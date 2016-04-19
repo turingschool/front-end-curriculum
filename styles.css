@@ -122,6 +122,12 @@ li h4 {
   width: 125px;
 }
 
+
+li h4.full-width {
+  width: 100%;
+  display: block;
+}
+
 li p {
   display: inline-block;
   font-size: 85%;
