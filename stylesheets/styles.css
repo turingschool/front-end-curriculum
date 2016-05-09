@@ -64,7 +64,7 @@ nav {
 }
 
 .arrow {
-  list-style-image: url(images/arrow.svg);
+  list-style-image: url(/assets/images/arrow.svg);
 }
 
 nav li {

@@ -1,0 +1,25 @@
+title: "Front-End Engineering Curriculum - Turing School of Software and Design"
+description: "Open source curriulum for the Turing School of Software and Design's front end engineering program."
+url: "http://frontend.turing.io/"
+
+baseurl: ''
+permalink: /:title
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+exclude: [
+  'Gemfile',
+  'Gemfile.lock',
+  'README.md',
+  'LICENSE',
+  'CNAME'
+]
+
+assets:
+  root_url: '/assets'
+
+images:
+  root_url: '/assets/images'
