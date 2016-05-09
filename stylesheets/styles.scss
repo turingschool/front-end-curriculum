@@ -1,3 +1,9 @@
+---
+# Main style files. Everything else is located in _sass.
+---
+
+$navbar-width: 160px;
+
 html, body {
   font-family: 'Open Sans', sans-serif;
   height: 100%;
@@ -15,6 +21,12 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   color: #3c4040;
   font-size: 200%;
+  line-height: 1.4em;
+}
+
+h1 small {
+  font-weight: 300;
+  display: block;
 }
 
 h2 {
@@ -59,7 +71,7 @@ nav {
   padding-top: 50px;
   position: fixed;
   margin-right: 25px;
-  width: 150px;
+  width: $navbar-width;
   top: 0;
 }
 
@@ -90,14 +102,13 @@ nav a:hover {
 section {
   display: inline-block;
   padding-top: 20px;
-
 }
 
 section.container {
   max-width: 750px;
   min-width: 350px;
   padding-top: 47px;
-  margin-left: 200px;
+  margin-left: $navbar-width + 50px;
 }
 
 article {
