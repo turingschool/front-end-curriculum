@@ -12,7 +12,7 @@ There are also a number of things that JavaScript cannot do in the browser. For 
 
 ### Installing Node
 
-Downloading and install Node.js is relatively easy in OS X.
+Downloading and installing Node.js is relatively easy in OS X.
 
 1. Visit the [Node.js website][node] and click on the button to download the "Current" version of Node.js.
 2. The previous step should trigger a package to download to you `~/Downloads` folder. Right-click on package and select "Open" to run the installer.
@@ -22,7 +22,7 @@ If everything went well, you now have Node.js installed on your computer. You ca
 
 ### Configuring npm
 
-When we installed Node, we were also treated to a second utility called [npm][].
+When we installed Node, we were also treated to a utility called [npm][].
 
 npm is a number of things. First of all, it's an [online repository][npm] that stores a metric ton of useful third-party JavaScript modules that you can use in your code as well as a wide selection of useful tools for building your applications.
 
