@@ -2,6 +2,8 @@
 # Main style files. Everything else is located in _sass.
 ---
 
+@import 'syntax';
+
 $navbar-width: 160px;
 
 html, body {
@@ -108,7 +110,7 @@ section {
   padding-top: 20px;
 }
 
-section.container {
+.container {
   max-width: 750px;
   min-width: 350px;
   padding-top: 47px;
@@ -117,14 +119,22 @@ section.container {
 
 article {
   margin: 30px 0;
-}
-
-article li {
-  margin-bottom: 20px;
-}
-
-article li:last-of-type {
-  margin-bottom: 0;
+  h2, h3 {
+    margin-top: 2em;
+  }
+  ol, ul {
+    margin: 2em 0 2em 3em;
+  }
+  ol {
+    list-style-type: decimal;
+  }
+  li {
+    margin-bottom: 20px;
+    line-height: 150%;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
 }
 
 li h4 {
