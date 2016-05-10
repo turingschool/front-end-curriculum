@@ -18,6 +18,13 @@ exclude: [
   'CNAME'
 ]
 
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "page"
+
 assets:
   root_url: '/assets'
 
