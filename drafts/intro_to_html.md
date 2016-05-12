@@ -1,9 +1,9 @@
 ### Goals
 
-By the end of this lesson, you will be able to:
+By the end of this lesson, you should be able to:
 
 * Write clear, organized HTML
-* Understand basic HTML elements: links, images, lists, etc.
+* Understand basic HTML elements like links, images, lists, etc.
 * Write semantic HTML and understand its purpose
 
 ### Structure
@@ -21,13 +21,13 @@ Developers love to hate on HTML and CSS, but they also recognize that front-end 
 
 ###### What will students know or be able to do by the end of the class? What are the goals?
 
-By the end of the class, students will have an understanding of how to write semantic markup and why it is used.
+By the end of the class, you will have an understanding of how to write semantic markup, why it is used, and the role CSS plays.
 
 #### Introduction to New Material (I do)
 
-* instructor explains, shows, or demonstrates
+* Instructor explains, shows, or demonstrates
 * Examples: lecture, slides, code demonstration
-  + what is HTML and what is CSS (quick review)
+  + What is HTML and what is CSS (quick review)
     - HTML is the Structure, CSS is the Pretty
     - In this lesson we're talking about HTML.
 
@@ -39,11 +39,13 @@ By the end of the class, students will have an understanding of how to write sem
         + a larger wrapping element that contains other elements and content (a ```<p>``` or a ```<div>``` are examples)
       - stand alone element
         + element that can't contain anything else (```<br/>``` and ```<img/>``` are examples)
+        + explain the concept of a self-closing element
     * what is an attribute, how to apply a value to an attribute
       - it provides info about the element.
       - examples: class, id, source, language
       - goes inside opening tag bfore right angle bracket
-      - attributes have a value that is in quotes: ```class="red"'```
+      - attributes have a value that is in quotes: ```class="red"'```  
+
 
   + Strategies for how to set up a page in a way that is easy to read, easy to write CSS for, and not div-tastic.
     * organize, organize, organize!
@@ -66,7 +68,7 @@ By the end of the class, students will have an understanding of how to write sem
         + ```<p>``` ```<div>``` are examples, but most elements are block level elements. they appear on a line, and the next element on the page falls under/below them in the layout
           * appears on the next line, like a paragraph
         + ```<img>``` ```<strong>```is an example of an inline element. Content flows around it, rather than falling below it.
-          * appears on the same like that they are written on
+          * appears on the same line that they are written on
 
     * Static Positioning
       - normal page flow
@@ -103,9 +105,9 @@ By the end of the class, students will have an understanding of how to write sem
 
   + line breaks
   + UL & OL's
-      - lists! one has numbers, one have bullets
-    * unordered list.
-    * ordered list.
+      - lists! one has numbers, one has bullets
+    * unordered list
+    * ordered list
     * change what the bullets look like and/or control position
       - ```list-style``` property.
     * ways to use lists
@@ -113,7 +115,7 @@ By the end of the class, students will have an understanding of how to write sem
       - navigation
       - to organize groups of content
 
-  + tables.
+  + Tables
     * Use them for content that should be in a table, don't use them to control your layout.
     * ways to use tables:
       - things you'd use a spreadsheet for
@@ -121,7 +123,6 @@ By the end of the class, students will have an understanding of how to write sem
   + Character Codes
     * example: copyright is ``` &copy; ```
     * if you don't use them you'll get funky character hodgepodge which isn't very useful.
-    *
 
 ###### Guided Practice time: set up a very basic html file that we can use during the lesson
   + make 1 directory
