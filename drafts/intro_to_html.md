@@ -1,10 +1,10 @@
 ### Goals
 
-By the end of this lesson, you will know/be able to:
+By the end of this lesson, you will be able to:
 
-* Be able to write clear, organized HTML
-* Understand how to write basic HTML elements: links, images, lists, etc.
-* Be able to write semantic HTML
+* Write clear, organized HTML
+* Understand basic HTML elements: links, images, lists, etc.
+* Write semantic HTML and understand its purpose
 
 ### Structure
 
@@ -32,7 +32,7 @@ By the end of the class, students will have an understanding of how to write sem
     - In this lesson we're talking about HTML.
 
 ##### Basic intro to HTML structure and different tags.
-  + anatomy of an HTML element
+  + Anatomy of an HTML element
     * Tag break down
       - opening and closing tags
       - container element
