@@ -6,15 +6,23 @@
   </head>
 
   <body>
-    {% include navigation.html %}
-
-    <section class="container">
-      {% include header.html %}
-      <article>
-        <h2 id="before">{{ page.title }}</h2>
-        {{content}}
-      </article>
-      {% include footer.html %}
-    </section>
+    <div class="container">
+      <section class="sidebar">
+        {% include header.html %}
+        {% include navigation.html %}
+      </section>
+      <section class="content">
+        <article>
+          <header>
+            <h1>
+              {{ page.title }}
+            </h1>
+          </header>
+          {{content}}
+        </article>
+        {% include footer.html %}
+      </section>
+    </div>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
   </body>
 </html>
