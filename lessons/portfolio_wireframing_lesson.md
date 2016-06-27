@@ -52,7 +52,7 @@ Keep in mind that we don't always move through these phases in a structured, for
 
 #### Let's Try It Out Together
 
-Let's take a look at the [portfolio project spec](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/drafts/portfolio-project-spec.md). Here we see the basic content you'll need to work with in your portfolio. Nothing too surprising here, but it's good to understand what you need to be working with before you start sketching. Here's what we need to include:
+Let's take a look at the [portfolio project spec](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/lessons/portfolio-project-spec.md). Here we see the basic content you'll need to work with in your portfolio. Nothing too surprising here, but it's good to understand what you need to be working with before you start sketching. Here's what we need to include:
 
 - primary navigation
 - footer
