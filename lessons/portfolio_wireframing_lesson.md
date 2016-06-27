@@ -79,4 +79,4 @@ We'll whiteboard an option for low fi and user flow wireframes together.
 
 Now that we've done some sketching together, it's your turn! Take a crack at thinking through and sketching low fidelity and user flow wireframes for your portfolio site. Since we want to iterate quickly and get all our ideas out of our heads and onto paper, **sketch 2-3 different options for your portfolio site.** Consider how you want to organize your content, what you want a user to see first, and how they'll navigate through the site to different content.
 
-The goal here isn't perfect drawings, it's about communicating your ideas visually in a way that can start discussion.
+The goal here isn't perfect drawings, it's about communicating your ideas visually in a way that can start discussion. There are lots of ways to approach this project, so be sure to keep your wireframes -- we'll want to discuss them and your approach! A good strategy is to keep things simple: clear and usable beats fancy and confusing any day.
