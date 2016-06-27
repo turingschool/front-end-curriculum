@@ -20,9 +20,6 @@ Before starting any new project, it's important to know why you are building it 
 
 #### What are Wireframes?
 
-* What is this lesson about?
-* What will students know or be able to do by the end of the class? What are the goals?
-
 Your first project will be to build a custom portfolio site to showcase the work you create over the next seven months. However, before diving into the code you need to know where you're heading with your project. What content will you have and how will you organize it? How many pages are you going to need? What do you want visitors to your site to read first?
 
 To help answer these questions, we build wireframes of our site. Wireframes are like an architectural blueprint of your site -- they help us refine content and hierarchy without the distractions of color palettes, fonts, and imagery. They are a tool that allows us to refine our design strategy with minimal risk. If we realize something doesn't make sense in a wireframe, it's very quick and simple to change it. If we realize something doesn't make sense once we're elbows deep in a code base, it's going to set us back a lot more time.
