@@ -19,8 +19,8 @@ While you can include additional content if you'd like, we feel the content belo
 - bio
 - past jobs
 - education
-- goals (*NOTE: do we need/want this?*)(*Maybe its too similar to the bio? Im thinking of it like a mini mission statement, unless its for job hunting then it could be a list of things like "Looking for a collaborative environment"? - bjm*)
-- contact information (github, twitter, email (if you want, or a contact form if you're feeling ambitious))
+- goals (*think of this as a mini mission statement. For example, if it is for job hunting then it could be a list of things like "Looking for a collaborative environment"*)
+- contact information: github, twitter, *email if you want, or a contact form if you're feeling ambitious*
 - list of projects with the following information for each:
     + project name
     + project description/overview
@@ -30,7 +30,7 @@ While you can include additional content if you'd like, we feel the content belo
 
 We're not going to dictate how you structure your site -- layout and content flow is up to you.
 
-### Content Heirarchy
+### Content Hierarchy
 
 Carefully consider how you organize your content and how you structure your site. Is there a clear flow through the site? What pieces of information to do want your users to focus on? Is it easy for users to find what they're looking for?
 
@@ -47,7 +47,7 @@ Remember, clarity and usability are important. Simple and clear beats complex an
 
 ### Specification Adherence
 
-* _10 points_ - The student has included all the required content sections. There is no omitted content and the visual flow/layout is well thought out, makes sense, and is clear. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features or content missing from above that make the application feel incomplete or hard to use.
+* _10 points_ - The student has included all the required content sections. There is no omitted content, process examples are included (wireframes, screen grabs, etc), and the visual flow/layout is well thought out, makes sense, and is clear. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features or content missing from above that make the application feel incomplete or hard to use.
 
 ### User Interface
 
