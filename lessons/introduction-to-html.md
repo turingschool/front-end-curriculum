@@ -1,3 +1,9 @@
+---
+title: Introduction to HTML
+length: 1 hrs
+tags: html, semantics
+---
+
 ### Goals
 
 By the end of this lesson, you should be able to:
@@ -44,7 +50,7 @@ By the end of the class, you will have an understanding of how to write semantic
       - it provides info about the element.
       - examples: class, id, source, language
       - goes inside opening tag bfore right angle bracket
-      - attributes have a value that is in quotes: ```class="red"'```  
+      - attributes have a value that is in quotes: ```class="red"'```
 
 
   + Strategies for how to set up a page in a way that is easy to read, easy to write CSS for, and not div-tastic.
@@ -83,7 +89,7 @@ By the end of the class, you will have an understanding of how to write semantic
 
   + SEMANTICS
     - Using semantic tags as you're writing your HTML adds meaning to your page, which is good for you and your teammates. Semantic markup is easier to understand what groups of content represent, and it increases things like searchability and accessibility.
-      + examples of semantic tags:  
+      + examples of semantic tags:
         * section
         * article
         * aside
