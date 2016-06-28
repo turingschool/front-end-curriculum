@@ -1,0 +1,21 @@
+{
+  "name": "front-end-curriculum",
+  "version": "1.0.0",
+  "description": "Open source curriculum for Turing School's front-end engineering program.",
+  "main": "index.html",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/turingschool/front-end-curriculum.git"
+  },
+  "author": "Turing School of Software and Design",
+  "license": "CC-BY-NC-SA-4.0",
+  "bugs": {
+    "url": "https://github.com/turingschool/front-end-curriculum/issues"
+  },
+  "homepage": "https://github.com/turingschool/front-end-curriculum#readme"
+}
