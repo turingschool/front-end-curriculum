@@ -4,7 +4,7 @@ length: 1 hrs
 tags: html, semantics
 ---
 
-### Goals
+## Goals
 
 By the end of this lesson, you should be able to:
 
@@ -12,24 +12,25 @@ By the end of this lesson, you should be able to:
 * Understand basic HTML elements like links, images, lists, etc.
 * Write semantic HTML and understand its purpose
 
-### Structure
+## Structure
 
-#### Hook: <5 min
+### Hook: < 5 min
 
-###### Why is this lesson important?
+#### Why is this lesson important?
 
 Every single page that renders in your browser is built with HTML. Writing clean HTML is a critical foundational skill for a front-end developer. Everything you do in the front end is built upon the HTML you write.
 
-#### Opening: 1-2 min
+### Opening: 1-2 min
 
-###### What is this lesson about?
-Developers love to hate on HTML and CSS, but they also recognize that front-end development is crucial for every digital product. It serves as a user's main point of interaction with an application. Once you understand how it works, HTML and CSS will be very straightforward to work with.
+#### What is this lesson about?
 
-###### What will students know or be able to do by the end of the class? What are the goals?
+Developers love to hate on HTML and CSS, but they also recognize that front-end development is crucial for every digital product. It serves as a user's main point of interaction with an application. Once you understand how it works, HTML and CSS will be very straight-forward to work with.
+
+#### What will students know or be able to do by the end of the class? What are the goals?
 
 By the end of the class, you will have an understanding of how to write semantic markup, why it is used, and the role CSS plays.
 
-#### Introduction to New Material (I do)
+### Introduction to New Material
 
 * Instructor explains, shows, or demonstrates
 * Examples: lecture, slides, code demonstration
@@ -37,7 +38,8 @@ By the end of the class, you will have an understanding of how to write semantic
     - HTML is the Structure, CSS is the Pretty
     - In this lesson we're talking about HTML.
 
-##### Basic intro to HTML structure and different tags.
+### Basic intro to HTML structure and different tags.
+
   + Anatomy of an HTML element
     * Tag break down
       - opening and closing tags
@@ -130,7 +132,7 @@ By the end of the class, you will have an understanding of how to write semantic
     * example: copyright is ``` &copy; ```
     * if you don't use them you'll get funky character hodgepodge which isn't very useful.
 
-###### Guided Practice time: set up a very basic html file that we can use during the lesson
+#### Guided Practice time: set up a very basic html file that we can use during the lesson
   + make 1 directory
     * inside have a layout.html, styles.css, and an images folder
 
