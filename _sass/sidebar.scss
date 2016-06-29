@@ -1,0 +1,69 @@
+.sidebar-navigation--logo {
+  background-color: #000;
+}
+
+.turing-logo {
+  margin: auto;
+  max-width: 200px;
+  display: block;
+}
+
+.sidebar {
+  min-width: $sidebar-width;
+  max-width: $sidebar-width;
+
+  flex-basis: auto;
+
+  background-color: $dark-gray;
+  color: white;
+
+  @media (max-width: $tablet-width) {
+    min-width: 100%;
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  h1 {
+    padding-left: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+    background-color: lighten($dark-gray, 10);
+    font-size: 1.1em;
+  }
+
+  ul, ol {
+    list-style: none;
+
+    @media (max-width: $tablet-width) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  li {
+    margin-bottom: 0;
+    margin-left: 0;
+
+    line-height: 1.8em;
+  }
+
+  a {
+    display: block;
+    padding: 1em;
+    border-bottom: none;
+
+    color: white;
+
+    &:hover {
+      background-color: darken($dark-gray, 10);
+    }
+
+    &:active {
+      background-color: $teal;
+      box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    }
+  }
+
+}

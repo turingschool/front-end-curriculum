@@ -1,0 +1,28 @@
+/* Daily Outlines */
+
+.outlines {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    border-bottom: none;
+    background-color: lighten($light-gray, 10);
+    border: 1px solid $light-gray;
+    margin-right: 1em;
+    margin-bottom: 1em;
+    padding: 1em;
+
+    &:hover {
+      background-color: $light-gray;
+      border-color: $medium-gray;
+    }
+  }
+}
+
+.outline {
+  display: block;
+
+  list-style: none;
+  margin-left: 0;
+  margin-bottom: 0;
+}

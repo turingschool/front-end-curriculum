@@ -1,0 +1,23 @@
+/* Code Samples */
+
+pre {
+  overflow-x: scroll;
+}
+
+.try-it {
+  background-color: lighten($teal, 50);
+  border: 1px solid $teal;
+  padding: 1em;
+  pre {
+    border: 1px solid black;
+    background-color: rgb(50, 50, 50);
+    color: white;
+  }
+}
+
+.highlighter-rouge {
+  max-width: 100%;
+  pre {
+    white-space: pre-wrap;
+  }
+}

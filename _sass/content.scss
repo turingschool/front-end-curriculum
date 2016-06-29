@@ -1,0 +1,15 @@
+/* Content */
+
+.content {
+  // max-width: 100%;
+  padding: 2em;
+  // flex-grow: 500;
+}
+
+.main-content {
+  h1, h2, h3, h4, h5, h6 {
+    &:first-child {
+      margin-top: 1em;
+    }
+  }
+}
