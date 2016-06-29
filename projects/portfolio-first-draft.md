@@ -1,12 +1,17 @@
+---
+title: Portfolio (First Draft)
+---
+
 ## Project Requirements
 
 A portfolio site represents you, your personal brand, and is a fantastic opportunity to make a great first impression. For this project, we'll be focusing on how you structure both your content and your HTML & CSS.
 
 Your site must be:
-* easy to navigate
-* clearly organized
-* well written with reusable, DRY CSS and semantic HTML
-* free of Bootstrap or other style guides -- write all your own HTML and CSS
+
+* Easy to navigate
+* Clearly organized
+* Well written with reusable, DRY CSS and semantic HTML
+* Free of Bootstrap or other style guides -- write all your own HTML and CSS
 
 ### Content Requirements
 
