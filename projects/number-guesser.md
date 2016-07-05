@@ -28,9 +28,12 @@ Some things to think about:
 
 ## Phase Two: More Better
 
-- The type attribute for the guess input should be "number"
+- The type attribute for the guess input should be "number".
   - It should have "min" and a "max" attributes equal to the minimum and maximum of the reange of guesses (e.g. 1 and 100, respectively).
 - The application should display an error message if the guess is not a number (e.g. `parseInt()` returns `NaN`).
+- The application should display an error if the guess is outside of the range of possible answers.
+- The clear button should be disabled if there is nothing to clear.
+- The reset button should be disabled if there is nothing to reset.
 
 ## Phase Three: Level Up
 
@@ -55,4 +58,3 @@ Some things to think about:
 - 3: Application shows strong effort towards organization, content, and refactoring
 - 2: Application runs but the code has long functions, unnecessary or poorly named variables, and needs significant refactoring
 - 1: Application generates syntax error or crashes during execution
-
