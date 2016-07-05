@@ -29,6 +29,8 @@ With GitHub we can:
 * create a new remote on Github
 * push a local repository to Github from the command line
 
+Read more about the workflow we use with GitHub [here on the GitHub Guides](https://guides.github.com/introduction/flow/).
+
 #### Getting Set Up
 
 You already have your text editor up and running and Xcode installed, but if you have any questions about how those are set up here are the steps:
