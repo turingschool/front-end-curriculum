@@ -1,6 +1,6 @@
 ---
 title: DOM Manipulation with JavaScript
-length: 120
+length: 180
 tags: javascript, dom, browser
 ---
 
@@ -100,6 +100,59 @@ Let's take a look at the syntax and then we'll talk about what's happening.
   - The type of event we're interested in a listening for.
   - A function that should be called whenever that event happens.
 
+### Pair Practice
 
+1. Take the JavaScript that you wrote during the previous pair practice session.
+2. Add a `<button>` to the HTML markup of the page.
+3. Add an event listener to that button.
+4. When the button is clicked, all of your JavaScript from the previous session should execute.
+
+#### Extensions
+
+Here is [MDN's master list of DOM events][events-mdn]. Most of them are rare birds. Can you add additional events to the page?
+
+If that list overwhelms you, here is a artisinal, hand-crafted list:
+
+- `mouseenter`
+- `mouseleave`
+- `dblclick`
+- `keydown`
+- `keyup`
+
+[events-mdn]: https://developer.mozilla.org/en-US/docs/Web/Events
 
 ## Changing Styles Programmatically
+
+We can also modify the CSS styling of any element on the page using JavaScript.
+
+There are three approaches:
+
+1. We can directly manipulate the style of the element.
+2. We can add or remove classes from the element.
+3. You can modify the stylesheet itself with JavaScript.
+
+We're only going to talk about the first two, unless you ask real nicely (and we have time).
+
+Consider the following:
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="grRjXA" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/grRjXA/">CSS Manipulation with JavaScript</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+### Pair Practice
+
+1. Add a button that changes the width of the box to 400px.
+2. Add a button that removes the border class from the box. (Hint: the method is called `remove` instead of `add`.)
+
+### Getting User Input from Forms
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="akwjjr" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/akwjjr/">Color Box</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+### Pair Practice
+
+1. Add an input field with the `id` of "very-important-message" along with a button. When the user clicks on the button, it should set the `innerText` of the box to contents of the input field.
+2. Add two inputs one for a CSS property and one for a value. When the user clicks the button, it should adjust that property on the box.
+
+Here is an example of the second task:
+
+![Custom CSS Color Box](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif)
