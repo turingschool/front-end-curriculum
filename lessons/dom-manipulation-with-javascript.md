@@ -85,7 +85,7 @@ Visit the [this page][codepen] and fork the CodePen.
 
 Changing stuff on the page with JavaScript is all well and good, but if you might as well have just written it in the markup to begin with. The real power of JavaScript comes into play when we write code that responds to user input.
 
-The real power of using jQuery to change pages emerges when we start listening for user events.
+The real power of using JavaScript to change pages emerges when we start listening for user events.
 
 This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what he or she sees.
 
@@ -94,8 +94,8 @@ Let's take a look at the syntax and then we'll talk about what's happening.
 <p data-height="300" data-theme-id="23788" data-slug-hash="qNjyAg" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/qNjyAg/">A First Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-1. We're querying for tall of the elements we need and we're storing them in variables.
-2. We're adding an event listener to the `<button>` with the class of `.change-me`.
+1. We're querying for all of the elements we need and we're storing them in variables.
+2. We're adding an event listener to the `<button>` with the class of `.change-text`.
 3. We're passing `addEventListener()` two arguments:
   - The type of event we're interested in a listening for.
   - A function that should be called whenever that event happens.
