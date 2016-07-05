@@ -1,7 +1,7 @@
 ---
 title: Introduction to JavaScript
 length: 120
-tags: javascript, dom, browser
+tags: javascript, browser
 ---
 
 ## Learning Goals
@@ -312,79 +312,3 @@ var cat = {
 
 cat.sayHello(); // 'Hello, I'm Bucu'
 ```
-
-### The Document Object Model (DOM)
-
-The browser gives us some useful global objects for free. The `window` object is the global object and it holds a lot of information about the browser window including it's current location (URL), size, etc. `document` contains a representation of the current web page.
-
-`document` contains a bunch of methods that allow us to query the DOM. Let's talk about two commonly used methods.
-
-```js
-document.querySelector();
-document.querySelectorAll();
-```
-
-Both methods take a query selector—like you would use in Capybara. `document.querySelector()` returns the first element that matches the query. `document.querySelectorAll()` returns a collection all of the elements that match the query.
-
-Let's say we have a page with the following markup:
-
-```html
-<h1>This is a Page Heading</h1>
-
-<p>The is the first paragraph.</p>
-<p class="awesome">The is the second paragraph.</p>
-<p id="third" class="awesome">The is the third paragraph.</p>
-```
-
-Let's try out some queries:
-
-* `document.querySelectorAll('p')` will return a collection of all of the paragraphs.
-* `document.querySelector('p')` will return just the first paragraph.
-* `document.querySelectorAll('.awesome')` will return the two paragraphs with the class `awesome`.
-* `document.querySelectorAll('#third')` will return the paragraph with the id `third`.
-
-Let's say we wanted to change the contents of our `<h1>` element. We could modify it's contents with the following JavaScript.
-
-```js
-document.querySelector('h1').innerHTML = 'JavaScript is amazing!';
-```
-
-The DOM has been updated to the following:
-
-```html
-<h1>JavaScript is amazing!</h1>
-
-<p>The is the first paragraph.</p>
-<p class="awesome">The is the second paragraph.</p>
-<p id="third" class="awesome">The is the third paragraph.</p>
-```
-
-# Break
-
-## Independent Work
-
-Visit the [this page][jsbin]. Try to implement the following using JavaScript in the Chrome Developer Tools:
-
-[jsbin]: http://jsbin.com/vozap
-
-### Beginning
-
-* Find the element with the `id` of `status` and change the message to something warm and uplifting.
-* Find the `h1` tag and change the header to "A Stellar Record of My Performance".
-* Change all of the elements with a class of `student` to your name.
-
-### Intermediate
-
-* Find all of the elements with the class of `grade`. Iterate through all of them and change their content to "A+"s.
-* Can you create a function that takes an HTML element as an argument and capitalizes its contents?
-
-### Challenging
-
-* Select an element and set `contentEditable` to true. Now, click on the element. What happened?
-* Take a look at the [MDN documentation for DOM events][mdndom]. Can you bind a function to the click event of the element?
-
-[mdndom]: https://developer.mozilla.org/en-US/docs/Web/API/Event
-
-## Wrapup
-
-Spend the last five minutes returning to your Gist from the Warmup. Were your initialize observations true? What are some additional differences that you've noticed after spending a few ours with JavaScript? How might the Chrome Developer Tools aid in Rails development?
