@@ -29,7 +29,7 @@ With GitHub we can:
 * create a new remote on Github
 * push a local repository to Github from the command line
 
-Read more about the workflow we use with GitHub [here](https://guides.github.com/introduction/flow/).
+Read more about the workflow we use with GitHub [here on the GitHub Guides](https://guides.github.com/introduction/flow/).
 
 #### Getting Set Up
 
