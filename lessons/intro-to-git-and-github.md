@@ -4,6 +4,31 @@ length:
 tags: version control, git, github
 ---
 
+### What is Git?
+
+Git is a version control system, which means it allows us to record changes we make to our files over time -- it lets us *control the versions* of our files. With Git we can reference specific versions of our work as we need to. This means we can access a specific change we made days ago, or we can look back and see what changes have been made over time. It allows us to keep every version of our files, and gives us the ability to revert back to past versions of files, revert an entire project back to a previous state, compare changes over time, see who made specific changes, and all manner of useful things that can help us troubleshoot if (or when) we screw things up and or lose files. It makes it much, much easier to recover when things go wrong.
+
+A typical workflow with Git includes:
+
+* initialize a new git repository
+* add files to git staging area
+* commit files and directories
+* check the status of the working directory and staging area and interpret the output
+* view previous commits
+* create and checkout a new branch
+* switch between branches
+* merge local branches to local master
+
+### Git != GitHub
+
+Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local repo from the remote origin repo on GitHub, and then as work is done, the code is committed and pushed from the developers local repo and added to the remote origin repo on GitHub. The work of other developers is pulled down and merged into
+
+With GitHub we can:
+
+* clone an existing repository from Github
+* create a new remote on Github
+* push a local repository to Github from the command line
+
 #### Getting Set Up
 
 You already have your text editor up and running and Xcode installed, but if you have any questions about how those are set up here are the steps:
