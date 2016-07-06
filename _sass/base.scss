@@ -14,7 +14,10 @@ html, body {
 
 p {
   line-height: 1.6em;
-  margin-bottom: $content-block-spacing;
+}
+
+li {
+  line-height: 2em;
 }
 
 strong {
@@ -23,10 +26,6 @@ strong {
 
 img {
   max-width: 100%;
-}
-
-ul {
-  list-style: disc;
 }
 
 a {
