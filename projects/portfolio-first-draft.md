@@ -47,3 +47,41 @@ Remember, clarity and usability are important. Simple and clear beats complex an
 - DRY, reusable CSS
 - External stylesheets
 - Deploy as a gh-pages site
+
+## Questions/Concepts to Discuss:
+
+* What functionality or features do we need to have an MVP? Are these shown in the wireframes and reflected in the in-process product? Does the student need help or guidance with this? Working software beats fancy hotness.
+* Can student speak to each line of code, understands what each line is doing
+* As a user, is the proposed layout clear? Is the information you’re most interested in easy to locate and structured in a way that has a good hierarchy?
+* Does the proposed user flow make sense? Is it simple to move around the site? Are there steps to navigate between pages that haven’t been addressed
+
+
+## Deeper Questions/Review Criteria:
+
+### Specification Adherence
+
+ The student has included all the required content sections. There is no omitted content, process examples (wireframes) are available to help explain layout approach and strategy, and the visual flow/layout is well thought out, makes sense, and is clear. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features or content missing from above that make the application feel incomplete or hard to use.
+
+
+### User Interface
+
+* 😀  The application is pleasant, logical, and easy to use. There are no holes in functionality and the application stands on it own to be used by the instructor without guidance from the developer.
+* 🙂  The application has many strong pages/interactions, but a few holes in lesser-used functionality.
+* 😬  The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
+* 😭  The application is confusing or difficult to use.
+
+
+### HTML Quality
+
+* 😀  Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
+* 🙂  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
+* 😬  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
+* 😭  Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
+
+
+### CSS Style
+
+* 😀  Application has exceptionally well-factored CSS with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
+* 🙂  Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS is doing.
+* 😬  Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+* 😭  Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
