@@ -1,3 +1,10 @@
+---
+title: CSS Reset vs Normalize
+length: 30 mins
+tags: CSS, reset, normalize
+---
+
+
 ### CSS Reset vs Normalize
 
 Browsers give plain ol' HTML a set of default styles, but the problem is that exactly what those styles are isn't consistent across all browsers. These default styles can also interfere with our layout in unexpected ways as we write our own styles. It's common practice to clear out the default styles and start with a blank slate before you start working on your CSS.
