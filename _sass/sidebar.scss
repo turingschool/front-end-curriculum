@@ -1,24 +1,36 @@
+$sidebar-color: rgb(245, 245, 245);
+
 .sidebar-navigation--logo {
-  background-color: #000;
+  background-color: white;
+  padding: 1em;
 }
 
 .turing-logo {
   margin: auto;
-  max-width: 200px;
+  max-width: 80%;
   display: block;
+
+  @media (max-width: $tablet-width) {
+    max-width: 200px;
+  }
 }
 
 .sidebar {
   min-width: $sidebar-width;
   max-width: $sidebar-width;
 
-  background-color: $dark-gray;
-  color: white;
+  background-color: $sidebar-color;
+  color: invert($sidebar-color);
+  border-right: 1px solid darken($sidebar-color, 20);
 
   @media (max-width: $tablet-width) {
+    font-size: 0.85em;
     min-width: 100%;
     max-width: 100%;
     padding-top: 0;
+    border-right: none;
+    border-top: 1px solid darken($sidebar-color, 20);
+    border-bottom: 1px solid darken($sidebar-color, 20);
   }
 
   h1 {
@@ -26,8 +38,12 @@
     padding-top: 1em;
     padding-bottom: 1em;
 
-    background-color: lighten($dark-gray, 10);
+    background-color: lighten($sidebar-color, 5);
     font-size: 1.1em;
+
+    @media (max-width: $tablet-width) {
+      text-align: center;
+    }
   }
 
   ul, ol {
@@ -52,10 +68,10 @@
     padding: 1em;
     border-bottom: none;
 
-    color: white;
+    color: invert($sidebar-color);
 
     &:hover {
-      background-color: darken($dark-gray, 10);
+      background-color: darken($sidebar-color, 10);
     }
 
     &:active {
@@ -64,4 +80,24 @@
     }
   }
 
+}
+
+.sidebar-navigation--links {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    section {
+      min-width: 300px;
+      width: 50%;
+
+      @media (max-width: $tablet-width - 50px) {
+        width: auto;
+      }
+    }
+  }
+
+  @media (max-width: $tablet-width - 50px) {
+    flex-direction: column;
+  }
 }
