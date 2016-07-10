@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    {% include head.html %}
+  </head>
+
+  <body>
+    <div class="container">
+      <section class="sidebar">
+        {% include header.html %}
+        {% include navigation.html %}
+      </section>
+      <section class="content">
+        <article>
+          <header>
+            <h1>
+              {{ page.title }}
+            </h1>
+          </header>
+          {{content}}
+        </article>
+        {% include footer.html %}
+      </section>
+    </div>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+  </body>
+</html>
