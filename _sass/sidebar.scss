@@ -12,8 +12,6 @@
   min-width: $sidebar-width;
   max-width: $sidebar-width;
 
-  flex-basis: auto;
-
   background-color: $dark-gray;
   color: white;
 
@@ -34,6 +32,7 @@
 
   ul, ol {
     list-style: none;
+    padding-left: 0;
 
     @media (max-width: $tablet-width) {
       display: flex;
@@ -44,7 +43,6 @@
 
   li {
     margin-bottom: 0;
-    margin-left: 0;
 
     line-height: 1.8em;
   }
