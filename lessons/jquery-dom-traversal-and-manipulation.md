@@ -191,7 +191,7 @@ One you have queried for some elements using jQuery, you can use `find()` to dri
 
 It's useful to think of `find()` as a more powerful alternative for `children()`. The `children()` method will look only one level down the tree. `find()` will search the children, the grandchildren, the great-grandchildren, and so on. The method will look at anything you currently have selected and then search within those results.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="dXVEpN" data-default-tab="html,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/dXVEpN/">jQuery Find</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="dXVEpN" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/dXVEpN/">jQuery Find</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 Which one do you use? It depends, do you want to traverse all the way down the tree or just down one level.
 
@@ -205,12 +205,37 @@ Which one do you use? It depends, do you want to traverse all the way down the t
 
 ## Part Four: Adding to the DOM
 
-Let's take a look at some approaches of adding/changing content in the DOM.
+Let's take a look at some approaches of changing content in the DOM.
 
-* `.text()`
-* `.html()`
-* `.append()`
-* `.prepend()`
+### `text()`
+
+`text()` is like using `innerText` or `textContent`. There is an important difference. The vanilla DOM manipulation tools allow you to assign the new value to `innerText`. The jQuery methods on the other hand work on everything as if it were a method.
+
+Let's compare and contrast.
+
+```js
+var vanilla = document.querySelector('.some-element');
+var jq = $('.some-element');
+
+vanilla.textContent = 'New text.';
+jq.text('New text.');
+```
+
+### `html()`
+
+`html()` is to `text()` as `innerHTML` is to `innerText`. Basically, change the HTML contents of a bigger element, not just the text of it. As a fun experiment, select an element and try to replace the contents to `<script>alert('HACKED!');</script>` using both `text()` and `html()`. Let me know how it goes for you.
+
+### `append()`
+
+`html()` replaces the entire contents of an element. `append()` adds new content onto the end of it.
+
+### `prepend()`
+
+`html()` replaces the entire contents of an element. `append()` adds new content onto the beginning of it.
+
+In order to take both `append()` and `prepend()` for a spin, let's try the following code in the exercise below.
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="pbWXgg" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/pbWXgg/">Append/Prepend</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 ## Exercise, Part Four: Dead Presidents
 
