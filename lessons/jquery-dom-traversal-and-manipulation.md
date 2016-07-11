@@ -15,58 +15,13 @@ status: draft
 * Add event listeners to elements currently in the DOM
 * Understand that adding an event listener will not effect elements you add to the DOM in the future
 
-## Structure
-
-* 9:05 - 5 - Intro
-* 9:15 - 10 - Lecture 1: Selectors
-* 9:25 - 10 - Exercise 1: Basic Selectors with the President
-* 9:30 - 5 - Exercise Review
-* 9:35 - 5 - Break
-* 9:50 - 15 - Lecture 2: Manipulating CSS
-* 10:00 - 10 - Exercise 2: Painting the Presidents
-* 10:05 - 5 - Exercise Review
-* 10:10 - 5 - Break
-* 10:25 - 15 - Lecture 3: Filtering and Traversal
-* 10:40 - 15 - Exercise 3: One-Term Presidents
-* 10:45 - 5 - Exercise Review
-* 10:55 - 10 - Break
-* 11:05 - 10 - Lecture 4: Appending to the DOM
-* 11:20 - 15 - Exercise 4: Dead Presidents
-* 11:25 - 5 - Exercise Review
-* 11:30 - 5 - Break
-* 11:40 - 10 - Lecture 5: Events
-* 11:55 - 15 - Exercise 5: Event Responder
-* 12:00 - 5 - Exercise Review: Wrap Up
-
-## Intro to the DOM
-
-DOM stands for Document Object Model. The browser uses it to represent everything on the page. It's an "object model" because it is made of objects. Each element is an object. If you wanted to, you could directly translate the DOM to a javascript object.
-
-The DOM is hierarchical. If you have a tag wrapping another tag, then the inner object is a child of the outer object, which is the parent.
-
-```html
-<ol>                <!-- parent -->
-  <li>First</li>    <!-- child  -->
-  <li>Second</li>   <!-- child  -->
-</ol>
-
-```
-
-The browser creates the DOM by reading from HTML, but from then on, javascript controls any changes to the DOM.
-
-```
-HTML --> DOM <--> JS
-```
-
-Today we're going to learn how to do just that.
-
-## Lecture, Part One: Selectors
+## Part One: Selectors
 
 ### Basic Selectors
 
-Out of the box, jQuery supports the selector syntax from CSS to find elements on the page. So, you already come pre-equipped with a bunch of knowledge for finding elements.
+Out of the box, jQuery supports the selector syntax from CSS to find elements on the page just like `document.querySelector` and `document.querySelectorAll`. So, you've already come pre-equipped with a bunch of knowledge for finding elements.
 
-That said, let's review some of the different ways we can find an element on page.
+That said, let's review some of the different ways we can find an element on page:
 
 * `$('p')`, selects all of a given element.
 * `$('#heading')`, selects the element with a given id.
@@ -100,11 +55,7 @@ Use Chrome Developer Tools to select the form fields. When properly selected you
 
 ## Exercise, Part One: The Presidents
 
-For this exercise, we're going to play with [a table of the Presidents of the United States of America](https://gist.github.com/neight-allen/a49b8caa02d127a3a3fcf409eea3ed14).
-
-```
-git clone https://gist.github.com/a49b8caa02d127a3a3fcf409eea3ed14.git jquery_lesson
-```
+For this exercise, we're going to play with [a table of the Presidents of the United States of America](http://codepen.io/team/turing/pen/NAaLXw).
 
 Let's try out a few things, just to get our hands dirty. We'll use the console in the Chrome developer tools to validate our work.
 
@@ -114,9 +65,7 @@ Let's try out a few things, just to get our hands dirty. We'll use the console i
 * Select all of the checked—umm—checkboxes. (You'll probably want to check some checkboxes first.)
 * Select all of the `td` elements with the class of `number` that appear in a row of a `tr` with the class of `whig`.
 
-(This should take about five minutes total.)
-
-## Lecture, Part Two: Manipulating CSS
+## Part Two: Manipulating CSS
 
 Once we have an element in our sites, we probably want to do something with it, right?
 
@@ -179,7 +128,7 @@ $('.federalist').toggleClass('red');
 
 (This should take 10 minutes.)
 
-## Lecture, Part Three: Filtering and Traversal
+## Part Three: Filtering and Traversal
 
 Let's talk about a few [DOM traversal methods](http://api.jquery.com/category/traversing/tree-traversal/).
 
@@ -198,7 +147,7 @@ Here are some of the all-stars of the DOM traversing world:
 * Add the class of `blue` to the parent of a checked checkbox.
 * Add the class of `yellow` to the siblings of the parent (`td`, in this case) of an unchecked checkbox.
 
-## Lecture, Part Four: Adding to the DOM
+## Part Four: Adding to the DOM
 
 Let's take a look at some approaches of adding/changing content in the DOM.
 
@@ -213,7 +162,7 @@ Let's take a look at some approaches of adding/changing content in the DOM.
 * Append `<span class="died">(Died)<span>` to the the `term` column.
 * **Bonus**: Add a radio button before the number in each row.
 
-## Lecture, Part Five: Simple Event Binding
+## Part Five: Simple Event Binding
 
 ### Event Driven Programming
 
@@ -223,21 +172,31 @@ You've done event driven programming before. Can you think of projects that use 
 
 ### Event binding using jQuery
 
-Let's start by looking at the [jQuery Events API](http://api.jquery.com/category/events/).
+Start by looking at the [jQuery Events API](http://api.jquery.com/category/events/).
 
-The Events API tends to mimic the native DOM events, but with some abstraction to standardize across all of the browsers in use today.
+The Events API tends to mimic the native DOM events from your last project, but with some abstraction to standardize across all of the browsers in use today.
 
 Our main focus today is going to be on the `.on()` method. As of jQuery 1.7 and later, this is the preferred method for binding events. You may see `.bind()` as well, but this support older code.
 
-Talking points:
+#### Knowing Which Element We Clicked
 
-* Talk about `this` in an event handler.
-* Bind a `console.log` to a checkbox.
-* Inline handlers vs named functions
+jQuery makes it do stuff to many elements ate the same time, but if we add event listeners to a bunch of boxes at the same time, then how we know which one the user clicked? Consider a situation where we have three boxes. When that particular box is clicked, we want to toggle a class. How do we know which box was clicked?
+
+It turns out that when we add an event listener using jQuery, we get a special little variable called `this`. Lucky for us, `this` is set to the box we clicked on.
+
+<aside>
+  As you hopefully know, it's possible to select elements without jQuery. When we use jQuery our elements get a whole bunch of extra super powers. But, jQuery doesn't <em>know</em> that you want these when you're listening for an event. <code>this</code> is just the regular element. Use <code>$(this)</code> if you want to add those super powers back. At this very moment, it's probably unclear what those super powers are. So, let's just always use <code>$(this)</code> for now.
+</aside>
+
+Let's take a look at the example below:
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="EyKxpp" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/EyKxpp/">$(this)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 Let's take a look at [this simple form](http://jsbin.com/basolo/). Right now, it doesn't work. Let's wire it up together.
 
 ## Exercise, Part Five:
+
+Let's refer back the the Presidents this here United States of America:
 
 * Add an event handler to all of the checkboxes that when the box is checked, adds the `yellow` class to the `tr`.
 * Add an event handler that adds the `red` class to a `td` element when it's clicked on.
