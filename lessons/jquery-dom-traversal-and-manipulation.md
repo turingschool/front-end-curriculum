@@ -41,9 +41,31 @@ There are a few different ways to chain selectors to use them together. You can 
 
 ### Attribute Selectors
 
+On top of querying for types of elements, classes, and ids, we can also search for elements by the type of attributes that it has.
+
+Here are some examples:
+
+- `$(input[type="date"])` will get all of the date selector inputs.
+- `$(input[type="number"])` will get all of the number inputs.
+- `$(input[type="submit"])` will get all of the form submission buttons.
+
 See the API documentation [here](http://api.jquery.com/category/selectors/attribute-selectors/).
 
-Let's take a look at [this simple form](http://jsbin.com/basolo/) and try out some selectors.
+Let's take a look at [this simple form](https://turingschool-examples.github.io/jquery-playgrounds/presidents.html) and try out some selectors.
+
+### The Special `:checked` Selector
+
+It's not uncommon that you might want to go look for all of the "checked" elements. This includes drop downs, checkboxes, and radio buttons.
+
+- `$('input:checked')` will return all of the checked checkboxes.
+- `$('input[type="radio"]:checked')` will return all of the checked radio buttons.
+
+### Quick Practice
+
+- Can you find all of the check boxes?
+- Can you find all of the radio buttons?
+- Can you find all of the checked elements?
+- What about all of the checked checkboxes?
 
 Use Chrome Developer Tools to select the form fields. When properly selected you should see an array of selected elements. You should see sections of the page highlighted when you hover over the elements in the array.
 
@@ -57,11 +79,7 @@ Use Chrome Developer Tools to select the form fields. When properly selected you
 
 For this exercise, we're going to play with [a table of the Presidents of the United States of America][presidents].
 
-[presidents]: https://s.codepen.io/boomerang/7af630c9d6c1296c608da48aed8b6a891468197137778/index.html
-
-(The full Code Pen that powers this is [here][pen].)
-
-[pen]: http://codepen.io/team/turing/full/NAaLXw/
+[presidents]: https://turingschool-examples.github.io/jquery-playgrounds/presidents.html
 
 Let's try out a few things, just to get our hands dirty. We'll use the console in the Chrome developer tools to validate our work.
 
@@ -142,11 +160,41 @@ Let's talk about a few [DOM traversal methods](http://api.jquery.com/category/tr
 
 Here are some of the all-stars of the DOM traversing world:
 
-* `find()`
-* `parent()`
-* `parents()`
-* `children()`
-* `siblings()`
+### `parent()`
+
+The `parent()` method will take the currently selected element and go one level up the DOM tree.
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="AXQkEZ" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXQkEZ/">jQuery Parent</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+### `parents()`
+
+This one will include all of the parents—all the way up to the `<body>` of the page. Additionally, you can pass it a selector. `$('.some-selector').parents('.active')` will traverse up the DOM, but only return the elements with the class of `.active`.
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="AXQkXA" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXQkXA/">jQuery Parents</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+### `children()`
+
+This method returns all of the direct childen of the given selection. It will _not_ search their children. Like `parents()`, `children()` will also take a selector. `$('.some-selector').children('.active')` will go through the children of the current query and only return the elements with the class of `.active`.
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="VjrOjp" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/VjrOjp/">jQuery Children</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+### `siblings()`
+
+`siblings()` will select all of the sibling elements based on the current query. Like it's friends, it will also take a selector if you're polite.
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="Gqrapr" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Gqrapr/">Siblings</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+### `find()`
+
+One you have queried for some elements using jQuery, you can use `find()` to drill down a little deeper.
+
+It's useful to think of `find()` as a more powerful alternative for `children()`. The `children()` method will look only one level down the tree. `find()` will search the children, the grandchildren, the great-grandchildren, and so on. The method will look at anything you currently have selected and then search within those results.
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="dXVEpN" data-default-tab="html,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/dXVEpN/">jQuery Find</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+
+Which one do you use? It depends, do you want to traverse all the way down the tree or just down one level.
+
 
 ## Exercise, Part Three: One-Term Presidents
 
@@ -199,8 +247,6 @@ It turns out that when we add an event listener using jQuery, we get a special l
 Let's take a look at the example below:
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="EyKxpp" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/EyKxpp/">$(this)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-
-Let's take a look at [this simple form](http://jsbin.com/basolo/). Right now, it doesn't work. Let's wire it up together.
 
 ## Exercise, Part Five:
 
