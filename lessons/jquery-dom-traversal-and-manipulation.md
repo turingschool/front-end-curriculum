@@ -45,9 +45,9 @@ On top of querying for types of elements, classes, and ids, we can also search f
 
 Here are some examples:
 
-- `$(input[type="date"])` will get all of the date selector inputs.
-- `$(input[type="number"])` will get all of the number inputs.
-- `$(input[type="submit"])` will get all of the form submission buttons.
+- `$('input[type="date"]')` will get all of the date selector inputs.
+- `$('input[type="number"]')` will get all of the number inputs.
+- `$('input[type="submit"]')` will get all of the form submission buttons.
 
 See the API documentation [here](http://api.jquery.com/category/selectors/attribute-selectors/).
 
