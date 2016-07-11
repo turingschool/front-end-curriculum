@@ -51,7 +51,7 @@ Here are some examples:
 
 See the API documentation [here](http://api.jquery.com/category/selectors/attribute-selectors/).
 
-Let's take a look at [this simple form](https://turingschool-examples.github.io/jquery-playgrounds/presidents.html) and try out some selectors.
+Let's take a look at [this simple form](https://turingschool-examples.github.io/jquery-playgrounds/form.html) and try out some selectors.
 
 ### The Special `:checked` Selector
 
@@ -99,7 +99,7 @@ In this case, let's add some CSS styling. Let's say we wanted to grab all of the
 $('.federalist').css('color', 'pink');
 ```
 
-One thing you might have noticed about CSS is that it really likes hyphens. So, to change a background color, you would use `background-color`. The thing about hyphens is that they are a no-no in JavaScript. So, we *should* to camel-case our property names in our CSS methods.
+One thing you might have noticed about CSS is that it really likes hyphens. So, to change a background color, you would use `background-color`. The thing about hyphens is that they are a no-no in JavaScript. So, we *should* camel-case our property names in our CSS methods.
 
 ```js
 $('.federalist').css('backgroundColor', 'pink');
@@ -180,7 +180,7 @@ This method returns all of the direct childen of the given selection. It will _n
 
 ### `siblings()`
 
-`siblings()` will select all of the sibling elements based on the current query. Like it's friends, it will also take a selector if you're polite.
+`siblings()` will select all of the sibling elements based on the current query. Like its friends, it will also take a selector if you're polite.
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="Gqrapr" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Gqrapr/">Siblings</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
