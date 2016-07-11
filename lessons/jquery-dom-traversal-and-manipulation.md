@@ -55,7 +55,13 @@ Use Chrome Developer Tools to select the form fields. When properly selected you
 
 ## Exercise, Part One: The Presidents
 
-For this exercise, we're going to play with [a table of the Presidents of the United States of America](http://codepen.io/team/turing/pen/NAaLXw).
+For this exercise, we're going to play with [a table of the Presidents of the United States of America][presidents].
+
+[presidents]: https://s.codepen.io/boomerang/7af630c9d6c1296c608da48aed8b6a891468197137778/index.html
+
+(The full Code Pen that powers this is [here][pen].)
+
+[pen]: http://codepen.io/team/turing/full/NAaLXw/
 
 Let's try out a few things, just to get our hands dirty. We'll use the console in the Chrome developer tools to validate our work.
 
@@ -107,11 +113,13 @@ $('.federalist').addClass('red');
 $('.federalist').removeClass('red');
 ```
 
-Keeping track of state is hard. jQuery is here to help.
+Keeping track of state is hard. jQuery is here to help. What if we were in a position where we want to add a class if an element had it, but remove it if it didn't? jQuery's `hasClass` method is certainly helpful in this case.
 
 ```js
 $('.federalist').hasClass('federalist'); // Returns true, obviously.
 ```
+
+But, it seems like this is a common pattern and there should be a better way to do this, right?
 
 The other option is to use `toggleClass`, which will either add or remove the class depending on whether or not the class currently exists.
 
@@ -119,14 +127,14 @@ The other option is to use `toggleClass`, which will either add or remove the cl
 $('.federalist').toggleClass('red');
 ```
 
+(Do this like 17 times for good measure.)
+
 ## Exercise, Part Two: Style the Presidents
 
 * Add the class of `red` to all of the Republicans.
 * Add the class of `blue` to all of the Democrats.
 * Add the class of `yellow` to the term column of the table.
 * Take all the whig presidents and give them a purple background and white text.
-
-(This should take 10 minutes.)
 
 ## Part Three: Filtering and Traversal
 
