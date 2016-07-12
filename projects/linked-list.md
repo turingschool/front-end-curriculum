@@ -2,6 +2,8 @@
 title: Linked List
 ---
 
+## Specification
+
 With a little jQuery under your belt, it's time to try your hand at building a small application.
 
 In it's simplest form, the application should have the following:
@@ -16,7 +18,7 @@ In it's simplest form, the application should have the following:
   - A button to "Mark as Read"
   - A button to "Remove" the bookmark
 
-## Phase One
+### Phase One
 
 - The user should be able to input a title and URL into the appropriate fields
 - When the user clicks on the button for creating the bookmark, it should be added to the bookmarks section
@@ -25,15 +27,17 @@ In it's simplest form, the application should have the following:
   - If it already has the class of `read`, it should be removed
 - When the user clicks on the "Remove" button, the link should be removed from the page
 
-## Phase Two
+### Phase Two
 
 - If the user omits the title or the URL, the application should not create the link and should instead display an error.
 - The application should be resposive and work equally well on desktop and mobile. (Flexbox is your friend here.)
 
-## Phase Three
+### Phase Three
 
 - The button for creating links should be disabled if there are no contents in the title or URL fields.
 - The application should be able to keep count of the total number of links currently on the page.
+
+## Rubric
 
 ### Functional Expectations
 
