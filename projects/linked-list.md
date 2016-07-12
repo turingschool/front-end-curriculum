@@ -36,6 +36,7 @@ In it's simplest form, the application should have the following:
 
 - The button for creating links should be disabled if there are no contents in the title or URL fields.
 - The application should be able to keep count of the total number of links currently on the page.
+- The application should be able to keep count of the total number of read and unread links currently on the page.
 
 ## Rubric
 
