@@ -24,7 +24,7 @@ Just like we can apply solid color as a background, we can also apply a gradient
 
 As solid colors use the `background-color` property, gradients use the  `background-image` property. For both solid colors and gradients we can also use the shorthand `background` property.
 
-Here's an example of what that looks like:
+Here's an example from [Chris Coyier](https://css-tricks.com/) of what that looks like:
 
 ```CSS
 .gradient {
@@ -105,6 +105,8 @@ We can also use `color-stops` to make hard edges between our colors. This can be
 }
 ```
 
+For a more in-depth dive into linear gradients, take a look at the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/linear-gradient).
+
 ##### Radial Gradient
 
 Radial gradients are often used to simulate a light source, something that a linear gradient isn't always suited for.
@@ -142,6 +144,8 @@ We an also dictate where the gradient starts if we don't want it centered:
   background-image: radial-gradient(circle at top right, magenta, aqua);
 }
 ```
+
+For a more in-depth dive into linear gradients, take a look at the [Mozilla documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/radial-gradient).
 
 #### Repeating Gradients
 
@@ -213,6 +217,8 @@ background-image:
 background-image:
   radial-gradient(circle farthest-side at right, #00F, #FFF);
 ```
+
+For more information about working with gradients, check out the [Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
 #### Your Turn
 
