@@ -38,6 +38,11 @@ In it's simplest form, the application should have the following:
 - The application should be able to keep count of the total number of links currently on the page.
 - The application should be able to keep count of the total number of read and unread links currently on the page.
 
+### Phase Four: The Project Strikes Back
+
+- Add a "Clear Read Bookmarks" button.
+- The user should to be able to add a URL that isn't valid.
+
 ## Rubric
 
 ### Functional Expectations
