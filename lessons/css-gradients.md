@@ -159,10 +159,12 @@ We can also create patterns using repeating linear-gradients and some precise co
       aqua,
       aqua 25px,
       magenta 25px,
-      magenta 50px /* determines size */
+      magenta 50px
     );
 }
 ```
+
+You can also create [`repeating-radial-gradients`](https://developer.mozilla.org/en-US/docs/Web/CSS/repeating-radial-gradient).
 
 #### Browser Support and prefixes
 
@@ -202,7 +204,7 @@ For example, if you wanted deep browser support, you'd end up with something lik
 }
 ```
 
-Radial gradients are for the most part treated the same but they can be a little bit more complicated. Here is [Chris's'](https://css-tricks.com/) example of syntax changes for radial gradients:
+Radial gradients are for the most part treated the same but they can be a little bit more complicated. Here is [Chris's](https://css-tricks.com/) example of syntax changes for radial gradients:
 
 ```css
 /* Example of Old */
