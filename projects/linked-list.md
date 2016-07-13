@@ -40,8 +40,8 @@ In it's simplest form, the application should have the following:
 
 ### Phase Four: The Project Strikes Back
 
-- Add a "Clear Read Bookmarks" button.
-- The user should to be able to add a URL that isn't valid.
+- Add a "Clear Read Bookmarks" button which clears all the read bookmarks when clicked.
+- The user should **not** to be able to add a URL that isn't valid.
 
 ## Rubric
 
@@ -78,4 +78,3 @@ In it's simplest form, the application should have the following:
 - 3:  Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS is doing.
 - 2:  Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
 - 1:  Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
-
