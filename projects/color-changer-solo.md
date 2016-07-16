@@ -4,7 +4,7 @@ title: Color Changer Solo
 
 ## Specification
 
-You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have the afternoon to work on this project, and it is due by end of day. Absolute cut off time for commits is 5:00pm. Focus on taking small steps, using good workflow, and getting to working software.
+You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have the afternoon to work on this project, and it is due at the end of the day, with final commits timestamped no later than 5:00pm. Focus on taking small steps, using good workflow, and getting to working software.
 
 In it's simplest form, the application will have the following:
 
@@ -15,7 +15,7 @@ In it's simplest form, the application will have the following:
 
 ### Requirements
 
-- You are provided with comps showing colors, fonts, and layouts for desktop and for mobile, respectively. Your project must match these comps.
+- You are provided with comps showing colors, fonts, and layouts for desktop and for mobile, respectively. Your project should match these comps.
 - The random background color cannot be white.
 - The default and reset background color must be white.
 - Your project must be responsive.
