@@ -4,11 +4,11 @@ title: Color Changer Solo
 
 ## Specification
 
-You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have the afternoon to work on this project, and it is due at the end of the day, with final commits timestamped no later than 5:00pm. Focus on taking small steps, using good workflow, and getting to working software.
+You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have the afternoon to work on this project, and it is due at the end of the day, with final commits no later than 6:00pm. Get as far as you can and focus on breaking the project down into small steps, using good git workflows, and getting to working features.
 
-In it's simplest form, the application will have the following:
+The application will have the following:
 
-- A default background color of white
+- A default window background color of white
 - Two buttons
   - One that sets a random background color that _cannot_ be white
   - One that resets the background color to white
@@ -37,18 +37,18 @@ Mobile layout:
 
 ![mobile layout][mobile-base]
 
-Desktop layout when button is hovered over:
+Desktop layout when buttons are hovered over:
 
 ![desktop hover][desktop-hover]
 
-Mobile layout when button is hovered over:
+Mobile layout when buttons are clicked:
 
 ![mobile hover][mobile-hover]
 
-[desktop-base]: /assets/images/projects/color-changer/color-change-01.png
-[mobile-base]: /assets/images/projects/color-changer/color-change-04.png
-[desktop-hover]: /assets/images/projects/color-changer/color-change-02.png
-[mobile-hover]: /assets/images/projects/color-changer/color-change-03.png
+[desktop-base]: /assets/images/projects/color-changer/color-change-02.png
+[mobile-base]: /assets/images/projects/color-changer/color-change-03.png
+[desktop-hover]: /assets/images/projects/color-changer/color-change-01.png
+[mobile-hover]: /assets/images/projects/color-changer/color-change-04.png
 [button-specs]: /assets/images/projects/color-changer/color-change-05.png
 
 ## Rubric
