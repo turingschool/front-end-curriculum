@@ -1,27 +1,50 @@
 ---
-title: Color Changer
+title: Color Changer Solo
 ---
 
 ## Specification
 
-You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have the afternoon to work on this project, and it is due by end of day. Absolute cut off time for commits is 5:00pm. Focus on taking small steps and getting to working software.
+You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have the afternoon to work on this project, and it is due by end of day. Absolute cut off time for commits is 5:00pm. Focus on taking small steps, using good workflow, and getting to working software.
 
 In it's simplest form, the application will have the following:
 
 - A default background color of white
 - Two buttons
-  - One that sets a random background color that **cannot** be white
+  - One that sets a random background color that _cannot_ be white
   - One that resets the background color to white
 
 ### Requirements
 
-- You will be given 2 comps showing the layout for desktop and for mobile, respectively. Your project must match these comps.
+- You are provided with comps showing the layout for desktop and for mobile, respectively. Your project must match these comps.
 - The random background color cannot be white.
 - The default and reset background color must be white.
 - Your project must be responsive.
 - Your project must be pushed to GitHub.
 - Your project must be live as a GitHub Pages site.
 
+## Layout comps
+
+Desktop layout:
+
+![desktop layout][desktop-base]
+
+
+Mobile layout:
+
+![mobile layout][mobile-base]
+
+Desktop layout when button is hovered over:
+
+![desktop hover][desktop-hover]
+
+Mobile layout when button is hovered over:
+
+![mobile hover][mobile-hover]
+
+[desktop-base]: /assets/images/projects/color-changer/color-change-01.png
+[mobile-base]: /assets/images/projects/color-changer/color-change-04.png
+[desktop-hover]: /assets/images/projects/color-changer/color-change-02.png
+[mobile-hover]: /assets/images/projects/color-changer/color-change-03.png
 
 ## Rubric
 
