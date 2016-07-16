@@ -15,7 +15,7 @@ In it's simplest form, the application will have the following:
 
 ### Requirements
 
-- You are provided with comps showing the layout for desktop and for mobile, respectively. Your project must match these comps.
+- You are provided with comps showing colors, fonts, and layouts for desktop and for mobile, respectively. Your project must match these comps.
 - The random background color cannot be white.
 - The default and reset background color must be white.
 - Your project must be responsive.
@@ -23,6 +23,10 @@ In it's simplest form, the application will have the following:
 - Your project must be live as a GitHub Pages site.
 
 ## Layout comps
+
+Button specs:
+
+![button specs][button-specs]
 
 Desktop layout:
 
@@ -45,6 +49,7 @@ Mobile layout when button is hovered over:
 [mobile-base]: /assets/images/projects/color-changer/color-change-04.png
 [desktop-hover]: /assets/images/projects/color-changer/color-change-02.png
 [mobile-hover]: /assets/images/projects/color-changer/color-change-03.png
+[button-specs]: /assets/images/projects/color-changer/color-change-05.png
 
 ## Rubric
 
