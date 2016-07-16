@@ -4,7 +4,7 @@ title: Color Changer Solo
 
 ## Specification
 
-You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have the afternoon to work on this project, and it is due at the end of the day, with final commits no later than 6:00pm. Get as far as you can and focus on breaking the project down into small steps, using good git workflows, and getting to working features.
+You've been doing a great job over the last 3 weeks, and it's time for a solo challenge! You'll have this afternoon and evening to work on this project, and it is to be completed by start of class tomorrow morning (there will not be work time for this project tomorrow). Get as far as you can and focus on breaking the project down into small bite-sized steps, using good git workflows, and getting to working features.
 
 The application will have the following:
 
@@ -20,7 +20,7 @@ The application will have the following:
 - The default and reset background color must be white.
 - Your project must be responsive.
 - Your project must be pushed to GitHub.
-- Your project must be live as a GitHub Pages site.
+- Your project must be live as a [GitHub Pages project site](https://pages.github.com/).
 
 ## Layout comps
 
@@ -56,7 +56,7 @@ Mobile layout when buttons are clicked:
 ### Functional Expectations
 
 - 4: Application meets all of the layout and functional expectations.
-- 3: Application meets all of the layout and has one key feature fully implemented with one key feature partially implemented.
+- 3: Application meets all of the layout expectations and has one key feature fully implemented with one key feature partially implemented _OR_ meets all functional expectations and has partially implemented layout.
 - 2: Application has partially implemented features and layout.
 - 1: Application does not meet the requirements.
 
