@@ -1,0 +1,242 @@
+---
+title: CSS Performance and Organization
+length:
+tags: css, performance, organization
+---
+
+### Goals
+
+By the end of this lesson, you will know/be able to:
+
+* Deepen understanding of how browsers read CSS selectors
+* Utilize best practices around writing effective CSS
+* Be able to plan and execute well structured CSS
+
+
+### CSS Organization
+
+We all want to write clear, easy to maintain CSS, but as a project grows and more people are touching the codebase that goal can quickly morph into an unwieldy challenge. Once-organized stylesheets can quickly degrade into a giant pile of spaghetti code. However, we can help maintain the integrity of our CSS by keeping a few concepts and rules in mind.
+
+#### Naming Conventions
+
+Every programming language has it's own conventions around naming, and CSS, although not exactly a language, is no exception.
+
+There are several different naming conventions. Here are some you will see often:
+
+_Camel case_ uses capital letters to form a compound word rather than spaces to separate words. Generally, the first word is lower case, and any following words are capitalized. The capital letters popping up look a little bit like a camel's hump. Example: `thisIsCamelCase`. You may see examples that begin with a capital letter, which is known as `UpperCamelCase.`
+
+_Snake case_ uses an underscore to separate lowercase words. It's called "snake case" because it is is reminiscent of a snake slithering along the ground. Example: `this_is_snake_case`
+
+Similar to snake case, _kebab case_ uses dashes to separate words (note: there is some disagreement about what this convention is called, and some refer to it "lisp case", or even as a variation of "snake case"). "Kebab" references the dashes skewering the words together, much like a shish kebab. This is the standard for CSS and HTML. Other naming conventions will still work, but kebab case is likely to be what you'll see used most commonly with HTML and CSS. It's good to get into the habit of using it. Example: `this-is-kebab-case`
+
+For our purposes, we'll be using kebab case.
+
+#### Selector Rules
+
+A CSS rule consists of a selector and declaration block, with the selector indicating which HTML element we want to style, and the declarations controlling what styles we apply to that HTML element. We can group our CSS rules into four main categories:
+
+* ID rules
+* Class rules
+* Tag rules
+* Universal rules
+
+In a rule that uses more than one selector to target an HTML element, the last part of the selector is known as a _key selector_. The key selector is what matches the exact HTML element to which the style is being applied, rather than it's ancestors.
+
+For example, key selectors would be the `p`, `a`, and `img` selectors below:
+
+```css
+section p,
+ul li a,
+footer img {...}
+```
+
+As we can see in this example, selectors are read starting on the right with the key selector then moving to the left. A key selector can be an ID, Class, Tag, or Universal rule.
+
+An _ID Rule_ has a id selector as it's key selector:
+
+```css
+aside#main {...}
+p#footer {...}
+button#hero:hover {...}
+```
+
+Similarly, a _Class Rule_ has a class selector as it's key selector:
+
+```css
+section.container {...}
+.three-column {...}
+.main-content {...}
+```
+
+If there is no `id` or `class`, then the _Tag Rule_ is used. When we an HTML tag itself is used as the key selector, it falls into this category:
+
+```css
+article {...}
+header {...}
+li {...}
+```
+
+A _Universal Rule_ is applied to the entire HTML page.
+
+```css
+* {...}
+```
+
+#### How this effects our efficiency and organization
+
+Our styles are matched starting with the key selector then moving left. The browser will continue to look further up this tree of selectors as it narrows the matches for the rule, until it either finds the match or abandons it because of a mismatch.
+
+This is a primary concept to understand: the rule categories exist to filter out irrelevant rules so the systems trying to filter them don't waste time trying to match things unnecessarily. Our CSS will be more effective for both the systems rendering it and the people working with it if we keep the number of rules needed for each element to a minimum.
+
+The rules listed above are in order of efficiency. Example: only ID rules that match an element's `id` will be checked, only Class rules for a particular `class` will be checked, only Tag rules that match a specific `tag` will be checked, and Universal rules will always be checked.
+
+#### General Guidelines
+
+##### Avoid Universal Rules
+Because Universal rules are always checked, they should be used sparingly.
+
+##### ID and Class rules don't need a tag name
+By putting an `id` or `class` on a tag, you are already clearly indicating where you want a specific style applied. In the majority of cases, this means it's unnecessary to include the tag to which you've applied an `id` or `class`.
+
+For example:
+
+```css
+nav#primary-navigation {...}
+p.secondary-content {...}
+```
+
+would be better written like this:
+
+```css
+#primary-navigation {...}
+.secondary-content {...}
+```
+
+##### On Being Too Specific
+
+Using a long list of tags and selectors to narrow down where you want a style applied is inefficient from a systems perspective and it's also inefficient from a human point of view -- if it's too complicated for another  developer (or future-you) to figure out where to make a change to CSS reasonably quickly, a new CSS rule may just get slapped onto the bottom on the stylesheet. That will result in styles that are bloated and unwieldy to manage. Here's an example of what a long list of selectors might look like:
+
+```css
+header nav ul li a.nav-link {...}
+}
+```
+
+You can see that this is very specific. We won't be able to reuse these styles, simply because we've made them so locked in to the context of our main navigation. But if we think about it, it's very possible that we could have other elements on our site that we would want to use these same styles. It would be nice to write them once and then apply the class to HTML tags as needed. We can do that with just a little clean up:
+
+```css
+.nav-link {...}
+}
+```
+
+We've eliminated unnecessary specificity, made our CSS more reusable, and it still does exactly the same thing in our header navigation.
+
+### Performance Beyond Selectors
+
+In the early 2000's, how developers structured their CSS selectors could have a big impact on a [page's efficiency](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS). Understanding how the browser read through and gave precedence to certain key selectors and over others was a critical skill to have if you wanted your site to work well. Today, conforming to these guidelines that were intended to optimize page performance allows us to write modular and understandable styles that make it easier and faster for _humans_ to understand our CSS. These early best practices are still relevant and useful but there have been advances, [as outlined by Nicole Sullivan here](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/), that allow us to write CSS in a way that makes the most sense for the site architecture we want rather than what selectors are going to be most efficient to render.
+
+#### Style Sharing
+
+This change makes browsers have much less work to do. Once a browser has figured out how to style one element in the style tree, it won't need to do it again for the same type of element in the same context. For example, if the browser has calculated the styles for one paragraph it won't have to again for the following paragraphs it encounters:
+
+```html
+<section>
+  <p>Only</p>
+  <p>Calculated</p>
+  <p>Once</p>
+</section>
+```
+
+#### Rule Hashes
+
+This takes the idea of a key selector one step further. Rule hashes break your stylesheet into key selector-based groups. This means the browser only has to look through styles with a key selector of `p` in the following example:
+
+```css
+section p {...}
+.hero-unit p {...}
+#sidebar p {...}
+```
+
+This is nice because it means the browser isn't looking through every selector, it can very quickly narrow it's search to find which selectors could match.
+
+#### Ancestor Filters
+
+Ancestor filters are _probability filters_ that calculate the likelihood a selector will match. This is a tricky piece of fancy footwork that means the browser can very quickly eliminate rules when an element doesn't have the required matching ancestors. It tests for descendant and child selectors, making matches based on id, class, and tag. This filtering approach has taken something that was a slow process and almost made it a non-issue using a [bloom filter](https://en.wikipedia.org/wiki/Bloom_filter).
+
+A bloom filter is a data structure that is "used to test whether an element is a member of a set" -- in this case, checking to find if our selectors match! Bloom filters allow false positives, but not false negatives, so as soon as they hit a non-match the browser knows it can stop looking and move on. Because large stylesheets will have more false positives to check, it's a good idea to keep your CSS lean.
+
+In short: modern CSS and browsers have evolved to be fairly speedy, and the key to making sure we don't get in their way is to be mindful of file size and moderate in our use of selectors.
+
+### Planning and Organizing Content
+
+We've discussed how our selectors are read, and how browsers have evolved to make the process of narrowing selectors speedy. We know that our best bet to write CSS that lets these processes work as efficiently as possible is to keep it lean and organized, which has the additional benefit of making it easier to understand and maintain for humans. As is often the case in the programming world, there are different schools of thought around how to organize and structure code to achieve this optimized 'lean and organized' state. We'll be discussing how to think about structuring your content based on the process outlines in [Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/).
+
+Jonathan proposes grouping your HTML elements in your styles using 5 primary categories. 3 of these categories lend themselves to smaller sites and help developers focus on organization of content, structure, and naming conventions. These 3 categories are _base_, _layout_, and _module_.
+
+#### Base styles
+
+_Base_ level styles may be applied to whole site, and are limited to element selectors like `html`, `body` , `h1, h2, h3` and CSS resets/normalizers. Styles in this base category set the foundation for everything else you add to build your site. Ideally, base category styles are very minimal. These may be setting margin on `body`, a base background color for the page, or pulling in a custom font to be used throughout the site.
+
+#### Layout Styles
+
+_Layout_ level styles identify the main structural elements and main layout sections/containers on the page. For example, these containers might include a header, sidebar, main-content. At this point, we are not focused about what the content is or how it looks, we're just interested in defining the structure of our page.
+
+It's also a good place to think about how to approach making your layout responsive, because we're working with the simplest form of the blocks of major sections. Layout styles effectively function as your grid system, which allows you to figure out your responsive strategy broadly first, before you start dealing with the layout of the detailed content inside.
+
+It's really all about figuring out what the primary chunks of your layout/page are, and deciding how you're going to group and work with them.
+
+#### Module Styles
+
+_Module_ level styles make up the content pieces within layout elements. These make up most of your site, and while the other categories are important module level styles make up the majority of styles in your project.
+
+Fortunately, designers work very hard to create cohesive visual languages for digital products -- this means that more often than not, a site will have many repeating visual approaches that can be translated into very reusable code. Each module you create is an interface that a user has to learn to use, and that has been carefully thought through and created by a designer. It has to be written, delivered, and maintained by a developer. This is good reason to simplify your CSS, and write code that is modular and reusable.
+
+A module may have variations on a basic visual structure. Take buttons, for example. We may have a consistent style approach on all our buttons, but perhaps some need to be larger or a different color. In these cases, we identify our base module styles, and then add _sub-module_ styles to refine. We are applying these styles to one element, in this case a `button`, and it's ok to have more than one selector used to apply our styles because it gives us flexibility and allows us to reuse our code as much as possible. It's about identifying patterns in your layout.
+
+For example, we may have a basic button style, and an active button style which might change the background color:
+
+```html
+<button class="btn">Basic Button</button>
+<button class="btn btn-destroy">Delete Button</button>
+```
+
+We can have child elements within a module that have specific styles applied to them. This means that we want to be able to identify 
+
+### File Structure
+
+Now that we have a clearer idea of how to approach naming and organizing our content, we can go a step further and talk about breaking our styles into multiple files. On small sites, using a single stylesheet isn't going to cause too many problems. Once a site grows to several pages, or if you have layout elements with complex content, a single stylesheet becomes very hard to manage.
+
+<!-- it's ok to have multiple style sheets -->
+<!-- it can help you organize your files and your site -->
+<!-- it can help you remember how you planned/approached/structured your site -->
+<!-- smaller CSS files means easier to read through -->
+<!--  -->
+
+We have been working with all our styles in one stylesheet so far, but from an organization perspective it's a good idea to pull out groups of related styles into their own style sheets. It makes it quicker to find specific styles, it reenforces a modular approach, and it makes it more straightforward to locate specific styles if you need to make a change. This might mean you have stylesheets named something like this:
+
+base.css
+
+navigation.css
+
+hero-unit.css
+
+footer.css
+
+By grouping our styles together by content (or layout) type, we reenforce that we are writing our CSS from a more structural point of view rather than what the particular content inside a particular element is.
+
+
+### Resources referenced in this lesson:
+
+[Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
+
+[CSS Selector Performance has changed! (For the better)](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/)
+
+[Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/)
+
+
+### Additional Resources
+
+[CSS Guidelines](http://cssguidelin.es/)
+
+[Front End Masters: Scaleable and Modular Architecture for CSS (SMACSS)](https://frontendmasters.com/courses/smacss/)
+
+[CSS Tricks: Efficiently Rendering CSS](https://css-tricks.com/efficiently-rendering-css/)
