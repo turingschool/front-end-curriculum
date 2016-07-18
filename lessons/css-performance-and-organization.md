@@ -239,8 +239,6 @@ We may want to apply different states to elements on our page -- these states mi
 
 Themes are generally something a user can customize and select. For example, the task management product, [Trello](https://trello.com/) allows you to specific what background color you want to use on each project board. This is an example of theming. It's not terribly common, as many products and websites don't want to give users control of their company branding elements in this way.
 
-<!-- ### Naming Conventions -->
-
 ### File Structure
 
 Now that we have a clearer idea of how to approach naming and organizing our content, we can go a step further and talk about breaking our styles into multiple files. On small sites, using a single stylesheet isn't going to cause too many problems. Once a site grows to several pages, or if you have layout elements with complex content, a single stylesheet becomes very hard to manage.
