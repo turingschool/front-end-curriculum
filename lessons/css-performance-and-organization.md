@@ -170,11 +170,11 @@ In short: modern CSS and browsers have evolved to be fairly speedy, and the key 
 
 We've discussed how our selectors are read, and how browsers have evolved to make the process of narrowing selectors speedy. We know that our best bet to write CSS that lets these processes work as efficiently as possible is to keep it lean and organized, which has the additional benefit of making it easier to understand and maintain for humans. As is often the case in the programming world, there are different schools of thought around how to organize and structure code to achieve this optimized 'lean and organized' state. We'll be discussing how to think about structuring your content based on the process outlines in [Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/).
 
-Jonathan proposes grouping your HTML elements in your styles using 5 primary categories. 3 of these categories lend themselves to smaller sites and help developers focus on organization of content, structure, and naming conventions. These 3 categories are _base_, _layout_, and _module_.
+Jonathan proposes grouping your HTML elements in your styles using 5 primary categories. These categories help developers focus on organization of content, structure, and naming conventions. These 5 categories are _base_, _layout_, _module_, _state_, and _theme_.
 
-#### Base styles
+#### Base Styles
 
-_Base_ level styles may be applied to whole site, and are limited to element selectors like `html`, `body` , `h1, h2, h3` and CSS resets/normalizers. Styles in this base category set the foundation for everything else you add to build your site. Ideally, base category styles are very minimal. These may be setting margin on `body`, a base background color for the page, or pulling in a custom font to be used throughout the site.
+_Base_ level styles may be applied to whole site, and are limited to element selectors like `html`, `body` , `h1, h2, h3` and CSS resets/normalizers, which are targeting these element selectors as well. Styles in this base category set the foundation for everything else you add to build your site. Ideally, base category styles are very minimal. These may be setting margin on `body`, a background color for the page, or pulling in a custom font to be used throughout the site.
 
 #### Layout Styles
 
@@ -182,11 +182,19 @@ _Layout_ level styles identify the main structural elements and main layout sect
 
 It's also a good place to think about how to approach making your layout responsive, because we're working with the simplest form of the blocks of major sections. Layout styles effectively function as your grid system, which allows you to figure out your responsive strategy broadly first, before you start dealing with the layout of the detailed content inside.
 
+![layout styles][layout-styles]
+
+[layout-styles]: /assets/images/lessons/css-organization/css-organization_01.png
+
 It's really all about figuring out what the primary chunks of your layout/page are, and deciding how you're going to group and work with them.
 
 #### Module Styles
 
 _Module_ level styles make up the content pieces within layout elements. These make up most of your site, and while the other categories are important module level styles make up the majority of styles in your project.
+
+![module styles][module-styles]
+
+[module-styles]: /assets/images/lessons/css-organization/css-organization_02.png
 
 Fortunately, designers work very hard to create cohesive visual languages for digital products -- this means that more often than not, a site will have many repeating visual approaches that can be translated into very reusable code. Each module you create is an interface that a user has to learn to use, and that has been carefully thought through and created by a designer. It has to be written, delivered, and maintained by a developer. This is good reason to simplify your CSS, and write code that is modular and reusable.
 
@@ -199,27 +207,53 @@ For example, we may have a basic button style, and an active button style which 
 <button class="btn btn-destroy">Delete Button</button>
 ```
 
-We can have child elements within a module that have specific styles applied to them. This means that we want to be able to identify 
+![button styles][button-styles]
+
+[button-styles]: /assets/images/lessons/css-organization/css-organization_03.png
+
+We can have child elements within a module that have specific styles applied to them. This means that we want to be able to identify these elements and have them associated specifically with the root module, and not with anything outside of the module. Again, this is an exercise in identifying and isolating patterns in your design to control how our styles that are applied. We want to target those repeating elements and identify them so we can reuse the styles.
+
+For example, perhaps we have a card that we use to organize similar content in a consistent way. This structure of these cards is always the same, so we can identify it as a module, and within it we can approach it's contents as sub-module elements. Example:
+
+```html
+<section class="card">
+  <h2 class="card-header">Header</h2>
+  <img class="card-img" src="images/a-nice-image.jpg" />
+  <p class="card-body">
+    Card content here.
+  </p>
+</section>
+```
+
+![card styles][card-styles]
+
+[card-styles]: /assets/images/lessons/css-organization/css-organization_04.png
+
+We can see that the class names are specific to cards. Modules and sub-modules allow us to target groups of like content and apply specific styles to them. Our goal is to control the cascade, and use it to our advantage.
+
+#### State styles
+
+We may want to apply different states to elements on our page -- these states might be things like `hover` or `active`. They are used to show that something is changing on your page, add feedback and information for the user as they interact with the site, and often indicate a Javascript dependancy. They are like a module variation.
+
+#### Theme styles
+
+Themes are generally something a user can customize and select. For example, the task management product, [Trello](https://trello.com/) allows you to specific what background color you want to use on each project board. This is an example of theming. It's not terribly common, as many products and websites don't want to give users control of their company branding elements in this way.
+
+<!-- ### Naming Conventions -->
 
 ### File Structure
 
 Now that we have a clearer idea of how to approach naming and organizing our content, we can go a step further and talk about breaking our styles into multiple files. On small sites, using a single stylesheet isn't going to cause too many problems. Once a site grows to several pages, or if you have layout elements with complex content, a single stylesheet becomes very hard to manage.
 
-<!-- it's ok to have multiple style sheets -->
-<!-- it can help you organize your files and your site -->
-<!-- it can help you remember how you planned/approached/structured your site -->
-<!-- smaller CSS files means easier to read through -->
-<!--  -->
-
 We have been working with all our styles in one stylesheet so far, but from an organization perspective it's a good idea to pull out groups of related styles into their own style sheets. It makes it quicker to find specific styles, it reenforces a modular approach, and it makes it more straightforward to locate specific styles if you need to make a change. This might mean you have stylesheets named something like this:
 
-base.css
+`base.css`
 
-navigation.css
+`navigation.css`
 
-hero-unit.css
+`hero-unit.css`
 
-footer.css
+`footer.css`
 
 By grouping our styles together by content (or layout) type, we reenforce that we are writing our CSS from a more structural point of view rather than what the particular content inside a particular element is.
 
