@@ -132,7 +132,7 @@ We've eliminated unnecessary specificity, made our CSS more reusable, and it sti
 
 ### Performance Beyond Selectors
 
-In the early 2000's, how developers structured their CSS selectors could have a big impact on a [page's efficiency](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS). Understanding how the browser read through and gave precedence to certain key selectors and over others was a critical skill to have if you wanted your site to work well. Today, conforming to these guidelines that were intended to optimize page performance allows us to write modular and understandable styles that make it easier and faster for _humans_ to understand our CSS. These early best practices are still relevant and useful but there have been advances, [as outlined by Nicole Sullivan here](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/), that allow us to write CSS in a way that makes the most sense for the site architecture we want rather than what selectors are going to be most efficient to render.
+In the early 2000's, how developers structured their CSS selectors could have a big impact on a page's efficiency. Understanding how the browser read through and gave precedence to certain key selectors over others was a critical skill to have if you wanted your site to work well. Today, conforming to these guidelines that were intended to optimize page performance allows us to write modular and understandable styles that make it easier and faster for _humans_ to understand our CSS. These early best practices are still relevant and useful but there have been advances, [as outlined by Nicole Sullivan here](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/), that allow us to write CSS in a way that makes the most sense for the site architecture we want rather than what selectors are going to be most efficient to render.
 
 #### Style Sharing
 
@@ -162,13 +162,13 @@ This is nice because it means the browser isn't looking through every selector, 
 
 Ancestor filters are _probability filters_ that calculate the likelihood a selector will match. This is a tricky piece of fancy footwork that means the browser can very quickly eliminate rules when an element doesn't have the required matching ancestors. It tests for descendant and child selectors, making matches based on id, class, and tag. This filtering approach has taken something that was a slow process and almost made it a non-issue using a [bloom filter](https://en.wikipedia.org/wiki/Bloom_filter).
 
-A bloom filter is a data structure that is "used to test whether an element is a member of a set" -- in this case, checking to find if our selectors match! Bloom filters allow false positives, but not false negatives, so as soon as they hit a non-match the browser knows it can stop looking and move on. Because large stylesheets will have more false positives to check, it's a good idea to keep your CSS lean.
+A bloom filter is a data structure that is "used to test whether an element is a member of a set" -- in this case, checking to find if our selectors match! Bloom filters allow false positives, but not false negatives, so as soon as they hit a non-match the browser knows it can stop looking there and move on. Because large stylesheets will have more false positives to check, it's still a good idea to keep your CSS lean.
 
 In short: modern CSS and browsers have evolved to be fairly speedy, and the key to making sure we don't get in their way is to be mindful of file size and moderate in our use of selectors.
 
 ### Planning and Organizing Content
 
-We've discussed how our selectors are read, and how browsers have evolved to make the process of narrowing selectors speedy. We know that our best bet to write CSS that lets these processes work as efficiently as possible is to keep it lean and organized, which has the additional benefit of making it easier to understand and maintain for humans. As is often the case in the programming world, there are different schools of thought around how to organize and structure code to achieve this optimized 'lean and organized' state. We'll be discussing how to think about structuring your content based on the process outlines in [Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/).
+We've discussed how our selectors are read, and how browsers have evolved to make the process of narrowing selectors speedy. We know that our best bet to write CSS that lets these processes work as efficiently as possible is to keep it lean and organized, which has the additional benefit of making it easier to understand and maintain for humans. As is often the case in the programming world, there are different schools of thought around how to organize and structure code to achieve this optimized 'lean and organized' state. We'll be discussing how to think about structuring your content based on the process outlined in [Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/).
 
 Jonathan proposes grouping your HTML elements in your styles using 5 primary categories. These categories help developers focus on organization of content, structure, and naming conventions. These 5 categories are _base_, _layout_, _module_, _state_, and _theme_.
 
@@ -180,13 +180,13 @@ _Base_ level styles may be applied to whole site, and are limited to element sel
 
 _Layout_ level styles identify the main structural elements and main layout sections/containers on the page. For example, these containers might include a header, sidebar, main-content. At this point, we are not focused about what the content is or how it looks, we're just interested in defining the structure of our page.
 
-It's also a good place to think about how to approach making your layout responsive, because we're working with the simplest form of the blocks of major sections. Layout styles effectively function as your grid system, which allows you to figure out your responsive strategy broadly first, before you start dealing with the layout of the detailed content inside.
-
 ![layout styles][layout-styles]
 
-[layout-styles]: /assets/images/lessons/css-organization/css-organization_01.png
+It's also a good place to think about how to approach making your layout responsive, because we're working with the simplest form of the blocks of major sections. Layout styles effectively function as your grid system, which allows you to figure out your responsive strategy broadly first, before you start dealing with the layout of the detailed content inside.
 
 It's really all about figuring out what the primary chunks of your layout/page are, and deciding how you're going to group and work with them.
+
+[layout-styles]: /assets/images/lessons/css-organization/css-organization_01.png
 
 #### Module Styles
 
@@ -200,7 +200,7 @@ Fortunately, designers work very hard to create cohesive visual languages for di
 
 A module may have variations on a basic visual structure. Take buttons, for example. We may have a consistent style approach on all our buttons, but perhaps some need to be larger or a different color. In these cases, we identify our base module styles, and then add _sub-module_ styles to refine. We are applying these styles to one element, in this case a `button`, and it's ok to have more than one selector used to apply our styles because it gives us flexibility and allows us to reuse our code as much as possible. It's about identifying patterns in your layout.
 
-For example, we may have a basic button style, and an active button style which might change the background color:
+For example, we may have a basic button style, and a destroy button style which might change the background color:
 
 ```html
 <button class="btn">Basic Button</button>
@@ -211,7 +211,7 @@ For example, we may have a basic button style, and an active button style which 
 
 [button-styles]: /assets/images/lessons/css-organization/css-organization_03.png
 
-We can have child elements within a module that have specific styles applied to them. This means that we want to be able to identify these elements and have them associated specifically with the root module, and not with anything outside of the module. Again, this is an exercise in identifying and isolating patterns in your design to control how our styles that are applied. We want to target those repeating elements and identify them so we can reuse the styles.
+We can have child elements within a module that have specific styles applied to them. This means that we want to be able to identify these elements and have them associated specifically with the root module, and not with anything outside of the module. Again, this is an exercise in identifying and isolating patterns in your design to control how our styles are applied. We want to target those repeating elements and identify them so we can reuse the styles.
 
 For example, perhaps we have a card that we use to organize similar content in a consistent way. This structure of these cards is always the same, so we can identify it as a module, and within it we can approach it's contents as sub-module elements. Example:
 
