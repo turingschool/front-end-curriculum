@@ -28,6 +28,10 @@ Button specs:
 
 ![button specs][button-specs]
 
+Button specs on `:hover`
+
+![button hover specs][button-hover-specs]
+
 Desktop layout:
 
 ![desktop layout][desktop-base]
@@ -37,19 +41,11 @@ Mobile layout:
 
 ![mobile layout][mobile-base]
 
-Desktop layout when buttons are hovered over:
-
-![desktop hover][desktop-hover]
-
-Mobile layout when buttons are clicked:
-
-![mobile hover][mobile-hover]
 
 [desktop-base]: /assets/images/projects/color-changer/color-change-02.png
 [mobile-base]: /assets/images/projects/color-changer/color-change-03.png
-[desktop-hover]: /assets/images/projects/color-changer/color-change-01.png
-[mobile-hover]: /assets/images/projects/color-changer/color-change-04.png
 [button-specs]: /assets/images/projects/color-changer/color-change-05.png
+[button-hover-specs]: /assets/images/projects/color-changer/color-change-06.png
 
 ## Rubric
 
