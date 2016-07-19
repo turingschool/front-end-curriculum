@@ -142,7 +142,7 @@ Student chooses an additional feature or performance optimization to add to the 
 ### Specification Adherence
 
 * 4 - The application meets all of the requirements listed above and implements one or more of the extensions.
-* 3 - The application consists of one page with all of the major functionality being provided by jQuery. There is no use of `format.js` in Rails. There is no use of unobstrusive JavaScript. There are no front-end frameworks used in the application. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
+* 3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
 * 2 - The application is in a usable state, but is missing 1 or more of the features outline in the specification above.
 * 1 - The application is missing 3 or more smaller features or 1 major feature essential to having a complete application.
 * 0 - The application is unusable.
