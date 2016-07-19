@@ -26,7 +26,8 @@ Your entire application will consist of one HTML page or template.
 
 ### Data Model
 
-* An Idea has a _title_, a _body_, and a _quality_.
+* An Idea has an _id_, _title_, a _body_, and a _quality_.
+  * The _id_ should be a unique identifier.
   * _title_ and _body_ are free-form strings.
 * _quality_  should be one of the follow: "genius", "plausible", and "swill."
 * By default, the idea's "quality" should default to the lowest setting (i.e. "swill").
