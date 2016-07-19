@@ -154,13 +154,6 @@ Student chooses an additional feature or performance optimization to add to the 
 * 2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 * 1 - The application is confusing or difficult to use.
 
-### Testing
-
-* 4 - Project has a running test suite that exercises the application at multiple levels including JavaScript tests.
-* 3 - Project has a running test suite that tests and multiple levels but fails to cover some features. All controller actions are covered by tests. The application makes some use of integration testing.
-* 2 - Project has sporadic use of tests and multiple levels. Not all controller actions are tested. There are little or no attempts at integration testing.
-* 1 - There is little or no evidence of testing in this application.
-
 ### JavaScript Style
 
 * 4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
