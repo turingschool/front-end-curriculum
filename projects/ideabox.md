@@ -90,6 +90,36 @@ We'd like our users to be able to easily find specific ideas they already create
 * As a user types in the search box, the list of ideas should filter in real time to only display ideas whose title or body include the user's text. The page _should not_ reload.
 * Clearing the search box should restore all the ideas to the list.
 
+#### Layout comps
+
+Desktop layout:
+
+![desktop specs][desktop-base]
+
+Mobile layout:
+
+![mobile specs][mobile-base]
+
+Full mobile layout:
+
+![full mobile layout][mobile-full]
+
+
+Color, font, and icon spec:
+
+![color font and icon specs][button-hover-specs]
+
+#### Link to icon files
+
+You will need the `svg` files for the delete, upvote, and downvote icons. [Here's the link.](https://drive.google.com/open?id=0B_lPnjyMN6-CaHpTQlRUdzNnZ0U)
+
+
+[desktop-base]: /assets/images/projects/ideabox/ideabox-01.png
+[mobile-base]: /assets/images/projects/ideabox/ideabox-02.png
+[mobile-full]: /assets/images/projects/ideabox/ideabox-03.png
+[button-hover-specs]: /assets/images/projects/ideabox/ideabox-04.png
+
+
 ### Extensions
 
 Extensions are a great way to earn additional points beyond the 150 available in this project. That said, awarding points for delivering a given extension is up to the instructor, who may only award partial points depending on the quality of the implementation. The points listed below represent the maximum number of points. Extensions can _not_ be done after the fact without instructor permission in advance.
