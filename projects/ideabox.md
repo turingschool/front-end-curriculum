@@ -61,7 +61,7 @@ When a user clicks "Save":
 
 When viewing the idea list:
 
-* Each idea in the list should have a link or button to "Delete" (or 𝗫, etc).
+* Each idea in the list should have a link or button to "Delete" (or 𝗫).
 * Upon clicking "Delete", the appropriate idea should be removed from the list.
 * The page _should not_ reload when an idea is deleted.
 * The idea should be removed from `localStorage`. It should not re-appear on next page load.
@@ -70,10 +70,10 @@ When viewing the idea list:
 
 As we said above, ideas should start out as "swill." In order to change the recorded quality of an idea, the user will interact with it from the idea list.
 
-* Each idea in the list should include a "thumbs up" and "thumbs down" button.
-* Clicking thumbs up on the idea should increase its quality one notch ("swill" → "plausible",
+* Each idea in the list should include an "upvote" and "downvote" button.
+* Clicking upvote on the idea should increase its quality one notch ("swill" → "plausible",
   "plausible" → "genius").
-* Clicking thumbs down on the idea should decrease its quality one notch ("genius" → "plausible",
+* Clicking downvote on the idea should decrease its quality one notch ("genius" → "plausible",
   "plausible" → "swill").
 * Incrementing a "genius" idea or decrementing a "swill" idea should have no effect.
 
