@@ -12,7 +12,21 @@ tags: jekyll, github pages
 
 #### Installing Jekyll
 
-Since Jekyll is a you have to do a little set-up before you can start using it. The easiest way to install Jekyll is through Ruby Gems, so if you've gone through the install process for Ruby already you're good to go. If you haven't, you may be fine since Ruby comes pre-loaded on Macs. If you get stuck, we'll [troubleshoot](https://jekyllrb.com/docs/troubleshooting/).
+Since Jekyll is a you have to do a little set-up before you can start using it. The easiest way to install Jekyll is through Ruby Gems, so if you've gone through the install process for Ruby already you're good to go. If you haven't, you may be fine since Ruby comes pre-loaded on Macs. If you get stuck, we'll [troubleshoot](https://jekyllrb.com/docs/troubleshooting/). Here's some [additional documentation](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) if you're having trouble.
+
+Since we're installing Jekyll with Ruby Gems, we'll need to check that we have Ruby 2.0.0 or higher installed on our computers:
+
+```
+ruby --version
+ruby 2.X.X
+```
+
+Then you'll need to install Bundler:
+
+```
+gem install bundler
+# Installs the Bundler gem
+```
 
 Enter this in the command line:
 
@@ -67,7 +81,38 @@ Go ahead and navigate into your new project directory and take a look around. Yo
 
 For our purposes today, we'll just be using the `_includes` and `_layouts` directories, we won't worry about the other directories and files Jekyll gave us for now. If you're curious, they have great [documentation about structure](https://jekyllrb.com/docs/structure/).
 
+### Viewing your site locally
 
-### Learning to Fish
+Viewing your Jekyll site locally is a little bit trickier than just viewing a site built with HTML files. Jekyll comes with a built-in development server that will allow you to preview what the generated site will look like in your browser locally.
 
-Jekyll has lots of well documented and user-friendly. To take a deep dive into it, take a look at the [documentation](https://jekyllrb.com/docs/home/), and here is a [beginner-friendly tutorial](https://css-tricks.com/building-a-jekyll-site-part-1-of-3/) from CSS Tricks.
+To do that, open up your terminal, navigate into your Jekyll project's root directory and run this command:
+
+```
+jekyll serve
+```
+
+This will spin up a server, and if we read the message it displays we'll find the URL to enter into our browser. Give it a try!
+
+### Adding Pages
+
+Like a basic GitHub Pages site that only used HTML and CSS files, Jekyll will use `index.html` in your site's root folder as your homepage by default. You can add additional html pages -- perhaps `about.html` or `projects.html` -- to your root folder as well and then link to those pages to create a multi-page site. Here's an example from the Jekyll documentation of what that file tree and the associated page URLs would look like:
+
+```
+.
+|-- _config.yml
+|-- _includes/
+|-- _layouts/
+|-- _posts/
+|-- _site/
+|-- about.html    # => http://example.com/about.html
+|-- index.html    # => http://example.com/
+|-- other.md      # => http://example.com/other.html
+└── contact.html  # => http://example.com/contact.html
+```
+
+To read more, check out the [documentation about creating pages](https://jekyllrb.com/docs/pages/).
+
+
+### Your Turn!
+
+Using Jekyll rather than plain HTML and CSS files for your personal portfolio sites will save you a lot of time and energy. It's well worth taking the time to make the switch, so go for it! Jekyll has lots of well documented and user-friendly. To take a deep dive into it, take a look at the [documentation](https://jekyllrb.com/docs/home/).
