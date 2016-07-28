@@ -4,11 +4,11 @@ title: Seven Weeks of Fonts
 
 ## Project Introduction
 
-Typography is a critical piece of the web design puzzle. At it's most basic, it makes your site easy to read and understand. It can also express emotion, add significant depth and richness to layouts, and guide user's assumptions about the site or product.
+Typography is a critical piece of the web design puzzle. At it's most basic, it makes your site easy to read and understand. It can also express emotion, add significant depth and richness to layouts, and guide users' assumptions about the site or product.
 
-The choices a designer makes around typography are calculated, precise, and deeply thought through. It's important to understand and honor this as you build a site that is either based on comps from a designer or as you design a site yourself.
+The choices a designer makes around typography are calculated, precise, and deeply thought through. It's important to understand and honor this as you build a site whether it be based on comps from a designer or as you design a site yourself.
 
-To help us gain a better understanding of how we can use typography and fonts as a tool for visual expression, we will be doing a variation of a common [Intro to Typography exercise](http://www.designingwithtype.com/cooper5/5_expressive1.html) to help enforce the concept that type can be used as a visual communication tool which enhances [the meaning and emotion](http://www.designingwithtype.com/cooper5/5_intro.html) of the content beyond simply spelling out words.
+To help us gain a better understanding of how we can use typography and fonts as tools for visual expression, we will be doing a variation of a common [Intro to Typography exercise](http://www.designingwithtype.com/cooper5/5_expressive1.html). This project will enforce the concept that type can be used as a visual communication tool which enhances [the meaning and emotion](http://www.designingwithtype.com/cooper5/5_intro.html) of the content beyond simply conveying text.
 
 ## Project Overview
 
@@ -21,8 +21,8 @@ To help build typography and layout skills simultaneously, we'll make our challe
 Your Seven Weeks of Fonts project must meet the following criteria:
 
 - Must have a one-page site holding all of the examples
-- One-page site to be live on gh-pages
-- Each weekly exercise to be a section of the one-page site, and needs to include the date, its number in the series, and names + links to the fonts used
+- One-page site must be live on gh-pages
+- Each weekly exercise should be a section of the one-page site, and needs to include the date, its number in the series, and names + links to the fonts used
 - Both specified fonts
 - The specified copy
 - All layouts must be responsive
