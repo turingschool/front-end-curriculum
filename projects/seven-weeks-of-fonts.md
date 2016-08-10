@@ -29,6 +29,8 @@ Your Seven Weeks of Fonts project must meet the following criteria:
 
 ## Week One
 
+For your first week, you will use the fonts and copy below for your layout. You should also consider how color and scale impact your layouts.
+
 Fonts:
 
 - [Unna](https://fonts.google.com/specimen/Unna?category=Serif,Sans+Serif&query=unna)
