@@ -4,15 +4,17 @@ title: Chatroom Adventures
 
 ## Project Introduction
 
-Along with day-glow clothes, grunge rock, and fanny packs, chatrooms were a staple of the 90's. We'll be getting back to our Internet roots by building our very own chat applications.
+Along with day-glow clothes, grunge rock, and fanny packs, chatrooms were a staple of the 90s. We'll be getting back to our Internet roots by building our very own chat applications.
 
 At the end of the day, let's be really honest: this isn't that much different than Idea Box or Linked List, right? Yea, that's fair. But, this time around we are going to up the ante a little bit.
 
-- Test-driven (Feature tests as well as unit tests)
+- Test-driven (feature tests as well as unit tests)
 - Using build tools (like you did with Game Time)
 - Students design it (like you didn't do with Idea Box)
 - Mobile-first (like you've never done)
 - Accessible
+
+Your main goal for this phase of the project is to focus on the user interface. In later interations, we will add the actual functionality that makes it a chat application.
 
 ### Project Timeline
 
@@ -71,7 +73,6 @@ Please emphasis quality over quantity. (That said, quality is not an excuse for 
 
 - The application should only show the ten most recent messages.
 - The application should contain a button labeled "Show more messages…" which will load additional messages from the past.
-
 
 ## Instructor Evaluation Points
 
