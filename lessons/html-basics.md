@@ -96,7 +96,7 @@ is just as valid as
 <!dOcTyPe hTmL>
 ```
 
-...although you should probably stick to upcase, downcase, or regular ol' capitalizing. You aren't an animal, right?
+...although you should probably stick to upcase, downcase, or regular ol' capitalizing. Because you aren't an animal, are you?
 
 #### Page Contents
 
