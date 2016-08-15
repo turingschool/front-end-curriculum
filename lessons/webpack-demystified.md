@@ -40,7 +40,7 @@ All of these JS files need to be loaded by your browser in a certain order, afte
 
 All of the CSS files need to be applied to your HTML, but not until the SASS compiler has done it's job.  
 
-And don't forget about the images or static asset files - those need to be pulled form the CSS files or maybe from the HTML code and stuck in their appropriate places relative to where the browser will render them.  
+And don't forget about the images or static asset files - those need to be pulled from the CSS files or maybe from the HTML code and stuck in their appropriate places relative to where the browser will render them.  
 
 All of that is a lot of stuff to worry about not only for the developer, but also for the browser. Debugging what went wrong can result in a bad time. Luckily for us, a variety of build tools have been developed that do all of the organizing for us.
 
