@@ -120,7 +120,6 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 [mobile-full]: /assets/images/projects/ideabox/ideabox-03.png
 [button-hover-specs]: /assets/images/projects/ideabox/ideabox-04.png
 
-
 ### Extensions
 
 Extensions are a great way to earn additional points beyond the 150 available in this project. That said, awarding points for delivering a given extension is up to the instructor, who may only award partial points depending on the quality of the implementation. The points listed below represent the maximum number of points. Extensions can _not_ be done after the fact without instructor permission in advance.
