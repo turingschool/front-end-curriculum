@@ -1,3 +1,9 @@
+---
+title: Webpack DeMystified
+length: 120
+tags: node, webpack, npm
+---
+
 # Webpack Demystified
 
 ### Game Plan:
