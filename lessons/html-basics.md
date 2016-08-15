@@ -32,9 +32,9 @@ In client side code, you will encounter three primary languages: HTML, CSS, and 
 
 In this lesson we will be discussing HTML and how to effectively structure your markup.
 
-#### Basic intro to HTML structure and different tags.
+#### Structure and Tags
 
-At it's heart, HTML is built to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called **elements**. There are many (different types of tags)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element] that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
+At it's heart, HTML is built to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many (different types of tags)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element] that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
 
 ```HTML
 <tagname>Content Here</tagname>
@@ -96,14 +96,13 @@ is just as valid as
 <!dOcTyPe hTmL>
 ```
 
-...although you should probably stick to upcase, downcase, or regular ol' capitalizing.
+...although you should probably stick to upcase, downcase, or regular ol' capitalizing. You aren't an animal, right?
 
-#### Page structure
+#### Page Contents
 
 After doctype, we have a few tags that will always be present on every HTML page we write.
 
 First, we need opening an closing `<html>` tags to contain all our content:
-
 
 ```html
 <!doctype html>
@@ -154,7 +153,7 @@ A paragraph is pretty straightforward, and it's something we've seen before! Let
 </html>
 ```
 
-Heading tags are a little different than a paragraph. There are 6 different hierarchy levels for headings, `<h1>` through `<h6>`. Remeber, these heading tags indicate _hierarchy_ rather than size. Of the heading tags, `<h1>` is given most importance by search engines and screen readers, and `<h6>` is given the least. Let's add some to our example and see what they look like:
+Heading tags are a little different than a paragraph. There are 6 different hierarchy levels for headings, `<h1>` through `<h6>`. Remember, these heading tags indicate _hierarchy_ rather than size. Of the heading tags, `<h1>` is given most importance by search engines and screen readers, and `<h6>` is given the least. Let's add some to our example and see what they look like:
 
 ```html
 <!doctype html>
@@ -191,54 +190,32 @@ Some commonly used examples of semantic tags include:
 
 We would use the tags above in place of a `<div>`. The layouts would look the same in the browser, but the markup that uses semantic tags will be significantly easier to read and understand. Without even seeing any content, we understand that a `<footer>` tag will be used to contain footer content, and that a `<nav>` tag is going to hold some sort of navigational elements. Staring at a page full of nested div's and trying to figure out where one ends and the next begins is a very specific kind of sadness.
 
-It's also good practice to name your attribute values semantically, when possible. So, class and id values should add meaning to about what their purpose is. Semantics are a topic that be talked about until you're blue in the face, but sometimes seeing a few examples can help clarify better than discussion. Take a look at this old, but useful, (article)[https://css-tricks.com/semantic-class-names/] by Chris Coyier for examples and clarifying descriptions!
+It's also good practice to name your attribute values semantically, when possible. So, class and id values should add meaning to about what their purpose is. Semantics are a topic that be talked about until you're blue in the face, but sometimes seeing a few examples can help clarify better than discussion. Take a look at this older, but useful, (article)[https://css-tricks.com/semantic-class-names/] by Chris Coyier for a few examples and clarifying descriptions.
 
 Now that we know how to group our content within semantic tags, we can discuss strategies for setting up pages in a way that is easy to read, easy to apply CSS to, and not a wall of div's:
-* organize, organize, organize!
-* nesting (within reason) is your friend, white space is your friend
-* headings & hierarchy
-  - one h1 per page is a good practice -- really should be the primary header/topic of the page.
-  - use h2-h6 for all other header/subheads.
-* adding inline formatting to text
-  - ```em``` emphasised/italic
-  - ```strong``` strong/bold
-  - ```<span>``` tag
-    + used to apply a specific style inline
 
-    <!-- * organize, organize, organize!
-    * nesting (within reason) is your friend, white space is your friend
-    * headings & hierarchy
-      - one h1 per page is a good practice -- really should be the primary header/topic of the page.
-      - use h2-h6 for all other header/subheads.
-    * adding inline formatting to text
-      - ```em``` emphasised/italic
-      - ```strong``` strong/bold
-      - ```<span>``` tag
-        + used to apply a specific style inline -->
+* nesting is your friend
+* white space gets ignored by the browser, so use it to help you read your HTML more easily
+* headings & hierarchy
+  - one h1 per page is a good practice, should be used as the primary header/topic of the page
+  - use h2-h6 for all other headers and subheads.
+* adding inline formatting to text
+  - ```em``` emphasis/italic
+  - ```strong``` strong/bold
+  - ```<span>``` tag can be used to apply a specific style inline
+
 
 #### Default Positioning and Page Flow
 
-  + Positioning (Basic page flow, no CSS)
-    * What is "normal page flow?"
-      - when you lay out your page, HTML elements fill the browser window in the order they are in your HTML doc, according to the rules block and inline-block elements follow.
-      - Understanding what normal page flow is allows you to anticipate exactly where the html elements go on your page.
+_Normal page flow_ is from the top left to the lower right, the same way we read english. When you lay out your page, HTML elements fill the browser window in the order they are in your HTML doc, according to the rules block and inline-block elements follow. Understanding what normal page flow is allows you to anticipate exactly where the html elements go on your page.
 
-      - inline vs block
-        + ```<p>``` ```<div>``` are examples, but most elements are block level elements. they appear on a line, and the next element on the page falls under/below them in the layout
-          * appears on the next line, like a paragraph
-        + ```<img>``` ```<strong>```is an example of an inline element. Content flows around it, rather than falling below it.
-          * appears on the same like that they are written on
+##### Inline vs Block Elements
 
-    * Static Positioning
-      - normal page flow
-        + block elements flow one per line
-        + inline-block elements flow left to right and drop to the next line as needed
+There are different displays types for HTML elements which cause them to behave differently in the normal flow of the page, `block` and `inline`.
 
-    * Grouping Elements
-      - used anywhere you want to group elements together into sections
-      - div, section, article, aside
-        + these tags are just for grouping/organizing content, and you can apply IDs and Classes to them to control their styles with CSS
-        + div is most generic, the others give semantic info about intended use of content it wraps.
+A _block_ level element takes up the entirety of the line it appears on regardless of the width of the element, and the next element on the page falls under/below it in the layout. ```<p>``` and ```<div>``` are examples, but most elements are block level elements.
+
+_Inline_ elements do not take up the whole line they fall on, which allows other content to flow around them, rather than falling bellow them. ```<img>``` ```<strong>```is an example of an inline element. These elements flow left to right and drop to the next line as needed
 
 #### Links
 
@@ -250,7 +227,7 @@ Links are what the web is all about! They are made up of three components, let's
 
 Like any HTML element, we start with a tag. For a link, it's a `<a>`, or anchor, tag. Next, we have an `href` attribute. This stands for "hypertext reference". Then, we see  a title. Titles in links are important for accessibility reasons, and they also provide additional information in the event that your link is broken for some reason.
 
-Now, if we were to click on the link about, it would take us to the new page in the same browser window we are currently in. Maybe that's what you want, but sometimes you may want your current site to stay open and for the link to open in a new window. That's an easy addition:
+Now, if we were to click on the link about, it would take us to the new page in the same browser window we are currently in. That may be exactly what you want, but sometimes you may prefer that the page the user is on stay open and that the link opens in a new window. That's an easy addition:
 
 
 ```HTML
@@ -259,51 +236,119 @@ Now, if we were to click on the link about, it would take us to the new page in 
 
 We add `target=_"blank"` in our opening `<a>` tag, and ta-da! Now our link will open in a new window.
 
-  + link attributes
-    * ```<a>``` anchor tag
-    * ```href``` hypertext reference
-    * ```target="_blank"``` opens link in new/blank window
-    * together, this looks like ```<a href="www.turing.io" target="_blank>Turing School</a>```
-    * relative path: depends on knowing the location of file, like an image or page link within your directory structure
-    * absolute path: a specific location of something, like a link to a website
+#### Images
 
-  + image tags are made up of 3 things:
-    * ```img```
-    * ```src="http://link.com"```
-    * ```alt="what a great link!"```
-    * which looks like ```<img src="http://link.com" alt="what a great link" />```
+What's a website without some nice images? As mentioned above, an image tag is an example of a _stand alone elements_. This means we don't need a closing tag, and the tag itself don't contain anything. Let's see what that looks like:
 
-  + line breaks
-  + UL & OL's
-      - lists! one has numbers, one have bullets
-    * unordered list.
-    * ordered list.
-    * change what the bullets look like and/or control position
-      - ```list-style``` property.
-    * ways to use lists
-      - actual lists of things!
-      - navigation
-      - to organize groups of content
+```HTML
+<img src="http://placekitten.com/200/300" alt="kittens!"/>
+```
 
-  + tables.
-    * Use them for content that should be in a table, don't use them to control your layout.
-    * ways to use tables:
-      - things you'd use a spreadsheet for
+Let's walk through this. An image needs three components:
+* an `<img>` tag
+* the `src`, or source, attribute
+* an `alt` attribute with a brief description of the image, for accessibility and to make sure users aren't left hanging if your image won't load for some reason.
 
-  + Character Codes
-    * example: copyright is ``` &copy; ```
-    * if you don't use them you'll get funky charcter hodgepodge which isn't very useful.
-    *
+#### Other Useful Tags
 
-###### Guided Practice time: set up a very basic html file that we can use during the lesson
-  + make 1 directory
-    * inside have a layout.html, styles.css, and an images folder
+###### Line Breaks
 
-  + basic page structure for html:
-    <!DOCTYPE html>
-      <html>
-        <head> has title of page and meta info about page
-        <body> has all the content of your page
+Line breaks, `<br/>`, add visual separation between elements. For example:
 
-  + have some content in the body
-    - things that we talked about: images, links, lists, etc.
+```HTML
+<section>First element</section>
+<section>second element</section>
+```
+
+Will be much closer than:
+
+```HTML
+<section>First element</section>
+<br/>
+<section>second element</section>
+```
+
+You can also add a `<br/>` within the text of a `<p>`, to add line breaks. For example, all the text will be on one line:
+
+```HTML
+<p>Hello. It's me.</p>
+```
+
+And when we add a `<br/>`:
+
+```HTML
+<p>Hello.<br/>It's me.</p>
+```
+
+###### Lists
+
+There are three (kinds of lists)[https://www.w3.org/TR/html4/struct/lists.html] in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see `<ol>`, ordered list, and `<ol>`, ordered list, most often, but it's important to know what a definition looks, `<dl>` like in the event you need one or encounter one in the wild.
+
+Lists are made up of 2 sets of tags, the wrapping tag that specifies the list type, and the nested tag(s) of list items, `<li>`. Let's take a look at how to write the three list types:
+
+Unordered list have numbered list items.
+
+```html
+<ol>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ol>
+```
+
+Ordered list have bulleted list items.
+
+```html
+<ul>
+  <li>Item 1</li>
+  <li>Item 2</li>
+</ul>
+```
+
+And definition lists the black sheep of the list family, and are typically made up of a series of term/definition pairs:
+
+```html
+<dl>
+  <dt>Item 1</dt>
+  <dd>This is the first item</dd>
+  <dt>Item 2</dt>
+  <dd>This is the second item</dd>
+</dl>
+```
+
+`<dl>` stands for "definition list", `<dt>` stands for definition term, and `<dd>` stands for "definition description".
+
+Lists are great for organizing groups of like content, like navigation links in a head bar.
+
+###### Tables
+
+Tables are used to store information in a set of rows, columns and cells. They should never be used for layout. If you ever finding yourself wondering if you need to use a table, ask yourself "Would I put this in a spreadsheet?". If the answer is yes, great! Use a table! If the answer is no, find a different solution.
+
+```html
+<table>
+  <tr>
+    <th>One Column</th>
+    <th>Two Column</th>
+    <th>Three Column</th>
+  </tr>
+
+  <tr>
+    <td>Column 1 data</td>
+    <td>Column 2 data</td>
+    <td>Column 3 data</td>
+  </tr>
+</table>
+```
+
+Tables are made up of one wrapping `<table>` tag, a table row tag `<tr>` for each row of your table, a table header tag `<th>` for the headers of head column, and table data `<td>` for the main content of the table cells.
+
+###### Character Codes
+
+Sometimes you may want to use a special character in your text, like an &amp; or &copy;.
+To avoid seeing a funky group of character hodgepodge instead of the character you wanted, use a character code.
+
+The examples above use the character codes `&amp;` and `&copy;`. For a full list, look (here)[http://www.ascii.cl/htmlcodes.htm].
+
+
+###### Your Turn!
+
+Set up a basic html file that we can use during the lesson. Use basic page structure for html, have some content in the body that uses semantic tags that we covered and images, links, lists, etc.
