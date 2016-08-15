@@ -473,5 +473,3 @@ Beyond this basic Webpack configuration, there are countless ways to use Webpack
 [Awesome Webpack Blog Post](http://code.tutsplus.com/series/introduction-to-webpack--cms-983)  
 [Comparing Browserify/Grunt/Gulp/Webpack](https://npmcompare.com/compare/browserify,grunt,gulp,webpack)  
 [Another Webpack Tutorial](http://survivejs.com/webpack/developing-with-webpack/getting-started/)  
-
-___
