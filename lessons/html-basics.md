@@ -270,13 +270,16 @@ What's a website without some nice images? As mentioned above, an image tag is a
 ```
 
 Let's walk through this. An image needs three components:
+
 * an `<img>` tag
+
 * the `src`, or source, attribute
+
 * an `alt` attribute with a brief description of the image, for accessibility and to make sure users aren't left hanging if your image won't load for some reason.
 
 #### Other Useful Tags
 
-###### Line Breaks
+##### Line Breaks
 
 Line breaks, `<br/>`, add visual separation between elements. For example:
 
@@ -305,7 +308,7 @@ And when we add a `<br/>`:
 <p>Hello.<br/>It's me.</p>
 ```
 
-###### Lists
+##### Lists
 
 There are three [kinds of lists](https://www.w3.org/TR/html4/struct/lists.html) in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see `<ol>`, ordered list, and `<ol>`, ordered list, most often, but it's important to know what a definition looks, `<dl>` like in the event you need one or encounter one in the wild.
 
