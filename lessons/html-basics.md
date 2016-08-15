@@ -16,15 +16,11 @@ By the end of this lesson, you will know/be able to:
 
 #### HTML is Everywhere
 
-Every single page that renders in your browser is built with HTML. Writing HTML well is a critical foundational skill for a front-end developer, because everything you do in the front end is built upon the HTML you write.
-
-HTML & CSS are non-negotiable parts of the web and the foundation of every digital product, and once you understand how they works it's straightforward to use them.
-
-As front end developers, it's crucial that you are able to write clear and well structured HTML and CSS. By the end of the class, students will have an understanding of how (and why) to write semantic markup.
+Every single page that renders in your browser is built with HTML. As front end developers, it's crucial that you are able to write clear and well structured HTML, because it is a non-negotiable part of the web and the foundation of every digital product.
 
 #### What is HTML?
 
-HTML stands for Hypertext Markup Language, and it was developed by Tim Berners-Lee as the publishing language of the web in 1989. Berners-Lee developed this tool during his time at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland, as a way for physicists to collaborate more effectively from remote locations and laboratories around the world. His goal was to make research documents available to be downloaded to individual computers. A key element of this idea was the concept of linking text within these documents, allowing the reader to switch from one technical paper to a specific section of another, creating a "web" of information across computers all over the world.
+HTML stands for Hypertext Markup Language, and it was developed by Tim Berners-Lee as the publishing language of the web in the late 80's/early 90's. Berners-Lee developed this tool during his time at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland, as a way for physicists to collaborate more effectively from remote locations and laboratories around the world. His goal was to make research documents available to be downloaded to individual computers. A key element of this idea was the concept of linking text within these documents, allowing the reader to switch from one technical paper to a specific section of another, creating a "web" of information across computers all over the world.
 
 Today, the way we use the web is very different from it's scientific beginnings, and the tools used to build digital products are significantly more complex than they were back in the 90's. But despite all the advances and changes, HTML has remained a constant part of working with the web.
 
@@ -34,13 +30,13 @@ In this lesson we will be discussing HTML and how to effectively structure your 
 
 #### Structure and Tags
 
-At it's heart, HTML is built to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many (different types of tags)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element] that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
+At it's heart, the purpose of HTML is to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many (different types of tags)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element] that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
 
 ```HTML
 <tagname>Content Here</tagname>
 ```
 
-Let's break that down:
+Let's break this element down:
 
 We always begin our element with an opening tag, and end our element with a closing tag. Tags are made up of a left-angle bracket, the tag name, and a right-angle bracket. Opening and closing tags are almost the same, but a closing tag has a back slash after the left-angle bracket and before the tag name. Between our opening and closing tags, we have our content. This can be text, or even other HTML elements.
 
@@ -153,7 +149,7 @@ A paragraph is pretty straightforward, and it's something we've seen before! Let
 </html>
 ```
 
-Heading tags are a little different than a paragraph. There are 6 different hierarchy levels for headings, `<h1>` through `<h6>`. Remember, these heading tags indicate _hierarchy_ rather than size. Of the heading tags, `<h1>` is given most importance by search engines and screen readers, and `<h6>` is given the least. Let's add some to our example and see what they look like:
+Heading tags are a little different than a paragraph. There are 6 different hierarchy levels for headings, `<h1>` through `<h6>`. Remember, these heading tags indicate _hierarchy_ rather than the size of the text. Of the heading tags, `<h1>` is given most importance by search engines and screen readers, and `<h6>` is given the least. Let's add some to our example and see what they look like:
 
 ```html
 <!doctype html>
@@ -204,8 +200,37 @@ Now that we know how to group our content within semantic tags, we can discuss s
   - ```strong``` strong/bold
   - ```<span>``` tag can be used to apply a specific style inline
 
+Let's add some semantic tags to wrap out text blocks:
 
-#### Default Positioning and Page Flow
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>I'm the title!</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Main Title</h1>
+      <p>I'm the page content!</p>
+    </header>
+
+    <section>
+      <h3>Subheading</h3>
+      <p>Here is more content.</p>
+    </section>
+
+    <footer>
+      <h6>Smallest Subheading</h6>
+      <p>This is also content</p>
+    </footer>
+  </body>
+</html>
+```
+
+Now we can clearly see what the content is intended to be!
+
+#### Normal Page Flow
 
 _Normal page flow_ is from the top left to the lower right, the same way we read english. When you lay out your page, HTML elements fill the browser window in the order they are in your HTML doc, according to the rules block and inline-block elements follow. Understanding what normal page flow is allows you to anticipate exactly where the html elements go on your page.
 
