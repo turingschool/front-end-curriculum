@@ -173,7 +173,7 @@ Heading tags are a little different than a paragraph. There are 6 different hier
 
 #### Semantic HTML
 
-Many tags serve the same purpose and won't change the functionality of your page, but taking advantage of _semantic tags_ will add meaning to your page structure. This has many benefits, including making your code easier to work with for other developers, future-you who is coming back to make an update to a page after time away from the code base, and it also makes your sight more effective for screen readers and search engines.
+Many tags serve a similar purpose and won't change the functionality of your page, but taking advantage of _semantic tags_ will add meaning to your page structure. This has many benefits, including making your code easier to work with for other developers, making life easier for future-you who is coming back to make an update to a page after time away from the code base, and making your site more effective for screen readers and search engines.
 
 Some commonly used examples of semantic tags include:
 
@@ -184,15 +184,15 @@ Some commonly used examples of semantic tags include:
 * header
 * footer
 
-We would use the tags above in place of a `<div>`. The layouts would look the same in the browser, but the markup that uses semantic tags will be significantly easier to read and understand. Without even seeing any content, we understand that a `<footer>` tag will be used to contain footer content, and that a `<nav>` tag is going to hold some sort of navigational elements. Staring at a page full of nested div's and trying to figure out where one ends and the next begins is a very specific kind of sadness.
+We would use the tags above in place of a `<div>`. The layouts would look the same in the browser, but the markup that uses semantic tags will be significantly easier to read and understand. Without even looking at the content in the browser, we understand that a `<footer>` tag will be used to contain footer information, and that a `<nav>` tag is going to hold some sort of navigational elements. Staring at a page full of nested div's and trying to figure out where one ends and the next begins is a very specific kind of sadness and leads to people saying they hate HTML.
 
 It's also good practice to name your attribute values semantically, when possible. So, class and id values should add meaning to about what their purpose is. Semantics are a topic that be talked about until you're blue in the face, but sometimes seeing a few examples can help clarify better than discussion. Take a look at this older, but useful, [article](https://css-tricks.com/semantic-class-names/) by Chris Coyier for a few examples and clarifying descriptions.
 
 Now that we know how to group our content within semantic tags, we can discuss strategies for setting up pages in a way that is easy to read, easy to apply CSS to, and not a wall of div's:
 
 * nesting is your friend
-* white space gets ignored by the browser, so use it to help you read your HTML more easily
-* headings & hierarchy
+* white space gets ignored by the browser, so use it to help make your HTML easier to read
+* headings and hierarchy
   - one h1 per page is a good practice, should be used as the primary header/topic of the page
   - use h2-h6 for all other headers and subheads.
 * adding inline formatting to text
