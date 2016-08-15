@@ -200,7 +200,7 @@ Now that we know how to group our content within semantic tags, we can discuss s
   - ```strong``` strong/bold
   - ```<span>``` tag can be used to apply a specific style inline
 
-Let's add some semantic tags to wrap out text blocks:
+Let's add some semantic tags to wrap our example's text blocks:
 
 ```html
 <!doctype html>
@@ -232,15 +232,15 @@ Now we can clearly see what the content is intended to be!
 
 #### Normal Page Flow
 
-_Normal page flow_ is from the top left to the lower right, the same way we read english. When you lay out your page, HTML elements fill the browser window in the order they are in your HTML doc, according to the rules block and inline-block elements follow. Understanding what normal page flow is allows you to anticipate exactly where the html elements go on your page.
+_Normal page flow_ is from the top left to the lower right, the same way we read english. When you set up your HTML page, elements fill the browser window in the order they are in your HTML doc, according to the rules block and inline-block elements follow. Understanding what normal page flow is allows you to anticipate exactly where the html elements go on your page.
 
 ##### Inline vs Block Elements
 
 There are different displays types for HTML elements which cause them to behave differently in the normal flow of the page, `block` and `inline`.
 
-A _block_ level element takes up the entirety of the line it appears on regardless of the width of the element, and the next element on the page falls under/below it in the layout. ```<p>``` and ```<div>``` are examples, but most elements are block level elements.
+A _block_ level element takes up the entirety of the line it appears on regardless of the width of the element itself, and the next element on the page falls under/below it in the layout. ```<p>``` and ```<div>``` are examples, but most elements are block level elements.
 
-_Inline_ elements do not take up the whole line they fall on, which allows other content to flow around them, rather than falling bellow them. ```<img>``` ```<strong>```is an example of an inline element. These elements flow left to right and drop to the next line as needed
+_Inline_ elements do not take up the whole line they fall on, which allows other content to flow around them, rather than falling below them. ```<img>``` ```<strong>```is an example of an inline element. These elements flow left to right and drop to the next line as needed
 
 #### Links
 
