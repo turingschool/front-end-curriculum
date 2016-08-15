@@ -4,8 +4,6 @@ length: 120
 tags: node, webpack, npm
 ---
 
-# Webpack Demystified
-
 ### Game Plan:
   - Part 1:
     - Understand what Webpack is, and why it is useful
