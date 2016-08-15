@@ -72,9 +72,9 @@ Please emphasis quality over quantity. (That said, quality is not an excuse for 
 - The application should only show the ten most recent messages.
 - The application should contain a button labeled "Show more messages…" which will load additional messages from the past.
 
+
 ## Instructor Evaluation Points
 
-<<<<<<< HEAD
 ### Specification Adherence
 
 * 4 - The application meets all of the requirements listed above and implements one or more of the extensions.
@@ -85,17 +85,11 @@ Please emphasis quality over quantity. (That said, quality is not an excuse for 
 
 ### User Interface
 
-* 4 - The application is pleasant, logical, and easy to use. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
-=======
-### User Interface
-
 * 4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
->>>>>>> 011bdc33f22c39fcbd7a4204d6d23a803b636597
 * 3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality.
 * 2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 * 1 - The application is confusing or difficult to use.
 
-<<<<<<< HEAD
 ### HTML Style
 
 - 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
@@ -120,7 +114,7 @@ Please emphasis quality over quantity. (That said, quality is not an excuse for 
 
 ### Testing
 
-* 4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite convers almost all aspects of the application.
+* 4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
 * 3 - Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of feature testing.
 * 2 - Project has sporadic use of tests and multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * 1 - There is little or no evidence of testing in this application.
@@ -141,11 +135,10 @@ The output from a code sanitizer (either JSHint or ESLint) shows…
 * 3 - Five or fewer complaints
 * 2 - Six to ten complaints
 * 1 - More than ten complaints
-=======
+
 ### Design
 
 * 4 - The application is visually appealing and shows thoughtful and effective use of typography, color, and layout. The application looks professional, with visuals enhancing the user's experience. The evaluator has very few recommended changes.
 * 3 - The application has a strong approach to layout and content hierarchy, but typography and color choices are lacking. The evaluator has several recommended changes to improvement.
 * 2 - Layout, content hierarchy, typography, and color choices show effort, but the result is not effective. The evaluator recommends significant changes.
-* 1 - Layout, content hierarchy, typography, and color choices and actively detract from the user's ability to use the application. The evaluator recommends significant changes.
->>>>>>> 011bdc33f22c39fcbd7a4204d6d23a803b636597
+* 1 - Layout, content hierarchy, typography, and color choices actively detract from the user's ability to use the application.
