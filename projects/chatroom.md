@@ -15,7 +15,7 @@ At the end of the day, let's be really honest, this isn't that much different th
 
 ### Evaluation Criteria
 
-You will have _two_ evaluations for this project. The first is the good, old-fashioned technical evaluation. You'll also have an evaluation with on the UI
+You will have _two_ evaluations for this project. The first is the good, old-fashioned technical evaluation. You'll also have an evaluation on the UI -- you will be on your own to wireframe and design this project.
 
 You're application should:
 
@@ -54,3 +54,19 @@ In future iterations, we'll implement the collaborative aspect of the applicatio
 
 - The application should only show the ten most recent messages.
 - The application should contain a button labeled "Show more messages…" which will load additional messages from the past.
+
+## Instructor Evaluation Points
+
+### User Interface
+
+* 4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
+* 3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality.
+* 2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
+* 1 - The application is confusing or difficult to use.
+
+### Design
+
+* 4 - The application is visually appealing and shows thoughtful and effective use of fonts, colors, and layout. The application looks professional, with visuals enhancing the user's experience. The evaluator has very few recommended changes.
+* 3 - The application has a strong approach to layout and content hierarchy, but typography and color choices are lacking. The evaluator has suggestions to improvement.
+* 2 - Layout, content hierarchy, typography, and color choices show effort, but the result is not effective. The evaluator recommends changes to three of these areas.
+* 1 - Layout, content hierarchy, typography, and color choices actively detract from the user's ability to use the application.
