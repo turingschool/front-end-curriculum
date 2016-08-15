@@ -66,7 +66,7 @@ In future iterations, we'll implement the collaborative aspect of the applicatio
 
 ### Design
 
-* 4 - The application is visually appealing and shows thoughtful and effective use of fonts, colors, and layout. The application looks professional, with visuals enhancing the user's experience. The evaluator has very few recommended changes.
-* 3 - The application has a strong approach to layout and content hierarchy, but typography and color choices are lacking. The evaluator has suggestions to improvement.
-* 2 - Layout, content hierarchy, typography, and color choices show effort, but the result is not effective. The evaluator recommends changes to three of these areas.
-* 1 - Layout, content hierarchy, typography, and color choices actively detract from the user's ability to use the application.
+* 4 - The application is visually appealing and shows thoughtful and effective use of typography, color, and layout. The application looks professional, with visuals enhancing the user's experience. The evaluator has very few recommended changes.
+* 3 - The application has a strong approach to layout and content hierarchy, but typography and color choices are lacking. The evaluator has several recommended changes to improvement.
+* 2 - Layout, content hierarchy, typography, and color choices show effort, but the result is not effective. The evaluator recommends significant changes.
+* 1 - Layout, content hierarchy, typography, and color choices and actively detract from the user's ability to use the application. The evaluator recommends significant changes.
