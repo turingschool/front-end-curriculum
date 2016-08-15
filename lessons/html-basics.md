@@ -30,7 +30,7 @@ In this lesson we will be discussing HTML and how to effectively structure your 
 
 #### Structure and Tags
 
-At it's heart, the purpose of HTML is to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many (different types of tags)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element] that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
+At it's heart, the purpose of HTML is to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many [different types of tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
 
 ```HTML
 <tagname>Content Here</tagname>
@@ -186,7 +186,7 @@ Some commonly used examples of semantic tags include:
 
 We would use the tags above in place of a `<div>`. The layouts would look the same in the browser, but the markup that uses semantic tags will be significantly easier to read and understand. Without even seeing any content, we understand that a `<footer>` tag will be used to contain footer content, and that a `<nav>` tag is going to hold some sort of navigational elements. Staring at a page full of nested div's and trying to figure out where one ends and the next begins is a very specific kind of sadness.
 
-It's also good practice to name your attribute values semantically, when possible. So, class and id values should add meaning to about what their purpose is. Semantics are a topic that be talked about until you're blue in the face, but sometimes seeing a few examples can help clarify better than discussion. Take a look at this older, but useful, (article)[https://css-tricks.com/semantic-class-names/] by Chris Coyier for a few examples and clarifying descriptions.
+It's also good practice to name your attribute values semantically, when possible. So, class and id values should add meaning to about what their purpose is. Semantics are a topic that be talked about until you're blue in the face, but sometimes seeing a few examples can help clarify better than discussion. Take a look at this older, but useful, [article](https://css-tricks.com/semantic-class-names/) by Chris Coyier for a few examples and clarifying descriptions.
 
 Now that we know how to group our content within semantic tags, we can discuss strategies for setting up pages in a way that is easy to read, easy to apply CSS to, and not a wall of div's:
 
@@ -307,7 +307,7 @@ And when we add a `<br/>`:
 
 ###### Lists
 
-There are three (kinds of lists)[https://www.w3.org/TR/html4/struct/lists.html] in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see `<ol>`, ordered list, and `<ol>`, ordered list, most often, but it's important to know what a definition looks, `<dl>` like in the event you need one or encounter one in the wild.
+There are three [kinds of lists](https://www.w3.org/TR/html4/struct/lists.html) in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see `<ol>`, ordered list, and `<ol>`, ordered list, most often, but it's important to know what a definition looks, `<dl>` like in the event you need one or encounter one in the wild.
 
 Lists are made up of 2 sets of tags, the wrapping tag that specifies the list type, and the nested tag(s) of list items, `<li>`. Let's take a look at how to write the three list types:
 
@@ -371,7 +371,7 @@ Tables are made up of one wrapping `<table>` tag, a table row tag `<tr>` for eac
 Sometimes you may want to use a special character in your text, like an &amp; or &copy;.
 To avoid seeing a funky group of character hodgepodge instead of the character you wanted, use a character code.
 
-The examples above use the character codes `&amp;` and `&copy;`. For a full list, look (here)[http://www.ascii.cl/htmlcodes.htm].
+The examples above use the character codes `&amp;` and `&copy;`. For a full list, look [here](http://www.ascii.cl/htmlcodes.htm).
 
 
 ###### Your Turn!
