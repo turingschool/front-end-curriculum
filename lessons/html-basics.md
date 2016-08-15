@@ -277,9 +277,9 @@ Let's walk through this. An image needs three components:
 
 * an `alt` attribute with a brief description of the image, for accessibility and to make sure users aren't left hanging if your image won't load for some reason.
 
-#### Other Useful Tags
+### Other Useful Tags
 
-##### Line Breaks
+#### Line Breaks
 
 Line breaks, `<br/>`, add visual separation between elements. For example:
 
@@ -308,9 +308,9 @@ And when we add a `<br/>`:
 <p>Hello.<br/>It's me.</p>
 ```
 
-##### Lists
+#### Lists
 
-There are three [kinds of lists](https://www.w3.org/TR/html4/struct/lists.html) in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see `<ol>`, ordered list, and `<ol>`, ordered list, most often, but it's important to know what a definition looks, `<dl>` like in the event you need one or encounter one in the wild.
+There are three [kinds of lists](https://www.w3.org/TR/html4/struct/lists.html) in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see ordered lists and unordered lists most often, but it's important to know what a definition list looks like in the event you need one or encounter one in the wild.
 
 Lists are made up of 2 sets of tags, the wrapping tag that specifies the list type, and the nested tag(s) of list items, `<li>`. Let's take a look at how to write the three list types:
 
@@ -343,11 +343,11 @@ And definition lists the black sheep of the list family, and are typically made 
 </dl>
 ```
 
-`<dl>` stands for "definition list", `<dt>` stands for definition term, and `<dd>` stands for "definition description".
+`<dl>` stands for "definition list", `<dt>` stands for "definition term", and `<dd>` stands for "definition description".
 
 Lists are great for organizing groups of like content, like navigation links in a head bar.
 
-###### Tables
+#### Tables
 
 Tables are used to store information in a set of rows, columns and cells. They should never be used for layout. If you ever finding yourself wondering if you need to use a table, ask yourself "Would I put this in a spreadsheet?". If the answer is yes, great! Use a table! If the answer is no, find a different solution.
 
@@ -369,7 +369,7 @@ Tables are used to store information in a set of rows, columns and cells. They s
 
 Tables are made up of one wrapping `<table>` tag, a table row tag `<tr>` for each row of your table, a table header tag `<th>` for the headers of head column, and table data `<td>` for the main content of the table cells.
 
-###### Character Codes
+#### Character Codes
 
 Sometimes you may want to use a special character in your text, like an &amp; or &copy;.
 To avoid seeing a funky group of character hodgepodge instead of the character you wanted, use a character code.
@@ -377,6 +377,6 @@ To avoid seeing a funky group of character hodgepodge instead of the character y
 The examples above use the character codes `&amp;` and `&copy;`. For a full list, look [here](http://www.ascii.cl/htmlcodes.htm).
 
 
-###### Your Turn!
+#### Your Turn!
 
 Set up a basic html file that we can use during the lesson. Use basic page structure for html, have some content in the body that uses semantic tags that we covered and images, links, lists, etc.
