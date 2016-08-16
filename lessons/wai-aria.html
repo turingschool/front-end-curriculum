@@ -202,19 +202,19 @@ layout: presentation
 </section>
 
 <section class="aria-lesson">
-  <dfn><code>alert</code></dfn>
+  <dfn><code>role='alert'</code></dfn>
   <p>message with important information</p>
   <code>&lt;div role=&quot;alert&quot;&gt;Please download a new version of this software.&lt;/div&gt;</code>
 </section>
 
 <section class="aria-lesson">
-  <dfn><code>term</code></dfn>
+  <dfn><code>role='term'</code></dfn>
   <p>element that identifies a term to be defined</p>
   <code>&lt;div role=&quot;term&quot; id=&quot;hypertension-term&quot;&gt;hypertension&lt;/div&gt;</code>
 </section>
 
 <section class="aria-lesson">
-  <dfn><code>definition</code></dfn>
+  <dfn><code>role='definition'</code></dfn>
   <p>definition of previously specified "term" element</p>
   <p>should include the ARIA attribute <code>aria-labelledby</code></p>
   <code>&lt;div role=&quot;definition&quot; aria-labelledby=&quot;hypertension-term&quot;&gt;high blood pressure&lt;/div&gt;</code>
@@ -242,7 +242,7 @@ layout: presentation
 </section>
 
 <section class="aria-lesson">
-  <dfn><code>aria-labelledby</code></dfn>
+  <dfn><code>aria-labelledby="elementID"</code></dfn>
   <p>contains the ID of the element the group is focused on or needs to be associated with</p>
 <code>
   &lt;figure aria-labelledby=&quot;mountain&quot; role=&quot;group&quot;&gt;<br/>
