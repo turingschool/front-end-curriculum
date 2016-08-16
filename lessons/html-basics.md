@@ -16,15 +16,11 @@ By the end of this lesson, you will know/be able to:
 
 #### HTML is Everywhere
 
-Every single page that renders in your browser is built with HTML. Writing HTML well is a critical foundational skill for a front-end developer, because everything you do in the front end is built upon the HTML you write.
-
-HTML & CSS are non-negotiable parts of the web and the foundation of every digital product, and once you understand how they works it's straightforward to use them.
-
-As front end developers, it's crucial that you are able to write clear and well structured HTML and CSS. By the end of the class, students will have an understanding of how (and why) to write semantic markup.
+Every single page that renders in your browser is built with HTML. As front end developers, it's crucial that you are able to write clear and well structured HTML, because it is a non-negotiable part of the web and the foundation of every digital product.
 
 #### What is HTML?
 
-HTML stands for Hypertext Markup Language, and it was developed by Tim Berners-Lee as the publishing language of the web in 1989. Berners-Lee developed this tool during his time at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland, as a way for physicists to collaborate more effectively from remote locations and laboratories around the world. His goal was to make research documents available to be downloaded to individual computers. A key element of this idea was the concept of linking text within these documents, allowing the reader to switch from one technical paper to a specific section of another, creating a "web" of information across computers all over the world.
+HTML stands for Hypertext Markup Language, and it was developed by Tim Berners-Lee as the publishing language of the web in the late 80's/early 90's. Berners-Lee developed this tool during his time at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland, as a way for physicists to collaborate more effectively from remote locations and laboratories around the world. His goal was to make research documents available to be downloaded to individual computers. A key element of this idea was the concept of linking text within these documents, allowing the reader to switch from one technical paper to a specific section of another, creating a "web" of information across computers all over the world.
 
 Today, the way we use the web is very different from it's scientific beginnings, and the tools used to build digital products are significantly more complex than they were back in the 90's. But despite all the advances and changes, HTML has remained a constant part of working with the web.
 
@@ -34,13 +30,13 @@ In this lesson we will be discussing HTML and how to effectively structure your 
 
 #### Structure and Tags
 
-At it's heart, HTML is built to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many (different types of tags)[https://developer.mozilla.org/en-US/docs/Web/HTML/Element] that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
+At it's heart, the purpose of HTML is to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many [different types of tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
 
 ```HTML
 <tagname>Content Here</tagname>
 ```
 
-Let's break that down:
+Let's break this element down:
 
 We always begin our element with an opening tag, and end our element with a closing tag. Tags are made up of a left-angle bracket, the tag name, and a right-angle bracket. Opening and closing tags are almost the same, but a closing tag has a back slash after the left-angle bracket and before the tag name. Between our opening and closing tags, we have our content. This can be text, or even other HTML elements.
 
@@ -96,7 +92,7 @@ is just as valid as
 <!dOcTyPe hTmL>
 ```
 
-...although you should probably stick to upcase, downcase, or regular ol' capitalizing. You aren't an animal, right?
+...although you should probably stick to upcase, downcase, or regular ol' capitalizing. Because you aren't an animal, are you?
 
 #### Page Contents
 
@@ -153,7 +149,7 @@ A paragraph is pretty straightforward, and it's something we've seen before! Let
 </html>
 ```
 
-Heading tags are a little different than a paragraph. There are 6 different hierarchy levels for headings, `<h1>` through `<h6>`. Remember, these heading tags indicate _hierarchy_ rather than size. Of the heading tags, `<h1>` is given most importance by search engines and screen readers, and `<h6>` is given the least. Let's add some to our example and see what they look like:
+Heading tags are a little different than a paragraph. There are 6 different hierarchy levels for headings, `<h1>` through `<h6>`. Remember, these heading tags indicate _hierarchy_ rather than the size of the text. Of the heading tags, `<h1>` is given most importance by search engines and screen readers, and `<h6>` is given the least. Let's add some to our example and see what they look like:
 
 ```html
 <!doctype html>
@@ -177,7 +173,7 @@ Heading tags are a little different than a paragraph. There are 6 different hier
 
 #### Semantic HTML
 
-Many tags serve the same purpose and won't change the functionality of your page, but taking advantage of _semantic tags_ will add meaning to your page structure. This has many benefits, including making your code easier to work with for other developers, future-you who is coming back to make an update to a page after time away from the code base, and it also makes your sight more effective for screen readers and search engines.
+Many tags serve a similar purpose and won't change the functionality of your page, but taking advantage of _semantic tags_ will add meaning to your page structure. This has many benefits, including making your code easier to work with for other developers, making life easier for future-you who is coming back to make an update to a page after time away from the code base, and making your site more effective for screen readers and search engines.
 
 Some commonly used examples of semantic tags include:
 
@@ -188,15 +184,15 @@ Some commonly used examples of semantic tags include:
 * header
 * footer
 
-We would use the tags above in place of a `<div>`. The layouts would look the same in the browser, but the markup that uses semantic tags will be significantly easier to read and understand. Without even seeing any content, we understand that a `<footer>` tag will be used to contain footer content, and that a `<nav>` tag is going to hold some sort of navigational elements. Staring at a page full of nested div's and trying to figure out where one ends and the next begins is a very specific kind of sadness.
+We would use the tags above in place of a `<div>`. The layouts would look the same in the browser, but the markup that uses semantic tags will be significantly easier to read and understand. Without even looking at the content in the browser, we understand that a `<footer>` tag will be used to contain footer information, and that a `<nav>` tag is going to hold some sort of navigational elements. Staring at a page full of nested div's and trying to figure out where one ends and the next begins is a very specific kind of sadness and leads to people saying they hate HTML.
 
-It's also good practice to name your attribute values semantically, when possible. So, class and id values should add meaning to about what their purpose is. Semantics are a topic that be talked about until you're blue in the face, but sometimes seeing a few examples can help clarify better than discussion. Take a look at this older, but useful, (article)[https://css-tricks.com/semantic-class-names/] by Chris Coyier for a few examples and clarifying descriptions.
+It's also good practice to name your attribute values semantically, when possible. So, class and id values should add meaning to about what their purpose is. Semantics are a topic that be talked about until you're blue in the face, but sometimes seeing a few examples can help clarify better than discussion. Take a look at this older, but useful, [article](https://css-tricks.com/semantic-class-names/) by Chris Coyier for a few examples and clarifying descriptions.
 
 Now that we know how to group our content within semantic tags, we can discuss strategies for setting up pages in a way that is easy to read, easy to apply CSS to, and not a wall of div's:
 
 * nesting is your friend
-* white space gets ignored by the browser, so use it to help you read your HTML more easily
-* headings & hierarchy
+* white space gets ignored by the browser, so use it to help make your HTML easier to read
+* headings and hierarchy
   - one h1 per page is a good practice, should be used as the primary header/topic of the page
   - use h2-h6 for all other headers and subheads.
 * adding inline formatting to text
@@ -204,18 +200,47 @@ Now that we know how to group our content within semantic tags, we can discuss s
   - ```strong``` strong/bold
   - ```<span>``` tag can be used to apply a specific style inline
 
+Let's add some semantic tags to wrap our example's text blocks:
 
-#### Default Positioning and Page Flow
+```html
+<!doctype html>
+<html>
+  <head>
+    <title>I'm the title!</title>
+  </head>
 
-_Normal page flow_ is from the top left to the lower right, the same way we read english. When you lay out your page, HTML elements fill the browser window in the order they are in your HTML doc, according to the rules block and inline-block elements follow. Understanding what normal page flow is allows you to anticipate exactly where the html elements go on your page.
+  <body>
+    <header>
+      <h1>Main Title</h1>
+      <p>I'm the page content!</p>
+    </header>
+
+    <section>
+      <h3>Subheading</h3>
+      <p>Here is more content.</p>
+    </section>
+
+    <footer>
+      <h6>Smallest Subheading</h6>
+      <p>This is also content</p>
+    </footer>
+  </body>
+</html>
+```
+
+Now we can clearly see what the content is intended to be!
+
+#### Normal Page Flow
+
+_Normal page flow_ is from the top left to the lower right, the same way we read english. When you set up your HTML page, elements fill the browser window in the order they are in your HTML doc, according to the rules block and inline-block elements follow. Understanding what normal page flow is allows you to anticipate exactly where the html elements go on your page.
 
 ##### Inline vs Block Elements
 
 There are different displays types for HTML elements which cause them to behave differently in the normal flow of the page, `block` and `inline`.
 
-A _block_ level element takes up the entirety of the line it appears on regardless of the width of the element, and the next element on the page falls under/below it in the layout. ```<p>``` and ```<div>``` are examples, but most elements are block level elements.
+A _block_ level element takes up the entirety of the line it appears on regardless of the width of the element itself, and the next element on the page falls under/below it in the layout. ```<p>``` and ```<div>``` are examples, but most elements are block level elements.
 
-_Inline_ elements do not take up the whole line they fall on, which allows other content to flow around them, rather than falling bellow them. ```<img>``` ```<strong>```is an example of an inline element. These elements flow left to right and drop to the next line as needed
+_Inline_ elements do not take up the whole line they fall on, which allows other content to flow around them, rather than falling below them. ```<img>``` ```<strong>```is an example of an inline element. These elements flow left to right and drop to the next line as needed
 
 #### Links
 
@@ -245,13 +270,16 @@ What's a website without some nice images? As mentioned above, an image tag is a
 ```
 
 Let's walk through this. An image needs three components:
+
 * an `<img>` tag
+
 * the `src`, or source, attribute
+
 * an `alt` attribute with a brief description of the image, for accessibility and to make sure users aren't left hanging if your image won't load for some reason.
 
-#### Other Useful Tags
+### Other Useful Tags
 
-###### Line Breaks
+#### Line Breaks
 
 Line breaks, `<br/>`, add visual separation between elements. For example:
 
@@ -280,9 +308,9 @@ And when we add a `<br/>`:
 <p>Hello.<br/>It's me.</p>
 ```
 
-###### Lists
+#### Lists
 
-There are three (kinds of lists)[https://www.w3.org/TR/html4/struct/lists.html] in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see `<ol>`, ordered list, and `<ol>`, ordered list, most often, but it's important to know what a definition looks, `<dl>` like in the event you need one or encounter one in the wild.
+There are three [kinds of lists](https://www.w3.org/TR/html4/struct/lists.html) in HTML: Unordered Lists, Ordered Lists, and Definition Lists. You'll probably see ordered lists and unordered lists most often, but it's important to know what a definition list looks like in the event you need one or encounter one in the wild.
 
 Lists are made up of 2 sets of tags, the wrapping tag that specifies the list type, and the nested tag(s) of list items, `<li>`. Let's take a look at how to write the three list types:
 
@@ -315,11 +343,11 @@ And definition lists the black sheep of the list family, and are typically made 
 </dl>
 ```
 
-`<dl>` stands for "definition list", `<dt>` stands for definition term, and `<dd>` stands for "definition description".
+`<dl>` stands for "definition list", `<dt>` stands for "definition term", and `<dd>` stands for "definition description".
 
 Lists are great for organizing groups of like content, like navigation links in a head bar.
 
-###### Tables
+#### Tables
 
 Tables are used to store information in a set of rows, columns and cells. They should never be used for layout. If you ever finding yourself wondering if you need to use a table, ask yourself "Would I put this in a spreadsheet?". If the answer is yes, great! Use a table! If the answer is no, find a different solution.
 
@@ -341,14 +369,14 @@ Tables are used to store information in a set of rows, columns and cells. They s
 
 Tables are made up of one wrapping `<table>` tag, a table row tag `<tr>` for each row of your table, a table header tag `<th>` for the headers of head column, and table data `<td>` for the main content of the table cells.
 
-###### Character Codes
+#### Character Codes
 
 Sometimes you may want to use a special character in your text, like an &amp; or &copy;.
 To avoid seeing a funky group of character hodgepodge instead of the character you wanted, use a character code.
 
-The examples above use the character codes `&amp;` and `&copy;`. For a full list, look (here)[http://www.ascii.cl/htmlcodes.htm].
+The examples above use the character codes `&amp;` and `&copy;`. For a full list, look [here](http://www.ascii.cl/htmlcodes.htm).
 
 
-###### Your Turn!
+#### Your Turn!
 
 Set up a basic html file that we can use during the lesson. Use basic page structure for html, have some content in the body that uses semantic tags that we covered and images, links, lists, etc.

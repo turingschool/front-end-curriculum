@@ -2,6 +2,7 @@ code {
   font-family: monospace;
   font-size: 1.2em;
   padding: 3px;
+  background-color: #f4f4f4;
 }
 
 pre {
@@ -18,7 +19,7 @@ pre {
 }
 
 .highlight .hll { background-color: #d6d6d6 }
-.highlight  { background: #ffffff; color: #4d4d4c }
+.highlight  { background: #f4f4f4; color: #4d4d4c } /*bjm 8-15-16*/
 .highlight .c { color: #8e908c } /* Comment */
 .highlight .err { color: #c82829 } /* Error */
 .highlight .k { color: #8959a8 } /* Keyword */
