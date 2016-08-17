@@ -48,7 +48,7 @@ When an event occurs, the browser checks the element to see if there are any eve
 
 Try out the following code in the example code pen:
 
-```
+```js
   document.querySelector('.grandparent').addEventListener('click', function (event) {
     console.log('Grandparent');
   });
@@ -68,7 +68,7 @@ If you click on the button, you'll see that the events all bubble up through the
 
 The anonymous function passed to `document.addEventListener()` takes an optional argument, which it assigns an `Event` object to. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
 
-Each type of event supports a number of different properties. `MouseEvent`s contains information about the `x` and `y` coordinates where the mouse was clicked. `KeyboardEvent` has information about which key was pressed. The `currentTarget` property on the `Event` object can be useful during the event bubbling phase.
+Each type of event supports a number of different properties. `MouseEvent`s contain information about the `x` and `y` coordinates where the mouse was clicked. `KeyboardEvent` has information about which key was pressed. The `currentTarget` property on the `Event` object can be useful during the event bubbling phase.
 
 Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` of the event.
 
