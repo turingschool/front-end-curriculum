@@ -48,7 +48,7 @@ When an event occurs, the browser checks the element to see if there are any eve
 
 Try out the following code in the example code pen:
 
-```
+```js
   document.querySelector('.grandparent').addEventListener('click', function (event) {
     console.log('Grandparent');
   });
@@ -62,17 +62,30 @@ Try out the following code in the example code pen:
   });
 ```
 
-If you click on the button, you'll see that the events all bubbles up through the `.parent` and `.grandparent` elements — this provides a more explicit proof than the solutions you may come up with for the previous question.
+If you click on the button, you'll see that the events all bubble up through the `.parent` and `.grandparent` elements — this provides a more explicit proof than the solutions you may come up with for the previous question.
 
-The DOM has been updated to the following:
+### The Event Object
 
-```html
-<h1>JavaScript is amazing!</h1>
+The anonymous function passed to `document.addEventListener()` takes an optional argument, which it assigns an `Event` object to. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
 
-<p>The is the first paragraph.</p>
-<p class="awesome">The is the second paragraph.</p>
-<p id="third" class="awesome">The is the third paragraph.</p>
+Each type of event supports a number of different properties. `MouseEvent`s contain information about the `x` and `y` coordinates where the mouse was clicked. `KeyboardEvent` has information about which key was pressed. The `currentTarget` property on the `Event` object can be useful during the event bubbling phase.
+
+Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` of the event.
+
+```js
+document.querySelector('.grandparent').addEventListener('click', function (event) {
+  console.log(event.target);
+});
+
+document.querySelector('.parent').addEventListener('click', function (event) {
+  console.log(event.target);
+});
+
+document.querySelector('#click-me').addEventListener('click', function (event) {
+  console.log(event.target);
+});
 ```
+
 
 ### Pair Practice
 
@@ -103,9 +116,9 @@ Can you modify the function that adds new buttons so that it adds an event liste
 
 ## Event Delegation
 
-Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, when you do so, you have to remember to remove those event listeners.
+Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
 
-You can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM.
+Also, You can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM.
 
 Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
 
