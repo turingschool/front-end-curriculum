@@ -1,6 +1,5 @@
 ---
 title: Introduction to Sass
-layout: post
 tags: css, sass, scss
 ---
 
