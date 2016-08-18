@@ -1,5 +1,6 @@
 ---
 title: Introduction to Sass
+length: 120;
 tags: css, sass, scss
 ---
 
@@ -31,12 +32,12 @@ tags: css, sass, scss
   Here's an example of old-school Sass:
 
 ```
-  !primary-color= hotpink
+!primary-color= hotpink
 
-  .my-css-class
-      color= !primary-color
-      width= 100%
-      overflow= hidden
+.my-css-class
+    color= !primary-color
+    width= 100%
+    overflow= hidden
 ```
 
   With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now.
@@ -49,13 +50,13 @@ tags: css, sass, scss
   In May, 2010 `SCSS` was introduced with more recognizable syntax.
 
 ```
-  $primary-color: hotpink;
+$primary-color: hotpink;
 
-  .my-element {
-      color: $primary-color;
-      width: 100%;
-      overflow: hidden;
-  }
+.my-element {
+    color: $primary-color;
+    width: 100%;
+    overflow: hidden;
+}
 ```
 
   Even if you've never worked with SCSS before, this syntax is a little bit easier to understand since it is so much closer to the languages that we use every day. Variables look like jQuery variables, things are nested in these guys: `{}`, wrong indentation won't break your code, and assignments happen using `:` just like in normal CSS.
