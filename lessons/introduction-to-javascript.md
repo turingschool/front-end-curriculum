@@ -11,37 +11,6 @@ tags: javascript, browser
 * Work with functions as first-class objects
 * Understand how to query and update a page after its been loaded
 
-## Structure
-
-* 5 - Warm Up
-* 10 - Full-Group Instruction: History and Basics
-* 15 - Pair Experiment and Review: Creating a Function
-* 5 - Break
-* 10 - Full-Group Instruction: Control Flow and Array Iteration
-* 10 - Pair Exercise and Review: Iterating Over an Array of Functions
-* 5 - Break
-* 25 - Full Group Instruction
-* 5 - Break
-* 25 - Independent Work
-* 5 - Wrap Up
-
-### I consider myself a JavaScript ninja already... What should I do?
-
-This is a very introductory lesson. If you find yourself already familiar with the things we are going to cover in this lesson and you want something a little spicier to chew on head over to the [JavaScript Koans](https://github.com/mrdavidlaing/javascript-koans) and try your hand at some JavaScript challenges.
-
-
-## Warmup
-
-Open up the Chrome Developer Tools by pressing `Command-Option-J` on your Mac. This will give you a REPL like `pry` or `irb`—except with JavaScript. Take a few moments to try the following:
-
-* Perform basic arithmetic (`2 + 2`, `3 * 3`);
-* Create some strings
-* Create an array
-* Assign a value to a variable
-* Create a hash (in Ruby 1.9+ style)
-
-What works as expected? What are some things that you noticed behave differently? Record these observations in a Gist.
-
 ## Full-Group Instruction I: History and Basics
 
 Legend has it JavaScript was created in 10 days in May of 1995 by Brendan Eich. It was originally descended from [Self][] and [Scheme][], but its syntax was changed to be more like Java and C. It has no relation to Java.
@@ -50,8 +19,6 @@ Legend has it JavaScript was created in 10 days in May of 1995 by Brendan Eich. 
 [Scheme]: http://www.scheme.com/tspl4/
 
 ### Variables
-
-Like Ruby, JavaScript uses duck typing. Unlike Ruby, you need to use the `var` keyword when declaring a variable for the first time. If you forget the `var` keyword, your variable will be declared in the global scope—whether you meant it that way or not.
 
 ```js
 var x = 1;
@@ -130,7 +97,7 @@ Operators are pretty straight forward in JavaScript - for the most part.
 
 ### Conditionals
 
-We can write conditionals in JavaScript too! There are a few differences from ruby.
+We can write conditionals in JavaScript too!
 
 ```js
 var cookie = "chocolate chip"
