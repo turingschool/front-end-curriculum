@@ -9,7 +9,7 @@ Sass will watch for any files with a `.scss` or `.sass` extension and compile th
   - You have a basic html/css/js structure
   - You have NOT integrated node, webpack, or other fancy package managers (they have their own set uÂp rules)
 
-### Verify that you have Ruby
+### Verify That You Have Ruby
   The most common way to install Sass is by using Ruby.  
 
   If you are on a mac, your computer comes with the Ruby programming language ready to go.  
@@ -24,14 +24,17 @@ Sass will watch for any files with a `.scss` or `.sass` extension and compile th
   You should see a bunch of output, with `1 gem installed` somewhere in there.
 
 ### Put Sass to Work
-  Tell Sass to watch for any changes to `.sass` or `.scss` files in a certain directory with this command:
-  `sass --watch path/to/targe-directory`
+  Tell Sass to watch for any changes to `.sass` or `.scss` files in a certain directory with this command:  
+
+  `sass --watch path/to/targe-directory`  
+
   Example: `sass --watch ~/my_project/lib/styles`. This will watch that directory.
 
-  If there is an existing `.scss` file it will automatically compile it into `.css` for you, and continuously re-compile any time a change is made.  
-  If there are no files, it will wait until you create a `.scss` file and then immediately compile it to `.css`.
+  If there is an existing `.scss` file it will automatically compile it into `.css` for you, and continuously re-compile any time a change is made.
 
-  After running the watch command, you'll see an ouput similar to this:
+  If there are no existing files, it will wait until you create a `.scss` file and then immediately compile it to `.css`.
+
+  After running the watch command, you'll see an outut similar to this:
 ```
 sass --watch ~/project/lib/styles
 >>> Sass is watching for changes. Press Ctrl-C to stop.
@@ -57,3 +60,5 @@ This is saying to watch for any changes or creation of `.scss` files in `~/scss-
 If you only care about a particular file, not an entire directory, simply specify that file in the watch command.  
 
 `sass --watch ~/project/lib/styles/variables.scss`
+
+#### Happy Sassing.
