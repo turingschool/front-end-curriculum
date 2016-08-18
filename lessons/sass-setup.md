@@ -1,6 +1,5 @@
 ---
 title: Setting Up Sass Locally
-layout: post
 tags: css, sass, scss
 ---
 
