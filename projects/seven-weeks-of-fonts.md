@@ -46,4 +46,4 @@ _When tempted to fight fire with fire, remember that the Fire Department usually
 # Resources
 
 - [Thinking with Type](http://www.thinkingwithtype.com/)
-- Inspiration on the power of using typography to invoke emotion [via the Stranger Things title sequence](http://www.vox.com/2016/8/16/12490274/stranger-things-credits-design) 
+- Inspiration on the power of using typography to invoke emotion [via the Stranger Things title sequence](http://www.vox.com/2016/8/16/12490274/stranger-things-credits-design)  
