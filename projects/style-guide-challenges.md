@@ -16,9 +16,9 @@ Every week you will be given a specific page element to build. It must be respon
 
 ## Project Requirements
 
-Each week you will be given a new page element to build, and by the end of the module you will have a created a style guide. As outlined in Brad Frost's [Style Guide](http://bradfrost.com/blog/post/style-guides/) overviews, you will focus on creating a _pattern library_ and _code style guide_ for each element.
+Each week you will be given a new page element to build, and by the end of the module you will have a created a style guide. As outlined in Brad Frost's [Style Guide](http://bradfrost.com/blog/post/style-guides/) overviews, you will focus on creating a pattern library and code style guide for each element.
 
-Focus on semantic HTML, reusable class and ID names, organized and clear CSS, and DRY, well factored Javascript. At the end of the module, your deliverable will be a gh-pages site displaying each of your solutions and the code for each, along with a brief description of the element so a developer new to your project can understand the intended use without further explanation.
+Focus on semantic HTML, well organized and clear CSS, and DRY, well factored Javascript. At the end of the module, your deliverable will be a gh-pages site displaying each of your solutions and the code for each, along with a brief description of the element so a developer new to your project can understand the intended use without further explanation.
 
 Your final style guide deliverable must meet the following criteria:
 
@@ -36,7 +36,7 @@ Design and build a reusable primary navigation bar. It must meet the following c
 
 - be responsive
 - have a series of links that is not a dropdown on mid to large screens
-- responsive layout must have the links shown as a dropdown
+- small screen/device layout must have the links shown as a dropdown
 - have a button suitable to be used for "sign up" or "log out"
 - have space for a logo, with a placeholder icon
 
