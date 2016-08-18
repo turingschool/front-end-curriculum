@@ -1,398 +1,376 @@
 ---
 title: Introduction to Sass
-layout: post
+layout: presentation
 tags: css, sass
 ---
-# Introduction to Sass/SCSS
 
-### Goals For This Lesson:
-  1. Get a general understanding of Sass and SCSS
-  2. Learn how to set up a project to use SCSS
-  3. Understand Variables, Nesting, and Cool Tricks
-
-### Things You Need
-  1. Your Brain
-  2. Some *sass*...bahahaha.
-
-## Understanding Sass
-
-### What is Sass?
-  Sass stands for Syntactically Awesome StyleSheets.
-
-  *Interesting Note: Sass is never in uppercase. SCSS is always uppercase. There's even a website about it:*  [SassnotSASS.com](SassnotSASS.com)
-
-  Think of it Sass just like CSS but with a grab back of extra weapons like variables, functions, and organizational wizardry.
-
-  As an general definition, Sass is a *preprocessor* written in Ruby that compiles SCSS into CSS3.
-
-  Originally it was part of another preprocessor called `Haml`. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules.
-
-  Here's an example of old-school Sass:
-
-  ```
-  !primary-color= hotpink
-
-  .my-css-class
-      color= !primary-color
-      width= 100%
-      overflow= hidden
-  ```
-
-  With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now.
-
-  Developers wanted a syntax that was more familiar to and compatible with vanilla `CSS`. Which brings us to...
-
-###  SCSS
-  SCSS stands for Sassy CSS (...seriously).
-
-  In May, 2010 `SCSS` was introduced with more recognizable syntax.
-
-  ```
-  $primary-color: hotpink;
-
-  .my-element {
-      color: $primary-color;
-      width: 100%;
-      overflow: hidden;
-  }
-  ```
-
-  Even if you've never worked with SCSS before, this syntax is a little bit easier to understand since it is so much closer to the languages that we use every day. Variables look like jQuery variables, things are nested in these guys: `{}`, wrong indentation won't break your code, and assignments happen using `:` just like in normal CSS.
-
-  Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for many reasons.
-
-  1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. Such is not the case for Sass.
-  2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make Jhun cry, BUT through the tears your stylesheet will still function properly.
-
-### What do we mean by "Sass is a Preprocessor"?
-At the most basic level, a preprocessor is a computer program that takes one type of data and converts it to another type of data.
-
-As developers we are lucky to have some amazing modern tools that help make writing code easier. Unfortunately, computers are still big dumb animals that need very specific instructions.
-
-Sass makes CSS awesome, but we need a processor to do some middle work for us and translate it into the normal CSS that the browser can understand.
-
-### Why use Sass in the first place?
-  CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY.
-
-  Some of the cool tricks include defining variables that can be peppered across multiple CSS files, nesting elements to visibly reflect the HTML element relationships, using math equations to adjust sizes and values, adjusting colors using more intuitive language like "darken" and "lighten", and bundling groups of styles together to easily reference throughout your CSS...to name a few.
-
-## Variables
-One of the most obvious and immediately useful features of Sass is the ability to define variables.
-
-As developers we strive to write DRY, clean code, and storing values for CSS styles as variables contributes to that. This means we can make color changes in one place, and the change will be reflected anywhere that the variable is referenced.
-
-Variables are defined by a `$` immediately preceding the name of the variable (like jQuery), and a colon separating the name of the variable from the value.
-```
-$favorite-text-color: chartreuse;
-```
-
-They can then be used anywhere in your stylesheet in place of that style.
-```
-p {
-  color: $favorite-text-color;
-}
-```
-
-It's also nice to avoid typing long, specific styles more than once. Instead we can reference a semantically logical variable.
-
-```
-$frilly-font: "Fantasy", cursive;
-$main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
-
-$button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
-
-.main-content {
-  font-family: $main-font;
-  button {
-    transition: $button-slide-transition;
-  }
-}
-```
-
-Variables are easiest to change if they're all located in the same stylsheet. Let's say you create a file called `variables.scss` that houses all of your variables. Then you simply need to require said file in your other stylesheets using the syntax `@import "variables"`
-
-```
-// variables.scss
-
-// Colors
-$favorite-text-color: chartreuse;
-$gray-link: #aaa;
-
-// Fonts
-$frilly-font: "Fantasy", cursive;
-$main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
-
-// Transitions
-$button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
-```
-
-```
-// home-page.scss
-@import "variables";
-
-body {
-  color: $favorite-text-color;
-}
-
-```
-
-## Nestings
-Nesting makes representing relationships between elements in HTML possible in CSS.
-
-For example, if you want to target an anchor tag within a navigation element within a particular header tag, you can wrap the elements inside each other as you would in HTML.
-
-##### Sass
-```
-$main-text-dark: #000;
-$red: #FF0000;
-$link-light: #fff;
-
-header {
-  color: $main-text-dark;
-  nav: {
-    background-color: $dark-red;
-    a { color: $link-light; }
-  }
-}
-```
-
-##### CSS Output
-```
-header { color: #000; }
-header nav { background-color: #ff0000; }
-header nav a { color: white; }
-```
-
-*IMPORTANT NOTE* Notice how the CSS output contains very specific CSS style rules. Although nesting can make writing CSS easier, it can also make targeting future elements more difficult when you need to make changes. Try to avoid excessive levels of nesting unless absolutely necessary.
-
-#### Nesting & Psuedo-Selectors
-A common scenario when nesting is a good option is when dealing with psuedo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
-
-To target a parent element and apply a psuedo selector, use `&:psuedo-selector` as in the following syntax:
- ```
-a {
-  &:hover { color: pink; }
-}
- ```
-
-Here is a more in depth example. Notice how the nesting is only one HTML element deep.
-
-##### Sass
-```
-nav {
-  background: red;
-  a {
-    color: white;
-    &:hover { text-decoration: none; }
-  }
-}
-```
-
-##### CSS
-```
-nav { background: red; }
-nav a { color: white; }
-nav a:hover { text-decoration: none; }
-```
-
-## Color Functions
-Color functions in Sass let you adjust defined color values with ease.
-
-Let's take a second to go back over the different ways to define a color in CSS.
-
-##### RGBA
-Stands For: Red, Green, Blue, Alpha(Opacity)
-Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`
-Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)
-
-Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation of red, blue and green respectively, and blends them together.
-
-##### Hexadecimal Code
-Stands For: A form of RGB notation written as pairs of hexadecimal values.
-Syntax: `#rrggbb` or `#rgb`.
-Example: `#f00` or `#ff0000` (red)
-
-*ProTip:* Shorthand comes from duplicating each character. So `#f00` (red) expands into `#ff0000`, or `#fb0` (yellow) expands to `#ffbb00`;)
-
-
-##### HSLA
-Stands For: Hue, Saturation, Lightness, Alpha(Opacity)
-Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`
-Example: `hsla(0, 100%, 50%, 1)` (red)
-
-**Hue:** A value from 0 to 360 indicating the value of RGB on a color wheel.
-
-Think of the letters RGB distributed equally clockwise around a circle. (R)ed is at 0 or 360, (G)reen is at 120, (B)lue is at 240.
-
-[Color Wheel](https://uwdigipub.files.wordpress.com/2014/11/hsl-color-wheel-pagespeed-ce-if6-exzipy.png)
-
-**Saturation:** A percentage of the grayscale from 0% (no color) to 100% (full color).
-
-**Lightness:** A percentage of white value from 0% (completely dark) to 100% (completely light);
-
-**Alpha:** A decimal value indicating transparency from 0 (invisible) to 1 (completely opaque).
-
-#### mix(color1, color2, weight)
-Mixes two given colors based on the weight percentage provided.
-
-`$weight` in this function is relative to the two defined colors. Closer to `100%` gives more weight to `$color1`, closer to `0%` gives more weight to `$color2`.
-```
-$color1: hsla(0, 100%, 50%, 1);
-$color2: hsla(240, 100%, 50%, 1);
-mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 75%);
-mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 35%);
-
-.redder-background {
-  background: mix($color1, $color2, 25%);
-}
-
-.bluer-background {
-  background: mix($color1, $color2, 95%);
-}
-
-```
-
-#### lighten/darken(color, amount)
-Takes a color and a percentage value, returning a color with a lightness increased or decreased by given amount.
-
-```
-$color1: hsla(240, 100%, 50%, 1);
-lighten(hsla(240, 100%, 50%, 1), 30%);
-darken(hsla(240, 100%, 50%, 1), 30%);
-
-.lighter-background {
-  background: lighten($color1, 30%);
-}
-
-.darker-background {
-  background: darken($color1, 30%);
-}
-
-```
-
-#### desaturate/saturate(color, amount)
-Remember that saturation is a colors representation on a gray scale.
-
-`desaturate()` Will reduce a color's saturation by that percentage.
-`saturate()` Will increase a color's saturation by that percentage.
-
-```
-$full-color: hsla(240, 100%, 50%, 1);
-$duller-color: hsla(240, 50%, 50%, 1);
-saturate(hsla(240, 50%, 50%, 1), 10%);
-desaturate(hsla(240, 100%, 50%, 1), 80%);
-
-.vibrant-background {
-  background: saturate($duller-color, 30%);
-}
-
-.dull-background {
-  background: desaturate($full-color, 80%);
-}
-```
-
-#### complement(color)
-Returns the complement (aka the color that is 180 degrees from the value on the color wheel).
-Identical function to `adjust-hue(color, 180deg)`
-
-Take a peek at the [Color Wheel](https://uwdigipub.files.wordpress.com/2014/11/hsl-color-wheel-pagespeed-ce-if6-exzipy.png) again for clarity.
-
-```
-$color1: hsla(240, 100%, 50%, 1);
-complement(hsla(240, 100%, 50%, 1));
-=> hsla(60, 100%, 50%, 1);
-
-.complement-background {
-  background: complement($color1)
-}
-```
-
-#### invert(color)
-The red, green, and blue values are inverted.
-
-```
-$color: rgba(233, 29, 99, 1);
-invert(rgba(233, 29, 99, 1));
-=> ????
-
-.inverted-background {
-  background: invert($color);
-}
-```
-
-## Math
-
-Another cool trick in Sass is using Math to handle simple changes to numerical values.
-
-For example, you can define the width of your window using a variable like `$windowWidth` and then make a div that has a width of `windowWidth/3`.  Let's see this in action.
-
-##### SCSS
-```
-$contentWidth: 900px;
-
-.innerContent {
-  width: $contentWidth/3;
-}
-```
-
-##### CSS
-```
-.innerContent {
-  width: 300px;
-}
-```
-
-This is super useful for mentally organizing what you are trying to calculate. Take the following example as a demonstration of how using math and clear variable names can help clarify your stylesheets.
-
-##### SCSS
-```
-$contentWidth: 900px;
-$narrowContainerPadding: 25px;
-
-.main-section {
-  padding: $narrowContainerPadding;
-  width: $contentWidth - $narrowContainerPadding*2
-}
-```
-
-##### CSS
-```
-.main-section{
-  padding: 20px;
-  width: 850px;
-}
-```
-
-We can combine our color super-powers and math to do some awesome stuff too!
-
-Lets generate random colors with Sass.
-
-In Sass, there's a random function `random()` which unlike JavaScript starts its random number value range at 1.
-
-See if you can set a text color and background-color to the following div using random colors.
-
-```
-.random-color-element {
-  //INSERT CODE HERE
-
-
-}
-
-//SOLUTION:
-
-  $red: random(256)-1;
-  $green: random(256)-1;
-  $blue: random(256)-1;
-
-  .random-color-element {
-    color: rgba($red, $green, $blue, 1);
-    background-color: rgba($red, $green, $blue, 1);
-  }
-
-```
-
-## Resources
-  - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
-  - [Sass to CSS Translator](http://www.sassmeister.com/)
-  - SASS syntax highlighting
-  - ATOM package for showing CSS colors in your editor
+<section>
+  <h2>Introduction to Sass/SCSS</h2>
+</section>
+
+<section>
+  <h3>Goals:</h3>
+  <ol>
+    <li>Get a general understanding of Sass and SCSS</li>
+    <li>Discover Sass Ninja Skills</li>
+    <ul>
+      <li>Variables</li>
+      <li>Nesting</li>
+      <li>Color Functions</li>
+      <li>Math Functions</li>
+    </ul>
+  </ol>
+</section>
+
+<section>
+  <h3>
+    Sass: Syntactically Awesome Style Sheets
+  </h3>
+  <p>
+    <i>Interesting Note: Sass is never in uppercase.<br/>
+      SCSS is always uppercase.<br/>
+      There's even a website about it:</i> <a href="http://SassnotSASS.com">SassnotSASS.com</a>
+  </p>
+</section>
+
+<section>
+  <p>
+    Sass is a <i>preprocessor.</i>
+  </p>
+</section>
+
+<section>
+  <h3>Old School Sass</h3>
+  <code>
+    <pre>
+      !primary-color= hotpink
+
+      .my-css-class
+          color= !primary-color
+          width= 100%
+          overflow= hidden
+    </pre>
+  </code>
+</section>
+
+<section>
+  This was weird.
+</section>
+
+<section>
+  <h3>SCSS: Sassy CSS</h3>
+  <p>Seriously.</p>
+</section>
+
+<section>
+  <h3>Modern SCSS</h3>
+  <code>
+    <pre>
+      $primary-color: hotpink;
+
+      .my-element {
+          color: $primary-color;
+          width: 100%;
+          overflow: hidden;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <p>You can still use Sass if you want to.</p>
+</section>
+
+<section>
+  <p>Why use a CSS preprocessor?</p>
+  <ul>
+    <li>Developers are lazy.</li>
+    <li>DRY Code</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Cool New Tricks</h3>
+  <ul>
+    <li>Variables</li>
+    <li>Nesting</li>
+    <li>Math</li>
+    <li>Color Functions</li>
+    <li>OTHER Functions (like <code>for loops</code>!)</li>
+    <li>MixIns</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Variables</h2>
+  <code>
+    <pre>
+      $ridiculousPink: #e91d63;
+
+      body {
+        background-color: $myFavoriteColor;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <code>
+    <pre>
+      $frilly-font: "Fantasy", cursive;
+      $main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
+      $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+      .main-title { font-family: $frilly-font; }
+      .main-content {
+        font-family: $main-font;
+        button {
+          transition: $button-slide-transition;
+        }
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <strong>ProTip:</strong> Consolodate variables into one file.
+</section>
+
+<section>
+  <pre>variables.scss</pre>
+  <code>
+    <pre>
+      // Colors
+      $favorite-text-color: chartreuse;
+      $gray-link: #aaa;
+
+      // Fonts
+      $frilly-font: "Fantasy", cursive;
+      $main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
+
+      // Transitions
+      $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
+    </pre>
+  </code>
+
+  <pre>home-page.scss</pre>
+  <code>
+    <pre>
+      @import "variables";
+
+      body {
+        color: $favorite-text-color;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <h3>Your Turn</h3>
+  Turn this CSS into SCSS using variables.
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="Lkaqzo" data-default-tab="html,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/Lkaqzo/">Lkaqzo</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>A quick note on Sass variable naming conventions.</h3>
+</section>
+
+<section>
+  <h3>Nesting</h3>
+  <p>
+    Nesting allows you to structure your CSS similarly to how the associated HTML is structured.
+  </p>
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="QEPLXQ" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/QEPLXQ/">Nesting Example</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>IMPORTANT</h3>
+  <p>
+    Nesting can result in VERY specific CSS. </br>
+    Don't go overboard.
+  </p>
+</section>
+
+<section>
+  <h3>Nesting & Psuedo Selectors</h3>
+  <p>A good practice for nesting is when you have a psuedo selector like the following: <pre>:hover</pre></p>
+  <code>
+    <pre>
+      a {
+        &:hover { color: pink; }
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <h3>Your Turn</h3>
+  <p>Write SCSS for this HTML using nesting & variables to accomplish the following criteria:
+    <ol>
+      <li>Define all styles as variables.</li>
+      <li>Link text font family should be Arial, Tahoma, or sans-serif.</li>
+      <li>On hover, make the link text red, and the button text white.</li>
+      <li>On hover, make the button have a box shadow of your choosing.</li>
+    </ol>
+
+    <p data-height="265" data-theme-id="0" data-slug-hash="ZOPkzb" data-default-tab="html,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/ZOPkzb/">Nested SCSS</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+
+<section>
+  <h3>Color Functions</h3>
+</section>
+
+<section>
+  <h3>Color Functions</h3>
+  <p>Lets you adjust color values with minimal headache.</p>
+  <ul>
+    <li>complement(color)</li>
+    <li>mix(color, %)</li>
+    <li>lighten/darken(color, %)</li>
+    <li>saturate/desaturate(color, %)</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Quick CSS Color Review</h3>
+</section>
+
+<section>
+  <h3>RGBA</h3>
+  <code>rgba(0-255, 0-255, 0-255, 0-1)</code> <br>
+  or <br>
+  <code>rgba(0-100%, 0-100%, 0-100%, 0-1 )</code>
+</section>
+
+<section>
+  <h3>Hexadecimal</h3>
+  <code>#rrggbb</code> or <code>#rgb</code>
+  <p>ProTip: <code>#f00</code> = <code>#ff0000</code>. Simply duplicate each character.</p>
+  <p>(FF is 255 if converted from base 16 (Hexadecimal) to base 10 (Decimal).)</p>
+</section>
+
+<section>
+  <h3>HSLA</h3>
+  <code>hsla(0-360, 0-100%, 0-100%, 0-1)</code>
+</section>
+
+<section>
+  <h3>Let's see some functions</h3>
+</section>
+
+<section>
+  <h3>complement(color)</h3>
+  <p>Returns the color that is 180 degrees from the given argument on the <a href="https://uwdigipub.files.wordpress.com/2014/11/hsl-color-wheel-pagespeed-ce-if6-exzipy.png">RGBA color wheel</a>.</p>
+  <code>
+    <pre>
+      $color: hsla(240, 100%, 50%, 1);
+      complement(hsla(240, 100%, 50%, 1)); => hsla(60, 100%, 50%, 1);
+
+      .complement-background {
+        background-color: complement($color)
+      }
+    </pre>
+  </code>
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="dXALPk" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/dXALPk/">Color Functions</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>mix(color1, color2, %)</h3>
+  <p>
+    Mixes two given colors based on the percentage.
+  </p>
+  <p>
+    It's like a spectrum. <br/>
+    100% means completely on the color1 side, 0% is completely towards color2.
+  </p>
+  <code>
+    <pre>
+      $red: hsla(0, 100%, 50%, 1);
+      $blue: hsla(240, 100%, 50%, 1);
+
+      p {
+        background-color: mix($red, $blue, 80%);
+      }
+    </pre>
+  </code>
+
+    <p data-height="265" data-theme-id="0" data-slug-hash="dXALPk" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/dXALPk/">Color Functions</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+</section>
+
+<section>
+  <h3>Your Turn</h3>
+  <p>
+    Experiment with using the <code>mix()</code> and <code>complement()</code> functions in the CodePen from the previous slide.
+  </p>
+
+  <p>
+    Then implement the <code>lighten()</code>, <code>darken()</code>, <code>saturate()</code>, and <code>desaturate()</code> functions. <br/>
+    Check out the <a href="http://sass-lang.com/documentation/Sass/Script/Functions.htm">documentation</a>.
+  </p>
+</section>
+
+<section>
+  <h3>Math</h3>
+  <p>
+    (insert stink eye here)
+  </p>
+  <p>
+    Sass lets you call math operators on numerical values as if you were using a robust programming language (crazy!!).
+  </p>
+</section>
+
+<section>
+  <h3>Example:</h3>
+  <code>
+    <pre>
+      // SCSS
+      $content-width: 900px;
+
+      .innerContent {
+        width: $contentWidth/3
+      }
+    </pre>
+  </code>
+
+  <code>
+    <pre>
+      // CSS
+      .innerContent{
+        width: 300px;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <p>
+    This is helpful for organizing what you are trying to calculate on a page.
+  </p>
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="yJABKv" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/yJABKv/">Math Functions</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>Your Turn!</h3>
+  <h5>Random Color Generator</h5>
+  <p>
+    Using the <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#random-instance_method">random number</a> function, assign a random background color to the div to the CodePen from the previous slide. <br/>
+    Be sure to use variables.
+  </p>
+  <p>Hint: Remember that RGB values are created by setting 3 values of numbers between 0-255.</p>
+</section>
+
+<section>
+  <h3>The End.</h3>
+  <a href="https://gist.github.com/martensonbj/d9c4ac31959e1b5a9611a9986d8f8c67">Gist of Verbose Lesson Plan</a>
+  <img src="http://i0.kym-cdn.com/photos/images/newsfeed/000/085/444/1282786204310.jpg?1318992465" alt="puking-rainbows" />
+</section>
