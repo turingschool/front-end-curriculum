@@ -21,7 +21,7 @@ A typical workflow with Git includes:
 
 ### Git != GitHub
 
-Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local repo from the remote origin repo on GitHub, and then as work is done, the code is committed and pushed from the developers local repo and added to the remote origin repo on GitHub. The work of other developers is pulled down and merged into
+Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo from the remote origin repo on GitHub, and then as work is done, the code is committed and pushed from the developer's local repo and added to the remote origin repo on GitHub. The work of other developer's is pulled down and merged into
 
 With GitHub we can:
 
@@ -31,7 +31,7 @@ With GitHub we can:
 
 Read more about the workflow we use with GitHub [here on the GitHub Guides](https://guides.github.com/introduction/flow/).
 
-#### Getting Set Up
+## Getting Set Up
 
 You already have your text editor up and running and Xcode installed, but if you have any questions about how those are set up here are the steps:
 
@@ -66,7 +66,7 @@ You'll want to install it before attempting to install anything else.
 Now you should have the underlying tools we need to move forward.
 
 
-#### Setting up Git
+## Setting up Git
 
 ### Homebrew
 
@@ -131,15 +131,11 @@ brew install git
 
 #### Configuring Git
 
-If you haven't used git before (don't worry, we'll be covering its usage in future classes),
-we'll want to configure it with some basic information about us.
+If you haven't used git before (don't worry, we'll continuing covering how to use it in future classes), we'll want to configure it with some basic information about us.
 
-We can tell git to configure itself using the `git config` command from our terminal.
-Additionally, we're setting "global" configurations for git, so we'll use the `--global` flag
-when we provide it with a new piece of configuration.
+We can tell git to configure itself using the `git config` command from our terminal. Additionally, we're setting "global" configurations for git, so we'll use the `--global` flag when we provide it with a new piece of configuration.
 
-Tell git your Name and Email address by using the following commands, substituting your
-own name and email:
+Tell git your Name and Email address by using the following commands, substituting your own name and email:
 
 ```
 git config --global user.name "John Doe"
@@ -154,10 +150,11 @@ In order to push up to GitHub, you'll also need to generate an SSH key. SSH keys
 
 ### Git Commands for a Basic workflow
 
-There are hundreds of different git commands, but to get started you only need to remember a handful of them. Let's go over a few of the commands you'll be using right off the bat:
+There are hundreds of different git commands, but to get started you only need to remember a handful of them. Let's go over a few of the commands you'll be using often:
 
 * `git init` initializes your local directory as a new git repository. You must run this before you can commit any of your work.
 * `git status` shows the current status of your repo. It will show you if you have any work that is unstaged, what branch you are on, how many commits you are ahead of the master remote on github, and other useful things.
+* `git diff` shows you the changes in your unstaged code.
 * `git remote -v` shows you all the remotes for your repo. The `v` stands for verbose, which shows you the URL of the repository on github, if any, that your local repository is pointing to rather than just the name of the remote repo.
 * `git add .` takes all unstaged work and stages it, making it ready to be committed. You can also specify a particular file to stage with `git add file-path/name-of-file`
 *  `git commit -m "write commit message here"` commits all staged work. It's important to write a brief, clear commit message so you know what each commit is for. "Final commit" is not the commit message you're looking for exactly 100% of the time.
@@ -171,4 +168,4 @@ There are hundreds of different git commands, but to get started you only need t
 * `history` will show you your past git commands
 * `git stash` stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
 * `git stash pop` gives you back the last staged changes you stashed
-* `git blame file-path/name-of-file` shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote that terrible chunk of code you've been swearing at for the last hour.
+* `git blame file-path/name-of-file` shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
