@@ -14,7 +14,7 @@ At the end of the day, let's be really honest: this isn't that much different th
 - Mobile-first (like you've never done)
 - Accessible
 
-Your main goal for this phase of the project is to focus on the user interface. In later interations, we will add the actual functionality that makes it a chat application.
+Your main goal for this phase of the project is to focus on the user interface. In later iterations, we will add the actual functionality that makes it a chat application.
 
 ### Project Timeline
 
