@@ -4,6 +4,8 @@ title: Tier One
 
 ## Project Introduction
 
+In the last project, we gave your a familiar concept (taking user input and adding it to the page) and then added some new techniques (e.g. integration testing, webpack, etc). This time around, we're flipping it around. There are no new tools, but you're tackling new and novel application ideas.
+
 Over the next few weeks you will be working through three tiers of projects. Each of these tiers will allow you and your project group to select one of several project options, and will increase in difficulty each tier level.
 
 In Tier One, you will choose one of the following projects, with specific base requirements outlined below:
@@ -58,9 +60,9 @@ Things to keep in mind as you are planning your time for the next week:
 
 * DTR: clarify roles, scheduling restraints, personal learning goals at the start of the project
 * Take the time to wireframe your app. Think through the user flow, have a solid plan and direction for you project. Don't start coding without a roadmap.
-* Your app must be visually correct and consistent in Chrome, Safari, and Firefox.
-* TDD: test test test
-
+  * **Pro-tip**: Bring early wireframes and ideas to Module 1 students, friends, and family. Are your assumptions about how a user would interact with the application accurate?
+* Your app must be visually correct and consistent in Chrome, Safari, Firefox, and Microsoft Edge.
+* Test-driven development: This is essential unless you want your application to fall under the weight of itself.
 
 ### Evaluation Criteria
 
