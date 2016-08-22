@@ -91,3 +91,19 @@ Honestly, you're probably equally likely to see either one in the real world. Pi
 There is another interested tool called [EditorConfig](http://editorconfig.org/). Many browsers support it by default, but those that don't out of the box often have plugins that do. Basically, EditorConfig allows a team to define their own settings for spaces and tabs and whatnot. Even if a developer prefers different settings, their editors will automatically match whatever the agreed upon settings are for that project when their working on the code base.
 
 This tool is [very common in the real world](https://github.com/editorconfig/editorconfig/wiki/Projects-Using-EditorConfig).
+
+## Installing Locally
+
+It's not polite to assume that your colleagues have these tools installed globally. Instead, you should make it a `devDependency` of your project and set up an npm script.
+
+```
+npm install eslint --save-dev
+```
+
+In `package.json` add the following to your `"scripts"` section:
+
+```
+"lint": "eslint lib/*.js" // The second part is depedent on how you've structured your project.
+```
+
+Now, anyone who has run `npm install` can run the linter using: `npm run lint`.
