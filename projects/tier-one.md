@@ -70,7 +70,7 @@ You're application should:
 
 - Work on all screen devices
 - Should take a mobile-first approach
-- Be thoughtfully designed. (This is a good opportunity to practice with Sketch)
+- Be thoughtfully designed.
 
 ## Instructor Evaluation Points
 
