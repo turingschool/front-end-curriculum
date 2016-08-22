@@ -103,13 +103,13 @@ source ~/.bash_profile
 
 Now run `brew doctor` again and the warning should be gone.
 
-__Aside: `PATH`:__
+##### Aside: `PATH`
 
 Your `PATH` is a system configuration property which tells your computer which places to look for underlying programs
 when you want to run a command. By adding this directory to our `PATH`, we're telling the system how to find the various applications we will
 install using Homebrew
 
-__Aside: `~/.bash_profile`__
+##### Aside: `~/.bash_profile`
 
 When we use our terminal, we're actually using a program called a "Shell" to interact
 with the underlying Operating System. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
@@ -146,8 +146,29 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-You'll also need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
+In order to push up to GitHub, you'll also need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
 
 #### Downloading GitHub Desktop
 
 [GitHub Desktop](https://desktop.github.com/) is a graphical interface that allows you to work with Git and GitHub outside of the command line. If you need some help setting it up, take a look at the step by step [docs from GitHub](https://help.github.com/desktop/guides/getting-started/setting-up-github-desktop/) or find more information [here](https://help.github.com/desktop/guides/getting-started/).
+
+### Git Commands for a Basic workflow
+
+There are hundreds of different git commands, but to get started you only need to remember a handful of them. Let's go over a few of the commands you'll be using right off the bat:
+
+* `git init` initializes your local directory as a new git repository. You must run this before you can commit any of your work.
+* `git status` shows the current status of your repo. It will show you if you have any work that is unstaged, what branch you are on, how many commits you are ahead of the master remote on github, and other useful things.
+* `git remote -v` shows you all the remotes for your repo. The `v` stands for verbose, which shows you the URL of the repository on github, if any, that your local repository is pointing to rather than just the name of the remote repo.
+* `git add .` takes all unstaged work and stages it, making it ready to be committed. You can also specify a particular file to stage with `git add file-path/name-of-file`
+*  `git commit -m "write commit message here"` commits all staged work. It's important to write a brief, clear commit message so you know what each commit is for. "Final commit" is not the commit message you're looking for exactly 100% of the time.
+* `git pull` once you've committed all your local work and running `git status` shows that you have nothing to commit, you pull down any changes from your remote. By default, this will pull from the `origin` remote's `master` branch. To be specific about which remote and branch to pull from, you can use: `git pull name-of-remote name-of-branch`
+* `git push` pushed your local changes up to your remote. By default, this will push to the `origin` remote's `master` branch. Like pull, you can push to a specific remote and branch with: `git push name-of-remote name-of-branch`. This is useful if you are using branches and pull requests. If you get an error message, it's probably because you haven't pushed your local branch up to github yet. Try `git push -u name-of-remote name-of-branch`.
+* `git branch` shows you all your local branches and indicates which branch you are currently on.
+* `git checkout -b name-of-new-branch` makes a new branch and switches to that branch.
+* `git merge name-of-branch` will merge the specified branch into the branch you are currently on.
+* `git branch -d name-of-branch-to-delete` deletes the specified branch
+* `git log` will show you the full list of commits and authors for your repo
+* `history` will show you your past git commands
+* `git stash` stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
+* `git stash pop` gives you back the last staged changes you stashed
+* `git blame file-path/name-of-file` shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote that terrible chunk of code you've been swearing at for the last hour.
