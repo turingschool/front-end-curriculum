@@ -16,9 +16,9 @@ Regardless of which project you choose, your project must:
 
 - Be test-driven
 - Use build tools
-- Designed by the student
+- Be designed by the student
 - Use a mobile-first approach
-- Accessible
+- Be accessible
 
 ### Project Option Descriptions:
 
