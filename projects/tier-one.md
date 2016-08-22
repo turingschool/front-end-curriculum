@@ -4,13 +4,13 @@ title: Tier One
 
 ## Project Introduction
 
-This module you will be working through three tiers of projects. Each of these tiers will allow you and your project group to select one of several project options, and will increase in difficulty each tier level.
+Over the next few weeks you will be working through three tiers of projects. Each of these tiers will allow you and your project group to select one of several project options, and will increase in difficulty each tier level.
 
 In Tier One, you will choose one of the following projects, with specific base requirements outlined below:
 
-* Pomodoro app
-* Weather app
-* Address book / contacts manager / "job stalker"
+* A Pomodoro application
+* A weather application
+* An address book / contacts manager / job stalker
 
 Regardless of which project you choose, your project must:
 
@@ -50,7 +50,6 @@ Networking is a critical skill, and it can get hard to keep track of everyone yo
 * A contact's information must be editable. You can enter multiple options for email, phone, and social media but if there is more than one you must specify a "primary".
 * You must be able to enter a note for each contact (what if you forget where you met them or what you talked about?)
 
-
 ### Project Timeline
 
 This projects spans a full seven (plus one) days. Your group will have the opportunity to check-in with instructors for guidance and assistance.
@@ -65,30 +64,13 @@ Things to keep in mind as you are planning your time for the next week:
 
 ### Evaluation Criteria
 
-You will have _two_ evaluations for this project. The first is the good, old-fashioned technical evaluation. You'll also have an evaluation on the UI -- you will be on your own to wireframe and design this project.
+You will have _two_ evaluations for this project. The first is the good, old-fashioned technical evaluation. You'll also have an evaluation on the UI. **Nota bene**: you will be on your own to wireframe and design this project.
 
 You're application should:
 
 - Work on all screen devices
 - Should take a mobile-first approach
 - Be thoughtfully designed. (This is a good opportunity to practice with Sketch)
-
-
-### Specification
-
-Please emphasis quality over quantity. (That said, quality is not an excuse for missing a large number of features.)
-
-#### Phase One
-
-<!-- Louisa is currently not sure how to outline the phases for this since there are 3 project options to choose from -->
-
-#### Phase Two
-
-<!-- Louisa is currently not sure how to outline the phases for this since there are 3 project options to choose from -->
-
-#### Phase Three
-
-<!-- Louisa is currently not sure how to outline the phases for this since there are 3 project options to choose from -->
 
 ## Instructor Evaluation Points
 
