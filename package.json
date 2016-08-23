@@ -6,7 +6,9 @@
   "dependencies": {
     "eslint": "^2.13.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "webdriverio": "^4.2.7"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

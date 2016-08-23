@@ -2,6 +2,15 @@
 title: Bird Feeder 1.0
 ---
 
+## setup
+
+Do this now:
+
+- Install the [Heroku Toolbelt](https://toolbelt.heroku.com).
+- Fork [this repository][chat-box], clone it, and run `npm install`.
+
+## Introduction
+
 Today, you'll be building a small chat application. (I know, I know.) Just to keep things fresh, let's make believe that it's a simple microblogging application (i.e. Twitter).
 
 This time around, we'll be using AJAX to synchronize our messages with the server. Luckily, some nice person built you a server and did all of the necessary build tool setup for you.
