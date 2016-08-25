@@ -43,6 +43,20 @@ Copy:
 _When tempted to fight fire with fire, remember that the Fire Department usually uses water._
 
 
+## Week Two
+
+Use the fonts and copy below for your layout. You should also consider how color and scale impact your layouts.
+
+Fonts:
+
+- [Vollkorn](https://fonts.google.com/specimen/Vollkorn)
+- [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+
+Copy:
+
+_“Well I could do that, but I won’t because I’m not an animal, and I don’t hate myself.” —Steve_
+
+
 # Resources
 
 - [Thinking with Type](http://www.thinkingwithtype.com/)
