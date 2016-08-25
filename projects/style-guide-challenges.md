@@ -30,6 +30,8 @@ Your final style guide deliverable must meet the following criteria:
 
 # Weekly Assignments
 
+Design, fonts, styles, and general structure is up to you. The final bar must be straightforward to maintain, user friendly, and easy to drop into a new codebase.
+
 ## Week One
 
 Design and build a reusable primary navigation bar. It must meet the following criteria:
@@ -40,7 +42,15 @@ Design and build a reusable primary navigation bar. It must meet the following c
 - have a button suitable to be used for "sign up" or "log out"
 - have space for a logo, with a placeholder icon
 
-Design, fonts, styles, and general structure is up to you. The final bar must be straightforward to maintain, user friendly, and easy to drop into a new codebase.
+## Week Two
+
+Design and build a reusable content card. It must meet the following criteria:
+
+- be responsive -- how does the layout/use of the cards change at small and large screen?
+- have an image
+- have a title
+- have a description
+- have a nicely styled link
 
 # Resources
 
