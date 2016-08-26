@@ -45,6 +45,13 @@ Some things to think about:
 
 ## Rubric
 
+### UX/UI Expectations
+
+- 4: Application is intuitive, well designed, and easy to use. Virtually no major improvements are needed in the UX or UI.
+- 3: Application shows strong effort towards simple, clean design, content organization, and well thought out experience and user interactions.
+- 2: Application meets basic best UX practices, but makes questionable design decisions that negatively impact the overall UX/UI.
+- 1: Application is lacking in basic best practices, and user struggles to understand how to use it.
+
 ### Functional Expectations
 
 - 4: Application meets all of the functional expectations in Phase Three
