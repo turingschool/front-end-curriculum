@@ -4,6 +4,8 @@ length: 180
 tags: css
 ---
 
+<!-- NOTE: WIP, because Louisa is in a constant state of not getting this lesson finished. -->
+
 ### Goals
 
 By the end of this lesson, you will know/be able to:
