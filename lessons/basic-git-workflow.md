@@ -117,9 +117,9 @@ Once we run our commit, we'll see the following:
 [master (root-commit) 5f2b8fb] Initial commit
  1 file changed, 0 insertions(+), 0 deletions(-)
  create mode 100644 readme.md
- ```
+```
 
-This is telling us we've made our root commit on the master branch, providing the sha that is unique to this commit, and that we've changed one file (our readme.md). Great! Now if we run `git status` again (if you haven't guessed it already, we'll be checking our status a lot -- it helps you keep track of where you are with your work), we'll see that we don't have anything to commit and we're all up to date:
+This is telling us we've made our root commit on the master branch, providing the SHA that is unique to this commit, and that we've changed one file (our readme.md). Great! Now if we run `git status` again (if you haven't guessed it already, we'll be checking our status a lot -- it helps you keep track of where you are with your work), we'll see that we don't have anything to commit and we're all up to date:
 
 ```
 On branch master
@@ -220,7 +220,7 @@ Fast-forward
 
 Now, still in master, run `git log` again and see what you get.
 
-All you're commits are there again! We've successfully merged the code from our branch back into master. Now that master is up to date, we don't really need the new-text branch anymore. Let's go ahead and delete it. First confirm that you're on the branch you think you are (in this case, master) with `git branch` and then run:
+All your commits are there again! We've successfully merged the code from our branch back into master. Now that master is up to date, we don't really need the new-text branch anymore. Let's go ahead and delete it. First confirm that you're on the branch you think you are (in this case, master) with `git branch` and then run:
 
 ```
 git branch -d new-text
@@ -228,10 +228,73 @@ git branch -d new-text
 
 You should see a message of `Deleted branch new-text (was ae1d85b).` Now if you run `git branch` again, you'll see that your only branch is master.
 
+### Stashing
 
----------
+There are times when you find yourself working along, only to realize you no longer want or need to code you've been working on, or you want to quickly pause mid-stream to hop to another branch and check something out without doing an in-process commit of your current work. A quick way to do this is `git stash`. Stashing saves away all work back to your last commit, and allows you to get it back again. Be careful with this -- if you bring back code you stashed several days ago, it's very likely that you'll get conflicts and bugs!
+
+Let's try stashing something. But first we need something to stash! On master, add some text to your readme:
+
+```
+# Hello
+
+I'm trying out branching!
+
+This is text I'm adding on my branch called new-text.
+
+I'm about to get stashed!
+```
+
+Now run `git status` and we'll see that we have unstaged changes. To stash these changes, run:
+
+```
+git stash
+```
+
+You should see the following message:
+
+```
+Saved working directory and index state WIP on master: ae1d85b add text in new-text branch
+HEAD is now at ae1d85b add text in new-text branch
+```
+
+This is saying that the working directory has been saved in a WIP (work in progress) state, and our last commit is now at HEAD (i.e. the current working code has been reverted back to the most recent commit).
+
+We don't have to specify what we're stashing, git will by default grab everything we've changed and stash it for us. Now run `git status` again. You should see that we're back to the message `nothing to commit, working directory clean`.
+
+If we decide we want our stashed code back, there's an easy way to get it back. Just run:
+
+```
+git stash pop
+```
+
+Stash saves all stashed code in a stash list, and `git stash pop` pops the last item in the list off and unstashes it for you. There are more [stash-related commands](https://git-scm.com/docs/git-stash) that can come in handy in certain edge cases, but most of the time `git stash` and `git stash pop` get you what you need. Run `git status` again, and you should see that you're back to the `Changes not staged for commit` message you had before we stashed!
+
+### Blaming
+
+There will be times when you hit a patch of code that doesn't make sense or you need some clarification on. On big teams, it's often fastest to try to find the person who wrote the code and ask them questions directly. But how do you figure out who wrote what? Git to the rescue! This is a pretty common need, and git has the solution with the appropriately named `git blame` command.
+
+From your master branch, run this command:
+
+```
+git blame readme.md
+```
+
+And you should see something like this:
+
+```
+62e1cd3c (Your Name 2016-08-28 18:22:08 -0600 1) # Hello
+62e1cd3c (Your Name 2016-08-28 18:22:08 -0600 2)
+62e1cd3c (Your Name 2016-08-28 18:22:08 -0600 3) I'm trying out branching!
+ae1d85be (Your Name 2016-08-28 18:56:13 -0600 4)
+ae1d85be (Your Name 2016-08-28 18:56:13 -0600 5) This is text I'm adding on my branch called new-text.
+```
+
+We can see the unique SHA of the commit that generated each line, the developer who wrote it, the date, and the line number in our working file. That's a lot of important information! It lets us chase down specific commits, figure out who wrote what, and when the changes happened. It also, on occasion, will point out that the anonymous developer you've been mad at all afternoon about a hacky chunk of code is, in fact, you.
+
 
 ### List of Common Commands
+
+Now that you've taken a walk through of the common git commands and workflow you'll be using, you're ready to dive into using git in your project repos confidently! And to help you along, here's a list of the commands we covered above. If you want more information or a deeper dive (or hit a git issue that we didn't cover here), check out the [great git docs](https://git-scm.com/docs).
 
 ###### `git init`
 initializes your local directory as a new git repository. You must run this before you can commit any of your work.
@@ -239,23 +302,11 @@ initializes your local directory as a new git repository. You must run this befo
 ###### `git status`
 shows the current status of your repo. It will show you if you have any work that is unstaged, what branch you are on, how many commits you are ahead of the master remote on github, and other useful things.
 
-###### `git diff`
-shows you the changes in your unstaged code.
-
-###### `git remote -v`
-shows you all the remotes for your repo. The `v` stands for verbose, which shows you the URL of the repository on github, if any, that your local repository is pointing to rather than just the name of the remote repo.
-
 ###### `git add .`
 takes all unstaged work and stages it, making it ready to be committed. You can also specify a particular file to stage with `git add file-path/name-of-file`
 
 ######  `git commit -m "write commit message here"`
 commits all staged work. It's important to write a brief, clear commit message so you know what each commit is for. "Final commit" is not the commit message you're looking for exactly 100% of the time.
-
-###### `git pull`
-once you've committed all your local work and running `git status` shows that you have nothing to commit, you pull down any changes from your remote. By default, this will pull from the `origin` remote's `master` branch. To be specific about which remote and branch to pull from, you can use: `git pull name-of-remote name-of-branch`
-
-###### `git push`
-pushes your local changes up to your remote. By default, this will push to the `origin` remote's `master` branch. Like pull, you can push to a specific remote and branch with: `git push name-of-remote name-of-branch`. This is useful if you are using [branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) and [pull requests](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project#The-GitHub-Flow). If you get an error message, it's probably because you haven't pushed your local branch up to github yet. Try `git push -u name-of-remote name-of-branch`.
 
 ###### `git branch`
 shows you all your local branches and indicates which branch you are currently on.
@@ -275,6 +326,9 @@ deletes the specified branch
 ###### `git log`
 will show you the full list of commits and authors for your repo
 
+###### `git diff`
+shows you the changes in your unstaged code.
+
 ###### `history`
 will show you your past git commands
 
@@ -286,6 +340,17 @@ gives you back the last staged changes you stashed
 
 ###### `git blame file-path/name-of-file`
 shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
+
+#### Working with Github
+
+###### `git remote -v`
+shows you all the remotes for your repo. The `v` stands for verbose, which shows you the URL of the repository on github, if any, that your local repository is pointing to rather than just the name of the remote repo. If none are shown, that means your remote isn't pointing to a remote repository on Github.
+
+###### `git pull`
+once you've committed all your local work and running `git status` shows that you have nothing to commit, you pull down any changes from your remote. By default, this will pull from the `origin` remote's `master` branch. To be specific about which remote and branch to pull from, you can use: `git pull name-of-remote name-of-branch`
+
+###### `git push`
+pushes your local changes up to your remote. By default, this will push to the `origin` remote's `master` branch. Like pull, you can push to a specific remote and branch with: `git push name-of-remote name-of-branch`. This is useful if you are using [branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) and [pull requests](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project#The-GitHub-Flow). If you get an error message, it's probably because you haven't pushed your local branch up to github yet. Try `git push -u name-of-remote name-of-branch`.
 
 
 ### Resources
