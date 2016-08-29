@@ -296,60 +296,60 @@ We can see the unique SHA of the commit that generated each line, the developer 
 
 Now that you've taken a walk through of the common git commands and workflow you'll be using, you're ready to dive into using git in your project repos confidently! And to help you along, here's a list of the commands we covered above. If you want more information or a deeper dive (or hit a git issue that we didn't cover here), check out the [great git docs](https://git-scm.com/docs).
 
-###### `git init`
+##### `git init`
 initializes your local directory as a new git repository. You must run this before you can commit any of your work.
 
-###### `git status`
+##### `git status`
 shows the current status of your repo. It will show you if you have any work that is unstaged, what branch you are on, how many commits you are ahead of the master remote on github, and other useful things.
 
-###### `git add .`
+##### `git add .`
 takes all unstaged work and stages it, making it ready to be committed. You can also specify a particular file to stage with `git add file-path/name-of-file`
 
-######  `git commit -m "write commit message here"`
+#####  `git commit -m "write commit message here"`
 commits all staged work. It's important to write a brief, clear commit message so you know what each commit is for. "Final commit" is not the commit message you're looking for exactly 100% of the time.
 
-###### `git branch`
+##### `git branch`
 shows you all your local branches and indicates which branch you are currently on.
 
-###### `git checkout -b name-of-new-branch`
+##### `git checkout -b name-of-new-branch`
 makes a new branch and switches to that branch.
 
-###### `git checkout name-of-existing-branch`
+##### `git checkout name-of-existing-branch`
 switches to an existing branch.
 
-###### `git merge name-of-branch`
+##### `git merge name-of-branch`
 will merge the specified branch into the branch you are currently on.
 
-###### `git branch -d name-of-branch-to-delete`
+##### `git branch -d name-of-branch-to-delete`
 deletes the specified branch
 
-###### `git log`
+##### `git log`
 will show you the full list of commits and authors for your repo
 
-###### `git diff`
+##### `git diff`
 shows you the changes in your unstaged code.
 
-###### `history`
+##### `history`
 will show you your past git commands
 
-###### `git stash`
+##### `git stash`
 stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
 
-###### `git stash pop`
+##### `git stash pop`
 gives you back the last staged changes you stashed
 
-###### `git blame file-path/name-of-file`
+##### `git blame file-path/name-of-file`
 shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
 
 #### Working with Github
 
-###### `git remote -v`
+##### `git remote -v`
 shows you all the remotes for your repo. The `v` stands for verbose, which shows you the URL of the repository on github, if any, that your local repository is pointing to rather than just the name of the remote repo. If none are shown, that means your remote isn't pointing to a remote repository on Github.
 
-###### `git pull`
+##### `git pull`
 once you've committed all your local work and running `git status` shows that you have nothing to commit, you pull down any changes from your remote. By default, this will pull from the `origin` remote's `master` branch. To be specific about which remote and branch to pull from, you can use: `git pull name-of-remote name-of-branch`
 
-###### `git push`
+##### `git push`
 pushes your local changes up to your remote. By default, this will push to the `origin` remote's `master` branch. Like pull, you can push to a specific remote and branch with: `git push name-of-remote name-of-branch`. This is useful if you are using [branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) and [pull requests](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project#The-GitHub-Flow). If you get an error message, it's probably because you haven't pushed your local branch up to github yet. Try `git push -u name-of-remote name-of-branch`.
 
 
