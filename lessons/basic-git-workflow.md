@@ -10,7 +10,7 @@ By the end of this lesson, you will know/be able to:
 
 * Be familiar with common git commands
 * Understand how to use those git commands to use git effectively
-* Gain comfort using git as a part of their development workflow
+* Gain comfort using git as a part of your development workflow
 
 
 ### Git Commands for a Basic workflow
@@ -78,11 +78,11 @@ Untracked files:
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
-Let's run through what all that means:
-* `On branch master` indicates that we are on the master branch
-* `Initial commit` indicates that we have yet to make our first commit
-* `Untracked files` shows a list of files that have not been staged yet, currently that's just our readme.md file. "Untracked" means git isn't keeping a record of them for us yet.
-* `Nothing added to commit but untracked files present` means that git doesn't have anything that could be added to the commit other than the untracked file listed above.
+Let's run through what all that means:  
+  * `On branch master` indicates that we are on the master branch
+  * `Initial commit` indicates that we have yet to make our first commit
+  * `Untracked files` shows a list of files that have not been staged yet, currently that's just our readme.md file. "Untracked" means git isn't keeping a record of them for us yet.
+  * `Nothing added to commit but untracked files present` means that git doesn't have anything that could be added to the commit other than the untracked file listed above.
 
 Now that we've initialized our directory as a git repository, we can make our first commit. Our first step is to add all untracked files, then make the commit itself. We can add our untracked file individually with `git add readme.md`, or we can add all untracked files as once with `git add .` (the dot indicates "all"). Since we only have one file, our readme.md, let's go ahead and add it individually. In your command line enter:
 
@@ -130,7 +130,7 @@ Success! We've initialized our repo and made our first commit!
 
 ### Branching
 
-One of the central ideas of git is the concept of branches. Branches allows to deviate away from our main codebase (the Master branch) at a specific point and work on a feature without running the risk of introducing bugs to our existing code. We can fully build our feature in a branch while pulling in any new code from our master branch so we are up to date with the work being done elsewhere. To see how it works, let's try it out. First, we'll add some text to our readme.md in our Master branch (remember, this is a [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) file):
+One of the central ideas of git is the concept of branches. Branches allows us to deviate away from our main codebase (the Master branch) at a specific point and work on a feature without running the risk of introducing bugs to our existing code. We can fully build our feature in a branch while pulling in any new code from our master branch so we are up to date with the work being done elsewhere. To see how it works, let's try it out. First, we'll add some text to our readme.md in our Master branch (remember, this is a [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) file):
 
 ```
 # Hello
@@ -193,7 +193,11 @@ This is text I'm adding on my branch called new-text.
 
 Check the status again, and we'll see that the message tells us that we're on the new-text branch and that we've modified our readme. You know the drill! Let's add and commit those changes!
 
-Once you've commited your recent changes, run `git log` again. You should see that you have three commits. That's what we expect! Now, let's hop back over to our master branch. _Note: it's important to remember to commit any changes in your branch before to switch to a different branch. If you don't, your unstaged changes will follow you around from branch to branch and potentially cause you problems and confusion. So, play it safe and commit any unstaged work before you switch to a different branch!_ The command to switch to an existing branch, in this case `master`, is:
+Once you've commited your recent changes, run `git log` again. You should see that you have three commits. That's what we expect! Now, let's hop back over to our master branch.  
+
+*Note: it's important to remember to commit any changes in your branch before to switch to a different branch. If you don't, your unstaged changes will follow you around from branch to branch and potentially cause you problems and confusion.*  
+
+So, play it safe and commit any unstaged work before you switch to a different branch! The command to switch to an existing branch, in this case `master`, is:
 
 ```
 git checkout master
@@ -355,4 +359,5 @@ pushes your local changes up to your remote. By default, this will push to the `
 
 ### Resources
 
-* [git docs](https://git-scm.com/docs)
+  * [git docs](https://git-scm.com/docs)
+  * [Awesome Git Tutorial] (https://githowto.com/)
