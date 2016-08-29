@@ -39,7 +39,7 @@ Next, let's add a README markdown file so we have something we can edit:
 touch readme.md
 ```
 
-If we run `ls` we should see our `readme.md` file is happily in our `git-workflow-practice directory`. Ok, great! We have a basic directory set up with an empty markdown file in it. The next thing to do it commit this work so we know our project is saved. The first thing we want to do is check the status of our project to confirm that we're commiting what we think we are (hey, you'd be surprised how things sneak in there sometimes!). Let's try that. From the command line, enter the following:
+If we run `ls` we should see our `readme.md` file is happily in our `git-workflow-practice directory`. Ok, great! We have a basic directory set up with an empty markdown file in it. The next thing to do it commit this work so we know our project is saved. The first thing we want to do is check the status of our project to confirm that we're committing what we think we are (hey, you'd be surprised how things sneak in there sometimes!). Let's try that. From the command line, enter the following:
 
 ```
 git status
@@ -128,12 +128,105 @@ nothing to commit, working directory clean
 
 Success! We've initialized our repo and made our first commit!
 
+### Branching
 
+One of the central ideas of git is the concept of branches. Branches allows to deviate away from our main codebase (the Master branch) at a specific point and work on a feature without running the risk of introducing bugs to our existing code. We can fully build our feature in a branch while pulling in any new code from our master branch so we are up to date with the work being done elsewhere. To see how it works, let's try it out. First, we'll add some text to our readme.md in our Master branch (remember, this is a [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) file):
 
+```
+# Hello
 
+I'm trying out branching!
+```
 
+Before we do anything else let's run, you guessed it, `git status` and see what we have. It should show that we've modified our readme.md file. Let's go ahead and `add` and `commit` this change. Remember to write a good commit message!
 
+Now we have two commits, let's remind ourselves what they were. There's a handy command that will show you all the commits on a project from all the contributors. Enter this:
 
+```
+git log
+```
+
+It returns a list of all our commits, the author, when they were made, and the commit message:
+
+```
+commit 62e1cd3cd05fff6aa05fc720b91da9616b3a7251
+Author: You <example@email.com>
+Date:   Sun Aug 28 18:22:08 2016 -0600
+
+    update readme
+
+commit 5f2b8fbee22f4eae1c26ad7c9d3b61308af88707
+Author: You <example@email.com>
+Date:   Sun Aug 28 17:49:59 2016 -0600
+
+    Initial commit
+```
+
+We're in good shape on our master branch, let's go ahead and make a branch called "new-text" and do some new work there. The command to make a new branch and switch to the new branch is:
+
+```
+git checkout -b new-text
+```
+
+When we run that, we should see a message of `Switched to a new branch 'new-text'`. If we want to see a list of all our branches we can use:
+
+```
+git branch
+```
+
+This will return a list of all our branches, with an asterisk next to the branch we are currently on. It looks like this:
+
+```
+master
+* new-text
+```
+
+Now that we're on our branch, let's make some changes to our readme text so it says:
+
+```
+# Hello
+
+I'm trying out branching!
+
+This is text I'm adding on my branch called new-text.
+```
+
+Check the status again, and we'll see that the message tells us that we're on the new-text branch and that we've modified our readme. You know the drill! Let's add and commit those changes!
+
+Once you've commited your recent changes, run `git log` again. You should see that you have three commits. That's what we expect! Now, let's hop back over to our master branch. _Note: it's important to remember to commit any changes in your branch before to switch to a different branch. If you don't, your unstaged changes will follow you around from branch to branch and potentially cause you problems and confusion. So, play it safe and commit any unstaged work before you switch to a different branch!_ The command to switch to an existing branch, in this case `master`, is:
+
+```
+git checkout master
+```
+
+You should see a message that says `Switched to branch 'master'`. You successfully navigated back to your master branch! Now, go take a look at your readme.md file. Hey! The text we just added is gone! No need to worry, our new text isn't there because it currently only exists in our new-text branch. For further proof, run `git log` and you'll see the last commit you made on the new-text branch isn't shown either.
+
+This is why branching is so useful -- we have a good, working master branch, and we're making all our changes on our new-text branch. We aren't in danger of introducing bugs to master, because git is smart enough to keep them totally separated until we decide we want to merge them.
+
+For our current work, we can be sure that our new-text branch is bug-free and ready to merge back into master. Let's do it! From the master branch, enter this command:
+
+```
+git merge new-text
+```
+
+You should see the following message:
+
+```
+Updating 62e1cd3..ae1d85b
+Fast-forward
+ readme.md | 2 ++
+ 1 file changed, 2 insertions(+)
+```
+
+Now, still in master, run `git log` again and see what you get.
+
+All you're commits are there again! We've successfully merged the code from our branch back into master. Now that master is up to date, we don't really need the new-text branch anymore. Let's go ahead and delete it. First confirm that you're on the branch you think you are (in this case, master) with `git branch` and then run:
+
+```
+git branch -d new-text
+```
+
+You should see a message of `Deleted branch new-text (was ae1d85b).` Now if you run `git branch` again, you'll see that your only branch is master.
 
 
 ---------
@@ -169,6 +262,9 @@ shows you all your local branches and indicates which branch you are currently o
 
 ###### `git checkout -b name-of-new-branch`
 makes a new branch and switches to that branch.
+
+###### `git checkout name-of-existing-branch`
+switches to an existing branch.
 
 ###### `git merge name-of-branch`
 will merge the specified branch into the branch you are currently on.
