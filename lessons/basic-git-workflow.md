@@ -79,10 +79,10 @@ nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 Let's run through what all that means:  
-  * `On branch master` indicates that we are on the master branch
-  * `Initial commit` indicates that we have yet to make our first commit
-  * `Untracked files` shows a list of files that have not been staged yet, currently that's just our readme.md file. "Untracked" means git isn't keeping a record of them for us yet.
-  * `Nothing added to commit but untracked files present` means that git doesn't have anything that could be added to the commit other than the untracked file listed above.
+  - `On branch master` indicates that we are on the master branch
+  - `Initial commit` indicates that we have yet to make our first commit
+  - `Untracked files` shows a list of files that have not been staged yet, currently that's just our readme.md file. "Untracked" means git isn't keeping a record of them for us yet.
+  - `Nothing added to commit but untracked files present` means that git doesn't have anything that could be added to the commit other than the untracked file listed above.
 
 Now that we've initialized our directory as a git repository, we can make our first commit. Our first step is to add all untracked files, then make the commit itself. We can add our untracked file individually with `git add readme.md`, or we can add all untracked files as once with `git add .` (the dot indicates "all"). Since we only have one file, our readme.md, let's go ahead and add it individually. In your command line enter:
 
