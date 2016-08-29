@@ -113,8 +113,6 @@ A quick note on commits: the `-m` means "message". It's best practice to leave a
 
 Once we run our commit, we'll see the following:
 
-TEST GIT STASH
-
 ```
 [master (root-commit) 5f2b8fb] Initial commit
  1 file changed, 0 insertions(+), 0 deletions(-)
@@ -361,5 +359,6 @@ pushes your local changes up to your remote. By default, this will push to the `
 
 ### Resources
 
-  * [git docs](https://git-scm.com/docs)
-  * [Awesome Git Tutorial](https://githowto.com/)
+  - [git docs](https://git-scm.com/docs)
+  - [Awesome Git Tutorial](https://githowto.com/)
+  - [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/)
