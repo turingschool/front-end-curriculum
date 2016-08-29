@@ -84,35 +84,114 @@ Let's run through what all that means:
 * `Untracked files` shows a list of files that have not been staged yet, currently that's just our readme.md file. "Untracked" means git isn't keeping a record of them for us yet.
 * `Nothing added to commit but untracked files present` means that git doesn't have anything that could be added to the commit other than the untracked file listed above.
 
+Now that we've initialized our directory as a git repository, we can make our first commit. Our first step is to add all untracked files, then make the commit itself. We can add our untracked file individually with `git add readme.md`, or we can add all untracked files as once with `git add .` (the dot indicates "all"). Since we only have one file, our readme.md, let's go ahead and add it individually. In your command line enter:
+
+```
+git add readme.md
+```
+
+Run that, and it should be pretty uneventful. But if we `git status`, we'll see that some things have changed. Let's take a look:
+
+```
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   readme.md
+```
+
+Great! We see that we're still on our master branch, and that we still  haven't made our initial commit, but we see that readme.md is staged as a new file. That means it's ready to be committed. Let's do that now with:
+
+```
+git commit -m "Initial commit"
+```
+
+A quick note on commits: the `-m` means "message". It's best practice to leave a concise, clear commit message to describe to yourself and any other developers who may work with your codebase what each commit consisted of. Keep these short and to the point. "Initial commit" is very common as the first commit message when initializing a new git repo, as this is typically done straight away before any significant work is done. After that, it's important to use commit messages to explain to others (and future you) what each commit is for. An example of a good commit message is "Add navigation links to sidebar". An example of a bad commit message is "Add stuff" or the infamous "Final commit".
+
+Once we run our commit, we'll see the following:
+
+```
+[master (root-commit) 5f2b8fb] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 readme.md
+ ```
+
+This is telling us we've made our root commit on the master branch, providing the sha that is unique to this commit, and that we've changed one file (our readme.md). Great! Now if we run `git status` again (if you haven't guessed it already, we'll be checking our status a lot -- it helps you keep track of where you are with your work), we'll see that we don't have anything to commit and we're all up to date:
+
+```
+On branch master
+nothing to commit, working directory clean
+```
+
+Success! We've initialized our repo and made our first commit!
 
 
 
 
 
 
-Let's go over a few of the commands you'll be using often:
 
-* `git init` initializes your local directory as a new git repository. You must run this before you can commit any of your work.
-* `git status` shows the current status of your repo. It will show you if you have any work that is unstaged, what branch you are on, how many commits you are ahead of the master remote on github, and other useful things.
-* `git diff` shows you the changes in your unstaged code.
-* `git remote -v` shows you all the remotes for your repo. The `v` stands for verbose, which shows you the URL of the repository on github, if any, that your local repository is pointing to rather than just the name of the remote repo.
-* `git add .` takes all unstaged work and stages it, making it ready to be committed. You can also specify a particular file to stage with `git add file-path/name-of-file`
-*  `git commit -m "write commit message here"` commits all staged work. It's important to write a brief, clear commit message so you know what each commit is for. "Final commit" is not the commit message you're looking for exactly 100% of the time.
-* `git pull` once you've committed all your local work and running `git status` shows that you have nothing to commit, you pull down any changes from your remote. By default, this will pull from the `origin` remote's `master` branch. To be specific about which remote and branch to pull from, you can use: `git pull name-of-remote name-of-branch`
-* `git push` pushes your local changes up to your remote. By default, this will push to the `origin` remote's `master` branch. Like pull, you can push to a specific remote and branch with: `git push name-of-remote name-of-branch`. This is useful if you are using [branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) and [pull requests](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project#The-GitHub-Flow). If you get an error message, it's probably because you haven't pushed your local branch up to github yet. Try `git push -u name-of-remote name-of-branch`.
-* `git branch` shows you all your local branches and indicates which branch you are currently on.
-* `git checkout -b name-of-new-branch` makes a new branch and switches to that branch.
-* `git merge name-of-branch` will merge the specified branch into the branch you are currently on.
-* `git branch -d name-of-branch-to-delete` deletes the specified branch
-* `git log` will show you the full list of commits and authors for your repo
-* `history` will show you your past git commands
-* `git stash` stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
-* `git stash pop` gives you back the last staged changes you stashed
-* `git blame file-path/name-of-file` shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
+
+
+---------
+
+### List of Common Commands
+
+###### `git init`
+initializes your local directory as a new git repository. You must run this before you can commit any of your work.
+
+###### `git status`
+shows the current status of your repo. It will show you if you have any work that is unstaged, what branch you are on, how many commits you are ahead of the master remote on github, and other useful things.
+
+###### `git diff`
+shows you the changes in your unstaged code.
+
+###### `git remote -v`
+shows you all the remotes for your repo. The `v` stands for verbose, which shows you the URL of the repository on github, if any, that your local repository is pointing to rather than just the name of the remote repo.
+
+###### `git add .`
+takes all unstaged work and stages it, making it ready to be committed. You can also specify a particular file to stage with `git add file-path/name-of-file`
+
+######  `git commit -m "write commit message here"`
+commits all staged work. It's important to write a brief, clear commit message so you know what each commit is for. "Final commit" is not the commit message you're looking for exactly 100% of the time.
+
+###### `git pull`
+once you've committed all your local work and running `git status` shows that you have nothing to commit, you pull down any changes from your remote. By default, this will pull from the `origin` remote's `master` branch. To be specific about which remote and branch to pull from, you can use: `git pull name-of-remote name-of-branch`
+
+###### `git push`
+pushes your local changes up to your remote. By default, this will push to the `origin` remote's `master` branch. Like pull, you can push to a specific remote and branch with: `git push name-of-remote name-of-branch`. This is useful if you are using [branches](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging) and [pull requests](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project#The-GitHub-Flow). If you get an error message, it's probably because you haven't pushed your local branch up to github yet. Try `git push -u name-of-remote name-of-branch`.
+
+###### `git branch`
+shows you all your local branches and indicates which branch you are currently on.
+
+###### `git checkout -b name-of-new-branch`
+makes a new branch and switches to that branch.
+
+###### `git merge name-of-branch`
+will merge the specified branch into the branch you are currently on.
+
+###### `git branch -d name-of-branch-to-delete`
+deletes the specified branch
+
+###### `git log`
+will show you the full list of commits and authors for your repo
+
+###### `history`
+will show you your past git commands
+
+###### `git stash`
+stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
+
+###### `git stash pop`
+gives you back the last staged changes you stashed
+
+###### `git blame file-path/name-of-file`
+shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
 
 
 ### Resources
 
-* [git docs](https://git-scm.com/docs)
-* [git docs](https://git-scm.com/docs)
 * [git docs](https://git-scm.com/docs)
