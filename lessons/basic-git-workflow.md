@@ -51,7 +51,7 @@ Wait, that gave us an error message. that's not what we expected. Let's look at 
 fatal: Not a git repository (or any of the parent directories): .git
 ```
 
-Ok, this is straightforward. The first part of the error message telling us exactly what is wrong:  `Not a git repository`. All we need to do is make initialize it as a git repository! Here's the command:
+Ok, this is straightforward. The first part of the error message telling us exactly what is wrong:  `Not a git repository`. All we need to do is initialize it as a git repository! Here's the command:
 
 ```
 git init
@@ -360,4 +360,4 @@ pushes your local changes up to your remote. By default, this will push to the `
 ### Resources
 
   * [git docs](https://git-scm.com/docs)
-  * [Awesome Git Tutorial] (https://githowto.com/)
+  * [Awesome Git Tutorial](https://githowto.com/)
