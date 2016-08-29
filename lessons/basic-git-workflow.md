@@ -113,6 +113,8 @@ A quick note on commits: the `-m` means "message". It's best practice to leave a
 
 Once we run our commit, we'll see the following:
 
+TEST GIT STASH
+
 ```
 [master (root-commit) 5f2b8fb] Initial commit
  1 file changed, 0 insertions(+), 0 deletions(-)
