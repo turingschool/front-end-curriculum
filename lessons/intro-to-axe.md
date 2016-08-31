@@ -3,8 +3,6 @@ title: Introduction to aXe
 length: 120
 tags: testing, selenium, aXe
 ---
-#AXE-Core
-
 #Context
 
 I grew up in a large filipino family. One thing I loved about growing up with this loud group of people was that we didn't really care who you were when you showed up to our family party. The only thing we really cared about was you leaving with a belly full of food.
