@@ -149,7 +149,7 @@ For a more in-depth dive into linear gradients, take a look at the [Mozilla docu
 
 #### Repeating Gradients
 
-We can also create patterns using repeating linear-gradients and some precise color-stops. It's slightly less supported and can take some fussing with the implement, but the results are pretty fun:
+We can also create patterns using repeating linear-gradients and some precise color-stops. It's slightly less supported and can take some fussing with to implement, but the results are pretty fun:
 
 ```css
 .repeat {
@@ -221,6 +221,8 @@ background-image:
 ```
 
 For more information about working with gradients, check out the [Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
+
+And for help figuring out what prefixes you need, check out [Autoprefixer](https://css-tricks.com/autoprefixer/).
 
 #### Your Turn
 
