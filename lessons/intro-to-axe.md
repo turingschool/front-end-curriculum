@@ -261,7 +261,7 @@ So whats super great about aXe is that it comes with a chrome extension. Now wha
 
 3) Brownie points if you implement this into your pomodoro app :D
 
-# Adding axe and ecstatic to your personal sister
+# Adding axe and ecstatic to your personal site
 
 - first things first go to the directory of your portfolio site
 
@@ -277,4 +277,4 @@ So whats super great about aXe is that it comes with a chrome extension. Now wha
 - also make some testings files
  `mkdir tests && touch tests/axe-test.js`
 
-- you are now off of the ground. You should create your server file and your tests. 
+- you are now off of the ground. You should create your server file and your tests.
