@@ -260,3 +260,21 @@ So whats super great about aXe is that it comes with a chrome extension. Now wha
 2) Implement this into your portfolio website!
 
 3) Brownie points if you implement this into your pomodoro app :D
+
+# Adding axe and ecstatic to your personal sister
+
+- first things first go to the directory of your portfolio site
+
+- once you've done that run `npm init -y`
+
+- now that you have a `package json` you'll need to install some dependencies
+
+- run `npm install selenium-webdriver axe-core axe-webdriverjs ecstatic mocha --save-dev` in your terminal
+
+- once thats installed you'll need to touch a server file
+`touch server`
+
+- also make some testings files
+ `mkdir tests && touch tests/axe-test.js`
+
+- you are now off of the ground. You should create your server file and your tests. 
