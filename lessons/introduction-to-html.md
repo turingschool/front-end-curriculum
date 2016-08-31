@@ -42,7 +42,7 @@ Here is the [tl;dr][] of the lesson:
 
 ## Narrative
 
-Of all of the major technologies used on the web—on either the front- or the back-end—HTML is the oldest. In the beginning, the web was just a bunch of HTML documents that you wrote by hand. They had these cool things called hyperlinks that would allow to click on a word on one page and be taken to another page.
+Of all of the major technologies used on the web—on either the front- or the back-end—HTML is the oldest. In the beginning, the web was just a bunch of HTML documents that you wrote by hand. They had these cool things called hyperlinks that would allow you to click a word on one page and be taken to another page.
 
 At the end of the day, HTML is made up two things: text and tags that mark up that text.
 
@@ -76,7 +76,7 @@ Here is an example of a slightly more robust document:
 
 ### Images and Attributes
 
-We HTML tags to mark up text to show it's semantic meaning. The browser uses these tags to build up document. _Most_ tags have an opening and closing tag, but a few do not. Images—defined using the `<img>` tag do not have a closing tag for instance.
+We use HTML tags to mark up text to show its semantic meaning. The browser uses these tags to structure the document. _Most_ tags have an opening and closing tag, but a few do not. Images—defined using the `<img>` tag do not have a closing tag for instance.
 
 Consider the following:
 
@@ -84,13 +84,13 @@ Consider the following:
 <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/turing.png">
 ```
 
-There are two things happening here. First, we have an `<img>` tag that is somewhat unique in that it doesn't have a closing tag like all of the other ones we've see so far.
+There are two things happening here. First, we have an `<img>` tag that is somewhat unique in that it doesn't have a closing tag like all of the other ones we've seen so far.
 
-Our `<img>` tag needs an extra little piece of information. Our browser is more than happy to load up an image, but it'd be helpful if we told it where that image located. That's where the `src` attribute comes in.
+Our `<img>` tag needs an extra little piece of information. Our browser is more than happy to load up an image, but it'd be helpful if we told it where that image was located. That's where the `src` attribute comes in.
 
 ![Anatomy of an HTML Tag](/assets/images/html-tag-anatomy.png)
 
-Let's update our page from earlier with an the image above.
+Let's update our page from earlier with the image above.
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="XKmwqR" data-default-tab="html,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/XKmwqR/">A Page with an Image</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
@@ -112,7 +112,7 @@ Another important tag is the `<a>` tag. These are the tags we use for creating h
 </p>
 ```
 
-In this case, `<a>` tags need to know where they should link to. We use the `href` attribute to set where the link should point to. `href` is an abbreviation for "hyper reference." It was the 90s and that's how things were done back then. We were all getting ready to surf the [Information Superhighway][]. Let's all just be happy they didn't end up getting called "cyberlinks."
+In this case, `<a>` tags need to know where they should link to. We use the `href` attribute to set where the link should point to. `href` is an abbreviation for "hyper reference." It was the 90s and that's how things were done back then. We were all getting ready to surf the [Information Superhighway][]. Let's all just be happy they didn't end up being called "cyberlinks."
 
 [Information Superhighway]: https://en.wikipedia.org/wiki/Information_superhighway "Information Superhighway on Wikipedia"
 
@@ -120,7 +120,7 @@ In this case, `<a>` tags need to know where they should link to. We use the `hre
 
 ### Block and Inline Elements
 
-You might have noticed that the `<a>` tag is a behaves a little bit different that the `<h1>`, `<h2>`, and `<p>` tags. We can use the `<a>` tag to mark up a few words, while the other tags denote a big section—let's call it a "block"—of our page.
+You might have noticed that the `<a>` tag behaves a little differently than the `<h1>`, `<h2>`, and `<p>` tags. We can use the `<a>` tag to mark up a few words, while the other tags denote a big section—let's call it a "block"—of our page.
 
 This is an important distinction:
 
@@ -161,7 +161,7 @@ We'll discuss these more in a bit when we talk about CSS. But, for now, let's mo
 
 So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms.
 
-There are a lot to forms that we go into depth on in the full program, but we're going to blissfully ignore today.
+There are a lot to forms that we'll go into depth on later in the full program, but we're going to blissfully ignore today.
 
 Instead we'll focus on two elements:
 
