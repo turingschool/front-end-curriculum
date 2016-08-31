@@ -168,7 +168,7 @@ You can also create [`repeating-radial-gradients`](https://developer.mozilla.org
 
 #### Browser Support and prefixes
 
-Gradients are notorious for needing vendor prefixes and being a hassle to write to accommodate the various versions on syntax that browsers has supported over time. Modern browsers have good support for the **new syntax we just used**, so it's a good idea to test, test, test in many browsers to make sure your gradients are holding up.
+Gradients are notorious for needing vendor prefixes and being a hassle to write to accommodate the various versions on syntax that browsers has supported over time. While modern browsers have good support for the **new syntax we just used**, it's still a very good idea to test, test, test in many browsers to make sure your gradients are holding up.
 
 For example, if you wanted deep browser support, you'd end up with something like this linear gradient example from [Chris Coyier](https://css-tricks.com/):
 
