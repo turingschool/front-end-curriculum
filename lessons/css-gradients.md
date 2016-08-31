@@ -222,8 +222,6 @@ background-image:
 
 For more information about working with gradients, check out the [Mozilla docs](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Images/Using_CSS_gradients).
 
-And for help figuring out what prefixes you need, check out [Autoprefixer](https://css-tricks.com/autoprefixer/).
-
 #### Your Turn
 
 Time for Ultimate Gradient Extreme Garbage Challenge! Get all that gradient mayhem out of your system. Go nuts!
