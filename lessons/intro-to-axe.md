@@ -261,4 +261,4 @@ So whats super great about aXe is that it comes with a chrome extension. Now wha
 
 2) Implement this into your portfolio website!
 
-3) Brownie points if you implement this into your pomadoro app :D
+3) Brownie points if you implement this into your pomodoro app :D
