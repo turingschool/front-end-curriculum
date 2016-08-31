@@ -9,7 +9,7 @@ I grew up in a large filipino family. One thing I loved about growing up with th
 
 This idea of inclusion really kind of affected me. This idea that if you found yourself by my house and you were hungry we would feed you. We didn't really care about your socio-economic background, sexual-orientation, religious affiliation, you showed up and thats all that mattered. Come sit and eat. In tagalog we would say ``kain na! `` which mean lets eat.
 
-Now the internet is a very special place for all of us. We have memories and our 2livelihood on the web. The net has literally imbedded itself into our lives.
+Now the internet is a very special place for all of us. We have memories and our livelihood on the web. The net has literally imbedded itself into our lives.
 
 So why can't we share all of the amazing things about the internet with everyone else?
 
@@ -68,7 +68,7 @@ Second we are going to talk about the ``axe-core`` tool and how this integrates 
 
 #Goals
 
-- develop a level of empethy for people with accessibility needs
+- develop a level of empathy for people with accessibility needs
 - solidify async ideas
 - Utilize axe-core tests.
 
@@ -90,6 +90,12 @@ If you're following along you're going to need to download this repository
 `` git clone https://github.com/joshuajhun/axe-testing.git ``
 
 and then run ``npm install``
+
+after that you might have to reinstall `selenium-standalone` so make sure you run the curl request to download it.
+
+`curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar`
+
+The `scripts` portion of your  `package.json` has a commmand to launch the server (`npm run sel`)
 
 Now really all this has given us is a package.json file. Some css, and index, a server, and a testing folder.
 
@@ -120,7 +126,7 @@ We're going to need `mocha`, `axe`, and `selenium`. So since we know that we're 
 
 ``
 var selenium   = require('selenium-webdriver')
-    AxeBuilder = require('axe-webdriverjs')\
+    AxeBuilder = require('axe-webdriverjs')
     assert     = require('assert')
 ``
 
@@ -189,6 +195,7 @@ Now lets actually write our first test. I know for a fact a big issue within our
 				done();
 			});
 	});
+
 ```
 
 Now lets kind of break this apart. The `results` portion of our function is going to return a `json` object. Based on this object we can assert a bunch of different things.
@@ -271,10 +278,19 @@ So whats super great about aXe is that it comes with a chrome extension. Now wha
 
 - run `npm install selenium-webdriver axe-core axe-webdriverjs ecstatic mocha --save-dev` in your terminal
 
+- install selenium standalone `curl -O http://selenium-release.storage.googleapis.com/2.53/selenium-server-standalone-2.53.1.jar`
+
 - once thats installed you'll need to touch a server file
 `touch server.js`
 
 - also make some testings files
  `mkdir tests && touch tests/axe-test.js`
 
+- add these scripts to your `package.json`
+  `  "scripts": {
+    "test": "mocha",
+    "start": "node server.js",
+    "sel": "java -jar selenium-server-standalone-2.53.0.jar"
+  },`
+  
 - you are now off of the ground. You should create your server file and your tests.
