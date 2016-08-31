@@ -272,7 +272,7 @@ So whats super great about aXe is that it comes with a chrome extension. Now wha
 - run `npm install selenium-webdriver axe-core axe-webdriverjs ecstatic mocha --save-dev` in your terminal
 
 - once thats installed you'll need to touch a server file
-`touch server`
+`touch server.js`
 
 - also make some testings files
  `mkdir tests && touch tests/axe-test.js`
