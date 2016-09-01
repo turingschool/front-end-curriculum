@@ -4,7 +4,9 @@ title: Tier Two
 
 ## Project Introduction
 
-Welcome to Tier Two projects. By now, you should be feeling more comfortable in the basic development tools, as well as gaining confidence in writing more code, which incidentally is exactly what we want you to do now. WRITE MORE CODE. Additionally, we have higher expectations for the planning, design, and overall user experience of your projects. 
+Welcome to Tier Two projects. By now, you should be feeling more comfortable in the basic development tools, as well as gaining confidence in writing more code, which incidentally is exactly what we want you to do now. **Write more code**. Additionally, we have higher expectations for the planning, design, and overall user experience of your projects.
+
+Great software developers are always refining their craft—others just stick to their original assumptions, regardless of how much friction those decisions cause down the road. A second goal of this project is to push and test your ability to adapt your project as you learn new skills and topics over the next two weeks. Is your code tied to your initial ideas of how to approach the problem or are you able to pivot and try out different ideas as you go along? Did you stick with what you knew at the very beginning of the project or were you able to integrate concepts and ideas from React (or mocking and stubbing or some advanced Firebase techniques) as you learned them?
 
 Tier Two Projects: Choose wisely. You are in charge of your own fun.
 
@@ -14,7 +16,7 @@ Tier Two Projects: Choose wisely. You are in charge of your own fun.
 
 Regardless of which project you choose, your project must:
 
-- Be test-driven
+- Be test-driven ([where applicable](https://twitter.com/stevekinney/status/771195836822802432))
 - Use build tools
 - Be designed by the student
 - Use a mobile-first approach
@@ -24,7 +26,7 @@ Regardless of which project you choose, your project must:
 
 #### A Fancy List
 
-Lists are handy resources to keep you from forgetting the most important things. Be it a grocery list, a 'to-do' list, or a 'things-I-don't-need-but-really-want' list -- they are a critical part of most people's day-to-day. And while I'm sure we can all appreciate the good ole pen and paper list, we want something a little more dynamic. As a user, I want a list that:
+Lists are handy resources to keep you from forgetting the most important things. Be it a grocery list, a 'to-do' list, or a 'things-I-don't-need-but-really-want' list—they are a critical part of most people's day-to-day. And while I'm sure we can all appreciate the good ole pen and paper list, we want something a little more dynamic. As a user, I want a list that:
 
 * Allows for quick entry of my list items, along with the ability to delete and/or "check-off" list items
 * Allows me to assign list items to a category that I define
@@ -46,10 +48,10 @@ Money doesn't grow on trees, and it sure can burn a hole in many a person's pock
 
 Networking is a critical skill, and it can get hard to keep track of everyone you meet when you're getting established in a new industry. Build an app to help you organize all your contacts and, hey, maybe even do a little job stalking while you're at it. As a user, I want a networking app that:
 
-* At a minimum, allows me to record name, company, email, social media, and phone number of new contacts. 
+* At a minimum, allows me to record name, company, email, social media, and phone number of new contacts.
 * Ideally, I can also add an image (like logo, avatar, biz card snap)
 * Includes a toggle on/off "followup" indicator on each contact, which will save those contacts in a "followup" list for my quick reference
-* Permits multiple options for email, phone, and social media, and allows me to specifiy "primary" where applicable.
+* Permits multiple options for email, phone, and social media, and allows me to specify "primary" where applicable.
 * Includes an option note field for each contact, so that I can write myself little reminders about how we met, and what we discussed.
 
 ### Project Timeline
@@ -78,11 +80,18 @@ You're application should:
 
 ### Specification Adherence
 
-* 4 - The application meets all of the requirements listed above and implements one or more of the extensions.
-* 3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
+* 4 - The application meets all of the requirements listed above and implements one or more features not included in the specification. The application is an exemplar and is considered a production-level MVP (minimum viable product). The application is ready to be distributed to users.
+* 3 - No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
 * 2 - The application is in a usable state, but is missing 1 or more of the features outline in the specification above.
 * 1 - The application is missing 3 or more smaller features or 1 major feature essential to having a complete application.
 * 0 - The application is unusable.
+
+### Risk Taking and Creativity
+
+* 4 - Developers pushed themselves and their team by taking risks which is demonstrated by a _delivered feature_. The application shows evidence that the developers explored concepts and technologies outside the scope of the curriculum.
+* 3 - The project shows that the developers carefully considered their approach and were able to implement concepts taught over the last two weeks. The application shows evidence that developers dug deep into documentation for the technologies they used and experimented with different approaches.
+* 2 - The application shows some effort to incorporate ideas and concepts from the last two weeks of instruction, but is structured in a way that makes it hard to adapt and change approaches. There is some evidence that the developers considered what additional features and functionality the user might need.
+* 1 - The application does the bare minimum it needs to and shows little or no influence by topics and approaches covered in the two weeks of instruction from when the project started. The project shows no evidence that the developers considered the user in implementing the features in the application.
 
 ### Design
 
@@ -122,8 +131,8 @@ You're application should:
 
 ### Testing
 
-* 4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
-* 3 - Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of feature testing.
+* 4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application. The testing in this project shows that the students dedicated themselves to overcoming obstacles and figure out how to test parts of the application that were otherwise "hard to test."
+* 3 - Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application has robust unit tests and makes some use of feature testing where appropriate and applicable.
 * 2 - Project has sporadic use of tests and multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * 1 - There is little or no evidence of testing in this application.
 
@@ -143,5 +152,3 @@ The output from a code sanitizer (either JSHint or ESLint) shows…
 * 3 - Five or fewer complaints
 * 2 - Six to ten complaints
 * 1 - More than ten complaints
-
-
