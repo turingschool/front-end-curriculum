@@ -4,7 +4,7 @@ title: Tier One
 
 ## Project Introduction
 
-In the last project, we gave your a familiar concept (taking user input and adding it to the page) and then added some new techniques (e.g. integration testing, webpack, etc). This time around, we're flipping it around. There are no new tools, but you're tackling new and novel application ideas.
+In the last project, we gave you a familiar concept (taking user input and adding it to the page) and then added some new techniques (e.g. integration testing, webpack, etc). This time around, we're flipping it around. There are no new tools, but you're tackling new and novel application ideas.
 
 Over the next few weeks you will be working through three tiers of projects. Each of these tiers will allow you and your project group to select one of several project options, and will increase in difficulty each tier level.
 
