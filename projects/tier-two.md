@@ -102,14 +102,14 @@ You're application should:
 
 ### User Interface
 
-* 4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
+* 4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There are no holes in functionality and the application stands on its own to be used by the instructor _without_ guidance from the developer.
 * 3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality.
 * 2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 * 1 - The application is confusing or difficult to use.
 
 ### HTML Style
 
-- 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
+- 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with thoughtful use of tags and selectors.
 - 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
 - 2:  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
 - 1:  Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
@@ -123,7 +123,7 @@ You're application should:
 
 ### JavaScript Style
 
-* 4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
+* 4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are _zero_ instances where an instructor would recommend taking a different approach.
 * 3- Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
 * 2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
 * 1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
@@ -133,7 +133,7 @@ You're application should:
 
 * 4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application. The testing in this project shows that the students dedicated themselves to overcoming obstacles and figure out how to test parts of the application that were otherwise "hard to test."
 * 3 - Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application has robust unit tests and makes some use of feature testing where appropriate and applicable.
-* 2 - Project has sporadic use of tests and multiple levels. The application contains numerous holes in testing and/or many features are untested.
+* 2 - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * 1 - There is little or no evidence of testing in this application.
 
 ### Workflow
