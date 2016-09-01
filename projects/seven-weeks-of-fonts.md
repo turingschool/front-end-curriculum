@@ -63,7 +63,7 @@ Fonts:
 
 Copy:
 
-_““Everything in moderation, including moderation.” ― Oscar Wilde_
+_“Everything in moderation, including moderation.” ― Oscar Wilde_
 
 
 # Resources

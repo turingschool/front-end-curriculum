@@ -56,10 +56,10 @@ Design and build a reusable content card. It must meet the following criteria:
 
 Design and build an accordion tab component. It must meet the following criteria:
 
-- be responsive -- how does the layout/use of the cards change at small and large screen?
+- be responsive -- how does the layout/use of the tabs change at small and large screen?
 - have the title of the tab's contents on each tab
 - have the selected tab be the background color, and the not selected tabs be a different color that indicates that they are not selected.
-- selected tab should show a header and body content
+- selected tab should show the tab's contents, including a header and body content
 
 # Resources
 
