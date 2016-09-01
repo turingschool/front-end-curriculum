@@ -1,3 +1,9 @@
+---
+title: Git and GitHub
+length:
+tags: version control, git, github
+---
+
 # Falling In Love with Git in Six Acts
 This is a little git love reference, which we expect to grow over time. It's not all encompassing. Some things, you must explore on your own. This love story assumes you've been introduced to git and have a github account.
 
