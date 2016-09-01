@@ -94,6 +94,7 @@ git status
 (# do this until you know what you are doing)
 
 ```
+
 ### You are ready to commit:
 
 ```
@@ -107,6 +108,7 @@ git status
 (# at this juncture, you might see "nothing to commit, working tree clean")
 ```
 ### You want to share your masterpiece with the world (aka "push to Github" :octocat:):
+
 ```
 git push origin master
 (# you are pushing your local commits up to the big github in the sky)
@@ -182,6 +184,7 @@ Now visit the big :octocat: and do any number/combination of these things:
 Now comes that unavoidable time when you say to anyone who will listen: I got myself up git creek without a paddle! You have merge conflicts and find yourself desperately seeking a git blame. You've lost your teammates in a sea of git branching that has you feeling out of sync and off the reservation. You hate git. You hate collaborating. You pulled when you should of merged and then pushed. You force pushed and sunk the canoes of your teammates. You are a mess.
 
 ### Some helpful Oh :poop: commands once you find yourself up git creek: 
+
 ```
 git commit --amend
 (# you made a goof in your last commit and want to amend it)
@@ -212,6 +215,7 @@ git reset --hard <last good SHA>
 Git is not the enemy. If they didn’t tell you before, we will tell you now. Git is forgiving. Git is your friend. Anything you git, you can un-git. Git loves you. Git is easy, or at least it will be soon. Just don't git up. Git with it. And most importantly, this is only the beginning of git. It is enough to git you going, but there is so much more to learn. Go forth and explore, confident in your ability to navigate the git creek.
 
 ### Some helpful commands and tools to show you the way:
+
 ```
 git log
 (# git outputs commits made in reverse chrono order)
@@ -227,6 +231,7 @@ git log --stat
 git log -p
 (# most detailed view of your history)
 ```
+
 ### GUI Tools if you aren't :neckbeard: enough to stay in terminal outputs:
 - [Github Desktop](https://desktop.github.com/)
 - [Gitx](http://gitx.frim.nl/) (*don't forget to enable terminal usage with this one*)
@@ -238,6 +243,7 @@ git log -p
 So this is git, as demanding and nourishing and difficult as it can be, and as strong and wise as it makes you become. There is something to be gained from commitment. And so you let git come perch upon your shoulder. And you do not turn it away. You do the tango. You just git it.
 
 ### When all else fails, ask git for help:
+
 ```
 git help <command>
 (# if I want git to tell me about 'rebase', I type git help rebase)
@@ -245,6 +251,7 @@ git help <command>
 ```
 
 ### From novice to Git Greatness, these things will git you there:
+
 - [Try Git](https://try.github.io/levels/1/challenges/1)
 - [Github On Demand](https://github.github.io/on-demand/)
 - [Pro Git](https://progit.org/)
