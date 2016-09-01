@@ -11,7 +11,7 @@ This is a little git love reference, which we expect to grow over time. It's not
 
 ***
 
-#Act One. LUST :heart_eyes:
+#Act One. LUST 😍
 Here it is, the big “Wow!” the big “Gee!” the big “YesYesYes!” you’ve been waiting for...**YOU HAVE A NEW PROJECT ASSIGNMENT**. Lust isn’t a sin, it’s a necessity, for with lust as our guide we think: I have no need of food, I have no need of sleep, I have no needs other than occasionally chewing a breath mint. I AM GOING TO CODE MY FACE OFF. And so it begins...
 
 *There are two paths to the start of this journey. You must be comfortable in both.*
@@ -27,13 +27,14 @@ cd <my-awesome-project-name>
 git remote -v
 ```
 Eeeeeeeee!!!! :clap: Life is so good, because this:
+
 ```
 # origin	git@github.com:you/my-awesome-project-name.git (fetch)
 # origin	git@github.com:you/my-awesome-project-name.git (push)
 ```
-I have the correct remotes in place for my local machine to both push and fetch from the big :octocat: in the sky.:thumbsup:
+I have the correct remotes in place for my local machine to both push and fetch from the big :octocat: in the sky. :thumbsup:
 
-## Path-B :: I create my project locally first:
+## Path-B :: I create my project locally first: 
 ```
 mkdir <my-awesome-project-name>
 cd <my-awesome-project-name>
