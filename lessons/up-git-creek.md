@@ -5,13 +5,15 @@ tags: version control, git, github
 ---
 
 # Falling In Love with Git in Six Acts
+
 This is a little git love reference, which we expect to grow over time. It's not all encompassing. Some things, you must explore on your own. This love story assumes you've been introduced to git and have a github account.
 
 *(This love story inspired by [Nike's 1993 Vanity Fair Ad](http://www.rogerhorberry.com/falling-in-love-in-six-acts-courtesy-of-nike/))*
 
 ***
 
-#Act One. LUST 😍
+#Act One. LUST :heart-eyes:
+
 Here it is, the big “Wow!” the big “Gee!” the big “YesYesYes!” you’ve been waiting for...**YOU HAVE A NEW PROJECT ASSIGNMENT**. Lust isn’t a sin, it’s a necessity, for with lust as our guide we think: I have no need of food, I have no need of sleep, I have no needs other than occasionally chewing a breath mint. I AM GOING TO CODE MY FACE OFF. And so it begins...
 
 *There are two paths to the start of this journey. You must be comfortable in both.*
@@ -20,7 +22,7 @@ Here it is, the big “Wow!” the big “Gee!” the big “YesYesYes!” you�
 
 - I visit my profile on GH and I create a new repo, following these [steps](https://help.github.com/articles/creating-a-new-repository/).
 - Yay! I will now clone this very shiny new, empty repository onto my machine. And the lovely GH provides the [steps](https://help.github.com/articles/cloning-a-repository/) to do so.
-- I do not have to ```git init``` in ```<my-awesome-project-name>``` on my local machine. I cloned from the big :octocat: in the sky, so I am all initialized with an empty .git repository. I am special. :tulip:
+- I do not have to ```git init``` in ```<my-awesome-project-name>``` on my local machine. I cloned from the big :octocat: in the sky, so I am all initialized with an empty .git repository. I am special.  :tulip:
 - And just to be sure all is well, I will double check the project on my machine is in fact connected to the big :octocat: in the sky.
 ```
 cd <my-awesome-project-name>
@@ -35,12 +37,13 @@ Eeeeeeeee!!!! :clap: Life is so good, because this:
 I have the correct remotes in place for my local machine to both push and fetch from the big :octocat: in the sky. :thumbsup:
 
 ## Path-B :: I create my project locally first: 
+
 ```
 mkdir <my-awesome-project-name>
 cd <my-awesome-project-name>
 git init
 ```
-Boom. :boom: ```#Initialized empty Git repository in /Users/you/my-awesome-project-name/.git```
+Boom. :boom:  ```#Initialized empty Git repository in /Users/you/my-awesome-project-name/.git```
 
 I want to share the love with everyone!!! How do I do this? OH RIGHT! I push my project up :arrow_up: to the big Github :octocat: in the sky. I will go there now and follow these [steps](https://help.github.com/articles/creating-a-new-repository/) to create a new repository.
 
@@ -117,6 +120,7 @@ git push -f origin master
 ***
 
 #Act Three. FEAR :see_no_evil:
+
 Now you must collaborate with a **TEAM**. More than one person all up in your git and github. This is where the doubt begins, where the mind comes back from shopping, yells at the heart -- This is where you become afraid to commit, to push, to share anything with that damn :octocat:.
 
 ###Invite your team to collaborate on the big :octocat: in the sky:
