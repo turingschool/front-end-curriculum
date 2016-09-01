@@ -107,6 +107,7 @@ git commit -m "My awesome commit message"
 git status
 (# at this juncture, you might see "nothing to commit, working tree clean")
 ```
+
 ### You want to share your masterpiece with the world (aka "push to Github" :octocat:):
 
 ```
@@ -117,6 +118,7 @@ git push origin master
 
 ```
 But even though you are the master of your own domain, what if your :octocat: is mistaken about this? What if you are DENIED? Never fear. The FORCE is with you:
+
 ```
 git push -f origin master
 (# you will now overwrite the entire repo on the big github in the sky with your local copy)
