@@ -1,30 +1,31 @@
 ---
-title: Introduction to CSS
+title: Idiomatic CSS
 tags: css, cheat-sheet
 ---
+# CSS Sense and Sensibility. 
 
-# Idiomatic CSS (sense and sensibility)
+Your guide to CSS etiquette and maintaining a degree of sanity whilst writing large volumes of CSS. **Thanks and credit to [Nicolas Gallagher](http://nicolasgallagher.com/) who defined and championed consistent and idiomatic CSS organization in the community.**
 
-**Thanks and credit to [Nicolas Gallagher](http://nicolasgallagher.com/) who defined and championed consistent and idiomatic CSS organization in the community.**
-
-# Basic Housekeeping
+***
 
 > "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec." - Idan Gazit
 
-## Thou shalt:
+***
 
-### Generally...
+# Thou shalt:
+
+#### Generally...
 
 - Establish a consistent style for the code-base and reinforce it on the team. Any code-base should look like a single-person typed it, even when there are multiple contributers.
 - Choose existing, common style patterns first, employing deviations only when necessary and for good reason.
 
-### Whitespace...
+#### Whitespace...
 - Use whitespace to improve readability.
 - Choose between soft indents (spaces) or real tabs. Stick to your choice without fail. (Preference: spaces)
 - Choose the number of characters used per indentation level. (Preference: 2 spaces)
 - Configure your editor to "show invisibles" or to automatically remove end-of-line whitespace.
 
-### Format...
+#### Format...
 
 - Choose a code format that is easy to read; easy to clearly comment; minimizes the chance of accidentally introducing errors; and results in useful diffs and blames.
 - Use one discrete selector per line in multi-selector rulesets.
@@ -115,20 +116,15 @@ tags: css, cheat-sheet
 }
 ```
 
-### Comments...
+#### Comments...
 
 - Create a comment style that is simple and consistent. 
 - Place comments on a new line above their subject.
 - Use "sentence case" comments and consistent text indentation.
 - Use comments when needed, not as a crutch to explain everything you are doing. Your code should largely speak for itself.
 
-
-
-
-
-## Thou shalt NOT:
+# Thou shalt NOT:
 
 - Prematurely optimize your code; keep it readable and understandable.
 - Mix spaces and tabs for indentation.
 - Make a novel out of comments.
-- 
