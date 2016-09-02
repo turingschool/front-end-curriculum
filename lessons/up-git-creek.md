@@ -1,7 +1,6 @@
 ---
 title: Git and GitHub
-length:
-tags: version control, git, github
+tags: version control, git, github, cheat-sheet
 ---
 
 # Falling In Love with Git in Six Acts
