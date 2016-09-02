@@ -6,7 +6,7 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
 
 ***
 
-> ##### *"Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec."* - Idan Gazit
+> #### *"Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec."* - Idan Gazit
 
 ***
 
@@ -60,7 +60,7 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
 }
 ```
 
-#### Declaration Order
+#### Declaration Order...
 
 - Order declarations in accordance with a single, simple principle.
 - Examples include: order alphabetically, and/or cluster related properties (e.g. positioning and box-model) 
@@ -95,7 +95,7 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
 }
 ```
 
-#### Declaration Order
+#### Format with Preprocessors...
 
 *Different CSS preprocessors have different features, functionality, and syntax. Your conventions should be extended to accommodate the particularities of any preprocessor in use. The following guidelines are in reference to Sass.*
 
@@ -122,7 +122,7 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
 - Use "sentence case" comments and consistent text indentation.
 - Use comments when needed, not as a crutch to explain everything you are doing. Your code should largely speak for itself.
 
-# Thou shalt NOT: (:weary: :shit: :weary: :thumbsdown: )
+# Thou shalt NOT: (:weary: :shit: :rage4: :thumbsdown: )
 
 - Prematurely optimize your code; keep it readable and understandable.
 - Mix spaces and tabs for indentation.
