@@ -1,18 +1,16 @@
 ---
-title: Idiomatic CSS
+title: Idiomatic CSS. Sense & Sensibility.
 tags: css, cheat-sheet
 ---
-# CSS Sense and Sensibility. 
-
 Your guide to CSS etiquette and maintaining a degree of sanity whilst writing large volumes of CSS. **Thanks and credit to [Nicolas Gallagher](http://nicolasgallagher.com/) who defined and championed consistent and idiomatic CSS organization in the community.**
 
 ***
 
-> "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec." - Idan Gazit
+>>> "Part of being a good steward to a successful project is realizing that writing code for yourself is a Bad Idea™. If thousands of people are using your code, then write your code for maximum clarity, not your personal preference of how to get clever within the spec." - Idan Gazit
 
 ***
 
-# Thou shalt:
+# Thou shalt: (:heart_eyes: :neckbeard: :star2: :thumbsup:)
 
 #### Generally...
 
@@ -96,6 +94,7 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
     text-align: right;
 }
 ```
+
 #### Declaration Order
 
 *Different CSS preprocessors have different features, functionality, and syntax. Your conventions should be extended to accommodate the particularities of any preprocessor in use. The following guidelines are in reference to Sass.*
@@ -123,7 +122,7 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
 - Use "sentence case" comments and consistent text indentation.
 - Use comments when needed, not as a crutch to explain everything you are doing. Your code should largely speak for itself.
 
-# Thou shalt NOT:
+# Thou shalt NOT: (:weary: :shit: :weary: :thumbsdown: )
 
 - Prematurely optimize your code; keep it readable and understandable.
 - Mix spaces and tabs for indentation.
