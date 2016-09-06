@@ -124,6 +124,6 @@ Your guide to CSS etiquette and maintaining a degree of sanity whilst writing la
 
 # Thou shalt NOT: (:weary: :shit: :rage4: :thumbsdown: )
 
-- Prematurely optimize your code; keep it readable and understandable.
+- Prematurely optimize your code; (keep it readable and understandable!).
 - Mix spaces and tabs for indentation.
 - Make a novel out of comments.
