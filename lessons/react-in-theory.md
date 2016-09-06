@@ -1,4 +1,8 @@
-# React In Theory
+---
+title: React In Theory
+length: 180 min
+tags: React, JavaScript, Webpack
+---
 
 ### Goals of This Lesson
   - Build a basic web app from scratch using React
