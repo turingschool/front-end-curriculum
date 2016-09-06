@@ -12,8 +12,7 @@
 
 ## Webpack and Application Setup
 
-Clone down the repository.  
-`git `
+Clone down [the repository](https://github.com/martensonbj/react-in-theory).  
 Initialize `npm` and accept all defaults  
 `npm init --yes`  
 
@@ -25,7 +24,6 @@ To cover our bases make sure your `.gitignore` file is ready to go:
 We want Webpack to handle all the fancy stuff so let's set that up as well.  
 `npm i webpack webpack-dev-server -D`  
 `touch webpack.config.js`  
-
 
 You can verify that everything is in order if your `package.json` dependencies (so far) look something like this:  
 
