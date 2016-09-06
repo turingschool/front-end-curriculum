@@ -30,3 +30,6 @@ assets:
 
 images:
   root_url: '/assets/images'
+
+gems:
+  - jemoji
