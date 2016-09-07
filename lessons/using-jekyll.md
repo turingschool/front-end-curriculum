@@ -12,7 +12,7 @@ tags: jekyll, github pages
 
 #### Installing Jekyll
 
-Since Jekyll is a you have to do a little set-up before you can start using it. The easiest way to install Jekyll is through Ruby Gems, so if you've gone through the install process for Ruby already you're good to go. If you haven't, you may be fine since Ruby comes pre-loaded on Macs. If you get stuck, we'll [troubleshoot](https://jekyllrb.com/docs/troubleshooting/). Here's some [additional documentation](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) if you're having trouble.
+You have to do a little set-up before you can start using Jekyll. The easiest way to install Jekyll is through Ruby Gems, so if you've gone through the install process for Ruby already you're good to go. If you haven't, you may be fine since Ruby comes pre-loaded on Macs. If you get stuck, we'll [troubleshoot](https://jekyllrb.com/docs/troubleshooting/). Here's some [additional documentation](https://help.github.com/articles/setting-up-your-github-pages-site-locally-with-jekyll/) if you're having trouble.
 
 Since we're installing Jekyll with Ruby Gems, we'll need to check that we have Ruby 2.0.0 or higher installed on our computers:
 
@@ -79,7 +79,7 @@ Go ahead and navigate into your new project directory and take a look around. Yo
 └── index.html
 ```
 
-For our purposes today, we'll just be using the `_includes` and `_layouts` directories, we won't worry about the other directories and files Jekyll gave us for now. If you're curious, they have great [documentation about structure](https://jekyllrb.com/docs/structure/).
+For our purposes today, we'll just be using the `_includes` and `_layouts` directories, we won't worry about the other directories and files Jekyll gave us for now. If you're curious, there is great [documentation about structure](https://jekyllrb.com/docs/structure/).
 
 ### Viewing your site locally
 
