@@ -1,5 +1,5 @@
 ---
-title: Responsive Image Handling & Performance Monitoring
+title: Responsive Image Handling
 length: 
 tags: images, css, performance
 ---
@@ -42,21 +42,60 @@ It's important to understand the prominent image file types leveraged in web des
 	- can be used as an image ```<img src='some-image.svg' alt='some image'```
 	- can be used inline with html, and then controlled with css
 
+- WebP (google thing. future forward, not all browswers support)
+	- like png, but much smaller
+
+* often need to experiment with file types/approaches for what will work best
 
 #### Image Crushing
-
+Collection of other image optimizers. It runs a file through different programs to minimize file size. Removing meta data in the image mostly. Biggest gains in pngs, then jpgs, then gif.
 https://imageoptim.com/mac
+svgo gui - crushing for when your svg is utilized as image
+** can save megabytes immediately
 
 #### Sprites
+Why ask the server for multiple images, when you could just use one? 
+
 
 #### Icon Fonts
+<do I even bother?>
+Maybe, but probably almost never...
+When we couldn't use svg's (IE 8), we'd make it a font.
+Was a stop-gap solution
 
-#### Cloudinary
+#### Responsive Image Handling
+- Art Direction Problem
+- Resolution Switching Problem
 
+http://fluidity.sexy/
+
+web is 100% responsive by default. just set 100% width on your image.
+srcset and picture element
+
+CHROME: prioritizes calls across the wire first.
+
+scrset 
+- could go crazy.
+- use for most all of your images (maybe not avatars, and certainly not background images)
+- set your range - like smallest will be 800px for instance and I am okay serving that on 400 screen. Because could get crazy. Work w/ design on resolution range setting. So if gets too blurry at 2400 screen, then bump up the range of size/pixel dimension
+- can use analytics to determine which image sizes are most popular
+- how big could the image ever get
+
+
+https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images
+
+http://cloudinary.com/blog/responsive_images_with_srcset_sizes_and_cloudinary?utm_source=taboola&utm_medium=paid_traffic&utm_campaign=Retargeting-ImageHostingLP
+
+** Future forward, need to investigate the "Client Hints" movement, whereby client sends info to server and server handles all the image choosing. Will be cool if it happens. Managing on client side hurts. (markup ugly)
+
+None are "great"
+
+#### Background images
+Former way of controlling image calls from server
+Had to have markup just right, with parent element. Because client was actually pulling down ALL the images across breakpoints if the markup wasn't right.
+Not great for accessibility, no alt attr, no fallback. Just design on a box. (* ```object-fit``` is gaining traction, which will replace this in applicable instances.)
 
 #### 
-
-
 
 #### Opening: 1-2 min
 
@@ -89,9 +128,6 @@ https://imageoptim.com/mac
 * What questions might students ask during class, and how will you respond? 
 * What concepts might students misunderstand, and why? 
 
-### Slides
-
-* [Link to optional slides]()
 
 ### Video
 
