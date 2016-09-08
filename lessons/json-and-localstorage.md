@@ -9,7 +9,7 @@ tags: web apis, storage, persistence
 `localStorage` supports the following methods:
 
 - `localStorage.getItem()` gets an item from storage based on the key provided.
-- `localStorage.getItem()` takes two arguments—a key and value—and stores the given value under the provided key.
+- `localStorage.setItem()` takes two arguments—a key and value—and stores the given value under the provided key.
 - `localStorage.removeItem()` takes a key and removes that key and its associated value from storage.
 - `localStorage.clear()` removes all items from storage for that domain.
 
