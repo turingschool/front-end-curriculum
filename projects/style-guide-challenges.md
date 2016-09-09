@@ -61,6 +61,20 @@ Design and build an accordion tab component. It must meet the following criteria
 - have the selected tab be the background color, and the not selected tabs be a different color that indicates that they are not selected.
 - selected tab should show the tab's contents, including a header and body content
 
+## Week Four
+
+Design and build a reusable footer. It must meet the following criteria:
+
+- be responsive -- how does the layout/use of the tabs change at small and large screen?
+- have space for a logo, with a placeholder icon
+- have placeholder links for
+  * site navigation
+  * social media links (twitter, facebook, linkedin)
+  * terms and conditions
+  * privacy policy
+- a copyright blurb
+
+
 # Resources
 
 #### Best Practices and Definitions
