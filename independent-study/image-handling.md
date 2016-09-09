@@ -128,10 +128,9 @@ The srcset and sizes attributes look complicated, but they're not that bad to un
 - You could go crazy w/ image sizes, but don't. Set your range - like maybe your smallest image size will be 800px, and you and the team agree you have no qualms serving that on a 400 screen. Work w/ your designers on resolution range setting. If it gets too blurry at 2400 screen, then bump up the range of size/pixel dimension serving that you've set.
 - Evaluate analytics to determine which image sizes are most popular, and make some optimization choices based on those insights.
 
-** Future forward, keep your eye out on the "Client Hints" movement, whereby client sends info to server and server handles all the image choosing. Managing this crap on client side hurts. And javascript is not all the answer, and comes with it's own set of drawbacks. 
+** Future forward, keep your eye out on the "Client Hints" movement, whereby client sends info to server and server handles all the image choosing. Managing this crap on client side hurts. 
 
-
----
+--- 
 
 ## Further reading and things to keep your :eyes: on:
 - [SVGs and Accessibility](https://css-tricks.com/accessible-svgs/)
