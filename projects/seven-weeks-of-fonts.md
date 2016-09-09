@@ -66,6 +66,17 @@ Copy:
 _“Everything in moderation, including moderation.” ― Oscar Wilde_
 
 
+## Week Four
+
+Fonts:
+
+- [Abril Fatface](https://fonts.google.com/specimen/Abril+Fatface)
+- [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+
+Copy:
+
+_“I love deadlines. I like the whooshing sound they make as they fly by.” ― Douglas Adams_
+
 # Resources
 
 - [Thinking with Type](http://www.thinkingwithtype.com/)
