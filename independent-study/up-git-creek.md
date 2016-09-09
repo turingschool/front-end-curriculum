@@ -186,6 +186,8 @@ Now comes that unavoidable time when you say to anyone who will listen: I got my
 
 ### Some helpful Oh :poop: commands once you find yourself up git creek: 
 
+### Yes. This. ~ [Oh Shit Git](http://ohshitgit.com/)
+
 ```
 git commit --amend
 (# you made a goof in your last commit and want to amend it)
