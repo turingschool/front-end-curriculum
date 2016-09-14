@@ -98,14 +98,14 @@ Now that we know about different data types and have values assigned to both of 
 
 So far, we have:
 
-```Javascript
+```javascript
 var quantity = 3;
 var mythicalCreature = " unicorns";
 ```
 
 Let's make a new variable called "creatureCount" and assign the value as our quantity and our mythicalCreature.
 
-```Javascript
+```javascript
 var quantity = 3;
 var mythicalCreature = " unicorns";
 var creatureCount = quantity + mythicalCreature
@@ -123,7 +123,7 @@ In the example above, we used a `+` to combine the values of two different varia
 
 We can concatenate html tags, text, numbers, and variable values. Let's revisit our example above to concatenate a more readable phrase as the value of our creatureCount variable:
 
-```Javascript
+```javascript
 var quantity = 3;
 var mythicalCreature = " unicorns";
 var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature + "</p>"
