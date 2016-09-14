@@ -6,31 +6,31 @@ tags: html
 
 ### Goals
 
-By the end of this lesson, you will know/be able to:
+By the end of this lesson, you will:
 
 * Become familiar with the history of HTML
-* Understand how to write basic HTML elements: links, images, lists, etc.
+* Understand how to create basic HTML elements: links, images, lists, etc.
 * Be able to write clear, organized HTML
 * Have an understanding of semantic HTML
 
 
 #### HTML is Everywhere
 
-Every single page that renders in your browser is built with HTML. As front end developers, it's crucial that you are able to write clear and well structured HTML, because it is a non-negotiable part of the web and the foundation of every digital product.
+Every single page that renders in your browser is built with HTML. As front-end developers, it's crucial that you are able to write clear and well-structured HTML, because it is a non-negotiable part of the web and the foundation of every digital product.
 
 #### What is HTML?
 
 HTML stands for Hypertext Markup Language, and it was developed by Tim Berners-Lee as the publishing language of the web in the late 80's/early 90's. Berners-Lee developed this tool during his time at CERN, the European Laboratory for Particle Physics in Geneva, Switzerland, as a way for physicists to collaborate more effectively from remote locations and laboratories around the world. His goal was to make research documents available to be downloaded to individual computers. A key element of this idea was the concept of linking text within these documents, allowing the reader to switch from one technical paper to a specific section of another, creating a "web" of information across computers all over the world.
 
-Today, the way we use the web is very different from it's scientific beginnings, and the tools used to build digital products are significantly more complex than they were back in the 90's. But despite all the advances and changes, HTML has remained a constant part of working with the web.
+Today, the way we use the web is very different from its scientific beginnings, and the tools used to build digital products are significantly more complex than they were back in the 90's. But despite all the advances and changes, HTML has remained a constant part of working with the web.
 
-In client side code, you will encounter three primary languages: HTML, CSS, and JavaScript. These all work together, but are very different beasts. HTML is the structure and content of your page, CSS controls the layout and how the page visually looks, and JavaScript handles more complex user interactions, data, and logic.
+In client-side code, you will encounter three primary languages: HTML, CSS, and JavaScript. These all work together, but are very different beasts. HTML is the structure and content of your page, CSS controls the layout and how the page visually looks, and JavaScript handles more complex user interactions, data, and logic.
 
 In this lesson we will be discussing HTML and how to effectively structure your markup.
 
 #### Structure and Tags
 
-At it's heart, the purpose of HTML is to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many [different types of tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
+At its heart, the purpose of HTML is to show text and content. To that end, all HTML really is is text and the structural tags that wrap text. These tag-wrapped content blocks are called _elements_. There are many [different types of tags](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) that can be used to provide semantics, or meaning, to your markup. These include _paragraph_, or `<p>`, _section_, or `<section>`, and the infamous `<div>`, or _division_, tag. Regardless of the specific tag used, the structure of an HTML element will always be consistent and looks like this:
 
 ```HTML
 <tagname>Content Here</tagname>
@@ -54,7 +54,7 @@ Now if we add some text, the complete HTML element for a paragraph looks like th
 
 There are different types of HTML elements. Most are _container elements_, which means they contain other elements or content. Our example of a `<p>` tag above is a container element.
 
-We can also have _stand alone elements_. These are less common, and include break tags, `<br/>`, and image tags, `<img/>`. These tags are self contained, and do not wrap any content. They have the back slash at the end of the tag name, rather than in front of the tag name as a closing tag of a container element would have.
+We can also have _stand-alone elements_. These are less common, and include break tags, `<br/>`, and image tags, `<img/>`. These tags are self-contained, and do not wrap any content. They have the back slash at the end of the tag name, rather than in front of the tag name as a closing tag of a container element would have.
 
 ###### Attributes
 
