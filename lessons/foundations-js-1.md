@@ -1,5 +1,5 @@
 ---
-title: Foundations Javascript 1
+title: Foundations Javascript 1: Variables
 length:
 tags: js, introduction, foundation, variables
 ---
@@ -142,6 +142,7 @@ Write a complete sentence using paragraph tags and your "quantity" and "mythical
 <!--  numbers, operators -->
 <!--  strings, string operators/concatenation -->
 
+<!-- topics not covered yet: -->
 <!-- const, not let -->
 <!-- introduction to arrays -->
 <!-- what is a statement pg 56 -->
