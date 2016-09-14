@@ -16,7 +16,6 @@ By the end of this lesson, you will know/be able to:
 
 As we're writing code, there are many times when we want to be able to store a value so we have ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common that we need to have access to the same information more than once. A variable lets us do just that!
 
-<!-- variable values -->
 
 ### What is a variable?
 
@@ -37,7 +36,6 @@ When we write a very simple variable like this, it's called _declaring_ the vari
 Declare 2 variables, one named "quantity" and one named "mythicalCreature"
 
 ### Variable Values
-<!-- naming/declaring variables -->
 
 So, we have our variable. Now what? When we first create a variable it's value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to our `myVariableName` variable:
 
@@ -77,7 +75,7 @@ Note that we _do not_ enclose a number data type in quotes.
 
 The string data type handles letters and other characters. It is always enclosed in quotes, and looks like this:
 
-`'I am a string!`
+`'I am a string!'`
 
 You can use either single or double quotes to wrap a string, but the opening and closing quotes need to match. A good rule of thumb is to pick a type of quote to use and then be consistent in it's use throughout a project.
 
@@ -119,21 +117,34 @@ Open up the console in your browser, enter these in, and see what you get!
 
 Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
 
+### Concatenating Variable Values
 
+In the example above, we used a `+` to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
 
+We can concatenate html tags, text, numbers, and variable values. Let's revisit our example above to concatenate a more readable phrase as the value of our creatureCount variable:
 
+```Javascript
+var quantity = 3;
+var mythicalCreature = " unicorns";
+var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature + "</p>"
+```
 
+This is very useful when we want to append data to the DOM, because it means we can write out an entire HTML tag and concatenate in the data from our variable.
+
+#### Your Turn
+
+Write a complete sentence using paragraph tags and your "quantity" and "mythicalCreature" variables and assign it as the value of your "creatureCount" variable. Run it in your console.
+
+<!-- NOTES on what to cover -->
+<!-- variable values -->
+<!-- naming/declaring variables -->
 <!--  using a variable -->
-
 <!--  numbers, operators -->
-
-<!--  strings, string operators/concatination -->
-
+<!--  strings, string operators/concatenation -->
 
 <!-- const, not let -->
 <!-- introduction to arrays -->
 <!-- what is a statement pg 56 -->
 <!-- accessing values in an array -->
-
 
 <!-- 70 - 73 and chapter 2 in duckett js book -->
