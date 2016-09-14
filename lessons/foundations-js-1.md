@@ -8,9 +8,9 @@ tags: js, introduction, foundation, variables
 
 By the end of this lesson, you will know/be able to:
 
-* Understand what a variable is
-* Understand how to use variables
+* Understand what a variable is and how to use it
 * Understand operators and how to use them
+* Understand array literals and change/add values to them via their indices
 
 ### Variables in Javascript
 
@@ -194,6 +194,7 @@ colors
 
 #### Your Turn
 In the console, do the following:
+
 - create an array of cars
 - change the values within the array
 - add a new car to the array
@@ -212,7 +213,3 @@ Expressions rely on operators to calculate their single value. There are 5 types
 3. String operators. Combine strings. ```var greeting = 'Hello! ' + 'Nice to meet you.';```
 4. Comparison operators. Compare two values and return a __true__ or __false__. ```var buy = 3 > 5;``` (value of buy is false)
 5. Logical operators. Combines __expressions__ and return true or false. ``` var buy = (5 > 3) && (2 < 4);```
-
-#### Your Turn
-In the console, do the following:
-

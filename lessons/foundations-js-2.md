@@ -94,3 +94,7 @@ return x + y / 3;
 ```
 
 ### Getting Multiple Values from Functions:
+
+
+-----------------------
+var as "optional" - not really: http://stackoverflow.com/questions/2485423/is-using-var-to-declare-variables-optional
