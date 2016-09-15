@@ -8,15 +8,15 @@ tags: js, introduction, foundation, variables
 
 By the end of this lesson, you will know/be able to:
 
-* Understand what a variable is
-* Understand how to use variables
+* Understand what a variable is and how to use it
 * Understand operators and how to use them
+* Understand array literals and change/add values to them via their indices
 
-### Variables in Javascript
+# Variables in Javascript
 
 As we're writing code, there are many times when we want to be able to store a value so we have ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common that we need to have access to the same information more than once. A variable lets us do just that!
 
-### What is a variable?
+## What is a variable?
 
 A variable is a place to store values. When we write scripts (a set of instructions for a computer to follow), we need to temporarily store small pieces of data. We store that data in variables. Variable is a good name for this concept because it indicates the stored data can _change_(or vary) EACH time a script is run.
 
@@ -30,11 +30,11 @@ We see that we have the variable keyword, and we've set the variable name to `my
 
 When we write a very simple variable like this, it's called _declaring_ the variable.
 
-#### Your Turn
+### Your Turn (in the console)
 
 Declare 2 variables, one named "quantity" and one named "mythicalCreature"
 
-### Variable Values
+## Variable Values
 
 So, we have our variable. Now what? When we first create a variable it's value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to our `myVariableName` variable:
 
@@ -57,7 +57,7 @@ Step 3: dance for joy at seeing our assigned value of "Hello, variable!"
 
 Until you've added the assignment operator and the variable value, the variable is considered _undefined_.
 
-#### Your Turn
+### Your Turn (in the console)
 
 Assign values to your "quantity" and "mythicalCreature" variables.
 
@@ -67,7 +67,7 @@ Once we have a variable with a declared value, we can start to actually use that
 
 The value of a variable is data, and there are three basic _data types_: numeric, string, and boolean. Let's go over what each of these is.
 
-#### Numeric Data Type
+# Numeric Data Type
 
 This data type handles numbers. In JavaScript, numbers are written without commas so three thousand four hundred and seventy five would be written like this:
 
@@ -77,7 +77,7 @@ Numbers can also be negative and decimals (also called "floats"), so we can writ
 
 Note that we _do not_ enclose a number data type in quotes.
 
-#### String Data Type
+# String Data Type
 
 The string data type handles letters and other characters. It is always enclosed in quotes, and looks like this:
 
@@ -87,14 +87,14 @@ You can use either single or double quotes to wrap a string, but the opening and
 
 Strings can be used for any kind of text. We use them regularly to add text to a page, and they can contain HTML markup.
 
-#### Boolean Data Type
+# Boolean Data Type
 
 A boolean has one of two values: `true` or `false`. Think of it like a light switch: its either on or off.
 
 Booleans can be very useful to help determine which part of a script should be run.
 
 
-#### Your Turn
+### Your Turn (in the console)
 
 What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
 
@@ -120,11 +120,11 @@ var creatureCount = quantity + mythicalCreature
 Open up the console in your browser, enter these in, and see what you get!
 Now change the value of your quantity variable and ask the console for the creatureCount value again.
 
-#### Your Turn
+### Your Turn (in the console)
 
 Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
 
-### Concatenating Variable Values
+## Concatenating Variable Values
 
 In the example above, we used a `+` to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
 
@@ -137,7 +137,7 @@ var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature +
 ```
 This is very useful when we want to append data to the DOM, because it means we can write out an entire HTML tag and concatenate in the data from our variable.
 
-### Rules for Naming Variables
+## Rules for Naming Variables
 - Name must begin with a letter, dollar sign ($), or an underscore (_). It must NOT begin with a number.
 - Name can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
 - You cannot use keywords or reserved words.
@@ -145,7 +145,7 @@ This is very useful when we want to append data to the DOM, because it means we 
 - Use names that describe the kind of information you plan to assign the variable.
 - If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case.
 
-#### Arrays
+# Arrays
 An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a list of values, or values that are related to one another. 
 
 You can put different types of data into an array:
@@ -166,7 +166,7 @@ colors = ['white',
           'pink']
 ```
 
-### Accessing Values in Arrays
+## Accessing Values in Arrays
 Each value in an array is automatically given a number called an index. This index can be used to access a particular value in any given array.
 
 Indices begin at 0 and order incrementally. So in the above colors example, the following is true:
@@ -192,19 +192,19 @@ colors
 
 ```
 
-#### Your Turn
-In the console, do the following:
+### Your Turn (in the console)
+
 - create an array of cars
 - change the values within the array
 - add a new car to the array
 
-### Expressions
+# Expressions
 An _expression_ evaluates (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
 
 1. Expressions that assign a single value to a variable. 
 2. Expressions that use two or more values to return a single value. 
 
-### Operators
+# Operators
 Expressions rely on operators to calculate their single value. There are 5 types of operators:
 
 1. Assigment operators. Assign a value to a variable. (hint: you've got these down already) ``` var color = 'magenta';``` 
@@ -212,7 +212,3 @@ Expressions rely on operators to calculate their single value. There are 5 types
 3. String operators. Combine strings. ```var greeting = 'Hello! ' + 'Nice to meet you.';```
 4. Comparison operators. Compare two values and return a __true__ or __false__. ```var buy = 3 > 5;``` (value of buy is false)
 5. Logical operators. Combines __expressions__ and return true or false. ``` var buy = (5 > 3) && (2 < 4);```
-
-#### Your Turn
-In the console, do the following:
-
