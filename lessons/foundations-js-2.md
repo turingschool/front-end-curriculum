@@ -47,6 +47,7 @@ When this code is read, ```myRadFunction()``` is "called", meaning all three sta
 Let's go ahead and declare myRadFunction in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
 Create your own functions in the console:
+
 - write a function that declares a ```firstName``` variable and a ```lastName``` variable, then alerts the user with a message that incorporates the full name, and then logs a random number to the console.
 - write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables
 - write a function that alerts the user with a message of "YO!", and then logs to the console a sum of eight different integers.
@@ -215,7 +216,7 @@ Where you declare a variable affects where it can be used within your code. If y
   - stored in memory for as long as the web page is loaded
   - takes up more memory than local variables, as well as introduces more risk of naming conflicts
 
-- Variables sans the keyword ```var``
+- Variables sans the keyword  ```var```
   - will work
   - will be considered global variable, even if declared _inside_ a function
   - bad practice
