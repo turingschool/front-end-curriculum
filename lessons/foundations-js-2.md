@@ -215,7 +215,7 @@ Where you declare a variable affects where it can be used within your code. If y
   - stored in memory for as long as the web page is loaded
   - takes up more memory than local variables, as well as introduces more risk of naming conflicts
 
-- Variables sans the keyword ```var``
+- Variables sans the keyword  ```var```
   - will work
   - will be considered global variable, even if declared _inside_ a function
   - bad practice

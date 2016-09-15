@@ -73,7 +73,7 @@ myLitObject
 ```
 And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation just like you did before.
 
-Sometimes, you want to create a bunch of objects that are similar. You want an object making factory that will spit out objects all day based on the _template_ that you define. So... you make a constructor that declares your base object set. And then, everytime ```new``` is called on that constructor, you get an _instance_ of that object. Let's look at this:
+Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ to spit out little objects that you define. Everytime you call ```new``` on this constructor you get an instance of the object. Let's look at this:
 
 ```javascript
 function Restaurant(name, tables, reservations) {
@@ -85,6 +85,15 @@ function Restaurant(name, tables, reservations) {
   }
 }
 ```
+
+What is happening up ^^ there? 
+- A function called Restaurant is a template for creating new objects that represent restaurants
+- The function has three parameters
+- Each parameter sets the _value_ of a _property_ in the object
+- Each object created will utilize the same method for checking availability
+- The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates
+- Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma
+- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. It's a constructor function, and you need the ```new``` keyword to create your various instances of the object. 
 
 
 ### Your Turn (in the console)
