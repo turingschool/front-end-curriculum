@@ -2,23 +2,6 @@
 title: Shoot The Breeze
 ---
 
-### Wireframes
-
-- Typeface: [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
-- Colors: [Flat UI](https://flatuicolors.com/)
-
-#### Desktop (Logged In)
-
-![Shoot The Breeze UI](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-logged-in.jpg)
-
-#### Desktop (Not Logged In)
-
-![Shoot The Breeze UI](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-not-logged-in.jpg)
-
-#### Mobile
-
-![Shoot The Breeze UI](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-mobile.jpg)
-
 ## Specification
 
 ### Main Goals
@@ -49,6 +32,23 @@ title: Shoot The Breeze
 
 - User can set number for how many previous messages to show
 - User can delete only their messages
+
+### Wireframes
+
+- Typeface: [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
+- Colors: [Flat UI](https://flatuicolors.com/)
+
+#### Desktop (Logged In)
+
+![Shoot The Breeze UI - Logged In](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-logged-in.jpg)
+
+#### Desktop (Not Logged In)
+
+![Shoot The Breeze UI (Desktop - Not Logged In)](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-desktop-not-logged-in.jpg)
+
+#### Mobile
+
+![Shoot The Breeze UI (Mobile)](http://frontend.turing.io/assets/images/projects/shoot-the-breeze/shoot-the-breeze-mobile.jpg)
 
 ## Rubric
 
