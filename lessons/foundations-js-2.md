@@ -35,11 +35,11 @@ function myRadFunction() {
 
 ### Call a Function:
 ```javascript
-// Calling a function w/out parameters
+// Calling a function w/out arguments
 myRadFunction();
 
-// Calling a function with parameters
-myRadFunction(param1, param2);
+// Calling a function with arguments
+myRadFunction(arg1, arg2);
 ```
 When this code is read, ```myRadFunction()``` is "called", meaning all three statements within the function's body (those curly braces) gets run.
 
@@ -49,7 +49,9 @@ Let's go ahead and declare myRadFunction in the console together and then call i
 Create your own functions in the console:
 
 - write a function that declares a ```firstName``` variable and a ```lastName``` variable, then alerts the user with a message that incorporates the full name, and then logs a random number to the console.
+
 - write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables
+
 - write a function that alerts the user with a message of "YO!", and then logs to the console a sum of eight different integers.
 
 ### Pass Information to a Function:
