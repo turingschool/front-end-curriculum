@@ -60,11 +60,7 @@ The elements panel lets you view the entire HTML source of the current page you 
 #### Selecting Elements to work with
 You'll notice hovering over an HTML element in the devtools panel will also highlight that element on the page. This makes it easier to find and select the content you'd like to work with.
 
-[ **TODO:** gif of hovering over elements in the devtools panel ]
-
 You can also select elements directly on the page by clicking the ![Square Arrow](http://i.imgur.com/ODylyUu.png) icon in the toolbar, then hovering over the element on the page. This will automatically bring you to the corresponding code for that element in the devtools panel.
-
-[ **TODO:** gif of clicking on arrow and hovering over elements on page ]
 
 If you're having trouble finding the element you'd like to work with, you can search through the entire HTML with `Cmd + F`. You'll notice a searchbar appear at the bottom of the panel where you can enter any string to find a match. This is useful if you'd like to search for an element by a known ID or class.
 
@@ -88,20 +84,23 @@ The browser didn't recognize that we wanted the `<b>` tag to be considered HTML,
 There are a lot of other options in the menu that appears when you right-click on an element. Play around with each of the options to see what else can be done.
 
 #### Editing CSS
-To the right of the HTML pane, there's a small sidebar that gives us styling information for the currently selected element. Similar to the HTML pane, we can add or remove styles and adjust CSS property values from this pane.
+To the right of the HTML pane, there's a small sidebar that gives us styling information for the currently selected element. Similar to the HTML pane, we can add or remove styles and adjust CSS property values from this pane. You can click on any style property associated with the selected element and change its value. You can also use the blue checkbox to toggle the style on or off.
 
-[ **TODO:** gif showing us adding, removing and editing a style of an element ]
+![Editing CSS][editing-css]
 
 #### Inspecting DOM Events
 Also in this sidebar is a tab labeled 'Event Listeners'. This is an important one for debugging user interactions on your application. In our expense tracker application, we've set up an event listener on our form for submitting a new expense:
 
 ```javascript
-$('#submit-expense').on('submit', (e) => fn); // form submit
+$('#submit-expense').on('submit', (e) => {
+  e.preventDefault();
+  console.log('Submitting a new expense...');
+});
 ```
 
 We can verify that this event listener has been attached to its corresponding DOM node by selecting the `form` in the elements panel, and navigating to the 'Event Listeners' tab in the sidebar:
 
-[ **TODO:** gif showing the event listeners have been registered in sidebar ] 
+![Event Listeners][event-listeners]
 
 
 [elements-panel]: /assets/images/lessons/debugging-with-devtools/elements-panel.png
@@ -109,6 +108,8 @@ We can verify that this event listener has been attached to its corresponding DO
 [editing-text]: /assets/images/lessons/debugging-with-devtools/editing-text.gif
 [cant-parse-html]: /assets/images/lessons/debugging-with-devtools/cant-parse-html.gif
 [edit-as-html]: /assets/images/lessons/debugging-with-devtools/edit-as-html.gif
+[editing-css]: /assets/images/lessons/debugging-with-devtools/editing-css.png
+[event-listeners]: /assets/images/lessons/debugging-with-devtools/event-listeners.gif
 
 ---------------------------------------
 
@@ -238,7 +239,13 @@ Let's remove the `debugger` statement we adding in our codebase, and use a break
 * examining network requests and responses
 * debugging issues with sending or receiving API data
 
-[ **TODO:** explain what we see in this panel, what we'll use it for, why it's cool ]
+---------------------------------------
+
+### Practice
+
+Let's put this information into practice by trying to solve a couple of bugs in our expense application.
+Read through the first buggy scenario [here](https://github.com/turingschool-examples/debugging-with-devtools/tree/category-highlighting) and checkout the `category-highlighting` branch to get started fixing
+that code.
 
 ---------------------------------------
 
