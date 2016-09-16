@@ -61,12 +61,14 @@ var myLitObject = {
 
 // 1. Get the value of myLitObject
 // 2. Get the value of coolFactor
-// 3. Add a new property
-// 4. Get the value of that new property, but utilize a different notation from step #2
-// 5. Change the value of coolFactor
-// 6. Get the value of myLitObject
-// 7. Create a method on myLitOjbect that logs "Skateboarding is fun" to the console
-// 8. Get the value of myLitObject, confirm that your method is there
+// 3. Add a new property of your choosing
+// 4. Check the value of myLitObject again
+// 5. Ask myLit Object for the value of the new property you set, but utilize a different notation than when you asked for the value of coolFactor in step #2
+// 6. Change the value of coolFactor
+// 7. Get the value of myLitObject
+// 8. Create a method on myLitOjbect that logs "Skateboarding is fun" to the console
+// 9. Check the value of myLitObject. Do you see your method?
+// 10. Use myLitObject to log "Skateboarding is fun"
 ```
 Great, we feel pretty good about literal notation to create an object. Let's talk about _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
@@ -96,7 +98,7 @@ What is happening up ^^ there?
 - Each object created will utilize the same method for checking availability
 - The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates
 - Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma
-- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
+- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.
 
 ## Oh jeeze...```this``` (It's just a keyword)
 The keyword ```this``` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, ```this``` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
