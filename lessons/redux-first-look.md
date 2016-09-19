@@ -1,8 +1,12 @@
-# First Look: Redux
+---
+title: First Look: Redux
+length: 180 min
+tags: React, JavaScript, Webpack
+---
 
 ## Plan Of Attack
   - What is Redux? (Slide Deck)
-  - Code Along (short!)
+  - [Code Along](https://github.com/martensonbj/redux-first-look) (short!)
 
 ## Things to Keep In Mind:
   - This is meant to be a surface level class to introduce you to concepts, buzz words, and let you have a first glance at what Redux looks like.
@@ -11,6 +15,8 @@
 
 ### What Is Redux?
 Redux was created by Dan Abramov to be a predictable state manager for JavaScript applications.  
+
+**Redux is only concerned with State**
 
 Although we will be talking about Redux within a React app, it is not dependent on React it just works really well together.
 
@@ -162,7 +168,7 @@ Clone down a copy of the [first-look-redux](https://github.com/martensonbj/redux
 
 Notice we have a skeleton setup with components, a little css, an our index.js and html files.   
 
-Run `npm start` to confirm everything is working.
+Run `npm install` and then `npm start` to confirm everything is working.
 
 #### Step 2: Write our First Reducer
 
@@ -186,9 +192,9 @@ const initialState = {
 export default function counter(state = initialState, action) {
   switch (action.type) {
     case 'INCREMENT':
-      return state = {likes: state.likes + 1}
+      return state = {...state, likes: state.likes + 1}
     case 'DECREMENT':
-      return state = {likes: state.likes - 1}
+      return state = {...state, likes: state.likes - 1}
     default:
       return state
   }
@@ -401,6 +407,9 @@ Assuming our reducer now represents multiple reducers it doesn't make sense to c
 Then pass our store the new variable.  
 `const store = createStore(reducer)`.  
 
+Think about how we are passing our state initially to our App. What did we just do? How can we drill into the information to accurately render our Likes counter now?
+*hint: debugger!*
+
 We are going to leave this lesson here. Next steps will include:
   - Implementing `react-redux` specific functions:
   - Wrapping our main component in a `<Provider />` component
@@ -408,9 +417,9 @@ We are going to leave this lesson here. Next steps will include:
   - Using `mapStateToProps()` and `mapDispatchToProps()` to work with `connect()`
 
 #### Resources
-[Official Github Docs](https://github.com/reactjs/redux)
-[Redux Example Apps](http://redux.js.org/docs/introduction/Examples.html)
-[Using Redux with React](http://redux.js.org/docs/basics/UsageWithReact.html)
-[Smart and Dumb Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
-[Thinking In React](https://facebook.github.io/react/docs/thinking-in-react.html)
-[Redux - By Turing's own Marc Garreau!](https://quickleft.com/blog/redux-plain-english-workflow/)
+[Official Github Docs](https://github.com/reactjs/redux)  
+[Redux Example Apps](http://redux.js.org/docs/introduction/Examples.html)  
+[Using Redux with React](http://redux.js.org/docs/basics/UsageWithReact.html)  
+[Smart and Dumb Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)  
+[Thinking In React](https://facebook.github.io/react/docs/thinking-in-react.html)  
+[Redux - By Turing's own Marc Garreau!](https://quickleft.com/blog/redux-plain-english-workflow/)  
