@@ -1,20 +1,30 @@
 # First Look: Redux
 
 ## Plan Of Attack
+  - What is Redux? (Slide Deck)
+  - Code Along (short!)
+
+## Things to Keep In Mind:
+  - This is meant to be a surface level class to introduce you to concepts, buzz words, and let you have a first glance at what Redux looks like.
+  - You ARE NOT expected to understand Redux after this class.
+  - There are tons of great resources (listed at the bottom of this file) if you want to dive deeper this week.
 
 ### What Is Redux?
-- Created by Dan Abramov
-- Predictable state container for JS apps
-- Can be used with React or with any other view library
-- 2kb (INCLUDING dependencies TINY!)
-- Some ideas from Flux with Elm influence
-- Collection of JS modules (like importing any type of NPM package)
-- Written in ES6, but precompile CommonJS. Babel not required for Redux to work (unlike React)
-- Scales extremely well to large complex apps
-- Allows you to trace every mutation of state to the action that caused it
+Redux was created by Dan Abramov to be a predictable state manager for JavaScript applications.  
 
+Although we will be talking about Redux within a React app, it is not dependent on React it just works really well together.
 
-### Things You Need To Install  
+Redux is written in ES6, but precompiles into CommonJS so Babel is not required for Redux to work (but Babel IS required for React. So there's that.)  
+
+Redux wraps up all of your application's state into a single "store". The state is changed when your app fires off an "action", which is processed in something called a "reducer", which then modifies the state withing your store.
+
+It's only 2kb (INCLUDING dependencies. That's TINY!)  
+
+You'll hear a lot about "Flux" vs "Redux". Flux came first, and it's a bit more complicated than Redux. Redux was designed to simplify Flux and do the job better.  If you want to know more, research Flux.  
+
+Other benefits of Redux are that it scales extremely well to large complex apps. As your app grows, it grows horizontally with the help of Redux. Things do not become more dependent on each other, you simply add more pieces to the puzzle. Redux also allows your to trace every mutation of state to the action that caused it, it comes built in with a type of "rewind" functionality.
+
+### Things You Need To Install If You're Doing This Alone
 (Assuming you have a skeleton setup with npm, webpack, and react).
 ```
 npm i --save redux react-redux
@@ -31,8 +41,6 @@ This is similar, except it's wired up to interact directly with the `state` of y
 Redux emits events called `actions` (essentially event listeners) that change appropriate parts of component's `state`.  
 
 To connect the `action` and related `state` in your `store.js`, you use something called a `reducer`. Reducers specify what you want to do with a given action. Like a middle man between user behavior and component rendering.
-
-### Redux vs Flux + Elm
 
 ### Reducers
 
@@ -96,10 +104,55 @@ store.dispatch({ type: 'DECREMENT" '})
 
 ```
 
-
 ### Actions
 
-### Data Cycle
+Actions are pieces of information that tell your app how to send data from your application to your store. They require a type (defined as a string), and can also have an optional payload.
+
+```
+type: 'DECREMENT',
+changeCount: -1
+```
+
+### ActionCreator
+
+Functions that return actions. Slightly bundled into the same concept as a Reducer if you don't have a separate file handling these actions.
+
+```
+export default function counter(state = initialState, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state = {likes: state.likes + 1}
+    case 'DECREMENT':
+      return state = {likes: state.likes - 1}
+    default:
+      return state
+  }
+}
+```
+
+### Reducers
+
+Reducers make a copy of state, update the copy, and pass those copies back to the store. A redux store can only accept one "reducer" passed in as an argument so you will most often see them consolidated into something called a rootReducer.
+
+In your store, these actions will be called using the built in redux function `store.dispatch()` which we will get into later.  
+
+Think of Reducer like tiny photocopy robots..or github. Instead of overwriting anything, they are always just making copies and making changes to the newest copy.  
+
+Each individual reducer (let's say we had a few like an "ideas" reducer, and a "posts" reducer, and "comments" reducer) sends their respective states to the root reducer. The rootReducer then compares notes, puts together a master copy of anything needing updated, and send its along to the redux Store.  
+
+Things Reducers should NOT do:
+  - Mutate Arguments
+  - Perform side jobs (API calls, routing, etc)
+  - Call non-pure functions like Math.random() or Date.now()  
+
+### Store
+
+The redux Store is the crux of the gig. It pulls in the actions and reducers and hands everything off to the components that need it.  
+
+It gives us a few built in functions:  
+  - getState()
+  - dispatch()
+  - subscribe()
 
 ### Code-Along Phase 1: Implement Redux
 
@@ -295,22 +348,69 @@ export default class ActionButton extends Component {
 
 Congrats! We've implemented Redux. But this is really only convenient if we have a tiny app with one component, one state, and one reducer. If that's all that was necessary we might as well just handle state within the components without redux at all.
 
-Let's refactor to allow for scalability.
+Let's refactor to allow for scalability and add some react-redux special effects. (Note: This will be a sneak peek at next steps, which will be covered more in depth next module).
 
+#### Step 1: Implement a rootReducer  
 
-#### QUESTIONS
-  - import css from './styles.css' --> what is css?
-  - what is raven? (config.js)
-  - React.cloneElement, this.props.children
-  - store.subscribe(render)??
+Start by creating a new file `reducers/counter.js`. Assuming our app will eventually have more than one reducer, this lets us start to separate our logic.
 
-#### BUZZ WORDS
-  - Action
-  - ActionCreator
-  - Reducer
-  - Store
-  - Payload
+Keep in mind that Redux can only pass one reducer to state, which means we need to consolidate our information so this is possible.
+
+Within that file move the logic from `reducers/index.js`:  
+`reducers/counter.js`  
+```
+// counter reducer
+
+const initialState = {
+  likes: 0
+}
+
+export default function counter(state = initialState, action) {
+  switch (action.type) {
+    case 'INCREMENT':
+      return state = {likes: state.likes + 1}
+    case 'DECREMENT':
+      return state = {likes: state.likes - 1}
+    default:
+      return state
+  }
+}
+
+```
+
+Update `reducers/index.js`  
+```
+import { combineReducers } from 'redux'
+import counter from './counter'
+
+const rootReducer = combineReducers({
+  counter
+})
+
+export default rootReducer
+```
+
+Now we need to make a few changes in our `store` (`src/index.js`).  
+This line:  
+`import counter from './reducers'`  
+Becomes:
+`import reducer from './reducers'`
+
+Assuming our reducer now represents multiple reducers it doesn't make sense to call it "counter".
+
+Then pass our store the new variable.  
+`const store = createStore(reducer)`.  
+
+We are going to leave this lesson here. Next steps will include:
+  - Implementing `react-redux` specific functions:
+  - Wrapping our main component in a `<Provider />` component
+  - Using connect() to pare down what state our component needs access to
+  - Using `mapStateToProps()` and `mapDispatchToProps()` to work with `connect()`
 
 #### Resources
 [Official Github Docs](https://github.com/reactjs/redux)
 [Redux Example Apps](http://redux.js.org/docs/introduction/Examples.html)
+[Using Redux with React](http://redux.js.org/docs/basics/UsageWithReact.html)
+[Smart and Dumb Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0)
+[Thinking In React](https://facebook.github.io/react/docs/thinking-in-react.html)
+[Redux - By Turing's own Marc Garreau!](https://quickleft.com/blog/redux-plain-english-workflow/)
