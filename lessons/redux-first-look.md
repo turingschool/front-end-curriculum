@@ -288,6 +288,7 @@ This is no longer what our App.js file is expecting, which means we need to upda
 First, we can remove the directions to render this component since that is now being handled in `src/index.js`, and instead we simply need to export the class. This means we also no longer need import the render method at the top of our file, and lastly we need to update how the props are being passed through.
 
 `App.js`  
+
 ```
 import React, { Component } from 'react'
 import LikesCounter from './LikesCounter.js'
@@ -334,7 +335,8 @@ export default class LikesCounter extends Component {
 }
 ```
 
-And finally in `ActionButton.js`:
+And finally in `ActionButton.js`:  
+
 ```
 import React, { Component } from 'react'
 
@@ -364,6 +366,7 @@ Keep in mind that Redux can only pass one reducer to state, which means we need 
 
 Within that file move the logic from `reducers/index.js`:  
 `reducers/counter.js`  
+
 ```
 // counter reducer
 
@@ -381,10 +384,10 @@ export default function counter(state = initialState, action) {
       return state
   }
 }
-
 ```
 
 Update `reducers/index.js`  
+
 ```
 import { combineReducers } from 'redux'
 import counter from './counter'
