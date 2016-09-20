@@ -15,14 +15,14 @@ By the end of this lesson, you will:
 
 ### Why Wireframe?
 
-Before starting any new project, it's important to know why you are building it and what the expectations are for the finished product. Taking the time to sketch out your ideas is useful for many reasons, and it allows you to refine your assumptions about your product and get input from others to confirm that your approach makes sense. Iterating on ideas quickly is an important component of Agile development practices and it can save you precious time later on by identifying potential issues or misconceptions early on when the cost of making a change is significantly lower. It also helps get you in the habit of speaking clearly about your ideas and work. Getting used to working this way sooner than later is going to help you in the long run.
+Before starting any new project, it's important to know why you are building it and what the expectations are for the finished product. Taking the time to sketch out your ideas is useful for many reasons. It allows you to refine your assumptions about your product and get input from others to confirm your approach makes sense. Iterating on ideas quickly is an important component of Agile development practices and it can save you precious time later on by identifying potential issues or misconceptions early on, when the cost of making a change is significantly lower. It also helps get you in the habit of speaking clearly about your ideas and work. Getting used to working this way sooner rather than later is going to help you in the long run.
 
 
 #### What are Wireframes?
 
-Your first project will be to build a custom portfolio site to showcase the work you create over the next seven months. However, before diving into the code you need to know where you're heading with your project. What content will you have and how will you organize it? How many pages are you going to need? What do you want visitors to your site to read first?
+Your first project will be to build a custom portfolio site to showcase the work you create over the next seven months. However, before diving into the code, you need to know where you're heading with your project. What content will you have and how will you organize it? How many pages are you going to need? What do you want visitors of your site to read first?
 
-To help answer these questions, we build wireframes of our site. Wireframes are like an architectural blueprint of your site -- they help us refine content and hierarchy without the distractions of color palettes, fonts, and imagery. They are a tool that allows us to refine our design strategy with minimal risk. If we realize something doesn't make sense in a wireframe, it's very quick and simple to change it. If we realize something doesn't make sense once we're elbows deep in a code base, it's going to set us back a lot more time.
+To help answer these questions, we build wireframes. Wireframes are like an architectural blueprint of your site -- they help us refine content and hierarchy without the distractions of color palettes, fonts, and imagery. They allow us to refine our design strategy with minimal risk. If we realize something doesn't make sense in a wireframe, it's very quick and simple to change it. If we realize something doesn't make sense once we're elbows-deep in a code base, it's going to cost us a lot more time.
 
 Wireframes allow us to quickly get ideas out of our heads and in front of peers or users. They help us gather feedback and organize our thoughts. Our primary goal is to lock in our content and how it's structured on the page, taking into consideration how we want our page to flow, what our visitor's needs are, and what the correct hierarchy is for our content.
 
@@ -34,7 +34,7 @@ This is a simple visualization of how a user moves through your site. They can b
 
 **Low Fidelity Wireframes**
 
-This is where you get all your ideas onto a page. Pen and paper is ideal for low fi wireframes, because it lets you move quickly without worrying about making things perfect. You'll focus 100% on the structure of your content, so don't get bogged down with details like fonts and colors. Feeling like you're to focused on the little things? Try using a thick marker, like a Sharpie. You can't get too detailed when your writing tool is beefy!
+This is where you get all your ideas onto a page. Pen and paper is ideal for low fi wireframes, because it lets you move quickly without worrying about making things perfect. You'll focus 100% on the structure of your content, so don't get bogged down with details like fonts and colors. Feeling like you're too focused on the little things? Try using a thick marker, like a Sharpie. You can't get too detailed when your writing tool is beefy!
 
 **Mid Fidelity Wireframes**
 
@@ -42,9 +42,9 @@ We've gotten through our initial brain-dump of ideas with our low fi wireframes,
 
 **High Fidelity Wireframes**
 
-This is the final, most detailed phase of wireframing. Still in grayscale, with no real images, this phase is where you finalize copy, content, and page flow. At this point, the ideas and structure expressed in your wireframes should be solid enough to be moved into a more formal design phase very easily. Ultimately, wireframes are not design comps. They are not the place we dig into nuanced design choices, rather, they are where we formalize ideas, lock in content, and clarify how users use our site.
+This is the final, most detailed phase of wireframing. Still in grayscale, with no real images, this phase is where you finalize copy, content, and page flow. At this point, the ideas and structure expressed in your wireframes should be solid enough to be moved into a more formal design phase very easily. Ultimately, wireframes are not design comps. They are not the place we dig into nuanced design choices, rather, they are where we formalize ideas, lock in content, and clarify how users interact with our site.
 
-Keep in mind that we don't always move through these phases in a structured, formal way. Sometimes the path from low fi to high fi is fairly quick and seamless, but it's good practice to be mindful of where you are in the process so you don't jump ahead and get too detailed too quickly. Wireframes should act as a reference point for you and your thinking about a project, it's ok to make adjustments and tweaks as you refine your layout down the road.
+Keep in mind that we don't always move through these phases in a structured, formal way. Sometimes the path from low fi to high fi is fairly quick and seamless, but it's good practice to be mindful of where you are in the process so you don't jump ahead and get too detailed too quickly. Wireframes should act as a reference point for you and your thinking about a project; it's ok to make adjustments and tweaks as you refine your layout down the road.
 
 
 #### Let's Try It Out Together
