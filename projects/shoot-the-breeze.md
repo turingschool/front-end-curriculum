@@ -33,6 +33,9 @@ title: Shoot The Breeze
 - User can set number for how many previous messages to show
 - User can delete only their messages
 
+### Repo
+- Example repo can be found [here](https://github.com/turingschool-examples/shoot-the-breeze)
+
 ### Wireframes
 
 - Typeface: [Fira Sans](https://fonts.google.com/specimen/Fira+Sans)
