@@ -169,6 +169,7 @@ As always, we need to install the necessary dependencies to add the React librar
 Let's start by creating the template for the "Like" button.
 
 Replace what is currently in `index.js` with:  
+
 ```
 require('./main')
 
@@ -343,7 +344,8 @@ constructor(props) {
 }
 ```
 
-At this point your `LikesCounter.jsx` file should look like this:
+At this point your `LikesCounter.jsx` file should look like this:  
+
 ```
 const React = require('react')
 const ReactDOM = require('react-dom')
@@ -390,7 +392,8 @@ In a perfect world, I want to write a JavaScript function that adds 1 to the num
 addToLikesCount (num) {
   this.setState({count: this.state.count + num});
 }
-```
+```  
+
 This is where the magic of React comes in. We are essentially throwing out the old information and replacing it with fresh, up-to-date information by re setting the state to be `{count: this.state.count + num}` .  
 
 Finally, add an `onClick` event-listener into our `ActionButton` class, and then pass that information to the `<ActionButton />` component to tell it what to do within our `<LikesCounter />` .  
@@ -405,7 +408,8 @@ class ActionButton extends React.Component {
     )
   }
 }
-```
+```  
+
 Note that within our `onClick` action, we get to name our "prop" whatever we want. A common function name is `handleClick`. This will in turn go tell our component to find the prop `handleClick` and run the function we set as its value.
 
 ```
@@ -434,7 +438,8 @@ Hint: Each of these files will house a single component of the same name!
 
 See if you can refactor so that your index.js file looks like this:
 
-`index.js`
+`index.js`  
+
 ```
 require('./main')
 require('./components/App')
