@@ -239,6 +239,12 @@ Let's remove the `debugger` statement we adding in our codebase, and use a break
 * examining network requests and responses
 * debugging issues with sending or receiving API data
 
+The network tab shows you information about all the server requests that were made when loading or interacting with your application. Specifically, you can view the response and status code of each request and how long it took to make the trip to the server and back. This panel is most helpful when you are debugging data that is being sent to and received from an API.
+
+![Network Panel][network-panel]
+
+[network-panel]: /assets/images/lessons/debugging-with-devtools/network-panel.png
+
 ---------------------------------------
 
 ### Practice
