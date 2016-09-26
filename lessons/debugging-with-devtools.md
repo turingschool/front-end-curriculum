@@ -184,6 +184,7 @@ The sources panel gives us an overview of all the files we have loaded into our 
 ##### HELPFUL FOR:
 * examining the files loaded into your application
 * live-debugging JavaScript errors
+* monitoring the values of application variables
 
 #### Pausing Code Execution with `debugger`
 Similar to the `console.log()` method we just learned about, we can also use `debugger` statements in our code to get feedback about our application's JavaScript.
@@ -225,11 +226,24 @@ Let's remove the `debugger` statement we adding in our codebase, and use a break
 
 ![breakpoint-pause][breakpoint-pause]
 
+#### Watching Variables
+Another way we can inspect the state of our application is by using watch expressions. In the sidebar above the 'scope' section we just explored, there is also a 'watch' section. In here, we can add the name of any variable in our application, and the panel will continuously monitor and display its value, no matter how many times it changes.
+
+With our breakpoints still in place, let's add the variable `expense` to the watch section by clicking on the plus sign and typing 'expense' into the textbox that appears: 
+
+![Add watch expression][add-watch]
+
+Now when we refresh our page and our code is paused on each loop, we should notice the `expense` variable in our watch expression updating with every loop:
+
+![Watch Expressions][watch-expressions]
+
 
 
 [console-error]: /assets/images/lessons/debugging-with-devtools/console-error.png
 [debugger-pause]: /assets/images/lessons/debugging-with-devtools/debugger-pause.png
 [breakpoint-pause]: /assets/images/lessons/debugging-with-devtools/breakpoint-pause.png
+[add-watch]: /assets/images/lessons/debugging-with-devtools/add-watch.png
+[watch-expressions]: /assets/images/lessons/debugging-with-devtools/watch-expressions.png
 
 ---------------------------------------
 
