@@ -8,7 +8,7 @@ tags: javascript, gulp, webpack, grunt
 
 ## Goals
 
-By the end of this lesson, you will know/be able to:
+By the end of this lesson, you will:
 
 * Have an understanding of what client side build tools are
 * Have a basic understanding of what Webpack is and what it does for us
@@ -21,19 +21,15 @@ If you get stuck at any point, go back and reference the [starter-kit for webpac
 
 ## Install Some Command Line Tools
 
-Let's install some command line tools.
-We'll also use local versions of these packages,
-but the in order to use global commands, we'll need to install them globally as well.
+Let's install some command line tools. We'll also use local versions of these packages, but the in order to use global commands, we'll need to install them globally as well.
 
 ```
 npm install -g webpack webpack-dev-server mocha
 ```
 
-This will install [Webpack](http://webpack.github.io/) and [Mocha](https://mochajs.org/)
-command line tools globally -- hence the `-g` flag --
-on your file system.
+This will install the [Webpack](http://webpack.github.io/) and [Mocha](https://mochajs.org/) command line tools globally -- hence the `-g` flag -- on your file system.
 
-You'll be able to run these tools with the `webpack`, `webpack-dev-server`, and `mocha` command respectively.
+You'll be able to run these tools with the `webpack`, `webpack-dev-server`, and `mocha` commands respectively.
 
 ## Creating your first Webpack project
 
@@ -56,8 +52,7 @@ First, create your project with:
 npm init
 ```
 
-You'll be guided through a command-line setup "wizard", prompting
-you for some info on your project such as its:
+You'll be guided through a command-line setup "wizard", prompting you for some info on your project such as its:
 
 * Name
 * Author
@@ -65,8 +60,7 @@ you for some info on your project such as its:
 * Description
 * License, etc.
 
-For most of these items you can use the default option
-by pressing `Enter`.
+For most of these items you can use the default option by pressing `Enter`.
 
 Finally, install our libary dependencies with `npm install`:
 
@@ -89,13 +83,9 @@ We installed a few development dependencies:
 * Git problems caused by versioning dependencies or other frequently
   changing files
 
-For these reasons, it's often helpful to start with
-a `.gitignore` file which includes "sane defaults" for NPM projects.
-One example is provided on github, and we can easily include
-it in our newly created project by pulling the file down with
-`curl`:
+For these reasons, it's often helpful to start with a `.gitignore` file which includes "sane defaults" for NPM projects. One example is provided on github, and we can easily include it in our newly created project by pulling the file down with `curl`:
 
-```
+```bash
 curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore > .gitignore
 ```
 
@@ -103,15 +93,15 @@ curl https://raw.githubusercontent.com/github/gitignore/master/Node.gitignore > 
 
 We'll also want to add a README.md documentation file.
 
-```
+```bash
 touch README.md
 ```
 
 As we continue along in the coding process, we should leave breadcrumbs for ourselves in this file.
 
-Here's a good start for our README.md
+Here's a good start for our README.md:
 
-```
+```md
 # Webpack Walkthrough
 
 To install the dependencies:
@@ -123,14 +113,14 @@ npm install
 
 Next, let's create some empty files and folders for our future code:
 
-```
+```bash
 mkdir lib test
 touch lib/index.js test/index.js
 ```
 
 Our directory structure should look like this:
 
-```
+```bash
 lib/
   index.js
 node_modules/
@@ -145,18 +135,14 @@ README.md
 
 __Discussion: Application Entry Points__
 
-* What is needed to trigger an application to "run" in its
-most standard configuration?
+* What is needed to trigger an application to "run" in its most standard configuration?
 * How do we run a rails project? Its test suite?
 * System executables vs. Code files
 * What is the "executable" for a browser-based app?
 
-You'll want an HTML page that loads up each of your bundles
-in the browser.
+You'll want an HTML page that loads up each of your bundles in the browser.
 
-We'll create two HTML files: `touch index.html test.html`
-These will provide entry points to our application and test suite,
-respectively
+We'll create two HTML files: `touch index.html test.html`. These will provide entry points to our application and test suite, respectively
 
 Below is an example of the basic structure you can use:
 
@@ -177,20 +163,18 @@ __index.html__
 
 The important part is the third line from the bottom:
 
-```
+```html
 <script src="main.bundle.js"></script>
 ```
 
 This is the line that loads up your bundle. Notice that we only have to load a single
 JS file. This is one of the major benefits of Webpack (or another frontend build tool)
--- it will package all of our JS files and their dependencies into a single bundle that we can
-load.
+-- it will package all of our JS files and their dependencies into a single bundle that we can load.
 
 Since the `index.html` file is the entry point for our application, we're loading
 in the "main" bundle.
 
-For our `test.html` file, we'll have almost the same thing, except
-we'll load in the test bundle:
+For our `test.html` file, we'll have almost the same thing, except we'll load in the test bundle:
 
 __test.html__
 
@@ -207,8 +191,7 @@ __test.html__
 </html>
 ```
 
-Note that these pages won't work yet, since the bundles themselves
-have not yet been built.
+Note that these pages won't work yet, since the bundles themselves have not yet been built.
 
 ## Setting Up Webpack
 
@@ -238,13 +221,9 @@ module.exports = {
 }
 ```
 
-In the above configuration, we're telling Webpack that we'd like it
-to build too different bundles: our main application and our test suite
-(these are the 2 distinct bundles we referenced from our 2 entry point
-html files).
+In the above configuration, we're telling Webpack that we'd like it to build two different bundles: our main application and our test suite. (These are the 2 distinct bundles we referenced from our 2 entry point html files.)
 
-We can build the files once with `webpack` or we can set up a
-development server that will reload our changes with `webpack-dev-server`.
+We can build the files once with `webpack` or we can set up a development server that will reload our changes with `webpack-dev-server`.
 
 Let's fire up `webpack-dev-server` and head over to `http://localhost:8080/`.
 
@@ -272,18 +251,15 @@ pull them all together.
 __Your Turn -- additional test files__
 
 * Create 2 additional test files in your `test` directory
-* To each one, add a basic example test similar to the one we
-added to `test/index.js`. Make sure your tests have different
-names so we can tell them apart.
+* To each one, add a basic example test similar to the one we added to `test/index.js`. Make sure your tests have different names so we can tell them apart.
 * Require your 2 new files from `index.js`
-* Refresh your `test.html` file and make sure all 3 tests appear
-(the original one plus the 2 you added)
+* Refresh your `test.html` file and make sure all 3 tests appear (the original one plus the 2 you added)
 
 ### A Quick Word on Testing Environments
 
 You have two ways of running JavaScript: the browser and Node.js.
 Most of the time, they're pretty much the same. Node uses Chrome's V8 JavaScript engine,
-so the javascript runtime you're getting with Node is actually the same one as you
+so the JavaScript runtime you're getting with Node is actually the same one as you
 get with Chrome.
 
 However, one major difference is that your browser, being designed for working with
@@ -347,9 +323,7 @@ body { background-color: $color; }
 
 Keep in mind:
 
-* Requiring files is path-relative to the file you are requiring _from_
-(i.e. if you want to require a file in your project root into `lib/index.js`,
-you'll need to step up one directory level to access it)
+* Requiring files is path-relative to the file you are requiring _from_ (i.e. if you want to require a file in your project root into `lib/index.js`, you'll need to step up one directory level to access it)
 
 As an added bonus, we can also tell Webpack to resolve the file extensions on our behalf.
 
@@ -418,8 +392,6 @@ Notice that we exclude our `node_modules` folder. We want to process all files t
 
 __Your Turn__
 
-Practice using the ES6 `let` feature in one of your tests.
-Make sure it still runs. (Recall that `let` works similarly to `var`, but
-has stricter rules around where the new variable will be in scope).
+Practice using the ES6 `let` feature in one of your tests. Make sure it still runs. (Recall that `let` works similarly to `var`, but has stricter rules around where the new variable will be in scope).
 
 [Babel]: http://babeljs.io
