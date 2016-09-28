@@ -1,6 +1,5 @@
 ---
-title: Introduction to jQuery
-layout: post
+title: Introduction to jQuery 
 tags: jquery, javascript
 ---
 
