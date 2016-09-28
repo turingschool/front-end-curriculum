@@ -20,11 +20,11 @@ There is also [JSLint](http://www.jslint.com/), but it'll hurt your feelings.
 Each one of these has plugins for your editor. You should install one or both of them.
 
 - [There are lots of editor plugins for JSHint](http://jshint.com/install/).
-- [As you might expect, there is also a lot of options for ESLint](http://eslint.org/docs/user-guide/integrations).
+- [As you might expect, there are also a lot of options for ESLint](http://eslint.org/docs/user-guide/integrations).
 
 ### Configuring
 
-JSHint and ESLint use a `.jshintrc` and a `.eslintrc` respectively to configure their settings.
+JSHint and ESLint use `.jshintrc` and `.eslintrc` files, respectively, to configure their settings.
 
 These are JSON files where you can configure different settings to your taste.
 
@@ -74,7 +74,7 @@ Here is an example `.eslintrc` file:
 
 #### Your Turn
 
-- Take a look at examples above what is one rule that struck you as unfamiliar? Check the docs and see what it does.
+- Taking a look at examples above, what is one rule that struck you as unfamiliar? Check the docs and see what it does.
 - Go through the docs and see if you can find one rule that you feel strongly about and would definitely like to implement in your next project.
 
 ### Which one should I use?
