@@ -1,5 +1,5 @@
 ---
-title: Responsive Image Handling
+title: Image Handling
 tags: images, css, performance
 ---
 64% of the weight of the web is images. :open_mouth: Regardless of whether you are building for 1 image or 1 million - how you handle serving and sizing that image has impact. As a Front End Engineer, you are expected to serve gorgeous images at any size, while achieving optimal site/app performance. We've outlined the brilliant basics for you below. It is important to note that things evolve rapidly, and responsive image handling is a hot topic in the community. Consider this a solid foundation to get you started. Implement these current best practices into your workflow.
