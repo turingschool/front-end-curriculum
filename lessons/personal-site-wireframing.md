@@ -1,7 +1,7 @@
 ---
-title: Portfolio Wireframing Lesson
+title: Personal Site Wireframing Lesson
 length: 1 hrs
-tags: design, wireframe, portfolio
+tags: design, wireframe, personal site
 ---
 
 ### Goals
@@ -10,7 +10,7 @@ By the end of this lesson, you will:
 
 * Have the skills and vocabulary to talk through your approach and thinking for a project layout
 * Begin to feel comfortable iterating on ideas quickly
-* Have a plan and roadmap for your personal portfolio project
+* Have a plan and roadmap for your personal site
 
 
 ### Why Wireframe?
@@ -20,7 +20,7 @@ Before starting any new project, it's important to know why you are building it 
 
 #### What are Wireframes?
 
-Your first project will be to build a custom portfolio site to showcase the work you create over the next seven months. However, before diving into the code you need to know where you're heading with your project. What content will you have and how will you organize it? How many pages are you going to need? What do you want visitors to your site to read first?
+Your first project will be to build a custom personal site to showcase the work you create over the next seven months. However, before diving into the code you need to know where you're heading with your project. What content will you have and how will you organize it? How many pages are you going to need? What do you want visitors to your site to read first?
 
 To help answer these questions, we build wireframes of our site. Wireframes are like an architectural blueprint of your site -- they help us refine content and hierarchy without the distractions of color palettes, fonts, and imagery. They are a tool that allows us to refine our design strategy with minimal risk. If we realize something doesn't make sense in a wireframe, it's very quick and simple to change it. If we realize something doesn't make sense once we're elbows deep in a code base, it's going to set us back a lot more time.
 
@@ -49,7 +49,7 @@ Keep in mind that we don't always move through these phases in a structured, for
 
 #### Let's Try It Out Together
 
-Let's take a look at the [portfolio project spec](t p). Here we see the basic content you'll need to work with in your portfolio. Nothing too surprising here, but it's good to understand what you need to be working with before you start sketching. Here's what we need to include:
+Let's take a look at the [personal site project spec](t p). Here we see the basic content you'll need to work with in your personal site. Nothing too surprising here, but it's good to understand what you need to be working with before you start sketching. Here's what we need to include:
 
 - primary navigation
 - footer
@@ -74,6 +74,6 @@ We'll whiteboard an option for low fi and user flow wireframes together.
 
 #### Your Turn
 
-Now that we've done some sketching together, it's your turn! Take a crack at thinking through and sketching low fidelity and user flow wireframes for your portfolio site. Since we want to iterate quickly and get all our ideas out of our heads and onto paper, **sketch 2-3 different options for your portfolio site.** Consider how you want to organize your content, what you want a user to see first, and how they'll navigate through the site to different content.
+Now that we've done some sketching together, it's your turn! Take a crack at thinking through and sketching low fidelity and user flow wireframes for your personal site. Since we want to iterate quickly and get all our ideas out of our heads and onto paper, **sketch 2-3 different options for your personal site.** Consider how you want to organize your content, what you want a user to see first, and how they'll navigate through the site to different content.
 
 The goal here isn't perfect drawings, it's about communicating your ideas visually in a way that can start discussion. There are lots of ways to approach this project, so be sure to keep your wireframes -- we'll want to discuss them and your approach! A good strategy is to keep things simple: clear and usable beats fancy and confusing any day.
