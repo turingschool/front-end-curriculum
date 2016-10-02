@@ -59,6 +59,14 @@ When a user clicks the title or task of a TODO in the list, that text should:
   * The user should be able to “commit” their changes by pressing “Enter/Return” or by clicking outside of the text field.
   * If the user reloads the page, their edits will be reflected.
 
+### Searching
+
+We’d like our users to be able to easily find specific TODOs they already created, so let’s provide them with a filtering interface on the TODO list.
+
+  * At the top of the TODO list, include a text field labeled “Search”.
+  * As a user types in the search box, the list of TODOs should filter in real time to only display TODOs whose title or task include the user’s text.
+  * The page should not reload.
+  * Clearing the search box should restore all the ideas to the list.
 
 # Phase 2
 
