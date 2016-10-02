@@ -56,15 +56,36 @@ To change our current directory, we use the command ``cd``. To move from the cur
 
 You would enter ``cd notes`` into the terminal. Usually, you would say that you are going down into the notes directory.
 
-If you want to go up one directory, then simply use two periods: ``cd ..`` to go back up one level. With the previous example where you are currently in the notes directory, you would type ``cd ..`` to get to the ``turing`` directory.
+If you want to go back, then simply use two periods: ``cd ..`` to go back up one level. With the previous example where you are currently in the notes directory, you would type ``cd ..`` to get to the ``turing`` directory.
 
-One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal you did the correct thing.
+One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal when you do the correct thing.
 
-You might be thinking to yourself "man I'm doing a lot of typing...and if I type something incorrectly the terminal will go to the wrong place."
+You might be thinking to yourself, "Wow, I'm doing a lot of typing...and if I type something incorrectly in the terminal, then I'll go to the wrong place or nowhere at all."
 
-With that being said I would encourage you to use tab completion. What I mean by that is if you are trying to change directories or ``cd`` anywhere if you start typing the first part of where you want to go and then you hit ``tab`` the terminal will auto complete the rest of the desired location for you.
+Tab completion is your friend when you don't want to type an entire directory name or you don't quite remember how something is spelled. What I mean by that is if you're trying to change directories or ``cd`` anywhere, if you start typing the first part of where you want to go and then you hit ``tab``, then the terminal will autocomplete the rest of the desired directory for you.
 
-What's really cool is if we have something multiple levels deep we can concatenate to different folders.
+For example, in the directory structure:
+
+```
+|- turing
+  |-- notes
+```
+
+If you are currently in the ``turing`` directory and you want to go to notes, then just type ``cd n`` and hit ``tab``. The terminal will autocomplete for you and your command will become ``cd notes``. Then hit ``Enter`` to finish the directory change.
+
+What if you want to change to a directory that is inside another directory? You can imagine that using ``cd`` multiple times would get tiring and slow. What's really cool is if we have something multiple levels deep we can keep adding directories to our ``cd`` command. Say we have:
+
+```
+|- turing
+  |-- notes
+    |--- first-lesson
+```
+
+If we're in ``turing`` and we want to get to ``first-lesson`` quickly, then we can do this with one command: ``cd notes/first-lesson``
+
+Note that each directory is separated with a slash, ``/``. If you wanted to add another directory, then it would be something like: ``cd notes/first-lesson/section-one``
+
+Likewise, we can also go back up multiple directories using one command. If you are in the ``first-lesson`` directory and you want to go back to the ``turing`` directory, then you can use the double dots as before with the slash separator: ``cd ../..``
 
 ### Your Turn
 
@@ -76,19 +97,27 @@ Once you're in your documents folder type in ``ls`` again to see what folders an
 
 When you're done with, that try and figure out a way to get back to your ``root`` directory from where you're at.
 
-### Creating Files & Making Folders: ``mkdir``, ``touch``
+### Making Folders & Creating/Removing Files: ``mkdir``, ``touch``, ``rm``
 
 #### mkdir
 
 Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the ``mkdir [dir name]`` operator. What this will do is create a new folder for us with whatever name you want to give it.
 
-Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to ``cd`` into it.
+Let's create a new directory called ``pizza``. Enter ``mkdir pizza`` in the terminal.
+
+Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to ``cd`` into it. Go ahead and ``cd`` into the ``pizza`` directory.
 
 #### touch
 
-Go ahead and ``cd`` into that directory. Now that we are inside of this directory what we can do now is create a new file. The command we are going to use to do this is the ``touch [file name]`` command.
+Now that we are inside of this directory what we can do now is create a new file. The command we are going to use to do this is the ``touch [file name]`` command.
 
-Let's make a new, blank text file using ``touch new_file.txt``.
+Let's make a new, blank text file using ``touch toppings.txt``.
+
+#### rm
+
+So we can make directories and new files, but we want to be able to remove them. That is where the ``rm`` command comes in. If we're not happy with our ``toppings.txt`` file, then we can delete it.
+
+Enter ``rm toppings.txt`` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
 
 ### Your Turn
 
@@ -98,7 +127,7 @@ If you're looking for a little bit of a challenge, feel free to ``cd`` into your
 
 ### Copying and Moving: ``cp``, ``mv``
 
-So now that we can create and remove things, let's add to our toolbox by being able to copy or move files.
+So now that we can create and remove files, let's add to our toolbox by being able to copy or move files. At a high level, ``cp`` keeps the source file and copies the file to a new location. ``mv`` takes the source file and moves it to a new location.
 
 #### cp
 
@@ -153,8 +182,16 @@ It's likely that copy-and-pasting is a big part of your life. You might think th
 
 In this case ``pbcopy < [file]`` & ``pbpaste > [file]`` copies the context of one file and pastes the contents into another file.
 
+For example, let's say we have a file ``hello.txt`` with the content ``Hello World!`` written inside of it, and we want to copy that text into a file named ``aloha.txt``.
+
+Start by copying the contents from ``hello.txt``: ``pbcopy < hello.txt``
+
+And paste it into the ``aloha.txt`` file: ``pbpaste > aloha.txt``
+
+Now the ``aloha.txt`` file has the contents ``Hello World!``.
+
 ## Additional Resources
 
-If you want some more repetition and practice, you can use this short course: [Learn the Command Line from Code Academy](https://www.codecademy.com/learn/learn-the-command-line)
+If you want some more command line repetition and practice, then you can use this short course: [Learn the Command Line from Code Academy](https://www.codecademy.com/learn/learn-the-command-line)
 
 The documentation for each command in the terminal is available if you type ``man [command]``. For instance, ``man cd``. Once you're done viewing the manual page, enter ``q`` to exit.
