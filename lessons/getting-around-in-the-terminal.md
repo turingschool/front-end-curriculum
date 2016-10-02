@@ -1,5 +1,5 @@
 ---
-title: Getting Around in the Terminal
+title: Introduction to the Terminal
 length: 90
 tags: command line, terminal
 ---
