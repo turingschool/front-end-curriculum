@@ -4,7 +4,27 @@ Do you remember that project Ideabox?
 
 We thought they were pretty great, but, I think it's time to pivot those projects over to something we like to call 2DoBox.
 
-You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox. Your projects will utilize webpack and it's built in node server. You will also keep accessibility in mind as we will be grading you based on how accessible your application is. You will also implement selenium webdriver to test the DOM.
+You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox. Your projects will utilize webpack & it's awesome development server. Keeping accessibility in mind we will be grading you based on how accessible your application is. Lastly you will implement feature tests using selenium webdriver.
+
+# Getting Started ( Should I fork or Clone?! )
+
+Beginning The Pivot
+
+Once you've explored the base project, the team leader will:
+
+Create a new, blank repository on GitHub named 2DoBox-Pivot
+Clone the ideaBox project that you'll be working with to your local machine
+Go into that project directory and git remote rm origin
+Add the new repository as a remote git remote add origin git://new_repo_url
+Push the code git push origin master
+Add the other team members as collaborators in Github
+Once the team leader has done this, the other team member can fork the new repo.
+
+# Restrictions and Outside Code
+
+Your project should evolve, refactor, and clean up the code you inherit. This includes deleting redundant, broken, or obsolete code. However, you should not throw out the previous work wholesale.
+
+Furthermore, there should be no reduction in functionality except when explicitly called for by new requirements.
 
 # Phase 1
 
@@ -12,80 +32,105 @@ You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox
 
 On the application’s main page, a user should:
 
-See two text boxes for entering the “Title” and “Task” for a new TODO, and a “Save” button for committing that TODO.
-When a user clicks “Save”:
+* See two text boxes for entering the “Title” and “Task” for a new TODO, and a “Save” button for committing that TODO.
 
-A new TODO with the provided title and body should appear in the TODO list.
-The text fields should be cleared and ready to accept a new TODO.
-The page should not reload.
-The TODO should be persisted. It should still be present upon reloading the page
+* When a user clicks “Save”:
+  * A new TODO with the provided title and body should appear in the TODO list.
+  * The text fields should be cleared and ready to accept a new TODO.
+  * The page should not reload.
+  * The TODO should be persisted. It should still be present upon reloading the page
 
 
 ### Deleting an existing TODO
 
 When viewing the TODO list:
 
-Each TODO in the list should have a link or button to “Delete” (or 𝗫).
-Upon clicking “Delete”, the appropriate TODO should be removed from the list.
-The page should not reload when an idea is deleted.
-The TODO should be removed from localStorage. It should not re-appear on next page load.
+  * Each TODO in the list should have a link or button to “Delete” (or 𝗫).
+  * Upon clicking “Delete”, the appropriate TODO should be removed from the list.
+  * The page should not reload when an idea is deleted.
+  * The TODO should be removed from localStorage. It should not re-appear on next page load.
 
 
 ### Editing an existing TODO
 
-When a user clicks the title or task of a TODO in the list, that text should become an editable text field, pre-populated with the existing  TODO title or task.
-The user should be able to “commit” their changes by pressing “Enter/Return” or by clicking outside of the text field.
-If the user reloads the page, their edits will be reflected.
+When a user clicks the title or task of a TODO in the list, that text should:
+
+  * become an editable text field, pre-populated with the existing  TODO title or task.
+  * The user should be able to “commit” their changes by pressing “Enter/Return” or by clicking outside of the text field.
+  * If the user reloads the page, their edits will be reflected.
 
 
 # Phase 2
 
+### Marking a TODO as completed
+
+When viewing the TODO list:
+  * Each TODO in the list should have a button called `Completed Task`
+  * When a the user clicks the `Completed Task` button the idea should be either grayed out and/or shown with a strike through text
+  * On reloading the page the page the completed TODOs should be exempted from the list.
+  * When the user clicks the `show completed TODOs` The completed TODOs should be loaded back onto the top of the TODO list.
+
 ### Accessibility
 
-Your web application should pass `aXe-core` tests and should be `tab index` accessible.
+Your web application should pass `aXe-core` tests and should be `tab index` accessible. For tab indexing refer to this [resource](http://archive.tlt.psu.edu/accessibility/tabindex0.html#whyzero)
 
 ### Importance
 
-Each  TODO should be given a level of importance. As a user I should be able to change the level of importance by up-voting or down-voting that specific  TODO. Each  TODO should start with a level of `Normal`.
+Each  TODO should be given a level of importance.
 
-Levels of Importance are as follows
+  * As a user I should be able to change the level of importance by up-voting or down-voting that specific  TODO.
+  * Each  TODO should start with a level of `Normal`.
+      * Levels of Importance are as follows
 
-1) Critical
+        1) Critical
 
-2) High
+        2) High
 
-3) Normal
+        3) Normal
 
-4) Low
+        4) Low
 
-5) None
+        5) None
 
-The change of importance should persist after a page refresh
-
-### Bookmarking
-
-There should be a `bookmark` button for each  TODO. As a user if I click the `bookmark` button I should see a visual change for the specific  TODO I've bookmarked.
-
-If I refresh the page the book mark should persist.
+  * The change of importance should persist after a page refresh
 
 # Phase 3
 
 ### Recent TODOs
 
 The application should only show the ten most recent  TODOS.
-The application should contain a button labeled “Show more TODO S…” which will load additional messages from the past.
+
+  * The application should contain a button labeled “Show more TODOs ...”
+  * When a user clicks on the `Show more TODOs...` button this list should load additional messages from the past.
 
 ### Filter by Importance
 
-The application should allow users to filter the TODO list based off of importance. Your application should have 5 buttons corresponding to each level of importance (Critical, High, Normal, Low, and None). When one of the filter buttons is clicked the TODO list should only display TODOs with the selected importance.
+The application should allow users to filter the TODO list based off of importance.
+
+* Your application should have 5 buttons corresponding to each level of importance (Critical, High, Normal, Low, and None).
+
+* When one of the filter buttons is clicked the TODO list should only display TODOs with the selected importance.
 
 ### Character Counter
 
 The application is able to count the number of characters inside of the input field in real time.
 
+* As the user types the character count should increment up.
+* If the user delets characters the character count should decrease.
+
 ### Submit button disabled
 
 The submit button should be disabled when there is not valid content in both input fields and if the input field character count exceeds 120 characters.
+
+
+# Extension
+
+When viewing the TODO list:
+
+  * Each TODO should have an option to set a due date for the specific TODO
+  * Once a TODO's due date is reached the TODO should be marked as completed.
+
+### Due Date
 
 
 # Instructor Evaluation Points
@@ -151,10 +196,3 @@ The output from a code sanitizer (either JSHint or ESLint) shows…
 3 - Five or fewer complaints
 2 - Six to ten complaints
 1 - More than ten complaints
-
-## Design
-
-4 - The application is visually appealing and shows thoughtful and effective use of typography, color, and layout. The application looks professional, with visuals enhancing the user’s experience. The evaluator has very few recommended changes.
-3 - The application has a strong approach to layout and content hierarchy, but typography and color choices are lacking. The evaluator has several recommended changes to improvement.
-2 - Layout, content hierarchy, typography, and color choices show effort, but the result is not effective. The evaluator recommends significant changes.
-1 - Layout, content hierarchy, typography, and color choices actively detract from the user’s ability to use the application.
