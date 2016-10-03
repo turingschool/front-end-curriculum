@@ -235,7 +235,7 @@ Then require said file and call the function in our entry `index.js` file.
 
 *index.js*
 ```
-var newAlert = require('./alert')
+var newAlert = require('./alert');
 newAlert();
 ```
 
