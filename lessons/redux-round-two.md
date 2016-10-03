@@ -23,44 +23,46 @@ FOLLOW UP:
 
 ### Review of Redux Key Concepts
 
-*Actions*: Recall that every component will do at least two things. It will render itself to the DOM after dealing with necessary data in "State", and it will potentially interact with user interaction through "Actions". Every action has a type, and a payload of information that gets passed on to the reducer.
+*Actions*  
+Objects. Recall that every component will do at least two things. It will render itself to the DOM after dealing with necessary data in "State", and it will potentially interact with user interaction through "Actions". Every action has a type, and a payload of information that gets passed on to the reducer.
 
-*Action Creators*: Functions that receive data from a DOM event and return a specific action formatted as a JSON object. Think of Action Creators like component organizers - when an event fires, they gather and organize any information needed to make changes to state and pass it on in a neat little bundle to the reducer.
+*Action Creators*  
+Functions that receive data from a DOM event and return a specific action formatted as a JSON object. Think of Action Creators like component organizers - when an event fires, they gather and organize any information needed to make changes to state and pass it on in a neat little bundle to the reducer.
 
-*Reducers*: Functions. Take state from Redux, and our bundle of information from 'actions' from our Action Creator and return a new state that is updated in our Redux store.
+*Reducers*  
+Functions. Take state from Redux, and our bundle of information from 'actions' from our Action Creator and return a new state that is updated in our Redux store.
 
 Reducer functions get called by the "Container" when there is a user action. When the reducer changes the state, Redux passes that information to any components that need to know about it which triggers the React engine to re render the component.
 
-*Presentational Components*: Synonymous with a dumb or stateless component. Presentational components receive data from container/smart/stateful components and render themselves accordingly.
+*Presentational Components*  
+Synonymous with a dumb or stateless component. Presentational components receive data from container/smart/stateful components and render themselves accordingly.
 
-*Container Components*: Synonymous with smart, or stateful components. These are parent components to Presentational Components that deal with redux, state, actions etc. Containers pass data to the presentational component.
-
-??? ADD MOCKUP HERE
+*Container Components*
+Synonymous with smart, or stateful components. These are parent components to Presentational Components that deal with redux, state, actions etc. Containers pass data to the presentational component.
 
 ### New Redux Concepts
 
-*`connect()`*
+*`connect()`*  
 Connects a React component to the Redux store. Does not modify anything, actually returns a new connected component that wraps around any existing components.  
 
 Takes at least one component, either mapStateToProps or mapDispatchToProps which generally are each defined outside of this function. (Note: There are other arguments that we will not get into here, such as `mergeProps` and `options`)
 
-Example:
+**Example:**  
 
 ```
   connect(mapStateToProps, mapDispatchToProps)
 ```
 
-*`[mapStateToProps(state, [ownProps]): stateProps](Function)`*
+*`[mapStateToProps(state, [ownProps]): stateProps](Function)`*  
 If passed into `connect()`, the component will subscribe to Redux store updates. Any time the store is updated, `mapStateToProps` will be called and will pass along the updated props. If `ownProps` is specified, its value will be what is passed as props to the component.
 
-*`[mapDispatchToProps(dispatch, [ownProps]): dispatchProps](Object or Function)`*
+*`[mapDispatchToProps(dispatch, [ownProps]): dispatchProps](Object or Function)`*  
 By default injects the `dispatch()` method into your component's props, which connects any event listeners to a designated action and reducer. If `ownProps` is specified, its value will be what is passed as props to the component. If an object is passed as an argument, anything inside will be assumed to be a Redux action creator. Functions will be given access to `dispatch()`
 
-
-*`<Provider store>`*
+*`<Provider store>`*  
 Typically, this component is wrapped around your application's root component. This allows the `connect()` method in nested components to have access to the Redux store.
 
-Example:  
+**Example:**:  
 
 ```
 render (
@@ -71,11 +73,11 @@ render (
 )
 ```
 
-*Middleware*
+*Middleware*  
 Middleware is code inserted between the code receiving a request and the code generating a response. In other words (straight from the docs), it **provides a third party extension point between dispatching an action and the moment it reaches the reducer**. There are tons of examples of middleware usage in a React-Redux app, but a big reason is to make asynchronous API calls to hit a database.
 
-Example:
-(hitTwitterAPI is a made-up function that makes a request to some third party API, as an example)
+**Example:**
+(`hitTwitterAPI` is a made-up function that makes a request to some third party API, for instance.)
 
 ```
 let store = createStore(
@@ -84,7 +86,7 @@ let store = createStore(
   )
 ```
 
-*Containers*
+*Containers*  
 "Smart" components that are aware of Redux and connected to the redux store. They wrap around presentational components, handing down any data as props as needed.
 
 ### Organizing Our App
@@ -126,7 +128,8 @@ What components do you foresee being necessary? What actions? How are these goin
 Thinking back to our first look at Redux, we know that each component is going to (potentially) be connected to state, and have behavior called "actions" that pass along information to update that state. Let's break down what our components might need.
 
 **AddTodo:**
-  - State: None. (It's an input field and a button. Nothing about the rendering is changed based on user interaction)
+  - State:  
+    - None. (It's an input field and a button. Nothing about the rendering is changed based on user interaction)
 
   - Actions: "ADD_TODO"
 
@@ -138,6 +141,7 @@ Thinking back to our first look at Redux, we know that each component is going t
     payload: { data: "Go to the Vault", id: 1, completed: false }
   }
 ```
+
 **TodoList:**
   - State:
     - Needs to have a list of todos (`[]`)
@@ -155,9 +159,10 @@ Thinking back to our first look at Redux, we know that each component is going t
 ```
 
 **Filter**
-  - State: Which Filter is currently applied (ie: all, complete, incomplete)
+  - State:
+    - Which Filter is currently applied (ie: all, complete, incomplete)
 
-  - Actions: "SET_FILTER"
+  - Actions: "SET_FILTER"  
 
   Tells other components which filter has been selected, and therefore which todo list items to display. This means we need it to know which filter is active.
 
@@ -172,7 +177,7 @@ Thinking back to our first look at Redux, we know that each component is going t
 
 So based on our thorough planning, we have three actions: "ADD_TODO", "TOGGLE_TODO", and "SET_FILTER". This means we need three Action Creators.
 
-Recall that an Action Creator is a function that takes in data from a DOM event, and returns and action object that is sent to a reducer.  
+Recall that an Action Creator is a function that takes in data from a DOM event, and returns an action object that is sent to a reducer.  
 
 `touch actions/index.js`  
 
@@ -203,15 +208,17 @@ export const setFilter = (filter) => {
 
 ### Add Reducers
 
-Once our actions have been filtered through our Action Creator, we need a couple reducers to handle what that means in terms of our application's state.   
+Once our actions have been filtered through our Action Creator, we need a couple reducers to handle what that means in terms of updating our application's state.   
 
-Let's take a second to think about what we need. We need something to handle our todos, and something to deal with filters.   
+Let's take a second to think about what we need.
+  - We need something to handle our todos
+  - And something to deal with filters.   
 
 If a user wants to add a todo, we need an reducer that takes in the information from the ADD_TODO action and updates our state. Likewise with toggling a TODO as completed.  
 
 For our filters, we need to set a default filter (maybe "show all?"), and then we need to toggle which status we want to display based on if a filter has been selected by a user.  
 
-This means we want two reducers, which we will combine into one in our next step.  
+This means we want two reducers, which we will combine into a `rootReducer` in our next step.  
 
 First, create the two reducers.  
 
@@ -273,11 +280,11 @@ const reducers = combineReducers({
 export default reducers
 ```
 
-### Introducing Containers
+### Build Out Components
 
-For each component we have, we need a container component wrapped around it to handle the messy logic, and a presentational component nested within to render that information.
+For each component we have, we need a container component wrapped around it to handle the messy logic, and a presentational component nested within to render that information. (Think back to the deconstructed mockup with all the crazy arrows.)
 
-### But first, the Presentational Components
+### Presentational Components
 Let's start with building out our presentational components.
 
 #### `<AddTodoForm />`
@@ -575,6 +582,8 @@ render(
 )
 ```
 
+### TADA!
+You just built a React-Redux To-Do list. 
 
 ### Resources
 [Official Redux Docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options)
