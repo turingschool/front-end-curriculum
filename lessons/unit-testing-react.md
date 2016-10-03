@@ -177,9 +177,9 @@ When `starred` is true, it will be included as a class name. But, how do we know
 
 Write the following tests and the implementation to match:
 
-- `it('should not have a className of "starred" if is not starred')`
-- `it('should have a className of "purchased" if is purchased')`
-- `it('should not have a className of "purchased" if is not purchased')`
+- `it('should not have a className of "starred" if it is not starred')`
+- `it('should have a className of "purchased" if it is purchased')`
+- `it('should not have a className of "purchased" it if is not purchased')`
 
 ### Optional Components
 
@@ -192,7 +192,7 @@ To help with this, our grocery application allows the user to specify an optiona
 Let's start with a tests:
 
 ```js
-it('should have a p.Grocery-quantity element if a quantity are passed as a prop', () => {
+it('should have a p.Grocery-quantity element if a quantity is passed as a prop', () => {
   const wrapper = shallow(
     <Grocery name="Bananas" quantity={'17 bunches'} />
   );
@@ -200,7 +200,7 @@ it('should have a p.Grocery-quantity element if a quantity are passed as a prop'
   expect(wrapper.find('.Grocery-quantity').length).toEqual(1);
 });
 
-it('should not have a p.Grocery-quantity element if a quantity are passed as a prop', () => {
+it('should not have a p.Grocery-quantity element if a quantity is passed as a prop', () => {
   const wrapper = shallow(
     <Grocery name="Bananas" quantity={undefined} />
   );
@@ -228,7 +228,7 @@ const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar
 
 So, does that functionality even work? Let's write a test to make sure the element isn't present if there is no quantity. While we're at it, let's do the same for the notes as well.
 
-- `it('should not have a p.Grocery-quantity element if a quantity are not passed as a prop')`
+- `it('should not have a p.Grocery-quantity element if a quantity is not passed as a prop')`
 - `it('should have a p.Grocery-notes element if a notes are passed as a prop')`
 - `it('should not have a p.Grocery-notes element if a notes are not passed as a prop')`
 
