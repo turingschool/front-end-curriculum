@@ -1,3 +1,6 @@
+---
+title: 2DoBox-Pivot
+---
 # 2DoBox Pivot
 
 Do you remember that project Ideabox?
