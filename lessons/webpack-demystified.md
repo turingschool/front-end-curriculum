@@ -81,7 +81,7 @@ module.exports = {
 }
 ```
 
-This chunk of code tells Webpack to start at the `entry` point and create a `main` bundle which we define as `index.js`. This is where we will write our code and require any other `.js` files that we need in our project. It will follow the tree of nested files and concatenate/minify/work some webpack magic and `output` one single manageable file with the name of `index.bundle.js` which is what you'll include in `<script>` tags in your `index.html` file.
+This chunk of code tells Webpack to start at the `entry` point and create a `main` bundle which we define as `index.js`. This is where we will write our code and require any other `.js` files that we need in our project. It will follow the tree of nested files and concatenate/minify/work some webpack magic and `output` one single manageable file with the name of `main.bundle.js` which is what you'll include in `<script>` tags in your `index.html` file.
 
 #### What about the `module: { loaders: ...}` part?
 
