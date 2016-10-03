@@ -15,11 +15,11 @@ Beginning The Pivot
 
 Once you've explored the base project, the team leader will:
 
-- Create a new, blank repository on GitHub named 2DoBox-Pivot
+- Create a new, blank repository on GitHub named `2DoBox-Pivot`
 - Clone the ideaBox project that you'll be working with to your local machine
-- Go into that project directory and git remote rm origin
-- Add the new repository as a remote git remote add origin `git://new_repo_url`
-- Push the code git push origin master
+- Go into that project directory and `git remote rm origin`
+- Add the new repository as a remote `git remote add origin` `git://new_repo_url`
+- Push the code  `git push origin master`
 - Add the other team members as collaborators in Github
 - Once the team leader has done this, the other team member can fork the new repo.
 
