@@ -15,8 +15,7 @@ Here are the basics we're going to go over:
 - macOS "Command Line Tools" -- these are some system dependencies needed for some of the tools we will use.
 - **Homebrew**: This is a "package manager" for installing other developer-related programs. You can think of it as the "App Store for nerds."
 - Git (An application for handling "version control" of our software projects)
-- The Ruby programming language -- version 2.2 in particular -- as well as a Ruby "Version Manager" to allow
-us to install other versions as needed
+- The Ruby programming language -- version 2.2 in particular
 
 ### Xcode & Command Line Tools
 
@@ -165,7 +164,3 @@ Finished in 0.01 seconds
 ```
 - If you get anything else, let an instructor know and we'll come trouble-shoot.
 - If you are successful, cd back to your root directory: ```cd ~```
-
-
-
-
