@@ -137,10 +137,15 @@ it('should have a className of "starred" if is starred', () => {
 });
 ```
 
-This will fail. You could be fancy and try either a ternary or an `&&` condition in a template literal interpolation.
+This will fail. You could be fancy and try either a ternary or an `&&` condition in a template literal interpolation in `Grocery.js`.
 
-- `<article className={`Grocery ${starred ? 'starred' : ''}`}>`
-- `<article className={`Grocery ${starred && 'starred' }`}>`
+```jsx
+<article className={`Grocery ${starred ? 'starred' : ''}`}>
+```
+
+```jsx
+<article className={`Grocery ${starred && 'starred' }`}>
+```
 
 Try both of those out and very that they get the test passing. Then let the uneasy feeling settle in as your consider that as time goes on, you'll have to do this repeatedly—first with `purchased` and then possible more properties as requirements change down the line.
 
