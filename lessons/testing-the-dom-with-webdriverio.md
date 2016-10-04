@@ -1,7 +1,7 @@
 ---
 title: Test Driven Development with WebDriver.io
 length:
-tags: webdriver, node, selenium
+tags: webdriver, webpack, selenium
 ---
 # Test Driven Development with WebDriver.io
 
@@ -20,12 +20,12 @@ Testing allows us to see if our application is working the way we want it to wor
 
 A term you will hear often is "Dream Driven Development". When writing test this should be your mantra and rhythm. When you write your tests you should think  'What do I want to happen". After you write what you're expecting your code should make that test pass.
 
-Now up to this point all of our testing has been unit tests. Meaning that we are never really looking at the dom. We're testing that our functions are taking an input and getting an output. Now unit tests are like the bedrock for our development. It helps guide our development but in terms of checking and seeing if our expectation is actually happening in the dom our unit tests kind of sease.
+Now up to this point all of our testing has been unit tests. Meaning that we are never really looking at the dom. We're testing that our functions are taking an input and getting an output. Now unit tests are like the bedrock for our development. It helps guide our development but in terms of checking and seeing if our expectation is actually happening in the dom our unit tests kind of cease.
 
 Enter integration tests.
 Integration tests are tests to see if everything works well together. It's taking what we do with unit tests and throwing it into the wild.
 
-If we do our unit tests right then we should see that our integration tests flow pretty semlessly.
+If we do our unit tests right then we should see that our integration tests flow pretty seemlessly.
 
 
 ## Let's talk about testing.
@@ -34,7 +34,7 @@ What we are going to be talking about today is how to set up webdriver.io and we
 
 ## Let's go!
 
-Now I could of given you a repo that has this set up already but that won't be very benificial so lets walk through using node and installing that `yung-webdriver`
+Now I could of given you a repo that has this set up already but that won't be very beneficial so lets walk through using node and installing that `yung-webdriver`
 
 First things first lets go ahead and make a directory called testing-webdriverio.
 
@@ -45,13 +45,13 @@ Great now that we've done that lets go ahead and create a new node project withi
 ```
 npm init
 ```
-NOTE: It's going to ask ask us a bunch of questions that we don't necissarily have to answer. So in our case we can fill everything out or just hit enter until we get to the end.
+NOTE: It's going to ask ask us a bunch of questions that we don't necessarily have to answer. What you can do to bypass all of that is to do `npm init -y`.
 
 once that's done we need to install a couple of dependencies into our project.
 
 The first is going to be webdriver. This is going to be the framework that we will use to test the dom. What's great about webdriver is that it not only allow us to use something called ```mocha``` which is a assertion library (basically it allows us to test what we want) and it will also leverage ```selenium``` which is the thing that will literally open up your browser and run the tests for you.
 
-So we're going to have to install ``selenium standalone`` and ``webdriverio`` into our dependencies (when i say dependencies it's essnetially software that we need to make our project/desired functionality work.).
+So we're going to have to install ``selenium standalone`` and ``webdriverio`` into our dependencies (when i say dependencies it's essentially software that we need to make our project/desired functionality work.).
 
 run these commands on your command line.
 
@@ -122,63 +122,7 @@ A: http://localhost:3000 (just press enter)
 
 ```
 
-Once you've walked yourself through that let's go ahead and create a simple server file so that we serve up a single page.
-
-```
-const http = require('http');
-const express = require('express');
-const app = express();
-
-app.use(express.static('public'));
-
-var port = process.env.PORT || 3000;
-
-var server = http.createServer(app);
-server.listen(port, function () {
-  console.log('Listening on port ' + port + '.');
-});
-
-app.get('/', function (req, res){
-  res.sendFile(__dirname + '/views/index.html');
-});
-
-```
-
-Now that we have our server file set up we can go ahead and make a directory called public and inside that folder we can add all of our client side javascript.
-
-```
-mkdir public
-touch public/client.js
-```
-also lets make sure we can serve up our index page as well.
-
-```
-mkdir views
-touch views/index.html
-```
-
-with all of that set up lets go ahead and create our html file and put in our form.
-
-```
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>hello world</title>
-  </head>
-  <body>
-
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-      <script src='/client.js'></script>
-  </body>
-
-</html>
-
-```
-
-*notice that in the scripts portion of the html we have required jquery and the client.js scripts to enable our javascript!
-
-now that we have that loaded we can start looking into actually writing our tests to get the desired functionality.
+Now that we have webdriver configured and ready to go!
 
 lets go ahead and make the folders we need so that our tests can run.
 
@@ -232,7 +176,7 @@ so what's super powerful about all of this is if we look into the ```wdio.conf.j
 the first is ```sync: true,``` This is significant because if this was moved to false we would be writting our tests with promises because javascript is async. This allows us to declare variables and have them accessable to our tests when we need them to be.
 
 also check out ```baseUrl: 'http://localhost:300',```
-the nice part about this is we can declare what our root is. In our case we've defined it to be ```localhost:3000```.
+the nice part about this is we can declare what our root is. In our case we've defined it to be ```localhost:8080```.
 
 Now back to our tests. We've explicitly defined the root to be ```localhost``` so we can tell the browser to go to the root.
 Now that we have our browser in the desired location we can tell the browser to now grab the title of our webpage. If we save that to a variable we can test it and as you can see we are expecting that title should be equal to ```'hello world'```.
@@ -243,14 +187,17 @@ Now as developer our goal is to be as lazy as we possibly can. What's nice is in
 
 ```
   "scripts": {
-    "test": "wdio wdio.conf.js",
-    "start": "node server.js"
-  },
+    "sel": "java -jar selenium-server-standalone-2.53.0.jar",
+    "feature": "wdio wdio.conf.js",  
+  }
 ```
 
 In order for us to run our test we're going to have to have 2 of our servers running. One to launch our local server and the other server to run selenium.
 
-Once we fire up both of those servers we can run ```npm test``` and we should see our tests pass.
+To fire up both servers we're going to need 2 terminal windows.
+In one window you'll need to run `npm start` and in the other `npm run sel`
+
+Once we fire up both of those servers we can run ```npm run feature``` and we should see our tests pass.
 
 Now that we have things working correctly lets go ahead and take a pom and come back to this.
 
@@ -276,17 +223,17 @@ What I want to test is that there are in fact forms on the page that I can add v
 
 
 ```
-describe('attributes on our application',functions(){
+describe('attributes on our application',function(){
   it('has input forms and I can set values in those forms', function(){
     browser.url('/')
     var ideaTitle = browser.element("#idea-title")
-    var ideaDescription = browser.element("#idea-desciription")
+    var ideaDescription = browser.element("#idea-description")
 
     ideaTitle.setValue('great title')
-    ideaDescription.setValue('great description)
+    ideaDescription.setValue('great description')
 
-    assert.equal(ideaTitle.getText(), 'great title')
-    assert.equal(ideaDescription.getText(), 'great description')
+    assert.equal(ideaTitle.getValue(), 'great title')
+    assert.equal(ideaDescription.getValue(), 'great description')
   })
 })
 ```
@@ -376,7 +323,7 @@ function formatIdeas(){
 
 pro tip. When you're driving your development with tests it is super easy to want to overthink our development. I would say that you want to make your current test pass first.
 
-We would call this our first itteration. We know that typically we would store what we have in local storage. Right now lets get base functionality in terms of the idea being added to the dom.
+We would call this our first iteration. We know that typically we would store what we have in local storage. Right now lets get base functionality in terms of the idea being added to the dom.
 
 this is what I came up with.
 
@@ -426,7 +373,7 @@ So lets go ahead and write that test.
 
 ```
 it('should clear the input fields', function(){
-	browser('/')
+	   browser.url('/')
     var ideaTitle = browser.element("#idea-title")
     var ideaDescription = browser.element("#idea-description")
 
@@ -438,8 +385,7 @@ it('should clear the input fields', function(){
     assert.equal(ideaTitle.getValue(), "")
     assert.equal(ideaDescription.getValue(), "")
 
-})
-
+  })
 ```
 
 sweet so we are now about to enter the red when we run this test and we should see it blow up.
@@ -535,25 +481,23 @@ I'll give you about 15 minutes to do that and we will go from there.
 This is what I got.
 
 ```
-  it('allows me to submit inputs and have ideas render onto the page', function(){
-    browser.url('/');
-    var formTitleInput  = browser.element('#idea-title');
-    formTitleInput.setValue('greatTitle');
+it('allows me to delete a single idea from the page', function(){
+  browser.url('/');
+  var formTitleInput  = browser.element('#idea-title');
+  formTitleInput.setValue('greatTitle');
 
-    var formDescriptionInput = browser.element('#idea-description');
-    formDescriptionInput.setValue('great description');
+  var formDescriptionInput = browser.element('#idea-description');
+  formDescriptionInput.setValue('great description');
 
-    assert.equal(formTitleInput.getValue(), 'greatTitle');
-    assert.equal(formDescriptionInput.getValue(), 'great description');
+  assert.equal(formTitleInput.getValue(), 'greatTitle');
+  assert.equal(formDescriptionInput.getValue(), 'great description');
 
-    browser.click('#submit-button');
+  browser.click('#submit-button');
 
-    browser.click('.delete-idea')
+  browser.click('.delete-idea')
 
-    var allIdeas = browser.getText("li");
-    assert.equal(allIdeas.length, 0 ); //aserts that two ideas have been appended to the page
-    assert.equal(allIdeas.replace(/\n/g, ", "), '')
-```
+  assert.equal(browser.isExisting('li'), false );
+})
 
 ```
 
@@ -597,8 +541,4 @@ Now that we have a delete button lets talk about some of the code we just wrote 
 
 closures are an important because what they do is essentially save a variable in memory. As we learned in the past memory is the best place to store something.
 
-What a closure does is it essentially takes what we had set as variables and because they are all stored in memory they are autonomous units. So when I remove an idea from the dom it's able to diffrentiate itself.
-
-
-### Your turn
-you have the rest of the time to create tests with the given user stories and ge the test to pass.
+What a closure does is it essentially takes what we had set as variables and because they are all stored in memory they are autonomous units. So when I remove an idea from the dom it's able to differentiate itself.

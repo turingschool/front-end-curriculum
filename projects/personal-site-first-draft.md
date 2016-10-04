@@ -1,10 +1,10 @@
 ---
-title: Portfolio (First Draft)
+title: Personal Site (First Draft)
 ---
 
 ## Project Requirements
 
-A portfolio site represents you, your personal brand, and is a fantastic opportunity to make a great first impression. For this project, we'll be focusing on how you structure both your content and your HTML & CSS.
+A personal site represents you, your personal brand, and is a fantastic opportunity to make a great first impression. For this project, we'll be focusing on how you structure both your content and your HTML & CSS.
 
 Your site must be:
 
