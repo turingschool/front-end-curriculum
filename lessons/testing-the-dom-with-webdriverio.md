@@ -32,6 +32,9 @@ If we do our unit tests right then we should see that our integration tests flow
 
 What we are going to be talking about today is how to set up webdriver.io and we'll drive our development together inside of node. Once we set up our testing environment we will go straight into writing some tests together to get an idea to post onto the DOM, and also deleting a specific idea.
 
+
+In order for us to test the DOM we have to have two of our servers running. We need our development server (web-pack-dev-server) and our selenium-server running. Selenium will act like a human and essentially walk through the functionality of our application for us. 
+
 ## Let's go!
 
 Now I could of given you a repo that has this set up already but that won't be very beneficial so lets walk through using node and installing that `yung-webdriver`
@@ -216,7 +219,7 @@ Let's go ahead and dream up some of that code in our tests.
 
 ### Writing our first test.
 
-Now somethings we should keep in mind about testing. Our tests should cascade in complexity. We should see very small tests at first and then we should have the errors in our tests guide us into creating our application. Obviously when it comes to real world applications it doesnt always work out that way mainly because you're dealing with time. I want you to know from the jump heavily based on your test. Why? Because your tests will communicate to me how you understood the problem. Not only are tests super great for your source of truth but as you've seen tests allow us to refactor. Without tests it will be really difficult to have something to check if your implementation is working correctly.
+Now somethings we should keep in mind about testing. Our tests should cascade in complexity. We should see very small tests at first and then we should have the errors in our tests guide us into creating our application. Obviously when it comes to real world applications it doesn't always work out that way mainly because you're dealing with time. I want you to know from the jump heavily based on your test. Why? Because your tests will communicate to me how you understood the problem. Not only are tests super great for your source of truth but as you've seen tests allow us to refactor. Without tests it will be really difficult to have something to check if your implementation is working correctly.
 
 Now we lets write some tests to drive our development.
 What I want to test is that there are in fact forms on the page that I can add values to and grab the values from.
@@ -263,9 +266,9 @@ awesome.
 
 Now let's ramp up the complexity of our tests.
 
-I'm going to give you a user story. Based on that user story lets write tests to accomidate each expectation.
+I'm going to give you a user story. Based on that user story lets write tests to accommodate each expectation.
 
-Some of you might be wondering what a user story is. A user story is expectations / guidlines that a user has for your application. In the wild you will typically recieves these as your spec. Typically your user story is actually your integration tests. The only difference is that it's meant for a human to read and not a computer. So lets take a normal user story and lets turn that into a test.
+Some of you might be wondering what a user story is. A user story is expectations / guidelines that a user has for your application. In the wild you will typically recieves these as your spec. Typically your user story is actually your integration tests. The only difference is that it's meant for a human to read and not a computer. So lets take a normal user story and lets turn that into a test.
 
 
 ```
@@ -302,7 +305,7 @@ our test should look a little like this.
 
 ```
 
-because we have no javascript written this test is going to fail. When we click the button nothing will infact be added to our document. So let's look at what it looks like to programm some of this stuff.
+because we have no javascript written this test is going to fail. When we click the button nothing will in fact be added to our document. So let's look at what it looks like to program some of this stuff.
 
 Our goal now is to get the idea title and idea description onto the dom.
 
@@ -498,6 +501,45 @@ it('allows me to delete a single idea from the page', function(){
 
   assert.equal(browser.isExisting('li'), false );
 })
+
+it('allows me to submit multiple ideas and delete one idea', function(){
+
+ var formTitleInput       = browser.element('#idea-title');
+ formTitleInput.setValue('greatTitle');
+ var formDescriptionInput = browser.element('#idea-description');
+  formDescriptionInput.setValue('great description');
+
+
+ assert.equal(formTitleInput.getValue(), 'greatTitle');
+ assert.equal(formDescriptionInput.getValue(), 'great description');
+
+ browser.click('#submit-button');
+
+ formTitleInput.setValue('another great Title');
+ formDescriptionInput.setValue('another great description');
+
+ assert.equal(formTitleInput.getValue(), 'another great Title');
+ assert.equal(formDescriptionInput.getValue(), 'another great description');
+
+ browser.click('#submit-button');
+
+ formTitleInput.setValue('suh');
+ formDescriptionInput.setValue('dude');
+
+ browser.click('#submit-button');
+
+ var allIdeas = browser.elements("li").getText()
+
+ assert.equal(allIdeas.length, 3 )
+
+ browser.click('.delete-idea')
+
+ var allIdeas = browser.elements("li").getText()
+
+ assert.equal(allIdeas.length, 2)
+
+})
+```
 
 ```
 
