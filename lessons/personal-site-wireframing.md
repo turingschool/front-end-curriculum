@@ -28,19 +28,19 @@ Wireframes allow us to quickly get ideas out of our heads and in front of peers 
 
 There are different "phases" of wireframes: user flow, low fidelity, mid fidelity, and high fidelity.
 
-**User Flow Wireframes**
+##### User Flow Wireframes
 
 This is a simple visualization of how a user moves through your site. They can be quick, loose sketches or tighter digital renderings, but the idea is to think through and lock in the ways a user navigates to all the different areas and pages of your site.
 
-**Low Fidelity Wireframes**
+##### Low Fidelity Wireframes
 
 This is where you get all your ideas onto a page. Pen and paper is ideal for low fi wireframes, because it lets you move quickly without worrying about making things perfect. You'll focus 100% on the structure of your content, so don't get bogged down with details like fonts and colors. Feeling like you're to focused on the little things? Try using a thick marker, like a Sharpie. You can't get too detailed when your writing tool is beefy!
 
-**Mid Fidelity Wireframes**
+##### Mid Fidelity Wireframes
 
 We've gotten through our initial brain-dump of ideas with our low fi wireframes, and we have a plan for how we want to structure our content. Our mid fidelity wireframes are where we refine these ideas visually through hierarchy, grids, and image placeholders. It's important that these are still somewhat vague -- we don't want to start pulling in specific images, colors, or fonts yet. We still want to be able to move quickly, so the trick here is to balance tightening up your ideas and layout without getting overly specific and detailed.
 
-**High Fidelity Wireframes**
+##### High Fidelity Wireframes
 
 This is the final, most detailed phase of wireframing. Still in grayscale, with no real images, this phase is where you finalize copy, content, and page flow. At this point, the ideas and structure expressed in your wireframes should be solid enough to be moved into a more formal design phase very easily. Ultimately, wireframes are not design comps. They are not the place we dig into nuanced design choices, rather, they are where we formalize ideas, lock in content, and clarify how users use our site.
 
@@ -49,7 +49,7 @@ Keep in mind that we don't always move through these phases in a structured, for
 
 #### Let's Try It Out Together
 
-Let's take a look at the [personal site project spec](t p). Here we see the basic content you'll need to work with in your personal site. Nothing too surprising here, but it's good to understand what you need to be working with before you start sketching. Here's what we need to include:
+Let's take a look at the [personal site project spec](http://frontend.turing.io/projects/personal-site-first-draft.html). Here we see the basic content you'll need to work with in your personal site. Nothing too surprising here, but it's good to understand what you need to be working with before you start sketching. Here's what we need to include:
 
 - primary navigation
 - footer
