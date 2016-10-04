@@ -15,7 +15,7 @@ By the end of this lesson, you will:
 
 ### Why Wireframe?
 
-Before starting any new project, it's important to know why you are building it and what the expectations are for the finished product. Taking the time to sketch out your ideas is useful for many reasons, and it allows you to refine your assumptions about your product and get input from others to confirm that your approach makes sense. Iterating on ideas quickly is an important component of Agile development practices and it can save you precious time later on by identifying potential issues or misconceptions early on when the cost of making a change is significantly lower. It also helps get you in the habit of speaking clearly about your ideas and work. Getting used to working this way sooner than later is going to help you in the long run.
+Before starting to write code for any new project, it's important to know why you are building it and what the expectations are for the finished product. Taking the time to sketch out your ideas is useful for many reasons, and it allows you to refine your assumptions about your product and get input from others to confirm that your approach makes sense. Iterating on ideas quickly is an important component of Agile development practices and it can save you precious time later on by identifying potential issues or misconceptions early on when the cost of making a change is significantly lower. It also helps get you in the habit of speaking clearly about your ideas and work. Getting used to working this way sooner than later is going to help you in the long run.
 
 
 #### What are Wireframes?
