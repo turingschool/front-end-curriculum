@@ -3,13 +3,15 @@ title: Unit Testing Redux
 tags: React, Redux, Testing
 ---
 
-### Unit Testing Redux
+### Unit Testing
 
 Unit tests, as always, aim to modularly test individual pieces of code as thoroughly as possible. In React apps, these targeted chunks of code include classes, functions, components, helper files...etc. Things that you refactor and split up. Unit testing makes your life as a developer easier and makes refactoring possible.  
 
-The goal of unit testing is for each function, after giving your test the expected arguments, do you get back what you expected?
+After giving your function the expected arguments, do you get back what you expected?
 
-An interesting comment I read in [this blog post](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking) referred to unit testing as "tests written for developers", whereas integration (or acceptance) tests are written for those who can't code.  
+An interesting comment I read in [this blog post](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking) referred to unit testing as "tests written for developers", whereas integration (or acceptance) tests are written for users.  
+
+### Testing in Redux  
 
 In order to test Redux, there are a few things you need to mentally organize. Tests in Redux include Action tests, Reducer tests, Component tests, and any other middleware or additional libraries you may have included (like `ImmutableJS`).
 
@@ -31,16 +33,16 @@ Take for example our `addTodo()` action.
 export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
-    id: Date.now(),
-    text,
-    completed: false
+    text
   }
 }
 ```
 
-Given a string as text, (let's say "Find A Pumpkin"), we expect it to return an object with a key of `'ADD_TODO'` and data containing the ID, the text "Find A Pumpkin", and a default value of "completed: false".
+Given a string as text, (let's say "Find A Pumpkin"), we expect it to return an object with a key of `'ADD_TODO'` and the text "Find A Pumpkin".
 
-### Setup Testing with Jest
+### Setup Testing with Jest  
+
+As you learned with yesterdays Testing React lesson, Jest is a great testing framework for both unit tests AND integration tests! It's like Christmas!  
 
 `npm i -D jest`  
 `npm i -D babel-jest`  
@@ -83,6 +85,7 @@ describe('actions', () => {
 })
 ```
 Run `npm test` to run your suite once, or `npm run test:watch` to test on any file changes.  
+
 Assuming you have a passing test, let's add some substance.
 
 ```
@@ -106,7 +109,7 @@ Recall that Reducers connect actions to state, returning an updated state based 
 
 In other words, a reducer receives an action and decides how to change the state based on the behavior defined in the action. We want to test that behavior.
 
-How about we look at our todos reducer.
+Take a look at our todos reducer.
 
 ```
 //reducers/todos.js
@@ -114,7 +117,7 @@ How about we look at our todos reducer.
 const todos = (state=[], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, {id: action.id, text: action.text, completed: false}]
+      return [...state, {id: Date.now(), text: action.text, completed: false}]
     case 'TOGGLE_TODO':
       return state.map(todo => {
         if (todo.id !== action.id) {
