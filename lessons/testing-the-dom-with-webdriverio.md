@@ -33,24 +33,13 @@ If we do our unit tests right then we should see that our integration tests flow
 What we are going to be talking about today is how to set up webdriver.io and we'll drive our development together inside of node. Once we set up our testing environment we will go straight into writing some tests together to get an idea to post onto the DOM, and also deleting a specific idea.
 
 
-In order for us to test the DOM we have to have two of our servers running. We need our development server (web-pack-dev-server) and our selenium-server running. Selenium will act like a human and essentially walk through the functionality of our application for us. 
+In order for us to test the DOM we have to have two of our servers running. We need our development server (web-pack-dev-server) and our selenium-server running. Selenium will act like a human and essentially walk through the functionality of our application for us.
 
 ## Let's go!
 
-Now I could of given you a repo that has this set up already but that won't be very beneficial so lets walk through using node and installing that `yung-webdriver`
+Once you've cloned the repository make sure you `npm install` all our dependencies.
 
-First things first lets go ahead and make a directory called testing-webdriverio.
-
-```
-mkdir testing-webdriverio && cd testing-webdriverio
-```
-Great now that we've done that lets go ahead and create a new node project within our directory.
-```
-npm init
-```
-NOTE: It's going to ask ask us a bunch of questions that we don't necessarily have to answer. What you can do to bypass all of that is to do `npm init -y`.
-
-once that's done we need to install a couple of dependencies into our project.
+once that's done we need to install a couple more dependencies into our project ( I wanted to give you the practice).
 
 The first is going to be webdriver. This is going to be the framework that we will use to test the dom. What's great about webdriver is that it not only allow us to use something called ```mocha``` which is a assertion library (basically it allows us to test what we want) and it will also leverage ```selenium``` which is the thing that will literally open up your browser and run the tests for you.
 
@@ -156,9 +145,9 @@ describe('welcome page', function(){
 });
 ```
 
-so now that we have the structure for our tests lets talk about the compents and pieces we need to make this work.
+so now that we have the structure for our tests lets talk about the components and pieces we need to make this work.
 
-We need to someone launch the browser to grab the title of our website. Once we have the browser to go to it's desired location we'll tell it to grab the title of the website.
+We need something launch the browser to grab the title of our website. Once we have the browser to go to it's desired location we'll tell it to grab the title of the website.
 
 luckly for us ```webdriver``` gives us access to the browser and we can leverage that to do what we want.
 
@@ -178,7 +167,7 @@ so what's super powerful about all of this is if we look into the ```wdio.conf.j
 
 the first is ```sync: true,``` This is significant because if this was moved to false we would be writting our tests with promises because javascript is async. This allows us to declare variables and have them accessable to our tests when we need them to be.
 
-also check out ```baseUrl: 'http://localhost:300',```
+also check out ```baseUrl: 'http://localhost:8080',```
 the nice part about this is we can declare what our root is. In our case we've defined it to be ```localhost:8080```.
 
 Now back to our tests. We've explicitly defined the root to be ```localhost``` so we can tell the browser to go to the root.
@@ -268,7 +257,7 @@ Now let's ramp up the complexity of our tests.
 
 I'm going to give you a user story. Based on that user story lets write tests to accommodate each expectation.
 
-Some of you might be wondering what a user story is. A user story is expectations / guidelines that a user has for your application. In the wild you will typically recieves these as your spec. Typically your user story is actually your integration tests. The only difference is that it's meant for a human to read and not a computer. So lets take a normal user story and lets turn that into a test.
+Some of you might be wondering what a user story is. A user story is expectations / guidelines that a user has for your application. In the wild you will typically receives these as your spec. Typically your user story is actually your integration tests. The only difference is that it's meant for a human to read and not a computer. So lets take a normal user story and lets turn that into a test.
 
 
 ```
@@ -318,8 +307,8 @@ $(document).ready(function(){
 });
 
 function formatIdeas(){
- // have a variable set to the return value of a function that formats idea formated for us
- // have a variable set to the return value of a function that returns a seperate delete button
+ // have a variable set to the return value of a function that formats idea formatted for us
+ // have a variable set to the return value of a function that returns a separate delete button
 }
 
 ```
