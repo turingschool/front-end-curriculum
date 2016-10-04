@@ -165,7 +165,7 @@ describe('welcome page', function(){
 
 so what's super powerful about all of this is if we look into the ```wdio.conf.js``` it gives us access to configuring our runner file. Now if we open that up there are a couple of pieces I would love for us to take a look at.
 
-the first is ```sync: true,``` This is significant because if this was moved to false we would be writting our tests with promises because javascript is async. This allows us to declare variables and have them accessable to our tests when we need them to be.
+the first is ```sync: true,``` This is significant because if this was moved to false we would be writing our tests with promises because javascript is async. This allows us to declare variables and have them accessible to our tests when we need them to be.
 
 also check out ```baseUrl: 'http://localhost:8080',```
 the nice part about this is we can declare what our root is. In our case we've defined it to be ```localhost:8080```.
@@ -300,6 +300,12 @@ Our goal now is to get the idea title and idea description onto the dom.
 
 so lets write some code to accomplish some of that.
 
+so before we do that lets touch a file called `idea-box.js` inside of our lib directory.
+
+Once we do that lets go ahead and require that file inside of our index.js
+
+`require('./idea-box.js')`
+
 ```
 
 $(document).ready(function(){
@@ -419,11 +425,11 @@ function formatIdeas(){
 
 we run the test and we are green!
 Now as you can see we are method is pretty chunky.
-Not only is it chuncky this is going to be really difficult to debugg as our application begins to grow.
+Not only is it chuncky this is going to be really difficult to debug as our application begins to grow.
 
 The name of our function is formatIdeas() but it's doing more than just formatting the ideas. All of the logic is nested in this function. Ideally it would be nice to extract this logic into other functions.
 
-Ideally if we can take the logic out of this stack we can deligate the responsibility to other pieces and parts.
+Ideally if we can take the logic out of this stack we can delegate the responsibility to other pieces and parts.
 
 When a function has too many responsibilities the code becomes brittle. The image I want you to think of is a bunch of tangled wires.
 
