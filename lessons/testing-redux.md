@@ -3,14 +3,6 @@ title: Unit Testing Redux
 tags: React, Redux, Testing
 ---
 
-### FOLLOW UP
-Webpack configuration
-Testing components
-Rewire??
-Redux Thunk
-Redux Mock Store
-Fetch - isomorphic-fetch
-
 ### Unit Testing Redux
 
 Unit tests, as always, aim to modularly test individual pieces of code as thoroughly as possible. In React apps, these targeted chunks of code include classes, functions, components, helper files...etc. Things that you refactor and split up. Unit testing makes your life as a developer easier and makes refactoring possible.  
@@ -153,25 +145,105 @@ describe('todos reducer', () => {
 
 YOUR TURN! Test the todos reducer for what we expect to see in State if we Add a Todo.
 
-### Component Tests ????????????
+### Component Tests
 As we've seen, it's important to separate our React components into "Presentational" vs "Container".
 
-Dumb component testing generally involves mocking and stubbing, and can be thrown into the "Testing React" bucket. For this lesson, we will focus mostly on Smart components that involve the redux `connect` method.
+Presentational component testing generally involves minor mocking and stubbing, and can be thrown into the "Testing React" bucket which you are all familiar with.
 
-Connect allows components to receive props directly from the redux `store`, rather than having to pass them through parent components. Said props are accessed using the method `mapStateToProps`. Connect is also a beast to try to test, and even [Official Redux Testing Documentation](http://redux.js.org/docs/recipes/WritingTests.html) suggests somewhat ignoring connect and testing the component itself.  
+Container components, however, are hooked up to Redux and use the `connect` method. Connect allows components to receive props directly from the redux `store`, rather than having to pass them through parent components. Said props are accessed using the method `mapStateToProps`. Connect is a beast to try to test, and even the [Official Redux Testing Documentation](http://redux.js.org/docs/recipes/WritingTests.html) suggests somewhat ignoring connect and testing the component itself.  
 
-Lets take our LikesCounter component.  
-???????
+But, because we're unique snowflakes, let's give it a go.  
+
+First, if you don't have it already, make sure Enzyme and it's buddy are installed.  
+`npm i -D enzyme react-addons-test-utils`  
+
+Let's look at the AddTodoForm Component, and AddTodo Container.
+
+Normally, to import a component into a test you would simply include the line `import AddTodoForm from './path/AddTodoForm'` or something along those lines.  With Redux, our component is wrapped in a container component that passes State to it using the `connect()` method. This means that the component that is rendered is actually a `<Connect />` component, and not the `<AddTodoForm />` component itself.
+
+Sometimes it's important to test the interaction with Redux, in which case you would wrap it in a <Provider> component and create a store designed specifically for a particular unit test. In order to simply test the rendering of the component itself, you must export the undecorated (without Connect) component in the container file.
+
+This means that when importing said component in your test, you need to grab it with curly braces from the modules being exported from the container file.
+
+```
+// test/components/AddTodoForm.test.js
+
+import React from 'react'
+import { shallow } from 'enzyme'
+import { AddTodoForm } from '../../containers/AddTodo'
+
+function setup() {
+  const props = {
+    onSubmit: jest.fn()
+  }
+
+  const wrapper = shallow(<AddTodoForm {...props} /> )
+
+  return {
+    props,
+    wrapper
+  }
+}
+```
+
+Then let's confirm that it renders a form (we'll keep this test simple for now, although in real life you would need a beefier test).
+
+```
+...
+
+describe('components', () => {
+  describe('AddTodoForm', () => {
+
+    it('should render a form', () => {
+      const { wrapper } = setup()
+
+      expect(wrapper.find('form').length).toEqual(1)
+      // should test other elements here
+    })
+
+  })
+})
+
+```
+
+And finally check that when the Add Todo button is clicked that it calls the function we expect. We've set it up to mock a function call with `jest.fn`.
+
+```
+ ...
+
+describe('components', () => {
+  describe('AddTodoForm', () => {
+
+    it('should render a form', () => {
+      const { wrapper } = setup()
+
+      expect(wrapper.find('form').length).toEqual(1)
+    })
+
+    it('should call addTodo when Add Todo button is clicked', () => {
+      const { wrapper, props } = setup()
+
+      wrapper.find('button').simulate('click')
+
+      expect(props.onSubmit).toBeCalled()
+
+      // Or to verify how many times a function has been called
+      expect(props.onSubmit.mock.calls.length).toBe(1)
+    })
+
+  })
+})
+
+```
 
 ### Middleware Testing  
 
-For async action creators that hit a third party middleware (such as [redux thunk](https://github.com/gaearon/redux-thunk)), you'll need to completely Mock out the redux store. There are tools for this like [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store), or [nock](https://github.com/pgte/nock) to replicate HTTP requests.
+For async action creators that hit a third party middleware (such as [redux thunk](https://github.com/gaearon/redux-thunk)), you'll need to completely Mock out the redux store (hence the difficulty). There are tools for this like [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store), or [nock](https://github.com/pgte/nock) to replicate HTTP requests.  
 
 
 ### Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)
 [Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)
-
 
 ### Answers
 
