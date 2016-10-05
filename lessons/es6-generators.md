@@ -13,8 +13,8 @@ Let's start with an example of familiar JS syntax.
 
 ```
 function cheer() {
-	console.log('skol')
-  console.log('vikings')
+	console.log('go Pack')
+  console.log('go!')
 }
 
 cheer()
@@ -23,8 +23,8 @@ cheer()
 What do you expect the output to be?
 
 ```
-=> skol
-=> vikings
+=> go Pack
+=> go!
 ```
 
 This seems legit.  
@@ -37,9 +37,9 @@ Wouldn't it be awesome if I could execute one line, do something else, then exec
 
 ```
 function cheer() {
-  console.log('skol')
+  console.log('go Pack')
   doSomethingImportant()
-  console.log('vikings')
+  console.log('go!')
 }
 
 function doSomethingImportant(){
@@ -52,9 +52,9 @@ cheer()
 We get:  
 
 ```
-=> skol
+=>
 => getting a snack
-=> vikings
+=> go!
 ```
 
 Great! Everything happened a little fast, but it did what I wanted it to do.  
@@ -63,9 +63,9 @@ What about this:
 
 ```
 function cheer() {
-  console.log('skol')
+  console.log('go Pack')
   doSomethingImportant()
-  console.log('vikings')
+  console.log('go!')
 }
 
 function doSomethingImportant(){
@@ -75,11 +75,11 @@ function doSomethingImportant(){
 cheer()
 ```
 
-What do you expect to happen here? In a perfect world, I want to see `skol`, then I want to see `taking my time`, then `vikings`. Instead, the first line doesn't wait for the second line to execute so we get
+What do you expect to happen here? In a perfect world, I want to see `go Pack`, then I want to see `taking my time`, then `go!`. Instead, the first line doesn't wait for the second line to execute so we get
 
 ```
-=> skol
-=> vikings
+=> go Pack
+=> go!
 => getting a snack
 ```
 
