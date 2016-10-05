@@ -4,9 +4,12 @@
   "description": "Open source curriculum for Turing School's front-end engineering program.",
   "main": "index.html",
   "dependencies": {
-    "eslint": "^2.13.1"
+    "eslint": "^2.13.1",
+    "react-redux": "^4.4.5",
+    "redux": "^3.6.0"
   },
   "devDependencies": {
+    "redux-devtools": "^3.3.1",
     "webdriverio": "^4.2.7"
   },
   "scripts": {
