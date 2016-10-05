@@ -6,7 +6,7 @@ tags: version control, git, github
 
 ### What is Git?
 
-Git is a version control system, which means it allows us to record changes we make to our files over time -- it lets us *control the versions* of our files. With Git we can reference specific versions of our work as we need to. This means we can access a specific change we made days ago, or we can look back and see what changes have been made over time. It allows us to keep every version of our files, and gives us the ability to revert back to past versions of files, revert an entire project back to a previous state, compare changes over time, see who made specific changes, and all manner of useful things that can help us troubleshoot if (or when) we screw things up and or lose files. It makes it much, much easier to recover when things go wrong.
+Git is a version control system that allows us to record changes we make to our files over time -- it lets us *control the versions* of our files. With Git we can reference specific versions of our work as we need to. This means we can access a specific change we made days ago, or we can look back and see what changes others have made throughout the life of the project. It keeps track of every version of our files and allows us to revert back to a specific change, roll an entire project back to a previous state, compare changes over time or see who made specific changes. Git is an incredibly powerful tool that can make troubleshooting much easier when we screw things up or lose files. It makes it much, much easier to recover when things go wrong.
 
 A typical workflow with Git includes:
 
@@ -21,7 +21,7 @@ A typical workflow with Git includes:
 
 ### Git != GitHub
 
-Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo from the remote origin repo on GitHub, and then as work is done, the code is committed and pushed from the developer's local repo and added to the remote origin repo on GitHub. The work of other developer's is pulled down and merged into
+Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo from the remote origin repo on GitHub, and then, as work is done, the code is committed and pushed from the developer's local repo and added to the remote origin repo on GitHub.
 
 With GitHub we can:
 
@@ -74,7 +74,7 @@ Now you should have the underlying tools we need to move forward.
 to install hundreds of open source projects and compile them from source
 for maximum performance on your machine.
 
-Open the Terminal then run the homebrew installation script:
+Open the Terminal and run the homebrew installation script:
 
 ```shell
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -105,18 +105,14 @@ Now run `brew doctor` again and the warning should be gone.
 
 ##### Aside: `PATH`
 
-Your `PATH` is a system configuration property which tells your computer which places to look for underlying programs
-when you want to run a command. By adding this directory to our `PATH`, we're telling the system how to find the various applications we will
-install using Homebrew
+Your `PATH` is a system configuration property which tells your computer where to look for underlying programs when you want to run a command. By adding this directory to our `PATH`, we're telling the system how to find the various applications we will install using Homebrew
 
 ##### Aside: `~/.bash_profile`
 
 When we use our terminal, we're actually using a program called a "Shell" to interact
 with the underlying Operating System. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
 
-The file `~/.bash_profile` contains settings and commands to help us configure the shell,
-so when we have a bit of configuration code such as setting our `PATH`, it often goes
-in our `~/.bash_profile`.
+The file `~/.bash_profile` contains settings and commands to help us configure the shell, so when we have a bit of configuration code such as setting our `PATH`, it often goes in our `~/.bash_profile`.
 
 ### Git
 

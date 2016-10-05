@@ -32,22 +32,14 @@ If we do our unit tests right then we should see that our integration tests flow
 
 What we are going to be talking about today is how to set up webdriver.io and we'll drive our development together inside of node. Once we set up our testing environment we will go straight into writing some tests together to get an idea to post onto the DOM, and also deleting a specific idea.
 
+
+In order for us to test the DOM we have to have two of our servers running. We need our development server (web-pack-dev-server) and our selenium-server running. Selenium will act like a human and essentially walk through the functionality of our application for us.
+
 ## Let's go!
 
-Now I could of given you a repo that has this set up already but that won't be very beneficial so lets walk through using node and installing that `yung-webdriver`
+Once you've cloned the repository make sure you `npm install` all our dependencies.
 
-First things first lets go ahead and make a directory called testing-webdriverio.
-
-```
-mkdir testing-webdriverio && cd testing-webdriverio
-```
-Great now that we've done that lets go ahead and create a new node project within our directory.
-```
-npm init
-```
-NOTE: It's going to ask ask us a bunch of questions that we don't necessarily have to answer. What you can do to bypass all of that is to do `npm init -y`.
-
-once that's done we need to install a couple of dependencies into our project.
+once that's done we need to install a couple more dependencies into our project ( I wanted to give you the practice).
 
 The first is going to be webdriver. This is going to be the framework that we will use to test the dom. What's great about webdriver is that it not only allow us to use something called ```mocha``` which is a assertion library (basically it allows us to test what we want) and it will also leverage ```selenium``` which is the thing that will literally open up your browser and run the tests for you.
 
@@ -153,9 +145,9 @@ describe('welcome page', function(){
 });
 ```
 
-so now that we have the structure for our tests lets talk about the compents and pieces we need to make this work.
+so now that we have the structure for our tests lets talk about the components and pieces we need to make this work.
 
-We need to someone launch the browser to grab the title of our website. Once we have the browser to go to it's desired location we'll tell it to grab the title of the website.
+We need something launch the browser to grab the title of our website. Once we have the browser to go to it's desired location we'll tell it to grab the title of the website.
 
 luckly for us ```webdriver``` gives us access to the browser and we can leverage that to do what we want.
 
@@ -173,9 +165,9 @@ describe('welcome page', function(){
 
 so what's super powerful about all of this is if we look into the ```wdio.conf.js``` it gives us access to configuring our runner file. Now if we open that up there are a couple of pieces I would love for us to take a look at.
 
-the first is ```sync: true,``` This is significant because if this was moved to false we would be writting our tests with promises because javascript is async. This allows us to declare variables and have them accessable to our tests when we need them to be.
+the first is ```sync: true,``` This is significant because if this was moved to false we would be writing our tests with promises because javascript is async. This allows us to declare variables and have them accessible to our tests when we need them to be.
 
-also check out ```baseUrl: 'http://localhost:300',```
+also check out ```baseUrl: 'http://localhost:8080',```
 the nice part about this is we can declare what our root is. In our case we've defined it to be ```localhost:8080```.
 
 Now back to our tests. We've explicitly defined the root to be ```localhost``` so we can tell the browser to go to the root.
@@ -216,7 +208,7 @@ Let's go ahead and dream up some of that code in our tests.
 
 ### Writing our first test.
 
-Now somethings we should keep in mind about testing. Our tests should cascade in complexity. We should see very small tests at first and then we should have the errors in our tests guide us into creating our application. Obviously when it comes to real world applications it doesnt always work out that way mainly because you're dealing with time. I want you to know from the jump heavily based on your test. Why? Because your tests will communicate to me how you understood the problem. Not only are tests super great for your source of truth but as you've seen tests allow us to refactor. Without tests it will be really difficult to have something to check if your implementation is working correctly.
+Now somethings we should keep in mind about testing. Our tests should cascade in complexity. We should see very small tests at first and then we should have the errors in our tests guide us into creating our application. Obviously when it comes to real world applications it doesn't always work out that way mainly because you're dealing with time. I want you to know from the jump heavily based on your test. Why? Because your tests will communicate to me how you understood the problem. Not only are tests super great for your source of truth but as you've seen tests allow us to refactor. Without tests it will be really difficult to have something to check if your implementation is working correctly.
 
 Now we lets write some tests to drive our development.
 What I want to test is that there are in fact forms on the page that I can add values to and grab the values from.
@@ -263,9 +255,9 @@ awesome.
 
 Now let's ramp up the complexity of our tests.
 
-I'm going to give you a user story. Based on that user story lets write tests to accomidate each expectation.
+I'm going to give you a user story. Based on that user story lets write tests to accommodate each expectation.
 
-Some of you might be wondering what a user story is. A user story is expectations / guidlines that a user has for your application. In the wild you will typically recieves these as your spec. Typically your user story is actually your integration tests. The only difference is that it's meant for a human to read and not a computer. So lets take a normal user story and lets turn that into a test.
+Some of you might be wondering what a user story is. A user story is expectations / guidelines that a user has for your application. In the wild you will typically receives these as your spec. Typically your user story is actually your integration tests. The only difference is that it's meant for a human to read and not a computer. So lets take a normal user story and lets turn that into a test.
 
 
 ```
@@ -302,11 +294,17 @@ our test should look a little like this.
 
 ```
 
-because we have no javascript written this test is going to fail. When we click the button nothing will infact be added to our document. So let's look at what it looks like to programm some of this stuff.
+because we have no javascript written this test is going to fail. When we click the button nothing will in fact be added to our document. So let's look at what it looks like to program some of this stuff.
 
 Our goal now is to get the idea title and idea description onto the dom.
 
 so lets write some code to accomplish some of that.
+
+so before we do that lets touch a file called `idea-box.js` inside of our lib directory.
+
+Once we do that lets go ahead and require that file inside of our index.js
+
+`require('./idea-box.js')`
 
 ```
 
@@ -315,8 +313,8 @@ $(document).ready(function(){
 });
 
 function formatIdeas(){
- // have a variable set to the return value of a function that formats idea formated for us
- // have a variable set to the return value of a function that returns a seperate delete button
+ // have a variable set to the return value of a function that formats idea formatted for us
+ // have a variable set to the return value of a function that returns a separate delete button
 }
 
 ```
@@ -427,11 +425,11 @@ function formatIdeas(){
 
 we run the test and we are green!
 Now as you can see we are method is pretty chunky.
-Not only is it chuncky this is going to be really difficult to debugg as our application begins to grow.
+Not only is it chuncky this is going to be really difficult to debug as our application begins to grow.
 
 The name of our function is formatIdeas() but it's doing more than just formatting the ideas. All of the logic is nested in this function. Ideally it would be nice to extract this logic into other functions.
 
-Ideally if we can take the logic out of this stack we can deligate the responsibility to other pieces and parts.
+Ideally if we can take the logic out of this stack we can delegate the responsibility to other pieces and parts.
 
 When a function has too many responsibilities the code becomes brittle. The image I want you to think of is a bunch of tangled wires.
 
@@ -498,6 +496,45 @@ it('allows me to delete a single idea from the page', function(){
 
   assert.equal(browser.isExisting('li'), false );
 })
+
+it('allows me to submit multiple ideas and delete one idea', function(){
+
+ var formTitleInput       = browser.element('#idea-title');
+ formTitleInput.setValue('greatTitle');
+ var formDescriptionInput = browser.element('#idea-description');
+  formDescriptionInput.setValue('great description');
+
+
+ assert.equal(formTitleInput.getValue(), 'greatTitle');
+ assert.equal(formDescriptionInput.getValue(), 'great description');
+
+ browser.click('#submit-button');
+
+ formTitleInput.setValue('another great Title');
+ formDescriptionInput.setValue('another great description');
+
+ assert.equal(formTitleInput.getValue(), 'another great Title');
+ assert.equal(formDescriptionInput.getValue(), 'another great description');
+
+ browser.click('#submit-button');
+
+ formTitleInput.setValue('suh');
+ formDescriptionInput.setValue('dude');
+
+ browser.click('#submit-button');
+
+ var allIdeas = browser.elements("li").getText()
+
+ assert.equal(allIdeas.length, 3 )
+
+ browser.click('.delete-idea')
+
+ var allIdeas = browser.elements("li").getText()
+
+ assert.equal(allIdeas.length, 2)
+
+})
+```
 
 ```
 

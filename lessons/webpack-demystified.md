@@ -420,7 +420,7 @@ Restart your server and check it out.
 
 With all of the new ES6 functionality, we need to make sure everything is compatible. Webpack and do this for us by compiling our ES6 into ES5 with a Babel-Loader.
 
-`npm install --save-dev babel-loader`
+`npm install --save-dev babel-loader babel-core`
 
 Then add it into your loaders module in `webpack.config.js`. Your entire file should look like this:
 
