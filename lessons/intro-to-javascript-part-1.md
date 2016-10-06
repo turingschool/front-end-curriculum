@@ -385,7 +385,7 @@ Now that we know about functions, let's talk about variables again. _Where_ you 
   - stored in memory for as long as the web page is loaded
   - takes up more memory than local variables, as well as introduces more risk of naming conflicts
 
-Don't worry if this doesn't completely make sense right now. We'll go over it again!
+Don't worry if this doesn't completely make sense right now. We'll go over it again in later lessons!
 
 ### The Variable Danger Zone
 
