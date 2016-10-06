@@ -80,6 +80,12 @@ console.log(myVar)
 
 // How do you get the fifth name from the array?
 
+// In your array of names, change the last name to a vegetable
+
+// Now change the second name to your least favorite number
+
+// Finally, add your favorite tree to the end of the array
+
 // As a challenge, how do you get the last element of an array of any size?
 ```
 

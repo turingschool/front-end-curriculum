@@ -10,7 +10,6 @@ Here are the basics we're going to go over:
 
 - A text editor. Developers need to work with text in a different way than your average MS Word user. We'll want a text editor designed for software development.
   - [Atom](http://atom.io)
-  - [Visual Studio Code](https://code.visualstudio.com/)
 - A system _Terminal_ for interacting with our machine from the command line. Fortunately macOS already ships with one.
 - macOS "Command Line Tools" -- these are some system dependencies needed for some of the tools we will use.
 - **Homebrew**: This is a "package manager" for installing other developer-related programs. You can think of it as the "App Store for nerds."
@@ -116,14 +115,7 @@ git config --global user.email johndoe@example.com
   - Enter `atom .` to open your user directory in Atom.
   - Experiment with creating a file in Atom and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Atom.
 
-#### _Optional_: Install Visual Studio Code command line tools
-
-- _Alternatively_, install the Visual Studio Code command line tools:
-  - Launch VS Code. Now open the Command Palette (`⇧⌘P`) and type shell command to find the Shell Command: Install 'code' command in PATH command.
-- Open up the _Terminal_ application by going to _Applications_ and then _Utilities_.
-    - Drag this to the dock so that you have easy access to it later.
-
-### Install [Node.js](http://nodejs.org) using `nvm`
+### Install Node.js using `nvm`
 
 - `touch ~/.bash_profile`
 - `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash`
