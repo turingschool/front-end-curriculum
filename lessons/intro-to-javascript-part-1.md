@@ -28,7 +28,7 @@ Now that we know a little bit about Javascript, let's talk about how to actually
 
 ### Data Types
 
-There are  different Data Types in Javascript. It's important to understand what type of data you're dealing with, and knowing the types of data available to you is the first step. 
+There are  different Data Types in Javascript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
 There are three basic data types: numeric, string, and boolean. Let's go over what each of these is.
 
@@ -62,19 +62,21 @@ Booleans can be very useful to help determine which part of a script should be r
 
 Now that we know how to differentiate between different kinds of data, we can use operators to calculate their single value. There are 5 types of operators:
 
-1. Assignment operators. Assign a value to a variable. (hint: you've got these down already) ``` var color = 'magenta';```
+1. Assignment operators. Assign a value to a variable. (hint: you've got these down already) ```'magenta';```
 
-2. Arithmetic operators. Perform basic math. ```var addTwo = 2 + 2;```
+2. Arithmetic operators. Perform basic math. ```2 + 2;```
 
-3. String operators. Combine strings. ```var greeting = 'Hello! ' + 'Nice to meet you.';```
+3. String operators. Combine strings. ```'Hello! ' + 'Nice to meet you.';```
 
-4. Comparison operators. Compare two values and return a __true__ or __false__. ```var buy = 3 > 5;``` (value of buy is false)
+4. Comparison operators. Compare two values and return a __true__ or __false__. ```3 > 5;``` (value of buy is false)
 
-5. Logical operators. Combines __expressions__ and return true or false. ``` var buy = (5 > 3) && (2 < 4);```
+5. Logical operators. Combines __expressions__ and return true or false. ```(5 > 3) && (2 < 4);```
 
-<!-- ### Your Turn (in the console) -->
+### Your Turn (in the console)
 
-<!-- Add something to play with using operators to deal with data types -->
+Try it out! Play around with the different data types in your console. Try using the different types of operators, and see what happens when you combine the different data types.
+
+Learn to feel comfortable playing and experimenting with your data, because it can help you better understand what you're working with and how to use it effectively in your projects. Here's a [a very fun talk](http://confreaks.tv/videos/railsconf2016-closing-keynote-paul-lamere) about the great experiments that can result from playing with your data.
 
 ### Variables in Javascript
 
