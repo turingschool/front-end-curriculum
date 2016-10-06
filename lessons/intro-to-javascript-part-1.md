@@ -14,19 +14,23 @@ By the end of this lesson, you will know/be able to:
 
 ### History of Javascript
 
-Way back in the early days of the web, Brendan Eich created Javascript. Legend says he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. He might have been walking up hill, both ways, through 10 feet of snow, too.
+Way back in the early days of the web, Brendan Eich created Javascript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'Javascript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
 
-The language was first released with Netscape 2 in 1996. The name 'Javascript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages.
+### What is Javascript?
 
-<!-- ### A Bit About the language
+Javascript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment.
 
-#### -->
+Javascript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
+
+It's a highly versatile and flexible language, and has become the most commonly used language of the web.
+
+Now that we know a little bit about Javascript, let's talk about how to actually use it!
 
 ### Data Types
 
-There are  different Data Types in Javascript. It's important to understand why type of data you're dealing with, because then we can start to actually use that data!
+There are  different Data Types in Javascript. It's important to understand what type of data you're dealing with, and knowing the types of data available to you is the first step. 
 
-The value of a variable is data, and there are three basic _data types_: numeric, string, and boolean. Let's go over what each of these is.
+There are three basic data types: numeric, string, and boolean. Let's go over what each of these is.
 
 #### Numeric Data Type
 
