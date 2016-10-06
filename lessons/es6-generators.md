@@ -52,7 +52,7 @@ cheer()
 We get:  
 
 ```
-=>
+=> go Pack
 => getting a snack
 => go!
 ```
