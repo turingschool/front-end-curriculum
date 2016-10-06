@@ -4,6 +4,12 @@ length: 120
 tags: javascript, browser
 ---
 
+<!--
+NOTE: Louisa removed this lesson from the lessons/index.html directory 10/05/16
+
+      It was repurposed from the back end program's intro to JS and is targeted at students who have experience with Ruby and already have an understanding of OOP.
+-->
+
 ## Learning Goals
 
 * Learn how to access and use the Chrome Developer Tools
