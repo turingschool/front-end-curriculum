@@ -110,15 +110,18 @@ var myVariableName = "Hello, variable!";
 
 We've added a couple of things to our variable. Let's go through them:
 
-After our `var` keyword (a special word that the JavaScript interpreter knows is used to create a variable) and our variable name, we have an equals sign, `=`. That's called the _assignment opperator_, because we use it to _assign_ a value to our variable declaration.
+After our `var` keyword (a special word that the JavaScript interpreter knows is used to create a variable) and our variable name, we have an equals sign, `=`. That's called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.
 
 Let's test these additions in the console.
 
 WAIT! Eeek! Why does my console still show 'undefined'?? Well JavaScript is designed as a dynamic language which means that the type (string, void, boolean …) of a function ```return``` value is not pre-defined. If a function does not use a ```return``` statement or uses an empty return statement with no value, JavaScript automatically returns _undefined_. That means in JavaScript every function returns something, at the very least an "undefined". Chrome will display the function return value (existent or not) in the console. An assignment also does not include a return value, so Chrome will display "undefined".
 
 Okay, let's ask the console to give us the value of our variable. How do we do that?
+
 Step 1: declare the variable and it's value
+
 Step 2: call the variable
+
 Step 3: dance for joy at seeing our assigned value of "Hello, variable!"
 
 Until you've added the assignment operator and the variable value, the variable is considered _undefined_.
@@ -165,7 +168,7 @@ var quantity = 3;
 var mythicalCreature = " unicorns";
 var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature + "</p>"
 ```
-This is very useful when we want to append data to the DOM, because it means we can write out an entire HTML tag and concatenate in the data from our variable.
+This is very useful when we want to append data to the DOM (Document Object Model), because it means we can write out an entire HTML tag and concatenate in the data from our variable.
 
 ### Rules for Naming Variables
 
@@ -175,6 +178,17 @@ This is very useful when we want to append data to the DOM, because it means we 
 - All variables are case sensitive.
 - Use names that describe the kind of information you plan to assign the variable.
 - If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case.
+
+### The Variable Danger Zone
+
+Keep this in mind as you're making new variables:
+
+Variables sans the keyword  ```var```
+  - will work
+  - will be considered global variable, even if declared _inside_ a function
+  - are bad practice
+
+The good news is all you have to do to avoid this is to always remember to use the `var` keyword!
 
 ### Arrays
 
@@ -188,9 +202,8 @@ var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 var lotteryNumbers = [33, 72, 64, 18, 17, 85];
 var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-
 ```
-You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets ([]), and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
+You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets `[]`, and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
 
 ```javascript
 colors = ['white',
@@ -222,7 +235,6 @@ colors[2] = 'blue'
 
 // Check the value of colors
 colors
-
 ```
 
 #### Your Turn (in the console)
@@ -392,14 +404,3 @@ Now that we know about functions, let's talk about variables again. _Where_ you 
   - takes up more memory than local variables, as well as introduces more risk of naming conflicts
 
 Don't worry if this doesn't completely make sense right now. We'll go over it again in later lessons!
-
-### The Variable Danger Zone
-
-Keep this in mind as you're making new variables:
-
-Variables sans the keyword  ```var```
-  - will work
-  - will be considered global variable, even if declared _inside_ a function
-  - are bad practice
-
-The good news is all you have to do to avoid this is to always remember to use the `var` keyword!
