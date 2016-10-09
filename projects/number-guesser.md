@@ -2,8 +2,6 @@
 title: Number Guesser
 ---
 
-<!-- ![Number Guesser UI](/assets/images/number-guesser.png) -->
-
 Today, you'll be building a game where the user picks a number between 1 and 100.
 
 ## Phase One: Basic Requirements
@@ -47,15 +45,15 @@ Some things to think about:
 
 Desktop layout:
 
-![Number Guesser Desktop](desktop-base)
+![Number Guesser Desktop][desktop-base]
 
 Mobile layout:
 
-![Number Guesser Mobile](mobile-base)
+![Number Guesser Mobile][mobile-base]
 
 Color and font spec:
 
-![Design Specs](design-specs)
+![Design Specs][design-specs]
 
 
 [desktop-base]: /assets/images/projects/number-guesser/numberguesser1.png
