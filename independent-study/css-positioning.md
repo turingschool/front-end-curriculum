@@ -19,6 +19,7 @@ title: CSS Positioning
 *:before
   box-sizing: border-box
 ```
+
 ### Display Property
 
 - The default value for all elements is inline. Most "User Agent stylesheets" (the default styles the browser applies to all sites) reset many elements to "block".
