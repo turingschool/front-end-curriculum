@@ -2,7 +2,7 @@
 title: Number Guesser
 ---
 
-![Number Guesser UI](/assets/images/number-guesser.png)
+<!-- ![Number Guesser UI](/assets/images/number-guesser.png) -->
 
 Today, you'll be building a game where the user picks a number between 1 and 100.
 
@@ -42,6 +42,25 @@ Some things to think about:
 - Every time the user wins a round decrease the minimum number by 10.
 
 (**Pro-tip**: You'll need to adjust the input fields to accept the new minimum and maximum numbers.)
+
+#### Layout comps
+
+Desktop layout:
+
+![Number Guesser Desktop](desktop-base)
+
+Mobile layout:
+
+![Number Guesser Mobile](mobile-base)
+
+Color and font spec:
+
+![Design Specs](design-specs)
+
+
+[desktop-base]: /assets/images/projects/number-guesser/numberguesser1.png
+[mobile-base]: /assets/images/projects/number-guesser/numberguesser2.png
+[design-specs]: /assets/images/projects/number-guesser/numberguesser3.png
 
 ## Rubric
 
