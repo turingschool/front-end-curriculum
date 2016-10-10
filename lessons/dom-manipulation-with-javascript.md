@@ -1,5 +1,5 @@
 ---
-title: DOM Manipulation with JavaScript
+title: Introduction to Javascript, Part 2: DOM Manipulation with JavaScript
 length: 180
 tags: javascript, dom, browser
 ---
@@ -9,6 +9,16 @@ tags: javascript, dom, browser
 * Continue to learn how to access and use the Chrome Developer Tools
 * Continue to develop a basic understanding for JavaScript syntax
 * Understand how to query and update a page after its been loaded
+
+## Review
+
+Before we get into DOM Manipulation, let's go over over what we've learned so far.
+
+- What are the three basic data types in Javascript?
+- How do we write a variable and why would we use one?
+- How do you add a value to an array?
+- How do you write a function?
+- How do you call a function?
 
 ## The Document Object Model (DOM)
 

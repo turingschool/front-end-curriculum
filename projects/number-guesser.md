@@ -2,8 +2,6 @@
 title: Number Guesser
 ---
 
-![Number Guesser UI](/assets/images/number-guesser.png)
-
 Today, you'll be building a game where the user picks a number between 1 and 100.
 
 ## Phase One: Basic Requirements
@@ -16,8 +14,8 @@ The application should have the following user interface components:
 - A button that resets the game to its initial state
 - An element that displays the users most recent guess
 - An element that displays a message to user
-  - If their guess is too high, it should display: "Sorry, that guess is too high. Try a lower number."
-  - If their guess is too low, it should display: "Sorry, that guess is too low. Try a higher number."
+  - If their guess is too high, it should display: "That is too high"
+  - If their guess is too low, it should display: "That is too low"
 
 Some things to think about:
 
@@ -43,14 +41,33 @@ Some things to think about:
 
 (**Pro-tip**: You'll need to adjust the input fields to accept the new minimum and maximum numbers.)
 
+#### Layout comps
+
+Desktop layout:
+
+![Number Guesser Desktop][desktop-base]
+
+Mobile layout:
+
+![Number Guesser Mobile][mobile-base]
+
+Color and font spec:
+
+![Design Specs][design-specs]
+
+
+[desktop-base]: /assets/images/projects/number-guesser/numberguesser1.png
+[mobile-base]: /assets/images/projects/number-guesser/numberguesser2.png
+[design-specs]: /assets/images/projects/number-guesser/numberguesser3.png
+
 ## Rubric
 
 ### UX/UI Expectations
 
-- 4: Application is intuitive, well designed, and easy to use. Virtually no major improvements are needed in the UX or UI.
-- 3: Application shows strong effort towards simple, clean design, content organization, and well thought out experience and user interactions.
-- 2: Application meets basic best UX practices, but makes questionable design decisions that negatively impact the overall UX/UI.
-- 1: Application is lacking in basic best practices, and user struggles to understand how to use it.
+- 4: Application matches comp exactly. There are no omitted details. Any extensions are intuitive, well designed, easy to use, and in keeping with the visuals outlined in the comp. Virtually no major improvements are needed in the UX or UI.
+- 3: Application shows strong effort towards matching the comp, but some details have been missed. Any extensions are simple, clean design, content organization, and well thought out experience and user interactions.
+- 2: Application meets the basic spirit of the comp but overlooks many details. Extensions show questionable design decisions that negatively impact the overall UX/UI.
+- 1: Application does not match the comp, is lacking in basic best practices, and user struggles to understand how to use it.
 
 ### Functional Expectations
 

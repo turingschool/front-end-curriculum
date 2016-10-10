@@ -146,17 +146,17 @@ This is very useful when we want to append data to the DOM, because it means we 
 - If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case.
 
 # Arrays
-An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a list of values, or values that are related to one another. 
+An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a list of values, or values that are related to one another.
 
 You can put different types of data into an array:
 
 ```javascript
 var arrayName = [element0, element1, ...];
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green', 
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
 'Blue', 'Indigo', 'Violet'];
 var lotteryNumbers = [33, 72, 64, 18, 17, 85];
 var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-				
+
 ```
 You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets ([]), and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
 
@@ -187,7 +187,7 @@ colors
 // Update the third value in the array
 colors[2] = 'blue'
 
-// Check the value of colors 
+// Check the value of colors
 colors
 
 ```
@@ -201,13 +201,13 @@ colors
 # Expressions
 An _expression_ evaluates (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
 
-1. Expressions that assign a single value to a variable. 
-2. Expressions that use two or more values to return a single value. 
+1. Expressions that assign a single value to a variable.
+2. Expressions that use two or more values to return a single value.
 
 # Operators
 Expressions rely on operators to calculate their single value. There are 5 types of operators:
 
-1. Assigment operators. Assign a value to a variable. (hint: you've got these down already) ``` var color = 'magenta';``` 
+1. Assigment operators. Assign a value to a variable. (hint: you've got these down already) ``` var color = 'magenta';```
 2. Arithmetic operators. Perform basic math. ```var addTwo = 2 + 2;```
 3. String operators. Combine strings. ```var greeting = 'Hello! ' + 'Nice to meet you.';```
 4. Comparison operators. Compare two values and return a __true__ or __false__. ```var buy = 3 > 5;``` (value of buy is false)
