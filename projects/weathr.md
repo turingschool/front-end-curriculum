@@ -9,6 +9,12 @@ As web developers you're going to be living in the context of the web. With this
 
 In this project you will be getting your first real interactions with ReactJS, asynchronous javascript, and managing the state of your application.
 
+## Required Technology
+
+- ReactJS
+- jQuery for AJAX only (No DOM manipulation)
+- Sass
+
 ## Phase one
 
 * Your application should have a welcome page that greets the user. The welcome page has an input field that asks the user for it's  current location / desired location
@@ -28,8 +34,12 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 * Each day should have a summary of what the weather will look like ex: `Today: Sunny Today, It's currently 42, the high will be 46`
 
+* Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive.
+
+
 
 ## Phase three
+
 * Application should render an image that best reflects the weather.
 
 * Have an alert if an extreme weather event is forecasted in the area the user has specified (tornado watch, flood watch, blizzard watch, etc).
