@@ -4,8 +4,6 @@ length: 180
 tags: javascript
 ---
 
-# API’s and a short talk on how the web works.
-
 ## Context
 
 On me and my wife’s second date we went to multiple restaurants. The fact that I could afford to take her out on a date was a miracle, and the fact that she actually was going on a second date with me was also a miracle.  Now at the two restaurants we went to the one thing they all had in common was they all provided a waiter.
@@ -75,5 +73,5 @@ app.post('/messages', (request, response) => {
   response.status(201).send({message: message });
 });
 
-
+```
 With that being said lets move over to the second part of this [lesson](http://frontend.turing.io/lessons/introduction-to-ajax.html
