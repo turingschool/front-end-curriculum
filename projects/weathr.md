@@ -15,15 +15,23 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 * There should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
 
+* utilize sass variables and color scheme of app changes based on the weather and temp.
+
 * location persists after refresh.
+
 
 # Phase two
 
-* If a user clicks on a specific day on the 7 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
-
 * Display likely-hood of weather event happening
 
-* Have an alert if an extreme weather event is forecasted in the area the user has specified (tornado watch, flood watch, blizzard watch, etc).
+* Each day should have a summary of what the weather will look like ex: `Today: Sunny Today, It's currently 42, the high will be 46`
 
 
 # Phase three
+* Application should render an image that best reflects the weather.
+
+* Have an alert if an extreme weather event is forecasted in the area the user has specified (tornado watch, flood watch, blizzard watch, etc).
+
+# Extension
+
+* If a user clicks on a specific day on the 7 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
