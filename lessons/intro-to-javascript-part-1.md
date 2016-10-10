@@ -11,6 +11,7 @@ By the end of this lesson, you will know/be able to:
 * Understand what a variable is and how to use it
 * Understand operators and how to use them
 * Understand array literals and change/add values to them via their indices
+* Understand how to write a function
 
 ### History of Javascript
 
@@ -62,7 +63,7 @@ Booleans can be very useful to help determine which part of a script should be r
 
 Now that we know how to differentiate between different kinds of data, we can use operators to calculate their single value. There are 5 types of operators:
 
-1. Assignment operators. Assign a value to a variable. (hint: you've got these down already) ```'magenta';```
+1. Assignment operators. Assign a value to a variable. ```var color ='magenta';```
 
 2. Arithmetic operators. Perform basic math. ```2 + 2;```
 
