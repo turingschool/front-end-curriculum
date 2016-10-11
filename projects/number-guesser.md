@@ -22,7 +22,7 @@ Some things to think about:
 - Input fields—regardless of their "type" attribute—store their values in strings. You'll need to use `parseInt()` to turn it back into a number.
 - You'll need a strategy for [generating random numbers][rand].
 
-[rand]: https://github.com/turingschool/try-turing/blob/gh-pages/_posts/2000-01-31-afternoon-projects.markdown#generating-random-numbers
+[rand]: http://frontend.turing.io/independent-study/random-numbers.html
 
 ## Phase Two: More Better
 
