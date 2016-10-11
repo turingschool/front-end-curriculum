@@ -158,7 +158,7 @@ Time to write some code in React!
 
 From the slide deck, we ultiately want to create something like this:
 
-![](images/final-app.png)
+![](/assets/images/lessons/react-in-theory/final-image.png)
 
 As always, we need to install the necessary dependencies to add the React library to our application.
 
