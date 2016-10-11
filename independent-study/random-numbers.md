@@ -22,7 +22,7 @@ title: Random Numbers
  
  They are between 0 and just under 3. We need to add one and then round down. `Math.floor()` will round the number down.
  
- ```js
+ ```
  Math.floor(2.48614382491825) === 2; // true!
  ```
  
