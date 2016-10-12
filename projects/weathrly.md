@@ -2,7 +2,7 @@
 title: weathrly
 ---
 
-# Context 
+# Context
 
 It's important to know what Mother Nature is going to throw at you each day -- what if you wear flip flops because it's sunny and 65 degrees in the morning and then it snows all afternoon (this is Colorado, after all).
 
@@ -21,7 +21,7 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 * Your application should have a welcome page that greets the user. The welcome page has an input field that asks the user for it's  current location / desired location
 
-* Once the desired location is submitted a weekly forecast overview (morning/evening for 7 days) is shown.
+* Once the desired location is submitted a weekly forecast overview (weather for next 7 days) is shown.
 
 * There should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
 
