@@ -14,7 +14,7 @@ tags: ember, testing, javascript
 
 ### Setting Up Testing
 
-The Ember CLI is a powerhouse for helping you set up the files necessary to build and test your Ember app. Let's start with acceptance tests. To create an acceptance test, simply execute the following command in your terminal:
+The Ember CLI is a powerhouse for helping you set up the files necessary to build and test your Ember app. Let's start with acceptance tests. To create an acceptance test, simply execute the following command in your terminal (Note: this has already been done for you in the practice repo):
 
 ```
 ember generate acceptance-test home-page
