@@ -7,9 +7,9 @@ tags: enzyme, jsdom
 
 ## context
 
-One of my favorite magazines to read is a mag called ``offscreen``. The more I think about it this was the magazine that actually got me into really considering a career as a software developer. With that being said this magazine basically interviews developers and it walks you through some of the cool things these people are doing. As I began to read through some of these developer's stories I came across one that really put things into perspective for me. I want to read that for you now.  It's from Greg Knauss apprently he went to school in `san diego` to which I say `carne asada bro!`
+One of my favorite magazines to read is a mag called ``offscreen``. The more I think about it this was the magazine that actually got me into really considering a career as a software developer. With that being said this magazine basically interviews developers and it walks you through some of the cool things these people are doing. As I began to read through some of these developer's stories I came across one that really put things into perspective for me. I want to read that for you now.  It's from Greg Knauss apparently he went to school in `san diego` to which I say `carne asada bro!`
 
-``Experience has taught me to see my software as a writthing Achilles' heels, a horrific Shoggoth, every line a code of potential disaster. And so I wrap each in a thick, protective layer of negative assumptions, so that when things do go wrong --and they will -- the program can (best case) recover quickly or (worst case) not actually kill anyone.``
+``Experience has taught me to see my software as a writhing Achilles' heels, a horrific Shoggoth, every line a code of potential disaster. And so I wrap each in a thick, protective layer of negative assumptions, so that when things do go wrong --and they will -- the program can (best case) recover quickly or (worst case) not actually kill anyone.``
 
 So you might be asking why do I test? Well the answer should be because you care. People are going to hire you to do somethings most people can not do. You will be paid money to figure things out and solve problems to most seem impossible.
 
