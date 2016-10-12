@@ -77,7 +77,9 @@ Now inside of `helpers` we are going to create a `setup.js` file. Now the stuff 
 I repeat you do not need to know what what every single line in this code is doing. I just need you to be aware of whats actually happening. The moment you focus on this you loose the whole point of the lesson.
 
 ```
-require('babel-register')
+require('babel-register')({
+  presets: ["react", "es2015"]
+});
 require('babel-polyfill')
 
 global.document = require('jsdom').jsdom(
