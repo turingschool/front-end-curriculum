@@ -15,6 +15,7 @@ In this project you will be getting your first real interactions with ReactJS, a
 - ReactJS
 - jQuery for AJAX only (No DOM manipulation)
 - Sass
+- API (written by yung-Jhun) [Link](http://weatherly-api.herokuapp.com/api/weather)
 
 ## Phase one
 
