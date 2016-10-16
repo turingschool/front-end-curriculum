@@ -45,7 +45,7 @@ You can get more specific with the constraints by specifying details like the vi
 }
 ```
 
-##### *Practice*
+#### *Practice*
 Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options (if we use audio without headphones there will be horrific, eternal feedback). We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
 
 ### The MediaStream Object
@@ -53,13 +53,13 @@ Assuming you have made the API call correctly and the user grants permission to 
 
 The MediaStream object gives you access to any audio or video tracks that are being recorded, and allows you to act on them in various ways.
 
-##### *Practice*
+#### *Practice*
 Log the MediaStream object to the console in the success handler of your `getUserMedia` call. Inspect the object in your console, making sure to check out the methods available in its prototype (`__proto__`). 
 
 ### Using the MediaStream with an HTML Media Element
 The MediaStream object offers us plenty of methods to inspect and interact with it, but it isn't super useful on its own. When combined with an [HTML Media Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement), however, we can interface with it just like a video or audio recording. The two HTML elements that are considered "media" elements are the `<video>` and `<audio>` tags. These elements come with a special API that gives us the ability to play, pause, stop any media attached to them. 
 
-##### *Practice*
+#### *Practice*
 Let's add a `video` element to our HTML file. Set a height and width as attributes.
 
 ```html
@@ -109,7 +109,7 @@ We'll see the default set of controls that the element comes with when we re-ren
 ### Recording Audio & Video
 Let's try recording the livestream from our webcam. Stash or commit any changes you've made to the example codebase so far and pull down the [recording branch]() (to come) from the practice repo. Switch to this branch and you'll see some boilerplate code set up for you to enable video recording. You'll want to be wearing headphones for this exercise.
 
-##### *Practice: On Your Own*
+#### *Practice: On Your Own*
 * We want two video elements on our page: one that shows your live stream from the webcam, and another that will display the recorded version when it's ready
 * Beneath the live stream video, we want two buttons: one that will toggle between 'Start Recording' and 'Stop Recording', and one that will 'Display the Recording' in the second video element
 * The 'Display Recording' button can only be clicked after a recording has been made (i.e. a user clicks 'start recording' then 'stop recording'). When the 'Display Recording' button is clicked, it will update the second video element with the recorded video.
