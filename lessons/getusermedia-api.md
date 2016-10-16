@@ -51,13 +51,13 @@ Let's clone the [get-user-media](https://github.com/turingschool-examples/get-us
 ### The MediaStream Object
 Assuming you have made the API call correctly and the user grants permission to access their media devices, the promise returned from `getUserMedia()` will resolve with a [MediaStream Object](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream).
 
-The MediaStream object gives you access to any audio or video tracks that are being recorded, and allows you to act on them in various ways.
+The MediaStream object gives you access to any audio or video tracks that are being monitored, and allows you to act on them in various ways.
 
 #### *Practice*
 Log the MediaStream object to the console in the success handler of your `getUserMedia` call. Inspect the object in your console, making sure to check out the methods available in its prototype (`__proto__`). 
 
 ### Using the MediaStream with an HTML Media Element
-The MediaStream object offers us plenty of methods to inspect and interact with it, but it isn't super useful on its own. When combined with an [HTML Media Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement), however, we can interface with it just like a video or audio recording. The two HTML elements that are considered "media" elements are the `<video>` and `<audio>` tags. These elements come with a special API that gives us the ability to play, pause, stop any media attached to them. 
+The MediaStream object offers us plenty of methods to inspect and interact with it, but it isn't super useful on its own. When combined with an [HTML Media Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement), however, we can interface with it just like a video or audio recording. The two HTML elements that are considered "media" elements are the `<video>` and `<audio>` tags. These elements come with a special API that gives us the ability to play, pause, or seek any media attached to them. 
 
 #### *Practice*
 Let's add a `video` element to our HTML file. Set a height and width as attributes.
@@ -85,7 +85,7 @@ The syntax for this isn't the friendliest, and API developers are working on sim
 video.src = window.URL.createObjectURL(mediaStream);
 ```
 
-There is an attribute called `src` on video elements (just like `script` tags), that allow you to set the source of your video. Because we have an object (`mediaStream`), and not a URL, we need to create a URL from our media stream. The `window.URL.createObjectURL` method allows you to pass in an object or file that you'd like to create a URL for.
+There is an attribute called `src` on video elements (just like `script` tags), that allows you to set the source of your video. Because we have an object (`mediaStream`), and not a URL, we need to create a URL from our media stream. The `window.URL.createObjectURL` method allows you to pass in an object or file that you'd like to create a URL for.
 
 Let's look at the next lines:
 
@@ -95,7 +95,7 @@ video.onloadedmetadata = (event) => {
 };
 ```
 
-Remember we said the `video` element was a special HTML Media Element. This is where we are going to use that special API to leverage the events and methods on our video. In this code, we are setting an event handler for the `onloadedmetadata` event of our video. This event will fire whenever our video metadata (e.g. the source) is ready. When it's ready, we use another special method on the video element called `play` to play our stream. Take a look at the [HTML Media Element API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) to see additional events and methods that are available to us with video elements.
+Remember we said the `video` element was a special HTML Media Element. This is where we are going to use that special API to leverage the events and methods on our video. In this code, we are setting an event handler for the `onloadedmetadata` event of our video. This event will fire whenever our video metadata (e.g. the source) is ready. When it's ready, we use another special method on the video element called `play` to play our stream. Take a look at the [HTML Media Element API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) to see additional events and methods that are available to us with video and audio elements.
 
 ### Media Element Controls
 Media Elements (`video` and `audio` tags) can take an optional attribute `controls`. If we add this attribute to our video element:
