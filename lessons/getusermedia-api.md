@@ -107,7 +107,13 @@ Media Elements (`video` and `audio` tags) can take an optional attribute `contro
 We'll see the default set of controls that the element comes with when we re-render the page. You'll notice you can pause and play the video, and you'll see a timeline with a progress bar for the duration of the video. Because this is a live stream, there is no start and end point, so the progress bar isn't very useful in our case. We'll be able to make more use of this when we get into recording our video rather than just displaying it.
 
 ###Recording Audio & Video
-[ boilerplate code to come ]
+Let's try recording the livestream from our webcam. Stash or commit any changes you've made to the example codebase so far and pull down the [recording branch]() (to come) from the practice repo. Switch to this branch and you'll see some boilerplate code set up for you to enable video recording. You'll want to be wearing headphones for this exercise.
+
+#####*Practice: On Your Own*
+* We want two video elements on our page: one that shows your live stream from the webcam, and another that will display the recorded version when it's ready
+* Beneath the live stream video, we want two buttons: one that will toggle between 'Start Recording' and 'Stop Recording', and one that will 'Display the Recording' in the second video element
+* The 'Display Recording' button can only be clicked after a recording has been made (i.e. a user clicks 'start recording' then 'stop recording'). When the 'Display Recording' button is clicked, it will update the second video element with the recorded video.
+* The recorded video element should have controls that allow you to pause/play the recording
 
 ###Resources 
 
