@@ -46,7 +46,7 @@ You can get more specific with the constraints by specifying details like the vi
 ```
 
 #####*Practice*
-Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options. We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
+Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options (if we use audio without headphones there will be horrific, eternal feedback). We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
 
 ###The MediaStream Object
 Assuming you have made the API call correctly and the user grants permission to access their media devices, the promise returned from `getUserMedia()` will resolve with a [MediaStream Object](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream).
@@ -62,7 +62,7 @@ The MediaStream object offers us plenty of methods to inspect and interact with 
 #####*Practice*
 Let's add a `video` element to our HTML file. Set a height and width as attributes.
 
-```javascript
+```html
 <video id="video-stream" height="320" width="480"></video>
 ```
 
@@ -97,8 +97,13 @@ video.onloadedmetadata = (event) => {
 
 Remember we said the `video` element was a special HTML Media Element. This is where we are going to use that special API to leverage the events and methods on our video. In this code, we are setting an event handler for the `onloadedmetadata` event of our video. This event will fire whenever our video metadata (e.g. the source) is ready. When it's ready, we use another special method on the video element called `play` to play our stream. Take a look at the [HTML Media Element API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) to see additional events and methods that are available to us with video elements.
 
-###Taking a video still
+###Media Element Controls
+Media Elements (`video` and `audio` tags) can take an optional attribute `controls`. If we add this attribute to our video element:
 
+```html
+<video id="video-stream" height="320" width="480" controls></video>
+```
 
-#####*Practice: on your own*
-We've already worked with video from the API, let's try capturing some audio. 
+We'll see the default set of controls that the element comes with when we re-render the page. You'll notice you can pause and play the video, and you'll see a timeline with a progress bar for the duration of the video. Because this is a live stream, there is no start and end point, so the progress bar isn't very useful in our case. We'll be able to make more use of this when we get into recording our video rather than just displaying it.
+
+###Recording Audio & Video
