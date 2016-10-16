@@ -107,3 +107,11 @@ Media Elements (`video` and `audio` tags) can take an optional attribute `contro
 We'll see the default set of controls that the element comes with when we re-render the page. You'll notice you can pause and play the video, and you'll see a timeline with a progress bar for the duration of the video. Because this is a live stream, there is no start and end point, so the progress bar isn't very useful in our case. We'll be able to make more use of this when we get into recording our video rather than just displaying it.
 
 ###Recording Audio & Video
+[ boilerplate code to come ]
+
+###Resources 
+
+* [getUserMedia API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
+* [HTML Media Element API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)
+* [WebRTC](https://developer.mozilla.org/en-US/docs/Web/API/WebRTC_API)
+* [WebRTC Demos with getUserMedia](https://webrtc.github.io/samples/)
