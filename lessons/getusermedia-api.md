@@ -46,7 +46,9 @@ You can get more specific with the constraints by specifying details like the vi
 ```
 
 #### Practice
-Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options (if we use audio without headphones, there will be horrific, eternal feedback). We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
+Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options (if we use audio without headphones, there will be horrific, eternal feedback that will sound cool at first, like you're screaming into an endless empty cave, but then soon turn into an ear-piercing beep that eventually only dogs will be able to hear).
+
+We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
 
 ### The MediaStream Object
 Assuming you have made the API call correctly and the user grants permission to access their media devices, the promise returned from `getUserMedia()` will resolve with a [MediaStream Object](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream).
@@ -69,7 +71,7 @@ Let's add a `video` element to our HTML file. Set a height and width as attribut
 In the success handler of our `getUserMedia` call, let's select that video element and attach our media stream object to it:
 
 ```javascript
-var video = $('video'); 
+let video = document.querySelector('video'); 
 
 // create a "url" for our media object to
 // use as the source of our video element
@@ -100,7 +102,7 @@ Remember we said the `video` element was a special HTML Media Element. This is w
 This syntax can be made even simpler by adding the [autoplay](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) attribute to the video element in our HTML. When specifying that attribute, we can simplify our javascript to:
 
 ```javascript
-var video = $('video'); 
+let video = document.querySelector('video'); 
 video.src = window.URL.createObjectURL(mediaStream);
 ```
 
