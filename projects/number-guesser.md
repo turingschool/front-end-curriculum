@@ -29,6 +29,7 @@ Some things to think about:
 - The type attribute for the guess input should be "number".
   - It should have "min" and a "max" attributes equal to the minimum and maximum of the reange of guesses (e.g. 1 and 100, respectively).
 - The application should display an error message if the guess is not a number (e.g. `parseInt()` returns `NaN`).
+  - This may require your input to have two "type" attributes.
 - The application should display an error if the guess is outside of the range of possible answers.
 - The clear button should be disabled if there is nothing to clear.
 - The reset button should be disabled if there is nothing to reset.
