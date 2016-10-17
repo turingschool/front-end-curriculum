@@ -126,6 +126,8 @@ It takes a single argument that must be a mediaStream object. (This is the objec
 
 For example, while you are recording, the MediaRecorder will continuously generate little bits of information in chunks or [blobs](https://developer.mozilla.org/en-US/docs/Web/API/Blob). Each of these blobs represents a small portion of the total recording - immutable, raw data.
 
+This pattern of generating many tiny little blobs of data is the essence of streaming. When you're streaming a tv show or movie online, you're not watching a piece of data that's two hours long (that would be huge and slow and bulky). Instead, you're constantly having tiny new portions of the entire video delivered to you. This is why when your internet connection is weak and a video times out, it can pick up right where it left off. It doesn't have to trash the whole video and make you start from the beginning.
+
 In order to access these blobs, we could hook into the MediaRecorder's [ondataavailable](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/ondataavailable) event. Within this event, we can access each of the current blobs through `event.data`:
 
 ```javascript
