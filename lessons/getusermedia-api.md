@@ -45,7 +45,7 @@ You can get more specific with the constraints by specifying details like the vi
 }
 ```
 
-#### *Practice*
+#### Practice
 Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options (if we use audio without headphones, there will be horrific, eternal feedback). We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
 
 ### The MediaStream Object
@@ -53,13 +53,13 @@ Assuming you have made the API call correctly and the user grants permission to 
 
 The MediaStream object gives you access to any audio or video tracks that are being monitored, and allows you to act on them in various ways.
 
-#### *Practice*
+#### Practice
 Log the MediaStream object to the console in the success handler of your `getUserMedia` call. Inspect the object in your console, making sure to check out the methods available in its prototype (`__proto__`). 
 
-### Using the MediaStream with an HTML Media Element
+## Using the MediaStream with an HTML Media Element
 The MediaStream object offers us plenty of methods to inspect and interact with it, but it isn't super useful on its own. When combined with an [HTML Media Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement), however, we can interface with it just like a video or audio recording. The two HTML elements that are considered "media" elements are the `<video>` and `<audio>` tags. These elements come with a special API that gives us the ability to play, pause, or seek any media attached to them. 
 
-#### *Practice*
+#### Practice
 Let's add a `video` element to our HTML file. Set a height and width as attributes.
 
 ```html
@@ -113,7 +113,7 @@ Media Elements (`video` and `audio` tags) can take an optional attribute `contro
 
 We'll see the default set of controls that the element comes with when we re-render the page. You'll notice you can pause and play the video, and you'll see a timeline with a progress bar for the duration of the video. Because this is a live stream, there is no start and end point, so the progress bar isn't very useful in our case. We'll be able to make more use of this when we get into recording our video rather than just displaying it.
 
-### Recording With the MediaRecorder API
+## Recording With the MediaRecorder API
 In order to capture and save the audio or video we are streaming, we need to leverage the [MediaRecorder API](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder).
 
 Creating a new instance of a MediaRecorder returns an object that contains methods that allow you to start and stop a recording:
@@ -146,10 +146,10 @@ recorder.ondataavailable = (event) => {
 let fullRecording = new Blob(babyBlobs);
 ```
 
-We could now set the source of a new video element using our `fullRecording` and play our recorded video.
+We could now set the source of a new video element using our `fullRecording` blob and play our recorded video.
 
 
-#### *Practice: On Your Own*
+#### Practice: On Your Own
 Let's try recording the livestream from our webcam. Stash or commit any changes you've made to the example codebase so far and pull down the [recording branch](https://github.com/turingschool-examples/get-user-media/tree/recording) from the practice repo. Switch to this branch and you'll see some boilerplate code set up for you to enable video recording. You'll want to be wearing headphones for this exercise.
 
 **Requirements:**
@@ -161,7 +161,7 @@ Let's try recording the livestream from our webcam. Stash or commit any changes 
 
 When you've completed the exercise, you can compare your work against the solution in the `working` branch of the repo.
 
-### Resources 
+## Resources 
 
 * [getUserMedia API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
 * [HTML Media Element API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)
