@@ -46,7 +46,7 @@ You can get more specific with the constraints by specifying details like the vi
 ```
 
 #### *Practice*
-Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options (if we use audio without headphones there will be horrific, eternal feedback). We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
+Let's clone the [get-user-media](https://github.com/turingschool-examples/get-user-media) repository and follow the instructions in the README to install dependencies and start the server. In our `public` directory, let's open the `script.js` file and add a call to `getUserMedia`. For now, let's only pass in `{ video: true }` as options (if we use audio without headphones, there will be horrific, eternal feedback). We should log a success or error message to the console depending on what happens. When we grant permission to access our device, we should see our green webcam light turn on.
 
 ### The MediaStream Object
 Assuming you have made the API call correctly and the user grants permission to access their media devices, the promise returned from `getUserMedia()` will resolve with a [MediaStream Object](https://developer.mozilla.org/en-US/docs/Web/API/MediaStream).
@@ -97,6 +97,13 @@ video.onloadedmetadata = (event) => {
 
 Remember we said the `video` element was a special HTML Media Element. This is where we are going to use that special API to leverage the events and methods on our video. In this code, we are setting an event handler for the `onloadedmetadata` event of our video. This event will fire whenever our video metadata (e.g. the source) is ready. When it's ready, we use another special method on the video element called `play` to play our stream. Take a look at the [HTML Media Element API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement) to see additional events and methods that are available to us with video and audio elements.
 
+This syntax can be made even simpler by adding the [autoplay](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) attribute to the video element in our HTML. When specifying that attribute, we can simplify our javascript to:
+
+```javascript
+var video = $('video'); 
+video.src = window.URL.createObjectURL(mediaStream);
+```
+
 ### Media Element Controls
 Media Elements (`video` and `audio` tags) can take an optional attribute `controls`. If we add this attribute to our video element:
 
@@ -106,14 +113,47 @@ Media Elements (`video` and `audio` tags) can take an optional attribute `contro
 
 We'll see the default set of controls that the element comes with when we re-render the page. You'll notice you can pause and play the video, and you'll see a timeline with a progress bar for the duration of the video. Because this is a live stream, there is no start and end point, so the progress bar isn't very useful in our case. We'll be able to make more use of this when we get into recording our video rather than just displaying it.
 
-### Recording Audio & Video
-Let's try recording the livestream from our webcam. Stash or commit any changes you've made to the example codebase so far and pull down the [recording branch]() (to come) from the practice repo. Switch to this branch and you'll see some boilerplate code set up for you to enable video recording. You'll want to be wearing headphones for this exercise.
+### Recording With the MediaRecorder API
+In order to capture and save the audio or video we are streaming, we need to leverage the [MediaRecorder API](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder).
+
+The MediaRecorder API has methods that allow you to start and stop a recording. There are also several events you can hook into in order to extract the recording data.
+
+For example, while you are recording, the MediaRecorder will continuously generate little bits of information in chunks or [blobs](https://developer.mozilla.org/en-US/docs/Web/API/Blob). Each of these blobs represents a small portion of the total recording - immutable, raw data.
+
+In order to access these blobs, we could hook into the MediaRecorder's [ondataavailable](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder/ondataavailable) event. Within this event, we can access each of the current blobs through `event.data`:
+
+```javascript
+recorder.ondataavailable = (event) => {
+  console.log(event.data); // logs an array of the most recently generated blobs
+}
+```
+
+By themselves, we can't do much with these tiny blobs. But we might want to store them somewhere safe so that we can reconstruct the entire recording at a later time. For example, we might want to push each of them into a pre-existing array, that we can then use to create a new blob that represents the entire recording:
+
+```javascript
+let babyBlobs = [];
+
+recorder.ondataavailable = (event) => {
+  babyBlobs.push(event.data);
+};
+
+let fullRecording = new Blob(babyBlobs);
+```
+
+We could now set the source of a new video element using our `fullRecording` and play our recorded video.
+
 
 #### *Practice: On Your Own*
-* We want two video elements on our page: one that shows your live stream from the webcam, and another that will display the recorded version when it's ready
+Let's try recording the livestream from our webcam. Stash or commit any changes you've made to the example codebase so far and pull down the [recording branch](https://github.com/turingschool-examples/get-user-media/tree/recording) from the practice repo. Switch to this branch and you'll see some boilerplate code set up for you to enable video recording. You'll want to be wearing headphones for this exercise.
+
+**Requirements:**
+
+* We want two video elements on our page: one that shows your live stream from the webcam, and another that will display and loop the recorded version when it's ready
 * Beneath the live stream video, we want two buttons: one that will toggle between 'Start Recording' and 'Stop Recording', and one that will 'Display the Recording' in the second video element
-* The 'Display Recording' button can only be clicked after a recording has been made (i.e. a user clicks 'start recording' then 'stop recording'). When the 'Display Recording' button is clicked, it will update the second video element with the recorded video.
+* The 'Display Recording' button can only be clicked after a recording has been made (i.e. a user clicks 'start recording' then 'stop recording'). When the 'Display Recording' button is clicked, it will update the recorded video element with the recorded video.
 * The recorded video element should have controls that allow you to pause/play the recording
+
+When you've completed the exercise, you can compare your work against the solution in the `working` branch of the repo.
 
 ### Resources 
 
