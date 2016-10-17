@@ -25,7 +25,7 @@ Which generates a file like this:
 ```
 import { test } from 'qunit';
 import moduleForAcceptance from 'super-rentals/tests/helpers/module-for-acceptance';
-
+a
 moduleForAcceptance('Acceptance | home page');
 
 test('visiting /home-page', function(assert) {
