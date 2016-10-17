@@ -5,6 +5,13 @@ tags: jquery, javascript
 
 jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, it's JavaScript. It gives our JavaScript super powers. It's used on about 78% of the top million web pages. So, it's worth while getting comfortable with it.
 
+#### Loading the jQuery library
+
+```js
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="path/to/your/jquery.min.js"><\/script>')</script>
+```
+
 Let's say that we have a page with the following markup?
 
 ```html
