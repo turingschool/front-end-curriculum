@@ -116,7 +116,13 @@ We'll see the default set of controls that the element comes with when we re-ren
 ### Recording With the MediaRecorder API
 In order to capture and save the audio or video we are streaming, we need to leverage the [MediaRecorder API](https://developer.mozilla.org/en-US/docs/Web/API/MediaRecorder).
 
-The MediaRecorder API has methods that allow you to start and stop a recording. There are also several events you can hook into in order to extract the recording data.
+Creating a new instance of a MediaRecorder returns an object that contains methods that allow you to start and stop a recording:
+
+```javascript
+let recorder = new MediaRecorder(mediaStream);
+```
+
+It takes a single argument that must be a mediaStream object. (This is the object that would be returned from a call to `getUserMedia`.) It also has several events you can hook into in order to extract the recording data.
 
 For example, while you are recording, the MediaRecorder will continuously generate little bits of information in chunks or [blobs](https://developer.mozilla.org/en-US/docs/Web/API/Blob). Each of these blobs represents a small portion of the total recording - immutable, raw data.
 
