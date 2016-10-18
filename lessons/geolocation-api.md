@@ -88,29 +88,23 @@ navigator.geolocation.clearWatch(watchId);
 ## Practice
 Let's practice using the geolocation API to pin ourselves on a map.
 
-**Step 1: Get an API Key**
-
+##### Step 1: Get an API Key
 We'll use the [Google Maps API](https://developers.google.com/maps/) to generate our map and display our marker. You'll first need to get an API key [here](https://developers.google.com/maps/documentation/javascript/get-api-key#key). Accept the terms and conditions and provide them with an arbitrary name for your application.
 
-**Step 2: Create an HTML file**
-
+##### Step 2: Create an HTML file
 Create an HTML file and save it anywhere on your computer. You'll be able to open this file in a browser and still see the full effect without having to set up an entire application. We will be bad programmers and use internal style tags and scripts for our CSS and JavaScript.
 
-
-**Step 3: Add a map element**
-
+##### Step 3: Add a map element
 In your HTML, add a `div` tag with an ID so that you can access it later in your JavaScript with `document.getElementByID(id)`. This is where we will insert our map.
 
-**Step 3: Load the Google Maps API**
-
+##### Step 4: Load the Google Maps API
 At the end of the body section, add a script tag to access the google maps API. The tag should have both an `async` and a `defer` property. (See documentation [here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/script)). The source attribute should be:
 
 `https://maps.googleapis.com/maps/api/js?key=<your API key>&callback=createMap`
 
 Notice the parameter portion of the source URL that specifies `callback=createMap`. This tells us that once the API is fully loaded and ready to use, we want to call the function `createMap`. 
 
-**Step 4: Add a `createMap` function**
-
+##### Step 5: Add a `createMap` function
 Let's add another script tag to our HTML (directly above our Google Maps script tag) file with a `createMap` function:
 
 ```html
@@ -127,8 +121,7 @@ Let's add another script tag to our HTML (directly above our Google Maps script 
 </script>
 ```
 
-**Step 6: Use the Google Maps API Reference**
-
+##### Step 6: Use the Google Maps API Reference
 To fill out the `createMap` function, you'll want to use what you've learned about geolocation and check out the [Google Maps API Reference](https://developers.google.com/maps/documentation/javascript/3.exp/reference) to learn how to create a new google [map](https://developers.google.com/maps/documentation/javascript/maptypes), re-center it, and add a [marker](https://developers.google.com/maps/documentation/javascript/markers).
 
 When you've completed the exercise, you can compare your work against the solution found [here](https://gist.github.com/brittanystoroz/46c6741b20678caa0d6c69cdc931893c).
