@@ -11,7 +11,7 @@ In it's simplest form, the application should have the following:
 - Two input fields
   - One for the title of the bookmark
   - One for the URL that the bookmark should link to
-- One for creating the bookmark and adding it to the page
+- One button for creating the bookmark and adding it to the page
 - A section for all of the created bookmarks; each bookmark should display:
   - The title of the bookmark
   - The URL of the bookmark (this should be clickable and link to the URL)
@@ -42,6 +42,26 @@ In it's simplest form, the application should have the following:
 
 - Add a "Clear Read Bookmarks" button which clears all the read bookmarks when clicked.
 - The user should **not** to be able to add a URL that isn't valid.
+
+#### Layout comps
+
+##### Desktop layout:
+
+![Linked List Desktop][desktop-base]
+
+##### Mobile layout:
+
+![Linked List Mobile][mobile-base]
+
+[Download the Linked List Logo here.](https://drive.google.com/file/d/0B_lPnjyMN6-CWjBGME1BUUgxTE0/view?usp=sharing)
+
+##### Color and font spec:
+
+![Design Specs][design-specs]
+
+[desktop-base]: /assets/images/projects/linked-list/linked-list-01.png
+[mobile-base]: /assets/images/projects/linked-list/linked-list-02.png
+[design-specs]: /assets/images/projects/linked-list/linked-list-03.png
 
 ## Rubric
 
