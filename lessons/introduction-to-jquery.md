@@ -28,7 +28,7 @@ Play around with the following example.
 
 - Remove the line of JavaScript.
 - Change the replace text to something else.
-- Change the `h1` selector to `.important message`
+- Change the `h1` selector to `.important-message`
 - Add the following line of code: `$('h1').css('backgroundColor', 'red');`
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="yJexXR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/yJexXR/">Your First Lines of jQuery</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -43,7 +43,7 @@ This is the crux of front-end engineering. We present a user interface and then 
 
 Let's take a look at the syntax and then we'll talk about what's happening.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="zBrJpV" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/zBrJpV/">Your First Lines of jQuery</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="zBrJpV" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/gMPdzx/">Event Listeners</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 The following things are happening in the example above:
 
