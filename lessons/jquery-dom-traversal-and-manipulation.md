@@ -231,7 +231,7 @@ jq.text('New text.');
 
 ### `prepend()`
 
-`html()` replaces the entire contents of an element. `append()` adds new content onto the beginning of it.
+`html()` replaces the entire contents of an element. `prepend()` adds new content onto the beginning of it.
 
 In order to take both `append()` and `prepend()` for a spin, let's try the following code in the exercise below.
 
