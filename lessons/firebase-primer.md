@@ -35,6 +35,7 @@ This allows for real-time updates and makes our applications pretty fast
 Look through these resources before tomorrow. Please have the tutorial finished by end of today. We will be going through an implementation of Grudge-Box with Firebase.
 
 During the work time please look into the following resources.
+
 - [Getting Started with Firebase on the Web](https://www.youtube.com/watch?v=k1D0_wFlXgo)
 
 - [Getting Started with Firebase Storage on the Web](https://www.youtube.com/watch?v=SpxHVrpfGgU&index=13&list=PLl-K7zZEsYLnJVX_0zbKytptZGugPIbJR)
