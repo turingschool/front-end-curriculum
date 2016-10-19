@@ -5,11 +5,9 @@ title: Shoot The Breeze
 ## Specification
 
 ### Main Goals
-
-  - App must be broken out into a _minimum_ of 8 components
   - All components must be tested using Enzyme
 		- You do not need to test authentication.
-  - App must be robustly tested using both integration and unit tests
+  - App must be robustly tested using unit tests
   - Application must use Firebase to store chats
   - Webpack for build tools
 
