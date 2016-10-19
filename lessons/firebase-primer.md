@@ -6,7 +6,7 @@ tags: firebase
 
 # Introduction to Firebase.
 
-### What is Firebase Intro?
+### What is Firebase?
 
 Firebase is real time database which provides an API that allows developers to store and sync data across multiple clients. It allows us to import a full back-end into our front end application.  It gives us some really cool things like OAuth, Web-Sockets, and a Real-Time database.
 
@@ -29,14 +29,20 @@ This is important for us because within firebase we have the ability to choose i
 ### Real-Time Database
 The Firebase Realtime Database is a cloud-hosted database. Data is stored as JSON and synchronized in realtime to every connected client. When you build cross-platform apps with our iOS, Android, and JavaScript SDKs, all of your clients share one Realtime Database instance and automatically receive updates with the newest data.
 This allows for real-time updates and makes our applications pretty fast
+
 ### Your Turn.
+
 Look through these resources before tomorrow. Please have the tutorial finished by end of today. We will be going through an implementation of Grudge-Box with Firebase.
 
 During the work time please look into the following resources.
 - [Getting Started with Firebase on the Web](https://www.youtube.com/watch?v=k1D0_wFlXgo)
+
 - [Getting Started with Firebase Storage on the Web](https://www.youtube.com/watch?v=SpxHVrpfGgU&index=13&list=PLl-K7zZEsYLnJVX_0zbKytptZGugPIbJR)
+
 - [Getting Started with Firebase Hosting on the Web](https://www.youtube.com/watch?v=meofoNuK3vo&list=PLl-K7zZEsYLmnJ_FpMOZgyg6XcIGBu2OX&index=11)
+
 - [Getting started with Firebase Auth on the Web](https://www.youtube.com/watch?v=-OKrloDzGpU&list=PLl-K7zZEsYLmnJ_FpMOZgyg6XcIGBu2OX&index=8)
 
 Complete the following tutorial:
+
 - [Build a Real Time Chat Application](https://codelabs.developers.google.com/codelabs/firebase-web/index.html?index=..%2F..%2Findex#0)
