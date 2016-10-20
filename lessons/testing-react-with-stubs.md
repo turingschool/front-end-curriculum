@@ -69,15 +69,70 @@ One of the most difficult parts of learning how to test in JavaScript is the fac
 
 So let's spend some time talking about the tech stack we will use in this lesson - and what the other options are....
 
-## What Is a Test Runner: Mocha vs. Jest
+## Jasmine vs. Mocha vs. Jest vs. Enzyme
 
-## What is a Test Utility: Enzyme
+If you've done an [exercism exercise](http://exercism.io/languages/javascript/installing), you've used a spec framework called [Jasmine](http://github.com/pivotal/jasmine) (or actually more specifically [jasmine-node](https://github.com/mhevery/jasmine-node)). Jasmine included a test runner (the thing that finds your test files and runs them) AND an assertion library (the thing that lets you say things like `expect(something)to.eq(somethingElse)`) AND some other bells and whistles.
 
-## What Solutions/Libraries Can We Use
+When you wrote tests for [GameTime](http://frontend.turing.io/projects/game-time.html), or for our [data structures sessions](https://github.com/turingschool/data_structures_and_algorithms/blob/master/linked_lists/javascript/linkedList_test.js) you used a test runner called [MochaJS](https://mochajs.org/) and an assertion library called [ChaiJS](http://chaijs.com/).
+
+The problems you were solving were relatively simple. Well not the problems, but the set up. You had vanilla JS, maybe some jQuery, a little bit of putting things on the DOM... 
+
+The main difficulty in testing front-end applications is the nature of some of the advanced things that frameworks and libraries do for us. For example, React has a virtual DOM. Components have state, receive props, they have an entire life cycle. It's complicated stuff, and we want to try and make our tests simple.
+
+So it's not enough to just use Mocha + Chai or Jasmine
+
+###### We Want a Specialized Testing Tool for React
+
+The two major React testing tools right now are [Enzyme](https://github.com/airbnb/enzyme) and [Jest](https://facebook.github.io/jest).
+
+[Jest](https://facebook.github.io/jest) is created by Facebook and is actively in development. Anecdotally, it sort of sucked for a while and now is really wonderful. It also has a lot of features. For that reason, it is great to use but NOT great to learn with. We teach Mocha instead of Jasmine because mocha is light weight... and we'll teach Enzyme instead of Jest for the same reason.
+
+[Enzyme](https://github.com/airbnb/enzyme) is created by AirBnB. It is a `JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.`
+
+The lessons you learn in using Enzyme will translate to Jest - of if you started working in Angular and used their Angular testing tool called [Protractor](https://angular.github.io/protractor) and when someone creates a new framework called American Black Bear... and etc etc etc... 
+
+Enzyme is lightweight, so we will use some of our familiar testing tools in this lesson.
+
+##### Our Testing Stack
+
+- Mocha: To run our tests
+- Chai: To give us an assertion syntax
+- Enzyme: To give us special React testing ammenities
+- Babel: To translate our ES6 to ES5
+- Webpack: To manage the entire process
+- ______: To give us stubbing/spying/mocking ammenities
+
+You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much.
+
+Notice I left that last section blank. Let's talk about how we'll integrate mocks/stubs and spies into our tech stack next.
+
+##### Additional Resources: 
+
+- [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html)
+- [Jest](https://facebook.github.io/jest)
+
+##### Your Turn
+
+- Take the next ***10 minutes*** and review the Additional Resources list above: JavaScript Testing with Enzyme Lesson and the front page of the Jest website.
+  - ***Don't code along with the examples***, just read the overview. We'll work through examples in React later on today.
+- (Try to) answer the following questions
+  - What does it seem like the difference is between Jest and Enzyme for you?
+  - Does anything in the Enzyme lesson make more sense, or less sense, since the last time you read it?
+
+## Mocking/Stubbing/Spying Libraries
 
 #### Hand Rolling
 
 #### Sinon vs. TestDouble vs. Runner-Based Solutions
+
+## Setup the Testing Tech Stack
+
+- Mocha: To run our tests
+- Chai: To give us an assertion syntax
+- Enzyme: To give us special React testing ammenities
+- Babel: To translate our ES6 to ES5
+- Webpack: To manage the entire process
+- Sinon: To give us stubbing/spying/mocking ammenities
 
 ## Practice Specific Implementations
 
@@ -100,3 +155,5 @@ So let's spend some time talking about the tech stack we will use in this lesson
 ## Clarifying Questions
 
 ## Additional Resources
+
+- Blog: [Testing React Components with Enzyme and Mocha](https://semaphoreci.com/community/tutorials/testing-react-components-with-enzyme-and-mocha)
