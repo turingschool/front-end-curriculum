@@ -50,7 +50,26 @@ For the rest of this lesson - we'll focus on how to implement these solutions in
 - (Try to) answer the following questions
   - What is the difference between a mock, stub and spy?
   - When have you used these techniques already?
+
+## Alphabet Soup: Why Is It So Hard to Google React Testing?
+
+How many times have you been looking up example repositories and blog posts to try and figure out how to do something in JavaScript?
+
+Let's say you google 'testing localStorage in React'
+
+You find some stackoverflow answers, some blog posts, a few npm packages.
+
+The first example you click looks great, until you get to '...and we're testing this using Karma, Jest and Istanbul'
+
+Everything else about the scenario is correct, they're using React, they're storing info in localStorage... but you have no idea what Karma, Jest and Istanbul are, other than names of Power Ranger villains. It's hard to use the blog post to help yourself understand the concept because the tech stack seems wildly different.
+
+One of the most difficult parts of learning how to test in JavaScript is the fact that there are 14 different ways to do basically anything.
+
+So let's spend some time talking about the tech stack we will use in this lesson - and what the other options are....
+
 ## What Is a Test Runner: Mocha vs. Jest
+
+## What is a Test Utility: Enzyme
 
 ## What Solutions/Libraries Can We Use
 
