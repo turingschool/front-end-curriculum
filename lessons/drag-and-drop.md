@@ -13,12 +13,14 @@ By the end of this lesson, you will:
 * Recognize how it can be used to enhance user interfaces
 
 ## Working with the Drag & Drop API
+
 You've probably seen a number of user interfaces that allow you to grab multiple files off of your computer, and literally drag them onto the website, that would then upload them or process their information in some way. Or you might be familiar with interfaces like [Trello](https://trello.com/), that allow you to [move elements around on the page](https://www.youtube.com/watch?v=xky48zyL9iA&t=2m11s), aligning cards in different lists. It's pretty wild and pretty convenient...for most.
 
 Making drag and drop an intuitive user interaction takes a lot of work. For developers and other tech-savvy people, it usually feels intuitive right away. For others, however, it can be very difficult to discover and understand how to use the feature without explicit explanations or visual cues. In this lesson, we'll go over how to implement drag and drop, and some of the best practices for doing it in a way that makes it as intuitive as possible.
 
 ## Drag & Drop Requirements
-A standard drag and drop interface will require three things: 
+
+A standard drag and drop interface will require three things:
 
 * an element that can be dragged
 * the data or information we want transferred upon a successful drop
@@ -28,9 +30,11 @@ The drop target is another element on the page where a user can let go of the it
 
 
 ### Follow Along: Practice Exercise
-We're going to implement a Trello-style drag and drop to-do list. Grab the boilerplate HTML file [here](https://gist.github.com/brittanystoroz/cbfb8639140666812b681c53c5625838), and save it somewhere on your computer. You'll be able to open this file directly in your browser and see the full effect of drag and drop as we implement it.
+
+We're going to implement a Trello-style drag and drop to-do list. Use [this CodePen](https://codepen.io/team/turing/pen/ozQOJw?editors=1010#0) or grab the boilerplate HTML file [here](https://gist.github.com/brittanystoroz/cbfb8639140666812b681c53c5625838), and save it somewhere on your computer. You'll be able to open this file directly in your browser and see the full effect of drag and drop as we implement it.
 
 ## Making Items Draggable
+
 Elements on the page can be made draggable simply by adding a `draggable` attribute:
 
 ```html
@@ -42,6 +46,7 @@ Before adding this attribute to the list elements in your to-do list, try draggi
 Add the draggable attribute to each `<li>` tag and try again. Now you should see a faintly opaque copy of the dragged element following your mouse around until you let go.
 
 ## Working with Drag Events
+
 Now that we have our draggable elements, we need to wire up the drop zone and define the data that we want to transfer upon dropping an element. Both of these require that we hook into several of the built-in [drag events](https://developer.mozilla.org/en-US/docs/Web/API/DragEvent) available to us.
 
 The events that make drag and drop possible are similar to your standard [mouse events](https://developer.mozilla.org/en-US/docs/Web/Events) that you might already be familiar with. (e.g. 'click', 'mouseover', etc.) Drag events build on top of this and offer us a very detailed lifecycle to work with. Here are the various events fired as you perform a drag with your mouse:
@@ -56,9 +61,11 @@ The events that make drag and drop possible are similar to your standard [mouse 
 These events are important not only for implementing the functionality, but also for providing user feedback at each phase of performing a drag-and-drop.
 
 ## Creating a Drop Zone
+
 The events we'll need to work with when creating a drop zone are `dragenter`, `dragleave`, `dragover`, and `drop`.
 
 ### Drop
+
 We want to target the completed `ul` element as our drop zone. In order to do this, we'll attach a listener to this element for the `drop` event:
 
 ```javascript
@@ -87,7 +94,8 @@ $('#completed')
 We should now see our 'Dropped!' message logged to the console when we try dragging a list element into the zone.
 
 ### Drag Enter & Drag Leave
-Remember we said that drag and drop functionality isn't always intuitive for all users. Therefore, we must be very generous with the user feedback we provide throughout the drag-and-drop lifecycle. First, we'll want to indicate to a user when they have successfully positioned their mouse over the drop zone by giving them some sort of visual cue. Let's add a class to our CSS called `drop-zone-activated` and set `border-color: #000`. 
+
+Remember we said that drag and drop functionality isn't always intuitive for all users. Therefore, we must be very generous with the user feedback we provide throughout the drag-and-drop lifecycle. First, we'll want to indicate to a user when they have successfully positioned their mouse over the drop zone by giving them some sort of visual cue. Let's add a class to our CSS called `drop-zone-activated` and set `border-color: #000`.
 
 We can hook into the `dragenter` and `dragleave` events to toggle this class depending on if a user's mouse is positioned within the drop zone:
 
@@ -107,24 +115,26 @@ You'll notice when you actually perform the drop event, the class remains activa
 
 ```javascript
 $('#completed').on('drop', function(event) {
-    event.preventDefault();
-    console.log('Dropped!');
-    $(this).removeClass('drop-zone-activated');
-  }) ;
+  event.preventDefault();
+  console.log('Dropped!');
+  $(this).removeClass('drop-zone-activated');
+}) ;
 ```
 
 ## Transferring Data
-We now have our draggable list items and a drop zone to place them in, but we aren't doing anything useful yet. The core functionality of drag and drop is the transfer of data from one element to another. 
+
+We now have our draggable list items and a drop zone to place them in, but we aren't doing anything useful yet. The core functionality of drag and drop is the transfer of data from one element to another.
 
 We want to physically **move** the list item into our drop zone, removing it from the to do list. Again, we're going to make use of some drag events to define how this should be handled.
 
 ### Defining Data
+
 A good time to define the data we want to transfer is in the very beginning of the process, on the `dragstart` event. Because `dragstart` is fired as soon as we grab our draggable element, we need to attach a listener to our draggable elements to handle it:
 
 ```javascript
-  $('#not-completed li').on('dragstart', function(e) {
-    e.originalEvent.dataTransfer.setData("listItem", $(this).index());
-  });
+$('#not-completed li').on('dragstart', function(e) {
+  e.originalEvent.dataTransfer.setData("listItem", $(this).index());
+});
 ```
 
 *NOTE: Because we are using jQuery, we are recieving a jQuery event object when we run our event handlers. This object is slightly different than the native event you get when using vanilla JavaScript. The jQuery event object does not have a `dataTransfer` property. Because of this, we have to call `setData()` on `e.originalEvent.dataTransfer` rather than just `e.dataTransfer`.*
@@ -136,6 +146,7 @@ Drag events give you access to an object called `dataTransfer`, that provides yo
 The second argument is the actual data you are transferring. In our example, we're actually only going to transfer the `index` value of the list item we've selected. So if we select the third item in the list, our data is going to be 2.
 
 ### Retrieving Data on Drop
+
 When the `drop` event fires, we want to access the data we prepared for transfer with `getData()`:
 
 ```javascript
@@ -163,6 +174,7 @@ If we refresh our page, we should now be able to move to do list items into the 
 ## Best Practices for Implementing a User-Friendly Drag-n-Drop
 
 ### Offer Alternative Methods
+
 The first and most important step in creating a user-friendly interface with drag and drop is to always offer another way to perform the same interaction. That's right. Drag and drop is an **enhancement** for most users, not necessarily a solution. Many users with motor challenges might have a difficult time with the drag and drop method. (I, for one, have a terrible time dragging and dropping when simply using a trackpad on a laptop rather than a mouse.)
 
 In the example we just built, an alternative interaction to drag and drop might be an arrow button placed in between the two unordered lists. Clicking this button would manually move one of the list items to the completed column.
@@ -170,6 +182,7 @@ In the example we just built, an alternative interaction to drag and drop might 
 If you are using drag and drop for uploading files, you might want to include the standard file upload input as an alternative interaction.
 
 ### Provide Event Feedback
+
 Giving user consistent visual cues as to what's happening is crucial to making drag and drop an effective interaction. We already added a highlighted border to our drop zone when we enter and leave the zone, but we can go even further in several ways:
 
 * Explicitly state somewhere on the page "Drag to-do items into the completed list when finished"
@@ -178,8 +191,10 @@ Giving user consistent visual cues as to what's happening is crucial to making d
 * Change the cursor when in the process of dragging an element (CSS: `cursor: 'grabbing'`)
 
 ### Probably just use jQuery UI
+
 The native drag and drop API has been criticized for being buggy and somewhat difficult to work with. In order to ensure better cross-browser compatibility and a seamless user experience, you might want to use [jQuery UI](https://jqueryui.com/). They offer a drag and drop interface that is easier to work with and includes built-in animations and effects that provide nicer user feedback.
 
 ## Resources
+
 * [Drag and Drop MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
 * [jQuery UI](https://jqueryui.com/)
