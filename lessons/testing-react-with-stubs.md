@@ -43,6 +43,13 @@ For the rest of this lesson - we'll focus on how to implement these solutions in
 
 [Testing JavaScript in General with Mocks, Stubs and Spies](https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/testing_javascript-mocks_and_stubs.markdown)
 
+##### Your Turn
+
+- Take the next ***10 minutes*** and re-read the JavaScript Testing Lesson above.
+  - Don't code along with the examples, just read the overview. We'll work through examples in React later on today.
+- (Try to) answer the following questions
+  - What is the difference between a mock, stub and spy?
+  - When have you used these techniques already?
 ## What Is a Test Runner: Mocha vs. Jest
 
 ## What Solutions/Libraries Can We Use
