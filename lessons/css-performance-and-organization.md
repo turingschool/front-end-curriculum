@@ -55,15 +55,15 @@ As we can see in this example, selectors are read starting on the right with the
 An _ID Rule_ has a id selector as its key selector:
 
 ```css
-aside#main {...}
-p#footer {...}
-button#hero:hover {...}
+aside #main {...}
+p #footer {...}
+button #hero:hover {...}
 ```
 
 Similarly, a _Class Rule_ has a class selector as its key selector:
 
 ```css
-section.container {...}
+section .container {...}
 .three-column {...}
 .main-content {...}
 ```
@@ -101,8 +101,8 @@ By putting an `id` or `class` on a tag, you are already clearly indicating where
 For example:
 
 ```css
-nav#primary-navigation {...}
-p.secondary-content {...}
+nav #primary-navigation {...}
+p .secondary-content {...}
 ```
 
 would be better written like this:
@@ -117,7 +117,7 @@ would be better written like this:
 Using a long list of tags and selectors to narrow down where you want a style applied is inefficient from a systems perspective and it's also inefficient from a human point of view -- if it's too complicated for another developer (or future-you) to figure out where to make a change to CSS reasonably quickly, a new CSS rule may just get slapped onto the bottom of the stylesheet. That will result in styles that are bloated and unwieldy to manage. Here's an example of what a long list of selectors might look like:
 
 ```css
-header nav ul li a.nav-link {...}
+header nav ul li a .nav-link {...}
 }
 ```
 
