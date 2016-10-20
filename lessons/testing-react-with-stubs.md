@@ -19,6 +19,8 @@ By the end of this lesson, you will know/be able to:
 * Be Familiar with Libraries Used to Mock/Stub/Spy: Sinon vs. TestDouble vs. Runner-Based Solutions
 * Practice a Specific Implementation with Mocha and Sinon
 
+## RoadMap
+
 ## Hard Things About Testing React
 
 There are times that we do complicated things with React. For example:
