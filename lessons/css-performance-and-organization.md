@@ -152,8 +152,10 @@ This takes the idea of a key selector one step further. Rule hashes break your s
 
 ```css
 section p {...}
+nav {...}
 .hero-unit p {...}
 #sidebar p {...}
+.main-content {...}
 ```
 
 This is nice because it means the browser isn't looking through every selector. It can very quickly narrow its search to find which selectors could match.
