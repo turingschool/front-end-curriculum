@@ -121,7 +121,7 @@ header nav ul li a.nav-link {...}
 }
 ```
 
-You can see that this is very specific. We won't be able to reuse these styles, simply because we've made them so locked in to the context of our main navigation. But if we think about it, it's very possible that we might want to apply these same styles to other elements on our site. It would be nice to write them once, then apply the class to any HTML tags as needed. We can do that with just a little clean up:
+You can see that this is extremely specific. We won't be able to reuse these styles or easily refactor our code, simply because we've made them so locked into this particular structure for navigation in our header. But if we think about it, it's very possible that we will want to refactor this HTML at some point. With this multi-selector approach, we'll break our styles if we refactor our HTML. It would be nice to write the styles once, then have the flexibility to apply the class to any HTML tags as needed. We can do that with just a little clean up:
 
 ```css
 .nav-link {...}
@@ -132,7 +132,7 @@ We've eliminated unnecessary specificity, made our CSS more reusable, and it sti
 
 ### Performance Beyond Selectors
 
-In the early 2000's, how developers structured their CSS selectors could have a big impact on a page's efficiency. Understanding how the browser read through and gave precedence to certain key selectors over others was a critical skill to have if you wanted your site to work well. Today, conforming to these guidelines that were intended to optimize page performance allows us to write modular and understandable styles that make it easier and faster for _humans_ to understand our CSS. These early best practices are still relevant and useful but there have been advances, [as outlined by Nicole Sullivan here](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/), that allow us to write CSS in a way that makes the most sense for the site architecture we want, rather than what selectors are going to be most efficient to render.
+In the early 2000's, how developers structured their CSS selectors had a big impact on a page's efficiency. Understanding how the browser read through and gave precedence to certain key selectors over others was a critical skill to have if you wanted your site to work well. Today, conforming to the guidelines that were necessary to optimize page performance allows us to write modular and understandable styles that make it easier and faster for _humans_ to understand our CSS. These early best practices are still relevant and important but there have been advances, [as outlined by Nicole Sullivan here](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/), that allow us to write CSS in a way that makes the most sense for the site architecture we want, rather than which selectors are going to be most efficient to render.
 
 #### Style Sharing
 
@@ -174,7 +174,7 @@ Jonathan proposes grouping your HTML elements in your styles using 5 primary cat
 
 #### Base Styles
 
-_Base_ level styles may be applied to the whole site, and are limited to element selectors like `html`, `body` , `h1, h2, h3` and CSS resets/normalizers. Styles in this base category set the foundation for everything else you add to build your site. Ideally, base category styles are very minimal. These may be setting the margin on `body`, a background color for the page, or pulling in a custom font to be used throughout the site.
+_Base_ level styles may be applied to the whole site, and are limited to tag, or element, selectors like `html`, `body` , `h1, h2, h3` and CSS resets/normalizers. Styles in this base category set the foundation for everything else you add to build your site. Ideally, base category styles are very minimal. These may be setting the margin on `body`, a background color for the page, or pulling in a custom font to be used throughout the site.
 
 #### Layout Styles
 
