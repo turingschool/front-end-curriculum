@@ -1,68 +1,74 @@
 ---
-title: 
+title: Testing React: Stubs/Spies/Mocks
 length: 
-tags: 
+module: 2
+tags: react, testing, enzyme, stub, spy, mock
 ---
 
-### Goals
+# Testing React: Stubs/Spies/Mocks
+
+## Repository
+
+[Lesson Repository](https://github.com/turingschool-examples/react-testing-with-stubs)
+
+## Goals
 
 By the end of this lesson, you will know/be able to:
 
-* Goal 1
-* Goal 2
-* Goal 3
+* Understand the Concept of a Test Runner: Mocha vs Jest
+* Be Familiar with Libraries Used to Mock/Stub/Spy: Sinon vs. TestDouble vs. Runner-Based Solutions
+* Practice a Specific Implementation with Mocha and Sinon
 
-### Structure
+## Hard Things About Testing React
 
-#### Hook: <5 min
+There are times that we do complicated things with React. For example:
 
-* Captures student interest. 
-* Why is this lesson important? 
-* Examples: demonstration, story, problem to solve
+- Write to localStorage
+- Hit an external API
+- Post to Firebase
+- Respond differently based on time of day
 
-#### Opening: 1-2 min
+Testing a React component that does any of these things is in direct conflict with these rules of testing.
 
-* What is this lesson about? 
-* What will students know or be able to do by the end of the class? What are the goals?
+- A test suite should be able to run without an internet connection
+- A test suite should run as quickly as possible so that you can run it frequently during your development process
+- A test suite should NEVER hit or share the same storage resources as your production users
+- A test suite should have the same outcome no matter what time of day, or number of times you run it (i.e. no intermittant failures)
 
-#### Introduction to New Material (I do)
+We can solve these tricky problems in React (and in other libraries/languages) by using concepts called ***mocking***, ***stubbing*** and ***spying***
 
-* instructor explains, shows, or demonstrates
-* Examples: lecture, slides, code demonstration
+For the rest of this lesson - we'll focus on how to implement these solutions in React. Check out the additional resources to learn about mocking, stubbing and spying in JavaScript testing in general.
 
-#### Guided Practice (We do)
+##### Additional Resources: 
 
-* instructor and students both "doing"
-* Examples: code-along, hot seat, discussion, question/answer, students telling instructor what to write, students pairing with close guidance from instructor
+[Testing JavaScript in General with Mocks, Stubs and Spies](https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/testing_javascript-mocks_and_stubs.markdown)
 
-#### Independent/Pair Practice (You do)
+## What Is a Test Runner: Mocha vs. Jest
 
-* students "doing", instructor available as lifeline
-* Examples: questions in a Gist, implementing feature, creating diagram
+## What Solutions/Libraries Can We Use
 
-#### The Closing: ~5 min
+#### Hand Rolling
 
-* Check for understanding
-* Discuss any clarifications or student misconceptions
-* Review goals, further resources, and next steps
+#### Sinon vs. TestDouble vs. Runner-Based Solutions
 
-### Possible questions and/or misunderstandings
+## Practice Specific Implementations
 
-* What questions might students ask during class, and how will you respond? 
-* What concepts might students misunderstand, and why? 
+- Write to localStorage
+  - I do
+  - You do
 
-### Slides
+- Hit an external API
+  - I do
+  - You do
 
-* [Link to optional slides]()
+- Post to Firebase
+  - I do
+  - You do
 
-### Video
+- Respond differently based on time of day
+  - I do
+  - You do
 
-* [Link to optional video]()
+## Clarifying Questions
 
-### Repository
-
-* [Link to optional repo]()
-
-### Outside Resources / Further Reading
-
-* [Link to first outside resource]()
+## Additional Resources
