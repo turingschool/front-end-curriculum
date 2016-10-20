@@ -86,7 +86,7 @@ A _Universal Rule_ is applied to the entire HTML page.
 
 Our styles are matched starting with the key selector then moving left. The browser will continue to look further up this tree of selectors as it narrows down the matches for the rule, until it either finds the match or abandons it because of a mismatch.
 
-This is a primary concept to understand: the rule categories exist to filter out irrelevant rules so the systems trying to filter them don't waste time trying to match things unnecessarily. Our CSS will be more effective for both the systems rendering it and the people working with it if we keep the number of rules needed for each element to a minimum.
+This is a primary concept to understand: the rule categories exist to filter out irrelevant rules so the systems trying to filter them doesn't waste time trying to match things unnecessarily. Our CSS will be more effective for both the systems rendering it and the people working with it if we keep the number of rules needed for each element to a minimum.
 
 The rules listed above are in order of efficiency. Example: only ID rules that match an element's `id` will be checked, only Class rules for a particular `class` will be checked, only Tag rules that match a specific `tag` will be checked, and Universal rules will always be checked.
 
