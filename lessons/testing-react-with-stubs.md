@@ -91,20 +91,22 @@ The two major React testing tools right now are [Enzyme](https://github.com/airb
 
 The lessons you learn in using Enzyme will translate to Jest - of if you started working in Angular and used their Angular testing tool called [Protractor](https://angular.github.io/protractor) and when someone creates a new framework called American Black Bear... and etc etc etc... 
 
-Enzyme is lightweight, so we will use some of our familiar testing tools in this lesson.
+Enzyme is lightweight, so we will use some of our familiar testing tools in this lesson - we'll use Mocha to run things and Chai to make our assertions.
+
+##### Mocks/Spies/Stubs
+
+Finally, we want to bring in a library to help us create mocks/stubs and spies easily. From the earlier reading, we know that Sinon can help us with that. So we'll bring that in as well.
 
 ##### Our Testing Stack
 
+- Webpack: To manage the entire process
+- Babel: To translate our ES6 to ES5
 - Mocha: To run our tests
 - Chai: To give us an assertion syntax
 - Enzyme: To give us special React testing ammenities
-- Babel: To translate our ES6 to ES5
-- Webpack: To manage the entire process
-- ______: To give us stubbing/spying/mocking ammenities
+- Sinon: To give us stubbing/spying/mocking ammenities
 
-You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much.
-
-Notice I left that last section blank. Let's talk about how we'll integrate mocks/stubs and spies into our tech stack next.
+You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much. In the next sections we'll talk about exactly how we set up this test stack, and try to get examples of testing the hard to test with React.
 
 ##### Additional Resources: 
 
@@ -118,12 +120,6 @@ Notice I left that last section blank. Let's talk about how we'll integrate mock
 - (Try to) answer the following questions
   - What does it seem like the difference is between Jest and Enzyme for you?
   - Does anything in the Enzyme lesson make more sense, or less sense, since the last time you read it?
-
-## Mocking/Stubbing/Spying Libraries
-
-#### Hand Rolling
-
-#### Sinon vs. TestDouble vs. Runner-Based Solutions
 
 ## Setup the Testing Tech Stack
 
