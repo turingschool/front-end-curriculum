@@ -194,6 +194,8 @@ Giving user consistent visual cues as to what's happening is crucial to making d
 
 The native drag and drop API has been criticized for being buggy and somewhat difficult to work with. In order to ensure better cross-browser compatibility and a seamless user experience, you might want to use [jQuery UI](https://jqueryui.com/). They offer a drag and drop interface that is easier to work with and includes built-in animations and effects that provide nicer user feedback.
 
+## File Uploads with Drag and Drop
+
 ## Resources
 
 * [Drag and Drop MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/HTML_Drag_and_Drop_API)
