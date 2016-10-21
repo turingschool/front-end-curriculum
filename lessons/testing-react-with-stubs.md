@@ -132,6 +132,8 @@ You will see many different tech stacks as you google things - but this is our t
 
 ## Practice Specific Implementations
 
+- Shallow vs Mount vs Render
+
 - Write to localStorage
   - I do
   - You do
