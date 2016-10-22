@@ -181,7 +181,7 @@ Student chooses an additional feature or performance optimization to add to the 
 * 4 - Team members leverage github to have discussions about their
   solutions, track tasks/issues, and showcase a clear workflow process
   in their use of PRs.
-* 3 - Team members employ PRs and issues to both manage their work and
+* 3 - Team members employ PRs and [issues](https://guides.github.com/features/issues/) to both manage their work and
   communication/collaboration around executing the tasks.
 * 2 - Team members shared equitably in the workload, however there are
   only a few pull requests, which are not labeled or documented very
