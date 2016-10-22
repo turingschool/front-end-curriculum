@@ -168,3 +168,16 @@ Student chooses an additional feature or performance optimization to add to the 
 * 2 - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 * 1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0 - The application was not checked into version control.
+
+### Collaboration
+
+* 4 - Team members leverage github to have discussions about their
+  solutions, track tasks/issues, and showcase a clear workflow process
+  in their use of PRs.
+* 3 - Team members employ PRs and issues to both manage their work and
+  communication/collaboration around executing the tasks.
+* 2 - Team members shared equitably in the workload, however there are
+  only a few pull requests, which are not labeled or documented very
+  well.
+* 1 - A gross majority of the project was executed by one team member.
+* 0 - The team did not utilize pull requests via github to collaborate.
