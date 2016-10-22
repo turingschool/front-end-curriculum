@@ -146,13 +146,6 @@ Student chooses an additional feature or performance optimization to add to the 
 * 1 - The application is missing 3 or more smaller features or 1 major feature essential to having a complete application.
 * 0 - The application is unusable.
 
-### User Interface
-
-* 4 - The application is pleasant, logical, and easy to use. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
-* 3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality.
-* 2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
-* 1 - The application is confusing or difficult to use.
-
 ### HTML Style
 
 - 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
