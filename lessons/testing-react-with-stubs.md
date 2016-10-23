@@ -15,13 +15,40 @@ tags: react, testing, enzyme, stub, spy, mock
 
 By the end of this lesson, you will know/be able to:
 
-* Understand the Concept of a Test Runner: Mocha vs Jest
-* Be Familiar with Libraries Used to Mock/Stub/Spy: Sinon vs. TestDouble vs. Runner-Based Solutions
-* Practice a Specific Implementation with Mocha and Sinon
+* Understand where mocking/stubbing/spying fit into your tech stack in React
+* Understand where Sinon can help us write simple tests
+* Understand how breaking down components can help us avoid using Sinon
 
 ## RoadMap
 
-## Hard Things About Testing React
+- Hard Things About Testing React
+  - Lecture: 5 mins
+  - Your Turn: 10 mins
+
+- Alphabet Soup: Why Is It So Hard to Google React Testing?
+  - Intro: 5 mins
+  - Jasmine vs. Mocha vs. Jest vs. Enzyme: 10 mins
+  - Our Testing Stack: 5 mins
+  - Your Turn: 15 mins
+
+- Basic Usage: Sinon Tests
+  - Code Lecture: 10 mins
+  - Your Turn: 10 mins
+
+- Let's Get More Complicated, Quickly: Hitting an External API
+  - Code Lecture: 10 mins
+  - Testing Approaches: The 'Easy' Way
+    - Code Along: 20 mins
+    - Your Turn: 10 mins
+  - Testing Approaches: The 'Hard' Way
+    - Code Along: 10 mins
+    - Your Turn: 10 mins
+
+- TakeAways
+  - Short Discussion: 10 mins
+  - (Optional) Code Along with Application.js
+
+# Hard Things About Testing React
 
 There are times that we do complicated things with React. For example:
 
@@ -41,11 +68,11 @@ We can solve these tricky problems in React (and in other libraries/languages) b
 
 For the rest of this lesson - we'll focus on how to implement these solutions in React. Check out the additional resources to learn about mocking, stubbing and spying in JavaScript testing in general.
 
-##### Additional Resources: 
+#### Additional Resources: 
 
 [Testing JavaScript in General with Mocks, Stubs and Spies](https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/testing_javascript-mocks_and_stubs.markdown)
 
-##### Your Turn
+#### Your Turn
 
 - Take the next ***10 minutes*** and re-read the JavaScript Testing Lesson above.
   - Don't code along with the examples, just read the overview. We'll work through examples in React later on today.
@@ -53,7 +80,7 @@ For the rest of this lesson - we'll focus on how to implement these solutions in
   - What is the difference between a mock, stub and spy?
   - When have you used these techniques already?
 
-## Alphabet Soup: Why Is It So Hard to Google React Testing?
+# Alphabet Soup: Why Is It So Hard to Google React Testing?
 
 How many times have you been looking up example repositories and blog posts to try and figure out how to do something in JavaScript?
 
@@ -81,7 +108,7 @@ The main difficulty in testing front-end applications is the nature of some of t
 
 So it's not enough to just use Mocha + Chai or Jasmine
 
-###### We Want a Specialized Testing Tool for React
+** We Want a Specialized Testing Tool for React **
 
 The two major React testing tools right now are [Enzyme](https://github.com/airbnb/enzyme) and [Jest](https://facebook.github.io/jest).
 
@@ -93,11 +120,9 @@ The lessons you learn in using Enzyme will translate to Jest - of if you started
 
 Enzyme is lightweight, so we will use some of our familiar testing tools in this lesson - we'll use Mocha to run things and Chai to make our assertions.
 
-##### Mocks/Spies/Stubs
-
 Finally, we want to bring in a library to help us create mocks/stubs and spies easily. From the earlier reading, we know that Sinon can help us with that. So we'll bring that in as well.
 
-##### Our Testing Stack
+## Our Testing Stack
 
 - Webpack: To manage the entire process
 - Babel: To translate our ES6 to ES5
@@ -106,7 +131,7 @@ Finally, we want to bring in a library to help us create mocks/stubs and spies e
 - Enzyme: To give us special React testing ammenities
 - Sinon: To give us stubbing/spying/mocking ammenities
 
-You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much. In the next sections we'll talk about exactly how we set up this test stack, and try to get examples of testing the hard to test with React.
+You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much. 
 
 ##### Additional Resources: 
 
@@ -121,18 +146,7 @@ You will see many different tech stacks as you google things - but this is our t
   - What does it seem like the difference is between Jest and Enzyme for you?
   - Does anything in the Enzyme lesson make more sense, or less sense, since the last time you read it?
 
-## Setup the Testing Tech Stack
-
-- Mocha: To run our tests
-- Chai: To give us an assertion syntax
-- Enzyme: To give us special React testing ammenities
-- Babel: To translate our ES6 to ES5
-- Webpack: To manage the entire process
-- Sinon: To give us stubbing/spying/mocking ammenities
-
-## Practice Specific Implementations
-
-### Our First Sinon Test
+# Basic Usage: Sinon Tests
 
 We are actually introduced to sinon in the very first example in the [Enzyme Docs](https://github.com/airbnb/enzyme#shallow-rendering)
 
@@ -219,7 +233,8 @@ In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzym
   - Why would one use shallow instead of mount? 
     - Hint: Read the [first section](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) of the shallow anzyme docs for a clue as to why.
 
-### Hit an External API
+
+# Let's Get More Complicated, Quickly: Hitting an External API
 
 Let's say we have a component called `Org.jsx`
 
@@ -229,7 +244,7 @@ Then, it loads the name and a link to each public repo in the `turingschool` acc
 
 Let's look at the code here:
 
-```
+```javascript
 // Org.jsx
 
 import React, { Component } from 'react'
@@ -276,7 +291,7 @@ Walking through the code quickly:
 
 In the constructor, we set data to an empty array
 
-```
+```javascript
   this.state = {
     name: 'turingschool',
     source: 'https://api.github.com/orgs/turingschool/repos',
@@ -288,7 +303,7 @@ So that in the render function, when we call `this.state.data.map` - we simply w
 
 When the component did mount:
 
-```
+```javascript
   componentDidMount() {
     this.serverRequest = $.get(this.state.source, function(result){
       this.setState({data: result})
@@ -325,7 +340,7 @@ And it is an array of objects - so when we call `<RepoCard key={index} {...repo}
 - Set the key prop to the index
 - And then make props for each key in the repo object - so we can use 'em all
 
-#### Testing Approaches
+## Testing Approaches
 
 In order to test this component - we have to struggle with the fact that it has an API call.
 
@@ -334,7 +349,7 @@ We can handle the API call in the tests the easy way or the hard way.
 1. We can allow the component to take in test data
 2. We can hijack ajax itself to return test data
 
-#### The 'Easy' Way
+### The 'Easy' Way
 
 In my opinion, this is the best way to test this component. This is just my opinion.
 
@@ -441,7 +456,7 @@ Here we check to make sure that we have two RepoCard components displayed (the s
     - try commenting it out and breaking it
     - or using locus to put a debugger in that section of the code (instructions on using locus in the project README if you need them)
 
-#### The 'Hard' Way
+### The 'Hard' Way
 
 If we don't want to change our code - we have another option. We can use Sinon to create a fake server that will jump in the way of the ajax call and give our fake data away.
 
@@ -556,9 +571,16 @@ If you add those lines, the tests should just magically run.
   - Think about the two different approaches to testing - is the 'hard' way inherently harder or just harder to configure?
   - Which approach would you be more likely to use?
 
-## Takeaways
+# Takeaways
 
-## Clarifying Questions
+- Sinon (or any other mocking/stubbing/spying library) is not magic, it's just code
+- Using Sinon is hardly ever the only solution to testing something
+- Seperating into smaller components and being able to control component inputs makes testing easier
+  - By proxy, it usually makes life a little easier
+
+### Small Code Along (time permitting)
+
+- Let's take a look at Application.js and see what we can do to refactor it!
 
 ## Additional Resources
 
