@@ -138,15 +138,350 @@ You will see many different tech stacks as you google things - but this is our t
   - I do
   - You do
 
-- Hit an external API
+- Respond differently based on time of day
   - I do
   - You do
+
+### Hit an external API
+
+Let's say we have a component called `Org.jsx`
+
+That component hits Github's API and it asks Github for information about the `turingschool` organization.
+
+Then, it loads the name and a link to each public repo in the `turingschool` account.
+
+Let's look at the code here:
+
+```
+// Org.jsx
+
+import React, { Component } from 'react'
+const $ = require('jquery');
+
+import RepoCard from './RepoCard'
+
+export default class Org extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      name: 'turingschool',
+      source: 'https://api.github.com/orgs/turingschool/repos',
+      data: []
+    }
+  }
+
+  componentDidMount() {
+    this.serverRequest = $.get(this.state.source, function(result){
+      this.setState({data: result})
+    }.bind(this))
+  }
+
+  componentWillUnmount() {
+    this.serverRequest.abort();
+  }
+
+  render() {
+    return (
+      <div>
+        Repos owned by {this.state.name}
+        {this.state.data
+          .map((repo, index) => (
+            <RepoCard key={index} {...repo} />
+          ))
+        }
+      </div>
+    )
+  }
+}
+```
+
+Walking through the code quickly:
+
+In the constructor, we set data to an empty array
+
+```
+  this.state = {
+    name: 'turingschool',
+    source: 'https://api.github.com/orgs/turingschool/repos',
+    data: []
+  }
+```
+
+So that in the render function, when we call `this.state.data.map` - we simply won't render any repo cards until the ajax call is completed.
+
+When the component did mount:
+
+```
+  componentDidMount() {
+    this.serverRequest = $.get(this.state.source, function(result){
+      this.setState({data: result})
+    }.bind(this))
+  }
+```
+
+We make an ajax call to our source link (hardcoded right now) and we overwrite the data array in state to be the payload from the ajax call.
+
+When we use `this.setState` - it triggers the components 'render' function
+
+Which means that we map through each piece of data from the API to render a component representing a repo
+
+```
+  render() {
+    return (
+      <div>
+        Repos owned by {this.state.name}
+        {this.state.data
+          .map((repo, index) => (
+            <RepoCard key={index} {...repo} />
+          ))
+        }
+      </div>
+    )
+  }
+```
+
+The api endpoint is [here](https://api.github.com/orgs/turingschool/repos)
+
+And it is an array of objects - so when we call `<RepoCard key={index} {...repo} />` - what we are doing is saying:
+
+- Create a React component
+- Set the key prop to the index
+- And then make props for each key in the repo object - so we can use 'em all
+
+#### Testing Approaches
+
+In order to test this component - we have to struggle with the fact that it has an API call.
+
+We can handle the API call in the tests the easy way or the hard way.
+
+1. We can allow the component to take in test data
+2. We can hijack ajax itself to return test data
+
+#### The 'Easy' Way
+
+In my opinion, this is the best way to test this component. This is just my opinion.
+
+** We can change our code to use stub data OR fire an ajax call **
+
+In this version of the `componentDidMount()` - we check to see if a prop called orgData was included when the component was created.
+
+```
+  componentDidMount() {
+    if(!this.props.orgData) {
+      this.serverRequest = $.get(this.state.source, function(result){
+        this.setState({data: result})
+      }.bind(this))
+    } else {
+      this.setState({data: this.props.orgData})
+    }
+  }
+```
+
+If no prop of orgData was submitted, we do our ajax call
+
+Otherwise, we use that prop.
+
+This code is a little messy - we could refactor it in a few ways
+
+```
+  componentDidMount() {
+    if (this.props.orgData) { return this.setState({data: this.props.orgData}) }
+    this.serverRequest = $.get(this.state.source, function(result){
+      this.setState({data: result})
+    }.bind(this))
+  }
+```
+
+In this implementation - if we find an orgData prop - we use a `return` to exiting the function before we run the ajax call
+
+We could go even further by splitting out the ajax call
+
+```
+  componentDidMount() {
+    if (this.props.orgData) { return this.setState({data: this.props.orgData}) }
+    this.getOrgData()
+  }
+
+  getOrgData(){
+    this.serverRequest = $.get(this.state.source, function(result){
+      this.setState({data: result})
+    }.bind(this))
+  }
+```
+
+Now we can set up a test using fake data.
+
+In our test folder - we can create a file called `Org.spec.js`
+
+```
+import React from 'react'
+
+import { shallow, mount, render } from 'enzyme'
+import { expect } from 'chai'
+
+import Org from '../lib/components/Org'
+import RepoCard from '../lib/components/RepoCard'
+
+describe('<Org />', () => {
+  it('should render the org name', () => {
+    const wrapper = shallow(<Org />)
+    expect(wrapper.contains('turingschool')).to.be.true
+  })
+
+  context('testing ajax calls - the easy way', () => {
+    it('should repoCard components for organizational data', () => {
+      let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
+      const wrapper = mount(<Org orgData={orgData} />)
+      expect(wrapper.find(RepoCard).length).to.equal(2)
+    }) 
+  })
+})
+
+```
+
+Walking through this test code - we have one simple test - just checking to see if basic information shows up on the page without the API.
+
+Then we have a longer test.
+
+`let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]`
+
+Here we create some fake api data
+
+`const wrapper = mount(<Org orgData={orgData} />)`
+
+Here we `mount` a component (remember that our juicy code happens in the componentDidMount section - so we need `mount` and not `shallow`)
+
+We then pass a prop called `orgData`
+
+`expect(wrapper.find(RepoCard).length).to.equal(2)`
+
+Here we check to make sure that we have two RepoCard components displayed (the same number as objects in our fake data)
+
+##### Your Turn
+
+- Take the next ***10 minutes*** to read over the code and the tests. 
+  - If a line of code is confusing
+    - try commenting it out and breaking it
+    - or using locus to put a debugger in that section of the code (instructions on using locus in the project README if you need them)
+
+#### The 'Hard' Way
+
+If we don't want to change our code - we have another option. We can use Sinon to create a fake server that will jump in the way of the ajax call and give our fake data away.
+
+Pros: We don't have to change our Org.js code
+Cons: We have to configure Sinon correctly to make this work with jsdom - which is scary
+
+Let's start with our test file - let's add a test that uses Sinon's FakeServer abilities.
+
+Add the following code to the `Org.spec.js` file, below the last context you created
+
+```
+  context('testing ajax calls - the hard way', () => {
+    let server;
+    
+    before(() => {
+      let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
+      server = sinon.fakeServer.create()
+      var response = [200, {'Content-type': 'application/json'}, JSON.stringify(orgData)];
+      server.respondWith('GET', 'https://api.github.com/orgs/turingschool/repos', response)
+    })
+
+    after(() => {
+      server.restore();
+    });
+
+    it('should successfully make an ajax call when component mounts', () => {
+      const wrapper = mount(<Org />)
+      server.respond()
+      expect(wrapper.find(RepoCard).length).to.equal(2)
+    })
+  })
+
+```
+
+Walking through this code:
+
+`let server;`
+
+In the context, we set aside a variable for server
+
+```
+    before(() => {
+      // ...
+    })
+```
+
+This block will run before every test
+
+```
+    before(() => {
+      let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
+      server = sinon.fakeServer.create()
+      var response = [200, {'Content-type': 'application/json'}, JSON.stringify(orgData)];
+      server.respondWith('GET', 'https://api.github.com/orgs/turingschool/repos', response)
+    })
+```
+
+We use sinon to create a fake server.
+
+Then we create a fake response - with a 200 status code, a type of `application/json` and finally, a JSON response with ur stubbed data in it
+
+Then we tell our server to respond to any GET request that looks like our hardcoded api call with our response
+
+```
+    after(() => {
+      server.restore();
+    });
+```
+
+After every test, we clean up our Sinon
+
+```
+    it('should successfully make an ajax call when component mounts', () => {
+      const wrapper = mount(<Org />)
+      server.respond()
+      expect(wrapper.find(RepoCard).length).to.equal(2)
+    })
+```
+
+Then we mount the component - tell the server to respond - and write our original assertion from the 'easy way' test
+
+Whew...
+
+Now if you run this test, you'll get an error about the tests not knowing what sinon is.
+
+If this were a normal testing situation, you would simply add an import statement to the file to bring Sinon in.
+
+But - that won't work here.
+
+The reason is complicated(ish) but basically this ** in order to create a fake server that puts itself in the way of an ajax call - we need to add it jsdom on test set up **
+
+So to make this test work, we need to add the following lines to our `test/helpers/setup.js` file
+
+```
+global.XMLHttpRequest = global.window.XMLHttpRequest;
+
+global.sinon = require('sinon');
+global.sinon.useFakeXMLHttpRequest();
+
+global.window.XMLHttpRequest = global.XMLHttpRequest;
+global.$ = require('jquery')(global.window);
+```
+
+If you want to read more about it - [check out this issue](https://github.com/sinonjs/sinon/issues/657)
+
+If you add those lines, the tests should just magically run.
+
+##### Your Turn
+
+- Take the next ***10 minutes*** to read over the code and the tests. 
+  - If you have errors popping up - try to check out the completed branch of the repo
+  - Think about the two different approaches to testing - is the 'hard' way inherently harder or just harder to configure?
+  - Which approach would you be more likely to use?
+
+
 
 - Post to Firebase
-  - I do
-  - You do
-
-- Respond differently based on time of day
   - I do
   - You do
 
