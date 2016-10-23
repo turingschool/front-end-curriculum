@@ -1,11 +1,11 @@
 ---
 title: Testing React: Stubs/Spies/Mocks
-length: 
+length: 180 minutes
 module: 2
 tags: react, testing, enzyme, stub, spy, mock
 ---
 
-# Testing React: Stubs/Spies/Mocks
+# Testing React: Stubs & Spies
 
 ## Repository
 
@@ -15,27 +15,24 @@ tags: react, testing, enzyme, stub, spy, mock
 
 By the end of this lesson, you will know/be able to:
 
-* Understand where mocking/stubbing/spying fit into your tech stack in React
+* Understand where stubbing & spying fit into your tech stack in React
 * Understand where Sinon can help us write simple tests
 * Understand how breaking down components can help us avoid using Sinon
 
 ## RoadMap
 
-- Hard Things About Testing React
+##### Hard Things About Testing React
   - Lecture: 5 mins
   - Your Turn: 10 mins
-
-- Alphabet Soup: Why Is It So Hard to Google React Testing?
+##### Alphabet Soup: Why Is It So Hard to Google React Testing?
   - Intro: 5 mins
   - Jasmine vs. Mocha vs. Jest vs. Enzyme: 10 mins
   - Our Testing Stack: 5 mins
   - Your Turn: 15 mins
-
-- Basic Usage: Sinon Tests
+##### Basic Usage: Sinon Tests
   - Code Lecture: 10 mins
   - Your Turn: 10 mins
-
-- Let's Get More Complicated, Quickly: Hitting an External API
+##### Let's Get More Complicated, Quickly: Hitting an External API
   - Code Lecture: 10 mins
   - Testing Approaches: The 'Easy' Way
     - Code Along: 20 mins
@@ -43,9 +40,8 @@ By the end of this lesson, you will know/be able to:
   - Testing Approaches: The 'Hard' Way
     - Code Along: 10 mins
     - Your Turn: 10 mins
-
-- TakeAways
-  - Short Discussion: 10 mins
+##### TakeAways
+  - Short Discussion: 5 mins
   - (Optional) Code Along with Application.js
 
 # Hard Things About Testing React
@@ -59,20 +55,20 @@ There are times that we do complicated things with React. For example:
 
 Testing a React component that does any of these things is in direct conflict with these rules of testing.
 
-- A test suite should be able to run without an internet connection
-- A test suite should run as quickly as possible so that you can run it frequently during your development process
-- A test suite should NEVER hit or share the same storage resources as your production users
-- A test suite should have the same outcome no matter what time of day, or number of times you run it (i.e. no intermittant failures)
+##### A test suite should be able to run without an internet connection
+##### A test suite should run as quickly as possible so that you can run it frequently during your development process
+##### A test suite should NEVER hit or share the same storage resources as your production users
+##### A test suite should have the same outcome no matter what time of day, or number of times you run it (i.e. no intermittant failures)
 
 We can solve these tricky problems in React (and in other libraries/languages) by using concepts called ***mocking***, ***stubbing*** and ***spying***
 
 For the rest of this lesson - we'll focus on how to implement these solutions in React. Check out the additional resources to learn about mocking, stubbing and spying in JavaScript testing in general.
 
-#### Additional Resources: 
+### Additional Resources: 
 
 [Testing JavaScript in General with Mocks, Stubs and Spies](https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/testing_javascript-mocks_and_stubs.markdown)
 
-#### Your Turn
+### Your Turn
 
 - Take the next ***10 minutes*** and re-read the JavaScript Testing Lesson above.
   - Don't code along with the examples, just read the overview. We'll work through examples in React later on today.
@@ -133,12 +129,12 @@ Finally, we want to bring in a library to help us create mocks/stubs and spies e
 
 You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much. 
 
-##### Additional Resources: 
+### Additional Resources: 
 
 - [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html)
 - [Jest](https://facebook.github.io/jest)
 
-##### Your Turn
+### Your Turn
 
 - Take the next ***10 minutes*** and review the Additional Resources list above: JavaScript Testing with Enzyme Lesson and the front page of the Jest website.
   - ***Don't code along with the examples***, just read the overview. We'll work through examples in React later on today.
@@ -207,7 +203,7 @@ This represents a very standard use case for how we can use a `Spy`.
 
 In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md) we see another use case for using Sinon.
 
-```
+```javascript
   it('calls componentDidMount', () => {
     sinon.spy(Foo.prototype, 'componentDidMount');
     const wrapper = mount(<Foo />);
@@ -225,7 +221,7 @@ In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzym
 - `expect(Foo.prototype.componentDidMount.calledOnce).to.equal(true);`
   - We assert that if we ask our spy on Foo.prototype if componentDidMount was called once, it will be true
 
-##### Your Turn
+### Your Turn
 
 - Take the next ***10 minutes*** to read over the code and think about the following questions
   - How else could we accomplish the goal of the first test, 'it simulates click events', without sinon?
@@ -317,7 +313,7 @@ When we use `this.setState` - it triggers the components 'render' function
 
 Which means that we map through each piece of data from the API to render a component representing a repo
 
-```
+```javascript
   render() {
     return (
       <div>
@@ -349,7 +345,7 @@ We can handle the API call in the tests the easy way or the hard way.
 1. We can allow the component to take in test data
 2. We can hijack ajax itself to return test data
 
-### The 'Easy' Way
+## The 'Easy' Way
 
 In my opinion, this is the best way to test this component. This is just my opinion.
 
@@ -357,7 +353,7 @@ In my opinion, this is the best way to test this component. This is just my opin
 
 In this version of the `componentDidMount()` - we check to see if a prop called orgData was included when the component was created.
 
-```
+```javascript
   componentDidMount() {
     if(!this.props.orgData) {
       this.serverRequest = $.get(this.state.source, function(result){
@@ -375,7 +371,7 @@ Otherwise, we use that prop.
 
 This code is a little messy - we could refactor it in a few ways
 
-```
+```javascript
   componentDidMount() {
     if (this.props.orgData) { return this.setState({data: this.props.orgData}) }
     this.serverRequest = $.get(this.state.source, function(result){
@@ -388,7 +384,7 @@ In this implementation - if we find an orgData prop - we use a `return` to exiti
 
 We could go even further by splitting out the ajax call
 
-```
+```javascript
   componentDidMount() {
     if (this.props.orgData) { return this.setState({data: this.props.orgData}) }
     this.getOrgData()
@@ -405,7 +401,7 @@ Now we can set up a test using fake data.
 
 In our test folder - we can create a file called `Org.spec.js`
 
-```
+```javascript
 import React from 'react'
 
 import { shallow, mount, render } from 'enzyme'
@@ -449,14 +445,14 @@ We then pass a prop called `orgData`
 
 Here we check to make sure that we have two RepoCard components displayed (the same number as objects in our fake data)
 
-##### Your Turn
+### Your Turn
 
 - Take the next ***10 minutes*** to read over the code and the tests. 
   - If a line of code is confusing
     - try commenting it out and breaking it
     - or using locus to put a debugger in that section of the code (instructions on using locus in the project README if you need them)
 
-### The 'Hard' Way
+## The 'Hard' Way
 
 If we don't want to change our code - we have another option. We can use Sinon to create a fake server that will jump in the way of the ajax call and give our fake data away.
 
@@ -467,7 +463,7 @@ Let's start with our test file - let's add a test that uses Sinon's FakeServer a
 
 Add the following code to the `Org.spec.js` file, below the last context you created
 
-```
+```javascript
   context('testing ajax calls - the hard way', () => {
     let server;
     
@@ -497,7 +493,7 @@ Walking through this code:
 
 In the context, we set aside a variable for server
 
-```
+```javascript
     before(() => {
       // ...
     })
@@ -505,7 +501,7 @@ In the context, we set aside a variable for server
 
 This block will run before every test
 
-```
+```javascript
     before(() => {
       let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
       server = sinon.fakeServer.create()
@@ -520,7 +516,7 @@ Then we create a fake response - with a 200 status code, a type of `application/
 
 Then we tell our server to respond to any GET request that looks like our hardcoded api call with our response
 
-```
+```javascript
     after(() => {
       server.restore();
     });
@@ -528,7 +524,7 @@ Then we tell our server to respond to any GET request that looks like our hardco
 
 After every test, we clean up our Sinon
 
-```
+```javascript
     it('should successfully make an ajax call when component mounts', () => {
       const wrapper = mount(<Org />)
       server.respond()
@@ -549,8 +545,8 @@ But - that won't work here.
 The reason is complicated(ish) but basically this ** in order to create a fake server that puts itself in the way of an ajax call - we need to add it jsdom on test set up **
 
 So to make this test work, we need to add the following lines to our `test/helpers/setup.js` file
-
 ```
+
 global.XMLHttpRequest = global.window.XMLHttpRequest;
 
 global.sinon = require('sinon');
@@ -564,7 +560,7 @@ If you want to read more about it - [check out this issue](https://github.com/si
 
 If you add those lines, the tests should just magically run.
 
-##### Your Turn
+### Your Turn
 
 - Take the next ***10 minutes*** to read over the code and the tests. 
   - If you have errors popping up - try to check out the completed branch of the repo
@@ -578,7 +574,7 @@ If you add those lines, the tests should just magically run.
 - Seperating into smaller components and being able to control component inputs makes testing easier
   - By proxy, it usually makes life a little easier
 
-### Small Code Along (time permitting)
+## Small Code Along (time permitting)
 
 - Let's take a look at Application.js and see what we can do to refactor it!
 
