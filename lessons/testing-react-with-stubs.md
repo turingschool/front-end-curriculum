@@ -132,17 +132,94 @@ You will see many different tech stacks as you google things - but this is our t
 
 ## Practice Specific Implementations
 
-- Shallow vs Mount vs Render
+### Our First Sinon Test
 
-- Write to localStorage
-  - I do
-  - You do
+We are actually introduced to sinon in the very first example in the [Enzyme Docs](https://github.com/airbnb/enzyme#shallow-rendering)
 
-- Respond differently based on time of day
-  - I do
-  - You do
+They demonstrate basic usage of `shallow rendering` using the following example:
 
-### Hit an external API
+```javascript
+import React from 'react';
+import { shallow } from 'enzyme';
+import sinon from 'sinon';
+
+import MyComponent from './MyComponent';
+import Foo from './Foo';
+
+describe('<MyComponent />', () => {
+  it('renders three <Foo /> components', () => {
+    const wrapper = shallow(<MyComponent />);
+    expect(wrapper.find(Foo)).to.have.length(3);
+  });
+
+  it('renders an `.icon-star`', () => {
+    const wrapper = shallow(<MyComponent />);
+    expect(wrapper.find('.icon-star')).to.have.length(1);
+  });
+
+  it('renders children when passed in', () => {
+    const wrapper = shallow(
+      <MyComponent>
+        <div className="unique" />
+      </MyComponent>
+    );
+    expect(wrapper.contains(<div className="unique" />)).to.equal(true);
+  });
+
+  it('simulates click events', () => {
+    const onButtonClick = sinon.spy();
+    const wrapper = shallow(
+      <Foo onButtonClick={onButtonClick} />
+    );
+    wrapper.find('button').simulate('click');
+    expect(onButtonClick).to.have.property('callCount', 1);
+  });
+});
+```
+
+It's the last test that we want to focus on. 
+
+- `const onButtonClick = sinon.spy();` 
+  - Here we create a spy, using sinon, to represent our callback function
+- `const wrapper = shallow(<Foo onButtonClick={onButtonClick} />);`
+  - We set up our Foo component with shallow rendering
+  - We pass an onButtonClick prop to the Foo component, with our spy as the callback function
+- `wrapper.find('button').simulate('click');`
+  - We find the button in our Foo component, and simulate a click action
+- `expect(onButtonClick).to.have.property('callCount', 1);`
+  - We assert that if we ask our spy callback function if it was called, it will have been called once
+
+This represents a very standard use case for how we can use a `Spy`.
+
+In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md) we see another use case for using Sinon.
+
+```
+  it('calls componentDidMount', () => {
+    sinon.spy(Foo.prototype, 'componentDidMount');
+    const wrapper = mount(<Foo />);
+    expect(Foo.prototype.componentDidMount.calledOnce).to.equal(true);
+  });
+```
+
+- `sinon.spy(Foo.prototype, 'componentDidMount');` 
+  - Here we create a spy, using sinon, but unlike the last example
+    - We spy on the Foo.prototype (not Foo itself)
+    - We spy specifically on the 'componentDidMount' function
+- `const wrapper = mount(<Foo />);`
+  - We mount our Foo component
+  - Notice that we don't pass any props in this instance
+- `expect(Foo.prototype.componentDidMount.calledOnce).to.equal(true);`
+  - We assert that if we ask our spy on Foo.prototype if componentDidMount was called once, it will be true
+
+##### Your Turn
+
+- Take the next ***10 minutes*** to read over the code and think about the following questions
+  - How else could we accomplish the goal of the first test, 'it simulates click events', without sinon?
+  - Why would it be important that the callback function `onButtonClick` was passed to the prop?
+  - Why would one use shallow instead of mount? 
+    - Hint: Read the [first section](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) of the shallow anzyme docs for a clue as to why.
+
+### Hit an External API
 
 Let's say we have a component called `Org.jsx`
 
@@ -479,11 +556,7 @@ If you add those lines, the tests should just magically run.
   - Think about the two different approaches to testing - is the 'hard' way inherently harder or just harder to configure?
   - Which approach would you be more likely to use?
 
-
-
-- Post to Firebase
-  - I do
-  - You do
+## Takeaways
 
 ## Clarifying Questions
 
