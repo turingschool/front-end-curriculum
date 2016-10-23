@@ -25,17 +25,17 @@ By the end of this lesson, you will know/be able to:
   - Lecture: 5 mins
   - Your Turn: 10 mins
 
-##### Alphabet Soup: Why Is It So Hard to Google React Testing?
+#### Alphabet Soup: Why Is It So Hard to Google React Testing?
   - Intro: 5 mins
   - Jasmine vs. Mocha vs. Jest vs. Enzyme: 10 mins
   - Our Testing Stack: 5 mins
   - Your Turn: 15 mins
 
-##### Basic Usage: Sinon Tests
+#### Basic Usage: Sinon Tests
   - Code Lecture: 10 mins
   - Your Turn: 10 mins
 
-##### Let's Get More Complicated, Quickly: Hitting an External API
+#### Let's Get More Complicated, Quickly: Hitting an External API
   - Code Lecture: 10 mins
   - Testing Approaches: The 'Easy' Way
     - Code Along: 20 mins
@@ -43,8 +43,8 @@ By the end of this lesson, you will know/be able to:
   - Testing Approaches: The 'Hard' Way
     - Code Along: 10 mins
     - Your Turn: 10 mins
-    
-##### TakeAways
+
+#### TakeAways
   - Short Discussion: 5 mins
   - (Optional) Code Along with Application.js
 
@@ -59,10 +59,10 @@ There are times that we do complicated things with React. For example:
 
 Testing a React component that does any of these things is in direct conflict with these rules of testing.
 
-##### A test suite should be able to run without an internet connection
-##### A test suite should run as quickly as possible so that you can run it frequently during your development process
-##### A test suite should NEVER hit or share the same storage resources as your production users
-##### A test suite should have the same outcome no matter what time of day, or number of times you run it (i.e. no intermittant failures)
+- A test suite should be able to run without an internet connection
+- A test suite should run as quickly as possible so that you can run it frequently during your development process
+- A test suite should NEVER hit or share the same storage resources as your production users
+- A test suite should have the same outcome no matter what time of day, or number of times you run it (i.e. no intermittant failures)
 
 We can solve these tricky problems in React (and in other libraries/languages) by using concepts called ***mocking***, ***stubbing*** and ***spying***
 
