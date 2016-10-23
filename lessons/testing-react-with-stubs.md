@@ -24,14 +24,17 @@ By the end of this lesson, you will know/be able to:
 ##### Hard Things About Testing React
   - Lecture: 5 mins
   - Your Turn: 10 mins
+
 ##### Alphabet Soup: Why Is It So Hard to Google React Testing?
   - Intro: 5 mins
   - Jasmine vs. Mocha vs. Jest vs. Enzyme: 10 mins
   - Our Testing Stack: 5 mins
   - Your Turn: 15 mins
+
 ##### Basic Usage: Sinon Tests
   - Code Lecture: 10 mins
   - Your Turn: 10 mins
+
 ##### Let's Get More Complicated, Quickly: Hitting an External API
   - Code Lecture: 10 mins
   - Testing Approaches: The 'Easy' Way
@@ -40,6 +43,7 @@ By the end of this lesson, you will know/be able to:
   - Testing Approaches: The 'Hard' Way
     - Code Along: 10 mins
     - Your Turn: 10 mins
+    
 ##### TakeAways
   - Short Discussion: 5 mins
   - (Optional) Code Along with Application.js
