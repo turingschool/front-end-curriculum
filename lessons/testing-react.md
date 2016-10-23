@@ -1,7 +1,8 @@
 ---
 title: Testing React
 length:
-tags: enzyme, jsdom
+module: 2
+tags: enzyme, jsdom, react
 ---
 # Testing the difficult.
 
