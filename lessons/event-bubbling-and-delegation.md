@@ -118,7 +118,7 @@ Can you modify the function that adds new buttons so that it adds an event liste
 
 Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
 
-Also, You can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM.
+Also, You can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
 
 Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
 
