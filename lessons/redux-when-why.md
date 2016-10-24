@@ -17,6 +17,7 @@ At this point, we've worked with Redux and we're familiar with some of the synta
 
 If you still wouldn't feel comfortable answering these two questions, it's likely because you haven't yet built an app without Redux that desperately needed it. Often times, you won't truly understand the need for a library until you try to build something without it that simply doesn't work.
 
+### A Case Study
 For example, let's say we have an e-commerce clothing website. We navigate immediately to the clearance section, because everything on here is a ripoff, and we see the basic layout of our browsing experience: a sidebar for filtering/sorting, a main content area with product previews that match our filters, and a top navigation bar showing our current place within the site:
 
 ![ecommerce][ecommerce-site]
@@ -27,11 +28,12 @@ So this page might be made up of 3 container components:
 * `productPreviewsContainer`
 * `breadcrumbsContainer`
 
-If we were to build this with just React, each component would need to know exactly what category of clothing we were browsing *(Clearance > Dresses)* and our `sidebarFiltersContainer` and `productPreviewsContainer` would also need to know what filters we selected *(Size 4 > Color Black)*.
+#### React-only Strategy
+If we were to build this with just React, each component would need to know exactly what category of clothing we were browsing *(Clearance > Dresses)* and our `sidebarFiltersContainer` and `productPreviewsContainer` would also need to know what filters we selected *(Size 4 > Color: Black)*.
 
 If we were to build this with just React, the only way we could share the same information across all three of these components would be to create **another** container component that stored all of that data in its state. It would have to wrap all three of our components and pass down the necessary data to each of them.
 
-And what happens when we decide to change our filters? If we want to look at red sweaters instead, now we have to pass that data back up to the mega-container, just to pass it right back down again, updating each of the child components. 
+And what happens when we decide to change our filters? If we want to look at red sweaters instead, now we have to pass that data back up to the mega-container component, just to pass it right back down again, updating each of the child components. 
 
 Additionally, our state can change from any three of these components. We can update the filters from the sidebar, we can update the clothing category by clicking on the breadcrumb links (e.g. if our breadcrumb links show *Women's > Clothing > Dresses* we could click on *Clothing*, effectively removing the *Dresses* category from our search), and we can click on a product preview to completely change our route and display the full product details, making most of the state we just stored in our mega-container irrelevant.
 
@@ -39,7 +41,7 @@ Additionally, our state can change from any three of these components. We can up
 
 [ecommerce-site]: /assets/images/lessons/redux-when-why/e-commerce.png
 
-## Enter Redux
+#### React & Redux Strategy
 As we've learned, Redux is intended to manage state and only state. 
 
 **State** is the application data that influences how the application is rendered. (e.g. if the state says we are filtering by dresses, our application should only render dresses.) **State** can be updated through user interactions (e.g. if we click on the 'Sweaters' filter, our state should update itself to reflect that we are now browsing sweaters instead of dresses, and update the UI accordingly).
