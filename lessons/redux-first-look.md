@@ -18,29 +18,30 @@ Redux was created by Dan Abramov to be a predictable state manager for JavaScrip
 
 **Redux is only concerned with State**
 
-Although we will be talking about Redux within a React app, it is not dependent on React it just works really well together.
+Although we will be talking about Redux within a React app, it is not dependent on React it just works really well together, and the two libraries share some of the same brilliant minds. You could just as easily implement Redux into an Angular2 App.  
 
-Redux is written in ES6, but precompiles into CommonJS so Babel is not required for Redux to work (but Babel IS required for React. So there's that.)  
+As you start getting into docs, you'll hear a lot about "Flux" vs "Redux". Flux came first, and I like to think of it as the conceptual approach, or a general list of "best practices". Redux takes that one step further and gives you methods and code structure to implement this approach in a consistent way. Redux was designed to simplify Flux and do the job better.  If you want to know more, research Flux.  
 
-Redux wraps up all of your application's state into a single "store". The state is changed when your app fires off an "action", which is processed in something called a "reducer", which then modifies the state withing your store.
+Redux is written in ES6, but precompiles into CommonJS so Babel is not required for Redux to work (but Babel IS required for React. So there's that.) Also, It's only 2kb (INCLUDING dependencies. That's TINY!)  
 
-It's only 2kb (INCLUDING dependencies. That's TINY!)  
+In a nutshell, Redux wraps up all of your application's state into a single black box of information called a `store`. The state is changed when your app fires off an "action", which is processed in something called a "reducer", which then modifies the state within your store. Let that wash over you for a moment - what you should think about at this point are the buzz words `action`, `reducer` and `store`.  
 
-You'll hear a lot about "Flux" vs "Redux". Flux came first, and it's a bit more complicated than Redux. Redux was designed to simplify Flux and do the job better.  If you want to know more, research Flux.  
-
-Other benefits of Redux are that it scales extremely well to large complex apps. As your app grows, it grows horizontally with the help of Redux. Things do not become more dependent on each other, you simply add more pieces to the puzzle. Redux also allows your to trace every mutation of state to the action that caused it, it comes built in with a type of "rewind" functionality.
+Other benefits of Redux are that it scales extremely well to large complex apps. As your app grows, it grows horizontally with the help of Redux. Things do not become more dependent on each other, you simply add more pieces to the puzzle. Redux also allows your to trace every mutation of state to the action that caused it, it comes built in with a type of "rewind" functionality.  
 
 ### Things You Need To Install If You're Doing This Alone
-(Assuming you have a skeleton setup with npm, webpack, and react).
+(Assuming you have a skeleton setup with npm, webpack, and react).  
+
 ```
-npm i --save redux react-redux
+npm i --save redux react-redux  
 npm i -D redux-devtools
 ```
 
-### General Idea
-The entire state of your app is stored as a JavaScript object in a single `store`.  
+React-redux only gives us two things: A component called `<Provider />`, and access to the `connect` method. Stick that  
 
-Think Steve's rendition of IdeaBox in React! Crud functionality was handled within a `store.js` file that called on an EventEmitter and handled the add/delete/update etc functionality.  
+### General Idea
+The entire state of your app is stored as a JavaScript object in a single Redux `store`. Think of the store like a black box that churns out state based on any (or lack of any) changes to your app.
+
+If you experienced Steve's rendition of IdeaBox in React, crud functionality was handled within a `store.js` file that called on an EventEmitter and handled the add/delete/update etc functionality. All of that action happened outside of the component itself, which is a similar concept of the Redux store.   
 
 This is similar, except it's wired up to interact directly with the `state` of your React components through Redux rather than through an EventEmitter.  
 
@@ -65,9 +66,9 @@ function likesCounter(state = 0, action) {
 }
 ```
 
-A Reducer is a **[pure function](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976#.wh1l54a00)**. Meaning given the same input, the function will always return the same output.
+A Reducer is set of a **[pure functions](https://medium.com/javascript-scene/master-the-javascript-interview-what-is-a-pure-function-d1c076bec976#.wh1l54a00)**. Meaning given the same input, the function will always return the same output.
 
-Quick Example:
+Quick Example:  
 
 *NOT PURE*
 ```
@@ -75,16 +76,26 @@ Math.random(); // => 0.4011148700956255
 Math.random(); // => 0.8533405303023756
 Math.random(); // => 0.3550692005082965
 ```
+
+Even though we are calling the same function, with the same arguments ( or lack thereof ), we get back different results every time. That is an inpure function.  
+
+
 *PURE*
 ```
-FIND EXAMPLE?
+addTwo(num) {
+  return num + 2
+}
 ```
 
-As in React, instead of mutating the existing state, you return a new object if the state changes.
+If we call `addTwo(2)`, we will ALWAYS get back `4`, no matter how many times we call said function.
+
+As in React, instead of mutating the existing state, you return a new object if the state changes, which helps us maintain pure functions within our reducers.  Let's take a very high-level look at a possible action-flow. Note that there are more things that need to happen here to make this code work...but for example purposes...
 
 ```
+// Get the necessary method(s) from redux
 import { createStore } from 'redux'
 
+// Set up a reducer that tells redux what happens to state based on a given action
 function likesCounter(state = 0, action) {
   switch (action.type) {
     case 'INCREMENT' :
@@ -96,23 +107,25 @@ function likesCounter(state = 0, action) {
   }
 }
 
-// Create a Redux store holding the state of your app as defined above
+// Create a Redux store that holds the state of your app and keeps an eye on it
 let store = createStore(likesCounter)
 
-// Do some fancy stuff with React Redux
+// Do-Some-Fancy-Stuff-With-React-Redux-Here-That-We-Will-Talk-About-Later
 
-// The only way to mutate the state is to dispatch an action.
-// Store started with a default value of 0
+// Dispatch an action that tells Redux to update the state if necessary
+
 store.dispatch({ type: 'INCREMENT' })
 // => 1
 store.dispatch({ type: 'DECREMENT" '})
 // => 0
 
+// Do what you want with the newly updated state
+
 ```
 
 ### Actions
 
-Actions are pieces of information that tell your app how to send data from your application to your store. They require a type (defined as a string), and can also have an optional payload.
+Actions are simple JavaScript objects that send data from your application to your store. They require a type (defined as a string), and can also have an optional payload.
 
 ```
 type: 'DECREMENT',
@@ -121,8 +134,32 @@ changeCount: -1
 
 ### ActionCreator
 
-Functions that return actions. Slightly bundled into the same concept as a Reducer if you don't have a separate file handling these actions.
+Action Creators are simple JavaScript functions that return action objects. Action Creators allow your app to call a function and return an object with the organized information your reducer needs to do it's job. In the following example we won't have an action creator.  
 
+```
+decrementCount = () => {
+  type: 'DECREMENT',
+  changeCount: -1
+}
+```
+
+### Reducers
+
+Reducers make a copy of state, update the copy, and pass those copies back to the store. A redux store can only accept one "reducer" passed in as an argument so you will most often see them consolidated into something called a rootReducer.
+
+In your store, these actions will be called using the built in redux function `store.dispatch()` which we will get into later.  
+
+Think of a Reducer like tiny photocopy robots. Instead of overwriting anything, they are always just making copies and making changes to the newest copy.  
+
+Each individual reducer (let's say we had a few like an "ideas" reducer, and a "posts" reducer, and "comments" reducer) sends their respective states to the root reducer. The rootReducer then compares notes, puts together a master copy of anything needing updated, and send its along to the redux store and then on to your components.  
+
+Things Reducers should NOT do:
+  - Mutate Arguments
+  - Perform side jobs (API calls, routing, etc)
+  - Call non-pure functions like Math.random() or Date.now()   
+
+
+Example:  
 ```
 export default function counter(state = initialState, action) {
   switch (action.type) {
@@ -136,21 +173,6 @@ export default function counter(state = initialState, action) {
 }
 ```
 
-### Reducers
-
-Reducers make a copy of state, update the copy, and pass those copies back to the store. A redux store can only accept one "reducer" passed in as an argument so you will most often see them consolidated into something called a rootReducer.
-
-In your store, these actions will be called using the built in redux function `store.dispatch()` which we will get into later.  
-
-Think of Reducer like tiny photocopy robots..or github. Instead of overwriting anything, they are always just making copies and making changes to the newest copy.  
-
-Each individual reducer (let's say we had a few like an "ideas" reducer, and a "posts" reducer, and "comments" reducer) sends their respective states to the root reducer. The rootReducer then compares notes, puts together a master copy of anything needing updated, and send its along to the redux Store.  
-
-Things Reducers should NOT do:
-  - Mutate Arguments
-  - Perform side jobs (API calls, routing, etc)
-  - Call non-pure functions like Math.random() or Date.now()  
-
 ### Store
 
 The redux Store is the crux of the gig. It pulls in the actions and reducers and hands everything off to the components that need it.  
@@ -158,7 +180,9 @@ The redux Store is the crux of the gig. It pulls in the actions and reducers and
 It gives us a few built in functions:  
   - getState()
   - dispatch()
-  - subscribe()
+  - subscribe()  
+
+
 
 ### Code-Along Phase 1: Implement Redux
 
@@ -172,7 +196,7 @@ Run `npm install` and then `npm start` to confirm everything is working.
 
 #### Step 2: Write our First Reducer
 
-The beauty of redux is that it handles our application's state in on localized place. Right now our LikesCounter is maintaining our state. Let's move that responsibility over to redux world.
+The beauty of redux is that it handles our application's state in one localized place. Right now our LikesCounter is maintaining our state. Let's move that responsibility over to redux world.
 
 Think about what we need here. We have an initial state value of 0, and then a function to update our value by 1 or -1. This is what will be handled by a `reducer`. Remember that a `reducer` is the middle man between when a user triggers an event, and the state of our component being updated.  
 
@@ -201,7 +225,7 @@ export default function counter(state = initialState, action) {
 }
 ```
 
-First we set up an initial state so we only have to make changes in one place. Then we write a switch statement that handles each of our action types, for this app we have two: 'INCREMENT', or 'DECREMENT', which respectively replace the value `state.likes`.  
+First we set up an initial state so we only have to make changes in one place. Then we write a switch statement that handles each of our action types, for this app we only have two: 'INCREMENT', or 'DECREMENT', which respectively replace the value in `state.likes`.  
 
 #### Step 3: Create a Store
 
@@ -223,6 +247,7 @@ import { createStore } from 'redux'
 import counter from './reducers'
 
 const store = createStore(counter)
+
 const target = document.getElementById('application')
 
 const render = () => ReactDOM.render(
@@ -269,7 +294,7 @@ Lets talk about each Redux specific function.
 
 `store.dispatch()`:  This is the most commonly used store method. Allows us to "dispatch" actions to change the state of our application when events are fired. This is similar to calling "this.setState()..." when an `onClick` event fires on a button.
 
-`store.subscribe()`: Registers a callback within which it is always listening for something to be dispatched. It's like having an alert that says "SOMETHING WAS DISPATCHED!" which triggers our app to say "Hey, React, go re-render this component now.".
+`store.subscribe()`: Registers a callback within which it is always listening for something to be dispatched. It's like having an alert that says "SOMETHING WAS DISPATCHED!" which triggers our app to say "Hey, React, see if we need to re-render this component now.".
 
 #### Step 4: Update our Components
 
