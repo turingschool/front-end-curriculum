@@ -12,7 +12,7 @@ We will be working off of this [react-router practice repo](https://github.com/m
 
 ### What Is A Router?
 
-In order to visit a certain webpage, you need to tell your browser how to get there and what you want to do once you arrive. Like a road map. Each framework we work with handles routing in different ways, but ultimately they all share the same goal. Based on that road map, where do you want your user to end up and what do you want your user to see?
+From a user's perspective, routing is how you tell your browser what webpage you would like to visit and the path designates what you should see once you arrive. Like a road map. Each framework we work with handles routing in different ways, but ultimately they all share the same goal. Based on that road map, what view do you expect your user to see and what information does it contain?
 
 Let's take a look at an example url:   
 `localhost:3000/ideas/1`  
@@ -23,7 +23,7 @@ What is this telling us about where we are in our app?
 
 React Router is the go-to routing library for building React apps.  
 
-The main cornerstones of React Router are components, location, and Match. As with the rest of React, everything is a component, and the router is no different, although it's worth mentioning once again that React Router is not PART of React, although it was designed to work seamlessly with this particular framework.
+In React Router 4, the building blocks are `components`, `location`, and `<Match>`, with additional tools baked in. As with the rest of React, everything is a component, and the router is no different. It's worth mentioning once again that React Router is not PART of React, although it was designed to work seamlessly with this particular framework.
 
 React router in essence simply shows or hides components based on what page your user has visited.  
 
@@ -80,38 +80,50 @@ const App = React.createClass({
 render(<App />, document.body)
 ```
 
-Yuck mouth.
+Yuck mouth. It's doable, but not super fun. React Router makes your job easier.
 
 ### Implementing React-Router.
 
-If you're using `create-react-app` React Router has already been installed for you, you only need to require it and any associated modules you need at the top of the file you are implementing it in.
+If you're using `create-react-app` the tools you need to write React have been provided for you, but you'll need to install `react-router` independently.
 
-If you are starting on your own, install react-router with `npm install react-router history`.
+If you are starting on your own, you can install the default version of react-router as well as the history module with `npm install react-router history`.
 
-At the top of the file where you define your router component, add this line:  
+At the top of the file where you define your router component you'll need at least a few components to help you build out a Router element.
+
 ```
 import { BrowserRouter, Match, Miss } from 'react-router';
-```
 
-Then let's create a router component.
-
-```
 const Root = () => {
   return (
-    <BrowserRouter>
-      <Match exactly pattern="/" component={MyComponent}/>
+    <BrowserRouter history={ history }>
+      <Match exactly pattern="/" component={App}/>
     </BrowserRouter>
   )
 }
 ```
 
-Check it out! So we are creating a `<BrowserRender>` component that has within it a `<Match />` component. This line is saying "Hey, if the user types in something that matches the following pattern EXACTLY, render this component". In this case, if our user visits the root directory, `/`, we will render the `<MyComponent />` component.  
+For those of you familiar with older versions of React Router, this looks similar to the following:  
 
-A couple things to note, the `<Match />` component can be used ANYWHERE in your app. Just like other modules, as long as the dependencies are required at the top of the file, you are free to add this conditional element anywhere within your React app.  
+```
+import { Router, Route, hashHistory } from 'react-router'
+
+const Root = () => {
+  return (
+    <Router history={hashHistory}>
+      <Route path="/" component={App}/>
+    </Router>
+  )
+}
+
+```
+
+Check it out! So we are creating a `<BrowserRender>` component that has within it a `<Match />` component. This line is saying "Hey, if the user types in something that matches the following pattern EXACTLY, render this component". In this case, if our user visits the root directory, `'/'`, we will render the `<App />` component.  
+
+A couple things to note, the `<Match />` component can be used ANYWHERE in your app. Just like other modules, as long as the dependencies are required at the top of the file.  
 
 For example, maybe you only want to show a particular sidebar when you are on the landing page. This would be a great time to pop in a `<Match />` element.  
 
-Look at the following example of a completed (albeit small) router component and let's briefly talk about the pieces. We will dive into these more in depth after a quick code along.   
+Look at the following example of a small router component and let's briefly talk about the pieces. We will dive into these more in depth after a quick code along.   
 
 ```
 const Root = () => {
@@ -119,7 +131,7 @@ const Root = () => {
     <BrowserRouter>
       <div className="router">
         <Match exactly pattern="/" component={App} />
-        <Match pattern="/ideas/:ideaId" component={IndividualIdea} />
+        <Match pattern="/about/:name" component={DynamicAboutPage} />
         <Miss component={NotFound} />
       </div>
     </BrowserRouter>
@@ -127,37 +139,31 @@ const Root = () => {
 }
 ```
 
-#### <BrowserRouter />
+#### BrowserRouter
 
-One of the cool parts about this setup is that once we wrap our components in our `BrowserRouter` tag, it becomes the parent of everything. This means we can access React Router through any component that is a child of this element.    
+One of the cool parts about this setup is that once we wrap our components in our `<BrowserRouter>` tag, it becomes the parent of everything within it (similar to `<Provider>` in Redux.), and it can pass down routing information to child components. In other words, we can access React Router through any component that is a child of this element.    
 
-This guy keeps your app in sync with the browser history. Note that you can set the `basename` of your app here. For example, if your app is served from the `/lessons` directory, you can set the `basename` within this element to eliminate having to specify that path in every href.
+This guy also keeps your app in sync with the browser history.  
 
-```
-<BrowserRouter basename="/lessons" />
+#### Match  
 
-<Link to="/react-router" />
-// This will now show up as "/lessons/react-router"
-```
-
-#### <Match />  
-Renders a particular chunk of code when a given pattern matches the location in your URL.   Behind the scenes, it uses the [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) module. Example:  
+Renders a particular chunk of code when a given pattern matches the location in your URL.   Behind the scenes, it uses the [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) module.  
 
 ```
-<Match pattern="/" exactly component={LandingPage} />
+<Match pattern="/" exactly component={App} />
 ```
 
-Note the `exactly` boolean. In this case, the pattern will only be matched if it EXACTLY matches the given string. Contrarily, there is this:  
+Note the `exactly` boolean. In this case, the pattern will only be matched if it EXACTLY matches the given string. You don't always want a perfect match, like in the following example.  
 
 ```
-<Match pattern="/ideas/:ideaId" component={IndividualId} />
+<Match pattern="/about/:name" component={DynamicAboutPage} />
 ```
 
-This would match any route that includes `/ideas`, allowing us to also pass in a dynamic argument that will be handed down to our component.  
+This will match any route that includes `/about` followed by something else. This allows us to also pass in a dynamic argument that will be handed down to our component, like a user_id etc.  
 
 We will look at further magic sent to components after our code-along.
 
-#### <Miss />  
+#### Miss
 
 When there is no match for the provided location or pattern, `<Miss />` will render. Simply specify what component (or jsx) you wish to render.  
 
@@ -176,11 +182,9 @@ const NoMatch = ({ location }) => (
 
 ```
 
-Note that unlike all the props components get through `Match`, the only info passed into this component will be `location`.  
+#### Link
 
-#### <Link />  
-
-Needless to say, your user won't be navigating around your app exclusively via the browser URL bar. We need to handle where a user gets sent when a link is clicked within the app. This is where `<Link />` comes in.  
+Needless to say, your user won't be navigating around your app exclusively via the browser URL bar. We need to handle where a user gets sent when a link is clicked within the app. This is where `<Link />` comes in. It renders as an `<a></a>` tag and provides a relative `href` to the `to=` parameter.
 
 ```
 <Link to="/about" activeClassName="active">
@@ -188,9 +192,9 @@ Needless to say, your user won't be navigating around your app exclusively via t
 </Link>
 ```
 
-#### <Redirect>  
+#### Redirect
 
-Rendering a `Redirect` component will navigate to a new location while putting the previous location in browser history.  
+Rendering a `Redirect` component will navigate to a new location while putting the previous location in browser history. Check out the option of putting JSX directly into your render function here.   
 
 ```
 <Match pattern="/" exactly render={() => (
@@ -202,22 +206,26 @@ Rendering a `Redirect` component will navigate to a new location while putting t
 )}/>
 ```
 
-### <MemoryRouter />
+### MemoryRouter  
+
 Keeps the history of your url in memory as if you were on a browser - helpful for when you're working on an app that doesn't have a browser (like with React-Native).
 
 
 ### Code Along
 
-Let's put together a quick example of how this would work in context. If you haven't already, clone down [this example repo](). It is already set up from the `create-react-app` boilerplate. For best practice purposes, create a new branch to mess around with.  
+Let's put together a quick example of how this would work in context. If you haven't already, clone down [this example repo](https://github.com/martensonbj/react-router-revisited). It is already set up from the `create-react-app` boilerplate, run `npm install` and `npm start`. For best practice purposes, create a new branch to mess around with.  
 
-#### Install Dependencies
+#### Install Dependencies  
+
 Our repo comes with everything set up for React out of the box. But remember that react-router isn't necessary to build an app in React, it's a completely third-party entity that happens to make routing really nice.  We need to install those dependencies now.  
 
-`npm i --save react-router@4.0.0-alpha.3 history`  
+`npm i --save react-router@4.0.0-alpha.3`  
 
 We are installing the newest version of React-Router 4, but as of now it has not been released as the default version so it's necessary to include the specific version number in our terminal command. We also need the `history` module to handle keeping track of what pages we've visited.  
 
-Take a moment to dig into the react dev tools and see what your app gives you out of the box before we start rewiring our components. Right now we only have an App component that renders the line "React Router Revisited" along with the rest of the React boilerplate code.  The code we will start digging into is located in `src/index.js`.
+Take a moment to dig into the react dev tools and see what your app gives you out of the box before we start rewiring our components.  
+
+Right now we only have an App component that renders the line "React Router Revisited" along with the rest of the React boilerplate code and some questionable style choices.  The code we will start digging into is located in `src/index.js`. It starts out looking like this:  
 
 ```
 import React from 'react';
@@ -258,7 +266,7 @@ render(<Root />, document.querySelector("#root"))
 
 Let's break down what we changed. The second line reduces what we are pulling from `react-dom` to just be the `{render}` method. This is cool because we don't need the entire `react-dom` library right now.  
 
-Then skip down a couple lines to where we are pulling in our `react-redux` dependencies. You'll recognize these terms from earlier in the lesson. This gives us access to the components that will do all of our `react-router` magic.  
+Then skip down a couple lines to where we are pulling in our `react-redux` dependencies. You'll recognize these terms from earlier in the lesson. This gives us access to the components that will do all of our `react-router` magic. Previous versions of `react-router` had slightly different dependencies that worked the same way: `{ Router, Route, Link }`.
 
 Next we redefine our component to be functional component called Root. It returns a `<BrowserRouter />` component. This component will listen to any url changes and make the location available to other components.
 
@@ -289,7 +297,7 @@ import React from 'react';
 const About = () => {
   return (
     <div className="About">
-      <p>About This App</p>
+      <h2>About This App</h2>
     </div>
   );
 }
@@ -305,7 +313,7 @@ import React from 'react';
 const Contact = () => {
   return (
     <div className="Contact">
-      <p>Contact Page</p>
+      <h2>Contact Page</h2>
     </div>
   );
 }
@@ -393,7 +401,7 @@ const Navigation = () => {
 export default Navigation;
 ```
 
-As of right now our Nav component renders a bunch of `<li>`. Hook up this component with our `{ Link }` component from `react-router` and specify the route we want to link to.  
+As of right now our nav component renders a bunch of `<li>` elements. Hook up our `{ Link }` component from `react-router` and specify the routes we want to link to.  
 
 ```
 import React from 'react';
@@ -420,26 +428,43 @@ So far wiring up routes and components seems relatively straightforward, but the
 
 Visit `/about` and pop open your React dev tools. You should see a few interesting things. As of now, we have not explicitly given this component any immediate props, however we can see through the dev tools that we are set up with quite a few. What do these mean? Let's revisit some of the tools we get from our Router module.
 
-#### <Match />
+### BrowserRouter
+
+The parent component of your Router. We can pass router information down through components because of this component. We will look into how to use `context` to do this shortly.  
+
+Note that you can set the `basename` of your app here. For example, if your app is served from the `/lessons` directory, you can set the `basename` within this element to eliminate having to specify that path in every href.
+
+```
+<BrowserRouter basename="/lessons" />
+
+<Link to="/react-router" />
+// This will now show up as "/lessons/react-router"
+```
+
+#### Match
 
 Recall that Match checks out the current URL and matches it to the route specified in the component, like this:   
 
 `<Match exactly pattern="/about" component={About} />`  
 
 The `component` parameter provides a particular component to render when the location is a match, and sends through some props for free.  
-  - `pattern`: string - the part that matched the pattern (ie `/ideas/1`)
-  - `pathname`: string - the part that matched the pathname
-  - `isExact`: boolean - whether or not it was required to match exactly
-  - `location`: the location pulled from the url
+  - `pattern`: string - the part that matched the pattern (ie `/ideas/1`)  
+  - `pathname`: string - the part that matched the pathname  
+  - `isExact`: boolean - whether or not it was required to match exactly  
+  - `location`: the location pulled from the url  
   - `params`: the additional information given by the URL (like the particular idea's id)  
 
 Change one of your `<Match>` components to take in a dynamic second path. For example, `<Match pattern="/about/:name" component={About} />`. Now visit `/about/sandwich`. What do you see in `props.params`? What about `pathname` vs `pattern`?
 
 There are additional params you can send through with `<Match />` that do some cool stuff, like [animation or fade-in/fade-out](https://react-router.now.sh/animated-transitions) behavior.  
 
-#### <Link />
+#### Miss
 
-Let's go back to our <Link> component.  
+Note that unlike all the props components get through `Match`, the only info passed into this component will be `location`.  
+
+#### Link
+
+Let's go back to our `<Link />` component.  
 
 ```
 <Link to="/">Home</Link>
@@ -483,7 +508,7 @@ It's like a secret backdoor.
 
 **[STOP AND READ THIS](https://facebook.github.io/react/docs/context.html#why-not-to-use-context)**  
 
-**Ok...But...YOLO**
+*Ok...But...YOLO*
 
 Let's go back to our example and set up a component to demonstrate. Jump back into your `About.js` component and replace the code with the following:
 
@@ -527,7 +552,7 @@ About.contextTypes = {
 
 Look back at the dev tools. Now we have access to our secret backdoor, which beacuse of the `<BrowserRouter />` parent component we have this thing called `router`. It has access to the methods `react-router` gives us, like `transitionTo`, which seems logical to move to a given page. Make sure you've selected the `<About>` component and try out `$r.context` in the console.
 
-What happens if you type `$r.context.router.transitionTo(`/`)` ?
+What happens if you type `$r.context.router.transitionTo('/')` ?
 
 So let's use this to our advantage and pull in the information from our form to redirect our page. Notice we're adding code to both the `goToDestination` function as well as the `input` field.
 
