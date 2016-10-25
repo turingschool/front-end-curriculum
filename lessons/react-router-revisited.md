@@ -21,9 +21,13 @@ What is this telling us about where we are in our app?
 
 ### What is React Router?  
 
-React Router is the go-to routing library for building React apps.  
+React Router is the go-to routing library for building React apps built by Michael Jackson (hah) and Ryan Florence. They wanted a way to load routes as they needed them, to fetch data as needed, to incorporate routing with redux and hot module reloading, and they wanted to improve on the mess that was React Router <v4 that apparently nobody (including the React team) liked.  
 
-In React Router 4, the building blocks are `components`, `location`, and `<Match>`, with additional tools baked in. As with the rest of React, everything is a component, and the router is no different. It's worth mentioning once again that React Router is not PART of React, although it was designed to work seamlessly with this particular framework.
+[Dan Abramov Has Thoughts](https://twitter.com/dan_abramov/status/776096318351634433)
+
+In React Router 4, the guys essentially removed the Routes and the complicated behind the scenes logic, and moved the emphasis to be on React itself. This turns what you're working with into actual React components that behave like...React Components.  
+
+The building blocks are `components`, `location`, and `<Match>`, with additional tools baked in. As with the rest of React, everything is a component, which might sound obvious but that's not how things worked before version 4.0. and the router is no different. It's worth mentioning once again that React Router is not PART of React, although it was designed to work seamlessly with this particular framework.
 
 React router in essence simply shows or hides components based on what page your user has visited.  
 
@@ -593,5 +597,6 @@ Just for fun, wire up a new `<Match />` component in `index.js` that takes in a 
 
 
 ### Resources
+[Watch This Video](https://www.youtube.com/watch?v=Vur2dAFZ4GE)
 [React Router 4 Docs](https://react-router.now.sh)  
 [Using Context and React Router](https://facebook.github.io/react/docs/context.html#parent-child-coupling)
