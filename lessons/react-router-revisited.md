@@ -1,6 +1,5 @@
 ---
 title: React Router Revisited
-layout: presentation
 module: 3
 tags: react react-router javascript create-react-app
 ---
