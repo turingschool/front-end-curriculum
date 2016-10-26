@@ -28,7 +28,7 @@ create-react-app grocery-list
 
 ### Setting Up Linting
 
-Linking is a powerful tool for maintaining code quality. Create React App uses ESLint for code linting. One thing that you'll notice as you build your application is that you'll see warnings in the console and the command line.
+Linting is a powerful tool for maintaining code quality. Create React App uses ESLint for code linting. One thing that you'll notice as you build your application is that you'll see warnings in the console and the command line.
 
 Add the following to your `package.json`:
 
@@ -40,7 +40,7 @@ Add the following to your `package.json`:
 
 ### Running Tests
 
-In order to run the tests, you can type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better—by default, it will only watch files that have changed since the last time you made a git commit.
+In order to run the tests, you can type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better — by default, it will only watch files that have changed since the last time you made a git commit.
 
 As you might expect, you can use `npm test` to fire up the test server.
 
@@ -105,7 +105,7 @@ describe('Grocery', () => {
 });
 ```
 
-Create React App uses [Jest][] instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its won expectation library which is similar to Chai's `expect` syntax instead of an `assert` syntax.
+Create React App uses [Jest][] instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax instead of an `assert` syntax.
 
 [Jest](https://facebook.github.io/jest)
 
@@ -125,7 +125,7 @@ it('has a class of .Grocery', () => {
 
 In the image above, the component changes visually based on whether or not the grocery item has been starred or purchase.
 
-We could start out with a simple test to see if has the appropriate class if it's starred.
+We could start out with a simple test to see if it has the appropriate class if it's starred.
 
 ```js
 it('should have a className of "starred" if is starred', () => {
@@ -147,7 +147,7 @@ This will fail. You could be fancy and try either a ternary or an `&&` condition
 <article className={`Grocery ${starred && 'starred' }`}>
 ```
 
-Try both of those out and very that they get the test passing. Then let the uneasy feeling settle in as your consider that as time goes on, you'll have to do this repeatedly—first with `purchased` and then possible more properties as requirements change down the line.
+Try both of those out and verify that they get the test passing. Then let the uneasy feeling settle in as you consider that as time goes on, you'll have to do this repeatedly — first with `purchased` and then possibly with more properties as requirements change down the line.
 
 **Stop and Read**: To make our lives easier, we'll use the [classnames][] package from npm. Check out the documentation before moving forward. You can install it with `npm install -S classnames`.
 
@@ -179,7 +179,7 @@ Write the following tests and the implementation to match:
 
 - `it('should not have a className of "starred" if it is not starred')`
 - `it('should have a className of "purchased" if it is purchased')`
-- `it('should not have a className of "purchased" it if is not purchased')`
+- `it('should not have a className of "purchased" if it is not purchased')`
 
 ### Optional Components
 
@@ -189,7 +189,7 @@ To help with this, our grocery application allows the user to specify an optiona
 
 [circle cheeses]: http://mini-babybel.com/products/
 
-Let's start with a tests:
+Let's start with a test:
 
 ```js
 it('should have a p.Grocery-quantity element if a quantity is passed as a prop', () => {
@@ -200,7 +200,7 @@ it('should have a p.Grocery-quantity element if a quantity is passed as a prop',
   expect(wrapper.find('.Grocery-quantity').length).toEqual(1);
 });
 
-it('should not have a p.Grocery-quantity element if a quantity is passed as a prop', () => {
+it('should not have a p.Grocery-quantity element if a quantity is not passed as a prop', () => {
   const wrapper = shallow(
     <Grocery name="Bananas" quantity={undefined} />
   );
@@ -229,8 +229,8 @@ const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar
 So, does that functionality even work? Let's write a test to make sure the element isn't present if there is no quantity. While we're at it, let's do the same for the notes as well.
 
 - `it('should not have a p.Grocery-quantity element if a quantity is not passed as a prop')`
-- `it('should have a p.Grocery-notes element if a notes are passed as a prop')`
-- `it('should not have a p.Grocery-notes element if a notes are not passed as a prop')`
+- `it('should have a p.Grocery-notes element if notes are passed as a prop')`
+- `it('should not have a p.Grocery-notes element if notes are not passed as a prop')`
 
 ### Testing for the Changing Text on the Buttons
 
@@ -238,7 +238,7 @@ So, does that functionality even work? Let's write a test to make sure the eleme
 ```js
 describe('.Grocery-purchase button', () => {
 
-  it('should have a text of "Purchase" if purchase is false', () => {
+  it('should have a text of "Purchase" if purchased is false', () => {
     const wrapper = shallow(
       <Grocery name="Bananas" purchased={undefined} />
     );
@@ -246,7 +246,7 @@ describe('.Grocery-purchase button', () => {
     expect(wrapper.find('.Grocery-purchase').text()).toEqual('Purchase');
   });
 
-  it('should have a text of "Unpurchase" if purchase is true', () => {
+  it('should have a text of "Unpurchase" if purchased is true', () => {
     const wrapper = shallow(
       <Grocery name="Bananas" purchased={true} />
     );
@@ -265,7 +265,7 @@ describe('.Grocery-purchase button', () => {
 - Can you write a test to see if the quantity field has the correct text in it?
 - Can you write a test to see if the notes field has the correct text in it?
 
-### Testing the Button functionality
+### Testing the Button Functionality
 
 So, the buttons say the right things. That's cool, but how do we know that they do the things we expect them to?
 
@@ -299,18 +299,18 @@ it('should call the onPurchase prop when clicked', () => {
 
 #### Your Turn
 
-- Can you add an `onClick` function to the "Purchase" button and be the hero who makes the test passed?
+- Can you add an `onClick` function to the "Purchase" button and be the hero who makes the test pass?
 - Can you write the tests and implementation for the "Star" and "Remove" buttons?
 
 ### Implementing the Grocery List
 
 ![](/assets/images/lessons/unit-testing-react/grocery-list-component.gif)
 
-(**Important Note for Careful Readers**: You're not responsible for the form. Just the list below.)
+(**Important Note for Careful Readers**: You're not responsible for the form... just the list below.)
 
 The list has the following functionality:
 
 - It shows all of the groceries. Can you test to make sure that it shows the appropriate number of groceries?
-- There is a "Clear Groceries" button that is disabled unless there is one or more groceries on the list.
+- There is a "Clear Groceries" button that is disabled unless there are one or more groceries on the list.
 - When the "Clear Groceries" button has been pressed the `onClearGroceries` property function should be called.
-- Not shown: Can you test and implement a counter that keeps track of the number of groceries in the list.
+- Not shown: Can you test and implement a counter that keeps track of the number of groceries in the list?
