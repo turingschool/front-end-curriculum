@@ -70,7 +70,7 @@ Things to keep in mind as you are planning your time for the next two weeks:
 
 You will have _two_ evaluations for this project. The first is the good, old-fashioned technical evaluation. You'll also have an evaluation on the UI. **Nota bene**: you will be on your own to wireframe and design this project.
 
-You're application should:
+Your application should:
 
 - Work on all screen devices
 - Take a mobile-first approach
