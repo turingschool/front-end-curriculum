@@ -3,14 +3,10 @@ title: PostCSS and CSS Modules
 tags: CSS, JavaScript
 ---
 
-FOLLOW UP:
+## Alternatives to Vanilla CSS
 
-Radium
-JSS
-Aphrodite
-Glamor
-Flea
-Styled Cmponents
+> The worst things about CSS are the "Cascading" and the "Sheets"
+- Jed Schmidt
 
 ### What Is PostCSS?
 
@@ -92,9 +88,11 @@ Let's look back at our [react-router-revisited](https://github.com/martensonbj/r
 
 Check out the organization of our app. Previously everything was listed as separate files. In this branch, we've create an `App` folder with everything related to the App component nested within it. This includes a baby `App.css` file.
 
-This allows us to require just that part of CSS at the top of our `App.js` file, which will be loaded as a separate piece of CSS directly into style tags in your HTML. Fire up your server and take a look at the elements tab and dig into the `<head></head>` section to see our styles.
+This allows us to require just that part of CSS at the top of our `App.js` file, which will be loaded as a separate piece of CSS directly into style tags in your HTML. Fire up your server and take a look at the elements tab and dig into the `<head></head>` section to see our style.
 
-What does this mean?  
+Why is this good?
+
+One of the more headache inducing aspects of CSS is the concept of "cascading". Using modular CSS means that class names and other style decisions don't overlap each other and your battle with specificity is greatly reduced.
 
 Our JavaScript file(s) requested their appropriate CSS files and that code was embedded in `<style>` tags within our HTML page. This makes our code incredibly modular and easy to read/maintain. Webpack is doing this behind the scenes with the `style-loader`. Then at build time, webpack automatically generates classnames which are exported as a JS object injected into your code.  
 
@@ -133,6 +131,19 @@ This also means that you can take advantage of normal JavaScript things in your 
   composes: header;
   background: red;
 }
+```
+
+You can also use props to make dynamic style choices.
+
+```
+<Component bgcolor={'#ff0000'} />
+
+//Component.js
+
+let style = {
+  backgroundColor: this.props.bgcolor
+}
+
 ```
 
 ### Using Style Objects in React Components
