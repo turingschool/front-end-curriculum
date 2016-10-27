@@ -32,16 +32,14 @@ You can use any of the following libraries:
 
 ## Game Choices
 
-- Connect Four
-- Lights Out
-- Snake
 - Hang Man
-- Breakout
+- Lights Out
+- Connect Four
 - Black Jack
 - Othello/Reversi
-- 2048
-- Snake
+- Breakout
 - Tron
+- Snake
 
 (Any other game can requires instructor approval.)
 
