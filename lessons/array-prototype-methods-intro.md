@@ -87,6 +87,44 @@ In the example above, we set up an iterator, `i`. As long as `i` is less than th
 
 Do the things...
 
+### Array.prototype.map
+
+`forEach()` will iterate through each element in an array and pass that element to an anonymous function. It's not uncommon that we find ourselves in a position where we need to transform the contents of an array.
+
+In theory, we could use `forEach()` like this:
+
+```js
+const letters = ['a', 'b', 'c'];
+const uppercaseLetters = [];
+
+letters.forEach(function (letter) {
+  const uppercaseLetter = letter.toUpperCase();
+  uppercaseLetters.push(uppercaseLetter);
+});
+
+console.log(uppercaseLetters);
+```
+
+This will work. The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap):
+
+```js
+const letters = ['a', 'b', 'c'];
+
+const uppercaseLetters = letters.map(function (letter) {
+  return letter.toUpperCase();
+});
+
+console.log(uppercaseLetters);
+```
+
+The example above will give us the same result as the one before it: `['A', 'B', 'C']`. That said, it's about half the length and doesn't involve mutating an existing array.
+
+Like `forEach()`, `map()` accepts an anonymous function that it calls on each element of the array it's called on. `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
+
+#### Your turn
+
+Do the things...
+
 ### Array.prototype.filter
 
 [`Array.prototype.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), like `map()`, returns a new array based on the return value of the callback function you pass it. The mechanics, however, differ slightly.
