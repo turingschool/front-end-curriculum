@@ -4,16 +4,16 @@ length: 120
 tags: JavaScript, array, prototype
 ---
 
-### Context
-
-
-
 ### Learning Goals
 
 In this segment, you'll learn the following:
 
 * How to use the `Array.prototype` `forEach()`, `map()`, `filter()`, `reduce()`, and `sort()` methods.
 * How to create DOM nodes using array prototypes.
+
+### Context
+
+
 
 ### For Loops...
 
@@ -62,8 +62,27 @@ Let's follow what happens to ``i`` for each iteration of the ``for`` loop.
 | 6        | true          | 6 is logged to the console; i increases by 1 |
 | 7        | true          | 7 is logged to the console; i increases by 1 |
 | 8        | true          | 8 is logged to the console; i increases by 1 |
-| 9        | false         | statements are not executed                  |
+| 9        | false         | statements in the loop are not executed      |
 
+We can use ``for`` loops to iterate through an array.
+
+```js
+var letters = ['a', 'b', 'c'];
+
+for (var i = 0; i < letters.length; i++) {
+  console.log(letters[i]);
+}
+```
+
+In the example above, we set up an iterator, `i`. As long as `i` is less than the length of the array of letters, we'll keep calling the body of the loop. After we call the body of the loop, we'll increment `i`, which will eventually become greater than the length of the array and the loop will exit.
+
+If we put the above example in our console, then we should see this output:
+
+```
+a
+b
+c
+```
 
 ### Array.prototype.forEach
 
@@ -77,9 +96,9 @@ letters.forEach(function (letter) {
 });
 ```
 
-This will log the following output to the console:
+This will log the following output to the console, just like our ``for`` loop example above:
 
-```js
+```
 a
 b
 c
@@ -108,18 +127,6 @@ This will log the following output to the console:
 ```
 
 JavaScript allows you to omit arguments without raising an error. You can use this to your advantage by leaving out the index and the full array if you're not using them, which is common and what we did in the first example. However, if you do need either or both the index or the full array, you have access to them.
-
-`forEach()` is not the only way to iterate through an array — you may have seen another approach using for loops.
-
-```js
-const letters = ['a', 'b', 'c'];
-
-for (var i = 0; i < letters.length; i++) {
-  console.log(letters[i]);
-}
-```
-
-In the example above, we set up an iterator, `i`. As long as `i` is less than the length of the array of letters, we'll keep calling the body of the loop. After we call the body of the loop, we'll increment `i`, which will eventually become greater than the length of the array and the loop will exit.
 
 `forEach()` has a few advantages over using a `for` loop. First, it's quicker to write and easier to read. Secondly, JavaScript has function scope, but not block scope. This means that `number` in our first example is scoped only to our callback function, whereas `i` is accessible outside of the loop body, which is the global scope in this case. The latter could have some unintended consequences.
 
