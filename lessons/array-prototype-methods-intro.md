@@ -25,7 +25,7 @@ for ([initialization]; [condition]; [final-expression]) {
 }
 ```
 
-The initialization starts with a counter variable. Typically, this counter starts at zero, but you can specify any number. The condition is an expression evaluated each time the loop finishes executing an iteration. If the condition is true, the loop continues iterating. The final-expression statement is how you want to increment the initialization counter after each iteration. Usually the increment is by one, or ``i++`` for shorthand.
+The initialization starts with a counter variable. Typically, this counter starts at zero, but you can specify any number. The condition is an expression evaluated each time the loop finishes executing an iteration. If the condition is true, the loop continues iterating. The final-expression statement is executed at the end of each loop iteration, which is usually used to increment the initialization counter. Usually the increment is by one, or ``i++`` for shorthand.
 
 For example, we can log the counter variable to the console for each iteration, which is the first example on the MDN docs.
 
@@ -55,6 +55,14 @@ Let's follow what happens to ``i`` for each iteration of the ``for`` loop.
 | :------: |:-------------:| :-------------------------------------------:|
 | 0        | true          | 0 is logged to the console; i increases by 1 |
 | 1        | true          | 1 is logged to the console; i increases by 1 |
+| 2        | true          | 2 is logged to the console; i increases by 1 |
+| 3        | true          | 3 is logged to the console; i increases by 1 |
+| 4        | true          | 4 is logged to the console; i increases by 1 |
+| 5        | true          | 5 is logged to the console; i increases by 1 |
+| 6        | true          | 6 is logged to the console; i increases by 1 |
+| 7        | true          | 7 is logged to the console; i increases by 1 |
+| 8        | true          | 8 is logged to the console; i increases by 1 |
+| 9        | false         | statements are not executed                  |
 
 
 ### Array.prototype.forEach
