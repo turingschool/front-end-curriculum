@@ -9,7 +9,8 @@ Modern browsers include the [HTML5 Canvas API][canvas], which allows us to draw 
 
 ## Canvas Basics
 
-This section is not intended to be a full tutorial on the basics of working with Canvas. Rather, it will be just enough to help anyone not already familiar with the API to get by. We can easily add a [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element to our HTML like so:
+This section is not intended to be a full tutorial on the basics of working with Canvas. Rather, just enough to help get started with the API. 
+We can easily add a [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element to our HTML like so:
 
 ```html
 <canvas id="game" width="400" height="300"></canvas>
@@ -36,29 +37,17 @@ context.fillRect(50, 50, 10, 10);
 
 This will draw a 10 pixel by 10 pixel square located 50 pixels from the top-left corner of the canvas. Congratulations, you're a web artist now.
 
-> ### Animating Canvas
+#### Animating Canvas
 
-> We might be tempted to try something like `setTimeout()`. The issue with `setTimeout()` is that it doesn't guarantee accuracy. Let's consider the following:
-
-> ```js
-> setTimeout(function () {
->   console.log('Welcome to the future.');
-> }, 1000)
-> ```
-
-> This schedules the callback to be executed 1000 milliseconds (one second) in the future. Unfortunately, JavaScript can't — or won't, at least — make us any promises that this function will be called in one second. Instead, we're promised that it will be at least one second before the browser will try to call the function.
-
-#### requestAnimationFrame
-
-If [`setTimeout()`](https://developer.mozilla.org/en-US/docs/Web/API/WindowTimers/setTimeout) isn't the best solution, then what is? In modern browsers (most versions of Firefox and Chrome, Internet Explorer 10 and later, Safari 6.0 and later), we have [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame), which is specifically tuned for creating animations in the browser.
+In modern browsers (most versions of Firefox and Chrome, Internet Explorer 10 and later, Safari 6.0 and later), we have [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame), which is specifically tuned for creating animations in the browser.
 
 According to [MDN][MDNrAF]:
 
-> The `window.requestAnimationFrame()` method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes as an argument a callback to be invoked before the repaint.
+The `window.requestAnimationFrame()` method tells the browser that you wish to perform an animation and requests that the browser call a specified function to update an animation before the next repaint. The method takes as an argument a callback to be invoked before the repaint.
 
 [MDNrAF]: https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame
 
-`requestAnimationFrame()` takes as an argument a function, which it calls when the browser is ready to perform the next stage of the animation.
+`requestAnimationFrame()` takes a function as an argument, which it calls when the browser is ready to perform the next stage of the animation.
 
 ```js
 requestAnimationFrame(function () {
