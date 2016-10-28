@@ -32,13 +32,15 @@ You can use any of the following JavaScript libraries:
 
 ## Game Choices
 
-- Hang Man
 - Lights Out
 - Connect Four
 - Black Jack
 - Othello/Reversi
+- Frogger
+- Qbert
 - Breakout
 - Tron
+- Tetris
 - Snake
 
 (Any other game requires instructor approval.)
