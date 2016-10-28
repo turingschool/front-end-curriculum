@@ -9,7 +9,7 @@ Modern browsers include the [HTML5 Canvas API][canvas], which allows us to draw 
 This section is not intended to be a full tutorial on the basics of working with Canvas. Rather, it will be just enough to help anyone not already familiar with the API to get by. We can easily add a [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element to our HTML like so:
 
 ```html
-<canvas id="game" width="400px" height="300px"></canvas>
+<canvas id="game" width="400" height="300"></canvas>
 ```
 
 This will create a `<canvas>` element that is 400 pixels wide and 300 pixels high. Next, we'll need to get hold of a reference to our new Canvas in JavaScript, so we can start to manipulate it using code. The Canvas API supports a number of different _contexts_ for drawing on it; we'll be using the basic two-dimensional context.
@@ -33,17 +33,17 @@ context.fillRect(50, 50, 10, 10);
 
 This will draw a 10 pixel by 10 pixel square located 50 pixels from the top-left corner of the canvas. Congratulations, you're a web artist now.
 
-### Animating Canvas
+> ### Animating Canvas
 
-We might be tempted to try something like `setTimeout()`. The issue with `setTimeout()` is that it doesn't guarantee accuracy. Let's consider the following:
+> We might be tempted to try something like `setTimeout()`. The issue with `setTimeout()` is that it doesn't guarantee accuracy. Let's consider the following:
 
-```js
-setTimeout(function () {
-  console.log('Welcome to the future.');
-}, 1000)
-```
+> ```js
+> setTimeout(function () {
+>   console.log('Welcome to the future.');
+> }, 1000)
+> ```
 
-This schedules the callback to be executed 1000 milliseconds (one second) in the future. Unfortunately, JavaScript can't — or won't, at least — make us any promises that this function will be called in one second. Instead, we're promised that it will be at least one second before the browser will try to call the function.
+> This schedules the callback to be executed 1000 milliseconds (one second) in the future. Unfortunately, JavaScript can't — or won't, at least — make us any promises that this function will be called in one second. Instead, we're promised that it will be at least one second before the browser will try to call the function.
 
 #### requestAnimationFrame
 
