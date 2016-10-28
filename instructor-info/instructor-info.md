@@ -1,6 +1,16 @@
 ---
 Front End Instructor Contact Information
 ---
+# Student Support
+
+* Nick Dorans
+  * Slack - @nickynonaps
+  * Github -
+  * For pairing - Send Slack DM and use his [YouCanBookMe](https://nicholasdorans.youcanbook.me/)
+
+
+* Sign up to pair with 1608
+  *  Link - [GoogleDoc](https://docs.google.com/spreadsheets/d/1QQmWfs3yZVrEfO-z0THEjZNxKMksvFije_p1SeZJzp8/edit)
 
 # Instructors
 
@@ -59,10 +69,3 @@ Front End Instructor Contact Information
   * Slack - @robbiejaeger
   * Github - [robbiejaeger](https://github.com/robbiejaeger)
   * For Pairing - Send Slack DMs to schedule a time
-
-### Student Support
-
-* Nick Dorans
-  * Slack - @nickynonaps
-  * Github -
-  * For pairing - Send Slack DM and use his [YouCanBookMe](https://nicholasdorans.youcanbook.me/)
