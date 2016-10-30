@@ -13,11 +13,13 @@ In this segment, you'll learn the following:
 
 ### Context
 
+Sometimes we have a collection of items that we want to use. When we talk about a collection, we usually mean a series of items stored in an array. We could want to change the items in the collection, sort them, add all of the values in the collection, retrieve some items in the collection based on some condition, or many other scenarios.
 
+We could do these things by hand using a `for` loop, which we will introduce below, but we would have to implement our own logic to work with the array. Alternatively, we can use methods that the JavaScript language provides for us. These methods are in a group called array prototype methods. They are called this because Array is a JavaScript object, and there are methods that act on array objects. You'll see how these methods work in this lesson.
 
 ### For Loops...
 
-Let's talk about how traditional ``for`` loops work and why they can be dangerous. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a ``for`` loop:
+Let's talk about how traditional `for` loops work and why they can be something to stay away from. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
 
 ```js
 for ([initialization]; [condition]; [final-expression]) {
@@ -25,12 +27,12 @@ for ([initialization]; [condition]; [final-expression]) {
 }
 ```
 
-The initialization starts with a counter variable. Typically, this counter starts at zero, but you can specify any number. The condition is an expression evaluated each time the loop finishes executing an iteration. If the condition is true, the loop continues iterating. The final-expression statement is executed at the end of each loop iteration, which is usually used to increment the initialization counter. Usually the increment is by one, or ``i++`` for shorthand.
+The initialization starts with a counter variable. Typically, this counter starts at zero, but you can specify any number. The condition is an expression evaluated each time the loop finishes executing an iteration. If the condition is true, the loop continues iterating. The final-expression statement is executed at the end of each loop iteration, which is usually used to increment the initialization counter. Usually the increment is by one, or `i++` for shorthand.
 
 For example, we can log the counter variable to the console for each iteration, which is the first example on the MDN docs.
 
 ```js
-for (var i = 0; i < 9; i++) {
+for (var i = 0; i < 4; i++) {
    console.log(i);
 }
 ```
@@ -42,29 +44,19 @@ The output to the console will look something like:
 1
 2
 3
-4
-5
-6
-7
-8
 ```
 
-Let's follow what happens to ``i`` for each iteration of the ``for`` loop.
+Let's follow what happens to `i` in the `for` loop. Each of the rows in the table can be referred to as an **iteration**, a term we will hear a lot when dealing with arrays and loops.
 
-| i        | Condition     | What happens for this iteration?             |
-| :------: |:-------------:| :-------------------------------------------:|
-| 0        | true          | 0 is logged to the console; i increases by 1 |
-| 1        | true          | 1 is logged to the console; i increases by 1 |
-| 2        | true          | 2 is logged to the console; i increases by 1 |
-| 3        | true          | 3 is logged to the console; i increases by 1 |
-| 4        | true          | 4 is logged to the console; i increases by 1 |
-| 5        | true          | 5 is logged to the console; i increases by 1 |
-| 6        | true          | 6 is logged to the console; i increases by 1 |
-| 7        | true          | 7 is logged to the console; i increases by 1 |
-| 8        | true          | 8 is logged to the console; i increases by 1 |
-| 9        | false         | statements in the loop are not executed      |
+| i    | Condition     | What happens for each iteration?             |
+| :--: |:-------------:| :-------------------------------------------:|
+| 0    | (0 < 4) true  | 0 is logged to the console; i increases by 1 |
+| 1    | (1 < 4) true  | 1 is logged to the console; i increases by 1 |
+| 2    | (2 < 4) true  | 2 is logged to the console; i increases by 1 |
+| 3    | (3 < 4) true  | 3 is logged to the console; i increases by 1 |
+| 4    | (4 < 4) false | statements in the loop are not executed      |
 
-We can use ``for`` loops to iterate through an array.
+The previous example didn't deal with an array, so let's use an array with a `for` loop. We can use `for` loops to iterate through an array.
 
 ```js
 var letters = ['a', 'b', 'c'];
@@ -84,6 +76,8 @@ b
 c
 ```
 
+#### Your Turn
+
 ### Array.prototype.forEach
 
 One of the first methods we'll explore together is [`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FforEach), which iterates over the array and passes each element into a callback function that you provide.
@@ -96,7 +90,7 @@ letters.forEach(function (letter) {
 });
 ```
 
-This will log the following output to the console, just like our ``for`` loop example above:
+This will log the following output to the console, just like our `for` loop example above:
 
 ```
 a
@@ -132,7 +126,7 @@ JavaScript allows you to omit arguments without raising an error. You can use th
 
 `forEach()` is the foundation for many of the other methods we'll explore today and you can accomplish much of the same functionality with `forEach()` that other methods specialize in. That said, just because you _can_ use it, it doesn't mean it's the best choice and that you _should_ use it. More on this later.
 
-#### Your turn
+#### Your Turn
 
 Do the things...
 
@@ -170,7 +164,7 @@ The example above will give us the same result as the one before it: `['A', 'B',
 
 Like `forEach()`, `map()` accepts an anonymous function that it calls on each element of the array it's called on. `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
 
-#### Your turn
+#### Your Turn
 
 Do the things...
 
@@ -227,7 +221,7 @@ const guitarPlayingBeatles = beatles.filter(function (beatle) {
 });
 ```
 
-#### Your turn
+#### Your Turn
 
 Do the things...
 
@@ -262,7 +256,7 @@ console.log(capitalLetter); // Logs ["A", "B", "C"]
 
 The second argument that we pass to the `reduce()` method is an empty array, which is then set as the initial value for `newArray`. Next, we push in a capital version of the current letter. [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fpush) returns the current length of the array after the new element has been pushed in, so we have to explicitly return `newArray` to pass it along to the next iteration in our `reduce()`.
 
-#### Your turn
+#### Your Turn
 
 Do the things...
 
@@ -334,10 +328,11 @@ const sortedBeatles = beatles.sort(function (a, b) {
 console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 ```
 
-#### Your turn
+#### Your Turn
 
 Do the things...
 
 ### Additional Resources
 
-[MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls.
+* [MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls.
+* [Array Prototype Methods documentation by MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) - for a full list of array methods given to you by default in JavaScript
