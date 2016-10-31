@@ -281,7 +281,7 @@ __Your Turn__
 
 ## Additional Loaders
 
-Webpack can transpile assets during the build process. An example of this is if we want to write in SCSS. The browser can only run CSS, so we have to convert our assets for the browser.
+Webpack can transpile assets during the build process. An example of this is if we want to write in SCSS. The browser can only run CSS, so we have to convert our assets for the browser. For now, we'll use plain old CSS. Don't worry about SCSS!
 
 Webpack handles this using _loaders_. There are many loaders on npm. We'll discuss just a few of them.
 
@@ -314,10 +314,10 @@ module.exports = {
 }
 ```
 
-We can now require a CSS file with `require('style.css')` or a
+We can now require a CSS file with `require('style.css')` or, down the road, a
 SCSS files with `require('style.scss')`.
 
-__Your Turn: Using SCSS__
+<!-- __Your Turn: Using SCSS__
 
 * Create a new scss stylesheet file and add some styling to it:
 ```
@@ -325,7 +325,7 @@ $color: #F00;
 body { background-color: $color; }
 ```
 * In your `index.js`, require this file
-* load your main page and see if your styles are present
+* load your main page and see if your styles are present -->
 
 Keep in mind:
 
