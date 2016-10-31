@@ -31,7 +31,7 @@ Some things to take note of:
 
 What if we wanted to "React-ify" this SVG in order to use it as a custom component?
 
-```jsx
+```js
 const ProgressBar = () => {
   return (
     <svg width="600" height="40" viewBox="0 0 600 40" xmlns="http://www.w3.org/2000/svg">
@@ -46,7 +46,7 @@ const ProgressBar = () => {
 
 Right now, it's pretty static. We can make it a little more dynamic by passing in some properties, I suppose.
 
-```jsx
+```js
 const ProgressBar = ({ width, height }) => {
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} xmlns="http://www.w3.org/2000/svg">
@@ -61,7 +61,7 @@ const ProgressBar = ({ width, height }) => {
 
 As it stands, the progress bar only ever shows a 50/50 split. What if we let the whoever was using the component pass in a percentage?
 
-```jsx
+```js
 const ProgressBar = ({ width, height, percentage }) => {
   return (
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} xmlns="http://www.w3.org/2000/svg">
@@ -78,7 +78,7 @@ That's a lot of math, but we'll refactor that out in a bit.
 
 What if we made it so that the user could modify the component?
 
-```jsx
+```js
 class App extends Component {
   constructor(props) {
     super(props);
@@ -123,7 +123,7 @@ Can you make the width and the height of the progress bar adjustable as well?
 
 If someone omits the width, height, or percentage. It's going to be bad news bears. We could specify that each of these is required.
 
-```jsx
+```js
 ProgressBar.propTypes = {
   width: React.PropTypes.number.isRequired,
   height: React.PropTypes.number.isRequired,
@@ -135,7 +135,7 @@ This will also protect us from the user passing in something that is not a numbe
 
 In addition, we could specify some defaults as well.
 
-```jsx
+```js
 ProgressBar.defaultProps = {
   width: 600,
   height: 40,
@@ -151,7 +151,7 @@ There is a bug when you adjust the slider or the input field. Can you fix the is
 
 There is a little bit of room for refactoring here. We have some repeated logic.
 
-```jsx
+```js
 const ProgressBar = ({ width, height, percentage }) => {
   const firstHalfWidth = width * (percentage / 100);
   const secondHalfWidth = width - firstHalfWidth;
@@ -184,7 +184,7 @@ You may want to take a look at the documentation for [React.PropTypes](https://f
 
 Your progress bar is pretty good. Nice job. There is a limitation in that it can only divide that bar between two values. It would be cool if we could also render a stacked bar graph. Let's start by making a copy of `<ProgressBar/>`, hollowing it out, and changing the names.
 
-```jsx
+```js
 import React from 'react';
 
 const StackedBarGraph = ({ width, height }) => {
@@ -215,7 +215,7 @@ export default StackedBarGraph;
 
 One of the things that differentiates our `<StackedBarGraph/>` from `<ProgressBar/>` is that it will have an unknown number of elements. We'll use a component for representing our data points. Unsurprisingly, it will be called `<DataPoint/>`.
 
-```jsx
+```js
 import React from 'react';
 
 const DataPoint = () => {};
@@ -234,7 +234,7 @@ It seems pretty simple for now, but we'll be able to take advantage of `PropType
 
 ### Setting Up the Application Component
 
-```jsx
+```js
 import React, { Component } from 'react';
 import Immutable from 'immutable'; // This is for later…
 import StackedBarGraph from './StackedBarGraph';
@@ -290,7 +290,7 @@ We'll use the excellent [Immutable][] by our friends at Facebook (the makers of 
 [Immutable]: https://facebook.github.io/immutable-js/
 [auth0imm]: https://auth0.com/blog/intro-to-immutable-js/
 
-```jsx
+```js
 import React, { Component } from 'react';
 import Immutable from 'immutable';
 import StackedBarGraph from './StackedBarGraph';
