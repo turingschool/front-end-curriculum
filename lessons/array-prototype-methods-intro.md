@@ -66,7 +66,7 @@ for (var i = 0; i < letters.length; i++) {
 }
 ```
 
-In the example above, we set up an iterator, `i`. As long as `i` is less than the length of the array of letters, we'll keep calling the body of the loop. After we call the body of the loop, we'll increment `i`, which will eventually become greater than the length of the array and the loop will exit.
+In the example above, we set up an iterator, `i`. As long as `i` is less than the length of the array of letters, we'll keep calling the body of the loop. After we call the body of the loop, we'll increment `i`, which will eventually become greater than the length of the array and the loop will exit. The `letters.length` part of the loop condition gives us the ability to change the size of the letters array without having to change the condition.
 
 If we put the above example in our console, then we should see this output:
 
@@ -76,11 +76,17 @@ b
 c
 ```
 
+Notice that the condition is crucial in controlling the flow of our loop. If the condition is never false, then the loop will become an infinite loop and never stop running until we stop it or our computer runs out of memory. This is one delicate part of `for` loops to watch out for.
+
 #### Your Turn
+
+1. Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+
+2. Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
 
 ### Array.prototype.forEach
 
-One of the first methods we'll explore together is [`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FforEach), which iterates over the array and passes each element into a callback function that you provide.
+Let's get into the array prototype methods. One of the first methods we'll explore together is [`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FforEach), which iterates over the array and passes each element into a callback function that you provide.
 
 ```js
 const letters = ['a', 'b', 'c'];
@@ -128,7 +134,15 @@ JavaScript allows you to omit arguments without raising an error. You can use th
 
 #### Your Turn
 
-Do the things...
+These look familiar...let's compare the structure to what we had before using the `for` loop now with `forEach`.
+
+* Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+
+* Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+
+And one additional:
+
+* If we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
 
 ### Array.prototype.map
 
@@ -166,7 +180,9 @@ Like `forEach()`, `map()` accepts an anonymous function that it calls on each el
 
 #### Your Turn
 
-Do the things...
+* From before, if we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. This time we should end up with an array `[5, 7, 9]`.
+
+* Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius; `degreesF = [67, 32, 55, 102]`. It should roughly become `[19.44, 0, 12.77, 38.88]`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm) to convert from Fahrenheit to Celsius.
 
 ### Array.prototype.filter
 
@@ -223,7 +239,9 @@ const guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 #### Your Turn
 
-Do the things...
+* From the array `[34, 2, 55, 75, -1, 100]`, return an array with only numbers greater that 50.
+
+* Filter on the array to return objects that are not thirsty: `[{name: "Martha", thirsty: true}, {name: "Pam", thirsty: false}, {name: "Roberta", thirsty: true}]`.
 
 ### Array.prototype.reduce
 
@@ -241,7 +259,7 @@ console.log(sum); // Logs 6
 
 You might notice that we have a second argument after our anonymous function. In the example above, we passed `0`. The second argument is the starting value of the accumulator (`total` in this case). It doesn't have to be a number. You could pass in an empty array or even an object that you want to work with.
 
-If we wanted to—and we're not sure that we ever would—we could implement `map()` using `reduce()`:
+If we wanted to — and we're not sure that we ever would — we could implement `map()` using `reduce()`:
 
 ```js
 const letters = ['a', 'b', 'c'];
@@ -258,7 +276,9 @@ The second argument that we pass to the `reduce()` method is an empty array, whi
 
 #### Your Turn
 
-Do the things...
+* For the shopping cart array `[{item: "shoes", price: 79.99}, {item: "gloves", price: 29.75}, {item: "pants", price: 39.99}]`, add the items to get the total cost of the shopping cart (should be equal to 149.73).
+
+* Say we have created an array of arrays `[["gears", 20], ["diameter", 26], ["height", 19.5]]`. What we really want is a single object with these as key-value pairs: `{gears: 20, diameter: 26, height: 19.5}`.
 
 ### Array.prototype.sort
 
@@ -287,7 +307,7 @@ console.log(sortedNumbers); // Logs [1, 10, 3, 7]
 
 Unless you've encountered a similar example in the past, `[1, 10, 3, 7]` is probably not what you were expecting the `sort()` method to return. By default, JavaScript uses lexicographical sorting. You can think of it as alphabetical sorting. 7 may come before 10 numerically, but 10 comes first lexicographically.
 
-So, how do we sort numbers then? `Array.prototype.sort()` also accepts a callback function that it will use to evalute the order of the elements in the new array it returns.
+So, how do we sort numbers then? `Array.prototype.sort()` also accepts a callback function that it will use to evaluate the order of the elements in the new array it returns.
 
 The callback function compares two elements at a time and the `sort()` method rearranges the elements based on a value returned by the callback function.
 
@@ -330,9 +350,11 @@ console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 
 #### Your Turn
 
-Do the things...
+* Sort the numbers in the array in descending order: `[2, 56, 5, 8, 1, 100]`.
+
+* Sort the words in alphabetical order according to the second letter in the word: `["couch", "blender", "island", "cereal", "chair"]`.
 
 ### Additional Resources
 
-* [MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls.
-* [Array Prototype Methods documentation by MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) - for a full list of array methods given to you by default in JavaScript
+* [MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls and DOM manipulation.
+* [Array Prototype Methods documentation by MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) - for a full list of array methods given to you by default in JavaScript.
