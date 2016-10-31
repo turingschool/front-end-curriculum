@@ -160,7 +160,7 @@ const ProgressBar = ({ width, height, percentage }) => {
     <svg width={width} height={height} viewBox={`0 0 ${width} ${height}`} xmlns="http://www.w3.org/2000/svg">
       <g>
         <rect fill="#D0011B" x={0} y={0} width={firstHalfWidth} height={height} />
-        <rect fill="#50E3C2" x={width * (percentage / 100)} y={0} width={secondHalfWidth} height={height} />
+        <rect fill="#50E3C2" x={firstHalfWidth} y={0} width={secondHalfWidth} height={height} />
       </g>
     </svg>
   );
@@ -234,6 +234,7 @@ It seems pretty simple for now, but we'll be able to take advantage of `PropType
 
 ### Setting Up the Application Component
 
+```jsx
 import React, { Component } from 'react';
 import Immutable from 'immutable'; // This is for later…
 import StackedBarGraph from './StackedBarGraph';
