@@ -231,7 +231,7 @@ We can build the files once with `webpack` or we can set up a development server
 
 Let's fire up `webpack-dev-server` and head over to `http://localhost:8080/`.
 
-__Note:__ Having trouble? If `webpack-dev-server` throws an error like `webpack-dev-server: command not found`, try adding ` "start": "webpack-dev-server"` in the `"scripts"` section of your `package.json` file. Now run `npm start`. This should allow us to run the command specified in the package's `"start"` property of its `"scripts"` object -- in this case, `webpack-dev-server`. In other words, it lets us to run `webpack-dev-server`!
+__Note:__ Having trouble? If `webpack-dev-server` throws an error like `webpack-dev-server: command not found`, try adding ` "start": "webpack-dev-server"` in the "scripts" section of your package.json file. Now run `npm start`. This should allow us to run the command specified in the package's `"start"` property of its `"scripts"` object -- in this case, `webpack-dev-server`. In other words, it lets us to run `webpack-dev-server`!
 
 ## Our First Test
 
