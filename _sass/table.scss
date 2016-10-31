@@ -1,0 +1,22 @@
+table {
+	border-collapse: collapse;
+	margin: 20px 0 0;
+	padding: 0;
+}
+
+table tr {
+	border-top: 1px solid #ccc;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+table tr:nth-child(2n) {
+	background-color: #f8f8f8;
+}
+
+table tr th, table tr td {
+	border: 1px solid #ccc;
+	margin: 0;
+	padding: 6px 20px;
+}

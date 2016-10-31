@@ -37,6 +37,75 @@ context.fillRect(50, 50, 10, 10);
 
 This will draw a 10 pixel by 10 pixel square located 50 pixels from the top-left corner of the canvas. Congratulations, you're a web artist now.
 
+#### Setup
+Create a directory with the following files:
+
+##### helper.js
+```
+function getClickPosition(e) {
+  function getPosition(element) {
+    var xPosition = 0;
+    var yPosition = 0;
+
+    while (element) {
+        xPosition += (element.offsetLeft - element.scrollLeft + element.clientLeft);
+        yPosition += (element.offsetTop - element.scrollTop + element.clientTop);
+        element = element.offsetParent;
+    }
+
+    return { x: xPosition, y: yPosition };
+  }
+
+  var parentPosition = getPosition(e.currentTarget);
+  var xPosition = e.clientX - parentPosition.x;
+  var yPosition = e.clientY - parentPosition.y;
+
+  return { x: xPosition, y: yPosition };
+}
+```
+
+##### script.js
+
+```js
+var canvas = document.getElementById('game');
+var context = canvas.getContext('2d');
+```
+
+##### index.html
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Canvas Blocks</title>
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <canvas id="game"
+          class="game-canvas"
+          width="400"
+          height="300">
+  </canvas>
+
+  <script src="helper.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
+```
+
+##### style.css
+
+```css
+.game-canvas {
+  border: 1px dashed;
+  margin: auto;
+  display: block;
+}
+```
+
 #### Animating Canvas
 
 In modern browsers (most versions of Firefox and Chrome, Internet Explorer 10 and later, Safari 6.0 and later), we have [`requestAnimationFrame()`](https://developer.mozilla.org/en-US/docs/Web/API/window/requestAnimationFrame), which is specifically tuned for creating animations in the browser.
