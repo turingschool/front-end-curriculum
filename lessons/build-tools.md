@@ -78,6 +78,12 @@ We installed a few development dependencies:
 
 ### Recommended: sane `.gitignore` defaults
 
+First, let's go ahead and make our `.gitignore` file:
+
+```bash
+touch .gitignore
+```
+
 * [NPM](https://www.npmjs.com/) vs. [Bundler](http://bundler.io/) dependency storage
 * Git strategy -- keeping diffs meaningful and project churn low
 * Git problems caused by versioning dependencies or other frequently
@@ -136,7 +142,6 @@ README.md
 __Discussion: Application Entry Points__
 
 * What is needed to trigger an application to "run" in its most standard configuration?
-* How do we run a rails project? Its test suite?
 * System executables vs. Code files
 * What is the "executable" for a browser-based app?
 
@@ -196,7 +201,6 @@ Note that these pages won't work yet, since the bundles themselves have not yet 
 ## Setting Up Webpack
 
 [Webpack](https://webpack.github.io/) is a module bundler.
-Think of it as the Asset Pipeline, but _way_ better and without Rails.
 
 We installed it earlier, but let's add a configuration file:
 
@@ -226,6 +230,8 @@ In the above configuration, we're telling Webpack that we'd like it to build two
 We can build the files once with `webpack` or we can set up a development server that will reload our changes with `webpack-dev-server`.
 
 Let's fire up `webpack-dev-server` and head over to `http://localhost:8080/`.
+
+__Note:__ Having trouble? If `webpack-dev-server` throws an error like `webpack-dev-server: command not found`, try adding `"start": "webpack-dev-server"` in the "scripts" section of your package.json file. Now run `npm start`. This should allow us to run the command specified in the package's `"start"` property of its `"scripts"` object -- in this case, `webpack-dev-server`. In other words, it lets us to run `webpack-dev-server`!
 
 ## Our First Test
 
@@ -275,7 +281,7 @@ __Your Turn__
 
 ## Additional Loaders
 
-Like the Asset Pipeline in Rails, Webpack can transpile assets during the build process. An example of this is if we want to write in SCSS. The browser can only run CSS, so we have to convert our assets for the browser.
+Webpack can transpile assets during the build process. An example of this is if we want to write in SCSS. The browser can only run CSS, so we have to convert our assets for the browser. For now, we'll use plain old CSS. Don't worry about SCSS!
 
 Webpack handles this using _loaders_. There are many loaders on npm. We'll discuss just a few of them.
 
@@ -308,10 +314,10 @@ module.exports = {
 }
 ```
 
-We can now require a CSS file with `require('style.css')` or a
+We can now require a CSS file with `require('style.css')` or, down the road, a
 SCSS files with `require('style.scss')`.
 
-__Your Turn: Using SCSS__
+<!-- __Your Turn: Using SCSS__
 
 * Create a new scss stylesheet file and add some styling to it:
 ```
@@ -319,7 +325,7 @@ $color: #F00;
 body { background-color: $color; }
 ```
 * In your `index.js`, require this file
-* load your main page and see if your styles are present
+* load your main page and see if your styles are present -->
 
 Keep in mind:
 
