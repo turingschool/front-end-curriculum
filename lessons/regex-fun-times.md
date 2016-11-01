@@ -48,12 +48,6 @@ Let's looks specifically at the set up for this regex pattern.
 | `g`       | Flag: Outside the regex meaning 'global'. That means it will test the pattern against all possible matches in a string. Without this flag, the regex will only test the first match it finds and then stop.     |
 | `i`       | Flag: Match is case insensitive.         |
 
-#### Practice
-
-Open [regex101](www.regex101.com)
-
-@TODO: Include test examples with basic strings at end and begining of a regex
-
 ### Capturing a Character
 
 ```
@@ -98,8 +92,6 @@ This is a quantifier which targets the capture group and says 'repeat previous t
 | `{min,max}` | Must match the preceding element _atleast min times but not more than max times |
 | `{,max}`   | Must match the preceding element _no more that max times_ |
 
-@TODO: Include practice lines including `cats?` matching cat or cats
-
 ### Final Breakdown
 
 ```
@@ -130,7 +122,33 @@ This is a quantifier which targets the capture group and says 'repeat previous t
   - [A previously compliant version](http://www.ex-parrot.com/~pdw/Mail-RFC822-Address.html)
   - [Relevant Post]( https://davidcel.is/posts/stop-validating-email-addresses-with-regex/)
 
-## Practice: In JavaScript
+# Let's Practice (Language Agnostic)
+
+Let's take approx 15 minutes to play around with this. Choose either one of the options below.
+
+## Practice: RegexCrosswords
+
+A regular expression, especially a gnarly one like the email validator above, can be intimidating. The best way to get better at writing regular expression patterns, however, is to practice.
+
+- Open the [Regex Crossword](https://regexcrossword.com/) site
+- Play through the first tutorial level
+- If you get stuck, copy part of the pattern into [Regex101](https://regex101.com)
+- How far can you get in 15 minutes?
+
+## Practice: Regex Golf
+
+XKCD likes to write Regex jokes (and subsequently explain them in a format that is really excellent and informative). Check out this [comic](https://www.explainxkcd.com/wiki/index.php/1313:_Regex_Golf) and explanation.
+
+[Here is an implementation of Regex Golf](http://regex.alf.nu/)
+
+- Read the [comic](https://www.explainxkcd.com/wiki/index.php/1313:_Regex_Golf) and explanation
+- Open the [Regex Golf](http://regex.alf.nu/) (if the site is still down - try playing it from the [Internet Archive](https://web.archive.org/web/20160206184838/http://regex.alf.nu/)) site
+- Play through the Warmup first level and then move through the levels
+- If you get stuck, copy part of the pattern into [Regex101](https://regex101.com)
+- How far can you get in 15 minutes?
+
+
+## JavaScript: RegExp
 
 Regular Expressions are awesome.
 
@@ -190,22 +208,9 @@ and the constructor function is:
 | `split` | Accepts a RegExp or string to break self into an array of strings    |
 
 
-@TODO: Experiments with these methods
+## Practice: JavaScript
 
-## Practice: RegexCrosswords
-
-A regular expression, especially a gnarly one like the email validator above, can be intimidating. The best way to get better at writing regular expression patterns, however, is to practice.
-
-- Open the [Regex Crossword](https://regexcrossword.com/) site
-- Play through the first tutorial level
-- If you get stuck, copy part of the pattern into [Regex101](https://regex101.com)
-- How far can you get in 15 minutes?
-
-## Practice: Regex Golf
-
-XKCD likes to write Regex jokes (and subsequently explain them in a format that is really excellent and informative). Check out this [comic](https://www.explainxkcd.com/wiki/index.php/1313:_Regex_Golf) and explanation.
-
-[Here is an implementation of Regex Golf](http://regex.alf.nu/)
+@TODO: Mini-JS test suite
 
 # Resources and Next Steps
 
