@@ -156,7 +156,41 @@ You can say it outloud if you want.
 If you include a regular expression in your code, you MUST also write minimum 3 unit tests.
 ```
 
-@TODO: How to Use in JavaScript
+Okay. Now that you've internalized that. Let's talk about how you work with Regular Expression in JavaScript specifically.
+
+There are two ways to create a [RegExp Object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp)
+
+The literal version is:
+
+```javascript
+   var regex = /cat/;
+```
+
+and the constructor function is:
+
+```javascript
+  var regex = new RegExp("cat");
+```
+
+#### RegExp methods
+
+| Method | Description                                             |
+|--------|---------------------------------------------------------|
+| `exec` | Accepts a string, searches it for a match. Returns an array of information or null    |
+| `test` | Accepts a string, searches it for a match. Returns true of false     |
+
+#### String methods using RegExp
+
+| Method | Description                                             |
+|---------|---------------------------------------------------------|
+| `match` | Accepts a RegExp, searches self for a match. Returns an array of information or null    |
+| `test`  | Accepts a RegExp, searches self for a match. Returns true of false     |
+| `search`| Accepts a RegExp, searches self for a match. Returns the index of the match or -1 if not match   |
+|`replace`| Accepts a RegExp and a replacement string, searches self for a match and replaces with replacement string where match.    |
+| `split` | Accepts a RegExp or string to break self into an array of strings    |
+
+
+@TODO: Experiments with these methods
 
 ## Practice: RegexCrosswords
 
