@@ -1,5 +1,5 @@
 ---
-Front End Instructor Contact Information
+title: Front End Instructor Contact Information
 ---
 # Student Support
 
