@@ -84,9 +84,20 @@ Enter CSS Modules.
 
 CSS modules allow you to optimize which styles need to be loaded at what time, which helps maximize performance. What are we talking about? Isn't creating a `main.css` file and importing it into my `index.js` entry point also a module? Yes! Yes it is. But we can break it up into individual pieces that are requested alongside the rendered component, rather than required all at once.
 
-Let's look back at our [react-router-revisited](https://github.com/martensonbj/react-router-revisited/tree/css-modules) repo (or whatever repo you want to experiment on).
+Pull up a repo using React that does NOT use `create-react-app`. At the time of writing this lesson plan, the `create-react-app` boilerplate has the following limitations (among others, always check [the docs](https://github.com/facebookincubator/create-react-app#limitations):  
+```
+Some features are currently not supported:
 
-Check out the organization of our app. Previously everything was listed as separate files. In this branch, we've create an `App` folder with everything related to the App component nested within it. This includes a baby `App.css` file.
+Server rendering.
+Some experimental syntax extensions (e.g. decorators).
+CSS Modules.  <---- THIS MEANS TROUBLE
+LESS or Sass.
+Hot reloading of components.
+```
+
+Pick your favorite component, and create a .css file associated with it. For example, if you have an `About.js` file that renders an `<About />` component, create an `About/` folder, move your component, make any necessary changes to where `About.js` was previously referenced, and then add an `About.css` file in that folder as well.
+
+Creating a tiny `.css` file with styles associated with this component explicitly makes writing CSS extremely flexible. 
 
 This allows us to require just that part of CSS at the top of our `App.js` file, which will be loaded as a separate piece of CSS directly into style tags in your HTML. Fire up your server and take a look at the elements tab and dig into the `<head></head>` section to see our style.
 
@@ -96,7 +107,7 @@ One of the more headache inducing aspects of CSS is the concept of "cascading". 
 
 Our JavaScript file(s) requested their appropriate CSS files and that code was embedded in `<style>` tags within our HTML page. This makes our code incredibly modular and easy to read/maintain. Webpack is doing this behind the scenes with the `style-loader`. Then at build time, webpack automatically generates classnames which are exported as a JS object injected into your code.  
 
-There are also valid arguments for not having your CSS served up as embedded style tags. In order to tell Webpack to chill and let the CSS live in external style sheet, we need to install a plugin, [`extract-text-webpack-plugin`](https://github.com/webpack/extract-text-webpack-plugin). (This is also already installed if you're using `create-react-app`)  
+There are also valid arguments for not having your CSS served up as embedded style tags. In order to tell Webpack to chill and let the CSS live in external style sheet, we need to install a plugin, [`extract-text-webpack-plugin`](https://github.com/webpack/extract-text-webpack-plugin).
 
 Example:  
 
