@@ -190,6 +190,13 @@ and the constructor function is:
   var regex = new RegExp("cat");
 ```
 
+You will want to use the constructor function if you're dynamically creating a regex. You can use flags like `i` for case insensitive in either case.
+
+```javascript
+  var regex1 = /cat/i;
+  var regex2 = new RegExp("cat", 'i');
+```
+
 #### RegExp methods
 
 | Method | Description                                             |
@@ -210,22 +217,17 @@ and the constructor function is:
 
 ## Practice: JavaScript
 
-@TODO: Mini-JS test suite
+The goal of this experiment is to practice using RegExp in JavaScript AND more importantly to show you how easily a regex can miss an edge case.
+
+Don't expect to get every test passing during the worktime, and feel free to add additional tests to try and find more edge cases as you think of them.
+
+[Clone This Repo](https://github.com/rrgayhart/regex-js-practice)
 
 # Resources and Next Steps
 
-[MDN Has an Excellent Guide for JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
-
-## Beginner & Intermediate Level
-
+- [MDN Has an Excellent Guide for JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions)
 - [No but seriously, read this XKCD comic explanation, it's real good](https://www.explainxkcd.com/wiki/index.php/1313:_Regex_Golf)
-- [Regex Crosswords](https://regexcrossword.com/)
 - [Regex101](https://regex101.com/)
 - [Intro to Regular Expressions by Michael Fitzgeral](
 http://www.amazon.com/Introducing-Regular-Expressions-ebook/dp/B008K9OGDA/ref=sr_1_2?ie=UTF8&qid=1374171971&sr=8-2&keywords=Regular+Expressions)
-
-## Advanced
-
-- @TODO: Advanced JS resource
-
 - ["Finite State Machines and Regular Expressions" by Eli Bendersky](http://www.gamedev.net/page/resources/_/technical/general-programming/finite-state-machines-and-regular-expressions-r3176)
