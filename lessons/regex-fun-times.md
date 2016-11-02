@@ -157,7 +157,9 @@ They are also really, really, really, really, really easy to get wrong.
 Before we go further, I need you, the reader, to repeat the following warning in your head.
 
 ```
-If you include a regular expression in your code, you MUST also write minimum 3 unit tests. A happy path, as sad path and a bizarre path.
+If you include a regular expression in your code, you MUST also write minimum 3 unit tests.
+
+A happy path, as sad path and a bizarre path.
 ```
 
 I don't care where you're putting the regular expression. 
