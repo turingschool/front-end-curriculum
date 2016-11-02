@@ -4,13 +4,13 @@ tags: HTML, CSS, Parallax
 ---
 
 Plan Of Attack:  
-  - What is Parallax?  
-  - Examples  
-  - Build a basic fixed-parallax site with CSS  
-  - Add some JS to create a dynamic parallax site  
-  - Build a dynamic parallax site without JavaScript  
-  - Background Videos  
-  - Finished branches are located [here](https://github.com/martensonbj/parallax)  
+* What is Parallax?  
+* Examples  
+* Build a basic fixed*parallax site with CSS  
+* Add some JS to create a dynamic parallax site  
+* Build a dynamic parallax site without JavaScript  
+* Background Videos  
+* Finished branches are located [here](https://github.com/martensonbj/parallax)  
 
 ### What is Parallax?
 
