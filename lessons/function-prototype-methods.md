@@ -8,7 +8,7 @@ title: Function Prototype Methods
 * Understand the precedence of these rules
 * Understand the difference between function definition context and invocation context
 
-#### Questions you will have to answer at the end of the lesson: 
+#### Questions to answer at the end of the lesson: 
 1. What determines which object a function's `this` points to? What's the default?
 2. How do you "borrow" a function by implicit assignment of `this`?
 3. How do you explicitly bind `this`?
@@ -84,7 +84,125 @@ var Car = function(make, model, color){
 - `bind()` let's you save for later
 
 ```javascript
+//basic object w/ two properties and a method
+
+var noah = {
+    name: 'Noah',
+    age: 12,
+    sayName: function(){
+  console.log('My name is ' + this.name);
+ }
+}
+
+//we know the left of the dot rule means the this keyword references our
+noah object
+noah.sayName()
 ```
+
+```javascript
+//what happens if we want to move that method to the global scope and still reference the context of our Noah object?
+
+var sayName = function(){
+  console.log('My name is ' + this.name);
+ }
+
+var noah = {
+    name: 'Noah',
+    age: 12,
+}
+
+//every function has a "call" method, defined on prototype, whose first argument is the context for which to call that function.  :)
+
+sayName.call(noah)
+```
+
+```javascript
+//let's make it a little more interesting.
+
+var sayName = function(){
+  console.log('My name is ' + this.name);
+ }
+
+var noah = {
+    name: 'Noah',
+    age: 12,
+}
+
+var cars = ['R8', 'Yugo', 'Shelby']
+
+```
+
+```javascript
+//with the call method on a function, the first argument is the context and every argument AFTER that will be run through the function. :)
+
+var sayName = function(car1, car2, car3){
+  console.log('My name is ' + this.name + ' and I own a ' + car1 + ', '
+  + car2 + ', and a ' + car3);
+ };
+
+var noah = {
+    name: 'Noah',
+    age: 12,
+};
+
+var cars = ['R8', 'Yugo', 'Shelby'];
+
+sayName.call(noah, cars[0], cars[1], cars[2]);
+
+```
+
+```javascript
+//yikes, that is a lot of arguments to manage. Does javascript give us a better option? YES.
+
+var sayName = function(car1, car2, car3){
+  console.log('My name is ' + this.name + ' and I own a ' + car1 + ', '
+  + car2 + ', and a ' + car3);
+ };
+
+var noah = {
+    name: 'Noah',
+    age: 12,
+};
+
+var cars = ['R8', 'Yugo', 'Shelby'];
+
+//just remember the 'a' in apply goes with the 'a' in array! :)
+
+sayName.apply(noah, cars);
+
+```
+
+```javascript
+//but what if you don't want to invoke the function immediately with call and apply? Good news - you can save for later with bind.
+
+var sayName = function(car1, car2, car3){
+  console.log('My name is ' + this.name + ' and I own a ' + car1 + ', '
+  + car2 + ', and a ' + car3);
+ };
+
+var noah = {
+    name: 'Noah',
+    age: 12,
+};
+
+var cars = ['R8', 'Yugo', 'Shelby'];
+
+//bind will not run the function immediately on the cars, instead you get a new function back. So knowing that, we'll assign this bound function to a newly named function and call the new function to check that we get the same result.
+
+var newFunction = sayName.bind(noah, cars[0], cars[1], cars[2]);
+```
+
+Let's recap those:
+
+- `call()` and `apply()` and `bind()` allow us to explicitly state what
+  the `this` keyword is going to be in any given function
+- `call()` and `apply()` behave the exact same way. They will
+  immediately invoke the function.
+- `call()` you pass the arguments in one-by-one
+- `apply()` you pass the arguments in as an array
+- `bind()` is just like `call()`, EXCEPT instead of immediately invoking
+  the function, it returns you a brand new function that you can invoke
+  later
 
 #### Implicit Binding
 ![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-3.jpg) 
@@ -98,9 +216,9 @@ var fruit = {
     name: 'apple',
     ripe: true,
     displayType: function(){ console.log(this.name) }
-  }
+  };
 
-fruit.displayType()
+fruit.displayType();
 ```
 
 ```javascript
@@ -113,11 +231,12 @@ var fruitBowl = function(object){
 var apple = {
   name: 'apple',
   ripe: false
-  }
+  };
+
 var banana = {
   name: 'banana',
   ripe: true
-  }
+  };
 
 fruitBowl(apple);
 fruitBowl(banana);
@@ -154,7 +273,7 @@ someFruit.trickyFruit.fruitType();
 
 - In the absence of any other rule, `this` refers to the window object
 - This is the default rule, when all of the above fails
-- Strict mode will throw you an error, because it knows you don't _really_ mean the window, so it doesn't even let you do it, and makes `this` undefined
+- [Strict Mode](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) will throw you an error, because it knows you don't _really_ mean the window, so it doesn't even let you do it, and makes `this` undefined
 
 ```javascript
 var carColor = function(){
@@ -175,4 +294,30 @@ var carColor = function(){
 var myCar = {
   color: 'Black';
 };
+```
+
+#### For Fun
+
+```javascript
+
+var fullname = 'Jane Doe';
+var obj = {
+  fullname: 'Scooby Doo',
+  prop: {
+    fullname: 'Penny Pumpkin',
+    getFullname: function() {
+      return this.fullname;
+    }
+  }
+};
+
+//What does this return?
+console.log(obj.prop.getFullname());
+
+//What does this return? Why?
+var test = obj.prop.getFullname;
+console.log(test());
+
+//Fix the above test code to return Penny Pumpkin using call and/or
+apply
 ```
