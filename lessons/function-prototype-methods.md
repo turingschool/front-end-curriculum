@@ -317,6 +317,5 @@ console.log(obj.prop.getFullname());
 var test = obj.prop.getFullname;
 console.log(test());
 
-//Fix the above test code to return Penny Pumpkin using call and/or
-apply
+//Fix the above test code to return Penny Pumpkin using call and/or apply
 ```
