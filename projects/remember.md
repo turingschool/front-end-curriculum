@@ -96,10 +96,11 @@ ____
 When the user clicks on one of the reminders on the page, they are taken to a `Reminder` route (e.g. `"/1"`, if the id of the reminder is `1`). The title of the reminder object should be displayed.
 
 So, what needs to happen here?  
+
 * You'll need a `Reminder` route in addition to the `Reminders` route.
 * It should be nested under the `Reminders` route.
 * The user should still see all of the reminders from your previous feature. The specific reminder they are looking at now should be rendered in the outlet of the `reminders.hbs` template.
-* There should be some CSS for the `.active` class.
+* There should be some CSS for the `.active` class.  
 
 ![](http://g.recordit.co/bWm36UCXsA.gif)
 
