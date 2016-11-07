@@ -43,9 +43,9 @@ greeting('Peggy')
 ## How do I figure `this` out? There are four rules, in order of precedence:
 
 ### new Binding
-![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-1.jpg) 
+![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-1.jpg)
 
-- When a function is invoked with the `new` keyword, the `this` keyword inside that function is bound to the new ojbect being constructed
+- When a function is invoked with the `new` keyword, the `this` keyword inside that function is bound to the new object being constructed
 - Confusingly, you can put `new` on ANY function
 
 ```javascript
@@ -61,7 +61,7 @@ var bestCar = new Car('Audi', 'R8', 'grey')
 
 ```javascript
 var Car = function(make, model, color){
-  // this = {} 
+  // this = {}
   this.make = make;
   this.model = model;
   this.color = color;
@@ -70,7 +70,7 @@ var Car = function(make, model, color){
 ```
 
 ### Explicit Binding
-![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-2.jpg) 
+![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-2.jpg)
 
 - `bind()`, `call()`, or `apply()`
 - `call()` and `apply()` are really the same & are invoked immediately
@@ -197,9 +197,9 @@ Let's recap those:
   later
 
 ### Implicit Binding
-![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-3.jpg) 
+![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-3.jpg)
 
-- The most common rule. 
+- The most common rule.
 - Found in about 80% of the use cases.
 - Left of the dot at call time.
 
@@ -261,7 +261,7 @@ someFruit.trickyFruit.fruitType();
 ```
 
 ### window Binding
-![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-4.jpg) 
+![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-4.jpg)
 
 - In the absence of any other rule, `this` refers to the window object
 - This is the default rule, when all of the above fails
@@ -273,7 +273,7 @@ var carColor = function(){
 };
 
 var myCar = {
-  color: 'Black';
+  color: 'Black'
 };
 ```
 
@@ -284,7 +284,7 @@ var carColor = function(){
 };
 
 var myCar = {
-  color: 'Black';
+  color: 'Black'
 };
 ```
 
