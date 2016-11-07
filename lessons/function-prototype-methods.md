@@ -319,3 +319,8 @@ console.log(test());
 
 //Fix the above test code to return Penny Pumpkin using call and/or apply
 ```
+
+### Additional Resources
+- [MDN Github What is `this`? Lesson](https://github.com/mdn/advanced-js-fundamentals-ck/blob/gh-pages/tutorials/02-functions/02-what-is-this.md)
+- [You Don't Know JS: `this` or that](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch1.md)
+- [You Don't Know JS: `this` All Makes Sense Now!](https://github.com/getify/You-Dont-Know-JS/blob/master/this%20%26%20object%20prototypes/ch2.md)
