@@ -8,16 +8,9 @@ title: Function Prototype Methods
 * Understand the precedence of these rules
 * Understand the difference between function definition context and invocation context
 
-#### Questions to answer at the end of the lesson: 
-1. What determines which object a function's `this` points to? What's the default?
-2. How do you "borrow" a function by implicit assignment of `this`?
-3. How do you explicitly bind `this`?
-4. How can you seal a specific `this` to a function? Why do that? Why not?
-5. How do you create a new `this`?
-
 ***
 
-#### What is `this`?
+## What is `this`?
 - The most misunderstood aspect of javascript.
 - Every function, _while executing_, has a reference to its current execution context, called `this`.
 - `this` is a _binding_ that is made when a function is _invoked_, and what it references is determined entirely by the _call-site_ where the function is called.
@@ -47,9 +40,9 @@ greeting('Peggy')
 
 ***
 
-#### How do I figure `this` out? There are four rules, in order of precedence:
+## How do I figure `this` out? There are four rules, in order of precedence:
 
-#### new Binding
+### new Binding
 ![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-1.jpg) 
 
 - When a function is invoked with the `new` keyword, the `this` keyword inside that function is bound to the new ojbect being constructed
@@ -76,7 +69,7 @@ var Car = function(make, model, color){
 
 ```
 
-#### Explicit Binding
+### Explicit Binding
 ![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-2.jpg) 
 
 - `bind()`, `call()`, or `apply()`
@@ -136,8 +129,7 @@ var cars = ['R8', 'Yugo', 'Shelby']
 //with the call method on a function, the first argument is the context and every argument AFTER that will be run through the function. :)
 
 var sayName = function(car1, car2, car3){
-  console.log('My name is ' + this.name + ' and I own a ' + car1 + ', '
-  + car2 + ', and a ' + car3);
+  console.log('My name is ' + this.name + ' and I own a ' + car1 + ', ' + car2 + ', and a ' + car3);
  };
 
 var noah = {
@@ -204,7 +196,7 @@ Let's recap those:
   the function, it returns you a brand new function that you can invoke
   later
 
-#### Implicit Binding
+### Implicit Binding
 ![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-3.jpg) 
 
 - The most common rule. 
@@ -268,7 +260,7 @@ someFruit.trickyFruit.fruitType();
 
 ```
 
-#### window Binding
+### window Binding
 ![fight-club-image](/assets/images/lessons/function-prototype-methods/fight-club-4.jpg) 
 
 - In the absence of any other rule, `this` refers to the window object
@@ -296,7 +288,14 @@ var myCar = {
 };
 ```
 
-#### For Fun
+## Pop Quiz Questions
+1. What determines which object a function's `this` points to? What's the default?
+2. How do you "borrow" a function by implicit assignment of `this`?
+3. How do you explicitly bind `this`?
+4. How can you seal a specific `this` to a function? Why do that? Why not?
+5. How do you create a new `this`?
+
+## Pop Quiz Exercise
 
 ```javascript
 
@@ -311,7 +310,7 @@ var obj = {
   }
 };
 
-//What does this return?
+//What will this return? Make a prediction BEFORE typing it into the console.
 console.log(obj.prop.getFullname());
 
 //What does this return? Why?
