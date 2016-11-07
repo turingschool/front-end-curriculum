@@ -273,7 +273,7 @@ var carColor = function(){
 };
 
 var myCar = {
-  color: 'Black';
+  color: 'Black'
 };
 ```
 
@@ -284,7 +284,7 @@ var carColor = function(){
 };
 
 var myCar = {
-  color: 'Black';
+  color: 'Black'
 };
 ```
 
