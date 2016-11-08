@@ -6,7 +6,7 @@ Working on an Open Source project seems super intimidating. Here is a comprehens
 
 ## Picking A Project to Work On
 - Find a Repo that is primarily written in a language you're comfortable with.
-  - Check out [First Timers Only](http://www.firsttimersonly.com) or [24pullrequests.com](http://24pullrequests.com/)
+  - Check out [First Timers Only](http://www.firsttimersonly.com) or [codeTriage](https://www.codetriage.com/) or [24pullrequests.com](http://24pullrequests.com/)
   - Talk to mentors for suggestions
   - Think about tools you already use like the React library
   - Look for developers or companies on Github that you respect
