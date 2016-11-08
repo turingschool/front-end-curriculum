@@ -102,9 +102,9 @@ So, what needs to happen here?
 * The user should still see all of the reminders from your previous feature. The specific reminder they are looking at now should be rendered in the outlet of the `reminders.hbs` template.
 * There should be some CSS for the `.active` class.  
 
-![](http://g.recordit.co/bWm36UCXsA.gif)
+![](http://g.recordit.co/bWm36UCXsA.gif)  
 
-There is a failing test set up in `tests/acceptance/reminder-list-test.js`.
+There is a failing test set up in `tests/acceptance/reminder-list-test.js` to get you started.
 
 ____
 
