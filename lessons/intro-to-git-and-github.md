@@ -10,8 +10,8 @@ Git is a version control system that allows us to record changes we make to our 
 
 A typical workflow with Git includes:
 
-* initialize a new git repository
-* add files to git staging area
+* initialize a new Git repository (repo)
+* add files to Git staging area
 * commit files and directories
 * check the status of the working directory and staging area and interpret the output
 * view previous commits
@@ -19,9 +19,9 @@ A typical workflow with Git includes:
 * switch between branches
 * merge local branches to local master
 
-### Git != GitHub
+### Git !== GitHub
 
-Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo from the remote origin repo on GitHub, and then, as work is done, the code is committed and pushed from the developer's local repo and added to the remote origin repo on GitHub.
+Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo on GitHub, and then, as work is done, the code is committed and pushed from the developer's local repo and added to the repo on GitHub.
 
 With GitHub we can:
 
@@ -33,46 +33,13 @@ Read more about the workflow we use with GitHub [here on the GitHub Guides](http
 
 ## Getting Set Up
 
-You already have your text editor up and running and Xcode installed, but if you have any questions about how those are set up here are the steps:
-
-### Text Editor
-
-If you don't already have a favorite text editor, we recommend using [Atom](https://atom.io/).
-
-#### Setting Up Terminal Access for Atom
-
-One of the things you'll do frequently is open an entire folder (like when working on a project) in your text editor. Let's get that setup:
-
-* Open Atom (`command-spacebar` for spotlight, type `Atom`, and hit enter).
-* Click the `Atom` menu in the top left corner
-* Click `Install Shell Commands`
-* Return to your terminal and enter `which atom`. You should get back `/usr/local/bin/atom`
-* Enter `atom .` to open your user directory in Atom.
-* Experiment with creating a file in Atom and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Atom.
-
-### XCode & Command Line Tools
-
-XCode is a huge suite of development tools published by Apple. If we wanted to develop
-software for the Apple Ecosystem (iPhone apps, Mac OS Apps, etc), we would use XCode as our editor.
-But even if we aren't working in this ecosystem, XCode provides some system dependencies that we'll
-want to have available.
-
-You'll want to install it before attempting to install anything else.
-
-1. Install XCode from the Apple App Store
-2. Open the application after installing and agree to the SLA terms
-3. Open `terminal` and run `xcode-select --install`, enter your user password
-
-Now you should have the underlying tools we need to move forward.
-
+You already have your text editor up and running and Xcode installed, but if you have any questions about how those are set up, look at the bottom of this lesson.
 
 ## Setting up Git
 
 ### Homebrew
 
-[Homebrew](http://brew.sh) is a package management system that makes it easy
-to install hundreds of open source projects and compile them from source
-for maximum performance on your machine.
+[Homebrew](http://brew.sh) is a package management system that makes it easy to install hundreds of open source projects and compile them from source for maximum performance on your machine.
 
 Open the Terminal and run the homebrew installation script:
 
@@ -80,8 +47,7 @@ Open the Terminal and run the homebrew installation script:
 ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 ```
 
-It will ask you for your password. This is the password to log in to your account on the computer.
-It needs this because it installs its packages in a place that all users of this computer can access.
+It will ask you for your password. This is the password to log in to your account on the computer. It needs this because it installs its packages in a place that all users of this computer can access.
 
 #### Verifying Homebrew
 
@@ -109,15 +75,13 @@ Your `PATH` is a system configuration property which tells your computer where t
 
 ##### Aside: `~/.bash_profile`
 
-When we use our terminal, we're actually using a program called a "Shell" to interact
-with the underlying Operating System. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
+When we use our terminal, we're actually using a program called a "Shell" to interact with the underlying Operating System. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
 
 The file `~/.bash_profile` contains settings and commands to help us configure the shell, so when we have a bit of configuration code such as setting our `PATH`, it often goes in our `~/.bash_profile`.
 
 ### Git
 
-[Git](http://git-scm.com/) is the version control system of choice in the JavaScript community.
-XCode installed an older version of Git for you, but let's update it.
+[Git](http://git-scm.com/) is the version control system of choice in the JavaScript community. XCode installed an older version of Git for you, but let's update it.
 
 ```shell
 brew install git
@@ -133,7 +97,7 @@ We can tell git to configure itself using the `git config` command from our term
 
 Tell git your Name and Email address by using the following commands, substituting your own name and email:
 
-```
+```shell
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
@@ -165,3 +129,35 @@ There are hundreds of different git commands, but to get started you only need t
 * `git stash` stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
 * `git stash pop` gives you back the last staged changes you stashed
 * `git blame file-path/name-of-file` shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
+
+### Additional Resources
+
+#### Text Editor and XCode
+
+If you don't already have a favorite text editor, we recommend using [Atom](https://atom.io/). Also, make sure you have XCode installed (using the Apple App Store). To verify that you have XCode command line tools installed, enter the command `gcc -v` into your terminal.
+
+The output should include something like `Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/c++/4.2.1`.
+
+#### Setting Up Terminal Access for Atom
+
+One of the things you'll do frequently is open an entire folder (like when working on a project) in your text editor. Let's get that setup:
+
+1. Open Atom (`command-spacebar` for spotlight, type `Atom`, and hit enter).
+2. Click the `Atom` menu in the top left corner
+3. Click `Install Shell Commands`
+4. Return to your terminal and enter `which atom`. You should get back `/usr/local/bin/atom`
+5. Enter `atom .` to open your user directory in Atom.
+6. Experiment with creating a file in Atom and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Atom.
+
+#### Setting Up XCode & Command Line Tools
+
+XCode is a huge suite of development tools published by Apple. If we wanted to develop
+software for the Apple Ecosystem (iPhone apps, Mac OS Apps, etc), we would use XCode as our editor.
+But even if we aren't working in this ecosystem, XCode provides some system dependencies that we'll
+want to have available.
+
+You'll want to install it before attempting to install anything else.
+
+1. Install XCode from the Apple App Store
+2. Open the application after installing and agree to the SLA terms
+3. Open `terminal` and run `xcode-select --install`, enter your user password
