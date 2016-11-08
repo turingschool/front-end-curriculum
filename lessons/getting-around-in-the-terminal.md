@@ -28,7 +28,7 @@ Let's actually start working on some basic interactions with our files using the
 
 Open your terminal using `command + spacebar`, then type `terminal`, and press `enter`. The mysterious black window appears...
 
-### Moving Through Our File Structure: `pwd`, `ls`, `cd`
+### Observe the File Structure: `pwd`, `ls`
 
 When you open up your terminal, you aren't greeted with much. It just says your name and that's about it. Typically when you open up your terminal you are brought to your root directory. Directory is just another word for folder. Your root directory usually contains:
 
@@ -43,37 +43,87 @@ When you open up your terminal, you aren't greeted with much. It just says your 
 
 #### pwd
 
-Let's first get a handle of where we are in our computer's file structure. To see where you are located in the file structure, enter `pwd` in the terminal. This stands for present working directory. If you are in the root directory, it will most like say `/Users/[your name]`. If you're ever confused about where you are, then use `pwd` to find out!
+We can use our terminal to navigate through our computer's files and directories.
+
+Let's first get a handle of where we are in our computer's file structure. To see where you are located in the file structure, enter `pwd` in the terminal. This stands for your present working directory. If you are in the root directory, it will most like say `/Users/[your name]`. If you ever forget or are confused about where you are, then use `pwd` to find out!
 
 #### ls
 
-Our file structure is made up of files and directories. Just as you would see in Finder or the Windows File Explorer, files and directories can live inside other directories, which you can visualize in a tree-level structure.
+Our file structure is made up of files and directories. Just as you would see visually in Finder or the Windows File Explorer, files and directories can live inside other directories, which you can picture as:
 
 ```
 |- first-level-dir
   |-- second-level-dir
   |-- another-dir
-    |--- third-level-dir (that is under/within another-dir)
+    |--- third-level-dir (that is under/within `another-dir`)
 ```
 
-When we use the command `ls` it will list for us all the content in our current directory at a single level. You can see directories and files in the current directory, but you cannot see directories and files that are inside these directories.
+In the terminal, we don't have Finder to visually tell us what is contained within a directory or nested directories, but we do have commands to tell us.
 
-For a more detailed list of content, type `ls -la`.
+We can use the command `ls` to list the content in our current directory. You can see directories and files in the current directory, but you cannot see directories and files that are inside other directories.
+
+For a more detailed list of content, type `ls -la` - note the space between the characters. The addition of `-la` gives more information about when that file or directory was last modified, permissions, and also lists [hidden files/directories](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory).
+
+#### Your Turn
+
+* Open your terminal and enter the command `pwd`. What do you see? Can you find this same location using Finder?
+
+* Enter the command `ls`. What directories and files do you see?
+
+* Enter `ls -la`. How does this list change? Do you see the same files and directories when you use Finder?
+
+### Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
+
+#### mkdir
+
+Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the `mkdir [dir name]` command. What this will do is create a new folder for us with whatever name you want to give it.
+
+Note: A common way to document how to use a command is the command name, `mkdir`, and then something within square brackets, `[dir name]`. The first part, `mkdir`, is the text that the terminal recognizes as a command. The second part, `[dir name]`, is the part where you will specify the new directory's name. The square brackets mean that this is a place for you to fill in your own information, but you do not include the square brackets.
+
+For example, let's create a new directory called `pizza`. Enter `mkdir pizza` in the terminal.
+
+One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal when you do the correct thing.
+
+How do we check that the directory was made? Use `ls` to check that it is listed.
+
+Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to change into that new directory, but we will talk about this in the next section.
+
+#### touch
+
+Similar to directories, we also need to be able to create new files. The command we are going to use to do this is the `touch [file name]` command.
+
+Let's make a new, blank text file using `touch toppings.txt`. If we open the file, there is nothing in it, but we expect that because we only told the terminal to create a new file.
+
+#### rm
+
+So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `toppings.txt` file, then we can delete it.
+
+Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
+
+### Your Turn
+
+* Open a new terminal window. Create a directory five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
+
+* Create ten new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
+
+### Move Through the File Structure: `cd`
 
 #### cd
 
-To change our current directory, we use the command `cd`. To move from the current directory into another directory, you use `cd [name of the folder]`. For example, if your current directory is named `turing`, and you want to move to `notes`, then...
+If we are in our root directory, and we want to see what files are within the Pictures directory, we currently don't have a way to do that. For instance, if we are in the root directory, and we enter `ls` in the terminal, it will just list the files and directories in the root directory, but we cannot see what is inside Pictures by only using `ls`.
+
+To see what is in other directories, we can move around and navigate through our file structure. We want to change into the Pictures directory to see what is inside it.
+
+To change our current directory, we use the command `cd [directory name]`. We can move through directories in two directions: up or down - to a previous directory or to a nested directory. Let's see this visually with sample directories.
 
 ```
 |- turing
   |-- notes
 ```
 
-You would enter `cd notes` into the terminal. Usually, you would say that you are going down into the notes directory.
+From the example above, if your current directory is `turing` and you want to move to `notes`, then you would enter `cd notes` into the terminal. We our changing our current directory to the `notes` directory. Usually, you would say that you are going down into the notes directory.
 
-If you want to go back, then simply use two periods: `cd ..` to go back up one level. With the previous example where you are currently in the notes directory, you would type `cd ..` to get to the `turing` directory.
-
-One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal when you do the correct thing.
+If you want to go back to the `turing` directory, then simply use two periods: `cd ..` to go back up one level. With the previous example where you are currently in the notes directory, you would type `cd ..` to get to the `turing` directory.
 
 You might be thinking to yourself, "Wow, I'm doing a lot of typing...and if I type something incorrectly in the terminal, then I'll go to the wrong place or nowhere at all."
 
@@ -86,7 +136,7 @@ For example, in the directory structure:
   |-- notes
 ```
 
-If you are currently in the `turing` directory and you want to go to notes, then just type `cd n` and hit `tab`. The terminal will autocomplete for you and your command will become `cd notes`. Then hit `enter` to finish the directory change.
+If you are currently in the `turing` directory and you want to go to notes, then just type `cd n` and hit `tab`. The terminal will autocomplete for you and your command will become `cd notes`. Then hit `enter` to run the directory change.
 
 What if you want to change to a directory that is inside another directory? You can imagine that using `cd` multiple times would get tiring and slow. What's really cool is if we have something multiple levels deep we can keep adding directories to our `cd` command. Say we have:
 
@@ -104,45 +154,15 @@ Likewise, we can also go back up multiple directories using one command. If you 
 
 ### Your Turn
 
-Type `ls` into your terminal.
+* In your terminal, change to your root directory. Your root directory is noted as a `~` symbol. So the change directory command would be `cd ~`. From there, `cd` into your Documents folder.
 
-From there, `cd` into your documents folder.
+* Once you're in your Documents directory, list the contents of the Documents directory.
 
-Once you're in your documents folder type in `ls` again to see what folders and files you have available. If you have another folder available, I would like you to `cd` into that directory.
+* In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this five times. When you are done, delete the directories you just made, one directory at a time.
 
-When you're done with, that try and figure out a way to get back to your `root` directory from where you're at.
+### Copy and Move Files/Directories: `cp`, `mv`
 
-### Making Folders & Creating/Removing Files: `mkdir`, `touch`, `rm`
-
-#### mkdir
-
-Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the `mkdir [dir name]` operator. What this will do is create a new folder for us with whatever name you want to give it.
-
-Let's create a new directory called `pizza`. Enter `mkdir pizza` in the terminal.
-
-Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to `cd` into it. Go ahead and `cd` into the `pizza` directory.
-
-#### touch
-
-Now that we are inside of this directory what we can do now is create a new file. The command we are going to use to do this is the `touch [file name]` command.
-
-Let's make a new, blank text file using `touch toppings.txt`.
-
-#### rm
-
-So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `toppings.txt` file, then we can delete it.
-
-Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
-
-### Your Turn
-
-Make sure you're in your `~` directory. Once you're there, I want your to create a directory called `turing` and inside of that directory I want your to create a directory called `mod1`. Once you've done, then go ahead and touch a file called `sample.html`. Now if you want to delete that file you can use the command `rm sample.html`.
-
-If you're looking for a little bit of a challenge, feel free to `cd` into your `~` directory and remove the folder you created. Once you've done that, try creating your folders and files again but in a one-line command.
-
-### Copying and Moving: `cp`, `mv`
-
-So now that we can create and remove files, let's add to our toolbox by being able to copy or move files. At a high level, `cp` keeps the source file and copies the file to a new location. `mv` takes the source file and moves it to a new location.
+So now that we can create and remove files, let's add to our toolbox the ability to copy or move files. At a high level, `cp` keeps the source file and copies the file to a new location. `mv` takes the source file and moves it to a new location.
 
 #### cp
 
