@@ -17,9 +17,9 @@ A good project idea should:
 
 **1. Completion**
 
-* 4: Developer completed all the user stories and requirements set by the client in timely manner.
-* 3: Developer completed all the user stories and requirements set by the client.
-* 2: Developer completed most of the user stories and requirements set by the client.
+* 4: Developer completed all the user stories and requirements set in check-ins in timely manner.
+* 3: Developer completed all the user stories and requirements set during check-ins.
+* 2: Developer completed most of the user stories and requirements set during check-ins.
 * 1: Developer completed the user stories and requirements partially.
 
 **2. Organization**
