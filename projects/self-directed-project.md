@@ -3,7 +3,7 @@ title: Self-Directed Project
 module: 3
 ---
 
-The goal of this project is to create a successful web application from a project idea. You will create an app that will authenticate with a third-party service, consume an api, and solve an actual problem.
+The goal of this project is to create a successful web application from a project idea. You will create an app that will solve an actual problem.
 
 ### Project Scope
 
