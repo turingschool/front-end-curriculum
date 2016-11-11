@@ -75,7 +75,7 @@ Your `PATH` is a system configuration property which tells your computer where t
 
 ##### Aside: `~/.bash_profile`
 
-When we use our terminal, we're actually using a program called a "Shell" to interact with the underlying Operating System. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
+When we use our terminal, we're actually using a program called a *shell* to interact with the underlying operating system. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
 
 The file `~/.bash_profile` contains settings and commands to help us configure the shell, so when we have a bit of configuration code such as setting our `PATH`, it often goes in our `~/.bash_profile`.
 
@@ -95,7 +95,7 @@ If you haven't used git before (don't worry, we'll continuing covering how to us
 
 We can tell git to configure itself using the `git config` command from our terminal. Additionally, we're setting "global" configurations for git, so we'll use the `--global` flag when we provide it with a new piece of configuration.
 
-Tell git your Name and Email address by using the following commands, substituting your own name and email:
+Tell git your name and email address by using the following commands, substituting your own name and email:
 
 ```shell
 git config --global user.name "John Doe"
@@ -110,7 +110,7 @@ In order to push up to GitHub, you'll also need to generate an SSH key. SSH keys
 
 ### Git Commands for a Basic workflow
 
-There are hundreds of different git commands, but to get started you only need to remember a handful of them. Let's go over a few of the commands you'll be using often:
+There are hundreds of different Git commands, but to get started you only need to remember a handful of them. Here is a summary of the commands you'll use most often:
 
 * `git init` initializes your local directory as a new git repository. You must run this before you can commit any of your work.
 * `git status` shows the current status of your repo. It will show you if you have any work that is unstaged, what branch you are on, how many commits you are ahead of the master remote on github, and other useful things.
