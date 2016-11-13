@@ -83,3 +83,7 @@ No one should make fun of your code. If they do, they are jerks.
 You will likely get feedback and suggestions - or polite rejections if the code doesn’t fit with the repo owner’s style or goals.
 
 Be ready to try many repos and many issues before you find one you can fix and feel confident in PRing.
+
+## Resources
+
+- [The Shape of Open Source](https://github.com/blog/2195-the-shape-of-open-source)
