@@ -11,8 +11,9 @@ The application should have the following user interface components:
 - An input field for guessing the number
 - A button for submitting a guess
 - A button for clearing the input field
-- A button that resets the game to its initial state
+- A button that resets the game to its initial state (changes the random number to guess to a new random number)
 - An element that displays the users most recent guess
+  - If there hasn't been a guess yet, then indicate that in this display element
 - An element that displays a message to user
   - If their guess is too high, it should display: "That is too high"
   - If their guess is too low, it should display: "That is too low"
@@ -26,8 +27,8 @@ Some things to think about:
 
 ## Phase Two: More Better
 
-- The type attribute for the guess input should be "number".
-  - It should have "min" and a "max" attributes equal to the minimum and maximum of the reange of guesses (e.g. 1 and 100, respectively).
+- The HTML type attribute for the guess input should be "number".
+  - It should have "min" and a "max" attributes equal to the minimum and maximum of the range of guesses (e.g. 1 and 100, respectively).
 - The application should display an error message if the guess is not a number (e.g. `parseInt()` returns `NaN`).
   - This may require your input to have two "type" attributes.
 - The application should display an error if the guess is outside of the range of possible answers.
