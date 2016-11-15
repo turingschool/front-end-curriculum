@@ -196,7 +196,13 @@ The same can be done with making new directories. With our current running examp
 
 #### Your Turn
 
-* 
+* Change to your root directory if you are not there already. How do we do this? With these next tasks, do not change into other directories. Keep your root directory as your present working directory.
+
+* Make three nested directories.
+
+* In each nested directory, create a file.
+
+* Remove all of the directories and files that you just created - one directory at a time.
 
 ### Copy and Move Files/Directories: `cp`, `mv`
 
