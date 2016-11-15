@@ -100,7 +100,7 @@ So we can make directories and new files, but we want to be able to remove them.
 
 Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
 
-### Your Turn
+#### Your Turn
 
 * Open a new terminal window. Create a directory five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
 
@@ -152,13 +152,51 @@ Note that each directory is separated with a slash, `/`. If you wanted to add an
 
 Likewise, we can also go back up multiple directories using one command. If you are in the `first-lesson` directory and you want to go back to the `turing` directory, then you can use the double dots as before with the slash separator: `cd ../..`
 
-### Your Turn
+#### Your Turn
 
 * In your terminal, change to your root directory. Your root directory is noted as a `~` symbol. So the change directory command would be `cd ~`. From there, `cd` into your Documents folder.
 
 * Once you're in your Documents directory, list the contents of the Documents directory.
 
 * In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this five times. When you are done, delete the directories you just made, one directory at a time.
+
+### Commands From Your Present Working Directory
+
+Using `cd`, you can move around directories and add files in the directories where we need them. However, moving around to other directories can get tedious and time consuming.
+
+From our present working directory, you can add files or directories anywhere in our file system by adding our "directory path" in our terminal commands.
+
+#### Create Files
+
+Going back to `mkdir` and `touch`, you can chain on directories if you want to add files inside other directories. Say you have these directories:
+
+```
+|- turing (your present working directory)
+  |-- mod1
+```
+
+If your present working directory is `turing`, then you can create a new file inside `mod1` using one command: `touch mod1/new-file.txt`. This command includes the directory and then the new file you want to create. You don't have to `cd` into `mod1`. With this command, you end up with:
+
+```
+|- turing
+  |-- mod1
+    |--- new-file.txt
+```
+
+### Create Directories
+
+The same can be done with making new directories. With our current running example, let's add a directory inside the `mod1` directory. Again, if your present working directory is `turing`, then you can do this with one command: `mkdir mod1/new-directory`. We end up with:
+
+```
+|- turing
+  |-- mod1
+    |--- new-directory
+    |--- new-file.txt
+```
+
+#### Your Turn
+
+* 
 
 ### Copy and Move Files/Directories: `cp`, `mv`
 
@@ -205,7 +243,7 @@ Like in the example before, if we want to move the file instead of copy it into 
     |--- sample.txt
 ```
 
-### Your Turn
+#### Your Turn
 
 Make a few nested directories with blank files in them, and move files around from directory to directory.
 
