@@ -2,28 +2,29 @@
 title: Number Guesser
 ---
 
-Build a game where the user guesses a number between 1 and 100.
-Phases 1-3 must be on your master branch. If you elect to incorporate Phase 4, it must be on its own branch.
+## Overview
+- Build a game where the user guesses a number between 1 and 100.
+- Phases 1-3 = MASTER branch for evaluation. 
+- If you elect Phase 4, create a separate branch for that work. 
 
 ## Phase One: Basic Requirements
 
 The application should have the following user interface components:
 
-Zero State:
+#### Zero State:
 - An input field for guessing the number
 - A button for submitting a guess
 - A button for clearing the input field
 - A button that resets the game 
 
-User's Guess:
+#### User's Guess State:
 - Display the user's most recent guess
 - Display results and feedback: 
   - If their guess is too high, it should display: "That is too high"
   - If their guess is too low, it should display: "That is too low"
   - If the guess is correct, it should display: "BOOM!"
 
-Some things to think about:
-
+#### Some things to consider:
 - Input fields,regardless of their "type" attribute, store their values in strings. You'll need to use `parseInt()` to turn it back into a number.
 - You'll need a strategy for [generating random numbers][rand].
 
@@ -83,7 +84,7 @@ Color and font spec:
 
 ### Functional Expectations
 
-- :sparkles: You completed through Phase Three and you did something with Phase Four
+- :sparkles: You completed Phase Three and did something with Phase Four
 - 4: Application meets all of the functional expectations in Phase Three
 - 3: Application meets all of the functional expectations in Phase Two
 - 2: Application meets all of the functional expectations in Phase One
