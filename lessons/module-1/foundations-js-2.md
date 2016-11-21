@@ -1,6 +1,6 @@
 ---
 title: Foundations JS - II
-length: 180
+length: 120
 tags: js, introduction, foundation, variables
 ---
 ## Learning Goals
@@ -8,8 +8,7 @@ tags: js, introduction, foundation, variables
 By the end of this lesson, you will know/be able to:
 
 * Understand array literals and change/add values to them via their indices
-* Declare and call functions with or without parameters
-* Understand different types of functions and their uses
+* Understand more about functions and their uses
 * Understand variable scope
 
 # Arrays

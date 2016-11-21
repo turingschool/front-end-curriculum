@@ -8,16 +8,19 @@ tags: js, introduction, foundation, variables
 
 By the end of this lesson, you will know/be able to:
 
+* Understand the basic JavaScript data types
 * Understand what a variable is and how to use it
 * Understand operators and how to use them
+* Understand conditionals and when to use them
+* Declare and call functions with or without parameters
 
 ## History of JavaScript
 
 Way back in the early days of the web, Brendan Eich created JavaScript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'JavaScript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
 
-## What is JavaScript?
+## What is JavaScript and Why?
 
-JavaScript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment.
+JavaScript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
 
 JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
 
@@ -27,7 +30,7 @@ Now that we know a little bit about JavaScript, let's talk about how to actually
 
 # Data Types
 
-There are  different Data Types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
+There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
 There are three basic data types: numeric, string, and boolean. Let's go over what each of these is.
 
@@ -49,13 +52,13 @@ The string data type handles letters and other characters. It is always enclosed
 
 You can use either single or double quotes to wrap a string, but the opening and closing quotes need to match. A good rule of thumb is to pick a type of quote to use and then be consistent in it's use throughout a project.
 
-Strings can be used for any kind of text. We use them regularly to add text to a page, and they can contain HTML markup.
+Strings can be used for any kind of text. We use them regularly to add text to a page.
 
 ## Boolean Data Type
 
-A boolean has one of two values: `true` or `false`. Think of it like a light switch: its either on or off.
+A boolean has one of two values: `true` or `false`. Think of it like a light switch: it's either on or off.
 
-Booleans can be very useful to help determine which part of a script should be run.
+Booleans can be very useful to help determine which part of a script should be run (as in conditionals, which we will talk about later).
 
 # Variables in JavaScript
 
@@ -63,7 +66,7 @@ As we're writing code, there are many times when we want to be able to store a v
 
 ## What is a variable?
 
-A variable is a place to store values. When we write scripts (a set of instructions for a computer to follow), we need to temporarily store small pieces of data. We store that data in variables. Variable is a good name for this concept because it indicates the stored data can _change_(or vary) EACH time a script is run.
+A variable is a place to store values. When we write scripts (a set of instructions for a computer to follow), we need to temporarily store small pieces of data. We store that data in variables. Variable is a good name for this concept because it indicates the stored data can _change_ (or vary) each time a script is run.
 
 A variable is, at it's most simple, a declaration. It's made up of two parts: the variable keyword, `var`, and the variable name, which can be whatever you choose. Let's see what that looks like in the console:
 
@@ -76,20 +79,20 @@ We see that we have the variable keyword, and we've set the variable name to `my
 When we write a very simple variable like this, it's called _declaring_ the variable.
 
 ## Rules for Naming Variables
-- Name must begin with a letter, dollar sign, or an underscore. It must NOT begin with a number.
-- Name can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
-- You cannot use keywords or reserved words.
+- Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
+- Names can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
+- You cannot use keywords or reserved words (such as `var` or `for`).
 - All variables are case sensitive.
 - Use names that describe the kind of information you plan to assign the variable.
-- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case.
+- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case (thisIsMyVariableName).
 
 ### Your Turn (in the console)
 
 Declare 2 variables, one named "quantity" and one named "mythicalCreature"
 
-## Variable Values
+## Variable Values: Assignment
 
-So, we have our variable. Now what? When we first create a variable it's value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to our `myVariableName` variable:
+So, we have our variable. Now what? When we first create a variable, its value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to our `myVariableName` variable:
 
 ```javascript
 var myVariableName = "Hello, variable!";
@@ -101,8 +104,6 @@ After our `var` keyword (a special word that the JavaScript interpreter knows is
 
 Let's test these additions in the console.
 
-WAIT! Eeek! Why does my console still show 'undefined'?? Well JavaScript is designed as a dynamic language which means that the type (string, void, boolean …) of a function `return` value is not pre-defined. If a function does not use a `return` statement or uses an empty return statement with no value, JavaScript automatically returns _undefined_. That means in JavaScript every function returns something, at the very least an "undefined". Chrome will display the function return value (existent or not) in the console. An assignment also does not include a return value, so Chrome will display "undefined".
-
 Okay, let's ask the console to give us the value of our variable. How do we do that?
 Step 1: declare the variable and it's value
 Step 2: call the variable
@@ -112,39 +113,9 @@ Until you've added the assignment operator and the variable value, the variable 
 
 ### Your Turn (in the console)
 
-Assign values to your "quantity" and "mythicalCreature" variables.
-
-## Using Variables to Store Data
-
-**THIS NEEDS TO CHANGE!!!!**
-
-Now that we know about different data types and have values assigned to both of our variables, let's dive into using them together!
-
-So far, we have:
-
-```javascript
-var quantity = 3;
-var mythicalCreature = " unicorns";
-```
-
-Let's make a new variable called "creatureCount" and assign the value as our quantity and our mythicalCreature.
-
-```javascript
-var quantity = 3;
-var mythicalCreature = " unicorns";
-var creatureCount = quantity + mythicalCreature
-```
-
-Open up the console in your browser, enter these in, and see what you get!
-Now change the value of your quantity variable and ask the console for the creatureCount value again.
-
-### Your Turn (in the console)
-
-Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
-
-### Your Turn (in the console)
-
-What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
+* Assign values to your "quantity" and "mythicalCreature" variables.
+  * What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
+* Create three more variables, and give them each different data types (numbers, strings, booleans)
 
 ## Using Variables Together
 
@@ -183,15 +154,21 @@ var quantity = 3;
 var mythicalCreature = " unicorns";
 var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature + "</p>"
 ```
-This is very useful when we want to append data to the DOM, because it means we can write out an entire HTML tag and concatenate in the data from our variable.
+This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and concatenate the data from our variable.
 
-# Expressions
+# Conditionals
+
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
+
+To use conditionals, we first need t talk about expressions and operators.
+
+## Expressions
 An _expression_ evaluates (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
 
 1. Expressions that assign a single value to a variable.
 2. Expressions that use two or more values to return a single value.
 
-# Operators
+## Operators
 Expressions rely on operators to calculate their single value. There are 5 types of operators:
 
 1. Assignment operators. Assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
@@ -200,9 +177,23 @@ Expressions rely on operators to calculate their single value. There are 5 types
 4. Comparison operators. Compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. Logical operators. Combines __expressions__ and return true or false. `var buy = (5 > 3) && (2 < 4);`
 
-# Conditionals
+Let's now look at the basic structure of a conditional:
 
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
+```javascript
+if (expression) {
+  statement;
+} else {
+  statement;
+}
+```
+
+If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false). Some examples of expressions for conditionals are:
+
+* `myNum < 5`
+* `userString === "Denver"`
+* `isTired ==== true`
+
+Now for some real conditional examples.
 
 ```javascript
 var cookie = "chocolate chip";
@@ -327,3 +318,7 @@ return false;
 return x;
 return x + y / 3;
 ```
+
+### Additional Practice
+
+* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
