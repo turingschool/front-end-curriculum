@@ -4,58 +4,13 @@ length:
 tags: js, introduction, foundation, variables
 ---
 
-## Learning Goals
+### Goals
 
 By the end of this lesson, you will know/be able to:
 
 * Understand what a variable is and how to use it
 * Understand operators and how to use them
-
-## History of Javascript
-
-Way back in the early days of the web, Brendan Eich created Javascript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'Javascript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
-
-## What is Javascript?
-
-Javascript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment.
-
-Javascript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
-
-It's a highly versatile and flexible language, and has become the most commonly used language of the web.
-
-Now that we know a little bit about Javascript, let's talk about how to actually use it!
-
-# Data Types
-
-There are  different Data Types in Javascript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
-
-There are three basic data types: numeric, string, and boolean. Let's go over what each of these is.
-
-## Numeric Data Type
-
-This data type handles numbers. In JavaScript, numbers are written without commas so three thousand four hundred and seventy five would be written like this:
-
-`3475`
-
-Numbers can also be negative and decimals (also called "floats"), so we can write `-3475` and `0.5`
-
-Note that we _do not_ enclose a number data type in quotes.
-
-## String Data Type
-
-The string data type handles letters and other characters. It is always enclosed in quotes, and looks like this:
-
-`'I am a string!'`
-
-You can use either single or double quotes to wrap a string, but the opening and closing quotes need to match. A good rule of thumb is to pick a type of quote to use and then be consistent in it's use throughout a project.
-
-Strings can be used for any kind of text. We use them regularly to add text to a page, and they can contain HTML markup.
-
-## Boolean Data Type
-
-A boolean has one of two values: `true` or `false`. Think of it like a light switch: its either on or off.
-
-Booleans can be very useful to help determine which part of a script should be run.
+* Understand array literals and change/add values to them via their indices
 
 # Variables in Javascript
 
@@ -74,14 +29,6 @@ var myVariableName;
 We see that we have the variable keyword, and we've set the variable name to `myVariableName`.
 
 When we write a very simple variable like this, it's called _declaring_ the variable.
-
-## Rules for Naming Variables
-- Name must begin with a letter, dollar sign, or an underscore. It must NOT begin with a number.
-- Name can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
-- You cannot use keywords or reserved words.
-- All variables are case sensitive.
-- Use names that describe the kind of information you plan to assign the variable.
-- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case.
 
 ### Your Turn (in the console)
 
@@ -114,37 +61,44 @@ Until you've added the assignment operator and the variable value, the variable 
 
 Assign values to your "quantity" and "mythicalCreature" variables.
 
-## Using Variables to Store Data
+### Using Variables to Store Data
 
-Now that we know about different data types and have values assigned to both of our variables, let's dive into using them together!
+Once we have a variable with a declared value, we can start to actually use that data.
 
-So far, we have:
+The value of a variable is data, and there are three basic _data types_: numeric, string, and boolean. Let's go over what each of these is.
 
-```javascript
-var quantity = 3;
-var mythicalCreature = " unicorns";
-```
+# Numeric Data Type
 
-Let's make a new variable called "creatureCount" and assign the value as our quantity and our mythicalCreature.
+This data type handles numbers. In JavaScript, numbers are written without commas so three thousand four hundred and seventy five would be written like this:
 
-```javascript
-var quantity = 3;
-var mythicalCreature = " unicorns";
-var creatureCount = quantity + mythicalCreature
-```
+`3475`
 
-Open up the console in your browser, enter these in, and see what you get!
-Now change the value of your quantity variable and ask the console for the creatureCount value again.
+Numbers can also be negative and decimals (also called "floats"), so we can write `-3475` and `0.5`
 
-### Your Turn (in the console)
+Note that we _do not_ enclose a number data type in quotes.
 
-Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
+# String Data Type
+
+The string data type handles letters and other characters. It is always enclosed in quotes, and looks like this:
+
+`'I am a string!'`
+
+You can use either single or double quotes to wrap a string, but the opening and closing quotes need to match. A good rule of thumb is to pick a type of quote to use and then be consistent in it's use throughout a project.
+
+Strings can be used for any kind of text. We use them regularly to add text to a page, and they can contain HTML markup.
+
+# Boolean Data Type
+
+A boolean has one of two values: `true` or `false`. Think of it like a light switch: its either on or off.
+
+Booleans can be very useful to help determine which part of a script should be run.
+
 
 ### Your Turn (in the console)
 
 What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
 
-## Using Variables Together
+#### Using Variables Together
 
 Now that we know about different data types and have values assigned to both of our variables, let's dive into using them together!
 
@@ -182,6 +136,67 @@ var mythicalCreature = " unicorns";
 var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature + "</p>"
 ```
 This is very useful when we want to append data to the DOM, because it means we can write out an entire HTML tag and concatenate in the data from our variable.
+
+## Rules for Naming Variables
+- Name must begin with a letter, dollar sign ($), or an underscore (_). It must NOT begin with a number.
+- Name can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
+- You cannot use keywords or reserved words.
+- All variables are case sensitive.
+- Use names that describe the kind of information you plan to assign the variable.
+- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case.
+
+# Arrays
+An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a list of values, or values that are related to one another.
+
+You can put different types of data into an array:
+
+```javascript
+var arrayName = [element0, element1, ...];
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+
+```
+You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets ([]), and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
+
+```javascript
+colors = ['white',
+          'black',
+          'pink']
+```
+
+## Accessing Values in Arrays
+Each value in an array is automatically given a number called an index. This index can be used to access a particular value in any given array.
+
+Indices begin at 0 and order incrementally. So in the above colors example, the following is true:
+
+- color white has an index of 0
+- color black has an index of 1
+- color pink has an index of 2
+
+You can change values in an array by their index. Let's walk through it in the console:
+
+```javascript
+// Create the array
+var colors = ['white', 'black', 'pink'];
+
+// Check the value of colors
+colors
+
+// Update the third value in the array
+colors[2] = 'blue'
+
+// Check the value of colors
+colors
+
+```
+
+### Your Turn (in the console)
+
+- create an array of cars
+- change the values within the array
+- add a new car to the array
 
 # Expressions
 An _expression_ evaluates (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
