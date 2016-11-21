@@ -1,6 +1,6 @@
 ---
 title: Foundations JS - I
-length:
+length: 180
 tags: js, introduction, foundation, variables
 ---
 
@@ -11,23 +11,23 @@ By the end of this lesson, you will know/be able to:
 * Understand what a variable is and how to use it
 * Understand operators and how to use them
 
-## History of Javascript
+## History of JavaScript
 
-Way back in the early days of the web, Brendan Eich created Javascript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'Javascript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
+Way back in the early days of the web, Brendan Eich created JavaScript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'JavaScript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
 
-## What is Javascript?
+## What is JavaScript?
 
-Javascript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment.
+JavaScript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment.
 
-Javascript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
+JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
 
 It's a highly versatile and flexible language, and has become the most commonly used language of the web.
 
-Now that we know a little bit about Javascript, let's talk about how to actually use it!
+Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
 # Data Types
 
-There are  different Data Types in Javascript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
+There are  different Data Types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
 There are three basic data types: numeric, string, and boolean. Let's go over what each of these is.
 
@@ -45,7 +45,7 @@ Note that we _do not_ enclose a number data type in quotes.
 
 The string data type handles letters and other characters. It is always enclosed in quotes, and looks like this:
 
-`'I am a string!'`
+`"I am a string!"`
 
 You can use either single or double quotes to wrap a string, but the opening and closing quotes need to match. A good rule of thumb is to pick a type of quote to use and then be consistent in it's use throughout a project.
 
@@ -57,7 +57,7 @@ A boolean has one of two values: `true` or `false`. Think of it like a light swi
 
 Booleans can be very useful to help determine which part of a script should be run.
 
-# Variables in Javascript
+# Variables in JavaScript
 
 As we're writing code, there are many times when we want to be able to store a value so we have ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common that we need to have access to the same information more than once. A variable lets us do just that!
 
@@ -101,7 +101,7 @@ After our `var` keyword (a special word that the JavaScript interpreter knows is
 
 Let's test these additions in the console.
 
-WAIT! Eeek! Why does my console still show 'undefined'?? Well JavaScript is designed as a dynamic language which means that the type (string, void, boolean …) of a function ```return``` value is not pre-defined. If a function does not use a ```return``` statement or uses an empty return statement with no value, JavaScript automatically returns _undefined_. That means in JavaScript every function returns something, at the very least an "undefined". Chrome will display the function return value (existent or not) in the console. An assignment also does not include a return value, so Chrome will display "undefined".
+WAIT! Eeek! Why does my console still show 'undefined'?? Well JavaScript is designed as a dynamic language which means that the type (string, void, boolean …) of a function `return` value is not pre-defined. If a function does not use a `return` statement or uses an empty return statement with no value, JavaScript automatically returns _undefined_. That means in JavaScript every function returns something, at the very least an "undefined". Chrome will display the function return value (existent or not) in the console. An assignment also does not include a return value, so Chrome will display "undefined".
 
 Okay, let's ask the console to give us the value of our variable. How do we do that?
 Step 1: declare the variable and it's value
@@ -115,6 +115,8 @@ Until you've added the assignment operator and the variable value, the variable 
 Assign values to your "quantity" and "mythicalCreature" variables.
 
 ## Using Variables to Store Data
+
+**THIS NEEDS TO CHANGE!!!!**
 
 Now that we know about different data types and have values assigned to both of our variables, let's dive into using them together!
 
@@ -192,8 +194,136 @@ An _expression_ evaluates (results in) a single value. Expressions rely on opera
 # Operators
 Expressions rely on operators to calculate their single value. There are 5 types of operators:
 
-1. Assigment operators. Assign a value to a variable. (hint: you've got these down already) ``` var color = 'magenta';```
-2. Arithmetic operators. Perform basic math. ```var addTwo = 2 + 2;```
-3. String operators. Combine strings. ```var greeting = 'Hello! ' + 'Nice to meet you.';```
-4. Comparison operators. Compare two values and return a __true__ or __false__. ```var buy = 3 > 5;``` (value of buy is false)
-5. Logical operators. Combines __expressions__ and return true or false. ``` var buy = (5 > 3) && (2 < 4);```
+1. Assignment operators. Assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
+2. Arithmetic operators. Perform basic math. `var addTwo = 2 + 2;`
+3. String operators. Combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
+4. Comparison operators. Compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
+5. Logical operators. Combines __expressions__ and return true or false. `var buy = (5 > 3) && (2 < 4);`
+
+# Conditionals
+
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
+
+```javascript
+var cookie = "chocolate chip";
+
+if (cookie === "chocolate chip") {
+  alert("This cookie is a chocolate chip cookie!");
+} else if (cookie === "oatmeal raisin") {
+  alert("This is not a cookie :(");
+} else {
+  alert("I bet you wish you had a chocolate chip cookie");
+}
+```
+
+```javascript
+var hoursOfSleep = 8;
+
+if (hoursOfSleep < 6) {
+  console.log('I am groggy.');
+} else {
+  console.log('I feel fantastic!');
+}
+```
+
+# Functions
+Functions are a way to group statements together to perform a specific task. Functions are reusable blocks of code. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
+
+## Statements
+A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon. Example statement:
+
+```javascript
+console.log('BOOM');
+```
+
+## Anatomy of a Function:
+```javascript
+function myRadFunction() {
+  var myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'"
+  alert('This is my second statement!');
+  console.log(myFirstStatement);
+}
+```
+- You declare a function using the keyword `function`.
+- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty, or accept parameters.
+- You must follow the name of the function with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
+- Calling the function is quite easy. Simply type the function name with it's parenthesis and any associated parameters.
+
+## Call a Function:
+```javascript
+// Calling a function w/out arguments
+myRadFunction();
+
+// Calling a function with arguments
+myRadFunction(arg1, arg2);
+```
+
+When this code is read, `myRadFunction()` is "called", meaning all three statements within the function's body (those curly braces) gets run.
+
+### Your Turn
+Let's go ahead and declare myRadFunction in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
+
+Create your own functions in the console:
+
+- Write a function that declares a `firstName` variable and a `lastName` variable, then alerts the user with a message that incorporates the full name, and then logs a random number to the console.
+
+- Write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables
+
+- Write a function that alerts the user with a message of "YO!", and then logs to the console a sum of eight different integers.
+
+## Pass Information to a Function:
+Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_. These are bits of information that you identify with appropriately named labels (you get to decide the notation) inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as means to pass values.
+
+## Parameters vs. Arguments
+Its a subtle difference. Basically, when you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass the values of the parameters, those are called arguments. Like this:
+
+```javascript
+// parameters named on declaration of function
+function myDreamCar(make, model) {
+  return "Buy me " + make " " + model;
+}
+
+// arguments "Audi" and "R8" passed into a called function
+myDreamCar("Audi", "R8");
+```
+
+## Getting A Value from Functions:
+Some functions return information to the code that called them. Wait - what? When a function performs a calculation, like 2 + 2, it will return the "answer" of 4, right? Yes, AND, you still have to tell it to do so. Let's work with some return statements in functions with parameters in the console:
+
+```javascript
+function addTwoNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+function addTwoNumbers(num1, num2) {
+  num1 + num2;
+}
+
+function addTwoNumbers(num1, num2) {
+  console.log('Boom');
+  return num1 + num2;
+}
+
+function addTwoNumbers(num1, num2) {
+  return num1 + num2;
+  console.log('Boom');
+}
+
+```
+
+The return statement ends function execution and specifies a value to be returned to the function caller. It looks like this:
+
+```javascript
+return [[expression]]
+// The expression to return. If omitted, undefined is returned instead.
+```
+
+When a `return` statement is called in a function, the execution of this function is stopped. If specified, a given value is returned to the function caller. If the expression is omitted, undefined is returned instead. The following return statements all break the function execution:
+
+```javascript
+return;
+return true;
+return false;
+return x;
+return x + y / 3;
+```
