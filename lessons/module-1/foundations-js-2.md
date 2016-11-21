@@ -12,7 +12,7 @@ By the end of this lesson, you will know/be able to:
 * Understand variable scope
 
 # Arrays
-An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a list of values, or values that are related to one another.
+An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
 
 You can put different types of data into an array:
 
@@ -34,7 +34,7 @@ colors = ['white',
 ## Accessing Values in Arrays
 Each value in an array is automatically given a number called an index. This index can be used to access a particular value in any given array.
 
-Indices begin at 0 and order incrementally. So in the above colors example, the following is true:
+Indices begin at 0 and order incrementally. So in the above `colors` example, the following is true:
 
 - color white has an index of 0
 - color black has an index of 1
@@ -186,3 +186,7 @@ Variables sans the keyword `var`
   - are bad practice
 
 The good news is all you have to do to avoid this is to always remember to use the `var` keyword!
+
+### Additional Practice
+
+* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
