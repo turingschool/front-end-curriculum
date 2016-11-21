@@ -1,5 +1,5 @@
 ---
-title: React Router Revisited
+title: React Router 4
 module: 3
 tags: react react-router javascript create-react-app
 ---

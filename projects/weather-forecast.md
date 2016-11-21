@@ -2,7 +2,6 @@
 title: Weather Tracker
 ---
 
-
 ## Specification
 
 ### Overview
@@ -11,10 +10,9 @@ In this project you'll be building a react/redux weather app that allows you to 
 
 ### Main Goals
 
-  - Retrieve and display forecast data from the OpenWeatherMap API 
-  - Use the Geolocation API to determine the weather in your current city 
-  - Save "pinned" or favorite cities to display their weather 
-
+  - Retrieve and display forecast data from the OpenWeatherMap API
+  - Use the Geolocation API to determine the weather in your current city
+  - Save "pinned" or favorite cities to display their extended weather forecasts
 
 ## Setup
 
@@ -23,7 +21,11 @@ In this project you'll be building a react/redux weather app that allows you to 
 We'll be using the OpenWeatherMap API to retrieve weather data. You'll need to [sign up for an API key](http://openweathermap.org/appid) to make any data requests.
 
 ### Repo
-Webpack and react dependencies have been setup for you in the [weather-app repo](https://github.com/turingschool-examples/weather-forecast). Fork this repo and follow the setup instructions in the README.
+Webpack and react dependencies have been setup for you in the [weather-app repo](https://github.com/turingschool-examples/weather-forecast). Fork this repo and follow the setup instructions in the README. You'll notice that the repo has been created using the `create-react-app` boilerplate.
+
+Note: The repo has a few additional things set up for you out of the box. This does not mean you can't make changes to how the app is structured, but there are some pieces that might look unfamiliar. These include (but are not limited to) the `routes.js` file, `applyMiddleware`, `createLogger`, and `thunk`.  
+
+You are **STRONGLY ENCOURAGED** to do a research spike on these elements before diving into coding this project. We are fully aware that you haven't worked with some of these concepts before, but the ultimate goal of this project is to emphasize heavy use of documentation and to encourage a 'divide and conquer' mentality among your group members.
 
 ### General Requirements
 
@@ -88,3 +90,22 @@ Extended Forecast Page
 * 2 - The group makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application and who worked on what features.
 * 1 - The group committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0 - The application was not checked into version control.
+
+### Troubleshooting
+
+Expected Information When Asking a Question:
+	- Start with a helpful "question".
+		  Bad: "This isn't working"
+		  Good: "I'm getting an error message that I don't understand coming from line 5 of my cities reducer".
+	- A given error message (if applicable)
+	- Specific line numbers and file names
+	- What you expected to see/happen
+	- What you're seeing/getting instead
+	- What steps have been taken so far to solve the problem.
+
+* 4 - Most to all questions were posed to instructors with expected information (see above)
+* 3 - Some questions were posed to instructors without supporting information
+* 2 - "This isn't working" was said at least once without additional information.
+* 1 - Zero to little attempt was made to solve problems before approaching an instructor
+* 0 - Don't make us give you a 0.
+```
