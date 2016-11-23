@@ -1,5 +1,5 @@
 ---
-title: Git and GitHub - Part 1
+title: Introduction to Git and GitHub - Part 1
 length: 60
 tags: git, github
 ---
