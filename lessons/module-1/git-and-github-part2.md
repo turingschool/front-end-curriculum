@@ -4,13 +4,50 @@ length: 60
 tags: git, github
 ---
 
-## Learning Goals
+### Learning Goals
 
-*
+In this lesson, you will learn how to:
 
-## Some Context: What is GitHub?
+* Use a version control system (Git) in conjunction with an online/remote repository (GitHub)
+* Start a project locally and synchronize with the remote repository
 
-A typical workflow with Git and GitHub includes:
+## GitHub
+
+### Some Context: What is GitHub?
+
+### Why Do We Use GitHub?
+
+Again, Git is NOT the same thing as GitHub!
+
+## Setup
+
+In order to push up to GitHub, you'll also need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
+
+## Working Example...
+
+* Create directory (new directory from previous lesson)
+* Initialize git
+* Create repository on GitHub (naming convention: these names should be the same to avoid confusion)
+* Add remote (origin) to local repository - we are not linked!
+* Checkout branch
+* Add HTML file
+* Add content
+* Commit changes
+* Add more content (just for commit repetition)
+* Commit new content, at this point happy to merge with master
+
+This is where things differ greatly.
+
+* Push the branch up to GitHub (go to GitHub and view the branch and changes)
+* Create a pull request (PR)
+* View changes and merge (into master - view master to see the changes are on master)
+* Back to the local repository, checkout master and notice the changes that were merged on GitHub are NOT on our local machine
+* Pull remote master into our local version
+* Checkout new branch and repeat the process...
+
+## A Typical Workflow
+
+To summarize the example above, a typical workflow with Git and GitHub includes:
 
 * Initialize a new Git repository (repo)
 * Add files to Git staging area
@@ -21,13 +58,7 @@ A typical workflow with Git and GitHub includes:
 * Switch between branches
 * Merge local branches to local master
 
-Again, Git is NOT the same thing as GitHub!
-
-## Setup
-
-In order to push up to GitHub, you'll also need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
-
-## Working Example...
+This workflow is great when you are working alone, but we will go over how to use Git and GitHub in groups in a later lesson.
 
 ## Additional Resources
 

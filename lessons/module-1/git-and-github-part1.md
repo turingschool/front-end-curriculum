@@ -4,7 +4,7 @@ length: 60
 tags: git, github
 ---
 
-## Learning Goals
+### Learning Goals
 
 In this lesson, you will learn how to:
 
@@ -93,8 +93,19 @@ Now we're ready to go!
 * Make a branch?
 * Add a file
 * Check status
-* Add file to staging
+* Add HTML file to staging
 * Commit the file
+* Edit file (adding content)
+* Check status again
+* Commit changes
+* Look at commit log
+* Make more changes
+* Commit changes
+* Didn't like changes and want to go back to previous commit?...need to talk about head and detached head state?
+* Reset hard and continue from there
+* Satisfied with work on branch, ready to merge to master
+* Checkout master (notice the changes are gone, maybe go back and forth to see changes on each branch)
+* Merge branch into master
 
 ### Typical Git Workflow
 
