@@ -4,15 +4,23 @@ title: Unit Testing React Components
 
 **Golden Rule**: No copy and pasting. Part of the point of this exercise is to build up some muscle memory.
 
-## Getting Started with Create React App
+## A Bit Of Background
 
-[Create React App][] is a new, officially-supported way to easily create React apps. As of this writing, the project is still very young and not used widely, but adoption is growing quickly.
+[Create React App][] is a new, officially-supported way to easily create React apps. As of this writing, the project is still very young and not used widely, but adoption is growing quickly.  
 
-[Create React App]: https://github.com/facebookincubator/create-react-app
+**Stop and Look Through These Links**:  
+* [Create React App]: https://github.com/facebookincubator/create-react-app
 
-**Stop and Read**: [Create Apps with No Configuration](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)
+* [Create Apps with No Configuration](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)  
 
-Install the `create-react-app` command line tool.
+It's *important to note* that `create-react-app` was intentionally built without many features we are used to seeing in our apps, like Sass, specific testing frameworks, or access to your `webpack.config` file. In order to implement additional features, or modify your `webpack.config` file, you must `npm eject` out of the boilerplate. This will effectively spit out all of the files being maintained behind the scenes and allow for custom configuration.    
+
+Keep in mind that although `create-react-app` is extremely popular, there are other boilerplates being built as well that you can explore that include more features, such as [react-boilerplate](https://github.com/mxstbr/react-boilerplate).  
+
+**Stop and Read**: [Conversation About Lack of Features](https://github.com/facebookincubator/create-react-app/issues/78)
+
+## Getting Started
+Install the `create-react-app` command line tool if you haven't already. (To check for globally installed dependencies run the command `npm list -g --depth=0`)
 
 ```
 npm install -g create-react-app
@@ -32,7 +40,7 @@ Linting is a powerful tool for maintaining code quality. Create React App uses E
 
 Add the following to your `package.json`:
 
-```json
+```
 "eslintConfig": {
   "extends": "react-app"
 }
@@ -40,15 +48,24 @@ Add the following to your `package.json`:
 
 ### Running Tests
 
+As we mentioned before, `create-react-app` has a built in testing framework that cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here] (https://facebook.github.io/jest/docs/tutorial-react.html), .
+
 In order to run the tests, you can type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better — by default, it will only watch files that have changed since the last time you made a git commit.
 
-As you might expect, you can use `npm test` to fire up the test server.
+Try it out - run `npm test` to fire up the test server. Currently our app has only one test file, `App.test.js`. Take a few seconds to look at that file.
 
-**Stop and Read**: [This section on file naming conventions](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#filename-conventions). Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with it for the purposes of this tutorial.
+**Stop and Read**: [This section on file naming conventions](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#filename-conventions).  
+ Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with the facebook convention for the purposes of this tutorial.
+
+Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) they " recommend that you use a separate tool for browser end-to-end tests if you need them. They are beyond the scope of Create React App." This means implementing our super friend `Enzyme`!  
 
 ```
 npm install --save-dev enzyme react-addons-test-utils
 ```
+
+### App Ultimate Goals
+
+For this tutorial, we are building a grocery-list app. In it, you can add groceries to a list, mark them starred or purchased, and filter based on these tags.  
 
 ### Testing the Grocery Component
 
@@ -62,7 +79,7 @@ Notice the following:
 - The "Purchase" button says "Unpurchase" when the item is purchased.
 - The "Star" button says "Unstar" when the item is starred.
 
-To get started, make the following three files in the `src` folder of your project:
+To get started, make the following two files in the `src` folder of your project:
 
 - `Grocery.js`
 - `Grocery.test.js`
@@ -83,7 +100,7 @@ const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar
 export default Grocery;
 ```
 
-It's a simple, stateless component. Right now, we're not using a number of the properties we're passing. Don't worry, we will.
+It's a functional, stateless component. Right now, we're not using a number of the properties we're passing. Don't worry, we will.
 
 In `Grocery.test.js`, we'll start with a simple test to see if the `name` property is properly rendered in the component.
 
@@ -105,15 +122,19 @@ describe('Grocery', () => {
 });
 ```
 
-Create React App uses [Jest][] instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax instead of an `assert` syntax.
+Create React App uses [Jest](http://facebook.github.io/jest/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax instead of an `assert` syntax.  
 
-[Jest](https://facebook.github.io/jest)
+[Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
 
-If you run `npm test` you should see your one test pass. You can keep this process running. The test suite will automatically be run whenever you make a change to the test file.
+If you run `npm test` you should see your one test pass (two if you still have the generic App test). You can keep this process running. The test suite will automatically be run whenever you make a change to the test file.
 
 #### Testing for a class
 
 It might also be helpful to test to see if a component has a certain class. An easy way to do that is to test if it matches a given selector.
+
+```
+Grocery.test.js  
+```
 
 ```js
 it('has a class of .Grocery', () => {
@@ -122,6 +143,10 @@ it('has a class of .Grocery', () => {
   expect(wrapper.is('.Grocery')).toEqual(true);
 });
 ```
+
+Now you should have three passing tests.  
+
+### Testing for dynamic changes  
 
 In the image above, the component changes visually based on whether or not the grocery item has been starred or purchase.
 
@@ -137,7 +162,7 @@ it('should have a className of "starred" if is starred', () => {
 });
 ```
 
-This will fail. You could be fancy and try either a ternary or an `&&` condition in a template literal interpolation in `Grocery.js`.
+This will fail. To fix it, you could be fancy and try either a ternary or an `&&` condition in a template literal interpolation in `Grocery.js`.
 
 ```jsx
 <article className={`Grocery ${starred ? 'starred' : ''}`}>
@@ -153,7 +178,7 @@ Try both of those out and verify that they get the test passing. Then let the un
 
 [classnames]: https://www.npmjs.com/package/classnames
 
-We'll import it into the module and refactor our components as follows:
+We'll import it into the module and refactor our `Grocery.js` component as follows:
 
 ```js
 import React from 'react';
@@ -183,9 +208,9 @@ Write the following tests and the implementation to match:
 
 ### Optional Components
 
-Sometimes my son has strong opinions on how many of something I should get. For example, he wanted _two_ packs of "[circle cheeses][]" the other day. The same is true for notes. He _does not_ like the "Light" variety and I better not dare come home with the cheddar-flavored derivatives.
+Sometimes Steve's son has strong opinions on how many of something he should get. For example, he wanted _two_ packs of "[circle cheeses][]" the other day. The same is true for how he feels about specifics. He _does not_ like the "Light" variety and Steve better not dare come home with the cheddar-flavored derivatives.
 
-To help with this, our grocery application allows the user to specify an optional quantity or notes. These aren't always needed. I know exactly what kind of vegan sardines I want. In these cases, I don't want to clutter up the user interface with "Quantity: NaN" or anything along those lines.
+To help with this, our grocery application allows the user to specify an optional quantity or notes. These aren't always needed. Let's say you know exactly what kind of vegan sardines you want. In these cases, you shouldn't have to clutter up the user interface with "Quantity: NaN" or anything along those lines.
 
 [circle cheeses]: http://mini-babybel.com/products/
 
@@ -302,7 +327,7 @@ it('should call the onPurchase prop when clicked', () => {
 - Can you add an `onClick` function to the "Purchase" button and be the hero who makes the test pass?
 - Can you write the tests and implementation for the "Star" and "Remove" buttons?
 
-### Implementing the Grocery List
+### Homework: Implementing the Grocery List
 
 ![](/assets/images/lessons/unit-testing-react/grocery-list-component.gif)
 

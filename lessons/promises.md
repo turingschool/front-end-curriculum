@@ -21,10 +21,14 @@ The callback pattern is wildly popular because it's easy to implement. But, it h
 
 ## Enter Promises
 
+### When to use Promises
 Let's get a common question out of the way first: "When am I going to use promises?"
 
-The short answer: whenever you're handed a promise by an API you didn't write where the author chose to use promises. This includes many modern browser APIs such as `fetch`.
+The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`. 
 
+When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback.
+
+### Advantages of Promises
 Okay, so what are some of the advantages of promises?
 
 - You are getting an IOU that you're holding on to rather than giving your code away as you would with promises.
