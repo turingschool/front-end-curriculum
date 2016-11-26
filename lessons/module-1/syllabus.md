@@ -92,7 +92,7 @@ Module one can be overwhelming as you find yourself adjusting to a new routine, 
 |Mid Mock Assessment| This assessment is not included in your portfolio, but is prep for the final assessment week.|
 |Quizlette| Weekly pop quiz questions.|
 |Pentathlon| Week six of the program, coined the “Pentathlon”, is a summative assessment to determine your eligibility to advance to module two. The assessment is comprised of two coding challenges, a comprehensive quizlette, game time evaluations, and your portfolio defense.|
-|Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments. Detailed information here: https://github.com/turingschool/portfolios|
+|Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments. Detailed information [here](https://github.com/turingschool/portfolios).|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|
 
 ### Weekly Detail
