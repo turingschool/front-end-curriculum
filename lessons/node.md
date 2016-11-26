@@ -261,3 +261,88 @@ This approach has a bunch of flaws:
 - We're storing data in memory, which will be wiped out when the server goes down.
 - Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
 
+#### The Unhappy Path
+
+What happens if the user doesn't give us a message parameter?
+
+We should tell them that we got some bad data.
+
+```js
+app.post('/api/secrets', (request, response) => {
+  const id = Date.now();
+  const { message } = request.body;
+
+  if (!message) {
+    return response.status(422).send({
+      error: 'No message property provided'
+    });
+  }
+
+  app.locals.secrets[id] = message;
+
+  response.json({ id, message });
+});
+```
+
+It would also be nice if we used the correct status code on the successful response.
+
+```js
+response.status(201).json({ id, message });
+```
+
+### Generating Unique Keys
+
+At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
+
+There are many ways we could create a random hash. We could take the body of our data along with the current time and do an MD5 hash. For now, let's do the simplest possible thing. We'll generate some random bytes with Node's built-in `crypto` module and then hash those.
+
+This seems like something we could break out into a little helper module.
+
+```
+mkdir lib
+touch lib/generate-id.js
+```
+
+In `lib/generate-id.js`, we'll add the following:
+
+```js
+const crypto = require('crypto');
+
+module.exports = () => {
+  return crypto.randomBytes(10).toString('hex');
+};
+```
+
+Now, we can require our little helper in `server.js`.
+
+```js
+const generateId = require('./lib/generate-id');
+```
+
+Let's replace `Date.now()` in our `POST` action.
+
+```js
+app.post('/api/secrets', (request, response) => {
+  const id = generateId();
+  const { message } = request.body;
+
+  if (!message) {
+    return response.status(422).send({
+      error: 'No message property provided'
+    });
+  }
+
+  app.locals.secrets[id] = message;
+
+  response.json({ id, message });
+});
+```
+
+### Further Exploration
+
+Read through [this simple chat application](https://github.com/turingschool-examples/chat-box-webpack/) from Module 2.
+
+- How would implement `PUT` and `DESTROY` actions in this application?
+- How was testing the endpoints handled?
+
+We'll look more into all of this tomorrow.
