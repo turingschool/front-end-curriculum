@@ -219,14 +219,45 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Secret Box';
-app.locals.secrets = {};
+app.locals.secrets = {
+  wowowow: 'I am a banana'
+};
 
 app.get('/', (request, response) => {
-  response.send('It\'s a secret to everyone.');
+  response.send('Hello World!');
+});
+
+app.get('/api/secrets/:id', (request, response) => {
+  const { id } = request.params;
+  const message = app.locals.secrets[id]
+
+  if (!message) { return response.sendStatus(404); }
+
+  response.json({ id, message });
 });
 
 app.listen(app.get('port'), () => {
   console.log(`${app.locals.title} is running on ${app.get('port')}.`);
 });
 ```
+
+### Creating a POST Route
+
+We'll use our super secure method of generating random IDs.
+
+```js
+app.post('/api/secrets', (request, response) => {
+  const id = Date.now();
+  const { message } = request.body;
+
+  app.locals.secrets[id] = message;
+
+  response.json({ id, message });
+});
+```
+
+This approach has a bunch of flaws:
+
+- We're storing data in memory, which will be wiped out when the server goes down.
+- Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
 
