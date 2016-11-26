@@ -16,6 +16,12 @@ tags: css, sass, scss
   1. Your Brain
   2. Some *sass*...bahahaha.
 
+### Relevant Intermission Assignments
+
+- [Why Sass?](http://alistapart.com/article/why-sass)
+- [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
+- [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+
 ## Understanding Sass
 
 ### What is Sass?
