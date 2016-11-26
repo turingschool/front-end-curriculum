@@ -30,7 +30,7 @@ The network tab will list any requests you make to the server. If we search for 
 [network-requests]: /assets/images/lessons/backend-primer/network-requests.png
 [network-response]: /assets/images/lessons/backend-primer/network-response.png
 
-####Making Requests to the Server
+#### Making Requests to the Server
 Our applications will request HTML documents, CSS files, images, and data. The way each of these requests are made is quite different:
 
 * Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
