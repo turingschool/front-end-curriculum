@@ -7,22 +7,6 @@ module: 4
 
 In this project you'll build a URL shortener service.
 
-This version is a little bit different than what we do in Module 2 these days:
-
-* You can use Rails and ActiveRecord instead of Sinatra and Sequel
-* We're skipping authentication and authorization: We won't be implementing the idea of registered users
-* You don't have to worry about deployment
-* You must use [Hound][]
-  * Set up your repository
-  * Visit the [Hound][] site and activate Hound for your repository
-  * Work on new features in a branch
-  * When you're ready to merge it into master, open a pull request on your respository
-  * Address Hound's comments (they should be folded up when you update make new commits that affect that line)
-  * Merge in your pull request into master when you make all of your commits
-* Most of the extensions are now base requirements. 😜
-
-[Hound]: https://houndci.com/
-
 Your application will allow users to provide long, ugly URLs and create shortened URLs through your service.
 
 The main goal of your application is to redirect a request at the shortened URL to their long URL equivalent.
@@ -47,19 +31,6 @@ Then I expect to see URLs sorted by popularity
 And I expect to see URLs sorted by how recently they were added
 ```
 
-### API
-
-Create a Ruby gem that uses your API
-
-```sh
-$ gem install --local jetfuel-0.0.1.gem
-```
-
-```ruby
-jf = JetFuel.new 'http://SERVER'
-jf.shorten "http://jumpstartlab.com" # => "http://SERVER/AFGAD"
-```
-
 ### Statistics
 
 Provide additional statistics on the main page of your application, a user's page of shortened URLS, and indivudal URL pages.
@@ -80,15 +51,11 @@ And type into the search field
 Then I expect to only see a list of generated links that contain my search query
 ```
 
-This should be done using jQuery.
-
 ### Titles
 
 Having just a big table of URLs (shortened and unshortened) is going to get unweidly fast.
 
-Ideally, it would be cool if we could use Faraday to fetch the title of the page. This probably shouldn't happen in the controller, though, right?
-
-Create a background worker that fetches the title of the webpage and saves it to the model.
+Create a background task that fetches the title of the webpage and saves it to the model.
 
 ## Evaluation
 
@@ -104,13 +71,9 @@ Create a background worker that fetches the title of the webpage and saves it to
 * Is the code clearly laid out within the class?
 * Does each method accomplish their intended task or do they do more than their intended?
 
-### Models
+### Server-side Code
 
-* Are the shortened urls generated within the `Url` model or within a class method?
-
-### Controller Code
-
-* Does each controller handle a single operation?
+* Does each route handle a single operation?
 * Are there a small number of instance variables defined?
 * Could multiple of the instance variables be represented with a singular concept/object?
 
