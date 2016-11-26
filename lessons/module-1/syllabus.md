@@ -29,20 +29,20 @@ community
 ## Module Aims
 By the end of module one, students will:
 
-### General
+#### General
 
 * Understand how the internet works and the roles of HTML, CSS, and JS in front end engineering. 
 * Understand the what, why, and how of code libraries. 
-* Comfort using terminal to navigate through directories, adding and moving files 
+* Exhibit comfort using terminal to navigate through directories, adding and moving files 
 
-### HTML
+#### HTML
 
 * Use semantic tags. 
 * Write well structured markup w/ proper nesting.
 * Follow style and naming conventions.
 * Create forms using correct structure and form elements 
 
-### CSS
+#### CSS
 
 * Understand and leverage cascading styles. 
 * Know when to use ids and classes, & add multiple classes in markup. 
@@ -53,7 +53,7 @@ By the end of module one, students will:
 * Understand basic performance issues introduced by CSS. 
 * Use devtools effectively to debug & read error messages. 
 
-### Javascript
+#### Javascript
 
 * Exhibit a solid grasp of syntax, such that syntax does not inhibit student’s progress, but the occasional quick reference is fine.
 * Use devtools to debug & read error messages, specifically: setting breakpoints, using sources to watch/evaluate code, making use of console to test data and code.
@@ -66,7 +66,7 @@ By the end of module one, students will:
 * Understand the reason for jQuery and how to leverage it.
 * Understand how event bubbling and delegation work, and exhibit that understanding in manipulation of the DOM.
 
-### Testing
+#### Testing
 
 * Understand the what and why for testing libraries and difference between test runner and assertion library.
 * Experience in writing tests in mocha/chai and can unit test
@@ -74,7 +74,7 @@ functions.
 * Employ cross browser testing regularly throughout development.
 * Leverage test failure messages to debug and diagnose issues.
 
-### Refactoring
+#### Refactoring
 
 * Refactor large functions into smaller functions.
 * Avoid the crutch of global variables.
@@ -83,6 +83,8 @@ functions.
 
 ## Module Format & Expectations
 Module one can be overwhelming as you find yourself adjusting to a new routine, challenging curriculum, and assimilating into a new community. We have a lot to accomplish in a concentrated period. Below you will find a breakout of curriculum and assignments per week. Other expectations include:
+
+### Overview
 
 | Attendance & Tardiness| Class begins promptly at 9:00 AM for the morning session, and 1:00 PM for the afternoon session. You are expected to be on time and in attendance every day. We understand issues arise, and ask that you communicate with instructors when you are going to be late or absent. |
 | 1:1's| These are 15 minute checkins with instructors to discuss how things are going in the program and if you have any concerns/questions.|
@@ -93,3 +95,46 @@ Module one can be overwhelming as you find yourself adjusting to a new routine, 
 |Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments. Detailed information here: https://github.com/turingschool/portfolios|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|
 
+### Weekly Detail
+
+##### WK 1: Introduction to Turing & Introduction to Frontend Engineering
+
+|Mindset     | We are a team. This week is about building trust with one another.|
+|Lessons     | HTML I & II, CSS I & II, JS I & II, Terminal, Personal Branding I |
+|Assignments | Personal Branding DUE Friday |
+|Homework    | Static Comps to Build & Reading |
+
+##### WK 2: Putting the Pieces Together
+
+|Mindset     | Open, optimistic, invested. |
+|Lessons     | JS III & IV, Git & Github, Intro Responsive, Intro Refactoring, Idiomatic CSS & Image Optimization, Giving & Receiving Feedback |
+|Assignments | Mythical Creatures & Number Guesser |
+|Homework    | Mythical Creatures & Reading |
+
+##### WK 3: Build on a Solid Foundation
+
+|Mindset     | Dig Deep, show grit, be vocal, be resourceful. |
+|Lessons     | jQuery, Github Workflow, Event Bubbling & Delegation, CSS Performance & Optimization, CSS Animations & Transitions, Flexbox, Responsive Unicorn|
+|Assignments | Mid Mock Assessment & Linked List|
+|Homework    | Static Comp Challenge (1/3)|
+
+##### WK 4: Proficiency in the Fundamentals
+
+|Mindset     | Self-driven, self-aware, personal and interpersonal responsibility.|
+|Lessons     | Local Storage, Review JS III & IV, Array Prototypes, Function Prototypes|
+|Assignments | Idea Box|
+|Homework    | Static Comp Challenge (2/3)|
+
+##### WK 5: Creative Problem Solving
+
+|Mindset     | Brave, supportive, can-do-attitude.|
+|Lessons     | Intro to OOP w/ Canvas, Intro to Build Tools, Intro to Unit Testing, Adventures w/ Blocky, Game Time Testing Journey|
+|Assignments | Game Time|
+|Homework    | Static Comp Challenge (3/3), Watch Mary Build a Game Video |
+
+##### WK 6: Mastery of Module
+
+|Mindset     | Independent, confident problem solver, successful team member.|
+|Lessons     | N/A Final Assessment Week|
+|Assignments | Pentathlon: Code Challenges I & II, Final Quizlette, Game Time Evals, Portfolio Defense|
+|Homework    | Game Time Polish & Portfolio|
