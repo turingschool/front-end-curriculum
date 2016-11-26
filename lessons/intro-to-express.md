@@ -23,5 +23,17 @@ Just like browser-based JavaScript, the syntax for using plain Node.js isn't the
 While Node.js provides us with all of the functionality we need for our back-ends, writing this logic without Express is more difficult to make sense of and maintain. The two biggest advantages of Express are:
 
 1. the collection of helpful utilities and conveniences that abstract away the Node.js complexity. (e.g. sending a single image file in raw Node.js is quite complex, but can be done in just one line with express)
-2. the ability to refactor request handlers into smaller pieces that are more modular and maintainable
-...
+2. the ability to refactor request handlers into smaller pieces that are more modular and maintainable. (Node.js, by default, requires you to create one large request handler, which makes your logic more rigid and difficult to refactor)
+
+## The Anatomy of a Request
+When we are just using Node.js, the flow of a single request might look like this:
+
+![node only][node-only-flow]
+
+When we add Express, there a couple of additional steps added to the flow of a request:
+
+![express flow][express-flow]
+
+While the Express flow might look more complex, it actually makes the developer's job a lot easier. In this flow, the developer is only responsible for the 'Middleware' part of the process. The code we write in this step is also much easier to write and understand because of the features added by the Express step.
+
+## Middleware
