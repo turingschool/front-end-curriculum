@@ -65,10 +65,10 @@ Create a background task that fetches the title of the webpage and saves it to t
 
 ### Code Clarity
 
-* Is the application consistent with other Rails applications you have written or seen?
+* Is the application consistent with other applications you have written or seen?
 * Are the files of the application laid out in a logical manner?
 * Does the code within each file directly relate to the name of the file and location within the application?
-* Is the code clearly laid out within the class?
+* Is the code clearly laid out?
 * Does each method accomplish their intended task or do they do more than their intended?
 
 ### Server-side Code
@@ -76,12 +76,7 @@ Create a background task that fetches the title of the webpage and saves it to t
 * Does each route handle a single operation?
 * Are there a small number of instance variables defined?
 * Could multiple of the instance variables be represented with a singular concept/object?
-
-### View
-
-* Are the views well formatted?
-* Are the views broken into appropriate sub-view templates?
-* Are the views free of complicated code and conditional logic?
+* Are your routes "RESTful"?
 
 ### Tests
 
