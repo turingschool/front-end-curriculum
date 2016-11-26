@@ -11,13 +11,13 @@ status: draft
 The callback pattern is wildly popular because it's easy to implement. But, it has a few problems:
 
 - You're giving away your code to be executed later.
-	- You can hope that this will be when you expect and as many times as you expect. But no promises (pun unintended, but I'm going with it).
-	- You can store/cache the results anywhere. You get access to the data in that callback function and that's it. If you need that data again, you're going to have to make another request. Bummer.
-	- Doing things like executing callbacks in parallel and waiting for all of them to come back is tricky.
-	- Doing things in series where one callback hands its data to the next callback is also tricky. (This has the delightful nickname of "callback hell.")
-	- Error handing is inherently broken. There are a bunch of clever ways around this:
-		- Pass two callbacks—one for a successful outcome and one for an unsuccessful outcome.
-		- Use the Node.js "error-first" style of callbacks where the first argument is always an error object, which is typically set to `null` in the event that we reached a successful outcome. This is incredibly pessimistic.
+  - You can hope that this will be when you expect and as many times as you expect. But no promises (pun unintended, but I'm going with it).
+  - You can store/cache the results anywhere. You get access to the data in that callback function and that's it. If you need that data again, you're going to have to make another request. Bummer.
+  - Doing things like executing callbacks in parallel and waiting for all of them to come back is tricky.
+  - Doing things in series where one callback hands its data to the next callback is also tricky. (This has the delightful nickname of "callback hell.")
+  - Error handing is inherently broken. There are a bunch of clever ways around this:
+    - Pass two callbacks—one for a successful outcome and one for an unsuccessful outcome.
+    - Use the Node.js "error-first" style of callbacks where the first argument is always an error object, which is typically set to `null` in the event that we reached a successful outcome. This is incredibly pessimistic.
 
 ## Enter Promises
 
@@ -41,9 +41,9 @@ jQuery is nice enough to support both callbacks and promises.
 
 ```js
 $.getJSON('/api/students.json', (students) => {
-	console.log(students);
+  console.log(students);
 }, (error) => {
-	console.error(error);
+  console.error(error);
 });
 
 // No more access to students out here.
@@ -64,17 +64,17 @@ It gets worse when we have to more than one thing.
 
 ```js
 $.getJSON('/api/students.json', (students) => {
-	getProjectsForStudents(students, (projects) => {
-		getGradesForProjects(projects, (grades) => {
-			doSomethingImportantWithAllThisData(students, projects, grades);
-		}, (error) => {
-			console.error(error);
-		})
-	}, (error) => {
-		console.error(error);
-	})
+  getProjectsForStudents(students, (projects) => {
+    getGradesForProjects(projects, (grades) => {
+      doSomethingImportantWithAllThisData(students, projects, grades);
+    }, (error) => {
+      console.error(error);
+    })
+  }, (error) => {
+    console.error(error);
+  })
 }, (error) => {
-	console.error(error);
+  console.error(error);
 });
 
 ```
@@ -128,11 +128,11 @@ As you can probably imagine when things go well, you should call the `resolve()`
 
 ```js
 const promise = new Promise((resolve, reject) => {
-	if (thingsGoWell) {
-		resolve(theDataYouReceived);
-	} else {
-		reject(someHelpfulError);
-	}
+  if (thingsGoWell) {
+    resolve(theDataYouReceived);
+  } else {
+    reject(someHelpfulError);
+  }
 });
 ```
 
