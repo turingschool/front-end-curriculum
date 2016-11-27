@@ -42,7 +42,9 @@ While the Express flow might look more complex, it actually makes the developer'
 ## Routing & Middleware
 Earlier we mentioned that with plain Node.js, you would create a single function to handle requests. This single function can get large and unwieldy as your application grows in complexity. Express middlware allows you to break this single function into many smaller functions that only handle one thing at a time.
 
-Most of the Express code that you write will be middleware. Middleware is basically the "glue" between two systems that helps them work together (in our case, Node and Express). Our code will be concerned with responding to client requests to different URLs and different methods (GET, POST, etc).
+Most of the Express code that you write will be routing middleware. Middleware is basically the "glue" between two systems that helps them work together (in our case, Node and Express). Our code will be concerned with responding to client requests to different URLs with different methods (GET, POST, etc).
+
 
 ## Resources
 - [Express.js](https://expressjs.com/)
+
