@@ -44,6 +44,50 @@ Earlier we mentioned that with plain Node.js, you would create a single function
 
 Most of the Express code that you write will be routing middleware. Middleware is basically the "glue" between two systems that helps them work together (in our case, Node and Express). Our code will be concerned with responding to client requests to different URLs with different methods (GET, POST, etc).
 
+Let's pick apart the structure of how we define an Express route:
+
+```javascript
+app.get('/', function (req, res) {
+  res.send('Hello World!')
+})
+```
+
+In the above example, our express app (denoted by `app`), is handling a `GET` request to `'/'`. The second parameter in this call is our callback that defines how we're actually going to handle what happens when a user makes a `GET` request to `'/'`. The callback takes two parameters: the request (`req`) and the response (`res`). In this example, our hander is simply sending back a response (`res.send`) with the text 'Hello World!'. 
+
+This pattern is exactly how we can define and handle any routes in an Express application. There are four main pieces to this code:
+
+* `app` - the instance of our Express application
+* a METHOD - the method specified when the request is made from the client. (e.g. `GET`, `POST`, `PUT`, `DELETE`)
+* a PATH - the endpoint that we are requesting
+* a HANDLER - the function we write that contains the logic for how the request should be dealt with, and what kind of response it should return
+
+An example of a `POST` request to retrieve data might look something like the following:
+
+```javascript
+app.post('/messages', (request, response) => {
+  const { message } = request.body;
+  message.id = message.id || Date.now();
+  app.locals.messages.push(message);
+  response.status(201).send({ message });
+});
+```
+
+This block of code would be hit any time a `POST` request is made from the client side to `/messages`. Using the `fetch` API, the code on our client-side might look like this:
+
+```javascript
+fetch('/messages', {
+  method: 'POST',
+  body: JSON.stringify({ user: 'Brittany', message: 'Hello' })
+})
+.then(response => JSON.parse(response))
+.then(messageData => {
+  console.log(messageData); // logs { id: 2307652394, user: 'Brittany', message: 'Hello' }
+})
+.catch(error => {
+  console.log(error); // logs any error message we return from our response
+})
+```
+
 
 ## Resources
 - [Express.js](https://expressjs.com/)
