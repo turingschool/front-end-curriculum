@@ -65,10 +65,10 @@ An example of a `POST` request to retrieve data might look something like the fo
 
 ```javascript
 app.post('/messages', (request, response) => {
-  const { message } = request.body;
-  message.id = message.id || Date.now();
-  app.locals.messages.push(message);
-  response.status(201).send({ message });
+  const { message } = request.body; // grab the data we pass in from the client-side
+  message.id = message.id || Date.now(); // add a unique ID to the message
+  app.locals.messages.push(message); // store the new message locally (normally this would go into a database)
+  response.status(201).send({ message }); // send back the full message object as our response
 });
 ```
 
@@ -91,4 +91,4 @@ fetch('/messages', {
 
 ## Resources
 - [Express.js](https://expressjs.com/)
-
+- [HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
