@@ -7,7 +7,7 @@ Do you remember that project Ideabox?
 
 We thought they were pretty great, but, I think it's time to pivot those projects over to something we like to call 2DoBox.
 
-You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox. Your projects will utilize webpack & it's awesome development server. Keeping accessibility in mind we will be grading you based on how accessible your application is. Lastly you will implement feature tests using selenium webdriver.
+You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox. Your projects will utilize webpack & its awesome development server. Keeping accessibility in mind we will be grading you based on how accessible your application is. Lastly you will implement feature tests using selenium webdriver.
 
 # Getting Started ( Should I Fork or Clone?! )
 
@@ -134,13 +134,30 @@ The application is able to count the number of characters inside of the input fi
 
 The submit button should be disabled when there is not valid content in both input fields and if the input field character count exceeds 120 characters.
 
+# Extensions
 
-# Extension
+## TODO Due Dates
 
 When viewing the TODO list:
 
   * Each TODO should have an option to set a due date for the specific TODO
-  * Once a TODO's due date is reached the TODO should be marked as completed.
+  * Once a TODO's due date is reached the TODO should show a visual indication that it is past due if it has not been completed.
+
+Note: TimeZones are hard - consider using a library like [MomentJS](http://momentjs.com/)
+
+## Refactoring to Sass
+
+Your webpack setup will help you install Sass - a CSS preprocessor - but to complete this extension you need to _really use it_
+
+* CSS for the project should be structured matching the new Sass style.
+  * Re-read [this intermission assignment](http://thesassway.com/beginner/how-to-structure-a-sass-project) for an idea of how to set up a structure for Sass
+
+* CSS code should be exceptionally DRY (Do Not Repeat Yourself) - meaning that there is _no_ repetion of CSS that could be broken reasonably into variables and mixins.
+  * Read through this [lesson](http://frontend.turing.io/lessons/introduction-to-sass.html) for an idea of what Sass can do
+
+* Atleast one advanced feature of Sass should be used to enhance the project.
+  * Developer should be able to speak to what this feature does and why it improves the code for future developers.
+  * Google 'fun sass tricks' or use a gist like [this one](https://gist.github.com/jareware/4738651) for inspiration!
 
 # Instructor Evaluation Points
 
@@ -186,16 +203,6 @@ When viewing the TODO list:
 
 1: Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
 
-## CSS/Sass Style
-
-4: Application has exceptionally well-factored CSS/Sass with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
-
-3: Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS/Sass is doing.
-
-2: Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-
-1: Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS/Sass is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
-
 ## JavaScript Style
 
 4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There zero instances where an instructor would recommend taking a different approach.
@@ -212,9 +219,9 @@ When viewing the TODO list:
 
 4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
 
-3 - Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of feature testing.
+3 - Project has a running test suite that tests and multiple levels but fails to cover some features. The application makes some use of feature testing.
 
-2 - Project has sporadic use of tests and multiple levels. The application contains numerous holes in testing and/or many features are untested.
+2 - Project has sporadic use of tests. The application contains numerous holes in testing and/or many features are untested.
 
 1 - There is little or no evidence of testing in this application.
 
