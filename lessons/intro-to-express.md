@@ -47,8 +47,8 @@ Most of the Express code that you write will be routing middleware. Middleware i
 Let's pick apart the structure of how we define an Express route:
 
 ```javascript
-app.get('/', function (req, res) {
-  res.send('Hello World!')
+app.get('/', function (request, response) {
+  response.send('Hello World!')
 })
 ```
 
@@ -87,6 +87,37 @@ fetch('/messages', {
   console.log(error); // logs any error message we return from our response
 })
 ```
+
+## Error Handling
+In our previous example, we simply stored a new message object that we received from the client-side and sent it back as a successful response. When we successfully create a new record in a collection of application data, we can signal this success to our end-user by setting an [HTTP Status Code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). There are many different status codes to use in various situations. Upon a successful 'creation' you'll want to set the status code to `201` before sending back the response object.
+
+Take a minute to look through some of the other available status codes that can be used. These are a quick way to determine what happened to our request when it was sent to the server, and are easily viewed in the 'Network' panel of your browser developer tools.
+
+Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that 'user' and 'message' are both required properties when submitting a new message, and we want to respond with an error if either of them are missing:
+
+```javascript
+app.post('/messages', (request, response) => {
+  const { message } = request.body;
+
+  for (let requiredParameter of ['user', 'message']) {
+    if (!message[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ 
+          error: `Expected format: { user: <String>, message: <String> }. You're missing a "${requiredParameter}" property.`
+        });
+    }
+  }
+
+  message.id = message.id || Date.now();
+  app.locals.messages.push(message);
+  response.status(201).send({ message });
+});
+```
+
+If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error message we sent along with the 422 response.
+
+It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response message is the best way to write a user-friendly API.
 
 
 ## Resources
