@@ -37,3 +37,6 @@ When we add Express, there a couple of additional steps added to the flow of a r
 While the Express flow might look more complex, it actually makes the developer's job a lot easier. In this flow, the developer is only responsible for the 'Middleware' part of the process. The code we write in this step is also much easier to write and understand because of the features added by the Express step.
 
 ## Middleware
+Earlier we mentioned that with plain Node.js, you would create a single function to handle requests. This single function can get large and unwieldy as your application grows in complexity. Express middlware allows you to break this single function into many smaller functions that only handle one thing at a time.
+
+Most of the Express code that you write will be middleware. Middleware is basically the "glue" between two systems that helps them work together (in our case, Node and Express). 
