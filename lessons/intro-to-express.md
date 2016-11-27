@@ -25,7 +25,7 @@ While Node.js provides us with all of the functionality we need for our back-end
 1. the collection of helpful utilities and conveniences that abstract away the Node.js complexity. (e.g. sending a single image file in raw Node.js is quite complex, but can be done in just one line with express)
 2. the ability to refactor request handlers into smaller pieces that are more modular and maintainable. (Node.js, by default, requires you to create one large request handler, which makes your logic more rigid and difficult to refactor)
 
-## The Anatomy of a Request
+## Request Flow
 When we are just using Node.js, the flow of a single request might look like this:
 
 ![node only][node-only-flow]
@@ -34,8 +34,7 @@ When we add Express, there a couple of additional steps added to the flow of a r
 
 ![express flow][express-flow]
 
-While the Express flow might look more complex, it actually makes the developer's job a lot easier. In this flow, the developer is only responsible for the 'Middleware' part of the process. The code we write in this step is also much easier to write and understand because of the features added by the Express step.
-
+While the Express flow might look more complex, it actually makes the developer's job a lot easier. In this flow, the developer is only responsible for the 'Middleware' part of the process. This replaces the single request handler function that you would write without Express. Writing middlware for Express is a lot easier to write and more maintainable because of the 'Express' step that abstracts the complex logic for us.
 
 [node-only-flow]: /assets/images/lessons/express/node-only-flow.png
 [express-flow]: /assets/images/lessons/express/express-flow.png
