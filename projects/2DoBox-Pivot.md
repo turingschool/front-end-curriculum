@@ -261,15 +261,3 @@ Your webpack setup will help you install Sass - a CSS preprocessor - but to comp
 1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 
 0 - The application was not checked into version control.
-
-## Code Sanitation
-
-The output from a code sanitizer (either JSHint or ESLint) shows…
-
-4 - Zero complaints
-
-3 - Five or fewer complaints
-
-2 - Six to ten complaints
-
-1 - More than ten complaints
