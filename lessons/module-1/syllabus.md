@@ -101,20 +101,20 @@ Module one can be overwhelming as you find yourself adjusting to a new routine, 
 
 |Mindset     | We are a team. This week is about building trust with one another.|
 |Lessons     | HTML I & II, CSS I & II, JS I & II, Terminal, Personal Branding I |
-|Assignments | Personal Branding DUE Friday |
+|Assignments | Personal Branding I: Two Deliverables DUE 11/30 & 12/2 |
 |Homework    | Static Comps to Build & Reading |
 
 ##### WK 2: Putting the Pieces Together
 
 |Mindset     | Open, optimistic, invested. |
-|Lessons     | JS III & IV, Git & Github, Intro Responsive, Intro Refactoring, Idiomatic CSS & Image Optimization, Giving & Receiving Feedback |
+|Lessons     | Giving & Receiving Feedback, JS III & IV, Git & Github, Intro Responsive, Intro Refactoring, Idiomatic CSS & Image Optimization |
 |Assignments | Mythical Creatures & Number Guesser |
 |Homework    | Mythical Creatures & Reading |
 
 ##### WK 3: Build on a Solid Foundation
 
 |Mindset     | Dig Deep, show grit, be vocal, be resourceful. |
-|Lessons     | jQuery, Github Workflow, Event Bubbling & Delegation, CSS Performance & Optimization, CSS Animations & Transitions, Flexbox, Responsive Unicorn|
+|Lessons     | Learning How to Pair, jQuery, Github Workflow, Event Bubbling & Delegation, CSS Performance & Optimization, CSS Animations & Transitions, Flexbox, Responsive Unicorn|
 |Assignments | Mid Mock Assessment & Linked List|
 |Homework    | Static Comp Challenge (1/3)|
 

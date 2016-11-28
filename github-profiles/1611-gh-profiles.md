@@ -5,10 +5,9 @@ title: 1610 GH Profiles
 
 * [Breana Cowart Knight](https://github.com/AKewlBreeze)
 * [Charlie Dunn](https://github.com/dunncl15)
-* [Daniel Bucket](http://github.com/danielbucket)
+* [Daniel Ludwick](http://github.com/danielbucket)
 * [Devin Dixon](http://github.com/devinisafoal)
 * [Franklin Crosby](https://github.com/Obleo33)
-* [Gabriella Tangredi](https://github.com/gtangredi)
 * [Hugh Morrison](https://github.com/hmorri32)
 * [Julian Kyer](https://github.com/juliankyer)
 * [Jonathan Willemain](https://github.com/jonwille)
