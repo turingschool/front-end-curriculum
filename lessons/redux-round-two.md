@@ -4,23 +4,21 @@ tags: React, JavaScript, Webpack, Redux
 ---
 
 ### Game Plan
-  - Review key Redux concepts
-  - Introduce some new concepts
-  - Talk about organizing a Redux app
-  - Build a slice of a Todo App
+  - Why Redux?
+  - Break down Redux concepts
+  - Build a slice of a Todo App in Redux
   - Look at a completed App
     - [Working Repo](https://github.com/martensonbj/redux-second-look)
   - Explore Testing
 
-#### What We Are Building:  
-
-![Mockup Image](http://i.imgur.com/XSEWgwR.png)
+// FIND ARTICLE AND SETUP GROUPS  
 
 ### LifeCycle of a Redux App
 
 ![Redux Diagram](https://i.redd.it/hl2aytgofz6x.png)
 
-### Review of Redux Key Concepts
+### Redux Key Concepts
+
 *Store*  
 The essence of Redux. Holds all of your application's state(s) and data in a giant JavaScript object.
 
@@ -47,45 +45,51 @@ function addTodo(text) => {
 *Reducers*  
 Functions. Take state from Redux, and our bundle of information from our Action Creator and return a new state that is updated in our Redux store. Redux then passes that new state to any components that need to know about it which triggers the React engine to re-render the component.
 
-*Presentational Components*  
-Synonymous with a dumb or stateless component. Presentational components receive data from container/smart/stateful components and render themselves accordingly.
-
-### New Redux Concepts
-
 *Container Components*  
 Synonymous with smart, or stateful components. These are parent components to Presentational Components that deal with redux, state, actions etc. Containers pass data to the presentational component, making the connection between the Redux store and the presentational components that need to be rendered.
 
+### More Concepts
+
+*Presentational Components*  
+Synonymous with a dumb or stateless component. Presentational components receive data from container/smart/stateful components and render themselves accordingly.
+
+
+#### Connect Magic
+
 *`connect()`*  
-
-
 Connects a React component to the Redux store. Behind the scenes it actually returns a new connected component that wraps around any existing components.  
 
-Takes at least one argument, either `mapStateToProps` or `mapDispatchToProps` which are generally each defined outside of this function. (Note: There are other arguments that we will not get into here, such as `mergeProps` and `options`)  
+Takes at least one argument, either `mapStateToProps` or `mapDispatchToProps` or both.
 
-```
-// containers/AppThatCaresContainer.js
+*`mapStateToProps(state, [ownProps]) `*  
+Function.   
 
-...
-connect(mapStateToProps, mapDispatchToProps)(AppThatCares)
-```
-
-```
-<Provider store={store} />
-  <App />
-    <Container(TodoList) />
-      <TodoList />
-    </Container>
-  </App>
-</Provider>
-```
-
-*`[mapStateToProps(state, [ownProps]): stateProps](Function)`*  
 If passed into `connect()`, the component will subscribe to Redux store updates. Any time the store is updated, `mapStateToProps` will be called and will pass along the updated props. If `ownProps` is specified, its value will be what is passed as props to the component.
 
-*`[mapDispatchToProps(dispatch, [ownProps]): dispatchProps](Object or Function)`*  
-By default injects the `dispatch()` method into your component's props, which connects any event listeners to a designated action and reducer. If `ownProps` is specified, its value will be what is passed as props to the component. If an object is passed as an argument, anything inside will be assumed to be a Redux action creator. Functions will be given access to `dispatch()`
+*`mapDispatchToProps(dispatch, [ownProps])`*  
+Object or Function.  
 
-*`<Provider store>`*  
+By default injects the `dispatch()` method into your component's props, which connects any event listeners to a designated action and reducer. If `ownProps` is specified, its value will be what is passed as props to the component. If an object is passed as an argument, anything inside will be assumed to be a Redux action creator.
+
+```
+containers/ComponentThatCaresContainer.js
+```
+
+```js
+import ComponentThatCares from './ComponenThatCares.js'  
+
+const mapStateToProps = () => {
+  // Some code to connect Component to State within the Redux Store
+}
+
+const mapDispatchToProps = () => {
+  // Some code to connect Component to app Actions and therefore Reducers within Redux Store
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ComponentThatCares)
+```
+
+*`<Provider store={store}>`*  
 Typically, this component is wrapped around your application's root component. This allows the `connect()` method in nested components to have access to the Redux store.
 
 **Example:**:  
@@ -114,7 +118,7 @@ let store = createStore(
 
 ### Organizing An App
 
-Implementing Redux forces you to think about your app from a high-level perspective, in terms of the data you need to manage.
+Implementing Redux forces you to think about your app from a high-level perspective, in terms of the data you need to manage and how the state of your app will change.
 
 Let's start by looking at how to organize a directory structure in broad terms. It is common to put actions, components, containers, and reducers in their own folders.   
 
@@ -136,7 +140,7 @@ webpack.config.js
 If you are coding along, you'll need the following directories:  
 `mkdir actions components containers reducers test`  
 
-This is what we want to build:  
+#### What We Are Building:  
 
 ![Imgur](http://i.imgur.com/XSEWgwR.png)
 
