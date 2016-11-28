@@ -176,11 +176,11 @@ Instead we'll focus on two elements:
 <p data-height="300" data-theme-id="26495" data-slug-hash="MeaMEr" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Inputs and Buttons" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/MeaMEr/">Inputs and Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-## Your Challenge
+# Your Challenge
 You will build this wireframe as a static site. We'll build on this idea over the next few days. You will need to create a directory called "meeting-site" to hold your files. We'll start with the content and the markup. Your creative license for this phase:
 
 * You may change the content to reflect other subject matter. So instead of "Providers", feel free to use "Cats"
-* You may NOT change the page layout
+* You need only concentrate on content right now, we will approach layout when we start CSS 
 * FPO images and copy are of your choosing (just keep it clean people)
 
 ![Meeting Site Wireframe](/assets/images/meetingsite-wireframe1.jpg)
