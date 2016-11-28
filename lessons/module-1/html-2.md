@@ -28,11 +28,11 @@ Forms are an important part of a website. They allow users to send data to the w
 
 # Docs
 
-[MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
-[How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
-[Chrome Dev Tools Reference](https://developer.chrome.com/devtools)
-[Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
-[How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
+* [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
+* [How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+* [Chrome Dev Tools Reference](https://developer.chrome.com/devtools)
+* [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
+* [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
 
 # Your Challenge
 
