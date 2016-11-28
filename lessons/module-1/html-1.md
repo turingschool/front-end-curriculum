@@ -51,8 +51,9 @@ Here is an example of a slightly more robust document:
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 # The Docs
-[MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
-[MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+
+* [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
 
 ***
 
@@ -67,6 +68,8 @@ Let's practice with the following tags:
 * `section`
 * `article`
 * `p`
+* `ul` and `ol`
+* `div`
 
 <p data-height="530" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -138,7 +141,7 @@ Some other inline tags you might see in the wild:
 
 We use `<em>` and `<strong>` to denote the semantic meaning of the content.
 
-<p data-height="300" data-theme-id="26495" data-slug-hash="ezpwZe" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/ezpwZe/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="583" data-theme-id="26495" data-slug-hash="ezpwZe" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/ezpwZe/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 You may notice that the `<em>` tags are italicized and the `<strong>` tags are displayed in bold. The browser does this by default. That said, you should still only use these tags to convey meaning. We can change the way stuff looks later with CSS.
@@ -162,7 +165,7 @@ There is just one important difference between the two.
 
 We'll discuss these more in a bit when we talk about CSS. But, for now, let's move on to forms.
 
-### Inputs and Buttons
+### Forms: Inputs and Buttons
 
 So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms.
 
@@ -176,11 +179,11 @@ Instead we'll focus on two elements:
 <p data-height="300" data-theme-id="26495" data-slug-hash="MeaMEr" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Inputs and Buttons" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/MeaMEr/">Inputs and Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-## Your Challenge
+# Your Challenge
 You will build this wireframe as a static site. We'll build on this idea over the next few days. You will need to create a directory called "meeting-site" to hold your files. We'll start with the content and the markup. Your creative license for this phase:
 
 * You may change the content to reflect other subject matter. So instead of "Providers", feel free to use "Cats"
-* You may NOT change the page layout
+* You need only concentrate on content right now, we will approach layout when we start CSS 
 * FPO images and copy are of your choosing (just keep it clean people)
 
 ![Meeting Site Wireframe](/assets/images/meetingsite-wireframe1.jpg)
