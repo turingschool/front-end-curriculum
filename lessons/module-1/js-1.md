@@ -1,5 +1,5 @@
 ---
-title: Foundations JS - I
+title: JS I
 length: 180
 tags: js, introduction, foundation, variables
 ---
