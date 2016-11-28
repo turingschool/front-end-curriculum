@@ -8,10 +8,7 @@ title: Unit Testing React Components
 
 [Create React App](https://github.com/facebookincubator/create-react-app) is a new, officially-supported way to easily create React apps. As of this writing, the project is still very young and not used widely, but adoption is growing quickly.  
 
-**Stop and Look Through These Links**:  
-* [Create React App](https://github.com/facebookincubator/create-react-app)
-
-* [Create Apps with No Configuration](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)  
+**Stop and Read:**: [Create Apps with No Configuration](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)  
 
 It's *important to note* that `create-react-app` was intentionally built without some of the features we are used to seeing in our apps, like Sass, specific testing frameworks, or access to your `webpack.config` file. In order to implement additional features, or modify your `webpack.config` file, you must `npm eject` out of the boilerplate. This will effectively spit out all of the files being maintained behind the scenes and allow for custom configuration.    
 
@@ -50,7 +47,7 @@ Add the following to your `package.json`:
 
 ### Clean Up Extra Stuff
 
-Out of the box, `create-react-app` hooks you up with some boilerplate HTML and CSS that we won't be using. let's clean up the existing files before we get started. First, you can delete the `logo.svg` file. Next, update the following files to match below:  
+Out of the box, `create-react-app` hooks you up with some boilerplate HTML and CSS that we won't be using. Let's clean up the existing files before we get started. First, you can delete the `logo.svg` file. Next, update the following files to match below:  
 
 ```
 App.css
@@ -86,7 +83,7 @@ export default App;
 
 ### Running Tests
 
-As we mentioned before, `create-react-app` has a built in testing framework that cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here] (https://facebook.github.io/jest/docs/tutorial-react.html).
+As we mentioned before, `create-react-app` has a built in testing framework that cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
 
 In order to run the tests, type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better — by default, it will only watch files that have changed since the last time you made a git commit.
 
@@ -393,7 +390,7 @@ it('should call the onPurchase prop when clicked', () => {
 
 ![](/assets/images/lessons/unit-testing-react/grocery-list-component.gif)
 
-(**Important Note for Careful Readers**: You're not responsible for the form... just the list below...which means you'll probably need to provide some fake groceries)
+(**Important Note for Careful Readers**: You're not responsible for the form... just the list below...which means you'll probably need to provide some fake grocery data in your tests)
 
 The list should have the following functionality (test driven, of course):
 
