@@ -1,7 +1,9 @@
 ---
-title: Reintroduction ot Node.js
+title: Reintroduction to Node.js
 module: 4
 ---
+
+An example repository of the completed example can be found [here](https://github.com/turingschool-examples/secret-box).
 
 In the past, we've used Node.js to build our client-side applications. We've even used it to spin up development servers to make it easier to develop our client-side applications. We've used Node.js as a tool, but we haven't written much for the platform itself. Luckily, given the fact that they both share some common technologies, we're already in possession of a bit of pre-requisite knowledge.
 
@@ -54,7 +56,7 @@ server.listen(3000, () => {
 });
 
 server.on('request', (request, response) => {
-  response.writeHead(200, { 'Content-Type': "text/plain" });
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
   response.write('Hello World');
   response.end();
 });
@@ -76,7 +78,7 @@ server.listen(3000, 'localhost');
 let counter = 0;
 
 server.on('request', (request, response) => {
-  response.writeHead(200, { "Content-Type": "text/plain" });
+  response.writeHead(200, { "Content-Type": 'text/plain' });
   response.write("Hello World\n");
   response.write(`This is Request #${++counter}.`);
   response.end();
@@ -269,8 +271,8 @@ We should tell them that we got some bad data.
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const id = Date.now();
   const { message } = request.body;
+  const id = Date.now();
 
   if (!message) {
     return response.status(422).send({
@@ -294,37 +296,24 @@ response.status(201).json({ id, message });
 
 At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
 
-There are many ways we could create a random hash. We could take the body of our data along with the current time and do an MD5 hash. For now, let's do the simplest possible thing. We'll generate some random bytes with Node's built-in `crypto` module and then hash those.
-
-This seems like something we could break out into a little helper module.
+For the time being, we'll use an MD5 hash, which is a unique value based on the content of the message. You've seen them in Github gists among other places.
 
 ```
-mkdir lib
-touch lib/generate-id.js
+npm i md5 --save
 ```
 
-In `lib/generate-id.js`, we'll add the following:
+Now, in our `server.js`, we can require the module.
 
 ```js
-const crypto = require('crypto');
-
-module.exports = () => {
-  return crypto.randomBytes(10).toString('hex');
-};
+const md5 = require('md5');
 ```
 
-Now, we can require our little helper in `server.js`.
-
-```js
-const generateId = require('./lib/generate-id');
-```
-
-Let's replace `Date.now()` in our `POST` action.
+Finally, let's replace `Date.now()` in our `POST` action.
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const id = generateId();
   const { message } = request.body;
+  const id = md5(message);
 
   if (!message) {
     return response.status(422).send({
@@ -334,7 +323,7 @@ app.post('/api/secrets', (request, response) => {
 
   app.locals.secrets[id] = message;
 
-  response.json({ id, message });
+  response.status(201).json({ id, message });
 });
 ```
 
@@ -344,5 +333,3 @@ Read through [this simple chat application](https://github.com/turingschool-exam
 
 - How would implement `PUT` and `DESTROY` actions in this application?
 - How was testing the endpoints handled?
-
-We'll look more into all of this tomorrow.

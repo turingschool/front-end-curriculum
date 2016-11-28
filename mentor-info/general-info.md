@@ -9,7 +9,6 @@ tags: mentor, posse
 
 Posses are student-led organized groups with a focused learning goal. Any given module there will be anywhere from 8-10 posses. Each posses will have 1-3 student leaders, a handful of mentors, a faculty advisor, and 8-10 student members. Posses are encouraged for students in Module 1, as a way to meet students from other cohorts. We encourage students in module 2 and 3 to begin experimenting with Posse leadership. 
 
-
 ## How To: Select a Posse
 
 Mary will meet with your class on Tuesday during your first week to give an in-depth introduction to the posse and mentor system. After that, she’ll provide you some documents about the posses, their leaders, and a list of mentors at Turing. Once you’ve taken some time to think about which posse you’d like to join, you’ll be given a google form to fill out and will be sorted into the posse of your first or second choice. If at any time, the posse is not all that you dreamed it to be, you can contact Mary and she will help you find the right fit.  More information about posses can be found here.
@@ -20,7 +19,7 @@ Mary will meet with your class on Tuesday during your first week to give an in-d
 ### How do I find a mentor or learn more about the mentors in my posse?
 
 Mentors all come with a unique set of expertise and experience. Not sure what to ask your mentor? Need a mentor from outside of your posse? Want to get a better understanding of what our mentors work on?
-You will get a mentor assignment during the first week of classes. Check out the Mentor Information Spreadsheet to find out more about your mentor! We recommend attempting to connect with the mentors in your posse first before casting a wider net. They are waiting by the slack DMs for you!
+You will receive a link to the Mentor Information Spreadsheet during the first week of classes. Use the Mentor Information Spreadsheet to find out more about your mentor! We recommend attempting to connect with 1-2 mentors first before casting a wider net. The spreadsheet will contain information on how to best contact your selected mentor!
 
 ### What should I work on with my mentor?
 
