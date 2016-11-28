@@ -8,7 +8,6 @@ title: 1610 GH Profiles
 * [Daniel Bucket](http://github.com/danielbucket)
 * [Devin Dixon](http://github.com/devinisafoal)
 * [Franklin Crosby](https://github.com/Obleo33)
-* [Gabriella Tangredi](https://github.com/gtangredi)
 * [Hugh Morrison](https://github.com/hmorri32)
 * [Julian Kyer](https://github.com/juliankyer)
 * [Jonathan Willemain](https://github.com/jonwille)
