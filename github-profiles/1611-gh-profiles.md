@@ -5,7 +5,7 @@ title: 1610 GH Profiles
 
 * [Breana Cowart Knight](https://github.com/AKewlBreeze)
 * [Charlie Dunn](https://github.com/dunncl15)
-* [Daniel Bucket](http://github.com/danielbucket)
+* [Daniel Ludwick](http://github.com/danielbucket)
 * [Devin Dixon](http://github.com/devinisafoal)
 * [Franklin Crosby](https://github.com/Obleo33)
 * [Hugh Morrison](https://github.com/hmorri32)
