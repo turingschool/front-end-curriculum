@@ -7,7 +7,15 @@ Do you remember that project Ideabox?
 
 We thought they were pretty great, but, I think it's time to pivot those projects over to something we like to call 2DoBox.
 
-You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox. Your projects will utilize webpack & its awesome development server. Keeping accessibility in mind we will be grading you based on how accessible your application is. Lastly you will implement feature tests using selenium webdriver.
+You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox. 
+
+Your projects will utilize webpack & its awesome development server. 
+
+Keeping accessibility in mind we will be grading you based on how accessible your application is. 
+
+Now that we're using Webpack, we can use some fancy es6 syntax. You will be expected to attempt to get some es6 syntax in your project (and make sure that Webpack uses Babel to transpile it).
+
+Lastly you will implement feature tests using selenium webdriver.
 
 # Getting Started ( Should I Fork or Clone?! )
 
@@ -70,6 +78,13 @@ We’d like our users to be able to easily find specific TODOs they already crea
   * As a user types in the search box, the list of TODOs should filter in real time to only display TODOs whose title or task include the user’s text.
   * The page should not reload.
   * Clearing the search box should restore all the ideas to the list.
+
+### Es6 Usage
+
+- You should make sure that Webpack is set up to use es6 (hint: the key words here are babel, es6 and webpack)
+
+- Picking at least one new feature of es6 - [review the intermission assignment for ideas](https://github.com/turingschool/intermission-assignments/blob/master/prep-for-module-2-frontend.markdown) - refactor your existing code and use this es6 feature instead
+  - Note: You should always try to not 'mix and match' in your code, so if you decide to use `let` and `const` instead or `var` in your code - you should not have _any_ files with both `var` and `let`.
 
 # Phase 2
 
@@ -214,6 +229,16 @@ Your webpack setup will help you install Sass - a CSS preprocessor - but to comp
 1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 
 0 - Your client-side application does not function or the application does not make use of localStorage for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
+
+## Utilization of es6
+
+4 - Developer has used more than one new es6 feature in their code. Developer should be able to speak to what the feature(s) does/do and why it improves the code for future developers. Developer has zero instances of the es5 style in their code left in the codebase.
+
+3 - Developer has used one new es6 feature in their code. Developer should be able to speak to what the feature does and why it improves the code for future developers. Developer has zero instances of mismatching es5 and es6 style in any specific file.
+
+2 - Developer has used one new es6 feature in their code. Developer cannot effectively speak to why the code change is valuable || Developer does not implement the code change more than a few times || Developer has mismatching es5 and es6 syntax in files.
+
+1 - Developer has little to no evidence of having researched and implemented an es6 feature in the codebase.
 
 ## Testing
 
