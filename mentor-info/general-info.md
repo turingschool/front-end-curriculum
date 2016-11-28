@@ -7,6 +7,8 @@ tags: mentor, posse
 
 |Mary Cutrali| @marycutrali |
 
+### [Mentor List](https://docs.google.com/spreadsheets/d/1NpEeyD0N4s3EfQOQxS20KfI4UKddd41ziyRfZ1lqMwg/edit#gid=1600123372)
+
 # Posses & Mentors
 
 ## What is a Posse? 
@@ -16,7 +18,6 @@ Posses are student-led organized groups with a focused learning goal. Any given 
 ## How To: Select a Posse
 
 Mary will meet with your class on Tuesday during your first week to give an in-depth introduction to the posse and mentor system. After that, she’ll provide you some documents about the posses, their leaders, and a list of mentors at Turing. Once you’ve taken some time to think about which posse you’d like to join, you’ll be given a google form to fill out and will be sorted into the posse of your first or second choice. If at any time, the posse is not all that you dreamed it to be, you can contact Mary and she will help you find the right fit.  More information about posses can be found here.
-
 
 ## How To: Find & Schedule a Meeting With Your Mentor
 
