@@ -107,7 +107,7 @@ If you're having trouble finding the element you'd like to work with, you can se
 
 ![Find in HTML][find-in-html]
 
-### Your Turn
+# Your Turn
 Directly from the elements panel, we can edit the HTML and see the changes reflected immediately. (Again, these changes won't be saved to your codebase, but sometimes it helps to see the tweaks as you make them before committing to them.)
 
 Let's work with the following edits on [girldevelopit.com](https://www.girldevelopit.com/):
