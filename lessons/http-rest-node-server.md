@@ -127,11 +127,11 @@ What are the benefits/disadvantages of using Node versus other server technologi
 
 
 #### Pair Practice
-[Clone this repo]("https://github.com/Alex-Tideman/dino_express")
+[Clone this repo](https://github.com/Alex-Tideman/dino_express)
+
  The first part of this paired practice will be to create a json dinosaur file and get the contents of all the dinosaurs or of a specific dinosaur.
 
  The second part will be including all CRUD methods, adding a MongoDB to store data and using Postman to execute HTTP requests to the API.
-
 
 1. Create an index.html page and a GET route to it
 Show implementation
@@ -142,10 +142,10 @@ Show implementation
 3. Add MongoDB and use Postman to send CRUD requests
 Show implementation
 
-	$ brew update
+	`$ brew update
 	//Get mongo DB
 	$ brew install mongodb
-	$ sudo mongod
+	$ sudo mongod`
 
 
 ![postman download][postman-download]
