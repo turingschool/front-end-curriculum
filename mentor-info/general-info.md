@@ -19,7 +19,7 @@ Mary will meet with your class on Tuesday during your first week to give an in-d
 ### How do I find a mentor or learn more about the mentors in my posse?
 
 Mentors all come with a unique set of expertise and experience. Not sure what to ask your mentor? Need a mentor from outside of your posse? Want to get a better understanding of what our mentors work on?
-You will get a mentor assignment during the first week of classes. Check out the Mentor Information Spreadsheet to find out more about your mentor! We recommend attempting to connect with the mentors in your posse first before casting a wider net. They are waiting by the slack DMs for you!
+You will receive a link to the Mentor Information Spreadsheet during the first week of classes. Use the Mentor Information Spreadsheet to find out more about your mentor! We recommend attempting to connect with 1-2 mentors first before casting a wider net. The spreadsheet will contain information on how to best contact your selected mentor!
 
 ### What should I work on with my mentor?
 
