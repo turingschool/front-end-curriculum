@@ -102,7 +102,7 @@ Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see t
 
 #### Your Turn
 
-* Open a new terminal window. Create a directory five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
+* Open a new terminal window. Create five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
 
 * Create ten new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
 
