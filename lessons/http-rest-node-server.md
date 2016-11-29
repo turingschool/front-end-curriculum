@@ -144,6 +144,19 @@ What are the benefits/disadvantages of using Node versus other server technologi
 [node-server]: /assets/images/lessons/http-rest-node-server/node-server.png
 [node-event-loop]: /assets/images/lessons/http-rest-node-server/node-event-loop.png
 
+Awesomeness of Node includes:
+
+* Everything in JS
+* Fast, non-blocking code. Wait for your slow operations (file system, database I/O operations)
+* Real-time communications with sockets (run on TCP instead of HTTP)
+* Not multi-threaded (good for memory)
+
+Disadvantages of Node:
+
+* Lack of libraries (No ORM, image processing)
+* Frequent changes to Node API
+* Gotta deal with async
+* Not multi-threaded (bad for computations)
 
 ### Practicing RESTful and adding a DB
 [Clone this repo](https://github.com/Alex-Tideman/dino_express)
@@ -239,7 +252,7 @@ router.get('/:id', function (req, res) {
 
 Now we could add the POST, PUT and DELETE methods to this app, but it's kind of a pain in the ass dealing with reading and writing files. What we need is a database to help with the pain.
 
-Enter [MongoDB](https://www.mongodb.com/) and [mongoosejs](http://mongoosejs.com/docs/guide.html). MongoDB is a free NoSQL database and mongoosejs allows us to set the model schema and do CRUD functionality to our models. Think of NoSQL database as a collection of key-value pairs, with the values being arrays, hashes, strings, ints... MongoDB calls one set of key-value pairs a collection. They are easy to create, flexible to add and change and 'Javascripty' to query. The shortcomings are if you have a lot of complex relationships that are related (tomorrows lesson on SQL talks about relational databases)
+Enter [MongoDB](https://www.mongodb.com/) and [mongoosejs](http://mongoosejs.com/docs/guide.html). MongoDB (huMONGOus) is a free NoSQL database and mongoosejs allows us to set the model schema and do CRUD functionality to our models. Think of NoSQL database as a collection of key-value pairs, with the values being arrays, hashes, strings, ints... MongoDB calls one set of key-value pairs a collection (very similiar to a JSON-like object). They are easy to create, flexible to add and change, 'Javascripty' to query and fast in searching. It provides a more horizontal/flat storage of data that is helpful in large datasets. The shortcomings are if you have a lot of complex relationships that are related it can be difficult to get back what you need, there aren't consistent interfaces and there isn't a low-level query language. Tomorrows lesson on SQL talks about relational databases.
 
 Let's add mongodb and mongoose:
 
