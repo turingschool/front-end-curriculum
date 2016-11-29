@@ -13,6 +13,23 @@ tags: React, JavaScript, Webpack, Redux
 
 ### Why Redux + Part 1 Of Slides
 
+In a nutshell, Redux is a *predictable state manager* for your app. Every application fires up with an initial state (for example, 0 ideas in the idea box). Every interaction following start up (when you click `Submit Idea` on a form, or `Like` on Facebook) has the potential to modify that state and needs to do so in predictable, manageable ways.  
+
+As an application scales, maintaining where state changes and when, and which components need to know about it, and how to trickle that information down to the 500th grandchild of the component who knows about state, becomes less fun.
+
+### When To Use Redux
+
+According to [this article](http://redux.js.org/docs/faq/General.html#general-when-to-use), Dan Abramov has said:  
+> ...don't use Redux until you have problems with vanilla React.  
+
+Redux should be used when you have a significant amount of data changing over time and it is no longer reasonable to keep your state in a top-level React component.  
+
+That being said, Redux comes with trade offs. It requires a significant amount of work to set up the structure necessary to implement Redux, as we'll see shortly, but then once in place allows you to scale your app horizontally.  
+
+Think about adding more components to an app using Vanilla react - as you continue to grow, the state form a parent component will need to continually be passed deeper down a vertical chain of nested components. With Redux, the app stops growing vertically the moment it is in implemented and instead allows for a shallow communication of state to any component in the app.  
+
+Let's visualize this.  
+
 ### LifeCycle of a Redux App
 
 ![Redux Diagram](https://i.redd.it/hl2aytgofz6x.png)  
