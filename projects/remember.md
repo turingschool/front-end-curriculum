@@ -17,7 +17,6 @@ One of the primary goals of this project is to master work flow using small, con
 * When ready to merge to master, submit a PR for feature A
 * There should be no excessive code NOT related to feature A in said PR.  
 * Feature A will be merged into master
-* Start a branch `feature-b` from master to continue working on the next issue.
 
 Often, you'll be waiting for feature-A to be merged in but will want to continue working on feature-B. The process for that looks like this:  
 
@@ -29,7 +28,7 @@ Often, you'll be waiting for feature-A to be merged in but will want to continue
 * Upon successful merge, create a new branch called `feature-b` **branched from master**.
 * The `feature-b` branch will now have feature A's code since it was merged into master.
 * Use `git cherry-pick <commitSHA>` ([docs](https://git-scm.com/docs/git-cherry-pick)) to pull in **ONLY** the commits you made in `wip-feature-b` that apply to the feature B situation
-* Submit a PR fr feature B with the `feature-b` branch
+* Submit a PR for feature B with the `feature-b` branch
 
 
 ### PR Template
