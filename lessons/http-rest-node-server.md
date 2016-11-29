@@ -127,34 +127,263 @@ What are the benefits/disadvantages of using Node versus other server technologi
 
 
 #### Pair Practice
-[Clone this repo]("https://github.com/Alex-Tideman/dino_express")
- The first part of this paired practice will be to create a json dinosaur file and get the contents of all the dinosaurs or of a specific dinosaur.
+[Clone this repo](https://github.com/Alex-Tideman/dino_express)
 
- The second part will be including all CRUD methods, adding a MongoDB to store data and using Postman to execute HTTP requests to the API.
+The first part of this paired practice will be to create a json dinosaur file and get the contents of all the dinosaurs or of a specific dinosaur with all the CRUD methods.
 
+The second part will be adding a MongoDB to store data and using a form and Postman to execute HTTP requests to the API.
 
-1. Create an index.html page and a GET route to it
-Show implementation
+After npm i the initial setup has our usual server.js file:
 
-2. Add three other routes that are nested under dinosaur
-Show implementation
+```js
+var express = require('express')
+var app = express()
+var dinosaurs = require('./public/dinosaurs')
 
-3. Add MongoDB and use Postman to send CRUD requests
-Show implementation
+app.use('/dinosaurs', dinosaurs)
 
-	$ brew update
-	//Get mongo DB
-	$ brew install mongodb
-	$ sudo mongod
+app.listen(3000, function () {
+  console.log('RrrarrrrRrrrr server alive on port 3000')
+})
+```
 
+One difference is the app.use('/dinosaurs', dinosaurs). This is simply setting a new "root" endpoint that is reached at /dinosaurs and uses the dinosaurs.js file in the public folder.
 
-![postman download][postman-download]
+The public folder has a dinosaurs.js file with the dependencies we will use:
 
-![postman request][postman-request]
+```js
+var express = require('express')
+var router = express.Router()
+var bodyParser = require('body-parser');
+var fs = require('fs')
+var app = express()
 
-[postman-download]: /assets/images/lessons/http-rest-node-server/postman-download.png
-[postman-request]: /assets/images/lessons/http-rest-node-server/postman-request.png
+app.use(bodyParser.json()); // support json encoded bodies
+app.use(bodyParser.urlencoded({ extended: true })); // support encoded bodies
 
+router.get('/', function (req, res) {
+  res.sendFile(__dirname + '/index.html')
+})
+
+module.exports = router
+```
+
+The router variable uses the Express Router to handle complex routing. So instead of app.get('/') we use router.get('/'). In this context the path '/' refers to '/dinosaurs'. In our router.get('/') handler we are sending the index.html file in the response. So now we can go in our browser and go to localhost:3000/dinosaurs and view our home page.
+
+Ok that's pretty cool, but it's still a static app with a homepage. Pretty boring. Let's set up some dummy data and then add RESTful routes to the app:
+
+I created a dinosaurs.json file under the public directory to get us a few dinosaurs to start:
+
+```js
+{
+   "dino1" : {
+    "name" : "T-Rex",
+	  "size" : "big",
+	  "id": 1
+   },
+   "dino2" : {
+    "name" : "Iguanodon",
+	  "size" : "medium",
+	  "id": 2
+   },
+   "dino3" : {
+    "name" : "Sinornithosaurus",
+	  "size" : "small",
+	  "id": 3
+   }
+}
+```
+
+Now that we have some data let's grab all the dinosaurs in a new route:
+
+```js
+router.get('/list', function (req, res) {
+   fs.readFile( __dirname + "/dinos.json", 'utf8', function (err, data) {
+       res.send( data );
+   });
+})
+```
+
+Now we have a '/dinosaurs/list' route that will read from our json file and send the data in the response. Go the url and check it out!
+
+Let's get a specific dinosaur with it's id:
+
+```js
+router.get('/:id', function (req, res) {
+   fs.readFile( __dirname + "/" + "dinos.json", 'utf8', function (err, data) {
+    let dinos = JSON.parse( data );
+    var dino = dinos["dino" + req.params.id]
+    res.end( JSON.stringify(dino));
+  });
+})
+```
+
+Now we could add the POST, PUT and DELETE methods to this app, but it's kind of a pain in the ass dealing with reading and writing files. What we need is a database to help with the pain.
+
+Enter [MongoDB](https://www.mongodb.com/) and [mongoosejs](http://mongoosejs.com/docs/guide.html). MongoDB is a free NoSQL database and mongoosejs allows us to set the model schema and do CRUD functionality to our models. Think of NoSQL database as a collection of key-value pairs, with the values being arrays, hashes, strings, ints... MongoDB calls one set of key-value pairs a collection. They are easy to create, flexible to add and change and 'Javascripty' to query. The shortcomings are if you have a lot of complex relationships that are related (tomorrows lesson on SQL talks about relational databases)
+
+Let's add mongodb and mongoose:
+
+```js
+$ brew update
+//Get mongo DB
+$ brew install mongodb
+//Install mongoose
+$ npm install mongoose --save
+// Fire up the DB. Sudo mongod if mongod doesn't work
+$ mongod
+```
+
+Now we can create our database name in our server.js file:
+
+```js
+var dbName = 'dinosaurDB';
+var connectionString = 'mongodb://localhost:27017/' + dbName;
+
+mongoose.connect(connectionString);
+```
+
+Cool we have a DB, how about a model? Let's create a Dinosaur model to store our data in. Create a new directory called models and in it add a dinosaur.js file:
+
+```js
+var mongoose=require('mongoose');
+var Schema=mongoose.Schema;
+
+var dinosaurSchema = new Schema({
+  name: String,
+  size: String,
+  food: String
+});
+
+module.exports = mongoose.model('Dinosaur', dinosaurSchema);
+```
+
+This sets the schema or design of our database model with the fields in the model and their type. We now have a Dinosaur model with a name, size and food.
+
+Let's head over to our dinosaurs.js file that deals with the dinosaur routes and require our Dinosaur model.
+
+```js
+var Dinosaur = require('../models/dinosaur');
+```
+
+Now for changing our routes. First the get route for all dinosaurs:
+
+```js
+router.get('/dinosaurs', function(req, res) {
+    Dinosaur.find(function(err, dinos) {
+      if (err) {
+        res.send(err)
+      }
+      // res.render(view, locals)
+      res.render('index.ejs', {dinosaurs: dinos})
+  })
+})
+```
+
+There is a few new things here. Dinosaur.find is using mongoose to find all dinosaurs with the Dinosaur model. If there's an error send the error, if not then render our index.ejs template. Let's not worry about the templating yet and focus on our CRUD routes.
+
+```js
+router.post('/dinosaurs', function(req, res) {
+  var dinosaur = new Dinosaur(req.body);
+
+  dinosaur.save(function(err) {
+    if (err) {
+      res.send(err)
+    }
+    Dinosaur.find(function(err, dinos) {
+      res.render('index.ejs', {dinosaurs: dinos})
+    })
+  })
+})
+
+router.put('/dinosaurs/:name', function(req,res){
+  Dinosaur.findOne({ name: req.params.name }, function(err, dinosaur) {
+    if (err) {
+     res.send(err)
+    }
+    // Update the params sent
+    for (prop in req.body) {
+      dinosaur[prop] = req.body[prop]
+    }
+
+    // Save the dinosaur
+    dinosaur.save(function(err) {
+      if (err) {
+        res.send(err)
+      }
+      res.json({ message: 'Dinosaur updated!' });
+    })
+  })
+})
+
+router.get('/dinosaurs/:name', function(req, res) {
+  Dinosaur.findOne({ name: req.params.name}, function(err, dinosaur) {
+    if (err) {
+      res.status(404).send(err)
+    }
+    res.json(dinosaur)
+  })
+})
+
+router.delete('/dinosaurs/:name', function(req, res) {
+  Dinosaur.remove({name: req.params.name}, function(err, dinosaur) {
+    if (err) {
+      res.send(err)
+    } else if (!dinosaur) {
+      res.send('Dino does not exist!')
+    }
+    res.json({ message: 'Dinosaur deleted' })
+  })
+})
+```
+
+Now we have all of the CRUD database queries. Back to templating.
+
+```js
+npm i ejs --save
+```
+
+EJS allows use to pass in variables to our html template. To set the view engine add this to your server.js file:
+
+```js
+app.set('view engine', 'ejs')
+```
+
+Now our app knows to look in a view directory that has a .ejs extension. Go ahead and add that directory with an index.ejs file.
+
+```js
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dino Express</title>
+</head>
+<body>
+  <h1>All the Dinosaurs</h1>
+  <form action="/dinosaurs" method="POST">
+    <input type="text" placeholder="name" name="name">
+    <input type="text" placeholder="size" name="size">
+    <input type="text" placeholder="food" name="food">
+    <button type="submit">Submit</button>
+  </form>
+  <ul class="dinosaurs">
+    <% for(var i=0; i<dinosaurs.length; i++) {/\%\>
+      <li class="dinosaur">
+        <span><%= dinosaurs[i].name %>
+                  is <%= dinosaurs[i].size %>
+                  and eats <%= dinosaurs[i].food %>
+        </span><br />
+        <a href="/dinosaurs/<%= dinosaurs[i].name %>">View</a>
+      </li>
+    <% /\%\} %>
+  </ul>
+</body>
+</html>
+```
+
+Now if you look back at our '/dinosaurs' route we can see that we are passing our MongoDB query of Dinosaur.find to the EJS template as the variable dinosaurs. We can then loop through that data and display it and add links to the individual page. We can also add a new dinosaur through the form. Try it!
+
+To update and delete, let's use Postman.
 
 ### Slides
 

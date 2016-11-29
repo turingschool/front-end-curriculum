@@ -1,5 +1,5 @@
 ---
-title: Foundations JS - II
+title: JS II
 length: 120
 tags: js, introduction, foundation, variables
 ---
