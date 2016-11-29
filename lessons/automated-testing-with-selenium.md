@@ -195,30 +195,29 @@ now that we have that let's start building out the start of our test.
 
 ```
 describe('testing ideabox',()=>{
- it('should allow me to add a title and a description', ()=>{
-   const driver = new webdriver.Builder()
-   .forBrowser('chrome')
-   .build();
+  it('should allow me to add a title and a description', ()=>{
+    const driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
 
+    driver.get('http://localhost:3000');
 
-   driver.get('http://localhost:3000');
+    const title = driver.findElement({name: 'title'})
+    const description = driver.findElement({name: 'description'})
+    title.sendKeys('this is a title').then(()=>{
+      return title.getAttribute('value')
+    }).then((value)=>{
+      assert.equal(value, 'this is a title')
+    })
 
-
-   const title = driver.findElement({name: 'title'})
-   const description = driver.findElement({name: 'description'})
-   title.sendKeys('this is a title').then(()=>{
-     return title.getAttribute('value')
-     }).then((value)=>{
-       assert.equal(value, 'this is a title')
-   })
-
-   description.sendKeys('this is a description').then(()=>{
-     return description.getAttribute('value')
-     }).then((value)=>{
-       assert.equal(value, 'this is a description')
+    description.sendKeys('this is a description').then(()=>{
+      return description.getAttribute('value')
+    }).then((value)=>{
+      assert.equal(value, 'this is a description')
+    })
   })
- })  
 })
+
 ```
 
 if we run this test we'll see that the browser doesn't even get built. So what's actually going on? Well we're dealing with the async environment that javascript lives in. There are ton of ways to deal with but I found that the easiest way to deal with it is by utilizing selenium's built in Promise manage. All we have to do is require that part of the selenium into our file.
@@ -230,30 +229,27 @@ const test      = require('selenium-webdriver/testing')
 
 
 test.describe('testing ideabox',()=>{
- test.it('should allow me to add a title and a description', ()=>{
-   const driver = new webdriver.Builder()
-   .forBrowser('chrome')
-   .build();
+  test.it('should allow me to add a title and a description', ()=>{
+    const driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
 
+    driver.get('http://localhost:3000');
 
-   driver.get('http://localhost:3000');
+    const title = driver.findElement({name: 'title'})
+    const description = driver.findElement({name: 'description'})
+    title.sendKeys('this is a title').then(()=>{
+      return title.getAttribute('value')
+    }).then((value)=>{
+      assert.equal(value, 'this is a title')
+    })
 
-
-   const title = driver.findElement({name: 'title'})
-   const description = driver.findElement({name: 'description'})
-   title.sendKeys('this is a title').then(()=>{
-     return title.getAttribute('value')
-     }).then((value)=>{
-       assert.equal(value, 'this is a title')
-   })
-
-
-   description.sendKeys('this is a description').then(()=>{
-     return description.getAttribute('value')
-     }).then((value)=>{
-       assert.equal(value, 'this is a description')
-  })
- })  
+    description.sendKeys('this is a description').then(()=>{
+      return description.getAttribute('value')
+    }).then((value)=>{
+      assert.equal(value, 'this is a description')
+    })
+  })  
 })
 ```
 So if we run this test we're going to see some selenium begin to build our browser but then all of a sudden it stops. and we get this error.
@@ -271,31 +267,31 @@ const test      = require('selenium-webdriver/testing')
 
 test.describe('testing ideabox',()=>{
   this.timeout(10000)
- test.it('should allow me to add a title and a description', ()=>{
-   const driver = new webdriver.Builder()
-   .forBrowser('chrome')
-   .build();
+  test.it('should allow me to add a title and a description', ()=>{
+    const driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
 
-   driver.get('http://localhost:3000');
+    driver.get('http://localhost:3000');
 
-   const title = driver.findElement({name: 'title'})
-   const description = driver.findElement({name: 'description'})
-   title.sendKeys('this is a title').then(()=>{
-     return title.getAttribute('value')
-     }).then((value)=>{
-       assert.equal(value, 'this is a title')
-   })
-
-   description.sendKeys('this is a description').then(()=>{
-     return description.getAttribute('value')
-     }).then((value)=>{
-       assert.equal(value, 'this is a description')
+    const title = driver.findElement({name: 'title'})
+    const description = driver.findElement({name: 'description'})
+    title.sendKeys('this is a title').then(()=>{
+      return title.getAttribute('value')
+    }).then((value)=>{
+      assert.equal(value, 'this is a title')
     })
 
+    description.sendKeys('this is a description').then(()=>{
+      return description.getAttribute('value')
+    }).then((value)=>{
+      assert.equal(value, 'this is a description')
+    })
 
-  driver.quit()
- })  
+    driver.quit()
+  })  
 })
+
 ```
 
 As you can see the only thing that I added was a `this.timeout()`. Now if we run our tests we should see our tests pass.
@@ -323,8 +319,8 @@ test.it('should allow me to add a title and a description', ()=>{
 
   driver.findElement({tagName: 'li'}).then((li)=>{
     return li.getText()
-    }).((text)=> {
-      assert.equal(text, 'this is a title\nthis is a description')
+  }).((text)=> {
+    assert.equal(text, 'this is a title\nthis is a description')
   })
 })  
 
@@ -427,27 +423,25 @@ One thing you might have noticed is that our testing suite is not very dry. One 
 
 ```
 test.describe('testing idea box', ()=>{
-const driver
+  const driver
 
 
-test.beforeEach(()=>{
-  this.timeout(10000);
-  driver = new webdriver.Builder()
-  .forBrowser('chrome')
-  .build();
-  driver.get('http://localhost:3000')
-})
-
-
-test.afterEach(()=>{
-  driver.quit()
-})
-
+  test.beforeEach(()=>{
+    this.timeout(10000);
+    driver = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
+    driver.get('http://localhost:3000')
+  })
+  
+  test.afterEach(()=>{
+    driver.quit()
+  })
 
   test.it('...',()=>{
     ...
-    })
   })
+})
 ```
 Now that we have that working for us we can move all of the instances in our test that repeat this code out.
 
