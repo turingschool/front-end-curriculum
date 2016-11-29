@@ -62,7 +62,7 @@ Now run `brew doctor` again and the warning should be gone.
 
 ### Install Git
 
-[Git](http://git-scm.com/) is the version control system of choice in the JavaScript community. XCode installed an older version of Git for you, but let's update it.
+[Git](http://git-scm.com/) is the version control system of choice in the JavaScript community and many others. XCode installed an older version of Git for you, but let's update it.
 
 ```shell
 brew install git
@@ -72,7 +72,7 @@ brew install git
 
 ### Configuring Git
 
-If you haven't used Git before, then we need to configure it with some basic information about us.
+If you haven't used Git before, then we need to configure it with some basic information about us. You might have done this during Computer Setup. If so, then you can skip this section.
 
 We can tell git to configure itself using the `git config` command from our terminal. Additionally, we're setting "global" configurations for git, so we'll use the `--global` flag when we provide it with a new piece of configuration.
 
@@ -85,27 +85,73 @@ git config --global user.email johndoe@example.com
 
 Now we're ready to go!
 
-## Working Example...
+## An Example Journey Through Git
 
-* Create a new directory
-* Initialize git repo
-* Check branch and talk about master branch (typical workflow keeping master clean)
-* Make a branch?
-* Add a file
-* Check status
-* Add HTML file to staging
-* Commit the file
-* Edit file (adding content)
-* Check status again
-* Commit changes
-* Look at commit log
-* Make more changes
-* Commit changes
-* Didn't like changes and want to go back to previous commit?...need to talk about head and detached head state?
-* Reset hard and continue from there
-* Satisfied with work on branch, ready to merge to master
-* Checkout master (notice the changes are gone, maybe go back and forth to see changes on each branch)
-* Merge branch into master
+#### Create a new directory
+
+In your terminal, change into a directory where you can add Turing related projects. Once you are in that directory, create a new directory called `git-intro`. Change into that directory.
+
+#### Initialize git (`git init`)
+
+Once you are in the `git-intro` directory, in the terminal, type `git status`. What do you see? An error? This error says that this directory is not a git repository, and the terminal can't do what you're trying to ask of it.
+
+For this command to recognize that command and give you useful information, we must initialize git for this specific directory. Type `git init` into the terminal.
+
+Now type `git status` in the terminal, and you should see a different message. Now Git is tracking where you have made changes within this directory. We'll get into the status in a bit.
+
+Additionally, if we use `ls -la` to look in the directory, we can see a `.git` hidden directory. The `.git` directory is not something you need to worry about, and you will likely never modify it. It is used by Git to keep track of your change history (commits) - more on that later.
+
+#### Add a file
+
+Let's make this a real project and actually add some content! Add a new HTML file from the terminal using `touch index.html`.
+
+#### Check status (`git status`)
+
+We've added a file, and by doing that we've made changes in our directory. Does Git know about these changes? Let's check by checking the status of our repository using the command `git status`.
+
+Now we see some new information! There is a section of this message that says "Untracked files:" with something that looks familiar - the name of the file we just created.
+
+#### Add file to staging area (`git add`)
+
+If in the future we want to add these changes to our repository (and we do), then we need to add this file to the "staging area". To add the file to the staging area, use the command `git add index.html`. This command is saying to add the file named `index.html` to the staging area.
+
+If we wanted to add all of the untracked files or changes, then we could use the command `git add .`. The dot `.` after `add` says add everything.
+
+Let's check the status of our Git repository again: `git status`. Now we see the same file name under the heading "Changes to be committed:".
+
+#### Commit the file (`git commit`)
+
+Now that we have added the file to the staging area, we are ready to commit the file. Committing the file will "save" these changes to the Git history in this repository. Think of this as a snapshot of our directory (or a snapshot of our project).
+
+Commit the file using the command: `git commit -m "Add new index HTML file"`
+
+The `-m` part of the command says we want to add a message to this commit. ALWAYS add a message. The message is information that you (or other developers) can use at a later time when you want to look back and see what changes were contained in a commit. We will view this history later.
+
+#### Edit the file
+
+
+
+10. Check status again
+11. Commit changes (this is like V2 of this file)
+12. Look at commit log and see the "versions"
+
+#### The master branch
+
+When we type `git status`, part of the message we get back is "On branch master". What is a branch, and what is master?
+
+In Git, there is a concept of branches.
+
+[More info on branching.](https://git-scm.com/book/en/v2/Git-Branching-Basic-Branching-and-Merging)
+
+#### Make a branch (`git branch` and `git checkout`)
+
+13. Make more changes
+14. Commit changes
+15. Didn't like changes and want to go back to previous commit?...need to talk about head and detached head state?
+16. Reset hard and continue from there
+17. Satisfied with work on branch, ready to merge to master
+18. Checkout master (notice the changes are gone, maybe go back and forth to see changes on each branch)
+19. Merge branch into master
 
 ### Typical Git Workflow
 

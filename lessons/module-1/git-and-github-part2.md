@@ -9,7 +9,7 @@ tags: git, github
 In this lesson, you will learn how to:
 
 * Use a version control system (Git) in conjunction with an online/remote repository (GitHub)
-* Start a project locally and synchronize with the remote repository
+* Start a project locally and synchronize your changes with the remote repository
 
 ## GitHub
 
@@ -21,14 +21,14 @@ Again, Git is NOT the same thing as GitHub!
 
 ## Setup
 
-In order to push up to GitHub, you'll also need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
+In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
 
 ## Working Example...
 
 * Create directory (new directory from previous lesson)
 * Initialize git
 * Create repository on GitHub (naming convention: these names should be the same to avoid confusion)
-* Add remote (origin) to local repository - we are not linked!
+* Add remote (origin) to local repository - we are now linked!
 * Checkout branch
 * Add HTML file
 * Add content
