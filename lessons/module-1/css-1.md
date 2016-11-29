@@ -31,7 +31,8 @@ But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.c
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page.
 
 ## Anatomy of a Basic CSS Rule
-![CSS Rule](/assets/images/css-rule.png)
+
+#![CSS Rule](/assets/images/css-rule.png)
 
 * Can target via tag name
 * Can target via class name
@@ -41,9 +42,31 @@ It’s a “style sheet language” that lets you style the HTML elements on you
 <p data-height="300" data-theme-id="26495" data-slug-hash="KNvbQX" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="CSS Rules" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/KNvbQX/">CSS Rules</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+## Static Site Playground
+Let's setup a small static page to experiement with our HTML and CSS. 
+
+* Create a directory called static-site-playground
+* Create a file `index.html` with the html provided below
+* Create a file `main.css`
+* Link the index and main files you just made
+* Test things are working as expected
+
+```html
+<!doctype html>
+<html>
+  <head>  
+    <title>Playground</title>
+  </head>  
+  <body>  
+    <h1>Static Site Experiments in Here!</h1>
+  </body>  
+</html>
+```
+
 ## All the Elements are Boxes
 Each element is a rectangular box. CSS leverages this box model to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. 
-![Box Model](/assets/images/box-model.jpg)
+
+# ![Box Model](/assets/images/box-model.jpg)
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="Lbjqxp" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="CSS Boxes Playground" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjqxp/">CSS Boxes Playground</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -166,5 +189,8 @@ This is the default behavior for the rendering of block elements in CSS. The `bo
 
 Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. Its `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
 
+# Let's build something together
 
+# Your Turn
+Build Dog Party. We'll run the setup together
 
