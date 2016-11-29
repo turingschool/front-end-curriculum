@@ -137,7 +137,7 @@ Turn to the person next to you and discuss the following things
 
 2) What's the main difference between the `{}` syntax and the `By.[function-name]`
 
-3) Any concerns || confusion
+3) Any concerns or confusion
 
 #### Your Turn
 
