@@ -13,23 +13,23 @@ An interesting comment I read in [this blog post](https://www.codementor.io/reac
 
 ### Testing in Redux  
 
-In order to test Redux, there are a few things you need to mentally organize. Tests in Redux include Action tests, Reducer tests, Component tests, and any other middleware or additional libraries you may have included (like `ImmutableJS`).
+In order to test Redux, there are a few things you need to mentally organize. Tests in Redux include Action tests, Reducer tests, Component tests, and any other middleware or additional libraries you may have included.  
 
-Let's look at an example of a unit test in English.
+Let's look at an example of a unit test in English.  
 
-"I want to make sure that my todos reducer returns an array with an incremented length value in my state after receiving the ADD_TODO event."
+"I want to make sure that my todos reducer returns an array with an incremented length value in my state after receiving the ADD_TODO event."  
 
-This differs from an integration test which alternatively would make sure that "As a user, when I'm on the home page, and I type in a Todo, and I click "Add Todo" then I see my new Todo on the page".
+This differs from an integration test which alternatively would make sure that "As a user, when I'm on the home page, and I type in a Todo, and I click "Add Todo" then I see my new Todo on the page".  
 
 Let's start with Action tests.
 
 ### Action Creators
 
-Action creators in Redux are functions that simply return a plain object. When testing action creators we want to test whether the correct action creator was called and also whether the right action was returned.
+Action creators in Redux are functions that simply return a plain object. When testing action creators we want to test whether the correct action creator was called and also whether the right action was returned.  
 
-Take for example our `addTodo()` action.
+Take for example our `addTodo()` action.  
 
-```
+```js
 export const addTodo = (text) => {
   return {
     type: 'ADD_TODO',
@@ -38,26 +38,26 @@ export const addTodo = (text) => {
 }
 ```
 
-Given a string as text, (let's say "Find A Pumpkin"), we expect it to return an object with a key of `'ADD_TODO'` and the text "Find A Pumpkin".
+Given a string as text, (let's say "Find A Pumpkin"), we expect it to return an object with a key of `'ADD_TODO'` and the text "Find A Pumpkin".  
 
 ### Setup Testing with Jest  
 
-As you learned with yesterdays Testing React lesson, Jest is a great testing framework for both unit tests AND integration tests! It's like Christmas!  
+As you learned with yesterdays Testing React lesson, Jest is a great testing framework for both unit tests AND it makes popping on Enzyme for integration tests a breeeeze! It's like Christmas!  
 
 `npm i -D jest`  
 `npm i -D babel-jest`  
 
 Make sure you have the following in your `.babelrc` file:  
 
-```
+```js
   {
     "presets": ["es2015"]
   }
 ```
 
-Then make a quick change to the test part of `scripts` in your `package.json`.
+Then make a quick change to the test part of `scripts` in your `package.json`.  
 
-```
+```js
 {
   "scripts":{
     ...
@@ -75,7 +75,7 @@ Next, let's set up our test.
 
 Step one, let's just make sure everything is wired up.
 
-```
+```js
 import * as actions from '../../actions'
 
 describe('actions', () => {
@@ -86,9 +86,9 @@ describe('actions', () => {
 ```
 Run `npm test` to run your suite once, or `npm run test:watch` to test on any file changes.  
 
-Assuming you have a passing test, let's add some substance.
+Assuming you have a passing test, let's add some substance.  
 
-```
+```js
 import * as actions from '../../actions'
 
 describe('actions', () => {
@@ -111,7 +111,7 @@ In other words, a reducer receives an action and decides how to change the state
 
 Take a look at our todos reducer.
 
-```
+```js
 //reducers/todos.js
 
 const todos = (state=[], action) => {
@@ -135,7 +135,7 @@ Make the correct directory:
 
 To test this reducer, let's start by testing what happens if we don't pass this reducer any action. We want to get the default state back, which for us is an empty array.
 
-```
+```js
 import reducer from '../../reducers/todos'
 
 describe('todos reducer', () => {
@@ -157,18 +157,20 @@ Container components, however, are hooked up to Redux and use the `connect` meth
 
 But, because we're unique snowflakes, let's give it a go.  
 
-First, if you don't have it already, make sure Enzyme and it's buddy are installed.  
-`npm i -D enzyme react-addons-test-utils`  
+First, if you don't have it already, make sure Enzyme and it's test-utils buddy are installed.  
+`npm i -D enzyme react-addons-test-utils`   
 
-Let's look at the AddTodoForm Component, and AddTodo Container.
+Let's look at the AddTodoForm Component, and AddTodo Container.  
 
-Normally, to import a component into a test you would simply include the line `import AddTodoForm from './path/AddTodoForm'` or something along those lines.  With Redux, our component is wrapped in a container component that passes State to it using the `connect()` method. This means that the component that is rendered is actually a `<Connect />` component, and not the `<AddTodoForm />` component itself.
+Normally, to import a component into a test you would simply include the line `import AddTodoForm from './path/AddTodoForm'` or something along those lines.  With Redux, our component is wrapped in a container component that passes State to it using the `connect()` method. This means that the component that is rendered is actually a `<Connect />` component, and not the `<AddTodoForm />` component itself.  
 
 Sometimes it's important to test the interaction with Redux, in which case you would wrap it in a <Provider> component and create a store designed specifically for a particular unit test. In order to simply test the rendering of the component itself, you must export the undecorated (without Connect) component in the container file.
 
-This means that when importing said component in your test, you need to grab it with curly braces from the modules being exported from the container file.
+This means that when importing said component in your test, you need to grab it with curly braces from the modules being exported from the container file.  
 
-```
+Let's start by setting up the information our test will need.
+
+```js
 // test/components/AddTodoForm.test.js
 
 import React from 'react'
@@ -189,9 +191,9 @@ function setup() {
 }
 ```
 
-Then let's confirm that it renders a form (we'll keep this test simple for now, although in real life you would need a beefier test).
+Then in that same file, let's confirm that it renders a form (we'll keep this test simple for now, although in real life you would need a beefier test).
 
-```
+```js
 ...
 
 describe('components', () => {
@@ -211,7 +213,7 @@ describe('components', () => {
 
 And finally check that when the Add Todo button is clicked that it calls the function we expect. We've set it up to mock a function call with `jest.fn`.
 
-```
+```js
  ...
 
 describe('components', () => {

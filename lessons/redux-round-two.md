@@ -26,6 +26,8 @@ Redux should be used when you have a significant amount of data changing over ti
 
 That being said, Redux comes with trade offs. It requires a significant amount of work to set up the structure necessary to implement Redux, as we'll see shortly, but then once in place allows you to scale your app horizontally.  
 
+**READ THIS AT SOME POINT:** [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.tm7sb1mps)  
+
 Think about adding more components to an app using Vanilla react - as you continue to grow, the state form a parent component will need to continually be passed deeper down a vertical chain of nested components. With Redux, the app stops growing vertically the moment it is in implemented and instead allows for a shallow communication of state to any component in the app.  
 
 Let's visualize this.  
