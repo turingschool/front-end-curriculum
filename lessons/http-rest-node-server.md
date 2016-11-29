@@ -62,7 +62,6 @@ When fetching data, you'll often hear the URL referred to as an "endpoint". Thes
 #### Hypertext transfer protocol
 The protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.
 
-
 #### RESTful API design
 * REST stands for representational state transfer. What this means is that web resources communicate using a set of uniform operations that are stateless (don't persist data between requests)
 
@@ -91,6 +90,16 @@ a client or server to handle the request properly.
 A header is simply a hash of key-value pairs:
 `{"Content-Type": "text-html"}`
 
+There is a lot of metadata that you can pass in a request. Some of the more common values are
+ "Accept" which allows you to set what media types are acceptable and in what quality.
+ Example:
+ ```
+ Accept: audio/*; q=0.2, audio/basic
+ SHOULD be interpreted as "I prefer audio/basic, but send me any audio type if it is the best available after an 80% mark-down in quality."
+```
+
+Another common value is "Content-Length". This indicates the length in of the body if the request would have been sent in a GET method. It's measured in bytes. Good way to know quickly how big a request is.
+
 If we look at a response in our browser, we can check out the headers:
 ![network header][network-header]
 
@@ -106,9 +115,19 @@ backend...) but my request is OK
 
 #### Misc. other useful concepts
 
-DNS
-Ports
+#### IP address
+An IP address is the identification of a host or network interface and allows us to find the address of a location of another host or network interface.  The current protocol for IPs is IPv4, which is still in use today using a 32-bit system. But lots of people use the internet and we are running out of IP addresses. Enter IPv6, which is slowly being phased in:
 
+![32 ip][32-ip]
+![128 ip][128-ip]
+
+[32-ip]: /assets/images/lessons/http-rest-node-server/32-ip.png
+[128-ip]: /assets/images/lessons/http-rest-node-server/128-ip.png
+
+
+#### Domain Name System
+Since humans aren't computers, we need human-readable forms (domains) to remember URLs.
+We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. You OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
 
 ### Back-End Frameworks
 Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
@@ -126,7 +145,7 @@ What are the benefits/disadvantages of using Node versus other server technologi
 [node-event-loop]: /assets/images/lessons/http-rest-node-server/node-event-loop.png
 
 
-#### Pair Practice
+### Practicing RESTful and adding a DB
 [Clone this repo](https://github.com/Alex-Tideman/dino_express)
 
 The first part of this paired practice will be to create a json dinosaur file and get the contents of all the dinosaurs or of a specific dinosaur with all the CRUD methods.

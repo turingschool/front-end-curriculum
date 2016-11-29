@@ -185,7 +185,8 @@ Instead we'll focus on two elements:
 
 ### Create this table
 ** Hint: Research the `table` element in HTML
-![Flags Table](/assets/images/flags-table.jpg)
+
+# ![Flags Table](/assets/images/flags-table.jpg)
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
