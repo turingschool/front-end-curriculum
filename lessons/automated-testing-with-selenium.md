@@ -32,7 +32,6 @@ people's lives.
 
 I'm going to read an article from a magazine that I love that really challenged
 the way I wrote my code.
-[insert article from offscreen]
 
 In this module my hope for you is that you will begin to love testing. Testing
 is particularly difficult. I learned a lot about testing from our friend Meeka
