@@ -97,7 +97,7 @@ The first thing we're going to do in order to get a hang of using Selenium is to
 
 Awesome! Once you have this installed let's go ahead and hop into our terminal and type
 
-'node'
+`node`
 
 Now just like any file we need to require some of the dependencies we've installed. So the first thing we're going to require is going to be `selenium-webdriver`
 
