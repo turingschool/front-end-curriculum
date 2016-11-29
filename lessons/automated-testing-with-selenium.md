@@ -62,7 +62,7 @@ C) You write test so you can refactor
   - What was your development process like without `dom` tests?
 
 
- ### Enter Selenium
+### Enter Selenium
 
  Up to this point in our development we've spent most if not all our time in the Unit Test department and we've never really ventured into the `dom`. What Selenium allows us to do is automate our `dom` tests. So instead of us having to go in ourselves and test to see if the functionality is working we can write a test, run our test suite, and then see if the test passes or fails.
 
@@ -79,8 +79,7 @@ The first thing we're going to do in order to get a hang of using Selenium is to
 
 - Java SE Development Kit
 
-  - Unfortunately for any of this to work we are going to need to install some dependencies. Selenium is reliant upon Java's SDK so we're going to have to download and install that into our computer.
-
+  - Unfortunately for any of this to work we are going to need to install some dependencies. Selenium is reliant upon Java's SDK so we're going to have to download and install that into our computer. Download [here](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 - Chrome driver
 
