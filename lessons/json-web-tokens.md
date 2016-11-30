@@ -121,20 +121,47 @@ We'll also want to add a `logout` method to clear out any data when a user logs 
 ```
 
 ## Putting the Authentication to Work
-In the `views/Login` directory we have a component called `Login`. Right now it's not doing much, but let's put our AuthService to work. Import our AuthService file:
+We're going to want to work with authentication on every route in our application. In this case, we only have a login and a home route. But if our app were to grow, we'd want to make sure we were checking if a user was logged in no matter what page they landed on or what URL they came to. This means we'll want to instantiate our AuthService in our `routes` file.
+
+In the `/src/views/` directory, open the `routes.js` file, and import our AuthService:
 
 ```javascript
-import MessageBoard from 'components/MessageBoard'
+import AuthService from 'utils/AuthService'
 ```
 
-And let's add an instance of it to our `propTypes` definition:
+The first thing we want to do is create a new instance of our service and call it `auth`:
 
 ```javascript
-  static propTypes = {
-    location: T.object,
-    auth: T.instanceOf(AuthService)
+const auth = new AuthService(__AUTH0_CLIENT_ID__, __AUTH0_DOMAIN__);
+```
+
+This is automatically pulling in the client ID and domain that we specified in our `.env` file.
+
+We've already set up a couple of routes, and we want to give each of them access to our new `auth` variable. Add `auth` as a prop on the top-level `Route` component:
+
+```javascript
+  <Route path="/" component={Container} auth={auth}>
+```
+
+Finally, when we want to protect a route, (e.g. our 'home' route), we want to add a check against our authentication service to see if a user is logged in or not. Add a `requireAuth` helper above the `makeMainRoutes` function:
+
+```javascript
+// onEnter callback to validate authentication in private routes
+const requireAuth = (nextState, replace) => {
+  if (!auth.loggedIn()) {
+    replace({ pathname: '/login' })
   }
+}
 ```
+
+This is using our auth service to check if the user is logged in, and if they are not, will automatically redirect them to the login page. Now to protect our home route, we can add an `onEnter` prop to execute this call:
+
+```javascript
+<Route path="home" component={Home} onEnter={requireAuth} />
+```
+
+## Creating the Login Button
+In `src/views/Login` we have a Login component that isn't doing much right now. We have already passed the instance of our AuthService into the component through the top-level route component, and can access it via `this.props.auth`.
 
 In our render method, we want to make use of our `auth` prop and call the `login` method we created in our service when we click the login button:
 
