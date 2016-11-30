@@ -40,7 +40,7 @@ While we can implement JWTs on our own, the native spec and implementation *stil
 [spa-react]: /assets/images/lessons/jwts/spa-react.png
 
 ## Configuring an Auth0 Client
-At this point, Auth0 has already created a new client (i.e. a new application) for you. You can view the settings of your client [here](https://manage.auth0.com/#/clients). Go ahead and change the name of your application, set the client type to 'Single Page Application' and add a callback URL like so:
+At this point, Auth0 has already created a new client (i.e. a new application) for you. You can view the settings of your client [here](https://manage.auth0.com/#/clients). Go ahead and change the name of your application, set the client type to 'Single Page Application' and add a callback URL to `http://localhost:3000/login` like so:
 
 ![client-settings][client-settings]
 
