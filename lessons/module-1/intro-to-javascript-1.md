@@ -1,7 +1,7 @@
 ---
-title: JS I
+title: Introduction to JavaScript: Part I
 length: 180
-tags: js, introduction, foundation, variables
+tags: javascript, introduction, foundation, variables
 ---
 
 ## Learning Goals
