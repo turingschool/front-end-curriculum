@@ -1,5 +1,5 @@
 ---
-title: Introduction to JavaScript: Part II
+title: JS II
 length: 120
 tags: javascript, introduction, foundation, variables
 ---
