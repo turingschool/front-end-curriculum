@@ -26,9 +26,10 @@ eyJtZXNzYWdlIjoiSldUIFJ1bGVzISIsImlhdCI6MTQ1OTQ0ODExOSwiZXhwIjoxNDU5NDU0NTE5fQ.
 If you're interested in understanding the breakdown of what goes into creating a JSON Web Token, you can learn more about that [here](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.pnimsp9e2). Going in-depth about that information in this lesson isn't completely necessary, thanks to a service that we'll use called [JWT.io](https://jwt.io/).
 
 ## Using JWTs with JWT.io
-While we can implement JWTs on our own, the native spec and implementation *still* isn't the most user-friendly interface for developers. So, like everything else in the tech world, a simpler service was built on top of them to make it easier for us to use. One popular service created by [Auth0](https://auth0.com/) is [JWT.io](https://jwt.io/). Similar to [Firebase](https://firebase.google.com/), JWT.io provides 3rd-party authentication that allows you to secure your client-side application with logins for Google, Facebook, etc. It also allows you to make secure requests to private API endpoints on a server. Let's create a simple React application that allows users to login, and contains a protected endpoint that requires authentication.
+While we can implement JWTs on our own, the native spec and implementation *still* isn't the most user-friendly interface for developers. So, like everything else in the tech world, a simpler service was built on top of them to make it easier for us to use. One popular service created by [Auth0](https://auth0.com/) is [JWT.io](https://jwt.io/). Similar to [Firebase](https://firebase.google.com/), JWT.io provides 3rd-party authentication that allows you to secure your client-side application with logins for Google, Facebook, etc. It also allows you to make secure requests to private API endpoints on a server.
 
 ## Getting Started
+We're going to create a simple React message board that allows anyone to view messages that have been previously posted, but requires an authenticated user to post a message.
 
 1. Clone this [repo](https://github.com/turingschool-examples/auth0-react.git)
 2. Create a free account with Auth0 [here](https://auth0.com/signup), enable Google Authentication, and select Single Page App with React as your framework:
