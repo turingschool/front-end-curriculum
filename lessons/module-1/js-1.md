@@ -60,6 +60,10 @@ A boolean has one of two values: `true` or `false`. Think of it like a light swi
 
 Booleans can be very useful to help determine which part of a script should be run (as in conditionals, which we will talk about later).
 
+### Your Turn
+
+Let's take a couple of minutes to pair up and explain these three data types to your neighbor. Take turns, and make sure both of you have a chance to explain. This is to practice using the vocabulary and talking about code.
+
 # Variables in JavaScript
 
 As we're writing code, there are many times when we want to be able to store a value so we have ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common that we need to have access to the same information more than once. A variable lets us do just that!
@@ -145,7 +149,7 @@ Make 4 new variables. Assign values with numeric data types to two of them, and 
 
 ## Concatenating Variable Values
 
-In the example above, we used a `+` to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
+In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
 
 We can concatenate html tags, text, numbers, and variable values. Let's revisit our example above to concatenate a more readable phrase as the value of our creatureCount variable:
 
@@ -160,13 +164,13 @@ This is very useful when we want to append data to our webpage, because it means
 
 Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
 
-To use conditionals, we first need t talk about expressions and operators.
+To use conditionals, we first need to talk about expressions and operators.
 
 ## Expressions
 An _expression_ evaluates (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
 
-1. Expressions that assign a single value to a variable.
-2. Expressions that use two or more values to return a single value.
+1. Expressions that assign a single value to a variable. They look like this: `var fruit = "apple";`
+2. Expressions that use two or more values to return a single value. They look like this: `var adele = "Hello, " + "its me";`
 
 ## Operators
 Expressions rely on operators to calculate their single value. There are 5 types of operators:
@@ -216,6 +220,10 @@ if (hoursOfSleep < 6) {
   console.log('I feel fantastic!');
 }
 ```
+
+### Your Turn
+
+Write a conditional that gives a different alert message based on your favorite kind of animal.
 
 # Functions
 Functions are a way to group statements together to perform a specific task. Functions are reusable blocks of code. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
