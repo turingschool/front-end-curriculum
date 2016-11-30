@@ -12,16 +12,23 @@ By the end of this lesson, you will:
 - be able to secure a basic node/express app with JWTs
 
 ## Token-Based Authentication
-Secure authentication is a vital aspect of many applications. While traditional oAuth methods can be difficult to understand, some alternative solutions have made this process easier for developers. We're already familiar with [Firebase](https://firebase.google.com/), which provides 3rd-party authentication as one of its many features. In this lesson, we'll learn how to secure our Node and Express applications with JSON Web Tokens.
+Secure authentication is a vital aspect of many applications. While traditional oAuth methods can be difficult to understand, some alternative solutions have made this process easier for developers. In this lesson, we'll learn how to secure our Node and Express applications and APIs with JSON Web Tokens.
 
 ## JSON Web Tokens
-JSON Web Tokens, JWTs for short, provide us with a compact way to securely transmit data encoded as a JSON object. JSON objects are simple and compact, making them easy to pass along as query strings, headers, and request bodies. Similar to API Keys that help verify access to an API, JSON web tokens look something like this:
+JSON Web Tokens, JWTs for short, provide us with a compact way to securely transmit data encoded as a JSON object. JSON objects are simple and compact, making them easy to pass along as query strings, headers, and request bodies. Similar to API Keys that help verify access to an API, JSON web tokens need to be passed along with your server requests, and look something like this:
 
 ```javascript
 eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.
 eyJtZXNzYWdlIjoiSldUIFJ1bGVzISIsImlhdCI6MTQ1OTQ0ODExOSwiZXhwIjoxNDU5NDU0NTE5fQ.
 -yIVBD5b73C75osbmwwshQNRC7frWUYrqaTjTpza2y4
 ```
+
+If you're interested in understanding the breakdown of what goes into creating a JSON Web Token, you can learn more about that [here](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.pnimsp9e2). Go in-depth about that information in this lesson isn't completely necessary, thanks to a service that we'll use called [JWT.io](https://jwt.io/).
+
+## Using JWTs with JWT.io
+While we can implement JWTs on our own, the native spec and implementation *still* isn't the most user-friendly interface for developers. So, like everything else in the tech world, a simpler service was built on top of them to make it easier for us to use. One popular service created by [Auth0](https://auth0.com/) is [JWT.io](https://jwt.io/). Similar to [Firebase](https://firebase.google.com/), JWT.io provides 3rd-party authentication that allows you to secure your client-side application with logins for Google, Facebook, etc. It also allows you to make secure requests to private API endpoints on a server. Let's create a simple React application that allows users to login, and contains a protected endpoint that requires authentication.
+
+
 
 
 ## Resources
