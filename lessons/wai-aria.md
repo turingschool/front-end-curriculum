@@ -1,6 +1,5 @@
 ---
 title: WAI-ARIA Roles
-layout: presentation
 ---
 
 <section>
