@@ -134,11 +134,10 @@ div {
 - A positioned element can take advantage of the `z-index` property to specify its stack order. The stack order is the order in which elements in the same space lay on top of one another. For example, an element with a `z-index` of `2` will appear above an element with a `z-index` of `1` if they happen to overlap. Without any z-index value, elements stack in the order they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning will always appear on top of elements with default static positioning. Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can never be higher than element B.
 
 ### Floats
+"Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element. (It was originally intended only for magazine style text wrapping.)
 
-- "Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element. (It was originally intended only for magazine style text wrapping.)
 - Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.
 - You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.
-
 - `none`: the element does not float. This is the initial value.
 - `left`: floats the element to the left of its container.
 - `right`: floats the element to the right of its container.
@@ -184,14 +183,13 @@ Examples:-
 * `div p` has a specificity of 2 (2 element selectors, 1+1)
 * `.active` has a specificity of 10 (1 class selector)
 * `#nav` has a specificity of 100 (1 id selector)
-* `#nav li.active` a has a specificity of 112 (1 id selector + 1 class selector + 2 elements selector)
+* `#nav li.active` a has a specificity of 111 (1 id selector + 1 class selector + 1 elements selector)
 
 [Specificity Calculator](https://specificity.keegan.st/) The highest number wins for most specific and will correspondingly take precedent in application of style.
 
 Key Points: 
 
 * In case of conflicting styles declaration, the declaration with higher specificity will win regardless of order.
-* Always try to use IDs to increase the specificity as its specificity is 100. 
 * The universal selector (*) has no specificity value. 
 * Pseudo-classes have specificity of 10 while pseudo-elements (e.g. :first-line) has a specificity of 1. [Pseudo-class vs. Pseudo-element](https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/)
 * The pseudo-class :not() adds no specificity by itself, only elements inside its parenthesis will add to specificity weight.
