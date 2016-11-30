@@ -36,9 +36,28 @@ While we can implement JWTs on our own, the native spec and implementation *stil
 ![google auth][google-auth]
 ![spa react][spa-react]
 
-
 [google-auth]: /assets/images/lessons/jwts/google-auth.png
 [spa-react]: /assets/images/lessons/jwts/spa-react.png
+
+## Configuring an Auth0 Client
+At this point, Auth0 has already created a new client (i.e. a new application) for you. You can view the settings of your client [here](https://manage.auth0.com/#/clients). Go ahead and change the name of your application, set the client type to 'Single Page Application' and add a callback URL like so:
+
+![client-settings][client-settings]
+
+[client-settings]: /assets/images/lessons/jwts/client-settings.png
+
+
+### Configure Your Application Environment Settings
+You'll see a `.env` file in the root of the repo we just cloned. It should look something like this:
+
+```javascript
+AUTH0_CLIENT_ID='YOUR_CLIENT_ID'
+AUTH0_DOMAIN='YOUR_DOMAIN'
+AUTH0_SECRET='YOUR_CLIENT_SECRET'
+```
+
+You'll want to replace these values with your own settings from the Auth0 client you just set up. You'll be able to see all of these values on the [settings page in Auth0](https://manage.auth0.com/#/clients). You'll have to click to 'reveal' the client secret value. Once you've updated these settings you **do not commit this file to github**. This is secret information (hence the value, 'client secret'). Add the `.env` file to your `.gitignore` before pushing up your code.
+
 
 
 
