@@ -176,6 +176,8 @@ In our render method, we want to make use of our `auth` prop and call the `login
   }
 ```
 
+Now if we boot up our application and try to navigate to `http://localhost:3000/home` it should automatically redirect us to `http://localhost:3000/login`. When we click our login button, we should see the authentication widget pop up and be able to log in.
+
 
 
 
