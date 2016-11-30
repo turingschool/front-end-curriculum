@@ -183,14 +183,13 @@ Examples:-
 * `div p` has a specificity of 2 (2 element selectors, 1+1)
 * `.active` has a specificity of 10 (1 class selector)
 * `#nav` has a specificity of 100 (1 id selector)
-* `#nav li.active` a has a specificity of 112 (1 id selector + 1 class selector + 2 elements selector)
+* `#nav li.active` a has a specificity of 111 (1 id selector + 1 class selector + 1 elements selector)
 
 [Specificity Calculator](https://specificity.keegan.st/) The highest number wins for most specific and will correspondingly take precedent in application of style.
 
 Key Points: 
 
 * In case of conflicting styles declaration, the declaration with higher specificity will win regardless of order.
-* Always try to use IDs to increase the specificity as its specificity is 100. 
 * The universal selector (*) has no specificity value. 
 * Pseudo-classes have specificity of 10 while pseudo-elements (e.g. :first-line) has a specificity of 1. [Pseudo-class vs. Pseudo-element](https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/)
 * The pseudo-class :not() adds no specificity by itself, only elements inside its parenthesis will add to specificity weight.
