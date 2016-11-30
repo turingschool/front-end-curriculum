@@ -418,6 +418,8 @@ Restart your server and check it out.
 
 #### Babel and ES6
 
+##### Install and Configure Babel
+
 With all of the new ES6 functionality, we need to make sure everything is compatible. Webpack and do this for us by compiling our ES6 into ES5 with a Babel-Loader.
 
 `npm install --save-dev babel-loader babel-core`
@@ -425,6 +427,8 @@ With all of the new ES6 functionality, we need to make sure everything is compat
 Then add it into your loaders module in `webpack.config.js`. Your entire file should look like this:
 
 ```
+// webpack.config.js
+
 const path = require('path');
 
 module.exports = {
@@ -438,7 +442,7 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.js$/, exclude: '/node_modules/', loader: 'babel-loader', query: { presets: ['es2015'] } },
+      { test: /\.js$/, exclude: /node_modules/, loader: "babel-loader" },
       { test: /\.css$/, loader: "style!css" },
       { test: /\.scss$/, loader: "style!css!sass" }
     ]
@@ -448,7 +452,6 @@ module.exports = {
   }
 }
 ```
-
 Note that we exclude `node_modules` here. We want Webpack to process all of OUR `.js` files, but *not* the ones we didn't write ourselves.
 
 As an added bonus, we can tell Webpack to figure out file extensions for us. If you haven't already, make sure to add this at the end of your config file:
@@ -460,6 +463,26 @@ resolve: {
 ```
 
 This allows us to be generic when requiring files. We can say `require('./styles')` instead of `require('./styles.scss')` because the `.scss` extension is part of the list Webpack is looking for.
+
+##### Enable Babel
+
+Great! You've configured Babel but you haven't made it actually _do_ anything. Create a `.babelrc` config in your project root and enable some plugins.
+
+To start, you can use the the latest preset, which enables transforms for ES2015+:
+
+`npm install --save-dev babel-preset-latest`
+
+In order to enable the preset you have to define it in your `.babelrc` file, like this:
+
+```
+// .babelrc
+
+{
+  "presets": ["latest"]
+}
+```
+
+##### Further Reading
 
 Beyond this basic Webpack configuration, there are countless ways to use Webpack to your advantage. For further reading some of the additional tricks for later use include:  
 [Tree Shaking](https://medium.com/modus-create-front-end-development/webpack-2-tree-shaking-configuration-9f1de90f3233#.rlpftvy03): Letting Webpack scan your code for anything unused or superfluous before it packages everything up for production.  
