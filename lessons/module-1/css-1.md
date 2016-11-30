@@ -134,11 +134,10 @@ div {
 - A positioned element can take advantage of the `z-index` property to specify its stack order. The stack order is the order in which elements in the same space lay on top of one another. For example, an element with a `z-index` of `2` will appear above an element with a `z-index` of `1` if they happen to overlap. Without any z-index value, elements stack in the order they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning will always appear on top of elements with default static positioning. Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can never be higher than element B.
 
 ### Floats
+"Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element. (It was originally intended only for magazine style text wrapping.)
 
-- "Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element. (It was originally intended only for magazine style text wrapping.)
 - Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.
 - You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.
-
 - `none`: the element does not float. This is the initial value.
 - `left`: floats the element to the left of its container.
 - `right`: floats the element to the right of its container.
