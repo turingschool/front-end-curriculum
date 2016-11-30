@@ -123,7 +123,7 @@ We'll also want to add a `logout` method to clear out any data when a user logs 
 ## Putting the Authentication to Work
 We're going to want to work with authentication on every route in our application. In this case, we only have a login and a home route. But if our app were to grow, we'd want to make sure we were checking if a user was logged in no matter what page they landed on or what URL they came to. This means we'll want to instantiate our AuthService in our `routes` file.
 
-In the `/src/views/` directory, open the `routes.js` file, and import our AuthService:
+In the `/src/views/Main` directory, open the `routes.js` file, and import our AuthService:
 
 ```javascript
 import AuthService from 'utils/AuthService'
