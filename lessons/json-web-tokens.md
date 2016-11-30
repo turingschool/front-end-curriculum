@@ -49,15 +49,15 @@ At this point, Auth0 has already created a new client (i.e. a new application) f
 
 
 ## Configure Your Application Environment Settings
-You'll see a `.env` file in the root of the repo we just cloned. It should look something like this:
+You'll see a `.env.example` file in the root of the repo we just cloned. It should look something like this:
 
 ```javascript
-AUTH0_CLIENT_ID='YOUR_CLIENT_ID'
-AUTH0_DOMAIN='YOUR_DOMAIN'
-AUTH0_SECRET='YOUR_CLIENT_SECRET'
+AUTH0_CLIENT_ID='Auth Client ID'
+AUTH0_DOMAIN='Auth0 Domain'
+AUTH0_SECRET='Auth0 Secret'
 ```
 
-You'll want to replace these values with your own settings from the Auth0 client you just set up. You'll be able to see all of these values on the [settings page in Auth0](https://manage.auth0.com/#/clients). You'll have to click to 'reveal' the client secret value. Once you've updated these settings you **do not commit this file to github**. This is secret information (hence the value, 'client secret'). Add the `.env` file to your `.gitignore` before pushing up your code.
+You'll want to copy this file and create a new one that is just titled `.env`. Replace these values with your own settings from the Auth0 client you just set up. You'll be able to see all of these values on the [settings page in Auth0](https://manage.auth0.com/#/clients). You'll have to click to 'reveal' the client secret value. Once you've updated these settings you **do not commit this file to github**. This is secret information (hence the value, 'client secret'). Double check that the `.env` file is in your `.gitignore` before pushing up your code.
 
 ## Creating an Authentication Service
 Similar to when we used firebase to set up login and logout methods, we'll want to create an auth service that will handle user sign-in through Auth0 and store our session information in localStorage. 
@@ -229,7 +229,7 @@ app.post('/api/v1/messages', authenticate, (request, response) => {
 });
 ```
 
-In order to authorize this particular request, we can pass in our authentication token as a header. Let's add some headers to our request:
+In order to authorize this particular request, we can pass in our authentication token as a header. Headers are a way to configure the request so that the server has everything it needs to process it. Let's add some headers to our request:
 
 ```javascript
   fetch('/api/v1/messages',
