@@ -5,6 +5,12 @@ tags: html, introduction, practice
 
 # Overview & Docs
 
+The front-end of the web is based on three major technologies:
+
+* __STRUCTURE__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
+* __PRESENTATION__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
+* __BEHAVIOR__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
+
 ## What is HTML?
 
  * HTML = HyperText Markup Language  
