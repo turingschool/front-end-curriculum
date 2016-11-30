@@ -19,20 +19,12 @@ This lesson is all about the presentation layer, CSS. We'll take this opportunit
 
 But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.com/)
 
-### The Docs
-
-* [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-* [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Visual Guide to CSS](http://cssreference.io/)
-
-*** 
-
-# CSS The Basics
-It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page.
+## CSS The Basics
+It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old tag names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
 
 ## Anatomy of a Basic CSS Rule
 
-#![CSS Rule](/assets/images/css-rule.png)
+# ![CSS Rule](/assets/images/css-rule.png)
 
 * Can target via tag name
 * Can target via class name
@@ -42,7 +34,22 @@ It’s a “style sheet language” that lets you style the HTML elements on you
 <p data-height="300" data-theme-id="26495" data-slug-hash="KNvbQX" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="CSS Rules" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/KNvbQX/">CSS Rules</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-## Static Site Playground
+## All the Elements are Boxes
+Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane. :scream: 
+
+# ![Box Model](/assets/images/box-model.jpg)
+
+***
+
+# The Docs
+
+* [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+* [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Visual Guide to CSS](http://cssreference.io/)
+
+*** 
+ 
+# Practice
 Let's setup a small static page to experiement with our HTML and CSS. 
 
 * Create a directory called static-site-playground
@@ -63,13 +70,35 @@ Let's setup a small static page to experiement with our HTML and CSS.
 </html>
 ```
 
-## All the Elements are Boxes
-Each element is a rectangular box. CSS leverages this box model to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. 
+## Let's draw some boxes and play with some basic CSS properties
 
-# ![Box Model](/assets/images/box-model.jpg)
+* Box Model things: `width`, `height`, `border`, `padding`, `margin`
+* Aesthetic things: `color`, `font`, `background`
 
-<p data-height="300" data-theme-id="26495" data-slug-hash="Lbjqxp" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="CSS Boxes Playground" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjqxp/">CSS Boxes Playground</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+## Don't Forget Your Dev Tools!
+
+#### Editing CSS
+To the right of the HTML pane, there's a small sidebar that gives us styling information for the currently selected element. Similar to the HTML pane, we can add or remove styles and adjust CSS property values from this pane. You can click on any style property associated with the selected element and change its value. You can also use the blue checkbox to toggle the style on or off.
+
+![Editing CSS](/assets/images/lessons/debugging-with-devtools/editing-css.png)
+
+### Box-Sizing and the CSS Box Model:
+
+In HTML, you can visualize each element as its own rectangular box. There are a number of CSS properties that can affect the final width and height of each of these boxes. The CSS Box Model describes how the final height and width of an element is determined.
+
+We have a `div` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The DevTools panel provides a handy graphic of how our div is being rendered.
+
+This is the default behavior for the rendering of block elements in CSS. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
+
+```css
+*,
+*:after,
+*:before {
+  box-sizing: 'border-box';
+}
+```
+
+Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. Its `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
 
 ## Document Flow is Important
 The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according by their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
@@ -171,26 +200,13 @@ Key Points:
 
 ***
 
-### Box-Sizing and the CSS Box Model:
-
-In HTML, you can visualize each element as its own rectangular box. There are a number of CSS properties that can affect the final width and height of each of these boxes. The CSS Box Model describes how the final height and width of an element is determined.
-
-We have a `div` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The DevTools panel provides a handy graphic of how our div is being rendered.
-
-This is the default behavior for the rendering of block elements in CSS. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
-
-```css
-*,
-*:after,
-*:before {
-  box-sizing: 'border-box';
-}
-```
-
-Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. Its `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
-
-# Let's build something together
 
 # Your Turn
-Build Dog Party. We'll run the setup together
+You may NOT take liberties with the layout, but your creative license includes:
 
+* Copy
+* Images
+* Icons
+* Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/) or [coolors](https://coolors.co/) or [color-hex](http://www.color-hex.com/color-palettes/)  
+
+# ![Dog Party](/assets/images/dog-party.png)
