@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 # Discussion
 
 - Mod 2 is currently working on a React app using Ajax and hitting an API (and using React)

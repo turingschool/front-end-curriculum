@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Notes from Nov 30, 2016 session
 
 Okay - I've got good news and (maybe) bad news
