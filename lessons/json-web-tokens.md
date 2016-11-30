@@ -109,7 +109,7 @@ Next we need a `login` method, that will actually display the pop-up that allows
   }
 ```
 
-This is as simple as calling `this.lock.show()`. This is built-in to the Auth0Lock library we just imported and configured.
+This is as simple as calling `this.lock.show()`. This is built-in to the Auth0Lock library we just imported and configured, and will display the authentication widget (similar to Firebase).
 
 We'll also want to add a `logout` method to clear out any data when a user logs out. There are some pre-defined methods in our service that set two pieces of data in localStorage: `id_token` and `profile`. When we log out, we want to remove these keys from localStorage:
 
@@ -120,7 +120,34 @@ We'll also want to add a `logout` method to clear out any data when a user logs 
   }
 ```
 
+## Putting the Authentication to Work
+In the `views/Login` directory we have a component called `Login`. Right now it's not doing much, but let's put our AuthService to work. Import our AuthService file:
 
+```javascript
+import MessageBoard from 'components/MessageBoard'
+```
+
+And let's add an instance of it to our `propTypes` definition:
+
+```javascript
+  static propTypes = {
+    location: T.object,
+    auth: T.instanceOf(AuthService)
+  }
+```
+
+In our render method, we want to make use of our `auth` prop and call the `login` method we created in our service when we click the login button:
+
+```javascript
+  render() {
+    const { auth } = this.props
+    return (
+      <div>
+        <button onClick={auth.login.bind(this)}>Login</button>
+      </div>
+    )
+  }
+```
 
 
 
