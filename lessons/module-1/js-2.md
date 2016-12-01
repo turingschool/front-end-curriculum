@@ -1,9 +1,6 @@
 ---
-<<<<<<< HEAD:lessons/module-1/intro-to-javascript-2.md
 title: Introduction to JavaScript — Part II
-=======
 title: JS II
->>>>>>> origin/gh-pages:lessons/module-1/js-2.md
 length: 120
 tags: javascript, introduction, foundation, variables
 ---
