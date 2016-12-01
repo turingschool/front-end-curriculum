@@ -3,6 +3,17 @@ title: JS II
 length: 120
 tags: javascript, introduction, foundation, variables
 ---
+
+## JS I Review
+
+Before we get started with new material, let's go over over what we've learned so far.
+
+- What are the three basic data types in Javascript?
+- How do we write a variable and why would we use one?
+- How do you add a value to an array?
+- How do you write a function?
+- How do you call a function?
+
 ## Learning Goals
 
 By the end of this lesson, you will know/be able to:

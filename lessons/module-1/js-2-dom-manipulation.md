@@ -10,16 +10,6 @@ tags: javascript, dom, browser
 * Continue to develop a basic understanding for JavaScript syntax
 * Understand how to query and update a page after its been loaded
 
-## Review
-
-Before we get into DOM Manipulation, let's go over over what we've learned so far.
-
-- What are the three basic data types in Javascript?
-- How do we write a variable and why would we use one?
-- How do you add a value to an array?
-- How do you write a function?
-- How do you call a function?
-
 ## The Document Object Model (DOM)
 
 The browser gives us some useful global objects for free. The `window` object is the global object and it holds a lot of information about the browser window including it's current location (URL), size, etc. `document` contains a representation of the current web page.
