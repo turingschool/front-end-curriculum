@@ -29,7 +29,7 @@ If you're interested in understanding the breakdown of what goes into creating a
 While we can implement JWTs on our own, the native spec and implementation *still* isn't the most user-friendly interface for developers. So, like everything else in the tech world, a simpler service was built on top of them to make it easier for us to use. One popular service created by [Auth0](https://auth0.com/) is [JWT.io](https://jwt.io/). Similar to [Firebase](https://firebase.google.com/), JWT.io provides 3rd-party authentication that allows you to secure your client-side application with logins for Google, Facebook, etc. It also allows you to make secure requests to private API endpoints on a server.
 
 ## Getting Started
-We're going to create a simple React message board that allows anyone to view messages that have been previously posted, but requires an authenticated user to post a message.
+We're going to create a simple React message board that allows logged in users to view messages that have been previously posted, and requires a JSON Web Token to allow a user to post a message.
 
 1. Clone this [repo](https://github.com/turingschool-examples/auth0-react.git)
 2. Create a free account with Auth0 [here](https://auth0.com/signup), enable Google Authentication, and select Single Page App with React as your framework:
@@ -49,15 +49,15 @@ At this point, Auth0 has already created a new client (i.e. a new application) f
 
 
 ## Configure Your Application Environment Settings
-You'll see a `.env` file in the root of the repo we just cloned. It should look something like this:
+You'll see a `.env.example` file in the root of the repo we just cloned. It should look something like this:
 
 ```javascript
-AUTH0_CLIENT_ID='YOUR_CLIENT_ID'
-AUTH0_DOMAIN='YOUR_DOMAIN'
-AUTH0_SECRET='YOUR_CLIENT_SECRET'
+AUTH0_CLIENT_ID='Auth Client ID'
+AUTH0_DOMAIN='Auth0 Domain'
+AUTH0_SECRET='Auth0 Secret'
 ```
 
-You'll want to replace these values with your own settings from the Auth0 client you just set up. You'll be able to see all of these values on the [settings page in Auth0](https://manage.auth0.com/#/clients). You'll have to click to 'reveal' the client secret value. Once you've updated these settings you **do not commit this file to github**. This is secret information (hence the value, 'client secret'). Add the `.env` file to your `.gitignore` before pushing up your code.
+You'll want to copy this file and create a new one that is just titled `.env`. Replace these values with your own settings from the Auth0 client you just set up. You'll be able to see all of these values on the [settings page in Auth0](https://manage.auth0.com/#/clients). You'll have to click to 'reveal' the client secret value. Once you've updated these settings you **do not commit this file to github**. This is secret information (hence the value, 'client secret'). Double check that the `.env` file is in your `.gitignore` before pushing up your code.
 
 ## Creating an Authentication Service
 Similar to when we used firebase to set up login and logout methods, we'll want to create an auth service that will handle user sign-in through Auth0 and store our session information in localStorage. 
@@ -123,7 +123,7 @@ We'll also want to add a `logout` method to clear out any data when a user logs 
 ## Putting the Authentication to Work
 We're going to want to work with authentication on every route in our application. In this case, we only have a login and a home route. But if our app were to grow, we'd want to make sure we were checking if a user was logged in no matter what page they landed on or what URL they came to. This means we'll want to instantiate our AuthService in our `routes` file.
 
-In the `/src/views/` directory, open the `routes.js` file, and import our AuthService:
+In the `/src/views/Main` directory, open the `routes.js` file, and import our AuthService:
 
 ```javascript
 import AuthService from 'utils/AuthService'
@@ -160,7 +160,7 @@ This is using our auth service to check if the user is logged in, and if they ar
 <Route path="home" component={Home} onEnter={requireAuth} />
 ```
 
-## Creating the Login Button
+## Wiring up the Login
 In `src/views/Login` we have a Login component that isn't doing much right now. We have already passed the instance of our AuthService into the component through the top-level route component, and can access it via `this.props.auth`.
 
 In our render method, we want to make use of our `auth` prop and call the `login` method we created in our service when we click the login button:
@@ -178,9 +178,81 @@ In our render method, we want to make use of our `auth` prop and call the `login
 
 Now if we boot up our application and try to navigate to `http://localhost:3000/home` it should automatically redirect us to `http://localhost:3000/login`. When we click our login button, we should see the authentication widget pop up and be able to log in.
 
+## Protecting an Endpoint
+Now that we're logged in, we can see a form that should allow us to submit a new message to the board. If we try this as-is, we see we're getting an authorization error:
 
+![unauthorized][unauthorized]
 
+[unauthorized]: /assets/images/lessons/jwts/unauthorized.png
 
+Let's take a look at the POST request we're currently making in the `PostNewMessage` component within the `/src/components/` directory:
+
+```javascript
+  sendMessage(event) {
+    const { auth } = this.props
+
+    fetch('/api/v1/messages',
+      { 
+        method: 'POST',
+        body: JSON.stringify({ 
+          message: {
+            content: this.state.messageText,
+            username: auth.getProfile().name
+          }
+        })
+      }
+    )
+    .then(response => auth.checkStatus(response))
+    .then(response => window.location.reload())
+    .catch(error => console.log('Error submitting new message: ', error));
+  }
+```
+
+We're using the fetch API to `POST` to the `/api/v1/messages` endpoint. We're passing in a `username` which we grab from our auth service for the currently logged in user, and a `content` property which contains the text of the message.
+
+When the request first hits, we again use our auth service to check the authenticity of the request with `auth.checkStatus()`. Even though we know we are logged in, because we've hit the home URL of our application, this particular API endpoint doesn't necessarily know where the request is coming from, and wants to be 100% certain that it's being performed by an authenticated user.
+
+Remember earlier we said that JSON Web Tokens are just encoded JSON objects that can be passed in as query params or headers. POSTing to `/api/v1/messages` is a protected endpoint that requires a signed JSON Web Token in order to return successfully. If you take a look at the `server.js` file, you can see how the request handler takes a parameter called `authenticate` to verify the request:
+
+```javascript
+var authenticate = jwt({
+  secret: new Buffer(process.env.AUTH0_SECRET, 'base64'),
+  audience: process.env.AUTH0_CLIENT_ID
+});
+
+app.post('/api/v1/messages', authenticate, (request, response) => {
+  const { message } = request.body;
+
+  message.id = message.id || Date.now();
+  app.locals.messages.push(message);
+  response.json({ message });
+});
+```
+
+In order to authorize this particular request, we can pass in our authentication token as a header. Headers are a way to configure the request so that the server has everything it needs to process it. Let's add some headers to our request:
+
+```javascript
+  fetch('/api/v1/messages',
+    { 
+      method: 'POST',
+      headers: {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + auth.getToken()
+      },
+      body: JSON.stringify({ 
+        message: {
+          content: this.state.messageText,
+          username: auth.getProfile().name
+        }
+      })
+    }
+  )
+```
+
+The key header here that we want to pay attention to is the `Authorization` header. We are setting this equal to 'Bearer <your token>'. The token we are retrieving from our auth service, which we've stored in localStorage.
+
+If we refresh and try to make the request again, we should see the POST request goes through successfull and our new message is rendered in the UI.
 
 ## Resources
 - [JWT.io](https://jwt.io/)

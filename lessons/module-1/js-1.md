@@ -1,5 +1,6 @@
 ---
 title: Introduction to JavaScript — Part I
+title: JS I
 length: 180
 tags: javascript, introduction, foundation, variables
 ---
@@ -109,9 +110,10 @@ After our `var` keyword (a special word that the JavaScript interpreter knows is
 Let's test these additions in the console.
 
 Okay, let's ask the console to give us the value of our variable. How do we do that?
-Step 1: declare the variable and it's value
-Step 2: call the variable
-Step 3: dance for joy at seeing our assigned value of "Hello, variable!"
+
+- Step 1: declare the variable and it's value
+- Step 2: call the variable
+- Step 3: dance for joy at seeing our assigned value of "Hello, variable!"
 
 Until you've added the assignment operator and the variable value, the variable is considered _undefined_.
 
@@ -137,7 +139,7 @@ Let's make a new variable called "creatureCount" and assign the value as our qua
 ```javascript
 var quantity = 3;
 var mythicalCreature = " unicorns";
-var creatureCount = quantity + mythicalCreature
+var creatureCount = quantity + mythicalCreature;
 ```
 
 Open up the console in your browser, enter these in, and see what you get!
@@ -164,7 +166,7 @@ This is very useful when we want to append data to our webpage, because it means
 
 Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
 
-To use conditionals, we first need to talk about expressions and operators.
+To use conditionals, we first need to talk about expressions, operators, and statements.
 
 ## Expressions
 An _expression_ evaluates (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
@@ -175,11 +177,23 @@ An _expression_ evaluates (results in) a single value. Expressions rely on opera
 ## Operators
 Expressions rely on operators to calculate their single value. There are 5 types of operators:
 
-1. Assignment operators. Assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
-2. Arithmetic operators. Perform basic math. `var addTwo = 2 + 2;`
-3. String operators. Combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
-4. Comparison operators. Compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
-5. Logical operators. Combines __expressions__ and return true or false. `var buy = (5 > 3) && (2 < 4);`
+1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators) assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
+2. [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic_operators) perform basic math. `var addTwo = 2 + 2;`
+3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
+4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
+5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
+
+## Statements
+A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon.
+
+Example statements:
+
+```javascript
+console.log('BOOM');
+alert('POW');
+```
+
+## Basic Conditional Structure
 
 Let's now look at the basic structure of a conditional:
 
@@ -194,8 +208,8 @@ if (expression) {
 If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false). Some examples of expressions for conditionals are:
 
 * `myNum < 5`
-* `userString === "Denver"`
-* `isTired ==== true`
+* `userCity === "Denver"`
+* `isTired === true`
 
 Now for some real conditional examples.
 
@@ -228,23 +242,17 @@ Write a conditional that gives a different alert message based on your favorite 
 # Functions
 Functions are a way to group statements together to perform a specific task. Functions are reusable blocks of code. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
 
-## Statements
-A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon. Example statement:
-
-```javascript
-console.log('BOOM');
-```
-
 ## Anatomy of a Function:
 ```javascript
 function myRadFunction() {
-  var myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'"
+  var myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
   alert('This is my second statement!');
   console.log(myFirstStatement);
 }
 ```
+
 - You declare a function using the keyword `function`.
-- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty, or accept parameters.
+- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
 - You must follow the name of the function with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
 - Calling the function is quite easy. Simply type the function name with it's parenthesis and any associated parameters.
 
@@ -257,7 +265,7 @@ myRadFunction();
 myRadFunction(arg1, arg2);
 ```
 
-When this code is read, `myRadFunction()` is "called", meaning all three statements within the function's body (those curly braces) gets run.
+When this code is read, `myRadFunction()` is "called", all three statements within the function's body (those curly braces) get run.
 
 ### Your Turn
 Let's go ahead and declare myRadFunction in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?

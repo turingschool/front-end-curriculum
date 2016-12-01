@@ -268,8 +268,8 @@ title: WAI-ARIA Roles
 
 <section class="aria-lesson">
   <h1>Aria Roles, States and Properties</h1>
-  ![Aria Roles](./roles.png)
-  ![Aria State](./state.png)
+  <img src='https://raw.githubusercontent.com/Tman22/wai-aria/master/roles.png' alt='list of aria roles'/>
+  <img src='https://github.com/Tman22/wai-aria/blob/master/state.png' alt='list of aria states and properties'/>
 </section>
 
 <section class="aria-lesson">

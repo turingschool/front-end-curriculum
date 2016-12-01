@@ -232,6 +232,7 @@ Let's break down what our information each component might need to render, and w
   {
     type: "ADD_TODO",
     text: "Go to the Vault"
+    id: 1
   }
 ```
 
@@ -276,10 +277,11 @@ Create an actions file now, and update it to match the following.
 `touch src/actions/index.js`  
 
 ```js
-export const addTodo = (text) => {
+export const addTodo = (text, id) => {
   return {
     type: 'ADD_TODO',
-    text
+    text,
+    id
   }
 }
 
@@ -320,7 +322,7 @@ First, create the two reducers.
 const todos = (state=[], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, {id: Date.now(), text: action.text, completed: false}]
+      return [...state, {id: action.id, text: action.text, completed: false}]
     case 'TOGGLE_TODO':
       return state.map(todo => {
         if (todo.id !== action.id) {
@@ -413,14 +415,15 @@ This will be our form. We only need an input field and a submit button. The `onS
 ```js
 import React from 'react'
 
-let AddTodoForm = ({ onSubmit }) => {
+let AddTodoForm = ({ handleSubmit }) => {
   let input
+  let i = todos.length
 
   return (
     <section>
       <form onSubmit={ (e) => {
         e.preventDefault()
-        onSubmit(input.value)
+        handleSubmit(input.value, i)
       }}>
         <input ref={ node => { input = node }} />
         <button>Add Todo</button>
@@ -451,18 +454,22 @@ import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 import AddTodoForm from '../components/AddTodoForm'
 
+const mapStateToProps = (state) => {
+  return { todos: state.todos }
+}
+
 const mapDispatchToProps=(dispatch) => {
   return {
-    onSubmit: (text) => {
-      dispatch(addTodo(text))
+    handleSubmit: (text, id) => {
+      dispatch(addTodo(text, id))
     }
   }
 }
 
-export default connect(null, mapDispatchToProps)(AddTodoForm)
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
 
-Take a second to notice that the prop `onSubmit` is exactly what our `AddTodoForm` component is expecting when it renders. Because of redux our container is hooked up to the required action that passes the new component information through our reducers to update state.
+Take a second to notice that the prop `handleSubmit` is exactly what our `AddTodoForm` component is expecting when it renders. Because of redux our container is hooked up to the required action that passes the new component information through our reducers to update state.
 
 #### App
 
@@ -534,15 +541,14 @@ Before we deal with a list of Todos, let's set up our individual Todo component.
 ```js
 import React from 'react'
 
-const Todo = ({ onClick, completed, text }) => {
-  (
+const Todo = ({handleClick, completed, text}) => {
+  return (
     <li
-      onClick={ onClick }
+      onClick={handleClick}
       style={
-        { textDecoration: completed ? 'line-through' : 'none' }
-      }
-    >
-    { text }
+      { textDecoration: completed ? 'line-through' : 'none'}
+    }>
+      {text}
     </li>
   )
 }
@@ -558,22 +564,26 @@ Now to render a list of all "todos" which will come from an array stored in our 
 
 ```js
 import React from 'react'
-import Todo from './Todo.js'
+import Todo from './Todo'
 
 const TodoList = ({ todos, onTodoClick }) => {
   if (todos.length === 0) {
     return <h3>You have nothing to do!</h3>
   }
 
-  <ul>
+  return(
+    <ul>
     { todos.map(todo => {
-      <Todo
-        key={todo.id}  
-        {...todo}
-        onClick={() => onTodoClick(todo.id)}
-      />  
-    })}
-  </ul>
+      return (
+        <Todo
+          key={todo.id}
+          {...todo}
+          handleClick={() => onTodoClick(todo.id)}
+        />
+      )
+    }) }
+    </ul>
+  )
 }
 
 export default TodoList
@@ -593,15 +603,16 @@ const FilterLink = ({ active, children, onClick }) => {
     return <span>{ children }</span>
   }
 
-  <a  href="#"
-      onClick={ (e) => {
-        e.preventDefault()
-        onClick()
-      }}
-  >
-  { children }
-  </a>
-
+  return (
+    <a  href="#"
+        onClick={ (e) => {
+          e.preventDefault()
+          onClick()
+        }}
+    >
+      { children }
+    </a>
+  )
 }
 
 export default FilterLink
@@ -615,15 +626,17 @@ Our list of available filters is displayed as a row of links in our footer, whic
 
 ```js
 import React from 'react'
-import Filter from '../src/containers/FilterContainer'
+import FilterContainer from '../containers/FilterContainer'
 
-const Footer = () => (
-  <footer>
-    <Filter filter="SHOW_ALL">All Todos</Filter>
-    <Filter filter="SHOW_ACTIVE">Active</Filter>
-    <Filter filter="SHOW_COMPLETED">Completed</Filter>
-  </footer>
-)
+const Footer = () => {
+  return (
+    <footer>
+      <FilterContainer filter="SHOW_ALL">All Todos</FilterContainer>
+      <FilterContainer filter="SHOW_ACTIVE">Active</FilterContainer>
+      <FilterContainer filter="SHOW_COMPLETED">Completed</FilterContainer>
+    </footer>
+  )
+}
 
 export default Footer
 ```
@@ -637,12 +650,11 @@ Next up is the TodoList container which is a bit more complicated. We need to ge
 `touch src/containers/FilteredTodoList.js`  
 
 ```js
-
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
-import TodoList from '../src/components/TodoList'
+import TodoList from '../components/TodoList'
 
-// Based on what filter the user has clicked, what todos do we need to manipulate?
+// Based on what filter the user has clicked, what todos do we want to work with?
 
 const getFilteredTodos = (todos, filter) => {
   switch (filter) {
@@ -653,11 +665,11 @@ const getFilteredTodos = (todos, filter) => {
     case 'SHOW_ACTIVE':
       return todos.filter(todo => !todo.completed)
     default:
-      throw new Error('Unknown filter: ' + filter)
+      return new Error('Unknown filter: ' + filter)
   }
 }
 
-// What part of state does the component care about?
+// What part(s) of state does the component care about?
 
 const mapStateToProps = (state) => ({
   todos: getFilteredTodos(state.todos, state.setFilter)
@@ -665,8 +677,10 @@ const mapStateToProps = (state) => ({
 
 // What are we handing down as an event listener (also coming through as a prop), and what reducer is organizing what that action needs?
 
-const mapDispatchToProps = ({
-  onTodoClick: toggleTodo
+const mapDispatchToProps = (dispatch) => ({
+  onTodoClick: (id) => {
+    dispatch(toggleTodo(id))
+  }
 })
 
 const FilteredTodoList = connect(
@@ -685,24 +699,22 @@ Next is the Filter container component. Remember we created three different filt
 ```js
 import { connect } from 'react-redux'
 import { setFilter } from '../actions'
-import FilterLink from '../src/components/FilterLink'
+import FilterLink from '../components/FilterLink'
 
 const mapStateToProps = (state, props) => ({
   active: props.filter === state.setFilter
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
-  onClick: () => {
-    dispatch(setFilter(props.filter))
-  }
+  handleClick () { dispatch(setFilter(props.filter)) }
 })
 
-const Filter = connect(
+const FilterContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(FilterLink)
 
-export default Filter
+export default FilterContainer
 ```
 
 #### `<App />`  
@@ -712,21 +724,21 @@ Update the wrapper component.
 `// components/App.js`
 
 ```js
-import React from 'react'
-import AddTodo from '../src/containers/AddTodo'
-import FilteredTodoList from '../src/containers/FilteredTodoList'
-import Footer from '../src/components/Footer'
+import React, { Component } from 'react'
+import AddTodoFormContainer from '../containers/AddTodoFormContainer'
+import FilteredTodoListContainer from '../containers/FilteredTodoListContainer'
+import Footer from '../components/Footer'
 
-class App extends React.Component {
-  render () {
-    return (
-      <section>
-        <AddTodo />
-        <FilteredTodoList />
-        <Footer />
-      </section>  
-    )
-  }
+
+
+const App = () => {
+  return (
+    <section>
+      <AddTodoFormContainer />
+      <FilteredTodoListContainer />
+      <Footer />
+    </section>
+  )
 }
 
 export default App
