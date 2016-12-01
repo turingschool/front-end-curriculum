@@ -2,6 +2,7 @@
 title: Redux: When and Why
 length: 1 hour
 tags: redux, react, state
+module: 3
 ---
 
 ### Goals
@@ -33,7 +34,7 @@ If we were to build this with just React, each component would need to know exac
 
 If we were to build this with just React, the only way we could share the same information across all three of these components would be to create **another** container component that stored all of that data in its state. It would have to wrap all three of our components and pass down the necessary data to each of them.
 
-And what happens when we decide to change our filters? If we want to look at red sweaters instead, now we have to pass that data back up to the mega-container component, just to pass it right back down again, updating each of the child components. 
+And what happens when we decide to change our filters? If we want to look at red sweaters instead, now we have to pass that data back up to the mega-container component, just to pass it right back down again, updating each of the child components.
 
 Additionally, our state can change from any three of these components. We can update the filters from the sidebar, we can update the clothing category by clicking on the breadcrumb links (e.g. if our breadcrumb links show *Women's > Clothing > Dresses* we could click on *Clothing*, effectively removing the *Dresses* category from our search), and we can click on a product preview to completely change our route and display the full product details, making most of the state we just stored in our mega-container irrelevant.
 
@@ -42,7 +43,7 @@ Additionally, our state can change from any three of these components. We can up
 [ecommerce-site]: /assets/images/lessons/redux-when-why/e-commerce.png
 
 #### React & Redux Strategy
-As we've learned, Redux is intended to manage state and only state. 
+As we've learned, Redux is intended to manage state and only state.
 
 **State** is the application data that influences how the application is rendered. (e.g. if the state says we are filtering by dresses, our application should only render dresses.) **State** can be updated through user interactions (e.g. if we click on the 'Sweaters' filter, our state should update itself to reflect that we are now browsing sweaters instead of dresses, and update the UI accordingly).
 

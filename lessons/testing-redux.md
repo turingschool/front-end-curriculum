@@ -1,6 +1,7 @@
 ---
 title: Unit Testing Redux
 tags: React, Redux, Testing
+module: 3
 ---
 
 ### Unit Testing

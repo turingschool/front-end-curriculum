@@ -1,5 +1,6 @@
 ---
 title: Unit Testing React Components
+module: 3
 ---
 
 **Golden Rule**: No copy and pasting. Part of the point of this exercise is to build up some muscle memory.

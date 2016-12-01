@@ -2,6 +2,7 @@
 title: Testing Ember
 length:
 tags: ember, testing, javascript
+module: 3
 ---
 
 ### Setup
