@@ -100,7 +100,7 @@ Module one can be overwhelming as you find yourself adjusting to a new routine, 
 ##### WK 1: Introduction to Turing & Introduction to Frontend Engineering
 
 |Mindset     | We are a team. This week is about building trust with one another.|
-|Lessons     | HTML I & II, CSS I & II, JS I & II, Terminal, Personal Branding I |
+|Lessons     | HTML I & II, CSS I, JS I & II, Terminal, Personal Branding I |
 |Assignments | Personal Branding I: Two Deliverables DUE 11/30 & 12/2 |
 |Homework    | Static Comps to Build & Reading |
 
