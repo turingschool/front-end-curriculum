@@ -5,8 +5,6 @@ module: 2
 tags: regular expressions, regex
 ---
 
-#Sass Deep Dive
-
 ## Goals
 1. Know how to import partials to keep your Sass files well organized and modular.
 2. Understand mixins and functions and when to use them.
@@ -14,7 +12,7 @@ tags: regular expressions, regex
 4. Understand the four different control directives and when you would want to leverage them.
 
 
-##Why Deeply Learning Sass (SCSS) is Worth Your Time 
+## Why Deeply Learning Sass (SCSS) is Worth Your Time 
 Let's face it, writing a lot of CSS is not very enjoyable. I love the instant gratification of seeing something beautiful come to life on the screen but it can get very frustrating inspecting elements and adding new classes for hours to get there. But never fear, Sass is here! Let's see how Sass can make writing CSS fun again.
 
 Sass makes you structure important front end choices in a functional way. Being able to quickly find, read and change your Sass is a very important skill on the job. If you can do this, you can get quick feedback from designers and move on the next feature. Otherwise, prepare for long days of wiping tears streaking down your face as you refresh the page for the 87th time and your navbar still doesn't have the correct box shadow. 
@@ -31,11 +29,11 @@ Let's look at the possibilities...
 
 
 
-##Variables - Covered
-##Nesting - Covered
-##Operators - Covered
+## Variables - Covered
+## Nesting - Covered
+## Operators - Covered
 
-##1. Partials and Import
+## 1. Partials and Import
 Partails keep your Sass code organized and won't generate partials it's own CSS file. You must import them into your main Sass file.
 
 The config directory is where you store Sass code that doesn't output to CSS. This would be global variables for colors, mixins and functions. Things you want to scatter alongst all of your other Sass partials.
@@ -204,7 +202,7 @@ Real world example of how this is useful is creating a bunch of add-in features 
 
 ## 4. Control directives
 
-###@if
+### @if
 
 The if directive returns any styles if the directive doesn't not result in false or null.
 
@@ -240,7 +238,7 @@ The if directive returns any styles if the directive doesn't not result in false
 
 
 
-###@each
+### @each
 
 The each directive loops through a list or map of variables. This is handy in creating accurate class names with specific values:
     
@@ -259,7 +257,7 @@ The each directive loops through a list or map of variables. This is handy in cr
   }
 
 
-###@for
+### @for
 
 Output styles in a loop. Uses a variable name to track the loop. You can use from x through y to include the ending number or from x to y to not include it. You can loop backwards by making the first number larger than the second. 
 
@@ -267,7 +265,7 @@ Output styles in a loop. Uses a variable name to track the loop. You can use fro
     .col-#{$i} { width: 100/12 * $i;}
   }
 
-###@while
+### @while
 
 Output styles until the desired condition returns false.
 
@@ -281,7 +279,7 @@ Output styles until the desired condition returns false.
   };
 
 
-##Closing
+## Closing
 So what did we learn today?
 
 1. CSS doesn't need to be painful, it's fun with Sass!
@@ -290,19 +288,19 @@ So what did we learn today?
 4. Control directives allows for complex styles with very little Sass. 
 
 
-##Possible Questions
+## Possible Questions
 1. When should I use mixins instead of extending?
 2. Where should I import partials?
 3. When should I use @each vs. @for vs. @while?
 
 
-##Answers
+## Answers
 1. Mixins should be used for a specific style that will be used repetitively. Extending should be used for building upon a generic or parent class.
 2. You should import partials in your main scss file. If there are lots of partials in each directory you can use an _all.scss file to import the partials and then import all of the _all.scss partials.
 3. Use @each for a set list of variables, @for to loop through a known number of loops, and @while for a specific stop case.
 
 
-##Project Work Time
+## Project Work Time
 Use partials, mixins, functions and control directives (at least one of each @if, @each, @for, @while) in your Ideabox to add a four column grid to the idea list. Each column should have it's own unique style.
 
     
