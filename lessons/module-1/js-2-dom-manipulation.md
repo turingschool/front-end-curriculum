@@ -1,5 +1,5 @@
 ---
-title: Introduction to Javascript, Part 2: DOM Manipulation with JavaScript
+title: JS II - Intro to DOM Manipulation
 length: 180
 tags: javascript, dom, browser
 ---
