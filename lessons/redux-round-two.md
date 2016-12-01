@@ -232,6 +232,7 @@ Let's break down what our information each component might need to render, and w
   {
     type: "ADD_TODO",
     text: "Go to the Vault"
+    id: 1
   }
 ```
 
@@ -276,10 +277,11 @@ Create an actions file now, and update it to match the following.
 `touch src/actions/index.js`  
 
 ```js
-export const addTodo = (text) => {
+export const addTodo = (text, id) => {
   return {
     type: 'ADD_TODO',
-    text
+    text,
+    id
   }
 }
 
@@ -413,14 +415,15 @@ This will be our form. We only need an input field and a submit button. The `onS
 ```js
 import React from 'react'
 
-let AddTodoForm = ({ onSubmit }) => {
+let AddTodoForm = ({ handleSubmit }) => {
   let input
+  let i = todos.length
 
   return (
     <section>
       <form onSubmit={ (e) => {
         e.preventDefault()
-        onSubmit(input.value)
+        handleSubmit(input.value, i)
       }}>
         <input ref={ node => { input = node }} />
         <button>Add Todo</button>
@@ -451,18 +454,22 @@ import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 import AddTodoForm from '../components/AddTodoForm'
 
+const mapStateToProps = (state) => {
+  return { todos: state.todos }
+}
+
 const mapDispatchToProps=(dispatch) => {
   return {
-    onSubmit: (text) => {
-      dispatch(addTodo(text))
+    handleSubmit: (text, id) => {
+      dispatch(addTodo(text, id))
     }
   }
 }
 
-export default connect(null, mapDispatchToProps)(AddTodoForm)
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
 
-Take a second to notice that the prop `onSubmit` is exactly what our `AddTodoForm` component is expecting when it renders. Because of redux our container is hooked up to the required action that passes the new component information through our reducers to update state.
+Take a second to notice that the prop `handleSubmit` is exactly what our `AddTodoForm` component is expecting when it renders. Because of redux our container is hooked up to the required action that passes the new component information through our reducers to update state.
 
 #### App
 
