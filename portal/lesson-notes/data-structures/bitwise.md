@@ -1,3 +1,7 @@
+---
+layout: page
+---
+
 ## Notes from 1608
 
 Drop lesson plan
