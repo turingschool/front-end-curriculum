@@ -44,8 +44,7 @@ Given a string as text, (let's say "Find A Pumpkin"), we expect it to return an 
 
 As you learned with yesterdays Testing React lesson, Jest is a great testing framework for both unit tests AND it makes popping on Enzyme for integration tests a breeeeze! It's like Christmas!  
 
-`npm i -D jest`  
-`npm i -D babel-jest`  
+`npm i -D jest babel-jest`  
 
 Make sure you have the following in your `.babelrc` file:  
 
@@ -76,32 +75,39 @@ Next, let's set up our test.
 Step one, let's just make sure everything is wired up.
 
 ```js
-import * as actions from '../../actions'
+import * as actions from '../../src/actions'
 
 describe('actions', () => {
   it('should create an action to add a todo', () => {
     expect(true).toEqual(true)
   })
 })
+
 ```
 Run `npm test` to run your suite once, or `npm run test:watch` to test on any file changes.  
 
 Assuming you have a passing test, let's add some substance.  
 
 ```js
-import * as actions from '../../actions'
+import * as actions from '../../src/actions'
 
 describe('actions', () => {
   it('should create an action to add a todo', () => {
-    const text = "Find A Pumpkin"
+    const text = "Go to the Vault"
+    const id = 1
     const expectedAction = {
       type: 'ADD_TODO',
-      text,
+      text: "Go to the Vault",
+      id: 1
     }
-    expect(actions.addTodo(text)).toEqual(expectedAction)
+    expect(actions.addTodo(text, id)).toEqual(expectedAction)
   })
 })
 ```
+
+#### YOUR TURN!
+
+Write two more unit tests to verify the functions in `actions/index.js`. file.
 
 ### Reducer Tests
 
@@ -112,12 +118,12 @@ In other words, a reducer receives an action and decides how to change the state
 Take a look at our todos reducer.
 
 ```js
-//reducers/todos.js
+// reducers/todos.js
 
 const todos = (state=[], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, {id: Date.now(), text: action.text, completed: false}]
+      return [...state, {id: action.id, text: action.text, completed: false}]
     case 'TOGGLE_TODO':
       return state.map(todo => {
         if (todo.id !== action.id) {
@@ -129,14 +135,17 @@ const todos = (state=[], action) => {
       return state
   }
 }
+
+export default todos
 ```
-Make the correct directory:  
+
+Make the new directory:  
 `test/reducers/todos.test.js`  
 
 To test this reducer, let's start by testing what happens if we don't pass this reducer any action. We want to get the default state back, which for us is an empty array.
 
 ```js
-import reducer from '../../reducers/todos'
+import reducer from '../../src/reducers/todos'
 
 describe('todos reducer', () => {
   it('should return the initial state', () => {
@@ -146,72 +155,129 @@ describe('todos reducer', () => {
 
 ```
 
-YOUR TURN! Test the todos reducer for what we expect to see in State if we Add a Todo.
+#### YOUR TURN!
+Test the todos reducer for what we expect to see in State if we...
+
+* hit the "ADD_TODO" case
+
+```js
+it('should return state with a new todo', () => {
+})
+```
+
+* hit the "TOGGLE_TODO" case
+
+```js
+it('should toggle the completed status of a new todo', () => {
+})
+```
 
 ### Component Tests
 As we've seen, it's important to separate our React components into "Presentational" vs "Container".
 
 Presentational component testing generally involves minor mocking and stubbing, and can be thrown into the "Testing React" bucket which you are all familiar with.
 
-Container components, however, are hooked up to Redux and use the `connect` method. Connect allows components to receive props directly from the redux `store`, rather than having to pass them through parent components. Said props are accessed using the method `mapStateToProps`. Connect is a beast to try to test, and even the [Official Redux Testing Documentation](http://redux.js.org/docs/recipes/WritingTests.html) suggests somewhat ignoring connect and testing the component itself.  
+Container components, however, are hooked up to Redux and use the `connect` method. Connect allows components to receive props directly from the redux `store`, rather than having to pass them through parent components.  
+
+These props are accessed using the method `mapStateToProps`. Connect is a beast to try to test, and even the [Official Redux Testing Documentation](http://redux.js.org/docs/recipes/WritingTests.html) suggests somewhat ignoring connect and testing the component itself.  
 
 But, because we're unique snowflakes, let's give it a go.  
 
 First, if you don't have it already, make sure Enzyme and it's test-utils buddy are installed.  
 `npm i -D enzyme react-addons-test-utils`   
 
-Let's look at the AddTodoForm Component, and AddTodo Container.  
+Let's look at the AddTodoForm Component, and AddTodoForm Container.  
 
-Normally, to import a component into a test you would simply include the line `import AddTodoForm from './path/AddTodoForm'` or something along those lines.  With Redux, our component is wrapped in a container component that passes State to it using the `connect()` method. This means that the component that is rendered is actually a `<Connect />` component, and not the `<AddTodoForm />` component itself.  
+With Redux, our component is wrapped in a container component that passes State to it using the `connect()` method. This means that the component that is rendered is actually a `<Connect />` component, and not the `<AddTodoForm />` component itself.  
 
-Sometimes it's important to test the interaction with Redux, in which case you would wrap it in a <Provider> component and create a store designed specifically for a particular unit test. In order to simply test the rendering of the component itself, you must export the undecorated (without Connect) component in the container file.
+The container component is connected to the Redux store, which is passed down to components through the  `<Provider>` parent component. In order to test our containers we need to include the `<Provider>`, the target presentational component, and fake out a store that Provider can access.
 
-This means that when importing said component in your test, you need to grab it with curly braces from the modules being exported from the container file.  
-
-Let's start by setting up the information our test will need.
+Let's start by creating a fake store to pass to the `<Provider />` component.
 
 ```js
-// test/components/AddTodoForm.test.js
+// test/containers/fakeStore.js
+
+export const fakeStore = (state) => {
+  return {
+    default: () => {},
+    subscribe: () => {},
+    dispatch: () => {},
+    getState: () => {
+      return { ...state }
+    }
+  };
+}
+```
+
+Next, let's set up the information our test will need in a `setup()` function so we only have to do that part once.
+
+```js
+// test/containers/AddTodoFormContainer.test.js
 
 import React from 'react'
-import { shallow } from 'enzyme'
-import { AddTodoForm } from '../../containers/AddTodo'
+import { mount  } from 'enzyme'
 
-function setup() {
+import AddTodoFormContainer from '../../src/containers/AddTodoFormContainer'
+import AddTodoForm from '../../src/components/AddTodoForm'
+
+import { Provider } from 'react-redux'
+import { fakeStore } from './fakeStore'
+
+
+const setup = () => {
   const props = {
-    onSubmit: jest.fn()
+    handleSubmit: jest.fn()
   }
 
-  const wrapper = shallow(<AddTodoForm {...props} /> )
+  const store = fakeStore({ todos: [] })
+
+
+  const wrapper = mount(
+    <Provider store={store}>
+      <AddTodoFormContainer {...props}/>
+    </Provider>
+  )
+
+  const Component = wrapper.find(AddTodoForm)
+  const Container = wrapper.find(AddTodoFormContainer)
 
   return {
     props,
-    wrapper
+    Component,
+    Container
   }
 }
 ```
 
-Then in that same file, let's confirm that it renders a form (we'll keep this test simple for now, although in real life you would need a beefier test).
+Then in that same file, let's confirm that it renders both the presentational component, and the container component.
 
 ```js
-...
+//setup() code goes here
 
 describe('components', () => {
   describe('AddTodoForm', () => {
 
-    it('should render a form', () => {
-      const { wrapper } = setup()
+    it('should render expected elements', () => {
+      const { Component, Container } = setup()
 
-      expect(wrapper.find('form').length).toEqual(1)
-      // should test other elements here
+
+
+      expect(Component.length).toEqual(1)
+      expect(Component.find('form').length).toEqual(1)
+
+      expect(Container.length).toEqual(1)
     })
-
   })
 })
 
 ```
 
-And finally check that when the Add Todo button is clicked that it calls the function we expect. We've set it up to mock a function call with `jest.fn`.
+Run `npm test`. You might get a [syntax error about that spread operator](https://babeljs.io/docs/plugins/transform-object-rest-spread/). If that happens, do the following:  
+* run `npm install --save-dev babel-plugin-transform-object-rest-spread`  
+* in `.babelrc` add `  "plugins": ["transform-object-rest-spread"]
+`
+
+And finally let's check that when the `Add Todo` button is clicked that it calls the function we expect. We've set it up to mock a function call with `jest.fn`.
 
 ```js
  ...
@@ -249,26 +315,3 @@ For async action creators that hit a third party middleware (such as [redux thun
 ### Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)
 [Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)
-
-### Answers
-
-Test ADD_TODO action in todos reducer:   
-
-```
-it('should handle ADD_TODO', () => {
-  expect(
-    reducer([], {
-      type: 'ADD_TODO',
-      text: 'Carve batman'
-    })
-  ).toEqual(
-    [
-      {
-        id: Date.now(),
-        text: "Carve batman",
-        completed: false
-      }
-    ]
-  )
-})
-```
