@@ -5,13 +5,13 @@ length: 120
 tags: javascript, introduction, foundation, variables
 ---
 
-## JS I Review
+## Review
 
 Before we get started with new material, let's go over over what we've learned so far.
 
 - What are the three basic data types in Javascript?
 - How do we write a variable and why would we use one?
-- How do you add a value to an array?
+- How do we write a conditional?
 - How do you write a function?
 - How do you call a function?
 
@@ -126,7 +126,7 @@ var volumeTwo = getSize(1, 8, 7)[0];
 
 ## Functions - Famous or Anonymous?
 
-So far, we've mostly been working with *named functions*. Through *function declaration* `function myNamedFunction()` we create a function that we intend to call later in our code via the name we gave it. That is kind of cool. It feels very similar to when we were naming/assigning variables. A named function is kind of like that: we create a name, assign a series of instructions (the function) to that name, and we get to use it all over the place, simply by calling the name of the function with its parentheses.
+So far, we've been working with *named functions*. Through *function declaration* `function myNamedFunction()` we create a function that we intend to call later in our code via the name we gave it. That is kind of cool. It feels very similar to when we were naming/assigning variables. A named function is kind of like that: we create a name, assign a series of instructions (the function) to that name, and we get to use it all over the place, simply by calling the name of the function with its parentheses.
 
 ```javascript
 // Declare a named function
@@ -147,7 +147,7 @@ Here's a hint: Remember expressions? What do they do? :smiling_imp:
 - Can a function return a value?
 - Can a function be an expression?
 
-Hmm, that's interesting. Let's talk about that "function as an expression" bit. What the heck is that about? Anywhere the interpreter expects to find an expression, a la in a variable assignment for instance, we can use an expression that is NOT named, in which case we call it an *anonymous function*. Remember that an expression simply evaluates to and returns a value, it doesn't really care how it gets that value.
+Let's talk about that "function as an expression" bit. What the heck is that about? Anywhere the interpreter expects to find an expression, like variable assignment for instance, we can use an expression that is NOT named. In the context of functions, we call this an *anonymous function*. Remember that an expression simply evaluates to and returns a value, so it makes sense that we should be able get that value from a function.
 
 With that in mind, let's take a look at an example of an anonymous function:
 

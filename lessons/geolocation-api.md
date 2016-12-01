@@ -2,6 +2,7 @@
 title: Working with geolocation
 length: 1 hour
 tags: geolocation, web API, APIs
+module: 3
 ---
 
 ### Goals
@@ -102,7 +103,7 @@ At the end of the body section, add a script tag to access the google maps API. 
 
 `https://maps.googleapis.com/maps/api/js?key=<your API key>&callback=createMap`
 
-Notice the parameter portion of the source URL that specifies `callback=createMap`. This tells us that once the API is fully loaded and ready to use, we want to call the function `createMap`. 
+Notice the parameter portion of the source URL that specifies `callback=createMap`. This tells us that once the API is fully loaded and ready to use, we want to call the function `createMap`.
 
 ##### Step 5: Add a `createMap` function
 Let's add another script tag to our HTML (directly above our Google Maps script tag) file with a `createMap` function:

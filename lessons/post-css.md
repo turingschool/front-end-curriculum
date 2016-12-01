@@ -1,6 +1,7 @@
 ---
 title: PostCSS and CSS Modules
 tags: CSS, JavaScript
+module: 3
 ---
 
 ## Alternatives to Vanilla CSS
@@ -97,7 +98,7 @@ Hot reloading of components.
 
 Pick your favorite component, and create a .css file associated with it. For example, if you have an `About.js` file that renders an `<About />` component, create an `About/` folder, move your component, make any necessary changes to where `About.js` was previously referenced, and then add an `About.css` file in that folder as well.
 
-Creating a tiny `.css` file with styles associated with this component explicitly makes writing CSS extremely flexible. 
+Creating a tiny `.css` file with styles associated with this component explicitly makes writing CSS extremely flexible.
 
 This allows us to require just that part of CSS at the top of our `App.js` file, which will be loaded as a separate piece of CSS directly into style tags in your HTML. Fire up your server and take a look at the elements tab and dig into the `<head></head>` section to see our style.
 

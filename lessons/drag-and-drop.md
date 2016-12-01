@@ -2,6 +2,7 @@
 title: Drag and Drop
 length: 1 hour
 tags: drag and drop, web API, APIs
+module: 3
 ---
 
 ### Goals

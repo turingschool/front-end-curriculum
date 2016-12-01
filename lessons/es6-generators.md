@@ -1,11 +1,7 @@
 ---
 title: ES6 Generators
+module: 3
 ---
-
-FOLLOW UP:
-  - Promises vs Generators?
-  - Why no return value?
-  - Generators vs Callback
 
 ### What is an ES6 Generator Function?
 

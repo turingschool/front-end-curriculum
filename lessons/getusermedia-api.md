@@ -2,6 +2,7 @@
 title: Working with getUserMedia
 length: 1 hour
 tags: getUserMedia, web API, APIs
+module: 3
 ---
 
 ### Goals
@@ -19,7 +20,7 @@ You'll often hear it used as part of the [WebRTC API](https://developer.mozilla.
 
 ### The Syntax
 
-We can use the API by making a call to `navigator.mediaDevices.getUserMedia()`. This is a promised-based API, meaning the function call will return a promise that will either resolve or reject. 
+We can use the API by making a call to `navigator.mediaDevices.getUserMedia()`. This is a promised-based API, meaning the function call will return a promise that will either resolve or reject.
 
 ```javascript
 navigator.mediaDevices.getUserMedia(options)
@@ -56,10 +57,10 @@ Assuming you have made the API call correctly and the user grants permission to 
 The MediaStream object gives you access to any audio or video tracks that are being monitored, and allows you to act on them in various ways.
 
 #### Practice
-Log the MediaStream object to the console in the success handler of your `getUserMedia` call. Inspect the object in your console, making sure to check out the methods available in its prototype (`__proto__`). 
+Log the MediaStream object to the console in the success handler of your `getUserMedia` call. Inspect the object in your console, making sure to check out the methods available in its prototype (`__proto__`).
 
 ## Using the MediaStream with an HTML Media Element
-The MediaStream object offers us plenty of methods to inspect and interact with it, but it isn't super useful on its own. When combined with an [HTML Media Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement), however, we can interface with it just like a video or audio recording. The two HTML elements that are considered "media" elements are the `<video>` and `<audio>` tags. These elements come with a special API that gives us the ability to play, pause, or seek any media attached to them. 
+The MediaStream object offers us plenty of methods to inspect and interact with it, but it isn't super useful on its own. When combined with an [HTML Media Element](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement), however, we can interface with it just like a video or audio recording. The two HTML elements that are considered "media" elements are the `<video>` and `<audio>` tags. These elements come with a special API that gives us the ability to play, pause, or seek any media attached to them.
 
 #### Practice
 Let's add a `video` element to our HTML file. Set a height and width as attributes.
@@ -71,7 +72,7 @@ Let's add a `video` element to our HTML file. Set a height and width as attribut
 In the success handler of our `getUserMedia` call, let's select that video element and attach our media stream object to it:
 
 ```javascript
-let video = document.querySelector('video'); 
+let video = document.querySelector('video');
 
 // create a "url" for our media object to
 // use as the source of our video element
@@ -102,7 +103,7 @@ Remember we said the `video` element was a special HTML Media Element. This is w
 This syntax can be made even simpler by adding the [autoplay](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/video) attribute to the video element in our HTML. When specifying that attribute, we can simplify our javascript to:
 
 ```javascript
-let video = document.querySelector('video'); 
+let video = document.querySelector('video');
 video.src = window.URL.createObjectURL(mediaStream);
 ```
 
@@ -165,7 +166,7 @@ Let's try recording the livestream from our webcam. Stash or commit any changes 
 
 When you've completed the exercise, you can compare your work against the solution in the `working` branch of the repo.
 
-## Resources 
+## Resources
 
 * [getUserMedia API](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)
 * [HTML Media Element API](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement)

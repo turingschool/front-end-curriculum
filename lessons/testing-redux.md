@@ -1,6 +1,7 @@
 ---
 title: Unit Testing Redux
 tags: React, Redux, Testing
+module: 3
 ---
 
 ### Unit Testing
@@ -181,18 +182,14 @@ Container components, however, are hooked up to Redux and use the `connect` meth
 
 These props are accessed using the method `mapStateToProps`. Connect is a beast to try to test, and even the [Official Redux Testing Documentation](http://redux.js.org/docs/recipes/WritingTests.html) suggests somewhat ignoring connect and testing the component itself.  
 
-But, because we're unique snowflakes, let's give it a go.  
+But, because we're unique snowflakes, let's give it a go. This will be more of a conversation about various approaches to mocking data in your test files. The tests themselves could use some significant improvement.  
 
 First, if you don't have it already, make sure Enzyme and it's test-utils buddy are installed.  
 `npm i -D enzyme react-addons-test-utils`   
 
-Let's look at the AddTodoForm Component, and AddTodoForm Container.  
-
-With Redux, our component is wrapped in a container component that passes State to it using the `connect()` method. This means that the component that is rendered is actually a `<Connect />` component, and not the `<AddTodoForm />` component itself.  
-
 The container component is connected to the Redux store, which is passed down to components through the  `<Provider>` parent component. In order to test our containers we need to include the `<Provider>`, the target presentational component, and fake out a store that Provider can access.
 
-Let's start by creating a fake store to pass to the `<Provider />` component.
+One way to fake the redux store is to hand write a helper file and import that "store" into your test file.
 
 ```js
 // test/containers/fakeStore.js
@@ -209,6 +206,23 @@ export const fakeStore = (state) => {
 }
 ```
 
+You might get a [syntax error about that spread operator](https://babeljs.io/docs/plugins/transform-object-rest-spread/) in your fake store file. If that happens, do the following:  
+* run `npm install --save-dev babel-plugin-transform-object-rest-spread`  
+* in `.babelrc` add `  "plugins": ["transform-object-rest-spread"]
+`
+
+Then in your test file, you'd reference your fake store like this:  
+
+```js
+import { fakeStore } from './fakeStore'
+```
+Option two is to run `npm i -D redux-mock-store`. Then at the top of your test file, include the following lines:
+
+```js
+import configureMockStore from 'redux-mock-store'
+const fakeStore = configureMockStore()({todos: []})
+```
+
 Next, let's set up the information our test will need in a `setup()` function so we only have to do that part once.
 
 ```js
@@ -219,89 +233,68 @@ import { mount  } from 'enzyme'
 
 import AddTodoFormContainer from '../../src/containers/AddTodoFormContainer'
 import AddTodoForm from '../../src/components/AddTodoForm'
-
 import { Provider } from 'react-redux'
+
+// get your fake store data like this if you created a helper file
 import { fakeStore } from './fakeStore'
+
+// or like this if you're using the redux module
+import configureMockStore from 'redux-mock-store'
+const fakeStore = configureMockStore()({todos: []})
 
 
 const setup = () => {
   const props = {
-    handleSubmit: jest.fn()
+    handleSubmit: jest.fn(),
   }
 
-  const store = fakeStore({ todos: [] })
-
-
   const wrapper = mount(
-    <Provider store={store}>
-      <AddTodoFormContainer {...props}/>
-    </Provider>
+    // if you were to test your Provider or Container components you'd need the following
+    // <Provider store={fakeStore}>
+    //   <AddTodoFormContainer {...props}/>
+    // </Provider>
+
+    <AddTodoForm handleSubmit={props.handleSubmit} todos={props.todos} />
+
   )
 
   const Component = wrapper.find(AddTodoForm)
-  const Container = wrapper.find(AddTodoFormContainer)
 
   return {
     props,
-    Component,
-    Container
+    Component
   }
 }
 ```
 
-Then in that same file, let's confirm that it renders both the presentational component, and the container component.
+Then in that same file, for now we can test that the component triggers our mocked out function when we submit our form.
 
 ```js
-//setup() code goes here
+//... setup() code goes here
 
 describe('components', () => {
   describe('AddTodoForm', () => {
 
-    it('should render expected elements', () => {
-      const { Component, Container } = setup()
+  it('should render something', () => {
+      const { Component } = setup()
 
-
-
-      expect(Component.length).toEqual(1)
       expect(Component.find('form').length).toEqual(1)
 
-      expect(Container.length).toEqual(1)
-    })
-  })
-})
-
-```
-
-Run `npm test`. You might get a [syntax error about that spread operator](https://babeljs.io/docs/plugins/transform-object-rest-spread/). If that happens, do the following:  
-* run `npm install --save-dev babel-plugin-transform-object-rest-spread`  
-* in `.babelrc` add `  "plugins": ["transform-object-rest-spread"]
-`
-
-And finally let's check that when the `Add Todo` button is clicked that it calls the function we expect. We've set it up to mock a function call with `jest.fn`.
-
-```js
- ...
-
-describe('components', () => {
-  describe('AddTodoForm', () => {
-
-    it('should render a form', () => {
-      const { wrapper } = setup()
-
-      expect(wrapper.find('form').length).toEqual(1)
+      expect(Component.length).toEqual(1)
     })
 
     it('should call addTodo when Add Todo button is clicked', () => {
-      const { wrapper, props } = setup()
+      const { props, Component } = setup()
 
-      wrapper.find('button').simulate('click')
+      let form = Component.find('form')
 
-      expect(props.onSubmit).toBeCalled()
+      form.simulate('submit')
+      console.log(props);
+      expect(props.handleSubmit).toBeCalled()
 
-      // Or to verify how many times a function has been called
-      expect(props.onSubmit.mock.calls.length).toBe(1)
+    // Or to verify how many times a function has been called
+      expect(props.handleSubmit.mock.calls.length).toBe(1)
     })
-
   })
 })
 
@@ -313,5 +306,6 @@ For async action creators that hit a third party middleware (such as [redux thun
 
 
 ### Resources
-[Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)
-[Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)
+[Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
+[Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)  
+[Blog Post About Testing Containers]http://www.wsbrunson.com/react/redux/test/2016/05/08/testing-redux-containers.html  

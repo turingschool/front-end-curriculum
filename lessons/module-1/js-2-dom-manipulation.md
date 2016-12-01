@@ -25,15 +25,15 @@ Both methods take a query selector—like you would use in CSS. `document.queryS
 
 Let's say we have a page with the following markup:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="WxOKwo" data-default-tab="html,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/WxOKwo/">Simple HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="WxOKwo" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/WxOKwo/">Simple HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 Let's try out some queries:
 
-* `document.querySelectorAll('p')` will return a collection of all of the paragraphs.
+* `document.querySelectorAll('p')` will return a collection containing all of the paragraphs.
 * `document.querySelector('p')` will return just the first paragraph.
-* `document.querySelectorAll('.awesome')` will return the two paragraphs with the class `awesome`.
-* `document.querySelectorAll('#third')` will return the paragraph with the id `third`.
+* `document.querySelector('#third')` will return the paragraph with the id `third`.
+* `document.querySelectorAll('.awesome')` will return a collection containing the two paragraphs with the class `awesome`.
 
 Let's say we wanted to change the contents of our `<h1>` element. We could modify it's contents with the following JavaScript.
 
@@ -41,7 +41,7 @@ Let's say we wanted to change the contents of our `<h1>` element. We could modif
 document.querySelector('h1').innerText = 'JavaScript is amazing!';
 ```
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="kXwjbv" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/kXwjbv/">Simple HTML Page (Now with JavaScript!)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="kXwjbv" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/kXwjbv/">Simple HTML Page (Now with JavaScript!)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 The DOM has been updated to the following:
@@ -58,7 +58,7 @@ The DOM has been updated to the following:
 
 Visit the [this page][codepen] and fork the CodePen.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="GqEBqg" data-default-tab="html,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/GqEBqg/">HTML Report Card</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="GqEBqg" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/GqEBqg/">HTML Report Card</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 [codepen]: http://codepen.io/team/turing/pen/GqEBqg
@@ -91,7 +91,7 @@ This is the crux of front-end engineering. We present a user interface and then 
 
 Let's take a look at the syntax and then we'll talk about what's happening.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="qNjyAg" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/qNjyAg/">A First Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="qNjyAg" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/qNjyAg/">A First Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 1. We're querying for all of the elements we need and we're storing them in variables.
@@ -131,11 +131,11 @@ There are three approaches:
 2. We can add or remove classes from the element.
 3. You can modify the stylesheet itself with JavaScript.
 
-We're only going to talk about the first two, unless you ask real nicely (and we have time).
+We're only going to talk about the first two today.
 
 Consider the following:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="grRjXA" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/grRjXA/">CSS Manipulation with JavaScript</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="grRjXA" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/grRjXA/">CSS Manipulation with JavaScript</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Pair Practice
@@ -145,7 +145,7 @@ Consider the following:
 
 ### Getting User Input from Forms
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="akwjjr" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/akwjjr/">Color Box</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="akwjjr" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/akwjjr/">Color Box</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Pair Practice

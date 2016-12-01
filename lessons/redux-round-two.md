@@ -1,6 +1,7 @@
 ---
 title: Redux Round Two
 tags: React, JavaScript, Webpack, Redux
+module: 3
 ---
 
 ### Game Plan
