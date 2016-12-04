@@ -160,7 +160,7 @@ Two ways to redirect routes:
 
 As you've been generating files, you've probably noticed a line saying `{{outlet}}` that we've been ignoring. This small chunk of handlebars code is replaced by markup for the current route.
 
-### {{yield}
+### {{yield}}
 
 
 ## Ember Mirage
