@@ -133,5 +133,11 @@ Save the file, and another window should pop up with more information. At this t
 
 #### Amending Commits
 
+`git commit --amend` allows you to edit the most recent commit message without affecting any of the code that was written/modified.  
+
+It's useful to make small changes - like forgetting to format a message correctly or add additional details to the message.   
+
+Note that using this command replaces the message completely - to git, this will look like a brand new commit with no record of the previous commit.  
+
 ### Example PRs
 [They Dont Have to Be Boring](https://github.com/bitly/dablooms/pull/19)
