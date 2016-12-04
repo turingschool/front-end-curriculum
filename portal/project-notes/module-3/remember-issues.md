@@ -3,7 +3,7 @@ layout: page
 module: 3
 ---
 
-## Issues given to students for the remEMBER project. 
+## Issues given to students for the remEMBER project.
 
 ### Issues
 
@@ -35,7 +35,7 @@ There is a failing test set up in `tests/acceptance/reminder-list-test.js` to ge
 
 ____
 
-#### 3. Create a New note
+#### 3. Create A New note
 
 At the bottom of the `reminders.hbs` template, there is a button that routes the user to `/new` where users can create a new reminder.  
 
