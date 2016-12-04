@@ -25,9 +25,9 @@ React Router is the go-to routing library for building React apps built by Micha
 
 [Dan Abramov Has Thoughts](https://twitter.com/dan_abramov/status/776096318351634433)
 
-In React Router 4, the guys essentially removed the Routes and the complicated behind the scenes logic, and moved the emphasis to be on React itself. This turns what you're working with into actual React components that behave like...React Components.  
+In React Router 4, the guys essentially removed the Routes and the complicated behind the scenes logic, and moved the emphasis to be on React itself. This turns the routing language you're working with into actual React components that behave like...React Components.  
 
-The building blocks are `components`, `location`, and `<Match>`, with additional tools baked in. As with the rest of React, everything is a component, which might sound obvious but that's not how things worked before version 4.0. and the router is no different. It's worth mentioning once again that React Router is not PART of React, although it was designed to work seamlessly with this particular framework.
+The building blocks you'll be playing with are `components`, `location`, and `<Match>`, with additional tools baked in. As with the rest of React, everything is a component. This might sound obvious, but that's not how things worked before version 4.0. and the router is no different. It's worth mentioning once again that React Router is not PART of React, although it was designed to work seamlessly with this particular framework.
 
 React router in essence simply shows or hides components based on what page your user has visited.  
 

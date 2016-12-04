@@ -1,6 +1,7 @@
 ---
 title: MVC Architecture
 layout: presentation
+module: 3
 ---
 
 <section>
@@ -144,11 +145,11 @@ layout: presentation
     <h2>Data Binding & Templating: before</h2>
     <pre>
       <code class="javascript js">
-      &lt;input type="text" class="current-grocery" /&gt; 
-      &lt;div id="grocery-name"&gt;&lt;/div&gt; 
+      &lt;input type="text" class="current-grocery" /&gt;
+      &lt;div id="grocery-name"&gt;&lt;/div&gt;
 
-      $('input.current-grocery').on('keyup', (e) => { 
-        $('#grocery-name').text(`Current Word: ${this.val()}`); 
+      $('input.current-grocery').on('keyup', (e) => {
+        $('#grocery-name').text(`Current Word: ${this.val()}`);
       });
       </code>
     </pre>
@@ -175,7 +176,7 @@ layout: presentation
     &lt;Route path="/" component={App}&gt;
       &lt;Route path="groceries/" component={GroceryList} /&gt;
       &lt;Route path="groceries/:id" component={GroceryDetail} /&gt;
-    &lt;/Route&gt; 
+    &lt;/Route&gt;
   &lt;/Router&gt;
       </code>
     </pre>

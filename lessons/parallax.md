@@ -1,6 +1,7 @@
 ---
 title: Parallax
 tags: HTML, CSS, Parallax
+module: 3
 ---
 
 Plan Of Attack:  

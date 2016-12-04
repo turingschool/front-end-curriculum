@@ -35,6 +35,10 @@ You are **STRONGLY ENCOURAGED** to do a research spike on these elements before 
   - Create a dashboard/index page that shows the Current Weather for a maximum of 3 "pinned" cities. If there aren't 3 pinned cities, add a placeholder with a link to "Pin a new city"
   - Each pinned city forecast should include a link to display an extended 5 day/3 hour forecast. The route for the extended forecast should be something like `/forecast/<cityId>`.
 
+### Extensions
+
+  - Additional features were implemented using Redux.
+
 ### Wireframes
 Dashboard Page:
 ![Dashboard](../assets/images/projects/weather-forecast/dashboard.png)
@@ -57,7 +61,7 @@ Extended Forecast Page
 
 ### Redux Architecture
 
-* 4 - Appropriate components are wrapped in connected Redux components. The Redux store contains all necessary application data and nothing more. All state changes are handled through Redux actions and reducers.
+* 4 - Appropriate components are wrapped in connected Redux container components. The Redux store contains all necessary application data and nothing more. All state changes are handled through Redux actions and reducers.
 * 3 - At least one component is not connected with Redux appropriately. Application state is mutated by more than just Redux. The Redux store is missing application data that it should be handling.
 * 2 - Application state is mostly outside the control of Redux. Application did not make use of Redux actions and reducers to mutate state. Components do not demonstrate a clear understanding of stateful vs. statelessness.
 * 1 - Application does not make use of Redux to manage state. There are little or no connected components.
@@ -71,7 +75,7 @@ Extended Forecast Page
 
 ### JavaScript Style
 
-* 4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
+* 4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are _zero_ instances where an instructor would recommend taking a different approach.
 * 3- Application is thoughtfully put together with some duplication and no major bugs. Group can speak to choices made in the code and knows what every line of code is doing.
 * 2 - Application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
 * 1 - Application has a significant amount of duplication and one or more major bugs. Group cannot speak to most choices and does not know what every line of code is doing.
@@ -93,15 +97,15 @@ Extended Forecast Page
 
 ### Troubleshooting
 
-Expected Information When Asking a Question:
-	- Start with a helpful "question".
-		  Bad: "This isn't working"
-		  Good: "I'm getting an error message that I don't understand coming from line 5 of my cities reducer".
-	- A given error message (if applicable)
-	- Specific line numbers and file names
-	- What you expected to see/happen
-	- What you're seeing/getting instead
-	- What steps have been taken so far to solve the problem.
+Expected Information When Asking a Question:  
+* Start with a helpful "question".  
+	  Bad: "This isn't working."  
+	  Good: "I'm getting an error message that I don't understand coming from line 5 of my cities reducer."  
+* A given error message (if applicable)
+* Specific line numbers and file names
+* What you expected to see/happen
+* What you're seeing/getting instead
+* What steps have been taken so far to solve the problem (Did you look at React/Redux dev tools?).
 
 * 4 - Most to all questions were posed to instructors with expected information (see above)
 * 3 - Some questions were posed to instructors without supporting information

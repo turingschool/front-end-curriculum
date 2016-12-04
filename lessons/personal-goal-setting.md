@@ -6,7 +6,7 @@ tags: goals
 
 ### Goals
 
-By the end of this lesson, you will:
+By the end of this session, you will:
 
 * Have identified real, achievable goals to work towards during your time at Turing
 
@@ -30,7 +30,7 @@ Once you've gotten these ideas written out, write two sets of goals:
 
 * The first around what you hope to get from your time at Turing _(i.e. I want to learn by teaching so I will volunteer as a TA at Girl Develop It workshops)_
 
-* The second around your biggest challenges to help you strategize how to tackle them head-on _(i.e. I'm bad at staying organized --> every Sunday I'll schedule a half hour to plan my week ahead)_
+* The second around your biggest challenges to help you strategize how to tackle them head-on _(i.e. I'm bad at staying organized so every Sunday I'll schedule a half hour to plan my week ahead)_
 
 ### Refine Goals in Small Groups
 

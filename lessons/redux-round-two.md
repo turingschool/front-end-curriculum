@@ -1,33 +1,69 @@
 ---
 title: Redux Round Two
 tags: React, JavaScript, Webpack, Redux
+module: 3
 ---
 
 ### Game Plan
-  - Review key Redux concepts
-  - Introduce some new concepts
-  - Talk about organizing a Redux app
-  - Build a slice of a Todo App
+  - Why Redux?
+  - Break down Redux concepts
+  - Build a slice of a Todo App in Redux
   - Look at a completed App
     - [Working Repo](https://github.com/martensonbj/redux-second-look)
   - Explore Testing
 
-#### What We Are Building:  
+### Why Redux + Part 1 Of Slides
 
-![Mockup Image](http://i.imgur.com/XSEWgwR.png)
+In a nutshell, Redux is a *predictable state manager* for your app. Every application fires up with an initial state (for example, 0 ideas in the idea box). Every interaction following start up (when you click `Submit Idea` on a form, or `Like` on Facebook) has the potential to modify that state and needs to do so in predictable, manageable ways.  
+
+As an application scales, maintaining where state changes and when, and which components need to know about it, and how to trickle that information down to the 500th grandchild of the component who knows about state, becomes less fun.
+
+### When To Use Redux
+
+According to [this article](http://redux.js.org/docs/faq/General.html#general-when-to-use), Dan Abramov has said:  
+> ...don't use Redux until you have problems with vanilla React.  
+
+Redux should be used when you have a significant amount of data changing over time and it is no longer reasonable to keep your state in a top-level React component.  
+
+That being said, Redux comes with trade offs. It requires a significant amount of work to set up the structure necessary to implement Redux, as we'll see shortly, but then once in place allows you to scale your app horizontally.  
+
+**READ THIS AT SOME POINT:** [You Might Not Need Redux](https://medium.com/@dan_abramov/you-might-not-need-redux-be46360cf367#.tm7sb1mps)  
+
+Think about adding more components to an app using Vanilla react - as you continue to grow, the state form a parent component will need to continually be passed deeper down a vertical chain of nested components. With Redux, the app stops growing vertically the moment it is in implemented and instead allows for a shallow communication of state to any component in the app.  
+
+Let's visualize this.  
 
 ### LifeCycle of a Redux App
 
-![Redux Diagram](https://i.redd.it/hl2aytgofz6x.png)
+![Redux Diagram](https://i.redd.it/hl2aytgofz6x.png)  
 
-### Review of Redux Key Concepts
+### Splinter Into Bundles  
+
+1. **Stop And Read:**   ( 10 Minutes )
+[Data Flow](http://redux.js.org/docs/basics/DataFlow.html)  
+
+2. **Independent Research** ( 10 Minutes )   
+Spend the next 10 minutes understanding your assigned concept below and jotting down notes - NOTEBOOKS ONLY,
+
+  **1:** [Store](http://redux.js.org/docs/api/Store.html)  
+  **2:** [Actions](http://redux.js.org/docs/basics/Actions.html)  
+  **3:** [Reducers](http://redux.js.org/docs/basics/Reducers.html)  
+  **4:** [Provider](http://redux.js.org/docs/basics/UsageWithReact.html#passing-the-store),[Presentational vs Container Components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)  
+
+3. **Group Discussion** ( 5 - 10 Minutes)  
+Head to the white board with your group. Each member of the group should write their part of the redux data-flow on the board and explain to the rest of the group what it does, then pass the marker to the next person in the data-flow.  
+
+### Part 2 Of Slides
+
+### Redux Key Concepts
+
 *Store*  
 The essence of Redux. Holds all of your application's state(s) and data in a giant JavaScript object.
 
 *Actions*  
 Objects. Recall that every component will do at least two things. It will render itself to the DOM after dealing with necessary data in "State", and it will potentially interact with user interaction through "Actions". Every action has a type, and a payload of information that gets sent to the store using `store.dispatch()`.
 
-```
+```js
 {
   type: 'ADD_TODO'
   text: 'Get a pumpkin'
@@ -37,60 +73,83 @@ Objects. Recall that every component will do at least two things. It will render
 *Action Creators*  
 Functions. They receive data from a DOM event and return a specific action formatted as a JSON object. Think of Action Creators like component organizers - when an event fires, they gather and organize any extra information needed to make changes to state and pass it on in a neat little bundle to the reducer.
 
-```
-function addTodo(text) => {
+```js
+const addTodo = (text) => {
   type: 'ADD_TODO',
   text: text
 }
 ```
 
 *Reducers*  
-Functions. Take state from Redux, and our bundle of information from our Action Creator and return a new state that is updated in our Redux store. Redux then passes that new state to any components that need to know about it which triggers the React engine to re-render the component.
+Functions. Takes existing state from the Redux store, pulls in our bundle of information sent from the Action Creators and returns a new state that gets updated in the Redux store. Redux then passes that new state to any components that need to know about it which triggers the React engine to re-render the component.  
 
-*Presentational Components*  
-Synonymous with a dumb or stateless component. Presentational components receive data from container/smart/stateful components and render themselves accordingly.
+```js
+const todos = (state=[], action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      // return state with an additional ToDo
+    case 'TOGGLE_TODO':
+      // return a version of state based on what filter is applied
+    default:
+      // return a default state if an error is made
+      return state
+  }
+}
 
-### New Redux Concepts
+```
+
+
+### More Concepts
 
 *Container Components*  
 Synonymous with smart, or stateful components. These are parent components to Presentational Components that deal with redux, state, actions etc. Containers pass data to the presentational component, making the connection between the Redux store and the presentational components that need to be rendered.
 
+*Presentational Components*  
+Synonymous with a dumb or stateless component. Presentational components receive data from container/smart/stateful components and render themselves accordingly.
+
+[Dan Abramov Talks about Presentational vs Container Components](https://medium.com/@dan_abramov/smart-and-dumb-components-7ca2f9a7c7d0#.v3t2z819q)
+
+#### Connect Magic
+
 *`connect()`*  
-
-
 Connects a React component to the Redux store. Behind the scenes it actually returns a new connected component that wraps around any existing components.  
 
-Takes at least one argument, either `mapStateToProps` or `mapDispatchToProps` which are generally each defined outside of this function. (Note: There are other arguments that we will not get into here, such as `mergeProps` and `options`)  
+Takes at least one argument, either `mapStateToProps` or `mapDispatchToProps` or both.
 
-```
-// containers/AppThatCaresContainer.js
+*`mapStateToProps(state, [ownProps])`*  
+Function.   
 
-...
-connect(mapStateToProps, mapDispatchToProps)(AppThatCares)
-```
-
-```
-<Provider store={store} />
-  <App />
-    <Container(TodoList) />
-      <TodoList />
-    </Container>
-  </App>
-</Provider>
-```
-
-*`[mapStateToProps(state, [ownProps]): stateProps](Function)`*  
 If passed into `connect()`, the component will subscribe to Redux store updates. Any time the store is updated, `mapStateToProps` will be called and will pass along the updated props. If `ownProps` is specified, its value will be what is passed as props to the component.
 
-*`[mapDispatchToProps(dispatch, [ownProps]): dispatchProps](Object or Function)`*  
-By default injects the `dispatch()` method into your component's props, which connects any event listeners to a designated action and reducer. If `ownProps` is specified, its value will be what is passed as props to the component. If an object is passed as an argument, anything inside will be assumed to be a Redux action creator. Functions will be given access to `dispatch()`
+*`mapDispatchToProps(dispatch, [ownProps])`*  
+Object or Function.  
 
-*`<Provider store>`*  
+By default injects the `dispatch()` method into your component's props, which connects any event listeners to a designated action and reducer. If `ownProps` is specified, its value will be what is passed as props to the component. If an object is passed as an argument, anything inside will be assumed to be a Redux action creator.
+
+```
+containers/ComponentThatCaresContainer.js
+```
+
+```js
+import ComponentThatCares from './ComponenThatCares.js'  
+
+const mapStateToProps = () => {
+  // Some code to connect Component to State within the Redux Store
+}
+
+const mapDispatchToProps = () => {
+  // Some code to connect Component to app Actions and therefore Reducers within Redux Store
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ComponentThatCares)
+```
+
+*`<Provider store={store}>`*  
 Typically, this component is wrapped around your application's root component. This allows the `connect()` method in nested components to have access to the Redux store.
 
 **Example:**:  
 
-```
+```js
 render (
   <Provider store={store}>
     <App />
@@ -100,31 +159,39 @@ render (
 ```
 
 *Middleware*  
+[Redux Docs: Middleware](http://redux.js.org/docs/advanced/Middleware.html)  
 Middleware is code inserted between the part of your app receiving a request and the part that generates a response. In other words (straight from the docs), it **provides a third party extension point between dispatching an action and the moment it reaches the reducer**. There are tons of examples of middleware usage in a React-Redux app, but a big reason is to make asynchronous API calls to fetch data from outside your app.
 
 **Example:**
 (`hitTwitterAPI` is a made-up function that makes a request to some third party API, for instance.)
 
-```
+```js
 let store = createStore(
   reducers,
   applyMiddleware(hitTwitterApi)
   )
 ```
 
+### Code Along  
+[Redux Second Look](https://github.com/martensonbj/redux-second-look)
+* Clone down
+* `npm install`  
+* Checkout a new branch
+
 ### Organizing An App
 
-Implementing Redux forces you to think about your app from a high-level perspective, in terms of the data you need to manage.
+Implementing Redux forces you to think about your app from a high-level perspective, in terms of the data you need to manage and how the state of your app will change.
 
 Let's start by looking at how to organize a directory structure in broad terms. It is common to put actions, components, containers, and reducers in their own folders.   
 
-```
+```js
 actions/
 app/
+src/
+  components/
+  containers/
+  reducers/
 build/
-components/
-containers/
-reducers/
 test/
 .babelrc
 .gitignore
@@ -133,10 +200,11 @@ README.md
 webpack.config.js
 ```
 
-If you are coding along, you'll need the following directories:  
-`mkdir actions components containers reducers test`  
+If you are coding along, you'll need to add the following directories:  
+`mkdir test src src/actions src/components src/containers src/reducers`  
 
-This is what we want to build:  
+#### What We Are Building:  
+(Sorry. It was pumpkin season.)  
 
 ![Imgur](http://i.imgur.com/XSEWgwR.png)
 
@@ -151,9 +219,9 @@ What components do you foresee being necessary? What actions? How are these goin
   - Filter(s)  
   - Footer  
 
-Thinking back to our first look at Redux, we know that each component is to render something to the DOM based on state, and they will have behavior called "actions" that pass along information to update that state. Let's break down what our components need to facilitate functionality.
+Let's break down what our information each component might need to render, and what events (aka "actions") it needs to listen for.
 
-**AddTodo:**  
+**AddTodoForm:**  
   State:  
     - None. (It's an input field and a button. Nothing about the rendering is changed based on user interaction)  
 
@@ -161,10 +229,11 @@ Thinking back to our first look at Redux, we know that each component is to rend
 
    We have a form with a submit button, on click we need it to grab the value from the input field. Our action object would look something like this:  
 
-```
+```js
   {
     type: "ADD_TODO",
-    payload: { text: "Go to the Vault" }
+    text: "Go to the Vault"
+    id: 1
   }
 ```
 
@@ -176,41 +245,44 @@ Thinking back to our first look at Redux, we know that each component is to rend
 
   Each individual todo-list item will have an on-click even that can mark itself as complete. When this happens, we need to update the todo list item. The information needed to make this happen is simply the id of the todo-list item.
 
-```
+```js
     {
       type: "TOGGLE_TODO",
-      payload: { id: ### }
+      id: 2
     }
 ```
 
 **Filter**  
   State:  
-    - Which Filter is currently applied (ie: all, complete, incomplete)  
+    - Which Filter has been selected (ie: all, complete, incomplete)  
 
   Actions: "SET_FILTER"  
 
-  Tells other components which filter has been selected, and therefore which todo list items to display. This means we need it to know which filter is active.
+  Tells other components which filter has been selected, and therefore which todo list items to display. This means we need it to know which filter is active and update state accordingly.
 
-```
+```js
   {
     type: "SET_FILTER",
-    payload: { filter: "Completed" }
+    filter: "Completed"
   }
 ```
 
-### Time For Action Creators
+### Actions/Action Creators
 
-So based on our thorough planning, we have three actions: "ADD_TODO", "TOGGLE_TODO", and "SET_FILTER". This means we need three Action Creators.
+So based on our thorough planning, we have three actions: "ADD_TODO", "TOGGLE_TODO", and "SET_FILTER". This means we need three Action Creator functions to return the objects our reducers need to update state.
 
-Recall that an Action Creator is a function that takes in data from a DOM event, and returns an action object with any additional information that is needed for our reducers to update state.  
+Recall that an Action Creator is a function that takes in data from a DOM event, and returns an action object with any additional information that is needed.  
 
-`touch actions/index.js`  
+Create an actions file now, and update it to match the following.  
 
-```
-export const addTodo = (text) => {
+`touch src/actions/index.js`  
+
+```js
+export const addTodo = (text, id) => {
   return {
     type: 'ADD_TODO',
-    text
+    text,
+    id
   }
 }
 
@@ -231,27 +303,27 @@ export const setFilter = (filter) => {
 
 ### Add Reducers
 
-Once our actions have been filtered through our Action Creator, we need a couple reducers to handle what that means in terms of updating our application's state.   
+Once our actions have been fired off, we need a couple reducers to handle what that means in terms of updating our application's state.  
 
 We will need:  
   - Something to handle our todos  
-  - Something to deal with filters.   
+  - Something to deal with setting/changing filters.   
 
 The todos reducer will handle the 'ADD_TODO' and 'TOGGLE_TODO' actions.  
 
-The filters reducer will handle a default filter (probably "show all" of some sort), and the 'SET_FILTER' action.  
+The filters reducer will handle a default filter (probably `'SHOW_ALL'` of some sort), and the `'SET_FILTER'` action to toggle between `active` and `completed` tasks.  
 
 First, create the two reducers.  
 
-`touch reducers/todos.js reducers/setFilter.js`  
+`touch src/reducers/todos.js src/reducers/setFilter.js`  
 
-`// reducers/todos.js`  
+`// src/reducers/todos.js`
 
-```
+```js
 const todos = (state=[], action) => {
   switch (action.type) {
     case 'ADD_TODO':
-      return [...state, {id: Date.now(), text: action.text, completed: false}]
+      return [...state, {id: action.id, text: action.text, completed: false}]
     case 'TOGGLE_TODO':
       return state.map(todo => {
         if (todo.id !== action.id) {
@@ -267,9 +339,9 @@ const todos = (state=[], action) => {
 export default todos
 ```
 
-`// reducers/setFilter.js`  
+`// src/reducers/setFilter.js`  
 
-```
+```js
 const setFilter = (state='SHOW_ALL', action) => {
   switch (action.type) {
     case 'SET_FILTER':
@@ -282,13 +354,13 @@ const setFilter = (state='SHOW_ALL', action) => {
 export default setFilter
 ```
 
-Recall from our first look at redux that your app can only import one reducer, because to create a redux store you need to pass it one exported file. We currently have two reducers, which means we need to combine then.
+Recall from our slide deck that your app can only import one reducer. To create a redux store you need to pass it one exported file, We currently have two reducers, which means we need to combine them into a...drumroll..."root reducer".
 
-`touch reducers/index.js`  
+`touch src/reducers/index.js`  
 
-`// reducers/index.js`  
+`// src/reducers/index.js`  
 
-```
+```js
 import { combineReducers } from 'redux'
 import todos from './todos'
 import setFilter from './setFilter'
@@ -303,7 +375,7 @@ export default reducers
 
 ### Build Out Components
 
-Recall our list of components:  
+Here's our list of components:  
 
 **Components**  
   - Add Todo Form  
@@ -312,7 +384,7 @@ Recall our list of components:
   - Filter(s)  
   - Footer  
 
-For each component we have that deals with our redux store, we need a container component wrapped around it to handle the messy logic, and a presentational component nested within to render that information.  
+For each component that needs to interact with state, we need a container component wrapped around it to talk to our redux store, and a presentational component connected to it that will render the information.  
 
 Which components need to interact with and/or care about state?  
   - Add Todo Form  
@@ -337,21 +409,22 @@ Let's build out a slice of the app from start to finish to see how everything is
 ##### `<AddTodoForm />`
 This will be our form. We only need an input field and a submit button. The `onSubmit` callback is coming in as Props from the container component that hasn't been written yet.
 
-`touch components/AddTodoForm.js`  
+`touch src/components/AddTodoForm.js`  
 
-`// components/AddTodoForm.js`  
+`// src/components/AddTodoForm.js`  
 
-```
+```js
 import React from 'react'
 
-let AddTodoForm = ({ onSubmit }) => {
+let AddTodoForm = ({ handleSubmit }) => {
   let input
+  let i = todos.length
 
   return (
     <section>
       <form onSubmit={ (e) => {
-            e.preventDefault()
-            onSubmit(input.value)
+        e.preventDefault()
+        handleSubmit(input.value, i)
       }}>
         <input ref={ node => { input = node }} />
         <button>Add Todo</button>
@@ -368,67 +441,67 @@ This is where the magic happens!
 
 Now that we have our presentational components ready to display the appropriate information, we need to build out the container components that will handle what that information is.  
 
-Think of container components as a type of shell that gets a high five from redux, and wraps around a dumb component to hand it any information it needs to render. This means that each of our containers need to import the presentational component it cares about, then using Redux's built in methods `connect` and `dispatch` it will pass it data from the Redux store. This is also where the two objects `mapDispatchToProps`, and `mapStateToProps` come in.
+Think of a container as a type of shell that is always talking to the redux `store`, and wraps around a  component to hand it any information it needs to render. This means that each of our containers need to import the presentational component it needs to pass information to, then using Redux's built in methods `connect` and `dispatch` it will act as a liaison between the store (which knows about state) and the component (which does not). This is also where the two objects `mapDispatchToProps`, and `mapStateToProps` come in.
 
-For our AddTodo container, we need the `connect` method from Redux, the `addTodo` action we defined in our ActionsCreator, and the `AddTodoForm` presentational component that needs access to these "props".
+For our AddTodo container, we need the `connect` method from Redux, the `addTodo` action we defined in our ActionsCreator, and the `AddTodoForm` component that needs access to these "props".
 
-#### `<AddTodo />`
-`touch containers/AddTodo.js`
+#### `<AddTodo />` Container
+`touch src/containers/AddTodoFormContainer.js`
 
-`// containers/AddTodo.js`
+`// src/containers/AddTodoFormContainer.js`
 
-```
+```js
 import { connect } from 'react-redux'
 import { addTodo } from '../actions'
 import AddTodoForm from '../components/AddTodoForm'
 
+const mapStateToProps = (state) => {
+  return { todos: state.todos }
+}
+
 const mapDispatchToProps=(dispatch) => {
   return {
-    onSubmit: (text) => {
-      dispatch(addTodo(text))
+    handleSubmit: (text, id) => {
+      dispatch(addTodo(text, id))
     }
   }
 }
 
-let AddTodo = connect(null, mapDispatchToProps)(AddTodoForm)
-
-export default AddTodo
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
 
-Take a second to notice that the prop `onSubmit` is exactly what our `AddTodoForm` component is expecting when it renders. Because of redux our container is hooked up to the required action that passes the new component information through our reducers to update state.
+Take a second to notice that the prop `handleSubmit` is exactly what our `AddTodoForm` component is expecting when it renders. Because of redux our container is hooked up to the required action that passes the new component information through our reducers to update state.
 
 #### App
 
-Let's wire these two up to our DOM.
+Let's wire these two up to our DOM with a parent component.
 
-`touch components/App.js`
+`touch src/components/App.js`
 
-```
-import React from 'react'
-import AddTodo from '../containers/AddTodo'
+```js
+import React, { Component } from 'react'
+import AddTodoForm from '../containers/AddTodoFormContainer'
 
-class App extends React.Component {
-  render () {
-    return (
-      <section>
-        <AddTodo />
-      </section>  
-    )
-  }
+const App = () => {
+  return (
+    <section>
+      <AddTodoForm />
+    </section>  
+  )
 }
 
 export default App
 ```
 
-### Create Redux Store
+### Create The Redux Store
 
 #### `index.js`
 
-We need a file that will tell our app what to render to the DOM, pulling in all the necessary pieces. This creates our Redux Store. The file already exists as the entry point of our app (`app/index.js`), but we need to beef it up.
+We need a file that will tell our app what to render to the DOM, pulling in all the necessary pieces. In that file we can create our Redux Store. The file already exists as the entry point of our app (`app/index.js`), but we need to beef it up.
 
 `// app/index.js`  
 
-```
+```js
 require('./main')
 
 import React from 'react'
@@ -436,9 +509,9 @@ import { render } from 'react-dom'
 
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
-import reducers from '../reducers'
+import reducers from '../src/reducers'
 
-import App from '../components/App'
+import App from '../src/components/App'
 
 let store = createStore(reducers)
 
@@ -464,20 +537,19 @@ Now we finish building out our presentational components.
 #### `<Todo />`
 Before we deal with a list of Todos, let's set up our individual Todo component. It makes sense to set this up as a `<li>` html element since an individual todo will be part of a larger `<ul>` section. We will need some text, for whatever the user inputs as the value of the Todo, and an `onClick` event for if the user marks a todo as completed.  
 
-`touch components/Todo.js`  
+`touch src/components/Todo.js`  
 
-```
+```js
 import React from 'react'
 
-const Todo = ({ onClick, completed, text }) => {
-  (
+const Todo = ({handleClick, completed, text}) => {
+  return (
     <li
-      onClick={ onClick }
+      onClick={handleClick}
       style={
-        { textDecoration: completed ? 'line-through' : 'none' }
-      }
-    >
-    { text }
+      { textDecoration: completed ? 'line-through' : 'none'}
+    }>
+      {text}
     </li>
   )
 }
@@ -489,26 +561,30 @@ export default Todo
 
 Now to render a list of all "todos" which will come from an array stored in our state. The array of existing todos and the logic behind an onClick function (to trigger whether or not the item is marked complete) will be sent in from the parent container.
 
-`touch components/TodoList.js`  
+`touch src/components/TodoList.js`  
 
-````
+```js
 import React from 'react'
-import Todo from './Todo.js'
+import Todo from './Todo'
 
 const TodoList = ({ todos, onTodoClick }) => {
   if (todos.length === 0) {
     return <h3>You have nothing to do!</h3>
   }
 
-  <ul>
+  return(
+    <ul>
     { todos.map(todo => {
-      <Todo
-        key={todo.id}  
-        {...todo}
-        onClick={() => onTodoClick(todo.id)}
-      />  
-    })}
-  </ul>
+      return (
+        <Todo
+          key={todo.id}
+          {...todo}
+          handleClick={() => onTodoClick(todo.id)}
+        />
+      )
+    }) }
+    </ul>
+  )
 }
 
 export default TodoList
@@ -518,9 +594,9 @@ export default TodoList
 
 Each of our given filters will be rendered as either a link or plain text depending on if it's active or not. They'll each need a boolean, text to display, and a callback to trigger the boolean to change.
 
-`components/FilterLink.js`  
+`src/components/FilterLink.js`  
 
-```
+```js
 import React from 'react'
 
 const FilterLink = ({ active, children, onClick }) => {
@@ -528,53 +604,58 @@ const FilterLink = ({ active, children, onClick }) => {
     return <span>{ children }</span>
   }
 
-  <a  href="#"
-      onClick={ (e) => {
-        e.preventDefault()
-        onClick()
-      }}
-  >
-  { children }
-  </a>
-
+  return (
+    <a  href="#"
+        onClick={ (e) => {
+          e.preventDefault()
+          onClick()
+        }}
+    >
+      { children }
+    </a>
+  )
 }
 
 export default FilterLink
 ```
 
-#### `<Footer />`
+#### `<Footer />`  
+
 Our list of available filters is displayed as a row of links in our footer, which will each be a container component. Lets put together the rendering component now.
 
-`components/Footer.js`
+`src/components/Footer.js`
 
-```
+```js
 import React from 'react'
-import Filter from '../containers/Filter'
+import FilterContainer from '../containers/FilterContainer'
 
-const Footer = () => (
-  <footer>
-    <Filter filter="SHOW_ALL">All Todos</Filter>
-    <Filter filter="SHOW_ACTIVE">Active</Filter>
-    <Filter filter="SHOW_COMPLETED">Completed</Filter>
-  </footer>
-)
+const Footer = () => {
+  return (
+    <footer>
+      <FilterContainer filter="SHOW_ALL">All Todos</FilterContainer>
+      <FilterContainer filter="SHOW_ACTIVE">Active</FilterContainer>
+      <FilterContainer filter="SHOW_COMPLETED">Completed</FilterContainer>
+    </footer>
+  )
+}
 
 export default Footer
 ```
 
 ### Remaining Container Components
 
-#### `<FilteredTodoList />`
+#### `<FilteredTodoList />`  
+
 Next up is the TodoList container which is a bit more complicated. We need to get all of the todos, including which filter is being applied (if any), and then pass that information to the presentational component as props.
 
-`touch containers/FilteredTodoList.js`  
+`touch src/containers/FilteredTodoList.js`  
 
-```
+```js
 import { connect } from 'react-redux'
 import { toggleTodo } from '../actions'
 import TodoList from '../components/TodoList'
 
-// Based on what filter the user has clicked, what todos do we need to manipulate?
+// Based on what filter the user has clicked, what todos do we want to work with?
 
 const getFilteredTodos = (todos, filter) => {
   switch (filter) {
@@ -585,11 +666,11 @@ const getFilteredTodos = (todos, filter) => {
     case 'SHOW_ACTIVE':
       return todos.filter(todo => !todo.completed)
     default:
-      throw new Error('Unknown filter: ' + filter)
+      return new Error('Unknown filter: ' + filter)
   }
 }
 
-// What part of state does the component care about?
+// What part(s) of state does the component care about?
 
 const mapStateToProps = (state) => ({
   todos: getFilteredTodos(state.todos, state.setFilter)
@@ -597,8 +678,10 @@ const mapStateToProps = (state) => ({
 
 // What are we handing down as an event listener (also coming through as a prop), and what reducer is organizing what that action needs?
 
-const mapDispatchToProps = ({
-  onTodoClick: toggleTodo
+const mapDispatchToProps = (dispatch) => ({
+  onTodoClick: (id) => {
+    dispatch(toggleTodo(id))
+  }
 })
 
 const FilteredTodoList = connect(
@@ -614,7 +697,7 @@ Next is the Filter container component. Remember we created three different filt
 
 `touch containers/Filter.js`  
 
-```
+```js
 import { connect } from 'react-redux'
 import { setFilter } from '../actions'
 import FilterLink from '../components/FilterLink'
@@ -624,17 +707,15 @@ const mapStateToProps = (state, props) => ({
 })
 
 const mapDispatchToProps = (dispatch, props) => ({
-  onClick: () => {
-    dispatch(setFilter(props.filter))
-  }
+  handleClick () { dispatch(setFilter(props.filter)) }
 })
 
-const Filter = connect(
+const FilterContainer = connect(
   mapStateToProps,
   mapDispatchToProps
 )(FilterLink)
 
-export default Filter
+export default FilterContainer
 ```
 
 #### `<App />`  
@@ -643,22 +724,22 @@ Update the wrapper component.
 
 `// components/App.js`
 
-```
-import React from 'react'
-import AddTodo from '../containers/AddTodo'
-import FilteredTodoList from '../containers/FilteredTodoList'
+```js
+import React, { Component } from 'react'
+import AddTodoFormContainer from '../containers/AddTodoFormContainer'
+import FilteredTodoListContainer from '../containers/FilteredTodoListContainer'
 import Footer from '../components/Footer'
 
-class App extends React.Component {
-  render () {
-    return (
-      <section>
-        <AddTodo />
-        <FilteredTodoList />
-        <Footer />
-      </section>  
-    )
-  }
+
+
+const App = () => {
+  return (
+    <section>
+      <AddTodoFormContainer />
+      <FilteredTodoListContainer />
+      <Footer />
+    </section>
+  )
 }
 
 export default App
@@ -668,5 +749,5 @@ export default App
 You just built a React-Redux To-Do list.
 
 ### Resources
-[Official Redux Docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options)
-[Original Todo List Redux  Tutorial](https://medium.com/@rajaraodv/step-by-step-guide-to-building-react-redux-apps-using-mocks-48ca0f47f9a#.fn8hsv6vf)
+[Official Redux Docs](https://github.com/reactjs/react-redux/blob/master/docs/api.md#connectmapstatetoprops-mapdispatchtoprops-mergeprops-options)  
+[Original Todo List Redux  Tutorial](https://medium.com/@rajaraodv/step-by-step-guide-to-building-react-redux-apps-using-mocks-48ca0f47f9a#.fn8hsv6vf)  

@@ -60,3 +60,8 @@ title: Front End Instructor Contact Information
   * Slack - @robbiejaeger
   * Github - [robbiejaeger](https://github.com/robbiejaeger)
   * For Pairing - Send Slack DMs to schedule a time
+
+* Alex Tideman
+  * Slack - @alex_tideman
+  * Github - [Alex-Tideman](https://github.com/robbiejaeger)
+  * For Pairing - Send Slack DMs to schedule a time

@@ -1,8 +1,20 @@
 ---
-title: Foundations JS - II
+title: Introduction to JavaScript — Part II
+title: JS II
 length: 120
-tags: js, introduction, foundation, variables
+tags: javascript, introduction, foundation, variables
 ---
+
+## Review
+
+Before we get started with new material, let's go over over what we've learned so far.
+
+- What are the three basic data types in Javascript?
+- How do we write a variable and why would we use one?
+- How do we write a conditional?
+- How do you write a function?
+- How do you call a function?
+
 ## Learning Goals
 
 By the end of this lesson, you will know/be able to:
@@ -113,12 +125,8 @@ var volumeTwo = getSize(1, 8, 7)[0];
 ```
 
 ## Functions - Famous or Anonymous?
-Remember expressions? What do they do? :smiling_imp:
-Where can expressions be used?
-Can a function return a value?
-Can a function be an expression?
 
-So far, we've mostly been working with *named functions*. Through *function declaration* `function myNamedFunction()` we create a function that we intend to call later in our code via the name we gave it. Hmmmm... that is kind of cool...in that it reminds me of when we were naming/assigning variables. So a named function, is kind of like that. We create a name, then assign a series of instructions (the function) to that name, and we get to use it all over the place, simply by calling the name of the function with its parentheses.
+So far, we've been working with *named functions*. Through *function declaration* `function myNamedFunction()` we create a function that we intend to call later in our code via the name we gave it. That is kind of cool. It feels very similar to when we were naming/assigning variables. A named function is kind of like that: we create a name, assign a series of instructions (the function) to that name, and we get to use it all over the place, simply by calling the name of the function with its parentheses.
 
 ```javascript
 // Declare a named function
@@ -131,10 +139,20 @@ function myRadFunction(parameter) {
 myRadFunction("Boom");
 ```
 
-So what about that function as an expression bit? What the heck is that about? Anywhere the interpreter expects to find an expression, a la in a variable assignment for instance, we can use an expression that is NOT named, in which case we call it an *anonymous function*.
+So what's all this business about *anonymous functions*?
+
+Here's a hint: Remember expressions? What do they do? :smiling_imp:
+
+- Where can expressions be used?
+- Can a function return a value?
+- Can a function be an expression?
+
+Let's talk about that "function as an expression" bit. What the heck is that about? Anywhere the interpreter expects to find an expression, like variable assignment for instance, we can use an expression that is NOT named. In the context of functions, we call this an *anonymous function*. Remember that an expression simply evaluates to and returns a value, so it makes sense that we should be able get that value from a function.
+
+With that in mind, let's take a look at an example of an anonymous function:
 
 ```javascript
-// Instead of declaring a named function, let's assign a function to a variable.
+// Instead of declaring a named function, we assign a function to a variable.
 var area = function(width, height) {
   return width * height;
 };
@@ -146,7 +164,7 @@ var size = area(3, 4);
 Why does this matter? When should I care?
 
 - A function declaration (that whole named function bit above) has a higher priority to the interpreter than an anonymous function. The interpreter always looks for variables and function declarations _before_ going through each section of a script, line-by-line. This means that a function created by function declaration can be called _before_ it has even been declared.
-- When a function is treated as an expression, the interpreter won't process it until it gets to that statement. This means you cannot call the anonymous function _before_ the interpreter discovers it. It also means any preceding code up to that point could potentially alter waht goes inside that function.
+- When a function is treated as an expression, the interpreter won't process it until it gets to that statement. This means you cannot call the anonymous function _before_ the interpreter discovers it. It also means any preceding code up to that point could potentially alter what goes inside that function.
 - Anonymous functions are good for:
   - code that you really only need to run once in a task, rather than something you need to repeatedly call in other parts of the script
   - as an argument, that will calculate a value on the fly as it is being passed into another function
