@@ -5,15 +5,12 @@ module: 3
 
 ### Stuff You (should) Already Know
 
-Pull requests are used to promote and facilitate app development within groups. It is important as a dev team to create small, modular branches that encapsulate the code you are working on for a particular feature.
-
-This is are important for many reasons.
-*
-*
+Pull requests are used to promote and facilitate app development within groups. It is important as a dev team to create small, modular branches that encapsulate the code you are working on for a particular feature. This includes writing helpful, descriptive commit messages that create a record of the development of your code.  
 
 ### Commit Message Structure
 There are lots of good resources and examples via the google but here are a few to keep on hand:
-  * [Note About Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+* [5 Useful Tips from Thoughtbot](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message)
+* [Note About Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
 
 ```
 First line of commit message, capitalized with a 50 character limit
@@ -129,7 +126,6 @@ squash 30e0ccb Crap forgot to delete a comment somewhere
 ```
 
 Save the file, and another window should pop up with more information. At this time you can make changes to the first commit message that is a more accurate description of what's going on. Save, and close the file. Run `git log`. Your commits have been squashed!
-
 
 #### Amending Commits
 
