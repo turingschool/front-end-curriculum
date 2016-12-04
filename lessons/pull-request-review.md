@@ -92,8 +92,43 @@ Why use rebase?
 Let's say you committed some code and made a mistake in your first commit, then fix said mistake in a later commit. When someone else is reviewing your code, they will read commits chronologically and see that first mistake without knowing that later it has already been addressed. Rebasing allows your to compress your commits to avoid this situation, among others.
 
 #### Squashing Commits
+[Squashing Commits with Rebase](http://gitready.com/advanced/2009/02/10/squashing-commits-with-rebase.html)  
 
-When you merge a feature branch into master, all of your commits are retained. Sometimes you'll have a few in there that aren't needed..like `oops forgot to delete that comment`. Although the history is helpful as you're working on the feature, certain commits aren't useful to other developers walking through the more pivotal changes in your app.
+**WORD OF CAUTION** only squash commits that haven't been pushed to an external repository. IE if you're already merged into master, it's too late. Only rebase and squash commits that don't affect anyone else's potential code base.
+
+When you merge a feature branch into master, all of your commits are retained. Sometimes you'll have a few in there that aren't needed..like `oops forgot to delete that comment`. Although the history is helpful as you're working on the feature, certain commits aren't useful to other developers walking through the more pivotal changes in your app.  
+
+* Step 1: `git rebase -i HEAD~5`
+  - Git will now know that you want to make changes to the last 5 commits made to your branch, and pop open an editor. You'll see something like this:
+
+```
+pick 01d1124 This is the commit I care about
+pick 6340aaa Some other commit I made that isn't important
+pick ebfd367 Dont care other stuff blah
+pick 30e0ccb Crap forgot to delete a comment somewhere
+
+# Rebase 60709da..30e0ccb onto 60709da
+#
+# Commands:
+#  p, pick = use commit
+#  e, edit = use commit, but stop for amending
+#  s, squash = use commit, but meld into previous commit
+#
+# If you remove a line here THAT COMMIT WILL BE LOST.
+# However, if you remove everything, the rebase will be aborted.
+#
+```
+
+* Step 2: Assuming I want to squash all of the commits into that first one, I would adjust the top of the file to look like this:
+
+```
+pick 01d1124 This is the commit I care about
+squash 6340aaa Some other commit I made that isn't important
+squash ebfd367 Dont care other stuff blah
+squash 30e0ccb Crap forgot to delete a comment somewhere
+```
+
+Save the file, and another window should pop up with more information. At this time you can make changes to the first commit message that is a more accurate description of what's going on. Save, and close the file. Run `git log`. Your commits have been squashed!
 
 
 #### Amending Commits
