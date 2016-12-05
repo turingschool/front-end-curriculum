@@ -15,35 +15,62 @@ In this lesson, you will learn how to:
 
 ### Some Context: What is GitHub, and why do we use it?
 
+We learned how to use Git from the terminal in the last lesson to control the versions of our projects (repositories) - that work was all done locally. It was hard to share your code with anyone else on another computer. Today, we'll learn how to push your code up to the cloud! We can use an website called GitHub to store your code and make it much easier to share code and collaborate with others.
 
-
-Again, Git is NOT the same thing as GitHub!
+Again, Git is NOT the same thing as GitHub! Git is the local command-line language for version control, and GitHub is a website to share your code.
 
 ## Setup
 
 In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
 
-## Working Example...
+## An Example Journey Using GitHub (and Git)
 
-* Create directory (new directory from previous lesson)
-* Initialize git
-* Create repository on GitHub (naming convention: these names should be the same to avoid confusion)
-* Add remote (origin) to local repository - we are now linked!
-* Checkout branch
+Some of this is review from the Git introductory lesson, but there are all of the new GitHub workflow concepts in this example.
+
+### Create a new directory and initialize Git (`git init`)
+
+(Project with JS file and basic DOM interaction? click a button and something gets added to page?...)
+
+### Create repository on GitHub
+
+(naming convention: these names should be the same to avoid confusion)
+
+### Add remote (origin) to local repository (`git remote`)
+
+we are now linked!
+
+### Checkout a feature branch (`git branch`, `git checkout`)
+
 * Add HTML file
 * Add content
-* Commit changes
+
+### Commit feature work (`git add`, `git commit`)
+
+* Commit content
 * Add more content (just for commit repetition)
 * Commit new content, at this point happy to merge with master
 
 This is where things differ greatly.
 
-* Push the branch up to GitHub (go to GitHub and view the branch and changes)
-* Create a pull request (PR)
+### Push the branch up to GitHub (`git push`)
+
+go to GitHub and view the branch and changes
+
+### Create a pull request on GitHub (PR)
+
 * View changes and merge (into master - view master to see the changes are on master)
+
+### What is going on locally?
 * Back to the local repository, checkout master and notice the changes that were merged on GitHub are NOT on our local machine
-* Pull remote master into our local version
-* Checkout new branch and repeat the process...
+
+### Merge pull request (PR)
+
+
+### Pull remote master into our local version
+
+### Your Turn
+
+Checkout new branch and repeat the process... (this is where they can push up their dog party or what they have for their number guesser projects so far.)
 
 ## A Typical Workflow
 
