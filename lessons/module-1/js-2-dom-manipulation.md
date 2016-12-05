@@ -4,6 +4,8 @@ length: 180
 tags: javascript, dom, browser
 ---
 
+<!--  NOTE 12/01/16: add intro to basic for-loops to this lesson for updating innerText on querySelectAll-->
+
 ## Learning Goals
 
 * Continue to learn how to access and use the Chrome Developer Tools

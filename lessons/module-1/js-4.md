@@ -1,75 +1,17 @@
 ---
-title: Foundations JS - III
-tags: js, introduction, foundation, variables
+title: Introduction to JavaScript IV
+tags: js, introduction, constructor functions, this
 ---
 ### Goals
 
 By the end of this lesson, you will know/be able to:
 
-* Declare objects using literal and constructor notation
+* Understand what a constructor function is
+* Introduction to ```this```
 * Understand whether you need an array or object data structure
-* Understand the value of leveraging prototype methods in JS
-* Understand what ```this``` is
 
-# Objects
-Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds a value. So basically, you know this already. A key-value pair in an object is essentially a variable. That variable is called a _property_ of the object. When we assign a function as the value to one of our keys, we call that function a _method_. Let's look at this:
+<!-- pulled from second half of JS III lesson -->
 
-```javascript
-var school = {
-  name: 'International School of Denver',
-  capacity: 250,
-  languageImmersion: true,
-  currentStudents: 75,
-  checkOpenSpots: function() {
-    return this.capacity - this.currentStudents;
-  }
-}
-```
-The ```school``` object has four properties:
-
-- ```name: 'International School of Denver'```
-- ```capacity: 250```
-- ```languageImmersion: true```
-- ```currentStudents: 75```
-
-The ```school``` object has one method:
-
-- ```checkOpenspots: function(){ return this.capacity - this.currentStudents; }```
-
-There are several ways to create an object, and the easiset and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
-
-There are two ways to access the properties or methods of an object: 
-
-- _Dot Notation_:
-```javascript
- var schoolName = school.name
- var schoolCapacity = school.capacity
-```
-- _Brackets_: 
-```javascript
-var schoolName = school['name']
-var schoolCapacity = school['capacity']
-``` 
-
-Let's goof off in the console a bit:
-
-```javascript
-// Create an object in honor of @jhunbug
-var myLitObject = {
-  coolFactor: "bananas"
-}
-
-// 1. Get the value of myLitObject
-// 2. Get the value of coolFactor
-// 3. Add a new property of your choosing
-// 4. Check the value of myLitObject again
-// 5. Ask myLit Object for the value of the new property you set, but utilize a different notation than when you asked for the value of coolFactor in step #2
-// 6. Change the value of coolFactor
-// 7. Get the value of myLitObject
-// 8. Create a method on myLitOjbect that logs "Skateboarding is fun" to the console
-// 9. Check the value of myLitObject. Do you see your method?
-// 10. Use myLitObject to log "Skateboarding is fun"
-```
 Great, we feel pretty good about literal notation to create an object. Let's talk about _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
 ```javascript
@@ -91,7 +33,7 @@ function Restaurant(name, tables, reservations) {
 }
 ```
 
-What is happening up ^^ there? 
+What is happening up ^^ there?
 - A function called Restaurant is a template for creating new objects that represent restaurants
 - The function has three parameters
 - Each parameter sets the _value_ of a _property_ in the object
@@ -116,7 +58,7 @@ var secondRest = new Restaurant("Chilis")
 // Get the name of the firstRest and the secondRest
 firstRest.name
 secondRest.name
-``` 
+```
 
 So what's all the fuss about ```this``` anyway? Seems pretty straightforward. Well, turns out, the value of ```this``` changes in different situations. Let's look at those situations:
 
@@ -139,13 +81,13 @@ showWidth();
 // METHOD OF AN OBJECT - when does a function become a method? When it is defined INSIDE an object. In a method, "THIS" refers to the containing object.
 var shape = {
   width: 600,
-  height: 400, 
+  height: 400,
   getArea: function() {
     return this.width * this.height;
   }
 };
 
-// FUNCTION EXPRESSION AS A METHOD - what does that mean? An expression returns a single value. A function can be an expression. If you assign that function expression to a property on an object, it is then called a method. 
+// FUNCTION EXPRESSION AS A METHOD - what does that mean? An expression returns a single value. A function can be an expression. If you assign that function expression to a property on an object, it is then called a method.
 
 // Let's declare a global variable of width and assign the value of 600
 var width = 600;
@@ -193,7 +135,7 @@ Grid.prototype.addBlock(block) = function() {
 Grid.prototype.grow(num1, num2) = function() {
   // some parameter manipulation/assignment and growing of grid code here
 }
-``` 
+```
 
 ## Which Data Structure?
 The data you are required to represent is getting increasingly complex. You need several objects at one time, which can be stored in arrays or other objects. When deciding on an approach, you must consider how the data will be used. When the order of objects is important, they should be stored in an array. When you want to access objects using their name, they work well as properties of another object (because you would not need to iterate through all objects like in an array).
@@ -225,7 +167,3 @@ people.Mike.age
 people.Tony.active
 people.Becca.age
 ```
- 
-
-
-
