@@ -48,6 +48,7 @@ You can also close multiple at once. Adding the sentence `This PR closes #45, cl
 * Continuing to commit to a PR branch after making the initial PR request.
   - When those commits are pushed up to github, they will become part of the initial request causing confusion and a boatload of extra code not related to the original PR.
   - Each PR should have code relating to a single feature. Additional code for a second or separate feature should be committed on a separate branch, therefore through a separate PR.
+  - Exception: When a PR is used as a "WIP PR" that is used to initiate an on-going conversation - you'll usually see `WIP` in the title of the PR, which stands for "Work In Progress".
 
 * Keep an eye on the destination branch. `git push origin master` is not the same as `git push origin feature-a`
 
@@ -56,16 +57,16 @@ You can also close multiple at once. Adding the sentence `This PR closes #45, cl
 
 Let's say you're working on a feature, we'll call it "Feature A".
 
-* While working on feature A, create a new branch called `feature-a`
-* When ready to merge to master, submit a PR for feature A
-* The ONLY CODE in said PR should BE RELEVANT to feature A
+* While working on Feature A, create a new branch called `feature-a`
+* When ready to merge to master, submit a PR for Feature A
+* The ONLY CODE in said PR should BE RELEVANT to Feature A
 * Feature A gets merged into master, `feature-a` branch can be deleted.
 * Everyone pulls down fresh copy of master.
 * Repeat.
 
-Often, you'll be waiting for the `feature-A` branch to be merged into master but you'll want to get started on Feature B while you wait. The process for that looks like this:  
+Often, you'll be waiting for the `feature-a` branch to be merged into master but you'll want to get started on Feature B while you wait. The process for that looks like this:  
 
-* Feature B depends on the work you did for feature A.
+* Feature B depends on the work you did for Feature A.
 * The PR for `feature-a` branch has not been merged in, but you want to continue to make progress
 * Create a new branch `wip-feature-b`, **branched from the `feature-a` branch**.
 * Work on Feature B on the `wip-feature-b` branch.
@@ -77,7 +78,9 @@ Often, you'll be waiting for the `feature-A` branch to be merged into master but
 * Submit a PR for feature B with the `feature-b` branch
 
 ### Cleaning Up Commit History
- Often when you're ready to merge, there will be multiple commits that are not important to the workflow history of the branch being merged in. For example, nobody needs to see the time you ran `git commit -m "F U WEBPACK"`, or how many times your commit message read `fix merge conflict`.
+ Often when you're ready to merge, there will be multiple commits that are not important to the workflow history of the branch being merged in. For example, nobody needs to see the time you ran `git commit -m "F U WEBPACK"`, or how many times your commit message read `fix merge conflict`.  
+
+ This is where rebasing, and squashing come in.  
 
 #### Rebasing Commits
 [Documentation](https://git-scm.com/docs/git-rebase)  
