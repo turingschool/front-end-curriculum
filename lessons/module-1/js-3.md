@@ -99,6 +99,15 @@ Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds
 Let's look at an example:
 
 ```javascript
+var objectName = {
+  property1: value1,
+  property2: value2
+}
+```
+
+Which looks like this when we implement it in code:
+
+```javascript
 var school = {
   name: 'International School of Denver',
   capacity: 250,
@@ -138,26 +147,6 @@ var schoolName = school['name']
 var schoolCapacity = school['capacity']
 ```
 
-Let's goof off in the console a bit. Mandatory fun time!
-
-```javascript
-// Create an object in honor of @jhunbug
-var myLitObject = {
-  coolFactor: "bananas"
-}
-
-// 1. Get the value of myLitObject
-// 2. Get the value of coolFactor
-// 3. Add a new property of your choosing
-// 4. Check the value of myLitObject again
-// 5. Ask myLit Object for the value of the new property you set, but utilize a different notation than when you asked for the value of coolFactor in step #2
-// 6. Change the value of coolFactor
-// 7. Get the value of myLitObject
-// 8. Create a method on myLitOjbect that logs "Skateboarding is fun" to the console
-// 9. Check the value of myLitObject. Do you see your method?
-// 10. Use myLitObject to log "Skateboarding is fun"
-```
-
 ### What is `this`: a 10,000ft Introduction
 You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`?
 
@@ -166,3 +155,24 @@ You may have noticed that we used a familiar word in a strange way in the `check
 In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement that being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents`.
 
 `capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
+
+### Your Turn
+Let's goof off in the console a bit. As a group, we'll practice working with an object:
+
+```javascript
+// Create an object in honor of @jhunbug
+var myLitObject = {
+  burritoType: "carne asada"
+}
+
+// 1. Get the value of myLitObject
+// 2. Get the value of burritoType
+// 3. Add a new property of your choosing
+// 4. Check the value of myLitObject again
+// 5. Ask myLitObject for the value of the new property you set, but utilize a different notation than when you asked for the value of burritoType in step #2
+// 6. Change the value of burritoType
+// 7. Get the value of myLitObject
+// 8. Create a method on myLitOjbect that logs "Skateboarding is fun" to the console
+// 9. Check the value of myLitObject. Do you see your method?
+// 10. Use myLitObject to log "Skateboarding is fun"
+```
