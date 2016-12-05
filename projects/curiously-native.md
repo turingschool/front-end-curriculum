@@ -6,7 +6,9 @@ tags: react native, api
 
 ## The Project
 
-In this project, we'll be creating an mobile app with React Native that consumes a public API and reimagines a client interface. Your team will get to choose a theme for your interface to follow. For example, as a Minnesota native I could create a Github mobile app that uses canoe paddles to upvote and a river to show the branches in a repo. You can choose any 'native' theme but try to think of a unique interface that takes a very popular client and focuses the experience to a specific set of users. The choice of which API  your team is going to use is due to Steve by 4:00pm today. Below is a list of possible APIs to use. If you want to use something else, come talk to Steve or Alex for approval.
+In this project, we'll be creating an mobile app with React Native that consumes a public API and reimagines a client interface. We will also be using ImmutableJS to store the API data in Redux.
+
+Your team will get to choose a theme for your interface to follow. For example, as a Minnesota native I could create a Github mobile app that uses canoe paddles to upvote and a river to show the branches in a repo. Your team can choose any 'native' theme but try to think of a unique interface that takes a very popular client and focuses the experience to a specific set of users. The choice of which API  your team is going to use is due to Steve by 4:00pm today. Below is a list of possible APIs to use. If you want to use something else, come talk to Steve or Alex for approval.
 
 ### Pre-Work
 
@@ -33,7 +35,7 @@ For each project, we have included a rough summary list of features to include. 
 
 Build a basic version of the Github profile / feed UI. As a user, I should be able to:
 
-* Authenticate with my github account
+* Authenticate with my Github account
 * View basic information about my account (profile pic, number of starred repos, followers, following)
 * View a summary feed of my recent activity (recent commits)
 * View a summary feed of recent activity from users whom I follow
@@ -46,66 +48,38 @@ Extensions:
 * View a list of “@mentions” that I was included in
 * Create a new repository
 
-### Foursquare/Swarm
+### Facebook
 
-Build a basic check-in and venue browser. As a user, I should be able to:
+Build a basic version of the Facebook (web) UI. As a user, I should be able to:
 
-* Authenticate with my Foursquare/Swarm account
-* See my basic user information (Name, photo, number of check-ins, social media accounts, and whatever else you want)
-* See the score and venue of my most recent check-ins
-* Click on a check-in to see a venue “show” page
-* Have a page to search for venues by location. Each result should link to the venue show page
-* Search for a venue by location AND category
-* Venue Show Page
-* See Basic info, like name, address/location, category, and hours
-* See foursquare stats, like number of check-ins, who is the mayor
-* See the last 5 check-ins for this location * See 5 tips for this location
-
-Extensions:
-
-* Mayor or tips on a venue show page links to a profile for that user
-* Allow me to add a tip for a venue
-* Use the ‘multi’ endpoint to combine all of the venue show page requests into one request
-
-
-### Reddit
-
-Reddit can be a scary place. Tread lightly.
-
-Build a basic subreddit browser. As a user, I should be able to:
-
-* Authenticate with my Reddit account
-* View my basic info (username, karma)
-* View a list of my subreddit subscriptions
-* View a subreddit, with it’s rules and sidebar content
-* View the last 15 posts in a subreddit. Each post should be a link
-* View the score for each post
-* View the comments for each post. Comment replies should be visually nested.
-
-Extensions:
-
-* Add pagination for a subreddit
-* Add upvote and downvote links for each post
-* Add upvote and downvote links for each comment
-* Be able to view and send private messages
-* Create a new subreddit
-
-### Tumblr
-
-Build a basic version of the Tumblr UI. As a user, I should be able to:
-
-* Authenticate with my Tumblr account
-* See my basic profile information (username, profile pic)
+* Authenticate with my Facebook account
+* See my basic profile information (username, profile pic, friends)
 * View a list of recent posts from my feed
-* View embedded photo or video content for the posts
-* Favorite a post
-* Reblog a post
+* View my photos
+* View comments for each post
+* View like count for each post
 
 Extensions:
 
-* Create a post (perhaps starting with just text posts and moving on to more complicated types)
-* Generate a permalink for a post
-* Follow a user whose post was reblogged into my feed
+* Infinite Scroll to view more photos
+* See trending posts
+* Show pictures that match a hashtag
+* Search for a user
+
+### LinkedIn
+
+Build a basic version of the LinkedIn (web) UI. As a user, I should be able to:
+
+* Authenticate with my LinkedIn account
+* See my basic profile information (profile pic, # of connections, job history)
+* View a list of recent connections
+* Sort connections by first and last name
+
+Extensions:
+
+* See trending posts
+* Search for a job
+* Search for a profile
 
 ### Instagram
 
@@ -133,14 +107,22 @@ Extensions:
 
 ### Blog Post (45 Points - 15 points per post)
 
-### Authentication (10 Points)
+### Authentication (15 Points)
 
-* 15: A user can successfully login and logout using JWTs and Auth0 and can access all functionality relating to that user.
-* 10: A user can successfully login and logout but there are issues with authenticating that prevents the user from accessing functionality.
-* 5: There are bugs in authenticating and heavily duplication of code
+* 10: A user can successfully login and logout using JWTs and Auth0 and can access all functionality relating to that user.
+* 7: A user can successfully login and logout but there are issues with authenticating that prevents the user from accessing functionality.
+* 3: There are bugs in authenticating and heavily duplication of code
 * 0: No authentication.
 
-### JavaScript Style (40 points)
+### ImmutableJS (15 Points)
+
+* 15: Successfully store data from the API in ImmutableJS and render it in React components.
+* 10: Success at storing API data in ImmutableJS but bugs in rendering it in React components.
+* 5: Attempt at using ImmutableJS but really it's a dumpster fire of data.
+* 0: No attempt made
+
+
+### JavaScript Style (30 points)
 
 * 40: Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
 * 35: Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
@@ -156,7 +138,7 @@ Extensions:
 * 8: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories. Little to no attempt to create a unique client interface.
 * 0: The application is confusing or difficult to use.
 
-### Risk Taking and Creativity (40 points)
+### Risk Taking and Creativity (30 points)
 
 Instructor/developers will select one feature in the project to review for this section of the rubric.
 
