@@ -13,9 +13,9 @@ In this lesson, you will learn how to:
 
 ## GitHub
 
-### Some Context: What is GitHub?
+### Some Context: What is GitHub, and why do we use it?
 
-### Why Do We Use GitHub?
+
 
 Again, Git is NOT the same thing as GitHub!
 
@@ -47,16 +47,16 @@ This is where things differ greatly.
 
 ## A Typical Workflow
 
-To summarize the example above, a typical workflow with Git and GitHub includes:
+To summarize the example above, a typical workflow for a new project with Git and GitHub includes:
 
-* Initialize a new Git repository (repo)
-* Add files to Git staging area
-* Commit files and directories
-* Check the status of the working directory and staging area and interpret the output
-* View previous commits
-* Create and checkout a new branch
-* Switch between branches
-* Merge local branches to local master
+1. Initialize a new Git repository (repo)
+2. Add files to Git staging area
+3. Commit files and directories
+4. Check the status of the working directory and staging area and interpret the output
+5. View previous commits
+6. Create and checkout a new branch
+7. Switch between branches
+8. Merge local branches to local master
 
 This workflow is great when you are working alone, but we will go over how to use Git and GitHub in groups in a later lesson.
 
