@@ -80,7 +80,7 @@ Instructor/developers will select one feature in the project to review for this 
 
 - 60: Developers pushed themselves and their team by taking risks which is demonstrated by a delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
 - 50: Developers pushed themselves and their team by taking risks which is demonstrated by an almost delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
-- 30: Developers attempted to implement extensions using technologies not covered in class but it did not result in a delivered feature.
+- 30: Developers attempted to implement feature using technologies not covered in class but it did not result in a delivered feature.
 - 10: Developers did not build any features.
 
 ### Workflow (20 Points)
