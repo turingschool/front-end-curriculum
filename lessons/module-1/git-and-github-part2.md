@@ -110,3 +110,8 @@ There are hundreds of different Git commands, but to get started you only need t
 * `git stash` stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
 * `git stash pop` gives you back the last staged changes you stashed
 * `git blame file-path/name-of-file` shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
+
+
+### More GitHub
+
+  * [GitHub Tutorials](https://guides.github.com/)

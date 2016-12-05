@@ -356,6 +356,11 @@ From the example we worked through above, we can come up with a common workflow 
 
 ## Additional Resources
 
+  * [git docs](https://git-scm.com/docs)
+  * [Awesome Git Tutorial](https://githowto.com/)
+  * [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/)
+  * [Visual Documentation and Examples for Git and GitHub](https://www.atlassian.com/git/tutorials/)
+
 #### Aside: `PATH`
 
 Your `PATH` is a system configuration property which tells your computer where to look for underlying programs when you want to run a command. By adding this directory to our `PATH`, we're telling the system how to find the various applications we will install using Homebrew
