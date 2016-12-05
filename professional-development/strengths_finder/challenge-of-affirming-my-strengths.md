@@ -4,7 +4,7 @@ subheading: Small Groups Follow-Up
 layout: page
 ---
 
-###The Challenge of Affirming My Strengths
+### The Challenge of Affirming My Strengths
 
 
 **Structure:** M1 small groups
