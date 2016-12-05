@@ -1,3 +1,5 @@
+#If you're not in the [Professional Skills](https://github.com/turingschool/professional_skills) repo, don't make changes to anything in this folder
+
 # Professional Skills Repo
 
 ## How this works
