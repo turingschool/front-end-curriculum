@@ -4,11 +4,7 @@ subheading: Small Groups Follow-Up
 layout: page
 ---
 
-#StrengthsFinder: Module One
-##Small Groups Follow-Up
-
-
-###The Challenge of Affirming My Strengths
+### The Challenge of Affirming My Strengths
 
 
 **Structure:** M1 small groups
