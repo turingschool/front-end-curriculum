@@ -8,6 +8,7 @@ By the end of this lesson, you will know/be able to:
 
 * Understand what a loop is and when to use one
 * Declare objects using literal notation
+* Be familiar with `this`
 <!-- * Understand more advanced usage of functions -->
 
 # Loops
