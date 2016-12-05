@@ -25,7 +25,7 @@ In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are 
 
 ## An Example Journey Using GitHub (and Git)
 
-Some of this is review from the Git introductory lesson, but there are all of the new GitHub workflow concepts in this example.
+Some of this is review from the Git introductory lesson, but there are all of the new GitHub workflow concepts in this example. We use Git in conjunction with GitHub, even though they are separate entities.
 
 ### Create a new directory and initialize Git (`git init`)
 
@@ -39,18 +39,24 @@ Some of this is review from the Git introductory lesson, but there are all of th
 
 we are now linked!
 
+### Add basic file structure
+
+(html and js file)
+
+### Commit files (`git add`, `git commit`)
+
+### Push up the master branch to GitHub (to the remote repository)
+
 ### Checkout a feature branch (`git branch`, `git checkout`)
 
-* Add HTML file
-* Add content
+* Add HTML content
+* Add JS stuff...?
 
 ### Commit feature work (`git add`, `git commit`)
 
 * Commit content
 * Add more content (just for commit repetition)
 * Commit new content, at this point happy to merge with master
-
-This is where things differ greatly.
 
 ### Push the branch up to GitHub (`git push`)
 
@@ -76,16 +82,17 @@ Checkout new branch and repeat the process... (this is where they can push up th
 
 To summarize the example above, a typical workflow for a new project with Git and GitHub includes:
 
-1. Initialize a new Git repository (repo)
-2. Add files to Git staging area
-3. Commit files and directories
-4. Check the status of the working directory and staging area and interpret the output
-5. View previous commits
-6. Create and checkout a new branch
-7. Switch between branches
-8. Merge local branches to local master
-
-This workflow is great when you are working alone, but we will go over how to use Git and GitHub in groups in a later lesson.
+1. Initialize a new Git repository (repo) and make initial file structure
+2. Create a new repository on GitHub
+3. Link your local and GitHub repository (add remote)
+4. Push structure to remote repository (on the master branch)
+5. Check out a feature branch
+6. Make changes to files
+7. Add files to staging area
+8. Commit files and directories
+9. Push up the feature branch and make a PR
+10. Go on GitHub, view the PR, and merge the PR
+11. Locally, pull down master to your local master branch (to sync the remote with your local repository)
 
 ## Additional Resources
 
