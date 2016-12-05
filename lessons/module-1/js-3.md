@@ -8,7 +8,7 @@ By the end of this lesson, you will know/be able to:
 
 * Understand what a loop is and when to use one
 * Declare objects using literal notation
-* Understand more advanced usage of functions
+<!-- * Understand more advanced usage of functions -->
 
 # Loops
 There are times when we want to repeat the same operation multiple times. Loops allow us to do just that by checking a conditional. If the conditional returns `true`, a code block will be run and the condition will be checked again. This pattern will be repeated until the conditional returns `false`.
@@ -176,3 +176,9 @@ var myLitObject = {
 // 9. Check the value of myLitObject. Do you see your method?
 // 10. Use myLitObject to log "Skateboarding is fun"
 ```
+<!--
+# More Fun with functions
+We're familiar with functions, but let's talk about a few more things we can do with them.
+
+### Calling functions inside of other functions
+When writing Javascript, you want to do your best to keep your code DRY. That means keeping functions concise and single responsibility. It's not uncommon to do a first pass at solving a problem and end up with a more verbose solution, and then revisit your code to tighten it up. This process of cleaning up your working code is called refactoring. When we refactor, we look to see where we have unnecessary duplication in our functions and see if we can pull out chunks of code into separate chunks of reusable code. -->
