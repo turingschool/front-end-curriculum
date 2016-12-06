@@ -112,7 +112,7 @@ export default Ember.Route.extend({
 
 Ember route handlers are how we load model data into our app. In a routes file, our route handler returns a `model hook` that structures the data that we will need for each of our models.
 
-`app/routes/user.js`
+`app/routes/users.js`
 
 ```js
 import Ember from 'ember'
@@ -138,13 +138,14 @@ export default Ember.Route.extend({
   }
 });
 ```
-Realistically, this information will come form a data store or database, but the point is that the route returns the information your templates need to render in the `model hook`.
+Realistically, this information will come from a data store or database, but the point is that the route returns the information your templates need to render in the `model hook`.
 
 A 'hook' is a function that gets called multiple times during the lifecycle of an app - for instance, the `users model hook` will be called any time a user enters the `users` route. The array of users returned form this function will be passed to our `users template` as the `model` property.  
 
 Once you have access to Ember Data you won't need to hard code in your model information and can instead make a call to the data store, your model hook at that point will look something like this:  
 
 ```js
+// app/routes/users.js
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -180,6 +181,8 @@ Two ways to redirect routes:
 As you've been generating files, you've probably noticed a line saying `{{outlet}}` that we've been ignoring. This small chunk of handlebars code is replaced by markup for the current route.
 
 ### {{yield}}
+
+Similar to `{{outlet}}` in that it servers as a placeholder for additional markeup. {{yield}} generally lives in a component and is replaced with HTML.
 
 
 ## Ember Mirage
@@ -218,7 +221,7 @@ export default function() {
 }    
 ```
 
-The namespace here is important so that navigating to `/users` would conflict with our mocked out data store. In order to make this work, we need to install something called an `adapter` to help our app know what to do. The adapter will extend the JSONAPIAdapter base class from Ember Data.
+The namespace here is important so that navigating to `/users` would conflict with our mocked out data store. In order to make this work, we need to install something called an `adapter` to help our app know what to do. The adapter will extend the JSONAPIAdapter base class from Ember Data. [More on the jsonAPI](http://jsonapi.org/), more on [JSONAPIAdapter](http://emberjs.com/api/data/classes/DS.JSONAPIAdapter.html).
 
 ### Routing with Ember Data
 
@@ -238,4 +241,5 @@ The statement within the model hook tells Ember Data to make a `GET` request to 
 
 
 ### Resources
+[Adapters and Serializers](https://emberigniter.com/fit-any-backend-into-ember-custom-adapters-serializers/)  
 [5 Ember Concepts](https://emberigniter.com/5-essential-ember-concepts/)
