@@ -65,7 +65,7 @@ Within your small group, pick both a scribe and a timekeeper. You will have 20 m
 1. How does your shared strength make you an effective team member? 
 2. In what team situations would you want to dial this strength back? How can you do that?
 2. As you discuss differing strengths within your small group -- how can these strengths complement each other? When might they be at conflict? 
-3. If no differing strengths within the group, what kind of person's strengths might complement your strength? When might they be at conflict? You can reference the [list of all StrengthsFinder strengths](). 
+3. If no differing strengths within the group, what kind of person's strengths might complement your strength? When might they be at conflict? You can reference the [list of all StrengthsFinder strengths](https://github.com/turingschool/professional_skills/blob/master/files/BriefDescriptionsOfThemes.pdf). 
 3. Storytelling I: Creating User Stories for the perfect team. Your goal here is to create user stories to describe ideal situations for both yourself and different team members and by doing so, you gain a perspective of how others in your team relate to one another.
 	* Use this template for your user stories: 
 	
