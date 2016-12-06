@@ -7,12 +7,21 @@ tags: js, introduction, constructor functions, this
 By the end of this lesson, you will know/be able to:
 
 * Understand what a constructor function is
-* Introduction to ```this```
+<!-- * Introduction to ```this``` -->
 * Understand whether you need an array or object data structure
 
 <!-- pulled from second half of JS III lesson -->
 
-Great, we feel pretty good about literal notation to create an object. Let's talk about _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
+# Object Review
+- How do you create an object using literal notation?
+- What is an object and what is it made up of?
+- When we assign a function as the value of a key inside an object, what do we call it?
+
+# Constructor Notation
+
+We feel pretty good about using literal notation to create an object. We know that all we really need is `{}`, but it's a good idea to assign an empty object to a variable to we can actually put things in it.
+
+Now, let's talk about _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
 ```javascript
 var myLitObject = new Object()
