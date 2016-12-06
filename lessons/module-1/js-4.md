@@ -17,17 +17,19 @@ By the end of this lesson, you will know/be able to:
 - What is an object and what is it made up of?
 - When we assign a function as the value of a key inside an object, what do we call it?
 
-# Constructor Notation
+# Objects: Constructor Notation
 
 We feel pretty good about using literal notation to create an object. We know that all we really need is `{}`, but it's a good idea to assign an empty object to a variable to we can actually put things in it.
 
-Now, let's talk about _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
+Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
 ```javascript
 var myLitObject = new Object()
 myLitObject
 ```
 And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation just like you did before.
+
+## Creating Many Objects
 
 Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ to spit out little objects that you define. Everytime you call ```new``` on this constructor you get an instance of the object. Let's look at this:
 
@@ -42,7 +44,8 @@ function Restaurant(name, tables, reservations) {
 }
 ```
 
-What is happening up ^^ there?
+Let's talk about what's going on here:
+
 - A function called Restaurant is a template for creating new objects that represent restaurants
 - The function has three parameters
 - Each parameter sets the _value_ of a _property_ in the object
@@ -51,7 +54,7 @@ What is happening up ^^ there?
 - Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma
 - Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.
 
-## Oh jeeze...```this``` (It's just a keyword)
+## Oh jeeze...```this``` again
 The keyword ```this``` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, ```this``` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
 
 ```javascript
@@ -79,7 +82,7 @@ function Boom() {
   return [height, width]
 }
 
-// GLOBAL VARIABLES - global variables become properties of the big window in the browser sky object. When a function is in the global context, you can access global variables using the window object.
+// GLOBAL VARIABLES - global variables become properties of the window in the browser object. When a function is in the global context, you can access global variables using the window object.
 var width = 600;
 var shape = {width: 300}
 var showWidth = function() {
@@ -121,10 +124,10 @@ All JavaScript objects inherit the properties and methods from their prototype. 
 
 ```javascript
 // Let's make a constructor function
-function DumbObjectMaker {}
+function DumbObjectMaker() {}
 
 // Let's ask myDumbObject for the value of it's prototype
-function myDumbObject {}
+function myDumbObject() {}
 myDumbObject.prototype
 ```
 

@@ -114,7 +114,7 @@ function ninjaAttack() {
 ```
 
 ### Your Turn
-How can you further DRY up our `karateChop` and `ninjaAttack` functions? Look at what is the same between these two functions and see how you can pull duplication out into our `kapow` function. Hint: you might want to have your functions take a parameter.
+How can you further DRY up our `karateChop` and `ninjaAttack` functions? Look at what is the same between these two functions and see how you can move that duplication into our `kapow` function. Hint: you might want to have your functions take a parameter.
 
 # Objects
 Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
