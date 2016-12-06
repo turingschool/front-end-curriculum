@@ -6,16 +6,20 @@ Ember router translates the URL into a series of *nested templates* that define 
 
 Based on the URL, a particular model is handed to a given template to be rendered on a page.
 
-Let's say you have a url that looks like this:
+Let's say you have a url that looks like this:  
+
 ```
 localhost:3000/items/1
 ```
 
-The path your router will see is
+The path your router will see is  
+
 ```
 /items/:item_id
-```
+```  
+
 let's say this path exists in the Item Route, which would look something like this:  
+
 ```
 Router.map(function() {
   this.route('item', { path: '/items/:item_id' });
@@ -26,7 +30,7 @@ The route would then pass the `item` model data down to components and templates
 
 ### Routing Through the URL
 
-Using the CLI tool, run `ember g route <about>`. You'll see output that looks something like this:  
+Using the CLI tool, run `ember g route about`. You'll see output that looks something like this:  
 
 ```
 $ ember g route about
@@ -59,8 +63,9 @@ Throw some HTML into the `about.hbs` template file, run `ember s` then visit `lo
 Ember, like most structurally opinionated frameworks, provides you with helper methods that do the hard work behind the scenes. One of these helper methods specific to routing is `{{link-to}}`.  
 
 Example:  
+
 ```
-{[#link-to 'about' class='button']}
+{{#link-to 'about' class='button'}}
   About Page
 {{/link-to}}
 ```
