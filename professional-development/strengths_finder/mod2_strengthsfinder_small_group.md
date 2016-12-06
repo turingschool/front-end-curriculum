@@ -16,7 +16,7 @@ layout: page
 * Discuss how to leverage others' strengths to work better in teams
 
 ### Opening
-As you learned in Personal Branding I in Module One, there are 3 questions that emphasize your development at Turing:
+As you learned in Personal Branding I in Module One, there are 3 questions that drive your professional development at Turing:
 
 * Who are you?
 * Why are you here?
