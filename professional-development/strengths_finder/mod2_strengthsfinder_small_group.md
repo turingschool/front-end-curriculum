@@ -1,10 +1,9 @@
-```yaml
 ---
 title: Module Two StrengthsFinder
 subheading: Who are you...as a Team Member?
 layout: page
 ---
-```
+
 
 # Module Two StrengthsFinder: Who are you...as a Team Member?
 
