@@ -17,31 +17,37 @@ When the user visits the root of the application (e.g. the `"/"` URL), they shou
 **Hot Tip**: If you put "Closes #1" (assuming the issue is marked `#1`) in the pull request, your commit, or anywhere in the body of your PR, it will automatically close this issue when it successfully merged into master.
 
 ____
+#### 1.5 Adjust Root to Redirect to '/reminders'
 
+When the user visits the root of the application, they should be redirected to `'/reminders'` and should see a list of all reminders on the page.
+
+**Hot Tip**: This will make your previous test fail (if you had it passing). Make the necessary changes in the test.
+
+____
 #### 2. See An Individual Reminder
 
-When the user clicks on one of the reminders on the page, they are taken to a `Reminder` route (e.g. `"/1"`, if the id of the reminder is `1`). The title of the reminder object should be displayed.
+When the user clicks on one of the reminders on the page, they are taken to an individual reminders route (ie: '/reminders/1', if the id of the reminder is `1`). The title of the reminder object should be displayed.
 
 So, what needs to happen here?  
 
-* You'll need a `Reminder` route in addition to the `Reminders` route.
-* It should be nested under the `Reminders` route.
+* You'll need a `reminder` route in addition to the `reminders` route.
+* It should be nested inside the `reminders` route.
 * The user should still see all of the reminders from your previous feature. The specific reminder they are looking at now should be rendered in the outlet of the `reminders.hbs` template.
 * There should be some CSS for the `.active` class.  
 
 ![](http://g.recordit.co/bWm36UCXsA.gif)
 
-There is a failing test set up in `tests/acceptance/reminder-list-test.js` to get you started.
+There is a failing test set up in `tests/acceptance/reminder-list-test.js` to get you started - this test needs to be rewritten to reflect the route you are expecting to visit.
 
 ____  
 
 #### 3. Create A New note
 
-At the bottom of the `reminders.hbs` template, there is a button that routes the user to `/new` where users can create a new reminder.  
+At the bottom of the `reminders.hbs` template, there should be a button that routes the user to `reminders/new` where users can create a new reminder.  
 
 * The new reminder should have inputs for the title, date, and notes.
 * The new reminder should have a button for submitting the new note.
-* Pressing the button, should submit reminder to the database and have it shown in the Reminders list.
+* Pressing the button, should submit reminder to the database and have it shown in the reminders list.
 
 **Hot Tip**: There are no tests set up for this user story. So, you'll have to write an acceptance test.  
 
@@ -55,19 +61,22 @@ ____
 
 #### 5. Editing A Note
 
-When viewing an existing reminder. The user can click on an "Edit" button where they can modify the title, notes, or date of the reminder.
+When viewing an existing reminder, the user can click on an "Edit" button where they can modify the title, notes, or date of the reminder.
 
 * When editing a note, there is a "Save" button that commits the changes to the server.  
 * When the user hits the save button, they are returned to the original individual note.
+
+Things to keep in mind:  
+* What should your route look like to edit a reminder?  
 
 ____
 
 #### 6. Refactor New Reminder Form  
 
-In Issue #3, we introduced a `new-reminder-form` component that has a lot of code hard coded into it. Let's refactor it into a component that we just call `reminder-form` that we could use for both editing reminders and creating new reminder.
+In Issue #3, we introduced a `/reminders/new` route that has a lot of code hard coded into it that looks a lot like our edit form. Let's refactor it into a component that we just call `reminder-form` that we could use for both editing reminders and creating new reminder.
 
 Some research points:  
-* [Ember Best Practice: Stop Bubbling and Use Closure Actions](https://dockyard.com/blog/2015/10/29/ember-best-practice-stop-bubbling-and-use-closure-actions)
+* [Ember Best Practice: Stop Bubbling and Use Closure Actions](https://dockyard.com/blog/2015/10/29/ember-best-practice-stop-bubbling-and-use-closure-actions)  
 * [Closure Actions in Ember](https://emberway.io/route-closure-actions-in-ember-js-d0a7a37a5d1b#.ko5ueszgy)  
 
 ____
@@ -76,10 +85,10 @@ ____
 
 User can revert an unsaved reminder to its previous state mid-edit.  
 
-* When actively editing a reminder, if the reminder has unsaved changes, the user will see a "Revert" button.
-* When clicked it will automatically rollback the attributes of the reminder to its original, clean state.
+* When actively editing a reminder, if the reminder has unsaved changes, the user will see a button to rollback unsaved changes.  
+* When clicked it will automatically rollback the attributes of the reminder to its original, clean state.  
 
-**Pro tip**: If you're doing something that seems hard, maybe you should check the Ember Data API docs?
+**Pro tip**: If you're doing something that seems hard, maybe you should check the Ember Data API docs?  
 
 ____
 
@@ -87,7 +96,7 @@ ____
 
 User sees visual cue that reminder has not been saved.
 
-* When a reminder has changes that have not been saved to the database/server, the user should see some kind of visual indication in the sidebar of the application.  
+* When a reminder has changes that have not been saved to the database/server, the user should see some kind of visual indication in the sidebar of the application on that particular note.  
 
 ____
 
@@ -95,7 +104,7 @@ ____
 
 User can remove/delete a reminder.
 
-* Users should be able to remove a reminder from either the list of reminders or from an individual reminder's page.
+* Users should be able to remove a reminder from both the list of reminders or from an individual reminder's page.
 * If they do it from the individual reminder's page, then the application should reroute them back to the `/reminders` route.
 
 ____
@@ -125,7 +134,7 @@ ____
 
 User can sort reminders chronologically in either ascending or descending order.
 
-* Sorting happens in the sidebare list of reminders
+* Sorting happens in the sidebar list of reminders
 * This state should be stored in a query param  
 
 ____
