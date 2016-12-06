@@ -29,7 +29,8 @@ Today, we'll build on that sentence(s) by working to answer the question, "who a
 ### Group Dynamics & Change
 In agile teams, status is a driving factor -- both leaders and followers are essential to the team in different ways. The [Agile Manifesto](http://agilemanifesto.org/principles.html) states:
 
-	Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done. 
+	Build projects around motivated individuals. 
+	Give them the environment and support they need, and trust them to get the job done. 
 
 Within your teams, you need to be prepared to adjust your status level in order to enable the team to be successful. As discussed in the book [Improv-ing Agile Teams](https://www.amazon.com/Improv-ing-Agile-Teams-Constraints-Creativity/dp/0993301304), improvisational techniques provide us with some lessons on how to do this.
 
@@ -37,21 +38,27 @@ In improv, communication revolves around "offers" and "blocks" -- offers are pos
 
 For example, this conversation is had between a Product Owner and a Project Manager:
 
-	Product Owner: I need these extra features to be included in this sprint. One of our major customers is depending on it.
+	Product Owner: I need these extra features to be included in this sprint. 
+	One of our major customers is depending on it.
 
 	Project Manager: Of course. We'll see what we can do.
 
 Replaying the scenario, the Project Manager uses a **block** to match status with the Product Owner:
 
-	Product Owner: I need these extra features to be included in this sprint. One of our major customers is depending on it. (Offer)
+	Product Owner: I need these extra features to be included in this sprint. 
+	One of our major customers is depending on it. (Offer)
 
-	Project Manager: That's a risk. We stand to reduce the quality of the features in progress if we accept a change right now. (Block)
+	Project Manager: That's a risk. We stand to reduce the quality of the features 
+	in progress if we accept a change right now. (Block)
 
 The Project Manager matches status by exhibiting knowledge and experience and providing information that the Product Owner might not be aware of. To make progress, someone's status needs to change ever so slightly -- 
 
-	Product Owner: Good point. When is a better time to bring this to the team's attention? (Alternate offer)
+	Product Owner: Good point. When is a better time to bring 
+	this to the team's attention? (Alternate offer)
 
-	Project Manager: We have a team meeting later today to discuss the rest of our task list. If you can attend, that will give you an idea of the effort required by the team. You should be able to set expectations with the client from there. (Offer)
+	Project Manager: We have a team meeting later today to discuss the rest of our task list. 
+	If you can attend, that will give you an idea of the effort required by the team. 
+	You should be able to set expectations with the client from there. (Offer)
 
 **Discussion Questions #1:**
 
@@ -82,9 +89,13 @@ So that...[the team is successful in this way]
 
 Here are some examples:
 
-	As a person with strength in Adaptability, I want to use my flexible nature to add value to my team so that if plans go awry, I can adjust to new circumstances and help our team make progress. 
+	As a person with strength in Adaptability, I want to use my flexible nature to 
+	add value to my team so that if plans go awry, I can adjust to new circumstances 
+	and help our team make progress. 
 	
-	As I work with someone who is strong in the Futuristic strength, I want to remember that they are focsued on the future and will ask them for their longterm vision for the project so that I can help ensure that project goals incorporate that vision.
+	As I work with someone who is strong in the Futuristic strength, I want to remember 
+	that they are focsued on the future and will ask them for their longterm vision for 
+	the project so that I can help ensure that project goals incorporate that vision.
 
 ### Share Takeaways
 
