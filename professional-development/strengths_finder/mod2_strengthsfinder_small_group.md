@@ -21,11 +21,11 @@ Reflecting on last module, use your strengths to answer the question “Who are 
 Today, we'll build on that sentence(s) by working to answer the question, "who are you...as a team member?"
 
 ### Group Dynamics & Change
-In agile teams, status is a driving factor -- both leaders and followers are essential to the team in different ways. The [Agile Manifesto]() states:
+In agile teams, status is a driving factor -- both leaders and followers are essential to the team in different ways. The [Agile Manifesto](http://agilemanifesto.org/principles.html) states:
 
 	Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done. 
 
-Within your teams, you need to be prepared to adjust your status level in order to enable the team to be successful. As discussed in the book [Improv-ing Agile Teams](), improvisational techniques provide us with some lessons on how to do this.
+Within your teams, you need to be prepared to adjust your status level in order to enable the team to be successful. As discussed in the book [Improv-ing Agile Teams](https://www.amazon.com/Improv-ing-Agile-Teams-Constraints-Creativity/dp/0993301304), improvisational techniques provide us with some lessons on how to do this.
 
 In improv, communication revolves around "offers" and "blocks" -- offers are positive suggestions intended to move a team forward while blocks require all parties to move in alternate directions.
 
