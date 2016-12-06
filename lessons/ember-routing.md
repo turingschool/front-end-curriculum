@@ -2,12 +2,35 @@
 title: Ember Routing
 module: 3
 ---
+Ember router translates the URL into a series of *nested templates* that define navigable pages in your app.
 
-Ember routes define navigable pages in your app. You can access a route in your app either through the URL directly (visiting `localhost:4200/about`), by clicking on a link that takes you to a new page, or via a scripted redirect. Let's start with looking at how Ember navigates to routes via the URL.
+Based on the URL, a particular model is handed to a given template to be rendered on a page.
+
+Let's say you have a url that looks like this:  
+
+```
+localhost:3000/items/1
+```
+
+The path your router will see is  
+
+```
+/items/:item_id
+```  
+
+let's say this path exists in the Item Route, which would look something like this:  
+
+```
+Router.map(function() {
+  this.route('item', { path: '/items/:item_id' });
+});
+```
+
+The route would then pass the `item` model data down to components and templates. This may sound similar to React in that the philosophy is "data down, actions up".
 
 ### Routing Through the URL
 
-Using the CLI tool, run `ember g route <about>`. You'll see an output that looks something like this:  
+Using the CLI tool, run `ember g route about`. You'll see output that looks something like this:  
 
 ```
 $ ember g route about
@@ -40,8 +63,9 @@ Throw some HTML into the `about.hbs` template file, run `ember s` then visit `lo
 Ember, like most structurally opinionated frameworks, provides you with helper methods that do the hard work behind the scenes. One of these helper methods specific to routing is `{{link-to}}`.  
 
 Example:  
+
 ```
-{[#link-to 'about' class='button']}
+{{#link-to 'about' class='button'}}
   About Page
 {{/link-to}}
 ```
@@ -64,7 +88,7 @@ If you boot up your server and inspect element, you'll see something like this:
 
 ### Creating our Index Route
 
-The routes we've built so far help navigate to pages within our app, but we need to specify the route that users will reach when the visit `'/'`.
+The routes we've built so far help navigate to pages within our app, but we need to specify the route that users will reach when they first visit `'/'`.
 
 `ember g route index`
 
@@ -93,7 +117,7 @@ export default Ember.Route.extend({
 
 Ember route handlers are how we load model data into our app. In a routes file, our route handler returns a `model hook` that structures the data that we will need for each of our models.
 
-`app/routes/user.js`
+`app/routes/users.js`
 
 ```js
 import Ember from 'ember'
@@ -119,13 +143,14 @@ export default Ember.Route.extend({
   }
 });
 ```
-Realistically, this information will come form a data store or database, but the point is that the route returns the information your templates need to render in the `model hook`.
+Realistically, this information will come from a data store or database, but the point is that the route returns the information your templates need to render in the `model hook`.
 
 A 'hook' is a function that gets called multiple times during the lifecycle of an app - for instance, the `users model hook` will be called any time a user enters the `users` route. The array of users returned form this function will be passed to our `users template` as the `model` property.  
 
-Once you have access to Ember Data you won't need to hard code in your model information and can instead make a call to the database, your model hook at that point will look something like this:  
+Once you have access to Ember Data you won't need to hard code in your model information and can instead make a call to the data store, your model hook at that point will look something like this:  
 
 ```js
+// app/routes/users.js
 import Ember from 'ember';
 
 export default Ember.Route.extend({
@@ -147,7 +172,7 @@ export default Ember.Route.extend({
 
 ```  
 
-Like props in React, our template now has access to the information necessary to iterate over data and display relevant information to the user.
+Like props in React, our template now has access to the information necessary to iterate over data and display relevant information to the user.  
 
 Two ways to redirect routes:
 **replaceWith**
@@ -161,6 +186,8 @@ Two ways to redirect routes:
 As you've been generating files, you've probably noticed a line saying `{{outlet}}` that we've been ignoring. This small chunk of handlebars code is replaced by markup for the current route.
 
 ### {{yield}}
+
+Similar to `{{outlet}}` in that it servers as a placeholder for additional markeup. {{yield}} generally lives in a component and is replaced with HTML.
 
 
 ## Ember Mirage
@@ -199,7 +226,7 @@ export default function() {
 }    
 ```
 
-The namespace here is important so that navigating to `/users` would conflict with our mocked out data store. In order to make this work, we need to install something called an `adapter` to help our app know what to do. The adapter will extend the JSONAPIAdapter base class from Ember Data.
+The namespace here is important so that navigating to `/users` would conflict with our mocked out data store. In order to make this work, we need to install something called an `adapter` to help our app know what to do. The adapter will extend the JSONAPIAdapter base class from Ember Data. [More on the jsonAPI](http://jsonapi.org/), more on [JSONAPIAdapter](http://emberjs.com/api/data/classes/DS.JSONAPIAdapter.html).
 
 ### Routing with Ember Data
 
@@ -217,5 +244,7 @@ export default Ember.Route.extend({
 
 The statement within the model hook tells Ember Data to make a `GET` request to `/users`. With Mirage installed, this request will trigger a particular JSON response based on what we have provided in our config file.
 
-FOLLOWUP: WTF IS AN ADAPTER
-FOLLOWUP: JSONAPI Adapter
+
+### Resources
+[Adapters and Serializers](https://emberigniter.com/fit-any-backend-into-ember-custom-adapters-serializers/)  
+[5 Ember Concepts](https://emberigniter.com/5-essential-ember-concepts/)
