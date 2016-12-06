@@ -27,56 +27,145 @@ In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are 
 
 Some of this is review from the Git introductory lesson, but there are all of the new GitHub workflow concepts in this example. We use Git in conjunction with GitHub, even though they are separate entities.
 
+For this example, we'll create a basic HTML page with a simple JavaScript file for DOM manipulation.
+
 ### Create a new directory and initialize Git (`git init`)
 
-(Project with JS file and basic DOM interaction? click a button and something gets added to page?...)
+To start, create a new directory for this project. `mkdir github-intro` and then `cd` into that directory (`cd github-intro`).
+
+Once we are in the new directory, initialize the repository using `git init`. Now we can start tracking our changes using Git (locally).
 
 ### Create repository on GitHub
 
-(naming convention: these names should be the same to avoid confusion)
+Now let's create a repository on GitHub. This repository will sync with your local repository - the code you develop locally will be synced with this online repository so you can share code and collaborate.
+
+Go to your GitHub profile. Click the green button called **New Repository**.
+
+Under "Repository name", let's give this the same name as the directory we made locally. The convention is to keep these names the same to avoid any confusion.
 
 ### Add remote (origin) to local repository (`git remote`)
 
-we are now linked!
+Now that we have an online (remote) repository, we have to connect it to our local repository. Git has a concept of a "remote". The remote is a place where we can push our code externally (like the cloud - GitHub).
+
+The command to add a remote is, surprise, `git remote`. To add the remote, the generalized command is `git remote add [name-of-remote] [address-of-repository]`. Now we have to fill in these fields.
+
+The name of the remote, by convention, is typically `origin`. If we go to the repository on GitHub, then the address is also given to us. For instance, my repository address is `git@github.com:robbiejaeger/github-intro.git`.
+
+So all together, enter the command `git remote add origin git@github.com:robbiejaeger/github-intro.git` into the terminal.
+
+The local and remote repositories are now linked!
 
 ### Add basic file structure
 
-(html and js file)
+For this first part, let's work off of the master branch. Add an `index.html` and `index.js` file to our current directory. In the files, put the code:
+
+```html
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1 class="text-to-change">Change this!</h1>
+
+    <button id="text-button">Change the h1</button>
+
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
+```
+
+```javascript
+var textToChange = document.querySelector('.text-to-change')
+var buttonForText = document.querySelector('#text-button');
+```
+
+So basically what we have is a button that in the future will change the text of the h1, but the functionality has not all been written yet.
 
 ### Commit files (`git add`, `git commit`)
 
-### Push up the master branch to GitHub (to the remote repository)
+Just like we did before, let's add these changes to the staging area and commit the changes:
+
+`git add .`
+
+`git commit -m "Add HTML and JS file structure"`
+
+### Push up the master branch to GitHub (to the remote repository) (`git push`)
+
+This is where things differ from before. The goal here is to get the code that we have locally into the online, remote repository (GitHub). If we look at the repository on GitHub, there is nothing there. It tells us we need to add content. Well let's go ahead and do that.
+
+To get our code into the remote repository, we need to "push" it up there. The command is: `git push [remote-name] [branch-name-to-push-to-remote]`
+
+So in our case, we want to push the code from our master branch to the remote repository called "origin". The exact command in this case is: `git push origin master`
+
+Now if we look at the GitHub repository, we see our code!
 
 ### Checkout a feature branch (`git branch`, `git checkout`)
 
-* Add HTML content
-* Add JS stuff...?
+Let's keep it going and use our preferred feature branch workflow. Let's checkout a feature branch to add an event listener to the button. To make the new branch, enter `git branch add-event-listener`. Then checkout the branch using `git checkout add-event-listener`.
+
+(Note: you can actually do these two steps in one command using `git checkout -b add-event-listener`)
+
+In the `index.js` file, add the lines of code:
+
+```javascript
+buttonForText.addEventListener('click', function(){
+  textToChange.innerText = "You've Changed!";
+})
+```
 
 ### Commit feature work (`git add`, `git commit`)
 
-* Commit content
-* Add more content (just for commit repetition)
-* Commit new content, at this point happy to merge with master
+Add the changes to the staging area, and commit the changes, just as before:
+
+`git add index.js`
+
+`git commit -m "Add button event listener to change the text"`
 
 ### Push the branch up to GitHub (`git push`)
 
-go to GitHub and view the branch and changes
+We're satisfied with the work done on this branch. Now we can push this branch up to GitHub and merge it to master there. To push this branch, we use the same `git push` command as before, but with a slight change:
+
+Enter the command: `git push origin add-event-lister`
+
+With that command, we pushed the `add-event-lister` branch up to the remote repository names `origin`. If we look on GitHub, the code on the master branch has not changed, but we do see a notification of a new branch.
 
 ### Create a pull request on GitHub (PR)
 
-* View changes and merge (into master - view master to see the changes are on master)
+On the GitHub repository page, there is now a notification of a recently pushed branch. On the right side of the notification, click **Compare & pull request**.
 
-### What is going on locally?
-* Back to the local repository, checkout master and notice the changes that were merged on GitHub are NOT on our local machine
+Now we can create a pull request (PR). A pull request is a formal way of merging code from one branch to another with the idea that someone can come in and review the code before it is merged. Often this is an opportunity for a "code review".
+
+Edit the title of the pull request, if necessary, and add some more content in the description box about what you changed and why. When you are done describing the changes, click **Create pull request**.
 
 ### Merge pull request (PR)
 
+Normally at this point, a coworker or project partner would view the pull request, make comments on the changes, and say if it should be merged or not. Since we are working by ourselves for this, our code is perfect! Let's merge the code into the master branch.
+
+On the pull request page, make a comment that the PR was reviewed, and then click **Comment**.
+
+Now that it has been reviewed, click **Merge pull request** and then **Confirm merge**. Merged!
+
+Our changes from our branch that we pushed up to GitHub are now merged to the master branch **on GitHub**.
+
+### What is going on locally?
+
+Back in your local repository, checkout the master branch and notice the changes that were merged on GitHub are NOT on our local machine. We need to get those code changes from the remote repository so our local code is in sync.
 
 ### Pull remote master into our local version
 
+If you haven't already, checkout the master branch: `git checkout master`
+
+To get the changes from the master branch on GitHub to our local master branch, we need to "pull" down those changes. The general command is: `git pull [remote-name] [branch-of-remote-to-pull-down]`
+
+In this case, enter the command: `git pull origin master`
+
+Our changes are now completely synced. The master branch locally is the same as the master branch on GitHub. We can make more feature branches, add more features, and repeat the same process!
+
 ### Your Turn
 
-Checkout new branch and repeat the process... (this is where they can push up their dog party or what they have for their number guesser projects so far.)
+Practice by pushing up your Dog Party or Number Guesser project to GitHub.
 
 ## A Typical Workflow
 
@@ -89,12 +178,16 @@ To summarize the example above, a typical workflow for a new project with Git an
 5. Check out a feature branch
 6. Make changes to files
 7. Add files to staging area
-8. Commit files and directories
+8. Commit changes
 9. Push up the feature branch and make a PR
 10. Go on GitHub, view the PR, and merge the PR
 11. Locally, pull down master to your local master branch (to sync the remote with your local repository)
 
 ## Additional Resources
+
+### More GitHub
+
+  * [GitHub Tutorials](https://guides.github.com/)
 
 ### Git Commands - A Summary
 
@@ -117,8 +210,3 @@ There are hundreds of different Git commands, but to get started you only need t
 * `git stash` stashes any unstaged changes in your repository. They will not be present in your codebase, but they are not deleted.
 * `git stash pop` gives you back the last staged changes you stashed
 * `git blame file-path/name-of-file` shows you line-by-line who wrote the code in the specified file. Useful when you have a question about how something works and want to figure out who to ask, and also great source of shame when you realize you wrote the chunk of code you've been swearing at for the last hour.
-
-
-### More GitHub
-
-  * [GitHub Tutorials](https://guides.github.com/)
