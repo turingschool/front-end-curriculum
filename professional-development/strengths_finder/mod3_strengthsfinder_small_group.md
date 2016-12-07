@@ -1,6 +1,6 @@
 ---
-title: Module Two StrengthsFinder
-subheading: Who are you...as a Team Member?
+title: Module Three StrengthsFinder
+subheading: Why are you here?
 layout: page
 ---
 
