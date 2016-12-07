@@ -4,7 +4,7 @@ module: 4
 tags: spectron, electron, testing
 ---
 
-Let's take a good hard look at the UI. This is what we're going to implement.
+Testing is hard. Spectron makes your life easier for checking all of Electrons APIs. Let's look at some simple tests to get started and then think about test strategies for your projects.
 
 ## Adding Spectron
 
