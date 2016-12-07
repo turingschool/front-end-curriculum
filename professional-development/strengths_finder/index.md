@@ -19,24 +19,21 @@ Module One's focus is on the Discover/Awareness piece of the Strengths Developme
 
 * **Take the assessment:** If you'd like to take the StrengthsFinder assessment, contact the Community Affairs Manager to get an access code. You'll take the assessment [here](http://www.strengthsquest.com/home.aspx)
 
-  **Facilitation:** By end of week 1
+  **When:** By end of week 1 of module 1
 
-* **[Exploring My Signature Themes]**
-
-  **Facilitation:** During 1-on-1s with the Community Affairs Manager
-
-* **[The Challenge of Affirming My Strengths](challenge-of-affirming-my-strengths)**
+* **[Who are you?]()**
+Both your 1-on-1 meeting with Allison and your small group session will help you begin to answer the question of "Who are you?"
 
 ## Module Two Activities
 Module Two's focus is on the Develop/Integrate piece of the Strengths Development Framework:
 ![develop_integrate](../images/develop_integrate.png)
 
-* **[Complementary Partners, Group Dynamics, & Your Strengths](complementary_partners)**
+* **[Who are you...as a team member?](mod2_strengthsfinder_small_group)**
 
 ## Module Three Activities
 
-* **[Barrier Labels]**
+* **[Why Are You Here?](mod3_strengthsfinder_small_group)**
 
 ## Module Four Activities
 
-* **[One Key Question]**
+* **[What's Next?]**
