@@ -22,6 +22,7 @@ Module One's focus is on the Discover/Awareness piece of the Strengths Developme
   **When:** By end of week 1 of module 1
 
 * **[Who are you?]()**
+
 Both your 1-on-1 meeting with Allison and your small group session will help you begin to answer the question of "Who are you?"
 
 ## Module Two Activities
