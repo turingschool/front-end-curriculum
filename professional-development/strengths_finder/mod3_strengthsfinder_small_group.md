@@ -20,15 +20,16 @@ Reflecting on the last two modules, use your strengths and team experiences to a
 Today, we'll build on that sentence(s) by working to answer the question, "Why are you here?"
 
 ### Storytelling
-Why are we drawn to stories? Stories help us better relate to the world around us. As noted in [Improv-ing Agile Teams](), in software development, we can become more engaged if we harness the enjoyment and escapism that storytelling provides -- when we reimagine our projects as stories in their own right. 
+Why are we drawn to stories? Stories help us better relate to the world around us. As noted in [Improv-ing Agile Teams](https://www.amazon.com/Improv-ing-Agile-Teams-Constraints-Creativity/dp/0993301304), in software development, we can become more engaged if we harness the enjoyment and escapism that storytelling provides -- when we reimagine our projects as stories in their own right. 
 
 When people hear a story unfold, they also develop increased empathy. We can also use storytelling to communicate who we are and why we're here pursuing this new career, so when potential employers hear your story, they are able to relate to you more. That is why learning to tell your story is an essential piece of your professional development.  
 
 **Discussion:**
 
-Pixar story artist [Emma Coats described the 22 rules]() that drive storytelling, including:
+Pixar story artist [Emma Coats described the 22 rules](http://storyshots.tumblr.com/post/25032057278/22-storybasics-ive-picked-up-in-my-time-at-pixar) that drive storytelling, including:
 
-	Pull apart the stories you like. What you like in them is a part of you; you’ve got to recognize it before you can use it.
+	Pull apart the stories you like. What you like in them is a part of you; 
+	you’ve got to recognize it before you can use it.
 
 * How does your shared strength influence your own story?
 * How does your shared strength make you likeable? How can you describe that to someone else?
@@ -51,7 +52,8 @@ Think about your story as a user story -- if we think of ourselves as users in o
 
 Here are some examples:
 
-	As a person with strength in Adaptability, I want to utilize my flexible nature so that I can take on new challenges more easily each time they come up.
+	As a person with strength in Adaptability, I want to utilize my flexible nature
+	so that I can take on new challenges more easily each time they come up.
 
 ### Envisioning the Future 
 In the Flower Exercise, you're being asked to reflect on your past in order to influence what kind of future you will pursue. Today, you'll work on crafting your vision statement for that future. This is another kind of storytelling.
@@ -60,7 +62,8 @@ In the Flower Exercise, you're being asked to reflect on your past in order to i
 
 Reflect on one more narrative rule that Coats describes:
 
-	Come up with your ending before you figure out your middle. Seriously. Endings are hard, get yours working up front.
+	Come up with your ending before you figure out your middle. Seriously. 
+	Endings are hard, get yours working up front.
 	
 Imagine that it's one year from now - what have you accomplished during that time? How is your life different? How have your strengths influenced that change?
 
