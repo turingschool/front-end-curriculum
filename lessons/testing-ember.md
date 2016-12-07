@@ -7,7 +7,7 @@ module: 3
 
 ### Setup
 
-1. If you already have it, `git pull` and `git fetch` to get the latest branches on the [ember-groceries](https://github.com/turingschool-examples/ember-groceries/tree/testing-adventure) repo, or clone down a new copy.
+1. If you already have it, `git pull` and `git fetch` to get the latest branches on the [ember-groceries](https://github.com/turingschool-examples/ember-groceries) repo, or clone down a new copy.
 
 2. **CHECKOUT BRANCH:** `testing-adventure`  
 
@@ -15,7 +15,7 @@ module: 3
 
 ### Setting Up Testing
 
-The Ember CLI is a powerhouse for helping you set up the files necessary to build and test your Ember app. Let's start with acceptance tests. To create an acceptance test, simply execute the following command in your terminal (Note: this has already been done for you in the practice repo):
+The Ember CLI is a powerhouse for helping you set up the files necessary to build and test your Ember app. Let's start with acceptance tests. To create an acceptance test, simply execute the following command in your terminal:
 
 ```
 ember generate acceptance-test home-page
@@ -23,9 +23,11 @@ ember generate acceptance-test home-page
 
 Which generates a file like this:  
 
-```
+```js
+// tests/acceptance/home-page
+
 import { test } from 'qunit';
-import moduleForAcceptance from 'super-rentals/tests/helpers/module-for-acceptance';
+import moduleForAcceptance from 'ember-groceries/tests/helpers/module-for-acceptance';
 a
 moduleForAcceptance('Acceptance | home page');
 
@@ -43,7 +45,7 @@ test('visiting /home-page', function(assert) {
 
 ```
 import { test } from 'qunit';
-import moduleForAcceptance from 'super-rentals/tests/helpers/module-for-acceptance';
+import moduleForAcceptance from 'ember-groceries/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | home page');
 
@@ -61,7 +63,7 @@ This boilerplate test is simply to make sure your app is wired up and the enviro
 
 ```
 import { test } from 'qunit';
-import moduleForAcceptance from 'super-rentals/tests/helpers/module-for-acceptance';
+import moduleForAcceptance from 'ember-groceries/tests/helpers/module-for-acceptance';
 
 moduleForAcceptance('Acceptance | home page');
 
@@ -83,8 +85,7 @@ test('should show new idea on submit', function (assert) {
 
 Use the command `ember test --server` from the command line to run your test suite. You'll see a report output in the terminal as well as an independent Chrome instance with detailed information.  
 
-
-**Important Note**: Make sure as you peruse documentation that you are looking at v2.0.0 or greater.
+**Important Note**: Make sure as you peruse documentation that you are looking at a relevant version of Ember.
 
 ### Unit Tests  
 As always, Unit Tests test small chunks of code to ensure the functionality is being implemented as expected. They are independent from the application as a whole.
@@ -93,7 +94,7 @@ To create a unit test, simply create an instance of the Ember.Object in question
 
 Unit tests are where methods within your app are tested. For instance, if you have a model that looks something like this:
 
-```
+```js
 import Ember from 'ember';
 
 export default Ember.Object.extend({
@@ -108,7 +109,7 @@ export default Ember.Object.extend({
 
 Your test would look like this:  
 
-```
+```js
 test('should return incremented count on calc', function(assert) {
   const someThing = this.subject();
   assert.equal(someThing.calc(), 'count: 1');
@@ -116,20 +117,20 @@ test('should return incremented count on calc', function(assert) {
 });
 ```
 
-As with all unit tests, you are extracting tiny pieces of logic from your app and making sure what you expect to get back makes sense.  
+As with all unit tests, you are extracting tiny pieces of logic from your app and making sure what you expect and what is happening match on a granular level.  
 
-Unit tests include testing Models, Controllers, and Routes in your application. We'll start with Models.  
+In Ember, unit tests include testing Models, Controllers, and Routes. We'll start with Models.  
 
 #### Testing Models
-[Testing Models Docs](https://guides.emberjs.com/v2.8.0/testing/testing-models/)
+[Testing Models Docs](https://guides.emberjs.com/v2.8.0/testing/testing-models/)  
 
-*Note: `DS.Model` extends `Ember.Object`*
+*Note: `DS.Model` extends `Ember.Object`*  
 
 Let's look at an example. Below we have the `grocery` model from the `ember-groceries` repo:  
 
 `// app/models/grocery.js`
 
-```
+```js
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -147,7 +148,7 @@ export default DS.Model.extend({
 
 To test this model, we will use the `moduleForModel` helper method.  
 
-```
+```js
 import { moduleForModel, test } from 'ember-qunit';
 import Ember from 'ember';
 
@@ -178,12 +179,11 @@ Implement the skipped tests.
 #### Testing Controllers
 [Testing Controllers Docs](https://guides.emberjs.com/v2.8.0/testing/testing-controllers/)  
 
-
 Controllers are Ember objects that contain properties, methods, and actions.  
 
 An example controller:  
 
-```
+```js
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
@@ -212,7 +212,7 @@ Tests are designed to make sure that those properties are what you expect before
 
 `// tests/unit/controllers/groceries-test.js`  
 
-```
+```js
 test('should update filter property on appropriate actions', function(assert) {
 
   // create a new instance of your controller
@@ -262,9 +262,9 @@ And I hit the Submit button,
 Then I see a Grocery item with those values.
 ```
 
-Execution of this test would something like this:  
+Execution of this test would look something like this:  
 
-```
+```js
 $ ember g acceptance-test add-grocery
 installing acceptance-test
   create tests/acceptance/add-grocery.js
@@ -274,7 +274,7 @@ installing acceptance-test
 
 Note that the test will automatically make the name of the test the path in the default boilerplate. Change that to the route you expect (here it's `'/'` because we are testing our root path)
 
-```
+```js
 import { test } from 'qunit';
 import moduleForAcceptance from 'ember-groceries/tests/helpers/module-for-acceptance';
 
@@ -304,15 +304,15 @@ Each of these asynchronous helpers returns a Promise.
 
 Some examples of asynchronous helpers:
   - **`click(selector)`**: Clicks on an element, returns a promise.  
-    - Ex: `click('a:contains("About")')`
-  - **`fillIn(selector, value)`**: Fills in an input element with text.
-    - Ex: `fillIn('#name', 'Brenna')`
+    - Ex: `click('a:contains("About")')`  
+  - **`fillIn(selector, value)`**: Fills in an input element with text.  
+    - Ex: `fillIn('#name', 'Brenna')`  
   - **`keyEvent(selector, type, keyCode)`**: Simulates a key event (ie: keypress, keyup, takes an optional keyCode argument)  
-    - Ex: `keyEvent('.name-input', 'keypress', 13)`
-  - **`triggerEvent(selector, type, options)`**: Triggers a DOM event like `blur`.
-    - Ex: `trigger('.name-input', 'blur')`
-  - **`visit(url)`**: Visits a particular route
-    - Ex: `visit('/')`
+    - Ex: `keyEvent('.name-input', 'keypress', 13)`  
+  - **`triggerEvent(selector, type, options)`**: Triggers a DOM event like `blur`.  
+    - Ex: `trigger('.name-input', 'blur')`  
+  - **`visit(url)`**: Visits a particular route  
+    - Ex: `visit('/')`  
 
 #### Synchronous Test Helpers
 [Synchronous Helper Docs](https://guides.emberjs.com/v2.8.0/testing/acceptance/#toc_synchronous-helpers)
@@ -320,10 +320,10 @@ Some examples of asynchronous helpers:
 These helpers are performed immediately when called, they will not wait for any other action to be completed first.  
 
 Some examples of synchronous helpers:  
-  - **`currentPath()`**: Returns the current path
-  - **`currentRouteName()`**: Returns currently active route name
-  - **`currentURL()`**: Returns current URL
-  - **`find(selector, context)`**: Finds an element within the app's root element. Context is optional.
+  - **`currentPath()`**: Returns the current path  
+  - **`currentRouteName()`**: Returns currently active route name  
+  - **`currentURL()`**: Returns current URL  
+  - **`find(selector, context)`**: Finds an element within the app's root element. Context is optional.  
     - Ex: `find('.my-element')`  
 
 #### Wait Helper aka `andThen()`
@@ -332,7 +332,7 @@ Some examples of synchronous helpers:
 ```
 andThen(() => assert.equal(.....))
 ```
-Waits for all previous asynchronous helpers to complete before executing the next function. It takes a single argument of the function that needs to be executed. For example, the actual assertion statement.  
+Waits for **all previous asynchronous helpers** to complete before executing the next function. It takes a single argument of the function that needs to be executed. For example, the actual assertion statement.  
 
 Example:  
 
@@ -426,39 +426,6 @@ function(assert){
   assert.equal(this.$('.spec-input-name').val(), 'hello world', 'updates with provided value')
 })
 ```
-
-
-
-### `ember-cli-mirage`  
-[Mirage Docs](http://www.ember-cli-mirage.com/)  
-
-This is used (among other things) to stub in HTTP requests and serve up fake data, often used in acceptance tests.  
-
-`ember install ember-cli-mirage`  
-
-This command will give you the addon and Bower dependencies, plus a `/mirage` directory where your fake data will live.  
-
-With Mirage, you are ultimately faking out an API call and returning fake data. In your config file, you redefine a `route handler` to stub in exactly what data you want to see.  
-
-Example:  
-
-`// mirage/config.js`  
-
-```
-export default function() {  
-  this.get('/groceries', () => {
-    return {
-      groceries: [
-        {id: 1, name: 'Bananas'},
-        {id: 2, name: 'Apples'},
-        {id: 3, name: 'Pork Ribs'},
-      ]
-    };
-  });
-}
-```
-
-Check out the docs for more in depth instructions on how to configure your Mirage "database".  
 
 ### Your Turn
 
