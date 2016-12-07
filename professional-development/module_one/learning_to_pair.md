@@ -4,6 +4,9 @@ subheading: Define the Relationship and Hold Each Other Accountable
 layout: page
 ---
 
+# Learning to Pair 
+## How to Define the Relationship and Hold Each Other Accountable
+
 Pairing with other programmers is an essential agile practice, and building your pairing skills will help you be successful in projects at Turing and in the workplace. Learning to pair is about establishing a relationship with the person you’re working with. This starts with breaking down communication barriers and building trust within the working relationship. This session covers how to DTR (Define the Relationship), strategies for upholding expectations with your partner(s), how to have difficult conversations when group members break expectations, and how to give each other feedback.
 
 Refer to the [Learning to Pair slides](https://docs.google.com/presentation/d/1_ZfOvYNMeOQeks4CBioyMZy3mm_5pWdyX6Tp9Ej4OLw/edit?usp=sharing) for this lesson.
