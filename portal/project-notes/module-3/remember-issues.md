@@ -17,14 +17,14 @@ When the user visits the root of the application (e.g. the `"/"` URL), they shou
 **Hot Tip**: If you put "Closes #1" (assuming the issue is marked `#1`) in the pull request, your commit, or anywhere in the body of your PR, it will automatically close this issue when it successfully merged into master.
 
 ____
-#### 1.5 Adjust Root to Redirect to '/reminders'
+#### 2 Adjust Root to Redirect to '/reminders'
 
-When the user visits the root of the application, they should be redirected to `'/reminders'` and should see a list of all reminders on the page.
+When the user visits the root of the application, they should be redirected to `'/reminders'` and should see a list of all reminders on the page. This means making a hopefully small adjustment to your `router.js` file.
 
-**Hot Tip**: This will make your previous test fail (if you had it passing). Make the necessary changes in the test.
+**Hot Tip**: This will make your previous test fail (if you had it passing). Make the necessary changes in the test(s).
 
 ____
-#### 2. See An Individual Reminder
+#### 3. See An Individual Reminder
 
 When the user clicks on one of the reminders on the page, they are taken to an individual reminders route (ie: '/reminders/1', if the id of the reminder is `1`). The title of the reminder object should be displayed.
 
@@ -41,7 +41,7 @@ There is a failing test set up in `tests/acceptance/reminder-list-test.js` to ge
 
 ____  
 
-#### 3. Create A New note
+#### 4. Create A New note
 
 At the bottom of the `reminders.hbs` template, there should be a button that routes the user to `reminders/new` where users can create a new reminder.  
 
@@ -53,13 +53,13 @@ At the bottom of the `reminders.hbs` template, there should be a button that rou
 
 ____
 
-#### 4. Don't display notes if there are no notes.  
+#### 5. Don't display notes if there are no notes.  
 
 Update reminder component to have a conditional that will only display notes if notes exist.  
 
 ____
 
-#### 5. Editing A Note
+#### 6. Editing A Note
 
 When viewing an existing reminder, the user can click on an "Edit" button where they can modify the title, notes, or date of the reminder.
 
@@ -71,7 +71,7 @@ Things to keep in mind:
 
 ____
 
-#### 6. Refactor New Reminder Form  
+#### 7. Refactor New Reminder Form  
 
 In Issue #3, we introduced a `/reminders/new` route that has a lot of code hard coded into it that looks a lot like our edit form. Let's refactor it into a component that we just call `reminder-form` that we could use for both editing reminders and creating new reminder.
 
@@ -81,7 +81,7 @@ Some research points:
 
 ____
 
-#### 7. Revert an Unsaved Reminder
+#### 8. Revert an Unsaved Reminder
 
 User can revert an unsaved reminder to its previous state mid-edit.  
 
@@ -92,7 +92,7 @@ User can revert an unsaved reminder to its previous state mid-edit.
 
 ____
 
-#### 8. Visual Cues on Unsaved Reminders
+#### 9. Visual Cues on Unsaved Reminders
 
 User sees visual cue that reminder has not been saved.
 
@@ -100,7 +100,7 @@ User sees visual cue that reminder has not been saved.
 
 ____
 
-#### 9. Remove Reminders
+#### 10. Remove Reminders
 
 User can remove/delete a reminder.
 
@@ -109,7 +109,7 @@ User can remove/delete a reminder.
 
 ____
 
-#### 10. Styling: Master Detail View
+#### 11. Styling: Master Detail View
 
 Users should see the list of reminders along the left side and the individual new note on the right.
 
@@ -119,7 +119,7 @@ Users should see the list of reminders along the left side and the individual ne
 
 ____
 
-#### 11. Filter Reminders
+#### 12. Filter Reminders
 
 User can filter reminder by title keyword.  
 
@@ -130,7 +130,7 @@ User can filter reminder by title keyword.
 
 ____
 
-#### 12. Sort Reminders
+#### 13. Sort Reminders
 
 User can sort reminders chronologically in either ascending or descending order.
 
