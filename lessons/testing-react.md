@@ -108,6 +108,7 @@ it('simulates click events', () => {
 ```
 
 ### Your turn
+
   - look into the following [mount functions](http://airbnb.io/enzyme/docs/api/mount.html) `get`, `children`,`simulate`
   - Once you've spent time reading the docs discuss with the person next to you
     - What is the difference between Mount and Shallow?
