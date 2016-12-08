@@ -31,8 +31,11 @@ You'll often find similar experiences happen in pair programming. This session w
 [Pair programming](https://www.agilealliance.org/glossary/pairing/) can take many forms, and here are some suggestions of how you can approach pairing at Turing:
 
 * **Driver-Navigator:** Driver has control of the keyboard while the Navigator guides the Driver towards the end goal.
+
 	Roles: Driver types and hones muscle memory through minute-to-minute typing while the Navigator pays attention to the code being written 
+	
 	Tip: Switch these roles up throughout a work session!
+	
 	Potential pitfall: The Navigator stops paying attention and the Driver starts doing their own thing. Active participation is crucial for this pairing to be successful
 * **Ping Pong pairing:** 
 
