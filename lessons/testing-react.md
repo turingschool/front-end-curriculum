@@ -52,7 +52,7 @@ Up to this point we've spent some time utilizing `selenium-webdriver` to test th
 
 ### Testing React with Enzyme
 
-If all we really care about is state in our application then the meat of our tests (the more important tests) should really only check to see if our states changed if any sort of event has occured. Enzyme allows us to hook into our  test runner (in our case that's `mocha`) so it's something that we're pretty familiar with. On top of that if we are looking to get any sort of Dom elements or events we can emulate those events inside of the test framework. Behind the scenes we'll be using `js-dom` which creates an instance of the `dom` for us. What's great is that we can now run our tests pretty quickly.
+If all we really care about is state in our application then the meat of our tests (the more important tests) should really only check to see if our states changed if any sort of event has occurred. Enzyme allows us to hook into our  test runner (in our case that's `mocha`) so it's something that we're pretty familiar with. On top of that if we are looking to get any sort of Dom elements or events we can emulate those events inside of the test framework. Behind the scenes we'll be using `js-dom` which creates an instance of the `dom` for us. What's great is that we can now run our tests pretty quickly.
 
 Whats really interesting is that Enzyme gives us 3 different modes to help us test our React application. You want to look at these as gears on a bike. Just how each gear on a bike has a specific job, purpose, and excels in different circumstance the same applies for each mode provided.
 
@@ -164,7 +164,7 @@ require('babel-register')({
 require('babel-polyfill')
 
 global.document = require('jsdom').jsdom(
-  "<head> <meta charset='UTF-8'><title>React In Theory</title></head><body><div id='application'></div>"
+  "<head><meta charset='UTF-8'><div class='application'></div></head>"
 ) // the virtual dom this is where our application is rendered.
 
 global.window = document.defaultView // if we have to go to the window (Event bubbling, referencing the window)
@@ -201,6 +201,7 @@ You really want to look at those 3 things being imported from ``enzyme`` as gear
 ### Your turn
 
 - Turn to your partner and recap everything we just talked about (whats need for testing and the 3 different flavors of ``enzyme``)
+
 - If you're still a little confused it might be beneficial for you to look at the docs together to see what's going on.
 
 the docs can be found [here](http://airbnb.io/enzyme/docs/api/index.html)
