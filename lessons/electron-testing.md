@@ -88,7 +88,57 @@ describe('App starts and has correct title and buttons', function () {
 
 ### FileBin
 
+Reading and writing to the file system when you test is a pain. Let's use Steve's npm module to mock the file system.
 
+```js
+$ npm i file-bin --save-dev
+```
+
+Then require file-bin and set the base directory to tell FileBin where to look. You can also include an array of valid file types.
+
+```js
+const FileBin = require('file-bin');
+
+let fileBin = new FileBin('/base-directory', ['.md', '.txt']);
+```
+
+To find a file:
+
+```js
+fileBin.find('README.md').then(file => {
+  console.log(file);
+});
+// Find all the files
+fileBin.all().then(files => console.log(files));
+```
+
+To write a file:
+
+```js
+fileBin.write('CONTRIBUTORS.md', 'Pull requests accepted')
+       .then(file => console.log(file));
+```
+
+To copy a file:
+
+```js
+fileBin.copy('orignal.md', 'original-copy.md')
+       .then(copy => console.log(copy));
+```
+
+To rename a file:
+
+```js
+fileBin.rename('old-name.md', 'new-name.md')
+       .then((file, oldFileName, newFileName) => console.log(`${oldFileName} was successfully renamed to ${newFileName}.`)
+```
+
+To destroy a file:
+
+```js
+fileBin.destroy('filename.md')
+  .then(console.log(`filename.md`))
+```
 
 ### Thinking About Your Project
 
