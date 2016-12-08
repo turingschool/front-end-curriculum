@@ -10,7 +10,7 @@ Let's start with an example of familiar JS syntax.
 
 ```js
 function cheer() {
-	console.log('skol Vikings')
+  console.log('skol Vikings')
   console.log('WOOOOOO!')
 }
 
@@ -33,14 +33,14 @@ This is because JavaScript is "single-threaded". Meaning only one command can be
 Wouldn't it be awesome if I could execute one line, do something else, then execute the next line?
 
 ```js
-function cheer() {
+function cheer() {   
   console.log('skol Vikings!')
   doSomethingImportant()
   console.log('WOOOO!')
 }
 
-function doSomethingImportant(){
-  console.log('getting a snack');
+function doSomethingImportant() {
+	console.log('getting a snack');
 }
 
 cheer()
@@ -65,8 +65,8 @@ function cheer() {
   console.log('WOOOO!')
 }
 
-function doSomethingImportant(){
-  setTimeout(function(){ console.log('getting a snack')}, 1000)
+function doSomethingImportant() {
+	setTimeout(() => console.log('getting a snack'), 1000)
 }
 
 cheer()
@@ -131,7 +131,7 @@ function* doSomething() {
 }
 
 function normalFunction() {
-  return 'hello world'
+  return 'huzzah!'
 }
 
 console.log(doSomething())
@@ -150,7 +150,7 @@ Luckily, there's this thing called a **Generator Iterator**. To everyone's surpr
 First off, we need to construct the iterator. This is usually done by first saving your generator function to a variable for easy access.
 
 ```js
-let words = doSomething()
+const words = doSomething()
 ```
 
 To command the generator to execute the function and read the next line of code you must use the method `.next()`.
@@ -161,7 +161,7 @@ function* doSomething() {
   yield 'HAHAHAH'
 }
 
-var words = doSomething()
+const words = doSomething()
 
 console.log(words.next())
 ```
@@ -275,7 +275,7 @@ sum.next()
 => Object {value: NaN, done: true}
 ```
 
-Why did this happen? In this situation, the generator has paused on the `yield expression` and is waiting for input. What input you provide will replace the `(yield result)` chunk of code.
+Why did this happen? In this situation, the generator has paused on the `yield expression` and is waiting for input. What input you provide will replace the entire `(yield result)` chunk of code.
 
 ```js
 sum.next(10)
@@ -288,7 +288,7 @@ Let's look at another example!
 function* yellStuff(){
   var firstYell = yield 'AUGHH KELLY CLARKSON'
   var secondYell = yield firstYell + "...HAHAHA!!!"
-  return firstYell + "..." + secondYell + "...LOUD NOISES"
+  return firstYell + "..." + secondYell + "...LOUD NOISES!!!"
 }
 
 const shouting = yellStuff()
@@ -435,5 +435,6 @@ function* doAllTheThings() {
 ```
 ### Read
 
+[Entertaining Article about Generators with Lots of Swear Words](https://medium.com/@dtothefp/why-can-t-anyone-write-a-simple-es6-generators-tutorial-ec2bbdf6ff45#.rmqbhf1zl)  
 [MDN Docs on Generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Iterators_and_Generators)  
-[The Basics of ES6 Generators](https://davidwalsh.name/es6-generators)
+[The Basics of ES6 Generators](https://davidwalsh.name/es6-generators)  
