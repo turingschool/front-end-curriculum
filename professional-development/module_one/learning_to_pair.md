@@ -34,10 +34,31 @@ You'll often find similar experiences happen in pair programming. This session w
 
 	Roles: Driver types and hones muscle memory through minute-to-minute typing while the Navigator pays attention to the code being written 
 	
-	Tip: Switch these roles up throughout a work session!
+	Tips: Switch these roles up throughout a work session!
 	
-	Potential pitfall: The Navigator stops paying attention and the Driver starts doing their own thing. Active participation is crucial for this pairing to be successful
-* **Ping Pong pairing:** 
+	Potential pitfall: The Navigator stops paying attention, and the Driver starts doing their own thing. Active participation and constant communication is crucial for this pairing to be successful.
+	
+* **Ping Pong pairing:** This looks like side-by-side pairing. This could include 2 mice and 2 keyboards. 
+
+	Roles: 
+	
+	Tips: 
+	
+	Potential pitfall: 
+	
+* **Distributed Pairing (Remote Pairing):** 
+
+
+	Roles: 
+	
+	Tips: 
+	
+		* Invest in a good headset
+		* Experiment with ScreenHero to build your comfort with using it
+		* Be more vocal about when to switch Driver and Navigator roles
+	
+	Potential pitfall: 
+	
 
 
 ## Defining the Relationship (DTR)
