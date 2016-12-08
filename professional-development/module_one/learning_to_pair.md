@@ -38,25 +38,27 @@ You'll often find similar experiences happen in pair programming. This session w
 	
 	Potential pitfall: The Navigator stops paying attention, and the Driver starts doing their own thing. Active participation and constant communication is crucial for this pairing to be successful.
 	
-* **Ping Pong pairing:** This looks like side-by-side pairing. This could include 2 mice and 2 keyboards. 
+* **Ping Pong pairing:** This looks like side-by-side pairing and could include 2 mice and 2 keyboards. 
 
-	Roles: 
+	Roles: Ping pong pairing is especially effective when writing tests. Team Member 1 can write a test while Team Member 2 can make the test green. Or the responsibility for making the test pass can switch back and forth (or ping pong, if you will) -- Team Member 1 could write test, Team Member 2 makes it green and then writes another test, Team Member 1 then makes that test green and so on. 
 	
-	Tips: 
+	Tips: Control can be passed back and forth frequently here, but in order to target what each person needs in their learning, it requires communication. If one member has more expertise in a certain area, this is both a great way for that person to exercise that knowledge and directly give feedback to the person who is learning to get better in that area.  
 	
-	Potential pitfall: 
+	Potential pitfall: Not setting expectations ahead of time could make it more difficult to decide who is doing what. 
 	
 * **Distributed Pairing (Remote Pairing):** 
 
 
-	Roles: 
+	Roles: You can incorporate either Driver-Navigator or Ping Pong during a remote pairing
 	
 	Tips: 
+	
 		* Invest in a good headset
 		* Experiment with ScreenHero to build your comfort with using it
+		* Spend longer on the DTR (covered next) to get to know each other
 		* Be more vocal about when to switch Driver and Navigator roles
 	
-	Potential pitfall: 
+	Potential pitfall: Technical issues when pairing remotely are common, so test your tools ahead of time!
 	
 
 
