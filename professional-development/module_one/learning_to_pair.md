@@ -51,12 +51,7 @@ You'll often find similar experiences happen in pair programming. This session w
 
 	Roles: You can incorporate either Driver-Navigator or Ping Pong during a remote pairing
 	
-	Tips: 
-	
-	Invest in a good headset
-	Experiment with ScreenHero to build your comfort with using it
-	Spend longer on the DTR (covered next) to get to know each other
-	Be more vocal about when to switch Driver and Navigator roles
+	Tips: Invest in a good headset; Experiment with [ScreenHero](https://screenhero.com/) to build your comfort with using it; Spend longer on the DTR (covered next) to get to know each other; Be more vocal about when to switch Driver and Navigator roles
 	
 	Potential pitfall: Technical issues when pairing remotely are common, so test your tools ahead of time!
 	
