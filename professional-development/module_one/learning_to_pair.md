@@ -52,7 +52,6 @@ You'll often find similar experiences happen in pair programming. This session w
 	Roles: 
 	
 	Tips: 
-	
 		* Invest in a good headset
 		* Experiment with ScreenHero to build your comfort with using it
 		* Be more vocal about when to switch Driver and Navigator roles
