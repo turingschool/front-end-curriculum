@@ -4,50 +4,130 @@ length:
 module: 2
 tags: enzyme, jsdom, react
 ---
-# Testing the difficult.
+## Testing is hard.
 
-## context
+Up to this point the extent of testing has been unit tests with `mocha` and feature style testing with `selenium-webdriver`. We use our unit tests to make sure that our objects can take in an input and shoot out an output. We used `selenium-webdriver` to 'hook into' our `mocha` testing framework to check and see if our features are working as planned. We dispatch `selenium` it opens up a browser, goes into our application, and checks to see if something is on the dom.
 
-One of my favorite magazines to read is a mag called ``offscreen``. The more I think about it this was the magazine that actually got me into really considering a career as a software developer. With that being said this magazine basically interviews developers and it walks you through some of the cool things these people are doing. As I began to read through some of these developer's stories I came across one that really put things into perspective for me. I want to read that for you now.  It's from Greg Knauss apparently he went to school in `san diego` to which I say `carne asada bro!`
+Historically testing UI has been extremely difficult. There are so many different variables to consider when you are on the front-end of development. Since we care about the code we are writing then we should also consider testing our UI. Testing code is crucial for the maintainability of a complex code base.
 
-``Experience has taught me to see my software as a writhing Achilles' heels, a horrific Shoggoth, every line a code of potential disaster. And so I wrap each in a thick, protective layer of negative assumptions, so that when things do go wrong --and they will -- the program can (best case) recover quickly or (worst case) not actually kill anyone.``
+I get that those reasons may not be enough to persuade you to actually want to start testing. In an article written by the Next Web entitled `11 Ways to screen your front-end developer Candidate` Reason 10 was Testing.
 
-So you might be asking why do I test? Well the answer should be because you care. People are going to hire you to do somethings most people can not do. You will be paid money to figure things out and solve problems to most seem impossible.
+```
+10. Have Them Write Unit Tests
 
-More importantly program is and will be your craft. Like anyone who is crafting something you should take extreme pride in your work because your name is going on it. So to insure that our work is good, and give ourselves the opportunity to write better code.
+Most developers don’t write unit tests, but we insist on them at Hubstaff for all development work. It’s a best practice that’s integral to saving time overall, as it reduces the amount of time we spend fixing issues after doing functional testings.
+
+Since we want our developers to know how to take new features for a test drive, we ask them to show us how well they write front–end tests. It’s an intellectual challenge to write effective tests for front–end behavior, which means that that developers who can do this well understand both the purpose of testing and the relevant behaviors to test.
+– Jared Brown, Hubstaff
+
+```
+
+In module 1 we were introduced to the bed rock of all of our testing: `unit-tests`. `unit-test` allowed us the ability to not only use these tests to check our constructors, but it also allowed us the opportunity to refactor our code. Unit-test are extremely foundational and important for us as developers if we are wanting to write good, clean, and refactored code.
 
 
 ## Learning Goals
 
-- Introduce Developers to enzyme and it's 3 major properties.
-- Introduce Developers to server side debugging with ``locus``
+- Understand what to test in a react application
+- Build an understanding of Enzyme’s three testing modes
+- Interactions with a user story.
+- Introduce developers to server side debugging with locus
+
+### Turn and Talk
+
+Before we move on it might be beneficial for all of us to be on the same page about testing. Discuss the following points with the person sitting next to you in regards to testing. Once you're done we'll reconvene.
+
+- What Unit Tests have you done?
+- What was it like to write feature tests with `selenium-webdriver` ?
+- Did you hit any snags?
+- What were the cons came along with testing the dom with `selenium-webdriver`
+- Consider your current application. What kind of tests do you expect to write?
+
+### What about Selenium?
+
+Up to this point we've spent some time utilizing `selenium-webdriver` to test the dom. There are some great things that come along with all of this. Some of the cons that come along with utilizing this technology is that
+
+ - It's memory intensive meaning it takes a long time to run our tests
+ - It's not headless meaning we have to utilize an actual instance of the browser in order get an instance of the dom
+ - Asynchronous Javascript
+
+### Testing React with Enzyme
+
+If all we really care about is state in our application then the meat of our tests (the more important tests) should really only check to see if our states changed if any sort of event has occured. Enzyme allows us to hook into our  test runner (in our case that's `mocha`) so it's something that we're pretty familiar with. On top of that if we are looking to get any sort of Dom elements or events we can emulate those events inside of the test framework. Behind the scenes we'll be using `js-dom` which creates an instance of the `dom` for us. What's great is that we can now run our tests pretty quickly.
+
+Whats really interesting is that Enzyme gives us 3 different modes to help us test our React application. You want to look at these as gears on a bike. Just how each gear on a bike has a specific job, purpose, and excels in different circumstance the same applies for each mode provided.
+
+Technically I could ride my bike in the highest gear at all times. I wouldn't have the best time in the world, but it would get the job done. The same could be said about writing tests in enzyme. There might be somethings that would work a lot better in a `shallow` test vs using a `render` function.
+
+With that lets look into the 3 different 'modes' that enzyme offers us. Off the bat it gives us a shallow rendering option, a full dom rendering, and a static rendering option.
+
+# Shallow
+
+Shallow basically does the bare minimum. So if we look at what's actually happening all Shallow does is return the base ``HTML`` of the given ``prop``. If there is a ``component`` lying inside of the given ``prop`` it will only return a ``stub`` of the ``prop``.
+
+Now I know what you're thinking. What is a `stub`?
+
+`A stub is a controllable replacement for an Existing Dependency (or collaborator) in the system. By using a stub, you can test your code without dealing with the dependency directly.`
+
+One thing that is amazing about shallow is it's ability to allow the developer the ability to stick to a single component. If all we really care about is state Shallow offers us the ability to test our functions with little effort.
+
+### Your turn
+
+Look into the following [Shallow methods](http://airbnb.io/enzyme/docs/api/ShallowWrapper/)  `find`, `at`, `simulate`, `contains`, and `state`
+
+Once you've looked at those methods discuss with the person next to you
+
+  - Do the tests look different?
+  - What function stuck out to you?
+  - Do I foresee myself using a particular function
+
+# Mount
+
+What ``mount`` does is it basically uses ``jsdom`` to render a testable version of the ``dom``
+heres the definition from the docs.
+
+``
+Full DOM rendering is ideal for use cases where you have components that may interact with DOM APIs, or may require the full lifecycle in order to fully test the component (i.e., componentDidMount etc.)
+
+Full DOM rendering requires that a full DOM API be available at the global scope. This means that it must be run in an environment that at least "looks like" a browser environment. If you do not want to run your tests inside of a browser, the recommended approach to using mount is to depend on a library called jsdom which is essentially a headless browser implemented completely in JS.
+
+``
+
+So what's super awesome about this is we can write tests and it kinda feels like we're writing ``jquery``
+here's a great example of how you can use ``mount``
+
+```
+it('simulates click events', () => {
+  const onButtonClick = spy();
+  const wrapper = mount(
+    <Foo onButtonClick={onButtonClick} />
+    );
+    wrapper.find('button').simulate('click');
+    expect(onButtonClick.calledOnce).to.equal(true);
+    });
+
+```
+
+### Your turn
+  - look into the following [mount functions](http://airbnb.io/enzyme/docs/api/mount.html) `get`, `children`,`simulate`
+  - Once you've spent time reading the docs discuss with the person next to you
+    - What is the difference between Mount and Shallow?
+    - was there big difference in syntax?
+
+# Render
+
+`Render` feels a lot like `mount` it just takes it a step further. It uses a thing called `cheerio` in the background.
+
+```
+Enzyme's render function is used to render react components to static HTML and analyze the resulting HTML structure.
+
+render returns a wrapper very similar to the other renderers in enzyme, mount and shallow; however, render uses a third party HTML parsing and traversal library Cheerio. We believe that Cheerio handles parsing and traversing HTML extremely well, and duplicating this functionality ourselves would be a disservice.
+
+For the purposes of this documentation, we will refer to Cheerio's constructor as CheerioWrapper, which is to say that it is analogous to our ReactWrapper and ShallowWrapper constructors.
+```
+If anything this will be the closest implementation to the browser.
 
 
-
-## Testing is hard.
-
-We are learning so much. Up to this point all we've ever really done is manipulate the dom. We haven't done much with interacting with Server Side code. It seems like everything escalated super quickly. Up to this point we've used frame works like `webdriverio` and `selenium-webdriver` to write feature tests. These feature tests would send selenium to actually go into the dom and and perform commands for us.
-
-In module 1 we were introduced to the bed rock of all of our testing: `unit-tests`. `unit-test` allowed us the ability to not only use these tests to check our constructors, but it also allowed us the opportunity to refactor our code.
-
-### your turn
-- take the next 5 minutes discussing the differences between all the testing we've done
-- consider your current application. What things do you think need to be tested?
-
-In our case there are so many things we could test. We have our server side interactions with firebase. We have things like Auth(), we things like a database. Coming from the server side world I am used to writing all this functionality. Now if you write functionality there should be a test for that functionality.
-
-Now if we look at `firebase` it's giving us all these things for free. So we could write some feature test to test that out but if we do that it won't be doing to much for us.
-
-One drawback to using selenium in this case is that it is very memory intensive and time intensive. One way we can combat this is to actually look at testing our `react` components.
-
-The code we are actually writing is `react` therefore there is going to be a higher chance of error in something like this. So I propose that we test our props and our components.
-
-
-## Testing react with Enzyme
-
-Now I know what you're thinking. `How can I test a react component without the dom?`. Well thankful with the help of `mocha, chai, and enzyme` we can actually do this. Our goals for today are to write some unit tests for our react `components` and our `props`. Now this is going to be stretching you a little bit. Before we move on lets talk about what we need to happen for this to work.
-
-#### needs
+#### Needs
 
 - we need a simulated `dom` and `window`
 - we need our react components
@@ -118,62 +198,6 @@ import { shallow, mount, render } from 'enzyme'
 Now you might be wondering what the heck those 3 things next to import do. They are essentially the 3 parts of enzyme. For the most part you'll really only be using one of them but if you wanted to you could learn how to use all 3.
 You really want to look at those 3 things being imported from ``enzyme`` as gears on a bike.
 
-# Shallow
-
-Shallow basically does the bare minimum. So if we look at what's actually happening all Shallow does is return the base ``HTML`` of the given ``prop``. If there is a ``component`` lying inside of the given ``prop`` it will only return a ``stub`` of the ``prop``.
-
-Now I know what you're thinking. What is a `stub`?
-
-`A stub is a controllable replacement for an Existing Dependency (or collaborator) in the system. By using a stub, you can test your code without dealing with the dependency directly.`
-
-So it'll acknowledge that the thing is there but you can't do much with it. Like you can't ``click`` it or really do anything other than acknowledge it's existence.
-
-# Mount
-
-This is most likely going to be your bread and butter. You'll be using this because it's a ``headless`` browser. When we used ``webdriverio`` and ``selenium`` we were actually launching a browser teseting the functionality of our app.
-
-What ``mount`` does is it basically uses ``jsdom`` to render a testable version of the ``dom``
-
-heres the definition from the docs.
-
-``
-Full DOM rendering is ideal for use cases where you have components that may interact with DOM APIs, or may require the full lifecycle in order to fully test the component (i.e., componentDidMount etc.)
-
-Full DOM rendering requires that a full DOM API be available at the global scope. This means that it must be run in an environment that at least "looks like" a browser environment. If you do not want to run your tests inside of a browser, the recommended approach to using mount is to depend on a library called jsdom which is essentially a headless browser implemented completely in JS.
-
-``
-
-So what's super awesome about this is we can write tests and it kinda feels like we're writing ``jquery``
-
-here's a great example of how you can use ``mount``
-
-```
-  it('simulates click events', () => {
-    const onButtonClick = spy();
-    const wrapper = mount(
-      <Foo onButtonClick={onButtonClick} />
-    );
-    wrapper.find('button').simulate('click');
-    expect(onButtonClick.calledOnce).to.equal(true);
-  });
-
-```
-
-
-# Render
-
-`Render` feels a lot like `mount` it just takes it a step further. It uses a thing called `cheerio` in the background.
-
-```
-Enzyme's render function is used to render react components to static HTML and analyze the resulting HTML structure.
-
-render returns a wrapper very similar to the other renderers in enzyme, mount and shallow; however, render uses a third party HTML parsing and traversal library Cheerio. We believe that Cheerio handles parsing and traversing HTML extremely well, and duplicating this functionality ourselves would be a disservice.
-
-For the purposes of this documentation, we will refer to Cheerio's constructor as CheerioWrapper, which is to say that it is analogous to our ReactWrapper and ShallowWrapper constructors.
-```
-
-If anything this will be the closest implementation to the browser.
-
 ### Your turn
 
 - Turn to your partner and recap everything we just talked about (whats need for testing and the 3 different flavors of ``enzyme``)
@@ -184,110 +208,4 @@ the docs can be found [here](http://airbnb.io/enzyme/docs/api/index.html)
 
 ### Code along
 
-If you get lost checkout ``yung-tests`` to get to the completed testing implementation of our project.
-
-so the first thing I want to test is the ``<App/>`` on a base level. And really if we look at ``app`` it's really just rendering the ``likesCounter``
-
-
-before we do this we have to change a couple things in our code to target the correct buttons. make these changes!
-
-in action button
-
-```
-const React = require('react')
-const ReactDOM = require('react-dom')
-
-class ActionButton extends React.Component {
-  render () {
-    return (
-      <button className="ActionButton" id={this.props.id} onClick={this.props.handleClick}>
-        <span>{this.props.text}</span>
-      </button>
-    )
-  }
-}
-
-module.exports = ActionButton
-```
-
-inside of likes counter
-
-```
-const React = require('react')
-const ReactDOM = require('react-dom')
-const ActionButton = require('./ActionButton')
-
-class LikesCounter extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {count: props.initialCount};
-  }
-
-  addToLikesCount (num) {
-debugger
-    this.setState( {count: this.state.count += num } )
-  }
-
-  render () {
-    return (
-      <div className="LikesCounter">
-        <h3>Likes: {this.state.count}</h3>
-        <div className="ActionButtons">
-          <ActionButton id="like" text="Like! (+1)" handleClick={this.addToLikesCount.bind(this, 1)} />
-          <ActionButton id="dislike" text="Dislike! (-1)" handleClick={this.addToLikesCount.bind(this, -1)} />
-        </div>
-      </div>
-    )
-  }
-}
-
-module.exports = LikesCounter
-
-```
-
-So now lets actually write some tests!
-
-```
-describe('app.jsx renders the likes counter',function(){
-  it('should render the application',function(){
-
-    const wrapper = shallow(<App/>)
-
-    expect(wrapper.contains(<LikesCounter initialCount={0} />)).to.be.true
-    expect(wrapper.props()).to.deep.equal({ initialCount: 0 })
-  })
-
-
-  it('should have the button text rendered onto the page', function(){
-    const wrapper = render(<App/>)
-    expect(wrapper.text()).to.contain('Likes: 0Like! (+1)Dislike! (-1)')
-  })
-})
-```
-
-So lets kind of talk about whats going on here. We've written two tests and we're using two different wrappers. In our first test we are using the shallow wrapper. The benefit of doing something like this is that it allows us the ability to stick to one of components without having to be testing our props.
-
-We also see our render wrapper. Render is running our code and is.
-
-Pro tip try running `console.log(wrapper.debug())`
-
-
-last tests.
-
-```
-describe('likes counter',function(){
-  it('should have 2 action button props', function(){
-    const wrapper = render(<LikesCounter/>)
-    expect(wrapper.find('.ActionButton')).to.have.length(2)
-  })
-
-  it('should allow me to click the action button', function(){
-    const wrapper = mount(<LikesCounter/>)
-    wrapper.state().count = 0 // we must do this because this value isn't set initially
-    var button = wrapper.find('#like').simulate('click')
-
-    expect(wrapper.state().count).to.equal(1)
-  })
-})
-
-```
+It might be beneficial for you to follow along as we write tests. If you would like to see the finish product checkout `enzyme-finished`
