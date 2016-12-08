@@ -53,15 +53,13 @@ You'll often find similar experiences happen in pair programming. This session w
 	
 	Tips: 
 	
-		* Invest in a good headset
-		* Experiment with ScreenHero to build your comfort with using it
-		* Spend longer on the DTR (covered next) to get to know each other
-		* Be more vocal about when to switch Driver and Navigator roles
+	Invest in a good headset
+	Experiment with ScreenHero to build your comfort with using it
+	Spend longer on the DTR (covered next) to get to know each other
+	Be more vocal about when to switch Driver and Navigator roles
 	
 	Potential pitfall: Technical issues when pairing remotely are common, so test your tools ahead of time!
 	
-
-
 ## Defining the Relationship (DTR)
 DTR refers to a conversation each student has with group partner(s) before launching into a project. During this conversation, group members set expectations for how to work together. Use this [DTR Guiding Questions & Memo template](https://docs.google.com/document/d/1zMtgWhODQuP3KBNhrg6PtmPUkw0DIskqgggeyEzYZi4/edit?usp=sharing) to guide the conversation.
 
