@@ -3,14 +3,15 @@ title: ES6 Generators
 module: 3
 ---
 
+
 ### What is an ES6 Generator Function?
 
 Let's start with an example of familiar JS syntax.
 
-```
+```js
 function cheer() {
-	console.log('go Pack')
-  console.log('go!')
+	console.log('skol Vikings')
+  console.log('WOOOOOO!')
 }
 
 cheer()
@@ -18,24 +19,24 @@ cheer()
 
 What do you expect the output to be?
 
-```
-=> go Pack
-=> go!
+```js
+=> skol Vikings!
+=> WOOOOO!
 ```
 
 This seems legit.  
 
 Typically, JavaScript functions will run each line of code one after the other in sequential order without stopping until the return statement. Once a function is called it will **"run to completion"** before any other JS code can be run.  
 
-This is because JavaScript is "single-threaded". Meaning only one command/function can be executed at any given time.
+This is because JavaScript is "single-threaded". Meaning only one command can be executed at any given time.
 
 Wouldn't it be awesome if I could execute one line, do something else, then execute the next line?
 
-```
+```js
 function cheer() {
-  console.log('go Pack')
+  console.log('skol Vikings!')
   doSomethingImportant()
-  console.log('go!')
+  console.log('WOOOO!')
 }
 
 function doSomethingImportant(){
@@ -47,21 +48,21 @@ cheer()
 
 We get:  
 
-```
-=> go Pack
+```js
+=> skol Vikings!
 => getting a snack
-=> go!
+=> WOOOOO!
 ```
 
 Great! Everything happened a little fast, but it did what I wanted it to do.  
 
 What about this:  
 
-```
+```js
 function cheer() {
-  console.log('go Pack')
+  console.log('skol Vikings!')
   doSomethingImportant()
-  console.log('go!')
+  console.log('WOOOO!')
 }
 
 function doSomethingImportant(){
@@ -71,21 +72,21 @@ function doSomethingImportant(){
 cheer()
 ```
 
-What do you expect to happen here? In a perfect world, I want to see `go Pack`, then I want to see `taking my time`, then `go!`. Instead, the first line doesn't wait for the second line to execute so we get
+What do you expect to happen here? In a perfect world, I still want to see `skol Vikings!`, then I want to see `getting a snack`, then `WOOOO!`. Instead, the first line doesn't wait for the second line to execute so we get:  
 
-```
-=> go Pack
-=> go!
+```js
+=> skol Vikings!
+=> WOOOO!
 => getting a snack
 ```
 
-This is where Generators come in handy.  
+This is where Generators come in to save the day.  
 
 A generator is a special kind of function in ES6 that can be paused in the middle, allowing other code to run, and then resumed when needed.
 
 Essentially we are talking about making synchronous code act like asynchronous code, which with the help of generators and Promises is far easier than it used to be.
 
-```
+```js
 function* doSomething() {
   yield 'hello world'  
   yield 'something else'
@@ -98,15 +99,15 @@ There are a few things to note here. First, generator functions are indicated wi
 
 Second, the content within the function starts with a `yield expression`. This is what tells the generator to pause.
 
-Once the generator function is called, it will only execute the code up until it encounters the special word `yield`. This tells the generator function to return whatever is to the right of the yield, and then pause after until told to continue.  
+Once the generator function is called, it will only execute the code up until it encounters the special word `yield`. This tells the generator function to return whatever is to the right of the yield, and then pause until told to continue.  
 
-After executing the line with the first `yield`, it cannot continue until you tell it to, which is done using a **Generator Iterator**.
+After executing the code to the right of the first `yield`, it cannot continue until you tell it to, which is done using a **Generator Iterator**.
 
-### Generator Iterator
+### Generator Iterators
 
 Take a look at our first example of a generator function.
 
-```
+```js
 function* doSomething() {
   yield 'hello world'  
   yield 'other stuff'
@@ -117,13 +118,13 @@ What do you expect to see if you run `doSomething()`?
 
 What do we actually get?  
 
-```
+```js
 => //....radio silence
 ```
 
 This is because `doSomething()` is no longer a vanilla JS function, it has been transformed by the asterisk into a Generator. Check it out:  
 
-```
+```js
 function* doSomething() {
   yield 'hello world'  
   yield 'other stuff'
@@ -137,7 +138,7 @@ console.log(doSomething())
 console.log(normalFunction())
 ```
 
-```
+```js
 => Generator {}
 => hi
 ```
@@ -152,7 +153,7 @@ First off, we need to construct the iterator. This is usually done by first savi
 
 To command the generator to execute the function and read the next line of code you must use the method `.next()`.
 
-```
+```js
 function* doSomething() {
   yield 'hello world'
   yield 'HAHAHAH'
@@ -167,16 +168,17 @@ Once again, what do you expect to see?
 
 The answer is super interesting! You might expect the return value to be `'hello world'`. In fact, the Generator returns a `Generator Object`.
 
-```
+```js
 => Object {value: 'hello world', done: false}
-```
+```  
+
 The object tells us two things.
   1) The return value from the yield expression
   2) A boolean indicating if the function is fully executed.  
 
 In order to get the value, simply chain `.value` onto the call.  
 
-```
+```js
 console.log(words.next().value)
 ```
 
@@ -186,7 +188,7 @@ But when do you actually want to use this type of thing?
 
 One use case is to iterate over a large function, executing other things on the way without breaking the flow of the function.
 
-```
+```js
 function *numbers() {
   yield 1
   yield 2
@@ -200,7 +202,7 @@ const generator = numbers()
 
 If you were to call `generator.next()` 5 times, you would get 5 numbers. Seems legit. But like always, calling a function 5 times to do the same thing defeats the purpose of being a lazy programmer.
 
-```
+```js
 for(let num of generator){
 	console.log(num)
 }
@@ -208,7 +210,7 @@ for(let num of generator){
 
 Or let the data persist.
 
-```
+```js
 const list = []
 for(let num of generator){
   list.push(num)
@@ -218,7 +220,7 @@ console.log(list)
 
 This seems kind of useless..we might as well just make an array. But let's check out an example where instead of simply printing numbers we pop out of our function and o something else.
 
-```
+```js
 function *numbers() {
   yield 1
   yield 2
@@ -246,7 +248,7 @@ With normal functions, you can pass in parameters at the beginning, and you get 
 
 For example:   
 
-```
+```js
 function *adding(){
   const result = 1 + 1
   return 20 + (yield result)
@@ -257,7 +259,7 @@ const sum = numbers()
 
 Think about what you expect to see on the first `sum.next()` call.
 
-```
+```js
 sum.next()
 => Object { value: 2, done: false}
 ```
@@ -266,21 +268,21 @@ This is because the function will kick off and execute until it encouters the fi
 
 Let's do it again. What do you expect?
 
-```
+```js
 sum.next()
 => Object {value: NaN, done: true}
 ```
 
 Why did this happen? In this situation, the generator has paused on the `yield expression` and is waiting for input. What input you provide will replace the `(yield result)` chunk of code.
 
-```
+```js
 sum.next(10)
 => Object{value: 30, done:true}
 ```
 
 Let's look at another example!
 
-```
+```js
 function* yellStuff(){
   var firstYell = yield 'AUGHH KELLY CLARKSON'
   var secondYell = yield firstYell + "...HAHAHA!!!"
@@ -290,7 +292,7 @@ function* yellStuff(){
 const shouting = yellStuff()
 ```
 
-```
+```js
 console.log(shouting.next())
 => Object {value: "AUGHH KELLY CLARKSON", done: false}
 ```
@@ -299,7 +301,7 @@ So our first execution returns what is to the right of the first `yield expressi
 
 If I give it nothing:   
 
-```
+```js
 console.log(shouting.next())
 => Object {value: "AUGHH KELLY CLARKSON", done: false}
 
@@ -309,7 +311,7 @@ console.log(shouting.next())
 
 Vs
 
-```
+```js
 console.log(shouting.next())
 => Object {value: "AUGHH KELLY CLARKSON", done: false}
 
@@ -319,7 +321,7 @@ console.log(shouting.next('OTHER LOUD THINGS'))
 
 And our last execution needs another input to replace `yield firstYell` statement, and save to the variable `secondYell`.
 
-```
+```js
 function* yellStuff(){
   var firstYell = yield 'AUGHH KELLY CLARKSON'
   var secondYell = yield firstYell + "...HAHAHA!!!"
@@ -345,7 +347,7 @@ console.log(shouting.next('HAM SANDWICH'))
 
 One final example with asynchronous functions.
 
-```
+```js
 function* doAllTheThings() {
     //... some code 1
     var val1 = yield task1();
@@ -375,7 +377,7 @@ console.log(doIt.next('FINAL'))
 
 Generators help you avoid the callback pyramid of hell. Take the following example:
 
-```
+```js
 function doAllTheThings(callback) {
   //....
   thing1(function(val) {
@@ -394,7 +396,7 @@ This is pretty gross. So what about Promises?
 
 Promises are great! The code above using Promises would look something like this:
 
-```
+```js
 function doAllTheThings() {
   return Promise.resolve()
     .then(function() {
@@ -416,7 +418,7 @@ This is much more readable, but it still requires you to write the function asyn
 
 Using Generators that code now looks like this:
 
-```
+```js
 function* doAllTheThings() {
     //... some code 1
     var val1 = yield task1();

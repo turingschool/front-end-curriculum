@@ -8,14 +8,14 @@ module: 3
 Pull requests are used to promote and facilitate app development within groups. It is important as a dev team to create small, modular branches that encapsulate the code you are working on for a particular feature. This includes writing helpful, descriptive commit messages that create a record of the development of your code.  
 
 ### Commit Message Structure
-There are lots of good resources and examples via the google but here are a few to keep on hand:
-* [5 Useful Tips from Thoughtbot](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message)
-* [Note About Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)
+There are lots of good resources and examples via the google but here are a few to keep on hand:  
+* [5 Useful Tips from Thoughtbot](https://robots.thoughtbot.com/5-useful-tips-for-a-better-commit-message)  
+* [Note About Commit Messages](http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html)  
 
 ```
-First line of commit message, capitalized with a 50 character limit
+First line of commit message, capitalized, imperative tense, with a 50 character limit
 
-Body of commit message which can be any length. Not required, but useful to explain what exactly your commit does and any context behind the code. Convention is to use "present imperitive" tense, for example you should say "fix bug" not "fixes bug" or "fixed bug". General rule of thumb is your message should finish the sentence "If this commit is merged in, it will...".
+Body of commit message which can be any length. Not required, but useful to explain what exactly your commit does and any context behind the code. Convention is to use "present imperative" tense, for example you should say "Fix bug" not "Fixes bug" or "Fixed bug". General rule of thumb is your message should finish the sentence "If this commit is merged in, it will...".
 
 - Bullets are OK in a commit body
 - So are emojis :sparkles:
@@ -38,10 +38,9 @@ Technically you can close an issue within both the commit message and the PR. Si
 
 Instead, put this line in the description of your PR. Once the PR has been successfully merged into master, the issue will be automatically closed.  
 
-You can use multiple buzzwords to accomplish the same task. Adding `closes #45` will automatically close issue 45. You could also say `Fixes #45`, `Resolve 45`, and others. [Check out the list here](https://help.github.com/articles/closing-issues-via-commit-messages/). (Note that the link refers to closing issues in a commit message but the same syntax applies to the description in a PR.)
+You can use multiple buzzwords to accomplish the same task. Adding `closes #45` will automatically close issue 45. You could also say `Fixes #45`, `Resolve #45`, and others. [Check out the list here](https://help.github.com/articles/closing-issues-via-commit-messages/). (Note that the link refers to closing issues in a commit message but the same syntax applies to closing them in the PR description.)
 
 You can also close multiple at once. Adding the sentence `This PR closes #45, closes #33, and closes #12` would close all of the listed issues.
-
 
 ### Common Mistakes
 
@@ -96,7 +95,7 @@ Let's say you committed some code and made a mistake in your first commit, then 
 
 **WORD OF CAUTION** only squash commits that haven't been pushed to an external repository. IE if you're already merged into master, it's too late. Only rebase and squash commits that don't affect anyone else's potential code base.
 
-When you merge a feature branch into master, all of your commits are retained. Sometimes you'll have a few in there that aren't needed..like `oops forgot to delete that comment`. Although the history is helpful as you're working on the feature, certain commits aren't useful to other developers walking through the more pivotal changes in your app.  
+When you merge a feature branch into master, all of your commits are retained. Sometimes you'll have a few in there that aren't needed..like `git commit -m "oops forgot to delete a comment"`. Although the history is helpful as you're working on the feature, certain commits aren't useful to other developers walking through the more pivotal changes in your app.  
 
 * Step 1: `git rebase -i HEAD~5`
   - Git will now know that you want to make changes to the last 5 commits made to your branch, and pop open an editor. You'll see something like this:
