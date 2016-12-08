@@ -12,6 +12,7 @@ Refer to the [Learning to Pair slides](https://docs.google.com/presentation/d/1_
 
 ## Learning Objectives:
 
+* Identify various forms of pair programming
 * Understand what DTR is and how to hold a DTR conversation
 * Define your own expectations in a working relationship
 * Apply strategies to hold your partners accountable
@@ -20,6 +21,21 @@ Refer to the [Learning to Pair slides](https://docs.google.com/presentation/d/1_
 ## Deliverable:
 
 * Include a DTR memo in your portfolio for at least one project
+
+## Opening
+In the past when you've worked in teams, what was successful about them? What was unsuccessful?
+
+You'll often find similar experiences happen in pair programming. This session will help you discover tools to navigate this relationship in a way that it's a great learning experience for you both. 
+
+## Types of pair programming
+[Pair programming](https://www.agilealliance.org/glossary/pairing/) can take many forms, and here are some suggestions of how you can approach pairing at Turing:
+
+* **Driver-Navigator:** Driver has control of the keyboard while the Navigator guides the Driver towards the end goal.
+	Roles: Driver types and hones muscle memory through minute-to-minute typing while the Navigator pays attention to the code being written 
+	Tip: Switch these roles up throughout a work session!
+	Potential pitfall: The Navigator stops paying attention and the Driver starts doing their own thing. Active participation is crucial for this pairing to be successful
+* **Ping Pong pairing:** 
+
 
 ## Defining the Relationship (DTR)
 DTR refers to a conversation each student has with group partner(s) before launching into a project. During this conversation, group members set expectations for how to work together. Use this [DTR Guiding Questions & Memo template](https://docs.google.com/document/d/1zMtgWhODQuP3KBNhrg6PtmPUkw0DIskqgggeyEzYZi4/edit?usp=sharing) to guide the conversation.
