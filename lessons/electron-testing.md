@@ -86,6 +86,10 @@ describe('App starts and has correct title and buttons', function () {
 });
 ```
 
+### FileBin
+
+
+
 ### Thinking About Your Project
 
 We could go into the weeds and TDD some more on Fire Sale, but let's take some time and map out what you need to test for your project. Take 10 minutes with your partner and think about how your user will interact with your app and possible edge cases. Use paper and pencil to write out the major features you will test and their edge cases.
