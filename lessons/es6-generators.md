@@ -149,7 +149,9 @@ Luckily, there's this thing called a **Generator Iterator**. To everyone's surpr
 
 First off, we need to construct the iterator. This is usually done by first saving your generator function to a variable for easy access.
 
-`let words = doSomething()`  
+```js
+let words = doSomething()
+```
 
 To command the generator to execute the function and read the next line of code you must use the method `.next()`.
 
@@ -218,7 +220,7 @@ for(let num of generator){
 console.log(list)
 ```
 
-This seems kind of useless..we might as well just make an array. But let's check out an example where instead of simply printing numbers we pop out of our function and o something else.
+This seems kind of useless...we might as well just make an array. But let's check out an example where instead of simply printing numbers we pop out of our function and do something else.
 
 ```js
 function *numbers() {
@@ -264,7 +266,7 @@ sum.next()
 => Object { value: 2, done: false}
 ```
 
-This is because the function will kick off and execute until it encouters the first `yield expression`. At that point it will pause and return anything to the right of that expression, in this case `result`, which is `1+1`, which is `2`.  
+This is because the function will kick off and execute until it encounters the first `yield expression`. At that point it will pause and return anything to the right of that expression, in this case `result`, which is `1+1`, which is `2`.  
 
 Let's do it again. What do you expect?
 
