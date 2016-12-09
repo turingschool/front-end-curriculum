@@ -185,11 +185,11 @@ Two ways to redirect routes:
 
 ### outlet
 
-As you've been generating files, you've probably noticed a line saying {{outlet}} that we've been ignoring. This small chunk of handlebars code is replaced by markup for the current route.
+As you've been generating files, you've probably noticed a line saying `outlet` that we've been ignoring. This small chunk of handlebars code is replaced by markup for the current route.
 
 ### yield
 
-Similar to {{outlet}} in that it servers as a placeholder for additional markup. {{yield}} generally lives in a component and is replaced with HTML.
+Similar to `outlet` in that it servers as a placeholder for additional markup. `yield` generally lives in a component and is replaced with HTML.
 
 
 ## Ember Mirage
