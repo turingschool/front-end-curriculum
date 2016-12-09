@@ -35,7 +35,26 @@ All searches using a binary search tree start at the root of the tree and traver
 
 [binary-search]: /assets/images/lessons/search-algorithms/binary-search.png
 
-[Code from this gist](https://gist.github.com/greim/17ccec50e8ac45a35edf08efec5fe059)
+[My code pen](http://codepen.io/atideman/pen/YpvLdZ?editors=1012)
+
+Like a linked list, a binary tree has two things:
+
+* A tree to hold all the nodes
+* Individual nodes that link to each other
+
+First let's focus on creating one node. This node simply contains a value that could be anything:
+
+```js
+class Node {
+  constructor(value) {
+    this.value = value;
+  }
+}
+```
+
+Let's not worry about finding the left and right nodes of a single node yet but instead create our Tree. The Tree has one root (first node). We can add a node if there is no root yet, or if there is a root we will add it to the root.
+
+We can also check if a tree has a value in one of its nodes or delete a node.
 
 ```js
 class Tree {
@@ -50,74 +69,51 @@ class Tree {
   delete(value) {
     if (this.root) this.root.delete(value, this, 'root');
   }
-  *[Symbol.iterator]() {
-    if (this.root) yield* this.root;
-  }
 }
-
-class Node {
-  constructor(value) {
-    this.value = value;
-  }
-  add(value) {
-    if (value < this.value) {
-      if (this.left) this.left.add(value);
-      else this.left = new Node(value);
-    } else if (value > this.value) {
-      if (this.right) this.right.add(value);
-      else this.right = new Node(value);
-    }
-  }
-  has(value) {
-    if (value < this.value) {
-      if (this.left) return this.left.has(value);
-      else return false;
-    } else if (value > this.value) {
-      if (this.right) return this.right.has(value);
-      else return false;
-    } else if (value === this.value) {
-      return true;
-    }
-  }
-  delete(value, parent, which) {
-    if (value < this.value) {
-      if (this.left) this.left.delete(value, this, 'left');
-    } else if (value > this.value) {
-      if (this.right) this.right.delete(value, this, 'right');
-    } else if (value === this.value) {
-      if (this.left) {
-        let node = this.left;
-        while (node.right) node = node.right;
-        this.value = node.value;
-        this.left.delete(this.value, this, 'left');
-      } else if (this.right) {
-        let node = this.right;
-        while (node.left) node = node.left;
-        this.value = node.value;
-        this.right.delete(this.value, this, 'right');
-      } else {
-        delete parent[which];
-      }
-    }
-  }
-  *[Symbol.iterator]() {
-    if (this.left) yield* this.left;
-    yield this.value;
-    if (this.right) yield* this.right;
-  }
-}
-
-var tree = new Tree
-tree.add(5)
-tree.add(12)
-tree.add(3)
-tree.add(58)
-tree.add(13)
-tree.add(1)
-tree.add(29)
-
-console.log(tree)
-console.log(tree.root.right.right.left)
 ```
 
-### Extra practice
+Back to our individual nodes to add, check values and delete.
+
+```js
+add(value) {
+  if (value < this.value) {
+    if (this.left) this.left.add(value);
+    else this.left = new Node(value);
+  } else if (value > this.value) {
+    if (this.right) this.right.add(value);
+    else this.right = new Node(value);
+  }
+}
+has(value) {
+  if (value < this.value) {
+    if (this.left) return this.left.has(value);
+    else return false;
+  } else if (value > this.value) {
+    if (this.right) return this.right.has(value);
+    else return false;
+  } else if (value === this.value) {
+    return true;
+  }
+}
+delete(value, parent, which) {
+  if (value < this.value) {
+    if (this.left) this.left.delete(value, this, 'left');
+  } else if (value > this.value) {
+    if (this.right) this.right.delete(value, this, 'right');
+  } else if (value === this.value) {
+    if (this.left) {
+      let node = this.left;
+      while (node.right) node = node.right;
+      this.value = node.value;
+      this.left.delete(this.value, this, 'left');
+    } else if (this.right) {
+      let node = this.right;
+      while (node.left) node = node.left;
+      this.value = node.value;
+      this.right.delete(this.value, this, 'right');
+    } else {
+      delete parent[which];
+    }
+  }
+}
+```
