@@ -8,19 +8,19 @@ Based on the URL, a particular model is handed to a given template to be rendere
 
 Let's say you have a url that looks like this:  
 
-```
+```js
 localhost:3000/items/1
 ```
 
 The path your router will see is  
 
-```
+```js
 /items/:item_id
 ```  
 
 let's say this path exists in the Item Route, which would look something like this:  
 
-```
+```js
 Router.map(function() {
   this.route('item', { path: '/items/:item_id' });
 });
@@ -32,7 +32,7 @@ The route would then pass the `item` model data down to components and templates
 
 Using the CLI tool, run `ember g route about`. You'll see output that looks something like this:  
 
-```
+```js
 $ ember g route about
 installing route
   create app/routes/about.js
@@ -64,7 +64,7 @@ Ember, like most structurally opinionated frameworks, provides you with helper m
 
 Example:  
 
-```
+```js
 {{#link-to 'about' class='button'}}
   About Page
 {{/link-to}}
@@ -72,7 +72,7 @@ Example:
 
 The `#` indicates an opening tag, meaning you must also have a `/` to close said tag (similar to HTML syntax). The opening tag takes an argument with the name of the route you're trying to link to. Here, we are linking to `'about'`, which matches what exists in `router.js`.
 
-```
+```js
 Router.map(function() {
   this.route('about');
 });
@@ -143,6 +143,7 @@ export default Ember.Route.extend({
   }
 });
 ```
+
 Realistically, this information will come from a data store or database, but the point is that the route returns the information your templates need to render in the `model hook`.
 
 A 'hook' is a function that gets called multiple times during the lifecycle of an app - for instance, the `users model hook` will be called any time a user enters the `users` route. The array of users returned form this function will be passed to our `users template` as the `model` property.  
@@ -174,20 +175,21 @@ export default Ember.Route.extend({
 
 Like props in React, our template now has access to the information necessary to iterate over data and display relevant information to the user.  
 
-Two ways to redirect routes:
-**replaceWith**
+Two ways to redirect routes:  
+
+* **replaceWith**
   Replaces the current URL in the browser history.
 
-**transitionTo**
+* **transitionTo**
   Adds a new route to the browser history.
 
-### {{outlet}}
+### outlet
 
-As you've been generating files, you've probably noticed a line saying `{{outlet}}` that we've been ignoring. This small chunk of handlebars code is replaced by markup for the current route.
+As you've been generating files, you've probably noticed a line saying `{{`outlet`}}` that we've been ignoring. This small chunk of handlebars code is replaced by markup for the current route.
 
-### {{yield}}
+### yield
 
-Similar to `{{outlet}}` in that it servers as a placeholder for additional markeup. {{yield}} generally lives in a component and is replaced with HTML.
+Similar to `{{`outlet`}}` in that it servers as a placeholder for additional markeup. `{{`yield`}}` generally lives in a component and is replaced with HTML.
 
 
 ## Ember Mirage
