@@ -1,6 +1,5 @@
 ---
 title: Sorting Algorithms
-length:
 tags: sorting, algorithms
 ---
 

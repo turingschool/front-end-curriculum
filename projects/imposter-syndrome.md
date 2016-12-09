@@ -46,7 +46,7 @@ Since this is [terra incognita][], a big part of the project will be documenting
 1. A particular technical problem that you encounter and how you solved it (or your efforts to solve it, if you didn't end up solving it)
 1. A post-mortem on what went well and what you would improve upon if you were to continue working on this project or if you started over
 
-Each section is worth 15 points for a total of 60 points.
+Each section is worth 15 points for a total of 45 points.
 
 **Important Note**: It's easy to complain how stuff is hard in a blog post. Not only is that not particularly helpful to anyone who reads your post, it turns out that most open source software is created by humans and humans have a tendency to feel really bad when you complain about their donated efforts.
 
@@ -62,8 +62,8 @@ Each section is worth 15 points for a total of 60 points.
 
 * 40: Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
 * 35: Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* 15: Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-* 10: Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
+* 15: Application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+* 10: Application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 * 5: Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 * 0: There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
 
@@ -80,8 +80,8 @@ Instructor/developers will select one feature in the project to review for this 
 
 - 60: Developers pushed themselves and their team by taking risks which is demonstrated by a delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
 - 50: Developers pushed themselves and their team by taking risks which is demonstrated by an almost delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
-- 30: Developers attempted to implement extensions using technologies not covered in class but it did not result in a delivered feature.
-- 10: Developers but did not build any features.
+- 30: Developers attempted to implement feature using technologies not covered in class but it did not result in a delivered feature.
+- 10: Developers did not build any features.
 
 ### Workflow (20 Points)
 
