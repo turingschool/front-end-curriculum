@@ -85,26 +85,37 @@ You can see that IOS tends to have an ioS specific component (...Android does to
 
 ### Let's Talk Styles
 
-When it comes to styling your app, we don't write CSS (although it will look very similar). Instead we create a simple JS StyleSheet object and pass specific properties (subcomponents) of the object into components as the style prop. You can pass multiple style props using an array, with the last style taking precedence. As  Let's take a look how this works in our app:
+When it comes to styling your app, we don't write CSS (although it will look very similar). Instead we create a simple JS StyleSheet object and pass specific properties (subcomponents) of the object into components as the style prop. You can pass multiple style props using an array, with the last style taking precedence.
+
+There are a few quirks to be aware of. First, there are no units for size in React Native. WHICH IS AWESOME. No more deciding between pixels and vh and rem and em...just declare a number. React Native also uses flexbox as the default layout. You can also set absolute values like width: 100. Here is a good rule of thumb from React Native Express:
+
+![react native flexbox][react-native-flexbox]
+
+[react-native-flexbox]: /assets/images/lessons/react-native/react-native-flexbox.png
+
+
+
+Let's take a look how this works in our app:
 
 ```js
 // First we create a StyleSheet object with three subcomponents, container, header and dinoList.
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    top: 100,
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: '100',
-    textAlign: 'center',
-    marginBottom: 25,
-  },
-  dinoList: {
-    marginBottom: 25,
-  },
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      top: 50,
+      borderWidth: 25,
+    },
+    header: {
+      fontSize: 24,
+      fontWeight: '900',
+      textAlign: 'center',
+      marginBottom: 25,
+    },
+    dinoList: {
+      padding: 10,
+    },
 })
 ```
 
@@ -126,18 +137,104 @@ render() {
 }
 ```
 
-As you can see in our Switch component, we can also declare styles directly. This is helpful when we want to dynamically set style properties such as height or width based on another prop or state value. But what if we want to use multiple style subcomponents? Use an array!
+As you can see in our Switch component, we can also declare styles directly inline. This is helpful when we want to dynamically set style properties such as height or width based on another prop or state value. But what if we want to use multiple style subcomponents? Use an array!
 
 ```js
 <Text style={[{width: 50},styles.container,styles.header]}>Welcome to Bouncing Dinos!</Text>
+```
+
+It takes awhile to get used to writing inline styles and CSS as a Javascript object on the same file as your JS code. It feels dirty and unnatural and you want to grab for Sass and separate your files. This is mobile, not the web. We don't have to follow the same rules. I hated it at first, but now I actually prefer it. It makes you focus on each element of a component and not worry about the hierarchy of styles being handed down.
+
+There are ways to abstract out styles and create separate JS files where you export styles. This is handy when you need to want different styles based on the platform. [Read this article from WillowTree to get an idea of how to do that](http://willowtreeapps.com/blog/react-native-tips-and-tricks-styling-in-js/)
+
+One final note on styling. If you want to get the unitless height and width of the device, you can:
+
+```js
+// Make sure to import Dimensions from react-native
+let { height, width } = Dimensions.get(`window`);
 ```
 
 ### Animations coming soon
 
 We will talk about animations tomorrow.
 
+### Let's Talk Abstracting Away the Platform
+
+This will happening: You are tapping away, building up some slick looking scene with animations and fancy colors with the xcode simulator up and running. You want to check out your work so you save and watch the xcode hot reload. Only it doesn't. You hit save 12 more times, add in a backgroundColor: red just for good measure, and still nothing. 10 out of 10 times it's because you were changing your index.android.js file. Angered at the universe for birthing two mobile platforms, you select-all and copy paste into index.ios.js. All is right in the world again.
+
+The duality of mobile developent is annoying. Thankfully we can abstract away constant battle of index.android.js vs. index.ios.js. Let's do that in our app by creating an App.js component that is consumed by both files.
+
+```js
+import React, { Component } from 'react';
+import { StyleSheet, Dimensions, Platform, Text, View, Switch, Navigator } from 'react-native';
+import { DinoScroll } from './DinoScroll';
+
+export default class App extends Component {
+
+  state = {
+    horizontalIsOn: false,
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.header}>Welcome to Bouncing Dinos!</Text>
+        <Text>Scroll Horizontal</Text>
+        <Switch
+          onValueChange={(value) => this.setState({horizontalIsOn: value})}
+          style={{marginBottom: 10}}
+          value={this.state.horizontalIsOn} />
+        <DinoScroll horizontal={this.state.horizontalIsOn} />
+      </View>
+    );
+  }
+}
+
+let { height, width } = Dimensions.get(`window`);
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      top: 50,
+      borderWidth: 25,
+    },
+    header: {
+      fontSize: 24,
+      fontWeight: '900',
+      textAlign: 'center',
+      marginBottom: 25,
+    },
+    dinoList: {
+      padding: 10,
+    },
+})
+```
+
+This is exactly what we had before, except we are exporting the App component instead of registering it with AppRegistry. Now for our index.android.js and index.ios.js files:
+
+```js
+
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import App from './app/App';
+
+class Main extends Component{
+  render() {
+    return (
+      <App />
+    );
+  }
+}
+
+AppRegistry.registerComponent('BouncingDinos', () => Main);
+```
+
+Clean, small, easy to read files that you can easily add platform dependent code without worrying about your main app.
+
 ### Let's Talk Debugging
-As we all know, we no longer in a browser where we can throw debuggers and console.log()s to our heart's desire. But thankful React Native gives us a couple of tools to make debugging like good old times. First, you can throw a console.error('whatver') in your React Native code and redbox (not the movie rental but an error messaging feature) with throw up a red screen with whatever you put in console.error(). An even better feature is the ability to turn on remote debugging. With your ioS emulator running, click cmd+control+z to pull up the dev tools. Select Debug JS Remotely and a web browser pointed at http://localhost:8081/debugger-ui will open. Open up the console and select the Pause on Exceptions button. Then throw a debugger in your JS and reload the emulator. The debugger should trigger like a normal debugger and you can inspect this.props ...etc.
+
+As we all know, we no longer in a browser where we can throw debuggers and console.log()s to our heart's desire. But thankful React Native gives us a couple of tools to make debugging like good old times. First, you can throw a console.error('whatver') in your React Native code and redbox (not the movie rental but an error messaging feature) with throw up a red screen with whatever you put in console.error(). An even better feature is the ability to turn on remote debugging through Chrome. With your ioS emulator running, click cmd+control+z to pull up the dev tools. Select Debug JS Remotely and a web browser pointed at http://localhost:8081/debugger-ui will open. Open up the console and select the Pause on Exceptions button. Then throw a debugger in your JS and reload the emulator. The debugger should trigger like a normal debugger and you can inspect this.props ...etc.
 
 ### A Refresher in the React Component Lifecycle
 
@@ -145,15 +242,26 @@ Just like normal React, we have access to the component lifecycle API. Here is a
 
 #### Mounting Cycle
 
-* constructor(props) -
-* componentWillMount() -
-* render() -
-* componentDidMount()
+* constructor(props) - Instantiate the component class and pass in props from the parent component (or container). Can also set local state in the component.
+* componentWillMount() - Invoked just once, right before component renders.
+* render() - Renders a React component or null.
+* componentDidMount() - Invoked just once right after component renders. Good time to make API call or execute delayed code.
 
 #### Updating Cycle
 
-* componentWillReceiveProps(nextProps) -
-* shouldComponentUpdate(nextProps, nextState) -
-* componentWillUpdate(nextProps, nextState)
-* render() -
-* componentDidUpdate(prevProps, prevState)
+* componentWillReceiveProps(nextProps) - Parent of component has passed in new props. This component will now re-render. Good time to set local state before the re-render (if necessary)
+* shouldComponentUpdate(nextProps, nextState) - Returns either true or false. Defaults to true. If true, the component will re-render. If false, the component will not re-render. Usually used by comparing current props to passed in props.
+* componentWillUpdate(nextProps, nextState) - Called once the component decides it will re-render. Can't set local state here.
+* render() - Renders a React component or null if shouldComponentUpdate returns true.
+* componentDidUpdate(prevProps, prevState) - Invoked right after component re-renders.
+
+
+### Go Forth and Mobilize
+In our next few lessons we will learn how to navigate and add scenes within our mobile apps, how to use animations for immersive user experience, what ImmutableJS is and how to implment it with Redux.
+
+---
+
+### Resources
+
+* [React Native docs](https://facebook.github.io/react-native/docs)
+* [React Native Express](http://www.reactnativeexpress.com/)
