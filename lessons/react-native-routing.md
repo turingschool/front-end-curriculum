@@ -11,5 +11,5 @@ By the end of this lesson, you will:
 * ...
 
 ## Resources
-- [Express.js](https://expressjs.com/)
-- [HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [Navigator API](https://facebook.github.io/react-native/docs/navigator.html)
+- [Navigation Guide](https://facebook.github.io/react-native/docs/navigation.html)
