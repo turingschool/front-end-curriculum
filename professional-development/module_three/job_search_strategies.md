@@ -51,3 +51,54 @@ Goals will help guide the scheduling and priorities. Set your long term goal fir
 - Based on the weekly goals, what would need to happen on a daily basis to reach the weekly goals? i.e. If I want at least 12 new conversations per week, I would need to send at least five cold/warm outreach emails per day.
 - Spend thirty minutes each day and an hour each week assessing how your tasks aligned with your goals. Make adjustments as needed -- it's so important to be flexible, kind to yourself, and realistic with time.
 
+
+## More tips from Meg:
+
+## Scheduling
+
+### During Turing:
+
+	* How are you spending your time?
+		* Code
+		* Outreach
+		* Research
+		* Network
+	* When do you have time to dedicate to Job search?                                      
+		-evenings, weekend, morning, around project work time
+	* How many hours can you afford to spend on job search?                               
+		-Ideally 2 hours/wk minimum
+	* Block that time off on your calendar
+	* Set goals for tasks to complete during that time                                       
+		-research, outreach, network
+	* Allocate a timebox for each task. 
+	* Manage timeboxes via calendar
+	* Respect the schedule                                                               
+		- Can be flexible but make sure you are making time for every task everyday. If you short a task one day, give it extra time the next.
+	* Respect how you like to schedule                                              
+		-When are you most/least focused? Do you like having a precise schedule or varying schedule?
+	* Make weekly assessments of the schedule and what did and didn’t work and adjust as needed. 
+
+### After Turing:
+	* Design a 40 hour work week that addresses  ALL tasks 
+		* Code
+		* Outreach
+		* Research 
+		* Network
+
+### Goal Setting
+Set your long term goal first and work backwards identifying monthly, weekly and daily goals.                                                         "Accept job offer within 8 weeks of graduating from Turing." 
+		1. Monthly?
+			* Need at least three interviews within the first month 
+		2. Weekly?
+			* During Turing-need at least 2 conversations per week
+			* After-Need at least 12 new conversations per week are needed
+		3. Daily?
+			* During-Need at least 1 cold outreach email/day
+			* After-Need at least 5 cold/warm outreach emails are needed/day. 
+
+Be flexible, kind to yourself and realistic with your time. 
+If something isn’t working, try something different
+
+Goals guide the schedule and priorities
+[Example](https://gist.github.com/kjs222/7ef5e79a71eedf9d8c8d401da1e687c7)
+
