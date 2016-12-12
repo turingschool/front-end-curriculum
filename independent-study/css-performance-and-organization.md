@@ -261,20 +261,12 @@ We have been working with all our styles in one stylesheet so far, but from an o
 
 By grouping our styles together by content (or layout) type, we reenforce that we are writing our CSS from a more structural point of view rather than what the particular content inside a particular element is.
 
-
-### Resources referenced in this lesson:
-
-[Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
-
-[CSS Selector Performance has changed! (For the better)](http://calendar.perfplanet.com/2011/css-selector-performance-has-changed-for-the-better/)
-
-[Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/)
-
-
 ### Additional Resources
 
 [CSS Guidelines](http://cssguidelin.es/)
 
-[Front End Masters: Scaleable and Modular Architecture for CSS (SMACSS)](https://frontendmasters.com/courses/smacss/)
-
 [CSS Tricks: Efficiently Rendering CSS](https://css-tricks.com/efficiently-rendering-css/)
+
+[Writing efficient CSS](https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Writing_efficient_CSS)
+
+[Jonathan Snook's guide, Scaleable and Modular Architecture for CSS](https://smacss.com/)

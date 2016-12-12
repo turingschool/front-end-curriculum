@@ -91,8 +91,8 @@ But if my picture is giant, like say 4000px wide, and I serve that image to mobi
 
 _Short answer:_ :point_right: Yes and Yes :point_left:. 
 So how do we deal with the issues above?
-We leverage two newish attributes of the ```img`` tag in HTML.
-```srcset``` and ```sizes``` provide several additional source images along with hints to help the browser pick the right one. 
+We leverage two newish attributes of the `img` tag in HTML.
+`srcset` and `sizes` provide several additional source images along with hints to help the browser pick the right one. 
 
 ```
 <img srcset="puppy-320w.jpg 320w,

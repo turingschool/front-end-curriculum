@@ -1,24 +1,36 @@
 ---
-title: Introduction to jQuery 
+title: Introduction to jQuery
 tags: jquery, javascript
 ---
 
-jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, it's JavaScript. It gives our JavaScript super powers. It's used on about 78% of the top million web pages. So, it's worth while getting comfortable with it.
+jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, it's JavaScript. It's used on about 78% of the top million web pages, so it's worth while getting comfortable with it.
 
 #### Loading the jQuery library
 
-```js
+To use jQuery, you'll need to include the following lines in your HTML:
+
+```html
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="path/to/your/jquery.min.js"><\/script>')</script>
 ```
 
-Let's say that we have a page with the following markup?
+Let's talk about what's going on here:
+
+In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.1.1`.
+
+In the second line, we're including a link to a local set of jQuery files that we've downloaded to our machine and included in the directory for our project. This line isn't strictly required for us to use jQuery, but rather is a fallback to make sure that we can still access the library in the event that we are unable to access the CDN for some reason (better safe than sorry, right?). You can [download a copy of jQuery here.](http://jquery.com/download/) **Note: be sure to download the same version that you're referencing in the Google CDN link.**
+
+## First Lines of jQuery
+
+Let's say that we have a page with the following markup:
 
 ```html
 <h1 class="important-header">Dinosaurs are awesome.</h1>
 ```
 
-We could change the text programatically.
+Just like with plain ol' Javascript, jQuery lets us change the text programatically. The neat thing about jQuery, though, is that it significantly reduces the amount of code we have to write.
+
+Think about how you would use `innerText` to change the content in an HTML page with Javascript. Now, take a look at all you need to do that with jQuery:
 
 ```js
 $('h1').text('I AM A DINOSAUR.');
@@ -26,24 +38,24 @@ $('h1').text('I AM A DINOSAUR.');
 
 Play around with the following example.
 
-- Remove the line of JavaScript.
 - Change the replace text to something else.
-- Change the `h1` selector to `.important-message`
+- Change the `h1` selector to `.important-header`
 - Add the following line of code: `$('h1').css('backgroundColor', 'red');`
+- Add another CSS property to `h1` -- how do you change more than one style on the same selector with jQuery?
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="yJexXR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/yJexXR/">Your First Lines of jQuery</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="zBrJpV" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/gMPdzx/">Event Listeners</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 ## Responding to User Events
 
-JavaScript along with its good friend jQuery are used to change and manipulate web pages. But, generally speaking, if you wanted the page to be different, you could have just written different HTML or CSS to begin with, right?
+jQuery and, of course, Javascript are used to change and manipulate web pages. But, generally speaking, if you wanted the page to be different, you could have just written different HTML or CSS to begin with, right?
 
-The real power of using jQuery to change pages emerges when we start listening for user events.
+Just like Javascript, the real power of using jQuery to change pages emerges when we start listening for user events.
 
 This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what he or she sees.
 
 Let's take a look at the syntax and then we'll talk about what's happening.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="zBrJpV" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/gMPdzx/">Event Listeners</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="QEQwjy" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/QEQwjy">Event Listeners</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 The following things are happening in the example above:
 
@@ -84,7 +96,7 @@ We're using a jQuery method called `toggleClass()`. When the user clicks on the 
 - `.mouseover()`
 - `.mouseup()`
 
-Let's take a moment to play with each of them.
+Take a moment to investigate and play with each of them.
 
 ## Getting Values from the User
 
