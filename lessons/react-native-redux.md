@@ -222,4 +222,52 @@ export default class Search extends Component{
 
 Lots going on here but really all you need to know is that you can enter search criteria and click get books to make an API call to Google Books. If we fire up the iOS simulator with react-native run-ios and search for something... say 'donkey kong' ... we get ... NOTHING. So useful. This is because the Search component doesn't know about this.props.books yet.
 
-Now the real work begins. Time to set up our actions, reducers and containers.
+Now the real work begins. Time to set up our actions, reducers and then back to containers. Create actions and reducers directories under the app directory. I like to create a file for all my types of actions:
+
+```js
+// In actionTypes.js file under actions directory
+export const types = {
+  GET_BOOKS: 'GET_BOOKS'
+}
+```
+
+This is just a handy way to see all of your actions in one place. Now lets create the matching getBooks action function:
+
+```js
+// In bookActions.js file under actions directory
+import {types} from './actionTypes';
+
+export const actionCreators = {
+  getBooks: (data) => {
+    return {type: types.GET_BOOKS, data: data}
+  }
+}
+```
+
+This function takes in data (in our case it will be an array) and returns an object with type: 'GET_BOOKS' and data: data. Simple, pure functions at their finest.
+
+Now for the reducer. We will import all of our action types (in our case just the one, but could be lots) and set the initial state of our app with books as an empty array. 
+
+```js
+// In book.js file under reducers directory
+import * as types from '../actions/actionTypes';
+
+const initialState = {
+  books: []
+};
+
+export const reducer = (state = initialState, action) => {
+  const { books } = state
+  const { type, data } = action
+
+  switch (type) {
+    case 'GET_BOOKS':
+      return {
+        ...state,
+        books: data
+      }
+  }
+
+  return state
+}
+```
