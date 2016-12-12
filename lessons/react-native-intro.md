@@ -1,7 +1,18 @@
 ---
 title: Introduction to React Native
 module: 4
-status: draft
+tags: react native, mobile
+---
+
+### Goals
+
+By the end of this lesson, you will:
+* Understand the differences between React and React Native
+* Understand how to use an iOS simulator
+* Understand the different native components and how to style them
+* Know how to debug React Native with warnings, errors and Chrome debugger
+* Be familiar with when to use the different React lifecycle methods for mobile development
+
 ---
 
 Welcome to the world of mobile development. React Native is just like the React you know and love for the web, but it complies Javascript to native code (Objective-C, Java) for a specific OS. So you get the performance of native apps while just writing JS! You also get the benefits of reusable components, state management with Redux, and Chrome debugging tools.
@@ -81,7 +92,7 @@ But this being mobile, we have to be able to respond to user gestures and naviga
 <Switch />
 ```
 
-You can see that IOS tends to have an ioS specific component (...Android does too on some components) because ioS is no fun and doesn't like you customizing components. You can use <Navigator /> for ioS but if you are building strictly for Apple products using <NavigatorIOS /> leverages native UIKit navigation.
+You can see that IOS tends to have an iOS specific component (...Android does too on some components) because iOS is no fun and doesn't like you customizing components. You can use <Navigator /> for iOS but if you are building strictly for Apple products using <NavigatorIOS /> leverages native UIKit navigation.
 
 ### Let's Talk Styles
 
