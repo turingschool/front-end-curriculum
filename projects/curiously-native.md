@@ -1,20 +1,21 @@
 ---
 title: Curiously Native
 module: 4
-tags: react native, api
+tags: react native, redux, immutable, data, visualizations, api
 ---
 
 ## The Project
 
 In this project, we'll be creating an mobile app with React Native that consumes a public API and renders useful data visualizations. We will also be using Redux with ImmutableJS to store the our data and auth0 to authenticate users.
 
-You can use whatever API interests you, but you must use only React Native components to create the data visualizations (no npm installs for graphs)
+You can use whatever API interests you and any of the auth0 providers to authenticate users.
 
 ### Pre-Work
 
-You'll be expected to have reviewed the following materials by Monday.
+You'll be expected to have reviewed the following materials by Wednesday morning:
 
-1. Prework 1
+1. https://facebook.github.io/react-native/
+2. http://www.reactnativeexpress.com/
 
 ## Requirements
 
@@ -22,22 +23,28 @@ You'll be expected to have reviewed the following materials by Monday.
 
 You must use auth0 to authenticate a user. You can use any of the auth0 providers (Google, Twitter, Facebook, Github... [check them all out here](https://auth0.com/docs/identityproviders))
 
-### Consume API
+### Consume Public API
 
-You can pick any API you want. No CORS in React Native yaaaay.
+You can pick any API you want. No CORS in React Native so go bananas.
 
 ### Immutablility
 
 You must use ImmutableJS with Redux to store your API data in your app.
 
-### Visualization
+### User Experience
 
-You must use create two scenes (think of pages for mobile) that have data visualizations. What those visualizations look like is up to you. You must also have a login scene and a profile scene.
+You must create four distinct scenes (think of a web page for mobile) and use the navigator to navigate between them:
+
+1. A Home scene - Ability to login
+2. A Profile scene - Picture of user along with user information and ability to logout
+3. A search scene - Ability to make an api call to search for information and display results.
+4. Data visualization scene - Two unique data visualizations based on data retrieved by api call.
+
+What the scenes and visualizations look like is up to you.
 
 ### Blog Posts
 
 You've built apps in React/Redux, you've hit API endpoints, but you haven't used React Native for mobile development. One of the goals of this project is to documenting your successes and struggles with mobile development and authentication. In addition to programming, you'll be writing a a series of blog posts:
-
 
 1. An introduction to React Native and how mobile development differs from web development. Discuss the pros/cons of using React Native vs. React, what you need to keep in mind when developing for both iOS and Android, and any design choices you made because of mobile development.
 2. A particular technical problem that occurred when trying to visualize data.
@@ -45,10 +52,8 @@ You've built apps in React/Redux, you've hit API endpoints, but you haven't used
 
 ## Extensions
 
-* Infinite Scroll to view more photos
-* See trending posts
-* Show pictures that match a hashtag
-* Search for a user
+* Add an additional scene with two more data visualizations and animations (15 pts)
+* Persist data in a MySql database using Realm (20 pts)
 
 ---------
 
@@ -75,10 +80,10 @@ You've built apps in React/Redux, you've hit API endpoints, but you haven't used
 * 5: Attempt at using ImmutableJS but really it's a dumpster fire of data.
 * 0: No attempt made
 
-### Visualization (20 Points)
+### Visualizations (20 Points)
 
-* 20: There are at least two scenes of data visualization that have animations and are beautifully displayed.
-* 15: There are two scenes of data visualization.
+* 20: There are at least two unique data visualization that have animations and are beautifully rendered.
+* 15: There are two unique data visualization with basic animations.
 * 7: There are less than two scenes of data visualization or visualizations do not work properly.
 * 0: No visualizations.
 
@@ -93,11 +98,11 @@ You've built apps in React/Redux, you've hit API endpoints, but you haven't used
 * 5: Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 * 0: There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
 
-### User Interface (20 points)
+### User Interface (10 points)
 
-* 20: The application is pleasant, logical, and easy to use. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer. The client interface is unique and is in spirit with the selected theme.
-* 15: The application has many strong pages/interactions, but a few holes in lesser-used functionality. Some attempt to create a unique client interface and experience.
-* 8: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories. Little to no attempt to create a unique client interface.
+* 10: The application is pleasant, logical, and easy to use. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer. The client interface is unique and is in spirit with the selected theme.
+* 7: The application has many strong pages/interactions, but a few holes in lesser-used functionality. Some attempt to create a unique client interface and experience.
+* 5: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories. Little to no attempt to create a unique client interface.
 * 0: The application is confusing or difficult to use.
 
 ### Risk Taking and Creativity (20 points)
