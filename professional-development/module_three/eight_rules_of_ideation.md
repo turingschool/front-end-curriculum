@@ -3,6 +3,7 @@ title: 8 Rules of Ideation
 layout: page
 ---
 
+# Creativity Exercise: Eight Rules of Ideation
 
 (*adapted from the Ignite step of the Disciplined Dreaming Framework*)
 
