@@ -21,13 +21,15 @@ A scene can be thought of as a page in your standard web app. Scenes are simply 
 
 For example, in our Dino App, the cohesive rendering of all the components in our `App.js` file can be considered a scene:
 
-```javascript
+```js
 <View style={styles.container}>
   <Text style={styles.header}>Welcome to Bouncing Dinos!</Text>
   <Text>Scroll Horizontal</Text>
   <Switch
     onValueChange={(value) => this.setState({horizontalIsOn: value})}
-    style={{marginBottom: 10}}
+    style={ 
+      {marginBottom: 10}
+    }
     value={this.state.horizontalIsOn} />
   <DinoScroll horizontal={this.state.horizontalIsOn} />
 </View>
@@ -45,14 +47,18 @@ Now we can use the `Navigator` within our render method:
 
 ```javascript
     <Navigator
-      initialRoute={{title: 'Welcome to Bouncing Dinos!'}}
+      initialRoute={
+        {title: 'Welcome to Bouncing Dinos!'}
+      }
       renderScene={(route, navigator) =>
         <View style={styles.container}>
           <Text style={styles.header}>{route.title}</Text>
           <Text>Scroll Horizontal</Text>
           <Switch
             onValueChange={(value) => this.setState({horizontalIsOn: value})}
-            style={{marginBottom: 10}}
+            style={
+              {marginBottom: 10}
+            }
             value={this.state.horizontalIsOn} />
           <DinoScroll 
             style={styles.dinoList}
@@ -84,7 +90,9 @@ export class Home extends Component {
         <Text>Scroll Horizontal</Text>
         <Switch
           onValueChange={(value) => this.setState({horizontalIsOn: value})}
-          style={{marginBottom: 10}}
+          style={
+            {marginBottom: 10}
+          }
           value={this.state.horizontalIsOn} />
         <DinoScroll 
           style={styles.dinoList}
@@ -103,7 +111,9 @@ export default class App extends Component {
   render() {
     return (
       <Navigator
-        initialRoute={{ title: 'Welcome to Bouncing Dinos!' }}
+        initialRoute={
+          { title: 'Welcome to Bouncing Dinos!' }
+        }
         renderScene={(route, navigator) => {
           return (
             <Home {...route} />
@@ -134,7 +144,9 @@ Currently, our navigator is only rendering a `<Home>` scene. In order to make th
 
 ```javascript
 <Navigator
-  initialRoute={{ component: Main, title: 'Welcome to Bouncing Dinos!' }}
+  initialRoute={
+    { component: Main, title: 'Welcome to Bouncing Dinos!' }
+  }
   renderScene={(route, navigator) => {
     let RouteComponent = route.component;
     return (
@@ -150,7 +162,9 @@ If we compare our `Home.js` and `DinoFacts.js` components, we'll see a little bi
 
 ```javascript
 <Navigator
-  initialRoute={{ component: Home, title: 'Welcome to Bouncing Dinos!' }}
+  initialRoute={
+    { component: Home, title: 'Welcome to Bouncing Dinos!' }
+  }
   renderScene={(route, navigator) => {
     let RouteComponent = route.component;
     return (
@@ -251,7 +265,8 @@ The `Navigator` component has a built-in `NavigationBar` that we can hook into. 
 ```javascript
 navigationBar={
   <Navigator.NavigationBar
-    routeMapper={{
+    routeMapper={
+    {
       LeftButton: (route, navigator, index) => { 
         return (
           <Text style={styles.prevButton}>Prev</Text>
@@ -269,7 +284,8 @@ navigationBar={
           <Text style={styles.dinoHeader}>{route.dinoName}</Text>
         );
       },
-    }}
+    }
+    }
     style={styles.navBar}
   />
 }
