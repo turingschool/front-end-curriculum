@@ -308,3 +308,78 @@ import ImportedComponent from '../components/ImportedComponent'
 
 export default connect(mapStateToProps, mapDispatchToProps)(ImportedComponent)
 ```
+
+Why is this? Because I want to share data from this container to multiple components. This frees to you chain together multiple containers to share very specific props set by those containers to any component.
+
+Let's put that container back into our component and add the action to get books.
+
+```js
+import booksContainer from '../containers/booksContainer'
+
+// Rest of same code
+
+...
+
+
+// ScrollView maps over this.props.books instead of []
+<ScrollView
+  style={styles.scrollView}>
+  {this.props.books.map(function(book, i) {
+    return <Row key={i} book={book} />}
+  )}
+</ScrollView>
+
+
+// Updated _onCallAPI function that dispatches the getBooks action
+_onCallApi() {
+  const component = this
+  const { books, getBooks } = this.props
+  const {freeEbook, orderByNewest, searchTerm, subject} = this.state
+  let searchTerms
+
+  if(subject) {
+    searchTerms = `${searchTerm}+subject:${subject}`
+  } else {
+    searchTerms = `${searchTerm}`
+  }
+  let API_ENDPOINT = `https://www.googleapis.com/books/v1/volumes?q=${searchTerms}&maxResults=20`
+  if(freeEbook) {
+    API_ENDPOINT = API_ENDPOINT + '&filter=free-ebooks'
+  }
+  if(orderByNewest) {
+    API_ENDPOINT = API_ENDPOINT + '&orderBy=newest'
+  }
+  fetch(API_ENDPOINT, {
+      method: "GET"
+      // headers: {
+      //   'Authorization': 'Bearer ' + this.props.token.idToken
+      // }
+    })
+    .then((response) => response.json())
+    .then((responseJSON) => {
+      getBooks(responseJSON.items)
+      Alert.alert(
+        'Request Successful',
+        `We found ${responseJSON.totalItems} books on ${this.state.searchTerm}`,
+        [
+          {text: 'OK'},
+        ]
+      )
+    })
+    .catch((error) => {
+      getBooks([])
+      Alert.alert(
+        'Request Failed',
+        'Please try a different search',
+        [
+          {text: 'OK'},
+        ]
+      )
+    });
+}
+
+// Finally, we wrap the container around the component
+export default booksContainer(Search);
+```
+
+Magic!
