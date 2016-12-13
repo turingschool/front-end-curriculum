@@ -145,7 +145,7 @@ Currently, our navigator is only rendering a `<Home>` scene. In order to make th
 ```javascript
 <Navigator
   initialRoute={
-    { component: Main, title: 'Welcome to Bouncing Dinos!' }
+    { component: Home, title: 'Welcome to Bouncing Dinos!' }
   }
   renderScene={(route, navigator) => {
     let RouteComponent = route.component;
