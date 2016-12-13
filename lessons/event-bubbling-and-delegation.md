@@ -15,7 +15,7 @@ Events are happening all the time in the browser. When the browser has finished 
 
 It is, however, possible for us to use JavaScript to set up listeners for events that interest us. Our listeners wait patiently on a DOM node until the event they're waiting for is fired. Then, they spring into action, running an appropriate function to respond to the event as required, or whatever else you deem appropriate.
 
-For a review of how to set event listeners, please refer to the [DOM Manipulation with JavaScript Lesson](http://frontend.turing.io/lessons/dom-manipulation-with-javascript.html)
+For a review of how to set event listeners, please refer to the [DOM Manipulation with JavaScript Lesson](http://frontend.turing.io/lessons/module-1/js-2-dom-manipulation.html)
 
 ## Event Bubbling
 
