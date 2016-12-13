@@ -3,7 +3,7 @@ title:  10 Ways to Strike Sparks of Creativity
 layout: page
 ---
 
-
+# Creativity Exercise: 10 Ways to Strike Sparks of Creativity
 
 *(modified from the Ignite phase of the Disciplined Dreaming framework for creativity)*
 
