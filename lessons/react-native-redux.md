@@ -246,7 +246,9 @@ export const actionCreators = {
 
 This function takes in data (in our case it will be an array) and returns an object with type: 'GET_BOOKS' and data: data. Simple, pure functions at their finest.
 
-Now for the reducer. We will import all of our action types (in our case just the one, but could be lots) and set the initial state of our app with books as an empty array. 
+Now for the reducer. We will import all of our action types (in our case just the one, but could be lots) and set the initial state of our app with books as an empty array.
+
+For our reducer function, we pass in state (defaulted at initialState if no state is passed in) and an action. Within the reducer we can destructure state to our hearts desire. For now we just care about books. We can also destructure the action to get the type of action and the data passed to the action. From there we check which type of action was called. Based on the type, we can set the new state. In our case our type is 'GET_BOOKS' so we will return the current state (...state) and then set this.state.books equal to the data we passed in. If we don't pass a type or it's a wrong type, we default to just returning the current state. Phewwww...
 
 ```js
 // In book.js file under reducers directory
@@ -270,4 +272,39 @@ export const reducer = (state = initialState, action) => {
 
   return state
 }
+```
+
+To complete the Redux lifecycle, we need a container to turn state into props and pass those props to a component. So let's go ahead and do that. In our containers directory we will add a new file called booksContainer.js. A container is the place to do all of your data manipulation (think Date formatting, calculations based on state, or make your date IMMUTABLE and INVINCIBLE FOREVER... more on this to come). First up in our container we will map our state to props. In our case we simply set the books props to state.books. If you had a container for an individual book you could pass in an id and filter through state.books to find that book. We will also dispatch our getBooks method to allow us to call the getBooks action in our components. Now we can export this container with connect(mapStateToProps, mapDispatchToProps).
+
+:
+
+```js
+import { connect } from 'react-redux'
+import { actionCreators } from '../actions/bookActions'
+
+const mapStateToProps = (state) => {
+  return { books: state.books }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getBooks: (books) => {
+       dispatch(actionCreators.getBooks(books))
+     }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)
+```
+
+You might notice that I'm not importing a component and passing it into connect like so:
+
+```js
+import ImportedComponent from '../components/ImportedComponent'
+
+...
+
+/// rest of code ///
+
+export default connect(mapStateToProps, mapDispatchToProps)(ImportedComponent)
 ```
