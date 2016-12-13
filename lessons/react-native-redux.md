@@ -382,4 +382,17 @@ _onCallApi() {
 export default booksContainer(Search);
 ```
 
-Magic!
+Magic! If we had more containers and wanted to give Search more props, we could simply wrap those containers around Search like so:
+
+```js
+export default booksContainer(
+                ratingsContainer(
+                  pagesContainer(Search)
+                )
+              )
+```
+
+You can now reuse the containers on any component throughout your app to give them exactly what props they need and none that they don't. You also give them access to the actions to update state.
+
+
+## Immutable data

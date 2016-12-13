@@ -94,6 +94,127 @@ But this being mobile, we have to be able to respond to user gestures and naviga
 
 You can see that IOS tends to have an iOS specific component (...Android does too on some components) because iOS is no fun and doesn't like you customizing components. You can use <Navigator /> for iOS but if you are building strictly for Apple products using <NavigatorIOS /> leverages native UIKit navigation.
 
+To register you app, you have to use AppRegistry.registerComponent.
+
+Let's dive into some code to check it out. We are going to build out a very simple app that scrolls some dinos. I've set you up with images and a basic App component. We will walk through the rest of the code and build it together.
+
+First, let's check out our index.ios.js:
+
+```js
+import React, { Component } from 'react';
+import { AppRegistry } from 'react-native';
+import App from './app/App';
+
+class Main extends Component{
+  render() {
+    return (
+      <App />
+    );
+  }
+}
+
+AppRegistry.registerComponent('BouncingDinos', () => Main);
+```
+Here we are creating a Main component which returns the App component. We register our app as BouncingDinos, and pass in the Main component. Piece of cake. Let's build out that App component now. It will have some text with a switch that allows you to change our dinos to scroll horizontal vs. vertical:
+
+```js
+import React, { Component } from 'react';
+import { StyleSheet, Dimensions, Platform, Text, View, Switch, Navigator } from 'react-native';
+import { DinoScroll } from './DinoScroll';
+
+export default class App extends Component {
+
+  state = {
+    horizontalIsOn: false,
+  };
+
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.header}>Welcome to Bouncing Dinos!</Text>
+        <Text>Scroll Horizontal</Text>
+        <Switch
+          onValueChange={(value) => this.setState({horizontalIsOn: value})}
+          style={{marginBottom: 10}}
+          value={this.state.horizontalIsOn} />
+        <DinoScroll horizontal={this.state.horizontalIsOn} />
+      </View>
+    );
+  }
+}
+
+let { height, width } = Dimensions.get(`window`);
+const styles = StyleSheet.create({
+    container: {
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      top: 50,
+      borderWidth: 25,
+    },
+    header: {
+      fontSize: 24,
+      fontWeight: '900',
+      textAlign: 'center',
+      marginBottom: 25,
+    },
+    dinoList: {
+      padding: 10,
+    },
+})
+```
+
+Now for the DinoScroll component. We will import ScrollView, which allows a user to scroll on a mobile device kinda like overflow: scroll:
+
+```js
+import React, { Component } from 'react';
+import {
+  AppRegistry,
+  StyleSheet,
+  Text,
+  View,
+  Image,
+  ScrollView,
+  Animated
+} from 'react-native';
+import * as Animatable from 'react-native-animatable';
+
+export class DinoScroll extends Component {
+  state = {count: 0}
+
+  componentDidMount() {
+    setInterval(() => {
+      this.setState({count: this.state.count + 1})
+    }, 1000)
+  }
+
+  render() {
+    const {count} = this.state
+    const {horizontal} = this.props
+    this.anim = this.anim || new Animated.Value(0);
+    return (
+      <ScrollView
+        horizontal={horizontal} >
+        <Image style={[styles.dino]} source={require('./images/allasaur.jpeg')} />
+        <Image style={[styles.dino]} source={require('./images/pterodactyl.jpg')} />
+        <Image style={[styles.dino]} source={require('./images/stegosaurus.jpeg')} />
+        <Image style={[styles.dino]} source={require('./images/trex.png')} />
+      </ScrollView>
+    )
+  }
+}
+
+const styles = StyleSheet.create({
+  dino: {
+    padding: 20,
+    height: 220,
+    width: 250,
+    shadowColor: '#000',
+    shadowRadius: 5,
+  }
+})
+```
+
 ### Let's Talk Styles
 
 When it comes to styling your app, we don't write CSS (although it will look very similar). Instead we create a simple JS StyleSheet object and pass specific properties (subcomponents) of the object into components as the style prop. You can pass multiple style props using an array, with the last style taking precedence.
