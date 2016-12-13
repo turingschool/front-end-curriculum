@@ -45,7 +45,7 @@ Now we can use the `Navigator` within our render method:
 
 ```javascript
     <Navigator
-      initialRoute={{ title: 'Welcome to Bouncing Dinos!' }}
+      initialRoute={{title: 'Welcome to Bouncing Dinos!'}}
       renderScene={(route, navigator) =>
         <View style={styles.container}>
           <Text style={styles.header}>{route.title}</Text>
