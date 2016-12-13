@@ -3,6 +3,7 @@ title: SCAMPER
 layout: page
 ---
 
+# Creativity Exercise: SCAMPER
 
 *(exercise adapted from the Ignite phase of the Disciplined Dreaming framework)*
 
