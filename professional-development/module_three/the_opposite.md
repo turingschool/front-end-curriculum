@@ -3,6 +3,7 @@ title: The Opposite
 layout: page
 ---
 
+# Creativity Exercise: The Opposite
 
 *(exercise adapted from the Ignite step of the Disciplined Dreaming framework)*
 
