@@ -195,6 +195,14 @@ Now if we refresh our app and click on our new link, we can see our app navigate
 ### navigator.pop()
 Here we're using `navigator.pop()`. This `pop` method tells our app to go to the last route prior to navigating. In our case, this will take us back to the home page.
 
+By default, the transition between routes uses a swipe effect. This can be configured in your navigator with `configureScene`:
+
+```javascript
+configureScene={(route, routeStack) =>
+  Navigator.SceneConfigs.FloatFromBottom} 
+```
+
+## Working with Route Stacks
 These navigator methods, `push` and `pop` are similar to the ones you're familiar with when working with Arrays. In the context of a navigator, the "array" we're working with is actually an array of routes. Routes are simply objects containing the properties that help display each scene. The two routes in our application so far could be written as:
 
 ```javascript
@@ -204,11 +212,84 @@ const routes = [
 ];
 ```
 
+When you already know what routes you'll have and what data they'll contain, you can create an array just like this and specify an `initialRouteStack` in your Navigator component. Let's try this out in `DinoFacts.js`. We're going to have an array of routes, one for each dinosaur, that contains it's name, diet, and size. In `DinoFacts.js`, add:
+
+```javascript
+const routes = [
+  { dinoName: 'allasaur', diet: 'carnivore', size: '28 feet, 2.3 tons' },
+  { dinoName: 'pterodactyl', diet: 'carnivore', size: '20 feet, 2 tons' },
+  { dinoName: 'stegosaurus', diet: 'herbivore', size: '30 feet, 5 tons' },
+  { dinoName: 't-rex', diet: 'carnivore', size: '42 feet, 7 tons' },
+];
+```
+
+We'll also add a new `Navigator` component that will handle rendering these particular routes:
+
+```javascript
+<Navigator
+  style={styles.navContainer}
+  initialRoute={routes[0]}
+  initialRouteStack={routes}
+  renderScene={(route, navigator) => {
+    return (
+      <View style={styles.dinoFacts}>
+        <Text>Diet: {route.diet}</Text>
+        <Text>Size: {route.size}</Text>
+      </View>
+    );
+  }}
+```
+
+Notice we are setting the `initialRoute` to `routes[0]`. This will make sure our navigator renders the information for Allasaur first. We have a new property here called `initialRouteStack`, which we've set equal to our entire array of routes. Finally, in `renderScene`, we're displaying the facts about each dinosaur.
+
+But we're missing a couple of things. For starters, we're not rendering the name of the dinosaur. Additionally, we need a way to navigate between each of the dinos. Let's add a NavigationBar that will provide us with both of these things.
 
 ## Creating a Navigation Bar
+The `Navigator` component has a built-in `NavigationBar` that we can hook into. Add the following to your Navigator:
+
+```javascript
+navigationBar={
+  <Navigator.NavigationBar
+    routeMapper={{
+      LeftButton: (route, navigator, index) => { 
+        return (
+          <Text style={styles.prevButton}>Prev</Text>
+        );
+      },
+
+      RightButton: (route, navigator, index) => {
+        return (
+          <Text style={styles.nextButton}>Next</Text>
+        );
+      },
+
+      Title: (route, navigator, index) => { 
+        return (
+          <Text style={styles.dinoHeader}>{route.dinoName}</Text>
+        );
+      },
+    }}
+    style={styles.navBar}
+  />
+}
+``` 
+
+This is a lot of code, but essentially what it's doing is telling the Navigator that we have a `NavigationBar` component with a `LeftButton`, a `Title`, and a `RightButton`. Each of these are methods that give us access to the current route, the navigator we are using, and the index of our route in the stack. If we take a look at our app now, it renders appropriately, but doesn't actually do anything when we click the Previous/Next buttons. Using the `push` and `pop` methods we just learned about, let's cycle through the routes when each button is clicked.
+
+```javascript
+<TouchableHighlight onPress={() => navigator.pop()}>
+  <Text style={styles.prevButton}>Prev</Text>
+</TouchableHighlight>
+
+<TouchableHighlight onPress={() => navigator.push(routes[index + 1])}>
+  <Text style={styles.nextButton}>Next</Text>
+</TouchableHighlight>
+```
+
+While this NavigationBar is a built-in feature for the Navigator, obviously there are various libraries that built on top of it because that's what we do. You may see differing implementations of this same component in the wild, depending on what libraries are being used, but this is the bare bones code that provides the foundation for a navigation bar.
 
 ## NavigatorExperimental
-
+As with everything we learn, it winds up being deprecated about an hour after we master it. The beta version of the Navigator is available as a component under `NavigatorExperimental`. It takes a pretty different approach to routing and transitions, so take note if you are browsing for examples which version of `Navigator` is being used.
 
 ## Resources
 - [Navigator API](https://facebook.github.io/react-native/docs/navigator.html)
