@@ -41,4 +41,6 @@ Here's an example thinking about breakfast cereal:
 
 **Eliminate:** "Without nuts", "reduced fat", "sugar-free", "only whole grains", and other banners are now a mainstay of cereal production. Eliminating one or more aspects of an idea is a way to uncover brand new ideas. *How could you apply this to your project idea?*
 
-**Rearrange or reverse:** Post launched Honey Bunches of Oats in 1989. Today, you can find it packaged with almonds, bananas, peaches, strawberries, chocolate clusters, cinnamon clusters, or vanilla clusters. What did Post do next? They launched Just Bunches, eliminating other elements of the cereal altogether. They built a cereal franchise around one original product idea. *How could variations of your idea enrich your project?*
+**Rearrange or reverse:** Post launched Honey Bunches of Oats in 1989. Today, you can find it packaged with almonds, bananas, peaches, strawberries, chocolate clusters, cinnamon clusters, or vanilla clusters. What did Post do next? They launched Just Bunches, eliminating other elements of the cereal altogether. They built a cereal franchise around one original product idea. 
+
+*How could variations of your idea enrich your project?*
