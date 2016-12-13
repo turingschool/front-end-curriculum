@@ -7,6 +7,7 @@ tags: react native, mobile
 ### Goals
 
 By the end of this lesson, you will:
+
 * Understand the differences between React and React Native
 * Understand how to use an iOS simulator
 * Understand the different native components and how to style them
