@@ -103,27 +103,39 @@ First, let's check out our index.ios.js:
 
 ```js
 import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-import App from './app/App';
+import { AppRegistry, StyleSheet } from 'react-native';
+import {
+  Text,
+  View
+} from 'react-native';
 
-class Main extends Component{
+class App extends Component {
   render() {
     return (
-      <App />
+      <Text style={styles.hello}>Hello World</Text>
     );
   }
 }
 
-AppRegistry.registerComponent('BouncingDinos', () => Main);
+const styles = StyleSheet.create({
+  hello: {
+    flex: 1,
+    justifyContent: 'center',
+    textAlign: 'center',
+    top: 200,
+  }
+})
+
+AppRegistry.registerComponent('BouncingDinos', () => App);
 ```
-Here we are creating a Main component which returns the App component. We register our app as BouncingDinos, and pass in the Main component. Piece of cake. Let's build out that App component now. It will have some text with a switch that allows you to change our dinos to scroll horizontal vs. vertical:
+Here we are creating a App component which returns text. What an app. We register our app as BouncingDinos, and pass in the App component. Piece of cake. Let's build out that App component now. It will have some text with a switch that allows you to change our dinos to scroll horizontal vs. vertical:
 
 ```js
 import React, { Component } from 'react';
 import { StyleSheet, Dimensions, Platform, Text, View, Switch, Navigator } from 'react-native';
-import { DinoScroll } from './DinoScroll';
+import { DinoScroll } from './app/DinoScroll';
 
-export default class App extends Component {
+class App extends Component {
 
   state = {
     horizontalIsOn: false,
@@ -163,6 +175,8 @@ const styles = StyleSheet.create({
       padding: 10,
     },
 })
+
+AppRegistry.registerComponent('BouncingDinos', () => App);
 ```
 
 Now for the DinoScroll component. We will import ScrollView, which allows a user to scroll on a mobile device kinda like overflow: scroll:
