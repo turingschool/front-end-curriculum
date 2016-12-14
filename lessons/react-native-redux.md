@@ -274,9 +274,7 @@ export const reducer = (state = initialState, action) => {
 }
 ```
 
-To complete the Redux lifecycle, we need a container to turn state into props and pass those props to a component. So let's go ahead and do that. In our containers directory we will add a new file called booksContainer.js. A container is the place to do all of your data manipulation (think Date formatting, calculations based on state, or make your date IMMUTABLE and INVINCIBLE FOREVER... more on this to come). First up in our container we will map our state to props. In our case we simply set the books props to state.books. If you had a container for an individual book you could pass in an id and filter through state.books to find that book. We will also dispatch our getBooks method to allow us to call the getBooks action in our components. Now we can export this container with connect(mapStateToProps, mapDispatchToProps).
-
-:
+To complete the Redux lifecycle, we need a container to turn state into props and pass those props to a component. So let's go ahead and do that. In our containers directory we will add a new file called booksContainer.js. A container is the place to do all of your data manipulation (think Date formatting, calculations based on state, or make your date IMMUTABLE and INVINCIBLE FOREVER... more on this to come). First up in our container we will map our state to props. In our case we simply set the books props to state.books. If you had a container for an individual book you could pass in an id and filter through state.books to find that book. We will also dispatch our getBooks method to allow us to call the getBooks action in our components. Now we can export this container with connect(mapStateToProps, mapDispatchToProps):
 
 ```js
 import { connect } from 'react-redux'
