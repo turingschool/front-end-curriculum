@@ -386,13 +386,111 @@ Magic! If we had more containers and wanted to give Search more props, we could 
 
 ```js
 export default booksContainer(
-                ratingsContainer(
-                  pagesContainer(Search)
-                )
+                userContainer(Search)
               )
 ```
 
 You can now reuse the containers on any component throughout your app to give them exactly what props they need and none that they don't. You also give them access to the actions to update state.
 
+Let's create that userContainer with matching actions and reducers...
+
+```js
+// First we add our action type in actions/actionTypes.js
+export const types = {
+  GET_BOOKS: 'GET_BOOKS',
+  GET_USER: 'GET_USER'
+}
+
+// Next up is the action. This is in the userActions.js file. It's just like our books action.
+import {types} from './actionTypes';
+
+export const actionCreators = {
+  getUser: (data) => {
+    return {type: types.GET_USER, data: data}
+  }
+}
+
+// Reducer in reducers/user.js
+import * as types from '../actions/actionTypes';
+
+const initialState = {
+  user: {}
+};
+
+const user = (state = initialState, action) => {
+  const { user } = state
+  const { type, data } = action
+
+  switch (type) {
+    case 'GET_USER':
+      return {
+        ...state,
+        user: data
+      }
+  }
+
+  return state
+}
+
+export default user
+
+// Container is containers/userContainer.js
+import { connect } from 'react-redux'
+import { actionCreators } from '../actions/userActions'
+
+const mapStateToProps = (state) => {
+  return { user: state.user }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    getUser: (user) => {
+       dispatch(actionCreators.getUser(user))
+     }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)
+```
+Now that we have multiple reducers, we need to combine them before we pass them to our store. I created an index.js file in reducers that does just that:
+
+```js
+import { combineReducers } from 'redux'
+import books from './book'
+import user from './user'
+
+const reducers = combineReducers({
+  books,
+  user
+})
+
+export default reducers
+```
+
+Now we can import reducers in our containers/main.js file where we create the store:
+
+```js
+import reducers from '../reducers/index'
+
+const store = createStore(reducers);
+```
+
+Now we can use our getUser action when we successfully login with auth0 to set our user information in state.
+
+Once we are logged in, we can use our userContainer on any component to grab the user info. An example of this is in the Search component for the search placeholder.
 
 ## Immutable data
+
+Why it matters.
+
+Peformance. Speed when shouldComponentUpdate is false. Never mutate data.
+
+```js
+$ npm i immutable --save
+```
+
+Use in reducer.
+
+Turn back to regular JS with .toJS()
+
+Watch youtube video.
