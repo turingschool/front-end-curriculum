@@ -7,6 +7,7 @@ status: draft
 ### Goals
 
 By the end of this lesson, you will:
+
 * Know how to implement Redux with React Native
 * Understand the value of ImmutableJS
 * Know how to implement ImmutableJS data structures within Redux
