@@ -77,7 +77,7 @@ In it's simplest form, the application should have the following:
 - 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
 - 3: Application shows strong effort towards organization, content, and refactoring.
 - 2: Application runs but the code has long functions, unnecessary or poorly named variables, and needs significant refactoring.
-- 1: Application generates syntax error or crashes during execution.
+- 1: Application generates syntax errors or crashes during execution.
 
 ### Workflow
 
