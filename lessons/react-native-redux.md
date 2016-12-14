@@ -1,7 +1,7 @@
 ---
 title: Redux with React Native + ImmutableJS
 module: 4
-status: draft
+tags: redux, react native, immutable
 ---
 
 ### Goals
@@ -480,16 +480,48 @@ Once we are logged in, we can use our userContainer on any component to grab the
 
 ## Immutable data
 
-Why it matters.
+[![immutable talk](http://img.youtube.com/vi/I7IdS-PbEgI/0.jpg)](http://www.youtube.com/watch?v=I7IdS-PbEgI "Lee Byron's React.js Conf 2015")
 
-Peformance. Speed when shouldComponentUpdate is false. Never mutate data.
+
+To add immutable to your project:
 
 ```js
 $ npm i immutable --save
 ```
 
-Use in reducer.
+You can use immutable data structures in your reducer to set state. Then you pass the immutable to your container and components and can transform it back to plain old JS with .toJS():
 
-Turn back to regular JS with .toJS()
+```js
+// Import the whole library
+import Immutable from 'immutable'
+// Or import just what you need.
+// Map === JS Object and List === JS Array
+import { Map, List } from 'immutable'
+import * as types from '../actions/actionTypes';
 
-Watch youtube video.
+const initialState = {
+  books: []
+};
+
+const books = (state = initialState, action) => {
+  const { books } = state
+  const { type, data } = action
+
+  switch (type) {
+    case 'GET_BOOKS':
+      return {
+        ...state,
+        books: Immutable.Lit(data)
+      }
+  }
+  return state
+}
+
+export default books
+
+/// In our component
+
+render() {
+  this.props.books.toJS() // back to array
+}
+```
