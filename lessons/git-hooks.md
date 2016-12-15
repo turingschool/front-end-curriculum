@@ -181,7 +181,11 @@ chmod +x hooks/filename
 There are additional hooks for facilitating a custom email workflow and manipulating other git actions such as rebasing. These aren't used quite as often as the commit hooks, but it's good to be aware they exist.
 
 ### Sharing Hooks
-By default, git hooks exist in the `.git/hooks` directory of your local repo. You'll notice that this isn't a directory that gets pushed to github, so when new contributors pull down your repo, they won't have the same hooks in place that the rest of the team might be using. 
+By default, git hooks exist in the `.git/hooks` directory of your local repo. You'll notice that this isn't a directory that gets pushed to github, so when new contributors pull down your repo, they won't have the same hooks in place that the rest of the team might be using. There are a couple of ways to get around this.
+
+As of Git 2.9, you can set a git configuration option `core.hooksPath` that will override the default `.git/hooks` directory. This would allow you and your team to put your hooks in an internal, standalone repository that each developer could clone down and reference with the `core.hooksPath` option.
+
+In earlier versions of Git, you could implement this same strategy by creating a symlink from the `.git/hooks` directory to your local repository of your team's git hooks.
 
 ## Resources
 
