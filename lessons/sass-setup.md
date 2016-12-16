@@ -1,6 +1,7 @@
 ---
 title: Setting Up Sass Locally
 tags: css, sass, scss, setup
+module: 2
 ---
 
 Sass will watch for any files with a `.scss` or `.sass` extension and compile them into `.css` files for you.

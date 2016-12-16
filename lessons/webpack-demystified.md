@@ -2,6 +2,7 @@
 title: Webpack DeMystified
 length: 120
 tags: node, webpack, npm
+module: 2
 ---
 
 ### Game Plan:

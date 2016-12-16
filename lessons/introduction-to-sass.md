@@ -2,6 +2,7 @@
 title: Introduction to Sass
 length: 120;
 tags: css, sass, scss
+module: 2
 ---
 
 ### Goals For This Lesson:

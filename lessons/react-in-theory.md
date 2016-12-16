@@ -2,6 +2,7 @@
 title: React In Theory
 length: 180 min
 tags: React, JavaScript, Webpack
+module: 2
 ---
 
 ## Background

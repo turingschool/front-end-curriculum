@@ -2,6 +2,7 @@
 title: Linting and Code Sanitation
 length: 60
 tags: linting, code sanitation
+module: 2
 ---
 
 ## What is linting?
