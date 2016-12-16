@@ -58,10 +58,26 @@ The browser provides a `JSON` object with two methods.
 
 ### Your Turn
 
-Take the object from the previous exercise that didn't work and refactor it.
+Take the object from the previous exercise that didn't work and refactor it. Don't look below quite yet...
 
 1. You should use `JSON.stringify()` before storing it in `localStorage`.
 2. You should use `JSON.parse()` after retrieving it from `localStorage`.
+
+### Complete Workflow in Console
+
+The goal is to take our object, store it in local storage, and then be able to take the object out of local storage and modify the object.
+
+1. `var objectToStore = { name: 'J Mascis', affiliation: 'Dinosaur Jr.' }`
+2. `var stringifiedObject = JSON.stringify(objectToStore)`
+3. `stringifiedObject` (Notice our object has turned into a string!)
+4. `localStorage.setItem('somethingComplicated', stringifiedObject)` (Stores the object in local storage)
+
+Now the object is in local storage, and we can retrieve it out of local storage.
+
+5. `var retrievedObject = localStorage.getItem('somethingComplicated')`
+6. `retrievedObject` (Notice this is still the stringified version of our object - we need it to be a real object again, not a string)
+7. `var parsedObject = JSON.parse(retrievedObject)`
+8. `parsedObject` (We are now back to our original object!)
 
 ### Storage Events
 
