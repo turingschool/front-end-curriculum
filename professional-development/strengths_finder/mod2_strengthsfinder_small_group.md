@@ -59,12 +59,12 @@ The Project Manager matches status by exhibiting knowledge and experience and pr
 	If you can attend, that will give you an idea of the effort required by the team. 
 	You should be able to set expectations with the client from there. (Offer)
 
-**Discussion Questions #1:**
+**Discussion Question #1:**
 
 * What do you notice about the idea of status in this scenario?
 * How might this scenario look in a Turing project group?  
 
-**Discussion Questions #2:** 
+**Discussion Question #2:** 
 Discuss how your shared strength can help you create offers or blocks depending on your status within the group:
 
 * As a project manager, what would this look like?
