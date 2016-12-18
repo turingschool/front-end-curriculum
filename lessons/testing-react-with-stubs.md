@@ -1,11 +1,9 @@
 ---
-title: Testing React: Stubs/Spies/Mocks
+title: Testing React: Stubs & Spies
 length: 180 minutes
 module: 2
 tags: react, testing, enzyme, stub, spy, mock
 ---
-
-# Testing React: Stubs & Spies
 
 ## Repository
 
