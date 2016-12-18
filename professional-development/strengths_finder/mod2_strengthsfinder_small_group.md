@@ -93,7 +93,7 @@ Here are some examples:
 	and help our team make progress. 
 	
 	As I work with someone who is strong in the Futuristic strength, I want to remember 
-	that they are focsued on the future and will ask them for their longterm vision for 
+	that they are focused on the future and will ask them for their longterm vision for 
 	the project so that I can help ensure that project goals incorporate that vision.
 
 ### Share Takeaways
