@@ -2,6 +2,7 @@
 title: Introduction to aXe
 length: 120
 tags: testing, selenium, aXe
+module: 2
 ---
 #Context
 

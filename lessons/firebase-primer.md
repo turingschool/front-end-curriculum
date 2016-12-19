@@ -2,6 +2,7 @@
 title: Firebase-Primer
 length:
 tags: firebase
+module: 2
 ---
 
 # Introduction to Firebase.

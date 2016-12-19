@@ -2,6 +2,7 @@
 title: API’s and a short talk on how the web works
 length: 180
 tags: javascript
+module: 2
 ---
 
 ## Context

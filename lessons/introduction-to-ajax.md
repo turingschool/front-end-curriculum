@@ -1,5 +1,6 @@
 ---
 title: Introduction to AJAX with jQuery
+module: 2
 ---
 
 ## Setup and Administrivia

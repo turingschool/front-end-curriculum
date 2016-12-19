@@ -1,6 +1,6 @@
 ---
 title: Accessibility Deep Dive
-module: 3
+module: 2
 ---
 
 ## Context

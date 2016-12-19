@@ -1,11 +1,9 @@
 ---
-title: Testing React: Stubs/Spies/Mocks
+title: Testing React: Stubs & Spies
 length: 180 minutes
 module: 2
 tags: react, testing, enzyme, stub, spy, mock
 ---
-
-# Testing React: Stubs & Spies
 
 ## Repository
 
@@ -21,15 +19,15 @@ By the end of this lesson, you will know/be able to:
 
 ## RoadMap
 
-##### Hard Things About Testing React
-  - Lecture: 5 mins
-  - Your Turn: 10 mins
-
 #### Alphabet Soup: Why Is It So Hard to Google React Testing?
   - Intro: 5 mins
-  - Jasmine vs. Mocha vs. Jest vs. Enzyme: 10 mins
   - Our Testing Stack: 5 mins
+  - Your Turn: 10 mins
+
+##### Hard Things About Testing React
+  - Lecture: 5 mins
   - Your Turn: 15 mins
+  - Group Discussion: 5 mins
 
 #### Basic Usage: Sinon Tests
   - Code Lecture: 10 mins
@@ -47,6 +45,50 @@ By the end of this lesson, you will know/be able to:
 #### TakeAways
   - Short Discussion: 5 mins
   - (Optional) Code Along with Application.js
+
+![Burry](/assets/images/lessons/testing-react-with-stubs/burry.jpg)
+
+# Alphabet Soup: Why Is It So Hard to Google React Testing?
+
+When you wrote tests for [GameTime](http://frontend.turing.io/projects/game-time.html), or for our [data structures sessions](https://github.com/turingschool/data_structures_and_algorithms/blob/master/linked_lists/javascript/linkedList_test.js) you used a test runner called [MochaJS](https://mochajs.org/) and an assertion library called [ChaiJS](http://chaijs.com/).
+
+The problems you were solving were relatively simple. Well not the problems, but the set up. You had vanilla JS, maybe some jQuery, a little bit of putting things on the DOM... 
+
+The main difficulty in testing front-end applications is the nature of some of the advanced things that frameworks and libraries do for us. For example, React has a virtual DOM. Components have state, receive props, they have an entire life cycle. It's complicated stuff, and we want to try and make our tests simple.
+
+So it's not enough to just use Mocha + Chai or Jasmine
+
+** We Want a Specialized Testing Tool for React **
+
+[Eyme](https://github.com/airbnb/enzyme) is created by AirBnB. It is a `JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.`
+
+Enzyme is lightweight, so we will use some of our familiar testing tools in this lesson - we'll use Mocha to run things and Chai to make our assertions.
+
+## Our Testing Stack
+
+- Webpack: To manage the entire process
+- Babel: To translate our ES6 to ES5
+- Mocha: To run our tests
+- Chai: To give us an assertion syntax
+- Enzyme: To give us special React testing ammenities
+- Sinon: To give us stubbing/spying/mocking ammenities (We'll talk about this soon!)
+
+You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much. 
+
+### Additional Resources: 
+
+- [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html)
+- [Jest](https://facebook.github.io/jest)
+
+### Your Turn
+
+- Take the next ***10 minutes*** and review the Additional Resources list above: JavaScript Testing with Enzyme Lesson and the front page of the Jest website.
+  - ***Don't code along with the examples***, just read the overview. We'll work through examples in React later on today.
+- (Try to) answer the following questions
+  - What does it seem like the difference is between Jest and Enzyme for you?
+  - Does anything in the Enzyme lesson make more sense, or less sense, since the last time you read it?
+
+![Blue Strawberry](/assets/images/lessons/testing-react-with-stubs/blue-strawberry.jpg)
 
 # Hard Things About Testing React
 
@@ -74,77 +116,13 @@ For the rest of this lesson - we'll focus on how to implement these solutions in
 
 ### Your Turn
 
-- Take the next ***10 minutes*** and re-read the JavaScript Testing Lesson above.
+- Take the next ***15 minutes*** and read through the JavaScript Testing Lesson above.
   - Don't code along with the examples, just read the overview. We'll work through examples in React later on today.
 - (Try to) answer the following questions
   - What is the difference between a mock, stub and spy?
   - When have you used these techniques already?
 
-# Alphabet Soup: Why Is It So Hard to Google React Testing?
-
-How many times have you been looking up example repositories and blog posts to try and figure out how to do something in JavaScript?
-
-Let's say you google 'testing localStorage in React'
-
-You find some stackoverflow answers, some blog posts, a few npm packages.
-
-The first example you click looks great, until you get to '...and we're testing this using Karma, Jest and Istanbul'
-
-Everything else about the scenario is correct, they're using React, they're storing info in localStorage... but you have no idea what Karma, Jest and Istanbul are, other than names of Power Ranger villains. It's hard to use the blog post to help yourself understand the concept because the tech stack seems wildly different.
-
-One of the most difficult parts of learning how to test in JavaScript is the fact that there are 14 different ways to do basically anything.
-
-So let's spend some time talking about the tech stack we will use in this lesson - and what the other options are....
-
-## Jasmine vs. Mocha vs. Jest vs. Enzyme
-
-If you've done an [exercism exercise](http://exercism.io/languages/javascript/installing), you've used a spec framework called [Jasmine](http://github.com/pivotal/jasmine) (or actually more specifically [jasmine-node](https://github.com/mhevery/jasmine-node)). Jasmine included a test runner (the thing that finds your test files and runs them) AND an assertion library (the thing that lets you say things like `expect(something)to.eq(somethingElse)`) AND some other bells and whistles.
-
-When you wrote tests for [GameTime](http://frontend.turing.io/projects/game-time.html), or for our [data structures sessions](https://github.com/turingschool/data_structures_and_algorithms/blob/master/linked_lists/javascript/linkedList_test.js) you used a test runner called [MochaJS](https://mochajs.org/) and an assertion library called [ChaiJS](http://chaijs.com/).
-
-The problems you were solving were relatively simple. Well not the problems, but the set up. You had vanilla JS, maybe some jQuery, a little bit of putting things on the DOM... 
-
-The main difficulty in testing front-end applications is the nature of some of the advanced things that frameworks and libraries do for us. For example, React has a virtual DOM. Components have state, receive props, they have an entire life cycle. It's complicated stuff, and we want to try and make our tests simple.
-
-So it's not enough to just use Mocha + Chai or Jasmine
-
-** We Want a Specialized Testing Tool for React **
-
-The two major React testing tools right now are [Enzyme](https://github.com/airbnb/enzyme) and [Jest](https://facebook.github.io/jest).
-
-[Jest](https://facebook.github.io/jest) is created by Facebook and is actively in development. Anecdotally, it sort of sucked for a while and now is really wonderful. It also has a lot of features. For that reason, it is great to use but NOT great to learn with. We teach Mocha instead of Jasmine because mocha is light weight... and we'll teach Enzyme instead of Jest for the same reason.
-
-[Enzyme](https://github.com/airbnb/enzyme) is created by AirBnB. It is a `JavaScript Testing utility for React that makes it easier to assert, manipulate, and traverse your React Components' output.`
-
-The lessons you learn in using Enzyme will translate to Jest - of if you started working in Angular and used their Angular testing tool called [Protractor](https://angular.github.io/protractor) and when someone creates a new framework called American Black Bear... and etc etc etc... 
-
-Enzyme is lightweight, so we will use some of our familiar testing tools in this lesson - we'll use Mocha to run things and Chai to make our assertions.
-
-Finally, we want to bring in a library to help us create mocks/stubs and spies easily. From the earlier reading, we know that Sinon can help us with that. So we'll bring that in as well.
-
-## Our Testing Stack
-
-- Webpack: To manage the entire process
-- Babel: To translate our ES6 to ES5
-- Mocha: To run our tests
-- Chai: To give us an assertion syntax
-- Enzyme: To give us special React testing ammenities
-- Sinon: To give us stubbing/spying/mocking ammenities
-
-You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much. 
-
-### Additional Resources: 
-
-- [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html)
-- [Jest](https://facebook.github.io/jest)
-
-### Your Turn
-
-- Take the next ***10 minutes*** and review the Additional Resources list above: JavaScript Testing with Enzyme Lesson and the front page of the Jest website.
-  - ***Don't code along with the examples***, just read the overview. We'll work through examples in React later on today.
-- (Try to) answer the following questions
-  - What does it seem like the difference is between Jest and Enzyme for you?
-  - Does anything in the Enzyme lesson make more sense, or less sense, since the last time you read it?
+![Red Strawberry](/assets/images/lessons/testing-react-with-stubs/strawberries.jpg)
 
 # Basic Usage: Sinon Tests
 
@@ -209,9 +187,9 @@ In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzym
 
 ```javascript
   it('calls componentDidMount', () => {
-    sinon.spy(Foo.prototype, 'componentDidMount');
-    const wrapper = mount(<Foo />);
-    expect(Foo.prototype.componentDidMount.calledOnce).to.equal(true);
+    sinon.spy(MyComponent.prototype, 'componentDidMount');
+    const wrapper = mount(<MyComponent />);
+    expect(MyComponent.prototype.componentDidMount.calledOnce).to.equal(true);
   });
 ```
 
@@ -227,12 +205,16 @@ In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzym
 
 ### Your Turn
 
-- Take the next ***10 minutes*** to read over the code and think about the following questions
-  - How else could we accomplish the goal of the first test, 'it simulates click events', without sinon?
-  - Why would it be important that the callback function `onButtonClick` was passed to the prop?
-  - Why would one use shallow instead of mount? 
-    - Hint: Read the [first section](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) of the shallow anzyme docs for a clue as to why.
+- Take the next ***15 minutes*** to work on the following challenge
+  - In the [Lesson Repository](https://github.com/turingschool-examples/react-testing-with-stubs) run `npm test` and try to get the tests in `test/MyComponent.spec.js` to pass.
+  - As you work on the tests passing, think about the following questions:
+    - How else could we accomplish the goal of the first test, 'it simulates click events', without sinon?
+    - Why would it be important that the callback function `onButtonClick` was passed to the prop?
+    - Why would one use shallow instead of mount? 
+      - Hint: Read the [first section](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) of the shallow anzyme docs for a clue as to why.
+  - If you get stuck, check out the 'solutions' branch of the repo
 
+![Sketch Strawberry](/assets/images/lessons/testing-react-with-stubs/sketch-berry.jpg)
 
 # Let's Get More Complicated, Quickly: Hitting an External API
 

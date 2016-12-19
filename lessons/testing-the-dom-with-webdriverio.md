@@ -2,6 +2,7 @@
 title: Test Driven Development with WebDriver.io
 length:
 tags: webdriver, webpack, selenium
+module: 2
 ---
 # Test Driven Development with WebDriver.io
 

@@ -511,7 +511,7 @@ const books = (state = initialState, action) => {
     case 'GET_BOOKS':
       return {
         ...state,
-        books: Immutable.Lit(data)
+        books: Immutable.List(data)
       }
   }
   return state
