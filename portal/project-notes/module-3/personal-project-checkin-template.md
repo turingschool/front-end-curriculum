@@ -9,6 +9,8 @@ module: 3
 
 ### Framework & Technologies Used
 
+### [Rubric](../../projects/self-directed-project.md)
+
 ### Week 1
 
 #### Notes
