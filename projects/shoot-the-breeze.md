@@ -64,7 +64,7 @@ title: Shoot The Breeze
 ### Component Architecture
 
 * 4 - Application is broken out into small reusable React components. Complicated functionality is wrapped in parent components. There are zero cases where a complicated component can be broken down into smaller composite components.
-* 3 - Application is broken in out into _at least_ 8 components that properly encapsulate functionality. There is no more than one component that could be broken down into composite parts.
+* 3 - Application is broken in out into _at least_ 6 components that properly encapsulate functionality. There is no more than one component that could be broken down into composite parts.
 * 2 - Application contains multiple components that could be broken down into composite parts.
 * 1 - The application has many confusing methods and interactions and it is difficult for the instructor to get a sense of functionality lives where.
 
