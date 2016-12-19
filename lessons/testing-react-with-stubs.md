@@ -5,6 +5,8 @@ module: 2
 tags: react, testing, enzyme, stub, spy, mock
 ---
 
+# Testing React: Stubs & Spies
+
 ## Repository
 
 [Lesson Repository](https://github.com/turingschool-examples/react-testing-with-stubs)
