@@ -81,8 +81,6 @@ Need more proof? Check this site + the minimal accompanying *responsive css*: [f
 
 But of course, it is never just that easy...
 
-{% include dun_dun_dun.html %}
-
 _Art Direction Problem:_  :raising_hand:
 But what if I don't want my picture to squish quite like that (fluidity example above)? Or for that matter, get so HUGE on a bigger screen? What if I want to serve some specific cropped versions based on screen size?
 
