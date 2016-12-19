@@ -9,7 +9,7 @@ module: 3
 
 ### Framework & Technologies Used
 
-### [Rubric](../../projects/self-directed-project.md)
+### [Rubric](http://frontend.turing.io/projects/self-directed-project.html)  
 
 ### Week 1
 
@@ -29,7 +29,7 @@ module: 3
 
 #### Deliverables
 
-### Week 3 Deliverables
+### Week 3
 
 #### Notes
 
