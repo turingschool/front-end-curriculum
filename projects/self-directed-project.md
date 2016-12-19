@@ -9,7 +9,7 @@ The goal of this project is to create a successful web application from a projec
 
 A good project idea should:
 
-* Break down into logical iterations so that you can deliver a strong product on  every checkin
+* Break down into logical iterations so that you can deliver a strong product on every check-in
 * Be something that real people would want to use to solve a problem
 * Have enough *technical* challenge to be worth your time (as opposed to a *content* challenge)
 
