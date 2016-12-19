@@ -14,6 +14,7 @@ The static comp challenge is a series of three weekly challenges to keep you wor
   - Basic site setup with `index.html` and `styles.css`
   - Site must be responsive
   - Create a repo on github :octocat: for your work with following naming construct: [initials]-comp-challenge-[challenge number] (i.e. "bt-comp-challenge-1"
+  - Add your instructors as collaborators to the repo
   - Push your final work to [github pages](https://pages.github.com/)
   - Post link to your github pages [here](https://docs.google.com/spreadsheets/d/10oLWn4Zjj-jK4hWKpLRGQbshMACoIr1oVayAMvbfjTA/edit#gid=0)
   - Link must be posted by 7:30 AM of the due date

@@ -89,7 +89,7 @@ Notice that the condition is crucial in controlling the flow of our loop. If the
 Let's get into the array prototype methods. One of the first methods we'll explore together is [`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FforEach), which iterates over the array and passes each element into a callback function that you provide.
 
 ```js
-const letters = ['a', 'b', 'c'];
+var letters = ['a', 'b', 'c'];
 
 letters.forEach(function (letter) {
   console.log(letter);
@@ -107,7 +107,7 @@ c
 In the example above, we work through each letter one by one and pass it into an anonymous function that logs each letter to the console. `forEach()` passes three arguments to the callback function: the current element for this iteration, the index of that element, and a full copy of the array that we're iterating through.
 
 ```js
-const letters = ['a', 'b', 'c'];
+var letters = ['a', 'b', 'c'];
 
 letters.forEach(function (letter, index, array) {
   console.log({
@@ -151,11 +151,11 @@ And one additional:
 In theory, we could use `forEach()` like this:
 
 ```js
-const letters = ['a', 'b', 'c'];
-const uppercaseLetters = [];
+var letters = ['a', 'b', 'c'];
+var uppercaseLetters = [];
 
 letters.forEach(function (letter) {
-  const uppercaseLetter = letter.toUpperCase();
+  var uppercaseLetter = letter.toUpperCase();
   uppercaseLetters.push(uppercaseLetter);
 });
 
@@ -165,9 +165,9 @@ console.log(uppercaseLetters);
 This will work. The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap):
 
 ```js
-const letters = ['a', 'b', 'c'];
+var letters = ['a', 'b', 'c'];
 
-const uppercaseLetters = letters.map(function (letter) {
+var uppercaseLetters = letters.map(function (letter) {
   return letter.toUpperCase();
 });
 
@@ -195,9 +195,9 @@ What makes a value truthy or falsy? Let's start with the easy ones: `true` is tr
 Let's start with a simple example:
 
 ```js
-const booleans = [true, true, false, true];
+var booleans = [true, true, false, true];
 
-const truths = booleans.filter(function (value) {
+var truths = booleans.filter(function (value) {
   return value;
 });
 
@@ -207,9 +207,9 @@ console.log(truths); // Logs [true, true, true]
 As you can see in the example above, `false` is omitted from the resulting array. This works, but it's not very useful. Let's look at something slightly more interesting:
 
 ```js
-const numbers = [1, 2, 3, 4, 5, 6, 7];
+var numbers = [1, 2, 3, 4, 5, 6, 7];
 
-const oddNumbers = numbers.filter(function (number) {
+var oddNumbers = numbers.filter(function (number) {
   return number % 2;
 });
 
@@ -221,18 +221,18 @@ For all of the even numbers, `number % 2` returns `0`, which—as we saw earlier
 We can also get a little bit more nuanced in how we filter elements in our array. Let's take a look at the following example:
 
 ```js
-const beatles = [
+var beatles = [
   { name: 'John', living: false, instruments: ['guitar', 'bass', 'piano'] },
   { name: 'Paul', living: true, instruments: ['bass', 'guitar', 'piano'] },
   { name: 'George', living: false, instruments: ['guitar', 'sitar'] },
   { name: 'Ringo', living: true, instruments: ['drums', 'bongos'] },
 ];
 
-const livingBeatles = beatles.filter(function (beatle) {
+var livingBeatles = beatles.filter(function (beatle) {
   return beatle.living;
 });
 
-const guitarPlayingBeatles = beatles.filter(function (beatle) {
+var guitarPlayingBeatles = beatles.filter(function (beatle) {
   return beatle.instruments.indexOf('guitar') !== -1;
 });
 ```
@@ -248,9 +248,9 @@ const guitarPlayingBeatles = beatles.filter(function (beatle) {
 [`Array.prototype.reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FReduce) is a lot like `map()`, but with one important distinction: it returns one single value as opposed to an array of new values. Consider this example:
 
 ```js
-const numbers = [1, 2, 3];
+var numbers = [1, 2, 3];
 
-const sum = numbers.reduce(function (total, number) {
+var sum = numbers.reduce(function (total, number) {
   return total + number;
 }, 0);
 
@@ -262,14 +262,14 @@ You might notice that we have a second argument after our anonymous function. In
 If we wanted to — and we're not sure that we ever would — we could implement `map()` using `reduce()`:
 
 ```js
-const letters = ['a', 'b', 'c'];
+var letters = ['a', 'b', 'c'];
 
-const capitalLetters = letters.reduce(function (newArray, letter) {
+var capitalLetters = letters.reduce(function (newArray, letter) {
   newArray.push(letter.toUpperCase());
   return newArray;
 }, []);
 
-console.log(capitalLetter); // Logs ["A", "B", "C"]
+console.log(capitalLetters); // Logs ["A", "B", "C"]
 ```
 
 The second argument that we pass to the `reduce()` method is an empty array, which is then set as the initial value for `newArray`. Next, we push in a capital version of the current letter. [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fpush) returns the current length of the array after the new element has been pushed in, so we have to explicitly return `newArray` to pass it along to the next iteration in our `reduce()`.
@@ -285,11 +285,11 @@ The second argument that we pass to the `reduce()` method is an empty array, whi
 [`Array.prototype.sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) will sort all of the elements in the array. We can invoke it without a callback function.
 
 ```js
-const numbers = [2, 1, 4, 3];
-const letters = ['a', 'd', 'c', 'b'];
+var numbers = [2, 1, 4, 3];
+var letters = ['a', 'd', 'c', 'b'];
 
-const sortedNumbers = numbers.sort();
-const sortedLetters = letters.sort();
+var sortedNumbers = numbers.sort();
+var sortedLetters = letters.sort();
 
 console.log(sortedNumbers); // Logs [1, 2, 3, 4]
 console.log(sortedLetters); // Logs ['a', 'b', 'c', 'd']
@@ -298,9 +298,9 @@ console.log(sortedLetters); // Logs ['a', 'b', 'c', 'd']
 Without a callback function, `sort()` uses a default sorting algorithm that simply sorts the array items in ascending order. In the examples above, everything works the way we would expect, but there are some surprising peculiarities of the default sorting algorithm. Consider the following example:
 
 ```js
-const numbers = [1, 7, 3, 10];
+var numbers = [1, 7, 3, 10];
 
-const sortedNumbers = numbers.sort();
+var sortedNumbers = numbers.sort();
 
 console.log(sortedNumbers); // Logs [1, 10, 3, 7]
 ```
@@ -318,9 +318,9 @@ The callback function compares two elements at a time and the `sort()` method re
 Armed with this new knowledge, let's see if we can sort an array of numbers — umm — numerically.
 
 ```js
-const numbers = [1, 7, 3, 10];
+var numbers = [1, 7, 3, 10];
 
-const sortedNumbers = numbers.sort(function (a, b) {
+var sortedNumbers = numbers.sort(function (a, b) {
   return a - b;
 });
 
@@ -332,14 +332,14 @@ console.log(sortedNumbers); // Logs [1, 3, 7, 10]
 We can also use custom sorting functions for more complicated data structures. Let's say we wanted to sort the Beatles by the number of instruments played in descending order. As a bonus, we'll map the sorted array to just collect the names of each Beatle.
 
 ```js
-const beatles = [
+var beatles = [
   { name: 'John', instruments: ['guitar', 'bass', 'piano' ] },
   { name: 'Paul', instruments: ['bass', 'guitar', 'piano', 'cowbell'] },
   { name: 'Ringo', instruments: ['drums'] },
   { name: 'George', instruments: ['guitar', 'sitar'] }
 ];
 
-const sortedBeatles = beatles.sort(function (a, b) {
+var sortedBeatles = beatles.sort(function (a, b) {
   return b.instruments.length - a.instruments.length;
 }).map(function (beatle) {
   return beatle.name;
