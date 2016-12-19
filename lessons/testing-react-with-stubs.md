@@ -20,11 +20,11 @@ By the end of this lesson, you will know/be able to:
 ## RoadMap
 
 #### Alphabet Soup: Why Is It So Hard to Google React Testing?
-  - Intro: 5 mins
-  - Our Testing Stack: 5 mins
-  - Your Turn: 10 mins
+  - Intro & Our Testing Stack: 5 mins
+  - Your Turn: 15 mins
+  - Group Discussion: 5 mins
 
-##### Hard Things About Testing React
+#### Hard Things About Testing React
   - Lecture: 5 mins
   - Your Turn: 15 mins
   - Group Discussion: 5 mins
@@ -32,6 +32,7 @@ By the end of this lesson, you will know/be able to:
 #### Basic Usage: Sinon Tests
   - Code Lecture: 10 mins
   - Your Turn: 10 mins
+  - Group Discussion: 5 mins
 
 #### Let's Get More Complicated, Quickly: Hitting an External API
   - Code Lecture: 10 mins
@@ -45,6 +46,10 @@ By the end of this lesson, you will know/be able to:
 #### TakeAways
   - Short Discussion: 5 mins
   - (Optional) Code Along with Application.js
+
+This lesson will also feature uncomfortably large and detailed images of strawberries - to indicate when we're switching topics...
+
+Like now...
 
 ![Burry](/assets/images/lessons/testing-react-with-stubs/burry.jpg)
 
@@ -77,12 +82,13 @@ You will see many different tech stacks as you google things - but this is our t
 
 ### Additional Resources: 
 
-- [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html)
-- [Jest](https://facebook.github.io/jest)
+- [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html) (read but don't follow code examples)
+- [Jest](https://facebook.github.io/jest) (Just read the first page)
+- [Jest to Enzyme Blog Post](https://www.codementor.io/vijayst/tutorials/unit-testing-react-components-jest-or-enzyme-du1087lh8) (read but don't follow code examples)
 
 ### Your Turn
 
-- Take the next ***10 minutes*** and review the Additional Resources list above: JavaScript Testing with Enzyme Lesson and the front page of the Jest website.
+- Take the next ***15 minutes*** and review the Additional Resources list above
   - ***Don't code along with the examples***, just read the overview. We'll work through examples in React later on today.
 - (Try to) answer the following questions
   - What does it seem like the difference is between Jest and Enzyme for you?
@@ -211,7 +217,7 @@ In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzym
     - How else could we accomplish the goal of the first test, 'it simulates click events', without sinon?
     - Why would it be important that the callback function `onButtonClick` was passed to the prop?
     - Why would one use shallow instead of mount? 
-      - Hint: Read the [first section](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) of the shallow anzyme docs for a clue as to why.
+      - Hint: Read the [first section](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) of the shallow enzyme docs for a clue as to why.
   - If you get stuck, check out the 'solutions' branch of the repo
 
 ![Sketch Strawberry](/assets/images/lessons/testing-react-with-stubs/sketch-berry.jpg)
@@ -331,6 +337,8 @@ We can handle the API call in the tests the easy way or the hard way.
 1. We can allow the component to take in test data
 2. We can hijack ajax itself to return test data
 
+![emoji Strawberry](/assets/images/lessons/testing-react-with-stubs/emoji.png)
+
 ## The 'Easy' Way
 
 In my opinion, this is the best way to test this component. This is just my opinion.
@@ -403,7 +411,7 @@ describe('<Org />', () => {
   })
 
   context('testing ajax calls - the easy way', () => {
-    it('should repoCard components for organizational data', () => {
+    it('should display repoCard components for organizational data', () => {
       let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
       const wrapper = mount(<Org orgData={orgData} />)
       expect(wrapper.find(RepoCard).length).to.equal(2)
@@ -433,10 +441,13 @@ Here we check to make sure that we have two RepoCard components displayed (the s
 
 ### Your Turn
 
-- Take the next ***10 minutes*** to read over the code and the tests. 
+- Take the next ***10 minutes*** to port over the code and the tests. 
   - If a line of code is confusing
     - try commenting it out and breaking it
     - or using locus to put a debugger in that section of the code (instructions on using locus in the project README if you need them)
+  - If you get stuck, check out the `solutions` branch
+
+![emoji Strawberry](/assets/images/lessons/testing-react-with-stubs/emoji2.png)
 
 ## The 'Hard' Way
 
@@ -531,8 +542,8 @@ But - that won't work here.
 The reason is complicated(ish) but basically this ** in order to create a fake server that puts itself in the way of an ajax call - we need to add it jsdom on test set up **
 
 So to make this test work, we need to add the following lines to our `test/helpers/setup.js` file
-```
 
+```
 global.XMLHttpRequest = global.window.XMLHttpRequest;
 
 global.sinon = require('sinon');
@@ -548,8 +559,12 @@ If you add those lines, the tests should just magically run.
 
 ### Your Turn
 
-- Take the next ***10 minutes*** to read over the code and the tests. 
-  - If you have errors popping up - try to check out the completed branch of the repo
+- Take the next ***15 minutes*** try to minimize this tutorial and fill in the tests
+  - There is sudo code everywhere that you have to make a change, with `@TODO:` in front of it - so you can do a global search for that term.
+  - If you get stuck - try googling the sudo code with 'sinon' - like: `How do I create a fake server with sinon` or look at the sinon docs. You may even find an even better solution than the one suggested earlier!
+  - If you get totally stuck, check out the `solutions` branch of this repo
+
+- Consider the following questions
   - Think about the two different approaches to testing - is the 'hard' way inherently harder or just harder to configure?
   - Which approach would you be more likely to use?
 
@@ -559,6 +574,8 @@ If you add those lines, the tests should just magically run.
 - Using Sinon is hardly ever the only solution to testing something
 - Seperating into smaller components and being able to control component inputs makes testing easier
   - By proxy, it usually makes life a little easier
+
+![emoji Strawberry](/assets/images/lessons/testing-react-with-stubs/cake.png)
 
 ## Small Code Along (time permitting)
 
