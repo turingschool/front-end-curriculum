@@ -63,11 +63,11 @@ Ultimately the only thing happening here is forcing the top content to behave as
 
 If you break down what sections are needed in the markup, you'll see we have an alternating situation of a background image, then some content, etc. So let's create an `index.html` page to reflect this, with a few sections of content and few sections that will eventually have a background image.  
 
-```
+```html
 index.html
 ```
 
-```
+```html
 <body>
   ...
   <section class="container parallax parallax-1">
@@ -96,12 +96,8 @@ A few other things to note before we add the CSS. It's helpful to define a consi
 
 Additionally, the size of a user's browser window will always be different. Setting the background-size property to `cover` will help make sure the image is always filling the space available, and giving it a specific [`background-position`](http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-position&preval=50%25%2050%25) will help it scale attractively.  
 
-```
-main.css
-```
-
-```
-  ...
+```css
+/* main.css */
 
 /* Add some space in the static content sections */
 section.container.static {
@@ -129,7 +125,7 @@ section.container.parallax h1 {
   font-family: sans-serif;
   text-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
-  ...
+
 ```
 
 [Completed Repo](https://github.com/martensonbj/parallax/tree/fixed-complete)  
@@ -146,13 +142,8 @@ Most significantly, we don't want our background-images to remain fixed, so we a
 
 The `h1` at this point no longer has a fixed height to match to a line-height, so we set it to `1` to match the containing element. Everything else can stay the same for now.
 
-
-```
-main.css
-```
-
-```
- ...
+```css
+/* main.css */
 
  section.container.parallax {
   padding: 240px 0;
@@ -177,7 +168,6 @@ section.container.parallax h1 {
   text-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-  ...
 ```
 
 At this point everything scrolls like a normal web page, with no fun parallax effects at all. We need to call in our super friend JavaScript to give us some extra tools to get fancy.  
@@ -186,11 +176,11 @@ Ultimately, every time we reach a parallax section within our viewport, we want 
 
 In other words, if we scrolled down the entire webpage by 100px, we want the parallax background image to only be 50px form where it started instead (effectively reducing the "speed" by 50%).
 
-```
+```js
 parallax.js
 ```
 
-```
+```js
 (function() {
   var parallax = document.querySelectorAll('.parallax'),
       speed = 0.5;
@@ -236,13 +226,13 @@ As you noticed with our previous example, JavaScript is one way to implement par
 
 Let's go back to some basic HTML markup and talk about what we need to accomplish. Check out a new branch from master and start fresh.  
 
-```
+```html
 index.html
 ```  
 
-```
+```html
 <div class="parallax-container">
-  <div class="parallax background-layer>
+  <div class="parallax background-layer">
     Background Layer
   </div>
   <div class="parallax foreground-layer">
@@ -251,11 +241,11 @@ index.html
 </div>
 ```
 
-```
+```css
 main.css
 ```
 
-```
+```css
 .parallax-container {
   perspective: 1px;
   height: 100vh;
@@ -294,16 +284,16 @@ What appears to be scrolling speed, then, is controlled by a combination of pers
 
 Let's put this into practice.  
 
-```
+```html
 index.html
 ```  
 
-```
+```html
 <div class="parallax-container">
 
   <div class="parallax-all">
 
-    <div class="parallax background-layer>
+    <div class="parallax background-layer">
       Background Layer
     </div>
 
@@ -316,11 +306,11 @@ index.html
 </div>
 ```
 
-```
+```css
 main.css
 ```
 
-```
+```css
 .parallax-container {
   perspective: 1px;
   height: 100vh;
@@ -357,6 +347,55 @@ main.css
 
 The last style we added allows our other layers to behave relatively to the group element, which we effectively move out of the way using the `translate3d` business. [Documentation here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d)  
 
+### Parallax with React
+
+Seems like since we're dealing with re-rendering the page in weird, unique ways React might be a useful tool here. Let's try implementing this with React.  
+
+You can grab a practice repo [here], or pull up a code-pen session and make sure your settings are hooked up for react.
+
+
+#### NPM To The Rescue
+Shockingly (not shockingly) there is a module for this.  
+
+Run `npm i -S react-parallax`.  
+
+This helper module gives us a `<Parallax>` component that can take a multitude of props that make our lives easier.
+
+From [the docs](https://www.npmjs.com/package/react-parallax) an example of implementation of this component would be:  
+
+```js
+import { Parallax } from 'react-parallax';
+
+const TheContainer = () => {
+    return (
+      <div>
+        <Parallax bgImage="assets/1.jpg" strength={400}>
+          <br/>
+          <h1> some content that is displayed above the bgImage </h1>
+        </Parallax>
+      </div>
+    )
+}
+
+export default TheContainer;
+```
+
+Additionally, you're given a `<Background>` component that you can nest within the `<Provider>` component. Child nodes nested within this Background are positioned behind elements outside of the Background element.  
+
+```js
+<Parallax strength={300}>
+    <Background>
+      <img src="http://www.fillmurray.com/400/300"/>
+      <div style={{
+         width: 800,
+         height: 300,
+         backgroundColor: '#450093'
+        }}></div>
+      <img src="http://www.fillmurray.com/500/300"/>
+    </Background>
+    <h1>something else</h1>
+  </Parallax>
+```
 
 ### Implementing Video Backgrounds with HTML5
 
@@ -368,7 +407,7 @@ Ultimately there are three main formats that you need to support: `MP4`, `Ogg`, 
 
 Next step is simply to pop in our HTML5 `<video>` tags with the necessary details, and BAM.  
 
-```
+```html
 <video width="1600" height="300">
   <source src="video.mp4" type="video/mp4" />
   <source src="video.ogv" type="video/ogg" />
@@ -382,11 +421,11 @@ One of the trickier parts of implementing video UX is making it play nicely with
 
 Check out a new branch, and find a cool video [here](http://www.coverr.co/). Then update your `index.html` and `main.css` files to match the following:  
 
-```
+```html
 index.html
 ```
 
-```
+```html
 <body>
     <nav>
       <h2>
@@ -417,11 +456,11 @@ index.html
 
 (Replace the `src` tags with whatever video and path you're working with).  
 
-```
+```css
 main.css
 ```
 
-```
+```css
 .content {
   position: relative;
   top: 30%;
@@ -451,7 +490,7 @@ The interesting parts of this CSS are the content and video sections. The `z-ind
 
 Spend some time playing around with these settings to see what changes. The rest of the CSS just for fun-sies is as follows:  
 
-```
+```css
 html,
 body,
 div,

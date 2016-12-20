@@ -4,12 +4,6 @@ module: 3
 tags: react react-router javascript create-react-app
 ---
 
-
-  - what is context
-  - name the 3 major dependencies imported from react router 4
-  - how do you access the pathname simply through the console?
-
-
 By the end of today's lesson, you should have a better idea of what React Router is, why it's useful, and how to implement it into a React app.  
 
 The lesson stems from the understanding that you have (most likely) tinkered with React Router in the past and are familiar with React and ES6 modules.  
@@ -607,7 +601,7 @@ Add a destination and check out the URL! Notice that we're still technically see
 
 YOUR TURN!  
 
-Wire up a new `<Match />` component in `index.js` that takes in a dynamic parameter and displays whatever that new parameter is on the page. (Hint: If you give the component `className="Destination"` there is some CSS wired up for you.)
+Wire up a new `<Match />` component in `index.js` that takes in a dynamic parameter and displays whatever that new parameter is on the page. (Hint: If you give the component `className="Destination"` there is some CSS wired up for you. )
 
 ### Resources
 - [Read The Conversation At The End Of This NPM Article](https://www.npmjs.com/package/react-router4)  
