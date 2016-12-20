@@ -7,14 +7,14 @@ layout: page
 
 Building on the competencies of successful teamwork and personal growth of Module One, professional development in Module Two focuses on intentional communication. These sessions hone in on communicating well in software teams as well as communicating with potential employers and members of the technology community.
 
-* [Finding Opportunities](finding_opportunities)
-* [Collaborative Communication (BEE)](collaborative_communication)
+* [Finding Opportunities](finding_opportunities.md)
+* [Collaborative Communication (BEE)](collaborative_communication.md)
 * [Agile Practices & Project Management (FEE)]()
 * [Feedback II]()
   * BEE: Small Groups
   * FEE: Whole Group
-* [Cold Outreach]()
-* [Networking](networking)
+* [Cold Outreach](cold_outreach.md)
+* [Networking](networking.md)
 
 ### Finding Opportunities
 Looking for jobs on sites like Monster.com, Indeed, and other career listing sites can be discouraging and ineffective. Let’s talk about how to find a job without relying on your resume or job postings.
