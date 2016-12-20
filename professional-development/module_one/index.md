@@ -8,7 +8,7 @@ layout: page
 
 Professional development in Module One is focused on the fundamentals of building a career as a developer. These foundations are set through four sessions:
 
-* [Personal Branding I](personal_branding_p1)
+* [Personal Branding I](personal_branding_p1.md)
 * [Learning to Pair](learning_to_pair)
 * [Feedback I](feedback_1)
 * [Personal Branding II](personal_branding_p2)
