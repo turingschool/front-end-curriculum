@@ -14,7 +14,7 @@ layout: page
 
 As we mentioned in [Finding Opportunities](finding_opportunities.md), looking for jobs on sites like monster.com, Indeed, and other career listing sites can be discouraging and ineffective. Now that you've done the research an added companies to your job tracker with a point of contact at each, let's learn how to learn about opportunities within those companies or companies similar.
 
-- Check out the [Cold Outreach](../files/Cold%20Outreach.pdf) slide deck for more research support.
+- Check out the [Cold Outreach](../files/cold_outreach_meg.key) slide deck for more research support.
 
 ## Objectives
 
