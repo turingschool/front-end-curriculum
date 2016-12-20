@@ -9,10 +9,22 @@ Reference [Personal Branding Part I Slide Deck](../files/personal-branding.pdf) 
 
 ## Deliverables
 
+- Answers to the questions: 
+	1. Who are you? 
+	2. How did you get here? 
+	3. What's next? (Optional)
+- Two resume + LinkedIn peer reviews
 - Working resume
 - LinkedIn profile
-- Twitter Account
-- GitHub Profile
+- Update your photo on your GitHub Profile, LinkedIn, and Twitter to be consistent
+
+### Learn How to Tell Your Story
+
+This story will be used in a number of channels, but having foundation to pull from and refer back to will be essential. Let's start by answering the following:
+
+	1. Who are you? 
+	2. How did you get here? 
+	3. What's next? (Optional)
 
 ### Resume Learning Competencies
 
@@ -120,7 +132,11 @@ Exchange resumes with (2) peers. Share written feedback that you can refer back 
 - Add to the conversation
 
 ### GitHub Learning Competencies
-- Complete GitHub profile
+- Add a headshot photo rather than using the avatar - CTOs will think you're an amateur otherwise
+- Complete GitHub profile with:
+	- location
+	- link to personal site once you have one
+	- Twitter handle
 
 ### Complete Profile
 - Share your email address, personal website, location, headshot
