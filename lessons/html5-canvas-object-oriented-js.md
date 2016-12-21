@@ -27,18 +27,9 @@ The `canvas` variable holds some important information like the width and the he
 
 The `context` gives us a number of methods for drawing on our canvas. We'll start with [`fillRect()`](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillRect), which creates a rectangle filled by a color — black by default.
 
-`context.fillRect()` takes four arguments: `x`, `y`, `width`, and `height.`
+`context.fillRect()` takes four arguments: `x`, `y`, `width`, and `height.` We'll experiment with this in just a moment, but first [we'll set up a workspace based on this starter code `demos/canvas-blocks`][canvas-blocks].
 
-Let's start by drawing a small, square alien to our canvas. [Starter code has been set up for you at `demos/canvas-blocks`][canvas-blocks]. Clone it down and add the following line in at the bottom of the `script.js` file:
-
-```js
-context.fillRect(50, 50, 10, 10);
-```
-
-This will draw a 10 pixel by 10 pixel square located 50 pixels from the top-left corner of the canvas. Congratulations, you're a web artist now.
-
-#### Setup
-The starter code is a directory with the following files:
+The starter code directory has the following files:
 
 ##### helper.js
 ```
@@ -105,6 +96,17 @@ var context = canvas.getContext('2d');
   display: block;
 }
 ```
+
+Once you've recreated this directory and its contents locally it's time to try it out. Let's start by drawing a small, square alien to our canvas. Go ahead and add the following line in at the bottom of the `script.js` file:
+
+```js
+context.fillRect(50, 50, 10, 10);
+```
+
+Remember that `context.fillRect()` takes four arguments: `x`, `y`, `width`, and `height`? This line of code will draw a 10 pixel by 10 pixel square located 50 pixels from the top-left corner of the canvas.
+
+Congratulations, you're a web artist now.
+
 
 #### Animating Canvas
 

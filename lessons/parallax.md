@@ -7,11 +7,11 @@ module: 3
 Plan Of Attack:  
 * What is Parallax?  
 * Examples  
-* Build a basic fixed*parallax site with CSS  
+* Build a basic fixed parallax site with CSS  
 * Add some JS to create a dynamic parallax site  
 * Build a dynamic parallax site without JavaScript  
 * Background Videos  
-* Finished branches are located [here](https://github.com/martensonbj/parallax)  
+* Starter Repo Located [here](https://github.com/martensonbj/parallax)  
 
 ### What is Parallax?
 
@@ -63,6 +63,8 @@ Ultimately the only thing happening here is forcing the top content to behave as
 
 If you break down what sections are needed in the markup, you'll see we have an alternating situation of a background image, then some content, etc. So let's create an `index.html` page to reflect this, with a few sections of content and few sections that will eventually have a background image.  
 
+In the body of your html page, insert alternating sections with specific classes to define whether the section is meant to be a parallax background image, or a static container.
+
 ```html
 index.html
 ```
@@ -72,7 +74,7 @@ index.html
   ...
   <section class="container parallax parallax-1">
     <div class="content">
-      <h1>Hello</h1>
+      <h1>I Will Have a Background Image</h1>
     </div>
   </section>
 
@@ -86,25 +88,32 @@ index.html
 </body>
 ```
 
-In the body of your html page, insert alternating sections with specific classes to define whether the section is meant to be a parallax background image, or a static container. Add as many as you'd like here, but be sure to change the number in the class associated with the div. (Ie the second parallax section will have a class of `parallax-2`).  
+Add as many as you'd like here, but be sure to change the number in the class associated with the div. (Ie the second parallax section will have a class of `parallax-2`). (*Pro Tip* I included 4 generic background images...in case you want 4 sections...)  
 
 Also note that within each section we have a div that holds the actual content of our sections - this will be important for allowing the visible content to be dynamic as our browser size changes.
 
 #### CSS Magic
 
-A few other things to note before we add the CSS. It's helpful to define a consistent size for your background images so that the size of the parallax sections can match the same height, and it's also important to plan for the largest reasonable image size needed - although be sure to optimize any images used.  
+A few other things to note before we add the CSS.  
 
-Additionally, the size of a user's browser window will always be different. Setting the background-size property to `cover` will help make sure the image is always filling the space available, and giving it a specific [`background-position`](http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-position&preval=50%25%2050%25) will help it scale attractively.  
+- We want each of the parallax sections to have a background image that a foreground can slide over.
+- When choosing a background image, it's helpful to define a consistent size so that the size of the html container element can match the same height
+- It's also important to plan for the largest reasonable image size needed - although be sure to optimize any images used.  
+- The size of a user's browser window will always be different. Setting the background-size property to `cover` will help make sure the image is always filling the space available.  
+- Giving it a specific [`background-position`](http://www.w3schools.com/cssref/playit.asp?filename=playcss_background-position&preval=50%25%2050%25) will help it scale attractively.  
 
 ```css
 /* main.css */
+```
 
-/* Add some space in the static content sections */
+```
+/* Add some space in the static content sections */  
+
 section.container.static {
   padding: 40px 0;
 }
 
-/* Check out the background specifications in this style rule. Here we are saying that our images are big enough to not repeat, we want them to take up as much space as they're given, to stay put (fixed), and to position the image in the middle of the content provided */  
+/* Check out the universal background specifications in this style rule. Here we are saying that our images are big enough to not repeat, we want them to take up as much space as they're given, to stay put (fixed), and to position the image in the middle of the content provided */  
 
 section.container.parallax {
   height: 600px;
@@ -127,6 +136,32 @@ section.container.parallax h1 {
 }
 
 ```
+
+At this point if you look at your html file in a browser it looks like nothing fancy is happening at all. This is because we need to give our parallax sections content that the foreground can appear to slide over. Right now everything is white so there is no context to see movement. Add some background image specifications to your css. Feel free to choose your own here, or use the files I've included in the repo.
+
+```css
+main.css
+```
+
+```css
+section.container.parallax-1 {
+  background-image: url('./images/bg_1.jpeg')
+}
+
+section.container.parallax-2 {
+  background-image: url('./images/bg_2.jpeg')
+}
+
+section.container.parallax-3 {
+  background-image: url('./images/bg_3.jpeg')
+}
+
+section.container.parallax-4 {
+  background-image: url('./images/bg_4.jpeg')
+}
+```
+
+Reload `index.html` and see what happened. I did not include a `reset.css` file so a lot of the default padding and margins are creating some less than ideal affects. We won't spend time fixing those here but an example finished repo is included below.    
 
 [Completed Repo](https://github.com/martensonbj/parallax/tree/fixed-complete)  
 
@@ -174,7 +209,7 @@ At this point everything scrolls like a normal web page, with no fun parallax ef
 
 Ultimately, every time we reach a parallax section within our viewport, we want JavaScript to grab it and alter the scroll speed to be slower than what it would be by default.  
 
-In other words, if we scrolled down the entire webpage by 100px, we want the parallax background image to only be 50px form where it started instead (effectively reducing the "speed" by 50%).
+In other words, if we scrolled down the entire webpage by 100px, we want the parallax background image to only be 50px from where it started  effectively reducing the "speed" by 50%. Create a js file and pop in the following code.
 
 ```js
 parallax.js
@@ -182,23 +217,21 @@ parallax.js
 
 ```js
 (function() {
-  var parallax = document.querySelectorAll('.parallax'),
-      speed = 0.5;
+  var parallax = document.querySelectorAll('.parallax')
+  var speed = 0.5;
 
   window.onscroll = function() {
     [].slice.call(parallax).forEach(function(el, i){
+      var windowYOffset = window.pageYOffset
+      var setBackgroundPos = '50% ' + (windowYOffset * speed) + 'px';
 
-      var windowYOffset = window.pageYOffset,
-          setBackgroundPos = '50% ' + (windowYOffset * speed) + 'px';
-
-          el.style.backgroundPosition = setBackgroundPos
-
+      el.style.backgroundPosition = setBackgroundPos
     });
   }
 })(); // <-- Remember this guy??
 ```
 
-Ok. Wtf just happened, and what's up with the funky empty array/slice/call business?
+Ok. Wtf just happened, and what's up with the funky empty array/slice/call business?  
 
 First, we target all of the elements with a class of `.parallax`, which are the elements with the background images that we want to slow down.  
 
@@ -206,15 +239,17 @@ Then we set the speed to a decimal between 0 and 1, in our case we want to move 
 
 Then we use the `window` API and target the `.onScroll` method.  
 
-That next weird bit with `[].slice.call(parallax)` is a pretty cool way of saying `Array.prototype.slice.call(parallax)`. We're using it because our current array (`var parallax = document.querySelectorAll('.parallax')`) is not technically an Array, but an "Array-like" object of nodes.
+That next weird bit with `[].slice.call(parallax)` is a pretty cool way of saying `Array.prototype.slice.call(parallax)`. We're using it because our current array (`var parallax = document.querySelectorAll('.parallax')`) is not technically an Array, but an "Array-like" object of html node elements which don't behave the same way.
 
-Using this fancy method, we have access to all of the prototype methods on the `Array` object, like `slice`. So `.slice()`, if given no argument, returns the original reference (which here is an empty array). We then hand our array of Dom Nodes to the `.call()` function, which allows us to then iterate over it. Nbd.
+Using this fancy method, we have access to all of the prototype methods on the `Array` object that our "array like object" wouldn't normally have access to, like `slice`. So `.slice()`, if given no argument, returns the original reference (which here is an empty array). We then hand our array of DOM nodes to the `.call()` function, which allows us to then iterate over it. Nbd.  
 
-When the user scrolls, we want to loop over all of our `.parallax` sections and find the `y-position` of where the window is currently located. Ultimately we want to say "Hey window, at any given point when a user scrolls, give me the location of the tops of all parallax sections (aka the y values)".  
+When the user scrolls, we want to loop over all of our `.parallax` sections and find the `y-position` of where the window is currently located. Ultimately we want to say "Hey window, at any given point when a user scrolls, give me the location of the tops of all parallax sections (aka the yOffset values)".  
 
 After getting that value (`window.pageYOffset`) we overwrite the background position to be the new fraction we saved in our speed variable (`0.5`).   
 
-Magic.
+Magic.  
+
+[Completed Dynamic Repo](https://github.com/martensonbj/parallax/tree/dynamic-complete)  
 
 #### Troubleshooting
 
@@ -272,15 +307,15 @@ main.css
 }
 ```
 
-Our `parallax-container` class is what begins to control the effect here. The `height` and `perspective` css properties keep this section centered, similar to a focal point of a 3d image ([details on the css perspective property here](https://css-tricks.com/almanac/properties/p/perspective/)). Setting `overflow-y` property to `auto` allows everything within our container to scroll as usual, but all child elements have to be rendered relative to our defined perspective.  
+Our `.parallax-container` class is what begins to control the effect here. The `height` and `perspective` css properties keep this section centered, similar to a focal point of a 3d image ([details on the css perspective property here](https://css-tricks.com/almanac/properties/p/perspective/)). Setting `overflow-y` property to `auto` allows everything within our container to scroll as usual, but all child elements have to be rendered relative to our defined perspective.  
 
-The `parallax` class will be the layer of content that the parallax effect will ultimately be applied to. The element is pulled out of normal flow and we redefine its behavior.
+The `parallax` class will be the layer of content that the parallax effect will be applied to. The element is pulled out of normal flow and we redefine its behavior.  
 
-The last two style rules effect `foreground-layer` and `background-layer`. These will help us independently control their respective speeds by moving it closer to or farther from the Z axis.  
+The last two style rules effect `foreground-layer` and `background-layer`. These will help us independently control their respective speeds by moving the element closer to or farther from the Z axis.  
 
 You'll notice, however, that because of our translation on the Z index, the foreground appears larger than the background, which isn't what we want.  To counteract this, we need to use `scale()` to bring it back down.  
 
-What appears to be scrolling speed, then, is controlled by a combination of perspective, and Z translation. Negative Z values will appear to scroll slower than positive Z values. Additionally, the farther a value is from 0, the more obvious the parallax effect will be. Just like from the video we looked at earlier, the farther away an object is, the slower it appears to move.
+What appears to be scrolling speed, then, is controlled by a combination of perspective, and Z translation. Negative Z values will appear to scroll slower than positive Z values. Additionally, the farther a value is from 0, the more obvious the parallax effect will be. Just like from the video we looked at earlier, the farther away an object is, the slower it appears to move.  
 
 Let's put this into practice.  
 
@@ -290,9 +325,7 @@ index.html
 
 ```html
 <div class="parallax-container">
-
   <div class="parallax-all">
-
     <div class="parallax background-layer">
       Background Layer
     </div>
@@ -300,10 +333,8 @@ index.html
     <div class="parallax foreground-layer">
       Layer 1
     </div>
-
-  </div>
-
-</div>
+  </div><!--parallax all-->
+</div><!--parallax contaienr-->
 ```
 
 ```css
@@ -345,63 +376,15 @@ main.css
 }
 ```
 
-The last style we added allows our other layers to behave relatively to the group element, which we effectively move out of the way using the `translate3d` business. [Documentation here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d)  
+The last style we added, `.parallax-all` allows our other layers to behave relative to the group element, which we effectively move out of the way using the `translate3d` business. [Documentation here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d)  
 
-### Parallax with React
-
-Seems like since we're dealing with re-rendering the page in weird, unique ways React might be a useful tool here. Let's try implementing this with React.  
-
-You can grab a practice repo [here], or pull up a code-pen session and make sure your settings are hooked up for react.
-
-
-#### NPM To The Rescue
-Shockingly (not shockingly) there is a module for this.  
-
-Run `npm i -S react-parallax`.  
-
-This helper module gives us a `<Parallax>` component that can take a multitude of props that make our lives easier.
-
-From [the docs](https://www.npmjs.com/package/react-parallax) an example of implementation of this component would be:  
-
-```js
-import { Parallax } from 'react-parallax';
-
-const TheContainer = () => {
-    return (
-      <div>
-        <Parallax bgImage="assets/1.jpg" strength={400}>
-          <br/>
-          <h1> some content that is displayed above the bgImage </h1>
-        </Parallax>
-      </div>
-    )
-}
-
-export default TheContainer;
-```
-
-Additionally, you're given a `<Background>` component that you can nest within the `<Provider>` component. Child nodes nested within this Background are positioned behind elements outside of the Background element.  
-
-```js
-<Parallax strength={300}>
-    <Background>
-      <img src="http://www.fillmurray.com/400/300"/>
-      <div style={{
-         width: 800,
-         height: 300,
-         backgroundColor: '#450093'
-        }}></div>
-      <img src="http://www.fillmurray.com/500/300"/>
-    </Background>
-    <h1>something else</h1>
-  </Parallax>
-```
+[Completed No-Js Repo] (https://github.com/martensonbj/parallax/tree/no-javascript)  
 
 ### Implementing Video Backgrounds with HTML5
 
 Another hip UX feature on webpages these days is the [live video background image](https://www.flyfrontier.com/). Let's walk through a quick implementation of how to make this happen.  
 
-HTML5 videos are no supported in all modern browsers (besides IE<8...no surprise there). There are a ton of ways you can optimize and customize the video being played in your webpage, but for today we will just be looking at a brief "how-to".  
+HTML5 videos are now supported in all modern browsers (besides IE<8...no surprise there). There are a ton of ways you can optimize and customize the video being played in your webpage, but for today we will just be looking at a brief "how-to".  
 
 Ultimately there are three main formats that you need to support: `MP4`, `Ogg`, and `WebM`. At the bare minimum, `MP4` should get you up and running.  
 
@@ -454,7 +437,7 @@ index.html
   </body>
 ```
 
-(Replace the `src` tags with whatever video and path you're working with).  
+(Replace the `src` tags with whatever path you're working with).  
 
 ```css
 main.css
@@ -486,9 +469,9 @@ h1 {
 }
 ```
 
-The interesting parts of this CSS are the content and video sections. The `z-index` allows our video to sit behind any content (here and `h1`) while `fixed` and `transform` glue it into place and shift it to be centered within the space allowed.  
+The interesting part of this CSS is in the content and video sections. The `z-index` allows our video to sit behind any content (here it's just an `h1`) while `fixed` and `transform` glue it into place and shift it to be centered within the space allowed.  
 
-Spend some time playing around with these settings to see what changes. The rest of the CSS just for fun-sies is as follows:  
+Spend some time playing around with these settings to see what changes. The rest of the CSS, just for fun-sies, is as follows:  
 
 ```css
 html,
@@ -556,6 +539,8 @@ li {
 }
 
 ```
+
+[Completed Video Repo](https://github.com/martensonbj/parallax/tree/background-video)  
 
 A few last comments. This lesson in it's entirety was designed to be a top level overview of parallax options and video implementation. For further instruction and better/other ways to implement cross-browser compatibility there are countless resources to help. Make sure to do your research before pushing to production!  
 
