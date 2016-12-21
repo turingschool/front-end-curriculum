@@ -247,7 +247,9 @@ When the user scrolls, we want to loop over all of our `.parallax` sections and 
 
 After getting that value (`window.pageYOffset`) we overwrite the background position to be the new fraction we saved in our speed variable (`0.5`).   
 
-Magic.
+Magic.  
+
+[Completed Dynamic Repo](https://github.com/martensonbj/parallax/tree/dynamic-complete)  
 
 #### Troubleshooting
 
@@ -375,6 +377,8 @@ main.css
 ```
 
 The last style we added, `.parallax-all` allows our other layers to behave relative to the group element, which we effectively move out of the way using the `translate3d` business. [Documentation here](https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/translate3d)  
+
+[Completed No-Js Repo] (https://github.com/martensonbj/parallax/tree/no-javascript)  
 
 ### Implementing Video Backgrounds with HTML5
 
@@ -535,6 +539,8 @@ li {
 }
 
 ```
+
+[Completed Video Repo](https://github.com/martensonbj/parallax/tree/background-video)  
 
 A few last comments. This lesson in it's entirety was designed to be a top level overview of parallax options and video implementation. For further instruction and better/other ways to implement cross-browser compatibility there are countless resources to help. Make sure to do your research before pushing to production!  
 
