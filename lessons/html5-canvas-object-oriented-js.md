@@ -9,7 +9,7 @@ Modern browsers include the [HTML5 Canvas API][canvas], which allows us to draw 
 
 ## Canvas Basics
 
-This section is not intended to be a full tutorial on the basics of working with Canvas. Rather, just enough to help get started with the API. 
+This section is not intended to be a full tutorial on the basics of working with Canvas. Rather, just enough to help get started with the API.
 We can easily add a [`<canvas>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas) element to our HTML like so:
 
 ```html
@@ -29,7 +29,7 @@ The `context` gives us a number of methods for drawing on our canvas. We'll star
 
 `context.fillRect()` takes four arguments: `x`, `y`, `width`, and `height.`
 
-Let's start by drawing a small, square alien to our canvas. A workspace has been set up for you in `demos/canvas-blocks`. Add the following line in at the bottom of the `script.js` file:
+Let's start by drawing a small, square alien to our canvas. [Starter code has been set up for you at `demos/canvas-blocks`](canvas-blocks). Clone it down and add the following line in at the bottom of the `script.js` file:
 
 ```js
 context.fillRect(50, 50, 10, 10);
@@ -38,7 +38,7 @@ context.fillRect(50, 50, 10, 10);
 This will draw a 10 pixel by 10 pixel square located 50 pixels from the top-left corner of the canvas. Congratulations, you're a web artist now.
 
 #### Setup
-Create a directory with the following files:
+The starter code is a directory with the following files:
 
 ##### helper.js
 ```
