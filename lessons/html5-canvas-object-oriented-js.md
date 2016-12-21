@@ -29,7 +29,7 @@ The `context` gives us a number of methods for drawing on our canvas. We'll star
 
 `context.fillRect()` takes four arguments: `x`, `y`, `width`, and `height.`
 
-Let's start by drawing a small, square alien to our canvas. [Starter code has been set up for you at `demos/canvas-blocks`](canvas-blocks). Clone it down and add the following line in at the bottom of the `script.js` file:
+Let's start by drawing a small, square alien to our canvas. [Starter code has been set up for you at `demos/canvas-blocks`][canvas-blocks]. Clone it down and add the following line in at the bottom of the `script.js` file:
 
 ```js
 context.fillRect(50, 50, 10, 10);
