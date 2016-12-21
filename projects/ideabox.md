@@ -141,7 +141,7 @@ Student chooses an additional feature or performance optimization to add to the 
 
 * 4 - The application meets all of the requirements listed above and implements one or more of the extensions.
 * 3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
-* 2 - The application is in a usable state, but is missing 1 or more of the features outline in the specification above.
+* 2 - The application is in a usable state, but is missing 1 or more of the features outlined in the specification above.
 * 1 - The application is missing 3 or more smaller features or 1 major feature essential to having a complete application.
 * 0 - The application is unusable.
 
@@ -150,7 +150,7 @@ Student chooses an additional feature or performance optimization to add to the 
 - 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
 - 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
 - 2:  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
-- 1:  Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
+- 1:  Developer writes code with unnecessary tags, selectors, or nesting that do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
 
 ### CSS Style
 
@@ -165,7 +165,7 @@ Student chooses an additional feature or performance optimization to add to the 
 * 3- Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
 * 2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
 * 1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
-* 0 - Your client-side application does not function or the application does not make use of `localStorage` for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
+* 0 - Your application does not function or the application does not make use of `localStorage` for updating information on the client. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
 
 ### Workflow
 
@@ -177,13 +177,8 @@ Student chooses an additional feature or performance optimization to add to the 
 
 ### Collaboration
 
-* 4 - Team members leverage github to have discussions about their
-  solutions, track tasks/issues, and showcase a clear workflow process
-  in their use of PRs.
-* 3 - Team members employ PRs and [issues](https://guides.github.com/features/issues/) to both manage their work and
-  communication/collaboration around executing the tasks.
-* 2 - Team members shared equitably in the workload, however there are
-  only a few pull requests, which are not labeled or documented very
-  well.
+* 4 - Team members leverage GitHub to have discussions about their solutions, track tasks/issues, and showcase a clear workflow process in their use of PRs.
+* 3 - Team members employ PRs and [issues](https://guides.github.com/features/issues/) to both manage their work and communication/collaboration around executing the tasks.
+* 2 - Team members shared equitably in the workload, however there are only a few pull requests, which are not labeled or documented very well.
 * 1 - A gross majority of the project was executed by one team member.
-* 0 - The team did not utilize pull requests via github to collaborate.
+* 0 - The team did not utilize pull requests via GitHub to collaborate.
