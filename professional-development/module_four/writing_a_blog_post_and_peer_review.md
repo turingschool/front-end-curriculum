@@ -5,7 +5,7 @@ layout: page
 
 # Writing a Blog Post & Completing Peer Review
 
-[Slides for this lesson]()
+[Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/blog_post_peer_review_slides.pdf)
 
 ###Objectives:
 * Decide on a structure for a blog post on your project and your Mod 4 learning
