@@ -6,7 +6,7 @@ tags: javascript, jquery, canvas, svg, mocha, testing
 
 ## Abstract
 
-Build a game that is playable in the browser. There is no server-side component for this project.
+Build a game that is playable in the browser.
 
 This project is inspired by [Minicade](http://minica.de/).
 
@@ -28,7 +28,7 @@ You can use any of the following JavaScript libraries:
 
 (Other libraries may be used *only* with instructor approval.)
 
-**Nota bene**: We provide a [Game Time Starter Kit](https://github.com/turingschool-examples/game-time-starter-kit) that has been preconfigured with Webpack. You should probably use this starter kit.
+**Nota bene**: We provide a [Game Time Starter Kit](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) that has been preconfigured with webpack. You should probably use this starter kit.
 
 ## Game Choices
 
@@ -47,11 +47,9 @@ You can use any of the following JavaScript libraries:
 
 ## Playability Features
 
-We want your game to be full-featured and playable — not just a proof of concept of the gameplay and rendering
-features.
+We want your game to be full-featured and playable — not just a proof of concept of the gameplay and rendering features.
 
-To this end, make sure to include sufficient UX to allow the user to fully interact with the game. This would
-include:
+To this end, make sure to include sufficient UX to allow the user to fully interact with the game. This would include:
 
 * Indicate when the game is over and won or lost
 * Allow the user to start a new game
