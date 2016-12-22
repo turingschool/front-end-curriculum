@@ -125,7 +125,7 @@ The peer review process is similar to soliciting feedback on a project. As you d
 * [Share with peers for review](https://help.medium.com/hc/en-us/articles/215564177-Share-a-draft)
 * [Peers can leave feedback through Notes](https://help.medium.com/hc/en-us/articles/214035868)
 
-[Use this checklist]() when you read through your partner's post in order to give thoughtful feedback. 
+[Use these guidelines]() when you read through your partner's post in order to give thoughtful feedback. 
 
 ###Free Write & Share
 Decide on a structure for your blog post and think about your audience -- who are you trying to reach?
