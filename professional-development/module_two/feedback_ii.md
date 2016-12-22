@@ -14,9 +14,9 @@ layout: page
 * Use the right-wrong spotting techniques to break down feedback you've received
 * Create an action plan for how to improve your practices from feedback you've received
 
-**Portfolio Deliverables:**
+**Portfolio Deliverable:**
 
-2-paragraph reflection in your portfolio on:
+Paragraph reflection in your portfolio on:
 
 * How you incorporated feedback from your team members and what you learned about yourself in the process
 
