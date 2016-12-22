@@ -9,10 +9,8 @@ Building on the competencies of successful teamwork and personal growth of Modul
 
 * [Finding Opportunities](finding_opportunities.md)
 * [Collaborative Communication (BEE)](collaborative_communication.md)
-* [Agile Practices & Project Management (FEE)]()
+* [Agile Practices & Project Management (FEE)](https://github.com/turingschool/professional_skills/blob/master/module_two/agile_practices_project_management.md)
 * [Feedback II]()
-  * BEE: Small Groups
-  * FEE: Whole Group
 * [Cold Outreach](cold_outreach.md)
 * [Networking](networking.md)
 
