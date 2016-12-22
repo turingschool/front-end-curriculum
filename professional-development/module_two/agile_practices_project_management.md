@@ -1,3 +1,8 @@
+---
+title: Agile Practices & Project Management
+layout: page
+---
+
 
 # Agile Practices & Project Management 
 
