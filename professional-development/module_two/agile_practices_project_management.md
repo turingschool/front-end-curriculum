@@ -81,8 +81,8 @@ Debrief:
 ###Reflections & Applications
 As your prepare for your next team project DTR, consider:
 
-* How will you incorporate agile practices?
-* What project management tool will you use?
+* How will agile practices help you manage a larger team than you're used to working in?
+* What project management tool will you use to plan out a project that has some ambiguity?
 * Your group should choose someone to be the project manager. What responsibilities will that individual have?
 
 More Resources:
