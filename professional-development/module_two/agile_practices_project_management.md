@@ -6,7 +6,7 @@ layout: page
 
 # Agile Practices & Project Management 
 
-[Slides for this lesson]()
+[Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/agile_practices_slides.pdf)
 
 ###Objectives
 * Demonstrate an understanding of different agile practices
