@@ -1,3 +1,8 @@
+---
+title: Feedback II
+layout: page
+---
+
 # Feedback II
 
 [Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/feedback_ii_slides.pdf)
