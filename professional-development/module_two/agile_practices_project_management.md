@@ -15,10 +15,9 @@ layout: page
 
 **Portfolio Deliverables:**
 
-2-paragraph reflection in your portfolio on:
+Paragraph reflection in your portfolio on:
 
-1. Details on project management strategies you used in your projects; What went well? What didn’t go well?
-2. How you incorporated feedback from your team members and what you learned about yourself in the process
+* Details on project management strategies you used in your projects; What went well? What didn’t go well?
 
 ### What is Agile?
 Agile is both a series of processes and a philosophy around how to develop software in a more efficient way.
