@@ -88,4 +88,5 @@ As your prepare for your next team project DTR, consider:
 More Resources:
 
 * [10 Key Principles of Agile](http://www.allaboutagile.com/what-is-agile-10-key-principles/)
+* [Agile Programming Best Practices](https://www.versionone.com/agile-101/agile-software-programming-best-practices/)
 
