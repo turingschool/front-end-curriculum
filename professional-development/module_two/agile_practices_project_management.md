@@ -8,7 +8,7 @@ layout: page
 
 [Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/agile_practices_slides.pdf)
 
-###Objectives
+### Objectives
 * Demonstrate an understanding of different agile practices
 * Describe how to use these agile practices with your teams
 * Utilize strategies for building trust in teams
@@ -20,7 +20,7 @@ layout: page
 1. Details on project management strategies you used in your projects; What went well? What didn’t go well?
 2. How you incorporated feedback from your team members and what you learned about yourself in the process
 
-###What is Agile?
+### What is Agile?
 Agile is both a series of processes and a philosophy around how to develop software in a more efficient way.
 
 And to explain it, let's start with what it's not. Agile is a response to the Waterfall method.
@@ -34,7 +34,7 @@ Read through the 12 principles of the [Agile Manifesto](http://agilemanifesto.or
 * What do you notice about these principles? Do any particularly resonate with you?
 * How might these principles be applied? How have you already seen them in action at Turing?
 
-###Exploring Agile Practices
+### Exploring Agile Practices
 Based on these principles, processes have been created for teams to embrace agile methodology:
 
 * Scrum:
@@ -78,7 +78,7 @@ Debrief:
 * How did it feel when someone told you what you'd be doing or what you might need help with?
 * What emotions did you notice feeling towards the people you predicted for? 
 
-###Reflections & Applications
+### Reflections & Applications
 As your prepare for your next team project DTR, consider:
 
 * How will agile practices help you manage a larger team than you're used to working in?
