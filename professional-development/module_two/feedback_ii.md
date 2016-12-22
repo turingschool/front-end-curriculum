@@ -7,7 +7,7 @@ layout: page
 
 [Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/feedback_ii_slides.pdf)
 
-###Objectives
+### Objectives
 
 * Identify when triggers are at play in feedback
 * Use the Johari Window technique to recognize your own blind spots
@@ -20,7 +20,7 @@ layout: page
 
 * How you incorporated feedback from your team members and what you learned about yourself in the process
 
-###Opening
+### Opening
 
 **Revisit the three triggers to feedback:**
 
@@ -44,7 +44,7 @@ So, the receiver asked for more clarification around the feedback, and the giver
 
 What about the person's behavior might have contributed to the feedback that they received?
 
-###Blind Spots 
+### Blind Spots 
 A blind spot is something you don’t see about yourself that others do see.  Language that you use, facial expressions, body language, tone of voice, and behavioral patterns show your blind spots, and they impede true communication.
 
 Increasing awareness of your blind spots is an important first step, and you can do that by analyzing patterns in your behavior. When you receive feedback, consider:
@@ -60,14 +60,12 @@ What blind spots might be at play in these scenarios?
 
 **Scenario #3:** You feel great about how pairing went last week with a Mod. 1 student. During the pairing session, you helped drive and explained everything you were doing. You talked through the entire problem, and the student didn’t seem to have any questions. But the next week, that student doesn't want to meet with you. You DM the student to ask if they want to meet again, but the student makes a few comments that a lot of the material was “was over my head” and “hard to understand.” They say they're going to pair with someone else this week who might be able to "reach me on my level."
 
-###Right & Wrong Spotting
+### Right & Wrong Spotting
 When we receive feedback, often our first reaction is that it's wrong. That's a valid feeling -- go with it. List everything that seems wrong about the feedback.
 
 And then go back through the feedback and pull out what might be *right* about it -- what truth is there in this feedback? What is something that you can easily implement? 
 
-Allison will model this using feedback she's received.
-
-###Independent Reflections
+### Independent Reflections
 **Activity #1:** Complete the [Johari Window activity](https://github.com/turingschool/professional_skills/blob/master/module_two/johari_window_activity.md) using the adjectives you and your teammates identified for you ahead of time. 
 
 Analyze:
@@ -85,7 +83,6 @@ In the right column, make plans for how you can improve in the next team or pair
 
 * What is useful here?
 * What is something I want to work on from this feedback?
-
 
 ### Closing
 
