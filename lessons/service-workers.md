@@ -31,21 +31,52 @@ While this aspect of service workers provides us with great flexibility, it also
 ## Practice
 We'll create simple Markdown Previewer application that allows users to type markdown into a textarea, transforming it to HTML on the fly. We'll use a web worker for the transformation, and a service worker for loading up our assets when a user is offline.
 
-Follow along by cloning the [markdown-previewer](https://github.com/turingschool-examples/markdown-previewer) application.
+Follow along by cloning the [markdown-previewer](https://github.com/turingschool-examples/markdown-previewer) application. We already have some basic HTML and CSS ready for us, and we also have a `markdown-it.min.js` file in our `lib` directory that will handle our markdown to HTML transformation.
 
 
-## Registering a Service Worker
+## Serving Assets Offline
+
+The first thing we want to do is make sure all of our assets necessary for rendering the page are available offline. This requires a couple of steps.
+
+### Registering a Service Worker
+
+Add the following code in a new JavaScript file and add the file to your `index.html`:
 
 ```javascript
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./service-worker.js')
+      .then(registration => {
+        // Registration was successful
+        console.log('ServiceWorker registration successful');
+      }).catch(err => {
+        // registration failed :(
+        console.log(`ServiceWorker registration failed: ${err}`);
+      });
   });
 }
 ```
+
+Our registration code starts with some feature detection, by checking if `serviceWorker` actually exists in `navigator`. Assuming we're using a modern browser that supports service workers, we should then be able to register our worker on page load with `navigator.serviceWorker.register()`. This method takes a single parameter - the path to a javascript file that represents your service worker (we will create this file in a moment), and returns a promise.
+
+Now let's create that service worker script that we referenced in our registration code. Create a `service-worker.js` file in the root of your application. For now, let's just add a service worker that will log to the console once it's been installed:
+
+```javascript
+self.addEventListener('install', function(event) {
+  console.log('Service Worker Installed!');
+});
+```
+
+Notice the `self` object in our service worker script. This is how you reference the instance of the service worker itself. You can think of it as being similar to your `this` context. Using our `self` object, we are adding a listener for the `install` event of our service worker. This is one of the phases of a service worker's lifecycle. It's important to understand the lifecycle of a service worker so you can better predict its behavior in different circumstances.
+
+### Lifecycle of a Service Worker
+
+1. Registration - browser is aware that we have a service worker that needs to be recognized, and will kick off the installation step upon a successful registration
+2. Installation - the service worker is installed, but doesn't actually control anything on the page just yet. This is a good phase to cache assets for offline use.
+3. Activation - the service worker has been installed and is activated. This is a good place for us to manage old cached assets and update the service worker.
+4. Full Page Control - the service worker has been activated and now has full control over any pages that fall under its scope
+
+## Inspecting a Service Worker
+If we actually boot up our application, (an easy way to do this is with `python -m SimpleHTTPServer`), we can see in the console that our registration was successful, but we never actually reach our 'Service Worker Installed!' message. This is because the service worker script is run in the background, on its own thread, separate from our application.
+
+In order to inspect a service worker, we can go to [chrome://serviceworker-internals](chrome://serviceworker-internals). Here you'll see details listed for any service workers that have been registered while you were browsing. In our case, we can see that our service worker is activated and running. If we click the 'inspect' button, we will actually see that our installation message *was* logged to the console - just a separate one :) 
