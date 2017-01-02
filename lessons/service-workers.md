@@ -81,9 +81,11 @@ python -m SimpleHTTPServer 3000
 
 we see the HTML and CSS at `localhost:3000`. We can check up on our service worker by clicking on the 'Application' tab of dev tools, and selecting 'Service Workers' in the left panel:
 
-![devtools-service-workers][]
+![Dev Tools Service Workers][devtools-service-workers]
 
 This panel gives us a lot of handy tools for debugging our service worker. Most importantly, we can simulate being offline by selecting the 'offline' checkbox. If we select this and refresh our application, we'll see we get an error that we're offline and nothing will load.
+
+![No Internet][no-internet]
 
 This is because we haven't actually told our service worker that we want to cache assets for offline use. Let's update our service worker to do that now.
 
@@ -120,3 +122,8 @@ self.addEventListener('fetch', event => {
 ```
 
 You'll often hear that service workers are **event-based web workers**. This means our service worker is going to respond and communicate explicity through events. In this code, we are adding a listener for any `fetch` events, and checking to see if they exist in our cache with `caches.match()`. If it finds a match, it will return the asset right away. If it doesn't, it will go ahead and fetch it from the server. 
+
+
+
+[devtools-service-workers]: /assets/images/lessons/service-workers/devtools-service-workers.png
+[no-internet]: /assets/images/lessons/service-workers/no-internet.png
