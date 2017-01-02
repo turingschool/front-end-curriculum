@@ -1,4 +1,4 @@
-# Module 4 StrengthsFinder
+# Module 4 StrengthsFinder: What's next?
 
 
 ### Envisioning the Future 
