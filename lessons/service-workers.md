@@ -73,9 +73,11 @@ Notice the `self` object in our service worker script. This is how you reference
 4. Full Page Control - the service worker has been activated and now has full control over any pages that fall under its scope
 
 ## Inspecting a Service Worker
-If we actually boot up our application, (an easy way to do this is with `python -m SimpleHTTPServer`), we can see in the console that our registration was successful, but we never actually reach our 'Service Worker Installed!' message. This is because the service worker script is run in the background, on its own thread, separate from our application.
+If we actually boot up our application, (an easy way to do this is with `python -m SimpleHTTPServer`).
 
-In order to inspect a service worker, we can go to [chrome://serviceworker-internals](chrome://serviceworker-internals). Here you'll see details listed for any service workers that have been registered while you were browsing. In our case, we can see that our service worker is activated and running. If we click the 'inspect' button, we will actually see that our installation message *was* logged to the console - just a separate one :) 
+In order to inspect a service worker, we can go to the Application Tab in DevTools and click on 'Service Workers'. If you select the 'show all' checkbox, you should see a list of quite a few service workers from other sites that are already running:
+
+![devtools-service-workers][]
 
 ## Serving Assets Offline
 Before we add some assets to serve offline, shut down your local server and refresh your application. You should notice that nothing loads. We get an error that nothing exists at our localhost endpoint. We can solve this by adjusting the code in our service worker file. Remember we said the installation phase of the worker's lifecycle was a good time to add assets to our cache. Update your service worker with the following:
