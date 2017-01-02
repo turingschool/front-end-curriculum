@@ -73,26 +73,50 @@ Notice the `self` object in our service worker script. This is how you reference
 4. Full Page Control - the service worker has been activated and now has full control over any pages that fall under its scope
 
 ## Inspecting a Service Worker
-If we actually boot up our application, (an easy way to do this is with `python -m SimpleHTTPServer`).
+If we actually boot up our application:
 
-In order to inspect a service worker, we can go to the Application Tab in DevTools and click on 'Service Workers'. If you select the 'show all' checkbox, you should see a list of quite a few service workers from other sites that are already running:
+```bash
+python -m SimpleHTTPServer 3000
+```
+
+we see the HTML and CSS at `localhost:3000`. We can check up on our service worker by clicking on the 'Application' tab of dev tools, and selecting 'Service Workers' in the left panel:
 
 ![devtools-service-workers][]
+
+This panel gives us a lot of handy tools for debugging our service worker. Most importantly, we can simulate being offline by selecting the 'offline' checkbox. If we select this and refresh our application, we'll see we get an error that we're offline and nothing will load.
+
+This is because we haven't actually told our service worker that we want to cache assets for offline use. Let's update our service worker to do that now.
+
 
 ## Serving Assets Offline
 Before we add some assets to serve offline, shut down your local server and refresh your application. You should notice that nothing loads. We get an error that nothing exists at our localhost endpoint. We can solve this by adjusting the code in our service worker file. Remember we said the installation phase of the worker's lifecycle was a good time to add assets to our cache. Update your service worker with the following:
 
 ```javascript
-self.addEventListener('install', (event) => {
+self.addEventListener('install', event => {
   event.waitUntil(
     caches.open('assets-v1').then(cache => {
       return cache.addAll([
-        './css/style.css',
-        './lib/markdown-it.min.js'
-      ]);
+        '/index.html',
+        '/css/app.css',
+        '/lib/markdown-it.min.js'
+      ])
     })
   );
 });
 ```
 
-With these changes, we're telling our service worker that upon installation, we want to create a new cache of assets. Service workers use the CacheStorage API as its underlying method for storage, which you'll learn about more in an upcoming lesson. For now, just know that we have access to a `caches` variable that allows us to `open` a new cache. This cache will have a name (in our case, `assets-v1`), and upon opening, we can specify a list of files we'd like to add to this cache. Here, we are adding our css and markdown library to make them available offline.
+With these changes, we're telling our service worker that upon installation, we want to create a new cache of assets. Service workers use the CacheStorage API as its underlying method for storage, which you'll learn about more in an upcoming lesson. For now, just know that we have access to a `caches` variable that allows us to `open` a new cache. This cache will have a name (in our case, `assets-v1`), and upon opening, we can specify a list of files we'd like to add to this cache. Here, we are adding our index page, css and markdown library to make them available offline.
+
+Next, we have to tell our service worker to intercept any network requests to these files so that it can serve them through the cache we just created, rather than trying to find them online:
+
+```javascript
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});
+```
+
+You'll often hear that service workers are **event-based web workers**. This means our service worker is going to respond and communicate explicity through events. In this code, we are adding a listener for any `fetch` events, and checking to see if they exist in our cache with `caches.match()`. If it finds a match, it will return the asset right away. If it doesn't, it will go ahead and fetch it from the server. 
