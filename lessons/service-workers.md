@@ -153,8 +153,7 @@ In our click event, we first want to check if there is actually a service worker
 
 Assuming we have a service worker running, we can then post a message to our controller with `navigator.serviceWorker.controller.postMessage()`. This method can take in an object of data that we'll now have access to in our service worker script. Here we are simply sending over the value of the current markdown.
 
-Refresh your application and you should notice that after typing in some markdown and clicking your submit button, you'll get a message in the console with the data object you passed in.
-
+Refresh your application, type in some markdown and click your submit button. If we go to the service workers devtools panel again, we can click on 'inspect' for our service worker and we'll get a brand new dev tools window, specific to our service worker. If you click on the 'Console' tab in this new window, you'll notice the `console.log()` we added to our service worker script has been logged. The service workers debug window gives you all the functionality you need to troubleshoot your code.
 
 
 
