@@ -128,6 +128,17 @@ Now if you refresh your application and reselect the 'offline' box, you'll see t
 ## Communication with Service Workers
 Because service workers run in the background, they do not have direct access to the DOM like we're used to with other JavaScript files. They are completely detached from the window they control. If we want our service worker to be aware of DOM-related content or interactions, we must communicate with them through messaging events.
 
+When a service worker receives a message, we can handle it from our service worker file like so:
+
+```javascript
+self.addEventListener('message', event => {
+  let eventData = event.data // any data you pass into the message
+  console.log('Event Data: ', eventData);
+});
+````
+
+
+
 
 [devtools-service-workers]: /assets/images/lessons/service-workers/devtools-service-workers.png
 [no-internet]: /assets/images/lessons/service-workers/no-internet.png
