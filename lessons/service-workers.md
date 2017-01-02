@@ -92,3 +92,5 @@ self.addEventListener('install', (event) => {
   );
 });
 ```
+
+With these changes, we're telling our service worker that upon installation, we want to create a new cache of assets. Service workers use the CacheStorage API as its underlying method for storage, which you'll learn about more in an upcoming lesson. For now, just know that we have access to a `caches` variable that allows us to `open` a new cache. This cache will have a name (in our case, `assets-v1`), and upon opening, we can specify a list of files we'd like to add to this cache. Here, we are adding our css and markdown library to make them available offline.
