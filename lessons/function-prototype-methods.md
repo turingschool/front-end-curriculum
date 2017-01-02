@@ -77,7 +77,7 @@ var Car = function(make, model, color){
 - `bind()` let's you save for later
 
 ```javascript
-//basic object w/ two properties and a method
+// Basic object w/ two properties and a method.
 
 var noah = {
     name: 'Noah',
@@ -87,13 +87,12 @@ var noah = {
  }
 }
 
-//we know the left of the dot rule means the this keyword references our
-noah object
+// We know the left of the dot rule means the this keyword references our noah object.
 noah.sayName()
 ```
 
 ```javascript
-//what happens if we want to move that method to the global scope and still reference the context of our Noah object?
+// What happens if we want to move that method to the global scope and still reference the context of our Noah object?
 
 var sayName = function(){
   console.log('My name is ' + this.name);
@@ -104,29 +103,32 @@ var noah = {
     age: 12,
 }
 
-//every function has a "call" method, defined on prototype, whose first argument is the context for which to call that function.  :)
+// What happens now if we try?
+
+sayName()
+
+// Every function has a "call" method, defined on prototype, whose first argument is the context for which to call that function. :)
 
 sayName.call(noah)
 ```
 
 ```javascript
-//let's make it a little more interesting.
+// Let's make it a little more interesting.
+
+var noah = {
+  name: 'Noah',
+  age: 12,
+}
 
 var sayName = function(){
   console.log('My name is ' + this.name);
- }
-
-var noah = {
-    name: 'Noah',
-    age: 12,
 }
 
 var cars = ['R8', 'Yugo', 'Shelby']
-
 ```
 
 ```javascript
-//with the call method on a function, the first argument is the context and every argument AFTER that will be run through the function. :)
+// With the call method on a function, the first argument is the context and every argument AFTER that will be run through the function. :)
 
 var sayName = function(car1, car2, car3){
   console.log('My name is ' + this.name + ' and I own a ' + car1 + ', ' + car2 + ', and a ' + car3);
@@ -144,7 +146,7 @@ sayName.call(noah, cars[0], cars[1], cars[2]);
 ```
 
 ```javascript
-//yikes, that is a lot of arguments to manage. Does javascript give us a better option? YES.
+// Yikes, that is a lot of arguments to manage. Does javascript give us a better option? YES
 
 var sayName = function(car1, car2, car3){
   console.log('My name is ' + this.name + ' and I own a ' + car1 + ', '
@@ -158,14 +160,14 @@ var noah = {
 
 var cars = ['R8', 'Yugo', 'Shelby'];
 
-//just remember the 'a' in apply goes with the 'a' in array! :)
+// Just remember the 'a' in apply goes with the 'a' in array! :)
 
 sayName.apply(noah, cars);
 
 ```
 
 ```javascript
-//but what if you don't want to invoke the function immediately with call and apply? Good news - you can save for later with bind.
+// But what if you don't want to invoke the function immediately with call and apply? Good news - you can save for later with bind.
 
 var sayName = function(car1, car2, car3){
   console.log('My name is ' + this.name + ' and I own a ' + car1 + ', '
@@ -179,7 +181,7 @@ var noah = {
 
 var cars = ['R8', 'Yugo', 'Shelby'];
 
-//bind will not run the function immediately on the cars, instead you get a new function back. So knowing that, we'll assign this bound function to a newly named function and call the new function to check that we get the same result.
+// Bind will not run the function immediately on the cars, instead you get a new function back. So knowing that, we'll assign this bound function to a newly named function and call the new function to check that we get the same result.
 
 var newFunction = sayName.bind(noah, cars[0], cars[1], cars[2]);
 ```
@@ -310,14 +312,14 @@ var obj = {
   }
 };
 
-//What will this return? Make a prediction BEFORE typing it into the console.
+// What will this return? Make a prediction BEFORE typing it into the console.
 console.log(obj.prop.getFullname());
 
-//What does this return? Why?
+// What does this return? Why?
 var test = obj.prop.getFullname;
 console.log(test());
 
-//Fix the above test code to return Penny Pumpkin using call and/or apply
+// Fix the above test code to return Penny Pumpkin using call and/or apply
 ```
 
 ### Additional Resources
