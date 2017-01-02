@@ -135,7 +135,25 @@ self.addEventListener('message', event => {
   let eventData = event.data // any data you pass into the message
   console.log('Event Data: ', eventData);
 });
-````
+```
+
+Let's add a submit button that will mimic saving our current markdown. We will eventually store our saved markdown to IndexedDB, but that will be covered in a future lesson.
+
+```javascript
+$('#submit-markdown').on('click', function() {
+  if (navigator.serviceWorker.controller) {
+    navigator.serviceWorker.controller.postMessage({
+      mdContent: $('#live-markdown').val();
+    });
+  }
+});
+```
+
+In our click event, we first want to check if there is actually a service worker controlling the page. Remember service workers must first be registered, installed and activated before they actually take over a page. We can check if a service worker has control by accessing `navigator.serviceWorker.controller`.
+
+Assuming we have a service worker running, we can then post a message to our controller with `navigator.serviceWorker.controller.postMessage()`. This method can take in an object of data that we'll now have access to in our service worker script. Here we are simply sending over the value of the current markdown.
+
+Refresh your application and you should notice that after typing in some markdown and clicking your submit button, you'll get a message in the console with the data object you passed in.
 
 
 
