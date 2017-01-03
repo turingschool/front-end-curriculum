@@ -4,6 +4,8 @@
 
 ### Opening
 
+Reflection on how you've used your strengths to get through this program and how you will use them in your job search and new career
+
 ### Envisioning the Future 
 In the Flower Exercise, you were asked to reflect on your past in order to influence what kind of future you will pursue. Today, you'll work on crafting your vision statement for that future. This is another kind of storytelling.
 
