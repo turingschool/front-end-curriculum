@@ -9,8 +9,7 @@ layout: page
 ### Objectives:
 
 * Describe how your strengths make you a likeable character in your own story
-* Develop user stories to describe how your strength drives change in your life as a developer
-* Create a vision statement to answer the question, "Why are you here?"
+* Develop and use user stories to build an understanding of your partners' strengths as well as your own when it comes to telling your story as a developer
 
 ### Opening
 As you learned in Personal Branding I in Module One, there are 3 questions that drive your development at Turing:
@@ -21,12 +20,12 @@ As you learned in Personal Branding I in Module One, there are 3 questions that 
 
 Reflecting on the last two modules, use your strengths and team experiences to answer the question, “Who are you?” in high-level 1-2 sentences to share with the group.
 
-Today, we'll build on that sentence(s) by working to answer the question, "Why are you here?"
+Today, we'll build on that sentence(s) by working to answer the question, "Why are you here?" through storytelling.
 
 ### Storytelling
-Why are we drawn to stories? Stories help us better relate to the world around us. As noted in [Improv-ing Agile Teams](https://www.amazon.com/Improv-ing-Agile-Teams-Constraints-Creativity/dp/0993301304), in software development, we can become more engaged if we harness the enjoyment and escapism that storytelling provides -- when we reimagine our projects as stories in their own right. 
+Why are we drawn to stories? Stories help us better relate to the world around us. As noted in [Improv-ing Agile Teams](https://www.amazon.com/Improv-ing-Agile-Teams-Constraints-Creativity/dp/0993301304), in software development, we can become more engaged if we harness the enjoyment and escapism that storytelling provides -- when we reimagine our projects as stories in their own right.
 
-When people hear a story unfold, they also develop increased empathy. We can also use storytelling to communicate who we are and why we're here pursuing this new career, so when potential employers hear your story, they are able to relate to you more. That is why learning to tell your story is an essential piece of your professional development.  
+When people hear a story unfold, they also develop increased empathy. We can also use storytelling to communicate who we are and why we're here pursuing this new career, so when potential employers hear your story, they are able to relate to you more. That is why learning to tell your story is an essential piece of your professional development, and our focus today will be continuing to pull out the story of **"why are you here"** using your strengths.  
 
 **Discussion:**
 
@@ -35,32 +34,76 @@ Pixar story artist [Emma Coats described the 22 rules](http://storyshots.tumblr.
 	Pull apart the stories you like. What you like in them is a part of you; 
 	you’ve got to recognize it before you can use it.
 
-* How does your shared strength influence your own story?
-* How does your shared strength make you likeable? How can you describe that to someone else?
+Pair up with someone with a different focus strength from yours and discuss the following:
 
-### User Story Practice
+* Give a brief summary of what your focus strength means to your partner.
+* How have you seen your focus strength in action in the past? Recently? 
+	When did it help you overcome obstacles? Give some examples.
+* How does your strength make you likeable to someone else? 
+* Use your focus strength to answer the question "why are you here?"
 
-Within your small group, pick both a scribe and a timekeeper. You will have 15 minutes to discuss both your shared and differing strengths in regards to another narrative rule identified by Coats:
+**Reflections:**
 
-	You admire a character for trying more than for their successes.  
+* What was easy during this discussion with your peer? What was difficult about it?
+* Did it help you clarify telling your own story? If so, how?
 
-Characters seem more realistic to us when we can empathise with their pain and struggles, and the changes that a character goes through become more interesting to us.
+### Taking on Each Other's Stories: User Story Practice
+So far, both with the Flower Exercise and in the discussion you just had, we've been focusing on the past and how that has provided a foundation to answer the question "why are you here?" Now, we'll describe how to use our strengths to show why we're here, pursuing this new career. 
 
-Think about your story as a user story -- if we think of ourselves as users in our own stories, we can create stories that fully capture how to use our strengths to address our needs. 
+Using the information from your discussion with your partner(s), you will build 1-3 user stories (as time permits) for that person. These user stories are a response to 3 additional narrative rules from Coats:
 
-**As a group, decide on a user story for each of your shared strengths by following this template:**
+	1. You admire a character for trying more than for their successes.  
+
+	2. What is your character good at, comfortable with? Throw the polar opposite at them. 
+	Challenge them. How do they deal?
+	
+	3. If you were your character, in this situation, how would you feel? 
+	Honesty lends credibility to unbelievable situations.
+
+Consider: 
+
+* How has your partner used this strength to overcome obstacles? This is an indication of how they will continue to overcome obstacles in the future.
+* How can you challenge your partner to use the strength more?
+* How might your partner want to move forward with building this strength?
+
+Here are some templates you can follow as examples:
 
 	As [someone with this strength], 
-	I want [to use it in this way] 
-	so that [a desired change results]
+	my user wants [to challenge themselves in this way] 
+	so that [a desired change will result]
+
+	As [someone with this strength], 
+	my user wants [to use that strength in this strategic way] 
+	so that [their new career is successful in this way]
+	
+	As [someone with this strength], 
+	my user wants [to show how to use that strength in this way] 
+	so that [they can express why they are pursuing programming as a career]
 
 Here are some examples:
 
-	As a person with strength in Adaptability, I want to utilize my flexible nature
-	so that I can take on new challenges more easily each time they come up.
+	As a person with strength in Adaptability, my user wants to be an example of flexibility
+	so that other programmers can see the benefits of a growth mindset. 
+	
+	As a person with strength in Communication, my user wants to combine their strength and 
+	interests in public speaking with their newfound knowledge so that they can speak at 
+	conferences and spread that knowledge.
+	
+	As a person with strength in Empathy, my user wants to use the ability to relate to others 
+	so that their software reflects their users in an effective way. 
+	
+Reflections:
+
+* How did writing the user stories make you think about these strengths?
+
+### Independent Reflection
+Read through and think about the user stories that your partner came up with:
+
+* Do they reflect you in an accurate way? 
+* Is anything surprising about how your partner interpreted your story? 
+* How else would you use your strength to describe why you are here?
+
+Use these reflections to revise your answer to the question "why are you here?" in 1-2 high-level sentences.
 
 ### Share Takeaways
-
-Share your vision statement and how you can use your strengths to begin to put this vision into practice right now as a current Turing student. 
-
-
+Share your user stories and reflections.
