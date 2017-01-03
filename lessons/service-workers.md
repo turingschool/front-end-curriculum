@@ -169,6 +169,48 @@ self.addEventListener('message', event => {
 
 We can access our controlled application through `self.clients.matchAll()` from our service worker. Because our worker might control multiple pages, this method is going to give us back an array of clients (e.g. windows or application pages). Posting a message to our current window requires us to target the first item in that array, `clients[0]`. 
 
+### Setting up Push Notifications
 
+Push notifications are one of the most exciting features that service workers make possible. It mimics the behavior of native applications, and can be used to alert users to updates or messages.
+
+In order to set up push notifications, we first must request permission from the user. Within our service worker registration:
+
+```javascript
+navigator.serviceWorker.register('./service-worker.js')
+  .then(registration => {
+    console.log('ServiceWorker registration successful');
+    Notification.requestPermission();
+  })
+```
+
+We can call `Notification.requestPermission()` which will display a prompt for users to enable notifications:
+
+![Notification Permissions][notification-permissions]
+
+Then, from within our service worker script, let's update our message handler to display a notification:
+
+```javascript
+self.addEventListener('message', event => {
+  self.registration.showNotification('New Markdown Saved!');
+});
+```
+
+The `showNotification()` method takes two parameters. The first is a title message for the notification, and the second is an object of additional options. This lets you create more advanced messages where users can actually interact with the notification.
+
+If we refresh our application and give it access to send push notifications, we should now see a web notification when we click our submit button:
+
+![Notification][notification]
+
+## What Good is all of this?
+
+So far, the functionality we've implemented with our service worker is pretty minimal. We've successfully offlined our application, and learned how to send messages back and forth between our worker and our app. The communication logic is a bit contrived at this point -- we could have done all of this from within our original JavaScript thread on our app. Where this set up will come in handy is when we start actually saving our markdowns to IndexedDB, and when we have multiple people adding new files. In the next lessons, we'll learn how service workers interface with IndexedDB to persist data, and display notifications when other users add new markdowns.
+
+## Resources
+
+[Service Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
+[Push Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
+
+[notification]: /assets/images/lessons/service-workers/notification.png
+[notification-permissions]: /assets/images/lessons/service-workers/notification-permissions.png
 [devtools-service-workers]: /assets/images/lessons/service-workers/devtools-service-workers.png
 [no-internet]: /assets/images/lessons/service-workers/no-internet.png
