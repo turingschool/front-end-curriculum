@@ -10,6 +10,11 @@ By the end of this lesson, you will:
 
 * Know how to persist data locally in IndexedDB
 
+
+## Follow Along
+We'll be adding onto the functionality in the markdown previewer application. You can clone the [markdown-previewer](https://github.com/turingschool-examples/markdown-previewer/tree/master) repo and check out the [indexed-db](https://github.com/turingschool-examples/markdown-previewer/tree/indexed-db) branch as your starting point.
+
+
 ## Resources
 
 [IndexedDB API](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API)
