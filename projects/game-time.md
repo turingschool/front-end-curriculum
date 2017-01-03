@@ -40,7 +40,6 @@ You can use any of the following JavaScript libraries:
 - Qbert
 - Breakout
 - Tron
-- Tetris
 - Snake
 
 (Any other game requires instructor approval.)
