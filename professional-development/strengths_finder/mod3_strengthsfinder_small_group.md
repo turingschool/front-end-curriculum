@@ -48,7 +48,7 @@ Pair up with someone with a different focus strength from yours and discuss the 
 * Did it help you clarify telling your own story? If so, how?
 
 ### Taking on Each Other's Stories: User Story Practice
-So far, both with the Flower Exercise and in the discussion you just had, we've been focusing on the past and how that has provided a foundation to answer the question "why are you here?" Now, we'll describe how to use our strengths to show why we're here, pursuing this new career. 
+So far, both with the Flower Exercise and in the discussion you just had, we've been focusing on the past and how that has provided a foundation to answer the question "why are you here?" Now, we'll describe how to use our strengths in the present and future to show why we're here pursuing this new career. 
 
 Using the information from your discussion with your partner(s), you will build 1-3 user stories (as time permits) for that person. These user stories are a response to 3 additional narrative rules from Coats:
 
