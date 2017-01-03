@@ -5,6 +5,11 @@ module: 2
 tags: regular expressions, regex
 ---
 
+## Resources
+
+- [Intro Sass Ideabox Repo](https://github.com/rrgayhart/intro-sass-ideabox)
+- [Clouds Codepen](http://codepen.io/rrgayhart/pen/ZLEENp)
+
 ## Goals
 1. Know how to import partials to keep your Sass files well organized and modular.
 2. Understand mixins and functions and when to use them.
@@ -87,7 +92,7 @@ Use @import to include a partial.
     
 **Individually**
 
-Pull down the add-sass-magic branch from the intro-sass-ideabox repo. Add the stylesheets, config, partials and vendor folders and create a _colors.scss, _reset.scss, _buttons.scss, _input.scss, _typography.scss partials using the exisiting Sass code. Import those partials into the main.scss (or style.scss) file in your Ideabox.
+Pull down the add-sass-magic branch from the [Intro Sass Ideabox Repo](https://github.com/rrgayhart/intro-sass-ideabox). Add the stylesheets, config, partials and vendor folders and create a _colors.scss, _reset.scss, _buttons.scss, _input.scss, _typography.scss partials using the exisiting Sass code. Import those partials into the main.scss (or style.scss) file in your Ideabox.
 
 ## 2. Mixins and Functions
 A mixin allows you to define a set of styles along with the option to pass in arguments that you can include in HTML elements, classes or IDs. Mixins are great for reducing repetitive styles in your CSS.
