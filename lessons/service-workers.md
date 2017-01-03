@@ -155,6 +155,19 @@ Assuming we have a service worker running, we can then post a message to our con
 
 Refresh your application, type in some markdown and click your submit button. If we go to the service workers devtools panel again, we can click on 'inspect' for our service worker and we'll get a brand new dev tools window, specific to our service worker. If you click on the 'Console' tab in this new window, you'll notice the `console.log()` we added to our service worker script has been logged. The service workers debug window gives you all the functionality you need to troubleshoot your code.
 
+Sending a message back to the application is a little more complex, as we have to target the page that our service worker is controlling. We can do this from our service worker script by updating our event listener on the `message` event:
+
+```javascript
+self.addEventListener('message', event => {
+  self.clients.matchAll().then(clients => {
+    clients[0].postMessage({
+      message: 'Message being sent from the service worker!'
+    });
+  });
+});
+```
+
+We can access our controlled application through `self.clients.matchAll()` from our service worker. Because our worker might control multiple pages, this method is going to give us back an array of clients (e.g. windows or application pages). Posting a message to our current window requires us to target the first item in that array, `clients[0]`. 
 
 
 [devtools-service-workers]: /assets/images/lessons/service-workers/devtools-service-workers.png
