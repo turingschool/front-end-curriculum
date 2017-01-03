@@ -80,14 +80,14 @@ Here are some templates you can follow as examples:
 	my user wants [to show how to use that strength in this way] 
 	so that [they can express why they are pursuing programming as a career]
 
-Here are some examples:
+And here are some examples of finished user stories:
 
-	As a person with strength in Adaptability, my user wants to be an example of flexibility
-	so that other programmers can see the benefits of a growth mindset. 
+	As a person with strength in Adaptability, my user wants to be an example of flexibility 
+	and positive attitude so that other programmers can see the benefits of a growth mindset. 
 	
-	As a person with strength in Communication, my user wants to combine their strength and 
+	As a person with strength in Communication, my user wants to combine their talents and 
 	interests in public speaking with their newfound knowledge so that they can speak at 
-	conferences and spread that knowledge.
+	conferences and inspire others. 
 	
 	As a person with strength in Empathy, my user wants to use the ability to relate to others 
 	so that their software reflects their users in an effective way. 
@@ -99,8 +99,8 @@ Reflections:
 ### Independent Reflection
 Read through and think about the user stories that your partner came up with:
 
-* Do they reflect you in an accurate way? 
-* Is anything surprising about how your partner interpreted your story? 
+* Do they reflect you in an accurate way? Do they give you an idea of how you would answer "why are you here"?
+* Is anything surprising about how your partner interpreted your story?  
 * How else would you use your strength to describe why you are here?
 
 Use these reflections to revise your answer to the question "why are you here?" in 1-2 high-level sentences.
