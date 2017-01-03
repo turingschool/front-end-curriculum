@@ -1,10 +1,8 @@
 ---
-title: Intro to Service Workers
+title: Introduction to Service Workers
 length: 90 mins
 tags: javascript, service workers, offline, cachestorage, web APIs
 ---
-
-# Intro to Service Workers
 
 ## Goals
 
@@ -16,7 +14,7 @@ By the end of this lesson, you will:
 
 
 ## The Offline Problem
-Web developers have long been thinking about how to create offline applications that behavr more like native apps. The initial solution to this problem was [AppCache](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache), but it had significant pain points and was recently scrapped in favor of [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API). 
+Web developers have long been thinking about how to create offline applications that behavr more like native apps. The initial solution to this problem was [AppCache](https://developer.mozilla.org/en-US/docs/Web/HTML/Using_the_application_cache), but it had significant pain points and was recently scrapped in favor of [Service Workers](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API).
 
 ## What are Service Workers?
 The service worker is a relatively new API that allows developers to run a script in the background of their application. With a service worker script being run in the background, we can add new features to our applications that help create better offline experiences for users. For example, a service worker could implement push notifications or background data synchronization - features that were once previously limited to native apps. A service worker script also gives us the ability to intercept network requests and determine how to handle them. This is useful for when we want to serve assets from a cache when a user is offline.
@@ -167,7 +165,7 @@ self.addEventListener('message', event => {
 });
 ```
 
-We can access our controlled application through `self.clients.matchAll()` from our service worker. Because our worker might control multiple pages, this method is going to give us back an array of clients (e.g. windows or application pages). Posting a message to our current window requires us to target the first item in that array, `clients[0]`. 
+We can access our controlled application through `self.clients.matchAll()` from our service worker. Because our worker might control multiple pages, this method is going to give us back an array of clients (e.g. windows or application pages). Posting a message to our current window requires us to target the first item in that array, `clients[0]`.
 
 ### Setting up Push Notifications
 
