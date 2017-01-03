@@ -21,7 +21,7 @@ Module One's focus is on the Discover/Awareness piece of the Strengths Developme
 
   **When:** By end of week 1 of module 1
 
-* **[Who are you?]():** Both your 1-on-1 meeting with Allison and your small group session will help you begin to answer the question of "Who are you?"
+* **[Who are you?](mod1_strengthsfinder_small_group):** Both your 1-on-1 meeting with Allison and your small group session will help you begin to answer the question of "Who are you?"
 
 ## Module Two Activities
 Module Two's focus is on the Develop/Integrate piece of the Strengths Development Framework:
