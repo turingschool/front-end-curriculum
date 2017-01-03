@@ -96,7 +96,7 @@ noah.sayName()
 
 var sayName = function(){
   console.log('My name is ' + this.name);
- }
+}
 
 var noah = {
     name: 'Noah',
@@ -125,9 +125,7 @@ var sayName = function(){
 }
 
 var cars = ['R8', 'Yugo', 'Shelby']
-```
 
-```javascript
 // With the call method on a function, the first argument is the context and every argument AFTER that will be run through the function. :)
 
 var sayName = function(car1, car2, car3){
@@ -142,7 +140,6 @@ var noah = {
 var cars = ['R8', 'Yugo', 'Shelby'];
 
 sayName.call(noah, cars[0], cars[1], cars[2]);
-
 ```
 
 ```javascript
@@ -163,7 +160,6 @@ var cars = ['R8', 'Yugo', 'Shelby'];
 // Just remember the 'a' in apply goes with the 'a' in array! :)
 
 sayName.apply(noah, cars);
-
 ```
 
 ```javascript
@@ -237,11 +233,9 @@ fruitBowl(banana);
 
 apple.fruitName();
 banana.fruitName();
-
 ```
 
 ```javascript
-
 var Fruit = function(name, ripe){
   return {
     name: name,
@@ -259,7 +253,6 @@ var Fruit = function(name, ripe){
 var someFruit = Fruit('apple', true);
 someFruit.fruitType();
 someFruit.trickyFruit.fruitType();
-
 ```
 
 ### window Binding
