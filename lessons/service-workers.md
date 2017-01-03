@@ -121,7 +121,10 @@ self.addEventListener('fetch', event => {
 
 You'll often hear that service workers are **event-based web workers**. This means our service worker is going to respond and communicate explicity through events. In this code, we are adding a listener for any `fetch` events, and checking to see if they exist in our cache with `caches.match()`. If it finds a match, it will return the asset right away. If it doesn't, it will go ahead and fetch it from the server. You can think of a service worker as a proxy for network requests.
 
-Now if you refresh your application and reselect the 'offline' box, you'll see that our app loads and works even when we're offline. You can also completely shut down your python server in the command line and you'll still be able to see and use your app.
+Now if you refresh your application and reselect the 'offline' box, you'll see that our app loads and works even when we're offline. You can also completely shut down your python server in the command line and you'll still be able to see and use your app. In the 'Application' panel of dev tools, you'll see an option for 'CacheStorage' in the left sidebar. If you navigate to this tab, you'll see all of the assets you just stored for offline use. This is where your service worker is pulling the files from, rather than making additional network requests:
+
+
+![Assets Cache][assets-cache]
 
 ## Communication with Service Workers
 Because service workers run in the background, they do not have direct access to the DOM like we're used to with other JavaScript files. They are completely detached from the window they control. If we want our service worker to be aware of DOM-related content or interactions, we must communicate with them through messaging events.
@@ -208,6 +211,7 @@ So far, the functionality we've implemented with our service worker is pretty mi
 [Service Workers API](https://developer.mozilla.org/en-US/docs/Web/API/Service_Worker_API)
 [Push Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/Push_API)
 
+[assets-cache]: /assets/images/lessons/service-workers/assets-cache.png
 [notification]: /assets/images/lessons/service-workers/notification.png
 [notification-permissions]: /assets/images/lessons/service-workers/notification-permissions.png
 [devtools-service-workers]: /assets/images/lessons/service-workers/devtools-service-workers.png
