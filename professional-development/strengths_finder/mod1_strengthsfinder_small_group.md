@@ -1,3 +1,8 @@
+---
+title: Module One StrengthsFinder
+subheading: Who are you?
+layout: page
+---
 
 
 # Module One StrengthsFinder: Who are you?
