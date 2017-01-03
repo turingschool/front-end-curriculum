@@ -266,20 +266,12 @@ someFruit.trickyFruit.fruitType();
 var carColor = function(){
   console.log(this.color);
 };
-
-var myCar = {
-  color: 'Black'
-};
 ```
 
 ```javascript
 var carColor = function(){
   'use strict';
   console.log(this.color);
-};
-
-var myCar = {
-  color: 'Black'
 };
 ```
 
