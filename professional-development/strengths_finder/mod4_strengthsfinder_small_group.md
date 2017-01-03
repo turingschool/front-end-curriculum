@@ -1,12 +1,15 @@
 # Module 4 StrengthsFinder: What's next?
 
+### Objectives
+
+### Opening
 
 ### Envisioning the Future 
-In the Flower Exercise, you're being asked to reflect on your past in order to influence what kind of future you will pursue. Today, you'll work on crafting your vision statement for that future. This is another kind of storytelling.
+In the Flower Exercise, you were asked to reflect on your past in order to influence what kind of future you will pursue. Today, you'll work on crafting your vision statement for that future. This is another kind of storytelling.
 
-**1. Start with Your Ending** 
+**Start with Your Ending** 
 
-Reflect on one more narrative rule that Coats describes:
+Reflect on another narrative rule described by Emma Coats from her :
 
 	Come up with your ending before you figure out your middle. Seriously. 
 	Endings are hard, get yours working up front.
@@ -15,7 +18,7 @@ Imagine that it's one year from now - what have you accomplished during that tim
 
 Use this imagined year ahead to develop your vision statement.
 
-**2. Create a vision statement to answer the question, "Why are you here?"**
+**Create a vision statement to answer the question, "Why are you here?"**
 
 Guidelines for writing your vision statement:
 
@@ -30,3 +33,6 @@ Examples:
 "I am here as a testament to my strength as a Learner -- to continuously pursue my passions. I build software that represents my Futuristic strength by looking ahead at what's to come and anticipating problems that need to be solved in society."
 
 "I am here to create a culture shift in the software industry so that software more fully represents the people who use it. By using both my strengths in Individualization and Woo, I address a wide spectrum of users' needs and challenge what is already in place while attracting clients to my way of thinking." 
+
+### Whole Group Share
+Each person will share their vision statement and answer
