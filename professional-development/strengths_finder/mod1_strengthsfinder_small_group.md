@@ -35,25 +35,28 @@ Spend 5 minutes revisiting the top 5 strengths that came up for you, and look ba
 ### Pair/Small Group Activity
 Take your list of 10 words and pair up with someone who has the same focus strength as you. Share your top 10 and discuss which words you wrote down are similar and which are different -- how does this reinforce or change the way you think about the strength?
 
-As a pair, decide on the top 5 words that are the most interesting or meaningful to help describe your strength and come up with a story to describe how to use this strength efffectively and when to dial it back. 
+As a pair, decide on the top 5 words that are the most interesting or meaningful to help describe your strength and create a story about how you already use that strength, how you could use it more, and when to dial it back. 
 
 Consider:
 
 * How will others know that this is something that you're good at?
 * What circumstances warrant pulling back on that strength?
-* How will you remind yourself to use this strength to your advantage?
+* How will you remind yourself to see the benefits of this strength?
+
+Example:
+
+    Our strength is Adaptability, and we describe it through these words: ______________________________. Here are some examples of how we use that strength: _____________________________. We could use it more in these situations: ____________________. We should dial it down/up in these situations: ____________________________.
 
 ### Whole Group Discussion
 Each pair share their stories of what their strength means and how they can use it. 
 
 **Debrief:**
 
-* What feedback do you have for the way others groups described their strength? Do you have any questions or comments for them?
-* How will you continue to build awareness around your strengths?
-* How can you hold each other accountable in this development?
+* What advice do you have for each other on how to use this strength effectively?
+* How will you hold each other accountable in this development?
 
 ### Independent Reflection & Takeaways
-Create and share a high-level sentence (or two) to answer the question “who are you?"
+Using your focus strenght, create and share a high-level sentence (or two) to answer the question “who are you?"
 
 Use these questions to guide your reflection:
 
