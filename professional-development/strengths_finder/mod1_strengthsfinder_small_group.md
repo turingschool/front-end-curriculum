@@ -45,7 +45,10 @@ Consider:
 
 Example:
 
-    Our strength is Adaptability, and we describe it through these words: ______________________________. Here are some examples of how we use that strength: _____________________________. We could use it more in these situations: ____________________. We should dial it down/up in these situations: ____________________________.
+    Our strength is Adaptability, and we describe it through these words: ______________________________. 
+    Here are some examples of how we use that strength: _____________________________. We could use it more 
+    in these situations: ____________________. We should dial it down/up in these situations: 
+    ____________________________.
 
 ### Whole Group Discussion
 Each pair share their stories of what their strength means and how they can use it. 
