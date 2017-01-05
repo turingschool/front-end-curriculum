@@ -6,7 +6,7 @@ tags: react react-router javascript create-react-app
 
 By the end of today's lesson, you should have a better idea of what React Router is, why it's useful, and how to implement it into a React app. You will see implementation examples of both React Router <4.0 (meaning 2.0/3.0) and the new hot 4.0. We will talk through some theory, watch some videos, and then do a code along together.
 
-We will be working off of this [react-router practice repo](https://github.com/martensonbj/react-router-tutorial).
+We will be working off of this [react-router practice repo](https://github.com/martensonbj/react-router-revisited).
 
 ### What Is A Router?
 
