@@ -47,6 +47,7 @@ render((
 In React Router 4, the team essentially removed the `<Route />` and the complicated behind the scenes logic, and moved the emphasis to be on React itself. This turns the routing language you're working with into actual React components that behave like...React Components.  
 
 4.0 Example Syntax  
+
 ```js
 import { BrowserRouter, Match, Miss, Link } from 'react-router';
 
@@ -74,7 +75,7 @@ Stop here and [watch this video](https://www.youtube.com/watch?v=Vur2dAFZ4GE) ab
 
 Back to the concept of routing, a "location" within an application is where your user is trying to go. Take a second to pop open your console and type `window.location`. Behind the scenes, any router library is simply manipulating this global `window` variable and calling methods on `.location`.  
 
-If all this is globally available, Wwy not just hand roll a route?  
+If all this is globally available, why not just hand roll a route?  
 
 From [the docs](https://github.com/ReactTraining/react-router/blob/master/docs/Introduction.md), here is an example of building a router in React without help.
 
@@ -165,6 +166,7 @@ Check it out! So in 4.0 we are creating a `<BrowserRender>` *component* that has
 Look at the following example of a small router component and let's briefly talk about the pieces. We will dive into these more in depth after a quick code along.   
 
 React Router <4.0  
+
 ```js
 render((
   <Router history={browserHistory}>
@@ -180,6 +182,7 @@ render((
 Notice that in 2.0, nested routes are wrapped within `<Route></Route>` tags, with the parent route information. This differs from 4.0 below in which nested routes are simply explicitly targeted in the pattern to be matched.  
 
 React Router 4.0  
+
 ```js
 const Root = () => {
   return (
@@ -211,11 +214,13 @@ Let's go through the pieces you'll see most often with React Router 4.0.
 Renders a particular chunk of code when a given pattern or path that matches the location in your URL. Behind the scenes, `<Match />` uses the [`path-to-regexp`](https://www.npmjs.com/package/path-to-regexp) module. Take a minute to look through that npm package, it's pretty sweet.  
 
 2.0  
+
 ```js
 <Route path="/" component={App}>
 ```
 
 4.0  
+
 ```js
 <Match pattern="/" exactly component={App} />
 ```
@@ -223,11 +228,13 @@ Renders a particular chunk of code when a given pattern or path that matches the
 Note the `exactly` boolean in the 4.0 syntax. In this case, the pattern will only be matched if it EXACTLY matches the given string. You don't always want a perfect match, like in the following example.  
 
 2.0  
+
 ```js
 <Route path="about/:userId" component={User} />
 ```
 
 4.0  
+
 ```js
 <Match pattern="/about/:userId" component={User} />
 ```
@@ -272,6 +279,7 @@ Notice that you get an `activeClassName` property for free that will automatical
 Let's say we wanted to display a different component when we are at the root of a route. In other words, what if we ALWAYS want the user to see a particular header/footer layout, but when the visit the `'/'` we want them to see a particular dashboard that's different than say the `/about` page that still shares the same header/footer.
 
 2.0
+
 ```js
 
 render((
@@ -286,6 +294,7 @@ render((
 In 4.0 You would simply nest the `<Dashboard />` component within that parent `<App />` component...just like you would in React land in the first place.  
 
 4.0
+
 ```js
 const App = () => {
   render() {
@@ -301,6 +310,7 @@ const App = () => {
 Rendering a `Redirect` component will navigate to a new location while putting the previous location in browser history. Check out the option of putting JSX directly into your render function in 4.0.   
 
 2.0
+
 ```js
 <Route path ="/" component={App}>
   <Route path="about/:userId" component={UserProfile} />
@@ -309,7 +319,7 @@ Rendering a `Redirect` component will navigate to a new location while putting t
 ```
 
 In 4.0 you can add logic to your redirects.  
-4.0
+
 ```js
 <Match exactly pattern="/"
   render={() => (
