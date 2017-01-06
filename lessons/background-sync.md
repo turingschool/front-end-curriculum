@@ -146,5 +146,6 @@ One thing that will help solve these challenges in the future is the `periodicSy
 While we wait for this spec to be finalized, the old-fashioned solution to this problem would be to continuously fire off a fetch request that polls your server for the latest data. It's not ideal, as this code cannot be entirely run in the background of a service worker, but it gives us a solution for the time being.
 
 ## Resources
-[Using Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
-[Background Sync README](https://github.com/WICG/BackgroundSync/blob/master/explainer.md)
+
+* [Using Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
+* [Background Sync README](https://github.com/WICG/BackgroundSync/blob/master/explainer.md)
