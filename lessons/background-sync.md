@@ -104,7 +104,7 @@ function persistLocalChanges() {
 
 In this function, we are calling `getLocalRecords()`, a function that has been pre-written for you to gather any records that exist in IndexedDB. We're then making a fetch request to `POST` these markdowns to our API endpoint `/markdowns`. 
 
-If you recall, all `fetch` requests return a promise. If a user is not connected to the internet, our call to `persistLocalChanges()` will fail. The beauty of background sync is that's ok! Our sync event will queue this function and wait until it succeeds. When a user regains their connection, the fetch request will succeed, and our success handler for our sync event will be fired. Let's take a look back at how we're handling the sync event:
+Remember that all `fetch` requests return a promise. If a user is not connected to the internet, our call to `persistLocalChanges()` will fail. The beauty of background sync is that's ok! Our sync event will queue this function and wait until it succeeds. When a user regains their connection, the fetch request will succeed, and our success handler for our sync event will be fired. Let's take a look back at how we're handling the sync event:
 
 ```javascript
 event.waitUntil(persistLocalChanges()
@@ -123,9 +123,16 @@ Once `persistLocalChanges()` succeeds, our `.then()` will be fired off. In our c
 Now if we spin up our application we should see a couple of things:
 
 1. We are immediately prompted with a request to permit Push Notifications
-3. Once our service worker has taken control of the page, and we are connected to wifi, we can submit a markdown file which will be saved to IndexedDB **and** our server.
-4. We should see a push notification upon a successful `POST` to our server.
-5. Disconnect yourself from wifi. 
+2. If we are connected to wifi, we can submit a new markdown and it will be saved to IndexedDB **and** our server.
+3. We will get a push notification that the markdown has been synced to our server. If you do this with the network tab of devtools opened, you'll see a successful network `POST` request with a response that returns all of the markdowns from the back-end.
+
+Now let's disconnect from wifi. You may have noticed in the service workers panel of dev tools that you can 'mimic' being offline by toggling a checkbox. With background sync, this will not work. We actually have to turn wifi off on our computers:
+
+1. Turn wifi connection off.
+2. Submit a new markdown. You should see it updates the count of markdowns in IndexedDB, and now appears in the drop down menu. It was successfully saved locally.
+3. You will **not** see the push notification saying that the markdown was synced to the server, because you are offline. This network request is now effectively 'queued up' to fire the next time our internet returns.
+4. Turn wifi back on.
+5. You'll see a successful network request in the network panel of dev tools, and you'll get the push notification saying your changes have been synced.
 
 ## Coming Soon: Periodic Sync
 Another important thing you might want to do with background sync is periodically fetch data from a server to make sure your users are viewing the most recent information. A `periodicSync` API is currently in progress for this use-case, but not yet available. (The [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/periodicSync) is pretty much completely empty still.) While we wait for this spec to be finalized, the old-fashioned solution to this problem would be to continuously fire off a fetch event that polls your server for the latest data. It's not ideal, as this code cannot be run in the background as it would be with a service worker, but it gives us a solution for the time being.
