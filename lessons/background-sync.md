@@ -17,7 +17,7 @@ Creating better offline experiences for web apps has been a big focus for spec w
 This is where [Background Sync](https://developers.google.com/web/updates/2015/12/background-sync) comes in handy. The concept behind background sync is to handle scenarios where a user might have intermittent or an interrupted network connection. Using a service worker to handle background sync allows us to defer an action we want to take until a user regains their connection. In our original example, we could use background sync to queue up a `submitMessage` action that sends a `POST` request to the server with our message. When the user regains connection, it will automatically execute that fetch request and submit our message. No having to hit the submit button a thousand times and no risk of sending the same message more than once.
 
 ## Follow Along
-Clone the [markdown-previewer](https://github.com/turingschool-examples/markdown-previewer/tree/master) repo and checkout the [sync-begin](https://github.com/turingschool-examples/markdown-previewer/tree/sync-begin) branch to follow along. The finished example can be found on the [sync](https://github.com/turingschool-examples/markdown-previewer/tree/sync) branch. Several refactoring changes have been made in these branches to support background sync.
+Clone the [markdown-previewer](https://github.com/turingschool-examples/markdown-previewer/tree/master) repo and checkout the [begin-sync](https://github.com/turingschool-examples/markdown-previewer/tree/begin-sync) branch to follow along. The finished example can be found on the [sync](https://github.com/turingschool-examples/markdown-previewer/tree/sync) branch. Several refactoring changes have been made in these branches to support background sync.
 
 Run `npm install` and `npm run start` to spin up the application. You can access it at `localhost:5000`.
 
@@ -91,7 +91,7 @@ function persistLocalChanges() {
   return getLocalRecords().then(records => {
     return fetch('/markdowns', {
       method: 'POST',
-      body: JSON.stringify({ 
+      body: JSON.stringify({
         markdowns: records
       }),
       headers: {
@@ -102,7 +102,7 @@ function persistLocalChanges() {
 }
 ```
 
-In this function, we are calling `getLocalRecords()`, a function that has been pre-written for you to gather any records that exist in IndexedDB. We're then making a fetch request to `POST` these markdowns to our API endpoint `/markdowns`. 
+In this function, we are calling `getLocalRecords()`, a function that has been pre-written for you to gather any records that exist in IndexedDB. We're then making a fetch request to `POST` these markdowns to our API endpoint `/markdowns`.
 
 Remember that all `fetch` requests return a promise. If a user is not connected to the internet, our call to `persistLocalChanges()` will fail. The beauty of background sync is that's ok! Our sync event will queue this function and wait until it succeeds. When a user regains their connection, the fetch request will succeed, and our success handler for our sync event will be fired. Let's take a look back at how we're handling the sync event:
 
