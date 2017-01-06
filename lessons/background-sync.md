@@ -135,7 +135,16 @@ Now let's disconnect from wifi. You may have noticed in the service workers pane
 5. You'll see a successful network request in the network panel of dev tools, and you'll get the push notification saying your changes have been synced.
 
 ## Coming Soon: Periodic Sync
-Another important thing you might want to do with background sync is periodically fetch data from a server to make sure your users are viewing the most recent information. A `periodicSync` API is currently in progress for this use-case, but not yet available. (The [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/periodicSync) is pretty much completely empty still.) While we wait for this spec to be finalized, the old-fashioned solution to this problem would be to continuously fire off a fetch event that polls your server for the latest data. It's not ideal, as this code cannot be run in the background as it would be with a service worker, but it gives us a solution for the time being.
+One thing you might notice about our application is that we're only displaying the IndexedDB records in our UI. We're not actually using any of the data we store to the server. In a real-world application, you'd likely want to fire off a `GET` request to grab the latest server-side data, compare it against your existing IndexedDB for any deltas, and merge the two datasets to form a single, true version of the application data.
+
+The simplest but not foul-proof solution to this might be to add an `updatedAt` property to each data record. For each data record, you'd want to determine which one is the most recent (the one saved to the server or the one in IndexedDB) by comparing their `updatedAt` values, and throwing away whichever was older.
+
+This gets trickier when you have multiple people editing the same content on an application. Think about when you're using git and you run into a merge conflict. Who's to say that Person A's change on December 12th isn't actually supposed to take precedence over Person B's change on December 13th?
+
+One thing that will help solve these challenges in the future is the `periodicSync` API, which is still in progress and not yet available. (The [MDN Documentation](https://developer.mozilla.org/en-US/docs/Web/API/ServiceWorkerRegistration/periodicSync) is sparse, to say the least.) This would allow us to periodically fetch data from a server at given intervals to keep up-to-date with any data changes that are occuring at the same time we are working locally.
+
+While we wait for this spec to be finalized, the old-fashioned solution to this problem would be to continuously fire off a fetch request that polls your server for the latest data. It's not ideal, as this code cannot be entirely run in the background of a service worker, but it gives us a solution for the time being.
 
 ## Resources
 [Using Background Sync](https://developers.google.com/web/updates/2015/12/background-sync)
+[Background Sync README](https://github.com/WICG/BackgroundSync/blob/master/explainer.md)
