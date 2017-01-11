@@ -1,7 +1,10 @@
 # Turing Professional Development Pre-Work
 When you're transitioning careers, often many other aspects of your approach to work and life undergo a transition. Turing aims to be a place where you can work through this transition successfully. While enrolled at Turing and during your subsequent job search, you'll be provided with 
 
-The pre-work for professional development is focused on building strategies for resiliency and becoming proactive about 
+The pre-work for professional development is focused on building strategies for resiliency and becoming proactive about
+
+-Goal One: Create a process for work flow and organization (Checklist and introduce Trello, etc.)
+-Goal Two: Reflections on how you got here??
 
 ### Readings:
 * [29 Behaviors That Will Make You an Unstoppable Programmer](http://blog.thefirehoseproject.com/posts/29-behaviors-will-make-unstoppable-programmer/)
