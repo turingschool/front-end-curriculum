@@ -12,7 +12,7 @@ Throughout each module, you’ll have workshops with the Community Affairs Manag
 ### Breakdown of Curriculum
 * [Module One](https://github.com/turingschool/professional_skills/blob/master/module_one/index.md)
 * [Module Two](https://github.com/turingschool/professional_skills/blob/master/module_two/index.md)
-* [Module Three](module_three)
+* [Module Three](https://github.com/turingschool/professional_skills/blob/master/module_three/index.md)
 * [Module Four](module_four)
 * [Extensions & Resources](extensions_and_resources)
 * [StrengthsFinder (optional)](strengths_finder)
