@@ -14,7 +14,8 @@ The pre-work for professional development is focused on introducing you to a set
 Your Gear Up pre-work is focused on Empathy, so that is not a focus of this pre-work while the other four mindsets will be introduced to you here. Your objectives in this pre-work are to:
 
 * Understand the non-coding aspects that go into being a successful programmer
-* 
+* Reflect on your current mindsets and build an understanding of new or differing mindsets 
+* Reflect on organizational processes that would be useful for you in this career
 
 ### Directions: 
 For the activities listed below, **please create a gist on GitHub to capture your reflections for each of these 3 parts.** 
@@ -31,5 +32,5 @@ For the activities listed below, **please create a gist on GitHub to capture you
 
 3. Read through [29 Behaviors That Will Make You an Unstoppable Programmer](http://blog.thefirehoseproject.com/posts/29-behaviors-will-make-unstoppable-programmer/)
    
-   * Approximate reading time: 17 minutes
+   * Approximate reading time: 20 minutes
    * Pick out 3 behaviors that resonate with you in the list and reflect on why they resonate with you in a reflection (4-6 sentences).
