@@ -34,4 +34,4 @@ For the activities listed below, **please create a gist on GitHub to capture you
 3. Read through [29 Behaviors That Will Make You an Unstoppable Programmer](http://blog.thefirehoseproject.com/posts/29-behaviors-will-make-unstoppable-programmer/)
    
    * Approximate reading time: 20 minutes
-   * Pick out 3 behaviors that resonate with you in the list and reflect on why they resonate with you in a reflection (4-6 sentences).
+   * Pick out 3 behaviors that resonate with you in the list and describe why they resonate with you in a reflection (4-6 sentences).
