@@ -1,5 +1,5 @@
 ---
-title: Redux: When and Why
+title: "Redux: When and Why"
 length: 1 hour
 tags: redux, react, state
 module: 3
