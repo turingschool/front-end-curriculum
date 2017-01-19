@@ -23,12 +23,6 @@ By the end of this lesson, you will:
 ### Back-end Primer
 Even as a front-end developer, it's important to have a basic understanding of what's going on behind the scenes in the back-end. You'll often be working with back-end developers on your team that will have a huge effect on how your application interacts with its data. The better you understand the back-end, the more prepared you'll be to build an application on top of it.
 
-### How the Interwebs Work
-Lots of cats and dogs running around doing adorable things and making everyone happy.
-![corgi chillin][corgi-chillin]
-
-[corgi-chillin]: /assets/images/lessons/http-rest-node-server/corgi-chillin.jpg
-
 ### The Server
 There are many different types of servers, but when we are building web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably, or simply shortened to "server".
 
