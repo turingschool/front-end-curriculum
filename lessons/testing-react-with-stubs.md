@@ -1,5 +1,5 @@
 ---
-title: Testing React: Stubs & Spies
+title: "Testing React: Stubs & Spies"
 length: 180 minutes
 module: 2
 tags: react, testing, enzyme, stub, spy, mock
@@ -59,7 +59,7 @@ Like now...
 
 When you wrote tests for [GameTime](http://frontend.turing.io/projects/game-time.html), or for our [data structures sessions](https://github.com/turingschool/data_structures_and_algorithms/blob/master/linked_lists/javascript/linkedList_test.js) you used a test runner called [MochaJS](https://mochajs.org/) and an assertion library called [ChaiJS](http://chaijs.com/).
 
-The problems you were solving were relatively simple. Well not the problems, but the set up. You had vanilla JS, maybe some jQuery, a little bit of putting things on the DOM... 
+The problems you were solving were relatively simple. Well not the problems, but the set up. You had vanilla JS, maybe some jQuery, a little bit of putting things on the DOM...
 
 The main difficulty in testing front-end applications is the nature of some of the advanced things that frameworks and libraries do for us. For example, React has a virtual DOM. Components have state, receive props, they have an entire life cycle. It's complicated stuff, and we want to try and make our tests simple.
 
@@ -80,9 +80,9 @@ Enzyme is lightweight, so we will use some of our familiar testing tools in this
 - Enzyme: To give us special React testing ammenities
 - Sinon: To give us stubbing/spying/mocking ammenities (We'll talk about this soon!)
 
-You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much. 
+You will see many different tech stacks as you google things - but this is our tech stack, and I happen to like it very much.
 
-### Additional Resources: 
+### Additional Resources:
 
 - [Testing React with Enzyme](http://frontend.turing.io/lessons/testing-react.html) (read but don't follow code examples)
 - [Jest](https://facebook.github.io/jest) (Just read the first page)
@@ -118,7 +118,7 @@ We can solve these tricky problems in React (and in other libraries/languages) b
 
 For the rest of this lesson - we'll focus on how to implement these solutions in React. Check out the additional resources to learn about mocking, stubbing and spying in JavaScript testing in general.
 
-### Additional Resources: 
+### Additional Resources:
 
 [Testing JavaScript in General with Mocks, Stubs and Spies](https://github.com/turingschool/lesson_plans/blob/master/ruby_04-apis_and_scalability/testing_javascript-mocks_and_stubs.markdown)
 
@@ -177,9 +177,9 @@ describe('<MyComponent />', () => {
 });
 ```
 
-It's the last test that we want to focus on. 
+It's the last test that we want to focus on.
 
-- `const onButtonClick = sinon.spy();` 
+- `const onButtonClick = sinon.spy();`
   - Here we create a spy, using sinon, to represent our callback function
 - `const wrapper = shallow(<Foo onButtonClick={onButtonClick} />);`
   - We set up our Foo component with shallow rendering
@@ -201,7 +201,7 @@ In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzym
   });
 ```
 
-- `sinon.spy(Foo.prototype, 'componentDidMount');` 
+- `sinon.spy(Foo.prototype, 'componentDidMount');`
   - Here we create a spy, using sinon, but unlike the last example
     - We spy on the Foo.prototype (not Foo itself)
     - We spy specifically on the 'componentDidMount' function
@@ -218,7 +218,7 @@ In the documentation for [Enzyme's API on Mount](https://github.com/airbnb/enzym
   - As you work on the tests passing, think about the following questions:
     - How else could we accomplish the goal of the first test, 'it simulates click events', without sinon?
     - Why would it be important that the callback function `onButtonClick` was passed to the prop?
-    - Why would one use shallow instead of mount? 
+    - Why would one use shallow instead of mount?
       - Hint: Read the [first section](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) of the shallow enzyme docs for a clue as to why.
   - If you get stuck, check out the 'solutions' branch of the repo
 
@@ -417,7 +417,7 @@ describe('<Org />', () => {
       let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
       const wrapper = mount(<Org orgData={orgData} />)
       expect(wrapper.find(RepoCard).length).to.equal(2)
-    }) 
+    })
   })
 })
 
@@ -443,7 +443,7 @@ Here we check to make sure that we have two RepoCard components displayed (the s
 
 ### Your Turn
 
-- Take the next ***10 minutes*** to port over the code and the tests. 
+- Take the next ***10 minutes*** to port over the code and the tests.
   - If a line of code is confusing
     - try commenting it out and breaking it
     - or using locus to put a debugger in that section of the code (instructions on using locus in the project README if you need them)
@@ -465,7 +465,7 @@ Add the following code to the `Org.spec.js` file, below the last context you cre
 ```javascript
   context('testing ajax calls - the hard way', () => {
     let server;
-    
+
     before(() => {
       let orgData = [{name: 'curriculum', html_url: 'www.google.com'}, {name: 'fred', html_url: 'www.fred.com'}]
       server = sinon.fakeServer.create()

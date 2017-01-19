@@ -1,5 +1,5 @@
 ---
-title: First Look: Redux
+title: "First Look: Redux"
 length: 180 min
 tags: React, JavaScript, Webpack
 module: 2
