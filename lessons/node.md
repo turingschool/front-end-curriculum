@@ -16,7 +16,6 @@ By the end of this lesson, you will:
 * Understand how the client and server relationship works
 * Know what a server is and how requests and responses are handled
 * Know which appropriate RESTful method to send in a request
-* Use Express to create a simple web server that can make and receive HTTP request and responds with JSON and store them in a database
 
 ## HTTP, REST and Building a Simple Node Server
 
@@ -53,6 +52,9 @@ While the syntax for each of these requests looks significantly different, they 
 
 When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with the application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints. We will look at a few backend choices later, but first let's talk about what they all share in common.
 
+### Student Discussion (5 minutes)
+In small groups, discuss what types of requests and responses you sent and received in your intermission homework. What did your client side code request? How did your server-side code respond to those requests? What kinds of data did you respond with and how was that data consumed?
+
 #### Hypertext transfer protocol
 The protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.
 
@@ -73,8 +75,9 @@ RESTful architecture includes sending HTTP methods to a URL to get back informat
 ---
 1. GET - Retrieve information identified by the request
 2. POST - Create a new resource by the request
-3. PUT - Update a specific resource by the request
-4. DELETE - Destroy a specific resource by the request
+3. PUT - Update a specific resource by the request sending the full resource
+4. PATCH - Update a specific resource by the request sending only the updated information of the resource
+5. DELETE - Destroy a specific resource by the request
 
 #### The Inner Workings of a Request and a Response
 The header of a request or response allow the client and the server to pass
@@ -120,13 +123,15 @@ An IP address is the identification of a host or network interface and allows us
 
 
 #### Domain Name System
-Since humans aren't computers, we need human-readable forms (domains) to remember URLs.
-We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. You OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
+Since humans aren't computers, we need human-readable forms (domains) to remember URLs. We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. You OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
 
 ### Back-End Frameworks
 Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
 
 For the following lessons, we'll focus on using [node](https://nodejs.org/en/) and [express](http://expressjs.com/) for building a back-end. We will use Node today to create a simple HTTP server with several endpoints.
+
+### Student Discussion (5 minutes)
+Grab a partner and discuss what it was like to write server-side code. What was unfamiliar to you? Where there any limitations in debugging tools that you are used to using and how did that effect your ability to solve problems?
 
 #### NodeJS
 What are the benefits/disadvantages of using Node versus other server technologies?
@@ -246,3 +251,9 @@ This is Request #1.
 ```
 
 The request number will increment upon further requests. If you use a web browser, you'll notice that the request number might increment by 2 each time you make a request on the server. This is because some browsers make a request for a favicon each time as well.
+
+### Check For Understanding
+
+* What type of information is included in the header of a request?
+* What are the major RESTful methods and what do each of them do?
+* What is Node?
