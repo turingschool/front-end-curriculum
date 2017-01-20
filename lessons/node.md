@@ -4,10 +4,6 @@ length: 2 hours
 module: 4
 ---
 
-### Pre-reqs
-
-* Download Postman from Chrome
-
 ### Goals
 
 By the end of this lesson, you will:
