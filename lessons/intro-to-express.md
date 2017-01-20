@@ -1,7 +1,7 @@
 ---
-title: A Re-introduction to Express
-length: 1 hour
-tags: node, express, back-end, server
+title: "Fundamentals of Express and HTTP Methods"
+length: 2 hours
+tags: node, express, back-end, server, http
 ---
 
 ### Goals
@@ -11,8 +11,10 @@ By the end of this lesson, you will:
 * Understand when and why to use Express.js in the back-end of an application
 * Know how Express.js abstracts difficult server-side logic and makes it easier to write endpoints
 
+An example repository of the completed example can be found [here](https://github.com/turingschool-examples/secret-box).
+
 ## What is Express?
-Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features. 
+Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
 
 ## Why do we use Express?
 Think about how and why we use jQuery on the front-end. Vanilla JavaScript can be verbose and difficult to read. jQuery came along to give developers a nicer-looking syntax to perform the same operations. It was a library built to abstract the trickier parts of JavaScript and make them easier to write and work with. Express was built for very similar reasons.
@@ -52,7 +54,7 @@ app.get('/', function (request, response) {
 })
 ```
 
-In the above example, our express app (denoted by `app`), is handling a `GET` request to `'/'`. The second parameter in this call is our callback that defines how we're actually going to handle what happens when a user makes a `GET` request to `'/'`. The callback takes two parameters: the request (`req`) and the response (`res`). In this example, our hander is simply sending back a response (`res.send`) with the text 'Hello World!'. 
+In the above example, our express app (denoted by `app`), is handling a `GET` request to `'/'`. The second parameter in this call is our callback that defines how we're actually going to handle what happens when a user makes a `GET` request to `'/'`. The callback takes two parameters: the request (`req`) and the response (`res`). In this example, our hander is simply sending back a response (`res.send`) with the text 'Hello World!'.
 
 This pattern is exactly how we can define and handle any routes in an Express application. There are four main pieces to this code:
 
@@ -61,57 +63,195 @@ This pattern is exactly how we can define and handle any routes in an Express ap
 * a PATH - the endpoint that we are requesting
 * a HANDLER - the function we write that contains the logic for how the request should be dealt with, and what kind of response it should return
 
-An example of a `POST` request to retrieve data might look something like the following:
+## Getting Started with Express
 
-```javascript
-app.post('/messages', (request, response) => {
-  const { message } = request.body; // grab the data we pass in from the client-side
-  message.id = message.id || Date.now(); // add a unique ID to the message
-  app.locals.messages.push(message); // store the new message locally (normally this would go into a database)
-  response.status(201).send({ message }); // send back the full message object as our response
+Let's also go ahead and install some dependencies that we'll need to get things rolling.
+
+```
+npm i express --save
+```
+
+We'll get a basic server running using some code I stole from [the Express documentation](http://expressjs.com/starter/hello-world.html) and modified slightly to fit my tastes.
+
+```js
+const express = require('express');
+const app = express();
+
+app.set('port', process.env.PORT || 3000);
+app.locals.title = 'Secret Box';
+
+app.get('/', (request, response) => {
+  response.send('It\'s a secret to everyone.');
+});
+
+app.listen(app.get('port'), () => {
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
 });
 ```
 
-This block of code would be hit any time a `POST` request is made from the client side to `/messages`. Using the `fetch` API, the code on our client-side might look like this:
+Fire up the server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
 
-```javascript
-fetch('/messages', {
-  method: 'POST',
-  body: JSON.stringify({ user: 'Brittany', message: 'Hello' })
-})
-.then(response => JSON.parse(response))
-.then(messageData => {
-  console.log(messageData); // logs { id: 2307652394, user: 'Brittany', message: 'Hello' }
-})
-.catch(error => {
-  console.log(error); // logs any error message we return from our response
-})
+### Making a Dynamic Route
+
+When we go to view a tweet or a user, we do something special with the URL to identify which tweet or user. We specify it in the URL itself. URLs—after all—stand for universal resource locator.
+
+Consider the following:
+
+```js
+app.get('/api/secrets/:id', (request, response) => {
+  response.json({
+    id: request.params.id
+  });
+});
 ```
 
-## Error Handling
+Take that for a spin with a bunch of different words where `:id` should go.
+
+Some things to notice:
+
+- `response.json` is just a short hand for setting the response type as `application/json`.
+- It automatically serializes our object as JSON.
+
+### Storing Secrets
+
+In addition, let's add some data structure for keeping track of some kind of arbitrary data.
+
+```js
+app.locals.secrets = {};
+```
+
+Let's put some fake data in for now.
+
+```js
+app.locals.secrets = {
+  wowowow: 'I am a banana'
+};
+```
+
+Here is the feature we want to implement: when a user has the correct secret, we want to show them message associated with that `id`.
+
+```js
+app.get('/api/secrets/:id', (request, response) => {
+  const { id } = request.params;
+  const message = app.locals.secrets[id];
+  response.json({ id, message });
+});
+```
+
+Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser now that the resource was not found.
+
+```js
+app.get('/api/secrets/:id', (request, response) => {
+  const { id } = request.params;
+  const message = app.locals.secrets[id];
+
+  if (!message) { return response.sendStatus(404); }
+
+  response.json({ id, message });
+});
+```
+
+### Sending Data With Our Post Request
+
+It would be cool if we could store secrets in addition to just being able to retreive the prepopulated ones.
+
+Express did this thing a while back, where they took a bunch of stuff out of the core framework. This makes it smaller and means you don't have cruft you're not using, but it also means that sometimes you have to mix those things back in. One of those components that was pulled out was the ability to parse the body of an HTTP request. That's okay, we can just mix it back in.
+
+```
+npm i body-parser --save
+```
+
+We'll also need to require and use it in our `server.js`.
+
+```js
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+```
+
+This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other. (We're only going to use JSON, but I am leaving it here for reference.)
+
+Here is what my server looks like so far.
+
+```js
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.set('port', process.env.PORT || 3000);
+app.locals.title = 'Secret Box';
+app.locals.secrets = {
+  wowowow: 'I am a banana'
+};
+
+app.get('/', (request, response) => {
+  response.send('Hello World!');
+});
+
+app.get('/api/secrets/:id', (request, response) => {
+  const { id } = request.params;
+  const message = app.locals.secrets[id]
+
+  if (!message) { return response.sendStatus(404); }
+
+  response.json({ id, message });
+});
+
+app.listen(app.get('port'), () => {
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
+});
+```
+
+### Creating a POST Route
+
+We'll use our super secure method of generating random IDs.
+
+```js
+app.post('/api/secrets', (request, response) => {
+  const id = Date.now();
+  const { message } = request.body;
+
+  app.locals.secrets[id] = message;
+
+  response.json({ id, message });
+});
+```
+
+This approach has a bunch of flaws:
+
+- We're storing data in memory, which will be wiped out when the server goes down.
+- Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
+
+#### The Unhappy Path
+
+What happens if the user doesn't give us a message parameter?
+
+We should tell them that we got some bad data.
+
 In our previous example, we simply stored a new message object that we received from the client-side and sent it back as a successful response. When we successfully create a new record in a collection of application data, we can signal this success to our end-user by setting an [HTTP Status Code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). There are many different status codes to use in various situations. Upon a successful 'creation' you'll want to set the status code to `201` before sending back the response object.
 
 Take a minute to look through some of the other available status codes that can be used. These are a quick way to determine what happened to our request when it was sent to the server, and are easily viewed in the 'Network' panel of your browser developer tools.
 
-Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that 'user' and 'message' are both required properties when submitting a new message, and we want to respond with an error if either of them are missing:
+Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that 'message' is a required property when submitting a new message, and we want to respond with an error if it's missing:
 
-```javascript
-app.post('/messages', (request, response) => {
+```js
+app.post('/api/secrets', (request, response) => {
   const { message } = request.body;
+  const id = Date.now();
 
-  for (let requiredParameter of ['user', 'message']) {
-    if (!message[requiredParameter]) {
-      return response
-        .status(422)
-        .send({ 
-          error: `Expected format: { user: <String>, message: <String> }. You're missing a "${requiredParameter}" property.`
-        });
-    }
+  if (!message) {
+    return response.status(422).send({
+      error: 'No message property provided'
+    });
   }
 
-  message.id = message.id || Date.now();
-  app.locals.messages.push(message);
-  response.status(201).send({ message });
+  app.locals.secrets[id] = message;
+
+  response.json({ id, message });
 });
 ```
 
@@ -120,6 +260,58 @@ If either property is missing, we will see an error in the Network tab of our de
 It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response message is the best way to write a user-friendly API.
 
 
+It would also be nice if we used the correct status code on the successful response.
+
+```js
+response.status(201).json({ id, message });
+```
+
+### Generating Unique Keys
+
+At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
+
+For the time being, we'll use an MD5 hash, which is a unique value based on the content of the message. You've seen them in Github gists among other places.
+
+```
+npm i md5 --save
+```
+
+Now, in our `server.js`, we can require the module.
+
+```js
+const md5 = require('md5');
+```
+
+Finally, let's replace `Date.now()` in our `POST` action.
+
+```js
+app.post('/api/secrets', (request, response) => {
+  const { message } = request.body;
+  const id = md5(message);
+
+  if (!message) {
+    return response.status(422).send({
+      error: 'No message property provided'
+    });
+  }
+
+  app.locals.secrets[id] = message;
+
+  response.status(201).json({ id, message });
+});
+```
+
+### Further Exploration
+
+Read through [this simple chat application](https://github.com/turingschool-examples/chat-box-webpack/) from Module 2.
+
+- How would implement `PUT` and `DESTROY` actions in this application?
+- How was testing the endpoints handled?
+
 ## Resources
 - [Express.js](https://expressjs.com/)
 - [HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+
+### Extra Repository
+
+* [Dino Express](git@github.com:Alex-Tideman/dino_express.git)

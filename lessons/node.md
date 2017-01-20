@@ -1,9 +1,156 @@
 ---
-title: Reintroduction to Node.js
+title: "Reintroduction to Node.js"
+length: 2 hours
 module: 4
 ---
 
-An example repository of the completed example can be found [here](https://github.com/turingschool-examples/secret-box).
+### Pre-reqs
+
+* Download Postman from Chrome
+
+### Goals
+
+By the end of this lesson, you will:
+
+* Understand how you might work with back-end developers on your team
+* Understand how the client and server relationship works
+* Know what a server is and how requests and responses are handled
+* Know which appropriate RESTful method to send in a request
+* Use Express to create a simple web server that can make and receive HTTP request and responds with JSON and store them in a database
+
+## HTTP, REST and Building a Simple Node Server
+
+### Back-end Primer
+Even as a front-end developer, it's important to have a basic understanding of what's going on behind the scenes in the back-end. You'll often be working with back-end developers on your team that will have a huge effect on how your application interacts with its data. The better you understand the back-end, the more prepared you'll be to build an application on top of it.
+
+### The Server
+There are many different types of servers, but when we are building web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably, or simply shortened to "server".
+
+An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, or data. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the 'Nework' tab of our developer tools:
+
+![network requests][network-requests]
+
+The network tab will list any requests you make to the server. If we search for 'www.turing.io', in the top left of the network panel, we can We see that the type of request we made was for a 'document'. If we click on this request, we can also see information about the request itself, as well as the response we were given. Clicking on the 'Response' tab, you'll see the entire markup of the HTML document we requested:
+
+![network response][network-response]
+
+[network-requests]: /assets/images/lessons/backend-primer/network-requests.png
+[network-response]: /assets/images/lessons/backend-primer/network-response.png
+
+#### Making Requests to the Server
+Our applications will request HTML documents, CSS files, images, and data. The way each of these requests are made is quite different:
+
+* Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
+* Including a link tag to request an external stylesheet: `<link href="https://www.turing.io/css/styles.css" />`
+* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`.
+* Making an AJAX request to fetch data: `$.ajax({ url: "https://www.turing.io/api/v1/curriculum/", method: "GET" })`
+
+While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
+
+![url pic][url-pic]
+
+[url-pic]: /assets/images/lessons/http-rest-node-server/url-pic.gif
+
+When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with the application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints. We will look at a few backend choices later, but first let's talk about what they all share in common.
+
+#### Hypertext transfer protocol
+The protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.
+
+#### RESTful API design
+* REST stands for representational state transfer. What this means is that web resources communicate using a set of uniform operations that are stateless (don't persist data between requests)
+
+The six architectural constraints are:
+
+1. Client-server - Separation of GUI and data
+2. Stateless - No client context is stored by server, each client request  provides all the information to fulfill the request.
+3. Cacheable - Server responses defined as cacheable or not. Speeds up future interacts.
+4. Layered system
+5. Code on demand (i.e. execute JS script in HTML)
+6. Uniform interface
+
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. Here are the primary methods, which are often called CRUD methods (Create, Read,Update,Destroy)
+
+---
+1. GET - Retrieve information identified by the request
+2. POST - Create a new resource by the request
+3. PUT - Update a specific resource by the request
+4. DELETE - Destroy a specific resource by the request
+
+#### The Inner Workings of a Request and a Response
+The header of a request or response allow the client and the server to pass
+additional information to each other. Think of it as metadata that allows
+a client or server to handle the request properly.
+
+A header is simply a hash of key-value pairs:
+`{"Content-Type": "text-html"}`
+
+There is a lot of metadata that you can pass in a request. Some of the more common values are
+ "Accept" which allows you to set what media types are acceptable and in what quality.
+ Example:
+ ```
+ Accept: audio/*; q=0.2, audio/basic
+ SHOULD be interpreted as "I prefer audio/basic, but send me any audio type if it is the best available after an 80% mark-down in quality."
+```
+
+Another common value is "Content-Length". This indicates the length in of the body if the request would have been sent in a GET method. It's measured in bytes. Good way to know quickly how big a request is.
+
+If we look at a response in our browser, we can check out the headers:
+![network header][network-header]
+
+[network-header]: /assets/images/lessons/http-rest-node-server/network-header.png
+
+There is a lot of information in the header, but most important part is the status code returned to us. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rule is:
+
+* 200 range means everything is OK
+* 300 range means you need to do more to complete the request
+* 400 range means you sent a bad request. Do it again, but better
+* 500 range means that something is screwed up with the server (thanks
+backend...) but my request is OK
+
+#### Misc. other useful concepts
+
+#### IP address
+An IP address is the identification of a host or network interface and allows us to find the address of a location of another host or network interface.  The current protocol for IPs is IPv4, which is still in use today using a 32-bit system. But lots of people use the internet and we are running out of IP addresses. Enter IPv6, which is slowly being phased in:
+
+![32 ip][32-ip]
+![128 ip][128-ip]
+
+[32-ip]: /assets/images/lessons/http-rest-node-server/32-ip.png
+[128-ip]: /assets/images/lessons/http-rest-node-server/128-ip.png
+
+
+#### Domain Name System
+Since humans aren't computers, we need human-readable forms (domains) to remember URLs.
+We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. You OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
+
+### Back-End Frameworks
+Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
+
+For the following lessons, we'll focus on using [node](https://nodejs.org/en/) and [express](http://expressjs.com/) for building a back-end. We will use Node today to create a simple HTTP server with several endpoints.
+
+#### NodeJS
+What are the benefits/disadvantages of using Node versus other server technologies?
+
+![node server][node-server]
+
+![node event loop][node-event-loop]
+
+[node-server]: /assets/images/lessons/http-rest-node-server/node-server.png
+[node-event-loop]: /assets/images/lessons/http-rest-node-server/node-event-loop.png
+
+Awesomeness of Node includes:
+
+* Everything in JS
+* Fast, non-blocking code. Wait for your slow operations (file system, database I/O operations)
+* Real-time communications with sockets (run on TCP instead of HTTP)
+* Not multi-threaded (good for memory)
+
+Disadvantages of Node:
+
+* Lack of libraries (No ORM, image processing)
+* Frequent changes to Node API
+* Gotta deal with async
+* Not multi-threaded (bad for computations)
 
 In the past, we've used Node.js to build our client-side applications. We've even used it to spin up development servers to make it easier to develop our client-side applications. We've used Node.js as a tool, but we haven't written much for the platform itself. Luckily, given the fact that they both share some common technologies, we're already in possession of a bit of pre-requisite knowledge.
 
@@ -99,237 +246,3 @@ This is Request #1.
 ```
 
 The request number will increment upon further requests. If you use a web browser, you'll notice that the request number might increment by 2 each time you make a request on the server. This is because some browsers make a request for a favicon each time as well.
-
-## Getting Started with Express
-
-Let's also go ahead and install some dependencies that we'll need to get things rolling.
-
-```
-npm i express --save
-```
-
-We'll get a basic server running using some code I stole from [the Express documentation](http://expressjs.com/starter/hello-world.html) and modified slightly to fit my tastes.
-
-```js
-const express = require('express');
-const app = express();
-
-app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Secret Box';
-
-app.get('/', (request, response) => {
-  response.send('It\'s a secret to everyone.');
-});
-
-app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
-});
-```
-
-Fire up the server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
-
-### Making a Dynamic Route
-
-When we go to view a tweet or a user, we do something special with the URL to identify which tweet or user. We specify it in the URL itself. URLs—after all—stand for universal resource locator.
-
-Consider the following:
-
-```js
-app.get('/api/secrets/:id', (request, response) => {
-  response.json({
-    id: request.params.id
-  });
-});
-```
-
-Take that for a spin with a bunch of different words where `:id` should go.
-
-Some things to notice:
-
-- `response.json` is just a short hand for setting the response type as `application/json`.
-- It automatically serializes our object as JSON.
-
-### Storing Secrets
-
-In addition, let's add some data structure for keeping track of some kind of arbitrary data.
-
-```js
-app.locals.secrets = {};
-```
-
-Let's put some fake data in for now.
-
-```js
-app.locals.secrets = {
-  wowowow: 'I am a banana'
-};
-```
-
-Here is the feature we want to implement: when a user has the correct secret, we want to show them message associated with that `id`.
-
-```js
-app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params;
-  const message = app.locals.secrets[id];
-  response.json({ id, message });
-});
-```
-
-Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser now that the resource was not found.
-
-```js
-app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params;
-  const message = app.locals.secrets[id];
-
-  if (!message) { return response.sendStatus(404); }
-
-  response.json({ id, message });
-});
-```
-
-### Sending Data With Our Post Request
-
-It would be cool if we could store secrets in addition to just being able to retreive the prepopulated ones.
-
-Express did this thing a while back, where they took a bunch of stuff out of the core framework. This makes it smaller and means you don't have cruft you're not using, but it also means that sometimes you have to mix those things back in. One of those components that was pulled out was the ability to parse the body of an HTTP request. That's okay, we can just mix it back in.
-
-```
-npm i body-parser --save
-```
-
-We'll also need to require and use it in our `server.js`.
-
-```js
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-```
-
-This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other. (We're only going to use JSON, but I am leaving it here for reference.)
-
-Here is what my server looks like so far.
-
-```js
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
-
-app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Secret Box';
-app.locals.secrets = {
-  wowowow: 'I am a banana'
-};
-
-app.get('/', (request, response) => {
-  response.send('Hello World!');
-});
-
-app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params;
-  const message = app.locals.secrets[id]
-
-  if (!message) { return response.sendStatus(404); }
-
-  response.json({ id, message });
-});
-
-app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
-});
-```
-
-### Creating a POST Route
-
-We'll use our super secure method of generating random IDs.
-
-```js
-app.post('/api/secrets', (request, response) => {
-  const id = Date.now();
-  const { message } = request.body;
-
-  app.locals.secrets[id] = message;
-
-  response.json({ id, message });
-});
-```
-
-This approach has a bunch of flaws:
-
-- We're storing data in memory, which will be wiped out when the server goes down.
-- Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
-
-#### The Unhappy Path
-
-What happens if the user doesn't give us a message parameter?
-
-We should tell them that we got some bad data.
-
-```js
-app.post('/api/secrets', (request, response) => {
-  const { message } = request.body;
-  const id = Date.now();
-
-  if (!message) {
-    return response.status(422).send({
-      error: 'No message property provided'
-    });
-  }
-
-  app.locals.secrets[id] = message;
-
-  response.json({ id, message });
-});
-```
-
-It would also be nice if we used the correct status code on the successful response.
-
-```js
-response.status(201).json({ id, message });
-```
-
-### Generating Unique Keys
-
-At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
-
-For the time being, we'll use an MD5 hash, which is a unique value based on the content of the message. You've seen them in Github gists among other places.
-
-```
-npm i md5 --save
-```
-
-Now, in our `server.js`, we can require the module.
-
-```js
-const md5 = require('md5');
-```
-
-Finally, let's replace `Date.now()` in our `POST` action.
-
-```js
-app.post('/api/secrets', (request, response) => {
-  const { message } = request.body;
-  const id = md5(message);
-
-  if (!message) {
-    return response.status(422).send({
-      error: 'No message property provided'
-    });
-  }
-
-  app.locals.secrets[id] = message;
-
-  response.status(201).json({ id, message });
-});
-```
-
-### Further Exploration
-
-Read through [this simple chat application](https://github.com/turingschool-examples/chat-box-webpack/) from Module 2.
-
-- How would implement `PUT` and `DESTROY` actions in this application?
-- How was testing the endpoints handled?
