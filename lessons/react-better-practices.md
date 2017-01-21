@@ -131,22 +131,24 @@ It seems as though there is a solid consensus about NOT making an initial API ca
 
 
 ## Controlled Form Components
-I highly recommend you breeze through [this blog post](http://lorenstewart.me/2016/10/31/react-js-forms-controlled-components/) that goes into more details about Controlled Form Components.  
+I highly recommend you breeze through [this blog post](http://lorenstewart.me/2016/10/31/react-js-forms-controlled-components/) that goes into awesome detail about controlled form components.
 
-A controlled form component is a form element (like an input field, radio button, text box, etc) where the value is controlled by state as well as user interaction. The blog post referenced above defines them this way:
+A controlled form component is a form element (like an input field, radio button, text box, etc) where the value is being told what to be through props or state, as well as user interaction. The blog post referenced above defines them this way:
 
 ```
 1. Controlled components have functions to govern the data going into them on every onChange event, rather than grabbing the data only once, e.g. when a user clicks a submit button. This 'governed' data is then saved to state (in this case, the parent/container component's state).  
 2. Data displayed by a controlled component is received through props passed down from it's parent/container component.
 ```
 
-Input tells the state what it should be updated to.
+It's like a big circle of information love. The initial value is set by props or state, then when the user interacts with the form element (say, types something into the input field) the `onChange` event fires and updates state, which updates what the value of that form element is.  
+
+Without this, the input field is telling state what to be and the circle ends. A common way to write an uncontrolled input element might look like this:   
 
 ```
 <input onChange={ e => this.setState({ searchTerm: e.target.value }) } />
 ```
 
-Really, though, state should tell the input what it should be, making it something called a "Controlled Component".
+Really, though, state should tell the input what it should be because of the big "one source of truth" situation.
 
 ```
 <input
@@ -154,16 +156,12 @@ Really, though, state should tell the input what it should be, making it somethi
     onChange={ e => this.setState({ searchTerm: e.target.value }) } />
 ```
 
-Remove the `onChange()` line completely. What happens when you try to type into the input field?  
+Our `onChange()` event is triggering our state to update, which in turn is re-rendering our component and setting the value of our input field to whatever is now in state.
 
-Command Z to get the `onChange()` back. What's happening here? Our `onChange()` event is triggering our state to update, which in turn is re-rendering our component and setting the value of our input field to whatever is now in state.
+This is important because it lets us declaratively tell each component what values it needs to know about instead of the other way around.  
 
-**// FOLLOW UP: WHY IS A CONTROLLED COMPONENT IMPORTANT?**
-
-Imperative: Oh, user changed something, we need to go figure out what the value is.
-Declarative: The value of the input is the value of the state.
-
-More explicitly matches what is defined as the value of a component with what is defined in state, less of a question.
+Imperative: Oh, user changed something, we need to go figure out what the value is...wait...something else changed...figure that out too...wait...
+Declarative: The value of the input is the value of the state...if you want to change values let me know and i'll update you appropriately.
 
 
 ## A Few Additional Comments
