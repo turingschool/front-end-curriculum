@@ -12,7 +12,7 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 ## Prep Work
 
-[Read This First](https://medium.com/@kentcdodds/what-code-comments-can-teach-us-about-scaling-a-codebase-90bbfad8d70d#.yno9hmf22)(7 min)  
+[Read This First](https://medium.com/@kentcdodds/what-code-comments-can-teach-us-about-scaling-a-codebase-90bbfad8d70d#.yno9hmf22) (7 min)  
 
 ## Project Goals & Requirements:
 
@@ -21,7 +21,8 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 3. Match the given comps for styling - [style guide info can be found here](#style-guide).
 4. Make informed decisions between creating functional vs class based React components.
 5. Use a modular architecture for your application file structure.
-6. Implement React lifecycle methods regularly and appropriately.  
+6. Think deeply about React Lifecycle Methods.  
+6. Use `propTypes` for every component receiving props.  
 
 ### Important Notes  
 
