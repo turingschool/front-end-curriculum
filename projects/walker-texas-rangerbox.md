@@ -12,7 +12,7 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 ## Prep Work
 
-[Read This First](https://medium.com/@kentcdodds/what-code-comments-can-teach-us-about-scaling-a-codebase-90bbfad8d70d#.yno9hmf22) (7 min)  
+[Read This First](https://medium.com/@kentcdodds/what-code-comments-can-teach-us-about-scaling-a-codebase-90bbfad8d70d#.yno9hmf22) (7 min)  - This is an article discussing why modular architecture is a good idea.
 
 ## Project Goals & Requirements:
 
@@ -50,7 +50,7 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 - There is a `Settings` button, that when clicked displays a configuration page. The user no longer sees the buttons or list of jokes when on the settings page (*comp 3*).  
 
-- On the settings page, there should be a field to change the name `Chuck Norris`
+- On the settings page, there should be a field to change the name `Chuck Norris`. 
 
 - There should also be a `Parental Controls` radio button that sets the jokes to be either kid-friendly, or general audience.   
 
