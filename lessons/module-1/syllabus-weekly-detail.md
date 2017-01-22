@@ -18,7 +18,7 @@ title: Syllabus Weekly Detail
 |Assignment  | __DUE__: Wed 2/1 ~ Dog Party Static Comp |
 |Assignment  | __EVAL__: Thu 2/2 ~ Number Guesser |
 
-### WK 3: Build on a Solid Foundation
+### WK 3: Level Up
 
 |Mindset     | _Dig Deep, show grit, be vocal, be resourceful_. |
 |Lessons     | Design II, Learning How to Pair, jQuery, Event Bubbling & Delegation, CSS Performance & Optimization, CSS Animations & Transitions, Flexbox, Responsive Unicorn|
@@ -26,14 +26,14 @@ title: Syllabus Weekly Detail
 |Assignment  | __EVAL__: Thu 2/9 ~ Linked List |
 |Assignment  | __DUE__:  Fri 2/10 ~ Responsive Unicorn |
 
-### WK 4: Proficiency in the Fundamentals
+### WK 4: Build on a Solid Foundation 
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_.|
 |Lessons     | Design III, Local Storage, Review JS III & IV, Array Prototypes, Feature Testing Selenium, Intro to Build Tools, TDD/Refactoring, Gear Up |
 |Assignment  | __DUE__:   Mon 2/13 ~ Static Comp Challenge #1 |
 |Assignment  | __EVAL__:  Thu 2/16 ~ Ideabox |
 
-### WK 5: Creative Problem Solving
+### WK 5: Practice for Proficiency in the Fundamentals
 
 |Mindset     | _Brave, supportive, can-do-attitude_.|
 |Holiday     | No School Monday President's Day |
