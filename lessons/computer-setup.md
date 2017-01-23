@@ -22,7 +22,7 @@ Xcode is a huge suite of development tools published by Apple. If we wanted to d
 
 You'll want to install it before attempting to install anything else.
 
-Download from the Apple App Store.
+Download and install from the Apple App Store - this will probably take a little while.
 
 Open `terminal` and run `xcode-select --install`, enter your user password
 
