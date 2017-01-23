@@ -7,9 +7,9 @@ tags: html, introduction, practice
 
 The front-end of the web is based on three major technologies:
 
-* __STRUCTURE__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
-* __PRESENTATION__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
-* __BEHAVIOR__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
+* __HTML aka "STRUCTURE"__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
+* __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
+* __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
 
 ## What is HTML?
 
@@ -60,13 +60,25 @@ Here is an example of a slightly more robust document:
 
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+* Also, check out the cheat sheets in independent study
 
 ***
+
+# Setup for Today
+
+### Code Pen
+Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account setup.
+
+### Dog Party
+
+* Create a directory called  `dog-party`
+* Create a sub-directory called `images`
+* Create a file called `index.html`
 
 # Practice
 
 ### Containing Elements, Semantics & Text
-Let's practice with the following tags:
+Let's experiment with the following tags codepen:
 
 * `header`
 * `footer`
@@ -194,6 +206,10 @@ Instead we'll focus on two elements:
 
 # ![Flags Table](/assets/images/flags-table.jpg)
 
-<p data-height="300" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+### Dog Party
+In your `dog-party` site directory, begin laying out the HTML for this
+site:
+
+# ![Dog Party](/assets/images/dog-party.png)
+
 
