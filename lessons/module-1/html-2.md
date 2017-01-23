@@ -17,6 +17,7 @@ Now that you have a handle on the basics of structuring content for an HTML file
 * [Chrome Dev Tools Reference](https://developer.chrome.com/devtools)
 * [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
 * [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+* [MDN Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 ***
 
@@ -130,11 +131,14 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 * _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
 
 ## WAI-ARIA
-WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
 
 #### WAI: Web Accessibility Initiative
 
 #### ARIA: Accessible Rich Internet Application
+
+WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
+
+
 
 * __Roles__ — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. `role="navigation"` (`<nav>`) or `role="complementary"` (`<aside>`), but there are also others that describe different pages structures, such as `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"`, etc., which are commonly found in UIs.
 * __Properties__ — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, aria-required="true" specifies that a form input needs to be be filled in to be valid, whereas aria-labelledby="label" allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a `<div>` is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the alt attribute. You can see an example of this at Text alternatives.
@@ -142,7 +146,78 @@ WAI-ARIA is a specification written by the W3C, defining a set of additional HTM
 
 An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
-### Rules of ARIA
+### Rules of ARIA Use
+
+* If you can use native HTML elements and attributes to communicate the proper semantics and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
+* Don’t change native semantics, unless you really have to.
+* All interactive ARIA controls must be usable with the keyboard.
+* Don’t use role=“presentation” or aria-hidden=“true” on a visible focusable element.
+* All interactive elements must have an accessible name.
+
+#### Semantic HTML
+
+* Elements such as `<nav>`, `<button>`, `<header>`, `<aside>` when read aloud help clarify what part of the html page someone is focused on.
+* These elements have default implicit ARIA roles.
+
+```
+Example: <nav></nav> tags have an implicit role="navigation". 
+Keep an eye on these so you can avoid writing redundant code.
+```
+* [Table of elements with implicit Aria roles](http://lab.abhinayrathore.com/aria-cheatsheet/)
+
+#### Alt Tags!
+
+* Hugely important
+* Low hanging fruit, easy to use on images. 
+* Be verbose.
+* Just do it.
+
+```
+bad: <img src="mountain.jpg" alt="mountain" />
+good: <img src="mountain.jpg" alt="The cascade mountains at sunset in January" />
+```
+
+### ARIA Roles & Examples
+
+`role="img"`
+
+* container for collection of elements that form an image. ie: can contain captions and descriptive text, or other stuff. Example of role="img":
+
+```
+<figure role="img" aria-labelledby="fish-caption">
+```
+
+### ARIA Attributes
+
+* Added to HTML like roles, but they serve a different purpose. 
+```
+ie: <div role="definition" aria-labelledby="term">definition of term</div>
+aria-checked="true"
+```
+
+* On an element meant to look like a checkbox, with the box checked, that doesn't already have a semantic HTML checkbox around it.
+
+```
+<span role="checkbox" aria-checked="true"></span>
+aria-label="close"
+```
+
+* When there isn’t a label for an element to specify what it is or does, ie: The button looks like a typical close button, but an AT would read only the "X" which is unclear. The label describes what happens with the button is clicked.
+
+```
+<button aria-label="Close" onclick="myDialog.close()">X</button>
+aria-labelledby="elementID"
+```
+
+* Contains the ID of the element the group is focused on or needs to be associated with
+
+```
+<figure aria-labelledby="mountain" role="group">
+<img src="mountain.jpg" alt="The cascade mountains at sunset in January"/>
+<figcaption id="mountain">I climbed the Cascades on <time datetime="2016-01-01 24:00">New Years Eve</time></figcaption>
+</figure>
+```
+
 
 ## Your Challenge
 Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes. 
@@ -177,6 +252,3 @@ Take the following HTML snippet and make it accessible using explicit semantic H
   <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
 </div>
 ```
-
-
-
