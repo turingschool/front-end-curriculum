@@ -16,16 +16,16 @@ Turing provides the opportunity for every student to take the StrengthsFinder as
 * [Research Paper on Clifton StrengthsFinder and Student Strengths Development](../files/The_Clifton_StrengthsFinder_and_Student_Strengths_Development.pdf)
 
 ## Module One Activities
-Module One's focus is on the Discover/Awareness piece of the Strengths Development Framework:
+Module One is focused on strength awareness, and as such, the M1 activities center on defining and understanding your top strengths and how they play a part in shaping your identity. 
 
-* **Take the assessment:** If you'd like to take the StrengthsFinder assessment, contact the Community Affairs Manager to get an access code. You'll take the assessment [here](http://www.strengthsquest.com/home.aspx)
+* **Take the assessment:** If you'd like to take the StrengthsFinder assessment, contact the Allison Reu Singer, the Community Affairs Manager, to get an access code. You'll take the assessment [here](http://www.strengthsquest.com/home.aspx)
 
   **When:** By end of week 1 of module 1
 
 * **[Who are you?](mod1_strengthsfinder_small_group.md):** Both your 1-on-1 meeting with Allison and your small group session will help you begin to answer the question of "Who are you?"
 
 ## Module Two Activities
-Module Two's focus is on the Develop/Integrate piece of the Strengths Development Framework:
+Module Two's focus is on applying your top strengths to working in teams. 
 
 * **[Who are you...as a team member?](mod2_strengthsfinder_small_group.md)**
 
