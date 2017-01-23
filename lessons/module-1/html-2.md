@@ -1,21 +1,26 @@
 ---
-title: HTML II
+title: HTML II - Forms, Devtools, Accessibility Best Practices
 tags: html, introduction, practice
 ---
 
-# Overview & Docs
+# Overview
 Now that you have a handle on the basics of structuring content for an HTML file:
 
-* Let's chat about how the pieces of HTML, CSS, JS fit together in Front End Engineering 
-* Let's discuss building more robust HTML forms
-* Let's start using our devtools
+* Let's discuss building more robust HTML __forms__
+* Let's start using our __devtools__
+* Let's put __accessibility__ best practices into place
 
-The front-end of the web is based on three major technologies:
+# Docs
 
-* __STRUCTURE__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
-* __PRESENTATION__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
-* __BEHAVIOR__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
+* [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
+* [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+* [Chrome Dev Tools Reference](https://developer.chrome.com/devtools)
+* [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
+* [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 
+***
+
+# Forms
 Forms are an important part of a website. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own. Forms are comprised of the following base elements:
 
 * `form`
@@ -26,15 +31,7 @@ Forms are an important part of a website. They allow users to send data to the w
 <p data-height="300" data-theme-id="26495" data-slug-hash="JbyeZM" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Super Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/JbyeZM/">Super Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-# Docs
-
-* [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
-* [How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
-* [Chrome Dev Tools Reference](https://developer.chrome.com/devtools)
-* [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
-* [How Does the Internet Work?](https://web.stanford.edu/class/msande91si/www-spr04/readings/week1/InternetWhitepaper.htm)
-
-# Your Challenge
+## Your Challenges (2)
 
 ### Part One:
 Partner up and answer the following questions: 
@@ -57,6 +54,8 @@ Refactor this form as follows:
 
 <p data-height="458" data-theme-id="26495" data-slug-hash="Lbjgwy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjgwy/">Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+***
 
 # Chrome Dev Tools 
 
@@ -107,7 +106,7 @@ If you're having trouble finding the element you'd like to work with, you can se
 
 ![Find in HTML][find-in-html]
 
-# Your Turn
+## Your Challenge
 Directly from the elements panel, we can edit the HTML and see the changes reflected immediately. (Again, these changes won't be saved to your codebase, but sometimes it helps to see the tweaks as you make them before committing to them.)
 
 Let's work with the following edits on [girldevelopit.com](https://www.girldevelopit.com/):
@@ -121,3 +120,63 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 
 [elements-panel]: /assets/images/lessons/debugging-with-devtools/elements-panel.png
 [find-in-html]: /assets/images/lessons/debugging-with-devtools/find-in-html.gif
+
+***
+
+# Accessibility
+
+* Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way. 
+* The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
+* _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
+
+## WAI-ARIA
+WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
+
+#### WAI: Web Accessibility Initiative
+
+#### ARIA: Accessible Rich Internet Application
+
+* __Roles__ — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. `role="navigation"` (`<nav>`) or `role="complementary"` (`<aside>`), but there are also others that describe different pages structures, such as `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"`, etc., which are commonly found in UIs.
+* __Properties__ — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, aria-required="true" specifies that a form input needs to be be filled in to be valid, whereas aria-labelledby="label" allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a `<div>` is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the alt attribute. You can see an example of this at Text alternatives.
+* __States__ — Special properties that define the current conditions of elements, such as `aria-disabled="true"`, which specifies to a screenreader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.
+
+An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
+
+### Rules of ARIA
+
+## Your Challenge
+Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes. 
+
+```html
+<div>
+  <p>Main Title</p>
+    <form action="/" method="get">
+      <input type="search">
+      <input type="submit">
+    </form>
+</div>
+<ul>
+  <li><a href="/">Home</a></li>
+  <li><a href="/products">About</a></li>
+  <li><a href="/about">Contact</a></li>
+</ul>
+<div>
+  <div>
+    <p>Content Title Subject One</p>
+    <p>This is the content of this important section</p>
+  </div>
+  <div>
+    <p>Content Title Subject Two</p>
+    <p>This is the content of the section important section</p>
+  </div>
+  <div>
+    <img src="mountain.jpg" />
+  </div>
+</div>
+<div>
+  <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
+</div>
+```
+
+
+
