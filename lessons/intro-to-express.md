@@ -4,12 +4,17 @@ length: 2 hours
 tags: node, express, back-end, server, http
 ---
 
+### Pre-reqs
+
+* Download Postman from Chrome
+
 ### Goals
 
 By the end of this lesson, you will:
 
 * Understand when and why to use Express.js in the back-end of an application
 * Know how Express.js abstracts difficult server-side logic and makes it easier to write endpoints
+* Create a simple Express app that implements all of the basic CRUD methods
 
 An example repository of the completed example can be found [here](https://github.com/turingschool-examples/secret-box).
 
@@ -300,6 +305,23 @@ app.post('/api/secrets', (request, response) => {
   response.status(201).json({ id, message });
 });
 ```
+
+### Using Postman
+Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit or delete data if there isn't a UI to do so. In our case, it's handy to add secrets, edit a specific secret, or delete a secret. Get familiar with Postman because it will be your best friend for all things API from here on out.
+
+Things to consider:
+
+Header needs to include Content-Type: application/x-www-form-urlencoded
+Remember to check which HTTP method you are using before sending the request.
+
+### Student Exploration (20 mins)
+
+* Implement a PUT route for a specific secret to edit the message of the secret.
+* Implement a DELETE route for a specific secret to remove it.
+
+BONUS:
+
+Can you implement a GET route that shows only the secrets that have been edited?
 
 ### Further Exploration
 
