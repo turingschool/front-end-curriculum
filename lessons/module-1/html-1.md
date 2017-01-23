@@ -1,9 +1,9 @@
 ---
-title: HTML I
+title: HTML I - Structure, Semantics, and FPO Fun
 tags: html, introduction, practice
 ---
 
-# Overview & Docs
+# Overview 
 
 The front-end of the web is based on three major technologies:
 
@@ -56,7 +56,9 @@ Here is an example of a slightly more robust document:
 <p data-height="300" data-theme-id="26495" data-slug-hash="gLxjjy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A complete but small document" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/gLxjjy/">A complete but small document</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-# The Docs
+***
+
+# Docs
 
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
@@ -74,6 +76,8 @@ Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account s
 * Create a directory called  `dog-party`
 * Create a sub-directory called `images`
 * Create a file called `index.html`
+
+*** 
 
 # Practice
 
@@ -199,16 +203,20 @@ Instead we'll focus on two elements:
 <p data-height="300" data-theme-id="26495" data-slug-hash="MeaMEr" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Inputs and Buttons" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/MeaMEr/">Inputs and Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-# Your Turn
+***
 
-### Create this table
+# Your Challenges (2)
+
+### 1. Create this table
+You can use codepen or create your own html file.
 ** Hint: Research the `table` element in HTML
 
 # ![Flags Table](/assets/images/flags-table.jpg)
 
-### Dog Party
-In your `dog-party` site directory, begin laying out the HTML for this
-site:
+*** 
+
+### 2. Create this Dog Party
+In your `dog-party` site directory, begin laying out the HTML for this site:
 
 # ![Dog Party](/assets/images/dog-party.png)
 
