@@ -5,7 +5,7 @@ layout: page
 
 # Using StrengthsFinder at Turing
 
-![StrengthFinder Scope & Sequence](../images/StrengthsFinder Scope & Sequence.jpg)
+![StrengthFinder Scope & Sequence](https://github.com/turingschool/professional_skills/blob/master/images/StrengthsFinder%20Scope%20%26%20Sequence.jpeg)
 
 
 Turing provides the opportunity for every student to take the StrengthsFinder assessment to use as tool in their professional development. Students are strongly encouraged to take this assessment and participate in this development. The StrengthsFinder curriculum is adapted from StrengthsQuest and used to further your development through each module at Turing through personal reflections, 1-on-1 discussions with the Community Affairs Manager, and small group discussions with others in your cohort.
