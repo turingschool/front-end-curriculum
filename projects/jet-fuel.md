@@ -162,9 +162,10 @@ The following set of points are distributed at the discretion of the instructor.
 * **7 points** - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 * **0 points** - The application was not checked into version control.
 
-## Project is worth 150 points with 25 extra points possible
+## Project is worth 150 points with 35 extra points possible
 
 ## To get a 3 on this project, you need to score 110 points or higher
+
 ## To get a 4 on this project, you need to score 135 points or higher
 
 ## Projects are due on Friday 1/27, 12:00 p.m.
