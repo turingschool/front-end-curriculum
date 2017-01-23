@@ -23,4 +23,4 @@ Non-relational databases have been gaining popularity as the web can support mor
 ### Client-Side Storage
 As we start building more progressive web applications, and attempt to facilitate a greater offline experience, we might also want to leverage some of the client-side storage options available to us. We'll learn more about these in future lessons, but familiarize yourself with them now: [Offline Storage](https://www.html5rocks.com/en/tutorials/offline/storage/).
 
-A lot of their underlying principles mimic data storage on the back-end, but they are used more often for temporary storage and come with some unique challenges. 
+A lot of their underlying principles mimic data storage on the back-end, but they are used more often for temporary or session-based storage and come with some unique challenges. For example, many client-side storage options may be hampered by the common use of ad blockers and other privacy extensions users have installed on their browsers. You do not want to rely solely on client-side storage for persisting application data.
