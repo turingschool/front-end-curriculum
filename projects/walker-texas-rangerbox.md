@@ -76,6 +76,8 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 ### Style Guide
 
+**NOTE:** Typo in style guide below - font style for the body of the app should be `Karla` NOT `Kara`. When in doubt, dont pay for fonts.  
+
 ![Annotated Style Guide](http://i.imgur.com/f0zyVOA.png)
 
 ## Rubric
