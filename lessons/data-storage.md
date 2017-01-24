@@ -82,9 +82,11 @@ Good use-cases for working with client-side storage might be facilitating a more
 
 ### Review
 
+** Make sure that you can answer the following questions. Additional Googling may be required. **
+
 - What is the difference between a relational and non-relational database?
 - What is an example of a relational database?
 - What kind of database did you use when you saved data to Firebase?
 - How do you look at what is being stored in client side storage in the Chrome Developer tools?
 - What is the difference between localStorage & cookies?
-- How much time do you think developers spend thinking about, discussing the structure of how they will store data in a large application? (hint: might be a good question to send to a mentor)
+- How much time do you think developers spend thinking about, discussing and planning the structure of how they will store data in a large application? (hint: might be a good question to send to a mentor)
