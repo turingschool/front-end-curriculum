@@ -371,7 +371,7 @@ describe('GET /api/secrets', function() {
     res.should.have.status(200);
     res.should.be.json; // jshint ignore:line
     res.body.should.be.a('object');
-    res.body[0].should.have.property('wowow');
+    res.body.should.have.property('wowow');
     done();
     });
   });
