@@ -10,7 +10,7 @@ module: 4
 By the end of this lesson, you will:
 
 * Have a 500' view of the difference between a relational and non-relational database
-* Have an introduction to why/how data base storage structures are chosen
+* Have an introduction to why/how database storage structures are chosen
 * Understand where client-side storage fits into the history of web development
 
 ### Choosing a Database
