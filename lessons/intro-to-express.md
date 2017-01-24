@@ -338,11 +338,15 @@ Mocha and Chai are two of the more popular testing frameworks to use with Expres
 
 Next let's setup our testing directory:
 
-`mkdir test
-touch test/routes.spec.js`
+```js
+mkdir test
+touch test/routes.spec.js
+```
 
 In the testing file we need some setup as well:
-`process.env.NODE_ENV = 'test';
+
+```js
+process.env.NODE_ENV = 'test';
 
 var chai = require('chai');
 var should = chai.should();
@@ -353,11 +357,13 @@ chai.use(chaiHttp);
 
 describe('API Routes', function() {
 
-});`
+});
+```
 
 Now for our first test to the secrets endpoint:
 
-`describe('GET /api/secrets', function() {
+```js
+describe('GET /api/secrets', function() {
   it('should return all secrets', function(done) {
     chai.request(server)
     .get('/api/secrets')
@@ -369,7 +375,8 @@ Now for our first test to the secrets endpoint:
     done();
     });
   });
-});`
+});
+```
 
 
 Then go ahead and run mocha in your terminal to run the test suit and see what errors you get.
