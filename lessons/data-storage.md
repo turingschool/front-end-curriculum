@@ -1,15 +1,23 @@
 ---
-title: Data Storage
+title: Application Data Storage Theory
 length: 60
 tags: data, data storage, databases
+module: 4
 ---
 
-## Application Data Storage
+### Goals
+
+By the end of this lesson, you will:
+
+* Have a 500' view of the difference between a relational and non-relational database
+* Have an introduction to why/how data base storage structures are chosen
+* Understand where client-side storage fits into the history of web development
 
 ### Choosing a Database
-Choosing a database for your application is highly dependent on what kind of data you plan to store. You'll often hear of two different types of databases: relational and non-relational. 
 
-Traditional databases such as MySQL are considered relational -- data points are predictable and have strict relationships between each other. The database requires a strict, pre-defined schema with tables and columns.
+Choosing a database for your application is highly dependent on what kind of data you plan to store. You'll often hear of two different types of databases: **relational** and **non-relational**. 
+
+Traditional databases such as MySQL are considered **relational** -- data points are predictable and have strict relationships between each other. The database requires a strict, pre-defined schema with tables and columns.
 
 Non-relational databases, such as MongoDB, allow for greater flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
 
@@ -17,7 +25,17 @@ Non-relational databases, such as MongoDB, allow for greater flexibility with th
 
 You also might choose a particular database depending on what technologies you're using elsewhere in your application. For example, if you're using Firebase for authentication and storage, it might make sense to use Firebase as your back-end store as well. The database you choose will ultimately have an effect on the structure of your data. For example, read through how Firebase prefers that you [structure your data](https://firebase.google.com/docs/database/web/structure-data). Following the documentation and examples for the database you choose will help you understand the best way to structure your data to work most efficiently and effectively with that particular database.
 
+#### Readings
+
+- Read [Relational vs. non-relational databases and how to choose](https://www.pluralsight.com/blog/software-development/relational-non-relational-databases)
+- Skim [Firebase's thoughts on how to structure your data](https://firebase.google.com/docs/database/web/structure-data)
+  - Review how you have structured data with Firebase in past projects. Did you find this documentation on your own? If you didn't, would reading this have changed how you structured your data?
+- Look at Real Code. Check out the files in [this directory](https://github.com/thinktopography/backframejs/tree/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations) in a randomly selected open source project. 
+  - Each file relates to a `table` in the database for this project using `Knex` to interface with a `relational database`.
+
+
 ### Data Structures & Data Modeling
+
 There are many different strategies for modeling application data. The data modeling method you choose is highly dependent on what type of database you're using. For example, if you choose to use Postgres, a relational database, you must define a schema before adding any records to your database. A schema is the definition of your data structure, and provides a blueprint for the tables in your database and the relationships between them. Within each table, you also need to define the types of data that can be stored in each column. 
 
 In contrast, a non-relational database allows you to add records to your database (often called 'documents' in a non-relational database) that describe the schema of your data. The cause-and-effect here is essentially flipped: instead of our schema describing our data, our data is describing our schema. This is especially useful in scenarios where you each data record may or may not contain certain values. When your data is going to be less predictable, and more flexible, this type of database is often easier to work with. They allow you to create nested data objects and add as much or as little complexity to each record as you'd like.
