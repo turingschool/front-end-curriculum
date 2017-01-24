@@ -260,4 +260,48 @@ There are a few things going on in the code above.
 2. Based on that environment, we'll fetch the database configuration from `knexfile.js` for whatever environment we're in.
 3. Finally, we'll ask the database for everything in the `secrets` table and serve it as JSON to our api/secrets endpoint.
 
-If you run `npm start`, you should see our three secrets when you visit /api/secrets. The next steps will be to build an abstraction around these database queries and an Express API.
+If you run `npm start`, you should see our three secrets when you visit /api/secrets.
+
+Okay cool we can get data from the database, but how do we create and edit and delete?? Pretty easy actually. Just find the resource you need using params.
+
+```js
+app.post('/api/secrets', (request, response) => {
+  const { message, owner_id } = request.body
+  const id = md5(message)
+
+  const secret = { id, message, owner_id, created_at: new Date };
+  database('secrets').insert(secret)
+  .then(function() {
+    database('secrets').select()
+            .then(function(secrets) {
+              response.status(200).json(secrets);
+            })
+            .catch(function(error) {
+              console.error('somethings wrong with db')
+            });
+  })
+})
+```
+
+### Your turn (10 minutes)
+Implement a PUT and DELETE route for a specific secret
+
+### Querying Data for a relationship
+We can get back all our secrets or a specific secret, but what about all the secrets for a specific owner?
+
+```js
+app.get('/api/owners/:id', (request, response) => {
+  database('secrets').where('owner_id', request.params.id).select()
+          .then(function(secrets) {
+            response.status(200).json(secrets);
+          })
+          .catch(function(error) {
+            console.error('somethings wrong with redirect')
+          });
+})
+```
+
+### Pushing to Heroku
+Now that we are all wired up with Knex in our local dev environment, it's time to look towards big and better things... the wonderful world of production. Because it doesn't matter how awesome your endpoints are if you can't show the world.
+
+We've already done a lot of prep without even knowing it, but there are a few catch-yas left to conquire.
