@@ -194,8 +194,8 @@ now that we have that let's start building out the start of our test.
 
 
 ```
-describe('testing ideabox',()=>{
-  it('should allow me to add a title and a description', ()=>{
+describe('testing ideabox', function() {
+  it('should allow me to add a title and a description', () =>{
     const driver = new webdriver.Builder()
     .forBrowser('chrome')
     .build();
@@ -228,8 +228,8 @@ const webdriver = require('selenium-webdriver');
 const test      = require('selenium-webdriver/testing')
 
 
-test.describe('testing ideabox',()=>{
-  test.it('should allow me to add a title and a description', ()=>{
+test.describe('testing ideabox', function() {
+  test.it('should allow me to add a title and a description', () => {
     const driver = new webdriver.Builder()
     .forBrowser('chrome')
     .build();
@@ -265,7 +265,7 @@ const assert    = require('assert');
 const webdriver = require('selenium-webdriver');
 const test      = require('selenium-webdriver/testing')
 
-test.describe('testing ideabox',()=>{
+test.describe('testing ideabox',function(){
   this.timeout(10000)
   test.it('should allow me to add a title and a description', ()=>{
     const driver = new webdriver.Builder()
@@ -287,7 +287,6 @@ test.describe('testing ideabox',()=>{
     }).then((value)=>{
       assert.equal(value, 'this is a description')
     })
-
     driver.quit()
   })  
 })
@@ -317,9 +316,10 @@ test.it('should allow me to add a title and a description', ()=>{
 
   submitButton.click();
 
-  driver.findElement({tagName: 'li'}).then((li)=>{
-    return li.getText()
-  }).((text)=> {
+  let idea = driver.findElement({tagName: 'li'})
+
+
+  idea.getText().((text)=> {
     assert.equal(text, 'this is a title\nthis is a description')
   })
 })  
@@ -364,7 +364,6 @@ test.it('can add multiple ideas', ()=>{
 
   submit.click()
 
-  var allIdeas = driver.findElements({tagName: 'li'})
   driver.findElements({tagName:'li'}).then((li) =>{
     assert.equal(li.length, 2)
   })
@@ -375,8 +374,6 @@ test.it('can add multiple ideas', ()=>{
 #### Phase 1
 
 Now I want you to write a test where a user adds 2 ideas to the dom, deletes one idea, and you assert that there is one idea on the dom.
-
-driver.findElement({className: 'delete-idea'}).click()
 
 ```
 test.it('can add multiple ideas', ()=>{
@@ -402,11 +399,11 @@ test.it('can add multiple ideas', ()=>{
 
   submit.click()
 
-  var allIdeas = driver.findElements({tagName: 'li'})
   driver.findElements({tagName:'li'}).then((li) =>{
-    assert.equal(li.length, 2)
+    assert.equal(li.length, 2) // checking to see that multiple ideas are on the dom
   })
 
+  driver.findElement({className: 'delete-idea'}).click() // clicks delete button
 
   driver.findElements({tagName: 'li'}).then((li)=>{
     assert.equal(li.length, 1)
@@ -433,7 +430,7 @@ test.describe('testing idea box', ()=>{
     .build();
     driver.get('http://localhost:3000')
   })
-  
+
   test.afterEach(()=>{
     driver.quit()
   })
