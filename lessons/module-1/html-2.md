@@ -2,6 +2,9 @@
 title: HTML II - Forms, Devtools, Accessibility Best Practices
 tags: html, introduction, practice
 ---
+# Pre-Teach Resources
+* [Joe Dolson: ARIA - Roles, States and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
+* [ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson / Front-Trends 2015](https://www.youtube.com/watch?v=qdB8SRhqvFc)
 
 # Overview
 Now that you have a handle on the basics of structuring content for an HTML file:
@@ -17,6 +20,7 @@ Now that you have a handle on the basics of structuring content for an HTML file
 * [Chrome Dev Tools Reference](https://developer.chrome.com/devtools)
 * [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
 * [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
+* [MDN Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
 ***
 
@@ -130,19 +134,50 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 * _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
 
 ## WAI-ARIA
-WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. There are three main features defined in the spec:
+WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories: 
 
-#### WAI: Web Accessibility Initiative
-
-#### ARIA: Accessible Rich Internet Application
-
-* __Roles__ — These define what an element is or does. Many of these are so-called landmark roles, which largely duplicate the semantic value of HTML5 structural elements e.g. `role="navigation"` (`<nav>`) or `role="complementary"` (`<aside>`), but there are also others that describe different pages structures, such as `role="banner"`, `role="search"`, `role="tabgroup"`, `role="tab"`, etc., which are commonly found in UIs.
-* __Properties__ — These define properties of elements, which can be used to give them extra meaning or semantics. As an example, aria-required="true" specifies that a form input needs to be be filled in to be valid, whereas aria-labelledby="label" allows you to put an ID on an element, then reference it as being the label for anything else on the page, including multiple elements, which is not possible using `<label for="input">`. As an example, you could use `aria-labelledby` to specify that a key description contained in a `<div>` is the label for multiple table cells, or you could use it as an alternative to image alt text — specify existing information on the page as an image's alt text, rather than having to repeat it inside the alt attribute. You can see an example of this at Text alternatives.
-* __States__ — Special properties that define the current conditions of elements, such as `aria-disabled="true"`, which specifies to a screenreader that a form input is currently disabled. States differ from properties in that properties don't change throughout the lifecycle of an app, whereas states can change, generally programmatically via JavaScript.
+* __Roles__: define the purpose of an element
+* __Properties__:  help better describe what an element can do
+* __States__: like properties that are designed to change – normally with the help of Javascript
+* An element can only have one ARIA role at a time, but can have as many properties and states as necessary.
 
 An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
-### Rules of ARIA
+### Rules of ARIA Use
+There are a few core rules to keep in mind when using ARIA:
+
+* If you can use native HTML elements and attributes to communicate the proper semantics (like `<nav>`, `<header>`, `<aside>`, `<button>`, etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
+* Don’t change native semantics, unless you really have to.
+* All interactive controls such as a button, sliding control, or drag-and-drop widget must be usable by the keyboard.
+* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__. Defining a presentation role is more strict than an `aria-hidden=”true”` state – and we’ll see an example of this down below.
+* Lastly, all interactive elements such as form fields should have a name associated with them. Something like a `<label>` is perfect, and with ARIA, you can even specify that a certain element is labelled by or described by another element.
+
+#### Semantic HTML
+
+* Elements such as `<nav>`, `<button>`, `<header>`, `<aside>` when read aloud help clarify what part of the html page someone is focused on.
+* These elements have default implicit ARIA roles.
+* Keep an eye on these so you can avoid writing redundant code.
+
+```
+Example: <nav></nav> tags have an implicit role="navigation". 
+```
+* [Table of elements with implicit Aria roles](http://lab.abhinayrathore.com/aria-cheatsheet/)
+
+#### Alt Tags!
+
+* Hugely important
+* Low hanging fruit, easy to use on images. 
+* Be verbose.
+* Just do it.
+
+```
+bad: <img src="mountain.jpg" alt="mountain" />
+good: <img src="mountain.jpg" alt="The cascade mountains at sunset in January" />
+```
+
+### ARIA Roles & Examples
+
+
 
 ## Your Challenge
 Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes. 
@@ -177,6 +212,3 @@ Take the following HTML snippet and make it accessible using explicit semantic H
   <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
 </div>
 ```
-
-
-

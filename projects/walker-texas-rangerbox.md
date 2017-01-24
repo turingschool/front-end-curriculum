@@ -16,7 +16,7 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 ## Project Goals & Requirements:
 
-1. Get comfortable whipping together React components on your own.
+1. Get comfortable whipping together React components on your own and implementing React Router.
 2. Write **squeaky clean**, well refactored code using **exclusively** ES6 syntax.
 3. Match the given comps for styling - [style guide info can be found here](#style-guide).
 4. Make informed decisions between creating functional vs class based React components.
@@ -40,7 +40,7 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 ### Iteration 1: Get Jokes
 
-- There is an input field to set the number of jokes you want returned. When a user clicks on `Get Jokes`, a request is made that returns the specified number of jokes on the page.  
+- There is an input field to set the number of jokes you want returned. When a user clicks on `Get Jokes`, a request is made that returns the specified number of jokes on the page, and the path is `'/jokes'`.  
 
 - Each joke displays the joke text (with clean data - aka no `&quot;` messes). The jokes automatically spread themselves out evenly based on the number of jokes requested.
 
@@ -48,9 +48,9 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 ### Iteration 2: Settings
 
-- There is a `Settings` button, that when clicked displays a configuration page. The user no longer sees the buttons or list of jokes when on the settings page (*comp 3*).  
+- There is a `Settings` button, that when clicked displays a configuration page and the path is `'/settings'`. The user no longer sees the buttons or list of jokes when on the settings page (*comp 3*).  
 
-- On the settings page, there should be a field to change the name `Chuck Norris`. 
+- On the settings page, there should be a field to change the name `Chuck Norris`.
 
 - There should also be a `Parental Controls` radio button that sets the jokes to be either kid-friendly, or general audience.   
 
@@ -58,23 +58,25 @@ For this project, we will be hitting [The Internet Chuck Norris Database](http:/
 
 ### Iteration 3: Starred Jokes
 
-- There should be a button to show "Favorites"
+- There should be a button to show "Favorites". When clicked, the path is `'/favorites'` and the user sees their starred jokes.
+
+- If there are no favorites, there should be a message indicating that there are no favorites.
 
 - Each joke has a star icon that when clicked changes colors.
 
-- When a joke is "starred" it gets moved to "Favorite Jokes". When "Favorites" is clicked, the user sees only the starred jokes. Clicking "New Jokes" should not affect the favorites page.  
+- When a joke is "starred" it gets moved to "Favorite Jokes".
 
 ## Extensions
 
 - `Parental Controls` buttons look like a [toggle slider](http://www.w3schools.com/howto/howto_css_switch.asp)
-
-- Implement React Router to access the Settings page
 
 - Data persists using Firebase, localStorage, or the database of your choice.
 
 - Walker Texas Ranger Chuck Norris gifs with sound happen occasionally (this will mean bonus cool points.)  
 
 ### Style Guide
+
+**NOTE:** Typo in style guide below - font style for the body of the app should be `Karla` NOT `Kara`. When in doubt, dont pay for fonts.  
 
 ![Annotated Style Guide](http://i.imgur.com/f0zyVOA.png)
 

@@ -197,6 +197,13 @@ app.get('/', (request, response) => {
   response.send('Hello World!');
 });
 
+app.get('/api/secrets', (request, response) => {
+  const secrets = app.locals.secrets
+
+  response.json({ secrets });
+});
+
+
 app.get('/api/secrets/:id', (request, response) => {
   const { id } = request.params;
   const message = app.locals.secrets[id]
@@ -323,16 +330,61 @@ BONUS:
 
 Can you implement a GET route that shows only the secrets that have been edited?
 
-### Further Exploration
+### Testing in Express
 
-Read through [this simple chat application](https://github.com/turingschool-examples/chat-box-webpack/) from Module 2.
+Mocha and Chai are two of the more popular testing frameworks to use with Express, so let's go ahead and install those.
 
-- How would implement `PUT` and `DESTROY` actions in this application?
-- How was testing the endpoints handled?
+`npm i --save-dev mocha chai chai-http`
+
+Next let's setup our testing directory:
+
+```js
+mkdir test
+touch test/routes.spec.js
+```
+
+In the testing file we need some setup as well:
+
+```js
+process.env.NODE_ENV = 'test';
+
+var chai = require('chai');
+var should = chai.should();
+var chaiHttp = require('chai-http');
+var server = require('../app');
+
+chai.use(chaiHttp);
+
+describe('API Routes', function() {
+
+});
+```
+
+Now for our first test to the secrets endpoint:
+
+```js
+describe('GET /api/secrets', function() {
+  it('should return all secrets', function(done) {
+    chai.request(server)
+    .get('/api/secrets')
+    .end(function(err, res) {
+    res.should.have.status(200);
+    res.should.be.json; // jshint ignore:line
+    res.body.should.be.a('object');
+    res.body.should.have.property('wowow');
+    done();
+    });
+  });
+});
+```
+
+
+Then go ahead and run mocha in your terminal to run the test suit and see what errors you get.
 
 ## Resources
 - [Express.js](https://expressjs.com/)
 - [HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
+- [Testing with Mocha and Chai](http://mherman.org/blog/2016/04/28/test-driven-development-with-node/#.WIdxcbYrLVo)
 
 ### Extra Repository
 

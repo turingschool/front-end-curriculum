@@ -15,14 +15,14 @@ Take 5-10 minutes to read up on your assigned life cycle method. Documentation c
 4. componentDidMount()
 
 ### Phase 2: Updating  
-1. componentWillReceiveProps()
-2. shouldComponentUpdate()
-3. componentWillUpdate()
-4. render()
-5. componentDidUpdate()
+5. componentWillReceiveProps()
+6. shouldComponentUpdate()
+7. componentWillUpdate()
+8. render()
+9. componentDidUpdate()
 
 ### Phase 3: Removing  
-5. componentWillUnmount()
+10. componentWillUnmount()
 
 ## PropTypes
 

@@ -22,9 +22,9 @@ Xcode is a huge suite of development tools published by Apple. If we wanted to d
 
 You'll want to install it before attempting to install anything else.
 
-<!-- Open `terminal` and run `xcode-select --install`, enter your user password -->
+Download and install from the Apple App Store - this will probably take a little while.
 
-Download from the Apple App Store.
+Open `terminal` and run `xcode-select --install`, enter your user password
 
 Now you should have the underlying tools we need to move forward.
 
@@ -124,7 +124,7 @@ git config --global user.email johndoe@example.com
 - Close and reopen the Terminal window
 - `nvm ls-remote`
 - Install the last, most-recent version in the list.
-    - Right now, that's `nvm install 6.7.0`
+    - Right now, that's `nvm install 7.4.0`
 
 ### Setup [Exercisms](http://exercism.io)
 We introduce exercisms later in the module. For now, we're just getting things setup.
