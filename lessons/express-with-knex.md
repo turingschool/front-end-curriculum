@@ -16,7 +16,9 @@ By the end of this lesson, you will:
 * Understand how to create, retrieve, update and delete data within a database using knex
 
 ## What is Knex?
-Knex
+Straight from the docs, Knex.js is a "batteries included" SQL query builder for Postgres, MSSQL, MySQL, MariaDB, SQLite3, and Oracle designed to be flexible, portable, and fun to use. It features both traditional node style callbacks as well as a promise interface for cleaner async flow control, a stream interface, full featured query and schema builders, transaction support (with savepoints), connection pooling and standardized responses between different query clients and dialects.
+
+What Knex really is is Javascript instead of raw SQL.
 
 ## Setting Up the Database
 
@@ -108,7 +110,7 @@ exports.down = function(knex, Promise) {
 
 Migrations are kind of like version control for databases. For every `up` there must be an equal and opposite `down` that will allow us to rollback those changes. `up` defines what should happen when we do the migration. `down` is the reverse. If we want to roll back to a previous version, then `down` undoes whatever `up` did.
 
-I edited the migration as follows:
+I edited the migration to create an owners table and a secrets table. We create the relationship between the two in the secrets table by adding an owner_id field that references id key in the owner table. That means each secret belongs to one owner:
 
 ```js
 exports.up = function(knex, Promise) {
@@ -163,7 +165,7 @@ exports.seed = function(knex, Promise) {
 };
 ```
 
-We're going to need to modify this a bit and do it in two seperate files, one for owners and one for secrets.
+We're going to need to modify this a bit and do it in two separate files, one for owners and one for secrets.
 
 For owners, create a owners.js file under seeds/dev directory:
 
@@ -215,11 +217,10 @@ exports.seed = function(knex, Promise) {
     ]);
   });
 };
-
 ```
 
 
-You'll notice that I used `Promise.all` this time. It's becasue I wanted to do three things (i.e. insert each of my fake foods). `Promise.all` will resolve when all three of my inserts resolve.
+You'll notice that I used `Promise.all` this time. It's because I wanted to do three things (i.e. insert each of my fake secrets). `Promise.all` will resolve when all three of my inserts resolve.
 
 ### Running the Migrations and Seeding the Database
 
@@ -304,4 +305,71 @@ app.get('/api/owners/:id', (request, response) => {
 ### Pushing to Heroku
 Now that we are all wired up with Knex in our local dev environment, it's time to look towards big and better things... the wonderful world of production. Because it doesn't matter how awesome your endpoints are if you can't show the world.
 
-We've already done a lot of prep without even knowing it, but there are a few catch-yas left to conquire.
+We've already done a lot of prep without even knowing it, but there are a few catchyas left to conquer. Before we can config production fully, we need to create our production app with Heroku. If you haven't already, go ahead and create an account with Heroku. Then login in your terminal:
+
+```js
+heroku login
+```
+
+To create an app with Heroku:
+
+```js
+heroku create app-name // app-name can be whatever you want as long as there isn't another app named it. If you don't give it a name Heroku will name it something super badass like misty-acorn-valleys9292
+```
+
+Then you can push your code to Heroku like so:
+
+```js
+git push heroku master // Make it a practice to only push to production from master. master is your Master. Obey it as your production overlord. Many things will be happening in your terminal but the main thing to look for is if the build succeeds or fails.
+heroku open // Opens your app in a browser
+```
+
+Aaaaaaaand...... error screen. Wah wah wah. Welcome to getting things up in production. The MOST IMPORTANT thing to learn about production is reading error logs from Heroku:
+
+```js
+heroku logs
+heroku logs --tail // Get the last error message
+```
+
+First step is to add a Procfile. This lets Heroku know to fire up your server.
+
+```js
+touch Procfile
+
+// In the Procfile
+web: node server.js
+```
+
+Next up is adding the Postgres add-on in Heroku. After you add this, you will also get an environment variable for the database URL.
+
+![heroku postgres][heroku-postgres]
+![heroku database url][heroku-database-url]
+
+[heroku-postgres]: /assets/images/lessons/express-with-knex/heroku-postgres.png
+[heroku-database-url]: /assets/images/lessons/express-with-knex/heroku-database-url.png
+
+
+Now we want to make sure our knexfile has this environment variable for production. You also need to add ?ssl=true at the end of the URL:
+
+```js
+  production: {
+    client: 'pg',
+    connection: process.env.HEROKU_POSTGRESQL_SILVER_URL + `?ssl=true`,
+    migrations: {
+      directory: './db/migrations'
+    },
+    seeds: {
+      directory: './db/seeds/production'
+    },
+    useNullAsDefault: true
+  }
+```
+
+Now our production code knows where to look to grab production data. The last step is adding some seed data, which I'll just copy from seeds/dev to seeds/production. Commit all those changes and push it up to Heroku. To migrate and seed with Heroku:
+
+```js
+heroku run 'knex migrate:latest'
+heroku run 'knex seed:run'
+```
+
+It should give you some feedback that it worked. Now do heroku open and magic! You have data.
