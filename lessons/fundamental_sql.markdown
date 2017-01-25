@@ -227,7 +227,7 @@ id |  name   | quantity | country_of_origin
 
 ### Ordering
 
-Be default data will be output in the order it was inserted, but that's not particularly reliable. If order matters to you, you need to add an `ORDER BY` clause:
+By default data will be output in the order it was inserted, but that's not particularly reliable. If order matters to you, you need to add an `ORDER BY` clause:
 
 ```
 > SELECT * from fruits ORDER BY name;
@@ -362,5 +362,5 @@ We've explored the basic tools of a SQL database. Exit your prompt with `\q`.
 
 ## References
 
-* [SQLite Tutorial by Zetcode.com](http://zetcode.com/db/sqlite/)
-* [SQL Interactive Tutorial](http://sqlzoo.net/wiki/Main_Page)
+* [Database Design for Mere Mortals](https://www.amazon.com/Database-Design-Mere-Mortals-Hands/dp/0321884493/ref=sr_1_1?ie=UTF8&qid=1485317431&sr=8-1&keywords=database+design+for+mere+mortals) is the best book ever written about SQL databases
+* [SQL Interactive Tutorial](http://sqlzoo.net/wiki/Main_Page) from SQL Zoo offers some more practice
