@@ -3,7 +3,7 @@ title: HTML I - Structure, Semantics, and FPO Fun
 tags: html, introduction, practice
 ---
 
-# Overview 
+# Overview
 
 The front-end of the web is based on three major technologies:
 
@@ -15,14 +15,14 @@ The front-end of the web is based on three major technologies:
 
  * HTML = HyperText Markup Language  
  * HTML is used to create electronic documents (pages) that are displayed on the Web
- * Each page contains a series of connections to other pages called hyperlinks 
+ * Each page contains a series of connections to other pages called hyperlinks
  * Every page you see on the internet is written using HTML
  * HTML ensures the proper formatting of content (text, images, video) so that your internet browser can display them as intended
  * Tags = used to wrap content of a web page and define how the browser must format and display the content
  * Elements = the end result of our tags once the browser has parsed the HTML and rendered based on our tag instruction
  * Markup = the set of tags to structure a page
 
-## Example 
+## Example
 
 Let's say that we had some text and we wanted to denote that this text was a paragraph.
 
@@ -77,7 +77,7 @@ Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account s
 * Create a sub-directory called `images`
 * Create a file called `index.html`
 
-*** 
+***
 
 # Practice
 
@@ -132,7 +132,7 @@ Let's take a moment to digress and discuss important things. Like "For Placement
 * [PlaceKitten](http://placekitten.com/)
 * [BaconMockup](http://baconmockup.com/)
 * [SampleVideos](http://www.sample-videos.com/)
-* [Article](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online) w/ lots of useful sites for free icons, image assets, etc. 
+* [Article](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online) w/ lots of useful sites for free icons, image assets, etc.
 
 ### Hyperlinks
 
@@ -144,7 +144,7 @@ Another important tag is the `<a>` tag. These are the tags we use for creating h
 </p>
 ```
 
-In this case, `<a>` tags need to know where they should link to. We use the `href` attribute to set where the link should point to. `href` is an abbreviation for "hyper reference." 
+In this case, `<a>` tags need to know where they should link to. We use the `href` attribute to set where the link should point to. `href` is an abbreviation for "hyper reference."
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="yJYdyb" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/yJYdyb/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -213,11 +213,12 @@ You can use codepen or create your own html file.
 
 # ![Flags Table](/assets/images/flags-table.jpg)
 
-*** 
+***
 
 ### 2. Create this Dog Party
-In your `dog-party` site directory, begin laying out the HTML for this site:
+
+First thing's first, you'll need to [download the assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing). 
+
+Now, in your `dog-party` site directory, begin laying out the HTML for this site:
 
 # ![Dog Party](/assets/images/dog-party.png)
-
-
