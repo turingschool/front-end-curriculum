@@ -1,5 +1,5 @@
 ---
-title: Introduction to SQL
+title: Fundamental SQL
 length: 90
 tags: sql, databases, modeling
 ---
