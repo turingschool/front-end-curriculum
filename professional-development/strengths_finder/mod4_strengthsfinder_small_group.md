@@ -8,7 +8,7 @@
 * Devise an action step to help you begin to realize your vision
 
 ### Opening Reflection (10 minutes)
-Review what this strength means and write about one way this strength has helped them during the previous 3 modules. Each person shares out, and the whole group will provide another example of how they've seen each person use that strength. 
+Review what this strength means and write about one way this strength has helped you during the previous 3 modules. Each person shares out, and the whole group will provide another example of how they've seen each person use that strength. 
 
 ### Envisioning the Future (12 minutes)
 In the Flower Exercise, you were asked to reflect on your past in order to influence what kind of future you will pursue. Today, you'll work on crafting your vision statement for that future. This is another kind of storytelling.
