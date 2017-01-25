@@ -102,12 +102,13 @@ This is the default behavior for the rendering of block elements in CSS. The `bo
 Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. Its `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
 
 ## Document Flow is Important
+
 The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according by their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
 
 - CSS divides HTML elements into two types: inline and block
 - After block elements, browsers render a new line
-- Inline elements: img, a, br, em, strong
-- Block elements: p, h1, ul, li, almost everything else
+- Inline elements: `img`, `a`, `br`, `em`, `strong`
+- Block elements: `p`, `h1`, `ul`, `li`, almost everything else
 
 ### Display Property
 
