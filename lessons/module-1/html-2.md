@@ -143,7 +143,9 @@ WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich In
 
 An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
-### Rules of ARIA Use
+![Aria Tree](/assets/images/aria.jpg)
+
+## Rules of ARIA Use
 There are a few core rules to keep in mind when using ARIA:
 
 * If you can use native HTML elements and attributes to communicate the proper semantics (like `<nav>`, `<header>`, `<aside>`, `<button>`, etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
@@ -152,18 +154,30 @@ There are a few core rules to keep in mind when using ARIA:
 * There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__. Defining a presentation role is more strict than an `aria-hidden=”true”` state – and we’ll see an example of this down below.
 * Lastly, all interactive elements such as form fields should have a name associated with them. Something like a `<label>` is perfect, and with ARIA, you can even specify that a certain element is labelled by or described by another element.
 
-#### Semantic HTML
+### Semantic HTML
 
 * Elements such as `<nav>`, `<button>`, `<header>`, `<aside>` when read aloud help clarify what part of the html page someone is focused on.
 * These elements have default implicit ARIA roles.
 * Keep an eye on these so you can avoid writing redundant code.
+
+### More Obscure Semantic HTML5 Elements
+
+* `<q></q>`: inline quoted text
+* `<time></time>`: date or specific time
+* `<cite></cite>`: reference to a cited book, play, etc
+* `<input type="email"></input>`: specific type of input field
+* `<figcaption></figcaption>`: detailed caption on an image
+* `<code></code>`: code snippet
+* `<aside></aside>`: chunk of text that isn't the primary focus of the page
+* `<article></article>`: small subsection of content
+* `<abbr></abbr>`: abbreviation
 
 ```
 Example: <nav></nav> tags have an implicit role="navigation". 
 ```
 * [Table of elements with implicit Aria roles](http://lab.abhinayrathore.com/aria-cheatsheet/)
 
-#### Alt Tags!
+### Alt Tags!
 
 * Hugely important
 * Low hanging fruit, easy to use on images. 
@@ -175,7 +189,45 @@ bad: <img src="mountain.jpg" alt="mountain" />
 good: <img src="mountain.jpg" alt="The cascade mountains at sunset in January" />
 ```
 
-### ARIA Roles & Examples
+## ARIA Roles & Examples
+
+__Define your main header, content, and footer__
+The banner, main, and contentinfo roles are meant to be used only one time per page, and they help screen readers figure out how a page is laid out on a high-level.
+
+```html
+<header role="banner">
+</header>
+ 
+<main role="main">
+</main>
+ 
+<footer role="contentinfo">
+</footer>
+```
+-------------------------------------------------
+
+__Label and Describe Elements__
+
+* `aria-label`: property that defines a short title for an element
+* `aria-labelledby`: references the ID of another element, which is a short title for the element
+* `aria-describedby`: is just like aria-labelledby – but is meant for longer descriptions instead of short titles
+
+```html
+<button aria-describedby="revertTooltip">Revert</button>
+<div role="tooltip" id="revertTooltip">Reverting will undo any changes that have been made since the last save.</div>
+```
+
+```html
+<div class="lightbox" aria-label="Image Lightbox">
+  <img src="foo.jpg" alt="Foo" />
+</div>
+```
+Now it’s important to remember that we don’t need to label everything, especially if there’s already a predefined way of labelling an element such as a `<figcaption>`, `title` attribute, or an image’s `alt` attribute. We only need to label something if the HTML doesn’t clearly indicate the purpose of an important element.
+
+-------------------------------------------------
+
+__Forms__
+
 
 
 
