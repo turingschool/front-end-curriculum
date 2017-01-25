@@ -247,7 +247,7 @@ There are a lot of various ARIA roles and attributes that can be applied to form
 
 Important to remember:
 
-1. Each form field should have a valid <label>. Either wrap the form field or reference it with the `for` attribute. If this isn’t possible, then you can use the ARIA labelling methods discussed above. You cannot substitute the placeholder attribute for a label because it’s not meant to be handled as a label; a placeholder is meant to simply be an example of what you’re supposed to enter in that field.
+1. Each form field should have a valid `<label>`. Either wrap the form field or reference it with the `for` attribute. If this isn’t possible, then you can use the ARIA labelling methods discussed above. You cannot substitute the placeholder attribute for a label because it’s not meant to be handled as a label; a placeholder is meant to simply be an example of what you’re supposed to enter in that field.
 2. Forms are often tabbed-through via the keyboard, so tab order should make sense. Normally this isn’t a concern, but if you position or hide certain input fields via CSS/Javascript, then the tab order might become unintuitive. When this happens, you can set the tabindex attribute of an element to make sure that the tab order is how you expect it to be.
 
 ```html
