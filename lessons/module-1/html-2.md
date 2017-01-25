@@ -47,7 +47,7 @@ Partner up and answer the following questions:
 * Why would a `legend` element be important?
 
 ### Part Two:
-Refactor this form as follows:
+Copy the form code below into your own Pen, and then refactor as follows:
 
 * Validate for email type 
 * Replace all `div` elements with correct semantic elements
@@ -151,7 +151,7 @@ There are a few core rules to keep in mind when using ARIA:
 * If you can use native HTML elements and attributes to communicate the proper semantics (like `<nav>`, `<header>`, `<aside>`, `<button>`, etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
 * Don’t change native semantics, unless you really have to.
 * All interactive controls such as a button, sliding control, or drag-and-drop widget must be usable by the keyboard.
-* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__. Defining a presentation role is more strict than an `aria-hidden=”true”` state – and we’ll see an example of this down below.
+* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__. 
 * Lastly, all interactive elements such as form fields should have a name associated with them. Something like a `<label>` is perfect, and with ARIA, you can even specify that a certain element is labelled by or described by another element.
 
 ### Semantic HTML
@@ -177,7 +177,7 @@ Example: <nav></nav> tags have an implicit role="navigation".
 ```
 * [Table of elements with implicit Aria roles](http://lab.abhinayrathore.com/aria-cheatsheet/)
 
-### Alt Tags!
+### Alt Attributes for Yo Images!
 
 * Hugely important
 * Low hanging fruit, easy to use on images. 
@@ -187,6 +187,13 @@ Example: <nav></nav> tags have an implicit role="navigation".
 ```
 bad: <img src="mountain.jpg" alt="mountain" />
 good: <img src="mountain.jpg" alt="The cascade mountains at sunset in January" />
+```
+### Title Attributes for Yo Links!
+* Low hanging fruit on anchor tags. 
+* Not necessary for all links, but make sure to use them for your icon anchors – you know, things like your facebook, twitter, etc icons:
+
+```html
+<a class="facebook-icon" title="Facebook"><a/>
 ```
 
 ## ARIA Roles & Examples
@@ -228,7 +235,42 @@ Now it’s important to remember that we don’t need to label everything, espec
 
 __Forms__
 
+There are a lot of various ARIA roles and attributes that can be applied to forms, but we're just going to highlight some of the more important ones to include:
 
+* `form`: simple and an implicit role for `<form>`
+* `search`: role for a form with the primary function of searching data
+* `aria-required`: property indicating whether a field is required
+* `aria-invalid`: property indicating that the value of an input field is
+  invalid (wait until after form submission to add this)
+
+Important to remember:
+
+1. Each form field should have a valid <label>. Either wrap the form field or reference it with the `for` attribute. If this isn’t possible, then you can use the ARIA labelling methods discussed above. You cannot substitute the placeholder attribute for a label because it’s not meant to be handled as a label; a placeholder is meant to simply be an example of what you’re supposed to enter in that field.
+2. Forms are often tabbed-through via the keyboard, so tab order should make sense. Normally this isn’t a concern, but if you position or hide certain input fields via CSS/Javascript, then the tab order might become unintuitive. When this happens, you can set the tabindex attribute of an element to make sure that the tab order is how you expect it to be.
+
+```html
+<p id="formLabel">Information Form</p>
+<form role="form" aria-labelledby="formLabel">
+ 
+  <label for="name">Name</label>
+  <input id="name" type="text" placeholder="John Doe" value="" />
+ 
+  <label for="email">Email*</label>
+  <input id="email" type="email" placeholder="foo@bar.com" value="" aria-required="true" />
+  
+  <span id="genderLabel">Gender</span>
+  <div role="radiogroup" aria-labelledby="genderLabel">
+    <input type="radio" name="gender" value="male"> Male<br>
+    <input type="radio" name="gender" value="female"> Female<br>
+    <input type="radio" name="gender" value="other"> Other
+  </div>
+ 
+  <label for="comment">Comment*</label>
+  <textarea id="comment" aria-multiline="true" aria-required="true"></textarea>
+ 
+  <input type="submit" value="Submit />
+</form>
+```
 
 
 ## Your Challenge
@@ -264,3 +306,10 @@ Take the following HTML snippet and make it accessible using explicit semantic H
   <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
 </div>
 ```
+
+## Additional Resources
+
+* [HTML Nu Validator](https://validator.w3.org/nu)
+* [9 Tools for Website Accessibility
+  Testing](https://www.shopify.com/partners/blog/website-accessibility-testing)
+
