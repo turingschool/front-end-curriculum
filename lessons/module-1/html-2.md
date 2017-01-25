@@ -188,7 +188,9 @@ Example: <nav></nav> tags have an implicit role="navigation".
 bad: <img src="mountain.jpg" alt="mountain" />
 good: <img src="mountain.jpg" alt="The cascade mountains at sunset in January" />
 ```
+
 ### Title Attributes for Yo Links!
+
 * Low hanging fruit on anchor tags. 
 * Not necessary for all links, but make sure to use them for your icon anchors – you know, things like your facebook, twitter, etc icons:
 
