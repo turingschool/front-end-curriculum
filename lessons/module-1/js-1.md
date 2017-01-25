@@ -169,13 +169,13 @@ Sometimes we want to perform an action based on some kind of condition. In Engli
 To use conditionals, we first need to talk about expressions, operators, and statements.
 
 ## Expressions
-An _expression_ evaluates (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
+An _expression_ evaluates to (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
 
 1. Expressions that assign a single value to a variable. They look like this: `var fruit = "apple";`
 2. Expressions that use two or more values to return a single value. They look like this: `var adele = "Hello, " + "its me";`
 
 ## Operators
-Expressions rely on operators to calculate their single value. There are 5 types of operators:
+Expressions rely on operators to calculate their single value. There are 5 basic types of operators to get you started:
 
 1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators) assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
 2. [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic_operators) perform basic math. `var addTwo = 2 + 2;`
