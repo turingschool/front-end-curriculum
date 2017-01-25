@@ -7,9 +7,10 @@ tags: css, introduction, practice
 
 The front-end of the web is based on three major technologies:
 
-* __STRUCTURE__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
-* __PRESENTATION__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
-* __BEHAVIOR__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
+* __HTML aka "STRUCTURE"__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
+* __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
+* __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
+The front-end of the web is based on three major technologies:
 
 This lesson is all about the presentation layer, CSS. We'll take this opportunity to accomplish the following:
 
@@ -198,13 +199,7 @@ Key Points:
 
 ***
 
-
 # Your Turn
-You may NOT take liberties with the layout, but your creative license includes:
-
-* Copy
-* Images
-* Icons
-* Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/) or [coolors](https://coolors.co/) or [color-hex](http://www.color-hex.com/color-palettes/)  
+Style that dog party like a BOSS! :smirk:
 
 # ![Dog Party](/assets/images/dog-party.png)
