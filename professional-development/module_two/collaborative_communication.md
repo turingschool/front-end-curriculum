@@ -68,7 +68,7 @@ Back in your small groups, define the role of the project manager for your group
 	Which one(s) will you use in your team? What will that look like?
 
 ## How to handle Failure:
-**Discuss Chapter 4 in small groups:**
+**Discuss Chapter 5 in small groups:**
 
 * What was this chapter about?
 * What does it look like to actually learn from and move past mistakes?
