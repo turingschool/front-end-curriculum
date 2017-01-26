@@ -5,6 +5,8 @@ layout: page
 
 # Collaborative Communication
 
+[Slides for this lesson]()
+
 ## Pre-Reading from *How to Win Friends & Influence People in the Digital Age*:
 
 * [Chapter 4: Ask Questions Instead of Giving Direct Orders from How to Win Friends and Influence People in the Digital Age](../files/Chapter%204%20Ask%20Questions%20Instead%20of%20Giving%20Direct%20Orders.pdf)
