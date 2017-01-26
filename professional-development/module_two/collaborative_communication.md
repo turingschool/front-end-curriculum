@@ -18,13 +18,12 @@ layout: page
 
 ## Connections:
 * Success in M2: M2 is where you hone your teamwork skills. Understanding and using project management best practices is essential to becoming an effective team member.
-* Success in career: Your technical skills will help you get a job. Your project management and communication skills will help you keep a job. Demonstrating that you can successfully work with teams and learn from mistakes in a productive way will be a huge asset to any organization
+* Success in career: Your technical skills will help you get a job. Your project management and communication skills will help you *keep* a job. Demonstrating that you can successfully work with teams and learn from mistakes in a productive way will be a huge asset to any organization
 
 ## Deliverable:
-2-paragraph reflection in your portfolio on:
+Paragraph reflection in your portfolio on:
 
-1. Details on project management strategies you used in your projects (Rush Hour and/or Little Shop); What went well? What didn’t go well?
-2. How you incorporated feedback from your team members and what you learned about yourself in the process
+* Details on project management strategies you used in your projects (Rush Hour and/or Little Shop); What went well? What didn’t go well?
 
 ## Opening
 Recap project management and agile practices:
