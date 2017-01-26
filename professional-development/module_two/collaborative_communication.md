@@ -26,27 +26,52 @@ layout: page
 1. Details on project management strategies you used in your projects (Rush Hour and/or Little Shop); What went well? What didn’t go well?
 2. How you incorporated feedback from your team members and what you learned about yourself in the process
 
-## Discussion #1
+## Opening
+Recap project management and agile practices:
 
-* Debrief Chapter 4
-	* What was this chapter about?
-	* Do you agree with this approach? Why/why not?
-	* What does it mean to be a good leader?
-	* How can you replicate this approach within teams, especially when there’s a project manager?
-* Goal-Planning within Bike Share groups:
-	* What are the responsibilities of a project manager? How will the project manager support everyone? How will you work together as a group to support the project manager?
-	* SCENARIO: Your group discussed skill levels and expectations in your DTR, and during the first iteration of Bike Share, Teammate A drives while Teammate B navigates and (if applicable) Teammate C looks up documentation. Teammate A insists on going down a route he/she claims to feel comfortable with. Teammate B asks a few questions, looking confused, but then falls silent as Teammate A continues to drive and gives little explanation for what he/she is doing. Teammate C vocalizes that he/she has found a better way to complete the iteration based on some documentation, but Teammate A answers that his/her way will be better. During the group’s next check-in, Teammate A presents the code he/she produced, takes credit for it, and the other teammates sit silently. Discuss what should be done in this situation as a team. How can the project manager help to handle this? What would you do if Teammate A was your project manager?
+* Waterfall vs. Agile
+* Tuckman's
+* Waffle
+* Git Workflow
+
+How do these practices relate to the success of a team?
+
+## Leadership in Teams
+**Discuss Chapter 4 in small groups:**
+
+* What was this chapter about?
+* Do you agree with this approach? Why/why not?
+* What does it mean to be a good leader?
+* How can you replicate this approach within teams, especially when there’s a project manager?
+
+**Whole Group Discussion: Project Managers**
+Building off of your small group discussion, how would you define the role of the project manager?
+
+Back in your small groups, define the role of the project manager for your group. 
+
+**Goal-Planning Activity:**
+
+	SCENARIO: Your group discussed skill levels and expectations in your DTR, and during the first iteration of Bike Share, Teammate A drives while Teammate B navigates and (if applicable) Teammate C looks up documentation. Teammate A insists on going down a route he/she claims to feel comfortable with. Teammate B asks a few questions, looking confused, but then falls silent as Teammate A continues to drive and gives little explanation for what he/she is doing. Teammate C vocalizes that he/she has found a better way to complete the iteration based on some documentation, but Teammate A answers that his/her way will be better. During the group’s next check-in, Teammate A presents the code he/she produced, takes credit for it, and the other teammates sit silently. Discuss what should be done in this situation as a team. 
+	
+	* How can the project manager help in this situation? What would you do if Teammate A was your project manager?
 	* How will each of you exemplify leadership within your team, whether you are the project manager or not?
 	* Discuss one (or more) of the agile practices you learned about in the Project Management lesson. Which one(s) will you use in your team? What will that look like?
 
-## Discussion #2
-* Debrief of Chapter 5:
-	* What was this chapter about?
-	* What does it look like to actually learn from and move past mistakes?
-	* Why did I have you read this?
-* Fear-Planning within Bike Share groups:
-	* SCENARIO: During your DTR for your project, Teammate A expresses that he/she wants to take on some new features that he/she has never done before. Teammates B and (if applicable) C aren’t sure about this. There is so much to get done, they want to just stick to what they know how to do well. What system can your team create to allow team members to take risks and try out new things in the project? What will your team do if Teammate A “fails”? How will your team communicate?
-	* Discuss the above scenario using the prompts below:
+## How to handle Failure:
+**Discuss Chapter 4 in small groups:**
+
+* What was this chapter about?
+* What does it look like to actually learn from and move past mistakes?
+* Why did I have you read this?
+
+**Whole Group Debrief:**
+How can this chapter be applied to software teams?
+
+**Fear-Planning Activity:
+
+	SCENARIO: During your DTR for your project, Teammate A expresses that he/she wants to take on some new features that he/she has never done before. Teammates B and (if applicable) C aren’t sure about this. There is so much to get done, they want to just stick to what they know how to do well. What system can your team create to allow team members to take risks and try out new things in the project? What will your team do if Teammate A “fails”? How will your team communicate?
+	
+	Discuss the above scenario using the prompts below:
 		* Acknowledge that failure happens. How can we do that in our team? What will that look like?
 		* Encourage dialogue to foster trust. How can you establish honest communication within your team?
 		* Separate the person from the failure. How can you create a sense of safety in your team? How will you mitigate fault?
