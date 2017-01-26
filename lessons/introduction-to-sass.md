@@ -435,6 +435,7 @@ $box-shadow-default: 1px 1px 30px #000;
 }
 ```
 ## Resources
+
   - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
   - [Sass to CSS Translator](http://www.sassmeister.com/)
   - [SASS Syntax Highlighting for Atom](https://atom.io/packages/atom-syntax-highlighting-for-sass)
