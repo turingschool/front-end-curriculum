@@ -124,7 +124,7 @@ var volumeOne = getSize(2, 2, 2)[1];
 var volumeTwo = getSize(1, 8, 7)[0];
 ```
 
-## Functions - Famous or Anonymous?
+## Functions - Named or Anonymous?
 
 So far, we've been working with *named functions*. Through *function declaration* `function myNamedFunction()` we create a function that we intend to call later in our code via the name we gave it. That is kind of cool. It feels very similar to when we were naming/assigning variables. A named function is kind of like that: we create a name, assign a series of instructions (the function) to that name, and we get to use it all over the place, simply by calling the name of the function with its parentheses.
 
@@ -157,7 +157,10 @@ var area = function(width, height) {
   return width * height;
 };
 
-// Now let's assign another variable, that uses the thing we just did.
+// We call this function using the variable that we assigned our anonymous function to
+area(2, 1)
+
+// We can even assign that function call as the value of another variable. How would we run our 'area' function now?
 var size = area(3, 4);
 ```
 
