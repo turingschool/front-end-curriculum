@@ -287,7 +287,7 @@ Its a subtle difference. Basically, when you declare a function, and you stipula
 ```javascript
 // parameters named on declaration of function
 function myDreamCar(make, model) {
-  return "Buy me " + make " " + model;
+  return "Buy me " + make + " " + model;
 }
 
 // arguments "Audi" and "R8" passed into a called function
