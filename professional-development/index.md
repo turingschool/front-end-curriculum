@@ -10,7 +10,8 @@ During your time at Turing School of Software and Design, you’ll prepare for y
 Throughout each module, you’ll have workshops with the Community Affairs Manager, Employment Coordinator, and the Partnerships Manager to address these ideas and prepare you for your new career.
 
 ### Breakdown of Curriculum
-* [Module One](https://github.com/turingschool/professional_skills/blob/master/module_one/index.md)
+
+* [M1 Identity Essentials](https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/professional_development/module_one/identity_essentials.markdown)
 * [Module Two](https://github.com/turingschool/professional_skills/blob/master/module_two/index.md)
 * [Module Three](https://github.com/turingschool/professional_skills/blob/master/module_three/index.md)
 * [Module Four](https://github.com/turingschool/professional_skills/blob/master/module_four/index.md)
