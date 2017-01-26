@@ -7,9 +7,10 @@ tags: css, introduction, practice
 
 The front-end of the web is based on three major technologies:
 
-* __STRUCTURE__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
-* __PRESENTATION__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
-* __BEHAVIOR__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
+* __HTML aka "STRUCTURE"__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
+* __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
+* __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
+The front-end of the web is based on three major technologies:
 
 This lesson is all about the presentation layer, CSS. We'll take this opportunity to accomplish the following:
 
@@ -101,12 +102,13 @@ This is the default behavior for the rendering of block elements in CSS. The `bo
 Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. Its `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
 
 ## Document Flow is Important
+
 The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according by their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
 
 - CSS divides HTML elements into two types: inline and block
 - After block elements, browsers render a new line
-- Inline elements: img, a, br, em, strong
-- Block elements: p, h1, ul, li, almost everything else
+- Inline elements: `img`, `a`, `br`, `em`, `strong`
+- Block elements: `p`, `h1`, `ul`, `li`, almost everything else
 
 ### Display Property
 
@@ -198,13 +200,7 @@ Key Points:
 
 ***
 
-
 # Your Turn
-You may NOT take liberties with the layout, but your creative license includes:
-
-* Copy
-* Images
-* Icons
-* Color palette, but ONLY if you select a complementary palette. We highly encourage you to visit sites like: [material palette](https://www.materialpalette.com/) or [coolors](https://coolors.co/) or [color-hex](http://www.color-hex.com/color-palettes/)  
+Style that dog party like a BOSS! :smirk:
 
 # ![Dog Party](/assets/images/dog-party.png)

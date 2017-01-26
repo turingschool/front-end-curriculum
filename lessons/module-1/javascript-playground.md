@@ -311,6 +311,5 @@ Practice, practice, practice! Repetition, repetition, repetition!
 
 * [Functions Practice](http://www.ling.gu.se/~lager/kurser/webtechnology/lab4.html)
 * If you want more of a challenging problem that deals with conditionals, try to solve [SuperFizzBuzz](https://github.com/turingschool/challenges/blob/620f4a12ab4e3c1a3f258bb4347e0c2c569a934d/super_fizz.markdown), but don't worry about the extensions.
-* [Code Academy - JavaScript](https://www.codecademy.com/learn/javascript)
 * [JavaScript Exercisms](http://exercism.io/languages/javascript)
-* Exercises at the end of each chapter in Eloquent JavaScript
+* Exercises at the end of each chapter in [Eloquent JavaScript](http://eloquentjavascript.net/)

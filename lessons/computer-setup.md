@@ -124,7 +124,7 @@ git config --global user.email johndoe@example.com
 - Close and reopen the Terminal window
 - `nvm ls-remote`
 - Install the last, most-recent version in the list.
-    - Right now, that's `nvm install 7.4.0`
+    - Right now, that's v6.9.4. Use the command `nvm install 6.9.4` to install this version.
 
 ### Setup [Exercisms](http://exercism.io)
 We introduce exercisms later in the module. For now, we're just getting things setup.
