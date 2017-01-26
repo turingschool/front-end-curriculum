@@ -5,7 +5,7 @@ layout: page
 
 # Collaborative Communication
 
-[Slides for this lesson]()
+[Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/CollaborativeCommunication_BEE%20M2.pdf)
 
 ## Pre-Reading from *How to Win Friends & Influence People in the Digital Age*:
 
