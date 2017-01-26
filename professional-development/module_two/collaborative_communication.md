@@ -50,7 +50,14 @@ Back in your small groups, define the role of the project manager for your group
 
 **Goal-Planning Activity:**
 
-	SCENARIO: Your group discussed skill levels and expectations in your DTR, and during the first iteration of Bike Share, Teammate A drives while Teammate B navigates and (if applicable) Teammate C looks up documentation. Teammate A insists on going down a route he/she claims to feel comfortable with. Teammate B asks a few questions, looking confused, but then falls silent as Teammate A continues to drive and gives little explanation for what he/she is doing. Teammate C vocalizes that he/she has found a better way to complete the iteration based on some documentation, but Teammate A answers that his/her way will be better. During the group’s next check-in, Teammate A presents the code he/she produced, takes credit for it, and the other teammates sit silently. Discuss what should be done in this situation as a team. 
+	SCENARIO: Your group discussed skill levels and expectations in your DTR, and during the first iteration 
+	of Bike Share, Teammate A drives while Teammate B navigates and (if applicable) Teammate C looks up 
+	documentation. Teammate A insists on going down a route he/she claims to feel comfortable with. Teammate B 
+	asks a few questions, looking confused, but then falls silent as Teammate A continues to drive and gives 
+	little explanation for what he/she is doing. Teammate C vocalizes that he/she has found a better way 
+	to complete the iteration based on some documentation, but Teammate A answers that his/her way will be 
+	better. During the group’s next check-in, Teammate A presents the code he/she produced, takes credit for 
+	it, and the other teammates sit silently. Discuss what should be done in this situation as a team. 
 	
 	* How can the project manager help in this situation? What would you do if Teammate A was your project manager?
 	* How will each of you exemplify leadership within your team, whether you are the project manager or not?
@@ -68,7 +75,11 @@ How can this chapter be applied to software teams?
 
 **Fear-Planning Activity:
 
-	SCENARIO: During your DTR for your project, Teammate A expresses that he/she wants to take on some new features that he/she has never done before. Teammates B and (if applicable) C aren’t sure about this. There is so much to get done, they want to just stick to what they know how to do well. What system can your team create to allow team members to take risks and try out new things in the project? What will your team do if Teammate A “fails”? How will your team communicate?
+	SCENARIO: During your DTR for your project, Teammate A expresses that he/she wants to take on some new 
+	features that he/she has never done before. Teammates B and (if applicable) C aren’t sure about this. 
+	There is so much to get done, they want to just stick to what they know how to do well. What system can 
+	your team create to allow team members to take risks and try out new things in the project? What will 
+	your team do if Teammate A “fails”? How will your team communicate?
 	
 	Discuss the above scenario using the prompts below:
 		* Acknowledge that failure happens. How can we do that in our team? What will that look like?
