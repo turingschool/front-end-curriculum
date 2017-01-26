@@ -78,7 +78,7 @@ Back in your small groups, define the role of the project manager for your group
 
 How can this chapter be applied to software teams?
 
-**Fear-Planning Activity:
+**Fear-Planning Activity:**
 
 	SCENARIO: During your DTR for your project, Teammate A expresses that he/she wants to take on some new 
 	features that he/she has never done before. Teammates B and (if applicable) C aren’t sure about this. 
