@@ -44,6 +44,7 @@ How do these practices relate to the success of a team?
 * How can you replicate this approach within teams, especially when there’s a project manager?
 
 **Whole Group Discussion: Project Managers**
+
 Building off of your small group discussion, how would you define the role of the project manager?
 
 Back in your small groups, define the role of the project manager for your group. 
@@ -74,6 +75,7 @@ Back in your small groups, define the role of the project manager for your group
 * Why did I have you read this?
 
 **Whole Group Debrief:**
+
 How can this chapter be applied to software teams?
 
 **Fear-Planning Activity:
