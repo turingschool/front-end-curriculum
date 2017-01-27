@@ -41,6 +41,7 @@ Adjectives that were not selected by either you or your peers remain in the **Un
 * clever
 * collaborative
 * communicative
+* competitive
 * complex
 * confident
 * dependable
