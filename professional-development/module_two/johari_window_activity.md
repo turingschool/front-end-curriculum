@@ -81,6 +81,7 @@ Adjectives that were not selected by either you or your peers remain in the **Un
 * organized
 * patient
 * perseverant 
+* positive
 * powerful
 * proud
 * reflective
