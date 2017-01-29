@@ -83,7 +83,6 @@ Let's take a crack at refactoring some functions and calling functions within ot
 
 ```js
 function karateChop() {
-  console.log("KARATE!");
   alert("KAPOW!");
   console.log("KARATE CHOP!");
 }
@@ -102,7 +101,6 @@ function kapow() {
 }
 
 function karateChop() {
-  console.log("KARATE!");
   kapow();
   console.log("KARATE CHOP!");
 }
