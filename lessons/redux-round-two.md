@@ -45,10 +45,9 @@ Let's visualize this.
 2. **Independent Research** ( 10 Minutes )   
 Spend the next 10 minutes understanding your assigned concept below and jotting down notes - NOTEBOOKS ONLY,
 
-  **1:** [Store](http://redux.js.org/docs/api/Store.html) and [Provider](http://redux.js.org/docs/basics/UsageWithReact.html#passing-the-store)   
-  **2:** [Actions](http://redux.js.org/docs/basics/Actions.html)  
-  **3:** [Reducers](http://redux.js.org/docs/basics/Reducers.html)  
-  **4:** [Presentational vs Container Components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)  
+  **1:** [Store](http://redux.js.org/docs/api/Store.html) and [Reducers](http://redux.js.org/docs/basics/Reducers.html)   [Provider](http://redux.js.org/docs/basics/UsageWithReact.html#passing-the-store)   
+  **2:** [Actions](http://redux.js.org/docs/basics/Actions.html)   [Provider](http://redux.js.org/docs/basics/UsageWithReact.html#passing-the-store)   
+  **3:** [Presentational vs Container Components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)  
 
 3. **Single Concept Group Discussion** ( 5 - 10 Minutes)  
 Get together with classmates who also studied the same Redux concept (ie: all 1's get together, all 2's get together etc).
