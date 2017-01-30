@@ -15,7 +15,7 @@ The focus of this project is to implement client-side security and real-time com
 ### On the Server
 
 - Build a Node application that starts off just keeping all of the data in memory using local variables.
-- Use WebSockets to broadcast poll results to the client
+- Use WebSockets to broadcast poll results to the client.
 
 ### On the Client
 
@@ -31,7 +31,7 @@ The focus of this project is to implement client-side security and real-time com
 
 ## Case Studies and User Flows
 
-Your application must meet the needs of _both_ users for whichever application you select as outlined below.
+Your application must meet the needs of the user as outlined below.
 
 ### Crowdsource
 
