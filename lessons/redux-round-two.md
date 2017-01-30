@@ -215,17 +215,17 @@ Let's take a second to break this down into components.
 
 What components do you foresee being necessary? What actions? How are these going to be organized?
 
-**Components**
-  - Add Todo Form  
-  - List of Todos  
-  - Todo Item  
-  - Filter(s)  
-  - FilterMenu  
+**Components**  
+- Add Todo Form  
+- List of Todos  
+- Todo Item  
+- Filter(s)  
+- FilterMenu  
 
 Let's break down what our information each component might need to render, and what events (aka "actions") it needs to listen for.
 
 **AddTodoForm:**  
-- State: 'todos'
+- State: 'todos'  
   - In this example, I'll be using the length of the array of todos to create a unique ID every time we create a new Todo   
 
 - Actions: "ADD_TODO"  
@@ -315,8 +315,8 @@ export const setFilter = (filter) => {
 Once our actions have been fired off, we need a couple reducers to handle what that means in terms of updating our application's state.  
 
 We will need:  
-  - Something to handle our list of todos  
-  - Something to deal with setting/changing filters.   
+- Something to handle our list of todos  
+- Something to deal with setting/changing filters.   
 
 The todos reducer will handle the default state of our todo list - probably an empty array - and respond to 'ADD_TODO' and 'TOGGLE_TODO' actions.  
 
