@@ -52,7 +52,7 @@ Please read the entire rubric before beginning the project.
 
 Does it have the expected features?
 
-* 50 points - Met expectations as outlined by the user personas, the application is a solid first version. All planned features were delivered.
+* 50 points - Met expectations as outlined by the user personas, the application is a solid first version. All planned features were delivered and the application is easy to use.
 * 35 points - Some features were sacrificed to meet the deadline. At best, this is a prototype. Major features covered by the learning goals listed above were not written by the developer.
 * 10 points - Major features are missing, there are major bugs that make it impossible to use, and/or the application is not deployed to production.
 * 0 - There is no application.
@@ -65,13 +65,12 @@ Does it have the expected features?
 * 10 points - Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 * 0 points - Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
 
+### Testing
 
-### Interface
-
-* 25 points - The application is pleasant, logical, and easy to use
-* 17 points - The application has many strong pages/interactions, but a few holes in lesser-used functionality.
-* 12 points - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
-* 0 points - The application is confusing or difficult to use.
+* 25 points - The application has all routes tested and a minimum of five unit tests. No tests are failing on master and any skipped tests have an explanation of why skipped.
+* 17 points - The application has most routes tested and some unit tests. There are no tests failing testing on master.
+* 12 points - The application has a small number of routes tested and no unit tests. No tests are failing on master.
+* 0 points - The application is has no testing.
 
 ### Workflow
 
@@ -92,6 +91,8 @@ This is not part of the project score but a homework assignment. If you are choo
 * What are some interesting use-cases for WebSockets besides polling or IM'ing (aka Slack)?
 * Explain the structure and content of a JSON web tokens and how you can use a JWT to restrict a user to specific routes in your application?
 
+## Total possible points of 150 with a chance of 40 extra points
 
+## To get a 3, you need 110 / 150 points
 
-[Original project link](https://github.com/turingschool/curriculum/blob/master/source/projects/real_time.markdown)
+## To get a 4, you need 135 / 150 points
