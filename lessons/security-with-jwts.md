@@ -86,12 +86,12 @@ HMACSHA256(
 
 We include the encoded header and payload, as well as a secret. (Think of the secret as the API Secret Key you get when using a tool like Firebase.)
 
-## Using JWTs with JWT.io
+## Using JWTs with JWT.io/Auth0
 While we can implement JWTs on our own, the native spec and implementation still isn't the most user-friendly interface for developers. So, like everything else in the tech world, a simpler service was built on top of them to make it easier for us to use. One popular service created by [Auth0](https://auth0.com/) is [JWT.io](https://jwt.io/). Similar to [Firebase](https://firebase.google.com/), JWT.io provides 3rd-party authentication that allows you to secure your client-side application with logins for Google, Facebook, etc. It also allows you to make secure requests to private API endpoints on a server.
 
 
 ## Getting Started
-We're going to create a simple React message board that allows logged in users to view messages that have been previously posted, and requires a JSON Web Token to allow a user to post a message.
+We're going to create a simple React message board that allows logged in users to view messages that have been previously posted, and requires a JSON Web Token to allow a user to post a message. We'll use Auth0 to learn how to protect a route and protect an endpoint.
 
 1. Clone this [repo](https://github.com/turingschool-examples/auth0-react.git)
 2. Create a free account with Auth0 [here](https://auth0.com/signup), enable Google Authentication, and select Single Page App with React as your framework:
@@ -120,68 +120,12 @@ AUTH0_SECRET='Auth0 Secret'
 
 You'll want to copy this file and create a new one that is just titled `.env`. Replace these values with your own settings from the Auth0 client you just set up. You'll be able to see all of these values on the [settings page in Auth0](https://manage.auth0.com/#/clients). You'll have to click to 'reveal' the client secret value. Once you've updated these settings you **do not commit this file to github**. This is secret information (hence the value, 'client secret'). Double check that the `.env` file is in your `.gitignore` before pushing up your code.
 
-## Creating an Authentication Service
+## The Authentication Service
 Similar to when we used firebase to set up login and logout methods, we'll want to create an auth service that will handle user sign-in through Auth0 and store our session information in localStorage. 
 
-In the `/src/utils` directory, there is a file called `AuthService`. Some of the boilerplate code has already been filled out for you.
+In the `/src/utils` directory, there is a file called `AuthService`. This provides us with the methods we need to support login and logout, and maintains our user profile in localStorage for easy access.
 
-The first thing we need to do is utilize the [Auth0Lock]() library to configure what we want to happen when a user clicks the 'login' button. The library has already been imported for you. In the `constructor` of our AuthService class, we'll want to create a new instance of Auth0Lock:
-
-```javascript
-  // Configure Auth0
-  this.lock = new Auth0Lock(clientId, domain, {
-    auth: {
-      redirectUrl: `${window.location.origin}/login`,
-      responseType: 'token'
-    }
-  })
-```
-
-Whenever we instatiate our AuthService file, we will have access to a new property, `lock`. This code creates a new instance of Auth0Lock, which takes in our clientId and domain that we specified in our `.env` file. The final parameter is where we determine what will happen when a user logs in:
-
-1. We want to redirect the user to a pre-approved URL by setting a `redirectUrl`. Remember in our Auth0 client settings we added `http://localhost:3000/login` as a callback URL. That's what we'll want to use here. *(Note: using `window.location.origin` simply allows us to redirect to `/login` without having to worry about exactly what port we are running our app on)*
-2. We want to return the actual JSON Web Token so that we can use it for future requests. We can do this by setting `responseType` to `token`.
-
-Your constructor method should now look like this:
-
-```javascript
-  constructor(clientId, domain) {
-    super()
-
-    // Configure Auth0
-    this.lock = new Auth0Lock(clientId, domain, {
-      auth: {
-        redirectUrl: `${window.location.origin}/login`,
-        responseType: 'token'
-      }
-    })
-
-    this.lock.on('authenticated', this._doAuthentication.bind(this))
-    this.lock.on('authorization_error', this._authorizationError.bind(this))
-    this.login = this.login.bind(this)
-  }
-```
-
-Next we need a `login` method, that will actually display the pop-up that allows us to fill in our Google account information and authenticate:
-
-```javascript
-  login() {
-    this.lock.show()
-  }
-```
-
-This is as simple as calling `this.lock.show()`. This is built-in to the Auth0Lock library we just imported and configured, and will display the authentication widget (similar to Firebase).
-
-We'll also want to add a `logout` method to clear out any data when a user logs out. There are some pre-defined methods in our service that set two pieces of data in localStorage: `id_token` and `profile`. When we log out, we want to remove these keys from localStorage:
-
-```javascript
-  logout() {
-    localStorage.removeItem('id_token');
-    localStorage.removeItem('profile');
-  }
-```
-
-## Putting the Authentication to Work
+## Securing a Route
 We're going to want to work with authentication on every route in our application. In this case, we only have a login and a home route. But if our app were to grow, we'd want to make sure we were checking if a user was logged in no matter what page they landed on or what URL they came to. This means we'll want to instantiate our AuthService in our `routes` file.
 
 In the `/src/views/Main` directory, open the `routes.js` file, and import our AuthService:
@@ -239,7 +183,7 @@ In our render method, we want to make use of our `auth` prop and call the `login
 
 Now if we boot up our application and try to navigate to `http://localhost:3000/home` it should automatically redirect us to `http://localhost:3000/login`. When we click our login button, we should see the authentication widget pop up and be able to log in.
 
-## Protecting an Endpoint
+## Securing an Endpoint
 Now that we're logged in, we can see a form that should allow us to submit a new message to the board. If we try this as-is, we see we're getting an authorization error:
 
 ![unauthorized][unauthorized]
@@ -313,7 +257,7 @@ In order to authorize this particular request, we can pass in our authentication
 
 The key header here that we want to pay attention to is the `Authorization` header. We are setting this equal to 'Bearer <your token>'. The token we are retrieving from our auth service, which we've stored in localStorage.
 
-If we refresh and try to make the request again, we should see the POST request goes through successfull and our new message is rendered in the UI.
+If we refresh and try to make the request again, we should see the POST request goes through successfully and our new message is rendered in the UI.
 
 ## Resources
 - [JWT.io](https://jwt.io/)
