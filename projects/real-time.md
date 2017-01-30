@@ -65,13 +65,13 @@ Does it have the expected features?
 * 10 points - Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 * 0 points - Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
 
-
 ### Testing
 
 * 25 points - The application has all routes tested and a minimum of five unit tests. No tests are failing on master and any skipped tests have an explanation of why skipped.
 * 17 points - The application has most routes tested and some unit tests. There are no tests failing testing on master.
 * 12 points - The application has a small number of routes tested and no unit tests. No tests are failing on master.
 * 0 points - The application is has no testing.
+
 ### Workflow
 
 * 25 points - The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application.
