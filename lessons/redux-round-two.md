@@ -9,7 +9,7 @@ module: 3
   - Break down Redux concepts
   - Build a slice of a Todo App in Redux
   - Look at a completed App
-    - [Working Repo](https://github.com/martensonbj/redux-second-look)
+    - [Working Repo](https://github.com/martensonbj/redux-lesson-boilerplate)
   - Explore Testing
 
 ### Why Redux + Part 1 Of Slides
