@@ -184,7 +184,36 @@ In our render method, we want to make use of our `auth` prop and call the `login
 Now if we boot up our application and try to navigate to `http://localhost:3000/home` it should automatically redirect us to `http://localhost:3000/login`. When we click our login button, we should see the authentication widget pop up and be able to log in.
 
 ## Securing an Endpoint
-Now that we're logged in, we can see a form that should allow us to submit a new message to the board. If we try this as-is, we see we're getting an authorization error:
+Now that we're logged in, we can see a form that should allow us to submit a new message to the board. We want to secure this server-side endpoint using our Auth0 token. Let's hop into our server-side code and open up `server.js`.
+
+We can see we already have a `post` endpoint set up for messages, but it doesn't actually require any authentication or verification. We can make use of the [express-jwt](https://github.com/auth0/express-jwt) library in order to require a JWT for this request.
+
+```javascript
+let jwt = require('express-jwt');
+```
+
+With express-jwt, we can create a helper function called `authenticate` that will generate a JWT for us based on our Auth0 settings:
+
+```javascript
+let authenticate = jwt({
+  secret: new Buffer(process.env.AUTH0_SECRET, 'base64'),
+  audience: process.env.AUTH0_CLIENT_ID
+});
+```
+
+Now for any endpoint we want to secure, we can simply pass this `authenticate` function in as a second argument:
+
+```javascript
+app.post('/api/v1/messages', authenticate, (request, response) => {
+  const { message } = request.body;
+
+  message.id = message.id || Date.now();
+  app.locals.messages.push(message);
+  response.json({ message });
+});
+```
+
+Now if we try submitting a new message, we'll notice we're getting an authorization error:
 
 ![unauthorized][unauthorized]
 
@@ -217,24 +246,9 @@ We're using the fetch API to `POST` to the `/api/v1/messages` endpoint. We're pa
 
 When the request first hits, we again use our auth service to check the authenticity of the request with `auth.checkStatus()`. Even though we know we are logged in, because we've hit the home URL of our application, this particular API endpoint doesn't necessarily know where the request is coming from, and wants to be 100% certain that it's being performed by an authenticated user.
 
-Remember earlier we said that JSON Web Tokens are just encoded JSON objects that can be passed in as query params or headers. POSTing to `/api/v1/messages` is a protected endpoint that requires a signed JSON Web Token in order to return successfully. If you take a look at the `server.js` file, you can see how the request handler takes a parameter called `authenticate` to verify the request:
+Remember earlier we said that JSON Web Tokens are just encoded JSON objects that can be passed in as query params or headers. POSTing to `/api/v1/messages` is now a protected endpoint that requires a signed JSON Web Token in order to return successfully. 
 
-```javascript
-var authenticate = jwt({
-  secret: new Buffer(process.env.AUTH0_SECRET, 'base64'),
-  audience: process.env.AUTH0_CLIENT_ID
-});
-
-app.post('/api/v1/messages', authenticate, (request, response) => {
-  const { message } = request.body;
-
-  message.id = message.id || Date.now();
-  app.locals.messages.push(message);
-  response.json({ message });
-});
-```
-
-In order to authorize this particular request, we can pass in our authentication token as a header. Headers are a way to configure the request so that the server has everything it needs to process it. Let's add some headers to our request:
+In order to authorize this particular request, let's pass in our authentication token as a header. Headers are a way to configure the request so that the server has everything it needs to process it. Let's add some headers to our request:
 
 ```javascript
   fetch('/api/v1/messages',
