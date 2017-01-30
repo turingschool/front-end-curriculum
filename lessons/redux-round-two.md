@@ -45,7 +45,7 @@ Let's visualize this.
 2. **Independent Research** ( 10 Minutes )   
 Spend the next 10 minutes understanding your assigned concept below and jotting down notes - NOTEBOOKS ONLY,
 
-  **1:** [Store](http://redux.js.org/docs/api/Store.html) and [Reducers](http://redux.js.org/docs/basics/Reducers.html)   [Provider](http://redux.js.org/docs/basics/UsageWithReact.html#passing-the-store)   
+  **1:** [Store](http://redux.js.org/docs/api/Store.html) and [Reducers](http://redux.js.org/docs/basics/Reducers.html)   
   **2:** [Actions](http://redux.js.org/docs/basics/Actions.html)   [Provider](http://redux.js.org/docs/basics/UsageWithReact.html#passing-the-store)   
   **3:** [Presentational vs Container Components](http://redux.js.org/docs/basics/UsageWithReact.html#presentational-and-container-components)  
 
