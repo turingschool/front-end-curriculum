@@ -10,7 +10,7 @@ In this project you'll be building a react/redux weather app that allows you to 
 
 ### Main Goals
 
-  - Retrive and display sunrise and sunset information from the [Sunrise-Sunset API](http://sunrise-sunset.org/api)
+  - Retrieve and display sunrise and sunset information from the [Sunrise-Sunset API](http://sunrise-sunset.org/api)
   - Use the [Geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation/Using_geolocation) to determine your current location
   - Retrieve and display forecast data from the [OpenWeatherMap API](http://openweathermap.org/appid) or [WeatherUnderground API](http://api.wunderground.com/weather/api/)
   - Save "pinned" or favorite cities to display their extended weather forecasts
