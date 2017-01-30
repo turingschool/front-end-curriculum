@@ -1,3 +1,7 @@
+---
+title: Sorting Suite
+---
+
 # Sorting Suite
 
 Sorting algorithms are one of the common domains for studying Computer Science data structures and algorithms. They give us an opportunity to focus on algorithms of various complexity all solving a relatively simple problem.
@@ -267,6 +271,7 @@ mergeSort(["d", "b", "a", "c"])
 
 
 ## Evaluation Rubric
+
 
 ### 1. Fundamental JavaScript & Style
 
