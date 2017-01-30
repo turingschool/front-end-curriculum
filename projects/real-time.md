@@ -94,4 +94,5 @@ This is not part of the project score but a homework assignment. If you are choo
 ## Total possible points of 150 with a chance of 40 extra points
 
 ## To get a 3, you need 110 / 150 points
+
 ## To get a 4, you need 135 / 150 points
