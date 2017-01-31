@@ -83,9 +83,8 @@ Let's take a crack at refactoring some functions and calling functions within ot
 
 ```js
 function karateChop() {
-  console.log("KARATE!");
-  alert("KAPOW!");
   console.log("KARATE CHOP!");
+  alert("KAPOW!");
 }
 
 function ninjaAttack() {
@@ -102,9 +101,8 @@ function kapow() {
 }
 
 function karateChop() {
-  console.log("KARATE!");
-  kapow();
   console.log("KARATE CHOP!");
+  kapow();
 }
 
 function ninjaAttack() {

@@ -4,8 +4,9 @@ title: Number Guesser
 
 ## Overview
 - Build a game where the user guesses a number between 1 and 100.
-- Phases 1-3 = MASTER branch for evaluation. 
-- If you elect Phase 4, create a separate branch for that work. 
+- Phases 1-3 = pushed to Github and on MASTER branch for evaluation.
+- If you elect Phase 4, create a separate branch for that work.
+- Include a README.md in your project that summarizes the project (that does not mean paste this project spec into your README)
 
 ## Phase One: Basic Requirements
 
@@ -15,11 +16,11 @@ The application should have the following user interface components:
 - An input field for guessing the number
 - A button for submitting a guess
 - A button for clearing the input field
-- A button that resets the game 
+- A button that resets the game
 
 #### User's Guess State:
 - Display the user's most recent guess
-- Display results and feedback: 
+- Display results and feedback:
   - If their guess is too high, it should display: "That is too high"
   - If their guess is too low, it should display: "That is too low"
   - If the guess is correct, it should display: "BOOM!"
@@ -49,7 +50,9 @@ The application should have the following user interface components:
 (**Pro-tip**: You'll need to adjust the input fields to accept the new minimum and maximum numbers.)
 
 ## Phase Four: Choose Your Own Adventure
+
 You have liberty with the UI.
+
 - Make it two player.
 - Incorporate a scoring system based on how quickly user guesses correct number.
 - Turn it into a game to teach basic arithmetic to kids.
@@ -92,8 +95,8 @@ Color and font spec:
 
 ### Fundamental HTML
 
-- 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
-- 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
+- 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors and has incorporated accessibility best practices.
+- 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing and has incorporated accessibility best practices.
 - 2:  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
 - 1:  Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
 
