@@ -41,6 +41,7 @@ Alex is an instructor at a seven month developer training program in Colorado. I
 - He goes to the site to generate a new poll and adds three potential responses: "This is old hat to me", "I have an okay understanding of this", "I have no idea what you're babbling about".
 - He gets back a link to share with others that contains a voting page that shows the options for the poll.
 - He drops the link into Slack and his students vote.
+- His students need to authenticate themselves before they can vote.
 - Alex can see in real time the poll results and a picture of each student next to their response.
 - Alex feels pleased when he sees that 100% of his students are absolute masters of everything he has ever taught.
 
