@@ -8,7 +8,7 @@ layout: page
 
 ### Objectives:
 
-* Describe how your strengths make you a likeable character in your own story
+* Describe how your strengths make you a "likeable character" in your own story
 * Develop and use user stories to build an understanding of your partners' strengths as well as your own when it comes to telling your story as a developer
 
 ### Opening
@@ -27,14 +27,18 @@ Why are we drawn to stories? Stories help us better relate to the world around u
 
 When people hear a story unfold, they also develop increased empathy. We can also use storytelling to communicate who we are and why we're here pursuing this new career, so when potential employers hear your story, they are able to relate to you more. That is why learning to tell your story is an essential piece of your professional development, and our focus today will be continuing to pull out the story of **"why are you here"** using your strengths.  
 
-**Discussion:**
+**Activity:**
 
 Pixar story artist [Emma Coats described the 22 rules](http://storyshots.tumblr.com/post/25032057278/22-storybasics-ive-picked-up-in-my-time-at-pixar) that drive storytelling, including:
 
 	Pull apart the stories you like. What you like in them is a part of you; 
 	you’ve got to recognize it before you can use it.
 
-Pair up with someone with a different focus strength from yours and discuss the following:
+1. **Write:** Reflect on your focus strength and what it means to you.
+* When at Turing have you seen it in action? How did it help you overcome obstacles?
+* How have you seen yourself grow with this strength?
+
+2. **Share:** Pair up with someone with a different focus strength from yours and discuss the following:
 
 * Give a brief summary of what your focus strength means to your partner.
 * How have you seen your focus strength in action in the past? Recently? 
@@ -42,8 +46,7 @@ Pair up with someone with a different focus strength from yours and discuss the 
 * How does your strength make you likeable to someone else? 
 * Use your focus strength to answer the question "why are you here?"
 
-**Reflections:**
-
+3. **Whole Group Reflections:** 
 * What was easy during this discussion with your peer? What was difficult about it?
 * Did it help you clarify telling your own story? If so, how?
 
@@ -89,8 +92,8 @@ And here are some examples of finished user stories:
 	interests in public speaking with their newfound knowledge so that they can speak at 
 	conferences and inspire others. 
 	
-	As a person with strength in Empathy, my user wants to use the ability to relate to others 
-	so that their software reflects their users in an effective way. 
+	As a person who is Strategic, my user aims to use this new career in software to create 
+	new solutions to overcome obstacles.
 	
 Reflections:
 
