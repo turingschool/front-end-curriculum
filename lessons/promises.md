@@ -145,3 +145,4 @@ The promise object itself encapsulates all of the asynchronous logic and allows 
 ## References
 
 - ["You're Missing the Point of Promises" by Domenic Denicola](https://gist.github.com/domenic/3889970)
+- [MDN Promises](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise)
