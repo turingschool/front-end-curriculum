@@ -227,7 +227,17 @@ Before we write any queries, let's add a viewport meta tag in the ``head`` of ou
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
+The viewport metatag shown above is saying...
 
+```
+width=device-width
+initial-scale=1
+```
+
+In more human terms these say..
+
+* __Width__: Make the width of the page the same width as whatever screen it is being shown on.
+* __Initial Scale__: If the page is shown in landscape (a phone turned sideways) make the page as wide as it can be within that screen.
 Let's start with our media query for large screens. We know we want our breakpoint to be 900px. Let's add a loud background color to our ``body`` just to make sure it's hooked up.
 
 ```css
