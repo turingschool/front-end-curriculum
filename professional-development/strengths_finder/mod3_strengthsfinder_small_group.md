@@ -34,12 +34,12 @@ Pixar story artist [Emma Coats described the 22 rules](http://storyshots.tumblr.
 	Pull apart the stories you like. What you like in them is a part of you; 
 	you’ve got to recognize it before you can use it.
 
-1. **Write:** Reflect on your focus strength and what it means to you.
+**Write:** Reflect on your focus strength and what it means to you.
 
 * When at Turing have you seen it in action? How did it help you overcome obstacles?
 * How have you seen yourself grow with this strength?
 
-2. **Share:** Pair up with someone with a different focus strength from yours and discuss the following:
+**Share:** Pair up with someone with a different focus strength from yours and discuss the following:
 
 * Give a brief summary of what your focus strength means to your partner.
 * How have you seen your focus strength in action in the past? Recently? 
@@ -47,7 +47,8 @@ Pixar story artist [Emma Coats described the 22 rules](http://storyshots.tumblr.
 * How does your strength make you likeable to someone else? 
 * Use your focus strength to answer the question "why are you here?"
 
-3. **Whole Group Reflections:** 
+**Whole Group Reflections:** 
+
 * What was easy during this discussion with your peer? What was difficult about it?
 * Did it help you clarify telling your own story? If so, how?
 
