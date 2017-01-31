@@ -35,6 +35,7 @@ Pixar story artist [Emma Coats described the 22 rules](http://storyshots.tumblr.
 	you’ve got to recognize it before you can use it.
 
 1. **Write:** Reflect on your focus strength and what it means to you.
+
 * When at Turing have you seen it in action? How did it help you overcome obstacles?
 * How have you seen yourself grow with this strength?
 
