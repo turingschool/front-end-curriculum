@@ -146,3 +146,5 @@ The promise object itself encapsulates all of the asynchronous logic and allows 
 
 - ["You're Missing the Point of Promises" by Domenic Denicola](https://gist.github.com/domenic/3889970)
 - [MDN Promises](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise)
+- [MDN Promise.Race()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
+- [MDN Promise.All()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all)
