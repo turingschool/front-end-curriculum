@@ -31,10 +31,13 @@ You may NOT take liberties with the layout, but your creative license includes:
   - This final challenge is a part of your portfolio
   - Note the rubric below for evaluation criteria
 
-### Evaluation Rubric
+***
+
+## Evaluation Rubric
 
 ### Design Integrity
 TBD
+
 ### Responsive Layout
 TBD
 
@@ -56,7 +59,7 @@ TBD
 
 ## Submission Details
 
-* __DUE by 7:30 AM 2/21/17__
+* __DUE by 7:30 AM 3/1/17__
 * Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1b1NMYdKFbiMwlnjQvu5wj0GAUn6f9VCvga-eRexeGnU/edit#gid=0)
 
 ![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
