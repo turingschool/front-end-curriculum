@@ -26,7 +26,7 @@ By the end of this module, students will be able to:
 - Understand why relational databases are valuable as data storage
 - Authenticate users and implement common client-side security features
 - Access the file system and build desktop  applications using Electron
-- 
+- Spin up a server using Node/Express to build an API that a client-side application can read from
 
 ## Graduation Requirements
 
