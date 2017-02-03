@@ -16,9 +16,9 @@ By the end of this lesson, you will:
 ## What is Localization/Internationalization?
 Localization is the process of adapting an existing website to local language and culture. Internationalization describes the patterns, strategies and conventions an application should use in order to facilitate easier localization in the future. While not every app you build will need to be localized, it's important to keep internationalization strategies in mind when building an app that may need to reach wider audiences in the future.
 
-Many people mistakenly believe localization simply refers to rendering the page text in multiple languages. In reality, it's a bit more involved than that.
+Many people mistakenly believe localization simply refers to rendering the page text in multiple languages. In reality, it's a bit more involved than that. There are many technical and design decisions that are affected by localization, which we'll learn more about later in this lesson.
 
-You'll often hear of these terms as acronyms: l10n and i18n. (The first letter of the word, how many letters exist before the last letter of the word.) These acronyms are often used in the naming of libraries that help us achieve internationalization and localization goals.
+You'll often hear of these terms described with the following acronyms: l10n and i18n. (The first letter of the word, how many letters exist before the last letter of the word, and the last letter of the word. Really not any easier to say and just more confusing to see.) These acronyms are often used in the naming of libraries that help us achieve internationalization and localization goals.
 
 ## Detecting a User's Locale
 If we want to localize our application, the first thing we need to do is detect what locale your user prefers. A locale denotes a bit more than just language -- it also signifies cultural preferences in how the language should be expressed.
@@ -182,6 +182,9 @@ Some languages, such as Arabic, are read right-to-left. Another attribute you mi
 This provides a more familiar layout for RTL readers, although it may look incredibly bizarre to us. Facilitating this mirror image layout is simply a matter of having that attribute on the HTML or body tag of each page. While [you can also use CSS](https://css-tricks.com/almanac/properties/d/direction/), it is recommended to use the HTML attribute in case the CSS fails for any reason (e.g. it does not load, someone has styles turned off)
 
 [rtl-design]: /assets/images/lessons/localization/rtl-design.png
+
+### Simplifying Partially-Localized Pages
+If you don't have a fully complete localization for a particular language, you might want to consider hiding the parts of your application that have not yet been translated. They would likely be less useful and even more confusing for users that don't understand the language.
 
 ### Images
 Avoid using images that include text. Sometimes logos are an exception, but prefer using CSS to position text over images if required.
