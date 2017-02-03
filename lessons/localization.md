@@ -1,6 +1,6 @@
 ---
 title: Localization / Internationalization
-length: 2 hours
+length: 1 hour
 tags: language, accessibility, localization, globalization, l10n, l18n
 module: 4
 ---
@@ -54,8 +54,30 @@ We might need this ranked list if a user's top locale isn't supported by our app
 [chrome-language-preferences]: /assets/images/lessons/localization/chrome-language-preferences.png
 
 ### Server-Side Detection
+On the server-side, we can gain access to an entire array of acceptable locales that the user has set in their browser preferences. This will allow us to fall back to a secondary locale if we don't support their first choice. (e.g. if their top locale is Chinese, and their second is Spanish, and our app has not been translated to Chinese, we could still serve up a Spanish version)
+
+Let's take a look at how to do this. We'll create a basic node/express app with a single route:
+
+```javascript
+app.get('/', function(req, res) {
+  let acceptedLocales = req.header('Accept-Language');
+  console.log(`Locales: ${acceptedLocales}`);
+});
+```
+
+If we now try to hit the root of our application, we'll see our terminal has logged a string that includes all of our ranked locales:
+
+`Locales: es,en-US;q=0.8,en;q=0.6,la;q=0.4`
+
+The `;q=0.8` parameter simply denotes the quality/level of acceptance for this particular locale. (e.g. in this string, a user would prefer an en-US over la).
 
 ## Design Patterns & Other Considerations
+
+### URLs
+You'll often notice localized applications provide you with a locale identifier directly in the URL. For example, on [Fedex.com](http://fedex.com), you can manually select which location you'd like to view the site in. If we select 'Spain' from the drop down menu, we can see that we actually get redirected to https://spain.fedex.com/#/Main?lang=es. By using a query param in our URL to set the language, we can override any autodetection for locale and have more control over how the site content is displayed. So even if my default browser settings say to prefer English, if I decide I want to view the Spanish version of a website, I can still do that so long as the URL has an identifier in place.
+
+### Images
+Avoid using images that include text. Sometimes logos are an exception, but prefer using CSS to position text over images if required.
 
 ### RTL Locales
 Some languages, such as Arabic, are read right-to-left. Another attribute you might notice on the `html` tag is `dir`. This stands for 'direction' and should either be set equal to `ltr` (left-to-right) or `rtl` (right-to-left). There are significant design implications when localizing a web app for an RTL language. You'll notice if you were to view Wikipedia in Arabic, all of the text is aligned on the right, and almost the entire website is mirrored horizontally:
