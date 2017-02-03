@@ -82,6 +82,40 @@ Remember we said internationalization was the process of configuring our applica
 3. Creating translation files our application can pull from to display the right text
 
 ### Leverage an i18n Library
+An i18n library will help us accomplish some of these steps, and abstract away some of the more difficult logic. In this example we'll use [i18n-node](https://github.com/mashpie/i18n-node). 
+
+#### Practice: On Your Own
+Install the `i18n` library and create a new file at the root of your application called `i18n.js`. This will serve as middleware for our application to assist us in the localization process. 
+
+This file should require in the `i18n` module and set the following [configurations](https://github.com/mashpie/i18n-node#list-of-all-configuration-options):
+
+1. Support the `en-US` and `es` locales
+2. Set our locales directory to `__dirname + '/locales'`
+3. Set the default locale to `en-US`
+4. Rename the `__` API method to `translate`
+
+Finally, we want to initialize the the library, provide ourselves access to the `translate` method, and finish sending the request through:
+
+```javascript
+module.exports = function(req, res, next) {
+
+  // initialize the i18n library
+  i18n.init(req, res);
+
+  // add the translate method to our response locals
+  res.locals.translate = res.translate;
+
+  return next();
+};
+```
+
+To apply our middleware, we'll want to include this new file into our server file, and incorporate it with `app.use()`:
+
+```javascript
+const i18n = require('./i18n');
+
+app.use(i18n);
+```
 
 ### Create Your Translation Files
 Building translation files is currently a very manual process. Translation files are simple JSON files, where each key is an identifier for a piece of text to be displayed on the page, and each value is the translation of that text. For example, a translation file for our Spanish app would be named `es.json` and might look like this:
@@ -95,6 +129,17 @@ Building translation files is currently a very manual process. Translation files
 This may seem simple enough, but imagine all of the text you might have on your application. These files will get very large very fast. Not to mention, you have to continuously update every translation file for each locale you support. Though there are libraries that support creating a template for your translation files that will automatically add any new keys to each JSON file, the translation for each key must still be done manually.
 
 Services such as Google Translate are constantly improving, but the inaccuracies that still exist usually pose too great a risk to justify automatically translating your application. Most companies will either hire a translation team to do this work manually, or, rely on the help of the community to submit translations as they are able. (For example, [Mozilla's Support Application](https://support.mozilla.org/) allows users to translate any article on the page and submit it to the database.)
+
+#### Practice: On Your Own
+Remember in our i18n middleware, we specified a locales directory in the configuration option. This is where we want all of our translation JSON files to live. Create this directory at the root of your application, and add two JSON files: `en-US.json` and `es.json`. Both of these files will map to the supported locales we specified in our i18n configuration.
+
+Add a title and description key to each JSON file, and set their values equal to whatever you'd like -- just put them in the correct language!
+
+### Serving up the Localization
+
+#### Practice: On Your Own
+
+
 
 ## Design Patterns & Other Considerations
 
