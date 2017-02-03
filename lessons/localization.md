@@ -95,16 +95,13 @@ This file should require in the `i18n` module and set the following [configurati
 4. Rename the `__` API method to `translate`
 5. Set the URL query parameter to override the locale to `lang`
 
-Finally, we want to initialize the the library, provide ourselves access to the `translate` method, and finish sending the request through:
+Finally, we want to initialize the the library and finish sending the request through:
 
 ```javascript
 module.exports = function(req, res, next) {
 
   // initialize the i18n library
   i18n.init(req, res);
-
-  // add the translate method to our response locals
-  res.locals.translate = res.translate;
 
   return next();
 };
