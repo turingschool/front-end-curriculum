@@ -71,7 +71,7 @@ The place of design in tech and business has become much bigger than simply maki
 
 Good design requires the ability to take a set of restrictions framing a problem and find the best solution within those limitations to maximize impact, usability, and engagement with users. Design is all about people and how the things those people need, work.
 
-It is important to keep in mind that the problems designers solve are not typically _their own_ problems. We live in an age when our users are constantly immersed in digital products, which means they have high expectations: to them, the tech that created it is far less important than their experience with a product. If it doesn’t do that they need it to or it doesn't make them feel good, they won’t use it. Period.
+It is important to keep in mind that the problems designers solve are not typically _their own_ problems. We live in an age when our users are constantly immersed in digital products, which means they have high expectations: to them, the tech that created it is far less important than their experience with a product. If it doesn’t do what they need it to or it doesn't make them feel good, they won’t use it. Period.
 
 Successful products and businesses are made and lost through design. This is because products that offer unique and effective solutions to human problems *that are also intuitive for users to understand and use* set themselves apart from the crowd of competitors.
 
