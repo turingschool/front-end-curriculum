@@ -35,7 +35,7 @@ if (navigator.browserLanguage) {
 }
 // All other vendors
 else if (navigator.language) {
-    console.log(navigator.language);[]
+    console.log(navigator.language);
 }
 ```
 
