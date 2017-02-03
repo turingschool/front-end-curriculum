@@ -58,9 +58,16 @@ We might need this ranked list if a user's top locale isn't supported by our app
 ## Design Patterns & Other Considerations
 
 ### RTL Locales
-Some languages, such as Arabic, are read right-to-left.
+Some languages, such as Arabic, are read right-to-left. Another attribute you might notice on the `html` tag is `dir`. This stands for 'direction' and should either be set equal to `ltr` (left-to-right) or `rtl` (right-to-left). There are significant design implications when localizing a web app for an RTL language. You'll notice if you were to view Wikipedia in Arabic, all of the text is aligned on the right, and almost the entire website is mirrored horizontally:
+
+![rtl-design][rtl-design]
+
+This provides a more familiar layout for RTL readers, although it may look incredibly bizarre to us. Facilitating this mirror image layout is simply a matter of having that attribute on the HTML or body tag of each page. While [you can also use CSS](https://css-tricks.com/almanac/properties/d/direction/), it is recommended to use the HTML attribute in case the CSS fails for any reason (e.g. it does not load, someone has styles turned off)
+
+[rtl-design]: /assets/images/lessons/localization/rtl-design.png
 
 ### Dates, Numbers and Currencies
+Besides translating our text strings, we also need to keep other data points in mind such as dates, numbers and currencies. These are often formatted differently based on locale, and we want to make sure they read in an appropriate manner. 
 
 ### Resources
 * [Detecting a User's Locale](http://www.mattzabriskie.com/blog/detecting-locale)
