@@ -1,5 +1,5 @@
 ---
-title: Localization / Globalization
+title: Localization / Internationalization
 length: 2 hours
 tags: language, accessibility, localization, globalization, l10n, l18n
 module: 4
@@ -47,14 +47,19 @@ If you log `navigator.language` in your browser console, you'll likely get a str
 
 Besides having to account for differences among browsers, detecting the locale on the client-side only gives us a single locale. In reality, most browsers support ranking multiple languages in your preference settings:
 
-[chrome settings image]
+![chrome language preferences][chrome-language-preferences]
 
 We might need this ranked list if a user's top locale isn't supported by our application. Unfortunately, we can't get all of this information from the client-side, so it's often better to do your detection on the server-side.
+
+[chrome-language-preferences]: /assets/images/lessons/localization/chrome-language-preferences.png
 
 ### Server-Side Detection
 
 ## Design Patterns & Other Considerations
+
 ### RTL Locales
+Some languages, such as Arabic, are read right-to-left.
+
 ### Dates, Numbers and Currencies
 
 ### Resources
