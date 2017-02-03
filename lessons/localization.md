@@ -93,6 +93,7 @@ This file should require in the `i18n` module and set the following [configurati
 2. Set our locales directory to `__dirname + '/locales'`
 3. Set the default locale to `en-US`
 4. Rename the `__` API method to `translate`
+5. Set the URL query parameter to override the locale to `lang`
 
 Finally, we want to initialize the the library, provide ourselves access to the `translate` method, and finish sending the request through:
 
@@ -136,9 +137,39 @@ Remember in our i18n middleware, we specified a locales directory in the configu
 Add a title and description key to each JSON file, and set their values equal to whatever you'd like -- just put them in the correct language!
 
 ### Serving up the Localization
+Now that our app is configured to support two different locales, we need to actually serve up different versions of our files based on what locale a user is in. 
+
+This is a great use case for using server-side templates. Because we're going to be dynamically generating multiple parts of our content, and because we're already detecting locale on the server-side, it makes sense to use a template engine such as [EJS](http://ejs.co/).
 
 #### Practice: On Your Own
+Install the EJS module and set it as your view engine in your server file:
 
+```javascript
+app.set('view engine', 'ejs');
+```
+Next, create a `views` directory and an `index.ejs` template that will display our title and description:
+
+```html
+<html lang="<%= locale %>">
+  <head>
+    <title><%= translate ('title') %></title>
+  </head>
+  <body>
+    <h1><%= translate('title') %></h1>
+    <h3><%= translate('description') %></h3>
+  </body>
+</html>
+```
+
+To present this template when a user visits our app, we'll want to adjust our route to render `index.ejs`:
+
+```javascript
+app.get('/', function(req, res) {
+  res.render('index.ejs');
+});
+```
+
+Now when you visit your application, you should see your rendered template with localized strings. If you adjust your browser language settings, you'll notice that the localized strings change based on your top locale choice.
 
 
 ## Design Patterns & Other Considerations
