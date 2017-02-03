@@ -5,8 +5,6 @@ module: 1
 tags:
 ---
 
-### Goals
-
 In this lesson we will cover:
 
 * the Design Track and its learning goals
@@ -109,7 +107,7 @@ Obviously, the technology stack and architectural decisions engineers make are a
 
 ***
 
-Technology become so ubiquitous in our daily life that it’s taken for granted unless a user's experience with it is so exceptional that they can’t help but notice it.
+Technology has become so ubiquitous in our daily life that it’s taken for granted unless a user's experience with it is so exceptional that they can’t help but notice it.
 
 Digital tools are everywhere and are used for almost everything we do during our daily lives. We ask users to put a huge amount of trust in our products which means we’re asking them to put that trust in us. We’re asking them to give us their email address, their home address, their social security numbers, their bank account information. That’s a lot. They should expect a lot from us in return.
 
