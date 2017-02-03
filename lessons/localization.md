@@ -61,15 +61,22 @@ Let's take a look at how to do this. We'll create a basic node/express app with 
 ```javascript
 app.get('/', function(req, res) {
   let acceptedLocales = req.header('Accept-Language');
-  console.log(`Locales: ${acceptedLocales}`);
+  res.send(`Locales: ${acceptedLocales}`)
 });
 ```
 
-If we now try to hit the root of our application, we'll see our terminal has logged a string that includes all of our ranked locales:
+If we now try to hit the root of our application, we'll now see a string displayed that includes all of our ranked locales:
 
 `Locales: es,en-US;q=0.8,en;q=0.6,la;q=0.4`
 
 The `;q=0.8` parameter simply denotes the quality/level of acceptance for this particular locale. (e.g. in this string, a user would prefer an en-US over la).
+
+This `req.header('Accept-Language')` value is given to us as a request header (similar to when you've specified Authorization headers or Accept-Content headers) automatically by the browser. If we look at our request in the browser dev tools, we can see this information has been passed through for us by the browser:
+
+![request-headers][request-headers]
+
+[request-headers]: /assets/images/lessons/localization/request-headers.png
+
 
 ## Design Patterns & Other Considerations
 
