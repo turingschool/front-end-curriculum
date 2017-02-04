@@ -5,9 +5,19 @@ title: PostWork
 
 # Front-End Postwork
 
-## 
+After you leave Turing you will undoubtedly have a bookmarks tab full of all the technology you should be learning, all the blog posts you should read, all the videos you should watch, etc etc etc.
 
-## JavaScript Resources
+If you're feeling overwhelmed, this postwork document is meant to be a small list of resources compiled by your front-end team to keep your skills sharp in the next 3 to 6 months.
+
+While you're in the interview process, you should have an answer to the question 'what have you done since you graduated?'.
+
+During your first six months of the job, you should have an answer to the question 'why do you deserve a raise?'.
+
+Pick a chunk of time _every day_ that you'll dedicate to working through these resources. Define success for yourself by having a hard stop.
+
+For example, if you're on vacation, commit to doing two hours of code with your morning coffee. At the two hour mark, close your computer and allow yourself to enjoy the rest of the day. You might end up opening your computer right back up - but always know when you have 'successfully hit your goal'.
+
+## Code Resources
 
 #### The [The 2017 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2017) by Frontend Masters
 
@@ -17,13 +27,19 @@ Download in .pdf, .epub or .mobi [here](https://www.gitbook.com/book/frontendmas
 
 If you don't want to download a pdf, check out the easier to browse 2016 version [here](https://www.frontendhandbook.com/)
 
+Review this book when you're feeling imposter syndrome coming on. Think about how many of the topics listed here you already know! 
+
+Dig in to some of the resources and review.
+
 #### [30 Day Vanilla JS Coding Challenge](https://javascript30.com/)
 
 Build 30 things in 30 days with 30 tutorials. No frameworks. No compilers. No libraries. No boilerplace.
 
 Make sure your fundamentals don't atrophy.
 
-## Community and Professional Skills
+Do these challenges. Post your results in your cohort channel.
+
+## Community and Professional Skills Resources
 
 #### Blog
 
@@ -43,8 +59,10 @@ Join the `#thought-leadership` channel in slack and get advice, lists of upcomin
 
 [Lanyard.com](http://lanyrd.com/calls/) has a pretty comprehensive list of calls for speakers.
 
-## Workflow and Tools
+#### Leverage the Turing Community
 
-## HTML & CSS Resources
+Reach out early and often with Meg, Lia and the rest of the professional skills team.
 
-## Design, UX, and UI Resources
+Reach out to your instructors for advice.
+
+Most importantly, use your cohort-mates and don't let your groups slack channel go silent. 
