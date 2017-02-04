@@ -5,11 +5,11 @@ title: Front-End Postwork
 
 After you leave Turing you will undoubtedly have a bookmarks tab full of all the technology you should be learning, all the blog posts you should read, all the videos you should watch, etc etc etc.
 
-If you're feeling overwhelmed, this postwork document is meant to be a small list of resources compiled by your front-end team to keep your skills sharp in the next 3 to 6 months.
+If you're feeling overwhelmed, **this postwork document is meant to be a small list of resources and advice to keep your skills sharp in the next 3 to 6 months**.
 
-While you're in the interview process, you should have an answer to the question 'what have you done since you graduated?'.
+While you're in the **interview process**, have an answer to the question `what have you done since you graduated?`.
 
-During your first six months of the job, you should have an answer to the question 'why do you deserve a raise?'.
+During your **first six months of the job**, have an answer to the question `why do you deserve a raise?`.
 
 Pick a chunk of time _every day_ that you'll dedicate to working through these resources. Define success for yourself by having a hard stop.
 
@@ -81,3 +81,7 @@ Reach out early and often with Meg, Lia and the rest of the professional skills 
 Reach out to your instructors for advice.
 
 Most importantly, use your cohort-mates and don't let your groups slack channel go silent. 
+
+## Contributing
+
+This postwork is part of the front-end-curriculum repo at the Turing School of Software and Design. Feel free to send Pull Requests or raise issues in [our repository](https://github.com/turingschool/front-end-curriculum).
