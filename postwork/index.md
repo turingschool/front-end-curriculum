@@ -17,7 +17,7 @@ For example, if you're on vacation, commit to doing two hours of code with your 
 
 ## Code Resources
 
-### The [The 2017 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2017) by Frontend Masters
+### [The 2017 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2017) by Frontend Masters
 
 ```
 This is a guide that anyone could use to learn about the practice of front-end development. It broadly outlines and discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2016.
@@ -59,7 +59,7 @@ Join the `#thought-leadership` channel in slack and get advice, lists of upcomin
 
 [Lanyard.com](http://lanyrd.com/calls/) has a pretty comprehensive list of calls for speakers.
 
-### Leverage the Turing Community
+###g Leverage the Turing Community
 
 Reach out early and often with Meg, Lia and the rest of the professional skills team.
 
