@@ -1,9 +1,7 @@
 ---
 layout: page
-title: PostWork
+title: Front-End Postwork
 ---
-
-# Front-End Postwork
 
 After you leave Turing you will undoubtedly have a bookmarks tab full of all the technology you should be learning, all the blog posts you should read, all the videos you should watch, etc etc etc.
 
@@ -19,11 +17,13 @@ For example, if you're on vacation, commit to doing two hours of code with your 
 
 ## Code Resources
 
-#### The [The 2017 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2017) by Frontend Masters
+### The [The 2017 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2017) by Frontend Masters
 
-> This is a guide that anyone could use to learn about the practice of front-end development. It broadly outlines and discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2016.
+```
+This is a guide that anyone could use to learn about the practice of front-end development. It broadly outlines and discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2016.
+```
 
-Download in .pdf, .epub or .mobi [here](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/details))
+Download in .pdf, .epub or .mobi [here](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/details)
 
 If you don't want to download a pdf, check out the easier to browse 2016 version [here](https://www.frontendhandbook.com/)
 
@@ -31,7 +31,7 @@ Review this book when you're feeling imposter syndrome coming on. Think about ho
 
 Dig in to some of the resources and review.
 
-#### [30 Day Vanilla JS Coding Challenge](https://javascript30.com/)
+### [30 Day Vanilla JS Coding Challenge](https://javascript30.com/)
 
 Build 30 things in 30 days with 30 tutorials. No frameworks. No compilers. No libraries. No boilerplace.
 
@@ -41,7 +41,7 @@ Do these challenges. Post your results in your cohort channel.
 
 ## Community and Professional Skills Resources
 
-#### Blog
+### Blog
 
 Increase your value as a developer by writing blog posts. Avoid oversharing personal details, use good titles, use refactored code examples and format the post well. Imagine what blog post you had wish you had found when you were googling a problem.
 
@@ -49,7 +49,7 @@ Use a site like [medium.com](https://medium.com/) for hosting so that you have a
 
 [Lesson](https://github.com/turingschool/professional_skills/blob/master/module_four/writing_a_blog_post_and_peer_review.md)
 
-#### Record Videos & Give Talks
+### Record Videos & Give Talks
 
 If you want to give a conference talk someday, prove that you can do it with a screencast or a tutorial video. Make the videos small and be prepared to record them multiple times.
 
@@ -59,7 +59,7 @@ Join the `#thought-leadership` channel in slack and get advice, lists of upcomin
 
 [Lanyard.com](http://lanyrd.com/calls/) has a pretty comprehensive list of calls for speakers.
 
-#### Leverage the Turing Community
+### Leverage the Turing Community
 
 Reach out early and often with Meg, Lia and the rest of the professional skills team.
 
