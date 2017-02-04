@@ -33,11 +33,26 @@ Dig in to some of the resources and review.
 
 ### [30 Day Vanilla JS Coding Challenge](https://javascript30.com/)
 
+```
 Build 30 things in 30 days with 30 tutorials. No frameworks. No compilers. No libraries. No boilerplace.
+```
 
 Make sure your fundamentals don't atrophy.
 
 Do these challenges. Post your results in your cohort channel.
+
+### Specific Topic Resources
+
+Below is a list of pretty wonderful free resources on some specific topics that you could check out if you're interested.
+
+- [Node: The Art of Learning Node](https://github.com/maxogden/art-of-node)
+- [Electron: Steve Kinney's Electron Frontend Masters Workshop](https://frontendmasters.com/live-event/electron-live/)
+- [Deep in the Fundamental JavaScript Weeds: You Don't Know JS Series](https://github.com/getify/You-Dont-Know-JS)
+- [Interviews: A Curated List of Awesome Interview Questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
+- [HTML & CSS: Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/)
+- [React: React Cheat Sheet](http://reactcheatsheet.com/)
+
+To dive deeper, checkout the lists of resources in the frontend masters handbook!
 
 ## Community and Professional Skills Resources
 
@@ -47,7 +62,7 @@ Increase your value as a developer by writing blog posts. Avoid oversharing pers
 
 Use a site like [medium.com](https://medium.com/) for hosting so that you have a higher chance of the post being found.
 
-[Lesson](https://github.com/turingschool/professional_skills/blob/master/module_four/writing_a_blog_post_and_peer_review.md)
+Review this [lesson](https://github.com/turingschool/professional_skills/blob/master/module_four/writing_a_blog_post_and_peer_review.md) for more ideas/best practices.
 
 ### Record Videos & Give Talks
 
@@ -59,7 +74,7 @@ Join the `#thought-leadership` channel in slack and get advice, lists of upcomin
 
 [Lanyard.com](http://lanyrd.com/calls/) has a pretty comprehensive list of calls for speakers.
 
-###g Leverage the Turing Community
+### Leverage the Turing Community
 
 Reach out early and often with Meg, Lia and the rest of the professional skills team.
 
