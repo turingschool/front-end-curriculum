@@ -10,153 +10,168 @@ module: 3
 
 <section>
   <h2>Ember CLI</h2>
-  <ul>
-    <li><pre><code>npm install -g ember-cli@2.11</code></pre></li>
-    <li><pre><code>ember --help</code></pre></li>
-    <li>
-      <pre><code>ember new project-name</code></pre>
-      Out of the box, you will get:
-      <ul>
-        <li>A dev server</li>
-        <li>Templates</li>
-        <li>JS and CSS Minification (think Webpack)</li>
-        <li>ES6 with Babel Presets</li>
-      </ul>
-    </li>
-    <li>
-      <pre>
-        <code>
-          ember server
-          ember serve
-          ember s
-        </code>
-      </pre>
-    </li>
-  </ul>
+  <section>
+    <pre><code>npm install -g ember-cli@2.11</code></pre>
+    <pre><code>ember --help</code></pre>
+    <pre><code>ember new project-name</code></pre>
+  </section>
+
+  <section>
+    Out of the box, you will get:
+    <ul>
+      <li>A dev server</li>
+      <li>Templates</li>
+      <li>JS and CSS Minification (think Webpack)</li>
+      <li>ES6 with Babel Presets</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Ember Dev Server</h2>
+    <pre>
+      <code>
+        ember server
+        ember serve
+        ember s
+      </code>
+    </pre>
+  </section>
 </section>
 
 <section>
-  <h1>Folder Structure</h1>
-  <div>
-    <pre><code>
-      app/
-      config/
-      public/
-      node_modules/
-      tests/
-      vendor/
+  <h2>Folder Structure</h2>
+  <section>
+    <div>
+      <pre><code>
+        app/
+        config/
+        public/
+        node_modules/
+        tests/
+        vendor/
 
-      bower.json
-      ember-cli-build.js
-      package.json
-      README.md
-      testem.js
-    </code></pre>
+        bower.json
+        ember-cli-build.js
+        package.json
+        README.md
+        testem.js
+      </code></pre>
+    </div>
+  </section>
 </section>
 
 <section>
-  <h1>Ember Data Flow</h1>
+  <h2>Ember Data Flow</h2>
   <ul>
     <li><a href="https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png">Ember Core Concepts</a></li>
   </ul>
 </section>
 
 <section>
-  <h2>Testing</h2>
-  <ul>
-    <li>Ember's built-in testing framework allows for TDD using Acceptance Tests</li>
-    <li>
-      <pre><code>ember g acceptance-test test-name</code></pre>
-      <p>This will generate a test file in <code>tests/acceptance/test-name-test.js</code></p>
-      <p>Let's check it out.</p>
-    </li>
-    <li>
-      <code>ember test --server</code>
-    </li>
-  </ul>
+  <section>
+    <h2>Testing</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Ember's built-in testing framework allows for TDD using Acceptance Tests</li>
+      <li>
+        <pre><code>ember g acceptance-test test-name</code></pre>
+        <p>This will generate a test file in <code>tests/acceptance/test-name-test.js</code></p>
+        <p>Let's check it out.</p>
+      </li>
+      <li>
+        <code>ember test --server</code>
+      </li>
+    </ul>
+  </section>
 </section>
 
 <section>
-  <h2>Routes</h2>
-  <ul>
-    <li>Ember applications are organized and run by "Routes".</li>
-    <ol>
-      <li>User navigates to a route. Example: `'/'`.</li>
-      <li>Ember Router maps the URL to a particular `Route Handler`</li>
-      <li>The Route Handler renders the template associated with said route.</li>
-      <li>The Route Handler hands the template the Model the template needs to know about.</li>
-    </ol>
-  </ul>
+  <section>
+    <h2>Routes</h2>
+  </section>
+  <section>
+      <p>Ember applications are organized and run by "Routes".</p>
+      <ol>
+        <li>User navigates to a route. Example: `'/'`.</li>
+        <li>Ember Router maps the URL to a particular `Route Handler`</li>
+        <li>The Route Handler renders the template associated with said route.</li>
+        <li>The Route Handler hands the template the Model the template needs to know about.</li>
+      </ol>
+  </section>
 </section>
 
 <section>
+  <pre><code>ember g route route-name</code></pre>
+  <p>Generates:</p>
   <ul>
-    <li><code>ember g route route-name</code></li>
-    <li>Generates:<br/>
-      A route file: <pre><code> app/routes/about.js </code></pre>
-      A template: <pre><code> app/templates/about.hbs </code></pre>
-      A test: <pre><code> tests/unit/routes/about-test.js </code></pre>
-      Updates the router.js <pre><code> updating router: add route about </code></pre>
-    </li>
+    <li>A route file: <pre><code> app/routes/about.js </code></pre></li>
+    <li>A template: <pre><code> app/templates/about.hbs </code></pre></li>
+    <li>A test: <pre><code> tests/unit/routes/about-test.js </code></pre></li>
+    <li>Updates the `router.js` <pre><code> updating router: add route about </code></pre></li>
   </ul>
 </section>
 
 <section>
   <h2>Model Hook</h2>
-  <ul>  
-    <li><pre><code>
-    // app/routes/modelName.js
+  <section>
+    <pre><code>
+      // app/routes/modelName.js
       model() {
         return modelName;
       }
-      </code></pre></li>
-      <li>Ember calls for this `model hook` at various times throughout the lifecycle of the app.<br/>
-      One example would be when a user enters the `rentals` route.</li>
-      <li>`model hook` returns the array of models and passes it to the template</li>
-  </ul>
+    </code></pre>
+    <p>Ember calls for this `model hook` at various times throughout the lifecycle of the app.<br/>
+      One example would be when a user enters the `rentals` route.</p>
+    <p>`model hook` returns the array of models and passes it to the template</p>
+  </section>
 </section>
 
 <section>
   <h2>Models</h2>
   <p>Objects that represent data that your application presents to the user</p>
-  <ul>
-    <li>Ie: an app might have a `User Model` with properties like "firstName" or "lastName"</li>
-    <li>
-      <pre><code>
-        // app/models/user.js
+  <section>
+      <p>Ie: an app might have a `User Model` with properties like "firstName" or "lastName"</p>
+      <p>
+        <pre><code>
+          // app/models/user.js
 
-        import DS from 'ember-data';
+          import DS from 'ember-data';
 
-        export default DS.Model.extend({
-            firstName: DS.attr('string'),
-            lastName: DS.attr('string'),
+          export default DS.Model.extend({
+              firstName: DS.attr('string'),
+              lastName: DS.attr('string'),
 
-            fullName: Ember.computed('firstName', 'lastName', () => {
-              return `${this.get('firstName')} ${this.get('lastName')}`;
-            });
-          })
-      </code></pre>
-    </li>
-  </ul>
+              fullName: Ember.computed('firstName', 'lastName', () => {
+                return `${this.get('firstName')} ${this.get('lastName')}`;
+              });
+            })
+        </code></pre>
+      </p>
+  </section>
 </section>
 
 <section>
   <h2>Ember Store</h2>
-  <p>Provided by `Ember Data`</p>
-  <p>Central repository of models in your app</p>
-  <p>Components and Routes can ask the store for models to then send to the templates</p>
-  <p>`this.get('store').findRecord('user', params.user_id)`</p>
-  <p>PRO-TIP: Store is available by default in Routes, and Controllers. NOT Components.</p>
+  <section>
+    <p>Provided by `Ember Data`</p>
+    <p>Central repository of models in your app</p>
+    <p>Components and Routes can ask the store for models to then send to the templates</p>
+    <p>`this.get('store').findRecord('user', params.user_id)`</p>
+    <p>PRO-TIP: Store is available by default in Routes, and Controllers. NOT Components.</p>
+  </section>
 </section>
 
 <section>
   <h2>Controllers</h2>
-  <ul>
-    <li>Rendered by the router when entering a Route</li>
-    <li>Receives the `model` (whatever the Route's `model hook` returns)</li>
-    <li>The first place actions bubble up to find their behavior</li>
-    <li>
-      <pre><code>
+  <section>
+    <ul>
+      <li>Rendered by the router when entering a Route</li>
+      <li>Receives the `model` (whatever the Route's `model hook` returns)</li>
+      <li>The first place actions bubble up to find rules about behavior</li>
+    </ul>
+  </section>
+  <section>
+    <pre><code>
       // In template
       {{#if isExpanded}}
         &lt;button {{action "toggleBody"}}&gt;Hide Body&lt;/button&gt;
@@ -175,29 +190,36 @@ module: 3
           }
         }
       });
-    </li>
-    <li>"Controller are still an integral part of Ember architecture"</li>
-  </ul>
+    </code></pre>
+  </section>
+  <section>
+    <p>"Controller are still an integral part of Ember architecture"</p>
+  </section>
 </section>
 
 <section>
   <h2>Components</h2>
-  <ul>
-    <li>Components allow different parts of your app to share functionality.</li>
-    <li>ProTip: Dashes are REQUIRED in every component name.</li>
-    <li>Components have two parts: <br/>
-      1. A template `app/templates/components/my-component.hbs`<br/>
-      2. A JS source file `app/components/my-component.js`
-    </li>
-    <li>To invoke a component:
-      <code><pre>
-      {{#each model as |item|}}
-        {{my-component item=itemUnit}}
-      {{/each}}
-      </pre></code>
-      Notice the name of the component matches the name of the my-compnent.js file. Then we assign each "unit" we are iterating over as the whatever we designate within the pipes.
-    </li>
-  </ul>
+  <section>
+    <p>Components allow different parts of your app to share functionality.</p>
+    <p><strong>ProTip</strong>: Dashes are REQUIRED in every component name.</p>
+  </section>
+  <section>
+    Components have two parts:
+    <ol>
+      <li>A template `app/templates/components/my-component.hbs`</li>
+      <li>A JS source file `app/components/my-component.js`</li>
+    </ol>
+  </section>
+  <section>
+    <p>To invoke a component in a template file:</p>
+      <pre><code>
+        {{#each model as |item|}}
+          {{my-component item=itemUnit}}
+        {{/each}}
+      </code></pre>
+    <p>Notice the name of the component matches the name of the my-component.js file.</p>
+    <p>Then we assign each "unit" we are iterating over as the whatever we designate within the pipes.</p>
+  </section>
 </section>
 
 <section>
@@ -209,9 +231,9 @@ module: 3
         <code>&lt;div&gt;This is an example DIV in an Ember Template&lt;/div&gt;</code>
       </pre>
     </li>
-    <li><pre><code>
-      {{Handlebars}}
-      // templates.hbs
+    <li>
+      <pre><code>
+        {{Handlebars}}
       </code></pre>
     </li>
     <li>&lt;div&gt;Hi {{name}}, this is a valid Ember template!&lt;/div&gt;</li>
