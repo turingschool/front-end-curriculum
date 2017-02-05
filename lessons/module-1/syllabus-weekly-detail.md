@@ -10,6 +10,8 @@ title: Syllabus Weekly Detail
 |Lessons     | HTML I & HTML II, CSS I, JS I & JS II, Terminal, Personal Branding I |
 |Assignment  | Establish a __routine__. Set healthy study __habits__ early. Write __code everyday__. |
 
+|Lessons     | [HTML I](http://frontend.turing.io/lessons/module-1/html-1.html) & [HTML II](http://frontend.turing.io/lessons/module-1/html-2.html), [CSS I](http://frontend.turing.io/lessons/module-1/css-1.html), [JS I](http://frontend.turing.io/lessons/module-1/js-1.html) & [JS II](http://frontend.turing.io/lessons/module-1/js-2.html), [Terminal](http://frontend.turing.io/lessons/module-1/getting-around-in-the-terminal.html), [Personal Branding I](https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/professional_development/module_one/identity_essentials.markdown) |
+
 ### WK 2: Putting the Pieces Together
 
 |Mindset     | _Open, optimistic, invested_. |
