@@ -1,0 +1,163 @@
+---
+title: Introduction To Ember
+layout: presentation
+module: 3
+---
+
+// FOLLOW UP:
+  - Vendor directory
+  - Addons?
+  - Model vs Model Hook in Routes
+  - Controller vs Component
+
+<section>
+  <h1>Introduction To Ember</h1>
+</section>
+
+<section>
+  <h2>Ember CLI</h2>
+  <ul>
+    <li><pre><code>npm install -g ember-cli@2.11</code></pre></li>
+    <li><pre><code>ember --help</code></pre></li>
+    <li>
+      <pre><code>ember new project-name</code></pre>
+      Out of the box, you will get:
+        - A dev server
+        - Templates
+        - JS and CSS Minification
+        - ES6 with Babel Presets
+    </li>
+    <li>
+      <pre>
+        <code>
+          ember server
+          ember serve
+          ember s
+        </code>
+      </pre>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h1>Folder Structure</h1>
+  <div>
+    <pre><code>
+      app/
+      config/
+      public/
+      node_modules/
+      tests/
+      vendor/
+
+      bower.json
+      ember-cli-build.js
+      package.json
+      README.md
+      testem.js
+    </code></pre>
+</section>
+
+<section>
+  <h1>Ember Data Flow</h1>
+  <ul>
+    <li>![ember work flow](https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png)
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Testing</h2>
+  <ul>
+    <li>Ember's built-in testing framework allows for TDD using Acceptance Tests</li>
+    <li>
+      <pre><code>ember g acceptance-test test-name</code></pre>
+      <p>This will generate a test file in <code>tests/acceptance/test-name-test.js</code></p>
+      <p>Let's check it out.</p>
+    </li>
+    <li>
+      <code>ember test --server</code>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Routes</h2>
+  <ul>
+    <li>Ember applications are organized and run by "Routes".</li>
+    <li>Step 1: User navigates to a route. Example: `'/'`.</li>
+    <li>Step 2: Ember Router maps the URL to a particular `Route Handler`</li>
+    <li>Step 3: The Route Handler renders the template associated with said route.</li>
+    <li>Step 4: The Route Handler hands the template the Model the template needs to know about.</li>
+  </ul>
+</section>
+
+<section>
+  <ul>
+    <li><code>ember g route route-name</code></li>
+    <li>Generates:<br/>
+      A route file: <pre><code> app/routes/about.js </code></pre>
+      A template: <pre><code> app/templates/about.hbs </code></pre>
+      A test: <pre><code> tests/unit/routes/about-test.js </code></pre>
+      Updates the router.js <pre><code> updating router: add route about </code></pre>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Controllers</h2>
+</section>
+
+<section>
+  <h2>Components</h2>
+  <ul>
+    <li>Components allow different parts of your app to share functionality.</li>
+    <li>ProTip: Dashes are REQUIRED in every component name.</li>
+    <li>Components have two parts: <br/>
+      1. A template `app/templates/components/my-component.hbs`<br/>
+      2. A JS source file `app/components/my-component.js`
+    </li>
+    <li>To invoke a component:
+      <code><pre>
+      {{#each model as |item|}}
+        {{my-component item=itemUnit}}
+      {{/each}}
+      </pre></code>
+      Notice the name of the component matches the name of the my-compnent.js file. Then we assign each "unit" we are iterating over as the whatever we designate within the pipes.
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h2>Templates</h2>
+  <ul>  
+    <li>Templates are the "view" layer of an Ember application.</li>
+    <li>For the most part, they look like any other fragment of HTML.
+      <pre>
+        <code>&lt;div&gt;This is an example DIV in an Ember Template&lt;/div&gt;</code>
+      </pre>
+    </li>
+    <li><pre><code>
+      {{Handlebars}}
+      // templates.hbs
+      </code></pre>
+    </li>
+    <li>&lt;div&gt;Hi {{name}}, this is a valid Ember template!&lt;/div&gt;</li>
+    <li><code>application.hbs</code>: If an application template exists, anything it in will be displayed on every page.</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Model Hook</h2>
+  <ul>  
+    <li><pre><code>
+    // app/routes/modelName.js
+      model() {
+        return modelName;
+      }
+      </code></pre></li>
+      <li>Ember calls for this `model hook` at various times throughout the lifecycle of the app.<br/>
+      One example would be when a user enters the `rentals` route.</li>
+      <li>`model hook` returns the array of models and passes it to the template</li>
+  </ul>
+</section>
