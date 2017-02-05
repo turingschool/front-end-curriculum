@@ -1,5 +1,5 @@
 ---
-title: How to build a state tree AKA wtf is: (Redux/Flux/Vuex)
+title: How to build a state tree AKA wtf is (Redux/Flux/Vuex)
 ---
 
 ### Author

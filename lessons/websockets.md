@@ -43,6 +43,27 @@ In your notebook, record your answers to the following questions:
   * A WebSocket is a persistent two-way connection between the server and the client
   * The server can push an event without having to receive a request from the client
   * The client can send messages to the server without having to wait for a response
+  * The handshake
+
+```js
+GET /chat HTTP/1.1
+Host: server.example.com
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Key: x3JJHMbDL1EzLkh9GBhXDw==
+Sec-WebSocket-Protocol: chat, superchat
+Sec-WebSocket-Version: 13
+Origin: http://example.com
+```
+
+```js
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: HSmrc0sMlYUkAGmm5OPpG2HaGWk=
+Sec-WebSocket-Protocol: chat
+```
+
 * In what contexts would you want to consider WebSockets?
   * Chat/instant messaging
   * Real-time analytics

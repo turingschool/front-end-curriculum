@@ -12,7 +12,7 @@ tags: electron
 
 ---
 
-In this project, we'll be designing an interpretation of a traditional desktop application using Electron. The choice of which application your pair is going to work on is due to Steve by 4:00pm today.
+In this project, we'll be designing an interpretation of a traditional desktop application using Electron. The choice of which application your pair is going to work on is due to Alex/Brittany/Meeka by 4:00pm today.
 
 Here are some helpful suggestions:
 
