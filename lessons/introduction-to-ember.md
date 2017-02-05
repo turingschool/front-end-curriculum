@@ -9,7 +9,9 @@ module: 3
 </section>
 
 <section>
-  <h2>Ember CLI</h2>
+  <section>
+    <h2>Ember CLI</h2>
+  </section>
   <section>
     <pre><code>npm install -g ember-cli@2.11</code></pre>
     <pre><code>ember --help</code></pre>
@@ -222,6 +224,8 @@ module: 3
   </section>
 </section>
 
+
+/// *********************** ///
 <section>
   <h2>Templates</h2>
   <ul>  
