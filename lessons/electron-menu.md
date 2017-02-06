@@ -6,7 +6,7 @@ status: draft
 
 ## Getting Set Up
 
-[Continuing from the multiple windows lesson.]((http://frontend.turing.io/lessons/electron-multiple-windows.html) 
+[Continuing from the multiple windows lesson.](http://frontend.turing.io/lessons/electron-multiple-windows.html) 
 
 ## Adding Menu Items
 
