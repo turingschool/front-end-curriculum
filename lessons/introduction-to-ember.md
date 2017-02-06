@@ -43,7 +43,7 @@ Out of the box, you will get:
 ```
 
 ## Ember Data Flow
-![Ember Core Concepts](https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png")
+[Ember Core Concepts](https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png")
 
 ## Testing
 Ember's built-in testing framework allows for TDD using Acceptance Tests.
@@ -152,50 +152,45 @@ export default Ember.Controller.extend({
 Components allow different parts of your app to share functionality.  
 **ProTip**: Dashes are *REQUIRED* in every component name.  
 
-Components have two parts:
-- A template `app/templates/components/my-component.hbs`  
-- A JS source file `app/components/my-component.js`  
+Components have two parts:  
+- A template: `app/templates/components/my-component.hbs`  
+- A JS source file: `app/components/my-component.js`  
 
-To invoke a component in a template file:
+To invoke a component in a template file:  
 
-```js
-{{#each model as |item|}}
-{{my-component item=itemUnit}}
-{{/each}}
-```
+{{#each model as |item|}}  
+  {{my-component item=itemUnit}}  
+{{/each}}  
 
 Notice the name of the component matches the name of the my-component.js file.  
 
 Then we assign each "unit" we are iterating over as the whatever we designate within the pipes...
 
-## Templates
+## Templates  
 Templates are the "view" layer of an Ember application.  
 
 For the most part, they look like any other fragment of HTML.  
 
-```html
-<div>This is an example DIV in an Ember Template</div>
-```
+<div>This is an example DIV in an Ember Template</div>  
 
-## {{Handlebars}}
+## Handlebars  
 
-```html
-<div>Hi {{name}}, this is a valid Ember template!</div>
-```
+<div>Hi {{name}}, this is a valid Ember template!</div>  
 
 ## Application Template
 If an application template exists, anything it in will be displayed on every page.
 
-## FAQ
+## FAQ  
+
 #### Q: Controller vs Component  
 A: First of all: controllers are getting ditched shortly. [Proof](https://i.imgur.com/TgmUDac.png).  
 Components have everything controllers have, plus stuff the views have.
 
-#### Q: So...then what's a controller?</h2>
+#### Q: So...then what's a controller?
 Can hold onto short term state.  
 Actions get sent to the controller first.  
 For example, if you send a variable to your view (ie `<p>{{someText}}</p>`), your app will check the controller for info first before bubbling up to the route.  
 
 ## ProTips
-- Check documentation **DATE**.
+- Check documentation **DATE**.  
 - Use `return false` or `return true` to your advantage to either stop or continue bubbling up the event chain.  

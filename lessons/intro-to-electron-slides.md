@@ -54,9 +54,10 @@ layout: presentation
   <section>
     <h3>Greater Flexibility & Permissions</h3>
     <ul>
-      <li>Browsers are limited in their capabilities due to security concerns</li>
-      <li>Web apps can't access the file system, and browsers can't execute code that's not written in JavaScript</li>
-      <li>Don't have to worry about nuances when developing for browsers (feature detection, fallbacks, etc.) because we're already pinned down the underlying technologies</li>
+      <li>less of the security concerns we have in browsers</li>
+      <li>web apps can't access the file system</li>
+      <li>browsers can't execute code not written in JavaScript</li>
+      <li>no need to worry about nuances when developing for browsers (feature detection, fallbacks, etc.)</li>
     </ul>
   </section>
 </section>
@@ -67,11 +68,20 @@ layout: presentation
   </section>
   <section>
     <h3>Chromium Content Module</h3>
-    <p>[ models - operations - views - events ]</p>
+    <ul>
+      <li>open-source version of Google Chrome's browser</li>
+      <li>core technology required to render HTML/CSS/JS</li>
+      <li>Includes V8 JS Engine & Blink Rendering Engine</li>
+      <li>Doesn't allow for anything within the shell of the browser (bookmarks/syncing/extensions/etc.)</li>
+    </ul>
   </section>
   <section>
     <h3>Node.js</h3>
-    <p>[ models - views - presenters ]</p>
+    <ul>
+      <li>runtime for developing server-side apps using JS</li>
+      <li>includes APIs for accessing file systems/creating servers/loading external modules</li>
+      <li>allowed front-end devs to more easily transition to writing server-side code</li>
+    </ul>
   </section>
   <section>
     <h3>Two Types of Processes:</h3>
