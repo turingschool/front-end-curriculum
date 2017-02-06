@@ -28,11 +28,6 @@ layout: presentation
   </section>
   <section>
     <h3>Creating GUIs for node apps</h3>
-    <p>When you want to build an app that behaves like a native desktop app</p>
-  </section>
-  </section>
-  <section>
-    <h3>Creating GUIs for node apps</h3>
     <ul>
       <li>Anything you can do in the browser, you can do in an Electron app</li>
     </ul>
