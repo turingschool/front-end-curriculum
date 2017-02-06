@@ -4,7 +4,13 @@ module: 4
 status: draft
 ---
 
-So, this functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer.
+## Getting Set Up
+
+[Continuing from the file dialog lesson.](http://frontend.turing.io/lessons/electron-file-dialogs.html)
+
+## Creating Multiple Windows
+
+So, our functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer.
 
 Let's import `createWindow()` as well.
 

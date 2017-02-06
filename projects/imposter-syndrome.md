@@ -31,20 +31,20 @@ A simple application done really well is better than a complicated application d
 
 We're going to do something that hasn't really been done too many times in the past. We'll be wading through plenty of uncharted waters and have to figure out a lot of the solutions on our own. The hope is that you'll have the foundation of something worth talking about at the end of the project, but the main goal is to learn a ton.
 
-### Pre-Work
+### Resources
 
-You'll be expected to have reviewed the following materials by Monday.
+Watch Steve's talks on Electron for extra prep:
 
 1. [Building Desktop Applications with Node and Electron](https://www.youtube.com/watch?v=rbSvc8_BHaw)
-1. [Getting Started with Electron](https://vimeo.com/155240396)
+2. [Getting Started with Electron](https://vimeo.com/155240396)
 
 ## Requirements
 
 Since this is [terra incognita][], a big part of the project will be documenting our travels. One of the goals of this project is strengthen your portfolio and there is no better way to do that than to showcase your expertise in an area that not may other people know about. In addition to programming, you'll be writing a a series of blog posts:
 
 1. An introduction to Electron along with any other libraries you're using (e.g. you may decide you want to manage your UI with React or Vue). Discuss how they work (both individually as well as how they work together), why you chose the additional libraries you chose, and why you chose them over the alternatives.
-1. A particular technical problem that you encounter and how you solved it (or your efforts to solve it, if you didn't end up solving it)
-1. A post-mortem on what went well and what you would improve upon if you were to continue working on this project or if you started over
+2. A particular technical problem that you encounter and how you solved it (or your efforts to solve it, if you didn't end up solving it)
+3. A post-mortem on what went well and what you would improve upon if you were to continue working on this project or if you started over
 
 Each section is worth 15 points for a total of 45 points.
 
@@ -85,8 +85,8 @@ Instructor/developers will select one feature in the project to review for this 
 
 ### Workflow (20 Points)
 
-* 20: The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches.
-* 15: The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review.
+* 20: The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches. Your team uses Waffle effectively to create small, single functionality user stories that are assigned to team members.
+* 15: The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review. Your team uses Waffle but user stories are large, broad features.
 * 5: The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting issues in the code base. (This is important. These issues should not be able to make it past code review.)
 * 1: The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0: The application was not checked into version control.
@@ -94,4 +94,4 @@ Instructor/developers will select one feature in the project to review for this 
 #### Extensions (20 points each)
 
 - Developer contributes to or creates an npm module/library.
-- Developer packaged their application for distribution.
+- Developer packaged their application for distribution aka you can send me a zip folder with your app and I can use it on my computer.
