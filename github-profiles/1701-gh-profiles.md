@@ -11,7 +11,7 @@ title: 1701 GH Profiles
 * [Ciara Bujanos](https://github.com/buji405)
 * [Daniel Ludwick](http://github.com/danielbucket)
 * [Dave Hubertus](https://github.com/dhubertus)
-* [Devin Dixon](http://github.com/devinisafoal)
+* [Devin Dixon](https://github.com/devthehuman)
 * [Devon Bull](https://github.com/DBULL7)
 * [Jack Bevis](https://github.com/jbevis)
 * [Jenn Peavler](https://github.com/jennPeavler)
