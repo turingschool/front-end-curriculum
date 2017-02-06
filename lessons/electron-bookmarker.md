@@ -218,6 +218,28 @@ Let's start by showing _something_ in `index.html`.
 </html>
 ```
 
+To render the index.html file, change the URL you load in main.js:
+
+```js
+const { app, BrowserWindow } = require('electron');
+
+let mainWindow = null;
+
+app.on('ready', () => {
+  mainWindow = new BrowserWindow({
+    minWidth: 800,
+    minHeight: 600,
+    show: false
+  });
+
+  mainWindow.loadURL(`file://${__dirname}/index.html`);
+
+  mainWindow.once('ready-to-show', () => {
+    mainWindow.show();
+  });
+});
+```
+
 ### Worlds Collide
 
 Let's open up the developer tools an play around for a second.
@@ -294,6 +316,16 @@ Chromium's Content Module doesn't provide helpful validity popups, like those in
 Here we will only activate the button if it's a valid URL. In a perfect world, we could display a better URI for telling them why the URL isn't valid, but let's stick with this for now.
 
 ```js
+const { shell } = require('electron');
+
+const newLinkUrl = document.querySelector('.new-link-form--url');
+const newLinkSubmit = document.querySelector('.new-link-form--submit');
+const newLinkForm = document.querySelector('.new-link-form');
+const errorMessage = document.querySelector('.message');
+const linkTemplate = document.querySelector('#link-template');
+const linksSection = document.querySelector('.links');
+const clearStorageButton = document.querySelector('.controls--clear-storage');
+
 newLinkUrl.addEventListener('keyup', () => {
   newLinkSubmit.disabled = !newLinkUrl.validity.valid;
 });
@@ -302,8 +334,8 @@ newLinkUrl.addEventListener('keyup', () => {
 Now is also a good time to add a small helper function to clear out the contents of the URL field. In a perfect world, we’ll call this whenever we’ve successfully stored the link.
 
 ```js
-const clearForm () => {
-  newLinkUrl.value = null;
+const clearInput = () => {
+  newLinkUrl.value = '';
 };
 ```
 
@@ -385,7 +417,7 @@ fetch(url)
   .then(findTitle)
   .then(title => { title, url })
   .then(addToPage)
-  .then(clearForm)
+  .then(clearInput)
   .catch(error => {
     console.error(error);
     errorMessage.textContent = `There was an error fetching "${url}."`
@@ -413,7 +445,7 @@ fetch(url)
   .then(title => { title, url })
   .then(addToPage)
   .then(storeLink)
-  .then(clearForm)
+  .then(clearInput)
   .catch(error => {
     console.error(error);
     errorMessage.textContent = `There was an error fetching "${url}."`
@@ -456,20 +488,90 @@ linksSection.addEventListener('click', (event) => {
 });
 ```
 
-### An Unhappy Path
-
-If we hit a 400- or 500-level status code, let's not save the link.
+So now we should be able to store URLS, restart the app and have any saved URLs show up and have the ability to clear out all URLS to start fresh. This is what my renderer.js looks like:
 
 ```js
-const validateResponse = (response) => {
-  if (response.ok) { return response; }
-  throw new Error(`Received a status code of ${response.status}`);
-}
+const { shell } = require('electron');
+
+const newLinkUrl = document.querySelector('.new-link-form--url');
+const newLinkSubmit = document.querySelector('.new-link-form--submit');
+const newLinkForm = document.querySelector('.new-link-form');
+const errorMessage = document.querySelector('.message');
+const linkTemplate = document.querySelector('#link-template');
+const linksSection = document.querySelector('.links');
+const clearStorageButton = document.querySelector('.controls--clear-storage');
+
+const parser = new DOMParser();
+const parseResponse = (text) => parser.parseFromString(text, 'text/html');
+const findTitle = (nodes) => nodes.querySelector('title').innerText;
+
+window.addEventListener('load', () => {
+  for (let title of Object.keys(localStorage)) {
+    addToPage({ title, url: localStorage.getItem(title) });
+  }
+});
+
+clearStorageButton.addEventListener('click', () => {
+  localStorage.clear();
+  linksSection.innerHTML = '';
+});
+
+const addToPage = ({ title, url }) => {
+  const newLink = linkTemplate.content.cloneNode(true);
+  const titleElement = newLink.querySelector('.link--title');
+  const urlElement =  newLink.querySelector('.link--url')
+
+  titleElement.textContent = title;
+  urlElement.href = url;
+  urlElement.textContent = url;
+
+  linksSection.appendChild(newLink);
+  return { title, url };
+};
+
+newLinkUrl.addEventListener('keyup', () => {
+  newLinkSubmit.disabled = !newLinkUrl.validity.valid;
+});
+
+newLinkForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const url = newLinkUrl.value;
+
+  fetch(url)
+    .then(response => response.text())
+    .then(parseResponse)
+    .then(findTitle)
+    .then(title => ({ title, url }))
+    .then(addToPage)
+    .then(storeLink)
+    .then(clearInput)
+    .catch(error => {
+      console.error(error);
+      errorMessage.textContent = `There was an error fetching "${url}."`
+    });
+});
+
+linksSection.addEventListener('click', (event) => {
+  if (event.target.href) {
+    event.preventDefault();
+    shell.openExternal(event.target.href);
+  }
+});
+
+const storeLink = ({ title, url }) => {
+  localStorage.setItem(title, url);
+  return { title, url };
+};
+
+const clearInput = () => {
+  newLinkUrl.value = '';
+};
 ```
 
 ### Devtron
 
-We can install Devtron, an officially supported set of tools.
+We can install Devtron, an officially supported set of tools. If you open up the dev tools (Opt+Command+I) in your Electron app, you now have access Devtron. Take a few minutes to see what is can show you.
 
 ```js
 require('devtron').install();
@@ -484,7 +586,7 @@ const { shell, remote } = require('electron');
 const { systemPreferences } = remote;
 ```
 
-When the page loads. We'll query if macOS is in dark mode and if so, we'll swap style sheets.
+When the page loads. We'll query if macOS is in dark mode and if so, we'll swap style sheets. To turn on dark mode on your mac, go to Preferences -> General -> Use dark menu bar and Dock. Fire up your app and voi-la!
 
 ```js
 window.addEventListener('load', () => {
