@@ -12,10 +12,10 @@ ember new project-name
 ```
 
 Out of the box, you will get:  
-- A dev server  
-- Templates  
-- JS and CSS Minification (think Webpack)  
-- ES6 with Babel Presets  
+* A dev server  
+* Templates  
+* JS and CSS Minification (think Webpack)  
+* ES6 with Babel Presets  
 
 ## Ember Dev Server
 
@@ -43,37 +43,40 @@ Out of the box, you will get:
 ```
 
 ## Ember Data Flow
-[Ember Core Concepts](https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png")
+[Ember Core Concepts]("https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png")
 
 ## Testing
-Ember's built-in testing framework allows for TDD using Acceptance Tests.
+Ember's built-in testing framework allows for TDD using Acceptance Tests.  
+
 ```
 ember g acceptance-test test-name
 ```
-This will generate a test file in `tests/acceptance/test-name-test.js`  
 
-Let's check it out.  
+This will generate a test file:  
 
 ```
-ember test --server
+tests/acceptance/test-name-test.js
 ```
 
-## Routes
+Let's check it out `ember test --server`  
+
+## Routes  
+
 Ember applications are organized and run by "Routes".  
-- User navigates to a route. Example: `'/'`.  
-- Ember Router maps the URL to a particular `Route Handler`  
-- The Route Handler renders the template associated with said route.  
-- The Route Handler hands the template the Model the template needs to know about.  
+* User navigates to a route. Example: `'/'`.  
+* Ember Router maps the URL to a particular `Route Handler`  
+* The Route Handler renders the template associated with said route.  
+* The Route Handler hands the template the Model the template needs to know about.  
 
 ```
 ember g route route-name
 ```
 
 This Generates:
-- A route file: `app/routes/about.js`  
-- A template: `app/templates/about.hbs`  
-- A test: `tests/unit/routes/about-test`  
-- Updates the `router.js` file.   
+* A route file: `app/routes/about.js`  
+* A template: `app/templates/about.hbs`  
+* A test: `tests/unit/routes/about-test`  
+* Updates the `router.js` file.   
 
 ## Model Hook
 
@@ -102,21 +105,21 @@ An app might have a `User Model` with properties like `firstName` or `lastName`.
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-    firstName: DS.attr('string'),
-    lastName: DS.attr('string'),
+    firstName:  DS.attr('string'),
+    lastName:   DS.attr('string'),
 
-    fullName: Ember.computed('firstName', 'lastName', () => {
+    fullName:   Ember.computed('firstName', 'lastName', () => {
       return `${this.get('firstName')} ${this.get('lastName')}`;
     });
   })
 ```
 
 ## Ember Store  
-- Provided by `Ember Data`  
-- Central repository of models in your app  
-- Components and Routes can ask the store for models to then send to the templates.
-- `this.get('store').findRecord('user', params.user_id)`  
-- **PRO-TIP**: The store is available by default in Routes, and Controllers. NOT Components.  
+* Provided by `Ember Data`  
+* Central repository of models in your app  
+* Components and Routes can ask the store for models to then send to the templates.
+* `this.get('store').findRecord('user', params.user_id)`  
+* **PRO-TIP**: The store is available by default in Routes, and Controllers. NOT Components.  
 
 ## Controllers
 Rendered by the router when entering a Route.  
@@ -128,12 +131,12 @@ Controllers are the first place actions bubble up to find rules about behavior.
 ```js
 // In template
 {{#if isExpanded}}
-  &lt;button {{action "toggleBody"}}&gt;Hide Body&lt;/button&gt;
-    &lt;div class="body"&gt;
+  <button {{action "toggleBody"}}>Hide Body</button>
+    <div class="body">
       {{ model.body }}
-    &lt;/div&gt;
+    </div>
 {{else}}
-  &lt;button {{action "toggleBody"}}&gt;Show Body&lt;/button&gt;
+  <button {{action "toggleBody"}}>Show Body</button>
 {{/if}}
 
 // In controller
@@ -153,14 +156,18 @@ Components allow different parts of your app to share functionality.
 **ProTip**: Dashes are *REQUIRED* in every component name.  
 
 Components have two parts:  
-- A template: `app/templates/components/my-component.hbs`  
-- A JS source file: `app/components/my-component.js`  
+* A template: `app/templates/components/my-component.hbs`  
+* A JS source file: `app/components/my-component.js`  
 
 To invoke a component in a template file:  
 
+(see markdown file)  
+
+```
 {{#each model as |item|}}  
   {{my-component item=itemUnit}}  
 {{/each}}  
+```
 
 Notice the name of the component matches the name of the my-component.js file.  
 
@@ -171,11 +178,13 @@ Templates are the "view" layer of an Ember application.
 
 For the most part, they look like any other fragment of HTML.  
 
-<div>This is an example DIV in an Ember Template</div>  
+`<div>This is an example DIV in an Ember Template</div>`  
 
 ## Handlebars  
 
-<div>Hi {{name}}, this is a valid Ember template!</div>  
+(see markdown file)  
+
+`<div>Hi {{name}}, this is a valid Ember template!</div>`  
 
 ## Application Template
 If an application template exists, anything it in will be displayed on every page.
@@ -192,5 +201,5 @@ Actions get sent to the controller first.
 For example, if you send a variable to your view (ie `<p>{{someText}}</p>`), your app will check the controller for info first before bubbling up to the route.  
 
 ## ProTips
-- Check documentation **DATE**.  
-- Use `return false` or `return true` to your advantage to either stop or continue bubbling up the event chain.  
+* Check documentation **DATE**.  
+* Use `return false` or `return true` to your advantage to either stop or continue bubbling up the event chain.  
