@@ -19,15 +19,15 @@ Students must earn a 3 or greater on *each* segment of the End of Module Assessm
 
 (forthcoming)
 
+
 ### Professional Skills
 
-The Professional Skills segment is made up of several pieces:
+The Professional Skills segment is made up of several pieces, all of which are to be submitted by 9AM on Monday of Week 6. It's suggested that you send them earlier if possible.
 
-* Following up on the [*Organize Your Shit*](backend.turing.io/professional_development/module_four/organize_your_shit) session, ensure that your GitHub, LinkedIn, and StackOverflow accounts are properly setup
-* Following up on the *Flower Exercise* session, submit a gist or uploaded graphic organizer of the flower exercise to [Allison](mailto:allison@turing.io) by the end of Week 5
-* Following up on the *Portfolio Tips & Tricks* tutorial, notify [Meg](mailto:mstewart@turing.io) that your portfolio is complete with your name, photo, description, three projects, and resume by the end of Week 5
-* Following the *Finding Opportunities* session, add [Meg](mailto:mstewart@turing.io) as a collaborator to your Trello board with 10 companies by the end of Week 5.
-* Following up on the *Job Search Action Plan*, submit to [Meg](mailto:mstewart@turing.io) a plan following the supplied template by the end of Week 5
+* Following up on the [*Organize Your Shit*](backend.turing.io/professional_development/module_four/organize_your_shit) session, ensure that your GitHub, LinkedIn, and StackOverflow accounts are properly setup by linking to them in your Census account
+* Following up on the *Portfolio Tips & Tricks* tutorial, notify [Meg](mailto:mstewart@turing.io) that your portfolio is complete with your name, photo, description, three projects, and resume
+* Following the *Finding Opportunities* session, add [Meg](mailto:mstewart@turing.io) as a collaborator to your Trello board with 10 companies
+* Following up on the *Job Search Action Plan* & *Flower Exercise Follow-Up*, submit to [Meg](mailto:mstewart@turing.io) a plan following the supplied template
 
 ### Community & Feedback
 
