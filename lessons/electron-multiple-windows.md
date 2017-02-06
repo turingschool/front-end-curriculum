@@ -10,18 +10,77 @@ status: draft
 
 ## Creating Multiple Windows
 
-So, our functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer.
-
-Let's import `createWindow()` as well.
+So, our functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer. Let's add a function called createWindow() in main.js to do just that.
 
 ```js
-const { createWindow, openFile } = remote.require('./main');
+const windows = new Set()
+
+const createWindow = exports.createWindow = (file) => {
+  let newWindow = new BrowserWindow({ show: false });
+  windows.add(newWindow)
+
+  newWindow.loadURL(`file://${__dirname}/index.html`);
+
+  newWindow.once('ready-to-show', () => {
+    if (file) openFile(newWindow, file)
+    newWindow.show();
+  });
+
+  newWindow.on('close', (event) => {
+    if(newWindow.isDocumentEdited()) {
+      const result = dialog.showMessageBox(newWindow, {
+        type: 'warning',
+        title: 'Quit with Unsaved Changes?',
+        message: 'You have unsaved changes. Are you sure you want to quit?',
+        buttons: [
+          'Quit Anyway',
+          'Cancel'
+        ],
+        defaultId: 0,
+        cancelId: 1
+      })
+
+      if(result === 0) newWindow.destroy()
+    }
+  });
+
+  newWindow.on('closed', () => {
+    windows.delete(newWindow)
+    newWindow = null
+  });
+
+  return newWindow
+}
+```
+
+A lot of things are going on here so let's step through it line by line.
+
+Next let's import `createWindow()` in our renderer.js file and add a New File button in our index.html.
+
+```js
+// index.html
+<section class="controls">
+  <button id="new-file">New File</button>
+  <button id="open-file">Open File</button>
+  <button id="copy-html">Copy HTML</button>
+  <button id="save-file">Save HTML</button>
+</section>
+
+// renderer.js
+const { createWindow, openFile, saveFile } = remote.require('./main');
+
+const $markdownView = $('.raw-markdown')
+const $htmlView = $('.rendered-html')
+const $newFileButton = $('#new-file')
+const $openFileButton = $('#open-file')
+const $saveFileButton = $('#save-file')
+const $copyHtmlButton = $('#copy-html')
 ```
 
 Then we can go ahead and create an event listener.
 
 ```js
-newFileButton.addEventListener('click', () => {
+$newFileButton.on('click', () => {
   createWindow();
 });
 ```
