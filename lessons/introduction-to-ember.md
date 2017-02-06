@@ -13,9 +13,9 @@ module: 3
     <h1>Ember CLI</h1>
   </section>
   <section>
-    <pre><code>npm install -g ember-cli@2.11</code></pre>
-    <pre><code>ember --help</code></pre>
-    <pre><code>ember new project-name</code></pre>
+    <pre><code class="javascript js">npm install -g ember-cli@2.11</code></pre>
+    <pre><code class="javascript js">ember --help</code></pre>
+    <pre><code class="javascript js">ember new project-name</code></pre>
   </section>
 
   <section>
@@ -30,7 +30,7 @@ module: 3
 
   <section>
     <h2>Ember Dev Server</h2>
-      <pre><code>
+      <pre><code class="javascript js">
         ember server
         ember serve
         ember s
@@ -43,7 +43,7 @@ module: 3
     <h1>Folder Structure</h1>
   </section>
   <section>
-      <pre><code>
+      <pre><code class="javascript js">
         app/
         config/
         public/
@@ -70,11 +70,13 @@ module: 3
     <h1>Testing</h1>
   </section>
   <section>
-    <p>Ember's built-in testing framework allows for TDD using Acceptance Tests</p>
-    <pre><code>ember g acceptance-test test-name</code></pre>
-    <p>This will generate a test file in <code>tests/acceptance/test-name-test.js</code></p>
+    Ember's built-in testing framework allows for TDD using Acceptance Tests
+    <pre><code class="javascript js">ember g acceptance-test test-name</code></pre>
+    <p>This will generate a test file in
+      <code class="javascript js">tests/acceptance/test-name-test.js</code>
+    </p>
     <p>Let's check it out.</p>
-    <code>ember test --server</code>
+    <pre><code class="javascript js">ember test --server</code></pre>
   </section>
 </section>
 
@@ -94,13 +96,13 @@ module: 3
 </section>
 
 <section>
-  <pre><code>ember g route route-name</code></pre>
+  <pre><code class="javascript js">ember g route route-name</code></pre>
   <p>Generates:</p>
   <ul>
-    <li>A route file: <pre><code> app/routes/about.js </code></pre></li>
-    <li>A template: <pre><code> app/templates/about.hbs </code></pre></li>
-    <li>A test: <pre><code> tests/unit/routes/about-test.js </code></pre></li>
-    <li>Updates the `router.js` <pre><code> updating router: add route about </code></pre></li>
+    <p>A route file: <code class="javascript js"> app/routes/about.js </code></p>
+    <p>A template: <code class="javascript js"> app/templates/about.hbs </code></p>
+    <p>A test: <code class="javascript js"> tests/unit/routes/about-test.js </code></p>
+    <p>Updates the `router.js` <code class="javascript js"> updating router: add route about </code></p>
   </ul>
 </section>
 
@@ -109,15 +111,16 @@ module: 3
     <h1>Model Hook</h1>
   </section>
   <section>
-    <pre><code>
+    <code class="javascript js">
       // app/routes/modelName.js
+
       model() {
         return modelName;
       }
-    </code></pre>
-    <p>Ember calls for this `model hook` at various times throughout the lifecycle of the app.</p>
-    <p>One example would be when a user enters the `rentals` route.</p>
-    <p>`model hook` returns the array of models and passes it to the template</p>
+    </code>
+    <p>Ember calls for this <code>model hook</code> at various times throughout the lifecycle of the app.</p>
+    <p>One example would be when a user enters the <code>rentals</code> route.</p>
+    <p>The model hook returns the array of models and passes it to the template</p>
   </section>
 </section>
 
@@ -127,8 +130,8 @@ module: 3
     <p>Objects that represent data that your application presents to the user</p>
   </section>
   <section>
-    <p>An app might have a `User Model` with properties like "firstName" or "lastName"</p>
-    <pre><code>
+    <p>An app might have a <code>User Model</code> with properties like "firstName" or "lastName"</p>
+    <pre><code class="javascript js">
       // app/models/user.js
 
       import DS from 'ember-data';
@@ -150,11 +153,13 @@ module: 3
     <h1>Ember Store</h1>
   </section>
   <section>
-    <p>Provided by `Ember Data`</p>
-    <p>Central repository of models in your app</p>
-    <p>Components and Routes can ask the store for models to then send to the templates</p>
-    <p>`this.get('store').findRecord('user', params.user_id)`</p>
-    <p>PRO-TIP: Store is available by default in Routes, and Controllers. NOT Components.</p>
+  <ul>
+    <li>Provided by `Ember Data`</li>
+    <li>Central repository of models in your app</li>
+    <li>Components and Routes can ask the store for models to then send to the templates</li>
+    <li><code>this.get('store').findRecord('user', params.user_id)</code></li>
+    <li>PRO-TIP: Store is available by default in Routes, and Controllers. NOT Components.</li>
+  </ul>
   </section>
 </section>
 
@@ -168,7 +173,7 @@ module: 3
     </ul>
   </section>
   <section>
-    <pre><code>
+    <pre><code class="javascript js">
       // In template
       {{#if isExpanded}}
         &lt;button {{action "toggleBody"}}&gt;Hide Body&lt;/button&gt;
@@ -209,7 +214,7 @@ module: 3
   </section>
   <section>
     <p>To invoke a component in a template file:</p>
-      <pre><code>
+      <pre><code class="javascript js">
         {{#each model as |item|}}
           {{my-component item=itemUnit}}
         {{/each}}
@@ -226,9 +231,9 @@ module: 3
   </section>
   <section>
     <p>For the most part, they look like any other fragment of HTML.</p>
-    <pre><code>&lt;div&gt;This is an example DIV in an Ember Template&lt;/div&gt;</code></pre>
-    <pre><code>{{Handlebars}}</code></pre>
-    <pre><code>&lt;div&gt;Hi {{name}}, this is a valid Ember template!&lt;/div&gt;</code></pre>
+    <pre><code class="javascript js">&lt;div&gt;This is an example DIV in an Ember Template&lt;/div&gt;</code></pre>
+    <pre><code class="javascript js">{{Handlebars}}</code></pre>
+    <pre><code class="javascript js">&lt;div&gt;Hi {{name}}, this is a valid Ember template!&lt;/div&gt;</code></pre>
     <p>If an application template exists, anything it in will be displayed on every page.</p>
   </section>
 </section>
