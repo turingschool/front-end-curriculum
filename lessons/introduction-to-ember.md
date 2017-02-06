@@ -5,7 +5,7 @@ module: 3
 
 ## Ember CLI
 
-```
+```shell
 npm install -g ember-cli@2.11
 ember --help
 ember new project-name
@@ -19,15 +19,15 @@ Out of the box, you will get:
 
 ## Ember Dev Server
 
-```
-  ember server
-  ember serve
-  ember s
+```shell
+ember server
+ember serve
+ember s
 ```
 
 ## Folder Structure
 
-```
+```shell
   app/
   config/
   public/
@@ -43,22 +43,25 @@ Out of the box, you will get:
 ```
 
 ## Ember Data Flow
-[Ember Core Concepts]("https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png")
+[Ember Core Concepts](https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png)
 
 ## Testing
 Ember's built-in testing framework allows for TDD using Acceptance Tests.  
 
-```
+```shell
 ember g acceptance-test test-name
 ```
 
 This will generate a test file:  
 
-```
+```shell
 tests/acceptance/test-name-test.js
 ```
 
-Let's check it out `ember test --server`  
+Let's check it out:
+```shell
+ember test --server
+```  
 
 ## Routes  
 
@@ -68,7 +71,7 @@ Ember applications are organized and run by "Routes".
 * The Route Handler renders the template associated with said route.  
 * The Route Handler hands the template the Model the template needs to know about.  
 
-```
+```shell
 ember g route route-name
 ```
 
@@ -130,8 +133,9 @@ Controllers are the first place actions bubble up to find rules about behavior.
 
 (see markdown file)
 
-```js
-// In template
+```hbs
+{{!-- In template --}}
+
 {{#if isExpanded}}
   <button {{action "toggleBody"}}>Hide Body</button>
     <div class="body">
@@ -140,7 +144,9 @@ Controllers are the first place actions bubble up to find rules about behavior.
 {{else}}
   <button {{action "toggleBody"}}>Show Body</button>
 {{/if}}
+```
 
+```js
 // In controller
 export default Ember.Controller.extend({
   actions: {
@@ -165,7 +171,7 @@ To invoke a component in a template file:
 
 (see markdown file)  
 
-```
+```hbs
 {{#each model as |item|}}  
   {{my-component item=itemUnit}}  
 {{/each}}  
@@ -180,13 +186,17 @@ Templates are the "view" layer of an Ember application.
 
 For the most part, they look like any other fragment of HTML.  
 
-`<div>This is an example DIV in an Ember Template</div>`  
+```html
+<div>This is an example DIV in an Ember Template</div>
+```  
 
 ## Handlebars  
 
 (see markdown file)  
 
-`<div>Hi {{name}}, this is a valid Ember template!</div>`  
+```hbs
+<div>Hi {{name}}, this is a valid Ember template!</div>
+```  
 
 ## Application Template
 If an application template exists, anything it in will be displayed on every page.
