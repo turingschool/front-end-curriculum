@@ -128,6 +128,8 @@ Receives the `model` (whatever the Route's `model hook` returns).
 
 Controllers are the first place actions bubble up to find rules about behavior.  
 
+(see markdown file)
+
 ```js
 // In template
 {{#if isExpanded}}
