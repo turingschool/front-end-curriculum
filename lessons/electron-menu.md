@@ -6,7 +6,7 @@ status: draft
 
 ## Getting Set Up
 
-We are adding functionality to our Firesale app  [Firesale](https://github.com/stevekinney/firesale-tutorial)
+[Continuing from the multiple windows lesson.]((http://frontend.turing.io/lessons/electron-multiple-windows.html) 
 
 ## Adding Menu Items
 
