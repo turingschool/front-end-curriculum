@@ -85,8 +85,8 @@ Instructor/developers will select one feature in the project to review for this 
 
 ### Workflow (20 Points)
 
-* 20: The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches.
-* 15: The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review.
+* 20: The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches. Your team uses Waffle effectively to create small, single functionality user stories that are assigned to team members.
+* 15: The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review. Your team uses Waffle but user stories are large, broad features.
 * 5: The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting issues in the code base. (This is important. These issues should not be able to make it past code review.)
 * 1: The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0: The application was not checked into version control.
@@ -94,4 +94,4 @@ Instructor/developers will select one feature in the project to review for this 
 #### Extensions (20 points each)
 
 - Developer contributes to or creates an npm module/library.
-- Developer packaged their application for distribution.
+- Developer packaged their application for distribution aka you can send me a zip folder with your app and I can use it on my computer.
