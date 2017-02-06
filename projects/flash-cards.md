@@ -123,7 +123,7 @@ Then we should be able to do this:
 
 ```
 const filename = "cards.txt"
-let cardsGenerator = CardGenerator.new(filename)
+let cardsGenerator = new CardGenerator(filename)
 let cards = cardsGenerator.cards
 
 => [Card { answer: "10", question: "What is 5 + 5?"},
