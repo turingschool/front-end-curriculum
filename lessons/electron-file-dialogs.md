@@ -106,9 +106,7 @@ app.on('ready', function () {
 
 If the user ever closes the window, we'll set the `mainWindow` back to `null`.
 
-Let's take our application for a spin again by running `electron .` from the command line. You should see something resembling the image below.
-
-![Blank Window](images/01-blank-window.png)
+Let's take our application for a spin again by running `electron .` from the command line.
 
 Let's actually load some content, shall we?
 
