@@ -146,11 +146,13 @@ body {
 ```
 
 ## Nesting
+
 Nesting makes representing relationships between elements in HTML possible in CSS.
 
 For example, if you want to target an anchor tag within a navigation element within a particular header tag, you can wrap the elements inside each other as you would in HTML.
 
 ##### Sass
+
 ```
 $main-text-dark: #000;
 $red: #FF0000;
@@ -166,6 +168,7 @@ header {
 ```
 
 ##### CSS Output
+
 ```
 header { color: #000; }
 header nav { background-color: #ff0000; }
@@ -175,6 +178,7 @@ header nav a { color: white; }
 *IMPORTANT NOTE* Notice how the CSS output contains very specific CSS style rules. Although nesting can make writing CSS easier, it can also make targeting future elements more difficult when you need to make changes. Try to avoid excessive levels of nesting unless absolutely necessary.
 
 #### Nesting & Psuedo-Selectors
+
 A common scenario when nesting is a good option is when dealing with psuedo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
 
 To target a parent element and apply a psuedo selector, use `&:psuedo-selector`, as in the following syntax:
@@ -209,11 +213,13 @@ Let's say that your client wants everything thats red to be teal.  Pretend that 
 
 
 ## Color Functions
+
 Color functions in Sass let you adjust defined color values with ease.
 
 Let's take a second to go back over the different ways to define a color in CSS.
 
 ##### RGBA
+
 Stands For: Red, Green, Blue, Alpha(Opacity)
 Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`
 Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)
@@ -221,6 +227,7 @@ Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)
 Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation of red, blue and green respectively, and blends them together.
 
 ##### Hexadecimal Code
+
 Stands For: A form of RGB notation written as pairs of hexadecimal values.
 Syntax: `#rrggbb` or `#rgb`.
 Example: `#f00` or `#ff0000` (red)
@@ -229,6 +236,7 @@ Example: `#f00` or `#ff0000` (red)
 
 
 ##### HSLA
+
 Stands For: Hue, Saturation, Lightness, Alpha(Opacity)
 Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`
 Example: `hsla(0, 100%, 50%, 1)` (red)
@@ -246,6 +254,7 @@ Think of the letters RGB distributed equally clockwise around a circle. (R)ed is
 **Alpha:** A decimal value indicating transparency from 0 (invisible) to 1 (completely opaque).
 
 #### complement(color)
+
 Returns the complement (aka the color that is 180 degrees from the value on the color wheel).
 Identical function to `adjust-hue(color, 180deg)`
 
@@ -262,6 +271,7 @@ complement(hsla(240, 100%, 50%, 1));
 ```
 
 #### mix(color1, color2, weight)
+
 Mixes two given colors based on the weight percentage provided.
 
 `$weight` in this function is relative to the two defined colors. Closer to `100%` gives more weight to `$color1`, closer to `0%` gives more weight to `$color2`.
@@ -281,6 +291,7 @@ mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 35%);
 ```
 
 #### lighten/darken(color, amount)
+
 Takes a color and a percentage value, returning a color with a lightness increased or decreased by given amount.
 
 ```
@@ -326,6 +337,7 @@ Another cool trick in Sass is using Math to handle simple changes to numerical v
 For example, you can define the width of your window using a variable like `$windowWidth` and then make a div that has a width of `windowWidth/3`.  Let's see this in action.
 
 ##### SCSS
+
 ```
 $content-width: 900px;
 
@@ -335,6 +347,7 @@ $content-width: 900px;
 ```
 
 ##### CSS
+
 ```
 .innerContent {
   width: 300px;
@@ -344,6 +357,7 @@ $content-width: 900px;
 This is super useful for mentally organizing what you are trying to calculate. Take the following example as a demonstration of how using math and clear variable names can help clarify your stylesheets.
 
 ##### SCSS
+
 ```
 $width-content: 900px;
 $padding-narrow-container: 25px;
@@ -355,6 +369,7 @@ $padding-narrow-container: 25px;
 ```
 
 ##### CSS
+
 ```
 .main-section{
   padding: 20px;
@@ -394,7 +409,9 @@ See if you can set a text color and background-color to the following div using 
 ### SOLUTIONS
 
 #### Nesting Practice Solution:
+
 ##### SCSS
+
 ```
 $color-text-light: #fff;
 $color-text-bold:   #f00;
@@ -418,6 +435,7 @@ $box-shadow-default: 1px 1px 30px #000;
 }
 ```
 ## Resources
+
   - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
   - [Sass to CSS Translator](http://www.sassmeister.com/)
   - [SASS Syntax Highlighting for Atom](https://atom.io/packages/atom-syntax-highlighting-for-sass)

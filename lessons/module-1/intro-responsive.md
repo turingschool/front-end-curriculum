@@ -225,9 +225,19 @@ Now, you may be thinking that this seems like a pretty imprecise way to identify
 Before we write any queries, let's add a viewport meta tag in the ``head`` of our ``index.html``. This will make sure that our site works on devices. It can be a frustrating surprise to find that your responsive site works on your computer, and in device simulators, only to try it out on your phone and find out it looks terrible. The viewport meta tag gives the browser instructions on how to control the pages dimensions and sets the width of the page based on the screen width of the device it is being viewed on. Magic! If you want to learn more, Mozilla has an [article](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag) that's full of good information.
 
 ```html
-<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=true;">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+```
+The viewport metatag shown above is saying...
+
+```
+width=device-width
+initial-scale=1
 ```
 
+In more human terms these say..
+
+* __Width__: Make the width of the page the same width as whatever screen it is being shown on.
+* __Initial Scale__: If the page is shown in landscape (a phone turned sideways) make the page as wide as it can be within that screen.
 Let's start with our media query for large screens. We know we want our breakpoint to be 900px. Let's add a loud background color to our ``body`` just to make sure it's hooked up.
 
 ```css
@@ -277,4 +287,3 @@ Congratulations! You've built a responsive site!
 # Your Turn
 
 Complete the [Responsive Layout Challenge](https://github.com/turingschool-examples/responsive-layout-challenges)
-

@@ -86,4 +86,4 @@ In the right column, make plans for how you can improve in the next team or pair
 
 ### Closing
 
-Share out -- what feedback will you incorporate into your next team project?
+Share out -- what are you focused on improving in your next team project?

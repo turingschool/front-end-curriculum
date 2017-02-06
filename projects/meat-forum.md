@@ -6,13 +6,13 @@ title: Meat Forum
 
 ### Overview
 
-In this project you'll be building a react/redux app that allows you to see nearby meetup information for your current location, and set favorite cities to pin to the home page.
+In this project you'll be building a react/redux app that allows you to see nearby meet-up information for your current location and set favorite cities to pin to the home page.
 
 ### Main Goals
 
-  - Use the Geolocation API to determine your current location and display local meetups
-  - Save "pinned" or favorite cities to display their meetup information
-  - Familiarize yourself with making API calls and organize a react/redux app appropriately
+- Use the Geolocation API to determine your current location and display local meet-ups
+- Save "pinned" or favorite cities to display their meet-up information
+- Familiarize yourself with making API calls and organize a react/redux app appropriately
 
 ## Setup
 
@@ -22,7 +22,13 @@ You'll be working off of a boilerplate repo built using `create-react-app`. Fork
 
 Note: The repo has a few additional things set up for you out of the box. This does not mean you can't make changes to how the app is structured, but there are some pieces that might look unfamiliar. These include (but are not limited to) the `routes.js` file, `applyMiddleware`, `redux-dev-tools` and `thunk`.  
 
-You are **STRONGLY ENCOURAGED** to do a research spike on these elements before diving into coding this project. We are fully aware that you haven't worked with some of these concepts before, but the ultimate goal of this project is to emphasize heavy use of documentation and to encourage a 'divide and conquer' mentality among your group members.
+You are **STRONGLY ENCOURAGED** to do a research spike on these elements before diving into coding this project. We are fully aware that you haven't worked with some of these concepts before, but the ultimate goal of this project is to emphasize heavy use of documentation and to encourage a 'divide and conquer' mentality among your group members.  
+
+#### API Keys
+
+You'll need to familiarize yourself with a couple APIs, some of which require an API key. 
+1. Sunset-Sunrise: http://sunrise-sunset.org/api
+2. Google Places:
 
 ### General Requirements
 
