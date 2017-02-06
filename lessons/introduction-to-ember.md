@@ -10,7 +10,7 @@ module: 3
 
 <section>
   <section>
-    <h2>Ember CLI</h2>
+    <h1>Ember CLI</h1>
   </section>
   <section>
     <pre><code>npm install -g ember-cli@2.11</code></pre>
@@ -19,7 +19,7 @@ module: 3
   </section>
 
   <section>
-    Out of the box, you will get:
+    <p>Out of the box, you will get:</p>
     <ul>
       <li>A dev server</li>
       <li>Templates</li>
@@ -27,22 +27,22 @@ module: 3
       <li>ES6 with Babel Presets</li>
     </ul>
   </section>
+
   <section>
     <h2>Ember Dev Server</h2>
-    <pre>
-      <code>
+      <pre><code>
         ember server
         ember serve
         ember s
-      </code>
-    </pre>
+      </code></pre>
   </section>
 </section>
 
 <section>
-  <h2>Folder Structure</h2>
   <section>
-    <div>
+    <h1>Folder Structure</h1>
+  </section>
+  <section>
       <pre><code>
         app/
         config/
@@ -57,48 +57,39 @@ module: 3
         README.md
         testem.js
       </code></pre>
-    </div>
   </section>
 </section>
 
 <section>
-  <h2>Ember Data Flow</h2>
-  <ul>
-    <li><a href="https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png">Ember Core Concepts</a></li>
-  </ul>
+  <h1>Ember Data Flow</h1>
+  <a href="https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png">Ember Core Concepts</a>
 </section>
 
 <section>
   <section>
-    <h2>Testing</h2>
+    <h1>Testing</h1>
   </section>
   <section>
-    <ul>
-      <li>Ember's built-in testing framework allows for TDD using Acceptance Tests</li>
-      <li>
-        <pre><code>ember g acceptance-test test-name</code></pre>
-        <p>This will generate a test file in <code>tests/acceptance/test-name-test.js</code></p>
-        <p>Let's check it out.</p>
-      </li>
-      <li>
-        <code>ember test --server</code>
-      </li>
-    </ul>
+    <p>Ember's built-in testing framework allows for TDD using Acceptance Tests</p>
+    <pre><code>ember g acceptance-test test-name</code></pre>
+    <p>This will generate a test file in <code>tests/acceptance/test-name-test.js</code></p>
+    <p>Let's check it out.</p>
+    <code>ember test --server</code>
   </section>
 </section>
 
 <section>
   <section>
-    <h2>Routes</h2>
+    <h1>Routes</h1>
   </section>
   <section>
-      <p>Ember applications are organized and run by "Routes".</p>
-      <ol>
-        <li>User navigates to a route. Example: `'/'`.</li>
-        <li>Ember Router maps the URL to a particular `Route Handler`</li>
-        <li>The Route Handler renders the template associated with said route.</li>
-        <li>The Route Handler hands the template the Model the template needs to know about.</li>
-      </ol>
+    <p>Ember applications are organized and run by "Routes".</p>
+    <ol>
+      <li>User navigates to a route. Example: `'/'`.</li>
+      <li>Ember Router maps the URL to a particular `Route Handler`</li>
+      <li>The Route Handler renders the template associated with said route.</li>
+      <li>The Route Handler hands the template the Model the template needs to know about.</li>
+    </ol>
   </section>
 </section>
 
@@ -114,7 +105,9 @@ module: 3
 </section>
 
 <section>
-  <h2>Model Hook</h2>
+  <section>
+    <h1>Model Hook</h1>
+  </section>
   <section>
     <pre><code>
       // app/routes/modelName.js
@@ -122,38 +115,40 @@ module: 3
         return modelName;
       }
     </code></pre>
-    <p>Ember calls for this `model hook` at various times throughout the lifecycle of the app.<br/>
-      One example would be when a user enters the `rentals` route.</p>
+    <p>Ember calls for this `model hook` at various times throughout the lifecycle of the app.</p>
+    <p>One example would be when a user enters the `rentals` route.</p>
     <p>`model hook` returns the array of models and passes it to the template</p>
   </section>
 </section>
 
 <section>
-  <h2>Models</h2>
-  <p>Objects that represent data that your application presents to the user</p>
   <section>
-      <p>Ie: an app might have a `User Model` with properties like "firstName" or "lastName"</p>
-      <p>
-        <pre><code>
-          // app/models/user.js
+    <h1>Models</h1>
+    <p>Objects that represent data that your application presents to the user</p>
+  </section>
+  <section>
+    <p>An app might have a `User Model` with properties like "firstName" or "lastName"</p>
+    <pre><code>
+      // app/models/user.js
 
-          import DS from 'ember-data';
+      import DS from 'ember-data';
 
-          export default DS.Model.extend({
-              firstName: DS.attr('string'),
-              lastName: DS.attr('string'),
+      export default DS.Model.extend({
+          firstName: DS.attr('string'),
+          lastName: DS.attr('string'),
 
-              fullName: Ember.computed('firstName', 'lastName', () => {
-                return `${this.get('firstName')} ${this.get('lastName')}`;
-              });
-            })
-        </code></pre>
-      </p>
+          fullName: Ember.computed('firstName', 'lastName', () => {
+            return `${this.get('firstName')} ${this.get('lastName')}`;
+          });
+        })
+    </code></pre>
   </section>
 </section>
 
 <section>
-  <h2>Ember Store</h2>
+  <section>
+    <h1>Ember Store</h1>
+  </section>
   <section>
     <p>Provided by `Ember Data`</p>
     <p>Central repository of models in your app</p>
@@ -164,8 +159,8 @@ module: 3
 </section>
 
 <section>
-  <h2>Controllers</h2>
   <section>
+    <h1>Controllers</h1>
     <ul>
       <li>Rendered by the router when entering a Route</li>
       <li>Receives the `model` (whatever the Route's `model hook` returns)</li>
@@ -200,7 +195,7 @@ module: 3
 </section>
 
 <section>
-  <h2>Components</h2>
+  <h1>Components</h1>
   <section>
     <p>Components allow different parts of your app to share functionality.</p>
     <p><strong>ProTip</strong>: Dashes are REQUIRED in every component name.</p>
@@ -224,43 +219,37 @@ module: 3
   </section>
 </section>
 
-
-/// *********************** ///
 <section>
-  <h2>Templates</h2>
-  <ul>  
-    <li>Templates are the "view" layer of an Ember application.</li>
-    <li>For the most part, they look like any other fragment of HTML.
-      <pre>
-        <code>&lt;div&gt;This is an example DIV in an Ember Template&lt;/div&gt;</code>
-      </pre>
-    </li>
-    <li>
-      <pre><code>
-        {{Handlebars}}
-      </code></pre>
-    </li>
-    <li>&lt;div&gt;Hi {{name}}, this is a valid Ember template!&lt;/div&gt;</li>
-    <li><code>application.hbs</code>: If an application template exists, anything it in will be displayed on every page.</li>
-  </ul>
+  <section>
+    <h1>Templates</h1>
+    <p>Templates are the "view" layer of an Ember application.</p>
+  </section>
+  <section>
+    <p>For the most part, they look like any other fragment of HTML.</p>
+    <pre><code>&lt;div&gt;This is an example DIV in an Ember Template&lt;/div&gt;</code></pre>
+    <pre><code>{{Handlebars}}</code></pre>
+    <pre><code>&lt;div&gt;Hi {{name}}, this is a valid Ember template!&lt;/div&gt;</code></pre>
+    <p>If an application template exists, anything it in will be displayed on every page.</p>
+  </section>
 </section>
 
-
 <section>
-  <h2>FAQ</h2>
-  <ul>
-    <li>
-      <h3>Controller vs Component</h3>
-      <p>First of all: controllers are getting ditched shortly.</p>
-      <p><a href="https://i.imgur.com/TgmUDac.png">Proof.</a></p>
-      <p>Components have everything controllers have, plus stuff the views have</p>
-      <p>Controllers:</p>
-      <ol>
-        <li>Can hold onto short term state</li>
-        <li>Actions and stuff sent to your view (ie `<p>{{someText}}</p>`) check the controller for info first before bubbling up to the route</li>
-      </ol>
-    </li>
-  </ul>
+  <section>
+    <h1>FAQ</h1>
+  </section>
+  <section>
+    <h3>Controller vs Component</h3>
+    <p>First of all: controllers are getting ditched shortly.</p>
+    <p><a href="https://i.imgur.com/TgmUDac.png">Proof.</a></p>
+    <p>Components have everything controllers have, plus stuff the views have</p>
+  </section>
+  <section>
+    <h2>Controllers:</h2>
+    <ol>
+      <li>Can hold onto short term state</li>
+      <li>Actions and stuff sent to your view (ie `<p>{{someText}}</p>`) check the controller for info first before bubbling up to the route</li>
+    </ol>
+  </section>
 </section>
 
 <section>
