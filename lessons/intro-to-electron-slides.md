@@ -25,6 +25,7 @@ layout: presentation
 <section>
   <section>
     <h2>When?</h2>
+  </section>
   <section>
     <h3>Creating GUIs for node apps</h3>
     <p>When you want to build an app that behaves like a native desktop app</p>
