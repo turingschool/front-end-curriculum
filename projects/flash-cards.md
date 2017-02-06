@@ -104,7 +104,7 @@ round.percentCorrect()
 
 ```
 
-# Iteration 6: Loading Text Files
+# Iteration 5: Loading Text Files
 
 Right now, we're hardcoding the flashcards into our runner. Wouldn't it be nice to have a whole text file of questions and answers to use?
 
