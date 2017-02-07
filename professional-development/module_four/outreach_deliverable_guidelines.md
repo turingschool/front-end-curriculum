@@ -3,7 +3,7 @@
 * Company of Contact
   * ex "Allstate"
 
-* Person of contact and relevent postion 
+* Person of contact and relevant postion 
   * ex "Joe Schneider, Senior Software Developer"
 
 * Date of contact
