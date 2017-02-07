@@ -61,7 +61,7 @@ A lot of things are going on here so let's step through it line by line.
 const windows = new Set()
 ```
 
-This is a new data structure for ES6 which stores unique values. It could be a string, integer, object, function, literally anything except null. If you try to add a duplicate value, the Set will reject it. Think of a Set as a fancy array that protects for uniqueness of each element.
+This is a new data structure for ES6 which stores unique values. It could be a string, integer, object, function, literally anything except null. If you try to add a duplicate value, the Set will reject it. Think of a Set as a fancy array that protects for uniqueness of each element in the Set.
 
 ```js
 let newWindow = new BrowserWindow({ show: false });
