@@ -381,6 +381,7 @@ In integration tests, the goal is to assert that the component is rendered as ex
 Like most generator commands in Ember, when you create a component with `ember g component component-name` a test file is automatically generated for you.  
 
 {% raw %}
+
 ```js
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -484,7 +485,7 @@ Replace `skip` with `test` in your test files and fill in the content to get the
 
 ### Additional Informative Notes
 
-#### {% raw %} {{outlet}} {% endraw %}
+#### {% raw %} {{outlet}} {% endraw %}  
 The magic ember syntax {{outlet}} defers to the router, which will insert the template for the current route at that location.
 
 #### `hook`
