@@ -162,14 +162,31 @@ If I look at any of the windows in my editor right now, I can see what is opened
 I can see that in my poor application. Let's see if we can fix that.
 
 ```js
-win.setTitle(`${f} - Fire Sale`);
+const openFile = exports.openFile = (targetWindow) => {
+  let files = dialog.showOpenDialog(targetWindow, {
+    properties: ['openFile'],
+    filters: [
+      { name: 'Markdown Files', extensions: ['md', 'markdown', 'txt'] }
+    ]
+  })
+
+  if (!files) { return }
+
+  let file = files[0]
+  let content = fs.readFileSync(file).toString()
+
+  targetWindow.webContents.send('file-opened', file, content)
+  targetWindow.setTitle(`New Fire Sale`);
+}
 ```
 
+Let's refactor out the file selection into it's own function:
+
 ```js
-const openFile = exports.openFile = (win, file = getFileFromUserSelection(win)) => {
+const openFile = exports.openFile = (targetWindow, file = getFileFromUserSelection(targetWindow)) => {
   const content = fs.readFileSync(file).toString();
   win.webContents.send('file-opened', file, content);
-  win.setTitle(`${file} - Fire Sale`);
+  currentWindow.setTitle(`${file} - Fire Sale`);
 };
 ```
 
@@ -182,7 +199,8 @@ This is a macOS-only trick, but it's still something that Mac users some to expe
 Take a look right next to the file title in my editor? There is a little file icon.
 
 ```js
-win.setRepresentedFilename(file);
+// Below setTitle
+targetWindow.setRepresentedFilename(file);
 ```
 
 ## Setting the Document as Edited
