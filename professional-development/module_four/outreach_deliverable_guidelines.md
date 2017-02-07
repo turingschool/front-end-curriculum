@@ -1,10 +1,13 @@
 #Documentation should include the following for all 6 emails:
 
-* Company of Contact. ex "Allstate"
+* Company of Contact
+*  ex "Allstate"
 
-* Person of contact and relevent postion. ex "Joe Schneider, Senior Software Developer"
+* Person of contact and relevent postion 
+*  ex "Joe Schneider, Senior Software Developer"
 
-* Date of contact. ex "01/29/2017"
+* Date of contact
+*  ex "01/29/2017"
 
 * Outcome (ie did you get a response? If so, what happened?)
 
