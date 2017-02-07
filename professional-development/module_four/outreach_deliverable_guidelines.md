@@ -8,8 +8,8 @@
 
 *Outcome (ie did you get a response? If so, what happened?)
 
-  **ex. She didnt respond
+  1. ex. She didnt respond
 
-  **He and I have coffee scheduled on 02/14
+  2. He and I have coffee scheduled on 02/14
 
-  **She and I had coffee on 02/06 and I am going to tour the Allstate office next week on 02/16
+  3. She and I had coffee on 02/06 and I am going to tour the Allstate office next week on 02/16
