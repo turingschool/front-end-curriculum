@@ -74,7 +74,7 @@ A round will be the object that processes responses and records guesses. Use TDD
 let card1 = new Card("What is the capital of Alaska?", "Juneau")
 let card2 = new Card("Approximately how many miles are in one astronomical unit?", "93,000,000")
 let deck  = new Deck([card1, card2])
-let round = Round.new(deck)
+let round = new Round(deck)
 round.deck
 => #Deck {cards:[...] }
 round.guesses
