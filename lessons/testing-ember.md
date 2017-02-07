@@ -380,6 +380,7 @@ In integration tests, the goal is to assert that the component is rendered as ex
 
 Like most generator commands in Ember, when you create a component with `ember g component component-name` a test file is automatically generated for you.  
 
+{% raw %}
 ```js
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -403,6 +404,7 @@ test('it renders', function(assert) {
   assert.equal(this.$().text().trim(), 'template block text');
 });
 ```
+{% endraw %}
 
 The `moduleForComponent` helper will find the correct component and its template, if it exists. `integration: true` is required to enable the test to do it's job correctly. This allows each test to have access to the `render()` function, which lets us create an instance of our component (similar to `this.subject`) but in template syntax.
 
@@ -440,6 +442,7 @@ For the component, let's test that it has the properties we expect.
 
 `// tests/integration/components/add-grocery-test.js`  
 
+{% raw %}
 ```js
 
 test('it renders with default string properties', function(assert){
@@ -451,9 +454,11 @@ test('it renders with default string properties', function(assert){
 })
 
 ```
+{% endraw %}
 
 Then we can test that it updates the name property when told to do so.
 
+{% raw %}
 
 ```js
 test('it renders with an updated name value when provided',
@@ -466,6 +471,8 @@ function(assert){
   assert.equal(this.$('.spec-input-name').val(), 'hello world', 'updates with provided value')
 })
 ```
+{% endraw %}
+
 
 ### Your Turn
 
@@ -477,11 +484,11 @@ Replace `skip` with `test` in your test files and fill in the content to get the
 
 ### Additional Informative Notes
 
-#### {{outlet}}
+#### {% raw %} {{outlet}} {% endraw %}
 The magic ember syntax {{outlet}} defers to the router, which will insert the template for the current route at that location.
 
 #### `hook`
-A function that Ember will call at various times in our app. For instance, if you define a `model(){}` hook in a routes handler, it will be called whenever a user hits that path.
+A function that Ember will call at various times in our app. For instance, if you define a {% raw %} `model(){}` {% endraw %} hook in a routes handler, it will be called whenever a user hits that path.
 
 #### Route Handlers & Models
 Route handlers (the stuff inside `export default Ember.Route.extend({})`) are in charge of loading model data. What is returned within our `model hook` will be passed to the respective template as the `model` property.
