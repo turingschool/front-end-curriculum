@@ -443,7 +443,6 @@ For the component, let's test that it has the properties we expect.
 
 `// tests/integration/components/add-grocery-test.js`  
 
-{% raw %}
 ```js
 
 test('it renders with default string properties', function(assert){
@@ -455,11 +454,9 @@ test('it renders with default string properties', function(assert){
 })
 
 ```
-{% endraw %}
 
 Then we can test that it updates the name property when told to do so.
 
-{% raw %}
 
 ```js
 test('it renders with an updated name value when provided',
@@ -472,7 +469,6 @@ function(assert){
   assert.equal(this.$('.spec-input-name').val(), 'hello world', 'updates with provided value')
 })
 ```
-{% endraw %}
 
 
 ### Your Turn
@@ -485,11 +481,11 @@ Replace `skip` with `test` in your test files and fill in the content to get the
 
 ### Additional Informative Notes
 
-#### {% raw %} {{outlet}} {% endraw %}  
+#### outlet  
 The magic ember syntax {{outlet}} defers to the router, which will insert the template for the current route at that location.
 
 #### `hook`
-A function that Ember will call at various times in our app. For instance, if you define a {% raw %} `model(){}` {% endraw %} hook in a routes handler, it will be called whenever a user hits that path.
+A function that Ember will call at various times in our app. For instance, if you define a `model(){}` hook in a routes handler, it will be called whenever a user hits that path.
 
 #### Route Handlers & Models
 Route handlers (the stuff inside `export default Ember.Route.extend({})`) are in charge of loading model data. What is returned within our `model hook` will be passed to the respective template as the `model` property.
