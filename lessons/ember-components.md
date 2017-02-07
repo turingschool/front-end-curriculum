@@ -51,9 +51,7 @@ This command will generate our `.hbs` file, a `.js` file, and a test. We want to
 Somewhere in your `application.hbs` or `groceries.hbs` files, make a reference to the component:
 
 ```
-{% raw %}
-{{ double-clickable }}
-{% endraw %}
+double-clickable
 ```
 
 Then, in `app/templates/components/double-clickable.hbs`, add the following:
