@@ -19,6 +19,12 @@ Paragraph reflection in your portfolio on:
 
 * Details on project management strategies you used in your projects; What went well? What didn’t go well?
 
+### Opening Reflection
+Write:
+
+* What has made your previous teams successful? What has made them difficult?
+* When working together for the first time, what can you do/have you done to make sure your team is productive?
+
 ### What is Agile?
 Agile is both a series of processes and a philosophy around how to develop software in a more efficient way.
 
@@ -48,34 +54,24 @@ Within your small groups, discuss your assigned process and then present to the 
 
 * Summarize how this process works -- what do you see as pros and cons?
 * How would this process look at Turing?
+* Think back to the successful teams you wrote about in your warmup questions. What did you do to get you through the early stages to become successful?
+
+***MORE QUESTIONS HERE FOR SMALL GROUPS
 
 ### Project Management Tools
 There are also lots of project management tools available to reinforce these processes:
 
+* [Waffle.io](https://waffle.io/)
+* Git Workflow for Teams ***ADD IN RESOURCES FROM BACKEND'S LESSON***
 * [Jira](https://www.atlassian.com/software/jira)
 * [CA Technologies](https://www.ca.com/us/why-ca/about-us/acquisitions/rally-is-now-ca-technologies.html?cid=GLOB-EOA-ABUS-ADB-000083-00000151)
-* [Waffle.io](https://waffle.io/)
 
-###How to Create Successful Teams 
-In order for teams to be successful, they need to build trust with each other. How do you do that? The first step is communication. Two very common practices that reinforce clear communication are having daily Stand Ups and regular Retros. 
 
-Stand Ups usually include sharing:
+### How to Create Successful Teams
+In order for teams to be successful, they need to build trust with each other. How do you do that? The first step is communication. 
 
-1. What you worked on yesterday
-2. What you'll work on today
-3. Anything that is blocking your progress or that you might need help with
+***HERE STUDENTS CREATE NORMS FOR TEAMS BASED ON WHAT THEY'VE LEARNED -- CREATE OWN MANIFESTO FOR HOW TO USE AGILE AT TURING
 
-**Activity: Psychic Stand Up**
-
-Within groups of 4, take turns sharing what you accomplished yesterday. After one person shares, the person to their left will predict what they'll do today and the next person will predict what they could use help with. Complete 2 rounds of this. In the first round, start by sharing something that has nothing to do with Turing (running errands, taking public transportation, walking your dog), and in the second round, share something related to Turing. 
-
-Purpose: Building empathy within the group by having other predict what work and struggles we share
-
-Debrief:
-
-* What made it easier to predict someone's future?
-* How did it feel when someone told you what you'd be doing or what you might need help with?
-* What emotions did you notice feeling towards the people you predicted for? 
 
 ### Reflections & Applications
 As your prepare for your next team project DTR, consider:
