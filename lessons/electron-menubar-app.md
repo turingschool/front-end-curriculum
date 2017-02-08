@@ -52,3 +52,18 @@ menubar.on('after-create-window', function () {
 Take the next 10 minutes to turn Firesale into a menubar app.
 
 ### Hacking a Menubar
+Unlike Firesale, we can't require remote in our renderer.js and call remote.getCurrentWindow(). Our menubar uses a BrowserWindow under the hood but because it is a high-level abstraction, getCurrentWindow() doesn't find our menubar app. Bummer. But because it's a menubar app, we aren't going to be opening lots of other windows.
+
+We can leverage the BrowserWindow under the hood to do some cool things with this app. When I first started out making this app, I wanted to be able to show different timelines based on the size of the menubar app. I was able to do this with a little bit of hacking:
+
+```js
+menubar.on('after-create-window', function () {
+  menubar.window.loadURL(`file://${__dirname}/index.html`);
+  menubar.window.on('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      menubar.window.webContents.send('resized' , {data: fullHistory, bounds: menubar.window.getBounds()});
+    }, 150);
+  })
+});
+```
