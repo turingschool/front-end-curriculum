@@ -59,7 +59,7 @@ Within your small groups, discuss your assigned process:
 Groups present on the process that they discussed to the whole group. 
 
 ### Project Management Tools
-There are also lots of project management tools available to reinforce these processes:
+Think about how to reinforce these processes:
 
 * [Git Workflow for Teams](https://docs.google.com/a/casimircreative.com/spreadsheets/d/11JEKXiW7Pp7XZct191mmJv45XDwq1w6nfWNNKAbD36U/edit?usp=sharing)
 * [Waffle.io](https://waffle.io/) 
@@ -71,10 +71,19 @@ There are also lots of project management tools available to reinforce these pro
 * [CA Technologies](https://www.ca.com/us/why-ca/about-us/acquisitions/rally-is-now-ca-technologies.html?cid=GLOB-EOA-ABUS-ADB-000083-00000151)
 
 ### Show What You Know: Creating Successful Teams
-In order for teams to be successful, they need to build trust with each other. How do you do that? 
+In order for teams to be successful, they need to establish trust. We'll do that today by creating a set of norms for our teams at Turing to follow. 
 
-***HERE STUDENTS CREATE NORMS FOR TEAMS BASED ON WHAT THEY'VE LEARNED -- CREATE OWN MANIFESTO FOR HOW TO USE AGILE AT TURING
+Go back to the Agile Manifesto to create your own set of principles for how to use agile at Turing. Each group takes on a line from the Manifesto to establish 1-2 principles for how that will look at Turing, and as a class, a set of Turing principles will be established: 
 
+	We are uncovering better ways of developing software by doing it and helping others do it.
+	Through this work we have come to value:
+
+	**Individuals and interactions** over processes and tools
+	**Working software** over comprehensive documentation
+	**Customer collaboration** over contract negotiation
+	**Responding to change** over following a plan
+
+	That is, while there is value in the items on the right, we value the items on the left more.
 
 ### Reflections & Applications
 As your prepare for your next team project DTR, consider:
