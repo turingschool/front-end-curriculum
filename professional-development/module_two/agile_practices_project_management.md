@@ -78,16 +78,17 @@ Go back to the Agile Manifesto to create your own set of principles for how to u
 	We are uncovering better ways of developing software by doing it and helping others do it.
 	Through this work we have come to value:
 
-	**Individuals and interactions** over processes and tools
-	**Working software** over comprehensive documentation
-	**Customer collaboration** over contract negotiation
-	**Responding to change** over following a plan
+	Individuals and interactions over processes and tools
+	Working software over comprehensive documentation
+	Customer collaboration over contract negotiation
+	Responding to change over following a plan
 
 	That is, while there is value in the items on the right, we value the items on the left more.
 
 ### Reflections & Applications
 As your prepare for your next team project DTR, consider:
 
+* Which principle do you value the most? How will you work to exemplify it?
 * How will agile practices help you manage a larger team than you're used to working in?
 * What project management tool will you use to plan out a project that has some ambiguity?
 * Your group should choose someone to be the project manager. What responsibilities will that individual have?
