@@ -19,7 +19,7 @@ Paragraph reflection in your portfolio on:
 
 * Details on project management strategies you used in your projects; What went well? What didn’t go well?
 
-### Opening Reflection
+### Warm Up Reflection
 Write:
 
 * What has made your previous teams successful? What has made them difficult?
@@ -37,7 +37,7 @@ Needless to say, waterfall became an ineffective way to run software development
 Read through the 12 principles of the [Agile Manifesto](http://agilemanifesto.org/principles.html). 
 
 * What do you notice about these principles? Do any particularly resonate with you?
-* How might these principles be applied? How have you already seen them in action at Turing?
+* How might these principles be applied? 
 
 ### Exploring Agile Practices
 Based on these principles, processes have been created for teams to embrace agile methodology:
@@ -50,25 +50,28 @@ Based on these principles, processes have been created for teams to embrace agil
 	* [More Info](https://en.wikipedia.org/wiki/Tuckman%27s_stages_of_group_development)
 * [XP](http://www.extremeprogramming.org/)
 
-Within your small groups, discuss your assigned process and then present to the whole group:
+Within your small groups, discuss your assigned process:
 
 * Summarize how this process works -- what do you see as pros and cons?
-* How would this process look at Turing?
-* Think back to the successful teams you wrote about in your warmup questions. What did you do to get you through the early stages to become successful?
+* Think back to the successful teams you wrote about in your warmup questions. How have you already utilized this process? How would this process have helped your team?  
+* How can you utilize this process at Turing?
 
-***MORE QUESTIONS HERE FOR SMALL GROUPS
+Groups present on the process that they discussed to the whole group. 
 
 ### Project Management Tools
 There are also lots of project management tools available to reinforce these processes:
 
-* [Waffle.io](https://waffle.io/)
-* Git Workflow for Teams ***ADD IN RESOURCES FROM BACKEND'S LESSON***
+* [Git Workflow for Teams](https://docs.google.com/a/casimircreative.com/spreadsheets/d/11JEKXiW7Pp7XZct191mmJv45XDwq1w6nfWNNKAbD36U/edit?usp=sharing)
+* [Waffle.io](https://waffle.io/) 
+	* Convert the requirements of the project to stories/issues on Waffle (e.g. Average GPA - average_gpa returns the average GPA for all students)
+	* Let the stories drive development, even copy and paste the story into the tests
+	* Use waffle to track tasks to be completed
+	* Use waffle to keep you focused (i.e. avoid rabbit holes)
 * [Jira](https://www.atlassian.com/software/jira)
 * [CA Technologies](https://www.ca.com/us/why-ca/about-us/acquisitions/rally-is-now-ca-technologies.html?cid=GLOB-EOA-ABUS-ADB-000083-00000151)
 
-
-### How to Create Successful Teams
-In order for teams to be successful, they need to build trust with each other. How do you do that? The first step is communication. 
+### Show What You Know: Creating Successful Teams
+In order for teams to be successful, they need to build trust with each other. How do you do that? 
 
 ***HERE STUDENTS CREATE NORMS FOR TEAMS BASED ON WHAT THEY'VE LEARNED -- CREATE OWN MANIFESTO FOR HOW TO USE AGILE AT TURING
 
