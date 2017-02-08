@@ -9,9 +9,9 @@ layout: page
 [Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/agile_practices_slides.pdf)
 
 ### Objectives
-* Demonstrate an understanding of different agile practices
+* Demonstrate an understanding of different Agile and its processes
 * Describe how to use these agile practices with your teams
-* Utilize strategies for building trust in teams
+* Create a set of agile principles to use at Turing
 
 **Portfolio Deliverables:**
 
