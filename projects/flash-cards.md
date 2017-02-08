@@ -83,7 +83,7 @@ round.currentCard()
 => Card {answer: "Juneau", question: "What is the capital of Alaska?"}
 round.recordGuess("Juneau")
 => Guess {card: Card{answer: "Juneau", question: "What is the capital of Alaska?"}, response: "Juneau">
-round.guesses.count
+round.guesses.length
 => 1
 round.guesses[0].feedback
 => "Correct!"
@@ -93,7 +93,7 @@ round.currentCard()
 => Card { answer: "93,000,000", question: "Approximately how many miles are in one astronomical unit?"}
 round.recordGuess("2")
 => Guess {card: Card { answer:"93,000,000", question: "Approximately how many miles are in one astronomical unit?"}, response: "2"}
-round.guesses.count
+round.guesses.length
 => 2
 round.guesses[1].feedback
 => "Incorrect."
