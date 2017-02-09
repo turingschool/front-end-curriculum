@@ -117,6 +117,6 @@ And finally we'll wrap it up with a few review questions, from the instructor, a
 * Start with the [CSS Transitions, Transformations, Animations](http://frontend.turing.io/lessons/module-1/css-transitions-transformations) lesson
 * Articulate the differences between transitions, transformations, and animations.
 * Are there accessibility concerns with CSS animations? What are they and what can we do about it?
-* Construct your own examples of various transitions, transformations, and at least one multi-stage animation
+* Create your own code pen examples of various transitions, transformations, and at least one multi-stage animation (goal: 5 code pens, different from the lesson provided above)
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
 
