@@ -39,7 +39,7 @@ Product: Design a user dashboard for a fitness tracking app. It must include the
 
 #### Open Sans
 
-- Semi-Bold 600
+- Bold 700
 - Light 300
 
 [Open Sans for web](https://fonts.google.com/specimen/Open+Sans)
