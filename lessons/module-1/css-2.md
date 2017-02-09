@@ -22,7 +22,7 @@ length: 150
 ### Introduction (5 min)
 Each student is part of a Research Group investigating one of four content areas:
 
-* Reset vs Normalize CSS files
+* Reset vs Normalize CSS files & Idiomatic CSS
 * Image Optimization
 * Performance & Organization
 * Transitions, Transformations, Animations
@@ -44,7 +44,7 @@ In this session your goal is to "build expertise". Gather into your "Research Gr
 * Are there any downsides to using it?
 * Where can a person go to learn more about it? Any resources seem better than others?
 
-Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go.
+__Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go.__
 
 ## :relieved: :revolving_hearts: :boom: BREAK (8 min) :relieved: :revolving_hearts: :boom:
 
@@ -68,15 +68,15 @@ During Session 2, a representative from each of the research groups will take tu
 ## :innocent: :cupid: :dizzy: BREAK (8 min) :innocent: :cupid: :dizzy:
 
 ### Session 4: Gather Questions (10 min)
-During this short session, one person from each Learning Group will write their unanswered questions on the front board.
+During this short session, one person from each Learning Group will write that group's unanswered questions on the front board.
 
 ### Session 5: Review Questions (20 min)
-We'll review and attempt to answer your questions all together as a group.
+We'll review and attempt to answer all the questions on the board together.
 
 ## :kissing_closed_eyes: :sparkling_heart: :star2: BREAK (8 min) :kissing_closed_eyes: :sparkling_heart: :star2:
 
 ### Session 6: Wrapup (5 min)
-And finally we'll wrap it up with a few review questions.
+And finally we'll wrap it up with a few review questions, from the instructor, across each topic.
 
 ***
 
