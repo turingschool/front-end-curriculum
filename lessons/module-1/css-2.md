@@ -15,7 +15,7 @@ length: 150
 # Structure
 "Jigsaw" lesson! Today, you'll be creating your own learning. We've arranged "learning groups" whereby you collaborate on the research of assigned subject matter and then share your learnings with fellow students from other groups. There are six sessions designed to guide us through the process. 
 
-## Introduction (5 min)
+### Introduction (5 min)
 Each student is part of a Research Group investigating one of four content areas:
 
 * Reset vs Normalize CSS files
@@ -90,14 +90,14 @@ And finally we'll wrap it up with a few review questions.
 
 # Content
 
-### Reset v. Normalize CSS Files
+### Reset v. Normalize CSS Files :panda_face:
 
 * Start with the [Reset vs Normalize](http://frontend.turing.io/lessons/reset-vs-normalize.html) lesson
 * What are the differences Reset v. Normalize files and when/why would they matter to us as FE Devs?
 * Who are the creators of normalize and why should we care? 
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
 
-### Image Optimization
+### Image Optimization :snake:
 
 * Start with the [Image Handling 101](http://frontend.turing.io/independent-study/image-handling.html) lesson from the FE curriculum independent study section
 * What are the different image types and their best uses? Can you provide any visual examples to highlight differences?  
@@ -106,7 +106,7 @@ And finally we'll wrap it up with a few review questions.
 * Create a code demo with images to implement and explain html's `srcset` and `sizes` attributes available on the image tag. Be prepared to discuss why the different image versions are important in FE development.
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
 
-### Performance & Organization
+### Performance & Organization :ant:
 
 * Start with the [CSS Performance & Organization](http://frontend.turing.io/independent-study/css-performance-and-organization.html) lesson from the FE curriculum independent study section
 * Revisit the concept of specificity from the [CSS 1](http://localhost:4000/lessons/module-1/css-1.html) lesson
@@ -115,10 +115,14 @@ And finally we'll wrap it up with a few review questions.
 * Are there any good "rules of :thumb:" to remember as you construct your CSS?
 * Someday... you will have LOT's of CSS to organize. Multiple files even! What are some organization patterns that exist in the industry? Give a high-level overview of each, focusing on basic principles, how they compare, pros/cons. (Hint: BEM, SMACSS, Object Oriented CSS, Atomic CSS)
 * Why is a system of organization important at all?
+* Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
 
-### Transitions, Transformations, Animations
+
+### Transitions, Transformations, Animations :dragon_face:
 
 * Start with the [CSS Transitions, Transformations, Animations](http://frontend.turing.io/lessons/module-1/css-transitions-transformations) lesson
 * Articulate the differences between transitions, transformations, and animations.
 * Are there accessibility concerns with CSS animations? What are they and what can we do about it?
 * Construct your own examples of various transitions, transformations, and at least one multi-stage animation
+* Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
+
