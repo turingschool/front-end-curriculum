@@ -7,10 +7,12 @@ length: 150
 # Learning Goals
 
 * Understand the differences between reset and normalize css files
+* Learn how to write consistent and idiomatic CSS with an understanding of why it is important
 * Explore and understand how to implement a variety of image optimization methods
 * Understand the key issues in crafting CSS that can impact performance
 * Explore current industry patterns for organizing CSS files, understanding their differences and pros/cons
 * Learn the difference in CSS transitions, transformations, animations and how to implement various interactions utilizing all of them 
+
 
 ***
 
@@ -47,7 +49,7 @@ Each person from the "Research Group" needs to finish session 1 with their own s
 ## :relieved: :revolving_hearts: :boom: BREAK (8 min) :relieved: :revolving_hearts: :boom:
 
 ### Session 3: Expert Presentations (10 min each) 
-Recombine into you "Learning Groups" specified in the outline. You should have one person from each of the Research Groups. 
+Recombine into your "Learning Groups" specified in the outline. You should have one person from each of the Research Groups. 
 During Session 2, a representative from each of the research groups will take turns sharing their findings from the respective content areas as follows:
 
 * Clear, concise definition(s) of the subject matter and its importance
@@ -60,7 +62,7 @@ During Session 2, a representative from each of the research groups will take tu
 
 * Take their own notes
 * Ask clarifying questions
-* Brainstorm/record any depth questions that the researcher isn't able to answer
+* Brainstorm/record any depth questions the researcher is not able to answer
 * Make sure to WATCH THE CLOCK :alarm_clock: so you each have a good set of notes, understandings, and questions by the end of the session
 
 ## :innocent: :cupid: :dizzy: BREAK (8 min) :innocent: :cupid: :dizzy:
@@ -80,12 +82,16 @@ And finally we'll wrap it up with a few review questions.
 
 # Content
 
-### Reset v. Normalize CSS Files :panda_face:
+### Reset v. Normalize CSS Files & Idiomatic CSS :panda_face:
 
 * Start with the [Reset vs Normalize](http://frontend.turing.io/lessons/reset-vs-normalize.html) lesson
 * What are the differences Reset v. Normalize files and when/why would they matter to us as FE Devs?
 * Who are the creators of normalize and why should we care? 
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
+* Check out [Idiomatic CSS](http://frontend.turing.io/independent-study/idiomatic-css.html) lesson from the FE curriculum independent study section
+* What is idiomatic CSS and why is it important?
+* What are some options in the organization of properties per CSS declaration? Describe and show details.
+* Check out this [article](https://www.wired.com/2012/06/write-better-css-with-idiomatic-css/) and see if there is anything else interesting to add to your share list.
 
 ### Image Optimization :snake:
 
