@@ -2,7 +2,7 @@
 ## Developing Mindsets to Succeed
 _Our **mission** is to unlock human potential by training a diverse, inclusive student body to succeed in high-fulfillment technical careers._
 
-When you're transitioning careers, often many other aspects of your approach to work and life undergo a transition. Turing aims to be a place where you can work through these transitions successfully. While enrolled at Turing and during your subsequent job search, you'll be provided with tools and strategies to develop the professional skills necessary to enter a new career as a software developer. 
+When you're transitioning careers, often many other aspects of your approach to work and life undergo a transition as well. Turing aims to be a place where you can work through these transitions successfully. While enrolled at Turing and during your subsequent job search, you'll be provided with tools and strategies to develop the professional skills necessary to enter a new career as a software developer. 
 
 The pre-work for professional development is focused on introducing you to a set of mindsets that we at Turing believe will make you a successful programmer. These mindsets are:
 

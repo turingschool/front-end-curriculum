@@ -4,21 +4,156 @@ module: 4
 status: draft
 ---
 
-So, this functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer.
+## Getting Set Up
 
-Let's import `createWindow()` as well.
+[Continuing from the file dialog lesson.](http://frontend.turing.io/lessons/electron-file-dialogs.html)
+
+## Why Would You Want Multiple Windows?
+Discussion
+
+## Creating Multiple Windows
+So, our functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer. Let's add a function called createWindow() in main.js to do just that.
 
 ```js
-const { createWindow, openFile } = remote.require('./main');
+const windows = new Set()
+
+const createWindow = exports.createWindow = (file) => {
+  let newWindow = new BrowserWindow({ show: false });
+  windows.add(newWindow)
+
+  newWindow.loadURL(`file://${__dirname}/index.html`);
+
+  newWindow.once('ready-to-show', () => {
+    if (file) openFile(newWindow, file)
+    newWindow.show();
+  });
+
+  newWindow.on('close', (event) => {
+    if(newWindow.isDocumentEdited()) {
+      const result = dialog.showMessageBox(newWindow, {
+        type: 'warning',
+        title: 'Quit with Unsaved Changes?',
+        message: 'You have unsaved changes. Are you sure you want to quit?',
+        buttons: [
+          'Quit Anyway',
+          'Cancel'
+        ],
+        defaultId: 0,
+        cancelId: 1
+      })
+
+      if(result === 0) newWindow.destroy()
+    }
+  });
+
+  newWindow.on('closed', () => {
+    windows.delete(newWindow)
+    newWindow = null
+  });
+
+  return newWindow
+}
+```
+
+A lot of things are going on here so let's step through it line by line.
+
+```js
+const windows = new Set()
+```
+
+This is a new data structure for ES6 which stores unique values. It could be a string, integer, object, function, literally anything except null. If you try to add a duplicate value, the Set will reject it. Think of a Set as a fancy array that protects for uniqueness of each element in the Set.
+
+```js
+let newWindow = new BrowserWindow({ show: false });
+windows.add(newWindow)
+```
+
+Our createWindow() function creates a new window and defaults it to not show. Then we add the new window to our windows Set. All of our new windows should be unique so a Set is a great way to store all of our windows.
+
+```js
+newWindow.once('ready-to-show', () => {
+  if (file) openFile(newWindow, file)
+  newWindow.show();
+});
+```
+
+Once the new window is ready to show, we will call openFile if there is a file to open with the new window. Then we will show the new window.
+
+```js
+newWindow.on('close', (event) => {
+  if(newWindow.isDocumentEdited()) {
+    const result = dialog.showMessageBox(newWindow, {
+      type: 'warning',
+      title: 'Quit with Unsaved Changes?',
+      message: 'You have unsaved changes. Are you sure you want to quit?',
+      buttons: [
+        'Quit Anyway',
+        'Cancel'
+      ],
+      defaultId: 0,
+      cancelId: 1
+    })
+
+    if(result === 0) newWindow.destroy()
+  }
+});
+
+newWindow.on('closed', () => {
+  windows.delete(newWindow)
+  newWindow = null
+});
+
+return newWindow
+```
+
+When we close the new window, we will check if we have edited the document (functionality we will add), give a dialog box if they have edited it, and then delete the window from the window Set if it closes. The new window is the return value of createWindow().
+
+Next let's add a New File button in our index.html, detect the currentWindow and import `createWindow()` in our renderer.js file.
+
+```js
+// index.html
+<section class="controls">
+  <button id="new-file">New File</button>
+  <button id="open-file">Open File</button>
+  <button id="copy-html">Copy HTML</button>
+  <button id="save-file">Save HTML</button>
+</section>
+
+// renderer.js
+const currentWindow = remote.getCurrentWindow()
+
+const { createWindow, openFile, saveFile } = remote.require('./main');
+
+const $markdownView = $('.raw-markdown')
+const $htmlView = $('.rendered-html')
+const $newFileButton = $('#new-file')
+const $openFileButton = $('#open-file')
+const $saveFileButton = $('#save-file')
+const $copyHtmlButton = $('#copy-html')
 ```
 
 Then we can go ahead and create an event listener.
 
 ```js
-newFileButton.addEventListener('click', () => {
+$newFileButton.on('click', () => {
   createWindow();
 });
 ```
+
+Let's also pass the currentWindow to our openFile and saveFile functions.
+
+```js
+$openFileButton.on('click', () => {
+  openFile(currentWindow)
+})
+
+$saveFileButton.on('click', () => {
+  var html = $htmlView.html()
+  saveFile(currentWindow, html)
+})
+```
+
+Let's fire up our app and see if we can open multiple windows. What are some things that suck about the current functionality?
 
 ## Setting the Tile of the Window When a File is opened
 
@@ -27,14 +162,31 @@ If I look at any of the windows in my editor right now, I can see what is opened
 I can see that in my poor application. Let's see if we can fix that.
 
 ```js
-win.setTitle(`${f} - Fire Sale`);
+const openFile = exports.openFile = (targetWindow) => {
+  let files = dialog.showOpenDialog(targetWindow, {
+    properties: ['openFile'],
+    filters: [
+      { name: 'Markdown Files', extensions: ['md', 'markdown', 'txt'] }
+    ]
+  })
+
+  if (!files) { return }
+
+  let file = files[0]
+  let content = fs.readFileSync(file).toString()
+
+  targetWindow.webContents.send('file-opened', file, content)
+  targetWindow.setTitle(`New Fire Sale`);
+}
 ```
 
+Let's refactor out the file selection into it's own function:
+
 ```js
-const openFile = exports.openFile = (win, file = getFileFromUserSelection(win)) => {
+const openFile = exports.openFile = (targetWindow, file = getFileFromUserSelection(targetWindow)) => {
   const content = fs.readFileSync(file).toString();
   win.webContents.send('file-opened', file, content);
-  win.setTitle(`${file} - Fire Sale`);
+  currentWindow.setTitle(`${file} - Fire Sale`);
 };
 ```
 
@@ -47,7 +199,8 @@ This is a macOS-only trick, but it's still something that Mac users some to expe
 Take a look right next to the file title in my editor? There is a little file icon.
 
 ```js
-win.setRepresentedFilename(file);
+// Below setTitle
+targetWindow.setRepresentedFilename(file);
 ```
 
 ## Setting the Document as Edited

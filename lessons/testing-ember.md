@@ -380,6 +380,8 @@ In integration tests, the goal is to assert that the component is rendered as ex
 
 Like most generator commands in Ember, when you create a component with `ember g component component-name` a test file is automatically generated for you.  
 
+{% raw %}
+
 ```js
 import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
@@ -403,6 +405,7 @@ test('it renders', function(assert) {
   assert.equal(this.$().text().trim(), 'template block text');
 });
 ```
+{% endraw %}
 
 The `moduleForComponent` helper will find the correct component and its template, if it exists. `integration: true` is required to enable the test to do it's job correctly. This allows each test to have access to the `render()` function, which lets us create an instance of our component (similar to `this.subject`) but in template syntax.
 
@@ -467,6 +470,7 @@ function(assert){
 })
 ```
 
+
 ### Your Turn
 
 We will be using the [ember-groceries](https://github.com/turingschool-examples/ember-groceries) repository, checkout the branch `testing-adventure`.  
@@ -477,7 +481,7 @@ Replace `skip` with `test` in your test files and fill in the content to get the
 
 ### Additional Informative Notes
 
-#### {{outlet}}
+#### outlet  
 The magic ember syntax {{outlet}} defers to the router, which will insert the template for the current route at that location.
 
 #### `hook`

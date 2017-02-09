@@ -271,8 +271,7 @@ mergeSort(["d", "b", "a", "c"])
 
 
 ## Evaluation Rubric
-
-
+  
 ### 1. Fundamental JavaScript & Style
 
 * 4: Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are zero instances where an instructor would recommend taking a different approach.

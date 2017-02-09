@@ -1,8 +1,9 @@
+
 ---
-title: 
-length: 
+title:
+length:
 module:
-tags: 
+tags:
 ---
 
 ### Goals
@@ -17,13 +18,13 @@ By the end of this lesson, you will know/be able to:
 
 #### Hook: <5 min
 
-* Captures student interest. 
-* Why is this lesson important? 
+* Captures student interest.
+* Why is this lesson important?
 * Examples: demonstration, story, problem to solve
 
 #### Opening: 1-2 min
 
-* What is this lesson about? 
+* What is this lesson about?
 * What will students know or be able to do by the end of the class? What are the goals?
 
 #### Introduction to New Material (I do)
@@ -49,8 +50,8 @@ By the end of this lesson, you will know/be able to:
 
 ### Possible questions and/or misunderstandings
 
-* What questions might students ask during class, and how will you respond? 
-* What concepts might students misunderstand, and why? 
+* What questions might students ask during class, and how will you respond?
+* What concepts might students misunderstand, and why?
 
 ### Slides
 
