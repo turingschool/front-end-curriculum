@@ -15,7 +15,7 @@ If you're interested in the default CSS styles that are applied in your browser,
 * [Firefox](https://dxr.mozilla.org/mozilla-central/source/layout/style/res/html.css)
 * [Internet Explorer](http://www.iecss.com/)
 
-There are two approaches used to reconstruct our styles: **reseting** the default styles and **normalizing** the default styles.
+There are two approaches used to reconstruct our styles: **resetting** the default styles and **normalizing** the default styles.
 
 Both of these techniques aim to accomplish the same thing -- getting the default styles out of our way as we work -- but they go about doing that in slightly different ways.
 
