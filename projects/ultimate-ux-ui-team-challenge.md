@@ -50,6 +50,6 @@ Product: Design a user dashboard for a fitness tracking app. It must include the
 
 [Download the icon set](https://www.sketchappsources.com/free-source/2039-basic-icons-sketch-freebie-resource.html)
 
-### Color Pallette:
+### Color Palette:
 
 Use this [palette](https://coolors.co/b8d8d8-7a9e9f-4f6367-eef5db-fe5f55)
