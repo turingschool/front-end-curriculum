@@ -13,7 +13,6 @@ length: 150
 * Explore current industry patterns for organizing CSS files, understanding their differences and pros/cons
 * Learn the difference in CSS transitions, transformations, animations and how to implement various interactions utilizing all of them 
 
-
 ***
 
 # Structure
@@ -46,7 +45,7 @@ In this session your goal is to "build expertise". Gather into your "Research Gr
 
 __Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go.__
 
-## :relieved: :revolving_hearts: :boom: BREAK (8 min) :relieved: :revolving_hearts: :boom:
+## :boom: :revolving_hearts: :relieved: BREAK (8 min) :relieved: :revolving_hearts: :boom:
 
 ### Session 3: Expert Presentations (10 min each) 
 Recombine into your "Learning Groups" specified in the outline. You should have one person from each of the Research Groups. 
@@ -65,7 +64,7 @@ During Session 2, a representative from each of the research groups will take tu
 * Brainstorm/record any depth questions the researcher is not able to answer
 * Make sure to WATCH THE CLOCK :alarm_clock: so you each have a good set of notes, understandings, and questions by the end of the session
 
-## :innocent: :cupid: :dizzy: BREAK (8 min) :innocent: :cupid: :dizzy:
+## :dizzy: :cupid: :innocent: BREAK (8 min) :innocent: :cupid: :dizzy:
 
 ### Session 4: Gather Questions (10 min)
 During this short session, one person from each Learning Group will write that group's unanswered questions on the front board.
@@ -73,7 +72,7 @@ During this short session, one person from each Learning Group will write that g
 ### Session 5: Review Questions (20 min)
 We'll review and attempt to answer all the questions on the board together.
 
-## :kissing_closed_eyes: :sparkling_heart: :star2: BREAK (8 min) :kissing_closed_eyes: :sparkling_heart: :star2:
+## :star2: :sparkling_heart: :kissing_closed_eyes: BREAK (8 min) :kissing_closed_eyes: :sparkling_heart: :star2:
 
 ### Session 6: Wrapup (5 min)
 And finally we'll wrap it up with a few review questions, from the instructor, across each topic.
