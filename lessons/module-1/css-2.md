@@ -107,7 +107,7 @@ And finally we'll wrap it up with a few review questions, from the instructor, a
 * Revisit the concept of specificity from the [CSS 1](http://localhost:4000/lessons/module-1/css-1.html) lesson
 * How does the browser handle conflicting CSS rules?
 * When writing CSS, what sorts of things does a front end dev need to consider for performance (remember - always want things to read/render/perform FASTER)
-* Are there any good "rules of :thumb:" to remember as you construct your CSS?
+* Are there any good "rules of :thumbsup:" to remember as you construct your CSS?
 * Someday... you will have LOT's of CSS to organize. Multiple files even! What are some organization patterns that exist in the industry? Give a high-level overview of each, focusing on basic principles, how they compare, pros/cons. (Hint: BEM, SMACSS, Object Oriented CSS, Atomic CSS)
 * Why is a system of organization important at all?
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
