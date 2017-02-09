@@ -1,8 +1,6 @@
 ---
-title: Ultimate UX/UI Team Challenge
+title: Ultimate UX Design + Build Team Challenge
 ---
-
-# Ultimate UX Design + Build Team Challenge
 
 ### Project overview
 
@@ -41,11 +39,16 @@ Product: Design a user dashboard for a fitness tracking app. It must include the
 
 #### Open Sans
 
-Semi-Bold 600
-Light 300
+- Semi-Bold 600
+- Light 300
 
- - [For web](https://fonts.google.com/specimen/Open+Sans)
- - [To download to use with Sketch](https://drive.google.com/drive/folders/0B_lPnjyMN6-CSzF5bGVpZXJPM2s?usp=sharing)
+[Open Sans for web](https://fonts.google.com/specimen/Open+Sans)
+
+[Open Sans to download to use with Sketch](https://drive.google.com/drive/folders/0B_lPnjyMN6-CSzF5bGVpZXJPM2s?usp=sharing)
+
+### Icon Set:
+
+[Download the icon set](https://www.sketchappsources.com/free-source/2039-basic-icons-sketch-freebie-resource.html)
 
 ### Color Pallette:
 
