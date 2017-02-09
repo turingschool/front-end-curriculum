@@ -12,6 +12,8 @@ length: 150
 * Explore current industry patterns for organizing CSS files, understanding their differences and pros/cons
 * Learn the difference in CSS transitions, transformations, animations and how to implement various interactions utilizing all of them 
 
+***
+
 # Structure
 "Jigsaw" lesson! Today, you'll be creating your own learning. We've arranged "learning groups" whereby you collaborate on the research of assigned subject matter and then share your learnings with fellow students from other groups. There are six sessions designed to guide us through the process. 
 
@@ -42,11 +44,7 @@ In this session your goal is to "build expertise". Gather into your "Research Gr
 
 Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go.
 
-***
-
-## BREAK (8 min) :relieved: :revolving_hearts: :boom:
-
-***
+## :relieved: :revolving_hearts: :boom: BREAK (8 min) :relieved: :revolving_hearts: :boom:
 
 ### Session 3: Expert Presentations (10 min each) 
 Recombine into you "Learning Groups" specified in the outline. You should have one person from each of the Research Groups. 
@@ -65,11 +63,7 @@ During Session 2, a representative from each of the research groups will take tu
 * Brainstorm/record any depth questions that the researcher isn't able to answer
 * Make sure to WATCH THE CLOCK :alarm_clock: so you each have a good set of notes, understandings, and questions by the end of the session
 
-***
-
-## BREAK (8 min) :innocent: :cupid: :dizzy:
-
-***
+## :innocent: :cupid: :dizzy: BREAK (8 min) :innocent: :cupid: :dizzy:
 
 ### Session 4: Gather Questions (10 min)
 During this short session, one person from each Learning Group will write their unanswered questions on the front board.
@@ -77,11 +71,7 @@ During this short session, one person from each Learning Group will write their 
 ### Session 5: Review Questions (20 min)
 We'll review and attempt to answer your questions all together as a group.
 
-***
-
-## BREAK (8 min) :kissing_closed_eyes: :sparkling_heart: :star2:
-
-***
+## :kissing_closed_eyes: :sparkling_heart: :star2: BREAK (8 min) :kissing_closed_eyes: :sparkling_heart: :star2:
 
 ### Session 6: Wrapup (5 min)
 And finally we'll wrap it up with a few review questions.
@@ -116,7 +106,6 @@ And finally we'll wrap it up with a few review questions.
 * Someday... you will have LOT's of CSS to organize. Multiple files even! What are some organization patterns that exist in the industry? Give a high-level overview of each, focusing on basic principles, how they compare, pros/cons. (Hint: BEM, SMACSS, Object Oriented CSS, Atomic CSS)
 * Why is a system of organization important at all?
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc. 
-
 
 ### Transitions, Transformations, Animations :dragon_face:
 
