@@ -20,12 +20,11 @@ Your final live project must match the comp, be responsive, and be live on githu
  - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
 
 
-
 ## Week 1/Phase 1 (assigned 02/09, DUE 02/16):
 
-You can pick one of these two options (data can be hard-coded in the final build -- these will static pages):
-
 Product: Design a user dashboard for a fitness tracking app. It must include the following elements: a log of your recent workouts, the ability to set and track goals, a calendar to track your workouts. If you feel there are additional elements that should be a part of your comp, you may include them.
+
+Data can be hard-coded in the final build -- these will static pages. Remember: just like a designer, you do not have control of how the dev team you hand your comp off to chooses to build it.
 
 ### Deliverables for Phase 1:
 
