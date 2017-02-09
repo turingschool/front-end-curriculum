@@ -62,7 +62,7 @@ During Session 2, a representative from each of the research groups will take tu
 * Take their own notes
 * Ask clarifying questions
 * Brainstorm/record any depth questions the researcher is not able to answer
-* Make sure to WATCH THE CLOCK :alarm_clock: so you each have a good set of notes, understandings, and questions by the end of the session
+* Assign a time keeper to WATCH THE CLOCK :alarm_clock: so the group ends up with a comprehensive set of notes, understandings, and questions across each of the subjects by the end of the session
 
 ## :dizzy: :cupid: :innocent: BREAK (8 min) :innocent: :cupid: :dizzy:
 
