@@ -30,26 +30,26 @@ Each student is part of a Research Group investigating one of four content areas
 For warmup, before you get into your Research Group, spend ten minutes getting your feet wet with your research topic.
 
 ### Session 2: Research (35 min)
-In this session your goal is to "build expertise". Gather into your "Research Groups" specified in the outline. During this time you're group is collaborating to put together a collection of notes / key understandings such as:
+In this session your goal is to "build expertise". Gather into your "Research Groups" specified in the outline. During this time your group is collaborating to put together a collection of notes / key understandings such as:
 
 * What is this thing?
-* Who makes it / where does it come from?
 * Why is it useful?
-* Who uses it?
 * How do you put it into action?
-* How do you get / interpret the results?
 * Put together a short demo (less than 3 minutes)
 * How can it affect your development process?
 * Are there any downsides to using it?
 * Where can a person go to learn more about it? Any resources seem better than others?
 
-__Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go.__
+Additional requirements to note:
+
+* _I have outlined specific questions per content area below to guide the group's research. My expecation is that your presentations for session 3 cover the key questions I've provided per content area._
+* _Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go._
 
 ## :boom: :revolving_hearts: :relieved: BREAK (8 min) :relieved: :revolving_hearts: :boom:
 
 ### Session 3: Expert Presentations (10 min each) 
 Recombine into your "Learning Groups" specified in the outline. You should have one person from each of the Research Groups. 
-During Session 2, a representative from each of the research groups will take turns sharing their findings from the respective content areas as follows:
+A representative from each of the research groups will take turns sharing their findings from the respective content areas as follows:
 
 * Clear, concise definition(s) of the subject matter and its importance
 * Concrete example(s) of when to use, employ, consider
@@ -62,7 +62,7 @@ During Session 2, a representative from each of the research groups will take tu
 * Take their own notes
 * Ask clarifying questions
 * Brainstorm/record any depth questions the researcher is not able to answer
-* Assign a time keeper to WATCH THE CLOCK :alarm_clock: so the group ends up with a comprehensive set of notes, understandings, and questions across each of the subjects by the end of the session
+* Assign a time keeper to WATCH THE CLOCK :alarm_clock: so the presenter doesn't have to keep track, and the group ends up with a comprehensive set of notes, understandings, and questions across each of the subjects by the end of the session
 
 ## :dizzy: :cupid: :innocent: BREAK (8 min) :innocent: :cupid: :dizzy:
 
