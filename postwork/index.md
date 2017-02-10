@@ -43,8 +43,9 @@ Do these challenges. Post your results in your cohort channel.
 
 ### Specific Topic Resources
 
-Below is a list of pretty wonderful free resources on some specific topics that you could check out if you're interested.
+Below is a list of pretty wonderful free resources on some specific topics that you could check out if you're interested. If you only read a few docs over the next few weeks - read through these!
 
+- [Web Performance](https://medium.com/@addyosmani/javascript-start-up-performance-69200f43b201#.ddb3whars)
 - [Node: The Art of Learning Node](https://github.com/maxogden/art-of-node)
 - [Electron: Steve Kinney's Electron Frontend Masters Workshop](https://frontendmasters.com/live-event/electron-live/)
 - [Deep in the Fundamental JavaScript Weeds: You Don't Know JS Series](https://github.com/getify/You-Dont-Know-JS)
