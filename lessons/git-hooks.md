@@ -191,4 +191,7 @@ In earlier versions of Git, you could implement this same strategy by creating a
 
 * [Git Hooks Guide](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 * [Git Hooks Reference](https://git-scm.com/docs/githooks)
+* [Github Issues from Command Line](https://github.com/stephencelis/ghi)
+* [Node.js pre-commit](https://github.com/observing/pre-commit)
+* [Fit Commit](https://github.com/m1foley/fit-commit)
 * [CircleCI Documentation](https://circleci.com/docs/)

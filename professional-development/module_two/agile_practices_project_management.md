@@ -61,7 +61,7 @@ Groups present on the process that they discussed to the whole group.
 ### Project Management Tools
 Think about how to reinforce these processes:
 
-* [Git Workflow for Teams](https://docs.google.com/a/casimircreative.com/spreadsheets/d/11JEKXiW7Pp7XZct191mmJv45XDwq1w6nfWNNKAbD36U/edit?usp=sharing)
+* [Git Workflow for Teams](https://github.com/turingschool/professional_skills/blob/master/module_two/git_workflow_for_teams.md)
 * [Waffle.io](https://waffle.io/) 
 	* Convert the requirements of the project to stories/issues on Waffle (e.g. Average GPA - average_gpa returns the average GPA for all students)
 	* Let the stories drive development, even copy and paste the story into the tests

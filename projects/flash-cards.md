@@ -161,6 +161,7 @@ Correct!
 ****** Game over! ******
 You had 3 correct guesses out of 4 for a score of 75%.
 ```
+
 # Evaluation Rubric
 
 The project will be assessed with the following guidelines:
