@@ -12,7 +12,8 @@ Selenium is a free (open source) automated testing suite for web applications. I
 * Selenium (RC) Remote Control, aka "Selenium 1"
 * WebDriver
 * Selenium Grid
-* "Selenium 2" = Selenium RC + WebDriver
+
+#### AND FYI: "Selenium 2" = Selenium RC + WebDriver
 
 Why should you care? With Selenium, you can configure a set of scripts that will move through the functionality of your app like a human, testing for correct user flow as well as run automatically across the different browsers. Benefits include:
 
@@ -28,6 +29,9 @@ Why should you care? With Selenium, you can configure a set of scripts that will
 * Testing tools components allow for a fully customizable suite 
 * Cross browser & device flexibility
 
+### Wait, what was that ^^ again?
+Up to this point in our development we’ve spent most, if not all our time, in the Unit Testing department and we’ve never really ventured into testing the dom. What Selenium allows us to do is automate our dom tests. So instead of us having to go in ourselves and test(click all the buttons, reload the page) to see if the functionality is working we can write a Selenium test, run our test suite, and then see if the test passes or fails. :heart_eyes:
+
 # Setup 
 Let's take Selenium for a test drive on our Linked List project. 
 
@@ -37,7 +41,10 @@ Let's take Selenium for a test drive on our Linked List project.
 3. We still need a few additional components to make selenium work with the respective browsers. Luckily, we can leverage Homebrew to install both the Chrome and Firefox components. From the project directory, run the following commands:
    - `npm install chromedriver`
    - `npm install geckodriver`
-4. To get Safari working, run these commands:
+4. Apple's `safaridriver` is shipped with Safari 10 for OS X El Capitan and macOS Sierra. You will need to enable Remote Automation in the Develop menu of Safari 10 before testing. To turn on WebDriver support, follow these steps:
+   - Ensure that the Develop menu is available. It can be turned on by opening Safari preferences (_Safari > Preferences_ in the menu bar), going to the Advanced tab, and ensuring that the Show Develop menu in menu bar checkbox is checked.
+   - Enable Remote Automation in the Develop menu. This is toggled via _Develop > Allow Remote Automation_ in the menu bar.
+   - Authorize safaridriver to launch the webdriverd service which hosts the local web server. To permit this, run `/usr/bin/safaridriver` once manually and complete the authentication prompt.
 
 ### Test File(s)
 We need to write some configuration code 
