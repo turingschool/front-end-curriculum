@@ -14,7 +14,7 @@ By the end of this lesson, you will know/be able to:
 
 ## What is Cross-Browser Compatibility
 
-## Causes of browser discrepencies
+## Causes of Browser Discrepencies
 
 ## General Strategies & Solutions
 
@@ -42,9 +42,14 @@ By the end of this lesson, you will know/be able to:
 
 ### Sauce Labs
 
+### Virtual Machines
+
+### Browser Stack
+
 ## Resources
 
 * [Mozilla Cross-Browser Testing](https://github.com/mdn/crossbrowser-testing-lab/wiki)
 * [Sauce Labs](https://saucelabs.com/)
 * [Polyfills vs. Shims](http://www.2ality.com/2011/12/shim-vs-polyfill.html)
 * [IE Conditional Comments](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/)
+* [BrowserStack](https://www.browserstack.com/)
