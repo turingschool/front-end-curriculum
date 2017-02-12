@@ -19,9 +19,13 @@ By the end of this lesson, you will know/be able to:
 ## General Strategies & Solutions
 
 ### Fallbacks
+
 ### Feature Detection
+
 ### Polyfills & Shims
+
 ### CSS Vendor Prefixes
+
 ### IE Conditional Comments
 
 ## Cross-Browser Compat Tools
@@ -29,10 +33,13 @@ By the end of this lesson, you will know/be able to:
 ### Normalization Libraries
 
 #### [Modernizr](https://github.com/modernizr/modernizr)
+
 #### [LocalForage](https://github.com/localForage/localForage)
+
 #### [CSS Normalize](https://necolas.github.io/normalize.css/)
 
 ### Selenium Testing
+
 ### Sauce Labs
 
 ## Resources
