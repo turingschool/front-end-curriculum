@@ -178,7 +178,7 @@ See if you can implement a front facing application for your `trie`. The user sh
 
 The project will be assessed with the following rubric:
 
-### 1. Fundamental Ruby & Style
+### 1. Fundamental JavaScript & Style
 
 * 4:  Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring
 * 3:  Application shows strong effort towards organization, content, and refactoring
