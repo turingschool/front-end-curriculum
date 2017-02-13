@@ -31,13 +31,15 @@ Backing up a bit, let's talk about how computers work. From a relatively high le
 
 These storage locations ultimately control the flow of electricity in the form of circuits, the storage locations acting as 'gates'.   
 
-Each storage location has one of two states - high voltage, or low voltage. To represent these states programmers use the numbers 1 or 0 -  which is why binary is such a useful number system is so convenient.  
+Each storage location has one of two states - high voltage, or low voltage. To represent these states programmers use the numbers 1 or 0 -  which is why binary is so convenient.  
 
+```
 1 Storage Unit = 1 Binary Digit = 1 Bit  
 8 Bits = 1 Byte  
-/#bits/word = "Word Length" of a computer  
+#bits/word = "Word Length" of a computer  
 
-Ie: 32-bit, 64-bit (full-word, double-word).  
+ie: 32-bit, 64-bit (full-word, double-word).  
+```
 
 #### Back To Binary
 
@@ -58,12 +60,11 @@ As the above link mentions, digital logic gates allow us to represent boolean lo
 
 The six most common logic gate operators are `NOT`, `AND`, `OR`, `XOR`, `NAND`, and `NOR`.  
 
-
 Let's look at a few.  
 
 ##### AND ( & )
 
-Performs the AND operation on each pair of bits - returns a 1 only if both of the comparative bits are 1.  
+Performs the AND operation on each pair of bits - returns a 1 only if BOTH of the comparative bits are 1.  
 
 ![and diagram](http://www.ee.surrey.ac.uk/Projects/CAL/digital-logic/gatesfunc/graphics/AND.gif)  
 
@@ -167,7 +168,7 @@ Using a truth table, convert write out the logical representation of the followi
 
 #### Binary --> Decimal  
 
-Write a list of slots with the powers of 2 & values of the calculation.  
+Setup: Write a list of slots with the powers of 2 & values of the calculation.  
 
 ```
 ___ ___ ___ ___ ___ ___ ___ ___ ___ ___
@@ -175,7 +176,17 @@ ___ ___ ___ ___ ___ ___ ___ ___ ___ ___
 512 256 128  64  32  16   8   4   2   1
 ```
 
-Example: `101 = 1*2^2 + 0*2^1 + 1*2^0 = 8 + 0 + 1 = 9`.
+Determine the polynomial value:  
+
+Example:
+
+```
+_1_ _0_ _1_
+2^2 2^1 2^0
+ 4   2   1
+
+101 = 1*2^2 + 0*2^1 + 1*2^0 = 4 + 0 + 1 = 5
+```
 
 
 Convert the following numbers from Binary to Decimal.
