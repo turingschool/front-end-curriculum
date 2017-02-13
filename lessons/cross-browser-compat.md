@@ -150,21 +150,29 @@ __________________________________________
 
 ## Cross-Browser Compat Tools
 
-### Normalization & Feature Detection Libraries
+### [Modernizr](https://github.com/modernizr/modernizr)
 
-#### [Modernizr](https://github.com/modernizr/modernizr)
+Modernizr is a popular library that provides tons of polyfills for APIs which vary across browsers. You can build your own version of it choosing the specific polyfills you'll need for your application. This library provides an abstraction over many APIs making them easier to use and ensuring a consistent behavior and implementation across browsers.
 
-#### [LocalForage](https://github.com/localForage/localForage)
+### [CSS Normalize](https://necolas.github.io/normalize.css/)
 
-#### [CSS Normalize](https://necolas.github.io/normalize.css/)
+Including a `normalize.css` or `reset.css` file in your application has become a common practice for standardizing the styling of certain browser elements. Each browser has a natural styling for things like form elements, and starting with a clean slate or consistent styling for these elements makes it easier to provide visual consistency across browsers. Normalization files will standardize the styling for these elements, while reset files will strip the elements of their styling.
 
-### Selenium Testing
+### [Selenium Testing](http://www.seleniumhq.org/)
 
-### Sauce Labs
+Selenium provides a way for you to author tests that reproduce interactions that your users will engage in on your application. It can automate the process of filling in forms, clicking buttons and verifies that content is being displayed appropriately and the app is reacting as expected.
+
+### [Sauce Labs](https://saucelabs.com/)
+
+Sauce Labs is a company that provides extensive automated testing for different areas of coverage. They include specific cross-browser compatibility testing leveraging technologies like Selenium. You can manually test your application in a specified browser version and platform of your choosing, but they also allow you to set up automated tests for the same purposes that will run your application through each interaction in whichever environments you choose.
 
 ### Virtual Machines
 
-### Browser Stack
+You can install a virtual machine on your OS that allows you to run an entirely different operating system. Using [VirtualBox](https://www.virtualbox.org/wiki/VirtualBox), I could be working on a MacBook and install a VM that loads up Windows 95 with an old version of Internet Explorer. VMs can be bulky and slow, but they provide a very accurate environment for testing compatibility issues.
+
+### [Browser Stack](https://www.browserstack.com/)
+
+BrowserStack allows you to view your application on multiple different browsers at different resolutions and sizes to test appearance and functionality directly within the browser of your choosing. You can generate screenshots of your application for layout and styling discrepencies in any number of devices and browsers.
 
 __________________________________________
 
