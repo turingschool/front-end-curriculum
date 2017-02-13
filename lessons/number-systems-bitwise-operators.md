@@ -348,7 +348,7 @@ In hex, every group of 4 binary digits (bits!) represents one hexadecimal digit.
 
 Example:
 
-Binary: `101101110`
+Binary: `000101101110`
 
 If we break this up into sections of 4 "bits" with their individual decimal representations we have:
 
