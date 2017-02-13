@@ -91,6 +91,7 @@ __________________________________________
 
 ## Resources
 
+* [Progressive Enhancement vs. Graceful Degradation](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement)
 * [Mozilla Cross-Browser Testing](https://github.com/mdn/crossbrowser-testing-lab/wiki)
 * [Sauce Labs](https://saucelabs.com/)
 * [Polyfills vs. Shims](http://www.2ality.com/2011/12/shim-vs-polyfill.html)
