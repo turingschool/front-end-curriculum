@@ -29,7 +29,7 @@ Why should you care? With Selenium, you can configure a set of scripts that will
 * Testing tools components allow for a fully customizable suite 
 * Cross browser & device flexibility
 
-### Wait, what was that ^^ again?
+### Wait, what was all that ^^ again?
 Up to this point in our development we’ve spent most, if not all our time, in the Unit Testing department and we’ve never really ventured into testing the dom. What Selenium allows us to do is automate our dom tests. So instead of us having to go in ourselves and test(click all the buttons, reload the page) to see if the functionality is working we can write a Selenium test, run our test suite, and then see if the test passes or fails. :heart_eyes:
 
 # Setup 
@@ -47,5 +47,62 @@ Let's take Selenium for a test drive on our Linked List project.
    - Authorize safaridriver to launch the webdriverd service which hosts the local web server. To permit this, run `/usr/bin/safaridriver` once manually and complete the authentication prompt.
 
 ### Test File(s)
-We need to write some configuration code 
+Let's create a sample test file that will both help us see our Selenium in action, as well as walk us through some of the config requirements.
+
+```javascript
+
+// This includes the selenium webdriver module
+var webdriver = require('selenium-webdriver'),
+    By = webdriver.By,
+    until = webdriver.until;
+
+// This sets up a new instance of a driver using the new webdriver.Builder() constructor. With the forBrowser() method, we pass an argument 
+// that specifies the browser we want to test with the builder and then we call the build() method to actually build it. We have to construct 
+// this build process for each desired browser.
+var driver_fx = new webdriver.Builder()
+    .forBrowser('firefox')
+    .build();
+
+var driver_chr = new webdriver.Builder()
+    .forBrowser('chrome')
+    .build();
+
+var driver_saf = new webdriver.Builder()
+    .forBrowser('safari')
+    .build();
+
+// This is a test function that will run the test code across each driver we pass it.
+searchTest(driver_fx);
+searchTest(driver_chr);
+searchTest(driver_saf);
+
+// This is just a sample test to see Selenium in action. It begins by grabbing a url (DOM to test), finding an element on the page by it's name attribute/value, which in this case is Google's 
+// input field for user search, entering the text "webdriver" with the sendKeys method, and then clicking on the element with the name attribute of "btnG", which is the main button for "Google Search".
+function searchTest(driver) {
+  driver.get('http://www.google.com');
+  driver.findElement(By.name('q')).sendKeys('webdriver');
+  driver.findElement(By.name('btnG')).click();
+
+// The second part of this function, leverages the sleep method to stall the driver for 2 seconds (2000 miliseconds), which gives google enough time to load the search results. At that point, we call getTitle(),
+// which grabs the title element on the page and runs a conditional on the text of the title to determine the test's pass or fail result.
+  driver.sleep(2000).then(function() {
+    driver.getTitle().then(function(title) {
+      if(title === 'webdriver - Google Search') {
+        console.log('Test passed');
+      } else {
+        console.log('Test failed');
+      }
+    });
+  });
+
+// After you've finished running a test, you should shut down any driver instances you've opened, to make sure that you don't end up with loads of rogue browser instances open on your machine! This is done using the quit() method. Simply call this on your driver instance when you are finished with it.
+  driver.quit();
+}
+```
+
+### Testing Golden Rules
+
+1. Use good locator strategies: When you are Interacting with the document, make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
+2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the google_test.js test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps results_page_title_set_correctly.js would be slightly better?
+3. Write autonomous tests: Each test should work on it's own, and not depend on other tests to work.
 
