@@ -32,6 +32,11 @@ Why should you care? With Selenium, you can configure a set of scripts that will
 ### Wait, what was all that ^^ again?
 Up to this point in our development we’ve spent most, if not all our time, in the Unit Testing department and we’ve never really ventured into testing the dom. What Selenium allows us to do is automate our dom tests. So instead of us having to go in ourselves and test(click all the buttons, reload the page) to see if the functionality is working we can write a Selenium test, run our test suite, and then see if the test passes or fails. :heart_eyes:
 
+# Docs
+
+* [Selenium-WebDriver API Commands and Operations](http://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements)
+* [Selenium API Docs](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index.html)
+
 # Setup 
 Let's take Selenium for a test drive on our Linked List project. 
 
@@ -47,6 +52,12 @@ Let's take Selenium for a test drive on our Linked List project.
 
 ### Test File(s)
 Let's create a sample test file that will both help us see our Selenium in action, as well as walk us through some of the config requirements.
+
+1. Add a file to your linked list project called `multiple_browser_test.js`
+2. Copy/paste the code from below into the file 
+3. Now head over to your terminal and run `node multiple_browser_test.js`
+4. What do you observe?
+5. Let's discuss the code in the file
 
 ```javascript
 
@@ -88,6 +99,14 @@ function searchTest(driver) {
   driver.quit();
 }
 ```
+
+### Your Turn
+
+# Challenge 1
+
+# Challenge 2
+
+# Challenge 3
 
 ### Testing Golden Rules
 
