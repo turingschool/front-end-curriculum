@@ -1,3 +1,7 @@
+### Number Systems Exercises Answers 
+
+From [number-systems-bitwise-operators.html](This Lesson Plan).  
+
 #### Bitwise Logic Operators
 
 Using a truth table, convert write out the logical representation of the following bytes. Include the appropriate diagram.
