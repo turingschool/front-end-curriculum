@@ -14,6 +14,13 @@ By the end of this lesson, you will know/be able to:
 
 ## What is Cross-Browser Compatibility
 
+Cross-Browser compatibility describes the issues and strategies behind making sure your applications work in a consistent manner across as many browsers and platforms as possible. It is mainly an accessibility concern, and as we have introduced more devices, operating systems and browsers into the world, attempting to support all of them has become a significant challenge. Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner on the platforms they build.
+
+### Standards Bodies
+
+* [W3C](https://www.w3.org/)
+* [WhatWG](https://whatwg.org/)
+
 ## Causes of Browser Discrepencies
 
 ## General Strategies & Solutions
