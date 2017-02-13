@@ -57,12 +57,54 @@ __________________________________________
 ## Strategies & Solutions
 
 ### Fallbacks
+A fallback is a contingency plan -- an option or route to be taken when the preferred choice in unavailable. In a lot of scenarios, browsers will have some default fallback behavior already provided for you. Understanding what these fallbacks are and how they behave is an important part of achieving sound compatibility. Though some fallbacks are provided for us, handling them might still mean we have to write some additional code.
+
+For example, HTML5 introduced a lot of new tags that are unrecognized by older browsers. When a browser encounters an HTML tag it doesn't recognize, it treats it as an inline element with no semantic value. You can still target them with JavaScript and style them with CSS, but you might need to add some additional styles to ensure they appear in a presentable way when they go unrecognized. (e.g. an `article` tag in an older browser might require that you set `display: block` on its CSS in order to present it appropriately in older browsers).
+
+Another example of leveraging fallback behavior can be found in more advanced tags, such as `video` or `audio`. These tags were implemented with natural fallback mechanisms to make it easier for developers to integrate them into their applications before all browsers came up to speed. 
+
+Take the following HTML to present a video:
+
+```html
+<video id="video" controls preload="metadata" poster="img/puppy-poster.jpg">
+  <source src="video/cute-puppies.mp4" type="video/mp4">
+  <source src="video/cute-puppies.webm" type="video/webm">
+  <source src="video/cute-puppies.ogg" type="video/ogg">
+  <!-- Flash fallback -->
+  <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/cute-puppies.mp4" width="1024" height="576">
+     <param name="movie" value="flash-player.swf?videoUrl=video/cute-puppies.mp4" />
+     <param name="allowfullscreen" value="true" />
+     <param name="wmode" value="transparent" />
+     <param name="flashvars" value="controlbar=over&amp;image=img/puppy-poster.jpg&amp;file=flash-player.swf?videoUrl=video/cute-puppies.mp4" />
+      <img alt="Cute Puppies" src="img/puppy-poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
+  </object>
+  <!-- Offer download -->
+  <a href="video/cute-puppies.mp4">Download MP4</a>
+</video>
+```
+
+In a browser that doesn't recognize the `video` tag, that tag will be completely ignored and will automatically fallback to the flash content we provide within it. If the user has disabled flash, it will fallback even further to the download link for playing the mp4 file. In a browser that *does* support the video tag, we've provided 3 different source types (mp4, webm, ogg) to present the user with the best available option.
+
+### CSS Vendor Prefixes
+Similar to the HTML example we just looked at, CSS facilitates fallback behaviors as well. CSS3 added many new styling properties that generated quite a few discrepencies between how our applications ended up styled on different browsers. When a browser doesn't recognize a particular CSS property, it will simply skip over it. We can easily provide fallbacks by included a property we know the browser *will* recognize. Take background gradients for example. If we use the [CSS Gradient Generator](http://www.colorzilla.com/gradient-editor/) to create a CSS background, it will spit out something like the following:
+
+```css
+background: #1e5799;
+background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0);
+```
+
+By providing a plain colored background with the `background: #1e5799` property, we can ensure that any browser which doesn't understand gradients will still display a colored background similar to the look we're going for. Without this declaration, our background might show up completely transparent which could make text or other content within the block illegible.
+
+Because browsers will skip properties they don't understand, we can add a `filter` property specifically for older versions of IE. This is a particular rule that only Internet Explorer understands (obviously the syntax looks like hell), but other browsers will simply ignore this in favor of the other gradient declarations.
+
+You'll also notice we are specifying our gradients with indicators such as `-moz-linear-gradient` and `-webkit-linear-gradient`. These are called **vendor prefixes**, and can be used to target a specific browser vendor (Firefox or Chrome/Safari, in this case). These are useful when a new CSS declaration is added to the spec and platform engineers are still attempting to implement it. Eventually, when the implementation is more stable, these can be dropped in favor of the more generic `linear-gradient` declaration that all modern browsers will recognize.
 
 ### Feature Detection
 
 ### Polyfills & Shims
-
-### CSS Vendor Prefixes
 
 ### IE Conditional Comments
 
