@@ -44,21 +44,16 @@ Let's take Selenium for a test drive on our Linked List project.
 4. Apple's `safaridriver` is shipped with Safari 10 for OS X El Capitan and macOS Sierra. You will need to enable Remote Automation in the Develop menu of Safari 10 before testing. To turn on WebDriver support, follow these steps:
    - Ensure that the Develop menu is available. It can be turned on by opening Safari preferences (_Safari > Preferences_ in the menu bar), going to the Advanced tab, and ensuring that the Show Develop menu in menu bar checkbox is checked.
    - Enable Remote Automation in the Develop menu. This is toggled via _Develop > Allow Remote Automation_ in the menu bar.
-   - Authorize safaridriver to launch the webdriverd service which hosts the local web server. To permit this, run `/usr/bin/safaridriver` once manually and complete the authentication prompt.
 
 ### Test File(s)
 Let's create a sample test file that will both help us see our Selenium in action, as well as walk us through some of the config requirements.
 
 ```javascript
 
-// This includes the selenium webdriver module
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
 
-// This sets up a new instance of a driver using the new webdriver.Builder() constructor. With the forBrowser() method, we pass an argument 
-// that specifies the browser we want to test with the builder and then we call the build() method to actually build it. We have to construct 
-// this build process for each desired browser.
 var driver_fx = new webdriver.Builder()
     .forBrowser('firefox')
     .build();
@@ -71,20 +66,15 @@ var driver_saf = new webdriver.Builder()
     .forBrowser('safari')
     .build();
 
-// This is a test function that will run the test code across each driver we pass it.
 searchTest(driver_fx);
 searchTest(driver_chr);
 searchTest(driver_saf);
 
-// This is just a sample test to see Selenium in action. It begins by grabbing a url (DOM to test), finding an element on the page by it's name attribute/value, which in this case is Google's 
-// input field for user search, entering the text "webdriver" with the sendKeys method, and then clicking on the element with the name attribute of "btnG", which is the main button for "Google Search".
 function searchTest(driver) {
   driver.get('http://www.google.com');
   driver.findElement(By.name('q')).sendKeys('webdriver');
   driver.findElement(By.name('btnG')).click();
 
-// The second part of this function, leverages the sleep method to stall the driver for 2 seconds (2000 miliseconds), which gives google enough time to load the search results. At that point, we call getTitle(),
-// which grabs the title element on the page and runs a conditional on the text of the title to determine the test's pass or fail result.
   driver.sleep(2000).then(function() {
     driver.getTitle().then(function(title) {
       if(title === 'webdriver - Google Search') {
@@ -95,7 +85,6 @@ function searchTest(driver) {
     });
   });
 
-// After you've finished running a test, you should shut down any driver instances you've opened, to make sure that you don't end up with loads of rogue browser instances open on your machine! This is done using the quit() method. Simply call this on your driver instance when you are finished with it.
   driver.quit();
 }
 ```
