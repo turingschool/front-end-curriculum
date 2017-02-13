@@ -13,12 +13,30 @@ Students must earn a 3 or greater on *each* segment of the End of Module Assessm
 
 ### Individual Work
 
-(forthcoming)
+[Completed PreWork](https://github.com/turingschool/intermission-assignments/issues/98)  
+  Assignments:  
+  - WesBos Redux  
+  - Specified JS30 Exercises  
+  - NodeSchool Exercises  
+
+  Deliverables:  
+  - Write up a summary of the pieces you completed.
+  - Looking back on the pre-work, what did you find useful in terms of preparation for the material covered in Module 3? What do you wish there had been more/less of?
+[Homework Assignments](https://github.com/turingschool/front-end-submissions-public)  
+  - UX/UI Challenge 1: Swipe-able Cards   
+  - UX/UI Challenge 2: Sidebar Navigation  
+
+  Deliverables:  
+  - Write up at least 2 specific things that you learned from these exercises. For example "I had forgotten how to create a JavaScript class, these exercises reminded me how files communicate." (<-- cant use that one tho).  
+
+[Walker Texas Rangerbox](http://frontend.turing.io/projects/walker-texas-rangerbox.html)  
+[Self-Directed Project](http://frontend.turing.io/projects/self-directed-project.html)  
 
 ### Group Work
 
-(forthcoming)
-
+[Weather Forecast](http://frontend.turing.io/projects/weather-forecast.html) or [Movie Tracker](#)  
+[remEMBER](http://frontend.turing.io/projects/remember.html)  
+[Ultimate UX Design Challenge](http://frontend.turing.io/projects/ultimate-ux-ui-team-challenge.html)  
 
 ### Professional Skills
 
@@ -32,15 +50,13 @@ The Professional Skills segment is made up of several pieces, most of which are 
 
 ### Community & Feedback
 
-(forthcoming)
+Feedback from other students and to other students in either project groups, posses, general interaction, etc.  
+
+Discuss ways that you supported the larger Turing community. What do you want to keep doing next mod or start doing next mod?  
 
 ## Skill Expectations
 
 Students develop many skills in F3, but we are particularly emphasizing:
-
-### Professional Skills
-
-(review/edit the below)
 
 #### Project Management
 
