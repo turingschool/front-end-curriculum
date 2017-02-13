@@ -108,20 +108,30 @@ If you happen to end up working on a codebase that needs to support ancient IE b
 ```HTML
 <!--[if lte IE 8]>
   <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css">
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 ```
 
 These are conditional comments that are only recognized by IE. This particular example says 'If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files.' Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
 
 ### Feature Detection
+Feature detection is similar to fallbacks, though it's more about the process of determining whether or not a browser supports a particular piece of code. We can write our own conditional code to detect feature support, and within each condition, provide the best possible user experience for that scenario. For example, some browsers might support the new [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/notification) that allows for mobile-style push notifications from the browser. In an application where we want to provide this functionality, we'd want to detect whether or not the browser recognizes the API with a conditional like this:
 
-### Polyfills & Shims
+```js
+if (window.Notification && Notification.permission === "granted") {
+  let pushMessage = new Notification('Hi there, notification here!');
+} else {
+  // perhaps append a jQuery element to the page itself with the same message
+  $('#notification-box').append('<li>Hi there, notification here!');
+}
+```
+
+### Polyfills & Shims 
 __________________________________________
 
 ## Cross-Browser Compat Tools
 
-### Normalization Libraries
+### Normalization & Feature Detection Libraries
 
 #### [Modernizr](https://github.com/modernizr/modernizr)
 
