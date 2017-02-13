@@ -1,4 +1,4 @@
-### Number Systems Exercises Answers 
+### Number Systems Exercises Answers
 
 From [number-systems-bitwise-operators.html](This Lesson Plan).  
 
@@ -14,6 +14,18 @@ Using a truth table, convert write out the logical representation of the followi
 6. NOT 00010001
 7. 11001001 XOR 01100100
 8. 11001001 OR 01100100
+
+```
+ANSWERS
+1. 00000000
+2. 11111111
+3. 11111111
+4. 00110011
+5. 10101110
+6. 11101110
+7. 10101101
+8. 11101001
+```
 
 
 ### Binary --> Decimal  
