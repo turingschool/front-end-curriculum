@@ -102,12 +102,21 @@ Because browsers will skip properties they don't understand, we can add a `filte
 
 You'll also notice we are specifying our gradients with indicators such as `-moz-linear-gradient` and `-webkit-linear-gradient`. These are called **vendor prefixes**, and can be used to target a specific browser vendor (Firefox or Chrome/Safari, in this case). These are useful when a new CSS declaration is added to the spec and platform engineers are still attempting to implement it. Eventually, when the implementation is more stable, these can be dropped in favor of the more generic `linear-gradient` declaration that all modern browsers will recognize.
 
+### IE Conditional Comments
+If you happen to end up working on a codebase that needs to support ancient IE browsers, you might run into some comments within the HTML that look like this:
+
+```HTML
+<!--[if lte IE 8]>
+  <script src="ie-fix.js"></script>
+  <link href="ie-fix.css" rel="stylesheet" type="text/css">
+<![endif]-->
+```
+
+These are conditional comments that are only recognized by IE. This particular example says 'If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files.' Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
+
 ### Feature Detection
 
 ### Polyfills & Shims
-
-### IE Conditional Comments
-
 __________________________________________
 
 ## Cross-Browser Compat Tools
