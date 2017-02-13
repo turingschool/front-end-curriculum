@@ -66,20 +66,19 @@ Another example of leveraging fallback behavior can be found in more advanced ta
 Take the following HTML to present a video:
 
 ```html
-<video id="video" controls preload="metadata" poster="img/puppy-poster.jpg">
+<video id="video" poster="img/puppy-poster.jpg">
   <source src="video/cute-puppies.mp4" type="video/mp4">
   <source src="video/cute-puppies.webm" type="video/webm">
   <source src="video/cute-puppies.ogg" type="video/ogg">
   <!-- Flash fallback -->
-  <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/cute-puppies.mp4" width="1024" height="576">
-     <param name="movie" value="flash-player.swf?videoUrl=video/cute-puppies.mp4" />
-     <param name="allowfullscreen" value="true" />
-     <param name="wmode" value="transparent" />
-     <param name="flashvars" value="controlbar=over&amp;image=img/puppy-poster.jpg&amp;file=flash-player.swf?videoUrl=video/cute-puppies.mp4" />
-      <img alt="Cute Puppies" src="img/puppy-poster.jpg" width="1024" height="428" title="No video playback possible, please download the video from the link below" />
+  <object data="flash-player.swf?videoUrl=video/cute-puppies.mp4">
+    <param name="movie" value="flash-player.swf?videoUrl=video/cute-puppies.mp4" />
+    <param name="allowfullscreen" value="true" />
+    <param name="wmode" value="transparent" />
+    <img alt="Cute Puppies" src="img/puppy-poster.jpg" />
   </object>
-  <!-- Offer download -->
-  <a href="video/cute-puppies.mp4">Download MP4</a>
+  <!-- Download Video Fallback -->
+  <a href="video/cute-puppies.mp4">Download Video</a>
 </video>
 ```
 
@@ -122,11 +121,31 @@ if (window.Notification && Notification.permission === "granted") {
   let pushMessage = new Notification('Hi there, notification here!');
 } else {
   // perhaps append a jQuery element to the page itself with the same message
-  $('#notification-box').append('<li>Hi there, notification here!');
+  $('#notification-box').append('<li>Hi there, notification here!</li>');
 }
 ```
 
-### Polyfills & Shims 
+### Polyfills & Shims
+
+A shim allows you to bring a new API to an older environment. Usually these are libraries or other include files that you'll add to your application to support some functionality in an older browser.
+
+Polyfills aim to implement functionality that you'd expect the browser to have natively. When used in conjunction with feature detection, you can 'backfill' unsupported functionality in older browsers with your own implementation.
+
+You'll often hear the terms polyfill and shim used interchangeably, but in reality, a polyfill *is* a shim -- it's just a specific shim for a browser API. (Don't get caught up on the difference here, this is just a nice-to-know.)
+
+One polyfill we might want to create is support for the `fetch` API. Because this API relies on the `Promises` API, we'd need to use feature detection for both of these APIs to determine if they exist, and if not, create a shim that includes a polyfill for both APIs:
+
+```js
+if (window.Promise && window.fetch) {
+  // carry on, all is good here!
+} else {
+  // load shim for fetch & promises
+  // then carry on, all will be good!
+}
+```
+
+The polyfills for these APIs look like the following: [fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js), [promise polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js). You'll notice at the bottom of each polyfill file, it will return a newly defined object for either `fetch` or `Promise`. This allows our application code to be written as it would for modern browsers, and cuts down on the amount of conditional code we have to write.
+
 __________________________________________
 
 ## Cross-Browser Compat Tools
