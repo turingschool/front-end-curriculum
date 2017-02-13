@@ -28,12 +28,17 @@ When aiming to serve as large of an audience as possible, we need a clear outlin
 
 When asking yourself the above questions, you also need to put thought into what kind of audience you're serving. This will have an affect on how much time, effort and other resources you put behind supporting another platform. For example, if you're building a medical app to be used by clinicians who consistently work on Windows with Internet Explorer, you'd likely need to put significant muscle behind supporting older versions of IE. Conversely, because the clinicians work most often from their offices on desktop computers, you might be able to avoid having to support mobile devices and could put less effort into things like responsiveness and a slimmed-down mobile experience. While you can make some general, educated guesses about the type of audience you're trying to reach, some teams have dedicated resources for researching these types of demographics. 
 
+
+### The Approaches: Progressive Enhancement vs. Graceful Degradation
+
+__________________________________________
+
+## Causes of Compatibility Discrepencies
+
 ### Standards Bodies
 
 * [W3C](https://www.w3.org/)
 * [WhatWG](https://whatwg.org/)
-
-## Causes of Compatibility Discrepencies
 
 ### Different Browsers
 
@@ -41,7 +46,9 @@ When asking yourself the above questions, you also need to put thought into what
 
 ### Assistive Technologies
 
-## General Strategies & Solutions
+__________________________________________
+
+## Strategies & Solutions
 
 ### Fallbacks
 
@@ -52,6 +59,8 @@ When asking yourself the above questions, you also need to put thought into what
 ### CSS Vendor Prefixes
 
 ### IE Conditional Comments
+
+__________________________________________
 
 ## Cross-Browser Compat Tools
 
@@ -70,6 +79,8 @@ When asking yourself the above questions, you also need to put thought into what
 ### Virtual Machines
 
 ### Browser Stack
+
+__________________________________________
 
 ## Resources
 
