@@ -8,6 +8,25 @@ layout: page
 
 [Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/m4_flower_exercise_follow_up.pdf)
 
+Priorities:
+-Differentiation: students can self-select into groups depending on their stress levels; if students don't feel anxiety about any of the laid out ideas (or they already have a job), they will assist with the other student groups
+1. Pull out Flower Exercise -- study it and reflect for 5-10 mins. on top priorities and HOW to tackle them; Share those with a partner to discuss 3 things they want to make sure they emphasize in their job search and h
+2. On chart paper around the room, students write down their anxieties:
+	-Entering the industry
+	-Cold outreach
+	-Networking
+	-Branding
+	-Interviews (both technical and culture fit)
+	-Other (students can write down anything that didn't fit into the above)
+	
+-Opening -- objectives, expectations, intro the activity and the idea of "barriers"
+-Students go around and fill out their anxieties
+-Then students read through flower exercise and create priorities; they meet with a partner and discuss how to make them happen; Meanwhile, I will look at the results from the gallery walk and decide on what example I will walk through and how many groups should meet separately
+-Students share a few takeaways
+-I model a coaching session around one anxiety, soliciting input from the students on how I would solve my problem; outline options, define obstacles, land on an action step that speaks to my comfort level
+-Students then break out into groups to tackle other anxieties; I float from group to group to offer some guidance
+-Come back together -- share 1 action step from each group; address any last questions
+
 ### Objectives
 
 * Identify your top 3 priorities in your first dev job.
