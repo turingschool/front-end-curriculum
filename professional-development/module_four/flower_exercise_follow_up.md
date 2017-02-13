@@ -29,17 +29,44 @@ Priorities:
 
 ### Objectives
 
-* Identify your top 3 priorities in your first dev job.
-* Identify areas where you might place barriers on yourself in terms of the job search.
-* Devise an action plan to overcome those barriers.
-* Create a job search support group within your cohort -- you are each other’s best support system and allies in this search.
+* Identify your top 3 priorities in your first dev job
+* Identify areas where you might place barriers on yourself in terms of the job search
+* Devise an action plan to overcome those barriers
+* Create a job search support group within your cohort -- you are each other’s best support system and allies in this search
 
 ### Deliverables
 
-* 1 paragraph describing your top 3 priorities in your first dev job and why
-* 1-2 paragraphs describing your perceived barriers and the action steps you will take to overcome them
+* Utilize the plans you create today when you fill out The Plan for your portfolio
 
 ### Opening
+Today we'll discuss...
+
+
+### (Perceived) Barriers to your Job Search
+We can sometimes talk ourselves out of opportunities because we don’t think we deserve them, and we create our own barriers to success.
+
+* Examples of barriers:
+	* "I talk myself out of applying to certain jobs because I don’t meet enough of the listed qualifications."
+*This is common among women.*
+	* "I don't know if ....
+	* "I don’t feel comfortable networking. It feels forced, and I don’t want to do something that doesn’t feel genuine, so I stay home from meet-ups."
+	* "Interviews make me really nervous, so I end up performing badly. It’s hard for me to code or communicate on the spot."
+
+What are some barriers you might carry with you? Think about these areas:
+
+* Entering the Software Industry
+* Cold Outreach
+* Networking
+* Interviewing (either technical or culture fit)
+* Personal Branding for yourself
+* Other -- what other anxieties do you have that aren't covered in the other categories? 
+
+Activity: Fill out the chart paper
+
+Differentiation: For students who don't feel anxieties
+
+
+
 
 **Debrief Flower Exercise:** Write, Pair, Share
 
@@ -52,24 +79,6 @@ Pair up with someone else and discuss these 3 things as well as anything else yo
 	* What is something you and your partner learned about yourselves from completing the Flower Exercise?
 
 Now that you have a more clear picture of what you want in your job search, we will examine other forces that sometimes affect our job search.
-
-### (Perceived) Barriers to your Job Search
-We can sometimes talk ourselves out of opportunities because we don’t think we deserve them, and we create our own barriers to success.
-
-* Examples of barriers:
-	* "I talk myself out of applying to certain jobs because I don’t meet enough of the listed qualifications."
-*This is common among women.*
-	* "I don’t feel comfortable networking. It feels forced, and I don’t want to do something that doesn’t feel genuine, so I stay home from meet-ups."
-	* "Interviews make me really nervous, so I end up performing badly. It’s hard for me to code or communicate on the spot."
-
-What are some barriers you might carry with you? Think about these areas:
-
-* Entering the Software Industry
-* Interviewing
-* Networking
-* Personal Branding/“Selling” Yourself
-
-Discuss and synthesize the trends that come up.
 
 ### Taking Action
 How do we overcome those barriers? Brainstorm ideas on how to turn a barrier into something actionable and positive.
