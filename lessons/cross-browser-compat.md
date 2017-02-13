@@ -14,14 +14,32 @@ By the end of this lesson, you will know/be able to:
 
 ## What is Cross-Browser Compatibility
 
-Cross-Browser compatibility describes the issues and strategies behind making sure your applications work in a consistent manner across as many browsers and platforms as possible. It is mainly an accessibility concern, and as we have introduced more devices, operating systems and browsers into the world, attempting to support all of them has become a significant challenge. Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner on the platforms they build.
+Cross-Browser compatibility describes the issues and strategies behind making sure your applications work in a consistent manner across as many browsers and platforms as possible. It is mainly an accessibility concern. As we have introduced more devices, operating systems and browsers into the world, attempting to support all of them has become a significant challenge. Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build.
+
+### Prioritizing Functionality
+
+When aiming to serve as large of an audience as possible, we need a clear outline of what pieces of functionality and experience are highest priority. Delivering a completely consistent experience across all platforms isn't necessarily the goal, and is honestly kinda impossible. The real goal is simply to provide an acceptable experience for as many users as possible. This means we need to ask ourselves a few questions about what we're building:
+
+* What does the "minimum viable product" for our application look like?
+* What is the most important thing a user will want to do with our application?
+* What parts of the user experience can be sacrificed for the sake of supporting another platform, and how important is it that we serve this audience?
+
+### Understanding Your Audience
+
+When asking yourself the above questions, you also need to put thought into what kind of audience you're serving. This will have an affect on how much time, effort and other resources you put behind supporting another platform. For example, if you're building a medical app to be used by clinicians who consistently work on Windows with Internet Explorer, you'd likely need to put significant muscle behind supporting older versions of IE. Conversely, because the clinicians work most often from their offices on desktop computers, you might be able to avoid having to support mobile devices and could put less effort into things like responsiveness and a slimmed-down mobile experience. While you can make some general, educated guesses about the type of audience you're trying to reach, some teams have dedicated resources for researching these types of demographics. 
 
 ### Standards Bodies
 
 * [W3C](https://www.w3.org/)
 * [WhatWG](https://whatwg.org/)
 
-## Causes of Browser Discrepencies
+## Causes of Compatibility Discrepencies
+
+### Different Browsers
+
+### Different Devices
+
+### Assistive Technologies
 
 ## General Strategies & Solutions
 
