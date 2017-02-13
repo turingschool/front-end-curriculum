@@ -1,6 +1,6 @@
 ### Number Systems Exercises Answers
 
-From [number-systems-bitwise-operators.html](This Lesson Plan).  
+From [This Lesson Plan](number-systems-bitwise-operators.html).  
 
 #### Bitwise Logic Operators
 
