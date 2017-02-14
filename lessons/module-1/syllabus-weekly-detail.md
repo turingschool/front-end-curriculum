@@ -29,7 +29,7 @@ title: Syllabus Weekly Detail
 ### WK 4: Build on a Solid Foundation 
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_.|
-|Lessons     | Design III, [Local Storage](http://frontend.turing.io/lessons/json-and-localstorage.html), Review JS III & IV, [Array Prototypes](http://frontend.turing.io/lessons/array-prototype-methods-intro), Feature Testing Selenium, Intro to Build Tools, TDD/Refactoring, Gear Up |
+|Lessons     | Design III, [Local Storage](http://frontend.turing.io/lessons/json-and-localstorage.html), Review JS III & IV, [Array Prototypes](http://frontend.turing.io/lessons/array-prototype-methods-intro), [Intro Testing Selenium](http://frontend.turing.io/lessons/module-1/selenium-testing), Intro to Build Tools, Gear Up |
 |Assignment  | __DUE__:   Mon 2/13 ~ Static Comp Challenge #1 |
 |Assignment  | __EVAL__:  Thu 2/16 ~ Ideabox |
 
