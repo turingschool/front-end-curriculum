@@ -72,9 +72,10 @@ How do we overcome those barriers? We need to utilize coaching techniques to tal
 Allison will demonstrate how to coach through an anxiety. 
 
 Start with understanding what it is that holds you back in this area:
+* What are your strengths...
 * Example: ....
 
-Start by creating a goal:
+Then create a goal:
 
 * When you decide on an area that you'd like to improve, outline what your goal is around that improvement -- how will you know what you've overcome that barrier? What metrics will you use? 
 
@@ -86,8 +87,6 @@ For students who don't identify with having anxieties around these areas or alre
 
 **You Do:**
 Using barriers you’ve identified for yourself, expand on the action plan you started in your small groups to outline specific steps you will take to overcome those barriers
-
-
 
 ### Next Steps: Create a Job Search Support System
 In your cohort, you are each other’s best resources in the job search.
