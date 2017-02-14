@@ -2,9 +2,17 @@
 title: Introduction to Selenium Testing 
 ---
 
-# Overview
+# Optional Pre-Teach
 
-### Video: [Introduction to Selenium](https://www.youtube.com/watch?v=BL4-_tVx2rE) provides historical overview.
+__Video:__ [Introduction to Selenium](https://www.youtube.com/watch?v=BL4-_tVx2rE) provides historical overview.
+
+# Learning Goals
+
+* Learn how to setup a selenium testing environment to run tests locally
+* Learn the basics of constructing selenium tests in javascript
+* Learn about testing best practices
+
+# Overview
 
 Selenium is a free (open source) automated testing suite for web applications. It is comprised of four components:
 
@@ -59,8 +67,19 @@ Let's create a sample test file that will both help us see our Selenium in actio
 4. What do you observe?
 5. Let's discuss the code in the file
 
-```javascript
+#### Read and write code exercise: (10 min)
 
+* Pair and/or triple up in teams 
+* In your `multiple_browser_test.js` file, you will write comments to explain each block of code
+* A "block" of code is separated by line breaks - so there are eight(8) total in this file
+* Above each block, TAKE TURNS writing comments that explain what the block of code is doing
+* Imagine a senior developer will be reading your comments, so be clear, concise, and use correct terminology
+* Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
+
+#### Review instructor comments: (3 min) 
+I'll post a version in slack for you to compare your comments.
+
+```javascript
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
