@@ -173,7 +173,6 @@ completion.suggest("piz")
 See if you can implement a front facing application for your `trie`. The user should be able to submit a word and then receive the suggestions on the dom.
 
 
-
 ## Evaluation Rubric
 
 The project will be assessed with the following rubric:
