@@ -69,20 +69,21 @@ Let's create a sample test file that will both help us see our Selenium in actio
 
 #### Read and write code exercise: (10 min)
 
+* Objective: practice reading and articulating code. 
 * Pair and/or triple up in teams 
 * In your `multiple_browser_test.js` file, you will write comments to explain each block of code
 * A "block" of code is separated by line breaks - so there are eight(8) total in this file, although I've given you the comments on the first block as an example, so only seven(7) for you to do on your own
 * Above each block, TAKE TURNS writing comments that explain what the block of code is doing
 * Imagine a senior developer will be reading your comments, so be clear, concise, and use correct terminology
 * Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
+* _NOTE_: writing such verbose comments for each block of code is NOT a normal practice to implement in your daily coding and/or on production. Only use comments when you need them, focus on making your code speak for itself. This is simply an exercise focused on reading/writing code, not an exercise about commenting code.
 
 #### Review instructor comments: (3 min) 
 I'll post a version in slack for you to compare your comments.
 
 ```javascript
-//To initate our tests, we must first include the selenium-webdriver
-module. We require the module and assign it to the variable "webdriver".
-We declare 
+//To initate our tests, we must first include the selenium-webdriver module. We require the module and assign it to the variable "webdriver". We create a "By" and "until" shorthand variable for referencing the "By" class and "until" module more easily within our subsequent code. "until" defines common conditions for use with "WebDriver wait". "By" describes a mechanism for locating an element on the page.
+
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
@@ -122,15 +123,15 @@ function searchTest(driver) {
 }
 ```
 
-### Your Turn
+# Your Turn
 
-# Challenge 1
+### Challenge 1
 
-# Challenge 2
+### Challenge 2
 
-# Challenge 3
+### Challenge 3
 
-### Testing Golden Rules
+# Testing Golden Rules
 
 1. Use good locator strategies: When you are Interacting with the document, make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
 2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the google_test.js test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps results_page_title_set_correctly.js would be slightly better?
