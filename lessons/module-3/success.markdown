@@ -20,9 +20,11 @@ Students must earn a 3 or greater on *each* segment of the End of Module Assessm
   - NodeSchool Exercises  
 
   Deliverables:  
-  - Write up a summary of the pieces you completed.
-  - Looking back on the pre-work, what did you find useful in terms of preparation for the material covered in Module 3? What do you wish there had been more/less of?
+  - Write up a summary of the pieces you completed.  
+  - Looking back on the pre-work, what did you find useful in terms of preparation for the material covered in Module 3? What do you wish there had been more/less of?  
+
 [Homework Assignments](https://github.com/turingschool/front-end-submissions-public)  
+  Assignments:
   - UX/UI Challenge 1: Swipe-able Cards   
   - UX/UI Challenge 2: Sidebar Navigation  
 
