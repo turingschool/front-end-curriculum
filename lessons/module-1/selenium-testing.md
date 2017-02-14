@@ -62,25 +62,9 @@ Let's take Selenium for a test drive on our Linked List project.
 Let's create a sample test file that will both help us see our Selenium in action, as well as walk us through some of the config requirements.
 
 1. Add a file to your linked list project called `multiple_browser_test.js`
-2. Copy/paste the code from below into the file 
-3. Now head over to your terminal and run `node multiple_browser_test.js`
-4. What do you observe?
-5. Let's discuss the code in the file
+2. Copy/paste the code from below into the file: 
 
-#### Read and write code exercise: (10 min)
-
-* Objective: practice reading and articulating code. 
-* Pair and/or triple up in teams 
-* In your `multiple_browser_test.js` file, you will write comments to explain each block of code
-* A "block" of code is separated by line breaks - so there are eight(8) total in this file, although I've given you the comments on the first block as an example, so only seven(7) for you to do on your own
-* Above each block, TAKE TURNS writing comments that explain what the block of code is doing
-* Imagine a senior developer will be reading your comments, so be clear, concise, and use correct terminology
-* Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
-* _NOTE_: writing such verbose comments for each block of code is NOT a normal practice to implement in your daily coding and/or on production. Only use comments when you need them, focus on making your code speak for itself. This is simply an exercise focused on reading/writing code, not an exercise about commenting code.
-
-#### Review instructor comments: (3 min) 
-I'll post a version in slack for you to compare your comments.
-
+#### Multiple Browser Test File Code
 ```javascript
 //To initate our tests, we must first include the selenium-webdriver module. We require the module and assign it to the variable "webdriver". We create a "By" and "until" shorthand variable for referencing the "By" class and "until" module more easily within our subsequent code. "until" defines common conditions for use with "WebDriver wait". "By" describes a mechanism for locating an element on the page.
 
@@ -122,6 +106,23 @@ function searchTest(driver) {
   driver.quit();
 }
 ```
+3. Now head over to your terminal and run `node multiple_browser_test.js`
+4. What do you observe?
+5. Let's discuss the code in the file
+
+#### Read and write code exercise: (10 min)
+
+* Objective: practice reading and articulating code. 
+* Pair and/or triple up in teams 
+* In your `multiple_browser_test.js` file, you will write comments to explain each block of code
+* A "block" of code is separated by line breaks - so there are eight(8) total in this file, although I've given you the comments on the first block as an example, so only seven(7) for you to do on your own
+* Above each block, TAKE TURNS writing comments that explain what the block of code is doing
+* Imagine a senior developer will be reading your comments, so be clear, concise, and use correct terminology
+* Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
+* _NOTE_: writing such verbose comments for each block of code is NOT a normal practice to implement in your daily coding and/or on production. Only use comments when you need them, focus on making your code speak for itself. This is simply an exercise focused on reading/writing code, not an exercise about commenting code.
+
+#### Review instructor comments: (3 min) 
+I'll post a version in slack for you to compare your comments.
 
 # Your Turn
 
