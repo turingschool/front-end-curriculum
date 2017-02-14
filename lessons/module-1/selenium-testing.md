@@ -2,9 +2,17 @@
 title: Introduction to Selenium Testing 
 ---
 
-# Overview
+# Optional Pre-Teach
 
-### Video: [Introduction to Selenium](https://www.youtube.com/watch?v=BL4-_tVx2rE) provides historical overview.
+__Video:__ [Introduction to Selenium](https://www.youtube.com/watch?v=BL4-_tVx2rE) provides historical overview.
+
+# Learning Goals
+
+* Learn how to setup a selenium testing environment to run tests locally
+* Learn the basics of constructing selenium tests in javascript
+* Learn about testing best practices
+
+# Overview
 
 Selenium is a free (open source) automated testing suite for web applications. It is comprised of four components:
 
@@ -32,6 +40,11 @@ Why should you care? With Selenium, you can configure a set of scripts that will
 ### Wait, what was all that ^^ again?
 Up to this point in our development we’ve spent most, if not all our time, in the Unit Testing department and we’ve never really ventured into testing the dom. What Selenium allows us to do is automate our dom tests. So instead of us having to go in ourselves and test(click all the buttons, reload the page) to see if the functionality is working we can write a Selenium test, run our test suite, and then see if the test passes or fails. :heart_eyes:
 
+# Docs
+
+* [Selenium-WebDriver API Commands and Operations](http://www.seleniumhq.org/docs/03_webdriver.jsp#locating-ui-elements-webelements)
+* [Selenium API Docs](http://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/index.html)
+
 # Setup 
 Let's take Selenium for a test drive on our Linked List project. 
 
@@ -48,8 +61,28 @@ Let's take Selenium for a test drive on our Linked List project.
 ### Test File(s)
 Let's create a sample test file that will both help us see our Selenium in action, as well as walk us through some of the config requirements.
 
-```javascript
+1. Add a file to your linked list project called `multiple_browser_test.js`
+2. Copy/paste the code from below into the file 
+3. Now head over to your terminal and run `node multiple_browser_test.js`
+4. What do you observe?
+5. Let's discuss the code in the file
 
+#### Read and write code exercise: (10 min)
+
+* Pair and/or triple up in teams 
+* In your `multiple_browser_test.js` file, you will write comments to explain each block of code
+* A "block" of code is separated by line breaks - so there are eight(8) total in this file, although I've given you the comments on the first block as an example, so only seven(7) for you to do on your own
+* Above each block, TAKE TURNS writing comments that explain what the block of code is doing
+* Imagine a senior developer will be reading your comments, so be clear, concise, and use correct terminology
+* Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
+
+#### Review instructor comments: (3 min) 
+I'll post a version in slack for you to compare your comments.
+
+```javascript
+//To initate our tests, we must first include the selenium-webdriver
+module. We require the module and assign it to the variable "webdriver".
+We declare 
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
@@ -88,6 +121,14 @@ function searchTest(driver) {
   driver.quit();
 }
 ```
+
+### Your Turn
+
+# Challenge 1
+
+# Challenge 2
+
+# Challenge 3
 
 ### Testing Golden Rules
 
