@@ -109,7 +109,7 @@ function searchTest(driver) {
   driver.findElement(By.name('q')).sendKeys('webdriver');
   driver.findElement(By.name('btnG')).click();
 
-  driver.sleep(2000).then(function() {
+  driver.sleep(3000).then(function() {
     driver.getTitle().then(function(title) {
       if(title === 'webdriver - Google Search') {
         console.log('Test passed');
@@ -125,11 +125,14 @@ function searchTest(driver) {
 
 # Your Turn
 
-### Challenge 1
-
-### Challenge 2
-
-### Challenge 3
+* Create three individual test files for each of Chrome, Safari, Firefox
+* Create test suites for each browser to test LinkedList accordingly:
+  - Check on page load that a user hits the correct landing page
+  - Check that once a user enters a title/url, the bookmark is displayed
+  - If applicable, validate that "clear bookmarks" does its job
+  - If applicable, validate that an error is thrown when incorrect text is input into the title/url fields
+  - Validate the bookmark delete button removes that particular bookmark
+    from the page
 
 # Testing Golden Rules
 
