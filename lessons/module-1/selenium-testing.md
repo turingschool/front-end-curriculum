@@ -71,7 +71,7 @@ Let's create a sample test file that will both help us see our Selenium in actio
 
 * Pair and/or triple up in teams 
 * In your `multiple_browser_test.js` file, you will write comments to explain each block of code
-* A "block" of code is separated by line breaks - so there are eight(8) total in this file
+* A "block" of code is separated by line breaks - so there are eight(8) total in this file, although I've given you the comments on the first block as an example, so only seven(7) for you to do on your own
 * Above each block, TAKE TURNS writing comments that explain what the block of code is doing
 * Imagine a senior developer will be reading your comments, so be clear, concise, and use correct terminology
 * Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
@@ -80,6 +80,9 @@ Let's create a sample test file that will both help us see our Selenium in actio
 I'll post a version in slack for you to compare your comments.
 
 ```javascript
+//To initate our tests, we must first include the selenium-webdriver
+module. We require the module and assign it to the variable "webdriver".
+We declare 
 var webdriver = require('selenium-webdriver'),
     By = webdriver.By,
     until = webdriver.until;
