@@ -138,6 +138,9 @@ function searchTest(driver) {
 #### Review (3 min) :smiley:
 I'll post a version in slack for you to compare your comments.
 
+* What are the big discrepancies you notice?
+* Any A-HA moments?
+
 *** 
 
 # Application: Your Turn
