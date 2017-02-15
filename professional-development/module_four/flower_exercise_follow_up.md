@@ -17,22 +17,22 @@ layout: page
 
 ### Deliverables
 
-* Utilize the plans you create today when you fill out The Plan for your portfolio
+* Utilize the plans you create today when you fill out [The Plan](https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/module4/projects/the-plan/index.md) for your portfolio
 
 ### Opening
 Today, we'll discuss strategies for handling anxieties of the job search. You have many resources available to you during your job search, including meeting with Meg (your Employment Coordinator) and your Turing community at large.
 
-But how can you help yourself during this time? How can you help yourself overcome anxieties that hold you back in the job search? We'll approach these anxieties from the standpoint of coaching, and you'll walk away from today's session with actionable steps to implement to overcome any barriers. 
+But how can you help yourself during this time? How can you overcome anxieties that hold you back in the job search? We'll approach these anxieties from the standpoint of coaching, and you'll walk away from today's session with actionable steps to implement to overcome any barriers. 
 
 ### (Perceived) Barriers to your Job Search
-We can sometimes talk ourselves out of opportunities because we don’t think we deserve them, and we create our own barriers to success.
+We can sometimes talk ourselves out of opportunities before we even give them a chance, and we create our own barriers to success.
 
 * Examples of barriers:
-	* "I just want a job." When you don't clarify what you want, it can cause your job search to meander, and this could be a barrier for what you really want. 
 	* "I talk myself out of applying to certain jobs because I don’t meet enough of the listed qualifications."
 *This is common among women.*
 	* "I don’t feel comfortable networking. It feels forced, and I don’t want to do something that doesn’t feel genuine, so I stay home from meet-ups."
 	* "Interviews make me really nervous, so I end up performing badly. It’s hard for me to code or communicate on the spot."
+	* "I just want a job." When you don't clarify what you want, it can cause your job search to meander, and this could be a barrier for what you really want. 
 
 What are some barriers you might carry with you? Think about these areas:
 
@@ -44,7 +44,7 @@ What are some barriers you might carry with you? Think about these areas:
 * Other -- what other anxieties do you have that aren't covered in the other categories? 
 
 **Activity:** 
-Go around the classroom writing up any anxieties you have for each of the above categories. 
+Go around the classroom writing down any anxieties you have on the sheets for each of the above categories. 
 
 **Debrief Flower Exercise:** Write, Pair, Share
 While Allison compiles answers from the chart papers, students reflect on their Flower Exercise:
@@ -69,15 +69,20 @@ Now that you have a more clear picture of what you want in your job search, we w
 How do we overcome those barriers? We need to utilize coaching techniques to talk through the potential action steps we can pursue and support we can seek to move past these barriers. 
 
 **I Do:**
-Allison will demonstrate how to coach through an anxiety. 
+Allison will demonstrate how to coach through a barrier. 
 
 Start with understanding what it is that holds you back in this area:
-* What are your strengths...
-* Example: ....
+* Example: Cold outreach is uncomfortable. Talking to someone I don't know freaks me out, and that keeps me from writing emails. 
 
-Then create a goal:
+Then follow the GOOD coaching model by creating a **G**oal:
 
 * When you decide on an area that you'd like to improve, outline what your goal is around that improvement -- how will you know what you've overcome that barrier? What metrics will you use? 
+
+**O**ptions (what are some things I can do to make this more comfortable and easier for me to achieve?):
+
+**O**bstacles (what could keep you from taking those options?):
+
+**D**o (what action steps will you commit to taking going forward?):
 
 **We Do:**
 From the barriers selected, pick a small group to work with to brainstorm ideas on how to turn a barrier into something actionable and positive. You'll have 20 minutes to discuss. Be prepared to share one action step with the whole group when time is up. 
