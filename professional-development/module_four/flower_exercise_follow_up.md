@@ -15,7 +15,7 @@ layout: page
 * Devise an action plan to overcome those barriers
 * Create a job search support group within your cohort -- you are each other’s best support system and allies in this search
 
-### Deliverables
+### Deliverable
 
 * Utilize the plans you create today when you fill out [The Plan](https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/module4/projects/the-plan/index.md) for your portfolio
 
@@ -47,7 +47,7 @@ What are some barriers you might carry with you? Think about these areas:
 Go around the classroom writing down any anxieties you have on the sheets for each of the above categories. 
 
 **Debrief Flower Exercise:** Write, Pair, Share
-While Allison compiles answers from the chart papers, students reflect on their Flower Exercise:
+While Allison compiles answers from the chart paper, students reflect on their Flower Exercise:
 
 Written reflection:
 
@@ -72,17 +72,34 @@ How do we overcome those barriers? We need to utilize coaching techniques to tal
 Allison will demonstrate how to coach through a barrier. 
 
 Start with understanding what it is that holds you back in this area:
-* Example: Cold outreach is uncomfortable. Talking to someone I don't know freaks me out, and that keeps me from writing emails. 
 
-Then follow the GOOD coaching model by creating a **G**oal:
+* Example: "Interviews make me really nervous, so I end up performing badly. It’s hard for me to code or communicate on the spot."
 
-* When you decide on an area that you'd like to improve, outline what your goal is around that improvement -- how will you know what you've overcome that barrier? What metrics will you use? 
+Then, follow the **GOOD** coaching model:
 
-**O**ptions (what are some things I can do to make this more comfortable and easier for me to achieve?):
+First, create a **G**oal (when you decide on an area that you'd like to improve, outline what your goal is around that improvement -- how will you know what you've overcome that barrier? What metrics will you use?):
 
-**O**bstacles (what could keep you from taking those options?):
+* Example: My goal is to confidently complete an interview. 
 
-**D**o (what action steps will you commit to taking going forward?):
+Second, generate **O**ptions (what are some things I can do to make this more comfortable and easier for me to achieve?):
+
+* Examples: 
+1. Set up a mock interview with a mentor
+2. Practice technical interview questions with others in my cohort
+3. Join Ian Douglas's Google Hangout for technical interview prep next Monday
+4. Pair with a mentor on topics that I feel weaker in
+5. Get coffee with a connection from a company I'm interested in to get a sense of the company culture.
+6. Research projects that the company works on and practice building something similar to be prepared to discuss ideas.
+
+Third, consider **O**bstacles (what could keep you from taking those options?):
+
+* Examples: 
+1. Time could be an obstacle. I need to find the time to complete interview prep.
+2. Feeling discouraged if mock interviews don't go well. That could cause me to stop practicing or put it off more. 
+
+Lastly, decide what to **D**o next (what action steps will you commit to taking going forward?):
+
+* Example: I am going to plan to attend Ian Douglas's technical interview prep Hangout, and I'll use three takeaways from that session to focus on in a mock interview that I'll set up with a mentor. I will commit to both of these appointments a week in advance, and being accountable to someone else will ensure that I complete these action steps. I will ask for clear feedback from my mock interview so that I have something actionable to continue to work on, motivating me to keep trying to get better. 
 
 **We Do:**
 From the barriers selected, pick a small group to work with to brainstorm ideas on how to turn a barrier into something actionable and positive. You'll have 20 minutes to discuss. Be prepared to share one action step with the whole group when time is up. 
