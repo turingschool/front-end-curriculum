@@ -82,9 +82,12 @@ What do you expect to happen here? In a perfect world, I still want to see `skol
 
 This is where Generators come in to save the day.  
 
-A generator is a special kind of function in ES6 that can be paused in the middle, allowing other code to run, and then resumed when needed.
+A generator is a special kind of function in ES6 that can be paused in the middle, allowing other code to run, and then resumed when needed.  
 
-Essentially we are talking about making synchronous code act like asynchronous code, which with the help of generators and Promises is far easier than it used to be.
+
+They all you to produce iterable sequences of values one at a time.  
+
+Essentially we are talking about making synchronous code act like asynchronous code, which with the help of generators and Promises is far easier than it used to be.   
 
 ```js
 function* doSomething() {
@@ -174,9 +177,9 @@ The answer is super interesting! You might expect the return value to be `'hello
 => Object {value: 'hello world', done: false}
 ```  
 
-The object tells us two things.
-  1) The return value from the yield expression
-  2) A boolean indicating if the function is fully executed.  
+The object tells us two things:  
+1. The return value from the yield expression.  
+2. A boolean indicating if the function is fully executed.  
 
 In order to get the value, simply chain `.value` onto the call.  
 
@@ -202,7 +205,9 @@ function *numbers() {
 const generator = numbers()
 ```
 
-If you were to call `generator.next()` 5 times, you would get 5 numbers. Seems legit. But like always, calling a function 5 times to do the same thing defeats the purpose of being a lazy programmer.
+If you were to call `generator.next()` 5 times, you would get 5 numbers. Seems legit. But like always, calling a function 5 times to do the same thing defeats the purpose of being a lazy programmer.  
+
+Instead, we can call a [for of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop (which, shockingly, is also ES6).
 
 ```js
 for(let num of generator){
@@ -210,7 +215,7 @@ for(let num of generator){
 }
 ```
 
-Or let the data persist.
+Or collect the data in an external variable.  
 
 ```js
 const list = []
@@ -218,6 +223,12 @@ for(let num of generator){
   list.push(num)
 }
 console.log(list)
+```
+
+Or use a spread operator:  
+
+```js
+const [...numbers] = foo();
 ```
 
 This seems kind of useless...we might as well just make an array. But let's check out an example where instead of simply printing numbers we pop out of our function and do something else.
@@ -256,7 +267,7 @@ function *adding(){
   return 20 + (yield result)
 }
 
-const sum = numbers()
+const sum = adding()
 ```
 
 Think about what you expect to see on the first `sum.next()` call.
@@ -282,7 +293,26 @@ sum.next(10)
 => Object{value: 30, done:true}
 ```
 
-Let's look at another example!
+Here is another example taken from [this blog post](https://medium.com/javascript-scene/the-hidden-power-of-es6-generators-observable-async-flow-control-cfa4c7f31435#.cfa2x6x84) (which also has a monty python bridge reference...which is cool...):  
+
+```js
+function* crossBridge() {
+  const reply = yield 'What is your favorite color?';
+  console.log(reply);
+  if (reply !== 'yellow') return 'Wrong!'
+  return 'You may pass.';
+}
+
+{
+  const iter = crossBridge();
+  const q = iter.next().value; // Iterator yields question
+  console.log(q);
+  const a = iter.next('blue').value; // Pass reply back into generator
+  console.log(a);
+}
+```
+
+Let's look at another example to demonstrate how pieces of the function get replaced with arguments passed in.  
 
 ```js
 function* yellStuff(){
@@ -308,17 +338,17 @@ console.log(shouting.next())
 => Object {value: "AUGHH KELLY CLARKSON", done: false}
 
 console.log(shouting.next())
-=> Obejct {value: 'undefined...HAHAHA!!', done: false}
+=> Object {value: 'undefined...HAHAHA!!', done: false}
 ```
 
-Vs
+Vs  
 
 ```js
 console.log(shouting.next())
 => Object {value: "AUGHH KELLY CLARKSON", done: false}
 
 console.log(shouting.next('OTHER LOUD THINGS'))
-=> Obejct {value: 'OTHER LOUD THINGS...HAHAHA!!', done: false}
+=> Object {value: 'OTHER LOUD THINGS...HAHAHA!!', done: false}
 ```
 
 And our last execution needs another input to replace `yield firstYell` statement, and save to the variable `secondYell`.
@@ -339,7 +369,7 @@ console.log(shouting.next())
 console.log(shouting.next('OTHER LOUD THINGS'))
 // firstYell = 'OTHER LOUD THINGS'
 // yield pauses the function and waits for another input which will replace everything to the right of second `=`
-=>Object {value: "OTHER LOUD THINGS...HAHAHA!!!", done: false}
+=> Object {value: "OTHER LOUD THINGS...HAHAHA!!!", done: false}
 
 console.log(shouting.next('HAM SANDWICH'))
 // secondYell = 'HAM SANDWICH'
@@ -350,28 +380,25 @@ console.log(shouting.next('HAM SANDWICH'))
 One final example with asynchronous functions.
 
 ```js
-function* doAllTheThings() {
-    //... some code 1
-    var val1 = yield task1();
-    var val2 = yield task2(val1)
-    return val2;
+function* makeAPizza() {
+    var toppings = yield getToppings();
+    var pizza = yield getPizza(toppings)
 };
 
-function task1(){
-	console.log("DOING TASK 1!")
-  return 'TASK 1'
+function getToppings(){
+	console.log("in toppings function")
+  return 'What are your fav pizza toppings?'
 }
 
-function task2(words){
-  console.log("DOING TASK 2")
-  return "TASK 2: " + words
+function getPizza(toppings){
+  console.log("making pizza")
+  return "Here is your " + [...toppings] + " pizza!"
 }
 
-var doIt = doAllTheThings()
+var doStuff = makeAPizza();
 
-console.log(doIt.next())
-console.log(doIt.next("HAHAHA"))
-console.log(doIt.next('FINAL'))
+console.log(doStuff.next())
+console.log(doStuff.next(['pineapple', 'pepperoni']).value)
 ```
 
 
@@ -433,6 +460,28 @@ function* doAllTheThings() {
 };
 
 ```
+
+
+### Cool Examples
+
+```js
+function* fibonacci() { // a generator function
+  let [prev, curr] = [1, 1];
+  while (true) {
+    [prev, curr] = [curr, prev + curr];
+    yield curr;
+  }
+}
+
+for (let n of fibonacci()) {
+  console.log(n);
+  // truncate the sequence at 1000
+  if (n >= 1000) {
+    break;
+  }
+}
+```
+
 ### Read
 
 [Entertaining Article about Generators with Lots of Swear Words](https://medium.com/@dtothefp/why-can-t-anyone-write-a-simple-es6-generators-tutorial-ec2bbdf6ff45#.rmqbhf1zl)  
