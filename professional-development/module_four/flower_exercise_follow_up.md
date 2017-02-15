@@ -6,7 +6,7 @@ layout: page
 
 # Flower Exercise Follow-Up: Overcoming Job Searching Impostor's Syndrome
 
-[Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/m4_flower_exercise_follow_up.pdf)
+[Slides for this lesson](https://github.com/turingschool/professional_skills/blob/master/files/job_search_impostors_syndrome.pdf)
 
 ### Objectives
 
