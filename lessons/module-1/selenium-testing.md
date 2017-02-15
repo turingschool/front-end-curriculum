@@ -135,7 +135,7 @@ function searchTest(driver) {
 * Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
 * _NOTE:_ writing verbose comments for each "block of code" is *NOT* a normal practice to implement in your daily coding and/or production code. Only use comments when you need them, focus on making your code speak for itself. This exercise is focused on reading/writing code, it is NOT an exercise about commenting code.
 
-#### Review (3 min) :simple_smile:
+#### Review (3 min) :smiley:
 I'll post a version in slack for you to compare your comments.
 
 *** 
