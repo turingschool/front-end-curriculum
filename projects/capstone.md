@@ -5,14 +5,14 @@ module: 4
 
 ## Goals
 
-By the end of this session we will have established Capstone projects that'll
-guide your last three weeks in the program.
+By the end of this session we will have established Capstone projects that'll guide your last three weeks in the program. It's your final project which means it's your last opportunity to build something your really proud of and can show off for your portfolio. It's also the last time you will get to work with your cohort-mates and master your workflow before becoming a professional developer. Take risks, be creative, work nicely with your team and build something useful for others.
+
+The project is due on March 1st.
 
 ### Part 1: Solo
 
 Take the first 15 minutes to summarize and post your ideas. For *each one* create
-an issue on https://github.com/turingschool/mastery_project and, in the description,
-summarize the idea in the following format:
+an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project) and, in the description, summarize the idea in the following format:
 
 * Name:
 * Problem it solves:
@@ -23,7 +23,7 @@ If your a proposal similar to yours is already in the list of issues, please add
 
 ### Part 2: Small Groups
 
-Then get together in assigned groups of four to:
+Then get together in assigned groups of three to:
 
 * Review/discuss each of your ideas
 * Refine them
@@ -32,22 +32,19 @@ Then get together in assigned groups of four to:
 
 ### Part 3: Pitch & Merge
 
-Then we'll get back together and each group of four will come up to pitch their
-two ideas. Spend less than two minutes on each pitch.
+Then we'll get back together and each group of three will come up to pitch their two ideas. Spend less than two minutes on each pitch.
 
 After pitches, we'll merge any ideas that are very similar.
 
 ### Part 4: Voting
 
-Then we'll plot the four ideas on the board. Each of you should then pass through
-and mark the **three** ideas **you most want to exist**.
+Then we'll plot the pitched ideas on the board. Each of you should then pass through and mark the **three** ideas **you most want to exist**.
 
-After all votes are cast, the top four vote getters are selected. If there are any ties, Steve will cast the deciding votes.
+After all votes are cast, the top three vote getters are selected. If there are any ties, Alex will cast the deciding votes.
 
 ### Part 5: Teaming
 
-Using a randomly generated list, you'll select your project. No project may
-have more than four people.
+We will team up by interest in projects. Teams can be between 2 - 4 people. If no consensus is made on teams, they will be randomly picked.
 
 ### Part 6: Wireframing & Design
 
@@ -64,7 +61,7 @@ of your thinking:
 
 ### Part 7: Workflow
 
-Steve will create repositories for the selected projects. If you have a clever name, now is the time.
+Pick a team lead to create a repository for each the selected projects. If you have a clever name, now is the time.
 
 ## Rubric
 

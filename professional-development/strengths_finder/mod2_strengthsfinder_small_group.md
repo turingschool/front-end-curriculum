@@ -14,6 +14,15 @@ layout: page
 * Develop user stories to build empathy for teammates and describe team effectiveness
 * Discuss how to leverage others' strengths to work better in teams
 
+Edits:
+-Coaching session: G.O.O.D.
+-Use all 5 strengths; 
+-Individual reflection first: read through action items (I could maybe pull together their action items ahead of time); reflect on 
+-Gallery walk -- people fill out 
+-In rotating partners, they describe themselves and describe how they are effective team members; they have to then discuss how they would work together as a 
+-Look over Johari Windows -- how have you already been using your strengths? In what areas, could you develop your strengths more?
+-Students should give feedback/insight on how each other are using their strengths...could pair up according to teams they've worked in?
+
 ### Opening
 As you learned in Personal Branding I in Module One, there are 3 questions that drive your professional development at Turing:
 

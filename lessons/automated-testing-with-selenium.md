@@ -113,7 +113,7 @@ so whenever you call upon your browser instance you will always be on your local
 
 So once you've executed that command you should see that a new chrome browser should have opened. Now that it's opened we can sort of manipulate the browser's actions with specific commands. An easy one to start with would be
 
-`webdriver.get('http://google.com')`
+`driver.get('http://google.com')`
 
 Once you've done that the browser should take you to google's webpage.
 
