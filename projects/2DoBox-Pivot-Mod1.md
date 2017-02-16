@@ -1,7 +1,6 @@
 ---
-title: 2DoBox-Pivot-Mod1
+title: 2DoBox Pivot
 ---
-# 2DoBox Pivot (Module 1)
 
 Do you remember that project IdeaBox?...
 
@@ -15,7 +14,7 @@ Keeping accessibility in mind we will be grading you based on how accessible you
 
 Lastly, you will implement feature tests using selenium webdriver and follow (and see the benefits of) Test Driven Development (TDD).
 
-# Getting Started (Should I Fork or Clone?!)
+## Getting Started (Should I Fork or Clone?!)
 
 Beginning The Pivot
 
@@ -35,13 +34,24 @@ Your project should evolve, refactor, and clean up the code you inherit. This in
 
 Furthermore, there should be no reduction in functionality except when explicitly called for by new requirements.
 
-# NEW PHASE 1: Refactoring
+## Phase 1: Move to Webpack and Setup Selenium Testing
 
-Write tests for all existing functionality
+Your current IdeaBox repository does not use any kind of development server. We're going to use Webpack for 2DoBox. We're also going to be using Selenium for acceptance testing. Before you write any new code, setup Webpack and Selenium for this project using the lesson:
 
-Then start refactoring: tell them what they should focus on for refactoring (naming, shorter functions, etc.)
+## Phase 2: Write Acceptance Tests
 
-# Phase 1
+Before you write any new feature code, write acceptance tests for all existing functionality.
+
+## Phase 3: Feature Enhancement
+
+The following features are not completely new. While this functionality may be already in place, you need to update the user interface and naming conventions in your code base. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
+
+Throughout this phase, we challenge you to use Test Driven Development (TDD) during feature enhancement - TDD is not a requirement. This means you:
+
+  1. Write a failing acceptance test that describes the feature.
+  2. Write the feature code to make the acceptance test pass.
+  3. Refactor if there are opportunities to do so.
+  4. Move on to the next feature repeating this process.
 
 ### Adding a new TODO
 
@@ -85,7 +95,7 @@ We’d like our users to be able to easily find specific TODOs they've already c
   * The page should not reload.
   * Clearing the filter box should restore all the ideas to the list.
 
-# Phase 2
+## Phase 4: Add New Features
 
 ### Marking a TODO as completed
 
@@ -96,17 +106,13 @@ When viewing the TODO list:
   * On reloading the page the page, the completed TODOs should be exempted (but not deleted) from the list.
   * When the user clicks the `show completed TODOs`, the completed TODOs should be loaded back onto the top of the TODO list.
 
-### Accessibility
-
-Your web application should pass aXe-core tests and should be tab-index accessible. For tab indexing, refer to this [resource](http://archive.tlt.psu.edu/accessibility/tabindex0.html#whyzero)
-
 ### Importance
 
 Each TODO should be given a level of importance.
 
   * As a user, I should be able to change the level of importance by up-voting or down-voting that specific TODO.
   * Each TODO should start with a level of `Normal`.
-      * Levels of Importance are as follows:
+      * Levels of importance are as follows:
 
         1) Critical
 
@@ -120,36 +126,34 @@ Each TODO should be given a level of importance.
 
   * The change of importance should persist after a page refresh.
 
-# Phase 3
-
 ### Recent TODOs
 
 The application should only show the ten most recent TODOS.
 
-  * The application should contain a button labeled `Show more TODOs ...`.
-  * When a user clicks on the `Show more TODOs...` button, this list should load additional messages from the past.
+* The application should contain a button labeled `Show more TODOs ...`.
+* When a user clicks on the `Show more TODOs...` button, this list should load additional messages from the past.
 
 ### Filter by Importance
 
 The application should allow users to filter the TODO list based on level of importance.
 
-  * Your application should have 5 buttons corresponding to each level of importance (Critical, High, Normal, Low, and None).
-  * When one of the filter buttons is clicked, the TODO list should only display TODOs with the selected importance.
+* Your application should have 5 buttons corresponding to each level of importance (Critical, High, Normal, Low, and None).
+* When one of the filter buttons is clicked, the TODO list should only display TODOs with the selected importance.
+
+## Phase 5: Extensions
 
 ### Character Counter
 
 The application is able to count the number of characters inside of the input field in real time.
 
-  * As the user types, the character count should increment up.
-  * If the user deletes characters, then the character count should decrease.
+* As the user types, the character count should increment up.
+* If the user deletes characters, then the character count should decrease.
 
-### Submit button disabled
+### Submit button disabled based on character count
 
 The submit button should be disabled when there is not valid content in both input fields **and** if the input field character count exceeds 120 characters.
 
-# Extensions
-
-## TODO Due Dates
+### TODO Due Dates
 
 When viewing the TODO list:
 
@@ -158,13 +162,13 @@ When viewing the TODO list:
 
 Note: TimeZones are hard - consider using a library like [MomentJS](http://momentjs.com/)
 
-# Instructor Evaluation Points
+## Instructor Evaluation Points
 
-## Specification Adherence
+### Specification Adherence
 
 4 - The application meets all of the phase requirements listed above and implements one or more of the extensions.
 
-3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from the above phases that make the application feel incomplete or hard to use.
+3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from phases 1 through 4 that make the application feel incomplete or hard to use.
 
 2 - The application is in a usable state, but is missing 1 or more of the features outline in the specification above.
 
@@ -172,27 +176,17 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 
 0 - The application is unusable.
 
-## Accessibility
-
-4 - The application demonstrates an exceptional knowledge of web accessibility. The application has no aXe-core violations, is fully functional without using a mouse, and the application uses HTML/CSS to 'chunk' content into more manageable pieces. The application utilizes semantic HTML.
-
-3 - The application has a strong accessibility presence. The developer showed a strong effort to keep accessibility in mind from the beginning of the project. The application has 0-3 aXe-core violations.
-
-2 - The application shows glimpses of good accessibility practices, but fails to deliver a truly accessible product. The application has 4-6 aXe-core violations.
-
-1 - Developer did not keep accessibility in mind. The application has 6+ aXe-core violations.
-
-## User Interface
+### User Interface
 
 4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor without guidance from the developer.
 
-3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality. The application less than 3 aXe-core violations.
+3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality.
 
 2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 
 1 - The application is confusing or difficult to use.
 
-## HTML Style
+### HTML Style
 
 4 - Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
 
@@ -202,7 +196,7 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 
 1 - Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
 
-## JavaScript Style
+### JavaScript Style
 
 4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There zero instances where an instructor would recommend taking a different approach.
 
@@ -214,17 +208,17 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 
 0 - Your client-side application does not function or the application does not make use of localStorage for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 
-## Testing
+### Testing
 
-4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
+4 - Project has a running test suite. The test suite covers all aspects of the application.
 
-3 - Project has a running test suite that tests and multiple levels but fails to cover some features. The application makes some use of feature testing.
+3 - Project has a running test suite but fails to cover some features. The application makes some use of feature testing.
 
 2 - Project has sporadic use of tests. The application contains numerous holes in testing and/or many features are untested.
 
 1 - There is little or no evidence of testing in this application.
 
-## Workflow
+### Workflow
 
 4 - The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application.
 
