@@ -2,7 +2,7 @@
 
 ## Iteration 1
 
-- Describe the difference between a cookie, sessionStorage and localStorage.
+- Describe the difference between a cookie, sessionStorage and localStorage. [hint](https://github.com/turingschool/lesson_plans/blob/3ee469be5fdc94c926a88ca510106848b0339731/ruby_04-apis_and_scalability/client_side_storage.markdown)
 
 - What are `data-` attributes good for?
 
@@ -42,7 +42,7 @@ var foo = 10 + '20';
 
 - Can you describe the difference between progressive enhancement and graceful degradation?
 
-- Describe Floats and how they work.
+- Describe Floats and how they work. [hint](http://frontend.turing.io/lessons/module-1/css-1.html)
 
 - What's the difference between a relative, fixed, absolute and statically positioned element?
 
@@ -54,7 +54,7 @@ var foo = 10 + '20';
 
 ## Iteration 4
 
-- What does CORS stand for and what issue does it address?
+- What does CORS stand for and what issue does it address? [hint](http://frontend.turing.io/lessons/cors.html)
 
 - Describe z-index and how stacking context is formed.
 
