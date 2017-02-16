@@ -18,9 +18,36 @@
 
 - Describe z-index and how stacking context is formed.
 
+- How would you approach fixing browser-specific styling issues?
+
+- What are the different ways to visually hide content (and make it available only for screen readers)?
+
+- Have you used or implemented media queries or mobile specific layouts/CSS?
+
+- What are the advantages/disadvantages of using CSS preprocessors?
+
+- What's the difference between inline and inline-block?
+
+- What's the difference between a relative, fixed, absolute and statically positioned element?
+
 - What is `"use strict";`? what are the advantages and disadvantages to using it?
 
+- Explain how prototypal inheritance works
+
+- Explain event delegation
+
+- Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
+  - What needs to be changed to properly make it an IIFE?
+
+- What is a closure, and how/why would you use one?
+
+- Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+
 - What's the difference between `.call` and `.apply`?
+
+- Describe event bubbling.
+
+- What is the difference between `==` and `===`?
 
 - What are some things you like about the developer tools you use?
 
