@@ -1,5 +1,8 @@
 ## Interview Question Practice
 
+- What is `"use strict";`? what are the advantages and disadvantages to using it?
+
+- What's the difference between `.call` and `.apply`?
 
 - What are some things you like about the developer tools you use?
 
