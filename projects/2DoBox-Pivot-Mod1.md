@@ -38,7 +38,7 @@ We're going to be using Selenium for acceptance testing. Before you write any ne
 
 Before you write any new feature code, write acceptance tests for all existing functionality. Create a directory in your project called `test`, and create all of your test files in this directory.
 
-Your project needs to be set up on `gh-pages` in order to run tests in selenium. This is because the `driver.get()` method requires a web address (or file path), but the file path is different between you and your project partner. Using `gh-pages` solves this because you have one common address to use for your `driver.get()` method. 
+Your project needs to be set up on `gh-pages` in order to run tests in selenium. This is because the `driver.get()` method requires a web address (or file path), but the local file path to your `index.html` file is different between you and your project partner. Using `gh-pages` solves this because you have one common address to use for your `driver.get()` method. 
 
 ## Phase 3: Feature Enhancement
 
