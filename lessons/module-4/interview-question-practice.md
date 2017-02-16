@@ -71,7 +71,7 @@ var foo = 10 + '20';
 
 - How would you approach fixing browser-specific styling issues? [-hint-](http://frontend.turing.io/lessons/cross-browser-compat.html)
 
-- What is a closure, and how/why would you use one? [-hint-](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md) -secondary hint- You don't _have_ to know this to pass a code interview. Ask us about it.
+- What is a closure, and how/why would you use one? [-hint-](https://docs.google.com/presentation/d/1zX-A4d_yMFPrVpofoIP5FLSjOb94vBzORql-BOV2vUc/edit#slide=id.g1c033f9cd5_0_35) and bonus [-hint-](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md) -secondary hint- You don't _have_ to know this to pass a code interview. Ask us about it.
 
 - Describe event bubbling. [-hint-](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html)
 
