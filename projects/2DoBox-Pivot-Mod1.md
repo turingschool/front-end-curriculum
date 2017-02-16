@@ -63,9 +63,11 @@ Here are some refactoring points we want to see in your project:
   * Line lengths (keep them short and readable to avoid horizontal scrolling in your text editor)
   * File and folder organization (test, images, CSS directories)
 
-  When you "refactor," you make changes to the code without changing any of its functionality. You can think of it like a "clean up," for the sake of improving readability and quality.
+When you "refactor," you make changes to the code without changing any of its functionality. You can think of it like a "clean up," for the sake of improving readability and quality.
 
-  This doesn't include bug fixes or the addition of any new functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
+This doesn't include bug fixes or the addition of any new functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
+
+This is the existing functionality that should be pivoted for the 2DoBox user interface:
 
 ### Adding a new TODO
 
