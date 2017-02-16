@@ -14,6 +14,12 @@
 
 - What are some things you like about the developer tools you use?
 
+- Question: What is the value of foo?
+
+```js
+var foo = 10 + '20';
+```
+
 ## Iteration 2
 
 - Explain what ARIA and screenreaders are, and how to make a website accessible.
@@ -24,6 +30,13 @@
 
 - Explain how prototypal inheritance works
 
+- What are HTTP methods? List all HTTP methods that you know, and explain them.
+
+- Question: What value is returned from the following statement?
+
+```js
+"i'm a lasagna hog".split("").reverse().join("");
+```
 
 ## Iteration 3
 
@@ -50,6 +63,8 @@
 - Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
   - What needs to be changed to properly make it an IIFE?
 
+- Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+
 ## Iteration 5
 
 - How do you serve a page with content in multiple languages?
@@ -60,13 +75,15 @@
 
 - Describe event bubbling.
 
+- What are some advantages/disadvantages to testing your code?
+
 ## Iteration 6
 
 - What are the different ways to visually hide content (and make it available only for screen readers)?
 
 - What is `"use strict";`? what are the advantages and disadvantages to using it?
 
-
+- What are the pros and cons of using Promises instead of callbacks?
 
 
 
