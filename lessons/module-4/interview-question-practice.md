@@ -4,13 +4,13 @@
 
 - Describe the difference between a cookie, sessionStorage and localStorage. [-hint-](https://github.com/turingschool/lesson_plans/blob/3ee469be5fdc94c926a88ca510106848b0339731/ruby_04-apis_and_scalability/client_side_storage.markdown)
 
-- What are `data-` attributes good for?
+- What are `data-` attributes good for? [-hint-](https://css-tricks.com/almanac/selectors/a/attribute/)
 
 - Have you used or implemented media queries or mobile specific layouts/CSS? [-hint-](http://frontend.turing.io/lessons/module-1/intro-responsive.html)
 
 - Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
 
-- What is the difference between `==` and `===`?
+- What is the difference between `==` and `===`? [-hint-](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
 
 - What are some things you like about the developer tools you use?
 
@@ -22,15 +22,15 @@ var foo = 10 + '20';
 
 ## Iteration 2
 
-- Explain what ARIA and screenreaders are, and how to make a website accessible.
+- Explain what ARIA and screenreaders are, and how to make a website accessible. [-hint- here](http://frontend.turing.io/lessons/wai-aria.html) and [-hint- here](http://frontend.turing.io/lessons/module-1/html-2.html)
 
-- What is the difference between classes and IDs in CSS?
+- What is the difference between classes and IDs in CSS? [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
 
-- What are the advantages/disadvantages of using CSS preprocessors?
+- What are the advantages/disadvantages of using CSS preprocessors? [-hint-](http://frontend.turing.io/independent-study/idiomatic-css.html) and [-hint-](http://frontend.turing.io/lessons/introduction-to-sass.html)
 
-- Explain how prototypal inheritance works
+- Explain how prototypal inheritance works [-hint-](http://frontend.turing.io/lessons/module-1/js-4.html)
 
-- What are HTTP methods? List all HTTP methods that you know, and explain them.
+- What are HTTP methods? List all HTTP methods that you know, and explain them. [-hint-](http://frontend.turing.io/lessons/node.html)
 
 - Question: What value is returned from the following statement?
 
