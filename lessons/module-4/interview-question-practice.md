@@ -79,11 +79,11 @@ var foo = 10 + '20';
 
 ## Iteration 6
 
-- What are the different ways to visually hide content (and make it available only for screen readers)? 
+- What are the different ways to visually hide content (and make it available only for screen readers)? [-hint-](http://frontend.turing.io/lessons/module-1/html-2.html)
 
-- What is `"use strict";`? what are the advantages and disadvantages to using it?
+- What is `"use strict";`? what are the advantages and disadvantages to using it? [-hint-](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
 
-- What are the pros and cons of using Promises instead of callbacks?
+- What are the pros and cons of using Promises instead of callbacks? [-hint-](http://frontend.turing.io/lessons/promises.html) and bonus [-hint-](http://frontend.turing.io/lessons/es6-generators.html)
 
 
 
