@@ -38,9 +38,9 @@ We're going to be using Selenium for acceptance testing. Before you write any ne
 
 Before you write any new feature code, write acceptance tests for all existing functionality. Create a directory in your project called `test`, and create all of your test files in this directory.
 
-Your project needs to be set up on `gh-pages` in order to run tests in selenium. This is because the `driver.get()` method requires a web address (or file path), but the local file path to your `index.html` file is different between you and your project partner. Using `gh-pages` solves this because you have one common address to use for your `driver.get()` method. 
+Your project needs to be set up on `gh-pages` in order to run tests in selenium. This is because the `driver.get()` method requires a web address (or file path), but the local file path to your `index.html` file is different between you and your project partner. Using `gh-pages` solves this because you have one common address to use for your `driver.get()` method.
 
-## Phase 3: Feature Enhancement
+## Phase 3: Refactor
 
 The following features are not completely new. While this functionality may be already in place, you need to update the user interface and naming conventions in your code base. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
 
@@ -50,6 +50,22 @@ Throughout this phase, we challenge you to use Test Driven Development (TDD) dur
   2. Write the feature code to make the acceptance test pass.
   3. Refactor if there are opportunities to do so.
   4. Move on to the next feature repeating this process.
+
+### Refactoring Guidelines
+
+Here are some refactoring points we want to see in your project:
+
+  * Small JavaScript functions focused on single responsibility (SRP) - for example, one function should not handle both disabled button state and rendering elements to the DOM
+  * Consistent formatting, indentation, and naming schemes
+  * Smart, concise comments (only when absolutely needed for clarity)
+  * Little to no duplication in JavaScript (DRY principle)
+  * Avoid deep nesting (for if/else conditionals)
+  * Line lengths (keep them short and readable to avoid horizontal scrolling in your text editor)
+  * File and folder organization (test, images, CSS directories)
+
+  When you "refactor," you make changes to the code without changing any of its functionality. You can think of it like a "clean up," for the sake of improving readability and quality.
+
+  This doesn't include bug fixes or the addition of any new functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
 
 ### Adding a new TODO
 
