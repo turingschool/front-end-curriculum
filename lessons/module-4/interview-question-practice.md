@@ -8,7 +8,7 @@
 
 - How do you serve a page with content in multiple languages?
 
-- What are data- attributes good for?
+- What are `data-` attributes good for?
 
 - Describe the difference between a cookie, sessionStorage and localStorage.
 
