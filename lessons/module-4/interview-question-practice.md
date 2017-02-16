@@ -40,30 +40,30 @@ var foo = 10 + '20';
 
 ## Iteration 3
 
-- Can you describe the difference between progressive enhancement and graceful degradation?
+- Can you describe the difference between progressive enhancement and graceful degradation? [-hint-](http://frontend.turing.io/lessons/cross-browser-compat.html)
 
-- Describe Floats and how they work. [hint](http://frontend.turing.io/lessons/module-1/css-1.html)
+- Describe Floats and how they work. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
 
-- What's the difference between a relative, fixed, absolute and statically positioned element?
+- What's the difference between a relative, fixed, absolute and statically positioned element? [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
 
-- Explain event delegation
+- Explain event delegation [-hint-](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html)
 
-- What's the difference between `.call` and `.apply`?
+- What's the difference between `.call` and `.apply`? [-hint-](http://frontend.turing.io/lessons/module-2/function-prototype-methods.html)
 
 - Do you have any pet projects? What kind?
 
 ## Iteration 4
 
-- What does CORS stand for and what issue does it address? [hint](http://frontend.turing.io/lessons/cors.html)
+- What does CORS stand for and what issue does it address? [-hint-](http://frontend.turing.io/lessons/cors.html)
 
-- Describe z-index and how stacking context is formed.
+- Describe z-index and how stacking context is formed. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
 
-- What's the difference between inline and inline-block?
+- What's the difference between inline and inline-block? [-hint-](http://frontend.turing.io/independent-study/idiomatic-css.html) and [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
 
-- Explain why the following doesn't work as an IIFE: `function foo(){ }();`.
+- Explain why the following doesn't work as an IIFE: `function foo(){ }();`. [-hint-](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
   - What needs to be changed to properly make it an IIFE?
 
-- Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it?
+- Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it? [-hint-](http://frontend.turing.io/lessons/module-1/js-2.html)
 
 ## Iteration 5
 
