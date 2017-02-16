@@ -8,11 +8,7 @@ We thought they were pretty great, but, we think it's time to pivot those projec
 
 You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox.
 
-Your projects will utilize webpack & its awesome development server.
-
-Keeping accessibility in mind we will be grading you based on how accessible your application is.
-
-Lastly, you will implement feature tests using selenium webdriver and follow (and see the benefits of) Test Driven Development (TDD).
+You will also implement acceptance tests using selenium webdriver and follow (and see the benefits of) Test Driven Development (TDD).
 
 ## Getting Started (Should I Fork or Clone?!)
 
@@ -34,13 +30,13 @@ Your project should evolve, refactor, and clean up the code you inherit. This in
 
 Furthermore, there should be no reduction in functionality except when explicitly called for by new requirements.
 
-## Phase 1: Move to Webpack and Setup Selenium Testing
+## Phase 1: Setup Selenium Testing
 
-Your current IdeaBox repository does not use any kind of development server. We're going to use Webpack for 2DoBox. We're also going to be using Selenium for acceptance testing. Before you write any new code, setup Webpack and Selenium for this project using the lesson:
+We're going to be using Selenium for acceptance testing. Before you write any new feature code, setup Selenium for this project using [the selenium lesson](http://frontend.turing.io/lessons/module-1/selenium-testing).
 
 ## Phase 2: Write Acceptance Tests
 
-Before you write any new feature code, write acceptance tests for all existing functionality.
+Before you write any new feature code, write acceptance tests for all existing functionality. Create a directory in your project called `test`, and create all of your test files in this directory.
 
 ## Phase 3: Feature Enhancement
 
