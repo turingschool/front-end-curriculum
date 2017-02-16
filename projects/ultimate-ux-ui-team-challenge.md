@@ -33,6 +33,18 @@ Data can be hard-coded in the final build -- these will static pages. Remember: 
  - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable). Should be ready to hand-off to a dev team to build.
 
+### Deliverables for Phase 2:
+
+- The static site pushed up and live on github pages. It should be fully responsive and match the comp.
+- A comprehensive ReadMe in the Build Team’s project repo. It must include:
+Screen Grabs of your final live site to compare with the original comp.
+- An overview outlining your approach to building the comp.
+- This ReadMe will be a collaborative effort between the Design and Build Teams to make sure all the information and thinking is covered. Therefore, it must have the following from the Design Team:
+  - 3 examples of reference/inspiration. These could be products you currently use, or could be examples you find on dribbble, behance, or similar sites. They don’t have to be the same product type, but should offer good examples of how to approach organizing content and effective UX. Screen grabs are fine.
+  - Explain who your target user is, and how the choices you’ve made solve a problem for them, address their preferences/needs, and are tailored to them.
+  - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
+  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable).
+
 
 ### Fonts:
 
