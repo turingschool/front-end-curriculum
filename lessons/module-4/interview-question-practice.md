@@ -60,7 +60,7 @@ var foo = 10 + '20';
 
 - What's the difference between inline and inline-block? [-hint-](http://frontend.turing.io/independent-study/idiomatic-css.html) and [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
 
-- Explain why the following doesn't work as an IIFE: `function foo(){ }();`. [-hint-](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+- Explain why the following doesn't work as an IIFE: `function foo(){ }();`. [-hint-](https://docs.google.com/presentation/d/1zX-A4d_yMFPrVpofoIP5FLSjOb94vBzORql-BOV2vUc/edit#slide=id.g1c494e40cb_0_48) and bonus [-hint-](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
   - What needs to be changed to properly make it an IIFE?
 
 - Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it? [-hint-](http://frontend.turing.io/lessons/module-1/js-2.html)
