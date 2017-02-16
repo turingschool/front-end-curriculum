@@ -59,9 +59,9 @@ Let's take Selenium for a test drive on our Linked List project.
 ### Installation
 1. `cd` into an existing Linked List project that you have saved locally, or clone down a new Linked List project from :octocat: and `cd` into the resulting directory.
 2. From your Linked List directory, run `npm install selenium-webdriver`. You are installing the framework that will allow you to test with Selenium in a node environment.
-3. We still need a few additional components to make selenium work with the respective browsers. Luckily, we can leverage Homebrew to install both the Chrome and Firefox components. From the project directory, run the following commands:
-   - `npm install chromedriver`
-   - `npm install geckodriver`
+3. We still need a few additional components to make selenium work with the respective browsers. Luckily, we can leverage Node Package Manager (npm) to install both the Chrome and Firefox components. From the project directory, run the following commands:
+   - `npm install -g chromedriver` (the -g tag simply means to install it globally on your system, so you won't have to reinstall per project)
+   - `npm install -g geckodriver`
 4. Apple's `safaridriver` is shipped with Safari 10 for OS X El Capitan and macOS Sierra. You will need to enable Remote Automation in the Develop menu of Safari 10 before testing. To turn on WebDriver support, follow these steps:
    - Ensure that the Develop menu is available. It can be turned on by opening Safari preferences (_Safari > Preferences_ in the menu bar), going to the Advanced tab, and ensuring that the Show Develop menu in menu bar checkbox is checked.
    - Enable Remote Automation in the Develop menu. This is toggled via _Develop > Allow Remote Automation_ in the menu bar.
@@ -135,8 +135,11 @@ function searchTest(driver) {
 * Each person should share their comments, making revisions as necessary, and each person should end with their own copy of comments in their file, covering each block of code
 * _NOTE:_ writing verbose comments for each "block of code" is *NOT* a normal practice to implement in your daily coding and/or production code. Only use comments when you need them, focus on making your code speak for itself. This exercise is focused on reading/writing code, it is NOT an exercise about commenting code.
 
-#### Review (3 min) :simple_smile:
+#### Review (3 min) :smiley:
 I'll post a version in slack for you to compare your comments.
+
+* What are the big discrepancies you notice?
+* Any A-HA moments?
 
 *** 
 
