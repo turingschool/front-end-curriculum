@@ -67,19 +67,19 @@ var foo = 10 + '20';
 
 ## Iteration 5
 
-- How do you serve a page with content in multiple languages?
+- How do you serve a page with content in multiple languages? [-hint-](http://frontend.turing.io/lessons/localization.html)
 
-- How would you approach fixing browser-specific styling issues?
+- How would you approach fixing browser-specific styling issues? [-hint-](http://frontend.turing.io/lessons/cross-browser-compat.html)
 
-- What is a closure, and how/why would you use one?
+- What is a closure, and how/why would you use one? [-hint-](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md) -secondary hint- You don't _have_ to know this to pass a code interview. Ask us about it.
 
-- Describe event bubbling.
+- Describe event bubbling. [-hint-](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html)
 
-- What are some advantages/disadvantages to testing your code?
+- What are some advantages/disadvantages to testing your code? 
 
 ## Iteration 6
 
-- What are the different ways to visually hide content (and make it available only for screen readers)?
+- What are the different ways to visually hide content (and make it available only for screen readers)? 
 
 - What is `"use strict";`? what are the advantages and disadvantages to using it?
 
