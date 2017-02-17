@@ -7,92 +7,106 @@ module: 3
 
 ### Issues
 
-#### 1. See All Reminders
+#### 1. See all reminders
 
-When the user visits the root of the application (e.g. the `"/"` URL), they should see a list of all of the reminders on the page.  
+When the user visits the root of the application (e.g. the `"/"` URL), they should see a title of your app with your group number (ie: remEMBER-1), and list of all of the reminders on the page.  
 
-  * Each reminder should have a class of `.spec-reminder-item`.
-  * There is a failing test set up in `tests/acceptance/reminder-list-test.js`.
+Hints:  
+* Run the command `ember g route reminders`, which will generate a route in your `router.js`. Adjust this line so the path is the root directory  `'/'`.
+* To pass the model to the template, add a model hook in `routes/index.js` that returns the reminders.
+* Mirage will generate 5 "reminder" models for you.
+
+* There is a failing test set up in `tests/acceptance/reminder-list-test.js`, you will need to add a unit test for the model. The ember CLI will also generate additional unit tests with boilerplate code. Make sure you are updating the unit tests with intentional assertions or removing unused files.  
 
 **Hot Tip**: If you put "Closes #1" (assuming the issue is marked `#1`) in the pull request, your commit, or anywhere in the body of your PR, it will automatically close this issue when it successfully merged into master.
 
 ____
-#### 2 Adjust Root to Redirect to '/reminders'
+#### 2. Adjust root to redirect to '/reminders'
 
-When the user visits the root of the application, they should be redirected to `'/reminders'` and should see a list of all reminders on the page. This means making a hopefully small adjustment to your `router.js` file.
+Client has changed their mind.  
 
-**Hot Tip**: This will make your previous test fail (if you had it passing). Make the necessary changes in the test(s).
+When the user visits the root of the application, they should be redirected to `'/reminders'` and should see a list of all reminders on the page.  
+
+Hints:
+* Dig into the docs for notes on `beforeModel()`
+* Your model hook should no longer live in `routes/index.js`, and your `router.js` will need adjustments.  
+* Keep in mind that the structure of your `router.js` represents the file structure of the entire app.
+
+**Hot Tip**: This will make your previous test fail. Make the necessary changes in the test(s).
 
 ____
-#### 3. See An Individual Reminder
+#### 3. See an individual reminder
 
-When the user clicks on one of the reminders on the page, they are taken to an individual reminders route (ie: '/reminders/1', if the id of the reminder is `1`). The title of the reminder object should be displayed.
+The list of reminders should only display Titles.
 
-So, what needs to happen here?  
+When a user clicks on one of the existing titles, they are taken to an individual reminders route (ie: `'/reminders/1'`).  
 
-* You'll need a `reminder` route in addition to the `reminders` route.
-* It should be nested inside the `reminders` route.
+Hints:
+* Ember convention uses `:model_id` as the dynamic path, ie: `'/reminders/:reminder_id'`.
+* Run `ember g route reminders/reminder`  
 * The user should still see all of the reminders from your previous feature. The specific reminder they are looking at now should be rendered in the outlet of the `reminders.hbs` template.
 * There should be some CSS for the `.active` class.  
 
 ![](http://g.recordit.co/bWm36UCXsA.gif)
 
-There is a failing test set up in `tests/acceptance/reminder-list-test.js` to get you started - this test needs to be rewritten to reflect the route you are expecting to visit.
+**Hot Tip:** There is an existing acceptance test for this feature.
 
-____  
-
-#### 4. Create A New note
+#### 4. Create a new reminder
 
 At the bottom of the `reminders.hbs` template, there should be a button that routes the user to `reminders/new` where users can create a new reminder.  
 
-* The new reminder should have inputs for the title, date, and notes.
-* The new reminder should have a button for submitting the new note.
-* Pressing the button, should submit reminder to the database and have it shown in the reminders list.
+* The new reminder should have inputs for the title, date, and reminders.
+* The new reminder should have a button for submitting the new reminder.
+* Pressing the button should submit reminder to the database and have it display in the reminders list.
+* You are not allowed to use a component for this issue.
 
-**Hot Tip**: There are no tests set up for this user story. So, you'll have to write an acceptance test.  
+**Hot Tip**: There are no tests set up for this user story, you are required to add an acceptance test and any additional tests you need before this PR will be merged in.  
 
-____
-
-#### 5. Don't display notes if there are no notes.  
-
-Update reminder component to have a conditional that will only display notes if notes exist.  
 
 ____
 
-#### 6. Editing A Note
+#### 5. Display a message if there are no reminders  
 
-When viewing an existing reminder, the user can click on an "Edit" button where they can modify the title, notes, or date of the reminder.
-
-* When editing a note, there is a "Save" button that commits the changes to the server.  
-* When the user hits the save button, they are returned to the original individual note.
-
-Things to keep in mind:  
-* What should your route look like to edit a reminder?  
+Update reminders component to have a conditional that will only display reminders if reminders exist. If there are no reminders, users should see a message to add a new note with a link to the new note route.  
 
 ____
 
-#### 7. Refactor New Reminder Form  
+#### 6. Editing a reminder
 
-In Issue #3, we introduced a `/reminders/new` route that has a lot of code hard coded into it that looks a lot like our edit form. Let's refactor it into a component that we just call `reminder-form` that we could use for both editing reminders and creating new reminder.
+When viewing an existing reminder, the user can click on an "Edit" button where they can modify the title, notes, or date of the reminder, with a "Save" button.  
 
-Some research points:  
+In a previous issue you created a form to add a new reminder. This issue will require duplicating a lot of that code. Instead, refactor how your app is structured to use a `reminder-form` component to both add and edit a reminder.  
+
+You will need to move some logic around to handle where your actions are fired, and how the form gets information if the fields need to be pre-populated.
+
+Hints:
+* Ember logic bubbles from the controller to the route.  
+* Use `ember g component reminder-form` to generate your component.  
+* You might need to adjust your file structure.  
+* When the user hits the save button, they should be returned to that reminder's route.  
+
+**Hot Tip** To edit a reminder you need to know which reminder you are talking about. Think about this when you are structuring your `router.js` file.  
+
 * [Ember Best Practice: Stop Bubbling and Use Closure Actions](https://dockyard.com/blog/2015/10/29/ember-best-practice-stop-bubbling-and-use-closure-actions)  
 * [Closure Actions in Ember](https://emberway.io/route-closure-actions-in-ember-js-d0a7a37a5d1b#.ko5ueszgy)  
 
 ____
 
-#### 8. Revert an Unsaved Reminder
+#### 7. Revert an Unsaved Reminder
 
 User can revert an unsaved reminder to its previous state mid-edit.  
 
-* When actively editing a reminder, if the reminder has unsaved changes, the user will see a button to rollback unsaved changes.  
-* When clicked it will automatically rollback the attributes of the reminder to its original, clean state.  
+When actively editing a reminder, **if** the reminder has unsaved changes, the user will see a button to rollback unsaved changes.  
 
-**Pro tip**: If you're doing something that seems hard, maybe you should check the Ember Data API docs?  
+When clicked it will automatically rollback the attributes of the reminder to its original, clean state.  
+
+Hints:
+* Major Key: Look into `hasDirtyAttributes`.
+* Ember dev tools are helpful here.  
 
 ____
 
-#### 9. Visual Cues on Unsaved Reminders
+#### 8. Visual cues on unsaved reminders
 
 User sees visual cue that reminder has not been saved.
 
@@ -100,41 +114,32 @@ User sees visual cue that reminder has not been saved.
 
 ____
 
-#### 10. Remove Reminders
+#### 9. Delete a reminder
 
 User can remove/delete a reminder.
 
-* Users should be able to remove a reminder from both the list of reminders or from an individual reminder's page.
-* If they do it from the individual reminder's page, then the application should reroute them back to the `/reminders` route.
+* Users should be able to remove a reminder from both the list of reminders or from an individual reminder's page.  
+* If they do it from the individual reminder's page, then the application should reroute them back to the `/reminders` route.  
 
-____
+**Bonus** Implement a notification message that tells the user which reminder was deleted
 
-#### 11. Styling: Master Detail View
 
-Users should see the list of reminders along the left side and the individual new note on the right.
-
-**NOTE:** This is a wireframe, not a comp. You can choose to style it however you'd like. You may choose to prioritize other issues over this one for now.
-
-![remember layout](https://cloud.githubusercontent.com/assets/251000/19357783/547c496e-9130-11e6-9cb2-3c3a71815a5f.jpg)
-
-____
-
-#### 12. Filter Reminders
+#### 10. Extension: Filter reminders
 
 User can filter reminder by title keyword.  
 
-* At the top of the list of reminders, there should be a search field.
-* If the search field is empty, the list should show all of the reminders.
-* If the search field has content, then the list should only show the reminders that have a title matching the search term.
+* At the top of the list of reminders, there should be an input field.  
+* If the search field is empty, the list should show all of the reminders.  
+* If the search field has content, then the list should only show the reminders that have a title that includes the search term(s).  
 * This should be case insensitive and should use the [HTML5 search input](https://css-tricks.com/webkit-html5-search-inputs/).  
 
 ____
 
-#### 13. Sort Reminders
+#### 11. Sort Reminders
 
-User can sort reminders chronologically in either ascending or descending order.
+User can sort reminders chronologically in either ascending or descending order by date or alphabet.
 
-* Sorting happens in the sidebar list of reminders
+* Sorting happens in the sidebar list of reminders  
 * This state should be stored in a query param  
 
 ____

@@ -109,6 +109,7 @@ Adjectives that were not selected by either you or your peers remain in the **Un
 * uncaring
 * uncompromising
 * unfocused
+* unresponsive
 * warm
 * wise
 * withholding
