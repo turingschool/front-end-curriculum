@@ -7,7 +7,7 @@ module: 3
 
 ### Issues
 
-#### 1. See All Reminders
+#### 1. See all reminders
 
 When the user visits the root of the application (e.g. the `"/"` URL), they should see a title of your app with your group number (ie: remEMBER-1), and list of all of the reminders on the page.  
 
@@ -17,12 +17,11 @@ Hints:
 * Mirage will generate 5 "reminder" models for you.
 
 * There is a failing test set up in `tests/acceptance/reminder-list-test.js`, you will need to add a unit test for the model. The ember CLI will also generate additional unit tests with boilerplate code. Make sure you are updating the unit tests with intentional assertions or removing unused files.  
-____  
 
 **Hot Tip**: If you put "Closes #1" (assuming the issue is marked `#1`) in the pull request, your commit, or anywhere in the body of your PR, it will automatically close this issue when it successfully merged into master.
 
 ____
-#### 2. Adjust Root to Redirect to '/reminders'
+#### 2. Adjust root to redirect to '/reminders'
 
 Client has changed their mind.  
 
@@ -36,7 +35,7 @@ Hints:
 **Hot Tip**: This will make your previous test fail. Make the necessary changes in the test(s).
 
 ____
-#### 3. See An Individual Reminder
+#### 3. See an individual reminder
 
 The list of reminders should only display Titles.
 
