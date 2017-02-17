@@ -87,11 +87,13 @@ var foo = 10 + '20';
 
 - Explain Ajax in as much detail as possible. [js]
 
+## General Questions
 
+These are some of the softer questions you'll get in an interview, but you should still write out a "script" for answering these. You'd be surprised how easy it is to blank out on these types of questions once you're put on the spot!
 
-
-
-
+- What is a recent technical challenge you experienced and how did you solve it?
+- What are some things you like about the developer tools you use?
+- Do you have any pet projects? What kind?
 
 
 
