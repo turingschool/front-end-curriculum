@@ -2,19 +2,17 @@
 
 ## Iteration 1
 
-- Describe the difference between a cookie, sessionStorage and localStorage. [-hint-](https://github.com/turingschool/lesson_plans/blob/3ee469be5fdc94c926a88ca510106848b0339731/ruby_04-apis_and_scalability/client_side_storage.markdown)
+- Describe the difference between a cookie, sessionStorage and localStorage. [-hint-](https://github.com/turingschool/lesson_plans/blob/3ee469be5fdc94c926a88ca510106848b0339731/ruby_04-apis_and_scalability/client_side_storage.markdown) [web APIs]
 
-- What are `data-` attributes good for? [-hint-](https://css-tricks.com/almanac/selectors/a/attribute/)
+- What are `data-` attributes good for? [-hint-](https://css-tricks.com/almanac/selectors/a/attribute/) [html]
 
-- Have you used or implemented media queries or mobile specific layouts/CSS? [-hint-](http://frontend.turing.io/lessons/module-1/intro-responsive.html)
+- Have you used or implemented media queries or mobile specific layouts/CSS? [-hint-](http://frontend.turing.io/lessons/module-1/intro-responsive.html) [css]
 
-- Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`?
+- Difference between: `function Person(){}`, `var person = Person()`, and `var person = new Person()`? [js]
 
-- What is the difference between `==` and `===`? [-hint-](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness)
+- What is the difference between `==` and `===`? [-hint-](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) [js]
 
-- What are some things you like about the developer tools you use?
-
-- Question: What is the value of foo?
+- Question: What is the value of foo? [js]
 
 ```js
 var foo = 10 + '20';
@@ -22,17 +20,19 @@ var foo = 10 + '20';
 
 ## Iteration 2
 
-- Explain what ARIA and screenreaders are, and how to make a website accessible. [-hint- here](http://frontend.turing.io/lessons/wai-aria.html) and [-hint- here](http://frontend.turing.io/lessons/module-1/html-2.html)
+- Explain what ARIA and screenreaders are, and how to make a website accessible. [-hint- here](http://frontend.turing.io/lessons/wai-aria.html) and [-hint- here](http://frontend.turing.io/lessons/module-1/html-2.html) [best practices]
 
-- What is the difference between classes and IDs in CSS? [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
+- What is the difference between classes and IDs in CSS? [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html) [css]
 
-- What are the advantages/disadvantages of using CSS preprocessors? [-hint-](http://frontend.turing.io/independent-study/idiomatic-css.html) and [-hint-](http://frontend.turing.io/lessons/introduction-to-sass.html)
+- What are the advantages/disadvantages of using CSS preprocessors? [-hint-](http://frontend.turing.io/independent-study/idiomatic-css.html) and [-hint-](http://frontend.turing.io/lessons/introduction-to-sass.html) [css]
 
-- Explain how prototypal inheritance works [-hint-](http://frontend.turing.io/lessons/module-1/js-4.html)
+- Explain how prototypal inheritance works [-hint-](http://frontend.turing.io/lessons/module-1/js-4.html) [js]
 
-- What are HTTP methods? List all HTTP methods that you know, and explain them. [-hint-](http://frontend.turing.io/lessons/node.html)
+- Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models. [css]
 
-- Question: What value is returned from the following statement?
+- What are HTTP methods? List all HTTP methods that you know, and explain them. [-hint-](http://frontend.turing.io/lessons/node.html) [web APIs]
+
+- Question: What value is returned from the following statement? [js]
 
 ```js
 "i'm a lasagna hog".split("").reverse().join("");
@@ -40,50 +40,52 @@ var foo = 10 + '20';
 
 ## Iteration 3
 
-- Can you describe the difference between progressive enhancement and graceful degradation? [-hint-](http://frontend.turing.io/lessons/cross-browser-compat.html)
+- Can you describe the difference between progressive enhancement and graceful degradation? [-hint-](http://frontend.turing.io/lessons/cross-browser-compat.html) [best practices]
 
-- Describe Floats and how they work. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
+- Describe Floats and how they work. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html) [css]
 
-- What's the difference between a relative, fixed, absolute and statically positioned element? [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
+- What's the difference between a relative, fixed, absolute and statically positioned element? [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html) [css]
 
-- Explain event delegation [-hint-](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html)
+- Explain event delegation [-hint-](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html) [js]
 
-- What's the difference between `.call` and `.apply`? [-hint-](http://frontend.turing.io/lessons/module-2/function-prototype-methods.html)
-
-- Do you have any pet projects? What kind?
+- What's the difference between `.call` and `.apply`? [-hint-](http://frontend.turing.io/lessons/module-2/function-prototype-methods.html) [js]
 
 ## Iteration 4
 
-- What does CORS stand for and what issue does it address? [-hint-](http://frontend.turing.io/lessons/cors.html)
+- What does CORS stand for and what issue does it address? [-hint-](http://frontend.turing.io/lessons/cors.html) [web APIs]
 
-- Describe z-index and how stacking context is formed. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
+- Describe z-index and how stacking context is formed. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html) [css]
 
-- What's the difference between inline and inline-block? [-hint-](http://frontend.turing.io/independent-study/idiomatic-css.html) and [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html)
+- What's the difference between inline and inline-block? [-hint-](http://frontend.turing.io/independent-study/idiomatic-css.html) and [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html) [css]
 
-- Explain why the following doesn't work as an IIFE: `function foo(){ }();`. [-hint-](https://docs.google.com/presentation/d/1zX-A4d_yMFPrVpofoIP5FLSjOb94vBzORql-BOV2vUc/edit#slide=id.g1c494e40cb_0_48) and bonus [-hint-](https://developer.mozilla.org/en-US/docs/Glossary/IIFE)
+- Explain why the following doesn't work as an IIFE: `function foo(){ }();`. [-hint-](https://docs.google.com/presentation/d/1zX-A4d_yMFPrVpofoIP5FLSjOb94vBzORql-BOV2vUc/edit#slide=id.g1c494e40cb_0_48) and bonus [-hint-](https://developer.mozilla.org/en-US/docs/Glossary/IIFE) [js]
   - What needs to be changed to properly make it an IIFE?
 
-- Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it? [-hint-](http://frontend.turing.io/lessons/module-1/js-2.html)
+- Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it? [-hint-](http://frontend.turing.io/lessons/module-1/js-2.html) [best practices]
 
 ## Iteration 5
 
-- How do you serve a page with content in multiple languages? [-hint-](http://frontend.turing.io/lessons/localization.html)
+- How do you serve a page with content in multiple languages? [-hint-](http://frontend.turing.io/lessons/localization.html) [best practices]
 
-- How would you approach fixing browser-specific styling issues? [-hint-](http://frontend.turing.io/lessons/cross-browser-compat.html)
+- Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions? [html]
 
-- What is a closure, and how/why would you use one? [-hint-](https://docs.google.com/presentation/d/1zX-A4d_yMFPrVpofoIP5FLSjOb94vBzORql-BOV2vUc/edit#slide=id.g1c033f9cd5_0_35) and bonus [-hint-](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md) -secondary hint- You don't _have_ to know this to pass a code interview. Ask us about it.
+- How would you approach fixing browser-specific styling issues? [-hint-](http://frontend.turing.io/lessons/cross-browser-compat.html) [best practices]
 
-- Describe event bubbling. [-hint-](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html)
+- What is a closure, and how/why would you use one? [-hint-](https://docs.google.com/presentation/d/1zX-A4d_yMFPrVpofoIP5FLSjOb94vBzORql-BOV2vUc/edit#slide=id.g1c033f9cd5_0_35) and bonus [-hint-](https://github.com/getify/You-Dont-Know-JS/blob/master/scope%20%26%20closures/ch5.md) -secondary hint- You don't _have_ to know this to pass a code interview. Ask us about it. [js]
 
-- What are some advantages/disadvantages to testing your code? 
+- Describe event bubbling. [-hint-](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html) [js]
+
+- What are some advantages/disadvantages to testing your code? [best practices]
 
 ## Iteration 6
 
-- What are the different ways to visually hide content (and make it available only for screen readers)? [-hint-](http://frontend.turing.io/lessons/module-1/html-2.html)
+- What are the different ways to visually hide content (and make it available only for screen readers)? [-hint-](http://frontend.turing.io/lessons/module-1/html-2.html) [html]
 
-- What is `"use strict";`? what are the advantages and disadvantages to using it? [-hint-](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode)
+- What is `"use strict";`? what are the advantages and disadvantages to using it? [-hint-](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode) [js]
 
-- What are the pros and cons of using Promises instead of callbacks? [-hint-](http://frontend.turing.io/lessons/promises.html) and bonus [-hint-](http://frontend.turing.io/lessons/es6-generators.html)
+- What are the pros and cons of using Promises instead of callbacks? [-hint-](http://frontend.turing.io/lessons/promises.html) and bonus [-hint-](http://frontend.turing.io/lessons/es6-generators.html) [js]
+
+- Explain Ajax in as much detail as possible. [js]
 
 
 
