@@ -33,6 +33,8 @@ Data can be hard-coded in the final build -- these will static pages. Remember: 
  - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable). Should be ready to hand-off to a dev team to build.
 
+## Week 2/Phase 2 (assigned 02/16, DUE 02/23):
+
 ### Deliverables for Phase 2:
 
 - The static site pushed up and live on github pages. It should be fully responsive and match the comp.
