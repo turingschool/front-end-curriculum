@@ -28,7 +28,7 @@ var foo = 10 + '20';
 
 - Explain how prototypal inheritance works [-hint-](http://frontend.turing.io/lessons/module-1/js-4.html) [js]
 
-- Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models. [css]
+- Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html) [css]
 
 - What are HTTP methods? List all HTTP methods that you know, and explain them. [-hint-](http://frontend.turing.io/lessons/node.html) [web APIs]
 
