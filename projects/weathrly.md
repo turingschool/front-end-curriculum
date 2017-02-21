@@ -14,7 +14,6 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 - ReactJS
 - jQuery for AJAX only (No DOM manipulation)
-- Sass
 - weather underground API
 
 ## Phase one
