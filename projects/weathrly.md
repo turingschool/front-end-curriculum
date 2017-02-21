@@ -48,6 +48,10 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 * Developers make use of advance testing techniques (Mocking, Stubbing, and Sinon)
 
+* The application is fully accessible.
+   * The application can be used without a mouse
+   * zero axe-core violations
+
 # Instructor Evaluation Points
 
 ## Specification Adherence
@@ -61,16 +65,6 @@ In this project you will be getting your first real interactions with ReactJS, a
 1 - The application is missing 3 or more smaller features or 1 major feature essential to having a complete application.
 
 0 - The application is unusable.
-
-## Accessibility
-
-4 - The application demonstrates an exceptional knowledge of web accessibility. The application has no aXe-core violations, is fully functional without using a mouse, and the application uses HTML/CSS to 'chunk' content into more manageable pieces. The application utilizes semantic HTML.
-
-3 - The application has a strong accessibility presence. The developer showed a strong effort to keep accessibility in mind from the beginning of the project. The application has 0-3 aXe-core violations.
-
-2 - The application shows glimpses of good accessibility practices, but fails to deliver a truly accessible product. The application has 4-6 aXe-core violations
-
-1- Developer did not keep accessibility in mind. The application has 6+ aXe-core violations.
 
 ## User Interface
 
