@@ -4,11 +4,13 @@ module: 3
 tags: react react-router javascript create-react-app
 ---
 
+**LESSON UPDATE:** This lesson plan was written using the alpha version of react-router. To avoid errors, make sure you install the version discussed in this document: `react-router@4.0.0-alpha.6`.  
+
 By the end of today's lesson, you should have a better idea of what React Router is, why it's useful, and how to implement it into a React app.  
 
 The lesson stems from the understanding that you have (most likely) tinkered with React Router in the past and are familiar with React and ES6 modules.  
 
-We will be working off of this [react-router practice repo](https://github.com/martensonbj/react-router-revisited), and talking about the newest version of React Router 4.
+We will be working off of this [react-router practice repo](https://github.com/martensonbj/react-router-revisited), and talking about the latest alpha version of React Router 4.
 
 ### What Is A Router?
 
@@ -227,7 +229,7 @@ Let's put together a quick example of how this would work in context. If you hav
 
 Our repo comes with everything set up for React out of the box. But remember that react-router isn't necessary to build an app in React, it's a completely third-party entity that happens to make routing really nice.  We need to install those dependencies now.  
 
-`npm i -S react-router@next`  
+`npm i -S react-router@4.0.0-alpha.6`  
 
 We are installing the newest version of React-Router 4, but as of now it has not been released as the default version so as of writing this lesson the version you will get is `react-router@4.0.0-alpha.6`.
 
