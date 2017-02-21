@@ -187,8 +187,8 @@ You can verify that everything is in order if your `package.json` dependencies (
 ```
 ...
 "devDependencies": {
-  "webpack": "^1.13.2",
-  "webpack-dev-server": "^1.15.0"
+  "webpack": "^2.2.1",
+  "webpack-dev-server": "^2.4.1"
 }
 ...
 ```
@@ -224,12 +224,11 @@ In `package.json` add the script to run `webpack` and `webpack-dev-server`.
 ```
 
 *What are we missing in our directory before we can build our app?*
+<!-- missing an index.html file -->
 
-Once you've added what's missing, kick off Webpack with `run build` so it can do put itself together.
+Once you've added what's missing, kick off Webpack with `npm run build` so it can put itself together.
 
-`npm run build`  
-
-Notice that we should now `main.bundle.js` in our root directory (and and `index.html` file if you created one).
+Notice that we should now `main.bundle.js` in our root directory (and an `index.html` file if you created one).
 
 Run `npm start` and visit `localhost:8080` to make sure that everything is wired up and we see our `console.log` message.
 
@@ -309,7 +308,7 @@ Then, in the root of your application, `touch .babelrc`, and in that file add th
 
 Time to write some code in React!  
 
-From the slide deck, we ultiately want to create something like this:
+From the slide deck, we ultimately want to create something like this:
 
 ![](/assets/images/lessons/react-in-theory/final-image.png)
 
@@ -390,7 +389,7 @@ Time to build out something more interesting!
 
 I want to replicate the app from our slideshow and create two buttons that add or subtract from a "Likes" counter.  
 
-Ultimately I want a wrapping element that I'll name LikesCounter that has my tally of likes and two buttons for increasing and decreasing said likes.
+Ultimately, I want a wrapping element that I'll name LikesCounter that has my tally of likes and two buttons for increasing and decreasing said likes.
 
 Lets reorganize our app a little bit to plan ahead for refactoring and write out our structure.
 
