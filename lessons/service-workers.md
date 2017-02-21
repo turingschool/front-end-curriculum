@@ -55,7 +55,11 @@ if ('serviceWorker' in navigator) {
 
 Our registration code starts with some feature detection, by checking if `serviceWorker` actually exists in `navigator`. Assuming we're using a modern browser that supports service workers, we should then be able to register our worker on page load with `navigator.serviceWorker.register()`. This method takes a single parameter - the path to a javascript file that represents your service worker (we will create this file in a moment), and returns a promise.
 
-Now let's create that service worker script that we referenced in our registration code. Create a `service-worker.js` file in the root of your application. For now, let's just add a service worker that will log to the console once it's been installed:
+Now let's create that service worker script that we referenced in our registration code. 
+
+Create a `service-worker.js` file in the root of your application. 
+
+For now, let's just add a service worker that will log to the console once it's been installed:
 
 ```javascript
 self.addEventListener('install', function(event) {
@@ -96,6 +100,8 @@ This is because we haven't actually told our service worker that we want to cach
 
 
 ## Serving Assets Offline
+
+
 Before we add some assets to serve offline, shut down your local server and refresh your application. You should notice that nothing loads. We get an error that nothing exists at our localhost endpoint. We can solve this by adjusting the code in our service worker file. Remember we said the installation phase of the worker's lifecycle was a good time to add assets to our cache. Update your service worker with the following:
 
 ```javascript
@@ -151,7 +157,7 @@ Let's add a submit button that will mimic saving our current markdown. We will e
 $('#submit-markdown').on('click', function() {
   if (navigator.serviceWorker.controller) {
     navigator.serviceWorker.controller.postMessage({
-      mdContent: $('#live-markdown').val();
+      mdContent: $('#live-markdown').val()
     });
   }
 });
