@@ -27,14 +27,16 @@ When we mentioned earlier that a service worker script runs in the 'background' 
 While this aspect of service workers provides us with great flexibility, it also requires us to change the way we think about how a script communicates with our application. A worker script cannot directly interact with the DOM like we are used to. Instead, service workers can communicate with the pages it controls by responding to events and messages.
 
 ## Practice
+
 We'll create simple Markdown Previewer application that allows users to type markdown into a textarea, transforming it to HTML on the fly. We'll use a web worker for the transformation, and a service worker for loading up our assets when a user is offline.
 
 Follow along by cloning the [markdown-previewer](https://github.com/turingschool-examples/markdown-previewer) application. We already have some basic HTML and CSS ready for us, and we also have a `markdown-it.min.js` file in our `lib` directory that will handle our markdown to HTML transformation.
 
 ## Registering a Service Worker
+
 The first thing we want to do is make sure all of our assets necessary for rendering the page are available offline. This requires a couple of steps.
 
-Add the following code in a new JavaScript file and add the file to your `index.html`:
+Add the following code in the JavaScript file called `script.js` in your root directory:
 
 ```javascript
 if ('serviceWorker' in navigator) {
@@ -71,6 +73,9 @@ Notice the `self` object in our service worker script. This is how you reference
 4. Full Page Control - the service worker has been activated and now has full control over any pages that fall under its scope
 
 ## Inspecting a Service Worker
+
+First things first ***let's work from the Incognito Window for the rest of this lesson***. Just trust me on this one. It'll be easier.
+
 If we actually boot up our application:
 
 ```bash
