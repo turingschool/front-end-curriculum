@@ -228,7 +228,7 @@ In `package.json` add the script to run `webpack` and `webpack-dev-server`.
 
 Once you've added what's missing, kick off Webpack with `npm run build` so it can put itself together.
 
-Notice that we should now `main.bundle.js` in our root directory (and an `index.html` file if you created one).
+Notice that we should now have `main.bundle.js` in our root directory (and an `index.html` file if you created one).
 
 Run `npm start` and visit `localhost:8080` to make sure that everything is wired up and we see our `console.log` message.
 
