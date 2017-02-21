@@ -15,40 +15,39 @@ In this project you will be getting your first real interactions with ReactJS, a
 - ReactJS
 - jQuery for AJAX only (No DOM manipulation)
 - Sass
-- API (written by yung-Jhun) [Link](http://weatherly-api.herokuapp.com/api/weather)
+- weather underground API
 
 ## Phase one
 
-* Your application should have a welcome page that greets the user. The welcome page has an input field that asks the user for it's  current location / desired location
+* Your application should have a welcome page that greets the user. The welcome page has an input field that allows the user to submit a location (the location can either use a zip code, or city and state).
 
-* Once the desired location is submitted a weekly forecast overview (weather for next 7 days) is shown.
+* Once the desired location is submitted the Application should display the name of the current city, the current condition, the current day, the current temperature, the expected high and expected low for the day, and a summary of what the weather is going to be like that day ("Windy, chance of a few late night showers. Lows overnight in the mid 50s.)
 
 * There should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
-
-* utilize sass variables and color scheme of app changes based on the weather and temp.
 
 * location persists after refresh.
 
 
 ## Phase two
 
-* Display likely-hood of weather event happening
-
-* Each day should have a summary of what the weather will look like ex: `Today: Sunny Today, It's currently 42, the high will be 46`
+* The application should have 7 hour weather forecast
+   * For each hour it should display an image that reflect the weather
+   * For each hour it should display the projected temperature and the hour
 
 * Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive.
 
-
-
 ## Phase three
 
-* Application should render an image that best reflects the weather.
-
-* Have an alert if an extreme weather event is forecasted in the area the user has specified (tornado watch, flood watch, blizzard watch, etc).
+* The application should show display a 10 forecast
+  * Each day should display the Name of the day, an Image reflecting the weather condition and the High and Low for each day.
 
 ## Extension
 
-* If a user clicks on a specific day on the 7 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
+* If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
+   * For each hour it should display an image that reflect the weather
+   * For each hour it should display the projected temperature and the hour
+
+* Developers make use of advance testing techniques (Mocking, Stubbing, and Sinon)
 
 # Instructor Evaluation Points
 
