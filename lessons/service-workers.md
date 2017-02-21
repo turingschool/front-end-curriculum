@@ -77,6 +77,8 @@ If we actually boot up our application:
 python -m SimpleHTTPServer 3000
 ```
 
+_Note: [what does this command do?](http://www.pythonforbeginners.com/modules-in-python/how-to-use-simplehttpserver/)_
+
 we see the HTML and CSS at `localhost:3000`. We can check up on our service worker by clicking on the 'Application' tab of dev tools, and selecting 'Service Workers' in the left panel:
 
 ![Dev Tools Service Workers][devtools-service-workers]
