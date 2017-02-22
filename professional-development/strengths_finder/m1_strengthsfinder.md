@@ -75,13 +75,12 @@ Discussion questions:
 * How did you decide those strengths could complement each other?
 * What does that look like?
 
-Transition: Discuss your strengths as a whole
+Transition: Discuss all 5 of your strengths
 
 ## Discovery #4: Back to Your Vision (5 mins.)
 Find a partner with either strengths in common or not with you. Discuss your strengths again. 
 
-* What intrigues about developing these strengths?
-* Go back to your vision. How might your life change for the better if you developed this strength more?
+* Share your vision for why you're at Turing. How might your life change for the better if you developed this strength more?
 
 ### Whole Group Debrief (2 mins)
 2-3 groups share out takeaways
