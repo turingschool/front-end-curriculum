@@ -1,79 +1,141 @@
 ---
 title: CORS
-tags: testing, selenium, aXe
+tags: security, http
 module: 3
 ---
-## What is CORS?
 
-CORS stands for `Cross-Origin Resource Sharing`.
+## Learning Goals
 
-Resources make a **cross-origin HTTP request** when trying to communicate with a different domain than from where the request was sent.  
+* Student understands why CORS was created
+* Student can explain why CORS is not very secure
+* Student can determine whether two URLs have a matching origin
+* Student can set `Access-Control-Allow-Origin` in a NodeJS app
 
-For example, if my website `www.brenna.com` tries to fetch an image from `www.otherdomain.com/image1.jpg`, I am making a cross-origin request. Often this type of cross-origin conversation is perfectly fine. It's very common to request resources like CSS files, images, or script files from other servers.  
+## Lesson
 
-In certain situations, however, browser restrict cross-origin requests initiated from within scripts. When this happens it is known as the `same-origin policy`.  
+### The Problem
 
-What do we mean by "origin"?
+Your web application serves up several kinds of content:
 
-## Definition of Origin
+* HTML
+* Images
+* JavaScript
 
-The "origin" of a resource is the collection of information representing the protocol, port, and/or host of where a resource is stored. Two pages are said to have the same origin if those details match for both pages.  
+Over the last decade server CPU time has become cheap, disk space is near free, but the *data you transfer* still costs a good bit of money.
 
-The first time you make a request to load any webpage, that request defines the origin of where that intial `index.html` page comes from. Any request after that is checked against this original source.
+So, to save $$$, I have my website loading jQuery fetching jQuery off your server. I'm also using some images that you host. Thanks for the free bandwidth!
 
-Let's say you have a website with a URL of `http://my.company.com`. Check out the following table to look at reasons why communication between your website and the following resources would pass or fail.
+### SECURITY! THERE'S BEEN A BANDWIDTH ROBBERY!
 
+Because HTTP is a *stateless protocol*, there's no (easy) way to know if the asset being requested is requested by a user of our website or some other website. For example, in a normal scenario:
 
-| URL                                 | OUTCOME | REASON                             |
+1. User A requests the HTML from *Wonderful Wanda's* site
+2. User A's browser reads the HTML and requests the images and JavaScripts from *Wonderful Wanda*
+3. User A's browser displays the HTML, injects the images, and executes the JavaScript
+
+But in Step 2 the server doesn't know that User A is the same person who previously requested the HTML. That means this could happen:
+
+1. User B requests the HTML from *Evil Eve's* website
+2. User B's browser reads Eve's HTML, but it tells the browser to fetch the images and JavaScripts from *Wanda's* website
+3. User B's browser gets the assets and displays them, all the while using up *Wanda's* bandwidth
+
+This could potentially cause extra load on Wanda's website, cost her extra money to pay for the bandwidth, or other problems.
+
+### Fake Security with CORS
+
+Up-to-date browsers implement a technique to hinder the above stealing called CORS: `Cross-Origin Resource Sharing`.
+
+How does it work? The `headers` in a typical HTTP response might look like this:
+
+```
+GET /v1/data HTTP/1.1
+Host: api.example.com
+Origin: http://www.example.com
+
+HTTP/1.1 200 Ok
+Content-Type: application/json
+Content-Length: 4365
+```
+
+Following the CORS standard means adding one additional line like this:
+
+```
+GET /v1/data HTTP/1.1
+Host: api.example.com
+Origin: http://www.example.com
+
+HTTP/1.1 200 Ok
+Content-Type: application/json
+Content-Length: 4365
+Access-Control-Allow-Origin: http://www.example.com
+```
+
+#### Adding It...To What?
+
+This HTTP header, `Access-Control-Allow-Origin`, can be added when serving up any file/asset on the server. Let's return to the original scenario:
+
+1. User A requests the HTML from *Wonderful Wanda's* site
+2. User A's browser reads the HTML and requests the images and JavaScripts from *Wanda*
+3. The images and JavaScripts are served with `Access-Control-Allow-Origin` set to the domain of *Wanda's* website
+4. User A's browser displays the HTML, sees that the `ACAO` address matches the origin of the original HTML, then injects the images, and executes the JavaScript
+
+Everything works out as expected. But when User B hit's up Evil Eve...
+
+1. User B requests the HTML from *Evil Eve's* website
+2. User B's browser reads Eve's HTML, but it tells the browser to fetch the images and JavaScripts from *Wanda's* website
+3. The images and JavaScripts are served with `Access-Control-Allow-Origin` set to the domain of *Wanda's* website
+4. User B's browser gets the assets, see's there's a mismatch between the origin of *Eve's* HTML and *Wanda's* assets' `ACAO`, and it refuses to embed the images or execute the JavaScript
+
+This is only achieving the *slightest bit of "security*" because it's up to User B's browser to decide, in step 4, whether or not to respect the CORS conflict and cause problems.
+
+In fact, if *User B* is in on the plan, they could just [disable CORS on their browser with a Chrome extension](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?hl=en).
+
+#### What does it all mean?
+
+More than likely, CORS will be a pain in your development and never really save you any money or bandwidth. Sorry.
+
+#### Are you serious? All this is about a technology I don't care about?
+
+Yes, and no, and yes. Yes you don't want to care. But you'll have to because you'll run into problems like this:
+
+* You are running your own front-end code on `http://localhost:3000/index.html`
+* You are running your own API on `http://localhost:3001/api/v1/cookies`
+
+Your browser rendering the `index.html` will freak out about loading data from the API because they have different *"origins"*.
+
+#### What is an Origin?
+
+The "origin" of a resource is the protocol, port, and host of where a resource is stored. Two pages are said to have the same origin if those details match for both pages.  
+
+When your HTML loads from `http://localhost:3000/index.html` the following other requests could happen:
+
+| URL                                 | ORIGIN MATCH | REASON                             |
 |-------------------------------------|---------|------------------------------------|
-| http://my.company.com/other.html    | SUCCESS |                                    |
-| https://my.company.com/other.html   | FAILURE | Different Protocol (`http` vs `https`) |
-| http://your.company.com             | FAILURE | Different Host                     |
-| http://my.company.com:81/other.html | FAILURE | Different Port                     |
+| http://localhost:3000/other.html    | YES |                                    |
+| https://localhost:3000/other.html   | NO | Different Protocol (`http` vs `https`) |
+| http://example.com                  | NO | Different Host                     |
+| http://localhost:3001/other.html    | NO | Different Port                     |
 
+So `http://localhost:3000/index.html` and `http://localhost:3001/api/v1/cookies` would mismatch because of the different port.
 
+### TELL ME WHAT TO DO, MAN!
 
-## Same Origin Policy
+On the API side, let's say you're running an ExpressJS application. You want to set the headers so that the data from that API is allowed to be fetched/displayed from any origin. You'd add this code to your app:
 
-The `same-origin policy` has opinions about how resources from one origin are allowed to communicate with resources from another origin.  
+```js
+app.use(function(req, res, next) {
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
+```
 
-Requests made to the same origin for local resources are always allowed. This may seem like an obvious statement, but it's worth mentally taking note that any time your webpage needs to load an image that is stored locally, it is making a `same-origin request`.  
+The data/assets served by that API will have `Access-Control-Allow-Origin: *` set so even CORS-enabled browsers will let them be displayed on any page.
 
+## Addendum
 
-#### CORS
-
-Cross-Origin Resource Sharing standard give servers access to other domains based on configuration specifications. Most modern browsers use an API to establish CORS - many of which you are familiar with, like `Fetch`, and `XMLHttpRequest` (which is what `AJAX` uses to update pages without refresh, long story short).  
-
-It works by adding specific `HTTP headers` that add extra directions - these manually set headers can be allowed or rejected by the receiving host based on what type of request has been made.  
-
-#### Ok but for real...WTF is a 'HTTP Request Header'
-
-Great question! At the end of the day, HTTP headers give the server additional information to respond as quickly as possible to what the user is expecting to get back.  
-
-Let's spy on a browser request to see what is being sent in this magical package of headers.  Take a second to do the following:   
-
-* In Chrome, visit your favorite go-to website and open the dev tools.
-* Select the `Network` tab.
-* Reload the page, and select the first item on the list  
-  * Ideally this is the initial request to get the `html` document you're looking at.
-* Click on the tab on the right that says `headers`.  
-  * All of the HTTP headers will be displayed on the right panel.  
-
-
-In this context, the headers we care about most are `accept` and `cookie`. `Accept` tells the responding server what it expects the response format to be. 
-
-
-
-#### Visual: HTTP Request & Server Response  
-
-
-
-
-
-
-
-
-## Resources
-[Mozilla Docs on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)  
-[Same Origin Policy Docs](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)  
-[XMLHttpRequest Docs](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+* [Enable CORS](https://enable-cors.org)
+* [Mozilla Docs on CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS)  
+* [Same Origin Policy Docs](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy)  
+* [XMLHttpRequest Docs](https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest)
+* [An ExpressJS walkthrough video](https://www.youtube.com/watch?v=cUWcZ4FzgmI)
