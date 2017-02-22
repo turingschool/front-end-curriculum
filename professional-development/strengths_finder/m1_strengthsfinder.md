@@ -26,7 +26,7 @@ Allison's Strengths:
 ## Individual Reflections (8 mins.)
 1. Fill out a name tag with your name and 5 SF strengths
 2. **Write:** Vision-Building: think about why you came to Turing. Then relate your strengths to that vision:
-* How might your strengths help you fulfill that vision? 
+  * How might your strengths help you fulfill that vision? 
 * How does each strength describe you in that vision?
 * Considering how you describe these strengths, how do you want others to see you?
 * Are there any other strengths that are recommended for you to learn from? Keep these in mind for the activity today
