@@ -13,7 +13,7 @@ To help you develop your potential, StrengthsFinder curriculum follows a four-st
 * Application
 * Relationship
 
-Today's session will be focused on the Discovery/Awareness step in order to build an awareness of these strengths and begin to understand how to develop them further. This session will include a lot of learning from each other in order to increase that awareness. 
+Today's session will be focused on the Discovery/Awareness step in order to build an awareness of these strengths and begin to understand how to develop them further. This session will include a lot of learning from each other in order to increase that awareness through coaching questions and reflection. 
 
 Allison's Strengths:
 
@@ -48,7 +48,7 @@ Discussion questions:
 
 Transition: Pick the strength to focus on next: which one is difficult for you to see as a strength?
 
-## Discovery #2 (5 mins)
+## Discovery #2: Challenge of Affirming Our Strengths (5 mins)
 Find someone with a different strength in common with you (can also have groups of 3)
 Discussion questions:
 
@@ -63,7 +63,7 @@ Discussion questions:
 
 Transition: Pick the strength to focus on next: which one resonates the least with you? 
 
-## Discovery #3 (5 mins)
+## Discovery #3: Complementary Strengths (5 mins)
 Find someone with a different strength than you (can also have groups of 3)
 Discussion questions:
 
