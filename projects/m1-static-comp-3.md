@@ -36,15 +36,23 @@ You may NOT take liberties with the layout, but your creative license includes:
 ## Evaluation Rubric
 
 ### Design Integrity
-TBD
+
+- 4: The comp beautifully articulates the original design intent and there are no areas where an instructor would make changes with respect to color, layout, imagery, spatial relationship of graphical elements.
+- 3: The comp accurately reflects the design integrity with respect to color, layout, imagery, spatial relationship of graphical elements. While there are areas of improvement, it is a close representation of the original design.
+- 2:  The comp is missing major design elements and/or incorrectly applies design with respect to any number of major deviations across color, layout, sizing, imagery, graphical spatial relationships.
+- 1:  The comp fails to respect the original comp layout and visual hierarchy intent. In addition, but not limited to, it fails to employ complementary color palette, and/or is missing major design elements.
 
 ### Responsive Layout
-TBD
+
+- 4: The comp is fully responsive and there are no areas where the instructor would make changes.
+- 3:  The comp logically breaks down across several breakpoints to accommodate mobile, tablet, desktop, and large format screens. While there are areas for improvement, nothing is lost or illegible across any of the screen sizes.
+- 2:  The comp fails to employ multiple breakpoints and the design is severely compromised at either extreme of small (mobile) or large (flat screen) size.
+- 1:  The comp is not responsive at any size.
 
 ### HTML Style
 
 - 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
-- 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
+- 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing. Developer employs basic use of semantic tags and makes additional effort where applicable to write accessible markup.
 - 2:  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
 - 1:  Developer writes code with unnecessary tags, selectors, or nesting that do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
 
