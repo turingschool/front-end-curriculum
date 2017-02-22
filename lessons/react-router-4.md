@@ -4,7 +4,7 @@ module: 3
 tags: react react-router javascript create-react-app
 ---
 
-**LESSON UPDATE:** This lesson plan was written using the alpha version of react-router. To avoid errors, make sure you install the version discussed in this document: `react-router@4.0.0-alpha.6`.  
+**LESSON UPDATE:** *This lesson plan was written using the alpha version of react-router. To avoid errors, make sure you install the version discussed in this document: `react-router@4.0.0-alpha.6`.*  
 
 By the end of today's lesson, you should have a better idea of what React Router is, why it's useful, and how to implement it into a React app.  
 
