@@ -85,12 +85,12 @@ Once you've looked at those methods discuss with the person next to you
 What ``mount`` does is it basically uses ``jsdom`` to render a testable version of the ``dom``
 heres the definition from the docs.
 
-``
+```
 Full DOM rendering is ideal for use cases where you have components that may interact with DOM APIs, or may require the full lifecycle in order to fully test the component (i.e., componentDidMount etc.)
 
 Full DOM rendering requires that a full DOM API be available at the global scope. This means that it must be run in an environment that at least "looks like" a browser environment. If you do not want to run your tests inside of a browser, the recommended approach to using mount is to depend on a library called jsdom which is essentially a headless browser implemented completely in JS.
 
-``
+```
 
 So what's super awesome about this is we can write tests and it kinda feels like we're writing ``jquery``
 here's a great example of how you can use ``mount``
