@@ -15,14 +15,6 @@ To help you develop your potential, StrengthsFinder curriculum follows a four-st
 
 Today's session will be focused on the Discovery/Awareness step in order to build an awareness of these strengths and begin to understand how to develop them further. This session will include a lot of learning from each other in order to increase that awareness through coaching questions and reflection. 
 
-Allison's Strengths:
-
-* Strategic
-* Empathy
-* Intellection
-* Developer
-* Input
-
 ## Individual Reflections (8 mins.)
 1. Fill out a name tag with your name and 5 SF strengths
 2. **Write:** Vision-Building: think about why you came to Turing. Then relate your strengths to that vision:
@@ -46,7 +38,7 @@ Discussion questions:
 * Did anything surprise you from your discussion?
 * How can you use your discoveries to further your development in this strength?
 
-Transition: Pick the strength to focus on next: which one is difficult for you to see as a strength?
+Transition: Pick a strength to focus on next. Is there one that is particularly difficult for you to see as a strength? If not, what can sometimes be challenging about a particular strength?
 
 ## Discovery #2: Challenge of Affirming Our Strengths (5 mins)
 Find someone with a different strength in common with you (can also have groups of 3)
@@ -61,7 +53,7 @@ Discussion questions:
 * What were some similar challenges that came up? 
 * How will you work through these challenges?
 
-Transition: Pick the strength to focus on next: which one resonates the least with you? 
+Transition: Pick the strength to focus on next: is there one that doesn't resonate with you? 
 
 ## Discovery #3: Complementary Strengths (5 mins)
 Find someone with a different strength than you (can also have groups of 3)
