@@ -83,7 +83,7 @@ Once you've looked at those methods discuss with the person next to you
 # Mount
 
 What ``mount`` does is it basically uses ``jsdom`` to render a testable version of the ``dom``
-heres the definition from the docs.
+here is the definition from the docs.
 
 ```
 Full DOM rendering is ideal for use cases where you have components that may interact with DOM APIs, or may require the full lifecycle in order to fully test the component (i.e., componentDidMount etc.)
@@ -98,12 +98,11 @@ here's a great example of how you can use ``mount``
 ```
 it('simulates click events', () => {
   const onButtonClick = spy();
-  const wrapper = mount(
-    <Foo onButtonClick={onButtonClick} />
-    );
-    wrapper.find('button').simulate('click');
-    expect(onButtonClick.calledOnce).to.equal(true);
-    });
+  const wrapper = mount(<Foo onButtonClick={onButtonClick} />);
+
+  wrapper.find('button').simulate('click');
+  expect(onButtonClick.calledOnce).to.equal(true);
+});
 
 ```
 
@@ -138,6 +137,7 @@ If anything this will be the closest implementation to the browser.
 ## to the codez
 
 we're going to need some stuffs so lets go ahead and install some things into our project.
+
 ``npm install --save-dev babel-polyfill``
 
 ``npm -i -D react-addons-test-utils``
@@ -148,15 +148,15 @@ we're going to need some stuffs so lets go ahead and install some things into ou
 
 ``npm -i -D enzyme``
 
-Now that we have all of this good stuff installed we are going to need to start making some test directories.
+Now that we have all of this good stuff installed we need to make some test directories.
 
-so `mocha` is going to explicitly look for a test directory, but more importantly it's going to look for `test` singular. so lets go ahead and make that for us.
+`mocha` is going to explicitly look for a test directory, but more importantly it's going to look for `test` singular, so let's go ahead and make that for us.
 
 Inside of that directory lets make another folder called `helpers`.
 
 Now inside of `helpers` we are going to create a `setup.js` file. Now the stuff that goes inside of this file is strictly to setup our fake `dom` and fake `window`.
 
-I repeat you do not need to know what what every single line in this code is doing. I just need you to be aware of whats actually happening. The moment you focus on this you loose the whole point of the lesson.
+I repeat you do not need to know what what every single line in this code is doing. I just need you to be aware of what's actually happening. The moment you focus on this you lose the whole point of the lesson.
 
 ```
 require('babel-register')({
@@ -171,14 +171,14 @@ global.document = require('jsdom').jsdom(
 global.window = document.defaultView // if we have to go to the window (Event bubbling, referencing the window)
 global.navigator = window.navigator // if something is paginated this allows us to go from page to page
 
-//global is the window in node
+// global is the window in node
 // using globals are pretty bad and thats why you typically don't see this used.
 
 ```
 
 Now that we have that set up we need to make sure that whenever we run our tests we are actually running this setup file first. The reason why we need this to be done is because we need to make sure the virtual `dom` is available for us. Ultimately it gives our application a place to mount itself.
 
-they way we do that is.
+The way we do that is.
 
 ``mocha --require test/helpers/setup.js``
 
@@ -196,12 +196,12 @@ import { shallow, mount, render } from 'enzyme'
 
 ```
 
-Now you might be wondering what the heck those 3 things next to import do. They are essentially the 3 parts of enzyme. For the most part you'll really only be using one of them but if you wanted to you could learn how to use all 3.
-You really want to look at those 3 things being imported from ``enzyme`` as gears on a bike.
+Now you might be wondering what the heck those three things next to import do. They are essentially the three parts of enzyme. For the most part you'll really only be using one of them but if you wanted to you could learn how to use all three.
+You really want to look at those three things being imported from ``enzyme`` as gears on a bike.
 
 ### Your turn
 
-- Turn to your partner and recap everything we just talked about (whats need for testing and the 3 different flavors of ``enzyme``)
+- Turn to your partner and recap everything we just talked about (what is needed for testing and the three different flavors of ``enzyme``)
 
 - If you're still a little confused it might be beneficial for you to look at the docs together to see what's going on.
 
@@ -210,4 +210,4 @@ the docs can be found [here](http://airbnb.io/enzyme/docs/api/index.html)
 
 ### Code along
 
-It might be beneficial for you to follow along as we write tests. If you would like to see the finish product checkout `enzyme-finished`
+It might be beneficial for you to follow along as we write tests. If you would like to see the finished product checkout `enzyme-finished`
