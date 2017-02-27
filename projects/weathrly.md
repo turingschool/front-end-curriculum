@@ -29,21 +29,21 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 ## Phase two
 
-* The application should have 7 hour weather forecast
-   * For each hour it should display an image that reflect the weather
+* The application should have a 7 hour weather forecast
+   * For each hour it should display an image that reflects the weather
    * For each hour it should display the projected temperature and the hour
 
 * Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive.
 
 ## Phase three
 
-* The application should show display a 10 forecast
+* The application should show a 10 day forecast
   * Each day should display the Name of the day, an Image reflecting the weather condition and the High and Low for each day.
 
 ## Extension
 
 * If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
-   * For each hour it should display an image that reflect the weather
+   * For each hour it should display an image that reflects the weather
    * For each hour it should display the projected temperature and the hour
 
 * Developers make use of advance testing techniques (Mocking, Stubbing, and Sinon)
