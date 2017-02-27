@@ -1,0 +1,38 @@
+/* Content expand and collapse */
+
+.expander-btn {
+  background-color: inherit;
+  border: none;
+  color: $dark-gray;
+  outline: none;
+}
+
+.expander-btn:hover {
+  color: $medium-gray;
+}
+
+.expander-content {
+  background-color: #FAFAFA;
+  overflow: auto;
+  padding-bottom: 15px;
+}
+
+.arrow-right {
+  transform: rotate(0deg);
+  transition: transform 0.25s linear;
+  height: 20px;
+  width: 20px;
+}
+
+.arrow-right.down {
+  transform: rotate(90deg);
+  transition: transform 0.25s linear;
+}
+
+.expander-btn h4 {
+  margin: 10px 0;
+}
+
+.expander-content code {
+  background-color: #EEE;
+}
