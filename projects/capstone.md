@@ -105,12 +105,19 @@ Instructor/developers will select one feature in the project to review for this 
 
 ### Workflow (50 Points)
 
-* 20: The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches.
-* 15: The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review.
-* 5: The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting issues in the code base. (This is important. These issues should not be able to make it past code review.)
-* 1: The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
+* 50: The developers effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches.
+* 35: The developers makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review.
+* 15: The developers make large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting issues in the code base. (This is important. These issues should not be able to make it past code review.)
+* 5: The developers committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0: The application was not checked into version control.
 
 #### Extensions (20 points each)
 
 - Developer contributes to or creates an npm module/library.
+
+
+### To get a 4 on this project, you need to achieve 300 / 325
+
+### To get a 3 on this project, you need to achieve 240 / 325
+
+## Final Score: x / 325
