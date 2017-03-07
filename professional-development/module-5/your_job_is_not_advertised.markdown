@@ -71,3 +71,10 @@ Pick a city/region other than Denver/Boulder (it can just be for practice!) or S
 * Who RSVPed?
 * All of these are worth investigating and attempting to contact
 * Use our GitHub techniques to find two people that you'll *reach out to TODAY*
+
+### Closing
+
+* You've gotta sell when they're in the buying mood
+* Discipline keeps you ready to succeed
+* Hustle gets you connect
+* Skill gets you a job
