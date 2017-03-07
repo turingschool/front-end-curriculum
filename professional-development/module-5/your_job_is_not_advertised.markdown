@@ -3,7 +3,7 @@ title: Your Job Is Not Advertised
 layout: page
 ---
 
-# Discipline, Hustle, and Skill
+### Discipline, Hustle, and Skill
 
 In this session we'll work on HUSTLE -- the work it takes to find a potential employer, convince them you're worth the time to interview, and just maybe even hire.
 
@@ -42,6 +42,7 @@ Pick a city/region other than Denver/Boulder (it can just be for practice!) or S
 * Developer jobs come in lots of shapes and sizes
 * Diving deeper than developer job listings
 * Consider the less-attractive technology/industry
+* The devs there have more options than you do
 * Any industry connection is a huge hook/differentiator
 
 #### Practice
