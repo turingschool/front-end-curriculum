@@ -3,7 +3,9 @@ title: Your Job Is Not Advertised
 layout: page
 ---
 
-# Your Job Is Not Advertised
+# Discipline, Hustle, and Skill
+
+In this session we'll work on HUSTLE -- the work it takes to find a potential employer, convince them you're worth the time to interview, and just maybe even hire.
 
 ## Why
 
@@ -20,7 +22,7 @@ If you can job hunt beyond listings, then you're *actively* searching. The more 
 * Job listings are still worth something
 * Junior jobs are heavily applied
 * Applying for "senior" jobs that match your niche
-* The "dummy" senior job posting
+* The "dummy"/"fishing" senior job posting
 * You're either hiring or you're dying
 
 #### Practice
@@ -36,6 +38,7 @@ Pick a city/region other than Denver/Boulder (it can just be for practice!) or S
 ### Stepping Out of the Mainstream
 
 * Ruby? JavaScript? You're more common than you used to be.
+* The necessary lie of `jobs@company.com`
 * Developer jobs come in lots of shapes and sizes
 * Diving deeper than developer job listings
 * Consider the less-attractive technology/industry
