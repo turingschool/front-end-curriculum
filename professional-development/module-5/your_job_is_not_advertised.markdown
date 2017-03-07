@@ -40,6 +40,7 @@ Pick a city/region other than Denver/Boulder (it can just be for practice!) or S
 * Ruby? JavaScript? You're more common than you used to be.
 * The necessary lie of `jobs@company.com`
 * Developer jobs come in lots of shapes and sizes
+* How is a job listing born?
 * Diving deeper than developer job listings
 * Consider the less-attractive technology/industry
 * The devs there have more options than you do
