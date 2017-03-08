@@ -77,5 +77,5 @@ Pick a city/region other than Denver/Boulder (it can just be for practice!) or S
 
 * You've gotta sell when they're in the buying mood
 * Discipline keeps you ready to succeed
-* Hustle gets you connect
+* Hustle gets you connected to potential
 * Skill gets you a job
