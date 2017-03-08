@@ -42,6 +42,7 @@ Today let's explore the topic of growth over your first six months in your job.
 
 ### Quick Practice
 
+* Joey, get a calendar for god's sake.
 * You should get in the habit of tracking and critiquing how your time is spent. Signup *now* for a time-tracking tool [like Harvest](https://www.getharvest.com/)
 * What routines are you following *now*? This is your *discipline*. Break out your calendar and timebox the rest of this week and all of next week. When will you wake up? Exercise? Do outreach? Technical practice? It's ok to change the plan later, but having no plan is a shit plan.
 
