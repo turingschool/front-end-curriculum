@@ -387,6 +387,7 @@ it('should call the onPurchase prop when clicked', () => {
 - `jest.fn()` returns a special mock function that we can use but also test to see if it was called.
 - `wrapper.find('.Grocery-purchase').simulate('click');` will simulate a click event.
 - `expect(onPurchaseMock).toBeCalled()` asks our mock function if it was called. Ideally, when we wire it up to the appropriate button, this will be true.
+- We are now using the `mount` function to create our wrapper rather than the `shallow` rendering we've used previously. Doing a full mount will allow us to more easily test methods on our components. Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md).
 
 #### Your Turn
 
