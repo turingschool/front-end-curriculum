@@ -74,7 +74,7 @@ import Grocery from './Grocery'
 class App extends Component {
   render() {
     return (
-      <Grocery name={'bananas'} starred={false}/>
+      <Grocery name='bananas' starred={false}/>
     );
   }
 }
@@ -167,7 +167,9 @@ If you run `npm test` you should see your one test pass (two if you still have t
 
 #### Testing for a class
 
-It might also be helpful to test to see if a component has a certain class. An easy way to do that is to test if it matches a given css selector.
+A common mistake developers make when testing components is writing assertions that are very closely tied to the actual content and text on the page. This is problematic because copy is much more likely to change on a regular basis. For example, if we write an assertion to test that the title of our application exists and contains the text 'Grocery List', and then we decide to change it to 'Shopping Cart', now we have a failing test when nothing is actually broken.
+
+For this reason, (among others), it's usually more reliable to test things that are less likely to change, such as a class name on an element. An easy way to do that is to test if it matches a given css selector.
 
 ```
 Grocery.test.js  
@@ -185,7 +187,7 @@ Now you should have three passing tests.
 
 ### Testing for dynamic changes  
 
-In the image above, the component changes visually based on whether or not the grocery item has been starred or purchased.
+When you're testing your components, you're mainly testing presentation logic. Given our UI will change based on application data (our component props), we'll want to make sure we have tests for any conditional logic or dynamic changes. For example, our grocery component changes visually based on whether or not the grocery item has been starred or purchased. 
 
 We could start out with a simple test to see if it has the appropriate class if it's starred.
 
@@ -358,7 +360,7 @@ First, we should start by being clear about what should happen. If you look clos
 
 At this point, we don't necessarily care what the functions are doing -- just that they are being called appropriately. This is where **mocks** come in handy. Mocks are stubbed-in or "faked" functionality that allows us to unit test specific parts of our code without having to worry about others. A mock will override the behavior of a specific function and provide you with utilities to test the interaction with the mock instead.
 
-You'll find when testing applications that use a framework like React, you'll nned to make a significant amount of mocks. And that's ok! Sometimes it may feel like you're faking too much of your code by mocking so many pieces of functionality. The general rule here is if you're not testing the actual behavior **within** the code you are mocking, it's perfectly fine to mock it.
+You'll find when testing applications that use a framework like React, you'll need to make a significant amount of mocks. And that's ok! Sometimes it may feel like you're faking too much of your code by mocking so many pieces of functionality. The general rule here is if you're not testing the actual behavior **within** the code you are mocking, it's perfectly fine to mock it.
 
 So let's use mocks to test that the functions we passed in are being called appropriately.
 
@@ -389,6 +391,7 @@ it('should call the onPurchase prop when clicked', () => {
 #### Your Turn
 
 - Can you add an `onClick` function to the "Purchase" button and be the hero who makes the test pass?
+- We likely want to pass in a grocery ID or grocery name to the `onPurchase` method so we can keep track of what has been purchased. Can you add an assertion to the previous test to check that `onPurchaseMock` was called with the correct arguments? ([Hint](https://facebook.github.io/jest/docs/expect.html#content))
 - Can you write the tests and implementation for the "Star" and "Remove" buttons?
 
 ### Homework: Implementing the Grocery List
