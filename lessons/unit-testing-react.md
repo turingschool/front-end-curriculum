@@ -356,9 +356,13 @@ So, the buttons say the right things. That's cool, but how do we know that they 
 
 First, we should start by being clear about what should happen. If you look closely at the code, you'll see that `onPurchase`, `onStar`, and `onRemove` properties are being passed in. It stands to reason that these functions should be called when one of those fancy buttons we just made are tested.
 
-This is just a unit test. How are we going to test this functionality? Doesn't it require _at least_ the containing element?
+At this point, we don't necessarily care what the functions are doing -- just that they are being called appropriately. This is where **mocks** come in handy. Mocks are stubbed-in or "faked" functionality that allows us to unit test specific parts of our code without having to worry about others. A mock will override the behavior of a specific function and provide you with utilities to test the interaction with the mock instead.
 
-Jest is more than just a Mocha alternative and a Chai alternative. It's also a Sinon alternative! We can use mocks to test that the functions we passed in are being called. Consider the following test:
+You'll find when testing applications that use a framework like React, you'll nned to make a significant amount of mocks. And that's ok! Sometimes it may feel like you're faking too much of your code by mocking so many pieces of functionality. The general rule here is if you're not testing the actual behavior **within** the code you are mocking, it's perfectly fine to mock it.
+
+So let's use mocks to test that the functions we passed in are being called appropriately.
+
+Consider the following test:
 
 ```js
 it('should call the onPurchase prop when clicked', () => {
@@ -378,7 +382,7 @@ it('should call the onPurchase prop when clicked', () => {
 });
 ```
 
-- `jest.fn()` returns a special function that we can use but also test to see if it was called.
+- `jest.fn()` returns a special mock function that we can use but also test to see if it was called.
 - `wrapper.find('.Grocery-purchase').simulate('click');` will simulate a click event.
 - `expect(onPurchaseMock).toBeCalled()` asks our mock function if it was called. Ideally, when we wire it up to the appropriate button, this will be true.
 
