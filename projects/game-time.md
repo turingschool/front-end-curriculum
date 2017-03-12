@@ -8,7 +8,8 @@ tags: javascript, jquery, canvas, svg, mocha, testing
 
 Build a game that is playable in the browser.
 
-This project is inspired by [Minicade](http://minica.de/).
+<!-- link broken, nfoster, Mar-12-17 -->
+<!-- This project is inspired by [Minicade](http://minica.de/). -->
 
 ## Goals
 
