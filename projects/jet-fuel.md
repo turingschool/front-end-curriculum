@@ -9,9 +9,34 @@ In this project you'll build a URL shortener service.
 
 Your application will allow users to create folders (like bookmark folders) to store long, ugly URLs as shortened URLs through your service.
 
-The main goal of your application is to redirect a request at the shortened URL to their long URL equivalent. Each shortened URL should belong to a unique folder which is capable of storing N URLs.
+The main goal of your application is to redirect a request at the shortened URL to their long URL equivalent. Each shortened URL should belong to a unique folder which is capable of storing N number of URLs.
 
 Your secondary goal is to track URL usage and provide popularity statistics.
+
+## Base Expectations
+
+```gherkin
+Given that I am an anonymous user of the site
+When I visit the site and provide a folder name to the service
+Then I expect it to create that folder for storing URLs
+
+Given that I am an anonymous user of the site
+When I visit a folder and provide a URL to the service
+Then I expect it to return a service shortened URL for that folder
+
+Given that I am an anonymous user of the site
+When I follow a service shortened URL
+Then I expect to be redirected to the original URL
+
+Given that I am an anonymous user of the site
+When I visit a folder
+Then I expect to see all URLs relating to that folder
+
+Given that I am an anonymous user of the site
+When I visit a folder
+Then I expect the ability to sort the folder's URLs by popularity (number of visits)
+And I expect the ability to sort the folder's URLs by how recently they were added
+```
 
 ## Things to Think About
 
@@ -25,78 +50,28 @@ Your secondary goal is to track URL usage and provide popularity statistics.
 * Are the files of the application laid out in a logical manner?
 * Does the code within each file directly relate to the name of the file and location within the application?
 * Is the code clearly laid out?
-* Does each method accomplish their intended task or do they do more than intended?
+* Does each function accomplish their intended task or do they do more than intended?
 
 ### Server-side Code
 
 * Does each route handle a single operation?
-* Are there a small number of instance variables defined?
-* Could multiple of the instance variables be represented with a singular concept/object?
+* Does each route respond with the correct resource and in the correct JSON format?
 * Are your routes "RESTful"?
-* Are your urls stored to the correct folder database?
+* Are your urls stored to their correct folder in the database?
+
+### Client-side Code
+
+* Do event-listeners fetch the correct data from the correct endpoint?
+* Do fetch responses append information to the page correctly?
 
 ### Tests
 
 * Are all aspects of the application well-tested?
-* Do the tests run? Are there failures?
-* Are the tests within the test file directly related to the file they are testing?
+* Do the tests run? Are there failures? Are failed tests skipped with comments?
 * Is it clear what code is under test?
 * Is it clear what scenario is being tested?
 * Is it clear the expected results of the scenario?
 * Is there a lot of repetition of setup/teardown in the tests?
-
-## Base Expectations
-
-```gherkin
-Given that I am an anonymous user of the system
-When I visit the site
-And give a folder name to the service
-Then I expect it to create that folder for storing URLs
-
-Given that I am an anonymous user of the system
-When I visit the site
-And give a URL to the service
-Then I expect it to return a service shortened URL
-
-Given that I am an anonymous user of the system
-When I follow a service shortened URL
-Then I expect to be redirected to the original URL
-
-Given that I am an anonymous user of the system
-When I follow a folder
-Then I expect to see all URLs relating to that folder
-
-Given that I am an anonymous user of the system
-When I visit the site
-Then I expect to see URLs sorted by popularity
-And I expect to see URLs sorted by how recently they were added
-```
-
-### Statistics
-
-Provide additional statistics on the main page of your application, a user's page of shortened URLS, and individual URL pages.
-
-```gherkin
-Given that I am an anonymous user of the system
-When I visit the site
-And click to sort by popularity
-Then I expect to see a list of generated links sorted by popularity
-```
-
-### Filtering
-
-```gherkin
-Given that I am an anonymous user of the system
-When I visit the site
-And type into the search field
-Then I expect to only see a list of generated links that contain my search query
-```
-
-### Titles
-
-Having just a big table of URLs (shortened and unshortened) is going to get unwieldy fast.
-
-Create a background task that fetches the title of the webpage and saves it to the model.
 
 ## Evaluation
 
@@ -106,17 +81,15 @@ The following features are required for specification adherence (50 points) in t
 - The home page has a form for submitting a new URL for a selected folder.
 - When a URL is submitted, the user can see a shorted version of the URL in the user interface.
 - When the user visits the shortened URL, they are redirected to the original URL.
-- There is a list of all of the folders of the application on the page.
-- There is a list for each folder of all of the URLs shortened by the application on the page.
-- Users can see the data the URL was added as well as how many times the short URL has been visited.
-- Users can sort by popularity and by date added in either ascending or descending order.
+- There is a list of all of the folders of the site.
+- There is a list for each folder of all of it's shortened URLs.
+- Users can see the date the URL was added as well as how many times the short URL has been visited.
+- Users can sort by date added and by popularity in either ascending or descending order.
 
 In addition, the following features are worth additional points.
 
 - The list of URLs has a search field for filtering the list of URLs. (5 points)
-- The application will asynchronously fetch the title of the web page. (10 points)
-- The application will display an error to the if the page does not exist and it will not store it in its database. (10 points)
-- The application will allow the user to provide a custom short URL. (10 points)
+- The application will allow the user to provide their own custom short URL. (10 points)
 
 ## Instructor Evaluation Points
 
@@ -133,7 +106,7 @@ The following set of points are distributed at the discretion of the instructor.
 * **7 points** - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 * **0 points** - The application is confusing or difficult to use.
 
-### Data Persistance with SQL Database
+### Data Persistence with SQL Database
 
 * **20 points** - The application persists data in a SQL database but with correct relationships between folders and URLs.
 * **10 points** - The application persists data in a SQL database but with some incorrect relationships between folders and URLs.
@@ -162,11 +135,12 @@ The following set of points are distributed at the discretion of the instructor.
 * **7 points** - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 * **0 points** - The application was not checked into version control.
 
-## Project is worth 150 points with 35 extra points possible
+## Projects are due on Friday 3/17, 12:00 p.m. We will provide a submission form for all teams to submit their repos.
+
+## Project is worth 150 points with 15 extra points possible
 
 ## To get a 3 on this project, you need to score 110 points or higher
 
 ## To get a 4 on this project, you need to score 135 points or higher
 
-## Projects are due on Friday 1/27, 12:00 p.m.
-
+# Final Score: x / 150
