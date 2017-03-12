@@ -22,7 +22,6 @@ You can use any of the following JavaScript libraries:
 
 * [jQuery](http://jquery.com/)
 * [Mocha](http://mochajs.org/)
-* [Lodash](http://lodashjs.com/)
 * [Moment.js](http://momentjs.com)
 * [Numeral.js](http://numeraljs.com)
 

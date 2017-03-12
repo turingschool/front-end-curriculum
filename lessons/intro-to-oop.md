@@ -53,9 +53,13 @@ Now objects have expectations. Sometimes it would almost work best if objects ha
 
 When an object knows too much what you will notice is that it will not function correctly if there it isn't independent. When you are coding with any OOP language you will always create a dependency on something. Objects will interact with each other and you will notice that at some point you will see that objects will begin to depend on each other. As that happens and you begin to lay a dependency you want to place it on an object that is not going to change very much.
 
-The reason why we do this is because as developer we have to accommodate change.  If the dependency has less change then it means we don't have to accomidate that change as much.
+The reason why we do this is because as developer we have to accommodate change.  If the dependency has less change then it means we don't have to accommodate that change as much.
 
 
 ### Code Along
 
-We'll hop into some code and figure it out!
+Let's build some stuff!
+
+### Homework
+
+For your homework please make sure to build out phases 1 through 3 in the Flash Cards [project](http://frontend.turing.io/projects/flash-cards.html). This will help you understand the role of objects as you start your game time journey. 
