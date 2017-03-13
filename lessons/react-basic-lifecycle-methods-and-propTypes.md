@@ -28,6 +28,33 @@ You'll notice that React has some incredibly verbose and helpful error messages.
 
 ### What is this `super` business?  
 
+Try this in your component and check out the error message:
+
+```js
+constructor(){
+  console.log(this);
+}
+```
+
+You should see something like this:  
+
+```js
+Failed to compile.
+
+Error in ./src/Card.js
+Syntax error: 'this' is not allowed before super()
+
+`
+  3 | export default class Card extends Component {
+  4 |   constructor(){
+> 5 |     console.log(this);
+    |                 ^
+  6 |   }
+  7 |
+  8 |   render () {
+`
+```
+
 If, in your constructor, you need access to that component's `props` you must pass these as an argument down through `super()`.
 
 ```js
@@ -39,7 +66,7 @@ constructor(props) {
 }
 ```
 
-Without passing the props down into this method, `this.props` will return as `undefined` **within the `constructor` method**.  This is bad because it's the first function called when your component is instantiated as a class - knowing the context of `this` at this time is a big deal.   
+Without passing the props down into this method, `this.props` will return as `undefined` **within the `constructor` method**.  This is bad because it's the first function called when your component is instantiated as a class - knowing the context of `this` from the get go can be a big deal.   
 
 Note that whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` method - the `render()` method sets its own context.  
 
@@ -47,13 +74,19 @@ Note that whether or not you have a constructor method has no effect on `this` o
 
 ### componentDidMount
 
+Per the docs, `componentDidMount()` is invoked "immediately after a component is mounted." Any functionality that is dependent on existing DOM nodes should live here. For example, let's say you want to set state which affects a `<p>` tag, you need to wait until that `<p>` tag exists before you can throw any additional information into it.
+
+This is also the go-to location to fire off an API call or network request.  
+
+**NOTE:** Setting state in this method **WILL** trigger a re-render.
+
 ## More About Props
 
 ### PropTypes
 
-PropTypes allow you to specify what type of props you are expecting in a certain component. This is also known as "typechecking". Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies React's built in `propType` tools let you establish a safety net with very little effort.  
+PropTypes allow you to specify what type of props you are expecting in a certain component. This is also known as "typechecking". Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, React's built in `propType` tools let you establish a safety net with very little effort.  
 
-Let's say you declare a component `<Main title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else -- say for example the API changed and now you have an array of strings -- you will get a helpful warning message in your console.  
+Let's say you declare a component `<Main title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else -- say for example the API changed and now you have an array of strings -- you will get a helpful warning message in your console.  
 
 In React, `propTypes` are declared like this:
 
@@ -74,16 +107,44 @@ Main.propTypes = {
 The error you will see if the component gets something besides a string would look something like this:  
 
 ```
-Warning: Failed prop type: Invalid prop `jokes` of type `array` supplied to `Main`, expected `string`.
+Warning: Failed prop type: Invalid prop `name` of type `array` supplied to `Main`, expected `string`.
     in Main (created by App)
     in App
 ```
 
 Check out a complete list of `propTypes` and examples of usage [here](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#react.proptypes).  
 
+By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where your component will not function correctly without that particular prop. To add a validation that will fire an error message if a prop does not show up at all, simply add `.isRequired` to the end of the propType delcaration.  
+
+
+```js
+Main.propTypes = {
+  name: React.PropTypes.string.isRequired
+}
+```
+
+You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. Instead of specifying a particular JS primitive you can use `.any`.
+
+```js
+Main.propTypes = {
+  name: React.PropTypes.any.isRequired
+}
+```
+
+
+### Your Turn
+
+Take the next 5 minutes to look up the following prop types and understand what they do. We will circle back to talk about these particular methods when you are done.  
+
+- `React.PropTypes.oneOf()`  
+- `React.PropTypes.arrayOf()`  
+- `React.PropTypes.objectOf()`  
+- `React.PropTypes.shape()`  
+
+
 ## DefaultProps
 
-Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through.
+Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  
 
 ```js
 class Main extends Component  {
@@ -97,4 +158,17 @@ class Main extends Component  {
 Main.defaultProps = {
   name: 'Batman'
 }
-```
+```  
+
+**Note:** The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props to fill themselves in before any warning messages are thrown.  
+
+
+### Your Turn  
+
+Now that we've talked about the most obvious use cases of propTypes to preemptively debug your code, read the following two articles - you are highly encouraged to take notes:  
+- [Better Prop Validation](https://medium.com/@MoeSattler/better-prop-validation-in-react-cc83590d311f#.8z6wszfzn).  
+- [Writing A Good React Component](https://thoughts.travelperk.com/writing-a-good-react-component-59624ed40b8e#.64wzjk4qc)  
+
+We will circle back to review the main points of these articles together.  
+
+When you are done, get with your project partner (if you have one) and implement propTypes and defaultProps into your current project.  
