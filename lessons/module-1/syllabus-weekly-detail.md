@@ -36,9 +36,9 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 
 |Mindset     | _Brave, supportive, can-do-attitude_. |
 |Lessons     | Breakout Groups, Worktime & Study/Review for Pentathlon, [Design IV]() |
-|Assignment  | __DUE__:   Mon 4/10 ~ Static Comp Challenge #2 by *8:00 AM* |
-|Assignment  | __EVAL__:  Thu 4/13 ~ ToDoBox |
-|Assignment  | __PRESO__: Thu 4/13 ~ Lightening Talk Extravaganza |
+|Assignment  | __DUE__:  Mon 4/10 ~ Static Comp Challenge #2 by *8:00 AM* |
+|Assignment  | __DUE__:  Thu 4/13 ~ Lightening Talk |
+|Assignment  | __EVAL__: Thu 4/13 ~ ToDoBox |
 
 ### WK 6: Mastery of Module
 
