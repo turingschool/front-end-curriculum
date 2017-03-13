@@ -14,28 +14,28 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 2: Putting the Pieces Together
 
 |Mindset     | _Open, optimistic, invested_. |
-|Lessons     | [JS I](http://frontend.turing.io/lessons/module-1/js-1.html) &nbsp; [JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I]() |
+|Lessons     | [JS I](http://frontend.turing.io/lessons/module-1/js-1.html) &nbsp; [JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io lessons/module-1/design-1.html) |
 |Assignment  | __DUE__: Thu 3/23 no later than *1:00 PM* ~ Dog Party Static Comp |
 |Assignment  | __EVAL__: Thu 3/23 ~ Number Guesser |
 
 ### WK 3: Level Up
 
 |Mindset     | _Dig Deep, show grit, be vocal, be resourceful_. |
-|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [jQuery](http://frontend.turing.io/lessons/introduction-to-jquery.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II]() |
+|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [jQuery](http://frontend.turing.io/lessons/introduction-to-jquery.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) |
 |Assignment  | __EVAL__: Wed 3/29 ~ Mid Mock Assessment |
 |Assignment  | __EVAL__: Thu 3/30 ~ Linked List |
 
 ### WK 4: Build on a Solid Foundation 
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
-|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/array-prototype-methods-intro) &nbsp; [CSS Jigsaw]() &nbsp; [Design III]() |
+|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/array-prototype-methods-intro) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
 |Assignment  | __DUE__:   Mon 4/3 ~ Static Comp Challenge #1 by *8:00 AM* |
 |Assignment  | __EVAL__:  Thu 4/6 ~ Ideabox |
 
 ### WK 5: Practice for Proficiency in the Fundamentals
 
 |Mindset     | _Brave, supportive, can-do-attitude_. |
-|Lessons     | Breakout Groups, Worktime & Study/Review for Pentathlon, [Design IV]() |
+|Lessons     | Breakout Groups, Worktime & Study/Review for Pentathlon, [Design IV](https://github.com/turingschool-examples/mod1-gestalt-principals-foundations) |
 |Assignment  | __DUE__:  Mon 4/10 ~ Static Comp Challenge #2 by *8:00 AM* |
 |Assignment  | __DUE__:  Thu 4/13 ~ Lightening Talk |
 |Assignment  | __EVAL__: Thu 4/13 ~ ToDoBox |
