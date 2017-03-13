@@ -13,11 +13,14 @@ Students must earn a score of `3` or greater in *each* category of the final ass
 
 ### Independent Work
 
-(forthcoming)
+* Homework
+* Build-Your-Own-Backend
 
 ### Group Work
 
-(forthcoming)
+* Jet Fuel
+* Imposter Syndrome
+* Capstone Project
 
 ### Career Development
 
