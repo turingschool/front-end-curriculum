@@ -2,7 +2,6 @@
 title: jQuery DOM Traversal, Manipulation, and Events
 length: 180
 tags: javascript, jquery
-status: draft
 ---
 
 ## Learning Goals
