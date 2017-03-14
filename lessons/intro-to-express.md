@@ -70,9 +70,11 @@ This pattern is exactly how we can define and handle any routes in an Express ap
 
 ## Getting Started with Express
 
-Let's also go ahead and install some dependencies that we'll need to get things rolling.
+Let's go ahead and install some dependencies that we'll need to get things rolling.
 
 ```
+mkdir secret-box
+npm init --yes
 npm i express --save
 ```
 
@@ -330,56 +332,23 @@ BONUS:
 
 Can you implement a GET route that shows only the secrets that have been edited?
 
-### Testing in Express
-
-Mocha and Chai are two of the more popular testing frameworks to use with Express, so let's go ahead and install those.
-
-`npm i --save-dev mocha chai chai-http`
-
-Next let's setup our testing directory:
+### Static Files in Express
+To serve static files like an index.html file, you need to let Express know. To do this, tell Express what directory your static files live in with:
 
 ```js
-mkdir test
-touch test/routes.spec.js
+app.use(express.static('public'));
 ```
+This chains public to the root path. A good practice is to name this directory public if it contains public facing files such as html, css and js.
 
-In the testing file we need some setup as well:
-
-```js
-process.env.NODE_ENV = 'test';
-
-var chai = require('chai');
-var should = chai.should();
-var chaiHttp = require('chai-http');
-var server = require('../app');
-
-chai.use(chaiHttp);
-
-describe('API Routes', function() {
-
-});
-```
-
-Now for our first test to the secrets endpoint:
+To send the file, you need to read it with the 'fs' Node module (File System) and give it the local of the file. `__dirname` is a Node global variable that gives you the directory name of the current module (your path). By using app.use(express.static('public')), we change `__dirname` to `./public`. We then send our response with the index.html file. That's it!
 
 ```js
-describe('GET /api/secrets', function() {
-  it('should return all secrets', function(done) {
-    chai.request(server)
-    .get('/api/secrets')
-    .end(function(err, res) {
-    res.should.have.status(200);
-    res.should.be.json; // jshint ignore:line
-    res.body.should.be.a('object');
-    res.body.should.have.property('wowow');
-    done();
-    });
+app.get('/', (request, response) => {
+  fs.readFile(`${__dirname}/index.html`, (err, file) => {
+    response.send(file);
   });
 });
 ```
-
-
-Then go ahead and run mocha in your terminal to run the test suit and see what errors you get.
 
 ## Resources
 - [Express.js](https://expressjs.com/)
