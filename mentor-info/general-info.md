@@ -5,19 +5,21 @@ tags: mentor, posse
 
 ### Mentor Program Coordinator
 
-|Mary Cutrali| @marycutrali |
+|Allison Reu Singer| @allison_reu_singer |
 
-### [Mentor List](https://docs.google.com/spreadsheets/d/1NpEeyD0N4s3EfQOQxS20KfI4UKddd41ziyRfZ1lqMwg/edit#gid=1600123372)
+### [Mentor List](https://docs.google.com/document/d/1Q35fM3coYjnms9rkVem3FHVk44kW6qHp_-t99PBbczI/edit?usp=sharing)
 
 # Posses & Mentors
 
-## What is a Posse? 
+## What is a Posse?
 
-Posses are student-led organized groups with a focused learning goal. Any given module there will be anywhere from 8-10 posses. Each posses will have 1-3 student leaders, a handful of mentors, a faculty advisor, and 8-10 student members. Posses are encouraged for students in Module 1, as a way to meet students from other cohorts. We encourage students in module 2 and 3 to begin experimenting with Posse leadership. 
+Posses are student-led organized groups with a focused learning goal. Any given module there will be anywhere from 8-10 posses. Each posses will have 1-3 student leaders, a handful of mentors, a faculty advisor, and 8-10 student members. Posses are encouraged for students in Module 1, as a way to meet students from other cohorts. We encourage students in module 2 and 3 to begin experimenting with Posse leadership.
 
 ## How To: Select a Posse
 
 Mary will meet with your class on Tuesday during your first week to give an in-depth introduction to the posse and mentor system. After that, she’ll provide you some documents about the posses, their leaders, and a list of mentors at Turing. Once you’ve taken some time to think about which posse you’d like to join, you’ll be given a google form to fill out and will be sorted into the posse of your first or second choice. If at any time, the posse is not all that you dreamed it to be, you can contact Mary and she will help you find the right fit.  More information about posses can be found here.
+
+### [Posse List](https://docs.google.com/document/d/1OKjq08T6Wrw9IZi_lAGCHvVbWFRItvI966SLstMXVew/edit?usp=sharing)
 
 ## How To: Find & Schedule a Meeting With Your Mentor
 
@@ -32,7 +34,7 @@ Once you've located the right mentor -- think about what you'd like to work on. 
 
 ### How do I schedule a meeting with my mentor?
 
-Your mentors all volunteer their time to offer you unconditional support while you're on the wild ride through Turing. Remember that their time is just as valuable as yours and schedule pairing at LEAST 24-48 hours in advance (we acknowledge that exceptions happen). Your mentors should have updated availability in the spreadsheet referenced above. Ideally, you'll coordinate all of your pairing for the week on Mondays before class or after wrap up. 
+Your mentors all volunteer their time to offer you unconditional support while you're on the wild ride through Turing. Remember that their time is just as valuable as yours and schedule pairing at LEAST 24-48 hours in advance (we acknowledge that exceptions happen). Your mentors should have updated availability in the spreadsheet referenced above. Ideally, you'll coordinate all of your pairing for the week on Mondays before class or after wrap up.
 
 ### What if I need to cancel or reschedule?
 
@@ -49,7 +51,7 @@ If you can't extend the current pairing session, ask your mentor if you can sche
 
 ## How To: DTR With Your Mentor
 
-Meeting with a mentor for the first time can seem daunting. There is a lot of ground to cover, you’re not sure what to talk about …. Should you code? We recommend having a 30 minute google hangout/coffee/beer the first time you meet your mentor. It’s important to get to know each other outside the context of screenhero for a natural relationship to form. Below, a sampling of questions that you can ask to determine if the person you’re meeting is the right mentor for you! 
+Meeting with a mentor for the first time can seem daunting. There is a lot of ground to cover, you’re not sure what to talk about …. Should you code? We recommend having a 30 minute google hangout/coffee/beer the first time you meet your mentor. It’s important to get to know each other outside the context of screenhero for a natural relationship to form. Below, a sampling of questions that you can ask to determine if the person you’re meeting is the right mentor for you!
 
 ## How do you communicate best? What is your preferred way to support me while I go through Turing?
 
@@ -71,7 +73,3 @@ Meeting with a mentor for the first time can seem daunting. There is a lot of gr
 - example [non-technical but turing-related] - Technical Interview Prep, Leadership Skills, Public Speaking/Lightning Talks, Resumes
 - example [non-technical turing-divergent] - knitting, tattoos, yoga, skiing, craft-beer, parenting
 - What’s gone well or poorly in your last mentorships?
- 
-
-
-
