@@ -70,28 +70,30 @@ This pattern is exactly how we can define and handle any routes in an Express ap
 
 ## Getting Started with Express
 
-Let's also go ahead and install some dependencies that we'll need to get things rolling.
+Let's go ahead and install some dependencies that we'll need to get things rolling.
 
 ```
+mkdir secret-box
+npm init --yes
 npm i express --save
 ```
 
 We'll get a basic server running using some code I stole from [the Express documentation](http://expressjs.com/starter/hello-world.html) and modified slightly to fit my tastes.
 
 ```js
-const express = require('express');
-const app = express();
+const express = require('express')
+const app = express()
 
-app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Secret Box';
+app.set('port', process.env.PORT || 3000)
+app.locals.title = 'Secret Box'
 
 app.get('/', (request, response) => {
-  response.send('It\'s a secret to everyone.');
-});
+  response.send('It\'s a secret to everyone.')
+})
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
-});
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`)
+})
 ```
 
 Fire up the server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
@@ -106,8 +108,8 @@ Consider the following:
 app.get('/api/secrets/:id', (request, response) => {
   response.json({
     id: request.params.id
-  });
-});
+  })
+})
 ```
 
 Take that for a spin with a bunch of different words where `:id` should go.
@@ -122,7 +124,7 @@ Some things to notice:
 In addition, let's add some data structure for keeping track of some kind of arbitrary data.
 
 ```js
-app.locals.secrets = {};
+app.locals.secrets = {}
 ```
 
 Let's put some fake data in for now.
@@ -130,30 +132,30 @@ Let's put some fake data in for now.
 ```js
 app.locals.secrets = {
   wowowow: 'I am a banana'
-};
+}
 ```
 
 Here is the feature we want to implement: when a user has the correct secret, we want to show them message associated with that `id`.
 
 ```js
 app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params;
-  const message = app.locals.secrets[id];
-  response.json({ id, message });
-});
+  const { id } = request.params
+  const message = app.locals.secrets[id]
+  response.json({ id, message })
+})
 ```
 
 Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser now that the resource was not found.
 
 ```js
 app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params;
-  const message = app.locals.secrets[id];
+  const { id } = request.params
+  const message = app.locals.secrets[id]
 
-  if (!message) { return response.sendStatus(404); }
+  if (!message) { return response.sendStatus(404)  }
 
-  response.json({ id, message });
-});
+  response.json({ id, message })
+})
 ```
 
 ### Sending Data With Our Post Request
@@ -169,10 +171,10 @@ npm i body-parser --save
 We'll also need to require and use it in our `server.js`.
 
 ```js
-const bodyParser = require('body-parser');
+const bodyParser = require('body-parser')
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 ```
 
 This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other. (We're only going to use JSON, but I am leaving it here for reference.)
@@ -180,42 +182,42 @@ This will add in support for parsing JSON as well as HTML forms. If you only nee
 Here is what my server looks like so far.
 
 ```js
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
+const express = require('express')
+const app = express()
+const bodyParser = require('body-parser')
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
 
-app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Secret Box';
+app.set('port', process.env.PORT || 3000)
+app.locals.title = 'Secret Box'
 app.locals.secrets = {
   wowowow: 'I am a banana'
-};
+}
 
 app.get('/', (request, response) => {
-  response.send('Hello World!');
-});
+  response.send('Hello World!')
+})
 
 app.get('/api/secrets', (request, response) => {
   const secrets = app.locals.secrets
 
-  response.json({ secrets });
-});
+  response.json({ secrets })
+})
 
 
 app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params;
+  const { id } = request.params
   const message = app.locals.secrets[id]
 
-  if (!message) { return response.sendStatus(404); }
+  if (!message) { return response.sendStatus(404)  }
 
-  response.json({ id, message });
-});
+  response.json({ id, message })
+})
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
-});
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`)
+})
 ```
 
 ### Creating a POST Route
@@ -224,13 +226,13 @@ We'll use our super secure method of generating random IDs.
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const id = Date.now();
-  const { message } = request.body;
+  const id = Date.now()
+  const { message } = request.body
 
-  app.locals.secrets[id] = message;
+  app.locals.secrets[id] = message
 
-  response.json({ id, message });
-});
+  response.json({ id, message })
+})
 ```
 
 This approach has a bunch of flaws:
@@ -252,19 +254,19 @@ Status codes are especially important when handling errors for a request. Let's 
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const { message } = request.body;
-  const id = Date.now();
+  const { message } = request.body
+  const id = Date.now()
 
   if (!message) {
     return response.status(422).send({
       error: 'No message property provided'
-    });
+    })
   }
 
-  app.locals.secrets[id] = message;
+  app.locals.secrets[id] = message
 
-  response.json({ id, message });
-});
+  response.json({ id, message })
+})
 ```
 
 If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error message we sent along with the 422 response.
@@ -275,7 +277,7 @@ It's important to handle errors and write descriptive error messages so that oth
 It would also be nice if we used the correct status code on the successful response.
 
 ```js
-response.status(201).json({ id, message });
+response.status(201).json({ id, message })
 ```
 
 ### Generating Unique Keys
@@ -291,26 +293,26 @@ npm i md5 --save
 Now, in our `server.js`, we can require the module.
 
 ```js
-const md5 = require('md5');
+const md5 = require('md5')
 ```
 
 Finally, let's replace `Date.now()` in our `POST` action.
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const { message } = request.body;
-  const id = md5(message);
+  const { message } = request.body
+  const id = md5(message)
 
   if (!message) {
     return response.status(422).send({
       error: 'No message property provided'
-    });
+    })
   }
 
-  app.locals.secrets[id] = message;
+  app.locals.secrets[id] = message
 
-  response.status(201).json({ id, message });
-});
+  response.status(201).json({ id, message })
+})
 ```
 
 ### Using Postman
@@ -330,56 +332,23 @@ BONUS:
 
 Can you implement a GET route that shows only the secrets that have been edited?
 
-### Testing in Express
-
-Mocha and Chai are two of the more popular testing frameworks to use with Express, so let's go ahead and install those.
-
-`npm i --save-dev mocha chai chai-http`
-
-Next let's setup our testing directory:
+### Static Files in Express
+To serve static files like an index.html file, you need to let Express know. To do this, tell Express what directory your static files live in with:
 
 ```js
-mkdir test
-touch test/routes.spec.js
+app.use(express.static('public'))
 ```
+This chains public to the root path. A good practice is to name this directory public if it contains public facing files such as html, css and js.
 
-In the testing file we need some setup as well:
+To send the file, you need to read it with the 'fs' Node module (File System) and give it the local of the file. `__dirname` is a Node global variable that gives you the directory name of the current module (your path). By using app.use(express.static('public')), we change `__dirname` to `./public`. We then send our response with the index.html file. That's it!
 
 ```js
-process.env.NODE_ENV = 'test';
-
-var chai = require('chai');
-var should = chai.should();
-var chaiHttp = require('chai-http');
-var server = require('../app');
-
-chai.use(chaiHttp);
-
-describe('API Routes', function() {
-
-});
+app.get('/', (request, response) => {
+  fs.readFile(`${__dirname}/index.html`, (err, file) => {
+    response.send(file)
+  })
+})
 ```
-
-Now for our first test to the secrets endpoint:
-
-```js
-describe('GET /api/secrets', function() {
-  it('should return all secrets', function(done) {
-    chai.request(server)
-    .get('/api/secrets')
-    .end(function(err, res) {
-    res.should.have.status(200);
-    res.should.be.json; // jshint ignore:line
-    res.body.should.be.a('object');
-    res.body.should.have.property('wowow');
-    done();
-    });
-  });
-});
-```
-
-
-Then go ahead and run mocha in your terminal to run the test suit and see what errors you get.
 
 ## Resources
 - [Express.js](https://expressjs.com/)
