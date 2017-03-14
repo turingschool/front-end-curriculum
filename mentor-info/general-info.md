@@ -3,13 +3,9 @@ title: Mentor and Posse General Information
 tags: mentor, posse
 ---
 
-### Mentor Program Coordinator
-
-|Allison Reu Singer| @allison_reu_singer |
-
-### [Mentor List](https://docs.google.com/document/d/1Q35fM3coYjnms9rkVem3FHVk44kW6qHp_-t99PBbczI/edit?usp=sharing)
-
 # Posses & Mentors
+
+### [Posse List](https://docs.google.com/document/d/1OKjq08T6Wrw9IZi_lAGCHvVbWFRItvI966SLstMXVew/edit?usp=sharing)
 
 ## What is a Posse?
 
@@ -17,11 +13,17 @@ Posses are student-led organized groups with a focused learning goal. Any given 
 
 ## How To: Select a Posse
 
-Mary will meet with your class on Tuesday during your first week to give an in-depth introduction to the posse and mentor system. After that, she’ll provide you some documents about the posses, their leaders, and a list of mentors at Turing. Once you’ve taken some time to think about which posse you’d like to join, you’ll be given a google form to fill out and will be sorted into the posse of your first or second choice. If at any time, the posse is not all that you dreamed it to be, you can contact Mary and she will help you find the right fit.  More information about posses can be found here.
-
-### [Posse List](https://docs.google.com/document/d/1OKjq08T6Wrw9IZi_lAGCHvVbWFRItvI966SLstMXVew/edit?usp=sharing)
+Mary will meet with your class on Tuesday during your first week to give an in-depth introduction to the posse and mentor system. After that, she’ll provide you some documents about the posses, their leaders, and a list of mentors at Turing. Once you’ve taken some time to think about which posse you’d like to join, you’ll be given a google form to fill out and will be sorted into the posse of your first or second choice. If at any time, the posse is not all that you dreamed it to be, you can contact Mary and she will help you find the right fit.
 
 ## How To: Find & Schedule a Meeting With Your Mentor
+
+### [Mentor Info and FAQs](https://docs.google.com/document/d/1Q35fM3coYjnms9rkVem3FHVk44kW6qHp_-t99PBbczI/edit?usp=sharing)
+
+### [Mentor List](https://docs.google.com/spreadsheets/d/1oxsATOSIdRZ78-Bj3GQY2LkIp0OV_sCN6GJVjtUuCl0/edit#gid=1600123372)
+
+### Mentor Program Coordinator
+
+|Allison Reu Singer| @allison_reu_singer |
 
 ### How do I find a mentor or learn more about the mentors in my posse?
 
