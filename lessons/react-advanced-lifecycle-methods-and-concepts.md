@@ -1,5 +1,5 @@
 ---
-title: React: Advanced Lifecycle Methods & Additional Concepts
+title: "React: Advanced Lifecycle Methods & Additional Concepts"
 module: 3
 tags: React
 ---

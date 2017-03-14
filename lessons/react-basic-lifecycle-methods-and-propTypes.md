@@ -1,5 +1,5 @@
 ---
-title: React: Basic Lifecycle Methods and propTypes
+title: "React: Basic Lifecycle Methods and propTypes"
 module: 3
 ---
 
