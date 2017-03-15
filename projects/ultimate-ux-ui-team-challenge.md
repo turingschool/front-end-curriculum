@@ -6,7 +6,7 @@ title: Ultimate UX Design + Build Team Challenge
 
 This is a 3-week project broken into three phases. You will be asked to work through the life cycle of a project brief: design, build, and client review/critique.
 
-Each of the “project life cycle stages” is broken out as a phase of the project and you will have one week to complete each phase. In week 1, pairs will generate wireframes (hand drawn is fine) and a comp in Sketch. In week 2, pairs will switch comps with another team to build. In week 3, we will have a formal group critique of both comps and static sites lead by Lauren and Louisa.
+Each of the “project life cycle stages” is broken out as a phase of the project and you will have one week to complete each phase. In week 1, pairs will generate wireframes (hand drawn is fine) and a comp in Sketch. In week 2, pairs will switch comps with another team to build. In week 3, we will have a formal group critique of both comps and static sites.
 
 Why do this project and why do it in this format? Because it puts you in the designer's shoes _and_ in the shoes of a developer who is responsible for understanding and building a comp handed to them by a designer. You will build empathy and understanding around why design/UX matters, why it is important to understand the thinking behind a layout, follow a comp to the letter, and you will be pushed to explain and defend your design choices which will reinforce that the decisions that go into creating a layout are intentional, deliberate, and important.
 
@@ -20,7 +20,7 @@ Your final live project must match the comp, be responsive, and be live on githu
  - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
 
 
-## Week 1/Phase 1 (assigned 02/09, DUE 02/16):
+## Week 1/Phase 1: Design (assigned 03/15, DUE 03/22):
 
 Product: Design a user dashboard for a fitness tracking app. It must include the following elements: a log of your recent workouts, the ability to set and track goals, a calendar to track your workouts. If you feel there are additional elements that should be a part of your comp, you may include them.
 
@@ -33,7 +33,7 @@ Data can be hard-coded in the final build -- these will static pages. Remember: 
  - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable). Should be ready to hand-off to a dev team to build.
 
-## Week 2/Phase 2 (assigned 02/16, DUE 02/23):
+## Week 2/Phase 2: Build (assigned 03/22, DUE 03/29):
 
 ### Deliverables for Phase 2:
 
@@ -46,6 +46,11 @@ Screen Grabs of your final live site to compare with the original comp.
   - Explain who your target user is, and how the choices you’ve made solve a problem for them, address their preferences/needs, and are tailored to them.
   - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
   - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable).
+
+
+## Week 3/Phase 3: MANDATORY FUN TIME SHOW AND TELL DAY!
+
+All Design Team + Build team combos pull up their comp and static site on the TVs and we go through them together as a group. Lots of clapping, cheers, weird Louisa Noises, and high fives follow.
 
 
 ### Fonts:
