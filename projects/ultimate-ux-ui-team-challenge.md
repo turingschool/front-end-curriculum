@@ -33,7 +33,7 @@ Data can be hard-coded in the final build -- these will static pages. Remember: 
  - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable). Should be ready to hand-off to a dev team to build.
 
-<!-- ## Week 2/Phase 2L Build (assigned 03/22, DUE 03/29):
+## Week 2/Phase 2: Build (assigned 03/22, DUE 03/29):
 
 ### Deliverables for Phase 2:
 
@@ -45,7 +45,12 @@ Screen Grabs of your final live site to compare with the original comp.
   - 3 examples of reference/inspiration. These could be products you currently use, or could be examples you find on dribbble, behance, or similar sites. They don’t have to be the same product type, but should offer good examples of how to approach organizing content and effective UX. Screen grabs are fine.
   - Explain who your target user is, and how the choices you’ve made solve a problem for them, address their preferences/needs, and are tailored to them.
   - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
-  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable). -->
+  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable).
+
+
+## Week 2/Phase 3: MANDATORY FUN TIME SHOW AND TELL DAY!
+
+All Design Team + Build team combos pull up their comp and static site on the TVs and we go through them together as a group. Lots of clapping, cheers, weird Louisa Noises, and high fives follow.
 
 
 ### Fonts:
