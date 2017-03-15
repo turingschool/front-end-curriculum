@@ -48,7 +48,7 @@ Screen Grabs of your final live site to compare with the original comp.
   - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable).
 
 
-## Week 2/Phase 3: MANDATORY FUN TIME SHOW AND TELL DAY!
+## Week 3/Phase 3: MANDATORY FUN TIME SHOW AND TELL DAY!
 
 All Design Team + Build team combos pull up their comp and static site on the TVs and we go through them together as a group. Lots of clapping, cheers, weird Louisa Noises, and high fives follow.
 
