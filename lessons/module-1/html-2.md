@@ -310,6 +310,8 @@ Take the following HTML snippet and make it accessible using explicit semantic H
 </div>
 ```
 
+<!-- solution: http://codepen.io/team/turing/pen/PWKMga?editors=1000 -->
+
 ## Additional Resources
 
 * [HTML Nu Validator](https://validator.w3.org/nu)
