@@ -6,7 +6,7 @@ title: Number Guesser
 - Build a game where the user guesses a number between 1 and 100.
 - Phases 1-3 = pushed to Github and on MASTER branch for evaluation.
 - If you elect Phase 4, create a separate branch for that work.
-- Include a README.md in your project that summarizes the project (that does not mean paste this project spec into your README)
+- Include a README.md in your project that summarizes the project (this does not mean paste this project spec into your README)
 
 ## Phase One: Basic Requirements
 
@@ -63,9 +63,9 @@ Desktop layout:
 
 ![Number Guesser Desktop][desktop-base]
 
-Mobile layout:
+<!-- Mobile layout:
 
-![Number Guesser Mobile][mobile-base]
+![Number Guesser Mobile][mobile-base] -->
 
 Color and font spec:
 
