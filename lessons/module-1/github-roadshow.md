@@ -45,3 +45,11 @@ tags: git, github, pairing
 * Person A makes changes to a file on the same line(s), pushes changes, creates a PR (PR should have merge conflicts)
 * Person A pulls down, resolves merge conflicts and pushes up branch again
 * Person B merges PR
+
+### Communication in PR
+
+* Person A adds changes on a branch, makes a PR (mentions Person B in PR)
+* Person B goes and comments on a specific line of file
+* Person A fixes that line and pushes up the branch again
+* Person B checks PR again and merges
+* Both people sync master locally

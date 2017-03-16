@@ -1,10 +1,61 @@
 ---
-title: Making and Keeping Promises
+title: Async JavaScript with Promises
 module: 3
-status: draft
 ---
 
-<script async class="speakerdeck-embed" data-id="e59cedfdf3294f0bb0b1e29cd3e47ede" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+### Goals
+
+By the end of this lesson, you will:
+
+* Understand the difference between synchronous and asynchronous JavaScript
+* Be able to implement a network request using the `fetch` API
+* Know when and how to use Promises and why they're useful
+* Understand the relationship between Promises and callbacks
+
+## Synchronous vs. Asynchronous JavaScript
+
+Before we get into dissecting Promises, we need to make sure we understand the different between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written. **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. The result of an asynchronous operation will be handled once it's available.
+
+The most common example of async JavaScript on the client-side is a network request. Any time you make a trip to the server with an Ajax request, this is an async process. It takes some time to retrieve a response from the server, and our apps would be painfully slow if all of these requests blocked the other code we were trying to execute.
+
+
+## The Fetch API
+
+As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be an API that facilitates making promise-based network requests. Though still relatively new, the `fetch` API allows us to do just that. A typical `fetch` request might look like this:
+
+```javascript
+fetch('/api/v1/groceries', {
+  method: 'POST',
+  body: JSON.stringify({
+    name: 'Bananas',
+    quantity: 5
+  })
+});
+```
+
+In this example, we're making a `POST` request that would add 'Bananas' as a new grocery with a quantity of 5. `fetch` is a function that takes two arguments: the first is the URL or API endpoint we're trying to hit, and the second is an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it.
+
+Every fetch request we make will return a Promise object that contains our response data. This allows us to easily react to the type of response object we get once it's available. Handling the response of a fetch request might look something like this:
+
+```javascript
+fetch('/api/v1/groceries', {
+  method: 'POST',
+  body: JSON.stringify({
+    name: 'Bananas',
+    quantity: 5
+  })
+})
+.then(response => response.json())
+.then(updatedGroceryData => {
+  renderNewGroceries(updatedGroceryData);
+})
+.catch(error => {
+  renderErrorMessage(error.message);
+});
+```
+
+While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderNewGroceries()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
 
 ## An Alternative to Callbacks
 
