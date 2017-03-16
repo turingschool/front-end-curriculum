@@ -30,9 +30,10 @@ CREATE DATABASE secrets;
 CREATE DATABASE secrets_test;
 ```
 
-Install knex and pg (postgres) from npm:
+Install knex globally and in your project, and pg (postgres) in your project from npm:
 
 ```
+npm install -g knex
 npm install knex --save
 npm install pg --save
 ```
@@ -108,7 +109,7 @@ exports.down = function(knex, Promise) {
 };
 ```
 
-Migrations are kind of like version control for databases. For every `up` there must be an equal and opposite `down` that will allow us to rollback those changes. `up` defines what should happen when we do the migration. `down` is the reverse. If we want to roll back to a previous version, then `down` undoes whatever `up` did.
+Migrations are kind of like version control for databases. For every `up` there must be an equal and opposite `down` that will allow us to rollback those changes. `up` defines what should happen when we do the migration. `down` is the reverse. If we want to roll back to a previous version, then `down` undoes whatever `up` did. To see all the different options on building a table, review [the Knex docs.](http://knexjs.org/)
 
 I edited the migration to create an owners table and a secrets table. We create the relationship between the two in the secrets table by adding an owner_id field that references id key in the owner table. That means each secret belongs to one owner:
 
