@@ -78,38 +78,104 @@ Color and font spec:
 
 ## Rubric
 
-### UX/UI Expectations
-
-- 4: Application matches comp exactly. There are no omitted details. Any extensions are intuitive, well designed, easy to use, and in keeping with the visuals outlined in the comp. Virtually no major improvements are needed in the UX or UI.
-- 3: Application shows strong effort towards matching the comp, but some details have been missed. Any extensions are simple, clean design, content organization, and well thought out experience and user interactions.
-- 2: Application meets the basic spirit of the comp but overlooks many details. Extensions show questionable design decisions that negatively impact the overall UX/UI.
-- 1: Application does not match the comp, is lacking in basic best practices, and user struggles to understand how to use it.
-
 ### Functional Expectations
 
-- :sparkles: You completed Phase Three and did something with Phase Four
-- 4: Application meets all of the functional expectations in Phase Three
-- 3: Application meets all of the functional expectations in Phase Two
-- 2: Application meets all of the functional expectations in Phase One
-- 1: Application does not meet the requirements in Phase One
+|Novice             | Application meets all of the functional expectations in Phase One. |
+|Advanced Beginner  | Application meets all of the functional expectations in Phase Two. |
+|Proficient         | Application meets all of the functional expectations in Phase Three. |
+|Exceptional        | You completed Phase Three and did something with Phase Four. |
 
-### Fundamental HTML
+<br>
 
-- 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors and has incorporated accessibility best practices.
-- 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing and has incorporated accessibility best practices.
-- 2:  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
-- 1:  Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
+------------------------------------------------------------------
 
-### Fundamental CSS
+## HTML
 
-- 4: Application has exceptionally well-factored CSS with little or no duplication. There are zero instances where an instructor would recommend taking a different approach.
-- 3:  Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS is doing.
-- 2:  Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-- 1:  Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
+#### Accessibility
 
-### Fundamental JavaScript
+|Novice             | Knows what a semantic tag is and leverages the HTML5 structural tags to organize the content of their markup. |
+|Advanced Beginner  | Leverages more precise semantic tags when applicable, and employs basic ARIA roles attributes for added clarity in structure, descriptive image alt attributes, title attributes for applicable anchor tags. |
+|Proficient         | Employs detailed accessibility practices throughout markup, especially in forms and can speak to decisions made in accessibility choices as it relates to specific accessibility concerns. |
+|Exceptional        | Can run markup through a variety of online accessibility tools and score well for content, color, screen readers, etc. |
 
-- 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and there are no areas of suggested improvement
-- 3: Application shows strong effort towards organization, content, and proper syntax
-- 2: Application runs but the code is confusing with unnecessary or poorly named variables, functions, and unclear organization, structure, and/or duplication
-- 1: Application generates syntax error or crashes during execution
+#### Style
+
+|Novice             | Crafts markup with proper indentation and opening/closing tags. |
+|Advanced Beginner  | Crafts markup with proper and logical nesting. |
+|Proficient         | Crafts lean, efficient markup that is easy to read and follow across naming conventions, structure, and solid formatting that follows industry best practices. |
+|Exceptional        | Crafts lean, efficient markup and can speak directly to choices made to improve performance, including but not limited to, page load times, css/js optimizations, image optimizations. |
+
+<br>
+
+------------------------------------------------------------------
+
+## CSS
+
+#### Structure of Code
+
+|Novice             | Can effectively target DOM elements via tag, class, and/or id and write CSS rules around each element to create the desired style. |
+|Advanced Beginner  | Can cleanly and logically organize CSS rules according to similar categories (i.e. typography, layout, components), and then logically organize the remaining CSS rules based on flow of the markup. Organizes properties within rules alphabetically.|
+|Proficient         | Leverages cascading styles and CSS specificity rules to create more complex targeting of elements in order to reduce, reuse, share styles across elements. Organizes properties within rules based upon industry standard principles of writing consistent, idiomatic CSS. |
+|Exceptional        | Understands the performance implications surrounding cascading/specificity and crafts CSS that is mindful of reducing complexity and increasing performance.|
+
+#### Implementation
+
+|Novice             | Can articulate how the CSS box model works and apply it appropriately in a static layout.|
+|Advanced Beginner  | Can articulate the differences between the approaches of absolute/relative positioning, flex-box, floats, and can appropriately apply the approaches to solve a variety of layout problems.|
+|Proficient         | Develops layouts that work cross-browser, are responsive, and can logically defend the choices made in implementation approach for layout. |
+|Exceptional        | Can articulate rationale for all parts of the CSS implementation (each line of code/CSS rule) specifically in regards to the balance of: structure of code, design integrity, performance.|
+
+<br>
+
+------------------------------------------------------------------
+
+## JAVASCRIPT
+
+#### Conditional Logic
+
+|Novice             | Can understand when an expression evaluates to true or false.|
+|Advanced Beginner  | Uses if/else statements, but there are multiple levels of nesting, which makes the paths through the code difficult to follow. Understands what is "truthy" and "falsey" in JavaScript.|
+|Proficient         | Can use an if/esle statement to effectively handle multiple paths through the code. Writes if/else statements that only have one level of logic (no nesting). Can use logical operators instead of if/else statements where applicable.|
+|Exceptional        | Can write conditional logic that is succinct and easy to read. Logic can handle all situations where user gives incorrect/unexpected input.|
+
+#### Functions & Scope
+
+|Novice             | Can write a simple function that takes at least one input argument.|
+|Advanced Beginner  | Developer is comfortable using multiple arguments to pass data into functions. Understands how variables are scoped at the function level and global level. Functions are named descriptively. Knows when and why to use return in a function.|
+|Proficient         | Functions have single responsibility. The entirety of the function is easy to read what functionality it contains. Function is generally shorter than 8 lines. Uses functions to eliminate repeated code. Comfortable refactoring any piece of code and extracting it to a function.|
+|Exceptional        | Comfortable with using callback functions where applicable. Comfortable returning collections from functions (objects, arrays).|
+
+<br>
+
+------------------------------------------------------------------
+
+#### DOM Manipulation
+
+|Novice             | Can articulate what the DOM is and can effectively target elements in vanilla JavaScript via class, id, or tag.|
+|Advanced Beginner  | Can add event listeners and create small functions that execute on events, can leverage the event object appropriately, and can articulate the what/why/how of jQuery.|
+|Proficient         | Able to extract information, modify attributes, or append/prepend data in the DOM easily regardless of whether they are employing vanilla JavaScript or jQuery. Understands how to harness event bubbling.|
+|Exceptional        | Understands the potential performance impact imposed by leveraging vanilla JavaScript vs. jQuery in their implementation and will make choices accordingly based on the problem to solve.|
+
+#### Style
+
+|Novice             | Can explain the choices made in the overall codebase and is able to articulate what every line of code is doing. Code is neatly formatted and easy to read with correct indentation.|
+|Advanced Beginner  | Code shows strong effort toward organization, but suffers from long functions, unnecessary or poorly named variables, and requires significant refactoring. Application may have some duplication and minor bugs. |
+|Proficient         | Code is logically organized, such that reader can easily follow the progression of the app because variable and function names are descriptive and follow a single responsibility approach. There are no major bugs and minimal duplication.|
+|Exceptional        | Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring. Application has exceptionally well-factored code with little or no duplication. |
+
+<br>
+
+------------------------------------------------------------------
+
+## DESIGN
+
+#### Comp Recreation
+
+|Novice             | Can establish a complementary color palette, integrate font(s), and execute a handful of the large comp details. |
+|Advanced Beginner  | Can accomplish about 50-75% of the large and small design details and can logically rework them on at least 1 breakpoint. |
+|Proficient         | Developer captures the spirit and design intent of the comp. Some small details need polish to achieve a pixel-perfect match to the comp, but developer is clearly mindful of details and has made a conscious and careful effort to match the comp. Any design decisions left open to interpretation are handled thoughtfully and are well executed, but are more noticable and/or unintuative than they would be if the designer had provided the solution, or may not be totally seamless during screen-size transitions.|
+|Exceptional        | Developer skillfully captures the spirit and design intent of all comp details. Execution is pixel-perfect and any design decisions left open to interpretation are solved intentionally, are as seamless as if the designer had provided the solution, are handled gracefully, and enhance the overall design.|
+
+<br>
+
+------------------------------------------------------------------
