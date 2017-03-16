@@ -39,11 +39,64 @@ getTonsOfFlights(foo, bar, baz)
   });
 ```
 
-In this example, we kick off an asynchronous operation called `getTonsOfFlights`. This is now running in the background and the rest of our code (not shown) can continue to execute normally. This function returns a Promise object that gives us access to two methods: `.then()` and `.catch()`.
+In this example, we call a function: `getTonsOfFlights`. This function returns a Promise object which does two things:
 
-If the function completes successfully, our `.then()` block will execute. Within this block, we are automatically given a result that we can work with (e.g. data from an API endpoint). In this example, we are given flight data for tons of flights and we'll render them to the DOM.
+1. It makes the function asynchronous, allowing it to run in the background and giving the rest of our code (not shown) a chance to continue execution.
+2. It gives us access to two methods: `.then()` and `.catch()`.
 
-If the function fails for any reason, our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.
+If the function completes successfully, the Promise object is considered **resolved**, and our `.then()` block will execute. Within this block, we are automatically given a result that we can work with (e.g. data from an API endpoint). In this example, we are given flight data for tons of flights and we'll render them to the DOM.
+
+If the function fails for any reason, our Promise object is considered **rejected**, and our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.
+
+## Why Use Promises?
+
+Promises allow you to multi-task a bit in JavaScript. They provide a cleaner and more standardized method of dealing with tasks that need to happen in sequence. (For example, we couldn't have possibly called `renderDetailsForFlights()` until we actually received the flight data from `getTonsOfFlights()`). With Promises, we have more control over what happens with the outcomes of our async processes.
+
+## The Fetch API
+
+As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be an API that facilitates making promise-based network requests. Though still relatively new, the `fetch` API allows us to do just that. A typical `fetch` request might look like this:
+
+```javascript
+fetch('/api/v1/flights', {
+  method: 'POST',
+  body: JSON.stringify({
+    carrier: 'Foo Airlines',
+    passengers: 55,
+    status: 'On Time'
+  })
+});
+```
+
+In this example, we're making a `POST` request that would add a new flight for Foo Airlines that carries 55 passengers and is on time. `fetch` is a function that takes two arguments: the first is the URL or API endpoint we're trying to hit, and the second is an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it.
+
+Every fetch request we make will return a Promise object that contains our response data. This allows us to easily react to the type of response object we get once it's available. Handling the response of a fetch request might look something like this:
+
+```javascript
+fetch('/api/v1/flights', {
+  method: 'POST',
+  body: JSON.stringify({
+    carrier: 'Foo Airlines',
+    passengers: 55,
+    status: 'On Time'
+  })
+})
+.then(response => response.json())
+.then(updatedFlightsData => {
+  renderNewFlights(updatedFlightsData);
+})
+.catch(error => {
+  renderErrorMessage(error.message);
+});
+```
+
+While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderNewFlights()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
+
+
+
+
+
+
+## An Alternative to Callbacks
 
 A Promise is essentially an IOU that says "Ok, I'm going to get you the information you requested, just give me a second. In the meantime, go do whatever else you need to do, and I'll let you know when I'm ready." This is almost similar to event listeners that you may have written in the past. Take a click handler for example:
 
@@ -54,51 +107,6 @@ $('#clickity-click').click(function(event) {
 ```
 
 When this code first executes, it doesn't actually fire `doSomething()`. It simply binds the handler to our `clickity-click` element. It says: "Take note of clickity-click and wait for a user to click on it. Once that event happens, run the doSomething function." Recognize how it takes the execution of `doSomething()` out of the natural synchronous flow and holds onto it for later -- to execute only after a click event has occurred. This is a common convention in client-side JavaScript and is called the **callback pattern**.
-
-
-## The Fetch API
-
-As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be an API that facilitates making promise-based network requests. Though still relatively new, the `fetch` API allows us to do just that. A typical `fetch` request might look like this:
-
-```javascript
-fetch('/api/v1/groceries', {
-  method: 'POST',
-  body: JSON.stringify({
-    name: 'Bananas',
-    quantity: 5
-  })
-});
-```
-
-In this example, we're making a `POST` request that would add 'Bananas' as a new grocery with a quantity of 5. `fetch` is a function that takes two arguments: the first is the URL or API endpoint we're trying to hit, and the second is an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it.
-
-Every fetch request we make will return a Promise object that contains our response data. This allows us to easily react to the type of response object we get once it's available. Handling the response of a fetch request might look something like this:
-
-```javascript
-fetch('/api/v1/groceries', {
-  method: 'POST',
-  body: JSON.stringify({
-    name: 'Bananas',
-    quantity: 5
-  })
-})
-.then(response => response.json())
-.then(updatedGroceryData => {
-  renderNewGroceries(updatedGroceryData);
-})
-.catch(error => {
-  renderErrorMessage(error.message);
-});
-```
-
-While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderNewGroceries()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
-
-
-
-
-
-
-## An Alternative to Callbacks
 
 The callback pattern is wildly popular because it's easy to implement. But, it has a few problems:
 
@@ -111,7 +119,13 @@ The callback pattern is wildly popular because it's easy to implement. But, it h
     - Pass two callbacks—one for a successful outcome and one for an unsuccessful outcome.
     - Use the Node.js "error-first" style of callbacks where the first argument is always an error object, which is typically set to `null` in the event that we reached a successful outcome. This is incredibly pessimistic.
 
-## Enter Promises
+
+
+
+
+
+
+
 
 ### When to use Promises
 Let's get a common question out of the way first: "When am I going to use promises?"
