@@ -15,9 +15,45 @@ By the end of this lesson, you will:
 
 ## Synchronous vs. Asynchronous JavaScript
 
-Before we get into dissecting Promises, we need to make sure we understand the different between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written. **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. The result of an asynchronous operation will be handled once it's available.
+Before we get into disecting Promises, we need to make sure we understand the different between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written. **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. The result of an asynchronous operation will be handled once it's available.
 
 The most common example of async JavaScript on the client-side is a network request. Any time you make a trip to the server with an Ajax request, this is an async process. It takes some time to retrieve a response from the server, and our apps would be painfully slow if all of these requests blocked the other code we were trying to execute.
+
+
+## Enter Promises
+
+This is where Promises come in handy. When we want to pull a slow or expensive operation out of the default synchronous flow of execution, we can use a Promise to kick the process off in the background. While we wait for the result of that operation, we can continue to execute other code in the meantime. Using a Promise typically looks like this:
+
+```javascript
+// kick off async process in the background that will return a Promise object
+getTonsOfFlights(foo, bar, baz)
+
+  // Promise resolved successfully and we are given a result to work with
+  .then(flights => { 
+    renderDetailsForFlights(flights);
+  })
+
+  // Promise failed and we are given an error
+  .catch(error => {
+    somethingWentWrong(error);
+  });
+```
+
+In this example, we kick off an asynchronous operation called `getTonsOfFlights`. This is now running in the background and the rest of our code (not shown) can continue to execute normally. This function returns a Promise object that gives us access to two methods: `.then()` and `.catch()`.
+
+If the function completes successfully, our `.then()` block will execute. Within this block, we are automatically given a result that we can work with (e.g. data from an API endpoint). In this example, we are given flight data for tons of flights and we'll render them to the DOM.
+
+If the function fails for any reason, our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.
+
+A Promise is essentially an IOU that says "Ok, I'm going to get you the information you requested, just give me a second. In the meantime, go do whatever else you need to do, and I'll let you know when I'm ready." This is almost similar to event listeners that you may have written in the past. Take a click handler for example:
+
+```javascript
+$('#clickity-click').click(function(event) {
+  doSomething();
+});
+```
+
+When this code first executes, it doesn't actually fire `doSomething()`. It simply binds the handler to our `clickity-click` element. It says: "Take note of clickity-click and wait for a user to click on it. Once that event happens, run the doSomething function." Recognize how it takes the execution of `doSomething()` out of the natural synchronous flow and holds onto it for later -- to execute only after a click event has occurred. This is a common convention in client-side JavaScript and is called the **callback pattern**.
 
 
 ## The Fetch API
@@ -56,6 +92,11 @@ fetch('/api/v1/groceries', {
 ```
 
 While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderNewGroceries()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
+
+
+
+
+
 
 ## An Alternative to Callbacks
 
