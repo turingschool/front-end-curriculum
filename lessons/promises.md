@@ -19,6 +19,44 @@ Before we get into dissecting Promises, we need to make sure we understand the d
 
 The most common example of async JavaScript on the client-side is a network request. Any time you make a trip to the server with an Ajax request, this is an async process. It takes some time to retrieve a response from the server, and our apps would be painfully slow if all of these requests blocked the other code we were trying to execute.
 
+
+## The Fetch API
+
+As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be an API that facilitates making promise-based network requests. Though still relatively new, the `fetch` API allows us to do just that. A typical `fetch` request might look like this:
+
+```javascript
+fetch('/api/v1/groceries', {
+  method: 'POST',
+  body: JSON.stringify({
+    name: 'Bananas',
+    quantity: 5
+  })
+});
+```
+
+In this example, we're making a `POST` request that would add 'Bananas' as a new grocery with a quantity of 5. `fetch` is a function that takes two arguments: the first is the URL or API endpoint we're trying to hit, and the second is an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it.
+
+Every fetch request we make will return a Promise object that contains our response data. This allows us to easily react to the type of response object we get once it's available. Handling the response of a fetch request might look something like this:
+
+```javascript
+fetch('/api/v1/groceries', {
+  method: 'POST',
+  body: JSON.stringify({
+    name: 'Bananas',
+    quantity: 5
+  })
+})
+.then(response => response.json())
+.then(updatedGroceryData => {
+  renderNewGroceries(updatedGroceryData);
+})
+.catch(error => {
+  renderErrorMessage(error.message);
+});
+```
+
+While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderNewGroceries()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
+
 ## An Alternative to Callbacks
 
 The callback pattern is wildly popular because it's easy to implement. But, it has a few problems:
