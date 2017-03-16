@@ -1,10 +1,23 @@
 ---
-title: Making and Keeping Promises
+title: Async JavaScript with Promises
 module: 3
-status: draft
 ---
 
-<script async class="speakerdeck-embed" data-id="e59cedfdf3294f0bb0b1e29cd3e47ede" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+### Goals
+
+By the end of this lesson, you will:
+
+* Understand the difference between synchronous and asynchronous JavaScript
+* Be able to implement a network request using the `fetch` API
+* Know when and how to use Promises and why they're useful
+* Understand the relationship between Promises and callbacks
+
+## Synchronous vs. Asynchronous JavaScript
+
+Before we get into dissecting Promises, we need to make sure we understand the different between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written. **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. The result of an asynchronous operation will be handled once it's available.
+
+The most common example of async JavaScript on the client-side is a network request. Any time you make a trip to the server with an Ajax request, this is an async process. It takes some time to retrieve a response from the server, and our apps would be painfully slow if all of these requests blocked the other code we were trying to execute.
 
 ## An Alternative to Callbacks
 
