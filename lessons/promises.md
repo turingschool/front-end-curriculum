@@ -48,11 +48,7 @@ If the function completes successfully, the Promise object is considered **resol
 
 If the function fails for any reason, our Promise object is considered **rejected**, and our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.
 
-## Why Use Promises?
-
-Promises allow you to multi-task a bit in JavaScript. They provide a cleaner and more standardized method of dealing with tasks that need to happen in sequence. (For example, we couldn't have possibly called `renderDetailsForFlights()` until we actually received the flight data from `getTonsOfFlights()`). With Promises, we have more control over what happens with the outcomes of our async processes.
-
-## The Fetch API
+## Another Example: The Fetch API
 
 As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be an API that facilitates making promise-based network requests. Though still relatively new, the `fetch` API allows us to do just that. A typical `fetch` request might look like this:
 
@@ -82,21 +78,20 @@ fetch('/api/v1/flights', {
 })
 .then(response => response.json())
 .then(updatedFlightsData => {
-  renderNewFlights(updatedFlightsData);
+  renderDetailsForFlights(updatedFlightsData);
 })
 .catch(error => {
   renderErrorMessage(error.message);
 });
 ```
 
-While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderNewFlights()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
+While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderDetailsForFlights()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
 
+## Why Use Promises?
 
+Promises allow you to multi-task a bit in JavaScript. They provide a cleaner and more standardized method of dealing with tasks that need to happen in sequence. (For example, we couldn't have possibly called `renderDetailsForFlights()` until we actually received the flight data from `getTonsOfFlights()`). With Promises, we have more control over what happens with the outcomes of our async processes.
 
-
-
-
-## An Alternative to Callbacks
+### An Alternative to Callbacks
 
 A Promise is essentially an IOU that says "Ok, I'm going to get you the information you requested, just give me a second. In the meantime, go do whatever else you need to do, and I'll let you know when I'm ready." This is almost similar to event listeners that you may have written in the past. Take a click handler for example:
 
@@ -110,44 +105,15 @@ When this code first executes, it doesn't actually fire `doSomething()`. It simp
 
 The callback pattern is wildly popular because it's easy to implement. But, it has a few problems:
 
-- You're giving away your code to be executed later.
-  - You can hope that this will be when you expect and as many times as you expect. But no promises (pun unintended, but I'm going with it).
-  - You can store/cache the results anywhere. You get access to the data in that callback function and that's it. If you need that data again, you're going to have to make another request. Bummer.
-  - Doing things like executing callbacks in parallel and waiting for all of them to come back is tricky.
-  - Doing things in series where one callback hands its data to the next callback is also tricky. (This has the delightful nickname of "callback hell.")
-  - Error handing is inherently broken. There are a bunch of clever ways around this:
-    - Pass two callbacks—one for a successful outcome and one for an unsuccessful outcome.
-    - Use the Node.js "error-first" style of callbacks where the first argument is always an error object, which is typically set to `null` in the event that we reached a successful outcome. This is incredibly pessimistic.
+* You're giving away your code to be executed later.
+  * You can hope that this will be when you expect and as many times as you expect. But no promises (pun unintended, but I'm going with it).
+  * Doing things like executing callbacks in parallel and waiting for all of them to come back is tricky.
+  * Doing things in series where one callback hands its data to the next callback is also tricky. (This has the delightful nickname of "callback hell.")
+  * Error handing is inherently broken. There are a bunch of clever ways around this:
+    * Pass two callbacks—one for a successful outcome and one for an unsuccessful outcome.
+    * Use the Node.js "error-first" style of callbacks where the first argument is always an error object, which is typically set to `null` in the event that we reached a successful outcome. This is incredibly pessimistic.
 
-
-
-
-
-
-
-
-
-### When to use Promises
-Let's get a common question out of the way first: "When am I going to use promises?"
-
-The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`. 
-
-When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback.
-
-### Advantages of Promises
-Okay, so what are some of the advantages of promises?
-
-- You are getting an IOU that you're holding on to rather than giving your code away as you would with promises.
-- Error handling is less broken. It's not a silver bullet. Synchronous functions either `return` or throw an error. In a similar vein, your promises will either become *fulfilled* by a value or become *rejected* with an error.
-- You can catch errors along the way and deal with them in a way that is *similar* to synchronous code.
-- Chaining promises is easy and does not result in callback hell.
-
-But wait, there's more.
-
-- `Promise.all` takes an array of promises and waits until all of the promises are resolved. This solves the nastiness involved in doing this with callbacks.
-- `Promise.race` takes an array of promises and resolves as soon as any one of them fulfill. This would allow you to hit 3 API endpoints and then move on when we heard back from whichever one came back first.
-
-jQuery is nice enough to support both callbacks and promises.
+Let's take a look at some more intricate examples of the callback pattern:
 
 ```js
 $.getJSON('/api/students.json', (students) => {
@@ -214,30 +180,53 @@ $.getJSON('/api/students.json')
 
 This reads a lot better than that callback example, right? If you came back to this code in a few weeks or months, you'd probably be able to grok the general idea of what it does."
 
-## Making Promises
 
-Unless you're making a library or creating an abstraction over something complicated, you're likely to consume promises more than you create them. The syntax can look squirrelly, but if we pull it apart, it's not that bad.
+### Advantages of Promises
+Okay, so what are some of the advantages of promises?
+
+- You are getting an IOU that you're holding on to rather than giving your code away as you would with callbacks.
+- Error handling is less broken. It's not a silver bullet. Synchronous functions either `return` or throw an error. In a similar vein, your promises will either become *resolved* by a value or become *rejected* with an error.
+- You can catch errors along the way and deal with them in a way that is *similar* to synchronous code.
+- Chaining promises is easy and does not result in callback hell.
+
+But wait, there's more.
+
+- `Promise.all` takes an array of promises and waits until all of the promises are resolved. This solves the nastiness involved in doing this with callbacks.
+- `Promise.race` takes an array of promises and resolves as soon as any one of them fulfill. This would allow you to hit 3 API endpoints and then move on when we heard back from whichever one came back first.
+
+
+## When to use Promises
+Now that we have a better understanding of how and why to use Promises, what about the when? When do you actually want to use a Promise?
+
+The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`. 
+
+When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback. So for once, we don't really have to be in charge of making a decision here -- we can let the tools and technologies we're using dictate whether or not we should be using promises.
+
+
+## Further Learning: the Promise Object
+
+Unless you're making a library or creating an abstraction over something complicated, you're likely to consume promises more than you create them. The syntax can look squirrelly, but if we pull it apart, it's not that bad. If you open up the console in your browser dev tools, you can actually create your own Promise object and inspect its inner workings:
 
 ```js
-const promise = new Promise();
+let foo = new Promise();
 ```
 
 Done. Well, not quiet. We also need to give it the mechanics for how it should handle fulfillment or rejection. So, we hand the `Promise` constructor a function that will dictate how we figure this all out.
 
 ```js
-const promise = new Promise(() => {});
+let foo = new Promise(() => {});
 ```
 
 Okay, here's where it gets a bit hectic, that function is going to be handed two arguments, which are both functions as well.
 
 ```js
-const promise = new Promise((resolve, reject) => {});
+let foo = new Promise((resolve, reject) => {});
 ```
 
 As you can probably imagine when things go well, you should call the `resolve()` function. If things blow up, then you should use the `reject()` function.
 
 ```js
-const promise = new Promise((resolve, reject) => {
+let foo = new Promise((resolve, reject) => {
   if (thingsGoWell) {
     resolve(theDataYouReceived);
   } else {
