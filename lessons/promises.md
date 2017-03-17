@@ -15,36 +15,40 @@ By the end of this lesson, you will:
 
 ## Synchronous vs. Asynchronous JavaScript
 
-Before we get into disecting Promises, we need to make sure we understand the different between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written. **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. The result of an asynchronous operation will be handled once it's available.
+Before we get into dissecting Promises, we need to make sure we understand the different between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written. **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. The result of an asynchronous operation will be handled once it's available.
 
 The most common example of async JavaScript on the client-side is a network request. Any time you make a trip to the server with an Ajax request, this is an async process. It takes some time to retrieve a response from the server, and our apps would be painfully slow if all of these requests blocked the other code we were trying to execute.
-
-
-## Enter Promises
 
 This is where Promises come in handy. When we want to pull a slow or expensive operation out of the default synchronous flow of execution, we can use a Promise to kick the process off in the background. While we wait for the result of that operation, we can continue to execute other code in the meantime. Using a Promise typically looks like this:
 
 ```javascript
 // kick off async process in the background that will return a Promise object
-getProjectsForStudents(foo, bar, baz)
+getProjectsForStudents(students)
 
-  // Promise resolved successfully and we are given a result to work with
+  // Projects were successfully retrieved; now we can render them
   .then(projects => { 
     renderDetailsForProjects(projects);
   })
 
-  // Promise failed and we are given an error
+  // There was an error retrieving projects; log the error message
   .catch(error => {
-    somethingWentWrong(error);
+    console.log(error);
   });
+
+doOtherThings();
+noneOfTheseFunction();
+willBeBlocked();
+fromExecuting();
+whileWeWait();
+forProjectsToBeRetrieved();
 ```
 
-In this example, we call a function: `getProjectsForStudents`. This function returns a Promise object which does two things:
+In this example, we call a function: `getProjectsForStudents`. Though this might look like a typical function, it actually returns a [Promise object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which does two important things:
 
-1. It makes the function asynchronous, allowing it to run in the background and giving the rest of our code (not shown) a chance to continue execution.
+1. It makes the function asynchronous, allowing it to run in the background and giving the rest of our code a chance to continue execution.
 2. It gives us access to two methods: `.then()` and `.catch()`.
 
-If the function completes successfully, the Promise object is considered **resolved**, and our `.then()` block will execute. Within this block, we are automatically given a result that we can work with (e.g. data from an API endpoint). In this example, we are given projects data for student projects and we'll render them to the DOM.
+If the function completes successfully, the Promise object is considered **resolved**, and our `.then()` block will execute. Within this block, we are automatically given a result that we can work with (e.g. data from an API endpoint). In this example, we are given project data for our students and we'll render them to the DOM.
 
 If the function fails for any reason, our Promise object is considered **rejected**, and our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.
 
