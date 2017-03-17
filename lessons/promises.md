@@ -57,7 +57,7 @@ If the function fails for any reason, our Promise object is considered **rejecte
 
 ## Another Example: The Fetch API
 
-As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be an API that facilitates making promise-based network requests. Though still relatively new, the `fetch` API allows us to do just that. A typical `fetch` request might look like this:
+As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be a web API that facilitates making promise-based network requests. Though still relatively new, the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) allows us to do just that. A typical `fetch` request might look like this:
 
 ```javascript
 fetch('/api/v1/projects', {
@@ -69,9 +69,12 @@ fetch('/api/v1/projects', {
 });
 ```
 
-In this example, we're making a `POST` request that would add a new project named 'Foo' worth 100 points. `fetch` is a function that takes two arguments: the first is the URL or API endpoint we're trying to hit, and the second is an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it.
+In this example, we're making a `POST` request that would add a new project named 'Foo' worth 100 points. `fetch` is a function that takes two arguments: 
 
-Every fetch request we make will return a Promise object that contains our response data. This allows us to easily react to the type of response object we get once it's available. Handling the response of a fetch request might look something like this:
+1. the URL or API endpoint we're trying to hit
+2. an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it
+
+Every fetch request we make will return a Promise object that contains our response data. This allows us to easily react to the type of response we get once it's available. Handling the response of a fetch request might look something like this:
 
 ```javascript
 fetch('/api/v1/projects', {
@@ -86,9 +89,9 @@ fetch('/api/v1/projects', {
 .catch(error => console.log(error));
 ```
 
-While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, our first `.then()` block will fire. If you use the network tab in dev tools to inspect a response object, you'll notice that it returns a lot of extra information that we don't necessarily need. All we want in this scenario is a JSON object of our project data which we can get by calling `response.json()`.
+While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, our first `.then()` block will fire. The response object returns a lot of extra information that we don't necessarily need. All we want in this scenario is a JSON object of our project data which we can get by calling `response.json()`.
 
-Converting the body to a JSON data structure with `response.json()` actually returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Because we're getting another promise object back, we can simply chain an additional `.then()` block where we actually receive our projects data. We can then render it to the DOM with our imaginary `renderDetailsForProjects()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
+Converting the body to a JSON data structure with `response.json()` actually returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Because we're getting another promise object back, we can simply chain an additional `.then()` block where we actually receive our project data. We can then render it to the DOM with our imaginary `renderDetailsForProjects()` function. If for any reason the request failed, the `.catch()` block will be fired and we will log the error to the console.
 
 ## Why Use Promises?
 
