@@ -55,7 +55,7 @@ If the function completes successfully, the Promise object is considered **resol
 
 If the function fails for any reason, our Promise object is considered **rejected**, and our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.
 
-## Another Example: The Fetch API
+## The Promise-Based Fetch API
 
 As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be a web API that facilitates making promise-based network requests. Though still relatively new, the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) allows us to do just that. A typical `fetch` request might look like this:
 
