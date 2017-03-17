@@ -183,18 +183,6 @@ $.getJSON('/api/v1/students.json', (students) => {
 Ugh. This is what we refer to as callback hell. The code becomes super nesty and difficult to follow. Without comments, it's not clear which error callbacks are associated with which operation, and there is a lot of repeat code. When re-written using promises, we can consolidate and flatten a lot of this syntax:
 
 ```js
-const students = $.getJSON('/api/students.json');
-const projects = students.then(students => getProjectsForStudents(students));
-const grades = projects.then(projects => getGradesForProjects(projects));
-
-grades
-  .then(grades => doSomethingImportantWithAllThisData(grades))
-  .catch(error => console.error(error));
-```
-
-We could do also write it like this as well:
-
-```js
 $.getJSON('/api/students.json')
  .then(students => getProjectsForStudents(students))
  .then(projects => getGradesForProjects(projects))
