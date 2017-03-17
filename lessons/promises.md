@@ -36,14 +36,14 @@ getProjectsForStudents(students)
   });
 
 doOtherThings();
-noneOfTheseFunction();
+noneOfTheseFunctions();
 willBeBlocked();
 fromExecuting();
 whileWeWait();
 forProjectsToBeRetrieved();
 ```
 
-In this example, we call a function: `getProjectsForStudents`. Though this might look like a typical function, it actually returns a [Promise object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise) which does two important things:
+In this example, we call a function: `getProjectsForStudents`. Though this might look like a typical function, it actually returns a [Promise object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), which does two important things:
 
 1. It makes the function asynchronous, allowing it to run in the background and giving the rest of our code a chance to continue execution.
 2. It gives us access to two methods: `.then()` and `.catch()`.
@@ -79,15 +79,13 @@ fetch('/api/v1/projects', {
   })
 })
 .then(response => response.json())
-.then(projects => {
-  renderDetailsForProjects(projects);
-})
-.catch(error => {
-  renderErrorMessage(error.message);
-});
+.then(projects => renderDetailsForProjects(projects))
+.catch(error => console.log(error));
 ```
 
-While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, we first convert the body to a JSON data structure with `response.json()`, which returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Once the data is prepped and ready, we can then render it to the DOM with our imaginary `renderDetailsForProjects()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
+While we wait for the server to return our response, the rest of our application can continue executing other code in the meantime. Once the response object is available, our first `.then()` block will fire. If you use the network tab in dev tools to inspect a response object, you'll notice that it returns a lot of extra information that we don't necessarily need. All we want in this scenario is a JSON object of our project data which we can get by calling `response.json()`.
+
+Converting the body to a JSON data structure with `response.json()` actually returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Because we're getting another promise object back, we can simply chain an additional `.then()` block where we actually receive our projects data. We can then render it to the DOM with our imaginary `renderDetailsForProjects()` function. If for any reason, the request failed, the `.catch()` block will be fired and we will render an error message to the DOM to notify users that something has gone wrong.
 
 ## Why Use Promises?
 
