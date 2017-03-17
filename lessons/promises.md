@@ -19,10 +19,13 @@ Before we get into dissecting Promises, we need to make sure we understand the d
 
 The most common example of async JavaScript on the client-side is a network request. Any time you make a trip to the server with an Ajax request, this is an async process. It takes some time to retrieve a response from the server, and our apps would be painfully slow if all of these requests blocked the other code we were trying to execute.
 
+
+## Enter Promises
+
 This is where Promises come in handy. When we want to pull a slow or expensive operation out of the default synchronous flow of execution, we can use a Promise to kick the process off in the background. While we wait for the result of that operation, we can continue to execute other code in the meantime. Using a Promise typically looks like this:
 
 ```javascript
-// kick off async process in the background that will return a Promise object
+// imaginary function that will return a Promise object
 getProjectsForStudents(students)
 
   // Projects were successfully retrieved; now we can render them
@@ -107,11 +110,11 @@ The callback pattern, in short, is when you pass a function as an argument to an
 
 * You're giving away your code to be executed later.
   * You can hope that this will be when you expect and as many times as you expect. But no promises (pun unintended, but I'm going with it).
-  * Doing things like executing callbacks in parallel and waiting for all of them to come back is tricky.
-  * Doing things in series where one callback hands its data to the next callback is also tricky. (This has the delightful nickname of "callback hell.")
-  * Error handling is inherently broken. There are a bunch of clever ways around this:
-    * Pass two callbacks—one for a successful outcome and one for an unsuccessful outcome.
-    * Use the Node.js "error-first" style of callbacks where the first argument is always an error object, which is typically set to `null` in the event that we reached a successful outcome. This is incredibly pessimistic.
+* Doing things like executing callbacks in parallel and waiting for all of them to come back is tricky.
+* Doing things in series where one callback hands its data to the next callback is also tricky. (This has the delightful nickname of "callback hell.")
+* Error handling is inherently broken. There are a bunch of clever ways around this:
+  * Pass two callbacks—one for a successful outcome and one for an unsuccessful outcome.
+  * Use the Node.js "error-first" style of callbacks where the first argument is always an error object, which is typically set to `null` in the event that we reached a successful outcome. This is incredibly pessimistic.
 
 Let's take a look at some more intricate examples of the callback pattern. Using jQuery's `getJSON` method, (which can be written with callbacks *or* promises), we could make a network request that takes three arguments. The first is the endpoint we want to hit, the second is our success callback and the third is our error callback:
 
