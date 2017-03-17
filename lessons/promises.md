@@ -15,25 +15,32 @@ By the end of this lesson, you will:
 
 ## Synchronous vs. Asynchronous JavaScript
 
-Before we get into dissecting Promises, we need to make sure we understand the different between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written. **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. The result of an asynchronous operation will be handled once it's available.
+Before we get into dissecting Promises, we need to make sure we understand the difference between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written:
 
-The most common example of async JavaScript on the client-side is a network request. Any time you make a trip to the server with an Ajax request, this is an async process. It takes some time to retrieve a response from the server, and our apps would be painfully slow if all of these requests blocked the other code we were trying to execute.
+```javascript
+thisFunctionWillExecuteFirst();
+thisFunctionWillExecuteSecond();
+thisFunctionWillExecuteThird();
+```
 
+**Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. This comes in handy when we want to pull a slow or expensive operation out of the default synchronous flow of execution.
+
+```javascript
+imGoingToTakeForever();
+iCantExecuteUntilSlowPokeAboveMeIsDone();
+```
+
+In the above example, we would want to make the `imGoingToTakeForever()` function non-blocking so that all of the code below it could continue to execute while we waited for the result. The newest, hippest way to write to do this is to use [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 ## Enter Promises
 
-This is where Promises come in handy. When we want to pull a slow or expensive operation out of the default synchronous flow of execution, we can use a Promise to kick the process off in the background. While we wait for the result of that operation, we can continue to execute other code in the meantime. Using a Promise typically looks like this:
+Promises allow us to kick off an asynchronous process in the background and respond to its result when it becomes available. Using a Promise typically looks like this:
 
 ```javascript
-// imaginary function that will return a Promise object
 getProjectsForStudents(students)
-
-  // Projects were successfully retrieved; now we can render them
   .then(projects => { 
     renderDetailsForProjects(projects);
   })
-
-  // There was an error retrieving projects; log the error message
   .catch(error => {
     console.log(error);
   });
@@ -46,7 +53,7 @@ whileWeWait();
 forProjectsToBeRetrieved();
 ```
 
-In this example, we call a function: `getProjectsForStudents`. Though this might look like a typical function, it actually returns a [Promise object](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise), which does two important things:
+In this example, we call a function: `getProjectsForStudents`. Though this might look like a typical function, it actually returns a Promise object, which does two very important things:
 
 1. It makes the function asynchronous, allowing it to run in the background and giving the rest of our code a chance to continue execution.
 2. It gives us access to two methods: `.then()` and `.catch()`.
@@ -57,7 +64,7 @@ If the function fails for any reason, our Promise object is considered **rejecte
 
 ## The Promise-Based Fetch API
 
-As we've already mentioned, the most common example of an async process on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be a web API that facilitates making promise-based network requests. Though still relatively new, the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) allows us to do just that. A typical `fetch` request might look like this:
+The most common example of an async process we'll run into on the client-side is a network request. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be a web API that facilitates making promise-based network requests. Though still relatively new, the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) allows us to do just that. A typical `fetch` request might look like this:
 
 ```javascript
 fetch('/api/v1/projects', {
