@@ -21,8 +21,6 @@ Before we get into dissecting Promises, we need to make sure we understand the d
 thisFunctionWillExecuteFirst();
 thisFunctionWillExecuteSecond();
 thisFunctionWillExecuteThird();
-
-
 imGoingToTakeForever();
 iCantExecuteUntilSlowPokeAboveMeIsDone();
 ```
