@@ -1,6 +1,7 @@
 ---
 title: Testing Async JavaScript & API Calls
 module: 3
+tags: testing, react, async, fetch
 ---
 
 ## Goals
