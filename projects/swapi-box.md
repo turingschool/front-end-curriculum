@@ -6,102 +6,127 @@ tags: react, javascript, api
 
 ## Introduction
 
-For this project, we are going to dive deep into the realm of React components. At this point you've built at least one basic React app in the past, it's time to leverage that and add on some complexity.
+For this project, we are going to work on developing some muscle memory building out React components. At this point you've built at least one basic React app in the past. Now's the time to leverage that and add some complexity.  
 
-For this project, we will be hitting [The Star Wars API](https://swapi.co/documentation) to tap into a "black hole" of Star Wars data.  
+For this project, we will be hitting [The Star Wars API](https://swapi.co/documentation) to tap into a "black hole" of Star Wars data. Mwahaha.  
 
 ## Prep Work
 
-For this project you will be expected to use a modular structure for your application. Before you begin coding, read [this article](https://medium.com/@kentcdodds/what-code-comments-can-teach-us-about-scaling-a-codebase-90bbfad8d70d#.yno9hmf22) that discusses why modular architecture is a good idea.  
+You will be expected to use a modular structure for this application. Before you begin coding, read [this article](https://medium.com/@kentcdodds/what-code-comments-can-teach-us-about-scaling-a-codebase-90bbfad8d70d#.yno9hmf22) which discusses why modular architecture is a good idea.   
+
+Using a "Modular Structure" means that all of the files associated with a given component should be nested within the same folder.  
+
+For example:  
+```js
+App/
+  Components/
+    Button/
+      Button.js
+      Button.scss
+      Button.spec.js
+    Card/
+      Card.js
+      Card.scss
+      Card.spec.js
+```
 
 ## Project Goals & Requirements:
 
-1. Get comfortable whipping together React components on your own with the additional complexity of implementing React Router.
-2. Write **squeaky clean**, well refactored code using **exclusively** ES6 syntax.
-<!-- 3. Match the given comps for styling - [style guide info can be found here](#style-guide). -->
-4. Make informed decisions between creating functional vs class based React components.
-5. Use a modular architecture for your application file structure.
+1. Get comfortable whipping together React components on your own with the additional complexity of implementing React Router.  
+2. Write **squeaky clean**, well refactored code using ES6 syntax.  
+3. Make informed design decisions to create a user-friendly application.  
+4. Keep state based components to a minimum and leverage more functional components.  
+5. Use a modular architecture for your application file structure.  
 6. Think deeply about React Lifecycle Methods.  
 6. Use `propTypes` for every component receiving props.  
 
 ### Important Notes  
 
 - The API we are using is completely unsecured. This means we will be making all requests for this particular project directly from our browser. We will not be sending any advanced communication from a local server.  
-- Although there are many resources out there for making API calls, you are asked to exclusively use the native `fetch()` API for this project. That being said, you are **highly** encouraged to experiment with `axios` and any other fun libraries you wish for comparison purposes.  
-- The data does not need to persist. Feel free to implement Firebase or localStorage if you are so moved (it is also listed as an extension).
+- Although there are many resources out there for making API calls, you are asked to exclusively use the native [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API for this project. That being said, you are **highly** encouraged to experiment with [`axios`](https://github.com/mzabriskie/axios) and any other fun libraries you wish for comparison purposes.  
+- The data does not need to persist. Feel free to implement Firebase or localStorage if you are so moved (it is also listed as an extension).  
 
 ## Specifications
 
 ### Iteration 0: Landing Page
 
-- When visiting `'/'` the app should display the opening scrolling text of a random film, with the title of the film and release year listed below.
-- There should be buttons to browse three different categories (ie: People, Species, and Starships).  
+- When the app starts up `'/'` the user should see the opening `scrolling text` of a random film, with the title of the film and release year listed below.  
+- There should be buttons to browse three different categories: People, Planets, and Vehicles.  
+- There should be a button to view favorites, with the number of current favorites indicated.  
 
+![Landing Page](http://i.imgur.com/opKLFZ8.png)
 
-<!-- ![Landing Page](http://i.imgur.com/XqDYLbG.png) -->
+### Iteration 1: Get People
 
-### Iteration 1: Get Jokes
+- When a user clicks on `People`, the page is populated with cards with data for each person.
+- The cards should have:  
+  - Name  
+  - Homeworld  
+  - Species  
+  - Population of Homeworld  
+  - A button to "Favorite" the person  
 
-- There is an input field to set the number of jokes you want returned. When a user clicks on `Get Jokes`, a request is made that returns the specified number of jokes on the page, and the path is `'/jokes'`.  
+- The button should have an `active` class indicating it has been pressed.  
 
-- Each joke displays the joke text (with clean data - aka no `&quot;` messes). The jokes automatically spread themselves out evenly based on the number of jokes requested.
+![People](http://i.imgur.com/BKLDWsi.png)  
 
-![Get Jokes](http://i.imgur.com/7nIBMCB.png)
+### Iteration 2: Get Planets/Vehicles
+- When a user clicks on any of the other buttons, the data should then represent the button pressed.  
 
-### Iteration 2: Settings
+- Planet Cards:  
+  - Name  
+  - Terrain  
+  - Population  
+  - Climate  
+  - Residents  
+  - A button to "Favorite" the planet  
 
-- There is a `Settings` button, that when clicked displays a configuration page and the path is `'/settings'`. The user no longer sees the buttons or list of jokes when on the settings page (*comp 3*).  
+- Vehicle Cards:  
+  - Name  
+  - Model  
+  - Class  
+  - Number of Passengers  
 
-- On the settings page, there should be a field to change the name `Chuck Norris`.
+### Iteration 3: Favorites
 
-- There should also be a `Parental Controls` radio button that sets the jokes to be either kid-friendly, or general audience.   
+- There should be a button on each card to save it to Favorites.  
 
-![Settings](http://i.imgur.com/SFpVmjT.png)
+![Favorite Button](http://i.imgur.com/iTGJNu5.png)  
 
-### Iteration 3: Starred Jokes
+- There should also be a button that when clicked, displays only the favorited cards.  
 
-- There should be a button to show "Favorites". When clicked, the path is `'/favorites'` and the user sees their starred jokes.
+![Favorites Page](http://i.imgur.com/AVPEopf.png)  
 
-- If there are no favorites, there should be a message indicating that there are no favorites.
-
-- Each joke has a star icon that when clicked changes colors.
-
-- When a joke is "starred" it gets moved to "Favorite Jokes".
+- Users should be able to unfavorite a card.  
+- If there are no favorites, there should be a message indicating that there are no favorites.  
 
 ## Extensions
 
-- `Parental Controls` buttons look like a [toggle slider](http://www.w3schools.com/howto/howto_css_switch.asp)
-
-- Data persists using Firebase, localStorage, or the database of your choice.
-
-- Walker Texas Ranger Chuck Norris gifs with sound happen occasionally (this will mean bonus cool points.)  
-
-### Style Guide
-
-**NOTE:** Typo in style guide below - font style for the body of the app should be `Karla` NOT `Kara`. When in doubt, dont pay for fonts.  
-
-![Annotated Style Guide](http://i.imgur.com/f0zyVOA.png)
+- Implement a `More` button. When clicked, the next 10 items of that category should be shown.   There should be a `Back` button to go back to the previous page.  
+- Use `localStorage` to persist data.  
+- Implement `React Router`  
+  - The URL should match the category chosen. For example, clicking on the `People` button routes the user to `'/people'`and display the people cards.  
+  - When a user visits `'/favorites'` the favorited cards are displayed.  
 
 ## Rubric
 
 ### Specification Adherence
 - 4 - The application completes all 3 iterations above and implements one or more of the extensions.
 - 3 - The application completes all 3 iterations.
-- 2 - The application is in a usable state, but is missing 1 of the features outlined in the specification above.
+- 2 - The application is in a usable state, but is missing some of the features outlined in the specification above.
 - 1 - The application is missing multiple features essential to having a complete application.
-- 0 - The application is unusable.
 
 ### Code Quality
 - 4 - Developer demonstrates complete understanding of React with appropriately separated components and exceptionally well refactored code.
-- 3 - Developer appears comfortable in React demonstrated gaps in knowledge of how the tools should be used and/or the app contains unrefactored code.
+- 3 - Developer appears comfortable in React. There are minor opportunities to refactor.
 - 2 - Developer selected appropriate libraries and frameworks to build the app but did not use them as intended. Significant refactoring necessary.
 - 1 - Developer did not make any effort to use React effectively or refactor code.
 
 ### Design
-- 4 - Developer aligned design completely with provided comps. Zero major changes requested by evaluator.
-- 3 - Developer made a strong effort to match provided comps, some changes requested by evaluator.
-- 2 - Developer made a minimal attempt to style application to match provided comps. .
-- 1 - There was no attempt to style this application as specified.
+- 4 - Zero major changes requested by evaluator.
+- 3 - Some changes requested by evaluator.
+- 2 - Developer made a minimal attempt to style application.
+- 1 - There was no attempt to style this application.
 
 ### Testing
 - 4 - Every component is tested from both a unit and acceptance standpoint, all crucial functionality is tested
