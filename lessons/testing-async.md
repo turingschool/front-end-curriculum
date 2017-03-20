@@ -11,8 +11,15 @@ By the end of this lesson, you will:
 * Know how to test React components that contain methods with async JavaScript 
 * Understand how and what to test when making API calls with fetch
 
-Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin).
+### Getting Started
 
+Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin). Clone the repo and checkout the **async-begin** branch. Run the following commands to get started:
+
+```bash
+npm install
+npm run start
+npm run server
+```
 
 ## Testing API Calls
 When our application makes a request to an API endpoint, we typically want to test our app's **reaction** to the response it receives from that request. We don't really care about what goes on in the back-end, we just want to know that we can handle the response appropriately. This makes API calls a good scenario for using mocks. However, we're usually placing our fetch requests within other functions or methods, and we might not want to override the functionality of the entire method with a mock. Consider the following example from our [AddGroceryForm Component](https://github.com/turingschool-examples/grocery-list/blob/async-complete/src/AddGroceryForm.js):
@@ -104,9 +111,9 @@ it('submits the correct data when adding a new grocery', () => {
     status: 200,
     body: mockGroceries
   });
-  
+
   const wrapper = mount(
-    <AddGroceryForm updateGroceryList={jest.fn()} />
+    <AddGroceryForm updateGroceryList=jest.fn() />
   );
 
 });
@@ -114,13 +121,47 @@ it('submits the correct data when adding a new grocery', () => {
 
 Note here that we are passing in a prop called `updateGroceryList` as a mocked function. This is to prevent the test runner from complaining that it is undefined when we hit our `.then()` upon a successful fetch request. Because we're not concerned with testing this specific method right now, it's ok to mock it in and ignore its functionality.
 
+Now let's get to the good part: writing our assertions. We first need access to our form elements on the page so that we can simulate adding a name and quantity value before submitting the form:
 
+```javascript
+const nameInput = wrapper.find('input[name="name"]');
+const qtyInput = wrapper.find('input[name="quantity"]');
+const formElem = wrapper.find('form');
+```
 
+On both the `nameInput` and `qtyInput` elements, we want to simulate **change** events so that we can add values to them, and then we want to simuulate a **submit** event on our form element:
 
+```javascript
+nameInput.simulate('change', {
+  target: { name: 'name', value: 'Foo' }
+});
 
+qtyInput.simulate('change', {
+  target: { name: 'quantity', value: '1000' }
+});
 
+formElem.simulate('submit');
+```
 
+Now we should be able to assume that our `addGrocery` method was called and it triggered a fetch request that was intercepted with fetchMock. The fetchMock API gives us several methods for writing different assertions. Let's assert that:
 
+1. fetch was called
+2. fetch was called with the correct URL
+3. the correct data was passed along with the fetch request
+
+```javascript
+expect(fetchMock.called()).toEqual(true);
+expect(fetchMock.lastUrl()).toEqual('/api/v1/groceries');
+expect(fetchMock.lastOptions()).toEqual({
+  method: 'POST',
+  body: '{"grocery":{"name":"Foo","quantity":"1000"}}',
+  headers: { 'Content-Type': 'application/json' }
+});
+```
+
+The most important assertion in this example is the `fetchMock.lastOptions()`. This is the assertion that verifies we actually sent in the correct body data. You can see the method (POST) is correct, and the body is a JSON.stringified object that contains a single grocery, with a name of Foo and a quantity of 1000 -- the exact values we simulated in our input elements earlier.
+
+You'll notice the methods on fetchMock are prefixed with the word 'last'. (e.g. `lastUrl`, `lastOptions`). This is because we'll often have multiple test blocks that will be intercepting various fetch requests. We will always want the latest match every time fetchMock intercepts a request. We're also going to want to 'clean up' any fetchMock interceptions that we've made in our it blocks so that we can start with a clean slate when we run new tests. A nice way to add some reset/cleanup functionality to our test file is by using an `afterEach` hook. Within your `describe` block, directly before your first `it` block, add the following:
 
 ```javascript
   afterEach(() => {
