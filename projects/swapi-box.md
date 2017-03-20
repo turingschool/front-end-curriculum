@@ -68,7 +68,7 @@ App/
 
 - The button should have an `active` class indicating it has been pressed.  
 
-![People](http://i.imgur.com/BKLDWsi.png)  
+![People](http://i.imgur.com/7bKxgS5.png)  
 
 ### Iteration 2: Get Planets/Vehicles
 - When a user clicks on any of the other buttons, the data should then represent the button pressed.  

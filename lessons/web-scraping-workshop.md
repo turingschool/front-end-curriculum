@@ -3,6 +3,10 @@ title: Web Scraping Workshop
 module: 4
 ---
 
+# (Optional) Promises Warmup (9:00 - 10:00)
+
+[Lesson Plan Here](http://frontend.turing.io/lessons/promises-warmup.html)
+
 # Intro to Browser Automation and Scraping (10:00 - 10:10)
 
 [Excellent StackOverflow Breakdown of Technology Available](http://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions)
@@ -137,6 +141,14 @@ You can install nightmare in a project like so:
 ```
 
 [Review the documentation for NightmareJS](https://github.com/segmentio/nightmare)
+
+### Wait for Things!
+
+`.wait()` is a powerful tool in Nightmare. You can pass it a selector for it to wait for.. or you can pass it an amount of time. You may need to wait for things between clicks. If your script isn't behaving as expected, try waiting.
+
+### `.end()` and `.then()`
+
+You need these little fellers for your script to work correctly. Don't forget them.
 
 ### Promises
 
