@@ -9,7 +9,7 @@ module: 4
 
 [Selenium](http://seleniumhq.org/) - polyglot flagship in browser automation, bindings for Python, Ruby, JavaScript, C#, Haskell and more, IDE for Firefox (as an extension) for faster test deployment. Can act as a Server and has tons of features.
 
-# Web Scraping (10:15 - 2:30)
+# Web Scraping Workshop (10:15 - 2:30)
 
 ## Instructor Demo (10:15 - 10:45)
 
@@ -86,7 +86,26 @@ If you finish early, come up with another idea or study up more of vanilla DOM m
 
 Don't write any actual code though. Just psuedo code.
 
-Some ideas for things to code:
+Follow the following steps to get started:
+
+#### Create a folder for your experiments
+
+```
+  mkdir webscraping-workshop
+  cd webscraping-workshop
+```
+
+#### Run `npm init`
+
+#### Run `git init`
+
+#### Create a `.gitignore` and ignore, at minimum, `node_modules`
+
+#### Create a `README.md`
+
+As you work, put your script files in this folder. Link to helpful blog posts/tutorials.docs that helped you along your way in the README. It may also be a good idea to put your 'roadmap' of psuedocode in that README as well.
+
+#### Some ideas for things to code:
 
 - A script that orders pizza for your board game night and splits the check for you
 - A test suite for your personal project
@@ -95,6 +114,8 @@ Some ideas for things to code:
 - Remember how heroku goes to sleep? Write a script to wake your app up for you every morning.
 - Pull some data from some site that doesn't give you an API and makes you log in
   - Write that data to a CSV file. You can read those into Node projects pretty easily :D
+
+Really, though, the internet is your oyster.
 
 ## Implementation Phase (11:15 - 11:45 (lunch) 12:45 - 2:00)
 
