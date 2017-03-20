@@ -3,7 +3,7 @@ title: Syllabus Weekly Detail
 ---
 
 ## Weekly Detail
-This is a breakdown of your classes and assignments per each of the six weeks of Mod 1. Please NOTE: this serves as a helpful overview regarding the flow and cadence of content. It is NOT intended as a detailed schedule. Classes can be added and/or moved around. You should refer to the daily outlines for confirmed daily schedule and expectations of materials and assignments. 
+This is a breakdown of your classes and assignments per each of the six weeks of Mod 1. Please NOTE: this serves as a helpful overview regarding the flow and cadence of content. It is NOT intended as a detailed schedule. Classes can be added and/or moved around. You should refer to the daily outlines for confirmed daily schedule and expectations of materials and assignments.
 
 ### WK 1: Hello Turing! Hello Front End Engineering!
 
@@ -14,7 +14,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 2: Putting the Pieces Together
 
 |Mindset     | _Open, optimistic, invested_. |
-|Lessons     | [JS I](http://frontend.turing.io/lessons/module-1/js-1.html) &nbsp; [JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io lessons/module-1/design-1.html) |
+|Lessons     | [JS I](http://frontend.turing.io/lessons/module-1/js-1.html) &nbsp; [JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io lessons/module-1/design-1.html) |
 |Assignment  | __DUE__: Thu 3/23 no later than *1:00 PM* ~ Dog Party Static Comp |
 |Assignment  | __EVAL__: Thu 3/23 ~ Number Guesser |
 
@@ -25,7 +25,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 |Assignment  | __EVAL__: Wed 3/29 ~ Mid Mock Assessment |
 |Assignment  | __EVAL__: Thu 3/30 ~ Linked List |
 
-### WK 4: Build on a Solid Foundation 
+### WK 4: Build on a Solid Foundation
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
 |Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/array-prototype-methods-intro) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
