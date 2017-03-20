@@ -33,7 +33,7 @@ Promises allow us to kick off an asynchronous process in the background and resp
 
 ```javascript
 getProjectsForStudents(students)
-  .then(projects => { 
+  .then(projects => {
     renderDetailsForProjects(projects);
   })
   .catch(error => {
@@ -55,7 +55,10 @@ In this example, we call a function: `getProjectsForStudents`. Though this might
 
 If the function completes successfully, the Promise object is considered **resolved**, and our `.then()` block will execute. Within this block, we are automatically given a result that we can work with (e.g. data from an API endpoint). In this example, we are given project data for our students and we'll render them to the DOM.
 
-If the function fails for any reason, our Promise object is considered **rejected**, and our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.
+If the function fails for any reason, our Promise object is considered **rejected**, and our `.catch()` block will execute instead. Within this block, we are automatically given an error that we can use to notify the user that something went wrong.  
+
+![Image of Promise Flow](https://wtcindia.files.wordpress.com/2016/06/promises.png?w=605)
+(Photo credit from [WalkingTree](https://blogs.walkingtree.tech/2016/07/03/using-promises-in-ext-js-6/))
 
 ## The Promise-Based Fetch API
 
@@ -71,12 +74,12 @@ fetch('/api/v1/projects', {
 });
 ```
 
-In this example, we're making a `POST` request that would add a new project named 'Foo' worth 100 points. `fetch` is a function that takes two arguments: 
+In this example, we're making a `POST` request that would add a new project named 'Foo' worth 100 points. `fetch` is a function that takes two arguments:
 
 1. the URL or API endpoint we're trying to hit
 2. an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it
 
-Every fetch request we make will return a Promise object that contains our response data. This allows us to easily react to the type of response we get once it's available. Handling the response of a fetch request might look something like this:
+Every fetch request we make will **return a Promise object** that contains our response data. This allows us to easily react to the type of response we get once it's available. Handling the response of a fetch request might look something like this:
 
 ```javascript
 fetch('/api/v1/projects', {
@@ -109,7 +112,7 @@ $('#clickity-click').click(function(event) {
 });
 ```
 
-When this code first executes, it doesn't actually fire `doSomething()`. It simply binds the handler to our `clickity-click` element. It says: "Take note of clickity-click and wait for a user to click on it. Once that event happens, run the doSomething function." Recognize how it takes the execution of `doSomething()` out of the natural synchronous flow and holds onto it for later -- to execute only after a click event has occurred. This is a common convention in client-side JavaScript and is called the **callback pattern**.
+When this code first executes, it doesn't actually fire `doSomething()`. It simply binds the handler to our `clickity-click` element. It says: "Take note of `clickity-click` and wait for a user to click on it. Once that event happens, run the `doSomething` function." Recognize how it takes the execution of `doSomething()` out of the natural synchronous flow and holds onto it for later -- to execute only after a click event has occurred. This is a common convention in client-side JavaScript and is called the **callback pattern**.
 
 The callback pattern, in short, is when you pass a function as an argument to another function to be executed later.  This pattern has historically been wildly popular because it's easy to implement. But it has a few problems:
 
@@ -217,7 +220,7 @@ But wait, there's more.
 ## When to use Promises
 Now that we have a better understanding of how and why to use Promises, what about the when? When do you actually want to use a Promise?
 
-The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`. 
+The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`.
 
 When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback. So for once, we don't really have to be in charge of making a decision here -- we can let the tools and technologies we're using dictate whether or not we should be using promises.
 
@@ -258,6 +261,7 @@ The promise object itself encapsulates all of the asynchronous logic and allows 
 
 ## References
 
+- [Promise It Wont Hurt Workshop]((https://github.com/stevekane/promise-it-wont-hurt)  
 - ["You're Missing the Point of Promises" by Domenic Denicola](https://gist.github.com/domenic/3889970)
 - [MDN Promises](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise)
 - [MDN Promise.Race()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
