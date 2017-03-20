@@ -142,6 +142,14 @@ You can install nightmare in a project like so:
 
 [Review the documentation for NightmareJS](https://github.com/segmentio/nightmare)
 
+### Wait for Things!
+
+`.wait()` is a powerful tool in Nightmare. You can pass it a selector for it to wait for.. or you can pass it an amount of time. You may need to wait for things between clicks. If your script isn't behaving as expected, try waiting.
+
+### `.end()` and `.then()`
+
+You need these little fellers for your script to work correctly. Don't forget them.
+
 ### Promises
 
 We spent some time going over promises this morning, so check out this promises implementation 
