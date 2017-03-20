@@ -11,7 +11,7 @@ By the end of this lesson, you will:
 * Know how to test React components that contain methods with async JavaScript 
 * Understand how and what to test when making API calls with fetch
 
-Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-complete).
+Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin).
 
 
 ## Testing API Calls
@@ -53,10 +53,73 @@ Fetch-mock allows us to intercept any fetch requests we make and explicitly set 
 
 Let's take a closer look at the previous example. Building off of our Grocery List application, we've now added a back-end for persisting the grocery data we're working with. When we submit a new grocery, we now make a `POST` request to our server to add that grocery item. We don't want to override the entire `addGrocery` method, but we do want to intercept that `POST` request so that we can return some fake data to work with.
 
+Let's start by adding a test file for this component named `AddGroceryForm.test.js`. And install `fetch-mock` via npm:
+
+```bash
+npm install fetch-mock
+```
+
+We'll import fetchMock at the top of our new test file, along with React and Enzyme dependencies, and the component we're testing:
 
 ```javascript
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 import fetchMock from 'fetch-mock';
+
+import AddGroceryForm from './AddGroceryForm';
 ```
+
+Let's create our `describe` block and we're going to want to mock out some fake groceries that we can use later to return from our API request:
+
+```javascript
+describe('AddGroceryForm', () => {
+
+  const mockGroceries = [
+    { id: 1, name: 'Pineapples', quantity: 10 },
+    { id: 2, name: 'Coconuts', quantity: 1000 },
+    { id: 3, name: 'Pears', quantity: 5 }
+  ];
+
+});
+```
+
+Now we want to make an `it` block that will verify that our fetch request is a) being made b) called with the appropriate data. The very first thing we want to do in this block is utilize fetchMock to intercept that fetch request:
+
+```javascript
+it('submits the correct data when adding a new grocery', () => {
+  fetchMock.post('/api/v1/groceries', { 
+    status: 200,
+    body: mockGroceries
+  });
+});
+```
+
+This `fetchMock.post()` method takes two arguments. The first is the URL we want to match against to intercept requests, and the second is what we want to return from the fetch request. It is essentially saying: "intercept any POST requests made to `/api/v1/groceries` and instead of actually trying to hit the server, just immediately respond with a successful status code (200) and an array of fake groceries".
+
+You're probably used to starting your tests off with a `shallow` or `mount` rendering of the component you're testing. In this scenario, it's important to do this AFTER we set up our fetch mock intercepts. If our component had finished mounting before we setup our fetchMock, the requests would not be caught in time and our component would attempt to hit the server when they ran. But now that we've setup our fetchMock, let's go ahead and mount our component:
+
+```javascript
+it('submits the correct data when adding a new grocery', () => {
+  fetchMock.post('/api/v1/groceries', { 
+    status: 200,
+    body: mockGroceries
+  });
+  
+  const wrapper = mount(
+    <AddGroceryForm updateGroceryList={jest.fn()} />
+  );
+
+});
+```
+
+Note here that we are passing in a prop called `updateGroceryList` as a mocked function. This is to prevent the test runner from complaining that it is undefined when we hit our `.then()` upon a successful fetch request. Because we're not concerned with testing this specific method right now, it's ok to mock it in and ignore its functionality.
+
+
+
+
+
+
+
 
 
 ```javascript
