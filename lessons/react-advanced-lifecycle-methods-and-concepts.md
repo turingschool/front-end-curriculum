@@ -46,9 +46,12 @@ Dan's Answer: Just don't execute side effects in constructor. It's only for init
 
 It seems as though there is a solid consensus about NOT making an initial API call in the `constructor()`, but there's still a pretty healthy debate about sticking it in `componentWillMount()` vs `componentDidMount()`.  
 
-**Question:**   
-Has anyone encountered pros or cons to using these locations?  
+**One Last Thing**  
+A final comment about `componentDidMount()`. From [this stack overflow post](http://stackoverflow.com/questions/36049493/when-exactly-is-componentdidmount-fired), there's another interesting note about our most popular lifecycle method.  
 
+```md
+Inside a react component tree, `componentDidMount()` is fired after **all children components** have also been mounted. This means, that any child component's `componentDidMount()` is fired before its parent has been mounted.
+```
 
 ## Controlled Form Components
 I highly recommend you breeze through [this blog post](http://lorenstewart.me/2016/10/31/react-js-forms-controlled-components/) that goes into awesome detail about controlled form components.
