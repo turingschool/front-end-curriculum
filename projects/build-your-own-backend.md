@@ -23,7 +23,7 @@ Note: The developer does not HAVE to follow the JSON API standard but they must 
 
 ### Sources of Data
 
-Data source MUST BE LOCKED IN by Tuesday (3/21) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested
+Data source MUST BE LOCKED IN by Tuesday (3/21) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
