@@ -187,3 +187,121 @@ Often times, you'll want to start from scratch after every `it` block runs in yo
 
 In this example, we're using the `afterEach` block to reset our `fetchMock` status. We will use these hooks more frequently when we begin working with Redux, but for now, just know that they exist and allow us to execute code before and after our tests run.
 
+
+## Testing with Async/Await
+
+In our previous example, we tested a `POST` request, and used fetchMock to fake a successful response. Let's look at an example of testing a `GET` request that returns an error. In our `App.js` file, we are now making a fetch request in `componentDidMount` in order to retrieve groceries from the server:
+
+```javascript
+  componentDidMount() {
+    fetch('/api/v1/groceries')
+      .then(response => {
+        if (response.status >= 400) {
+          this.setState({
+            errorStatus: 'Error fetching groceries'
+          });
+        }
+        else {
+          response.json().then(data => {
+            this.setState({groceries: data.groceries})
+          });
+        }
+      })
+  }
+```
+
+We are doing a check on the status code right away when the response comes back to determine how to proceed. *(This style of writing fetch requests may seem unfamiliar, but you'll see it often in the real world. Sometimes it is useful to handle various status codes in different ways, rather than just lumping all erroneous status codes in a .catch())*.
+
+Let's again make a test file for this component named `App.test.js`, and add the appropriate imports:
+
+```javascript
+import React from 'react';
+import { mount } from 'enzyme';
+import fetchMock from 'fetch-mock';
+
+import App from './App';
+```
+
+We'll fill out our describe block similarly to the previous example. Because we're going to test an erroneous fetch response, we don't need to mock out any fake groceries this time around:
+
+```javascript
+describe('App', () => {
+
+  afterEach(() => {
+    expect(fetchMock.calls().unmatched).toEqual([]);
+    fetchMock.restore();
+  });
+
+  it('displays an error if fetching groceries fails', () => {
+  });
+
+});
+```
+
+In our `App.js` component, we are rendering an error message if there happened to be a problem fetching the groceries:
+
+```jsx
+{ errorStatus && 
+  <p className="error">{errorStatus}</p>
+}
+```
+
+In our assertion, we want to verify that this paragraph tag exists when our fetch request fails and that our state updated to add an error message.
+
+Again, let's first set up our fetchMock and then mount our component:
+
+```javascript
+fetchMock.get('/api/v1/groceries', { 
+  status: 500
+});
+
+const wrapper = mount(<App />);
+```
+
+This time we're doing a `GET` request, so instead of `fetchMock.post()`, we'll call `fetchMock.get()`. The URL we want to match is `/api/v1/groceries`, and we're simply going to return a status code of 500 from this request, which should be caught as an error within our component.
+
+Now we want to write our assertions. We want to verify that the `errorStatus` in our state was updated, and that a paragraph tag with an error class exists:
+
+```javascript
+expect(wrapper.state('errorStatus')).toEqual('Error fetching groceries');
+expect(wrapper.find('.error').length).toEqual(1);
+```
+
+If we go ahead and run this test, we'll see that it actually fails. Our first assertion says that `errorStatus` still equals an empty string, even though we expected it to update with an error message:
+
+```bash
+Expected value to equal:
+  "Error fetching groceries"
+Received:
+  ""
+```
+
+But our app is working perfectly fine! What could be wrong here? The problem isn't in our component code, but rather the way we've written our test. Dealing with asynchronous code (like API calls) can be tricky, especially when it exists within our React Lifecycle Methods. We need to rewrite our it block to say "mount our component, and wait for it to completely update before trying to test any changes". One way we can do this is with **async/await** and enzyme's `update()` method. Let's add some pieces to our it block:
+
+```javascript
+  it('displays an error if fetching groceries fails', async () => {
+    fetchMock.get('/api/v1/groceries', { 
+      status: 500
+    });
+    
+    const wrapper = mount(<App />);
+    await wrapper.update();
+
+    expect(wrapper.state('errorStatus')).toEqual('Error fetching groceries');
+    expect(wrapper.find('.error').length).toEqual(1);
+  });
+```
+
+We've added three things here:
+
+1. `async` - right before the opening parens of our it block, that will tell the test runner there is something asynchronous that we need to wait for before running our assertions with `expect`
+2. `await` - right before `wrapper.update()`. Await works alongside the `async` keyword we added and says 'this is the line of code we want to wait for!'
+3. `wrapper.update()` - this is one of [Enzyme's helper methods](http://airbnb.io/enzyme/docs/api/ShallowWrapper/update.html) that will force a re-render so that we can check our render output after something may have updated the state
+
+Now if we run this test again, we should see that it passes in flying colors. Hurray!
+
+
+### Your Turn
+
+* Can you display an error message in the `AddGroceryForm` component if the `POST` request fails, and write an assertion to test it?
+* Can you test a successful `GET` request in the `App` component and verify it updates the grocery list?
