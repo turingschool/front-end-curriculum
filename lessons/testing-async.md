@@ -305,3 +305,8 @@ Now if we run this test again, we should see that it passes in flying colors. Hu
 
 * Can you display an error message in the `AddGroceryForm` component if the `POST` request fails, and write an assertion to test it?
 * Can you test a successful `GET` request in the `App` component and verify it updates the grocery list?
+
+### Resources
+
+* [FetchMock](http://www.wheresrhys.co.uk/fetch-mock/)
+* [Jest Async Examples](https://facebook.github.io/jest/docs/tutorial-async.html#content)
