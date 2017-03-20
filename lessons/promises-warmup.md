@@ -29,3 +29,15 @@ Note: If you get stuck in the workshop, the solutions are all included in the re
 Note: If NodeSchool doesn't work on your machine, of you don't like the commandline tool - check out this [other promises workshop](https://github.com/asakusuma/promise-workshop)
 
 Note: If you already feel solid on using promises - work on [Learn Generators](https://github.com/isRuslan/learn-generators) instead
+
+### Wrap Up
+
+Review the following questions and come up with some theories
+
+1. What are the states of a promise?
+2. What is the difference between a callback, a promise or a generator?
+3. Why do we have Promises when we already have Callbacks?
+4. Is it critical that we write Promises all the time?
+5. Is jQuery using promises?
+
+Check out one take on the answers here: [Promises Q&A Answers](https://gist.github.com/rrgayhart/11596a68977d154d4735538b5e985edc)
