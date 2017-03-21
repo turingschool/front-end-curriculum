@@ -123,8 +123,8 @@ git config --global user.email johndoe@example.com
 - `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.31.4/install.sh | bash`
 - Close and reopen the Terminal window
 - `nvm ls-remote`
-- Install the last, most-recent version in the list.
-    - Right now, that's v6.9.4. Use the command `nvm install 6.9.4` to install this version.
+- Install the latest, **most-stable** version in the list.
+    - Right now, that's v6.10.1. Use the command `nvm install 6.10.1` to install this version.
 
 ### Setup [Exercisms](http://exercism.io)
 We introduce exercisms later in the module. For now, we're just getting things setup.
