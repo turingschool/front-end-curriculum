@@ -257,7 +257,23 @@ The network tab shows you information about all the server requests that were ma
 
 ![Network Panel][network-panel]
 
+
+
+One thing you'll notice about the network panel is that it won't automatically record any network requests unless you have the panel open at the time they're made. Additionally, the request list will refresh every time you navigate to a new page. You can change this functionality by selecting **Preserve Log** at the top of the panel.
+
+#### HTTP Status Codes
+
+The network panel is only useful if you understand what types of responses you can get back from a server. Familiarize yourself with all the different [status codes](http://www.restapitutorial.com/httpstatuscodes.html) you might receive from a network request. These status codes give you information about what happened during your request - was it successful? Did it fail? Why did it fail?
+
+Lucky for us, the network panel automatically highlights any failed requests in red:
+
+![Network Panel Error][network-panel-error]
+
+When we're trying to debug a network request and we see that it is highlighted in red in the network panel, we can click on the request under the 'Name' column to view more details about it. Here we'll be able to see more information about why it failed and what data was sent with the request.
+
 [network-panel]: /assets/images/lessons/debugging-with-devtools/network-panel.png
+
+[network-panel-error]: /assets/images/lessons/debugging-with-devtools/network-panel-error.png
 
 ---------------------------------------
 
