@@ -528,7 +528,101 @@ const logOut = (e) => {
 
 ### Step 4: Protecting the /admin Route
 
+Remember early on in this workshop we said we wanted the `/admin` route to require authentication. This means that if a user attempts to view the route and they are not logged in, it should automatically redirect them to the `/login` route rather than displaying the editing interface. We can do this fairly easily by leveraging some pre-existing [Route hooks](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/RouteConfiguration.md#enter-and-leave-hooks).
+
+In our scenario, we'll want to leverage the `onEnter` hook, which will allow us to run some code when a user first enters the route, but before the route components actually load. 
+
+In `src/app.js`, where we defined our route structure, add the hook to the `/admin` route like so:
+
+```jsx
+<Route path="admin" component={Admin} onEnter={requireAuth} />
+```
+
+This will attempt to run a function called `requireAuth` before loading the dashboard. But we have to write `requireAuth` ourselves! All we want to do in this function is check localStorage for a JWT. If none is found, we'll redirect them to the login route. Otherwise, the code will continue to execute normally. In the same file, beneath your imports, add your `requireAuth` function:
+
+```javascript
+const requireAuth = (nextState, replace) => {
+  let token = localStorage.getItem('token');
+  if (!token) {
+    replace({ pathname: '/login' })
+  }
+}
+```
+
+Now if you log out of your application and try to manually navigate to the `admin` route, you should notice that you're automatically redirected to the login page. Hurray!
+
+
 ### Step 5: Sending a JWT with a PATCH Request
+
+Remember earlier we protected the `PATCH` endpoint to update the status of a train. This means it requires an authorization token in order to proceed. Even if we are logged in, and viewing the admin dashboard, you'll notice that changing the value of that select menu gives us a 403 Forbidden Error when we try to update the status. (Open the network tab of devtools and then try changing a select menu -- you'll see a red request appear in the list. Click on it to inspect the response data we're currently getting back!)
+
+The logic for this request exists in our stateless `Train.js` component. Let's take a look at the `PATCH` request we're making:
+
+```javascript
+fetch(`/api/v1/trains/${trainId}`, {
+  method: 'PATCH',
+  body: JSON.stringify({ 
+    train: { status: value }
+  }),
+  headers: {
+    'Content-Type': 'application/json'
+  }
+})
+.then(response => {
+  if (!response.ok) {
+    throw Error(response.statusText);
+  }
+  
+  return response.json();
+})
+.then(updatedTrains => {
+  updateTrains(updatedTrains);
+})
+.catch(error => console.log('Error: ', error));
+```
+
+If you inspected the response in devtools, you'll notice the error message said "You must be authorized to hit this endpoint". This means that we're not passing in a token at all. Remember that we can pass JWTs as request headers or bodies, or query params in the URL. Let's first try passing it in with the request body.
+
+First we need to give the `Train` component our token. From `Admin.js`:
+
+```jsx
+<Train
+  key={train.id}
+  {...train}
+  updateTrains={updateTrains}
+  canEdit={true}
+  token={authStatus.token}
+/>
+```
+
+(Don't forget to deconstruct `authStatus` from your props at the top of the render method!)
+
+And let's make sure we add it to the arguments of our `Train` component:
+
+```jsx
+const Train = ({ token, id, line, status, canEdit, updateTrains })
+```
+
+Finally, within the body of our fetch request, let's add the token:
+
+```javascript
+body: JSON.stringify({ 
+  train: { status: value }
+  token
+}),
+```
+
+Now try changing a select menu to update a train status and you'll see that it succeeds!
+
+### Step 6: Extra Practice
+
+* Try passing that JWT through as a request header
+* Try passing that JWT through as a query parameter
+
+
+## Fin
+
+Good job! You've successfully protected an API endpoint that manipulates data, and secured a route on a Single-Page Application with JSON Web Tokens. You are great.
 
 
 ## Resources & Further Reading
