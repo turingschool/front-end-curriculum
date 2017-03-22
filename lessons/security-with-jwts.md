@@ -13,8 +13,7 @@ By the end of this lesson, you will:
 - be able to implement a protected route and API endpoint by verifying a JWT
 
 ## Application Security with JSON Web Tokens
-Securing your single page applications means that any application data being transmitted must be done so in a verifiable and trusted manner. This includes scenarios such as user authentication and API requests to send and retrieve application data. Without these features, applications can't really do much. Despite how important it is to keep security issues in mind while building applications, many launch without any precautions in place. While security is a difficult problem to solve, there are some standards we can take advantage of to help make our apps more secure.
-
+Securing your single page applications means that any application data being transmitted must be done so in a secure, verifiable, and trusted manner. This includes scenarios such as user authentication and API requests to send and retrieve application data. Despite how important it is to keep security issues in mind while building applications, many launch without any precautions in place. While security is a difficult problem to solve, there are some standards we can take advantage of to help make our apps more secure.
 
 ## Introducing JSON Web Tokens
 JSON Web Tokens, JWTs for short, provide us with a compact way to securely transmit data encoded as a JSON object. JSON objects are simple and compact, making them easy to pass along as query strings, headers, and request bodies. Similar to API Keys that help verify access to an API, JSON web tokens can be passed along to your server requests, and look something like this:
@@ -23,15 +22,18 @@ JSON Web Tokens, JWTs for short, provide us with a compact way to securely trans
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 ```
 
-This might look familiar to the API Tokens you may have used when interacting with public APIs or third-party services such as Firebase. But what does it actually mean?
+This might look familiar to the API Tokens you may have used when interacting with public APIs or third-party services such as Firebase. A JSON Web Token allows you to identify/authenticate a user in your application by passing a verified string through the header, URL, or body of a request which proves the user is logged in and allowed to access the desired content. This content could be an admin dashboard page or a PUT request to manipulate application data. 
 
+Though it's nice that the JWT is so compact and we can simply pass this string of numbers and letters around in a number of ways, it's tough to understand what it actually represents. Let's break down the anatomy of a JWT:
+
+## Structure of a JWT
 JWTs are made up of three distinct parts:
 
 * Header
 * Payload
 * Signature
 
-Each of these sections are separated by a `.` in the final format of the JWT, which is represented as a simple string.
+Each of these sections are separated by a `.` in the final format of the JWT, which is represented as a simple string. (As shown above.)
 
 ### Header
 The header usually consists of two pieces of information: the type of token (a JWT, in our case) and the hashing algorithm being used. A hashing algorithm is a way to transform a string of characters into a shorter key that represents the original string. (Think back to the the URL shortening you did!) Hashes are easier and faster to lookup than the original value. For example, the header portion of a JWT might represent a JSON object like this:
@@ -43,13 +45,13 @@ The header usually consists of two pieces of information: the type of token (a J
 }
 ```
 
-This JSON object is then Base64Url encoded to form the first part of the JWT, which might look something like this:
+This JSON object is then [Base64Url](https://brockallen.com/2014/10/17/base64url-encoding/) encoded to form the first part of the JWT, which might look something like this:
 
 ```javascript
 eyJhbGci0iJIUzI1NiIsInR5cCI6IkpXVCJ9
 ```
 
-Encoding is the process of converting data into a format that allows for efficient data transmission and storage, among other things. Base64 encoding is a convenient way to manage data in a simple, readable text format rather than as binary data. [Base64Url](https://brockallen.com/2014/10/17/base64url-encoding/) encoding is similar to Base64, although it avoids using common reserved URL characters (such as the / and -).
+Encoding is the process of converting data into a format that allows for efficient data transmission and storage, among other things. Base64 encoding is a convenient way to manage data in a simple, readable text format rather than as binary data. Base64Url encoding is similar to Base64, although it avoids using common reserved URL characters (such as the / and -).
 
 JWTs are intended to be as flexible as possible. The Base64Url encoding is one characteristic that allows them to be passed along as query strings, headers, and request bodies.
 
@@ -85,6 +87,8 @@ HMACSHA256(
 ```
 
 We include the encoded header and payload, as well as a secret. (Think of the secret as the API Secret Key you get when using a tool like Firebase.)
+
+Take some time to play around with the structure of a JWT in the browser with the [JWT.io debugger](https://jwt.io/). We'll get to implementing our own in a bit.
 
 
 ## Implementing JWTs
@@ -283,7 +287,7 @@ const checkAuth = (request, response, next) => {
 
 So first we're trying to find a JWT anywhere possible, and then we want to respond differently based on whether or not we find one. We'll get to the good part in a minute, but let's first take a look at that `else` block we wrote. If no token is found, it means the request was not authorized. We immediately return a 403 (Forbidden) status code with an error message. By using a `return` statement here, we can ensure that the rest of the functionality in our `PATCH` request will be short-circuited and we'll return the error response right away.
 
-Now let's think about what needs to be done if we **do** find a token. Remember we set the JWT to expire after 48 hours. And there is some potential for a JWT to become invalid or corrupt along the way, so if we find a token, now we have to **verify** that token before allowing the request to continue. Our JWT library provides us with a nice helper method to do this:
+Now let's think about what needs to be done if we **do** find a token. Remember we set the JWT to expire after 48 hours. And there is some potential for a JWT to become invalid or corrupt along the way, so if we find a token, now we have to **verify** that token before allowing the request to continue. Our JWT library provides us with a nice helper method to do this. Within the `if (token)` block, let's add:
 
 ```javascript
   jwt.verify(token, app.get('secretKey'), (error, decoded) => {
@@ -315,14 +319,13 @@ If it turns out the token was faulty, we'll again respond with an error message 
 
 If the verification is successful, however, we'll store a reference to the decoded JWT (try console logging that value and see what you get!), and call `next()`, which will allow us to move onto the next part of our `PATCH` request. (The part that actually does the patching!)
 
-
-
+Hurray - our server is all set up to handle JWTs when and where we need them! Let's move onto the client-side.
 
 
 ## Protecting a Client-Side Route
 
 
-## Resources
-- [JWT.io](https://jwt.io/)
-- [Auth0](https://auth0.com/)
+## Resources & Further Reading
 - [Atlassian JWT Structure](https://developer.atlassian.com/static/connect/docs/latest/concepts/understanding-jwt.html#token-structure-claims)
+- [Anatomy of a JWT](https://scotch.io/tutorials/the-anatomy-of-a-json-web-token)
+- [Understanding JWTs](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.xp9snye3h)
