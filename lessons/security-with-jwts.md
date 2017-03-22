@@ -247,7 +247,7 @@ After that token is generated, we respond to the client with a successful messag
 
 
 [authentication-error]: /assets/images/lessons/jwts/authentication-error.png
-[authentication-success]: /assets/images/lessons/jwts/authenticate-success.png
+[authentication-success]: /assets/images/lessons/jwts/authentication-success.png
 
 
 #### [GET] /api/v1/trains (public)
