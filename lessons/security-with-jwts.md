@@ -8,15 +8,15 @@ tags: security, oauth, jwt, json web tokens
 
 By the end of this lesson, you will:
 
-- have a basic understanding of token-based security
+- have a basic understanding of token-based authentication
 - recognize the underlying structure of a JWT
 - be able to implement a protected route and API endpoint by verifying a JWT
 
 ## Authenticating SPAs with JSON Web Tokens
-Securing your single page applications means that any application data being transmitted must be done so in a verifiable, and trusted manner. This includes scenarios such as user authentication and API requests to send and retrieve application data. Despite how important it is to keep these issues in mind while building applications, many launch without any precautions in place. While security is a much bigger problem than we're aiming to solve here, there are some standards we can take advantage of to boost the integrity of our applications.
+Authenticating your single page applications means that any application data being transmitted must be done so in a verifiable, and trusted manner. This includes scenarios such as user logins and API requests to send and retrieve application data. Despite how important it is to keep these issues in mind while building applications, many launch without any precautions in place. While security is a much bigger problem than we're aiming to solve here, there are some standards we can take advantage of to boost the integrity of our applications.
 
 ## Introducing JSON Web Tokens
-JSON Web Tokens, JWTs for short, provide us with a compact way to securely transmit data encoded as a JSON object. JSON objects are simple and compact, making them easy to pass along as query strings, headers, and request bodies. Similar to API Keys that help verify access to an API, JSON web tokens can be passed along to your server requests, and look something like this:
+JSON Web Tokens, JWTs for short, provide us with a compact way to securely transmit data as an encoded JSON object. JSON objects are simple and compact, making them easy to pass along as query strings, headers, and request bodies. Similar to API Keys that help verify access to an API, JSON web tokens can be passed along to your server requests, and look something like this:
 
 ```javascript
 eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
@@ -24,9 +24,11 @@ eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
 TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 ```
 
-This might look familiar to the API Tokens you may have used when interacting with public APIs or third-party services such as Firebase. A JSON Web Token allows you to identify/authenticate a user in your application by passing a verified string through the header, URL, or body of a request which proves the user is logged in and allowed to access the desired content. This content could be an admin dashboard page or a PUT request to manipulate application data. 
+This might look familiar to the API Tokens you may have used when interacting with public APIs or third-party services such as Firebase.
 
-Though it's nice that the JWT is so compact and we can simply pass this string of numbers and letters around in a number of ways, it's tough to understand what it actually represents. Let's break down the anatomy of a JWT:
+A JSON Web Token allows you to identify/authenticate a user in your application by passing a verified string (the the above example) through the header, URL, or body of a request which proves the user is trustworthy and allowed to access the desired content. (This content could be on an admin dashboard page or received through a GET request for an array of data.)
+
+Though it's nice that the JWT is so compact and we can simply pass this string of numbers and letters around in a number of ways, it's tough to understand what it actually represents. Let's break down the anatomy of a JWT.
 
 ## Structure of a JWT
 JWTs are made up of three distinct parts:
