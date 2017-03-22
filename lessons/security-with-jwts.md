@@ -117,9 +117,206 @@ It will also have three back-end API endpoints:
 Clone the [jwt-tutorial repo](https://github.com/turingschool-examples/jwt-tutorial) and run `npm install`. Before starting up our application, we'll need to configure a couple of things.
 
 ## Environment Variables
- 
+You'll see a `.env.example` file in the root of the project repo. It should look something like this:
+
+```javascript
+CLIENT_SECRET = 'SuperSecretKey'
+USERNAME = 'foo'
+PASSWORD = 'bar'
+```
+
+Copy this file and create a new one that is just titled `.env`. You can replace these values with whatever you'd like, or leave them as-is. The `CLIENT_SECRET` is the value we'll use to help generate our JWT, and the `USERNAME` and `PASSWORD` will be the valid credentials a user can enter when logging in. In a real application, these values would be highly sensitive and we'd want to make sure that this file wasn't committed to github. Because we're just practicing locally, we don't have much to worry about.
+
+We'll use these values momentarily, when we set up our server.
 
 ## Protecting Server-Side Endpoints
+
+We'll first take a look at how JWTs work on the back-end. If you open the `server.js` file at the root of your application, you'll see we already have some generic setup for a back-end:
+
+* Our imports and required libraries 
+* Some train data saved to app.locals
+* Configuration for CORS and JSON parsing
+* Starting up the server on port 3001
+
+### Importing Helpers
+
+The first step in implementing JWTs is, of course, pulling in an npm library. We're going to use the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) library. This will help us generate, verify, and decode the JWTs we work with. We'll also install a helper library for parsing the `.env` file we just created:
+
+```bash
+npm install --save jsonwebtoken
+npm install --save dotenv
+```
+
+And now we'll import it in `server.js`, and leverage the [dotenv](https://www.npmjs.com/package/dotenv) `config` method to parse our environment variables:
+
+```javascript
+const jwt = require('jsonwebtoken');
+const config = require('dotenv').config();
+```
+
+### Configuration
+
+We know we're going to need access to each of the variables we declared in our `.env` file, so let's be good citizens and throw an error in our server if any of them are missing. We now have access to each of the three variables (CLIENT_SECRET, USERNAME, PASSWORD) through `config[variableName]` which makes it easy for us to check for them. Beneath the `app.use(cors());` line, add the following check:
+
+```javascript
+if (!config.CLIENT_SECRET || !config.USERNAME || !config.PASSWORD) {
+  throw 'Make sure you have a CLIENT_SECRET, USERNAME, and PASSWORD in your .env file'
+}
+```
+
+Finally, we're going to want access to our `config.CLIENT_SECRET` in multiple places, so let's save it to a variable to make our lives easier. Beneath the check that we just added, set the following variable:
+
+```javascript
+app.set('secretKey', config.CLIENT_SECRET);
+```
+
+### Creating Endpoints
+
+Now for the fun part: creating our endpoints. We already mentioned our app will have 3 API endpoints.
+
+#### [POST] /authentication (public)
+
+We want anyone to be able to POST to this endpoint and provide a username and password to authenticate against. We'll want to check the provided credentials against `config.USERNAME` and `config.PASSWORD` to see if they match. If they don't, we'll send an error back to the client. If they do, we'll generate a new JWT and send that back to the client instead.
+
+```javascript
+  // Authentication/Login Endpoint
+  app.post('/authenticate', (request, response) => {
+    const user = request.body;
+  
+    // If the user enters credentials that don't match our hard-coded
+    // credentials in our .env configuration file, send a JSON error
+    if (user.username !== config.USERNAME || user.password !== config.PASSWORD) {
+      response.status(403).send({ 
+        success: false,
+        message: 'Invalid Credentials'
+      });
+    }
+  
+    // If the credentials are accurate, create a token and send it back
+    else {
+      let token = jwt.sign(user, app.get('secretKey'), {
+        expiresIn: 172800 // expires in 48 hours
+      });
+  
+      response.json({
+        success: true,
+        username: user.username,
+        token: token
+      });
+    }
+  });
+```
+
+Notice how we are checking the `username` and `password` values that were sent with the request against the values we've set in our configuration. If either of the values doesn't match, we return with a 403 (Forbidden) status code with an error message.
+
+If we are successful, however, we generate a new jwt with a little help from the npm library by calling `jwt.sign()`. This method takes three arguments:
+
+* The user data that we want to store
+* Our secret key (config.CLIENT_SECRET)
+* An object of configuration options such as expiration (we set ours to 48 hours)
+
+After that token is generated, we respond to the client with a successful message containing our username (so we can render it to the DOM) and the token (which we'll use to authenticate routes and requests).
+
+#### [GET] /api/v1/trains (public)
+
+Let's also create a simple GET endpoint to `/api/v1/trains` that will return the trains in our `app.locals`:
+
+```javascript
+app.get('/api/v1/trains', (request, response) => {
+  response.send(app.locals.trains);
+});
+```
+
+Remember this is a public endpoint, anyone should be able to retrieve the train data and it will not require any sort of authentication.
+
+#### [PATCH] /api/v1/trains/:id (private)
+
+Finally, we want to create a `PATCH` endpoint so that administrators can update the train status. As a public endpoint, our code would look something like this, which is mostly fine:
+
+```javascript
+app.patch('/api/v1/trains/:id', (request, response) => {
+  const { train } = request.body;
+  const { id } = request.params;
+  const index = app.locals.trains.findIndex((m) => m.id == id);
+
+  if (index === -1) { return response.sendStatus(404); }
+
+  const originalTrain = app.locals.trains[index];
+  app.locals.trains[index] = Object.assign(originalTrain, train);
+
+  return response.json(app.locals.trains);
+});
+```
+
+However, we need to verify that a user is authenticated before allowing any of the functionality in this route to be process. Luckily, Express lets us add as many intermediary steps as we'd like when we hit a particular endpoint. We can create a `checkAuth` function that will verify the JWT before handling this `PATCH` request.
+
+Let's first tell our `PATCH` request to run a `checkAuth` function. We can do this by simply adding `checkAuth` as the second argument in our route:
+
+```javascript
+app.patch('/api/v1/trains/:id', checkAuth, (request, response) => {
+  // keep all original logic provided earlier
+});
+```
+
+Now let's create our `checkAuth` function. We first want it to try to find a token to verify. Remember earlier we said JWTs can be passed along as part of the request body, as a header, or as a query param. Let's catch all three of those possibilities in our search:
+
+```javascript
+const checkAuth = (request, response, next) => {
+
+  // Check headers/POST body/URL params for an authorization token
+  const token = request.body.token || 
+                request.param('token') || 
+                request.headers['authorization'];
+
+  if (token) {
+    // do a lot of fancy things
+  }
+
+  else {
+    return response.status(403).send({ 
+      success: false, 
+      message: 'You must be authorized to hit this endpoint'
+    });
+  }
+});
+```
+
+So first we're trying to find a JWT anywhere possible, and then we want to respond differently based on whether or not we find one. We'll get to the good part in a minute, but let's first take a look at that `else` block we wrote. If no token is found, it means the request was not authorized. We immediately return a 403 (Forbidden) status code with an error message. By using a `return` statement here, we can ensure that the rest of the functionality in our `PATCH` request will be short-circuited and we'll return the error response right away.
+
+Now let's think about what needs to be done if we **do** find a token. Remember we set the JWT to expire after 48 hours. And there is some potential for a JWT to become invalid or corrupt along the way, so if we find a token, now we have to **verify** that token before allowing the request to continue. Our JWT library provides us with a nice helper method to do this:
+
+```javascript
+  jwt.verify(token, app.get('secretKey'), (error, decoded) => {
+
+    // If the token is invalid or expired, respond with an error      
+    if (error) {
+      return response.status(403).send({ 
+        success: false, 
+        message: 'Invalid authorization token.'
+      });    
+    }
+
+    // If the token is valid, save the decoded version to the
+    // request for use in other routes & continue on with next()
+    else {
+      request.decoded = decoded;  
+      next();
+    }
+  });
+```
+
+The `jwt.verify()` method takes three arguments:
+
+* The token we want to verify
+* Our secret key (config.CLIENT_SECRET) that will allow it to be decoded
+* A callback with the results of the verification process
+
+If it turns out the token was faulty, we'll again respond with an error message to alert the user they were not logged in.
+
+If the verification is successful, however, we'll store a reference to the decoded JWT (try console logging that value and see what you get!), and call `next()`, which will allow us to move onto the next part of our `PATCH` request. (The part that actually does the patching!)
+
+
+
 
 
 ## Protecting a Client-Side Route
