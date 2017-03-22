@@ -329,3 +329,4 @@ Hurray - our server is all set up to handle JWTs when and where we need them! Le
 - [Atlassian JWT Structure](https://developer.atlassian.com/static/connect/docs/latest/concepts/understanding-jwt.html#token-structure-claims)
 - [Anatomy of a JWT](https://scotch.io/tutorials/the-anatomy-of-a-json-web-token)
 - [Understanding JWTs](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.xp9snye3h)
+- [JWT.io Debugger](https://jwt.io/)
