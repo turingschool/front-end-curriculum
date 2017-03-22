@@ -151,6 +151,11 @@ We'll first take a look at how JWTs work on the back-end. If you open the `serve
 * Configuration for CORS and JSON parsing
 * Starting up the server on port 3001
 
+
+
+[home-component]: /assets/images/lessons/jwts/home-component.png
+[admin-component]: /assets/images/lessons/jwts/admin-component.png
+
 ### Importing Helpers
 
 The first step in implementing JWTs is, of course, pulling in an npm library. We're going to use the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) library. This will help us generate, verify, and decode the JWTs we work with. We'll also install a helper library for parsing the `.env` file we just created:
