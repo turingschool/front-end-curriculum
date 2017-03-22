@@ -660,7 +660,7 @@ Finally, within the body of our fetch request, let's add the token:
 
 ```javascript
 body: JSON.stringify({ 
-  train: { status: value }
+  train: { status: value },
   token
 }),
 ```
