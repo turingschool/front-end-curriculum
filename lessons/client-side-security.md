@@ -19,7 +19,7 @@ The lesson is not meant to be a comprehensive overview of every security techniq
 Sadly, the world is full of people exploiting code vulnerabilities for fun and profit.
 
 #### Theft of Propriatary Code
-  
+
   A developer creates a game that sweeps the nation. Within a week, dozens versions of that game with suspiciously similar interfaces (but slightly different graphics) start showing up all over the internet.
 
 #### Theft of Data
@@ -31,7 +31,7 @@ Sadly, the world is full of people exploiting code vulnerabilities for fun and p
   A website has many users sign up with an email and password. Someone gets access to the database and is able to pull out all user passwords. Many of the websites users use the same password for things like their bank account.
 
 #### Falsifying Information
-  
+
   A trusted news organization is hacked and for a brief moment, their social media says that there has been an attack on the President. It is corrected in minutes, but the Dow plunges as a result.
 
   Control systems of a major factory are accessible with password and username. Someone creates a false login page, meant to look exactly like the employee page redirects users visiting the main page to that site. Within hours, there is an unscheduled shutdown of the furnaces, causing major damage.
@@ -49,11 +49,11 @@ In groups of three, pick one of the following articles to read:
 - Scenario 7 [Example 1](http://www.theregister.co.uk/2011/05/06/syria_fake_certificate_facebook_attack/) & [Example 2](https://arstechnica.com/security/2015/04/meet-great-cannon-the-man-in-the-middle-weapon-china-used-on-github/)
 - Scenario 8 [Example 1](https://www.7xter.com/2015/03/how-i-exposed-your-private-photos.html) & [Example 2](https://www.7xter.com/2015/02/how-i-hacked-your-facebook-photos.html)
 
-**Read** 
+**Read**
   - Read the scenario
   - Do additional research, time permitting, into the event or events.
 
-**Small Group Discussion** 
+**Small Group Discussion**
 
 Discuss the following questions:
 
@@ -81,12 +81,12 @@ The client, however, handles all of the interactions between your users and your
 ## The Data Validation Waterfall
 
 ### Client-Side Validation
-  
-  **Best Practice** 
+
+  **Best Practice**
 
   Should be visual, simple validations to give user quick feedback.
 
-  ***Tech Recommendations:** 
+  **Tech Recommendations:** 
 
   Use things like [HTML5 input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [pattern attributes](https://webdesign.tutsplus.com/tutorials/html5-form-validation-with-the-pattern-attribute--cms-25145).
 
@@ -101,7 +101,7 @@ The client, however, handles all of the interactions between your users and your
   Keep all your validations in one place - do NOT sprinkle them throughout your components/JS view related files.
 
 ### Server-Side Validation
-  
+
   **Everything is Suspect**
 
   Assume all data coming in from the UI is suspect and have server level validations cross check this information.
@@ -150,8 +150,8 @@ The client, however, handles all of the interactions between your users and your
 
   Never fully trust your developers. Before data can be stored in the database, do some base level data validation. And never store plain text passwords in your database.
 
-  ***Tech Recommendations:** 
-  
+  ***Tech Recommendations:**
+
   Any major database will include methods and constraints to validate data quickly prior to storage.
 
   It's beyond the scope of this lesson to get into them specifically - but know that there are simple ways to do things like 'hey database, refuse to accept `null` values in this column of the table'.
@@ -188,7 +188,7 @@ Things like CORS and JWTs came about because many developers came across the sam
 
 This isn't really a general rule, but it's such a common mistake that developers make.
 
-There will come a time when you think you can do a better job than Auth0 or OmniAuth or etc, etc, etc. 
+There will come a time when you think you can do a better job than Auth0 or OmniAuth or etc, etc, etc.
 
 Don't do it. Trust me. It's above your paygrade.
 
