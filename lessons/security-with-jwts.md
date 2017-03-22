@@ -1,7 +1,7 @@
 ---
 title: Securing SPAs with JWTs
 length: 1 hour
-tags: security, oauth, auth0, jwt, json web tokens
+tags: security, oauth, jwt, json web tokens
 ---
 
 ### Goals
@@ -12,8 +12,8 @@ By the end of this lesson, you will:
 - recognize the underlying structure of a JWT
 - be able to implement a protected route and API endpoint by verifying a JWT
 
-## Application Security with JSON Web Tokens
-Securing your single page applications means that any application data being transmitted must be done so in a secure, verifiable, and trusted manner. This includes scenarios such as user authentication and API requests to send and retrieve application data. Despite how important it is to keep security issues in mind while building applications, many launch without any precautions in place. While security is a difficult problem to solve, there are some standards we can take advantage of to help make our apps more secure.
+## Authenticating SPAs with JSON Web Tokens
+Securing your single page applications means that any application data being transmitted must be done so in a verifiable, and trusted manner. This includes scenarios such as user authentication and API requests to send and retrieve application data. Despite how important it is to keep these issues in mind while building applications, many launch without any precautions in place. While security is a much bigger problem than we're aiming to solve here, there are some standards we can take advantage of to boost the integrity of our applications.
 
 ## Introducing JSON Web Tokens
 JSON Web Tokens, JWTs for short, provide us with a compact way to securely transmit data encoded as a JSON object. JSON objects are simple and compact, making them easy to pass along as query strings, headers, and request bodies. Similar to API Keys that help verify access to an API, JSON web tokens can be passed along to your server requests, and look something like this:
@@ -90,6 +90,8 @@ We include the encoded header and payload, as well as a secret. (Think of the se
 
 Take some time to play around with the structure of a JWT in the browser with the [JWT.io debugger](https://jwt.io/). We'll get to implementing our own in a bit.
 
+### Stop and Read
+Still feeling a bit confused? Hopefully things will clear up after the following sections where you'll actually be implementing a JWT. Before you get started, read through this quick blog post: [5 Easy Steps to Understanding JSON Web Tokens (JWT)](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.xp9snye3h) to help clear up any lingering fuzziness.
 
 ## Implementing JWTs
 Implementing JWT authentication is fairly simple with the help of an npm library or two. In the real world, your team may prefer to use a third-party service such as [Auth0](https://auth0.com/) or [Firebase](https://firebase.google.com/), which both provide you with authentication options for many popular services like Google, Facebook, Twitter, etc. In order to truly understand what's going on behind the scenes with JWTs, we'll bypass using these services and implement them on our own.
