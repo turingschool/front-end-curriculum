@@ -487,6 +487,49 @@ componentDidMount() {
 
 Now when a user first loads our app, we'll check for a user in localStorage, and update the `authStatus` accordingly. Note that we do not use our `updateAuthStatus` method here, we're simply setting the `authStatus` object in state. This is because we wouldn't want to immediately redirect anyone to a different route if they've just opened the app.
 
+### Step 3: Adding the Auth Component
+
+We already have an `Auth` component partially setup in `src/components`, but we're not actually using it anywhere. This component renders either a login or logout button depending on whether or not there is a currently authenticated user. Let's include it in our top-level `App.js` component so that it's persistently displayed on every route. I put it right beneath my header:
+
+```jsx
+<h1>Big Metro City Choo-Choo Train Authority</h1>
+<Auth 
+  username={authStatus.username}
+  updateAuthStatus={this.updateAuthStatus}
+/>
+```
+
+We'll pass in two props to our Auth component:
+
+* The username to display if someone is logged in
+* The `updateAuthStatus` method to facilitate logging out
+
+In a similar fashion to how we updated the `Login` component, we need to handle logging out with a click handler placed on the Logout link. Our logout function needs to do two things:
+
+* Remove the token and username from localStorage
+* Update the authStatus to the default state
+
+Add a click handler to the logout link within the render method, and create a logout function for yourself. Because this is a stateless component, we don't need to worry about binding a `this` context - we can simply create a function called `logOut`:
+
+```javascript
+const logOut = (e) => {
+  e.preventDefault();
+  localStorage.removeItem('token');
+  localStorage.removeItem('username');
+  updateAuthStatus({ 
+    loggedIn: false,
+    username: '',
+    token: ''
+  }, 'login');
+}
+```
+
+*Note: this needs to be *within* the `Auth` declaration so that you'll have access to the `updateAuthStatus` function. Don't forget to add `updateAuthStatus` to the deconstructed arguments in your Auth declaration!*
+
+### Step 4: Protecting the /admin Route
+
+### Step 5: Sending a JWT with a PATCH Request
+
 
 ## Resources & Further Reading
 - [Atlassian JWT Structure](https://developer.atlassian.com/static/connect/docs/latest/concepts/understanding-jwt.html#token-structure-claims)
