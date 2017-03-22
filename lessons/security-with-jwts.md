@@ -131,6 +131,9 @@ It will also have three back-end API endpoints:
 
 Clone the [jwt-tutorial repo](https://github.com/turingschool-examples/jwt-tutorial) and run `npm install`. Before starting up our application, we'll need to configure a couple of things.
 
+[home-component]: /assets/images/lessons/jwts/home-component.png
+[admin-component]: /assets/images/lessons/jwts/admin-component.png
+
 ## Environment Variables
 You'll see a `.env.example` file in the root of the project repo. It should look something like this:
 
@@ -144,6 +147,11 @@ Copy this file and create a new one that is just titled `.env`. You can replace 
 
 We'll use these values momentarily, when we set up our server.
 
+
+--------------------------------------------------------------
+
+
+
 ## Protecting Server-Side Endpoints
 
 We'll first take a look at how JWTs work on the back-end. If you open the `server.js` file at the root of your application, you'll see we already have some generic setup for a back-end:
@@ -152,11 +160,6 @@ We'll first take a look at how JWTs work on the back-end. If you open the `serve
 * Some train data saved to app.locals
 * Configuration for CORS and JSON parsing
 * Starting up the server on port 3001
-
-
-
-[home-component]: /assets/images/lessons/jwts/home-component.png
-[admin-component]: /assets/images/lessons/jwts/admin-component.png
 
 ### Importing Helpers
 
@@ -192,7 +195,7 @@ app.set('secretKey', config.CLIENT_SECRET);
 
 ### Creating Endpoints
 
-Now for the fun part: creating our endpoints. We already mentioned our app will have 3 API endpoints.
+Now for the fun part: creating our endpoints. Open up Postman to test your endpoints as you create them. We already mentioned our app will have 3 API endpoints.
 
 #### [POST] /authentication (public)
 
@@ -227,7 +230,9 @@ We want anyone to be able to POST to this endpoint and provide a username and pa
   });
 ```
 
-Notice how we are checking the `username` and `password` values that were sent with the request against the values we've set in our configuration. If either of the values doesn't match, we return with a 403 (Forbidden) status code with an error message.
+Notice how we are checking the `username` and `password` values that were sent with the request against the values we've set in our configuration. If either of the values doesn't match, we return with a 403 (Forbidden) status code with an error message:
+
+![authenticate error][authentication-error]
 
 If we are successful, however, we generate a new jwt with a little help from the npm library by calling `jwt.sign()`. This method takes three arguments:
 
@@ -236,6 +241,14 @@ If we are successful, however, we generate a new jwt with a little help from the
 * An object of configuration options such as expiration (we set ours to 48 hours)
 
 After that token is generated, we respond to the client with a successful message containing our username (so we can render it to the DOM) and the token (which we'll use to authenticate routes and requests).
+
+
+![authenticate success][authentication-success]
+
+
+[authentication-error]: /assets/images/lessons/jwts/authentication-error.png
+[authentication-success]: /assets/images/lessons/jwts/authenticate-success.png
+
 
 #### [GET] /api/v1/trains (public)
 
@@ -268,7 +281,15 @@ app.patch('/api/v1/trains/:id', (request, response) => {
 });
 ```
 
-However, we need to verify that a user is authenticated before allowing any of the functionality in this route to be process. Luckily, Express lets us add as many intermediary steps as we'd like when we hit a particular endpoint. We can create a `checkAuth` function that will verify the JWT before handling this `PATCH` request.
+Let's test that this works in Postman:
+
+
+![patch-noAuth-success][patch-noAuth-success]
+
+[patch-noAuth-success]: /assets/images/lessons/jwts/patch-noAuth-success.png
+
+
+This is great, but we actually need to verify that a user is authenticated before allowing any of the functionality in this route to be process. Luckily, Express lets us add as many intermediary steps as we'd like when we hit a particular endpoint. We can create a `checkAuth` function that will verify the JWT before handling this `PATCH` request.
 
 Let's first tell our `PATCH` request to run a `checkAuth` function. We can do this by simply adding `checkAuth` as the second argument in our route:
 
@@ -335,7 +356,28 @@ If it turns out the token was faulty, we'll again respond with an error message 
 
 If the verification is successful, however, we'll store a reference to the decoded JWT (try console logging that value and see what you get!), and call `next()`, which will allow us to move onto the next part of our `PATCH` request. (The part that actually does the patching!)
 
-Hurray - our server is all set up to handle JWTs when and where we need them! Let's move onto the client-side.
+Let's try that PATCH request in POSTMAN again, without sending through a JWT and make sure that it fails the way we expect it to:
+
+![patch-error][patch-error]
+
+[patch-error]: /assets/images/lessons/jwts/patch-error.png
+
+
+Now let's try passing a JWT through with the request body. Make another POSTMAN request to your `/authenticate` endpoint and copy the token value that it responds with. Then let's make another PATCH request with this value in the body:
+
+![patch-success-body][patch-success-body]
+
+[patch-success-body]: /assets/images/lessons/jwts/patch-success-body.png
+
+
+We can see we successfully updated the status of one of our trains! Remember we can also pass JWTs through as request headers. Let's remove the `token` from the body of this request and instead pass it in as an 'Authorization' header:
+
+![patch-success-header][patch-success-header]
+
+[patch-success-header]: /assets/images/lessons/jwts/patch-success-header.png
+
+
+This is how we'll want to write our PATCH request on the client-side when we allow an admin to edit the train status. But for now, hurray! Our server is all set up to handle JWTs when and where we need them! Let's move onto the client-side.
 
 
 ## Protecting a Client-Side Route
