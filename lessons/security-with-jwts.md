@@ -93,6 +93,13 @@ Take some time to play around with the structure of a JWT in the browser with th
 ### Stop and Read
 Still feeling a bit confused? Hopefully things will clear up after the following sections where you'll actually be implementing a JWT. Before you get started, read through this quick blog post: [5 Easy Steps to Understanding JSON Web Tokens (JWT)](https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.xp9snye3h) to help clear up any lingering fuzziness.
 
+To sum up some of the things we just learned:
+
+* **What is a JWT:** a JSON object encoded as a string
+* **What does it do:** allows us to verify data is coming from an authentic source
+* **How can we use it:** to secure an API endpoint of application data, or to require user authentication when navigating to a route in an SPA
+* **Where do we put it:** in the headers or body of a `fetch` request, OR in a query param (e.g. `/api/v1/foo?token=sigh942tydiufhg9e4th.sov98h403`)
+
 ## Implementing JWTs
 Implementing JWT authentication is fairly simple with the help of an npm library or two. In the real world, your team may prefer to use a third-party service such as [Auth0](https://auth0.com/) or [Firebase](https://firebase.google.com/), which both provide you with authentication options for many popular services like Google, Facebook, Twitter, etc. In order to truly understand what's going on behind the scenes with JWTs, we'll bypass using these services and implement them on our own.
 
