@@ -165,7 +165,9 @@ We'll first take a look at how JWTs work on the back-end. If you open the `serve
 
 ### Importing Helpers
 
-The first step in implementing JWTs is, of course, pulling in an npm library. We're going to use the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) library. This will help us generate, verify, and decode the JWTs we work with. We'll also install a helper library for parsing the `.env` file we just created:
+The first step in implementing JWTs is, of course, pulling in an npm library. We're going to use the [jsonwebtoken](https://www.npmjs.com/package/jsonwebtoken) library. This will help us generate, verify, and decode the JWTs we work with. Please read the documentation before continuing, so you have a better idea of how it will be used. It's ok if it doesn't all make sense right away, just recognize the types of things you can do with the library.
+
+We'll also install a helper library for parsing the `.env` file we just created:
 
 ```bash
 npm install --save jsonwebtoken
