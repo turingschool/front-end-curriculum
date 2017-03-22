@@ -333,6 +333,160 @@ Hurray - our server is all set up to handle JWTs when and where we need them! Le
 
 ## Protecting a Client-Side Route
 
+Take a moment to familiarize yourself with what exists for you on the client-side. In `/src` we have high-level `app.css` and `app.js` files that style common elements and setup our routes, respectively. 
+
+Within the `src/components` directory, we have several components that we'll work with to implement authentication and protected routes:
+
+* `App.js` - high-level container component that will hold our authentication state and train data
+* `Home.js` - component to match on the Home route (our index)
+* `Admin.js` - dashboard for administrators to edit the train status, matches against our Admin route, we'll make this one private!
+* `Login.js` - matches against the Login route, provides a form for users to log in
+* `Auth.js` - a small reusable component that will display the current logged-in status and a conditional login or logout button
+* `Train.js` - reusable component that display details for a particular train. If a user is authenticated, we'll also display a select menu to edit the train status.
+
+### Step 1: Saving authStatus to state
+
+We need to add some authentication state to keep track of whether or not we have a logged in user. We'll store this in the top-level `App.js` component so that we can easily pass it down to multiple components. In `App.js`:
+
+```javascript
+constructor(props) {
+  super(props);
+  this.state = {
+    authStatus: {
+      loggedIn: false,
+      username: '',
+      token: ''
+    },
+    trains: []
+  };
+};
+```
+
+We'll add an object called `authStatus` that contains three properties:
+
+* `loggedIn` - a boolean value, whether or not the user is loggedin
+* `username` - the username of the currently logged in user, for displaying in the `Auth.js` component
+* `token` - our JWT token that we'll want to pass along to our protected `PATCH` request to edit train statuses
+
+### Updating the Auth Status
+
+Next let's add a method to our `App.js` component for updating the `authStatus` in state. The `authStatus` will only be updated in one of two ways:
+
+* A user logs in, which will only be possible from the `/login` route
+* A user logs out by clicking on a 'Logout' button.
+
+In both of these scenarios, we'll not only want to update the `authStatus` state, but we'll want to redirect the user to a particular route. (`/admin` if they are logging in, `/login` if they've just logged out).
+
+So our method should look something like this:
+
+```javascript
+updateAuthStatus(authStatus, redirect) {
+  this.setState({authStatus}, browserHistory.push(`/${redirect}/`));
+}
+```
+
+It will take two arguments: 
+
+* `authStatus` - the updated authentication object that we want to use in state
+* `redirect` - a string that tells the browser where to navigate to after we've set our state
+
+Let's not forget to `bind` our method within the constructor of our App component:
+
+```javascript
+this.updateAuthStatus = this.updateAuthStatus.bind(this);
+```
+
+Finally, let's pass both of these down to our child components. From within the `render` method, we can add data to each of our child components like so:
+
+```javascript
+{React.cloneElement(
+  this.props.children,
+  { 
+    authStatus,
+    updateAuthStatus: this.updateAuthStatus,
+    trains,
+    updateTrains: this.updateTrains
+  }
+)}
+```
+
+(Don't forget to deconstruct the `authStatus` value from state at the top of your render method. )
+
+### Step 2: Updating the Login Component
+
+We've already got a nice form setup to facilitate the login process, but we need to wire up our login button to actually do something onClick. Let's add a click handler that will log a user in:
+
+```jsx
+<button id="submit"
+  onClick={event => this.login(event)}>Login
+</button>
+```
+
+And let's create our `login` method on the component. In this method, we'll want to make a `fetch` request to the `/authenticate` endpoint we created earlier. If the request is successful, we want to do two things:
+
+* Store the username and JWT in localStorage for persistence
+* Call the `updateAuthStatus` method we just created with the new auth data
+
+Let's try it out:
+
+```javascript
+login(event) {
+  const { updateAuthStatus } = this.props;
+
+  fetch('http://localhost:3001/authenticate', {
+    method: 'POST',
+    body: JSON.stringify(this.state),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => {
+    if (!response.ok) {
+      throw Error(response.statusText);
+    }
+    
+    return response.json();
+  })
+  .then(({ username, token }) => {
+    localStorage.setItem('token', token);
+    localStorage.setItem('username', username);
+    updateAuthStatus({ 
+      loggedIn: true,
+      username,
+      token
+    }, 'admin');
+  })
+  .catch(error => {
+    console.log('Error: ', error);
+  });
+}
+```
+
+Now try navigating to the `/login` route of your appliation and see if you can successfully login with the username/password combination you specified in your `.env` file.
+
+Notice how we stored the token and username to localStorage. This will allow us to check localStorage when the app starts up to check if a user has previously logged in. If a user logs in, closes the browser, then navigates back to the application, they shouldn't have to log in again. We need to do this localStorage check as soon as possible so that our components render appropriately. Let's add this check within the `componentDidMount` of our top-level `App.js` component:
+
+```javascript
+componentDidMount() {
+  let token = localStorage.getItem('token');
+  let username = localStorage.getItem('username');
+
+  if (token && username) {
+    this.setState({
+      authStatus: {
+        loggedIn: true,
+        username,
+        token
+      }
+    })
+  }
+
+  this.fetchTrains();
+}
+```
+
+Now when a user first loads our app, we'll check for a user in localStorage, and update the `authStatus` accordingly. Note that we do not use our `updateAuthStatus` method here, we're simply setting the `authStatus` object in state. This is because we wouldn't want to immediately redirect anyone to a different route if they've just opened the app.
+
 
 ## Resources & Further Reading
 - [Atlassian JWT Structure](https://developer.atlassian.com/static/connect/docs/latest/concepts/understanding-jwt.html#token-structure-claims)
