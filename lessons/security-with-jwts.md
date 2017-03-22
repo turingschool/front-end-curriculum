@@ -356,14 +356,14 @@ If it turns out the token was faulty, we'll again respond with an error message 
 
 If the verification is successful, however, we'll store a reference to the decoded JWT (try console logging that value and see what you get!), and call `next()`, which will allow us to move onto the next part of our `PATCH` request. (The part that actually does the patching!)
 
-Let's try that PATCH request in POSTMAN again, without sending through a JWT and make sure that it fails the way we expect it to:
+Now that we've protected this endpoint, let's try that PATCH request in Postman again, without sending through a JWT. It should fail the way we expect it to:
 
 ![patch-error][patch-error]
 
 [patch-error]: /assets/images/lessons/jwts/patch-error.png
 
 
-Now let's try passing a JWT through with the request body. Make another POSTMAN request to your `/authenticate` endpoint and copy the token value that it responds with. Then let's make another PATCH request with this value in the body:
+Great! Now let's try passing a JWT through with the request body. Make another Postman request to your `/authenticate` endpoint and copy the token value that it responds with. Then let's make another PATCH request with the token value in the body:
 
 ![patch-success-body][patch-success-body]
 
