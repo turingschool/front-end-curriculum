@@ -8,10 +8,10 @@ module: 2
 ### Goals For This Lesson:
   1. Get a general understanding of Sass and SCSS
   2. Understand:
-    - Variables
-    - Nesting
-    - Color Functions
-    - Math Functions
+    - Variables  
+    - Nesting  
+    - Color Functions  
+    - Math Functions  
 
 ### Things You Need
   1. Your Brain
@@ -220,28 +220,28 @@ Let's take a second to go back over the different ways to define a color in CSS.
 
 ##### RGBA
 
-Stands For: Red, Green, Blue, Alpha(Opacity)
-Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`
-Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)
+Stands For: Red, Green, Blue, Alpha(Opacity)  
+Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`  
+Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)  
 
 Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation of red, blue and green respectively, and blends them together.
 
 ##### Hexadecimal Code
 
-Stands For: A form of RGB notation written as pairs of hexadecimal values.
-Syntax: `#rrggbb` or `#rgb`.
-Example: `#f00` or `#ff0000` (red)
+Stands For: A form of RGB notation written as pairs of hexadecimal values.  
+Syntax: `#rrggbb` or `#rgb`.  
+Example: `#f00` or `#ff0000` (red)  
 
 *ProTip:* Shorthand comes from duplicating each character. So `#f00` (red) expands into `#ff0000`, or `#fb0` (yellow) expands to `#ffbb00`;)
 
 
 ##### HSLA
 
-Stands For: Hue, Saturation, Lightness, Alpha(Opacity)
-Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`
-Example: `hsla(0, 100%, 50%, 1)` (red)
+Stands For: Hue, Saturation, Lightness, Alpha(Opacity)  
+Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`  
+Example: `hsla(0, 100%, 50%, 1)` (red)  
 
-**Hue:** A value from 0 to 360 indicating the value of RGB on a color wheel.
+**Hue:** A value from 0 to 360 indicating the value of RGB on a color wheel.  
 
 Think of the letters RGB distributed equally clockwise around a circle. (R)ed is at 0 or 360, (G)reen is at 120, (B)lue is at 240.
 

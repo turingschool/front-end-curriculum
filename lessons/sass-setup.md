@@ -8,7 +8,7 @@ Sass will watch for any files with a `.scss` or `.sass` extension and compile th
 
 ### You should continue reading if...
   - You have a basic html/css/js structure
-  - You have NOT integrated node, webpack, or other fancy package managers (they have their own set uÂp rules)
+  - You have NOT integrated node, webpack, or other fancy package managers (they have their own set up rules)
 
 ### Verify That You Have Ruby
   The most common way to install Sass is by using Ruby.  
@@ -63,18 +63,3 @@ If you only care about a particular file, not an entire directory, simply specif
 `sass --watch ~/project/lib/styles/variables.scss`
 
 #### Happy Sassing.
-
-
-
-
-
-
-
-
-
-
-
-module.exports = {
-  accountParser: AccountParser;
-  thing: 
-}

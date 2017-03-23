@@ -37,6 +37,8 @@ Let's visualize this.
 
 ![Redux Diagram](https://i.redd.it/hl2aytgofz6x.png)  
 
+(Image courtesy of [The New Boston](https://thenewboston.com/))
+
 ### Research Spike
 
 1. **Stop And Read:**   ( 10 Minutes )
