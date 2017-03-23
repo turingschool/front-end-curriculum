@@ -9,12 +9,12 @@ Sorting algorithms are one of the common domains for studying Computer Science d
 In this project, you are challenged to implement *three*
 fundamental sorting algorithms. Your final submission should include at least these six files:
 
-* `bubble_sort.js`
-* `bubble_sort_test.js`
-* `insertion_sort.js`
-* `insertion_sort_test.js`
-* `merge_sort.js`
-* `merge_sort_test.js`
+* `bubbleSort.js`
+* `bubbleSort-test.js`
+* `insertionSort.js`
+* `insertionSort-test.js`
+* `mergeSort.js`
+* `mergeSort-test.js`
 
 ## 1. Bubble Sort
 
@@ -199,11 +199,12 @@ insertionSort(["d", "b", "a", "c"])
 
 Merge sort is the most fascinating sorting algorithm of the three, IMO, because it uses a technique called recursion.
 Recursion was a total mind-trip for me when I learned it.
-Here is a video I made with the intent of introducing recursion in a much more gradual way: https://vimeo.com/24716767
+Here is a video I made with the intent of introducing recursion in a much more gradual way:
+[Recursion Introduction](https://vimeo.com/24716767).
 
 ### Theory
 
-https://vimeo.com/channels/sortalgorithms/15559012
+[Sorting Algorithms Video](https://vimeo.com/channels/sortalgorithms/15559012)
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/merge_sort).
 For a sweet line dancing example, [see this](https://www.youtube.com/watch?v=XaqR3G_NVoo)
@@ -271,7 +272,7 @@ mergeSort(["d", "b", "a", "c"])
 
 
 ## Evaluation Rubric
-  
+
 ### 1. Fundamental JavaScript & Style
 
 * 4: Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are zero instances where an instructor would recommend taking a different approach.
@@ -300,3 +301,12 @@ mergeSort(["d", "b", "a", "c"])
 * 3: Application meets all requirements as laid out per the specification.
 * 2: Application runs, but does not work properly, or does not meet specifications.
 * 1: Application does not run, crashes on start.
+
+### 5. Code Sanitation
+
+The output from ESLint shows…
+
+* 4 - Zero complaints
+* 3 - Five or fewer complaints
+* 2 - Six to ten complaints
+* 1 - More than ten complaints
