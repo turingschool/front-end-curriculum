@@ -18,7 +18,7 @@ The lesson is not meant to be a comprehensive overview of every security techniq
 
 Sadly, the world is full of people exploiting code vulnerabilities for fun and profit.
 
-#### Theft of Propriatary Code
+#### Theft of Proprietary Code
 
   A developer creates a game that sweeps the nation. Within a week, dozens versions of that game with suspiciously similar interfaces (but slightly different graphics) start showing up all over the internet.
 
@@ -50,7 +50,7 @@ In groups of three, pick one of the following articles to read:
 - Scenario 8 [Example 1](https://www.7xter.com/2015/03/how-i-exposed-your-private-photos.html) & [Example 2](https://www.7xter.com/2015/02/how-i-hacked-your-facebook-photos.html)
 
 **Read**
-  - Read the scenario
+  - Read the scenario you pick
   - Do additional research, time permitting, into the event or events.
 
 **Small Group Discussion**
@@ -86,7 +86,7 @@ The client, however, handles all of the interactions between your users and your
 
   Should be visual, simple validations to give user quick feedback.
 
-  **Tech Recommendations:** 
+  **Tech Recommendations:**
 
   Use things like [HTML5 input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [pattern attributes](https://webdesign.tutsplus.com/tutorials/html5-form-validation-with-the-pattern-attribute--cms-25145).
 
@@ -110,7 +110,7 @@ The client, however, handles all of the interactions between your users and your
 
   **Use Environment Variables**
 
-  Store your credentials and secrets in a file seperate from the code that gets commited to Github or equivalent. Use environment variables: [the logic](https://12factor.net/config)
+  Store your credentials and secrets in a file separate from the code that gets committed to Github or equivalent. Use environment variables: [the logic](https://12factor.net/config)
 
   On heroku: [Use the CLI](https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application) or [the interface](https://devcenter.heroku.com/articles/config-vars)
 
@@ -132,7 +132,7 @@ The client, however, handles all of the interactions between your users and your
 
   **Authentication & Web Tokens**
 
-  Our next lesson will cover what webtokens are. But here is a [quick intro to jwt](https://jwt.io/introduction/).
+  You got to play around with JWTs yesterday, but here is a [quick intro to jwt](https://jwt.io/introduction/).
 
   Basically, modern authentication of users depends on handshakes and encryption. Consider this a handwave.
 
@@ -150,7 +150,7 @@ The client, however, handles all of the interactions between your users and your
 
   Never fully trust your developers. Before data can be stored in the database, do some base level data validation. And never store plain text passwords in your database.
 
-  ***Tech Recommendations:**
+  **Tech Recommendations:**
 
   Any major database will include methods and constraints to validate data quickly prior to storage.
 
@@ -174,7 +174,7 @@ When we talk about security, you will notice that Googling becomes harder and ha
 
 One theory: it's really, really, very, very hard to understand fully.
 
-Developers who specialize in security are few and far between. They get paid a lot of money. They also have a lot of responsability.
+Developers who specialize in security are few and far between. They get paid a lot of money. They also have a lot of responsibility.
 
 Let these larger points drive the way you approach security in the applications that you build.
 
