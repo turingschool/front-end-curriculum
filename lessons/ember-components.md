@@ -11,14 +11,15 @@ module: 3
 
 ## Explore.
 
-Let's take a minute to explore what this app does and look at the different Ember concepts.  
+Let's take a minute to explore what this app does. Focus particularly on files in the `components` directory. Today we will briefly discuss the role of a component in Ember and code out a small example.  
 
+Start up your Ember server.  
 ```
 ember s
 ```
 Components allow you to create reusable sections of code that maintain their own behavior.  
 
-What pieces of this app seem like reusable chunks of code?  
+Reflection: What pieces of this app seem like reusable chunks of code?  
 
 Let's start by digging into what our template structure looks like.  
 
@@ -27,14 +28,14 @@ Let's start by digging into what our template structure looks like.
 Open up `app/templates`.  
 
 Looks like we only have 2 templates that AREN'T associated with components:
-* `application.hbs`  --> Contains all of the HTML that we want to exist on ALL PAGES.  
-* `groceries.hbs` --> Contains two references to components, some filter buttons, and the grocery list.  
+* `application.hbs`: Contains all of the HTML that we want to exist on ALL PAGES.  
+* `groceries.hbs`: Contains two references to components, some filter buttons, and the grocery list.  
 
-Note that first line in `groceries.hbs` that references a component named `add-grocery`. Let's find that template in `app/templates/components/`.  
+Note that first line in `groceries.hbs` references a component named `add-grocery`. Find that template in `app/templates/components/`.  
 
 Looks like a form with some extra handlebars syntax. Split your text editor so you're looking at `app/templates/components/add-grocery.hbs` on one side, and `app/components/add-grocery.js` on the other. What do you notice about the interpolated information from the template compared to the syntax in the component?  
 
-Change one of the default `''` values in the component and check out the page in a browser.  
+Change one of the default empty string (`''`) values in the component and check out the page in a browser.  
 
 Next, take a moment to look through what is happening on the `createGrocery` action.  
 
@@ -46,7 +47,7 @@ For demo purposes, let's create a component from scratch to check out how these 
 ember g controller double-clickable
 ```
 
-This command will generate our `.hbs` file, a `.js` file, and a test. We want to create a section of code that when double clicked will do a thing. Let's call this component `double-clickable`.
+This command will generate a `.hbs` file, a `.js` file, and a test file. We want to create a section of code that when double clicked will do a thing. Let's call this component `double-clickable`.
 
 Somewhere in your `application.hbs` or `groceries.hbs` files, make a reference to the component:
 
@@ -67,7 +68,7 @@ Then, in `app/templates/components/double-clickable.hbs`, add the following:
 
 In the browser you should now see a black div with white text.  
 
-In `app/components/double-clickable.js` adjust the file to have our doubleClick method.
+In `app/components/double-clickable.js` adjust the file to have a `doubleClick()` method.
 
 ```js
 // app/components/double-clickable.js

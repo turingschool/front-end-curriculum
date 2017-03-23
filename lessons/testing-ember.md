@@ -24,13 +24,14 @@ There are three core sections of testing an Ember application that we'll cover t
   * Integration Tests  
 
 Unit tests cover small pieces of code.  
-  Example:  The date entered in a form is properly formatted.  
+  **Example:**  The date entered in a form is properly formatted.  
 
 Acceptance tests interact with the application the same way a user would - clicking on buttons, filling out forms, etc.  
-  Example: A user can add a new item to a list.  
+  **Example:** A user can add a new item to a list.  
 
-Integration tests are like the happy medium between Unit and Acceptance tests. They verify interactions between chunks of code within your app. Components are generally tested with integration tests.
-  Example: A form is properly displayed within a particular section of HTML.
+Integration tests are like the happy medium between Unit and Acceptance tests. They verify interactions between chunks of code within your app.  
+Components are generally tested with integration tests.  
+  **Example:** A form is properly displayed within a particular section of HTML.
 
 #### Tools  
 Out of the box, Ember comes with a testing framework called [QUnit](http://qunitjs.com/). Like most JS testing tools, QUnit comes with a particular list of familiar [assertions](http://api.qunitjs.com/category/assert/).  
@@ -63,9 +64,9 @@ test('visiting /groceries', function(assert) {
 
 ```
 
-*Note:* The test will automatically fill in the route for you with the test name. You'll need to change any line that tries to visit `'/groceries'` to actually represent the route you're aiming for.  
+*Note:* The test will automatically fill in the route for you with the test name. If that is not the route you are testing,  you'll need to change any line that tries to visit `'/groceries'` to actually represent the route you're aiming for.  
 
-```
+```js
 import { test } from 'qunit';
 import moduleForAcceptance from 'ember-groceries/tests/helpers/module-for-acceptance';
 
@@ -81,9 +82,9 @@ test('visiting /', function(assert) {
 
 ```
 
-This boilerplate test is simply to make sure your app is wired up and the environment is ready to go. Here is where you can write out a skeleton of what features you might want to be testing.
+The boilerplate test above is simply to make sure your app is wired up and the environment is ready to go. Here is where you can write out a skeleton of what features you might want to be testing.
 
-```
+```js
 import { test } from 'qunit';
 import moduleForAcceptance from 'ember-groceries/tests/helpers/module-for-acceptance';
 
@@ -105,20 +106,20 @@ test('should show new idea on submit', function (assert) {
 
 ### Running Tests
 
-Use the command `ember test --server` from the command line to run your test suite. You'll see a report output in the terminal as well as an independent Chrome instance with detailed information.  
+Use the command `ember test --server` from the command line to run your test suite. You'll see a report print out in the terminal, and an independent Chrome instance should pop up with detailed information.  
 
-**Important Note**: Make sure as you peruse documentation that you are looking at a relevant version of Ember.
+**Important Reminder**: Make sure as you peruse documentation that you are looking at a relevant version of Ember.
 
 ### Unit Tests  
-As always, Unit Tests test small chunks of code to ensure the functionality is being implemented as expected. They are independent from the application as a whole.
+As always, Unit Tests test small chunks of code to ensure the functionality is being implemented as expected. They are isolated from the application as a whole.
 
-To create a unit test, simply create an instance of the Ember.Object in question, pass it any required information, and assert you get back what you expect.  
+To write a unit test, simply create an instance of the Ember object in question, pass it any required information, and assert you get back what you expect.  
 
 Unit tests are where methods within your app are tested. For instance, if you have a model that looks something like this:
 
 ```js
 import Ember from 'ember';
-
+w
 export default Ember.Object.extend({
   count: 0,
   calc() {
