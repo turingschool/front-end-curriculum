@@ -98,7 +98,7 @@ To this end, make sure to include sufficient UX to allow the user to fully inter
 
 ### Code Sanitation
 
-The output from JSHint shows…
+The output from ESLint shows…
 
 * 4 - Zero complaints
 * 3 - Five or fewer complaints
