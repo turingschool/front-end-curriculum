@@ -9,21 +9,33 @@ module: 4
 
 By the end of this lesson, you will:
 
-* Have a 500' view of the difference between a relational and non-relational database
 * Have an introduction to why/how database storage structures are chosen
+* Have a 500' view of the difference between a relational and non-relational database
 * Understand where client-side storage fits into the history of web development
 
 ### Choosing a Database
 
-Choosing a database for your application is highly dependent on what kind of data you plan to store. You'll often hear of two different types of databases: **relational** and **non-relational**. 
+A database is, basically, a collection of data which is stored in an organized way.
 
-Traditional databases such as [MySQL](https://www.mysql.com/) are considered **relational** -- data points are predictable and have strict relationships between each other. The database requires a strict, pre-defined schema with tables and columns.
+Software products that are used to build, maintain and access data from a database are called Database Management Systems.
 
-Non-relational databases, such as [MongoDB](https://www.mongodb.com/), allow for greater flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
+Choosing a DBMS for your application is highly dependent on what kind of data you plan to store. You'll often hear of two different types of database systems: **relational** and **non-relational**. 
 
-[Relational vs. non-relational databases and how to choose](https://www.pluralsight.com/blog/software-development/relational-non-relational-databases)
+Traditional databases such as [MySQL](https://www.mysql.com/) are considered **relational** -- data points are predictable and have strict relationships between each other. The database requires a strict, pre-defined schema (more on this in a bit) with tables and columns.
 
-You also might choose a particular database depending on what technologies you're using elsewhere in your application. For example, if you're using Firebase for authentication and storage, it might make sense to use Firebase as your back-end store as well. The database you choose will ultimately have an effect on the structure of your data. For example, read through how Firebase prefers that you [structure your data](https://firebase.google.com/docs/database/web/structure-data). Following the documentation and examples for the database you choose will help you understand the best way to structure your data to work most efficiently and effectively with that particular database.
+Up until now, you have mostly seen non-relational databases. Non-relational databases, such as [MongoDB](https://www.mongodb.com/), allow for greater flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
+
+You also might choose a particular database depending on what technologies you're using elsewhere in your application. For example, if you're using Firebase for authentication and storage, it might make sense to use Firebase as your back-end store as well. 
+
+### Understanding the Data Modeling Process
+
+Let's pretend you get hired by a company to build an internal tool. Company A recently bought a really nice building in the heart of downtown Denver. The company is planning to expand, so they bought a building that is bigger than they need currently.
+
+While they wait to be aquired, they would like to rent out space in a big open area to other companies as a co-working space.
+
+They want you to build a system where they can rent out tables or single spots at tables for set periods of time.
+
+How would you model this? 
 
 #### Readings
 

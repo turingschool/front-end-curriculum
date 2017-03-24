@@ -7,13 +7,13 @@ tags: javascript, introduction, foundation, variables
 
 ## Learning Goals
 
-By the end of this lesson, you will know/be able to:
+In this lesson we'll cover:
 
-* Understand the basic JavaScript data types
-* Understand what a variable is and how to use it
-* Understand operators and how to use them
-* Understand conditionals and when to use them
-* Declare and call functions with or without parameters
+* The basic JavaScript data types
+* What a variable is and how to use it
+* Operators and how to use them
+* Conditionals and when to use them
+* How to declare and call functions with or without parameters
 
 ## History of JavaScript
 
@@ -63,7 +63,7 @@ Booleans can be very useful to help determine which part of a script should be r
 
 ### Your Turn
 
-Let's take a couple of minutes to pair up and explain these three data types to your neighbor. Take turns, and make sure both of you have a chance to explain. This is to practice using the vocabulary and talking about code.
+Let's take a couple of minutes to pair up and explain these three data types to your neighbor. Take turns, and make sure both of you have a chance to explain. This is to practice using the vocabulary and talking about code. Practice using your console to show the different data types.
 
 # Variables in JavaScript
 
@@ -71,9 +71,9 @@ As we're writing code, there are many times when we want to be able to store a v
 
 ## What is a variable?
 
-A variable is a place to store values. When we write scripts (a set of instructions for a computer to follow), we need to temporarily store small pieces of data. We store that data in variables. Variable is a good name for this concept because it indicates the stored data can _change_ (or vary) each time a script is run.
+A variable is a place to store values. When we write scripts (a set of instructions for a computer to follow), we need to temporarily store small pieces of data. We store that data in variables. "Variable" is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run.
 
-A variable is, at it's most simple, a declaration. It's made up of two parts: the variable keyword, `var`, and the variable name, which can be whatever you choose. Let's see what that looks like in the console:
+A variable is, at its most simple, a declaration. It's made up of two parts: the variable keyword, `var`, and the variable name, which can be whatever you choose. Let's see what that looks like in the console:
 
 ```javascript
 var myVariableName;
@@ -105,7 +105,7 @@ var myVariableName = "Hello, variable!";
 
 We've added a couple of things to our variable. Let's go through them:
 
-After our `var` keyword (a special word that the JavaScript interpreter knows is used to create a variable) and our variable name, we have an equals sign, `=`. That's called the _assignment opperator_, because we use it to _assign_ a value to our variable declaration.
+After our `var` keyword (a special word that the JavaScript interpreter knows is used to create a variable) and our variable name, we have an equals sign, `=`. That's called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.
 
 Let's test these additions in the console.
 
@@ -162,19 +162,15 @@ var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature +
 ```
 This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and concatenate the data from our variable.
 
-# Conditionals
+# Expressions
 
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
-
-To use conditionals, we first need to talk about expressions, operators, and statements.
-
-## Expressions
 An _expression_ evaluates to (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
 
 1. Expressions that assign a single value to a variable. They look like this: `var fruit = "apple";`
 2. Expressions that use two or more values to return a single value. They look like this: `var adele = "Hello, " + "its me";`
 
-## Operators
+# Operators
+
 Expressions rely on operators to calculate their single value. There are 5 basic types of operators to get you started:
 
 1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators) assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
@@ -183,7 +179,8 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
-## Statements
+# Statements
+
 A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon.
 
 Example statements:
@@ -192,6 +189,18 @@ Example statements:
 console.log('BOOM');
 alert('POW');
 ```
+
+## Your Turn
+
+Turn to your neighbor and explain what expressions, operators, and statements are. Take turns, and be sure you both have a chance to explain all three.
+
+
+# Conditionals
+
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." To do this in JavaScript, we can write conditionals to take a certain path in our program.
+
+To use conditionals, we first need to use expressions, operators, and statements.
+
 
 ## Basic Conditional Structure
 
@@ -205,7 +214,9 @@ if (expression) {
 }
 ```
 
-If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false). Some examples of expressions for conditionals are:
+If the expression evaluates to `true`, then the statement(s) for that condition will run. Otherwise, if the expression is `false`, then the statement(s) will not run at all. The expression will usually contain an operator to make a comparison (that evaluates to true or false).
+
+Some examples of expressions we could use for a conditional are:
 
 * `myNum < 5`
 * `userCity === "Denver"`
@@ -281,7 +292,7 @@ Create your own functions in the console:
 ## Pass Information to a Function:
 Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_. These are bits of information that you identify with appropriately named labels (you get to decide the notation) inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as means to pass values.
 
-## Parameters vs. Arguments
+### Parameters vs. Arguments
 Its a subtle difference. Basically, when you declare a function, and you stipulate the function will accept some bits of information, those are parameters. Then, when you pass the values of the parameters, those are called arguments. Like this:
 
 ```javascript

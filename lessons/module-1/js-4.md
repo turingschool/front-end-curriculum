@@ -4,15 +4,103 @@ tags: js, introduction, constructor functions, this
 ---
 ### Goals
 
-By the end of this lesson, you will know/be able to:
+In this lesson we'll cover:
 
-* Understand what a constructor function is
-<!-- * Introduction to ```this``` -->
-* Understand whether you need an array or object data structure
+* Objects
+* What a constructor function is
+* When you need an array or object data structure
+* Introduction to ```this```
 
-<!-- pulled from second half of JS III lesson -->
 
-# Object Review
+# Objects
+Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
+
+Let's look at an example:
+
+```javascript
+var objectName = {
+  property1: value1,
+  property2: value2,
+  property3: function() {
+    return "I'm value3!";
+  }
+}
+```
+
+Which looks like this when we implement it in code:
+
+```javascript
+var school = {
+  name: 'International School of Denver',
+  capacity: 250,
+  languageImmersion: true,
+  currentStudents: 75,
+  checkOpenSpots: function() {
+    return this.capacity - this.currentStudents;
+  }
+}
+```
+The ```school``` object has four properties:
+
+- ```name: 'International School of Denver'```
+- ```capacity: 250```
+- ```languageImmersion: true```
+- ```currentStudents: 75```
+
+The ```school``` object has one method:
+
+- ```checkOpenspots: function(){ return this.capacity - this.currentStudents; }```
+
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
+
+There are two ways to access the properties or methods of an object:
+
+The most common is Dot Notation:
+
+```js
+var schoolName = school.name
+var schoolCapacity = school.capacity
+```
+
+Bracket Notation is less commonly used:
+
+```js
+var schoolName = school['name']
+var schoolCapacity = school['capacity']
+```
+
+### What is `this`: a 10,000ft Introduction
+You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`?
+
+`this` is a keyword in Javascript that references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
+
+In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement that being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents`.
+
+`capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
+
+### Your Turn
+Let's goof off in the console a bit. As a group, we'll practice working with an object:
+
+```javascript
+// Create an object in honor of @jhunbug
+var myLitObject = {
+  burritoType: "carne asada"
+}
+
+// 1. Get the value of myLitObject
+// 2. Get the value of burritoType
+// 3. Add a new property of your choosing
+// 4. Check the value of myLitObject again
+// 5. Ask myLitObject for the value of the new property you set, but utilize a different notation than when you asked for the value of burritoType in step #2
+// 6. Change the value of burritoType
+// 7. Get the value of myLitObject
+// 8. Create a method on myLitOjbect that logs "Skateboarding is fun" to the console
+// 9. Check the value of myLitObject. Do you see your method?
+// 10. Use myLitObject to log "Skateboarding is fun"
+```
+
+### Your Turn, Part 2
+Turn to your neighbor and explain this to each other. Practice makes perfect, so make sure you both get to explain all three questions!
 - How do you create an object using literal notation?
 - What is an object and what is it made up of?
 - When we assign a function as the value of a key inside an object, what do we call it?
@@ -54,7 +142,7 @@ Let's talk about what's going on here:
 - Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma
 - Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.
 
-## Oh jeeze...```this``` again
+## Oh jeeze...```this``` thing
 The keyword ```this``` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, ```this``` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
 
 ```javascript

@@ -1,10 +1,10 @@
 ---
-title: Photo Album
+title: Foto Finder
 ---
 
 ## Specification
 
-With some jQuery lessons under your belt, it's time to try your hand at building a small application: a photo album!
+With some jQuery lessons under your belt, it's time to try your hand at building a small application: a photo album called Foto Finder!
 
 In it's simplest form, the application should have the following:
 
@@ -12,7 +12,7 @@ In it's simplest form, the application should have the following:
 
 Before you start writing code for this project, set up your project directory as follows:
 
-- Your project directory (called `photo-album`)
+- Your project directory (called `foto-finder`)
 - An HTML file called `index.html`, which will contain all of your HTML code.
 - A CSS file called `styles.css`, which will contain all of your CSS including media queries.
 - A JavaScript file called `scripts.js`, which will contain all of your JavaScript code.
@@ -21,7 +21,7 @@ Before you start writing code for this project, set up your project directory as
 Here is a visual representation of the file structure:
 
 ```
-|-- photo-album
+|-- foto-finder
    |-- index.html
    |-- styles.css
    |-- scripts.js

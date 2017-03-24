@@ -43,42 +43,45 @@ Out of the box, you will get:
 ```
 
 ## Ember Data Flow
-[Ember Core Concepts]("https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png")
+![Ember Core Concepts](https://guides.emberjs.com/v2.11.0/images/ember-core-concepts/ember-core-concepts.png)
 
 ## Testing
-Ember's built-in testing framework allows for TDD using Acceptance Tests.  
+Ember's built-in testing framework allows for TDD using Acceptance Tests. Let's create one and see what we get.  
 
 ```
 ember g acceptance-test test-name
 ```
 
-This will generate a test file:  
+This will generate a test file with a few lines of built in boilerplate code:  
 
 ```
 tests/acceptance/test-name-test.js
 ```
 
-Let's check it out `ember test --server`  
+To run the test, fire off the command `ember test --server`  
 
 ## Routes  
 
 Ember applications are organized and run by "Routes".  
 * User navigates to a route. Example: `'/'`.  
-* Ember Router maps the URL to a particular `Route Handler`  
-* The Route Handler renders the template associated with said route.  
-* The Route Handler hands the template the Model the template needs to know about.  
+* Ember Router maps the URL to a particular `route handler`  
+* The `route handler` renders the template associated with said route.  
+* The `route handler` hands the template which Model the template needs to know about.  
 
+Generate a route using the Ember CLI tools:  
 ```
 ember g route route-name
 ```
 
 This Generates:
 * A route file: `app/routes/about.js`  
-* A template: `app/templates/about.hbs`  
-* A test: `tests/unit/routes/about-test`  
+* A template file: `app/templates/about.hbs`  
+* A test file: `tests/unit/routes/about-test`  
 * Updates the `router.js` file.   
 
 ## Model Hook
+
+Within the route file you'll notice there is a method called `model()`. This piece of code is known as the `model hook`.
 
 ```js
 // app/routes/modelName.js
@@ -92,7 +95,7 @@ Ember calls for this `model hook` at various times throughout the lifecycle of t
 
 One example would be when a user enters the `rentals` route.  
 
-The model hook returns the array of models and passes it to the template.  
+The model hook then returns the array of models associated with the given template and passes it to the template.  
 
 ## Models
 Objects that represent data that your application presents to the user.  
@@ -127,11 +130,11 @@ Rendered by the router when entering a Route.
 
 Receives the `model` (whatever the Route's `model hook` returns).   
 
-Controllers are the first place actions bubble up to find rules about behavior.  
+Controllers are the first place actions bubble up to find rules about model behavior.  
 
-(see markdown file)
 
 ```js
+// (see raw markdown code to view curly braces)
 // In template
 {{#if isExpanded}}
   <button {{action "toggleBody"}}>Hide Body</button>
@@ -164,17 +167,17 @@ Components have two parts:
 
 To invoke a component in a template file:  
 
-(see markdown file)  
 
-```
+```js
+// (see raw markdown code to view curly braces)
 {{#each model as |item|}}  
   {{my-component item=itemUnit}}  
 {{/each}}  
 ```
 
-Notice the name of the component matches the name of the my-component.js file.  
+Notice the name of the component matches the name of the `my-component.js` file.  
 
-Then we assign each "unit" we are iterating over as the whatever we designate within the pipes...
+Then we assign each "unit" we are iterating over to whatever we designate within the pipes, just like you would when iterating over anything else in JavaScript.
 
 ## Templates  
 Templates are the "view" layer of an Ember application.  
@@ -185,9 +188,10 @@ For the most part, they look like any other fragment of HTML.
 
 ## Handlebars  
 
-(see markdown file)  
-
-`<div>Hi {{name}}, this is a valid Ember template!</div>`  
+```js
+// (see markdown file)  
+<div>Hi {{name}}, this is a valid Ember template!</div>
+```
 
 ## Application Template
 If an application template exists, anything it in will be displayed on every page.
@@ -195,11 +199,12 @@ If an application template exists, anything it in will be displayed on every pag
 ## FAQ  
 
 #### Q: Controller vs Component  
-A: First of all: controllers are getting ditched shortly. [Proof](https://i.imgur.com/TgmUDac.png).  
-Components have everything controllers have, plus stuff the views have.
+A: First of all: controllers are getting ditched shortly. ![Proof](https://i.imgur.com/TgmUDac.png).  
+Components have everything controllers have, plus stuff the views have.  
+That being said, controllers aren't gone.  
 
 #### Q: So...then what's a controller?
-Can hold onto short term state.  
+Controllers hold onto short term state.  
 Actions get sent to the controller first.  
 For example, if you send a variable to your view (ie `<p>{{someText}}</p>`), your app will check the controller for info first before bubbling up to the route.  
 

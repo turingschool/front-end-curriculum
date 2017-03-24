@@ -19,7 +19,7 @@ Debugging your front-end code can be an intimidating part of the development pro
 The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.
 
 ### Developer Tools
-One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). Though you can explore the browser DevTools on any webpage, we'll be using a simple expense tracking application to demonstrate how to use the DevTools. You can clone the application [here](https://github.com/turingschool-examples/example-expense-app), and follow the installation instructions in the README to get set up. The application has some pre-made bugs for us to solve as we go through the lesson.
+One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). Though you can explore the browser DevTools on any webpage, we'll be using a simple expense tracking application to demonstrate how to use the DevTools. You can clone the application [here](https://github.com/turingschool-examples/debugging-with-devtools), and follow the installation instructions in the README to get set up. The application has some pre-made bugs for us to solve as we go through the lesson.
 
 #### Accessing DevTools
 To open developer tools in Chrome:
@@ -257,7 +257,29 @@ The network tab shows you information about all the server requests that were ma
 
 ![Network Panel][network-panel]
 
+
+
+One thing you'll notice about the network panel is that it won't automatically record any network requests unless you have the panel open at the time they're made. Additionally, the request list will refresh every time you navigate to a new page. You can change this functionality by selecting **Preserve Log** at the top of the panel.
+
+#### HTTP Status Codes
+
+The network panel is only useful if you understand what types of responses you can get back from a server. Familiarize yourself with all the different [status codes](http://www.restapitutorial.com/httpstatuscodes.html) you might receive from a network request. These status codes give you information about what happened during your request - was it successful? Did it fail? Why did it fail?
+
+Lucky for us, the network panel automatically highlights any failed requests in red:
+
+![Network Panel Error][network-panel-error]
+
+When we're trying to debug a network request and we see that it is highlighted in red in the network panel, we can click on the request under the 'Name' column to view more details about it. Here we'll be able to see more information about why it failed and what data was sent with the request:
+
+![Request Details][request-details]
+
+The most important tabs in this view are the HEADERS tab and the RESPONSE tab. The Headers tab will give you detailed information about what was sent in the request. The response tab will show you what you actually received back from the server. This could be the JSON data you requested, an error message, or even an entire HTML file.
+
 [network-panel]: /assets/images/lessons/debugging-with-devtools/network-panel.png
+
+[network-panel-error]: /assets/images/lessons/debugging-with-devtools/network-panel-error.png
+
+[request-details]: /assets/images/lessons/debugging-with-devtools/request-details.png
 
 ---------------------------------------
 

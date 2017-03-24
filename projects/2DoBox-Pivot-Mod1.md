@@ -8,8 +8,6 @@ We thought they were pretty great, but, we think it's time to pivot those projec
 
 You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox.
 
-You will also implement acceptance tests using selenium webdriver and follow (and see the benefits of) Test Driven Development (TDD).
-
 ## Getting Started (Should I Fork or Clone?!)
 
 Beginning The Pivot
@@ -20,9 +18,9 @@ Once you've explored the base project, the team leader will:
 - Clone the IdeaBox project that you'll be working with to your local machine
 - Go into that local project directory and `git remote rm origin`
 - Add the new repository as a remote `git remote add origin` `git://new_repo_url` (this will be different based on your actual remote URL)
-- Push the code  `git push origin master`
+- Push the code `git push origin master`
 - Add the other team members as collaborators in GitHub
-- Once the team leader has done this, the other team members can fork the new repo.
+- Once the team leader has done this, the other team members, if applicable, can fork the new repo.
 
 # Restrictions and Outside Code
 
@@ -30,26 +28,9 @@ Your project should evolve, refactor, and clean up the code you inherit. This in
 
 Furthermore, there should be no reduction in functionality except when explicitly called for by new requirements.
 
-## Phase 1: Setup Selenium Testing
-
-We're going to be using Selenium for acceptance testing. Before you write any new feature code, setup Selenium for this project using [the selenium lesson](http://frontend.turing.io/lessons/module-1/selenium-testing).
-
-## Phase 2: Write Acceptance Tests
-
-Before you write any new feature code, write acceptance tests for all existing functionality. Create a directory in your project called `test`, and create all of your test files in this directory.
-
-Your project needs to be set up on `gh-pages` in order to run tests in selenium. This is because the `driver.get()` method requires a web address (or file path), but the local file path to your `index.html` file is different between you and your project partner. Using `gh-pages` solves this because you have one common address to use for your `driver.get()` method.
-
-## Phase 3: Refactor
+## Phase 1: Refactor
 
 The following features are not completely new. While this functionality may be already in place, you need to update the user interface and naming conventions in your code base. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
-
-Throughout this phase, we challenge you to use Test Driven Development (TDD) during feature enhancement - TDD is not a requirement. This means you:
-
-  1. Write a failing acceptance test that describes the feature.
-  2. Write the feature code to make the acceptance test pass.
-  3. Refactor if there are opportunities to do so.
-  4. Move on to the next feature repeating this process.
 
 ### Refactoring Guidelines
 
@@ -61,7 +42,15 @@ Here are some refactoring points we want to see in your project:
   * Little to no duplication in JavaScript (DRY principle)
   * Avoid deep nesting (for if/else conditionals)
   * Line lengths (keep them short and readable to avoid horizontal scrolling in your text editor)
-  * File and folder organization (test, images, CSS directories)
+  * File and folder organization (images, CSS directories)
+
+Specifically, we're going to set some constraints:
+
+  * You cannot use any nested if/else statements
+  * You cannot use anonymous functions (mainly looking at event event listeners for this)
+  * HTML must follow basic accessibility guidelines (semantic tagging, image attributes, roles)
+  * No use of global variables
+  * Functions cannot be longer than 8 lines (including event listeners)
 
 When you "refactor," you make changes to the code without changing any of its functionality. You can think of it like a "clean up," for the sake of improving readability and quality.
 
@@ -83,7 +72,6 @@ On the application’s main page, a user should:
 
 * The `Save` button should be disabled when there is not valid content in both input fields.
 
-
 ### Deleting an existing TODO
 
 When viewing the TODO list:
@@ -92,7 +80,6 @@ When viewing the TODO list:
   * Upon clicking `Delete`, the appropriate TODO should be removed from the list.
   * The page should not reload when an idea is deleted.
   * The TODO should be removed from localStorage - it should not re-appear on next page load.
-
 
 ### Editing an existing TODO
 
@@ -111,7 +98,7 @@ We’d like our users to be able to easily find specific TODOs they've already c
   * The page should not reload.
   * Clearing the filter box should restore all the ideas to the list.
 
-## Phase 4: Add New Features
+## Phase 2: Add New Features
 
 ### Marking a TODO as completed
 
@@ -156,7 +143,7 @@ The application should allow users to filter the TODO list based on level of imp
 * Your application should have 5 buttons corresponding to each level of importance (Critical, High, Normal, Low, and None).
 * When one of the filter buttons is clicked, the TODO list should only display TODOs with the selected importance.
 
-## Phase 5: Extensions
+## Extensions
 
 ### Character Counter
 
@@ -184,7 +171,7 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 
 4 - The application meets all of the phase requirements listed above and implements one or more of the extensions.
 
-3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from phases 1 through 4 that make the application feel incomplete or hard to use.
+3 - The application meets all of the phase requirements listed above with functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from phases 1 through 4 that make the application feel incomplete or hard to use.
 
 2 - The application is in a usable state, but is missing 1 or more of the features outline in the specification above.
 
@@ -223,16 +210,6 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 
 0 - Your client-side application does not function or the application does not make use of localStorage for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
-
-### Testing
-
-4 - Project has a running test suite. The test suite covers all aspects of the application.
-
-3 - Project has a running test suite but fails to cover some features. The application makes some use of feature testing.
-
-2 - Project has sporadic use of tests. The application contains numerous holes in testing and/or many features are untested.
-
-1 - There is little or no evidence of testing in this application.
 
 ### Workflow
 
