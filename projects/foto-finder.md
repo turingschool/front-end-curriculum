@@ -81,23 +81,33 @@ Let's improve the user experience in this phase.
 
 ### Layout Comps
 
+[Download the Foto Finder assets here.](https://drive.google.com/drive/folders/0B_lPnjyMN6-CSEFYTXBBbHNybFE?usp=sharing)
+
 #### Desktop layout:
 
-<!-- ![Linked List Desktop][desktop-base] -->
+![Foto Finder Desktop][desktop-base]
+
 
 #### Mobile layout:
 
-<!-- ![Linked List Mobile][mobile-base]
+![Foto Finder Mobile][mobile-base]
 
-[Download the Linked List Logo here.](https://drive.google.com/file/d/0B_lPnjyMN6-CWjBGME1BUUgxTE0/view?usp=sharing) -->
+
+#### Desktop and Mobile Full View
+
+![Foto Finder Mobile Expanded][mobile-expanded]
+![Foto Finder Desktop Expanded][desktop-expanded]
+
 
 #### Color and font spec:
 
-<!-- ![Design Specs][design-specs]
+![Design Specs][design-specs]
 
-[desktop-base]: /assets/images/projects/linked-list/linked-list-01.png
-[mobile-base]: /assets/images/projects/linked-list/linked-list-02.png
-[design-specs]: /assets/images/projects/linked-list/linked-list-03.png -->
+[desktop-base]: /assets/images/projects/foto-finder/fotofinder-1.png
+[mobile-base]: /assets/images/projects/foto-finder/fotofinder-2.png
+[desktop-expanded]: /assets/images/projects/foto-finder/fotofinder-3.png
+[mobile-expanded]: /assets/images/projects/foto-finder/fotofinder-4.png
+[design-specs]: /assets/images/projects/foto-finder/fotofinder-5.png
 
 ## Rubric
 
