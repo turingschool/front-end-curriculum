@@ -113,7 +113,6 @@ Let's improve the user experience in this phase.
 
 ------------------------------------------------------------------
 
-
 ## Functional Expectations
 
 |Novice             | Application meets all of the expectations of phase one. |
