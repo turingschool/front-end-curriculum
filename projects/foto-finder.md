@@ -110,6 +110,8 @@ Let's improve the user experience in this phase.
 [mobile-expanded]: /assets/images/projects/foto-finder/fotofinder-4.png
 [design-specs]: /assets/images/projects/foto-finder/fotofinder-5.png
 
+------------------------------------------------------------------
+
 ## Rubric
 
 ### Functional Expectations
@@ -118,6 +120,8 @@ Let's improve the user experience in this phase.
 |Advanced Beginner  | Application meets all of the expectations of phase two. |
 |Proficient         | Application meets all of the expectations of phase three. |
 |Exceptional        | Application meets all of the expectations of phase three and one or more of the extensions. |
+
+<br>
 
 ------------------------------------------------------------------
 
