@@ -22,7 +22,6 @@ You may NOT take liberties with the layout, but your creative license includes:
   - Basic static site setup with `index.html` and `styles.css`
   - Site must be responsive
   - Create a repo on github :octocat: for your work with following naming construct: [initials]-comp-challenge-[challenge number] (i.e. __"bt-comp-challenge-1"__)
-  - Add your instructors as collaborators to the repo (:octocat: breethomas, :octocat: robbiejaeger, :octocat: LouisaBarrett)
   - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
   - Push your final work to [github pages](https://pages.github.com/)
 
@@ -30,7 +29,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ## Submission Details
 
-* __DUE by 7:30 AM 2/13/17__
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1b1NMYdKFbiMwlnjQvu5wj0GAUn6f9VCvga-eRexeGnU/edit#gid=0)
+* __DUE by 7:30 AM 4/3/17__
+* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1BGLfjXNZ62OpyFK28mqJMV4R6gILTmmJM7bzsCBOw6Y/edit#gid=0)
 
 ![static-comp-challenge-1](/assets/images/static-comp-challenge-1.jpg)
