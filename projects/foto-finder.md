@@ -96,6 +96,7 @@ Let's improve the user experience in this phase.
 #### Desktop and Mobile Full View
 
 ![Foto Finder Mobile Expanded][mobile-expanded]
+
 ![Foto Finder Desktop Expanded][desktop-expanded]
 
 
