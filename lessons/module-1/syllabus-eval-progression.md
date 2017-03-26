@@ -9,7 +9,7 @@ In order to help you take ownership of your progression in the program and self-
 
 
 ## Legend
-The legend below _generally_ describes the developmental levels achievable during the six weeks of M1. 
+The legend below _generally_ describes the developmental levels achievable during the six weeks of M1.
 The levels build off one another, whereby each increase assumes the expectations from the prior level were met.
 
 |Novice             | Can function but needs a lot of oversight. |
@@ -17,7 +17,7 @@ The levels build off one another, whereby each increase assumes the expectations
 |Proficient         | Can confidently implement code without the need for rigid feedback. |
 |Exceptional        | Understands and executes advanced concepts. |
 
-For each of the subject matter areas of focus, we've applied these levels with added definition per key skill. 
+For each of the subject matter areas of focus, we've applied these levels with added definition per key skill.
 
 <br>
 
@@ -120,7 +120,7 @@ For each of the subject matter areas of focus, we've applied these levels with a
 
 ## GIT & GITHUB
 
-#### Git 
+#### Git
 
 |Novice             | Can use commits and can articulate what a commit is and why we use them. Makes large, infrequent commits directly to master branch. |
 |Advanced Beginner  | Can create branches and willingly attempts to incorporate branches into their workflow. Commits, while infrequent, are increased in volume and show improvements in description. |
@@ -157,7 +157,7 @@ For each of the subject matter areas of focus, we've applied these levels with a
 
 |Novice             | Can establish a complementary color palette, integrate font(s), and execute a handful of the large comp details. |
 |Advanced Beginner  | Can accomplish about 50-75% of the large and small design details and can logically rework them on at least 1 breakpoint. |
-|Proficient         | Developer captures the spirit and design intent of the comp. Some small details need polish to achieve a pixel-perfect match to the comp, but developer is clearly mindful of details and has made a conscious and careful effort to match the comp. Any design decisions left open to interpretation are handled thoughtfully and are well executed, but are more noticable and/or unintuative than they would be if the designer had provided the solution, or may not be totally seamless during screen-size transitions.|
+|Proficient         | Developer captures the spirit and design intent of the comp. Some small details need polish to achieve a pixel-perfect match to the comp, but developer is clearly mindful of details and has made a conscious and careful effort to match the comp. Any design decisions left open to interpretation are handled thoughtfully and are well executed, but are more noticeable and/or unintuitive than they would be if the designer had provided the solution, or may not be totally seamless during screen-size transitions.|
 |Exceptional        | Developer skillfully captures the spirit and design intent of all comp details. Execution is pixel-perfect and any design decisions left open to interpretation are solved intentionally, are as seamless as if the designer had provided the solution, are handled gracefully, and enhance the overall design.|
 
 #### Design Concepts
@@ -178,7 +178,7 @@ For each of the subject matter areas of focus, we've applied these levels with a
 |Novice             | Can communicate needs, expectations, scheduling constraints through a DTR, effectively creating a working plan with partner.|
 |Advanced Beginner  | Can identify deltas in skill level and collaborate on methods whereby both pairs can share equitably in the workload. Can revisit the DTR to address changes that arise, and/or simply to keep one another reminded of the working plan.|
 |Proficient         | Can diplomatically handle issues that arise between the pair through respectful, focused, targeted feedback and implement changes to positively adapt the working relationship and keep the project on track. Can effectively implement tactics to support their partner's learning and project goals, while also honoring their own personal learning and project goals, should the two be different or at different levels due to skill delta. |
-|Exceptional        | Pair collaboration and communication is exceptional, with the distibution of work being equal and balanced, and both partners experiencing a good working flow, able to handle stress, deadlines, issues with calm and focused demeanor.|
+|Exceptional        | Pair collaboration and communication is exceptional, with the distribution of work being equal and balanced, and both partners experiencing a good working flow, able to handle stress, deadlines, issues with calm and focused demeanor.|
 
 <br>
 
@@ -194,4 +194,3 @@ For each of the subject matter areas of focus, we've applied these levels with a
 |Exceptional        | Is well versed in the Sources tab of the dev tools and can implement breakpoints, watch changing values of variables, and can work with debugger statements in place of console logs.|
 
 <br>
-
