@@ -4,7 +4,7 @@ title: Foto Finder
 
 ## Specification
 
-With some jQuery lessons under your belt, it's time to try your hand at building a small application: a photo album called Foto Finder!
+With some jQuery lessons under your belt, it's time to try your hand at building a small application: a photo album called Foto Finder! For this project, you can use either vanilla JavaScript (`document.querySelector()`) or the jQuery library (`$()`). If you're going to use jQuery, don't forget to pull in the library.
 
 In it's simplest form, the application should have the following:
 
@@ -31,7 +31,7 @@ Here is a visual representation of the file structure:
       |-- photo3.jpg
 ```
 
-It is up to you to gather images to put into your `photos` directory. These assets are not provided for you. In the example above, `photo1.jpq` is just a placeholder name to show you that your image files go inside the `photos` directory. The names of the image files can be whatever you want.
+It is up to you to gather images to put into your `photos` directory. These assets are not provided for you - only button assets are provided. In the example above, `photo1.jpq` is just a placeholder name to show you that your image files go inside the `photos` directory. The names of the image files can be whatever you want.
 
 ### Phase One
 
@@ -41,6 +41,7 @@ This phase is all about setting up the user inputs and general structure of the 
   - One for the title of the photo
   - One for the caption of the photo
 - One input field to upload the photo (hint: look at the different HTML input element type attributes and how you can use on of them to select a file from your computer)
+  - [This article](https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/) can help you with styling the file upload button
 - One "Add to Album" button for adding the photo to the album so you see it on the page
 - A section for all of the photos in the album to live
 
