@@ -32,37 +32,65 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ***
 
-## Evaluation Rubric
+## HTML
 
-### Design Integrity
+#### Accessibility
 
-- 4: The comp beautifully articulates the original design intent and there are no areas where an instructor would make changes with respect to color, layout, imagery, spatial relationship of graphical elements.
-- 3: The comp accurately reflects the design integrity with respect to color, layout, imagery, spatial relationship of graphical elements. While there are areas of improvement, it is a close representation of the original design.
-- 2:  The comp is missing major design elements and/or incorrectly applies design with respect to any number of major deviations across color, layout, sizing, imagery, graphical spatial relationships.
-- 1:  The comp fails to respect the original comp layout and visual hierarchy intent. In addition, but not limited to, it fails to employ complementary color palette, and/or is missing major design elements.
+|Novice             | Knows what a semantic tag is and leverages the HTML5 structural tags to organize the content of their markup. |
+|Advanced Beginner  | Leverages more precise semantic tags when applicable, and employs basic ARIA roles attributes for added clarity in structure, descriptive image alt attributes, title attributes for applicable anchor tags. |
+|Proficient         | Employs detailed accessibility practices throughout markup, especially in forms and can speak to decisions made in accessibility choices as it relates to specific accessibility concerns. |
+|Exceptional        | Can run markup through a variety of online accessibility tools and score well for content, color, screen readers, etc. |
 
-### Responsive Layout
+#### Style
 
-- 4: The comp is fully responsive and there are no areas where the instructor would make changes.
-- 3:  The comp logically breaks down across several breakpoints to accommodate mobile, tablet, desktop, and large format screens. While there are areas for improvement, nothing is lost or illegible across any of the screen sizes.
-- 2:  The comp fails to employ multiple breakpoints and the design is severely compromised at either extreme of small (mobile) or large (flat screen) size.
-- 1:  The comp is not responsive at any size.
+|Novice             | Crafts markup with proper indentation and opening/closing tags. |
+|Advanced Beginner  | Crafts markup with proper and logical nesting. |
+|Proficient         | Crafts lean, efficient markup that is easy to read and follow across naming conventions, structure, and solid formatting that follows industry best practices. |
+|Exceptional        | Crafts lean, efficient markup and can speak directly to choices made to improve performance, including but not limited to, page load times, css/js optimizations, image optimizations. |
 
-### HTML Style
+<br>
 
-- 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
-- 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing. Developer employs basic use of semantic tags and makes additional effort where applicable to write accessible markup.
-- 2:  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
-- 1:  Developer writes code with unnecessary tags, selectors, or nesting that do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
+------------------------------------------------------------------
 
-### CSS Style
+## CSS
 
-- 4: Application has exceptionally well-factored CSS with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
-- 3:  Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS is doing.
-- 2:  Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-- 1:  Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
+#### Structure of Code
 
-***
+|Novice             | Can effectively target DOM elements via tag, class, and/or id and write CSS rules around each element to create the desired style. |
+|Advanced Beginner  | Can cleanly and logically organize CSS rules according to similar categories (i.e. typography, layout, components), and then logically organize the remaining CSS rules based on flow of the markup. Organizes properties within rules alphabetically.|
+|Proficient         | Leverages cascading styles and CSS specificity rules to create more complex targeting of elements in order to reduce, reuse, share styles across elements. Organizes properties within rules based upon industry standard principles of writing consistent, idiomatic CSS. |
+|Exceptional        | Understands the performance implications surrounding cascading/specificity and crafts CSS that is mindful of reducing complexity and increasing performance.|
+
+#### Implementation
+
+|Novice             | Can articulate how the CSS box model works and apply it appropriately in a static layout.|
+|Advanced Beginner  | Can articulate the differences between the approaches of absolute/relative positioning, flex-box, floats, and can appropriately apply the approaches to solve a variety of layout problems.|
+|Proficient         | Develops layouts that work cross-browser, are responsive, and can logically defend the choices made in implementation approach for layout. |
+|Exceptional        | Can articulate rationale for all parts of the CSS implementation (each line of code/CSS rule) specifically in regards to the balance of: structure of code, design integrity, performance.|
+
+<br>
+
+------------------------------------------------------------------
+
+## DESIGN
+
+#### Comp Recreation
+
+|Novice             | Can establish a complementary color palette, integrate font(s), and execute a handful of the large comp details. |
+|Advanced Beginner  | Can accomplish about 50-75% of the large and small design details and can logically rework them on at least 1 breakpoint. |
+|Proficient         | Developer captures the spirit and design intent of the comp. Some small details need polish to achieve a pixel-perfect match to the comp, but developer is clearly mindful of details and has made a conscious and careful effort to match the comp. Any design decisions left open to interpretation are handled thoughtfully and are well executed, but are more noticable and/or unintuative than they would be if the designer had provided the solution, or may not be totally seamless during screen-size transitions.|
+|Exceptional        | Developer skillfully captures the spirit and design intent of all comp details. Execution is pixel-perfect and any design decisions left open to interpretation are solved intentionally, are as seamless as if the designer had provided the solution, are handled gracefully, and enhance the overall design.|
+
+#### Design Concepts
+
+|Novice             | Can integrate typography, color choices, and layout in ways that do not detract from legibility.  |
+|Advanced Beginner  | Can apply fundamental design concepts with increased sensitivity that result in clear legibility but likely break in areas of responsiveness, layout, "noise". |
+|Proficient         | Can apply fundamental design concepts in a comp that demonstrates a thoughtful, purposeful, cohesive strategy that does not detract from legibility or overall design integrity.  |
+|Exceptional        | Typography, color choices, and layout decisions are thoughtful and appropriate, and strongly enhance the layout and legibility of the design.|
+
+<br>
+
+------------------------------------------------------------------
 
 ## Submission Details
 
