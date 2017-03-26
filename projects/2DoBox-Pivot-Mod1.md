@@ -170,9 +170,9 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 ## Functional Expectations
 
 |Novice             | Application meets all of the expectations of phase one. |
-|Advanced Beginner  | Application meets all of the expectations of phase two. |
-|Proficient         | Application meets all of the expectations of phase three. |
-|Exceptional        | Application meets all of the expectations of phase three and one or more of the extensions. |
+|Advanced Beginner  | Application meets __most__ of the expectations of phase two. |
+|Proficient         | Application meets __all__ of the expectations of phase two. |
+|Exceptional        | Application meets all of the expectations of both phases and one or more of the extensions. |
 
 <br>
 
