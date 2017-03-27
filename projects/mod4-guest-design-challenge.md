@@ -14,4 +14,4 @@ Why do this project and why do it in this format? Because it will help you get r
 
 Build this:
 
-[Download the PDF here](https://slack-files.com/files-pri-safe/T029P2S9M-F4N0VSB7B/falcon_ui_kit_r2_22.pdf?c=1490280563-a781b2b0d06cc74b972c7f0d5a0263b2c5c4dc79)
+[Download the PDF here](https://drive.google.com/drive/folders/0B_lPnjyMN6-CZFR0V295Ymt0aWc?usp=sharing)
