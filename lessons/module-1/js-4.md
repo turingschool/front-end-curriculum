@@ -243,7 +243,7 @@ function Outfit(pants, socks, shirt) {
 
 Outfit.prototype.compliment = function() {
   // some block manipulation/adding of block code here
-	console.log("Nice " + this.pants + " and " + this.socks + " and " + this.shirt)
+  console.log("Nice " + this.pants + " and " + this.socks + " and " + this.shirt)
 }
 
 ```
