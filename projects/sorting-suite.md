@@ -119,71 +119,83 @@ Insertion sort uses slightly more complex logic but the algorithm is generally m
 You can [see a visualization of the algorithm here](https://vimeo.com/channels/sortalgorithms/15558983).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/insertion_sort).
-Insertion sort works by creating a new, empty array of results. We iterate through the set to be sorted, pulling one element at a time, then inserting it into its correct position in the new array.
+Insertion sort works by adding items to a sorted array. Typically sorting is done in place inside the array which needs sorting. The first element in the array becomes the sorted array. We iterate through the set to be sorted, pulling one element at a time, then inserting it into its correct position in the sorted section of the array.
 
-Let's start with this array of numbers: `[1,0,4,3,2]`
+Let's start with this array of numbers: `[ 1, 0, 4, 3, 2 ]`
 
 #### Pass 1
 
-We pull the first element from the unsorted list and insert it into the sorted list:
+A list with only one item is always sorted, so we start our sorted list with the first element in our array:
 
 ```
-unsorted:      [1,0,4,3,2]
-to insert:     1
-sorted pre:    []
-sorted post:   [1]
-unsorted post: [0,4,3,2]
+original array:     [ 1, 0, 4, 3, 2 ]
+
+                    [ sorted | unsorted   ]
+original array:     [ 1,     | 0, 4, 3, 2 ]
 ```
 
 #### Pass 2
 
-We pull the first unsorted element, the `0`, and compare it to the first element of the sorted set, `1`. Since the `0` before the `1`, we insert it at the front of the sorted set:
+We pull the first unsorted element, the `0`, and compare it to the last element of the sorted set, `1`. Since `0` is less than `1`, we swap it with the `1`:
 
 ```
-unsorted:      [0,4,3,2]
+unsorted:      [0, 4, 3, 2]
 to insert:     0
-sorted pre:    [1]
-sorted post:   [0,1]
-unsorted post: [4,3,2]
+
+                [ sorted | unsorted   ]
+before insert:  [ 1,     | 0, 4, 3, 2 ]
+
+                [ sorted  | unsorted ]
+after insert:   [ 0, 1,   | 4, 3, 2  ]
+
 ```
 
 #### Pass 3
 
-We pull the first unsorted element, the `4`, and compare it to the first element of the sorted set, `0`. Since the `4` is greater, we look at the next position of the sorted set, `1`. The `4` is greater but there are no other elements, so we add the `4` to the end of the sorted array.
+We pull the first unsorted element, the `4`, and compare it to the last element of the sorted set, `1`. Since `4` is greater than `1`, we add the `4` to the end of the sorted array.
 
 ```
-unsorted:      [4,3,2]
+unsorted:      [4, 3, 2]
 to insert:     4
-sorted pre:    [0,1]
-sorted post:   [0,1,4]
-unsorted post: [3,2]
+
+                [ sorted | unsorted ]
+before insert:  [ 0, 1,  | 4, 3, 2  ]
+
+                [ sorted   | unsorted ]
+after insert:   [ 0, 1, 4, | 3, 2     ]
 ```
 
 #### Pass 4
 
-We pull the first unsorted element, the `3`, and compare it to the first element of the sorted set, `0`. Since the `3` is greater, we look at the next position of the sorted set, `1`. The `3` is greater, so we look at the next position of the sorted set, `4`. The `3` is less than `4`, so we insert the `3` at this position pushing the `4` to the right.
+We pull the first unsorted element, the `3`, and compare it to the last element of the sorted set, `4`. Since `3` is less than `4`, we swap the `3` and `4`. We then compare the `3` with the previous position of the sorted set, `1`. Since `3` is greater than `1` we have the `3` in the correct position.
 
 ```
-unsorted:      [3,2]
+unsorted:      [3, 2]
 to insert:     3
-sorted pre:    [0,1,4]
-sorted post:   [0,1,3,4]
-unsorted post: [2]
+
+                [ sorted   | unsorted ]
+before insert:  [ 0, 1, 4, | 3, 2     ]
+
+                [ sorted      | unsorted ]
+after insert:   [ 0, 1, 3, 4, | 2        ]
 ```
 
 #### Pass 5
 
-We pull the first unsorted element, the `2`, and compare it to the first element of the sorted set, `0`. Since the `2` is greater, we look at the next position of the sorted set, `1`. The `2` is greater, so we look at the next position of the sorted set, `3`. The `2` is less than `3`, so we insert the `3` at this position pushing the `3` to the right.
+We pull the first unsorted element, the `2`, and compare it to the last element of the sorted set, `4`. Since `2` is less than `4` we swap the `2` and `4`. We then compare the `2` with the previous position of the sorted set, `3`. Since `2` is less than `3`, we swap the `2` and `3`. Then we look at the previous position of the sorted set, `1`. Since `2` is greater than `1` we have the `2` in the correct position.
 
 ```
 unsorted:      [2]
 to insert:     2
-sorted pre:    [0,1,3,4]
-sorted post:   [0,1,2,3,4]
-unsorted post: []
+
+                [ sorted      | unsorted ]
+before insert:  [ 0, 1, 3, 4, | 2        ]
+
+                [ sorted         | unsorted ]
+after insert:   [ 0, 1, 2, 3, 4, |          ]
 ```
 
-Then our unsorted array is empty, meaning we're done with the algorithm.
+Since we have no more elements in the unsorted section of our array, we are done with the algorithm.
 
 ### Challenge
 
