@@ -148,7 +148,7 @@ Now you must collaborate with a **TEAM**. More than one person all up in your gi
 git coffee
 (# just kidding. this won't work. but it would be a lot cooler if it did...)
 
-git co master
+git checkout master
 (# to ensure you are on master)
 
 git pull origin master
@@ -157,20 +157,32 @@ git pull origin master
 
 git co -b gt-my-new-feature
 (# gt references initials of "gertrude zachary" from above workflow example)
-(# you are creating and naming a new branch (off master) with this command)
+(# the -b flag allows you to both CREATE and CHECKOUT at the same time)
 (# write some codes)
 
 git status
 (# see what's up)
 
 git add <some file paths/names here>
-(# add your magnificent code changes)
+(# add your magnificent code changes to the staging area of the feature branch that you have checked out)
 
 git commit -m "My magnificent code changes"
-(# commit to staging)
+(# commit your changes with a descriptive message. You are still on the feature branch.)
+
+git checkout master
+(# hop back over to master so that you can get any updates that happened while you were out on feature branch island.)
+
+git pull origin master
+(# pull all the updates from master. Even if you KNOW nothing happened on master, this move doesn't hurt anything and promotes good habits.)
+
+git checkout gt-my-new-feature
+(# hop back over to feature branch so that you can MERGE MASTER INTO your feature sandbox.) 
+
+git merge master
+(# You are on the feature branch. You were just on the master branch, whereby you pulled any updates. You hop back over the creek to feature so that you can MERGE master updates into your feature masterpiece.) 
 
 git push origin gt-my-new-feature
-(# push your BRANCH that is saved locally to the big github in the sky)
+(# push your BRANCH that is saved locally to the big github in the sky. Ideally, because you were so careful to stay IN-SYNC with master, there will be NO merge conflicts on the github when you generate a pull request.)
 ```
 Now visit the big :octocat: and do any number/combination of these things:
 - Create a pull request (PR).
@@ -233,6 +245,10 @@ git log --stat
 
 git log -p
 (# most detailed view of your history)
+
+git log --decorate --graph --all
+(# tinker toys view of your history)
+
 ```
 
 ### GUI Tools if you aren't :neckbeard: enough to stay in terminal outputs:
