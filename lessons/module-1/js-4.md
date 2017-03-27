@@ -234,19 +234,18 @@ myDumbObject.prototype
 But why do this? Because fast. Because flexible. Because separation of concerns. Constructors in javascript can be any function and they are responsible for creating new instances. A prototype in javascript can be any object and they are responsible for defining the behavior of instances. The behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. You basically use prototype to define your object's instance methods.
 
 ```javascript
-// Grid constructor whose only job is to create instances of grids all day. Takes width and height parameters, so it can make different sizes of grids all day.
-function Grid(width, height) {
-  this.width = width;
-  this.height = height;
+// Outfit constructor whose only job is to create instances of outfits all day. Takes pants, socks, and shirt parameters, so it can make different outfits all day.
+function Outfit(pants, socks, shirt) {
+	this.pants = pants;
+	this.socks = socks;
+	this.shirt = shirt;
 }
 
-Grid.prototype.addBlock(block) = function() {
+Outfit.prototype.compliment = function() {
   // some block manipulation/adding of block code here
+	console.log("Nice " + this.pants + " and " + this.socks + " and " + this.shirt)
 }
 
-Grid.prototype.grow(num1, num2) = function() {
-  // some parameter manipulation/assignment and growing of grid code here
-}
 ```
 
 ## Which Data Structure?
