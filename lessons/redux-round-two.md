@@ -41,7 +41,7 @@ Let's visualize this.
 
 ### Research Spike
 
-1. **Stop And Read:**   ( 10 Minutes )
+1. **Stop And Read:** ( 10 Minutes )
 [Data Flow](http://redux.js.org/docs/basics/DataFlow.html)  
 
 2. **Independent Research** ( 10 Minutes )   
@@ -138,7 +138,7 @@ containers/ComponentThatCaresContainer.js
 ```
 
 ```js
-import ComponentThatCares from './ComponenThatCares.js'  
+import ComponentThatCares from './ComponentThatCares.js'  
 
 const mapStateToProps = (state) => {
   // Some code to connect Component to State within the Redux Store
