@@ -49,7 +49,11 @@ The ```school``` object has four properties:
 
 The ```school``` object has one method:
 
-- ```checkOpenspots: function(){ return this.capacity - this.currentStudents; }```
+```js
+checkOpenspots: function() {
+  return this.capacity - this.currentStudents;
+}
+```
 
 There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
 
@@ -74,11 +78,18 @@ You may have noticed that we used a familiar word in a strange way in the `check
 
 `this` is a keyword in Javascript that references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
 
-In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement that being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents`.
+In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents`.
 
 `capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
 ### Your Turn
+Turn to your neighbor and explain the following object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
+- To start, go ahead and make an object or two together.
+- How do you create an object using literal notation?
+- What is an object and what is it made up of?
+- When we assign a function as the value of a key inside an object, what do we call it?
+
+### Your Turn, Part 2
 Let's goof off in the console a bit. As a group, we'll practice working with an object:
 
 ```javascript
@@ -99,11 +110,6 @@ var myLitObject = {
 // 10. Use myLitObject to log "Skateboarding is fun"
 ```
 
-### Your Turn, Part 2
-Turn to your neighbor and explain this to each other. Practice makes perfect, so make sure you both get to explain all three questions!
-- How do you create an object using literal notation?
-- What is an object and what is it made up of?
-- When we assign a function as the value of a key inside an object, what do we call it?
 
 # Objects: Constructor Notation
 
@@ -115,7 +121,7 @@ Now, let's talk about using _constructor notation_ to create an object. It's not
 var myLitObject = new Object()
 myLitObject
 ```
-And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation just like you did before.
+And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation.
 
 ## Creating Many Objects
 
@@ -142,7 +148,7 @@ Let's talk about what's going on here:
 - Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma
 - Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.
 
-## Oh jeeze...```this``` thing
+## Oh jeeze...```this``` again
 The keyword ```this``` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, ```this``` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
 
 ```javascript
@@ -160,7 +166,13 @@ firstRest.name
 secondRest.name
 ```
 
-So what's all the fuss about ```this``` anyway? Seems pretty straightforward. Well, turns out, the value of ```this``` changes in different situations. Let's look at those situations:
+### Your Turn
+
+Take a few minutes and make a constructor function and use it to make two new objects.
+
+## Which `this` is which?
+
+Why do we keep talking about ```this``` anyway? Seems pretty straightforward. Well, turns out, the value of ```this``` changes in different situations. Let's look at those situations:
 
 ```javascript
 // GLOBAL SCOPE FUNCTION - top of script, not inside another function or inside an object. The default object in this context is the WINDOW object.
@@ -207,7 +219,7 @@ shape.getWidth = showWidth;
 shape.getWidth();
 ```
 
-## So WHY this Prototype Business...???
+## What is this Prototype Business...???
 All JavaScript objects inherit the properties and methods from their prototype. Each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. ```null```, by definition, has no prototype, and acts as the final link in this _prototype chain_. There is nothing special about a prototype object. There are no special-out-of-the-box methods or magic to a prototype. Let's look:
 
 ```javascript
@@ -238,7 +250,7 @@ Grid.prototype.grow(num1, num2) = function() {
 ```
 
 ## Which Data Structure?
-The data you are required to represent is getting increasingly complex. You need several objects at one time, which can be stored in arrays or other objects. When deciding on an approach, you must consider how the data will be used. When the order of objects is important, they should be stored in an array. When you want to access objects using their name, they work well as properties of another object (because you would not need to iterate through all objects like in an array).
+When deciding on an approach, you must consider how the data will be used. When the order of objects is important, they should be stored in an array. When you want to access objects using their name, they work well as properties of another object (because you would not need to iterate through all objects like in an array).
 
 #### Objects in an Array
 
