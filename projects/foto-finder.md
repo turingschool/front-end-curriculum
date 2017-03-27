@@ -1,23 +1,124 @@
 ---
-title: Syllabus Evaluation & Skills Progression
+title: Foto Finder
 ---
 
-## Overview
-In order to advance to Module 2, you are required to pass a summative assessment, coined the Pentathlon, conducted in week 6 of the module. Prior to that week, we'll provide feedback regarding your skills through an individual mid-mock assessment in week 3, group project assessments throughout the six weeks, and any other opportunities including, but not limited to: 1-1 pairing, responses we're seeing on weekly quizlettes, participation in class, progress in javascript foundations exercises, progress in static comp challenges.
+## Specification
 
-In order to help you take ownership of your progression in the program and self-assess throughout the module, we've developed a Key Skills. The expectation for advancement to Module 2 is that a student is clearly "Proficient" across each key skill in every area of focus.
+With some jQuery lessons under your belt, it's time to try your hand at building a small application: a photo album called Foto Finder! For this project, you can use either vanilla JavaScript (`document.querySelector()`) or the jQuery library (`$()`). If you're going to use jQuery, don't forget to pull in the library.
+
+In it's simplest form, the application should have the following:
+
+### Setup: File Structure
+
+Before you start writing code for this project, set up your project directory as follows:
+
+- Your project directory (called `foto-finder`)
+- An HTML file called `index.html`, which will contain all of your HTML code.
+- A CSS file called `styles.css`, which will contain all of your CSS including media queries.
+- A JavaScript file called `scripts.js`, which will contain all of your JavaScript code.
+- A directory called `photos` that will contain the image files that the user can save to the photo album page
+
+Here is a visual representation of the file structure:
+
+```
+|-- foto-finder
+   |-- index.html
+   |-- styles.css
+   |-- scripts.js
+   |-- photos
+      |-- photo1.jpg
+      |-- photo2.jpg
+      |-- photo3.jpg
+```
+
+It is up to you to gather images to put into your `photos` directory. These assets are not provided for you - only button assets are provided. In the example above, `photo1.jpq` is just a placeholder name to show you that your image files go inside the `photos` directory. The names of the image files can be whatever you want.
+
+### Phase One
+
+This phase is all about setting up the user inputs and general structure of the page. The page will not be very interactive in this phase.
+
+- Two input fields for new photos to put in the album
+  - One for the title of the photo
+  - One for the caption of the photo
+- One input field to upload the photo (hint: look at the different HTML input element type attributes and how you can use on of them to select a file from your computer)
+  - [This article](https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/) can help you with styling the file upload button
+- One "Add to Album" button for adding the photo to the album so you see it on the page
+- A section for all of the photos in the album to live
+
+### Phase Two
+
+This phase builds on Phase 1 and gives some functionality to the page.
+
+- When a user fills in the Title, Caption, selects an image file from the `photos` directory, and then clicks the "Add to Album", the photo should be added to the photo album.
+- Each photo, when added to the album, is placed in a "card", and each photo card should display:
+  - The photo
+  - The title of the photo
+  - The caption of the photo
+  - A button to mark the photo as a "Favorite"
+  - A button to "Remove" the photo from the album
+- The application should be responsive and work equally well on desktop and mobile
+- When the user clicks on the "Favorite" button, the photo card background turns (a different color), and the button text color changes
+- When the user clicks on the "Remove" button, the photo should be removed from the page
+
+Note: If you refresh the page, the photos disappear! This is OK. You do not need to worry about photo persistence on page refresh (we'll handle that in later projects).
+
+### Phase Three
+
+Let's improve the user experience in this phase.
+
+- If the user does not have text in the Title **or** Caption input elements, **or** they have not selected a photo from the `photos` directory, then the "Add to Album" button should be disabled.
+- If there are no photos in the album yet, then there should be an indication to the user to add photos, displayed in the empty photo section.
+- The file selector should only allow image file types
+
+### Extensions
+
+**Sorting:** If a user marks a photo as a "Favorite", then that photo (an all other photos marked as favorites) should show at the top of the page before any other photos.
+
+**Image Analysis:** Mathematically determine the most prominent color of the photos in the album, and change the background of the album section to that prominent color. The background color should be calculated every time a new photo is added to the album.
+
+**Animations:** When a user removes a photo, the photos in the album shift almost instantly, which is a sharp, hard transition. Add a soft, brief animation that lets the remaining photos move smoothly.
+
+**Zoom View:** When a user clicks on an image card, the application should pop up a large view of the image overlaid on the rest of the album. Once in zoom view, the user should be able to click something on the image (like an "X") to exit out of the zoom view and see all of the images in the album as before.
+
+### Layout Comps
+
+[Download the Foto Finder assets here.](https://drive.google.com/drive/folders/0B_lPnjyMN6-CSEFYTXBBbHNybFE?usp=sharing)
+
+#### Desktop layout:
+
+![Foto Finder Desktop][desktop-base]
 
 
-## Legend
-The legend below _generally_ describes the developmental levels achievable during the six weeks of M1.
-The levels build off one another, whereby each increase assumes the expectations from the prior level were met.
+#### Mobile layout:
 
-|Novice             | Can function but needs a lot of oversight. |
-|Advanced Beginner  | Can function with very little oversight. |
-|Proficient         | Can confidently implement code without the need for rigid feedback. |
-|Exceptional        | Understands and executes advanced concepts. |
+![Foto Finder Mobile][mobile-base]
 
-For each of the subject matter areas of focus, we've applied these levels with added definition per key skill.
+
+#### Desktop and Mobile Full View
+
+![Foto Finder Mobile Expanded][mobile-expanded]
+
+![Foto Finder Desktop Expanded][desktop-expanded]
+
+
+#### Color and font spec:
+
+![Design Specs][design-specs]
+
+[desktop-base]: /assets/images/projects/foto-finder/fotofinder-1.png
+[mobile-base]: /assets/images/projects/foto-finder/fotofinder-2.png
+[desktop-expanded]: /assets/images/projects/foto-finder/fotofinder-3.png
+[mobile-expanded]: /assets/images/projects/foto-finder/fotofinder-4.png
+[design-specs]: /assets/images/projects/foto-finder/fotofinder-5.png
+
+------------------------------------------------------------------
+
+## Functional Expectations
+
+|Novice             | Application meets all of the expectations of phase one. |
+|Advanced Beginner  | Application meets all of the expectations of phase two. |
+|Proficient         | Application meets all of the expectations of phase three. |
+|Exceptional        | Application meets all of the expectations of phase three and one or more of the extensions. |
 
 <br>
 
@@ -86,20 +187,6 @@ For each of the subject matter areas of focus, we've applied these levels with a
 |Proficient         | Functions have single responsibility. The entirety of the function is easy to read what functionality it contains. Function is generally shorter than 8 lines. Uses functions to eliminate repeated code. Comfortable refactoring any piece of code and extracting it to a function.|
 |Exceptional        | Comfortable with using callback functions where applicable. Comfortable returning collections from functions (objects, arrays).|
 
-#### Arrays
-
-|Novice             | Can create array and use array indexing to extract data from array or modify array. Comfortable using arrays to store simple data types: numbers, booleans, or strings.|
-|Advanced Beginner  | Can modify arrays by adding or removing specific elements - uses array methods such as push or shift. Can use a for loop to iterate through array.|
-|Proficient         | Does not use for loops for arrays - uses array prototypes, such as forEach, to iterate through or manipulate arrays. Can use array to store more complicated data structures such as objects or nested arrays. Is comfortable/efficient with reading array prototype documentation and can efficiently test/apply array prototype methods they have not worked with before.|
-|Exceptional        | Uses variety array prototypes to iterate through arrays and manipulate/create new arrays without using documentation as a resource.|
-
-#### Objects & Prototypes
-
-|Novice             | Can declare an object literal and define/articulate properties vs. methods for an object. Can extract values of an object's property, and assign new properties and/or reassign values of existing properties on an object.|
-|Advanced Beginner  | Can use object constructor functions and is comfortable with extracting values of properties on different object instances.|
-|Proficient         | Can use object prototypes. Can articulate the definition and the "why" of an object prototype - the best use cases for prototypes.|
-|Exceptional        | Can identify and apply best use cases for constructor functions vs object literals in their code, and leverages more advanced object prototype methods.|
-
 #### DOM Manipulation
 
 |Novice             | Can articulate what the DOM is and can effectively target elements in vanilla JavaScript via class, id, or tag.|
@@ -138,19 +225,6 @@ For each of the subject matter areas of focus, we've applied these levels with a
 
 ------------------------------------------------------------------
 
-## TESTING
-
-#### Test Comprehension
-
-|Novice             | Can talk through the concept of testing and why it is useful.|
-|Advanced Beginner  | Can read through a test and understand the structure. Can make the test pass, but takes a few attempts because developer does not use error messages effectively.|
-|Proficient         | Can read through each line of a test and understand how to drive the development to make the test pass. If stuck on making a test pass, they know how to investigate where and how the test is failing using the error messages.|
-|Exceptional        | Can write their own tests.|
-
-<br>
-
-------------------------------------------------------------------
-
 ## DESIGN
 
 #### Comp Recreation
@@ -179,18 +253,5 @@ For each of the subject matter areas of focus, we've applied these levels with a
 |Advanced Beginner  | Can identify deltas in skill level and collaborate on methods whereby both pairs can share equitably in the workload. Can revisit the DTR to address changes that arise, and/or simply to keep one another reminded of the working plan.|
 |Proficient         | Can diplomatically handle issues that arise between the pair through respectful, focused, targeted feedback and implement changes to positively adapt the working relationship and keep the project on track. Can effectively implement tactics to support their partner's learning and project goals, while also honoring their own personal learning and project goals, should the two be different or at different levels due to skill delta. |
 |Exceptional        | Pair collaboration and communication is exceptional, with the distribution of work being equal and balanced, and both partners experiencing a good working flow, able to handle stress, deadlines, issues with calm and focused demeanor.|
-
-<br>
-
-------------------------------------------------------------------
-
-## DEBUGGING
-
-#### Dev Tools/Debug Process
-
-|Novice             | Reaches for the dev tools "Elements" pane to experiment and test variations for their HTML/CSS. Uses the "Console" pane in conjunction with their coding to test outputs of their JS at appropriate times.|
-|Advanced Beginner  | Can articulate and leverage all the features of the "Elements - Styles" pane, including: find, edit html, state toggles, adding new elements/classes, and can read/track sections of the Elements-Styles pain (separated by grey dividers) back to their codebase. |
-|Proficient         | Uses the dev tools as their first line of defense when encountering something unexpected. Demonstrates comfort and skill using dev tools to investigate, check layout issues, console log results, and experiment solving problems before writing abundant amounts of code. Will experiment with javascript in the console to test unfamiliar concepts.|
-|Exceptional        | Is well versed in the Sources tab of the dev tools and can implement breakpoints, watch changing values of variables, and can work with debugger statements in place of console logs.|
 
 <br>

@@ -212,6 +212,15 @@ The project will be assessed with the following rubric:
 * 2: Application runs, but does not work properly, or does not meet specifications.
 * 1: Application does not run, crashes on start.
 
+### 6. Code Sanitation
+
+The output from ESLint shows…
+
+* 4 - Zero complaints
+* 3 - Five or fewer complaints
+* 2 - Six to ten complaints
+* 1 - More than ten complaints
+
 
 ## Additional Rescources
 
