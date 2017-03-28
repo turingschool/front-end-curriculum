@@ -27,7 +27,6 @@ What is a jigsaw lesson? What is the purpose? What can't you just talk at us lik
 Review the base prework as a group:
 
 * [What is jQuery?](https://www.youtube.com/watch?v=T2mFyPxL-fU)
-* [Why is it still important?](http://www.learningjquery.com/2015/02/5-reasons-to-use-jquery)
 * [The basics of jQuery and the selector.](https://medium.com/@jaeger.rob/jquery-selectors-the-absolute-basics-d781500c722c#.q6q4j61fj)
 
 ### Research (35 minutes)
@@ -42,7 +41,7 @@ In this session your goal is to build expertise in your group's subject area. Ge
 * Are there any downsides to using it?
 * Where can a person go to learn more about it? Any resources seem better than others?
 
-### Break
+### Break (10 minutes)
 
 ### Expert Presentations (10 minutes for each subject area)
 
@@ -61,7 +60,7 @@ While they’re sharing, the rest of the group should:
 * Brainstorm/record any depth questions the researcher is not able to answer
 * Assign a time keeper to WATCH THE CLOCK :alarm_clock: so the presenter doesn’t have to keep track, and the group ends up with a comprehensive set of notes, understandings, and questions across each of the subjects by the end of the session
 
-### Break
+### Break (10 minutes)
 
 ### Gather Questions (10 minutes)
 
@@ -88,11 +87,28 @@ Go through [this lesson](http://frontend.turing.io/lessons/module-1/introduction
 * What are the different ways to chain selectors? For instance, how would you select an element with the class of “bordered-content” and “ad-aside”?
 * How do you select based on element attributes?
 * How do you select based on the state of a checkbox or radio button?
-* What does the jQuery selector return? You can use this for more in-depth research: http://learn.jquery.com/using-jquery-core/jquery-object/
+* What does the jQuery selector return? Be specific. You can use this for more in-depth research: http://learn.jquery.com/using-jquery-core/jquery-object/
 
 ### Getting and Setting Content Values
 
+Using jQuery methods:
+
+* How do you _get_ the text from an element (say a paragraph element)?
+* How do you _set_ the text from an element (say a paragraph element)?
+* How do you _get_ the text from an input element?
+* How do you _set_ the text from an input element?
+* How do you add, remove, or toggle classes of HTML elements?
+* How can you tell if an HTML element contains a certain CSS class?
+* What happens when you select and element using vanilla JavaScript (`document.querySelector()`) and then try to use a jQuery method for getting the text of that element? Provide examples of this and what errors you see.
+* If you have a jQuery selector that returns multiple elements, say `$('.link-img')`, then do you need to use a `for` loop to change the elements? Why or why not? What is returned by the selector?
+
 ### Events
+
+* Compare vanilla JavaScript event listeners (`addEventListener`) to the jQuery event listener(s).
+* What is the one jQuery event listener that can be used to listen for many types events. How do you specify the type of event?
+* What are some event listener methods in jQuery that are specific to the event type?
+* How do you write a basic click event listener that logs something to the console?
+* 
 
 ### jQuery Docs
 
