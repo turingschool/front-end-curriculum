@@ -129,7 +129,7 @@ Using jQuery methods:
 ### DOM Traversal
 
 * Describe what DOM traversal is and why it is useful.
-* What can the `sibling()`, `parent()`, and `child()` methods do?
+* What can the `siblings()`, `parent()`, and `children()` methods do?
 * What is `prepend()`, `append()`, and what are their differences?
 * What is the difference between `parent()` and `parents()`? Why would I want to use either?
 * Describe `closest()` and `find()`. What are their use cases?
