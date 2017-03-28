@@ -64,11 +64,11 @@ Post your CodePen demos to Slack for later reference.
 
 ### Break (10 minutes)
 
-### Gather Questions (10 minutes)
+### Gather Questions (5 minutes)
 
 Have one person from each Learning Group write that group’s unanswered questions on the front board.
 
-### Review Questions (30 minutes)
+### Review Questions (25 minutes)
 
 Let's review and attempt to answer all the questions on the board together.
 
