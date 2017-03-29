@@ -2,11 +2,9 @@
 layout: page
 module: 3
 ---
-
 ## Issues given to students for the remEMBER project.
 
 ### Issues
-
 #### 1. See all reminders
 
 When the user visits the root of the application (e.g. the `"/"` URL), they should see a title of your app with your group number (ie: remEMBER-1), and list of all of the reminders on the page.  
@@ -28,7 +26,8 @@ Client has changed their mind.
 When the user visits the root of the application, they should be redirected to `'/reminders'` and should see a list of all reminders on the page.  
 
 Hints:
-* Dig into the docs for notes on `beforeModel()`
+* Dig into the docs for notes on `beforeModel()`  
+* Maybe look [here](https://guides.emberjs.com/v2.12.0/routing/redirection/)  
 * Your model hook should no longer live in `routes/index.js`, and your `router.js` will need adjustments.  
 * Keep in mind that the structure of your `router.js` represents the file structure of the entire app.
 
@@ -43,11 +42,10 @@ When a user clicks on one of the existing titles, they are taken to an individua
 
 Hints:
 * Ember convention uses `:model_id` as the dynamic path, ie: `'/reminders/:reminder_id'`.
+* You can find help [here](https://guides.emberjs.com/v2.12.0/routing/specifying-a-routes-model/#toc_dynamic-models)  
 * Run `ember g route reminders/reminder`  
 * The user should still see all of the reminders from your previous feature. The specific reminder they are looking at now should be rendered in the outlet of the `reminders.hbs` template.
 * There should be some CSS for the `.active` class.  
-
-![](http://g.recordit.co/bWm36UCXsA.gif)
 
 **Hot Tip:** There is an existing acceptance test for this feature.
 
@@ -55,6 +53,7 @@ Hints:
 
 At the bottom of the `reminders.hbs` template, there should be a button that routes the user to `reminders/new` where users can create a new reminder.  
 
+* Start looking for help [here](https://guides.emberjs.com/v2.12.0/models/defining-models/)  
 * The new reminder should have inputs for the title, date, and reminders.
 * The new reminder should have a button for submitting the new reminder.
 * Pressing the button should submit reminder to the database and have it display in the reminders list.
