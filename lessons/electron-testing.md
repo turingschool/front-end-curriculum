@@ -135,7 +135,7 @@ if (process.env.SPECTRON) {
 
 This will tell the main process of our electron app to use the mock if we are in a 'SPECTRON' environment.
 
-So how do we actually run our app in a SPECTRON environment? Let's go back to our test file, setup a path to our mocks, and edit our setup in the `before` hook a bit:
+The last piece of setup we need to do for this is to make our test file aware of our mocks as well. Let's setup a path to our mocks, and edit our setup in the `before` hook a bit:
 
 ```js
 const electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
