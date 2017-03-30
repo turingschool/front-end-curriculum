@@ -47,7 +47,9 @@ describe('App starts and has correct title and buttons', function () {
 
   before(function () {
       app = new Application({ 
-        path: electronPath
+        path: electronPath,
+        env: { SPECTRON: true },
+        args: [appPath]
       });
       return app.start();
   });
@@ -136,9 +138,9 @@ This will tell the main process of our electron app to use the mock if we are in
 So how do we actually run our app in a SPECTRON environment? Let's go back to our test file, setup a path to our mocks, and edit our setup in the `before` hook a bit:
 
 ```js
-let electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
-let appPath = path.join(__dirname, '..');
-let mocksPath = path.join(__dirname, 'mocks.js');
+const electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
+const appPath = path.join(__dirname, '..');
+const mocksPath = path.join(__dirname, 'mocks.js');
 ```
 
 ```js
