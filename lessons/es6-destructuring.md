@@ -7,11 +7,8 @@ module: 3
 
 For the following problems, use the docs heavily. Solutions to each problem can be found through the link above.  
 
-## Arrays
-
-### Variable Swapping
+### Example: Variable Swapping
 Given two variables, swap their values in one line of code.
-
 
 ```js
 var thing1 = 'apple'
@@ -79,7 +76,7 @@ const object = {
 }
 ```
 
-## Parameter Matching
+### Parameter Matching
 Provided the arguments below, write a function that logs both arguments.
 
 ```js
