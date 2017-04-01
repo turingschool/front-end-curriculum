@@ -73,8 +73,8 @@ The first thing your `trie` should be able to do is take in a word.
 Once the words are placed into the `trie` it should also offer some suggestions.
 
 ```
-const CompleteMe = require ("./lib/complete_me")
-const text       = "/usr/share/dict/words"
+import CompleteMe from "./lib/complete_me"
+const text = "/usr/share/dict/words"
 
 completion = new CompleteMe
 
@@ -115,7 +115,7 @@ $ cat /usr/share/dict/words | wc -l
 We are going to load that data set into our trie.
 
 ```
-let dictionary = fs.readFileSystem(text).toString('utf-8').trim().split('\n')
+let dictionary = fs.readFileSync(text).toString('utf-8').trim().split('\n')
 
 completion.populate(dictionary)
 
