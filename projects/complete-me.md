@@ -86,7 +86,6 @@ completion.count()
 completion.insert('suh')
 
 completion.count()
-
 => 2
 
 completion.suggest("piz")
@@ -94,7 +93,6 @@ completion.suggest("piz")
 
 completion.suggest('s')
 => ["suh"]
-
 ```
 
 ## Phase 2
@@ -109,7 +107,6 @@ contains 235886 words:
 ```
 $ cat /usr/share/dict/words | wc -l
 235886
-
 ```
 
 We are going to load that data set into our trie.
@@ -124,7 +121,6 @@ completion.count
 
 completion.suggest("piz")
 => ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
-
 ```
 
 ## Phase 3
