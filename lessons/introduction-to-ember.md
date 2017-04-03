@@ -5,8 +5,10 @@ module: 3
 
 ## Ember CLI
 
+Grab [the docs](https://guides.emberjs.com) to find the latest version for installation.
+
 ```
-npm install -g ember-cli@2.11
+npm install -g ember-cli@[INSERT LATEST VERSION HERE]
 ember --help
 ember new project-name
 ```
