@@ -107,12 +107,13 @@ contains 235886 words:
 ```
 $ cat /usr/share/dict/words | wc -l
 235886
+
 ```
 
 We are going to load that data set into our trie.
 
 ```
-let dictionary = fs.readFileSync(text).toString('utf-8').trim().split('\n')
+let dictionary = fs.readFileSync(text).toString().trim().split('\n')
 
 completion.populate(dictionary)
 
@@ -147,7 +148,7 @@ const text       = "/usr/share/dict/words"
 
 completion = new CompleteMe
 
-let dictionary = fs.readFileSystem(text).toString('utf-8').trim().split('\n')
+let dictionary = fs.readFileSync(text).toString().trim().split('\n')
 
 completion.populate(dictionary)
 
