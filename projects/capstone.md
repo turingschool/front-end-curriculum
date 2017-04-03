@@ -7,9 +7,19 @@ module: 4
 
 By the end of this session we will have established Capstone projects that'll guide your last three weeks in the program. It's your final project which means it's your last opportunity to build something your really proud of and can show off for your portfolio. It's also the last time you will get to work with your cohort-mates and master your workflow before becoming a professional developer. Take risks, be creative, work nicely with your team and build something useful for others.
 
-The project is due on March 1st.
+The project is due on Wednesday, April 19th.
 
 ### Part 1: Solo
+
+On the whiteboard, summarize the data that is returned from your BYOB endpoints.
+
+**Example**
+
+* Patients
+* Medical Procedures (belong to patient)
+* Readings (belong to procedure)
+
+### Part 2: Solo
 
 Take the first 15 minutes to summarize and post your ideas. For *each one* create
 an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project) and, in the description, summarize the idea in the following format:
@@ -21,7 +31,7 @@ an issue on the [Turing Mastery Project repo](https://github.com/turingschool/ma
 
 If your a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
 
-### Part 2: Small Groups
+### Part 3: Small Groups
 
 Then get together in assigned groups of three to:
 
@@ -30,23 +40,30 @@ Then get together in assigned groups of three to:
 * Add comments to the issue
 * Select your two favorites (from the entire group, they could be from the same person)
 
-### Part 3: Pitch & Merge
+### Part 4: Pitch & Merge
 
 Then we'll get back together and each group of three will come up to pitch their two ideas. Spend less than two minutes on each pitch.
 
 After pitches, we'll merge any ideas that are very similar.
 
-### Part 4: Voting
+### Part 5: Voting
 
 Then we'll plot the pitched ideas on the board. Each of you should then pass through and mark the **three** ideas **you most want to exist**.
 
 After all votes are cast, the top three vote getters are selected. If there are any ties, Alex will cast the deciding votes.
 
-### Part 5: Teaming
+### Part 6: Teaming
 
 We will team up by interest in projects. Teams can be between 2 - 4 people. If no consensus is made on teams, they will be randomly picked.
 
-### Part 6: Wireframing & Design
+### Part 7: Pick Your API
+With the project and team established, get together with your group to decide who's API you will be utilizing. Feel free to use more than one if it makes sense.
+
+Remember, you can easily change the datasource for your API. Don't feel like you need to use the current data to fit your project. It's easy to switch out data sources, just be sure to cover the new data with tests.
+
+The requirement is that you use at least one team members API for a GET, POST, PUT and DELETE request through the UI.
+
+### Part 8: Wireframing & Design
 
 With the project and team established, get together with your group to wireframe
 the key screens / interactions and figure out how you'll implement services.
@@ -59,9 +76,13 @@ of your thinking:
 - Building real-time web applications with WebSockets
 - Building servers to store and share data between users
 
-### Part 7: Workflow
+### Part 9: Workflow
 
 Pick a team lead to create a repository for each the selected projects. If you have a clever name, now is the time.
+
+### Part 10: Definition of Done
+
+As a team, come up with your own Definition of Done. Have at least 5 criteria for your DoD. Follow your DoD throughout the project!
 
 ## Rubric
 
