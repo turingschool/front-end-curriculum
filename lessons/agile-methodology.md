@@ -4,8 +4,6 @@ length: 90 minutes
 tags: agile, project, management
 ---
 
-# Project Management with Agile Methodologies
-
 ## Manifesto
 
   1. Individuals and Interactions over processes and tools
