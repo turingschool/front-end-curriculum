@@ -113,6 +113,8 @@ $ cat /usr/share/dict/words | wc -l
 We are going to load that data set into our trie.
 
 ```
+const text = "/usr/share/dict/words"
+
 var completion = new CompleteMe
 
 let dictionary = fs.readFileSync(text).toString().trim().split('\n')
