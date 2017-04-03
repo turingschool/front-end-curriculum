@@ -76,7 +76,7 @@ Once the words are placed into the `trie` it should also offer some suggestions.
 import CompleteMe from "./lib/complete_me"
 const text = "/usr/share/dict/words"
 
-completion = new CompleteMe
+var completion = new CompleteMe
 
 completion.insert("pizza")
 
@@ -113,6 +113,8 @@ $ cat /usr/share/dict/words | wc -l
 We are going to load that data set into our trie.
 
 ```
+var completion = new CompleteMe
+
 let dictionary = fs.readFileSync(text).toString().trim().split('\n')
 
 completion.populate(dictionary)
@@ -146,7 +148,7 @@ Here's what that interaction model should look like:
 const CompleteMe = require ("./lib/complete_me")
 const text       = "/usr/share/dict/words"
 
-completion = new CompleteMe
+var completion = new CompleteMe
 
 let dictionary = fs.readFileSync(text).toString().trim().split('\n')
 
