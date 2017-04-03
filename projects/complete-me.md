@@ -121,7 +121,7 @@ let dictionary = fs.readFileSync(text).toString().trim().split('\n')
 
 completion.populate(dictionary)
 
-completion.count
+completion.count()
 => 235886
 
 completion.suggest("piz")
