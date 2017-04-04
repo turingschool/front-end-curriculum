@@ -10,9 +10,8 @@ By the end of this session we will have established Capstone projects that'll gu
 The project is due on Wednesday, April 19th.
 
 ### Past Capstones
-[Ian and Graham's We the People Native](https://github.com/ianlancaster/we-the-people-native)
-
-[Jeff, David, Casey, Pete and Kirsten's Turing Fridays](https://github.com/Jeff-Duke/turing-fridays)
+* [Ian and Graham's We the People Native](https://github.com/ianlancaster/we-the-people-native)
+* [Jeff, David, Casey, Pete and Kirsten's Turing Fridays](https://github.com/Jeff-Duke/turing-fridays)
 
 ### Part 1: Solo
 
