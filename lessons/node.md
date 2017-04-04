@@ -21,11 +21,11 @@ Even as a front-end developer, it's important to have a basic understanding of w
 ### The Server
 There are many different types of servers, but when we are building web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably, or simply shortened to "server".
 
-An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, or data. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the 'Nework' tab of our developer tools:
+An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, or data. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the 'Network' tab of our developer tools:
 
 ![network requests][network-requests]
 
-The network tab will list any requests you make to the server. If we search for 'www.turing.io', in the top left of the network panel, we can We see that the type of request we made was for a 'document'. If we click on this request, we can also see information about the request itself, as well as the response we were given. Clicking on the 'Response' tab, you'll see the entire markup of the HTML document we requested:
+The network tab will list any requests you make to the server. If we search for 'www.turing.io', in the top left of the network panel, we can see that the type of request we made was for a 'document'. If we click on this request, we can also see information about the request itself, as well as the response we were given. Clicking on the 'Response' tab, you'll see the entire markup of the HTML document we requested:
 
 ![network response][network-response]
 
@@ -37,7 +37,7 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 
 * Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
 * Including a link tag to request an external stylesheet: `<link href="https://www.turing.io/css/styles.css" />`
-* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`.
+* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`
 * Making an AJAX request to fetch data: `$.ajax({ url: "https://www.turing.io/api/v1/curriculum/", method: "GET" })`
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
@@ -60,7 +60,7 @@ The protocol for transmitting documents across the internet. There are a bunch m
 The six architectural constraints are:
 
 1. Client-server - Separation of GUI and data
-2. Stateless - No client context is stored by server, each client request  provides all the information to fulfill the request.
+2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
 3. Cacheable - Server responses defined as cacheable or not. Speeds up future interacts.
 4. Layered system
 5. Code on demand (i.e. execute JS script in HTML)
@@ -91,14 +91,14 @@ There is a lot of metadata that you can pass in a request. Some of the more comm
  SHOULD be interpreted as "I prefer audio/basic, but send me any audio type if it is the best available after an 80% mark-down in quality."
 ```
 
-Another common value is "Content-Length". This indicates the length in of the body if the request would have been sent in a GET method. It's measured in bytes. Good way to know quickly how big a request is.
+Another common value is "Content-Length". This indicates the length of the body if the request would have been sent in a GET method. It's measured in bytes. Good way to know quickly how big a request is.
 
 If we look at a response in our browser, we can check out the headers:
 ![network header][network-header]
 
 [network-header]: /assets/images/lessons/http-rest-node-server/network-header.png
 
-There is a lot of information in the header, but most important part is the status code returned to us. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rule is:
+There is a lot of information in the header, but the most important part is the status code returned to us. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rule is:
 
 * 200 range means everything is OK
 * 300 range means you need to do more to complete the request
@@ -119,7 +119,7 @@ An IP address is the identification of a host or network interface and allows us
 
 
 #### Domain Name System
-Since humans aren't computers, we need human-readable forms (domains) to remember URLs. We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. You OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
+Since humans aren't computers, we need human-readable forms (domains) to remember URLs. We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. Your OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
 
 ### Back-End Frameworks
 Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
@@ -170,7 +170,7 @@ Let's make a new directory:
 mkdir node-example && cd node-example
 ```
 
-Let's get a basic `package.json` up and running.
+Let's get a basic `package.json` up and running:
 
 ```js
 npm init --yes
