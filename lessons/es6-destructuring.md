@@ -102,8 +102,8 @@ var name="taylor"
 Assign 2 elements of an array to specific variables, and then assign the remaining values collectively to another variable
 ```js
 ['apple', 'banana', 'chocolate', 'pears', 'oats', 'pizza']
-// console.log(thing1) => 'apple'
-// console.log(thing2) => 'banana'
+// console.log(a) => 'apple'
+// console.log(b) => 'banana'
 // console.log(others) => ['chocolate, 'pears', 'oats', 'pizza']
 ```
 
