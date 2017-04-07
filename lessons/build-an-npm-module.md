@@ -178,6 +178,7 @@ Reference the [blog post]((https://medium.com/@jdaudier/how-to-create-and-publis
   - And check out [the slides](https://speakerdeck.com/stevekinney/the-ins-and-outs-of-publishing-a-module-to-npm) here
 - [NPM docs - How NPM works](https://docs.npmjs.com/how-npm-works/packages)
 - [NPM cheatsheet](http://browsenpm.org/help)
+- [Certified Modules](https://nodesource.com/blog/hello-certified-modules-the-future-of-trust-in-node-js-dependencies/) - How devs are trying to keep you and NPM itself safe
 
 ---
 
