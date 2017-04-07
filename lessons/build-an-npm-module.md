@@ -23,10 +23,15 @@ Note: as you read, prepare answers to the following discussion points
 ### Reading Discussion Points
 
 - What is SemVer
+
 - What is the difference between `npm install --save` `npm install` `npm install -g` and `npm install --save-dev`
   - Why might it be _very important_ to use the `--save` and `--save-dev` flags appropriately for an NPM package?
+
 - Having read this blog, what steps might be missing for you to create your own node module and deploy it?
+
 - What npm packages do you depend on? Have you ever looked at their source code?
+
+- How might the fact that you don't control the version of the package that your users use affect your workflow?
 
 ## An Example
 
