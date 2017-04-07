@@ -26,7 +26,7 @@ SOLUTION:
 ### Assigning New Variable Names to Object Keys
 Given an object, in one line, assign variables to the values of the object using different names than the keys already in the object.
 ```js
-const object = {name: 'elvis', title: 'hip swinger'}
+var object = {name: 'elvis', title: 'hip swinger'}
 
 // console.log(person) => 'elvis'
 // console.log(job) => 'hip swinger'
@@ -37,7 +37,7 @@ const object = {name: 'elvis', title: 'hip swinger'}
 What if I want to grab the values of the first and second elements of a given array using variables, and then swap the values of those variables?  
 
 ```js
-const items = ['apple', 'banana', 'pear']
+var items = ['apple', 'banana', 'pear']
 
 // Currently, I would get the following returns:
 console.log(a) => 'apple'
@@ -52,7 +52,7 @@ console.log(b) => 'apple';
 Given an object, write one line of code that assigns variables to the keys.
 
 ```js
-const object = {
+var object = {
   user: 'brenna',
   id: 1,
   date: 'monday',
@@ -65,7 +65,7 @@ const object = {
 Given an object with nested objects, write one line of code that assigns variables to the keys.
 
 ```js
-const object1 = {
+var object1 = {
   user: 'elvis',
   address: {
     city: 'denver',
@@ -83,20 +83,18 @@ There are three exercises, one using an array, one using variables passed as an 
 ```js
 // Array
 ['hello', 'taylor']
-
 // => 'hello, taylor!'
+
 
 // Object with keys
-const greeting="hello"
-const name="taylor"
-
+var greeting="hello"
+var name="taylor"
 {greeting, name}
-
 // => 'hello, taylor!'
+
 
 //Object with key value pairs
 {greeting: 'hello', name: 'taylor'}
-
 // => 'hello, taylor!'
 ```
 
@@ -141,7 +139,7 @@ Given an object, assign each value to a variable but "forget" a couple. Use defa
 ### Parsing An Array From A Function Return
 Given a function that returns an array, use ES6 to parse said array so that each value is accessible directly.
 ```js
-const x = () => {
+var x = () => {
   return ['hello', 'world']
 }
 
@@ -153,7 +151,7 @@ const x = () => {
 Given an object, in one line of code pull out the individual keys to be accessible directly.
 
 ```js
-const object = {name: 'elvis', title: 'hip swinger'}
+var object = {name: 'elvis', title: 'hip swinger'}
 
 // console.log(name) => 'elvis'
 // console.log(title) => 'hip swinger'
@@ -164,7 +162,7 @@ const object = {name: 'elvis', title: 'hip swinger'}
 Given a crazy array of objects with nested objects, iterate over it and grab just the artist and the third album title.
 
 ```js
-const singers = [
+var singers = [
   {
     artist: 'Elvis',
     albums: {
