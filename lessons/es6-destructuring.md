@@ -61,11 +61,11 @@ const object = {
 ```
 // console.log(user) => 'brenna'
 
-### Object Matching: Deep Matching
+### Object Matching: Nested destructuring
 Given an object with nested objects, write one line of code that assigns variables to the keys.
 
 ```js
-const object = {
+const object1 = {
   user: 'elvis',
   address: {
     city: 'denver',
@@ -75,8 +75,10 @@ const object = {
 }
 ```
 
-### Parameter Matching
-Provided the arguments below, write a function that logs both arguments.
+### Isolating Arguments Passed as Function Parameter
+Provided the arguments below, write a function that pulls fields from the provided object and logs the string below.  
+
+There are three exercises, one using an array, one using variables passed as an object, one using an object with key value pairs.  
 
 ```js
 // Array
