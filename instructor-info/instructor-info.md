@@ -4,31 +4,26 @@ title: Front End Instructor Contact Information
 
 # Student Support
 
-* Nick Dorans
-  * Slack - @nickynonaps
-  * Github -
-  * For pairing - Send Slack DM and use his [YouCanBookMe](https://nicholasdorans.youcanbook.me/)
-
-
-* Sign up to pair with 1608
-  *  Link - [GoogleDoc](https://docs.google.com/spreadsheets/d/1QQmWfs3yZVrEfO-z0THEjZNxKMksvFije_p1SeZJzp8/edit)
+* Casey Cross
+  * Slack - @kccrs
+  * For pairing - Send Slack DM and use her [YouCanBookMe](https://caseycross.youcanbook.me/)
 
 # Instructors
 
-* Steve Kinney - Director
+<!-- * Steve Kinney - Director
   * Slack - @steve
   * Github - [stevekinney](https://github.com/stevekinney)
-  * For Pairing - Send Slack DMs to schedule a time
+  * For Pairing - Send Slack DMs to schedule a time -->
+
+* Romeeka Gayhart - Director
+  * Slack - @meeka
+  * Github - [rrgayhart](https://github.com/rrgayhart)
+  * For Pairing - Send Slack DM or use her [YouCanBookMe](https://meeka.youcanbook.me/)
 
 * Louisa Barrett
   * Slack - @louisa
   * Github - [LouisaBarrett](https://github.com/LouisaBarrett)
   * For Pairing - Send Slack DMs to schedule a time
-
-* Romeeka Gayhart
-  * Slack - @meeka
-  * Github - [rrgayhart](https://github.com/rrgayhart)
-  * For Pairing - Send Slack DM or use her [YouCanBookMe](https://meeka.youcanbook.me/)
 
 * Jhun De Andres
   * Slack - @jhunbug
