@@ -167,7 +167,7 @@ var singers = [
     artist: 'Elvis',
     albums: {
       album1: 'this first title for Elvis',
-      album2: 'another second title for Elvis'
+      album2: 'another second title for Elvis',
       album3: 'third title for Elvis'
     }
   },
@@ -175,7 +175,7 @@ var singers = [
     artist: 'Cher',
     albums: {
       album1: 'this first title for Cher',
-      album2: 'another second title for Cher'
+      album2: 'another second title for Cher',
       album3: 'third title for Cher'
     }
   }
