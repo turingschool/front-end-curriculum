@@ -56,7 +56,7 @@ const object = {
   user: 'brenna',
   id: 1,
   date: 'monday',
-  class: 3
+  module: 3
 }
 ```
 // console.log(user) => 'brenna'
