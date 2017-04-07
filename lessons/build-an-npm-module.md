@@ -1,4 +1,3 @@
-
 ---
 title: Build an NPM Module
 length: 120 min
@@ -29,21 +28,55 @@ Note: as you read, prepare answers to the following discussion points
 - Having read this blog, what steps might be missing for you to create your own node module and deploy it?
 - What npm packages do you depend on? Have you ever looked at their source code?
 
-## I Do
+## An Example
 
-* [Link to optional repo]()
+* [Example Repo](https://github.com/rrgayhart/load-machine)
+
+Check out the implementation above. The README contains a 'more or less' summary of the steps taken to convert a piece of my Vending Machine Challenge logic into an npm module.
 
 ## You Do
 
-Check out a branch on your vending machine challenge
+Your challenge, if you choose to accept it, is to take a VERY small amount of logic out of your own repo and break it into an npm module. Go for the smallest possible thing. One helper function is ideal.
 
-Pick a very small helper function to break out
+### Check out a branch on your original repo
 
-Create an npm module to wrap the function
+```
+  git checkout -b 'npm-refactor'
+```
 
-Move over tests
+### Pick a very small helper function to break out
 
-Replace it
+In my case, my vending machine challenge code has a prototype function that allows me to load a machine dynamically. I am able to give the function an array of objects
+
+```js
+var items = [ {item: 'apple', cost: 2}, 
+              { item: 'banana', cost: 1.25},
+              { item: 'pear', cost: 2},
+              { item: 'strawberry', cost: 1.75},
+              { item: 'pineapple', cost: 2.5},
+              { item: 'orange', cost: 1},
+              { item: 'lime', cost: .5},
+              { item: 'lemon', cost: 2},
+              { item: 'guava', cost: 2},
+              { item: 'mango', cost: 2},
+              { item: 'lichee', cost: 2} ];
+```
+
+The function will take the width, number of rows, and depth of each row to assign a button value to each item. The functionality is kind of cool, so it might be something someone else might want to use? 
+
+### Create an npm module to wrap some functionality in your app
+
+Reference the [blog post]((https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)) that you read earlier. Reference the [Example Repo](https://github.com/rrgayhart/load-machine). Use the additional resources linked at the bottom of this tutorial. Isolate a very small piece of logic and move it out. 
+
+### Replace the original code in your original app with the NPM module
+
+   Make sure you're on a branch!!!
+
+   Try 'linking' to your local version (the example repo has a summary of linking)
+
+### Publish your module to NPM
+
+  Woo! Time to be famous!
 
 ## Outside Resources / Further Reading
 
