@@ -98,6 +98,31 @@ To unlink a package from your system:
 
 You can specify a scope for an NPM module to prevent naming collisions with other modules
 
+#### `version`
+
+[docs](https://docs.npmjs.com/cli/version)
+
+Bump an npm version when you add relevant information or code
+
+```
+  npm version <versions> -m "message"
+```
+
+`version`: patch, minor, major, prepatch, preminor, premajor, prerelease
+
+```
+  npm version patch -m "Update Documentation"
+```
+
+This will bump your version automatically, and prepare to version.
+
+Then:
+
+```
+  git push
+  npm publish
+```
+
 ## You Do
 
 Your challenge, if you choose to accept it, is to take a VERY small amount of logic out of your own repo and break it into an npm module. Go for the smallest possible thing. One helper function is ideal.
