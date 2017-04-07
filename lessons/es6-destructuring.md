@@ -76,7 +76,7 @@ const object1 = {
 ```
 
 ### Isolating Arguments Passed as Function Parameter
-Provided the arguments below, write a function that pulls fields from the provided object and logs the string below.  
+Provided the arguments below, write three separate functions, each will pull fields from the provided object and log a string.  
 
 There are three exercises, one using an array, one using variables passed as an object, one using an object with key value pairs.  
 
