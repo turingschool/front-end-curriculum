@@ -34,6 +34,70 @@ Note: as you read, prepare answers to the following discussion points
 
 Check out the implementation above. The README contains a 'more or less' summary of the steps taken to convert a piece of my Vending Machine Challenge logic into an npm module.
 
+## Cheatsheet
+
+Relevant NPM commands
+
+#### `link`
+
+[docs](https://docs.npmjs.com/cli/link)
+
+If you have a local directory containing an npm package, you can link this package locally. 
+
+```
+cd module-name
+npm link
+```
+
+When you want to use a local linked package, you can do so with link
+
+```
+ mkdir newapp/
+ cd newapp/
+ npm link module-name
+```
+
+To unlink a package from an application:
+
+```
+cd newapp/
+npm unlink module-name
+```
+
+To unlink a package from your system:
+
+```
+ cd module-name
+ npm unlink
+ ```
+
+#### `addUser` or `login`
+
+[docs](https://docs.npmjs.com/cli/adduser)
+
+```
+ npm adduser
+ npm login
+```
+
+#### `publish` & `unpublish`
+
+[docs](https://docs.npmjs.com/cli/publish)
+
+```
+ cd module-name
+ npm publish
+ npm unpublish module-name
+```
+
+`--access public` or `--access restricted` - flag to set as public
+
+#### `scope`
+
+[docs](https://docs.npmjs.com/misc/scope)
+
+You can specify a scope for an NPM module to prevent naming collisions with other modules
+
 ## You Do
 
 Your challenge, if you choose to accept it, is to take a VERY small amount of logic out of your own repo and break it into an npm module. Go for the smallest possible thing. One helper function is ideal.
