@@ -34,19 +34,18 @@ const object = {name: 'elvis', title: 'hip swinger'}
 
 ### Variable Swapping: Array
 
-What if I want to grab the values of the first and second elements of a given array and then swap those
- variables?
+What if I want to grab the values of the first and second elements of a given array using variables, and then swap the values of those variables?  
 
 ```js
 const items = ['apple', 'banana', 'pear']
 
 // Currently, I would get the following returns:
-console.log(items1) => 'apple'
-console.log(items2) => 'banana'
+console.log(a) => 'apple'
+console.log(b) => 'banana'
 
 // Assign variables using ES6 so that we get (note, you cannot just make a completely new array):
-console.log(items1) => 'banana';
-console.log(items2) => 'apple';
+console.log(a) => 'banana';
+console.log(b) => 'apple';
 ```
 
 ### Object Matching
