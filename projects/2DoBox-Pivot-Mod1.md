@@ -22,15 +22,13 @@ For this project, go ahead and clone the code base. Once you've explored the bas
 - Add the other team members as collaborators in GitHub
 - Once the team leader has done this, the other team members, if applicable, can fork the new repo.
 
-# Restrictions and Outside Code
+## Phase 1: Refactor
 
 Your project should evolve, refactor, and clean up the code you inherit. This includes deleting redundant, broken, or obsolete code. However, **you should not throw out the previous work wholesale**.
 
 Furthermore, there should be no reduction in functionality except when explicitly called for by new requirements.
 
-## Phase 1: Refactor
-
-The following features are not completely new. While this functionality may be already in place, you need to update the user interface and naming conventions in your code base. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
+There are no new features in this phase, however it is a good idea to generalize your application. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
 
 **Note:** While refactoring, if there is functionality missing from the base IdeaBox project, you will need to implement that functionality as well in this refactor phase.
 
@@ -61,7 +59,7 @@ This doesn't include bug fixes or the addition of any new 2DoBox functionality. 
 
 ## Phase 2: Pivot
 
-This is the existing functionality that should be pivoted for the 2DoBox user interface:
+This is the existing IdeaBox functionality that should be pivoted for the 2DoBox user interface:
 
 ### Adding a new TODO
 
