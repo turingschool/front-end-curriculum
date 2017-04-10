@@ -12,7 +12,7 @@ You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox
 
 Beginning The Pivot
 
-Once you've explored the base project, the team leader will:
+For this project, go ahead and clone the code base. Once you've explored the base project, the team leader will:
 
 - Create a new, blank repository on GitHub named `2DoBox-Pivot`
 - Clone the IdeaBox project that you'll be working with to your local machine
@@ -32,6 +32,8 @@ Furthermore, there should be no reduction in functionality except when explicitl
 
 The following features are not completely new. While this functionality may be already in place, you need to update the user interface and naming conventions in your code base. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
 
+**Note:** While refactoring, if there is functionality missing from the base IdeaBox project, you will need to implement that functionality as well in this refactor phase.
+
 ### Refactoring Guidelines
 
 Here are some refactoring points we want to see in your project:
@@ -46,15 +48,18 @@ Here are some refactoring points we want to see in your project:
 
 Specifically, we're going to set some constraints:
 
-  * You cannot use any nested if/else statements
-  * You cannot use anonymous functions (mainly looking at event event listeners for this)
+  * You cannot use any _nested_ if/else statements
+  * When you can, you should not use anonymous functions (mainly looking at event event listeners for this)
+    * For example, if you find an anonymous function in an event listener, pull it out of the event listener and use a function reference as the callback function
   * HTML must follow basic accessibility guidelines (semantic tagging, image attributes, roles)
-  * No use of global variables
+  * No use of global variables (we're not saying you should never use global variables in life, but for this project it will be an exercise in not using global variables)
   * Functions cannot be longer than 8 lines (including event listeners)
 
 When you "refactor," you make changes to the code without changing any of its functionality. You can think of it like a "clean up," for the sake of improving readability and quality.
 
-This doesn't include bug fixes or the addition of any new functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
+This doesn't include bug fixes or the addition of any new 2DoBox functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
+
+### Phase 2: Pivot
 
 This is the existing functionality that should be pivoted for the 2DoBox user interface:
 
