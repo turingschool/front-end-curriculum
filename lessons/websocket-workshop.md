@@ -423,11 +423,15 @@ Right now, we have nothing to send. Let's add those four buttons to the HTML.
 
 Let's start by simply adding some event listeners to the buttons.
 
+
+
+
 ```js
 // client.js
 const buttons = document.querySelectorAll('#choices button');
 
 for (let i = 0; i < buttons.length; i++) {
+	//using 'this' here doesn't work with ES6. Something about scope. I found either switching back to old 'function' or switch 'this' with 'buttons[i]' works.
   buttons[i].addEventListener('click', () => {
     console.log(this.innerText);
   });
@@ -443,6 +447,7 @@ Now, let's swap out that `console.log` and send some information back to the ser
 const buttons = document.querySelectorAll('#choices button');
 
 for (let i = 0; i < buttons.length; i++) {
+  //Same bug is seen here, see above.
   buttons[i].addEventListener('click', () => {
     socket.send('voteCast', this.innerText);
   });
