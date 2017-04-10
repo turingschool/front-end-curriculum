@@ -184,3 +184,8 @@ var singers = [
 // 'Artist: Elvis, Third Album: third title for Elvis'
 // 'Artist: Cher, Third Album: third title for Cher'
 ```
+
+
+http://www.sbs.com.au/theboat/ - interactive graphic novel about the vietnam war using CSS/JS/Parallax
+https://threejs.org/examples/#css3d_periodictable - Sick interactive periodic table (i like the Helix version)
+http://codepen.io/dissimulate/pen/KrAwx - Codepen of tearable cloth rendering with CSS/JS
