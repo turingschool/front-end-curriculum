@@ -20,7 +20,7 @@ For this project, go ahead and clone the code base. Once you've explored the bas
 - Add the new repository as a remote `git remote add origin` `git://new_repo_url` (this will be different based on your actual remote URL)
 - Push the code `git push origin master`
 - Add the other team members as collaborators in GitHub
-- Once the team leader has done this, the other team members, if applicable, can fork the new repo.
+- Once the team leader has done this, the other team members, if applicable, can clone the new repo.
 
 ## Phase 1: Refactor
 
