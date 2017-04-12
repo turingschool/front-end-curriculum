@@ -23,6 +23,15 @@ tags: javascript, jquery
 
 What is a jigsaw lesson? What is the purpose? What can't you just talk at us like usual?...
 
+* This lesson is a brief experience in what it will be like on the job when you are given a task that you have not had experience with in the past
+* Jigsaw-style lessons provide a cooperative learning experience in the safe environment of your peers and instructors
+* Teaching is one of the best ways to reinforce learning
+* The lesson provides a structure you can use in the future for learning new topics:
+  * Gather a list of questions about the topic
+  * Timebox your learning
+  * Report out on what you've learned to someone else
+  * Have questions about the topic that are still unclear that you can ask to a team member that has experience in that subject
+
 ### Warm Up (10 minutes)
 
 Review the base prework as a group:
