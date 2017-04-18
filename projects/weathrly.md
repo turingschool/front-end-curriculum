@@ -18,7 +18,7 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 ## Phase one
 
-* Your application should have a welcome page that greets the user. The welcome page has an input field that allows the user to submit a location (the location can either use a zip code, or city and state).
+* Your application should have a welcome page that greets the user. The welcome page has an input field that allows the user to submit a location (the location should work with both a zip code and city and state).
 
 * Once the desired location is submitted the Application should display the name of the current city, the current condition, the current day, the current temperature, the expected high and expected low for the day, and a summary of what the weather is going to be like that day ("Windy, chance of a few late night showers. Lows overnight in the mid 50s.)
 
