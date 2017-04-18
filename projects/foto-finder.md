@@ -57,7 +57,7 @@ This phase builds on Phase 1 and gives some functionality to the page.
   - A button to mark the photo as a "Favorite"
   - A button to "Remove" the photo from the album
 - The application should be responsive and work equally well on desktop and mobile
-- When the user clicks on the "Favorite" button, the photo card background turns (a different color), and the button text color changes
+- When the user clicks on the "Favorite" button, the photo card background turns (a different color), and the button should stay in the active (pink) state
 - When the user clicks on the "Remove" button, the photo should be removed from the page
 
 Note: If you refresh the page, the photos disappear! This is OK. You do not need to worry about photo persistence on page refresh (we'll handle that in later projects).

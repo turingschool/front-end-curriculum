@@ -12,7 +12,7 @@ You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox
 
 Beginning The Pivot
 
-Once you've explored the base project, the team leader will:
+For this project, go ahead and clone the code base. Once you've explored the base project, the team leader will:
 
 - Create a new, blank repository on GitHub named `2DoBox-Pivot`
 - Clone the IdeaBox project that you'll be working with to your local machine
@@ -20,17 +20,17 @@ Once you've explored the base project, the team leader will:
 - Add the new repository as a remote `git remote add origin` `git://new_repo_url` (this will be different based on your actual remote URL)
 - Push the code `git push origin master`
 - Add the other team members as collaborators in GitHub
-- Once the team leader has done this, the other team members, if applicable, can fork the new repo.
+- Once the team leader has done this, the other team members, if applicable, can clone the new repo.
 
-# Restrictions and Outside Code
+## Phase 1: Refactor
 
 Your project should evolve, refactor, and clean up the code you inherit. This includes deleting redundant, broken, or obsolete code. However, **you should not throw out the previous work wholesale**.
 
 Furthermore, there should be no reduction in functionality except when explicitly called for by new requirements.
 
-## Phase 1: Refactor
+There are no new features in this phase, however it is a good idea to generalize your application. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
 
-The following features are not completely new. While this functionality may be already in place, you need to update the user interface and naming conventions in your code base. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
+**Note:** While refactoring, if there is functionality missing from the base IdeaBox project, you will need to implement that functionality as well in this refactor phase.
 
 ### Refactoring Guidelines
 
@@ -46,17 +46,20 @@ Here are some refactoring points we want to see in your project:
 
 Specifically, we're going to set some constraints:
 
-  * You cannot use any nested if/else statements
-  * You cannot use anonymous functions (mainly looking at event event listeners for this)
+  * You cannot use any _nested_ if/else statements
+  * When you can, you should not use anonymous functions (mainly looking at event event listeners for this)
+    * For example, if you find an anonymous function in an event listener, pull it out of the event listener and use a function reference as the callback function
   * HTML must follow basic accessibility guidelines (semantic tagging, image attributes, roles)
-  * No use of global variables
+  * No use of global variables (we're not saying you should never use global variables in life, but for this project it will be an exercise in not using global variables)
   * Functions cannot be longer than 8 lines (including event listeners)
 
 When you "refactor," you make changes to the code without changing any of its functionality. You can think of it like a "clean up," for the sake of improving readability and quality.
 
-This doesn't include bug fixes or the addition of any new functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
+This doesn't include bug fixes or the addition of any new 2DoBox functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
 
-This is the existing functionality that should be pivoted for the 2DoBox user interface:
+## Phase 2: Pivot
+
+This is the existing IdeaBox functionality that should be pivoted for the 2DoBox user interface:
 
 ### Adding a new TODO
 
@@ -98,7 +101,7 @@ We’d like our users to be able to easily find specific TODOs they've already c
   * The page should not reload.
   * Clearing the filter box should restore all the ideas to the list.
 
-## Phase 2: Add New Features
+## Phase 3: Add New Features
 
 ### Marking a TODO as completed
 
@@ -293,27 +296,7 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 
 ------------------------------------------------------------------
 
-## TESTING
-
-#### Test Comprehension
-
-|Novice             | Can talk through the concept of testing and why it is useful.|
-|Advanced Beginner  | Can read through a test and understand the structure. Can make the test pass, but takes a few attempts because developer does not use error messages effectively.|
-|Proficient         | Can read through each line of a test and understand how to drive the development to make the test pass. If stuck on making a test pass, they know how to investigate where and how the test is failing using the error messages.|
-|Exceptional        | Can write their own tests.|
-
-<br>
-
-------------------------------------------------------------------
-
 ## DESIGN
-
-#### Comp Recreation
-
-|Novice             | Can establish a complementary color palette, integrate font(s), and execute a handful of the large comp details. |
-|Advanced Beginner  | Can accomplish about 50-75% of the large and small design details and can logically rework them on at least 1 breakpoint. |
-|Proficient         | Developer captures the spirit and design intent of the comp. Some small details need polish to achieve a pixel-perfect match to the comp, but developer is clearly mindful of details and has made a conscious and careful effort to match the comp. Any design decisions left open to interpretation are handled thoughtfully and are well executed, but are more noticeable and/or unintuitive than they would be if the designer had provided the solution, or may not be totally seamless during screen-size transitions.|
-|Exceptional        | Developer skillfully captures the spirit and design intent of all comp details. Execution is pixel-perfect and any design decisions left open to interpretation are solved intentionally, are as seamless as if the designer had provided the solution, are handled gracefully, and enhance the overall design.|
 
 #### Design Concepts
 
@@ -334,18 +317,5 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 |Advanced Beginner  | Can identify deltas in skill level and collaborate on methods whereby both pairs can share equitably in the workload. Can revisit the DTR to address changes that arise, and/or simply to keep one another reminded of the working plan.|
 |Proficient         | Can diplomatically handle issues that arise between the pair through respectful, focused, targeted feedback and implement changes to positively adapt the working relationship and keep the project on track. Can effectively implement tactics to support their partner's learning and project goals, while also honoring their own personal learning and project goals, should the two be different or at different levels due to skill delta. |
 |Exceptional        | Pair collaboration and communication is exceptional, with the distribution of work being equal and balanced, and both partners experiencing a good working flow, able to handle stress, deadlines, issues with calm and focused demeanor.|
-
-<br>
-
-------------------------------------------------------------------
-
-## DEBUGGING
-
-#### Dev Tools/Debug Process
-
-|Novice             | Reaches for the dev tools "Elements" pane to experiment and test variations for their HTML/CSS. Uses the "Console" pane in conjunction with their coding to test outputs of their JS at appropriate times.|
-|Advanced Beginner  | Can articulate and leverage all the features of the "Elements - Styles" pane, including: find, edit html, state toggles, adding new elements/classes, and can read/track sections of the Elements-Styles pain (separated by grey dividers) back to their codebase. |
-|Proficient         | Uses the dev tools as their first line of defense when encountering something unexpected. Demonstrates comfort and skill using dev tools to investigate, check layout issues, console log results, and experiment solving problems before writing abundant amounts of code. Will experiment with javascript in the console to test unfamiliar concepts.|
-|Exceptional        | Is well versed in the Sources tab of the dev tools and can implement breakpoints, watch changing values of variables, and can work with debugger statements in place of console logs.|
 
 <br>

@@ -19,7 +19,7 @@ By the end of this lesson, you will:
 An example repository of the completed example can be found [here](https://github.com/turingschool-examples/secret-box).
 
 ## What is Express?
-Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
+Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
 
 ## Why do we use Express?
 Think about how and why we use jQuery on the front-end. Vanilla JavaScript can be verbose and difficult to read. jQuery came along to give developers a nicer-looking syntax to perform the same operations. It was a library built to abstract the trickier parts of JavaScript and make them easier to write and work with. Express was built for very similar reasons.
@@ -37,7 +37,7 @@ When we are just using Node.js, the flow of a single request might look like thi
 
 ![node only][node-only-flow]
 
-When we add Express, there a couple of additional steps added to the flow of a request:
+When we add Express, there are a couple of additional steps added to the flow of a request:
 
 ![express flow][express-flow]
 
@@ -59,7 +59,7 @@ app.get('/', function (request, response) {
 })
 ```
 
-In the above example, our express app (denoted by `app`), is handling a `GET` request to `'/'`. The second parameter in this call is our callback that defines how we're actually going to handle what happens when a user makes a `GET` request to `'/'`. The callback takes two parameters: the request (`req`) and the response (`res`). In this example, our hander is simply sending back a response (`res.send`) with the text 'Hello World!'.
+In the above example, our express app (denoted by `app`), is handling a `GET` request to `'/'`. The second parameter in this call is our callback that defines how we're actually going to handle what happens when a user makes a `GET` request to `'/'`. The callback takes two parameters: the request (`req`) and the response (`res`). In this example, our handler is simply sending back a response (`res.send`) with the text 'Hello World!'.
 
 This pattern is exactly how we can define and handle any routes in an Express application. There are four main pieces to this code:
 
@@ -135,7 +135,7 @@ app.locals.secrets = {
 }
 ```
 
-Here is the feature we want to implement: when a user has the correct secret, we want to show them message associated with that `id`.
+Here is the feature we want to implement: when a user has the correct secret, we want to show them a message associated with that `id`.
 
 ```js
 app.get('/api/secrets/:id', (request, response) => {
@@ -145,7 +145,7 @@ app.get('/api/secrets/:id', (request, response) => {
 })
 ```
 
-Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser now that the resource was not found.
+Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
 
 ```js
 app.get('/api/secrets/:id', (request, response) => {
@@ -177,9 +177,9 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 ```
 
-This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other. (We're only going to use JSON, but I am leaving it here for reference.)
+This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other (we're only going to use JSON, but I am leaving it here for reference).
 
-Here is what my server looks like so far.
+Here is what my server looks like so far:
 
 ```js
 const express = require('express')
@@ -222,7 +222,7 @@ app.listen(app.get('port'), () => {
 
 ### Creating a POST Route
 
-We'll use our super secure method of generating random IDs.
+We'll use our super secure method of generating random IDs:
 
 ```js
 app.post('/api/secrets', (request, response) => {
