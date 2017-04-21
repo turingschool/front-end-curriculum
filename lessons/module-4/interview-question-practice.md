@@ -85,7 +85,7 @@ var foo = 10 + '20';
 
 - What are the pros and cons of using Promises instead of callbacks? [-hint-](http://frontend.turing.io/lessons/promises.html) and bonus [-hint-](http://frontend.turing.io/lessons/es6-generators.html) [js]
 
-- Explain Ajax in as much detail as possible. [js]
+- Explain Ajax in as much detail as possible. [-hint-](https://github.com/turingschool/front-end-curriculum/blob/71cacd598e799da11ee84e1e5341dde436398b2b/lessons/introduction-to-ajax.md) [js]
 
 ## General Questions
 
