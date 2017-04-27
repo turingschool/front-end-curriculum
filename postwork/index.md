@@ -52,6 +52,7 @@ Below is a list of pretty wonderful free resources on some specific topics that 
 - [Interviews: A Curated List of Awesome Interview Questions](https://github.com/MaximAbramchuck/awesome-interview-questions)
 - [HTML & CSS: Learn to Code Advanced HTML & CSS](http://learn.shayhowe.com/advanced-html-css/)
 - [React: React Cheat Sheet](http://reactcheatsheet.com/)
+- [Big O Notation in JavaScript](https://medium.com/cesars-tech-insights/big-o-notation-javascript-25c79f50b19b)
 
 To dive deeper, checkout the lists of resources in the frontend masters handbook!
 
