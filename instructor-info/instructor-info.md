@@ -6,7 +6,7 @@ title: Front End Instructor Contact Information
 
 * Dan Grund
   * Slack - @pizzarat
-  <!-- * For pairing - Send Slack DM and use his [YouCanBookMe](https://UPDATETHIS.youcanbook.me/) -->
+  * For pairing - Send Slack DM and use his [YouCanBookMe](https://dan-grund.youcanbook.me/)
 
 # Instructors
 
