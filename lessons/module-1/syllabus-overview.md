@@ -2,13 +2,12 @@
 title: Syllabus Overview & Expectations
 ---
 
-## January 23, 2017 - March 10, 2017
+## May 1, 2017 - June 6, 2017
 
-| Instructors    | Slack         | Email            |
-| -------------- |---------------| -----------------|
-| Louisa Barrett | @louisa       | louisa@turing.io |
-| Bree Thomas    | @breethomas   | bree@turing.io   | 
-| Robbie Jaeger  | @robbiejaeger | robbie@turing.io |
+| Instructors     | Slack         | Email            |
+| ----------------|---------------| -----------------|
+| Louisa Barrett  | @louisa       | louisa@turing.io |
+| Brenna Martenson| @brenna       | brenna@turing.io |
 
 ## Module Overview
 Welcome! We are excited to share the first six weeks of the program with you. As the first of four modules in the Front End program this six weeks is about developing a solid foundation in the fundamentals of HTML, CSS, and Javascript. Additionally, we’ll introduce you to test driven development, version control, refactoring, and object oriented programming. Module one also includes an introduction to Turing citizenship via special curriculum in community Fridays for M1 students and professional development courses to cultivate your unique developer identity in anticipation of entering the job market as a front end engineer.
@@ -17,7 +16,7 @@ Welcome! We are excited to share the first six weeks of the program with you. As
 We understand our community members represent a rich variety of backgrounds and perspectives. Turing is committed to providing an atmosphere for learning that respects diversity. While working together to build this community we ask all members to:
 
 * share their unique experiences, values and beliefs
-* be open to the views of others 
+* be open to the views of others
 * honor the uniqueness of their fellow members
 * appreciate the opportunity that we have to learn from each other in this
 community
@@ -30,14 +29,14 @@ By the end of module one, students will:
 
 #### General
 
-* Understand how the internet works and the roles of HTML, CSS, and JS in front end engineering. 
-* Understand the what, why, and how of code libraries. 
-* Exhibit comfort using terminal to navigate through directories, adding and moving files 
+* Understand how the internet works and the roles of HTML, CSS, and JS in front end engineering.
+* Understand the what, why, and how of code libraries.
+* Exhibit comfort using terminal to navigate through directories, adding and moving files
 * Demonstrate an ability to research documentation and apply it correctly in their code.
 
 #### HTML
 
-* Use semantic tags. 
+* Use semantic tags.
 * Write well structured markup w/ proper nesting.
 * Follow industry style and naming conventions.
 * Create forms using correct structure and form elements.
@@ -45,14 +44,14 @@ By the end of module one, students will:
 
 #### CSS
 
-* Understand and leverage cascading styles. 
-* Know when to use ids and classes, & add multiple classes in markup. 
-* Write idiomatic css. 
-* Understand positioning and employ various approaches appropriately. 
-* Understand and implement responsive layouts. 
-* Practically apply css animations in user interactions design. 
-* Understand basic performance issues introduced by CSS and be mindful of those considerations when crafting their CSS. 
-* Use devtools effectively to debug & read error messages. 
+* Understand and leverage cascading styles.
+* Know when to use ids and classes, & add multiple classes in markup.
+* Write idiomatic css.
+* Understand positioning and employ various approaches appropriately.
+* Understand and implement responsive layouts.
+* Practically apply css animations in user interactions design.
+* Understand basic performance issues introduced by CSS and be mindful of those considerations when crafting their CSS.
+* Use devtools effectively to debug & read error messages.
 
 #### Javascript
 
@@ -90,4 +89,3 @@ By the end of module one, students will:
 |Pentathlon| Week six of the program, coined the “Pentathlon”, is a summative assessment to determine your eligibility to advance to module two. The assessment is comprised of: <br>1. DOM coding challenge <br>2. Vanilla Javascript logic based coding challenge <br>3. A comprehensive quizlette <br>4. Static Comp #3 evaluation <br>5. Portfolio defense.|
 |Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments.<br>Detailed information can be found on the Turing School [Portfolios Repo](https://github.com/turingschool/portfolios).|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|
-
