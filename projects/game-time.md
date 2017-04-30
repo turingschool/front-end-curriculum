@@ -55,6 +55,20 @@ To this end, make sure to include sufficient UX to allow the user to fully inter
 * Include a clean UI surrounding the actual game interface itself
 * Create multiple rounds of difficulty (consider increasing factors such as game speed, randomness of starting setup, etc.).
 
+## Code organization
+
+Your game should make use of one or more classes, the exact number will depend on which game you choose and your design choices.
+
+Each class should have its own file with the filename capitalized. The class should be capitalized as well. Only code that is a part of this class should be in this file.
+
+i.e.
+```
+// Car.js
+function Car (name) {
+  this.name = name;
+}
+```
+
 ## Extensions
 
 * Create an AI player that can play as the second player.
