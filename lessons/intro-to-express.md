@@ -357,4 +357,4 @@ app.get('/', (request, response) => {
 
 ### Extra Repository
 
-* [Dino Express](git@github.com:Alex-Tideman/dino_express.git)
+* [Dino Express](https://github.com/Alex-Tideman/dino_express)
