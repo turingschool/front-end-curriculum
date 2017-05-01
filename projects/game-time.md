@@ -35,6 +35,7 @@ You can use any of the following JavaScript libraries:
 - Lights Out
 - Connect Four
 - Othello/Reversi
+- Flappy Bird
 - Frogger
 - Breakout
 - Tron
