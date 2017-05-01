@@ -61,11 +61,7 @@ The six architectural constraints are:
 
 1. Client-server - Separation of GUI and data
 2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
-<<<<<<< ecfc082515871b007153fb84a346d20ba7b8170e
-3. Cacheable - Server responses defined as cacheable or not. Speeds up future interacts.
-=======
 3. Cacheable - Server responses defined as cacheable or not. Speeds up future interactions
->>>>>>> Update node lesson plan
 4. Layered system
 5. Code on demand (i.e. execute JS script in HTML)
 6. Uniform interface
