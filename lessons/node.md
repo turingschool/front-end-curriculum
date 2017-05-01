@@ -74,8 +74,12 @@ RESTful architecture includes sending HTTP methods to a URL to get back informat
 3. PUT - Fully update a specific resource in its entirety
 4. PATCH - Update only a portion of a specific resource
 5. DELETE - Destroy an entire specific resource by the request
+---
 
-#### The Inner Workings of a Request and a Response
+
+### The Inner Workings of a Request and a Response
+
+#### Headers
 The header of a request or response allow the client and the server to pass
 additional information to each other. Think of it as metadata that allows
 a client or server to handle the request properly.
@@ -105,6 +109,31 @@ There is a lot of information in the header, but the most important part is the 
 * 400 range means you sent a bad request. Do it again, but better
 * 500 range means that something is screwed up with the server (thanks
 backend...) but my request is OK
+
+#### Body
+Requests and responses also might have a body. For example, when you make a `PATCH` request to update a resource, your `fetch` call might look like this:
+
+```js
+fetch('/api/v1/books', {
+  method: 'PATCH',
+  body: JSON.stringify({
+    'title': 'The Gene: An Intimate History',
+    'author': 'Siddhartha Mukherjee'
+  })
+});
+```
+
+This is an example of sending a body with your request so that the server can parse the data in it and update a resource based on the resulting body object. When the resource is successfully updated, the server will send a response with a status code of `200`, and usually a body object that contains the entire resource, reflected the new changes that were just made:
+
+```js
+// response body
+{
+  'title': 'The Gene: An Intimate History',
+  'author': 'Siddhartha Mukherjee',
+  'isbn': '978-1476733524',
+  'published': '2015'
+}
+```
 
 #### Misc. other useful concepts
 
