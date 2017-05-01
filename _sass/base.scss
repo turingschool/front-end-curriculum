@@ -106,8 +106,13 @@ header {
       display: none;
     }
 
+ 
+
     iframe {
       height: 400px;
+      @media (max-width: $phone-width) {
+        width: 250px;
+      }
     }
   }
 
