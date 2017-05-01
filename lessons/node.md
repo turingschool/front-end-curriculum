@@ -37,8 +37,8 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 
 * Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
 * Including a link tag to request an external stylesheet: `<link href="https://www.turing.io/css/styles.css" />`
-* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`
-* Making an AJAX request to fetch data: `$.ajax({ url: "https://www.turing.io/api/v1/curriculum/", method: "GET" })`
+* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`.
+* Making a fetch request to retrieve data: `fetch("https://www.turing.io/api/v1/curriculum/")`
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
 
@@ -46,7 +46,7 @@ While the syntax for each of these requests looks significantly different, they 
 
 [url-pic]: /assets/images/lessons/http-rest-node-server/url-pic.gif
 
-When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with the application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints. We will look at a few backend choices later, but first let's talk about what they all share in common.
+When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints. We will look at a few backend choices later, but first let's talk about what they all share in common.
 
 ### Student Discussion (5 minutes)
 In small groups, discuss what types of requests and responses you sent and received in your intermission homework. What did your client side code request? How did your server-side code respond to those requests? What kinds of data did you respond with and how was that data consumed?
@@ -61,19 +61,23 @@ The six architectural constraints are:
 
 1. Client-server - Separation of GUI and data
 2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
+<<<<<<< ecfc082515871b007153fb84a346d20ba7b8170e
 3. Cacheable - Server responses defined as cacheable or not. Speeds up future interacts.
+=======
+3. Cacheable - Server responses defined as cacheable or not. Speeds up future interactions
+>>>>>>> Update node lesson plan
 4. Layered system
 5. Code on demand (i.e. execute JS script in HTML)
 6. Uniform interface
 
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. Here are the primary methods, which are often called CRUD methods (Create, Read,Update,Destroy)
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. Here are the primary methods, which are often called CRUD methods (Create, Read, Update, Destroy)
 
 ---
 1. GET - Retrieve information identified by the request
-2. POST - Create a new resource by the request
-3. PUT - Update a specific resource by the request sending the full resource
-4. PATCH - Update a specific resource by the request sending only the updated information of the resource
-5. DELETE - Destroy a specific resource by the request
+2. POST - Create a new resource
+3. PUT - Fully update a specific resource in its entirety
+4. PATCH - Update only a portion of a specific resource
+5. DELETE - Destroy an entire specific resource by the request
 
 #### The Inner Workings of a Request and a Response
 The header of a request or response allow the client and the server to pass
