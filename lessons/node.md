@@ -66,7 +66,7 @@ The six architectural constraints are:
 5. Code on demand - (i.e. execute JS script tag within HTML document)
 6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
 
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. Here are the primary methods, which are often called CRUD methods (Create, Read, Update, Destroy)
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, Destroy) are as follows:
 
 ---
 1. GET - Retrieve information identified by the request
@@ -74,7 +74,6 @@ RESTful architecture includes sending HTTP methods to a URL to get back informat
 3. PUT - Fully update a specific resource in its entirety
 4. PATCH - Update only a portion of a specific resource
 5. DELETE - Destroy an entire specific resource by the request
----
 
 
 ### The Inner Workings of a Request and a Response
