@@ -55,18 +55,18 @@ In small groups, discuss what types of requests and responses you sent and recei
 The protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.
 
 #### RESTful API design
-* REST stands for representational state transfer. What this means is that web resources communicate using a set of uniform operations that are stateless (don't persist data between requests)
+* REST stands for representational state transfer. What this means is that web resources communicate using a set of stateless, uniform operations.
 
 The six architectural constraints are:
 
 1. Client-server - Separation of GUI and data
 2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
-3. Cacheable - Server responses defined as cacheable or not. Speeds up future interactions
-4. Layered system
-5. Code on demand (i.e. execute JS script in HTML)
-6. Uniform interface
+3. Cacheable - Server responses are defined as cacheable or not. (Speeds up future interactions)
+4. Layered system - Modularity, each 'layer' serves only a single high-level purpose
+5. Code on demand - (i.e. execute JS script tag within HTML document)
+6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
 
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. Here are the primary methods, which are often called CRUD methods (Create, Read, Update, Destroy)
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. Here are the primary methods, which are often called CRUD methods (Create, Read, Update, Destroy)
 
 ---
 1. GET - Retrieve information identified by the request
@@ -253,3 +253,10 @@ The request number will increment upon further requests. If you use a web browse
 * What type of information is included in the header of a request?
 * What are the major RESTful methods and what do each of them do?
 * What is Node?
+
+
+## Resources
+
+* [Anatomy of a URL](http://www.domainsherpa.com/anatomy-of-a-domain-name-and-url/)
+* [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+* [HTTP Status Codes](http://www.restapitutorial.com/httpstatuscodes.html)
