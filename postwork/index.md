@@ -15,6 +15,10 @@ Pick a chunk of time _every day_ that you'll dedicate to working through these r
 
 For example, if you're on vacation, commit to doing two hours of code with your morning coffee. At the two hour mark, close your computer and allow yourself to enjoy the rest of the day. You might end up opening your computer right back up - but always know when you have 'successfully hit your goal'.
 
+## Interview Practice
+
+### [Interview Practice and Lesson Plan Links](http://frontend.turing.io/lessons/module-4/interview-question-practice.html)
+
 ## Code Resources
 
 ### [The 2017 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2017) by Frontend Masters
