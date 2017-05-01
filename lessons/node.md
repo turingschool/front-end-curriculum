@@ -196,7 +196,6 @@ The built-in `http.Server` module inherits from `EventEmitter`.
 
 ```js
 const http = require("http");
-
 const server = http.createServer()
 
 server.listen(3000, () => {
@@ -205,7 +204,7 @@ server.listen(3000, () => {
 
 server.on('request', (request, response) => {
   response.writeHead(200, { 'Content-Type': 'text/plain' });
-  response.write('Hello World');
+  response.write('Hello World\n');
   response.end();
 });
 ```
@@ -218,7 +217,6 @@ In traditional web servers, a new thread is created every time a request is rece
 
 ```js
 const http = require("http");
-
 const server = http.createServer()
 
 server.listen(3000, 'localhost');
@@ -228,7 +226,7 @@ let counter = 0;
 server.on('request', (request, response) => {
   response.writeHead(200, { "Content-Type": 'text/plain' });
   response.write("Hello World\n");
-  response.write(`This is Request #${++counter}.`);
+  response.write(`This is Request #${++counter}.\n`);
   response.end();
 });
 ```
