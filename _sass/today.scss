@@ -1,0 +1,14 @@
+.responsive-iframe-container {
+  .tablet {
+    display: none;
+  }
+  @media (max-width: $tablet-width) {
+    display: block;
+  }
+
+  .desktop {
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+}
