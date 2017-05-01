@@ -36,6 +36,30 @@ We'll be using [mocha](https://mochajs.org/) for our test runner, [chai](http://
 
 Clone down this basic app to get started.
 
+### Setup
+
+Let's add our testing tools from the terminal.
+
+```shell
+npm install -D mocha chai chai-http
+```
+
+Create a directory called `test` and create a new test file called `routes.spec.js` within the `test` directory. Open the new test file.
+
+At the top of the `routes.spec.js` file, add:
+
+```javascript
+var chai = require('chai')
+var should = chai.should()
+var chaiHttp = require('chai-http')
+
+chai.use(chaiHttp)
+
+describe('API Routes', function(){
+  
+})
+```
+
 ### Happy Path
 
 ### Sad Path
