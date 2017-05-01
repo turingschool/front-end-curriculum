@@ -1,12 +1,22 @@
 .responsive-iframe-container {
   .tablet {
-    display: none;
-  }
-  @media (max-width: $tablet-width) {
-    display: block;
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+    iframe {
+      height: 400px;
+    }
   }
 
   .desktop {
+    display: block;
+
+    iframe {
+      width: 800px; 
+      height: 400px;
+    }
+
     @media (max-width: $tablet-width) {
       display: none;
     }

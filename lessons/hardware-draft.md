@@ -1,5 +1,5 @@
 ---
-title: Computer Science: Enough To Be Dangerous
+title: Computer Science Enough To Be Dangerous
 length: 1 hour
 tags: hardware, processes, services, memory
 module: 4
