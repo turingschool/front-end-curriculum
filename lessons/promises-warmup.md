@@ -1,5 +1,5 @@
 ---
-title: Promises: Warm Up
+title: Promises Warm Up
 module: 3
 ---
 

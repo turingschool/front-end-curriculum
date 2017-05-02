@@ -37,8 +37,8 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 
 * Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
 * Including a link tag to request an external stylesheet: `<link href="https://www.turing.io/css/styles.css" />`
-* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`
-* Making an AJAX request to fetch data: `$.ajax({ url: "https://www.turing.io/api/v1/curriculum/", method: "GET" })`
+* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`.
+* Making a fetch request to retrieve data: `fetch("https://www.turing.io/api/v1/curriculum/")`
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
 
@@ -46,7 +46,7 @@ While the syntax for each of these requests looks significantly different, they 
 
 [url-pic]: /assets/images/lessons/http-rest-node-server/url-pic.gif
 
-When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with the application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints. We will look at a few backend choices later, but first let's talk about what they all share in common.
+When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints. We will look at a few backend choices later, but first let's talk about what they all share in common.
 
 ### Student Discussion (5 minutes)
 In small groups, discuss what types of requests and responses you sent and received in your intermission homework. What did your client side code request? How did your server-side code respond to those requests? What kinds of data did you respond with and how was that data consumed?
@@ -55,27 +55,30 @@ In small groups, discuss what types of requests and responses you sent and recei
 The protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.
 
 #### RESTful API design
-* REST stands for representational state transfer. What this means is that web resources communicate using a set of uniform operations that are stateless (don't persist data between requests)
+* REST stands for representational state transfer. What this means is that web resources communicate using a set of stateless, uniform operations.
 
 The six architectural constraints are:
 
 1. Client-server - Separation of GUI and data
 2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
-3. Cacheable - Server responses defined as cacheable or not. Speeds up future interacts.
-4. Layered system
-5. Code on demand (i.e. execute JS script in HTML)
-6. Uniform interface
+3. Cacheable - Server responses are defined as cacheable or not. (Speeds up future interactions)
+4. Layered system - Modularity, each 'layer' serves only a single high-level purpose
+5. Code on demand - (i.e. execute JS script tag within HTML document)
+6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
 
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. Here are the primary methods, which are often called CRUD methods (Create, Read,Update,Destroy)
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, Destroy) are as follows:
 
 ---
 1. GET - Retrieve information identified by the request
-2. POST - Create a new resource by the request
-3. PUT - Update a specific resource by the request sending the full resource
-4. PATCH - Update a specific resource by the request sending only the updated information of the resource
-5. DELETE - Destroy a specific resource by the request
+2. POST - Create a new resource
+3. PUT - Fully update a specific resource in its entirety
+4. PATCH - Update only a portion of a specific resource
+5. DELETE - Destroy an entire specific resource by the request
 
-#### The Inner Workings of a Request and a Response
+
+### The Inner Workings of a Request and a Response
+
+#### Headers
 The header of a request or response allow the client and the server to pass
 additional information to each other. Think of it as metadata that allows
 a client or server to handle the request properly.
@@ -106,6 +109,31 @@ There is a lot of information in the header, but the most important part is the 
 * 500 range means that something is screwed up with the server (thanks
 backend...) but my request is OK
 
+#### Body
+Requests and responses also might have a body. For example, when you make a `PATCH` request to update a resource, your `fetch` call might look like this:
+
+```js
+fetch('/api/v1/books', {
+  method: 'PATCH',
+  body: JSON.stringify({
+    'title': 'The Gene: An Intimate History',
+    'author': 'Siddhartha Mukherjee'
+  })
+});
+```
+
+This is an example of sending a body with your request so that the server can parse the data in it and update a resource based on the resulting body object. When the resource is successfully updated, the server will send a response with a status code of `200`, and usually a body object that contains the entire resource, reflected the new changes that were just made:
+
+```js
+// response body
+{
+  'title': 'The Gene: An Intimate History',
+  'author': 'Siddhartha Mukherjee',
+  'isbn': '978-1476733524',
+  'published': '2015'
+}
+```
+
 #### Misc. other useful concepts
 
 #### IP address
@@ -122,7 +150,7 @@ An IP address is the identification of a host or network interface and allows us
 Since humans aren't computers, we need human-readable forms (domains) to remember URLs. We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. Your OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
 
 ### Back-End Frameworks
-Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
+Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
 
 For the following lessons, we'll focus on using [node](https://nodejs.org/en/) and [express](http://expressjs.com/) for building a back-end. We will use Node today to create a simple HTTP server with several endpoints.
 
@@ -196,7 +224,6 @@ The built-in `http.Server` module inherits from `EventEmitter`.
 
 ```js
 const http = require("http");
-
 const server = http.createServer()
 
 server.listen(3000, () => {
@@ -205,7 +232,7 @@ server.listen(3000, () => {
 
 server.on('request', (request, response) => {
   response.writeHead(200, { 'Content-Type': 'text/plain' });
-  response.write('Hello World');
+  response.write('Hello World\n');
   response.end();
 });
 ```
@@ -218,7 +245,6 @@ In traditional web servers, a new thread is created every time a request is rece
 
 ```js
 const http = require("http");
-
 const server = http.createServer()
 
 server.listen(3000, 'localhost');
@@ -228,7 +254,7 @@ let counter = 0;
 server.on('request', (request, response) => {
   response.writeHead(200, { "Content-Type": 'text/plain' });
   response.write("Hello World\n");
-  response.write(`This is Request #${++counter}.`);
+  response.write(`This is Request #${++counter}.\n`);
   response.end();
 });
 ```
@@ -253,3 +279,10 @@ The request number will increment upon further requests. If you use a web browse
 * What type of information is included in the header of a request?
 * What are the major RESTful methods and what do each of them do?
 * What is Node?
+
+
+## Resources
+
+* [Anatomy of a URL](http://www.domainsherpa.com/anatomy-of-a-domain-name-and-url/)
+* [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
+* [HTTP Status Codes](http://www.restapitutorial.com/httpstatuscodes.html)

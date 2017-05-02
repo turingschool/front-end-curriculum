@@ -34,10 +34,9 @@ You can use any of the following JavaScript libraries:
 
 - Lights Out
 - Connect Four
-- Black Jack
 - Othello/Reversi
+- Flappy Bird
 - Frogger
-- Qbert
 - Breakout
 - Tron
 - Snake
@@ -54,6 +53,20 @@ To this end, make sure to include sufficient UX to allow the user to fully inter
 * Allow the user to start a new game
 * Include a clean UI surrounding the actual game interface itself
 * Create multiple rounds of difficulty (consider increasing factors such as game speed, randomness of starting setup, etc.).
+
+## Code organization
+
+Your game should make use of one or more classes, the exact number will depend on which game you choose and your design choices.
+
+Each class should have its own file with the filename capitalized. The class should be capitalized as well. Only code that is a part of this class should be in this file.
+
+i.e.
+```
+// Car.js
+function Car (name) {
+  this.name = name;
+}
+```
 
 ## Extensions
 
