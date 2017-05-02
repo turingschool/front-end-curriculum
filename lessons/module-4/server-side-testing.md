@@ -10,7 +10,7 @@ Server-side testing is another crucial facet of testing. As your app grows in si
 
 ## Why is This Important?
 
-Everyone draw a diagram of how you envision your Jet Fuel app working - the entire process of the request and response cycle.
+Everyone draw a diagram of how you envision your Jet Fuel app working - the entire process of the request and response cycle from the client to the server and back to the client.
 
 Notice the complexity. With the back end added to your app, there are many more things that can go wrong. When you don't see something working on the page, it's difficult to track down the source. Let's look at the structure of a typical server-side test.
 
@@ -36,11 +36,19 @@ We'll be using [mocha](https://mochajs.org/) for our test runner, [chai](http://
 
 Clone down [this basic app](https://github.com/robbiejaeger/test-express) to get started.
 
+Change into the new directory and run `npm install`.
+
+To see that the server is running, run the command `node server.js` in the terminal, and head over to `localhost:3000` in your browser. You should see a page with the text "We're going to test all the routes!"
+
+To stop the server, just enter `control + c` in the terminal.
+
 ### Setup
 
-Take a look at the server file, `server.js` to see what this app is doing out of the box.
+Take a look at the server file, `server.js`, to see what this app is doing out of the box. We're requiring Express, creating the server application that listens on port 3000, and then setting up one route for the path `localhost:3000/`.
 
-We're going to be dealing with a "fake" database using `app.locals`. Add this code to your server file:
+In your project, you're going to be testing API requests. So let's set up an API!
+
+For this API, this server is going to use a very simplified database using `app.locals`. Add this code to your server file:
 
 ```javascript
 app.locals.students = require('./students')
@@ -50,7 +58,7 @@ app.get('/api/v1/students', (request, response) => {
 })
 ```
 
-The `students.js` file just contains an array of student objects, and we are loading the contents of this file into a local variable in our server called `app.locals.students`. Imagine this `app.locals.students` is our database. 
+The `students.js` file contains an array of student objects, and we are loading the contents of this file into a local server variable called `app.locals.students`. Imagine this `app.locals.students` is our database. Here is more on [app.locals](https://expressjs.com/en/api.html#app.locals).
 
 Now let's add our testing tools from the terminal.
 
@@ -63,37 +71,310 @@ Create a directory called `test` and create a new test file called `routes.spec.
 At the top of the `routes.spec.js` file, add:
 
 ```javascript
-var chai = require('chai')
-var should = chai.should()
-var chaiHttp = require('chai-http')
+const chai = require('chai')
+const should = chai.should()
+const chaiHttp = require('chai-http')
+const server = require('../server')
 
 chai.use(chaiHttp)
 
-describe('API Routes', function(){
+describe('Client Routes', () => {
+
+})
+
+describe('API Routes', () => {
 
 })
 ```
 
+Run the test suite with the command `mocha` (you'll have to have mocha installed globally to run this command in the terminal). The test output should be something like:
+
+```shell
+
+0 passing (3ms)
+
+```
+
+This makes sense because we don't have any tests yet, but now we're all setup!
+
 ### Happy Path
 
-(getting the GET request to the root)
+The happy path is a test case we write for when we expect everything to go well. This includes a well-formed request and the appropriate response.
+
+As a basic test, let's test the root endpoint to our app, `localhost:3000/`, or just `/`. In the `routes.spec.js` file. Use chai-http to make the request inside of the test.
+
+The test for the route `/` becomes:
+
+```javascript
+describe('Client Routes', () => {
+  it('should return the homepage with text', (done) => {
+    chai.request(server)
+    .get('/')
+    .end((err, response) => {
+      response.should.have.status(200)
+      response.should.be.html
+      response.res.text.should.equal('We\'re going to test all the routes!')
+      done()
+    })
+  })
+})
+```
+
+Here is the breakdown of the test:
+
+1. Start a request to the server
+2. For a specific route, use the request verb
+3. When you get the response from the server, test what the response contains
+
+The tests are written using `should`, but you can choose to use `expect` or `assert` - just be consistent. See the [chai docs](http://chaijs.com/api/) for more info.
 
 ### Sad Path
 
-(Bad route test - should get 404, add 404 handling)
+Let's test a route that doesn't exist in our app. All we have to do is make a request to a garbage endpoint and we then expect a standard 404 response. Here is what our tests look like:
 
-### Test an API Call
+```javascript
+describe('Client Routes', () => {
+  it('should return the homepage with text', (done) => {
+    chai.request(server)
+    .get('/')
+    .end((err, response) => {
+      response.should.have.status(200)
+      response.should.be.html
+      response.res.text.should.equal('We\'re going to test all the routes!')
+      done()
+    })
+  })
 
-(GET request for all of the things)
+  it('should return a 404 for a non existent route', (done) => {
+    chai.request(server)
+    .get('/sad')
+    .end((err, response) => {
+      response.should.have.status(404)
+      done()
+    })
+  })
+})
+```
+
+The status code is the very least we can test for. If you have a custom 404 error page, then you can also test for the contents of the page.
+
+When you run the tests with `mocha`, you should see something like:
+
+```shell
+
+Test Express is running on 3000.
+  Client Routes
+    ✓ should return the homepage with text
+    ✓ should return a 404 for a non existent route
+
+
+  2 passing (46ms)
+
+```
+
+Right now, this is what the entire test file looks like:
+
+```javascript
+const chai = require('chai')
+const should = chai.should()
+const chaiHttp = require('chai-http')
+const server = require('../server')
+
+chai.use(chaiHttp)
+
+describe('Client Routes', () => {
+  it('should return the homepage with text', (done) => {
+    chai.request(server)
+    .get('/')
+    .end((err, response) => {
+      response.should.have.status(200)
+      response.should.be.html
+      response.res.text.should.equal('We\'re going to test all the routes!')
+      done()
+    })
+  })
+
+  it('should return a 404 for a non existent route', (done) => {
+    chai.request(server)
+    .get('/sad')
+    .end((err, response) => {
+      response.should.have.status(404)
+      done()
+    })
+  })
+})
+
+describe('API Routes', () => {
+
+})
+```
+
+### Test an API Call (GET Request)
+
+From our basic server-side tests above, you can see how we might test our API. The first test is for the `/api/v1/students` route. A GET request to this endpoint should return a collection all of the students.
+
+Let's write the test. In the `API Routes` describe block:
+
+```javascript
+describe('API Routes', () => {
+  describe('GET /api/v1/students', () => {
+    it('should return all of the students', (done) => {
+      chai.request(server)
+      .get('/api/v1/students')
+      .end((err, response) => {
+        response.should.have.status(200)
+        response.should.be.json
+        response.body.should.be.a('array')
+        response.body.length.should.equal(3)
+        response.body[0].should.have.property('lastname')
+        response.body[0].lastname.should.equal('Turing')
+        response.body[0].should.have.property('program')
+        response.body[0].program.should.equal('FE')
+        response.body[0].should.have.property('enrolled')
+        response.body[0].enrolled.should.equal(true)
+        done()
+      })
+    })
+  })
+})
+```
+
+Run the tests with `mocha`. Because we already have the route set up in our `server.js` file, you should see something like:
+
+```shell
+
+Test Express is running on 3000.
+  Client Routes
+    ✓ should return the homepage with text
+    ✓ should return a 404 for a non existent route
+
+  API Routes
+    GET /api/v1/students
+      ✓ should return all of the students
+
+
+  3 passing (61ms)
+
+```
+
+### Test a POST Request
+
+For a post request, we need to not only send the request to the correct endpoint, but we also need to give some information in the body of the request.
+
+In another `describe` block, let's write the test first:
+
+```javascript
+describe('POST /api/v1/students', () => {
+  it('should create a new student', (done) => {
+    chai.request(server)
+    .post('/api/v1/students') // Notice the change in the verb
+    .send({                   // Here is the information sent in the body or the request
+      lastname: 'Knuth',
+      program: 'FE',
+      enrolled: true
+    })
+    .end((err, response) => {
+      response.should.have.status(201) // Different status here
+      response.body.should.be.a('object')
+      response.body.should.have.property('lastname')
+      response.body.lastname.should.equal('Knuth')
+      response.body.should.have.property('program')
+      response.body.program.should.equal('FE')
+      response.body.should.have.property('enrolled')
+      response.body.enrolled.should.equal(true)
+      chai.request(server) // Can also test that it is actually in the database
+      .get('/api/v1/students')
+      .end((err, response) => {
+        response.should.have.status(200)
+        response.should.be.json
+        response.body.should.be.a('array')
+        response.body.length.should.equal(4)
+        response.body[3].should.have.property('lastname')
+        response.body[3].lastname.should.equal('Knuth')
+        response.body[3].should.have.property('program')
+        response.body[3].program.should.equal('FE')
+        response.body[3].should.have.property('enrolled')
+        response.body[3].enrolled.should.equal(true)
+        done()
+      })
+    })
+  })
+})
+```
+
+Let's run the tests - we get:
+
+```shell
+1 failing
+
+1) API Routes POST /api/v1/students should create a new student:
+   Uncaught AssertionError: expected Object (domain, _events, ...) to have status code 201 but got 404
+    at chai.request.post.send.end (test/routes.spec.js:61:30)
+    at Test.Request.callback (node_modules/superagent/lib/node/index.js:631:3)
+    at IncomingMessage.<anonymous> (node_modules/superagent/lib/node/index.js:795:18)
+    at endReadableNT (_stream_readable.js:974:12)
+    at _combinedTickCallback (internal/process/next_tick.js:74:11)
+    at process._tickCallback (internal/process/next_tick.js:98:9)
+```
+
+Well of course. We expect a 201 response, but we get a 404 because we haven't created the route in our `server.js` file. Let's do that. In the `server.js` file, add:
+
+```javascript
+app.post('/api/v1/students', (request, response) => {
+  app.locals.students.push(request.body) // No validation here...
+  response.status(201).json(app.locals.students[app.locals.students.length - 1])
+})
+```
+
+Now we get this abysmal error:
+
+```shell
+1 failing
+
+  1) API Routes POST /api/v1/students should create a new student:
+     Uncaught AssertionError: expected '' to be an object
+      at chai.request.post.send.end (test/routes.spec.js:62:33)
+      at Test.Request.callback (node_modules/superagent/lib/node/index.js:619:12)
+      at node_modules/superagent/lib/node/index.js:795:18
+      at IncomingMessage.<anonymous> (node_modules/superagent/lib/node/parsers/json.js:16:7)
+      at endReadableNT (_stream_readable.js:974:12)
+      at _combinedTickCallback (internal/process/next_tick.js:74:11)
+      at process._tickCallback (internal/process/next_tick.js:98:9)
+```
+
+Seems like everything should work... However, if we `console.log()` the `request.body` in the route, we get `undefined`. Turns out the Express needs help parsing the body of a request. There is a package called, you guessed it, `body-parser` that can help us with this. It's already in the `package.json` file.
+
+Add this line to the `server.js` file:
+
+```javascript
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+```
+
+We're using `.json()` because we expect the content in the body to be JSON. Run the tests again, and everything should pass.
+
+### POST Sad Path
+
+#### beforeEach and afterEach
+
+
+By the end of it all, this is what the `routes.spec.js` file looks like:
+
+```javascript
+
+```
 
 ## On Your Own - In True TDD Style
 
 Add tests for:
 
-* GET request for one resource based on the id
-* POST request to add something new
-* PUT to change something
-* PATCH?
-* DELETE to remove something
+* GET request for one student based on their name
+  - Normally, this will be an ID, but here we'll use the name of the student. The route would look something like `/api/v1/students/`
+* PUT request to change a student's information
+* DELETE request to _destroy_ a student
 
 ## Additional Resources
+
+If you really want more to do, then convert your existing test suite to another chai assertion library (expect).
+
+[Test Driven Development With Node, Postgres, and Knex](http://mherman.org/blog/2016/04/28/test-driven-development-with-node/#.WPi_sVMrKsx)
