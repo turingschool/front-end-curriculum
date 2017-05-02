@@ -20,7 +20,11 @@ constructor() {
 
 Per [the docs](https://facebook.github.io/react/docs/react-component.html#constructor), the `constructor()` method is called before the component is mounted onto the DOM. It is the first and only function called automatically whenever a `class` based component is created.  
 
-Within the constructor it's important to immediately call `super()`, which allows `this` to have a defined value **within the constructor**. This does not mean that every class NEEDS a constructor. Rule of thumb is typically "if you have a constructor in your code, you must call super". In fact, browsers today will throw an error if you are using ES6 syntax and try to call a constructor method without `super()`.
+Within the constructor it's important to immediately call `super()`, which allows `this` to have a defined value **within the constructor**. 
+
+This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it.
+
+Rule of thumb, though, is typically "if you have a constructor in your code, you must call super". In fact, browsers today will throw an error if you are using ES6 syntax and try to call a constructor method without `super()`.
 
 Let's take a minute to fire up a react component and watch the errors fire as we build out a class based component. Start a blank react project - feel free to use `create-react-app` for this lesson.  
 
