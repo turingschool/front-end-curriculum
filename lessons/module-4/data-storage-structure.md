@@ -67,8 +67,25 @@ Remember, the way you put data **into** a database will have a big effect on how
 
 ### Defining Data Relationships
 
-There are several common 'relationships' between data in most applications. Two of the most common are **one-to-many** and **many-to-many**. 
+There are several common 'relationships' between data in most applications. Two of the most common are **one-to-many** and **many-to-many**. Let's take a look at an example of each and how they might be structured in a relational vs. non-relational database.
 
+Say we have a collection of research papers:
+
+```bash
+Research papers can have many footnotes
+Footnotes can only belong to a single research paper
+```
+
+What kind of relationship do you think this represents? How might it be modeled in a relational database? How might it be modeled in a non-relational database?
+
+Let's think about another relationship:
+
+```bash
+Research papers can have many authors
+Authors can publish many research papers
+```
+
+What relationship does this describe? How might it be modeled in a relational vs. non-relational database?
 
 
 ## Resources
