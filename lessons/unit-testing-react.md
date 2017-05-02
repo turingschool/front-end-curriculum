@@ -7,7 +7,11 @@ module: 3
 
 ## A Bit Of Background
 
-[Create React App](https://github.com/facebookincubator/create-react-app) is a new, officially-supported way to easily create React apps. As of this writing, the project is still very young and not used widely, but adoption is growing quickly.  
+[Create React App](https://github.com/facebookincubator/create-react-app) is a new, officially-supported way to easily create React apps. 
+
+From the Create-React-App Documentation:
+
+>>> If you’re getting started with React, use create-react-app to automate the build of your app. There is no configuration file, and react-scripts is the only extra build dependency in your package.json. Your environment will have everything you need to build a modern React app
 
 **Stop and Read:**: [Create Apps with No Configuration](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)  
 
