@@ -12,13 +12,13 @@ By the end of this lesson, you will:
 * Understand the difference between relational and non-relational databases
 * Be familiar with common data relationships and understand how their structure is affected by the database
 
-### Databases
+## Databases
 
 A database is a collection of data stored in an organized way.
 
 Software products that are used to build, maintain and access data from a database are called Database Management Systems. You'll often hear of two different types of database systems: **relational** and **non-relational**. 
 
-#### Relational Databases
+### Relational Databases
 
 Traditional databases such as [MySQL](https://www.mysql.com/) and [PostgreSQL](https://www.postgresql.org/) are considered **relational** -- data points are predictable and have strict relationships between each other. The database requires a strict, pre-defined schema (more on this in a bit) with tables and columns.
 
@@ -30,14 +30,14 @@ The important things to note about relational databases are that they:
 * **Uses SQL (structured querying language) to access and manipulate data points** - allows you to link information from different tables through unique keys (foreign and primary)
 
 
-##### Terminology
+#### Terminology
 
 * **Schema** - A schema is the definition of your data structure. It provides a blueprint for the tables in your database and the relationships between them. Within each table, you also need to define the types of data that can be stored in each column
 * **Primary Key** - A key in a relational database that is unique for each record. It is a unique identifier. You must have one and only one primary key
 * **Foreign Key** - A field in one table that uniquely identifies a row of another table. A foreign key is defined in a second table, but it refers to the primary key in the first table
 
 
-#### Non-Relational Databases
+### Non-Relational Databases
 
 Up until now, you have mostly seen non-relational databases. Non-relational databases, such as [MongoDB](https://www.mongodb.com/), allow for greater flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
 
@@ -47,12 +47,12 @@ Non-relational databases:
 * **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast, but it also means it's safe from SQL injection attacks.
 
 
-### Choosing a DBMS
+## Choosing a DBMS
 Choosing a Database Management System for your application is highly dependent on what kind of data you plan to store. It's important to map out what your ideal data structure might look like before choosing a DBMS.
 
 You also might choose a particular database depending on what technologies you're using elsewhere in your application. For example, if you're using Firebase for authentication and storage, it might make sense to use Firebase as your back-end store as well.
 
-### Understanding the Data Modeling Process
+## Understanding the Data Modeling Process
 
 Let's pretend you get hired by a company to build an internal tool. Company A recently bought a really nice building in the heart of downtown Denver. The company is planning to expand, so they bought a building that is bigger than they need currently.
 
