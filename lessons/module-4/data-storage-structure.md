@@ -36,6 +36,11 @@ The important things to note about relational databases are that they:
 * **Primary Key** - A key in a relational database that is unique for each record. It is a unique identifier. You must have one and only one primary key
 * **Foreign Key** - A field in one table that uniquely identifies a row of another table. A foreign key is defined in a second table, but it refers to the primary key in the first table
 
+#### Reading
+
+Take a couple of minutes to look through the files in [this randomly-selected open source codebase](https://github.com/thinktopography/backframejs/tree/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations). Each file is associated with a `table` in the database for this project, using software called Knex to interface with a `relational database`. We will learn more about Knex in the next lesson. 
+
+
 
 ### Non-Relational Databases
 
