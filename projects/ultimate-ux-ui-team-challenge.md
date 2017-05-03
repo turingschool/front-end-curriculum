@@ -19,8 +19,30 @@ Your final live project must match the comp, be responsive, and be live on githu
 
  - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
 
+### 1701 DESIGN TEAMS:
 
-## Week 1/Phase 1: Design (assigned 03/15, DUE 03/22):
+* Dave Hubertus, Breana Knight
+
+* Chris Bandrowsky, Christopher Jordan
+
+* Daniel Ludwick, Justyna Winiarska-Field
+
+* Devin Dixon, Leta Keane
+
+* Spencer Hilvitz, Devon Bull
+
+* Jack Bevis, John Binning
+
+* Keji Amos. Kelly Miller
+
+* Jenn Peavler, Laura Turk
+
+* Anders Wood, Travis Gregory
+
+* Adam Carpenter, Zane Russell
+
+
+## Week 1/Phase 1: Design (assigned 05/02, DUE 05/10):
 
 Product: Design a user dashboard for a fitness tracking app. It must include the following elements: a log of your recent workouts, the ability to set and track goals, a calendar to track your workouts. If you feel there are additional elements that should be a part of your comp, you may include them.
 
@@ -29,11 +51,11 @@ Data can be hard-coded in the final build -- these will static pages. Remember: 
 ### Deliverables for Phase 1:
 
  - 3 examples of reference/inspiration. These could be products you currently use, or could be examples you find on [dribbble](https://dribbble.com/), [behance](https://www.behance.net/), or similar sites. They don’t have to be the same product type, but should offer good examples of how to approach organizing content and effective UX. Screen grabs are fine.
- - Explain who your target user is, and how the choices you’ve made solve a problem for them, address their preferences/needs, and are tailored to them.
+ - Complete the user persona worksheet to explain who your target user is, how the choices you’ve made solve a problem for them, and be ready to speak to how you address their preferences/needs with your design solution.
  - Wireframes (hand-drawn is fine) of your comp for mobile and desktop -- we want to see your process and thinking.
  - Final comps for mobile and desktop layouts built in Sketch. Button/hover/active states must be included (if and when applicable). Should be ready to hand-off to a dev team to build.
 
-## Week 2/Phase 2: Build (assigned 03/22, DUE 03/29):
+## Week 2/Phase 2: Build (assigned 05/10, DUE 05/17):
 
 ### Deliverables for Phase 2:
 

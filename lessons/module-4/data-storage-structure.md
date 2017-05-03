@@ -51,8 +51,10 @@ Non-relational databases:
 * **Allow for complex data types to be stored** - this allows for a more nested data structure as you can store lists and objects in any field
 * **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast, but it also means it's safe from SQL injection attacks.
 
+Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient). (Think back to the tradeoffs we learned about in the Firebase documentation.)
 
-## Choosing a DBMS
+
+### Choosing a DBMS
 Choosing a Database Management System for your application is highly dependent on what kind of data you plan to store. It's important to map out what your ideal data structure might look like before choosing a DBMS. There are tools to help you visualize the schemas you create, such as [Schema Designer](http://ondras.zarovi.cz/sql/demo/)
 
 You also might choose a particular database depending on what technologies you're using elsewhere in your application. For example, if you're using Firebase for authentication and storage, it might make sense to use Firebase as your back-end store as well.
@@ -66,12 +68,12 @@ Although Firebase is a nosql database, they actually encourage you to [structure
 
 There are many different strategies for modeling application data. The data modeling method you choose is highly dependent on what type of database you're using. 
 
+### Cause & Effect Between Data & Schemas
 For example, if you choose to use [Postgres](https://www.postgresql.org/), a relational database, you must define a strict schema before adding any records to your database. Remember we said a **schema** is the definition of your data structure. It provides a blueprint for the tables in your database and the relationships between them.
 
 In contrast, a non-relational database allows you to add records to your database (often called 'documents') that describe the schema of your data. The cause-and-effect here is essentially flipped: instead of our schema describing our data, our data is describing our schema. This is especially useful in scenarios where you each data record may or may not contain certain values. When your data is going to be less predictable, and more flexible, this type of database is often easier to work with. They allow you to create nested data objects and add as much or as little complexity to each record as you'd like.
 
-Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient). (Think back to the tradeoffs we learned about in the Firebase documentation.)
-
+### Consider Data Extraction
 Remember, the way you put data **into** a database will have a big effect on how you pull data **out** of your database. When considering how to structure your data, think about what data points you're going to want to extract back out for use in your application. What information are you going to want to display on the UI? Prioritize making this extraction as simple as possible, by storing it in an easily accessible way.
 
 ### Defining Data Relationships

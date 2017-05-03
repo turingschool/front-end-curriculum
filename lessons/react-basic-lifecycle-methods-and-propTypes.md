@@ -22,7 +22,7 @@ Per [the docs](https://facebook.github.io/react/docs/react-component.html#constr
 
 Within the constructor it's important to immediately call `super()`, which allows `this` to have a defined value **within the constructor**. 
 
-This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it.
+This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting this.
 
 Rule of thumb, though, is typically "if you have a constructor in your code, you must call super". In fact, browsers today will throw an error if you are using ES6 syntax and try to call a constructor method without `super()`.
 
@@ -87,6 +87,8 @@ This is also the go-to location to fire off an API call or network request.
 ## More About Props
 
 ### PropTypes
+
+**Deprecation Warning: We will need to migrate to 'prop-types'** [Information here](https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html)
 
 PropTypes allow you to specify what type of props you are expecting in a certain component. This is also known as "typechecking". Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, React's built in `propType` tools let you establish a safety net with very little effort.  
 
