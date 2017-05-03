@@ -354,7 +354,7 @@ app.post('/api/v1/papers', (request, response) => {
 
   database('papers').insert(paper, 'id')
     .then(paper => {
-      response.status(200).json({ id: paper[0] })
+      response.status(201).json({ id: paper[0] })
     })
     .catch(error => {
       console.error('error: ', error);
