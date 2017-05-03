@@ -355,13 +355,251 @@ We're using `.json()` because we expect the content in the body to be JSON. Run 
 
 ### POST Sad Path
 
+What if we make a POST request and don't specify all of the properties of a student? For instance, in the request body if we specify `{lastname: 'Knuth', program: 'FE'}`, but we leave out the `enrolled` property and value, the new record should not be created.
+
+We need to design our server so that it does not accept this kind of situation with missing data. Let's write the test!
+
+```javascript
+it('should not create a record with missing data', (done) => {
+  chai.request(server)
+  .post('/api/v1/students')
+  .send({
+    lastname: 'Knuth',
+    program: 'FE' // Missing the enrolled property and value
+  })
+  .end((err, response) => {
+    response.should.have.status(422)
+    response.body.error.should.equal('You are missing data!')
+    done()
+  })
+})
+```
+
+We need to add some validation in our POST route to see if the request body object contains all the information we need. Let's modify the route:
+
+```javascript
+app.post('/api/v1/students', (request, response) => {
+  let result = ['lastname', 'program', 'enrolled'].every((prop) => {
+    return request.body.hasOwnProperty(prop)
+  })
+
+  if (result) {
+    app.locals.students.push(request.body)
+    response.status(201).json(app.locals.students[app.locals.students.length - 1])
+  } else {
+    response.status(422).send({
+      error: 'You are missing data!'
+    })
+  }
+})
+```
+
+When you're working with a database, your database ORM or database engine will most likely have some built-in validation for you, but you will still have to handle the response.
+
+Run the test suite again, and all of the tests should be passing.
+
 #### beforeEach and afterEach
 
+Server-side tests should run in isolation and each test should not leave artifacts in the database. Therefore, we need to clean out the database after each test and prepare the database before each test.
+
+If you're using a "real" database, you will typically need to:
+
+Before the first test:
+  1. Clean out the database (delete records in all tables (not drop))
+  2. Seed your database with records
+
+After every test, delete records in all tables and seed the database.
+
+For this lesson, we are not using a real database, so we can just reset `app.locals` to the original data from the `students.js` file, or in this case, the server file is required at set to the variable `server`.
+
+With our testing structure, we have built-in methods called `beforeEach` and `afterEach`, and they run before and after each test, respectively.
+
+Let's write these methods within the `describe('API Routes', ...` block.
+
+```javascript
+before((done) => {
+  // Would normally delete records in tables and seed database to make
+  // sure first test starts with clean DB
+  done()
+})
+
+afterEach((done) => {
+  // Would normally delete records in tables and seed database
+  server.locals.students = students
+  done()
+})
+```
+
+And at the top of the `routes.spec.js` file:
+
+```javascript
+const students = require('../students')
+```
+
+### File summary
 
 By the end of it all, this is what the `routes.spec.js` file looks like:
 
 ```javascript
+const chai = require('chai')
+const should = chai.should()
+const chaiHttp = require('chai-http')
+const server = require('../server')
+const students = require('../students')
 
+chai.use(chaiHttp)
+
+describe('Client Routes', () => {
+  it('should return the homepage with text', (done) => {
+    chai.request(server)
+    .get('/')
+    .end((err, response) => {
+      response.should.have.status(200)
+      response.should.be.html
+      response.res.text.should.equal('We\'re going to test all the routes!')
+      done()
+    })
+  })
+
+  it('should return a 404 for a non existent route', (done) => {
+    chai.request(server)
+    .get('/sad')
+    .end((err, response) => {
+      response.should.have.status(404)
+      done()
+    })
+  })
+})
+
+describe('API Routes', () => {
+
+  before((done) => {
+    // Would normally delete records in tables and seed database to make
+    // sure first test starts with clean DB
+    done()
+  })
+
+  afterEach((done) => {
+    // Would normally delete records in tables and seed database
+    server.locals.students = students
+    done()
+  })
+
+  describe('GET /api/v1/students', () => {
+    it('should return all of the students', (done) => {
+      chai.request(server)
+      .get('/api/v1/students')
+      .end((err, response) => {
+        response.should.have.status(200)
+        response.should.be.json
+        response.body.should.be.a('array')
+        response.body.length.should.equal(3)
+        response.body[0].should.have.property('lastname')
+        response.body[0].lastname.should.equal('Turing')
+        response.body[0].should.have.property('program')
+        response.body[0].program.should.equal('FE')
+        response.body[0].should.have.property('enrolled')
+        response.body[0].enrolled.should.equal(true)
+        done()
+      })
+    })
+  })
+
+  describe('POST /api/v1/students', () => {
+    it('should create a new student', (done) => {
+      chai.request(server)
+      .post('/api/v1/students') // Notice the change in the verb
+      .send({                   // Here is the information sent in the body or the request
+        lastname: 'Knuth',
+        program: 'FE',
+        enrolled: true
+      })
+      .end((err, response) => {
+        response.should.have.status(201) // Different status here
+        response.body.should.be.a('object')
+        response.body.should.have.property('lastname')
+        response.body.lastname.should.equal('Knuth')
+        response.body.should.have.property('program')
+        response.body.program.should.equal('FE')
+        response.body.should.have.property('enrolled')
+        response.body.enrolled.should.equal(true)
+        chai.request(server) // Can also test that it is actually in the database
+        .get('/api/v1/students')
+        .end((err, response) => {
+          response.should.have.status(200)
+          response.should.be.json
+          response.body.should.be.a('array')
+          response.body.length.should.equal(4)
+          response.body[3].should.have.property('lastname')
+          response.body[3].lastname.should.equal('Knuth')
+          response.body[3].should.have.property('program')
+          response.body[3].program.should.equal('FE')
+          response.body[3].should.have.property('enrolled')
+          response.body[3].enrolled.should.equal(true)
+          done()
+        })
+      })
+    })
+
+    it('should not create a record with missing data', (done) => {
+      chai.request(server)
+      .post('/api/v1/students')
+      .send({
+        lastname: 'Knuth',
+        program: 'FE' // Missing the enrolled property and value
+      })
+      .end((err, response) => {
+        response.should.have.status(422)
+        response.body.error.should.equal('You are missing data!')
+        done()
+      })
+    })
+  })
+})
+```
+
+Your `server.js` file should look something like this:
+
+```javascript
+const express = require('express')
+const app = express()
+
+const bodyParser = require('body-parser')
+app.use(bodyParser.json())
+
+
+app.set('port', process.env.PORT || 3000)
+app.locals.title = 'Test Express'
+app.locals.students = require('./students')
+
+app.get('/', (request, response) => {
+  response.send('We\'re going to test all the routes!')
+})
+
+app.get('/api/v1/students', (request, response) => {
+  response.status(200).json(app.locals.students)
+})
+
+app.post('/api/v1/students', (request, response) => {
+  let result = ['lastname', 'program', 'enrolled'].every((prop) => {
+    return request.body.hasOwnProperty(prop)
+  })
+
+  if (result) {
+    app.locals.students.push(request.body)
+    response.status(201).json(app.locals.students[app.locals.students.length - 1])
+  } else {
+    response.status(422).send({
+      error: 'You are missing data!'
+    })
+  }
+})
+
+app.listen(app.get('port'), () => {
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`)
+})
+
+module.exports = app
 ```
 
 ## On Your Own - In True TDD Style
