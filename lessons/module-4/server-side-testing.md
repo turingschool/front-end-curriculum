@@ -398,28 +398,29 @@ When you're working with a database, your database ORM or database engine will m
 
 Run the test suite again, and all of the tests should be passing.
 
-#### beforeEach and afterEach
+#### before and afterEach
 
 Server-side tests should run in isolation and each test should not leave artifacts in the database. Therefore, we need to clean out the database after each test and prepare the database before each test.
 
 If you're using a "real" database, you will typically need to:
 
 Before the first test:
-  1. Clean out the database (delete records in all tables (not drop))
-  2. Seed your database with records
+  1. Run the migrations
+  2. Clean out the database (delete records in all tables (not drop))
+  3. Seed your database with records
 
 After every test, delete records in all tables and seed the database.
 
 For this lesson, we are not using a real database, so we can just reset `app.locals` to the original data from the `students.js` file, or in this case, the server file is required at set to the variable `server`.
 
-With our testing structure, we have built-in methods called `beforeEach` and `afterEach`, and they run before and after each test, respectively.
+With our testing structure, we have built-in methods called `before` and `afterEach`, and they run before all tests and after each test, respectively.
 
 Let's write these methods within the `describe('API Routes', ...` block.
 
 ```javascript
 before((done) => {
-  // Would normally delete records in tables and seed database to make
-  // sure first test starts with clean DB
+  // Would normally run migrations, delete records in tables, and seed database
+  // to make sure first test starts with clean DB
   done()
 })
 
