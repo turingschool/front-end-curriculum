@@ -475,8 +475,8 @@ describe('Client Routes', () => {
 describe('API Routes', () => {
 
   before((done) => {
-    // Would normally delete records in tables and seed database to make
-    // sure first test starts with clean DB
+    // Would normally run migrations, delete records in tables, and seed database
+    // to make sure first test starts with clean DB
     done()
   })
 
