@@ -105,7 +105,7 @@ We actually want this to be detected automatically so that it can vary based on 
 const environment = process.env.NODE_ENV || 'development';
 ```
 
-Now when our application is running in Heroku, it will recognize that it's in a `production` environment and use all of the appropriate configurations.
+Now when our application is running in Heroku, it will recognize that it's in a `production` environment and use all of the appropriate configurations. Learn more about [environment variables](https://devcenter.heroku.com/articles/config-vars) and [process.env](https://nodejs.org/api/process.html#process_process_env).
 
 ### Step 6d - Commit & Push
 
