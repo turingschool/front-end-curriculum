@@ -16,11 +16,11 @@ Notice the complexity. With the back end added to your app, there are many more 
 
 ## Basic Structure of a Server-Side Test
 
-1. Setup (if testing route that interacts with the database)
+1. DB setup (if testing route that interacts with the database)
 2. Make a request to a route
 3. Get a response from the server
 4. Test the response
-5. Clean up (if testing route that interacts with the database)
+5. DB clean up (if testing route that interacts with the database)
 
 What do we test the response for?
 * The status code
@@ -616,4 +616,4 @@ Add tests for:
 
 If you really want more to do, then convert your existing test suite to another chai assertion library (expect).
 
-[Test Driven Development With Node, Postgres, and Knex](http://mherman.org/blog/2016/04/28/test-driven-development-with-node/#.WPi_sVMrKsx)
+[Test Driven Development With Node, Postgres, and Knex](http://mherman.org/blog/2016/04/28/test-driven-development-with-node/#.WPi_sVMrKsx) - This article has good tips on setting your environment. Beware that this article uses only one database table, so your migrations and seeds will vary.
