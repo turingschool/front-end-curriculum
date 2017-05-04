@@ -66,7 +66,7 @@ $ heroku logs --tail
 
 We've previously only worked with our applications in a `development` environment. Now we need to set them up to work in a `production` environment. This involves a couple of steps:
 
-### Step 6a - Add Postgres Addon
+### Step 6a - Install Postgres Addon
 
 Heroku allows you to install addons for your different projects. Under the resources tab for your project, you should see a section that allows you to search for an addon. Search for 'Heroku Postgres' and add the addon to your project.
 
