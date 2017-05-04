@@ -1,6 +1,6 @@
 ---
 title: Server-Side Testing
-length: 90
+length: 120
 tags: express, testing, server, node
 ---
 
