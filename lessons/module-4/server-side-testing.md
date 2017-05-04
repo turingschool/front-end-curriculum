@@ -608,7 +608,7 @@ module.exports = app
 Add tests for:
 
 * GET request for one student based on their name
-  - Normally, this will be an ID, but here we'll use the name of the student. The route would look something like `/api/v1/students/`
+  - Normally, this will be an ID, but here we'll use the name of the student. The route would look something like `/api/v1/students/knuth`
 * PUT request to change a student's information
 * DELETE request to _destroy_ a student
 
