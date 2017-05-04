@@ -70,13 +70,11 @@ We've previously only worked with our applications in a `development` environmen
 
 Heroku allows you to install addons for your different projects. Under the resources tab for your project, you should see a section that allows you to search for an addon. Search for 'Heroku Postgres' and add the addon to your project.
 
-### Step 6b - Inspect Configuration Variables
-
-This addon that we just installed created an environment variable for us to connect to our database. Navigate to the settings page for your application and click on 'Reveal Config Variables'.
+This addon will create an environment variable for us to connect to our production database. Navigate to the settings page for your application and click on 'Reveal Config Variables'.
 
 You'll see one has be created for us called `DATABASE_URL`. We don't need or want the actual value for this variable, we're just going to want to reference it in our database configuration.
 
-### Step 6c - Configure Knex for Production
+### Step 6b - Configure Knex for Production
 
 In your `knexfile.js`, add a production environment. You can copy directly from your `development` environment and then make a handful of changes:
 
@@ -93,7 +91,7 @@ production: {
 
 Notice here we are using that `DATABASE_URL` variable that was created for us. This configuration will now tell Heroku to connect to postgres through the addon we installed. *Note: we've appended `?ssl=true` to the end of our connection string because the [Heroku Postgres addon requires it](https://devcenter.heroku.com/articles/heroku-postgresql#heroku-postgres-ssl).
 
-### Step 6d - Update Your Server Environment
+### Step 6c - Update Your Server Environment
 
 We now need to tell our server to detect it's environment based on the process variables. Previously in our `server.js` files, we simply set:
 
@@ -109,7 +107,7 @@ const environment = process.env.NODE_ENV || 'development';
 
 Now when our application is running in Heroku, it will recognize that it's in a `production` environment and use all of the appropriate configurations.
 
-### Step 6e - Commit & Push
+### Step 6d - Commit & Push
 
 Commit the changes you've made to your `knexfile.js` and your `server.js`. Push them up to your origin remote and then push them to heroku:
 
@@ -118,7 +116,7 @@ $ git push origin master
 $ git push heroku master
 ```
 
-### Step 6f - Migrate Your Production Database
+### Step 6e - Migrate Your Production Database
 
 The final step here is to migrate our production database so it has the appropriate schema. We can run `knex` commands through Heroku with:
 
