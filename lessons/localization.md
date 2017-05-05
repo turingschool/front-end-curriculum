@@ -18,7 +18,7 @@ Localization is the process of adapting an existing website to local language an
 
 Many people mistakenly believe localization simply refers to rendering the page text in multiple languages. In reality, it's a bit more involved than that. There are many technical and design decisions that are affected by localization, which we'll learn more about later in this lesson.
 
-You'll often hear of these terms described with the following acronyms: l10n and i18n. (The first letter of the word, how many letters exist before the last letter of the word, and the last letter of the word. Really not any easier to say and just more confusing to see.) These acronyms are often used in the naming of libraries that help us achieve internationalization and localization goals.
+You'll often hear of these terms described with the following acronyms: **l10n** and **i18n**. (The first letter of the word, how many letters exist before the last letter of the word, and the last letter of the word. The acronyms are even harder to say and confusing to see. Sigh.) These acronyms are often used in the naming of libraries that help us achieve internationalization and localization goals.
 
 ## Detecting a User's Locale
 If we want to localize our application, the first thing we need to do is detect what locale your user prefers. A locale denotes a bit more than just language -- it also signifies cultural preferences in how the language should be expressed.
@@ -26,7 +26,7 @@ If we want to localize our application, the first thing we need to do is detect 
 Locales are formatted as `language[-region]`. So for example, `en` represents the English language, while `en-US` represents English in the United States, and `en-GB` represents English in Great Britain. Differences you'd notice per region in this example might be that words like 'favorite' would be spelled 'favourite' if you are in the `en-GB` locale.
 
 ### Client-Side Detection
-We can detect the user's language preference on the client-side, though we have to be aware of differences among browsers. For example:
+We could detect the user's language preference on the client-side, though we have to be aware of differences among browsers. For example:
 
 ```javascript
 // IE
@@ -53,7 +53,7 @@ We might need this ranked list if a user's top locale isn't supported by our app
 On the server-side, we can gain access to an entire array of acceptable locales that the user has set in their browser preferences. This will allow us to fall back to a secondary locale if we don't support their first choice. (e.g. if their top locale is Chinese, and their second is Spanish, and our app has not been translated to Chinese, we could still serve up a Spanish version)
 
 #### Practice: On Your Own
-Let's take a look at how to do this. Make a new directory and `npm init` a new project. Install express and set up a server file that will have the app listen on port 3000. Add a single route:
+Let's take a look at how to do this. Make a new directory and `npm init --yes` a new project. Install express and set up a server file that will have the app listen on port 3000. Add a single route:
 
 ```javascript
 app.get('/', function(req, res) {
