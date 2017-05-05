@@ -47,7 +47,7 @@ $ git remote -v
 
 ```bash
 $ git push heroku master
-$ git heroku open
+$ heroku open
 ```
 
 The open command will open your deployed application in your web browser. And you probably have a super unhelpful 'Application Error' page at the moment. You will inevitably have issues in production, so it's important to learn how to read the Heroku error logs.
