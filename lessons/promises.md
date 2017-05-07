@@ -75,7 +75,7 @@ fetch('/api/v1/projects', {
 ```
 
 In this example, we're making a `POST` request that would add a new project named 'Foo' worth 100 points. `fetch` is a function that takes two arguments:
-
+      
 1. the URL or API endpoint we're trying to hit
 2. an optional object of configuration settings for our request. This object may contain what kind of request we're making (e.g. `GET` vs `POST`) and any data we might need to pass along with it
 
@@ -261,7 +261,7 @@ The promise object itself encapsulates all of the asynchronous logic and allows 
 
 ## References
 
-- [Promise It Wont Hurt Workshop]((https://github.com/stevekane/promise-it-wont-hurt)  
+- [Promise It Wont Hurt Workshop](https://github.com/stevekane/promise-it-wont-hurt)  
 - ["You're Missing the Point of Promises" by Domenic Denicola](https://gist.github.com/domenic/3889970)
 - [MDN Promises](https://developer.mozilla.org/en-US/docs/Mozilla/JavaScript_code_modules/Promise.jsm/Promise)
 - [MDN Promise.Race()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/race)
