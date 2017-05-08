@@ -202,6 +202,7 @@ colors
 - create an array of cars
 - change the values within the array
 - add a new car to the array
+- identify the value of the 3rd element of the array
 
 ## Getting Multiple Values from Functions:
 
@@ -307,7 +308,7 @@ Additionally, if the condition of your loop never returns `false`, you will get 
 Here's an example of an infinite loop. Open a new tab in your browser and run this in your console. What happens?
 
 ```js
-for(var i = 0; i = true; i++) {
+for (var i = 0; i = true; i++) {
   console.log(i);
 }
 ```

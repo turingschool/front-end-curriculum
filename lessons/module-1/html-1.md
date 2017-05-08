@@ -49,7 +49,8 @@ Here is an example of a slightly more robust document:
 
 ## Required Structure of any HTML Page
 
-* `<!doctype html>` declaration: The doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the page is written in.
+* `<!doctype html>` declaration: The doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the page is written in.  
+  - [W3C DTD Docs](https://www.w3.org/QA/2002/04/valid-dtd-list.html)  
 * `<html></html>` tag wraps the entire document
 * `<head></head>` tag wraps elements that shouldn't be rendered: information about the page and how to process it
 * `<body></body>` tag wraps elements that should be displayed: the actual content
@@ -218,7 +219,7 @@ You can use codepen or create your own html file.
 
 ### 2. Create this Dog Party
 
-First thing's first, you'll need to [download the assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing). 
+First thing's first, you'll need to [download the assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing).
 
 Now, in your `dog-party` site directory, begin laying out the HTML for this site:
 

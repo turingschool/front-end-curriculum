@@ -18,7 +18,7 @@ Now that you have a handle on the basics of structuring content for an HTML file
 
 * [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
 * [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
-* [Chrome Dev Tools Reference](https://developer.chrome.com/devtools)
+* [Chrome Dev Tools Docs](https://developers.google.com/web/tools/chrome-devtools/)
 * [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
 * [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 * [MDN Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
@@ -31,7 +31,7 @@ Forms are an important part of a website. They allow users to send data to the w
 * `form`
 * `label`
 * `input`
-* `submit` 
+* `submit`
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="JbyeZM" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Super Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/JbyeZM/">Super Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
@@ -39,18 +39,18 @@ Forms are an important part of a website. They allow users to send data to the w
 ## Your Challenges (2)
 
 ### Part One:
-Partner up and answer the following questions: 
+Partner up and answer the following questions:
 
 * What is the attribute `for` indicate on the `label` element? Do you always have to use it? Why or why not?
-* What are 5 values for the `type` attribute of an `input` element and how do they work? 
-* What is the significance of the `name` attribute in a form? 
+* What are 5 values for the `type` attribute of an `input` element and how do they work?
+* What is the significance of the `name` attribute in a form?
 * What is a `fieldset` element?
 * Why would a `legend` element be important?
 
 ### Part Two:
 Copy the form code below into your own Pen, and then refactor as follows:
 
-* Validate for email type 
+* Validate for email type
 * Replace all `div` elements with correct semantic elements
 * Add a radial check box for gender
 * Include placeholders for name, email, and message
@@ -62,11 +62,13 @@ Copy the form code below into your own Pen, and then refactor as follows:
 
 ***
 
-# Chrome Dev Tools 
+# Chrome Dev Tools
 
 Debugging your front-end code can be an intimidating part of the development process, but it's also one of the most powerful skills you can acquire Developers of all levels spend a significant amount of time troubleshooting code, but the more comfortable you are with debugging tools, the easier it will be to isolate, identify and fix broken code.
 
-The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.
+The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.  
+
+Take 5 minutes to read through [this section](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) of the chrome devtools docs. 
 
 ### Developer Tools
 One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). To open developer tools in Chrome:
@@ -130,12 +132,12 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 
 # Accessibility
 
-* Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way. 
+* Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
 * The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
 * _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
 
 ## WAI-ARIA
-WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories: 
+WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
 
 * __Roles__: define the purpose of an element
 * __Properties__:  help better describe what an element can do
@@ -152,7 +154,7 @@ There are a few core rules to keep in mind when using ARIA:
 * If you can use native HTML elements and attributes to communicate the proper semantics (like `<nav>`, `<header>`, `<aside>`, `<button>`, etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
 * Don’t change native semantics, unless you really have to.
 * All interactive controls such as a button, sliding control, or drag-and-drop widget must be usable by the keyboard.
-* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__. 
+* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__.
 * Lastly, all interactive elements such as form fields should have a name associated with them. Something like a `<label>` is perfect, and with ARIA, you can even specify that a certain element is labelled by or described by another element.
 
 ### Semantic HTML
@@ -174,14 +176,14 @@ There are a few core rules to keep in mind when using ARIA:
 * `<abbr></abbr>`: abbreviation
 
 ```
-Example: <nav></nav> tags have an implicit role="navigation". 
+Example: <nav></nav> tags have an implicit role="navigation".
 ```
 * [Table of elements with implicit Aria roles](http://lab.abhinayrathore.com/aria-cheatsheet/)
 
 ### Alt Attributes for Yo Images!
 
 * Hugely important
-* Low hanging fruit, easy to use on images. 
+* Low hanging fruit, easy to use on images.
 * Be verbose.
 * Just do it.
 
@@ -192,7 +194,7 @@ good: <img src="mountain.jpg" alt="The cascade mountains at sunset in January" /
 
 ### Title Attributes for Yo Links!
 
-* Low hanging fruit on anchor tags. 
+* Low hanging fruit on anchor tags.
 * Not necessary for all links, but make sure to use them for your icon anchors – you know, things like your facebook, twitter, etc icons:
 
 ```html
@@ -207,10 +209,10 @@ The banner, main, and contentinfo roles are meant to be used only one time per p
 ```html
 <header role="banner">
 </header>
- 
+
 <main role="main">
 </main>
- 
+
 <footer role="contentinfo">
 </footer>
 ```
@@ -254,30 +256,30 @@ Important to remember:
 ```html
 <p id="formLabel">Information Form</p>
 <form role="form" aria-labelledby="formLabel">
- 
+
   <label for="name">Name</label>
   <input id="name" type="text" placeholder="John Doe" value="" />
- 
+
   <label for="email">Email*</label>
   <input id="email" type="email" placeholder="foo@bar.com" value="" aria-required="true" />
-  
+
   <span id="genderLabel">Gender</span>
   <div role="radiogroup" aria-labelledby="genderLabel">
     <input type="radio" name="gender" value="male"> Male<br>
     <input type="radio" name="gender" value="female"> Female<br>
     <input type="radio" name="gender" value="other"> Other
   </div>
- 
+
   <label for="comment">Comment*</label>
   <textarea id="comment" aria-multiline="true" aria-required="true"></textarea>
- 
+
   <input type="submit" value="Submit />
 </form>
 ```
 
 
 ## Your Challenge
-Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes. 
+Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes.
 
 ```html
 <div>
@@ -317,4 +319,3 @@ Take the following HTML snippet and make it accessible using explicit semantic H
 * [HTML Nu Validator](https://validator.w3.org/nu)
 * [9 Tools for Website Accessibility
   Testing](https://www.shopify.com/partners/blog/website-accessibility-testing)
-
