@@ -29,7 +29,7 @@ In this lesson we'll cover:
 
 Can't get enough.  
 
-## Calling functions inside of other functions
+## Part 1: Calling functions inside of other functions
 When writing Javascript, you want to do your best to keep your code DRY. That means keeping functions concise and single responsibility. It's not uncommon to do a first pass at solving a problem and end up with a more verbose solution, and then revisit your code to tighten it up. This process of cleaning up your working code is called `refactoring`. When we refactor, one of the things we look for is unnecessary duplication. If we see a line of code being used in multiple places, we can pull it out into its own separate functions of reusable code.
 
 Let's take a crack at refactoring some functions and calling functions within other functions. Below we see two very important functions:
@@ -70,7 +70,7 @@ Turn to your neighbor and explain how the functions above work. Remember, gettin
 
 How would you use parameters and arguments to make the logged string be different each time we call the function?
 
-## Functions Part 2: Declarations vs Expressions
+## Part 2: Declarations vs Expressions
 
 ### Named Functions aka Function Declarations
 
