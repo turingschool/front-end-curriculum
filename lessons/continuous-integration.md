@@ -9,8 +9,9 @@ module: 4
 
 By the end of this lesson, you will:
 
-* Be able to implement CircleCI for continuous integration and deployments
 * Understand what continuous integration is and why it's important
+* Be familiar with a typical deployment flow for agile teams
+* Be able to implement CircleCI for continuous integration and deployments
 
 ## Automating the Grunt Work
 As developers, we're constantly looking for ways to automate tedious tasks. We're essentially trying to put ourselves out of the job by writing scripts that will do it for us.
@@ -49,7 +50,7 @@ The yml file can define settings for various phases of the build process. The ph
 
 An example of how a `circle.yml` file might configure these build phases can be found in the documentation [here](https://circleci.com/docs/config-sample/).
 
-### Setting up Automatic Deployments
+### Automatic Deployments
 CircleCI provides deployment integration with other popular services such as Heroku. Upon a successful build, we can configure CircleCI to deploy our changes to specified environments. This takes a bit more work, but the seamless automation makes it all worthwhile. 
 
 When working with git, it's common to have a master or default branch represent your pristine production environment. We also want a staging environment where we can test out new changes and review the state of the code before it gets merged into master and sent to production. In order to maintain this staging environment, you'll want to create a 'staging' branch in your git repo. Go ahead and do that now if you don't already have one.
@@ -78,12 +79,12 @@ deployment:
   staging:
     branch: staging
     heroku:
-      appname: race-to-1k-staging
+      appname: your-staging-app-name
 
   production:
     branch: master
     heroku:
-      appname: race-to-1k-production
+      appname: your-production-app-name
 ```
 
 Now whenever we push to our staging or master branches, CircleCI will automatically run a build for us, and if it passes, it will deploy our app to the appropriate location.
