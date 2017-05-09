@@ -16,7 +16,7 @@ Every week you will be given a specific page element to build. It must be respon
 
 ## Project Requirements
 
-### You will be building [this comp](https://drive.google.com/drive/u/1/folders/0B_lPnjyMN6-CM1Z2OEptVmtUQ1U)
+### You will be building [this comp](https://drive.google.com/file/d/0B_lPnjyMN6-CWklWcy1wUFA1SVE/view?usp=sharing)
 
 By the end of the module you will have a created a small style guide. As outlined in Brad Frost's [Style Guide](http://bradfrost.com/blog/post/style-guides/) overviews, you will focus on creating a pattern library and code style guide for each element.
 
