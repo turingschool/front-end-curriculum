@@ -612,9 +612,3 @@ Add tests for:
   - Normally, this will be an ID, but here we'll use the name of the student. The route would look something like `/api/v1/students/knuth`
 * PUT request to change a student's information
 * DELETE request to _destroy_ a student
-
-## Additional Resources
-
-If you really want more to do, then convert your existing test suite to another chai assertion library (expect).
-
-[Test Driven Development With Node, Postgres, and Knex](http://mherman.org/blog/2016/04/28/test-driven-development-with-node/#.WPi_sVMrKsx) - This article has good tips on setting your environment. Beware that this article uses only one database table, so your migrations and seeds will vary.
