@@ -128,6 +128,10 @@ As you work, put your script files in this folder. Link to helpful blog posts/tu
 
 #### Run `npm i nightmare --save`
 
+#### Create a script file... something like `node script.js`
+
+#### Run your code using Node! So in the terminal `node scrape.js`
+
 #### Some ideas for things to code:
 
 - A script that orders pizza for your board game night and splits the check for you
@@ -176,10 +180,6 @@ Like, if you go to a site and it doesn't do anything... you probably forgot them
 We spent some time going over promises this morning, so check out this promises implementation 
 
 [Promise example here](https://github.com/rosshinkley/nightmare-examples/blob/master/docs/beginner/promises.md)
-
-## Show and Tell (2:00 - 2:30)
-
-Let's all gather together and show off our scripts - or brilliant ideas for scripts and our code battles to try and get there!
 
 ### Final Thoughts
 
