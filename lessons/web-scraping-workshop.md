@@ -3,19 +3,19 @@ title: Web Scraping Workshop
 module: 4
 ---
 
-# (Optional) Promises Warmup (9:00 - 10:00)
+# (PreWork or Warmup) Promises Warmup
 
 [Lesson Plan Here](http://frontend.turing.io/lessons/promises-warmup.html)
 
-# Intro to Browser Automation and Scraping (10:00 - 10:10)
+# Intro to Browser Automation and Scraping 
 
 [Excellent StackOverflow Breakdown of Technology Available](http://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions)
 
 [Selenium](http://seleniumhq.org/) - polyglot flagship in browser automation, bindings for Python, Ruby, JavaScript, C#, Haskell and more, IDE for Firefox (as an extension) for faster test deployment. Can act as a Server and has tons of features.
 
-# Web Scraping Workshop (10:15 - 2:30)
+# Web Scraping Workshop
 
-## Instructor Demo (10:15 - 10:45)
+## Instructor Demo
 
 Code for live implementation
 
@@ -46,7 +46,24 @@ nightmare
   });
 ```
 
-## Planning Phase (10:45 - 11:15)
+Minimum needed code is:
+
+```js
+var Nightmare = require('nightmare');
+var nightmare = Nightmare({  show: true });
+
+nightmare
+  .goto('WEBSITE ADDRESS')
+  .end()
+  .then(function (result) {
+    console.log(result);
+  })
+  .catch(function (error) {
+    console.error('Search failed:', error);
+  });
+```
+
+## Planning Phase
 
 Before you start writing code, don't.
 
@@ -109,6 +126,8 @@ Follow the following steps to get started:
 
 As you work, put your script files in this folder. Link to helpful blog posts/tutorials.docs that helped you along your way in the README. It may also be a good idea to put your 'roadmap' of psuedocode in that README as well.
 
+#### Run `npm i nightmare --save`
+
 #### Some ideas for things to code:
 
 - A script that orders pizza for your board game night and splits the check for you
@@ -121,7 +140,7 @@ As you work, put your script files in this folder. Link to helpful blog posts/tu
 
 Really, though, the internet is your oyster.
 
-## Implementation Phase (11:15 - 11:45 (lunch) 12:45 - 2:00)
+## Implementation Phase
 
 In groups of two, we can now begin the process of automation.
 
@@ -149,6 +168,8 @@ You can install nightmare in a project like so:
 ### `.end()` and `.then()`
 
 You need these little fellers for your script to work correctly. Don't forget them.
+
+Like, if you go to a site and it doesn't do anything... you probably forgot them....
 
 ### Promises
 
