@@ -14,11 +14,13 @@ By the end of this lesson, you will know/be able to:
 
 ## What is Cross-Browser Compatibility
 
-Cross-Browser compatibility describes the issues and strategies behind making sure your applications work in a consistent manner across as many browsers and platforms as possible. It is mainly an accessibility concern. As we have introduced more devices, operating systems and browsers into the world, attempting to support all of them has become a significant challenge. Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WhatWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences. 
+Cross-Browser compatibility describes the issues and strategies behind making sure your applications work in a consistent manner across as many browsers and platforms as possible. It is mainly an accessibility concern. As we have introduced more devices, operating systems and browsers into the world, attempting to support all of them has become a significant challenge. Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
+
+Take a few minutes to look through either of the standards websites, think about something in HTML you used in your last project, and find the standard that describes it. Put yourself in the position of a developer who wants to create a new browser, even better than Chrome!
 
 ### Prioritizing Functionality
 
-When aiming to serve as large of an audience as possible, we need a clear outline of what pieces of functionality and experience are highest priority. Delivering a completely consistent experience across all platforms isn't necessarily the goal, and is honestly kinda impossible. The real goal is simply to provide an acceptable experience for as many users as possible. This means we need to ask ourselves a few questions about what we're building:
+When aiming to serve as large of an audience as possible, we need a clear outline of what pieces of functionality and experience are highest priority. Delivering a completely consistent experience across all platforms isn't necessarily the goal, and is honestly kind of impossible. The real goal is simply to provide an acceptable experience for as many users as possible. This means we need to ask ourselves a few questions about what we're building:
 
 * What does the "minimum viable product" for our application look like?
 * What is the most important thing a user will want to do with our application?
@@ -26,11 +28,16 @@ When aiming to serve as large of an audience as possible, we need a clear outlin
 
 ### Understanding Your Audience
 
-When asking yourself the above questions, you also need to put thought into what kind of audience you're serving. This will have an affect on how much time, effort and other resources you put behind supporting another platform. For example, if you're building a medical app to be used by clinicians who consistently work on Windows with Internet Explorer, you'd likely need to put significant muscle behind supporting older versions of IE. Conversely, because the clinicians work most often from their offices on desktop computers, you might be able to avoid having to support mobile devices and could put less effort into things like responsiveness and a slimmed-down mobile experience. While you can make some general, educated guesses about the type of audience you're trying to reach, some teams have dedicated resources for researching these types of demographics. 
+When asking yourself the above questions, you also need to put thought into what kind of audience you're serving. This will have an affect on how much time, effort and other resources you put behind supporting another platform. For example, if you're building a medical app to be used by clinicians who consistently work on Windows with Internet Explorer, you'd likely need to put significant muscle behind supporting older versions of IE. Conversely, because the clinicians work most often from their offices on desktop computers, you might be able to avoid having to support mobile devices and could put less effort into things like responsiveness and a slimmed-down mobile experience. While you can make some general, educated guesses about the type of audience you're trying to reach, some teams have dedicated resources for researching these types of demographics.
+
+What are some instances where you might:
+
+* Only heavily support desktop devices? What about only mobile devices?
+* Support older versions of IE?
 
 ### The Approaches: Progressive Enhancement vs. Graceful Degradation
 
-At a high-level, there are two popular approaches for tackling the cross-compat problem: progressive enhancement, and graceful degradation.
+At a high-level, there are two popular approaches for tackling the cross-compat problem: progressive enhancement and graceful degradation.
 
 **Progressive enhancement** is a strategy where you build your application to work at a baseline level, perhaps somewhere in the middle of the road. You establish a basic user experience that all browsers you wish to support will be able to provide. Then you progressively build in more advanced functionality that will be available for platforms that can leverage it.
 
@@ -40,17 +47,19 @@ While these two approaches usually produce similar results, the big difference b
 
 __________________________________________
 
-## Causes of Compatibility Discrepencies
+## Causes of Compatibility Discrepancies
 
-Sometimes browsers implement APIs in different ways. Companies like Google, Mozilla and Microsoft have "Platform Engineering" teams who are responsible for building Chrome, Firefox and Internet Explorer. These engineers are in charge of implementing the features and APIs we use in our web applications -- from HTML tags such as `video` and `audio`, and JavaScript APIs such as `serviceWorkers` and `geolocation`.
+Sometimes browsers implement APIs in different ways. Companies like Google, Mozilla, and Microsoft have "Platform Engineering" teams who are responsible for building Chrome, Firefox, and Internet Explorer, respectively. These engineers are in charge of implementing the features and APIs we use in our web applications -- from HTML tags such as `video` and `audio`, and JavaScript APIs such as `serviceWorkers` and `geolocation`.
 
-As mentioned earlier, there now exist standards bodies such as W3C and WhatWG that provide definitions for how these features should be implemented in browsers. But this wasn't always the case. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
+As mentioned earlier, there now exist standards bodies such as W3C and WHATWG that provide definitions for how these features should be implemented in browsers. But this wasn't always the case. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
 
-Though we've all agreed to standardize, feature implementation discrepencies still exist in some contexts. The most bleeding-edge APIs are often changing rapidly as spec writers debate how they should behave. While the specification is in-flux, so is the implementation. Platform engineers will get started on the implementation right away, and they might contain bugs or outdated APIs while the spec is being solidified. This is unavoidable and our best bet in these scenarios is to simply be patient while we wait for a more stable release before using these features in production.
+Though we've all agreed to standardize, feature implementation discrepancies still exist in some contexts. The most bleeding-edge APIs are often changing rapidly as spec writers debate how they should behave. While the specification is in-flux, so is the implementation. Platform engineers will get started on the implementation right away, and they might contain bugs or outdated APIs while the spec is being solidified. This is unavoidable and our best bet in these scenarios is to simply be patient while we wait for a more stable release before using these features in production.
 
-Another reason discrepencies continue to exist is because people are still using old browsers and environments that are no longer being updated. For example, some larger companies that provide all their employees with Windows and a copy of Internet Explorer 8 might not have the resources to upgrade the entire staff to a new environment. Meanwhile, the teams over at Microsoft are busy working on more bleeding-edge versions of Internet Explorer, and trying to keep up with the newer APIs coming out. The support and resources they put into IE8 is minimal, if any, and thus that browser will never come up to par with more modern ones.
+For instance, take a look at the documentation page for the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API#Browser_compatibility). The top banner says it all.
 
-Finally, some companies are hesitant to stop supporting older browsers simply for financial reasons. The New York Times makes much more of its money off of online subscriptions and advertisements in recent years. Previously, they continued to support older versions of IE because not doing so could have had drastic effects on their revenue if they happened to lose that portion of their user base. (They eventually dropped support for IE8 in 2014 and IE9 in 2015. When doing so, they put an indicator on the UI for reader's using those browsers to let them know their browser would soon no longer be supported. The response was overwhelmingly positive. A large percentage of users were able to upgrade their browsers and did so.) 
+Another reason discrepancies continue to exist is because people are still using old browsers and environments that are no longer being updated. For example, some larger companies that provide all their employees with Windows and a copy of Internet Explorer 8 might not have the resources to upgrade the entire staff to a new environment. Meanwhile, the teams over at Microsoft are busy working on more bleeding-edge versions of Internet Explorer, and trying to keep up with the newer APIs coming out. The support and resources they put into IE8 is minimal, if any, and thus that browser will never come up to par with more modern ones.
+
+Finally, some companies are hesitant to stop supporting older browsers simply for financial reasons. The New York Times makes much more of its money off of online subscriptions and advertisements in recent years. Previously, they continued to support older versions of IE because not doing so could have had drastic effects on their revenue if they happened to lose that portion of their user base. (They eventually dropped support for IE8 in 2014 and IE9 in 2015. When doing so, they put an indicator on the UI for reader's using those browsers to let them know their browser would soon no longer be supported. The response was overwhelmingly positive. A large percentage of users were able to upgrade their browsers and did so.)
 
 __________________________________________
 
@@ -59,9 +68,9 @@ __________________________________________
 ### Fallbacks
 A fallback is a contingency plan -- an option or route to be taken when the preferred choice in unavailable. In a lot of scenarios, browsers will have some default fallback behavior already provided for you. Understanding what these fallbacks are and how they behave is an important part of achieving sound compatibility. Though some fallbacks are provided for us, handling them might still mean we have to write some additional code.
 
-For example, HTML5 introduced a lot of new tags that are unrecognized by older browsers. When a browser encounters an HTML tag it doesn't recognize, it treats it as an inline element with no semantic value. You can still target them with JavaScript and style them with CSS, but you might need to add some additional styles to ensure they appear in a presentable way when they go unrecognized. (e.g. an `article` tag in an older browser might require that you set `display: block` on its CSS in order to present it appropriately in older browsers).
+For example, HTML5 introduced a lot of new tags that are unrecognized by older browsers. When a browser encounters an HTML tag it doesn't recognize, it treats it as an inline element with no semantic value. You can still target them with JavaScript and style them with CSS, but you might need to add some additional styles to ensure they appear in a presentable way when they go unrecognized. (e.g. an [`article`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article) tag in an older browser might require that you set `display: block` on its CSS in order to present it appropriately in older browsers).
 
-Another example of leveraging fallback behavior can be found in more advanced tags, such as `video` or `audio`. These tags were implemented with natural fallback mechanisms to make it easier for developers to integrate them into their applications before all browsers came up to speed. 
+Another example of leveraging fallback behavior can be found in more advanced tags, such as `video` or `audio`. These tags were implemented with natural fallback mechanisms to make it easier for developers to integrate them into their applications before all browsers came up to speed.
 
 Take the following HTML to present a video:
 
@@ -104,14 +113,14 @@ You'll also notice we are specifying our gradients with indicators such as `-moz
 ### IE Conditional Comments
 If you happen to end up working on a codebase that needs to support ancient IE browsers, you might run into some comments within the HTML that look like this:
 
-```HTML
+```html
 <!--[if lte IE 8]>
   <script src="ie-fix.js"></script>
   <link href="ie-fix.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 ```
 
-These are conditional comments that are only recognized by IE. This particular example says 'If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files.' Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
+These are conditional comments that are only recognized by IE. This particular example says "If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files." Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
 
 ### Feature Detection
 Feature detection is similar to fallbacks, though it's more about the process of determining whether or not a browser supports a particular piece of code. We can write our own conditional code to detect feature support, and within each condition, provide the best possible user experience for that scenario. For example, some browsers might support the new [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/notification) that allows for mobile-style push notifications from the browser. In an application where we want to provide this functionality, we'd want to detect whether or not the browser recognizes the API with a conditional like this:
@@ -127,7 +136,7 @@ if (window.Notification && Notification.permission === "granted") {
 
 ### Polyfills & Shims
 
-A shim allows you to bring a new API to an older environment. Usually these are libraries or other include files that you'll add to your application to support some functionality in an older browser.
+A shim allows you to bring a new API to an older environment. Usually these are libraries or other included files that you'll add to your application to support some functionality in an older browser.
 
 Polyfills aim to implement functionality that you'd expect the browser to have natively. When used in conjunction with feature detection, you can 'backfill' unsupported functionality in older browsers with your own implementation.
 
@@ -162,6 +171,8 @@ Including a `normalize.css` or `reset.css` file in your application has become a
 
 Selenium provides a way for you to author tests that reproduce interactions that your users will engage in on your application. It can automate the process of filling in forms, clicking buttons and verifies that content is being displayed appropriately and the app is reacting as expected.
 
+You can test different browsers by using different [`drivers`](https://github.com/SeleniumHQ/selenium/tree/master/javascript/node/selenium-webdriver). There is a corresponding driver for each browser.
+
 ### [Sauce Labs](https://saucelabs.com/)
 
 Sauce Labs is a company that provides extensive automated testing for different areas of coverage. They include specific cross-browser compatibility testing leveraging technologies like Selenium. You can manually test your application in a specified browser version and platform of your choosing, but they also allow you to set up automated tests for the same purposes that will run your application through each interaction in whichever environments you choose.
@@ -172,11 +183,11 @@ You can install a virtual machine on your OS that allows you to run an entirely 
 
 ### [Browser Stack](https://www.browserstack.com/)
 
-BrowserStack allows you to view your application on multiple different browsers at different resolutions and sizes to test appearance and functionality directly within the browser of your choosing. You can generate screenshots of your application for layout and styling discrepencies in any number of devices and browsers.
+BrowserStack allows you to view your application on multiple different browsers at different resolutions and sizes to test appearance and functionality directly within the browser of your choosing. You can generate screenshots of your application for layout and styling discrepancies in any number of devices and browsers.
 
 __________________________________________
 
-## Resources
+## Additional Resources
 
 * [Progressive Enhancement vs. Graceful Degradation](https://www.w3.org/wiki/Graceful_degradation_versus_progressive_enhancement)
 * [Mozilla Cross-Browser Testing](https://github.com/mdn/crossbrowser-testing-lab/wiki)
