@@ -174,16 +174,11 @@ npm install --save jsonwebtoken
 npm install --save dotenv
 ```
 
-And now we'll import it in `server.js`, and leverage the [dotenv](https://www.npmjs.com/package/dotenv) `config` method to parse our environment variables:
-
-```javascript
-const jwt = require('jsonwebtoken');
-const config = require('dotenv').config();
-```
+Import these libraries into your `server.js`.
 
 ### Configuration
 
-We know we're going to need access to each of the variables we declared in our `.env` file, so let's be good citizens and throw an error in our server if any of them are missing. We now have access to each of the three variables (CLIENT_SECRET, USERNAME, PASSWORD) through `config[variableName]` which makes it easy for us to check for them. Beneath the `app.use(cors());` line, add the following check:
+We know we're going to need access to each of the variables we declared in our `.env` file, so let's be good citizens and throw an error in our server if any of them are missing. Read the [dotenv](https://www.npmjs.com/package/dotenv) documentation to learn how you can parse your environment variables and access them through a `config` object. Once you have access to each of the three variables (CLIENT_SECRET, USERNAME, PASSWORD) through `config[variableName]` which makes it easy for us to check for them. Beneath the `app.use(cors());` line, add the following check:
 
 ```javascript
 if (!config.CLIENT_SECRET || !config.USERNAME || !config.PASSWORD) {
