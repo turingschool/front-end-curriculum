@@ -63,7 +63,9 @@ nightmare
   });
 ```
 
-## Planning Phase
+[Longer Example Here](https://gist.github.com/rrgayhart/f1c25fd47bb5ad42957224e8b6b5ba83)
+
+# Planning Phase
 
 Before you start writing code, don't.
 
@@ -91,6 +93,8 @@ And walk through the process with psuedo code and by finding the selectors.
 
 ```
 
+# Resources
+
 The two resources below are a lifesaver for this process.
 
 ### How Do Query Selectors Work Again?
@@ -99,7 +103,7 @@ The two resources below are a lifesaver for this process.
 
 [CSS Selector Helper for Chrome](https://chrome.google.com/webstore/detail/css-selector-helper-for-c/gddgceinofapfodcekopkjjelkbjodin?utm_source=gmail)
 
-### You Do
+# You Do
 
 Spend the next pomodoro working by yourself to come up with an idea for something to scrape or some activity to automate, and outlining the steps needed to accomplish this automation.
 
@@ -181,7 +185,15 @@ We spent some time going over promises this morning, so check out this promises 
 
 [Promise example here](https://github.com/rosshinkley/nightmare-examples/blob/master/docs/beginner/promises.md)
 
-### Final Thoughts
+### Adjusting Your Viewport
+
+If you need more of the page, you can adjust the viewport using code like ` .viewport(1500, 1500)`
+
+### Writing to a File
+
+Rather than just console logging the output.. think about [writing it to a file](http://stackoverflow.com/questions/39175845/how-do-i-write-data-from-nightmarejs-to-file) 
+
+# Final Thoughts
 
 (from Neight the Greight)
 
