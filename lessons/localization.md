@@ -66,7 +66,7 @@ If we now try to hit the root of our application, we'll see a string displayed t
 
 `Locales: es,en-US;q=0.8,en;q=0.6,la;q=0.4`
 
-The `;q=0.8` parameter simply denotes the quality/level of acceptance for this particular locale. (e.g. in this string, a user would prefer an en-US over la).
+The `;q=0.8` parameter simply denotes the quality/level of acceptance for this particular locale. (e.g. in this string, a user would prefer an `en-US` over `la`). In this case, `es` gets a default quality value of `1.0`. You can check out the [ISO standard](https://en.wikipedia.org/wiki/ISO_639-1) for language codes.
 
 This `req.header('Accept-Language')` value is given to us as a request header (similar to when you've specified Authorization headers or Accept-Content headers) automatically by the browser. If we look at our request in the browser dev tools, we can see this information has been passed through for us by the browser:
 
@@ -149,7 +149,7 @@ Next, create a `views` directory and an `index.ejs` template that will display o
 ```html
 <html lang="<%= locale %>">
   <head>
-    <title><%= translate ('title') %></title>
+    <title><%= translate('title') %></title>
   </head>
   <body>
     <h1><%= translate('title') %></h1>
@@ -190,7 +190,7 @@ If you don't have a fully complete localization for a particular language, you m
 Avoid using images that include text. Sometimes logos are an exception, but prefer using CSS to position text over images if required.
 
 ### Dates, Numbers and Currencies
-Besides translating our text strings, we also need to keep other data points in mind such as dates, numbers and currencies. These are often formatted differently based on locale, and we want to make sure they read in an appropriate manner.
+Besides translating our text strings, we also need to keep other data points in mind such as dates, numbers, and currencies. These are often formatted differently based on locale, and we want to make sure they read in an appropriate manner.
 
 ### Resources
 * [Detecting a User's Locale](http://www.mattzabriskie.com/blog/detecting-locale)
