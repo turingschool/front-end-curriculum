@@ -41,6 +41,18 @@ Your final live project must match the comp, be responsive, and be live on githu
 
 * Adam Carpenter, Zane Russell
 
+### DESIGN/BUILD TEAM SWAP
+
+* Dave Hubertus, Breana Knight <--> Devin Dixon, Leta Keane
+
+* Chris Bandrowsky, Christopher Jordan <--> Spencer Hilvitz, Devon Bull
+
+* Daniel Ludwick, Justyna Winiarska-Field <--> Jack Bevis, John Binning
+
+* Keji Amos. Kelly Miller <--> Jenn Peavler, Laura Turk
+
+* Anders Wood, Travis Gregory <--> Adam Carpenter, Zane Russell
+
 
 ## Week 1/Phase 1: Design (assigned 05/02, DUE 05/10):
 
