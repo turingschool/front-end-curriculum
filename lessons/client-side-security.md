@@ -136,7 +136,7 @@ The client, however, handles all of the interactions between your users and your
 
   Basically, modern authentication of users depends on handshakes and encryption. Consider this a handwave.
 
-  ** Same-Origin Policy & Cross-Origin Resource Sharing **
+  **Same-Origin Policy & Cross-Origin Resource Sharing**
 
   The [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) permits `permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin.`
 
