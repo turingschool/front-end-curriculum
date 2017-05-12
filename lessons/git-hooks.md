@@ -22,12 +22,19 @@ Another tool we can leverage that works nicely with CI are [git hooks](https://g
 * `commit-msg` - runs after the commit message has been made, can be used to verify that your message follows a required pattern (e.g. capital first letter, no punctuation, command-style sentence)
 * `post-commit` - runs after the entire commit process is completed, can be used to run another script based on information from the most recent commit
 
-Git allows us to effectively 'pause' the commit cycle at each of these four phases through the use of hooks. We just saw how CircleCI builds will sometimes fail if we have a failing test or our code doesn't pass the linting rules we've set. Builds can take significant time when we have complex applications, so we want to minimize the chances that we'll start up a build that's going to fail. One way we can do that is by creating a `pre-commit` hook that prevents us from committing code that doesn't conform to our linting and testing standards.
+Git allows us to effectively 'pause' the commit cycle at each of these four phases through the use of hooks. We just saw how CircleCI builds will sometimes fail if we have a failing test or our code doesn't pass the linting rules we've set. Builds can take significant time when we have complex applications, so we want to minimize the chances that we'll start up a build that's going to fail. One way we can do that is by running our tests and linting checks before we even commit our code.
 
-### Creating a `pre-commit` hook
-Whenever we create a new local git repo, a `.git` directory is included in our project. If we were to `cd` into `.git/hooks` we can actually see a couple of sample hooks that git provides us with by default. You'll notice the filenames all end with `.sample`. This is what's preventing them from actually running. If we want to implement one of these hooks, we could simply remove the `.sample` suffix. 
+**Note: There are additional hooks for facilitating a custom email workflow and manipulating other git actions such as rebasing. These aren't used quite as often as the commit hooks, but it's good to be aware they exist.**
 
-Let's rename `pre-commit.sample` to `pre-commit` and open it in your text editor. We're not going to use any of the example functionality that was included, so we can remove everything in this file and replace it with the following:
+## The .git Directory
+Whenever we create a new local git repo, a `.git` directory is included in our project. This is where our git hooks live! The `.git` directory holds all sorts of secrets and goodies related to the version control process for our project. It maintains an immense amount of information, including all the deltas and changesets you've ever made. So even if you delete a commit or think you've lost some important code, never fear -- you can always jump into the depths of the `.git` directory and retrieve it. **(If you've ever committed your `node_modules` directory, you'll notice all of your clones and pulls are incredibly slow because that changeset still exists in the history somewhere, even after you delete it.)**
+
+
+## Creating a `pre-commit` hook
+If we were to `cd` into `.git/hooks` we can actually see a couple of sample hooks that git provides us with by default. You'll notice the filenames all end with `.sample`. This is what's preventing them from actually running. If we want to implement one of these hooks, we could simply remove the `.sample` suffix. 
+
+### Pre-Commit: Testing
+Let's rename `pre-commit.sample` to `pre-commit` and open it in your text editor. We're going to create a `pre-commit` hook that prevents us from committing code that doesn't conform to our linting and testing standards. We're not going to use any of the example functionality that was included, so we can remove everything in this file and replace it with the following:
 
 ```bash
 #!/bin/sh
@@ -37,7 +44,11 @@ echo "\Running tests:\n"
 npm run test --silent
 ```
 
-Now if we have a failing test, our pre-commit hook should catch that and prevent the commit from going through. This hook is super simple right now, because a failing test automatically causes the process to exit with an error. If we were to add linting to this hook:
+Now if we have a failing test, our pre-commit hook should catch that and prevent the commit from going through. This hook is super simple right now, because a failing test automatically causes the process to exit with an error.
+
+### Pre-Commit: Linting
+
+If we were to add linting to this hook:
 
 ```bash
 #!/bin/sh
@@ -79,7 +90,7 @@ else
 fi
 ```
 
-#### Accepting User Input
+### Pre-Commit: Console.Logs/Accepting User Input
 
 We might also want to check for `console.logs` or `debugger` statements in our code before committing. Sometimes (though rarely), you might actually want to include an intentional `console.log`. With the following script, we can allow users to choose whether or not to continue with the commit if any logs are detected:
 
@@ -125,10 +136,7 @@ fi
 chmod +x hooks/filename
 ```
 
-### More Hooks
-There are additional hooks for facilitating a custom email workflow and manipulating other git actions such as rebasing. These aren't used quite as often as the commit hooks, but it's good to be aware they exist.
-
-### Sharing Hooks
+## Sharing Hooks
 By default, git hooks exist in the `.git/hooks` directory of your local repo. You'll notice that this isn't a directory that gets pushed to github, so when new contributors pull down your repo, they won't have the same hooks in place that the rest of the team might be using. There are a couple of ways to get around this.
 
 As of Git 2.9, you can set a git configuration option `core.hooksPath` that will override the default `.git/hooks` directory. This would allow you and your team to put your hooks in an internal, standalone repository that each developer could clone down and reference with the `core.hooksPath` option.
