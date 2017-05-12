@@ -12,19 +12,23 @@ By the end of this lesson, you will:
 * Understand how to create and use git hooks to automate common developer workflow processes
 
 ## Automating the Grunt Work
-As developers, we're constantly looking for ways to automate tedious tasks. We're essentially trying to put ourselves out of the job by writing scripts that will do it for us.
+As developers, we're constantly looking for ways to automate tedious tasks. We're essentially trying to put ourselves out of the job by writing scripts that will do it for us. Let's talk about git hooks.
 
 ## Git Hooks
-Another tool we can leverage that works nicely with CI are [git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks). Git hooks are custom scripts that you can write to execute particular tasks during certain points of the git workflow process. Similar to the lifecycle methods in React or other JavaScript frameworks, you'll recognize some lifecycle patterns within the git version control system. For example, every time we make a commit, there are four distinct phases: 
+[Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are custom scripts that you can write to execute particular tasks during certain points of the git workflow process. Similar to the lifecycle methods in React or other JavaScript frameworks, you'll recognize some lifecycle patterns within the git version control system. For example, every time we make a commit, there are four distinct phases: 
 
 * `pre-commit` - runs before the commit is even attempted, can be used to do a quick QA evaluation on the code that's about to be committed
 * `prepare-commit-msg` - runs before the commit message is made but after a default message is created, e.g. merge commits are auto-generated and can be adjusted at this point in the cycle
 * `commit-msg` - runs after the commit message has been made, can be used to verify that your message follows a required pattern (e.g. capital first letter, no punctuation, command-style sentence)
 * `post-commit` - runs after the entire commit process is completed, can be used to run another script based on information from the most recent commit
 
-Git allows us to effectively 'pause' the commit cycle at each of these four phases through the use of hooks. We just saw how CircleCI builds will sometimes fail if we have a failing test or our code doesn't pass the linting rules we've set. Builds can take significant time when we have complex applications, so we want to minimize the chances that we'll start up a build that's going to fail. One way we can do that is by running our tests and linting checks before we even commit our code.
+Git allows us to effectively 'pause' the commit cycle at each of these four phases through the use of hooks. There are additional hooks for facilitating a custom email workflow and manipulating other git actions such as rebasing. These aren't used quite as often as the commit hooks, but it's good to be aware they exist.
 
-**Note: There are additional hooks for facilitating a custom email workflow and manipulating other git actions such as rebasing. These aren't used quite as often as the commit hooks, but it's good to be aware they exist.**
+## Why Git Hooks?
+
+* **We Don't Have to Wait for a Build Process:** We just saw how CircleCI builds will sometimes fail if we have a failing test or our code doesn't pass the linting rules we've set. Builds can take significant time when we have complex applications, so we want to minimize the chances that we'll start a build that's going to fail. One way we can do that is by running our tests and linting checks before we even commit our code with a `pre-commit` hook.
+* **They ensure your commits are flawless:** If you verify the integrity of your code before committing it, you'll never have to go back and add a separate commit that says 'Fix linting errors' or 'Remove console.logs'. These types of commits clutter up the history and make it more difficult to search past versions of the project.
+* **They enable you to be a slob:** You can carry-on with your normal workflow and write messy code...and no one will be the wiser. Git will clean it all up for you (or at least remind you to do so) before your teammates see what a mess you've made.
 
 ## The .git Directory
 Whenever we create a new local git repo, a `.git` directory is included in our project. This is where our git hooks live! The `.git` directory holds all sorts of secrets and goodies related to the version control process for our project. It maintains an immense amount of information, including all the deltas and changesets you've ever made. So even if you delete a commit or think you've lost some important code, never fear -- you can always jump into the depths of the `.git` directory and retrieve it. **(If you've ever committed your `node_modules` directory, you'll notice all of your clones and pulls are incredibly slow because that changeset still exists in the history somewhere, even after you delete it.)**
