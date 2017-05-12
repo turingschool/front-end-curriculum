@@ -44,10 +44,11 @@ In groups of three, pick one of the following articles to read:
 - [Scenario 2](https://www.theguardian.com/business/2013/apr/23/ap-tweet-hack-wall-street-freefall)
 - Scenario 3 [Small Example](http://www.html5gamedevs.com/topic/26341-have-your-games-been-stolen-check-here/) & [Large Example](https://arstechnica.com/gaming/2016/06/what-drove-one-half-life-2-super-fan-to-hack-into-valves-servers/)
 - [Scenario 4](http://www.bbc.com/news/technology-30575104)
-- [Scendario 5](https://petapixel.com/2014/07/31/cautionary-tale-bug-dropbox-permanently-deleted-8000-photos/)
+- [Scenario 5](https://www.theguardian.com/technology/2017/jan/10/browser-autofill-used-to-steal-personal-details-in-new-phising-attack-chrome-safari)
 - Scenario 6 [Watch (pertinant part at 0:45](https://www.youtube.com/watch?v=-hxX_Q5CnaA) & [Read](http://www.businessinsider.com/when-amazon-launched-a-bug-allowed-users-to-get-paid-by-the-company-2011-10)
 - Scenario 7 [Example 1](http://www.theregister.co.uk/2011/05/06/syria_fake_certificate_facebook_attack/) & [Example 2](https://arstechnica.com/security/2015/04/meet-great-cannon-the-man-in-the-middle-weapon-china-used-on-github/)
 - Scenario 8 [Example 1](https://www.7xter.com/2015/03/how-i-exposed-your-private-photos.html) & [Example 2](https://www.7xter.com/2015/02/how-i-hacked-your-facebook-photos.html)
+- [Scenario 9](https://petapixel.com/2014/07/31/cautionary-tale-bug-dropbox-permanently-deleted-8000-photos/)
 
 **Read**
   - Read the scenario you pick
