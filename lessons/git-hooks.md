@@ -79,6 +79,46 @@ else
 fi
 ```
 
+#### Accepting User Input
+
+We might also want to check for `console.logs` or `debugger` statements in our code before committing. Sometimes (though rarely), you might actually want to include an intentional `console.log`. With the following script, we can allow users to choose whether or not to continue with the commit if any logs are detected:
+
+```bash
+echo "\nChecking for console.logs()...\n"
+
+exec 1>&2
+# enable user input
+exec < /dev/tty
+
+consoleregexp='^\+.*console\.log('
+debuggerregexp='debugger'
+
+if test $(git diff --cached | grep $consoleregexp | wc -l) != 0
+then
+  exec git diff --cached | grep -ne $consoleregexp
+  read -p "You have added one or more console logs in your modification. Are you sure want to continue? (y/n)" yn
+  echo $yn | grep ^[Yy]$
+  if [ $? -eq 0 ]
+  then
+    exit 0; # Let the user continue
+  else
+    exit 1; # Don't let the user continue
+  fi
+fi
+if test $(git diff --cached | grep $debuggerregexp | wc -l) != 0
+then
+  exec git diff --cached | grep -ne $debuggerregexp
+  read -p "You have added one or more debuggers in your modification. Are you sure want to continue? (y/n)" yn
+  echo $yn | grep ^[Yy]$
+  if [ $? -eq 0 ]
+  then
+    exit 0; # Let the user continue
+  else
+    exit 1; # Don't let the user continue
+  fi
+fi
+```
+
 *Note: In order for a hook file to run, it must be made executeable. You can make a file executeable by running:* 
 
 ```bash
