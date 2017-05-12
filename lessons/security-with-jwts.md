@@ -8,9 +8,9 @@ tags: security, oauth, jwt, json web tokens
 
 By the end of this lesson, you will:
 
-- have a basic understanding of token-based authentication
-- recognize the underlying structure of a JWT
-- be able to implement a protected route and API endpoint by verifying a JWT
+- Have a basic understanding of token-based authentication
+- Recognize the underlying structure of a JWT
+- Be able to implement a protected route and API endpoint by verifying a JWT
 
 ## Authenticating SPAs with JSON Web Tokens
 Authenticating your single page applications means that any application data being transmitted must be done so in a verifiable, and trusted manner. This includes scenarios such as user logins and API requests to send and retrieve application data. Despite how important it is to keep these issues in mind while building applications, many launch without any precautions in place. While security is a much bigger problem than we're aiming to solve here, there are some standards we can take advantage of to boost the integrity of our applications.
@@ -26,7 +26,7 @@ TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
 
 This might look familiar to the API Tokens you may have used when interacting with public APIs or third-party services such as Firebase.
 
-A JSON Web Token allows you to identify/authenticate a user in your application by passing a verified string (the the above example) through the header, URL, or body of a request which proves the user is trustworthy and allowed to access the desired content. (This content could be on an admin dashboard page or received through a GET request for an array of data.)
+A JSON Web Token allows you to identify/authenticate a user in your application by passing a verified string (like the above example) through the header, URL, or body of a request which proves the user is trustworthy and allowed to access the desired content. (This content could be on an admin dashboard page or received through a GET request for an array of data.)
 
 Though it's nice that the JWT is so compact and we can simply pass this string of numbers and letters around in a number of ways, it's tough to understand what it actually represents. Let's break down the anatomy of a JWT.
 
@@ -37,7 +37,7 @@ JWTs are made up of three distinct parts:
 * Payload
 * Signature
 
-Each of these sections are separated by a `.` in the final format of the JWT, which is represented as a simple string. (As shown above.)
+Each of these sections are separated by a `.` in the final format of the JWT, which is represented as a simple string (as shown above).
 
 ### Header
 The header usually consists of two pieces of information: the type of token (a JWT, in our case) and the hashing algorithm being used. A hashing algorithm is a way to transform a string of characters into a shorter key that represents the original string. (Think back to the the URL shortening you did!) Hashes are easier and faster to lookup than the original value. For example, the header portion of a JWT might represent a JSON object like this:
@@ -158,7 +158,7 @@ We'll use these values momentarily, when we set up our server.
 
 We'll first take a look at how JWTs work on the back-end. If you open the `server.js` file at the root of your application, you'll see we already have some generic setup for a back-end:
 
-* Our imports and required libraries 
+* Our imports and required libraries
 * Some train data saved to app.locals
 * Configuration for CORS and JSON parsing
 * Starting up the server on port 3001
@@ -204,22 +204,22 @@ We want anyone to be able to POST to this endpoint and provide a username and pa
   // Authentication/Login Endpoint
   app.post('/authenticate', (request, response) => {
     const user = request.body;
-  
+
     // If the user enters credentials that don't match our hard-coded
     // credentials in our .env configuration file, send a JSON error
     if (user.username !== config.USERNAME || user.password !== config.PASSWORD) {
-      response.status(403).send({ 
+      response.status(403).send({
         success: false,
         message: 'Invalid Credentials'
       });
     }
-  
+
     // If the credentials are accurate, create a token and send it back
     else {
       let token = jwt.sign(user, app.get('secretKey'), {
         expiresIn: 172800 // expires in 48 hours
       });
-  
+
       response.json({
         success: true,
         username: user.username,
@@ -304,8 +304,8 @@ Now let's create our `checkAuth` function. We first want it to try to find a tok
 const checkAuth = (request, response, next) => {
 
   // Check headers/POST body/URL params for an authorization token
-  const token = request.body.token || 
-                request.param('token') || 
+  const token = request.body.token ||
+                request.param('token') ||
                 request.headers['authorization'];
 
   if (token) {
@@ -313,12 +313,12 @@ const checkAuth = (request, response, next) => {
   }
 
   else {
-    return response.status(403).send({ 
-      success: false, 
+    return response.status(403).send({
+      success: false,
       message: 'You must be authorized to hit this endpoint'
     });
   }
-});
+};
 ```
 
 So first we're trying to find a JWT anywhere possible, and then we want to respond differently based on whether or not we find one. We'll get to the good part in a minute, but let's first take a look at that `else` block we wrote. If no token is found, it means the request was not authorized. We immediately return a 403 (Forbidden) status code with an error message. By using a `return` statement here, we can ensure that the rest of the functionality in our `PATCH` request will be short-circuited and we'll return the error response right away.
@@ -330,8 +330,8 @@ Now let's think about what needs to be done if we **do** find a token. Remember 
 
     // If the token is invalid or expired, respond with an error      
     if (error) {
-      return response.status(403).send({ 
-        success: false, 
+      return response.status(403).send({
+        success: false,
         message: 'Invalid authorization token.'
       });    
     }
@@ -381,7 +381,7 @@ This is how we'll want to write our PATCH request on the client-side when we all
 
 ## Protecting a Client-Side Route
 
-Take a moment to familiarize yourself with what exists for you on the client-side. In `/src` we have high-level `app.css` and `app.js` files that style common elements and setup our routes, respectively. 
+Take a moment to familiarize yourself with what exists for you on the client-side. In `/src` we have high-level `app.css` and `app.js` files that style common elements and setup our routes, respectively.
 
 Within the `src/components` directory, we have several components that we'll work with to implement authentication and protected routes:
 
@@ -433,7 +433,7 @@ updateAuthStatus(authStatus, redirect) {
 }
 ```
 
-It will take two arguments: 
+It will take two arguments:
 
 * `authStatus` - the updated authentication object that we want to use in state
 * `redirect` - a string that tells the browser where to navigate to after we've set our state
@@ -449,7 +449,7 @@ Finally, let's pass both of these down to our child components. From within the 
 ```javascript
 {React.cloneElement(
   this.props.children,
-  { 
+  {
     authStatus,
     updateAuthStatus: this.updateAuthStatus,
     trains,
@@ -492,13 +492,13 @@ login(event) {
     if (!response.ok) {
       throw Error(response.statusText);
     }
-    
+
     return response.json();
   })
   .then(({ username, token }) => {
     localStorage.setItem('token', token);
     localStorage.setItem('username', username);
-    updateAuthStatus({ 
+    updateAuthStatus({
       loggedIn: true,
       username,
       token
@@ -541,7 +541,7 @@ We already have an `Auth` component partially setup in `src/components`, but we'
 
 ```jsx
 <h1>Big Metro City Choo-Choo Train Authority</h1>
-<Auth 
+<Auth
   username={authStatus.username}
   updateAuthStatus={this.updateAuthStatus}
 />
@@ -564,7 +564,7 @@ const logOut = (e) => {
   e.preventDefault();
   localStorage.removeItem('token');
   localStorage.removeItem('username');
-  updateAuthStatus({ 
+  updateAuthStatus({
     loggedIn: false,
     username: '',
     token: ''
@@ -578,7 +578,7 @@ const logOut = (e) => {
 
 Remember early on in this workshop we said we wanted the `/admin` route to require authentication. This means that if a user attempts to view the route and they are not logged in, it should automatically redirect them to the `/login` route rather than displaying the editing interface. We can do this fairly easily by leveraging some pre-existing [Route hooks](https://github.com/ReactTraining/react-router/blob/v3/docs/guides/RouteConfiguration.md#enter-and-leave-hooks).
 
-In our scenario, we'll want to leverage the `onEnter` hook, which will allow us to run some code when a user first enters the route, but before the route components actually load. 
+In our scenario, we'll want to leverage the `onEnter` hook, which will allow us to run some code when a user first enters the route, but before the route components actually load.
 
 In `src/app.js`, where we defined our route structure, add the hook to the `/admin` route like so:
 
@@ -609,7 +609,7 @@ The logic for this request exists in our stateless `Train.js` component. Let's t
 ```javascript
 fetch(`/api/v1/trains/${trainId}`, {
   method: 'PATCH',
-  body: JSON.stringify({ 
+  body: JSON.stringify({
     train: { status: value }
   }),
   headers: {
@@ -620,7 +620,7 @@ fetch(`/api/v1/trains/${trainId}`, {
   if (!response.ok) {
     throw Error(response.statusText);
   }
-  
+
   return response.json();
 })
 .then(updatedTrains => {
@@ -654,7 +654,7 @@ const Train = ({ token, id, line, status, canEdit, updateTrains })
 Finally, within the body of our fetch request, let's add the token:
 
 ```javascript
-body: JSON.stringify({ 
+body: JSON.stringify({
   train: { status: value },
   token
 }),
