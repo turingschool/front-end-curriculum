@@ -111,8 +111,9 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### Testing & Linting
 
-* **30 points** - Project has a running test suite that covers all happy and sad paths for the appropriate endpoints.
-* **-5** points for every missing/failing test
+* **30 points** - Project has a running test suite that covers all happy and sad paths for the appropriate endpoints. The project has a linting configuration that passes with no errors.
+* **20 points** - Project has a running test suite that covers most happy and sad paths for each endpoint. Linter has some errors that need fixing.
+* **10 points** - Project has significant lack of testing for happy and sad paths of endpoints; Linter is failing on multiple lines.
 
 ### JavaScript Style
 
