@@ -38,20 +38,20 @@ Possible sources of data:
 
 ### Relationships
 
-At minimum, you must have at least 1 relationship between two or more tables.
+At minimum, you must have at least 1 relationship between two or more tables. (e.g. one-to-one, one-to-many, many-to-many)
 
 ### Required endpoints
 
-* 6 GET endpoints
-  * 3 GET endpoints for all of one resource (i.e. '/api/v1/merchants')
-  * 3 GET endpoints for a specific resource (i.e. '/api/v1/merchants/:id')
-* 3 POST endpoints
-* 3 PUT OR PATCH endpoints
-* 3 DELETE endpoints
+* 4 GET endpoints
+  * 2 GET endpoints for all of one resource (i.e. '/api/v1/merchants')
+  * 2 GET endpoints for a specific resource (i.e. '/api/v1/merchants/:id')
+* 2 POST endpoints
+* 2 PUT OR PATCH endpoints
+* 2 DELETE endpoints
 
-### Status Codes
+### Status Codes & Error Handling
 
-All endpoint should respond with the minimum status code results:
+All endpoints should respond with the minimum status code results:
 
 * 200: Success
 * 404: Not Found
@@ -68,27 +68,29 @@ You are welcome to use other status codes.
 
 All of the above scenarios (other than the 500 error) should be tested per endpoint.
 
+In addition to responding with the appropriate status code, you are expected to send back clear, informative error messages when something goes wrong. Do not simply `console.log` 'WHATEVER'. If a `POST` request fails because the request didn't include a required parameter, respond with something like 'Entity requires a <fieldName> but none was provided.'
+
 ### Custom API Endpoints
 
-* Developer must have at least one endpoint that calculates a total number of something.
-
-For example, if you provided and endpoint of merchants, you would want an endpoint that provides the total revenue per merchant.
-
- `GET /api/v1/merchants/:id/revenue`
-
-The actual implementation will depend on your data set, but the goal is that you have an endpoint that does backend calculations on your data and serves it up (taking some of the weight off of whatever front-end you use.
-
-* Developer must use GET params on at least one endpoint, which would allow the user to narrow down the nature of their request. You will typically see this on something like an index. So for example, you may have an endpoint like:
+* Developer must use GET params on at least one endpoint, which would allow the user to narrow down the nature of their request or filter their results. So for example, you may have an endpoint like:
 
 `GET api/v1/merchants?areacode=80202`
 
-Which would limit the results to being merchants in the 80202 area code.
+Which would limit the results to merchants in the 80202 area code.
 
 A further example of this implementation can be found here: [params](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
 
-### Testing
+* Developer must secure at least 4 endpoints with a JWT. It typically makes sense to secure all POST/PUT/PATCH/DELETE requests.
+
+### Testing & Linting
 
 * All endpoints need to be tested for happy and sad paths. You should not only test status codes but also your test database to assert that your requests are doing what you are expecting.
+
+* You are expected to use a linter on this project and have 0 linting errors. You are free to choose your own linting configuration that fits your style preferences (e.g. you can tell eslint that you will never use semicolons), but your project must pass your linter. Bonus points for using a git hook that prevents you from committing any unlinted code.
+
+### Deployment
+
+
 
 ## Instructor Evaluation Points
 
@@ -105,7 +107,7 @@ The following set of points are distributed at the discretion of the instructor.
 * **20 points** - The application persists data in a SQL database but with some incorrect relationships between folders and URLs.
 * **0 points** - The application does not persist data in a SQL database.
 
-### Testing
+### Testing & Linting
 
 * **30 points** - Project has a running test suite that has 34 passing tests (a sad path and a happy path test for each endpoint)
 * **-5** points for every missing/failing test
