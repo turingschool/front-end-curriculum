@@ -6,9 +6,19 @@ module: 3
 
 # Agenda
 
-- Code Along - What is Even Happening
-- Research
-- Code Along Wrap Up
+Redux is a difficult concept to explain.
+
+So in today's tutorial, we are going to implement Redux and explain as we go.
+
+At the end of this lesson, you will:
+
+- Create an application that uses Redux
+- Learn a little bit about Redux
+- Still be kind of confused about Redux
+
+Don't worry, this isn't the last Redux lesson we're going to teach.
+
+Hold on to your butts.
 
 # Code Along
 
@@ -170,6 +180,8 @@ export const setFilter = (filter) => {
 
 Take a few minutes to turn to the person next to you and see if you can come up with theories on what these functions might be doing.
 
+Don't peek below, eh?
+
 ### I Do: What Does It Do?
 
 So here is a brief explanation of what an action creator is:
@@ -182,4 +194,158 @@ We now have this much of the Redux Lifecycle.
 
 ![Redux Explained](/assets/images/redux-explained2.jpg)
 
+## Step Two: Creating Some Reducers
 
+So, if you may think of our actions as little sanitizers for expected actions on the website.
+
+When an action happens, we need something that responds to the action and changes the application state accordingly.
+
+So if we were to think about our three actions `AddTodo`, `ToggleTodo`, `setFilter`.
+
+What two nouns do we have?
+
+- Todo
+
+- Filter
+
+Okay, cool - create two empty files
+
+```
+  touch src/reducers/todos-reducer.js
+  touch src/reducers/filter-reducer.js
+```
+
+Now think about the following psuedo-code:
+
+```
+I need a function that I can give an action and the state of all todos
+
+Depending on the action, it will 'switch' between different behaviors
+
+If the action is to add a todo:
+
+  - It will create a new todo
+
+  - Return an array with all todos including the new todo
+
+If the action is to toggle todos
+
+  - It change the status of completed on the todo with the matching id
+
+  - It will return all the todos in state including the toggled todo
+
+If it doesn't recognize the action, it will return the state unmodified.
+```
+
+This is what something like that might look like:
+
+```
+// src/reducers/todos-reducer.js
+
+const todos = (state=[], action) => {
+  switch (action.type) {
+    case 'ADD_TODO':
+      return [...state, {id: action.id, text: action.text, completed: false}]
+    case 'TOGGLE_TODO':
+      return state.map(todo => {
+        if (todo.id !== action.id) {
+          return todo
+        }
+        return Object.assign({}, todo, {completed: !todo.completed})
+      })
+    default:
+      return state
+  }
+}
+
+export default todos
+
+```
+
+Copy this code over to the appropriate file.
+
+### You Do: Play Around with the Code
+
+The `src/reducers/todos-reducer.js` file just contains a function. We can run it without React or Redux.
+
+Let's do that.
+
+Comment out `export default todos` for a second.
+
+Make sure you are at your root directory.
+
+In your terminal, type in `node`
+
+This will get you into the node REPL.
+
+Within the REPL, type:
+
+`.load src/reducers/todos-reducer.js`
+
+Now, try playing around with the todos function. Pass it different states and different actions and see what it returns.
+
+See if you can get the following things to happen:
+
+- You can add a 'new todo'
+- You can add a few new todos and have them update 'state'
+- You can change an existing todo
+
+Try to break things and get errors.
+
+MAKE SURE to comment your `export default todos` back in when you are done. 
+
+### Wrapping Up Reducers: Filter and Combine
+
+We mentioned that we have one other 'noun' to cover with a reducer: filter.
+
+We can do that by adding the following code to our filter-reducer: 
+
+```js
+// src/reducers/filter-reducer.js
+
+const filter = (state='SHOW_ALL', action) => {
+  switch (action.type) {
+    case 'SET_FILTER':
+      return action.filter
+    default:
+      return state
+  }
+}
+
+export default filter
+```
+
+Now that we have two reducers, we are going to need to use something in redux called `combineReducers` and export all of our reducers at once?
+
+Why?
+
+Well - we need a root reducer to kind of listen to all possible actions? We can only export one reducer? It's cleaner this way? 
+
+Let's go with 'because I said so' for now....
+
+Add the following code to your project:
+
+```js
+// src/reducers/index.js
+
+import { combineReducers } from 'redux'
+import todosReducer from './todos-reducer'
+import filterReducer from './filter-reducer'
+
+const rootReducer = combineReducers({
+  todosReducer,
+  filterReducer
+})
+
+export default rootReducer
+```
+
+### I Do: What Does It Do?
+
+**Reducers**
+
+Functions. Takes existing state from the Redux store, pulls in our bundle of information sent from the Action Creators and returns a new state that gets updated in the Redux store. Redux then passes that new state to any components that need to know about it which triggers the React engine to re-render the component.
+
+We have now seen about this much of the Redux Lifecycle.
+
+![Redux Explained](/assets/images/redux-explained2.jpg)
