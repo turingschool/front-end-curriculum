@@ -57,7 +57,7 @@ README.md
 
 At this point, we know about this much of the Redux process:
 
-![Redux Explained](/assets/images/redux-explained1.png)
+![Redux Explained](/assets/images/redux-explained1.jpg)
 
 Let's see if we can start to fill in some gaps.
 
@@ -180,6 +180,6 @@ Functions. They receive data from a DOM event and return a specific action forma
 
 We now have this much of the Redux Lifecycle.
 
-![Redux Explained](/assets/images/redux-explained2.png)
+![Redux Explained](/assets/images/redux-explained2.jpg)
 
 
