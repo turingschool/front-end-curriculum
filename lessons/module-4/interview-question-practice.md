@@ -12,6 +12,8 @@
 
 - What is the difference between `==` and `===`? [-hint-](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness) [js]
 
+- In as much detail as possible, explain what a database migration does.
+
 - Question: What is the value of foo? [js]
 
 ```js
@@ -50,6 +52,8 @@ var foo = 10 + '20';
 
 - What's the difference between `.call` and `.apply`? [-hint-](http://frontend.turing.io/lessons/module-2/function-prototype-methods.html) [js]
 
+- What is an API?
+
 ## Iteration 4
 
 - What does CORS stand for and what issue does it address? [-hint-](http://frontend.turing.io/lessons/cors.html) [web APIs]
@@ -62,6 +66,8 @@ var foo = 10 + '20';
   - What needs to be changed to properly make it an IIFE?
 
 - Why is it, in general, a good idea to leave the global scope of a website as-is and never touch it? [-hint-](http://frontend.turing.io/lessons/module-1/js-2.html) [best practices]
+
+- Explain how JSON Web Tokens work.
 
 ## Iteration 5
 
