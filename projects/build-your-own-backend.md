@@ -90,6 +90,7 @@ A further example of this implementation can be found here: [params](https://sco
 
 ### Deployment
 
+* Your application should be deployed to Heroku & have builds running with CircleCI. You do not need a staging environment for this project, but your production repo should be configured for automatic deployments to Heroku via CircleCI.
 
 
 ## Instructor Evaluation Points
@@ -98,8 +99,9 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### Endpoints
 
-* **60 points** - The application has all 17 endpoints (6 GETs, 3 POSTs, 3 PUTs/PATCHs, 3 DELETEs, 2 CUSTOM) with responses for happy and sad paths for each endpoint.
-* For every missing endpoint, -10 points.
+* **60 points** - Developer has implemented all 10 endpoints, 4 are secured via JWTs and one is a custom endpoint that filters data based on query params.
+* **40 points** - Developer has implemented all 10 endpoints but did not secure 4 of them with JWTs or have a custom endpoint based on query params.
+* **20 points** - Developer is missing endpoints and has not secured or customized any of the ones that have been implemented.
 
 ### Data Persistence with SQL Database
 
@@ -109,7 +111,7 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### Testing & Linting
 
-* **30 points** - Project has a running test suite that has 34 passing tests (a sad path and a happy path test for each endpoint)
+* **30 points** - Project has a running test suite that covers all happy and sad paths for the appropriate endpoints.
 * **-5** points for every missing/failing test
 
 ### JavaScript Style
