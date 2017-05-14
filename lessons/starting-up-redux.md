@@ -348,4 +348,4 @@ Functions. Takes existing state from the Redux store, pulls in our bundle of inf
 
 We have now seen about this much of the Redux Lifecycle.
 
-![Redux Explained](/assets/images/redux-explained2.jpg)
+![Redux Explained](/assets/images/redux-explained3.jpg)
