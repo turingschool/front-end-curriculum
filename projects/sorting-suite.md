@@ -31,28 +31,29 @@ Bubble sort works by comparing and possibly swapping two values in an array. Say
 start with this array of numbers:
 
 ```
-2 0 1 3 4 5
+5 0 1 3 4 2
 ```
 
 The algorithm would start with a variable `previous` pointing to the first element,
-`2` and `current` pointing to the second value `0`. Then if `current` is
+`5` and `current` pointing to the second value `0`. Then if `current` is
 less than `previous` the two values are *swapped*. The swap would take
-place in this case, because `0` is less than `2`.
+place in this case, because `0` is less than `5`.
 After that single swap the sequence would be:
 
 ```
-0 2 1 3 4 5
+  v v
+0 5 1 3 4 2
 ```
 
 The algorithm would continue with `previous` advancing one spot to the right,
-to point at `2`, and `current` advancing to point at `1`.
-`1` is less than `2`, so we swap them again to get:
+to point at `5`, and `current` advancing to point at `1`.
+`1` is less than `5`, so we swap them again to get:
 
 ```
-0 1 2 3 4 5
+0 1 5 3 4 2
 ```
 
-Notice that the `2` moved forward two spaces.
+Notice that the `5` moved forward two spaces.
 This is commonly called "bubbling up".
 The number being "bubbled" will always be the largest number seen up to this point.
 
@@ -72,29 +73,42 @@ where `n` is the size of the array.
 
 Let's look at the sequence for a more out-of-order sequence:
 
-```
-Pre-Sequence Previous Current Swap? Post-Sequence
-   4 2 0 3 1     4       2      Y   2 4 0 3 1
-   2 4 0 3 1     4       0      Y   2 0 4 3 1
-   2 0 4 3 1     4       3      Y   2 0 3 4 1
-   2 0 3 4 1     4       1      Y   2 0 3 1 4
-   2 0 3 1 4     2       0      Y   0 2 3 1 4
-   0 2 3 1 4     2       3      N   0 2 3 1 4
-   0 2 3 1 4     3       1      Y   0 2 1 3 4
-   0 2 1 3 4     3       4      N   0 2 1 3 4
-   0 2 1 3 4     0       2      N   0 2 1 3 4
-   0 2 1 3 4     2       1      Y   0 1 2 3 4
-   0 1 2 3 4     2       3      N   0 1 2 3 4
-   0 1 2 3 4     3       4      N   0 1 2 3 4
-   0 1 2 3 4     0       1      N   0 1 2 3 4
-   0 1 2 3 4     1       2      N   0 1 2 3 4
-   0 1 2 3 4     2       3      N   0 1 2 3 4
-   0 1 2 3 4     3       4      N   0 1 2 3 4
-   0 1 2 3 4     0       1      N   0 1 2 3 4
-   0 1 2 3 4     1       2      N   0 1 2 3 4
-   0 1 2 3 4     2       3      N   0 1 2 3 4
-   0 1 2 3 4     3       4      N   0 1 2 3 4
-```
+Each iteration the largest out of order number bubbles to the top
+
+
+- [ **5**, 4, 3, 2, 1 ]
+- [ 4, **5**, 3, 2, 1 ]
+- [ 4, 3, **5**, 2, 1 ]
+- [ 4, 3, 2, **5**, 1 ]
+- [ 4, 3, 2, 1, **5** ]
+
+
+- [ **4**, 3, 2, 1, 5 ]
+- [ 3, **4**, 2, 1, 5 ]
+- [ 3, 2, **4**, 1, 5 ]
+- [ 3, 2, 1, **4**, 5 ]
+- [ 3, 2, 1, 4, 5 ]
+
+
+- [ **3**, 2, 1, 4, 5 ]
+- [ 2, **3**, 1, 4, 5 ]
+- [ 2, 1, **3**, 4, 5 ]
+- [ 2, 1, 3, 4, 5 ]
+- [ 2, 1, 3, 4, 5 ]
+
+
+- [ **2**, 1, 3, 4, 5 ]
+- [ 1, **2**, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ]
+
+
+- [ 1, 2, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ]
 
 ### Expectations
 
@@ -209,10 +223,11 @@ insertionSort(["d", "b", "a", "c"])
 
 ## 3. Merge Sort
 
-Merge sort is the most fascinating sorting algorithm of the three, IMO, because it uses a technique called recursion.
+Merge sort is the most complicated, quickest and fascinating of the three IMO. You can create a really interesting recursive solution.
+<!-- Merge sort is the most fascinating sorting algorithm of the three, IMO, because it uses a technique called recursion.
 Recursion was a total mind-trip for me when I learned it.
 Here is a video I made with the intent of introducing recursion in a much more gradual way:
-[Recursion Introduction](https://vimeo.com/24716767).
+[Recursion Introduction](https://vimeo.com/24716767). -->
 
 ### Theory
 
@@ -222,7 +237,7 @@ For a high level understanding check out the [wikipedia article](https://en.wiki
 For a sweet line dancing example, [see this](https://www.youtube.com/watch?v=XaqR3G_NVoo)
 Merge sort can be thought of as splitting an array into two arrays and sorting
 the halves by also splitting them in half and sorting those halves by splitting
-them in half... and so on.
+them in half... and so on. Once we split down to arrays
 
 For a brief example let's look at a simple array. The first step would be to
 split the array into smaller arrays
@@ -282,6 +297,76 @@ mergeSort(["d", "b", "a", "c"])
 => ["a", "b", "c", "d"]
 ```
 
+## 4. Quick Sort
+With quick sort we take an array and choose one of the indexes as a pivot.
+We then want to move all the elements larger than the pivot to the right of the pivot
+and all the items smaller than the pivot to the left
+
+
+pointer starts with the last index
+p = array.length - 1
+```
+                           p
+      [ 9, 8, 5, 2, 1, 6, (3) ]  
+        ^------------------^
+
+swap    [ (3), 8, 5, 2, 1, 6, 9 ]  
+           ^------------------^
+
+compare [ (3), 8, 5, 2, 1, 6, 9 ]
+           ^---------------^
+
+compare [ (3), 8, 5, 2, 1, 6, 9 ]
+           ^------------^
+
+swap    [ 1, 8, 5, 2, (3), 6, 9 ]
+          ^------------^
+
+compare [ 1, 8, 5, 2, (3), 6, 9 ]
+             ^---------^
+
+swap    [ 1, (3), 5, 2, 8, 6, 9 ]
+              ^---------^
+
+compare [ 1, (3), 5, 2, 8, 6, 9 ]
+              ^---------^
+
+compare [ 1, (3), 5, 2, 8, 6, 9 ]
+              ^------^
+
+swap    [ 1, 2, 5, (3), 8, 6, 9 ]
+             ^------^
+
+compare [ 1, 2, 5, (3), 8, 6, 9 ]
+             ^------^
+
+compare
+[ 1, 2, 5, (3), 8, 6, 9 ]
+        ^---^
+
+swap
+[ 1, 2, (3), 5 8, 6, 9 ]
+         ^---^
+
+compare
+[ 1, 2, (3), 5 8, 6, 9 ]
+         ^---^
+
+compare
+[ 1, 2, (3), 5 8, 6, 9 ]
+         ^^
+
+pivot is at its correct location
+[ 1, 2, |3|, 5 8, 6, 9 ]
+```
+
+Now we need to quickSort the elements on each side of the pivot.
+
+something like...
+```
+quickSort([1, 2]);
+quickSort([5, 8, 6, 9])
+```
 
 ## Evaluation Rubric
 
@@ -295,8 +380,8 @@ mergeSort(["d", "b", "a", "c"])
 
 ### 2. Test-Driven Development
 
-* 4: Application is broken into components which are well tested in both isolation and integration
-* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality
+* 4: Application is broken into components which are well tested in both isolation and integration. Arrays of random numbers and letters are generated to test the maximum number of elements which the algorithm can sort.
+* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality. Arrays of random numbers are generated to test the maximum number of elements which the algorithm can sort.
 * 2: Application makes some use of tests, but the coverage is insufficient
 * 1: Application does not demonstrate strong use of TDD
 
