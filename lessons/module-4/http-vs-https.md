@@ -6,7 +6,7 @@ tags: http, https, security, ssl
 
 ## What is HTTPS?
 
-Hyper Text Transfer Protocol (HTTP) is the protocol over which data is transferred between your browser and a website. HTTPS (HTTP Secure) is a more secure version of this transfer protocol, in which all communications between the browser and website are encrypted. It is often used to protect sensitive data in transactions that occur during online banking or shopping.
+Hyper Text Transfer Protocol (HTTP) is the protocol over which data is transferred between your browser and a website. HTTPS (HTTP Secure) is a more secure version of this transfer protocol, in which all communications between the browser and website are encrypted. It is often used to protect sensitive data in transactions that occur during online banking or shopping. Websites that communicate over https will have urls that begin with `https://` rather than `http://`. 
 
 ## Why?
 
@@ -32,7 +32,7 @@ CloudFlare built their own PKI infrastructure and [documented](https://blog.clou
 
 ### How Does SSL Work?
 
-When you make a request to a site over an HTTPS connection, the website will first send its SSL certificate to your browser. The certificate will typically contain information such as:
+When you make a request to a site over an HTTPS connection, the website will first send its SSL certificate to your browser. SSL Certificates are issued by trusted, commercial Certificate Authorities (CAs). (Some of these include NameCheap RapidSSL, GoDaddy, and many other hosting providers.) The certificate will typically contain information such as:
 
 * The public key
 * A digital signature created by the private key
@@ -57,10 +57,9 @@ The browser will then validate the SSL certificate based on the information it p
 
 ### Extended Validation SSL
 
-Websites that communicate over https will have urls that begin with `https://` rather than `http://`. Because this difference is so subtle and can be easily missed, most browsers have implemented a small green padlock icon in their URL bars to signify that you are communicating over HTTPS.
+You'll notice many sites running on HTTPS will have a green padlock icon next to their name in the URL bar of the browser. This not only signifies to the user that you're communicating over HTTPS, but it also tells us that the site owners have gone through a stricter series of checks and conformed to more advanced protocol security measures.
 
-As the highest ‘class’ of SSL available, Extended Validation SSL Certificates (EV SSL) activate both the padlock and the green address bar in all major browsers. EV SSL Certificates provide the strongest encryption level available and enable the organization behind a website to present its own verified identity to website visitors. EV SSL Certificates offer a stronger guarantee that the owner of the website passed a thorough, and globally standardized, identity verification process defined within the EV guidelines (a set of vetting principles and policies ratified by the CA/Browser forum). The Extended Validation identity verification process requires the applicant to prove exclusive rights to use a domain, confirm its legal, operational and physical existence, and prove the entity has authorized the issuance of the Certificate.
-
+These sites have what's called an Extended Validation SSL Certificate (EV SSL). It is the highest class of SSL available and provides the strongest encryption level. The organization can present its own verified identity to visitors. An EV certificate is a stronger guarantee to users that the application has passed a more thorough identification process and abides by standards set by the CA forum.
 
 ## Switching from HTTP to HTTPS
 
@@ -86,4 +85,4 @@ One thing the green padlock does guarantee (within certain reasonable limits) is
 
 
 
- SSL Certificates are issued by trusted, commercial Certificate Authorities (CAs)
+
