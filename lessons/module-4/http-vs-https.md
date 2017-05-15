@@ -39,6 +39,14 @@ You can view a site's SSL certificate by going to the 'Security' panel in dev to
 
 ![SSL Certificate](/assets/images/lessons/https-ssl/ssl-certificate.png)
 
+The certificate itself seems to give a lot of information away for free. You might wonder how someone couldn't decrypt data from the website when given all of the encryption algorithms and certificate data. Remember you still need access to that private key in order to decrypt anything -- think of a typical master lock. We know the algorithm for opening the lock is:
+
+1. Turn 3 rotations to the right and stop
+2. Turn 1 rotation to the left, passing the first number and stopping on the second
+3. Turn 1 rotation to the right and stop on third number
+
+Even though we know this algorithm and it is well-documented, if we don't know the 3 numbers to stop on, we won't be able to open the master lock.
+
 The browser will then validate the SSL certificate based on the information it provides, and encrypt a new session key based on the public key provided. The server will then be able to access this valid session key for future requests. This generation of shared secrets is known as the 'SSL handshake'. It establishes a uniquely secure connection between your interactions on a website and the data they're transmitting.
 
 ![how-ssl-works](/assets/images/lessons/https-ssl/how-ssl-works.jpg)
