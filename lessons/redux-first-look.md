@@ -5,6 +5,8 @@ tags: React, JavaScript, Webpack
 module: 2
 ---
 
+DEPRECATED - see Starting Up Redux lesson instead
+
 ## Plan Of Attack
   - What is Redux? (Slide Deck)
   - [Code Along](https://github.com/martensonbj/redux-first-look) (short!)
