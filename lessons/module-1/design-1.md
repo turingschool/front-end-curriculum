@@ -105,9 +105,12 @@ Less, but better – because it concentrates on the essential aspects, and the p
 Back to purity, back to simplicity.
 
 
+##### Group Chat
+Did the products you brainstormed earlier fulfill all these requirements? Why or why not?
+
 #### Your Turn
 
-Turn to your neighbor and discuss what you think design is and how it relates to the tech industry.
+Turn to your neighbor and discuss how you think design relates to the tech industry.
 
 
 ### The Power of Design
