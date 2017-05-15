@@ -468,6 +468,32 @@ Using Redux's built in methods `connect` and `dispatch` it will act as a liaison
 
 If it seems like a lot of extra code to accomplish something pretty simple - well... it is.
 
+And this is what it should look like
+
+```js
+// src/containers/AddTodoFormContainer.js
+
+import { connect } from 'react-redux'
+import { addTodo } from '../actions'
+import AddTodoForm from '../components/AddTodoForm'
+
+const mapStateToProps = (state) => {
+  return { todos: state.todos }
+}
+
+const mapDispatchToProps=(dispatch) => {
+  return {
+    handleSubmit: (text, id) => {
+      dispatch(addTodo(text, id))
+    }
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
+```
+
+Take a second to notice that the prop `handleSubmit` is exactly what our `AddTodoForm` component is expecting when it renders. Because of Redux, our container is hooked up to the required action that passes the new component information through our reducers to update state.
+
 Let's keep going and wire the app up.
 
 ### You Do: Wiring it Up
