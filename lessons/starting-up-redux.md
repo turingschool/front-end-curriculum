@@ -478,7 +478,7 @@ import { addTodo } from '../actions'
 import AddTodoForm from '../components/AddTodoForm'
 
 const mapStateToProps = (state) => {
-  return { todos: state.todos }
+  return { todos: state.todosReducer }
 }
 
 const mapDispatchToProps=(dispatch) => {
@@ -540,7 +540,7 @@ import rootReducer from '../src/reducers'
 
 import App from './components/App'
 
-const store = createStore(reducers)
+const store = createStore(rootReducer)
 
 render(
   <Provider store={ store } >
