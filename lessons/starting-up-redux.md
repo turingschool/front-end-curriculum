@@ -393,7 +393,7 @@ Then I will create a stateful component that extends Component by creating an Ad
 
 My class will have a constructor, which accepts props as an argument and passes props up through super.
 
-I will also define the state as an object, which only contains a key or text with a value of an empty string.
+I will also define the state as an object, which only contains a key of 'text' with a value of an empty string ('').
 
 I will then define the function render()
 
@@ -413,15 +413,15 @@ I want my input to have a value of the text (from state), a placeholder of 'Add 
 
 I want my button to simply include the text AddTodo
 
+Finally, I want to export my component.
+
 ```
 
 ### You Do: Based on PsuedoCode, try to Implement
 
-Without peeking at the code below, take some time to try and create the component that was psudocoded above.
+Without peeking at the code below, take some time to try and create the component that was psuedocoded above.
 
 Don't try to finish it, just try to parse the confusing psuedocode into a regular old React component.
-
-Finally, I want to export my component.
 
 ### I Do: Implementing
 
