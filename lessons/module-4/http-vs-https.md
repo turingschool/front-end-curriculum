@@ -75,7 +75,7 @@ The process for converting an entire site from HTTP to HTTPS is fairly simple, t
 
 ## SSL Certifications are not foul-proof
 
-Each security measure we take, like transitioning from HTTP to HTTPS, protects us from very specific security threats - but not all of them. There is no foul-proof solution to all the different ways users can be taken advantage of and data can be compromised. 
+Each security measure we take, like transitioning from HTTP to HTTPS, protects us from very specific security threats - but not all of them. There is no foul-proof solution to all the different ways users can be taken advantage of and data can be compromised. (Think back to JWTs -- they allow us to protect an endpoint by requiring authentication, but don't protect us from any other security threats.)
 
 For example, an EV SSL certificate guarantees that the site you are communicating with is the sit in the address bar. However, because it is fairly easy to obtain an SSL certificate, anyone creating a phishing scheme can easily lure you into a false sense of security by applying one to a site like `amazn.com`. It would be easy to miss the typo in the URL bar and still believe you are interacting with `amazon.com`.
 
