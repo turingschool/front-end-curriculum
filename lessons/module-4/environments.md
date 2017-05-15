@@ -83,6 +83,8 @@ Environments can differ from each other in many ways. For example:
 * The port your application runs on might be 3000 in development, but 8080 in production depending on the tech stack and where it's hosted.
 * You likely want to use unminified versions of libraries and packages in development & testing for debugging purposes, but always want minified versions in production for performance reasons.
 
+### Environment Variables
+
 To handle these differences, we use **environment variables**. These are variables that differ between environments. They’re used across languages and platforms to set configuration. They allow the same logic and code to interact with different sources.
 
 We're already familiar with several environment variables from our past projects:
