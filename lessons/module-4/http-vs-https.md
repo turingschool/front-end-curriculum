@@ -6,7 +6,7 @@ tags: http, https, security, ssl
 
 ## What is HTTPS?
 
-Hyper Text Transfer Protocol (HTTP) is the protocol over which data is transferred between your browser and a website. HTTPS (HTTP Secure) is a more secure version of this transfer protocol, in which all communications between the browser and website are encrypted. It is often used to protect sensitive data in transactions that occur during online banking or shopping.
+Hyper Text Transfer Protocol (HTTP) is the protocol over which data is transferred between your browser and a website. HTTPS (HTTP Secure) is a more secure version of this transfer protocol, in which all communications between the browser and website are encrypted. It is often used to protect sensitive data in transactions that occur during online banking or shopping. Websites that communicate over https will have urls that begin with `https://` rather than `http://`. 
 
 ## Why?
 
@@ -16,13 +16,17 @@ So why the urgency?
 
 When communicating over a regular HTTP connection, all of the data is sent back and forth in plain text, and could be read by anyone who gained access to the connection between your browser and website. Similar to how you've learned that we don't want to store passwords in a database in plain text, it is much safer to encrypt this type of sensitive information. If a user is purchasing something online and fills out an order form containing their credit card information, their financial details are much more easily stolen if they can be read in plain text. With HTTPS, all of these details would be encrypted and a hacker would not be able to decrypt any of the data. In order to decrypt the information, they would also need access to a **private key** that is stored strictly on the server.
 
-## SSL & TLS
-
 HTTPS applications use one of two secure protocols to encrypt data transfer - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both of these protocols use an 'asymmetric' Public Key Infrastructure (PKI) system, which uses keys to encrypt and decrypt communications.
 
-### Public Key Infrastructure
+## Public Key Infrastructure
 
-An asymmetric system uses two keys to encrypt communications, a public key and a private key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa. 
+This strategy of using public and private keys is called a Public Key Infrastructure and is representative of an asymmetric encryption system.
+
+### Symmetric vs Asymmetric Encryption
+
+Older, more traditional encryption strategies were symmetric - they would apply a single secret key to any communication message and that key would change or encrypt the content in a particular way. The downfall of this strategy is that it would be very easy for the secret key to end up in the wrong hands when exchanging them over the Internet or over a large network. Anyone who knows the secret key can decrypt communications.
+
+An asymmetric system uses two keys to encrypt communications, a public key and a private key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa. With this key pair, we greatly reduce the risk of someone unauthorized being able to decrypt our communications. Any messages encrypted with the public key can only be decrypted with the matching private key in the key pair.
 
 The private key should always be hiding on the web server and only accessible to the owner of the key. The public key, on the other hand, will be distributed to anybody who needs to be able to decrypt the information that was encrypted by the private key. (e.g. the browser will need the public key in order to decrypt communications from the website).
 
@@ -30,9 +34,10 @@ You've been using different types of key infrastructures since you started progr
 
 CloudFlare built their own PKI infrastructure and [documented](https://blog.cloudflare.com/how-to-build-your-own-public-key-infrastructure/) the process in great detail, if you'd like to learn more about the infrastructure SSL is built on.
 
-### How Does SSL Work?
+### SSL & TLS: How Does it Work?
 
-When you make a request to a site over an HTTPS connection, the website will first send its SSL certificate to your browser. The certificate will typically contain information such as:
+HTTPS applications use one of two secure protocols to encrypt data transfer - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both of these protocols use an 'asymmetric' Public Key Infrastructure (PKI) system, which uses keys to encrypt and decrypt communications. 
+When you make a request to a site over an HTTPS connection, the website will first send its SSL certificate to your browser. SSL Certificates are issued by trusted, commercial Certificate Authorities (CAs). (Some of these include NameCheap RapidSSL, GoDaddy, and many other hosting providers.) The certificate will typically contain information such as:
 
 * The public key
 * A digital signature created by the private key
@@ -57,10 +62,9 @@ The browser will then validate the SSL certificate based on the information it p
 
 ### Extended Validation SSL
 
-Websites that communicate over https will have urls that begin with `https://` rather than `http://`. Because this difference is so subtle and can be easily missed, most browsers have implemented a small green padlock icon in their URL bars to signify that you are communicating over HTTPS.
+You'll notice many sites running on HTTPS will have a green padlock icon next to their name in the URL bar of the browser. This not only signifies to the user that you're communicating over HTTPS, but it also tells us that the site owners have gone through a stricter series of checks and conformed to more advanced protocol security measures.
 
-As the highest ‘class’ of SSL available, Extended Validation SSL Certificates (EV SSL) activate both the padlock and the green address bar in all major browsers. EV SSL Certificates provide the strongest encryption level available and enable the organization behind a website to present its own verified identity to website visitors. EV SSL Certificates offer a stronger guarantee that the owner of the website passed a thorough, and globally standardized, identity verification process defined within the EV guidelines (a set of vetting principles and policies ratified by the CA/Browser forum). The Extended Validation identity verification process requires the applicant to prove exclusive rights to use a domain, confirm its legal, operational and physical existence, and prove the entity has authorized the issuance of the Certificate.
-
+These sites have what's called an Extended Validation SSL Certificate (EV SSL). It is the highest class of SSL available and provides the strongest encryption level. The organization can present its own verified identity to visitors. An EV certificate is a stronger guarantee to users that the application has passed a more thorough identification process and abides by standards set by the CA forum.
 
 ## Switching from HTTP to HTTPS
 
@@ -74,16 +78,21 @@ The process for converting an entire site from HTTP to HTTPS is fairly simple, t
 * Implement permanent 301 redirects for each page
 * Rewire your application in [Google Search Console](https://www.google.com/webmasters/tools/home?hl=en&pli=1), Google Analytics, and other tracking tools you might be using
 
-## Certs are not foul-proof
+## SSL Certifications are not foul-proof
 
-One thing the green padlock does guarantee (within certain reasonable limits) is that the you are talking to the site in the address bar. So if you are on amazon.com and see a green padlock, then you are securely talking to amazon.com. However if you are on amaz0n.com with a green padlock then you will be securely talking to amaz0n, but there is no guarantee that this is the international retailer amazon.com and in all likelihood it is not and it is a fake phishing site, set up to trick you into thinking you are on Amazon.
+Each security measure we take, like transitioning from HTTP to HTTPS, protects us from very specific security threats - but not all of them. There is no foul-proof solution to all the different ways users can be taken advantage of and data can be compromised. (Think back to JWTs -- they allow us to protect an endpoint by requiring authentication, but don't protect us from any other security threats.)
 
-
-
-
+For example, an EV SSL certificate guarantees that the site you are communicating with is the sit in the address bar. However, because it is fairly easy to obtain an SSL certificate, anyone creating a phishing scheme can easily lure you into a false sense of security by applying one to a site like `amazn.com`. It would be easy to miss the typo in the URL bar and still believe you are interacting with `amazon.com`.
 
 
+## Resources
+
+* [Asymmetric/Symmetric Encryption](https://support.microsoft.com/en-us/help/246071/description-of-symmetric-and-asymmetric-encryption)
+* [SSL Protocol](https://tools.ietf.org/html/rfc6101)
 
 
 
- SSL Certificates are issued by trusted, commercial Certificate Authorities (CAs)
+
+
+
+
