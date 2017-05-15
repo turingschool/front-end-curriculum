@@ -19,7 +19,7 @@ tags: json, javascript, websockets, jquery, socket.io, node
 [org]: https://github.com/turingschool-examples
 [rn]: https://github.com/turingschool-examples/right-now
 
-## Structure
+<!-- ## Structure
 
 * 5 - Warm up
 * 20 - Lecture
@@ -27,7 +27,7 @@ tags: json, javascript, websockets, jquery, socket.io, node
 * 25 - Experiment  #1: Right Now
 * 5 - Break
 * 25 - Experiment #2: Twitter Stream
-* 5 - Wrap Up
+* 5 - Wrap Up -->
 
 ## Warm Up
 
@@ -39,27 +39,40 @@ In your notebook, record your answers to the following questions:
 
 ## Review of HTTP Request/Response Cycle
 
-The HTTP request/response cycle is a stateless machine by design. The client makes a request to a server, a connection is made with the server, the server interprets the request, forms a response, sends the response back to the client, and closes the connection.
+At a high level: the client makes a request to a server, a connection is made with the server, the server interprets the request, forms a response, sends the response back to the client, and closes the connection. [Here is a little more nitty-gritty info](http://celineotter.azurewebsites.net/world-wide-web-http-request-response-cycle/) on the details of a typical request-response cycle. Also, [this article](http://blog.catchpoint.com/2010/09/17/anatomyhttp/).
 
 ## A Thought Experiment
 
 You are have a brand new job working with a hedge fund, and they need real-time data on stock prices for quick trades. The amount of money that the hedge fund makes is directly related to how good the data of the stock price is, so you want the most up-to-date prices.
 
-Your boss demands for unknown reasons to implement a solution using the traditional HTTP request/response (not sockets).
+Your boss demands for unknown reasons to implement a solution using the traditional _HTTP request/response cycle_ (not sockets).
 
-How would you do this? Sketch out the API you would build to communicate with a stock market server that can tell you the prices. Remember: each request to a server costs money and time.
+How would you do this? Sketch out the API you would build to communicate with a stock market server that can tell you the prices in _real time_.
 
-When you're done, think about the downsides of this application. How does the HTTP request/response cycle make this a difficult task to do efficiently?
+When you're done, think about the downsides of this application. How does the HTTP request/response cycle make this a difficult task to do efficiently? Remember: every request to a server costs money and time.
 
-## Why WebSockets?
+(**DON'T LOOK BELOW YET** - maybe you'll come up with a cool solution that is actually used.)
 
-Long-polling...streaming...then websockets. [This article](http://websocket.org/quantum.html) has a good explanation of log-polling vs. streaming vs. WebSockets.
+## HTTP Versions of "Real Time"
 
-* Explain WebSockets vs. the HTTP request/response cycle
-  * A WebSocket is a persistent two-way connection between the server and the client
-  * The server can push an event without having to receive a request from the client
-  * The client can send messages to the server without having to wait for a response
-  * The handshake
+Suppose you want to check the value of some data on a server that changes periodically, but you don't know exactly when it will update. Here are some strategies used today, in the order of decreasing [latency](http://www.webperformancetoday.com/2012/04/02/latency-101-what-is-latency-and-why-is-it-such-a-big-deal/).
+
+* **Polling:** Periodically check for data. For instance, you could send a request to the server for data every two seconds. Why is this a bad idea? Every request to a server costs someone something - if you have access to an API, then you are likely paying for the API per request, and you don't want to send any unnecessary requests if the data isn't actually updating every two second.
+
+* **Long-Polling:** Make a request to the server for data, and hold the connection until there is new data. The benefit is less requests and only when you need them. The disadvantage is that you still have to make a new requests and connections to the server after you receive new data. [Details on downsides of long-polling](https://blog.baasil.io/why-you-shouldnt-use-long-polling-fallbacks-for-websockets-c1fff32a064a).
+
+* **Streaming:** In HTTP version 1.1 (which we still use today), there is an additional header you can add to your request called `Connection: Keep-Alive`. This will open up an indefinite connection between the client and the server, which is close to what we want! It's like long-polling, but the server never signals to the client that the response is complete, thereby leaving the connection open. In the end, you are still using the HTTP protocol to send information. So all of the header information is still sent with each message, which can be kilobytes in size.
+
+[This article](http://websocket.org/quantum.html) has a good explanation of log-polling vs. streaming vs. WebSockets. At the end of the day, anything using the HTTP request/response cycle is always going to be [half-duplex](https://en.wikipedia.org/wiki/Duplex_(telecommunications)), or one-way communication only. Think of a two-way radio where only one person at a time can talk.
+
+## WebSockets!
+
+### Explain WebSockets vs. the HTTP request/response cycle
+
+* A WebSocket is a persistent two-way TCP connection (full-duplex) between the server and the client
+* The server can push an event without having to receive a request from the client
+* The client can send messages to the server without having to wait for a response
+* A handshake initiates the WebSocket connection (really a [TCP connection](http://www.taltech.com/datacollection/articles/a_brief_overview_of_tcp_ip_communications))
 
 ```
 GET /chat HTTP/1.1
