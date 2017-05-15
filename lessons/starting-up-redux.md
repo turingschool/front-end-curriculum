@@ -506,29 +506,13 @@ Without peeking below, try to predict and add what you think you might need to a
 
 Note: You will get errors even if you get it right, because we are missing one last piece of the redux puzzle.
 
-### <App />
+### I Do: <App />
 
 Let's wire our AddTodoForm component and container up to the DOM through `<App />` - the existing file just needs a bit of tweaking.
 
-```js
-// src/components/App.js  
+[Here is the actual code needed](https://gist.github.com/rrgayhart/cb8328448444674f6049cb66d09f6472)
 
-import React from 'react';
-import './App.css';
-
-import AddTodoFormContainer from '../containers/AddTodoFormContainer'
-
-const App = () => {
-    return (
-      <div className="App">
-        <AddTodoFormContainer />
-      </div>
-    );
-}
-
-export default App;
-```
-. Because redux is attaching state to each component directly, we no longer need App to know about or care about the overarching state of our app. It can be a clean functional component. 
+Because redux is attaching state to each component directly, we no longer need App to know about or care about the overarching state of our app. It can be a clean functional component. 
 
 Also notice that instead of rendering the component, we are rendering the CONTAINER (which, at the end of the day, is wrapped around our presentational form component).
 
