@@ -8,10 +8,9 @@ tags: http, https, security, ssl
 
 Hyper Text Transfer Protocol (HTTP) is the protocol over which data is transferred between your browser and a website. HTTPS (HTTP Secure) is a more secure version of this transfer protocol, in which all communications between the browser and website are encrypted. It is often used to protect sensitive data in transactions that occur during online banking or shopping.
 
-
 ## Why?
 
-Many companies are being urged to switch over to HTTPS. While it may seem like everything on the internet changes in the blink of an eye, this switch to HTTPS has been a slow one. It was only recently that [usa.gov](https://www.usa.gov/) switched over. Developers have been weary of non-https sites for quite some time now, and Google began to cite [HTTPS as a ranking signal](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html) for SEO in 2014.
+Many companies are being urged to switch over to HTTPS. While it may seem like everything on the internet changes in the blink of an eye, this switch to HTTPS has been a slow one. For a long time HTTPS was only used within e-commerce sites, on pages that included order forms. It was only recently that [usa.gov](https://www.usa.gov/) switched over. However, many have been weary of non-https sites for quite some time now, and Google began to cite [HTTPS as a ranking signal](https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html) for SEO in 2014.
 
 So why the urgency?
 
@@ -29,16 +28,27 @@ As the names suggest, the 'private' key should be kept strictly protected and sh
 
 ### How Does SSL Work?
 
-When you make a request to a site over an HTTPS connection, the website will first send its SSL certificte to your browser. The certificate will typically contain information such as:
+When you make a request to a site over an HTTPS connection, the website will first send its SSL certificate to your browser. The certificate will typically contain information such as:
 
 * The public key
 * A digital signature created by the private key
 * Information about who issued the certificate and who it is issued to
 * The rights and privileges granted (expiration date/time, hostnames where the certificate is valid, how the certificate can be used)
 
+You can view a site's SSL certificate by going to the 'Security' panel in dev tools and clicking on 'View Certificate'.
+
+![SSL Certificate](/assets/images/lessons/https-ssl/ssl-certificate.png)
+
 The browser will then validate the SSL certificate based on the information it provides, and encrypt a new session key based on the public key provided. The server will then be able to access this valid session key for future requests. This generation of shared secrets is known as the 'SSL handshake'. It establishes a uniquely secure connection between your interactions on a website and the data they're transmitting.
 
 ![how-ssl-works](/assets/images/lessons/https-ssl/how-ssl-works.jpg)
+
+### Extended Validation SSL
+
+Websites that communicate over https will have urls that begin with `https://` rather than `http://`. Because this difference is so subtle and can be easily missed, most browsers have implemented a small green padlock icon in their URL bars to signify that you are communicating over HTTPS.
+
+As the highest ‘class’ of SSL available, Extended Validation SSL Certificates (EV SSL) activate both the padlock and the green address bar in all major browsers. EV SSL Certificates provide the strongest encryption level available and enable the organization behind a website to present its own verified identity to website visitors. EV SSL Certificates offer a stronger guarantee that the owner of the website passed a thorough, and globally standardized, identity verification process defined within the EV guidelines (a set of vetting principles and policies ratified by the CA/Browser forum). The Extended Validation identity verification process requires the applicant to prove exclusive rights to use a domain, confirm its legal, operational and physical existence, and prove the entity has authorized the issuance of the Certificate.
+
 
 ## Switching from HTTP to HTTPS
 
@@ -52,12 +62,6 @@ The process for converting an entire site from HTTP to HTTPS is fairly simple, t
 * Implement permanent 301 redirects for each page
 * Rewire your application in [Google Search Console](https://www.google.com/webmasters/tools/home?hl=en&pli=1), Google Analytics, and other tracking tools you might be using
 
-## Extended Validation SSL
-
-Websites that communicate over https will have urls that begin with `https://` rather than `http://`. Because this difference is so subtle and can be easily missed, most browsers have implemented a small green padlock icon in their URL bars to signify that you are communicating over HTTPS.
-
-As the highest ‘class’ of SSL available, Extended Validation SSL Certificates (EV SSL) activate both the padlock and the green address bar in all major browsers. EV SSL Certificates provide the strongest encryption level available and enable the organization behind a website to present its own verified identity to website visitors. EV SSL Certificates offer a stronger guarantee that the owner of the website passed a thorough, and globally standardized, identity verification process defined within the EV guidelines (a set of vetting principles and policies ratified by the CA/Browser forum). The Extended Validation identity verification process requires the applicant to prove exclusive rights to use a domain, confirm its legal, operational and physical existence, and prove the entity has authorized the issuance of the Certificate.
-
 ## Certs are not foul-proof
 
 One thing the green padlock does guarantee (within certain reasonable limits) is that the you are talking to the site in the address bar. So if you are on amazon.com and see a green padlock, then you are securely talking to amazon.com. However if you are on amaz0n.com with a green padlock then you will be securely talking to amaz0n, but there is no guarantee that this is the international retailer amazon.com and in all likelihood it is not and it is a fake phishing site, set up to trick you into thinking you are on Amazon.
@@ -68,6 +72,6 @@ One thing the green padlock does guarantee (within certain reasonable limits) is
 
 
 
- Previously, HTTPS was often only used on e-commerce sites for their order forms. 
+
 
  SSL Certificates are issued by trusted, commercial Certificate Authorities (CAs)
