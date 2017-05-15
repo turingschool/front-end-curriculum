@@ -73,10 +73,11 @@ The process for converting an entire site from HTTP to HTTPS is fairly simple, t
 * Implement permanent 301 redirects for each page
 * Rewire your application in [Google Search Console](https://www.google.com/webmasters/tools/home?hl=en&pli=1), Google Analytics, and other tracking tools you might be using
 
-## Certs are not foul-proof
+## SSL Certifications are not foul-proof
 
-One thing the green padlock does guarantee (within certain reasonable limits) is that the you are talking to the site in the address bar. So if you are on amazon.com and see a green padlock, then you are securely talking to amazon.com. However if you are on amaz0n.com with a green padlock then you will be securely talking to amaz0n, but there is no guarantee that this is the international retailer amazon.com and in all likelihood it is not and it is a fake phishing site, set up to trick you into thinking you are on Amazon.
+Each security measure we take, like transitioning from HTTP to HTTPS, protects us from very specific security threats - but not all of them. There is no foul-proof solution to all the different ways users can be taken advantage of and data can be compromised. 
 
+For example, an EV SSL certificate guarantees that the site you are communicating with is the sit in the address bar. However, because it is fairly easy to obtain an SSL certificate, anyone creating a phishing scheme can easily lure you into a false sense of security by applying one to a site like `amazn.com`. It would be easy to miss the typo in the URL bar and still believe you are interacting with `amazon.com`.
 
 
 
