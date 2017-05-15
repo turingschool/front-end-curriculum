@@ -16,13 +16,17 @@ So why the urgency?
 
 When communicating over a regular HTTP connection, all of the data is sent back and forth in plain text, and could be read by anyone who gained access to the connection between your browser and website. Similar to how you've learned that we don't want to store passwords in a database in plain text, it is much safer to encrypt this type of sensitive information. If a user is purchasing something online and fills out an order form containing their credit card information, their financial details are much more easily stolen if they can be read in plain text. With HTTPS, all of these details would be encrypted and a hacker would not be able to decrypt any of the data. In order to decrypt the information, they would also need access to a **private key** that is stored strictly on the server.
 
-## SSL & TLS
-
 HTTPS applications use one of two secure protocols to encrypt data transfer - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both of these protocols use an 'asymmetric' Public Key Infrastructure (PKI) system, which uses keys to encrypt and decrypt communications.
 
-### Public Key Infrastructure
+## Public Key Infrastructure
 
-An asymmetric system uses two keys to encrypt communications, a public key and a private key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa. 
+This strategy of using public and private keys is called a Public Key Infrastructure and is representative of an asymmetric encryption system.
+
+### Symmetric vs Asymmetric Encryption
+
+Older, more traditional encryption strategies were symmetric - they would apply a single secret key to any communication message and that key would change or encrypt the content in a particular way. The downfall of this strategy is that it would be very easy for the secret key to end up in the wrong hands when exchanging them over the Internet or over a large network. Anyone who knows the secret key can decrypt communications.
+
+An asymmetric system uses two keys to encrypt communications, a public key and a private key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa. With this key pair, we greatly reduce the risk of someone unauthorized being able to decrypt our communications. Any messages encrypted with the public key can only be decrypted with the matching private key in the key pair.
 
 The private key should always be hiding on the web server and only accessible to the owner of the key. The public key, on the other hand, will be distributed to anybody who needs to be able to decrypt the information that was encrypted by the private key. (e.g. the browser will need the public key in order to decrypt communications from the website).
 
@@ -30,8 +34,9 @@ You've been using different types of key infrastructures since you started progr
 
 CloudFlare built their own PKI infrastructure and [documented](https://blog.cloudflare.com/how-to-build-your-own-public-key-infrastructure/) the process in great detail, if you'd like to learn more about the infrastructure SSL is built on.
 
-### How Does SSL Work?
+### SSL & TLS: How Does it Work?
 
+HTTPS applications use one of two secure protocols to encrypt data transfer - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both of these protocols use an 'asymmetric' Public Key Infrastructure (PKI) system, which uses keys to encrypt and decrypt communications. 
 When you make a request to a site over an HTTPS connection, the website will first send its SSL certificate to your browser. SSL Certificates are issued by trusted, commercial Certificate Authorities (CAs). (Some of these include NameCheap RapidSSL, GoDaddy, and many other hosting providers.) The certificate will typically contain information such as:
 
 * The public key
@@ -80,6 +85,10 @@ Each security measure we take, like transitioning from HTTP to HTTPS, protects u
 For example, an EV SSL certificate guarantees that the site you are communicating with is the sit in the address bar. However, because it is fairly easy to obtain an SSL certificate, anyone creating a phishing scheme can easily lure you into a false sense of security by applying one to a site like `amazn.com`. It would be easy to miss the typo in the URL bar and still believe you are interacting with `amazon.com`.
 
 
+## Resources
+
+* [Asymmetric/Symmetric Encryption](https://support.microsoft.com/en-us/help/246071/description-of-symmetric-and-asymmetric-encryption)
+* [SSL Protocol](https://tools.ietf.org/html/rfc6101)
 
 
 
