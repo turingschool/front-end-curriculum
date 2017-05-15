@@ -42,20 +42,15 @@ The browser will then validate the SSL certificate based on the information it p
 
 ## Switching from HTTP to HTTPS
 
-The process for converting an entire site from HTTP to HTTPS is fairly simple, though it does require a lot of steps:
+The process for converting an entire site from HTTP to HTTPS is fairly simple, though it does require quite a few steps. The larger your site or application, the more involved this process can get. At a high-level, the transition includes the following processes:
 
-Purchase an SSL certificate and a dedicated IP address from your hosting company.
-Install and configure the SSL certificate.
-Perform a full back-up of your site in case you need to revert back.
-Configure any hard internal links within your website, from HTTP to HTTPS.
-Update any code libraries, such as JavaScript, Ajax and any third-party plugins.
-Redirect any external links you control to HTTPS, such as directory listings.
-Update htaccess applications, such as Apache Web Server, LiteSpeed, NGinx Config and your internet services manager function (such as Windows Web Server), to redirect HTTP traffic to HTTPS.
-If you are using a content delivery network (CDN), update your CDN's SSL settings.
-Implement 301 redirects on a page-by-page basis.
-Update any links you use in marketing automation tools, such as email links.
-Update any landing pages and paid search links.
-Set up an HTTPS site in Google Search Console and Google Analytics.
+* Purchasing an SSL certificate from your hosting provider about 100/yr)
+* Install and configure the SSL certificate - this process can vary depending on your application setup. DigitalOcean has a solid [tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-an-ssl-certificate-from-a-commercial-certificate-authority) that can give you some insight into the installation & configuration process
+* Ensure a complete backup of your application in its HTTP state exists in case the transition needs to be rolled back for any reason
+* Rewrite any hard-coded, internal links within you application from `http://` to `https://`
+* Redirect any external links you control to `https://`
+* Implement permanent 301 redirects for each page
+* Rewire your application in [Google Search Console](https://www.google.com/webmasters/tools/home?hl=en&pli=1), Google Analytics, and other tracking tools you might be using
 
 ## Extended Validation SSL
 
@@ -75,5 +70,4 @@ One thing the green padlock does guarantee (within certain reasonable limits) is
 
  Previously, HTTPS was often only used on e-commerce sites for their order forms. 
 
- SSL Certificates typically cost about $100 per year.
-
+ SSL Certificates are issued by trusted, commercial Certificate Authorities (CAs)
