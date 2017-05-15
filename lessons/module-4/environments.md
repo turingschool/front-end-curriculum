@@ -4,8 +4,6 @@ length: 60
 tags: environments, environment variables
 ---
 
-# Environments & Their Variables
-
 Environments in software development refer to a configured setup of tools, platforms and data management for your application. Each environment typically corresponds with a specific stage of the release process. 
 
 ## A Brief History
