@@ -32,8 +32,10 @@ Let's create an empty `index.html` file. Then:
   *[Tinker Toy Stage: Add a red dowel with a circular connector to the middle of the X]*
 2. `git commit -m "Initial commit"`  
   - Takes what was written to your repository, and creates a "commit object", or node, with an assigned ID.  
-  - This **commit node** now has **references** indicating what branch you are on, and where you have checked out that branch.
-  *[Tinker Toy Stage: Twist circular connector part around to show ID and attach the label of "head" and "master"]*  
+  - This **commit node** now has **references** indicating what branch you are on, and where you have checked out that branch.  
+  *[Tinker Toy Stage: Twist circular connector part around to show ID and attach the label of `HEAD` and `MASTER` GREEN.]*  
+
+  (Note here that on the tinker toys, GREEN indicates we are currently checked out on that branch, ORANGE indicates the branch exists but we are not checked out to that branch.)
 
 ![git-add-file-structure][git-add-file-structure]  
 
@@ -46,21 +48,21 @@ When we repeat this procedure, git knows that we have added an additional commit
 1. `git add`  
   - *[Tinker Toy Stage: Add another dowel and circle node]*
 2. `git commit -m "Another terrible commit message"`  
-  - *[Tinker Toy Stage: Dowel/Circle gets an ID, and the Head/Master flags get moved up to this new commit object]*  
+  - *[Tinker Toy Stage: Dowel/Circle gets an ID, and the Head/Master flags get moved up to this new commit object, `MASTER` is on the GREEN side bc we are checked out on this branch]*  
 
 
 ## Creating A New Branch  
 Typically we'll create a new branch when we want to start working on a new feature, but that part of our code is not ready for production.
 
 1. `git branch feature-a`  
-  - *[Tinker Toy Stage: Attach a small dowel and a new flag with "Feature A" to the same node as Master and Head]*  
+  - *[Tinker Toy Stage: Attach a small dowel and a new flag with `FEATURE` showing the ORANGE side]*  
 
 At this point, we have not navigated TO this branch, we have simply told git to create a reference to a new part of our repository tree. To actually navigate to this branch to add code, we'll need to run the checkout command, which tells Git to make commits to THIS branch instead of Master.  
 
 ![git-branch-feature-file-structure][git-branch-feature-file-structure]
 
 2. `git checkout feature-a`  
-  - *[Tinker Toy Stage: Flip over Feature A card to the other side so that is yellow, flip Master to be white.]*  
+  - *[Tinker Toy Stage: Flip over `FEATURE` card to the other side so that it is GREEN, flip `MASTER` to be ORANGE, move `HEAD` to this new node]*  
 
 ## Making Changes to New Branch
 When we add and commit to this new branch, we repeat the steps above, but this time our pointers move with our new `feature-a` branch.  
@@ -121,7 +123,6 @@ Lastly, to demonstrate how code gets written to disc in isolated pieces, run the
 ![git-merge-command-output][git-merge-command-output]  
 
 Take a minute to run the command `git log --graph --decorate --all`. This command lets you see a print out in a more visual way in your terminal.  
-
 
 
 <!-- IMAGE FILE REFERENCES -->
