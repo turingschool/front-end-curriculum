@@ -37,13 +37,11 @@ In your notebook, record your answers to the following questions:
 - Can we name any applications that are _real time_?
 - What's stopping our applications from being real time?
 
-## Lecture
-
-### Review
+## Review of HTTP Request/Response Cycle
 
 The HTTP request/response cycle is a stateless machine by design. The client makes a request to a server, a connection is made with the server, the server interprets the request, forms a response, sends the response back to the client, and closes the connection.
 
-### A Thought Experiment
+## A Thought Experiment
 
 You are have a brand new job working with a hedge fund, and they need real-time data on stock prices for quick trades. The amount of money that the hedge fund makes is directly related to how good the data of the stock price is, so you want the most up-to-date prices.
 
@@ -53,7 +51,7 @@ How would you do this? Sketch out the API you would build to communicate with a 
 
 When you're done, think about the downsides of this application. How does the HTTP request/response cycle make this a difficult task to do efficiently?
 
-### Why WebSockets?
+## Why WebSockets?
 
 Long-polling...streaming...then websockets. [This article](http://websocket.org/quantum.html) has a good explanation of log-polling vs. streaming vs. WebSockets.
 
@@ -63,7 +61,7 @@ Long-polling...streaming...then websockets. [This article](http://websocket.org/
   * The client can send messages to the server without having to wait for a response
   * The handshake
 
-```js
+```
 GET /chat HTTP/1.1
 Host: server.example.com
 Upgrade: websocket
@@ -74,7 +72,7 @@ Sec-WebSocket-Version: 13
 Origin: http://example.com
 ```
 
-```js
+```
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
