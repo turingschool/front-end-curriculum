@@ -18,13 +18,17 @@ When communicating over a regular HTTP connection, all of the data is sent back 
 
 ## SSL & TLS
 
-HTTPS pages typically use one of two secure protocols to encrypt communications - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both the TLS and SSL protocols use what is known as an 'asymmetric' Public Key Infrastructure (PKI) system.
+HTTPS applications use one of two secure protocols to encrypt data transfer - SSL (Secure Sockets Layer) or TLS (Transport Layer Security). Both of these protocols use an 'asymmetric' Public Key Infrastructure (PKI) system, which uses keys to encrypt and decrypt communications.
 
 ### Public Key Infrastructure
 
 An asymmetric system uses two keys to encrypt communications, a public key and a private key. Anything encrypted with the public key can only be decrypted by the private key and vice-versa. 
 
-As the names suggest, the 'private' key should be kept strictly protected and should only be accessible the owner of the private key. In the case of a website, the private key remains securely ensconced on the web server. Conversely, the public key is intended to be distributed to anybody and everybody that needs to be able to decrypt information that was encrypted with the private key.
+The private key should always be hiding on the web server and only accessible to the owner of the key. The public key, on the other hand, will be distributed to anybody who needs to be able to decrypt the information that was encrypted by the private key. (e.g. the browser will need the public key in order to decrypt communications from the website).
+
+You've been using different types of key infrastructures since you started programming. Think about how you configured git to work with the web-based GitHub. If you connected over SSH, you may have needed to generate an SSH key to run git commands in your terminal that communicated with github. When we've deployed our apps to production on Heroku and integrated with CircleCI, we needed to generate an account-specific Heroku key to link up the two services. While these examples dont perfectly mirror the PKI system used for SSL, they present a familiar pattern of using keys to provide access to and communicate with a particular service.
+
+CloudFlare built their own PKI infrastructure and [documented](https://blog.cloudflare.com/how-to-build-your-own-public-key-infrastructure/) the process in great detail, if you'd like to learn more about the infrastructure SSL is built on.
 
 ### How Does SSL Work?
 
@@ -39,13 +43,13 @@ You can view a site's SSL certificate by going to the 'Security' panel in dev to
 
 ![SSL Certificate](/assets/images/lessons/https-ssl/ssl-certificate.png)
 
-The certificate itself seems to give a lot of information away for free. You might wonder how someone couldn't decrypt data from the website when given all of the encryption algorithms and certificate data. Remember you still need access to that private key in order to decrypt anything -- think of a typical master lock. We know the algorithm for opening the lock is:
+The certificate itself seems to give a lot of information away for free. You might wonder how someone couldn't decrypt data from the website when given all of the encryption algorithms and certificate data. But remember that you still need access to that private key in order to decrypt anything -- think of a typical master lock. We know the algorithm for opening the lock is:
 
 1. Turn 3 rotations to the right and stop
 2. Turn 1 rotation to the left, passing the first number and stopping on the second
 3. Turn 1 rotation to the right and stop on third number
 
-Even though we know this algorithm and it is well-documented, if we don't know the 3 numbers to stop on, we won't be able to open the master lock.
+Even though we know this algorithm and it is well-documented, if we don't know the 3 numbers to stop on, we won't be able to open the lock.
 
 The browser will then validate the SSL certificate based on the information it provides, and encrypt a new session key based on the public key provided. The server will then be able to access this valid session key for future requests. This generation of shared secrets is known as the 'SSL handshake'. It establishes a uniquely secure connection between your interactions on a website and the data they're transmitting.
 
