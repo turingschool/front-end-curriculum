@@ -4,7 +4,7 @@ length: 60
 tags: environments, environment variables
 ---
 
-Environments in software development refer to a configured setup of tools, platforms and data management for your application. Each environment typically corresponds with a specific stage of the release process. 
+Environments in software development refer to the place where your code runs. The "where" in this definition is less of a physical location, and refers more to a configured setup of tools, platforms, hardware and software. Each environment typically corresponds with a specific phase of the release process. 
 
 ## A Brief History
 
@@ -33,15 +33,23 @@ While the development environment provided us with some answers to the problems 
 ### Stage 2: Three Environments
 #### (Development, Staging, Production)
 
+So, we created another environment that we call staging. This environment is meant to execute our code in an environment as close as possible to production, without actually disrupting production. The staging environment will often be accessible only internally so that employees and team members can do a round of quality assurance before deploying to production.
+
 ### Stage 3: Four Environments
 #### (Testing, Development, Staging, Production)
+
+As we began to focus on automation, we developed more advanced test suites that would do their own round of quality assurance on our code before even showing it to team members. We've created testing environments to run our automated test suites that verify the integrity of our code. 
 
 ### Stage 4: Five Environments
 #### (Testing, Development, CI, Staging, Production)
 
+There is yet another environment that is common on modern development teams: Continuous Integration. It exists to run our tests, report back with success or failure, and in some cases, take additional action.
+
+We all know to run our tests before we push, or after we merge, or before we deploy, but a continuous integration environment ensures that tests are run. We can’t forget. You can even add CI tools to your production deployment process, such that any commit that doesn’t pass its tests will be rejected.
+
 ## Modern Environments
 
-So the most common environments you'll see are:
+So based on that history, we ended up with the modern environments we have today. The most common ones you'll see are:
 
 * **Development:** 
   * the application is actively being developed
