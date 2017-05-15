@@ -107,6 +107,8 @@ app.set('port', process.env.PORT || 3000)
 const environment = process.env.NODE_ENV || 'development';
 ```
 
+### Getting and Setting Environment Variables
+
 In node applications, our environment variables are always prefixed with `process.env`. The `process` is a global object available to us that provides information about and access to the current [node process](https://nodejs.org/api/process.html).
 
 The `env` property on our process object returns another object that contains details about the current environment. This is where we store and read our environment variables.
