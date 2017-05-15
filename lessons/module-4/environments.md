@@ -84,3 +84,23 @@ Environments can differ from each other in many ways. For example:
 * You likely want to use unminified versions of libraries and packages in development & testing for debugging purposes, but always want minified versions in production for performance reasons.
 
 To handle these differences, we use **environment variables**. These are variables that differ between environments. They’re used across languages and platforms to set configuration. They allow the same logic and code to interact with different sources.
+
+We're already familiar with several environment variables from our past projects:
+
+```js
+// the port our node/express server runs on
+app.set('port', process.env.PORT || 3000)
+```
+
+```js
+// our database connection string for postgres
+  production: {
+    client: 'pg',
+    connection: `${process.env.DATABASE_URL}?ssl=true`
+  }
+```
+
+```js
+// even your environment is stored in an environment variable!
+const environment = process.env.NODE_ENV || 'development';
+```
