@@ -39,6 +39,24 @@ In your notebook, record your answers to the following questions:
 
 ## Lecture
 
+### Review
+
+The HTTP request/response cycle is a stateless machine by design. The client makes a request to a server, a connection is made with the server, the server interprets the request, forms a response, sends the response back to the client, and closes the connection.
+
+### A Thought Experiment
+
+You are have a brand new job working with a hedge fund, and they need real-time data on stock prices for quick trades. The amount of money that the hedge fund makes is directly related to how good the data of the stock price is, so you want the most up-to-date prices.
+
+Your boss demands for unknown reasons to implement a solution using the traditional HTTP request/response (not sockets).
+
+How would you do this? Sketch out the API you would build to communicate with a stock market server that can tell you the prices. Remember: each request to a server costs money and time.
+
+When you're done, think about the downsides of this application. How does the HTTP request/response cycle make this a difficult task to do efficiently?
+
+### Why WebSockets?
+
+Long-polling...streaming...then websockets. [This article](http://websocket.org/quantum.html) has a good explanation of log-polling vs. streaming vs. WebSockets.
+
 * Explain WebSockets vs. the HTTP request/response cycle
   * A WebSocket is a persistent two-way connection between the server and the client
   * The server can push an event without having to receive a request from the client
