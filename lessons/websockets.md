@@ -1,6 +1,6 @@
 ---
 title: Building Real-Time Applications with WebSockets
-length: 90
+length: 120
 tags: json, javascript, websockets, jquery, socket.io, node
 ---
 
@@ -18,16 +18,6 @@ tags: json, javascript, websockets, jquery, socket.io, node
 
 [org]: https://github.com/turingschool-examples
 [rn]: https://github.com/turingschool-examples/right-now
-
-<!-- ## Structure
-
-* 5 - Warm up
-* 20 - Lecture
-* 5 - Break
-* 25 - Experiment  #1: Right Now
-* 5 - Break
-* 25 - Experiment #2: Twitter Stream
-* 5 - Wrap Up -->
 
 ## Warm Up
 
@@ -166,7 +156,7 @@ io.on('connection', function (socket) {
 });
 ```
 
-Like everything with WebSockets, this is a two-part affair. The server is now emitting an event called `message` (this name is arbitrary - you can name the event whatever makes sense). We now need to do something when the client receives that message.
+Like everything with WebSockets, this is a two-part affair. The server is now emitting a `message` event. We now need to do something when the client receives that event.
 
 ```js
 // public/application.js
@@ -205,7 +195,7 @@ WebSockets are a two-way street. We can send something back to the server over `
 // public/application.js
 socket.on('connect', function () {
   console.log('You have connected!');
-  socket.send('message', {
+  socket.send({
     username: 'yournamehere',
     text: 'I did the thing.'
   });
@@ -222,8 +212,8 @@ io.on('connection', function (socket) {
     socket.emit('message', {user: 'turingbot', text: 'I am a banana.'});
   }, 1000);
 
-  socket.on('message', function (channel, message) {
-    console.log(channel + ':', message);
+  socket.on('message', function (message) {
+    console.log(message);
   });
 
   socket.on('disconnect', function () {
@@ -232,7 +222,7 @@ io.on('connection', function (socket) {
 });
 ```
 
-**Important Note**: We're doing it like this to demonstrate how you would push information from the client to the server using WebSockets. But, keep in mind, that the client has always been able to send requests to the server. It's totally okay to use AJAX in this situation.
+**Important Note**: We're doing it like this to demonstrate how you would push information from the client to the server using WebSockets. But, keep in mind, that the client has always been able to send requests to the server. It's totally okay to use AJAX in this situation without WebSockets.
 
 ### Your Turn
 
@@ -243,7 +233,7 @@ Here is a little bit of code to point you in the right direction.
 
 ```js
 io.on('connection', function(socket) {
-  socket.on('message', function (eventName, message) {
+  socket.on('eventName', function (message) {
     console.log(message);
   });
 });
