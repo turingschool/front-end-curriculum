@@ -109,15 +109,27 @@ const environment = process.env.NODE_ENV || 'development';
 
 ### Getting and Setting Environment Variables
 
-In node applications, our environment variables are always prefixed with `process.env`. The `process` is a global object available to us that provides information about and access to the current [node process](https://nodejs.org/api/process.html). This object is useful for identifying information about the runtime environment of your node application (node version, arguments passed to the executable, etc.)
+In node applications, our environment variables are always prefixed with `process.env`. The `process` is a global object available to us that provides information about and access to the current [node process](https://nodejs.org/api/process.html). This object is useful for identifying information about the runtime environment of your node application (node version, arguments passed to the executable, etc.). If you log the process object to your console, it should look something like this:
 
-The `env` property on our process object returns another object that contains details about the current environment. This is where we store and read our environment variables.
+```js
+// ultra-abridged version of a process object
+{
+  title: 'node',
+  version: 'v6.4.0',
+  arch: 'x64',
+  platform: 'darwin',
+  release: 
+   { name: 'node',
+     sourceUrl: 'https://nodejs.org/download/release/v6.4.0/node-v6.4.0.tar.gz',
+     headersUrl: 'https://nodejs.org/download/release/v6.4.0/node-v6.4.0-headers.tar.gz' },
+  argv: 
+   [ '/usr/local/bin/node',
+     '/Users/bstoroz/github/foo/server.js' ],
+  execPath: '/usr/local/bin/node'
+}
+```
 
-
-* log a process object
-* log an env object
-* explain what a process is
-* show how to set them in the terminal/heroku (config vars)
+The `env` property on our process returns another object that contains details about the current environment. This is where we store and read our environment variables.
 
 ## Resources
 
