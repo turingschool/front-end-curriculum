@@ -63,7 +63,7 @@ Suppose you want to check the value of some data on a server that changes period
 
 * **Streaming:** In HTTP version 1.1 (which we still use today), there is an additional header you can add to your request called `Connection: Keep-Alive`. This will open up an indefinite connection between the client and the server, which is close to what we want! It's like long-polling, but the server never signals to the client that the response is complete, thereby leaving the connection open. In the end, you are still using the HTTP protocol to send information. So all of the header information is still sent with each message, which can be kilobytes in size.
 
-[This article](http://websocket.org/quantum.html) has a good explanation of log-polling vs. streaming vs. WebSockets. At the end of the day, anything using the HTTP request/response cycle is always going to be [half-duplex](https://en.wikipedia.org/wiki/Duplex_(telecommunications)), or one-way communication only. Think of a two-way radio where only one person at a time can talk.
+[This article](http://websocket.org/quantum.html) has a good explanation of long-polling vs. streaming vs. WebSockets. At the end of the day, anything using the HTTP request/response cycle is always going to be [half-duplex](https://en.wikipedia.org/wiki/Duplex_(telecommunications)), or one-way communication only. Think of a two-way radio where only one person at a time can talk.
 
 ## WebSockets!
 
@@ -98,7 +98,7 @@ Sec-WebSocket-Protocol: chat
   * Real-time analytics
   * Document collaboration
   * Streaming
-* WebSockets work best when there is an event-driven server on the backend
+* WebSockets work best when there is an **event-driven** server on the backend
   * Ruby with [EventMachine][]
   * [Node.js][]
 * [Socket.io][] and [Faye][] will fallback to other methods if it can't make a WebSocket connection
@@ -114,9 +114,9 @@ Sec-WebSocket-Protocol: chat
 
 ### Getting Started
 
-[This repository][rn] contains a simple little Express app that servers a static `index.html` page. It also has [Socket.io][] hooked up by default—despite the fact that we're not using it at this moment.
+[This repository][rn] contains a simple little Express app that servers a static `index.html` page. It also has [Socket.io][] hooked up by default — despite the fact that we're not using it at this moment.
 
-You can fire up the server with `npm start`.
+Run `npm install`. Then you can fire up the server with `npm start`.
 
 Let's start with a simple "hello world" implementation.
 
@@ -136,6 +136,8 @@ When a connection is made to via WebSocket, you're server will log it to the con
 var socket = io();
 ```
 
+This function initiates the handshake and makes the connection. The default URL for the socket connection is `/`, which is what we want, so we don't need to pass anything into `io()`.
+
 You should see the following in your terminal after you refresh the page:
 
 ```shell
@@ -148,11 +150,11 @@ We can also let the client celebrate our new connection.
 ```js
 // public/application.js
 socket.on('connect', function () {
-  console.log('You have connected!');
+  console.log('You have connected!'); // This will log to the browser's console, not the terminal
 });
 ```
 
-One thing that you've probably picked up on is that we have an `io` object on the server—as well as the client-side of our application.
+There are [other built-in events](https://socket.io/docs/client-api/#event-connect) you can listen for other than `'connect'`. One thing that you've probably picked up on is that we have an `io` object on the server as well as the client-side of our application.
 
 So, let's send a message over the wire when a user connects.
 
@@ -164,9 +166,10 @@ io.on('connection', function (socket) {
 });
 ```
 
-Like everything with WebSockets, this is a two-part affair. The server is now emitting an event on the `message` channel. (This is arbitrary—like `sandwich_time` was when we discussed the using Redis for PubSub on the server-side.) We now need to do something when the client receives that message.
+Like everything with WebSockets, this is a two-part affair. The server is now emitting an event called `message` (this name is arbitrary - you can name the event whatever makes sense). We now need to do something when the client receives that message.
 
 ```js
+// public/application.js
 socket.on('message', function (message) {
   console.log('Something came along on the "message" channel:', message);
 });
@@ -233,14 +236,14 @@ io.on('connection', function (socket) {
 
 ### Your Turn
 
-* Write the functionality on the client that sends something over the `mission` channel.
-* Write the functionality on the server that listens on the `mission` channel and logs it to the console.
+* Write the functionality on the client that sends something over the `mission` event.
+* Write the functionality on the server that listens for the `mission` event and logs it to the console.
 
 Here is a little bit of code to point you in the right direction.
 
 ```js
 io.on('connection', function(socket) {
-  socket.on('message', function (channel, message) {
+  socket.on('message', function (eventName, message) {
     console.log(message);
   });
 });
@@ -261,7 +264,7 @@ io.sockets.emit('message', {user: 'turingbot', text: 'You can do the thing.'});
 socket.broadcast.emit('message', {user: 'turingbot', text: 'You can do the thing.'});
 ```
 
-You can also start to break your messaging out in additional channels. Here's an example.
+You can also start to break your messaging out into different event names. Here's an example.
 
 ```js
 socket.on('new message', addMessageToPage);
@@ -283,7 +286,7 @@ There are also some helpful methods for seeing how many clients are currently co
 
 ## Pair Project
 
-We're going to build a small chat room (like [this one][ch]) using Socket.io and jQuery.
+You're going to build a small chat room (like [this one][ch]) using Socket.io and jQuery.
 Users should be able to fill out a little form, which will send their message over the
 WebSocket to the server, which will broadcast it out to all of the connected clients.
 
