@@ -1,9 +1,11 @@
 ---
 title: Build an NPM Module
 length: 120 min
-module: 4
+module: 2
 tags: npm, node, package
 ---
+
+**source:** Stolen and altered from Meeka's [mod 4 lesson](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/lessons/build-an-npm-module.md)
 
 ## Goals
 
