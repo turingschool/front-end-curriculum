@@ -109,7 +109,7 @@ const environment = process.env.NODE_ENV || 'development';
 
 ### Getting and Setting Environment Variables
 
-In node applications, our environment variables are always prefixed with `process.env`. The `process` is a global object available to us that provides information about and access to the current [node process](https://nodejs.org/api/process.html).
+In node applications, our environment variables are always prefixed with `process.env`. The `process` is a global object available to us that provides information about and access to the current [node process](https://nodejs.org/api/process.html). This object is useful for identifying information about the runtime environment of your node application (node version, arguments passed to the executable, etc.)
 
 The `env` property on our process object returns another object that contains details about the current environment. This is where we store and read our environment variables.
 
@@ -118,3 +118,7 @@ The `env` property on our process object returns another object that contains de
 * log an env object
 * explain what a process is
 * show how to set them in the terminal/heroku (config vars)
+
+## Resources
+
+* [Understanding the node process object](https://egghead.io/lessons/node-js-understand-the-node-js-process-object)
