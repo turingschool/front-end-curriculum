@@ -10,7 +10,7 @@ module: 4
 By the end of this lesson, you will:
 
 * Understand the difference between relational and non-relational databases
-* Be familiar with common data relationships and understand how their structure is affected by the database
+* Be familiar with common data relationships and understand how their structure is affected by the database you choose
 
 ## Databases
 
@@ -22,12 +22,38 @@ Software products that are used to build, maintain and access data from a databa
 
 Traditional databases such as [MySQL](https://www.mysql.com/) and [PostgreSQL](https://www.postgresql.org/) are considered **relational** -- data points are predictable and have strict relationships between each other. The database requires a strict, pre-defined schema (more on this in a bit) with tables and columns.
 
-The important things to note about relational databases are that they:
+Important characteristics of relational databases are that they:
 
 * **Store data in tables with rows and columns** - similar to an excel spreadsheet
 * **Require a strict, pre-defined schema** - you must know the exact fields and their data types for each column of every table, and each record must conform to the defined structure
 * **Limit the types of data structures that can be stored** - this forces you into a flatter overall data structure, as you cannot easily nest complex data types
 * **Uses SQL (structured querying language) to access and manipulate data points** - allows you to link information from different tables through unique keys (foreign and primary)
+
+Let's look at an example of how data might exist in a relational database. If we have a table of research papers and another table of footnotes that each correspond to a research paper, our data tables might look like the following:
+
+```js
+// One-to-many relationship - Relational Database Setup
+// Requires two separate tables: one for research papers
+// and another for footnotes. Each footnote must contain 
+// a 'publicationId' field to link it to a specific paper
+
+researchPapers: id, title, publicationDate
+footNotes: id, page, note, publicationId
+```
+
+researchPapers:
+id | title            | publicationDate
+=========================================
+1  | Lorem Ispum      | 2345635682547
+2  | Dolor Set Amet   | 3568356245622
+3  | Consequetar Adip | 5795673456278
+ 
+footNotes:
+id | page | publicationId | note
+===================================
+1  | 26   | 1             | 'Dolor set amet consequetar'
+2  | 362  | 1             | 'Consequetar adipscing'
+3  | 75   | 2             | 'Lorem set amet'
 
 
 #### Terminology
