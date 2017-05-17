@@ -15,3 +15,7 @@
 - What are HTTP methods? List all HTTP methods that you know, and explain them.
 
 - Question: What value is returned from the following statement? [js]
+
+```js
+"i'm a lasagna hog".split("").reverse().join("");
+```
