@@ -31,6 +31,9 @@ In your notebook, record your answers to the following questions:
 
 At a high level: the client makes a request to a server, a connection is made with the server, the server interprets the request, forms a response, sends the response back to the client, and closes the connection. [Here is a little more nitty-gritty info](http://celineotter.azurewebsites.net/world-wide-web-http-request-response-cycle/) on the details of a typical request-response cycle. Also, [this article](http://blog.catchpoint.com/2010/09/17/anatomyhttp/).
 
+![HTTP Request-Response Cycle](https://image.slidesharecdn.com/inft132-09303webconcepts-090920164402-phpapp02/95/inft132-093-03-web-concepts-5-728.jpg?cb=1253465082 "HTTP Request-Response Cycle")
+[image source](https://www.slideshare.net/mrees/inft132-093-03-web-concepts)
+
 ## A Thought Experiment
 
 You are have a brand new job working with a hedge fund, and they need real-time data on stock prices for quick trades. The amount of money that the hedge fund makes is directly related to how good the data of the stock price is, so you want the most up-to-date prices.
