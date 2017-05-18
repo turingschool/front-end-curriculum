@@ -35,27 +35,27 @@ If we structure our data in a way that it becomes easier to access all of a sudd
 
 Whats really great about a prefix trie is that every parent node will typically have a node for every possible answer. So in our case if we're talking about a prefix trie each node can have up to 26 nodes (each for letter in the alphabet). If I was looking to add names to my trie it would look like this.
 
-		    [ root ]
+		       [ root ]
             /     \
            .       .
           /         \
          [a]        [e]
         /   \       /  \
-      [m]  [n]    [m]  [z]
-       |    |      |    |
-      [y]  [n]    [m]  [r]  
-            |      |    |   
-           [a]    [a]  [a]  
-         /  |  \      
-       [b] [i] [l]
-        |   |   |
-       [e] [k] [i]
-        |   |   |
-       [l] [a] [s]
-        |       |
-       [l]     [a]
-        |
-       [e]
+      [m . . n]   [m  . z]
+       |     |     |    |
+      [y]   [n]   [m]  [r]  
+             |     |    |   
+            [a]   [a]  [a]  
+          /  |  \      
+        [b . i . l]
+         |   |   |
+        [e] [k] [i]
+         |   |   |
+        [l] [a] [s]
+         |       |
+        [l]     [a]  
+         |
+        [e]
 
 In our example here we have two parent nodes. `a` and `e` they have children nodes of `m`, `n`, `m`, `z`. And it continues to trickle down.
 
@@ -166,6 +166,11 @@ completion.suggest("piz")
 
 ```
 
+## Phase 4
+
+Next week you will create a Weather App that needs an autocomplete feature.
+Package your complete-me trie in a node module so that you can import it into
+future projects.
 
 ## Extensions
 
