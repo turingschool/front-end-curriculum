@@ -13,6 +13,6 @@ module: 4
 
 - Explain event delegation.
 
-- What's the difference between `.call` and `.apply`?
+- What kind of information might you store in an environment variable? Why?
 
 - What is an API?
