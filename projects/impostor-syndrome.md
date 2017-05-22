@@ -1,5 +1,5 @@
 ---
-title: Imposter Syndrome
+title: Impostor Syndrome
 module: 4
 tags: electron
 ---
@@ -12,7 +12,7 @@ tags: electron
 
 ---
 
-In this project, we'll be designing an interpretation of a traditional desktop application using Electron. The choice of which application your pair is going to work on is due to Alex/Brittany/Meeka by 4:00pm today.
+In this project, we'll be designing an interpretation of a traditional desktop application using Electron. You must have nailed down a project idea by 4:00pm today. Ping Robbie & Brittany with your group's pitch.
 
 Here are some helpful suggestions:
 
@@ -56,7 +56,9 @@ Each section is worth 15 points for a total of 45 points.
 
 ## Rubric
 
-### Blog Post (45 Points - 15 points per post)
+### Blog Posts (45 Points - 15 points per post)
+
+* These will be due at the end of Week 5 (June 2nd)
 
 ### JavaScript Style (40 points)
 
@@ -93,5 +95,4 @@ Instructor/developers will select one feature in the project to review for this 
 
 #### Extensions (20 points each)
 
-- Developer contributes to or creates an npm module/library.
 - Developer packaged their application for distribution aka you can send me a zip folder with your app and I can use it on my computer.
