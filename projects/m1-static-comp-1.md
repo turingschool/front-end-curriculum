@@ -29,7 +29,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ## Submission Details
 
-* __DUE by 7:30 AM 4/3/17__
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1BGLfjXNZ62OpyFK28mqJMV4R6gILTmmJM7bzsCBOw6Y/edit#gid=0)
+* __DUE by NOON 5/23/17__
+* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1mFOyLHwf7EcA3ZNL3U660MVU2-rF8Y8p7Su4n63ljqE/edit?usp=sharing)
 
 ![static-comp-challenge-1](/assets/images/static-comp-challenge-1.jpg)
