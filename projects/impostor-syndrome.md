@@ -56,7 +56,7 @@ Each section is worth 15 points for a total of 45 points.
 
 ## Rubric
 
-### Blog Post (45 Points - 15 points per post)
+### Blog Posts (45 Points - 15 points per post)
 
 * These will be due at the end of Week 5 (June 2nd)
 
