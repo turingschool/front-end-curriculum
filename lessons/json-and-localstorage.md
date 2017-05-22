@@ -4,16 +4,29 @@ length: 60
 tags: web apis, storage, persistence
 ---
 
-[`localStorage`][ls-mdn] allows a web application to store information.  Storage is unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site.
+### What is Local Storage?
+
+[`localStorage`][ls-mdn] is a property you can call on the global `Window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.  
+
+Up until this point, the data in our projects has disappeared whenever we refresh our page, which is problematic. It would be nice if we could keep our ideas on the page without having to recreate them every time we want to see our CSS changes. Browsers provide two main types of immediate storage that is accessible without messing with a database: [`sessionStorage`][ss-mdn] which gets reset whenever your browser session restarts, and [`localStorage`][ls-mdn], which has no specified expiration date. (If you're curious you can check out your browsers storage capacity [here][gs-mdn]. Today we will strictly be talking about `localStorage`.
+
+The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site.  
+
+**NOTE:** Local Storage is not available/usable in all browsers. If you are building an application that requires cross-browser compatibility make sure to do some research on feature detection for the browsers you are working with.  
+
+### Local Storage Methods
 
 `localStorage` supports the following methods:
 
 - `localStorage.getItem()` gets an item from storage based on the key provided.
-- `localStorage.setItem()` takes two arguments—a key and value—and stores the given value under the provided key.
+- `localStorage.setItem()` takes two arguments—a key and value (both must be strings)—and stores the given value under the provided key.
 - `localStorage.removeItem()` takes a key and removes that key and its associated value from storage.
 - `localStorage.clear()` removes all items from storage for that domain.
 
 [ls-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+[ss-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
+[gs-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/globalStorage
+[storage-benchmark]:
 
 ## Your Turn
 
@@ -32,7 +45,7 @@ Open up the developer tools on this page and try the following:
 
 What are your observations?
 
-## JSON
+### What is JSON?
 
 When we're communicating with servers, we use a transport protocol called HTTP.
 
