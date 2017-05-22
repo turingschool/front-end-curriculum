@@ -35,7 +35,7 @@ If we structure our data in a way that it becomes easier to access all of a sudd
 
 Whats really great about a prefix trie is that every parent node will typically have a node for every possible answer. So in our case if we're talking about a prefix trie each node can have up to 26 nodes (each for letter in the alphabet). If I was looking to add names to my trie it would look like this.
 
-		       [ root ]
+		  [ root ]
             /     \
            .       .
           /         \
@@ -159,7 +159,7 @@ completion.populate(dictionary)
 completion.suggest("piz")
 => ["pize", "pizza", "pizzeria", "pizzicato", "pizzle", ...]
 
-completion.select("piz", "pizzeria")
+completion.select(pizzeria")
 
 completion.suggest("piz")
 => ["pizzeria", "pize", "pizza", "pizzicato", "pizzle", ...]
