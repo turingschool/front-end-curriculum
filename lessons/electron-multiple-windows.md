@@ -326,7 +326,7 @@ const updateEditedState = (isEdited) => {
 };
 ```
 
-Building up that tile makes me feel back, but let's roll with it for now.
+Building up that tile makes me feel bad, but let's roll with it for now.
 
 ```js
 markdownView.addEventListener('keyup', (event) => {
