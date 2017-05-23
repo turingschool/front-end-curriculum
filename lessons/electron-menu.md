@@ -18,14 +18,17 @@ Let's create a new file called `application-menu.js`, and import our app and the
 const { app, Menu } = require('electron');
 ```
 
+We'll also want to import some of the functionality we'll be using in our menu:
+
+```js
+const { showOpenFileDialog, activeFile } = require('./main');
+```
+
 Unfortunately, Electron's default menu is a "take it or leave it" affair. The moment that we want to add our own custom functionality to the menu, we must first invent the universe. Electron _does_ however give us the ability to create a simple data structure and have it build the menu from a template.
 
 A template is just going to represent an array of menu items. Because we have to recreate all of the default functionality, it's going to get a little verbose. I encourage you to copy and paste what follows and we'll discuss it together.
 
 ```js
-const { app, Menu } = require('electron');
-const { showOpenFileDialog, activeFile } = require('./main');
-
 const template = [
   {
     label: 'File',
@@ -198,13 +201,13 @@ First we need to import Electron's `Menu` module again, and we'll also want to p
 
 ```js
 const { Menu }  = require('electron');
-const applicationMenu = require('./application-menu');
 ```
 
-Then, in our `ready` event, we'll call `Menu.setApplicationMenu` to tell it to use our custom menu:
+Then, in our `ready` event, we'll import our custom menu and call `Menu.setApplicationMenu` to tell it to use our custom menu:
 
 ```js
 app.on('ready', function () {
+  const applicationMenu = require('./application-menu');
   Menu.setApplicationMenu(applicationMenu);
 });
 ```
