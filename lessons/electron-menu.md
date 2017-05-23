@@ -12,131 +12,156 @@ status: draft
 
 Having a button for opening and saving files is pretty neat, but it's not the pattern we're used to in desktop applications. Typically, desktop applications have a "File" menu "Open" and "Save" items. Up to this point, Electron has given us some sensible defaults for menu items. (Fire up your application and check out the menu bar if haven't already.)
 
-Let's go and pull in Electron's `Menu` module.
+Let's create a new file called `application-menu.js`, and import our app and the Menu module from electron: 
 
 ```js
-const Menu = electron.Menu;
+const { app, Menu } = require('electron');
 ```
 
 Unfortunately, Electron's default menu is a "take it or leave it" affair. The moment that we want to add our own custom functionality to the menu, we must first invent the universe. Electron _does_ however give us the ability to create a simple data structure and have it build the menu from a template.
 
-```js
-var menu = Menu.buildFromTemplate(template);
-```
-
-Once we have a menu object, we can override the default menu that Electron gave us when the `app` fires it's `ready` event.
+A template is just going to represent an array of menu items. Because we have to recreate all of the default functionality, it's going to get a little verbose. I encourage you to copy and paste what follows and we'll discuss it together.
 
 ```js
-app.on('ready', function () {
-  var menu = Menu.buildFromTemplate(template);
-  Menu.setApplicationMenu(menu);
-});
-```
+const { app, Menu } = require('electron');
+const { showOpenFileDialog, activeFile } = require('./main');
 
-Now, this won't work because we don't have a `template` object just yet. Because we have to recreate all of the default functionality, it's going to get a little verbose. I encourage you to copy and paste what follows and we'll discuss it together.
-
-```js
 const template = [
   {
     label: 'File',
     submenu: [
       {
-        label: 'Open',
-        accelerator: 'CmdOrCtrl+O',
-        click() { openFile(); }
+        label: 'Open File',
+        accelerator: 'CommandOrControl+O',
+        click() {
+          showOpenFileDialog();
+        },
       },
       {
-        label: 'Save',
-        accelerator: 'CmdOrCtrl+S',
-        click() { saveFile(); }
-      }
-    ]
+        label: 'Save File',
+        accelerator: 'CommandOrControl+S',
+        click() {
+          activeFile.saveMarkdown();
+        },
+      },
+      {
+        label: 'Export HTML',
+        accelerator: 'Shift+CommandOrControl+S',
+        click() {
+          activeFile.saveHtml();
+        },
+      },
+    ],
   },
   {
     label: 'Edit',
     submenu: [
       {
         label: 'Undo',
-        accelerator: 'CmdOrCtrl+Z',
-        role: 'undo'
+        accelerator: 'CommandOrControl+Z',
+        role: 'undo',
       },
       {
         label: 'Redo',
-        accelerator: 'Shift+CmdOrCtrl+Z',
-        role: 'redo'
+        accelerator: 'Shift+CommandOrControl+Z',
+        role: 'redo',
       },
-      {
-        type: 'separator'
-      },
+      { type: 'separator' },
       {
         label: 'Cut',
-        accelerator: 'CmdOrCtrl+X',
-        role: 'cut'
+        accelerator: 'CommandOrControl+X',
+        role: 'cut',
       },
       {
         label: 'Copy',
-        accelerator: 'CmdOrCtrl+C',
-        role: 'copy'
+        accelerator: 'CommandOrControl+C',
+        role: 'copy',
       },
       {
         label: 'Paste',
-        accelerator: 'CmdOrCtrl+V',
-        role: 'paste'
+        accelerator: 'CommandOrControl+V',
+        role: 'paste',
       },
       {
         label: 'Select All',
-        accelerator: 'CmdOrCtrl+A',
-        role: 'selectall'
+        accelerator: 'CommandOrControl+A',
+        role: 'selectall',
       },
-    ]
-  }
+    ],
+  },
+  {
+    label: 'Window',
+    role: 'window',
+    submenu: [
+      {
+        label: 'Minimize',
+        accelerator: 'CommandOrControl+M',
+        role: 'minimize',
+      },
+      {
+        label: 'Close',
+        accelerator: 'CommandOrControl+W',
+        role: 'close',
+      },
+    ],
+  },
+  {
+    label: 'Help',
+    role: 'help',
+    submenu: [],
+  },
 ];
 
-if (process.platform == 'darwin') {
-  var name = app.getName();
+if (process.platform === 'darwin') {
+  const name = app.getName();
   template.unshift({
     label: name,
     submenu: [
       {
-        label: 'About ' + name,
-        role: 'about'
+        label: `About ${name}`,
+        role: 'about',
       },
-      {
-        type: 'separator'
-      },
+      { type: 'separator' },
       {
         label: 'Services',
         role: 'services',
-        submenu: []
+        submenu: [],
       },
+      { type: 'separator' },
       {
-        type: 'separator'
-      },
-      {
-        label: 'Hide ' + name,
+        label: `Hide ${name}`,
         accelerator: 'Command+H',
-        role: 'hide'
+        role: 'hide',
       },
       {
         label: 'Hide Others',
         accelerator: 'Command+Alt+H',
-        role: 'hideothers'
+        role: 'hideothers',
       },
       {
         label: 'Show All',
-        role: 'unhide'
+        role: 'unhide',
       },
+      { type: 'separator' },
       {
-        type: 'separator'
-      },
-      {
-        label: 'Quit',
+        label: `Quit ${name}`,
         accelerator: 'Command+Q',
-        click() { app.quit(); }
+        click() { app.quit(); },
       },
-    ]
+    ],
   });
+
+  const windowMenu = template.find(item => item.label === 'Window');
+  windowMenu.submenu.push(
+    { type: 'separator' },
+    {
+      label: 'Bring All to Front',
+      role: 'front',
+    }
+  );
 }
+
+module.exports = Menu.buildFromTemplate(template);
 ```
 
 Welcome back! Let's take a closer look some of the moving pieces in the large chunk of code above. The template is an array of menu items. In this case, we have "File" and "Edit"—each with their own submenus. Under "File," we have two menu items: "Save" and "Open." When clicked, they fire `openFile` and `saveFile` respectively. We're also assigning each an "accelerator" (also know as a shortcut or hot key).
@@ -164,6 +189,26 @@ if (process.platform == 'darwin') { … }
 [Darwin]: https://en.wikipedia.org/wiki/Darwin_(operating_system)
 
 We'll use `unshift` to push it onto the front of the array. OS X will stubbornly continue to use "Electron" as the application title. In order to override this, we'll have to adjust the `plist` file that Electron generates when it builds the file. This is the same process we'll use for a custom application icon.
+
+## Using our Menu
+
+Now that we have a menu object, we can import it into our `main.js` file and override the default menu that Electron gave us when the `app` fires it's `ready` event.
+
+First we need to import Electron's `Menu` module again, and we'll also want to pull in the application menu we just created:
+
+```js
+const { Menu }  = require('electron');
+const applicationMenu = require('./application-menu');
+```
+
+Then, in our `ready` event, we'll call `Menu.setApplicationMenu` to tell it to use our custom menu:
+
+```js
+app.on('ready', function () {
+  Menu.setApplicationMenu(applicationMenu);
+});
+```
+
 
 ## Electron's `shell` Module
 
