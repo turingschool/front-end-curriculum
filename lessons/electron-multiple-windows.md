@@ -9,10 +9,12 @@ status: draft
 [Continuing from the file dialog lesson.](http://frontend.turing.io/lessons/electron-file-dialogs.html)
 
 ## Why Would You Want Multiple Windows?
-Discussion
+
+Discussion!
 
 ## Creating Multiple Windows
-So, our functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer. Let's add a function called createWindow() in main.js to do just that.
+
+So, our functionality is great and wonderful, but we still don't have a way to create more than one window. Bummer. Let's add a function called `createWindow()` in `main.js` to do just that.
 
 ```js
 const windows = new Set()
@@ -68,7 +70,7 @@ let newWindow = new BrowserWindow({ show: false });
 windows.add(newWindow)
 ```
 
-Our createWindow() function creates a new window and defaults it to not show. Then we add the new window to our windows Set. All of our new windows should be unique so a Set is a great way to store all of our windows.
+Our `createWindow()` function creates a new window and defaults it to not show. Then we add the new window to our windows Set. All of our new windows should be unique so a Set is a great way to store all of our windows.
 
 ```js
 newWindow.once('ready-to-show', () => {
@@ -108,7 +110,7 @@ return newWindow
 
 When we close the new window, we will check if we have edited the document (functionality we will add), give a dialog box if they have edited it, and then delete the window from the window Set if it closes. The new window is the return value of createWindow().
 
-Next let's add a New File button in our index.html, detect the currentWindow and import `createWindow()` in our renderer.js file.
+Next let's add a New File button in our `index.html`, detect the currentWindow and import `createWindow()` in our `renderer.js` file.
 
 ```js
 // index.html
@@ -157,9 +159,7 @@ Let's fire up our app and see if we can open multiple windows. What are some thi
 
 ## Setting the Tile of the Window When a File is opened
 
-If I look at any of the windows in my editor right now, I can see what is opened.
-
-I can see that in my poor application. Let's see if we can fix that.
+If I look at any of the windows in my editor right now, I can't see what is opened. Let's see if we can fix that.
 
 ```js
 const openFile = exports.openFile = (targetWindow) => {
@@ -190,7 +190,7 @@ const openFile = exports.openFile = (targetWindow, file = getFileFromUserSelecti
 };
 ```
 
-Yea, I am setting it as a default argument. Deal with it.
+Yeah, we're am setting it as a default argument. Deal with it.
 
 ## Setting the Represented File
 
@@ -360,7 +360,7 @@ const openFile = exports.openFile = (win, file = getFileFromUserSelection(win)) 
 
 ### Getting the Revert and Save Buttons Enabled
 
-We deseve a quick win at this point.
+We deserve a quick win at this point.
 
 ```js
 saveMarkdownButton.disabled = !isEdited;
