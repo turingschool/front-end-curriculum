@@ -5,7 +5,7 @@ module: 4
 
 ## Goals
 
-By the end of this session we will have established Capstone projects that'll guide your last three weeks in the program. It's your final project which means it's your last opportunity to build something your really proud of and can show off for your portfolio. It's also the last time you will get to work with your cohort-mates and master your workflow before becoming a professional developer. Take risks, be creative, work nicely with your team and build something useful for others.
+By the end of this session we will have established Capstone projects that'll guide your last two weeks in the program. It's your final project which means it's your last opportunity to build something your really proud of and can show off for your portfolio. It's also the last time you will get to work with your cohort-mates and master your workflow before becoming a professional developer. Take risks, be creative, work nicely with your team and build something useful for others.
 
 The project is due on Wednesday, June 7th.
 
@@ -15,7 +15,7 @@ The project is due on Wednesday, June 7th.
 
 ### Part 1: Solo
 
-On the whiteboard, summarize the data that is returned from your BYOB endpoints.
+On the whiteboard or with pen and paper, summarize the data that is returned from your BYOB endpoints. While you don't **have** to use your BYOB project as a base, we have found it greatly helps students to have that foundation. You are welcome to create another backend API if there is an application you strongly want to build, but remember that will require setting up new schemas and seeds.
 
 **Example**
 
@@ -25,8 +25,8 @@ On the whiteboard, summarize the data that is returned from your BYOB endpoints.
 
 ### Part 2: Solo
 
-Take the first 15 minutes to summarize and post your ideas. For *each one* create
-an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project) and, in the description, summarize the idea in the following format:
+Summarize and post your ideas of what kind of applications you could build off of your BYOB (or a new backend you'd like to build). For *each idea* create
+an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project). In the description, summarize the idea in the following format:
 
 * Name:
 * Problem it solves:
