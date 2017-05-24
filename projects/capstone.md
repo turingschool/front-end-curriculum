@@ -141,6 +141,6 @@ Instructor/developers will select one feature in the project to review for this 
 
 ### To get a 4 on this project, you need to achieve 300 / 325
 
-### To get a 3 on this project, you need to achieve 240 / 325
+### To get a 3 on this project, you need to achieve 250 / 325
 
 ## Final Score: x / 325
