@@ -26,14 +26,15 @@ On the whiteboard or with pen and paper, summarize the data that is returned fro
 ### Part 2: Solo
 
 Summarize and post your ideas of what kind of applications you could build off of your BYOB (or a new backend you'd like to build). For *each idea* create
-an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project). In the description, summarize the idea in the following format:
+an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project). Summarize the idea in the following format:
 
-* Name:
+Issue Name: (Name of the Project)  
+Issue Description:
 * Problem it solves:
 * How it solves it:
 * Technical challenges:
 
-If your a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
+If a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
 
 ### Part 3: Small Groups
 
