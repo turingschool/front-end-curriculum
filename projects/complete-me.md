@@ -64,8 +64,7 @@ In our example here we have two parent nodes. `a` and `e` they have children nod
 
 Everybody uses auto complete.You can love it or you can hate it but ultimately you're going to use it. Sometimes it's helpful and sometimes it's just annoying. In this project you are going to be building a low level version of an auto complete system in javascript.
 
-
-
+## Requirements
 
 ## Phase 1
 
