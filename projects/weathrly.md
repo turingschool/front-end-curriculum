@@ -16,6 +16,8 @@ In this project you will be getting your first real interactions with ReactJS, a
 - jQuery for AJAX only (No DOM manipulation)
 - weather underground API
 
+## Requirements
+
 ## Phase one
 
 * Your application should have a welcome page that greets the user. The welcome page has an input field that allows the user to submit a location (the location should work with both a zip code and city and state).
@@ -40,7 +42,11 @@ In this project you will be getting your first real interactions with ReactJS, a
 * The application should show a 10 day forecast
   * Each day should display the Name of the day, an Image reflecting the weather condition and the High and Low for each day.
 
-## Extension
+## Phase four
+
+* import your completeMe into your Weathrly project. Populate it with the supplied list of city/states and zip codes. When a user starts typing in a city/state or zip code display a list of possible suggestions using your completeMe's suggest function.
+
+## Extensions
 
 * If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
    * For each hour it should display an image that reflects the weather
