@@ -87,23 +87,24 @@ As a team, come up with your own Definition of Done. Have at least 5 criteria fo
 
 ## Rubric
 
-### Production (75 points)
+### Deployment (75 points)
 
-- 75: Application is deployed and in production.
-- 0: Application is not deployed and in production.
+- 75: Application is automatically deployed to production via CircleCI.
+- 40: Application is deployed to Heroku but not automatically via CircleCI.
+- 0: Application is not building with CircleCI and not deployed.
 
 ### JavaScript Style (50 points)
 
-* 50: Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
+* 50: Application has exceptionally well-factored code with little or no duplication and all modular pieces separated out into logical components. There are _zero_ instances where an instructor would recommend taking a different approach.
 * 35: Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* 15: Application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+* 15: Application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what most lines are doing.
 * 10: Application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 * 5: Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 * 0: There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
 
 ### User Interface (40 points)
 
-* 40: The application is pleasant, logical, and easy to use. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
+* 40: The application is pleasant, logical, and easy to use. There are no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
 * 30: The application has many strong pages/interactions, but a few holes in lesser-used functionality.
 * 20: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 * 0: The application is confusing or difficult to use.
@@ -117,19 +118,19 @@ Instructor/developers will select one feature in the project to review for this 
 - 30: Developers attempted to implement feature using technologies not covered in class but it did not result in a delivered feature.
 - 10: Developers did not build any features.
 
-### Testing (50 Points)
+### Testing & Linting (50 Points)
 
-* 50: Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
-* 40: Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of feature testing.
-* 30: Project has sporadic use of tests and multiple levels. The application contains numerous holes in testing and/or many features are untested.
-* 20: Testing in the application is sporadic and does not add confidence that the application would note break during refactoring.
-* 0: There is little or no evidence of testing in this application.
+* 50: Project has a running test suite that exercises the application at multiple levels (feature and unit, client-side and server-side). The test suite covers almost all aspects of the application. A linter has been enforced and passes with no errors.
+* 40: Project has a running test suite that tests multiple levels but fails to cover some features. Most functionality is covered by tests. The application makes some use of feature testing. A linter has been enforced but may contain some errors or warnings.
+* 30: Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested. A linter was enforced but it does not pass in multiple places.
+* 20: Testing in the application is sporadic and does not add confidence that the application would not break during refactoring. A linter was not enforced.
+* 0: There is little or no evidence of testing in this application. A linter was not enforced.
 
 ### Workflow (50 Points)
 
-* 50: The developers effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches.
-* 35: The developers makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review.
-* 15: The developers make large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting issues in the code base. (This is important. These issues should not be able to make it past code review.)
+* 50: The developers effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches. Commit messages are consistent and there are no instances where developers are committing debuggers or commented out code.
+* 35: The developers make a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review. Commit messages may be somewhat inconsistent and at times, the codebase contains debugger code.
+* 15: The developers make large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting or code styling issues in the code base. (This is important. These issues should not be able to make it past code review.)
 * 5: The developers committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0: The application was not checked into version control.
 
