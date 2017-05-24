@@ -13,7 +13,7 @@ The project is due on Wednesday, June 7th.
 * [Ian and Graham's We the People Native](https://github.com/ianlancaster/we-the-people-native)
 * [Jeff, David, Casey, Pete and Kirsten's Turing Fridays](https://github.com/Jeff-Duke/turing-fridays)
 
-### Part 1: Solo
+### Part 1: Solo (30 minutes)
 
 On the whiteboard or with pen and paper, summarize the data that is returned from your BYOB endpoints. While you don't **have** to use your BYOB project as a base, we have found it greatly helps students to have that foundation. You are welcome to create another backend API if there is an application you strongly want to build, but remember that will require setting up new schemas and seeds.
 
@@ -23,7 +23,7 @@ On the whiteboard or with pen and paper, summarize the data that is returned fro
 * Medical Procedures (belong to patient)
 * Readings (belong to procedure)
 
-### Part 2: Solo
+### Part 2: Solo (30 minutes)
 
 Summarize and post your ideas of what kind of applications you could build off of your BYOB (or a new backend you'd like to build). For *each idea* create
 an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project). Summarize the idea in the following format:
@@ -36,39 +36,35 @@ Issue Description:
 
 If a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
 
-### Part 3: Small Groups
+### Part 3: Small Groups (60 minutes)
 
-Then get together in assigned groups of three to:
+Get together in small groups or with a partner:
 
 * Review/discuss each of your ideas
 * Refine them
-* Add comments to the issue
-* Select your two favorites (from the entire group, they could be from the same person)
+* Select 1 or 2 of your favorite ideas
+* Practice a pitch to sell your ideas to the class
 
-### Part 4: Pitch & Merge
+### Part 4: Pitch (30 minutes)
 
-Then we'll get back together and each group of three will come up to pitch their two ideas. Spend less than two minutes on each pitch.
-
-After pitches, we'll merge any ideas that are very similar.
+We'll get back together as a class and each person will pitch their project ideas. Spend less than two minutes on each pitch.
 
 ### Part 5: Voting
 
-Then we'll plot the pitched ideas on the board. Each of you should then pass through and mark the **three** ideas **you most want to exist**.
-
-After all votes are cast, the top three vote getters are selected. If there are any ties, Alex will cast the deciding votes.
+Everyone will write down their top 5 choices of a project to work on. Rank them in order of what you'd most like to work on. Instructors will create teams based on these rankings.
 
 ### Part 6: Teaming
 
-We will team up by interest in projects. Teams can be between 2 - 4 people. If no consensus is made on teams, they will be randomly picked.
+We will team up by interest in projects. Teams will be between 2 - 4 people.
 
-### Part 7: Pick Your API
-With the project and team established, get together with your group to decide who's API you will be utilizing. Feel free to use more than one if it makes sense.
+### Part 7: Pick Your API (20 minutes)
+With the project and team established, get together with your group to decide whose API you will be utilizing, or if you'll be building a new one. Feel free to use more than one if it makes sense.
 
 Remember, you can easily change the datasource for your API. Don't feel like you need to use the current data to fit your project. It's easy to switch out data sources, just be sure to cover the new data with tests.
 
-The requirement is that you use at least one team members API for a GET, POST, PUT and DELETE request through the UI.
+The requirement is that you use a custom-built API for a GET, POST, PUT/PATCH and DELETE requests through the UI.
 
-### Part 8: Wireframing & Design
+### Part 8: Wireframing & Design (60 minutes)
 
 With the project and team established, get together with your group to wireframe
 the key screens / interactions and figure out how you'll implement services.
@@ -81,11 +77,11 @@ of your thinking:
 - Building real-time web applications with WebSockets
 - Building servers to store and share data between users
 
-### Part 9: Workflow
+### Part 9: Workflow (20 minutes)
 
 Pick a team lead to create a repository for each the selected projects. If you have a clever name, now is the time.
 
-### Part 10: Definition of Done
+### Part 10: Definition of Done (20 minutes)
 
 As a team, come up with your own Definition of Done. Have at least 5 criteria for your DoD. Follow your DoD throughout the project!
 
