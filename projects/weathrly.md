@@ -22,7 +22,13 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 * Your application should have a welcome page that greets the user. The welcome page has an input field that allows the user to submit a location (the location should work with both a zip code and city and state).
 
-* Once the desired location is submitted the Application should display the name of the current city, the current condition, the current day, the current temperature, the expected high and expected low for the day, and a summary of what the weather is going to be like that day ("Windy, chance of a few late night showers. Lows overnight in the mid 50s.)
+* Once the desired location is submitted the Application should display
+  * the name of the current city
+  * the current condition
+  * the current day
+  * the current temperature
+  * the expected high and expected low for the day
+  * a summary of what the weather is going to be like that day ("Windy, chance of a few late night showers. Lows overnight in the mid 50s.)
 
 * There should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
 
@@ -52,8 +58,6 @@ In this project you will be getting your first real interactions with ReactJS, a
 * If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
    * For each hour it should display an image that reflects the weather
    * For each hour it should display the projected temperature and the hour
-
-* Developers make use of advance testing techniques (Mocking, Stubbing, and Sinon)
 
 * The application is fully accessible.
    * The application can be used without a mouse
@@ -139,7 +143,7 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 ## Code Sanitation
 
-The output from a code sanitizer (either JSHint or ESLint) shows…
+The output from a code sanitizer ESLint shows…
 
 4 - Zero complaints
 
