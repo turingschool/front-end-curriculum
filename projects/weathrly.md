@@ -44,6 +44,7 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 ## Phase four
 
+* Add autocomplete functionality to your search input
 * import your completeMe into your Weathrly project. Populate it with the supplied list of city/states and zip codes. When a user starts typing in a city/state or zip code display a list of possible suggestions using your completeMe's suggest function.
 
 ## Extensions
