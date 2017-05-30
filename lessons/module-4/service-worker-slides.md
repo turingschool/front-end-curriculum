@@ -19,21 +19,19 @@ module: 2
 
 <section>
   <section>
-  <h3>
-    What is a Service Worker?
-  </h3>
+    <h3>What is a Service Worker?</h3>
   </section>
   <section>
-  <p>a new API that allows you to run a script in <i>background</i> of your application and facilitates creating <br /><i>Progressive Web Apps</i></p>
+    <p>a new API that allows you to run a script in <i>background</i> of your application and facilitates creating <br /><i>Progressive Web Apps</i></p>
   </section>
 </section>
 
 <section>
   <section>
-  <h3>What is a Progressive Web App?</h3>
+    <h3>What is a Progressive Web App?</h3>
   </section>
   <section>
-  <p>a web application intended to look, feel and behave like a native application</p>
+    <p>a web application intended to look, feel and behave like a native application</p>
   </section>
   <section>
 
