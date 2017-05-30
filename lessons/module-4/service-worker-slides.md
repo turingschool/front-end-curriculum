@@ -88,7 +88,9 @@ module: 2
   <h4>Let's Practice</h4>
   <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>
   <p><pre><code>`npm install simplehttpserver -g`</code></pre></p>
-  <p><pre><code>`cd public && simplehttpserver`</code></pre></p>
+  <p><pre><code>`cd public`</code></pre></p>
+  <p><pre><code>`simplehttpserver`</code></pre></p>
+  <p><pre><code>`http://localhost:8000`</code></pre></p>
 </section>
 
 <section>
