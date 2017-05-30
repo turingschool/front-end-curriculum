@@ -39,7 +39,7 @@ module: 2
 
   <p><i>Take a look at the apps on your phone - think about how you use them and how they behave.</i></p>
 
-  <p><i>How are they similar to web apps? How are they different?</i></p>
+  <p><i>How are they similar to web apps? How are they different?  (10-15 mins)</i></p>
   </section>
 </section>
 
