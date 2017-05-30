@@ -1,0 +1,369 @@
+---
+title: Introduction to Service Workers
+layout: presentation
+tags: css, sass
+module: 2
+---
+
+<section>
+  <h2>Intro to Service Workers</h2>
+</section>
+
+<section>
+  <h3>Goals:</h3>
+  <ol>
+    <li>Understand when and why to use service workers</li>
+    <li>Be able to implement service workers for making an application available offline</li>
+  </ol>
+</section>
+
+<section>
+  <h3>
+    What are Service Workers
+  </h3>
+  <ul>
+    <li>new API that facilitates creating <i>Progressive Web Apps</i></li>
+  </ul>
+</section>
+
+<section>
+  <h3>What is a Progressive Web App?</h3>
+  <p>a web application intended to look, feel and behave like a native application</p>
+  <p>take a look at the apps on your phone - think about how you use them and how they behave. how are they similar to web apps? how are they different?</p>
+</section>
+
+<section>
+  <h3>Old School Sass</h3>
+  <code>
+    <pre>
+      !primary-color= hotpink
+
+      .my-css-class
+          color= !primary-color
+          width= 100%
+          overflow= hidden
+    </pre>
+  </code>
+</section>
+
+<section>
+  This was weird.
+</section>
+
+<section>
+  <h3>SCSS: Sassy CSS</h3>
+  <p>Seriously.</p>
+</section>
+
+<section>
+  <h3>Modern SCSS</h3>
+  <code>
+    <pre>
+      $primary-color: hotpink;
+
+      .my-element {
+          color: $primary-color;
+          width: 100%;
+          overflow: hidden;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <p>You can still use Sass if you want to.</p>
+</section>
+
+<section>
+  <p>Why use a CSS preprocessor?</p>
+  <ul>
+    <li>Developers are lazy.</li>
+    <li>DRY Code</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Cool New Tricks</h3>
+  <ul>
+    <li>Variables</li>
+    <li>Nesting</li>
+    <li>Math</li>
+    <li>Color Functions</li>
+    <li>OTHER Functions (like <code>for loops</code>!)</li>
+    <li>MixIns</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Variables</h2>
+  <code>
+    <pre>
+      $ridiculousPink: #e91d63;
+
+      body {
+        background-color: $ridiculousPink;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <code>
+    <pre>
+      $frilly-font: "Fantasy", cursive;
+      $main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
+      $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
+
+      .main-title { font-family: $frilly-font; }
+      .main-content {
+        font-family: $main-font;
+        button {
+          transition: $button-slide-transition;
+        }
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <strong>ProTip:</strong> Consolodate variables into one file.
+</section>
+
+<section>
+  <pre>variables.scss</pre>
+  <code>
+    <pre>
+      // Colors
+      $favorite-text-color: chartreuse;
+      $gray-link: #aaa;
+
+      // Fonts
+      $frilly-font: "Fantasy", cursive;
+      $main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
+
+      // Transitions
+      $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
+    </pre>
+  </code>
+
+  <pre>home-page.scss</pre>
+  <code>
+    <pre>
+      @import "variables";
+
+      body {
+        color: $favorite-text-color;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <h3>Your Turn</h3>
+  Turn this CSS into SCSS using variables.
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="Lkaqzo" data-default-tab="html,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/Lkaqzo/">Lkaqzo</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>A quick note on Sass variable naming conventions.</h3>
+</section>
+
+<section>
+  <h3>Nesting</h3>
+  <p>
+    Nesting allows you to structure your CSS similarly to how the associated HTML is structured.
+  </p>
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="QEPLXQ" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/QEPLXQ/">Nesting Example</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>IMPORTANT</h3>
+  <p>
+    Nesting can result in VERY specific CSS. </br>
+    Don't go overboard.
+  </p>
+</section>
+
+<section>
+  <h3>Nesting & Psuedo Selectors</h3>
+  <p>A good practice for nesting is when you have a psuedo selector like the following: <pre>:hover</pre></p>
+  <code>
+    <pre>
+      a {
+        &:hover { color: pink; }
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <h3>Your Turn</h3>
+  <p>Write SCSS for this HTML using nesting & variables to accomplish the following criteria:
+    <ol>
+      <li>Define all styles as variables.</li>
+      <li>Link text font family should be Arial, Tahoma, or sans-serif.</li>
+      <li>On hover, make the link text red, and the button text white.</li>
+      <li>On hover, make the button have a box shadow of your choosing.</li>
+    </ol>
+
+    <p data-height="265" data-theme-id="0" data-slug-hash="ZOPkzb" data-default-tab="html,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/ZOPkzb/">Nested SCSS</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+    <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+</section>
+
+<section>
+  <h3>Color Functions</h3>
+</section>
+
+<section>
+  <h3>Color Functions</h3>
+  <p>Lets you adjust color values with minimal headache.</p>
+  <ul>
+    <li>complement(color)</li>
+    <li>mix(color, %)</li>
+    <li>lighten/darken(color, %)</li>
+    <li>saturate/desaturate(color, %)</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Quick CSS Color Review</h3>
+</section>
+
+<section>
+  <h3>RGBA</h3>
+  <code>rgba(0-255, 0-255, 0-255, 0-1)</code> <br>
+  or <br>
+  <code>rgba(0-100%, 0-100%, 0-100%, 0-1 )</code>
+</section>
+
+<section>
+  <h3>Hexadecimal</h3>
+  <code>#rrggbb</code> or <code>#rgb</code>
+  <p>ProTip: <code>#f00</code> = <code>#ff0000</code>. Simply duplicate each character.</p>
+  <p>(FF is 255 if converted from base 16 (Hexadecimal) to base 10 (Decimal).)</p>
+</section>
+
+<section>
+  <h3>HSLA</h3>
+  <code>hsla(0-360, 0-100%, 0-100%, 0-1)</code>
+</section>
+
+<section>
+  <h3>Let's see some functions</h3>
+</section>
+
+<section>
+  <h3>complement(color)</h3>
+  <p>Returns the color that is 180 degrees from the given argument on the <a href="https://uwdigipub.files.wordpress.com/2014/11/hsl-color-wheel-pagespeed-ce-if6-exzipy.png">RGBA color wheel</a>.</p>
+  <code>
+    <pre>
+      $color: hsla(240, 100%, 50%, 1);
+      complement(hsla(240, 100%, 50%, 1)); => hsla(60, 100%, 50%, 1);
+
+      .complement-background {
+        background-color: complement($color)
+      }
+    </pre>
+  </code>
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="dXALPk" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/dXALPk/">Color Functions</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>mix(color1, color2, %)</h3>
+  <p>
+    Mixes two given colors based on the percentage.
+  </p>
+  <p>
+    It's like a spectrum. <br/>
+    100% means completely on the color1 side, 0% is completely towards color2.
+  </p>
+  <code>
+    <pre>
+      $red: hsla(0, 100%, 50%, 1);
+      $blue: hsla(240, 100%, 50%, 1);
+
+      p {
+        background-color: mix($red, $blue, 80%);
+      }
+    </pre>
+  </code>
+
+    <p data-height="265" data-theme-id="0" data-slug-hash="dXALPk" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/dXALPk/">Color Functions</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+</section>
+
+<section>
+  <h3>Your Turn</h3>
+  <p>
+    Experiment with using the <code>mix()</code> and <code>complement()</code> functions in the CodePen from the previous slide.
+  </p>
+
+  <p>
+    Then implement the <code>lighten()</code>, <code>darken()</code>, <code>saturate()</code>, and <code>desaturate()</code> functions. <br/>
+    Check out the <a href="http://sass-lang.com/documentation/Sass/Script/Functions.htm">documentation</a>.
+  </p>
+</section>
+
+<section>
+  <h3>Math</h3>
+  <p>
+    (insert stink eye here)
+  </p>
+  <p>
+    Sass lets you call math operators on numerical values as if you were using a robust programming language (crazy!!).
+  </p>
+</section>
+
+<section>
+  <h3>Example:</h3>
+  <code>
+    <pre>
+      // SCSS
+      $content-width: 900px;
+
+      .innerContent {
+        width: $content-width/3
+      }
+    </pre>
+  </code>
+
+  <code>
+    <pre>
+      // CSS
+      .innerContent{
+        width: 300px;
+      }
+    </pre>
+  </code>
+</section>
+
+<section>
+  <p>
+    This is helpful for organizing what you are trying to calculate on a page.
+  </p>
+
+  <p data-height="265" data-theme-id="0" data-slug-hash="yJABKv" data-default-tab="css,result" data-user="bmartenson" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/bmartenson/pen/yJABKv/">Math Functions</a> by Brenna Martenson (<a href="http://codepen.io/bmartenson">@bmartenson</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+  <h3>Your Turn!</h3>
+  <h5>Random Color Generator</h5>
+  <p>
+    Using the <a href="http://sass-lang.com/documentation/Sass/Script/Functions.html#random-instance_method">random number</a> function, assign a random background color to the div to the CodePen from the previous slide. <br/>
+    Be sure to use variables.
+  </p>
+  <p>Hint: Remember that RGB values are created by setting 3 values of numbers between 0-255.</p>
+</section>
+
+<section>
+  <h3>The End.</h3>
+  <a href="https://gist.github.com/martensonbj/d9c4ac31959e1b5a9611a9986d8f8c67">Gist of Verbose Lesson Plan</a>
+  <img src="http://i0.kym-cdn.com/photos/images/newsfeed/000/085/444/1282786204310.jpg?1318992465" alt="puking-rainbows" />
+</section>
