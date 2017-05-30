@@ -76,8 +76,8 @@ module: 2
     <ul>
       <li>service worker can 'go to sleep' at any time</li>
       <li>is only woken up and utilized during events</li>
-      <li><img src="https://mdn.mozillademos.org/files/12632/sw-events.png" /></li>
     </ul>
+    <img src="https://mdn.mozillademos.org/files/12632/sw-events.png" />
   </section>
   <section>
     <p><b>Read:</b> <a href="https://aarontgrogg.com/blog/2015/07/20/the-difference-between-service-workers-web-workers-and-websockets/">What's the Difference Between Service Workers, Web Workers, and Web Sockets?</a></p>
