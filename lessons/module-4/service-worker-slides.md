@@ -89,7 +89,8 @@ module: 2
 <section>
   <h4>Let's Practice</h4>
   <p><a href="https://github.com/turingschool-examples/offline-news" />Clone this repo</a></p>
-  <pre><code>`npm install simplehttpserver -g`</code></pre>
+  <p><pre><code>`npm install simplehttpserver -g`</code></pre></p>
+  <p><pre><code>`cd public && simplehttpserver`</code></pre></p>
 </section>
 
 <section>
