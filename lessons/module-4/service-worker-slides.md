@@ -24,10 +24,7 @@ module: 2
   </h3>
   </section>
   <section>
-  <ul>
-    <li>new API allows you to run a script in <i>background</i> of your application</li>
-    <li>facilitates creating <i>Progressive Web Apps</i></li>
-  </ul>
+  <p>a new API that allows you to run a script in <i>background</i> of your application and facilitates creating <i>Progressive Web Apps</i></p>
   </section>
 </section>
 
