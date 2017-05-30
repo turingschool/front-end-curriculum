@@ -80,6 +80,14 @@ module: 2
       <li>is only woken up and utilized during events (network requests and messages)</li>
     </ul>
   </section>
+  <section>
+    <p><b>Read:</b> <a href="https://aarontgrogg.com/blog/2015/07/20/the-difference-between-service-workers-web-workers-and-websockets/">What's the Difference Between Service Workers, Web Workers, and Web Sockets?</a></p>
+  </section>
+</section>
+
+<section>
+  <h4>Let's Practice</h4>
+  <p><a href="" />Clone this repo</a></p>
 </section>
 
 <section>
