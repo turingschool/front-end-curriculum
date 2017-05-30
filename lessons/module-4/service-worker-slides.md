@@ -59,10 +59,10 @@ module: 2
   <section>
     <h4><b>Runs in the background</b></h4>
     <ul>
-      <li>service workers are a type of web worker</li>
       <li>web workers are single JavaScript files, run on own thread</li>
       <li>don't block execution of any other client-side JavaScript</li>
-      <li>handle time-intensive operations without locking up the UI</li>
+      <li>handle time-intensive operations without locking UI</li>
+      <li>service workers are a type of web worker</li>
       <li>service workers allow background processing that specifically relates to handling network requests</li>
     </ul>
   </section>
