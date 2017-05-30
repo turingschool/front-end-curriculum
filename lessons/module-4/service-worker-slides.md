@@ -67,7 +67,7 @@ module: 2
     </ul>
   </section>
   <section>
-    <h4><b>Cannot interact with DOM</b></li>
+    <h4><b>Cannot interact with DOM</b></h4>
     <ul>
       <li>can't access the DOM tree to do any manipulations</li>
       <li>must communicate through sending messages back and forth</li>
