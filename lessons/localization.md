@@ -16,9 +16,9 @@ By the end of this lesson, you will:
 ## What is Localization/Internationalization?
 Localization is the process of adapting an existing website to local language and culture. Internationalization describes the patterns, strategies and conventions an application should use in order to facilitate easier localization in the future. While not every app you build will need to be localized, it's important to keep internationalization strategies in mind when building an app that may need to reach wider audiences in the future.
 
-Many people mistakenly believe localization simply refers to rendering the page text in multiple languages. In reality, it's a bit more involved than that. There are many technical and design decisions that are affected by localization, which we'll learn more about later in this lesson.
+Many people mistakenly believe localization simply refers to rendering the page text in multiple languages. In reality, it's a bit more involved than that. There are many technical and design decisions that are affected by localization, which we'll learn more about later in this lesson. You can see how the standards organization [W3C](https://www.w3.org/International/questions/qa-i18n) defines internationalization and localization.
 
-You'll often hear of these terms described with the following acronyms: l10n and i18n. (The first letter of the word, how many letters exist before the last letter of the word, and the last letter of the word. Really not any easier to say and just more confusing to see.) These acronyms are often used in the naming of libraries that help us achieve internationalization and localization goals.
+You'll often hear of these terms described with the following acronyms: **l10n** and **i18n**. (The first letter of the word, how many letters exist before the last letter of the word, and the last letter of the word. The acronyms are even harder to say and confusing to see. Sigh.) These acronyms are often used in the naming of libraries that help us achieve internationalization and localization goals.
 
 ## Detecting a User's Locale
 If we want to localize our application, the first thing we need to do is detect what locale your user prefers. A locale denotes a bit more than just language -- it also signifies cultural preferences in how the language should be expressed.
@@ -26,7 +26,7 @@ If we want to localize our application, the first thing we need to do is detect 
 Locales are formatted as `language[-region]`. So for example, `en` represents the English language, while `en-US` represents English in the United States, and `en-GB` represents English in Great Britain. Differences you'd notice per region in this example might be that words like 'favorite' would be spelled 'favourite' if you are in the `en-GB` locale.
 
 ### Client-Side Detection
-We can detect the user's language preference on the client-side, though we have to be aware of differences among browsers. For example:
+We could detect the user's language preference on the client-side, though we have to be aware of differences among browsers. For example:
 
 ```javascript
 // IE
@@ -41,7 +41,7 @@ else if (navigator.language) {
 
 If you log `navigator.language` in your browser console, you'll likely get a string back that says 'en-US'. This locale value is what we'd like to reference when trying to determine what language to display our application in.
 
-Besides having to account for differences among browsers, detecting the locale on the client-side only gives us a single locale. In reality, most browsers support ranking multiple languages in your preference settings:
+Besides having to account for differences among browsers, detecting the locale on the client-side only gives us a single locale. In reality, most browsers support ranking multiple languages in your preference settings. In Chrome, you can see this by going into `Settings > Show Advanced Settings... > Language and Input Settings...`:
 
 ![chrome language preferences][chrome-language-preferences]
 
@@ -53,7 +53,7 @@ We might need this ranked list if a user's top locale isn't supported by our app
 On the server-side, we can gain access to an entire array of acceptable locales that the user has set in their browser preferences. This will allow us to fall back to a secondary locale if we don't support their first choice. (e.g. if their top locale is Chinese, and their second is Spanish, and our app has not been translated to Chinese, we could still serve up a Spanish version)
 
 #### Practice: On Your Own
-Let's take a look at how to do this. Make a new directory and `npm init` a new project. Install express and set up a server file that will have the app listen on port 3000. Add a single route:
+Let's take a look at how to do this. Make a new directory and `npm init --yes` a new project. Install express and set up a server file that will have the app listen on port 3000. Add a single route:
 
 ```javascript
 app.get('/', function(req, res) {
@@ -66,7 +66,7 @@ If we now try to hit the root of our application, we'll see a string displayed t
 
 `Locales: es,en-US;q=0.8,en;q=0.6,la;q=0.4`
 
-The `;q=0.8` parameter simply denotes the quality/level of acceptance for this particular locale. (e.g. in this string, a user would prefer an en-US over la).
+The `;q=0.8` parameter simply denotes the quality/level of acceptance for this particular locale. (e.g. in this string, a user would prefer an `en-US` over `la`). In this case, `es` gets a default quality value of `1.0`. You can check out the [ISO standard](https://en.wikipedia.org/wiki/ISO_639-1) for language codes.
 
 This `req.header('Accept-Language')` value is given to us as a request header (similar to when you've specified Authorization headers or Accept-Content headers) automatically by the browser. If we look at our request in the browser dev tools, we can see this information has been passed through for us by the browser:
 
@@ -82,10 +82,10 @@ Remember we said internationalization was the process of configuring our applica
 3. Creating translation files our application can pull from to display the right text
 
 ### Leverage an i18n Library
-An i18n library will help us accomplish some of these steps, and abstract away some of the more difficult logic. In this example we'll use [i18n-node](https://github.com/mashpie/i18n-node). 
+An i18n library will help us accomplish some of these steps, and abstract away some of the more difficult logic. In this example we'll use [i18n-node](https://github.com/mashpie/i18n-node).
 
 #### Practice: On Your Own
-Install the `i18n` library and create a new file at the root of your application called `i18n.js`. This will serve as middleware for our application to assist us in the localization process. 
+Install the `i18n` library and create a new file at the root of your application called `i18n.js`. This will serve as middleware for our application to assist us in the localization process.
 
 This file should require in the `i18n` module and set the following [configurations](https://github.com/mashpie/i18n-node#list-of-all-configuration-options):
 
@@ -134,7 +134,7 @@ Remember in our i18n middleware, we specified a locales directory in the configu
 Add a title and description key to each JSON file, and set their values equal to whatever you'd like -- just put them in the correct language!
 
 ### Serving up the Localization
-Now that our app is configured to support two different locales, we need to actually serve up different versions of our files based on what locale a user is in. 
+Now that our app is configured to support two different locales, we need to actually serve up different versions of our files based on what locale a user is in.
 
 This is a great use case for using server-side templates. Because we're going to be dynamically generating multiple parts of our content, and because we're already detecting locale on the server-side, it makes sense to use a template engine such as [EJS](http://ejs.co/).
 
@@ -149,7 +149,7 @@ Next, create a `views` directory and an `index.ejs` template that will display o
 ```html
 <html lang="<%= locale %>">
   <head>
-    <title><%= translate ('title') %></title>
+    <title><%= translate('title') %></title>
   </head>
   <body>
     <h1><%= translate('title') %></h1>
@@ -190,7 +190,7 @@ If you don't have a fully complete localization for a particular language, you m
 Avoid using images that include text. Sometimes logos are an exception, but prefer using CSS to position text over images if required.
 
 ### Dates, Numbers and Currencies
-Besides translating our text strings, we also need to keep other data points in mind such as dates, numbers and currencies. These are often formatted differently based on locale, and we want to make sure they read in an appropriate manner. 
+Besides translating our text strings, we also need to keep other data points in mind such as dates, numbers, and currencies. These are often formatted differently based on locale, and we want to make sure they read in an appropriate manner.
 
 ### Resources
 * [Detecting a User's Locale](http://www.mattzabriskie.com/blog/detecting-locale)

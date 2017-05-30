@@ -4,6 +4,8 @@ tags: React, JavaScript, Webpack, Redux
 module: 3
 ---
 
+DEPRECATED - see Starting Up Redux lesson instead
+
 ### Game Plan
   - Why Redux?
   - Break down Redux concepts

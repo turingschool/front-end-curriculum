@@ -34,10 +34,9 @@ You can use any of the following JavaScript libraries:
 
 - Lights Out
 - Connect Four
-- Black Jack
 - Othello/Reversi
+- Flappy Bird
 - Frogger
-- Qbert
 - Breakout
 - Tron
 - Snake

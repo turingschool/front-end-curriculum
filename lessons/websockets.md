@@ -1,6 +1,6 @@
 ---
 title: Building Real-Time Applications with WebSockets
-length: 90
+length: 120
 tags: json, javascript, websockets, jquery, socket.io, node
 ---
 
@@ -19,16 +19,6 @@ tags: json, javascript, websockets, jquery, socket.io, node
 [org]: https://github.com/turingschool-examples
 [rn]: https://github.com/turingschool-examples/right-now
 
-## Structure
-
-* 5 - Warm up
-* 20 - Lecture
-* 5 - Break
-* 25 - Experiment  #1: Right Now
-* 5 - Break
-* 25 - Experiment #2: Twitter Stream
-* 5 - Wrap Up
-
 ## Warm Up
 
 In your notebook, record your answers to the following questions:
@@ -37,15 +27,48 @@ In your notebook, record your answers to the following questions:
 - Can we name any applications that are _real time_?
 - What's stopping our applications from being real time?
 
-## Lecture
+## Review of HTTP Request/Response Cycle
 
-* Explain WebSockets vs. the HTTP request/response cycle
-  * A WebSocket is a persistent two-way connection between the server and the client
-  * The server can push an event without having to receive a request from the client
-  * The client can send messages to the server without having to wait for a response
-  * The handshake
+At a high level: the client makes a request to a server, a connection is made with the server, the server interprets the request, forms a response, sends the response back to the client, and closes the connection. [Here is a little more nitty-gritty info](http://celineotter.azurewebsites.net/world-wide-web-http-request-response-cycle/) on the details of a typical request-response cycle. Also, [this article](http://blog.catchpoint.com/2010/09/17/anatomyhttp/).
 
-```js
+![HTTP Request-Response Cycle](https://image.slidesharecdn.com/inft132-09303webconcepts-090920164402-phpapp02/95/inft132-093-03-web-concepts-5-728.jpg?cb=1253465082 "HTTP Request-Response Cycle")
+
+[image source](https://www.slideshare.net/mrees/inft132-093-03-web-concepts)
+
+## A Thought Experiment
+
+You are have a brand new job working with a hedge fund, and they need real-time data on stock prices for quick trades. The amount of money that the hedge fund makes is directly related to how good the data of the stock price is, so you want the most up-to-date prices.
+
+Your boss demands for unknown reasons to implement a solution using the traditional _HTTP request/response cycle_ (not sockets).
+
+How would you do this? Sketch out the API you would build to communicate with a stock market server that can tell you the prices in _real time_.
+
+When you're done, think about the downsides of this application. How does the HTTP request/response cycle make this a difficult task to do efficiently? Remember: every request to a server costs money and time.
+
+(**DON'T LOOK BELOW YET** - maybe you'll come up with a cool solution that is actually used.)
+
+## HTTP Versions of "Real Time"
+
+Suppose you want to check the value of some data on a server that changes periodically, but you don't know exactly when it will update. Here are some strategies used today, in the order of decreasing [latency](http://www.webperformancetoday.com/2012/04/02/latency-101-what-is-latency-and-why-is-it-such-a-big-deal/).
+
+* **Polling:** Periodically check for data. For instance, you could send a request to the server for data every two seconds. Why is this a bad idea? Every request to a server costs someone something - if you have access to an API, then you are likely paying for the API per request, and you don't want to send any unnecessary requests if the data isn't actually updating every two second.
+
+* **Long-Polling:** Make a request to the server for data, and hold the connection until there is new data. The benefit is less requests and only when you need them. The disadvantage is that you still have to make a new requests and connections to the server after you receive new data. [Details on downsides of long-polling](https://blog.baasil.io/why-you-shouldnt-use-long-polling-fallbacks-for-websockets-c1fff32a064a).
+
+* **Streaming:** In HTTP version 1.1 (which we still use today), there is an additional header you can add to your request called `Connection: Keep-Alive`. This will open up an indefinite connection between the client and the server, which is close to what we want! It's like long-polling, but the server never signals to the client that the response is complete, thereby leaving the connection open. In the end, you are still using the HTTP protocol to send information. So all of the header information is still sent with each message, which can be kilobytes in size.
+
+[This article](http://websocket.org/quantum.html) has a good explanation of long-polling vs. streaming vs. WebSockets. At the end of the day, anything using the HTTP request/response cycle is always going to be [half-duplex](https://en.wikipedia.org/wiki/Duplex_(telecommunications)), or one-way communication only. Think of a two-way radio where only one person at a time can talk.
+
+## WebSockets!
+
+### Explain WebSockets vs. the HTTP request/response cycle
+
+* A WebSocket is a persistent two-way TCP connection (full-duplex) between the server and the client
+* The server can push an event without having to receive a request from the client
+* The client can send messages to the server without having to wait for a response
+* A handshake initiates the WebSocket connection (really a [TCP connection](http://www.taltech.com/datacollection/articles/a_brief_overview_of_tcp_ip_communications))
+
+```
 GET /chat HTTP/1.1
 Host: server.example.com
 Upgrade: websocket
@@ -56,7 +79,7 @@ Sec-WebSocket-Version: 13
 Origin: http://example.com
 ```
 
-```js
+```
 HTTP/1.1 101 Switching Protocols
 Upgrade: websocket
 Connection: Upgrade
@@ -69,7 +92,7 @@ Sec-WebSocket-Protocol: chat
   * Real-time analytics
   * Document collaboration
   * Streaming
-* WebSockets work best when there is an event-driven server on the backend
+* WebSockets work best when there is an **event-driven** server on the backend
   * Ruby with [EventMachine][]
   * [Node.js][]
 * [Socket.io][] and [Faye][] will fallback to other methods if it can't make a WebSocket connection
@@ -85,9 +108,9 @@ Sec-WebSocket-Protocol: chat
 
 ### Getting Started
 
-[This repository][rn] contains a simple little Express app that servers a static `index.html` page. It also has [Socket.io][] hooked up by default—despite the fact that we're not using it at this moment.
+[This repository][rn] contains a simple little Express app that servers a static `index.html` page. It also has [Socket.io][] hooked up by default — despite the fact that we're not using it at this moment.
 
-You can fire up the server with `npm start`.
+Run `npm install`. Then you can fire up the server with `npm start`.
 
 Let's start with a simple "hello world" implementation.
 
@@ -107,6 +130,8 @@ When a connection is made to via WebSocket, you're server will log it to the con
 var socket = io();
 ```
 
+This function initiates the handshake and makes the connection. The default URL for the socket connection is `/`, which is what we want, so we don't need to pass anything into `io()`.
+
 You should see the following in your terminal after you refresh the page:
 
 ```shell
@@ -119,11 +144,11 @@ We can also let the client celebrate our new connection.
 ```js
 // public/application.js
 socket.on('connect', function () {
-  console.log('You have connected!');
+  console.log('You have connected!'); // This will log to the browser's console, not the terminal
 });
 ```
 
-One thing that you've probably picked up on is that we have an `io` object on the server—as well as the client-side of our application.
+There are [other built-in events](https://socket.io/docs/client-api/#event-connect) you can listen for other than `'connect'`. One thing that you've probably picked up on is that we have an `io` object on the server as well as the client-side of our application.
 
 So, let's send a message over the wire when a user connects.
 
@@ -135,9 +160,10 @@ io.on('connection', function (socket) {
 });
 ```
 
-Like everything with WebSockets, this is a two-part affair. The server is now emitting an event on the `message` channel. (This is arbitrary—like `sandwich_time` was when we discussed the using Redis for PubSub on the server-side.) We now need to do something when the client receives that message.
+Like everything with WebSockets, this is a two-part affair. The server is now emitting a `message` event. We now need to do something when the client receives that event.
 
 ```js
+// public/application.js
 socket.on('message', function (message) {
   console.log('Something came along on the "message" channel:', message);
 });
@@ -173,7 +199,7 @@ WebSockets are a two-way street. We can send something back to the server over `
 // public/application.js
 socket.on('connect', function () {
   console.log('You have connected!');
-  socket.send('message', {
+  socket.send({
     username: 'yournamehere',
     text: 'I did the thing.'
   });
@@ -190,8 +216,8 @@ io.on('connection', function (socket) {
     socket.emit('message', {user: 'turingbot', text: 'I am a banana.'});
   }, 1000);
 
-  socket.on('message', function (channel, message) {
-    console.log(channel + ':', message);
+  socket.on('message', function (message) {
+    console.log(message);
   });
 
   socket.on('disconnect', function () {
@@ -200,18 +226,22 @@ io.on('connection', function (socket) {
 });
 ```
 
-**Important Note**: We're doing it like this to demonstrate how you would push information from the client to the server using WebSockets. But, keep in mind, that the client has always been able to send requests to the server. It's totally okay to use AJAX in this situation.
+**Important Note**: We're doing it like this to demonstrate how you would push information from the client to the server using WebSockets. But, keep in mind, that the client has always been able to send requests to the server. It's totally okay to use AJAX in this situation without WebSockets.
+
+### Check Back on WebSockets
+
+Everyone get their pens and paper out again! Now that you've had some experience working with WebSockets, in your notebook, draw out a diagram of the HTTP upgrade request and then the WebSocket connection.
 
 ### Your Turn
 
-* Write the functionality on the client that sends something over the `mission` channel.
-* Write the functionality on the server that listens on the `mission` channel and logs it to the console.
+* Write the functionality on the client that sends something over the `mission` event.
+* Write the functionality on the server that listens for the `mission` event and logs it to the console.
 
 Here is a little bit of code to point you in the right direction.
 
 ```js
 io.on('connection', function(socket) {
-  socket.on('message', function (channel, message) {
+  socket.on('eventName', function (message) {
     console.log(message);
   });
 });
@@ -232,7 +262,7 @@ io.sockets.emit('message', {user: 'turingbot', text: 'You can do the thing.'});
 socket.broadcast.emit('message', {user: 'turingbot', text: 'You can do the thing.'});
 ```
 
-You can also start to break your messaging out in additional channels. Here's an example.
+You can also start to break your messaging out into different event names. Here's an example.
 
 ```js
 socket.on('new message', addMessageToPage);
@@ -254,7 +284,7 @@ There are also some helpful methods for seeing how many clients are currently co
 
 ## Pair Project
 
-We're going to build a small chat room (like [this one][ch]) using Socket.io and jQuery.
+You're going to build a small chat room (like [this one][ch]) using Socket.io and jQuery.
 Users should be able to fill out a little form, which will send their message over the
 WebSocket to the server, which will broadcast it out to all of the connected clients.
 

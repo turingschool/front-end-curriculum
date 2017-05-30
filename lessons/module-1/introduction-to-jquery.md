@@ -17,9 +17,11 @@ To use the jQuery library, you'll need to include the following lines in your HT
 
 Let's talk about what's going on here:
 
-In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.1.1`.
+In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.1.1` (as of the writing of this lesson).   
 
-In the second line, we're including a link to a local set of jQuery files that we've downloaded to our machine and included in the directory for our project. This line isn't strictly required for us to use jQuery, but rather is a fallback to make sure that we can still access the library in the event that we are unable to access the CDN for some reason (better safe than sorry, right?). You can [download a copy of jQuery here.](http://jquery.com/download/) **Note: be sure to download the same version that you're referencing in the Google CDN link.**
+In the second line, we're including a link to a local set of jQuery files that we've downloaded to our machine and included in the directory for our project. This line isn't strictly required for us to use jQuery, but rather is a fallback to make sure that we can still access the library in the event that we are unable to access the CDN for some reason (better safe than sorry, right?). You can [download a copy of jQuery here.](http://jquery.com/download/) **Note: be sure to download the same version that you're referencing in the Google CDN link.**  
+
+Note: If you look at the file extension you'll see the file says `jquery.min.js` - that `min` extensions indicates that its a `minified` version of the jQuery library. jQuery is a large library, and in order to maximize performance (especially on larger code bases), reducing how much space your code takes up is incredibly important. A minified file indicates that it has been abbreviated using one of many different encryption techniques. You can read more about it [in this Wikipedia article](https://en.wikipedia.org/wiki/Minification_(programming) (sorry for the Wiki reference...it actually does a pretty good job of digging into the details) if you are interested in the what and why of minification.   
 
 ## First Lines of jQuery
 
@@ -37,7 +39,7 @@ Think about how you would use `innerText` to change the content in an HTML page 
 document.querySelector('h1').innerText = 'I AM A DINOSAUR.'
 ```
 
-Now, take a look at all you need to do that with jQuery:
+Now, take a look at the same line of code in jQuery:
 
 ```js
 $('h1').text('I AM A DINOSAUR.');
@@ -53,7 +55,7 @@ Play around with the following example using jQuery.
 
 ## Responding to User Events
 
-jQuery and, of course, JavaScript are used to change and manipulate web pages. Just like JavaScript, jQuery had the ability to add event listeners based on user interaction.
+jQuery and, of course, JavaScript are used to change and manipulate web pages. Just like JavaScript, jQuery has the ability to add event listeners based on user interaction.
 
 This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what the user sees.
 
@@ -124,7 +126,7 @@ Let's consider the following example:
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="GqoYJQ" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/GqoYJQ/">Is this two?</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
-Hmm—that's curious. It doesn't seem to work. It's actually a good reason. No matter what, input fields always hold **strings** of text. So, we're actually getting the string `"2"` from the input element and not the number `2`. It makes sense that those things are not strictly equal. What we need to do is turn that string into a number before we compare it.
+Hmm—that's curious. It doesn't seem to work. You may have encountered this in a previous project. No matter what, input fields always hold **strings** of text. So, we're actually getting the string `"2"` from the input element and not the integer `2`. It makes sense that those things are not strictly equal. What we need to do is turn that string into a number before we compare it.
 
 This is pretty common, so JavaScript gives us a function for doing it called `parseInt()`.
 
@@ -161,9 +163,9 @@ Change some of the properties of the `.box` and `.clicked` selectors and observe
 
 ## Knowing Which Element We Clicked - THIS!
 
-Consider a situation where we have three boxes. When that particular box is clicked, we want to toggle a class. How do we know which box was clicked?
+Consider a situation where we have three boxes. When that particular box is clicked, we want to toggle a class on that box only. How do we know which box was clicked?
 
-It turns out that when we add an event listener using jQuery, we get a special little variable called `this`. Lucky for us, `this` is set to the box we clicked on.
+It turns out that when we add an event listener using jQuery, we get a special variable called `this`. Although the concept of the JavaScript `this` can get quite complicated, for our purposes the variable `this` is assigned to the context within which it is called.
 
 Let's take a look at the example below:
 
@@ -171,17 +173,19 @@ Let's take a look at the example below:
 
 #### Try It
 
-Can you create a class that adds a border and then toggle that class on the specific box that is hovered over? (For your own sanity, you probably want to remove the alert!)
+Can you create a class that adds a border and then toggle that class on the specific box that is hovered over? (For your own sanity, you probably want to remove the alert!)  
 
 ## Traversing the DOM
 
 A little while ago, we wanted to figure out how to tell which element we clicked. But, what if we wanted to find an element in relation to the element we clicked? jQuery lets us navigate from one element to another. When the browser parses our HTML, it creates a big tree-like structure. jQuery lets us hop from branch to branch.
 
-We want each box to have a button inside of it. When the user clicks the button, it should rotate the entire box. (We're rotating the box with a CSS class called `clicked` because we're super original.) Let's look at some code.
+Let's work through a box example again.  
+
+We want each box to have a button inside of it. When the user clicks the button, it should rotate the entire box. (We're rotating the box with a CSS class called `clicked`.)  
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="vKGYzo" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/vKGYzo/">Rotating Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
-This code _does not_ work the way we'd like. What we need to do is when the user clicks on a button, go up and find the box that it lives in (the parents element) and add the class to _that_ element. We can use traversal like this:
+This code _does not_ work the way we'd like - right now when we click on the button, the button itself is rotating instead of the entire box. What we need to do is when the user clicks on a button, go up and find the box that it lives in (the parent element) and add the class to _that_ element. We can use traversal like this:
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="YWqzJo" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/YWqzJo/">Rotating Boxes</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
@@ -195,7 +199,7 @@ Let's take a closer look at how we can use the jQuery library!
 
 ### Basic Selectors
 
-Out of the box, jQuery supports the selector syntax from CSS to find elements on the page just like `document.querySelector` and `document.querySelectorAll`. So, you've already come pre-equipped with a bunch of knowledge for finding elements.
+Out of the box, jQuery supports the selector syntax from CSS to find elements on the page just like `document.querySelector` and `document.querySelectorAll` from vanilla JS. So, you've already come pre-equipped with a bunch of knowledge for finding elements.
 
 That said, let's review some of the different ways we can find an element on page:
 
@@ -243,7 +247,7 @@ It's not uncommon that you might want to go look for all of the "checked" elemen
 - Can you find all of the checked elements?
 - What about all of the checked checkboxes?
 
-Use Chrome Developer Tools to select the form fields. When properly selected you should see an array of selected elements. You should see sections of the page highlighted when you hover over the elements in the array.
+Use Chrome Developer Tools to select the form fields above. When properly selected you should see an array of selected elements. You should see sections of the page highlighted when you hover over the elements in the array.
 
 ### Laboratory
 
@@ -260,6 +264,8 @@ For this exercise, we're going to play with [a table of the Presidents of the Un
 Let's try out a few things, just to get our hands dirty. We'll use the console in the Chrome developer tools to validate our work.
 
 * Select each `tr` element.
+* Select the first `tr` element only.
+* Select the third `tr` element only.
 * Select all of the elements with the class of `name`.
 * Select all of the elements with either the class of `name` or `term`.
 * Select all of the checked—umm—checkboxes. (You'll probably want to check some checkboxes first.)

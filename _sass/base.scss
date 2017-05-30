@@ -16,6 +16,10 @@ p {
   line-height: 1.6em;
 }
 
+blockquote p {
+  font-size: 1em;
+}
+
 li {
   line-height: 2em;
 }
@@ -96,6 +100,36 @@ header {
     & > small {
       display: block;
       font-weight: 300;
+    }
+  }
+}
+
+.responsive-iframe-container {
+  .tablet {
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+
+ 
+
+    iframe {
+      height: 400px;
+      @media (max-width: $phone-width) {
+        width: 250px;
+      }
+    }
+  }
+
+  .desktop {
+    display: block;
+
+    iframe {
+      width: 800px; 
+      height: 400px;
+    }
+
+    @media (max-width: $tablet-width) {
+      display: none;
     }
   }
 }

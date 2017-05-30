@@ -16,6 +16,8 @@ By the end of this lesson, you will know/be able to:
 
 [Read this Gold Standard Level blog post by Joanne Daudier](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)
 
+[Left Pad Debacle](https://www.theregister.co.uk/2016/03/23/npm_left_pad_chaos/)
+
 Note: don't code along, that will come later. 
 
 Note: as you read, prepare answers to the following discussion points

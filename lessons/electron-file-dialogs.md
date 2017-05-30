@@ -171,7 +171,7 @@ const openFile = function () {
 };
 ```
 
-We'll call this function immediately when the application is ready for now. If the user cancels the file open dialog, `files` will be `undefined`. If that happens, we're return early so that we don't get any errors down the line.
+We'll call this function immediately when the application is ready for now. If the user cancels the file open dialog, `files` will be `undefined`. If that happens, we're returning early so that we don't get any errors down the line.
 
 ```js
 app.on('ready', function () {
@@ -189,7 +189,7 @@ app.on('ready', function () {
 });
 ```
 
-Right now, we just log the name of the files selected to the console when we open a file. Try it out. You should notice the following that it's logging an array to the console. In theory, we're only going to want to open one file at a time in our application. So, we'll just grab the first file from the array.
+Right now, we just log the name of the files selected to the console when we open a file. Try it out. You should notice that it's logging an _array_ to the console. In theory, we're only going to want to open one file at a time in our application. So, we'll just grab the first file from the array.
 
 ```js
 const openFile = function () {
@@ -367,7 +367,7 @@ In our application, we have three buttons in the top bar:
 2. Copy HTML
 3. Save HTML
 
-It's true that we already the ability to open a file from within our application—but only from the main process. Generally speaking, renderer processes should _not_ access native OS APIs like spawning file dialogs and whatnot.
+It's true that we already have the ability to open a file from within our application—but only from the main process. Generally speaking, renderer processes should _not_ access native OS APIs like spawning file dialogs and whatnot.
 
 So, we're out of luck, right? Not quite. It's true that we can't pull up a file dialog from a render process. But, we _can_ ask the main process to open one up on our behalf.
 

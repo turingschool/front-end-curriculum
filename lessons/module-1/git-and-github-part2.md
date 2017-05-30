@@ -51,15 +51,36 @@ The command to add a remote is, surprise, `git remote`. To add the remote, the g
 
 The name of the remote, by convention, is typically `origin`. If we go to the repository on GitHub, then the address is also given to us. For instance, my repository address is `git@github.com:robbiejaeger/github-intro.git`.
 
-So all together, enter the command `git remote add origin git@github.com:robbiejaeger/github-intro.git` into the terminal.
+So all together, enter the command `git remote add origin git@github.com:robbiejaeger/github-intro.git` into the terminal.  
 
 The local and remote repositories are now linked!
 
-### Add basic file structure
+### Push up initial files (`git push`)
+Finally, we need to push up our initial code from our local repository (aka your computer), to the remote repository (aka GitHub.com).  
 
-For this first part, let's work off of the master branch. Add an `index.html` and `index.js` file to our current directory. In the files, put the code:
+First, let's add a couple boilerplate files for an initial setup.
+
+`touch index.html index.js`  
+
+Then, in the `index.html` file, type `html` and hit enter to spit out the basic skeleton of our file, and add an appropriate title like "GitHub Introduction". This is enough to push our files on up to the remote repository that we've created.
+
+All together now!  
+
+`git add .`  
+`git commit -m "Initial commit"`
+`git push -u origin master`
+
+The commit message above, `Initial commit` is a very common first commit message, used by developers everywhere when a project is first created. Best practice is to set up your github repository as soon as possible so you can start tracking changes, so this typically happens when you have your very basic file tree ready to start adding code.  
+
+Go back and visit the repository on github.com and refresh the page. If all went well you should see your files.  
+
+### Add some code
+
+For this first part, let's work off of the master branch. In the files we've created, put the code:
 
 ```html
+<!--index.html-->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -77,6 +98,8 @@ For this first part, let's work off of the master branch. Add an `index.html` an
 ```
 
 ```javascript
+// index.js
+
 var textToChange = document.querySelector('.text-to-change')
 var buttonForText = document.querySelector('#text-button');
 ```
@@ -93,13 +116,13 @@ Just like we did before, let's add these changes to the staging area and commit 
 
 ### Push up the master branch to GitHub (to the remote repository) (`git push`)
 
-This is where things differ from before. The goal here is to get the code that we have locally into the online, remote repository (GitHub). If we look at the repository on GitHub, there is nothing there. It tells us we need to add content. Well let's go ahead and do that.
+The goal here is to take the new code that we have added locally and push it up to the online, remote repository (GitHub).
 
 To get our code into the remote repository, we need to "push" it up there. The command is: `git push [remote-name] [branch-name-to-push-to-remote]`
 
 So in our case, we want to push the code from our master branch to the remote repository called "origin". The exact command in this case is: `git push origin master`
 
-Now if we look at the GitHub repository, we see our code!
+Now if we look at the GitHub repository, we see our new code, and updated commit messages!
 
 ### Checkout a feature branch (`git branch`, `git checkout`)
 
@@ -127,9 +150,9 @@ Add the changes to the staging area, and commit the changes, just as before:
 
 We're satisfied with the work done on this branch. Now we can push this branch up to GitHub and merge it to master there. To push this branch, we use the same `git push` command as before, but with a slight change:
 
-Enter the command: `git push origin add-event-lister`
+Enter the command: `git push origin add-event-listener`
 
-With that command, we pushed the `add-event-lister` branch up to the remote repository names `origin`. If we look on GitHub, the code on the master branch has not changed, but we do see a notification of a new branch.
+With that command, we pushed the `add-event-lister` branch up to the remote repository named `origin`. If we look on GitHub, the code on the master branch has not changed, but we do see a notification of a new branch.
 
 ### Create a pull request on GitHub (PR)
 

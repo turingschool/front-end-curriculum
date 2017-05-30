@@ -16,19 +16,25 @@ In this lesson, you will learn how to:
 
 ### Some Context: What is Git, and why should we use it?
 
-Git is a version control system (VCS). The Git language is a command-line language that you use from the terminal. We use Git to commit changes to our project. These commits serve as snapshots in time (or versions) of the project. A project that uses Git has a complete history of the code changes made throughout its existence, which can be powerful if you want to look at the origin of a bug, or if you want to revert to an old version of a project. Git is used throughout the software development community, not only for web development - it gives developers a robust way to collaborate, share, and maintain code bases.
+Git is a version control system (VCS). The Git language is a command-line language that you **use from the terminal**. We use Git to commit changes to our project. These commits serve as snapshots in time (or versions) of the project. A project that uses Git has a complete history of the code changes made throughout its existence, which can be powerful if you want to look at the origin of a bug, or if you want to revert to an old version of a project. Git is used throughout the software development community, not only for web development - it gives developers a robust way to collaborate, share, and maintain code bases.
 
 ### What Git is NOT
 
-Git is NOT the same as GitHub.
+**Git is NOT the same as GitHub**.
 
-We will work with GitHub later, but first we need to understand Git by itself. Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects. GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo on GitHub, and then, as work is done, the code is committed and pushed from the developer's local repo and added to the repo on GitHub.
+We will work with GitHub later, but first we need to understand Git by itself.  
+
+Despite their similar names, Git and GitHub are **not the same thing**. They work together, but they are their own distinct beasts. Git allows us to save specific versions of our work in a local repository on our computer. GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects.  
+
+GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo on GitHub, and then, as work is done, the code is committed and pushed from the developer's local repo and added to the repo on GitHub.
 
 ## Git Setup
 
 You already have your text editor up and running and Xcode installed, but if you have any questions about how those are set up, look at the bottom of this lesson.
 
 ### Install Homebrew
+
+Run the command `brew help`.  If you see output, that means you've already installed `Homebrew`. If you see something like `command not found`, continue through this section.  
 
 [Homebrew](http://brew.sh) is a package management system that makes it easy to install hundreds of open source projects and compile them from source for maximum performance on your machine.
 
@@ -60,7 +66,7 @@ source ~/.bash_profile
 
 Now run `brew doctor` again and the warning should be gone.
 
-### Install Git
+### Update and/or Install Git
 
 [Git](http://git-scm.com/) is the version control system of choice in the JavaScript community and many others. XCode installed an older version of Git for you, but let's update it.
 
@@ -72,11 +78,11 @@ brew install git
 
 ### Configuring Git
 
-If you haven't used Git before, then we need to configure it with some basic information about us. You might have done this during Computer Setup. If so, then you can skip this section.
+If you haven't used Git before, then we need to configure it with some basic information about us. You might have done this during Computer Setup. If so, you can skip this section.
 
-We can tell git to configure itself using the `git config` command from our terminal. Additionally, we're setting "global" configurations for git, so we'll use the `--global` flag when we provide it with a new piece of configuration.
+We can tell git to configure itself using the `git config` command. We also want these settings to be global on our computer (indicated by the `--global` flag) so we don't have to revisit this setup every time we interact with git from a different filepath.
 
-Tell git your name and email address by using the following commands, substituting your own name and email:
+Tell git your name and email address by using the following commands, substituting your own name and email. You'll notice that additional `--global` flag, indicating that these settings should be accessible from everywhere we interact with Git:
 
 ```shell
 git config --global user.name "John Doe"
@@ -91,17 +97,29 @@ Now we're ready to go!
 
 In your terminal, change into a directory where you can add Turing related projects. Once you are in that directory, create a new directory called `git-intro`. Change into that directory.
 
+Just to confirm we are starting from scratch, run the command `ls -la`. This will print out a list of files or directories nested within our current directory. At this time you should only see `./` and `../`.  
+
 #### Initialize git (`git init`)
 
-Once you are in the `git-intro` directory, in the terminal, type `git status`. What do you see? An error?
+Once you are in the `git-intro` directory, in the terminal, type `git status`. You should see a line that looks something like this:  
 
 ```shell
 fatal: Not a git repository (or any of the parent directories): .git
 ```
 
-This error says that this directory is not a git repository, and the terminal can't do what you're trying to ask of it.
+By running the command `git status`, you are essentially telling the current directory "hey, go find a file called `.git`, and find out the status of tracking my files through."  
 
-For this command to recognize that command and give you useful information, we must initialize git for this specific directory. Type `git init` into the terminal.
+The error we get says that we haven't created a `.git` file, which means the directory we're in is not a git repository, and the terminal can't do what you're trying to ask of it.  
+
+For the terminal to recognize the command `git status` and give you useful information, we must initialize git for this specific directory.  
+
+Type `git init` into the terminal.  
+
+What does the output say?
+
+```shell
+Initialized empty Git repository in /Users/username/whatever/directory/.git/
+```
 
 Now type `git status` in the terminal, and you should see a different message. Now Git is tracking where you have made changes within this directory. We'll get into the status in a bit.
 
@@ -113,7 +131,7 @@ Initial commit
 nothing to commit (create/copy files and use "git add" to track)
 ```
 
-Additionally, if we use `ls -la` to look in the directory, we can see a `.git` hidden directory. The `.git` directory is not something you need to worry about, and you will likely never modify it. It is used by Git to keep track of your change history (commits) - more on that later.
+Additionally, if we use `ls -la` to look in the directory, we can see a `.git` hidden directory. The `.git` directory is not something you need to worry about at this time, and you will likely never modify it. It is used by Git to keep track of your change history (commits) - more on that later.
 
 #### Add a file
 
@@ -189,7 +207,7 @@ Now that we have an empty `index.html` file, let's add some basic markup. Add th
 </html>
 ```
 
-We've basically added the basic HTML skeleton and an h1 in the body - no big deal.
+All we did here is create a basic HTML skeleton, adding an `<h1>` to the body of our page.  
 
 Let's check the status of our repository again (`git status`). Git saw our changes! We know this because it says under "changes not staged for commit" that the `index.html` was modified.
 
@@ -197,7 +215,7 @@ Since we want to add these changes to our project (and the version history of th
 
 Now that the changes are in the staging area, if we use `git status` to check the status of the repository again, there are now "changes to be committed".
 
-Commit the changes - we should know this by now. For this commit, we added content to our `index.html` file, so the commit command (with message!) is: `git commit -m "Add HTML structure and h1 title"`
+Commit the changes. For this commit, we added content to our `index.html` file, so the commit command (with message!) is: `git commit -m "Add HTML structure and h1 title"`
 
 ### Turn and Share
 
@@ -205,15 +223,19 @@ Now that we have worked on the basic editing workflow, turn to someone you're si
 
 ### Another Turn and Share: Look at your commit history (`git log`)
 
-Type `git log` in the terminal. What do you see? Discuss with you partner what you think is being displayed in the terminal.
+Type `git log` in the terminal. What do you see? Discuss with you partner what you think is being displayed in the terminal.  
+
+Checkout a condensed version of that report by running `git log --online`. What information gets left out compared to the `git log` command?  
 
 #### The master branch
 
-When we type `git status`, part of the message we get back is "On branch master". What is a branch, and what is master??
+When we type `git status`, part of the message we get back is "On branch master". Let's discuss the what git means by a "branch", and what is "master"?
 
-In Git, there is a concept of branches. They represent a line of development. The master branch is typically the branch where the code works without known bugs. Ideally, we want to keep the master branch "clean" of bugs. So if we want to write new code, then we can branch off of master.
+In Git, there is this concept of branches. They represent a line of development. The master branch is typically the branch where the code works without known bugs.  
 
-When you branch off of the master branch, that new branch can serve as a "sandbox" for development where you can make changes or experiment with a research spike without affecting the master branch.
+Ideally, we want to keep the master branch "clean" of bugs. So if we want to write new code, then we can branch off of master.
+
+When you branch off of the master branch, that new branch can serve as a `sandbox` for development where you can make changes or experiment with a `research spike` without affecting the master branch.
 
 [More info on branching.](https://www.atlassian.com/git/tutorials/using-branches/git-branch)
 
@@ -225,28 +247,34 @@ The general workflow is:
   * Checkout master
   * Merge your branch into master
 
-We'll practice this now!
+Let's practice this.
 
-#### Make a branch (`git branch` and `git checkout`)
+#### Creating A Branch   
+(`git branch` and `git checkout`)  
 
-Before we make a new branch, let's check what branch we are currently on. Type `git branch` in your terminal. This command lists all of the branches you have made and also tells us what branch we are on.
+Before we make a new branch, let's check what branch we are currently on.
+
+Command to identify current branch: `git branch`  
+This command lists all of the branches you have made and also tells us what branch we are on.
 
 ```shell
 * master
 ```
 
-We only have the default branch master right now, so it lists only `master`. The `*` denotes what branch we are currently on: master.
+We only have the default branch master right now, so it lists only `master`. The `*` denotes what branch we are currently on. In this case: `master`.
 
 Let's make a new branch! The command to make a new branch is `git branch [branch name]`.
 
-Type `git branch add-body-content` in the terminal. Now check `git branch` again. What do we see? We see our new branch name! However, the `*` is still next to the master branch. To change to our new branch, we need to "checkout" the branch.
+Type `git branch add-body-content` in the terminal. Now check `git branch` again. What do we see? We see our new branch name! However, the `*` is still next to the master branch.  
 
 ```shell
 add-body-content
 * master
 ```
 
-Let's checkout the new branch using the command `git checkout add-body-content`. To checkout any branch, the command is `git checkout [branch name]`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
+To change to our new branch, we need to "checkout" the branch.  
+
+Let's checkout the new branch using the command `git checkout add-body-content`. To checkout any branch, the command is `git checkout branch-name`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
 
 ```shell
 * add-body-content
@@ -295,9 +323,9 @@ Go ahead and add this change to the staging area and commit the change.
 
 #### Revert to old versions/snapshots (`git reset`)
 
-You know, I don't like the changes we made to add text to the body. I wish there was a way we could go back to code we had before. Well there is! This is the advantage of making small commits - we can revert our project back to one of these commits that served as a snapshot in time.
+You know, I don't like the changes we made to add text to the body. I wish there was a way we could go back to code we had before. Well, there is! This is the advantage of making small commits - we can revert our project back to one of these commits that served as a snapshot in time.
 
-Type `git log` in the terminal to see a history of our commits. For each commit, there is a special string of characters that uniquely identify each commit that is called a "hash". So there is the title of each commit, and then something like `commit 2951dd271a636583b394e19802c9703c260f45ac`, the hash.
+Type `git log` in the terminal to see a history of our commits. For each commit, there is a special string of characters that uniquely identify each commit that is called a "hash", or a "sha". So there is the title of each commit, and then something like `commit 2951dd271a636583b394e19802c9703c260f45ac`. That giant string of numbers/letters is the "sha" or "hash" (those words are frequently used interchangeably).
 
 We want to go back to the commit where we added the CSS file. To revert back to a commit, we have to use the hash to identify the unique commit. If we had 100 commits, and two of them had the same hash, then that would cause issues. So the hash is calculated to be a unique string.
 
@@ -339,7 +367,7 @@ Let's add some content to the body again, something simple, and commit it:
 
 Now that we are satisfied with the content on our `index.html` page, we are ready to put this code on the master branch. Let's first checkout the master branch with `git checkout master`. If we take a look at the `index.html` page, our changes aren't there! It's ok, the changes are still on the feature branch `add-body-content`. Our goal is to take the changes from the feature branch and merge them into the master branch.
 
-To merge changes locally between branches, the command is `git merge [branch you want to merge changes from]`. You want to checkout the branch to merge changes into, then run the merge command. In our case, let's checkout master, which we have already done with `git checkout master`.
+To merge changes locally between branches, you should first move to the branch you want to update. Then run the command `git merge [branch you want to merge changes from]`. In our case, let's checkout master, which we can do by running `git checkout master`.
 
 Now run `git merge add-body-content`. Our changes are now in master! We have now successfully made changes on a feature branch, kept master clean of unwanted code, and merge our finalized changes into master.
 
@@ -369,7 +397,9 @@ Your `PATH` is a system configuration property which tells your computer where t
 
 When we use our terminal, we're actually using a program called a *shell* to interact with the underlying operating system. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
 
-The file `~/.bash_profile` contains settings and commands to help us configure the shell, so when we have a bit of configuration code such as setting our `PATH`, it often goes in our `~/.bash_profile`.
+The file `~/.bash_profile` contains settings and commands to help us configure the shell, so when we have a bit of configuration code such as setting our `PATH`, it often goes in our `~/.bash_profile`.  
+
+### Review of Computer Setup
 
 #### Text Editor and XCode
 

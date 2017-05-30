@@ -3,19 +3,19 @@ title: Web Scraping Workshop
 module: 4
 ---
 
-# (Optional) Promises Warmup (9:00 - 10:00)
+# (PreWork or Warmup) Promises Warmup
 
 [Lesson Plan Here](http://frontend.turing.io/lessons/promises-warmup.html)
 
-# Intro to Browser Automation and Scraping (10:00 - 10:10)
+# Intro to Browser Automation and Scraping 
 
 [Excellent StackOverflow Breakdown of Technology Available](http://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions)
 
 [Selenium](http://seleniumhq.org/) - polyglot flagship in browser automation, bindings for Python, Ruby, JavaScript, C#, Haskell and more, IDE for Firefox (as an extension) for faster test deployment. Can act as a Server and has tons of features.
 
-# Web Scraping Workshop (10:15 - 2:30)
+# Web Scraping Workshop
 
-## Instructor Demo (10:15 - 10:45)
+## Instructor Demo
 
 Code for live implementation
 
@@ -46,7 +46,26 @@ nightmare
   });
 ```
 
-## Planning Phase (10:45 - 11:15)
+Minimum needed code is:
+
+```js
+var Nightmare = require('nightmare');
+var nightmare = Nightmare({  show: true });
+
+nightmare
+  .goto('WEBSITE ADDRESS')
+  .end()
+  .then(function (result) {
+    console.log(result);
+  })
+  .catch(function (error) {
+    console.error('Search failed:', error);
+  });
+```
+
+[Longer Example Here](https://gist.github.com/rrgayhart/f1c25fd47bb5ad42957224e8b6b5ba83)
+
+# Planning Phase
 
 Before you start writing code, don't.
 
@@ -74,6 +93,8 @@ And walk through the process with psuedo code and by finding the selectors.
 
 ```
 
+# Resources
+
 The two resources below are a lifesaver for this process.
 
 ### How Do Query Selectors Work Again?
@@ -82,7 +103,7 @@ The two resources below are a lifesaver for this process.
 
 [CSS Selector Helper for Chrome](https://chrome.google.com/webstore/detail/css-selector-helper-for-c/gddgceinofapfodcekopkjjelkbjodin?utm_source=gmail)
 
-### You Do
+# You Do
 
 Spend the next pomodoro working by yourself to come up with an idea for something to scrape or some activity to automate, and outlining the steps needed to accomplish this automation.
 
@@ -109,6 +130,12 @@ Follow the following steps to get started:
 
 As you work, put your script files in this folder. Link to helpful blog posts/tutorials.docs that helped you along your way in the README. It may also be a good idea to put your 'roadmap' of psuedocode in that README as well.
 
+#### Run `npm i nightmare --save`
+
+#### Create a script file... something like `node script.js`
+
+#### Run your code using Node! So in the terminal `node scrape.js`
+
 #### Some ideas for things to code:
 
 - A script that orders pizza for your board game night and splits the check for you
@@ -121,7 +148,7 @@ As you work, put your script files in this folder. Link to helpful blog posts/tu
 
 Really, though, the internet is your oyster.
 
-## Implementation Phase (11:15 - 11:45 (lunch) 12:45 - 2:00)
+## Implementation Phase
 
 In groups of two, we can now begin the process of automation.
 
@@ -150,17 +177,23 @@ You can install nightmare in a project like so:
 
 You need these little fellers for your script to work correctly. Don't forget them.
 
+Like, if you go to a site and it doesn't do anything... you probably forgot them....
+
 ### Promises
 
 We spent some time going over promises this morning, so check out this promises implementation 
 
 [Promise example here](https://github.com/rosshinkley/nightmare-examples/blob/master/docs/beginner/promises.md)
 
-## Show and Tell (2:00 - 2:30)
+### Adjusting Your Viewport
 
-Let's all gather together and show off our scripts - or brilliant ideas for scripts and our code battles to try and get there!
+If you need more of the page, you can adjust the viewport using code like ` .viewport(1500, 1500)`
 
-### Final Thoughts
+### Writing to a File
+
+Rather than just console logging the output.. think about [writing it to a file](http://stackoverflow.com/questions/39175845/how-do-i-write-data-from-nightmarejs-to-file) 
+
+# Final Thoughts
 
 (from Neight the Greight)
 

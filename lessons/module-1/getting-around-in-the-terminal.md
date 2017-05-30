@@ -6,7 +6,7 @@ tags: command line, terminal
 
 ### Context
 
-You probably grew up around computers, but if you're like most of the non-developer population, you may have never touched the terminal. Why would need to? Everything you need to do can be done on the desktop or through the Finder, and only super nerds use the terminal anyway. Right?
+You probably grew up around computers, but if you're like most of the non-developer population, you may have never touched the terminal. Why would you need to? Everything you need to do can be done on the desktop or through the Finder, and only super nerds use the terminal anyway. Right?
 
 Well, no...
 
@@ -14,7 +14,7 @@ You might be thinking to yourself "Hey, wait a minute! I'm pretty darn fast when
 
 It turns out you actually aren't fast enough. As a developer everything you do should be based on speed and efficiency. When any part of your work flow is lacking you are wasting time. Over the course of a day, every extra second compounds into time you aren't spending doing productive work. Not being a fluent user of your command line is a pain point that may not be terribly noticeable as you first start writing code and you're still gaining momentum, but over time as you work more quickly you (and your pairing partners) will absolutely feel it. In an interview or workplace environment not being able to effectively use your terminal is a red flag. That means it's important to start flexing our command line muscles right away to build understanding and comfort with this tool.
 
-Also, some of the tools you will use as a developer can only be used through the terminal and not by clicking in a program. You'll use those tools in the terminal soon enough!
+Additionally, some of the tools you will use as a developer can only be used through the terminal and not by clicking in a program. You'll use those tools in the terminal soon enough!
 
 ### Moving Forward
 
