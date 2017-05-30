@@ -24,7 +24,7 @@ module: 2
   </h3>
   </section>
   <section>
-  <p>a new API that allows you to run a script in <i>background</i> of your application and facilitates creating <i>Progressive Web Apps</i></p>
+  <p>a new API that allows you to run a script in <i>background</i> of your application and facilitates creating <br /><i>Progressive Web Apps</i></p>
   </section>
 </section>
 
@@ -39,7 +39,7 @@ module: 2
 
   <p><i>Take a look at the apps on your phone - think about how you use them and how they behave.</i></p>
 
-  <p><i>How are they similar to web apps? How are they different?  (10-15 mins)</i></p>
+  <p><i>How are they similar to web apps? How are they different? <br />(10-15 mins)</i></p>
   </section>
 </section>
 
@@ -61,8 +61,8 @@ module: 2
     <ul>
       <li>service workers are a type of web worker</li>
       <li>web workers are single JavaScript files, run on own thread</li>
-      <li>do not block/interfere with execution of any other client-side JavaScript</li>
-      <li>allow you to do time-intensive operations without locking up the UI</li>
+      <li>don't block execution of any other client-side JavaScript</li>
+      <li>handle time-intensive operations without locking up the UI</li>
       <li>service workers allow background processing that specifically relates to handling network requests</li>
     </ul>
   </section>
