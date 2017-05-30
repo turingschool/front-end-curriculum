@@ -77,7 +77,8 @@ module: 2
     <h4><b>Event-based</b></h4>
     <ul>
       <li>service worker can 'go to sleep' at any time</li>
-      <li>is only woken up and utilized during events (network requests and messages)</li>
+      <li>is only woken up and utilized during events</li>
+      <li><img src="https://mdn.mozillademos.org/files/12632/sw-events.png" /></li>
     </ul>
   </section>
   <section>
