@@ -13,6 +13,7 @@ module: 2
   <h3>Goals:</h3>
   <ol>
     <li>Understand how to leverage IndexedDB to store offline data</li>
+    <li>Provide a user experience that works regardless of network connectivity</li> 
   </ol>
 </section>
 
