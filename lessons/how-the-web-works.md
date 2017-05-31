@@ -11,7 +11,7 @@ We all use the internet. It's engrained in everything thing that we do. If our c
 
 As front-end devs our jobs for the most part will be to interact with the requests that are flying through the web. As a developer in your job you will be dealing with servers, requests, routes, and really everything that makes up the web. If we have a stronger understanding of how the web really works then I think that when things break in production or unexpected behavior presents itself you can fix it.
 
-As front-end developers you will notice that a lot of your job is going to be about making sure things are performant. Things are fast (they happen within 30fps) if they aren't then people will most likely stop using your application. Understanding how the web works will only help you in the long run.
+As front-end developers you will notice that a lot of your job is going to be about making sure things are performant. Things are fast (they happen within 30fps) then people will most likely stop using your application. Understanding how the web works will only help you in the long run.
 
 
 ## Client Server Model
@@ -23,24 +23,24 @@ On June 28th 2006 Senator Ted Stevens described the internet as a 'series of tub
  ```
 Don't let this be you!
 
-Really in a very small and simplistic sense the internet is just a bunch of computers talking to computers. The internet is comprised of servers that hold files and information on them. These servers or server networks are connected by wires either underground or underwater.
+Really in a very small and simplistic sense the internet is just a bunch of computers talking to computers. The internet is comprised of Serves that hold files and information on them. These servers or server networks are connected by wires either underground or underwater.
 
-Now typically what you will find is that a server typically will provided a service and that the client typically will take advantage of that service. The client will send a request to the server to utilize that service.
+Now typically what you will find is that a Server typically will provided a service and that the client typically will take advantage of that service. The client will send a request to the server to utilize that service.
 
-In most cases you'll see that a client is software that accesses the services provided by the server. That service is typically a file or application stored on a physical server somewhere. For example if you bank online. Your browser is acting as the client and is communicating to a physical server to grab information about the user's bank account. It uses `requests` to get information / services from the server.
+In most cases you'll see that a client is software that accesses the serves provided by the server. That service is typically a file or application stored on a physical server somewhere. For example if you bank online. Your browser is acting as the client and is communicating to a physical server to grab information about the user's bank account. It uses `requests` to get information / services from the server.
 
 This is where things can get a little tricky. A server/client can be a physical piece of hardware or some software that lets you serve up information. In `game-time` or `idea-box-pivot` you utilized something called a `webpack-dev-server`. When you strip everything down it's really just a `node-server` in the background serving your game / project locally on your machine. In this specific case your computer was a physical server and your laptop was also the client.
 
 
 ### How do Clients and Servers interact?
 
-For the most part what you will be building at your time at Turing will be mainly client-side. Your applications will talk to other back-end services.
-When you think about a regular conversation you typically have a request (a question) and a response from the person you're asking. That is how the web works. The client makes requests to the server and the server will always send a response. There is obviously a lot more parts to this interaction and we are going to cover those now.
+For the most part what you will be building at your time at turing will be mainly client-side. Your applications will talk to other back-end services.
+When you think about a regular conversation you typically have a request (a questions) and a response from the person you're asking. That is how the web works. The client makes requests to the server and the server will always send a response. There is obviously a lot more parts to this interaction and we are going to cover those now.
 
 ### What's inside of a request?
 
-So everything typically starts with the `URI` and when I say that I mean the location of the website / server we'd like to use / leverage.
-Once we've figured out our destination and hit enter, our client will then send a request to the server we'd like to visit.
+So everything typically starts with the `URI` and when I say that I mean the location of the website / server we'd like to user / leverage.
+Once we've figured out our destination and hit enter our client will then send a request to the server we'd like to visit.
 
 The request is comprised of 2 parts. We have the `header` and we also have the `body`. These two parts make up the whole of a server request.
 
