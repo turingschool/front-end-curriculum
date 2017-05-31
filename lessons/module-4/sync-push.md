@@ -1,12 +1,12 @@
 ---
-title: Persisting Data with IndexedDB
+title: Background Sync & Push Notifications
 layout: presentation
-tags: indexedDB, storage, offline
+tags: push, sync, offline
 module: 4
 ---
 
 <section>
-  <h2>Persisting Data with IndexedDB</h2>
+  <h2>Background Sync & Push Notifications</h2>
 </section>
 
 <section>
@@ -58,8 +58,7 @@ module: 4
   <h3>Let's Practice</h3>
   <p>Fetch and checkout the 'begin-db-lesson' branch of the <a href="https://github.com/turingschool-examples/offline-news">offline news repo</a></p>
   <p><pre><code>`npm install`</code></pre></p>
-  <p><pre><code>`weback --watch`</code></pre></p>
-  <p><pre><code>`node server.js`</code></pre></p>
+  <p><pre><code>`npm start`</code></pre></p>
   <p><pre><code>`http://localhost:3000`</code></pre></p>
 </section>
 
