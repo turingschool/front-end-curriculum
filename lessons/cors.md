@@ -128,6 +128,12 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
   next();
 });
+
+//or
+app.use(cors({
+  allowedOrigins: ['localhost:8000']
+}));
+
 ```
 
 The data/assets served by that API will have `Access-Control-Allow-Origin: *` set so even CORS-enabled browsers will let them be displayed on any page.

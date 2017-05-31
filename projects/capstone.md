@@ -57,14 +57,14 @@ Everyone will write down their top 5 choices of a project to work on. Rank them 
 
 We will team up by interest in projects. Teams will be between 2 - 4 people.
 
-### Part 7: Pick Your API (20 minutes)
+### Part 7: Pick Your API (15 minutes)
 With the project and team established, get together with your group to decide whose API you will be utilizing, or if you'll be building a new one. Feel free to use more than one if it makes sense.
 
 Remember, you can easily change the datasource for your API. Don't feel like you need to use the current data to fit your project. It's easy to switch out data sources, just be sure to cover the new data with tests.
 
 The requirement is that you use a custom-built API for a GET, POST, PUT/PATCH and DELETE requests through the UI.
 
-### Part 8: Wireframing & Design (60 minutes)
+### Part 8: Wireframing & Design (45 minutes)
 
 With the project and team established, get together with your group to wireframe
 the key screens / interactions and figure out how you'll implement services.
@@ -77,11 +77,11 @@ of your thinking:
 - Building real-time web applications with WebSockets
 - Building servers to store and share data between users
 
-### Part 9: Workflow (20 minutes)
+### Part 9: Workflow (15 minutes)
 
 Pick a team lead to create a repository for each the selected projects. If you have a clever name, now is the time.
 
-### Part 10: Definition of Done (20 minutes)
+### Part 10: Definition of Done (15 minutes)
 
 As a team, come up with your own Definition of Done. Have at least 5 criteria for your DoD. Follow your DoD throughout the project!
 
