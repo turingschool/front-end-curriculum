@@ -63,11 +63,12 @@ module: 4
 </section>
 
 <section>
-    <h3>What's Changed?</h3>
-    <ul>
-      <li>brought in webpack, updated SW cache to add `bundle.js`</li>
-      <li>fetching articles from the server rather than hardcoding</li>
-      <li>allowing users to click an article that will save it for offline reading (not implemented yet)</li>
+  <h3>What's Changed?</h3>
+  <ul>
+    <li>brought in webpack, updated SW cache to add `bundle.js`</li>
+    <li>fetching articles from the server rather than hardcoding</li>
+    <li>allowing users to click an article that will save it for offline reading (not implemented yet)</li>
+  </ul>
 </section>
 
 <section>
