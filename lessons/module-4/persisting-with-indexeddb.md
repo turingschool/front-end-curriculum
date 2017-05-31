@@ -2,7 +2,7 @@
 title: Persisting Data with IndexedDB
 layout: presentation
 tags: indexedDB, storage, offline
-module: 2
+module: 4
 ---
 
 <section>
