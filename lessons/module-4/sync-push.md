@@ -69,7 +69,7 @@ module: 4
   <h3>What Are Our Goals?</h3>
   <ul>
     <li>Set up communication between our client-side code and our service worker</li>
-    <li>Service worker intercepts POST request and waits for network connectivity to complete</li>
+    <li>Service worker intercepts POST request and waits for network connectivity before completing</li>
     <li>Upon completion, SW sends a message to the client to update the DOM</li>
     <li>Upon completion, SW sends a push notification to notify users it is complete</li>
   </ul>
