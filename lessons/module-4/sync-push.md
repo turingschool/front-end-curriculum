@@ -46,31 +46,31 @@ module: 4
   <h3>When Do I Use These?</h3>
   <ul>
     <li>when a user is manipulating application data through network requests but has an unstable or intermittent connection</li>
-    <li>
-  </ul>
-</section>
-
-<section>
-  <h3>How Does it Work?</h3>
-  <ul>
-    <li></li>
   </ul>
 </section>
 
 <section>
   <h3>Let's Practice</h3>
-  <p>Fetch and checkout the 'begin-db-lesson' branch of the <a href="https://github.com/turingschool-examples/offline-news">offline news repo</a></p>
+  <p>Fetch and checkout the 'before-sync-lesson' branch of the <a href="https://github.com/turingschool-examples/offline-news">offline news repo</a></p>
   <p><pre><code>`npm install`</code></pre></p>
-  <p><pre><code>`npm start`</code></pre></p>
+  <p><pre><code>`webpack --watch`</code></pre></p>
+  <p><pre><code>`node server.js`</code></pre></p>
   <p><pre><code>`http://localhost:3000`</code></pre></p>
+</section>
+
+<section>
+  <h3>What's New?</h3>
+  <ul>
+    <li>Added a tiny form so that any bozo can add their own news</li>
+  </ul>
 </section>
 
 <section>
   <h3>What Are Our Goals?</h3>
   <ul>
-    <li>Display a notification if we are online or not</li>
-    <li>Listen for changes in our connection status and display an appropriate list of articles</li>
-    <li>If we are online => fetch and display the latest articles from the server</li>
-    <li>If we're not online => display any articles saved to indexedDB for offline reading</li>
+    <li>Set up communication between our client-side code and our service worker</li>
+    <li>Service worker intercepts POST request and waits for network connectivity to complete</li>
+    <li>Upon completion, SW sends a message to the client to update the DOM</li>
+    <li>Upon completion, SW sends a push notification to notify users it is complete</li>
   </ul>
 </section>
