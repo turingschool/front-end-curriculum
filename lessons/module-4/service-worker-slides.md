@@ -1,7 +1,7 @@
 ---
 title: Introduction to Service Workers
 layout: presentation
-tags: css, sass
+tags: service workers, PWAs, offline
 module: 2
 ---
 
