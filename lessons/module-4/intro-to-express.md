@@ -160,7 +160,7 @@ app.get('/api/secrets/:id', (request, response) => {
 
 ### Sending Data With Our Post Request
 
-It would be cool if we could store secrets in addition to just being able to retreive the prepopulated ones.
+It would be cool if we could store secrets in addition to just being able to retrieve the prepopulated ones.
 
 Express did this thing a while back, where they took a bunch of stuff out of the core framework. This makes it smaller and means you don't have cruft you're not using, but it also means that sometimes you have to mix those things back in. One of those components that was pulled out was the ability to parse the body of an HTTP request. That's okay, we can just mix it back in.
 

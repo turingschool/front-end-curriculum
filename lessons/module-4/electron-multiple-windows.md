@@ -6,7 +6,7 @@ status: draft
 
 ## Getting Set Up
 
-[Continuing from the file dialog lesson.](http://frontend.turing.io/lessons/electron-file-dialogs.html)
+[Continuing from the file dialog lesson.](http://frontend.turing.io/lessons/module-4/electron-file-dialogs.html)
 
 ## Why Would You Want Multiple Windows?
 

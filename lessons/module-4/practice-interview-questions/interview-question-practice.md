@@ -1,4 +1,9 @@
-# Interview Question Practice
+---
+title: Interview Question Practice
+length: 60
+tags: interview, prep
+module: 4
+---
 
 ## Iteration 1
 
@@ -32,7 +37,7 @@ var foo = 10 + '20';
 
 - Explain your understanding of the box model and how you would tell the browser in CSS to render your layout in different box models. [-hint-](http://frontend.turing.io/lessons/module-1/css-1.html) [css]
 
-- What are HTTP methods? List all HTTP methods that you know, and explain them. [-hint-](http://frontend.turing.io/lessons/node.html) [web APIs]
+- What are HTTP methods? List all HTTP methods that you know, and explain them. [-hint-](http://frontend.turing.io/lessons/module-4/node.html) [web APIs]
 
 - Question: What value is returned from the following statement? [js]
 
@@ -71,7 +76,7 @@ var foo = 10 + '20';
 
 ## Iteration 5
 
-- How do you serve a page with content in multiple languages? [-hint-](http://frontend.turing.io/lessons/localization.html) [best practices]
+- How do you serve a page with content in multiple languages? [-hint-](http://frontend.turing.io/lessons/module-4/localization.html) [best practices]
 
 - Why is it generally a good idea to position CSS `<link>`s between `<head></head>` and JS `<script>`s just before `</body>`? Do you know any exceptions? [html]
 

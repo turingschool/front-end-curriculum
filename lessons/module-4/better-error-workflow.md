@@ -9,7 +9,7 @@ tags: workflow
 
 Let’s a specific example of this migrations file, from the Express with Knex lesson.
 
-```
+```javascript
 module.exports = {
   development: {
     client: 'pg',
