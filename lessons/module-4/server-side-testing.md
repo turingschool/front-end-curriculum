@@ -17,18 +17,18 @@ Notice the complexity. With the back end added to your app, there are many more 
 ## Basic Structure of a Server-Side Test
 
 1. DB setup (if testing route that interacts with the database)
-2. Make a request to a route
+2. Make a request to a server route
 3. Get a response from the server
 4. Test the response
 5. DB clean up (if testing route that interacts with the database)
 
-What do we test the response for?
-* The status code
-* What content type do we expect? (json, plain text)
-* What is the basic structure of the response body? (object, array)
-* What should be contained in the body?
-  - If it's an array, how many elements should be in the array?
-  - If it's an object, what properties and values should the object have?
+What about the response should we test?
+  * The status code
+  * What content type do we expect? (json, plain text)
+  * What is the data structure of the response body? (object, array)
+  * What should be contained in the body?
+    - If it's an array, how many elements should be in the array?
+    - If it's an object, what properties and values should the object have?
 
 ## Let's Go Through Some Examples
 
@@ -46,21 +46,21 @@ To stop the server, just enter `control + c` in the terminal.
 
 Take a look at the server file, `server.js`, to see what this app is doing out of the box. We're requiring Express, creating the server application that listens on port 3000, and then setting up one route for the path `localhost:3000/`.
 
-In your project, you're going to be testing API requests. So let's set up an API!
+In your projects, you're going to be testing API requests. So let's set up an API!
 
-For this API, this server is going to use a very simplified database using `app.locals`. Add this code to your server file:
+For this API, this server is going to have a very simplified database using `app.locals`. Add this code to the server file:
 
 ```javascript
-app.locals.students = require('./students')
+app.locals.students = require('./students');
 
 app.get('/api/v1/students', (request, response) => {
-  response.status(200).json(app.locals.students)
-})
+  response.status(200).json(app.locals.students);
+});
 ```
 
-The `students.js` file contains an array of student objects, and we are loading the contents of this file into a local server variable called `app.locals.students`. Imagine this `app.locals.students` is our database. Here is more on [app.locals](https://expressjs.com/en/api.html#app.locals).
+The `students.js` file contains an array of student objects, and we are loading the contents of this file into a local server variable called `app.locals.students`. Imagine this `app.locals.students` is our database's students table. Here is more on [app.locals](https://expressjs.com/en/api.html#app.locals).
 
-Now let's add our testing tools from the terminal.
+Now let's install our testing tools from the terminal.
 
 ```shell
 npm install -D mocha chai chai-http
@@ -68,23 +68,23 @@ npm install -D mocha chai chai-http
 
 Create a directory called `test` and create a new test file called `routes.spec.js` within the `test` directory. Open the new test file.
 
-At the top of the `routes.spec.js` file, add:
+At the top of the test file, `routes.spec.js`, add:
 
 ```javascript
-const chai = require('chai')
-const should = chai.should()
-const chaiHttp = require('chai-http')
-const server = require('../server')
+const chai = require('chai');
+const should = chai.should();
+const chaiHttp = require('chai-http');
+const server = require('../server');
 
-chai.use(chaiHttp)
+chai.use(chaiHttp);
 
 describe('Client Routes', () => {
 
-})
+});
 
 describe('API Routes', () => {
 
-})
+});
 ```
 
 Run the test suite with the command `mocha` (you'll have to have mocha installed globally to run this command in the terminal). The test output should be something like:
@@ -95,11 +95,11 @@ Run the test suite with the command `mocha` (you'll have to have mocha installed
 
 ```
 
-This makes sense because we don't have any tests yet, but now we're all setup!
+This makes sense because we don't have any tests yet, but now we're all setup to add tests!
 
 ### Happy Path
 
-The happy path is a test case we write for when we expect everything to go well. This includes a well-formed request and the appropriate response.
+The happy path is a test case we write for when we expect everything to go well. This includes a well-formed request and an appropriate response.
 
 As a basic test, let's test the root endpoint to our app, `localhost:3000/`, or just `/`. In the `routes.spec.js` file. Use chai-http to make the request inside of the test.
 
@@ -111,13 +111,13 @@ describe('Client Routes', () => {
     chai.request(server)
     .get('/')
     .end((err, response) => {
-      response.should.have.status(200)
-      response.should.be.html
-      response.res.text.should.equal('We\'re going to test all the routes!')
-      done()
-    })
-  })
-})
+      response.should.have.status(200);
+      response.should.be.html;
+      response.res.text.should.equal('We\'re going to test all the routes!');
+      done();
+    });
+  });
+});
 ```
 
 Here is the breakdown of the test:
@@ -125,6 +125,7 @@ Here is the breakdown of the test:
 1. Start a request to the server
 2. For a specific route, use the request verb
 3. When you get the response from the server, test what the response contains
+4. Call `done()` to tell mocha that the test has completed (or else the test will timeout and fail)
 
 The tests are written using `should`, but you can choose to use `expect` or `assert` - just be consistent. See the [chai docs](http://chaijs.com/api/) for more info.
 
@@ -138,22 +139,22 @@ describe('Client Routes', () => {
     chai.request(server)
     .get('/')
     .end((err, response) => {
-      response.should.have.status(200)
-      response.should.be.html
-      response.res.text.should.equal('We\'re going to test all the routes!')
-      done()
-    })
-  })
+      response.should.have.status(200);
+      response.should.be.html;
+      response.res.text.should.equal('We\'re going to test all the routes!');
+      done();
+    });
+  });
 
-  it('should return a 404 for a non existent route', (done) => {
+  it('should return a 404 for a route that does not exist', (done) => {
     chai.request(server)
     .get('/sad')
     .end((err, response) => {
-      response.should.have.status(404)
-      done()
-    })
-  })
-})
+      response.should.have.status(404);
+      done();
+    });
+  });
+});
 ```
 
 The status code is the very least we can test for. If you have a custom 404 error page, then you can also test for the contents of the page.
@@ -165,48 +166,49 @@ When you run the tests with `mocha`, you should see something like:
 Test Express is running on 3000.
   Client Routes
     ✓ should return the homepage with text
-    ✓ should return a 404 for a non existent route
+    ✓ should return a 404 for. a route that does not exist
 
 
   2 passing (46ms)
-
 ```
+
+Great! We have some basic routes tested, both a happy and sad path. Let's start testing the API routes.
 
 Right now, this is what the entire test file looks like:
 
 ```javascript
-const chai = require('chai')
-const should = chai.should()
-const chaiHttp = require('chai-http')
-const server = require('../server')
+const chai = require('chai');
+const should = chai.should();
+const chaiHttp = require('chai-http');
+const server = require('../server');
 
-chai.use(chaiHttp)
+chai.use(chaiHttp);
 
 describe('Client Routes', () => {
   it('should return the homepage with text', (done) => {
     chai.request(server)
     .get('/')
     .end((err, response) => {
-      response.should.have.status(200)
-      response.should.be.html
-      response.res.text.should.equal('We\'re going to test all the routes!')
-      done()
-    })
-  })
+      response.should.have.status(200);
+      response.should.be.html;
+      response.res.text.should.equal('We\'re going to test all the routes!');
+      done();
+    });
+  });
 
-  it('should return a 404 for a non existent route', (done) => {
+  it('should return a 404 for a route that does not exist', (done) => {
     chai.request(server)
     .get('/sad')
     .end((err, response) => {
-      response.should.have.status(404)
-      done()
-    })
-  })
-})
+      response.should.have.status(404);
+      done();
+    });
+  });
+});
 
 describe('API Routes', () => {
 
-})
+});
 ```
 
 ### Test an API Call (GET Request)
@@ -222,21 +224,21 @@ describe('API Routes', () => {
       chai.request(server)
       .get('/api/v1/students')
       .end((err, response) => {
-        response.should.have.status(200)
-        response.should.be.json
-        response.body.should.be.a('array')
-        response.body.length.should.equal(3)
-        response.body[0].should.have.property('lastname')
-        response.body[0].lastname.should.equal('Turing')
-        response.body[0].should.have.property('program')
-        response.body[0].program.should.equal('FE')
-        response.body[0].should.have.property('enrolled')
-        response.body[0].enrolled.should.equal(true)
-        done()
-      })
-    })
-  })
-})
+        response.should.have.status(200);
+        response.should.be.json;
+        response.body.should.be.a('array');
+        response.body.length.should.equal(3);
+        response.body[0].should.have.property('lastname');
+        response.body[0].lastname.should.equal('Turing');
+        response.body[0].should.have.property('program');
+        response.body[0].program.should.equal('FE');
+        response.body[0].should.have.property('enrolled');
+        response.body[0].enrolled.should.equal(true);
+        done();
+      });
+    });
+  });
+});
 ```
 
 Run the tests with `mocha`. Because we already have the route set up in our `server.js` file, you should see something like:
@@ -246,7 +248,7 @@ Run the tests with `mocha`. Because we already have the route set up in our `ser
 Test Express is running on 3000.
   Client Routes
     ✓ should return the homepage with text
-    ✓ should return a 404 for a non existent route
+    ✓ should return a 404 for. a route that does not exist
 
   API Routes
     GET /api/v1/students
@@ -274,32 +276,32 @@ describe('POST /api/v1/students', () => {
       enrolled: true
     })
     .end((err, response) => {
-      response.should.have.status(201) // Different status here
-      response.body.should.be.a('object')
-      response.body.should.have.property('lastname')
-      response.body.lastname.should.equal('Knuth')
-      response.body.should.have.property('program')
-      response.body.program.should.equal('FE')
-      response.body.should.have.property('enrolled')
-      response.body.enrolled.should.equal(true)
+      response.should.have.status(201); // Different status here
+      response.body.should.be.a('object');
+      response.body.should.have.property('lastname');
+      response.body.lastname.should.equal('Knuth');
+      response.body.should.have.property('program');
+      response.body.program.should.equal('FE');
+      response.body.should.have.property('enrolled');
+      response.body.enrolled.should.equal(true);
       chai.request(server) // Can also test that it is actually in the database
       .get('/api/v1/students')
       .end((err, response) => {
-        response.should.have.status(200)
-        response.should.be.json
-        response.body.should.be.a('array')
-        response.body.length.should.equal(4)
-        response.body[3].should.have.property('lastname')
-        response.body[3].lastname.should.equal('Knuth')
-        response.body[3].should.have.property('program')
-        response.body[3].program.should.equal('FE')
-        response.body[3].should.have.property('enrolled')
-        response.body[3].enrolled.should.equal(true)
-        done()
-      })
-    })
-  })
-})
+        response.should.have.status(200);
+        response.should.be.json;
+        response.body.should.be.a('array');
+        response.body.length.should.equal(4);
+        response.body[3].should.have.property('lastname');
+        response.body[3].lastname.should.equal('Knuth');
+        response.body[3].should.have.property('program');
+        response.body[3].program.should.equal('FE');
+        response.body[3].should.have.property('enrolled');
+        response.body[3].enrolled.should.equal(true);
+        done();
+      });
+    });
+  });
+});
 ```
 
 Let's run the tests - we get:
@@ -321,9 +323,9 @@ Well of course. We expect a 201 response, but we get a 404 because we haven't cr
 
 ```javascript
 app.post('/api/v1/students', (request, response) => {
-  app.locals.students.push(request.body) // No validation here...
-  response.status(201).json(app.locals.students[app.locals.students.length - 1])
-})
+  app.locals.students.push(request.body); // No validation here...
+  response.status(201).json(app.locals.students[app.locals.students.length - 1]);
+});
 ```
 
 Now we get this abysmal error:
@@ -347,8 +349,8 @@ Seems like everything should work... However, if we `console.log()` the `request
 Add this line to the `server.js` file:
 
 ```javascript
-const bodyParser = require('body-parser')
-app.use(bodyParser.json())
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 ```
 
 We're using `.json()` because we expect the content in the body to be JSON. Run the tests again, and everything should pass.
@@ -368,11 +370,11 @@ it('should not create a record with missing data', (done) => {
     program: 'FE' // Missing the enrolled property and value
   })
   .end((err, response) => {
-    response.should.have.status(422)
-    response.body.error.should.equal('You are missing data!')
-    done()
-  })
-})
+    response.should.have.status(422);
+    response.body.error.should.equal('You are missing data!');
+    done();
+  });
+});
 ```
 
 We need to add some validation in our POST route to see if the request body object contains all the information we need. Let's modify the route:
@@ -380,18 +382,18 @@ We need to add some validation in our POST route to see if the request body obje
 ```javascript
 app.post('/api/v1/students', (request, response) => {
   let result = ['lastname', 'program', 'enrolled'].every((prop) => {
-    return request.body.hasOwnProperty(prop)
-  })
+    return request.body.hasOwnProperty(prop);
+  });
 
   if (result) {
-    app.locals.students.push(request.body)
-    response.status(201).json(app.locals.students[app.locals.students.length - 1])
+    app.locals.students.push(request.body);
+    response.status(201).json(app.locals.students[app.locals.students.length - 1]);
   } else {
     response.status(422).send({
-      error: 'You are missing data!'
+      error: 'You are missing data!';
     })
   }
-})
+});
 ```
 
 When you're working with a database, your database ORM or database engine will most likely have some built-in validation for you, but you will still have to handle the response.
@@ -422,20 +424,20 @@ Let's write these methods within the `describe('API Routes', ...` block.
 beforeEach((done) => {
   // Would normally run run your seed(s), which includes clearing all records
   // from each of the tables
-  server.locals.students = students
-  done()
-})
+  server.locals.students = students;
+  done();
+});
 
 afterEach((done) => {
   // Would normally delete records in tables and seed database
-  done()
-})
+  done();
+});
 ```
 
 And at the top of the `routes.spec.js` file:
 
 ```javascript
-const students = require('../students')
+const students = require('../students');
 ```
 
 ### File summary
@@ -443,69 +445,69 @@ const students = require('../students')
 By the end of it all, this is what the `routes.spec.js` file looks like:
 
 ```javascript
-const chai = require('chai')
-const should = chai.should()
-const chaiHttp = require('chai-http')
-const server = require('../server')
-const students = require('../students')
+const chai = require('chai');
+const should = chai.should();
+const chaiHttp = require('chai-http');
+const server = require('../server');
+const students = require('../students');
 
-chai.use(chaiHttp)
+chai.use(chaiHttp);
 
 describe('Client Routes', () => {
   it('should return the homepage with text', (done) => {
     chai.request(server)
     .get('/')
     .end((err, response) => {
-      response.should.have.status(200)
-      response.should.be.html
-      response.res.text.should.equal('We\'re going to test all the routes!')
-      done()
-    })
-  })
+      response.should.have.status(200);
+      response.should.be.html;
+      response.res.text.should.equal('We\'re going to test all the routes!');
+      done();
+    });
+  });
 
-  it('should return a 404 for a non existent route', (done) => {
+  it('should return a 404 for a route that does not exist', (done) => {
     chai.request(server)
     .get('/sad')
     .end((err, response) => {
-      response.should.have.status(404)
-      done()
-    })
-  })
-})
+      response.should.have.status(404);
+      done();
+    });
+  });
+});
 
 describe('API Routes', () => {
 
   beforeEach((done) => {
     // Would normally run run your seed(s), which includes clearing all records
     // from each of the tables
-    server.locals.students = students
-    done()
-  })
+    server.locals.students = students;
+    done();
+  });
 
   afterEach((done) => {
     // Would normally delete records in tables and seed database
-    done()
-  })
+    done();
+  });
 
   describe('GET /api/v1/students', () => {
     it('should return all of the students', (done) => {
       chai.request(server)
       .get('/api/v1/students')
       .end((err, response) => {
-        response.should.have.status(200)
-        response.should.be.json
-        response.body.should.be.a('array')
-        response.body.length.should.equal(3)
-        response.body[0].should.have.property('lastname')
-        response.body[0].lastname.should.equal('Turing')
-        response.body[0].should.have.property('program')
-        response.body[0].program.should.equal('FE')
-        response.body[0].should.have.property('enrolled')
-        response.body[0].enrolled.should.equal(true)
-        done()
-      })
-    })
-  })
+        response.should.have.status(200);
+        response.should.be.json;
+        response.body.should.be.a('array');
+        response.body.length.should.equal(3);
+        response.body[0].should.have.property('lastname');
+        response.body[0].lastname.should.equal('Turing');
+        response.body[0].should.have.property('program');
+        response.body[0].program.should.equal('FE');
+        response.body[0].should.have.property('enrolled');
+        response.body[0].enrolled.should.equal(true);
+        done();
+      });
+    });
+  });
 
   describe('POST /api/v1/students', () => {
     it('should create a new student', (done) => {
@@ -517,31 +519,31 @@ describe('API Routes', () => {
         enrolled: true
       })
       .end((err, response) => {
-        response.should.have.status(201) // Different status here
-        response.body.should.be.a('object')
-        response.body.should.have.property('lastname')
-        response.body.lastname.should.equal('Knuth')
-        response.body.should.have.property('program')
-        response.body.program.should.equal('FE')
-        response.body.should.have.property('enrolled')
-        response.body.enrolled.should.equal(true)
+        response.should.have.status(201); // Different status here
+        response.body.should.be.a('object');
+        response.body.should.have.property('lastname');
+        response.body.lastname.should.equal('Knuth');
+        response.body.should.have.property('program');
+        response.body.program.should.equal('FE');
+        response.body.should.have.property('enrolled');
+        response.body.enrolled.should.equal(true);
         chai.request(server) // Can also test that it is actually in the database
         .get('/api/v1/students')
         .end((err, response) => {
-          response.should.have.status(200)
-          response.should.be.json
-          response.body.should.be.a('array')
-          response.body.length.should.equal(4)
-          response.body[3].should.have.property('lastname')
-          response.body[3].lastname.should.equal('Knuth')
-          response.body[3].should.have.property('program')
-          response.body[3].program.should.equal('FE')
-          response.body[3].should.have.property('enrolled')
-          response.body[3].enrolled.should.equal(true)
-          done()
-        })
-      })
-    })
+          response.should.have.status(200);
+          response.should.be.json;
+          response.body.should.be.a('array');
+          response.body.length.should.equal(4);
+          response.body[3].should.have.property('lastname');
+          response.body[3].lastname.should.equal('Knuth');
+          response.body[3].should.have.property('program');
+          response.body[3].program.should.equal('FE');
+          response.body[3].should.have.property('enrolled');
+          response.body[3].enrolled.should.equal(true);
+          done();
+        });
+      });
+    });
 
     it('should not create a record with missing data', (done) => {
       chai.request(server)
@@ -551,57 +553,57 @@ describe('API Routes', () => {
         program: 'FE' // Missing the enrolled property and value
       })
       .end((err, response) => {
-        response.should.have.status(422)
-        response.body.error.should.equal('You are missing data!')
-        done()
-      })
-    })
-  })
-})
+        response.should.have.status(422);
+        response.body.error.should.equal('You are missing data!');
+        done();
+      });
+    });
+  });
+});
 ```
 
 Your `server.js` file should look something like this:
 
 ```javascript
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-const bodyParser = require('body-parser')
-app.use(bodyParser.json())
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
 
 
-app.set('port', process.env.PORT || 3000)
-app.locals.title = 'Test Express'
-app.locals.students = require('./students')
+app.set('port', process.env.PORT || 3000);
+app.locals.title = 'Test Express';
+app.locals.students = require('./students');
 
 app.get('/', (request, response) => {
-  response.send('We\'re going to test all the routes!')
-})
+  response.send('We\'re going to test all the routes!');
+});
 
 app.get('/api/v1/students', (request, response) => {
-  response.status(200).json(app.locals.students)
-})
+  response.status(200).json(app.locals.students);
+});
 
 app.post('/api/v1/students', (request, response) => {
   let result = ['lastname', 'program', 'enrolled'].every((prop) => {
-    return request.body.hasOwnProperty(prop)
-  })
+    return request.body.hasOwnProperty(prop);
+  });
 
   if (result) {
-    app.locals.students.push(request.body)
-    response.status(201).json(app.locals.students[app.locals.students.length - 1])
+    app.locals.students.push(request.body);
+    response.status(201).json(app.locals.students[app.locals.students.length - 1]);
   } else {
     response.status(422).send({
-      error: 'You are missing data!'
+      error: 'You are missing data!';
     })
   }
-})
+});
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`)
-})
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
+});
 
-module.exports = app
+module.exports = app;
 ```
 
 ## On Your Own - In True TDD Style
