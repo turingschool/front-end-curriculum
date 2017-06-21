@@ -23,6 +23,7 @@ Notice the complexity. With the back end added to your app, there are many more 
 5. DB clean up (if testing route that interacts with the database)
 
 What about the response should we test?
+
   * The status code
   * What content type do we expect? (json, plain text)
   * What is the data structure of the response body? (object, array)
@@ -261,7 +262,7 @@ Test Express is running on 3000.
 
 ### Test a POST Request
 
-For a post request, we need to not only send the request to the correct endpoint, but we also need to give some information in the body of the request.
+For a post request, we need to not only send the request to the correct endpoint, but we also need to give some information in the body of the post request.
 
 In another `describe` block, let's write the test first:
 
@@ -319,7 +320,7 @@ Let's run the tests - we get:
     at process._tickCallback (internal/process/next_tick.js:98:9)
 ```
 
-Well of course. We expect a 201 response, but we get a 404 because we haven't created the route in our `server.js` file. Let's do that. In the `server.js` file, add:
+Well of course. We expect a 201 response from the post request, but we get a 404 because we haven't created the route in our `server.js` file. Let's do that. In the `server.js` file, add:
 
 ```javascript
 app.post('/api/v1/students', (request, response) => {
@@ -328,7 +329,7 @@ app.post('/api/v1/students', (request, response) => {
 });
 ```
 
-Now we get this abysmal error:
+Now we get this _abysmal_ error:
 
 ```shell
 1 failing
@@ -344,7 +345,7 @@ Now we get this abysmal error:
       at process._tickCallback (internal/process/next_tick.js:98:9)
 ```
 
-Seems like everything should work... However, if we `console.log()` the `request.body` in the route, we get `undefined`. Turns out the Express needs help parsing the body of a request. There is a package called, you guessed it, `body-parser` that can help us with this. It's already in the `package.json` file.
+Seems like everything should work...right? However, if we `console.log()` the `request.body` in the route, we get `undefined`. Turns out Express needs help parsing the body of a request. There is a package called, you guessed it, `body-parser` that can help us with this. It's already in the `package.json` file so you don't need to install it - just bring it in to the server file.
 
 Add this line to the `server.js` file:
 
@@ -357,7 +358,7 @@ We're using `.json()` because we expect the content in the body to be JSON. Run 
 
 ### POST Sad Path
 
-What if we make a POST request and don't specify all of the properties of a student? For instance, in the request body if we specify `{lastname: 'Knuth', program: 'FE'}`, but we leave out the `enrolled` property and value, the new record should not be created.
+What if we make a POST request and don't specify all of the properties of a student? For instance, in the request body if we specify `{lastname: 'Knuth', program: 'FE'}`, but we leave out the `enrolled` property and value, the new record should not be created. We don't want unintended null values in our database!
 
 We need to design our server so that it does not accept this kind of situation with missing data. Let's write the test!
 
@@ -396,40 +397,39 @@ app.post('/api/v1/students', (request, response) => {
 });
 ```
 
+This isn't a perfect validation because we're not testing for null values even when all the properties are specified in the post request body.
+
 When you're working with a database, your database ORM or database engine will most likely have some built-in validation for you, but you will still have to handle the response.
 
 Run the test suite again, and all of the tests should be passing.
 
 #### beforeEach and afterEach
 
-Server-side tests should run in isolation and each test should not leave artifacts in the database. Therefore, we need to clean out the database after each test and prepare the database before each test.
+Server-side tests should run in isolation and each test should not leave artifacts in the database. For instance, the first test in the test file should not influence what happens with the fifth test. Therefore, we need to run migrations before we run the test suite and reset the database before each test.
 
-If you're using a "real" database, you will typically need to:
+If you're using a "real" database like postgresql with knex, you will typically need to:
 
-If you have any new migrations, run the migrations for your test environment.
+ 1. Before all tests, run the migrations for your test environment and seed the test database
+ 2. Before each test:
+  * Clean out the database (delete records in all tables)
+  * Seed your database with records
 
-Before each test:
-  1. Clean out the database (delete records in all tables (not drop))
-  2. Seed your database with records
+For this lesson, we're not using a real database, so we can just reset `app.locals` to the original data from the `students.js` file.
 
-After every test, delete records in all tables and seed the database.
-
-For this lesson, we are not using a real database, so we can just reset `app.locals` to the original data from the `students.js` file, or in this case, the server file is required at set to the variable `server`.
-
-With our testing structure, we have built-in methods called `beforeEach` and `afterEach`, and they run before each test and after each test, respectively. There is a caveat with `afterEach`. If a test fails, the `afterEach` will _not_ run after that test. So be sure to put your database in a good state for every test even if one fails.
+With our testing structure, we have built-in methods called `before` and `beforeEach`, and they run before all tests and before each test in the describe block they are scoped in, respectively. There is also `after` and `afterEach`, but there is a caveat with `afterEach`. If a test fails, the `afterEach` will _not_ run after that test, which can leave your database in a bad state. So be sure to put your database in a good state for every test even if one fails.
 
 Let's write these methods within the `describe('API Routes', ...` block.
 
 ```javascript
+before((done) => {
+  // Run migrations and seeds for test database
+  done()
+});
+
 beforeEach((done) => {
   // Would normally run run your seed(s), which includes clearing all records
   // from each of the tables
   server.locals.students = students;
-  done();
-});
-
-afterEach((done) => {
-  // Would normally delete records in tables and seed database
   done();
 });
 ```
@@ -477,15 +477,15 @@ describe('Client Routes', () => {
 
 describe('API Routes', () => {
 
+  before((done) => {
+    // Run migrations and seeds for test database
+    done()
+  });
+
   beforeEach((done) => {
     // Would normally run run your seed(s), which includes clearing all records
     // from each of the tables
     server.locals.students = students;
-    done();
-  });
-
-  afterEach((done) => {
-    // Would normally delete records in tables and seed database
     done();
   });
 
@@ -608,9 +608,10 @@ module.exports = app;
 
 ## On Your Own - In True TDD Style
 
-Add tests for:
+Add tests for these requests, and then implement the routes:
 
-* GET request for one student based on their name
+* GET request for one student based on their name (happy path)
   - Normally, this will be an ID, but here we'll use the name of the student. The route would look something like `/api/v1/students/knuth`
-* PUT request to change a student's information
-* DELETE request to _destroy_ a student
+* GET request for one student based on their name that does not exist in the database (sad path)
+* PUT request to change a student's information (happy path)
+* DELETE request to _destroy_ a student (happy path)
