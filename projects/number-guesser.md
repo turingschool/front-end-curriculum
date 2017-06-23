@@ -76,63 +76,70 @@ Color and font spec:
 
 ## Functional Expectations
 
-[] Novice: Application meets all of the expectations of phase one.
-[] Advanced Beginner: Application meets all of the expectations of phase two.
-[] Proficient: Application meets all of the expectations of phase three.
-[] Exceptional: Application meets all of the expectations of phase three and one or more of the extensions.
+- Novice: Application meets all of the expectations of phase one.
+- Advanced Beginner: Application meets all of the expectations of phase two.
+- Proficient: Application meets all of the expectations of phase three.
+- Exceptional: Application meets all of the expectations of phase three and one or more of the extensions.
 
 <br>
 
 ## COMP RECREATION / DESIGN
-[] Novice
-[] Advanced Beginner
-[] Proficient
-[] Exceptional
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
 
 <br>
 
 ## HTML
-[] Novice
-[] Advanced Beginner
-[] Proficient
-[] Exceptional
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
 
 <br>
 
 ##  CSS
-[] Novice
-[] Advanced Beginner
-[] Proficient
-[] Exceptional
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
 
 <br>
 
 ##  JS/jQuery
-[] Novice
-[] Advanced Beginner
-[] Proficient
-[] Exceptional
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
 
 <br>
 
 ## Git/Github
-[] Novice
-[] Advanced Beginner
-[] Proficient
-[] Exceptional
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
 
 <br>
 
 ## Pairing
-[] Novice
-[] Advanced Beginner
-[] Proficient
-[] Exceptional
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
 
 <br>
 
 ## Surprise and Delight (reminder: have fun!)
-[] Unicorn Rainbows
-[] Hot Fire
-[] Sparkles
-[] Magic
+
+- Unicorn Rainbows
+- Hot Fire
+- Sparkles
+- Magic
