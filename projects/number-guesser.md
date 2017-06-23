@@ -74,6 +74,10 @@ Color and font spec:
 
 ------------------------------------------------------------------
 
+# Scoring Rubric
+
+Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/syllabus-eval-progression.html) for more details on how we evaluate your progression!
+
 ## Functional Expectations
 
 - Novice: Application meets all of the expectations of phase one.
