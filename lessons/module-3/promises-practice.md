@@ -61,25 +61,25 @@ console.log(bar(7));
 
 ```
 
-  So what we have is a function `foo(b)` that returns `10 + b + 11`.
-  Then there is `bar(x)` that returns `foo(x * y)`.
-  Our console.log ends up calling bar(7)
+So what we have is a function `foo(b)` that returns `10 + b + 11`.
+Then there is `bar(x)` that returns `foo(x * y)`.
+Our console.log ends up calling bar(7)
 
-  Lets watch the call stack:
+Lets watch the call stack:
 
-  ![call-stack](http://g.recordit.co/Hov4MmHhX2.gif)
+![call-stack](http://g.recordit.co/Hov4MmHhX2.gif)
 
-  As we see the stack starts by pushing `console.log(bar(7))` because it was the first executed code we have. Which then calls `bar(7)` to execute `foo(x * y)`
-  to execute the inner operation `x * y`. So far we have just been pushing things to the stack. Until after `x * y` has finished executing then it gets popped off!
+As we see the stack starts by pushing `console.log(bar(7))` because it was the first executed code we have. Which then calls `bar(7)` to execute `foo(x * y)`
+to execute the inner operation `x * y`. So far we have just been pushing things to the stack. Until after `x * y` has finished executing then it gets popped off!
 
-  Now we continue on with `foo(x * y)` which pushes `a + b + 11` to the top of the stack to immediately get popped off leaving `a + b` to be pushed to the top. Then finishes off by popping all the rest of the stack. This will finish by returning `42` to the console.
+Now we continue on with `foo(x * y)` which pushes `a + b + 11` to the top of the stack to immediately get popped off leaving `a + b` to be pushed to the top. Then finishes off by popping all the rest of the stack. This will finish by returning `42` to the console.
 
-  Well that was a lot. So I suggest you go use the tool above and create something a little simpler!
+Well that was a lot. So I suggest you go use the tool above and create something a little simpler!
 
-  Three things to note about our JS call stack
-  * `Single threaded:` Threads are basic units of CPU utilization.
-  * `Synchronous:` JavaScript call stack carries out tasks to completion instead of task switching and the same holds for events.
-  * `Non-blocking:` Blocking occurs when the application state is suspended as a thread runs.
+Three things to note about our JS call stack
+* `Single threaded:` Threads are basic units of CPU utilization.
+* `Synchronous:` JavaScript call stack carries out tasks to completion instead of task switching and the same holds for events.
+* `Non-blocking:` Blocking occurs when the application state is suspended as a thread runs.
 
 
 #### Non-blocking
@@ -138,7 +138,7 @@ $.get('http://localhost:3001/api/frontend-staff', (info) => {
 
 It will actually load the page seamlessly. Yet if you look at the console log you will see each one come in individually(I didn't log the bio info just because of the length).
 
-![console.log](./public/log.png)
+![console.log](https://raw.githubusercontent.com/turingschool-examples/promises-practice/master/public/log.png)
 
 You can see that each one response comes in separately, which could be a bad UX if sizing and images came in at all different times. Especially if there was heaver data coming in. I could put a setTimeout() let it wait 2 seconds and then setState but then we would be bogging down the entire task queue. Even then we don't actually know that all of them have come in! So lets move on to uses promises!
 
