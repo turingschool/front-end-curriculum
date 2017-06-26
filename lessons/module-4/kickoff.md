@@ -8,21 +8,25 @@ title: Module 4 KickOff
 
 Learning technologies like node and express will round out your skill set and make you a more flexible developer. Front-end developers still need a solid understanding of how to work with the back-end in order to be successful.
 
-### Reinforcement of Fundamentals
-
-We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. Many of these challenges will better prepare you for the technical interviews you'll be going on.
-
-### Understanding the Latest & Greatest
+### Progressive Web Apps & Upcoming APIs
 
 This module will introduce some of the latest APIs and technologies that are just barely gaining traction - service workers, JSON web tokens, web sockets, etc. The goal with these isn't necessarily to walk away being able to implement them from start to finish, but rather be able to understand and discuss them at a high-level. We want you to understand the hows, whys, and whats of these technologies rather than the exact technical details. Having this knowledge and exposure will set you apart from other junior developers and prepare you for what's to come in front-end development.
 
-## Rules
+### Reinforcement of Fundamentals & Real World Prep
 
-### No Cheating
+We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. Many of these challenges will better prepare you for the technical interviews you'll be going on.
 
-There is a difference between collaborating with your peers and copying someone else's codebase. We can tell. Anyone caught plagiarizing someone else's work will receive an automatic failure for that assignment. Additional assignments will be required to make up for the failure and graduate.
+## Things to Keep In Mind
 
-### Honest Effort with Debugging
+### 🙅 Senioritis
+
+You're at the home stretch! Finish strong. It is very easy to fall behind in this mod if you zone out for a lesson or two. 
+
+### 🙅 Copy Pasting
+
+There is a difference between collaborating with your peers and copying someone else's codebase. We can tell. Anyone caught plagiarizing someone else's work will receive an automatic failure for that assignment. Additional assignments will be required to make up for the failure and graduate. You get out of this what you put in; you'll learn nothing from copy pasta.
+
+### 💪 Debugging builds Character
 
 By now, you should have enough experience and resources to do more problem solving with less hand-holding than in the past. Try to solve the errors you run into before asking for help. Instructors should not be pulled in to pair with you before you've done your due diligence in evaluating the issue.
 
@@ -36,13 +40,13 @@ Students must earn a score of `3` or greater in *each* category of the final ass
 
 ### Independent Work
 
-* Homework
+* Homework (~4 assignments)
 * Build-Your-Own-Backend
 
 ### Group Work
 
 * Jet Fuel
-* Imposter Syndrome
+* House of Vars
 * Capstone Project
 
 ### Career Development

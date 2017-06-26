@@ -56,15 +56,27 @@ To this end, make sure to include sufficient UX to allow the user to fully inter
 
 ## Code organization
 
-Your game should make use of one or more classes, the exact number will depend on which game you choose and your design choices.
+Your game should make use of at least two classes, the exact number will depend on which game you choose and your design choices.
+
+You should use [inheritance](https://www.sitepoint.com/understanding-ecmascript-6-class-inheritance/) with your classes. (i.e. a parent class should have properties that might be shared by several other child classes. The child classes should inherit those properties from the parent class.)
 
 Each class should have its own file with the filename capitalized. The class should be capitalized as well. Only code that is a part of this class should be in this file.
 
 i.e.
 ```
-// Car.js
-function Car (name) {
-  this.name = name;
+// Person.js
+class Person {
+  constructor (name) {
+    this.name = name;
+  }
+}
+
+// Hoodlum.js
+class Hoodlum extends Person {
+  constructor (name, skills) {
+    super(name);
+    this.skills = skills;
+  }
 }
 ```
 

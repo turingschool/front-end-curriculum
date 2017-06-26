@@ -15,13 +15,12 @@ By the end of this lesson, you will:
 
 ## HTTP, REST and Building a Simple Node Server
 
-### Back-end Primer
 Even as a front-end developer, it's important to have a basic understanding of what's going on behind the scenes in the back-end. You'll often be working with back-end developers on your team that will have a huge effect on how your application interacts with its data. The better you understand the back-end, the more prepared you'll be to build an application on top of it.
 
 ### The Server
-There are many different types of servers, but when we are building web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably, or simply shortened to "server".
+A server is simply a computer or program that handles sending, retrieving and manipulating resources for a client. There are many different types of servers, but when we are building web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably, or simply shortened to "server".
 
-An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, or data. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the 'Network' tab of our developer tools:
+An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, data, etc. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the 'Network' tab of our developer tools:
 
 ![network requests][network-requests]
 
@@ -46,34 +45,116 @@ While the syntax for each of these requests looks significantly different, they 
 
 [url-pic]: /assets/images/lessons/http-rest-node-server/url-pic.gif
 
-When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints. We will look at a few backend choices later, but first let's talk about what they all share in common.
+When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints.
+
+*Note on HTTP: It is simply the protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.*
+
+
+### Student Discussion (5 minutes)
+Grab a partner and discuss what it was like to write server-side code. What was unfamiliar to you? What was familiar to you? Where there any limitations in debugging tools that you are used to using and how did that effect your ability to solve problems?
+
+
+### Back-End Frameworks
+Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
+
+For the following lessons, we'll focus on using [node](https://nodejs.org/en/) and [express](http://expressjs.com/) for building a back-end. We will use Node today to create a simple HTTP server with several endpoints.
+
+#### NodeJS
+What are the benefits/disadvantages of using Node versus other server technologies?
+
+Awesomeness of Node includes:
+
+* Everything in JS
+* Fast, non-blocking code. Wait for your slow operations (file system, database I/O operations)
+* Real-time communications with sockets (run on TCP instead of HTTP)
+* Not multi-threaded (good for memory)
+
+Disadvantages of Node:
+
+* Lack of libraries (No ORM, image processing)
+* Frequent changes to Node API
+* Gotta deal with async
+* Not multi-threaded (bad for computations)
+
+In the past, we've used Node.js to build our client-side applications. We've even used it to spin up development servers to make it easier to develop our client-side applications. We've used Node.js as a tool, but we haven't written much for the platform itself. Luckily, given the fact that they both share some common technologies, we're already in possession of a bit of pre-requisite knowledge.
+
+Here are some things we already know:
+
+- JavaScript
+- CommonJS module system (`require` and `module.exports`)
+- npm
+- `package.json`
+
+
+
+### Practice: Handling Request in Node.js
+
+We're going to set up a simple node server for handling a dataset of messages. Each message contains a `user` and a `message` property. Previously you may have worked with the Express framework on the server-side. Today we will just be using node, to remind ourselves that life is sometimes harder without frameworks.
+
+If you don't already have [Postman](https://www.getpostman.com/), install it now.
+
+Nodemon will also be helpful. Nodemon is an npm library that will auto-reload your server any time you make changes so you can see them take effect immediately. Without nodemon, you would have to restart your server every time you made a change to your code. You can install nodemon globally with:
+
+```bash
+npm i -g nodemon
+```
+
+Next, create and cd into a new directory:
+
+```bash
+mkdir messages && cd messages
+```
+
+Auto-generate a `package.json` file with:
+
+```bash
+npm init --yes
+```
+
+#### Requiring Built-in Modules
+
+Node has an intentionally small standard library. The standard library is documented in the [Node API Documentation][apidocs].
+
+[apidocs]: http://nodejs.org/documentation/api/
+
+The standard library can be required from any Node.js program. You do not have to give a relative path. Today we'll want to include the HTTP and URL libraries:
+
+``` js
+const http = require('http');
+const url = require('url');
+```
+
+### A Simple HTTP Server
+
+Create a file called `server.js` and require in the libraries we need:
+
+```js
+const http = require("http");
+const url = require('url');
+const server = http.createServer();
+```
+
+The built-in `http.Server` module inherits from `EventEmitter`. This means when we create our server, it can listen and respond to particular events, such as requests:
+
+```js
+server.listen(3000, () => {
+  console.log('The HTTP server is listening at Port 3000.');
+});
+
+server.on('request', (request, response) => {
+  response.writeHead(200, { 'Content-Type': 'text/plain' });
+  response.write('Hello World\n');
+  response.end();
+});
+```
+
+When the server receives a request, a "request" event is emitted and the server responds with a simple HTTP response.
+
+Now run your server in your terminal with: `nodemon server.js`. Using POSTMAN, make a GET request to `localhost:3000` and see what happens. You should see a 'Hello World' response returned.
+
 
 ### Student Discussion (5 minutes)
 In small groups, discuss what types of requests and responses you sent and received in your intermission homework. What did your client side code request? How did your server-side code respond to those requests? What kinds of data did you respond with and how was that data consumed?
-
-#### Hypertext transfer protocol
-The protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.
-
-#### RESTful API design
-* REST stands for representational state transfer. What this means is that web resources communicate using a set of stateless, uniform operations.
-
-The six architectural constraints are:
-
-1. Client-server - Separation of GUI and data
-2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
-3. Cacheable - Server responses are defined as cacheable or not. (Speeds up future interactions)
-4. Layered system - Modularity, each 'layer' serves only a single high-level purpose
-5. Code on demand - (i.e. execute JS script tag within HTML document)
-6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
-
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, Destroy) are as follows:
-
----
-1. GET - Retrieve information identified by the request
-2. POST - Create a new resource
-3. PUT - Fully update a specific resource in its entirety
-4. PATCH - Update only a portion of a specific resource
-5. DELETE - Destroy an entire specific resource by the request
 
 
 ### The Inner Workings of a Request and a Response
@@ -122,7 +203,7 @@ fetch('/api/v1/books', {
 });
 ```
 
-This is an example of sending a body with your request so that the server can parse the data in it and update a resource based on the resulting body object. When the resource is successfully updated, the server will send a response with a status code of `200`, and usually a body object that contains the entire resource, reflected the new changes that were just made:
+This is an example of sending a body with your request so that the server can parse the data in it and update a resource based on the resulting body object. When the resource is successfully updated, the server will send a response with a status code of `200`, and usually a body object that contains the entire resource, reflecting the new changes that were just made:
 
 ```js
 // response body
@@ -134,145 +215,67 @@ This is an example of sending a body with your request so that the server can pa
 }
 ```
 
-#### Misc. other useful concepts
+## RESTful API design
 
-#### IP address
-An IP address is the identification of a host or network interface and allows us to find the address of a location of another host or network interface.  The current protocol for IPs is IPv4, which is still in use today using a 32-bit system. But lots of people use the internet and we are running out of IP addresses. Enter IPv6, which is slowly being phased in:
+REST stands for representational state transfer. This means that web resources communicate using a set of stateless, uniform operations.
 
-![32 ip][32-ip]
-![128 ip][128-ip]
+The six architectural constraints of REST are:
 
-[32-ip]: /assets/images/lessons/http-rest-node-server/32-ip.png
-[128-ip]: /assets/images/lessons/http-rest-node-server/128-ip.png
+1. Client-server - Separation of GUI and data
+2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
+3. Cacheable - Server responses are defined as cacheable or not. (Speeds up future interactions)
+4. Layered system - Modularity, each 'layer' serves only a single high-level purpose
+5. Code on demand - (i.e. execute JS script tag within HTML document)
+6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
+
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, Destroy) are as follows:
+
+---
+1. GET - Retrieve information identified by the request
+2. POST - Create a new resource
+3. PUT - Fully update a specific resource in its entirety
+4. PATCH - Update only a portion of a specific resource
+5. DELETE - Destroy an entire specific resource by the request
 
 
-#### Domain Name System
-Since humans aren't computers, we need human-readable forms (domains) to remember URLs. We use a Domain Name System to map IP addresses to domain names. DNS servers contain massive databases of these mappings, and different organizations own the DNS based on the domain. Your OS caches domains that you visit, so next time you go to the same URL, it doesn't have to go looking for it in a DNS. DNS servers are often selected by configuration settings sent by your Internet service provider (ISP), WiFi network, modem or router that assigns your computer's network address.
+### Practice: Handling Multiple Requests in Node.js
 
-### Back-End Frameworks
-Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
-
-For the following lessons, we'll focus on using [node](https://nodejs.org/en/) and [express](http://expressjs.com/) for building a back-end. We will use Node today to create a simple HTTP server with several endpoints.
-
-### Student Discussion (5 minutes)
-Grab a partner and discuss what it was like to write server-side code. What was unfamiliar to you? Where there any limitations in debugging tools that you are used to using and how did that effect your ability to solve problems?
-
-#### NodeJS
-What are the benefits/disadvantages of using Node versus other server technologies?
-
-![node server][node-server]
-
-![node event loop][node-event-loop]
-
-[node-server]: /assets/images/lessons/http-rest-node-server/node-server.png
-[node-event-loop]: /assets/images/lessons/http-rest-node-server/node-event-loop.png
-
-Awesomeness of Node includes:
-
-* Everything in JS
-* Fast, non-blocking code. Wait for your slow operations (file system, database I/O operations)
-* Real-time communications with sockets (run on TCP instead of HTTP)
-* Not multi-threaded (good for memory)
-
-Disadvantages of Node:
-
-* Lack of libraries (No ORM, image processing)
-* Frequent changes to Node API
-* Gotta deal with async
-* Not multi-threaded (bad for computations)
-
-In the past, we've used Node.js to build our client-side applications. We've even used it to spin up development servers to make it easier to develop our client-side applications. We've used Node.js as a tool, but we haven't written much for the platform itself. Luckily, given the fact that they both share some common technologies, we're already in possession of a bit of pre-requisite knowledge.
-
-Here are some things we already know:
-
-- JavaScript
-- CommonJS module system (`require` and `module.exports`)
-- npm
-- `package.json`
-
-## Your First Node.js Application
-
-Let's make a new directory:
+Now let's make our server a bit more useful. First we'll want to set up some initial messages for our server to interact with:
 
 ```js
-mkdir node-example && cd node-example
+let messages = [
+  { 'id': 1, 'user': 'brittany storoz', 'message': 'hi there!' },
+  { 'id': 2, 'user': 'bob loblaw', 'message': 'check out my law blog' },
+  { 'id': 3, 'user': 'lorem ipsum', 'message': 'dolor set amet' }
+];
 ```
 
-Let's get a basic `package.json` up and running:
+And we'll edit our request handler to handle the RESTful HTTP methods: GET and POST.
 
 ```js
-npm init --yes
-```
-
-### Requiring Built-in Modules
-
-Node has an intentionally small standard library. The standard library is documented in the [Node API Documentation][apidocs].
-
-[apidocs]: http://nodejs.org/documentation/api/
-
-The standard library can be required from any Node.js program. You do not have to give a relative path. To use the HTTP library, require it as follows:
-
-``` js
-const http = require('http');
-```
-
-### A Simple HTTP Server
-
-Create a file `server.js`.
-
-The built-in `http.Server` module inherits from `EventEmitter`.
-
-```js
-const http = require("http");
-const server = http.createServer()
-
-server.listen(3000, () => {
-  console.log('The HTTP server is listening at Port 3000.');
-});
-
 server.on('request', (request, response) => {
-  response.writeHead(200, { 'Content-Type': 'text/plain' });
-  response.write('Hello World\n');
-  response.end();
+  if (request.method === 'GET') {
+    getAllMessages(response);
+  }
+
+  else if (request.method === 'POST') {
+    let newMessage = { 'id': new Date() };
+
+    request.on('data', (data) => {
+      newMessage = Object.assign(newMessage, JSON.parse(data));
+    });
+
+    request.on('end', () => {
+      addMessage(newMessage, response);
+    });
+  }
 });
 ```
 
-When the server receives a request, a "request" event is emitted and the server responds with a simple HTTP response.
+Given the new functions we're calling (`getAllMessages` and `addMessage`), try to create these functions and have them send an appropriate response back to the client.
 
-Try it in your terminal `node server.js`
-
-In traditional web servers, a new thread is created every time a request is received. The program exits after the request is sent. In Node, your server runs on a single thread that waits for requests. This means that we can store data in variables and this state will persist between requests. Let's modify our server to take advantage of this:
-
-```js
-const http = require("http");
-const server = http.createServer()
-
-server.listen(3000, 'localhost');
-
-let counter = 0;
-
-server.on('request', (request, response) => {
-  response.writeHead(200, { "Content-Type": 'text/plain' });
-  response.write("Hello World\n");
-  response.write(`This is Request #${++counter}.\n`);
-  response.end();
-});
-```
-
-We can use `curl` to test the server.
-
-```sh
-curl http://localhost:3000/
-```
-
-Our server should respond with the following:
-
-```sh
-Hello World
-This is Request #1.
-```
-
-The request number will increment upon further requests. If you use a web browser, you'll notice that the request number might increment by 2 each time you make a request on the server. This is because some browsers make a request for a favicon each time as well.
+### Student Discussion (10 minutes)
+Go back to the 6 architectural contraints of a RESTful API and try to identify and articulate how your ChatBox server adheres to each one.
 
 ### Check For Understanding
 
