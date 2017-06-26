@@ -194,3 +194,7 @@ What relationship does this describe? How might it be modeled in a relational vs
 
 * [Relational vs. non-relational databases and how to choose](https://www.pluralsight.com/blog/software-development/relational-non-relational-databases)
 * [Data Modeling Techniques for Non-Relational Databases](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/)
+
+
+### Instructor Resources
+* [Data Modeling Code Examples](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/data-structure-storage.md)
