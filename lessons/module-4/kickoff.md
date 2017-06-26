@@ -8,13 +8,13 @@ title: Module 4 KickOff
 
 Learning technologies like node and express will round out your skill set and make you a more flexible developer. Front-end developers still need a solid understanding of how to work with the back-end in order to be successful.
 
-### Reinforcement of Fundamentals
-
-We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. Many of these challenges will better prepare you for the technical interviews you'll be going on.
-
-### Understanding the Latest & Greatest
+### Progressive Web Apps & Upcoming APIs
 
 This module will introduce some of the latest APIs and technologies that are just barely gaining traction - service workers, JSON web tokens, web sockets, etc. The goal with these isn't necessarily to walk away being able to implement them from start to finish, but rather be able to understand and discuss them at a high-level. We want you to understand the hows, whys, and whats of these technologies rather than the exact technical details. Having this knowledge and exposure will set you apart from other junior developers and prepare you for what's to come in front-end development.
+
+### Reinforcement of Fundamentals & Real World Prep
+
+We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. Many of these challenges will better prepare you for the technical interviews you'll be going on.
 
 ## Rules
 
