@@ -4,11 +4,12 @@ tags: promises, event loop, heap, task queue, single-threaded, non-blocking, cal
 module: 3
 ---
 
-## Promises Practice Repo
+## Promises Practice Repos
 
 This repo was created using `create-react-app`
 
-Clone this repo and the [promises-api]() repo down.
+Clone this repo and the [promises-api](https://github.com/turingschool-examples/promises-api) repo down.
+Clone this repo and the [promises-practice](https://github.com/turingschool-examples/promises-practice) repo down.
 
 For both:
 
@@ -110,7 +111,7 @@ Talk about a quick review! How about we do some codez?
 
 ### Lets dive into callbacks and promises!
 
-Hokay. So. lets build a Front-end Turing staff website. What we have so far is an api that serves up a collection of members [here](). We also have our client side code located on this [repo]().
+Hokay. So. lets build a Front-end Turing staff website. What we have so far is an api that serves up a collection of members [here](https://github.com/turingschool-examples/promises-api). We also have our client side code located on this [repo](https://github.com/turingschool-examples/promises-practice).
 
 What we want to do first is make a `request` which we now know is writing asynchronous code. Earlier we talked about the request call being put into the `heap` which stores that information until it is ready to run it's callback. Then it's transferred into the `task queue` till the `event loop` says it's ready to be put on the `call stack`
 
