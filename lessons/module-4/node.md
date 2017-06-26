@@ -108,7 +108,7 @@ mkdir messages && cd messages
 Auto-generate a `package.json` file with:
 
 ```bash
-npm install --yes
+npm init --yes
 ```
 
 #### Requiring Built-in Modules
