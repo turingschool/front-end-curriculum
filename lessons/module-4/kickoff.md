@@ -16,13 +16,17 @@ This module will introduce some of the latest APIs and technologies that are jus
 
 We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. Many of these challenges will better prepare you for the technical interviews you'll be going on.
 
-## Rules
+## Things to Keep In Mind
 
-### No Cheating
+### 🙅 Senioritis
 
-There is a difference between collaborating with your peers and copying someone else's codebase. We can tell. Anyone caught plagiarizing someone else's work will receive an automatic failure for that assignment. Additional assignments will be required to make up for the failure and graduate.
+You're at the home stretch! Finish strong. It is very easy to fall behind in this mod if you zone out for a lesson or two. 
 
-### Honest Effort with Debugging
+### 🙅 Copy Pasting
+
+There is a difference between collaborating with your peers and copying someone else's codebase. We can tell. Anyone caught plagiarizing someone else's work will receive an automatic failure for that assignment. Additional assignments will be required to make up for the failure and graduate. You get out of this what you put in; you'll learn nothing from copy pasta.
+
+### 💪 Debugging builds Character
 
 By now, you should have enough experience and resources to do more problem solving with less hand-holding than in the past. Try to solve the errors you run into before asking for help. Instructors should not be pulled in to pair with you before you've done your due diligence in evaluating the issue.
 
