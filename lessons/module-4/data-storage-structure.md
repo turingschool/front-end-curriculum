@@ -41,19 +41,23 @@ researchPapers: id, title, publicationDate
 footNotes: id, page, note, publicationId
 ```
 
-researchPapers:
-id | title            | publicationDate
-=========================================
-1  | Lorem Ispum      | 2345635682547
-2  | Dolor Set Amet   | 3568356245622
-3  | Consequetar Adip | 5795673456278
+#### researchPapers:
+
+id | title            | publicationDate |
+---|------------------|-----------------|
+1  | Lorem Ispum      | 2345635682547   |
+2  | Dolor Set Amet   | 3568356245622   |
+3  | Consequetar Adip | 5795673456278   |
  
-footNotes:
+#### footNotes:
+
 id | page | publicationId | note
-===================================
-1  | 26   | 1             | 'Dolor set amet consequetar'
-2  | 362  | 1             | 'Consequetar adipscing'
-3  | 75   | 2             | 'Lorem set amet'
+---|------|---------------|------------------------------|
+1  | 26   | 1             | 'Dolor set amet consequetar' |
+2  | 362  | 1             | 'Consequetar adipscing'      |
+3  | 75   | 2             | 'Lorem set amet'             |
+
+
 
 
 In a more familiar format, this data would likely be extracted from a database and come through an API endpoint as JSON data like so:
