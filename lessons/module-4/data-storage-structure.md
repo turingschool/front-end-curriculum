@@ -56,6 +56,37 @@ id | page | publicationId | note
 3  | 75   | 2             | 'Lorem set amet'
 
 
+In a more familiar format, this data would likely be extracted from a database and come through an API endpoint as JSON data like so:
+
+```js
+// Research Papers
+[{
+  'id': 1,
+  'title': 'Lorem Ipsum Dolor',
+  'publicationDate': 2345635682547
+}];
+
+// Footnotes
+[{
+  'id': 1
+  'pageNumber': 26,
+  'note': 'Dolor set amet consequetar',
+  'publicationId': 1
+},
+{
+  'id': 2
+  'pageNumber': 362,
+  'note': 'Consequetar adipscing',
+  'publicationId': 1
+},
+{
+  'id': 3
+  'pageNumber': 75,
+  'note': 'Lorem set amet',
+  'publicationId': 2
+}];
+```
+
 #### Terminology
 
 * **Schema** - A schema is the definition of your data structure. It provides a blueprint for the tables in your database and the relationships between them. Within each table, you also need to define the types of data that can be stored in each column
@@ -79,6 +110,36 @@ Non-relational databases:
 
 Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient). (Think back to the tradeoffs we learned about in the Firebase documentation.)
 
+The same data we saw above, coming from a non-relational database, might look like so:
+
+```js
+// One-to-many relationship - Non-Relational Database Setup
+// Notice: footnotes are stored as an array directly within
+// the research paper object, and they no longer need a key
+// to reference the publicationId
+
+// Research Papers
+[{
+  'id': 1,
+  'title': 'Lorem Ipsum Dolor',
+  'publicationDate': 1493673656502,
+  'footnotes': [{
+    'id': 1
+    'pageNumber': 26,
+    'note': 'Dolor set amet consequetar'
+  },
+  {
+    'id': 2
+    'pageNumber': 362,
+    'note': 'Consequetar adipscing'
+  },
+  {
+    'id': 3
+    'pageNumber': 75,
+    'note': 'Lorem set amet'
+  }]
+}];
+```
 
 ### Choosing a DBMS
 Choosing a Database Management System for your application is highly dependent on what kind of data you plan to store. It's important to map out what your ideal data structure might look like before choosing a DBMS. There are tools to help you visualize the schemas you create, such as [Schema Designer](http://ondras.zarovi.cz/sql/demo/)
