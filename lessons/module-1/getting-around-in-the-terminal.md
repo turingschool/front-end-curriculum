@@ -269,7 +269,27 @@ And paste it into the `aloha.txt` file: `pbpaste > aloha.txt`
 
 Now the `aloha.txt` file has the contents `Hello World!`.
 
-# Advanced Topics
+# Wrap Up
+
+From this point forward, you should not be using the Finder. Challenge yourself to use the terminal for navigation. It will be painful at first, but you can't get fast without starting slow.
+
+Being fast in the terminal will help you in your evaluations at Turing.
+
+Take some time to review this [cheatsheet of commands](https://gist.github.com/poopsplat/7195274)
+
+You don't need all of the commands, or even most of them - but try out a few that seem interesting to you.
+
+The documentation for each command in the terminal is available if you type `man [command]`. For instance, `man cd`. Once you're done viewing the manual page, enter `q` to exit.
+
+### If You Are Feeling Like You Need More Practice
+
+Use this short course to practice: [Learn the Command Line from Code Academy](https://www.codecademy.com/learn/learn-the-command-line)
+
+### If You Are Feeling Pretty Comfortable
+
+Continue on and complete the Advanced Topics section of this lesson below
+
+# Advanced Topics (Optional)
 
 ## Customizing Your Terminal
 
@@ -342,9 +362,3 @@ alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yello
 alias gc="git checkout"
 alias gs="git status"
 ```
-
-## Additional Resources
-
-If you want some more command line repetition and practice, then you can use this short course: [Learn the Command Line from Code Academy](https://www.codecademy.com/learn/learn-the-command-line)
-
-The documentation for each command in the terminal is available if you type `man [command]`. For instance, `man cd`. Once you're done viewing the manual page, enter `q` to exit.
