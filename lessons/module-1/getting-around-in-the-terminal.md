@@ -275,7 +275,7 @@ Now the `aloha.txt` file has the contents `Hello World!`.
 
 A little bit of increased efficiency in your use of the Unix environment and your editor can pay significant dividends over time. Let's experiment with customizing and adding to your terminal and editor.
 
-* You can check out dotfiles on GitHub to see how serious people get: http://dotfiles.github.com/
+* You can check out dotfiles on GitHub to see how serious people get: [http://dotfiles.github.com/](http://dotfiles.github.com/)
 
 ### The Essentials
 
