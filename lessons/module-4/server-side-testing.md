@@ -403,11 +403,23 @@ When you're working with a database, your database ORM or database engine will m
 
 Run the test suite again, and all of the tests should be passing.
 
-#### beforeEach and afterEach
+### What Could Go Wrong? More Sad Paths
+
+There are many more possibilities for route sad paths. Some could be:
+
+* The resource requested at the endpoint does not exist (`/api/v1/students/5`, but student #5 does not exist in the database)
+* For a POST request, the request does not contain all of the necessary data in the body (missing properties or null data)
+* For a PUT request, the request body has missing properties or null data
+* For a PUT request, a user tries to change a property of a record that does not exist in the database
+* A user tries to change the primary key of a record
+* A user submits duplicate data for table columns that must have unique record values
+* And others!
+
+### before and beforeEach
 
 Server-side tests should run in isolation and each test should not leave artifacts in the database. For instance, the first test in the test file should not influence what happens with the fifth test. Therefore, we need to run migrations before we run the test suite and reset the database before each test.
 
-If you're using a "real" database like postgresql with knex, you will typically need to:
+If you're using a "real" database like postgreSQL with knex, you will typically need to:
 
  1. Before all tests, run the migrations for your test environment and seed the test database
  2. Before each test:
