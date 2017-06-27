@@ -196,5 +196,5 @@ What relationship does this describe? How might it be modeled in a relational vs
 * [Data Modeling Techniques for Non-Relational Databases](https://highlyscalable.wordpress.com/2012/03/01/nosql-data-modeling-techniques/)
 
 
-### Instructor Resources
-* [Data Modeling Code Examples](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/data-structure-storage.md)
+<!-- ### Instructor Resources -->
+<!-- * [Data Modeling Code Examples](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/data-structure-storage.md) -->
