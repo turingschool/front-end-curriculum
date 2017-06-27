@@ -324,7 +324,7 @@ Can you add emoticons? Yes. Yes [you can](http://osxdaily.com/2013/04/08/add-emo
 
 * Open `~/.bash_profile` in a text editor (ex: `atom ~/.bash_profile`)
 
-Anything that you type into your terminal will only persist for the lifetime of the terminal session. If you want to save your bash prompt, you'll do so by adding things to your .bash_profile file.
+Anything that you type into your terminal will only persist for the lifetime of the terminal session. If you want to save your bash prompt, you'll do so by adding the commands you put in your terminal to your .bash_profile file.
 
 #### Your Turn
 
@@ -343,6 +343,8 @@ Test it out by typing `m1` into your terminal
 #### Your Turn
 
 Create a shortcut to the file path that you actually use to store your coursework!
+
+Note: Make sure you get a specific alias that isn't already being used for something else. You can find out if it's already used by just typing it into your terminal and making sure you get a `command not found` back!
 
 ## Using `source` 
 
