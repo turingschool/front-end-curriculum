@@ -97,22 +97,22 @@ layout: presentation
   </section>
     <section>
     <p>HTML = Model</p>
-    <img src="../assets/images/lessons/mvc-architecture/model.png" />
+    <img src="../../assets/images/lessons/mvc-architecture/model.png" />
   </section>
   <section>
     <p>CSS = View</p>
-    <img src="../assets/images/lessons/mvc-architecture/view.png" />
+    <img src="../../assets/images/lessons/mvc-architecture/view.png" />
   </section>
   <section>
     <p>Browser = Controller</p>
-    <img src="../assets/images/lessons/mvc-architecture/controller.png" />
+    <img src="../../assets/images/lessons/mvc-architecture/controller.png" />
   </section>
 </section>
 
 <section>
     <h2>MVC Breakdown:</h2>
     <h3>Communication</h3>
-  <img src="../assets/images/lessons/mvc-architecture/communication.png" />
+  <img src="../../assets/images/lessons/mvc-architecture/communication.png" />
 </section>
 
 <section>
@@ -144,11 +144,11 @@ layout: presentation
     <h2>Data Binding & Templating: before</h2>
     <pre>
       <code class="javascript js">
-      &lt;input type="text" class="current-grocery" /&gt; 
-      &lt;div id="grocery-name"&gt;&lt;/div&gt; 
+      &lt;input type="text" class="current-grocery" /&gt;
+      &lt;div id="grocery-name"&gt;&lt;/div&gt;
 
-      $('input.current-grocery').on('keyup', (e) => { 
-        $('#grocery-name').text(`Current Word: ${this.val()}`); 
+      $('input.current-grocery').on('keyup', (e) => {
+        $('#grocery-name').text(`Current Word: ${this.val()}`);
       });
       </code>
     </pre>
@@ -175,7 +175,7 @@ layout: presentation
     &lt;Route path="/" component={App}&gt;
       &lt;Route path="groceries/" component={GroceryList} /&gt;
       &lt;Route path="groceries/:id" component={GroceryDetail} /&gt;
-    &lt;/Route&gt; 
+    &lt;/Route&gt;
   &lt;/Router&gt;
       </code>
     </pre>
