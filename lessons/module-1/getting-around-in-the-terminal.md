@@ -269,6 +269,80 @@ And paste it into the `aloha.txt` file: `pbpaste > aloha.txt`
 
 Now the `aloha.txt` file has the contents `Hello World!`.
 
+# Advanced Topics
+
+## Customizing Your Terminal
+
+A little bit of increased efficiency in your use of the Unix environment and your editor can pay significant dividends over time. Let's experiment with customizing and adding to your terminal and editor.
+
+* You can check out dotfiles on GitHub to see how serious people get: http://dotfiles.github.com/
+
+### The Essentials
+
+* `export` to set environment variables
+* `alias` for shorthand commands, like I define `e` to launch my editor
+* `source` to run scripts of bash commands
+
+## Using Export
+
+Snippets from Jeff's `.bash_profile` are below.
+The top three lines setup a yellow lightning bolt as my prompt because, well, it's awesome.
+
+```bash
+export PS1="\W \[\033[0;33m\]⚡\[\033[0;39m\] "
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+```
+
+#### Your Turn
+
+Check out this [ezprompt generator](http://ezprompt.net/) and try to create a prompt for yourself
+
+Can you add emoticons? Yes. Yes [you can](http://osxdaily.com/2013/04/08/add-emoji-command-line-bash-prompt/)
+
+## Persisting Your Changes
+
+* Open `~/.bash_profile` in a text editor (ex: `atom ~/.bash_profile`)
+
+Anything that you type into your terminal will only persist for the lifetime of the terminal session. If you want to save your bash prompt, you'll do so by adding things to your .bash_profile file.
+
+#### Your Turn
+
+Try adding your bash prompt to the to the `~/.bash_profile`
+
+Close your terminal and reopen, see if it still works!
+
+## Using `alias`
+
+A shortcut for getting back to our "Module 1" directory
+
+alias m1="cd ~/turing/1module"
+
+Test it out by typing `m1` into your terminal
+
+#### Your Turn
+
+Create a shortcut to the file path that you actually use to store your coursework!
+
+## Using `source` 
+
+Enable git's tab-completion library
+
+`source /usr/local/etc/bash_completion.d/git-completion.bash`
+
+You can also create aliases for git if you are so inclined
+
+Example shortcuts for git:
+
+```bash
+alias ga="git add"
+alias gb="git branch"
+alias gd="git diff --patience --ignore-space-change"
+alias gh="git log --pretty=format:\"%Cgreen%h%Creset %Cblue%ad%Creset %s%C(yellow)%d%Creset %Cblue[%an]%Creset\" --graph --date=short"
+alias gc="git checkout"
+alias gs="git status"
+```
+
 ## Additional Resources
 
 If you want some more command line repetition and practice, then you can use this short course: [Learn the Command Line from Code Academy](https://www.codecademy.com/learn/learn-the-command-line)
