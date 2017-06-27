@@ -5,30 +5,35 @@ module: 3
 ---
 
 <section>
-  <h1>MVC Architecture</h1>
+  <h1>React Lifecycle Method</h1>
 </section>
 
 <section>
   <section>
-    <h2>What?</h2>
+    <h2>Mounting Lifecycles</h2>
   </section>
   <section>
-    <p>A set of patterns and concepts that define the main <b>divisions</b> of your application, their responsibilities, and how they should work together.</p>
-  </section>
-  <section>
-    <p>A blueprint for the overall structure of your application that dictates how responsibilities should be delegated, and outlines a pattern of <b>communication</b><br />between each working part.</p>
-  </section>
-</section>
-
-<section>
-  <section>
-    <h2>Why?</h2>
-  </section>
-  <section>
-    <h3>Mental Model</h3>
+    <p>These methods are called when an instance of a component is being created and inserted into the DOM:</p>
     <ul>
-      <li>makes abstract concepts more tangible</li>
-      <li>app logic is easier to reason about when it's grouped under an 'umbrella' term</li>
+      <li>constructor()</li>
+      <li>componentWillMount()</li>
+      <li>render()</li>
+      <li>componentDidMount()</li>
+    </ul>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h3>constructor()</h3>
+  </section>
+  <section>
+    <ul>
+      <li>The constructor is called before the <b>component is mounted</b></li>
+      <li>constructor is meant for initialzing state and binding methods</li>
+      <li>Initializing state here with props will effectively 'fork' the props and sets the state to that intial props. </li>
+      <li>constructor() is only called once! It will not keep updating the props if you intialize them in state </li>
+      <li>"you should call super(props) before any other statement. Otherwise, this.props will be undefined in the constructor, which can lead to bugs." - React Docs</li>
     </ul>
   </section>
   <section>
@@ -98,22 +103,22 @@ module: 3
   </section>
     <section>
     <p>HTML = Model</p>
-    <img src="../../assets/images/lessons/mvc-architecture/model.png" />
+    <img src="../assets/images/lessons/mvc-architecture/model.png" />
   </section>
   <section>
     <p>CSS = View</p>
-    <img src="../../assets/images/lessons/mvc-architecture/view.png" />
+    <img src="../assets/images/lessons/mvc-architecture/view.png" />
   </section>
   <section>
     <p>Browser = Controller</p>
-    <img src="../../assets/images/lessons/mvc-architecture/controller.png" />
+    <img src="../assets/images/lessons/mvc-architecture/controller.png" />
   </section>
 </section>
 
 <section>
     <h2>MVC Breakdown:</h2>
     <h3>Communication</h3>
-  <img src="../../assets/images/lessons/mvc-architecture/communication.png" />
+  <img src="../assets/images/lessons/mvc-architecture/communication.png" />
 </section>
 
 <section>
