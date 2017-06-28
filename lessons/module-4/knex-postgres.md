@@ -171,10 +171,11 @@ exports.up = function(knex, Promise) {
   ])
 };
 
+
 exports.down = function(knex, Promise) {
   return Promise.all([
-    knex.schema.dropTable('papers'),
-    knex.schema.dropTable('footnotes')
+    knex.schema.dropTable('footnotes'),
+    knex.schema.dropTable('papers')
   ]);
 };
 ```
@@ -330,11 +331,17 @@ To make a selection for all the papers in the database, we can use `database('pa
 ```js
 app.get('/api/v1/papers', (request, response) => {
   database('papers').select()
-    .then(papers => {
-      response.status(200).json(papers);
+    .then((papers) => {
+      if (papers.length) {
+        response.status(200).json(papers);
+      } else {
+        response.status(404).json({ 
+          error: 'No papers found!'
+        });
+      }
     })
-    .catch(error => {
-      console.error('error: ', error)
+    .catch((error) => {
+      response.status(500).json({ error });
     });
 });
 ```
@@ -357,7 +364,7 @@ app.post('/api/v1/papers', (request, response) => {
       response.status(201).json({ id: paper[0] })
     })
     .catch(error => {
-      console.error('error: ', error);
+      response.status(500).json({ error });
     });
 });
 ```
@@ -376,10 +383,16 @@ What if we want to only retrieve a single, specific paper? We can do this by pas
 app.get('/api/v1/papers/:id', (request, response) => {
   database('papers').where('id', request.params.id).select()
     .then(papers => {
-      response.status(200).json(papers);
+      if (papers.length) {
+        response.status(200).json(papers);
+      } else {
+        response.status(404).json({ 
+          error: `Could not find paper with id ${request.params.id}`
+        });
+      }
     })
     .catch(error => {
-      console.error('error: ', error);
+      response.status(500).json({ error });
     });
 });
 ```
