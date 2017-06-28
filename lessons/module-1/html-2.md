@@ -52,7 +52,7 @@ Copy the form code below into your own Pen, and then refactor as follows:
 
 * Validate for email type
 * Replace all `div` elements with correct semantic elements
-* Add a radial check box for gender
+* Add a radial check box with atleast three options
 * Include placeholders for name, email, and message
 * Add a drop down for favorite color with at least three options
 * Use an input for submit instead of a button
