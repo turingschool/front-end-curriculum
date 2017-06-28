@@ -289,3 +289,7 @@ Go back to the 6 architectural contraints of a RESTful API and try to identify a
 * [Anatomy of a URL](http://www.domainsherpa.com/anatomy-of-a-domain-name-and-url/)
 * [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 * [HTTP Status Codes](http://www.restapitutorial.com/httpstatuscodes.html)
+
+### Instructor Resources
+
+* [Completed Server Example](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/node.md)
