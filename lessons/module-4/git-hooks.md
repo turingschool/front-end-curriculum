@@ -15,7 +15,7 @@ By the end of this lesson, you will:
 As developers, we're constantly looking for ways to automate tedious tasks. We're essentially trying to put ourselves out of the job by writing scripts that will do it for us. Let's talk about git hooks.
 
 ## Git Hooks
-[Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are custom scripts that you can write to execute particular tasks during certain points of the git workflow process. They let you interrupt the flow of a git event -- such as a commit -- to do things like verify that the code youre committing is linted and tested. They can be written in any language understood by the terminal (bash, node, ruby, python, etc.) When used in conjunction with other workflow tools and processes, you can create some really seamless patterns for maintaining any kind of codebase.
+[Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are custom scripts that you can write to execute particular tasks during certain points of the git workflow process. They let you interrupt the flow of a git event -- such as a commit -- to do things like verify that the code you're committing is linted and tested. They can be written in any language understood by the terminal (bash, node, ruby, python, etc.) When used in conjunction with other workflow tools and processes, you can create some really seamless patterns for maintaining any kind of codebase.
 
 Similar to the lifecycle methods in React or other JavaScript frameworks, you'll recognize some lifecycle patterns within the git version control system. For example, every time we make a commit, there are four distinct phases: 
 
@@ -153,6 +153,6 @@ In earlier versions of Git, you could implement this same strategy by creating a
 
 * [Git Hooks Guide](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
 * [Git Hooks Reference](https://git-scm.com/docs/githooks)
-* [Github Issues from Command Line](https://github.com/stephencelis/ghi)
+* [GitHub Issues from Command Line](https://github.com/stephencelis/ghi)
 * [Node.js pre-commit](https://github.com/observing/pre-commit)
 * [Fit Commit](https://github.com/m1foley/fit-commit)
