@@ -29,7 +29,7 @@ $ psql
 CREATE DATABASE publications;
 ```
 
-Install knex globally and in your project, and pg (postgres) in your project from npm:
+Create a new directory and cd into it, then run `npm init --yes`. Install knex globally and in your project, and pg (postgres) in your project from npm:
 
 ```
 npm install -g knex
@@ -156,7 +156,7 @@ exports.up = function(knex, Promise) {
       table.string('title');
       table.string('author');
 
-      table.timestamps();
+      table.timestamps(true, true);
     }),
 
     knex.schema.createTable('footnotes', function(table) {
@@ -166,15 +166,16 @@ exports.up = function(knex, Promise) {
       table.foreign('paper_id')
         .references('papers.id');
 
-      table.timestamps();
+      table.timestamps(true, true);
     })
   ])
 };
 
+
 exports.down = function(knex, Promise) {
   return Promise.all([
-    knex.schema.dropTable('papers'),
-    knex.schema.dropTable('footnotes')
+    knex.schema.dropTable('footnotes'),
+    knex.schema.dropTable('papers')
   ]);
 };
 ```
@@ -190,7 +191,7 @@ You can run all of your migrations to the latest point with the following comman
 
 ### Updating Your Schema with Migrations
 
-Now what if we realized we made a mistake in our schema and we wanted to add a column to the papers table for a publisher? We can't go directly into our initial migration file and edit it because it's already been made and run it's already set in stone. So what do we have to do? Create another migration. So go ahead and create a new migration:
+Now what if we realized we made a mistake in our schema and we wanted to add a column to the papers table for a publisher? We can't go directly into our initial migration file and edit it because it's already been made and run - it's already set in stone. So what do we have to do? Create another migration:
 
 `knex migrate:make add-publisher`
 
@@ -278,8 +279,13 @@ The logic here gets a little hairy, but ultimately will end up looking like this
 
 ```js
 exports.seed = function(knex, Promise) {
-  return knex('footnotes').del() // delete footnotes first
+  // We must return a Promise from within our seed function
+  // Without this initial `return` statement, the seed execution
+  // will end before the asynchronous tasks have completed
+  return knex('footnotes').del() // delete all footnotes first
     .then(() => knex('papers').del()) // delete all papers
+
+    // Now that we have a clean slate, we can re-insert our paper data
     .then(() => {
       return Promise.all([
         
@@ -293,10 +299,15 @@ exports.seed = function(knex, Promise) {
             { note: 'Dolor', paper_id: paper[0] }
           ])
         })
+        .then(() => console.log('Seeding complete!'))
+        .catch(error => console.log(`Error seeding data: ${error}`));
       ]) // end return Promise.all
-    });
+    })
+    .catch(error => console.log(`Error seeding data: ${error}`));
 };
 ```
+
+*Note on return statements: In our seed files, we often have to return Promises rather than just calling them. Without the return statements, the asynchronous code in our seed file will be kicked-off, but knex will not necessarily know to wait for it to resolve before it says 'I'm done seeding your data'. The same thing applies at any nested level of .thens() in our code. If your seeding doesn't seem to be working, but you're not receiving any error messages, double-check if you're missing any return statements for the asynchronous operations you're writing.*
 
 ### Running Your Seeds
 
@@ -306,6 +317,68 @@ You can run your seeds (again, similar to migrations) with:
 knex seed:run
 ```
 
+### Seeding Large Datasets
+
+When you have a large dataset that needs to be seeded, you'll often want to simplify your code by iterating over your dataset and inserting each record and any of its dependents, rather than having to manually write an `insert` for each one. This can get a little hairy when we're using Promises. We can't simply nest Promises within a `forEach` loop because our code will run through the loop without recognizing that it needs to wait for each insertion promise to resolve before ending the seed execution. 
+
+To get around this, we can break our insertion logic out into a separate function. For example, given the following dataset:
+
+```js
+let papersData = [{
+  author: 'Brittany',
+  title: 'Lorem Ipsum',
+  footnotes: ['one', 'two', 'three']
+},
+{
+  author: 'Robbie',
+  title: 'Dolor Set Amet',
+  footnotes: ['four', 'five', 'six']
+}]
+```
+
+We could write a function that appropriately seeds a paper into the `papers` table and all of it's footnotes into the `footnotes` table:
+
+```js
+const createPaper = (knex, paper) => {
+  return knex('papers').insert({
+    title: paper.title,
+    author: paper.author
+  }, 'id')
+  .then(paperId => {
+    let footnotePromises = [];
+
+    paper.footnotes.forEach(footnote => {
+      footnotePromises.push(
+        createFootnote(knex, {
+          note: footnote,
+          paper_id: paperId[0]
+        })
+      )
+    });
+
+    return Promise.all(footnotePromises);
+  })
+};
+
+const createFootnote = (knex, footnote) => {
+  return knex('footnotes').insert(footnote);
+};
+
+exports.seed = (knex, Promise) => {
+  return knex('footnotes').del() // delete footnotes first
+    .then(() => knex('papers').del()) // delete all papers
+    .then(() => {
+      let paperPromises = [];
+
+      papersData.forEach(paper => {
+        paperPromises.push(createPaper(knex, paper));
+      });
+
+      return Promise.all(paperPromises);
+    })
+    .catch(error => console.log(`Error seeding data: ${error}`));
+};
+```
 
 ## Fetching From the Database
 
@@ -330,13 +403,57 @@ To make a selection for all the papers in the database, we can use `database('pa
 ```js
 app.get('/api/v1/papers', (request, response) => {
   database('papers').select()
-    .then(papers => {
-      response.status(200).json(papers);
+    .then((papers) => {
+      if (papers.length) {
+        response.status(200).json(papers);
+      } else {
+        response.status(404).json({ 
+          error: 'No papers found!'
+        });
+      }
     })
-    .catch(error => {
-      console.error('error: ', error)
+    .catch((error) => {
+      response.status(500).json({ error });
     });
 });
+```
+
+If we check this in POSTMAN, we should get back an array of all our papers that looks something like this:
+
+```js
+[{
+  id: 1,
+  author: 'Brittany',
+  title: 'Lorem Ipsum',
+  publisher: 'University of Minnesota'
+},
+{
+  id: 2,
+  author: 'Robbie',
+  title: 'Dolor Set Amet',
+  publisher: 'University of Michigan'
+}]
+```
+
+Now let's say we decided we *didn't* need that publisher column, and we wanted to get rid of it. We could rollback that change to our schema by running:
+
+```bash
+knex migrate:rollback
+```
+
+Our GET request would now return the same array without publisher columns:
+
+```js
+[{
+  id: 1,
+  author: 'Brittany',
+  title: 'Lorem Ipsum'
+},
+{
+  id: 2,
+  author: 'Robbie',
+  title: 'Dolor Set Amet'
+}]
 ```
 
 #### On Your Own
@@ -357,7 +474,7 @@ app.post('/api/v1/papers', (request, response) => {
       response.status(201).json({ id: paper[0] })
     })
     .catch(error => {
-      console.error('error: ', error);
+      response.status(500).json({ error });
     });
 });
 ```
@@ -376,10 +493,16 @@ What if we want to only retrieve a single, specific paper? We can do this by pas
 app.get('/api/v1/papers/:id', (request, response) => {
   database('papers').where('id', request.params.id).select()
     .then(papers => {
-      response.status(200).json(papers);
+      if (papers.length) {
+        response.status(200).json(papers);
+      } else {
+        response.status(404).json({ 
+          error: `Could not find paper with id ${request.params.id}`
+        });
+      }
     })
     .catch(error => {
-      console.error('error: ', error);
+      response.status(500).json({ error });
     });
 });
 ```
