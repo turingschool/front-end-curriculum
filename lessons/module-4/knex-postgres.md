@@ -91,7 +91,7 @@ We're not quite done here, but let's switch gears for a bit and talk about **mig
 
 ## Migrations
 
-Migrations are kind of like version control for databases. They are single, timestamped files that each represent a change to your database schema. We'll discuss the structure of a migration file in the next section.
+Migrations are kind of like version control for databases. They are single, timestamped files that each represent a change to your database schema. Think back to the [randomly selected open-source code](https://github.com/mahaplatform/backframe/tree/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations) we looked at yesterday. Notice every file in this 'migrations' directory is simply a timestamped file. We'll talk more about the structure of these files in a bit.
 
 Migrations attempt to have as little effect on pre-existing data as possible, but sometimes it's hard to avoid. For example if you have a migration that deletes a column from a table, any data in that column might be destroyed along with it.
 
