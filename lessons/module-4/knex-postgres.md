@@ -29,7 +29,7 @@ $ psql
 CREATE DATABASE publications;
 ```
 
-Install knex globally and in your project, and pg (postgres) in your project from npm:
+Create a new directory and cd into it, then run `npm init --yes`. Install knex globally and in your project, and pg (postgres) in your project from npm:
 
 ```
 npm install -g knex
