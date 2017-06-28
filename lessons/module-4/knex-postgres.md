@@ -294,8 +294,11 @@ exports.seed = function(knex, Promise) {
             { note: 'Dolor', paper_id: paper[0] }
           ])
         })
+        .then(() => console.log('Seeding complete!'))
+        .catch(error => console.log(`Error seeding data: ${error}`));
       ]) // end return Promise.all
-    });
+    })
+    .catch(error => console.log(`Error seeding data: ${error}`));
 };
 ```
 
@@ -307,6 +310,70 @@ You can run your seeds (again, similar to migrations) with:
 knex seed:run
 ```
 
+### Seeding Large Datasets
+
+When you have a large dataset that needs to be seeded, you'll often want to simplify your code by iterating over your dataset and inserting each record and any of its dependents, rather than having to manually write an `insert` for each one. This can get a little hairy when we're using Promises. We can't simply nest Promises within a `forEach` loop because our code will run through the loop without recognizing that it needs to wait for each insertion promise to resolve before ending the seed execution. 
+
+To get around this, we can break our insertion logic out into a separate function. For example, given the following dataset:
+
+```js
+[{
+  id: 1,
+  author: 'Brittany',
+  title: 'Lorem Ipsum',
+  footnotes: ['one', 'two', 'three']
+},
+{
+  id: 2,
+  author: 'Robbie',
+  title: 'Dolor Set Amet',
+  footnotes: ['four', 'five', 'six']
+}]
+```
+
+We could write a function that appropriately seeds a paper into the `papers` table and all of it's footnotes into the `footnotes` table:
+
+```js
+const createPaper = (knex, paper) => {
+  return knex('papers').insert({
+    title: paper.title,
+    author: paper.author
+  }, 'id')
+  .then(paperId => {
+    let footNotePromises = [];
+
+    paper.footnotes.forEach(footnote => {
+      footnotePromises.push(
+        createFootnote(knex, {
+          note: footnote.note,
+          paper_id: paperId[0]
+        })
+      )
+    });
+
+    return Promise.all(footNotePromises);
+  })
+};
+
+const createFootnote = (knex, footnote) => {
+  return knex('footnotes').insert(footnote);
+};
+
+exports.seed = (knex, Promise) => {
+  return knex('footnotes').del() // delete footnotes first
+    .then(() => knex('papers').del()) // delete all papers
+    .then(() => {
+      let paperPromises = [];
+
+      papers.forEach(paper => {
+        paperPromises.push(createPaper(knex, paper));
+      });
+
+      return Promise.all(paperPromises);
+    })
+    .catch(error => console.log(`Error seeding data: ${error}`));
+};
+```
 
 ## Fetching From the Database
 
