@@ -279,8 +279,13 @@ The logic here gets a little hairy, but ultimately will end up looking like this
 
 ```js
 exports.seed = function(knex, Promise) {
-  return knex('footnotes').del() // delete footnotes first
+  // We must return a Promise from within our seed function
+  // Without this initial `return` statement, the seed execution
+  // will end before the asynchronous tasks have completed
+  return knex('footnotes').del() // delete all footnotes first
     .then(() => knex('papers').del()) // delete all papers
+
+    // Now that we have a clean slate, we can re-insert our paper data
     .then(() => {
       return Promise.all([
         
@@ -302,6 +307,8 @@ exports.seed = function(knex, Promise) {
 };
 ```
 
+*Note on return statements: In our seed files, we often have to return Promises rather than just calling them. Without the return statements, the asynchronous code in our seed file will be kicked-off, but knex will not necessarily know to wait for it to resolve before it says 'I'm done seeding your data'. The same thing applies at any nested level of .thens() in our code. If your seeding doesn't seem to be working, but you're not receiving any error messages, double-check if you're missing any return statements for the asynchronous operations you're writing.*
+
 ### Running Your Seeds
 
 You can run your seeds (again, similar to migrations) with:
@@ -317,14 +324,12 @@ When you have a large dataset that needs to be seeded, you'll often want to simp
 To get around this, we can break our insertion logic out into a separate function. For example, given the following dataset:
 
 ```js
-[{
-  id: 1,
+let papersData = [{
   author: 'Brittany',
   title: 'Lorem Ipsum',
   footnotes: ['one', 'two', 'three']
 },
 {
-  id: 2,
   author: 'Robbie',
   title: 'Dolor Set Amet',
   footnotes: ['four', 'five', 'six']
@@ -340,18 +345,18 @@ const createPaper = (knex, paper) => {
     author: paper.author
   }, 'id')
   .then(paperId => {
-    let footNotePromises = [];
+    let footnotePromises = [];
 
     paper.footnotes.forEach(footnote => {
       footnotePromises.push(
         createFootnote(knex, {
-          note: footnote.note,
+          note: footnote,
           paper_id: paperId[0]
         })
       )
     });
 
-    return Promise.all(footNotePromises);
+    return Promise.all(footnotePromises);
   })
 };
 
@@ -365,7 +370,7 @@ exports.seed = (knex, Promise) => {
     .then(() => {
       let paperPromises = [];
 
-      papers.forEach(paper => {
+      papersData.forEach(paper => {
         paperPromises.push(createPaper(knex, paper));
       });
 
