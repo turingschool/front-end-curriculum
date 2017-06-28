@@ -111,32 +111,64 @@ module: 3
       <li>Basically this controls exactly when your component will re-render.</li>
       <li>Is not called on a <b>forceUpdate()</b></li>
       <li>Does not prevent child components from re-rendering</li>
-      <li><b>returning false</b> will not call <b>componentWillUpdate(), render(), componentDidUpdate()</b></li>
+      <li><b>Returning false</b> will not call <b>componentWillUpdate(), render(), componentDidUpdate()</b></li>
+      <li>Can not <b>setState</b></li>
     </ul>
   </section>
   <section>
-    <h3>componentWillUpdate()</h3>
+    <h3>componentWillUpdate(nextProps, nextState)</h3>
   </section>
   <section>
     <ul>
-      <li>render is required in all class components</li>
-      <li>returns a single react element</li>
-      <li>you may return <b>null or false</b></li>
+      <li>Cannot call <b>setState()</b> here</li>
+      <li>Probably will never use this. IF you are using it.. look into componentWillReceiveProps()</li>
+      <li>When using shouldComponentUpdate() and props which changes something else then sure. But still.. maybe just do it in componentWillReceiveProps() </li>
     </ul>
   </section>
   <section>
     <h3>render()</h3>
   </section>
   <section>
-    <h3>componentDidUpdate()</h3>
-  </section>
-  <section>
-    "You can’t guarantee the AJAX request won’t resolve before the component mounts. If it did, that would mean that you’d be trying to setState on an unmounted component, which not only won’t work, but React will yell at you for. Doing AJAX in componentDidMount will guarantee that there’s a component to update." - Tyler McGinnis
+    <h3>componentDidUpdate(prevProps, prevState)</h3>
   </section>
   <section>
     <ul>
-      <li>setState() will trigger re-render</li>
-      <li>now you have access to all DOM nodes</li>
+      <li>Same thing as componentDidMount()</li>
+    </ul>
+  </section>
+  <section>
+    <h2>Unmounting</h2>
+  </section>
+  <section>
+    <h3>componentWillUnmount</h3>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Unmounting</h2>
+  </section>
+  <section>
+    <h3>componentWillUnmount()</h3>
+  </section>
+  <section>
+    <ul>
+      <li>Remove listeners</li>
+      <li>Cancel outgoing network requests</li>
+      <li>Cancel any timers, aka setTimeOut()</li>
+    </ul>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>setState((prevState, props)=> {...})</h2>
+    <h2>setState(stateChange, callback)</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Does not guarantee that the call will be synchronous</li>
+      <li>Might not update the component immediately, might batch or defer updates till later</li>
     </ul>
   </section>
 </section>
