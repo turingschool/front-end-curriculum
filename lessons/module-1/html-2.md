@@ -273,7 +273,7 @@ Important to remember:
   <label for="comment">Comment*</label>
   <textarea id="comment" aria-multiline="true" aria-required="true"></textarea>
 
-  <input type="submit" value="Submit />
+  <input type="submit" value="Submit" />
 </form>
 ```
 
