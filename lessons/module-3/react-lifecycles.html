@@ -25,7 +25,7 @@ module: 3
 
 <section>
   <section>
-    <h3>constructor()</h3>
+    <h3>constructor(props)</h3>
   </section>
   <section>
     <ul>
@@ -89,9 +89,63 @@ module: 3
 </section>
 
 <section>
+  <section>
+    <h3>componentWillReceiveProps(nextProps)</h3>
+  </section>
+  <section>
+    <ul>
+      <li>Called when component receives new props </li>
+      <li>This is a good area to realign state with your 'forked' props</li>
+      <li>nextProps is given to you to compare the new props with the old, this.props</li>
+      <li>Always compare the props before setting state, b/c this might get called without new props being given</li>
+    </ul>
+  </section>
+  <section>
+    <h3>shouldComponentUpdate(nextProps, nextState)</h3>
+  </section>
+  <section>
+    <ul>
+      <li>Should always return a <b>boolean</b></li>
+      <li>Defaults to <b>true</b></li>
+      <li>Great area to improve performance</li>
+      <li>Basically this controls exactly when your component will re-render.</li>
+      <li>Is not called on a <b>forceUpdate()</b></li>
+      <li>Does not prevent child components from re-rendering</li>
+      <li><b>returning false</b> will not call <b>componentWillUpdate(), render(), componentDidUpdate()</b></li>
+    </ul>
+  </section>
+  <section>
+    <h3>componentWillUpdate()</h3>
+  </section>
+  <section>
+    <ul>
+      <li>render is required in all class components</li>
+      <li>returns a single react element</li>
+      <li>you may return <b>null or false</b></li>
+    </ul>
+  </section>
+  <section>
+    <h3>render()</h3>
+  </section>
+  <section>
+    <h3>componentDidUpdate()</h3>
+  </section>
+  <section>
+    "You can’t guarantee the AJAX request won’t resolve before the component mounts. If it did, that would mean that you’d be trying to setState on an unmounted component, which not only won’t work, but React will yell at you for. Doing AJAX in componentDidMount will guarantee that there’s a component to update." - Tyler McGinnis
+  </section>
+  <section>
+    <ul>
+      <li>setState() will trigger re-render</li>
+      <li>now you have access to all DOM nodes</li>
+    </ul>
+  </section>
+</section>
+
+<section>
   <h2>References</h2>
   <ul>
     <li><a href="https://facebook.github.io/react/docs/react-component.html">React Docs</a></li>
     <li><a href="https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1"> React Lifecycle Methods - Scott Domes</a></li>
+    <li><a href="https://tylermcginnis.com/an-introduction-to-life-cycle-events-in-react-js/"> Life Cycle Events - Tyler McGinnis</a></li>
   </ul>
 </section>
