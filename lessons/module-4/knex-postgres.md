@@ -156,7 +156,7 @@ exports.up = function(knex, Promise) {
       table.string('title');
       table.string('author');
 
-      table.timestamps();
+      table.timestamps(true, true);
     }),
 
     knex.schema.createTable('footnotes', function(table) {
@@ -166,7 +166,7 @@ exports.up = function(knex, Promise) {
       table.foreign('paper_id')
         .references('papers.id');
 
-      table.timestamps();
+      table.timestamps(true, true);
     })
   ])
 };
@@ -191,7 +191,7 @@ You can run all of your migrations to the latest point with the following comman
 
 ### Updating Your Schema with Migrations
 
-Now what if we realized we made a mistake in our schema and we wanted to add a column to the papers table for a publisher? We can't go directly into our initial migration file and edit it because it's already been made and run it's already set in stone. So what do we have to do? Create another migration. So go ahead and create a new migration:
+Now what if we realized we made a mistake in our schema and we wanted to add a column to the papers table for a publisher? We can't go directly into our initial migration file and edit it because it's already been made and run - it's already set in stone. So what do we have to do? Create another migration:
 
 `knex migrate:make add-publisher`
 
@@ -344,6 +344,44 @@ app.get('/api/v1/papers', (request, response) => {
       response.status(500).json({ error });
     });
 });
+```
+
+If we check this in POSTMAN, we should get back an array of all our papers that looks something like this:
+
+```js
+[{
+  id: 1,
+  author: 'Brittany',
+  title: 'Lorem Ipsum',
+  publisher: 'University of Minnesota'
+},
+{
+  id: 2,
+  author: 'Robbie',
+  title: 'Dolor Set Amet',
+  publisher: 'University of Michigan'
+}]
+```
+
+Now let's say we decided we *didn't* need that publisher column, and we wanted to get rid of it. We could rollback that change to our schema by running:
+
+```bash
+knex migrate:rollback
+```
+
+Our GET request would now return the same array without publisher columns:
+
+```js
+[{
+  id: 1,
+  author: 'Brittany',
+  title: 'Lorem Ipsum'
+},
+{
+  id: 2,
+  author: 'Robbie',
+  title: 'Dolor Set Amet'
+}]
 ```
 
 #### On Your Own
