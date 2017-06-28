@@ -37,7 +37,7 @@ We'd wrap the text in paragraph tags.
 <p>This text is a paragraph.</p>
 ```
 
-We use `<p>` to signal to the browser that everything that's about to follow is part of a paragraph and `</p>` to let the browser know that this paragraph is done. When a user visits our application, the browser loads up the HTML and parses it into the elements that will eventally make up our user interface.
+We use `<p>` to signal to the browser that everything that's about to follow is part of a paragraph and `</p>` to let the browser know that this paragraph is done. When a user visits our application, the browser loads up the HTML and parses it into the elements that will eventually make up our user interface.
 
 Here is an example of a slightly more robust document:
 
@@ -84,7 +84,7 @@ Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account s
 # Practice
 
 ### Containing Elements, Semantics & Text
-Let's experiment with the following tags codepen:
+Let's experiment with the following tags in codepen:
 
 * `header`
 * `footer`
