@@ -128,18 +128,9 @@ Commit these changes and run a new build. You should see all of your tests runni
 
 
 ## Automatic Deployments
-CircleCI provides deployment integration with other popular services such as Heroku. Upon a successful build, we can configure CircleCI to deploy our changes to specified environments. This takes a bit more work, but the seamless automation makes it all worthwhile. 
+CircleCI provides deployment integration with other popular services such as Heroku. Upon a successful build, we can configure CircleCI to deploy our changes. This takes a bit more work, but the seamless automation makes it all worthwhile. 
 
-When working with git, it's common to have a master or default branch represent your pristine production environment. We also want a staging environment where we can test out new changes and review the state of the code before it gets merged into master and sent to production. In order to maintain this staging environment, you'll want to create a 'staging' branch in your git repo. Go ahead and do that now if you don't already have one.
-
-### Heroku - Pipeline Setup
-In Heroku, you'll want to create two different applications. A staging app and a production app. Once you've created these and configured them as needed, create a new pipeline and add them to their respective pipeline phases.
-
-Now that we're going to integrate CircleCI, we want to configure Heroku's default 'automatic deployments'. From the pipeline, click on each application and select 'Configure Automatic Deploys...'. 
-
-![Configure Deploys][configure-deploys]
-
-Then select the appropriate branch to deploy from for that application (e.g. master or staging), and check the 'Wait for CI to pass' box. This will ensure that we don't deploy code that is potentially broken.
+In order to have CircleCI take control over our deployments, we need to configure Heroku’s default ‘automatic deployments’. In Heroku, go to your application's deployment settings and select ‘Configure Automatic Deploys…’.
 
 ![Wait for CI][wait-for-ci]
 
@@ -149,22 +140,17 @@ In your project settings in CircleCI, you'll see an option for 'Heroku Deploymen
 ![Heroku Deployments][heroku-deployments]
 
 ### Circle.yml - Configuring Deployments
-The final step to linking up automatic deployments is adding an extra configuration phase to the `circle.yml` file in your repo. To set up deployments for both staging and production environments, you'll need to specify a branch and a heroku appname like so:
+The final step to linking up automatic deployments is adding an extra configuration phase to the `circle.yml` file in your repo. To set up deployments, you'll need to specify a branch and a heroku appname like so:
 
 ```yml
 deployment:
-  staging:
-    branch: staging
-    heroku:
-      appname: your-staging-app-name
-
   production:
     branch: master
     heroku:
       appname: your-production-app-name
 ```
 
-Now whenever we push to our staging or master branches, CircleCI will automatically run a build for us, and if it passes, it will deploy our app to the appropriate location.
+Now whenever we push to our master branch, CircleCI will automatically run a build for us and deploy only if and when the buid succeeds.
 
 ## Adding Status Badges
 You'll often see build status icons on the README files of popular open source libraries and frameworks. This is a quick and easy way to reassure users that the code is reliable. CircleCI provides a markdown snippet that we can paste directly into our README. In CircleCI, under your project settings, you'll see a 'Status Badges' link under the 'Notifications' heading in the sidebar. Copy and paste the markdown snippet provided for you and add it to your project's README.
