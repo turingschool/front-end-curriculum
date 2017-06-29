@@ -469,6 +469,14 @@ Now let's add a new paper to the database. We can do this with a POST request an
 app.post('/api/v1/papers', (request, response) => {
   const paper = request.body;
 
+  for (let requiredParameter of ['title', 'author']) {
+    if (!paper[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ error: `Expected format: { title: <String>, author: <String> }. You're missing a "${requiredParameter}" property.` });
+    }
+  }
+
   database('papers').insert(paper, 'id')
     .then(paper => {
       response.status(201).json({ id: paper[0] })

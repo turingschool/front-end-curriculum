@@ -80,14 +80,15 @@ Environments can differ from each other in many ways. For example:
 * You might want the mocked-out data in your test seeds to be more predictable/rigid than the data seeds you work with in development
 * Your database connection strings will change between environments because you can't and don't want to use the same database in production that you'll be using in development
 * The configuration for automatic deployments will vary based on where your staging vs. production applications live
+* The hostname for your different URLs will vary
 * The port your application runs on might be 3000 in development, but 8080 in production depending on the tech stack and where it's hosted.
 * You likely want to use unminified versions of libraries and packages in development & testing for debugging purposes, but always want minified versions in production for performance reasons.
 
 ### Environment Variables
 
-To handle these differences, we use **environment variables**. These are variables that differ between environments. They’re used across languages and platforms to set configuration. They allow the same logic and code to interact with different sources.
+To handle these differences, we use environment configurations and variables. Environment variables represent values that differ between environments. They’re used across languages and platforms to set configuration options. They allow the same logic and code to interact with different sources. They are most often found in configuration files for server-side logic or build tools.
 
-We're already familiar with several environment variables from our past projects:
+We might already familiar with several environment variables from our past projects:
 
 ```js
 // the port our node/express server runs on
@@ -129,7 +130,13 @@ In node applications, our environment variables are always prefixed with `proces
 }
 ```
 
-The `env` property on our process returns another object that contains details about the current environment. This is where we store and read our environment variables.
+The `env` property on our process returns another object that contains details about the current environment. This is where we store and read our environment variables. You can create and set your own environment variable directly in the terminal by passing it along with whatever node program you are running at the time. For example, if I want to start up a node application and declare an environment variable 'FOO', I could run:
+
+```bash
+FOO=bar node server.js
+```
+
+Now anywhere in my application that node handles, I can access `process.env.FOO` and should receive `bar` as its value.
 
 ## Resources
 
