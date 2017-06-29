@@ -3,8 +3,6 @@ title: Promises Warm Up
 module: 3
 ---
 
-Self Study Warm Up (Promises)
-
 One of the most frustrating things about browser automation is that, while the human brain can handle things like `wait a few minutes for the page to load` and `don't click until a button is on the page`, a computer isn't always so bright.
 
 For that reason, you need to have a strong handle on handling async interactions before you dig into browser automation. Before the WebScraping Workshop, take some time to refresh your memory on how Promises work!
@@ -25,7 +23,7 @@ You can run the commandline tool in your terminal by running:
 
 Learn more, if you're curious, in the [README](https://github.com/stevekane/promise-it-wont-hurt).
 
-You should aim to complete, at minimum, the Warm Up & Fufill a Promise & Reject a Promise
+You should aim to complete, at minimum, the Warm Up & Fulfill a Promise & Reject a Promise
 
 ## Reading
 
