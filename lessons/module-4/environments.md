@@ -130,10 +130,23 @@ In node applications, our environment variables are always prefixed with `proces
 }
 ```
 
-The `env` property on our process returns another object that contains details about the current environment. This is where we store and read our environment variables. You can create and set your own environment variable directly in the terminal by passing it along with whatever node program you are running at the time. For example, if I want to start up a node application and declare an environment variable 'FOO', I could run:
+The `env` property on our process returns another object that contains details about the current environment. This is where we store and read our environment variables. You can create and set your own environment variables in a couple different ways:
+
+```bash
+export FOO=bar
+npm start
+```
+
+Or...
 
 ```bash
 FOO=bar node server.js
+```
+
+Or directly in your codebase:
+
+```bash
+process.env.FOO = 'bar';
 ```
 
 Now anywhere in my application that node handles, I can access `process.env.FOO` and should receive `bar` as its value.
