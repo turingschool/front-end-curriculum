@@ -5,7 +5,7 @@ module: 4
 
 # (PreWork or Warmup) Promises Warmup
 
-[Lesson Plan Here](http://frontend.turing.io/lessons/promises-warmup.html)
+[Lesson Plan Here](http://frontend.turing.io/lessons/module-3/promises-warmup.html)
 
 # Intro to Browser Automation and Scraping 
 
