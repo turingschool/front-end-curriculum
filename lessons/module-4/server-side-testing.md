@@ -391,7 +391,7 @@ app.post('/api/v1/students', (request, response) => {
     response.status(201).json(app.locals.students[app.locals.students.length - 1]);
   } else {
     response.status(422).send({
-      error: 'You are missing data!';
+      error: 'You are missing data!'
     })
   }
 });
@@ -606,7 +606,7 @@ app.post('/api/v1/students', (request, response) => {
     response.status(201).json(app.locals.students[app.locals.students.length - 1]);
   } else {
     response.status(422).send({
-      error: 'You are missing data!';
+      error: 'You are missing data!'
     })
   }
 });
