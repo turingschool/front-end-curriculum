@@ -1,7 +1,8 @@
 ---
 title: NPM Basics
 length:
-tags: npm
+tags: npm, node modules
+mod: 2
 ---
 
 ## npm config list
