@@ -1,6 +1,7 @@
 ---
 title: Recursion
 length: 1 hour
+tags: recursion, javascript
 module: 2
 ---
 
