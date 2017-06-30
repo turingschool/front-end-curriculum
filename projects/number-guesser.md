@@ -132,14 +132,6 @@ Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/
 
 <br> -->
 
-## Pairing
-
-- Novice
-- Advanced Beginner
-- Proficient
-- Exceptional
-
-<br>
 
 ## Surprise and Delight (reminder: have fun!)
 
