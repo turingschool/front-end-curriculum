@@ -4,7 +4,7 @@ title: Number Guesser
 
 ## Overview
 - Build a game where the user guesses a number between 1 and 100.
-- Build out phases 1-3 and push them to Github via the MASTER branch for evaluation.
+<!-- - Build out phases 1-3 and push them to Github via the MASTER branch for evaluation. -->
 - Phase 4 is optional. If you execute phase 4, create a separate branch for that work for evaluation.
 - Include a README.md in your project that summarizes the project (this does not mean paste this project spec into your README)
 
