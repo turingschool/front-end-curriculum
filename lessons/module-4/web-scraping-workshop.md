@@ -3,19 +3,17 @@ title: Web Scraping Workshop
 module: 4
 ---
 
-# (PreWork or Warmup) Promises Warmup
+## (PreWork or Warmup) Promises Warmup
 
 [Lesson Plan Here](http://frontend.turing.io/lessons/module-3/promises-warmup.html)
 
-# Intro to Browser Automation and Scraping 
+## Intro to Browser Automation and Scraping 
 
 [Excellent StackOverflow Breakdown of Technology Available](http://stackoverflow.com/questions/18539491/headless-browser-and-scraping-solutions)
 
 [Selenium](http://seleniumhq.org/) - polyglot flagship in browser automation, bindings for Python, Ruby, JavaScript, C#, Haskell and more, IDE for Firefox (as an extension) for faster test deployment. Can act as a Server and has tons of features.
 
-# Web Scraping Workshop
-
-## Instructor Demo
+## Sample Demo
 
 Code for live implementation
 
@@ -65,7 +63,7 @@ nightmare
 
 [Longer Example Here](https://gist.github.com/rrgayhart/f1c25fd47bb5ad42957224e8b6b5ba83)
 
-# Planning Phase
+## Planning Phase
 
 Before you start writing code, don't.
 
@@ -93,7 +91,7 @@ And walk through the process with psuedo code and by finding the selectors.
 
 ```
 
-# Resources
+## Resources
 
 The two resources below are a lifesaver for this process.
 
@@ -103,7 +101,7 @@ The two resources below are a lifesaver for this process.
 
 [CSS Selector Helper for Chrome](https://chrome.google.com/webstore/detail/css-selector-helper-for-c/gddgceinofapfodcekopkjjelkbjodin?utm_source=gmail)
 
-# You Do
+## You Do
 
 Spend the next pomodoro working by yourself to come up with an idea for something to scrape or some activity to automate, and outlining the steps needed to accomplish this automation.
 
@@ -113,40 +111,42 @@ Don't write any actual code though. Just psuedo code.
 
 Follow the following steps to get started:
 
-#### Create a folder for your experiments
+1. Create a folder for your experiments
 
+```bash
+mkdir webscraping-workshop
+cd webscraping-workshop
 ```
-  mkdir webscraping-workshop
-  cd webscraping-workshop
-```
 
-#### Run `npm init`
+2. Run `npm init --yes`
+    
+    The `--yes` automatically answers yes to all of the questions during the npm initialization.
 
-#### Run `git init`
+3. Run `git init`
 
-#### Create a `.gitignore` and ignore, at minimum, `node_modules`
+4. Create a `.gitignore` and ignore, at minimum, `node_modules`
 
-#### Create a `README.md`
+5. Create a `README.md`
 
-As you work, put your script files in this folder. Link to helpful blog posts/tutorials.docs that helped you along your way in the README. It may also be a good idea to put your 'roadmap' of psuedocode in that README as well.
+    As you work, put your script files in this folder. Link to helpful blog posts/tutorials/docs that helped you along your way in the README. It may also be a good idea to put your 'road map' of psuedocode in that README as well.
 
-#### Run `npm i nightmare --save`
+6. Run `npm i nightmare --save`
 
-#### Create a script file... something like `node script.js`
+7. Create a script file... something like `script.js`
 
-#### Run your code using Node! So in the terminal `node scrape.js`
+8. Run your code using Node! So in the terminal `node scrape.js`
 
-#### Some ideas for things to code:
+9. Some ideas for things to code:
 
-- A script that orders pizza for your board game night and splits the check for you
-- A test suite for your personal project
-  - [Yes you can use Nightmare to create feature tests](https://gist.github.com/MikaelSoderstrom/4842a97ec399aae1e024)
-- An automated tool to log you into craiglist and post a missed connection for you
-- Remember how heroku goes to sleep? Write a script to wake your app up for you every morning.
-- Pull some data from some site that doesn't give you an API and makes you log in
-  - Write that data to a CSV file. You can read those into Node projects pretty easily :D
+    - A script that orders pizza for your board game night and splits the check for you
+    - A test suite for your personal project
+      - [Yes you can use Nightmare to create feature tests](https://gist.github.com/MikaelSoderstrom/4842a97ec399aae1e024)
+    - An automated tool to log you into craiglist and post a missed connection for you
+    - Remember how heroku goes to sleep? Write a script to wake your app up for you every morning.
+    - Pull some data from some site that doesn't give you an API and makes you log in
+      - Write that data to a CSV file. You can read those into Node projects pretty easily :D
 
-Really, though, the internet is your oyster.
+    Really, though, the internet is your oyster.
 
 ## Implementation Phase
 
@@ -193,7 +193,7 @@ If you need more of the page, you can adjust the viewport using code like ` .vie
 
 Rather than just console logging the output.. think about [writing it to a file](http://stackoverflow.com/questions/39175845/how-do-i-write-data-from-nightmarejs-to-file) 
 
-# Final Thoughts
+## Final Thoughts
 
 (from Neight the Greight)
 
