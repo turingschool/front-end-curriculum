@@ -123,14 +123,14 @@ Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/
 
 <br>
 
-## Git/Github
+<!-- ## Git/Github
 
 - Novice
 - Advanced Beginner
 - Proficient
 - Exceptional
 
-<br>
+<br> -->
 
 ## Pairing
 
