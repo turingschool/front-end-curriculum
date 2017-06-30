@@ -37,7 +37,7 @@ It’s a “style sheet language” that lets you style the HTML elements on you
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## All the Elements are Boxes
-Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane. :scream: 
+Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
 
 # ![Box Model](/assets/images/box-model.jpg)
 
@@ -49,10 +49,10 @@ Each element is a rectangular box. CSS leverages "the box model" to control layo
 * [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
 * [Visual Guide to CSS](http://cssreference.io/)
 
-*** 
- 
+***
+
 # Practice
-Let's setup a small static page to experiement with our HTML and CSS. 
+Let's setup a small static page to experiement with our HTML and CSS.
 
 * Create a directory called static-site-playground
 * Create a file `index.html` with the html provided below
@@ -133,7 +133,7 @@ div {
 - `absolute`: An absolutely positioned element is completely removed from the normal flow. The adjacent sibling elements occupy its space.
 - `fixed`: A fixed positioned element (subcategory of the absolute positioning) is positioned relative to the viewport. It will stick in place despite any scrolling or resizing of the viewport
 - You specify the position of your element via offset properties: `auto` (default), `top`, `bottom`, `right`, `left`
-- An element whose position property is set to absolute or fixed is called an absolutely positioned element. 
+- An element whose position property is set to absolute or fixed is called an absolutely positioned element.
 - A positioned element can take advantage of the `z-index` property to specify its stack order. The stack order is the order in which elements in the same space lay on top of one another. For example, an element with a `z-index` of `2` will appear above an element with a `z-index` of `1` if they happen to overlap. Without any z-index value, elements stack in the order they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning will always appear on top of elements with default static positioning. Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can never be higher than element B.
 
 ### Floats
@@ -145,7 +145,7 @@ div {
 - `left`: floats the element to the left of its container.
 - `right`: floats the element to the right of its container.
 - `inherit`: the element inherits the float direction of its parent.
-- `clear`: Float's sister property. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float. 
+- `clear`: Float's sister property. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float.
 
 ```css
 .clearfix:after {
@@ -190,14 +190,14 @@ Examples:-
 
 [Specificity Calculator](https://specificity.keegan.st/) The highest number wins for most specific and will correspondingly take precedent in application of style.
 
-Key Points: 
+Key Points:
 
 * In case of conflicting styles declaration, the declaration with higher specificity will win regardless of order.
-* The universal selector (*) has no specificity value. 
+* The universal selector (*) has no specificity value.
 * Pseudo-classes have specificity of 10 while pseudo-elements (e.g. :first-line) has a specificity of 1. [Pseudo-class vs. Pseudo-element](https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/)
 * The pseudo-class :not() adds no specificity by itself, only elements inside its parenthesis will add to specificity weight.
-* When an !important rule is used on a style declaration, it will override any other declarations. 
-* The only way an !important value can be overridden is with another !important rule declared later in the CSS and with equal or great specificity value . 
+* When an !important rule is used on a style declaration, it will override any other declarations.
+* The only way an !important value can be overridden is with another !important rule declared later in the CSS and with equal or great specificity value .
 
 ***
 
