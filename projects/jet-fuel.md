@@ -41,7 +41,7 @@ The basic layout of the application should include:
 * A form for submitting a new URL for a selected folder
 * When a URL is submitted, the user can see the shorted version of the URL in the user interface
 * A list of all of the folders of the site
-* The date the URL was added
+* For each URL, the user can see the date that the URL was added
 
 ## Guidelines
 
