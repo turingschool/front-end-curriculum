@@ -65,36 +65,7 @@ npm run test --silent
 npm run lint --silent
 ```
 
-We could technically still get our commit through as long as our tests are passing. This is because the linting process doesn't actually exit with an error if there are linting problems. In order to exit the process after reporting linting errors, we need to make our pre-commit hook a little more advanced:
 
-```bash
-echo "\nLinting...\n"
-
-files=$(git diff --cached --name-only --diff-filter=ACM | grep "\.js$")
-if [ "$files" = "" ]; then 
-    exit 0 
-fi
-
-lintPass=true
-
-for file in ${files}
-  do
-    ./node_modules/.bin/eslint -c ./.eslintrc.json ${file}
-    if [[ "$?" == 0 ]]; then
-        echo "\033[32mESLint Passed: ${file}\033[0m"
-    else
-        echo "\033[31mESLint Failed: ${file}\033[0m"
-        lintPass=false
-    fi
-done
-
-if ! $lintPass; then
-    echo "\033[31mCommit Failed:\033[0m Your commit contains files that should pass JSHint but do not. Please fix the JSHint errors and try again.\n"
-    exit 1
-else
-    echo "\033[32mCommit Succeeded\033[0m\n"
-fi
-```
 
 ### Pre-Commit: Console.Logs/Accepting User Input
 
