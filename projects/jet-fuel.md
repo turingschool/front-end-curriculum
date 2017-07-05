@@ -5,91 +5,77 @@ module: 4
 
 ## Abstract
 
-In this project you'll build a URL shortener service.
+Have you ever used [bitly](https://bitly.com/)? It's a service made to take a long URL and shorten it. When you visit the new short URL, it redirects you to the original, long URL.
 
-Your application will allow users to create folders (like bookmark folders) to store long, ugly URLs as shortened URLs through your service.
+For instance, I put the long URL, `https://fortunedotcom.files.wordpress.com/2015/02/78439682.jpg?w=720&quality=85`, for [this photo](https://fortunedotcom.files.wordpress.com/2015/02/78439682.jpg?w=720&quality=85) into bitly, 
+and it returned a [shortened URL](http://bit.ly/2tuK5Ai), `http://bit.ly/2tuK5Ai`.
 
-The main goal of your application is to redirect a request at the shortened URL to their long URL equivalent. Each shortened URL should belong to a unique folder which is capable of storing N number of URLs.
+You're going to create an application that does the same thing! 
 
-Your secondary goal is to track URL usage and provide popularity statistics.
+The main goal of your application is to redirect a request at the shortened URL to their long URL equivalent. Each shortened URL should belong to a _unique_ folder that is capable of storing N number of URLs.
 
 ## Base Expectations
 
-```gherkin
-Given that I am an anonymous user of the site
-When I visit the site and provide a folder name to the service
-Then I expect it to create that folder for storing URLs
+A user can:
 
-Given that I am an anonymous user of the site
-When I visit a folder and provide a URL to the service
-Then I expect it to return a service shortened URL for that folder
+* Create a folder to store shortened URLs in - the folder name *must be unique*
+* Give the application a URL to be shortened and the folder that the URL should belong to 
+* Click on a shortened URL and be redirected to the original, long URL
 
-Given that I am an anonymous user of the site
-When I follow a service shortened URL
-Then I expect to be redirected to the original URL
+    The anchor tag in your app should look something like this where the `href` attribute is the shortened URL:
 
-Given that I am an anonymous user of the site
-When I visit a folder
-Then I expect to see all URLs relating to that folder
+```html
+<a href="www.myjetfuelapp.com/someShortenedUrl">www.myjetfuelapp.com/someShortenedUrl</a>
 
-Given that I am an anonymous user of the site
-When I visit a folder
-Then I expect the ability to sort the folder's URLs by popularity (number of visits)
-And I expect the ability to sort the folder's URLs by how recently they were added
+<!-- For development, your app domain will just be localhost:3000/, but for production it will be something like https:/my-jet-fuel-app.heroku.com/ -->
+<!-- Don't worry about production until the last day of the project (Friday) -->
 ```
 
-## Things to Think About
+* Visit a folder an see all of the URLs associated with that folder
+* Visit a folder and sort the folder's URLs by how recently they were added (both descending and ascending order)
+* Enter a URL to be shortened _only if_ it is a valid URL (impose some kind of URL validation)
 
-### Application
+The basic layout of the application should include:
 
-* Does the application meet the expectations defined above?
+* A form for submitting a new folder
+* A form for submitting a new URL for a selected folder
+* When a URL is submitted, the user can see the shorted version of the URL in the user interface
+* A list of all of the folders of the site
+* The date the URL was added
 
-### Code Clarity
+## Guidelines
 
-* Is the application consistent with other applications you have written or seen?
-* Are the files of the application laid out in a logical manner?
-* Does the code within each file directly relate to the name of the file and location within the application?
-* Is the code clearly laid out?
-* Does each function accomplish their intended task or do they do more than intended?
+### Server Side
 
-### Server-side Code
+* The application must be constructed using Node/Express with a knex and PostgreSQL database.
+* There should be one client-side route (`'/'`), and other endpoints should be API endpoints (`'api/v1/...'`)
+* You should only need to use GET and POST requests. You should not need to use POST, PUT, or DELETE requests for the basic expectations of this project.
+* Each API endpoint should respond with JSON-formatted data
 
-* Does each route handle a single operation?
-* Does each route respond with the correct resource and in the correct JSON format?
-* Are your routes "RESTful"?
-* Are your urls stored to their correct folder in the database?
+### Client Side
 
-### Client-side Code
+* There is no comp given to you to follow - it is up to you how you want to design the UI/UX of your site within the base expectations of the app
+* This is a single-page app - everything about the app should be viewable from the homepage (eg. `localhost:3000/`)
+* Client-side code must be written in vanilla JavaScript or jQuery (just be consistent using one or the other) - _not React or any other framework_.
+* Client-side requests to the server should be made using the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch)
+* Remember that you're all front-end developers - take pride in the UI/UX and design part of this project
+* The user should never have to refresh the page
 
-* Do event-listeners fetch the correct data from the correct endpoint?
-* Do fetch responses append information to the page correctly?
+### Testing
 
-### Tests
+* Server-side testing is required for all endpoints using `mocha`, `chai`, and `chai-http`, and the tests should include happy and sad paths
+* You can get extra points for client-side testing, but for this project the focus should be server-side testing
 
-* Are all aspects of the application well-tested?
-* Do the tests run? Are there failures? Are failed tests skipped with comments?
-* Is it clear what code is under test?
-* Is it clear what scenario is being tested?
-* Is it clear the expected results of the scenario?
-* Is there a lot of repetition of setup/teardown in the tests?
+### Production
 
-## Evaluation
+On the last day of the project, you will have a class about pushing your application to production. You application must be on production 
+before it can be evaluated.
 
-The following features are required for specification adherence (50 points) in the rubric below.
+## Extensions
 
-- The home page has a form for submitting a new folder.
-- The home page has a form for submitting a new URL for a selected folder.
-- When a URL is submitted, the user can see a shorted version of the URL in the user interface.
-- When the user visits the shortened URL, they are redirected to the original URL.
-- There is a list of all of the folders of the site.
-- There is a list for each folder of all of it's shortened URLs.
-- Users can see the date the URL was added as well as how many times the short URL has been visited.
-- Users can sort by date added and by popularity in either ascending or descending order.
-
-In addition, the following features are worth additional points.
-
-- The list of URLs has a search field for filtering the list of URLs. (5 points)
-- The application will allow the user to provide their own custom short URL. (10 points)
+- The list of URLs has a search field for filtering the list of URLs (5 points)
+- The application will allow the user to provide their own custom short URL (10 points)
+- All of the client-side interactions are tested (10 points)
 
 ## Instructor Evaluation Points
 
@@ -98,6 +84,8 @@ The following set of points are distributed at the discretion of the instructor.
 ### Specification Adherence
 
 * **50 points**: No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
+* **40 points**: There is one feature missing from the base expectations that makes the application feel incomplete or hard to use.
+* **20 points**: There are two features missing from the base expectations that make the application feel incomplete or hard to use.
 
 ### User Interface
 
@@ -114,33 +102,30 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### Testing
 
-* **20 points** - Project has a running test suite that exercises the application at multiple levels including server and client tests.
-* **15 points** - Project has a running test suite that tests and multiple levels but fails to cover some features. All controller actions are covered by tests. The application makes some use of integration testing.
-* **7 points** - Project has sporadic use of tests and multiple levels. Not all controller actions are tested. There are little or no attempts at integration testing.
-* **0 points** - There is little or no evidence of testing in this application.
+* **20 points** - Project has a running test suite that tests every server-side endpoint with many happy and sad path cases.
+* **15 points** - Project has a running test suite that tests every server-side endpoint, but only has a couple sad path cases.
+* **7 points** - Project has sporadic testing of some server-side endpoints. There are happy path tests, but there are is one or zero sad path cases.
+* **0 points** - There is little or no evidence of testing in this application. Most or all of the tests in the test suite are failing.
 
 ### JavaScript Style
 
 * **20 points** - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
 * **15 points** - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* **12 points** - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-* **8 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
-* **3 point** - Your client-side application does not function or the application does not make use of AJAX using jQuery for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
+* **10 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
+* **5 points** - Your client-side application does not function or the application does not make use of `fetch` for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 * **0 points** - There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
 
 ### Workflow
 
 * **20 points** - The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application.
-* **15 points** - The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base.
-* **7 points** - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
+* **15 points** - *Node modules have been committed to the repo*, which you don't want. The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base.
+* **5 points** - The developer makes a few, large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 * **0 points** - The application was not checked into version control.
 
-## Projects are due on Friday 3/17, 12:00 p.m. We will provide a submission form for all teams to submit their repos.
+## Projects are due on Friday of week 1, by 1:00 p.m. We will provide a submission form for all teams to submit their GitHub repo and production link.
 
-## Project is worth 150 points with 15 extra points possible
+### Project is worth 150 points with 25 extra points possible
 
-## To get a 3 on this project, you need to score 110 points or higher
+### To get a 3 on this project, you need to score 115 points or higher
 
-## To get a 4 on this project, you need to score 135 points or higher
-
-# Final Score: x / 150
+### To get a 4 on this project, you need to score 135 points or higher
