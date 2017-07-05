@@ -5,8 +5,8 @@ title: Number Guesser
 ## Overview
 - Build a game where the user guesses a number between 1 and 100.
 <!-- - Build out phases 1-3 and push them to Github via the MASTER branch for evaluation. -->
-- Phase 4 is optional. If you execute phase 4, create a separate branch for that work for evaluation.
-- Include a README.md in your project that summarizes the project (this does not mean paste this project spec into your README)
+- Phase 4 is optional. If you execute phase 4, create a separate branch in Git for that work for evaluation (using Git is an extra challenge -- investigate how to initialize a Git repo and make a branch! We'll go over how to do this in class in a few days, so this is a great time to investigate on your own).
+<!-- - Include a README.md in your project that summarizes the project (this does not mean paste this project spec into your README) -->
 
 ## Phase One: Basic Requirements
 
@@ -123,23 +123,15 @@ Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/
 
 <br>
 
-## Git/Github
+<!-- ## Git/Github
 
 - Novice
 - Advanced Beginner
 - Proficient
 - Exceptional
 
-<br>
+<br> -->
 
-## Pairing
-
-- Novice
-- Advanced Beginner
-- Proficient
-- Exceptional
-
-<br>
 
 ## Surprise and Delight (reminder: have fun!)
 

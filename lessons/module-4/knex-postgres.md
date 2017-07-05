@@ -404,13 +404,7 @@ To make a selection for all the papers in the database, we can use `database('pa
 app.get('/api/v1/papers', (request, response) => {
   database('papers').select()
     .then((papers) => {
-      if (papers.length) {
-        response.status(200).json(papers);
-      } else {
-        response.status(404).json({ 
-          error: 'No papers found!'
-        });
-      }
+      response.status(200).json(papers);
     })
     .catch((error) => {
       response.status(500).json({ error });

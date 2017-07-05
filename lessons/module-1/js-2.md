@@ -178,9 +178,11 @@ Tricky Question! You'll notice that in the above snippets of code, only the NAME
 In other words, this means that when a function is written as an expression, the interpreter won't process it until it gets to that full statement. **This means function expressions do *not* get special treatment, you cannot call the function _before_ the interpreter discovers it.** (As a side note, it also means any preceding code up to that point could potentially alter what goes inside that function.)  
 
 ### Your Turn
-Take a few minutes with the person in front/behind you to look through the following examples functions. Try to answer the questions WITHOUT using your console yet. Then we will go over them together.  
+Take a few minutes with the person in front/behind you to talk through and explain hoisting to each other.
 
-[Check Your Understanding](https://gist.github.com/)  
+<!-- Take a few minutes with the person in front/behind you to look through the following examples functions. Try to answer the questions WITHOUT using your console yet. Then we will go over them together.  
+
+[Check Your Understanding](https://gist.github.com/)   -->
 
 # Variable Scope
 Where you declare a variable affects where it can be used within your code. If you declare a variable within a function, it can only be used within that function. This is known as the variable's `scope`. When we talk about variables in regard to their scope, there are two (kind of three) types:

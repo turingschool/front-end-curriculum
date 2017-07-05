@@ -56,6 +56,26 @@ The DOM has been updated to the following:
 <p id="third" class="awesome">The is the third paragraph.</p>
 ```
 
+```html
+<!-- The following line of HTML will be used in the next side track example -->
+<!-- Note the extra spaces after hello - that is intentional -->
+<p id="inner-text-example">Hello    <span>1706</span></p>
+```
+
+**Side Track**: You may have heard about a few different ways to target/manipulate the text of an HTML page. The two most common are `innerText` and `innerHTML`, with a third being `textContent`. [The first answer in this convo](https://teamtreehouse.com/community/innertext-vs-innerhtml) gives you a quick answer, but if you're curious run the following few lines of code in your console:
+
+```js
+var para = document.querySelector('#inner-text-example');
+console.log(para.innerText);
+console.log(para.innerHTML);
+console.log(para.textContent);
+```
+
+To sum up:   
+- `innerText` will collapse all of the spaces and give you back JUST THE TEXT.
+- `innerHTML` will give you back the text, with any nested HTML elements printed out as well  
+- `textContent` will give you back an exact copy of JUST THE TEXT, leaving any spacing or formatting as is.  
+
 ### Pair Practice
 
 Visit the [this page][codepen] and fork the CodePen.

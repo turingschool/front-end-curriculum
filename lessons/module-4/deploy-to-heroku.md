@@ -27,6 +27,8 @@ Add a [Procfile](https://devcenter.heroku.com/articles/procfile) at the root of 
 web: node server.js
 ```
 
+(*Note: If you've named your server file anything other than server.js, replace that line with the correct name. e.g. if your server is named `index.js` your procfile should say `web: node index.js`)*
+
 A Procfile contains a number of process type declarations, each on a new line. Each process type is a declaration of a command that is executed when a [dyno](https://devcenter.heroku.com/articles/dynos) of that process type is started.
 
 For example, if a web process type is declared, then when a dyno of this type is started, the command associated with the web process type, will be executed. This could mean starting a web server, for example. The `web: node server.js` will override the default `npm start` command that Heroku tries to run. (This is helpful because your start script might be using nodemon instead of just node.)
