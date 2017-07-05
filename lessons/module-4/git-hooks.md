@@ -120,6 +120,8 @@ As of Git 2.9, you can set a git configuration option `core.hooksPath` that will
 
 In earlier versions of Git, you could implement this same strategy by creating a symlink from the `.git/hooks` directory to your local repository of your team's git hooks.
 
+Both of these strategies can be facilitated by a library like [git-validate](https://github.com/nlf/git-validate). With git-validate, you can create a separate repository to hold things like a common linting configuration and rules for your pre-commit hooks.
+
 ## Resources
 
 * [Git Hooks Guide](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks)
