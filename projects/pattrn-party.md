@@ -12,21 +12,21 @@ By focusing on the parts that make up the whole, we are allowing ourselves to ma
 
 ## Project Overview
 
-Every week you will be given a specific page element to build. It must be responsive, and the HTML, CSS, and (when/if needed) JS must be written in a modular way. The goal is to create a small library of page components that can be quickly and easily dropped into a project with minimal work to integrate them into a codebase.
+Every week you will be given a specific page element to build. It must be responsive and the HTML, CSS, and (when/if needed) JS must be written in a modular way. The goal is to create a small library of page components that can be quickly and easily dropped into a project with minimal work to integrate them into a codebase.
 
 ## Project Requirements
 
 ### You will be building [this comp](https://drive.google.com/file/d/0B_lPnjyMN6-CWklWcy1wUFA1SVE/view?usp=sharing)
 
-By the end of the module you will have a created a small style guide. As outlined in Brad Frost's [Style Guide](http://bradfrost.com/blog/post/style-guides/) overviews, you will focus on creating a pattern library and code style guide for each element.
+By the end of the module you will have a created a small style guide. As outlined in Brad Frost's [Style Guide](http://bradfrost.com/blog/post/style-guides/) overviews, you will focus on creating a pattern library and code style guide for each element. This would be a great time to dig into and work with a [CSS methodology like BEM or SMACSS.](https://www.sitepoint.com/bem-smacss-advice-from-developers/)
 
 Focus on semantic HTML, well organized and clear CSS, and DRY, well factored Javascript. Your final deliverable will be a gh-pages site displaying each of your solutions and the code for each, along with a README that includes a brief description of the elements so a developer new to your project can understand the intended use without further explanation.
 
 Your final style guide deliverable must meet the following criteria:
 
-- One-page site that must be live (on gh-pages, or heroku if you want to be fancy)
+- One-page site that must be live (on gh-pages, or Heroku if you want to be fancy)
 - Each weekly exercise should be a section of the one-page site (as shown in comp)
-- Site must include the completed element and the associated code (for example: links to a codepen would be appropriate)
+- Site must include the completed element and the associated code (for example: links to a Codepen would be appropriate)
 - All elements must be fully responsive and match the comp
 
 # Weekly Assignments
@@ -35,15 +35,15 @@ Design, fonts, and colors are provided in the comp. The final elements must be b
 
 We know you've got a lot on your plate, so we've broken this out across three weeks to help with pacing:
 
-## Week One
+## Week One of Pattrn Party
 
 Accordion Tabs
 
-## Week Two
+## Week Two of Pattrn Party
 
 Flexible Cards
 
-## Week Three
+## Week Three of Pattrn Party
 
 Header Bar
 
@@ -56,6 +56,7 @@ Here is a collection of existing style guides for reference, and readings/docume
 - Brad Frost's post on [Style Guides](http://bradfrost.com/blog/post/style-guides/)
 - [Anatomy of a Pattern in a Pattern Library](http://bradfrost.com/blog/post/anatomy-of-a-pattern-in-a-pattern-library/)
 - For examples of how you might structure your CSS, take a look at SMACSS, particularly the chapters on [Layout Rules](https://smacss.com/book/type-layout) and [Module Rules](https://smacss.com/book/type-module)
+- [BEM vs SMACSS explanations, pros and cons](https://www.sitepoint.com/bem-smacss-advice-from-developers/)
 
 #### Reference Style Guides and Pattern Libraries
 - [Code for America Style Guide](http://codeforamerica.clearleft.com/)
