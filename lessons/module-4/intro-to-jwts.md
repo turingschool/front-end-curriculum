@@ -27,7 +27,7 @@ module: 4
 
 <section>
   <section>
-    <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.<br />eyJ1c2VybmFtZSI6ImJyaXR0YW55IiwicGFzc3dvcmQiOiJoZWxsbyIsImlhd<br />CI6MTQ5OTM0MjA5OSwiZXhwIjoxNDk5NTE0ODk5fQ.<br />PkWZL0OkYeNT1s5C2FUbB1XRpdo409A6ySa_d81dVgM</p>
+    <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2V<br />ybmFtZSI6ImJyaXR0YW55IiwicGFzc3dvcmQiOiJoZWxsby<br />IsImlhdCI6MTQ5OTM0MjA5OSwiZXhwIjoxNDk5NTE0ODk5<br />fQ.PkWZL0OkYeNT1s5C2FUbB1XRpdo409A6ySa_d81dVgM</p>
   </section>
   <section>
     <p><b>With a partner, discuss the following questions:</b></p>
