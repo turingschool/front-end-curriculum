@@ -51,7 +51,7 @@ module: 4
 
 <section>
   <h3>How Can we use JWTs?</h3>
-  <p>By passing them through a request to the server, either:</p>
+  <p>By passing them through a <b>request</b> to the <b>server</b>, either:</p>
   <ul>
     <li>in the request body</li>
     <li>as a query parameter</li>
@@ -64,7 +64,7 @@ module: 4
   <p>To verify that a request is coming from an authentic source</p>
   <ul>
     <li>to prevent data from being exposed to unauthorized users</li>
-    <li>to limit access to features and of an application</li>
+    <li>to limit access to features of an application</li>
     <li>authentication does not equal full security</li>
   </ul>
 </section>
