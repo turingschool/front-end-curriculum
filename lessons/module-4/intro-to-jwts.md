@@ -7,7 +7,7 @@ module: 4
 
 <section>
   <h2>Intro to JSON Web Tokens</h2>
-  <h3>Goals:</h3>
+  <p><b>Goals:</b></p>
   <ol>
     <li>Understand what a JSON Web Token is and how it's used</li>
     <li>Be able to protect a server-side endpoint with a JWT</li>
@@ -17,11 +17,11 @@ module: 4
 
 <section>
   <section>
-    <h2><i>What if...</i></h2>
-    <h3>"someone discovers a server-side endpoint used for sharing private photographs"</h3>
+    <h3>What if...</h3>
+    <p><i>"someone discovers a server-side endpoint used for sharing private photographs"</b></i>
   </section>
   <section>
-    <p>We can **protect** access to this endpoint by requiring **authentication** through the use of a **JWT**</p>
+    <p>We can <b>protect</b> access to this endpoint by requiring <b>authentication</b> through the use of a <b>JWT</b></p>
   </section>
 </section>
 
