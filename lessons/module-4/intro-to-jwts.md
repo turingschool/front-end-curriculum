@@ -26,7 +26,7 @@ module: 4
 </section>
 
 <section>
-  <h3>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXR0YW55IiwicGFzc3dvcmQiOiJoZWxsbyIsImlhdCI6MTQ5OTM0MjA5OSwiZXhwIjoxNDk5NTE0ODk5fQ.PkWZL0OkYeNT1s5C2FUbB1XRpdo409A6ySa_d81dVgM</h3>
+  <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXR0YW55IiwicGFzc3dvcmQiOiJoZWxsbyIsImlhdCI6MTQ5OTM0MjA5OSwiZXhwIjoxNDk5NTE0ODk5fQ.PkWZL0OkYeNT1s5C2FUbB1XRpdo409A6ySa_d81dVgM</p>
 </section>
 
 <section>
