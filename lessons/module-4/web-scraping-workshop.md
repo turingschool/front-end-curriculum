@@ -21,7 +21,7 @@ Code for live implementation
 
 ```js
 var Nightmare = require('nightmare');
-var nightmare = Nightmare({  show: true }); // this opens a browser. Normally we don't want that to happen, as it slows things down
+var nightmare = Nightmare({ show: true }); // this opens a browser. Normally we don't want that to happen, as it slows things down
 
 nightmare
   .goto('https://www.turing.io')
@@ -48,7 +48,7 @@ Minimum needed code is:
 
 ```js
 var Nightmare = require('nightmare');
-var nightmare = Nightmare({  show: true });
+var nightmare = Nightmare({ show: true });
 
 nightmare
   .goto('WEBSITE ADDRESS')
