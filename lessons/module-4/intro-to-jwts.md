@@ -26,16 +26,17 @@ module: 4
 </section>
 
 <section>
-  <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.<br />eyJ1c2VybmFtZSI6ImJyaXR0YW55IiwicGFzc3dvcmQiOiJoZWxsbyIsImlhdCI6MTQ5OTM0MjA5OSwiZXhwIjoxNDk5NTE0ODk5fQ.<br />PkWZL0OkYeNT1s5C2FUbB1XRpdo409A6ySa_d81dVgM</p>
-</section>
-
-<section>
-  <h3>What can Service Workers do?</h3>
-  <ul>
-    <li>offline your application</li>
-    <li>implement background sync*</li>
-    <li>enable push notifications*</li>
-  </ul>
+  <section>
+    <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.<br />eyJ1c2VybmFtZSI6ImJyaXR0YW55IiwicGFzc3dvcmQiOiJoZWxsbyIsImlhdCI6MTQ5OTM0MjA5OSwiZXhwIjoxNDk5NTE0ODk5fQ.<br />PkWZL0OkYeNT1s5C2FUbB1XRpdo409A6ySa_d81dVgM</p>
+  </section>
+  <section>
+    <p><b>With a partner, discuss the following questions:</b></p>
+    <ol>
+      <li>What did you use API keys for? Why did you need them?</li>
+      <li>How did you use them? Where did you put them in your codebase?</li>
+      <li>What problems, if any, did you run into when using them?</li>
+    </ol>
+  </section>
 </section>
 
 <section>
@@ -82,19 +83,9 @@ module: 4
 </section>
 
 <section>
-  <section>
-    <h3>Service Worker Lifecycle</h3>
-  </section>
-  <section>
-    <p><b>1. Registration:</b> browser is aware that we have a service worker that needs to be recognized, and will kick off the installation step upon a successful registration</p>
-  </section>
-  <section>
-    <p><b>2. Installation:</b> the service worker is installed, but doesn’t actually control anything on the page just yet. This is a good phase to cache assets for offline use.</p>
-  </section>
-  <section>
-    <p><b>3. Activation:</b> the service worker has been installed and is activated. This is a good place for us to manage old cached assets and update the service worker.</p>
-  </section>
-  <section>
-    <p><b>4. Full Page Control:</b> the service worker has been activated and now has full control over any pages that fall under its scope</p>
-  </section>
+  <h3>Resources</h3>
+  <ul>
+    <li><a href="https://zapier.com/engineering/apikey-oauth-jwt/>Differences between API Keys, OAuth, and JWTs</a></li>
+    <li><a href="">Understanding JWTs</a></li>
+  </ul>
 </section>
