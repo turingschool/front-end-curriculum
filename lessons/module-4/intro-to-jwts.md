@@ -1,44 +1,32 @@
 ---
-title: Introduction to Service Workers
+title: Introduction to JSON Web Tokens
 layout: presentation
-tags: service workers, PWAs, offline
+tags: authentication, security, JWTs
 module: 4
 ---
 
 <section>
-  <h2>Intro to Service Workers</h2>
-</section>
-
-<section>
+  <h2>Intro to JSON Web Tokens</h2>
   <h3>Goals:</h3>
   <ol>
-    <li>Understand when and why to use service workers</li>
-    <li>Be able to implement service workers for making an application available offline</li>
+    <li>Understand what a JSON Web Token is and how it's used</li>
+    <li>Be able to protect a server-side endpoint with a JWT</li>
+    <li>Understand similarities/differences between JWTs and other authentication methods</li>
   </ol>
 </section>
 
 <section>
   <section>
-    <h3>What is a Service Worker?</h3>
+    <h2><i>What if...</i></h2>
+    <h3>"someone discovers a server-side endpoint used for sharing private photographs"</h3>
   </section>
   <section>
-    <p>a new API that allows you to run a script in <i>background</i> of your application and facilitates creating <br /><i>Progressive Web Apps</i></p>
+    <p>We can **protect** access to this endpoint by requiring **authentication** through the use of a **JWT**</p>
   </section>
 </section>
 
 <section>
-  <section>
-    <h3>What is a Progressive Web App?</h3>
-  </section>
-  <section>
-    <p>a web application intended to look, feel and behave like a native application</p>
-  </section>
-  <section>
-
-  <p><i>Take a look at the apps on your phone - think about how you use them and how they behave.</i></p>
-
-  <p><i>How are they similar to web apps? How are they different? <br />(10-15 mins)</i></p>
-  </section>
+  <h3>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImJyaXR0YW55IiwicGFzc3dvcmQiOiJoZWxsbyIsImlhdCI6MTQ5OTM0MjA5OSwiZXhwIjoxNDk5NTE0ODk5fQ.PkWZL0OkYeNT1s5C2FUbB1XRpdo409A6ySa_d81dVgM</h3>
 </section>
 
 <section>
