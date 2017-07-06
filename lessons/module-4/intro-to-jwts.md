@@ -18,7 +18,7 @@ module: 4
 <section>
   <section>
     <h3>What if...</h3>
-    <p><i>"someone discovers a server-side endpoint used for sharing private photographs"</b></i>
+    <p><i>"someone discovers a server-side endpoint used for sharing private photographs"</i></p>
   </section>
   <section>
     <p>We can <b>protect</b> access to this endpoint by requiring <b>authentication</b> through the use of a <b>JWT</b></p>
