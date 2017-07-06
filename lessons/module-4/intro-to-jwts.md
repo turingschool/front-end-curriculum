@@ -72,7 +72,7 @@ module: 4
 <section>
   <h3>Resources</h3>
   <ul>
-    <li><a href="https://zapier.com/engineering/apikey-oauth-jwt>Differences between API Keys, OAuth, and JWTs</a></li>
+    <li><a href="https://zapier.com/engineering/apikey-oauth-jwt">Differences between API Keys, OAuth, and JWTs</a></li>
     <li><a href="https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.xp9snye3h">Understanding JWTs</a></li>
   </ul>
 </section>
