@@ -40,52 +40,39 @@ module: 4
 </section>
 
 <section>
-  <section>
-    <h3>Characteristics of a Service Worker</h3>
-  </section>
-  <section>
-    <h4><b>Runs in the background</b></h4>
-    <ul>
-      <li>web workers are single JavaScript files, run on own thread</li>
-      <li>don't block execution of any other client-side JavaScript</li>
-      <li>handle time-intensive operations without locking UI</li>
-      <li>service workers are a type of web worker</li>
-      <li>service workers allow background processing that specifically relates to handling network requests</li>
-    </ul>
-  </section>
-  <section>
-    <h4><b>Cannot interact with DOM</b></h4>
-    <ul>
-      <li>can't access the DOM tree to do any manipulations</li>
-      <li>must communicate through sending messages back and forth</li>
-    </ul>
-  </section>
-  <section>
-    <h4><b>Event-based</b></h4>
-    <ul>
-      <li>service worker can 'go to sleep' at any time</li>
-      <li>is only woken up and utilized during events</li>
-    </ul>
-    <img src="https://mdn.mozillademos.org/files/12632/sw-events.png" />
-  </section>
-  <section>
-    <p><b>Read:</b> <a href="https://aarontgrogg.com/blog/2015/07/20/the-difference-between-service-workers-web-workers-and-websockets/">What's the Difference Between Service Workers, Web Workers, and Web Sockets?</a></p>
-  </section>
+  <h3>What is a JWT?</h3>
+  <ul>
+    <li>a string</li>
+    <li>...that is base64url-encoded</li>
+    <li>...and contains authentication data for a particular user</li>
+  </ul>
+  <p>Let's take a look at the <a href="https://jwt.io/">anatomy of a JWT</a></p>
 </section>
 
 <section>
-  <h4>Let's Practice</h4>
-  <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>
-  <p><pre><code>`npm install simplehttpserver -g`</code></pre></p>
-  <p><pre><code>`cd public`</code></pre></p>
-  <p><pre><code>`simplehttpserver`</code></pre></p>
-  <p><pre><code>`http://localhost:8000`</code></pre></p>
+  <h3>How Can we use JWTs?</h3>
+  <p>By passing them through a request to the server, either:</p>
+  <ul>
+    <li>in the request body</li>
+    <li>as a query parameter</li>
+    <li>as an authorization header</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Why do we use JWTs?</h3>
+  <p>To verify that a request is coming from an authentic source</p>
+  <ul>
+    <li>to prevent data from being exposed to unauthorized users</li>
+    <li>to limit access to features and of an application</li>
+    <li>authentication does not equal full security</li>
+  </ul>
 </section>
 
 <section>
   <h3>Resources</h3>
   <ul>
     <li><a href="https://zapier.com/engineering/apikey-oauth-jwt/>Differences between API Keys, OAuth, and JWTs</a></li>
-    <li><a href="">Understanding JWTs</a></li>
+    <li><a href="https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.xp9snye3h">Understanding JWTs</a></li>
   </ul>
 </section>
