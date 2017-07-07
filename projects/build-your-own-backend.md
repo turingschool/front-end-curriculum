@@ -5,7 +5,7 @@ module: 4
 
 ## Abstract
 
-Practice makes practice. Last week's project had you dive head first into a full-stack application with Node, Express, Knex, and a front-end to boot. That was a lot thrown at you in one week so this time around we are going to focus solely on the backend.
+Practice makes practice. Last week's project had you dive head first into a full-stack application with Node, Express, Knex, and a front-end to boot. That was a lot thrown at you in one week so this time around we are going to focus solely on the backend. You'll be building your own API for a large dataset of your choosing.
 
 The main focus of this project will be to reinforce your understanding of CRUD methods, querying a database, and responding with JSON data. You can do this project right now, without any new lessons.
 
@@ -13,11 +13,7 @@ The secondary focus of this project is prepping your Capstone project so you hav
 
 ## Base Expectations
 
-### API Structure & Best Practices
-
-In the README, developer should provide documentation on the API endpoints that can be hit. This can be as simple as just listing all endpoints (and accepted params) with explanation of responses. Here is a [great example of in depth documentation](https://github.com/500px/api-documentation/blob/master/README.md)
-
-### Sources of Data
+### Find a Data Source
 
 Data source MUST BE LOCKED IN by Monday (7/10) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
@@ -34,7 +30,7 @@ Possible sources of data:
 
 ### Relationships
 
-At minimum, you must have at least 1 relationship between two or more tables. (e.g. one-to-one, one-to-many, many-to-many)
+At minimum, you must have at least 2 different tables with at least 1 relationship (e.g. one-to-one, one-to-many, many-to-many).
 
 ### Required endpoints
 
@@ -62,13 +58,11 @@ If you have a critical server error, you should respond with
 
 You are welcome to use other status codes.
 
-All of the above scenarios (other than the 500 error) should be tested per endpoint.
-
 In addition to responding with the appropriate status code, you are expected to send back clear, informative error messages when something goes wrong. Do not simply `console.log` 'WHATEVER'. If a `POST` request fails because the request didn't include a required parameter, respond with something like 'Entity requires a <fieldName> but none was provided.'
 
 ### Custom API Endpoints
 
-* Developer must use GET params on at least one endpoint, which would allow the user to narrow down the nature of their request or filter their results. So for example, you may have an endpoint like:
+* Developer must use query params on at least one endpoint, which would allow the user to narrow down the nature of their request or filter their results. So for example, you may have an endpoint like:
 
 `GET api/v1/merchants?areacode=80202`
 
@@ -78,15 +72,21 @@ A further example of this implementation can be found here: [params](https://sco
 
 * Developer must secure at least 4 endpoints with a JWT. It typically makes sense to secure any 'write' requests (POST/PUT/PATCH/DELETE).
 
+### Documentation
+
+* In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://github.com/500px/api-documentation/blob/master/README.md)
+
 ### Testing & Linting
 
-* All endpoints need to be tested for happy and sad paths. You should not only test status codes but also your test database to assert that your requests are doing what you are expecting.
+* All endpoints need to be tested for happy and sad paths. You should assert that proper status codes are being returned as well as appropriate response data and error messages.
 
 * You are expected to use a linter on this project and have 0 linting errors. You are free to choose your own linting configuration that fits your style preferences, but your project must pass your linter. Bonus points for using a git hook that prevents you from committing any unlinted code.
 
 ### Deployment
 
-* Your application should be deployed to Heroku & have builds running with CircleCI. You do not need a staging environment for this project, but your production repo should be configured for automatic deployments to Heroku via CircleCI.
+* Your application should be automatically deployed to Heroku via CircleCI
+* CircleCI should be running your tests and linter
+* You do **not** need a staging environment for this project
 
 -----------------------------------------------
 
