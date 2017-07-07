@@ -93,11 +93,18 @@ A further example of this implementation can be found here: [params](https://sco
 
 The following set of points are distributed at the discretion of the instructor.
 
+### Documentation
+
+* **10 points** -  The README includes documentation for all available endpoints and how to use them. Instructor can easily follow the documentation for using the API.
+* **5 points** -  The README documentation is out-of-date or inaccurate in some places. Instructor can not successfully use every endpoint based on following the documentation. 
+* **0 points** - The README documentation is too sparse or inaccurate to be helpful.
+
+
 ### Feature Completion
 
-* **60 points** - Developer has implemented all 10 endpoints, 4 are secured via JWTs and one is a custom endpoint that filters data based on query params. The database is seeded with at least two tables and one relationship. The README includes documentation for using all available endpoints.
-* **40 points** - Developer has implemented all 10 endpoints but did not secure 4 of them with JWTs or have a custom endpoint based on query params. The database is seeded with at least two tables but without an appropriate relationship. The README documentation is hard to follow or incomplete.
-* **20 points** - Developer is missing endpoints and has not secured or customized any of the ones that have been implemented. The database is not seeded with two tables and one relationship. The README documentation does not exist or is too sparse to be helpful.
+* **60 points** - Developer has implemented all 10 endpoints, 4 are secured via JWTs and one is a custom endpoint that filters data based on query params. The database is seeded with at least two tables and one relationship.
+* **40 points** - Developer has implemented all 10 endpoints but did not secure 4 of them with JWTs or have a custom endpoint based on query params. The database is seeded with at least two tables but without an appropriate relationship.
+* **20 points** - Developer is missing endpoints and has not secured or customized any of the ones that have been implemented. The database is not seeded with two tables and one relationship.
 
 ### Testing & Linting & Error Handling
 
@@ -115,10 +122,10 @@ The following set of points are distributed at the discretion of the instructor.
 
 ## Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
 
-## Project is worth 140 points
+## Project is worth 150 points
 
-## To get a 3 on this project, you need to score 105 points or higher
+## To get a 3 on this project, you need to score 110 points or higher
 
-## To get a 4 on this project, you need to score 120 points or higher
+## To get a 4 on this project, you need to score 130 points or higher
 
-# Final Score: x / 140
+# Final Score: x / 150
