@@ -129,3 +129,14 @@ The following set of points are distributed at the discretion of the instructor.
 ## To get a 4 on this project, you need to score 130 points or higher
 
 # Final Score: x / 150
+
+
+-----------------------------------------------
+
+#### Common Gotchas with Seeding Data:
+
+* You'll probably have to do some sort of data manipulation/massaging before you try to seed. Think about how YOU want YOUR data to look before just dumping the data you found into your database. Do any manipulations you need to on your dataset before trying to seed. (e.g. you might want to rename, delete, or add columns)
+* The data records you pull might already have unique IDs on them. Feel free to use these as your primary keys instead of wiping them out and creating new ones.
+* You're going to be seeding a lot of data all at once. Recall the "Seeding Large Datasets" example from the [Knex Lesson Plan](http://frontend.turing.io/lessons/module-4/knex-postgres.html) and brush up on how to work with `Promise.all()`
+* Remember you often have to RETURN the Promises you're using in your seed file. If you aren't getting any errors, but your data isn't being seeded, you're likely forgetting a `return` statement.
+* If you're trying to transform data from a CSV file, avoid using [this library](https://www.npmjs.com/package/knex-seed-file).
