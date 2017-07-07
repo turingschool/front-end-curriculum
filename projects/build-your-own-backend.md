@@ -121,10 +121,10 @@ The following set of points are distributed at the discretion of the instructor.
 
 -----------------------------------------------
 
-### Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
+#### Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
 
-#### To get a 3 on this project, you need to score 110 points or higher
-#### To get a 4 on this project, you need to score 130 points or higher
+To get a *3* on this project, you need to score *110* points or higher  
+To get a *4* on this project, you need to score *130* points or higher  
 
 # Final Score: x / 150
 
