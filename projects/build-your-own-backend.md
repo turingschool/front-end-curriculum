@@ -117,8 +117,8 @@ The following set of points are distributed at the discretion of the instructor.
 
 ## Project is worth 140 points
 
-## To get a 3 on this project, you need to score 100 points or higher
+## To get a 3 on this project, you need to score 105 points or higher
 
-## To get a 4 on this project, you need to score 115 points or higher
+## To get a 4 on this project, you need to score 120 points or higher
 
 # Final Score: x / 140
