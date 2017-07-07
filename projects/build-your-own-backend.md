@@ -19,7 +19,7 @@ In the README, developer should provide documentation on the API endpoints that 
 
 ### Sources of Data
 
-Data source MUST BE LOCKED IN by Tuesday (5/16) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
+Data source MUST BE LOCKED IN by Monday (7/10) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
@@ -49,10 +49,10 @@ At minimum, you must have at least 1 relationship between two or more tables. (e
 
 All endpoints should respond with the minimum status code results:
 
-* 200: Success
+* 200/201: Success
 * 404: Not Found
 
-If POST request fails to save an entity due to bad information being sent to it, you should respond with
+If POST/PUT/PATCH request fails to save an entity due to bad information being sent from the client, you should respond with
 
 * 422: Unprocessable Entity
 
@@ -76,13 +76,13 @@ Which would limit the results to merchants in the 80202 area code.
 
 A further example of this implementation can be found here: [params](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
 
-* Developer must secure at least 4 endpoints with a JWT. It typically makes sense to secure all POST/PUT/PATCH/DELETE requests.
+* Developer must secure at least 4 endpoints with a JWT. It typically makes sense to secure any 'write' requests (POST/PUT/PATCH/DELETE).
 
 ### Testing & Linting
 
 * All endpoints need to be tested for happy and sad paths. You should not only test status codes but also your test database to assert that your requests are doing what you are expecting.
 
-* You are expected to use a linter on this project and have 0 linting errors. You are free to choose your own linting configuration that fits your style preferences (e.g. you can tell eslint that you will never use semicolons), but your project must pass your linter. Bonus points for using a git hook that prevents you from committing any unlinted code.
+* You are expected to use a linter on this project and have 0 linting errors. You are free to choose your own linting configuration that fits your style preferences, but your project must pass your linter. Bonus points for using a git hook that prevents you from committing any unlinted code.
 
 ### Deployment
 
@@ -93,38 +93,39 @@ A further example of this implementation can be found here: [params](https://sco
 
 The following set of points are distributed at the discretion of the instructor.
 
-### Endpoints
+### Documentation
 
-* **60 points** - Developer has implemented all 10 endpoints, 4 are secured via JWTs and one is a custom endpoint that filters data based on query params.
-* **40 points** - Developer has implemented all 10 endpoints but did not secure 4 of them with JWTs or have a custom endpoint based on query params.
-* **20 points** - Developer is missing endpoints and has not secured or customized any of the ones that have been implemented.
+* **10 points** -  The README includes documentation for all available endpoints and how to use them. Instructor can easily follow the documentation for using the API.
+* **5 points** -  The README documentation is out-of-date or inaccurate in some places. Instructor can not successfully use every endpoint based on following the documentation. 
+* **0 points** - The README documentation is too sparse or inaccurate to be helpful.
 
-### Data Persistence with SQL Database
 
-* **40 points** - The application persists data in a SQL database but with correct relationships between folders and URLs.
-* **20 points** - The application persists data in a SQL database but with some incorrect relationships between folders and URLs.
-* **0 points** - The application does not persist data in a SQL database.
+### Feature Completion
 
-### Testing & Linting
+* **60 points** - Developer has implemented all 10 endpoints, 4 are secured via JWTs and one is a custom endpoint that filters data based on query params. The database is seeded with at least two tables and one relationship.
+* **40 points** - Developer has implemented all 10 endpoints but did not secure 4 of them with JWTs or have a custom endpoint based on query params. The database is seeded with at least two tables but without an appropriate relationship.
+* **20 points** - Developer is missing endpoints and has not secured or customized any of the ones that have been implemented. The database is not seeded with two tables and one relationship.
 
-* **30 points** - Project has a running test suite that covers all happy and sad paths for the appropriate endpoints. The project has a linting configuration that passes with no errors.
-* **20 points** - Project has a running test suite that covers most happy and sad paths for each endpoint. Linter has some errors that need fixing.
-* **10 points** - Project has significant lack of testing for happy and sad paths of endpoints; Linter is failing on multiple lines.
+### Testing & Linting & Error Handling
+
+* **40 points** - Project has a running test suite that covers all happy and sad paths for the appropriate endpoints. Error handling is informative and helpful for the end-user. The project has a linting configuration that passes with no errors.
+* **20 points** - Project has a running test suite that covers most happy and sad paths for each endpoint. Error handling has been implemented but does not cover all possible scenarios or is unhelpful for the end-user. Linter has some errors that need fixing.
+* **10 points** - Project has significant lack of testing for happy and sad paths of endpoints. Error handling is non-existent or missing status codes and helpful messages. Linter is failing on multiple lines.
 
 ### JavaScript Style
 
-* **20 points** - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
-* **15 points** - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* **12 points** - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-* **5 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
+* **40 points** - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
+* **20 points** - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
+* **15 points** - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+* **10 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 
 
-## Projects are due on Friday 5/19, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
+## Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
 
 ## Project is worth 150 points
 
 ## To get a 3 on this project, you need to score 110 points or higher
 
-## To get a 4 on this project, you need to score 140 points or higher
+## To get a 4 on this project, you need to score 130 points or higher
 
 # Final Score: x / 150
