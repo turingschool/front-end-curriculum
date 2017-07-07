@@ -119,16 +119,14 @@ The following set of points are distributed at the discretion of the instructor.
 * **15 points** - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
 * **10 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 
+-----------------------------------------------
 
-## Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
-
-## Project is worth 150 points
+### Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
 
 #### To get a 3 on this project, you need to score 110 points or higher
 #### To get a 4 on this project, you need to score 130 points or higher
 
 # Final Score: x / 150
-
 
 -----------------------------------------------
 
