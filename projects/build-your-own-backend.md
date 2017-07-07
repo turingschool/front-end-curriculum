@@ -88,6 +88,7 @@ A further example of this implementation can be found here: [params](https://sco
 
 * Your application should be deployed to Heroku & have builds running with CircleCI. You do not need a staging environment for this project, but your production repo should be configured for automatic deployments to Heroku via CircleCI.
 
+-----------------------------------------------
 
 ## Instructor Evaluation Points
 
