@@ -43,6 +43,10 @@ The basic layout of the application should include:
 * A list of all of the folders of the site
 * For each URL, the user can see the date that the URL was added
 
+### Special Task
+
+On a separate dedicated git branch, open your server file. For each line of the server file, put a comment on the line that explains what the line below is doing. Be as explicit as necessary.
+
 ## Guidelines
 
 ### Server Side
@@ -107,6 +111,12 @@ The following set of points are distributed at the discretion of the instructor.
 * **7 points** - Project has sporadic testing of some server-side endpoints. There are happy path tests, but there are is one or zero sad path cases.
 * **0 points** - There is little or no evidence of testing in this application. Most or all of the tests in the test suite are failing.
 
+### Commented Server File
+
+* **10 points** - Each line of the server file (on a separate branch) is commented and explains the code using precise, correct terminology and specificity
+* **5 points** - Most lines of the server file (on a separate branch) are commented, but the explanation of code does not display understanding of the underlying code
+* **0 points** - Lines are sparsely commented in the server file (on a separate branch) and understanding of the code is clearly lacking
+
 ### JavaScript Style
 
 * **20 points** - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
@@ -124,7 +134,7 @@ The following set of points are distributed at the discretion of the instructor.
 
 ## Projects are due on Friday of week 1, by 1:00 p.m. We will provide a submission form for all teams to submit their GitHub repo and production link.
 
-### Project is worth 150 points with 25 extra points possible
+### Project is worth 160 points with 25 extra points possible
 
 ### To get a 3 on this project, you need to score 115 points or higher
 
