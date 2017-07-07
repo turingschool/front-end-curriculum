@@ -19,7 +19,7 @@ In the README, developer should provide documentation on the API endpoints that 
 
 ### Sources of Data
 
-Data source MUST BE LOCKED IN by Tuesday (5/16) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
+Data source MUST BE LOCKED IN by Monday (7/10) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
@@ -49,10 +49,10 @@ At minimum, you must have at least 1 relationship between two or more tables. (e
 
 All endpoints should respond with the minimum status code results:
 
-* 200: Success
+* 200/201: Success
 * 404: Not Found
 
-If POST request fails to save an entity due to bad information being sent to it, you should respond with
+If POST/PUT/PATCH request fails to save an entity due to bad information being sent from the client, you should respond with
 
 * 422: Unprocessable Entity
 
@@ -76,13 +76,13 @@ Which would limit the results to merchants in the 80202 area code.
 
 A further example of this implementation can be found here: [params](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
 
-* Developer must secure at least 4 endpoints with a JWT. It typically makes sense to secure all POST/PUT/PATCH/DELETE requests.
+* Developer must secure at least 4 endpoints with a JWT. It typically makes sense to secure any 'write' requests (POST/PUT/PATCH/DELETE).
 
 ### Testing & Linting
 
 * All endpoints need to be tested for happy and sad paths. You should not only test status codes but also your test database to assert that your requests are doing what you are expecting.
 
-* You are expected to use a linter on this project and have 0 linting errors. You are free to choose your own linting configuration that fits your style preferences (e.g. you can tell eslint that you will never use semicolons), but your project must pass your linter. Bonus points for using a git hook that prevents you from committing any unlinted code.
+* You are expected to use a linter on this project and have 0 linting errors. You are free to choose your own linting configuration that fits your style preferences, but your project must pass your linter. Bonus points for using a git hook that prevents you from committing any unlinted code.
 
 ### Deployment
 
@@ -93,15 +93,15 @@ A further example of this implementation can be found here: [params](https://sco
 
 The following set of points are distributed at the discretion of the instructor.
 
-### Endpoints
+### Feature Completion
 
-* **60 points** - Developer has implemented all 10 endpoints, 4 are secured via JWTs and one is a custom endpoint that filters data based on query params.
-* **40 points** - Developer has implemented all 10 endpoints but did not secure 4 of them with JWTs or have a custom endpoint based on query params.
-* **20 points** - Developer is missing endpoints and has not secured or customized any of the ones that have been implemented.
+* **60 points** - Developer has implemented all 10 endpoints, 4 are secured via JWTs and one is a custom endpoint that filters data based on query params. The README includes documentation for using all available endpoints.
+* **40 points** - Developer has implemented all 10 endpoints but did not secure 4 of them with JWTs or have a custom endpoint based on query params. The README documentation is hard to follow or incomplete.
+* **20 points** - Developer is missing endpoints and has not secured or customized any of the ones that have been implemented. The README documentation does not exist or is too sparse to be helpful.
 
 ### Data Persistence with SQL Database
 
-* **40 points** - The application persists data in a SQL database but with correct relationships between folders and URLs.
+* **40 points** - The application persists data in a SQL database with correct relationships between folders and URLs.
 * **20 points** - The application persists data in a SQL database but with some incorrect relationships between folders and URLs.
 * **0 points** - The application does not persist data in a SQL database.
 
@@ -119,7 +119,7 @@ The following set of points are distributed at the discretion of the instructor.
 * **5 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 
 
-## Projects are due on Friday 5/19, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
+## Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
 
 ## Project is worth 150 points
 
