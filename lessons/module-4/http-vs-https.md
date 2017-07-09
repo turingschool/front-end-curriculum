@@ -1,6 +1,6 @@
 ---
 title: HTTP vs HTTPS
-length: 120
+length: 90
 tags: http, https, security, ssl
 ---
 
