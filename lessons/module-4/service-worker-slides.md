@@ -27,21 +27,6 @@ module: 4
 </section>
 
 <section>
-  <section>
-    <h3>What is a Progressive Web App?</h3>
-  </section>
-  <section>
-    <p>a web application intended to look, feel and behave like a native application</p>
-  </section>
-  <section>
-
-  <p><i>Take a look at the apps on your phone - think about how you use them and how they behave.</i></p>
-
-  <p><i>How are they similar to web apps? How are they different? <br />(10-15 mins)</i></p>
-  </section>
-</section>
-
-<section>
   <h3>What can Service Workers do?</h3>
   <ul>
     <li>offline your application</li>
