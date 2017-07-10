@@ -33,22 +33,17 @@ module: 4
 </section>
 
 <section>
-  <section>
-    <h3>Characteristics of a PWA</h3>
-  </section>
-  <section>
-    <ul>
-      <li>responsive design</li>
-      <li>performant on slower network speeds</li>
-      <li>installable and launchable from the home screen</li>
-      <li>all content served over HTTPS</li>
-      <li>provides some form of offline experience</li>
-    </ul>
-  </section>
+  <h3>Characteristics of a PWA</h3>
+  <ul>
+    <li>responsive design</li>
+    <li>performant on slower network speeds</li>
+    <li>installable and launchable from the home screen</li>
+    <li>all content served over HTTPS</li>
+    <li>provides some form of offline experience</li>
+  </ul>
 </section>
 
 <section>
-  <section>
     <h3>Resources</h3>
     <ul>
       <li><a href="http://blog.ionic.io/what-is-a-progressive-web-app/">What is a PWA></a></li>
