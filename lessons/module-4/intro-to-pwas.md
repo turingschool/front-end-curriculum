@@ -45,7 +45,7 @@ module: 4
 
 <section>
   <h3>Auditing PWAs in Lighthouse</h3>
-  <p><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> is an automated tool for improving the quality of your webpages in multiple areas<p>
+  <p><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse</a> is an automated tool for improving the quality of your webpages in multiple areas</p>
   <p>It can be installed as a chrome extension, node module, or used from the command line</p>
 </section>
 
