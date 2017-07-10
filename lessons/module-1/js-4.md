@@ -74,9 +74,9 @@ var schoolCapacity = school['capacity']
 ```
 
 ### What is `this`: a 10,000ft Introduction
-You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`?
+You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? Let's take a VERY brief look before you continue with objects. We will circle back on this later.
 
-`this` is a keyword in Javascript that references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
+Like `var` and `function`, `this` is a special keyword in Javascript. It references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
 
 In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents`.
 
@@ -125,7 +125,7 @@ And just like before, you can add/change properties and methods on this object, 
 
 ## Creating Many Objects
 
-Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ to spit out little objects that you define. Everytime you call ```new``` on this constructor you get an instance of the object. Let's look at this:
+Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ to spit out little objects that you define. Everytime you call ```new``` on this constructor you get an instance of the object. These are called `constructor functions`, and you can think of them like cookie cutters that produce the same shape of cookie every time you use them. Let's take a look:
 
 ```javascript
 function Restaurant(name, tables, reservations) {
@@ -140,15 +140,15 @@ function Restaurant(name, tables, reservations) {
 
 Let's talk about what's going on here:
 
-- A function called Restaurant is a template for creating new objects that represent restaurants
-- The function has three parameters
-- Each parameter sets the _value_ of a _property_ in the object
-- Each object created will utilize the same method for checking availability
-- The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates
-- Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma
-- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.
+- A function called `Restaurant` is a template for creating new objects that represent individual "instances" of restaurants  
+- The function has three parameters (`name`, `tables`, `reservations`)  
+- Each parameter sets the _value_ of a _property_ in the object  
+- Each object created will utilize the same method for checking availability  
+- The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
+- Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma  
+- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
 
-## Oh jeeze...```this``` again
+## Revisiting ```this```
 The keyword ```this``` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, ```this``` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
 
 ```javascript
@@ -157,8 +157,8 @@ function Restaurant(name) {
   this.name = name;
 }
 
-// Make two restaurant objects, one named "Micis" and the other named "Chilis"
-var firstRest = new Restaurant("Micis")
+// Make two restaurant objects, one named "KFC" and the other named "Chilis"
+var firstRest = new Restaurant("KFC")
 var secondRest = new Restaurant("Chilis")
 
 // Get the name of the firstRest and the secondRest
@@ -172,7 +172,9 @@ Take a few minutes and make a constructor function and use it to make two new ob
 
 ## Which `this` is which?
 
-Why do we keep talking about ```this``` anyway? Seems pretty straightforward. Well, turns out, the value of ```this``` changes in different situations. Let's look at those situations:
+**ProTip:** The default context of `this` is the `window` object. Try it out: In your console (not a repl), run `console.log(this)`. So without giving our browser ANY additional information, it tells us that the object we are working within is the `window`, which makes sense.
+
+Unfortunately ```this``` is not that simple. The value of ```this``` changes in different situations. This can be confusing at first, but it also gives us a really dynamic, powerful tool. Let's look at some example situations:
 
 ```javascript
 // GLOBAL SCOPE FUNCTION - top of script, not inside another function or inside an object. The default object in this context is the WINDOW object.
@@ -191,50 +193,91 @@ var showWidth = function() {
 showWidth();
 
 // METHOD OF AN OBJECT - when does a function become a method? When it is defined INSIDE an object. In a method, "THIS" refers to the containing object.
-var shape = {
-  width: 600,
+var room = {
+  width: 800,
   height: 400,
   getArea: function() {
+    console.log('in the room object', this)
     return this.width * this.height;
   }
 };
 
-// FUNCTION EXPRESSION AS A METHOD - what does that mean? An expression returns a single value. A function can be an expression. If you assign that function expression to a property on an object, it is then called a method.
-
-// Let's declare a global variable of width and assign the value of 600
-var width = 600;
-
-// Let's declare a global variable of shape and assign an object to it with a property of width that stores a value of 300
-var shape = {width: 300};
-
-// Let's create a that same function we did before, where we show an object's width by logging "this.width" to the console.
-var showWidth = function() {
-  console.log(this.width);
-}
-
-// Let's take that global function of 'showWidth' and assign it to our global variable shape that holds an object. Now shape has how many properties/methods and what are they?
-shape.getWidth = showWidth;
-
-// Let's ask shape what it's width is, and see that it no longer refers to a global context, because it is now a method scoped to a specific object, so "this" refers to that containing object.
-shape.getWidth();
 ```
 
-## What is this Prototype Business...???
-All JavaScript objects inherit the properties and methods from their prototype. Each object has an internal link to another object called its prototype. That prototype object has a prototype of its own, and so on until an object is reached with null as its prototype. ```null```, by definition, has no prototype, and acts as the final link in this _prototype chain_. There is nothing special about a prototype object. There are no special-out-of-the-box methods or magic to a prototype. Let's look:
+**YOUR TURN**: Take a few minutes with the person BEHIND/IN FRONT OF you and work through the next series of code examples. If you've been following along with the code above in a repl/script file, comment all of it out so you are starting with a clean slate.
+
+**Rule #1: No Copy Pasting.**
+
+```js
+// FUNCTION EXPRESSION AS A METHOD - what does that mean? An expression returns a single value. A function can be an expression. If you assign that function expression to a property on an object, it is then called a method.
+
+// Declare a global variable of name and assign the value of 'Elvis'
+var name = 'Elvis';
+
+// What do you get when you console.log(this.name) right now?
+
+// Declare another global variable of human and assign it to an object with a property of name that stores a different value.
+var human = {
+  name: 'Cher'
+};
+
+// Create a function like we did before (refer to the the GLOBAL VARIABLES example where we created a function called showWidth to log an object's width with "this.width" to the console), but this time leverage the context of `this` to print a name.
+var sayName = function() {
+  console.log(`Hello! My name is ${this.name}.`);
+}
+
+// Call the sayName function now
+sayName();
+
+// Based on your results, what is the context of 'this'?
+
+// Add a property called getName to our human object and assign it the value of our sayName function
+human.getName = sayName;
+
+// What does the human object look like now?
+
+// Ask human what its name is
+human.getName();
+
+// What do your results tell you about the context of this now?
+
+// Spoiler alert: `This` no longer refers to the global context (Elvis), because it is now a method scoped to a specific object (human), so "this" refers to that containing objects name property (Cher).
+
+// Create a second object with a different name value and use the same getName/sayName key value pair.
+```
+
+**PRO TIP:** The context of this within a function will be determined by WHERE THE FUNCTION GETS CALLED.
+
+## Prototypes & Inheritance: A First Look
+All JavaScript objects **inherit** the properties and methods from their `prototype`.  
+
+In other words, each object has an internal link to another object called its `prototype`. That prototype object has another prototype of its own, and so on and so on until an object is reached with `null` as its prototype. ```null```, by definition, has no prototype, and acts as the final link in this _prototype chain_.  
+
+There is nothing special about a prototype object. There are no special-out-of-the-box methods or magic to a prototype. Let's look:
 
 ```javascript
 // Let's make a constructor function
 function DumbObjectMaker() {}
 
-// Let's ask myDumbObject for the value of it's prototype
-function myDumbObject() {}
-myDumbObject.prototype
+// Let's ask DumbObjectMaker for the value of it's prototype
+function DumbObjectMaker() {}
+DumbObjectMaker.prototype
 ```
 
-But why do this? Because fast. Because flexible. Because separation of concerns. Constructors in javascript can be any function and they are responsible for creating new instances. A prototype in javascript can be any object and they are responsible for defining the behavior of instances. The behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. You basically use prototype to define your object's instance methods.
+As a review,constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
+
+```js
+function DumbObjectMaker() {
+  this.name = "Elvis"
+}
+```
+
+Similarly, a `prototype` in javascript can be _any object_ and it is responsible for defining the **behavior** of instances. This behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. Creating prototype functions is essentially defining your objects' instance methods.  
+
+Let's look at some code examples.  
 
 ```javascript
-// Outfit constructor whose only job is to create instances of outfits all day. Takes pants, socks, and shirt parameters, so it can make different outfits all day.
+// Outfit constructor whose only job is to create instances of outfits all day. It takes pants, socks, and shirt parameters, so it can make different outfits all day.
 function Outfit(pants, socks, shirt) {
 	this.pants = pants;
 	this.socks = socks;
@@ -242,14 +285,22 @@ function Outfit(pants, socks, shirt) {
 }
 
 Outfit.prototype.compliment = function() {
-  // some block manipulation/adding of block code here
-  console.log("Nice " + this.pants + " and " + this.socks + " and " + this.shirt)
+  console.log(`Nice ${this.pants} pants and ${this.socks} and ${this.shirt} shirt!`)
 }
 
+// Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
+
+var casual = new Outfit('denim', 'cat', 'hanes')
+casual.compliment();
 ```
 
+_Note_: We will get WAY MORE INTO prototype methods and what is happening behind the scenes as we progress through this mod/program. This is not the last time we will talk about these concepts so if prototypes and the word "this" make you feel panicky...thats ok.  
+
 ## Which Data Structure?
-When deciding on an approach, you must consider how the data will be used. When the order of objects is important, they should be stored in an array. When you want to access objects using their name, they work well as properties of another object (because you would not need to iterate through all objects like in an array).
+When deciding on an approach, you must consider how the data will be used. Let's think about a few scenarios:
+
+When the order of objects is important, they should be stored in an array.  
+When you want to access objects using their name, they work well as properties of another object.(because you would not need to iterate through all objects like in an array).
 
 #### Objects in an Array
 
@@ -269,12 +320,12 @@ people[2].active
 
 ```javascript
 var people = {
-  Mike: {age: 65, active: true},
-  Becca: {age: 23, active: false},
-  Tony: {age: 40, active: false},
-  Penelope: {age: 23, active: true}
+  Hercules: {age: 65, active: true},
+  Aphrodite: {age: 23, active: false},
+  Zeus: {age: 40, active: false},
+  Magneto: {age: 23, active: true}
 }
-people.Mike.age
-people.Tony.active
-people.Becca.age
+people.Magneto.age
+people.Hercules.active
+people.Aphrodite.age
 ```
