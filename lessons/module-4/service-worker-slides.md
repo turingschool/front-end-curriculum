@@ -70,9 +70,9 @@ module: 4
 </section>
 
 <section>
-  <h4>Let's Practice</h4>
   <section>
-    <h3>First things first:</h3>
+    <h4>Let's Practice</h4>
+    <p><b>First things first:</b></p>
     <p>1. Unregister any pre-existing service workers</p>
     <p>2. Clear any cache storages you've created in the past</p>
   </section>
