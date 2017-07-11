@@ -76,7 +76,7 @@ How would you use parameters and arguments to make the logged string be differen
 
 So far, we've been working with *named functions*. *Named functions* can also be referred to as *function declarations*, or even *normal functions*.  
 
-Through *function declaration*, or *named functions*, ie:`function myNamedFunction()`, we create a function that we intend to call later in our code via the name we gave it.  
+Through *function declaration*, or *named functions*, ie: `function myNamedFunction()`, we create a function that we intend to call later in our code via the name we gave it.  
 
 This type of function does not require the keyword `var` to kick it off. Even without the keyword `var`, the syntax feels similar to when we were naming/assigning variables: a variable declaration must start with `var`, followed by the name of the variable, and a function declaration must start with `function`, followed by the name of the function.  We can then call this function all over our code by that name property.  
 
@@ -148,7 +148,7 @@ Why does this matter? Seems like everyone just wants to make life hard with all 
 
 ### Hoisting
 
-Hoisting is a fancy way of saying that "some things are considered more important" to the interpreter that processes your JavaScript code. In other words, certain lines of code are `hoisted` to the top of the containing scope of your code.  
+Hoisting is a fancy way of saying that "some things are considered more important" to the interpreter that processes your JavaScript. In other words, certain lines of code are `hoisted` to the top of the containing scope of your code.  
 
 But WTF does that even mean??
 
@@ -169,11 +169,11 @@ function foo() {
 }
 ```
 
-A function declaration (ie: `function myFunction()`) has a higher priority to the interpreter than an anonymous function (ie: `function()`). The interpreter will always look for variables and function declarations _before_ going line-by-line through the rest of the script. This means that a function created by a function declaration gets special treatment, and can be called _before_ it has even been declared.  
+A function declaration (ie: `function foo()`) has a higher priority to the interpreter than an anonymous function (ie: `function()`). The interpreter will always look for variables and function declarations _before_ going line-by-line through the rest of the script. This means that a function created by a function declaration gets special treatment, and can be called _before_ it has even been declared.  
 
 But Wait! Don't the examples above show that variables get hoisted? Doesn't that mean that function expressions (ie: `var foo = function()`) would get hoisted too?.
 
-Tricky Question! You'll notice that in the above snippets of code, only the NAME of the variable is hoisted when it comes to variable declaration, but the value is left behind. The value of that variable is not evaluated until the interpreted reaches the line where that variable is declared. **Function declarations, on the other hand, are treated differently. The entire body of that declaration will be hoisted as well.**    
+Tricky Question! You'll notice that in the above snippets of code, only the **NAME** of the variable is hoisted, but the value is left behind. The value of that variable is not evaluated until the interpreter reaches the line where that variable is declared. **Function declarations, on the other hand, are treated differently. The entire body of that declaration will be hoisted as well.**    
 
 In other words, this means that when a function is written as an expression, the interpreter won't process it until it gets to that full statement. **This means function expressions do *not* get special treatment, you cannot call the function _before_ the interpreter discovers it.** (As a side note, it also means any preceding code up to that point could potentially alter what goes inside that function.)  
 

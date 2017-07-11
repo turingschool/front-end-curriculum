@@ -13,7 +13,7 @@ module: 4
   <h3>Goals:</h3>
   <ol>
     <li>Understand when and why to use service workers</li>
-    <li>Be able to implement service workers for making an application available offline</li>
+    <li>Be able to implement service workers for making application assets available offline</li>
   </ol>
 </section>
 
@@ -23,21 +23,6 @@ module: 4
   </section>
   <section>
     <p>a new API that allows you to run a script in <i>background</i> of your application and facilitates creating <br /><i>Progressive Web Apps</i></p>
-  </section>
-</section>
-
-<section>
-  <section>
-    <h3>What is a Progressive Web App?</h3>
-  </section>
-  <section>
-    <p>a web application intended to look, feel and behave like a native application</p>
-  </section>
-  <section>
-
-  <p><i>Take a look at the apps on your phone - think about how you use them and how they behave.</i></p>
-
-  <p><i>How are they similar to web apps? How are they different? <br />(10-15 mins)</i></p>
   </section>
 </section>
 
@@ -57,11 +42,11 @@ module: 4
   <section>
     <h4><b>Runs in the background</b></h4>
     <ul>
-      <li>web workers are single JavaScript files, run on own thread</li>
-      <li>don't block execution of any other client-side JavaScript</li>
+      <li><b>web workers</b> are single JavaScript files, run on own thread</li>
+      <li>don't block execution of other client-side code</li>
       <li>handle time-intensive operations without locking UI</li>
-      <li>service workers are a type of web worker</li>
-      <li>service workers allow background processing that specifically relates to handling network requests</li>
+      <li><b>service workers</b> are a type of web worker</li>
+      <li>service workers allow background processing that specifically relates to handling <b>network requests</b></li>
     </ul>
   </section>
   <section>
@@ -85,12 +70,18 @@ module: 4
 </section>
 
 <section>
-  <h4>Let's Practice</h4>
-  <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>
-  <p><pre><code>`npm install simplehttpserver -g`</code></pre></p>
-  <p><pre><code>`cd public`</code></pre></p>
-  <p><pre><code>`simplehttpserver`</code></pre></p>
-  <p><pre><code>`http://localhost:8000`</code></pre></p>
+  <section>
+    <h4>Let's Practice</h4>
+    <p><b>First things first:</b></p>
+    <p>1. Unregister any pre-existing service workers</p>
+    <p>2. Clear any cache storages you've created in the past</p>
+  </section>
+  <section>
+    <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>
+    <p><pre><code>`npm install`</code></pre></p>
+    <p><pre><code>`npm start`</code></pre></p>
+    <p><pre><code>`http://localhost:3000`</code></pre></p>
+  </section>
 </section>
 
 <section>
