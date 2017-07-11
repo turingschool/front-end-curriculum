@@ -13,7 +13,7 @@ module: 4
   <h3>Goals:</h3>
   <ol>
     <li>Understand when and why to use service workers</li>
-    <li>Be able to implement service workers for making an application available offline</li>
+    <li>Be able to implement service workers for making application assets available offline</li>
   </ol>
 </section>
 
@@ -72,10 +72,9 @@ module: 4
 <section>
   <h4>Let's Practice</h4>
   <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>
-  <p><pre><code>`npm install simplehttpserver -g`</code></pre></p>
-  <p><pre><code>`cd public`</code></pre></p>
-  <p><pre><code>`simplehttpserver`</code></pre></p>
-  <p><pre><code>`http://localhost:8000`</code></pre></p>
+  <p><pre><code>`npm install`</code></pre></p>
+  <p><pre><code>`npm start`</code></pre></p>
+  <p><pre><code>`http://localhost:3000`</code></pre></p>
 </section>
 
 <section>
