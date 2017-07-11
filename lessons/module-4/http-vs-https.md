@@ -6,7 +6,7 @@ tags: http, https, security, ssl
 
 ## What is HTTPS?
 
-Hyper Text Transfer Protocol (HTTP) is the protocol over which data is transferred between your browser and a website. HTTPS (HTTP Secure) is a more secure version of this transfer protocol, in which all communications between the browser and website are encrypted. It is often used to protect sensitive data in transactions that occur during online banking or shopping. Websites that communicate over https will have urls that begin with `https://` rather than `http://`. 
+Hypertext Transfer Protocol (HTTP) is the protocol over which data (structured text) is transferred between your browser and a website. HTTPS (HTTP Secure) is a more secure version of this transfer protocol, in which all communications between the browser and website are encrypted. It is often used to protect sensitive data in transactions that occur during online banking or shopping. Websites that communicate over https will have urls that begin with `https://` rather than `http://`. 
 
 ## Why?
 
