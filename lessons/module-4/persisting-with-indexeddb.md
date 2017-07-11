@@ -56,9 +56,9 @@ module: 4
 
 <section>
   <h3>Let's Practice</h3>
-  <p>Fetch and checkout the 'begin-db-lesson' branch of the <a href="https://github.com/turingschool-examples/offline-news">offline news repo</a></p>
+  <p>Fetch and checkout the 'before-db-lesson' branch of the <a href="https://github.com/turingschool-examples/offline-news">offline news repo</a></p>
   <p><pre><code>`npm install`</code></pre></p>
-  <p><pre><code>`weback --watch`</code></pre></p>
+  <p><pre><code>`webpack --watch`</code></pre></p>
   <p><pre><code>`node server.js`</code></pre></p>
   <p><pre><code>`http://localhost:3000`</code></pre></p>
 </section>
