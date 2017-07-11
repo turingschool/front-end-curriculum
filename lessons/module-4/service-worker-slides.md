@@ -42,11 +42,11 @@ module: 4
   <section>
     <h4><b>Runs in the background</b></h4>
     <ul>
-      <li>web workers are single JavaScript files, run on own thread</li>
-      <li>don't block execution of any other client-side JavaScript</li>
+      <li><b>web workers</b> are single JavaScript files, run on own thread</li>
+      <li>don't block execution of other client-side code</li>
       <li>handle time-intensive operations without locking UI</li>
-      <li>service workers are a type of web worker</li>
-      <li>service workers allow background processing that specifically relates to handling network requests</li>
+      <li><b>service workers</b> are a type of web worker</li>
+      <li>service workers allow background processing that specifically relates to handling <b>network requests</b></li>
     </ul>
   </section>
   <section>
