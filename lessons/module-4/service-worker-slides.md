@@ -71,10 +71,17 @@ module: 4
 
 <section>
   <h4>Let's Practice</h4>
-  <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>
-  <p><pre><code>`npm install`</code></pre></p>
-  <p><pre><code>`npm start`</code></pre></p>
-  <p><pre><code>`http://localhost:3000`</code></pre></p>
+  <section>
+    <h3>First things first:</h3>
+    <p>1. Unregister any pre-existing service workers</p>
+    <p>2. Clear any cache storages you've created in the past</p>
+  </section>
+  <section>
+    <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>
+    <p><pre><code>`npm install`</code></pre></p>
+    <p><pre><code>`npm start`</code></pre></p>
+    <p><pre><code>`http://localhost:3000`</code></pre></p>
+  </section>
 </section>
 
 <section>
