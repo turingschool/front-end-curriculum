@@ -114,7 +114,7 @@ The event listeners are only bound to the buttons that were present when the pag
 
 Can you modify the function that adds new buttons so that it adds an event listener to the element before appending it to the page?
 
-<!-- ## Event Delegation
+## Event Delegation
 
 Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
 
@@ -124,9 +124,17 @@ Rather than manage the addition and removal of event listeners, there is a metho
 
 In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="AXVgOj" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXVgOj/">event-delegation</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script> -->
+```js
+document.querySelector('body').addEventListener('click', function(event) {
+  if (event.target.tagName.toLowerCase() === 'li') {
+    // do your action on your 'li' or whatever it is you're listening for
+  }
+});
+```
 
+<!-- <p data-height="300" data-theme-id="23788" data-slug-hash="AXVgOj" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXVgOj/">event-delegation</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+ -->
 ### Next Steps
 
 - jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](https://learn.jquery.com/events/event-delegation/).
