@@ -14,9 +14,31 @@ module: 4
 <p>On the whiteboard, list all the libraries and frameworks you've used.</p>
 <ul>
   <li>look through the lesson plans listed on the frontend site</li>
-  <li>look through the `package.json` files in your projects</li>
+  <li>look through your `package.json` files in projects you've built</li>
 </ul>
+</section>
 
 <section>
+  <p><i>Learning 100 different libraries is still easier than building an application with none.</i></p>
+</section>
+
+<section>
+  <h3>Identifying the Layers</h3>
   <img src="../../assets/images/lessons/get-low-level/low-level-layers.png" />
+</section>
+
+<section>
+  <h3>Layer #3 - The Library</h3>
+  <ul>
+    <li>previously learned <a href="http://dexie.org/">Dexie</a> - library wrapping IndexedDB</li>
+    <li><a href="https://github.com/turingschool-examples/offline-news/blob/before-sync-lesson/public/indexedDB.js">code</a> was concise and read similar to English</li>
+  </ul>
+</section>
+
+<section>
+  <h3>Layer #2 - The Web API</h3>
+  <ul>
+    <li>Downsides of IndexedDB: "The API is <a href="https://github.com/turingschool-examples/offline-news/blob/d6182e5e7858af7481ef41d534dbc5a5d8b717f0/public/indexedDB.js">brutal</a>".</li>
+    <li>code is verbose and difficult to read</li>
+  </ul>
 </section>
