@@ -11,12 +11,14 @@ module: 4
 </section>
 
 <section>
-  <h4>On the whiteboard:</h4>
-  <p>list all libraries & frameworks you've used</p>
-  <ul>
-    <li>look through the lesson plans listed on the frontend site</li>
-    <li>look through your `package.json` files in projects you've built</li>
-  </ul>
+  <section>
+    <h4>On the whiteboard:</h4>
+    <p>list all libraries & frameworks you've used</p>
+    <ul>
+      <li>look through the lesson plans listed on the frontend site</li>
+      <li>look through your `package.json` files in projects you've built</li>
+    </ul>
+  </section>
   <section>
     <p><i>Learning 100 different libraries is still easier<br />than building an application with none.</i></p>
   </section>
