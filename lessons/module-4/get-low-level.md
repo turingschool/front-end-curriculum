@@ -36,7 +36,8 @@ module: 4
     </ul>
   </section>
   <section>
-    <p><b>On your own:</b> look through the Dexie <a href="https://github.com/dfahlander/Dexie.js">source code</a> and find the following implementations:</p>
+    <h4>On Your Own:</h4>
+    <p>look through the Dexie <a href="https://github.com/dfahlander/Dexie.js">source code</a><br />and find the following implementations:</p>
     <ul>
       <li>`put`</li>
       <li>`get`</li>
@@ -46,19 +47,20 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #2 - The Web API</h3>
-  <ul>
-    <li>Downsides of IndexedDB: "The API is <a href="https://github.com/turingschool-examples/offline-news/blob/d6182e5e7858af7481ef41d534dbc5a5d8b717f0/public/indexedDB.js">brutal</a>".</li>
-    <li>code is verbose and difficult to read</li>
-  </ul>
-</section>
-
-<section>
-  <h3>But y tho?</h3>
-  <ul>
-    <li>Web APIs need to be <b>flexible</b> to handle many scenarios</li>
-    <li>This means they have to be as <b>bare-bones</b> as possible</li>
-  </ul>
+  <section>
+    <h3>Layer #2 - The Web API</h3>
+    <ul>
+      <li>Downsides of IndexedDB: "The API is <a href="https://github.com/turingschool-examples/offline-news/blob/d6182e5e7858af7481ef41d534dbc5a5d8b717f0/public/indexedDB.js">brutal</a>".</li>
+      <li>code is verbose and difficult to read</li>
+    </ul>
+  </section>
+  <section>
+    <h3>But y tho?</h3>
+    <ul>
+      <li>Web APIs need to be <b>flexible</b> to handle many scenarios</li>
+      <li>This means they have to be as <b>bare-bones</b> as possible</li>
+    </ul>
+  </section>
 </section>
 
 <section>
