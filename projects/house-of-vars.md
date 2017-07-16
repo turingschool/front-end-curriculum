@@ -7,6 +7,8 @@ module: 4
 
 So far we've been building a lot of projects from scratch. While this is a great way to learn, it doesn't quite prepare you for the horror that is jumping into a pre-existing codebase full of bugs, legacy code and unfamiliar frameworks and libraries. In this project, we'll learn how to navigate and contribute to someone else's codebase by implementing features, refactoring old code, and fixing bugs: all without breaking anything. Be careful what you touch! The slightest change could bring the whole app down.
 
+-----------------------------------------------------------
+
 ## Things to Think About
 
 As you get started, pay close attention to the following things:
@@ -16,6 +18,8 @@ As you get started, pay close attention to the following things:
 3. **How can you contribute to the project?** Are there any obvious bugs or missing features that don't have open issues filed for them? Could you submit an issue with suggesstions for improvements? (Some common areas for improvement include accessibility and responsive design)
 
 Although you're working as a group, everybody should give themselves some alone time with the repo to take notes on the above questions. Comparing notes and sharing your experiences with your group mates afterwards will ensure that no potential issues or improvements fall through the cracks.
+
+-----------------------------------------------------------
 
 ## Expectations
 
@@ -62,20 +66,23 @@ Each group will present the work they accomplished (or didn't accomplish) to the
 
 Put your presentation into writing. Each person must write their own blog post. You can write about all four sections described in the presentation, or pick a single one to go in-depth on. Regardless of what you choose, each blog post should be about 1,000 words.
 
+-----------------------------------------------------------
 
 ## The Repos
 
 ### [Swagger UI](https://github.com/swagger-api/swagger-ui)
 
-#### Potential Issues:
+**Potential Issues:**
 
 * [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
 * [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
 * [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
 
+-----------------------------------------------------------
+
 ### [18F Crime Data](https://github.com/18F/crime-data-frontend)
 
-#### Potential Issues:
+**Potential Issues:**
 
 * [#1136](https://github.com/18F/crime-data-frontend/issues/1136)
 * [#1135](https://github.com/18F/crime-data-frontend/issues/1135)
