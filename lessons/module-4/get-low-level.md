@@ -56,17 +56,21 @@ module: 4
 <section>
   <h3>But y tho?</h3>
   <ul>
-    <li>Web APIs need to be as <b>flexible</b> as possible</li>
+    <li>Web APIs need to be <b>flexible</b> to handle many scenarios</li>
     <li>This means they have to be as <b>bare-bones</b> as possible</li>
   </ul>
 </section>
 
 <section>
   <h3>Layer #3a - The Browser Engine</h3>
+  <ul>
+    <li>Chrome - Webkit (C++)</li>
+    <li>Firefox - Gecko (C++)</li>
+  </ul>
 </section>
 
 <section>
-  <h3>Layer #4a - The Web API Specification
+  <h3>Layer #4a - The Web API Specification</h3>
 </section>
 
 <section>
@@ -75,9 +79,19 @@ module: 4
 
 <section>
   <h3>Layer #3b - The JS Engine</h3>
+  <ul>
+    <li>Chrome - V8 (C++)</li>
+    <li>Firefox - Spidermonkey (C/C++)</li>
+  </ul>
 </section>
 
 <section>
   <h3>Layer #4b - The ECMAScript Spec</h3>
 </section>
 
+<section>
+  <h3>Checks for Understanding</h3>
+  <ul>
+    <li>Where would the browser's implementation of `setInterval` live? In V8 or Webkit? Why?</li>
+  </ul>
+</section>
