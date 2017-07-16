@@ -65,9 +65,7 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ## The Repos
 
-### Swagger UI
-
-[Repo](https://github.com/swagger-api/swagger-ui)
+### [Swagger UI](https://github.com/swagger-api/swagger-ui)
 
 #### Potential Issues:
 
@@ -75,9 +73,7 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
 * [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
 
-### 18F Crime Data
-
-[Repo](https://github.com/18F/crime-data-frontend)
+### [18F Crime Data](https://github.com/18F/crime-data-frontend)
 
 #### Potential Issues:
 
