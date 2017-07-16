@@ -11,9 +11,11 @@ So far we've been building a lot of projects from scratch. While this is a great
 
 As you get started, pay close attention to the following things:
 
-1. **What's unfamiliar?** Is the codebase using different languages and frameworks than you've worked with in the past? Different setup / build tools? Are there coding conventions or stylistic choices you haven't seen before?
-2. **How was the setup and installation process?** Did you run into any problems or notice any errors or warnings in your terminal? Did you get things set up and running but you weren't sure how you did it? Was the documentation easy to follow or is there room for clarification? Could you submit an issue to improve the documentation for others struggling with the problems you might have run into?
+1. **How was the setup and installation process?** Did you run into any problems or notice any errors or warnings in your terminal? Did you get things set up and running but you weren't sure how you did it? Was the documentation easy to follow or is there room for clarification? Could you submit an issue to improve the documentation for others struggling with the problems you might have run into?
+2. **What's unfamiliar?** Is the codebase using different languages and frameworks than you've worked with in the past? Different setup / build tools? Are there coding conventions or stylistic choices you haven't seen before?
 3. **How can you contribute to the project?** Are there any obvious bugs or missing features that don't have open issues filed for them? Could you submit an issue with suggesstions for improvements? (Some common areas for improvement include accessibility and responsive design)
+
+Although you're working as a group, everybody should give themselves some alone time with the repo to take notes on the above questions. Comparing notes and sharing your experiences with your group mates afterwards will ensure that no potential issues or improvements fall through the cracks.
 
 ## Expectations
 
@@ -41,13 +43,11 @@ Excluding the two comments mentioned above, you must have both instructors revie
 
 #### Giving Your Teammates Credit
 
-Because this is a group project, you might be pairing to resolving a single issue. Just because one person is driving, doesn't mean they have to be the only one to get credit for the contribution. If you do submit a pull request, make sure to give your teammates credit! You can update the author on a commit with the following command:
+Because this is a group project, you might be pairing to resolve a single issue. Just because one person is driving, doesn't mean they have to be the only one to get credit for the contribution. If you do submit a pull request, make sure to give your teammates credit! You can update the author on a commit with the following command:
 
 ```bash
-git command
+git command TK TK
 ```
-
-### Blog Post
 
 ### Presentation
 
@@ -57,6 +57,32 @@ Each group will present the work they accomplished (or didn't accomplish) to the
 2. **What was it like jumping into that codebase?** What was the setup and installation process like? Was the build process familiar or challenging? Did the directory structure make sense? (5 minutes)
 3. **What was new and interesting?** Teach us about a new framework, library or tool that you had to use in the project. (5 minutes)
 4. **What issues did you resolve?** If you resolved any issues, walk us through your implementation in the codebase and update us on the github activity for your patch. (Was there any conversation in the github issue? Did you submit a pull request yet?) If you were unable to resolve any issues, walk us through the problems you ran into. (5 minutes)
- 
 
-## The Projects
+### Blog Posts
+
+Put your presentation into writing. Each person must write their own blog post. You can write about all four sections described in the presentation, or pick a single one to go in-depth on. Regardless of what you choose, each blog post should be about 1,000 words.
+
+
+## The Repos
+
+### Swagger UI
+
+[Repo](https://github.com/swagger-api/swagger-ui)
+
+#### Potential Issues:
+
+* [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
+* [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
+* [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
+
+### 18F Crime Data
+
+[Repo](https://github.com/18F/crime-data-frontend)
+
+#### Potential Issues:
+
+* [#1136](https://github.com/18F/crime-data-frontend/issues/1136)
+* [#1135](https://github.com/18F/crime-data-frontend/issues/1135)
+* [#1088](https://github.com/18F/crime-data-frontend/issues/1088)
+* [#1008](https://github.com/18F/crime-data-frontend/issues/1008)
+* [#990](https://github.com/18F/crime-data-frontend/issues/990)
