@@ -11,15 +11,15 @@ module: 4
 </section>
 
 <section>
-<p>On the whiteboard, list all the libraries and frameworks you've used.</p>
-<ul>
-  <li>look through the lesson plans listed on the frontend site</li>
-  <li>look through your `package.json` files in projects you've built</li>
-</ul>
-</section>
-
-<section>
-  <p><i>Learning 100 different libraries is still easier than building an application with none.</i></p>
+  <h4>On the whiteboard:</h4>
+  <p>list all libraries & frameworks you've used</p>
+  <ul>
+    <li>look through the lesson plans listed on the frontend site</li>
+    <li>look through your `package.json` files in projects you've built</li>
+  </ul>
+  <section>
+    <p><i>Learning 100 different libraries is still easier<br />than building an application with none.</i></p>
+  </section>
 </section>
 
 <section>
@@ -62,7 +62,7 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #3a - The Browser Engine</h3>
+  <h3>Layer #1a - The Browser Engine</h3>
   <ul>
     <li>Chrome - Webkit (C++)</li>
     <li>Firefox - Gecko (C++)</li>
@@ -70,7 +70,7 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #4a - The Web API Specification</h3>
+  <h3>Layer #0a - The Web API Specification</h3>
 </section>
 
 <section>
@@ -78,7 +78,7 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #3b - The JS Engine</h3>
+  <h3>Layer #1b - The JS Engine</h3>
   <ul>
     <li>Chrome - V8 (C++)</li>
     <li>Firefox - Spidermonkey (C/C++)</li>
@@ -86,7 +86,7 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #4b - The ECMAScript Spec</h3>
+  <h3>Layer #0b - The ECMAScript Spec</h3>
 </section>
 
 <section>
