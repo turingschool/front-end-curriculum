@@ -60,3 +60,24 @@ module: 4
     <li>This means they have to be as <b>bare-bones</b> as possible</li>
   </ul>
 </section>
+
+<section>
+  <h3>Layer #3a - The Browser Engine</h3>
+</section>
+
+<section>
+  <h3>Layer #4a - The Web API Specification
+</section>
+
+<section>
+  <h3>Standards Bodies & Specs</h3>
+</section>
+
+<section>
+  <h3>Layer #3b - The JS Engine</h3>
+</section>
+
+<section>
+  <h3>Layer #4b - The ECMAScript Spec</h3>
+</section>
+
