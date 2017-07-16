@@ -35,7 +35,7 @@ When requesting to take an issue, first assign yourself to the issue and add a c
 
 You are free to begin work on the issue while you wait for a response from someone on the team, but keep in mind they might tell you to stop and switch gears.
 
-If you cannot come up with a solution to submit in a pull request by the end of the weekend, you must un-assign yourself from the issue and leave another comment:
+If you cannot come up with a solution to submit a pull request by the end of the weekend, you must un-assign yourself from the issue and leave another comment:
 
 *Sorry, but I've had to unassign myself from this issue. I won't be able to submit a pull request in a timely manner and don't want to hold up progress. Hopefully someone else will be able to pick this up!*
 
@@ -77,8 +77,6 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
 * [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
 * [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
-
------------------------------------------------------------
 
 ### [18F Crime Data](https://github.com/18F/crime-data-frontend)
 
