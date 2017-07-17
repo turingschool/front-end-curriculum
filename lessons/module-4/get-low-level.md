@@ -127,7 +127,8 @@ module: 4
 
 <section>
   <section>
-    <h3>Standards Bodies & Specs</h3>
+    <h3>Standards Bodies</h3>
+    <p><i>Standards bodies facilitate creating technical documents that define how proposed web functionality should be implemented.</i></p>
     <ul>
       <li><a href="https://www.w3.org/">W3C</a> - World Wide Web Consortium</li>
       <li><a href="https://whatwg.org/">WHATWG</a> - Web Hypertext Application Technology Working Group</li>
@@ -145,11 +146,11 @@ module: 4
   <section>
     <h3>Standardization Process</h3>
     <ul>
-      <li>"Working Groups" (clubs of old white men) are formed and discuss new ideas for Web APIs</li>
-      <li>"Working Draft" (WD) - document to be reviewed by the community</li>
-      <li>"Candidate Recommendation" (CD) - released for implementation experience</li>
-      <li>"Proposed Recommenation" (PD) - technical report sent to advisory board</li>
-      <li>"W3C Recommenation" (REC) - technical report endorsed by W3C members/directors</li>
+      <li><b>"Working Groups"</b> (clubs of old white men) are formed and discuss new ideas for Web APIs</li>
+      <li><b>"Working Draft" (WD) -</b> document to be reviewed by the community</li>
+      <li><b>"Candidate Recommendation" (CD) -</b> released for implementation experience</li>
+      <li><b>"Proposed Recommenation" (PD) -</b> technical report sent to advisory board</li>
+      <li><b>"W3C Recommenation" (REC) -</b> technical report endorsed by W3C members/directors</li>
     </ul>
   </section>
   <section>
