@@ -175,6 +175,13 @@ module: 4
     </ul>
   </section>
   <section>
+    <h3>Array Methods in V8</h3>
+    <ul>
+      <li><a href="https://github.com/v8/v8/blob/f2bd913cd459854894447f5422a953d23fa4e7ba/src/runtime/runtime-array.cc#L527-L618">C++ Implementation of Array.indexOf()</a></li>
+      <li><a href="https://github.com/v8/v8/blob/f2bd913cd459854894447f5422a953d23fa4e7ba/src/js/array.js#L113-L119">JS Implementation of Array Push & Pop</a></li>
+    </ul>
+  </section>
+  <section>
     <h3>Check the <a href="https://github.com/v8/v8/tree/master/src/js">source</a></h3>
     <ul>
       <li>which file names sound familiar to you?</li>
