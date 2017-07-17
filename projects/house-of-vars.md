@@ -9,9 +9,13 @@ So far we've been building a lot of projects from scratch. While this is a great
 
 -----------------------------------------------------------
 
+## Before You Start
+
+Take some time to play around with the application you're going to be working on. Read the documentation and explore the UI. Get familiar with the project from a user perspective before even cloning the repo.
+
 ## Things to Think About
 
-As you get started, pay close attention to the following things:
+Once you're ready to jump into the codebase, pay close attention to the following things:
 
 1. **How was the setup and installation process?** Did you run into any problems or notice any errors or warnings in your terminal? Did you get things set up and running but you weren't sure how you did it? Was the documentation easy to follow or is there room for clarification? Could you submit an issue to improve the documentation for others struggling with the problems you might have run into?
 2. **What's unfamiliar?** Is the codebase using different languages and frameworks than you've worked with in the past? Different setup / build tools? Are there coding conventions or stylistic choices you haven't seen before?
