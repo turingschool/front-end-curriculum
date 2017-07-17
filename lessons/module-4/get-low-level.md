@@ -99,10 +99,30 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #0a - The Web API Specification</h3>
-  <ul>
-    <li>browser engine implementation of an API is dependent on its spec</li>
-  </ul>
+  <section>
+    <h3>Layer #0a - The Web API Specification</h3>
+    <p><i>The specification for a Web API gives platform engineers a strict set of rules for how the API should behave, which guides how it is implemented in the browser</i></p>
+    <ul>
+      <li>spec writers agree on functional behavior</li>
+      <li>platform engineers implement the API in the browser</li>
+      <li>app developers build applications using the API</li>
+    </ul>
+  </section>
+  <section>
+    <h3><a href="https://www.w3.org/TR/IndexedDB/">IndexedDB Spec</a></h3>
+    <p><i>Specs are notoriously difficult for app developers to read because they are written for platform engineers who write C++</i></p>
+  </section>
+  <section>
+    <h3>Reverse!</h3>
+    <p><i>Let's walk through a single point of IndexedDB functionality from the bottom up.</i></p>
+    <h4>Opening a Database:</h4>
+    <ul>
+      <li><a href="https://www.w3.org/TR/IndexedDB/#requests">The Spec</a></li>
+      <li><a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/Modules/indexeddb/IDBFactory.cpp#L78-L86">The Browser Engine Implementation</a></li>
+      <li><a href="https://github.com/turingschool-examples/offline-news/blob/d6182e5e7858af7481ef41d534dbc5a5d8b717f0/public/indexedDB.js#L11-L21">Our JavaScript Implementation</a></li>
+      <li><a href="https://github.com/turingschool-examples/offline-news/blob/after-sync-lesson/public/indexedDB.js#L4">The Dexie Library Wrapper</a></li>
+    </ul>
+  </section>
 </section>
 
 <section>
@@ -113,10 +133,13 @@ module: 4
     <h3>Why Standards?</h3>
   </section>
   <section>
+    <h3>Standardization Process</h3>
+  </section>
+  <section>
     <h3>Working Groups</h3>
   </section>
   <section>
-    <h3>Standardization Process</h3>
+    <h3>Potential Up & Coming Specs</h3>
   </section>
 </section>
 
@@ -140,5 +163,6 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #0b - The ECMAScript Spec</h3>
+  <h3>Layer #0b - The ECMAScript <a href="https://www.ecma-international.org/ecma-262/6.0/#sec-declarations-and-the-variable-statement">Spec</a></h3>
+  <p><i>The ECMAScript spec defines the entire JavaScript language, and is very <a href="https://twitter.com/brittanystoroz/status/885591959154417664">scary</a>.</i></p>
 </section>
