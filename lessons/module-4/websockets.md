@@ -117,8 +117,8 @@ Let's start with a simple "hello world" implementation.
 In our server, add the following code:
 
 ```js
-// index.js
-io.on('connection', function (socket) {
+// server.js
+io.on('connection', (socket) => {
   console.log('Someone has connected.');
 });
 ```
@@ -143,7 +143,7 @@ We can also let the client celebrate our new connection.
 
 ```js
 // public/application.js
-socket.on('connect', function () {
+socket.on('connect', () => {
   console.log('You have connected!'); // This will log to the browser's console, not the terminal
 });
 ```
@@ -153,10 +153,10 @@ There are [other built-in events](https://socket.io/docs/client-api/#event-conne
 So, let's send a message over the wire when a user connects.
 
 ```js
-// index.js
-io.on('connection', function (socket) {
+// server.js
+io.on('connection', (socket) => {
   console.log('Someone has connected.');
-  socket.emit('message', {user: 'turingbot', text: 'Hello, world!'});
+  socket.emit('message', { user: 'turingbot', text: 'Hello, world!' });
 });
 ```
 
@@ -164,7 +164,7 @@ Like everything with WebSockets, this is a two-part affair. The server is now em
 
 ```js
 // public/application.js
-socket.on('message', function (message) {
+socket.on('message', (message) => {
   console.log('Something came along on the "message" channel:', message);
 });
 ```
@@ -172,14 +172,13 @@ socket.on('message', function (message) {
 Super cool. You did the thing! Let's shoot some stuff over the wire on a regular interval.
 
 ```js
-// index.js
-io.on('connection', function (socket) {
-
-  var interval = setInterval(function () {
-    socket.emit('message', {user: 'turingbot', text: 'I am a banana.'});
+// server.js
+io.on('connection', (socket) => {
+  let interval = setInterval(() => {
+    socket.emit('message', { user: 'turingbot', text: 'I am a banana.' });
   }, 1000);
 
-  socket.on('disconnect', function () {
+  socket.on('disconnect', () => {
     clearInterval(interval);
   });
 });
@@ -187,7 +186,7 @@ io.on('connection', function (socket) {
 
 ### Your Turn
 
-So, right now, we're pushing data from the client out to the server. That's cool, but it would be nicer if we displayed them onto the page.
+So, right now, we're pushing data from the server out to the client. That's cool, but it would be nicer if we displayed them onto the page.
 
 Can you write some jQuery to append these messages to the DOM?
 
@@ -197,7 +196,7 @@ WebSockets are a two-way street. We can send something back to the server over `
 
 ```js
 // public/application.js
-socket.on('connect', function () {
+socket.on('connect', () => {
   console.log('You have connected!');
   socket.send({
     username: 'yournamehere',
@@ -209,18 +208,18 @@ socket.on('connect', function () {
 Let's also write a listener on the server.
 
 ```js
-// index.js
-io.on('connection', function (socket) {
+// server.js
+io.on('connection', (socket) => {
 
-  var interval = setInterval(function () {
+  let interval = setInterval(() => {
     socket.emit('message', {user: 'turingbot', text: 'I am a banana.'});
   }, 1000);
 
-  socket.on('message', function (message) {
+  socket.on('message', (message) => {
     console.log(message);
   });
 
-  socket.on('disconnect', function () {
+  socket.on('disconnect', () => {
     clearInterval(interval);
   });
 });
@@ -240,8 +239,8 @@ Everyone get their pens and paper out again! Now that you've had some experience
 Here is a little bit of code to point you in the right direction.
 
 ```js
-io.on('connection', function(socket) {
-  socket.on('eventName', function (message) {
+io.on('connection', (socket) => {
+  socket.on('eventName', (message) => {
     console.log(message);
   });
 });
@@ -266,8 +265,8 @@ You can also start to break your messaging out into different event names. Here'
 
 ```js
 socket.on('new message', addMessageToPage);
-socket.on('new connection', function () { updateStatus('A new user has connected.'); });
-socket.on('lost connection', function () { updateStatus('Someone has disconnected.'); });
+socket.on('new connection', () => { updateStatus('A new user has connected.'); });
+socket.on('lost connection', () => { updateStatus('Someone has disconnected.'); });
 ```
 
 There are also some helpful methods for seeing how many clients are currently connected.
