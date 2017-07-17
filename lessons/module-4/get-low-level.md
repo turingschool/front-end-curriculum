@@ -149,8 +149,8 @@ module: 4
       <li><b>"Working Groups"</b> (clubs of old white men) are formed and discuss new ideas for Web APIs</li>
       <li><b>"Working Draft" (WD) -</b> document to be reviewed by the community</li>
       <li><b>"Candidate Recommendation" (CD) -</b> released for implementation experience</li>
-      <li><b>"Proposed Recommenation" (PD) -</b> technical report sent to advisory board</li>
-      <li><b>"W3C Recommenation" (REC) -</b> technical report endorsed by W3C members/directors</li>
+      <li><b>"Proposed Recommendation" (PD) -</b> technical report sent to advisory board</li>
+      <li><b>"W3C Recommendation" (REC) -</b> technical report endorsed by W3C members/directors</li>
     </ul>
   </section>
   <section>
