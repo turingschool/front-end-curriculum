@@ -66,36 +66,81 @@ module: 4
 </section>
 
 <section>
-  <h3>Layer #1a - The Browser Engine</h3>
-  <ul>
-    <li>Chrome - Webkit (C++)</li>
-    <li>Firefox - Gecko (C++)</li>
-  </ul>
+  <section>
+    <h3>Layer #1 - The Browser</h3>
+    <ul>
+      <li>browser made up of many different parts</li>
+      <li>working with APIs is dependent on JS Engine & Browser Engine</li>
+      <li>JS Engine allows browser to understand the JavaScript we write</li>
+      <li>Browser Engine allows browser to understand the Web APIs we use</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Browser Architecture</h3>
+    <img src="../../assets/images/lessons/get-low-level/browser-arch.png" />
+  </section>
+</section>
+
+<section>
+  <section>
+    <h3>Layer #1a - The Browser Engine</h3>
+    <p><i>The browser engine is responsible for implementing Web APIs and functionality like IndexedDB, geolocation, web audio, etc.</i></p>
+    <ul>
+      <li>Chrome - Webkit (C++)</li>
+      <li>Firefox - Gecko (C++)</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Check the <a href="https://github.com/WebKit/webkit/tree/master/Source/WebCore/Modules">source</a></h3>
+    <ul>
+      <li>which modules sound familiar to you?</li>
+      <li>bump up a directory and explore the rest of /WebCore/</li>
+      <li>what other APIs live in the browser engine?</li>
+    </ul>
+  </section>
 </section>
 
 <section>
   <h3>Layer #0a - The Web API Specification</h3>
-</section>
-
-<section>
-  <h3>Standards Bodies & Specs</h3>
-</section>
-
-<section>
-  <h3>Layer #1b - The JS Engine</h3>
   <ul>
-    <li>Chrome - V8 (C++)</li>
-    <li>Firefox - Spidermonkey (C/C++)</li>
+    <li>browser engine implementation of an API is dependent on its spec</li>
   </ul>
+</section>
+
+<section>
+  <section>
+    <h3>Standards Bodies & Specs</h3>
+  </section>
+  <section>
+    <h3>Why Standards?</h3>
+  </section>
+  <section>
+    <h3>Working Groups</h3>
+  </section>
+  <section>
+    <h3>Standardization Process</h3>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h3>Layer #1b - The JS Engine</h3>
+    <p><i>The JavaScript Engine is responsible for interpreting the JavaScript we write and doing something meaningful with it.</i></p>
+    <ul>
+      <li>Chrome - V8 (C++)</li>
+      <li>Firefox - Spidermonkey (C/C++)</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Check the <a href="https://github.com/v8/v8/tree/master/src/js">source</a></h3>
+    <ul>
+      <li>which file names sound familiar to you?</li>
+      <li>bump up a directory and explore the rest of /src/</li>
+      <li>what other functionaliy lives in the JS engine?</li>
+    </ul>
+  </section>
 </section>
 
 <section>
   <h3>Layer #0b - The ECMAScript Spec</h3>
-</section>
-
-<section>
-  <h3>Checks for Understanding</h3>
-  <ul>
-    <li>Where would the browser's implementation of `setInterval` live? In V8 or Webkit? Why?</li>
-  </ul>
 </section>
