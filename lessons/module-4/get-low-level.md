@@ -33,7 +33,7 @@ module: 4
   <section>
     <h3>Layer #3 - The Library</h3>
     <ul>
-      <li>previously learned <a href="http://dexie.org/">Dexie</a> - library wrapping IndexedDB</li>
+      <li>previously used <a href="http://dexie.org/">Dexie</a> - library wrapping IndexedDB</li>
       <li><a href="https://github.com/turingschool-examples/offline-news/blob/before-sync-lesson/public/indexedDB.js">code</a> was concise and read similar to English</li>
     </ul>
   </section>
