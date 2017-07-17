@@ -128,12 +128,29 @@ module: 4
 <section>
   <section>
     <h3>Standards Bodies & Specs</h3>
+    <ul>
+      <li><a href="https://www.w3.org/">W3C</a> - World Wide Web Consortium</li>
+      <li><a href="https://whatwg.org/">WHATWG</a> - Web Hypertext Application Technology Working Group</li>
+    </ul>
   </section>
   <section>
     <h3>Why Standards?</h3>
+    <ul>
+      <li>promote a more stable and consistent web</li>
+      <li>follow patterns that make implementation and maintenance easier</li>
+      <li>are developed with all demographics in mind</li>
+      <li>make it easier to share common knowledge and learn from each other</li>
+    </ul>
   </section>
   <section>
     <h3>Standardization Process</h3>
+    <ul>
+      <li>"Working Groups" (clubs of old white men) are formed and discuss new ideas for Web APIs</li>
+      <li>"Working Draft" (WD) - document to be reviewed by the community</li>
+      <li>"Candidate Recommendation" (CD) - released for implementation experience</li>
+      <li>"Proposed Recommenation" (PD) - technical report sent to advisory board</li>
+      <li>"W3C Recommenation" (REC) - technical report endorsed by W3C members/directors</li>
+    </ul>
   </section>
   <section>
     <h3>Working Groups</h3>
