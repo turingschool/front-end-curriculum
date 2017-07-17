@@ -35,13 +35,13 @@ Each team will be provided with an open-source repo and a short list of suggeste
 
 When requesting to take an issue, first assign yourself to the issue and add a comment on the issue that says something along these lines:
 
-*Hi there! I'm a first-time contributor and was hoping to help out with this issue. I noticed nobody was assigned to it, but if there's already a solution in progress I'm happy to un-assign myself and try helping out elsewhere. Thanks!*
+*Hi there! I'm a first-time contributor and was hoping to help out with this issue. I noticed nobody was assigned to it, but if there's already a solution in progress I'm happy to try helping out elsewhere. Thanks!*
 
 You are free to begin work on the issue while you wait for a response from someone on the team, but keep in mind they might tell you to stop and switch gears.
 
 If you cannot come up with a solution to submit a pull request by the end of the weekend, you must un-assign yourself from the issue and leave another comment:
 
-*Sorry, but I've had to unassign myself from this issue. I won't be able to submit a pull request in a timely manner and don't want to hold up progress. Hopefully someone else will be able to pick this up!*
+*Sorry, but I've had to drop this issue from my to-do list. I won't be able to submit a pull request in a timely manner and don't want to hold up progress. Hopefully someone else will be able to pick this up!*
 
 Throughout this process, make sure you are conforming to any stylistic conventions and contribution guidelines set by the project maintainers. Repos will often have `CONTRIBUTING.md` files that give you guidelines on how to format your commit messages, how to write your pull request descriptions and how to file new issues. 
 
