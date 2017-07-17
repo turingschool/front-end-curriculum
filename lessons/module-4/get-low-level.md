@@ -153,10 +153,14 @@ module: 4
     </ul>
   </section>
   <section>
-    <h3>Working Groups</h3>
-  </section>
-  <section>
-    <h3>Potential Up & Coming Specs</h3>
+    <h3>Web Incubator Community Group (WICG)</h3>
+    <p><i>WICG is a <a href="https://wicg.io/">Community Group</a> where people <a href="https://discourse.wicg.io/latest">discuss</a> changes to pre-existing APIs and pitch potential new ones. Some of the discussions include:</i></p>
+    <ul>
+      <li><a href="https://discourse.wicg.io/t/web-share-api-for-sharing-content-to-arbitrary-destination/1561">Web Share</a></li>
+      <li><a href="https://discourse.wicg.io/t/a-zip-api-in-the-browser/14">Zip</a></li>
+      <li><a href="https://discourse.wicg.io/t/passing-an-object-of-attributes-to-document-createelement-as-the-second-argument/809">Changes to document.createElement()</a></li>
+      <li><a href="https://discourse.wicg.io/t/wake-lock-api-suppressing-power-management-screensavers/769/3">Wake Lock API</a></li>
+    </ul>
   </section>
 </section>
 
