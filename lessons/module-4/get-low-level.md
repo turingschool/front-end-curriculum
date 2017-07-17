@@ -7,7 +7,7 @@ module: 4
 
 <section>
   <h2>Get Low-Level</h2>
-  <h4>Understanding Specs<br /> & Standards Bodies</h4>
+  <h4>Understanding Browsers, Specs<br /> & Standards Bodies</h4>
 </section>
 
 <section>
