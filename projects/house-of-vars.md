@@ -9,9 +9,13 @@ So far we've been building a lot of projects from scratch. While this is a great
 
 -----------------------------------------------------------
 
+## Before You Start
+
+Take some time to play around with the application you're going to be working on. Read the documentation and explore the UI. Get familiar with the project from a user perspective before even cloning the repo.
+
 ## Things to Think About
 
-As you get started, pay close attention to the following things:
+Once you're ready to jump into the codebase, pay close attention to the following things:
 
 1. **How was the setup and installation process?** Did you run into any problems or notice any errors or warnings in your terminal? Did you get things set up and running but you weren't sure how you did it? Was the documentation easy to follow or is there room for clarification? Could you submit an issue to improve the documentation for others struggling with the problems you might have run into?
 2. **What's unfamiliar?** Is the codebase using different languages and frameworks than you've worked with in the past? Different setup / build tools? Are there coding conventions or stylistic choices you haven't seen before?
@@ -70,13 +74,13 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ## The Repos
 
-### [Swagger UI](https://github.com/swagger-api/swagger-ui)
+### [Vets.gov](https://github.com/department-of-veterans-affairs/vets-website)
 
 **Potential Issues:**
 
-* [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
-* [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
-* [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
+* [#3434](https://github.com/department-of-veterans-affairs/vets-website/issues/3434)
+* [#3274](https://github.com/department-of-veterans-affairs/vets-website/issues/3274)
+* [#5221](https://github.com/department-of-veterans-affairs/vets-website/issues/5221)
 
 ### [18F Crime Data](https://github.com/18F/crime-data-frontend)
 
@@ -87,3 +91,21 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1088](https://github.com/18F/crime-data-frontend/issues/1088)
 * [#1008](https://github.com/18F/crime-data-frontend/issues/1008)
 * [#990](https://github.com/18F/crime-data-frontend/issues/990)
+
+### [Swagger UI](https://github.com/swagger-api/swagger-ui)
+
+**Potential Issues:**
+
+* [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
+* [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
+* [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
+
+### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
+
+**Potential Issues:**
+* [#1311](https://github.com/openfoodfoundation/openfoodnetwork/issues/1311)
+* [#1306](https://github.com/openfoodfoundation/openfoodnetwork/issues/1306)
+* [#1296](https://github.com/openfoodfoundation/openfoodnetwork/issues/1296)
+* [#1382](https://github.com/openfoodfoundation/openfoodnetwork/issues/1382)
+* [#1307](https://github.com/openfoodfoundation/openfoodnetwork/issues/1307)
+
