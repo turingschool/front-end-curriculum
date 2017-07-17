@@ -7,7 +7,7 @@ module: 4
 
 <section>
   <h2>Get Low-Level</h2>
-  <h4>Understanding Specs<br /> & Standards Bodies</h4>
+  <h4>Understanding Browsers, Specs<br /> & Standards Bodies</h4>
 </section>
 
 <section>
@@ -149,8 +149,8 @@ module: 4
       <li><b>"Working Groups"</b> (clubs of old white men) are formed and discuss new ideas for Web APIs</li>
       <li><b>"Working Draft" (WD) -</b> document to be reviewed by the community</li>
       <li><b>"Candidate Recommendation" (CD) -</b> released for implementation experience</li>
-      <li><b>"Proposed Recommenation" (PD) -</b> technical report sent to advisory board</li>
-      <li><b>"W3C Recommenation" (REC) -</b> technical report endorsed by W3C members/directors</li>
+      <li><b>"Proposed Recommendation" (PD) -</b> technical report sent to advisory board</li>
+      <li><b>"W3C Recommendation" (REC) -</b> technical report endorsed by W3C members/directors</li>
     </ul>
   </section>
   <section>
@@ -180,6 +180,13 @@ module: 4
       <li>which file names sound familiar to you?</li>
       <li>bump up a directory and explore the rest of /src/</li>
       <li>what other functionaliy lives in the JS engine?</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Array Methods in V8</h3>
+    <ul>
+      <li><a href="https://github.com/v8/v8/blob/f2bd913cd459854894447f5422a953d23fa4e7ba/src/runtime/runtime-array.cc#L527-L618">C++ Implementation of Array.indexOf()</a></li>
+      <li><a href="https://github.com/v8/v8/blob/f2bd913cd459854894447f5422a953d23fa4e7ba/src/js/array.js#L113-L119">JS Implementation of Array Push & Pop</a></li>
     </ul>
   </section>
 </section>
