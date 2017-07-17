@@ -69,10 +69,8 @@ module: 4
   <section>
     <h3>Layer #1 - The Browser</h3>
     <ul>
-      <li>browser made up of many different parts</li>
-      <li>working with APIs is dependent on JS Engine & Browser Engine</li>
-      <li>JS Engine allows browser to understand the JavaScript we write</li>
-      <li>Browser Engine allows browser to understand the Web APIs we use</li>
+      <li>browsers are made up of many different parts</li>
+      <li>working with APIs is dependent on the built-in JavaScript Engine and Browser Engine</li>
     </ul>
   </section>
   <section>
