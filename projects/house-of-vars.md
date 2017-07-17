@@ -70,13 +70,13 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ## The Repos
 
-### [Swagger UI](https://github.com/swagger-api/swagger-ui)
+### [Vets.gov](https://github.com/department-of-veterans-affairs/vets-website)
 
 **Potential Issues:**
 
-* [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
-* [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
-* [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
+* [#3434](https://github.com/department-of-veterans-affairs/vets-website/issues/3434)
+* [#3274](https://github.com/department-of-veterans-affairs/vets-website/issues/3274)
+* [#5221](https://github.com/department-of-veterans-affairs/vets-website/issues/5221)
 
 ### [18F Crime Data](https://github.com/18F/crime-data-frontend)
 
@@ -87,3 +87,21 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1088](https://github.com/18F/crime-data-frontend/issues/1088)
 * [#1008](https://github.com/18F/crime-data-frontend/issues/1008)
 * [#990](https://github.com/18F/crime-data-frontend/issues/990)
+
+### [Swagger UI](https://github.com/swagger-api/swagger-ui)
+
+**Potential Issues:**
+
+* [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
+* [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
+* [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
+
+### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
+
+**Potential Issues:**
+* [#1311](https://github.com/openfoodfoundation/openfoodnetwork/issues/1311)
+* [#1306](https://github.com/openfoodfoundation/openfoodnetwork/issues/1306)
+* [#1296](https://github.com/openfoodfoundation/openfoodnetwork/issues/1296)
+* [#1382](https://github.com/openfoodfoundation/openfoodnetwork/issues/1382)
+* [#1307](https://github.com/openfoodfoundation/openfoodnetwork/issues/1307)
+
