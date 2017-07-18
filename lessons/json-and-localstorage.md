@@ -52,7 +52,7 @@ HTTP powers the web, but it does have one limitation. All information can only b
 
 JSON stands for "JavaScript Object Notation" and is an alternative to XML as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. All JSON objects are valid JavaScript, but not all JavaScript objects are valid JSON.
 
-JSON has the following rules in addition to the rules governing regular JSON:
+JSON has the following rules:
 
 - Keys must be double quoted.
 - Values must be one of the following types:
@@ -61,7 +61,10 @@ JSON has the following rules in addition to the rules governing regular JSON:
     - Booleans
     - Arrays
     - Objects
-- Values cannot be functions as JSON is just a way of conveying data.
+- Keys can only be properties, not methods  
+- Therefore, values cannot be functions  
+
+**JSON is a means of sending data.**
 
 The browser provides a `JSON` object with two methods.
 
@@ -95,4 +98,9 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 
 Whenever you change a value in localStorage, the DOM will fire a `storage` event in every other page currently open on that domain.
 
-Open [this CodePen](http://codepen.io/team/turing/pen/xOYdBG) up in two different windows to see.
+Open [this CodePen](http://codepen.io/team/turing/pen/xOYdBG) up in two different windows to see.  
+
+### Dig Deeper
+* [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
+* [Mozilla Docs on Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 
+* [Google Docs on Storing/Caching Data in Chrome](https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage)
