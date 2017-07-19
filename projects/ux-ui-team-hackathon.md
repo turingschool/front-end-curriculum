@@ -26,8 +26,9 @@ Your final live project must match the comp, be responsive, and be live on githu
 
 Design a user dashboard for a fitness tracking app. It must include the following elements:
 
-- a log of your recent workouts, the ability to set and track goals
-- a calendar to track your workouts.
+- a log of your recent workouts
+- the ability to set and track goals
+- a calendar to track your workouts
 
 If you feel there are additional elements that should be a part of your comp, include them!
 
