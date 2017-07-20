@@ -139,8 +139,8 @@ Instructor/developers will select one feature in the project to review for this 
 - Developer contributes to or creates an npm module/library.
 
 
-### To get a 3 on this project, you need to achieve 230 / 250
+### To get a 3 on this project, you need to achieve 200 / 250
 
-### To get a 4 on this project, you need to achieve 200 / 250
+### To get a 4 on this project, you need to achieve 230 / 250
 
 ## Final Score: x / 250
