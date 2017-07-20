@@ -22,7 +22,7 @@ Let's face it, writing a lot of CSS is not very enjoyable. I love the instant gr
 
 Sass makes you structure important front end choices in a functional way. Being able to quickly find, read and change your Sass is a very important skill on the job. If you can do this, you can get quick feedback from designers and move on the next feature. Otherwise, prepare for long days of wiping tears streaking down your face as you refresh the page for the 87th time and your navbar still doesn't have the correct box shadow. 
 
-In addition to saving your sanity, Sass is now making complex visual components possible. Leave the Javascript for state/actions and keep the cool looks and feels in Sass. With control directives, not only are these visuals possible, but they also reinforce fundamental coding principles. I understand for and while loops better because of Sass.
+In addition to saving your sanity, Sass is now making complex visual components possible. Leave the JavaScript for state/actions and keep the cool looks and feels in Sass. With control directives, not only are these visuals possible, but they also reinforce fundamental coding principles. I understand for and while loops better because of Sass.
 
 Let's look at the possibilities...
 
@@ -39,7 +39,8 @@ Let's look at the possibilities...
 ## Operators - Covered
 
 ## 1. Partials and Import
-Partails keep your Sass code organized and won't generate partials it's own CSS file. You must import them into your main Sass file.
+
+Partials keep your Sass code organized and won't generate partials it's own CSS file. You must import them into your main Sass file.
 
 The config directory is where you store Sass code that doesn't output to CSS. This would be global variables for colors, mixins and functions. Things you want to scatter alongst all of your other Sass partials.
 
@@ -92,7 +93,7 @@ Use @import to include a partial.
     
 **Individually**
 
-Pull down the add-sass-magic branch from the [Intro Sass Ideabox Repo](https://github.com/rrgayhart/intro-sass-ideabox). Add the stylesheets, config, partials and vendor folders and create a _colors.scss, _reset.scss, _buttons.scss, _input.scss, _typography.scss partials using the exisiting Sass code. Import those partials into the main.scss (or style.scss) file in your Ideabox.
+Pull down the add-sass-magic branch from the [Intro Sass Ideabox Repo](https://github.com/rrgayhart/intro-sass-ideabox). Add the stylesheets, config, partials and vendor folders and create a _colors.scss, _reset.scss, _buttons.scss, _input.scss, _typography.scss partials using the existing Sass code. Import those partials into the main.scss (or style.scss) file in your Ideabox.
 
 ## 2. Mixins and Functions
 A mixin allows you to define a set of styles along with the option to pass in arguments that you can include in HTML elements, classes or IDs. Mixins are great for reducing repetitive styles in your CSS.
@@ -201,7 +202,7 @@ Compiles to:
 
 Use mixins to create a gecko class that is extended by a reptile class that is extended by an animal class. 
 
-What happens if you have some SCSS (like the animal class) but you never actual apply that class in your HTML??? Well Sass has a fancy little tool called a placedholder. Just use %animal instead of .animal and it works the same without actaully compiling the placeholder with it's features. Try it!
+What happens if you have some SCSS (like the animal class) but you never actual apply that class in your HTML??? Well Sass has a fancy little tool called a placedholder. Just use %animal instead of .animal and it works the same without actually compiling the placeholder with it's features. Try it!
 
 Real world example of how this is useful is creating a bunch of add-in features using placeholders so that they are readily available by extending them, but if they aren't those extra features don't clutter the CSS.
 
@@ -209,7 +210,7 @@ Real world example of how this is useful is creating a bunch of add-in features 
 
 ### @if
 
-The if directive returns any styles if the directive doesn't not result in false or null.
+The if directive returns any styles if the directive does not result in false or null.
 
 
   // For debugging    
