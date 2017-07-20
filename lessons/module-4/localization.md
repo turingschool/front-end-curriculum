@@ -98,6 +98,12 @@ This file should require in the `i18n` module and set the following [configurati
 Finally, we want to initialize the the library and finish sending the request through:
 
 ```javascript
+const i18n = require('i18n');
+
+i18n.configure({
+  // set i18n configuration
+});
+
 module.exports = function(req, res, next) {
 
   // initialize the i18n library
