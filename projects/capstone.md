@@ -134,11 +134,6 @@ Instructor/developers will select one feature in the project to review for this 
 * 5: The developers committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0: The application was not checked into version control.
 
-#### Extensions (20 points each)
-
-- Developer contributes to or creates an npm module/library.
-
-
 ### To get a 3 on this project, you need to achieve 200 / 250
 
 ### To get a 4 on this project, you need to achieve 230 / 250
