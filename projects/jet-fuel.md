@@ -106,6 +106,8 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### Testing
 
+<!-- blah blah blah -->
+
 * **20 points** - Project has a running test suite that tests every server-side endpoint with many happy and sad path cases.
 * **15 points** - Project has a running test suite that tests every server-side endpoint, but only has a couple sad path cases.
 * **7 points** - Project has sporadic testing of some server-side endpoints. There are happy path tests, but there are is one or zero sad path cases.
