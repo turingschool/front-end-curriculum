@@ -52,6 +52,6 @@ In this repo you will find your name. It is your job to answer the given questio
 - Matt Renn:
 - Matthew Arvidson:
 - Michael Marlow:
-- Nick Teets:
+- Nick Teets: Skinning buffalo skulls
 - Robbie Greiner:
 - Samuel Singer:
