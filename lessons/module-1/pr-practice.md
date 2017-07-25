@@ -40,7 +40,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Ben Porter: Working at food service in a hospital.
 - David Ryan: Comcast Technician - The things I've seen
 - Rufus Welsh:
-- Erik Ingvalson:
+- Erik Ingvalson: Dancing Pickle 
 - Francy Lang: Bread Bakery Delivery Driver
 - Jacob Boutin:
 - Jason Hughes: Medieval Times entertainment department
