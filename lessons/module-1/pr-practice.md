@@ -48,7 +48,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Jennifer Woodson:
 - John Michael Boudreaux:
 - Jorge Perez Garcia:
-- Lucas Finney: From the ages of 8-15 I worked in a chocolate store that my aunt managed during the holidays putting together bulk business orders for holiday parties, which mostly included making hundreds upon hundreds of choclate dipped fruits.
+- Lucas Finney: From the ages of 8-15 I worked in a chocolate store that my aunt managed during the holidays putting together bulk business orders for holiday parties, which mostly included making hundreds upon hundreds of chocolate dipped fruits.
 - Matt Renn:
 - Matthew Arvidson:
 - Michael Marlow:
