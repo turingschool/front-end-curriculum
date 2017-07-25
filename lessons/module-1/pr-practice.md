@@ -35,7 +35,7 @@ In this repo you will find your name. It is your job to answer the given questio
 
 - Adam Mescher:
 - Alex Banister:
-- Lola Brenner:
+- Lola Brenner: florist
 - Amy Holt: Selling books door to door
 - Ben Porter: Working at food service in a hospital.
 - David Ryan:
