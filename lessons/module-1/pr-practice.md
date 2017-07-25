@@ -44,7 +44,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Erik Ingvalson:
 - Francy Lang:
 - Jacob Boutin:
-- Jason Hughes:
+- Jason Hughes: Medieval Times entertainment department
 - Jennifer Woodson:
 - John Michael Boudreaux:
 - Jorge Perez Garcia:
