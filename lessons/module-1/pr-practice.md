@@ -39,7 +39,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Lola Brenner:
 - Amy Holt:
 - Ben Porter:
-- David Ryan:
+- David Ryan: Comcast Technician - The things I've seen
 - Rufus Welsh:
 - Erik Ingvalson:
 - Francy Lang:
