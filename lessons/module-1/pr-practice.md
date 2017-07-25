@@ -35,7 +35,7 @@ In this repo you will find your name. It is your job to answer the given questio
 
 - Adam Mescher:
 - Alex Banister:
-- Lola Brenner: florist
+- Lola Brenner:
 - Amy Holt: Selling books door to door
 - Ben Porter: Working at food service in a hospital.
 - David Ryan:
@@ -48,7 +48,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - John Michael Boudreaux:
 - Jorge Perez Garcia: I served shots shirtless at X bar
 - Lucas Finney:
-- Matt Renn:
+- Matt Renn: Hemp Farmer or Cheesesteak Delivery Driver Camp Councelor
 - Matthew Arvidson:
 - Michael Marlow:
 - Nick Teets:
