@@ -41,7 +41,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Ben Porter:
 - David Ryan:
 - Rufus Welsh:
-- Erik Ingvalson:
+- Erik Ingvalson: Dancing Pickle 
 - Francy Lang:
 - Jacob Boutin:
 - Jason Hughes:
