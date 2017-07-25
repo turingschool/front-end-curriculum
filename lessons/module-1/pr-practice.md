@@ -45,7 +45,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Jacob Boutin:
 - Jason Hughes:
 - Jennifer Woodson:
-- John Michael Boudreaux:
+- John Michael Boudreaux: building scaffold in a small town for three nights.
 - Jorge Perez Garcia: I served shots shirtless at X bar
 - Lucas Finney:
 - Matt Renn: Hemp Farmer or Cheesesteak Delivery Driver Camp Councelor
