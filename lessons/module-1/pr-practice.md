@@ -42,7 +42,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - David Ryan:
 - Rufus Welsh:
 - Erik Ingvalson:
-- Francy Lang:
+- Francy Lang: Bread Bakery Delivery Driver
 - Jacob Boutin:
 - Jason Hughes:
 - Jennifer Woodson:
