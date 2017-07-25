@@ -34,7 +34,7 @@ In this repo you will find your name. It is your job to answer the given questio
 
 **What was your weirdest job?**
 
-- Adam Mescher:
+- Adam Mescher: Delivery driver for a junk yard
 - Alex Banister:
 - Lola Brenner:
 - Amy Holt:
