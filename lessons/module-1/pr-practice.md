@@ -43,7 +43,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Erik Ingvalson:
 - Francy Lang: Bread Bakery Delivery Driver
 - Jacob Boutin:
-- Jason Hughes:
+- Jason Hughes: Medieval Times entertainment department
 - Jennifer Woodson:
 - John Michael Boudreaux: building scaffold in a small town for three nights.
 - Jorge Perez Garcia: I served shots shirtless at X bar
