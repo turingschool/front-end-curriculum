@@ -47,7 +47,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Jason Hughes:
 - Jennifer Woodson:
 - John Michael Boudreaux:
-- Jorge Perez Garcia:
+- Jorge Perez Garcia: I served shots shirtless at X bar
 - Lucas Finney:
 - Matt Renn:
 - Matthew Arvidson:
