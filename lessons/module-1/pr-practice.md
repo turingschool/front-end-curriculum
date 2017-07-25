@@ -48,8 +48,8 @@ In this repo you will find your name. It is your job to answer the given questio
 - John Michael Boudreaux: building scaffold in a small town for three nights.
 - Jorge Perez Garcia: I served shots shirtless at X bar
 - Lucas Finney:
+- Matthew Arvidson: Working in a Dunk Tank Booth getting Dunked.
 - Matt Renn: Hemp Farmer or Cheesesteak Delivery Driver Camp Councelor
-- Matthew Arvidson:
 - Michael Marlow:
 - Nick Teets:
 - Robbie Greiner: making pizza and running laser tag.. 
