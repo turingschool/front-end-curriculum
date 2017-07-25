@@ -30,6 +30,10 @@ You may NOT take liberties with the layout, but your creative license includes:
   - This final challenge is a part of your portfolio
   - Note the rubric below for evaluation criteria
 
+## PRO-TIP
+
+This is a tough layout to build. Don't wait until Monday of week 6 to get started.
+
 ***
 
 ## HTML
