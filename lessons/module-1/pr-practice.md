@@ -51,6 +51,6 @@ In this repo you will find your name. It is your job to answer the given questio
 - Matthew Arvidson: Working in a Dunk Tank Booth getting Dunked.
 - Matt Renn: Hemp Farmer or Cheesesteak Delivery Driver Camp Councelor
 - Michael Marlow:
-- Nick Teets:
+- Nick Teets: Skinning buffalo skulls
 - Robbie Greiner: making pizza and running laser tag.. 
 - Samuel Singer: Cart Pusher
