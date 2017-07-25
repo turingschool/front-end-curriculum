@@ -34,8 +34,8 @@ In this repo you will find your name. It is your job to answer the given questio
 **What was your weirdest job?**
 
 - Adam Mescher:
-- Alex Banister:
-- Lola Brenner:
+- Alex Banister: Either all my jobs have been weird or none of them. I can't tell.
+- Lola Brenner: florist
 - Amy Holt: Selling books door to door
 - Ben Porter: Working at food service in a hospital.
 - David Ryan:
