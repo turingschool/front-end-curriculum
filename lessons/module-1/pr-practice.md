@@ -49,7 +49,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - John Michael Boudreaux:
 - Jorge Perez Garcia:
 - Lucas Finney:
-- Matt Renn:
+- Matt Renn: Camp Counselor
 - Matthew Arvidson:
 - Michael Marlow:
 - Nick Teets:
