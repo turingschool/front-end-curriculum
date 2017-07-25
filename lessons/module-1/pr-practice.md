@@ -45,7 +45,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Francy Lang:
 - Jacob Boutin:
 - Jason Hughes:
-- Jennifer Woodson:
+- Jennifer Woodson: milking goats
 - John Michael Boudreaux:
 - Jorge Perez Garcia:
 - Lucas Finney:
