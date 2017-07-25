@@ -33,7 +33,8 @@ In this repo you will find your name. It is your job to answer the given questio
 
 **What was your weirdest job?**
 
-- Adam Mescher:
+
+- Adam Mescher: Delivery driver for a junk yard
 - Alex Banister: Either all my jobs have been weird or none of them. I can't tell.
 - Lola Brenner: florist
 - Amy Holt: Selling books door to door
