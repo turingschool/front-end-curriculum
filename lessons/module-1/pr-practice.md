@@ -43,7 +43,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Rufus Welsh:
 - Erik Ingvalson:
 - Francy Lang:
-- Jacob Boutin:
+- Jacob Boutin: harvested liquid dinosaurs 
 - Jason Hughes:
 - Jennifer Woodson:
 - John Michael Boudreaux:
