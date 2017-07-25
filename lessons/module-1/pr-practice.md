@@ -42,7 +42,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Rufus Welsh:
 - Erik Ingvalson: Dancing Pickle 
 - Francy Lang: Bread Bakery Delivery Driver
-- Jacob Boutin:
+- Jacob Boutin: harvested liquid dinosaurs 
 - Jason Hughes: Medieval Times entertainment department
 - Jennifer Woodson:
 - John Michael Boudreaux: building scaffold in a small town for three nights.
