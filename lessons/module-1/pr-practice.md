@@ -38,7 +38,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Lola Brenner: florist
 - Amy Holt: Selling books door to door
 - Ben Porter: Working at food service in a hospital.
-- David Ryan:
+- David Ryan: Comcast Technician - The things I've seen
 - Rufus Welsh:
 - Erik Ingvalson:
 - Francy Lang: Bread Bakery Delivery Driver
