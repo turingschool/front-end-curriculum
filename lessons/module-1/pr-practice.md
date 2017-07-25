@@ -47,7 +47,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Jennifer Woodson:
 - John Michael Boudreaux: building scaffold in a small town for three nights.
 - Jorge Perez Garcia: I served shots shirtless at X bar
-- Lucas Finney:
+- Lucas Finney: From the ages of 8-15 I worked in a chocolate store that my aunt managed during the holidays putting together bulk business orders for holiday parties, which mostly included making hundreds upon hundreds of chocolate dipped fruits.
 - Matthew Arvidson: Working in a Dunk Tank Booth getting Dunked.
 - Matt Renn: Hemp Farmer or Cheesesteak Delivery Driver Camp Councelor
 - Michael Marlow:
