@@ -21,8 +21,7 @@ In this repo you will find your name. It is your job to answer the given questio
   (commit message): `Edit timeline of lesson plan structure`
   (body): `Previously the lesson was scheduled to be 3 hours but we have cut it down to 2 so we have extra time for questions`
 
-* Check the appropriate radio button. It is recommended to start a new branch that is separate from Master. In the example above, if I check the `create a new branch` radio button I can either use the auto-generated branch name ie: `martensonbj-patch-1`, or you can name it something specific to your fix.
-* Click `Commit Changes`
+* Click `Propose File Change`
 * You are now looking at the Pull Request template - your commit message is automatically rendered in the title of the PR. Add a bit of detail to give a comprehensive title associated with the issue. For the above example: `Update timeline with longer lesson plan`.
 * In the body, include a detailed report of why you are making this change, and any important details regarding the process you used. Ie: `@louisa This PR modifies the lesson plans length from 3 hours to 2. Approved by @johnsnow.` (notice you can tag users so they are notified of the PR directly)
 * Click `Create Pull Request`.
@@ -36,22 +35,22 @@ In this repo you will find your name. It is your job to answer the given questio
 
 - Adam Mescher:
 - Alex Banister: Either all my jobs have been weird or none of them. I can't tell.
-- Lola Brenner:
-- Amy Holt:
-- Ben Porter:
+- Lola Brenner: florist
+- Amy Holt: Selling books door to door
+- Ben Porter: Working at food service in a hospital.
 - David Ryan:
 - Rufus Welsh:
 - Erik Ingvalson:
-- Francy Lang:
+- Francy Lang: Bread Bakery Delivery Driver
 - Jacob Boutin:
 - Jason Hughes:
 - Jennifer Woodson:
 - John Michael Boudreaux:
-- Jorge Perez Garcia:
+- Jorge Perez Garcia: I served shots shirtless at X bar
 - Lucas Finney:
 - Matt Renn:
 - Matthew Arvidson:
 - Michael Marlow:
 - Nick Teets:
-- Robbie Greiner:
+- Robbie Greiner: making pizza and running laser tag.. 
 - Samuel Singer:
