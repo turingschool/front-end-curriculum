@@ -44,7 +44,7 @@ In this repo you will find your name. It is your job to answer the given questio
 - Francy Lang: Bread Bakery Delivery Driver
 - Jacob Boutin: harvested liquid dinosaurs 
 - Jason Hughes: Medieval Times entertainment department
-- Jennifer Woodson:
+- Jennifer Woodson: milking goats
 - John Michael Boudreaux: building scaffold in a small town for three nights.
 - Jorge Perez Garcia: I served shots shirtless at X bar
 - Lucas Finney: From the ages of 8-15 I worked in a chocolate store that my aunt managed during the holidays putting together bulk business orders for holiday parties, which mostly included making hundreds upon hundreds of chocolate dipped fruits.
