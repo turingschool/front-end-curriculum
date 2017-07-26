@@ -80,6 +80,18 @@ $sidebar-color: rgb(245, 245, 245);
     }
   }
 
+  input {
+    outline-color: $teal;
+    font-size: 1.1em;
+    margin-top: 0.5em;
+    padding-left: 0.3em;
+    width: 95%;
+  }
+
+}
+
+.sidebar-navigation--search {
+  text-align: center;
 }
 
 .sidebar-navigation--links {
