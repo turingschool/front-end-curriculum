@@ -3,7 +3,7 @@ $(function(config){
   var index = algolia.initIndex(config.indexName);
 
   var query;
-  $('.search-results-container').hide();
+  hideSearch();
 
   $('.sidebar-navigation--search input').on('input', function() {
     var query = $(this).val();
@@ -14,7 +14,7 @@ $(function(config){
     if (query.length) {
       index.search(query, {"hitsPerPage": "10", "page": "0", "typoTolerance": "false"}, onResult);
     } else {
-      $('.search-results-container').hide();
+      hideSearch();
     }
   };
 
@@ -27,8 +27,8 @@ $(function(config){
   };
 
   function displayResults(data) {
-    $('.search-results').text('')
-    $('.search-results-container').show();
+    showSearch()
+    $('.search-results').html('')
     if (data.hits.length) {
       data.hits.forEach(function(result) {
         $('.search-results').append(`<li>
@@ -37,8 +37,16 @@ $(function(config){
                                      </li>`);
       });
     } else {
-      console.log('No results')
-      $('.search-results').append('<li>No search results for that query</li>');
+      
+      $('.search-results-container').append('<p>No search results for that query</p>');
     }
+  };
+
+  function showSearch() {
+    $('.search-results-container').show();
+  };
+
+  function hideSearch() {
+    $('.search-results-container').hide();
   };
 }(window.ALGOLIA_CONFIG));
