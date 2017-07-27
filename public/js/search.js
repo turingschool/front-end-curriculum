@@ -2,7 +2,6 @@ $(function(config){
   var algolia = algoliasearch(config.applicationId, config.apiKey);
   var index = algolia.initIndex(config.indexName);
 
-  var query;
   hideSearch();
 
   $('.sidebar-navigation--search input').on('input', function() {
@@ -27,8 +26,8 @@ $(function(config){
   };
 
   function displayResults(data) {
-    showSearch()
-    $('.search-results').html('')
+    showSearch();
+    $('.search-results').html('');
     if (data.hits.length) {
       data.hits.forEach(function(result) {
         $('.search-results').append(`<li>
@@ -37,7 +36,6 @@ $(function(config){
                                      </li>`);
       });
     } else {
-      
       $('.search-results-container').append('<p>No search results for that query</p>');
     }
   };
