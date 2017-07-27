@@ -33,3 +33,37 @@ images:
 
 gems:
   - jemoji
+  - algoliasearch-jekyll
+
+algolia:
+  application_id: 'OOLQ64CUYT'
+  index_name:     'front-end-curriculum'
+  read_only_api_key: '5b955c38c514d8e5cb906c983c8c24db'
+  settings:
+    attributeForDistinct: 'title'
+    distinct: true
+  excluded_files:
+    - _includes
+    - _layouts
+    - _sass
+    - _site
+    - _templates
+    - archive
+    - assets
+    - calendars
+    - challenges
+    - independent-study
+    - instructor-info
+    - lessons/module-3/archive
+    - lessons/module-4/archive
+    - mentor-posse-info
+    - open-source
+    - portal
+    - postwork
+    - prework
+    - professional-development
+    - projects
+    - public
+    - stylesheets
+    - today
+    - index.html

@@ -1,0 +1,18 @@
+<section class="search-results-container" display="hidden">
+  <h2>Lessons Search Results</h2>
+  <h3>Top 10 Results</h3>
+  <ul class="search-results"></ul>
+</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch/3.6.0/algoliasearch.min.js"></script>
+<script src="//cdn.jsdelivr.net/algoliasearch.helper/2.1.0/algoliasearch.helper.min.js"></script>
+<script>
+  window.ALGOLIA_CONFIG = {
+    'applicationId': '{{ site.algolia.application_id }}',
+    'indexName': '{{ site.algolia.index_name }}',
+    'apiKey': '{{ site.algolia.read_only_api_key }}',
+    'baseurl': '{{ site.baseurl }}'
+  }
+</script>
+<script src="/public/js/search.js"></script>
