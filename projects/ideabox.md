@@ -1,6 +1,4 @@
----
-title: IdeaBox
----
+# IdeaBox
 
 Every developer has more ideas than time. As David Allen likes to say "the human brain is for creating
 ideas, not remembering them." In this project, we'll be building a simple application for recording and
