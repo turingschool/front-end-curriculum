@@ -56,11 +56,11 @@ $(function(config){
 
   function showSearch() {
     $('.search-results-container').show();
-    $('.clear-search img').show();
+    $('.clear-search').show();
   };
 
   function hideSearch() {
     $('.search-results-container').hide();
-    $('.clear-search img').hide();
+    $('.clear-search').hide();
   };
 }(window.ALGOLIA_CONFIG));
