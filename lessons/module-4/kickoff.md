@@ -42,6 +42,7 @@ Students must earn a score of `3` or greater in *each* category of the final ass
 
 * Homework (~4 assignments)
 * Build-Your-Own-Backend
+* Turing Story (5 minute presentation on your Turing experience)
 
 ### Group Work
 
