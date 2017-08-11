@@ -14,7 +14,7 @@ mod: 2
 
 TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any application code that implements that functionality.  
 
-Thank back to some of your module 1 projects, the workflow probably looked something like this:
+Think back to some of your module 1 projects, the workflow probably looked something like this:
 * Read project spec and feel kind of panicky  
 * Start randomly throwing code into an `index.js` file to implement the first feature  
 * Open Chrome  
@@ -73,7 +73,7 @@ An assertion is the crucial piece of the test that actually goes in and runs fun
 In english, here are a few examples of things we might want to assert:
 
 "After I create a new instance of a unicorn, the unicorn **should have a name**"  
-"After I create a new instance of a unicorn, and tell it to sing, the unicorn **should return a string of text from a song**"  
+"After I create a new instance of a unicorn, and tell it to sing, the unicorn **should return a string of text from a song**" 
 "After I create a new instance of a unicorn, and the unicorn eats three times, the unicorn **should have 300 calories**"  
 
 If you think of each of these simple english sentences, the "assertion" piece is the part in bold. In that last example, in other words, after I create a unicorn and it eats three times, I want to assert that its calorie count is **EQUAL TO** 300.  
@@ -84,7 +84,7 @@ The assertion library we are going to use today is called [Chai](http://chaijs.c
 
 You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which syntax feels best to you. For today we are going to stick with the [Assert API](http://chaijs.com/api/assert/), since it might seem the most familiar coming off of mythical creatures in mod 1.  
 
-The [Assert API](http://chaijs.com/api/assert/) from Chai provides a plethora of methods to allow for in depth, dynamic testing. The general syntax looks something like this:  
+The [Assert API](http://chaijs.com/api/assert/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
 
 ```js
 assert.method(actual, expected, [message])
@@ -150,7 +150,7 @@ On the contrary, using `deepEqual`, the same test would fail. Now Chai is diggin
 
 ## Structure of a Test  
 
-Now that we understand the difference between Mocha and Chai, let's look at a test form top to bottom.
+Now that we understand the difference between Mocha and Chai, let's look at a test from top to bottom.
 
 There are three crucial pieces of a test:  
 1. Setup
@@ -165,7 +165,7 @@ Look at the following example and read the comments that talk about each line of
 describe('unicorn', function() {
 
   // Next, an 'it block' contains the context of each specific test
-  it.skip('should accumulate calories when eating', function() {
+  it('should accumulate calories when eating', function() {
 
     // 1. "Setup"
     // Instantiate an instance of our unicorn
@@ -192,12 +192,12 @@ You'll often hear the following catch phrase in nerd-circles when talking about 
 
 ![Red, Green, Refactor](http://i.imgur.com/mFhQ5SI.png)  
 
-In other words, write a test and watch it test fail, implement some code to make the test pass, then clean up your code with some refactoring now that we have a test to keep an on the correct functionality.  
+In other words, write a test and watch it fail, implement some code to make the test pass, then clean up your code with some refactoring now that we have a test to keep an eye on the correct functionality.  
 
 ![Mr Green Refactor](http://i.imgur.com/rIduOzg.jpg)  
 You're welcome.  
 
-Here is another more in depth global lifecycle for best testing practices:  
+Here is another more in-depth global lifecycle for best testing practices:  
 
 ![Global Lifecycle](http://i.imgur.com/CL6Pr58.png)  
 
@@ -233,13 +233,13 @@ You'll notice that when we ran the command `npm init --yes` it generated a `pack
 
 **Install Mocha**:  
 `npm install -global mocha` (Installs the `mocha` command globally)
-`npm install --save-dev mocha` (Installs the `mocha` command locally within your project.)  
-(We need to install Mocha globally here because we are going to tell our package.json that the command `mocha` is what we will use to run our tests, which we will execute in our terminal on a global level. We also need it locally so when it sees our describe blocks within our code it knows what to do).
+`npm install --save-dev mocha` (Installs the `mocha` command locally within your project as a dev dependancy.)  
+(We need to install Mocha globally here because we are going to tell our package.json that the command `mocha` is what we will use to run our tests, which we will execute in our terminal on a global level. We also need it locally so when it sees our describe blocks within our code it knows what to do.)
 
 
 **Install Chai**:  
 `npm install --save-dev chai`  
-(Installs chai locally - we don't need this package globally because our assertions will only ever be within our test themselves.)  
+(Installs chai locally - we don't need this package globally because our assertions will only ever be within our tests themselves.)  
 
 You'll now see that in your `package.json` you have the following new dependencies:  
 
@@ -303,9 +303,9 @@ If you run `npm test` now, you'll see an error that isn't related to our actual 
     at Context.<anonymous> (test/index-test.js:3:5)
 ```
 
-It's saying that it doesn't know what `assert` is, which makes sense because we haven't told our file to care about Chair, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
+It's saying that it doesn't know what `assert` is, which makes sense because we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
 
-Import Chai, and specifically the assertion library, at the top of your test file:  
+Import Chai and the `assert` library, at the top of your test file:  
 
 ```js
 // test/index-test.js  
@@ -332,7 +332,7 @@ Box
 1 passing (10ms)  
 ```
 
-Obviously this test isn't doing anything helpful, but we know our files are wired up ok. Let's add some more interesting tests. Let's pretend we just received a spec, and the first iteration looks something like this:  
+Obviously this test isn't doing anything helpful, but we know our files are wired up. Let's add some more interesting tests. Let's pretend we just received a spec, and the first iteration looks something like this:  
 
 ```
 Iteration 1:
@@ -438,7 +438,7 @@ Box.prototype.area = function() {
 
 Run `npm test` again to make sure we didn't break anything. (REFACTOR).
 
-SWEET! There are we go with the first cycle of our RED-GREEN-REFACTOR TDD approach.  
+SWEET! There we go with the first cycle of our RED-GREEN-REFACTOR TDD approach.  
 
 ## Mocha Lifecycle Methods
 You may have noticed that every time we wrote a test, we had to instantiate a new instance of our box. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks)   
@@ -464,4 +464,4 @@ ie: `box.increment(10, height)` or `box.increment(10, width)`
 
 [Adventures Of Blocky](http://frontend.turing.io/lessons/module-2/adventures-of-blocky.html)  
 
-Now that you have a grasp of testing on a deeper level, its time to really get after it and drive home the concepts we've talked about. Click on the lesson repo above for your testing adventure.  
+Now that you have a grasp of testing on a deeper level, its time to really get after it and drive home the concepts we've talked about. Click on the lesson repo above to begin your testing adventure!  
