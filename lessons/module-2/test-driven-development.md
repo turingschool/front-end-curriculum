@@ -462,7 +462,6 @@ ie: `box.increment(10, height)` or `box.increment(10, width)`
 
 ## Homework: Adventures of Blocky  
 
-Now that you have a grasp of testing on a deeper level, its time to really get after it.  
+[Adventures Of Blocky](http://frontend.turing.io/lessons/module-2/adventures-of-blocky.html)  
 
-## Resources
-  - [TDD Tutorial Repo][https://github.com/dwyl/learn-tdd#what-is-tdd]
+Now that you have a grasp of testing on a deeper level, its time to really get after it and drive home the concepts we've talked about. Click on the lesson repo above for your testing adventure.  
