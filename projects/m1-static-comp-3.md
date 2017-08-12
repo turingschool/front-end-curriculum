@@ -30,6 +30,10 @@ You may NOT take liberties with the layout, but your creative license includes:
   - This final challenge is a part of your portfolio
   - Note the rubric below for evaluation criteria
 
+## PRO-TIP
+
+This is a tough layout to build. Don't wait until Monday of week 6 to get started.
+
 ***
 
 ## HTML
@@ -94,7 +98,6 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ## Submission Details
 
-* __DUE by 8:00 AM 6/07/17__
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1mFOyLHwf7EcA3ZNL3U660MVU2-rF8Y8p7Su4n63ljqE/edit#gid=331364728)
+* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1oAhNDiNKmiIz4_4KMYnekAIVw0Q6j9DaHGxkSQdjvdk/edit#gid=795178888)
 
 ![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)

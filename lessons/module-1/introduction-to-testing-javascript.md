@@ -8,7 +8,7 @@ tags: javascript, browser, testing, tdd
 
 We're always testing our code. We pull it up in the browser and poke at it. Does it do the thing we were expecting it to do? Yes? Then the code works. It's time to go and celebrate. No? Well then, back to the drawing board, right?
 
-For small code bases, this works. Write or change some code and then flip over to the browser and check to see if you got the desired result. The problem is that this doesn't scale very will. When our applications start getting big, we end up with more and more places to poke.  
+For small code bases, this works. Write or change some code and then flip over to the browser and check to see if you got the desired result. The problem is that this doesn't scale very well. When our applications start getting big, we end up with more and more places to poke.  
 
 Even worse: we can end up in a situation where changing code in one place causes something to break somewhere else—somewhere that we're not currently poking.
 

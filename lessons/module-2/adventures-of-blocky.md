@@ -25,13 +25,13 @@ We'll be modifying four files as we complete these exercises:
 
 There are a few dozen tests defined between `block-test.js` and `world-test.js`. Some of them are complete with assertions and a working implementation. Some of them are skipped tests just waiting for an implementation. The rest are empty shells—waiting for you to write some assertions followed by the implementation necessary to get them passing.
 
-Your first job is to get the entire suite passing. There are also some comments in the test suite for additonal tests that you'll need to add.
- 
+Your first job is to get the entire suite passing. There are also some comments in the test suite for additional tests that you'll need to add.
+
 ## Phase Two: Blaze Your Own Trail
 
 ### Inside Out
 
-There is nothing stopping `shrink()`, `getSkinner()`, or `getShorter()` from allowing the height or width of the block to become negative. Add additional tests and implementation that make sure that this doesn't happen.
+There is nothing stopping `shrink()`, `getSkinnier()`, or `getShorter()` from allowing the height or width of the block to become negative. Add additional tests and implementation that make sure that this doesn't happen.
 
 ### Blocky in the World
 

@@ -132,11 +132,11 @@ Watch this video from Dinosaur.js [here](https://www.youtube.com/watch?v=hKIQkgP
 
 #### Experiment
 
-Got to [auto-traders](http://www.autotrader.com/) website and tab around.
+Got to [enterprise car](https://www.enterprisecarsales.com//) website and tab around.
 
 	1) what was your experience like tabbing around?
 	2) How was the focus?
-	3) Did you tab into the dropdownfield?
+	3) Did you tab into the drop down field?
 
 ### Code Tip
 
