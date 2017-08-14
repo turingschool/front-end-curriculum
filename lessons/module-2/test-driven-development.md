@@ -6,13 +6,13 @@ mod: 2
 
 ## Game Plan:
   - Review the what and why of Test Driven Development  
-  - Introduce Mocha and Chai on a deeper level  
-  - Look at the testing cycle  
+  - Discuss Mocha and Chai on a deeper level  
+  - Look at the structure of a test and the testing lifecycle  
   - Write some tests!  
 
 ## Review: What is TDD?
 
-TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any application code that implements that functionality.  
+TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.   
 
 Think back to some of your module 1 projects, the workflow probably looked something like this:
 * Read project spec and feel kind of panicky  
@@ -49,40 +49,40 @@ The primary difference between the two, is that with a test driven approach you 
 
 ## Testing Framework: Mocha  
 
-This mod, you'll primarily be using the testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
+For now, we'll focus on the testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
 
 [Mocha](https://mochajs.org/) is a testing framework that runs on Node.js in your terminal, and can also be run in your browser window.  
 
-Mocha itself is the framework that runs the tests, and dictates the syntax of the test block as a whole, which is separate form the assertion library Chai that we will talk about in a minute.
+Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai that we will talk about in a minute.
 
 First, lets look at the syntax provided from Mocha:    
 
 ```js
 describe('unicorn', function() {
-  it.skip('should accumulate calories when eating', function() {
+  it('should accumulate calories when eating', function() {
   });
 })
 ```
 
-The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`, and in English, we want to test that it `should accumulate calories when eating`. These pieces are specific to the Mocha framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
+The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that it `should accumulate calories when eating`. These pieces are specific to the Mocha framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
 
 ## Assertion Library: Chai  
 
-An assertion is the crucial piece of the test that actually goes in and runs functionality and checks to see that what we're getting back is what we expect.  
+An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect.  
 
-In english, here are a few examples of things we might want to assert:
+In english, here are a few examples of things we might want to assert:  
 
 "After I create a new instance of a unicorn, the unicorn **should have a name**"  
-"After I create a new instance of a unicorn, and tell it to sing, the unicorn **should return a string of text from a song**" 
+"After I create a new instance of a unicorn, and tell it to sing, the unicorn **should return a string of text from a song**"  
 "After I create a new instance of a unicorn, and the unicorn eats three times, the unicorn **should have 300 calories**"  
 
 If you think of each of these simple english sentences, the "assertion" piece is the part in bold. In that last example, in other words, after I create a unicorn and it eats three times, I want to assert that its calorie count is **EQUAL TO** 300.  
 
-The assertion library we are going to use today is called [Chai](http://chaijs.com/). Chai can be inserted into many different testing frameworks, but it works seamlessly with Mocha which is what we'll focus on today. Before we get back to our tests, lets look at some of the syntax Chai provides:  
+The assertion library we are going to use today is called [Chai](http://chaijs.com/). Chai can be inserted into many different testing frameworks, but it works seamlessly with Mocha which is what we'll focus on today. Before we get back to our tests, lets look at some of the syntax options Chai provides:  
 
-![Imgur](http://i.imgur.com/T7Q4YkE.png)  
+![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)  
 
-You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which syntax feels best to you. For today we are going to stick with the [Assert API](http://chaijs.com/api/assert/), since it might seem the most familiar coming off of mythical creatures in mod 1.  
+You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to stick with the [Assert API](http://chaijs.com/api/assert/), since it might seem the most familiar coming off of mythical creatures in mod 1.  
 
 The [Assert API](http://chaijs.com/api/assert/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
 
@@ -96,6 +96,8 @@ In other words, we call `assert`, then the method we want, and the method takes 
 `message`: String (Optional), a message to yourself to indicate what is being tested  
 
 Note: Not all methods take three arguments. Keep the docs handy!  
+
+## Common Chai Assertions  
 
 Let's look at a few of the methods you might use most often:
 
@@ -129,28 +131,28 @@ assert.typeOf(['chai', 'jasmine'], 'array', 'we have an array');
 Assert inclusion:  
 
 ```js
-assert.include([1,2,3], 2, 'array contains value of 2');
+assert.include([1,2,3], 2, 'array includes a value of 2');
 ```
 
 *PAUSE: What's the difference between equal vs deepEqual?*
 
-You'll often see an assertion that something `deeply equals` something else. This is because in JavaScript, everything is technically an object, and because JavaScript is so helpful it tries to make your life easy and fill in some gaps for you. Sometimes we don't want those gaps filled. Lets look at a quick example:
+At some point you may have seen an assertion that something `deeply equals` something else. This is because JavaScript is trying to make your life easy and fill in some gaps for you. Sometimes we don't want those gaps filled. Lets look at a quick example:
 
 ```js
 assert.equal({ tea: 'green' }, { tea: 'jasmine' });
 ```
 
-Using the `equal` method, this test would pass. We're asking if an object (in general) is equal to an object (in general), which is true. In this case Chai is only looking at the outer structure of our actual vs expected arguments, both of which are objects.  
+Using the `equal` method, this test would pass. We're asking if an object (in general) is equal to an object (in general), which is true. In this case Chai is only looking at the outer structure of our actual `{tea: 'green'}` vs expected `{tea: 'jasmine'}` arguments, both of which are objects.  
 
 ```js
   assert.deepEqual({ tea: 'green' }, { tea: 'jasmine' });
 ```
 
-On the contrary, using `deepEqual`, the same test would fail. Now Chai is digging into the objects themselves and looking at the internal data, which is not the same.  
+On the contrary if use `deepEqual` instead, the same test would fail. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is not the same.  
 
 ## Structure of a Test  
 
-Now that we understand the difference between Mocha and Chai, let's look at a test from top to bottom.
+Now that we've discussed the difference between Mocha and Chai, let's look at a test from top to bottom.
 
 There are three crucial pieces of a test:  
 1. Setup
@@ -190,9 +192,11 @@ You'll often hear the following catch phrase in nerd-circles when talking about 
 
 **Red, Green, Refactor**  
 
-![Red, Green, Refactor](http://i.imgur.com/mFhQ5SI.png)  
+![Red, Green, Refactor](http://i.imgur.com/lwHNsic.png)
 
-In other words, write a test and watch it fail, implement some code to make the test pass, then clean up your code with some refactoring now that we have a test to keep an eye on the correct functionality.  
+In other words, write a test and watch it fail.  
+Implement some code to make the test pass  
+Then clean up your code with some refactoring now that we have a test to keep an eye on the correct functionality.  
 
 ![Mr Green Refactor](http://i.imgur.com/rIduOzg.jpg)  
 You're welcome.  
@@ -202,7 +206,9 @@ Here is another more in-depth global lifecycle for best testing practices:
 ![Global Lifecycle](http://i.imgur.com/CL6Pr58.png)  
 
 
-## Adding Mocha/Chai to a Project
+## Testing Practice: Adding Mocha and Chai   
+
+**First Rule of Mod 2:** No copy pasting. Until you can write this syntax with your eyes closed, practice typing it out word for word. If you feel like it's slow going, go home tonight and do this lesson again until you feel more confident.  
 
 To practice, let's kick off a brand new project to demonstrate how you would add Mocha and Chai to a project, and write a couple basic tests.  
 
@@ -214,9 +220,11 @@ mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes && tou
 
 Open up this project in your text editor.  
 
-You'll notice that when we ran the command `npm init --yes` it generated a `package.json` file for us automatically. This file is where we will store all of the dependencies our project will need to run smoothly. The `--yes` command allowed us to bypass answering any config questions when generating this file, which means we have a bare-bones skeleton that looks like this:  
+When we ran the command `npm init --yes` it generated a `package.json` file for us automatically. This file is where we will store all of the dependencies our project will need to run smoothly. The `--yes` command allowed us to bypass answering any config questions when generating this file, which means we have a bare-bones skeleton that looks like this:  
 
 ```json
+// package.json  
+
 {
   "name": "unit-testing-practice",
   "version": "1.0.0",
@@ -232,16 +240,16 @@ You'll notice that when we ran the command `npm init --yes` it generated a `pack
 ```  
 
 **Install Mocha**:  
-`npm install -global mocha` (Installs the `mocha` command globally)
-`npm install --save-dev mocha` (Installs the `mocha` command locally within your project as a dev dependancy.)  
-(We need to install Mocha globally here because we are going to tell our package.json that the command `mocha` is what we will use to run our tests, which we will execute in our terminal on a global level. We also need it locally so when it sees our describe blocks within our code it knows what to do.)
+`npm install -global mocha` (Installs the `mocha` command globally)  
+`npm install --save-dev mocha` (Installs the `mocha` command locally within your project as a development dependency.)  
 
+We need to install Mocha globally here because we are going to tell our package.json that the command `mocha` is what we will use to run our tests. This command will be executed in our terminal on a global level. We also need this package locally so when it sees the describe blocks within our code it knows what to do.  
 
 **Install Chai**:  
 `npm install --save-dev chai`  
 (Installs chai locally - we don't need this package globally because our assertions will only ever be within our tests themselves.)  
 
-You'll now see that in your `package.json` you have the following new dependencies:  
+You'll now see that in your `package.json` you have the following new dependencies (your version numbers might be different):  
 
 ```json
 "devDependencies": {
@@ -251,7 +259,7 @@ You'll now see that in your `package.json` you have the following new dependenci
 ```
 
 **Update package.json**:  
-Finally, we need to tell our package.json what to do when we want to run our tests. You'll notice there is a section within our `package.json` file called `scripts`. This is where our node app goes to figure out if the command we told it to execute from our terminal exists in our application. Right now, we should have the following unhelpful line of code:  
+Finally, we need to tell our package.json what to do when we want to run our tests. You'll notice there is a section within our `package.json` file called `scripts`. This is where our node app goes to figure out if the command we told it to execute from our terminal exists in within our application. Right now, we should have the following unhelpful line of code:  
 
 ```js
 "scripts": {
@@ -259,11 +267,11 @@ Finally, we need to tell our package.json what to do when we want to run our tes
 },
 ```
 
-Run the command `npm test` from your terminal. You should see text printout that looks suspiciously similar to the snippet above.  
+Before we change anything, run the command `npm test` from your terminal. You should see text printout that looks suspiciously similar to the snippet above.  
 
 *Pause: Command Breakdown: `npm` tells node to check package.json scripts for whatever command we type next. `test` tells node to execute the line of code indicated by the key `test` in our scripts object, which in this case is simply echoing a string in our terminal.*  
 
-Update our scripts to use Mocha:  
+Update the scripts object to run Mocha:  
 
 ```js
 "scripts": {
@@ -277,9 +285,9 @@ Run `npm test` again. You should see a line of code that says something like:
 Warning: Could not find any test files matching pattern: test
 ```
 
-This makes sense! We have no test files.
+This makes sense! We don't have a directory called `test`, which is what Mocha is looking for by default, nor do we have any test files for it to run.
 
-Let's practice writing a couple tests in true TDD fashion - this first one will just help verify that everything is wired up correctly.  
+Let's practice writing a couple tests in true TDD fashion - this first one will just help verify that everything is wired up correctly - plus it's always nice to start with an easy win.  
 
 ```bash
 mkdir test && touch test/index-test.js
@@ -295,7 +303,7 @@ describe('Box', function() {
 });
 ```
 
-If you run `npm test` now, you'll see an error that isn't related to our actual test. It's important to recognize this error, because it will happen a lot. Mocha and Chai are two different libraries - which is indicated by this error message:  
+If you run `npm test` now, you'll see an expected error. It's important to recognize this error, because it will happen a lot. Mocha and Chai are two different libraries - which is indicated by this error message:  
 
 ```bash
 1) Box should return true:
@@ -303,7 +311,7 @@ If you run `npm test` now, you'll see an error that isn't related to our actual 
     at Context.<anonymous> (test/index-test.js:3:5)
 ```
 
-It's saying that it doesn't know what `assert` is, which makes sense because we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
+It's saying that it doesn't know what `assert` is, and recall that `assert` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
 
 Import Chai and the `assert` library, at the top of your test file:  
 
@@ -320,7 +328,7 @@ describe('Box', function() {
 });
 ```
 
-*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` comes from ES6, which needs some additional tools in order to run. Right now we have a very simple JS application we are not incorporating any Babel compilers to help us navigate ES6 syntax. For now we will stick to ES5 syntax.*  
+*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` comes from ES6, which needs some additional tools in order to run. Right now we have a very simple JS application and are not incorporating any Babel compilers to help us navigate ES6 syntax. For now we will stick to ES5 syntax.*  
 
 If you run `npm test` now, we should have a passing test.  
 
@@ -332,6 +340,9 @@ Box
 1 passing (10ms)  
 ```
 
+
+## Testing Practice: Iteration 1  
+
 Obviously this test isn't doing anything helpful, but we know our files are wired up. Let's add some more interesting tests. Let's pretend we just received a spec, and the first iteration looks something like this:  
 
 ```
@@ -341,14 +352,16 @@ Iteration 1:
 - You should be able to calculate the area of your box using the method `.area()`.   
 ```
 
-Let's write some unit tests that pick apart each individual piece of functionality for this iteration.  
+Let's write some unit tests that pick apart each individual piece of functionality for this iteration. Notice that we are now also bringing in our primary `index.js` file and assigning it the variable `Box`.  
+
+We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refactor`.  
 
 ```js
 // test/index-test.js
 
 const chai = require('chai');
 const assert = chai.assert;
-const Box = require('./index.js');
+const Box = require('../index.js');
 
 describe('Box', function() {
   it('should return true', function() {
@@ -395,15 +408,9 @@ Run the tests and watch them fail (RED).
 
 Write some code to implement the functionality one test at a time. You can use the method `.skip` on any tests you want to skip so you can isolate individual tests you want to run.  
 
-Take a minute to make those tests pass WITHOUT LOOKING AHEAD. Here's a picture of a pig so you aren't tempted to look at the answer first.  
-
-
-
+Take a minute to make those tests pass **WITHOUT LOOKING AHEAD**. Here's a picture of a pig so you aren't tempted to look at the answer first.  
 
 ![adorable pig in rain boots](http://i.imgur.com/iEL5S40.jpg)   
-
-
-
 
 
 ```js
@@ -440,12 +447,11 @@ Run `npm test` again to make sure we didn't break anything. (REFACTOR).
 
 SWEET! There we go with the first cycle of our RED-GREEN-REFACTOR TDD approach.  
 
-## Mocha Lifecycle Methods
-You may have noticed that every time we wrote a test, we had to instantiate a new instance of our box. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks)   
+## Testing Practice: Hooks & Iteration 2
 
-## Your Turn
+You may have noticed that every time we wrote a test, we had to instantiate a new instance of our box. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some lifecycle `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks).   
 
-Add a `beforeEach()` block that instantiates a new box before every test, which should allow you to remove the line `var box = new Box()` in all of your tests. If you're getting an error about your box not being defined, check out [this stackoverflow conversation](https://stackoverflow.com/questions/38044111/basic-but-proper-use-of-beforeeach-or-aftereach-with-mocha-js-and-chai-js).  
+Using the docs linked above, add a `beforeEach()` hook that instantiates a new box before every test, this should allow you to remove the line `var box = new Box()` from all of your tests. If you're getting an error about box not being defined, check out [this stackoverflow conversation](https://stackoverflow.com/questions/38044111/basic-but-proper-use-of-beforeeach-or-aftereach-with-mocha-js-and-chai-js).  
 
 Implement iteration 2 for our box per the spec outlined below.  
 
