@@ -2,7 +2,7 @@
 title: Syllabus Overview & Expectations
 ---
 
-## May 1, 2017 - June 6, 2017
+## Aug 14, 2017 - Sept 22, 2017
 
 | Instructors     | Slack         | Email            |
 | ----------------|---------------| -----------------|
