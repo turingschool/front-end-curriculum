@@ -289,6 +289,7 @@ Go back to the 6 architectural contraints of a RESTful API and try to identify a
 * [Anatomy of a URL](http://www.domainsherpa.com/anatomy-of-a-domain-name-and-url/)
 * [HTTP Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods)
 * [HTTP Status Codes](http://www.restapitutorial.com/httpstatuscodes.html)
+* [Node.js Event Loop](http://blog.mixu.net/2011/02/01/understanding-the-node-js-event-loop/)
 
 ### Instructor Resources
 
