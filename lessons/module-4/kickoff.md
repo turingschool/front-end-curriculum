@@ -4,7 +4,7 @@ title: Module 4 KickOff
 
 ## Learning Goals & Focus
 
-### Server-Side kills
+### Server-Side Skills
 
 Learning technologies like node and express will round out your skill set and make you a more flexible developer. Front-end developers still need a solid understanding of how to work with the back-end in order to be successful.
 
@@ -41,12 +41,12 @@ Students must earn a score of `3` or greater in *each* category of the final ass
 ### Independent Work
 
 * Homework (~4 assignments)
-* Build-Your-Own-Backend
+* Jet Fuel
 * Turing Story (5 minute presentation on your Turing experience)
 
 ### Group Work
 
-* Jet Fuel
+* Build-Your-Own-Backend
 * House of Vars
 * Capstone Project
 
