@@ -111,9 +111,9 @@ git config --global user.email johndoe@example.com
 ### Install the Sublime command line tools
 
   - Make sure you download [Sublime](https://www.sublimetext.com/) 
-  - Open your finder (Command-Space for spotlight, type Finger, and hit enter) 
+  - Open your finder (Command-Space for spotlight, type Finder, and hit enter) 
   - Move Sublime from your downloads to your Applications folder.
-  - Open your terminal (Command-Space for spotlight, type Atom, and hit enter).
+  - Open your terminal (Command-Space for spotlight, type Sublime, and hit enter).
   - First up, check your own $PATH by typing the following in your terminal line:
   `echo $PATH`
     This is what mine returns:
