@@ -41,6 +41,7 @@ The basic layout of the application should include:
 * A form for submitting a new URL for a selected folder
 * When a URL is submitted, the user can see the shorted version of the URL in the user interface
 * A list of all of the folders of the site
+* When a user clicks on a folder, a CSS animation should be used to expand and display the list of URLs belonging to that folder
 * For each URL, the user can see the date that the URL was added
 
 ### Special Task
@@ -132,7 +133,7 @@ The following set of points are distributed at the discretion of the instructor.
 * **5 points** - The developer makes a few, large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 * **0 points** - The application was not checked into version control.
 
-## Projects are due on Friday of week 1, by 1:00 p.m. We will provide a submission form for all teams to submit their GitHub repo and production link.
+## Projects are due on Monday of week 2, by 9:00 a.m. We will provide a submission form for all teams to submit their GitHub repo and production link.
 
 ### Project is worth 160 points with 25 extra points possible
 
