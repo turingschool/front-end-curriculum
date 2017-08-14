@@ -9,7 +9,7 @@ Before we can do much programming, we need to make sure our machines are properl
 Here are the basics we're going to go over:
 
 - A text editor. Developers need to work with text in a different way than your average MS Word user. We'll want a text editor designed for software development.
-  - [Atom](http://atom.io)
+  - [Sublime](https://www.sublimetext.com/)
 - A system _Terminal_ for interacting with our machine from the command line. Fortunately macOS already ships with one.
 - macOS "Command Line Tools" -- these are some system dependencies needed for some of the tools we will use.
 - **Homebrew**: This is a "package manager" for installing other developer-related programs. You can think of it as the "App Store for nerds."
@@ -108,14 +108,25 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
-### Install the Atom command line tools
+### Install the Sublime command line tools
 
-  - Open Atom (`Command-Space` for spotlight, type `Atom`, and hit enter).
-  - Click the `Atom` menu in the top left corner
-  - Click `Install Shell Commands`
-  - Return to your terminal and enter `which atom`. You should get back `/usr/local/bin/atom`
-  - Enter `atom .` to open your user directory in Atom.
-  - Experiment with creating a file in Atom and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Atom.
+  - Make sure you download [Sublime](https://www.sublimetext.com/) 
+  - Open your finder (Command-Space for spotlight, type Finger, and hit enter) 
+  - Move Sublime from your downloads to your Applications folder.
+  - Open your terminal (Command-Space for spotlight, type Atom, and hit enter).
+  - First up, check your own $PATH by typing the following in your terminal line:
+  `echo $PATH`
+    This is what mine returns:
+      `/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin`
+
+    As you can see the /usr/local/bin path is included by default on OS X.
+
+  - Now, copy and paste the following line to put in your terminal:
+  `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime`
+  - Open a new terminal window (Command-T) and type `sublime .`
+  - Experiment with creating a file in Sublime and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Sublime.
+ 
+ (Full instructions can be found [here](http://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line//))
 
 ### Install Node.js using `nvm`
 
