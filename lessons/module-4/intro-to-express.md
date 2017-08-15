@@ -354,6 +354,7 @@ Express assumes a structure for our static assets. The response for the root pat
 
 ## Resources
 - [Express.js](https://expressjs.com/)
+- [Serving Static Assets](http://expressjs.com/en/starter/static-files.html)
 - [HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
 
 ### Extra Repository
