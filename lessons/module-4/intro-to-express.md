@@ -55,8 +55,8 @@ Let's pick apart the structure of how we define an Express route:
 
 ```javascript
 app.get('/', function (request, response) {
-  response.send('Hello World!')
-})
+  response.send('Hello World!');
+});
 ```
 
 In the above example, our express app (denoted by `app`), is handling a `GET` request to `'/'`. The second parameter in this call is our callback that defines how we're actually going to handle what happens when a user makes a `GET` request to `'/'`. The callback takes two parameters: the request (`req`) and the response (`res`). In this example, our handler is simply sending back a response (`res.send`) with the text 'Hello World!'.
@@ -81,19 +81,19 @@ npm i express --save
 We'll get a basic server running using some code I stole from [the Express documentation](http://expressjs.com/starter/hello-world.html) and modified slightly to fit my tastes.
 
 ```js
-const express = require('express')
-const app = express()
+const express = require('express');
+const app = express();
 
-app.set('port', process.env.PORT || 3000)
-app.locals.title = 'Secret Box'
+app.set('port', process.env.PORT || 3000);
+app.locals.title = 'Secret Box';
 
 app.get('/', (request, response) => {
-  response.send('It\'s a secret to everyone.')
-})
+  response.send('It\'s a secret to everyone.');
+});
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`)
-})
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
+});
 ```
 
 Fire up the server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
@@ -108,8 +108,8 @@ Consider the following:
 app.get('/api/secrets/:id', (request, response) => {
   response.json({
     id: request.params.id
-  })
-})
+  });
+});
 ```
 
 Take that for a spin with a bunch of different words where `:id` should go.
@@ -124,7 +124,7 @@ Some things to notice:
 In addition, let's add some data structure for keeping track of some kind of arbitrary data.
 
 ```js
-app.locals.secrets = {}
+app.locals.secrets = {};
 ```
 
 Let's put some fake data in for now.
@@ -132,30 +132,30 @@ Let's put some fake data in for now.
 ```js
 app.locals.secrets = {
   wowowow: 'I am a banana'
-}
+};
 ```
 
 Here is the feature we want to implement: when a user has the correct secret, we want to show them a message associated with that `id`.
 
 ```js
 app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params
-  const message = app.locals.secrets[id]
-  response.json({ id, message })
-})
+  const { id } = request.params;
+  const message = app.locals.secrets[id];
+  response.status(200).json({ id, message });
+});
 ```
 
 Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
 
 ```js
 app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params
-  const message = app.locals.secrets[id]
+  const { id } = request.params;
+  const message = app.locals.secrets[id];
 
-  if (!message) { return response.sendStatus(404)  }
+  if (!message) { return response.sendStatus(404)  };
 
-  response.json({ id, message })
-})
+  response.status(200).json({ id, message });
+});
 ```
 
 ### Sending Data With Our Post Request
@@ -171,10 +171,10 @@ npm i body-parser --save
 We'll also need to require and use it in our `server.js`.
 
 ```js
-const bodyParser = require('body-parser')
+const bodyParser = require('body-parser');
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 ```
 
 This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other (we're only going to use JSON, but I am leaving it here for reference).
@@ -182,42 +182,42 @@ This will add in support for parsing JSON as well as HTML forms. If you only nee
 Here is what my server looks like so far:
 
 ```js
-const express = require('express')
-const app = express()
-const bodyParser = require('body-parser')
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
 
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
 
-app.set('port', process.env.PORT || 3000)
-app.locals.title = 'Secret Box'
+app.set('port', process.env.PORT || 3000);
+app.locals.title = 'Secret Box';
 app.locals.secrets = {
   wowowow: 'I am a banana'
-}
+};
 
 app.get('/', (request, response) => {
-  response.send('Hello World!')
-})
+  response.send('Hello World!');
+});
 
 app.get('/api/secrets', (request, response) => {
-  const secrets = app.locals.secrets
+  const secrets = app.locals.secrets;
 
-  response.json({ secrets })
-})
+  response.json({ secrets });
+});
 
 
 app.get('/api/secrets/:id', (request, response) => {
-  const { id } = request.params
-  const message = app.locals.secrets[id]
+  const { id } = request.params;
+  const message = app.locals.secrets[id];
 
-  if (!message) { return response.sendStatus(404)  }
+  if (!message) { return response.sendStatus(404) };
 
-  response.json({ id, message })
-})
+  response.status(200).json({ id, message });
+});
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`)
-})
+  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
+});
 ```
 
 ### Creating a POST Route
@@ -226,13 +226,13 @@ We'll use our super secure method of generating random IDs:
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const id = Date.now()
-  const { message } = request.body
+  const id = Date.now();
+  const { message } = request.body;
 
-  app.locals.secrets[id] = message
+  app.locals.secrets[id] = message;
 
-  response.json({ id, message })
-})
+  response.json({ id, message });
+});
 ```
 
 This approach has a bunch of flaws:
@@ -254,18 +254,18 @@ Status codes are especially important when handling errors for a request. Let's 
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const { message } = request.body
-  const id = Date.now()
+  const { message } = request.body;
+  const id = Date.now();
 
   if (!message) {
     return response.status(422).send({
       error: 'No message property provided'
-    })
+    });
   }
 
-  app.locals.secrets[id] = message
+  app.locals.secrets[id] = message;
 
-  response.json({ id, message })
+  response.json({ id, message });
 })
 ```
 
@@ -277,7 +277,7 @@ It's important to handle errors and write descriptive error messages so that oth
 It would also be nice if we used the correct status code on the successful response.
 
 ```js
-response.status(201).json({ id, message })
+response.status(201).json({ id, message });
 ```
 
 ### Generating Unique Keys
@@ -293,26 +293,26 @@ npm i md5 --save
 Now, in our `server.js`, we can require the module.
 
 ```js
-const md5 = require('md5')
+const md5 = require('md5');
 ```
 
 Finally, let's replace `Date.now()` in our `POST` action.
 
 ```js
 app.post('/api/secrets', (request, response) => {
-  const { message } = request.body
-  const id = md5(message)
+  const { message } = request.body;
+  const id = md5(message);
 
   if (!message) {
     return response.status(422).send({
       error: 'No message property provided'
-    })
+    });
   }
 
-  app.locals.secrets[id] = message
+  app.locals.secrets[id] = message;
 
-  response.status(201).json({ id, message })
-})
+  response.status(201).json({ id, message });
+});
 ```
 
 ### Using Postman
@@ -336,25 +336,26 @@ Can you implement a GET route that shows only the secrets that have been edited?
 To serve static files like an index.html file, you need to let Express know. To do this, tell Express what directory your static files live in with:
 
 ```js
-app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
 ```
-This chains public to the root path. A good practice is to name this directory public if it contains public facing files such as html, css and js.
 
-To send the file, you need to read it with the 'fs' Node module (File System) and give it the local of the file. `__dirname` is a Node global variable that gives you the directory name of the current module (your path). By using app.use(express.static('public')), we change `__dirname` to `./public`. We then send our response with the index.html file. That's it!
+This chains public to the root path. A good practice is to name this directory public if it contains public facing files such as HTML, CSS and JS.
+
+`__dirname` is a Node global variable that gives you the directory name of the current module (your path). By using `express.static(__dirname + '/public')`, we change `__dirname` to `./public`. We then send our response using the static asset Express middleware. That's it!
 
 ```js
 app.get('/', (request, response) => {
-  fs.readFile(`${__dirname}/index.html`, (err, file) => {
-    response.send(file)
-  })
-})
+  // response is actually handled by static asset express middleware
+  // defined by app.use(express.static(__dirname + '/public'));
+});
 ```
+
+Express assumes a structure for our static assets. The response for the root path, `'/'` or `localhost:3000/`, first goes to the root of the `public` directory and looks for a file called `index.html`.
 
 ## Resources
 - [Express.js](https://expressjs.com/)
 - [HTTP Status Codes](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html)
-- [Testing with Mocha and Chai](http://mherman.org/blog/2016/04/28/test-driven-development-with-node/#.WIdxcbYrLVo)
 
 ### Extra Repository
 
-* [Dino Express](https://github.com/Alex-Tideman/dino_express)
+- [Dino Express](https://github.com/Alex-Tideman/dino_express)
