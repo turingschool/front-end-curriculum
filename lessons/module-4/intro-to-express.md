@@ -352,6 +352,8 @@ app.get('/', (request, response) => {
 
 Express assumes a structure for our static assets. The response for the root path, `'/'` or `localhost:3000/`, first goes to the root of the `public` directory and looks for a file called `index.html`.
 
+So now you can add a directory called `public` and in that directory add a file called `index.html` with some basic HTML. Restart the server, head over to `localhost:3000`, and you should see your HTML file being served.
+
 ## Resources
 - [Express.js](https://expressjs.com/)
 - [Serving Static Assets](http://expressjs.com/en/starter/static-files.html)
