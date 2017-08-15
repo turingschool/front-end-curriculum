@@ -25,10 +25,9 @@ A user can:
     The anchor tag in your app should look something like this where the `href` attribute is the shortened URL:
 
 ```html
-<a href="www.myjetfuelapp.com/someShortenedUrl">www.myjetfuelapp.com/someShortenedUrl</a>
+<a href="/theShortenedUrl">www.myjetfuelapp.com/theShortenedUrl</a>
 
-<!-- For development, your app domain will just be localhost:3000/, but for production it will be something like https:/my-jet-fuel-app.heroku.com/ -->
-<!-- Don't worry about production until the last day of the project (Friday) -->
+<!-- Note that the URL is a relative URL because it refers to your own backend endpoints -->
 ```
 
 * Visit a folder an see all of the URLs associated with that folder
@@ -52,9 +51,9 @@ On a separate dedicated git branch, open your server file. For each line of the 
 
 ### Server Side
 
-* The application must be constructed using Node/Express with a knex and PostgreSQL database.
+* The application must be constructed using Node/Express with a knex and PostgreSQL database
 * There should be one client-side route (`'/'`), and other endpoints should be API endpoints (`'api/v1/...'`)
-* You should only need to use GET and POST requests. You should not need to use POST, PUT, or DELETE requests for the basic expectations of this project.
+* You should only need to use GET and POST requests. You should not need to use PATCH, PUT, or DELETE requests for the basic expectations of this project.
 * Each API endpoint should respond with JSON-formatted data
 
 ### Client Side
