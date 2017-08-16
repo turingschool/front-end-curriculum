@@ -139,16 +139,20 @@ assert.include([1,2,3], 2, 'array includes a value of 2');
 At some point you may have seen an assertion that something `deeply equals` something else. This is because JavaScript is trying to make your life easy and fill in some gaps for you. Sometimes we don't want those gaps filled. Lets look at a quick example:
 
 ```js
-assert.equal({ tea: 'green' }, { tea: 'jasmine' });
+assert.equal({ tea: 'green' }, { tea: 'green' });
 ```
 
-Using the `equal` method, this test would pass. We're asking if an object (in general) is equal to an object (in general), which is true. In this case Chai is only looking at the outer structure of our actual `{tea: 'green'}` vs expected `{tea: 'jasmine'}` arguments, both of which are objects.  
+Using the `equal` method, this test will fail. These two objects look the same but they are in fact two distinct objects with the same contents. You can think of them as if they were genetic twins. Genetic twins share the same genetic DNA but they are not the same person.
+
+The `equal` method checks if two things are exactly the same.
 
 ```js
-  assert.deepEqual({ tea: 'green' }, { tea: 'jasmine' });
+  assert.deepEqual({ tea: 'green' }, { tea: 'green' });
 ```
 
-On the contrary if use `deepEqual` instead, the same test would fail. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is not the same.  
+On the contrary if use `deepEqual` instead, the same test will pass. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is the same.  
+
+The `deepEqual` method checks if two things contain the same information.
 
 ## Structure of a Test  
 
