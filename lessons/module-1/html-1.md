@@ -124,17 +124,13 @@ Let's update our page from earlier with the image above.
 ### FPO
 Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have the requisite content. In such cases, you must avail yourself of FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
 
-* [Cupcake Ipsum](http://www.cupcakeipsum.com/)
-* [Slipsum](http://slipsum.com/)
-* [Bacon Ipsum](https://baconipsum.com/)
-* [Hipster Ipsum](https://hipsum.co/)
-* [FillMurray](https://www.fillmurray.com/)
-* [PlaceCage](https://www.placecage.com/)
+* [Meet the Ipsums](http://meettheipsums.com/)
 * [FPOImg](http://fpoimg.com/)
 * [PlaceKitten](http://placekitten.com/)
-* [BaconMockup](http://baconmockup.com/)
+* [Lorem Pixel](http://lorempixel.com/)
+* [Unsplash](https://unsplash.com/)
 * [SampleVideos](http://www.sample-videos.com/)
-* [Article](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online) w/ lots of useful sites for free icons, image assets, etc.
+* [Article](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online) with useful sites for free icons, image assets, etc.
 
 ### Hyperlinks
 
