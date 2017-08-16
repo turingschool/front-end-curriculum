@@ -265,9 +265,14 @@ Important to remember:
 
   <span id="genderLabel">Gender</span>
   <div role="radiogroup" aria-labelledby="genderLabel">
-    <input type="radio" name="gender" value="male"> Male<br>
-    <input type="radio" name="gender" value="female"> Female<br>
-    <input type="radio" name="gender" value="other"> Other
+    <input type="radio" role="radio" name="gender" id="male" value="Male" />
+    <label for='male'>Male</label>
+    <br>
+    <input type="radio" role="radio" name="gender" id="female" value="Female" />
+    <label for='female'>Female</label>
+    <br>
+    <input type="radio" role="radio" name="gender" id="other" value="Other" />
+    <label for='other'>Other</label>
   </div>
 
   <label for="comment">Comment*</label>
