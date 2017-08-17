@@ -1,7 +1,7 @@
 ---
 title: Build an NPM Module
 length: 120 min
-module: 4
+module: 2
 tags: npm, node, package
 ---
 

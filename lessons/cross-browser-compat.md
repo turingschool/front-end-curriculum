@@ -1,7 +1,7 @@
 ---
 title: Cross-Browser Compatibility
 length: 69
-module: 4
+module: 2
 tags: cross-browser, compatibility
 ---
 
