@@ -2,21 +2,29 @@ $(function(config){
   var algolia = algoliasearch(config.applicationId, config.apiKey);
   var index = algolia.initIndex(config.indexName);
 
-  hideSearch();
-
-  $('.clear-search img, .search-results-container img').on('click', function() {
+  $('.clear-search-btn').on('click', function() {
     $('.sidebar-navigation--search input').val('');
     hideSearch();
   });
 
   $('.sidebar-navigation--search input').on('input', function() {
     var query = $(this).val();
-    onQueryChange(query);
+    updateSearchQuery(query);
   });
 
-  function onQueryChange(query) {
+  function updateSearchQuery(query) {
     if (query.length) {
-      index.search(query, {'hitsPerPage': '10', 'page': '0', 'typoTolerance': 'false'}, onResult);
+      index.search(query, {
+        hitsPerPage: 10,
+        page: 0,
+        typoTolerance: false,
+        ignorePlurals: true,
+        attributesToHighlight: [
+          'title',
+          'text'
+        ],
+        highlightPreTag: '<span class="search-highlight">'
+      }, onResult);
     } else {
       hideSearch();
     }
@@ -39,28 +47,30 @@ $(function(config){
 
   function renderNoResultsFound() {
     $('.search-results').append('<p>No search results for that query</p>');
-  }
+  };
 
   function renderHits(hits) {
+    var documentFragment = $(document.createDocumentFragment());
+
     hits.forEach(function(hit) {
-      $('.search-results').append(hitTemplate(hit))
+      documentFragment.append(hitTemplate(hit));
     });
-  }
+
+    $('.search-results').append(documentFragment);
+  };
 
   function hitTemplate(hit) {
-    return `<li>
-      <a href="${hit.url}">${hit.title}</a>
-      ${hit.raw_html}
-    </li>`
-  }
+    return `<li class="result">
+              <a href="${hit.url}">${hit._highlightResult.title.value}</a>
+              <p>${hit._highlightResult.text.value}</p>
+            </li>`
+  };
 
   function showSearch() {
-    $('.search-results-container').show();
-    $('.clear-search').show();
+    $('.search-results-container, .clear-search').show();
   };
 
   function hideSearch() {
-    $('.search-results-container').hide();
-    $('.clear-search').hide();
+    $('.search-results-container, .clear-search').hide();
   };
 }(window.ALGOLIA_CONFIG));

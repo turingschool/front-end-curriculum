@@ -54,6 +54,8 @@ algolia:
     - challenges
     - independent-study
     - instructor-info
+    - lessons/module-1/archive
+    - lessons/module-2/archive
     - lessons/module-3/archive
     - lessons/module-4/archive
     - mentor-posse-info
