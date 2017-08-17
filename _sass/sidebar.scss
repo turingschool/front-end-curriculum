@@ -1,13 +1,14 @@
 $sidebar-color: rgb(245, 245, 245);
 
 .sidebar-navigation--logo {
-  background-color: white;
+  background-color: $dark-gray;
   padding: 1em;
+  width: $sidebar-width;
 }
 
 .turing-logo {
-  margin: auto;
-  max-width: 80%;
+  margin: 0;
+  max-width: 97%;
   display: block;
 
   @media (max-width: $tablet-width) {
@@ -22,6 +23,7 @@ $sidebar-color: rgb(245, 245, 245);
   background-color: $sidebar-color;
   color: invert($sidebar-color);
   border-right: 1px solid darken($sidebar-color, 20);
+  box-shadow: 1px 1px 2px #eee;
 
   @media (max-width: $tablet-width) {
     font-size: 0.85em;
@@ -39,7 +41,9 @@ $sidebar-color: rgb(245, 245, 245);
     padding-bottom: 1em;
 
     background-color: lighten($sidebar-color, 5);
+    border-bottom: 1px solid $teal;
     font-size: 1.1em;
+    margin: 0;
 
     @media (max-width: $tablet-width) {
       text-align: center;
@@ -62,10 +66,12 @@ $sidebar-color: rgb(245, 245, 245);
 
     line-height: 1.8em;
   }
+}
 
+.sidebar-navigation--links {
   a {
     display: block;
-    padding: 1em;
+    padding: 0.5em 1.1em;
     border-bottom: none;
 
     color: invert($sidebar-color);
@@ -79,9 +85,7 @@ $sidebar-color: rgb(245, 245, 245);
       box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     }
   }
-}
 
-.sidebar-navigation--links {
   @media (max-width: $tablet-width) {
     display: flex;
     flex-wrap: wrap;
