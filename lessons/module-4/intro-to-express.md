@@ -328,7 +328,7 @@ Remember to check which HTTP method you are using before sending the request.
 * Implement a PUT route for a specific secret to edit the message of the secret.
 * Implement a DELETE route for a specific secret to remove it.
 
-BONUS:
+**BONUS:**
 
 Can you implement a GET route that shows only the secrets that have been edited?
 
