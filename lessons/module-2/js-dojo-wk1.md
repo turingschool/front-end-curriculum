@@ -60,6 +60,29 @@ console.log(name)
 createScope();
 ```
 
+#### Exercise 4
+```
+let name = 'Spider-Man';
+
+function scopeOne () {
+  let name = 'Doctor Doom';
+
+  scopeTwo();
+
+  function scopeTwo () {
+    let name = 'Lady Octopus';
+
+    scopeThree();
+  }
+
+  function scopeThree () {
+    console.log(name);
+  }
+
+}
+
+scopeOne()
+```
 
 ## Keyword this
 
