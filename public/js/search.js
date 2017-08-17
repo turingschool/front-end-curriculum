@@ -36,8 +36,8 @@ $(function(config){
   };
 
   function displayResults(data) {
-    showSearch();
     $('.search-results').html('');
+    showSearch();
     if (data.hits.length) {
       renderHits(data.hits);
     } else {
