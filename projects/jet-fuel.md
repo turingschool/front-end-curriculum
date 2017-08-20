@@ -132,7 +132,7 @@ The following set of points are distributed at the discretion of the instructor.
 * **5 points** - The developer makes a few, large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 * **0 points** - The application was not checked into version control.
 
-## Projects are due on Monday of week 2, by 9:00 a.m. We will provide a submission form for all teams to submit their GitHub repo and production link.
+## Projects are due on Monday of week 2, by 9AM. Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1703/mod-4/jet-fuel/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
 
 ### Project is worth 160 points with 25 extra points possible
 

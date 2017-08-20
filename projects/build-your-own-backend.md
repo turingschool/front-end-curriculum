@@ -122,7 +122,7 @@ The following set of points are distributed at the discretion of the instructor.
 
 -----------------------------------------------
 
-#### Projects are due on Friday 7/14, 1:00 p.m. We will provide a submission form for all teams to submit their repos.
+#### Projects are due on Monday of week 3 at 9AM. Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1703/mod-4/byob/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
 
 To get a **3** on this project, you need to score **110** points or higher  
 To get a **4** on this project, you need to score **130** points or higher  
