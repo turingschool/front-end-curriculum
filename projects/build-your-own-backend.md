@@ -70,7 +70,7 @@ Which would limit the results to merchants in the 80202 area code.
 
 A further example of this implementation can be found here: [params](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
 
-* Developer must secure at least 4 endpoints with a JWT. It typically makes sense to secure any 'write' requests (POST/PUT/PATCH/DELETE).
+* Developer must secure at least 4 endpoints with a JWT. Though this project doesn't have an explicit frontend, at the `/` root of your application, return an `index.html` file with a form that allows a user to request a JWT. The user must submit a username of 'BobLoblaw' and a password of 'LawBlog' in order to authenticate and generate a JWT. Secure any 'write' requests (POST/PUT/PATCH/DELETE) with the JWT.
 
 ### Documentation
 
