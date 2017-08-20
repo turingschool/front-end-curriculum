@@ -15,18 +15,18 @@ The secondary focus of this project is prepping your Capstone project so you hav
 
 ### Find a Data Source
 
-Data source MUST BE LOCKED IN by Monday (7/10) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
+Data source MUST BE LOCKED IN by Tuesday (8/20) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
 * Rebuild a backend from your personal project
-* Work with and scrape new data from an API. Some APIs are easier to work with than others - you may not be able to pull off the thing you want to do - be prepared for that.
+* Work with and scrape new data from an API or website. Some APIs and websites are easier to work with than others - you may not be able to pull off the thing you want to do - be prepared for that.
   * https://developer.nrel.gov/
   * https://sunlightfoundation.com/api/
   * https://developer.foursquare.com/
   * data.world
 * Parse CSVs or JSON files (Node has built-in modules for parsing CSVs)
-* Create the data yourself. You must create a ‘seed file’ with a minimum of 30 rows of data for each main table
+* Create the data yourself. You must create a ‘seed file’ with a minimum of ~30 rows of data for each main table
 
 ### Relationships
 
@@ -74,7 +74,7 @@ A further example of this implementation can be found here: [params](https://sco
 
 ### Documentation
 
-* In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://github.com/500px/api-documentation/blob/master/README.md)
+* In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://github.com/500px/api-documentation/blob/master/README.md) Pay attention to the information provided and the format that it's presented in. Improperly formatted information can make it very difficult to read even if it's all accurate.
 
 ### Testing & Linting
 
