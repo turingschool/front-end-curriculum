@@ -4,6 +4,10 @@ $sidebar-color: rgb(245, 245, 245);
   background-color: $dark-gray;
   padding: 1em;
   width: $sidebar-width;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .turing-logo {
@@ -13,6 +17,7 @@ $sidebar-color: rgb(245, 245, 245);
 
   @media (max-width: $tablet-width) {
     max-width: 200px;
+    margin: 0 auto;
   }
 }
 
