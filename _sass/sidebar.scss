@@ -37,8 +37,8 @@ $sidebar-color: rgb(245, 245, 245);
 
   h1 {
     padding-left: 1em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 0.75em;
+    padding-bottom: 0.75em;
 
     background-color: lighten($sidebar-color, 5);
     border-bottom: 1px solid $teal;
