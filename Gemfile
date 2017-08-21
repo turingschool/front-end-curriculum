@@ -5,3 +5,7 @@ gem 'kramdown', '1.9.0'
 gem 'rouge', '1.10.1'
 gem 'octopress', '3.0.11'
 gem 'jemoji'
+
+group :jekyll_plugins do
+  gem 'algoliasearch-jekyll'
+end
