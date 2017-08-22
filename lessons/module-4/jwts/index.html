@@ -91,7 +91,7 @@
           <p>We mentioned JWTs differ from API keys in that they can store more custom information and metadata about the identity of a user. Let's head over to <a href="https://jwt.io">JWT.io</a> and take a look at the debugger, which will allow us to get a closer look at the guts of a JWT.</p>
           <p>When a JWT is decoded, we can see that it's composed of three distinct parts: a header, a payload (also known as claims), and a signature. Each of these parts are encoded JSON objects that represent different types of information.</p>
           <h3>Header</h3>
-          <p>The header tells us the type of token we have (in our case, a JWT), and the hashing algorithm used to encode the final JWT string.</p>
+          <p>The header tells us the type of token we have (in our case, a JWT), and the hashing algorithm used to encode the final JWT string. Think about a master lock and how it's opened. The master lock would be our "type" of lock, and the pattern to open it (3 turns to the right, 1 turn to the left, 1 turn to the right) is our "algorithm".</p>
           <h3>Payload</h3>
           <p>The payload is where a lot of the main information is stored about a user's identity. This 
           <h3>Signature</h3>
