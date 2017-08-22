@@ -94,7 +94,7 @@
           <h3>Header</h3>
           <p>The header tells us the type of token we have (in our case, a JWT), and the hashing algorithm used to encode the final JWT string. Think about a master lock and how it's opened. The master lock would be our "type" of lock, and the pattern to open it (3 turns to the right, 1 turn to the left, 1 turn to the right) is our "algorithm".</p>
           <h3>Payload</h3>
-          <p>The payload is where a lot of the main information is stored about a user's identity. This 
+          <p>The second part of the JWT is made up of claims. JWT claims are represented again as a JSON Object that contains security information about the message you’re transmitting. The properties on this object ensure the authenticity of the claim, and contain information such as the issuer (identifies the application making the call), issued-at time (when was this token issued?, expiration (when will this token expire/no longer be valid?), and any additional contextual information.</p>
           <h3>Signature</h3>
           <p>The signature is a super key piece of the JWT. The signature is what's used to verify the sender of the token and ensure that the message hasn't been changed anywhere along the way.</p>
         </section>
