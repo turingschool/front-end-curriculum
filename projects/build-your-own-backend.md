@@ -64,11 +64,11 @@ In addition to responding with the appropriate status code, you are expected to 
 
 * Developer must use query params on at least one endpoint, which would allow the user to narrow down the nature of their request or filter their results. So for example, you may have an endpoint like:
 
-`GET api/v1/merchants?areacode=80202`
+  `GET api/v1/merchants?areacode=80202`
 
-Which would limit the results to merchants in the 80202 area code.
+  Which would limit the results to merchants in the 80202 area code.
 
-A further example of this implementation can be found here: [params](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
+  A further example of this implementation can be found here: [params](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
 
 * Developer must secure at least 4 endpoints with a JWT. Though this project doesn't have an explicit frontend, at the `/` root of your application, return an `index.html` file with a form that allows a user to request a JWT. The user must submit a username of 'BobLoblaw' and a password of 'LawBlog' in order to generate a JWT that will authenticate them for accessing all endpoints. Require the JWT by securing any 'write' requests (POST/PUT/PATCH/DELETE).
 
