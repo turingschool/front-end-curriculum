@@ -1,18 +1,32 @@
 ---
-title: Array Prototype Methods Introduction
-length: 180
-tags: JavaScript, array, prototype
+title: ARIA Roles, States, Properties
+length: 120
+tags: ARIA, accessibility
 ---
+# Aria #
 
-# Aria # 
+Roles, States, Properties, and Why You Should Care.
 
-Accessible Rich Internet Applications.
+## What Is ARIA ##
 
-ARIA is a set of tools we can add to our HTML to give our code more semantic meaning. Not only is this crucial for assistive technology, but it is also helpful to your future self and other developers to know why you did what you did.
+**Accessible Rich Internet Applications**.
 
-Think about the information provided by a set of `<div></div>` tags. What do we know about the content within those tags? Really, we know nothing. It's a meaningless element that controls the APPEARANCE of its content - by default setting is a `block` style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar...etc.
+ARIA is a set of tools we can add to our HTML to make our code more semantically meaningful. Not only is this crucial for assistive technology, but it is also helpful to your future self and other developers to know what you were trying to accomplish in your code.
 
-## Roles ##
+Think about the information provided by a set of `<div></div>` tags. What do we know about the content within those tags? Really, we know nothing. It's a semantically void element that controls the APPEARANCE of its content - by default it is a `block` style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar...etc.
+
+ARIA provides a series of tools and approaches to enhancing the meaning of your code. Toay we will look at the three main aspects of ARIA - Roles, States, and Properties.
+
+## Plan Of Attack ##
+
+* Explore Roles, States, and Properties
+* Watch a short video demonstrating the usefulness of these tools
+* Reflection: Answer questions based on the video
+* Discussion: Come back together to talk about what we've covered
+
+## Roles, States, and Properties ##
+
+### Roles ###
 
 Roles define what an element IS - what function it serves on the page.
 
@@ -39,7 +53,7 @@ Example:
 <!-- The above markup might have a background image set by CSS that is acting as as Hero Image, or a "banner", followed by a thin line that separates sections of content. The elements themsleves don't provide this additional information, requiring us to include an explicit role as an attribute  -->
 ```
 
-### Roles: Avoiding Redundancy ###
+#### Roles: Avoiding Redundancy ####
 
 As previously mentioned, many semantic HTML5 elements have implicit roles that are hooked up for free in the markup itself. It's important to avoid bloating your code with redundant markup both for DRYness, and to avoid confusion for any users running your markup through assistive technology.
 
@@ -62,7 +76,7 @@ Things to Avoid:
 
 As much as possible, if there's an element that accomplishes the "role" you are trying to achieve, use it. HTML 5 has provided a boatload of really great, semantically rich elements that not only convey the appropriate role, but also handle all of the behavioral keyboard interactions without requiring additional javascript.
 
-## States ##
+### States ###
 
 States describe how you are interacting with an element.
 
@@ -90,7 +104,7 @@ Luckily ARIA provides state information that we can add to our markup.
 
 This also allows you to target these elements using the `aria-expanded` attribute when interacting with them in your JavaScript.
 
-## Properties ##
+### Properties ###
 
 Properties give an element special characteristics that you can relate to other documents or elements.
 
@@ -107,7 +121,7 @@ For example, take the button we mentioned when discussing states. That button sp
 
 The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is contolled by this button.
 
-YOu can also use something called an `aria-label` property. Think of this like an `alt` tag for accessibility - this property allows you to enter additional text that provides more information to the user. This information won't sho up on the page but will be read by the screen reader.
+You can also use something called an `aria-label` property. Think of this like an `alt` tag for accessibility - this property allows you to enter additional text that provides more information to the user. This information won't show up on the page but will be read by the screen reader.
 
 ```html
 <button
@@ -123,7 +137,7 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 **NOTE**: Use this with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
 
-### Other Properties
+#### Other Properties ####
 
 "What Am I"
 
@@ -132,7 +146,7 @@ You can then use JavaScript to keep this information up to date - for example, o
 * `aria-atomic`
 * `aria-required`
 
-" Who am I Related To?"
+"Who am I Related To?"
 
 * `aria-controls` - Seen above. References an element that is controlled by the current element.
 * `aria-describedby`
@@ -141,7 +155,47 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 [Learn more about the extensive list of properties and states available in the documentation](https://msdn.microsoft.com/en-us/library/hh801958(v=vs.85).aspx).
 
+## Video ##
+
+Watch the following video (roughly 30 min)
+
+[ARIA, Accesibility and Coding Like you Give A Damn](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
+
+## Reflection ##
+
+Answer the following questions:
+
+1. What is the difference between the DOM tree and an Accessibility Tree?
+
+1. What 3 main types of information is available through the Accessibility Tree? Describe each of these types of information and provide an example.
+
+1. Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
+
+1. True or False: You can user JavaScript to interact directly with the Accessibility Tree. Elaborate.
+
+1. How does a screen reader interact with `<div>` and `<span>` tags?
+
+1. What could you do in order to tell a screen reader to treat an element, for instance a `<span></span>` tag, as a button? What does this do to the functionality of this element?
+
+1. Seeing as adding a role doesn't actually change the elements functionality or behavior, what could you do to make sure a screen reader catches an element as it tabs through the page?
+
+1. Write the necessary CSS that indicates visual changes have happened when hovering or focusing on something with the role of a button.
+
+1. What ARIA property gives a user a shortcut to content associated with a particular button?
+
+1. When should you use `aria-hidden` and why?
+
+1. What does this mean in terms of what you need to do within your JavaScript to make sure your ARIA markup stays accurate?
+
+1. As mentioned in the video, it's not about changing EVERYTHING all at the same time. Name ONE aspect of Accessibility that you can commit to adding to every project for the rest of this mod.
+
+## Discussion ##
+
+If time allows, reconvene with the class to discuss the answers to these questions.
+
 ## Resources ##
 
+All information in this lesson plan was pulled as a summary of the following two videos:
+
 * [Aria Roles, States, and Properites](https://www.youtube.com/watch?v=JptGV3XqNNk)
-* [ARIA, Accesibility and Coding Like you Give A Damn](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
+* [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
