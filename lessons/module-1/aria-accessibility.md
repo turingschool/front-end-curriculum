@@ -117,6 +117,10 @@ For example, take the button we mentioned when discussing states. That button sp
 >
     Toggle Menu
 </button>
+
+<nav id="sidebar-menu">
+  <!-- ...nav code here... -->
+</nav>
 ```
 
 The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is contolled by this button.
