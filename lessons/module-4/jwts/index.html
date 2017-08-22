@@ -122,6 +122,7 @@
                 <li>Check for a token that was sent through with the request</li>
                 <li>If no token exists, respond with a <code>403</code> and an error message that says 'You must be authorized to hit this endpoint.'</li>
                 <li>If a token <b>does</b> exist, <a href="https://www.npmjs.com/package/jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback">verify the token</a>.</li>
+                <li>If there is an error with the token, respond with a <code>403</code> and message that says 'Invalid token'.</li>
                 <li>If the decoded token contains <code>admin: true</code> in the payload, call the express <code>next()</code> helper to complete the request handler.</li>
                 <li>If the decoded token <b>does not</b> contain <code>admin: true</code> in the payload, respond with a <code>403</code> and an error message that says 'You must be an admin to hit this endpoint.'</li>
               </ul>
