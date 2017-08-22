@@ -225,7 +225,7 @@ Now that we have worked on the basic editing workflow, turn to someone you're si
 
 Type `git log` in the terminal. What do you see? Discuss with you partner what you think is being displayed in the terminal.  
 
-Checkout a condensed version of that report by running `git log --online`. What information gets left out compared to the `git log` command?  
+Checkout a condensed version of that report by running `git log --oneline`. What information gets left out compared to the `git log` command?  
 
 #### The master branch
 
