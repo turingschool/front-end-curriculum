@@ -78,6 +78,7 @@
           <p>Encoding is the process of converting data into a format that allows for efficient transmission and storage. Base64 encoding is a convenient way to manage data in a simple, readable text format rather than as binary data. Base64Url encoding is similar to Base64, but it avoids using common reserved URL characters (e.g. / and -)</p>
           <h3>Both are passed through a request to a server</h3>
           <p>Because these strings are Base64Url-Encoded, JWTs and API Keys can be passed through with a request to a server as a query param, authorization header, or in the request body.</p>
+          <img class="right" src="../../../assets/images/lessons/jwts/jwt-auth-process.png" />
           <h3>Both provide an authorization 'handshake' between client and server</h3>
           <p>When a client requests a JWT, they generally provide some sort of identifying information about themselves (e.g. a username, app ID, email address, admin role, etc.) The server generates this token based on that information and signs it using a secret key. The server then sends that newly generated token back to the client so it can be used in future requests.</p>
           <p>When the client sends this token back to the server when making a new request, the server first decodes the token, verifies all the information is correct, then gives permission for the client to proceed with their request.</p>
@@ -162,5 +163,10 @@
         </section>
       </div>
     </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
   </body>
 </html>

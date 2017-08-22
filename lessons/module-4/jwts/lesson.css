@@ -66,8 +66,12 @@ h1 {
   padding: 3px 0;
 }
 
-#toc a {
+#toc a:link, #toc a:visited {
   color: #3c4040;
+}
+
+#toc a:hover {
+  color: #000;
 }
 
 #content-container {
@@ -142,4 +146,10 @@ section .discuss {
 
 section .discuss h4 {
   margin: 0;
+}
+
+section img.right {
+  float: right;
+  margin: 20px 0 0 50px;
+  max-width: 45%;
 }
