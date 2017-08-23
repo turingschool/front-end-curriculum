@@ -71,12 +71,12 @@ refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new a
 
         <section>
           <h2><a name="TokenBasedAuth">Token-Based Auth</a></h2>
-          <p>We previously learned about <a href="#">JSON Web Tokens</a>, and described the general flow of receiving a token to identify a user, and using that token to authorize future requests. The initial phase of this process - generating a token to identify a user - is considered the authentication "handshake". You'll hear this term handshake used frequently to describe an authentication mechanism. It simply means that a client (in our case, the browser), is telling a server:</p>
+          <p>We previously learned about <a href="../jwts/index.html">JSON Web Tokens</a>, and described the general flow of receiving a token to identify a user, and using that token to authorize future requests. The initial phase of this process - generating a token to identify a user - is considered the authentication "handshake". You'll hear this term handshake used frequently to describe an authentication mechanism. It simply means that a client (in our case, the browser), is telling a server:</p>
           <blockquote>"Hi, nice to meet you, I am Bob Loblaw and I would like for you to trust me. Here are a couple facts about myself."</blockquote>
           <p>And the server looks Bob Loblaw up and down, writes down all of his information and says:</p>
           <blockquote>"Ok, Bob Loblaw. I trust you on one condition: you must provide me this secret password every time we do business."</blockquote>
           <p>And the server gives Bob a token that has encoded all of Bob's information and permission levels. Bob can now use this token as a "hall pass" to send and receive data from the server.</p>
-          <p>This token-based authentication flow is also what's used in OAuth implementations. In fact, some OAuth service providers like <a href="">Auth0</a> use JSON Web Tokens in their implementation.</p>
+          <p>This token-based authentication flow is also what's used in OAuth implementations. In fact, some OAuth service providers like <a href="https://www.auth0.com">Auth0</a> use JSON Web Tokens in their implementation.</p>
           <div class="discuss">
             <h4>Pause and Read</h4>
             <p>We've now learned about a couple different authentication mechanisms for working with APIs. Take a moment to read the following blog post on the differences between each of them and their best use cases:</p>
@@ -109,8 +109,9 @@ refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new a
           <h2><a name="Resources">Further Reading & Resources</a></h2>
           <ul>
             <li><a href="https://www.youtube.com/watch?v=LRNg4tDtrkE">OAuth 2.0 Video Series</a></li>
-            <li><a href="">Firebase</a></li>
-            <li><a href="">Auth0</a></li>
+            <li><a href="https://zapier.com/engineering/apikey-oauth-jwt/">API Keys vs. OAuth Tokens vs. JSON Web Tokens</a></li>
+            <li><a href="https://firebase.google.com/">Firebase</a></li>
+            <li><a href="https://auth0.com">Auth0</a></li>
           </ul>
         </section>
       </div>
