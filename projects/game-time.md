@@ -80,6 +80,16 @@ class Hoodlum extends Person {
 }
 ```
 
+## User Interface
+
+If your game uses the arrow keys, you should prevent the page from scrolling when the arrow keys are pressed.
+
+## Testing
+
+Each javascript file in your project should have it's own test file
+e.g.
+if you have a `MasterChief.js` class file, all the tests for that class should be located in `MasterChief-test.js`
+
 ## Extensions
 
 * Create an AI player that can play as the second player.
