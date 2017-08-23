@@ -47,7 +47,7 @@ Meeting with a mentor for the first time can seem daunting. There is a lot of gr
 
 ## How do you communicate best? What is your preferred way to support me while I go through Turing?
 
-- examples: Pairing (in-person / Screenhero), Slack Chats, Github Code Reviews, FaceTime/Hangouts
+- Examples: Pairing (in-person / Screenhero), Slack Chats, GitHub Code Reviews, FaceTime/Hangouts
 
 ### What do you need (resources, environment, communication) to feel prepared for our meetings?
 - examples[communication]: 24-48 hour advanced notice, slack ping right before meeting
@@ -56,12 +56,12 @@ Meeting with a mentor for the first time can seem daunting. There is a lot of gr
 
 ### What scheduling restraints do you have? What are your scheduling preferences
 
-- example [preferences]: google cal, youcanbook.me, slack message, sunrise
+- Example [preferences]: google cal, youcanbook.me, slack message, sunrise
 
 ### What do you identify as being your biggest strength(s) technically as they relate to the curriculum at Turing? What are some of your technical interests that we may not focus on at Turing? What are you non-technical interests / areas of expertise?
 
-- example [technical turing-related] - react.js, ember, creating style guides, UI design
-- example [technical but turing-divergent] - Clojure, Elixir, Rust, iOS
-- example [non-technical but turing-related] - Technical Interview Prep, Leadership Skills, Public Speaking/Lightning Talks, Resumes
-- example [non-technical turing-divergent] - knitting, tattoos, yoga, skiing, craft-beer, parenting
-- What’s gone well or poorly in your last mentorships?
+- Example [technical turing-related] - react.js, ember, creating style guides, UI design
+- Example [technical but turing-divergent] - Clojure, Elixir, Rust, iOS
+- Example [non-technical but turing-related] - Technical Interview Prep, Leadership Skills, Public Speaking/Lightning Talks, Resumes
+- Example [non-technical turing-divergent] - knitting, tattoos, yoga, skiing, craft-beer, parenting
+- What has gone well or poorly in your last mentorships?
