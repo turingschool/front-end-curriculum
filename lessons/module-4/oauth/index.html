@@ -19,7 +19,6 @@
         <ol>
           <li><a href="#LessonGoals">Lesson Goals</a></li>
           <li><a href="#Introduction">Introduction</a></li>
-          <li><a href="#AuthvsAuth">Authentication vs. Authorization</a></li>
           <li><a href="#TokenBasedAuth">Token-Based Authentication</a></li>
           <li><a href="#Firebase">Practice: Firebase OAuth</a></li>
           <li><a href="#Checks">Checks for Understanding</a></li>
@@ -42,32 +41,27 @@
         <hr />
         <section>
           <h2><a name="Introduction">Intro to OAuth</a></h2>
-          <p>OAuth stands for "Open Authentication" and is an open standard for implementing token-based authentication and authorization. The term "open standard" is a little vague, but essentially describes a specification that is open to the public and free to be implemented by application developers.</p>
+          <p>OAuth stands for "Open Authentication" and can be defined as:</p>
+          <blockquote>an open standard for implementing token-based authentication and authorization</blockquote>
+          <p>The term "open standard" is a little vague, but essentially describes a specification that is open to the public and free to be implemented by application developers.</p>
+          <p>OAuth allows your account information from one application (e.g. Twitter) to be used by another application (e.g. TweetDeck), without having to expose or share the user's credentials between apps. OAuth acts as an intermediary on behalf of the user, negotiating access and authorization between the two applications.</p>
 
+          <h3>Authentication vs. Authorization</h3>
+          <p>You'll often hear the two words authentication and authorization used interchangeably - we've already thrown them around a bit in this lesson - but they actually have two very different meanings. The process of <b>authentication</b> answers the question "Who are you?", while <b>authorization</b> answers the question: "What are you allowed to do?".</p>
+          <p>For example, I build a contacts application called FooBar that manages all of my contacts on various social accounts. I first authenticate my application with Google, telling them that I am FooBar. I then authorize my application to give it permissions for reading and writing changes to my Google contacts list.</p>
+          <p>Remember that OAuth stands for "Open Authentication". While the OAuth flow handles authorization and permissions as well, its main emphasis is on the authentication process, where you can essentially "log in" to a third-party without giving away your credentials.</p>
 
-OAuth, which is pronounced "oh-auth," allows an end user's account information to be used by third-party services, such as Facebook, without exposing the user's password. OAuth acts as an intermediary on behalf of the end user, providing the service with an access token that authorizes specific account information to be shared. The process for obtaining the token is called a flow.
+          <h3>Why Do We Need OAuth?</h3>
+          <p>OAuth is an important part of creating secure applications. We mentioned previously that an OAuth service provider acts as an intermediary to negotiate access to other application data. This intermediary role prevents us from having to give away our credentials by providing us with access tokens instead.</p>
 
-
-Benefits of Oauth:
-* dont have to give away your password, it wont exist in more places
-* usually easier setup because you'll use a service provider
-
-
-         <h3>OAuth 2.0</h3>
-
-Like the original OAuth, OAuth 2.0 provides users with the ability to grant third-party access to web resources without sharing a password. Updated features available in OAuth 2.0 include new flows, simplified signatures and short-lived tokens with long-lived authorizations.
-
-The biggest change in the latest version is that it’s no longer required to sign each call with a keyed hash. The most common implementations of OAuth use one or both of these tokens instead:
-
-access token: sent like an API key, it allows the application to access a user’s data; optionally, access tokens can expire.
-refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new access token if they have expired.
-
-
-
+          <div class="discuss">
+            <h4>Watch</h4>
+            <p>OAuth provides us with a secure way to build applications that rely on pre-existing datasets that may contain private information. Take a minute to watch this video on why OAuth is important:</p>
+            <a href="https://www.youtube.com/watch?v=LRNg4tDtrkE">OAuth 2.0 - Why It's Important</a>
+          </div>
 
         </section>
         <hr />
-
 
         <section>
           <h2><a name="TokenBasedAuth">Token-Based Auth</a></h2>
@@ -78,19 +72,10 @@ refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new a
           <p>And the server gives Bob a token that has encoded all of Bob's information and permission levels. Bob can now use this token as a "hall pass" to send and receive data from the server.</p>
           <p>This token-based authentication flow is also what's used in OAuth implementations. In fact, some OAuth service providers like <a href="https://www.auth0.com">Auth0</a> use JSON Web Tokens in their implementation.</p>
           <div class="discuss">
-            <h4>Pause and Read</h4>
+            <h4>Read</h4>
             <p>We've now learned about a couple different authentication mechanisms for working with APIs. Take a moment to read the following blog post on the differences between each of them and their best use cases:</p>
             <a href="https://zapier.com/engineering/apikey-oauth-jwt/">API Keys vs. OAuth Tokens vs. JSON Web Tokens</a>
           </div>
-        </section>
-
-        <hr />
-
-        <section>
-          <h2><a name="AuthvsAuth">Authentication vs. Authorization</a></h2>
-          <p>You'll often hear the two words authentication and authorization used interchangeably - but they actually have two very different meanings. The process of <b>authentication</b> answers the question "Who are you?", while <b>authorization</b> answers the question: "What are you allowed to do?".</p>
-          <p>For example, I build a contacts application called FooBar that manages all of my contacts on various social accounts. I first authenticate my application with Google, telling them that I am FooBar. I then authorize my application to give it permissions for reading and writing changes to my Google contacts list.</p>
-          <p>Remember that OAuth stands for "Open Authentication". While the OAuth flow handles authorization and permissions as well, its main emphasis is on the authentication process, where you can essentially "log in" to a third-party without giving away your credentials.</p>
         </section>
 
         <hr />
