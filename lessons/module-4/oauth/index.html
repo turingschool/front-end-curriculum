@@ -20,7 +20,8 @@
           <li><a href="#LessonGoals">Lesson Goals</a></li>
           <li><a href="#Introduction">Introduction</a></li>
           <li><a href="#TokenBasedAuth">Token-Based Authentication</a></li>
-          <li><a href="#OSP">OAuth Service Providers</a></li>
+          <li><a href="#OSP">Don't Roll Your Own</a></li>
+          <li><a href="#Practice">Practice with Firebase</a></li>
           <li><a href="#Checks">Checks for Understanding</a></li>
           <li><a href="#Resources">Further Reading & Resources</a></li>
         </ol>
@@ -103,6 +104,23 @@
 
           <h3>Auth0</h3>
           <p>Auth0 is a bit newer, and has a strong emphasis on the use of JWTs. It only provides the authentication feature (none of the other bells and whistles we get with Firebase), but it allows us to hook into the same types of accounts as Firebase. Unfortunately, because Auth0 is so young, it's also been notorious for implementing breaking changes which have cause applications to stop working in the past. Advice: Use with caution.</p>
+        </section>
+
+        <hr />
+        <section>
+          <h2><a name="Practice">Practice with Firebase</a></h2>
+          <p>We'll get some quick familiarity with the Firebase syntax and API, and see how the UI works when authenticating with Google through Firebase.</p> 
+          <h3>Step 1: Getting Started</h3>
+          <ul>
+            <li>Go to <a href="https://firebase.google.com/">Firebase</a> and click on "Go To Console" in the top right corner</li>
+            <li>Click "Add Project" and give it a name</li>
+            <li>You'll then be brought to a project management dashboard. Click on the 'Authentication' link in the left sidebar, and then click the 'Setup Signin Method' button.</li>
+            <li>Enable google authentication</li>
+          </ul>
+          <h3>Step 2: Writing the Code</h3>
+          <ul>
+            <li>Clone down <a href="https://gist.github.com/brittanystoroz/251de632b6cf9c5a92f087a46caf8bbc">this boilerplate</a></li>
+          </ul>
         </section>
 
         <hr />
