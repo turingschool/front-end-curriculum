@@ -20,7 +20,7 @@
           <li><a href="#LessonGoals">Lesson Goals</a></li>
           <li><a href="#Introduction">Introduction</a></li>
           <li><a href="#TokenBasedAuth">Token-Based Authentication</a></li>
-          <li><a href="#Firebase">Practice: Firebase OAuth</a></li>
+          <li><a href="#OSP">OAuth Service Providers</a></li>
           <li><a href="#Checks">Checks for Understanding</a></li>
           <li><a href="#Resources">Further Reading & Resources</a></li>
         </ol>
@@ -78,8 +78,38 @@
           </div>
         </section>
 
+
+
+<!--          <h3>OAuth 2.0</h3>
+
+Like the original OAuth, OAuth 2.0 provides users with the ability to grant third-party access to web resources without sharing a password. Updated features available in OAuth 2.0 include new flows, simplified signatures and short-lived tokens with long-lived authorizations.
+
+The biggest change in the latest version is that it’s no longer required to sign each call with a keyed hash. The most common implementations of OAuth use one or both of these tokens instead:
+
+access token: sent like an API key, it allows the application to access a user’s data; optionally, access tokens can expire.
+refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new access token if they have expired.
+
+ -->
+
+
+        </section>
         <hr />
 
+        <section>
+          <h2><a name="OSP">Don't Roll Your Own OAuth</a></h2>
+          <p>In the tech world we have a tendency to want to build things from scratch or reinvent the wheel. (Exhibit A: npm has 2,348 packages related to the fetch API.) While that's all well and good, authentication and authorization are not areas that you want to implement on your own. Rolling your own OAuth will be wrought with vulnerabilities and security holes unless you have a full team of security engineers working on maintaining its integrity. If you're ever creating a database where you are storing user's passwords, you probably want to rethink that decision.</p>
+          <p>Lucky for us, there are plenty of pre-existing tools we can use for hooking into authentication for applications like Google, GitHub, Facebook, Twitter, etc. Two you might hear about are <a href="#">Firebase</a> and <a href="#">Auth0</a>.</p>
+
+          <h3>Firebase</h3>
+          <p>Firebase is a product created by Google that provides a collection of tools for building a full-featured application without having to create your own backend. Firebase provides database management and authentication, among other things.</p>
+          <p>With Firebase, we can create a new application and enable authentication for Google, GitHub, Facebook, Twitter, etc. While Firebase provides us with many different tools for application development, we recommend only hooking into it for authentication purposes. You have your own backend skills, you don't need to rely on the other features of Firebase to build your applications.</p>
+
+          <h3>Auth0</h3>
+          <p>Auth0 is a bit newer, and has a strong emphasis on the use of JWTs. It only provides the authentication feature (none of the other bells and whistles we get with Firebase), but it allows us to hook into the same types of accounts as Firebase. Unfortunately, because Auth0 is so young, it's also been notorious for implementing breaking changes which have cause applications to stop working in the past. Advice: Use with caution.</p>
+        </section>
+
+        <hr />
+        
         <section>
           <h2><a name="Checks">Checks for Understanding</a></h2>
           <ul>
