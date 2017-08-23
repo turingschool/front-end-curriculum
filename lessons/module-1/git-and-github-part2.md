@@ -188,6 +188,42 @@ In this case, enter the command: `git pull origin master`
 
 Our changes are now completely synced. The master branch locally is the same as the master branch on GitHub. We can make more feature branches, add more features, and repeat the same process!
 
+## Merge Conflicts
+
+You might be wondering what happens if you're working on a project with a partner and you both make changes to the same line of code. This is called a merge conflict.
+
+Merge conflicts happen when two different commits can't be automatically merged and they need to be resolved. Conflicts can occur when you pull down from origin or when you are creating a pull request to merge to master on GitHub.
+
+In the event that this happens, you might get a message like this:
+
+```
+CONFLICT(content): Merge conflict in boots-and-pants.js
+Automatic merge failed. Fix conflicts and commit the results.
+```
+This happens because GitHub doesn't know what code to believe.
+
+Below is an example of what a conflict might look like upon inspection of the flagged file:
+
+```javascript
+// boots-and-pants.js
+
+var a = 1;
+<<<<<<<<<HEAD
+var b = 2;
+=========
+var b = 0;
+>>>>>>>>>39457094865893724234798326445
+var d = 5;
+var e = 3;
+var r = 18;
+```
+
+The lines of code between HEAD and the set of equals signs (so in this case, var b = 2) are all of the changes you made that are in conflict. These are change that you have made on your computer.
+
+Everything between the set of equals signs and the greater than signs followed by the conflicting commit number (var b = 0) are all of the changes from GitHub that you’re trying to pull down that are conflicting.
+
+To resolve conflicts, you have to decide which of the two conflicting lines you want to keep and then remove the HEAD, the set of equals, and the conflicting commit line.
+
 ### Your Turn
 
 Practice by pushing up your Dog Party or Number Guesser project to GitHub.

@@ -19,9 +19,9 @@
         <ol>
           <li><a href="#LessonGoals">Lesson Goals</a></li>
           <li><a href="#Introduction">Introduction</a></li>
-          <li><a href="#JWTvsAPI">JWTs vs. API Keys</a></li>
-          <li><a href="#Anatomy">Anatomy of a JWT</a></li>
-          <li><a href="#Practice">Practice</a></li>
+          <li><a href="#TokenBasedAuth">Token-Based Authentication</a></li>
+          <li><a href="#OSP">Don't Roll Your Own</a></li>
+          <li><a href="#Practice">Practice with Firebase</a></li>
           <li><a href="#Checks">Checks for Understanding</a></li>
           <li><a href="#Resources">Further Reading & Resources</a></li>
         </ol>
@@ -36,131 +36,114 @@
           <ul>
             <li>articulate what OAuth is and how it works at a high-level</li>
             <li>understand the pain points and potential hazards of rolling your own OAuth</li>
-            <li>implement OAuth through Firebase and/or Auth0</li>
+            <li>implement OAuth through Firebase</li>
           </ul>
         </section>
         <hr />
         <section>
-          <h2><a name="Introduction">Intro to JWTs</a></h2>
-          <p>We previously talked about <a href="http://frontend.turing.io/lessons/module-4/client-side-security.html">client-side security</a> at a high-level. Now we're going to dive a little deeper and talk about one of the strategies for making our applications slightly more secure through the use of JSON Web Tokens.</p>
-          <h3>A Case Study</h3>
-          <p>One of the vulnerable scenarios we talked about when we discussed security was the following:</p>
-          <blockquote>"someone discovers a server-side endpoint used for sharing private photographs"</blockquote>
-          <p>This is the exact type of vulnerability we can protect ourselves against with JSON Web Tokens. There are many other types of security threats, and JWTs are not going to solve all of them, but they are a single, simple step we can take towards ensuring our applications are more secure.</p>
-          <h3>What is a JWT?</h3>
-          <p>Here is what a standard JWT looks like:</p>
-          <code>
-            eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
-            eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWV9.
-            TJVA95OrM7E2cBab30RMHrHDcEfxjoYZgeFONFh7HgQ
-          </code>
-          <p>At first glance, it appears to be a giant string of gobbly-gook. Does this look familiar at all? When have you seen something similar?</p>
+          <h2><a name="Introduction">Intro to OAuth</a></h2>
+          <p>OAuth stands for "Open Authentication" and can be defined as:</p>
+          <blockquote>an open standard for implementing token-based authentication and authorization</blockquote>
+          <p>The term "open standard" is a little vague, but essentially describes a specification that is open to the public and free to be implemented by application developers.</p>
+          <p>OAuth allows your account information from one application (e.g. Twitter) to be used by another application (e.g. TweetDeck), without having to expose or share the user's credentials between apps. OAuth acts as an intermediary on behalf of the user, negotiating access and authorization between the two applications.</p>
+
+          <h3>Authentication vs. Authorization</h3>
+          <p>You'll often hear the two words authentication and authorization used interchangeably - we've already thrown them around a bit in this lesson - but they actually have two very different meanings. The process of <b>authentication</b> answers the question "Who are you?", while <b>authorization</b> answers the question: "What are you allowed to do?".</p>
+          <p>For example, I build a contacts application called FooBar that manages all of my contacts on various social accounts. I first authenticate my application with Google, telling them that I am FooBar. I then authorize my application to give it permissions for reading and writing changes to my Google contacts list.</p>
+          <p>Remember that OAuth stands for "Open Authentication". While the OAuth flow handles authorization and permissions as well, its main emphasis is on the authentication process, where you can essentially "log in" to a third-party without giving away your credentials.</p>
+
+          <h3>Why Do We Need OAuth?</h3>
+          <p>OAuth is an important part of creating secure applications. We mentioned previously that an OAuth service provider acts as an intermediary to negotiate access to other application data. This intermediary role prevents us from having to give away our credentials by providing us with access tokens instead.</p>
+
           <div class="discuss">
-          <h4>Discuss</h4>
-            <p>With a partner, discuss the following questions:</p>
-            <ul>
-              <li>What did you use API keys for? Why did you need them?</li>
-              <li>How did you retrieve an API key?</li>
-              <li>How did you use them? Where did you put them in your codebase?</li>
-              <li>What problems, if any, did you run into when using them?</li>
-            </ul>
+            <h4>Watch</h4>
+            <p>OAuth provides us with a secure way to build applications that rely on pre-existing datasets that may contain private information. Take a minute to watch this video on why OAuth is important:</p>
+            <a href="https://www.youtube.com/watch?v=LRNg4tDtrkE">OAuth 2.0 - Why It's Important</a>
           </div>
-          <p>Not only do JWTs <em>look</em> like API keys, they also behave in a very similar manner, with just slight differences. As a definition, both JWTs and API keys can be described as:</p>
-          <ul>
-            <li>a string</li>
-            <li>...that is base64url-encoded</li>
-            <li>...and verifies the identity of a particular user</li>
-          </ul>
+
         </section>
         <hr />
+
         <section>
-          <h2><a name="JWTvsAPI">JWTs vs. API Keys</a></h2>
-          <p>Let's dig into that definition a little further as we talk about the similarities and differences between JWTs and API keys.</p>
-          <h3>Both are Base64Url-Encoded Strings</h3>
-          <p>Encoding is the process of converting data into a format that allows for efficient transmission and storage. Base64 encoding is a convenient way to manage data in a simple, readable text format rather than as binary data. Base64Url encoding is similar to Base64, but it avoids using common reserved URL characters (e.g. / and -)</p>
-          <h3>Both are passed through a request to a server</h3>
-          <p>Because these strings are Base64Url-Encoded, JWTs and API Keys can be passed through with a request to a server as a query param, authorization header, or in the request body.</p>
-          <img class="right" src="../../../assets/images/lessons/jwts/jwt-auth-process.png" />
-          <h3>Both provide an authorization 'handshake' between client and server</h3>
-          <p>When a client requests a JWT, they generally provide some sort of identifying information about themselves (e.g. a username, app ID, email address, admin role, etc.) The server generates this token based on that information and signs it using a secret key. The server then sends that newly generated token back to the client so it can be used in future requests.</p>
-          <p>When the client sends this token back to the server when making a new request, the server first decodes the token, verifies all the information is correct, then gives permission for the client to proceed with their request.</p>
-          <h3>So how do they differ?</h3>
-          <p>The main difference between API Keys and JWTs is the type of data they contain when they are decoded. JWTs can store more custom information and metadata about the identity of a user than an API key. This allows for more granular control over permissions and access to your API.</p>
-          <p>API Keys are still useful if you simply want to provide general quick-start access to your API. (Generally an API Key gives you all or nothing: if you have a key, you have access to all the endpoints in that API.) They're also useful for keeping track of analytics data like the amount of requests made per user. (Many free, open-source APIs will limit the amount of requests you can make at set intervals.)</p>
+          <h2><a name="TokenBasedAuth">Token-Based Auth</a></h2>
+          <p>We previously learned about <a href="../jwts/index.html">JSON Web Tokens</a>, and described the general flow of receiving a token to identify a user, and using that token to authorize future requests. The initial phase of this process - generating a token to identify a user - is considered the authentication "handshake". You'll hear this term handshake used frequently to describe an authentication mechanism. It simply means that a client (in our case, the browser), is telling a server:</p>
+          <blockquote>"Hi, nice to meet you, I am Bob Loblaw and I would like for you to trust me. Here are a couple facts about myself."</blockquote>
+          <p>And the server looks Bob Loblaw up and down, writes down all of his information and says:</p>
+          <blockquote>"Ok, Bob Loblaw. I trust you on one condition: you must provide me this secret password every time we do business."</blockquote>
+          <p>And the server gives Bob a token that has encoded all of Bob's information and permission levels. Bob can now use this token as a "hall pass" to send and receive data from the server.</p>
+          <p>This token-based authentication flow is also what's used in OAuth implementations. In fact, some OAuth service providers like <a href="https://www.auth0.com">Auth0</a> use JSON Web Tokens in their implementation.</p>
+          <div class="discuss">
+            <h4>Read</h4>
+            <p>We've now learned about a couple different authentication mechanisms for working with APIs. Take a moment to read the following blog post on the differences between each of them and their best use cases:</p>
+            <a href="https://zapier.com/engineering/apikey-oauth-jwt/">API Keys vs. OAuth Tokens vs. JSON Web Tokens</a>
+          </div>
         </section>
+
+        <!-- <h3>OAuth 2.0</h3>
+
+        Like the original OAuth, OAuth 2.0 provides users with the ability to grant third-party access to web resources without sharing a password. Updated features available in OAuth 2.0 include new flows, simplified signatures and short-lived tokens with long-lived authorizations.
+
+        The biggest change in the latest version is that it’s no longer required to sign each call with a keyed hash. The most common implementations of OAuth use one or both of these tokens instead:
+
+        access token: sent like an API key, it allows the application to access a user’s data; optionally, access tokens can expire.
+        refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new access token if they have expired.
+         -->
+        <hr />
+
+        <section>
+          <h2><a name="OSP">Don't Roll Your Own OAuth</a></h2>
+          <p>In the tech world we have a tendency to want to build things from scratch or reinvent the wheel. (Exhibit A: npm has 2,348 packages related to the fetch API.) While that's all well and good, authentication and authorization are not areas that you want to implement on your own. Rolling your own OAuth will be wrought with vulnerabilities and security holes unless you have a full team of security engineers working on maintaining its integrity. It’s easy to introduce security holes if you're not familiar with that area of development or you're not actively and consistently looking for weaknesses.</p>
+          <p>There is a thing called <a href="https://www.schneier.com/blog/archives/2011/04/schneiers_law.html">Schneier's Law</a> which generally states:</p>
+          <blockquote>"any person can invent a security system so clever that she or he can't think of how to break it."</blockquote>
+          <p>Essentially, the security system you build is only as good as your security skills. There are a lot of seemingly minor features (user enumeration, lockout intervals, https, etc) that have a huge impact on the effectiveness of a security system. While we're used to being able to pare down a project scope to an MVP, you cannot take shortcuts when rolling your own authentication.</p>
+          <p>Lucky for us, there are plenty of pre-existing tools we can use for hooking into authentication for applications like Google, GitHub, Facebook, Twitter, etc. Two you might hear about are <a href="https://firebase.google.com/">Firebase</a> and <a href="https://www.auth0.com">Auth0</a>.</p>
+
+          <h3>Firebase</h3>
+          <p>Firebase is a product created by Google that provides a collection of tools for building a full-featured application without having to create your own backend. Firebase provides database management and authentication, among other things.</p>
+          <p>With Firebase, we can create a new application and enable authentication for Google, GitHub, Facebook, Twitter, etc. While Firebase provides us with many different tools for application development, we recommend only hooking into it for authentication purposes. You have your own backend skills, you don't need to rely on the other features of Firebase to build your applications.</p>
+
+          <h3>Auth0</h3>
+          <p>Auth0 is a bit newer, and has a strong emphasis on the use of JWTs. It only provides the authentication feature (none of the other bells and whistles we get with Firebase), but it allows us to hook into the same types of accounts as Firebase. Unfortunately, because Auth0 is so young, it's also been notorious for implementing breaking changes which have cause applications to stop working in the past. Advice: Use with caution.</p>
+        </section>
+
         <hr />
         <section>
-          <h2><a name="Anatomy">Anatomy of a JWT</a></h2>
-          <p>We mentioned JWTs differ from API keys in that they can store more custom information and metadata about the identity of a user. Let's head over to <a href="https://jwt.io">JWT.io</a> and take a look at the debugger, which will allow us to get a closer look at the guts of a JWT.</p>
-          <p>When a JWT is decoded, we can see that it's composed of three distinct parts: a header, a payload (also known as claims), and a signature. Each of these parts are encoded JSON objects that represent different types of information.</p>
-          <h3>Header</h3>
-          <p>The header tells us the type of token we have (in our case, a JWT), and the hashing algorithm used to encode the final JWT string. Think about a master lock and how it's opened. The master lock would be our "type" of lock, and the pattern to open it (3 turns to the right, 1 turn to the left, 1 turn to the right) is our "algorithm".</p>
-          <h3>Payload</h3>
-          <p>The second part of the JWT is made up of claims. JWT claims are represented again as a JSON Object that contains security information about the message you’re transmitting. The properties on this object ensure the authenticity of the claim, and contain information such as the issuer (identifies the application making the call), issued-at time (when was this token issued?, expiration (when will this token expire/no longer be valid?), and any additional contextual information.</p>
-          <h3>Signature</h3>
-          <p>The signature is a super key piece of the JWT. The signature is what's used to verify the sender of the token and ensure that the message hasn't been changed anywhere along the way.</p>
-        </section>
-        <hr />
-        <section>
-          <h2><a name="Practice">Practice</a></h2>
-          <p>Let's try securing a single server-side endpoint with a JWT. We'll set up a simple express server and utilize the <a href="https://www.npmjs.com/package/jsonwebtoken">jsonwebtoken</a> npm library for generating and verifying a token that can be used to access our protected endpoint.</p> 
+          <h2><a name="Practice">Practice with Firebase</a></h2>
+          <p>We'll get some quick familiarity with the Firebase syntax and API, and see how the UI works when authenticating with Google through Firebase. We're going to create simple, single HTML file that has a sign in button that allows you to authenticate with Google. When you click the button again, it will sign you out.</p> 
           <h3>Step 1: Getting Started</h3>
           <ul>
-            <li>Create a new npm project and install <a href="https://www.npmjs.com/package/express">express</a>, <a href="https://www.npmjs.com/package/body-parser">body-parser</a> and <a href="https://www.npmjs.com/package/jsonwebtoken">jsonwebtoken</a></li>
-            <li>Copy <a href="https://gist.github.com/brittanystoroz/19275a98b183466955408b595457d3ef">this</a> boilerplate as your server.</li>
-            <li>Create an app variable called <code>secretKey</code> using <code>app.set</code> <em>(Note: You would not normally store an app secret in your server like this. Because this would be considered sensitive data, you would store it in an environment variable instead.)</em></li>
+            <li>Go to <a href="https://firebase.google.com/">Firebase</a> and click on "Go To Console" in the top right corner</li>
+            <li>Click "Add Project" and give it a name</li>
+            <li>You'll then be brought to a project management dashboard. Click on the 'Authentication' link in the left sidebar, and then click the 'Setup Signin Method' button.</li>
+            <li>Enable google authentication</li>
           </ul>
-          <h3>Step 2: Create an Authentication Endpoint</h3>
+          <h3>Step 2: Writing the Code</h3>
           <ul>
-            <li>This should be a <code>POST</code> request that accepts an <code>email</code> and an <code>appName</code>.</li>
-            <li>Within the request handler, use the jsontwebtoken library to <a href="https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback">sign a new token</a>. The payload should contain the email address and app name. If the email address ends in <code>@turing.io</code>, it should also contain an admin property set to <code>true</code>.</li>
-            <li>The JWT should expire in 48 hours.</li>
-            <li>The server should respond with a JSON object containing the generated token.</li>
-          </ul>
-          <h3>Step 3: Create <a href="http://expressjs.com/en/guide/using-middleware.html">Express Middleware</a></h3>
-          <ul>
-            <li>Create a new function called <code>checkAuth</code> to be used as middleware.</li>
-            <li>The <code>checkAuth</code> function should:
-              <ul>
-                <li>Check for a token that was sent through with the request</li>
-                <li>If no token exists, respond with a <code>403</code> and an error message that says 'You must be authorized to hit this endpoint.'</li>
-                <li>If a token <b>does</b> exist, <a href="https://www.npmjs.com/package/jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback">verify the token</a>.</li>
-                <li>If there is an error with the token, respond with a <code>403</code> and message that says 'Invalid token'.</li>
-                <li>If the decoded token contains <code>admin: true</code> in the payload, call the express <code>next()</code> helper to complete the request handler.</li>
-                <li>If the decoded token <b>does not</b> contain <code>admin: true</code> in the payload, respond with a <code>403</code> and an error message that says 'You must be an admin to hit this endpoint.'</li>
-              </ul>
-            <li>Apply your middleware function to the <code>PATCH</code> request so that only an admin can edit the status of a train line.</li>
-          </ul>
-          <h3>End Goal</h3>
-          <ul>
-            <li>Any user can request and receive a JWT</li>
-            <li>A user with a token that <b>is</b> an admin can edit the status of a train</li>
-            <li>A user with a token that <b>is not</b> an admin cannot edit the status of a train</li>
+            <li>Clone down <a href="https://gist.github.com/brittanystoroz/251de632b6cf9c5a92f087a46caf8bbc">this boilerplate</a></li>
+            <li>You don't need to create a new directory or npm project, but you do need to start up a server. You can do this really quickly with <code>python -m SimpleHTTPServer</code> in the terminal or by doing a global installation of the npm <a href="https://www.npmjs.com/package/http-server">http-server</a> module and running <code>http-server</code>.</li>
+            <li>There are comments throughout the file of things you need to do to get authentication working and links to where you'll find the solutions in the documentation</li>
           </ul>
         </section>
+
         <hr />
+
         <section>
           <h2><a name="Checks">Checks for Understanding</a></h2>
           <ul>
-            <li>What is a JWT?</li>
-            <li>In what scenarios is an API key useful?</li>
-            <li>Why might you use a JWT over an API key?</li>
-            <li>What are the three ways we can send a JWT to the server?</li>
-            <li>What are the three parts that make up the structure of a JWT?</li>
+            <li>What do we mean when we say something is an "Open Standard"?</li>
+            <li>What is the difference between authentication and authorization?</li>
+            <li>Describe the process of token-based authorization.</li>
+            <li>How would you implement OAuth for an application that requires Twitter access?</li>
           </ul>
         </section>
         <hr />
         <section>
           <h2><a name="Resources">Further Reading & Resources</a></h2>
           <ul>
-            <li><a href="https://jwt.io">JWT.io</a></li>
-            <li><a href="https://zapier.com/engineering/apikey-oauth-jwt">API Keys vs. JWTs vs. OAuth</a></li>
-            <li><a href="https://nordicapis.com/why-api-keys-are-not-enough/">Why API Keys Don't Equal Security</a></li>
-            <li><a href="https://medium.com/vandium-software/5-easy-steps-to-understanding-json-web-tokens-jwt-1164c0adfcec#.xp9snye3h">Understanding JWTs</a></li>
-          </ul>
-          <h3>Instructor Resources</h3>
-          <ul>
-            <li><a href="https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/jwt-server-implementation.js">Full server-side JWT implementation</a></li>
+            <li><a href="https://www.youtube.com/watch?v=LRNg4tDtrkE">OAuth 2.0 Video Series</a></li>
+            <li><a href="https://zapier.com/engineering/apikey-oauth-jwt/">API Keys vs. OAuth Tokens vs. JSON Web Tokens</a></li>
+            <li><a href="https://firebase.google.com/">Firebase</a></li>
+            <li><a href="https://auth0.com">Auth0</a></li>
           </ul>
         </section>
       </div>
