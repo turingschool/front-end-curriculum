@@ -16,6 +16,7 @@ exclude: [
   'README.md',
   'LICENSE',
   'CNAME',
+  'lessons/module-1/archive',
   'lessons/module-2/archive',
   'lessons/module-3/archive',
   'lessons/module-4/archive'
@@ -51,7 +52,6 @@ algolia:
     - _sass
     - _site
     - _templates
-    - archive
     - assets
     - calendars
     - challenges
