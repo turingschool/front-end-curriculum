@@ -18,7 +18,7 @@ The main goal of your application is to redirect a request at the shortened URL 
 
 A user can:
 
-* Create a folder to store shortened URLs in - the folder name *must be unique*
+* Create a folder to store shortened URLs in
 * Give the application a URL to be shortened and the folder that the URL should belong to 
 * Click on a shortened URL and be redirected to the original, long URL
 
