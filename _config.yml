@@ -53,6 +53,7 @@ algolia:
     - _site
     - _templates
     - assets
+    - books
     - calendars
     - challenges
     - independent-study

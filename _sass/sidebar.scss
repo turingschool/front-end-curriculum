@@ -109,3 +109,8 @@ $sidebar-color: rgb(245, 245, 245);
     flex-direction: column;
   }
 }
+
+.active-link {
+  background-color: lighten(#98a1a2, 20);
+  font-weight: 600;
+}
