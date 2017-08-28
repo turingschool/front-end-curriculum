@@ -175,7 +175,7 @@ $ npm init --scope=username
 
 Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
 * **name:** the default will be `@username/project-name`, you need to change "@username" to be your npm account username
-* **Version:** thing about what you read about [Semantic Versioning](http://semver.org/)
+* **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
 * **License:** ISC is fine, [but what is it?](http://semver.org/)
 
 One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
@@ -186,22 +186,23 @@ $ npm i mocha -D
 $ npm i chai -D
 ```
 
-In your `test.js` file include the following:
-
-```
-var chai = require('chai')
-var expect = chai.expect
-```
-
 Fun facts!
 
 `-D` is the same as `--save-dev`  
 `-S` is the same as `--save`
 
+
+In your `test.js` file include the following:
+
+```
+const chai = require('chai')
+const expect = chai.expect
+```
+
 In your `index.js` file include the following:
 
 ```
-function bubbleSort(array) {
+const bubbleSort = (array) => {
   for(let j = 0; j < array.length; j++) {
     for(let i = 0; i < array.length - 1; i++) {
       if(array[i] > array[i + 1]) {
@@ -217,7 +218,7 @@ function bubbleSort(array) {
 module.exports = bubbleSort;
 ```
 
-And now, the really hard part...
+**If** we were going to publish this, we'd do ...
 
 ```
 npm publish --access=public
@@ -231,6 +232,7 @@ Now unpublish your node module so we're not muddying up npm with a bunch of repe
 npm unpublish --force
 ```
 
+**But instead, we're going to do this ... **
 
 #### There's Another Way!
 
