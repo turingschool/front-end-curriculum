@@ -74,13 +74,13 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ## The Repos
 
-### [Vets.gov](https://github.com/department-of-veterans-affairs/vets-website)
+### [Hospital Run](https://github.com/HospitalRun/hospitalrun-frontend)
 
 **Potential Issues:**
 
-* [#3434](https://github.com/department-of-veterans-affairs/vets-website/issues/3434)
-* [#3274](https://github.com/department-of-veterans-affairs/vets-website/issues/3274)
-* [#5221](https://github.com/department-of-veterans-affairs/vets-website/issues/5221)
+* [#540](https://github.com/HospitalRun/hospitalrun-frontend/issues/540)
+* [#1068](https://github.com/HospitalRun/hospitalrun-frontend/issues/1068)
+* [#1147](https://github.com/HospitalRun/hospitalrun-frontend/issues/1147)
 
 ### [18F Crime Data](https://github.com/18F/crime-data-frontend)
 
