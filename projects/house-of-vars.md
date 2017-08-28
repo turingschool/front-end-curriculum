@@ -82,13 +82,13 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1068](https://github.com/HospitalRun/hospitalrun-frontend/issues/1068)
 * [#1147](https://github.com/HospitalRun/hospitalrun-frontend/issues/1147)
 
-### [18F Crime Data](https://github.com/18F/crime-data-frontend)
+### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
 
 **Potential Issues:**
 
-* [#1099](https://github.com/18F/crime-data-frontend/issues/1099)
-* [#990](https://github.com/18F/crime-data-frontend/issues/990)
-* [#23](https://github.com/18F/crime-data-frontend/issues/23)
+* [#1205](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1205)
+* [#1177](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1177)
+* [#1363](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1363)
 
 ### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
 
