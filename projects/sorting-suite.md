@@ -1,4 +1,4 @@
-d---
+---
 title: Sorting Suite
 ---
 
@@ -7,7 +7,7 @@ title: Sorting Suite
 Sorting algorithms are one of the common domains for studying Computer Science data structures and algorithms. They give us an opportunity to focus on algorithms of various complexity all solving a relatively simple problem.
 
 In this project, you are challenged to implement *four*
-fundamental sorting algorithms. Your final submission should include at least these six files:
+fundamental sorting algorithms. Your final submission should include at least these eight files:
 
 * `bubbleSort.js`
 * `bubbleSort-test.js`
@@ -230,14 +230,12 @@ insertionSort(["d", "b", "a", "c"])
 ## 3. Merge Sort
 
 Merge sort is the most complicated, quickest and fascinating of the three IMO. You can create a really interesting recursive solution.
-<!-- Merge sort is the most fascinating sorting algorithm of the three, IMO, because it uses a technique called recursion.
-Recursion was a total mind-trip for me when I learned it.
-Here is a video I made with the intent of introducing recursion in a much more gradual way:
-[Recursion Introduction](https://vimeo.com/24716767). -->
 
 ### Theory
 
 [Sorting Algorithms Video](https://vimeo.com/channels/sortalgorithms/15559012)
+
+[Merge Sort Chart](http://3.bp.blogspot.com/-WmOzCucMWaI/UxzUCnQslTI/AAAAAAAACLI/fjOMo-bUEbE/s1600/Merge+sort+algorithm+diagram.png).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/merge_sort).
 For a sweet line dancing example, [see this](https://www.youtube.com/watch?v=XaqR3G_NVoo)
@@ -306,10 +304,13 @@ mergeSort(["d", "b", "a", "c"])
 ## 4. Quick Sort
 With quick sort we take an array and choose one of the indexes as a pivot.
 We then want to move all the elements larger than the pivot to the right of the pivot
-and all the items smaller than the pivot to the left
+and all the items smaller than the pivot to the left.
 
+After moving all the elements to either side of the pivot we can then recursively quick sort the elements on either side of the pivot.
 
-pointer starts with the last index
+Example of one iteration.
+
+pivot starts with the last index
 p = array.length - 1
 ```
                            p
@@ -374,42 +375,10 @@ quickSort([1, 2]);
 quickSort([5, 8, 6, 9])
 ```
 
-## Evaluation Rubric
+## Evaluation
 
-### 1. Fundamental JavaScript & Style
+The evaluation will be pass/fail.
 
-* 4: Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are zero instances where an instructor would recommend taking a different approach.
-* 3: Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* 2: Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-* 1: Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
-* 0: Your client-side application does not function or the application does not make use of localStorage for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
+You will be need to be able to explain any of the four sorting algorithms using numbered cards.
 
-### 2. Test-Driven Development
-
-* 4: Application is broken into components which are well tested in both isolation and integration. Arrays of random numbers and letters are generated to test the maximum number of elements which the algorithm can sort.
-* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality. Arrays of random numbers are generated to test the maximum number of elements which the algorithm can sort.
-* 2: Application makes some use of tests, but the coverage is insufficient
-* 1: Application does not demonstrate strong use of TDD
-
-### 3. Encapsulation / Breaking Logic into Components
-
-* 4: Application is expertly divided into logical components each with a clear, single responsibility
-* 3: Application effectively breaks logical components apart but breaks the principle of SRP
-* 2: Application shows some effort to break logic into components, but the divisions are inconsistent or unclear
-* 1: Application logic shows poor decomposition with too much logic mashed together
-
-### 4. Functional Expectations
-
-* 4: Application meets all requirements, and implements one extension properly.
-* 3: Application meets all requirements as laid out per the specification.
-* 2: Application runs, but does not work properly, or does not meet specifications.
-* 1: Application does not run, crashes on start.
-
-### 5. Code Sanitation
-
-The output from ESLint shows…
-
-* 4 - Zero complaints
-* 3 - Five or fewer complaints
-* 2 - Six to ten complaints
-* 1 - More than ten complaints
+You will be need to write either quick sort or merge sort after explaining how they work.
