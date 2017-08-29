@@ -69,13 +69,32 @@
         <section>
           <h2><a name="Performance">Performance Strategies</a></h2>
           <h3>HTML: Reducing Render Blocking & Keeping a Tiny DOM</h3>
-          (script tags at the bottom, async keyword on js tags)
-          (render blocking CSS)
-          (tiny DOM tree)
+          <h4>CSS Render-Blocking</h4>
+          <p>Render-blocking resources mean that no further content will be rendered to the DOM until that resource has finished processing. CSS is considered a render-blocking resource. Why, then, do we put our CSS tags in the head of our HTML files?</p>
+          <p>The short answer is that we need to -- CSS is critical to displaying our content in a visually appropriate and meaningful manner. Rendering a bunch of content to the page with no concept of styling or heirarchy wouldn't be as easy to understand and mentally organize without those visual cues.</p>
+          <p>We can, however, take a couple steps to reduce the amount of CSS that blocks our rendering. When we have CSS that is only used conditionally - say for print styles or mobile devices - we can extract those out into their own files and use media attributes to denote that they should be non-blocking. For example:</p>
+          <code>
+            <link href="style.css" rel="stylesheet" />
+            <link href="print.css" rel="stylesheet" media="print" />
+            <link href="other.css" rel="stylesheet" media="(max-width: 480px) /">
+          </code>
+          <p>The two CSS tags with media attributes won't block the render of the rest of our DOM because they're marked as only being necessary during print or on a device with a max-width of 480px.</p>
+
+          <h4>JavaScript Render-Blocking</h4>
+          <p>Like CSS, JavaScript is also considered a render-blocking resource unless explicitly told not to be. We've previously learned to keep our JavaScript tags at the end of our body element for this exact reason. Generally we're using JavaScript for interactivity and DOM manipulation, which aren't possible until the DOM tree is rendered and painted to the screen, so there's no need to put them in the head tag.</p>
+          <p>When we put JavaScript inline in our HTML file, it actually completely blocks the parser. Because the browser doesn't know what the JavaScript is going to do to the page, it hands over complete control, pauses the parser, and lets the script do its thing. When we use a <code>script</code> tag to fetch an external JavaScript file, the behavior is even worse - not only is the parser blocked, but we also have to wait for that resource to be fetched from the network, which can add even more milliseconds onto our wait time.</p>
+          <p>One way to get around this and tell the browser to let the script execute only when it's ready is by using an <code>async</code> attribute:</p>
+          <code><script src="app.js" async></script></code>
+
+          <h4>Keep the DOM Tree Light</h4>
+          <p>When rendering the CSSOM and DOM, it's important to keep the DOM tree light and tiny. The more nodes you have, the more elements that need to be styled, sized and positioned before they can be painted to the page.</p>
+
           <h3>Network Requests: Reducing Count & Size</h3>
           (http 1 vs 2, queued/stalled resources)
+
           <h3>Images: Compression & Lazy Loading</h3>
           (CSS sprites, pngs and compression, lazy loading, proper sizing, lossy/lossless compression)
+
           <h3>Performant JavaScript</h3>
           (performant jquery)
           (v8)
@@ -98,6 +117,7 @@
           <h2><a name="Resources">Further Reading & Resources</a></h2>
           <ul>
             <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction">Render Tree Construction</a></li>
+            <li><a href="https://code.tutsplus.com/tutorials/10-ways-to-instantly-increase-your-jquery-performance--net-5551">Improving jQuery performance</a></li>
             <li><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-End Performance Checklist</a></li>
           </ul>
         </section>
