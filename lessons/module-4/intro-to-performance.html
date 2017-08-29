@@ -74,9 +74,9 @@
           <p>The short answer is that we need to -- CSS is critical to displaying our content in a visually appropriate and meaningful manner. Rendering a bunch of content to the page with no concept of styling or heirarchy wouldn't be as easy to understand and mentally organize without those visual cues.</p>
           <p>We can, however, take a couple steps to reduce the amount of CSS that blocks our rendering. When we have CSS that is only used conditionally - say for print styles or mobile devices - we can extract those out into their own files and use media attributes to denote that they should be non-blocking. For example:</p>
           <textarea readonly>
-            <link href="style.css" rel="stylesheet" />
-            <link href="print.css" rel="stylesheet" media="print" />
-            <link href="other.css" rel="stylesheet" media="(max-width: 480px) /">
+<link href="style.css" rel="stylesheet" />
+<link href="print.css" rel="stylesheet" media="print" />
+<link href="other.css" rel="stylesheet" media="(max-width: 480px) /">
           </textarea>
           <p>The two CSS tags with media attributes won't block the render of the rest of our DOM because they're marked as only being necessary during print or on a device with a max-width of 480px.</p>
 
@@ -85,7 +85,7 @@
           <p>When we put JavaScript inline in our HTML file, it actually completely blocks the parser. Because the browser doesn't know what the JavaScript is going to do to the page, it hands over complete control, pauses the parser, and lets the script do its thing. When we use a <code>script</code> tag to fetch an external JavaScript file, the behavior is even worse - not only is the parser blocked, but we also have to wait for that resource to be fetched from the network, which can add even more milliseconds onto our wait time.</p>
           <p>One way to get around this and tell the browser to let the script execute only when it's ready is by using an <code>async</code> attribute:</p>
           <textarea readonly>
-            <script src="app.js" async></script>
+<script src="app.js" async></script>
           </textarea>
 
           <h4>Keep the DOM Tree Light</h4>
