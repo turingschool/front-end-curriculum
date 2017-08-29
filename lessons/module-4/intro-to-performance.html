@@ -96,15 +96,15 @@
           <p>Many applications will have a build process and tooling in place that bundles files together - it concatenates your JavaScript files into a single file so that only one network request has to be made to get your JavaScript in place. This allows us to reduce the amount of network requests required to get our resources loaded. Not only does every trip to the server take some time to come back, but the more trips we have to make, the more likely we are to have some of our requests stalled or queued.</p>
 
           <h4>HTTP1 vs. HTTP2</h4>
-
-          <h4>Minifying Files</h4>
+          <p>With the current implementation of the HTTP protocol, requests for assets on the same server can be stalled if there are too many happening all at once. The max amount of requests an HTTP server can handle at a time is about 6. This means we need to make each request as tiny as possible so that it can come back faster and we can move onto the next ones. With HTTP2, this isn't a problem, but because this has been the way for so long, we've become accustomed to minifying our files to reduce the byte size of our requests.</p>
 
           <h3>Images: Compression & Lazy Loading</h3>
+          <p>If you've ever worked with Photoshop or some other image editing software, you likely ran into some different options for saving your images. A lot of these options are dependent on whether you're saving the image for print purposes or for web. The resolution images must be printed at for magazines has historically been much higher than that needed for the web, which also lead to larger file sizes.</p>
+          <p>A lot of the images you'll see on websites are .PNG or .JPGs. JPGs are good for photographs - they can be compressed without losing image quality (called lossless compression). PNGs are good for logos, icons, line drawings and text because they allow for transparency and smaller file sizes.</p>
+          <p>It's important not only to save your images with the appropriate resolutions and file formats, but also the correct sizing. You don't want to be scaling down a 2,000px wide image for a mobile viewport that can only handle 480. Make multiple copies of the image at different sizes for different viewports.</p>
 
-          <h4>Optimizing Images for Web</h4>
-          (lossy/lossless compression, proper sizing)
           <h4>Lazy Loading</h4>
-          (not loading images until they're needed)
+          <p>Another strategy for avoiding performance hits for images is called lazy loading. This means that you don't actually request an image until it's in the visible portion of the viewport. This relies on adding event listeners for scrolling the images into the viewport. Check out this code example on <a href="https://css-tricks.com/snippets/javascript/lazy-loading-images/">CSS-Tricks</a></p>
 
           <h3>Performant JavaScript</h3>
           (performant jquery)
