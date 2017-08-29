@@ -54,7 +54,7 @@ Excluding the two comments mentioned above, you must have both instructors revie
 Because this is a group project, you might be pairing to resolve a single issue. Just because one person is driving, doesn't mean they have to be the only one to get credit for the contribution. If you do submit a pull request, make sure to give your teammates credit! You can update the author on a commit with the following command:
 
 ```bash
-git command TK TK
+git commit -m "Fix some issue" --author="Author Name <authoremail@example.com>, Author 2 Name, <author2email@gmail.com>, Author3 Name <author3email@gmail.com>"
 ```
 
 ### Presentation
