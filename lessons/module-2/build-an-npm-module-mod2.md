@@ -239,7 +239,7 @@ npm unpublish --force
 You can actually import modules/packaged code from GitHub repos. It's as easy as typing:
 
 ```
-npm install [GitHub URL] --S
+npm install [GitHub URL] -S
 ```
 
 and then requiring a specific module in your js file as you would with any other module.
