@@ -57,12 +57,11 @@
 
           <h3>Vocabulary</h3>
           <ul>
-            <li><b>First Meaningful Paint:</b></li>
-            <li><b>Reflows:</b></li>
-            <li><b>Latency:</b></li>
-            <li><b>Perceptual Speed Index:</b></li>
-            <li><b>CPU:</b></li>
-            <li><b>Critical Request Chain:</b></li>
+            <li><b>First Meaningful Paint:</b> the time at with the primary content of the page is rendered and visible to the user. A 'paint' is when the pixels are actually rendered to the screen. This happens after the CSS and DOM trees are combined to compute the layout of each element.</li>
+            <li><b>Reflows:</b> when the layout (the exact position and size of each element within the viewport) is calculated. The output of this process is called the box model - it converts the relative position and size of each element into absolute pixels on the screen</li>
+            <li><b>Latency:</b> the delay before an operation or data transfer begins after a user interaction. This concerns how responsive your application is to user interactions - does the trigged event occur immediately after you click a button? Or is there a wait time before it gets kicked off?</li>
+            <li><b>Perceptual Speed Index:</b> a metric for determining how fast the contents of a page are visibly populated</li>
+            <li><b>CPU:</b> acronym for central processor (or central processing unit), the area where most calculations take place. In web apps, we can generate JavaScript CPU profiles that will tell us where most of our execution time is spent within our page's functions</li>
           </ul>
         </section>
         <hr />
@@ -98,6 +97,7 @@
         <section>
           <h2><a name="Resources">Further Reading & Resources</a></h2>
           <ul>
+            <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction">Render Tree Construction</a></li>
             <li><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-End Performance Checklist</a></li>
           </ul>
         </section>
