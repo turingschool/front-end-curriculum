@@ -4,6 +4,12 @@
 
 Big O notation is used in Computer Science to describe the performance or complexity of an algorithm. Big O specifically describes the worst-case scenario, and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.
 
+Big Ω (Omega) is the best performance.
+
+Big Θ (Theta) is the average performance.
+
+You can think about these as ratings for your algorithm. These ratings can communicate the amount of space and time you can expect your algorithm to need.
+
 #### Factors in determining complexity
 
 - Number of comparisons
