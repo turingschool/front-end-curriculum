@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Intro to Performance</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to Performance</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>General Web &raquo; Performance</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">Introduction</a></li>
+          <li><a href="#Performance">Performance Strategies</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Further Reading & Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>define key vocabulary for discussing performance</li>
+            <li>identify several strategies for making their applications more performant</li>
+            <li>articulate how and why particular strategies work to increase performance</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Introduction">Intro to Performance</a></h2>
+          <h3>Vocabulary</h3>
+          <ul>
+            <li><b>Latency:</b></li>
+            <li><b>First Meaningful Paint:</b></li>
+            <li><b>Perceptual Speed Index:</b></li>
+          </ul>
+
+          <div class="discuss">
+            <h4>Whiteboard</h4>
+            <p>What are some strategies you currently take to make your applications more performant?</p>
+          </div>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Performance">Performance Strategies</a></h2>
+          <h3>HTML: Reducing Render Blocking & Keeping a Tiny DOM</h3>
+          (script tags at the bottom, async keyword on js tags)
+          (render blocking CSS)
+          (tiny DOM tree)
+          <h3>Network Requests: Reducing Count & Size</h3>
+          (http 1 vs 2, queued/stalled resources)
+          <h3>Images: Compression & Lazy Loading</h3>
+          (CSS sprites, pngs and compression, lazy loading, proper sizing)
+          <h3>Performant JavaScript</h3>
+          (performant jquery)
+          (v8)
+          (speed tests/benchmarks)
+        </section>
+
+        <hr />
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What are three strategies you use to make your applications more performant?</li>
+            <li>What is lazy loading and when is it used?</li>
+            <li>Why is it important to reduce the number of network requests your application makes?</li>
+            <li>Why is it important to put your script tags at the bottom of your HTML?</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-End Performance Checklist</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
