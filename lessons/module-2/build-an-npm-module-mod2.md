@@ -232,7 +232,7 @@ Now unpublish your node module so we're not muddying up npm with a bunch of repe
 npm unpublish --force
 ```
 
-**But instead, we're going to do this ... **
+**But instead, we're going to do this:**
 
 #### There's Another Way!
 
