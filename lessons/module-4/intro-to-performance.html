@@ -1,0 +1,145 @@
+<html>
+  <head>
+    <title>Intro to Performance</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}textarea{resize:none;width:95%;height:75px;font-size:16px;color:#fc4b60;font-family:monospace;}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to Performance</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>General Web &raquo; Performance</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">Introduction</a></li>
+          <li><a href="#Performance">Performance Strategies</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Further Reading & Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>define key vocabulary for discussing performance</li>
+            <li>identify several strategies for making their applications more performant</li>
+            <li>articulate how and why particular strategies work to increase performance</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Introduction">Intro to Performance</a></h2>
+          <p>Performance considerations in applications are often overlooked or ignored until there's an actual problem. Browsers have become so fast at parsing and rendering our front-end code, it's easy to build an application that <i>seems</i> fast, without really putting in thoughtful effort. The problem with waiting until there's a performance issue to address is that by that time, your application is likely quite large and complex, and more difficult to refactor.</p>
+          <p>If we take a more proactive approach, we'll find that our applications are more scalable, more compatible across platforms, and, of course, faster. While you may not notice your application is slow, even cutting off mere milliseconds from load times can make a significant difference when interacting with your application.
+
+          <div class="discuss">
+            <h4>Discuss</h4>
+            <p>What are some strategies you currently take to make your applications more performant?</p>
+          </div>
+
+          <p>We'll talk about more performance strategies in just a minute, but recognize that there are already things you are doing to increase performance in your applications, like bundling and minifying files. Strategies like this are so built-in to the development process that it's easy to forget they are in place for performance reasons.</p>
+
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>In the 'Audits' panel of Chrome Canary dev tools, pick a large website or application you frequent. (e.g. nytimes.com, nhl.com, etc.) Run a performance audit on the site and read through the results. Write down all the words or phrases you are unfamiliar with.</p>
+          </div>
+
+          <h3>Vocabulary</h3>
+          <ul>
+            <li><b>First Meaningful Paint:</b> the time at with the primary content of the page is rendered and visible to the user. A 'paint' is when the pixels are actually rendered to the screen. This happens after the CSS and DOM trees are combined to compute the layout of each element.</li>
+            <li><b>Reflows:</b> when the layout (the exact position and size of each element within the viewport) is calculated. The output of this process is called the box model - it converts the relative position and size of each element into absolute pixels on the screen</li>
+            <li><b>Latency:</b> the delay before an operation or data transfer begins after a user interaction. This concerns how responsive your application is to user interactions - does the trigged event occur immediately after you click a button? Or is there a wait time before it gets kicked off?</li>
+            <li><b>Perceptual Speed Index:</b> a metric for determining how fast the contents of a page are visibly populated</li>
+            <li><b>CPU:</b> acronym for central processor (or central processing unit), the area where most calculations take place. In web apps, we can generate JavaScript CPU profiles that will tell us where most of our execution time is spent within our page's functions</li>
+          </ul>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Performance">Performance Strategies</a></h2>
+          <h3>HTML: Reducing Render Blocking & Keeping a Tiny DOM</h3>
+          <h4>CSS Render-Blocking</h4>
+          <p>Render-blocking resources mean that no further content will be rendered to the DOM until that resource has finished processing. CSS is considered a render-blocking resource. Why, then, do we put our CSS tags in the head of our HTML files?</p>
+          <p>The short answer is that we need to -- CSS is critical to displaying our content in a visually appropriate and meaningful manner. Rendering a bunch of content to the page with no concept of styling or heirarchy wouldn't be as easy to understand and mentally organize without those visual cues.</p>
+          <p>We can, however, take a couple steps to reduce the amount of CSS that blocks our rendering. When we have CSS that is only used conditionally - say for print styles or mobile devices - we can extract those out into their own files and use media attributes to denote that they should be non-blocking. For example:</p>
+          <textarea readonly>
+<link href="style.css" rel="stylesheet" />
+<link href="print.css" rel="stylesheet" media="print" />
+<link href="other.css" rel="stylesheet" media="(max-width: 480px) /">
+          </textarea>
+          <p>The two CSS tags with media attributes won't block the render of the rest of our DOM because they're marked as only being necessary during print or on a device with a max-width of 480px.</p>
+
+          <h4>JavaScript Render-Blocking</h4>
+          <p>Like CSS, JavaScript is also considered a render-blocking resource unless explicitly told not to be. We've previously learned to keep our JavaScript tags at the end of our body element for this exact reason. Generally we're using JavaScript for interactivity and DOM manipulation, which aren't possible until the DOM tree is rendered and painted to the screen, so there's no need to put them in the head tag.</p>
+          <p>When we put JavaScript inline in our HTML file, it actually completely blocks the parser. Because the browser doesn't know what the JavaScript is going to do to the page, it hands over complete control, pauses the parser, and lets the script do its thing. When we use a <code>script</code> tag to fetch an external JavaScript file, the behavior is even worse - not only is the parser blocked, but we also have to wait for that resource to be fetched from the network, which can add even more milliseconds onto our wait time.</p>
+          <p>One way to get around this and tell the browser to let the script execute only when it's ready is by using an <code>async</code> attribute:</p>
+          <textarea readonly>
+<script src="app.js" async></script>
+          </textarea>
+
+          <h4>Keep the DOM Tree Light</h4>
+          <p>When rendering the CSSOM and DOM, it's important to keep the DOM tree light and tiny. The more nodes you have, the more elements that need to be styled, sized and positioned before they can be painted to the page.</p>
+
+          <h3>Network Requests: Reducing Count & Size</h3>
+          <p>One of the more expensive processes in our applications are making network requests. They're unavoidable, but we can do a lot to lessen the toll they take on the performance of our apps.</p>
+          <p>Many applications will have a build process and tooling in place that bundles files together - it concatenates your JavaScript files into a single file so that only one network request has to be made to get your JavaScript in place. This allows us to reduce the amount of network requests required to get our resources loaded. Not only does every trip to the server take some time to come back, but the more trips we have to make, the more likely we are to have some of our requests stalled or queued.</p>
+
+          <h4>HTTP1 vs. HTTP2</h4>
+          <p>With the current implementation of the HTTP protocol, requests for assets on the same server can be stalled if there are too many happening all at once. The max amount of requests an HTTP server can handle at a time is about 6. This means we need to make each request as tiny as possible so that it can come back faster and we can move onto the next ones. With HTTP2, this isn't a problem, but because this has been the way for so long, we've become accustomed to minifying our files to reduce the byte size of our requests.</p>
+
+          <h3>Images: Compression & Lazy Loading</h3>
+          <p>If you've ever worked with Photoshop or some other image editing software, you likely ran into some different options for saving your images. A lot of these options are dependent on whether you're saving the image for print purposes or for web. The resolution images must be printed at for magazines has historically been much higher than that needed for the web, which also lead to larger file sizes.</p>
+          <p>A lot of the images you'll see on websites are .PNG or .JPGs. JPGs are good for photographs - they can be compressed without losing image quality (called lossless compression). PNGs are good for logos, icons, line drawings and text because they allow for transparency and smaller file sizes.</p>
+          <p>It's important not only to save your images with the appropriate resolutions and file formats, but also the correct sizing. You don't want to be scaling down a 2,000px wide image for a mobile viewport that can only handle 480. Make multiple copies of the image at different sizes for different viewports.</p>
+
+          <h4>Lazy Loading</h4>
+          <p>Another strategy for avoiding performance hits for images is called lazy loading. This means that you don't actually request an image until it's in the visible portion of the viewport. This relies on adding event listeners for scrolling the images into the viewport. Check out this code example on <a href="https://css-tricks.com/snippets/javascript/lazy-loading-images/">CSS-Tricks</a></p>
+
+          <h3>Performant JavaScript</h3>
+          <ul>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment">Document Fragments</a></li>
+            <li><a href="https://jsperf.com/for-vs-find">JSPerf Benchmarks</a></li>
+          </ul>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What are three strategies you use to make your applications more performant?</li>
+            <li>What is lazy loading and when is it used?</li>
+            <li>Why is it important to reduce the number of network requests your application makes?</li>
+            <li>Why is it important to put your script tags at the bottom of your HTML?</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-tree-construction">Render Tree Construction</a></li>
+            <li><a href="https://code.tutsplus.com/tutorials/10-ways-to-instantly-increase-your-jquery-performance--net-5551">Improving jQuery performance</a></li>
+            <li><a href="https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/">Writing Performant JavaScript</a></li>
+            <li><a href="https://www.smashingmagazine.com/2016/12/front-end-performance-checklist-2017-pdf-pages/">Front-End Performance Checklist</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
