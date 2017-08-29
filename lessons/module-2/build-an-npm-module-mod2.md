@@ -203,34 +203,46 @@ In your `index.js` file include the following:
 
 ```
 const bubbleSort = (array) => {
-  for(let j = 0; j < array.length; j++) {
-    for(let i = 0; i < array.length - 1; i++) {
-      if(array[i] > array[i + 1]) {
-        let bigNum = array[i]
-        array[i] = array[i + 1]
-        array[i + 1] = bigNum
+  for (let j = 0; j < array.length; j++) {
+    for (let i = 0; i < array.length - 1; i++) {
+      if (array[i] > array[i + 1]) {
+        [ array[i], array[i + 1] ] = [ array[i + 1], array[i] ]
       }
     }
   }
-  return array
-}
+  return array;
+};
 
-module.exports = bubbleSort;
+const insertionSort = (array) => {
+  for (let j = 0; j < array.length; j++) {
+    for (let i = j - 1; i >= 0; i--) {
+      if (array[i + 1] < array[i]) {
+        [ array[i], array[i + 1] ] = [ array[i + 1], array[i] ]
+      }
+    }
+  }
+  return array;
+};
+
+module.exports = {
+  bubbleSort,
+  insertionSort
+};
 ```
 
 **If** we were going to publish this, we'd do ...
 
-```
-npm publish --access=public
-```
+  ```
+  npm publish --access=public
+  ```
 
-Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
+  Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
 
-Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
+  Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
 
-```
-npm unpublish --force
-```
+  ```
+  npm unpublish --force
+  ```
 
 **But instead, we're going to do this:**
 
