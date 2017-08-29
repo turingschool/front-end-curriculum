@@ -42,17 +42,28 @@
           <h2><a name="Introduction">Intro to Performance</a></h2>
           <p>Performance considerations in applications are often overlooked or ignored until there's an actual problem. Browsers have become so fast at parsing and rendering our front-end code, it's easy to build an application that <i>seems</i> fast, without really putting in thoughtful effort. The problem with waiting until there's a performance issue to address is that by that time, your application is likely quite large and complex, and more difficult to refactor.</p>
           <p>If we take a more proactive approach, we'll find that our applications are more scalable, more compatible across platforms, and, of course, faster. While you may not notice your application is slow, even cutting off mere milliseconds from load times can make a significant difference when interacting with your application.
-          <h3>Vocabulary</h3>
-          <ul>
-            <li><b>Latency:</b></li>
-            <li><b>First Meaningful Paint:</b></li>
-            <li><b>Perceptual Speed Index:</b></li>
-          </ul>
 
           <div class="discuss">
             <h4>Discuss</h4>
             <p>What are some strategies you currently take to make your applications more performant?</p>
           </div>
+
+          <p>We'll talk about more performance strategies in just a minute, but recognize that there are already things you are doing to increase performance in your applications, like bundling and minifying files. Strategies like this are so built-in to the development process that it's easy to forget they are in place for performance reasons.</p>
+
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>In the 'Audits' panel of Chrome Canary dev tools, pick a large website or application you frequent. (e.g. nytimes.com, nhl.com, etc.) Run a performance audit on the site and read through the results. Write down all the words or phrases you are unfamiliar with.</p>
+          </div>
+
+          <h3>Vocabulary</h3>
+          <ul>
+            <li><b>First Meaningful Paint:</b></li>
+            <li><b>Reflows:</b></li>
+            <li><b>Latency:</b></li>
+            <li><b>Perceptual Speed Index:</b></li>
+            <li><b>CPU:</b></li>
+            <li><b>Critical Request Chain:</b></li>
+          </ul>
         </section>
         <hr />
 
@@ -65,7 +76,7 @@
           <h3>Network Requests: Reducing Count & Size</h3>
           (http 1 vs 2, queued/stalled resources)
           <h3>Images: Compression & Lazy Loading</h3>
-          (CSS sprites, pngs and compression, lazy loading, proper sizing)
+          (CSS sprites, pngs and compression, lazy loading, proper sizing, lossy/lossless compression)
           <h3>Performant JavaScript</h3>
           (performant jquery)
           (v8)
