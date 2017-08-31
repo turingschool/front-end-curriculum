@@ -6,8 +6,8 @@ module: 2
 ---
 
 <style type="text/css">
-.discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}
-.discuss h4,section h2{margin:0}
+.discuss{padding:20px !important;font-size:13px !important;background-color:#fefefe;border:1px solid #eee !important}
+.discuss h4{margin:0 !important}
 </style>
 
 ### Goals For This Lesson:
@@ -419,6 +419,200 @@ See if you can set a text color and background-color to the following div using 
     color: rgba($red, $green, $blue, 1);
     background-color: rgba($red, $green, $blue, 1);
   }
+```
+
+## Mixins and Functions
+
+A mixin allows you to define a set of styles along with the option to pass in arguments that you can include in HTML elements, classes or IDs. Mixins are great for reducing repetitive styles in your CSS.
+
+To use:
+
+1. You name them with @mixin name(arguments) { style }.
+2. To include them you use @include name.
+
+```
+/ Example
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { 
+  @include border-radius(10px); 
+}
+```
+    
+
+<div class="discuss">
+  <h4>Practice</h4>
+  <p>Head over to the <a href="">CSS Background Gradient Generator</a> and grab some of the generated code to put in a codepen. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
+</div>
+
+---
+
+A similar feature is a Sass function, with the difference being that a function returns a single value. These are very useful in doing logic in your styles. You are already using some of the built in Sass functions such as rgba(200,0,100,.5) or darken(#500, %10). You name them with @function and set the return value with @return.
+
+```
+@function make-pinker($value) {
+  @return $value + rgb(100,0,0);
+}
+
+p {
+    background: make-pinker(gray);
+}
+```
+
+**Together**
+
+Let's make a function that returns the correct width based on our target size and it's container:
+
+```
+@function find-percent($target, $container) {
+  @return ($target / $container) * 100%;
+}
+
+div {
+  width: find-percent(760px, 1000px);
+}
+```
+
+
+[Solution](https://codepen.io/atideman/pen/QKJmaO)
+
+## Extend
+
+Extend allows you to inherit properties from other classes and IDs. Think of as parent styles -- short, green eyes, big feet. Their children and grandchildren have the same base styles but with new age flair and coolness of their own.
+
+```
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+```
+
+Compiles to:
+
+```  
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+```
+  
+[Check it out](https://codepen.io/atideman/pen/QKJmaO)
+
+## Control directives
+
+### @if
+
+The if directive returns any styles if the directive does not result in false or null.
+
+```
+// For debugging    
+@mixin debug-text($true) {
+  @if $true {
+    color: red;
+  }
+}
+
+body {
+  @include debug-text(true)
+}
+  
+// Useful mixin using If and else statement
+@mixin top-or-bottom($tb) {
+  position: absolute;
+
+  // Declare top or bottom
+  @if $tb == top {
+    top: 20px;
+  }
+
+  @else if $tb == bottom {
+    bottom: 20px;
+  }
+}
+
+.lower-text {
+  @include top-or-bottom(bottom);
+}
+```
+
+
+### @each
+
+The each directive loops through a list or map of variables. This is handy in creating accurate class names with specific values:
+
+```    
+@each $cohort in 1505, 1511, 1610, 1612 {
+   .#{$cohort}-avatar {
+       background-image: url('/img/#{$cohort}.png');
+   }
+}
+
+$align-list: center, left, right;
+
+@each $align in $align-list {
+  .txt-#{$align} {
+    text-align: $align;
+  }
+}
+```
+
+### @for
+
+Output styles in a loop. Uses a variable name to track the loop. You can use from x through y to include the ending number or from x to y to not include it. You can loop backwards by making the first number larger than the second. 
+
+```
+@for $i from 1 through 12 {
+  .col-#{$i} { width: 100/12 * $i;}
+}
+```
+
+### @while
+
+Output styles until the desired condition returns false.
+
+```
+$z:1;
+
+@while $z < 9 {
+    .text-col-#{$z} { 
+      font-weight: 100 * $z;
+    }
+    $z: $z + 1;
+};
 ```
 
 
