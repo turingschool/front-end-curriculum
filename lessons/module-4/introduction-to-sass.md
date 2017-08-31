@@ -205,8 +205,6 @@ a {
   </nav>
 ```
 
-(Possible solution is at the bottom of the file)
-
 Let's say that your client wants everything thats red to be teal.  Pretend that your CSS file is huge. Isn't is awesome that you only have to change the CSS in one tiny little place?
 
 ## Color Functions
@@ -348,56 +346,6 @@ $content-width: 900px;
 .innerContent {
   width: 300px;
 }
-```
-
-This is super useful for mentally organizing what you are trying to calculate. Take the following example as a demonstration of how using math and clear variable names can help clarify your stylesheets.
-
-##### SCSS
-
-```css
-$width-content: 900px;
-$padding-narrow-container: 25px;
-
-.main-section {
-  padding: $padding-narrow-container;
-  width: $width-content - $padding-narrow-container*2
-}
-```
-
-##### CSS
-
-```css
-.main-section{
-  padding: 20px;
-  width: 850px;
-}
-```
-
-We can combine our color super-powers and math to do some awesome stuff too!
-
-Lets generate random colors with Sass.
-
-In Sass, there's a random function `random()` which unlike JavaScript starts its random number value range at 1.
-
-See if you can set a text color and background-color to the following div using random colors.
-
-```css
-.random-color-element {
-  //INSERT CODE HERE
-
-
-}
-
-//SOLUTION:
-
-  $red: random(256)-1;
-  $green: random(256)-1;
-  $blue: random(256)-1;
-
-  .main-content {
-    color: rgba($red, $green, $blue, 1);
-    background-color: rgba($red, $green, $blue, 1);
-  }
 ```
 
 ## Mixins and Functions
