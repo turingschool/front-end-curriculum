@@ -412,38 +412,12 @@ See if you can set a text color and background-color to the following div using 
 ```
 
 
-### SOLUTIONS
-
-#### Nesting Practice Solution:
-
-##### SCSS
-
-```css
-$color-text-light: #fff;
-$color-text-bold:   #f00;
-$color-text-default: black;
-$font-link-default: Arial, Tahoma, sans-serif;
-$box-shadow-default: 1px 1px 30px #000;
-
-.nested-magic {
-  a {
-    color: $color-text-default;
-    font-family: $font-link-default;
-;
-    &:hover { color: $color-text-bold }
-  }
-  button {
-    &:hover {
-      color: $color-text-light;
-      box-shadow: $box-shadow-default;
-    }
-  }
-}
-```
 
 ## Resources
 
 - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 - [Sass to CSS Translator](http://www.sassmeister.com/)
-- [SASS Syntax Highlighting for Atom](https://atom.io/packages/atom-syntax-highlighting-for-sass)
-- [ATOM package for showing CSS colors in your editor](https://atom.io/packages/pigments)
+
+### Instructor Resources
+
+- [Practice Solutions](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/intro-to-sass.md)
