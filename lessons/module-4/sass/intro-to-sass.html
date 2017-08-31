@@ -1,0 +1,99 @@
+<html>
+  <head>
+    <title>Intro to SASS</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to SASS</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>CSS &raquo; Preprocessors</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">Introduction</a></li>
+          <li><a href="#Features">Features</a></li>
+          <li><a href="#ProsCons">Pros & Cons</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>articulate what SASS is and why it's useful</li>
+            <li>write SASS in a semantic way</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Introduction">Intro to SASS</a></h2>
+          <p>Pre-processor: think babel!</p>
+          <h3>SASS vs. SCSS</h3>
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>Take a look at the SCSS in <a href="https://codepen.io/the_ruther4d/pen/ormbi">this codepen</a>. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.</p>
+          </div>
+
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Features">Features</a></h2>
+          <h3>Variables</h3>
+          <h3>Nesting</h3>
+          <h3>Color Functions</h3>
+          <h3>Math Functions</h3>
+          <h3>Mixins</h3>
+          <h3>Extend</h3>
+          <h3>Control Directives</h3>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="ProsCons">Advantages & Disadvantages</a></h2>
+          <p>Downsides pretty minimal but there's this big list anyway: https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/</p>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What is a preprocessor?</li>
+            <li>What are three features of SASS that can make your code more DRY?</li>
+            <li>What are considered some disadvantages of using a CSS preprocessor></li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">Color Functions Documentation</a></li>
+            <li><a href="http://www.sassmeister.com/">Sass to CSS Translator</a></li>
+          </ul>
+          <h3>Instructor Resources</h3>
+          <ul>
+            <li><a href="https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/intro-to-sass.md">Practice Solutions</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
