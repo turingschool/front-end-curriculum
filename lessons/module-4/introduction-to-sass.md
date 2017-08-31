@@ -8,7 +8,8 @@ module: 2
 <style type="text/css">
 .discuss{padding:20px !important;font-size:13px !important;background-color:#fefefe;border:1px solid #eee !important}
 .discuss h4{margin:0 !important}
-body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',sans-serif, color: #555;}#content a:link, #content a:visited{text-decoration:none;color:#05c2d1}, #content { color: #555; }
+body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',sans-serif, color: #555;}#content a:link, #content a:visited{text-decoration:none;color:#05c2d1}, #content { color: #555 !important; }
+hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 </style>
 
 
@@ -47,6 +48,8 @@ Although both Sass and SCSS are both still viable languages to use, movement has
 CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY.
 
 Some of the cool tricks include defining variables that can be peppered across multiple CSS files, nesting elements to visibly reflect the HTML element relationships, using math equations to adjust sizes and values, adjusting colors using more intuitive language like "darken" and "lighten", and bundling groups of styles together to easily reference throughout your CSS...to name a few.
+
+<hr />
 
 ## Variables
 
@@ -109,6 +112,8 @@ body {
   color: $favorite-text-color;
 }
 ```
+
+<hr />
 
 ## Nesting
 
@@ -175,6 +180,8 @@ a {
 ```
 
 Let's say that your client wants everything thats red to be teal.  Pretend that your CSS file is huge. Isn't is awesome that you only have to change the CSS in one tiny little place?
+
+<hr />
 
 ## Color Functions
 
@@ -293,6 +300,8 @@ desaturate(hsla(240, 100%, 50%, 1), 80%);
 }
 ```
 
+<hr />
+
 ## Math
 
 Another cool trick in Sass is using Math to handle simple changes to numerical values.
@@ -316,6 +325,8 @@ $content-width: 900px;
   width: 300px;
 }
 ```
+
+<hr />
 
 ## Mixins and Functions
 
@@ -360,22 +371,8 @@ p {
 }
 ```
 
-**Together**
+<hr />
 
-Let's make a function that returns the correct width based on our target size and it's container:
-
-```
-@function find-percent($target, $container) {
-  @return ($target / $container) * 100%;
-}
-
-div {
-  width: find-percent(760px, 1000px);
-}
-```
-
-
-[Solution](https://codepen.io/atideman/pen/QKJmaO)
 
 ## Extend
 
@@ -427,6 +424,8 @@ Compiles to:
 ```
   
 [Check it out](https://codepen.io/atideman/pen/QKJmaO)
+
+<hr />
 
 ## Control directives
 
@@ -511,6 +510,8 @@ $z:1;
 };
 ```
 
+
+<hr />
 
 
 ## Resources
