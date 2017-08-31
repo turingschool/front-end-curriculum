@@ -8,7 +8,7 @@ module: 2
 <style type="text/css">
 .discuss{padding:20px !important;font-size:13px !important;background-color:#fefefe;border:1px solid #eee !important}
 .discuss h4{margin:0 !important}
-body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',sans-serif, color: #555;}#content a:link, #content a:visited{text-decoration:none;color:#05c2d1}, #content { color: #555 !important; }
+body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',sans-serif, color: #555;}.content a:link, .content a:visited{text-decoration:none;color:#05c2d1}, .content p { color: #555 !important; }
 hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 </style>
 
