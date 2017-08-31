@@ -8,7 +8,9 @@ module: 2
 <style type="text/css">
 .discuss{padding:20px !important;font-size:13px !important;background-color:#fefefe;border:1px solid #eee !important}
 .discuss h4{margin:0 !important}
+body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif, color: #555;}a:link,a:visited{text-decoration:none;color:#05c2d1}
 </style>
+
 
 ## Intro to Sass
 
@@ -22,9 +24,7 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 <img width="50%" src="../../assets/images/lessons/sass/sass-syntax.png" />
 
-With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now.
-
-Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
+With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
 ### SCSS
 
@@ -34,16 +34,6 @@ SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced wit
   <h4>Practice</h4>
   <p>Take a look at the SCSS in <a href="https://codepen.io/the_ruther4d/pen/ormbi">this codepen</a>. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.</p>
 </div>
-
-```
-$primary-color: hotpink;
-
-.my-element {
-    color: $primary-color;
-    width: 100%;
-    overflow: hidden;
-}
-```
 
 Even if you've never worked with SCSS before, this syntax is a little bit easier to understand since it is so much closer to the languages that we use every day. Variables look like jQuery variables, things are nested in these guys: `{}`, wrong indentation won't break your code, and assignments happen using `:` just like in normal CSS.
 
