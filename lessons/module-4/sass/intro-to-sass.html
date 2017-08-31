@@ -44,12 +44,17 @@
           <p>A <b>pre-processor</b> is a tool that will process your code and compile it to a new format that adheres to the requirements of your environment. Think babel - this compiles our fancy ES6 syntax back down to ES5 so that it can be supported in older browsers.</p>
           <h3>Sass vs. SCSS vs. CSS</h3>
           <p>Sass was originally part of another preprocessor called Haml. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules. Like so:</p>
-          <img src="../../../assets/images/lessons/sass/sass-syntax.png" />
+          <img width="50%" src="../../../assets/images/lessons/sass/sass-syntax.png" />
           <p>Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.</p>
           <div class="discuss">
             <h4>Practice</h4>
             <p>Take a look at the SCSS in <a href="https://codepen.io/the_ruther4d/pen/ormbi">this codepen</a>. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.</p>
           </div>
+          <p>Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:</p>
+          <ul>
+            <li>All modern CSS is valid SCSS. That means that you can rename an entire .css file .scss and nothing will yell at you. Such is not the case for Sass.</li>
+            <li>There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you’ll make Jhun cry, BUT through the tears your stylesheet will still function properly.</li>
+          </ul>
 
         </section>
         <hr />
