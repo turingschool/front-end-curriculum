@@ -12,13 +12,11 @@ module: 2
 
 ## Intro to Sass
 
-### What is Sass?
-
 Sass stands for Syntactically Awesome StyleSheets.
 
-*Interesting Note: Sass is never in uppercase. SCSS is always uppercase. There's even a website about it:*  [SassnotSASS.com](SassnotSASS.com)
+<!-- *Interesting Note: Sass is never in uppercase. SCSS is always uppercase. There's even a website about it:*  [SassnotSASS.com](SassnotSASS.com) -->
 
-Think of it Sass just like CSS but with a grab back of extra weapons like variables, functions, and organizational wizardry.
+Sass is just like CSS but with a grab bag of extra weapons like variables, functions, and organizational wizardry.
 
 As an general definition, Sass is a *preprocessor* written in Ruby that compiles SCSS into CSS3.
 
