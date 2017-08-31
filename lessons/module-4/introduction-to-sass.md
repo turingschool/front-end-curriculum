@@ -10,27 +10,7 @@ module: 2
 .discuss h4{margin:0 !important}
 </style>
 
-### Goals For This Lesson:
-
-1. Get a general understanding of Sass and SCSS
-2. Understand:
-  - Variables  
-  - Nesting  
-  - Color Functions  
-  - Math Functions  
-
-### Things You Need
-
-1. Your Brain
-2. Some *sass*...bahahaha.
-
-### Relevant Readings
-
-- [Why Sass?](http://alistapart.com/article/why-sass)
-- [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
-- [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
-
-## Understanding Sass
+## Intro to Sass
 
 ### What is Sass?
 
@@ -621,6 +601,9 @@ $z:1;
 
 - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 - [Sass to CSS Translator](http://www.sassmeister.com/)
+- [Why Sass?](http://alistapart.com/article/why-sass)
+- [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
+- [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
 
 ### Instructor Resources
 
