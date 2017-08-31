@@ -35,7 +35,7 @@ If we structure our data in a way that it becomes easier to access all of a sudd
 
 Whats really great about a prefix trie is that every parent node will typically have a node for every possible answer. So in our case if we're talking about a prefix trie each node can have up to 26 nodes (each for letter in the alphabet). If I was looking to add names to my trie it would look like this.
 
-		  [ root ]
+           [ root ]
             /     \
            .       .
           /         \
@@ -44,8 +44,8 @@ Whats really great about a prefix trie is that every parent node will typically 
       [m . . n]   [m  . z]
        |     |     |    |
       [y]   [n]   [m]  [r]  
-             |     |    |   
-            [a]   [a]  [a]  
+       |     |     |   
+      [a]   [a]   [a]  
           /  |  \      
         [b . i . l]
          |   |   |
@@ -68,8 +68,7 @@ Everybody uses auto complete.You can love it or you can hate it but ultimately y
 
 ## Phase 1
 
-The first thing your `trie` should be able to do is take in a word.
-Once the words are placed into the `trie` it should also offer some suggestions.
+The first thing your `trie` should be able to do is take in a word. It should also keep a count of how many words have been inserted.
 
 ```
 import CompleteMe from "./lib/complete_me"
@@ -82,19 +81,29 @@ completion.insert("pizza")
 completion.count()
 => 1
 
-completion.insert('suh')
+completion.insert('apple')
 
 completion.count()
 => 2
-
-completion.suggest("piz")
-=> ["pizza"]
-
-completion.suggest('s')
-=> ["suh"]
 ```
 
 ## Phase 2
+Once the words are placed into the `trie` it should be able to offer some suggestions based on a word prefix.
+
+```
+completion.suggest("piz")
+=> ["pizza"]
+
+completion.insert("pizzeria")
+
+completion.suggest("piz")
+=> ["pizza", "pizzeria"]
+
+completion.suggest('a')
+=> ["apple"]
+```
+
+## Phase 3
 
 Our Trie won't be very useful without a good dataset to populate it. Our computers ship with a special
 file containing a list of standard dictionary words.
@@ -105,18 +114,16 @@ contains 235886 words:
 
 ```
 $ cat /usr/share/dict/words | wc -l
-235886
-
+=> 235886
 ```
 
 We are going to load that data set into our trie.
 
 ```
 const text = "/usr/share/dict/words"
+const dictionary = fs.readFileSync(text).toString().trim().split('\n')
 
-var completion = new CompleteMe
-
-let dictionary = fs.readFileSync(text).toString().trim().split('\n')
+const completion = new CompleteMe()
 
 completion.populate(dictionary)
 
@@ -127,7 +134,7 @@ completion.suggest("piz")
 => ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
 ```
 
-## Phase 3
+## Phase 4
 
 The common gripe about autocomplete systems is that they give us
 suggestions that are technically valid but not at all what we wanted.
@@ -145,7 +152,6 @@ to influence future selections to make.
 Here's what that interaction model should look like:
 
 ```
-
 const CompleteMe = require ("./lib/complete_me")
 const text       = "/usr/share/dict/words"
 
@@ -165,11 +171,11 @@ completion.suggest("piz")
 
 ```
 
-## Phase 4
+## Phase 5
 
 Next week you will create a Weather App that needs an autocomplete feature.
 Package your complete-me trie in a node module so that you can import it into
-future projects.
+future projects. (Note: don't publish to npm, you can install your package from github)
 
 ## Extensions
 
