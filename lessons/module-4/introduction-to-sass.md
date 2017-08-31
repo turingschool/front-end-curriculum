@@ -12,36 +12,23 @@ module: 2
 
 ## Intro to Sass
 
-Sass stands for Syntactically Awesome StyleSheets.
+Sass stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. It is a CSS preprocessor that converts SCSS (Sassy CSS) into vanilla CSS.
 
-<!-- *Interesting Note: Sass is never in uppercase. SCSS is always uppercase. There's even a website about it:*  [SassnotSASS.com](SassnotSASS.com) -->
+A pre-processor is a tool that will process your code and compile it to a new format that adheres to the requirements of your environment. Think babel - this compiles our fancy ES6 syntax back down to ES5 so that it can be supported in older browsers.
 
-Sass is just like CSS but with a grab bag of extra weapons like variables, functions, and organizational wizardry.
+### Sass vs. SCSS vs. CSS
 
-As an general definition, Sass is a *preprocessor* written in Ruby that compiles SCSS into CSS3.
+Sass was originally part of another preprocessor called Haml. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules. Like so:
 
-Originally it was part of another preprocessor called `Haml`. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules.
-
-Here's an example of old-school Sass:
-
-```
-!primary-color= hotpink
-
-.my-css-class
-    color= !primary-color
-    width= 100%
-    overflow= hidden
-```
+<img width="50%" src="../../assets/images/lessons/sass/sass-syntax.png" />
 
 With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now.
 
-Developers wanted a syntax that was more familiar to and compatible with vanilla `CSS`. Which brings us to...
+Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
 ### SCSS
 
-SCSS stands for Sassy CSS (...seriously).
-
-In May, 2010 `SCSS` was introduced with more recognizable syntax.
+SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced with more recognizable syntax.
 
 <div class="discuss">
   <h4>Practice</h4>
@@ -60,20 +47,12 @@ $primary-color: hotpink;
 
 Even if you've never worked with SCSS before, this syntax is a little bit easier to understand since it is so much closer to the languages that we use every day. Variables look like jQuery variables, things are nested in these guys: `{}`, wrong indentation won't break your code, and assignments happen using `:` just like in normal CSS.
 
-Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for many reasons.
+Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:
 
 1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. Such is not the case for Sass.
 2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make Jhun cry, BUT through the tears your stylesheet will still function properly.
 
-### What do we mean by "Sass is a Preprocessor"?
-
-At the most basic level, a preprocessor is a computer program that takes one type of data and converts it to another type of data.
-
-As developers we are lucky to have some amazing modern tools that help make writing code easier. Unfortunately, computers are still big dumb animals that need very specific instructions.
-
-Sass makes CSS awesome, but we need a processor to do some middle work for us and translate it into the normal CSS that the browser can understand.
-
-### Why use Sass in the first place?
+### Why would we use Sass?
 
 CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY.
 
