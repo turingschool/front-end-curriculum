@@ -7,6 +7,7 @@ module: 2
 
 <style type="text/css">
 .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}
+.discuss h4,section h2{margin:0}
 </style>
 
 ### Goals For This Lesson:
