@@ -23,9 +23,9 @@ module: 4
   </section>
   <section>
     <ul>
-      <li>allows us to run code on a separate thread that will not lock up or interfere with any other client-side javascript</li>
-      <li>is an API dependent on Service Workers</li>
       <li>allows us to defer an action to a later point in time when a user has a more stable network connection</li>
+      <li>is an API dependent on Service Workers</li>
+      <li>allows us to run code on a separate thread that will not lock up or interfere with any other client-side javascript</li>
     </ul>
   </section>
 </section>
