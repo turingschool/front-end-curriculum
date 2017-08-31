@@ -162,12 +162,12 @@ a {
 <div class="discuss">
 <h4>Practice</h4>
 <p>Write SCSS for the following HTML using nesting & variables, following the following criteria:</p>
-
-- Link text font family should be Arial, Tahoma, or sans-serif.
-- On hover, make the link text red, and the button text white.
-- On hover, make the button have a box shadow of some kind.
-- For practice, define all styles as variables.
-
+<ul>
+  <li>Link text font family should be Arial, Tahoma, or sans-serif.</li>
+  <li>On hover, make the link text red, and the button text white.</li>
+  <li>On hover, make the button have a box shadow of some kind.</li>
+  <li>For practice, define all styles as variables.</li>
+</ul>
 </div>
 
 ```html
