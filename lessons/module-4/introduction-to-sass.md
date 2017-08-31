@@ -5,6 +5,10 @@ tags: css, sass, scss
 module: 2
 ---
 
+<style type="text/css">
+.discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}
+</style>
+
 ### Goals For This Lesson:
 
 1. Get a general understanding of Sass and SCSS
@@ -59,6 +63,11 @@ Developers wanted a syntax that was more familiar to and compatible with vanilla
 SCSS stands for Sassy CSS (...seriously).
 
 In May, 2010 `SCSS` was introduced with more recognizable syntax.
+
+<div class="discuss">
+  <h4>Practice</h4>
+  <p>Take a look at the SCSS in <a href="https://codepen.io/the_ruther4d/pen/ormbi">this codepen</a>. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.</p>
+</div>
 
 ```
 $primary-color: hotpink;

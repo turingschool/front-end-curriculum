@@ -53,8 +53,12 @@
           <p>Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:</p>
           <ul>
             <li>All modern CSS is valid SCSS. That means that you can rename an entire .css file .scss and nothing will yell at you. Such is not the case for Sass.</li>
-            <li>There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you’ll make Jhun cry, BUT through the tears your stylesheet will still function properly.</li>
+            <li>There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you’ll make Jhun cry, BUT even through the tears your stylesheet will still function properly.</li>
           </ul>
+
+          <h3>Why would we use Sass?</h3>
+          <p>CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY.</p>
+          <p>Some of the cool tricks include defining variables that can be peppered across multiple CSS files, nesting elements to visibly reflect the HTML element relationships, using math equations to adjust sizes and values, adjusting colors using more intuitive language like “darken” and “lighten”, and bundling groups of styles together to easily reference throughout your CSS…to name a few.</p>
 
         </section>
         <hr />
@@ -62,6 +66,9 @@
         <section>
           <h2><a name="Features">Features</a></h2>
           <h3>Variables</h3>
+          <p>One of the most obvious and immediately useful features of Sass is the ability to define variables.</p>
+          <p>As developers we strive to write DRY, clean code, and storing values for CSS styles as variables contributes to that. This means we can make color changes in one place, and the change will be reflected anywhere that the variable is referenced.
+          <p>Variables are defined by a $ immediately preceding the name of the variable (like jQuery!), and a colon separating the name of the variable from the value. For example: <code>$favorite-text-color: chartreuse;</code></p>
           <h3>Nesting</h3>
           <h3>Color Functions</h3>
           <h3>Math Functions</h3>
