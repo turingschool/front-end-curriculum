@@ -513,6 +513,9 @@ $z:1;
 
 <hr />
 
+## Disadvantages of Using a CSS Preprocessor
+
+The downsides of using a CSS preprocessor are pretty minimal, but here's a giant list [anyway](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
 
 ## Resources
 
