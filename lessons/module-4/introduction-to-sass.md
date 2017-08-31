@@ -427,7 +427,7 @@ To use:
 
 <div class="discuss">
   <h4>Practice</h4>
-  <p>Head over to the <a href="">CSS Background Gradient Generator</a> and grab some of the generated code to put in a codepen. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
+  <p>Head over to the <a href="http://www.colorzilla.com/gradient-editor/">CSS Background Gradient Generator</a> and grab some of the generated code to put in a codepen. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
 </div>
 
 ---
