@@ -5,91 +5,51 @@ tags: css, sass, scss
 module: 2
 ---
 
-### Goals For This Lesson:
+<style type="text/css">
+.discuss{padding:20px !important;font-size:13px !important;background-color:#fefefe;border:1px solid #eee !important}
+.discuss h4{margin:0 !important}
+body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',sans-serif, color: #555;}.content a:link, .content a:visited{border-bottom:0px !important;text-decoration:none;color:#05c2d1}.content p { color: #555 !important; }
+hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
+</style>
 
-1. Get a general understanding of Sass and SCSS
-2. Understand:
-  - Variables  
-  - Nesting  
-  - Color Functions  
-  - Math Functions  
 
-### Things You Need
+## Intro to Sass
 
-1. Your Brain
-2. Some *sass*...bahahaha.
+Sass stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. It is a CSS preprocessor that converts SCSS (Sassy CSS) into vanilla CSS.
 
-### Relevant Readings
+A pre-processor is a tool that will process your code and compile it to a new format that adheres to the requirements of your environment. Think babel - this compiles our fancy ES6 syntax back down to ES5 so that it can be supported in older browsers.
 
-- [Why Sass?](http://alistapart.com/article/why-sass)
-- [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
-- [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+### Sass vs. SCSS vs. CSS
 
-## Understanding Sass
+Sass was originally part of another preprocessor called Haml. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules. Like so:
 
-### What is Sass?
+<img width="50%" src="../../assets/images/lessons/sass/sass-syntax.png" />
 
-Sass stands for Syntactically Awesome StyleSheets.
-
-*Interesting Note: Sass is never in uppercase. SCSS is always uppercase. There's even a website about it:*  [SassnotSASS.com](SassnotSASS.com)
-
-Think of it Sass just like CSS but with a grab back of extra weapons like variables, functions, and organizational wizardry.
-
-As an general definition, Sass is a *preprocessor* written in Ruby that compiles SCSS into CSS3.
-
-Originally it was part of another preprocessor called `Haml`. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules.
-
-Here's an example of old-school Sass:
-
-```
-!primary-color= hotpink
-
-.my-css-class
-    color= !primary-color
-    width= 100%
-    overflow= hidden
-```
-
-With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now.
-
-Developers wanted a syntax that was more familiar to and compatible with vanilla `CSS`. Which brings us to...
+With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
 ### SCSS
 
-SCSS stands for Sassy CSS (...seriously).
+SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced with more recognizable syntax.
 
-In May, 2010 `SCSS` was introduced with more recognizable syntax.
-
-```
-$primary-color: hotpink;
-
-.my-element {
-    color: $primary-color;
-    width: 100%;
-    overflow: hidden;
-}
-```
+<div class="discuss">
+  <h4>Practice</h4>
+  <p>Take a look at the SCSS in <a href="https://codepen.io/the_ruther4d/pen/ormbi">this codepen</a>. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.</p>
+</div>
 
 Even if you've never worked with SCSS before, this syntax is a little bit easier to understand since it is so much closer to the languages that we use every day. Variables look like jQuery variables, things are nested in these guys: `{}`, wrong indentation won't break your code, and assignments happen using `:` just like in normal CSS.
 
-Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for many reasons.
+Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:
 
 1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. Such is not the case for Sass.
 2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make Jhun cry, BUT through the tears your stylesheet will still function properly.
 
-### What do we mean by "Sass is a Preprocessor"?
-
-At the most basic level, a preprocessor is a computer program that takes one type of data and converts it to another type of data.
-
-As developers we are lucky to have some amazing modern tools that help make writing code easier. Unfortunately, computers are still big dumb animals that need very specific instructions.
-
-Sass makes CSS awesome, but we need a processor to do some middle work for us and translate it into the normal CSS that the browser can understand.
-
-### Why use Sass in the first place?
+### Why would we use Sass?
 
 CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY.
 
 Some of the cool tricks include defining variables that can be peppered across multiple CSS files, nesting elements to visibly reflect the HTML element relationships, using math equations to adjust sizes and values, adjusting colors using more intuitive language like "darken" and "lighten", and bundling groups of styles together to easily reference throughout your CSS...to name a few.
+
+<hr />
 
 ## Variables
 
@@ -153,6 +113,8 @@ body {
 }
 ```
 
+<hr />
+
 ## Nesting
 
 Nesting makes representing relationships between elements in HTML possible in CSS.
@@ -197,14 +159,16 @@ a {
 }
 ```
 
-##### Practice
-
-Write SCSS for the following HTML using nesting & variables, following the following criteria:
-
-1. Link text font family should be Arial, Tahoma, or sans-serif.
-1. On hover, make the link text red, and the button text white.
-2. On hover, make the button have a box shadow of some kind.
-3. For practice, define all styles as variables.
+<div class="discuss">
+<h4>Practice</h4>
+<p>Write SCSS for the following HTML using nesting & variables, following the following criteria:</p>
+<ul>
+  <li>Link text font family should be Arial, Tahoma, or sans-serif.</li>
+  <li>On hover, make the link text red, and the button text white.</li>
+  <li>On hover, make the button have a box shadow of some kind.</li>
+  <li>For practice, define all styles as variables.</li>
+</ul>
+</div>
 
 ```html
   <nav class="nested-magic">
@@ -216,9 +180,9 @@ Write SCSS for the following HTML using nesting & variables, following the follo
   </nav>
 ```
 
-(Possible solution is at the bottom of the file)
-
 Let's say that your client wants everything thats red to be teal.  Pretend that your CSS file is huge. Isn't is awesome that you only have to change the CSS in one tiny little place?
+
+<hr />
 
 ## Color Functions
 
@@ -337,6 +301,8 @@ desaturate(hsla(240, 100%, 50%, 1), 80%);
 }
 ```
 
+<hr />
+
 ## Math
 
 Another cool trick in Sass is using Math to handle simple changes to numerical values.
@@ -361,62 +327,205 @@ $content-width: 900px;
 }
 ```
 
-This is super useful for mentally organizing what you are trying to calculate. Take the following example as a demonstration of how using math and clear variable names can help clarify your stylesheets.
+<hr />
 
-##### SCSS
+## Mixins and Functions
 
-```css
-$width-content: 900px;
-$padding-narrow-container: 25px;
+A mixin allows you to define a set of styles along with the option to pass in arguments that you can include in HTML elements, classes or IDs. Mixins are great for reducing repetitive styles in your CSS.
 
-.main-section {
-  padding: $padding-narrow-container;
-  width: $width-content - $padding-narrow-container*2
+To use:
+
+1. You name them with @mixin name(arguments) { style }.
+2. To include them you use @include name.
+
+```
+/ Example
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { 
+  @include border-radius(10px); 
+}
+```
+    
+
+<div class="discuss">
+  <h4>Practice</h4>
+  <p>Head over to the <a href="http://www.colorzilla.com/gradient-editor/">CSS Background Gradient Generator</a> and grab some of the generated code to put in a codepen. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
+</div>
+
+---
+
+A similar feature is a Sass function, with the difference being that a function returns a single value. These are very useful in doing logic in your styles. You are already using some of the built in Sass functions such as rgba(200,0,100,.5) or darken(#500, %10). You name them with @function and set the return value with @return.
+
+```
+@function make-pinker($value) {
+  @return $value + rgb(100,0,0);
+}
+
+p {
+    background: make-pinker(gray);
 }
 ```
 
-##### CSS
+<hr />
 
-```css
-.main-section{
-  padding: 20px;
-  width: 850px;
+
+## Extend
+
+Extend allows you to inherit properties from other classes and IDs. Think of as parent styles -- short, green eyes, big feet. Their children and grandchildren have the same base styles but with new age flair and coolness of their own.
+
+```
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
 }
 ```
 
-We can combine our color super-powers and math to do some awesome stuff too!
+Compiles to:
 
-Lets generate random colors with Sass.
-
-In Sass, there's a random function `random()` which unlike JavaScript starts its random number value range at 1.
-
-See if you can set a text color and background-color to the following div using random colors.
-
-```css
-.random-color-element {
-  //INSERT CODE HERE
-
-
+```  
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
 }
 
-//SOLUTION:
+.success {
+  border-color: green;
+}
 
-  $red: random(256)-1;
-  $green: random(256)-1;
-  $blue: random(256)-1;
+.error {
+  border-color: red;
+}
 
-  .main-content {
-    color: rgba($red, $green, $blue, 1);
-    background-color: rgba($red, $green, $blue, 1);
+.warning {
+  border-color: yellow;
+}
+```
+  
+[Check it out](https://codepen.io/atideman/pen/QKJmaO)
+
+<hr />
+
+## Control directives
+
+### @if
+
+The if directive returns any styles if the directive does not result in false or null.
+
+```
+// For debugging    
+@mixin debug-text($true) {
+  @if $true {
+    color: red;
   }
+}
+
+body {
+  @include debug-text(true)
+}
+  
+// Useful mixin using If and else statement
+@mixin top-or-bottom($tb) {
+  position: absolute;
+
+  // Declare top or bottom
+  @if $tb == top {
+    top: 20px;
+  }
+
+  @else if $tb == bottom {
+    bottom: 20px;
+  }
+}
+
+.lower-text {
+  @include top-or-bottom(bottom);
+}
 ```
 
 
+### @each
+
+The each directive loops through a list or map of variables. This is handy in creating accurate class names with specific values:
+
+```    
+@each $cohort in 1505, 1511, 1610, 1612 {
+   .#{$cohort}-avatar {
+       background-image: url('/img/#{$cohort}.png');
+   }
+}
+
+$align-list: center, left, right;
+
+@each $align in $align-list {
+  .txt-#{$align} {
+    text-align: $align;
+  }
+}
+```
+
+### @for
+
+Output styles in a loop. Uses a variable name to track the loop. You can use from x through y to include the ending number or from x to y to not include it. You can loop backwards by making the first number larger than the second. 
+
+```
+@for $i from 1 through 12 {
+  .col-#{$i} { width: 100/12 * $i;}
+}
+```
+
+### @while
+
+Output styles until the desired condition returns false.
+
+```
+$z:1;
+
+@while $z < 9 {
+    .text-col-#{$z} { 
+      font-weight: 100 * $z;
+    }
+    $z: $z + 1;
+};
+```
+
+
+<hr />
+
+## Disadvantages of Using a CSS Preprocessor
+
+The downsides of using a CSS preprocessor are pretty minimal, but here's a giant list [anyway](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
 
 ## Resources
 
 - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 - [Sass to CSS Translator](http://www.sassmeister.com/)
+- [Why Sass?](http://alistapart.com/article/why-sass)
+- [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
+- [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+- [Cooler things you can do with Sass](https://gist.github.com/jareware/4738651)
 
 ### Instructor Resources
 
