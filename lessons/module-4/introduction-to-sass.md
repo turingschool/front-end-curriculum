@@ -524,6 +524,7 @@ The downsides of using a CSS preprocessor are pretty minimal, but here's a giant
 - [Why Sass?](http://alistapart.com/article/why-sass)
 - [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
 - [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+- [Cooler things you can do with Sass](https://gist.github.com/jareware/4738651)
 
 ### Instructor Resources
 
