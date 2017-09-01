@@ -155,8 +155,7 @@ So, let's send a message over the wire when a user connects.
 ```js
 // server.js
 io.on('connection', (socket) => {
-  console.log('Someone has connected.');
-  socket.emit('message', { user: 'turingbot', text: 'Hello, world!' });
+  socket.emit('message', `A new user, ${Date.now()}, has connected`);
 });
 ```
 
@@ -166,21 +165,6 @@ Like everything with WebSockets, this is a two-part affair. The server is now em
 // public/application.js
 socket.on('message', (message) => {
   console.log('Something came along on the "message" channel:', message);
-});
-```
-
-Super cool. You did the thing! Let's shoot some stuff over the wire on a regular interval.
-
-```js
-// server.js
-io.on('connection', (socket) => {
-  let interval = setInterval(() => {
-    socket.emit('message', { user: 'turingbot', text: 'I am a banana.' });
-  }, 1000);
-
-  socket.on('disconnect', () => {
-    clearInterval(interval);
-  });
 });
 ```
 
@@ -199,8 +183,8 @@ WebSockets are a two-way street. We can send something back to the server over `
 socket.on('connect', () => {
   console.log('You have connected!');
   socket.send({
-    username: 'yournamehere',
-    text: 'I did the thing.'
+    username: 'Bob Loblaw',
+    text: 'Check out my law blog.'
   });
 });
 ```
@@ -211,12 +195,10 @@ Let's also write a listener on the server.
 // server.js
 io.on('connection', (socket) => {
 
-  let interval = setInterval(() => {
-    socket.emit('message', {user: 'turingbot', text: 'I am a banana.'});
-  }, 1000);
+  socket.emit('message', `A new user, ${Date.now()}, has connected`);
 
   socket.on('message', (message) => {
-    console.log(message);
+    console.log(`The new user's name is ${message.username}, and his message is: ${message.text}`);
   });
 
   socket.on('disconnect', () => {
