@@ -281,11 +281,11 @@ There are also some helpful methods for seeing how many clients are currently co
 * When a user disconnects. Broadcast a message to all of the other clients connected announcing that someone new has disconnected.
 * When a message comes in from a user. Broadcast it out to all users.
 
-## Pair Project
+<!-- ## Pair Project
 
 You're going to build a small chat room (like [this one][ch]) using Socket.io and jQuery.
 Users should be able to fill out a little form, which will send their message over the
-WebSocket to the server, which will broadcast it out to all of the connected clients.
+WebSocket to the server, which will broadcast it out to all of the connected clients. -->
 
 [ch]: https://fullstack-denver.herokuapp.com/websockets/
 
