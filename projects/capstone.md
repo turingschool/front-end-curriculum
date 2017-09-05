@@ -5,9 +5,9 @@ module: 4
 
 ## Goals
 
-By the end of this session we will have established Capstone projects that'll guide your last two weeks in the program. It's your final project which means it's your last opportunity to build something your really proud of and can show off for your portfolio. It's also the last time you will get to work with your cohort-mates and master your workflow before becoming a professional developer. Take risks, be creative, work nicely with your team and build something useful for others.
+By the end of this session we will have established Capstone projects that'll guide your last two weeks in the program. It's your final project which means it's your last opportunity to build something you're really proud of and can show off for your portfolio. It's also the last time you will get to work with your cohort-mates and master your workflow before becoming a professional developer. Take risks, be creative, work nicely with your team and build something useful for others.
 
-The project is due on Wednesday, June 7th.
+The project is due on Wednesday of Week 6.
 
 ### Past Capstones
 * [Ian and Graham's We the People Native](https://github.com/ianlancaster/we-the-people-native)

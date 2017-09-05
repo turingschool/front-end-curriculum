@@ -155,8 +155,7 @@ So, let's send a message over the wire when a user connects.
 ```js
 // server.js
 io.on('connection', (socket) => {
-  console.log('Someone has connected.');
-  socket.emit('message', { user: 'turingbot', text: 'Hello, world!' });
+  socket.emit('message', `A new user, ${Date.now()}, has connected`);
 });
 ```
 
@@ -166,21 +165,6 @@ Like everything with WebSockets, this is a two-part affair. The server is now em
 // public/application.js
 socket.on('message', (message) => {
   console.log('Something came along on the "message" channel:', message);
-});
-```
-
-Super cool. You did the thing! Let's shoot some stuff over the wire on a regular interval.
-
-```js
-// server.js
-io.on('connection', (socket) => {
-  let interval = setInterval(() => {
-    socket.emit('message', { user: 'turingbot', text: 'I am a banana.' });
-  }, 1000);
-
-  socket.on('disconnect', () => {
-    clearInterval(interval);
-  });
 });
 ```
 
@@ -199,8 +183,8 @@ WebSockets are a two-way street. We can send something back to the server over `
 socket.on('connect', () => {
   console.log('You have connected!');
   socket.send({
-    username: 'yournamehere',
-    text: 'I did the thing.'
+    username: 'Bob Loblaw',
+    text: 'Check out my law blog.'
   });
 });
 ```
@@ -211,12 +195,10 @@ Let's also write a listener on the server.
 // server.js
 io.on('connection', (socket) => {
 
-  let interval = setInterval(() => {
-    socket.emit('message', {user: 'turingbot', text: 'I am a banana.'});
-  }, 1000);
+  socket.emit('message', `A new user, ${Date.now()}, has connected`);
 
   socket.on('message', (message) => {
-    console.log(message);
+    console.log(`The new user's name is ${message.username}, and his message is: ${message.text}`);
   });
 
   socket.on('disconnect', () => {
@@ -281,11 +263,11 @@ There are also some helpful methods for seeing how many clients are currently co
 * When a user disconnects. Broadcast a message to all of the other clients connected announcing that someone new has disconnected.
 * When a message comes in from a user. Broadcast it out to all users.
 
-## Pair Project
+<!-- ## Pair Project
 
 You're going to build a small chat room (like [this one][ch]) using Socket.io and jQuery.
 Users should be able to fill out a little form, which will send their message over the
-WebSocket to the server, which will broadcast it out to all of the connected clients.
+WebSocket to the server, which will broadcast it out to all of the connected clients. -->
 
 [ch]: https://fullstack-denver.herokuapp.com/websockets/
 
