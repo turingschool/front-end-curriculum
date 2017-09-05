@@ -71,10 +71,9 @@ Everybody uses auto complete.You can love it or you can hate it but ultimately y
 The first thing your `trie` should be able to do is take in a word. It should also keep a count of how many words have been inserted.
 
 ```
-import CompleteMe from "./lib/complete_me"
-const text = "/usr/share/dict/words"
+import Trie from "./lib/Trie"
 
-var completion = new CompleteMe
+var completion = new Trie()
 
 completion.insert("pizza")
 
