@@ -1,0 +1,25 @@
+.card-container {
+  padding: 0;
+}
+
+.card {
+  display: inline-block;
+  border: 1px solid grey;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  list-style: none;
+  height: 300px;
+  width: 200px;
+  margin: 10px;
+  padding: 10px;
+  vertical-align: text-top;
+  text-align: center;
+}
+
+.card-icon {
+  display: block;
+  width: 5em;
+  height: 5em;
+  stroke-width: 0;
+  stroke: cyan;
+  fill: cyan;
+}
