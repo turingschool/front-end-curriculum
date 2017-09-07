@@ -148,7 +148,7 @@ it probably makes sense to recommend that as their first suggestion.
 Your library should support a `select` method
 which takes a substring and the selected suggestion. You
 will need to record this selection in your trie and use it
-to influence future selections to make.
+to influence future suggestions.
 
 Here's what that interaction model should look like:
 
@@ -165,7 +165,7 @@ completion.populate(dictionary)
 completion.suggest("piz")
 => ["pize", "pizza", "pizzeria", "pizzicato", "pizzle", ...]
 
-completion.select(pizzeria")
+completion.select("pizzeria")
 
 completion.suggest("piz")
 => ["pizzeria", "pize", "pizza", "pizzicato", "pizzle", ...]
