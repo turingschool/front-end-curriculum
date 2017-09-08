@@ -89,7 +89,7 @@ And finally we'll wrap it up with a few review questions, from the instructor, a
 
 ### Reset v. Normalize CSS Files & Idiomatic CSS
 
-* Start with the [Reset vs Normalize](http://frontend.turing.io/lessons/reset-vs-normalize.html) lesson
+* Start with the [Reset vs Normalize](http://frontend.turing.io/lessons/module-1/reset-vs-normalize) lesson
 * What are the differences Reset v. Normalize files and when/why would they matter to us as FE Devs?
 * Who are the creators of normalize and why should we care?
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc.
@@ -110,7 +110,7 @@ And finally we'll wrap it up with a few review questions, from the instructor, a
 ### Performance & Organization
 
 * Start with the [CSS Performance & Organization](http://frontend.turing.io/independent-study/css-performance-and-organization.html) lesson from the FE curriculum independent study section
-* Revisit the concept of specificity from the [CSS 1](http://localhost:4000/lessons/module-1/css-1.html) lesson
+* Revisit the concept of specificity from the [CSS 1](http://frontend.turing.io/lessons/module-1/css-1) lesson
 * How does the browser handle conflicting CSS rules?
 * When writing CSS, what sorts of things does a front end dev need to consider for performance (remember - always want things to read/render/perform FASTER)
 * Are there any good "rules of thumb" to remember as you construct your CSS?
