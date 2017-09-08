@@ -146,7 +146,7 @@ consistently selects "pizza" in response to completions for "pizz",
 it probably makes sense to recommend that as their first suggestion.
 
 Your library should support a `select` method
-which takes a substring and the selected suggestion. You
+which takes a suggested word. You
 will need to record this selection in your trie and use it
 to influence future suggestions.
 
