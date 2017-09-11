@@ -27,10 +27,10 @@ Your app should have at a minimum the following components.
 - Current Weather
 - 7 Hour Forecast
 - 10 Day Forecast
-- Card (used in 7 hour and 10 day) 
+- Card (used in 7 hour and 10 day)
 
 ## Design Requirements
-Your Readme should include wireframes of your app. 
+Your Readme should include wireframes of your app.
 
 ## Phase one
 
