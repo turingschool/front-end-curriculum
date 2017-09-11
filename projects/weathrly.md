@@ -18,11 +18,15 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 ## Requirements
 
+Your weather underground API key should not be stored on github. Store it in a seperate file. This file should be added to your `.gitignore` file.
+
 ## Phase one
 
-* Your application should have a welcome page that greets the user. The welcome page has an input field that allows the user to submit a location (the location should work with both a zip code and city and state).
+* Your application should have a welcome page that greets the user. The welcome page has a search component.
 
-* Once the desired location is submitted the Application should display
+The search component consists of an input field and a submit button that allows the user to search for a location (the location should work with both a zip code and city/state).
+
+* Once the desired location is submitted a current weather component should display with the following information
   * the name of the current city
   * the current condition
   * the current day
@@ -37,16 +41,19 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 ## Phase two
 
-* The application should have a 7 hour weather forecast
-   * For each hour it should display an image that reflects the weather
-   * For each hour it should display the projected temperature and the hour
+* The application should have a 7 hour weather forecast component. Each hour should be a card component and should display
+   * the hour
+   * an image that reflects the weather
+   * the projected high and low temperature
 
 * Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive.
 
 ## Phase three
 
-* The application should show a 10 day forecast
-  * Each day should display the Name of the day, an Image reflecting the weather condition and the High and Low for each day.
+* The application should have a 10 day forecast component. Each day should be a card component and should display
+  * the name of the day
+  * an image that reflects the weather
+  * the projected high and low temperature
 
 ## Phase four
 
