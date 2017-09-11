@@ -22,6 +22,7 @@ Your weather underground API key should not be stored on github. Store it in a s
 
 Your app should have at a minimum the following components.
 
+- App
 - Welcome
 - Search
 - Current Weather
