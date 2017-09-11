@@ -20,6 +20,18 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 Your weather underground API key should not be stored on github. Store it in a seperate file. This file should be added to your `.gitignore` file.
 
+Your app should have at a minimum the following components.
+
+- Welcome
+- Search
+- Current Weather
+- 7 Hour Forecast
+- 10 Day Forecast
+- Card (used in 7 hour and 10 day) 
+
+## Design Requirements
+Your Readme should include wireframes of your app. 
+
 ## Phase one
 
 * Your application should have a welcome page that greets the user. The welcome page has a search component.
@@ -65,6 +77,8 @@ The search component consists of an input field and a submit button that allows 
 * If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
    * For each hour it should display an image that reflects the weather
    * For each hour it should display the projected temperature and the hour
+
+* Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
 
 * The application is fully accessible.
    * The application can be used without a mouse
