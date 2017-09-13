@@ -57,7 +57,7 @@ The search component consists of an input field and a submit button that allows 
 * The application should have a 7 hour weather forecast component. Each hour should be a card component and should display
    * the hour
    * an image that reflects the weather
-   * the projected high and low temperature
+   * the projected temperature
 
 * Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive.
 
