@@ -29,7 +29,8 @@ Your application should have the following functionality. A user should be able 
   * A folder can hold many saved palettes (a one-to-many relationship)
   * The saved folder should persist in your backend database
 * Save a generated palette to a project folder
-  * The saved palette should appear in the folder as a link - when you click the link, the colors in the palette generator change to show the saved palette colors
+  * The saved palette should appear in the folder with the name of the palette (specified by the user) and the saved palette colors
+  * When you click on the name or colors in the saved palette, the palette generator should show the colors of that saved palette
   * The saved palette should persist in your backend database
 * Delete a palette from a project folder, which removes it from the page and database
 * Never need to refresh the page to see new information
@@ -41,6 +42,23 @@ In addition to the functional requirement, on a separate dedicated git branch, g
 **Backend:** build using Express, knex, and PostgreSQL. Server-side testing should be done using mocha, chai, and chai-http. There should be one client-side route (`'/'`), and other endpoints should be API endpoints (`'api/v1/...'`). Each API endpoint should respond with JSON-formatted data.
 
 **Frontend:** build using vanilla JavaScript or **jQuery** (you cannot use React or other libraries for this project - we want to keep the client-side code as simple as possible to reduce complexity and focus on the backend).
+
+**Project File Structure:** Here is how we would like you to structure your project files.
+
+```
+palette-picker
+|__ .gitignore
+|__ server.js
+|__ node_modules
+|__ public
+|  |__ index.html
+|  |__ css
+|  |  |__ styles.css
+|  |  |__ other-stylesheets.css
+|  |__ js
+|  |  |__ scripts.js
+|  |  |__ other-scripts.js
+```
 
 ## Extensions
 
