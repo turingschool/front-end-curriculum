@@ -49,7 +49,6 @@ In addition to the functional requirement, on a separate dedicated git branch, g
 palette-picker
 |__ .gitignore
 |__ server.js
-|__ node_modules
 |__ public
 |  |__ index.html
 |  |__ css
