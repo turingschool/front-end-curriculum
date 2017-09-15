@@ -5,15 +5,13 @@ module: 4
 
 ## Abstract
 
-There is a website out there called [Coolers](https://coolors.co/495867-577399-bdd5ea-f7f7ff-fe5f55) - and others like it are out there. They help you generate color palettes for websites or other design projects.
+There is a website out there called [Coolers](https://coolors.co/495867-577399-bdd5ea-f7f7ff-fe5f55){:target="_blank"} - and others like it are out there. They help you generate color palettes for websites or other design projects.
 
 Your job is to recreate some of this site's functionality with your own backend and database. A user should be able to come to your site, generate a color palette, and save it for their own future projects.
 
 ## Wireframe
 
 This is a general guide on what should be included in your site. You can completely change the look of your own website as long as you stay true to the project specifications and features.
-
-This is a single-page application, and there are two main parts to this UI.
 
 ![Palette Picker Wireframe](/assets/images/palette-picker-wireframe.png)
 
