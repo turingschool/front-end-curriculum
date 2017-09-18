@@ -55,7 +55,7 @@ As mentioned earlier, there now exist standards bodies such as W3C and WHATWG th
 
 Though we've all agreed to standardize, feature implementation discrepancies still exist in some contexts. The most bleeding-edge APIs are often changing rapidly as spec writers debate how they should behave. While the specification is in-flux, so is the implementation. Platform engineers will get started on the implementation right away, and they might contain bugs or outdated APIs while the spec is being solidified. This is unavoidable and our best bet in these scenarios is to simply be patient while we wait for a more stable release before using these features in production.
 
-For instance, take a look at the documentation page for the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API#Browser_compatibility). The top banner says it all.
+For instance, take a look at the documentation page for the [Web VR API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API). The top banner says it all.
 
 Another reason discrepancies continue to exist is because people are still using old browsers and environments that are no longer being updated. For example, some larger companies that provide all their employees with Windows and a copy of Internet Explorer 8 might not have the resources to upgrade the entire staff to a new environment. Meanwhile, the teams over at Microsoft are busy working on more bleeding-edge versions of Internet Explorer, and trying to keep up with the newer APIs coming out. The support and resources they put into IE8 is minimal, if any, and thus that browser will never come up to par with more modern ones.
 
