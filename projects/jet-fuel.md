@@ -14,6 +14,12 @@ You're going to create an application that does the same thing!
 
 The main goal of your application is to redirect a request at the shortened URL to their long URL equivalent. Each shortened URL should belong to a _unique_ folder that is capable of storing N number of URLs.
 
+## Wireframe
+
+This is a general guide on what should be included in your site. You can completely change the look of your own website as long as you stay true to the project specifications and features.
+
+![Jet Fuel Wireframe](/assets/images/jet-fuel-wireframe.png)
+
 ## Base Expectations
 
 A user can:
