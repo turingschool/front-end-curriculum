@@ -53,7 +53,9 @@ The basic layout of the application should include:
 
 On a separate dedicated git branch, open your server file. For each line of the server file, put a comment on the line that explains what the line below is doing. Be as explicit as necessary.
 
-**Project File Structure:** Here is how we would like you to structure your project files.
+### Project File Structure
+
+Here is how we would like you to structure your project files.
 
 ```
 jet-fuel
