@@ -49,9 +49,25 @@ The basic layout of the application should include:
 * When a user clicks on a folder, a CSS animation should be used to expand and display the list of URLs belonging to that folder
 * For each URL, the user can see the date that the URL was added
 
-### Special Task
+### Special Task (Required)
 
 On a separate dedicated git branch, open your server file. For each line of the server file, put a comment on the line that explains what the line below is doing. Be as explicit as necessary.
+
+**Project File Structure:** Here is how we would like you to structure your project files.
+
+```
+jet-fuel
+|__ .gitignore
+|__ server.js
+|__ public
+|  |__ index.html
+|  |__ css
+|  |  |__ styles.css
+|  |  |__ other-stylesheets.css
+|  |__ js
+|  |  |__ scripts.js
+|  |  |__ other-scripts.js
+```
 
 ## Guidelines
 
