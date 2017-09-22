@@ -128,11 +128,13 @@ Instructor/developers will select one feature in the project to review for this 
 
 ### Workflow (40 Points)
 
-* 40: The developers effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches. Commit messages are consistent and there are no instances where developers are committing debuggers or commented out code.
-* 20: The developers make a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review. Commit messages may be somewhat inconsistent and at times, the codebase contains debugger code.
-* 10: The developers make large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting or code styling issues in the code base. (This is important. These issues should not be able to make it past code review.)
-* 5: The developers committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
-* 0: The application was not checked into version control.
+* **40 points** - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
+
+* **20 points** - Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
+
+* **10 points** - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
+
+* **5 points**  - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
 
 ### To get a 3 on this project, you need to achieve 200 / 250
 

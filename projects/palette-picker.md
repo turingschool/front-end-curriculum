@@ -112,10 +112,13 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### Workflow
 
-* **20 points** - The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application.
-* **15 points** - *Node modules have been committed to the repo*, which you don't want. The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base.
-* **5 points** - The developer makes a few, large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
-* **0 points** - The application was not checked into version control.
+* **20 points** - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
+
+* **15 points** - Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
+
+* **10 points** - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
+
+* **5 points**  - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
 
 ## Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1705/mod-4/jet-fuel/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
 
