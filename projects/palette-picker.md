@@ -5,7 +5,7 @@ module: 4
 
 ## Abstract
 
-There is a website out there called [Coolers](https://coolors.co/495867-577399-bdd5ea-f7f7ff-fe5f55){:target="_blank"} - and others like it are out there. They help you generate color palettes for websites or other design projects.
+There is a website out there called [Coolors](https://coolors.co/495867-577399-bdd5ea-f7f7ff-fe5f55){:target="_blank"} - and others like it are out there. They help you generate color palettes for websites or other design projects.
 
 Your job is to recreate some of this site's functionality with your own backend and database. A user should be able to come to your site, generate a color palette, and save it for their own future projects.
 
@@ -21,7 +21,7 @@ This is a general guide on what should be included in your site. You can complet
 Your application should have the following functionality. A user should be able to:
 
 * Generate a palette with **5 distinct colors**
-  * You should be able to hold or "freeze" one color and generate a new palette while the frozen color remains the same (similar to the _Lock_ functionality on [Coolers](https://coolors.co/393d3f-fdfdff-c6c5b9-62929e-546a7b))
+  * You should be able to hold or "freeze" one color and generate a new palette while the frozen color remains the same (similar to the _Lock_ functionality on [Coolors](https://coolors.co/393d3f-fdfdff-c6c5b9-62929e-546a7b))
   * The colors should be randomly generated (do not use predefined lists of color palettes)
 * Create a project folder as a place to save palettes
   * You should be able to create multiple folders
