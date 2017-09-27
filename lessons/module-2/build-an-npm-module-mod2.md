@@ -175,7 +175,7 @@ $ npm init --scope=username
 
 Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
 * **name:** the default will be `@username/project-name`, you need to change "@username" to be your npm account username
-* **Version:** thing about what you read about [Semantic Versioning](http://semver.org/)
+* **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
 * **License:** ISC is fine, [but what is it?](http://semver.org/)
 
 One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
@@ -186,58 +186,60 @@ $ npm i mocha -D
 $ npm i chai -D
 ```
 
-In your `test.js` file include the following:
-
-```
-var chai = require('chai')
-var expect = chai.expect
-```
-
 Fun facts!
 
 `-D` is the same as `--save-dev`  
 `-S` is the same as `--save`
 
+
+In your `test.js` file include the following:
+
+```
+const chai = require('chai')
+const expect = chai.expect
+```
+
 In your `index.js` file include the following:
 
 ```
-function bubbleSort(array) {
-  for(let j = 0; j < array.length; j++) {
-    for(let i = 0; i < array.length - 1; i++) {
-      if(array[i] > array[i + 1]) {
-        let bigNum = array[i]
-        array[i] = array[i + 1]
-        array[i + 1] = bigNum
+const bubbleSort = (array) => {
+  for (let j = 0; j < array.length; j++) {
+    for (let i = 0; i < array.length - 1; i++) {
+      if (array[i] > array[i + 1]) {
+        [ array[i], array[i + 1] ] = [ array[i + 1], array[i] ]
       }
     }
   }
-  return array
-}
+  return array;
+};
 
-module.exports = bubbleSort;
+module.exports = {
+  bubbleSort
+};
 ```
 
-And now, the really hard part...
+**If** we were going to publish this, we'd do ...
 
-```
-npm publish --access=public
-```
+  ```
+  npm publish --access=public
+  ```
 
-Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
+  Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
 
-Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
+  Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
 
-```
-npm unpublish --force
-```
+  ```
+  npm unpublish --force
+  ```
 
+**But instead, we're going to do this:**
 
 #### There's Another Way!
 
 You can actually import modules/packaged code from GitHub repos. It's as easy as typing:
 
 ```
-npm install [GitHub URL] --S
+npm install [GitHub URL] -S
 ```
 
 and then requiring a specific module in your js file as you would with any other module.

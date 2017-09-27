@@ -29,11 +29,11 @@ Although you're working as a group, everybody should give themselves some alone 
 
 ### Open-Source Contributions
 
-Each team will be provided with an open-source repo and a short list of suggested issues to resolve. While you will not fail if you're unable to submit a PR that gets merged, we expect you to make a strong effort towards getting a contribution accepted. You do not have to work on the suggested issues and can pick others from the repo as long as they aren't already assigned to someone else.
+Each team will be provided with an open-source repo and a short list of suggested issues to resolve. While you will not fail if you're unable to submit a PR that gets merged, we expect you to make a strong effort towards getting a contribution accepted. You do not have to work on the suggested issues and can pick others from the repo as long as they aren't already assigned to someone else. If none of the suggested issues are available or seem too complex to solve, play with the application on all different browsers and devices - try to find new issues to file and fix (common areas for easy fixes are accessibility concerns and UI/UX issues). 
 
 #### Being a Good Human
 
-When requesting to take an issue, first assign yourself to the issue and add a comment on the issue that says something along these lines:
+When requesting to take an issue, first add a comment on the issue that says something along these lines:
 
 *Hi there! I'm a first-time contributor and was hoping to help out with this issue. I noticed nobody was assigned to it, but if there's already a solution in progress I'm happy to try helping out elsewhere. Thanks!*
 
@@ -43,18 +43,19 @@ If you cannot come up with a solution to submit a pull request by the end of the
 
 *Sorry, but I've had to drop this issue from my to-do list. I won't be able to submit a pull request in a timely manner and don't want to hold up progress. Hopefully someone else will be able to pick this up!*
 
-Throughout this process, make sure you are conforming to any stylistic conventions and contribution guidelines set by the project maintainers. Repos will often have `CONTRIBUTING.md` files that give you guidelines on how to format your commit messages, how to write your pull request descriptions and how to file new issues. 
+Throughout this process, make sure you are conforming to any stylistic conventions and contribution guidelines set by the project maintainers. Repos will often have `CONTRIBUTING.md` files that give you guidelines on how to format your commit messages, how to write your pull request descriptions and how to file new issues. Make sure you run any linters and test suites before submitting a pull request.
 
 #### Getting Instructor Review & Approval
 
-Excluding the two comments mentioned above, you must have both instructors review and approve **any other comment** that you make on an issue. You must also have us review your code changes and your pull request descriptions before submitting.
+Excluding the two comments mentioned above, you must have both instructors review and approve **any other comment or communication** that you make on an issue or pull request. You must also have us review your code changes and your pull request descriptions before submitting.
 
 #### Giving Your Teammates Credit
 
 Because this is a group project, you might be pairing to resolve a single issue. Just because one person is driving, doesn't mean they have to be the only one to get credit for the contribution. If you do submit a pull request, make sure to give your teammates credit! You can update the author on a commit with the following command:
 
 ```bash
-git command TK TK
+git config user.name "Your Name, Partner's Name, Partner's Name" 
+git config user.email "yourEmail@gmail, partnersEmail@gmail, partnersEmail@gmail"
 ```
 
 ### Presentation
@@ -74,38 +75,36 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ## The Repos
 
-### [Vets.gov](https://github.com/department-of-veterans-affairs/vets-website)
+### [Hospital Run](https://github.com/HospitalRun/hospitalrun-frontend)
 
 **Potential Issues:**
 
-* [#3434](https://github.com/department-of-veterans-affairs/vets-website/issues/3434)
-* [#3274](https://github.com/department-of-veterans-affairs/vets-website/issues/3274)
-* [#5221](https://github.com/department-of-veterans-affairs/vets-website/issues/5221)
+* [#540](https://github.com/HospitalRun/hospitalrun-frontend/issues/540)
+* [#1068](https://github.com/HospitalRun/hospitalrun-frontend/issues/1068)
+* [#1147](https://github.com/HospitalRun/hospitalrun-frontend/issues/1147)
 
-### [18F Crime Data](https://github.com/18F/crime-data-frontend)
-
-**Potential Issues:**
-
-* [#1136](https://github.com/18F/crime-data-frontend/issues/1136)
-* [#1135](https://github.com/18F/crime-data-frontend/issues/1135)
-* [#1088](https://github.com/18F/crime-data-frontend/issues/1088)
-* [#1008](https://github.com/18F/crime-data-frontend/issues/1008)
-* [#990](https://github.com/18F/crime-data-frontend/issues/990)
-
-### [Swagger UI](https://github.com/swagger-api/swagger-ui)
+### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
 
 **Potential Issues:**
 
-* [#3393](https://github.com/swagger-api/swagger-ui/issues/3393)
-* [#3359](https://github.com/swagger-api/swagger-ui/issues/3359)
-* [#3269](https://github.com/swagger-api/swagger-ui/issues/3269)
+* [#1205](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1205)
+* [#1177](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1177)
+* [#1363](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1363)
 
 ### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
 
 **Potential Issues:**
-* [#1311](https://github.com/openfoodfoundation/openfoodnetwork/issues/1311)
-* [#1306](https://github.com/openfoodfoundation/openfoodnetwork/issues/1306)
-* [#1296](https://github.com/openfoodfoundation/openfoodnetwork/issues/1296)
-* [#1382](https://github.com/openfoodfoundation/openfoodnetwork/issues/1382)
-* [#1307](https://github.com/openfoodfoundation/openfoodnetwork/issues/1307)
+* [#1770](https://github.com/openfoodfoundation/openfoodnetwork/issues/1770)
+* [#1760](https://github.com/openfoodfoundation/openfoodnetwork/issues/1760)
+* [#1722](https://github.com/openfoodfoundation/openfoodnetwork/issues/1722)
 
+### [Code for Social Good](https://github.com/Code4SocialGood/)
+
+**Potential Issues:**
+
+* [#1157](https://github.com/Code4SocialGood/c4sg-web/issues/1157)
+* [#1156](https://github.com/Code4SocialGood/c4sg-web/issues/1156)
+* [#1138](https://github.com/Code4SocialGood/c4sg-web/issues/1138)
+
+
+If, as a group, you are all struggling to make progress towards a contribution, you are free to choose another open-source codebase to work with. You all must agree on another codebase as we only want a single presentation per group. A good way to search for additional repos is to search GitHub for open issues with labels like "HTML", "CSS", "UI", "UX", "design", "docs", "enhancement". An example search query can be found [here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Acss).

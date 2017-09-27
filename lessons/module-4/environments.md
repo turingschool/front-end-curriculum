@@ -153,4 +153,4 @@ Now anywhere in my application that node handles, I can access `process.env.FOO`
 
 ## Resources
 
-* [Understanding the node process object](https://egghead.io/lessons/node-js-understand-the-node-js-process-object)
+* [Understanding the node process object](https://egghead.io/lessons/node-js-understand-the-node-js-process-object){:target="_blank"}

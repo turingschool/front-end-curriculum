@@ -80,7 +80,7 @@ Without changing our `package.json`, we could also override CircleCI's default t
 ```js
 test:
   override:
-    - `./node_modules/.bin/mocha`
+    - ./node_modules/.bin/mocha
 ```
 
 This is useful for changing the commands you want to run during the test phase and adding additional ones. (e.g. if we had an eslint configuration in our project, we might also want to make sure our linter is passing in the test section as well.)

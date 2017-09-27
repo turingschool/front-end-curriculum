@@ -143,7 +143,7 @@ console.log(normalFunction())
 
 ```js
 => Generator {}
-=> hi
+=> huzzah!
 ```
 
 Simply calling a generator function (ie: just calling `doSomething()`) doesn't actually execute it's contents, instead it returns a Generator Object. We need additional magic.

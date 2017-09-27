@@ -225,7 +225,7 @@ Now that we have worked on the basic editing workflow, turn to someone you're si
 
 Type `git log` in the terminal. What do you see? Discuss with you partner what you think is being displayed in the terminal.  
 
-Checkout a condensed version of that report by running `git log --online`. What information gets left out compared to the `git log` command?  
+Checkout a condensed version of that report by running `git log --oneline`. What information gets left out compared to the `git log` command?  
 
 #### The master branch
 
@@ -403,20 +403,32 @@ The file `~/.bash_profile` contains settings and commands to help us configure t
 
 #### Text Editor and XCode
 
-If you don't already have a favorite text editor, we recommend using [Atom](https://atom.io/). Also, make sure you have XCode installed (using the Apple App Store). To verify that you have XCode command line tools installed, enter the command `gcc -v` into your terminal.
+If you don't already have a favorite text editor, we recommend using [Sublime](https://www.sublimetext.com/). Also, make sure you have XCode installed (using the Apple App Store). To verify that you have XCode command line tools installed, enter the command `gcc -v` into your terminal.
 
 The output should include something like `Configured with: --prefix=/Applications/Xcode.app/Contents/Developer/usr --with-gxx-include-dir=/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.11.sdk/usr/include/c++/4.2.1`.
 
-#### Setting Up Terminal Access for Atom
+#### Setting Up Terminal Access for Sublime
 
 One of the things you'll do frequently is open an entire folder (like when working on a project) in your text editor. Let's get that setup:
 
-1. Open Atom (`command-spacebar` for spotlight, type `Atom`, and hit enter).
-2. Click the `Atom` menu in the top left corner
-3. Click `Install Shell Commands`
-4. Return to your terminal and enter `which atom`. You should get back `/usr/local/bin/atom`
-5. Enter `atom .` to open your user directory in Atom.
-6. Experiment with creating a file in Atom and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Atom.
+
+  - Make sure you download [Sublime](https://www.sublimetext.com/) 
+  - Open your finder (Command-Space for spotlight, type Finder, and hit enter) 
+  - Move Sublime from your downloads to your Applications folder.
+  - Open your terminal (Command-Space for spotlight, type Sublime, and hit enter).
+  - First up, check your own $PATH by typing the following in your terminal line:
+  `echo $PATH`
+    This is what mine returns:
+      `/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin`
+
+    As you can see the /usr/local/bin path is included by default on OS X.
+
+  - Now, copy and paste the following line to put in your terminal:
+  `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime`
+  - Open a new terminal window (Command-T) and type `sublime .`
+  - Experiment with creating a file in Sublime and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Sublime.
+ 
+ (Full instructions can be found [here](http://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line//))
 
 #### Setting Up XCode & Command Line Tools
 

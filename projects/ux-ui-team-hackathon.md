@@ -4,9 +4,9 @@ title: Design + Build Team Hackathon
 
 ### Project overview
 
-In this one-day designathon, you will be asked to work through the life cycle of a project brief: design, build, and review/critique.
+In this one-day design-a-thon, you will be asked to work through the life cycle of a project brief: design, build, and review/critique.
 
-In the morning, pairs will generate wireframes (hand drawn is fine) and a comp in Sketch. In the afternoon, pairs will swap comps with another team to build. In week 3, we will have a formal group critique of both comps and static sites.
+In the morning, pairs will generate wireframes (hand drawn is fine) and a comp in Sketch. In the afternoon, pairs will swap comps with another team to build. At the end of the day we will have a formal group critique of both comps and static sites.
 
 Why do this project and why do it in this format? Because it puts you in the designer's shoes _and_ in the shoes of a developer who is responsible for understanding and building a comp handed to them by a designer. You will build empathy and understanding around why design/UX matters, why it is important to understand the thinking behind a layout, follow a comp to the letter, and you will be pushed to explain and defend your design choices which will reinforce that the decisions that go into creating a layout are intentional, deliberate, and important.
 
@@ -20,6 +20,8 @@ Why do this project and why do it in this format? Because it puts you in the des
 Your final live project must match the comp, be responsive, and be live on github pages.
 
  - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
+
+ - GET WEIRD AND HAVE FUN
 
 
 ## THE PRODUCT

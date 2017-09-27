@@ -7,7 +7,7 @@ module: 3
 
 Grab [the docs](https://guides.emberjs.com) to find the latest version for installation.
 
-```
+```shell
 npm install -g ember-cli@[INSERT LATEST VERSION HERE]
 ember --help
 ember new project-name
@@ -21,7 +21,7 @@ Out of the box, you will get:
 
 ## Ember Dev Server
 
-```
+```shell
   ember server
   ember serve
   ember s
@@ -50,7 +50,7 @@ Out of the box, you will get:
 ## Testing
 Ember's built-in testing framework allows for TDD using Acceptance Tests. Let's create one and see what we get.  
 
-```
+```shell
 ember g acceptance-test test-name
 ```
 
@@ -71,7 +71,8 @@ Ember applications are organized and run by "Routes".
 * The `route handler` hands the template which Model the template needs to know about.  
 
 Generate a route using the Ember CLI tools:  
-```
+
+```shell
 ember g route route-name
 ```
 
@@ -170,7 +171,7 @@ Components have two parts:
 To invoke a component in a template file:  
 
 
-```js
+```hbs
 // (see raw markdown code to view curly braces)
 {{#each model as |item|}}  
   {{my-component item=itemUnit}}  
@@ -186,11 +187,13 @@ Templates are the "view" layer of an Ember application.
 
 For the most part, they look like any other fragment of HTML.  
 
-`<div>This is an example DIV in an Ember Template</div>`  
+```html
+<div>This is an example DIV in an Ember Template</div>
+```
 
 ## Handlebars  
 
-```js
+```hbs
 // (see markdown file)  
 <div>Hi {{name}}, this is a valid Ember template!</div>
 ```

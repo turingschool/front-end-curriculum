@@ -1,0 +1,157 @@
+<html>
+  <head>
+    <title>Intro to OAuth and Why You Should Just Use Firebase or Auth0 Instead</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to OAuth and Why You Should Just Use Firebase or Auth0 Instead</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>General Web &raquo; Security</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">Introduction</a></li>
+          <li><a href="#TokenBasedAuth">Token-Based Authentication</a></li>
+          <li><a href="#OSP">Don't Roll Your Own</a></li>
+          <li><a href="#Practice">Practice with Firebase</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Further Reading & Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>articulate what OAuth is and how it works at a high-level</li>
+            <li>understand the pain points and potential hazards of rolling your own OAuth</li>
+            <li>implement OAuth through Firebase</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Introduction">Intro to OAuth</a></h2>
+          <p>OAuth stands for "Open Authentication" and can be defined as:</p>
+          <blockquote>an open standard for implementing token-based authentication and authorization</blockquote>
+          <p>The term "open standard" is a little vague, but essentially describes a specification that is open to the public and free to be implemented by application developers.</p>
+          <p>OAuth allows your account information from one application (e.g. Twitter) to be used by another application (e.g. TweetDeck), without having to expose or share the user's credentials between apps. OAuth acts as an intermediary on behalf of the user, negotiating access and authorization between the two applications.</p>
+
+          <h3>Authentication vs. Authorization</h3>
+          <p>You'll often hear the two words authentication and authorization used interchangeably - we've already thrown them around a bit in this lesson - but they actually have two very different meanings. The process of <b>authentication</b> answers the question "Who are you?", while <b>authorization</b> answers the question: "What are you allowed to do?".</p>
+          <p>For example, I build a contacts application called FooBar that manages all of my contacts on various social accounts. I first authenticate my application with Google, telling them that I am FooBar. I then authorize my application to give it permissions for reading and writing changes to my Google contacts list.</p>
+          <p>Remember that OAuth stands for "Open Authentication". While the OAuth flow handles authorization and permissions as well, its main emphasis is on the authentication process, where you can essentially "log in" to a third-party without giving away your credentials.</p>
+
+          <h3>Why Do We Need OAuth?</h3>
+          <p>OAuth is an important part of creating secure applications. We mentioned previously that an OAuth service provider acts as an intermediary to negotiate access to other application data. This intermediary role prevents us from having to give away our credentials by providing us with access tokens instead.</p>
+
+          <div class="discuss">
+            <h4>Watch</h4>
+            <p>OAuth provides us with a secure way to build applications that rely on pre-existing datasets that may contain private information. Take a minute to watch this video on why OAuth is important:</p>
+            <a href="https://www.youtube.com/watch?v=LRNg4tDtrkE">OAuth 2.0 - Why It's Important</a>
+          </div>
+
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="TokenBasedAuth">Token-Based Auth</a></h2>
+          <p>We previously learned about <a href="../jwts/index.html">JSON Web Tokens</a>, and described the general flow of receiving a token to identify a user, and using that token to authorize future requests. The initial phase of this process - generating a token to identify a user - is considered the authentication "handshake". You'll hear this term handshake used frequently to describe an authentication mechanism. It simply means that a client (in our case, the browser), is telling a server:</p>
+          <blockquote>"Hi, nice to meet you, I am Bob Loblaw and I would like for you to trust me. Here are a couple facts about myself."</blockquote>
+          <p>And the server looks Bob Loblaw up and down, writes down all of his information and says:</p>
+          <blockquote>"Ok, Bob Loblaw. I trust you on one condition: you must provide me this secret password every time we do business."</blockquote>
+          <p>And the server gives Bob a token that has encoded all of Bob's information and permission levels. Bob can now use this token as a "hall pass" to send and receive data from the server.</p>
+          <p>This token-based authentication flow is also what's used in OAuth implementations. In fact, some OAuth service providers like <a href="https://www.auth0.com">Auth0</a> use JSON Web Tokens in their implementation.</p>
+          <div class="discuss">
+            <h4>Read</h4>
+            <p>We've now learned about a couple different authentication mechanisms for working with APIs. Take a moment to read the following blog post on the differences between each of them and their best use cases:</p>
+            <a href="https://zapier.com/engineering/apikey-oauth-jwt/">API Keys vs. OAuth Tokens vs. JSON Web Tokens</a>
+          </div>
+        </section>
+
+        <!-- <h3>OAuth 2.0</h3>
+
+        Like the original OAuth, OAuth 2.0 provides users with the ability to grant third-party access to web resources without sharing a password. Updated features available in OAuth 2.0 include new flows, simplified signatures and short-lived tokens with long-lived authorizations.
+
+        The biggest change in the latest version is that it’s no longer required to sign each call with a keyed hash. The most common implementations of OAuth use one or both of these tokens instead:
+
+        access token: sent like an API key, it allows the application to access a user’s data; optionally, access tokens can expire.
+        refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new access token if they have expired.
+         -->
+        <hr />
+
+        <section>
+          <h2><a name="OSP">Don't Roll Your Own OAuth</a></h2>
+          <p>In the tech world we have a tendency to want to build things from scratch or reinvent the wheel. (Exhibit A: npm has 2,348 packages related to the fetch API.) While that's all well and good, authentication and authorization are not areas that you want to implement on your own. Rolling your own OAuth will be wrought with vulnerabilities and security holes unless you have a full team of security engineers working on maintaining its integrity. It’s easy to introduce security holes if you're not familiar with that area of development or you're not actively and consistently looking for weaknesses.</p>
+          <p>There is a thing called <a href="https://www.schneier.com/blog/archives/2011/04/schneiers_law.html">Schneier's Law</a> which generally states:</p>
+          <blockquote>"any person can invent a security system so clever that she or he can't think of how to break it."</blockquote>
+          <p>Essentially, the security system you build is only as good as your security skills. There are a lot of seemingly minor features (user enumeration, lockout intervals, https, etc) that have a huge impact on the effectiveness of a security system. While we're used to being able to pare down a project scope to an MVP, you cannot take shortcuts when rolling your own authentication.</p>
+          <p>Lucky for us, there are plenty of pre-existing tools we can use for hooking into authentication for applications like Google, GitHub, Facebook, Twitter, etc. Two you might hear about are <a href="https://firebase.google.com/">Firebase</a> and <a href="https://www.auth0.com">Auth0</a>.</p>
+
+          <h3>Firebase</h3>
+          <p>Firebase is a product created by Google that provides a collection of tools for building a full-featured application without having to create your own backend. Firebase provides database management and authentication, among other things.</p>
+          <p>With Firebase, we can create a new application and enable authentication for Google, GitHub, Facebook, Twitter, etc. While Firebase provides us with many different tools for application development, we recommend only hooking into it for authentication purposes. You have your own backend skills, you don't need to rely on the other features of Firebase to build your applications.</p>
+
+          <h3>Auth0</h3>
+          <p>Auth0 is a bit newer, and has a strong emphasis on the use of JWTs. It only provides the authentication feature (none of the other bells and whistles we get with Firebase), but it allows us to hook into the same types of accounts as Firebase. Unfortunately, because Auth0 is so young, it's also been notorious for implementing breaking changes which have cause applications to stop working in the past. Advice: Use with caution.</p>
+        </section>
+
+        <hr />
+        <section>
+          <h2><a name="Practice">Practice with Firebase</a></h2>
+          <p>We'll get some quick familiarity with the Firebase syntax and API, and see how the UI works when authenticating with Google through Firebase. We're going to create simple, single HTML file that has a sign in button that allows you to authenticate with Google. When you click the button again, it will sign you out.</p> 
+          <h3>Step 1: Getting Started</h3>
+          <ul>
+            <li>Go to <a href="https://firebase.google.com/">Firebase</a> and click on "Go To Console" in the top right corner</li>
+            <li>Click "Add Project" and give it a name</li>
+            <li>You'll then be brought to a project management dashboard. Click on the 'Authentication' link in the left sidebar, and then click the 'Setup Signin Method' button.</li>
+            <li>Enable google authentication</li>
+          </ul>
+          <h3>Step 2: Writing the Code</h3>
+          <ul>
+            <li>Clone down <a href="https://gist.github.com/brittanystoroz/251de632b6cf9c5a92f087a46caf8bbc">this boilerplate</a></li>
+            <li>You don't need to create a new directory or npm project, but you do need to start up a server. You can do this really quickly with <code>python -m SimpleHTTPServer</code> in the terminal or by doing a global installation of the npm <a href="https://www.npmjs.com/package/http-server">http-server</a> module and running <code>http-server</code>.</li>
+            <li>There are comments throughout the file of things you need to do to get authentication working and links to where you'll find the solutions in the documentation</li>
+          </ul>
+        </section>
+
+        <hr />
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What do we mean when we say something is an "Open Standard"?</li>
+            <li>What is the difference between authentication and authorization?</li>
+            <li>Describe the process of token-based authorization.</li>
+            <li>How would you implement OAuth for an application that requires Twitter access?</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="https://www.youtube.com/watch?v=LRNg4tDtrkE">OAuth 2.0 Video Series</a></li>
+            <li><a href="https://zapier.com/engineering/apikey-oauth-jwt/">API Keys vs. OAuth Tokens vs. JSON Web Tokens</a></li>
+            <li><a href="https://firebase.google.com/">Firebase</a></li>
+            <li><a href="https://auth0.com">Auth0</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
