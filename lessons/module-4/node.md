@@ -51,8 +51,21 @@ When fetching data, you'll often hear the URL referred to as an "endpoint". Thes
 
 
 ### Student Discussion (5 minutes)
-Grab a partner and discuss what it was like to write server-side code. What was unfamiliar to you? What was familiar to you? Where there any limitations in debugging tools that you are used to using and how did that effect your ability to solve problems?
+Grab a partner and discuss what it was like to write server-side code. What was unfamiliar to you? What was familiar to you? Were there any limitations in debugging tools that you are used to using, and how did that effect your ability to solve problems?
 
+### Request-Response Cycle Nitty Gritty
+
+Here is what a sample GET request looks like to a server:
+
+```
+HTTP/1.1 GET.....NEED MORE HERE
+```
+
+And this is a sample response that the server generates to send back to the client:
+
+```
+HTTP/1.1 GET.....NEED MORE HERE
+```
 
 ### Back-End Frameworks
 Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
@@ -71,12 +84,12 @@ Awesomeness of Node includes:
 
 Disadvantages of Node:
 
-* Lack of libraries (No ORM, image processing)
+* Lack of libraries (very new ORM package, image processing)
 * Frequent changes to Node API
 * Gotta deal with async
 * Not multi-threaded (bad for computations)
 
-In the past, we've used Node.js to build our client-side applications. We've even used it to spin up development servers to make it easier to develop our client-side applications. We've used Node.js as a tool, but we haven't written much for the platform itself. Luckily, given the fact that they both share some common technologies, we're already in possession of a bit of pre-requisite knowledge.
+In the past, we've used Node.js to build our client-side applications (think Webpack). We've even used it to spin up development servers to make it easier to develop our client-side applications. We've used Node.js as a tool for development, but we haven't written much for the platform itself. Luckily, given the fact that they both share some common technologies, we're already in possession of a bit of pre-requisite knowledge.
 
 Here are some things we already know:
 
@@ -85,15 +98,17 @@ Here are some things we already know:
 - npm
 - `package.json`
 
+### Review: The Request-Response Cycle
 
+On your own, draw a diagram of the request-response cycle as you know it. Include the a client, a server, and how they communicate between each other. After a few minutes, we'll go over it.
 
 ### Practice: Handling Request in Node.js
 
-We're going to set up a simple node server for handling a dataset of messages. Each message contains a `user` and a `message` property. Previously you may have worked with the Express framework on the server-side. Today we will just be using node, to remind ourselves that life is sometimes harder without frameworks.
+We're going to set up a simple Node server for handling a dataset of messages. Each message contains a `user` and a `message` property. Previously you might have worked with the Express framework on the server-side, which has a lot of very helpful functions for getting a server up and running. Today, we will just be using Node to remind ourselves that life is sometimes harder without frameworks - it will also give us an idea of the low-level programming that a server needs to handle requests.
 
-If you don't already have [Postman](https://www.getpostman.com/), install it now.
+If you don't already have [Postman](https://www.getpostman.com/), install it now. Postman is a tool we can use to generate custom requests (GET, POST, PATCH, etc.) that we would otherwise not be able to do through the browser alone.
 
-Nodemon will also be helpful. Nodemon is an npm library that will auto-reload your server any time you make changes so you can see them take effect immediately. Without nodemon, you would have to restart your server every time you made a change to your code. You can install nodemon globally with:
+Nodemon will also be helpful. Nodemon is an npm package that will auto-reload your server any time you make changes so you can see them take effect immediately. Without nodemon, you would have to restart your server every time you made a change to your code. You can install nodemon globally with:
 
 ```bash
 npm i -g nodemon
@@ -105,19 +120,21 @@ Next, create and cd into a new directory:
 mkdir messages && cd messages
 ```
 
-Auto-generate a `package.json` file with:
+Auto-generate a `package.json` file (with default "yes" to each of the standard questions) using:
 
 ```bash
 npm init --yes
 ```
 
-#### Requiring Built-in Modules
+#### Requiring Built-In Modules
 
 Node has an intentionally small standard library. The standard library is documented in the [Node API Documentation][apidocs].
 
 [apidocs]: http://nodejs.org/documentation/api/
 
-The standard library can be required from any Node.js program. You do not have to give a relative path. Today we'll want to include the HTTP and URL libraries:
+The standard library modules can be required from any Node program. You do not have to give a relative path of where the module lives on your local machine - all you need to do is require the module using the CommonJS `require` syntax.
+
+Today we'll want to include the HTTP and URL libraries:
 
 ``` js
 const http = require('http');
@@ -134,7 +151,7 @@ const url = require('url');
 const server = http.createServer();
 ```
 
-The built-in `http.Server` module inherits from `EventEmitter`. This means when we create our server, it can listen and respond to particular events, such as requests:
+The built-in `http.createServer` module inherits from `EventEmitter`. This means when we create our server, it can listen and respond to particular events, such as requests:
 
 ```js
 server.listen(3000, () => {
@@ -148,47 +165,58 @@ server.on('request', (request, response) => {
 });
 ```
 
-When the server receives a request, a "request" event is emitted and the server responds with a simple HTTP response.
+### Research - On Your Own
+
+Before we run the server and see it in action, take a few minutes to read through the documentation to know more about each of the response functions.
+
+Read through these sections of the Node documentation:
+
+- [response.writeHead]()
+- [response.write]()
+- [response.end]()
+
+Can you describe in one or two sentences what each of these methods do?
+
+### Run Your Server
+
+When the server receives a request, a "request" event is emitted, and the server responds with a simple HTTP response.
 
 Now run your server in your terminal with: `nodemon server.js`. Using POSTMAN, make a GET request to `localhost:3000` and see what happens. You should see a 'Hello World' response returned.
 
 
-### Student Discussion (5 minutes)
+### Discussion - Your Turn
 In small groups, discuss what types of requests and responses you sent and received in your intermission homework. What did your client side code request? How did your server-side code respond to those requests? What kinds of data did you respond with and how was that data consumed?
 
 
 ### The Inner Workings of a Request and a Response
 
 #### Headers
-The header of a request or response allow the client and the server to pass
-additional information to each other. Think of it as metadata that allows
-a client or server to handle the request properly.
+The header of a request or response allow the client and the server to pass additional information to each other. Think of it as metadata that allows a client or server to handle the request properly.
 
-A header is simply a hash of key-value pairs:
-`{"Content-Type": "text-html"}`
+You specify header information as simply a hash of key-value pairs:
+`{ "Content-Type": "text-html" }`
 
-There is a lot of metadata that you can pass in a request. Some of the more common values are
- "Accept" which allows you to set what media types are acceptable and in what quality.
- Example:
- ```
+There is a lot of metadata that you can pass in a request. A common header is "Accept", which allows you to set what media types are acceptable and in what quality. Example:
+
+```
  Accept: audio/*; q=0.2, audio/basic
- SHOULD be interpreted as "I prefer audio/basic, but send me any audio type if it is the best available after an 80% mark-down in quality."
+
+ This should be interpreted as "I prefer audio/basic, but send me any audio type if it is the best available after an 80% mark-down in quality."
 ```
 
-Another common value is "Content-Length". This indicates the length of the body if the request would have been sent in a GET method. It's measured in bytes. Good way to know quickly how big a request is.
+Another common header is "Content-Length". This indicates the length of the body if the request would have been sent in a GET method. It's measured in bytes - a good way to know quickly how big a request is.
 
 If we look at a response in our browser, we can check out the headers:
 ![network header][network-header]
 
 [network-header]: /assets/images/lessons/http-rest-node-server/network-header.png
 
-There is a lot of information in the header, but the most important part is the status code returned to us. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rule is:
+There is a lot of information in the headers, but the one of the most important parts is the status code returned to the client. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rules are:
 
-* 200 range means everything is OK
+* 200 range means everything is OK, the request was successful
 * 300 range means you need to do more to complete the request
 * 400 range means you sent a bad request. Do it again, but better
-* 500 range means that something is screwed up with the server (thanks
-backend...) but my request is OK
+* 500 range means that something is screwed up with the server (thanks back-end...) but my request is OK
 
 #### Body
 Requests and responses also might have a body. For example, when you make a `PATCH` request to update a resource, your `fetch` call might look like this:
