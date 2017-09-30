@@ -2,6 +2,10 @@
 
 ---
 
+### [Git Repo](https://github.com/letakeane/ajax-practice);
+
+---
+
 ### By the end of this lesson you should...
 
 * Understand the difference between synchronous and asynchronous operations
