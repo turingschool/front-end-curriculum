@@ -2,7 +2,7 @@
 
 ---
 
-### [Git Repo](https://github.com/letakeane/ajax-practice);
+### [Git Repo](https://github.com/letakeane/ajax-practice)
 
 ---
 
