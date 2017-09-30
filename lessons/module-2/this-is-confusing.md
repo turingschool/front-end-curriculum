@@ -8,17 +8,15 @@ tags: javascript, js, this, keyword
 
 ## Introduction
 
-The keyword _this_ in javascript can be confusing. Depending on where it is used it can refer to different things.
+The keyword `this` in javascript can be confusing. Depending on where `this` is used in code, it can refer to different things.
 
-While it is confusing, there are several easy rules for understanding and determining what it refers to.
-
-The value of this can only change when a function is executed.
+There are several rules which determine what the value of `this` is at any given point in time.
 
 ## Rule 1 - Default _this_ refers to the global object
 
 By default _this_ refers to the global object. In a browser, the global object is the window.
 
-```
+```javascript
 console.log(this);
 
 function logThis() {
@@ -28,38 +26,107 @@ function logThis() {
 logThis();
 ```
 
-## Rule 2 - When calling a function as a method on an object, _this_ refers to that object.
+There are a few ways we can change the value of `this` to be something different than the global object. All of these methods involve executing an ES5 function.
 
-```
+In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions where the value of `this` is determined when the arrow function is declared.
+
+## Rule 2 - When executing a function as a method on an object, _this_ refers to that object.
+
+This is a long rule, another way to think about this rule is if a function is executed and there is a `.` before the name of the function, `this` refers to whatever comes before the `.`. 
+
+In the following example, since `logThis` function is being executed as a method of the `voyager1` object, `this` will refer to the `voyager1` object.
+
+```javascript
+function logThis() {
+  console.log(this);
+}
+
 var voyager1 = {
   classification: 'Space Probe',
   title: 'Voyager 1',
-  logThis: function () {
-    console.log(this);
-  }
+  logThis: logThis  // adding logThis function to voyager1
 }
 
-voyager1.logThis();
+// voyager1 will be logged
+voyager1.logThis();  
 ```
+
+One important thing to remember here is that the value of `this` is set when the above ES5 function is executed.
+
+If I move the function to a different object, then execute the function on that object, `this` inside the function will refer to the new object it is a method of.
+
+```javascript
+function logThis() {
+  console.log(this);
+}
+
+var voyager1 = {
+  classification: 'Space Probe',
+  title: 'Voyager 1',
+  logThis: logThis
+}
+
+var voyager2 = {
+  classification: 'Space Probe',
+  title: 'Voyager 2',
+  logThis: logThis
+}
+
+// voyager1 will be logged
+voyager1.logThis(); 
+
+// voyager2 will be logged
+voyager2.logThis();  
+```
+
+Because of this rule, I can create a function once, add it to whichever objects I want and `this` will always refer to the object I execute the function on.
+
+Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
 
 ## Rule 3 - _this_ in function code invoked using the new operator refers to the newly created object.
 
-The _new_ keyword is used with constructor functions to create a new instance of an object.
+The `new` keyword is used with constructor functions to create a new instance of an object.
 
-When the _new_ keyword is used to invoke a function, _this_ inside of the function refers to the new object.
+When the `new` keyword is used to invoke a function, `this` inside of the function refers to the newly created object.
 
-```
+```javascript
 function SpaceProbe(title, classification) {
-  console.log(this);
+  
+  // new empty object will log
+  console.log(this);  
 
   this.title = title;
   this.classification = classification
 
-  console.log(this);
+  // object with added properties will log
+  console.log(this);  
 }
 
+var voyager1 = new SpaceProbe('Voyager 1', 'Space Probe');
 var voyager2 = new SpaceProbe('Voyager 2', 'Space Probe');
 ```
+
+With ES6 classes, the class constructor function replaces our old ES5 constructor function.
+
+```javascript
+class SpaceProbe {
+
+  constructor (title, classification) {
+  
+    // new empty object will log
+    console.log(this);  
+
+    this.title = title;
+    this.classification = classification
+
+    // object with added properties will log
+    console.log(this);  
+  }
+  
+}
+```
+When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created object.
+
 
 ## Rule 4 - When a function is called with either call, apply or bind, _this_ is set to the first argument passed to call, apply or bind
 
