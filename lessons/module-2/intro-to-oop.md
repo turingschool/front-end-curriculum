@@ -191,7 +191,7 @@ You can press enter to skip through all of the questions except for **test comma
 Next, you'll need to install chai in order to run our tests.
 
 ```
-$ npm i -D chai
+$ npm i --save-dev chai
 ```
 
 Lastly, we'll need to write tests in order to determine if our code works correctly. I strongly encourage you to write your own, but if you need, you can paste this into your `test.js` file to get going on creating objects. 
