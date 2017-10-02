@@ -27,23 +27,18 @@ While some languages such as Java, C++ and Ruby are specifically object-oriented
 ### Examples:
 
 <center>
-</br>
 
 ![vehicle example](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CPT-OOP-objects_and_classes.svg/220px-CPT-OOP-objects_and_classes.svg.png)
 
-</br>
 
 ---
 
-</br>
 
 ![car example](https://upload.wikimedia.org/wikipedia/commons/thumb/9/98/CPT-OOP-objects_and_classes_-_attmeth.svg/300px-CPT-OOP-objects_and_classes_-_attmeth.svg.png)
 
-</br>
 
 ---
 
-</br>
 
 ![instrument example](https://koenig-media.raywenderlich.com/uploads/2017/05/ObjectOrientedProgramming-graph-2.png)
 
@@ -59,7 +54,6 @@ While some languages such as Java, C++ and Ruby are specifically object-oriented
 
 # How do objects work?
 
-</br>
 
 ![object breakdown](http://www.teachitza.com/delphi/object.gif)
 
@@ -145,15 +139,12 @@ class Food extends Product {
 
 # Messages
 
-</br>
 
 ![message passing](https://www.defit.org/wp-content/uploads/2012/06/message-passing-320x266.jpg)
 
-</br>
 
 ![message example](https://www3.ntu.edu.sg/home/ehchua/programming/java/images/OOP_Objects.png)
 
-</br>
 
 This is how objects interact with each other. Now having one object just simply isn't enough. In real life this process isn't too difficult to understand. If I'm being annoying my wife communicates to me that I am being annoying and that I need to stop. If I'm driving my car and the gas tank light comes on it's pretty apparent that I need to then put gas in the car.
 
