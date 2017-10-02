@@ -108,6 +108,11 @@ git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com
 ```
 
+### Install Google Chrome Canary
+[Chrome Canary](https://www.google.com/chrome/browser/canary.html)
+
+Google Chrome Canary is a bleeding edge, experimental version of Chrome, with the latest features. This web browser is great for general internet perusing, but web developers like it because it has very useful developer tools (the console), which you will use in the prework and extensively during class.
+
 ### Install the Sublime command line tools
 
   - Make sure you download [Sublime](https://www.sublimetext.com/) 
