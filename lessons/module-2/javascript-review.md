@@ -10,21 +10,29 @@ A review of javascript concepts covered in module-1
 
 In this lesson we'll cover:
 
-* The basic JavaScript data types
-* What a variable is and how to use it
-* Operators and how to use them
-* Conditionals and when to use them
-* How to declare and call functions with or without parameters
+* JavaScript data types
+* Variables
+* Operators
+* Conditionals
+* Functions
 
 # Data Types
 
 There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
-There are three basic data types: boolean, numeric, string. Let's go over what each of these is.
+### Basic Data Types
+
+There are five basic data types: boolean, null, undefined, numeric, and string. Let's go over what each of these is.
 
 ```javascript
 // boolean values
 true, false
+
+// 
+null
+
+// undefined
+undefined
 
 // numeric values
 -43
@@ -36,6 +44,29 @@ true, false
 '34'
 'JavaScript is great!'
 ```
+
+`null` [represents the intentional absence of any object value](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/null)
+
+`undefined` [A variable that has not been assigned a value is of type undefined](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/undefined)
+
+### Object
+Objects are a complex data type provided by JavaScript. It is essentially a map between key value pairs. Keys must be strings and values can be any data type.
+
+```
+// US State object example
+{
+  'name': 'Kentucky',
+  'capitol': 'Frankfort',
+  'population': 4437000,
+  'isAwesome': true
+}
+```
+
+### Functions
+Functions are objects which can be executed.
+
+### Arrays
+Arrays are objects where there exists a relationship between any properties which correspond with an integer and the length property. In addition, array object inherit from the Array.prototype which gives them additional helper functions (i.e. push, pop, forEach...).
 
 # Variables in JavaScript
 
