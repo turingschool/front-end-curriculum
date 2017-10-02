@@ -51,20 +51,31 @@ When fetching data, you'll often hear the URL referred to as an "endpoint". Thes
 
 
 ### Student Discussion (5 minutes)
-Grab a partner and discuss what it was like to write server-side code. What was unfamiliar to you? What was familiar to you? Were there any limitations in debugging tools that you are used to using, and how did that effect your ability to solve problems?
+With a partner, discuss what it was like to write server-side code. What was unfamiliar to you? What was familiar to you? Were there any limitations in debugging tools that you are used to using, and how did that effect your ability to solve problems?
 
-### Request-Response Cycle Nitty Gritty
+### Request-Response Cycle: Under the Hood
 
 Here is what a sample GET request looks like to a server:
 
 ```
-HTTP/1.1 GET.....NEED MORE HERE
+GET / HTTP/1.1
+Host: www.google.com
 ```
 
 And this is a sample response that the server generates to send back to the client:
 
 ```
-HTTP/1.1 GET.....NEED MORE HERE
+HTTP/1.0 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1354
+
+<html>
+<body>
+  .
+  .
+  .
+</body>
+</html>
 ```
 
 ### Back-End Frameworks
@@ -171,9 +182,9 @@ Before we run the server and see it in action, take a few minutes to read throug
 
 Read through these sections of the Node documentation:
 
-- [response.writeHead]()
-- [response.write]()
-- [response.end]()
+- [response.writeHead](https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers)
+- [response.write](https://nodejs.org/api/http.html#http_response_write_chunk_encoding_callback)
+- [response.end](https://nodejs.org/api/http.html#http_response_end_data_encoding_callback)
 
 Can you describe in one or two sentences what each of these methods do?
 
@@ -214,7 +225,7 @@ If we look at a response in our browser, we can check out the headers:
 There is a lot of information in the headers, but the one of the most important parts is the status code returned to the client. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rules are:
 
 * 200 range means everything is OK, the request was successful
-* 300 range means you need to do more to complete the request
+* 300 range means you are probably being redirected
 * 400 range means you sent a bad request. Do it again, but better
 * 500 range means that something is screwed up with the server (thanks back-end...) but my request is OK
 
@@ -258,7 +269,6 @@ The six architectural constraints of REST are:
 
 RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, Destroy) are as follows:
 
----
 1. GET - Retrieve information identified by the request
 2. POST - Create a new resource
 3. PUT - Fully update a specific resource in its entirety
@@ -268,7 +278,7 @@ RESTful architecture includes sending HTTP methods to a URL to get back informat
 
 ### Practice: Handling Multiple Requests in Node.js
 
-Now let's make our server a bit more useful. First we'll want to set up some initial messages for our server to interact with:
+Now let's make our server a bit more useful. First we'll want to set up some initial messages in our server file to interact with:
 
 ```js
 let messages = [
@@ -303,14 +313,13 @@ server.on('request', (request, response) => {
 Given the new functions we're calling (`getAllMessages` and `addMessage`), try to create these functions and have them send an appropriate response back to the client.
 
 ### Student Discussion (10 minutes)
-Go back to the 6 architectural contraints of a RESTful API and try to identify and articulate how your ChatBox server adheres to each one.
+Go back to the 6 architectural constraints of a RESTful API and try to identify and articulate how your ChatBox server adheres to each one.
 
 ### Check For Understanding
 
 * What type of information is included in the header of a request?
 * What are the major RESTful methods and what do each of them do?
 * What is Node?
-
 
 ## Resources
 
