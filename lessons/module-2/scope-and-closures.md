@@ -1,5 +1,5 @@
 ---
-title: ES5 vs ES6
+title: Scope And Closures
 tags: javascript
 module: 2
 ---
