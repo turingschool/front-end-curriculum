@@ -194,7 +194,7 @@ We now have this much of the Redux Lifecycle.
 
 ![Redux Explained](/assets/images/redux-explained2.jpg)
 
-## Step Two: Creating Some Reducers
+## Step Three: Creating Some Reducers
 
 So, if you may think of our actions as little sanitizers for expected actions on the website.
 
