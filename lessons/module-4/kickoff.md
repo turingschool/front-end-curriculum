@@ -41,7 +41,7 @@ Students must earn a score of `3` or greater in *each* category of the final ass
 ### Independent Work
 
 * Homework (~4 assignments)
-* Jet Fuel
+* Palette Picker
 * Turing Story (5 minute presentation on your Turing experience)
 
 ### Group Work
