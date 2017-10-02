@@ -53,31 +53,6 @@ When fetching data, you'll often hear the URL referred to as an "endpoint". Thes
 ### Student Discussion (5 minutes)
 With a partner, discuss what it was like to write server-side code. What was unfamiliar to you? What was familiar to you? Were there any limitations in debugging tools that you are used to using, and how did that effect your ability to solve problems?
 
-### Request-Response Cycle: Under the Hood
-
-Here is what a sample GET request looks like to a server:
-
-```
-GET / HTTP/1.1
-Host: www.google.com
-```
-
-And this is a sample response that the server generates to send back to the client:
-
-```
-HTTP/1.1 200 OK
-Content-Type: text/html; charset=UTF-8
-Content-Length: 1354
-
-<html>
-<body>
-  .
-  .
-  .
-</body>
-</html>
-```
-
 ### Back-End Frameworks
 Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
 
@@ -112,6 +87,32 @@ Here are some things we already know:
 ### Review: The Request-Response Cycle
 
 On your own, draw a diagram of the request-response cycle as you know it. Include the a client, a server, and how they communicate between each other. After a few minutes, we'll go over it.
+
+### Request-Response Cycle: Under the Hood
+
+Here is what a sample GET request looks like to a server:
+
+```
+GET / HTTP/1.1
+Host: www.google.com
+```
+
+And this is a sample response that the server generates to send back to the client:
+
+```
+HTTP/1.1 200 OK
+Content-Type: text/html; charset=UTF-8
+Content-Length: 1354
+
+<html>
+<body>
+  .
+  .
+  .
+</body>
+</html>
+```
+
 
 ### Practice: Handling Request in Node.js
 
