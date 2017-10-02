@@ -28,10 +28,11 @@ There are five basic data types: boolean, null, undefined, numeric, and string. 
 // boolean values
 true, false
 
-// 
+// represents an intentional absence of a value
 null
 
-// undefined
+// a variable that has not been assigned a value is of type undefined
+// functions return undefined if no other return value is specified
 undefined
 
 // numeric values
@@ -70,11 +71,9 @@ Arrays are objects where there exists a relationship between any properties whic
 
 # Variables in JavaScript
 
-As we're writing code, there are many times when we want to be able to store a value so we have ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common that we need to have access to the same information more than once. A variable lets us do just that!
-
 ## What is a variable?
 
-A variable is a place to store values. When we write scripts (a set of instructions for a computer to follow), we need to temporarily store small pieces of data. We store that data in variables. "Variable" is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run.
+A variable is a place to store values. When we write scripts, we need to temporarily store pieces of data. We store that data in variables. "Variable" is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run.
 
 A variable is, at its most simple, a declaration. It's made up of two parts: the variable keyword, `var`, and the variable name, which can be whatever you choose. Let's see what that looks like in the console:
 
@@ -493,162 +492,6 @@ Variables sans the keyword `var`
 
 The good news is all you have to do to avoid this is to always remember to use the `var` keyword when declaring a new variable!
 
-# Arrays
-An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
-
-You can put different types of data into an array:
-
-```js
-var arrayName = [element0, element1, ...];
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-'Blue', 'Indigo', 'Violet'];
-var lotteryNumbers = [33, 72, 64, 18, 17, 85];
-var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
-```
-You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets ([]), and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
-
-```javascript
-colors = ['white',
-          'black',
-          'pink']
-```
-
-## Accessing Values in Arrays
-Each value in an array is automatically given a number called an index. This index can be used to access a particular value in any given array.
-
-Indices begin at 0 and order incrementally. So in the above `colors` example, the following is true:
-
-- color white has an index of 0
-- color black has an index of 1
-- color pink has an index of 2
-
-You can change values in an array by their index. Let's walk through it in the console:
-
-```javascript
-// Create the array
-var colors = ['white', 'black', 'pink'];
-
-// Check the value of colors
-colors;
-
-// Update the third value in the array
-colors[2] = 'blue';
-
-// Check the value of colors
-colors;
-
-// Get the value of the 1st element
-colors[0];
-```
-
-### Your Turn (5 min)
-
-In the console:  
-- create an array of cars
-- change the values within the array
-- add a new car to the array
-- identify the value of the 3rd element of the array
-
-## Getting Multiple Values from Functions:
-
-Functions can return more than one value using an array. Let's see what this looks like:
-
-```javascript
-function getSize(width, height, depth) {
-  var area = width * height;
-  var volume = width * height * depth;
-  var sizes = [area, volume];
-  return sizes;
-}
-var areaOne = getSize(3, 2, 3)[0];
-var volumeOne = getSize(3, 2, 3)[1];
-```
-
-### Your Turn (10 min)
-
-Okay, let's pick this apart in the console, step by step, and make sure we understand what's what. In the console, do these things:
-
-```javascript
-// Declare the getSize function
-function getSize(width, height, depth) {
-  var area = width * height;
-  var volume = width * height * depth;
-  var sizes = [area, volume];
-  return sizes;
-}
-
-// Ask the console what "getSize" is
-getSize;
-
-// Call the "getSize" function
-getSize();
-
-// Why this?
-[NaN, NaN];
-
-// Okay, pass getSize some arguments
-getSize(5, 3, 2);
-
-// I feel pretty good about this result, but feel free to check the math. ;)
-[15, 30];
-
-// Interactive Pop Quiz Time!
-var areaOne = getSize(3, 2, 3)[0];
-var areaTwo = getSize(3, 2, 3)[1];
-var areaThree = getSize(5, 1, 2)[0];
-var volumeOne = getSize(2, 2, 2)[1];
-var volumeTwo = getSize(1, 8, 7)[0];
-```
-
-# Loops
-There are times when we want to repeat the same operation multiple times over a set of data. Loops allow us to do just that by running through our data one by one and executing code to accomplish a goal.
-
-For example, for each item in a list (maybe an `array`...) if a conditional returns `true`, a code block will be run and the condition will be checked again. This pattern will be repeated until the conditional returns `false`.
-
-Let's take a look at the structure of the most commonly used type, the `for` loop:
-
-```js
-for ([initialExpression]; [condition]; [incrementExpression]) {
-  statement
-}
-```
-
-Which looks like this when we implement it in code:
-
-```js
-for (var i = 0; i < 10; i++ ) {
-  console.log(i);
-}
-```
-
-If we break this down, we see that our loop is constructed from the following parts:
-
-- the keyword `for`  
-- a set of rules, or conditions `(var i = 0; i < 10; i++ )`   
-- opening and closing curly braces which contain our code  
-- the code that we want our loop to execute: `console.log(i);`  
-
-Let's dig into the three statements separated by semicolons that make up or our conditions:
-
-- We begin with **initialization**. Where do we want our loop to start? The first statement `var i = 0;` creates a variable that is assigned the value of 0. This variable is commonly named `i`, or `index`, and will act as the counter. It is created the first time the loop is run.  
-- The next statement **sets the condition** that tells the loop when to stop running: `i < 10;`. In this case, the condition indicates that the loop will stop when `i` equals 10. The condition may use a variable that is assigned a value.
-- Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i + 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i - 1`.
-
-The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
-
-### Looping Over Arrays
-`for` loops are commonly used to iterate over the items in a array. To do this, we use the property `length` and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array. Let's see what that looks like in practice:
-
-```js
-var fruitList = ['apples', 'oranges', 'bananas'];
-
-for (var i = 0; i < fruitList.length; i++) {
-  console.log("I have some " + fruitList[i]);
-}
-```
-
-You can see that instead of using a hardcoded number, we are using `fruitList.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
-
 # Objects
 Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
@@ -859,3 +702,159 @@ people.Magneto.age
 people.Hercules.active
 people.Aphrodite.age
 ```
+
+# Arrays
+An array is a special type of object. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
+
+You can put different types of data into an array:
+
+```js
+var arrayName = [element0, element1, ...];
+var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
+'Blue', 'Indigo', 'Violet'];
+var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
+```
+You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets ([]), and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
+
+```javascript
+colors = ['white',
+          'black',
+          'pink']
+```
+
+## Accessing Values in Arrays
+Each value in an array is automatically given a number called an index. This index can be used to access a particular value in any given array.
+
+Indices begin at 0 and order incrementally. So in the above `colors` example, the following is true:
+
+- color white has an index of 0
+- color black has an index of 1
+- color pink has an index of 2
+
+You can change values in an array by their index. Let's walk through it in the console:
+
+```javascript
+// Create the array
+var colors = ['white', 'black', 'pink'];
+
+// Check the value of colors
+colors;
+
+// Update the third value in the array
+colors[2] = 'blue';
+
+// Check the value of colors
+colors;
+
+// Get the value of the 1st element
+colors[0];
+```
+
+### Your Turn (5 min)
+
+In the console:  
+- create an array of cars
+- change the values within the array
+- add a new car to the array
+- identify the value of the 3rd element of the array
+
+## Getting Multiple Values from Functions:
+
+Functions can return more than one value using an array. Let's see what this looks like:
+
+```javascript
+function getSize(width, height, depth) {
+  var area = width * height;
+  var volume = width * height * depth;
+  var sizes = [area, volume];
+  return sizes;
+}
+var areaOne = getSize(3, 2, 3)[0];
+var volumeOne = getSize(3, 2, 3)[1];
+```
+
+### Your Turn (10 min)
+
+Okay, let's pick this apart in the console, step by step, and make sure we understand what's what. In the console, do these things:
+
+```javascript
+// Declare the getSize function
+function getSize(width, height, depth) {
+  var area = width * height;
+  var volume = width * height * depth;
+  var sizes = [area, volume];
+  return sizes;
+}
+
+// Ask the console what "getSize" is
+getSize;
+
+// Call the "getSize" function
+getSize();
+
+// Why this?
+[NaN, NaN];
+
+// Okay, pass getSize some arguments
+getSize(5, 3, 2);
+
+// I feel pretty good about this result, but feel free to check the math. ;)
+[15, 30];
+
+// Interactive Pop Quiz Time!
+var areaOne = getSize(3, 2, 3)[0];
+var areaTwo = getSize(3, 2, 3)[1];
+var areaThree = getSize(5, 1, 2)[0];
+var volumeOne = getSize(2, 2, 2)[1];
+var volumeTwo = getSize(1, 8, 7)[0];
+```
+
+# Loops
+There are times when we want to repeat the same operation multiple times over a set of data. Loops allow us to do just that by running through our data one by one and executing code to accomplish a goal.
+
+For example, for each item in a list (maybe an `array`...) if a conditional returns `true`, a code block will be run and the condition will be checked again. This pattern will be repeated until the conditional returns `false`.
+
+Let's take a look at the structure of the most commonly used type, the `for` loop:
+
+```js
+for ([initialExpression]; [condition]; [incrementExpression]) {
+  statement
+}
+```
+
+Which looks like this when we implement it in code:
+
+```js
+for (var i = 0; i < 10; i++ ) {
+  console.log(i);
+}
+```
+
+If we break this down, we see that our loop is constructed from the following parts:
+
+- the keyword `for`  
+- a set of rules, or conditions `(var i = 0; i < 10; i++ )`   
+- opening and closing curly braces which contain our code  
+- the code that we want our loop to execute: `console.log(i);`  
+
+Let's dig into the three statements separated by semicolons that make up or our conditions:
+
+- We begin with **initialization**. Where do we want our loop to start? The first statement `var i = 0;` creates a variable that is assigned the value of 0. This variable is commonly named `i`, or `index`, and will act as the counter. It is created the first time the loop is run.  
+- The next statement **sets the condition** that tells the loop when to stop running: `i < 10;`. In this case, the condition indicates that the loop will stop when `i` equals 10. The condition may use a variable that is assigned a value.
+- Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i + 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i - 1`.
+
+The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
+
+### Looping Over Arrays
+`for` loops are commonly used to iterate over the items in a array. To do this, we use the property `length` and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array. Let's see what that looks like in practice:
+
+```js
+var fruitList = ['apples', 'oranges', 'bananas'];
+
+for (var i = 0; i < fruitList.length; i++) {
+  console.log("I have some " + fruitList[i]);
+}
+```
+
+You can see that instead of using a hardcoded number, we are using `fruitList.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
