@@ -65,7 +65,7 @@ Host: www.google.com
 And this is a sample response that the server generates to send back to the client:
 
 ```
-HTTP/1.0 200 OK
+HTTP/1.1 200 OK
 Content-Type: text/html; charset=UTF-8
 Content-Length: 1354
 
@@ -263,8 +263,8 @@ The six architectural constraints of REST are:
 1. Client-server - Separation of GUI and data
 2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
 3. Cacheable - Server responses are defined as cacheable or not. (Speeds up future interactions)
-4. Layered system - Modularity, each 'layer' serves only a single high-level purpose
-5. Code on demand - (i.e. execute JS script tag within HTML document)
+4. Layered system - Modularity, each 'layer' serves only a single high-level purpose - multiple servers can handle steps of a request (data/authentication), but the user cannot tell that their request/response went through multiple servers
+5. Code on demand - (i.e. instead of just JSON or XML, return JS script tag within HTML document) - optional feature; can still be considered RESTful without this
 6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
 
 RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, Destroy) are as follows:
