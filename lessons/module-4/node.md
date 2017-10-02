@@ -24,7 +24,7 @@ An **HTTP Server** handles any network requests by providing responses that can 
 
 ![network requests][network-requests]
 
-The network tab will list any requests you make to the server. If we search for 'www.turing.io', in the top left of the network panel, we can see that the type of request we made was for a 'document'. If we click on this request, we can also see information about the request itself, as well as the response we were given. Clicking on the 'Response' tab, you'll see the entire markup of the HTML document we requested:
+The network tab will list any requests you make to the server. If we search for `www.turing.io`, in the top left of the network panel, we can see that the type of request we made was for a `document`. If we click on this request, we can also see information about the request itself, as well as the response we were given. Clicking on the 'Response' tab, you'll see the entire markup of the HTML document we requested:
 
 ![network response][network-response]
 
