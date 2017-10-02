@@ -26,8 +26,6 @@ While some languages such as Java, C++ and Ruby are specifically object-oriented
 
 ### Examples:
 
-<center>
-
 ![vehicle example](https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CPT-OOP-objects_and_classes.svg/220px-CPT-OOP-objects_and_classes.svg.png)
 
 
@@ -42,8 +40,6 @@ While some languages such as Java, C++ and Ruby are specifically object-oriented
 
 ![instrument example](https://koenig-media.raywenderlich.com/uploads/2017/05/ObjectOrientedProgramming-graph-2.png)
 
-
-</center>
 
 # Benefits
 
