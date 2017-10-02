@@ -105,6 +105,8 @@ We've added a couple of things to our variable. Let's go through them:
 
 After our `var` keyword (a special word that the JavaScript interpreter knows is used to create a variable) and our variable name, we have an equals sign, `=`. That's called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.
 
+<!-- To Add: Pass By Reference vs Pass by Value -->
+
 ## Using Variables Together
 
 Now that we know about different data types and have values assigned to both of our variables, let's dive into using them together!
@@ -156,6 +158,8 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
+
+<!-- talk about how different data types evaluate to truthy/falsey values -->
 
 # Statements
 
@@ -217,6 +221,217 @@ if (hoursOfSleep < 6) {
 } else {
   console.log('I feel fantastic!');
 }
+```
+
+# Objects
+Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
+
+Let's look at an example:
+
+```javascript
+var objectName = {
+  property1: value1,
+  property2: value2,
+  property3: function() {
+    return "I'm value3!";
+  }
+}
+```
+
+Which looks like this when we implement it in code:
+
+```javascript
+var school = {
+  name: 'International School of Denver',
+  capacity: 250,
+  languageImmersion: true,
+  currentStudents: 75,
+  checkOpenSpots: function() {
+    return this.capacity - this.currentStudents;
+  }
+}
+```
+The ```school``` object has four properties:
+
+- ```name: 'International School of Denver'```
+- ```capacity: 250```
+- ```languageImmersion: true```
+- ```currentStudents: 75```
+
+The ```school``` object has one method:
+
+```js
+checkOpenspots: function() {
+  return this.capacity - this.currentStudents;
+}
+```
+
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
+
+There are two ways to access the properties or methods of an object:
+
+The most common is Dot Notation:
+
+```js
+var schoolName = school.name
+var schoolCapacity = school.capacity
+```
+
+Bracket Notation:
+
+```js
+var schoolName = school['name']
+var schoolCapacity = school['capacity']
+```
+
+Typically bracket notation is used when the name of the property is stored in a variable.
+
+```js
+var school = {
+  name: 'International School of Denver',
+  capacity: 250,
+  languageImmersion: true,
+  currentStudents: 75,
+  checkOpenSpots: function() {
+    return this.capacity - this.currentStudents;
+  }
+}
+
+var propertyName = 'name';
+
+console.log(school[propertyName]); // 'International School of Denver
+
+var properties = [ 
+	'name', 
+	'capacity', 
+	'languageImmersion', 
+	'currentStudents', 
+	'checkOpenSpots' 
+];
+
+properties.forEach( prop => {
+  console.log( prop );
+  // console.log( school[prop] );
+});
+```
+
+# Objects: Constructor Notation
+
+We feel pretty good about using literal notation to create an object. We know that all we really need is `{}`, but it's a good idea to assign an empty object to a variable to we can actually put things in it.
+
+Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
+
+```javascript
+var myLitObject = new Object()
+myLitObject
+```
+And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation.
+
+## Creating Many Objects
+
+Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ to spit out little objects that you define. Everytime you call ```new``` on this constructor you get an instance of the object. These are called `constructor functions`, and you can think of them like cookie cutters that produce the same shape of cookie every time you use them. Let's take a look:
+
+```javascript
+function Restaurant(name, tables, reservations) {
+  this.name = name;
+  this.tables = tables;
+  this.reservations = reservations;
+  this.checkAvailability = function () {
+    return this.tables - this.reservations;
+  }
+}
+```
+
+Let's talk about what's going on here:
+
+- A function called `Restaurant` is a template for creating new objects that represent individual "instances" of restaurants  
+- The function has three parameters (`name`, `tables`, `reservations`)  
+- Each parameter sets the _value_ of a _property_ in the object  
+- Each object created will utilize the same method for checking availability  
+- The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
+- Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma  
+- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
+
+## Prototypes & Inheritance: A First Look
+All JavaScript objects **inherit** the properties and methods from their `prototype`.  
+
+In other words, each object has an internal link to another object called its `prototype`. That prototype object has another prototype of its own, and so on and so on until an object is reached with `null` as its prototype. ```null```, by definition, has no prototype, and acts as the final link in this _prototype chain_.  
+
+There is nothing special about a prototype object. There are no special-out-of-the-box methods or magic to a prototype. Let's look:
+
+```javascript
+// Let's make a constructor function
+function DumbObjectMaker() {}
+
+// Let's ask DumbObjectMaker for the value of it's prototype
+function DumbObjectMaker() {}
+DumbObjectMaker.prototype
+```
+
+As a review,constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
+
+```js
+function DumbObjectMaker() {
+  this.name = "Elvis"
+}
+```
+
+Similarly, a `prototype` in javascript can be _any object_ and it is responsible for defining the **behavior** of instances. This behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. Creating prototype functions is essentially defining your objects' instance methods.  
+
+Let's look at some code examples.  
+
+```javascript
+// Outfit constructor whose only job is to create instances of outfits all day. It takes pants, socks, and shirt parameters, so it can make different outfits all day.
+function Outfit(pants, socks, shirt) {
+	this.pants = pants;
+	this.socks = socks;
+	this.shirt = shirt;
+}
+
+Outfit.prototype.compliment = function() {
+  console.log(`Nice ${this.pants} pants and ${this.socks} and ${this.shirt} shirt!`)
+}
+
+// Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
+
+var casual = new Outfit('denim', 'cat', 'hanes')
+casual.compliment();
+```
+
+_Note_: We will get WAY MORE INTO prototype methods and what is happening behind the scenes as we progress through this mod/program. This is not the last time we will talk about these concepts so if prototypes and the word "this" make you feel panicky...thats ok.  
+
+## Which Data Structure?
+When deciding on an approach, you must consider how the data will be used. Let's think about a few scenarios:
+
+When the order of objects is important, they should be stored in an array.  
+When you want to access objects using their name, they work well as properties of another object.(because you would not need to iterate through all objects like in an array).
+
+#### Objects in an Array
+
+```javascript
+var people = [
+  {name: 'Mike', age: 65, active: true},
+  {name: 'Becca', age: 23, active: false},
+  {name: 'Tony', age: 40, active: false},
+  {name: 'Penelope', age: 23, active: true}
+]
+people[1].name
+people[3].age
+people[2].active
+```
+
+#### Objects as Properties
+
+```javascript
+var people = {
+  Hercules: {age: 65, active: true},
+  Aphrodite: {age: 23, active: false},
+  Zeus: {age: 40, active: false},
+  Magneto: {age: 23, active: true}
+}
+people.Magneto.age
+people.Hercules.active
+people.Aphrodite.age
 ```
 
 # Functions
@@ -492,216 +707,6 @@ Variables sans the keyword `var`
 
 The good news is all you have to do to avoid this is to always remember to use the `var` keyword when declaring a new variable!
 
-# Objects
-Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
-
-Let's look at an example:
-
-```javascript
-var objectName = {
-  property1: value1,
-  property2: value2,
-  property3: function() {
-    return "I'm value3!";
-  }
-}
-```
-
-Which looks like this when we implement it in code:
-
-```javascript
-var school = {
-  name: 'International School of Denver',
-  capacity: 250,
-  languageImmersion: true,
-  currentStudents: 75,
-  checkOpenSpots: function() {
-    return this.capacity - this.currentStudents;
-  }
-}
-```
-The ```school``` object has four properties:
-
-- ```name: 'International School of Denver'```
-- ```capacity: 250```
-- ```languageImmersion: true```
-- ```currentStudents: 75```
-
-The ```school``` object has one method:
-
-```js
-checkOpenspots: function() {
-  return this.capacity - this.currentStudents;
-}
-```
-
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
-
-There are two ways to access the properties or methods of an object:
-
-The most common is Dot Notation:
-
-```js
-var schoolName = school.name
-var schoolCapacity = school.capacity
-```
-
-Bracket Notation:
-
-```js
-var schoolName = school['name']
-var schoolCapacity = school['capacity']
-```
-
-Typically bracket notation is used when the name of the property is stored in a variable.
-
-```js
-var school = {
-  name: 'International School of Denver',
-  capacity: 250,
-  languageImmersion: true,
-  currentStudents: 75,
-  checkOpenSpots: function() {
-    return this.capacity - this.currentStudents;
-  }
-}
-
-var propertyName = 'name';
-
-console.log(school[propertyName]); // 'International School of Denver
-
-var properties = [ 
-	'name', 
-	'capacity', 
-	'languageImmersion', 
-	'currentStudents', 
-	'checkOpenSpots' 
-];
-
-properties.forEach( prop => {
-  console.log( prop );
-  // console.log( school[prop] );
-});
-```
-
-# Objects: Constructor Notation
-
-We feel pretty good about using literal notation to create an object. We know that all we really need is `{}`, but it's a good idea to assign an empty object to a variable to we can actually put things in it.
-
-Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
-
-```javascript
-var myLitObject = new Object()
-myLitObject
-```
-And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation.
-
-## Creating Many Objects
-
-Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ to spit out little objects that you define. Everytime you call ```new``` on this constructor you get an instance of the object. These are called `constructor functions`, and you can think of them like cookie cutters that produce the same shape of cookie every time you use them. Let's take a look:
-
-```javascript
-function Restaurant(name, tables, reservations) {
-  this.name = name;
-  this.tables = tables;
-  this.reservations = reservations;
-  this.checkAvailability = function () {
-    return this.tables - this.reservations;
-  }
-}
-```
-
-Let's talk about what's going on here:
-
-- A function called `Restaurant` is a template for creating new objects that represent individual "instances" of restaurants  
-- The function has three parameters (`name`, `tables`, `reservations`)  
-- Each parameter sets the _value_ of a _property_ in the object  
-- Each object created will utilize the same method for checking availability  
-- The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
-- Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma  
-- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
-
-## Prototypes & Inheritance: A First Look
-All JavaScript objects **inherit** the properties and methods from their `prototype`.  
-
-In other words, each object has an internal link to another object called its `prototype`. That prototype object has another prototype of its own, and so on and so on until an object is reached with `null` as its prototype. ```null```, by definition, has no prototype, and acts as the final link in this _prototype chain_.  
-
-There is nothing special about a prototype object. There are no special-out-of-the-box methods or magic to a prototype. Let's look:
-
-```javascript
-// Let's make a constructor function
-function DumbObjectMaker() {}
-
-// Let's ask DumbObjectMaker for the value of it's prototype
-function DumbObjectMaker() {}
-DumbObjectMaker.prototype
-```
-
-As a review,constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
-
-```js
-function DumbObjectMaker() {
-  this.name = "Elvis"
-}
-```
-
-Similarly, a `prototype` in javascript can be _any object_ and it is responsible for defining the **behavior** of instances. This behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. Creating prototype functions is essentially defining your objects' instance methods.  
-
-Let's look at some code examples.  
-
-```javascript
-// Outfit constructor whose only job is to create instances of outfits all day. It takes pants, socks, and shirt parameters, so it can make different outfits all day.
-function Outfit(pants, socks, shirt) {
-	this.pants = pants;
-	this.socks = socks;
-	this.shirt = shirt;
-}
-
-Outfit.prototype.compliment = function() {
-  console.log(`Nice ${this.pants} pants and ${this.socks} and ${this.shirt} shirt!`)
-}
-
-// Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
-
-var casual = new Outfit('denim', 'cat', 'hanes')
-casual.compliment();
-```
-
-_Note_: We will get WAY MORE INTO prototype methods and what is happening behind the scenes as we progress through this mod/program. This is not the last time we will talk about these concepts so if prototypes and the word "this" make you feel panicky...thats ok.  
-
-## Which Data Structure?
-When deciding on an approach, you must consider how the data will be used. Let's think about a few scenarios:
-
-When the order of objects is important, they should be stored in an array.  
-When you want to access objects using their name, they work well as properties of another object.(because you would not need to iterate through all objects like in an array).
-
-#### Objects in an Array
-
-```javascript
-var people = [
-  {name: 'Mike', age: 65, active: true},
-  {name: 'Becca', age: 23, active: false},
-  {name: 'Tony', age: 40, active: false},
-  {name: 'Penelope', age: 23, active: true}
-]
-people[1].name
-people[3].age
-people[2].active
-```
-
-#### Objects as Properties
-
-```javascript
-var people = {
-  Hercules: {age: 65, active: true},
-  Aphrodite: {age: 23, active: false},
-  Zeus: {age: 40, active: false},
-  Magneto: {age: 23, active: true}
-}
-people.Magneto.age
-people.Hercules.active
-people.Aphrodite.age
-```
 
 # Arrays
 An array is a special type of object. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
