@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Terminal
-length: 60
+length: 90
 tags: command line, terminal
 ---
 
