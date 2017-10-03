@@ -41,13 +41,13 @@ When you open up your terminal, you aren't greeted with much. It just says your 
 ```
 (and other directories depending on your computer)
 
-#### pwd
+#### pwd (print working directory)
 
 We can use our terminal to navigate through our computer's files and directories.
 
 Let's first get a handle of where we are in our computer's file structure. To see where you are located in the file structure, enter `pwd` in the terminal. This stands for your present working directory. If you are in the root directory, it will most like say `/Users/[your name]`. If you ever forget or are confused about where you are, then use `pwd` to find out!
 
-#### ls
+#### ls (list)
 
 Our file structure is made up of files and directories. Just as you would see visually in Finder or the Windows File Explorer, files and directories can live inside other directories, which you can picture as:
 
@@ -74,7 +74,7 @@ For a more detailed list of content, type `ls -la` - note the space between the 
 
 ### Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
 
-#### mkdir
+#### mkdir (make directory)
 
 Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the `mkdir [dir name]` command. What this will do is create a new folder for us with whatever name you want to give it.
 
@@ -88,13 +88,13 @@ How do we check that the directory was made? Use `ls` to check that it is listed
 
 Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to change into that new directory, but we will talk about this in the next section.
 
-#### touch
+#### touch (create file)
 
 Similar to directories, we also need to be able to create new files. The command we are going to use to do this is the `touch [file name]` command.
 
 Let's make a new, blank text file using `touch toppings.txt`. If we open the file, there is nothing in it, but we expect that because we only told the terminal to create a new file.
 
-#### rm
+#### rm (remove)
 
 So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `toppings.txt` file, then we can delete it.
 
@@ -108,7 +108,7 @@ Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see t
 
 ### Move Through the File Structure: `cd`
 
-#### cd
+#### cd (change directory)
 
 If we are in our root directory, and we want to see what files are within the Pictures directory, we currently don't have a way to do that. For instance, if we are in the root directory, and we enter `ls` in the terminal, it will just list the files and directories in the root directory, but we cannot see what is inside Pictures by only using `ls`.
 
@@ -208,7 +208,7 @@ The same can be done with making new directories. With our current running examp
 
 So now that we can create and remove files, let's add to our toolbox the ability to copy or move files. At a high level, `cp` keeps the source file and copies the file to a new location. `mv` takes the source file and moves it to a new location.
 
-#### cp
+#### cp (copy)
 
 The copy command, `cp`, has two options you need to enter: `cp [the thing you want to copy] [where you want to copy it to]`, or more simply `cp [source] [destination]`.
 
@@ -237,7 +237,7 @@ If we are in the `turing` directory, then this is how we move the file:
 cp sample.txt notes/
 ```
 
-#### mv
+#### mv (move)
 
 Similarly, if we want to move a file, then we use the `mv` command with `mv [source] [destination]`. It's almost the same as copy, but as you can guess, the file is moved instead of copied.
 
