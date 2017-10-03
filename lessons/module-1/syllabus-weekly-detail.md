@@ -14,21 +14,21 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 2: Putting the Pieces Together
 
 |Mindset     | _Open, optimistic, invested_. |
-|Lessons     |[JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io lessons/module-1/design-1.html) |
+|Lessons     |[JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
 |Assignment  | __DUE__: Wed 10/11 end of day Dog Party Static Comp |
 |Assignment  | __EVAL__: Thu 10/12 ~ Number Guesser |
 
 ### WK 3: Level Up
 
 |Mindset     | _Dig Deep, show grit, be vocal, be resourceful_. |
-|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [jQuery](http://frontend.turing.io/lessons/introduction-to-jquery.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) |
+|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [jQuery](http://frontend.turing.io/lessons/module-1/introduction-to-jquery.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/module-1/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) |
 |Assignment  | __EVAL__: Wed 10/18 ~ Mid Mock Assessment |
 |Assignment  | __EVAL__: Thu 10/19 ~ Linked List |
 
 ### WK 4: Build on a Solid Foundation
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
-|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/array-prototype-methods-intro) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
+|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/array-prototype-methods-intro) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
 |Assignment  | __DUE__:   Wed 10/24 ~ Static Comp Challenge #1 by *12:00 PM* |
 |Assignment  | __EVAL__:  Thu 10/26 ~ Ideabox |
 
