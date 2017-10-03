@@ -18,6 +18,53 @@ A database is a collection of data stored in an organized way.
 
 Software products that are used to build, maintain and access data from a database are called Database Management Systems. You'll often hear of two different types of database systems: **relational** and **non-relational**. 
 
+### Non-Relational Databases
+
+Up until now, you have mostly seen non-relational databases. Non-relational databases, such as [MongoDB](https://www.mongodb.com/), allow for greater flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
+
+Non-relational databases:
+
+* **Allow for complex data types to be stored** - this allows for a more nested data structure as you can store lists and objects in any field
+* **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast, but it also means it's safe from SQL injection attacks.
+
+Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient). (Think back to the tradeoffs we learned about in the Firebase documentation.)
+
+The same data we saw above, coming from a non-relational database, might look like so:
+
+```js
+// One-to-many relationship - Non-Relational Database Setup
+// Notice: footnotes are stored as an array directly within
+// the research paper object, and they no longer need a key
+// to reference the publicationId
+
+// Research Papers
+[{
+  'id': 1,
+  'title': 'Lorem Ipsum Dolor',
+  'publicationDate': 1493673656502,
+  'footnotes': [{
+    'id': 1
+    'pageNumber': 26,
+    'note': 'Dolor set amet consequetar'
+  },
+  {
+    'id': 2
+    'pageNumber': 362,
+    'note': 'Consequetar adipscing'
+  },
+  {
+    'id': 3
+    'pageNumber': 75,
+    'note': 'Lorem set amet'
+  }]
+}];
+```
+
+### Reading
+
+Although Firebase is a nosql database, they actually encourage you to [structure your data](https://firebase.google.com/docs/database/web/structure-data) in a flat manner. Take a moment to read through this documentation and understand why.
+
+
 ### Relational Databases
 
 Traditional databases such as [MySQL](https://www.mysql.com/) and [PostgreSQL](https://www.postgresql.org/) are considered **relational** -- data points are predictable and have strict relationships between each other. The database requires a strict, pre-defined schema (more on this in a bit) with tables and columns.
@@ -96,62 +143,7 @@ In a more familiar format, this data would likely be extracted from a database a
 * **Foreign Key** - A field in one table that uniquely identifies a row of another table. A foreign key is defined in a second table, but it refers to the primary key in the first table
 
 ### Reading
-
-Take a couple of minutes to look through the files in [this randomly-selected open source codebase](https://github.com/thinktopography/backframejs/tree/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations). Each file is associated with a `table` in the database for this project, using software called Knex to interface with a `relational database`. We will learn more about Knex in the next lesson. 
-
-
-
-### Non-Relational Databases
-
-Up until now, you have mostly seen non-relational databases. Non-relational databases, such as [MongoDB](https://www.mongodb.com/), allow for greater flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
-
-Non-relational databases:
-
-* **Allow for complex data types to be stored** - this allows for a more nested data structure as you can store lists and objects in any field
-* **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast, but it also means it's safe from SQL injection attacks.
-
-Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient). (Think back to the tradeoffs we learned about in the Firebase documentation.)
-
-The same data we saw above, coming from a non-relational database, might look like so:
-
-```js
-// One-to-many relationship - Non-Relational Database Setup
-// Notice: footnotes are stored as an array directly within
-// the research paper object, and they no longer need a key
-// to reference the publicationId
-
-// Research Papers
-[{
-  'id': 1,
-  'title': 'Lorem Ipsum Dolor',
-  'publicationDate': 1493673656502,
-  'footnotes': [{
-    'id': 1
-    'pageNumber': 26,
-    'note': 'Dolor set amet consequetar'
-  },
-  {
-    'id': 2
-    'pageNumber': 362,
-    'note': 'Consequetar adipscing'
-  },
-  {
-    'id': 3
-    'pageNumber': 75,
-    'note': 'Lorem set amet'
-  }]
-}];
-```
-
-### Choosing a DBMS
-Choosing a Database Management System for your application is highly dependent on what kind of data you plan to store. It's important to map out what your ideal data structure might look like before choosing a DBMS. There are tools to help you visualize the schemas you create, such as [Schema Designer](http://ondras.zarovi.cz/sql/demo/)
-
-You also might choose a particular database depending on what technologies you're using elsewhere in your application. For example, if you're using Firebase for authentication and storage, it might make sense to use Firebase as your back-end store as well.
-
-### Reading
-
-Although Firebase is a nosql database, they actually encourage you to [structure your data](https://firebase.google.com/docs/database/web/structure-data) in a flat manner. Take a moment to read through this documentation and understand why.
-
+Take a couple of minutes to look through the files in [this randomly-selected open source codebase](https://github.com/thinktopography/backframejs/tree/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations). Each file is associated with a `table` in the database for this project, using software called Knex to interface with a `relational database`. We will learn more about Knex in the next lesson.
 
 ## Data Structures & Data Modeling
 
@@ -186,6 +178,9 @@ Authors can publish many research papers
 ```
 
 What relationship does this describe? How might it be modeled in a relational vs. non-relational database?
+
+### Mapping Out a Schema
+Choosing a Database Management System for your application is highly dependent on what kind of data you plan to store. It's important to map out what your ideal data structure might look like before choosing a DBMS. There are tools to help you visualize the schemas you create, such as [Schema Designer](http://ondras.zarovi.cz/sql/demo/)
 
 
 ## Resources
