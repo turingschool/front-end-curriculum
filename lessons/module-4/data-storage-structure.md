@@ -24,18 +24,18 @@ Up until now, you have mostly seen non-relational databases. Non-relational data
 
 Non-relational databases:
 
-* **Allow for complex data types to be stored** - this allows for a more nested data structure as you can store lists and objects in any field
+* **Allow for complex data types to be stored** - allows for a more nested data structure as you can store lists and objects in any field
 * **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast, but it also means it's safe from SQL injection attacks.
 
-Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient). (Think back to the tradeoffs we learned about in the Firebase documentation.)
+Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient).
 
-The same data we saw above, coming from a non-relational database, might look like so:
+Let's consider a dataset of **research papers** and **footnotes**. A research paper can have many footnotes. In a non-relational database, we have to nest the footnotes under each research paper.
 
 ```js
 // One-to-many relationship - Non-Relational Database Setup
 // Notice: footnotes are stored as an array directly within
-// the research paper object, and they no longer need a key
-// to reference the publicationId
+// the research paper object, and they do not need a key
+// to reference the publication
 
 // Research Papers
 [{
@@ -62,8 +62,7 @@ The same data we saw above, coming from a non-relational database, might look li
 
 ### Reading
 
-Although Firebase is a nosql database, they actually encourage you to [structure your data](https://firebase.google.com/docs/database/web/structure-data) in a flat manner. Take a moment to read through this documentation and understand why.
-
+Although Firebase is a nosql database, they actually encourage you to [structure your data](https://firebase.google.com/docs/database/web/structure-data) in a flat manner, which is what we'll see in relational databases next. Take a moment to read through this documentation and understand why.
 
 ### Relational Databases
 
