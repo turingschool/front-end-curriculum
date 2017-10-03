@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Terminal
-length: 90
+length: 60
 tags: command line, terminal
 ---
 
@@ -41,13 +41,13 @@ When you open up your terminal, you aren't greeted with much. It just says your 
 ```
 (and other directories depending on your computer)
 
-#### pwd
+#### pwd (print working directory)
 
 We can use our terminal to navigate through our computer's files and directories.
 
 Let's first get a handle of where we are in our computer's file structure. To see where you are located in the file structure, enter `pwd` in the terminal. This stands for your present working directory. If you are in the root directory, it will most like say `/Users/[your name]`. If you ever forget or are confused about where you are, then use `pwd` to find out!
 
-#### ls
+#### ls (list)
 
 Our file structure is made up of files and directories. Just as you would see visually in Finder or the Windows File Explorer, files and directories can live inside other directories, which you can picture as:
 
@@ -72,43 +72,9 @@ For a more detailed list of content, type `ls -la` - note the space between the 
 
 * Enter `ls -la`. How does this list change? Do you see the same files and directories when you use Finder?
 
-### Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
-
-#### mkdir
-
-Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the `mkdir [dir name]` command. What this will do is create a new folder for us with whatever name you want to give it.
-
-Note: A common way to document how to use a command is the command name, `mkdir`, and then something within square brackets, `[dir name]`. The first part, `mkdir`, is the text that the terminal recognizes as a command. The second part, `[dir name]`, is the part where you will specify the new directory's name. The square brackets mean that this is a place for you to fill in your own information, but you do not include the square brackets.
-
-For example, let's create a new directory called `pizza`. Enter `mkdir pizza` in the terminal.
-
-One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal when you do the correct thing.
-
-How do we check that the directory was made? Use `ls` to check that it is listed.
-
-Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to change into that new directory, but we will talk about this in the next section.
-
-#### touch
-
-Similar to directories, we also need to be able to create new files. The command we are going to use to do this is the `touch [file name]` command.
-
-Let's make a new, blank text file using `touch toppings.txt`. If we open the file, there is nothing in it, but we expect that because we only told the terminal to create a new file.
-
-#### rm
-
-So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `toppings.txt` file, then we can delete it.
-
-Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
-
-#### Your Turn
-
-* Open a new terminal window. Create five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
-
-* Create ten new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
-
 ### Move Through the File Structure: `cd`
 
-#### cd
+#### cd (change directory)
 
 If we are in our root directory, and we want to see what files are within the Pictures directory, we currently don't have a way to do that. For instance, if we are in the root directory, and we enter `ls` in the terminal, it will just list the files and directories in the root directory, but we cannot see what is inside Pictures by only using `ls`.
 
@@ -160,6 +126,40 @@ Likewise, we can also go back up multiple directories using one command. If you 
 
 * In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this five times. When you are done, delete the directories you just made, one directory at a time.
 
+### Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
+
+#### mkdir (make directory)
+
+Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the `mkdir [dir name]` command. What this will do is create a new folder for us with whatever name you want to give it.
+
+Note: A common way to document how to use a command is the command name, `mkdir`, and then something within square brackets, `[dir name]`. The first part, `mkdir`, is the text that the terminal recognizes as a command. The second part, `[dir name]`, is the part where you will specify the new directory's name. The square brackets mean that this is a place for you to fill in your own information, but you do not include the square brackets.
+
+For example, let's create a new directory called `pizza`. Enter `mkdir pizza` in the terminal.
+
+One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal when you do the correct thing.
+
+How do we check that the directory was made? Use `ls` to check that it is listed.
+
+Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to change into that new directory, but we will talk about this in the next section.
+
+#### touch (create file)
+
+Similar to directories, we also need to be able to create new files. The command we are going to use to do this is the `touch [file name]` command.
+
+Let's make a new, blank text file using `touch toppings.txt`. If we open the file, there is nothing in it, but we expect that because we only told the terminal to create a new file.
+
+#### rm (remove)
+
+So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `toppings.txt` file, then we can delete it.
+
+Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
+
+#### Your Turn
+
+* Open a new terminal window. Create five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
+
+* Create ten new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
+
 ### Commands From Your Present Working Directory
 
 Using `cd`, you can move around directories and add files in the directories where we need them. However, moving around to other directories can get tedious and time consuming.
@@ -208,7 +208,7 @@ The same can be done with making new directories. With our current running examp
 
 So now that we can create and remove files, let's add to our toolbox the ability to copy or move files. At a high level, `cp` keeps the source file and copies the file to a new location. `mv` takes the source file and moves it to a new location.
 
-#### cp
+#### cp (copy)
 
 The copy command, `cp`, has two options you need to enter: `cp [the thing you want to copy] [where you want to copy it to]`, or more simply `cp [source] [destination]`.
 
@@ -237,7 +237,7 @@ If we are in the `turing` directory, then this is how we move the file:
 cp sample.txt notes/
 ```
 
-#### mv
+#### mv (move)
 
 Similarly, if we want to move a file, then we use the `mv` command with `mv [source] [destination]`. It's almost the same as copy, but as you can guess, the file is moved instead of copied.
 
@@ -322,7 +322,7 @@ Can you add emoticons? Yes. Yes [you can](http://osxdaily.com/2013/04/08/add-emo
 
 ## Persisting Your Changes
 
-* Open `~/.bash_profile` in a text editor (ex: `atom ~/.bash_profile`)
+* Open `~/.bash_profile` in a text editor (ex: `sublime ~/.bash_profile`)
 
 Anything that you type into your terminal will only persist for the lifetime of the terminal session. If you want to save your bash prompt, you'll do so by adding the commands you put in your terminal to your .bash_profile file.
 
