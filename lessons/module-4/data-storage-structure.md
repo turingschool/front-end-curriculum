@@ -58,8 +58,6 @@ id | page | publicationId | note
 3  | 75   | 2             | 'Lorem set amet'             |
 
 
-
-
 In a more familiar format, this data would likely be extracted from a database and come through an API endpoint as JSON data like so:
 
 ```js
