@@ -22,17 +22,20 @@ Rebasing serves the same purpose, integrating changes from one branch into anoth
 
 Imagine the following scenario: you are working on a project with 5 other people and you've all divvied up the responsibilities to add features and functionality. You're in charge of adding database integration which is going to take you a significant amount of time to finish - about 2 weeks. You create a new feature branch based off of master and begin your work. In the meantime, your teammates are working on smaller issues that they've been completing and merging into master every day.
 
+[ whiteboard ]
+
 By the time you're finished with your database functionality, there have been 50 commits pushed into master and you need to integrate them into your branch. With the merge workflow, we would **merge** the **master** branch **into** our **feature** branch:
 
 ```bash
 repo-name:feature-branch $ git merge master
 ```
 
+
 ### How Merging Works
 
-After running this command, git will pull any changes from master into your feature branch and prompt you to resolve any merge conflicts. Once you resolve all the merge conflicts between the two branches, git will automatically create a new "Merge Commit" in the feature branch that ties the two histories together. These merge commits simply reflect the manual conflict resolutions that you made, and make the project history more difficult to read. Let's take a look at how this works:
+After running this command, git will pull any changes from master into your feature branch and prompt you to resolve any merge conflicts. Once you resolve all the merge conflicts between the two branches, git will automatically create a new "Merge Commit" in the feature branch that ties the two histories together. These merge commits simply reflect the manual conflict resolutions that you made, and make the project history more difficult to read. Let's take a look at the history this generates:
 
-[ demo, whiteboard, screenshots of history, graphs and charts of commits ]
+[ demo, screenshot ]
 
 You'll notice we also get these automatic merge commits when we merge a pull request into master from one of our teammates. These commits are more useful because they link to and document the pull request they came from, which helps you identify when and where certain changes were incorporated into the default branch.
 
