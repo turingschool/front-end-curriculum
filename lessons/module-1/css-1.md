@@ -52,7 +52,7 @@ Each element is a rectangular box. CSS leverages "the box model" to control layo
 ***
 
 # Practice
-Let's setup a small static page to experiement with our HTML and CSS.
+Let's setup a small static page to experiment with our HTML and CSS.
 
 * Create a directory called static-site-playground
 * Create a file `index.html` with the html provided below
@@ -90,13 +90,13 @@ In HTML, you can visualize each element as its own rectangular box. There are a 
 
 We have a `div` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The DevTools panel provides a handy graphic of how our div is being rendered.
 
-This is the default behavior for the rendering of block elements in CSS. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
+This is the default behavior for the rendering of block elements in CSS and is due to the `box sizing` property having a default value of `content-box`. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
 
 ```css
 *,
 *:after,
 *:before {
-  box-sizing: 'border-box';
+  box-sizing: border-box;
 }
 ```
 
