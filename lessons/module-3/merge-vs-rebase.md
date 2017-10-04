@@ -35,7 +35,9 @@ repo-name:feature-branch $ git merge master
 
 After running this command, git will pull any changes from master into your feature branch and prompt you to resolve any merge conflicts. Once you resolve all the merge conflicts between the two branches, git will automatically create a new "Merge Commit" in the feature branch that ties the two histories together. These merge commits simply reflect the manual conflict resolutions that you made, and make the project history more difficult to read. Let's take a look at the history this generates:
 
-[ demo, screenshot ]
+![merge-vs-rebase][merge-vs-rebase]
+
+[merge-vs-rebase]: /assets/images/lessons/debugging-with-devtools/devtools-window.gif
 
 You'll notice we also get these automatic merge commits when we merge a pull request into master from one of our teammates. These commits are more useful because they link to and document the pull request they came from, which helps you identify when and where certain changes were incorporated into the default branch.
 
@@ -71,7 +73,7 @@ This means that you may be resolving merge conflicts in every single commit you'
 
 #### Rewriting History
 
-Because you'll be resolving merge conflicts in each commit, you'll essentially be changing the work that was done in that commit. This is called **rewriting history**, and it means that your commit will get a brand new SHA identifier.
+Because you'll be resolving merge conflicts in each commit, and because you'll be moving your commits to the tip of the branch (despite their timestamps), you'll essentially be changing the work that was done in that commit. This is called **rewriting history**, and it means that your commit will get a brand new SHA identifier.
 
 This is important, and where rebasing gets tricky. Any time you rewrite history there is potential for collaboration to get thrown off track. If anyone has based any work off of your commits with their original SHAs, and then you rewrite history, git won't be able to successfully combine those changes any more.
 
