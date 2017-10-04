@@ -37,7 +37,7 @@ After running this command, git will pull any changes from master into your feat
 
 ![merge-vs-rebase][merge-vs-rebase]
 
-[merge-vs-rebase]: /assets/images/lessons/debugging-with-devtools/devtools-window.gif
+[merge-vs-rebase]: /assets/images/lessons/merge-rebase/merge-vs-rebase.png
 
 You'll notice we also get these automatic merge commits when we merge a pull request into master from one of our teammates. These commits are more useful because they link to and document the pull request they came from, which helps you identify when and where certain changes were incorporated into the default branch.
 
