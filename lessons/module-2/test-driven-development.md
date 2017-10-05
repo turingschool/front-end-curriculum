@@ -156,7 +156,7 @@ If use `deepEqual` instead, the same test will pass. `deepEqual` tells Chai to d
 
 Now that we've discussed the difference between Mocha and Chai, let's look at a test from top to bottom.
 
-There are three crucial pieces of a test:  
+There are four crucial pieces of a test:  
 1. Setup
 2. Pre-Assertion
 2. Execution
