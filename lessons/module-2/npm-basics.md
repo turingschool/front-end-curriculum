@@ -1,9 +1,12 @@
 ---
 title: NPM Basics
-length:
+length: 30 min
 tags: npm, node modules
 mod: 2
 ---
+
+## Slide deck:
+[lesson slides](https://docs.google.com/presentation/d/1DLcitTaOS0sOYrooIEa8iD92HWFU-EDHHwRbXCT15-w/edit?usp=sharing)
 
 ## npm config list
 Show install location of Node
@@ -28,11 +31,12 @@ Package will be installed globally
 global packaged typically installed in `/usr/local/lib/node_modules`
 
 
-## npm install --save
+## npm install --save-prod
 e.g.
-`npm install cows --save`
+`npm install cows --save-prod`
 Package will appear in your package.config > dependencies
 Good for production js files (e.g. jquery, angular, react…)
+NOTE: As of npm v5, anything installed with `npm install`, even without the `--save-prod` flag, will be added to the dependencies in the `package.json`
 
 
 ## npm install --save-dev
@@ -55,5 +59,5 @@ This runs a package's "test" script, if one was provided.
 
 
 ## npm run [-script]
-Shortcut for npm run-script
+Shortcut for a custom npm run-script
 runs an arbitrary command from a package's "scripts" object. If no "command" is provided, it will list the available scripts.
