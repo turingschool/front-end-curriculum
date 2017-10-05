@@ -16,8 +16,7 @@ The front-end of the web is based on three major technologies:
 This lesson is all about the presentation layer, CSS. We'll take this opportunity to accomplish the following:
 
 * Learn the basics of CSS, and experiment with some of the major properties for both aesthetic and layout
-* Build a small static site with semantically correct and well structured HTML
-* Style our markup using a separate style sheet of basic CSS
+* Build a small static site and style our markup using a separate style sheet of basic CSS
 
 But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.com/)
 
@@ -64,7 +63,7 @@ Let's setup a small static page to experiment with our HTML and CSS.
 <!doctype html>
 <html>
   <head>  
-    <title>Playground</title>
+    <title>CSS Playground</title>
   </head>  
   <body>  
     <h1>Static Site Experiments in Here!</h1>
