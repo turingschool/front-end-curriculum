@@ -176,13 +176,17 @@ describe('unicorn', function() {
     // Instantiate an instance of our unicorn
     var unicorn = new Unicorn('Susan');
 
-    // 2. "Execute"
+    // 2. "Pre-Assert"
+    // Make an assertion to verify that after executing certain functions, we end up with what we expect
+    assert.equal(unicorn.calories, 0);
+
+    // 3. "Execute"
     // Run appropriate functions that execute the behavior indicated by our test title
     unicorn.eat();
     unicorn.eat();
     unicorn.eat();
 
-    // 3. "Assert"
+    // 4. "Post-Assert"
     // Make an assertion to verify that after executing certain functions, we end up with what we expect
     assert.equal(unicorn.calories, 300);
   });
