@@ -158,8 +158,9 @@ Now that we've discussed the difference between Mocha and Chai, let's look at a 
 
 There are three crucial pieces of a test:  
 1. Setup
+2. Pre-Assertion
 2. Execution
-3. Assertion
+3. Post-Assertion
 
 Look at the following example and read the comments that talk about each line of our test:  
 
