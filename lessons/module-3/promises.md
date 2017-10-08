@@ -190,6 +190,7 @@ $.getJSON('/api/v1/students.json', (students) => {
 
 Or in other words...
 
+
 ![callback hell street fighters]('https://pbs.twimg.com/media/COYihdoWgAE9q3Y.jpg')
 
 Ugh. This is what we refer to as callback hell. The code becomes super nesty and difficult to follow. Without comments, it's not clear which error callbacks are associated with which operation, and there is a lot of repeat code. When re-written using promises, we can consolidate and flatten a lot of this syntax:
