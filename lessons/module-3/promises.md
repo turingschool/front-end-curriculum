@@ -107,7 +107,7 @@ Promises allow you to multi-task a bit in JavaScript. They provide a cleaner and
 A Promise is essentially an IOU that says "Ok, I'm going to get you the information you requested, just give me a second. In the meantime, go do whatever else you need to do, and I'll let you know when I'm ready." This is almost similar to event listeners that you may have written in the past. Take a click handler for example:
 
 ```javascript
-$('#clickity-click').click(function(event) {
+$('#clickity-click').click(() => {
   doSomething();
 });
 ```
