@@ -16,22 +16,19 @@ Thinking back to [last week's lesson](https://docs.google.com/presentation/d/1V2
 
 Today we're going to keep building on those principles.
 
-### Personas
+## Personas
 A persona is an imaginary example user, and includes information such as what the user's goal is, how familiar they are with the app, their situation in life, etc. It's a tool used to help designers and developers construct the architecture of an app.
 
 Here are some examples:
 ![example persona](https://i.imgur.com/3Yo2QcD.png)
-----------
 ![example persona](https://i.imgur.com/ulp4wU3.png)
------------
 ![example persona](https://i.imgur.com/C2li5ZQ.png)
-----------
 
 Personas can feel a little silly, but they are a great way to keep you focused on the user as you build an app. Especially as an app evolves and different pressures are applied (sales! marketing! budget! deadlines!) it's helpful to have a tangible reminder of the needs of your users.
 
 Today, we're going to redesign existing websites based on user personas that you create. We'll get into groups of at least 4 people, composed of people you *don't* normally sit near :)
 
-### Project
+## Project
 First off, this project is not graded. This is a lesson in prioritization - many companies do not prioritize UXD, so it's up to you to put in the time and effort to make an app functional and useful for your users. You get out of this project what you put into it!
 
 So let's get to it:
@@ -69,7 +66,7 @@ As you redesign, keep in mind:
 - UXD principles
 - your users (the personas you created)
 
-#### Designs will be shown off during next week's design lesson time!
+## Designs will be shown off during next week's design lesson time!
 Be prepared to talk about the personas you created, the app you were assigned, and the changes you would make and why.
 
 Feel free to create a mock-up design, or simply talk about your proposed redesign.
