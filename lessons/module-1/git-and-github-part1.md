@@ -16,7 +16,7 @@ In this lesson, you will learn how to:
 
 ### Some Context: What is Git, and why should we use it?
 
-Git is a version control system (VCS). The Git language is a command-line language that you **use from the terminal**. We use Git to commit changes to our project. These commits serve as snapshots in time (or versions) of the project. A project that uses Git has a complete history of the code changes made throughout its existence, which can be powerful if you want to look at the origin of a bug, or if you want to revert to an old version of a project. Git is used throughout the software development community, not only for web development - it gives developers a robust way to collaborate, share, and maintain code bases.
+Git is a version control system (VCS). We interact with Git **from the command line**. We use Git to commit changes to our project. These commits serve as snapshots in time (or versions) of the project. A project that uses Git has a complete history of the code changes made throughout its existence, which can be powerful if you want to look at the origin of a bug, or if you want to revert to an old version of a project. Git is used throughout the software development community, not only for web development - it gives developers a robust way to collaborate, share, and maintain code bases.
 
 ### What Git is NOT
 
