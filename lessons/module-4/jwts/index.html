@@ -75,9 +75,14 @@
           <h2><a name="JWTvsAPI">JWTs vs. API Keys</a></h2>
           <p>Let's dig into that definition a little further as we talk about the similarities and differences between JWTs and API keys.</p>
           <h3>Both are Base64Url-Encoded Strings</h3>
-          <p>Encoding is the process of converting data into a format that allows for efficient transmission and storage. Base64 encoding is a convenient way to manage data in a simple, readable text format rather than as binary data. Base64Url encoding is similar to Base64, but it avoids using common reserved URL characters (e.g. / and -)</p>
+          <p>Encoding is the process of converting data into a format that allows for human readability and efficient transmission/storage. Base64 encoding is a convenient way to manage data in a simple, readable text format rather than as binary data. Base64Url encoding is similar to Base64, but it avoids using common reserved URL characters (e.g. / and -)</p>
           <h3>Both are passed through a request to a server</h3>
-          <p>Because these strings are Base64Url-Encoded, JWTs and API Keys can be passed through with a request to a server as a query param, authorization header, or in the request body.</p>
+          <p>Because these strings are Base64Url-Encoded, JWTs and API Keys can be passed through with a request to a server three different ways:</p>
+          <ul>
+            <li>a query parameter</li>
+            <li>authorization header</li>
+            <li>request body</li>
+          </ul>
           <img class="right" src="../../../assets/images/lessons/jwts/jwt-auth-process.png" />
           <h3>Both provide an authorization 'handshake' between client and server</h3>
           <p>When a client requests a JWT, they generally provide some sort of identifying information about themselves (e.g. a username, app ID, email address, admin role, etc.) The server generates this token based on that information and signs it using a secret key. The server then sends that newly generated token back to the client so it can be used in future requests.</p>
@@ -111,7 +116,7 @@
           <h3>Step 2: Create an Authentication Endpoint</h3>
           <ul>
             <li>This should be a <code>POST</code> request that accepts an <code>email</code> and an <code>appName</code>.</li>
-            <li>Within the request handler, use the jsontwebtoken library to <a href="https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback">sign a new token</a>. The payload should contain the email address and app name. If the email address ends in <code>@turing.io</code>, it should also contain an admin property set to <code>true</code>.</li>
+            <li>Within the request handler, use the jsontwebtoken library to <a href="https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback">sign a new token</a>. The payload should contain the email address and app name.</li>
             <li>The JWT should expire in 48 hours.</li>
             <li>The server should respond with a JSON object containing the generated token.</li>
           </ul>
@@ -124,16 +129,20 @@
                 <li>If no token exists, respond with a <code>403</code> and an error message that says 'You must be authorized to hit this endpoint.'</li>
                 <li>If a token <b>does</b> exist, <a href="https://www.npmjs.com/package/jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback">verify the token</a>.</li>
                 <li>If there is an error with the token, respond with a <code>403</code> and message that says 'Invalid token'.</li>
-                <li>If the decoded token contains <code>admin: true</code> in the payload, call the express <code>next()</code> helper to complete the request handler.</li>
-                <li>If the decoded token <b>does not</b> contain <code>admin: true</code> in the payload, respond with a <code>403</code> and an error message that says 'You must be an admin to hit this endpoint.'</li>
+                <li>If there is <em>not</em> an error with the token, then verify that the <code>appName</code> part of the token contains a valid application (you can determine the list of approved applications), and then call the express <code>next()</code> helper to complete the request handler.</li>
+                <li>If the <code>appName</code> in the token is invalid, then respond with a <code>403</code> and message that says 'Invalid application'.</li>
               </ul>
             <li>Apply your middleware function to the <code>PATCH</code> request so that only an admin can edit the status of a train line.</li>
           </ul>
           <h3>End Goal</h3>
           <ul>
             <li>Any user can request and receive a JWT</li>
-            <li>A user with a token that <b>is</b> an admin can edit the status of a train</li>
-            <li>A user with a token that <b>is not</b> an admin cannot edit the status of a train</li>
+            <li>A user with a token that <b>is</b> from an approved app can edit the status of a train</li>
+            <li>A user with a token that <b>is not</b> from an approved app cannot edit the status of a train</li>
+          </ul>
+          <h3>Extension</h3>
+          <ul>
+            <li>If the <code>/authenticate</code> endpoint's payload email address ends in <code>@turing.io</code>, it should also contain an admin property set to <code>true</code>. The admin should have special permissions and be allowed to use any DELETE endpoint, which has yet to be created.</li>
           </ul>
         </section>
         <hr />
