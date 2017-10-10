@@ -83,93 +83,93 @@ The client, however, handles all of the interactions between your users and your
 
 ### Client-Side Validation
 
-  **Best Practice**
+**Best Practice**
 
-  Should be visual, simple validations to give user quick feedback.
+Should be visual, simple validations to give user quick feedback.
 
-  **Tech Recommendations:**
+**Tech Recommendations:**
 
-  Use things like [HTML5 input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [pattern attributes](https://webdesign.tutsplus.com/tutorials/html5-form-validation-with-the-pattern-attribute--cms-25145).
+Use things like [HTML5 input types](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) and [pattern attributes](https://webdesign.tutsplus.com/tutorials/html5-form-validation-with-the-pattern-attribute--cms-25145).
 
-  **Dangers**
+**Dangers**
 
-  Never depend on a client-side validation working. UI can be abused, and sometimes the user is not even using the browser (think curl or using postman).
+Never depend on a client-side validation working. UI can be abused, and sometimes the user is not even using the browser (think curl or using postman).
 
-  The mission critical validation should happen on a server.
+The mission critical validation should happen on a server.
 
-  Avoid having heavy validation on the client-side when you don't need it to prevent mismatch in validation rules across your server and client. The less rules you have on the client, the less places you have to change code when you change your validations.
+Avoid having heavy validation on the client-side when you don't need it to prevent mismatch in validation rules across your server and client. The less rules you have on the client, the less places you have to change code when you change your validations.
 
-  Keep all your validations in one place - do NOT sprinkle them throughout your components/JS view related files.
+Keep all your validations in one place - do NOT sprinkle them throughout your components/JS view related files.
 
 ### Server-Side Validation
 
-  **Everything is Suspect**
+**Everything is Suspect**
 
-  Assume all data coming in from the UI is suspect and have server level validations cross check this information.
+Assume all data coming in from the UI is suspect and have server level validations cross check this information.
 
-  This is also helps you protect your business logic. Since all client-side code can be viewed, if you hide the business logic in the server, you can protect it from theft.
+This is also helps you protect your business logic. Since all client-side code can be viewed, if you hide the business logic in the server, you can protect it from theft.
 
-  **Use Environment Variables**
+**Use Environment Variables**
 
-  Store your credentials and secrets in a file separate from the code that gets committed to Github or equivalent. Use environment variables: [the logic](https://12factor.net/config)
+Store your credentials and secrets in a file separate from the code that gets committed to Github or equivalent. Use environment variables: [the logic](https://12factor.net/config)
 
-  On heroku: [Use the CLI](https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application) or [the interface](https://devcenter.heroku.com/articles/config-vars)
+On heroku: [Use the CLI](https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application) or [the interface](https://devcenter.heroku.com/articles/config-vars)
 
-  [On Amazon EC2](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html).
+[On Amazon EC2](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html).
 
-  But wait, you might be asking, I just pushed my Firebase credentials up to Github? Am I good? Well, check out the 'web' portion of the [Firebase Launch Checklist](https://firebase.google.com/support/guides/launch-checklist).
+But wait, you might be asking, I just pushed my Firebase credentials up to Github? Am I good? Well, check out the 'web' portion of the [Firebase Launch Checklist](https://firebase.google.com/support/guides/launch-checklist).
 
-  **HTTP vs HTTPS**
+**HTTP vs HTTPS**
 
-  HTTP is HyperText Transfer Protocol while HTTPS is HyperText Transfer Protocol Secure.
+HTTP is HyperText Transfer Protocol while HTTPS is HyperText Transfer Protocol Secure.
 
-  All communications sent over HTTP connections are in 'plain text' and can be read by anyone who can interrupt the communication.
+All communications sent over HTTP connections are in 'plain text' and can be read by anyone who can interrupt the communication.
 
-  HTTPS, however, usses Secure Sockets Layer (SSL) to transmit information. In order to make an HTTPS connection to a webpage, your website needs an 'SSL certificate'. When this is received, the browser and your website begin a 'SSL handshake', generate secrets and establish a secure connection.
+HTTPS, however, usses Secure Sockets Layer (SSL) to transmit information. In order to make an HTTPS connection to a webpage, your website needs an 'SSL certificate'. When this is received, the browser and your website begin a 'SSL handshake', generate secrets and establish a secure connection.
 
-  If you use services like Firebase and Heroku, these things are handled for you. But it gets tricker when you want to use a custom domain.
+If you use services like Firebase and Heroku, these things are handled for you. But it gets tricker when you want to use a custom domain.
 
-  [Let's Encrypt](https://letsencrypt.org/how-it-works/) is your friend.
+[Let's Encrypt](https://letsencrypt.org/how-it-works/) is your friend.
 
-  **Authentication & Web Tokens**
+**Authentication & Web Tokens**
 
-  You got to play around with JWTs yesterday, but here is a [quick intro to jwt](https://jwt.io/introduction/).
+You will get to use JWTs this module, but here is a [quick intro to jwt](https://jwt.io/introduction/) if you can't wait.
 
-  Basically, modern authentication of users depends on handshakes and encryption. Consider this a handwave.
+Basically, modern authentication of users depends on handshakes and encryption. Consider this a handwave.
 
-  **Same-Origin Policy & Cross-Origin Resource Sharing**
+**Same-Origin Policy & Cross-Origin Resource Sharing**
 
-  The [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) permits `permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin.`
+The [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) permits `permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin.`
 
-  This worked great at preventing malicious scripts for a while - but now many of use server REST APIs from different origins and this became a problem that we started solving with hacks. Many of said hacks were unsecure.
+This worked great at preventing malicious scripts for a while - but now many of use server REST APIs from different origins and this became a problem that we started solving with hacks. Many of said hacks were unsecure.
 
-  [CORS](https://enable-cors.org/) enables you to safely overwrite and relax these rules for specific whitelisted domains.
+[CORS](https://enable-cors.org/) enables you to safely overwrite and relax these rules for specific whitelisted domains.
 
 ### Database Validations
 
-  **Best Practice**
+**Best Practice**
 
-  Never fully trust your developers. Before data can be stored in the database, do some base level data validation. And never store plain text passwords in your database.
+Never fully trust your users. Before data can be stored in the database, do some base-level data validation. And never store plain text passwords in your database. If you absolutely need to store passwords, then use a proven, maintained library like [bcrypt](https://www.npmjs.com/package/bcrypt).
 
-  **Tech Recommendations:**
+**Tech Recommendations:**
 
-  Any major database will include methods and constraints to validate data quickly prior to storage.
+Any major database will include methods and constraints to validate data quickly prior to storage.
 
-  It's beyond the scope of this lesson to get into them specifically - but know that there are simple ways to do things like 'hey database, refuse to accept `null` values in this column of the table'.
+It's beyond the scope of this lesson to get into them specifically - but know that there are simple ways to do things like 'hey database, refuse to accept `null` values in this column of the table'.
 
-  [Postgresql](http://nathanmlong.com/2016/01/protect-your-data-with-postgresql-constraints/)
+[Postgresql](http://nathanmlong.com/2016/01/protect-your-data-with-postgresql-constraints/)
 
-  [Firebase](https://firebase.google.com/docs/reference/security/database/)
+[Firebase](https://firebase.google.com/docs/reference/security/database/)
 
-  **Dangers**
+**Dangers**
 
-  Never store plain text data in your database
+Never store plain text data in your database
 
-  Read this [fun whitepaper](http://www.bailis.org/papers/feral-sigmod2015.pdf)
+Read this [fun whitepaper](http://www.bailis.org/papers/feral-sigmod2015.pdf)
 
 ![image of bug in a game](https://i.kinja-img.com/gawker-media/image/upload/s--2GheXUYU--/c_fit,fl_progressive,q_80,w_636/g7xvvnrysshrszatkuxm.jpg)
 
-## 'In Summation'
+## In Summation
 
 When we talk about security, you will notice that Googling becomes harder and harder. Securing websites is something we all deal with, right? Why, then, is it so hard to get a straight answer on what I should do?
 
@@ -196,6 +196,6 @@ Don't do it. Trust me. It's above your paygrade.
 #### The Pull Request Process ( when done correctly ) Protects Us
 
 If more than one person reviews code before it is merged, it means:
-    - The chances of a bug being introduced are lower
-    - If a bug is introduced, the number of people familiar with the code who can fix it is higher
-    - An honest mistake won't get one developer in hot water, since the team approved the work
+  - The chances of a bug being introduced are lower
+  - If a bug is introduced, the number of people familiar with the code who can fix it is higher
+  - An honest mistake won't get one developer in hot water, since the team approved the work

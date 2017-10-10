@@ -10,7 +10,7 @@ By the end of this lesson, you will:
 
 * Understand how you might work with back-end developers on your team
 * Understand how the client and server relationship works
-* Know what a server is and how requests and responses are handled
+* Know what a server is and how requests and responses are handled using the Node HTTP library
 * Know which appropriate RESTful method to send in a request
 
 ## HTTP, REST and Building a Simple Node Server
