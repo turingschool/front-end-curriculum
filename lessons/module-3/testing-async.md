@@ -16,6 +16,9 @@ By the end of this lesson, you will:
 Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin). 
 
 Clone the repo and checkout the **async-begin** branch. 
+
+Open the code up in your editor.
+
 Open two tabs in your terminal and run the following commands to get started:
 
 ```bash
