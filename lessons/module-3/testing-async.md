@@ -13,11 +13,14 @@ By the end of this lesson, you will:
 
 ### Getting Started
 
-Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin). Clone the repo and checkout the **async-begin** branch. Run the following commands to get started:
+Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin). 
+
+Clone the repo and checkout the **async-begin** branch. 
+Open two tabs in your terminal and run the following commands to get started:
 
 ```bash
 npm install
-npm run server
+node server.js
 npm start
 ```
 
