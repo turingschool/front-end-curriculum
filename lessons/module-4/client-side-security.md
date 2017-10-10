@@ -20,21 +20,21 @@ Sadly, the world is full of people exploiting code vulnerabilities for fun and p
 
 #### Theft of Proprietary Code
 
-  A developer creates a game that sweeps the nation. Within a week, dozens versions of that game with suspiciously similar interfaces (but slightly different graphics) start showing up all over the internet.
+A developer creates a game that sweeps the nation. Within a week, dozens versions of that game with suspiciously similar interfaces (but slightly different graphics) start showing up all over the internet.
 
 #### Theft of Data
 
-  A developer creates an application that uses AWS API secrets and keys. Overnight, someone finds the key and uses the developers account to spin up a bill for $6,000 worth of usage.
+A developer creates an application that uses AWS API secrets and keys. Overnight, someone finds the key and uses the developers account to spin up a bill for $6,000 worth of usage.
 
-  A user has private photos stored on a website/service through a process that is on autosync. They have an interface where they can see those photos, but only choose to share certain photos with the world. Someone figures out the endpoint that was being used to share the private photos, fakes approval, and takes some deeply personal photos that the user uploaded unintentionally and makes them public
+A user has private photos stored on a website/service through a process that is on autosync. They have an interface where they can see those photos, but only choose to share certain photos with the world. Someone figures out the endpoint that was being used to share the private photos, fakes approval, and takes some deeply personal photos that the user uploaded unintentionally and makes them public
 
-  A website has many users sign up with an email and password. Someone gets access to the database and is able to pull out all user passwords. Many of the websites users use the same password for things like their bank account.
+A website has many users sign up with an email and password. Someone gets access to the database and is able to pull out all user passwords. Many of the websites users use the same password for things like their bank account.
 
 #### Falsifying Information
 
-  A trusted news organization is hacked and for a brief moment, their social media says that there has been an attack on the President. It is corrected in minutes, but the Dow plunges as a result.
+A trusted news organization is hacked and for a brief moment, their social media says that there has been an attack on the President. It is corrected in minutes, but the Dow plunges as a result.
 
-  Control systems of a major factory are accessible with password and username. Someone creates a false login page, meant to look exactly like the employee page redirects users visiting the main page to that site. Within hours, there is an unscheduled shutdown of the furnaces, causing major damage.
+Control systems of a major factory are accessible with password and username. Someone creates a false login page, meant to look exactly like the employee page redirects users visiting the main page to that site. Within hours, there is an unscheduled shutdown of the furnaces, causing major damage.
 
 ### Your Turn
 
@@ -45,7 +45,7 @@ In groups of three, pick one of the following articles to read:
 - Scenario 3 [Small Example](http://www.html5gamedevs.com/topic/26341-have-your-games-been-stolen-check-here/) & [Large Example](https://arstechnica.com/gaming/2016/06/what-drove-one-half-life-2-super-fan-to-hack-into-valves-servers/)
 - [Scenario 4](http://www.bbc.com/news/technology-30575104)
 - [Scenario 5](https://www.theguardian.com/technology/2017/jan/10/browser-autofill-used-to-steal-personal-details-in-new-phising-attack-chrome-safari)
-- Scenario 6 [Watch (pertinant part at 0:45](https://www.youtube.com/watch?v=-hxX_Q5CnaA) & [Read](http://www.businessinsider.com/when-amazon-launched-a-bug-allowed-users-to-get-paid-by-the-company-2011-10)
+- Scenario 6 [Watch (pertinent part at 0:45](https://www.youtube.com/watch?v=-hxX_Q5CnaA) & [Read](http://www.businessinsider.com/when-amazon-launched-a-bug-allowed-users-to-get-paid-by-the-company-2011-10)
 - Scenario 7 [Example 1](http://www.theregister.co.uk/2011/05/06/syria_fake_certificate_facebook_attack/) & [Example 2](https://arstechnica.com/security/2015/04/meet-great-cannon-the-man-in-the-middle-weapon-china-used-on-github/)
 - Scenario 8 [Example 1](https://www.7xter.com/2015/03/how-i-exposed-your-private-photos.html) & [Example 2](https://www.7xter.com/2015/02/how-i-hacked-your-facebook-photos.html)
 - [Scenario 9](https://petapixel.com/2014/07/31/cautionary-tale-bug-dropbox-permanently-deleted-8000-photos/)
@@ -111,13 +111,13 @@ This is also helps you protect your business logic. Since all client-side code c
 
 **Use Environment Variables**
 
-Store your credentials and secrets in a file separate from the code that gets committed to Github or equivalent. Use environment variables: [the logic](https://12factor.net/config)
+Store your credentials and secrets in a file separate from the code that gets committed to GitHub or equivalent. Use environment variables: [the logic](https://12factor.net/config)
 
-On heroku: [Use the CLI](https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application) or [the interface](https://devcenter.heroku.com/articles/config-vars)
+On Heroku: [Use the CLI](https://devcenter.heroku.com/articles/config-vars#setting-up-config-vars-for-a-deployed-application) or [the interface](https://devcenter.heroku.com/articles/config-vars)
 
 [On Amazon EC2](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-credentials-node.html).
 
-But wait, you might be asking, I just pushed my Firebase credentials up to Github? Am I good? Well, check out the 'web' portion of the [Firebase Launch Checklist](https://firebase.google.com/support/guides/launch-checklist).
+But wait, you might be asking, I just pushed my Firebase credentials up to GitHub? Am I good? Well, check out the 'web' portion of the [Firebase Launch Checklist](https://firebase.google.com/support/guides/launch-checklist).
 
 **HTTP vs HTTPS**
 
@@ -125,7 +125,7 @@ HTTP is HyperText Transfer Protocol while HTTPS is HyperText Transfer Protocol S
 
 All communications sent over HTTP connections are in 'plain text' and can be read by anyone who can interrupt the communication.
 
-HTTPS, however, usses Secure Sockets Layer (SSL) to transmit information. In order to make an HTTPS connection to a webpage, your website needs an 'SSL certificate'. When this is received, the browser and your website begin a 'SSL handshake', generate secrets and establish a secure connection.
+HTTPS, however, uses Secure Sockets Layer (SSL) to transmit information. In order to make an HTTPS connection to a webpage, your website needs an 'SSL certificate'. When this is received, the browser and your website begin a 'SSL handshake', generate secrets and establish a secure connection.
 
 If you use services like Firebase and Heroku, these things are handled for you. But it gets tricker when you want to use a custom domain.
 
@@ -133,15 +133,15 @@ If you use services like Firebase and Heroku, these things are handled for you. 
 
 **Authentication & Web Tokens**
 
-You will get to use JWTs this module, but here is a [quick intro to jwt](https://jwt.io/introduction/) if you can't wait.
+You will get to use JWTs this module, but here is a [quick intro to JWTs](https://jwt.io/introduction/) if you can't wait.
 
-Basically, modern authentication of users depends on handshakes and encryption. Consider this a handwave.
+Basically, modern authentication of users depends on handshakes and encryption. Consider this a hand wave.
 
 **Same-Origin Policy & Cross-Origin Resource Sharing**
 
 The [same-origin policy](https://en.wikipedia.org/wiki/Same-origin_policy) permits `permits scripts contained in a first web page to access data in a second web page, but only if both web pages have the same origin.`
 
-This worked great at preventing malicious scripts for a while - but now many of use server REST APIs from different origins and this became a problem that we started solving with hacks. Many of said hacks were unsecure.
+This worked great at preventing malicious scripts for a while - but now many of use server REST APIs from different origins and this became a problem that we started solving with hacks. Many of said hacks were insecure.
 
 [CORS](https://enable-cors.org/) enables you to safely overwrite and relax these rules for specific whitelisted domains.
 
