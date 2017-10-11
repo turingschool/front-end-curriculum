@@ -70,7 +70,7 @@ All together now!
 
 `git add .`  
 `git commit -m "Initial commit"`
-`git push -u origin master`
+`git push origin master`
 
 The commit message above, `Initial commit` is a very common first commit message, used by developers everywhere when a project is first created. Best practice is to set up your github repository as soon as possible so you can start tracking changes, so this typically happens when you have your very basic file tree ready to start adding code.  
 
