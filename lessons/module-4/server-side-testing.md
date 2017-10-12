@@ -10,7 +10,7 @@ Server-side testing is another crucial facet of testing. As your app grows in si
 
 ## Why is This Important?
 
-Everyone draw a diagram of how you envision your Jet Fuel app working - the entire process of the request and response cycle from the client to the server and back to the client.
+Everyone draw a diagram of how you envision your week 1 apps working - the entire process of the request and response cycle from the client to the server and back to the client.
 
 Notice the complexity. With the back end added to your app, there are many more things that can go wrong. When you don't see something working on the page, it's difficult to track down the source. Let's look at the structure of a typical server-side test.
 
