@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.4.1'
 
 gem 'jekyll', '3.0.1'
 gem 'kramdown', '1.9.0'
