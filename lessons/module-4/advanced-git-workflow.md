@@ -26,23 +26,31 @@ In the effort to be committing tiny changesets very frequently, sometimes we can
 Many maintainers will ask you to go back and clean up the history by **squashing** your commits. Squashing commits means combining all the changesets into a single commit with a relevant message. We can accomplish this by doing an **interactive rebase**:
 
 ```bash
-git rebase --interactive HEAD~5
+git rebase --interactive HEAD~4
 ```
 
-This command would take the 5 most recent commits in the branch you're currently on, and open up a dialog to allow you to choose which commits you want to squash and/or edit:
+This command would take the 4 most recent commits in the branch you're currently on (in reverse order), and open up a dialog to allow you to choose which commits you want to squash and/or edit:
 
-PICTURE OF DIALOG THAT OPENS UP
+![interactive rebase][interactive-rebase]
 
 
-From here, you can update the text next to each commit to tell git what you want it to do:
+From here, you can update the text next to each commit that says 'pick', to tell git what you want it to do with that commit. The most common things you'll do are:
 
 * **edit** -- allows you to amend that particular commit
 * **squash** -- merge this commit into the previous one
 
+If you want to do nothing with a particular commit, just leave the text alone as 'pick'. So, for example, in the rebase above, let's say we want to squash the 'stub' commits and the 'update' commits. We would update this prompt like so:
 
+![squashing][squashing]
+
+And git would run through the rebase process, stopping along the way to allow us to update the commit messages for the commits that we're squashing.
 
 
 ## Resources
 
 * [Git Stashing](https://git-scm.com/docs/git-stash)
 * [Git Rebase](https://git-scm.com/docs/git-rebase)
+
+
+[interactive-rebase]: /assets/images/lessons/advanced-git/interactive-rebase.png
+[squashing]: /assets/images/lessons/advanced-git/squashing.png
