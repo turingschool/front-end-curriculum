@@ -4,6 +4,16 @@ length: 60
 tags: git, tooling, workflow
 ---
 
+## Advanced Git Workflow
+
+### Goals
+
+By the end of this lesson, students should:
+
+* know how to amend commits and squash others through interactive rebase
+* be able to stage changes in patches rather than all at once
+* understand when it's ok to rewrite history and the potential downfalls that occur when others are relying on your code
+
 
 ## Amending Commits
 
