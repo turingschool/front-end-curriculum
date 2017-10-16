@@ -75,13 +75,13 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ## The Repos
 
-### [Hospital Run](https://github.com/HospitalRun/hospitalrun-frontend)
+### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
 
 **Potential Issues:**
-
-* [#540](https://github.com/HospitalRun/hospitalrun-frontend/issues/540)
-* [#1068](https://github.com/HospitalRun/hospitalrun-frontend/issues/1068)
-* [#1147](https://github.com/HospitalRun/hospitalrun-frontend/issues/1147)
+* [#1840](https://github.com/openfoodfoundation/openfoodnetwork/issues/1840)
+* [#1806](https://github.com/openfoodfoundation/openfoodnetwork/issues/1806)
+* [#1382](https://github.com/openfoodfoundation/openfoodnetwork/issues/1382)
+* [#424](https://github.com/openfoodfoundation/openfoodnetwork/issues/424)
 
 ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
 
@@ -91,13 +91,6 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1428](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1428)
 * [#1177](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1177)
 * [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
-
-### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
-
-**Potential Issues:**
-* [#1770](https://github.com/openfoodfoundation/openfoodnetwork/issues/1770)
-* [#1760](https://github.com/openfoodfoundation/openfoodnetwork/issues/1760)
-* [#1722](https://github.com/openfoodfoundation/openfoodnetwork/issues/1722)
 
 ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
 
@@ -110,3 +103,16 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 
 If, as a group, you are all struggling to make progress towards a contribution, you are free to choose another open-source codebase to work with. You all must agree on another codebase as we only want a single presentation per group. A good way to search for additional repos is to search GitHub for open issues with labels like "HTML", "CSS", "UI", "UX", "design", "docs", "enhancement". An example search query can be found [here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Acss).
+
+
+<!--
+
+
+### [Hospital Run](https://github.com/HospitalRun/hospitalrun-frontend)
+
+**Potential Issues:**
+
+* [#1157](https://github.com/HospitalRun/hospitalrun-frontend/issues/1157)
+* [#1158](https://github.com/HospitalRun/hospitalrun-frontend/issues/1158)
+
+-->
