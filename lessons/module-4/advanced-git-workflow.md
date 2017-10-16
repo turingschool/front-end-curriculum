@@ -29,6 +29,23 @@ This can be accomplished by staging your changes in patches. Instead of doing a 
 
 This will walk you through each chunk of your changesets and ask you if you want to stage them or not. This is a good way to review your code before committing it, and make sure you keep all changes relevant to each commit.
 
+![add patch][add-patch]
+
+Git will automatically determine how to separate your changes into "chunks" so that they're readable and manageable when looking at them in the terminal. With each chunk, you will get a prompt that looks like this '`Stage this hunk [y,n,a,d,/,j,J,g,e,?]? ?` Each letter corresponds to an option you can select to perform an action on that particular hunk:
+
+* y - stage this hunk
+* n - do not stage this hunk
+* a - stage this and all the remaining hunks in the file
+* d - do not stage this hunk nor any of the remaining hunks in the file
+* g - select a hunk to go to
+* / - search for a hunk matching the given regex
+* j - leave this hunk undecided, see next undecided hunk
+* J - leave this hunk undecided, see next hunk
+* k - leave this hunk undecided, see previous undecided hunk
+* K - leave this hunk undecided, see previous hunk
+* s - split the current hunk into smaller hunks
+* e - manually edit the current hunk
+
 ## Interactive Rebasing & Squashing
 
 In the effort to be committing tiny changesets very frequently, sometimes we can commit *too* much, and we want to go back and fixup our messages and history before we submit a pull request. For example, maybe you are making changes to your README file, and you keep going back and noticing more typos and formatting issues that need to be fixed. Every time you notice one, you make a new commit called something like 'Update README' - but now you have 10 different commits that are all related to fixing up the documentation. Wouldn't it be nice if we had caught all those errors at once and we could have just made them all in a single commit? That's what squashing allows you to do!
@@ -62,5 +79,7 @@ And git would run through the rebase process, stopping along the way to allow us
 * [Git Rebase](https://git-scm.com/docs/git-rebase)
 
 
+
+[add-patch]: /assets/images/lessons/advanced-git/add-patch.png
 [interactive-rebase]: /assets/images/lessons/advanced-git/interactive-rebase.png
 [squashing]: /assets/images/lessons/advanced-git/squashing.png
