@@ -68,7 +68,7 @@
 
         <section>
           <h2><a name="Performance">Performance Strategies</a></h2>
-          <h3>HTML: Reducing Render Blocking & Keeping a Tiny DOM</h3>
+          <h3>HTML: Reducing Render-Blocking & Keeping a Tiny DOM</h3>
           <h4>CSS Render-Blocking</h4>
           <p>Render-blocking resources mean that no further content will be rendered to the DOM until that resource has finished processing. CSS is considered a render-blocking resource. Why, then, do we put our CSS tags in the head of our HTML files?</p>
           <p>The short answer is that we need to -- CSS is critical to displaying our content in a visually appropriate and meaningful manner. Rendering a bunch of content to the page with no concept of styling or heirarchy wouldn't be as easy to understand and mentally organize without those visual cues.</p>
@@ -107,10 +107,36 @@
           <p>Another strategy for avoiding performance hits for images is called lazy loading. This means that you don't actually request an image until it's in the visible portion of the viewport. This relies on adding event listeners for scrolling the images into the viewport. Check out this code example on <a href="https://css-tricks.com/snippets/javascript/lazy-loading-images/">CSS-Tricks</a></p>
 
           <h3>Performant JavaScript</h3>
+          <p>The JavaScript we write in our applications is often littered with places where we can improve performance. There are a lot of factors that go into writing performant JavaScript, and sometimes you have to make compromises for readibility or maintainability purposes. Keeping these strategies in mind will help make prioritizing performance slightly more second-nature.</p>
+
+          <h4>Getting Benchmarks</h4>
+          <p>One quick trick you can use to determine how long a particular function takes is by using the `performance.now()` API. [This API](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now) gives you pretty accurate readings on how long it takes for a particular function to run. For example:</p>
+          <textarea readonly>
+let startTime = performance.now();
+foo();
+let endTime = performance.now();
+console.log("Call to foo took " + (endTime - startTime) + " milliseconds.");
+          </textarea>
+          <p>There are also tools like [JSPerf](https://jsperf.com/for-vs-find) where members of the community create benchmarks for multiple approaches of achieving some common functionality.</p>
+
+          <h4>DOM Manipulations</h4>
+          <p>DOM manipulations are a particularly slow aspect of client-side code. One common mistake new developers make is looping through an array of data, and calling `.append()` during each loop. This means we're doing a DOM manipulation every time that loop runs, which can lock up the UI when we have very large datasets. What we really want to do is build up all that HTML we need in memory, as a "virtual" chunk of HTML, and then append it all at once after it has finishing building up.</p>
+          <p>We can use [Document Fragments](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment) for this purpose. Document Fragments allow you to build up a chunk of HTML by appending to a fragment, stored in a variable, in your JavaScript code, rather than appending each item to the DOM one at a time.</p>
+
+          <h4>Garbage Collection & Memory Leaks</h4>
+          <p>garbage collection works by reclaiming blocks of memory (objects) which are no longer reachable</p>
           <ul>
-            <li><a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment">Document Fragments</a></li>
-            <li><a href="https://jsperf.com/for-vs-find">JSPerf Benchmarks</a></li>
+            <li>keep variables close to their scope/where they're needed, avoid globals</li>
+            <li>unbind event listeners</li>
+            <li>https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#functions</li>
           </ul>
+
+          <h4>Variables & Data Types</h4>
+          <ul>
+            <li>v8 optimizations</li>
+            <li>storing references in variables</li>
+          </ul>
+
         </section>
 
         <hr />
