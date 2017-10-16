@@ -77,6 +77,7 @@ And git would run through the rebase process, stopping along the way to allow us
 
 * [Git Stashing](https://git-scm.com/docs/git-stash)
 * [Git Rebase](https://git-scm.com/docs/git-rebase)
+* [Interactive Staging](https://git-scm.com/book/en/v2/Git-Tools-Interactive-Staging)
 
 
 
