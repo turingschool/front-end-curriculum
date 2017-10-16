@@ -98,13 +98,14 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1760](https://github.com/openfoodfoundation/openfoodnetwork/issues/1760)
 * [#1722](https://github.com/openfoodfoundation/openfoodnetwork/issues/1722)
 
-### [Code for Social Good](https://github.com/Code4SocialGood/)
+### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
 
 **Potential Issues:**
 
-* [#1157](https://github.com/Code4SocialGood/c4sg-web/issues/1157)
-* [#1156](https://github.com/Code4SocialGood/c4sg-web/issues/1156)
-* [#1138](https://github.com/Code4SocialGood/c4sg-web/issues/1138)
+* [#1386](https://github.com/Code4SocialGood/c4sg-web/issues/1386)
+* [#1388](https://github.com/Code4SocialGood/c4sg-web/issues/1383)
+* [#1362](https://github.com/Code4SocialGood/c4sg-web/issues/1362)
+* [#1361](https://github.com/Code4SocialGood/c4sg-web/issues/1361)
 
 
 If, as a group, you are all struggling to make progress towards a contribution, you are free to choose another open-source codebase to work with. You all must agree on another codebase as we only want a single presentation per group. A good way to search for additional repos is to search GitHub for open issues with labels like "HTML", "CSS", "UI", "UX", "design", "docs", "enhancement". An example search query can be found [here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Acss).
