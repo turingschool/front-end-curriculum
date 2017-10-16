@@ -62,7 +62,6 @@ palette-picker
 ## Extensions
 
 * **15 Points** - Palette generation that isn't random and actually makes sense: If you look at the [HTML Color Codes site](http://htmlcolorcodes.com/color-picker/), they give some explanation about what colors make sense with other colors in a palette. Design your color generator so that the colors aren't picked completely at random, but they make a more cohesive, harmonious color palette.
-
 * **10 Points** - Color modification: In addition to being able to lock a particular color (part of the base functionality), a user should be able to modify one of the colors in the palette (by entering in their own hex code, color name, or some kind of hue slider)
 
 
@@ -72,7 +71,7 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### Specification Adherence
 
-* **50 points**: No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
+* **50 points**: No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use. Data persists on refresh using a knex/postgreSQL database.
 * **40 points**: There is one feature missing from the base expectations that makes the application feel incomplete or hard to use.
 * **20 points**: There are two features missing from the base expectations that make the application feel incomplete or hard to use.
 
@@ -82,12 +81,6 @@ The following set of points are distributed at the discretion of the instructor.
 * **15 points** - The application has many strong pages/interactions, but a few holes in lesser-used functionality.
 * **7 points** - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 * **0 points** - The application is confusing or difficult to use.
-
-### Data Persistence with SQL Database
-
-* **20 points** - The application persists data in a SQL database but with correct relationships between folders and URLs.
-* **10 points** - The application persists data in a SQL database but with some incorrect relationships between folders and URLs.
-* **0 points** - The application does not persist data in a SQL database.
 
 ### Testing
 
@@ -104,8 +97,8 @@ The following set of points are distributed at the discretion of the instructor.
 
 ### JavaScript Style
 
-* **20 points** - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
-* **15 points** - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
+* **30 points** - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
+* **20 points** - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
 * **10 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 * **5 points** - Your client-side application does not function or the application does not make use of `fetch` for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
 * **0 points** - There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
@@ -113,17 +106,14 @@ The following set of points are distributed at the discretion of the instructor.
 ### Workflow
 
 * **20 points** - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
-
 * **15 points** - Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
-
 * **10 points** - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
-
 * **5 points**  - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
 
-## Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1705/mod-4/palette-picker/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
+## Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1705/mod-4/palette-picker/submission-template.md) by copying it to a new file called YOURNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
 
-### Project is worth 160 points with 25 extra points possible
+### Project is worth 150 points with 25 extra points possible
 
-### To get a 3 on this project, you need to score 120 points or higher
+### To get a 3 on this project, you need to score 110 points or higher
 
-### To get a 4 on this project, you need to score 140 points or higher
+### To get a 4 on this project, you need to score 130 points or higher

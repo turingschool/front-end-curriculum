@@ -37,7 +37,7 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 * Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
 * Including a link tag to request an external stylesheet: `<link href="https://www.turing.io/css/styles.css" />`
 * Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`.
-* Making a fetch request to retrieve data: `fetch("https://www.turing.io/api/v1/curriculum/")`
+* Making a fetch request to retrieve data: `fetch('https://www.turing.io/api/v1/curriculum/')`
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
 
