@@ -81,6 +81,6 @@ And git would run through the rebase process, stopping along the way to allow us
 
 
 
-[add-patch]: /assets/images/lessons/advanced-git/add-patch.png
+[add-patch]: /assets/images/lessons/advanced-git/add-patch.gif
 [interactive-rebase]: /assets/images/lessons/advanced-git/interactive-rebase.png
-[squashing]: /assets/images/lessons/advanced-git/squashing.png
+[squashing]: /assets/images/lessons/advanced-git/squash.png
