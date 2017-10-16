@@ -87,9 +87,10 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 **Potential Issues:**
 
-* [#1205](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1205)
+* [#1452](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1452)
+* [#1428](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1428)
 * [#1177](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1177)
-* [#1363](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1363)
+* [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
 
 ### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
 
