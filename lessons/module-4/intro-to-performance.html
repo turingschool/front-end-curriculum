@@ -121,12 +121,6 @@
           <p data-height="265" data-theme-id="0" data-slug-hash="LzXqrR" data-default-tab="js" data-user="brittanystoroz" data-embed-version="2" data-pen-title="DocumentFragments Example" class="codepen">See the Pen <a href="https://codepen.io/brittanystoroz/pen/LzXqrR/">DocumentFragments Example</a> by Brittany Storoz (<a href="https://codepen.io/brittanystoroz">@brittanystoroz</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-          <h4>Variables & Data Types</h4>
-          <ul>
-            <li>v8 optimizations</li>
-            <li>storing references in variables</li>
-          </ul>
-
           <h4>Garbage Collection & Memory Leaks</h4>
           <p>Garbage collection is a process in which the browser reclaims blocks of memory (objects) which are no longer reachable.</p>
           <p>Take a look at the following example:</p>
@@ -139,8 +133,14 @@
           <p>We can see this by looking at the Memory tab of devtools and generating a heap snapshot after running through both code examples. The example where our object is not available for memory collection will return this in the snapshot:</p>
           <img src="../../assets/images/lessons/performance/heap-snapshot.png" />
           <p>A rule of thumb to avoid these types of mistakes is to keep variables close to their scope and where they're needed or being used, and avoid polluting the global scope because those values will never be available for garbage collection as they're reachable anywhere in the code.</p>
+          
           <!--https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#functions
             unbind event listeners
+          <h4>Variables & Data Types</h4>
+          <ul>
+            <li>v8 optimizations</li>
+            <li>storing references in variables</li>
+          </ul>
           -->
         </section>
 
