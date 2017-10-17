@@ -1,4 +1,8 @@
-# Refactoring Guidelines
+---
+title: Refactoring Guidelines
+length:
+tags: javascript, js, array, object, 
+---
 
 Look over code and get a feel for the organization of the entire project.
 
