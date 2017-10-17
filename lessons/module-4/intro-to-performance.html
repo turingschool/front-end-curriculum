@@ -110,18 +110,12 @@
           <p>The JavaScript we write in our applications is often littered with places where we can improve performance. There are a lot of factors that go into writing performant JavaScript, and sometimes you have to make compromises for readibility or maintainability purposes. Keeping these strategies in mind will help make prioritizing performance slightly more second-nature.</p>
 
           <h4>Getting Benchmarks</h4>
-          <p>One quick trick you can use to determine how long a particular function takes is by using the `performance.now()` API. [This API](https://developer.mozilla.org/en-US/docs/Web/API/Performance/now) gives you pretty accurate readings on how long it takes for a particular function to run. For example:</p>
-          <textarea readonly>
-let startTime = performance.now();
-foo();
-let endTime = performance.now();
-console.log("Call to foo took " + (endTime - startTime) + " milliseconds.");
-          </textarea>
-          <p>There are also tools like [JSPerf](https://jsperf.com/for-vs-find) where members of the community create benchmarks for multiple approaches of achieving some common functionality.</p>
+          <p>One quick trick you can use to determine how long a particular function takes is by using the <code>performance.now()</code> API. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">This API</a> gives you pretty accurate readings on how long it takes for a particular function to run. For example:</p>
+          <p>There are also tools like <a href="https://jsperf.com/for-vs-find">JSPerf</a> where members of the community create benchmarks for multiple approaches of achieving some common functionality.</p>
 
           <h4>DOM Manipulations</h4>
           <p>DOM manipulations are a particularly slow aspect of client-side code. One common mistake new developers make is looping through an array of data, and calling `.append()` during each loop. This means we're doing a DOM manipulation every time that loop runs, which can lock up the UI when we have very large datasets. What we really want to do is build up all that HTML we need in memory, as a "virtual" chunk of HTML, and then append it all at once after it has finishing building up.</p>
-          <p>We can use [Document Fragments](https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment) for this purpose. Document Fragments allow you to build up a chunk of HTML by appending to a fragment, stored in a variable, in your JavaScript code, rather than appending each item to the DOM one at a time.</p>
+          <p>We can use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/createDocumentFragment">Document Fragments</a> for this purpose. Document Fragments allow you to build up a chunk of HTML by appending to a fragment, stored in a variable, in your JavaScript code, rather than appending each item to the DOM one at a time.</p>
           <p>Take a look at the following example, and play with the two different solutions to see the performance gains achieved by using document fragments:</p>
 
           <p data-height="265" data-theme-id="0" data-slug-hash="LzXqrR" data-default-tab="js" data-user="brittanystoroz" data-embed-version="2" data-pen-title="DocumentFragments Example" class="codepen">See the Pen <a href="https://codepen.io/brittanystoroz/pen/LzXqrR/">DocumentFragments Example</a> by Brittany Storoz (<a href="https://codepen.io/brittanystoroz">@brittanystoroz</a>) on <a href="https://codepen.io">CodePen</a>.</p>
