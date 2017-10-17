@@ -136,8 +136,12 @@
 
           <p>In the first scenario, simply calling <code>foo()</code> means that anything within that function is available for garbage collection after the function finishes executing, because nothing in it is reachable after that point.</p>
           <p>In the second scenario, because we are storing a <b>reference</b> to <code>foo()</code> by assigning it to a variable, we cannot clean up the Person instance created within that function because it's technically still reachable by calling <code>baz()</code>.</p>
+          <p>We can see this by looking at the Memory tab of devtools and generating a heap snapshot after running through both code examples. The example where our object is not available for memory collection will return this in the snapshot:</p>
+          <img src="../../assets/images/lessons/performance/heap-snapshot.png" />
           <p>A rule of thumb to avoid these types of mistakes is to keep variables close to their scope and where they're needed or being used, and avoid polluting the global scope because those values will never be available for garbage collection as they're reachable anywhere in the code.</p>
-          <!--https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#functions-->
+          <!--https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#functions
+            unbind event listeners
+          -->
         </section>
 
         <hr />
