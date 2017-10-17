@@ -110,7 +110,7 @@
           <p>The JavaScript we write in our applications is often littered with places where we can improve performance. There are a lot of factors that go into writing performant JavaScript, and sometimes you have to make compromises for readibility or maintainability purposes. Keeping these strategies in mind will help make prioritizing performance slightly more second-nature.</p>
 
           <h4>Getting Benchmarks</h4>
-          <p>One quick trick you can use to determine how long a particular function takes is by using the <code>performance.now()</code> API. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">This API</a> gives you pretty accurate readings on how long it takes for a particular function to run. For example:</p>
+          <p>One quick trick you can use to determine how long a particular function takes is by using the <code>performance.now()</code> API. <a href="https://developer.mozilla.org/en-US/docs/Web/API/Performance/now">This API</a> gives you pretty accurate readings on how long it takes for a particular function to run.</p>
           <p>There are also tools like <a href="https://jsperf.com/for-vs-find">JSPerf</a> where members of the community create benchmarks for multiple approaches of achieving some common functionality.</p>
 
           <h4>DOM Manipulations</h4>
@@ -121,21 +121,23 @@
           <p data-height="265" data-theme-id="0" data-slug-hash="LzXqrR" data-default-tab="js" data-user="brittanystoroz" data-embed-version="2" data-pen-title="DocumentFragments Example" class="codepen">See the Pen <a href="https://codepen.io/brittanystoroz/pen/LzXqrR/">DocumentFragments Example</a> by Brittany Storoz (<a href="https://codepen.io/brittanystoroz">@brittanystoroz</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-
-          <h4>Garbage Collection & Memory Leaks</h4>
-          <p>garbage collection works by reclaiming blocks of memory (objects) which are no longer reachable</p>
-          <ul>
-            <li>keep variables close to their scope/where they're needed, avoid globals</li>
-            <li>unbind event listeners</li>
-            <li>https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#functions</li>
-          </ul>
-
           <h4>Variables & Data Types</h4>
           <ul>
             <li>v8 optimizations</li>
             <li>storing references in variables</li>
           </ul>
 
+          <h4>Garbage Collection & Memory Leaks</h4>
+          <p>Garbage collection is a process in which the browser reclaims blocks of memory (objects) which are no longer reachable.</p>
+          <p>Take a look at the following example:</p>
+
+          <p data-height="265" data-theme-id="0" data-slug-hash="JrezvM" data-default-tab="js" data-user="brittanystoroz" data-embed-version="2" data-pen-title="Memory Allocation Example" class="codepen">See the Pen <a href="https://codepen.io/brittanystoroz/pen/JrezvM/">Memory Allocation Example</a> by Brittany Storoz (<a href="https://codepen.io/brittanystoroz">@brittanystoroz</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+          <p>In the first scenario, simply calling <code>foo()</code> means that anything within that function is available for garbage collection after the function finishes executing, because nothing in it is reachable after that point.</p>
+          <p>In the second scenario, because we are storing a <b>reference</b> to <code>foo()</code> by assigning it to a variable, we cannot clean up the Person instance created within that function because it's technically still reachable by calling <code>baz()</code>.</p>
+          <p>A rule of thumb to avoid these types of mistakes is to keep variables close to their scope and where they're needed or being used, and avoid polluting the global scope because those values will never be available for garbage collection as they're reachable anywhere in the code.</p>
+          <!--https://www.smashingmagazine.com/2012/11/writing-fast-memory-efficient-javascript/#functions-->
         </section>
 
         <hr />
