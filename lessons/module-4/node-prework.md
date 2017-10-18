@@ -1,30 +1,34 @@
 ---
-title: "Reintroduction to Node.js"
+title: "Introduction to Node.js"
 length: 2 hours
 module: 4
 ---
 
 ### Goals
 
-By the end of this lesson, you will:
+By the end of this tutorial, you will:
 
-* Understand how you might work with back-end developers on your team
-* Understand how the client and server relationship works
 * Know what a server is and how requests and responses are handled using the Node HTTP library
+* Understand how the client and server relationship works
 * Know which appropriate RESTful method to send in a request
+* Understand a little more about the language and terminology of back-end developers
 
 ## HTTP, REST and Building a Simple Node Server
 
 Even as a front-end developer, it's important to have a basic understanding of what's going on behind the scenes in the back-end. You'll often be working with back-end developers on your team that will have a huge effect on how your application interacts with its data. The better you understand the back-end, the more prepared you'll be to build an application on top of it.
 
 ### The Server
-A server is simply a computer or program that handles sending, retrieving and manipulating resources for a client. There are many different types of servers, but when we are building web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably, or simply shortened to "server".
+A server is simply a computer or program that handles sending, retrieving, and manipulating resources for a client. There are many different types of servers, but when we build web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably or simply shortened to "server".
 
-An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, data, etc. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the 'Network' tab of our developer tools:
+An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, data, etc. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the **Network** tab of our developer tools:
+
+Open the Network tab, navigate to `https://www.turing.io/`, and you can see the requests and responses.
 
 ![network requests][network-requests]
 
-The network tab will list any requests you make to the server. If we search for `www.turing.io`, in the top left of the network panel, we can see that the type of request we made was for a `document`. If we click on this request, we can also see information about the request itself, as well as the response we were given. Clicking on the 'Response' tab, you'll see the entire markup of the HTML document we requested:
+The Network tab will list any requests you make to a server. If we search for `www.turing.io`, in the top left of the network panel, we can see that the type of request we made was for a `document`. Select that request, and you can also see detailed information about the request itself, as well as the response that was given.
+
+Click on the **Response** tab, and you'll see the entire markup of the HTML document we requested:
 
 ![network response][network-response]
 
@@ -41,20 +45,18 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
 
-![url pic][url-pic]
-
-[url-pic]: /assets/images/lessons/http-rest-node-server/url-pic.gif
+![url-pic](https://www.normshield.com/wp-content/uploads/2017/05/example.png)
 
 When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints.
 
 *Note on HTTP: It is simply the protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.*
 
 
-### Student Discussion (5 minutes)
-With a partner, discuss what it was like to write server-side code. What was unfamiliar to you? What was familiar to you? Were there any limitations in debugging tools that you are used to using, and how did that effect your ability to solve problems?
+### Some Introspection
+Take 10 minutes to think about API endpoints that you've used before. How were they structured? Did you have to use different HTTP methods? Write down some URLs that you had to use to make API requests.
 
 ### Back-End Frameworks
-Unlike the front-end, where our main language is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
+Unlike the front-end, where the main language used is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
 
 For the following lessons, we'll focus on using [node](https://nodejs.org/en/) and [express](http://expressjs.com/) for building a back-end. We will use Node today to create a simple HTTP server with several endpoints.
 
@@ -63,9 +65,9 @@ What are the benefits/disadvantages of using Node versus other server technologi
 
 Awesomeness of Node includes:
 
-* Everything in JS
-* Fast, non-blocking code. Wait for your slow operations (file system, database I/O operations)
-* Real-time communications with sockets (run on TCP instead of HTTP)
+* Everything in JS - you don't have to learn a new language! (even though that's not a bad thing)
+* Fast, non-blocking code
+* Supports real-time communications with sockets (run on TCP instead of HTTP)
 * Not multi-threaded (good for memory)
 
 Disadvantages of Node:
