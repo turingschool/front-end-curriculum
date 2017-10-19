@@ -34,6 +34,7 @@ module: 4
   <section>
     <h3>Why so many options?</h3>
     <ul>
+      <li>increasing complexity of applications required more flexibility in storage</li>
       <li>each storage option varies in size limits, security, persistence and allowed data types</li>
       <li>the internet is terrible and we don't know what we're doing</li>
     </ul>
