@@ -72,9 +72,9 @@ module: 4
 <section>
   <section>
     <h4>Let's Practice</h4>
-    <p><b>First things first:</b></p>
-    <p>1. Unregister any pre-existing service workers</p>
-    <p>2. Clear any cache storages you've created in the past</p>
+    <p><b>Familiarize Yourself with DevTools:</b></p>
+    <p>1. Check out the 'Application' tab in dev tools</p>
+    <p>2. Click on the 'Service Workers' tab and check the 'Show All' box</p>
   </section>
   <section>
     <p><a href="https://github.com/turingschool-examples/offline-news">Clone this repo</a></p>

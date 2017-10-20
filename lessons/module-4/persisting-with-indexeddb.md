@@ -28,11 +28,21 @@ module: 4
 
 <section>
   <section>
-    <h3>Why so many storage options?</h3>
+    <h3>Client-Side Storage</h3>
+    <p>What other options do we have for storing data in the browser?</p>
   </section>
   <section>
     <ul>
-      <li>each storage option varies in size limits, persistence and allowed data types</li>
+      <li><b>Cookies:</b> pre-HTML5, can't store much data</li>
+      <li><b>LocalStorage & Sessionstorage:</b> adheres to CORS, can store more information</li>
+      <li><b>Cache Storage:</b> built-in with the browser, expanded to support Service Workers and AppCache</li>
+    </ul>
+  </section>
+  <section>
+    <h3>Why so many options?</h3>
+    <ul>
+      <li>increasing complexity of applications required more flexibility in storage</li>
+      <li>each storage option varies in size limits, security, persistence and allowed data types</li>
       <li>the internet is terrible and we don't know what we're doing</li>
     </ul>
   </section>
