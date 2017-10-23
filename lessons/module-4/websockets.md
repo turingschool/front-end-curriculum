@@ -202,7 +202,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('disconnect', () => {
-    clearInterval(interval);
+    console.log('A user has disconnected.');
   });
 });
 ```
