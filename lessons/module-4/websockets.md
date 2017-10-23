@@ -259,9 +259,9 @@ There are also some helpful methods for seeing how many clients are currently co
 
 ### Your Turn
 
-* When a user connects. Broadcast a message to all of the other clients connected announcing that someone new has connected.
-* When a user disconnects. Broadcast a message to all of the other clients connected announcing that someone new has disconnected.
-* When a message comes in from a user. Broadcast it out to all users.
+* When a user connects, broadcast a message to all of the other clients connected announcing that someone new has connected.
+* When a user disconnects, broadcast a message to all of the other clients connected announcing that someone new has disconnected.
+* When a message comes in from a user, broadcast that message out to all users.
 
 <!-- ## Pair Project
 
