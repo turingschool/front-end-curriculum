@@ -44,8 +44,8 @@ Whats really great about a prefix trie is that every parent node will typically 
       [m . . n]   [m  . z]
        |     |     |    |
       [y]   [n]   [m]  [r]  
-       |     |     |   
-      [a]   [a]   [a]  
+             |     |    |   
+            [a]   [a]  [a]  
           /  |  \      
         [b . i . l]
          |   |   |
@@ -124,7 +124,7 @@ import fs from 'fs';
 const text = "/usr/share/dict/words"
 const dictionary = fs.readFileSync(text).toString().trim().split('\n')
 
-const completion = new CompleteMe()
+const completion = new Trie()
 
 completion.populate(dictionary)
 
@@ -153,12 +153,13 @@ to influence future suggestions.
 Here's what that interaction model should look like:
 
 ```
-const CompleteMe = require ("./lib/complete_me")
-const text       = "/usr/share/dict/words"
+import Trie from "./lib/Trie"
 
-var completion = new CompleteMe
+const text = "/usr/share/dict/words"
 
-let dictionary = fs.readFileSync(text).toString().trim().split('\n')
+const dictionary = fs.readFileSync(text).toString().trim().split('\n')
+
+const completion = new Trie()
 
 completion.populate(dictionary)
 
