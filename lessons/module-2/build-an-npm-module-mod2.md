@@ -246,3 +246,37 @@ npm install [GitHub URL] -S
 and then requiring a specific module in your js file as you would with any other module.
 
 For this to work, make sure you are still bundling up your code with that `module.exports`.
+
+--------
+## tl;dr
+#### In the file you are packaging up into a module:
+  1. Use `module.exports` to export the relevant functionality from your files.
+  2. Use `require()` with the relative filepath to import the significant functionality into the `index.js` file.
+  3. Use `module.exports` to export the functionality from the `index.js` file.
+  4. In the `package.json` file, make sure it includes a `"name"` property set to
+       `"@yourusername/your-project-name"`
+  5. In the `package.json` file, make sure it includes a `"main"` property set to the filepath of your
+       `"index.js"`
+  6. Add and commit your changes, push up to GitHub.
+  
+#### In the project you want to use the module in:
+  1. Run `npm install [THE URL OF THE MODULE'S GITHUB REPO]` + the appropriate flag
+       `--save-prod` or `--save-dev`
+  2. In whatever file you wish to use the module in, import it in
+       `import [NAME OF MODULE] from '@yourusername/your-project-name'`
+         OR
+       `const [NAME OF MODULE] = require('@yourusername/your-project-name')`
+       _NOTE: if this project will ALSO be turned into a module, use the `module.exports/require` syntax!_
+  3. Use your module and bask in the glow of keeping your project lean by importing in functionality!
+  
+  
+#### If you need to update your module:
+  1. Update your module!
+  2. Update the version number in your `package.json`
+  3. Add, commit, and push your changes to GitHub
+  4. In the project where you are using your module:
+    a) Delete the `package-lock.json` file
+    b) Run `npm install [THE URL OF THE MODULE'S GITHUB REPO]` + the appropriate flag
+       `--save-prod` or `--save-dev`
+    c) Open up the `node_modules`, find the module, and check that the module has been updated
+    
