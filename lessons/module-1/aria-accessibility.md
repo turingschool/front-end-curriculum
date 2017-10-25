@@ -125,6 +125,8 @@ For example, take the button we mentioned when discussing states. That button sp
 
 The `aria-controls` property has a value of the ID of the element it is attached to. So in this case, we would assume that there is another element with an id of `sidebar-menu` that is contolled by this button.
 
+Open [this CodePen](https://codepen.io/damwhit/pen/WZqyEe) to play around with it.
+
 You can also use something called an `aria-label` property. Think of this like an `alt` tag for accessibility - this property allows you to enter additional text that provides more information to the user. This information won't show up on the page but will be read by the screen reader.
 
 ```html
@@ -138,6 +140,8 @@ You can also use something called an `aria-label` property. Think of this like a
 ```
 
 You can then use JavaScript to keep this information up to date - for example, once `aria-expanded="false"`, you'd set your `aria-label` to `"Open sidebar navigation menu"`.
+
+Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with it.
 
 **NOTE**: Use this with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
 
