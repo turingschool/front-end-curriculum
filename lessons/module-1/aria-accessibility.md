@@ -28,7 +28,7 @@ ARIA provides a series of tools and approaches to enhancing the meaning of your 
 
 ### Roles ###
 
-Roles define what an element IS - what function it serves on the page.
+Roles define what an element is - what function it serves on the page.
 
 These can be either **implicit** or **explicit**.
 
@@ -108,7 +108,7 @@ This also allows you to target these elements using the `aria-expanded` attribut
 
 Properties give an element special characteristics that you can relate to other documents or elements.
 
-For example, take the button we mentioned when discussing states. That button specifcially controlled the sidebar-menu, but what if there are multiple menus that have similar buttons? ARIA lets us add additinoal properties that link elements together.
+For example, take the button we mentioned when discussing states. That button specifically controlled the sidebar-menu, but what if there are multiple menus that have similar buttons? ARIA lets us add additional properties that link elements together.
 
 ```html
 <button
@@ -146,16 +146,20 @@ You can then use JavaScript to keep this information up to date - for example, o
 "What Am I"
 
 * `aria-label` - Described above. Provides additional information about an element.
-* `aria-live` - **CRUCIAL** This Indicates an area of the page that might change, which tells the screen reader to watch this section of the DOM and announce any changes if necessary. (Ie: your facebook feed).
-* `aria-atomic`
-* `aria-required`
+* `aria-live` - **CRUCIAL** This Indicates an area of the page that might change, which tells the screen reader to watch this section of the DOM and announce any changes if necessary. (Ie: your facebook feed). Values are `polite` and `assertive`.
+* `aria-atomic` - Assistive technologies will present the entire region as a
+  whole. 
+* `aria-required` - Tells a user if they need to provide input on an element
+  before a form is submitted.
 
 "Who am I Related To?"
 
 * `aria-controls` - Seen above. References an element that is controlled by the current element.
-* `aria-describedby`
+* `aria-describedby` - References another atrribute to provide a text
+  alternative.
 * `aria-labelledby` - Sister to `aria-label`, tells the screen reader which element contains additional information about it.
-* `aria-owns`
+* `aria-owns` - References child elements if that relationship is not already
+  clear in the dom.
 
 [Learn more about the extensive list of properties and states available in the documentation](https://msdn.microsoft.com/en-us/library/hh801958(v=vs.85).aspx).
 
@@ -171,7 +175,7 @@ Answer the following questions:
 
 1. What is the difference between the DOM tree and an Accessibility Tree?
 
-1. What 3 main types of information is available through the Accessibility Tree? Describe each of these types of information and provide an example.
+1. What 3 main types of information are available through the Accessibility Tree? Describe each of these types of information and provide an example.
 
 1. Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
 
@@ -203,3 +207,8 @@ All information in this lesson plan was pulled as a summary of the following two
 
 * [Aria Roles, States, and Properites](https://www.youtube.com/watch?v=JptGV3XqNNk)
 * [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
+
+This is the documentation for ARIA. As you can see it is super dense and hard to
+pull out the practical pieces: 
+
+* [Aria Documentation](https://www.w3.org/TR/wai-aria)
