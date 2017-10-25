@@ -118,8 +118,8 @@ module: 4
     <h4>Opening a Database:</h4>
     <ul>
       <li><a href="https://www.w3.org/TR/IndexedDB/#requests">The Spec</a></li>
-      <li><a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/Modules/indexeddb/IDBFactory.cpp#L78-L86">The Browser Engine Implementation</a></li>
-      <li><a href="https://github.com/turingschool-examples/offline-news/blob/d6182e5e7858af7481ef41d534dbc5a5d8b717f0/public/indexedDB.js#L11-L21">Our JavaScript Implementation</a></li>
+      <li><a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/Modules/indexeddb/IDBFactory.cpp#L75-L101">The Browser Engine Implementation</a></li>
+      <li><a href="https://github.com/turingschool-examples/offline-news/blob/d6182e5e7858af7481ef41d534dbc5a5d8b717f0/public/indexedDB.js#L3-L21">Our JavaScript Implementation</a></li>
       <li><a href="https://github.com/turingschool-examples/offline-news/blob/after-sync-lesson/public/indexedDB.js#L4">The Dexie Library Wrapper</a></li>
     </ul>
   </section>
