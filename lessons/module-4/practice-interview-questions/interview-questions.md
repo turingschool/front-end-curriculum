@@ -5,8 +5,12 @@ tags: interview, prep
 module: 4
 ---
 
-# Interview Questions
-To commit the answers to these questions to memory, _write_ down your responses in your notebook - do not type them on your computer. After you're done writing them down, you can type them into your computer if you'd like.
+## Interview Prep
+To commit the answers to these questions to memory, **write** down your responses in your notebook - do not type them on your computer. After you're done writing them down, you can type them into your computer if you'd like.
+
+Write down your answers using the correct, precise terminology as if you were talking to an interviewer. All of these questions were from previous student's actual interviews.
+
+## Questions
 
 * In as much detail as possible, explain how you would localize an application.
 * Tell me two advantages of testing your code.
