@@ -149,7 +149,7 @@ header nav a { color: white; }
 
 #### Nesting & Psuedo-Selectors
 
-A common scenario when nesting is a good option is when dealing with psuedo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
+A common scenario, when nesting is a good option, is when dealing with psuedo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
 
 To target a parent element and apply a psuedo selector, use `&:psuedo-selector`, as in the following syntax:
 
