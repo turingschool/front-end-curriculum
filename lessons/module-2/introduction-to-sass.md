@@ -149,7 +149,7 @@ header nav a { color: white; }
 
 #### Nesting & Psuedo-Selectors
 
-A common scenario when nesting is a good option is when dealing with psuedo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
+A common scenario, when nesting is a good option, is when dealing with psuedo selectors. This makes it very transparent which element's behavior is being targeted on a particular action.
 
 To target a parent element and apply a psuedo selector, use `&:psuedo-selector`, as in the following syntax:
 
@@ -180,7 +180,7 @@ a {
   </nav>
 ```
 
-Let's say that your client wants everything thats red to be teal.  Pretend that your CSS file is huge. Isn't is awesome that you only have to change the CSS in one tiny little place?
+Let's say that your client wants everything thats red to be teal.  Pretend that your CSS file is huge. Isn't it awesome that you only have to change the CSS in one tiny little place?
 
 <hr />
 
@@ -188,9 +188,11 @@ Let's say that your client wants everything thats red to be teal.  Pretend that 
 
 Color functions in Sass let you adjust defined color values with ease.
 
+### Defining Colors
+
 Let's take a second to go back over the different ways to define a color in CSS.
 
-##### RGBA
+#### RGBA
 
 Stands For: Red, Green, Blue, Alpha(Opacity)  
 Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`  
@@ -198,7 +200,7 @@ Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)
 
 Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation of red, blue and green respectively, and blends them together.
 
-##### Hexadecimal Code
+#### Hexadecimal Code
 
 Stands For: A form of RGB notation written as pairs of hexadecimal values.  
 Syntax: `#rrggbb` or `#rgb`.  
@@ -206,7 +208,7 @@ Example: `#f00` or `#ff0000` (red)
 
 *ProTip:* Shorthand comes from duplicating each character. So `#f00` (red) expands into `#ff0000`, or `#fb0` (yellow) expands to `#ffbb00`;)
 
-##### HSLA
+#### HSLA
 
 Stands For: Hue, Saturation, Lightness, Alpha(Opacity)  
 Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`  
