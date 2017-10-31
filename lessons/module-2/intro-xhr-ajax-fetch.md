@@ -2,7 +2,8 @@
 
 ---
 
-### [Git Repo](https://github.com/letakeane/ajax-practice)
+### [Git Repo](https://github.com/letakeane/ajax-practice.git)
+`git clone https://github.com/letakeane/ajax-practice.git && cd ajax-practice && npm install && git checkout triviaStart && sublime .`
 
 ---
 
