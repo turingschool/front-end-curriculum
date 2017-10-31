@@ -44,7 +44,7 @@ npm test
 
 ## Jest
 
-_Jest is the de facto unit testing framework for ReactJS project. It is provided and used by Facebook themselves._
+_Jest is the de facto unit testing framework for ReactJS project. It is provided and used by Facebook._
 
 **Top features are:**
 
@@ -53,13 +53,13 @@ _Jest is the de facto unit testing framework for ReactJS project. It is provided
 * Runs your tests with a fake DOM implementation
 * Runs tests in parallel processes
 
-To install: 
+### Installation: 
 
 ```
 npm install --save-dev jest
 ```
 
-Just like `chai`, just uses the `expect` keyword, only with some slight differences. One syntactical difference you'll want to make note of is the simple check that something equals and expected result...
+Just like `chai`, jest uses the `expect` keyword, only with some slight differences. One syntactical difference you'll want to make note of is the simple check that something equals and expected result...
 
 ###### Chai:
 `expect(something).to.equal(true)`
@@ -67,7 +67,7 @@ Just like `chai`, just uses the `expect` keyword, only with some slight differen
 ###### Jest: 
 `expect(something).toEqual(true)`
 
-#### Work time!
+<!-- #### Work time!
 
 check out the [expect documentation](https://facebook.github.io/jest/docs/expect.html#content). Count off 1 thru 6, find your team and spend 10 mins reading up on your assigned method:
 
@@ -77,7 +77,7 @@ check out the [expect documentation](https://facebook.github.io/jest/docs/expect
 4. toEqual()
 5. toBe()
 6. toBeTruthy() && toBeFalsy() 
-
+ -->
 ## Enzyme
 
 From the [enzyme](https://github.com/airbnb/enzyme) docs:
@@ -88,18 +88,113 @@ _Enzyme's API is meant to be intuitive and flexible by mimicking jQuery's API fo
 
 _Enzyme is unopinionated regarding which test runner or assertion library you use, and should be compatible with all major test runners and assertion libraries out there. The documentation and examples for enzyme use mocha and chai, but you should be able to extrapolate to your framework of choice._
 
-To install:
+### What Does This Mean for Us?
+
+Enzyme renders our components and turns them into chunks of HTML. We can interact with this HTML using a jQuery like syntax.
+
+### Installation:
 
 ```
 npm i --save-dev enzyme
 ```
 
-###### There are two things we'll use from enzyme to help test our components:
+###### There are two methods we'll use from enzyme to render our component HTML.
 
 * [shallow](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md)
-* [mount](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md)
+Shallow renders our component's HTML, if our component has child components then it will only render stubs for the child components. It will not render the child components HTML. Because shallow does not render the child components it is much faster and should be used by default.
 
-To understand the difference, check out [this breakdown](https://gist.github.com/fokusferit/e4558d384e4e9cab95d04e5f35d4f913)
+* [mount](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md)
+Mount renders our component's HTML, if our component has child components then it will render the child components HTML. It also gives us triggers some of the child components life cycle methods.
+
+For a more detailed look at the differences, check out [this breakdown](https://gist.github.com/fokusferit/e4558d384e4e9cab95d04e5f35d4f913)
+
+Let's look at what happens when we use shallow or mount. Consider the following components...
+
+```jsx
+// List stateless component
+function List (props) {
+  return (
+    <ul>
+      props.data.map( (item) => {
+        return <li> item </li>
+      } );
+    </ul>
+  )
+}
+
+// App stateful component
+class App extends React.Component {
+  constructor () {
+    super(); 
+
+    this.state = {
+      list: [ 'vampire', 'werewolf', 'ghost' ]
+    }
+  }
+
+  render () {
+    return (
+      <div>
+        <h1>App Title</h1>
+
+        <List data={this.state.list} />
+      </div>
+    )
+  }
+}
+```
+
+Now let's shallow the App component.
+
+```
+// App-test.js
+import App from '../lib/App';
+
+describe('App', () => {
+  it('should shallow', () => {
+    let component = shallow(<App />);
+
+    console.log( component.debug() );
+  });
+
+  it('should mount', () => {
+    let component = mount(<App />);
+
+    console.log( component.debug() );
+  });
+});
+```
+
+The debug function is a super powerful, useful tool. It shows us the HTML our component renders.
+
+The shallow output of our App component will be the following.
+
+```
+// shallow output
+<div>
+  <h1>App Title</h1>
+
+  <List data={this.state.list} />
+</div>
+```
+
+The mount output of our App component will be the following. Notice that our List component has been fully rendered inside of our App component.
+
+```
+// mounted output
+<div>
+  <h1>App Title</h1>
+
+  <List data={this.state.list}>
+    <ul>
+      <li> vampire </li>
+      <li> werewolf </li>
+      <li> ghost </li>
+    </ul>
+  </List>
+</div>
+```
+
 
 #### Work time!
 
@@ -127,7 +222,7 @@ Some things to consider...
 * Does the component manipulate state? 
 * Are the correct functions being called? 
 * When you add something to the DOM/Virtual DOM, does it show? 
-    * When you add another, are there 2 items correctly being rendered? 
+    * When you create another instance of your component, are they rendered correctly? 
     * When you delete an item, is the count updated correctly? 
     
     
