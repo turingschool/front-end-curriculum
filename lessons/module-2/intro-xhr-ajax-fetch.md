@@ -240,7 +240,7 @@ _HINT_: You'll probably want to ensure your component is fully rendered (*cough*
 
 Once you successfully have the trivia set in state, see if you can add some code to the `TriviaList.jsx` file that will append the data to the DOM.
 
-_HINT:_ Look how the `trivia` array in state of the `Main` component is being passed down to the child components. Also, think grocery list...
+_HINT:_ Look how the `trivia` array in state of the `Main` component is being passed down to the child components.
 
 ### Step Four:
 
