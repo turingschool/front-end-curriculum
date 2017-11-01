@@ -3,7 +3,6 @@
 ---
 
 ### [Git Repo](https://github.com/letakeane/ajax-practice.git)
-`git clone https://github.com/letakeane/ajax-practice.git && cd ajax-practice && npm install && git checkout triviaStart && sublime .`
 
 ---
 
@@ -220,8 +219,8 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 
 ### Step One:
 
-Clone down **THIS** repo
-* `cd ajax-practice`
+Clone down [**THIS**](https://github.com/letakeane/ajax-practice.git) repo
+* `git checkout triviaStart`
 * `npm install`
 * `npm start`
 
