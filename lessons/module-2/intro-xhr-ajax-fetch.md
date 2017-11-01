@@ -2,7 +2,7 @@
 
 ---
 
-### [Git Repo](https://github.com/letakeane/ajax-practice.git)
+### [Git Repo](https://github.com/turingschool-examples/ajax-lesson-FE)
 
 ---
 
@@ -219,16 +219,15 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 
 ### Step One:
 
-Clone down [**THIS**](https://github.com/letakeane/ajax-practice.git) repo
-* `git checkout triviaStart`
+Clone down [this repo](https://github.com/turingschool-examples/ajax-lesson-FE)
 * `npm install`
 * `npm start`
 
-Visit `http://localhost:8080/public/`
+Visit **`http://localhost:8080/public/`**
 
 ### Step Two:
 
-Working in the `Main.jsx` file, see if you can _`GET`_ data from this endpoint displaying in your console and then set it to the `trivia` array in state.
+Working in the `Main.jsx` file, see if you can _`GET`_ data from this endpoint displaying in your console and then set it to the `triviaArray` in state.
 
 ```
 https://opentdb.com/api.php?amount=10&category=27&type=multiple
@@ -238,9 +237,9 @@ _HINT_: You'll probably want to ensure your component is fully rendered (*cough*
 
 ### Step Three:
 
-Once you successfully have the trivia set in state, see if you can add some code to the `TriviaList.jsx` file that will append the data to the DOM.
+Once you successfully have the trivia set in state, see if you can add some code to the `TriviaList.js` file that will append the data to the DOM.
 
-_HINT:_ Look how the `trivia` array in state of the `Main` component is being passed down to the child components.
+_HINT:_ Look how the `triviaArray` in state of the `Main` component is being passed down to the child components.
 
 ### Step Four:
 
