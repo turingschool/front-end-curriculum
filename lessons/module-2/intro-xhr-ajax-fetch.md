@@ -50,7 +50,6 @@ setTimeout is actually an asynchronous function, which executes its callback aft
 |<-----------------A---------------------------->|
      |<------------B---------------------------------->|
              |<----C-------------->|
-
 ```
 
 
