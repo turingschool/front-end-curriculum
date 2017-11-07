@@ -85,6 +85,8 @@ The search component consists of an input field and a submit button that allows 
    * The application can be used without a mouse
    * zero axe-core violations
 
+* Use Sass / SCSS to style your projects
+
 # Instructor Evaluation Points
 
 ## Specification Adherence

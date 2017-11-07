@@ -448,7 +448,7 @@ body {
   @include debug-text(true)
 }
   
-// Useful mixin using If and else statement
+// Useful mixin using if and else statement
 @mixin top-or-bottom($tb) {
   position: absolute;
 
