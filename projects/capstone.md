@@ -13,6 +13,30 @@ The project is due on Tuesday of Week 6.
 * [Ian and Graham's We the People Native](https://github.com/ianlancaster/we-the-people-native)
 * [Jeff, David, Casey, Pete and Kirsten's Turing Fridays](https://github.com/Jeff-Duke/turing-fridays)
 
+## Expectations
+
+### Everyone Starts From Scratch
+
+You cannot pitch an idea based on a project you've already worked on (e.g. your mod 3 personal project). You must build a new application from scratch. The only exception to this is that you can use your BYOB as the backend if you choose. 
+
+### Design Research
+
+Spend some time doing some legitimate design research to influence your UI. Pick a single UI element off of [Dribbble](https://dribbble.com) (or any other site you find to be really pretty) that you like and use it to inspire the rest of your design. For example: 
+
+I really like the subtle drop-shadows on these [notifications](https://dribbble.com/shots/1467222-Notifications), and the way the notification icons vary slightly in color by being slightly lighter than the rest of the background. I will incorporate these types of drop-shadows on elements in my project and play with this particular use of color.
+
+### Demonstrating What You've Learned
+
+This project should encapsulate what you've learned throughout Turing, and anything else you've been interested in exploring. We'd like to see a strong emphasis on some of the technologies you've learned in mod 4:
+
+* CSS Transitions & Animations
+* Git Hooks & Advanced Workflow
+* React Native (can be done as an extension, not as your entire application)
+* Service Workers & Background Sync/Push Notifications
+
+
+## Brainstorming
+
 ### Part 1: Solo (30 minutes)
 
 On the whiteboard or with pen and paper, summarize the data that is returned from your BYOB endpoints. While you don't **have** to use your BYOB project as a base, we have found it greatly helps students to have that foundation. You are welcome to create another backend API if there is an application you strongly want to build, but remember that will require setting up new schemas and seeds.
@@ -84,6 +108,8 @@ Pick a team lead to create a repository for each the selected projects. If you h
 ### Part 10: Definition of Done (15 minutes)
 
 As a team, come up with your own Definition of Done. Have at least 5 criteria for your DoD. Follow your DoD throughout the project!
+
+
 
 ## Rubric
 
