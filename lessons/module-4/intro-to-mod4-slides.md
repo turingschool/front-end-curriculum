@@ -75,6 +75,7 @@ layout: presentation
       <li>Homework</li>
       <li>Gear Up</li>
       <li>Professional Development</li>
+      <li>Final Assessment</li>
     </ul>
   </section>
 </section>
