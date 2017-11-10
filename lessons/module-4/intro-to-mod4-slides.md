@@ -84,8 +84,9 @@ layout: presentation
     <h2>Job Support</h2>
   </section>
   <section>
-    <p>Notes from Brittany needed here...</p>
-    <p>30-day action plan...peer-support groups</p>
+    <p>Peer-support groups with a dedicated coach</p>
+    <p>Refine your resumes, cover letters and outreach emails</p>
+    <p>Develop a 30-day action plan post-graduation to set yourself up for success</p>
   </section>
 </section>
 
