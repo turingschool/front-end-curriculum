@@ -73,7 +73,7 @@ layout: presentation
       <li>Prework</li>
       <li>Projects: Palette Picker, BYOB, House of Vars, Capstone</li>
       <li>Homework</li>
-      <li>Gear Up</li>
+      <li>Gear Up - You Lead!</li>
       <li>Professional Development</li>
       <li>Final Assessment</li>
     </ul>
