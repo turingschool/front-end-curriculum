@@ -115,56 +115,56 @@ As a team, come up with your own Definition of Done. Have at least 5 criteria fo
 
 ### Deployment (40 points)
 
-* **40:** Application is automatically deployed to production via CircleCI.
-* **20:** Application is deployed to Heroku but not automatically via CircleCI.
-* **0:** Application is not building with CircleCI and not deployed.
+* **40 points:** Application is automatically deployed to production via CircleCI.
+* **20 points:** Application is deployed to Heroku but not automatically via CircleCI.
+* **0 points:** Application is not building with CircleCI and not deployed.
 
 ### JavaScript Style (60 points)
 
-* **50:** Application has exceptionally well-factored code with little or no duplication and all modular pieces separated out into logical components. There are _zero_ instances where an instructor would recommend taking a different approach.
-* **35:** Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* **15:** Application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what most lines are doing.
-* **10:** Application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
-* **5:** Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
-* **0:** There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
+* **50 points:** Application has exceptionally well-factored code with little or no duplication and all modular pieces separated out into logical components. There are _zero_ instances where an instructor would recommend taking a different approach.
+* **35 points:** Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
+* **15 points:** Application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what most lines are doing.
+* **10 points:** Application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
+* **5 points:** Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
+* **0 points:** There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
 
 ### User Interface (60 points)
 
-* **40** - User interface is intuitive and the instructor can easily use it on their own without guidance. Styling is consistent and call-to-action elements are obvious. The application provides the user with relevant feedback based on interactions.  
+* **40 points:** User interface is intuitive and the instructor can easily use it on their own without guidance. Styling is consistent and call-to-action elements are obvious. The application provides the user with relevant feedback based on interactions.  
 
-* **30** - User interface is mostly intuitive, though the instructor might need some guidance on interactions. Styling is mostly consistent, but could use some clean up. Application may be missing some relevant feedback that would help guide the user. 
+* **30 points:** User interface is mostly intuitive, though the instructor might need some guidance on interactions. Styling is mostly consistent, but could use some clean up. Application may be missing some relevant feedback that would help guide the user. 
 
-* **20** - User interface demonstrates some effort, but is not intuitive and the instructor needs help figuring out how to use the application. Styling has several inconsistencies and it's sometimes unclear what elements a user can interact with. Application lacks useful feedback for the user.  
+* **20 points:** User interface demonstrates some effort, but is not intuitive and the instructor needs help figuring out how to use the application. Styling has several inconsistencies and it's sometimes unclear what elements a user can interact with. Application lacks useful feedback for the user.  
 
-* **0** - User interface does not demonstrate effort and is unintuitive. The instructor cannot use the application on their own. Styling is inconsistent and user interactions are unclear. Application lacks useful feedback for the user.
+* **0 points:** User interface does not demonstrate effort and is unintuitive. The instructor cannot use the application on their own. Styling is inconsistent and user interactions are unclear. Application lacks useful feedback for the user.
 
 
 ### Risk Taking and Creativity (10 points)
 
 Instructor/developers will select one feature in the project to review for this section of the rubric.
 
-* **10:** Developers pushed themselves and their team by taking risks which is demonstrated by a delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
-* **5:** Developers pushed themselves and their team by taking risks which is demonstrated by an almost delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
-* **2:** Developers attempted to implement feature using technologies not covered in class but it did not result in a delivered feature.
-* **0:** Developers did not use a new technology.
+* **10 points:** Developers pushed themselves and their team by taking risks which is demonstrated by a delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
+* **5 points:** Developers pushed themselves and their team by taking risks which is demonstrated by an almost delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
+* **2 points:** Developers attempted to implement feature using technologies not covered in class but it did not result in a delivered feature.
+* **0 points:** Developers did not use a new technology.
 
 ### Testing, Linting and Error Handling (40 Points)
 
-* **40:** Project has a running test suite that exercises the application at multiple levels (feature and unit, client-side and server-side). The test suite covers almost all aspects of the application. A linter has been enforced and passes with no errors.
-* **20:** Project has a running test suite that tests multiple levels but fails to cover some features. Most functionality is covered by tests. The application makes some use of feature testing. A linter has been enforced but may contain some errors or warnings.
-* **10:** Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested. A linter was enforced but it does not pass in multiple places.
-* **5:** Testing in the application is sporadic and does not add confidence that the application would not break during refactoring. A linter was not enforced.
+* **40 points:** Project has a running test suite that exercises the application at multiple levels (feature and unit, client-side and server-side). The test suite covers almost all aspects of the application. A linter has been enforced and passes with no errors.
+* **20 points:** Project has a running test suite that tests multiple levels but fails to cover some features. Most functionality is covered by tests. The application makes some use of feature testing. A linter has been enforced but may contain some errors or warnings.
+* **10 points:** Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested. A linter was enforced but it does not pass in multiple places.
+* **5 points:** Testing in the application is sporadic and does not add confidence that the application would not break during refactoring. A linter was not enforced.
 * **0:** There is little or no evidence of testing in this application. A linter was not enforced.
 
 ### Workflow (40 Points)
 
-* **40 points** - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
+* **40 points:** Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
 
-* **20 points** - Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
+* **20 points:** Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
 
-* **10 points** - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
+* **10 points:** Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
 
-* **5 points** - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
+* **5 points:** Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
 
 ### To get a 3 on this project, you need to achieve 200 / 250
 
