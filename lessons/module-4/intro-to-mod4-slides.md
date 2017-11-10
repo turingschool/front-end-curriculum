@@ -10,6 +10,24 @@ layout: presentation
 
 <section>
   <section>
+    <h2>Why?</h2>
+  </section>
+  <section>
+    <h4>Bare Minimum</h4>
+    <p>Finishing mod3, you know the bare minimum to become a junior front-end engineer.</p>
+  </section>
+  <section>
+    <h4>Set Yourself Apart</h4>
+    <p>Mod4 is designed to separate you from the pack of other bootcamps and front-end junior developers.</p>
+  </section>
+  <section>
+    <h4>Empower Yourself</h4>
+    <p>Mod4 gives you the tools to build full, professional web apps without the reliance on a back-end team.</p>
+  </section>
+</section>
+
+<section>
+  <section>
     <h2>What is Mod 4?</h2>
   </section>
   <section>
@@ -95,23 +113,5 @@ layout: presentation
     <h4>90% attendance minimum - 100% of the work completed</h4>
     <p>If you miss a class for an interview, you are still expected to go over the material and complete any required homework.</p>
     <p>Classes are usually written in a tutorial style and can be worked through on your own.</p>
-  </section>
-</section>
-
-<section>
-  <section>
-    <h2>Why?</h2>
-  </section>
-  <section>
-    <h4>Bare Minimum</h4>
-    <p>Finishing mod3, you know the bare minimum to become a junior front-end engineer.</p>
-  </section>
-  <section>
-    <h4>Set Yourself Apart</h4>
-    <p>Mod4 is designed to separate you from the pack of other bootcamps and front-end junior developers.</p>
-  </section>
-  <section>
-    <h4>Empower Yourself</h4>
-    <p>Mod4 gives you the tools to build full, professional web apps without the reliance on a back-end team.</p>
   </section>
 </section>
