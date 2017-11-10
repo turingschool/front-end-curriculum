@@ -71,6 +71,21 @@ palette-picker
 * **15 Points** - Palette generation that isn't random and actually makes sense: If you look at the [HTML Color Codes site](http://htmlcolorcodes.com/color-picker/), they give some explanation about what colors make sense with other colors in a palette. Design your color generator so that the colors aren't picked completely at random, but they make a more cohesive, harmonious color palette.
 * **10 Points** - Color modification: In addition to being able to lock a particular color (part of the base functionality), a user should be able to modify one of the colors in the palette (by entering in their own hex code, color name, or some kind of hue slider)
 
+## Timeline
+
+In order to ensure you're on pace for finishing the project successfully and on-time, you should try to be meeting each of these checkpoints:
+
+**EOD Monday:** Express server is set up and serving static assets; front-end is in place (though likely not polished); You have thought about what API endpoints you need and perhaps you've implemented one or two using data from `app.locals`
+
+**EOD Tuesday:** You have solidified what API endpoints you need and have implemented them using data from `app.locals`; You have put more thought into your front-end and design and it is starting to shape up and become more polished
+
+**EOD Wednesday:** You have set up your postgres database and refactored most of your endpoints that were using `app.locals` to communicate with the database instead; You have had someone attempt to use your application and received feedback on UI/UX
+
+**EOD Thursday:** You have finished refactoring your endpoints to communicate with your postgres database; You've setup your test database and written your happy/sad path tests for each of your endpoints; You've polished your front-end
+
+**Noon Friday:** You have successfully deployed your application to Heroku; You have commented out your server file line-by-line; You have filled out your submission template
+
+
 
 ## Instructor Evaluation Points
 
