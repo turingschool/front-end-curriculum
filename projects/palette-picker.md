@@ -13,8 +13,15 @@ Your job is to recreate some of this site's functionality with your own backend 
 
 This is a general guide on what should be included in your site. You can completely change the look of your own website as long as you stay true to the project specifications and features.
 
+Please remember that wireframes are not to be copied exactly as-is. Take liberties and build a UI that *makes sense*, and is intuitive for your users. We highly encourage you to have a non-Turing/non-developer friend try to use your application. Pay attention to when they get confused or struggle trying to use your app, and fix your UX accordingly.
+
 ![Palette Picker Wireframe](/assets/images/palette-picker-wireframe.png)
 
+## Design Research
+
+As part of your submission template, we'd like you to do some design research. Pick a single UI element off of [Dribbble](https://dribbble.com) (or any other site you find to be really pretty) that you like and use it to inspire the rest of your design. For example: 
+
+I really like the subtle drop-shadows on these [notifications](https://dribbble.com/shots/1467222-Notifications), and the way the notification icons vary slightly in color by being slightly lighter than the rest of the background. I will incorporate these types of drop-shadows on elements in my project and play with this particular use of color.
 
 ## Specifications
 

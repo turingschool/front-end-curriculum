@@ -7,7 +7,7 @@ module: 4
 
 By the end of this session we will have established Capstone projects that'll guide your last two weeks in the program. It's your final project which means it's your last opportunity to build something you're really proud of and can show off for your portfolio. It's also the last time you will get to work with your cohort-mates and master your workflow before becoming a professional developer. Take risks, be creative, work nicely with your team and build something useful for others.
 
-The project is due on Wednesday of Week 6.
+The project is due on Tuesday of Week 6.
 
 ### Past Capstones
 * [Ian and Graham's We the People Native](https://github.com/ianlancaster/we-the-people-native)
@@ -104,7 +104,7 @@ As a team, come up with your own Definition of Done. Have at least 5 criteria fo
 
 ### User Interface (60 points)
 
-* 40: The application is pleasant, logical, and easy to use. There are no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
+* 40: The application is pleasant, logical, and easy to use. There are no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer. 
 * 30: The application has many strong pages/interactions, but a few holes in lesser-used functionality.
 * 20: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
 * 0: The application is confusing or difficult to use.
