@@ -1,10 +1,11 @@
 ---
-title: Intro to Module 4
+title: Module 4 at a High Level
 layout: presentation
 ---
 
 <section>
-  <h1>Intro to Module 4</h1>
+  <h1>Module 4</h1>
+  <h3>At a High Level</h3>
 </section>
 
 <section>
@@ -12,8 +13,7 @@ layout: presentation
     <h2>What is Mod 4?</h2>
   </section>
   <section>
-    <p>At a high level, you're building your own backend APIs and learning cutting-edge browser technologies.</p>
-    <p>These are essential skills and set you apart from other junior front-end engineers.</p>
+    <p>You're building your own backend APIs and learning cutting-edge browser technologies.</p>
   </section>
   <section>
     <h3>Tons of new technologies and material to learn</h3>
@@ -36,9 +36,10 @@ layout: presentation
       <li>Background Sync</li>
       <li>Push notifications</li>
       <li>Websockets</li>
+      <li>React Native</li>
       <li>Build your own style guide</li>
-      <li>HTTPS, JWTs, and Auth</li>
-      <li>More git workflows (rebase)</li>
+      <li>HTTPS, JWTs, and OAuth</li>
+      <li>More git workflows</li>
       <li>Localization and Internationalization</li>
       <li>And more...</li>
     </ul>
@@ -47,7 +48,26 @@ layout: presentation
 
 <section>
   <section>
+    <h2>Structure</h2>
+  </section>
+  <section>
+    <ul>
+      <li>Prework</li>
+      <li>Projects: Palette Picker, BYOB, House of Vars, Capstone</li>
+      <li>Homework</li>
+      <li>Gear Up</li>
+      <li>Professional Development</li>
+    </ul>
+  </section>
+</section>
+
+<section>
+  <section>
     <h2>Job Support</h2>
+  </section>
+  <section>
+    <p>Notes from Brittany needed here...</p>
+    <p>30-day action plan...peer-support groups</p>
   </section>
 </section>
 
@@ -57,6 +77,7 @@ layout: presentation
   </section>
   <section>
     <p>What motivates you to want to be a developer?</p>
+    <p>What has prevented you from doing your best work in the past?</p>
     <p>What motivates you to do your best work?</p>
   </section>
 </section>
@@ -66,9 +87,31 @@ layout: presentation
     <h2>Attendance</h2>
   </section>
   <section>
-    <p>We still expect 90% attendance.</p>
-    <p>If you have an appointment, interview, or coffee chat with someone, then you need to let us know the day before.</p>
-    <p>Unexcused absences and tardiness will be recorded.</p>
-    <p>We're lenient about class time in mod4, but you still need to be professional about it.</p>
+    <h4>The expectation is still 90% attendance</h4>
+    <p>If you have an appointment or interview, then you need to let us know the day before.</p>
+    <p>Instructors respect your time for job hunting in mod4, but you still need to be professional about it. Unexcused absences and tardiness will be recorded.</p>
+  </section>
+  <section>
+    <h4>90% attendance minimum - 100% of the work completed</h4>
+    <p>If you miss a class for an interview, you are still expected to go over the material and complete any required homework.</p>
+    <p>Classes are usually written in a tutorial style and can be worked through on your own.</p>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Why?</h2>
+  </section>
+  <section>
+    <h4>Bare Minimum</h4>
+    <p>Finishing mod3, you know the bare minimum to become a junior front-end engineer.</p>
+  </section>
+  <section>
+    <h4>Set Yourself Apart</h4>
+    <p>Mod4 is designed to separate you from the pack of other bootcamps and front-end junior developers.</p>
+  </section>
+  <section>
+    <h4>Empower Yourself</h4>
+    <p>Mod4 gives you the tools to build full, professional web apps without the reliance on a back-end team.</p>
   </section>
 </section>
