@@ -86,7 +86,7 @@ layout: presentation
   <section>
     <p>Peer-support groups with a dedicated coach</p>
     <p>Refine your resumes, cover letters and outreach emails</p>
-    <p>Develop a 30-day action plan post-graduation to set yourself up for success</p>
+    <p>Develop a 30-day, post-grad action plan to set yourself up for success</p>
   </section>
 </section>
 
