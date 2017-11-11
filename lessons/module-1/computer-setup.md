@@ -133,6 +133,18 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
  
  (Full instructions can be found [here](http://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line//))
 
+### Add config setting to set tab size
+
+  - While sublime is open, Press command-comma to open your config file
+  - Add the following lines of code within the curly braces:
+
+```
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+```
+
+  - This will set tabs to be two spaces and make tabs compile down to spaces 
+
 ### Install Node.js using `nvm`
 
 - `touch ~/.bash_profile`
