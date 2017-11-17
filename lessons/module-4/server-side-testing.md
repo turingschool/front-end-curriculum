@@ -10,7 +10,7 @@ Server-side testing is another crucial facet of testing. As your app grows in si
 
 ## Why is This Important?
 
-Everyone draw a diagram of how you envision your week 1 apps working - the entire process of the request and response cycle from the client to the server and back to the client.
+Everyone draw a diagram of how you envision your week-1 app working - the entire process of the request and response cycle from the client to the server and back to the client.
 
 Notice the complexity. With the back end added to your app, there are many more things that can go wrong. When you don't see something working on the page, it's difficult to track down the source. Let's look at the structure of a typical server-side test.
 
@@ -35,7 +35,7 @@ What about the response should we test?
 
 We'll be using [mocha](https://mochajs.org/) for our test runner, [chai](http://chaijs.com/) for our assertion library, and [chai-http](https://github.com/chaijs/chai-http) for our request generator.
 
-Clone down [this basic app](https://github.com/robbiejaeger/test-express) to get started.
+Clone down [this basic app](https://github.com/turingschool-examples/test-express) to get started.
 
 Change into the new directory and run `npm install`.
 
@@ -64,7 +64,8 @@ The `students.js` file contains an array of student objects, and we are loading 
 Now let's install our testing tools from the terminal.
 
 ```shell
-npm install -D mocha chai chai-http
+npm install -D mocha chai
+npm install -D https://github.com/chaijs/chai-http#3ea4524 # Must use this version for correct error handling
 ```
 
 Create a directory called `test` and create a new test file called `routes.spec.js` within the `test` directory. Open the new test file.
@@ -108,14 +109,16 @@ The test for the route `/` becomes:
 
 ```javascript
 describe('Client Routes', () => {
-  it('should return the homepage with text', (done) => {
-    chai.request(server)
+  it('should return the homepage with text', () => {
+    return chai.request(server)
     .get('/')
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(200);
       response.should.be.html;
       response.res.text.should.equal('We\'re going to test all the routes!');
-      done();
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 });
@@ -136,23 +139,27 @@ Let's test a route that doesn't exist in our app. All we have to do is make a re
 
 ```javascript
 describe('Client Routes', () => {
-  it('should return the homepage with text', (done) => {
-    chai.request(server)
+  it('should return the homepage with text', () => {
+    return chai.request(server)
     .get('/')
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(200);
       response.should.be.html;
       response.res.text.should.equal('We\'re going to test all the routes!');
-      done();
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 
-  it('should return a 404 for a route that does not exist', (done) => {
-    chai.request(server)
+  it('should return a 404 for a route that does not exist', () => {
+    return chai.request(server)
     .get('/sad')
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(404);
-      done();
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 });
@@ -186,23 +193,27 @@ const server = require('../server');
 chai.use(chaiHttp);
 
 describe('Client Routes', () => {
-  it('should return the homepage with text', (done) => {
-    chai.request(server)
+  it('should return the homepage with text', () => {
+    return chai.request(server)
     .get('/')
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(200);
       response.should.be.html;
       response.res.text.should.equal('We\'re going to test all the routes!');
-      done();
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 
-  it('should return a 404 for a route that does not exist', (done) => {
-    chai.request(server)
+  it('should return a 404 for a route that does not exist', () => {
+    return chai.request(server)
     .get('/sad')
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(404);
-      done();
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 });
@@ -221,10 +232,10 @@ Let's write the test. In the `API Routes` describe block:
 ```javascript
 describe('API Routes', () => {
   describe('GET /api/v1/students', () => {
-    it('should return all of the students', (done) => {
-      chai.request(server)
+    it('should return all of the students', () => {
+      return chai.request(server)
       .get('/api/v1/students')
-      .end((err, response) => {
+      .then(response => {
         response.should.have.status(200);
         response.should.be.json;
         response.body.should.be.a('array');
@@ -235,7 +246,9 @@ describe('API Routes', () => {
         response.body[0].program.should.equal('FE');
         response.body[0].should.have.property('enrolled');
         response.body[0].enrolled.should.equal(true);
-        done();
+      })
+      .catch(err => {
+        console.log(err);
       });
     });
   });
@@ -268,7 +281,7 @@ In another `describe` block, let's write the test first:
 
 ```javascript
 describe('POST /api/v1/students', () => {
-  it('should create a new student', (done) => {
+  it('should create a new student', () => {
     chai.request(server)
     .post('/api/v1/students') // Notice the change in the verb
     .send({                   // Here is the information sent in the body or the request
@@ -276,7 +289,7 @@ describe('POST /api/v1/students', () => {
       program: 'FE',
       enrolled: true
     })
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(201); // Different status here
       response.body.should.be.a('object');
       response.body.should.have.property('lastname');
@@ -285,21 +298,9 @@ describe('POST /api/v1/students', () => {
       response.body.program.should.equal('FE');
       response.body.should.have.property('enrolled');
       response.body.enrolled.should.equal(true);
-      chai.request(server) // Can also test that it is actually in the database
-      .get('/api/v1/students')
-      .end((err, response) => {
-        response.should.have.status(200);
-        response.should.be.json;
-        response.body.should.be.a('array');
-        response.body.length.should.equal(4);
-        response.body[3].should.have.property('lastname');
-        response.body[3].lastname.should.equal('Knuth');
-        response.body[3].should.have.property('program');
-        response.body[3].program.should.equal('FE');
-        response.body[3].should.have.property('enrolled');
-        response.body[3].enrolled.should.equal(true);
-        done();
-      });
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 });
@@ -363,17 +364,19 @@ What if we make a POST request and don't specify all of the properties of a stud
 We need to design our server so that it does not accept this kind of situation with missing data. Let's write the test!
 
 ```javascript
-it('should not create a record with missing data', (done) => {
+it('should not create a record with missing data', () => {
   chai.request(server)
   .post('/api/v1/students')
   .send({
     lastname: 'Knuth',
     program: 'FE' // Missing the enrolled property and value
   })
-  .end((err, response) => {
+  .then(response => {
     response.should.have.status(422);
     response.body.error.should.equal('You are missing data!');
-    done();
+  })
+  .catch(err => {
+    console.log(err);
   });
 });
 ```
@@ -433,16 +436,15 @@ With our testing structure, we have built-in methods called `before` and `before
 Let's write these methods within the `describe('API Routes', ...` block.
 
 ```javascript
-before((done) => {
+before(() => {
   // Run migrations and seeds for test database
-  done()
 });
 
 beforeEach((done) => {
   // Would normally run run your seed(s), which includes clearing all records
   // from each of the tables
   server.locals.students = students;
-  done();
+  done(); // Need to call the done function because this is not a promise/async
 });
 ```
 
@@ -466,46 +468,49 @@ const students = require('../students');
 chai.use(chaiHttp);
 
 describe('Client Routes', () => {
-  it('should return the homepage with text', (done) => {
-    chai.request(server)
+  it('should return the homepage with text', () => {
+    return chai.request(server)
     .get('/')
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(200);
       response.should.be.html;
       response.res.text.should.equal('We\'re going to test all the routes!');
-      done();
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 
-  it('should return a 404 for a route that does not exist', (done) => {
-    chai.request(server)
+  it('should return a 404 for a route that does not exist', () => {
+    return chai.request(server)
     .get('/sad')
-    .end((err, response) => {
+    .then(response => {
       response.should.have.status(404);
-      done();
+    })
+    .catch(err => {
+      console.log(err);
     });
   });
 });
 
 describe('API Routes', () => {
 
-  before((done) => {
+  before(() => {
     // Run migrations and seeds for test database
-    done()
   });
 
   beforeEach((done) => {
     // Would normally run run your seed(s), which includes clearing all records
     // from each of the tables
     server.locals.students = students;
-    done();
+    done(); // Need to call the done function because this is not a promise/async
   });
 
   describe('GET /api/v1/students', () => {
     it('should return all of the students', (done) => {
-      chai.request(server)
+      return chai.request(server)
       .get('/api/v1/students')
-      .end((err, response) => {
+      .then(response => {
         response.should.have.status(200);
         response.should.be.json;
         response.body.should.be.a('array');
@@ -516,21 +521,23 @@ describe('API Routes', () => {
         response.body[0].program.should.equal('FE');
         response.body[0].should.have.property('enrolled');
         response.body[0].enrolled.should.equal(true);
-        done();
+      })
+      .catch(err => {
+        console.log(err);
       });
     });
   });
 
   describe('POST /api/v1/students', () => {
     it('should create a new student', (done) => {
-      chai.request(server)
+      return chai.request(server)
       .post('/api/v1/students') // Notice the change in the verb
       .send({                   // Here is the information sent in the body or the request
         lastname: 'Knuth',
         program: 'FE',
         enrolled: true
       })
-      .end((err, response) => {
+      .then(response => {
         response.should.have.status(201); // Different status here
         response.body.should.be.a('object');
         response.body.should.have.property('lastname');
@@ -539,35 +546,25 @@ describe('API Routes', () => {
         response.body.program.should.equal('FE');
         response.body.should.have.property('enrolled');
         response.body.enrolled.should.equal(true);
-        chai.request(server) // Can also test that it is actually in the database
-        .get('/api/v1/students')
-        .end((err, response) => {
-          response.should.have.status(200);
-          response.should.be.json;
-          response.body.should.be.a('array');
-          response.body.length.should.equal(4);
-          response.body[3].should.have.property('lastname');
-          response.body[3].lastname.should.equal('Knuth');
-          response.body[3].should.have.property('program');
-          response.body[3].program.should.equal('FE');
-          response.body[3].should.have.property('enrolled');
-          response.body[3].enrolled.should.equal(true);
-          done();
-        });
+      })
+      .catch(err => {
+        console.log(err);
       });
     });
 
     it('should not create a record with missing data', (done) => {
-      chai.request(server)
+      return chai.request(server)
       .post('/api/v1/students')
       .send({
         lastname: 'Knuth',
         program: 'FE' // Missing the enrolled property and value
       })
-      .end((err, response) => {
+      .then(response => {
         response.should.have.status(422);
         response.body.error.should.equal('You are missing data!');
-        done();
+      })
+      .catch(err => {
+        console.log(err);
       });
     });
   });
