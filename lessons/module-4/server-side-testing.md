@@ -129,7 +129,7 @@ Here is the breakdown of the test:
 1. Start a request to the server
 2. For a specific route, use the request verb
 3. When you get the response from the server, test what the response contains
-4. Call `done()` to tell mocha that the test has completed (or else the test will timeout and fail)
+- If you cannot return a promise from the test, then you need to use the `done()` function to tell mocha that the test has completed (or else the test will timeout and fail - we'll see this later in the lesson)
 
 The tests are written using `should`, but you can choose to use `expect` or `assert` - just be consistent. See the [chai docs](http://chaijs.com/api/) for more info.
 
@@ -507,7 +507,7 @@ describe('API Routes', () => {
   });
 
   describe('GET /api/v1/students', () => {
-    it('should return all of the students', (done) => {
+    it('should return all of the students', () => {
       return chai.request(server)
       .get('/api/v1/students')
       .then(response => {
@@ -529,7 +529,7 @@ describe('API Routes', () => {
   });
 
   describe('POST /api/v1/students', () => {
-    it('should create a new student', (done) => {
+    it('should create a new student', () => {
       return chai.request(server)
       .post('/api/v1/students') // Notice the change in the verb
       .send({                   // Here is the information sent in the body or the request
@@ -552,7 +552,7 @@ describe('API Routes', () => {
       });
     });
 
-    it('should not create a record with missing data', (done) => {
+    it('should not create a record with missing data', () => {
       return chai.request(server)
       .post('/api/v1/students')
       .send({
