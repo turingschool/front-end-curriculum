@@ -24,12 +24,12 @@ Notice the complexity. With the back end added to your app, there are many more 
 
 What about the response should we test?
 
-  * The status code
-  * What content type do we expect? (json, plain text)
-  * What is the data structure of the response body? (object, array)
-  * What should be contained in the body?
-    - If it's an array, how many elements should be in the array?
-    - If it's an object, what properties and values should the object have?
+* The status code
+* What content type do we expect? (json, plain text)
+* What is the data structure of the response body? (object, array)
+* What should be contained in the body?
+  - If it's an array, how many elements should be in the array?
+  - If it's an object, what properties and values should the object have?
 
 ## Let's Go Through Some Examples
 
@@ -614,6 +614,12 @@ app.listen(app.get('port'), () => {
 
 module.exports = app;
 ```
+
+## Checks for Understanding
+
+* What libraries do we use to test server-side endpoints?
+* What is the difference between happy and sad path tests?
+* What about a response should we test?
 
 ## On Your Own - In True TDD Style
 
