@@ -9,8 +9,8 @@ module: 4
 
 By the end of this lesson, you will:
 
-* Understand the difference between relational and non-relational databases
 * Be familiar with common data relationships and understand how their structure is affected by the database you choose
+* Understand the difference between relational and non-relational databases
 
 ## Databases
 
@@ -20,7 +20,7 @@ Software products that are used to build, maintain and access data from a databa
 
 ### Non-Relational Databases
 
-Up until now, you have mostly seen non-relational databases. Non-relational databases, such as [MongoDB](https://www.mongodb.com/), allow for greater flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
+Up until now, you have mostly seen non-relational databases. Non-relational databases, such as [MongoDB](https://www.mongodb.com/), allow for great flexibility with the types of data you are storing and the way it can be structured in your database. There is no required schema and each data record can specify its own set of attributes.
 
 Non-relational databases:
 
@@ -180,6 +180,13 @@ What relationship does this describe? How might it be modeled in a relational vs
 
 ### Mapping Out a Schema
 Choosing a Database Management System for your application is highly dependent on what kind of data you plan to store. It's important to map out what your ideal data structure might look like before choosing a DBMS. There are tools to help you visualize the schemas you create, such as [Schema Designer](http://ondras.zarovi.cz/sql/demo/)
+
+## Checks for Understanding
+
+* What are two or more differences between relational and non-relational databases?
+* What is a schema?
+* What is the purpose of a migration?
+* What are two examples of one-to-many relationships?
 
 
 ## Resources
