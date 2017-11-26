@@ -18,8 +18,8 @@ Most frequently, when you're writing SQL, you'd likely be doing it from the term
 
 ## Writing SQL in the Terminal
 
-* `SELECT * from <tablename>;`
-* `SELECT * from <tablename> WHERE column='value';`
+* `SELECT * FROM <tablename>;`
+* `SELECT * FROM <tablename> WHERE column='value';`
 * `INSERT INTO <tablename> (title) VALUES ('Baz');`
 * `DELETE FROM <tablename> WHERE column='value';`
 
@@ -29,13 +29,52 @@ Most frequently, when you're writing SQL, you'd likely be doing it from the term
 * Postgres requires single quotes in scenarios like `WHERE column='value'`
 
 
-## Handy Postgres Commands
+## Common Postgres Commands
 
-* `\list` - list all databases
-* `\connect <databasename>` - connect to a particular database
+* `\l` - list all databases
+* `CREATE DATABASE <databasename>;` - create a new database
+* `\c <databasename>` - connect to a particular database
 * `\dt` - after you're connected to a database, show the tables it contains
 * `\d <tablename>` - list all columns in a table
 * `\q` - quit
+
+
+## Sample Workflow Using Raw SQL
+
+Let's go through an exercise in using raw SQL in the terminal. You will almost never use raw SQL in the APIs you build, but it's helpful to see this in case you need to debug at the database level.
+
+```bash
+# Open PostgreSQL client
+psql
+
+# List all databases
+\list
+
+# Create a new database
+CREATE DATABASE name;
+
+# Connect to a database
+\c tablename
+
+# Create table
+CREATE TABLE students (
+  id serial PRIMARY KEY,
+  name varchar (50) NOT NULL,
+  program varchar (50) NOT NULL,
+);
+
+# View records in a table
+SELECT * FROM tablename;
+
+# Insert record
+INSERT INTO students (name, program) VALUES ('Robbie', 'FE');
+
+# View again and only certain columns
+SELECT name FROM students;
+
+# Delete record
+DELETE FROM students WHERE name='Robbie';
+```
 
 
 ## Practice (20 minutes)
