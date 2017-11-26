@@ -14,7 +14,9 @@ tags: sql, databases
 
 SQL (pronounced sequel) stands for Structured Query Language. Its the most popular language for interacting with databases. SQL allows us to create databases and tables, change the data that exists within them, retrieve very specific data from a large set that we're interested in, etc.
 
-Most frequently, when you're writing SQL, you'd likely be doing it from the terminal or writing a script that can be run to generate your queries for you. There are some exceptions though -- [here](https://github.com/symfony/symfony/blob/5129c4cf7e294b1a5ea30d6fec6e89b75396dcd2/src/Symfony/Bridge/Doctrine/Security/RememberMe/DoctrineTokenProvider.php#L63-L67) are some [instances](https://github.com/symfony/symfony/blob/5129c4cf7e294b1a5ea30d6fec6e89b75396dcd2/src/Symfony/Bridge/Doctrine/Security/RememberMe/DoctrineTokenProvider.php#L82-L85) of SQL in PHP codebases. Pretty gnarly when you see it in this context, right? Lucky for us, people have built many abstractions over SQL so that we don't have to write code that looks like this. 
+Most frequently, when you're writing SQL, you'd likely be doing it from the terminal or writing a script that can be run to generate your queries for you. There are some exceptions though -- [here](https://github.com/symfony/symfony/blob/5129c4cf7e294b1a5ea30d6fec6e89b75396dcd2/src/Symfony/Bridge/Doctrine/Security/RememberMe/DoctrineTokenProvider.php#L63-L67) are some [instances](https://github.com/symfony/symfony/blob/5129c4cf7e294b1a5ea30d6fec6e89b75396dcd2/src/Symfony/Bridge/Doctrine/Security/RememberMe/DoctrineTokenProvider.php#L82-L85) of SQL in PHP codebases. Pretty gnarly when you see it in this context, right?
+
+Lucky for us, people have built many abstractions over SQL so that we don't have to write code that looks like this. 
 
 ## Writing SQL in the Terminal
 
@@ -48,7 +50,7 @@ Let's go through an exercise in using raw SQL in the terminal. You will almost n
 psql
 
 # List all databases
-\list
+\l
 
 # Create a new database
 CREATE DATABASE name;
@@ -74,9 +76,19 @@ SELECT name FROM students;
 
 # Delete record
 DELETE FROM students WHERE name='Robbie';
+
+# Quit the PostgreSQL client
+\q 
 ```
 
 
 ## Practice (20 minutes)
 
 Practice writing SQL commands by going through the lessons [here](http://sql-by-repetition.herokuapp.com/), that will teach you how to make selections and filter data.
+
+## Checks for Understanding
+
+* What is postgres? How is it related to SQL?
+* How do you open and close the terminal PostgreSQL client?
+* How would you select all columns and all records from a table called "invoices?"
+* From a table called "customers", how would you select the email column from records that have a billing address in Arizona?
