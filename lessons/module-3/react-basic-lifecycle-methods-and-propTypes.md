@@ -88,15 +88,22 @@ This is also the go-to location to fire off an API call or network request.
 
 ### PropTypes
 
-**Deprecation Warning: We will need to migrate to 'prop-types'** [Information here](https://facebook.github.io/react/blog/2017/04/07/react-v15.5.0.html)
-
 PropTypes allow you to specify what type of props you are expecting in a certain component. This is also known as "typechecking". Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, React's built in `propType` tools let you establish a safety net with very little effort.  
 
 Let's say you declare a component `<Main title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else -- say for example the API changed and now you have an array of strings -- you will get a helpful warning message in your console.  
 
+Previously, PropTypes used to be a part of the React library itself, however it has since been extracted into its own
+module. You can install it like any other module. 
+
+```sh
+npm install --save prop-types
+```
+
 In React, `propTypes` are declared like this:
 
 ```js
+import PropTypes from 'prop-types'
+
 class Main extends Component  {
   render() {
     return(
@@ -106,7 +113,7 @@ class Main extends Component  {
 }
 
 Main.propTypes = {
-  name: React.PropTypes.string
+  name: PropTypes.string
 }
 ```
 
@@ -125,7 +132,7 @@ By default, all props specified within the `Class.propTypes` object will be cons
 
 ```js
 Main.propTypes = {
-  name: React.PropTypes.string.isRequired
+  name: PropTypes.string.isRequired
 }
 ```
 
@@ -133,7 +140,7 @@ You can also be more generic - let's say you need a prop to come in but it doesn
 
 ```js
 Main.propTypes = {
-  name: React.PropTypes.any.isRequired
+  name: PropTypes.any.isRequired
 }
 ```
 
@@ -142,10 +149,10 @@ Main.propTypes = {
 
 Take the next 5 minutes to look up the following prop types and understand what they do. We will circle back to talk about these particular methods when you are done.  
 
-- `React.PropTypes.oneOf()`  
-- `React.PropTypes.arrayOf()`  
-- `React.PropTypes.objectOf()`  
-- `React.PropTypes.shape()`  
+- `PropTypes.oneOf()`  
+- `PropTypes.arrayOf()`  
+- `PropTypes.objectOf()`  
+- `PropTypes.shape()`  
 
 
 ## DefaultProps
