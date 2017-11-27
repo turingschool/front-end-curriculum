@@ -147,7 +147,7 @@ Here is the feature we want to implement: when a user requests a message by its 
 app.get('/api/v1/messages/:id', (request, response) => {
   const { id } = request.params;
   const message = app.locals.messages.find(message => message.id === id);
-  return response.status(200).json({ message });
+  return response.status(200).json(message);
 });
 ```
 
@@ -158,7 +158,7 @@ app.get('/api/v1/messages/:id', (request, response) => {
   const { id } = request.params;
   const message = app.locals.messages.find(message => message.id === id);
   if (message) { 
-    return response.status(200).json({ message });
+    return response.status(200).json(message);
   } else {
     return response.sendStatus(404);
   }
@@ -217,7 +217,7 @@ app.get('/api/v1/messages/:id', (request, response) => {
   const { id } = request.params;
   const message = app.locals.messages.find(message => message.id === id);
   if (message) { 
-    return response.status(200).json({ message });
+    return response.status(200).json(message);
   } else {
     return response.sendStatus(404);
   }
