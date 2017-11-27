@@ -40,6 +40,7 @@ You can use any of the following JavaScript libraries:
 - Breakout
 - Tron
 - Missile Defense
+- Winterbells
 
 (Any other game requires instructor approval.)
 
