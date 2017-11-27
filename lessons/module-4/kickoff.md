@@ -4,19 +4,19 @@ title: Module 4 KickOff
 
 ## Learning Goals & Focus
 
-### Server-Side Skills
+### Week 1: Server-Side Skills
 
 Learning technologies like node and express will round out your skill set and make you a more flexible developer. Front-end developers still need a solid understanding of how to work with the back-end in order to be successful.
 
-### Mobile Dev & Progressive Web Apps
+### Week 2: Mobile Dev & Progressive Web Apps
 
-This module will introduce some of the latest APIs and technologies that are just barely gaining traction - service workers, JSON web tokens, web sockets, etc. The goal with these isn't necessarily to walk away being able to implement them from start to finish, but rather be able to understand and discuss them at a high-level. We want you to understand the hows, whys, and whats of these technologies rather than the exact technical details. Having this knowledge and exposure will set you apart from other junior developers and prepare you for what's to come in front-end development.
+This module will introduce some of the current technologies being used for creating mobile applications. This includes libraries like React Native, and Web APIs like service workers, background sync and push notifications.
 
-### Security
+### Week 3: Security
 
-JWTs, SSL & HTTPS, OAuth
+We'll be talking about security at a high-level and implementing some strategies for making our applications more secure. This includes protecting endpoints with JSON web tokens, understanding the difference between HTTP and HTTPS, and implementing OAuth.
 
-### Reinforcement of Fundamentals & Real World Prep
+### Week 4-6: Reinforcement of Fundamentals & Real World Prep
 
 We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. Many of these challenges will better prepare you for the technical interviews you'll be going on.
 
@@ -24,9 +24,17 @@ We'll be moving away from boilerplates and frameworks in this module to get you 
 
 In order to graduate from Module 4, students must complete each of the following:
 
-### Final Assessment
+### 90% Attendance
+
+Students must notify instructors of any absences, and are required to make up any work missed during the time they were out. If missing class for an interview, students must record the interview questions they received and add them to this [doc]
+
+### Final Assessment - Coding
 
 Students must earn a score of `3` or greater in *each* category of the final assessment rubric.
+
+### Final Assessment - Mock Interview
+
+Students must do a mock interview with one of the instructors. You will be graded on accuracy, eloquence, and professionalism.
 
 ### Independent Work
 
