@@ -99,7 +99,7 @@ module. You can install it like any other module.
 npm install --save prop-types
 ```
 
-In React, `propTypes` are declared like this:
+In React, `PropTypes` are declared like this:
 
 ```js
 import PropTypes from 'prop-types'
