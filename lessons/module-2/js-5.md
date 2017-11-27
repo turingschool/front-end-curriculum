@@ -59,7 +59,7 @@ var dog = {
 	name: 'Boris',
 	age: 3,
 	breed: 'Labradoodle'
-}
+};
 ```
 
 #### Adding properties to an object
@@ -92,7 +92,7 @@ var dog = {};
 dog['name'] = 'Boris';
 ```
 
-Bracket notation is great you need to store it in a variable.
+Bracket notation is great if you are storing the property name in a variable.
 
 ```js
 var dog = {};
@@ -106,12 +106,12 @@ console.log(dog); // { name: 'Boris' }
 Typically you will want to store your key in a variable when you don't know what the key is or if the key might change.
 
 ```js
-var storeItems = [ 'hammer', 'chisel', 'rake' ]
+var storeItems = [ 'hammer', 'chisel', 'rake' ];
 var store = {
 	hammer: 5,
 	chisel: 3,
 	rake: 7
-}
+};
 
 var totalCost = 0;
 
@@ -120,36 +120,53 @@ for (var i = 0; i < storeItems.length; i++) {
 	var itemPrice = store[ itemName ];  // using bracket notation because property is changing
 
 	totalCost += itemPrice;
-}
+};
 
 console.log(totalCost);
 ```
 
-It can also be used if you have keys with a space in it or that start with a number. Typically you want to avoid doing this but you might on occasion find you have to do it.
+It can also be used if you have a key with a space/other character in it or that starts with a number. Typically you want to avoid doing this but you might on occasion find you have to do it.
 
 
 #### Accessing object properties
-We can also use dot and bracket notation to access or use an objects properties
+We can also use dot and bracket notation to access or use an object's properties.
 
 ```js
 var dog = {
   scientificName: 'Canis lupus familiaris'  
 };
 
-console.log(dog.scientificName);    // Canis lupus familiaris
-console.log(dog['scientificName']); // Canis lupus familiaris
+console.log(dog.scientificName);    // 'Canis lupus familiaris'
+console.log(dog['scientificName']); // 'Canis lupus familiaris'
 ```
 
 #### Exercises
 Create an object with the following keys:
-book1, book2... ...book199, book200
+`book1, book2`...`book199, book200`, whose values are their corresponding number
+eg: `{ book1: 1, book2: 2`...`book199: 199, book200: 200 }`
+
+Given the following object and variable, access the value `'Apis mellifera'` in three different ways:
+```js
+var honeybee = {
+  scientificName: 'Apis mellifera'
+};
+
+var fancyName = 'scientificName';
+```
 
 ---
 
 ### Arrays
-Arrays are objects where there exists a relationship between any properties which correspond with an integer and the length property. In addition, array objects inherit from the Array.prototype which gives them additional helper functions (i.e. push, pop, forEach...). 
+[Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are objects where there exists a relationship between any properties which correspond with an integer and the length property. In addition, array objects inherit from the Array.prototype which gives them additional helper functions (i.e. `push`, `pop`, `forEach`, etc). 
 
-Basically what this means is that arrays are objects with special methods which make it easier to add and remove properties as well as methods which make it easier to interact with all of it's properties.
+Basically what this means is that arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to add and remove properties, as well as methods which make it easier to interact with all of their properties.
+
+#### Exercises
+In the console, take a look at `Array.prototype`. What methods do you recognize? What methods are new to you?
+
+In the console, create your own array `myArray` filled with any values. Look at `myArray.__proto__`.
+
+---
 
 ### Functions
 Functions are objects that contain js code which can be repeatedly invoked / executed.
@@ -158,8 +175,9 @@ A keyword `function` function is declared using the following syntax.
 
 ```js
 function sayHi () {
-	var greeting = 'Hi!'
-	console.log(greeting)
+	var greeting = 'Hi!';
+	
+	console.log(greeting);
 }
 ```
 
@@ -167,43 +185,50 @@ function sayHi () {
 
 ```js
 function sayHi () {
-	var greeting = 'Hi!'
+	var greeting = 'Hi!';
 
-	console.log(greeting);
+	console.log(greeting); // 'Hi!'
 }
+
+console.log(greeting); // Reference Error: greeting is not defined
 ```
 
 Any variables which are created in the function only exist in that function. You do not have access to them outside of the function in which they were declared.
 
 #### Parameters / Arguments
-If we want to pass information into a function we pass in a parameter to our function when we call it.
+If we want to pass information into a function, we pass in a parameter when we declare/define our function, and we pass in an argument when we invoke/call it.
 
 ```js
-// this function has a name argument
+// this function has a parameter of name
 function sayHi (name) {
-	var greeting = 'Hi! ' + name;
+	var greeting = 'Hi, ' + name + '!';
 
 	console.log(greeting);
 }
 
-sayHi('Casey');  // passing in a parameter
+sayHi('Mabel');  // passing in an argument 'Mabel'
 ```
 
 #### Returning something out of a function
-If we want create something in the function and return it outside of our function's scope we need to return it out of the function.
+If we want to create something in the function and use it outside of our function's scope, we need to return it out of the function.
 
 ```js
-// this function has a name argument
 function makeGreeting (name) {
-	var greeting = 'Hi! ' + name;
+	var greeting = 'Hi, ' + name + '!';
 
 	return greeting;
 }
 
-var caseyGreeting = makeGreeting('Casey');  // passing in a parameter
+var mabelGreeting = makeGreeting('Mabel');
 
-console.log(caseyGreeting);
+console.log(mabelGreeting);
 ```
 
 ##### One very important thing to remember!
-When returning something from a function you must give it a new variable to live in. In our above example we are creating a new variable named `caseyGreeting` in which we store our newly created greeting.
+If we are returning a value out of a function that we wish to use elsewhere in our code, it must be stored in a way that will allow us to reference it later. The easiest way to do this is to capture the value with a variable. In the above example, we are creating a new variable named `mabelGreeting` in which we are storing our newly created greeting (aka the value being returned by invoking `makeGreeting` with an argument of `'Mabel'`).
+
+_Note: we can also simply pass the invoked function directly to the console.log: `console.log( makeGreeting('Mabel') );`_
+
+#### Exercises
+Create a function `add2` that takes in a parameter of `number` and returns the parameter plus 2.
+
