@@ -129,8 +129,8 @@ Let's put some fake data in for now.
 
 ```js
 app.locals.messages = [
-  { id: 'a1b2c3', message: 'Hello World' },
-  { id: 'd4e5f6', message: 'Goodbye World' }
+  { id: 'a1', message: 'Hello World' },
+  { id: 'b2', message: 'Goodbye World' }
 ];
 ```
 
@@ -192,8 +192,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Chat Box';
 app.locals.messages = [
-  { id: 'a1b2c3', message: 'Hello World' },
-  { id: 'd4e5f6', message: 'Goodbye World' }
+  { id: 'a1', message: 'Hello World' },
+  { id: 'b2', message: 'Goodbye World' }
 ];
 
 app.get('/', (request, response) => {
