@@ -155,6 +155,19 @@ const environment = process.env.NODE_ENV || 'development';
 
 ### Using .env Files
 
+We previously mentioned environment variables might contain sensitive or private data, like API keys. These are things that we don't want to commit to GitHub. Instead of hardcoding their values into the codebase, we can store all of this sensitive information in a `.env` file that is git ignored. For example, at the root of our application, we have a file named `.env` that contains a super secret API key:
+
+```
+SECRET_API_KEY=a1b2c3d4e5f6
+```
+
+We make sure to include this file in our `.gitignore` so that it never gets committed to GitHub. Then, elsewhere in our codebase, where we want to access this environment variable, we can use a package like [dotenv](https://www.npmjs.com/package/dotenv) to parse this file and give us the results:
+
+```js
+require('dotenv').config()
+
+console.log('SECRET_API_KEY: ', process.env.SECRET_API_KEY);
+```
 
 
 ## Checks for Understanding
