@@ -300,7 +300,7 @@ If either property is missing, we will see an error in the Network tab of our de
 
 It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response message is the best way to write a user-friendly API.
 
-
+<!-- 
 ### Generating Unique Keys
 
 At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
@@ -334,7 +334,9 @@ app.post('/api/v1/messages', (request, response) => {
   }
 });
 ```
+ -->
 
+ 
 ### Using Postman
 Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit or delete data if there isn't a UI to do so. In our case, it's handy to add messages, edit a specific message, or delete a message. Get familiar with Postman because it will be your best friend for all things API from here on out.
 
