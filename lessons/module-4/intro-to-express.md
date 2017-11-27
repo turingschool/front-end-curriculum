@@ -184,7 +184,7 @@ app.get('/api/v1/messages/:id', (request, response) => {
 });
 ```
 
-### Sending Data With Our Post Request
+### Sending Data With A Post Request
 
 It would be cool if we could store messages in addition to just being able to retrieve the prepopulated ones.
 
