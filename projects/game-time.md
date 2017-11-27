@@ -33,13 +33,13 @@ You can use any of the following JavaScript libraries:
 ## Game Choices
 
 - Lights Out
+- Centipede
 - Connect Four
 - Othello/Reversi
-- Flappy Bird
 - Frogger
 - Breakout
 - Tron
-- Snake
+- Missile Defense
 
 (Any other game requires instructor approval.)
 
