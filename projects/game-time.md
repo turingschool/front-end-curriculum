@@ -39,7 +39,7 @@ You can use any of the following JavaScript libraries:
 - Frogger
 - Breakout
 - Tron
-- Missile Defense
+- Missile Command
 - Winterbells
 
 (Any other game requires instructor approval.)
