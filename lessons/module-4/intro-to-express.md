@@ -336,7 +336,7 @@ app.post('/api/v1/messages', (request, response) => {
 ```
 
 ### Using Postman
-Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit or delete data if there isn't a UI to do so. In our case, it's handy to add secrets, edit a specific secret, or delete a secret. Get familiar with Postman because it will be your best friend for all things API from here on out.
+Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit or delete data if there isn't a UI to do so. In our case, it's handy to add messages, edit a specific message, or delete a message. Get familiar with Postman because it will be your best friend for all things API from here on out.
 
 Things to consider:
 
@@ -345,12 +345,12 @@ Remember to check which HTTP method you are using before sending the request.
 
 ### Student Exploration (20 mins)
 
-* Implement a PUT route for a specific secret to edit the message of the secret.
-* Implement a DELETE route for a specific secret to remove it.
+* Implement a PUT route for a specific message to edit the message of the message.
+* Implement a DELETE route for a specific message to remove it.
 
 **BONUS:**
 
-Can you implement a GET route that shows only the secrets that have been edited?
+Can you implement a GET route that shows only the messages that have been edited?
 
 ### Static Files in Express
 To serve static files like an index.html file, you need to let Express know. To do this, tell Express what directory your static files live in with:
