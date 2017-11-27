@@ -94,7 +94,12 @@ app.listen(app.get('port'), () => {
 });
 ```
 
-Fire up the server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
+
+### Starting the Server
+
+You can fire up your server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
+
+OR...
 
 If you don't have `nodemon` installed globally, now might be a useful time to do that. Nodemon will auto-restart your server for you any time you make changes to your server file. When starting an app with `node`, you would have to manually shut your server down and spin it up again to see your most recent changes reflected.
 
@@ -102,6 +107,36 @@ If you don't have `nodemon` installed globally, now might be a useful time to do
 npm i -g nodemon
 nodemon server.js
 ```
+
+### A Simple GET Request
+
+We've already made one GET request, that's simply returning some text. Let's make another one using some actual data that will return JSON for us. 
+
+For now, we'll store an array of messages in a variable called `app.locals`, which is automatically given to us through express:
+
+```js
+app.locals.messages = [];
+```
+
+Let's put some fake data in for now:
+
+```js
+app.locals.messages = [
+  { id: 'a1', message: 'Hello World' },
+  { id: 'b2', message: 'Goodbye World' }
+];
+```
+
+The GET request:
+
+```js
+app.get('/api/v1/messages', (request, response) => {
+  const messages = app.locals.messages;
+
+  response.json({ messages });
+});
+```
+
 
 ### Making a Dynamic Route
 
@@ -124,22 +159,6 @@ Some things to notice:
 - `response.json` is just a short hand for setting the response type as `application/json`.
 - It automatically serializes our object as JSON.
 
-### Storing Messages
-
-In addition, let's add some data structure for keeping track of some kind of arbitrary data.
-
-```js
-app.locals.messages = [];
-```
-
-Let's put some fake data in for now.
-
-```js
-app.locals.messages = [
-  { id: 'a1', message: 'Hello World' },
-  { id: 'b2', message: 'Goodbye World' }
-];
-```
 
 Here is the feature we want to implement: when a user requests a message by its `id`, we want to return that message's message and id.
 
