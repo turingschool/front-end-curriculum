@@ -153,9 +153,9 @@ const environment = process.env.NODE_ENV || 'development';
 
 
 
-### Using .env Files
+### Storing Sensitive Data in .env Files
 
-We previously mentioned environment variables might contain sensitive or private data, like API keys. These are things that we don't want to commit to GitHub. Instead of hardcoding their values into the codebase, we can store all of this sensitive information in a `.env` file that is git ignored. For example, at the root of our application, we have a file named `.env` that contains a super secret API key:
+We previously mentioned environment variables might contain sensitive or private data, like API keys. These are things that we don't want to commit to GitHub. Instead of hardcoding their values into the codebase, we can store all of this sensitive information in a `.env` file that is gitignored. For example, at the root of our application, we have a file named `.env` that contains a super secret API key:
 
 ```
 SECRET_API_KEY=a1b2c3d4e5f6
