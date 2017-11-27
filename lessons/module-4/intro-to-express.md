@@ -73,7 +73,7 @@ This pattern is exactly how we can define and handle any routes in an Express ap
 Let's go ahead and install some dependencies that we'll need to get things rolling.
 
 ```
-mkdir secret-box
+mkdir chat-box
 npm init --yes
 npm i express --save
 ```
@@ -85,10 +85,10 @@ const express = require('express');
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Secret Box';
+app.locals.title = 'Chat Box';
 
 app.get('/', (request, response) => {
-  response.send('It\'s a secret to everyone.');
+  response.send('Oh hey Chat Box');
 });
 
 app.listen(app.get('port'), () => {
@@ -105,7 +105,7 @@ When we go to view a tweet or a user, we do something special with the URL to id
 Consider the following:
 
 ```js
-app.get('/api/secrets/:id', (request, response) => {
+app.get('/api/v1/messages/:id', (request, response) => {
   response.json({
     id: request.params.id
   });
@@ -119,48 +119,50 @@ Some things to notice:
 - `response.json` is just a short hand for setting the response type as `application/json`.
 - It automatically serializes our object as JSON.
 
-### Storing Secrets
+### Storing Messages
 
 In addition, let's add some data structure for keeping track of some kind of arbitrary data.
 
 ```js
-app.locals.secrets = {};
+app.locals.messages = [];
 ```
 
 Let's put some fake data in for now.
 
 ```js
-app.locals.secrets = {
-  wowowow: 'I am a banana'
-};
+app.locals.messages = [
+  { id: 'a1b2c3', message: 'Hello World' },
+  { id: 'd4e5f6', message: 'Goodbye World' }
+];
 ```
 
-Here is the feature we want to implement: when a user has the correct secret, we want to show them a message associated with that `id`.
+Here is the feature we want to implement: when a user requests a message by its `id`, we want to return that message's message and id.
 
 ```js
-app.get('/api/secrets/:id', (request, response) => {
+app.get('/api/v1/messages/:id', (request, response) => {
   const { id } = request.params;
-  const message = app.locals.secrets[id];
-  response.status(200).json({ id, message });
+  const message = app.locals.messages.find(message => message.id === id);
+  return response.status(200).json({ message });
 });
 ```
 
 Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
 
 ```js
-app.get('/api/secrets/:id', (request, response) => {
+app.get('/api/v1/messages/:id', (request, response) => {
   const { id } = request.params;
-  const message = app.locals.secrets[id];
-
-  if (!message) { return response.sendStatus(404)  };
-
-  response.status(200).json({ id, message });
+  const message = app.locals.messages.find(message => message.id === id);
+  if (message) { 
+    return response.status(200).json({ message });
+  } else {
+    return response.sendStatus(404);
+  }
 });
 ```
 
 ### Sending Data With Our Post Request
 
-It would be cool if we could store secrets in addition to just being able to retrieve the prepopulated ones.
+It would be cool if we could store messages in addition to just being able to retrieve the prepopulated ones.
 
 Express did this thing a while back, where they took a bunch of stuff out of the core framework. This makes it smaller and means you don't have cruft you're not using, but it also means that sometimes you have to mix those things back in. One of those components that was pulled out was the ability to parse the body of an HTTP request. That's okay, we can just mix it back in.
 
@@ -190,29 +192,30 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Secret Box';
-app.locals.secrets = {
-  wowowow: 'I am a banana'
-};
+app.locals.title = 'Chat Box';
+app.locals.messages = [
+  { id: 'a1b2c3', message: 'Hello World' },
+  { id: 'd4e5f6', message: 'Goodbye World' }
+];
 
 app.get('/', (request, response) => {
   response.send('Hello World!');
 });
 
-app.get('/api/secrets', (request, response) => {
-  const secrets = app.locals.secrets;
+app.get('/api/v1/messages', (request, response) => {
+  const messages = app.locals.messages;
 
-  response.json({ secrets });
+  response.json({ messages });
 });
 
-
-app.get('/api/secrets/:id', (request, response) => {
+app.get('/api/v1/messages/:id', (request, response) => {
   const { id } = request.params;
-  const message = app.locals.secrets[id];
-
-  if (!message) { return response.sendStatus(404) };
-
-  response.status(200).json({ id, message });
+  const message = app.locals.messages.find(message => message.id === id);
+  if (message) { 
+    return response.status(200).json({ message });
+  } else {
+    return response.sendStatus(404);
+  }
 });
 
 app.listen(app.get('port'), () => {
@@ -225,13 +228,13 @@ app.listen(app.get('port'), () => {
 We'll use our super secure method of generating random IDs:
 
 ```js
-app.post('/api/secrets', (request, response) => {
+app.post('/api/v1/messages', (request, response) => {
   const id = Date.now();
   const { message } = request.body;
 
-  app.locals.secrets[id] = message;
+  app.locals.messages.push(message);
 
-  response.json({ id, message });
+  response.status(201).json({ id, message });
 });
 ```
 
@@ -239,6 +242,7 @@ This approach has a bunch of flaws:
 
 - We're storing data in memory, which will be wiped out when the server goes down.
 - Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
+
 
 #### The Unhappy Path
 
@@ -253,7 +257,7 @@ Take a minute to look through some of the other available status codes that can 
 Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that 'message' is a required property when submitting a new message, and we want to respond with an error if it's missing:
 
 ```js
-app.post('/api/secrets', (request, response) => {
+app.post('/api/v1/messages', (request, response) => {
   const { message } = request.body;
   const id = Date.now();
 
@@ -261,11 +265,10 @@ app.post('/api/secrets', (request, response) => {
     return response.status(422).send({
       error: 'No message property provided'
     });
+  } else {
+    app.locals.messages.push({ id, message });
+    return response.status(201).json({ id, message });
   }
-
-  app.locals.secrets[id] = message;
-
-  response.json({ id, message });
 })
 ```
 
@@ -273,12 +276,6 @@ If either property is missing, we will see an error in the Network tab of our de
 
 It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response message is the best way to write a user-friendly API.
 
-
-It would also be nice if we used the correct status code on the successful response.
-
-```js
-response.status(201).json({ id, message });
-```
 
 ### Generating Unique Keys
 
@@ -299,7 +296,7 @@ const md5 = require('md5');
 Finally, let's replace `Date.now()` in our `POST` action.
 
 ```js
-app.post('/api/secrets', (request, response) => {
+app.post('/api/v1/messages', (request, response) => {
   const { message } = request.body;
   const id = md5(message);
 
@@ -307,11 +304,10 @@ app.post('/api/secrets', (request, response) => {
     return response.status(422).send({
       error: 'No message property provided'
     });
+  } else {
+    app.locals.messages.push({ id, message });
+    return response.status(201).json({ id, message });
   }
-
-  app.locals.secrets[id] = message;
-
-  response.status(201).json({ id, message });
 });
 ```
 
