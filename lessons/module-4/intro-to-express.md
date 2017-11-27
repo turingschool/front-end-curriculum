@@ -16,8 +16,6 @@ By the end of this lesson, you will:
 * Know how Express.js abstracts difficult server-side logic and makes it easier to write endpoints
 * Create a simple Express app that implements all of the basic CRUD methods
 
-An example repository of the completed example can be found [here](https://github.com/turingschool-examples/secret-box).
-
 ## What is Express?
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
 
