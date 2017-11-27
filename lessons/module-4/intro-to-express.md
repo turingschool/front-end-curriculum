@@ -348,6 +348,12 @@ Express assumes a structure for our static assets. The response for the root pat
 
 So now you can add a directory called `public` and in that directory add a file called `index.html` with some basic HTML. Restart the server, head over to `localhost:3000`, and you should see your HTML file being served.
 
+## Checks For Understanding
+
+- In as much detail as possible, explain what Express is and why we use it.
+- What would the CRUD endpoints be for a data structure that was an array of `todo` objects? Each `todo` object has an `id` and a `task` property.
+- What do the 2xx level status codes represent? 4xx?
+
 ## Resources
 - [Express.js](https://expressjs.com/)
 - [Serving Static Assets](http://expressjs.com/en/starter/static-files.html)
