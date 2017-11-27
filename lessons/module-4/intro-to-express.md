@@ -96,6 +96,13 @@ app.listen(app.get('port'), () => {
 
 Fire up the server using `node server.js` and visit `http://localhost:3000/` to enjoy in the fruits of your copy and pasting labor.
 
+If you don't have `nodemon` installed globally, now might be a useful time to do that. Nodemon will auto-restart your server for you any time you make changes to your server file. When starting an app with `node`, you would have to manually shut your server down and spin it up again to see your most recent changes reflected.
+
+```bash
+npm i -g nodemon
+nodemon server.js
+```
+
 ### Making a Dynamic Route
 
 When we go to view a tweet or a user, we do something special with the URL to identify which tweet or user. We specify it in the URL itself. URLs—after all—stand for universal resource locator.
