@@ -11,8 +11,6 @@ Environments in software development refer to the place where your code runs. Th
 ### Stage 0: One Environment
 #### Production
 
-![We'll Do It Live](https://media.giphy.com/media/A34x7CEKUkCyc/giphy.gif)
-
 In the beginning, we developed our applications directly in production. This was problematic for a number of reasons. Mainly, you had to deploy your code in order to see feedback. Think of how many times you write some functionality incorrectly. Every time you push broken code to production, it's breaking the user experience for people who are currently on your application.
 
 ### Stage 1: Two Environments
@@ -96,14 +94,6 @@ app.set('port', process.env.PORT || 3000)
 ```
 
 ```js
-// our database connection string for postgres
-  production: {
-    client: 'pg',
-    connection: `${process.env.DATABASE_URL}?ssl=true`
-  }
-```
-
-```js
 // even your environment is stored in an environment variable!
 const environment = process.env.NODE_ENV || 'development';
 ```
@@ -151,6 +141,29 @@ process.env.FOO = 'bar';
 
 Now anywhere in my application that node handles, I can access `process.env.FOO` and should receive `bar` as its value.
 
+### Examining a Variable Between Environments
+
+Let's work with the `NODE_ENV` variable that represents the name of the environment our code is currently running in. By default, when we run our application locally, this variable will returned `undefined` unless we explicitly give it a value. We want the `NODE_ENV` to fall back to 'development' if it's not already defined. We can do this with the following code:
+
+```js
+const environment = process.env.NODE_ENV || 'development';
+```
+
+
+
+
+
+### Using .env Files
+
+
+
+## Checks for Understanding
+
+* What is an environment?
+* What are the 5 different environments your code might run in and what are each of them used for?
+* What kind of data might be stored in an environment variable?
+
 ## Resources
 
 * [Understanding the node process object](https://egghead.io/lessons/node-js-understand-the-node-js-process-object){:target="_blank"}
+* [Working with Environment Variables in NodeJS](https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html)
