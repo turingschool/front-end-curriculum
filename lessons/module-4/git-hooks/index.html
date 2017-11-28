@@ -1,0 +1,140 @@
+<html>
+  <head>
+    <title>Better Workflow with Git Hooks</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Better Workflow with Git Hooks</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>Tooling & Workflow &raquo; git</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">Intro to Git Hooks</a></li>
+          <li><a href="#Why">Why Git Hooks?</a></li>
+          <li><a href="#Directory">The .git Directory</a></li>
+          <li><a href="#PreCommit">Creating a Pre-Commit Hook</a></li>
+          <li><a href="#AdvancedWorkflow">More Advanced Workflows</a></li>
+          <li><a href="#Sharing">Sharing Git Hooks</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Further Reading & Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>describe what a git hook is and what it can be used for</li>
+            <li>understand why git hooks are a popular and important part of many workflows</li>
+            <li>implement a pre-commit hook to run tests and linters</li>
+          </ul>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="Introduction">Intro to Git Hooks</a></h2>
+          <p>As developers, we're constantly looking for ways to automate tedious tasks. We're essentially trying to put ourselves out of the job by writing scripts that will do it for us.</p>
+
+          <p>Enter git hooks.</p>
+
+          <p><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git Hooks</a> are custom scripts that you can write to execute particular tasks during certain points of the git workflow process. They let you interrupt the flow of a git event -- such as a commit -- to do things like verify that the code you're committing is linted and tested. They can be written in any language understood by the terminal (bash, node, ruby, python, etc.) When used in conjunction with other workflow tools and processes, you can create some really seamless patterns for maintaining any kind of codebase.</p>
+
+          <p>Similar to the lifecycle methods in React or other JavaScript frameworks, you'll recognize some lifecycle patterns within the git version control system. For example, every time we make a commit, there are four distinct phases:</p>
+
+          <ul>
+            <li><b>pre-commit</b> - runs before the commit is even attempted, can be used to do a quick QA evaluation on the code that's about to be committed</li>
+            <li><b>prepare-commit-msg</b> - runs before the commit message is made but after a default message is created, e.g. merge commits are auto-generated and can be adjusted at this point in the cycle</li>
+            <li><b>commit-msg</b> - runs after the commit message has been made, can be used to verify that your message follows a required pattern (e.g. capital first letter, no punctuation, command-style sentence)</li>
+            <li><b>post-commit</b> - runs after the entire commit process is completed, can be used to run another script based on information from the most recent commit</li>
+          </ul>
+
+          <p>Git hooks allow us to effectively 'pause' the commit cycle at each of these four phases. There are additional hooks for facilitating a custom email workflow and manipulating other git actions such as rebasing. These aren't used quite as often as the commit hooks, but it's good to be aware they exist.</p>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="Why">Why Do We Use Git Hooks?</a></h2>
+          <h3>We Don't Have to Wait for a Build Process</h3>
+          <p>Running builds with a continuous integration tool takes time. Sometimes our build will fail if we have a broken test, or our code doesn't pass the linting rules we've set. Builds can take even longer as our applications grow more complex, so we want to minimize the chances that we'll start a build that's going to fail. One way we can do that is by running our tests and linting checks before we even commit our code with a <code>pre-commit</code> hook.</p>
+
+          <h3>They Ensure Your Commits are Flawless</h3>
+          <p>If you verify the integrity of your code before committing it, you'll never have to go back and add a separate commit that says 'Fix linting errors' or 'Remove console.logs'. These types of commits clutter up the history and make it more difficult to search past versions of the project.</p>
+          <p><em>Note: It's important not to commit debugger statements or console.logs to your codebase because embarassing things like <a href="https://twitter.com/CLINT/status/493173618105274369">this</a> might happen.</em></p>
+
+          <h3>They Enable You to be a Slob</h3>
+          <p>You can carry-on with your normal workflow and write messy code...and no one will be the wiser. Git will clean it all up for you (or at least remind you to do so) before your teammates see what a mess you've made.</p>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="Directory">The .git Directory</a></h2>
+          <p></p>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="PreCommit">Creating a Pre-Commit Hook</a></h2>
+          <p></p>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="AdvancedWorkflow">More Advanced Workflows</a></h2>
+          <p></p>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="Sharing">Sharing Git Hooks</a></h2>
+          <p></p>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What are two advantages of using git hooks?</li>
+            <li>Name three of the commit phases you can hook into.</li>
+          </ul>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks">Git Hooks Guide]()</a></li>
+            <li><a href="https://git-scm.com/docs/githooks">Git Hooks Reference</a></li>
+            <li><a href="https://github.com/stephencelis/ghi">GitHub Issues from Command Line</a></li>
+            <li><a href="https://github.com/observing/pre-commit">Node.js pre-commit</a></li>
+            <li><a href="https://github.com/m1foley/fit-commit">Fit Commit</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>
