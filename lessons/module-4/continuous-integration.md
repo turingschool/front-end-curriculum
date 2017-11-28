@@ -39,6 +39,10 @@ CircleCI automatically infers a lot of information about your application. This 
 
 As you may have noticed, front-end repos are made up of 90% config files and 10% actual code. In order to configure CircleCI, we're going to add a `circle.yml` file to the root of our repository. Any time CircleCI runs a build, it will look for this file and follow any instructions we provide.
 
+## What is a Build?
+
+Think of all the steps you have to take if you want to collaborate on a classmate's project. You have to fork their repo, clone it down locally, make sure you have an up-to-date version of Node (or some other platform) on your machine, install any dependencies, start up a server and maybe run a file watcher. Sometimes more complex projects require additional steps. This setup process is called a "build". It's all the things you need to do to get your app up and running. CI tools will run through all of these steps (and then some!) to make sure the application is in a stable, working state before it goes to production.
+
 ## Phases of the Build Process
 The yml file can define settings for various phases of the build process. The phases of a build process are:
 
