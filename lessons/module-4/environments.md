@@ -143,14 +143,11 @@ Now anywhere in my application that node handles, I can access `process.env.FOO`
 
 ### Examining a Variable Between Environments
 
-Let's work with the `NODE_ENV` variable that represents the name of the environment our code is currently running in. By default, when we run our application locally, this variable will returned `undefined` unless we explicitly give it a value. We want the `NODE_ENV` to fall back to 'development' if it's not already defined. We can do this with the following code:
+Let's work with the `NODE_ENV` variable that represents the name of the environment our code is currently running in. By default, when we run our application locally, this variable will return `undefined` unless we explicitly give it a value. We want the `NODE_ENV` to fall back to 'development' if it's not already defined. We can do this with the following code:
 
 ```js
 const environment = process.env.NODE_ENV || 'development';
 ```
-
-
-
 
 
 ### Storing Sensitive Data in .env Files
