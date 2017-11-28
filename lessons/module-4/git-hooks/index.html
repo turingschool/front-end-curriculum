@@ -83,7 +83,7 @@
 
         <section>
           <h2><a name="Directory">The .git Directory</a></h2>
-          <p></p>
+          <p>Whenever we create a new local git repo, a <code>.git</code> directory is included in our project. This is where our git hooks live! The <code>.git</code> directory holds all sorts of secrets and goodies related to the version control process for our project. It maintains an immense amount of information, including all the deltas and changesets you've ever made. So even if you delete a commit or think you've lost some important code, never fear -- you can always jump into the depths of the <code>.git</code> directory and retrieve it. <em>(If you've ever committed your <code>node_modules</code> directory, you'll notice all of your clones and pulls are incredibly slow because that changeset still exists in the history somewhere, even after you delete it.)</em></p>
         </section>
         <hr />
 
@@ -104,7 +104,13 @@
 
         <section>
           <h2><a name="Sharing">Sharing Git Hooks</a></h2>
-          <p></p>
+          <p>By default, git hooks exist in the <code>.git/hooks</code> directory of your local repo. You'll notice that this isn't a directory that gets pushed to github, so when new contributors pull down your repo, they won't have the same hooks in place that the rest of the team might be using. There are a couple of ways to get around this.</p>
+
+          <p>As of Git 2.9, you can set a git configuration option <code>core.hooksPath</code> that will override the default <code>.git/hooks</code> directory. This would allow you and your team to put your hooks in an internal, standalone repository that each developer could clone down and reference with the <code>core.hooksPath</code> option.</p>
+
+          <p>In earlier versions of Git, you could implement this same strategy by creating a symlink from the <code>.git/hooks</code> directory to your local repository of your team's git hooks.</p>
+
+          <p>Both of these strategies can be facilitated by a library like <a href="https://github.com/nlf/git-validate">git-validate</a>. With git-validate, you can create a separate repository to hold things like a common linting configuration and rules for your pre-commit hooks.</p>
         </section>
         <hr />
 
@@ -114,6 +120,7 @@
           <ul>
             <li>What are two advantages of using git hooks?</li>
             <li>Name three of the commit phases you can hook into.</li>
+            <li>How might your team go about ensuring all teammates are using the same git hooks on your project?</li>
           </ul>
         </section>
         <hr />
