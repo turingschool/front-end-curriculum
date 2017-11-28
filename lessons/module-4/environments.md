@@ -11,8 +11,6 @@ Environments in software development refer to the place where your code runs. Th
 ### Stage 0: One Environment
 #### Production
 
-![We'll Do It Live](https://media.giphy.com/media/A34x7CEKUkCyc/giphy.gif)
-
 In the beginning, we developed our applications directly in production. This was problematic for a number of reasons. Mainly, you had to deploy your code in order to see feedback. Think of how many times you write some functionality incorrectly. Every time you push broken code to production, it's breaking the user experience for people who are currently on your application.
 
 ### Stage 1: Two Environments
@@ -96,14 +94,6 @@ app.set('port', process.env.PORT || 3000)
 ```
 
 ```js
-// our database connection string for postgres
-  production: {
-    client: 'pg',
-    connection: `${process.env.DATABASE_URL}?ssl=true`
-  }
-```
-
-```js
 // even your environment is stored in an environment variable!
 const environment = process.env.NODE_ENV || 'development';
 ```
@@ -151,6 +141,39 @@ process.env.FOO = 'bar';
 
 Now anywhere in my application that node handles, I can access `process.env.FOO` and should receive `bar` as its value.
 
+### Examining a Variable Between Environments
+
+Let's work with the `NODE_ENV` variable that represents the name of the environment our code is currently running in. By default, when we run our application locally, this variable will return `undefined` unless we explicitly give it a value. We want the `NODE_ENV` to fall back to 'development' if it's not already defined. We can do this with the following code:
+
+```js
+const environment = process.env.NODE_ENV || 'development';
+```
+
+
+### Storing Sensitive Data in .env Files
+
+We previously mentioned environment variables might contain sensitive or private data, like API keys. These are things that we don't want to commit to GitHub. Instead of hardcoding their values into the codebase, we can store all of this sensitive information in a `.env` file that is gitignored. For example, at the root of our application, we have a file named `.env` that contains a super secret API key:
+
+```
+SECRET_API_KEY=a1b2c3d4e5f6
+```
+
+We make sure to include this file in our `.gitignore` so that it never gets committed to GitHub. Then, elsewhere in our codebase, where we want to access this environment variable, we can use a package like [dotenv](https://www.npmjs.com/package/dotenv) to parse this file and give us the results:
+
+```js
+require('dotenv').config()
+
+console.log('SECRET_API_KEY: ', process.env.SECRET_API_KEY);
+```
+
+
+## Checks for Understanding
+
+* What is an environment?
+* What are the 5 different environments your code might run in and what are each of them used for?
+* What kind of data might be stored in an environment variable?
+
 ## Resources
 
 * [Understanding the node process object](https://egghead.io/lessons/node-js-understand-the-node-js-process-object){:target="_blank"}
+* [Working with Environment Variables in NodeJS](https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html)
