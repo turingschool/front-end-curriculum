@@ -512,3 +512,8 @@ app.get('/api/v1/papers/:id', (request, response) => {
 #### On Your Own
 
 Write a GET request to retrieve all footnotes for a pre-existing paper. Verify it works with postman.
+
+
+### Instructor Resources
+
+* [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/master/module-4/lesson-plans/knex)
