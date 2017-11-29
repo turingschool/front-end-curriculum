@@ -182,3 +182,28 @@ The value of _this_ is set when the function is executed.
 
 ### () => {}
 The value of _this_ is set when the function is created.
+
+Example
+```
+var vampire = {
+  name: 'dracula',
+  dislikes: [
+    'garlic',
+    'crosses',
+    'stakes'
+  ],
+  whatDoYouDislike: function () {
+    // console.log(this)
+    
+    // this.dislikes.forEach(( item ) => {
+    //   console.log(this.name + ' dislikes ' + item)
+    // })
+    
+    this.dislikes.forEach(function ( item ) {
+      console.log(this.name + ' dislikes ' + item)
+    }.bind(this))
+  }
+}
+
+vampire.whatDoYouDislike()
+```
