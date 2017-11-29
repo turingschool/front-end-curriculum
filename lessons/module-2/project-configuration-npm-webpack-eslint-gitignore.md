@@ -204,30 +204,30 @@ To set up eslint, follow these steps:
 3. In that file, add this code:
 
    ```
-   {
+    {
       "parser": "babel-eslint",
       "extends": [
-         "eslint:recommended"
+        "eslint:recommended"
       ],
       "env": {
-      "browser": true,
-      "mocha": true,
-      "node": true,
-      "es6": true
-   },
-    // Having a problem with one of these rules? Learn more about it here: https://eslint.org/docs/rules/
-    "rules": {
-      "eqeqeq": ["error", "always"],
-      "getter-return": ["error", { "allowImplicit": true }],
-      "indent": ["warn", 2],
-      "no-template-curly-in-string": "error",
-      "semi": ["error", "always"]
-   },
-    "globals": {
-      "expect": true
+        "browser": true,
+        "mocha": true,
+        "node": true,
+        "es6": true
+      },
+      // Having a problem with one of these rules? Learn more about it here: https://eslint.org/docs/rules/
+      "rules": {
+        "eqeqeq": ["error", "always"],
+        "getter-return": ["error", { "allowImplicit": true }],
+        "indent": ["warn", 2],
+        "no-template-curly-in-string": "error",
+        "semi": ["error", "always"]
+      },
+      "globals": {
+        "expect": true
+      }
     }
-  }
-  ```
+   ```
 4. In the `scripts` object of the `package.json` file in your repo, add this key-value pair:
     ```
     "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
