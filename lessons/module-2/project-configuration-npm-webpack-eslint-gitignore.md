@@ -203,31 +203,91 @@ To set up eslint, follow these steps:
 2. Create an eslint file in your repo: `touch .eslintrc`
 3. In that file, add this code:
 
-   ```
+    ```js
     {
       "parser": "babel-eslint",
-      "extends": [
-        "eslint:recommended"
-      ],
+      "extends": "eslint:recommended",
       "env": {
         "browser": true,
         "mocha": true,
         "node": true,
         "es6": true
       },
-      // Having a problem with one of these rules? Learn more about it here: https://eslint.org/docs/rules/
+      "parserOptions": {
+        "sourceType": "module"
+      },
       "rules": {
+        "brace-style": "error",
+        "comma-spacing": [
+          "warn", {
+            "before": false,
+            "after": true
+          }
+        ],
+        "curly": "error",
         "eqeqeq": ["error", "always"],
         "getter-return": ["error", { "allowImplicit": true }],
+        
         "indent": ["warn", 2],
+        "key-spacing": [
+          "error", {
+            "beforeColon": false,
+            "afterColon": true
+          }
+        ],
+        "keyword-spacing": [
+          "error", {
+            "before": true,
+            "after": true
+          }
+        ],
+        "linebreak-style": [
+          "error",
+          "unix"
+        ],
+        "max-len": [
+          "error",
+          80
+        ],
+        "new-cap": [
+          "error", {
+            "newIsCap": true
+          }
+        ],
+        "newline-after-var": [
+          "error",
+          "always"
+        ],
         "no-template-curly-in-string": "error",
-        "semi": ["error", "always"]
+        "object-shorthand": [
+          "error",
+          "always"
+        ],
+        "semi": ["error", "always"],
+        "semi-spacing": [
+          "error", {
+            "before": false,
+            "after": true
+          }
+        ],
+        "space-before-blocks": [
+          "error", {
+            "functions": "always",
+            "keywords": "always",
+            "classes": "always"
+          }
+        ],
+        "space-infix-ops": [
+          "error", {
+            "int32Hint": false
+          }
+        ]
       },
       "globals": {
         "expect": true
       }
     }
-   ```
+    ```
 4. In the `scripts` object of the `package.json` file in your repo, add this key-value pair:
     ```
     "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
