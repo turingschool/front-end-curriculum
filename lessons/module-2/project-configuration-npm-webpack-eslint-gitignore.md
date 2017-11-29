@@ -92,7 +92,7 @@ Note: you **must** use the `--save-dev` flag. Otherwise, the dependency will be 
 
 When you install a package this way, a new key-value pair with that package's information will be added to the `"devDependencies"` object for you.
 
-**`scripts`**:
+**scripts**:
 Our `package.json` recipe also has instructions. The `scripts` object has a key of `"test"` whose value is `"./node_modules/mocha/bin/mocha --timeout 5000"`.
 
 We're creating a shortcut; we can now run `npm test` in our terminal, and it is equivalent to running `npm run ./node_modules/mocha/bin/mocha --timeout 5000` in the terminal, but obviously much shorter and easier for us.
