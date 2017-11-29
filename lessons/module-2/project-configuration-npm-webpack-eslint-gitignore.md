@@ -216,6 +216,7 @@ To set up eslint, follow these steps:
       "parserOptions": {
         "sourceType": "module"
       },
+      // Having a problem with one of these rules? Learn more about it here: https://eslint.org/docs/rules/
       "rules": {
         "brace-style": "error",
         "comma-spacing": [
