@@ -78,21 +78,21 @@ This is pretty ugly to look at. Let's break it down. The package.json is just me
 We're listing what ingredients we need for the app to run: we need express, and we need version 4.15.3 or any version compatible with 4.15.3.
 (You can read up on the what the symbols by the package version numbers mean [here](https://docs.npmjs.com/files/package.json#dependencies), and learn a bit about what the version numbers themselves even mean [here](https://semver.org/).)
 
-To install a package as a production dependency:
-`npm install [PACKAGE NAME OR GITHUB URL] --save-prod`
-Note: the `--save-prod` flag is optional; the latest version of npm will save any packages installed with npm install under dependencies automatically. It's still a good idea to use the flag when installing.
+    To install a package as a production dependency:
+    `npm install [PACKAGE NAME OR GITHUB URL] --save-prod`
+    Note: the `--save-prod` flag is optional; the latest version of npm will save any packages installed with npm install under dependencies automatically. It's still a good idea to use the flag when installing.
 
-When you install a package this way, a new key-value pair with that package's information will be added to the `"dependencies"` object for you.
+    When you install a package this way, a new key-value pair with that package's information will be added to the `"dependencies"` object for you.
 
 **devDependencies (development)**:
 
 Some of our ingredients won't end up in the cake that users eat, but they're important tools that chefs will need in order to work on our app - like our testing libraries, mocha and chai. The end user of an app will not need to have mocha and chai on their computers, since they will never be running the testing suite of the app. We designate those libraries as `devDependencies` because they are packages that only developers working on the app will use.
 
-To install a package as a development dependency:
-`npm install [PACKAGE NAME OR GITHUB URL] --save-dev`
-Note: you **must** use the `--save-dev` flag. Otherwise, the dependency will be installed as a production dependency.
+    To install a package as a development dependency:
+    `npm install [PACKAGE NAME OR GITHUB URL] --save-dev`
+    Note: you **must** use the `--save-dev` flag. Otherwise, the dependency will be installed as a production dependency.
 
-When you install a package this way, a new key-value pair with that package's information will be added to the `"devDependencies"` object for you.
+    When you install a package this way, a new key-value pair with that package's information will be added to the `"devDependencies"` object for you.
 
 **scripts**:
 
