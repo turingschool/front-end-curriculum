@@ -3,9 +3,6 @@ title: HTML II - Forms, Devtools, Accessibility Best Practices
 length: 180
 tags: html, introduction, practice
 ---
-# Pre-Teach Resources
-* [Joe Dolson: ARIA - Roles, States and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
-* [ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson / Front-Trends 2015](https://www.youtube.com/watch?v=qdB8SRhqvFc)
 
 # Overview
 Now that you have a handle on the basics of structuring content for an HTML file:
@@ -16,10 +13,15 @@ Now that you have a handle on the basics of structuring content for an HTML file
 
 # Docs
 
+HTML Guide and form structure
 * [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
 * [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+
+Dev Tools
 * [Chrome Dev Tools Docs](https://developers.google.com/web/tools/chrome-devtools/)
 * [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
+
+Accessibility
 * [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 * [MDN Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
@@ -51,8 +53,8 @@ Partner up and answer the following questions:
 Copy the form code below into your own Pen, and then refactor as follows:
 
 * Validate for email type
-* Replace all `div` elements with correct semantic elements
-* Add a radial check box with atleast three options
+* Replace all `div` elements with correct semantic elements - do not use any CSS
+* Add a set of radio buttons with at least three options - only allowing one to be selected at a time
 * Include placeholders for name, email, and message
 * Add a drop down for favorite color with at least three options
 * Use an input for submit instead of a button
@@ -98,7 +100,7 @@ For now, we're only going to focus on the first panel: Elements.
 
 ##### HELPFUL FOR:
 * debugging layout and styling issues
-* checking DOM events
+* checking DOM Events
 
 The elements panel lets you view the entire HTML source of the current page you are viewing. From here, you can edit, add or remove content and elements directly on the page. Though your changes won't be saved (any changes made here will be lost upon refreshing the page), sometimes it's helpful to make tweaks directly in this panel so you can see what effect the changes will have on your application before you implement them.
 
