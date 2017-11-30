@@ -234,7 +234,7 @@ When we ran the command `npm init --yes` it generated a `package.json` file for 
   "name": "unit-testing-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "Box.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
