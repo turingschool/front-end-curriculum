@@ -9,7 +9,7 @@ tags: javascript, browser, testing, tdd
 ```
 git clone https://github.com/turingschool-examples/adventures-of-blocky.git
 npm install
-npm start
+npm test
 ```
 
 ## Getting Started
