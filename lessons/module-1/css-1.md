@@ -50,6 +50,25 @@ Each element is a rectangular box. CSS leverages "the box model" to control layo
 
 ***
 
+## Don't Forget Your Dev Tools!
+
+#### Editing CSS
+To the right of the HTML pane, there's a small sidebar that gives us styling information for the currently selected element. Similar to the HTML pane, we can add or remove styles and adjust CSS property values from this pane. You can click on any style property associated with the selected element and change its value. You can also use the blue checkbox to toggle the style on or off.
+
+![Editing CSS](/assets/images/lessons/debugging-with-devtools/editing-css.png)
+
+
+### Your Challenge
+Directly from the css pane, we can edit the css and see the changes reflected immediately.
+
+Let's work with the following edits on [girldevelopit.com](https://www.girldevelopit.com/):
+
+* Change the background color of the header to chartreuse
+* Change the headline text color to magenta.
+* Change the "flourish" logo in the headline to have a height of 20px
+* Hide the element that contains the map using css
+
+
 # Practice
 Let's setup a small static page to experiment with our HTML and CSS.
 
@@ -75,13 +94,6 @@ Let's setup a small static page to experiment with our HTML and CSS.
 
 * Box Model things: `width`, `height`, `border`, `padding`, `margin`
 * Aesthetic things: `color`, `font`, `background`
-
-## Don't Forget Your Dev Tools!
-
-#### Editing CSS
-To the right of the HTML pane, there's a small sidebar that gives us styling information for the currently selected element. Similar to the HTML pane, we can add or remove styles and adjust CSS property values from this pane. You can click on any style property associated with the selected element and change its value. You can also use the blue checkbox to toggle the style on or off.
-
-![Editing CSS](/assets/images/lessons/debugging-with-devtools/editing-css.png)
 
 ### Box-Sizing and the CSS Box Model:
 
