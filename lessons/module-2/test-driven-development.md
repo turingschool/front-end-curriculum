@@ -215,8 +215,6 @@ Here is another more in-depth global lifecycle for best testing practices:
 
 ## Testing Practice: Adding Mocha and Chai   
 
-**First Rule of Mod 2:** No copy pasting. Until you can write this syntax with your eyes closed, practice typing it out word for word. If you feel like it's slow going, go home tonight and do this lesson again until you feel more confident.  
-
 To practice, let's kick off a brand new project to demonstrate how you would add Mocha and Chai to a project, and write a couple basic tests.  
 
 In your terminal, create your project directory, initialize an npm directory, and add a javascript file.  
