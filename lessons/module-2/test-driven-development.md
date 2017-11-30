@@ -177,7 +177,7 @@ describe('unicorn', function() {
     var unicorn = new Unicorn('Susan');
 
     // 2. "Pre-Assert"
-    // Make an assertion to verify that after executing certain functions, we end up with what we expect
+    // Make an assertion to verify that our starting condition is what we expect
     assert.equal(unicorn.calories, 0);
 
     // 3. "Execute"
