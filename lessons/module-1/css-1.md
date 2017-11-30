@@ -83,6 +83,17 @@ To the right of the HTML pane, there's a small sidebar that gives us styling inf
 
 ![Editing CSS](/assets/images/lessons/debugging-with-devtools/editing-css.png)
 
+
+### Your Challenge
+Directly from the css pane, we can edit the css and see the changes reflected immediately.
+
+Let's work with the following edits on [girldevelopit.com](https://www.girldevelopit.com/):
+
+* Change the background color of the header to chartreuse
+* Change the headline text color to magenta.
+* Change the "flourish" logo in the headline to have a height of 20px
+* Hide the element that contains the map using css
+
 ### Box-Sizing and the CSS Box Model:
 
 In HTML, you can visualize each element as its own rectangular box. There are a number of CSS properties that can affect the final width and height of each of these boxes. The CSS Box Model describes how the final height and width of an element is determined.
