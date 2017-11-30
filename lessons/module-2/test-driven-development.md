@@ -222,7 +222,7 @@ To practice, let's kick off a brand new project to demonstrate how you would add
 In your terminal, create your project directory, initialize an npm directory, and add a javascript file.  
 
 ```bash
-mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes && touch index.js  
+mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes && touch Box.js  
 ```
 
 Open up this project in your text editor.  
@@ -236,7 +236,7 @@ When we ran the command `npm init --yes` it generated a `package.json` file for 
   "name": "unit-testing-practice",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "Box.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -297,11 +297,11 @@ This makes sense! We don't have a directory called `test`, which is what Mocha i
 Let's practice writing a couple tests in true TDD fashion - this first one will just help verify that everything is wired up correctly - plus it's always nice to start with an easy win.  
 
 ```bash
-mkdir test && touch test/index-test.js
+mkdir test && touch test/Box-test.js
 ```
 
 ```js
-// test/index-test.js  
+// test/Box-test.js  
 
 describe('Box', function() {
   it('should return true', function() {
@@ -315,7 +315,7 @@ If you run `npm test` now, you'll see an expected error. It's important to recog
 ```bash
 1) Box should return true:
    ReferenceError: assert is not defined
-    at Context.<anonymous> (test/index-test.js:3:5)
+    at Context.<anonymous> (test/Box-test.js:3:5)
 ```
 
 It's saying that it doesn't know what `assert` is, and recall that `assert` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
@@ -323,7 +323,7 @@ It's saying that it doesn't know what `assert` is, and recall that `assert` come
 Import Chai and the `assert` library, at the top of your test file:  
 
 ```js
-// test/index-test.js  
+// test/Box-test.js  
 
 const chai = require('chai');
 const assert = chai.assert;
@@ -359,16 +359,16 @@ Iteration 1:
 - You should be able to calculate the area of your box using the method `.area()`.   
 ```
 
-Let's write some unit tests that pick apart each individual piece of functionality for this iteration. Notice that we are now also bringing in our primary `index.js` file and assigning it the variable `Box`.  
+Let's write some unit tests that pick apart each individual piece of functionality for this iteration. Notice that we are now also bringing in our primary `Box.js` file and assigning it the variable `Box`.  
 
 We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refactor`.  
 
 ```js
-// test/index-test.js
+// test/Box-test.js
 
 const chai = require('chai');
 const assert = chai.assert;
-const Box = require('../index.js');
+const Box = require('../Box.js');
 
 describe('Box', function() {
   it('should return true', function() {
@@ -402,15 +402,15 @@ Run the tests and watch them fail (RED).
 ```bash
 1) Box should have a default height and a width:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/index-test.js:12:15)
+    at Context.<anonymous> (test/Box-test.js:12:15)
 
 2) Box should have take a height and a width as arguments:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/index-test.js:19:15)
+    at Context.<anonymous> (test/Box-test.js:19:15)
 
 3) Box should calculate its area:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/index-test.js:26:15)
+    at Context.<anonymous> (test/Box-test.js:26:15)
 ```
 
 Write some code to implement the functionality one test at a time. You can use the method `.skip` on any tests you want to skip so you can isolate individual tests you want to run.  
@@ -421,7 +421,7 @@ Take a minute to make those tests pass **WITHOUT LOOKING AHEAD**. Here's a pictu
 
 
 ```js
-// index.js  
+// Box.js  
 function Box(height, width) {
   this.height = height || 100,
   this.width = width || 100
@@ -442,7 +442,7 @@ Run `npm test` and watch the tests pass! (GREEN).
 Look at the implementation of the `Box.prototype.area()` function as its written in the code snippet above. It works, and it was helpful to be super verbose on a first pass, but its pretty ugly. Now that we have a test to watch for functionality, we can refactor that code to clean it up.  
 
 ```js
-// index.js  
+// Box.js  
 
 Box.prototype.area = function() {
   return this.height * this.width;
