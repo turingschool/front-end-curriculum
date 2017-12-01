@@ -119,7 +119,7 @@ const environment = process.env.NODE_ENV || 'development';
 
 Now when our application is running in Heroku, it will recognize that it's in a `production` environment and use all of the appropriate configurations. Learn more about [environment variables](https://devcenter.heroku.com/articles/config-vars) and [process.env](https://nodejs.org/api/process.html#process_process_env).
 
-### Step 67 - Commit & Push
+### Step 7d - Commit & Push
 
 Commit the changes you've made to your `knexfile.js` and your `server.js`. Push them up to your origin remote and then push them to heroku:
 
