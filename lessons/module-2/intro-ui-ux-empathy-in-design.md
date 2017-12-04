@@ -153,3 +153,46 @@ Note: sometimes you will see the phrase "empathic design" - this means the same 
 
 ![like counselor troi](http://images6.fanpop.com/image/photos/39700000/Counselor-Deanna-Troi-counselor-deanna-troi-39723861-245-188.gif)
 
+### User Testing
+
+![users will always find ways to misunderstand how to use your app, so do user testing!](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/07/1436502693image00.gif)
+
+_Users will always find new and creative ways to misunderstand how to use your app ... so do user testing!_
+
+Earlier we said that empathy is one part of creating a great user experience. User testing is the other half of the equation. It's what reveals the actual weak points in your app, the places that need to be tweaked, the functionality that users are expecting.
+
+User testing helps account for any biases we might have as developers. We can't assume that we know all the pain points our users might run into, and we also can't assume that we know the right questions to ask!
+
+[Steve Krug](https://www.sensible.com/dmmt.html)'s excellent book on usability and user testing, [Don't Make Me Think](http://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) is worth reading if you're interested in making your apps more usable. Hint: everyone should be interested in making their apps more usable.
+
+No matter how empathetic and diligent you are, you can't assume you know everything about your users, or that you've closed all the gaps in your own assumptions.
+
+### One last note
+
+As in your code, when it comes to design, avoid cleverness for the sake of cleverness.
+
+Take a look at [this](http://web.archive.org/web/20170513210443/http://bolden.nl/) website.
+
+![clever but stupid design](http://g.recordit.co/HaFXd9kUEL.gif)
+
+This is a great example of clever but stupid design. It's really cool! A super fun bit of interaction and animation, and it hearkens back to decoder rings and secret messages that most kids love. But from a usability standpoint, it is awful. You have to mouse pretty far to the sides of the screen to trigger the color overlays that reveal the text.
+
+It's even worse from an accessibility standpoint.
+
+The point is, something like this is cool as a part of a design portfolio - it shouldn't be the landing page of your website.
+
+## Summary
+
+Good design is about making an app usable. Creating a usable app requires empathy and seeking out and listening to the app's end users.
+
+**Usability tools:**
+
+- User Testing
+- Empathy
+  - Personas
+  - User stories
+- Context
+  - Explicit interactions
+  - Implicit interactions
+  - Info when the user needs it
+- When you run across bad design, take a minute to analyze _what makes it bad_ and _how you can make it better_!
