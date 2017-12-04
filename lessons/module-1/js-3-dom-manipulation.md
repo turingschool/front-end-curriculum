@@ -59,7 +59,7 @@ The DOM has been updated to the following:
 ```html
 <!-- The following line of HTML will be used in the next side track example -->
 <!-- Note the extra spaces after hello - that is intentional -->
-<p id="inner-text-example">Hello    <span>1706</span></p>
+<p id="inner-text-example">Hello    <span>1711</span></p>
 ```
 
 **Side Track**: You may have heard about a few different ways to target/manipulate the text of an HTML page. The two most common are `innerText` and `innerHTML`, with a third being `textContent`. [The first answer in this convo](https://teamtreehouse.com/community/innertext-vs-innerhtml) gives you a quick answer, but if you're curious run the following few lines of code in your console:
@@ -72,7 +72,7 @@ console.log(para.textContent);
 ```
 
 To sum up:   
-- `innerText` will collapse all of the spaces and give you back JUST THE TEXT.
+- `innerText` will collapse all of the extra spaces and give you back JUST THE TEXT.
 - `innerHTML` will give you back the text, with any nested HTML elements printed out as well  
 - `textContent` will give you back an exact copy of JUST THE TEXT, leaving any spacing or formatting as is.  
 
@@ -119,7 +119,7 @@ Let's take a look at the syntax and then we'll talk about what's happening.
 1. We're querying for all of the elements we need and we're storing them in variables.
 2. We're adding an event listener to the `<button>` with the class of `.change-text`.
 3. We're passing `addEventListener()` two arguments:
-  - The type of event we're interested in a listening for.
+  - The type of event we're interested in listening for.
   - A function that should be called whenever that event happens.
 
 ### Pair Practice
