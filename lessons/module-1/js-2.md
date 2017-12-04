@@ -381,7 +381,7 @@ Additionally, if the condition of your loop never returns `false`, you will get 
 Here's an example of an infinite loop. Open a new tab in your browser and run this in your console. What happens?
 
 ```js
-for (var i = 0; i = true; i++) {
+for (var i = 0; i > -1; i++) {
   console.log(i);
 }
 ```
