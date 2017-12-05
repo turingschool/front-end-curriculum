@@ -33,7 +33,7 @@ When our application makes a request to an API endpoint, we typically want to te
 ```javascript
 // AddGroceryForm.js
 
-addGrocery(event) {
+handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
   const grocery = this.state.grocery;
@@ -230,7 +230,7 @@ it('calls fetch with the correct data when adding a new grocery', () => {
   }
 
   renderedComponent.setState({grocery: mockGrocery})
-  renderedComponent.instance().addGrocery(mockEvent)
+  renderedComponent.instance().handleAddGrocery(mockEvent)
   expect(window.fetch).toHaveBeenCalledWith('/api/v1/groceries', expectedFetchBody)
 })
 ```
@@ -246,7 +246,7 @@ it('resets the state after adding a new grocery', () => {
   renderedComponent.setState({grocery: mockGrocery})
 
   new Promise((resolve) => {
-    resolve(renderedComponent.instance().addGrocery(mockEvent))
+    resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
   }).then(() => {
     renderedComponent.update()
   }).then(() => {
@@ -263,7 +263,7 @@ assert that our `updateGroceryList` mock was called, we don't need to update the
 
 it('calls the updateGroceryList callback after adding a new grocery', () => {
   new Promise((resolve) => {
-    resolve(renderedComponent.instance().addGrocery(mockEvent))
+    resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
   }).then(() => {
     expect(mockUpdateGroceryList).toHaveBeenCalledWith(mockGroceries)
   })
@@ -283,7 +283,7 @@ it('sets an error when the fetch fails', () => {
   }))
 
   new Promise((resolve) => {
-    resolve(renderedComponent.instance().addGrocery(mockEvent))
+    resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
   }).then(() => {
     renderedComponent.update()
   }).then(() => {
@@ -301,7 +301,7 @@ to use the new ES7 `async/await` syntax. Let's lean on our new test suite to ref
 ```javascript
 // AddGroceryForm.js
 
-async addGrocery(event) {
+async handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
   const grocery = this.state.grocery;
