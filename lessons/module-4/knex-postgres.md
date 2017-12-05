@@ -512,3 +512,17 @@ app.get('/api/v1/papers/:id', (request, response) => {
 #### On Your Own
 
 Write a GET request to retrieve all footnotes for a pre-existing paper. Verify it works with postman.
+
+
+## Checks for Understanding
+
+* Why would we use a library like knex?
+* In as much detail as possible, describe what migrations are and what they do.
+* If we accidentally fat-finger a column name when setting up a table in our database, how can we fix that?
+* What's the difference between creating a migration and running a migration?
+* What is seed data and what do we use it for?
+
+
+### Instructor Resources
+
+* [Step-by-Step Code Along Screenshots](https://github.com/turingschool/front-end-keys/tree/master/module-4/lesson-plans/knex)

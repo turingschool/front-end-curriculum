@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Intro to Progressive Web Apps</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{font-size:0.85em;padding:5px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to Progressive Web Apps</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>Mobile Development &raquo; PWAs</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">What is a Progressive Web App?</a></li>
+          <li><a href="#Characteristics">Characteristics of a PWA</a></li>
+          <li><a href="#Manifest">The Manifest File</a></li>
+          <li><a href="#HTTPS">Serving Content over HTTPS</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Further Reading & Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>articulate what a Progressive Web App is</li>
+            <li>describe several characteristics of a PWA</li>
+            <li>implement a PWA manifest file and serve app content over HTTPS</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Introduction">What is a Progressive Web App</a></h2>
+          <p>A Progressive Web App is a web application intended to look, feel and behave like a native application. When we talk about "native" applications in this context, we mean applications that are installed directly on your device, without having to navigate to them in the browser.</p>
+
+          <div class="discuss">
+            <h4>On The Whiteboard</h4>
+            <p>Take a couple of minutes to play with the applications you have installed on your mobile devices. Use them with wifi on, wifi off, airplane mode, etc. Take note of how they look, how you use them, and the overall feel and experience. Does the app you're looking at have a web app equivalent? How is it similar to the web app? How is it different?</p>
+            <p>Make a list on the whiteboard of these similarities and differences.</p>
+          </div>
+
+          <h3>What Caused the Push for PWAs?</h3>
+          <p>Progressive Web Apps are gaining a lot of traction in the web development community for several reasons:</p>
+          <ul>
+            <li><b>Modern-day platforms all have the web in common already.</b> Because we have a browser on our tablets, laptops and mobile devices, all of these platforms can already support web apps out of the box.</li>
+            <li><b>Making the web more robust makes us more efficient.</b> If we only have to develop web apps, this will reduce the amount of time, money and effort that goes into creating cross-platform applications.</li>
+          </ul>
+          <p>For example, if we were building an application like Twitter - we would have to build not only a web application, but also an iOS and Android app. Because these platforms differ so much, and use different technologies, we'd have to hire three separate teams to build three different versions of the same exact application. That's a huge waste of resources.</p>
+          <p>Up until recently, the web platform was simply not robust enough to provide the same experiences that we get with native applications. A slew of new Web APIs like <b>Service Workers</b>, <b>Background Sync</b>, and <b>Push Notifications</b> aim to close this gap and make the web a better contender against native applications.</p>
+
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Characteristics">Characteristics of a PWA</a></h2>
+          <p>We've already talked a little bit about the differences between native applications and regular web apps. Remember that Progressive Web Apps are trying to bridge this gap by closing up some of these differences. This should give you a hint as to what we might expect from a PWA. The most crucial characteristics of a PWA are as follows:</p>
+          <ul>
+            <li>responsive design</li>
+            <li>performant on slower network speeds</li>
+            <li>installable and launchable from the home screen</li>
+            <li>all content served over HTTPS</li>
+            <li>provides some form of offline experience</li>
+          </ul>
+          <p>While this is just a handful of ways we would describe a PWA, we can dig further into a larger checklist of requirements for building PWAs by using Chrome's Developer Tools.</p>
+
+          <h3>Auditing a PWA</h3>
+          <p>Initially there existed a tool called Lighthouse, which would help automate the process of checking to see if your application met all the requirements of a Progressive Web App. This tool was eventually rolled directly into the Chrome Developer Tools, and can give us insight into how well a particular app fits the bill.</p>
+
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>Pick an app from <a href="https://pwa.rocks/">pwa.rocks</a> and open it in your browser. Using Chrome Canary, open developer tools and navigate to the 'Audits' panel. Click on the 'Perform An Audit' button and run an audit for 'Progressive Web App'.</p>
+            <p>When the audit is finished running, dig into the failing and passing checks that are listed. Expan each one to see what requirement it refers to.</p>
+          </div>
+
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Manifest">The Manifest File</a></h2>
+          <p>Foo</p>
+        </section>
+        <hr />
+        
+        <section>
+          <h2><a name="HTTPS">Serving Content over HTTPS</a></h2>
+          <p>Foo</p>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What is a Progressive Web App?</li>
+            <li>Why has the tech community made a big push for PWA support?</li>
+            <li>What are 3 main characteristics of a PWA?</li>
+            <li>What are some of the new web APIs that facilitate creating PWAs?</li>
+          </ul>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="http://blog.ionic.io/what-is-a-progressive-web-app/">Ionic Blog - What is a PWA?</a></li>
+            <li><a href="https://developers.google.com/web/progressive-web-apps/checklist">PWA Checklist</a></li>
+            <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse Audits</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

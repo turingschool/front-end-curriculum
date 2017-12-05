@@ -78,34 +78,53 @@ Put your presentation into writing. Each person must write their own blog post. 
 ### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
 
 **Potential Issues:**
-* [#1840](https://github.com/openfoodfoundation/openfoodnetwork/issues/1840)
 * [#1806](https://github.com/openfoodfoundation/openfoodnetwork/issues/1806)
-* [#1382](https://github.com/openfoodfoundation/openfoodnetwork/issues/1382)
-* [#424](https://github.com/openfoodfoundation/openfoodnetwork/issues/424)
+* [#1938](https://github.com/openfoodfoundation/openfoodnetwork/issues/1938)
+* [#1926](https://github.com/openfoodfoundation/openfoodnetwork/issues/1926) (may need to check if prior person actually submitted a pull request. If so, make a comment to close the issue if it's been resolved)
+* [#1913](https://github.com/openfoodfoundation/openfoodnetwork/issues/1913)
+* [#1912](https://github.com/openfoodfoundation/openfoodnetwork/issues/1912)
 
 ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
 
 **Potential Issues:**
 
-* [#1452](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1452)
-* [#1428](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1428)
 * [#1177](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1177)
 * [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
+* [#1510](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1510)
+* [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459)
 
 ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
 
 **Potential Issues:**
 
-* [#1386](https://github.com/Code4SocialGood/c4sg-web/issues/1386)
-* [#1388](https://github.com/Code4SocialGood/c4sg-web/issues/1383)
-* [#1362](https://github.com/Code4SocialGood/c4sg-web/issues/1362)
-* [#1361](https://github.com/Code4SocialGood/c4sg-web/issues/1361)
+* [#1733](https://github.com/Code4SocialGood/c4sg-web/issues/1733)
+* [#1728](https://github.com/Code4SocialGood/c4sg-web/issues/1728)
+* [#1727](https://github.com/Code4SocialGood/c4sg-web/issues/1727)
+* [#1724](https://github.com/Code4SocialGood/c4sg-web/issues/1724)
+* [#1723](https://github.com/Code4SocialGood/c4sg-web/issues/1723)
 
+### [Prometheus](https://github.com/prometheus/prometheus)
+
+**Potential Issues:**
+
+* [#3537](https://github.com/prometheus/prometheus/issues/3537)
+* [#3411](https://github.com/prometheus/prometheus/issues/3411)
+* [#2676](https://github.com/prometheus/prometheus/issues/2676)
+* [#1237](https://github.com/prometheus/prometheus/issues/1237)
 
 If, as a group, you are all struggling to make progress towards a contribution, you are free to choose another open-source codebase to work with. You all must agree on another codebase as we only want a single presentation per group. A good way to search for additional repos is to search GitHub for open issues with labels like "HTML", "CSS", "UI", "UX", "design", "docs", "enhancement". An example search query can be found [here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Acss).
 
 
 <!--
+
+### [Prometheus](https://github.com/prometheus/prometheus)
+
+**Potential Issues:**
+
+* [#3537](https://github.com/prometheus/prometheus/issues/3537)
+* [#3411](https://github.com/prometheus/prometheus/issues/3411)
+* [#2676](https://github.com/prometheus/prometheus/issues/2676)
+* [#1237](https://github.com/prometheus/prometheus/issues/1237)
 
 
 ### [Hospital Run](https://github.com/HospitalRun/hospitalrun-frontend)

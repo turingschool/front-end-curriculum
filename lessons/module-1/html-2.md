@@ -3,9 +3,6 @@ title: HTML II - Forms, Devtools, Accessibility Best Practices
 length: 180
 tags: html, introduction, practice
 ---
-# Pre-Teach Resources
-* [Joe Dolson: ARIA - Roles, States and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
-* [ARIA, Accessibility APIs and coding like you give a damn! – Léonie Watson / Front-Trends 2015](https://www.youtube.com/watch?v=qdB8SRhqvFc)
 
 # Overview
 Now that you have a handle on the basics of structuring content for an HTML file:
@@ -16,10 +13,15 @@ Now that you have a handle on the basics of structuring content for an HTML file
 
 # Docs
 
+HTML Guide and form structure
 * [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
 * [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+
+Dev Tools
 * [Chrome Dev Tools Docs](https://developers.google.com/web/tools/chrome-devtools/)
 * [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
+
+Accessibility
 * [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
 * [MDN Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
@@ -51,8 +53,8 @@ Partner up and answer the following questions:
 Copy the form code below into your own Pen, and then refactor as follows:
 
 * Validate for email type
-* Replace all `div` elements with correct semantic elements
-* Add a radial check box with atleast three options
+* Replace all `div` elements with correct semantic elements - do not use any class
+* Add a set of radio buttons with at least three options - only allowing one to be selected at a time
 * Include placeholders for name, email, and message
 * Add a drop down for favorite color with at least three options
 * Use an input for submit instead of a button
@@ -98,7 +100,7 @@ For now, we're only going to focus on the first panel: Elements.
 
 ##### HELPFUL FOR:
 * debugging layout and styling issues
-* checking DOM events
+* checking DOM Events
 
 The elements panel lets you view the entire HTML source of the current page you are viewing. From here, you can edit, add or remove content and elements directly on the page. Though your changes won't be saved (any changes made here will be lost upon refreshing the page), sometimes it's helpful to make tweaks directly in this panel so you can see what effect the changes will have on your application before you implement them.
 
@@ -154,7 +156,7 @@ There are a few core rules to keep in mind when using ARIA:
 * If you can use native HTML elements and attributes to communicate the proper semantics (like `<nav>`, `<header>`, `<aside>`, `<button>`, etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
 * Don’t change native semantics, unless you really have to.
 * All interactive controls such as a button, sliding control, or drag-and-drop widget must be usable by the keyboard.
-* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__.
+* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. An example of this would be hiding icons that have been added to display extra decoration or branding. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__.
 * Lastly, all interactive elements such as form fields should have a name associated with them. Something like a `<label>` is perfect, and with ARIA, you can even specify that a certain element is labelled by or described by another element.
 
 ### Semantic HTML
@@ -201,10 +203,29 @@ good: <img src="mountain.jpg" alt="The cascade mountains at sunset in January" /
 <a class="facebook-icon" title="Facebook"><a/>
 ```
 
-## ARIA Roles & Examples
+### Lang attribute on Yo HTML!
 
-__Define your main header, content, and footer__
-The banner, main, and contentinfo roles are meant to be used only one time per page, and they help screen readers figure out how a page is laid out on a high-level.
+* Low hanging fruit for HTML 
+* As far as non-english speaking screen readers are concerned, when they land on an english-speaking web page without lang attribute, it will be spoken with the screen reader language - making it impossible to understand - unless the screen reader user disables language switching in the screen reader.
+* Just do it
+
+```html
+<html lang="en">
+</html>
+```
+
+## ARIA Landmark Roles
+
+One of the easiest ARIA features to implement, and one that provides significant immediate benefits to screen reader users, is landmark roles. To add them, simply add a relevant role attribute to an appropriate container within your HTML. This allows the screen reader to quickly jump to that section of the page. Below, you will find an example of how you might utilize the different landmark roles for your layout:
+
+![Landmark Layout](/assets/images/landmarks.png)
+
+__Take note:__
+
+* The banner, main, and contentinfo roles are meant to be used only one time per page
+* Take care in using `role="application"` - When assistive technologies encounter content that’s marked up with `role=”application”` they stop listening for users’ keystrokes and hand off all functionality to the application. This is due to an expectation that the application has its own model for navigating and operating all controls by keyboard. It generally should not be used.
+
+Below you will find a code example of defining three landmark roles:
 
 ```html
 <header role="banner">
@@ -222,18 +243,19 @@ __Label and Describe Elements__
 
 * `aria-label`: property that defines a short title for an element
 * `aria-labelledby`: references the ID of another element, which is a short title for the element
-* `aria-describedby`: is just like aria-labelledby – but is meant for longer descriptions instead of short titles
-
-```html
-<button aria-describedby="revertTooltip">Revert</button>
-<div role="tooltip" id="revertTooltip">Reverting will undo any changes that have been made since the last save.</div>
-```
+* `aria-describedby`: is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
 
 ```html
 <div class="lightbox" aria-label="Image Lightbox">
   <img src="foo.jpg" alt="Foo" />
 </div>
 ```
+
+```html
+<button aria-describedby="revertTooltip">Revert</button>
+<div role="tooltip" id="revertTooltip">Reverting will undo any changes that have been made since the last save.</div>
+```
+
 Now it’s important to remember that we don’t need to label everything, especially if there’s already a predefined way of labelling an element such as a `<figcaption>`, `title` attribute, or an image’s `alt` attribute. We only need to label something if the HTML doesn’t clearly indicate the purpose of an important element.
 
 -------------------------------------------------
@@ -250,7 +272,7 @@ There are a lot of various ARIA roles and attributes that can be applied to form
 
 Important to remember:
 
-1. Each form field should have a valid `<label>`. Either wrap the form field or reference it with the `for` attribute. If this isn’t possible, then you can use the ARIA labelling methods discussed above. You cannot substitute the placeholder attribute for a label because it’s not meant to be handled as a label; a placeholder is meant to simply be an example of what you’re supposed to enter in that field.
+1. Each form field should have a valid `<label>` that is referenced with the `for` attribute. If this isn’t possible, then you can use the ARIA labelling methods discussed above. You cannot substitute the placeholder attribute for a label because it’s not meant to be handled as a label; a placeholder is meant to simply be an example of what you’re supposed to enter in that field.
 2. Forms are often tabbed-through via the keyboard, so tab order should make sense. Normally this isn’t a concern, but if you position or hide certain input fields via CSS/Javascript, then the tab order might become unintuitive. When this happens, you can set the tabindex attribute of an element to make sure that the tab order is how you expect it to be.
 
 ```html
@@ -281,7 +303,6 @@ Important to remember:
   <input type="submit" value="Submit" />
 </form>
 ```
-
 
 ## Your Challenge
 Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes.
@@ -316,11 +337,19 @@ Take the following HTML snippet and make it accessible using explicit semantic H
   <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
 </div>
 ```
-
 <!-- solution: http://codepen.io/team/turing/pen/PWKMga?editors=1000 -->
+
+## Perfect is the enemy of good
+
+For many people, the fear of not getting EVERYTHING right when it comes to accessibility causes them to not do accessibility at all. Don't be that person.
+
+```html
+Helping one group of people is a good place to start. There's a temptation with accessibility to think it has to be perfect. This is technology. This is people. We don't do perfect. It never happens. So, really, please don't go out there and think that if you're going to do accessibility that you have to get everything right. Perfect is, very much, the enemy of good. - Leonie Watson, Accessibility Engineer
+```
 
 ## Additional Resources
 
+* [Web Accessibility in Mind](https://webaim.org/articles/userperspective/)
 * [HTML Nu Validator](https://validator.w3.org/nu)
 * [9 Tools for Website Accessibility
   Testing](https://www.shopify.com/partners/blog/website-accessibility-testing)

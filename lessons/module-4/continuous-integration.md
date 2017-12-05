@@ -16,7 +16,7 @@ By the end of this lesson, you will:
 ## What is Continuous Integration
 Continuous Integration is a jargony buzzword that means "releasing changes fast and often". The goal of CI is to ensure stability by releasing smaller changesets at a time that are each fully tested. Many projects these days will rely on some sort of automated service to handle testing these changesets and facilitating frequent releases.
 
-The two most common CI services you'll hear about are [TravisCI](https://travis-ci.org/) and [CircleCI](https://circleci.com/). Travis has been around much longer than Circle, but the jury is still out on which is better. Today we'll focus on integrating CircleCI to perform a full build of an application, test it, and deploy it to Heroku.
+Somre of the most common CI services you'll hear about are [TravisCI](https://travis-ci.org/), [CircleCI](https://circleci.com/) and Jenkins. They all behave in a similar manner, though the setup and configuration process for each tool is slightly different. Today we'll focus on integrating CircleCI to perform a full build of an application, test it, and deploy it to Heroku.
 
 ## Why Use a CI Tool?
 Being able to run and test a full build of your application before you release it to production is important. Think of how easy it was to deploy new changes to your production apps on Heroku. You would make a commit, and it would immediately be reflected on production after running `git push heroku master`. What if that commit introduced breaking changes? There is no safeguard or filter against pushing up bad code. With a CI tool like CircleCI, we can still take advantage of automatic deployments, but we also get an extra layer of assurance that our app is in good condition before any changes are pushed live.
@@ -38,6 +38,10 @@ That's it!! Easy, right? Any time you push new commits to your remote repository
 CircleCI automatically infers a lot of information about your application. This allows it to work straight out of the box for us when we first start following a new repo. However, as our applications get more complex, we're likely going to want to configure certain build settings to ensure a correct representation of our application's stability.
 
 As you may have noticed, front-end repos are made up of 90% config files and 10% actual code. In order to configure CircleCI, we're going to add a `circle.yml` file to the root of our repository. Any time CircleCI runs a build, it will look for this file and follow any instructions we provide.
+
+## What is a Build?
+
+Think of all the steps you have to take if you want to collaborate on a classmate's project. You have to fork their repo, clone it down locally, make sure you have an up-to-date version of Node (or some other platform) on your machine, install any dependencies, start up a server and maybe run a file watcher. Sometimes more complex projects require additional steps. This setup process is called a "build". It's all the things you need to do to get your app up and running. CI tools will run through all of these steps (and then some!) to make sure the application is in a stable, working state before it goes to production.
 
 ## Phases of the Build Process
 The yml file can define settings for various phases of the build process. The phases of a build process are:

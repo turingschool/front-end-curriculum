@@ -10,11 +10,15 @@ tags: javascript, js, this, keyword
 
 The keyword `this` in javascript can be confusing. Depending on where `this` is used in code, it can refer to different things.
 
-There are several rules which determine what the value of `this` is at any given point in time.
+One key thing to remember is we can only change the value of the keyword `this` inside of an traditional function. There are a few ways we can invoke/execute a traditional function to change the value of this inside of the function.
+
+In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions where the value of `this` is determined when the arrow function is declared.
+
+With that being said, there are several rules which determine what the value of `this` is at any given point in time.
 
 ## Rule 1 - Default _this_ refers to the global object
 
-By default _this_ refers to the global object. In a browser, the global object is the window.
+By default _this_ refers to the global object. In a browser, the global object is the window. If we don't change what the value of `this` is, it will refer to the global object.
 
 ```javascript
 console.log(this);
@@ -25,10 +29,6 @@ function logThis() {
 
 logThis();
 ```
-
-There are a few ways we can change the value of `this` to be something different than the global object. All of these methods involve executing an ES5 function.
-
-In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions where the value of `this` is determined when the arrow function is declared.
 
 ## Rule 2 - When executing a function as a method on an object, _this_ refers to that object.
 
@@ -82,6 +82,30 @@ voyager2.logThis();
 Because of this rule, I can create a function once, add it to whichever objects I want and `this` will always refer to the object I execute the function on.
 
 Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
+
+Exercise: Move the logThis function so that when you execute the function it logs some of the following nested objects.
+```js
+function logThis () {
+  console.log( this );
+}
+
+const denver = {
+   buildings: {
+    athletic: [
+      { name: "Coors Field", floors: 4, completed: 1995, height: 64 },
+      { name: "Pepsi Center", floors: 5, completed: 1999, height: 68 }
+    ],
+    medical: [
+      { name: "Saint Joseph Hospital", floors: 12, completed: 1873, height: 120, beds: 365 },
+      { name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }
+    ]
+  },
+  restaurants: [
+    { name: "Fruition Restaurant", type: "Fine Dining", number_of_reviews: 788 },
+    { name: "Sam's No. 3", type: "Cheap Eats", number_of_reviews: 1870 },
+  ]
+};
+```
 
 ## Rule 3 - _this_ in function code invoked using the new operator refers to the newly created object.
 
@@ -158,3 +182,28 @@ The value of _this_ is set when the function is executed.
 
 ### () => {}
 The value of _this_ is set when the function is created.
+
+Example
+```
+var vampire = {
+  name: 'dracula',
+  dislikes: [
+    'garlic',
+    'crosses',
+    'stakes'
+  ],
+  whatDoYouDislike: function () {
+    // console.log(this)
+    
+    // this.dislikes.forEach(( item ) => {
+    //   console.log(this.name + ' dislikes ' + item)
+    // })
+    
+    this.dislikes.forEach(function ( item ) {
+      console.log(this.name + ' dislikes ' + item)
+    }.bind(this))
+  }
+}
+
+vampire.whatDoYouDislike()
+```

@@ -118,7 +118,7 @@ describe('Client Routes', () => {
       response.res.text.should.equal('We\'re going to test all the routes!');
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 });
@@ -148,7 +148,7 @@ describe('Client Routes', () => {
       response.res.text.should.equal('We\'re going to test all the routes!');
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 
@@ -159,7 +159,7 @@ describe('Client Routes', () => {
       response.should.have.status(404);
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 });
@@ -202,7 +202,7 @@ describe('Client Routes', () => {
       response.res.text.should.equal('We\'re going to test all the routes!');
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 
@@ -213,7 +213,7 @@ describe('Client Routes', () => {
       response.should.have.status(404);
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 });
@@ -248,7 +248,7 @@ describe('API Routes', () => {
         response.body[0].enrolled.should.equal(true);
       })
       .catch(err => {
-        console.log(err);
+        throw err;
       });
     });
   });
@@ -282,7 +282,7 @@ In another `describe` block, let's write the test first:
 ```javascript
 describe('POST /api/v1/students', () => {
   it('should create a new student', () => {
-    chai.request(server)
+    return chai.request(server)
     .post('/api/v1/students') // Notice the change in the verb
     .send({                   // Here is the information sent in the body or the request
       lastname: 'Knuth',
@@ -300,7 +300,7 @@ describe('POST /api/v1/students', () => {
       response.body.enrolled.should.equal(true);
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 });
@@ -365,7 +365,7 @@ We need to design our server so that it does not accept this kind of situation w
 
 ```javascript
 it('should not create a record with missing data', () => {
-  chai.request(server)
+  return chai.request(server)
   .post('/api/v1/students')
   .send({
     lastname: 'Knuth',
@@ -376,7 +376,7 @@ it('should not create a record with missing data', () => {
     response.body.error.should.equal('You are missing data!');
   })
   .catch(err => {
-    console.log(err);
+    throw err;
   });
 });
 ```
@@ -477,7 +477,7 @@ describe('Client Routes', () => {
       response.res.text.should.equal('We\'re going to test all the routes!');
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 
@@ -488,7 +488,7 @@ describe('Client Routes', () => {
       response.should.have.status(404);
     })
     .catch(err => {
-      console.log(err);
+      throw err;
     });
   });
 });
@@ -523,7 +523,7 @@ describe('API Routes', () => {
         response.body[0].enrolled.should.equal(true);
       })
       .catch(err => {
-        console.log(err);
+        throw err;
       });
     });
   });
@@ -548,7 +548,7 @@ describe('API Routes', () => {
         response.body.enrolled.should.equal(true);
       })
       .catch(err => {
-        console.log(err);
+        throw err;
       });
     });
 
@@ -564,7 +564,7 @@ describe('API Routes', () => {
         response.body.error.should.equal('You are missing data!');
       })
       .catch(err => {
-        console.log(err);
+        throw err;
       });
     });
   });
