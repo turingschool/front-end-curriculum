@@ -299,7 +299,7 @@ that there may be an easier, or at least more succinct way of writing this code.
 to use the new ES7 `async/await` syntax. Let's lean on our new test suite to refactor our code.
 
 ```javascript
-// AddGroceryForm.test.js
+// AddGroceryForm.js
 
 async addGrocery(event) {
   event.preventDefault();
@@ -318,7 +318,7 @@ async addGrocery(event) {
     this.setState({
       grocery: {
         name: '',
-        quantity: '' 
+        quantity: ''
       }
     }, updateGroceryList(groceries));
   } catch(error) {
@@ -408,7 +408,7 @@ than 400, my helper function should resolve to an object, otherwise, I should ex
 `resolves/rejects` happening in the test. These expectation helpers are built into Jest, and allow you get the resolved
 or rejected values from asynchronous functions.
 
-Now that we have our tests, lets write our function:
+With our test in hands, lets write our function:
 
 ```javascript
 // apiCalls.js
@@ -430,6 +430,32 @@ export const addGrocery = async (grocery) => {
 }
 ```
 
+With our new reusable function, our component method now knows nothing of fetch, and instead `await`'s our asynchronous
+function from apiCalls.js.
+
+```javascript
+// AddGroceryForm.js
+
+async addGrocery(event) {
+  event.preventDefault();
+  const { updateGroceryList } = this.props;
+  const grocery = this.state.grocery;
+
+  try {
+    const data = await addGrocery(grocery)
+    this.setState({
+      grocery: {
+        name: '',
+        quantity: ''
+      }
+    }, updateGroceryList(data.groceries));
+  } catch(error) {
+    this.setState({
+      errorStatus: 'Error adding grocery'
+    })
+  };
+}
+```
 Now that we've isoloated and tested our fetch functionality, testing our component method is simplified, because we can
 mock the response from our new `addGrocery` function. We no longer need to test that fetch is being called in the
 component tests, we only need to test that the data is handled correctly after the function is called.
