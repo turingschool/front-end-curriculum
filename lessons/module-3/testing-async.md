@@ -531,3 +531,8 @@ describe('AddGroceryForm', () => {
 
 ## Final thoughts
 As a rule of thumb, code is easier to test when it is doing less. By separating our API calls from component code, it’s easier to test the expected behavior of both pieces. By using the mocking and asynchronous expectations that are available in Jest, it’s easy to mimic the behavior of an API, and ensure that your application responds as you expect it should.
+
+## Your turn
+This isn't the only fetch call which needs to be tested. Notice the fetch call that's happening in the
+`componentDidMount` method of App.js? With a partner, extract that functionality into a helper method, and test both the
+helper method, and the App, using the same patterns we just went over.
