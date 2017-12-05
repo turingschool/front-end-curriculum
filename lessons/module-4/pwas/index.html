@@ -46,7 +46,7 @@
 
           <div class="discuss">
             <h4>On The Whiteboard</h4>
-            <p>Take a couple of minutes to play with the applications you have installed on your mobile devices. Use them with wifi on, wifi off, airplane mode, etc. Take note of how they look, how you use them, and the overall feel and experience. Does the app you're looking at have a web app equivalent? How is it similar to the web app? How is it different?</p>
+            <p>Take a couple of minutes to play with the applications you have installed on your mobile devices. Use them with wifi on, wifi off, airplane mode, etc. Take note of how they look, how you use them, and the overall feel and experience. How do you access the application? What happens when you have different settings on your phone? Does the app you're looking at have a web app equivalent? How is it similar to the web app? How is it different?</p>
             <p>Make a list on the whiteboard of these similarities and differences.</p>
           </div>
 
@@ -80,7 +80,7 @@
           <div class="discuss">
             <h4>Practice</h4>
             <p>Pick an app from <a href="https://pwa.rocks/">pwa.rocks</a> and open it in your browser. Using Chrome Canary, open developer tools and navigate to the 'Audits' panel. Click on the 'Perform An Audit' button and run an audit for 'Progressive Web App'.</p>
-            <p>When the audit is finished running, dig into the failing and passing checks that are listed. Expan each one to see what requirement it refers to.</p>
+            <p>When the audit is finished running, dig into the failing and passing checks that are listed. Expand each one to understand what requirement it refers to.</p>
           </div>
 
         </section>
@@ -88,13 +88,21 @@
 
         <section>
           <h2><a name="Manifest">The Manifest File</a></h2>
-          <p>Foo</p>
+          <p>We previously mentioned that a PWA must be installable and launchable from your device. The way we can achieve this is by adding a <b>Web App Manifest</b> file to our applications. The manifest file contains a number of configuration options information about your app.</p>
         </section>
         <hr />
         
         <section>
           <h2><a name="HTTPS">Serving Content over HTTPS</a></h2>
-          <p>Foo</p>
+          <p>One of the other main requirements of a Progressive Web App is that all content must be served over HTTPS. You may have noticed in some of the PWAs you looked at earlier, that their audits would pass on the check that says 'Serves content over HTTPS' but fail on the check that says 'HTTP content redirected to HTTPS'.</p>
+          <p>This is because it's not simply enough to <b>support</b> HTTPS in your applications, you must <b>enforce</b> HTTPS. This means that if someone types <code>http://yourapp.com</code>, your app must automatically redirect them to <code>https://yourapp.com</code>. This takes a little bit of work, but can be done in just a few lines of code.</p>
+
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>Do some research on how to redirect all HTTP content to HTTPS, and try to find a solution that works for Node/Express applications. Then, using your Palette Picker projects, redirect all HTTP traffic to HTTPS.</p>
+            <p><em>Hint: You'll be adding some middleware to your server file that will detect if a request came in with HTTP, and redirect to HTTPS.</em></p>
+          </div>
+
         </section>
         <hr />
 
@@ -114,6 +122,7 @@
           <ul>
             <li><a href="http://blog.ionic.io/what-is-a-progressive-web-app/">Ionic Blog - What is a PWA?</a></li>
             <li><a href="https://developers.google.com/web/progressive-web-apps/checklist">PWA Checklist</a></li>
+            <li><a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web App Manifest</a></li>
             <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse Audits</a></li>
           </ul>
         </section>
