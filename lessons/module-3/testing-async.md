@@ -182,11 +182,9 @@ describe('AddGroceryForm', () => {
 
   const mockUpdateGroceryList = jest.fn()
 
-  window.fetch = jest.fn().mockImplementation(() => new Promise((resolve, reject) => {
-    resolve({
-      json: () => new Promise((resolve, reject) => {
-        resolve(mockGroceries)
-      })
+  window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+    json: () => Promise.resolve({
+      groceries: mockGroceries,
     })
   }))
 
@@ -357,14 +355,12 @@ import { addGrocery } from './apiCalls'
 
 describe('addGrocery', () => {
   beforeEach(() => {
-    window.fetch = jest.fn().mockImplementation(() => new Promise(() => ({
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
-      json: () => new Promise((resolve, reject) => {
-        resolve({
-          groceries: mockGroceries,
-        })
+      json: () => Promise.resolve({
+        groceries: mockGroceries,
       }),
-    })))
+    }))
   })
 
   it('fetch is called with the correct params', async () => {
@@ -395,7 +391,7 @@ describe('addGrocery', () => {
   })
 
   it('throws an error if status code is not ok', () => {
-    window.fetch = jest.fn().mockImplementation(() => ({
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 500,
     }))
 
