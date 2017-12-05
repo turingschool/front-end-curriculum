@@ -312,82 +312,16 @@ let { height, width } = Dimensions.get(`window`);
 
 ### Let's Talk Abstracting Away the Platform
 
-This will happening: You are tapping away, building up some slick looking scene with animations and fancy colors with the xcode simulator up and running. You want to check out your work so you save and watch the xcode hot reload. Only it doesn't. You hit save 12 more times, add in a backgroundColor: red just for good measure, and still nothing. 10 out of 10 times it's because you were changing your index.android.js file. Angered at the universe for birthing two mobile platforms, you select-all and copy paste into index.ios.js. All is right in the world again.
+You can write most of your code platform-agnostic but then use the `ios` or `android` extensions on certain files to deal only with platform specific differences.
 
 The duality of mobile development is annoying. Thankfully, we can abstract away the constant battle of `index.android.js` vs. `index.ios.js`. Let's do that in our app by creating an `App.js` component that is consumed by both files.
 
-You can write most of your code platform-agnostic and use the `ios` or `android` extensions on certain files to deal only with platform specific differences.
 
-```js
-import React, { Component } from 'react';
-import { StyleSheet, Dimensions, Platform, Text, View, Switch, Navigator } from 'react-native';
-import { DinoScroll } from './DinoScroll';
 
-export default class App extends Component {
-
-  state = {
-    horizontalIsOn: false,
-  };
-
-  render() {
-    return (
-      <View style={styles.container}>
-        <Text style={styles.header}>Welcome to Bouncing Dinos!</Text>
-        <Text>Scroll Horizontal</Text>
-        <Switch
-          onValueChange={(value) => this.setState({horizontalIsOn: value})}
-          style={{marginBottom: 10}}
-          value={this.state.horizontalIsOn} />
-        <DinoScroll horizontal={this.state.horizontalIsOn} />
-      </View>
-    );
-  }
-}
-
-let { height, width } = Dimensions.get(`window`);
-const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      top: 50,
-      borderWidth: 25,
-    },
-    header: {
-      fontSize: 24,
-      fontWeight: '900',
-      textAlign: 'center',
-      marginBottom: 25,
-    },
-    dinoList: {
-      padding: 10,
-    }
-});
-```
-
-This is exactly what we had before, except we are exporting the `App` component instead of registering it with `AppRegistry`. Now for our `index.android.js` and `index.ios.js` files:
-
-```js
-import React, { Component } from 'react';
-import { AppRegistry } from 'react-native';
-import App from './app/App';
-
-class Main extends Component{
-  render() {
-    return (
-      <App />
-    );
-  }
-}
-
-AppRegistry.registerComponent('BouncingDinos', () => Main);
-```
-
-Clean, small, easy to read files that you can easily add platform dependent code without worrying about your main app.
 
 ### Let's Talk Debugging
 
-As we all know, we are no longer in a browser where we can throw debuggers and console.log()s to our heart's desire. But thankfully React Native gives us a couple of tools to make debugging like the good old times. First, you can throw a `console.error('whatver')` in your React Native code and redbox (not the movie rental but an error messaging feature) with throw up a red screen with whatever you put in `console.error()`.
+As we all know, we are no longer in a browser where we can throw debuggers and console.log()s to our heart's desire. But thankfully React Native gives us a couple of tools to make debugging like the good old times. First, you can throw a `console.error('whatver')` in your React Native code and redbox (not the movie rental but an error messaging feature) will throw up a red screen with whatever you put in `console.error()`.
 
 An even better feature is the ability to turn on remote debugging through Chrome. With your ioS emulator running, click `cmd+control+z` to pull up the dev tools. Select Debug JS Remotely and a web browser pointed at `http://localhost:8081/debugger-ui` will open. Open up the console and select the `Pause on Exceptions` button. Then throw a debugger in your JS and reload the emulator. The debugger should trigger like a normal debugger and you can inspect this.props ...etc.
 
