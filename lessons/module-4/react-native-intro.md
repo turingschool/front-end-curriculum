@@ -71,6 +71,9 @@ Let's setup our application. Run these commands in your terminal:
 $ react-native init DinoBounce
 $ cd DinoBounce
 # To run in iOS
+# Start another window in your terminal
+$ npm start
+# In the other terminal window
 $ react-native run-ios
 ```
 
