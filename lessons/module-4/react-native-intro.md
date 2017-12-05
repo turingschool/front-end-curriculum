@@ -11,12 +11,12 @@ By the end of this lesson, you will:
 * Understand the differences between React and React Native
 * Understand how to use an iOS simulator
 * Understand the different native components and how to style them
-* Know how to debug React Native with warnings, errors and Chrome debugger
+* Know how to debug React Native with warnings, errors, and Chrome debugger
 * Be familiar with when to use the different React lifecycle methods for mobile development
 
 ---
 
-Welcome to the world of mobile development. React Native is just like the React you know and love for the web, but it complies JavaScript to native code (Objective-C, Java) for a specific native OS. So you get the performance of native apps while just writing JS! You also get the benefits of reusable components, state management with Redux, and Chrome debugging tools.
+Welcome to the world of mobile development. React Native is just like the React you know and love for the web, but it compiles JavaScript to native code (Objective-C, Java) for a specific native OS. So you get the features of native apps while just writing JS! You also get the benefits of reusable components, state management with Redux, and Chrome debugging tools.
 
 Here are some things we already know:
 
@@ -42,35 +42,43 @@ brew install watchman
 npm i -g react-native-cli
 ```
 
-Now we are ready to create our first mobile app. We will be building a really simple app that scrolls through a few images and has a couple of UI components that change state. Using the React Native CLI, it's super easy to get your project up and running. We are going to focus today on just iOS because we don't need to install or sign up for an emulator - xcode provides us with one:
+Now we are ready to create our first mobile app. We will be building a really simple app that scrolls through a few images and has a couple of UI components that change state. Using the React Native CLI, it's super easy to get your project up and running. We are going to focus today on just iOS because we don't need to install or sign up for an iOS emulator - xcode provides us with one. Here are some commands you can use to setup and emulate a React Native app:
 
-```js
-// Create our app
+```bash
+# Create our app
 $ react-native init DinoBounce
 $ cd DinoBounce
-// To run in iOS
+# To run in iOS
 $ react-native run-ios
-// To run in Android
+# To run in Android
 $ react-native run-android
-// If you want to pick a specific device on iOS, set it with the simulator flag
+# If you want to pick a specific device on iOS, set it with the simulator flag
 $ react-native run-ios --simulator="iPhone 4s"
-// To check all the available devices you can run with iOS, run the below code. Pretty awesome that you can emulate iPhones, Ipads, iWatchs, Apple Tv
+# To check all the available devices you can run with iOS, run the below code. Pretty awesome that you can emulate iPhones, Ipads, iWatchs, Apple Tv
 $ xcrun simctl list devices
 ```
 
 ### Additional Android setup
-[Follow these instructions to get setup on a free Android emulator](http://facebook.github.io/react-native/releases/0.23/docs/android-setup.html#content)
+
+If you're interested in emulating your application on an Android device, then [follow these instructions to get setup on a free Android emulator](http://facebook.github.io/react-native/releases/0.23/docs/android-setup.html#content)
 
 ### First Time Around the Block
 
-A React Native app looks very similar to React apps you've seen before. You use render to display information to the user, pass around props and state, and use the lifecycle components to manage state. One of the first differences you will notice is that React Native apps come with two different `index.js` files:
+Let's setup our application. Run these commands in your terminal:
 
-* `index.android.js`
-* `index.ios.js`
+```bash
+# Create our app
+$ react-native init DinoBounce
+$ cd DinoBounce
+# To run in iOS
+$ react-native run-ios
+```
 
-Take a wild guess why they exist. Later on we will show you how to write most of your code platform-agnostic and use the `index.js` files to deal only with platform specific differences. But for now just think of these as the same file.
+The emulator should start, and when your terminal says `** BUILD SUCCEEDED **`, your app should load and you will see the boilerplate React Native screen. 
 
-Another change between normal React and React Native is that instead of using HTML elements we use mobile components. These are native UI components and can vary depending on the platform. The nice thing is that we still utilize JSX so it really isn't too big a difference. Here's a general mapping of the most common components vs. HTML:
+A React Native app looks very similar to React apps you've seen before. You use `render()` to display information to the user, pass around props and state, and use the lifecycle components to manage state. The React Native app entry point is the `index.js` file at the root.
+
+One major change between normal React and React Native is that instead of using HTML elements, we use mobile components - there is no HTML DOM like we think of when developing web apps in the browser. These are native UI components and can vary depending on the platform (iOS or Android). The nice thing is that we still utilize JSX so it really isn't too big a difference. Here's a general mapping of the most common native components vs. HTML:
 
 ```js
 <View /> = <div>
@@ -95,18 +103,26 @@ But this being mobile, we have to be able to respond to user gestures and naviga
 
 You can see that IOS tends to have an iOS specific component (...Android does too on some components) because iOS is no fun and doesn't like you customizing components. You can use `<Navigator />` for iOS, but if you are building strictly for Apple products using `<NavigatorIOS />` leverages native UIKit navigation.
 
-To register your app, you have to use `AppRegistry.registerComponent`.
+Part of the entry point file is registering the main application component. To register your app, you have to use `AppRegistry.registerComponent`.
 
 Let's dive into some code to check it out. We are going to build out a very simple app that scrolls some dinos. We've set you up with images and a basic `App` component. We will walk through the rest of the code and build it together.
 
-First, let's check out our `index.ios.js`:
+First, there is some boilerplate code in the `index.js` file, which we won't change:
+
+```js
+import { AppRegistry } from 'react-native';
+import App from './App';
+
+AppRegistry.registerComponent('DinoBounce', () => App);
+```
+
+However, we don't want the boilerplate code in the `App.js` file. Instead, use this basic "Hello World" code in the `App.js`:
 
 ```js
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet } from 'react-native';
-import { Text, View } from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <Text style={styles.hello}>Hello World</Text>
@@ -121,19 +137,19 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     top: 200,
   }
-})
-
-AppRegistry.registerComponent('BouncingDinos', () => App);
+});
 ```
 
-Here we are creating a App component that returns text. What an app! We register our app as BouncingDinos, and pass in the App component - piece of cake. Let's build out that App component now. It will have some text with a switch that allows you to change our dinos to scroll horizontal vs. vertical:
+Here we are creating a App component that returns text. What an app! We register our app as BouncingDinos, and pass in the App component - piece of cake. Let's build out that App component now. It will have some text with a switch that allows you to change our dinos to scroll horizontal vs. vertical.
+
+First, create a directory called `app` in the root of your project. Then in your `App.js` file:
 
 ```js
 import React, { Component } from 'react';
 import { StyleSheet, Dimensions, Platform, Text, View, Switch, Navigator } from 'react-native';
 import { DinoScroll } from './app/DinoScroll';
 
-class App extends Component {
+export default class App extends Component {
 
   state = {
     horizontalIsOn: false,
@@ -172,16 +188,20 @@ const styles = StyleSheet.create({
     dinoList: {
       padding: 10,
     },
-})
+});
+```
 
-AppRegistry.registerComponent('BouncingDinos', () => App);
+As we mentioned before, CSS animations are different in React Native - we'll use the `react-native-animatable` package to help with animations. In your terminal, run:
+
+```bash
+npm install react-native-animatable --save
 ```
 
 Now for the DinoScroll component. We will import ScrollView, which allows a user to scroll on a mobile device kinda like overflow: scroll:
 
 ```js
 import React, { Component } from 'react';
-import { AppRegistry, StyleSheet, Text, View, Image, ScrollView, Animated } from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView, Animated } from 'react-native';
 import * as Animatable from 'react-native-animatable';
 
 export class DinoScroll extends Component {
@@ -200,10 +220,10 @@ export class DinoScroll extends Component {
     return (
       <ScrollView
         horizontal={horizontal} >
-        <Image style={[styles.dino]} source={require('./images/allasaur.jpeg')} />
-        <Image style={[styles.dino]} source={require('./images/pterodactyl.jpg')} />
-        <Image style={[styles.dino]} source={require('./images/stegosaurus.jpeg')} />
-        <Image style={[styles.dino]} source={require('./images/trex.png')} />
+        <Image style={[styles.dino]} source={{uri: 'https://www.newdinosaurs.com/wp-content/uploads/2016/01/42_allosaurus_emily_willoughby.jpg'}} />
+        <Image style={[styles.dino]} source={{uri: 'https://www.everythingdinosaur.com/wp-content/uploads/2016/10/Bullyland-Pteranodon-model.jpg'}} />
+        <Image style={[styles.dino]} source={{uri: 'https://images-na.ssl-images-amazon.com/images/I/81T1sAImqwL._SX463_.jpg'}} />
+        <Image style={[styles.dino]} source={{uri: 'https://target.scene7.com/is/image/Target/23949202?wid=520&hei=520&fmt=pjpeg'}} />
       </ScrollView>
     )
   }
@@ -217,7 +237,7 @@ const styles = StyleSheet.create({
     shadowColor: '#000',
     shadowRadius: 5,
   }
-})
+});
 ```
 
 ### Let's Talk Styles
@@ -295,6 +315,8 @@ let { height, width } = Dimensions.get(`window`);
 This will happening: You are tapping away, building up some slick looking scene with animations and fancy colors with the xcode simulator up and running. You want to check out your work so you save and watch the xcode hot reload. Only it doesn't. You hit save 12 more times, add in a backgroundColor: red just for good measure, and still nothing. 10 out of 10 times it's because you were changing your index.android.js file. Angered at the universe for birthing two mobile platforms, you select-all and copy paste into index.ios.js. All is right in the world again.
 
 The duality of mobile development is annoying. Thankfully, we can abstract away the constant battle of `index.android.js` vs. `index.ios.js`. Let's do that in our app by creating an `App.js` component that is consumed by both files.
+
+You can write most of your code platform-agnostic and use the `ios` or `android` extensions on certain files to deal only with platform specific differences.
 
 ```js
 import React, { Component } from 'react';
