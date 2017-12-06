@@ -1,4 +1,10 @@
-# Git Flow
+---
+title: Git Flow
+length: 0
+tags: git, github
+---
+
+### A Recommended Workflow for Teams 
 
 1. git checkout -b <branch_name> (this creates a new branch and checks out to that same branch)
 2. do work
