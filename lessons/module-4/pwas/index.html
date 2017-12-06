@@ -89,8 +89,12 @@
         <section>
           <h2><a name="Manifest">The Manifest File</a></h2>
           <p>We previously mentioned that a PWA must be installable and launchable from your device. The way we can achieve this is by adding a <b>Web App Manifest</b> file to our applications. The manifest file contains a number of configuration options and information about your app such as logos, brand colors, installation setup, etc.</p>
-          <p>We can set up a manifest file by creating a simple JSON file. Take a look through the manifest documentation <a href="https://developers.google.com/web/fundamentals/web-app-manifest/">here</a> to see an example manifest file.</p>
-          <p>Then we need to tell the browser about our manifest file by linking to it in our index, like so: <pre><code> < link rel="manifest" href="/manifest.json" > </code></pre></p>
+          <p>We can set up a manifest file by creating a simple JSON file. Here's an example with some bare minimum requirements:</p>
+
+          <script src="https://gist.github.com/brittanystoroz/21317999ce83565d73048d48b14bb518.js"></script>
+          
+          <p>Take a look through the manifest documentation <a href="https://developers.google.com/web/fundamentals/web-app-manifest/">here</a> to gain a further understanding of each of these properties.</p>
+          <p>After our manifest file is set up, we need to tell the browser that it exists. We can do this by adding a link tag in our HTML like so: <pre><code> < link rel="manifest" href="/manifest.json"> </code></pre></p>
 
           <div class="discuss">
             <h4>Practice</h4>
