@@ -245,7 +245,7 @@ To summarize the example above, a typical workflow for a new project with Git an
 10. Go on GitHub, view the PR, and merge the PR
 11. Locally, pull down master to your local master branch (to sync the remote with your local repository)
 
-[Here is an excellent team workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.md)
+[Here is an excellent team workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.html)
 
 ## Additional Resources
 
