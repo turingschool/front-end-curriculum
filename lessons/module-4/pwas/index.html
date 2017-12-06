@@ -92,9 +92,18 @@
           <p>We can set up a manifest file by creating a simple JSON file. Here's an example with some bare minimum requirements:</p>
 
           <script src="https://gist.github.com/brittanystoroz/21317999ce83565d73048d48b14bb518.js"></script>
-          
+
           <p>Take a look through the manifest documentation <a href="https://developers.google.com/web/fundamentals/web-app-manifest/">here</a> to gain a further understanding of each of these properties.</p>
           <p>After our manifest file is set up, we need to tell the browser that it exists. We can do this by adding a link tag in our HTML like so: <pre><code> < link rel="manifest" href="/manifest.json"> </code></pre></p>
+
+          <p>These manifest files provide all the information our application needs in order to show an <b>Installation Banner</b>, which will prompt the user to install the web app to their home screen just like a native application. Installation banners are shown under a couple of conditions. They're generally shown to a user if you have visited the app in the browser more than once over the course of a week, but this could change or vary depending on your device.</p>
+
+          <div class="discuss">
+            <h4>See it in Action</h4>
+            <p>Grab an Android buddy and pick an application from <a href="https://pwa.rocks">pwa.rocks</a>. (The 2048 game is a great candidate.) The Android user should open the app in their browser, close their browser completely, then open it again and navigate to the application. See if you can trigger the installation banner to appear, and have the user choose to install the app on their home screen.</p> 
+          </div>
+
+          <p>Note that in the above practice section, we all had to gather around an Android user in order to see the installation banner appear. This is because PWA technologies are not yet supported in Safari. Sorry, iPhone users! Apple is making progress towards supporting Progressive Web Apps, but it will likely still be another two years or so before they are completely functional on those platforms. This is why technologies like React Native are so popular, because they can be used today across platforms. In the future, we expect that strategy to dwindle in favor of PWAs.</p>
 
           <div class="discuss">
             <h4>Practice</h4>
