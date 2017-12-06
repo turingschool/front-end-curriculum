@@ -17,7 +17,7 @@ Thinking back to [last week's lesson](https://docs.google.com/presentation/d/1V2
 Today we're going to keep building on those principles.
 
 ## Personas
-A persona is an imaginary example user, and includes information such as what the user's goal is, how familiar they are with the app, their situation in life, etc. It's a tool used to help designers and developers construct the architecture of an app.
+A persona is an example user, created by conducting research (either interviewing actual end users, or by market research to develop symbolic end users), and includes information such as what the user's goal is, how familiar they are with the app, their situation in life, how often they will be using the app, etc. It's a tool used to help designers and developers construct the architecture of an app.
 
 Here are some examples:
 ![example persona](https://i.imgur.com/3Yo2QcD.png)
