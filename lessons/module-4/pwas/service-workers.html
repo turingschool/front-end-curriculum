@@ -40,14 +40,42 @@
         </section>
         <hr />
         <section>
-          <h2><a name="Introduction">What is a Service Worker</a></h2>
-          <p></p>
+          <h2><a name="Introduction">What is a Service Worker?</a></h2>
+          <p>A service worker is a new API that allows you to run a script in <em>background</em> of your application, and facilitates creating <em>Progressive Web Apps</em>.</p>
+          <p>There are some key pieces of functionality that service workers allow you to implement, including:</p>
+          <ul>
+            <li><b>Offlining your application:</b> Cache assets so users can still view content when they lose their internet connection</li>
+            <li><b>Implementing background sync:*</b> Allow interactions like network requests to go through at a later point in time, e.g. when you have a spotty network connection, don't send a POST request through until it's stable</li>
+            <li><b>Enabling push notifications*:</b> Notify users with desktop notifications that something has happened, even if they're not currently looking at or using the application</li>
+          </ul>
+          <p>Background sync and push notifications we'll discuss in a future lesson, but I've left an asterisk next to them because they are actually both their own separate APIs. These APIs, however, are only made possible by service workers. So although a service worker isn't solely responsible for enabling background sync and push notifications, it is the backbone and foundation of getting these features to work.</p>
         </section>
         <hr />
 
         <section>
           <h2><a name="Characteristics">Characteristics of a Service Worker</a></h2>
-          <p></p>
+          <p>Let's pick apart that definition of a service worker a little further and talk about some characteristics.</p>
+          <h3>Runs in the Background</h3>
+          <ul>
+            <li>web workers are single JavaScript files, run on own thread</li>
+            <li>don't block execution of other client-side code</li>
+            <li>handle time-intensive operations without locking UI</li>
+            <li>service workers are a type of web worker</li>
+            <li>service workers allow background processing that specifically relates to handling network requests</li>
+          </ul>
+          <h3>Cannot Interact with the DOM</h3>
+          <ul>
+            <li>can't access the DOM tree to do any manipulations</li>
+            <li>must communicate through sending messages back and forth</li>
+          </ul>
+
+          <h3>Event-Based</h3>
+          <ul>
+            <li>service worker can 'go to sleep' at any time</li>
+            <li>is only woken up and utilized during events</li>
+          </ul>
+          <img src="https://mdn.mozillademos.org/files/12632/sw-events.png" />
+
         </section>
         <hr />
 
@@ -59,7 +87,13 @@
 
         <section>
           <h2><a name="Lifecycle">Service Worker Lifecycle</a></h2>
-          <p></p>
+          <p>Service Workers may seem like they behave in unpredictable ways when you first start developing with them, but some clarity can be brought to this by understanding their lifecycle process.</p>
+          <ul>
+            <li><b>1. Registration:</b> browser is aware that we have a service worker that needs to be recognized, and will kick off the installation step upon a successful registration</li>
+            <li><b>2. Installation:</b> the service worker is installed, but doesn’t actually control anything on the page just yet. This is a good phase to cache assets for offline use.</li>
+            <li><b>3. Activation:</b> the service worker has been installed and is activated. This is a good place for us to manage old cached assets and update the service worker.</li>
+            <li><b>4. Full Page Control:</b> the service worker has been activated and now has full control over any pages that fall under its scope</li>
+          </ul>
         </section>
         <hr />
 
@@ -82,6 +116,7 @@
             <li><a href="https://developers.google.com/web/progressive-web-apps/checklist">PWA Checklist</a></li>
             <li><a href="https://developer.mozilla.org/en-US/docs/Web/Manifest">Web App Manifest</a></li>
             <li><a href="https://developers.google.com/web/tools/lighthouse/">Lighthouse Audits</a></li>
+            <li><a href="https://aarontgrogg.com/blog/2015/07/20/the-difference-between-service-workers-web-workers-and-websockets/">What's the Difference between Service Workers, Web Workers, and Web Sockets></a></li>
           </ul>
         </section>
       </div>
