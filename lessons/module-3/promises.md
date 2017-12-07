@@ -8,10 +8,10 @@ module: 3
 
 By the end of this lesson, you will:
 
-* Understand the difference between synchronous and asynchronous JavaScript
+* Be able to articualte the differences between synchronous and asynchronous JavaScript
+* Be able to explain the relationship between Callback, Promises, and Async Await Functions
 * Be able to implement a network request using the `fetch` API
-* Know when and how to use Promises and why they're useful
-* Understand the relationship between Promises and callbacks
+* Be able to create and resolve a Promise and explain why this is useful
 
 ## Synchronous vs. Asynchronous JavaScript
 
