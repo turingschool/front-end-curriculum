@@ -154,35 +154,14 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
 - Install the latest, **most-stable** version in the list.
     - As of cohort 1711 the latest stable version was `9.2.0.` Run the command `nvm install 9.2.0` (or whatever version shows up as the latest version on that list at this time). 
 
-### Setup [Exercisms](http://exercism.io)
-We introduce exercisms later in the module. For now, we're just getting things setup.
+### Setup (github)
 
-- Visit [exercism.io](http://exercism.io/). In the top right corner, click "Log in with Github" and follow the authentication steps.
-- In your terminal, install jasmine-node (a javascript testing suite): ```npm install jasmine-node -g```
-- In your terminal, using brew, install the exercism CLI: ```brew install exercism```
-- Verify that it was installed properly by running: ```exercism --version``` (If there was a problem you will get an error message saying command not found.)
-- Go back to your exercism account online, under your profile, in "API Key", you will find a configuration command that you need to type into your terminal. Copy that command and paste it into your terminal.
-- In your terminal, navigate to the exercism directory: ```cd exercism```
-- Now type ```exercism fetch javascript```
-- Now type ```cd javascript```
-- Now type ```cd hello-world```
-- Now type ```jasmine-node .```
-- Success looks like this in your terminal:
+In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
 
-```
-F
+Additional links if you need to further configure: [repeated requests for passwords](https://stackoverflow.com/questions/21095054/ssh-key-still-asking-for-password-and-passphrase) - [adding a new SSH key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
 
-Failures:
+## Additional Resources
 
-  1) Hello World says hello world with no name
-   Message:
-     Expected undefined to equal 'Hello, World!'.
-   Stacktrace:
-     Error: Expected undefined to equal 'Hello, World!'.
-    at .<anonymous> (/Users/breethomas/exercism/javascript/hello-world/hello-world.spec.js:7:34)
+### More things to setup if you so choose
 
-Finished in 0.01 seconds
-1 test, 1 assertion, 1 failure, 0 skipped
-```
-- If you get anything else, let an instructor know and we'll come trouble-shoot.
-- If you are successful, cd back to your root directory: ```cd ~```
+  * [Excercisms](http://frontend.turing.io/independent-study/exercsim-setup)

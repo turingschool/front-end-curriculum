@@ -19,12 +19,6 @@ We learned how to use Git from the terminal in the last lesson to control the ve
 
 Again, Git is NOT the same thing as GitHub! Git is the local command-line language for version control, and GitHub is a website to share your code.
 
-## Setup
-
-In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
-
-Additional links if you need to further configure: [repeated requests for passwords](https://stackoverflow.com/questions/21095054/ssh-key-still-asking-for-password-and-passphrase) - [adding a new SSH key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
-
 ## An Example Journey Using GitHub (and Git)
 
 Some of this is review from the Git introductory lesson, but there are all of the new GitHub workflow concepts in this example. We use Git in conjunction with GitHub, even though they are separate entities.
