@@ -68,6 +68,6 @@ Beyond the issue of general motivation—let's face it, you're never going to go
 
 Enough talking about testing. Let's actually write some tests to see this in action. We'll do some together and then you'll do some on your own.
 
-Check out [this repostitory][rep] to get your hands dirty.
+Check out [this repository][rep] to get your hands dirty.
 
 [rep]: http://github.com/turingschool-examples/testing-javascript
