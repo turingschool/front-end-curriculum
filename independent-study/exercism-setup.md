@@ -4,8 +4,7 @@ length: 0
 tags: exercism, setup
 ---
 
-# Setup [Exercisms](http://exercism.io)
-We introduce exercisms later in the module. For now, we're just getting things setup.
+Exercisms are a great way to get more reps in with a coding language that you're already comfortable with or a great way to learn a new one! Here's how you get setup.
 
 - Visit [exercism.io](http://exercism.io/). In the top right corner, click "Log in with Github" and follow the authentication steps.
 - In your terminal, install jasmine-node (a javascript testing suite): ```npm install jasmine-node -g```

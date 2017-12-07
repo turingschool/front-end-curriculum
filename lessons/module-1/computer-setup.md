@@ -154,7 +154,7 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
 - Install the latest, **most-stable** version in the list.
     - As of cohort 1711 the latest stable version was `9.2.0.` Run the command `nvm install 9.2.0` (or whatever version shows up as the latest version on that list at this time). 
 
-### Setup (github)
+### Add a public key to your github account
 
 In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/generating-an-ssh-key/).
 
@@ -164,4 +164,4 @@ Additional links if you need to further configure: [repeated requests for passwo
 
 ### More things to setup if you so choose
 
-  * [Excercisms](http://frontend.turing.io/independent-study/exercsim-setup)
+  * [Excercisms](http://frontend.turing.io/independent-study/exercism-setup.html)
