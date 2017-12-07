@@ -66,7 +66,7 @@ module: 4
 
 <section>
   <h3>Let's Practice</h3>
-  <p>Fetch and checkout the 'before-db-lesson' branch of the <a href="https://github.com/turingschool-examples/offline-news">offline news repo</a></p>
+  <p>Fetch and checkout the '03-before-db' branch of the <a href="https://github.com/turingschool-examples/markdown-previewer">markdown previewer repo</a></p>
   <p><pre><code>`npm install`</code></pre></p>
   <p><pre><code>`webpack --watch`</code></pre></p>
   <p><pre><code>`node server.js`</code></pre></p>
@@ -77,17 +77,15 @@ module: 4
   <h3>What's Changed?</h3>
   <ul>
     <li>brought in webpack, updated SW cache to add `bundle.js`</li>
-    <li>fetching articles from the server rather than hardcoding</li>
-    <li>allowing users to click an article that will save it for offline reading (not implemented yet)</li>
+    <li>added a drop-down menu of saved markdowns to select</li>
   </ul>
 </section>
 
 <section>
   <h3>What Are Our Goals?</h3>
   <ul>
-    <li>Display a notification if we are online or not</li>
-    <li>Listen for changes in our connection status and display an appropriate list of articles</li>
-    <li>If we are online => fetch and display the latest articles from the server</li>
-    <li>If we're not online => display any articles saved to indexedDB for offline reading</li>
+    <li>Save markdowns to IndexedDB</li>
+    <li>Load all saved markdowns into the drop-down menu</li>
+    <li>Select a saved markdown from the drop-down menu to display in the textareas</li>
   </ul>
 </section>
