@@ -199,7 +199,7 @@ const groceryList = {
   },
   dryGoods: {
     canned: ['vegetable broth', 'diced tomatoes'],
-    boxedOrBagged: ['angel hair pasta', 'brown rice', 'bread']
+    boxedOrBagged: ['angel hair pasta']
   },
   frozen: {
     vegetables: ['corn', 'peas', 'edamame'],
@@ -208,5 +208,25 @@ const groceryList = {
 }
 
 flatten(groceryList);
-// ['apples', 'bananas', 'avocados', 'bell peppers', 'carrots', 'basil', 'cilantro', 'parsley', '2 percent milk', 'soy milk', 'cheddar', 'brie', 'vegetable broth', 'diced tomatoes', 'angel hair pasta', 'brown rice', 'bread', 'corn', 'peas', 'edamame', 'ice cream sandwiches']
+// [
+    'apples',
+    'bananas',
+    'avocados',
+    'bell peppers',
+    'carrots',
+    'basil',
+    'cilantro',
+    'parsley',
+    '2 percent milk',
+    'soy milk',
+    'cheddar',
+    'brie',
+    'vegetable broth',
+    'diced tomatoes',
+    'angel hair pasta',
+    'corn',
+    'peas',
+    'edamame',
+    'ice cream sandwiches'
+   ]
 ```
