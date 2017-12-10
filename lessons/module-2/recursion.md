@@ -120,7 +120,7 @@ One of the most basic patterns of recursion is when you can reduce a problem to 
 
 It can be helpful to break down what each step of this problem looks like. Here's one way to visualize the call stack:
 
-![visualization of the recursive call stack](https://i.imgur.com/aIORoWT.png)
+![visualization of the recursive call stack](https://i.imgur.com/Ly55ggk.png)
 
 **Solution**:
 
