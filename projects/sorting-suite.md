@@ -293,27 +293,51 @@ mergeSort(["d", "b", "a", "c"])
 With quick sort we take an array and choose one of the indexes as a pivot.
 We then want to move all the elements larger than the pivot to the right of the pivot and all the items smaller than the pivot to the left.
 
-After moving all the elements to either side of the pivot we can then recursively quick sort the elements on either side of the pivot.
+After moving all the elements to either side of the pivot our pivot will be in the correct spot. Now all the larger elements can be quick sorted and all the smaller elements can be quick sorted.
+
+Each time you call quick sort it will return an array that will return a sorted array that will need to be recombined with any previous pivots.
 
 Example of one iteration.
 ```
-                           p
-      [ 9, 8, 5, 2, 1, 6, (3) ]  
-```
+                     p
+[ 9, 8, 5, 2, 1, 6, (3) ]  
 
-Move all larger elements to the right and all smaller elements to left
-```               
-               p
-      [ 2, 1, (3), 9, 8, 5, 6 ]  
+
+// Move larger elements to the right of the pivot
+// Move smaller elements to the left of the pivot
+               
+         p
+[ 2, 1, (3), 9, 8, 5, 6 ]
 ```
-Our pivot is now in its final location.
+Our pivot is in its final location.
 
 We can now use a recursive solution to quick sort all the numbers on each side of our pivot.
 
 something like...
 ```
-quickSort([1, 2]);
-quickSort([5, 8, 6, 9])
+quickSort([2, 1]);
+    
+    p
+[2, 1]
+
+// move larger and smaller elements
+    p
+[1, 2]
+
+// quickSort([1]) 
+// since an array of one item is already sorted, return array
+
+quickSort([9, 8, 5, 6])
+
+          p
+[9, 8, 5, 6]
+
+// move larger and smaller elements
+    p
+[5, 6, 8, 9]
+
+// quicksort([5])
+// quicksort([8, 9])
 ```
 
 ## Evaluation
