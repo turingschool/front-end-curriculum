@@ -73,6 +73,8 @@ var schoolName = school['name']
 var schoolCapacity = school['capacity']
 ```
 
+Default to using Dot Notation. Bracket notation is only necessary when accessing a property with a variable as seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
+
 ### What is `this`: a 10,000ft Introduction
 You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? Let's take a VERY brief look before you continue with objects. We will circle back on this later.
 
@@ -264,7 +266,7 @@ function DumbObjectMaker() {}
 DumbObjectMaker.prototype
 ```
 
-As a review,constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
+As a review, constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
 
 ```js
 function DumbObjectMaker() {
