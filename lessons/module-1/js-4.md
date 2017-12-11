@@ -60,7 +60,7 @@ checkOpenspots: function() {
 }
 ```
 
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {};```
 
 There are two ways to access the properties or methods of an object:
 
@@ -85,7 +85,7 @@ You may have noticed that we used a familiar word in a strange way in the `check
 
 Like `var` and `function`, `this` is a special keyword in Javascript. It references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
 
-In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents`.
+In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
 
 `capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
@@ -185,7 +185,7 @@ Unfortunately ```this``` is not that simple. The value of ```this``` changes in 
 
 ```javascript
 // GLOBAL SCOPE FUNCTION - top of script, not inside another function or inside an object. The default object in this context is the WINDOW object.
-function Boom() {
+function boom() {
   var width = this.innerWidth;
   var height = this.innerHeight;
   return [height, width];
