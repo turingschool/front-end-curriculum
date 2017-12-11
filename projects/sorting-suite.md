@@ -33,53 +33,48 @@ Bubble Sort is often one of the first algorithms of any kind that programmers at
 You can see a [graphical run of the algorithm here](https://vimeo.com/channels/sortalgorithms/15558527).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/Bubble_sort).
-Bubble sort works by comparing and possibly swapping two values in an array. Say we
-start with this array of numbers:
+
+Bubble sort works by moving through an array of data and iteratively moving the largest number to the end of the array.
+
+Our goal is always to move the largest number to the end of the array. We can accomplish this by starting at the beginning of the array and checking the first two elements to see if the first element is larger than the second element
 
 ```
-5 0 1 3 4 2
+|  |
+v  v
+5  0  1  3  4  2
 ```
 
-The algorithm would start with a variable `previous` pointing to the first element,
-`5` and `current` pointing to the second value `0`. Then if `current` is
-less than `previous` the two values are *swapped*. The swap would take
-place in this case, because `0` is less than `5`.
-After that single swap the sequence would be:
+Since 5 is larger than 0 the numbers would be swapped.
 
 ```
-  v v
-0 5 1 3 4 2
+|  |
+v  v
+0  5  1  3  4  2
 ```
 
-The algorithm would continue with `previous` advancing one spot to the right,
-to point at `5`, and `current` advancing to point at `1`.
-`1` is less than `5`, so we swap them again to get:
+Now the next two numbers can be compared
 
 ```
-0 1 5 3 4 2
+   |  |
+   v  v
+0  5  1  3  4  2
 ```
 
-Notice that the `5` moved forward two spaces.
-This is commonly called "bubbling up".
-The number being "bubbled" will always be the largest number seen up to this point.
+As we move down the array the `5` bubbles up until it is at the end of the array.
 
-Now, `previous` advances to `2`, and `current` advances to `3`.
-`3` is not less than `2`, so the focus advances without swapping.
-This repeats moving right one space at a time until
-reaching the end of the array,
-meaning the largest number in the array must be in the last position.
-
-After the second bubbling, we know that the last two items must be the two
-largest items in the array, and they are sorted. After the third iteration,
-the last 3 items are sorted. Thus we repeat the process once for each
-element in the array, allowing us to know that the last `n` items are sorted,
-where `n` is the size of the array.
+```
+0  5  1  3  4  2
+0  1  5  3  4  2
+0  1  3  5  4  2
+0  1  3  4  5  2
+0  1  3  4  2  5
+```
 
 #### Richer Example
 
 Let's look at the sequence for a more out-of-order sequence:
 
-Each iteration the largest out of order number bubbles to the top
+Each iteration the largest number bubbles to the top
 
 
 - [ **5**, 4, 3, 2, 1 ]
@@ -105,16 +100,7 @@ Each iteration the largest out of order number bubbles to the top
 
 - [ **2**, 1, 3, 4, 5 ]
 - [ 1, **2**, 3, 4, 5 ]
-- [ 1, 2, 3, 4, 5 ]
-- [ 1, 2, 3, 4, 5 ]
-- [ 1, 2, 3, 4, 5 ]
-
-
-- [ 1, 2, 3, 4, 5 ]
-- [ 1, 2, 3, 4, 5 ]
-- [ 1, 2, 3, 4, 5 ]
-- [ 1, 2, 3, 4, 5 ]
-- [ 1, 2, 3, 4, 5 ]
+- [ 1, 2, 3, 4, 5 ] 
 
 ### Expectations
 
@@ -130,7 +116,7 @@ bubbleSort(["d", "b", "a", "c"])
 
 ### Big Picture
 
-Insertion sort is a next step up from Bubble Sort. Make sure that you've successfully implemented Bubble Sort before you dive into this section.
+Insertion sort is a next step up from Bubble Sort.
 
 Insertion sort uses slightly more complex logic but the algorithm is generally much higher performing than Bubble.
 
@@ -139,6 +125,7 @@ Insertion sort uses slightly more complex logic but the algorithm is generally m
 You can [see a visualization of the algorithm here](https://vimeo.com/channels/sortalgorithms/15558983).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/insertion_sort).
+
 Insertion sort works by adding items to a sorted array. Typically sorting is done in place inside the array which needs sorting. The first element in the array becomes the sorted array. We iterate through the set to be sorted, pulling one element at a time, then inserting it into its correct position in the sorted section of the array.
 
 Let's start with this array of numbers: `[ 1, 0, 4, 3, 2 ]`
@@ -229,7 +216,11 @@ insertionSort(["d", "b", "a", "c"])
 
 ## 3. Merge Sort
 
-Merge sort is the most complicated, quickest and fascinating of the three IMO. You can create a really interesting recursive solution.
+Merge sort is much faster than bubble and insertion sort. It typically has two parts
+1: a merge function which takes two sorted arrays and merges them into one sorted array
+2: a mergeSort function which splits an unsorted array into pieces so that they can be sorted. 
+
+It can be solved elegantly with a recursive solution.
 
 ### Theory
 
@@ -238,13 +229,15 @@ Merge sort is the most complicated, quickest and fascinating of the three IMO. Y
 [Merge Sort Chart](http://3.bp.blogspot.com/-WmOzCucMWaI/UxzUCnQslTI/AAAAAAAACLI/fjOMo-bUEbE/s1600/Merge+sort+algorithm+diagram.png).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/merge_sort).
+
 For a sweet line dancing example, [see this](https://www.youtube.com/watch?v=XaqR3G_NVoo)
-Merge sort can be thought of as splitting an array into two arrays and sorting
-the halves by also splitting them in half and sorting those halves by splitting
-them in half... and so on. Once we split down to arrays
+
+Merge sort can be thought of as splitting an array into two arrays and sorting the halves by also splitting them in half and sorting those halves by splitting them in half... and so on.
+
+The goal of the splitting is to get down to an array with only one item in it. Arrays with one item are sorted and can be merged with other sorted arrays to create larger sorted arrays.
 
 For a brief example let's look at a simple array. The first step would be to
-split the array into smaller arrays
+split the array into smaller arrays.
 
 #### Split the arrays
 
@@ -254,8 +247,7 @@ first_split:     [2, 0]
 remaining_split: [1, 3]
 ```
 
-We then proceed to split one of those arrays further until we are left with just
-numbers to compare.
+We then proceed to split one of those arrays further until we are left with just numbers to compare.
 
 #### Split again
 
@@ -265,8 +257,7 @@ first_num:   2
 second_num:  0
 ```
 
-We then compare those numbers and put them back into an array together. 1 and 0
-will swap, creating a sorted split array.
+We then compare those numbers and put them back into an array together. 1 and 0 will swap, creating a sorted split array.
 
 #### Sort the doubly split array
 
@@ -275,10 +266,7 @@ sorted_first_split: [0, 2]
 remaining_split:    [1, 3]
 ```
 
-We do the same operation on the remaining split, but we it's already sorted so
-there will be no change. We then merge these two sorted halves together to
-create a final sorted array. This is accomplished by comparing the each element
-in the first split to those in the remaining split.
+We do the same operation on the remaining split, but we it's already sorted so there will be no change. We then merge these two sorted halves together to create a final sorted array. This is accomplished by comparing the each element in the first split to those in the remaining split.
 
 #### Merge the split and sorted arrays
 
@@ -303,71 +291,24 @@ mergeSort(["d", "b", "a", "c"])
 
 ## 4. Quick Sort
 With quick sort we take an array and choose one of the indexes as a pivot.
-We then want to move all the elements larger than the pivot to the right of the pivot
-and all the items smaller than the pivot to the left.
+We then want to move all the elements larger than the pivot to the right of the pivot and all the items smaller than the pivot to the left.
 
 After moving all the elements to either side of the pivot we can then recursively quick sort the elements on either side of the pivot.
 
 Example of one iteration.
-
-pivot starts with the last index
-p = array.length - 1
 ```
                            p
       [ 9, 8, 5, 2, 1, 6, (3) ]  
-        ^------------------^
-
-swap    [ (3), 8, 5, 2, 1, 6, 9 ]  
-           ^------------------^
-
-compare [ (3), 8, 5, 2, 1, 6, 9 ]
-           ^---------------^
-
-compare [ (3), 8, 5, 2, 1, 6, 9 ]
-           ^------------^
-
-swap    [ 1, 8, 5, 2, (3), 6, 9 ]
-          ^------------^
-
-compare [ 1, 8, 5, 2, (3), 6, 9 ]
-             ^---------^
-
-swap    [ 1, (3), 5, 2, 8, 6, 9 ]
-              ^---------^
-
-compare [ 1, (3), 5, 2, 8, 6, 9 ]
-              ^---------^
-
-compare [ 1, (3), 5, 2, 8, 6, 9 ]
-              ^------^
-
-swap    [ 1, 2, 5, (3), 8, 6, 9 ]
-             ^------^
-
-compare [ 1, 2, 5, (3), 8, 6, 9 ]
-             ^------^
-
-compare
-[ 1, 2, 5, (3), 8, 6, 9 ]
-        ^---^
-
-swap
-[ 1, 2, (3), 5 8, 6, 9 ]
-         ^---^
-
-compare
-[ 1, 2, (3), 5 8, 6, 9 ]
-         ^---^
-
-compare
-[ 1, 2, (3), 5 8, 6, 9 ]
-         ^^
-
-pivot is at its correct location
-[ 1, 2, |3|, 5 8, 6, 9 ]
 ```
 
-Now we need to quickSort the elements on each side of the pivot.
+Move all larger elements to the right and all smaller elements to left
+```               
+               p
+      [ 2, 1, (3), 9, 8, 5, 6 ]  
+```
+Our pivot is now in its final location.
+
+We can now use a recursive solution to quick sort all the numbers on each side of our pivot.
 
 something like...
 ```
