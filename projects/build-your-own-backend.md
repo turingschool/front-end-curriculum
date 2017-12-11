@@ -15,7 +15,7 @@ The secondary focus of this project is prepping your Capstone project so you hav
 
 ### Find a Data Source
 
-Data source MUST BE LOCKED IN by Tuesday (8/20) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
+Data source MUST BE LOCKED IN by Tuesday (12/12) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
