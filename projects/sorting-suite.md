@@ -343,4 +343,12 @@ The evaluation will be pass/fail.
 
 You will be need to be able to explain any of the four sorting algorithms using numbered cards.
 
-You will be need to write either quick sort or merge sort after explaining how they work.
+You will need to be able to write either quick sort or merge sort after explaining how it works.
+
+### Testing Requirements
+
+To stress test your sorting algorithms you will need to sort large arrays of random numbers. You will need to create a function to generate large arrays of random numbers.
+
+In your tests see how large of an array you can consistently sort before the test times out.
+
+We will look at your tests to determine if they are sufficient.
