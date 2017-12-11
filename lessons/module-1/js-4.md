@@ -13,7 +13,12 @@ In this lesson we'll cover:
 
 
 # Objects
-Objects are a collection of key-value pairs. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
+
+### High Level
+Objects are an abstraction, or the representation of real world things in computer programming.
+
+### Anatomy of Objects
+Objects are a collection of key-value pairs surrounded by curly braces. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
 Let's look at an example:
 
@@ -24,7 +29,7 @@ var objectName = {
   property3: function() {
     return "I'm value3!";
   }
-}
+};
 ```
 
 Which looks like this when we implement it in code:
@@ -38,7 +43,7 @@ var school = {
   checkOpenSpots: function() {
     return this.capacity - this.currentStudents;
   }
-}
+};
 ```
 The ```school``` object has four properties:
 
@@ -55,30 +60,32 @@ checkOpenspots: function() {
 }
 ```
 
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {};```
 
 There are two ways to access the properties or methods of an object:
 
 The most common is Dot Notation:
 
 ```js
-var schoolName = school.name
-var schoolCapacity = school.capacity
+var schoolName = school.name;
+var schoolCapacity = school.capacity;
 ```
 
 Bracket Notation is less commonly used:
 
 ```js
-var schoolName = school['name']
-var schoolCapacity = school['capacity']
+var schoolName = school['name'];
+var schoolCapacity = school['capacity'];
 ```
+
+Default to using Dot Notation. Bracket notation is only necessary when accessing a property with a variable as seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
 
 ### What is `this`: a 10,000ft Introduction
 You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? Let's take a VERY brief look before you continue with objects. We will circle back on this later.
 
 Like `var` and `function`, `this` is a special keyword in Javascript. It references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
 
-In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents`.
+In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
 
 `capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
@@ -96,7 +103,7 @@ Let's goof off in the console a bit. As a group, we'll practice working with an 
 // Create an object in honor of @jhunbug
 var myLitObject = {
   burritoType: "carne asada"
-}
+};
 
 // 1. Get the value of myLitObject
 // 2. Get the value of burritoType
@@ -118,8 +125,8 @@ We feel pretty good about using literal notation to create an object. We know th
 Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
 ```javascript
-var myLitObject = new Object()
-myLitObject
+var myLitObject = new Object();
+myLitObject;
 ```
 And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation.
 
@@ -158,12 +165,12 @@ function Restaurant(name) {
 }
 
 // Make two restaurant objects, one named "KFC" and the other named "Chilis"
-var firstRest = new Restaurant("KFC")
-var secondRest = new Restaurant("Chilis")
+var restaurant1 = new Restaurant("KFC");
+var restaurant2 = new Restaurant("Chilis");
 
-// Get the name of the firstRest and the secondRest
-firstRest.name
-secondRest.name
+// Get the name of the restaurant1 and the restaurant2
+restaurant1.name;
+restaurant2.name;
 ```
 
 ### Your Turn
@@ -172,24 +179,24 @@ Take a few minutes and make a constructor function and use it to make two new ob
 
 ## Which `this` is which?
 
-**ProTip:** The default context of `this` is the `window` object. Try it out: In your console (not a repl), run `console.log(this)`. So without giving our browser ANY additional information, it tells us that the object we are working within is the `window`, which makes sense.
+**ProTip:** The default context of `this` is the `window` object. Try it out: In your console (not a repl), run `console.log(this);`. So without giving our browser ANY additional information, it tells us that the object we are working within is the `window`, which makes sense.
 
 Unfortunately ```this``` is not that simple. The value of ```this``` changes in different situations. This can be confusing at first, but it also gives us a really dynamic, powerful tool. Let's look at some example situations:
 
 ```javascript
 // GLOBAL SCOPE FUNCTION - top of script, not inside another function or inside an object. The default object in this context is the WINDOW object.
-function Boom() {
+function boom() {
   var width = this.innerWidth;
   var height = this.innerHeight;
-  return [height, width]
+  return [height, width];
 }
 
 // GLOBAL VARIABLES - global variables become properties of the window in the browser object. When a function is in the global context, you can access global variables using the window object.
 var width = 600;
-var shape = {width: 300}
+var shape = {width: 300};
 var showWidth = function() {
   console.log(this.width);
-}
+};
 showWidth();
 
 // METHOD OF AN OBJECT - when does a function become a method? When it is defined INSIDE an object. In a method, "THIS" refers to the containing object.
@@ -197,7 +204,7 @@ var room = {
   width: 800,
   height: 400,
   getArea: function() {
-    console.log('in the room object', this)
+    console.log('in the room object', this);
     return this.width * this.height;
   }
 };
@@ -261,14 +268,14 @@ function DumbObjectMaker() {}
 
 // Let's ask DumbObjectMaker for the value of it's prototype
 function DumbObjectMaker() {}
-DumbObjectMaker.prototype
+DumbObjectMaker.prototype;
 ```
 
-As a review,constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
+As a review, constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
 
 ```js
 function DumbObjectMaker() {
-  this.name = "Elvis"
+  this.name = "Elvis";
 }
 ```
 
@@ -285,7 +292,7 @@ function Outfit(pants, socks, shirt) {
 }
 
 Outfit.prototype.compliment = function() {
-  console.log(`Nice ${this.pants} pants and ${this.socks} and ${this.shirt} shirt!`)
+  console.log(`Nice ${this.pants} pants and ${this.socks} and ${this.shirt} shirt!`);
 }
 
 // Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
@@ -310,10 +317,10 @@ var people = [
   {name: 'Becca', age: 23, active: false},
   {name: 'Tony', age: 40, active: false},
   {name: 'Penelope', age: 23, active: true}
-]
-people[1].name
-people[3].age
-people[2].active
+];
+people[1].name;
+people[3].age;
+people[2].active;
 ```
 
 #### Objects as Properties
@@ -324,8 +331,8 @@ var people = {
   Aphrodite: {age: 23, active: false},
   Zeus: {age: 40, active: false},
   Magneto: {age: 23, active: true}
-}
-people.Magneto.age
-people.Hercules.active
-people.Aphrodite.age
+};
+people.Magneto.age;
+people.Hercules.active;
+people.Aphrodite.age;
 ```
