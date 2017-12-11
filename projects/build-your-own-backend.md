@@ -15,7 +15,7 @@ The secondary focus of this project is prepping your Capstone project so you hav
 
 ### Find a Data Source
 
-Data source MUST BE LOCKED IN by Tuesday (8/20) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
+Data source MUST BE LOCKED IN by Tuesday (12/12) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
@@ -80,7 +80,7 @@ In addition to responding with the appropriate status code, you are expected to 
 
 * All endpoints need to be tested for happy and sad paths. You should assert that proper status codes are being returned as well as appropriate response data and error messages.
 
-* You are expected to use a linter on this project and have 0 linting errors. You are free to choose your own linting configuration that fits your style preferences, but your project must pass your linter. Bonus points for using a git hook that prevents you from committing any unlinted code.
+* You are expected to use a linter on this project and have 0 linting errors. Use the linting configuration from your first project (Palette Picker). Bonus points for using a git hook that prevents you from committing any unlinted code.
 
 ### Deployment
 
@@ -123,16 +123,13 @@ The following set of points are distributed at the discretion of the instructor.
 ### Workflow
 
 * **20 points** - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
-
 * **15 points** - Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
-
 * **10 points** - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
-
 * **5 points**  - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
 
 -----------------------------------------------
 
-#### Projects are due on Monday of week 3 at 9AM. Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1703/mod-4/byob/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
+#### Projects are due on Friday of week 4 at 1PM. Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1706/mod-4/byob/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
 
 To get a **3** on this project, you need to score **125** points or higher  
 To get a **4** on this project, you need to score **145** points or higher  
