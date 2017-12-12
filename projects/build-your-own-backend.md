@@ -11,6 +11,8 @@ The main focus of this project will be to reinforce your understanding of CRUD m
 
 The secondary focus of this project is prepping your Capstone project so you have data ready to go and can dive into building a super badass UI instead of wasting a week in Node land. It's not necessary that you find perfect data for your Capstone, but it's vital that you know how to setup production APIs that are well tested. You can easily replace the source of your data, so don't worry if you can't come up with a good data source or if you have no idea what you want to build for the Capstone. Find or create interesting data that you might want to use in the future.
 
+**Note:** You cannot use your module 3 personal project as your final capstone project in module 4. That being said, you are welcome to base your BYOB project on your module 3 personal project data.
+
 ## Base Expectations
 
 ### Find a Data Source
