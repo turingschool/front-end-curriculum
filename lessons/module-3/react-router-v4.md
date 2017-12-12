@@ -2,15 +2,16 @@ This lesson goes with [this repo](https://github.com/turingschool-examples/react
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-# React Router (v.4)
+# React Router (v4)
 
 ### By the end of this lesson you should...
-* Understand what routing is
-* Be able to implement React Router
-* Know what each of these things are:
+* Explain the need for routing
+* Be able to implement React Router in a project
+* Articulate what each of these components do:
     * BrowserRouter
     * Route
     * Link / NavLink
+    * Switch
     
 ### Why Routing?
 
@@ -33,7 +34,10 @@ class SomeComponent extends Component {
 }
 ```
 
-This works...but as our applications grow larger and we seek to render more components, these conditinal toggles can become difficult to manage. 
+This works...but as our applications grow larger and we need to render more components, these conditinal toggles can become difficult to manage. 
+
+Suppose you have a long list of movies and you only want to show a user's favorites when they click on a `Favorites` button... 
+You can easily accomplish this with React Router!
 
 Enter [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
 
@@ -45,8 +49,8 @@ React Router is a collection of navigational components that compose declarative
 
 React Router allows us to:
 
-* Define which component(s) are rendering based on the URL pathname.
-* Bookmark specific page/view within our application
+* Define which component(s) are rendering based on the URL pathname (dynamic, nested views should have a URL of their own)
+* Bookmark specific page/view within our application to reference at a later time
 * Utilize the `back` and `forward` buttons in our browser
 
 ### Router
@@ -59,7 +63,7 @@ There are many high-level routers that come with the `react-router-dom` module:
 * `<NativeRouter>`
 * `<StaticRouter>`
 
-We will be focusing on **`BrowserRouter`** which is _A Router that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL._
+We will be focusing on **`BrowserRouter`** which is _A Router that uses the HTML5 history API to keep your UI in sync with the URL._
 
 Ultimately it will allow our users to bookmark specific paths and utilize their forward/back buttons. 
 
@@ -67,6 +71,8 @@ There are a few more tools we get with React Router that are important to know a
 
 ### Route
 The Route component is a key piece of React Router. Its most basic responsibility is to render some UI when a location matches the route’s path.
+
+The Route component expects a `path` prop (string) that describes the path name.
  
 There are 3 ways to render something with a Route:
 * `<Route component>`
@@ -160,7 +166,7 @@ It can take the following attributes:
 **Read about each of these [here](https://reacttraining.com/react-router/web/api/NavLink)**
 
 ```
-<NavLink to="/about">About</NavLink>
+<NavLink to='/about'>About</NavLink>
 ```
 
 ---
@@ -177,21 +183,21 @@ It can take the following attributes:
 * from: string
 
 ```
-<Redirect to="/not/unicorns"/>
+<Redirect to='/not/unicorns' />
 ```
 
 ---
 
 ### Switch
 
-_Renders the **first** child <Route> or <Redirect> that matches the location. `<Switch>` is unique in that it renders a route **exclusively**. In contrast, every <Route> that matches the location renders **inclusively**_
+_Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively**(only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively**(more than one route can match and render at a time)_
 
 ```
 <Switch>
-  <Route exact path="/" component={Home}/>
-  <Route path="/about" component={About}/>
-  <Route path="/:user" component={User}/>
-  <Route component={NoMatch}/>
+  <Route exact path='/' component={Home} />
+  <Route path='/users/add' component={UserAddPage} />
+  <Route path='/users' component={UsersPage} />
+  <Redirect to='/' />
 </Switch>
 ```
 
@@ -220,7 +226,7 @@ Additionally we will add a dynamic route to dig deeper into a specific creatures
 First let's install `react-router-dom`
 
 ```
-npm i -S react-router-dom
+npm i --save react-router-dom
 ```
 
 Next let's go import it and wrap it around our main entry point `App`:
@@ -257,7 +263,7 @@ export default class App extends Component {
   
   render() {
     return (
-      <div className="App">
+      <div className='App'>
         <div className='header-section'>
           <header>
             <NavLink to='/unicorns' className='nav'> Unicorns </NavLink>
@@ -561,3 +567,4 @@ And that's it! Go ahead and work on setting up dynamic routes for the other two 
 #### Resources:
 
 * [React Router Training](https://reacttraining.com/react-router/web/guides/philosophy)
+* [Watch This Video](https://www.youtube.com/watch?v=Mf0Fy8iHp8k&feature=youtu.be)

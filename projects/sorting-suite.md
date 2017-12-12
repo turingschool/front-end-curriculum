@@ -99,16 +99,6 @@ Each iteration the largest number bubbles to the top
 [ 1, **2**, 3, 4, 5 ]  
 [ 1, 2, 3, 4, 5 ]   
 
-### Expectations
-
-Implement a `bubbleSort` function which will make the following code snippet work:
-
-```
-bubbleSort(["d", "b", "a", "c"])
-=> ["a", "b", "c", "d"]
-
-```
-
 ## 2. Insertion Sort
 
 ### Big Picture
@@ -132,10 +122,10 @@ Let's start with this array of numbers: `[ 1, 0, 4, 3, 2 ]`
 A list with only one item is always sorted, so we start our sorted list with the first element in our array:
 
 ```
-original array:     [ 1, 0, 4, 3, 2 ]
+original array: [ 1, 0, 4, 3, 2 ]
 
-                    [ sorted | unsorted   ]
-original array:     [ 1,     | 0, 4, 3, 2 ]
+                [ sorted        | unsorted   ]
+original array: [ 1,            | 0, 4, 3, 2 ]
 ```
 
 #### Pass 2
@@ -146,11 +136,11 @@ We pull the first unsorted element, the `0`, and compare it to the last element 
 unsorted:      [0, 4, 3, 2]
 to insert:     0
 
-                [ sorted | unsorted   ]
-before insert:  [ 1,     | 0, 4, 3, 2 ]
+                [ sorted        | unsorted   ]
+before insert:  [ 1,            | 0, 4, 3, 2 ]
 
-                [ sorted  | unsorted ]
-after insert:   [ 0, 1,   | 4, 3, 2  ]
+                [ sorted        | unsorted   ]
+after insert:   [ 0, 1,         | 4, 3, 2    ]
 
 ```
 
@@ -162,11 +152,11 @@ We pull the first unsorted element, the `4`, and compare it to the last element 
 unsorted:      [4, 3, 2]
 to insert:     4
 
-                [ sorted | unsorted ]
-before insert:  [ 0, 1,  | 4, 3, 2  ]
+                [ sorted        | unsorted   ]
+before insert:  [ 0, 1,         | 4, 3, 2    ]
 
-                [ sorted   | unsorted ]
-after insert:   [ 0, 1, 4, | 3, 2     ]
+                [ sorted        | unsorted   ]
+after insert:   [ 0, 1, 4,      | 3, 2       ]
 ```
 
 #### Pass 4
@@ -177,11 +167,11 @@ We pull the first unsorted element, the `3`, and compare it to the last element 
 unsorted:      [3, 2]
 to insert:     3
 
-                [ sorted   | unsorted ]
-before insert:  [ 0, 1, 4, | 3, 2     ]
+                [ sorted        | unsorted   ]
+before insert:  [ 0, 1, 4,      | 3, 2       ]
 
-                [ sorted      | unsorted ]
-after insert:   [ 0, 1, 3, 4, | 2        ]
+                [ sorted        | unsorted   ]
+after insert:   [ 0, 1, 3, 4,   | 2          ]
 ```
 
 #### Pass 5
@@ -192,24 +182,15 @@ We pull the first unsorted element, the `2`, and compare it to the last element 
 unsorted:      [2]
 to insert:     2
 
-                [ sorted      | unsorted ]
-before insert:  [ 0, 1, 3, 4, | 2        ]
+                [ sorted        | unsorted   ]
+before insert:  [ 0, 1, 3, 4,   | 2          ]
 
-                [ sorted         | unsorted ]
-after insert:   [ 0, 1, 2, 3, 4, |          ]
+                [ sorted        | unsorted   ]
+after insert:   [ 0, 1, 2, 3, 4 |            ]
 ```
 
 Since we have no more elements in the unsorted section of our array, we are done with the algorithm.
 
-### Challenge
-
-Implement an `insertionSort` which will make the following code snippet
-work:
-
-```
-insertionSort(["d", "b", "a", "c"])
-=> ["a", "b", "c", "d"]
-```
 
 ## 3. Merge Sort
 
@@ -276,16 +257,6 @@ third_combination:          0, 1, 2, 3
 merged_array:               [0, 1, 2, 3]
 ```
 
-### Challenge
-
-Implement a `mergeSort` function which will make the following code snippets
-work.
-
-```
-mergeSort(["d", "b", "a", "c"])
-=> ["a", "b", "c", "d"]
-```
-
 ## 4. Quick Sort
 With quick sort we take an array and choose one of the indexes as a pivot.
 We then want to move all the elements larger than the pivot to the right of the pivot and all the items smaller than the pivot to the left.
@@ -337,10 +308,21 @@ quickSort([9, 8, 5, 6])
 // quicksort([8, 9])
 ```
 
+### Extension
+Use your favorite sorting algorithm to reimplement the functionality of [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+
 ## Evaluation
 
 The evaluation will be pass/fail.
 
 You will be need to be able to explain any of the four sorting algorithms using numbered cards.
 
-You will be need to write either quick sort or merge sort after explaining how they work.
+You will need to be able to write either quick sort or merge sort after explaining how it works.
+
+### Testing Requirements
+
+To stress test your sorting algorithms you will need to sort large arrays of random numbers. You will need to create a function to generate large arrays of random numbers.
+
+In your tests see how large of an array you can consistently sort before the test times out.
+
+We will look at your tests to determine if they are sufficient.

@@ -199,3 +199,9 @@ If more than one person reviews code before it is merged, it means:
   - The chances of a bug being introduced are lower
   - If a bug is introduced, the number of people familiar with the code who can fix it is higher
   - An honest mistake won't get one developer in hot water, since the team approved the work
+
+## Checks for Understanding
+
+* Give me an example of a security breach.
+* Where are the three places in your code where you should implement some level of data validations? (Or, the three phases of the validation waterfall)
+* What are two ways we can prevent ourselves from introducing security holes in our codebases?
