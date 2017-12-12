@@ -11,7 +11,6 @@ The main focus of this project will be to reinforce your understanding of CRUD m
 
 The secondary focus of this project is prepping your Capstone project so you have data ready to go and can dive into building a super badass UI instead of wasting a week in Node land. It's not necessary that you find perfect data for your Capstone, but it's vital that you know how to setup production APIs that are well tested. You can easily replace the source of your data, so don't worry if you can't come up with a good data source or if you have no idea what you want to build for the Capstone. Find or create interesting data that you might want to use in the future.
 
-**Note:** You cannot use your module 3 personal project as your final capstone project in module 4. That being said, you are welcome to base your BYOB project on your module 3 personal project data.
 
 ## Base Expectations
 
@@ -21,7 +20,6 @@ Data source MUST BE LOCKED IN by Tuesday (12/12) EOD . We don't want you wasti
 
 Possible sources of data:
 
-* Rebuild a backend from your personal project
 * Work with and scrape new data from an API or website. Some APIs and websites are easier to work with than others - you may not be able to pull off the thing you want to do - be prepared for that.
   * https://developer.nrel.gov/
   * https://sunlightfoundation.com/api/
@@ -29,6 +27,8 @@ Possible sources of data:
   * data.world
 * Parse CSVs or JSON files (Node has built-in modules for parsing CSVs)
 * Create the data yourself. You must create a ‘seed file’ with a minimum of ~30 rows of data for each main table
+
+**Note:** You can base your BYOB project on your module 3 personal project data, but then you cannot module 3 personal project as your final capstone project.
 
 ### Relationships
 
