@@ -17,6 +17,16 @@ It is, however, possible for us to use JavaScript to set up listeners for events
 
 For a review of how to set event listeners, please refer to the [DOM Manipulation with JavaScript Lesson](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html)
 
+## Things to know
+
+Event propagation is an important yet misunderstood topic/term when talking about events. Event propagation is an overarching term that includes the three different phases of DOM Events: capturing, targeting, and bubbling. Event propagation is bi-directional (starts at the window... goes to the target... and ends at the window) and is often improperly used as a synonym for event bubbling. Everytime an event occurs, event propagation is occuring behind the scenes. 
+
+![Graphical representation of an event dispatched in a DOM tree using the DOM event flow](/assets/images/eventpropagation.svg)
+
+* Event capture phase - When an event occurs in the DOM, notification of the event is passed starting at the top of the DOM tree and passing down through all parent element nodes all the way to the target node where the event occurred.
+* Event target phase - After the capturing phase occurs, the Target phase occurs. The target phase only includes a notification of Node where the event took place.
+* Event bubbling phase - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM
+
 ## Event Bubbling
 
 Now we've talked about the very basics of events, let's turn our attention to event bubbling, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to children of those nodes. We'll start with a quick experiment.
@@ -64,6 +74,18 @@ Try out the following code in the example code pen:
 
 If you click on the button, you'll see that the events all bubble up through the `.parent` and `.grandparent` elements — this provides a more explicit proof than the solutions you may come up with for the previous question.
 
+#### Please note:
+
+We are focusing on the bubbling phase because the capturing phase is rarely used. Normally it is invisible to us. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture phase` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
+
+```js
+ document.querySelector('#click-me').addEventListener('click', function (event) {
+    console.log('Button');
+  }, true);
+
+```
+
+
 ### The Event Object
 
 The anonymous function passed to `document.addEventListener()` takes an optional argument, which it assigns an `Event` object to. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
@@ -89,7 +111,7 @@ document.querySelector('#click-me').addEventListener('click', function (event) {
 
 ### Pair Practice
 
-Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful?
+Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful? What happens when you log `this` in each of the separate elements above?
 
 ## Adding and Removing Event Listeners
 
@@ -124,6 +146,13 @@ Rather than manage the addition and removal of event listeners, there is a metho
 
 In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements.
 
+Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
+
+The algorithim:
+ 1. Put a single handler on a container
+ 2. In the handler - check the source element using `event.target`
+ 3. If the event happened inside an element that interests us, then handle the event
+
 ```js
 document.querySelector('body').addEventListener('click', function(event) {
   if (event.target.tagName.toLowerCase() === 'li') {
@@ -137,4 +166,4 @@ document.querySelector('body').addEventListener('click', function(event) {
  -->
 ### Next Steps
 
-- jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](https://learn.jquery.com/events/event-delegation/).
+- jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/).
