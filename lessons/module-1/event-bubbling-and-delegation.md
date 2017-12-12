@@ -76,7 +76,7 @@ If you click on the button, you'll see that the events all bubble up through the
 
 #### Please note:
 
-We are focusing on the bubbling phase because the capturing phase is rarely used. Normally it is invisible to us. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture phase` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
+We are focusing on the bubbling phase because the capturing phase is rarely used. Normally it is invisible to us. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```js
  document.querySelector('#click-me').addEventListener('click', function (event) {
@@ -144,9 +144,7 @@ Also, You can cause a [memory leak](http://javascript.crockford.com/memory/leak.
 
 Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
 
-In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements.
-
-Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
+In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements. Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
 
 The algorithim:
  1. Put a single handler on a container
