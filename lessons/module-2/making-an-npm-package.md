@@ -13,23 +13,20 @@ Let's look at a simple example
 [arr-flatten](https://github.com/jonschlinkert/arr-flatten)
 
 Let's look at a more complex example  
-[colors](github.com/Marak/colors.js)
+[colors](https://github.com/Marak/colors.js)
 
 
 ### SemVer
-Read about semver and why it is important
 
-Reading
+[Read this Gold Standard Level blog post by Joanne Daudier](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)
 
-Read this Gold Standard Level blog post by Joanne Daudier
+Note: don't code along, that will come later
 
-Note: don’t code along, that will come later
-
-Note: don’t worry about things you don’t understand or recognize (i.e. mentions of Travis CI or Coveralls)
+Note: don't worry about things you don't understand or recognize (i.e. mentions of Travis CI or Coveralls)
 
 Note: as you read, prepare answers to the following discussion points
 
-Reading Discussion Points
+### Reading Discussion Points
 
 What is SemVer?
 
