@@ -70,17 +70,11 @@ To get started, we'll set up our HTML skeleton so we have a roadmap of where we'
 
 Now that we have our basic HTML page structure written, we can think about how we want to structure the contents. We know we want to have nav, main content, some secondary content in a sidebar on the right side of the screen, and a footer so we'll go ahead and add the appropriate tags for those chunks of content.
 
-Working in ``index.html``, let's start at the top and work our way down the page. For our primary navigation, we'll use the semantic ``header`` tag to wrap a ``nav`` tag that contains the unordered list that will become our navigation links.
+Working in ``index.html``, let's start at the top and work our way down the page. For our primary navigation, we'll keep it simple and use the semantic ``header`` tag. If we wanted to flush it out as a navigation bar with links inside our header, we could wrap a ``nav`` tag around an unordered list to become our navigation links.
 
 ```html
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
+    <header></header>
 </body>
 ```
 
@@ -88,13 +82,7 @@ Next, we'll add an ``article`` tag to hold the main content, an ``aside`` tag to
 
 ```html
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
+    <header></header>
     <article></article>
     <aside></aside>
     <footer></footer>
@@ -115,22 +103,18 @@ We'll keep this content simple for now so we can focus on getting the HTML eleme
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>A Link Here</li>
-            </ul>
-        </nav>
+      <h2>A Link Here</h2>
     </header>
     <section class="container">
         <article class="main-content">
-            <h1>Main Content</h1>
+            <h2>Main Content</h2>
         </article>
         <aside class="secondary-content">
             <h2>Secondary Content</h2>
         </aside>
     </section>
     <footer>
-        <h3>Footer Content</h3>
+        <h2>Footer Content</h2>
     </footer>
 </body>
 </html>
@@ -154,11 +138,7 @@ header {
   text-align: center;
 }
 
-nav {
-  padding-top: 15px;
-}
-
-nav:hover {
+header h2:hover {
   color: white;
 }
 ```
@@ -171,7 +151,7 @@ For the header tag, we've done the following things:
 - added a 25px margin to the bottom so the contents of our page don't crowd our nav bar
 - centered all the content.
 
-Since our ``header`` tag wraps our ``nav`` tag, we don't have to write as many styles here. We've added top padding to vertically center the link, and added a ``:hover`` pseudo element that changes the text color to white so our users can tell when they move their cursor over it that it's clickable. And with that, our header navigation is good to go!
+Since our ``header`` tag wraps an ``h2`` tag, we don't have to write as many styles here. We've added top padding to vertically center the link, and added a ``:hover`` pseudo element that changes the text color to white so our users can tell when they move their cursor over it that it's clickable. And with that, our header 'navigation' is good to go!
 
 On to our body content!
 
