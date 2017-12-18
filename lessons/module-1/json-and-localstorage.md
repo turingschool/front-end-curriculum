@@ -12,14 +12,12 @@ Up until this point, the data in our projects has disappeared whenever we refres
 
 The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site.  
 
-**NOTE:** Local Storage is not available/usable in all browsers. If you are building an application that requires cross-browser compatibility make sure to do some research on feature detection for the browsers you are working with.  
-
 ### Local Storage Methods
 
 `localStorage` supports the following methods:
 
-- `localStorage.getItem()` gets an item from storage based on the key provided.
 - `localStorage.setItem()` takes two arguments—a key and value (key must be string)—and stores the given value under the provided key.
+- `localStorage.getItem()` gets an item from storage based on the key provided.
 - `localStorage.removeItem()` takes a key and removes that key and its associated value from storage.
 - `localStorage.clear()` removes all items from storage for that domain.
 
@@ -50,7 +48,7 @@ When we're communicating with servers, we use a transport protocol called HTTP.
 
 HTTP powers the web, but it does have one limitation. All information can only be sent back and forth using strings. Strings are great, but it's not hard to imagine a world where we might want to send slightly more complicated data structures back (e.g. objects and arrays) back and forth between the client and the server.
 
-JSON stands for "JavaScript Object Notation" and is an alternative to [XML](https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53) as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. All JSON objects are valid JavaScript, but not all JavaScript objects are valid JSON.
+JSON stands for "JavaScript Object Notation" and is an alternative to [XML](https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53) as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. All JSON objects are valid JavaScript, but not all JavaScript objects are valid JSON. JSON is a language-independent data format.
 
 JSON has the following rules:
 
