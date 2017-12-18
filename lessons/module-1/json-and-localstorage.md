@@ -19,7 +19,7 @@ The web storage API is a secure way your browser can store key value pairs that 
 `localStorage` supports the following methods:
 
 - `localStorage.getItem()` gets an item from storage based on the key provided.
-- `localStorage.setItem()` takes two arguments—a key and value (both must be strings)—and stores the given value under the provided key.
+- `localStorage.setItem()` takes two arguments—a key and value (key must be string)—and stores the given value under the provided key.
 - `localStorage.removeItem()` takes a key and removes that key and its associated value from storage.
 - `localStorage.clear()` removes all items from storage for that domain.
 
@@ -31,16 +31,16 @@ The web storage API is a secure way your browser can store key value pairs that 
 
 Open up the developer tools on this page and try the following:
 
-1. `localStorage.setItem('storeMePlease', 2)`
-2. `localStorage.getItem('storeMePlease')`
+1. `localStorage.setItem('storeMePlease', 2);`
+2. `localStorage.getItem('storeMePlease');`
 3. Refresh the page and try to get the item again.
-4. `localStorage.removeItem('storeMePlease')`
-5. `localStorage.getItem('storeMePlease')`
-6. `localStorage.setItem('anotherThing', 'you look nice today')`
-7. `localStorage.getItem('anotherThing')`
-8. `localStorage.clear()`
-9. `localStorage.setItem('somethingComplicated', { name: 'J Mascis', affiliation: 'Dinosaur Jr.' })`
-10. `localStorage.getItem('somethingComplicated')`
+4. `localStorage.removeItem('storeMePlease');`
+5. `localStorage.getItem('storeMePlease');`
+6. `localStorage.setItem('anotherThing', 'you look nice today');`
+7. `localStorage.getItem('anotherThing');`
+8. `localStorage.clear();`
+9. `localStorage.setItem('somethingComplicated', { name: 'J Mascis', affiliation: 'Dinosaur Jr.' });`
+10. `localStorage.getItem('somethingComplicated');`
 
 What are your observations?
 
@@ -50,7 +50,7 @@ When we're communicating with servers, we use a transport protocol called HTTP.
 
 HTTP powers the web, but it does have one limitation. All information can only be sent back and forth using strings. Strings are great, but it's not hard to imagine a world where we might want to send slightly more complicated data structures back (e.g. objects and arrays) back and forth between the client and the server.
 
-JSON stands for "JavaScript Object Notation" and is an alternative to XML as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. All JSON objects are valid JavaScript, but not all JavaScript objects are valid JSON.
+JSON stands for "JavaScript Object Notation" and is an alternative to [XML](https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53) as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. All JSON objects are valid JavaScript, but not all JavaScript objects are valid JSON.
 
 JSON has the following rules:
 
@@ -82,16 +82,16 @@ Take the object from the previous exercise that didn't work and refactor it. Don
 
 The goal is to take our object, store it in local storage, and then be able to take the object out of local storage and modify the object.
 
-1. `var objectToStore = { name: 'J Mascis', affiliation: 'Dinosaur Jr.' }`
-2. `var stringifiedObject = JSON.stringify(objectToStore)`
+1. `var objectToStore = { name: 'J Mascis', affiliation: 'Dinosaur Jr.' };`
+2. `var stringifiedObject = JSON.stringify(objectToStore);`
 3. `stringifiedObject` (Notice our object has turned into a string!)
-4. `localStorage.setItem('somethingComplicated', stringifiedObject)` (Stores the object in local storage)
+4. `localStorage.setItem('somethingComplicated', stringifiedObject);` (Stores the object in local storage)
 
 Now the object is in local storage, and we can retrieve it out of local storage.
 
-5. `var retrievedObject = localStorage.getItem('somethingComplicated')`
+5. `var retrievedObject = localStorage.getItem('somethingComplicated');`
 6. `retrievedObject` (Notice this is still the stringified version of our object - we need it to be a real object again, not a string)
-7. `var parsedObject = JSON.parse(retrievedObject)`
+7. `var parsedObject = JSON.parse(retrievedObject);`
 8. `parsedObject` (We are now back to our original object!)
 
 ### Storage Events
