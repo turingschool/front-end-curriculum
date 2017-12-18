@@ -175,6 +175,19 @@ completion.suggest("piz")
 
 ## Phase 5
 
+Sometimes auto-completes give suggestions which we never want to see. Add a delete method to your Trie. 
+```js
+completion.suggest("piz")
+=> ["pizzeria", "pize", "pizza", "pizzicato", "pizzle", ...]
+
+completion.delete("pizzle");
+
+completion.suggest("piz")
+=> ["pizzeria", "pize", "pizza", "pizzicato", ...]
+```
+
+## Phase 6
+
 Next week you will create a Weather App that needs an autocomplete feature.
 Package your complete-me trie in a node module so that you can import it into
 future projects. (Note: don't publish to npm, you can install your package from github)
