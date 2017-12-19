@@ -37,7 +37,7 @@ This project should encapsulate what you've learned throughout Turing, and anyth
 
 ## Brainstorming
 
-### Part 1: Solo (30 minutes)
+### Part 1: Solo (15 minutes)
 
 On the whiteboard or with pen and paper, summarize the data that is returned from your BYOB endpoints. While you don't **have** to use your BYOB project as a base, we have found it greatly helps students to have that foundation. You are welcome to create another backend API if there is an application you strongly want to build, but remember that will require setting up new schemas and seeds.
 
@@ -47,7 +47,7 @@ On the whiteboard or with pen and paper, summarize the data that is returned fro
 * Medical Procedures (belong to patient)
 * Readings (belong to procedure)
 
-### Part 2: Solo (30 minutes)
+### Part 2: Solo (15 minutes)
 
 Summarize and post your ideas of what kind of applications you could build off of your BYOB (or a new backend you'd like to build). For *each idea* create
 an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project). Summarize the idea in the following format:
@@ -60,7 +60,7 @@ Issue Description:
 
 If a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
 
-### Part 3: Small Groups (60 minutes)
+### Part 3: Small Groups (30 minutes)
 
 Get together in small groups or with a partner:
 
