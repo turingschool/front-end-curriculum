@@ -29,7 +29,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
 |Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/array-prototype-methods-intro) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
-|Assignment  | __DUE__:   Tues 12/19 ~ Static Comp Challenge #1 by *8:00 AM* |
+|Assignment  | __DUE__:   Tues 12/19 ~ Static Comp Challenge #1 by *12:00 PM* |
 |Assignment  | __EVAL__:  Thu 12/21 ~ Ideabox |
 |Assignment  | __DUE__: Fri 12/22 ~ Mythical Creatures |
 
