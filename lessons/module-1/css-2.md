@@ -42,7 +42,7 @@ In this session your goal is to "build expertise". Gather into your "Research Gr
 
 Additional requirements to note:
 
-* _I have outlined specific questions per content area below to guide the group's research. My expecation is that your presentations for session 3 cover the key questions I've provided per content area._
+* _There are specific questions per content area below to guide the group's research. The expecation is that your presentations for session 3 cover the key questions provided per content area._
 * _Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go._
 
 ## BREAK (8 min)
@@ -68,20 +68,6 @@ A representative from each of the research groups will take turns sharing their 
 ### Session 3: Wrap Up (10 mins)
 
 Give instructors group questions so we can circle back around on them at a later lesson.
-
-
-<!-- ## BREAK (8 min)
-
-### Session 4: Gather Questions (10 min)
-During this short session, one person from each Learning Group will write that group's unanswered questions on the front board.
-
-### Session 5: Review Questions (20 min)
-We'll review and attempt to answer all the questions on the board together.
-
-##  BREAK (8 min)
-
-### Session 6: Wrapup (5 min)
-And finally we'll wrap it up with a few review questions, from the instructor, across each topic. -->
 
 ***
 
