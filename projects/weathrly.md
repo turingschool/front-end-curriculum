@@ -13,8 +13,8 @@ In this project you will be getting your first real interactions with ReactJS, a
 ## Required Technology
 
 - ReactJS
-- jQuery for AJAX only (No DOM manipulation)
-- weather underground API
+- fetch for api requests
+- [weather underground API](https://www.wunderground.com/weather/api/)
 
 ## Requirements
 
@@ -35,22 +35,18 @@ Your Readme should include wireframes of your app.
 
 ## Phase one
 
-* Your application should have a welcome page that greets the user. The welcome page has a search component.
+Create your Current Weather component
 
-The search component consists of an input field and a submit button that allows the user to search for a location (the location should work with both a zip code and city/state).
+You will create your User Interface using mock data. This will speed up your development time by not waiting for api requests. You can find the mock data [here](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). Copy it into a seperate file that you can then import into your App file.
 
-* Once the desired location is submitted a current weather component should display with the following information
+Your Current Weather component should display the following information
+
   * the name of the current city
   * the current condition
   * the current day
   * the current temperature
   * the expected high and expected low for the day
   * a summary of what the weather is going to be like that day ("Windy, chance of a few late night showers. Lows overnight in the mid 50s.)
-
-* There should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
-
-* location persists after refresh.
-
 
 ## Phase two
 
@@ -69,6 +65,16 @@ The search component consists of an input field and a submit button that allows 
   * the projected high and low temperature
 
 ## Phase four
+
+* Your application should have a welcome page that greets the user. The welcome page has a search component.
+
+The search component consists of an input field and a submit button that allows the user to search for a location (the location should work with both a zip code and city/state).
+
+* Once the desired location is submitted there should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
+
+* location persists after refresh.
+
+## Phase five
 
 * Add autocomplete functionality to your search input
 * import your completeMe into your Weathrly project. Populate it with the supplied list of city/states and zip codes. When a user starts typing in a city/state or zip code display a list of possible suggestions using your completeMe's suggest function.
