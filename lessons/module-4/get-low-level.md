@@ -34,7 +34,7 @@ module: 4
     <h3>Layer #3 - The Library</h3>
     <ul>
       <li>previously used <a href="http://dexie.org/">Dexie</a> - library wrapping IndexedDB</li>
-      <li><a href="https://github.com/turingschool-examples/offline-news/blob/before-sync-lesson/public/indexedDB.js">code</a> was concise and read similar to English</li>
+      <li><a href="https://github.com/turingschool-examples/markdown-previewer/blob/04-after-db/public/indexedDB.js">code</a> was concise and read similar to English</li>
     </ul>
   </section>
   <section>
@@ -117,10 +117,10 @@ module: 4
     <p><i>Let's walk through a single point of IndexedDB functionality from the bottom up.</i></p>
     <h4>Opening a Database:</h4>
     <ul>
-      <li><a href="https://www.w3.org/TR/IndexedDB/#requests">The Spec</a></li>
+      <li><a href="https://www.w3.org/TR/IndexedDB/#open-a-database">The Spec</a></li>
       <li><a href="https://github.com/WebKit/webkit/blob/master/Source/WebCore/Modules/indexeddb/IDBFactory.cpp#L75-L101">The Browser Engine Implementation</a></li>
       <li><a href="https://github.com/turingschool-examples/offline-news/blob/d6182e5e7858af7481ef41d534dbc5a5d8b717f0/public/indexedDB.js#L3-L21">Our JavaScript Implementation</a></li>
-      <li><a href="https://github.com/turingschool-examples/offline-news/blob/after-sync-lesson/public/indexedDB.js#L4">The Dexie Library Wrapper</a></li>
+      <li><a href="https://github.com/turingschool-examples/markdown-previewer/blob/04-after-db/public/indexedDB.js#L3">The Dexie Library Wrapper</a></li>
     </ul>
   </section>
 </section>
