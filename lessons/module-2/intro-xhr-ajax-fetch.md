@@ -227,8 +227,8 @@ The great thing about promises is that since they are just objects we can move t
 function getTrivia(number, categoryId) {
 	const root = 'https://opentdb.com/api.php';
 	const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
-	const promise = fetch(url);
-	.then(data => data.json());
+	const promise = fetch(url)
+	                .then(data => data.json());
 	
 	return promise;
 }
