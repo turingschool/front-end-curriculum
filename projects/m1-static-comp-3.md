@@ -98,6 +98,6 @@ This is a tough layout to build. Don't wait until Monday of week 6 to get starte
 
 ## Submission Details
 
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1XYg_eAAXPCyyBe83gBd0-Ea7_PU9Z6qnR_6GIQM2PrI/edit#gid=795178888)
+* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/19YGxF6WiF8Z73TQu5aoH7flHH4CKcTYPR-TW1Kd2WWs/edit#gid=795178888)
 
 ![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
