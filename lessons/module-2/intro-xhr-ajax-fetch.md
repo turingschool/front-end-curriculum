@@ -215,12 +215,38 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 
 ---
 
+## [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
+
+"A Promise is an object representing the eventual completion or failure of an asynchronous operation"
+
+In our case, we can think of Promises as a placeholder that will do something once it receives a response back from the trivia server.
+
+The great thing about promises is that since they are just objects we can move them around like an object and can return them from functions.
+
+```
+function getTrivia(number, categoryId) {
+	const root = 'https://opentdb.com/api.php';
+	const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
+	const promise = fetch(url);
+	.then(data => data.json());
+	
+	return promise;
+}
+
+getTrivia(10, 27)
+.then(data => console.log(data))
+.catch(err => /* do something else */);
+```
+---
+
 ## Practice Time!
 
-// in your console grab 10 science questions using fetch and console.log the entire response
-// in your console grab 20 geography questions and for each trivia console.log the answer only
-// in your console grab 20 geography questions and console.log the response status code
-// in your console grab 30 geography questions and console.log an array of only the hard trivia
+In your console do the following...
+
+- Fetch 10 science questions using fetch and console.log the entire response
+- Fetch 20 geography questions and for each trivia console.log the answer only
+- Fetch 20 geography questions and console.log the response status code.
+- Fetch 30 geography questions and console.log an array of only the hard trivia
 
 ##### Further Reading:
 
