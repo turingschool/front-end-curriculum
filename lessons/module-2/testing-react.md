@@ -228,7 +228,7 @@ Some things to consider...
     
 ## Time to Test!
 
-We will use this repo to work through some tests. This app _should_ look familiar. 
+We will use [this repo](https://github.com/turingschool-examples/testing-react) to work through some tests. This app _should_ look familiar. 
 
 * Clone this repo and `cd` into it
 * `git checkout in-class`
@@ -271,7 +271,7 @@ describe('App', () => {
 })
 ```
 
-Now let's look at our app's `render` function, it returns a `Header` and a `ToDontList` component. Let's make sure those exist. We can use the 
+Now let's look at our app's `render` function, it returns a `Header` and a `ToDontList` component. Let's make sure those exist. We can use the [find](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html#findselector--shallowwrapper) method to find those components inside of our rendered HTML.
 
 ```
 // lib/components/App.js
@@ -282,9 +282,13 @@ Now let's look at our app's `render` function, it returns a `Header` and a `ToDo
     return (
       <div>
         <Header toDonts={ toDonts } addToDont={this.addToDont.bind(this)} />
-        <ToDontList toDonts={ toDonts }
-                    updateCard={(card) => this.updateCard(card)}
-                    deleteCard={(card) => this.deleteCard(card) }/>
+
+        <ToDontList 
+          toDonts={ toDonts }
+          updateCard={(card) => this.updateCard(card)}
+          deleteCard={(card) => this.deleteCard(card)}
+        />
+
       </div>
     )
   }
