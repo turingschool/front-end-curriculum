@@ -7,6 +7,8 @@
 ### [JSX](http://buildwithreact.com/tutorial/jsx)
 
 JSX stands for JavaScript and XML. It allows us to write XML in our JavaScript. Luckily for us we have XML tags that correspond with the HTML tags with which we are familiar.
+
+Here we have a function that creates a label and button component for us.
 ```jsx
 function ButtonAndLabel () {
   return (
@@ -48,9 +50,9 @@ function ButtonAndLabel () {
 
 ### Components
 
-Components are JS constructor functions that compile our JSX and return HTML. In our previous examples we have a ButtonAndLabel component. We can use components in our JSX the same way that we would use HTML.
+Components are JS constructor functions that compile our JSX and return HTML. In our previous examples we have a ButtonAndLabel component. We can create instances of our components the same way that we would use HTML.
 
-If I wanted to make four ButtonAndLabel combinations I could by doing the following.
+I can make four ButtonAndLabel combinations by doing the following.
 
 ```
 function App () {
