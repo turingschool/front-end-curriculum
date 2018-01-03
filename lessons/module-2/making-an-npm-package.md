@@ -112,18 +112,18 @@ Note: typically you should not write tests for imported packages. The packages s
 
 ### SemVer
 
-[Read this Gold Standard Level blog post by Joanne Daudier](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)
-
-Note: don't code along, that will come later
-
-Note: don't worry about things you don't understand or recognize (i.e. mentions of Travis CI or Coveralls)
-
-Note: as you read, prepare answers to the following discussion points
+Go to the [SemVer site](https://semver.org/) and read through bullet point 8.
 
 ### Reading Discussion Points
 
 What is SemVer?
 
+Why is versioning important?
+
+What do the different numbers signify?
+
+<!--
+// maybe take out
 What is the difference between  
 `npm install --save-prod`  
 `npm install`  
@@ -133,12 +133,10 @@ and
 
 Why might it be very important to use the --save-prod and --save-dev flags appropriately for an NPM package?
 
-Having read this blog, what steps might be missing for you to create your own node module and deploy it?
-
 What npm packages do you depend on? Have you ever looked at their source code?
 
 How might the fact that you don’t control the version of the package that your users use affect your workflow?
-
+-->
 
 ### Updating package
 Bump an npm version when you add relevant information or code
@@ -158,11 +156,12 @@ if your current version is 1.0.0, the following commands will update the version
 1.0.0 --> 2.0.0
 `npm version major -m "Update Documentation"`
 
-#### Updating gen-random
+### Updating our gen-random project
 
-Lets update our package to also have a function to generate arrays of random letters.
+Lets update our package to also have a function to generate arrays of random letters. Make sure you are in the root of your gen-random project and create a generate-random-letters.js file
 
-- Create generate-random-letters.js file
+`touch lib/generate-random-letters.js`
+
 - Add function to file  
 
 ```
@@ -186,3 +185,15 @@ module.exports = generateRandomLetters;
 - update our package version
 - push to github
 - npm update our tdd repo
+
+
+## Outside Resources / Further Reading
+- [Read this Gold Standard Level blog post by Joanne Daudier](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)
+
+- Watch Steve Kinney's [2016 talk](https://www.youtube.com/watch?v=MamP2wIquGQ)
+  - And check out [the slides](https://speakerdeck.com/stevekinney/the-ins-and-outs-of-publishing-a-module-to-npm) here
+- [NPM docs - How NPM works](https://docs.npmjs.com/how-npm-works/packages)
+- [NPM cheatsheet](http://browsenpm.org/help)
+- [Certified Modules](https://nodesource.com/blog/hello-certified-modules-the-future-of-trust-in-node-js-dependencies/) - How devs are trying to keep you and NPM itself safe
+
+---
