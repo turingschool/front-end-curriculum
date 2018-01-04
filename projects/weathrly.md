@@ -77,7 +77,7 @@ The search component consists of an input field and a submit button that allows 
 ## Phase five
 
 * Add autocomplete functionality to your search input
-* import your completeMe into your Weathrly project. Populate it with the supplied list of city/states and zip codes. When a user starts typing in a city/state or zip code display a list of possible suggestions using your completeMe's suggest function.
+* import your completeMe into your Weathrly project. Populate it with this [list of city/states](https://drive.google.com/file/d/0B7Bgu1dKc7BzSVRjb2xMS0R5M2M/view?usp=sharing). When a user starts typing in a city/state or zip code display a list of possible suggestions using your completeMe's suggest function.
 
 ## Extensions
 
