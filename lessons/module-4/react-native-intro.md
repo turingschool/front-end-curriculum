@@ -148,6 +148,7 @@ Here we are creating a App component that returns text. What an app! We register
 First, create a directory called `app` in the root of your project. Then in your `App.js` file:
 
 ```js
+{% raw %}
 import React, { Component } from 'react';
 import { StyleSheet, Dimensions, Platform, Text, View, Switch, Navigator } from 'react-native';
 import { DinoScroll } from './app/DinoScroll';
@@ -192,6 +193,7 @@ const styles = StyleSheet.create({
       padding: 10,
     },
 });
+{% endraw %}
 ```
 
 As we mentioned before, CSS animations are different in React Native - we'll use the `react-native-animatable` package to help with animations. In your terminal, run:
@@ -203,6 +205,7 @@ npm install react-native-animatable --save
 Now for the DinoScroll component. We will import ScrollView, which allows a user to scroll on a mobile device kinda like overflow: scroll:
 
 ```js
+{% raw %}
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, Animated } from 'react-native';
 import * as Animatable from 'react-native-animatable';
@@ -241,6 +244,7 @@ const styles = StyleSheet.create({
     shadowRadius: 5,
   }
 });
+{% endraw %}
 ```
 
 ### Let's Talk Styles
@@ -257,6 +261,7 @@ There are a few quirks to be aware of. First, there are no units for size in Rea
 Let's take a look how this works in our app:
 
 ```js
+{% raw %}
 // First we create a StyleSheet object with three subcomponents, container, header and dinoList.
 const styles = StyleSheet.create({
     container: {
@@ -294,6 +299,7 @@ render() {
     </View>
   );
 }
+{% endraw %}
 ```
 
 As you can see in our Switch component, we can also declare styles directly inline. This is helpful when we want to dynamically set style properties such as height or width based on another prop or state value. But what if we want to use multiple style subcomponents? Use an array!

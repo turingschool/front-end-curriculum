@@ -35,9 +35,9 @@ assets:
 images:
   root_url: '/assets/images'
 
-gems:
+plugins:
   - jemoji
-  - algoliasearch-jekyll
+  - jekyll-algolia
 
 algolia:
   application_id: 'OOLQ64CUYT'
