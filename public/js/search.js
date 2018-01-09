@@ -21,9 +21,10 @@ $(function(config){
         ignorePlurals: true,
         attributesToHighlight: [
           'title',
-          'text'
+          'content'
         ],
-        highlightPreTag: '<span class="search-highlight">'
+        highlightPreTag: '<span class="search-highlight">',
+        highlightPostTag: '</span>'
       }, onResult);
     } else {
       hideSearch();
@@ -32,6 +33,7 @@ $(function(config){
 
   function onResult(err, data) {
     if (err) { return console.error(err) }
+    console.log(data);
     displayResults(data);
   };
 
@@ -62,7 +64,7 @@ $(function(config){
   function hitTemplate(hit) {
     return `<li class="result">
               <a href="${hit.url}">${hit._highlightResult.title.value}</a>
-              <p>${hit._highlightResult.text.value}</p>
+              <p>${hit._highlightResult.content.value}</p>
             </li>`
   };
 
