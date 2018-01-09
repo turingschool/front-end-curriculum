@@ -33,7 +33,6 @@ $(function(config){
 
   function onResult(err, data) {
     if (err) { return console.error(err) }
-    console.log(data);
     displayResults(data);
   };
 
