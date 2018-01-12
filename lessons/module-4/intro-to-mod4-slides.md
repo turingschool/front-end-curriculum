@@ -71,7 +71,7 @@ layout: presentation
   <section>
     <ul>
       <li>Prework</li>
-      <li>Projects: Palette Picker, BYOB, House of Vars, Capstone</li>
+      <li>Projects: Palette Picker, BYOB, House of Vars, Pattern Party, Capstone</li>
       <li>Homework</li>
       <li>Gear Up - You Lead!</li>
       <li>Professional Development</li>
@@ -85,7 +85,7 @@ layout: presentation
     <h2>Job Support</h2>
   </section>
   <section>
-    <p>Peer-support groups with a dedicated coach</p>
+    <!-- <p>Peer-support groups with a dedicated coach</p> -->
     <p>Refine your resumes, cover letters and outreach emails</p>
     <p>Schedule mock interviews during office hours</p>
     <p>Develop a 30-day, post-grad action plan to set yourself up for success</p>
@@ -116,5 +116,23 @@ layout: presentation
     <h4>90% attendance minimum - 100% of the work completed</h4>
     <p>If you miss a class for an interview, you are still expected to go over the material and complete any required homework.</p>
     <p>Classes are usually written in a tutorial style and can be worked through on your own.</p>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Asking for Help</h2>
+  </section>
+  <section>
+    <h4>Public Cohort Slack Channel</h4>
+    <p>Post your technical questions in your <em>public channel</em>.</p>
+    <p>Instructors want to know what questions you have, and we will jump in on answering questions if no one else can.</p>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Questions?</h2>
+    <p>We'll go over what the prework is right after this.</p>
   </section>
 </section>
