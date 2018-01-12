@@ -85,8 +85,7 @@ layout: presentation
     <h2>Job Support</h2>
   </section>
   <section>
-    <!-- <p>Peer-support groups with a dedicated coach</p> -->
-    <p>Refine your resumes, cover letters and outreach emails</p>
+    <p>Dedicated coach to help refine your resumes, cover letters and outreach emails</p>
     <p>Schedule mock interviews during office hours</p>
     <p>Develop a 30-day, post-grad action plan to set yourself up for success</p>
   </section>
