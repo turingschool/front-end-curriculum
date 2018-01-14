@@ -1,33 +1,50 @@
 $(function() {
-  if (localStorage.getItem('fe-curriculum-lessons') === null) {
-    localStorage.setItem('fe-curriculum-lessons', JSON.stringify({showModule: 0}));
-  }
+  initializeLocalStorage();
+  let modulePreference = getModulePreference();
+  activateButton(modulePreference);
+  showOrHideLessonContainer(modulePreference, 0);
 
-  showOrHideLessonContainer(getLessonPreference(), 0);
+  $('.module-selector').on('click', function(event) {
+    let previousModulePreference = getModulePreference();
+    deactivateButton(previousModulePreference);
 
-  $('.lesson-selector').on('click', function(e) {
-    let moduleSelection = $(e.target).data('module');
-    setLessonPreference(moduleSelection);
+    let moduleSelection = $(event.target).data('module');
+    setModulePreference(moduleSelection);
+    activateButton(moduleSelection);
     showOrHideLessonContainer(moduleSelection, 100);
   });
 
-  function showOrHideLessonContainer(moduleSelection, ease) {
-    if (moduleSelection === 0) { return $('.lesson-container').show() };
+  function initializeLocalStorage() {
+    if (localStorage.getItem('fe-curriculum-lessons') === null) {
+      localStorage.setItem('fe-curriculum-lessons', JSON.stringify({showModule: 0}));
+    }
+  };
 
-    $('.lesson-container').each(function(idx, el) {
-      if ($(el).data('module') === moduleSelection) {
-        $(el).show(ease);
+  function showOrHideLessonContainer(moduleSelection, ease) {
+    if (moduleSelection === 0) { return $('.lesson-container').show(ease) };
+
+    $('.lesson-container').each(function(idx, lessonContainer) {
+      if ($(lessonContainer).data('module') === moduleSelection) {
+        $(lessonContainer).show(ease);
       } else {
-        $(el).hide(ease);
+        $(lessonContainer).hide(ease);
       }
     });
   };
 
-  function setLessonPreference(moduleSelection) {
+  function activateButton(modulePreference) {
+    $(`.module-selector[data-module=${modulePreference}]`).addClass('active');
+  };
+
+  function deactivateButton(previousModulePreference) {
+    $(`.module-selector[data-module=${previousModulePreference}]`).removeClass('active');
+  };
+
+  function setModulePreference(moduleSelection) {
     localStorage.setItem('fe-curriculum-lessons', JSON.stringify({showModule: moduleSelection}));
   };
 
-  function getLessonPreference() {
+  function getModulePreference() {
     return JSON.parse(localStorage.getItem('fe-curriculum-lessons')).showModule;
   };
 }());
