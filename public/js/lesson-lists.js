@@ -3,22 +3,22 @@ $(function() {
     localStorage.setItem('fe-curriculum-lessons', JSON.stringify({showModule: 0}));
   }
 
-  showOrHideLessonContainer(getLessonPreference());
+  showOrHideLessonContainer(getLessonPreference(), 0);
 
   $('.lesson-selector').on('click', function(e) {
     let moduleSelection = $(e.target).data('module');
     setLessonPreference(moduleSelection);
-    showOrHideLessonContainer(moduleSelection);
+    showOrHideLessonContainer(moduleSelection, 100);
   });
 
-  function showOrHideLessonContainer(moduleSelection) {
+  function showOrHideLessonContainer(moduleSelection, ease) {
     if (moduleSelection === 0) { return $('.lesson-container').show() };
 
     $('.lesson-container').each(function(idx, el) {
       if ($(el).data('module') === moduleSelection) {
-        $(el).show();
+        $(el).show(ease);
       } else {
-        $(el).hide();
+        $(el).hide(ease);
       }
     });
   };
