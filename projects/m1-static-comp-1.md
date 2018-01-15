@@ -29,7 +29,6 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ## Submission Details
 
-* __DUE by noon on 12/19/17__
 * Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/a/casimircreative.com/spreadsheets/d/19YGxF6WiF8Z73TQu5aoH7flHH4CKcTYPR-TW1Kd2WWs/edit?usp=sharing)
 
 ![static-comp-challenge-1](/assets/images/static-comp-challenge-1.jpg)
