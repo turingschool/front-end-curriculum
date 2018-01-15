@@ -32,7 +32,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ## PRO-TIP
 
-This is a tough layout to build. Don't wait until Monday of week 6 to get started.
+This is layout that takes a good amount of time to build. Don't wait until Monday of week 6 to get started.
 
 ***
 
