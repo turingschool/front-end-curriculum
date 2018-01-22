@@ -12,9 +12,8 @@ Here are the basics we're going to go over:
   - [Sublime](https://www.sublimetext.com/)
 - A system _Terminal_ for interacting with our machine from the command line. Fortunately macOS already ships with one.
 - macOS "Command Line Tools" -- these are some system dependencies needed for some of the tools we will use.
-- **Homebrew**: This is a "package manager" for installing other developer-related programs. You can think of it as the "App Store for nerds."
+- Homebrew -- This is a "package manager" for installing other developer-related programs. You can think of it as the "App Store for nerds."
 - Git (An application for handling "version control" of our software projects)
-- The Ruby programming language -- version 2.2 in particular
 
 ### Xcode & Command Line Tools
 
@@ -83,7 +82,7 @@ in our `~/.bash_profile`.
 
 ### Git
 
-[Git](http://git-scm.com/) is the version control system of choice in the Ruby community.
+[Git](http://git-scm.com/) is the version control system of choice in the web development community.
 Xcode installed an older version of Git for you, but let's update it.
 
 ```shell
@@ -152,7 +151,7 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
 - Close and reopen the Terminal window
 - `nvm ls-remote`
 - Install the latest, **most-stable** version in the list.
-    - As of cohort 1711 the latest stable version was `9.2.0.` Run the command `nvm install 9.2.0` (or whatever version shows up as the latest version on that list at this time). 
+    - As of cohort 1801 the latest stable version was `9.4.0.` Run the command `nvm install 9.4.0` (or whatever version shows up as the latest version on that list at this time).
 
 ### Add a public key to your github account
 
