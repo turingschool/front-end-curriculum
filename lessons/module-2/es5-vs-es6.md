@@ -10,8 +10,7 @@ module: 2
 
 By the end of the lesson, you will
 * Be familiar with some of ES6 syntax and know how it relates to ES5
-* Know how prototypal inheritance works and be able to explain it
-* Be familiar with tools to make ES6 easier
+* Know how inheritance works and be able to explain it
 
 ## The differences between ES5 and ES6
 
