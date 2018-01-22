@@ -6,7 +6,7 @@ tags: node, express, back-end, server, http
 
 ### Pre-reqs
 
-* Download Postman from Chrome
+* Download [Postman from Chrome](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
 ### Goals
 
