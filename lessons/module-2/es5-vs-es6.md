@@ -1,6 +1,6 @@
 ---
 title: ES5 vs ES6
-tags: javascript
+tags: javascript, ES6, destructuring, spread operator, block scope
 module: 2
 ---
 
@@ -74,6 +74,12 @@ callbacks[2]() === 4
 The major differences are:
 * using the keyword `let` instead of `var` in the `for` loop, which will remain scoped to that block
 * not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a hoisted global variable
+
+**The differences between let and const:**
+
+Variables declared with `let` can be reassigned, whereas variables declared with `const` cannot.
+
+If an array or object is declared using the keyword `const`, the contents of that array or object can be changed, but that variable name will always point to that same piece of memory.
 
 ### Arrow Functions
 
