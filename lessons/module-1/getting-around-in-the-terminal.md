@@ -6,13 +6,19 @@ tags: command line, terminal
 
 ### Context
 
+#### You're not as fast as you think
+
 You probably grew up around computers, but if you're like most of the non-developer population, you may have never touched the terminal. Why would you need to? Everything you need to do can be done on the desktop or through the Finder, and only super nerds use the terminal anyway. Right?
 
 Well, no...
 
 You might be thinking to yourself "Hey, wait a minute! I'm pretty darn fast when it comes to using my mouse to get around. Why do you think I need to use the terminal?"
 
+#### Efficiency and Competency Show
+
 It turns out you actually aren't fast enough. As a developer everything you do should be based on speed and efficiency. When any part of your work flow is lacking you are wasting time. Over the course of a day, every extra second compounds into time you aren't spending doing productive work. Not being a fluent user of your command line is a pain point that may not be terribly noticeable as you first start writing code and you're still gaining momentum, but over time as you work more quickly you (and your pairing partners) will absolutely feel it. In an interview or workplace environment not being able to effectively use your terminal is a red flag. That means it's important to start flexing our command line muscles right away to build understanding and comfort with this tool.
+
+#### Some things must be setup in the terminal 
 
 Additionally, some of the tools you will use as a developer can only be used through the terminal and not by clicking in a program. You'll use those tools in the terminal soon enough!
 
@@ -27,6 +33,12 @@ When you're first starting to learn anything coding related, you have to build u
 Let's actually start working on some basic interactions with our files using the terminal. We're going to assume that you're using a Mac for this lesson.
 
 Open your terminal using `command + spacebar`, then type `terminal`, and press `enter`. The mysterious black window appears...
+
+#### Side Note - Keyboard Shortcuts for Efficiency
+
+`command + spacebar` will open your spotlight search
+
+`command + tab` will take you to your most recent open application 
 
 ### Observe the File Structure: `pwd`, `ls`
 
@@ -71,6 +83,40 @@ For a more detailed list of content, type `ls -la` - note the space between the 
 * Enter the command `ls`. What directories and files do you see?
 
 * Enter `ls -la`. How does this list change? Do you see the same files and directories when you use Finder?
+
+### Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
+
+#### mkdir (make directory)
+
+Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the `mkdir [dir name]` command. What this will do is create a new folder for us with whatever name you want to give it.
+
+Note: A common way to document how to use a command is the command name, `mkdir`, and then something within square brackets, `[dir name]`. The first part, `mkdir`, is the text that the terminal recognizes as a command. The second part, `[dir name]`, is the part where you will specify the new directory's name. The square brackets mean that this is a place for you to fill in your own information, but you do not include the square brackets.
+
+For example, let's create a new directory called `pizza`. Enter `mkdir pizza` in the terminal.
+
+One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal when you do the correct thing.
+
+How do we check that the directory was made? Use `ls` to check that it is listed.
+
+Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to change into that new directory, but we will talk about this in the next section.
+
+#### touch (create file)
+
+Similar to directories, we also need to be able to create new files. The command we are going to use to do this is the `touch [file name]` command.
+
+Let's make a new, blank text file using `touch toppings.txt`. If we open the file, there is nothing in it, but we expect that because we only told the terminal to create a new file.
+
+#### rm (remove)
+
+So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `toppings.txt` file, then we can delete it.
+
+Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
+
+#### Your Turn
+
+* Open a new terminal window. Create five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
+
+* Create ten new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
 
 ### Move Through the File Structure: `cd`
 
@@ -125,40 +171,6 @@ Likewise, we can also go back up multiple directories using one command. If you 
 * Once you're in your Documents directory, list the contents of the Documents directory.
 
 * In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this five times. When you are done, delete the directories you just made, one directory at a time.
-
-### Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
-
-#### mkdir (make directory)
-
-Creating a folder/directory is something that you will be doing often. A way to create a new folder is using the `mkdir [dir name]` command. What this will do is create a new folder for us with whatever name you want to give it.
-
-Note: A common way to document how to use a command is the command name, `mkdir`, and then something within square brackets, `[dir name]`. The first part, `mkdir`, is the text that the terminal recognizes as a command. The second part, `[dir name]`, is the part where you will specify the new directory's name. The square brackets mean that this is a place for you to fill in your own information, but you do not include the square brackets.
-
-For example, let's create a new directory called `pizza`. Enter `mkdir pizza` in the terminal.
-
-One thing that you have to keep in mind is that in this process you won't really get a prompt if you did the thing right. Typically if there is no output to the terminal when you do the correct thing.
-
-How do we check that the directory was made? Use `ls` to check that it is listed.
-
-Keep in mind that even though you've created this folder, it doesn't mean you are inside of that folder you've just created. To actually go into our new folder, you need to change into that new directory, but we will talk about this in the next section.
-
-#### touch (create file)
-
-Similar to directories, we also need to be able to create new files. The command we are going to use to do this is the `touch [file name]` command.
-
-Let's make a new, blank text file using `touch toppings.txt`. If we open the file, there is nothing in it, but we expect that because we only told the terminal to create a new file.
-
-#### rm (remove)
-
-So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `toppings.txt` file, then we can delete it.
-
-Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see there was no warning like, "Are you sure you want to delete this file?..." Be careful with this command because you can't undo it.
-
-#### Your Turn
-
-* Open a new terminal window. Create five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
-
-* Create ten new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
 
 ### Commands From Your Present Working Directory
 
