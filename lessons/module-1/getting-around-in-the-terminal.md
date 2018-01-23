@@ -139,6 +139,8 @@ If you want to go back to the `turing` directory, then simply use two periods: `
 
 You might be thinking to yourself, "Wow, I'm doing a lot of typing...and if I type something incorrectly in the terminal, then I'll go to the wrong place or nowhere at all."
 
+#### Tab Autocomplete & Nested Directories
+ 
 Tab completion is your friend when you don't want to type an entire directory name or you don't quite remember how something is spelled. What I mean by that is if you're trying to change directories or `cd` anywhere, if you start typing the first part of where you want to go and then you hit `tab`, then the terminal will autocomplete the rest of the desired directory for you.
 
 For example, in the directory structure:
