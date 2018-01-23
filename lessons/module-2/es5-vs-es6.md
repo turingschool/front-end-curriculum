@@ -379,7 +379,7 @@ We can create classes that inherit from another class by using the ES6 keyword `
 
 ### Additional Resources:
 
-Babel (ES6 -> ES5)		  https://babeljs.io/repl/
-Lebab	(ES5 -> ES6)		  https://lebab.io/try-it
-ES6 Features 		    	  http://es6-features.org
-Browser Compatability		https://kangax.github.io/compat-table/es6/
+* Babel (ES6 -> ES5)		  [https://babeljs.io/repl/](https://babeljs.io/repl/)
+* Lebab	(ES5 -> ES6)		  [https://lebab.io/try-it](https://lebab.io/try-it)
+* ES6 Features 		    	  [http://es6-features.org](http://es6-features.org)
+* Browser Compatability		[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
