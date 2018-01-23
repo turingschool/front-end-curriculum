@@ -55,7 +55,8 @@ callbacks[2]() === 4;
 
 And here's how we would do it with ES6:
 
-```// es6 block scope
+```
+// es6 block scope
 var callbacks = []
 
 for (let i = 0; i <= 2; i++) {
