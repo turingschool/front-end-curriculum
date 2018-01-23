@@ -374,7 +374,7 @@ Rectangle.prototype = Object.create(
 Rectangle.prototype.constructor = Rectangle;
 ```
 
-We can create classes that inherit from another class by using the ES6 keyword `extends` and the method `super()`. We'll learn more about this in our Intro to Object Oriented Programming lesson.
+We can create classes that inherit from another class by using the ES6 keyword `extends` and the method `super()`.
 
 
 ### Additional Resources:
