@@ -53,7 +53,7 @@ Partner up and answer the following questions:
 Copy the form code below into your own Pen, and then refactor as follows:
 
 * Validate for email type
-* Replace all `div` elements with correct semantic elements - do not use any class
+* Replace all `div` elements with correct semantic elements
 * Add a set of radio buttons with at least three options - only allowing one to be selected at a time
 * Include placeholders for name, email, and message
 * Add a drop down for favorite color with at least three options
@@ -246,9 +246,7 @@ __Label and Describe Elements__
 * `aria-describedby`: is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
 
 ```html
-<div class="lightbox" aria-label="Image Lightbox">
-  <img src="foo.jpg" alt="Foo" />
-</div>
+<input type="text" aria-label="First name" placeholder="Grace">
 ```
 
 ```html
