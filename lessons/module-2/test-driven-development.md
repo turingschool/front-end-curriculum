@@ -468,7 +468,7 @@ ie: `box.increaseWidth(10)`
 - You should be able to increment the height of your box by a provided value
 ie: `box.incrementHeight(10)`  
 - Refactor to allow for a single method to do both jobs
-ie: `box.increment(10, height)` or `box.increment(10, width)`  
+ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`  
 ```
 
 ## Homework: Adventures of Blocky  
