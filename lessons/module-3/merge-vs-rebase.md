@@ -22,9 +22,9 @@ Rebasing serves the same purpose, integrating changes from one branch into anoth
 
 Imagine the following scenario: you are working on a project with 5 other people and you've all divvied up the responsibilities to add features and functionality. You're in charge of adding database integration which is going to take you a significant amount of time to finish - about 2 weeks. You create a new feature branch based off of master and begin your work. In the meantime, your teammates are working on smaller issues that they've been completing and merging into master every day.
 
-![merge-vs-rebase][merge-workflow]
+![merge-workflow][merge-workflow]
 
-[merge-vs-rebase]: /assets/images/lessons/merge-rebase/merge-workflow.png
+[merge-workflow]: /assets/images/lessons/merge-rebase/merge-workflow.png
 
 By the time you're finished with your database functionality, there have been 50 commits pushed into master and you need to integrate them into your branch. With the merge workflow, we would **merge** the **master** branch **into** our **feature** branch:
 
