@@ -22,10 +22,12 @@ Rebasing serves the same purpose, integrating changes from one branch into anoth
 
 Imagine the following scenario: you are working on a project with 5 other people and you've all divvied up the responsibilities to add features and functionality. You're in charge of adding database integration which is going to take you a significant amount of time to finish - about 2 weeks. You create a new feature branch based off of master and begin your work. In the meantime, your teammates are working on smaller issues that they've been completing and merging into master every day.
 
-[ whiteboard ]
+![merge-vs-rebase][merge-vs-rebase]
+
+[merge-vs-rebase]: /assets/images/lessons/merge-rebase/merge-workflow.png
 
 By the time you're finished with your database functionality, there have been 50 commits pushed into master and you need to integrate them into your branch. With the merge workflow, we would **merge** the **master** branch **into** our **feature** branch:
-
+  
 ```bash
 repo-name:feature-branch $ git merge master
 ```
@@ -44,7 +46,7 @@ You'll notice we also get these automatic merge commits when we merge a pull req
 So while we don't care what has been merged into our **feature** branches, we **do** care what is being merged into our **master** branch.
 
 ### Advantages
-* Non-destructive, existing branches are not changed in any way, you just have another new commit 
+* Non-destructive, existing branches are not changed in any way, you just have another new commit
 
 ### Disadvantages
 * Pollutes the history of your repo, makes it hard to understand the evolution
@@ -52,7 +54,7 @@ So while we don't care what has been merged into our **feature** branches, we **
 
 ## Rebasing
 
-One of the main disadvantages of merging is that every time you merge, you automatically have a new merge commit that pollutes your project history and makes it difficult to follow the evolution of the application. 
+One of the main disadvantages of merging is that every time you merge, you automatically have a new merge commit that pollutes your project history and makes it difficult to follow the evolution of the application.
 
 To avoid this auto-generated commit, instead of merging, we can **rebase** our **feature** branch **on top of** our **master** branch:
 
