@@ -46,7 +46,7 @@ You'll notice we also get these automatic merge commits when we merge a pull req
 So while we don't care what has been merged into our **feature** branches, we **do** care what is being merged into our **master** branch.
 
 ### Advantages
-* Non-destructive, existing branches are not changed in any way, you just have another new commit
+* Non-destructive, existing branches are not changed in any way, you just have another new commit - Easy to undo
 
 ### Disadvantages
 * Pollutes the history of your repo, makes it hard to understand the evolution
@@ -68,7 +68,10 @@ This makes it so that all the new work you've done on your feature branch will b
 
 One thing that makes this process tricky is that git will have to step through every single commit you've made on your **feature** branch, one at a time, and see if it's possible to apply it on top of the **master** branch.
 
-[ whiteboard ]
+![rebase-workflow][rebase-workflow]
+
+[rebase-workflow]: /assets/images/lessons/merge-rebase/rebase-workflow.png
+
 
 This means that you may be resolving merge conflicts in every single commit you've made on your branch. Don't get tripped up by this! Git will give you instructions on how to continue with the rebase after every merge conflict you resolve. Note that you may have to resolve the same merge conflict multiple times if you haven't been rebasing frequently enough.
 
@@ -88,6 +91,7 @@ This is important, and where rebasing gets tricky. Any time you rewrite history 
 
 ### Disadvantages
 * Easy to do it wrong, rewrites history
+* Tougher to resolve conflicts
 
 
 ## To Rebase or Not to Rebase?
