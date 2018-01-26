@@ -149,6 +149,8 @@ heroku run 'knex migrate:latest'
 
 * Make sure you don't have `node_modules` committed. To fix this, you must first `rm -rf ./node_modules`, commit and push that change to master, then add `/node_modules` to a `.gitignore` file.
 
+* Check that you have a Procfile at the root of your application and that the file name is correct and it contains the single line `web: node server.js` with no typos.
+
 #### TypeError: Cannot read property 'client' of undefined
 
 * Make sure there are no typos in the knexfile, and also make sure that you've committed your most recent changes and pushed to master. Often times, students will make all the appropriate changes to add a production environment to their knexfile, but forget to commit them. You can check what the latest commit on Heroku is by looking in the web UI at your application, in the 'Activity' log. Compare the latest SHA on that page with the latest commit SHA on your github.
