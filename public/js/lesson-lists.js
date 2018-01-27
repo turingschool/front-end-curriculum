@@ -15,16 +15,16 @@ $(function() {
   });
 
   function initializeLocalStorage() {
-    if (localStorage.getItem('fe-curriculum-lessons') === null) {
-      localStorage.setItem('fe-curriculum-lessons', JSON.stringify({showModule: 0}));
+    if (localStorage.getItem('turing-fe-modulePref') === null) {
+      localStorage.setItem('turing-fe-modulePref', 0);
     }
   };
 
   function showOrHideLessonContainer(moduleSelection, ease) {
-    if (moduleSelection === 0) { return $('.lesson-container').show(ease) };
+    if (moduleSelection == 0) { return $('.lesson-container').show(ease) };
 
     $('.lesson-container').each(function(idx, lessonContainer) {
-      if ($(lessonContainer).data('module') === moduleSelection) {
+      if ($(lessonContainer).data('module') == moduleSelection) {
         $(lessonContainer).show(ease);
       } else {
         $(lessonContainer).hide(ease);
@@ -41,10 +41,10 @@ $(function() {
   };
 
   function setModulePreference(moduleSelection) {
-    localStorage.setItem('fe-curriculum-lessons', JSON.stringify({showModule: moduleSelection}));
+    localStorage.setItem('turing-fe-modulePref', moduleSelection);
   };
 
   function getModulePreference() {
-    return JSON.parse(localStorage.getItem('fe-curriculum-lessons')).showModule;
+    return localStorage.getItem('turing-fe-modulePref');
   };
 }());
