@@ -180,10 +180,39 @@
 
         <section>
           <h2><a name="Arrays">Arrays</a></h2>
-          <p></p>
+          <p>We mentioned earlier that arrays are comma-separated lists of related values. MDN defines arrays as <i>"high-level, list-like objects"</i>. What they mean by this, is that arrays are actually objects under the hood. Think back to when we logged the result of <code>Object.keys()</code> to the console. You could see that it was an array, but each list item was numbered, starting at zero. <b>Arrays are specialized objects where the keys are ordered numbers.</b>
+          <p>Arrays act as kind of an abstraction over objects. Think about how simple the syntax is for creating a new array:</p>
+
+<pre>
+  <code>
+    let toppings = ['pineapple','cheese','garlic'];
+  </code>
+</pre>
+
+          <p>If JavaScript didn't provide us with this simplified syntax for creating arrays, we would have to define them like we do objects:</p>
+
+<pre>
+  <code>
+    let toppings = {
+      0: 'pineapple',
+      1: 'cheese',
+      2: 'garlic'
+    };
+  </code>
+</pre>
+
+          <p>Not only is this more verbose and harder to write, the numbered keys in this object really don't provide us with any useful information or context about each value. JavaScript abstracts this away from us by providing us with a specialized Array data type.</p>
+          <p>The array data type comes with its own set of prototype methods for manipulating and accessing its data. There are <b>tons</b> of them, and sometimes picking which ones to use can be tricky. There are three main categories of array prototype methods: mutator, accessor, and iteration methods. While it's not vital that you remember the names of these categories, knowing what each set does can help you narrow down your choices when trying to determine what method to use to perform a particular action.</p>
+
           <h3>Mutator Methods</h3>
+          <p><b>Directly modify the existing array</b></p>
+
           <h3>Accessor Methods</h3>
+          <p><b>Do not modify the existing array; return a particular representation of the array</b></p>
+
           <h3>Iteration Methods</h3>
+          <p><b>Loop through the existing array</b></p>
+          
         </section>
 
         <hr />
