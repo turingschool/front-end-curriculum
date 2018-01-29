@@ -42,7 +42,7 @@
         <hr />
         <section>
           <h2><a name="Introduction">Arrays & Objects</a></h2>
-          <p>Arrays and objects are the more complex data types that are available to us in JavaScript. <b>What are all the data types you know of?</b>
+          <p>Arrays and objects are the more complex data types that are available to us in JavaScript. <i>What are all the data types you know of?</i>
 
           <!-- Instructor: Whiteboard out all the data types they shout out.
                Briefly review the difference between primitive data types and objects -->
@@ -55,30 +55,27 @@
           <!-- Instructor: Discuss what they wrote in their notebook, then whiteboard
                an example of what an array looks like vs. what an object looks like -->
 
-          <p><b>An array</b> is essentially a comma-separated list of related values. For example: <code>let pizzaToppings = ['onions', 'garlic', 'peppers'];</code></p>
+          <p><b>An array</b> is essentially a comma-separated list of related values. For example:</p>
+          <code>let pizzaToppings = ['onions', 'garlic', 'peppers'];</code>
           <p><b>An object</b> is a set of information that needs a bit more granularity. The data in objects are stored in key-value pairs to provide a little additional specificity and context to the information. For example:</p>
-          <code>
-            let pizzaOrder = {
-              size: 14,
-              style: 'thin-crust',
-              toppings: ['onions', 'garlic', 'peppers']
-            }
-          </code>
+          <pre>
+            <code>
+              let pizzaOrder = {
+                size: 14,
+                style: 'thin-crust',
+                toppings: ['onions', 'garlic', 'peppers']
+              }
+            </code>
+          </pre>
         </section>
         <hr />
 
         <section>
-          <h2><a name="TokenBasedAuth">Token-Based Auth</a></h2>
-          <p>We previously learned about <a href="../jwts/index.html">JSON Web Tokens</a>, and described the general flow of receiving a token to identify a user, and using that token to authorize future requests. The initial phase of this process - generating a token to identify a user - is considered the authentication "handshake". You'll hear this term handshake used frequently to describe an authentication mechanism. It simply means that a client (in our case, the browser), is telling a server:</p>
-          <blockquote>"Hi, nice to meet you, I am Bob Loblaw and I would like for you to trust me. Here are a couple facts about myself."</blockquote>
-          <p>And the server looks Bob Loblaw up and down, writes down all of his information and says:</p>
-          <blockquote>"Ok, Bob Loblaw. I trust you on one condition: you must provide me this secret password every time we do business."</blockquote>
-          <p>And the server gives Bob a token that has encoded all of Bob's information and permission levels. Bob can now use this token as a "hall pass" to send and receive data from the server.</p>
-          <p>This token-based authentication flow is also what's used in OAuth implementations. In fact, some OAuth service providers like <a href="https://www.auth0.com">Auth0</a> use JSON Web Tokens in their implementation.</p>
+          <h2><a name="Objects">Objects</a></h2>
+          <p></p>
           <div class="discuss">
-            <h4>Read</h4>
-            <p>We've now learned about a couple different authentication mechanisms for working with APIs. Take a moment to read the following blog post on the differences between each of them and their best use cases:</p>
-            <a href="https://zapier.com/engineering/apikey-oauth-jwt/">API Keys vs. OAuth Tokens vs. JSON Web Tokens</a>
+            <h4>Practice</h4>
+            <p>Let's assume the user has reviewed the order, and they decide to click the 'Place Order' button. When they click that button, we want to add additional information to their order details and display those on the DOM. Follow the instructions listed in <a href="https://gist.github.com/brittanystoroz/639a7d579d623a5baa72a3fa03f18df5">this gist</a>.</p>
           </div>
         </section>
 
