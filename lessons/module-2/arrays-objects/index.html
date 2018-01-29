@@ -64,9 +64,11 @@
           <p>An <b>object</b> is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:</p>
 <pre>
   <code>
-    let pizzaOrder = {
+    let pizza = {
+      crust: 'thin',
+      sauce: 'tomato',
       size: 14,
-      style: 'thin-crust',
+      extraCheese: true,
       toppings: ['onions', 'garlic', 'peppers']
     };
   </code>
@@ -82,6 +84,29 @@
           <p><b>Purpose:</b> iterating over each property of an object</p>
           <p><b>Use Case:</b> appending each property and its value to the DOM</p>
           <p><b>Parameters:</b> an object</p>
+
+          <p><code>Object.keys()</code> is a method that will return an array of all the properties for the object you pass in. For example:</p>
+
+<pre>
+  <code>
+    let pizza = {
+      crust: 'thin',
+      sauce: 'tomato',
+      size: 14,
+      extraCheese: true,
+      toppings: ['onions', 'garlic', 'peppers']
+    };
+
+    let pizzaProps = Object.keys(pizza);
+    console.log(pizzaProps); // returns ['crust', 'sauce', 'size', 'extraCheese', 'toppings']
+  </code>
+</pre>
+
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>Save <a href="https://gist.github.com/brittanystoroz/639a7d579d623a5baa72a3fa03f18df5">this boilerplate gist</a> to your desktop and open it up in your browser.</p>
+            <p>Let's say we are an online food delivery service, and this pizza object was an order that a user just put into their shopping cart. We want to display all the order details in an unordered list so that the user can review their order before placing it.</p>
+          </div>
 
           <h3>Object.assign()</h3>
           <div class="discuss">
