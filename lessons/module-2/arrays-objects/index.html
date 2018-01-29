@@ -363,7 +363,7 @@
 
     let cleanArray = messyArray.reduce(
       (accumulator, currentElement) => {
-        accumulator.concat(currentElement);
+        return accumulator.concat(currentElement);
       },
       []
     );
