@@ -80,11 +80,12 @@ To sum up:
 
 Visit the <a href="http://codepen.io/team/turing/pen/GqEBqg" target="_blank">this page</a> and fork the CodePen.
 
-Visit the [page](http://codepen.io/team/turing/pen/GqEBqg" target="_blank) and fork the CodePen.
+Visit the [page][link] and fork the CodePen.
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="GqEBqg" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/GqEBqg/">HTML Report Card</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
+[link]: <a href="http://codepen.io/team/turing/pen/GqEBqg" target="_blank">this page</a>
 [codepen]: http://codepen.io/team/turing/pen/GqEBqg" target="_blank
 
 #### Beginning
