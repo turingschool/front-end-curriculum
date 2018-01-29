@@ -13,6 +13,14 @@ In this lesson, you will learn how to:
 
 ## GitHub
 
+### Prework Setup: 
+
+#### Add a public key to your github account
+
+In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/ articles/generating-an-ssh-key/).
+
+Additional links if you need to further configure: [repeated requests for passwords](https://stackoverflow.com/questions/21095054/ssh-key-still-asking-for-password-and-passphrase) - [adding a new SSH key](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/)
+
 ### Some Context: What is GitHub, and why do we use it?
 
 We learned how to use Git from the terminal in the last lesson to control the versions of our projects (repositories) - that work was all done locally. It was hard to share your code with anyone else on another computer. Today, we'll learn how to push your code up to the cloud! We can use an website called GitHub to store your code and make it much easier to share code and collaborate with others.

@@ -1,11 +1,15 @@
 <html>
   <head>
     <title>Array & Object Prototype Methods</title>
+    <link rel="stylesheet"
+      href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
     <style type="text/css">
-    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span a{color:#555;}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span a{color:#555;}#view-toggle span.active,section h3{color:#333;font-weight:600},section h4 code{font-size: 20px;color:#fc4b60}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
     </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
   </head>
   <body>
     <header>
@@ -57,16 +61,18 @@
 
           <p>An <b>array</b> is essentially a comma-separated list of related values. For example:</p>
 <pre>
-  <code>
+  <code class="js">
     let pizzaToppings = ['onions', 'garlic', 'peppers'];
   </code>
 </pre>
           <p>An <b>object</b> is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:</p>
 <pre>
-  <code>
-    let pizzaOrder = {
+  <code class="javascript">
+    let pizza = {
+      crust: 'thin',
+      sauce: 'tomato',
       size: 14,
-      style: 'thin-crust',
+      extraCheese: true,
       toppings: ['onions', 'garlic', 'peppers']
     };
   </code>
@@ -76,10 +82,123 @@
 
         <section>
           <h2><a name="Objects">Objects</a></h2>
-          <p></p>
+          <p>Objects allow you to define a set of related information using key-value pairs. The 'keys' (also known as 'properties') are strings that describe the value associated with it. You can think of object properties as variables that are attached specifically to that particular object.</p>
 
-          <h3>Object.keys()</h3>
-          <h3>Object.assign()</h3>
+          <h3><code>Object.keys(<i>objectName</i>)</code></h3>
+          <ul>
+            <li><b>Purpose:</b> iterating over each property of an object</li>
+            <li><b>Use Case:</b> appending each property and its value to the DOM</li>
+            <li><b>Parameters:</b> an object</li>
+          </ul>
+
+          <p><code>Object.keys()</code> is a method that will return an array of all the properties for the object you pass in. For example:</p>
+
+<pre>
+  <code>
+    let pizza = {
+      crust: 'thin',
+      sauce: 'tomato',
+      size: 14,
+      extraCheese: true,
+      toppings: ['onions', 'garlic', 'peppers']
+    };
+
+    let pizzaProps = Object.keys(pizza);
+    console.log(pizzaProps);
+    // ['crust', 'sauce', 'size', 'extraCheese', 'toppings']
+  </code>
+</pre>
+
+          <div class="discuss">
+            <h4>Practice Together</h4>
+            <p>Save <a href="https://gist.github.com/brittanystoroz/639a7d579d623a5baa72a3fa03f18df5">this boilerplate gist</a> to your computer and open it up in your browser.</p>
+            <p>Let's say we are an online food delivery service, and this pizza object was an order that a user just put into their shopping cart. We want to display all the order details in an unordered list so that the user can review their order before placing it.</p>
+          </div>
+
+          <h3><code>Object.assign(<i>targetObject, ...sourceObjects</i>)</code></h3>
+          <ul>
+            <li><b>Purpose:</b> making a copy of a pre-existing object, merging two or more objects together</li>
+            <li><b>Use Case:</b> creating a new object based on pre-existing objects</li>
+            <li><b>Parameters:</b> a target object (where the new object will exist), unlimited source objects (pre-existing objects that you might want to merge)</li>
+          </ul>
+          <p>The <code>Object.assign()</code> method can be used to copy all the values from one or more objects to a brand new object - called a <i>target object</i>. It can be used for creating a fresh copy of a single object, or for combining properties of multiple objects. The method will return the <i>target object</i>.</p>
+
+          <h4>Copying an Object</h4>
+          <p>Sometimes we want to make a copy of a pre-existing object. It might seem simple enough to do something like this:</p>
+<pre>
+  <code>
+    let pizzaOne = {
+      crust: 'thin',
+      sauce: 'tomato',
+      size: 14,
+      extraCheese: true,
+      toppings: ['onions', 'garlic', 'peppers']
+    };
+
+    let pizzaTwo = pizzaOne;
+  </code>
+</pre>
+          <p>But this actually has a major pitfall. When we assign objects to new variables, we're not truly creating a new, independent copy of the object. We're simply telling our new variable (<code>pizzaTwo</code>) to reference the pre-existing object (<code>pizzaOne</code>). So now there are two variables pointing to the same exact object in memory. This becomes problematic if we decide we want to update one of the pizza objects, but not the other. For example:</p>
+<pre>
+  <code>
+    pizzaTwo.sauce = 'vodka';
+    console.log(pizzaOne.sauce); // 'vodka'
+  </code>
+</pre>
+
+          <p>A safer way to make a true, independent copy of a pre-existing object is to use <code>Object.assign()</code>:
+
+<pre>
+  <code>
+    let pizzaOne = {
+      crust: 'thin',
+      sauce: 'tomato',
+      size: 14,
+      extraCheese: true,
+      toppings: ['onions', 'garlic', 'peppers']
+    };
+
+    let pizzaTwo = Object.assign({}, pizzaOne);
+
+    pizzaTwo.sauce = 'vodka';
+
+    console.log(pizzaTwo.sauce); // 'vodka'
+    console.log(pizzaOne.sauce); // 'tomato'
+  </code>
+</pre>
+
+          <p>The <code>Object.assign()</code> method takes in an indefinite amount of arguments. The first argument must be your <i>target</i> object. When we're simply copying a pre-existing object, our target object will be an empty object. The second parameter is the <i>source</i> object. Or, whatever object you're hoping to copy properties from. You can pass in as many source objects as you want.</p>
+
+          <h4>Merging Multiple Objects</h4>
+          <p>Sometimes you might want to combine the properties from multiple objects into a single, new (target) object. This is also a scenario that <code>Object.assign()</code> can handle for you. One example is when you want to apply instance properties to a Class in a quick, clean way. You may have often seen instance properties defined on a class like so:</p>
+
+<pre>
+  <code>
+    class Person {
+      constructor(name, age, height, weight) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+      }
+    }
+  </code>
+</pre>
+
+          <p>Imagine all the instance properties we might want to add to this <code>Person</code> class. That could be tons of lines of repetitive code. With <code>Object.assign()</code>, however, we can clean this up a bit by doing something like:</p>
+
+<pre>
+  <code>
+    class Person {
+        constructor(name, age, height, weight) {
+            Object.assign(this, { name, age, height, weight });
+        }
+    }
+  </code>
+</pre>
+
+          <p>While this particular example is just giving us some nice, syntactic sugar, there are many other scenarios where you might want to merge objects. Let's practice!</p>
+
           <div class="discuss">
             <h4>Practice</h4>
             <p>Let's assume the user has reviewed the order, and they decide to click the 'Place Order' button. When they click that button, we want to add additional information to their order details and display those on the DOM. Follow the instructions listed in <a href="https://gist.github.com/brittanystoroz/639a7d579d623a5baa72a3fa03f18df5">this gist</a>.</p>
@@ -89,10 +208,171 @@
 
         <section>
           <h2><a name="Arrays">Arrays</a></h2>
-          <p></p>
+          <p>We mentioned earlier that arrays are comma-separated lists of related values. MDN defines arrays as <i>"high-level, list-like objects"</i>. What they mean by this, is that arrays are actually objects under the hood. Think back to when we logged the result of <code>Object.keys()</code> to the console. You could see that it was an array, but each list item was numbered, starting at zero. <b>Arrays are specialized objects where the keys are ordered numbers.</b>
+          <p>Arrays act as kind of an abstraction over objects. Think about how simple the syntax is for creating a new array:</p>
+
+<pre>
+  <code>
+    let toppings = ['pineapple','cheese','garlic'];
+  </code>
+</pre>
+
+          <p>If JavaScript didn't provide us with this simplified syntax for creating arrays, we would have to define them like we do objects:</p>
+
+<pre>
+  <code>
+    let toppings = {
+      0: 'pineapple',
+      1: 'cheese',
+      2: 'garlic'
+    };
+  </code>
+</pre>
+
+          <p>Not only is this more verbose and harder to write, the numbered keys in this object really don't provide us with any useful information or context about each value. JavaScript abstracts this away from us by providing us with a specialized Array data type.</p>
+
+          <p><i>Note: Try running <code>Object.keys()</code> against an array. You'll see that this method still works because arrays are objects under the hood! You should get back an array of ordered numbers.</i></p>
+
+          <p>The array data type comes with its own set of prototype methods for manipulating and accessing its data. There are <b>tons</b> of them, and sometimes picking which ones to use can be tricky. There are three main categories of array prototype methods: mutator, accessor, and iteration methods. While it's not vital that you remember the names of these categories, knowing what each set does can help you narrow down your choices when trying to determine what method to use to perform a particular action.</p>
+
           <h3>Mutator Methods</h3>
+          <p><b>Directly modify the existing array</b></p>
+          <p>Mutator methods can be used for adding or removing items from an array, sorting the array, reversing it, etc. They modify the existing array and might return the modified array, or the single array item that was effected.</p>
+          <p>As an example, one of the mutator methods you can call on an array is <code>sort()</code>. The <code>sort()</code> method will sort strings alphabetically and integers numerically by default:</p>
+
+<pre>
+  <code>
+    let instructors = ['Leta', 'Robbie', 'Brittany'];
+    instructors.sort(); // ['Brittany', 'Leta', 'Robbie'];
+    console.log(instructors); // ['Brittany', 'Leta', 'Robbie'];
+  </code>
+</pre>
+
           <h3>Accessor Methods</h3>
+          <p><b>Do not modify the existing array; return a particular representation of the array</b></p>
+          <p>Some accessor methods are very similar to the mutator methods, but the big difference here is that they do <b>not</b> modify the original array, and instead return a copy of it that reflects whatever mutation you made.</p>
+          <p>One example of an accessor method is <code>join()</code>. We can use this method to join together all the items of an array and return the resulting string:</p>
+
+<pre>
+  <code>
+    let lesson = ['module2', 'javascript', 'arrays'];
+    lesson.join('-'); // module2-javascript-arrays
+    console.log(lesson); // ['module2', 'javascript', 'arrays']
+  </code>
+</pre>
+
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>In pairs, take a look at the Array prototype methods listed <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods">here</a>. We'll practice specifically with <code>slice, splice, pop, shift, push, unshift</code>. Create a repl or in your browser dev tools console, play with the array method you're assigned. Pay particular attention to the following:</p>
+            <ul>
+              <li>the original array before you call a method on it</li>
+              <li>what the method does</li>
+              <li>what the method returns</li>
+              <li>the value of the original array after calling your assigned method</li>
+            </ul>
+            <p>We'll have each group demo and explain their assigned method.</p>
+          </div>
+
+
+
           <h3>Iteration Methods</h3>
+          <p><b>Loops through the existing array and applies a callback function that may mutate each element and return a new value</b></p>
+          <p>Iteration methods generally take in a callback function as their first argument.</p>
+
+          <h4><code>Array.map(<i>callbackFunction</i>)</code></h4>
+          <p><b>Use Case:</b> when you want a new array based on your original, with some modification</p>
+          <p>The <code>map()</code> method is very similar to <code>forEach()</code>, except that each time the callback is executed, whatever is returned from the callback is added to a new array that map returns.</p>
+
+<pre>
+  <code>
+    let evenNumbers = [2, 4, 6, 8, 10];
+
+    let oddNumbers = evenNumbers.map((number, index, array) => {
+      return number + 1;
+    });
+
+    console.log(oddNumbers); // [3, 5, 7, 9, 11]
+  </code>
+</pre>
+          
+          <h4><code>Array.find(<i>callbackFunction</i>)</code> and <code>Array.filter(callbackFunction)</code></h4>
+
+          <p><code>Array.find()</code> helps you find a particular item in an array that matches a given condition. It will return the very first array element where the callback function returns <code>true</code>, even if there are multiple matches.</p>
+
+
+<pre>
+  <code>
+    let pets = [
+      { name: 'harvey', age: 1 },
+      { name: 'julius', age: 3 },
+      { name: 'mishu', age: 15 },
+    ];
+
+    let mishu = pets.find(pet => {
+      return pet.name === 'mishu'
+    });
+
+    console.log(mishu); // { name: 'mishu', age: 15 }
+  </code>
+</pre>
+
+          <p><code>Array.filter()</code> is very similar to <code>Array.find()</code>, but instead of simply returning the first match, it will return a new array with all elements that match.</p>
+          
+<pre>
+  <code>
+    let pets = [
+      { name: 'harvey', age: 1 },
+      { name: 'julius', age: 5 },
+      { name: 'mishu', age: 15 },
+    ];
+
+    let adultPets = pets.filter(pet => {
+      return pet.age > 3;
+    });
+
+    console.log(adultPets);
+    // [{name: 'julius', age: 5}, {name: 'mishu', age: 15}]
+  </code>
+</pre>
+
+        <h4><code>Array.reduce(<i>callbackFunction, accumulator</i>)</code></h4>
+
+        <p><code>Array.reduce()</code> can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:</p>
+        <ul>
+          <li><b>a callback function</b> - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over</li>
+          <li><b>an accumulator</b> - The accumulator is this 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.</li>
+        </ul>
+
+<pre>
+  <code>
+    const numbers = [1, 2, 3, 4, 5];
+
+    let sum = numbers.reduce((sum, number) => {
+      sum += number;
+      
+      return sum;
+    }, 0);
+  </code>
+</pre>
+
+        <p>There is a lot going on in reduce, so let's take a look at another example. Imagine we have a really complex data structure that is an array that contains multiple arrays, and we want to flatten it into a single array. We could do something like the following:</p>
+
+<pre>
+  <code>
+    let messyArray = [[0, 1], [2, 3], [4, 5]];
+
+    let cleanArray = messyArray.reduce(
+      (accumulator, currentElement) => {
+        return accumulator.concat(currentElement);
+      },
+      []
+    );
+
+    // cleanArray is [0, 1, 2, 3, 4, 5]
+  </code>
+</pre>
+
+
         </section>
 
         <hr />

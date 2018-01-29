@@ -111,10 +111,10 @@ setTimeout(function() {
 They are also commonly referred to as a *function expression* because the function is assigned to a variable, which makes the anonymous function part of a larger `expression`.  
 
 ```js
-var aliens = function() {
+var alienAlert = function() {
   alert('E.T. PHONE HOME')
 };
-aliens();
+alienAlert();
 ```
 
 Take a moment to recall what an `expression` does in JavaScript. How do you think that applies here?  
@@ -132,15 +132,15 @@ Let's take a look at a few more examples.
 
 ```js
 // Instead of declaring a named function, we assign a function to a variable.
-var area = function(width, height) {
+var calculateArea = function(width, height) {
   return width * height;
 };
 
 // We call this function using the variable that we assigned our anonymous function to
-area(2, 1)
+calculateArea(2, 1)
 
 // We can even assign that function call as the value of another variable. How would we run our 'area' function now?
-var size = area(3, 4);
+var size = calculateArea(3, 4);
 ```
 
 Why does this matter? Seems like everyone just wants to make life hard with all these different ways of doing what seems like the same thing. Enter...
@@ -317,10 +317,10 @@ getSize(5, 3, 2);
 
 // Interactive Pop Quiz Time!
 var areaOne = getSize(3, 2, 3)[0];
-var areaTwo = getSize(3, 2, 3)[1];
-var areaThree = getSize(5, 1, 2)[0];
-var volumeOne = getSize(2, 2, 2)[1];
-var volumeTwo = getSize(1, 8, 7)[0];
+var volumeOne = getSize(3, 2, 3)[1];
+var areaTwo = getSize(5, 1, 2)[0];
+var volumeTwo = getSize(2, 2, 2)[1];
+var areaThree = getSize(1, 8, 7)[0];
 ```
 
 # Loops
