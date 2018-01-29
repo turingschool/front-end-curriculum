@@ -1,6 +1,6 @@
 ---
 title: Scope And Closures
-tags: javascript
+tags: javascript, scope, closure, currying, iife
 module: 2
 author: Nathaniel Foster
 ---
