@@ -335,15 +335,43 @@
   </code>
 </pre>
 
-<!--           * filter
-          * find
-          * forEach
-          * map
-          * reduce
+        <h4><code>Array.reduce(<i>callbackFunction</i>)</code></h4>
 
+        <p><code>Array.reduce()</code> can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:</p>
+        <ul>
+          <li><b>a callback function</b> - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over</li>
+          <li><b>an accumulator</b> - The accumulator is this 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.</li>
+        </ul>
 
-          * every
-          * some -->
+<pre>
+  <code>
+    const numbers = [1, 2, 3, 4, 5];
+
+    let sum = numbers.reduce((sum, number) => {
+      sum += number;
+      
+      return sum;
+    }, 0);
+  </code>
+</pre>
+
+        <p>There is a lot going on in reduce, so let's take a look at another example. Imagine we have a really complex data structure that is an array that contains multiple arrays, and we want to flatten it into a single array. We could do something like the following:</p>
+
+<pre>
+  <code>
+    let messyArray = [[0, 1], [2, 3], [4, 5]];
+
+    let cleanArray = messyArray.reduce(
+      (accumulator, currentElement) => {
+        accumulator.concat(currentElement);
+      },
+      []
+    );
+
+    // cleanArray is [0, 1, 2, 3, 4, 5]
+  </code>
+</pre>
+
 
         </section>
 
