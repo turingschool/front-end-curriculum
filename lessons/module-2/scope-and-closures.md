@@ -80,7 +80,7 @@ Even though buildLaser and buildMoonBase both use a variable called `message`, b
 
 As the call stack builds up, each function has its own execution context.
 
-![callstack building up](http://g.recordit.co/OjKfXiWtKN.gif)
+![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif)
 
 ### Creating scope
 
