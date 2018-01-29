@@ -82,7 +82,7 @@
 
         <section>
           <h2><a name="Objects">Objects</a></h2>
-          <p>Objects allow you to define a set of related information using key-value pairs. The 'keys' (also known as 'properties') are strings that describe the value associated with it. You can think of object properties as variables that are simply attached to that particular object.</p>
+          <p>Objects allow you to define a set of related information using key-value pairs. The 'keys' (also known as 'properties') are strings that describe the value associated with it. You can think of object properties as variables that are attached specifically to that particular object.</p>
 
           <h3><code>Object.keys(<i>objectName</i>)</code></h3>
           <ul>
@@ -115,7 +115,13 @@
             <p>Let's say we are an online food delivery service, and this pizza object was an order that a user just put into their shopping cart. We want to display all the order details in an unordered list so that the user can review their order before placing it.</p>
           </div>
 
-          <h3>Object.assign()</h3>
+          <h3><code>Object.assign(<i>targetObject, ...sourceObjects</i>)</code></h3>
+          <ul>
+            <li><b>Purpose:</b> making a copy of a pre-existing object, merging two or more objects together</li>
+            <li><b>Use Case:</b> appending each property and its value to the DOM</li>
+            <li><b>Parameters:</b> a target object (where the new object will exist), unlimited source objects (pre-existing objects that you might want to merge)</li>
+          </ul>
+          <p>The <code>Object.assign()</code> method can be used to copy all the values from one ore more objects to a brand new object - called a <i>target object</i>. It can be used for creating a fresh copy of a single object, or for combining properties of multiple objects. The method will return the <i>target object</i>.</p>
           <div class="discuss">
             <h4>Practice</h4>
             <p>Let's assume the user has reviewed the order, and they decide to click the 'Place Order' button. When they click that button, we want to add additional information to their order details and display those on the DOM. Follow the instructions listed in <a href="https://gist.github.com/brittanystoroz/639a7d579d623a5baa72a3fa03f18df5">this gist</a>.</p>
