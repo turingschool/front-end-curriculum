@@ -146,10 +146,30 @@
   </code>
 </pre>
 
-          <p>A safer way to make a true, independent copy of a pre-existing object is to use <code>Object.assign()</code>.
+          <p>A safer way to make a true, independent copy of a pre-existing object is to use <code>Object.assign()</code>:
+
+<pre>
+  <code>
+    let pizzaOne = {
+      crust: 'thin',
+      sauce: 'tomato',
+      size: 14,
+      extraCheese: true,
+      toppings: ['onions', 'garlic', 'peppers']
+    };
+
+    let pizzaTwo = Object.assign({}, pizzaOne);
+
+    pizzaTwo.sauce = 'vodka';
+
+    console.log(pizzaTwo.sauce); // 'vodka'
+    console.log(pizzaOne.sauce); // 'tomato'
+  </code>
+</pre>
+
+          <p>The <code>Object.assign()</code> method takes in an indefinite amount of arguments. The first argument must be your <i>target</i> object. When we're simply copying a pre-existing object, our target object will be an empty object. The second parameter is the <i>source</i> object. Or, whatever object you're hoping to copy properties from. You can pass in as many source objects as you want.</p>
 
           <h4>Merging Multiple Objects</h4>
-
 
           <div class="discuss">
             <h4>Practice</h4>
