@@ -124,6 +124,30 @@
           <p>The <code>Object.assign()</code> method can be used to copy all the values from one or more objects to a brand new object - called a <i>target object</i>. It can be used for creating a fresh copy of a single object, or for combining properties of multiple objects. The method will return the <i>target object</i>.</p>
 
           <h4>Copying an Object</h4>
+          <p>Sometimes we want to make a copy of a pre-existing object. It might seem simple enough to do something like this:</p>
+<pre>
+  <code>
+    let pizzaOne = {
+      crust: 'thin',
+      sauce: 'tomato',
+      size: 14,
+      extraCheese: true,
+      toppings: ['onions', 'garlic', 'peppers']
+    };
+
+    let pizzaTwo = pizzaOne;
+  </code>
+</pre>
+          <p>But this actually has a major pitfall. When we assign objects to new variables, we're not truly creating a new, independent copy of the object. We're simply telling our new variable (<code>pizzaTwo</code>) to reference the pre-existing object (<code>pizzaOne</code>). So now there are two variables pointing to the same exact object in memory. This becomes problematic if we decide we want to update one of the pizza objects, but not the other. For example:</p>
+<pre>
+  <code>
+    pizzaTwo.sauce = 'vodka';
+    console.log(pizzaOne.sauce); // returns 'vodka'
+  </code>
+</pre>
+
+          <p>A safer way to make a true, independent copy of a pre-existing object is to use <code>Object.assign()</code>.
+
           <h4>Merging Multiple Objects</h4>
 
 
