@@ -335,15 +335,21 @@
   </code>
 </pre>
 
-<!--           * filter
-          * find
-          * forEach
-          * map
-          * reduce
+        <h4><code>Array.reduce(<i>callbackFunction</i>)</code></h4>
 
+        <p><code>Array.reduce()</code> can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters: the first is a callback, the second is an accumulator. The accumulator is this 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.</p>
 
-          * every
-          * some -->
+<pre>
+  <code>
+    const numbers = [1, 2, 3, 4, 5];
+
+    let sum = numbers.reduce((sum, number) => {
+      sum += number;
+      
+      return sum;
+    }, 0);
+  </code>
+</pre>
 
         </section>
 
