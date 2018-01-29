@@ -1,5 +1,5 @@
 ---
-title: Array and Object functions
+title: Array and Object Prototype Methods
 length:
 tags: javascript, js, array, object, 
 ---
