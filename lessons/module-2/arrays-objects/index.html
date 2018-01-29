@@ -337,7 +337,11 @@
 
         <h4><code>Array.reduce(<i>callbackFunction</i>)</code></h4>
 
-        <p><code>Array.reduce()</code> can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters: the first is a callback, the second is an accumulator. The accumulator is this 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.</p>
+        <p><code>Array.reduce()</code> can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:</p>
+        <ul>
+          <li><b>a callback function</b> - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over</li>
+          <li><b>an accumulator</b> - The accumulator is this 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.</li>
+        </ul>
 
 <pre>
   <code>
