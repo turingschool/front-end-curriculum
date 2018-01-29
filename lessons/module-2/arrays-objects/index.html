@@ -73,56 +73,19 @@
         <section>
           <h2><a name="Objects">Objects</a></h2>
           <p></p>
+
+          <h3>Object.keys()</h3>
+          <h3>Object.assign()</h3>
           <div class="discuss">
             <h4>Practice</h4>
             <p>Let's assume the user has reviewed the order, and they decide to click the 'Place Order' button. When they click that button, we want to add additional information to their order details and display those on the DOM. Follow the instructions listed in <a href="https://gist.github.com/brittanystoroz/639a7d579d623a5baa72a3fa03f18df5">this gist</a>.</p>
           </div>
         </section>
-
-        <!-- <h3>OAuth 2.0</h3>
-
-        Like the original OAuth, OAuth 2.0 provides users with the ability to grant third-party access to web resources without sharing a password. Updated features available in OAuth 2.0 include new flows, simplified signatures and short-lived tokens with long-lived authorizations.
-
-        The biggest change in the latest version is that it’s no longer required to sign each call with a keyed hash. The most common implementations of OAuth use one or both of these tokens instead:
-
-        access token: sent like an API key, it allows the application to access a user’s data; optionally, access tokens can expire.
-        refresh token: optionally part of an OAuth flow, refresh tokens retrieve a new access token if they have expired.
-         -->
         <hr />
 
         <section>
-          <h2><a name="OSP">Don't Roll Your Own OAuth</a></h2>
-          <p>In the tech world we have a tendency to want to build things from scratch or reinvent the wheel. (Exhibit A: npm has 2,348 packages related to the fetch API.) While that's all well and good, authentication and authorization are not areas that you want to implement on your own. Rolling your own OAuth will be wrought with vulnerabilities and security holes unless you have a full team of security engineers working on maintaining its integrity. It’s easy to introduce security holes if you're not familiar with that area of development or you're not actively and consistently looking for weaknesses.</p>
-          <p>There is a thing called <a href="https://www.schneier.com/blog/archives/2011/04/schneiers_law.html">Schneier's Law</a> which generally states:</p>
-          <blockquote>"any person can invent a security system so clever that she or he can't think of how to break it."</blockquote>
-          <p>Essentially, the security system you build is only as good as your security skills. There are a lot of seemingly minor features (user enumeration, lockout intervals, https, etc) that have a huge impact on the effectiveness of a security system. While we're used to being able to pare down a project scope to an MVP, you cannot take shortcuts when rolling your own authentication.</p>
-          <p>Lucky for us, there are plenty of pre-existing tools we can use for hooking into authentication for applications like Google, GitHub, Facebook, Twitter, etc. Two you might hear about are <a href="https://firebase.google.com/">Firebase</a> and <a href="https://www.auth0.com">Auth0</a>.</p>
-
-          <h3>Firebase</h3>
-          <p>Firebase is a product created by Google that provides a collection of tools for building a full-featured application without having to create your own backend. Firebase provides database management and authentication, among other things.</p>
-          <p>With Firebase, we can create a new application and enable authentication for Google, GitHub, Facebook, Twitter, etc. While Firebase provides us with many different tools for application development, we recommend only hooking into it for authentication purposes. You have your own backend skills, you don't need to rely on the other features of Firebase to build your applications.</p>
-
-          <h3>Auth0</h3>
-          <p>Auth0 is a bit newer, and has a strong emphasis on the use of JWTs. It only provides the authentication feature (none of the other bells and whistles we get with Firebase), but it allows us to hook into the same types of accounts as Firebase. Unfortunately, because Auth0 is so young, it's also been notorious for implementing breaking changes which have cause applications to stop working in the past. Advice: Use with caution.</p>
-        </section>
-
-        <hr />
-        <section>
-          <h2><a name="Practice">Practice with Firebase</a></h2>
-          <p>We'll get some quick familiarity with the Firebase syntax and API, and see how the UI works when authenticating with Google through Firebase. We're going to create simple, single HTML file that has a sign in button that allows you to authenticate with Google. When you click the button again, it will sign you out.</p> 
-          <h3>Step 1: Getting Started</h3>
-          <ul>
-            <li>Go to <a href="https://firebase.google.com/">Firebase</a> and click on "Go To Console" in the top right corner</li>
-            <li>Click "Add Project" and give it a name</li>
-            <li>You'll then be brought to a project management dashboard. Click on the 'Authentication' link in the left sidebar, and then click the 'Setup Signin Method' button.</li>
-            <li>Enable google authentication</li>
-          </ul>
-          <h3>Step 2: Writing the Code</h3>
-          <ul>
-            <li>Clone down <a href="https://gist.github.com/brittanystoroz/251de632b6cf9c5a92f087a46caf8bbc">this boilerplate</a></li>
-            <li>You don't need to create a new directory or npm project, but you do need to start up a server. You can do this really quickly with <code>python -m SimpleHTTPServer</code> in the terminal (defaults to port 8000) or by doing a global installation of the npm <a href="https://www.npmjs.com/package/http-server">http-server</a> module and running <code>http-server</code>.</li>
-            <li>There are comments throughout the file of things you need to do to get authentication working and links to where you'll find the solutions in the documentation</li>
-          </ul>
+          <h2><a name="Arrays">Arrays</a></h2>
+          <p></p>
         </section>
 
         <hr />
