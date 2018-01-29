@@ -230,16 +230,63 @@
 </pre>
 
           <p>Not only is this more verbose and harder to write, the numbered keys in this object really don't provide us with any useful information or context about each value. JavaScript abstracts this away from us by providing us with a specialized Array data type.</p>
+
+          <p><i>Note: Try running <code>Object.keys()</code> against an array. You'll see that this method still works because arrays are objects under the hood! You should get back an array of ordered numbers.</i></p>
+
           <p>The array data type comes with its own set of prototype methods for manipulating and accessing its data. There are <b>tons</b> of them, and sometimes picking which ones to use can be tricky. There are three main categories of array prototype methods: mutator, accessor, and iteration methods. While it's not vital that you remember the names of these categories, knowing what each set does can help you narrow down your choices when trying to determine what method to use to perform a particular action.</p>
 
           <h3>Mutator Methods</h3>
           <p><b>Directly modify the existing array</b></p>
+          <p>Mutator methods can be used for adding or removing items from an array, sorting the array, reversing it, etc. They modify the existing array and might return the modified array, or the single array item that was effected.</p>
+          <p>As an example, one of the mutator methods you can call on an array is <code>sort()</code>. The <code>sort()</code> method will sort strings alphabetically and integers numerically by default:</p>
+
+<pre>
+  <code>
+    let instructors = ['Leta', 'Robbie', 'Brittany'];
+    instructors.sort(); // ['Brittany', 'Leta', 'Robbie'];
+    console.log(instructors); // ['Brittany', 'Leta', 'Robbie'];
+  </code>
+</pre>
 
           <h3>Accessor Methods</h3>
           <p><b>Do not modify the existing array; return a particular representation of the array</b></p>
+          <p>Some accessor methods are very similar to the mutator methods, but the big difference here is that they do <b>not</b> modify the original array, and instead return a copy of it that reflects whatever mutation you made.</p>
+          <p>One example of an accessor method is <code>join()</code>. We can use this method to join together all the items of an array and return the resulting string:</p>
+
+<pre>
+  <code>
+    let lesson = ['module2', 'javascript', 'arrays'];
+    lesson.join('-');
+    console.log(lesson); // ['module2', 'javascript', 'arrays']
+  </code>
+</pre>
+
+          <div class="discuss">
+            <h4>Discuss</h4>
+            <p>In pairs, take a look at the Array prototype methods listed <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Methods">here</a>. We'll practice specifically with <code>slice, splice, shift, unshift, push, pop</code>. Create a repl or in your browser dev tools console, play with the array method you're assigned. Pay particular attention to the following:</p>
+            <ul>
+              <li>the original array before you call a method on it</li>
+              <li>what the method does</li>
+              <li>what the method returns</li>
+              <li>the value of the original array after calling your assigned method</li>
+            </ul>
+          </div>
+
+
 
           <h3>Iteration Methods</h3>
-          <p><b>Loop through the existing array</b></p>
+          <p><b>Loops through the existing array and may mutate values, or return some other result based on what information you're trying to retrieve from the array.</b></p>
+
+          * filter
+          * find
+          * forEach
+          * map
+          * reduce
+
+
+          * every
+          * some
+
 
         </section>
 
