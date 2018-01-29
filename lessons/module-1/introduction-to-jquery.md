@@ -374,7 +374,7 @@ jq.text('New text.');
 
 ### `html()`
 
-`html()` is to `text()` as `innerHTML` is to `innerText`. Basically, change the HTML contents of a bigger element, not just the text of it. As a fun experiment, select an element and try to replace the contents to `<script>alert('HACKED!');</script>` using both `text()` and `html()`. Let me know how it goes for you.
+`html()` is to `text()` as `innerHTML` is to `innerText`. Basically, change the HTML contents of a bigger element, not just the text of it. As a fun experiment, select an element and try to replace the contents to `<script>alert('YOU ARE HACKED!');</script>` using both `text()` and `html()`. Let me know how it goes for you.
 
 ### `append()`
 
