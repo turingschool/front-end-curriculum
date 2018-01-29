@@ -355,6 +355,24 @@
   </code>
 </pre>
 
+        <p>There is a lot going on in reduce, so let's take a look at another example. Imagine we have a really complex data structure that is an array that contains multiple arrays, and we want to flatten it into a single array. We could do something like the following:</p>
+
+<pre>
+  <code>
+    let messyArray = [[0, 1], [2, 3], [4, 5]];
+
+    let cleanArray = messyArray.reduce(
+      (accumulator, currentElement) => {
+        accumulator.concat(currentElement);
+      },
+      []
+    );
+
+    // cleanArray is [0, 1, 2, 3, 4, 5]
+  </code>
+</pre>
+
+
         </section>
 
         <hr />
