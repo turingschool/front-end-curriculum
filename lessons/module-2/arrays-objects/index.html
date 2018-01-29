@@ -170,6 +170,34 @@
           <p>The <code>Object.assign()</code> method takes in an indefinite amount of arguments. The first argument must be your <i>target</i> object. When we're simply copying a pre-existing object, our target object will be an empty object. The second parameter is the <i>source</i> object. Or, whatever object you're hoping to copy properties from. You can pass in as many source objects as you want.</p>
 
           <h4>Merging Multiple Objects</h4>
+          <p>Sometimes you might want to combine the properties from multiple objects into a single, new (target) object. This is also a scenario that <code>Object.assign()</code> can handle for you. One example is when you want to apply instance properties to a Class in a quick, clean way. You may have often seen instance properties defined on a class like so:</p>
+
+<pre>
+  <code>
+    class Person {
+      constructor(name, age, height, weight) {
+        this.name = name;
+        this.age = age;
+        this.height = height;
+        this.weight = weight;
+      }
+    }
+  </code>
+</pre>
+
+          <p>Imagine all the instance properties we might want to add to this <code>Person</code> class. That could be tons of lines of repetitive code. With <code>Object.assign()</code>, however, we can clean this up a bit by doing something like:</p>
+
+<pre>
+  <code>
+    class Person {
+        constructor(name, age, height, weight) {
+            Object.assign(this, { name, age, height, weight });
+        }
+    }
+  </code>
+</pre>
+
+          <p>While this particular example is just giving us some nice, syntactic sugar, there are many other scenarios where you might want to merge objects. Let's practice!</p>
 
           <div class="discuss">
             <h4>Practice</h4>
