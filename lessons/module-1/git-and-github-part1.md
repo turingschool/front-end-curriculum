@@ -120,6 +120,17 @@ Commit the file using the command: `git commit -m "Add new index HTML file"`
 
 The `-m` part of the command says we want to add a message to this commit. ALWAYS add a message. The message is information that you (or other developers) can use at a later time when you want to look back and see what changes were contained in a commit. We will view this history later.
 
+##### A note on commit messages
+
+A git commit message is the best way to communicate *context* about a change to other developers and your future self.
+
+Basic rules of a decent commit message:
+* Capitalize the subject line
+* Do not end the subject line with a period
+* Use the imperative mood in the subject line
+
+Please read [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/) for homework as it goes into more detail on what makes a great commit message.
+
 If we check the status of the repository now (`git status`), then it tells us that there is "nothing to commit" because all of the changes we have made in this directory have been committed.
 
 ```shell
