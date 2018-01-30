@@ -213,14 +213,14 @@ add-body-content
 
 To change to our new branch, we need to "checkout" the branch.  
 
-Let's checkout the new branch using the command `git checkout add-body-content`. To checkout any branch, the command is `git checkout branch-name`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
+Let's checkout the new branch using the command `git checkout add-body-content`. To checkout any branch, the command is `git checkout [branch name]`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
 
 ```shell
 * add-body-content
   master
 ```
 
-Pro Tip: We can use the command `git checkout -b branch-name` to both create and change to the `branch-name` specified.
+Pro Tip: We can use the command `git checkout -b [branch name]` to both create and change to the `branch name` specified.
 
 #### Make changes on the new branch
 
