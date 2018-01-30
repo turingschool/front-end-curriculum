@@ -4,10 +4,6 @@ length:
 tags: javascript, js, array, object, 
 ---
 
-Refactoring your code is an important part of reducing <b>technical debt</b>. Technical debt is the build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain.
- 
-As we work under strict deadlines, we often write less-than-ideal code that might suffer from the above ailments. No codebase will ever be perfect, but we can take a lot of simple steps to clean up our projects and keep our technical debt in check.
-
 ### Goals
 
 By the end of this lesson, students should be able to:
@@ -16,7 +12,13 @@ By the end of this lesson, students should be able to:
 * identify several code smells and areas for improvement in codebases
 
 
-### File Issues
+
+Refactoring your code is an important part of reducing <b>technical debt</b>. Technical debt is the build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain.
+ 
+As we work under strict deadlines, we often write less-than-ideal code that might suffer from the above ailments. No codebase will ever be perfect, but we can take a lot of simple steps to clean up our projects and keep our technical debt in check.
+
+
+## File Issues
 
 First things first: before you even begin to prioritize working on technical debt, keep track of it. This is a great use-case for GitHub issues. Because resolving technical debt is usually a lower priority, and not as urgent as bug fixes and feature completion, it's important to file issues that will remind you of what needs fixing up once you have some downtime.
 
@@ -24,18 +26,18 @@ When you file issues for technical debt, it's helpful to put a label on them so 
 
 <em>Note: For Turing students specifically, filing issues is incredibly important. While you're interviewing, issues indicate to an employer that you know how to improve your projects. Even if you don't have time to resolve all of the issues you file (you won't), you can at least signify to potential employers that you're aware x, y, and z are broken and you plan on fixing them. (Filing these issues will also give you nice, bite-sized work to do after graduation when you're trying to keep coding.)</em>
 
-### Write Your Tests
+## Write Your Tests
 
 Testing your application is an important part of keeping technical debt under control. The more test coverage you have, the easier it will be to refactor your code later. Often, the scariest part of refactoring your code is not knowing whether or not something is going to break based on the changes you made. Unit tests and acceptance tests will let you know if your changes have broken any existing functionality, so you can safeguard yourself against adding bugs to your project.
 
 While testing may seem daunting or time-consuming upfront, it will save you a lot of time and stress in the long run. There is no better feeling than refactoring some code, and having a test alert you to a potential bug you may have introduced. 
 
 
-### Lint Everything
+## Lint Everything
 
 Linting your files helps prevent a lot of technical debt. For starters, it forces you to conform to a style guide for writing your code. The consistency provided by style guides makes your code infinitely easier to read. Without a linter, and with many collaborators, a codebase can quickly become an unreadable mess. Being able to read your code is a necessary requirement before you can start identifying areas for improvement.
 
-### Maintain a Healthy Git Workflow
+## Maintain a Healthy Git Workflow
 
 Many linters will catch things like debugger statements and `console.logs()`, but occessionally some of the things that we do in development will sneak through the linter and into our codebase. For example, a lot of new developers will try out several solutions to solve a problem, and leave a bunch of commented-out code from their prior attempts in place. There is no reason to commit commented-out code. You can hold onto those types of things through git in a number of ways. `git stash` is a great way to temporarily hang onto some code, and ensure it doesn't sneak into your commits. You should also get into the habit of adding code to your commits in patches rather than in bulk: `git add --patch`.
 
@@ -43,13 +45,13 @@ Similarly, you want to make sure you don't accidentally leave "dead" code in you
 
 Additionally, both commented-out code and dead code are often dead giveaways that you are throwing solutions at the wall rather than taking a purposeful, logical approach to solving a problem. Leaving these things in can affect people's confidence in the stability of the codebase and the developers working on it.
 
-### Types of Code Smells
+## Types of Code Smells
 
-#### Repetitive Code
+### Repetitive Code
 
 One of the most common code smells is redundant code. Ever find yourself copy and pasting chunks of code from one part of a file to another? Don't do that! Any time you see the same exact code in multiple places, or even just very similar code, you've got some refactoring to do. "Don't Repeat Yourself" is a core pillar of maintaining a healthy codebase. DRY up your code as much as possible.
 
-#### Hardcoded Values
+### Hardcoded Values
 
 Hardcoded values are often strings or other values that you use in multiple places throughout your codebase. The problem with hardcoding values like this is that if that value ever needs to change, now you have to update it in multiple places. It's best to store these types of values in a variable at the top of your file (or in the scope of wherever it's needed) so that you only have to change it once when the time comes. A common example that you'll run into in the future is seeing hardcoded URLs for accessing third-party APIs. For example, we would want to turn this:
 
@@ -86,7 +88,7 @@ fetch('/radar-map/denver')
   .catch(error => throw error);
 ```
 
-#### Long, Gnarly if-else Statements
+### Long, Gnarly if-else Statements
 
 Try to keep your if-else statements to a legitimate if, else, and nothing more. Relying heavily on `else if`'s is a sure sign your conditional logic is getting a little out of control. Some ways to refactor unruly if-else statements is to convert them into `switch` statements, or create an object of key-value pairs that you can use as a reference map for certain conditions. For example, this:
 
@@ -129,7 +131,7 @@ function evalInput(event) {
 ```
 
 
-### When to Prioritize Refactoring
+## When to Prioritize Refactoring
 
 We mentioned earlier that refactoring is often a secondary priority. It's hard to know when exactly to prioritize resolving technical debt, but there are a couple of scenarios where it makes sense:
 
@@ -138,7 +140,7 @@ We mentioned earlier that refactoring is often a secondary priority. It's hard t
 * **When you can resolve the technical debt quickly without taking yourself off your current task.** If you notice something small (e.g. a linter or code style error) that can be cleaned up while you're working on another feature, feel free to fix it right away rather than filing an issue to fix it later. In this scenario, you would still want to create a separate commit for the refactoring fix, to prevent cluttering up the diff on your feature commits.
 
 
-### Checks for Understanding
+## Checks for Understanding
 
 * What is technical debt?
 * What are some things we can do to keep technical debt under control?
