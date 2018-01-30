@@ -128,6 +128,7 @@ Basic rules of a decent commit message:
 * Capitalize the subject line
 * Do not end the subject line with a period
 * Use the imperative mood in the subject line
+* Explain what and why vs. how
 
 Please read [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/) for homework as it goes into more detail on what makes a great commit message.
 
