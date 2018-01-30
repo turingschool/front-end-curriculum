@@ -49,7 +49,26 @@ Additionally, both commented-out code and dead code are often dead giveaways tha
 
 ### Repetitive Code
 
-One of the most common code smells is redundant code. Ever find yourself copy and pasting chunks of code from one part of a file to another? Don't do that! Any time you see the same exact code in multiple places, or even just very similar code, you've got some refactoring to do. "Don't Repeat Yourself" is a core pillar of maintaining a healthy codebase. DRY up your code as much as possible.
+One of the most common code smells is redundant code. Ever find yourself copy and pasting chunks of code from one part of a file to another? Don't do that! Any time you see the same exact code in multiple places, or even just very similar code, you've got some refactoring to do. "Don't Repeat Yourself" is a core pillar of maintaining a healthy codebase. DRY up your code as much as possible. Here's an example where no line of code is exactly the same, but it still could use some DRYing up:
+
+```js
+const color1 = $('#color1').children('p').text()
+const color2 = $('#color2').children('p').text()
+const color3 = $('#color3').children('p').text()
+const color4 = $('#color4').children('p').text()
+const color5 = $('#color5').children('p').text()
+```
+
+Notice that only the number is changing in each line. We could refactor this using a for loop:
+
+```js
+let colors = [];
+
+for (let i = 0; i < 5; i++) {
+  colors[i] = $(`#color${i}`).children('p').text();
+}
+```
+
 
 ### Hardcoded Values
 
