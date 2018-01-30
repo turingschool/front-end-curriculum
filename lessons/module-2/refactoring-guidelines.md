@@ -69,6 +69,8 @@ for (let i = 0; i < 5; i++) {
 }
 ```
 
+Also note in this example, if you're ever naming variables with numbers appended to them, or making variables like `FirstThing` and `SecondThing`, that's another big code smell. Imagine if your app needed to scale and you eventually had a variable named `QuintillionthThing`. Numbering variables is usually a sign that you should be using an array and accessing them by their index.
+
 
 ### Hardcoded Values
 
