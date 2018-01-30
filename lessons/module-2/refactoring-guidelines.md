@@ -160,6 +160,103 @@ We mentioned earlier that refactoring is often a secondary priority. It's hard t
 * **When refactoring will make it faster or easier to implement a new feature.** Sometimes the time spent refactoring upfront will save you time down the road. If you're running into a serious roadblock with pre-existing code that's making it difficult to work on your higher-priority tasks, this might be a good time to do some refactoring.
 * **When you can resolve the technical debt quickly without taking yourself off your current task.** If you notice something small (e.g. a linter or code style error) that can be cleaned up while you're working on another feature, feel free to fix it right away rather than filing an issue to fix it later. In this scenario, you would still want to create a separate commit for the refactoring fix, to prevent cluttering up the diff on your feature commits.
 
+## Practice
+
+Take the following three code examples and try to identify what code smells you find. Then make an attempt at refactoring them.
+
+#### Example 1
+
+```js
+if (this.explode === 'no') {
+  let playerImage = new Image();
+
+  playerImage.src = 'assets/airplane.png';
+  context.drawImage(
+    playerImage,
+    this.x,
+    this.y,
+    this.width,
+    this.height
+  );
+
+} else if (this.explode === 'yes') {
+  let playerImage = new Image();
+
+  playerImage.src = 'assets/kapow.png';
+
+  context.drawImage(
+    playerImage,
+    this.x,
+    this.y,
+    this.width,
+    this.height
+  )
+}
+```
+
+#### Example 2
+
+```js
+function togglePlayer(currentToken) {
+  if (currentToken.player === "Player One") {
+    var placedToken = currentToken.moveDown(currentToken, newArray)
+
+    if (placedToken) {
+      newArray.push(placedToken);
+      return new Token("Player Two", context, canvas);
+
+    } else {
+      return new Token("Player One", context, canvas);
+    }
+
+  } else {
+    var placedToken = currentToken.moveDown(currentToken, newArray)
+
+    if (placedToken) {
+      newArray.push(placedToken);
+      return new Token("Player One", context, canvas);
+
+    } else {
+      return new Token("Player Two", context, canvas);
+    }
+  }
+}
+```
+
+#### Example 3
+
+```js
+var slots = [];
+var firstRow = 40;
+var secondRow = 40;
+var thirdRow = 40;
+var fourthRow = 40;
+var fifthRow = 40;
+var sixthRow = 40;
+
+for (var i = 0; i < 42; i++) {
+  if (i < 7) {
+    slots.push(new Slot(sixthRow, 550, context, canvas));
+    sixthRow += 95;
+  } else if (i < 14) {
+    slots.push(new Slot(fifthRow, 470,context, canvas));
+    fifthRow += 95;
+  } else if (i < 21) {
+    slots.push(new Slot(fourthRow, 390,context, canvas));
+    fourthRow += 95;
+  } else if (i < 28) {
+    slots.push(new Slot(thirdRow, 310,context, canvas));
+    thirdRow += 95;
+  } else if (i < 35) {
+    slots.push(new Slot(secondRow, 230,context, canvas));
+    secondRow += 95;
+  } else if (i < 42) {
+    slots.push(new Slot(firstRow, 150,context, canvas));
+    firstRow += 95;
+  }
+}
+```
+
 
 ## Checks for Understanding
 
