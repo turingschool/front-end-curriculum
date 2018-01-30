@@ -1,5 +1,5 @@
 ---
-title: Refactoring Guidelines
+title: Managing Technical Debt - Refactoring & Reformatting
 length:
 tags: javascript, js, array, object, 
 ---
