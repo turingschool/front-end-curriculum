@@ -37,6 +37,11 @@ While testing may seem daunting or time-consuming upfront, it will save you a lo
 
 Linting your files helps prevent a lot of technical debt. For starters, it forces you to conform to a style guide for writing your code. The consistency provided by style guides makes your code infinitely easier to read. Without a linter, and with many collaborators, a codebase can quickly become an unreadable mess. Being able to read your code is a necessary requirement before you can start identifying areas for improvement.
 
+Take a look at how much of a difference linting can make for readability:
+
+<img src="/assets/images/lessons/refactoring/linting.gif" width="800px" />
+
+
 ## Maintain a Healthy Git Workflow
 
 Many linters will catch things like debugger statements and `console.logs()`, but occessionally some of the things that we do in development will sneak through the linter and into our codebase. For example, a lot of new developers will try out several solutions to solve a problem, and leave a bunch of commented-out code from their prior attempts in place. There is no reason to commit commented-out code. You can hold onto those types of things through git in a number of ways. `git stash` is a great way to temporarily hang onto some code, and ensure it doesn't sneak into your commits. You should also get into the habit of adding code to your commits in patches rather than in bulk: `git add --patch`.
