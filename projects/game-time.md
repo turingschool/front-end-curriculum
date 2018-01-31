@@ -52,7 +52,7 @@ To this end, make sure to include sufficient UX to allow the user to fully inter
 
 * Indicate when the game is over and won or lost
 * Allow the user to start a new game
-* Include a clean UI surrounding the actual game interface itself
+* Include a clean UI surrounding the actual game interface itself, including thorough instructions
 * Create multiple rounds of difficulty (consider increasing factors such as game speed, randomness of starting setup, etc.).
 
 ## Code organization
@@ -111,10 +111,10 @@ if you have a `MasterChief.js` class file, all the tests for that class should b
 
 ### Testing
 
-* 4 - Project has a running test suite that exercises the application at multiple levels. The test suite covers almost all aspects of the application and uses mocks and stubs when appropriate.
-* 3 - Project has a running test suite that tests multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of integration testing.
-* 2 - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
-* 1 - There is little or no evidence of testing in this application.
+* 4 - Project has a running test suite that exercises the application at multiple levels. The test suite covers almost all aspects of the application and uses mocks and stubs when appropriate. ESLint shows 0 complaints.
+* 3 - Project has a running test suite that tests multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of integration testing. ESLint shows < 5 complaints.
+* 2 - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested. ESLint shows 5+ complaints.
+* 1 - There is little or no evidence of testing in this application. ESLint shows 10+ complaints.
 
 ### JavaScript Style
 
@@ -131,12 +131,3 @@ if you have a `MasterChief.js` class file, all the tests for that class should b
 * 2 - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 * 1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * 0 - The application was not checked into version control.
-
-### Code Sanitation
-
-The output from ESLint shows…
-
-* 4 - Zero complaints
-* 3 - Five or fewer complaints
-* 2 - Six to ten complaints
-* 1 - More than ten complaints

@@ -8,6 +8,28 @@ module: 4
 
 You are applying for a Front-End Developer position at a company called CourseFlow that specializes in helping college students organize their course load. Users sign up for the application to monitor their grades and ensure they're on track to graduate in 4 years with the appropriate credits. The company is just a few years old, and has about 50 employees. They foster a casual work environment, and while they try to facilitate a healthy work-life balance, sometimes working at a small company requires longer hours and more responsibility for employees.
 
+## Crushing the Interview
+
+In order to go into your job hunt and interview process more confident, there are some things you should keep in mind.
+
+### What to Expect
+
+* **Technical Questions**
+* **Coding/Whiteboarding Challenge**
+* **Introspective/Cultural Questions**
+* **Questions for the Employer**
+
+### How to Communicate
+
+* **It's ok to say you don't know**
+* **Talk about tech you're excited about**
+* **Answer questions as in-depth as you're comfortable**
+
+### Professionalism
+
+* **Dress appropriately**
+* **Be on time, but not too early**
+
 
 ## Rubric
 

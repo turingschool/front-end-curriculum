@@ -24,13 +24,12 @@ A **package** is a bit of reusable code!
 
 You can write your own packages, bundle them up, and publish them (either on the [NPM library](https://www.npmjs.com/) or on GitHub) for other devs to use!
 
-Why do we use packages? Think about your previous projects. You've probably used some packages (jQuery, mocha, chai, moment.js, etc). These packages provide us with additional functionality, or solve a problem so we don't have to. They reduce the bulk of our code. As complicated as node packages can be to understand at first, it is still easier to do than to not use any packages in our projects!
+Why do we use packages? Think about your previous projects. You've probably used some packages (jQuery, mocha, chai, moment.js, etc).  These packages solve a problem and help us from having to reinvent the wheel. They also reduce the bulk of our code.
 
 NPM is a **manager**; it includes a set of tools that let you use and control node packages. Using it, you can:
 - install packages into your project as dependencies (aka, code that your project _depends_ on)
 - create custom scripts to run code
 - specify specific packages to use when deploying your app to production
-- and more
 
 You are so far pretty familiar with cloning down a repo, changing into the directory, and running `npm install`. Let's unpack what's happening when you do that!
 
@@ -40,6 +39,7 @@ You are so far pretty familiar with cloning down a repo, changing into the direc
 The `package.json` file is created when we initialize npm in a repo (the terminal command is `npm init`). It keeps track of our dependencies, lets us write npm scripts, and is the instruction manual NPM follows when we run `npm install`.
 
 Let's take a look at an example `package.json` file:
+
 ```
 {
   "name": "Super Rad App Name",
@@ -71,7 +71,7 @@ Let's take a look at an example `package.json` file:
 
 Take a minute to look over this. What's familiar? What's confusing?
 
-This is pretty ugly to look at. Let's break it down. The package.json is just meta data about our installed packages. It can be helpful to think of the `package.json` as the recipe for our app.
+Let's break this down. The package.json is just meta data about our installed packages. It can be helpful to think of the `package.json` as the recipe for our app.
 
 #### dependencies (production):
 
@@ -108,6 +108,40 @@ _Note: you can always edit the `package.json` file manually! Just go in there an
 
 _Another note: Additional reading about the `package-lock.json` file [here](https://docs.npmjs.com/files/package-lock.json). It is a log of snapshots of your dependency tree. It ensures that a team or production build is using the exact same dependencies, and is also a log that allows you to "time travel" into earlier versions of the dependency tree._
 
+#### Common NPM Commands
+
+#### - `npm install`
+
+ Install package dependancies and devDependencies listed in package.json
+
+#### - `npm install [package-name]`
+
+ Install package locally in folder location node_modules
+
+#### - `npm install -g [package-name]`
+
+ Install package globally, usually to `/usr/local/lib/node_modules`
+
+#### - `npm install --save [package-name]`
+
+ Install package locally in folder location node_modules and update package.json dependancies
+
+#### - `npm install --save-dev [package-name]`
+ 
+ Install package locally in folder location node_modules and update package.json dependancies
+ 
+#### - `npm start`
+
+ Run start script located in package.json 
+ 
+#### - `npm test`
+
+ Run test script located in package.json 
+
+#### - `npm run [custom script]`
+
+ Run custom script located in package.json 
+ 
 ---
 
 ## Webpack Basics
@@ -115,84 +149,122 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 
 [Webpack intro blog post](https://blog.envylabs.com/getting-started-with-webpack-2-ed2b86c68783)
 
-What is webpack? In the simplest terms, webpack is a compiler that takes multiple JavaScript modules and bundles them up into a single, unified file.
+### What is Webpack?
+Webpack is a build tool that takes multiple JavaScript modules and bundles them up into a single, unified file.
 
-What is the point of something like this? There are a lot of reasons:
-- We can split our JS into separate files for organization, readability, and maintainability.
+### Why Do We Like It?
+
+- We can organize our code into separate files. This makes it easier to find specific pieces of code and improves maintainability.
     - Think about your GameTime project and how many different JS files you have - imagine writing all of your code in a single file!
-- Webpack works through our dependencies (which, as we just learned, are simply pacakges of JS we've imported into our projects) and adds them into our bundled-up code, exactly where we need it.
+
+- Webpack creates a unique scope for each our files, helping to prevent adding things to the global and naming collisions.
+
 - By bundling all of our JS into a single file, the browser only needs to request, wait for, and process through one file.
-    - Otherwise, it would have to request every single individual dependency and JS file!
+
+    - Otherwise, it would have to request every JS file and individual dependency!
+
     - Network requests are expensive (they take a long time), which slows down the app and makes for a poor user experience.
-- We can even turn our HTML and CSS files into bundle-able JS modules by using loaders, further reducing the number of files the browser has to request and process.
 
-[This](https://webpack.js.org/concepts/) is a great high-level overview of the core concepts of webpack. For now, we're just going to go over a very basic introduction on how to configure webpack.
+- We can even bundle up our HTML and CSS files by using loaders, further reducing the number of files the browser has to request and process.
 
-Here is the `webpack.config.js` file from the [tdd](https://github.com/turingschool-examples/tdd) repo:
+### Configuring Webpack
+
+[Core Webpack Concepts](https://webpack.js.org/concepts/)
+
+Here is the `webpack.config.js` file from the [gametime](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) repo:
+
 ```
+const path = require('path');
+
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
-    main: ['babel-polyfill', './lib/index.js'],
-    test: ['babel-polyfill', 'mocha!./test/index.js'],
+    main: "./lib/index.js",
+    test: "mocha!./test/index.js"
   },
   output: {
     path: __dirname,
-    filename: '[name].bundle.js',
+    filename: "[name].bundle.js"
   },
   module: {
     loaders: [
-      {
-        test: /\.jsx?$/,
-        exclude: /(node_modules|bower_components)/,
-        loader: 'babel',
-        query: {
-          presets: ['es2015', 'react'],
-        },
+      { 
+        test: /\.js$/, 
+        exclude: /node_modules/, 
+        loader: 'babel-loader' 
       },
-      { test: /\.css$/, loader: 'style!css' },
-      { test: /\.scss$/, loader: 'style!css!sass' },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        loader: 'file-loader'
+      { 
+        test: /\.css$/, 
+        exclude: /node_modules/, 
+        loader: "style-loader!css-loader" 
       }
-    ],
+    ]
   },
   resolve: {
-    extensions: ['', '.js', '.jsx', '.json', '.scss', '.css'],
+    extensions: ['', '.js', '.json', '.css']
   }
 };
 ```
 
-Let's focus on the `loaders` key-value pair inside the `module` object. You can read more about loaders [here](https://webpack.js.org/concepts/#loaders).
+#### devtool
+This provides a map of our bundled code, so that when we run into errors it will tell us in the console where the error is in our pre-bundled code.
 
-Loaders transform different non-JS code into valid JS modules so they can be included when webpack bundles everything up into a single file for the browser. Loaders have two parts: an npm module, and adding an object to the `webpack.config.js` file.
+#### entry
+This is where webpack will start bundling up our app. It should be the entry point to your application.
+
+#### output
+This defines where where webpack will create your bundled code and what it will name the file.
+
+#### loaders
+Let's focus on the `loaders` key-value pair inside the `module` object. 
+
+Loaders transform different non-JS code into valid JS modules so they can be included when webpack bundles everything up into a single file for the browser. 
+
+Loaders have two parts: an npm module, and a configuration object which is added to the `webpack.config.js` file.
 
 Let's walk through how the `css-loader` was added to the react starter kit repo.
 
-1. The css-loader package was installed: `npm install css-loader --save-dev`
+1. Install the loader
+`npm install css-loader --save-dev`
     - It also probably required the `style-loader` package to be installed, too.
-2. In the `webpack.config.js` file, we added `{ test: /\.css$/, loader: 'style!css' }` to the `loaders` array.
+2. In the `webpack.config.js` file, we add our configuration object
+
+```
+{ 
+  test: /\.css$/, 
+  exclude: /node_modules/, 
+  loader: 'style-loader!css-loader' 
+}
+``` 
 
 That's it! But what is that object doing?
 
-The regular expression inside the object looks for all files whose extension is `.css` and identifies them as code to be transformed into a JS module, using the style- and css- loader npm packages.
+The regular expression inside the object looks for all files whose extension is `.css` and identifies them as code to be transformed into a JS, using the style-loader and css-loader npm packages.
 
 When we run webpack, it transforms the css files into JS modules, which are then bundled together with the rest of our JS into a single file, `bundle.js` (as specified in the `output` section of the `webpack.config.js` file!).
+
+You can read more about loaders [here](https://webpack.js.org/concepts/#loaders).
+
+#### Using Our Bundled File
 
 In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it references the all-neatly-bundled-up JS file that webpack made for us!
 
 ---
 
-## eslint Basics
+## ESLint Basics
 [eslint 'Getting Started' documentation](https://eslint.org/docs/user-guide/getting-started)
 
 Linting is checking code for consistency and synctactical cleanliness. It can also help us spot things like redundant or extraneous code (e.g. variables we declare but never use, etc). We use [eslint](https://eslint.org/) in our projects.
 
 What are the benefits of consistent code?
+
 - It's easier to read
 - It reduces the chances of syntax errors
 - A consistent style makes it easier to begin understanding and writing code in an unfamiliar project
+
+### Setting up a new project with ESLint
+
+*Note: The boilerplates we set you up with already have eslint setup so you don't need to follow these steps*
 
 To set up eslint, follow these steps:
 
@@ -293,10 +365,19 @@ To set up eslint, follow these steps:
     ```
     "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
     ```
-5. To lint your code, in the terminal, run `npm run eslint`.
-6. It will output a list of all errors and warnings to be corrected in the code, including the file and line in which the errors are found.
+    
+### Running ESLint
 
-Read up on more linting rules [here](https://eslint.org/docs/rules/), and configuring the eslint file [here](https://eslint.org/docs/user-guide/configuring).
+In the terminal, run `npm run eslint`.
+
+It will output a list of all errors and warnings to be corrected in the code, including the file and line in which the errors are found.
+
+In your terminal, navigate to your gametime directory and enter `npm run eslint`.
+
+### Learn More
+[Linting Rules](https://eslint.org/docs/rules/)
+
+[Configuring ESLint](https://eslint.org/docs/user-guide/configuring).
 
 ---
 
@@ -305,21 +386,23 @@ Read up on more linting rules [here](https://eslint.org/docs/rules/), and config
 
 [github documentation on ignoring files](https://help.github.com/articles/ignoring-files/)
 
-Sometimes we don't want to commit files from our repos to git. Fortunately for us, we can create a `.gitignore` file.
-
-1. In your repo, add a `.gitignore` file: `touch .gitignore`
-2. In that file, add the filepaths of the directories or files we don't want added to github.
-
-That's it! It's that easy.
+.gitignore is a file we can add to any git repo. This file contains filepaths and types of files we do not want to add to our git repo.
 
 Common things to add to your `.gitignore` file are:
-- dependencies directories
+- dependency directories
 - log files
 - files generated by compilers
 - API keys, other sensitive data
     (note: there are better ways to obscure and protect data that will be covered in Mod 4)
 
+### Adding .gitignore to a git repo
+1. In your repo, add a `.gitignore` file: `touch .gitignore`
+2. In that file, add the filepaths of the directories or files we don't want added to github.
+
+That's it!
+
 An example `.gitignore` file might look like:
+
 ```
 # dependencies
 /node_modules
@@ -333,6 +416,9 @@ An example `.gitignore` file might look like:
 # misc
 .DS_Store
 .env
+
+# logs
+*.log
 ```
 
-The lines beginning with `#` are simply comments that make it easier to navigate and maintain the `.gitignore` file. Notice that the contents of the file are filepaths. Any file with `/node_modules` in its filepath will not be added, committed, or pushed to github.
+The lines beginning with `#` are simply comments that make it easier to navigate and maintain the `.gitignore` file. Notice that the contents of the file are filepaths. Any file with `/node_modules` in its filepath will not be added, committed, or pushed to github. If we want to ignore an entire type of file we can use the `*` to indicate all, and then follow it with the file extension we want to ignore.

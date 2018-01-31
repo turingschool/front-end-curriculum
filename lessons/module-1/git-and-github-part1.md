@@ -32,7 +32,7 @@ GitHub also allows teams to work seamlessly together (most of the time) on the s
 
 #### Create a new directory
 
-In your terminal, change into a directory where you can add Turing related projects. Once you are in that directory, create a new directory called `git-intro`. Change into that directory.
+In your terminal, change into a directory where you can add Turing related exercises. Once you are in that directory, create a new directory called `git-intro`. Change into that directory.
 
 Just to confirm we are starting from scratch, run the command `ls -la`. This will print out a list of files or directories nested within our current directory. At this time you should only see `./` and `../`.  
 
@@ -63,7 +63,7 @@ Now type `git status` in the terminal, and you should see a different message. N
 ```shell
 On branch master
 
-Initial commit
+No commits yet
 
 nothing to commit (create/copy files and use "git add" to track)
 ```
@@ -83,7 +83,7 @@ Now we see some new information! There is a section of this message that says "U
 ```shell
 On branch master
 
-Initial commit
+No commits yet
 
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
@@ -97,14 +97,14 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 If in the future we want to add these changes to our repository (and we do), then we need to add this file to the "staging area". To add the file to the staging area, use the command `git add index.html`. This command is saying to add the file named `index.html` to the staging area.
 
-If we wanted to add all of the untracked files or changes, then we could use the command `git add .`. The dot `.` after `add` says add everything.
+If we wanted to add all of the untracked files or changes, then we could use the command `git add .`. The dot `.` after `add` says add all untracked files in this repository.
 
 Let's check the status of our Git repository again: `git status`. Now we see the same file name under the heading "Changes to be committed:".
 
 ```shell
 On branch master
 
-Initial commit
+No commits yet
 
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
@@ -119,6 +119,18 @@ Now that we have added the file to the staging area, we are ready to commit the 
 Commit the file using the command: `git commit -m "Add new index HTML file"`
 
 The `-m` part of the command says we want to add a message to this commit. ALWAYS add a message. The message is information that you (or other developers) can use at a later time when you want to look back and see what changes were contained in a commit. We will view this history later.
+
+##### A note on commit messages
+
+A git commit message is the best way to communicate *context* about a change to other developers and your future self.
+
+Basic rules of a decent commit message:
+* Capitalize the subject line
+* Do not end the subject line with a period
+* Use the imperative mood in the subject line
+* Explain what and why vs. how
+
+Please read [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/) for homework as it goes into more detail on what makes a great commit message.
 
 If we check the status of the repository now (`git status`), then it tells us that there is "nothing to commit" because all of the changes we have made in this directory have been committed.
 
@@ -147,6 +159,8 @@ Now that we have an empty `index.html` file, let's add some basic markup. Add th
 All we did here is create a basic HTML skeleton, adding an `<h1>` to the body of our page.  
 
 Let's check the status of our repository again (`git status`). Git saw our changes! We know this because it says under "changes not staged for commit" that the `index.html` was modified.
+
+Running `git status` tells us what file has been modified but does not give us anything more. If we want to see exactly what changes occurred we can invoke the command `git diff` to see what they were.
 
 Since we want to add these changes to our project (and the version history of the project), we need to add them to the staging area: `git add index.html`
 
@@ -211,12 +225,14 @@ add-body-content
 
 To change to our new branch, we need to "checkout" the branch.  
 
-Let's checkout the new branch using the command `git checkout add-body-content`. To checkout any branch, the command is `git checkout branch-name`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
+Let's checkout the new branch using the command `git checkout add-body-content`. To checkout any branch, the command is `git checkout [branch name]`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
 
 ```shell
 * add-body-content
   master
 ```
+
+Pro Tip: We can use the command `git checkout -b [branch name]` to both create and change to the `branch name` specified.
 
 #### Make changes on the new branch
 
@@ -274,9 +290,15 @@ commit 2951dd271a636583b394e19802c9703c260f45ac
 
 Your exact commit hash WILL BE DIFFERENT from the one above.
 
-The command to revert to a previous commit is `git reset --hard [commit hash]`. So in this case, the command would be `git reset --hard 2951dd271a636583b394e19802c9703c260f45ac`
+The command to revert to a previous commit is `git reset [commit hash]`. So in this case, the command would be `git reset 2951dd271a636583b394e19802c9703c260f45ac`
 
-Now if we look at `git log`, the commit we reverted back to is the most recent and the commit with the paragraph content is no longer there. Reset `hard` reverts to the commit and removes any commits after that, which is something to be careful with.
+Note - this will keep all changes since the previous commit as unstaged changes.
+
+To reset to a previous commit and erase all changes since that commit, you can add the `--hard` flag, which is something to be careful with. Doing so will make the whole command look like this instead: `git reset --hard [commit hash]`.
+
+Lets go ahead and run `git reset --hard [commit hash]`
+
+Now if we look at `git log`, the commit we reverted back to is the most recent and the commit with the paragraph content is no longer there.  
 
 We reverted back to a state where we didn't have paragraph content, which seems trivial. We could have just deleted the paragraph! Imagine if you have multiple files with many changes. In that case, resetting to a previous commit makes grouping all of those changes much easier.
 

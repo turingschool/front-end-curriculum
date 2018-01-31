@@ -164,10 +164,15 @@ This is very useful when we want to append data to our webpage, because it means
 
 # Expressions
 
-An _expression_ evaluates to (results in) a single value. Expressions rely on operators to create this single value. There are 2 types of expressions:
+An _expression_ results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
 
-1. Expressions that assign a single value to a variable. They look like this: `var fruit = "apple";`
-2. Expressions that use two or more values to return a single value. They look like this: `var adele = "Hello, " + "its me";`
+This expression results in "apple"
+
+`"apple"`
+
+This expression results in 5
+
+`2 + 3`
 
 # Operators
 

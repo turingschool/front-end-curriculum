@@ -13,11 +13,17 @@ In this lesson, you will learn how to:
 
 ## GitHub
 
+### Prework Setup: 
+
+#### Add a public key to your github account
+
+In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/ articles/generating-an-ssh-key/).
+
 ### Some Context: What is GitHub, and why do we use it?
 
 We learned how to use Git from the terminal in the last lesson to control the versions of our projects (repositories) - that work was all done locally. It was hard to share your code with anyone else on another computer. Today, we'll learn how to push your code up to the cloud! We can use an website called GitHub to store your code and make it much easier to share code and collaborate with others.
 
-Again, Git is NOT the same thing as GitHub! Git is the local command-line language for version control, and GitHub is a website to share your code.
+Again, Git is NOT the same thing as GitHub! Git is the local command-line tool for version control, and GitHub is a website to share your code.
 
 ## An Example Journey Using GitHub (and Git)
 
@@ -56,7 +62,7 @@ Finally, we need to push up our initial code from our local repository (aka your
 
 First, let's add a couple boilerplate files for an initial setup.
 
-`touch index.html index.js`  
+`touch index.html styles.css`  
 
 Then, in the `index.html` file, type `html` and hit enter to spit out the basic skeleton of our file, and add an appropriate title like "GitHub Introduction". This is enough to push our files on up to the remote repository that we've created.
 
@@ -82,26 +88,22 @@ For this first part, let's work off of the master branch. In the files we've cre
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Beautiful Web Page</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <h1 class="text-to-change">Change this!</h1>
-
-    <button id="text-button">Change the h1</button>
-
-    <script type="text/javascript" src="index.js"></script>
+    <h1> Wow, Git and GitHub are pretty neat</h1>
   </body>
 </html>
 ```
 
-```javascript
-// index.js
+```css
+/* styles.css */
 
-var textToChange = document.querySelector('.text-to-change')
-var buttonForText = document.querySelector('#text-button');
+body {
+  background-color: chartreuse;
+}
 ```
-
-So basically what we have is a button that in the future will change the text of the h1, but the functionality has not all been written yet.
 
 ### Commit files (`git add`, `git commit`)
 
@@ -109,7 +111,7 @@ Just like we did before, let's add these changes to the staging area and commit 
 
 `git add .`
 
-`git commit -m "Add HTML and JS file structure"`
+`git commit -m "Add HTML and CSS file structure"`
 
 ### Push up the master branch to GitHub (to the remote repository) (`git push`)
 
@@ -123,33 +125,32 @@ Now if we look at the GitHub repository, we see our new code, and updated commit
 
 ### Checkout a feature branch (`git branch`, `git checkout`)
 
-Let's keep it going and use our preferred feature branch workflow. Let's checkout a feature branch to add an event listener to the button. To make the new branch, enter `git branch add-event-listener`. Then checkout the branch using `git checkout add-event-listener`.
+Let's keep it going and use our preferred feature branch workflow. Let's create and checkout to a feature branch using `git checkout -b add-heading-styles`.
 
-(Note: you can actually do these two steps in one command using `git checkout -b add-event-listener`)
+In the `styles.css` file, add the lines of code:
 
-In the `index.js` file, add the lines of code:
-
-```javascript
-buttonForText.addEventListener('click', function(){
-  textToChange.innerText = "You've Changed!";
-})
+```css
+h1 {
+  background-color: magenta;
+  color: chartreuse;
+}
 ```
 
 ### Commit feature work (`git add`, `git commit`)
 
 Add the changes to the staging area, and commit the changes, just as before:
 
-`git add index.js`
+`git add styles.css`
 
-`git commit -m "Add button event listener to change the text"`
+`git commit -m "Add styles to h1"`
 
 ### Push the branch up to GitHub (`git push`)
 
 We're satisfied with the work done on this branch. Now we can push this branch up to GitHub and merge it to master there. To push this branch, we use the same `git push` command as before, but with a slight change:
 
-Enter the command: `git push origin add-event-listener`
+Enter the command: `git push origin add-heading-styles`
 
-With that command, we pushed the `add-event-lister` branch up to the remote repository named `origin`. If we look on GitHub, the code on the master branch has not changed, but we do see a notification of a new branch.
+With that command, we pushed the `add-heading-styles` branch up to the remote repository named `origin`. If we look on GitHub, the code on the master branch has not changed, but we do see a notification of a new branch.
 
 ### Create a pull request on GitHub (PR)
 
@@ -182,6 +183,10 @@ To get the changes from the master branch on GitHub to our local master branch, 
 In this case, enter the command: `git pull origin master`
 
 Our changes are now completely synced. The master branch locally is the same as the master branch on GitHub. We can make more feature branches, add more features, and repeat the same process!
+
+### Fetching 
+
+Let's say that one of your co-worker's is working on a feature branch, and is having trouble finding a bug. As long as your co-worker has pushed up their feature branch to GitHub, we can use the `git fetch` command to pull that branch, and all other remote branches to our local machine.
 
 ## Merge Conflicts
 
@@ -219,10 +224,6 @@ Everything between the set of equals signs and the greater than signs followed b
 
 To resolve conflicts, you have to decide which of the two conflicting lines you want to keep and then remove the HEAD, the set of equals, and the conflicting commit line.
 
-### Your Turn
-
-Practice by pushing up your Dog Party or Number Guesser project to GitHub.
-
 ## A Typical Workflow
 
 To summarize the example above, a typical workflow for a new project with Git and GitHub includes:
@@ -240,6 +241,22 @@ To summarize the example above, a typical workflow for a new project with Git an
 11. Locally, pull down master to your local master branch (to sync the remote with your local repository)
 
 [Here is an excellent team workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.html)
+
+## Cloning 
+
+In order to move a remote repository to your local machine (a process known as cloning), you can use the `git clone [remote url]` command. GitHub makes this easy for us by providing a big green button that says 'Clone or Download' on all repository pages. 
+
+Let's clone the repo you just created in a new directory. Go to a new directory on your local machine that does not contain the `github-intro` directory. Go to the `github-intro` repository page on GitHub. Click on the 'Clone or Download' button, and copy the expanded url to your clipboard.
+
+Now, from your terminal run `git clone [copied url]`. This will copy the github repo into a directory of the same name on your local machine.
+
+## Forking
+
+There are certain times where you will need to work on a codebase that you do not have `push` access rights to. This is the case when you need to update `turingschool/portfolios` repo. In situations like this we can `fork` the remote repo, which will create another remote repo of the same name under your own username, which in this case would be `damwhit/portfolios`. Now I have `push` access rights to the 'forked' repo and can create pull requests on the original repo.
+
+### Your Turn
+
+Practice by pushing up your Dog Party or Number Guesser project to GitHub.
 
 ## Additional Resources
 

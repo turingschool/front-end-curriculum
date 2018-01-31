@@ -6,7 +6,7 @@ tags: node, express, back-end, server, http
 
 ### Pre-reqs
 
-* Download Postman from Chrome
+* Download [Postman from Chrome](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
 
 ### Goals
 
@@ -140,7 +140,7 @@ app.get('/api/v1/messages', (request, response) => {
 
 ### Making a Dynamic Route
 
-When we go to view a tweet or a user, we do something special with the URL to identify which tweet or user. We specify it in the URL itself. URLs—after all—stand for universal resource locator.
+Let's say we wanted to get a specific message based on its ID. We want anyone to be able to retrieve a single resource by indicating the ID associated with the object they want to retrieve. In order to do this, we must add a dynamic portion to our URL.
 
 Consider the following:
 

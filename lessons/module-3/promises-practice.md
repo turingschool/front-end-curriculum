@@ -109,7 +109,7 @@ So what does this mean? So yes, your JS code is running on a single call stack (
 
 Talk about a quick review! How about we do some codez?
 
-### Lets dive into callbacks and promises!
+### Lets dive into fetch!
 
 Hokay. So. lets build a Front-end Turing staff website. What we have so far is an api that serves up a collection of members [here](https://github.com/turingschool-examples/promises-api). We also have our client side code located on this [repo](https://github.com/turingschool-examples/promises-practice).
 
@@ -122,56 +122,6 @@ The endpoints given to us are:
 * http://localhost:3001//api/bio/:id - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
 
 So once we make our call we will need to iterate over the array and make more requests for additional info.
-
-What we could do is setState() after each request is returned which will end up looking like this: :
-
-``` javascript
-$.get('http://localhost:3001/api/frontend-staff', (info) => {
-  info.bio.forEach((i) => {
-    $.get(i.info, (bio) => {
-      Object.assign(i, bio)
-      this.setState({ staff: info.bio })
-    })
-  })
-})
-```
-
-It will actually load the page seamlessly. Yet if you look at the console log you will see each one come in individually(I didn't log the bio info just because of the length).
-
-![console.log](https://raw.githubusercontent.com/turingschool-examples/promises-practice/master/public/log.png)
-
-You can see that each one response comes in separately, which could be a bad UX if sizing and images came in at all different times. Especially if there was heaver data coming in. I could put a setTimeout() let it wait 2 seconds and then setState but then we would be bogging down the entire task queue. Even then we don't actually know that all of them have come in! So lets move on to uses promises!
-
-#### Promises
-
-Promises are a lot easier to work with because we can pass them around and you don't get in 'callback hell'. They are still a web api that gets stored in the `heap` and once resolved are placed inside the `task queue`.
-
-So you should have learned a little bit about promises by now.
-Like:
-* then()
-* catch()
-
-So for practice lets play around and create one. Take or comment any requests you have in your componentDidMount() and replace it with:
-*Do yourself a favor and actually type this out*
-```javascript
-
-componentDidMount() {
-  const promise = new Promise((resolve, reject) => {
-    if (this.state.staff.length === 0) { reject('Where did everyone go?') }
-    resolve(this.state.staff)
-  })
-
-  promise.then((foo) => console.log(foo))
-  .catch((err)=> console.log('mmm', err))
-}
-
-```
-
-When the array is empty what do we console.log()?
-When we throw an empty object in there, what does it log?
-
-So now that you've got to play around a bit with then() & catch(), lets talk about using them with `fetch`.
-
 
 #### Fetch
 

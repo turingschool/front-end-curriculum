@@ -22,7 +22,9 @@ Rebasing serves the same purpose, integrating changes from one branch into anoth
 
 Imagine the following scenario: you are working on a project with 5 other people and you've all divvied up the responsibilities to add features and functionality. You're in charge of adding database integration which is going to take you a significant amount of time to finish - about 2 weeks. You create a new feature branch based off of master and begin your work. In the meantime, your teammates are working on smaller issues that they've been completing and merging into master every day.
 
-[ whiteboard ]
+![merge-workflow][merge-workflow]
+
+[merge-workflow]: /assets/images/lessons/merge-rebase/merge-workflow.png
 
 By the time you're finished with your database functionality, there have been 50 commits pushed into master and you need to integrate them into your branch. With the merge workflow, we would **merge** the **master** branch **into** our **feature** branch:
 
@@ -44,7 +46,7 @@ You'll notice we also get these automatic merge commits when we merge a pull req
 So while we don't care what has been merged into our **feature** branches, we **do** care what is being merged into our **master** branch.
 
 ### Advantages
-* Non-destructive, existing branches are not changed in any way, you just have another new commit 
+* Non-destructive, existing branches are not changed in any way, you just have another new commit - Easy to undo
 
 ### Disadvantages
 * Pollutes the history of your repo, makes it hard to understand the evolution
@@ -52,7 +54,7 @@ So while we don't care what has been merged into our **feature** branches, we **
 
 ## Rebasing
 
-One of the main disadvantages of merging is that every time you merge, you automatically have a new merge commit that pollutes your project history and makes it difficult to follow the evolution of the application. 
+One of the main disadvantages of merging is that every time you merge, you automatically have a new merge commit that pollutes your project history and makes it difficult to follow the evolution of the application.
 
 To avoid this auto-generated commit, instead of merging, we can **rebase** our **feature** branch **on top of** our **master** branch:
 
@@ -66,7 +68,10 @@ This makes it so that all the new work you've done on your feature branch will b
 
 One thing that makes this process tricky is that git will have to step through every single commit you've made on your **feature** branch, one at a time, and see if it's possible to apply it on top of the **master** branch.
 
-[ whiteboard ]
+![rebase-workflow][rebase-workflow]
+
+[rebase-workflow]: /assets/images/lessons/merge-rebase/rebase-workflow.png
+
 
 This means that you may be resolving merge conflicts in every single commit you've made on your branch. Don't get tripped up by this! Git will give you instructions on how to continue with the rebase after every merge conflict you resolve. Note that you may have to resolve the same merge conflict multiple times if you haven't been rebasing frequently enough.
 
@@ -86,6 +91,7 @@ This is important, and where rebasing gets tricky. Any time you rewrite history 
 
 ### Disadvantages
 * Easy to do it wrong, rewrites history
+* Tougher to resolve conflicts
 
 
 ## To Rebase or Not to Rebase?

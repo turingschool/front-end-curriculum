@@ -63,7 +63,7 @@ $(function(config){
   function hitTemplate(hit) {
     return `<li class="result">
               <a href="${hit.url}">${hit._highlightResult.title.value}</a>
-              <p>${hit._highlightResult.content.value}</p>
+              <p>${hit._highlightResult.content.value.replace('<script>','')}</p>
             </li>`
   };
 

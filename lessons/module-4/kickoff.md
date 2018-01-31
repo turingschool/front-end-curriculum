@@ -26,7 +26,7 @@ In order to graduate from Module 4, students must complete each of the following
 
 ### 90% Attendance
 
-Students must notify instructors of any absences, and are required to make up any work missed during the time they were out. If missing class for an interview, students must record the interview questions they received and add them to this [doc]
+Students must notify instructors of any absences, and are required to make up any work missed during the time they were out. If missing class for an interview, students must record the interview questions they received and add them to this [doc](https://docs.google.com/document/u/1/d/1HPaWy99--cnbpcnEa639np9PL_PGcy7shZ49J_pfbEo/edit#)
 
 ### Final Assessment - Coding
 

@@ -185,8 +185,7 @@ Choosing a Database Management System for your application is highly dependent o
 
 * What are two or more differences between relational and non-relational databases?
 * What is a schema?
-* What is the purpose of a migration?
-* What are two examples of one-to-many relationships?
+* Give an example of a one-to-many relationship. A many-to-many relationship?
 
 
 ## Resources

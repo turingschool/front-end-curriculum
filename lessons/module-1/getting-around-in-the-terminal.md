@@ -6,13 +6,19 @@ tags: command line, terminal
 
 ### Context
 
+#### You're not as fast as you think
+
 You probably grew up around computers, but if you're like most of the non-developer population, you may have never touched the terminal. Why would you need to? Everything you need to do can be done on the desktop or through the Finder, and only super nerds use the terminal anyway. Right?
 
 Well, no...
 
 You might be thinking to yourself "Hey, wait a minute! I'm pretty darn fast when it comes to using my mouse to get around. Why do you think I need to use the terminal?"
 
+#### Efficiency and Competency Show
+
 It turns out you actually aren't fast enough. As a developer everything you do should be based on speed and efficiency. When any part of your work flow is lacking you are wasting time. Over the course of a day, every extra second compounds into time you aren't spending doing productive work. Not being a fluent user of your command line is a pain point that may not be terribly noticeable as you first start writing code and you're still gaining momentum, but over time as you work more quickly you (and your pairing partners) will absolutely feel it. In an interview or workplace environment not being able to effectively use your terminal is a red flag. That means it's important to start flexing our command line muscles right away to build understanding and comfort with this tool.
+
+#### Some things must be setup in the terminal 
 
 Additionally, some of the tools you will use as a developer can only be used through the terminal and not by clicking in a program. You'll use those tools in the terminal soon enough!
 
@@ -27,6 +33,12 @@ When you're first starting to learn anything coding related, you have to build u
 Let's actually start working on some basic interactions with our files using the terminal. We're going to assume that you're using a Mac for this lesson.
 
 Open your terminal using `command + spacebar`, then type `terminal`, and press `enter`. The mysterious black window appears...
+
+#### Side Note - Keyboard Shortcuts for Efficiency
+
+`command + spacebar` will open your spotlight search
+
+`command + tab` will take you to your most recent open application 
 
 ### Observe the File Structure: `pwd`, `ls`
 
@@ -72,60 +84,6 @@ For a more detailed list of content, type `ls -la` - note the space between the 
 
 * Enter `ls -la`. How does this list change? Do you see the same files and directories when you use Finder?
 
-### Move Through the File Structure: `cd`
-
-#### cd (change directory)
-
-If we are in our root directory, and we want to see what files are within the Pictures directory, we currently don't have a way to do that. For instance, if we are in the root directory, and we enter `ls` in the terminal, it will just list the files and directories in the root directory, but we cannot see what is inside Pictures by only using `ls`.
-
-To see what is in other directories, we can move around and navigate through our file structure. We want to change into the Pictures directory to see what is inside it.
-
-To change our current directory, we use the command `cd [directory name]`. We can move through directories in two directions: up or down - to a previous directory or to a nested directory. Let's see this visually with sample directories.
-
-```
-|- turing
-  |-- notes
-```
-
-From the example above, if your current directory is `turing` and you want to move to `notes`, then you would enter `cd notes` into the terminal. We our changing our current directory to the `notes` directory. Usually, you would say that you are going down into the notes directory.
-
-If you want to go back to the `turing` directory, then simply use two periods: `cd ..` to go back up one level. With the previous example where you are currently in the notes directory, you would type `cd ..` to get to the `turing` directory.
-
-You might be thinking to yourself, "Wow, I'm doing a lot of typing...and if I type something incorrectly in the terminal, then I'll go to the wrong place or nowhere at all."
-
-Tab completion is your friend when you don't want to type an entire directory name or you don't quite remember how something is spelled. What I mean by that is if you're trying to change directories or `cd` anywhere, if you start typing the first part of where you want to go and then you hit `tab`, then the terminal will autocomplete the rest of the desired directory for you.
-
-For example, in the directory structure:
-
-```
-|- turing
-  |-- notes
-```
-
-If you are currently in the `turing` directory and you want to go to notes, then just type `cd n` and hit `tab`. The terminal will autocomplete for you and your command will become `cd notes`. Then hit `enter` to run the directory change.
-
-What if you want to change to a directory that is inside another directory? You can imagine that using `cd` multiple times would get tiring and slow. What's really cool is if we have something multiple levels deep we can keep adding directories to our `cd` command. Say we have:
-
-```
-|- turing
-  |-- notes
-    |--- first-lesson
-```
-
-If we're in `turing` and we want to get to `first-lesson` quickly, then we can do this with one command: `cd notes/first-lesson`
-
-Note that each directory is separated with a slash, `/`. If you wanted to add another directory, then it would be something like: `cd notes/first-lesson/section-one`
-
-Likewise, we can also go back up multiple directories using one command. If you are in the `first-lesson` directory and you want to go back to the `turing` directory, then you can use the double dots as before with the slash separator: `cd ../..`
-
-#### Your Turn
-
-* In your terminal, change to your root directory. Your root directory is noted as a `~` symbol. So the change directory command would be `cd ~`. From there, `cd` into your Documents folder.
-
-* Once you're in your Documents directory, list the contents of the Documents directory.
-
-* In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this five times. When you are done, delete the directories you just made, one directory at a time.
-
 ### Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
 
 #### mkdir (make directory)
@@ -159,6 +117,62 @@ Enter `rm toppings.txt` into the terminal, and poof, it's gone! As you can see t
 * Open a new terminal window. Create five different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
 
 * Create ten new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
+
+### Move Through the File Structure: `cd`
+
+#### cd (change directory)
+
+If we are in our root directory, and we want to see what files are within the Pictures directory, we currently don't have a way to do that. For instance, if we are in the root directory, and we enter `ls` in the terminal, it will just list the files and directories in the root directory, but we cannot see what is inside Pictures by only using `ls`.
+
+To see what is in other directories, we can move around and navigate through our file structure. We want to change into the Pictures directory to see what is inside it.
+
+To change our current directory, we use the command `cd [directory name]`. We can move through directories in two directions: up or down - to a previous directory or to a nested directory. Let's see this visually with sample directories.
+
+```
+|- turing
+  |-- notes
+```
+
+From the example above, if your current directory is `turing` and you want to move to `notes`, then you would enter `cd notes` into the terminal. We our changing our current directory to the `notes` directory. Usually, you would say that you are going down into the notes directory.
+
+If you want to go back to the `turing` directory, then simply use two periods: `cd ..` to go back up one level. With the previous example where you are currently in the notes directory, you would type `cd ..` to get to the `turing` directory.
+
+You might be thinking to yourself, "Wow, I'm doing a lot of typing...and if I type something incorrectly in the terminal, then I'll go to the wrong place or nowhere at all."
+
+#### Tab Autocomplete & Nested Directories
+ 
+Tab completion is your friend when you don't want to type an entire directory name or you don't quite remember how something is spelled. What I mean by that is if you're trying to change directories or `cd` anywhere, if you start typing the first part of where you want to go and then you hit `tab`, then the terminal will autocomplete the rest of the desired directory for you.
+
+For example, in the directory structure:
+
+```
+|- turing
+  |-- notes
+```
+
+If you are currently in the `turing` directory and you want to go to notes, then just type `cd n` and hit `tab`. The terminal will autocomplete for you and your command will become `cd notes`. Then hit `enter` to run the directory change.
+
+What if you want to change to a directory that is inside another directory? You can imagine that using `cd` multiple times would get tiring and slow. What's really cool is if we have something multiple levels deep we can keep adding directories to our `cd` command. Say we have:
+
+```
+|- turing
+  |-- notes
+    |--- first-lesson
+```
+
+If we're in `turing` and we want to get to `first-lesson` quickly, then we can do this with one command: `cd notes/first-lesson`
+
+Note that each directory is separated with a slash, `/`. If you wanted to add another directory, then it would be something like: `cd notes/first-lesson/section-one`
+
+Likewise, we can also go back up multiple directories using one command. If you are in the `first-lesson` directory and you want to go back to the `turing` directory, then you can use the double dots as before with the slash separator: `cd ../..`
+
+#### Your Turn
+
+* In your terminal, change to your root directory. Your root directory is noted as a `~` symbol. So the change directory command would be `cd ~`. From there, `cd` into your Documents folder.
+
+* Once you're in your Documents directory, list the contents of the Documents directory.
+
+* In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this five times. When you are done, delete the directories you just made, one directory at a time.
 
 ### Commands From Your Present Working Directory
 

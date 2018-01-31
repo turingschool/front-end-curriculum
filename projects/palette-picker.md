@@ -66,10 +66,10 @@ palette-picker
 |  |  |__ other-scripts.js
 ```
 
-## Extensions
+## Extensions to Think About (no extra points)
 
-* **15 Points** - Palette generation that isn't random and actually makes sense: If you look at the [HTML Color Codes site](http://htmlcolorcodes.com/color-picker/), they give some explanation about what colors make sense with other colors in a palette. Design your color generator so that the colors aren't picked completely at random, but they make a more cohesive, harmonious color palette.
-* **10 Points** - Color modification: In addition to being able to lock a particular color (part of the base functionality), a user should be able to modify one of the colors in the palette (by entering in their own hex code, color name, or some kind of hue slider)
+* Palette generation that isn't random and actually makes sense: If you look at the [HTML Color Codes site](http://htmlcolorcodes.com/color-picker/), they give some explanation about what colors make sense with other colors in a palette. Design your color generator so that the colors aren't picked completely at random, but they make a more cohesive, harmonious color palette.
+* Color modification: In addition to being able to lock a particular color (part of the base functionality), a user should be able to modify one of the colors in the palette (by entering in their own hex code, color name, or some kind of hue slider)
 
 ## Timeline
 
@@ -132,9 +132,9 @@ The following set of points are distributed at the discretion of the instructor.
 * **10 points** - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
 * **5 points**  - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
 
-## Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1706/mod-4/palette-picker/submission-template.md) by copying it to a new file called YOURNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
+## Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1708/mod-4/palette-picker/submission-template.md) by copying it to a new file called YOURNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
 
-### Project is worth 150 points with 25 extra points possible
+### Project is worth 150 points
 
 ### To get a 3 on this project, you need to score 110 points or higher
 
