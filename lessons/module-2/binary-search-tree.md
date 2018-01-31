@@ -1,4 +1,8 @@
-# Binary Search Tree
+---
+title: Binary Search Tree
+length:
+tags: javascript, js, data structure
+---
 
 
 ### Description
