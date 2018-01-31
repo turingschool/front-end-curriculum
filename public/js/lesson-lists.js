@@ -8,10 +8,10 @@ $(function() {
     let previousModulePreference = getModulePreference();
     deactivateButton(previousModulePreference);
 
-    let moduleSelection = $(event.target).data('module');
-    setModulePreference(moduleSelection);
-    activateButton(moduleSelection);
-    showOrHideLessonContainer(moduleSelection, 100);
+    let selection = $(event.target).data('module');
+    setModulePreference(selection);
+    activateButton(selection);
+    showOrHideLessonContainer(selection, 100);
   });
 
   function initializeLocalStorage() {
@@ -40,8 +40,8 @@ $(function() {
     $(`.module-selector[data-module=${previousModulePreference}]`).removeClass('active');
   };
 
-  function setModulePreference(moduleSelection) {
-    localStorage.setItem('turing-fe-modulePref', moduleSelection);
+  function setModulePreference(selection) {
+    localStorage.setItem('turing-fe-modulePref', selection);
   };
 
   function getModulePreference() {
