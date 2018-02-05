@@ -32,7 +32,7 @@ Bubble Sort is often one of the first algorithms of any kind that programmers at
 
 ### The Algorithm
 
-You can see a [graphical run of the algorithm here](https://vimeo.com/channels/sortalgorithms/15558527).
+You can see a [graphical run of the algorithm here](https://www.youtube.com/watch?v=6eA3FrFbO8Q).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/Bubble_sort).
 
