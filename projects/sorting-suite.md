@@ -111,7 +111,7 @@ Insertion sort uses slightly more complex logic but the algorithm is generally m
 
 ### The Algorithm
 
-You can [see a visualization of the algorithm here](https://vimeo.com/channels/sortalgorithms/15558983).
+You can [see a visualization of the algorithm here](https://www.youtube.com/watch?v=8oJS1BMKE64).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/insertion_sort).
 
