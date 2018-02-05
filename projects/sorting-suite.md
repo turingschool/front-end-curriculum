@@ -237,7 +237,7 @@ first_num:   2
 second_num:  0
 ```
 
-We then compare those numbers and put them back into an array together. 1 and 0 will swap, creating a sorted split array.
+We then compare those numbers and put them back into an array together. 2 and 0 will swap, creating a sorted split array.
 
 #### Sort the doubly split array
 
@@ -265,7 +265,7 @@ We then want to move all the elements larger than the pivot to the right of the 
 
 After moving all the elements to either side of the pivot our pivot will be in the correct spot. Now all the larger elements can be quick sorted and all the smaller elements can be quick sorted.
 
-Each time you call quick sort it will return an array that will return a sorted array that will need to be recombined with any previous pivots.
+Each time you call quick sort it will return a sorted array that will need to be recombined with any previous pivots.
 
 Example of one iteration.
 ```
