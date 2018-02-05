@@ -32,7 +32,7 @@ Bubble Sort is often one of the first algorithms of any kind that programmers at
 
 ### The Algorithm
 
-You can see a [graphical run of the algorithm here](https://vimeo.com/channels/sortalgorithms/15558527).
+You can see a [graphical run of the algorithm here](https://www.youtube.com/watch?v=6eA3FrFbO8Q).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/Bubble_sort).
 
@@ -111,7 +111,7 @@ Insertion sort uses slightly more complex logic but the algorithm is generally m
 
 ### The Algorithm
 
-You can [see a visualization of the algorithm here](https://vimeo.com/channels/sortalgorithms/15558983).
+You can [see a visualization of the algorithm here](https://www.youtube.com/watch?v=8oJS1BMKE64).
 
 For a high level understanding check out the [wikipedia article](https://en.wikipedia.org/wiki/insertion_sort).
 
@@ -237,7 +237,7 @@ first_num:   2
 second_num:  0
 ```
 
-We then compare those numbers and put them back into an array together. 1 and 0 will swap, creating a sorted split array.
+We then compare those numbers and put them back into an array together. 2 and 0 will swap, creating a sorted split array.
 
 #### Sort the doubly split array
 
@@ -265,7 +265,7 @@ We then want to move all the elements larger than the pivot to the right of the 
 
 After moving all the elements to either side of the pivot our pivot will be in the correct spot. Now all the larger elements can be quick sorted and all the smaller elements can be quick sorted.
 
-Each time you call quick sort it will return an array that will return a sorted array that will need to be recombined with any previous pivots.
+Each time you call quick sort it will return a sorted array that will need to be recombined with any previous pivots.
 
 Example of one iteration.
 ```
