@@ -176,8 +176,9 @@ restaurant2.name;
 ### Your Turn
 
 With a partner:
-Take a few minutes and make a constructor function and use it to make two new objects.
-Take a few minutes to come up with an analogy for constructor functions.
+
+* Take a few minutes and make a constructor function and use it to make two new objects.
+* Take a few minutes to come up with an analogy for constructor functions.
 
 ## Which `this` is which?
 
