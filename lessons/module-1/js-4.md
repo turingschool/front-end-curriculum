@@ -18,7 +18,7 @@ In this lesson we'll cover:
 Objects are an abstraction, or the representation of real world things in computer programming.
 
 ### Anatomy of Objects
-Objects are a collection of key-value pairs surrounded by curly braces. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
+Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
 Let's look at an example:
 
@@ -153,7 +153,7 @@ Let's talk about what's going on here:
 - Each object created will utilize the same method for checking availability  
 - The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
 - Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma  
-- Constructor functions begin w/ capital letters, unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
+- Constructor functions begin w/ capital letters (PascalCase), unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
 
 ## Revisiting ```this```
 The keyword ```this``` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, ```this``` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
@@ -175,7 +175,9 @@ restaurant2.name;
 
 ### Your Turn
 
+With a partner:
 Take a few minutes and make a constructor function and use it to make two new objects.
+Take a few minutes to come up with an analogy for constructor functions.
 
 ## Which `this` is which?
 
@@ -184,14 +186,14 @@ Take a few minutes and make a constructor function and use it to make two new ob
 Unfortunately ```this``` is not that simple. The value of ```this``` changes in different situations. This can be confusing at first, but it also gives us a really dynamic, powerful tool. Let's look at some example situations:
 
 ```javascript
-// GLOBAL SCOPE FUNCTION - top of script, not inside another function or inside an object. The default object in this context is the WINDOW object.
+// FUNCTION DECLARATIONs - top of script, not inside another function or inside an object. The default object in this context is the `Window` object.
 function boom() {
   var width = this.innerWidth;
   var height = this.innerHeight;
   return [height, width];
 }
 
-// GLOBAL VARIABLES - global variables become properties of the window in the browser object. When a function is in the global context, you can access global variables using the window object.
+// GLOBAL VARIABLES - global variables become properties of the `Window` in the browser object. When a function is in the global context, you can access global variables using the window object.
 var width = 600;
 var shape = {width: 300};
 var showWidth = function() {
