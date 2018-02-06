@@ -76,7 +76,15 @@ In addition to responding with the appropriate status code, you are expected to 
 
 ### Documentation
 
-* In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://github.com/500px/api-documentation/blob/master/README.md) Pay attention to the information provided and the format that it's presented in. Improperly formatted information can make it very difficult to read even if it's all accurate.
+In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://developer.github.com/v3/repos/) Pay attention to the information provided and the format that it's presented in. Improperly formatted information can make it very difficult to read even if it's all accurate.
+
+Some things you want to considering having in your API documentation:
+
+* Endpoints available (e.g. GET /api/v1/students, POST api/v1/students)
+* What parameters can be used in certain requests (e.g. For a POST request, what should be put in the request body?)
+* Sample responses from endpoints (What does the response object look like for a request?)
+
+Don't worry about fancy styling of your documentation. You can put your documentation in the README of your BYOB GitHub repository.
 
 ### Testing & Linting
 
