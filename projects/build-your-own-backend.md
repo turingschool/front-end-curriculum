@@ -96,7 +96,6 @@ Don't worry about fancy styling of your documentation. You can put your document
 
 * Your application should be automatically deployed to Heroku via CircleCI
 * CircleCI should be running your tests and linter
-* You do **not** need a staging environment for this project
 
 -----------------------------------------------
 
