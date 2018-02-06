@@ -16,7 +16,7 @@ The secondary focus of this project is prepping your Capstone project so you hav
 
 ### Find a Data Source
 
-Data source MUST BE LOCKED IN by Tuesday (12/12) EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
+Data source MUST BE LOCKED IN by Tuesday EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
@@ -28,7 +28,7 @@ Possible sources of data:
 * Parse CSVs or JSON files (Node has built-in modules for parsing CSVs)
 * Create the data yourself. You must create a ‘seed file’ with a minimum of ~30 rows of data for each main table
 
-**Note:** You can base your BYOB project on your module 3 personal project data, but then you cannot module 3 personal project as your final capstone project.
+**Note:** You can base your BYOB project on your module 3 personal project data, but then you cannot use your module 3 personal project as your final capstone project.
 
 ### Relationships
 
@@ -76,7 +76,15 @@ In addition to responding with the appropriate status code, you are expected to 
 
 ### Documentation
 
-* In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://github.com/500px/api-documentation/blob/master/README.md) Pay attention to the information provided and the format that it's presented in. Improperly formatted information can make it very difficult to read even if it's all accurate.
+In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://developer.github.com/v3/repos/) Pay attention to the information provided and the format that it's presented in. Improperly formatted information can make it very difficult to read even if it's all accurate.
+
+Some things you want to considering having in your API documentation:
+
+* Endpoints available (e.g. GET /api/v1/students, POST api/v1/students)
+* What parameters can be used in certain requests (e.g. For a POST request, what should be put in the request body?)
+* Sample responses from endpoints (What does the response object look like for a request?)
+
+Don't worry about fancy styling of your documentation. You can put your documentation in the README of your BYOB GitHub repository.
 
 ### Testing & Linting
 
@@ -88,7 +96,6 @@ In addition to responding with the appropriate status code, you are expected to 
 
 * Your application should be automatically deployed to Heroku via CircleCI
 * CircleCI should be running your tests and linter
-* You do **not** need a staging environment for this project
 
 -----------------------------------------------
 

@@ -169,20 +169,8 @@ let product = power(base, power)  // 2 to the 4th power
 console.log(product);  // 16
 ```
 
+
 ### Exercise 5
-
-Write a recursive function to determine if two different objects have the same properties and values.
-
-```
-const obj1 = { name: 'Avery', age: 7, faveColor: 'green' };
-const obj2 = { name: 'Avery', age: 7, faveColor: 'green' };
-const obj3 = { name: 'Jesse', age: 7, faveColor: 'orange' };
-
-deepEqual( obj1, obj2 ); // true
-deepEqual( obj1, obj3 ); // false
-```
-
-### Exercise 6
 
 Flatten a nested object so that all the values stored in any array is returned in one array.
 
@@ -229,4 +217,17 @@ flatten(groceryList);
     'edamame',
     'ice cream sandwiches'
    ]
+```
+
+### Exercise 6
+
+Write a recursive function to determine if two different objects have the same properties and values.
+
+```
+const obj1 = { name: 'Avery', age: 7, faveColor: 'green' };
+const obj2 = { name: 'Avery', age: 7, faveColor: 'green' };
+const obj3 = { name: 'Jesse', age: 7, faveColor: 'orange' };
+
+deepEqual( obj1, obj2 ); // true
+deepEqual( obj1, obj3 ); // false
 ```
