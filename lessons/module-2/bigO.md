@@ -19,7 +19,7 @@ You can think about these as ratings for your algorithm. These ratings can commu
 ![Big-O Complexity](https://i.imgur.com/ICbvatT.png)
 
 ```
-      | 0( log n )      | 0( n ) |    0( n^2 )   | 0( 2^n )
+      | 0( log n )     | 0( n ) |    0( n^2 )   | 0( 2^n )
 ------------------------------------------------------------
 100   |     2	      |    100 |        10,000 | 1.27E+30
 ------------------------------------------------------------
