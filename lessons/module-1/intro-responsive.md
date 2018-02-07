@@ -1,5 +1,5 @@
 ---
-title: Intro to Responsive Design
+title: Intro to Responsive Layouts
 ---
 
 # Overview & Docs
@@ -135,10 +135,12 @@ header {
   background: grey;
   height: 50px;
   margin-bottom: 25px;
+  padding-top: 30px;
   text-align: center;
 }
 
 header h2:hover {
+  cursor: pointer;
   color: white;
 }
 ```
@@ -191,6 +193,7 @@ footer {
   background: grey;
   height: 50px;
   margin-top: 25px;
+  padding-top: 30px;
   text-align: center;
 }
 ```
