@@ -132,6 +132,8 @@ JavaScript allows you to omit arguments without raising an error. You can use th
 
 `forEach()` is the foundation for many of the other methods we'll explore today and you can accomplish much of the same functionality with `forEach()` that other methods specialize in. That said, just because you _can_ use it, it doesn't mean it's the best choice and that you _should_ use it. More on this later.
 
+One interesting thing to note is that `forEach()` does not return anything. If you have a return statement in your callback function it is likely not doing anything for you. This is different from map which we will look at next.
+
 #### Your Turn
 
 These look familiar...let's compare the structure to what we had before using the `for` loop now with `forEach`.
