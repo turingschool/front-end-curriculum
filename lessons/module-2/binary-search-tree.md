@@ -11,9 +11,10 @@ By the end of this lesson, you will:
 
 * Understand the general concept of a binary search tree
 * Be familiar with why binary search trees are used and what purpose they serve
-* Know how to traverse a search tree in two ways:
-  * Search
-  * Find
+* Know how to interact with a tree the following ways:
+  * Inserting Values
+  * Findind A Value
+  * Depth First vs Breadth First Search
 
 ## Data Structures
 
