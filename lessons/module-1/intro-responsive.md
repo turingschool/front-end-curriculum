@@ -60,7 +60,7 @@ To get started, we'll set up our HTML skeleton so we have a roadmap of where we'
 <!doctype html>
 <html>
 <head>
-    <title></title>
+  <title></title>
 </head>
 <body>
 
@@ -74,7 +74,7 @@ Working in ``index.html``, let's start at the top and work our way down the page
 
 ```html
 <body>
-    <header></header>
+  <header></header>
 </body>
 ```
 
@@ -82,10 +82,10 @@ Next, we'll add an ``article`` tag to hold the main content, an ``aside`` tag to
 
 ```html
 <body>
-    <header></header>
-    <article></article>
-    <aside></aside>
-    <footer></footer>
+  <header></header>
+  <article></article>
+  <aside></aside>
+  <footer></footer>
 </body>
 ```
 
@@ -102,20 +102,20 @@ We'll keep this content simple for now so we can focus on getting the HTML eleme
     <title>Responsive Site Example</title>
 </head>
 <body>
-    <header>
-      <h2>A Link Here</h2>
-    </header>
-    <section class="container">
-        <article class="main-content">
-            <h2>Main Content</h2>
-        </article>
-        <aside class="secondary-content">
-            <h2>Secondary Content</h2>
-        </aside>
-    </section>
-    <footer>
-        <h2>Footer Content</h2>
-    </footer>
+  <header>
+    <h2>A Link Here</h2>
+  </header>
+  <section class="container">
+    <article class="main-content">
+      <h2>Main Content</h2>
+    </article>
+    <aside class="secondary-content">
+      <h2>Secondary Content</h2>
+    </aside>
+  </section>
+  <footer>
+      <h2>Footer Content</h2>
+  </footer>
 </body>
 </html>
 ```
@@ -225,9 +225,9 @@ Let's start with our media query for large screens. We know we want our breakpoi
 
 ```css
 @media screen and (min-width: 900px) {
-    body {
-        background: yellow;
-    }
+  body {
+    background: yellow;
+  }
 }
 ```
 
@@ -235,10 +235,10 @@ Once we've established that our query is working, we can update the styles we wa
 
 ```css
 @media screen and (min-width: 900px) {
-    .container {
-        margin: 0 auto;
-        width: 90%;
-    }
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
 }
 ```
 
