@@ -245,6 +245,25 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 * Filter on the array to return objects that are not thirsty: `[{name: "Martha", thirsty: true}, {name: "Pam", thirsty: false}, {name: "Roberta", thirsty: true}]`.
 
+
+### Array.prototype.filter
+[`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it only returns the first element where the callback function returns a truthy value. If the callback function returns a falsy value for all of the elements the `.find` method will return `undefined`.
+
+```js
+var beatles = [
+  { name: 'John', living: false, instruments: ['guitar', 'bass', 'piano'] },
+  { name: 'Paul', living: true, instruments: ['bass', 'guitar', 'piano'] },
+  { name: 'George', living: false, instruments: ['guitar', 'sitar'] },
+  { name: 'Ringo', living: true, instruments: ['drums', 'bongos'] },
+];
+
+var aLivingBeatle = beatles.find(function (beatle) {
+  return beatle.living;
+});
+```
+
+
+
 ### Array.prototype.reduce
 
 [`Array.prototype.reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FReduce) is a lot like `map()`, but with one important distinction: it returns one single value as opposed to an array of new values. Consider this example:
