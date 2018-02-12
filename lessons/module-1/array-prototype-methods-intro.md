@@ -245,7 +245,7 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 * Filter on the array to return objects that are not thirsty: `[{name: "Martha", thirsty: true}, {name: "Pam", thirsty: false}, {name: "Roberta", thirsty: true}]`.
 
 
-### Array.prototype.filter
+### Array.prototype.find
 [`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it only returns the first element where the callback function returns a truthy value. If the callback function returns a falsy value for all of the elements the `.find` method will return `undefined`.
 
 ```js
