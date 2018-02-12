@@ -190,7 +190,7 @@ Like `forEach()`, `map()` accepts an anonymous function that it calls on each el
 
 [`Array.prototype.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), like `map()`, returns a new array based on the return value of the callback function you pass it. The mechanics, however, differ slightly.
 
-`filter()` will include an element in the new array if return value is truthy and omit it if the return value is falsy.
+`filter()` will only add an element to the new array if the callback function returns a truthy value. If the callback function returns a falsy value it will be omitted.
 
 What makes a value truthy or falsy? Let's start with the easy ones: `true` is truthy and `false` is falsy. `0`, `null`, `undefined`, `NaN`, and an empty string are all falsy as well. Everything else is truthy.
 
