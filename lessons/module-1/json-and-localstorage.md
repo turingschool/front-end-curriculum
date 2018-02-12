@@ -66,8 +66,8 @@ JSON has the following rules:
 
 The browser provides a `JSON` object with two methods.
 
-- `JSON.stringify()` turns any JavaScript object into valid JSON.
-- `JSON.parse()` turns any valid JSON into a JavaScript object.
+- `JSON.stringify();` turns any JavaScript object into valid JSON.
+- `JSON.parse();` turns any valid JSON into a JavaScript object.
 
 ### Your Turn
 
