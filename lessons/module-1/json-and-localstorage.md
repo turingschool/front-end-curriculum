@@ -6,7 +6,7 @@ tags: web apis, storage, persistence
 
 ### What is Local Storage?
 
-[`localStorage`][ls-mdn] is a property you can call on the global `Window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.  
+[`localStorage`][ls-mdn] is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
 
 Up until this point, the data in our projects has disappeared whenever we refresh our page, which is problematic. It would be nice if we could keep our ideas on the page without having to recreate them every time we want to see our CSS changes. Browsers provide two main types of immediate storage that is accessible without messing with a database: [`sessionStorage`][ss-mdn] which gets reset whenever your browser session restarts, and [`localStorage`][ls-mdn], which has no specified expiration date. Today we will strictly be talking about `localStorage`.
 
@@ -16,10 +16,10 @@ The web storage API is a secure way your browser can store key value pairs that 
 
 `localStorage` supports the following methods:
 
-- `localStorage.setItem()` takes two arguments—a key and value (key must be string)—and stores the given value under the provided key.
-- `localStorage.getItem()` gets an item from storage based on the key provided.
-- `localStorage.removeItem()` takes a key and removes that key and its associated value from storage.
-- `localStorage.clear()` removes all items from storage for that domain.
+- `localStorage.setItem();` takes two arguments—a key and value (key must be string)—and stores the given value under the provided key.
+- `localStorage.getItem();` gets an item from storage based on the key provided.
+- `localStorage.removeItem();` takes a key and removes that key and its associated value from storage.
+- `localStorage.clear();` removes all items from storage for that domain.
 
 [ls-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
 [ss-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
@@ -37,7 +37,7 @@ Open up the developer tools on this page and try the following:
 6. `localStorage.setItem('anotherThing', 'you look nice today');`
 7. `localStorage.getItem('anotherThing');`
 8. `localStorage.clear();`
-9. `localStorage.setItem('somethingComplicated', { name: 'J Mascis', affiliation: 'Dinosaur Jr.' });`
+9. `localStorage.setItem('somethingComplicated', { crust: 'deep dish', type: 'veggie' });`
 10. `localStorage.getItem('somethingComplicated');`
 
 What are your observations?
@@ -66,21 +66,21 @@ JSON has the following rules:
 
 The browser provides a `JSON` object with two methods.
 
-- `JSON.stringify()` turns any JavaScript object into valid JSON.
-- `JSON.parse()` turns any valid JSON into a JavaScript object.
+- `JSON.stringify();` turns any JavaScript object into valid JSON.
+- `JSON.parse();` turns any valid JSON into a JavaScript object.
 
 ### Your Turn
 
 Take the object from the previous exercise that didn't work and refactor it. Don't look below quite yet...
 
-1. You should use `JSON.stringify()` before storing it in `localStorage`.
-2. You should use `JSON.parse()` after retrieving it from `localStorage`.
+1. You should use `JSON.stringify();` before storing it in `localStorage`.
+2. You should use `JSON.parse();` after retrieving it from `localStorage`.
 
 ### Complete Workflow in Console
 
 The goal is to take our object, store it in local storage, and then be able to take the object out of local storage and modify the object.
 
-1. `var objectToStore = { name: 'J Mascis', affiliation: 'Dinosaur Jr.' };`
+1. `var objectToStore = { crust: 'deep dish', type: 'veggie' };`
 2. `var stringifiedObject = JSON.stringify(objectToStore);`
 3. `stringifiedObject` (Notice our object has turned into a string!)
 4. `localStorage.setItem('somethingComplicated', stringifiedObject);` (Stores the object in local storage)
