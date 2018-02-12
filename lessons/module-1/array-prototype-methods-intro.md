@@ -8,7 +8,7 @@ tags: JavaScript, array, prototype
 
 In this segment, you'll learn the following:
 
-* How to use the `Array.prototype` `forEach()`, `map()`, `filter()`, `reduce()`, and `sort()` methods.
+* How to use the `Array.prototype` `forEach()`, `map()`, `filter()`, `find`, `reduce()`, and `sort()` methods.
 * How to create DOM nodes using array prototypes.
 
 ### Context
