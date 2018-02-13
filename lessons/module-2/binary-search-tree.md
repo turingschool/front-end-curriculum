@@ -134,7 +134,7 @@ And last, but  not least, `insert(6)`. This node is less than `10`, so we move l
        /
       6
 ```
-
+<!-- 
 ## Tree Traversal
 
 Let's say we want to visit every node of this tree and print the values from lowest value to highest. What we'll need to do this is something called a "recursive algorithm". We need an algorithm that repetitively (recursively) checks and rechecks certain parts of the tree based on the conditions we are looking for.
@@ -189,7 +189,7 @@ Moving on to the right we see `19`. Before printing, check for any left child no
 
 Sorted Values `[3, 5, 6, 7, 10, 12, 19]`
 
-Finally we check for any right child nodes. There are none, so our sorting is complete.
+Finally we check for any right child nodes. There are none, so our sorting is complete. -->
 
 ## Finding Values in a BST
 
