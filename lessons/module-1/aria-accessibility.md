@@ -59,7 +59,7 @@ As previously mentioned, many semantic HTML5 elements have implicit roles that a
 
 Things to Avoid:
 
-* Reduncancy
+* Redundancy
 * Replacement
 * Modification
 
@@ -183,7 +183,7 @@ Answer the following questions:
 
 1. Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
 
-1. True or False: You can user JavaScript to interact directly with the Accessibility Tree. Elaborate.
+1. True or False: You can use JavaScript to directly interact with the Accessibility Tree. Elaborate.
 
 1. How does a screen reader interact with `<div>` and `<span>` tags?
 
