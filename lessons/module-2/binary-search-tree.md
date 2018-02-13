@@ -271,13 +271,12 @@ Fourth Round: `[6]`
 ## Checks For Understanding
 
 * What is a Binary Search Tree?
-* Give an example of data that might be stored in this structure
 * What rules must a BST follow?
-* Discuss why you might use Depth First approach vd Breadth First for searching a tree? What about the opposite?
+* Discuss why you might use Depth First approach vs. Breadth First for searching a tree? What about the opposite?
 
 ### BST in Code
 
-We will be implementing a BST using this [repo](https://github.com/turingschool-examples/tdd/tree/binaryTree). Use the tests to build out a few methods to navigate around a Binary Search Tree.
+We will be implementing a BST using this [repo](https://github.com/turingschool-examples/binary-search-tree). Use the tests to build out a few methods to navigate around a Binary Search Tree.
 
 ## Resources
 
