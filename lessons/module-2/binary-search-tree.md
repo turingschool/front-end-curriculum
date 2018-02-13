@@ -40,18 +40,18 @@ Let's take a look at what a small BST might look like:
 Before we continue to look at this structure, let's talk about what we mean by "cheap". Think about what an array looks like:
 
 ```js
-var x = [2, 4, 6, 7];
+let x = [2, 4, 6, 7];
 ```
 
 This data structure works really well if you need to set aside space for memory once, and then access it many times. But what if you need to modify this array, for example by adding the number 3 in the correct spot?
 
 ```js
-  var x = [2, 3, 4, 6, 7];
+  let x = [2, 3, 4, 6, 7];
 ```
 
-We wont go into the details too much, but because all of the data in this array is stored in the same location in memory, it ultimately means that you have to rewrite the entire array which will then take up a bigger chunk of data. What if you wanted to add 1,000,000 randomly generated values? You'd need a large chunk of memory to store such a big collection of numbers and continuously rewrite that entire array of data.
+We won't go into the details too much, but because all of the data in this array is stored in the same location in memory, it ultimately means that you have to rewrite the entire array which will then take up a bigger chunk of data. What if you wanted to add 1,000,000 randomly generated values? You'd need a large chunk of memory to store such a big collection of numbers and continuously rewrite that entire array of data.
 
-A BST, on the other hand, is structured with a series of `nodes`. Each node is an indepenent piece of data, with its own location in memory. This means that however many nodes there are, each one can have its own address without affecting the entire data structure.
+A BST, on the other hand, is structured with a series of `nodes`. Each node is an independent piece of data, with its own location in memory. This means that however many nodes there are, each one can have its own address without affecting the entire data structure.
 
 ## BST Rules
 There are a few main rules:
@@ -272,7 +272,7 @@ Fourth Round: `[6]`
 
 * What is a Binary Search Tree?
 * What rules must a BST follow?
-* Discuss why you might use Depth First approach vs. Breadth First for searching a tree? What about the opposite?
+* Discuss why you might use Depth First approach vs Breadth First for searching a tree? What about the opposite?
 
 ### BST in Code
 
