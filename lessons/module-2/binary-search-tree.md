@@ -272,7 +272,6 @@ Fourth Round: `[6]`
 
 * What is a Binary Search Tree?
 * What rules must a BST follow?
-* Discuss why you might use Depth First approach vs Breadth First for searching a tree? What about the opposite?
 
 ### BST in Code
 
