@@ -261,7 +261,7 @@ Third Round: `[12, 19]`
 
 ### Breadth First Search
 
-This approach moves laterally along tree branches checking each layer before moving deeper down a branch. Searching the same tree using this method might look somethign like this:
+This approach moves laterally along tree branches checking each layer before moving deeper down a branch. Searching the same tree using this method might look something like this:
 
 First Found: `[10]`
 Second Round: `[5, 12]`
