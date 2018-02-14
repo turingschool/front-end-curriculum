@@ -177,23 +177,32 @@ Watch the following video (roughly 30 min)
 Answer the following questions:
 
 1. What is the difference between the DOM tree and an Accessibility Tree?
+
 <!--  
   Accessibility tree is used by screen readers to navigate the DOM
 -->
 
 1. What 3 main types of information are available through the Accessibility Tree? Describe each of these types of information and provide an example.
-<!-- input types, state,  -->
+
+<!-- 
+  Role
+  State
+  Properties
+-->
 
 1. Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
+
 <!-- 
   using keyboard shortcuts you can easily navigate the page in different ways.
   Semantic navigation: moving through list tags, 
-  Landmark Navigation: using semantic tags you can navigate between section, footer, main...  
+  Landmark Navigation: using semantic tags you can navigate between article, section, footer, main...  
 -->
 
 1. True or False: You can use JavaScript to directly interact with the Accessibility Tree. Elaborate.
+
 <!-- 
-  
+  No, hopefully in the future.
+  We can use ARIA attributes to override the default accessibility tree
 -->
 
 1. How does a screen reader interact with `<div>` and `<span>` tags?
@@ -202,18 +211,21 @@ Answer the following questions:
 -->
 
 1. What could you do in order to tell a screen reader to treat an element, for instance a `<span></span>` tag, as a button? What does this do to the functionality of this element?
+
 <!-- 
   <span role="button"></span>
   screen reader will treat like a button, won't give it the ability of a button, still have to do that with js
 -->
 
 1. Seeing as adding a role doesn't actually change the elements functionality or behavior, what could you do to make sure a screen reader catches an element as it tabs through the page?
+
 <!-- 
   <span role="button" tabindex="0"></span>
   add tabIndex to the element
  -->
 
 1. Write the necessary CSS that indicates visual changes have happened when hovering or focusing on something with the role of a button.
+
 <!-- 
   [role="button"]:hover [role="button"]:focus {
     // css properties here
@@ -221,17 +233,20 @@ Answer the following questions:
  -->
 
 1. What ARIA property gives a user a shortcut to content associated with a particular button?
+
 <!-- 
 aria-controls
 <span role="button" aria-controls="navigation-pane"></span>
  -->
 
 1. When should you use `aria-hidden` and why?
+
 <!-- 
   if content is not needed for screen reader - remove content from accessibility tree
  -->
 
 1. What does this mean in terms of what you need to do within your JavaScript to make sure your ARIA markup stays accurate?
+
 <!-- 
   You have to use JS to update the aria properties to make sure they stay current with what is being displayed
  -->
