@@ -45,7 +45,7 @@ Additional requirements to note:
 * _There are specific questions per content area below to guide the group's research. The expecation is that your presentations for session 3 cover the key questions provided per content area._
 * _Each person from the "Research Group" needs to finish session 1 with their own set of notes and their own demo ready to go._
 
-## BREAK (8 min)
+## BREAK (5 min)
 
 ### Session 2: Expert Presentations (10 min each)
 Recombine into your "Learning Groups" specified in the outline. You should have one person from each of the Research Groups.
@@ -65,7 +65,7 @@ A representative from each of the research groups will take turns sharing their 
 * Assign a time keeper to WATCH THE CLOCK so the presenter doesn't have to keep track, and the group ends up with a comprehensive set of notes, understandings, and questions across each of the subjects by the end of the session
 * Write down any questions that your group wasn't clear on for instructors
 
-### Session 3: Wrap Up (10 mins)
+### Session 3: Wrap Up (5 mins)
 
 Give instructors group questions so we can circle back around on them at a later lesson.
 
