@@ -16,6 +16,8 @@ In this project you will be getting your first real interactions with ReactJS, a
 - fetch for api requests
 - [weather underground API](https://www.wunderground.com/weather/api/)
 
+Use [this react starter kit repo](https://github.com/turingschool-examples/react-starter-kit).
+
 ## Requirements
 
 Your weather underground API key should not be stored on github. Store it in a seperate file. This file should be added to your `.gitignore` file.
