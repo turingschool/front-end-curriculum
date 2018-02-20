@@ -93,6 +93,17 @@
 
         <section>
           <h2><a name="JSX">JSX</a></h2>
+          <p>JSX is a special syntax that allows you to write HTML in your JavaScript, and JavaScript in your HTML. It's technically XML, but you can just think of it as HTML and JavaScript working together to create that Virtual DOM. The same way Babel converts ES6 into ES5, Webpack converts JSX into JavaScript and HTML.</p>
+          <p>JSX syntax takes some getting used to, and it might seem to fly in the face of what you know about "separation of concerns" - but after a bit of practice you'll find it becomes more intuitive. In the early days when we talked about separation of concerns, we thought: split up your HTML (content) from your CSS (presentation) from your interactivity (JavaScript). Now when we think about separating our concerns, we do it in a slightly more semantic, user-centric way. We're not bothered by mashing up our HTML, CSS and JavaScript in a single file, if all of that logic works together to create a single application feature. Our separation of concerns is now much more focused on the concerns of our <b>users</b>, rather than concerns about our file structure. We'll see this demonstrated a bit further later on in this lesson.</p>
+          <p>First, let's take a look at the JSX syntax:</p>
+
+<pre>
+  <code class="js">
+    let message = <div className="hello" onClick="{someFunction}">Hello World</div>;
+    ReactDOM.render(message, document.body);
+  </code>
+</pre>
+
         </section>
         <hr />
 
