@@ -49,15 +49,20 @@
         <section>
           <h2><a name="Introduction">What is React?</a></h2>
           <p>People will define React in many different ways, but at its core, React is:</p>
-          <blockquote>a framework that allows you to easily and efficiently manipulate the DOM based on your application data and how it changes in response to user interaction</blockquote>
+          <blockquote>a client-side JavaScript framework that allows you to easily and efficiently manipulate the DOM based on your application data and how it changes in response to user interaction</blockquote>
 
           <p>Let's break this definition down a little bit.</p>
           <h5>What is a framework?</h5>
           <h5>How does React make DOM manipulation easy and efficient?</h5>
+          <p>Think about how you've previously interacted with the DOM, without the help of a framework. You maybe used vanilla JavaScript or jQuery to manipulate text or class names based on event listeners applied to certain selectors. Some of you may recognize how much effort goes into each of these DOM manipulations, some of you might think it hasn't been all that bad.</p>
+          <p>Trust me, it's bad.</p>
+          <p>Standard methods of DOM manipulation are tedious, slow and brittle. It requires us to manually target elements, it takes a long time for the browser to process DOM manipulations, and the amount of code it requires makes it really fragile. There are too many places where we could go wrong with a simple typo.</p>
+          <p>React solves all three of these problems by providing us with a Virtual DOM, which helps us reduce the amount of code and time it takes to update our UI. More on this later!</p>
+
           <h5>What do we mean when we say 'application data'?</h5>
 
           <h3>Why Do We Use React?</h3>
-          <h4>Easy & Efficient DOM manipulation</h4>
+          <h4>Facilitates creating fast, interactive applications</h4>
           <h4>Enforces modular code organization</h4>
 
           <h3>What Tools Does React Provide For Us?</h3>
@@ -74,6 +79,14 @@
 
         <section>
           <h2><a name="VirtualDOM">The Virtual DOM</a></h2>
+          <p>We mentioned previously that a big benefit of React is how well it can handle DOM manipulations in an easy and efficient way. This is done through the use of a Virtual DOM. A Virtual DOM is a JavaScript object that represents a copy of a DOM structure. This provides us with a huge performance benefit, because accessing and updating a JavaScript object is much faster than accessing the true DOM directly.</p>
+          <p>React lets us alter this virtual DOM first, then renders the change for us - making the smallest amount of true DOM manipulations possible. React will only render the deltas of what actually needs to be changed, rather than making a massive DOM manipulation to elements on the page that aren't actually changing.</p>
+          <p>This idea of a Virtual DOM isn't unique to React. It's found in many other client-side frameworks, and can even be implemented with vanilla JavaScript, using <a href="https://developer.mozilla.org/en-US/docs/Web/API/DocumentFragment">DocumentFragments</a>. Take a look at the following codepen:</p>
+          
+          <p data-height="265" data-theme-id="0" data-slug-hash="LzXqrR" data-default-tab="js" data-user="brittanystoroz" data-embed-version="2" data-pen-title="DocumentFragments Example" class="codepen">See the Pen <a href="https://codepen.io/brittanystoroz/pen/LzXqrR/">DocumentFragments Example</a> by Brittany Storoz (<a href="https://codepen.io/brittanystoroz">@brittanystoroz</a>) on <a href="https://codepen.io">CodePen</a>.</p><script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+          <p>If you run the jQuery solution to appending all of those elements to the DOM, then run the DocumentFragment solution, you'll see exactly how much of a performance benefit using a Virtual DOM gives us.</p>
+
         </section>
         <hr />
 
@@ -128,6 +141,7 @@
           <h2><a name="Resources">Further Reading & Resources</a></h2>
           <ul>
             <li><a href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en">React DevTools</a></li>
+            <li><a href="https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react">Props vs. State</a></li>
           </ul>
         </section>
       </div>
