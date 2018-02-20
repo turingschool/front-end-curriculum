@@ -52,7 +52,7 @@
           <blockquote>a client-side JavaScript framework that allows you to easily and efficiently manipulate the DOM based on application data and how it changes in response to user interaction</blockquote>
 
           <p>Let's break this definition down a little bit.</p>
-          <h5>What is a framework?</h5>
+          <h4>What is a framework?</h4>
           <p>The term framework is often used interchangeably with the term 'library', but they're actually a bit different. Libraries are usually a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think jQuery.) Libraries are usually 'syntactic sugar' over something difficult.</p>
           <p>Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code.</p>
           <p>We'll see this demonstrated a bit better when we get into the code along, but React gives us a lot of cool features:</p>
@@ -64,13 +64,13 @@
           </ul>
           <p>We'll go more in-depth into each of these features throughout the lesson, but for now just remember that in order to leverage all of these features, we have to write our code in a very specific way that React understands. This has implications on our directory structure, our separation of concerns, and the way we interact with our application through code.</p>
 
-          <h5>How does React make DOM manipulation easy and efficient?</h5>
+          <h4>How does React make DOM manipulation easy and efficient?</h4>
           <p>Think about how you've previously interacted with the DOM, without the help of a framework. You maybe used vanilla JavaScript or jQuery to manipulate text or class names based on event listeners applied to certain selectors. Some of you may recognize how much effort goes into each of these DOM manipulations, some of you might think it hasn't been all that bad.</p>
           <p>Trust me, it's bad.</p>
           <p>Standard methods of DOM manipulation are tedious, slow and brittle. It requires us to manually target elements, it takes a long time for the browser to process DOM manipulations, and the amount of code it requires makes it really fragile. There are too many places where we could go wrong with a simple typo.</p>
           <p>React solves all three of these problems by providing us with a Virtual DOM, which helps us reduce the amount of code and time it takes to update our UI. More on this later!</p>
 
-          <h5>What do we mean when we say 'application data'?</h5>
+          <h4>What do we mean when we say 'application data'?</h4>
           <p>Think about all the content you see on a site like Facebook - user profiles, their posts, comments on those posts, etc. All of this is considered application data. One of the core differences between building a  web site and building a web app is that web apps have to manage a large amount of data that can be manipulated by its users. For example, Facebook users can add and delete posts, edit comments, change their profile information, etc. A web application has to store and maintain all of this data even as it updates based on user interaction.</p>
           <p>React allows us to ensure our application UI is displaying all the correct information at any given time, no matter how frequently it changes.</p>
 
@@ -104,8 +104,11 @@
           <p>First, let's take a look at the JSX syntax:</p>
 
 <pre>
-  <code class="js">
-    let message = <div className="hello" onClick="{someFunction}">Hello World</div>;
+  <code class="jsx">
+    let message = 
+      <div className="hello" onClick="{someFunction}">
+        Hello World
+      </div>;
     ReactDOM.render(message, document.body);
   </code>
 </pre>
@@ -115,6 +118,8 @@
 
         <section>
           <h2><a name="Components">Components</a></h2>
+          <p>Components are reusable pieces of code that represent templates for a particular instance of a UI element. Components can take in parameters that might vary from instance to instance, allowing us to create unique elements with a shared structure and style. The main benefit of components is how modular they are - they can snap or nest together to create complete pages and applications.</p>
+
           <h3>Stateless Components</h3>
           <h3>Stateful Components</h3>
 
