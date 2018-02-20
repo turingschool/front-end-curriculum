@@ -53,19 +53,9 @@
 
           <p>Let's break this definition down a little bit.</p>
           <h5>What is a framework?</h5>
-          <h5>How does React make DOM manipulation easy and efficient?</h5>
-          <p>Think about how you've previously interacted with the DOM, without the help of a framework. You maybe used vanilla JavaScript or jQuery to manipulate text or class names based on event listeners applied to certain selectors. Some of you may recognize how much effort goes into each of these DOM manipulations, some of you might think it hasn't been all that bad.</p>
-          <p>Trust me, it's bad.</p>
-          <p>Standard methods of DOM manipulation are tedious, slow and brittle. It requires us to manually target elements, it takes a long time for the browser to process DOM manipulations, and the amount of code it requires makes it really fragile. There are too many places where we could go wrong with a simple typo.</p>
-          <p>React solves all three of these problems by providing us with a Virtual DOM, which helps us reduce the amount of code and time it takes to update our UI. More on this later!</p>
-
-          <h5>What do we mean when we say 'application data'?</h5>
-
-          <h3>Why Do We Use React?</h3>
-          <h4>Facilitates creating fast, interactive applications</h4>
-          <h4>Enforces modular code organization</h4>
-
-          <h3>What Tools Does React Provide For Us?</h3>
+          <p>The term framework is often used interchangeably with the term 'library', but they're actually a bit different. Libraries are usually a little bit smaller, and generally serve the purpose of providing us with abstractions over complex code that we would otherwise have to write ourselves. (Think jQuery.) Libraries are usually 'syntactic sugar' over something difficult.</p>
+          <p>Frameworks, on the other hand, offer us a bit more than just abstractions - they give us a lot more powerful ways to write our code, but at the same time, they prescribe a very strict and specific way for us to organize our code.</p>
+          <p>We'll see this demonstrated a bit better when we get into the code along, but React gives us a lot of cool features:</p>
           <ul>
             <li><b>The Virtual DOM: </b>an in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM</li>
             <li><b>JSX: </b>a mix of JavaScript and XML that facilitates rendering the appropriate HTML</li>
@@ -73,6 +63,21 @@
             <li><b>Props & State: </b>objects in React where we can store application data and other values that will affect the rendering of our components</li>
           </ul>
           <p>We'll go more in-depth into each of these features throughout the lesson, but for now just remember that in order to leverage all of these features, we have to write our code in a very specific way that React understands. This has implications on our directory structure, our separation of concerns, and the way we interact with our application through code.</p>
+
+          <h5>How does React make DOM manipulation easy and efficient?</h5>
+          <p>Think about how you've previously interacted with the DOM, without the help of a framework. You maybe used vanilla JavaScript or jQuery to manipulate text or class names based on event listeners applied to certain selectors. Some of you may recognize how much effort goes into each of these DOM manipulations, some of you might think it hasn't been all that bad.</p>
+          <p>Trust me, it's bad.</p>
+          <p>Standard methods of DOM manipulation are tedious, slow and brittle. It requires us to manually target elements, it takes a long time for the browser to process DOM manipulations, and the amount of code it requires makes it really fragile. There are too many places where we could go wrong with a simple typo.</p>
+          <p>React solves all three of these problems by providing us with a Virtual DOM, which helps us reduce the amount of code and time it takes to update our UI. More on this later!</p>
+
+          <h5>What do we mean when we say 'application data'?</h5>
+          <p></p>
+
+          <h3>Why Do We Use React?</h3>
+          <h4>Facilitates creating fast, interactive applications</h4>
+          <p>React is heavily focused on the interactive UI aspect of an application. While it can help you manage data as well, its main claim to fame is how easily we can create a highly interactive application with a UI that responds quickly to constantly changing data.</p>
+          <h4>Enforces modular code organization</h4>
+          <p>We mentioned a framework enforces a certain structure for your code. The way React requires us to set up our applications and break apart certain logic forces us to write modular applications by default. Modular applications are much more scalable and maintainable, and make future development and iterations easier.</p>
         </section>
         <hr />
 
