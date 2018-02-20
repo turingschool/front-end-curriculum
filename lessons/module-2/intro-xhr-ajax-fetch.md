@@ -1,5 +1,7 @@
-# Basic API Requests using AJAX
-
+---
+title: Adventures of Blocky (aka MORE Unit Testing in Javascript)
+length: 180 minutes
+tags: javascript, browser, network requests, fetch, ajax, xhr
 ---
 
 ### [Git Repo](https://github.com/turingschool-examples/ajax-lesson-FE)
@@ -9,7 +11,8 @@
 ### By the end of this lesson you should...
 
 * Understand the difference between synchronous and asynchronous operations
-* Be familiar with AJAX and XMLHttpRequest objects
+* Be familiar with the fetch API
+* Understand how network requests work
 * Know what a `GET` request does and how to use it
 
 ---
@@ -61,7 +64,23 @@ setTimeout is actually an asynchronous function, which executes its callback aft
 
 ---
 
-### What is AJAX?
+## The history of network requests
+
+What is a network request?
+
+Open up your dev tools and navigate to the Network tab. Refresh the page and watch what happens.
+
+![network dev tool example](https://i.imgur.com/C5brbyU.png)
+
+Each item on a webpage is coming from some server somewhere. The link tags in your HTML connecting your stylesheets and JavaScript files prompt network requests. Webpack saves us time because it bundles up all our files into a single JavaScript file, necessitating a single network request, rather than dozens of individual requests.
+
+Why is it important to keep this in mind?
+
+Each network request takes time - they're _expensive_. Imagine if you had to wait for a webpage to load one thing at a time! It would not make for a great user experience.
+
+Network requests are expensive no matter what we do. However, we can run them _asynchronously_, saving some time.
+
+### The first development: AJAX
 
 [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX)
 
@@ -141,9 +160,9 @@ If it worked, you should be able to type `xhttp` and see the results in your XML
 
 ### Isn't There an Easier Way???
 
-Like basically all things in Javascript, we can sprinkle a little syntactic suga (intentional misspelling) to make our lives easier.
+Like basically all things in Javascript, developers have come up with synctatic sugar to make our lives easier.
 
-### $.get()
+### jQuery: $.get()
 
 jQuery has incorporated AJAX functionality into its library to allow us to perform asynchronous tasks in a more readable fashion. Here is a sample request matching what we did above:
 
@@ -171,9 +190,11 @@ $.get("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 
 Some additional information on the specifc methods can be found [here](https://api.jquery.com/jquery.get/)
 
-### fetch()
+### ES6: fetch()
 
-Another great tool to help with network requests is the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+Another great tool to help with network requests is the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). This is what we'll focus on in Mod 2, since we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery)!
+
+_It's important to note that not every browser supports the fetch api; polyfills are available, but many legacy codebases use other apis that are supported by older browsers, such as Axios or Superagent._
 
 From the docs:
 
@@ -185,14 +206,16 @@ We can nearly mimic the syntax above to perform the same network request, with a
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 ```
 
-Next we see that fetch returns a promise that resolves to the response of of our request. We haven't talked about promises yet, but all you need to know for now is that we can call `.then(callback)` which will execute our callback as soon as the response comes in...or in other words...it will wait until we have ALL of the data (or an error) back, `THEN` it will execute whatever we say to do next with that data.
+Next we see that fetch returns a promise that resolves to the response of of our request. We haven't talked about promises yet, but all you need to know for now is that we can add `.then(callback)` to our fetch. The callback parameter inside the `.then()` method will execute as soon as the response comes in. In other words, it will wait until we have ALL of the data (or an error) back, `THEN` it will execute whatever we say to do next with that data.
 
 ```
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => console.log(data))
 ```
 
-If you plug the code above into your console, you should see the Response object come back. There's one problem however, we can't seem to get the data we want from the Response.body. There's one more step to parse the data (much like you do when pulling things from localStorage). We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`.
+If you plug the code above into your console, you should see the Response object come back!
+
+However, there's one problem: we can't seem to get the data we want from the Response.body. There's one more step to parse the data (much like you do when pulling things from localStorage). We'll need to use the **`Body.json()`** method that comes with fetch to parse it and call another `.then()`. (See code snippet below)
 
 From the docs, the `.json()` method returns "A promise that resolves with the result of parsing the body text as JSON. This could be anything that can be represented by JSON — an object, an array, a string, a number..."
 
