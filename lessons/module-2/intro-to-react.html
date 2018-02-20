@@ -130,10 +130,12 @@
           <p>You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. In React, components have the following characteristics:</p>
           
           <ul>
-            <li>they are are similar to ES6 classes, and they each have a <code>render</code> method we can use to tell React what to render to the DOM when that component is used.</li>
+            <li>they are either functions or an extended ES6 class</li>
             <li>they return one, single JSX element (remember, functions can only return one thing!)</li>
             <li>there are two types of components: stateless and stateful</li>
           </ul>
+
+          <p>We'll start investigating these characteristics by practicing with stateless components.</p>
 
           <div class="discuss">
             <h4>Code Along</h4>
@@ -141,9 +143,10 @@
           </div>
 
           <h3>Stateless Components</h3>
-          <p></p>
+          <p>Stateless components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Stateless components are just functions that return the HTML you want rendered to the DOM.</p>
 
           <h3>Stateful Components</h3>
+          <p>Stateful components are ES6 classes that extend an abstract 'Component' class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM, and they keep track of some sort of application data.</p>
 
         </section>
         <hr />
