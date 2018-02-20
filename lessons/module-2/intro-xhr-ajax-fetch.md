@@ -1,11 +1,7 @@
 ---
-title: Adventures of Blocky (aka MORE Unit Testing in Javascript)
+title: Intro to Network Requests
 length: 180 minutes
 tags: javascript, browser, network requests, fetch, ajax, xhr
----
-
-### [Git Repo](https://github.com/turingschool-examples/ajax-lesson-FE)
-
 ---
 
 ### By the end of this lesson you should...
@@ -270,6 +266,14 @@ In your console do the following...
 - Fetch 20 geography questions and for each trivia console.log the answer only
 - Fetch 20 geography questions and console.log the response status code.
 - Fetch 30 geography questions and console.log an array of only the hard trivia
+
+## Even more practice time:
+
+This [repo](https://github.com/turingschool-examples/ajax-lesson-FE) has instructions in the README for implementing a fetch request into a basic React app.
+
+Try it out!
+
+---
 
 ##### Further Reading:
 
