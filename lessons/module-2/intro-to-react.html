@@ -103,7 +103,8 @@
           <p>JSX syntax takes some getting used to, and it might seem to fly in the face of what you know about "separation of concerns" - but after a bit of practice you'll find it becomes more intuitive. In the early days when we talked about separation of concerns, we thought: split up your HTML (content) from your CSS (presentation) from your interactivity (JavaScript). Now when we think about separating our concerns, we do it in a slightly more semantic, user-centric way. We're not bothered by mashing up our HTML, CSS and JavaScript in a single file, if all of that logic works together to create a single application feature. Our separation of concerns is now much more focused on the concerns of our <b>users</b>, rather than concerns about our file structure. We'll see this demonstrated a bit further later on in this lesson.</p>
           <p>First, let's take a look at the JSX syntax:</p>
 
-          <img src="../../assets/images/lessons/intro-to-react/jsx-example.png" width="100%" /><br />
+          <img src="../../assets/images/lessons/intro-to-react/jsx-example.png" width="100%" />
+          <p>What looks familiar? What looks different? You might notice the curly braces around things like <code>onClick={someFunction}</code>. These curly braces are allowing us to interpolate JavaScript in our HTML. Think about how you may have used template strings in vanilla JavaScript in the past: we use the <code>${}</code> syntax to denote that this particular chunk of the string is a dynamic value that should be evaluated and parsed as a dynamic JavaScript value, rather than plain text. The curly braces in React give us similar functionality. Anywhere in our JSX where we want to tell our application "This is JavaScript, so don't render it character by character like HTML, we can wrap that code in curly braces to signal that.</p>
         </section>
         <hr />
 
