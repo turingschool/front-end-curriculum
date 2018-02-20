@@ -144,6 +144,20 @@
 
         <section>
           <h2><a name="PropsState">Props & State</a></h2>
+          <p>While React is focused heavily on the UI/visual layer of applications, it does allow for some data management through props and state.</p>
+          <h3>Props</h3>
+          <p>We mentioned that components are reusable pieces of code, that allow us to create unique instances of certain UI elements. We can do this by passing <b>props</b> to each of our components. Think about how you create new instances of ES6 Classes - they share the same base, but you pass in different arguments every time you create a new instance, which allows each instance to vary slightly.</p>
+          <p>Props allow us to pass information from parent components to child components. We can pass strings, numbers, booleans, arrays, objects, functions, pretty much any piece of data we want access to in our child component. We can name them whatever we'd like, as long as we're consistent and semantic with the names that we choose.</p>
+          <p>When we pass props down to a child component, it comes through as a simple JavaScript object with key value pairs.</p>
+          <h3>State</h3>
+          <p>State is slightly different than props: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.</p>
+          <p>One of the more confusing things about React is when to make a component stateful. A general rule of thumb to keep in mind is that, if you're not sure if a component should be stateless or stateful, start with a stateless component. Add state if you find that you need it. Stateful components are a lot heavier than stateless component. Keep your app as lean as possible!</p>
+
+          <div class="discuss">
+            <h4>Read</h4>
+            <p>Understanding the difference between props and state can be tricky. Read through the top three answers on this <a href="https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react">stackoverflow question, and go through any links or resources provided in the answers. Just because one answer has the most upvotes, doesn't mean it's going to be the one that makes everything click for you. Take your time reading through the explanations here.</p>
+          </div>
+
         </section>
         <hr />
 
