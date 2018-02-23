@@ -108,8 +108,8 @@ We’d like our users to be able to easily find specific TODOs they've already c
 When viewing the TODO list:
 
   * Each TODO in the list should have a button called `Completed Task`.
-  * When a the user clicks the `Completed Task` button, the idea should be either grayed out and/or shown with a strike through text.
-  * On reloading the page the page, the completed TODOs should be exempted (but not deleted) from the list.
+  * When a user clicks the `Completed Task` button, the idea should be either grayed out and/or shown with a strike through text.
+  * On reloading the page, the completed TODOs should be exempted (but not deleted) from the list.
   * When the user clicks the `show completed TODOs`, the completed TODOs should be loaded back onto the top of the TODO list.
 
 ### Importance
