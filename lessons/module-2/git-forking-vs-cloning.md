@@ -51,16 +51,9 @@ Let's say an instructor has created a repo for a live coding lesson that lives a
 
 If you clone down this repo, you will have access to both of those branches no problem. But now you can't push your changes up to github because you don't have collaborator access to that repo. If you'd like to be able to show your changes on your github, and keep track of your own version of the repo, a better workflow would be to fork.
 
-After forking the repo, you'll need access to those two branches, `tutorial-begin` and `tutorial-complete`. This involves a couple of steps:
+Your workflow would involve a couple of steps and look like this:
 
-1. Add the turing repo as a remote:
-
-`git remote add turing http://github.com/turing/foo-bar`
-
-2. Fetch all the branches from the newly added remote:
-
-`get fetch --all`
-
-3. Create a new local branch based on the turing `tutorial-begin` branch:
-
-`git checkout -b tutorial-begin turing/tutorial-begin`
+1. Fork the repo
+2. Add the turing repo as a remote: `git remote add turing http://github.com/turing/foo-bar`
+3. Fetch all the branches from the newly added remote: `get fetch --all`
+4. Create a new local branch based on the turing `tutorial-begin` branch: `git checkout -b tutorial-begin turing/tutorial-begin`
