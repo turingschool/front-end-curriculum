@@ -4,10 +4,7 @@ length:
 tags: git, tooling, workflow 
 ---
 
-
-## Git Review - forking vs. cloning
-
-### Cloning
+## Cloning
 
 Cloning allows you to copy down the original repo from github into a local directory. When you clone a repo, the local directory it creates is automatically mapped to the remote github repo. By default, it creates a remote for you called 'origin', and gives you access to any and all of the branches that exist on that remote repository.
 
@@ -17,7 +14,7 @@ While cloning allows you to copy down the original repo, if you are not a collab
 
 Which brings us to...
 
-### Forking
+## Forking
 
 When you don't have collaboration access on a particular remote repository, but you want to contribute to it or save your own version of it, you should fork the repository.
 
@@ -48,7 +45,7 @@ If you want to create a new local branch, based on an existing remote branch, yo
 `git checkout -b <new_branch_name> <remote_name>/<remote_branch_name>`
 
 
-### Example Workflow
+## Example Workflow
 
 Let's say an instructor has created a repo for a live coding lesson that lives at http://github.com/turing/foo-bar, and there are two branches on that repository: `tutorial-begin`, where everyone should start, and `tutorial-complete`, with the completed solution.
 
