@@ -46,3 +46,24 @@ This will fetch and create a reference to all the branches from every single one
 If you want to create a new local branch, based on an existing remote branch, you can then do:
 
 `git checkout -b <new_branch_name> <remote_name>/<remote_branch_name>`
+
+
+### Example Workflow
+
+Let's say an instructor has created a repo for a live coding lesson that lives at http://github.com/turing/foo-bar, and there are two branches on that repository: `tutorial-begin`, where everyone should start, and `tutorial-complete`, with the completed solution.
+
+If you clone down this repo, you will have access to both of those branches no problem. But now you can't push your changes up to github because you don't have collaborator access to that repo. If you'd like to be able to show your changes on your github, and keep track of your own version of the repo, a better workflow would be to fork.
+
+After forking the repo, you'll need access to those two branches, `tutorial-begin` and `tutorial-complete`. This involves a couple of steps:
+
+1. Add the turing repo as a remote:
+
+`git remote add turing http://github.com/turing/foo-bar`
+
+2. Fetch all the branches from the newly added remote:
+
+`get fetch --all`
+
+3. Create a new local branch based on the turing `tutorial-begin` branch:
+
+`git checkout -b tutorial-begin turing/tutorial-begin`
