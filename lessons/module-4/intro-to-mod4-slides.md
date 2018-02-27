@@ -82,10 +82,19 @@ layout: presentation
 
 <section>
   <section>
+    <h2>Gear Up</h2>
+  </section>
+  <section>
+    <p>Brainstorm ideas - fill out survey</p>
+  </section>
+</section>
+
+<section>
+  <section>
     <h2>Job Support</h2>
   </section>
   <section>
-    <p>Dedicated coach to help refine your resumes, cover letters and outreach emails</p>
+    <p>Dedicated coach to help refine your resumes, cover letters, and outreach emails</p>
     <p>Schedule mock interviews during office hours</p>
     <p>Develop a 30-day, post-grad action plan to set yourself up for success</p>
   </section>
