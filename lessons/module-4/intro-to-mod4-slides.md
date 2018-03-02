@@ -15,14 +15,15 @@ layout: presentation
   <section>
     <h4>Bare Minimum</h4>
     <p>Finishing mod3, you know the bare minimum to become a junior front-end engineer.</p>
+    <p>Who is excited about the bare minimum?</p>
   </section>
   <section>
     <h4>Set Yourself Apart</h4>
-    <p>Mod4 is designed to separate you from the pack of other bootcamps and front-end junior developers.</p>
+    <p>Mod4 is designed to separate you from the pack of other bootcamp graduates and front-end junior developers.</p>
   </section>
   <section>
     <h4>Empower Yourself</h4>
-    <p>Mod4 gives you the tools to build full, professional web apps without the reliance on a back-end team.</p>
+    <p>Mod4 gives you the tools to build full, professional web apps without the reliance on third-party APIs.</p>
   </section>
 </section>
 
@@ -57,7 +58,6 @@ layout: presentation
       <li>React Native</li>
       <li>Build your own style guide</li>
       <li>HTTPS, JWTs, and OAuth</li>
-      <li>More git workflows</li>
       <li>Localization and Internationalization</li>
       <li>And more...</li>
     </ul>
@@ -78,6 +78,10 @@ layout: presentation
       <li>Final Assessment</li>
     </ul>
   </section>
+  <section>
+    <p>Week one is tough - new material every day that you'll have to implement the same day.</p>
+    <p>You will have to use jQuery for the first project. Review it.</p>
+  </section>
 </section>
 
 <section>
@@ -85,7 +89,7 @@ layout: presentation
     <h2>Gear Up</h2>
   </section>
   <section>
-    <p>Brainstorm ideas - fill out survey</p>
+    <p>Let's take 5 minutes to brainstorm ideas (via a survey).</p>
   </section>
 </section>
 
@@ -94,20 +98,9 @@ layout: presentation
     <h2>Job Support</h2>
   </section>
   <section>
-    <p>Dedicated coach to help refine your resumes, cover letters, and outreach emails</p>
+    <p>Dedicated small-group coach to help refine your resumes, cover letters, and outreach emails</p>
     <p>Schedule mock interviews during office hours</p>
-    <p>Develop a 30-day, post-grad action plan to set yourself up for success</p>
-  </section>
-</section>
-
-<section>
-  <section>
-    <h2>Motivation</h2>
-  </section>
-  <section>
-    <p>What motivates you to want to be a developer?</p>
-    <p>What has prevented you from doing your best work in the past?</p>
-    <p>What motivates you to do your best work?</p>
+    <p>Develop a 30-day, post-grad action plan to set yourself up for success after graduation</p>
   </section>
 </section>
 
@@ -124,6 +117,17 @@ layout: presentation
     <h4>90% attendance minimum - 100% of the work completed</h4>
     <p>If you miss a class for an interview, you are still expected to go over the material and complete any required homework.</p>
     <p>Classes are usually written in a tutorial style and can be worked through on your own.</p>
+  </section>
+</section>
+
+<section>
+  <section>
+    <h2>Motivation</h2>
+  </section>
+  <section>
+    <p>What motivates you to want to be a developer?</p>
+    <p>What has prevented you from doing your best work in the past?</p>
+    <p>What motivates you to do your best work?</p>
   </section>
 </section>
 
