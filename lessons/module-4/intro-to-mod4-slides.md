@@ -80,6 +80,7 @@ layout: presentation
   </section>
   <section>
     <p>Week one is tough - new material every day that you'll have to implement the same day.</p>
+    <p>If you are demoing the first week, you won't have much time to work on your mod3 project.</p>
     <p>You will have to use jQuery for the first project. Review it.</p>
   </section>
 </section>
