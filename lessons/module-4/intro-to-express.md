@@ -358,17 +358,17 @@ Can you implement a GET route that shows only the messages that have been edited
 To serve static files like an index.html file, you need to let Express know. To do this, tell Express what directory your static files live in with:
 
 ```js
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('public'));
 ```
 
-This chains public to the root path. A good practice is to name this directory public if it contains public facing files such as HTML, CSS and JS.
+This chains public to the root path. A good practice is to name this directory `public` if it contains public facing files such as HTML, CSS and JS.
 
-`__dirname` is a Node global variable that gives you the directory name of the current module (your path). By using `express.static(__dirname + '/public')`, we change `__dirname` to `./public`. We then send our response using the static asset Express middleware. That's it!
+We then send our response using the static asset Express middleware. That's it!
 
 ```js
 app.get('/', (request, response) => {
   // response is actually handled by static asset express middleware
-  // defined by app.use(express.static(__dirname + '/public'));
+  // defined by app.use(express.static('public'));
 });
 ```
 
