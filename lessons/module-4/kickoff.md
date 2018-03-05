@@ -16,9 +16,10 @@ This module will introduce some of the current technologies being used for creat
 
 We'll be talking about security at a high-level and implementing some strategies for making our applications more secure. This includes protecting endpoints with JSON web tokens, understanding the difference between HTTP and HTTPS, and implementing OAuth.
 
-### Week 4-6: Reinforcement of Fundamentals & Real World Prep
+### Week 4-6: Reinforcement of Fundamentals, Real-World Topics, & Interview Prep
 
 We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. Many of these challenges will better prepare you for the technical interviews you'll be going on.
+
 
 ## Graduation Requirements
 
@@ -32,22 +33,27 @@ Students must notify instructors of any absences, and are required to make up an
 
 Students must earn a score of `3` or greater in *each* category of the final assessment rubric.
 
-### Final Assessment - Mock Interview
+### Mock Interview
 
-Students must do a mock interview with one of the instructors. You will be graded on accuracy, eloquence, and professionalism.
+Students must do a mock interview with one of the instructors. You will be given feedback on accuracy, eloquence, and professionalism.
 
 ### Independent Work
 
-* Homework (~4 assignments)
+* Prework Assignments
+* Homework Assignments (~3 assignments)
 * Palette Picker
-* Turing Story (5 minute presentation on your Turing experience)
+* Pattrn Party
 
 ### Group Work
 
-* Build-Your-Own-Backend
 * House of Vars
+* Build-Your-Own-Backend
 * Capstone Project
 
 ### Career Development
 
-The Career Development segment is made up of a 30-day action plan where you will work with your cohort mates and instructors to prepare yourself for moving on after Turing. We will go over this in more detail during week one, but you can see a general outline [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_four/post_grad_plan.md)
+The Career Development segment is made up of a 30-day action plan where you will work with your cohort mates and instructors to prepare yourself for moving on after Turing. This will be mentioned again during your week one professional development kickoff, but you can see a general outline [here](https://github.com/turingschool/career-development-curriculum/blob/master/module_four/post_grad_plan.md)
+
+### Portfolio Presentation
+
+On the final Thursday of the module, you will give a 10-minute presentation about your experience in module 4, Turing, and your action plan going forward. The details about it can be found [here](https://github.com/turingschool/portfolios/blob/master/README.markdown) under "Module 4 (Front-End)".
