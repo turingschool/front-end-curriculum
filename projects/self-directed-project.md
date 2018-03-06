@@ -53,6 +53,11 @@ The output from ESLint shows…
 * 2 - Six to ten complaints
 * 1 - More than ten complaints
 
+### PropType Implementation
+
+- Pass - Proptype validation is implemented for any component receiving props.
+- Fail - There are components missing proptype validation.
+
 ### README Updates
 
 - Pass - The README.md file has been updated with a description of the project, the team, and how to get it up and
