@@ -149,7 +149,7 @@ App/
   running
 - Fail - The boilerplate README is still in place
 
-### 5. Code Sanitation
+### Code Sanitation
 
 The output from ESLint shows…
 
