@@ -53,6 +53,12 @@ The output from ESLint shows…
 * 2 - Six to ten complaints
 * 1 - More than ten complaints
 
+### README Updates
+
+- Pass - The README.md file has been updated with a description of the project, the team, and how to get it up and
+  running
+- Fail - The boilerplate README is still in place
+
 ### Testing
 
 - 4 - Every component is tested from both a unit and acceptance standpoint, all crucial functionality is tested
