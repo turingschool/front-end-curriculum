@@ -85,7 +85,8 @@ App/
   - Name  
   - Model  
   - Class  
-  - Number of Passengers  
+  - Number of Passengers 
+  - A button to "Favorite" the vehicle 
 
 ### Iteration 3: Favorites
 
