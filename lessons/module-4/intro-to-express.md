@@ -27,8 +27,8 @@ Just like browser-based JavaScript, the syntax for using plain Node.js isn't the
 ## Advantages of Express
 While Node.js provides us with all of the functionality we need for our back-ends, writing this logic without Express is more difficult to make sense of and maintain. The two biggest advantages of Express are:
 
-1. the collection of helpful utilities and conveniences that abstract away the Node.js complexity. (e.g. sending a single image file in raw Node.js is quite complex, but can be done in just one line with express)
-2. the ability to refactor request handlers into smaller pieces that are more modular and maintainable. (Node.js, by default, requires you to create one large request handler, which makes your logic more rigid and difficult to refactor)
+1. The collection of helpful utilities and conveniences that abstract away the Node.js complexity. (e.g. sending a single image file in raw Node.js is quite complex, but can be done in just one line with express)
+2. The ability to refactor route handlers into smaller pieces that are more modular and maintainable. (Node.js, by default, requires you to create one large route handler, which makes your logic more rigid and difficult to refactor)
 
 ## Request Flow
 When we are just using Node.js, the flow of a single request might look like this:
@@ -39,13 +39,13 @@ When we add Express, there are a couple of additional steps added to the flow of
 
 ![express flow][express-flow]
 
-While the Express flow might look more complex, it actually makes the developer's job a lot easier. In this flow, the developer is only responsible for the 'Middleware' part of the process. This replaces the single request handler function that you would write without Express. Writing middlware for Express is a lot easier to write and more maintainable because of the 'Express' step that abstracts the complex logic for us.
+While the Express flow might look more complex, it actually makes the developer's job a lot easier. In this flow, the developer is only responsible for the 'Middleware' part of the process. This replaces the single route handler function that you would write without Express. Writing middleware for Express is a lot easier to write and more maintainable because of the 'Express' step that abstracts the complex logic for us.
 
 [node-only-flow]: /assets/images/lessons/express/node-only-flow.png
 [express-flow]: /assets/images/lessons/express/express-flow.png
 
 ## Routing & Middleware
-Earlier we mentioned that with plain Node.js, you would create a single function to handle requests. This single function can get large and unwieldy as your application grows in complexity. Express middlware allows you to break this single function into many smaller functions that only handle one thing at a time.
+Earlier we mentioned that with plain Node.js, you would create a single function to handle requests. This single function can get large and unwieldy as your application grows in complexity. Express middleware allows you to break this single function into many smaller functions that only handle one thing at a time.
 
 Most of the Express code that you write will be routing middleware. Middleware is basically the "glue" between two systems that helps them work together (in our case, Node and Express). Our code will be concerned with responding to client requests to different URLs with different methods (GET, POST, etc).
 
@@ -338,24 +338,24 @@ app.post('/api/v1/messages', (request, response) => {
 
  
 ### Using Postman
-Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit or delete data if there isn't a UI to do so. In our case, it's handy to add messages, edit a specific message, or delete a message. Get familiar with Postman because it will be your best friend for all things API from here on out.
+Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit, or delete data if there isn't a UI to do so. In our case, it's handy to add messages, edit a specific message, or delete a message. Get familiar with Postman because it will be your best friend for all things API from here on out.
 
 Things to consider:
 
-Header needs to include Content-Type: application/x-www-form-urlencoded
-Remember to check which HTTP method you are using before sending the request.
+* If you are including information in the body of the request, then one of the headers needs to include `Content-Type: application/json`
+* Remember to check which HTTP method you are using before sending the request
 
 ### Student Exploration (20 mins)
 
-* Implement a PUT route for a specific message to edit the message of the message.
-* Implement a DELETE route for a specific message to remove it.
+* Implement a PUT route for a specific message to edit the message of the message
+* Implement a DELETE route for a specific message to remove it
 
 **BONUS:**
 
 Can you implement a GET route that shows only the messages that have been edited?
 
 ### Static Files in Express
-To serve static files like an index.html file, you need to let Express know. To do this, tell Express what directory your static files live in with:
+To serve static files like an `index.html` file, you need to let Express know. To do this, tell Express what directory your static files live in with:
 
 ```js
 app.use(express.static('public'));
