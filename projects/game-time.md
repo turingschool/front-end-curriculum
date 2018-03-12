@@ -1,6 +1,6 @@
 ---
 title: Game Time
-length: 2
+length: 2 weeks
 tags: javascript, jquery, canvas, svg, mocha, testing
 ---
 
