@@ -1,6 +1,6 @@
 ---
 title: ARIA Roles, States, Properties
-length: 120
+length: 90
 tags: ARIA, accessibility
 ---
 # Aria #
