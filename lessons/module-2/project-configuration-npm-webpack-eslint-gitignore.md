@@ -292,6 +292,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 2. Create a new directory: `test`
 3. Create a new file: `test/index-test.js`
 4. Paste the following code to the webpack.config.js file:
+
   ```
   const path = require('path');
 
@@ -319,12 +320,16 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
     }
   };
   ```
+  
 5. In the index-test.js file, let's require chai:
+
   ```
   const chai = require('chai');
   const assert = chai.assert;
   ```
+  
 6. In the index-test.js file, let's write one test to see that mocha and chai are properly hooked up:
+
   ```
   describe('test', function() {
     it('should return true', function() {
@@ -332,6 +337,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
     });
   });
   ```
+  
 7. In your terminal, run `npm test`
 
 ---
@@ -437,10 +443,13 @@ What are the benefits of consistent code?
       }
     }
     ```
+    
 3. In the `scripts` object of the `package.json` file in your repo, add this key-value pair:
+
     ```
     "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
     ```
+    
 4. In the terminal, run `npm run eslint`
   - It will output a list of all errors and warnings to be corrected in the code, including the file and line in which the errors are found.
 
