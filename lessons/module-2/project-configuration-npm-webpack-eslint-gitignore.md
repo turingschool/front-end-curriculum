@@ -172,6 +172,8 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - eslint
 - Install the following dependencies:
   - webpack
+  - style-loader
+  - css-loader
 
 ---
 
