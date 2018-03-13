@@ -151,7 +151,7 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
 - Close and reopen the Terminal window
 - `nvm ls-remote`
 - Install the latest, **most-stable** version in the list.
-    - As of cohort 1801 the latest stable version was `9.4.0.` Run the command `nvm install 9.4.0` (or whatever version shows up as the latest version on that list at this time).
+    - As of cohort 1803 the latest stable version was `9.8.0.` Run the command `nvm install 9.4.0` (or whatever version shows up as the latest version on that list at this time).
 
 ## Additional Resources
 
