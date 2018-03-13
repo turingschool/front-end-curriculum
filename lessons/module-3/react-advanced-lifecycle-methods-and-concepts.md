@@ -11,15 +11,15 @@ Take 10 minutes to read up on your assigned life cycle method. Documentation can
 EVERYONE:  
 ### Phase 1: Mounting  
 1. constructor()
-2. componentWillMount()
+2. componentWillMount() - *will be deprecated with React 17*
 3. render()
 4. componentDidMount()
 
 SPLIT UP:  
 ### Phase 2: Updating  
-5. componentWillReceiveProps()
+5. componentWillReceiveProps() - *will be deprecated with React 17*
 6. shouldComponentUpdate()
-7. componentWillUpdate()
+7. componentWillUpdate() - *will be deprecated with React 17*
 8. render()
 9. componentDidUpdate()
 
@@ -44,7 +44,7 @@ Posted Comment: My reaction to this is that perhaps I wish there were documentat
 Dan's Answer: Just don't execute side effects in constructor. It's only for initializing state (and perhaps other variables). Don't make calls or change the state of your app from there.
 ```
 
-It seems as though there is a solid consensus about NOT making an initial API call in the `constructor()`, but there's still a pretty healthy debate about sticking it in `componentWillMount()` vs `componentDidMount()`.  
+It seems as though there is a solid consensus about NOT making an initial API call in the `constructor()`, and `componentWillMount()` will be deprecated with React 17... so, we are left with `componentDidMount()` as our best option. 
 
 **One Last Thing**  
 A final comment about `componentDidMount()`. From [this stack overflow post](http://stackoverflow.com/questions/36049493/when-exactly-is-componentdidmount-fired), there's another interesting note about our most popular lifecycle method.  
