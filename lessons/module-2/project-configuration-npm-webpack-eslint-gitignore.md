@@ -1,16 +1,26 @@
 ---
 title: Configuring Your Projects
-length: 60 minutes
-tags: javascript, webpack, eslint, npm, gitignore
+length: 90 minutes
+tags: javascript, webpack, eslint, npm, gitignore, config, configuration, configure
 ---
 
 # Configuring Your Projects
+
 Adding dependencies, bundling your JavaScript files with Webpack, adding style loaders writing npm scripts, linting your code, preventing files from being added to github ... This lesson will begin to draw back the veil on these mysteries!
+
+In this lesson, we will hand-roll the repo that we'll use for our Sorting Suite and Complete Me projects.
+
+## Pre-lesson Homework
+
+1. Create a directory named `TDD`
+2. Create a sub-directory called `lib`
+3. Create two files: `lib/index.js` and `README.md`
+4. Initialize git and push your project to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
 
 ---
 
-## NPM basics
-[Lesson slides with an exercise](https://docs.google.com/presentation/d/1DLcitTaOS0sOYrooIEa8iD92HWFU-EDHHwRbXCT15-w/edit?usp=sharing)
+## NPM
+[NPM basics: slides with an exercise](https://docs.google.com/presentation/d/1DLcitTaOS0sOYrooIEa8iD92HWFU-EDHHwRbXCT15-w/edit?usp=sharing)
 
 [NPM documentation](https://docs.npmjs.com/)
 
@@ -110,13 +120,17 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 
 #### Common NPM Commands
 
+#### - `npm init` and optionally `npm init --yes`
+
+ Initializes npm and creates the `package.json` file. If run without the `--yes` flag, it will run you through a dialogue designed to help customize the `package.json` file. The file can always be edited and updated at any point.
+
 #### - `npm install`
 
- Install package dependancies and devDependencies listed in package.json
+ Install package dependancies and devDependencies listed in `package.json`
 
 #### - `npm install [package-name]`
 
- Install package locally in folder location node_modules
+ Install package locally in folder location `node_modules`
 
 #### - `npm install -g [package-name]`
 
@@ -124,24 +138,41 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 
 #### - `npm install --save [package-name]`
 
- Install package locally in folder location node_modules and update package.json dependancies
+ Install package locally in folder location `node_modules` and update `package.json` dependancies
 
 #### - `npm install --save-dev [package-name]`
- 
- Install package locally in folder location node_modules and update package.json dependancies
- 
+
+ Install package locally in folder location `node_modules` and update `package.json` developer dependancies
+
 #### - `npm start`
 
- Run start script located in package.json 
- 
+ Run start script located in `package.json`
+
 #### - `npm test`
 
- Run test script located in package.json 
+ Run test script located in `package.json`
 
 #### - `npm run [custom script]`
 
- Run custom script located in package.json 
- 
+ Run custom script located in `package.json`
+
+
+### In your TDD repo:
+
+- Run `npm init --yes` to create the `package.json` file.
+- Edit the `scripts` portion of the `package.json` file:
+
+    ```
+    "test": "./node_modules/mocha/bin/mocha",
+    "start": "webpack"
+    ```
+- Install the following dev dependencies:
+  - mocha
+  - chai
+  - eslint
+- Install the following dependencies:
+  - webpack
+
 ---
 
 ## Webpack Basics
@@ -150,9 +181,12 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 [Webpack intro blog post](https://blog.envylabs.com/getting-started-with-webpack-2-ed2b86c68783)
 
 ### What is Webpack?
+
 Webpack is a build tool that takes multiple JavaScript modules and bundles them up into a single, unified file.
 
 ### Why Do We Like It?
+
+While webpack can be difficult to understand at first, it makes our lives much easier.
 
 - We can organize our code into separate files. This makes it easier to find specific pieces of code and improves maintainability.
     - Think about your GameTime project and how many different JS files you have - imagine writing all of your code in a single file!
@@ -171,6 +205,8 @@ Webpack is a build tool that takes multiple JavaScript modules and bundles them 
 
 [Core Webpack Concepts](https://webpack.js.org/concepts/)
 
+[Configuring Webpack](https://webpack.js.org/configuration/)
+
 Here is the `webpack.config.js` file from the [gametime](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) repo:
 
 ```
@@ -188,15 +224,15 @@ module.exports = {
   },
   module: {
     loaders: [
-      { 
-        test: /\.js$/, 
-        exclude: /node_modules/, 
-        loader: 'babel-loader' 
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader'
       },
-      { 
-        test: /\.css$/, 
-        exclude: /node_modules/, 
-        loader: "style-loader!css-loader" 
+      {
+        test: /\.css$/,
+        exclude: /node_modules/,
+        loader: "style-loader!css-loader"
       }
     ]
   },
@@ -216,26 +252,25 @@ This is where webpack will start bundling up our app. It should be the entry poi
 This defines where where webpack will create your bundled code and what it will name the file.
 
 #### loaders
-Let's focus on the `loaders` key-value pair inside the `module` object. 
+Let's focus on the `loaders` key-value pair inside the `module` object.
 
-Loaders transform different non-JS code into valid JS modules so they can be included when webpack bundles everything up into a single file for the browser. 
+Loaders transform different non-JS code into valid JS modules so they can be included when webpack bundles everything up into a single file for the browser.
 
 Loaders have two parts: an npm module, and a configuration object which is added to the `webpack.config.js` file.
 
 Let's walk through how the `css-loader` was added to the react starter kit repo.
 
-1. Install the loader
-`npm install css-loader --save-dev`
-    - It also probably required the `style-loader` package to be installed, too.
+1. Install the style and css loaders
+`npm install style-loader css-loader --save-dev`
 2. In the `webpack.config.js` file, we add our configuration object
 
 ```
-{ 
-  test: /\.css$/, 
-  exclude: /node_modules/, 
-  loader: 'style-loader!css-loader' 
+{
+  test: /\.css$/,
+  exclude: /node_modules/,
+  loader: 'style-loader!css-loader'
 }
-``` 
+```
 
 That's it! But what is that object doing?
 
@@ -248,6 +283,54 @@ You can read more about loaders [here](https://webpack.js.org/concepts/#loaders)
 #### Using Our Bundled File
 
 In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it references the all-neatly-bundled-up JS file that webpack made for us!
+
+### In your TDD repo:
+
+1. Create a new file: `webpack.config.js`
+2. Create a new directory: `test`
+3. Create a new file: `test/index-test.js`
+4. Paste the following code to the webpack.config.js file:
+  ```
+  const path = require('path');
+
+  module.exports = {
+    devtool: 'inline-source-map',
+    entry: {
+      main: "./lib/index.js",
+      test: "mocha!./test/index.js"
+    },
+    output: {
+      path: __dirname,
+      filename: "[name].bundle.js"
+    },
+    module: {
+      loaders: [
+        {
+          test: /\.css$/,
+          exclude: /node_modules/,
+          loader: "style-loader!css-loader"
+        }
+      ]
+    },
+    resolve: {
+      extensions: ['', '.js', '.json', '.css']
+    }
+  };
+  ```
+5. In the index-test.js file, let's require chai:
+  ```
+  const chai = require('chai');
+  const assert = chai.assert;
+  ```
+6. In the index-test.js file, let's write one test to see that mocha and chai are properly hooked up:
+  ```
+  describe('test', function() {
+    it('should return true', function() {
+      assert.equal(true, true);
+    });
+  });
+  ```
+7. In your terminal, run `npm test`
 
 ---
 
@@ -262,22 +345,13 @@ What are the benefits of consistent code?
 - It reduces the chances of syntax errors
 - A consistent style makes it easier to begin understanding and writing code in an unfamiliar project
 
-### Setting up a new project with ESLint
+### In your TDD repo:
 
-*Note: The boilerplates we set you up with already have eslint setup so you don't need to follow these steps*
+1. Create a new file in your repo: `.eslintrc`
+2. In that file, add this code:
 
-To set up eslint, follow these steps:
-
-1. Install eslint:
-    - Globally on your machine: `npm install -g eslint`
-    - Locally in your repo: `npm install --save-dev eslint`
-    - Locally in your repo with babel: `npm install --save-dev babel-eslint`
-2. Create an eslint file in your repo: `touch .eslintrc`
-3. In that file, add this code:
-
-    ```js
+    ```
     {
-      "parser": "babel-eslint",
       "extends": "eslint:recommended",
       "env": {
         "browser": true,
@@ -300,7 +374,7 @@ To set up eslint, follow these steps:
         "curly": "error",
         "eqeqeq": ["error", "always"],
         "getter-return": ["error", { "allowImplicit": true }],
-        
+
         "indent": ["warn", 2],
         "key-spacing": [
           "error", {
@@ -361,18 +435,12 @@ To set up eslint, follow these steps:
       }
     }
     ```
-4. In the `scripts` object of the `package.json` file in your repo, add this key-value pair:
+3. In the `scripts` object of the `package.json` file in your repo, add this key-value pair:
     ```
     "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
     ```
-    
-### Running ESLint
-
-In the terminal, run `npm run eslint`.
-
-It will output a list of all errors and warnings to be corrected in the code, including the file and line in which the errors are found.
-
-In your terminal, navigate to your gametime directory and enter `npm run eslint`.
+4. In the terminal, run `npm run eslint`
+  - It will output a list of all errors and warnings to be corrected in the code, including the file and line in which the errors are found.
 
 ### Learn More
 [Linting Rules](https://eslint.org/docs/rules/)
@@ -395,8 +463,9 @@ Common things to add to your `.gitignore` file are:
 - API keys, other sensitive data
     (note: there are better ways to obscure and protect data that will be covered in Mod 4)
 
-### Adding .gitignore to a git repo
-1. In your repo, add a `.gitignore` file: `touch .gitignore`
+### In your TDD repo:
+
+1. Create a new file: `.gitignore`
 2. In that file, add the filepaths of the directories or files we don't want added to github.
 
 That's it!
@@ -407,15 +476,13 @@ An example `.gitignore` file might look like:
 # dependencies
 /node_modules
 
-# testing
-/coverage
-
 # production
 /build
 
 # misc
 .DS_Store
 .env
+APIkey.js
 
 # logs
 *.log
