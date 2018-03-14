@@ -213,7 +213,7 @@ Instead we'll focus on two elements:
 
 ### 1. Create this table
 You can use codepen or create your own html file.
-** Hint: Research the `table` element in HTML
+** Hint: Research the [table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) in HTML
 
 # ![Flags Table](/assets/images/flags-table.jpg)
 
