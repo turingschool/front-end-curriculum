@@ -126,7 +126,8 @@ Let's take a moment to digress and discuss important things. Like "For Placement
 
 * [Meet the Ipsums](http://meettheipsums.com/)
 * [FPOImg](http://fpoimg.com/)
-* [PlaceKitten](http://placekitten.com/)
+<!--* [PlaceKitten](http://placekitten.com/) no longer works :( -->
+* [FillMurray](http://www.fillmurray.com/)
 * [Lorem Pixel](http://lorempixel.com/)
 * [Unsplash](https://unsplash.com/)
 * [SampleVideos](http://www.sample-videos.com/)
