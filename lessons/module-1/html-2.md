@@ -347,6 +347,6 @@ Helping one group of people is a good place to start. There's a temptation with 
 ## Additional Resources
 
 * [Web Accessibility in Mind](https://webaim.org/articles/userperspective/)
-* [W3C Marup validation](https://validator.w3.org/#validate_by_uri)
+* [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
 * [9 Tools for Website Accessibility
   Testing](https://www.shopify.com/partners/blog/website-accessibility-testing)
