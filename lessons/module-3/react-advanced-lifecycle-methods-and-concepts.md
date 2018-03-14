@@ -126,5 +126,5 @@ class MyComponent extends Component {
 Notice that in state based components props are available anywhere using `this.props`.  
 
 ## Resources  
-- [How and Where to Make AJAX Calls In React](https://daveceddia.com/ajax-requests-in-react/)
+- [How to Fetch Data in React](https://www.robinwieruch.de/react-fetching-data/)
 - [On Ajax Library Comparisons](http://andrewhfarmer.com/ajax-libraries/)  
