@@ -41,7 +41,9 @@ We use `<p>` to signal to the browser that everything that's about to follow is 
 
 Here is an example of a slightly more robust document:
 
-<p data-height="300" data-theme-id="26495" data-slug-hash="VjvOyd" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Very Basic HTML Page" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/VjvOyd/">Very Basic HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="26495" data-slug-hash="VjvOyd" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Very Basic HTML Page" data-editable="true" class="codepen">
+  See the Pen <a href="http://codepen.io/team/turing/pen/VjvOyd/">Very Basic HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.
+</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Anatomy of a Tag
@@ -104,6 +106,8 @@ Let's experiment with the following tags in codepen:
 
 We use HTML tags to mark up text to show its semantic meaning. The browser uses these tags to structure the document. _Most_ tags have an opening and closing tag, but a few do not. Images—defined using the `<img>` tag do not have a closing tag for instance.
 
+_Note: Elements which do not have closing tags and cannot have content are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)_.
+
 Consider the following:
 
 ```html
@@ -121,8 +125,8 @@ Let's update our page from earlier with the image above.
 <p data-height="471" data-theme-id="26495" data-slug-hash="XKmwqR" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with an Image" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/XKmwqR/">A Page with an Image</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### FPO
-Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have the requisite content. In such cases, you must avail yourself of FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
+### For Placement Only (FPO)
+Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
 
 * [Meet the Ipsums](http://meettheipsums.com/)
 * [FPOImg](http://fpoimg.com/)
@@ -130,7 +134,7 @@ Let's take a moment to digress and discuss important things. Like "For Placement
 * [Lorem Pixel](http://lorempixel.com/)
 * [Unsplash](https://unsplash.com/)
 * [SampleVideos](http://www.sample-videos.com/)
-* [Article](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online) with useful sites for free icons, image assets, etc.
+* [Article with useful sites for free icons, image assets, etc.](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online)
 
 ### Hyperlinks
 
