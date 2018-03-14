@@ -28,13 +28,13 @@ The front-end of the web is based on three major technologies:
 Let's say that we had some text and we wanted to denote that this text was a paragraph.
 
 ```
-This text is a paragraph.
+This is an example paragraph. We should probably place this inside of a tag. If we place it in a tag it will be easier to access and style.
 ```
 
 We'd wrap the text in paragraph tags.
 
 ```html
-<p>This text is a paragraph.</p>
+<p>This is an example paragraph. We should probably place this inside of a tag. If we place it in a tag it will be easier to access and style.</p>
 ```
 
 We use `<p>` to signal to the browser that everything that's about to follow is part of a paragraph and `</p>` to let the browser know that this paragraph is done. When a user visits our application, the browser loads up the HTML and parses it into the elements that will eventually make up our user interface.
@@ -97,6 +97,8 @@ Let's experiment with the following tags in codepen:
 * `ul` and `ol`
 * `div`
 
+Use these tags to recreate the following design. Only use HTML for this exercise.
+
 ![Alien Paper](/assets/images/alien-paper.png)
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -106,7 +108,7 @@ Let's experiment with the following tags in codepen:
 
 We use HTML tags to mark up text to show its semantic meaning. The browser uses these tags to structure the document. _Most_ tags have an opening and closing tag, but a few do not. Images—defined using the `<img>` tag do not have a closing tag for instance.
 
-_Note: Elements which do not have closing tags and cannot have content are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)_.
+_Note: Elements which do not have closing tags and cannot have child elements are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)_.
 
 Consider the following:
 
