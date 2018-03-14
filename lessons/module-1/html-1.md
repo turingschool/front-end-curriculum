@@ -75,12 +75,6 @@ Here is an example of a slightly more robust document:
 ### Code Pen
 Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account setup.
 
-### Dog Party
-
-* Create a directory called  `dog-party`
-* Create a sub-directory called `images`
-* Create a file called `index.html`
-
 ***
 
 # Practice
@@ -97,7 +91,7 @@ Let's experiment with the following tags in codepen:
 * `ul` and `ol`
 * `div`
 
-Use these tags to recreate the following design. Only use HTML for this exercise.
+Use these tags to recreate the following design on codepen. Only use HTML for this exercise.
 
 ![Alien Paper](/assets/images/alien-paper.png)
 
@@ -220,6 +214,10 @@ You can use codepen or create your own html file.
 ***
 
 ### 2. Create this Dog Party
+
+* Create a directory called  `dog-party`
+* Create a sub-directory called `images`
+* Create a file called `index.html`
 
 First thing's first, you'll need to [download the assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing).
 
