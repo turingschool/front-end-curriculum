@@ -9,7 +9,7 @@ tags: javascript, introduction, foundation, variables
 
 Before we get started with new material, let's go over over what we've learned so far.  
 
-- The three basic data types
+- The primitive data types
 - Variables
 - Conditionals
 - Functions
