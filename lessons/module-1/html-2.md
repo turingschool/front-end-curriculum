@@ -53,7 +53,6 @@ Partner up and answer the following questions:
 Copy the form code below into your own Pen, and then refactor as follows:
 
 * Validate for email type
-* Replace all `div` elements with correct semantic elements
 * Add a set of radio buttons with at least three options - only allowing one to be selected at a time
 * Include placeholders for name, email, and message
 * Add a drop down for favorite color with at least three options
@@ -278,27 +277,27 @@ Important to remember:
 <form role="form" aria-labelledby="formLabel">
 
   <label for="name">Name</label>
-  <input id="name" type="text" placeholder="John Doe" value="" />
+  <input id="name" type="text" placeholder="John Doe" value="">
 
   <label for="email">Email*</label>
-  <input id="email" type="email" placeholder="foo@bar.com" value="" aria-required="true" />
+  <input id="email" type="email" placeholder="foo@bar.com" value="" aria-required="true">
 
   <span id="genderLabel">Gender</span>
   <div role="radiogroup" aria-labelledby="genderLabel">
-    <input type="radio" role="radio" name="gender" id="male" value="Male" />
+    <input type="radio" role="radio" name="gender" id="male" value="Male">
     <label for='male'>Male</label>
     <br>
-    <input type="radio" role="radio" name="gender" id="female" value="Female" />
+    <input type="radio" role="radio" name="gender" id="female" value="Female">
     <label for='female'>Female</label>
     <br>
-    <input type="radio" role="radio" name="gender" id="other" value="Other" />
+    <input type="radio" role="radio" name="gender" id="other" value="Other">
     <label for='other'>Other</label>
   </div>
 
   <label for="comment">Comment*</label>
   <textarea id="comment" aria-multiline="true" aria-required="true"></textarea>
 
-  <input type="submit" value="Submit" />
+  <input type="submit" value="Submit">
 </form>
 ```
 
@@ -328,7 +327,7 @@ Take the following HTML snippet and make it accessible using explicit semantic H
     <p>This is the content of the section important section</p>
   </div>
   <div>
-    <img src="mountain.jpg" />
+    <img src="mountain.jpg">
   </div>
 </div>
 <div>
@@ -348,6 +347,6 @@ Helping one group of people is a good place to start. There's a temptation with 
 ## Additional Resources
 
 * [Web Accessibility in Mind](https://webaim.org/articles/userperspective/)
-* [HTML Nu Validator](https://validator.w3.org/nu)
+* [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
 * [9 Tools for Website Accessibility
   Testing](https://www.shopify.com/partners/blog/website-accessibility-testing)

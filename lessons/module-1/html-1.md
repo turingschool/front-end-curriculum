@@ -28,20 +28,22 @@ The front-end of the web is based on three major technologies:
 Let's say that we had some text and we wanted to denote that this text was a paragraph.
 
 ```
-This text is a paragraph.
+This is an example paragraph. We should probably place this inside of a tag. If we place it in a tag it will be easier to access and style.
 ```
 
 We'd wrap the text in paragraph tags.
 
 ```html
-<p>This text is a paragraph.</p>
+<p>This is an example paragraph. We should probably place this inside of a tag. If we place it in a tag it will be easier to access and style.</p>
 ```
 
 We use `<p>` to signal to the browser that everything that's about to follow is part of a paragraph and `</p>` to let the browser know that this paragraph is done. When a user visits our application, the browser loads up the HTML and parses it into the elements that will eventually make up our user interface.
 
 Here is an example of a slightly more robust document:
 
-<p data-height="300" data-theme-id="26495" data-slug-hash="VjvOyd" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Very Basic HTML Page" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/VjvOyd/">Very Basic HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="26495" data-slug-hash="VjvOyd" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Very Basic HTML Page" data-editable="true" class="codepen">
+  See the Pen <a href="http://codepen.io/team/turing/pen/VjvOyd/">Very Basic HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.
+</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 ## Anatomy of a Tag
@@ -73,12 +75,6 @@ Here is an example of a slightly more robust document:
 ### Code Pen
 Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account setup.
 
-### Dog Party
-
-* Create a directory called  `dog-party`
-* Create a sub-directory called `images`
-* Create a file called `index.html`
-
 ***
 
 # Practice
@@ -95,6 +91,8 @@ Let's experiment with the following tags in codepen:
 * `ul` and `ol`
 * `div`
 
+Use these tags to recreate the following design on codepen. Only use HTML for this exercise.
+
 ![Alien Paper](/assets/images/alien-paper.png)
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -103,6 +101,8 @@ Let's experiment with the following tags in codepen:
 ### Images and Attributes
 
 We use HTML tags to mark up text to show its semantic meaning. The browser uses these tags to structure the document. _Most_ tags have an opening and closing tag, but a few do not. Images—defined using the `<img>` tag do not have a closing tag for instance.
+
+_Note: Elements which do not have closing tags and cannot have child elements are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element)_.
 
 Consider the following:
 
@@ -121,16 +121,17 @@ Let's update our page from earlier with the image above.
 <p data-height="471" data-theme-id="26495" data-slug-hash="XKmwqR" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with an Image" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/XKmwqR/">A Page with an Image</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-### FPO
-Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have the requisite content. In such cases, you must avail yourself of FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
+### For Placement Only (FPO)
+Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
 
 * [Meet the Ipsums](http://meettheipsums.com/)
 * [FPOImg](http://fpoimg.com/)
-* [PlaceKitten](http://placekitten.com/)
+<!--* [PlaceKitten](http://placekitten.com/) no longer works :( -->
+* [FillMurray](http://www.fillmurray.com/)
 * [Lorem Pixel](http://lorempixel.com/)
 * [Unsplash](https://unsplash.com/)
 * [SampleVideos](http://www.sample-videos.com/)
-* [Article](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online) with useful sites for free icons, image assets, etc.
+* [Article with useful sites for free icons, image assets, etc.](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online)
 
 ### Hyperlinks
 
@@ -207,13 +208,17 @@ Instead we'll focus on two elements:
 
 ### 1. Create this table
 You can use codepen or create your own html file.
-** Hint: Research the `table` element in HTML
+** Hint: Research the [table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) in HTML
 
 # ![Flags Table](/assets/images/flags-table.jpg)
 
 ***
 
 ### 2. Create this Dog Party
+
+* Create a directory called  `dog-party`
+* Create a sub-directory called `images`
+* Create a file called `index.html`
 
 First thing's first, you'll need to [download the assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing).
 

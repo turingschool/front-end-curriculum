@@ -26,25 +26,24 @@ SPLIT UP:
 ### Phase 3: Removing  
 10. componentWillUnmount()
 
-### Components and API Calls
+### Error Handling
+11. componentDidCatch() - *just know this exists*
+
+## Here are some great life-cycle resources for you to check out and reference
+
+- [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
+- [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
+- [React Lifecycle Docs](https://reactjs.org/docs/react-component.html)
+
+## Components and API Calls
 
 A common question as we get into heavier React app is "Where exactly do I make my API calls?". React is great in that it's really flexible and technically "lets" you fire off a request in various places in your app. Let's talk about best practices.
 
-First of all let's revisit a crucial concept of React: "Events Up, Data Down". In React you should build out your components with the intention of having "one source of truth". Meaning there is one place in your state where data lives and is updated.
+First of all let's revisit a crucial concept of React: "Data Down, Actions/Events Up". In React you should build out your components with the intention of having "one source of truth". Meaning there is one place in your state where data lives and is updated.
 
 This means that, in general, the most parenty-parent component should be in charge of fetching the data and keeping it updated to hand off to child components as needed.  
 
-With that in mind, what's the difference between sticking your initial `fetch()` request in the `constructor()` vs in `componentDidMount()` vs `componentWillMount()`? Shockingly, this is a common conversation in the React realm.
-
-In [this react conversation](https://github.com/reactjs/react-redux/issues/129#issuecomment-148420509) our buddy Mr. Abramov makes an interesting comment about the issue. More specifically, he says:
-
-```
-Posted Comment: My reaction to this is that perhaps I wish there were documentation somewhere about when constructor() and componentWillMount() should be used in React.
-
-Dan's Answer: Just don't execute side effects in constructor. It's only for initializing state (and perhaps other variables). Don't make calls or change the state of your app from there.
-```
-
-It seems as though there is a solid consensus about NOT making an initial API call in the `constructor()`, and `componentWillMount()` will be deprecated with React 17... so, we are left with `componentDidMount()` as our best option. 
+There is a solid consensus about NOT making an initial API call in the `constructor()`, and `componentWillMount()` will be deprecated with React 17... so, we are left with `componentDidMount()` as our best option. 
 
 **One Last Thing**  
 A final comment about `componentDidMount()`. From [this stack overflow post](http://stackoverflow.com/questions/36049493/when-exactly-is-componentdidmount-fired), there's another interesting note about our most popular lifecycle method.  
@@ -126,5 +125,5 @@ class MyComponent extends Component {
 Notice that in state based components props are available anywhere using `this.props`.  
 
 ## Resources  
-- [How and Where to Make AJAX Calls In React](https://daveceddia.com/ajax-requests-in-react/)
+- [How to Fetch Data in React](https://www.robinwieruch.de/react-fetching-data/)
 - [On Ajax Library Comparisons](http://andrewhfarmer.com/ajax-libraries/)  
