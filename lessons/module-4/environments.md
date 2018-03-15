@@ -86,7 +86,7 @@ Environments can differ from each other in many ways. For example:
 
 To handle these differences, we use environment configurations and variables. Environment variables represent values that differ between environments. They’re used across languages and platforms to set configuration options. They allow the same logic and code to interact with different sources. They are most often found in configuration files for server-side logic or build tools, and sometimes contain sensitive or private data such as API keys and database connections.
 
-We might already familiar with several environment variables from our past projects:
+We might already be familiar with several environment variables from our projects:
 
 ```js
 // the port our node/express server runs on
@@ -139,7 +139,7 @@ Or directly in your codebase:
 process.env.FOO = 'bar';
 ```
 
-Now anywhere in my application that node handles, I can access `process.env.FOO` and should receive `bar` as its value.
+Now anywhere in our Node application, I can access `process.env.FOO` and should receive `bar` as its value.
 
 
 ### Storing Sensitive Data in .env Files
