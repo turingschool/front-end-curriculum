@@ -276,11 +276,11 @@ Functions are a way to group statements together to perform a specific task. Fun
 
 ## Anatomy of a Function:
 ```javascript
-function myRadFunction() {
+function makeStatement() {
   var myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
   alert('This is my second statement!');
   console.log(myFirstStatement);
-}
+}]
 ```
 
 - You declare a function using the keyword `function`.
@@ -291,16 +291,16 @@ function myRadFunction() {
 ## Call a Function:
 ```javascript
 // Calling a function w/out arguments
-myRadFunction();
+makeStatement();
 
 // Calling a function with arguments
-myRadFunction(arg1, arg2);
+makeStatement(arg1, arg2);
 ```
 
-When this code is read, `myRadFunction()` is "called", all three statements within the function's body (those curly braces) get run.
+When this code is read, `makeStatement()` is "called", all three statements within the function's body (those curly braces) get run.
 
 ### Your Turn
-Let's go ahead and declare myRadFunction in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
+Let's go ahead and declare makeStatement in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
 Create your own functions in the console:
 
@@ -318,12 +318,12 @@ Its a subtle difference. Basically, when you declare a function, and you stipula
 
 ```javascript
 // parameters named on declaration of function
-function myDreamCar(make, model) {
-  return "Buy me " + make + " " + model;
+function createDreamCar(make, model) {
+  return "My dream car is a " + make + " " + model;
 }
 
 // arguments "Audi" and "R8" passed into a called function
-myDreamCar("Audi", "R8");
+createDreamCar("Audi", "R8");
 ```
 
 ## Getting A Value from Functions:
