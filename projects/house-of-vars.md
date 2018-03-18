@@ -81,33 +81,45 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [Marked as good for beginners](https://github.com/openfoodfoundation/openfoodnetwork/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 * [#1806](https://github.com/openfoodfoundation/openfoodnetwork/issues/1806)
 * [#1938](https://github.com/openfoodfoundation/openfoodnetwork/issues/1938)
-* [#1926](https://github.com/openfoodfoundation/openfoodnetwork/issues/1926) (may need to check if prior person actually submitted a pull request. If so, make a comment to close the issue if it's been resolved)
 * [#1913](https://github.com/openfoodfoundation/openfoodnetwork/issues/1913)
-* [#1912](https://github.com/openfoodfoundation/openfoodnetwork/issues/1912)
 
 
 ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
 
 **Potential Issues:**
-
+* [Marked as newcomer friendly](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues?q=is%3Aissue+is%3Aopen+label%3A%22newcomer+friendly%22)
 * [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
 * [#1510](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1510)
 * [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459)
 
 
-### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
+<!-- ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
 
 **Potential Issues:**
-
 * [#1733](https://github.com/Code4SocialGood/c4sg-web/issues/1733)
 * [#1727](https://github.com/Code4SocialGood/c4sg-web/issues/1727)
-
+ -->
 
 ### [Git Point](https://github.com/gitpoint/git-point)
 
 **Potential Issues:**
-
 * [Marked as good for beginners](https://github.com/gitpoint/git-point/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+for+beginners%22)
 
 
-If, as a group, you are all struggling to make progress towards a contribution, you are free to choose another open-source codebase to work with. You all must agree on another codebase as we only want a single presentation per group. A good way to search for additional repos is to search GitHub for open issues with labels like "HTML", "CSS", "UI", "UX", "design", "docs", "enhancement". An example search query can be found [here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Acss).
+### [Iodide](https://github.com/iodide-project/iodide)
+
+**Potential Issues:**
+* [Marked as Good First Issue](https://github.com/iodide-project/iodide/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+
+### [Refined GitHub](https://github.com/sindresorhus/refined-github)
+
+**Potential Issues:**
+* [Marked as Good First Issue](https://github.com/sindresorhus/refined-github/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+<!-- ### Other Potential Repos -->
+<!-- https://github.com/vuetifyjs/vuetify -->
+<!-- https://github.com/wekan/wekan -->
+<!-- https://github.com/alphagov/accessible-autocomplete -->
+
+If, as a group, you are all struggling to make progress toward a contribution, you are free to choose another open-source codebase to work with. You all must agree on another codebase as we only want a single presentation per group. A good way to search for additional repos is to search GitHub for open issues with labels like "HTML", "CSS", "UI", "UX", "design", "docs", "enhancement". An example search query can be found [here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Acss).
