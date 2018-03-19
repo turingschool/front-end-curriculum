@@ -218,7 +218,7 @@ let pets = [
   { name: 'mishu', age: 15 },
 ];
 
-let adultPets = pets.find( (pet) => {
+let adultPets = pets.filter( (pet) => {
   return pet.age > 3;
 } )
 
