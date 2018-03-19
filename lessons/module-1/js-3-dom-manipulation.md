@@ -12,7 +12,7 @@ tags: javascript, dom, browser
 * Continue to develop a basic understanding for JavaScript syntax
 * Understand how to query and update a page after its been loaded
 
-## The Document Object Model (DOM)
+## [The Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 The browser gives us some useful global objects for free. The `window` object is the global object and it holds a lot of information about the browser window including it's current location (URL), size, etc. `document` contains a representation of the current web page.
 
@@ -23,7 +23,7 @@ document.querySelector();
 document.querySelectorAll();
 ```
 
-Both methods take a query selector—like you would use in CSS. `document.querySelector()` returns the first element that matches the query. `document.querySelectorAll()` returns a collection all of the elements that match the query.
+Both methods take a query selector—like you would use in CSS. `document.querySelector()` returns the first element that matches the query. `document.querySelectorAll()` returns a collection of all the elements that match the query.
 
 Let's say we have a page with the following markup:
 
@@ -36,6 +36,8 @@ Let's try out some queries:
 * `document.querySelector('p')` will return just the first paragraph.
 * `document.querySelector('#third')` will return the paragraph with the id `third`.
 * `document.querySelectorAll('.awesome')` will return a collection containing the two paragraphs with the class `awesome`.
+
+[Elements](https://developer.mozilla.org/en-US/docs/Web/API/Element) have a number of useful properties and methods.
 
 Let's say we wanted to change the contents of our `<h1>` element. We could modify it's contents with the following JavaScript.
 
@@ -70,6 +72,8 @@ console.log(para.innerText);
 console.log(para.innerHTML);
 console.log(para.textContent);
 ```
+
+MDN has a great [description](https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent) of the differences between `innerHTML`, `innerText`, and `textContent`
 
 To sum up:   
 - `innerText` will collapse all of the extra spaces and give you back JUST THE TEXT.
