@@ -84,14 +84,16 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1913](https://github.com/openfoodfoundation/openfoodnetwork/issues/1913)
 
 
-### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
+<!-- ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
 
 **Potential Issues:**
 * [Marked as newcomer friendly](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues?q=is%3Aissue+is%3Aopen+label%3A%22newcomer+friendly%22)
 * [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
 * [#1510](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1510)
-* [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459)
+* [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459) -->
 
+### [Denver Satartup Week](https://github.com/denverstartupweek/dsw-site)
+* [Issues](https://github.com/denverstartupweek/dsw-site/issues)
 
 <!-- ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
 
