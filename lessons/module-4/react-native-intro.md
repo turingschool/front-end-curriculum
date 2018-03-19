@@ -60,7 +60,7 @@ $ xcrun simctl list devices
 
 ### Additional Android setup
 
-If you're interested in emulating your application on an Android device, then [follow these instructions to get setup on a free Android emulator](http://facebook.github.io/react-native/releases/0.23/docs/android-setup.html#content)
+If you're interested in emulating your application on an Android device, then [follow these instructions to get setup on a free Android emulator](https://developers.facebook.com/docs/react-native/configure-android-current)
 
 ### First Time Around the Block
 
@@ -196,19 +196,12 @@ const styles = StyleSheet.create({
 {% endraw %}
 ```
 
-As we mentioned before, CSS animations are different in React Native - we'll use the `react-native-animatable` package to help with animations. In your terminal, run:
-
-```bash
-npm install react-native-animatable --save
-```
-
 Now for the DinoScroll component. We will import ScrollView, which allows a user to scroll on a mobile device kinda like overflow: scroll:
 
 ```js
 {% raw %}
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, Animated } from 'react-native';
-import * as Animatable from 'react-native-animatable';
 
 export class DinoScroll extends Component {
   state = {count: 0}
