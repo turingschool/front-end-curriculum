@@ -12,7 +12,8 @@ tags: javascript, dom, browser
 * Continue to develop a basic understanding for JavaScript syntax
 * Understand how to query and update a page after its been loaded
 
-## [The Document Object Model (DOM)](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
+## The Document Object Model (DOM)
+[DOM Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 The browser gives us some useful global objects for free. The `window` object is the global object and it holds a lot of information about the browser window including it's current location (URL), size, etc. `document` contains a representation of the current web page.
 
@@ -42,7 +43,9 @@ Let's try out some queries:
 Let's say we wanted to change the contents of our `<h1>` element. We could modify it's contents with the following JavaScript.
 
 ```js
-document.querySelector('h1').innerText = 'JavaScript is amazing!';
+var h1Element = document.querySelector('h1');
+
+h1Element.innerText = 'JavaScript is amazing!';
 ```
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="kXwjbv" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/kXwjbv/">Simple HTML Page (Now with JavaScript!)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
