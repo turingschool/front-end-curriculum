@@ -92,7 +92,7 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1510](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1510)
 * [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459) -->
 
-### [Denver Satartup Week](https://github.com/denverstartupweek/dsw-site)
+### [Denver Startup Week](https://github.com/denverstartupweek/dsw-site)
 * [Issues](https://github.com/denverstartupweek/dsw-site/issues)
 
 <!-- ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
