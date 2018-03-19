@@ -114,7 +114,7 @@ Changing stuff on the page with JavaScript is all well and good, but if you migh
 
 The real power of using JavaScript to change pages emerges when we start listening for user events.
 
-This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what he or she sees.
+This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what they see.
 
 Let's take a look at the syntax and then we'll talk about what's happening.
 
