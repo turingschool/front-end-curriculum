@@ -77,7 +77,7 @@ Additionally, if we use `ls -la` to look in the directory, we can see a `.git` h
 1. Working Area
   * Where **untracked files** live
 2. Staging Area
-  * What files are going to be a part of the next commit
+  * Where files that are going to be a part of the next commit live
 3. The Repository
   * The files git knows about!
   * Contains all of your commits
@@ -200,7 +200,7 @@ Ideally, we want to keep the master branch "clean" of bugs. So if we want to wri
 
 When you branch off of the master branch, that new branch can serve as a `sandbox` for development where you can make changes or experiment with a `research spike` without affecting the master branch.
 
-[More info on branching.](https://www.atlassian.com/git/tutorials/using-branches/git-branch)
+[More info on branching.](https://www.atlassian.com/git/tutorials/using-branches)
 
 The general workflow is:
 
@@ -244,7 +244,7 @@ Let's checkout the new branch using the command `git checkout add-body-content`.
   master
 ```
 
-Pro Tip: We can use the command `git checkout -b [branch name]` to both create and change to the `branch name` specified.
+**Pro Tip:** We can use the command `git checkout -b [branch name]` to both create and change to the `branch name` specified.
 
 #### Make changes on the new branch
 
@@ -252,7 +252,7 @@ Now that we've checked out the new feature branch, we can start making changes o
 
 To add the CSS file, `touch styles.css`. In the CSS file, add a simple rule:
 
-```CSS
+```css
 body {
   background-color: lightgray;
 }
