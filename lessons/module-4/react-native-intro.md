@@ -60,7 +60,7 @@ $ xcrun simctl list devices
 
 ### Additional Android setup
 
-If you're interested in emulating your application on an Android device, then [follow these instructions to get setup on a free Android emulator](https://developers.facebook.com/docs/react-native/configure-android-current)
+If you're interested in emulating your application on an Android device, then [follow these instructions to get setup on a free Android emulator](https://facebook.github.io/react-native/docs/getting-started.html#java-development-kit)
 
 ### First Time Around the Block
 
@@ -87,7 +87,7 @@ One major change between normal React and React Native is that instead of using 
 <View /> = <div>
 <Text /> = <p><h1><h2><h3><h4><h5><h6>
 <TextInput /> = <input type="text">
-<TouchableHighlight /> = <button>
+<Button /> = <button>
 <ListView /> = <table>
 <Image /> = <img>
 ```
@@ -150,14 +150,14 @@ First, create a directory called `app` in the root of your project. Then in your
 ```js
 {% raw %}
 import React, { Component } from 'react';
-import { StyleSheet, Dimensions, Platform, Text, View, Switch, Navigator } from 'react-native';
+import { StyleSheet, Text, View, Switch } from 'react-native';
 import { DinoScroll } from './app/DinoScroll';
 
 export default class App extends Component {
 
-  state = {
-    horizontalIsOn: false,
-  };
+  constructor() {
+    this.state = {horizontalIsOn: false}
+  }
 
   render() {
     return (
@@ -174,24 +174,23 @@ export default class App extends Component {
   }
 }
 
-let { height, width } = Dimensions.get(`window`);
 const styles = StyleSheet.create({
     container: {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
       top: 50,
-      borderWidth: 25,
+      borderWidth: 25
     },
     header: {
       fontSize: 24,
       fontWeight: '900',
       textAlign: 'center',
-      marginBottom: 25,
+      marginBottom: 25
     },
     dinoList: {
-      padding: 10,
-    },
+      padding: 10
+    }
 });
 {% endraw %}
 ```
@@ -201,21 +200,11 @@ Now for the DinoScroll component. We will import ScrollView, which allows a user
 ```js
 {% raw %}
 import React, { Component } from 'react';
-import { StyleSheet, Text, View, Image, ScrollView, Animated } from 'react-native';
+import { StyleSheet, Image, ScrollView } from 'react-native';
 
 export class DinoScroll extends Component {
-  state = {count: 0}
-
-  componentDidMount() {
-    setInterval(() => {
-      this.setState({count: this.state.count + 1})
-    }, 1000)
-  }
-
   render() {
-    const {count} = this.state
     const {horizontal} = this.props
-    this.anim = this.anim || new Animated.Value(0);
     return (
       <ScrollView
         horizontal={horizontal} >
@@ -234,7 +223,7 @@ const styles = StyleSheet.create({
     height: 220,
     width: 250,
     shadowColor: '#000',
-    shadowRadius: 5,
+    shadowRadius: 5
   }
 });
 {% endraw %}
@@ -305,19 +294,12 @@ It takes a while to get used to writing inline styles and CSS as a JavaScript ob
 
 There are ways to abstract out styles and create separate JS files where you export styles. This is handy when you need different styles based on the platform. [Read this article from WillowTree to get an idea of how to do that](http://willowtreeapps.com/blog/react-native-tips-and-tricks-styling-in-js/).
 
-One final note on styling. If you want to get the unitless height and width of the device, you can:
-
-```js
-// Make sure to import Dimensions from react-native
-let { height, width } = Dimensions.get(`window`);
-```
 
 ### Let's Talk Abstracting Away the Platform
 
 You can write most of your code platform-agnostic but then use the `ios` or `android` extensions on certain files to deal only with platform specific differences.
 
 The duality of mobile development is annoying. Thankfully, we can abstract away the constant battle of `index.android.js` vs. `index.ios.js`. Let's do that in our app by creating an `App.js` component that is consumed by both files.
-
 
 
 
