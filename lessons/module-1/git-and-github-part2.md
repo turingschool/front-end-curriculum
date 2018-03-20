@@ -57,6 +57,8 @@ So all together, enter the command `git remote add origin git@github.com:robbiej
 
 The local and remote repositories are now linked!
 
+![Git Areas](/assets/images/lessons/git/github-diagrams.002.jpeg)
+
 ### Push up initial files (`git push`)
 Finally, we need to push up our initial code from our local repository (aka your computer), to the remote repository (aka GitHub.com).  
 
@@ -123,7 +125,7 @@ So in our case, we want to push the code from our master branch to the remote re
 
 Now if we look at the GitHub repository, we see our new code, and updated commit messages!
 
-### Checkout a feature branch (`git branch`, `git checkout`)
+### Checkout to a feature branch (`git checkout -b`)
 
 Let's keep it going and use our preferred feature branch workflow. Let's create and checkout to a feature branch using `git checkout -b add-heading-styles`.
 
@@ -245,6 +247,8 @@ To summarize the example above, a typical workflow for a new project with Git an
 
 ## Cloning 
 
+# ![Git Clone Diagram](/assets/images/lessons/git/github-diagrams.003.jpeg)
+
 In order to move a remote repository to your local machine (a process known as cloning), you can use the `git clone [remote url]` command. GitHub makes this easy for us by providing a big green button that says 'Clone or Download' on all repository pages. 
 
 Let's clone the repo you just created in a new directory. Go to a new directory on your local machine that does not contain the `github-intro` directory. Go to the `github-intro` repository page on GitHub. Click on the 'Clone or Download' button, and copy the expanded url to your clipboard.
@@ -252,6 +256,8 @@ Let's clone the repo you just created in a new directory. Go to a new directory 
 Now, from your terminal run `git clone [copied url]`. This will copy the github repo into a directory of the same name on your local machine.
 
 ## Forking
+
+# ![Fork Diagram](/assets/images/lessons/git/github-diagrams.004.jpeg)
 
 There are certain times where you will need to work on a codebase that you do not have `push` access rights to. This is the case when you need to update `turingschool/portfolios` repo. In situations like this we can `fork` the remote repo, which will create another remote repo of the same name under your own username, which in this case would be `damwhit/portfolios`. Now I have `push` access rights to the 'forked' repo and can create pull requests on the original repo.
 
