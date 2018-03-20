@@ -16,7 +16,7 @@ In this lesson, you will learn how to:
 
 ### Some Context: What is Git, and why should we use it?
 
-Git is a version control system (VCS). We interact with Git **from the command line**. We use Git to commit changes to our project. These commits serve as snapshots in time (or versions) of the project. A project that uses Git has a complete history of the code changes made throughout its existence, which can be powerful if you want to look at the origin of a bug, or if you want to revert to an old version of a project. Git is used throughout the software development community, not only for web development - it gives developers a robust way to collaborate, share, and maintain code bases.
+Git is a version control system (VCS). VCSs keep track of the differences in file systems at different points in time. We interact with Git **from the command line**. We use Git to commit changes to our project. These commits serve as snapshots in time (or versions) of the project. A project that uses Git has a complete history of the code changes made throughout its existence, which can be powerful if you want to look at the origin of a bug, or if you want to revert to an old version of a project. Git is used throughout the software development community, not only for web development - it gives developers a robust way to collaborate, share, and maintain code bases.
 
 ### What Git is NOT
 
@@ -69,6 +69,18 @@ nothing to commit (create/copy files and use "git add" to track)
 ```
 
 Additionally, if we use `ls -la` to look in the directory, we can see a `.git` hidden directory. The `.git` directory is not something you need to worry about at this time, and you will likely never modify it. It is used by Git to keep track of your change history (commits) - more on that later.
+
+### Three areas where code lives
+
+# ![Git Areas](/assets/images/lessons/git/github-diagrams.001.jpeg)
+
+1. Working Area
+  * Where **untracked files** live
+2. Staging Area
+  * Where files that are going to be a part of the next commit live
+3. The Repository
+  * The files git knows about!
+  * Contains all of your commits
 
 #### Add a file
 
@@ -188,7 +200,7 @@ Ideally, we want to keep the master branch "clean" of bugs. So if we want to wri
 
 When you branch off of the master branch, that new branch can serve as a `sandbox` for development where you can make changes or experiment with a `research spike` without affecting the master branch.
 
-[More info on branching.](https://www.atlassian.com/git/tutorials/using-branches/git-branch)
+[More info on branching.](https://www.atlassian.com/git/tutorials/using-branches)
 
 The general workflow is:
 
@@ -232,7 +244,7 @@ Let's checkout the new branch using the command `git checkout add-body-content`.
   master
 ```
 
-Pro Tip: We can use the command `git checkout -b [branch name]` to both create and change to the `branch name` specified.
+**Pro Tip:** We can use the command `git checkout -b [branch name]` to both create and change to the `branch name` specified.
 
 #### Make changes on the new branch
 
@@ -240,7 +252,7 @@ Now that we've checked out the new feature branch, we can start making changes o
 
 To add the CSS file, `touch styles.css`. In the CSS file, add a simple rule:
 
-```CSS
+```css
 body {
   background-color: lightgray;
 }
