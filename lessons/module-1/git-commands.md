@@ -1,6 +1,5 @@
 ---
 title: Git Commands
-length: 0
 tags: git, github
 ---
 
