@@ -17,7 +17,7 @@ In this lesson, you will learn how to:
 
 #### Add a public key to your github account
 
-In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/ articles/generating-an-ssh-key/).
+In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/).
 
 ### Some Context: What is GitHub, and why do we use it?
 
