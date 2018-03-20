@@ -216,6 +216,7 @@ var b = 0;
 var d = 5;
 var e = 3;
 var r = 18;
+
 ```
 
 The lines of code between HEAD and the set of equals signs (so in this case, var b = 2) are all of the changes you made that are in conflict. These are change that you have made on your computer.

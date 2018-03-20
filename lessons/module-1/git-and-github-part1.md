@@ -70,6 +70,18 @@ nothing to commit (create/copy files and use "git add" to track)
 
 Additionally, if we use `ls -la` to look in the directory, we can see a `.git` hidden directory. The `.git` directory is not something you need to worry about at this time, and you will likely never modify it. It is used by Git to keep track of your change history (commits) - more on that later.
 
+### Three areas where code lives
+
+# ![Git Areas](/assets/images/lessons/git/github-diagrams.001.jpeg)
+
+1. Working Area
+  * Where **untracked files** live
+2. Staging Area
+  * What files are going to be a part of the next commit
+3. The Repository
+  * The files git knows about!
+  * Contains all of your commits
+
 #### Add a file
 
 Let's make this a real project and actually add some content! Add a new HTML file from the terminal using `touch index.html`.
