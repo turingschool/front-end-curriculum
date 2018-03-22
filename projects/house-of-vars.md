@@ -84,23 +84,9 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [#1913](https://github.com/openfoodfoundation/openfoodnetwork/issues/1913)
 
 
-<!-- ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
-
-**Potential Issues:**
-* [Marked as newcomer friendly](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues?q=is%3Aissue+is%3Aopen+label%3A%22newcomer+friendly%22)
-* [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
-* [#1510](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1510)
-* [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459) -->
-
 ### [Denver Startup Week](https://github.com/denverstartupweek/dsw-site)
 * [Issues](https://github.com/denverstartupweek/dsw-site/issues)
 
-<!-- ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
-
-**Potential Issues:**
-* [#1733](https://github.com/Code4SocialGood/c4sg-web/issues/1733)
-* [#1727](https://github.com/Code4SocialGood/c4sg-web/issues/1727)
- -->
 
 ### [Git Point](https://github.com/gitpoint/git-point)
 
@@ -118,6 +104,21 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 **Potential Issues:**
 * [Marked as Good First Issue](https://github.com/sindresorhus/refined-github/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
+
+<!-- ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
+
+**Potential Issues:**
+* [Marked as newcomer friendly](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues?q=is%3Aissue+is%3Aopen+label%3A%22newcomer+friendly%22)
+* [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
+* [#1510](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1510)
+* [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459) -->
+
+<!-- ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
+
+**Potential Issues:**
+* [#1733](https://github.com/Code4SocialGood/c4sg-web/issues/1733)
+* [#1727](https://github.com/Code4SocialGood/c4sg-web/issues/1727)
+ -->
 
 <!-- ### Other Potential Repos -->
 <!-- https://github.com/vuetifyjs/vuetify -->
