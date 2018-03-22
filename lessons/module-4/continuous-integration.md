@@ -73,7 +73,15 @@ By default, in our node projects the TravisCI test section will simply try to ru
 
 ## Begin Configuration
 
-You take it from here. Let's push up our `.travis.yml` file to master, look at the build, and squash those errors!
+You take it from here. Let's push up our `.travis.yml` file to the master branch on GitHub, look at the TravisCI build, and squash those errors!
+
+## Checking Pull Requests
+
+After we have configured pushes to our master branch to successfully build, what about checking pull requests before they are merged?
+
+## Badges
+
+What about those cool badges you see in GitHub repositories that show if the latest build has passed all of the tests in TravisCI? How do we add this?
 
 <!-- ### Machine
 
