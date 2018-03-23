@@ -1,6 +1,6 @@
 ---
 title: Continuous Integration with TravisCI
-length: 1 hour
+length: 1.5 hours
 tags: continuous integration, travisCI
 module: 4
 ---
@@ -24,7 +24,8 @@ Being able to run and test a full build of your application before you release i
 TravisCI will also help you catch errors that you might not find locally. By more closely mimicking a production environment, we can recognize any differences that might be causing inconsistent behavior between environments. For example, if I am developing an app locally and I did an `npm install` months ago, and I did not explicitly lock down the version numbers for each of my dependencies in my `package.json`, I might not notice that my production environment received more updated packages during the `npm install` phase. Some of these packages may have included breaking changes that would only be exposed in production, and impossible to reproduce locally until another `npm install` was run.
 
 ## Getting Started with TravisCI
-1. Sign up for a TravisCI account [here](https://travis-ci.org/) and login with your GitHub account.
+
+1. Sign up for a TravisCI account [here](https://travis-ci.org/) and login with your GitHub account (the **`.org`** version of TravisCI is FREE, the `.com` version of TravisCI is NOT free).
 
 2. Authorize TravisCI to access information about your GitHub repos (it's ok)
 
@@ -62,7 +63,7 @@ The yml file can define settings for various phases of the build lifecycle. In T
 
 Before we get started configuring the TravisCI installation, script, and deployment phases, let's make sure we have our test script set up.
 
-By default, in our node projects the TravisCI test section will simply try to run `npm test`. If you don't currently have a command in here for your test script in your `package.json` file, update it to reflect the command you've been using to run your tests. That might look something like this:
+By default, in our Node projects the TravisCI test section will simply try to run `npm test`. If you don't currently have a command in here for your test script in your `package.json` file, update it to reflect the command you've been using to run your tests. That might look something like this:
 
 ```js
 "scripts": {
@@ -71,7 +72,9 @@ By default, in our node projects the TravisCI test section will simply try to ru
 }
 ```
 
-## Begin Configuration
+**Run `npm test` to make sure your tests are passing locally.** If they are, you're ready to move on to the next steps. If not, then fix or skip the tests temporarily to get a passing test suite.
+
+## Begin TravisCI Configuration
 
 You take it from here. Let's push up our `.travis.yml` file to the master branch on GitHub, look at the TravisCI build, and squash those errors!
 
