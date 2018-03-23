@@ -122,7 +122,7 @@ In it's simplest form, the application should have the following:
 * Proficient  
 * Exceptional 
 
-## Techincal Vocabulary
+## Technical Vocabulary
 
 * Novice
 * Advanced Beginner
