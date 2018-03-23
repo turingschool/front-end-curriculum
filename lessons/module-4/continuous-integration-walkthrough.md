@@ -204,6 +204,8 @@ After we have configured pushes to our master branch to successfully build, what
 
 What about those cool badges you see in GitHub repositories that show if the latest build has passed all of the tests in TravisCI? How do we add this?
 
+[This documentation page](https://docs.travis-ci.com/user/status-images/) will give you an idea of how to add the badge to your GitHub repository.
+
 [add-new-repository]: /assets/images/lessons/continuous-integration/add-new-repository.png
 [turn-on-repository]: /assets/images/lessons/continuous-integration/turn-on-repository.png
 [initial-build]: /assets/images/lessons/continuous-integration/initial-build.png
