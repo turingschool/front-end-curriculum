@@ -4,7 +4,7 @@ title: Linked List
 
 ## Specification
 
-With a little jQuery under your belt, it's time to try your hand at building a small application.
+Now it's time to try your hand at building a small application.
 
 In it's simplest form, the application should have the following:
 
@@ -120,7 +120,14 @@ In it's simplest form, the application should have the following:
 * Novice  
 * Advanced Beginner  
 * Proficient  
-* Exceptional  
+* Exceptional 
+
+## Techincal Vocabulary
+
+* Novice
+* Advanced Beginner
+* Proficient
+* Exceptional
 
 ## Surprise and Delight (optional category, but reminder: have fun!)
 
