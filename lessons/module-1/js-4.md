@@ -18,7 +18,7 @@ In this lesson we'll cover:
 Objects are an abstraction, or the representation of real world things in computer programming.
 
 ### Anatomy of Objects
-Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
+Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. Each property in an object must be unique. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
 Let's look at an example:
 
@@ -71,23 +71,18 @@ var schoolName = school.name;
 var schoolCapacity = school.capacity;
 ```
 
-Bracket Notation is less commonly used:
+Bracket Notation is usually used when the name of the property is stored in a variable. 
 
 ```js
-var schoolName = school['name'];
-var schoolCapacity = school['capacity'];
+var prop = 'name';
+
+var schoolName = school[prop];
 ```
 
-Default to using Dot Notation. Bracket notation is only necessary when accessing a property with a variable as seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
+Another example can be seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
 
-### What is `this`: a 10,000ft Introduction
-You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? Let's take a VERY brief look before you continue with objects. We will circle back on this later.
+Default to using Dot Notation unless you find a need to use bracket notation.
 
-Like `var` and `function`, `this` is a special keyword in Javascript. It references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
-
-In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
-
-`capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
 ### Your Turn
 Turn to your neighbor and explain the following object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
@@ -116,6 +111,15 @@ var myLitObject = {
 // 9. Check the value of myLitObject. Do you see your method?
 // 10. Use myLitObject to log "Skateboarding is fun"
 ```
+
+### What is `this`: a 10,000ft Introduction
+You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? Let's take a VERY brief look before you continue with objects. We will circle back on this later.
+
+Like `var` and `function`, `this` is a special keyword in Javascript. It references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
+
+In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
+
+`capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
 
 # Objects: Constructor Notation
