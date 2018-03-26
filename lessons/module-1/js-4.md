@@ -234,7 +234,7 @@ var human = {
 
 // Create a function like we did before (refer to the the GLOBAL VARIABLES example where we created a function called showWidth to log an object's width with "this.width" to the console), but this time leverage the context of `this` to print a name.
 var sayName = function() {
-  console.log('Hello! My name is ' + this.name');
+  console.log('Hello! My name is ' + this.name);
 }
 
 // Call the sayName function now
