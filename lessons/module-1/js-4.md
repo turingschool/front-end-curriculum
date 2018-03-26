@@ -18,7 +18,7 @@ In this lesson we'll cover:
 Objects are an abstraction, or the representation of real world things in computer programming.
 
 ### Anatomy of Objects
-Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
+Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. Each property in an object must be unique. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
 Let's look at an example:
 
@@ -71,23 +71,18 @@ var schoolName = school.name;
 var schoolCapacity = school.capacity;
 ```
 
-Bracket Notation is less commonly used:
+Bracket Notation is usually used when the name of the property is stored in a variable. 
 
 ```js
-var schoolName = school['name'];
-var schoolCapacity = school['capacity'];
+var prop = 'name';
+
+var schoolName = school[prop];
 ```
 
-Default to using Dot Notation. Bracket notation is only necessary when accessing a property with a variable as seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
+Another example can be seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
 
-### What is `this`: a 10,000ft Introduction
-You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? Let's take a VERY brief look before you continue with objects. We will circle back on this later.
+Default to using Dot Notation unless you find a need to use bracket notation.
 
-Like `var` and `function`, `this` is a special keyword in Javascript. It references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
-
-In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
-
-`capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
 ### Your Turn
 Turn to your neighbor and explain the following object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
@@ -117,6 +112,28 @@ var myLitObject = {
 // 10. Use myLitObject to log "Skateboarding is fun"
 ```
 
+### What is `this`: a 10,000ft Introduction
+Let's consider our school object from before
+```javascript
+var school = {
+  name: 'International School of Denver',
+  capacity: 250,
+  languageImmersion: true,
+  currentStudents: 75,
+  checkOpenSpots: function() {
+    return this.capacity - this.currentStudents;
+  }
+};
+```
+
+You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? 
+
+Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
+
+In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
+
+`capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
+
 
 # Objects: Constructor Notation
 
@@ -139,9 +156,6 @@ function Restaurant(name, tables, reservations) {
   this.name = name;
   this.tables = tables;
   this.reservations = reservations;
-  this.checkAvailability = function () {
-    return this.tables - this.reservations;
-  }
 }
 ```
 
@@ -150,13 +164,21 @@ Let's talk about what's going on here:
 - A function called `Restaurant` is a template for creating new objects that represent individual "instances" of restaurants  
 - The function has three parameters (`name`, `tables`, `reservations`)  
 - Each parameter sets the _value_ of a _property_ in the object  
-- Each object created will utilize the same method for checking availability  
-- The ```this``` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
+- The `this` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
 - Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma  
 - Constructor functions begin w/ capital letters (PascalCase), unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
 
-## Revisiting ```this```
-The keyword ```this``` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, ```this``` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
+## Adding methods to our constructed objects
+The constructor function prototype is a blueprint that 
+```javascript
+  Restaurant.prototype.checkAvailability = function () {
+    return this.tables - this.reservations;
+  }
+```
+- Each object created will inherit this method for checking availability.
+
+## Revisiting `this`
+The keyword `this` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, `this` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
 
 ```javascript
 // Declare a constructor function for making restaurant objects that accepts a parameter of "name".
@@ -233,7 +255,7 @@ var human = {
 
 // Create a function like we did before (refer to the the GLOBAL VARIABLES example where we created a function called showWidth to log an object's width with "this.width" to the console), but this time leverage the context of `this` to print a name.
 var sayName = function() {
-  console.log(`Hello! My name is ${this.name}.`);
+  console.log('Hello! My name is ' + this.name);
 }
 
 // Call the sayName function now
@@ -288,19 +310,18 @@ Let's look at some code examples.
 
 ```javascript
 // Outfit constructor whose only job is to create instances of outfits all day. It takes pants, socks, and shirt parameters, so it can make different outfits all day.
-function Outfit(pants, socks, shirt) {
-	this.pants = pants;
-	this.socks = socks;
-	this.shirt = shirt;
+function Outfit(pants, shirt) {
+  this.pants = pants;
+  this.shirt = shirt;
 }
 
 Outfit.prototype.compliment = function() {
-  console.log(`Nice ${this.pants} pants and ${this.socks} and ${this.shirt} shirt!`);
+  console.log('Nice ' + this.pants + ' pants and ' + this.shirt + '  shirt!');
 }
 
 // Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
 
-var casual = new Outfit('denim', 'cat', 'hanes')
+var casual = new Outfit('denim', 'cat')
 casual.compliment();
 ```
 
