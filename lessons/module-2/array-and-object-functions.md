@@ -1,10 +1,19 @@
 ---
 title: Array and Object Prototype Methods
 length:
-tags: javascript, js, array, object, 
+tags: javascript, js, array, object,
 ---
 
 ## [Slides](https://docs.google.com/presentation/d/1PspIlaLWoHvXLAMARW6nrANhCPj6erLpl2B7AGNiq0o/edit#slide=id.g217b56adb2_0_0)
+
+## Vocab
+
+- `Object` A data structure made up of Keys and Values
+- `Key` The name used to refer to a Value in an Object
+- `Value` / `Property` / `Attribute` The value referenced by a Key in an Object
+- `Array` A list of values
+- `Iteration` / `Enumeration` The concept of doing something over and over again, usually over elements in a list
+
 
 
 ## Objects

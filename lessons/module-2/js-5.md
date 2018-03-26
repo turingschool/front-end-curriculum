@@ -1,5 +1,19 @@
 # JS V
 
+## Vocab
+
+- `Data Type` A kind of data, e.g., String, Object, Boolean, etc.
+- `Primitives` / `Simple Data Types` Basic data types like String, Boolean, Number
+- `Complex Data Types` Data types that are not Primitives. E.g., Objects, Arrays
+- `Object` A data structure made up of Keys and Values
+- `Key` The name used to refer to a Value in an Object
+- `Value` / `Property` / `Attribute` The value referenced by a Key in an Object
+- `Array` A list of values
+- `Function` A grouping of executable code. Can be manipulated just like any other Object
+- `Scope` Where variables and functions are accessible
+- `Parameters` The variables a function says it will take in when it runs. Declared inside parens
+- `Arguments` The actual variables a function uses when it runs
+
 ## Data Types Review
 
 ## Simple Data Types

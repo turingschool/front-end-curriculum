@@ -1,8 +1,14 @@
 ---
 title: Git Review - forking vs. cloning
 length:
-tags: git, tooling, workflow 
+tags: git, tooling, workflow
 ---
+
+## Vocab
+
+- `Git` A distributed version control system
+- `Cloning` Copying a remote repo to your local machine
+- `Forking` Creating your own copy of somebody else's repo
 
 ## Cloning
 
