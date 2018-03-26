@@ -290,8 +290,8 @@ Let's look at some code examples.
 ```javascript
 // Outfit constructor whose only job is to create instances of outfits all day. It takes pants, socks, and shirt parameters, so it can make different outfits all day.
 function Outfit(pants, shirt) {
-	this.pants = pants;
-	this.shirt = shirt;
+  this.pants = pants;
+  this.shirt = shirt;
 }
 
 Outfit.prototype.compliment = function() {
