@@ -22,8 +22,6 @@ For your testing start with testing small arrays of numbers and/or letters.
 For more advanced testing you will need to generate arrays of numbers to see how large of an array your different
 sorting algorithms can sort.
 
-You will use this [repo](https://github.com/turingschool-examples/tdd).
-
 ## 1. Bubble Sort
 
 ### Big Picture
