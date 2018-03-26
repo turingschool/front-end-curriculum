@@ -113,9 +113,22 @@ var myLitObject = {
 ```
 
 ### What is `this`: a 10,000ft Introduction
-You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? Let's take a VERY brief look before you continue with objects. We will circle back on this later.
+Let's consider our school object from before
+```javascript
+var school = {
+  name: 'International School of Denver',
+  capacity: 250,
+  languageImmersion: true,
+  currentStudents: 75,
+  checkOpenSpots: function() {
+    return this.capacity - this.currentStudents;
+  }
+};
+```
 
-Like `var` and `function`, `this` is a special keyword in Javascript. It references its parent object and is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
+You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? 
+
+Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
 
 In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
 
