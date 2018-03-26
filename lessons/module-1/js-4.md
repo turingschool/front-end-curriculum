@@ -295,7 +295,7 @@ function Outfit(pants, shirt) {
 }
 
 Outfit.prototype.compliment = function() {
-  console.log('Nice ' + this.pants + ' pants and ' + this.shirt + '  shirt!'');
+  console.log('Nice ' + this.pants + ' pants and ' + this.shirt + '  shirt!');
 }
 
 // Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
