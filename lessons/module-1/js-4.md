@@ -237,7 +237,7 @@ var human = {
 
 // Create a function like we did before (refer to the the GLOBAL VARIABLES example where we created a function called showWidth to log an object's width with "this.width" to the console), but this time leverage the context of `this` to print a name.
 var sayName = function() {
-  console.log(`Hello! My name is ${this.name}.`);
+  console.log('Hello! My name is ' + this.name');
 }
 
 // Call the sayName function now
@@ -292,19 +292,18 @@ Let's look at some code examples.
 
 ```javascript
 // Outfit constructor whose only job is to create instances of outfits all day. It takes pants, socks, and shirt parameters, so it can make different outfits all day.
-function Outfit(pants, socks, shirt) {
+function Outfit(pants, shirt) {
 	this.pants = pants;
-	this.socks = socks;
 	this.shirt = shirt;
 }
 
 Outfit.prototype.compliment = function() {
-  console.log(`Nice ${this.pants} pants and ${this.socks} and ${this.shirt} shirt!`);
+  console.log('Nice ' + ' this.pants + ' pants and ' + this.shirt + '  shirt!'');
 }
 
 // Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
 
-var casual = new Outfit('denim', 'cat', 'hanes')
+var casual = new Outfit('denim', 'cat')
 casual.compliment();
 ```
 
