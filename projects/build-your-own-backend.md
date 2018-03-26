@@ -94,8 +94,8 @@ Don't worry about fancy styling of your documentation. You can put your document
 
 ### Deployment
 
-* Your application should be automatically deployed to Heroku via CircleCI
-* CircleCI should be running your tests and linter
+* Your application should be automatically deployed to Heroku via TravisCI
+* TravisCI should be running your tests and linter
 
 -----------------------------------------------
 
