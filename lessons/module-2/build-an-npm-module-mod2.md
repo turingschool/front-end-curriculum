@@ -38,112 +38,6 @@ Note: as you read, prepare answers to the following discussion points
 
 
 
-## Cheatsheet
-
-Relevant NPM commands
-
-#### `link`
-
-[docs](https://docs.npmjs.com/cli/link)
-
-If you have a local directory containing an npm package, you can link this package locally. 
-
-```
-cd module-name
-npm link
-```
-
-When you want to use a local linked package, you can do so with link
-
-```
- mkdir newapp/
- cd newapp/
- npm link module-name
-```
-
-To unlink a package from an application:
-
-```
-cd newapp/
-npm unlink module-name
-```
-
-To unlink a package from your system:
-
-```
- cd module-name
- npm unlink
- ```
-
-#### `addUser` or `login`
-
-[docs](https://docs.npmjs.com/cli/adduser)
-
-```
- npm adduser
- npm login
-```
-
-#### `publish` & `unpublish`
-
-[docs](https://docs.npmjs.com/cli/publish)
-
-```
- cd module-name
- npm publish
- npm unpublish module-name
-```
-
-`--access public` or `--access restricted` - flag to set as public
-
-#### `scope`
-
-[docs](https://docs.npmjs.com/misc/scope)
-
-You can specify a scope for an NPM module to prevent naming collisions with other modules
-
-#### `version`
-
-[docs](https://docs.npmjs.com/cli/version)
-
-Bump an npm version when you add relevant information or code
-
-```
-  npm version <versions> -m "message"
-```
-
-`version`: patch, minor, major, prepatch, preminor, premajor, prerelease
-
-```
-  npm version patch -m "Update Documentation"
-```
-
-This will bump your version automatically, and prepare to version.
-
-Then:
-
-```
-  git push
-  npm publish
-```
-
-## Outside Resources / Further Reading
-
-- Watch Steve Kinney's [2016 talk](https://www.youtube.com/watch?v=MamP2wIquGQ)
-  - And check out [the slides](https://speakerdeck.com/stevekinney/the-ins-and-outs-of-publishing-a-module-to-npm) here
-- [NPM docs - How NPM works](https://docs.npmjs.com/how-npm-works/packages)
-- [NPM cheatsheet](http://browsenpm.org/help)
-- [Certified Modules](https://nodesource.com/blog/hello-certified-modules-the-future-of-trust-in-node-js-dependencies/) - How devs are trying to keep you and NPM itself safe
-
----
-
-
-## Reading Discussion Point Answers
-
-- SemVer stands for semantic versioning
-- The `--save-dev` flag means that the dependency is only used by developers. The `--save` flag means that this dependency has to be used for the package to work in production. It really matters here. When people include your npm module in their `node_modules` folder, the dev dependencies won't come along for the ride. That's important, because number of lines of code matter for the speed of an application. If you completely omit the `--save` flag, then your npm module won't work when other folks pull it down.
-
----
 <div id="do"></div>
 
 ## Set Up a Basic NPM Module
@@ -262,6 +156,118 @@ npm install [GitHub URL] -S
 and then requiring a specific module in your js file as you would with any other module.
 
 For this to work, make sure you are still bundling up your code with that `module.exports`.
+
+
+--------
+
+
+## Cheatsheet
+
+Relevant NPM commands
+
+#### `link`
+
+[docs](https://docs.npmjs.com/cli/link)
+
+If you have a local directory containing an npm package, you can link this package locally. 
+
+```
+cd module-name
+npm link
+```
+
+When you want to use a local linked package, you can do so with link
+
+```
+ mkdir newapp/
+ cd newapp/
+ npm link module-name
+```
+
+To unlink a package from an application:
+
+```
+cd newapp/
+npm unlink module-name
+```
+
+To unlink a package from your system:
+
+```
+ cd module-name
+ npm unlink
+ ```
+
+#### `addUser` or `login`
+
+[docs](https://docs.npmjs.com/cli/adduser)
+
+```
+ npm adduser
+ npm login
+```
+
+#### `publish` & `unpublish`
+
+[docs](https://docs.npmjs.com/cli/publish)
+
+```
+ cd module-name
+ npm publish
+ npm unpublish module-name
+```
+
+`--access public` or `--access restricted` - flag to set as public
+
+#### `scope`
+
+[docs](https://docs.npmjs.com/misc/scope)
+
+You can specify a scope for an NPM module to prevent naming collisions with other modules
+
+#### `version`
+
+[docs](https://docs.npmjs.com/cli/version)
+
+Bump an npm version when you add relevant information or code
+
+```
+  npm version <versions> -m "message"
+```
+
+`version`: patch, minor, major, prepatch, preminor, premajor, prerelease
+
+```
+  npm version patch -m "Update Documentation"
+```
+
+This will bump your version automatically, and prepare to version.
+
+Then:
+
+```
+  git push
+  npm publish
+```
+
+## Outside Resources / Further Reading
+
+- Watch Steve Kinney's [2016 talk](https://www.youtube.com/watch?v=MamP2wIquGQ)
+  - And check out [the slides](https://speakerdeck.com/stevekinney/the-ins-and-outs-of-publishing-a-module-to-npm) here
+- [NPM docs - How NPM works](https://docs.npmjs.com/how-npm-works/packages)
+- [NPM cheatsheet](http://browsenpm.org/help)
+- [Certified Modules](https://nodesource.com/blog/hello-certified-modules-the-future-of-trust-in-node-js-dependencies/) - How devs are trying to keep you and NPM itself safe
+
+---
+
+
+## Reading Discussion Point Answers
+
+- SemVer stands for semantic versioning
+- The `--save-dev` flag means that the dependency is only used by developers. The `--save` flag means that this dependency has to be used for the package to work in production. It really matters here. When people include your npm module in their `node_modules` folder, the dev dependencies won't come along for the ride. That's important, because number of lines of code matter for the speed of an application. If you completely omit the `--save` flag, then your npm module won't work when other folks pull it down.
+
+---
+
 
 --------
 ## tl;dr
