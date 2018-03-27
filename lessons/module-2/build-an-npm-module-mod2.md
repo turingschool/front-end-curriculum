@@ -162,13 +162,21 @@ Make sure when you create your new GitHub repo you check the box that says 'Init
 
 ### Create the Package Directory
 
-Create a new directory named after your new fancy node module (**USE lowercase ONLY!**) 
+Create a new directory named after your new fancy node module (**USE lowercase and hyphens ONLY!**). It would make sense if it was named the same thing as your newly created GitHub repo. 
 
 ```
 $ mkdir name-of-module
+$ cd name-of-module
 ```
 
-We'll want to add some files: 
+Next, you'll initialize this directory as a git repo:
+
+```
+$ git init
+$ git remote add origin <github url>
+```
+
+Now let's add some files: 
 * an index.js file to contain our code (more complex packages may use more than one file)
 * A test folder with a test.js file in it
 
