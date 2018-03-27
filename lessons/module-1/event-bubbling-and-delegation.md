@@ -6,7 +6,7 @@ tags: javascript, dom, browser, events
 
 ### Learning Goals
 
-- Understand and describe propagation 
+- Understand and describe propagation
 - Understand and apply event delegation
 - Utilize the event object
 
@@ -26,15 +26,15 @@ It is, however, possible for us to use JavaScript to set up handlers for events 
 
 For a review of how to set event handlers, please refer to the [DOM Manipulation with JavaScript Lesson](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html)
 
-### Your Turn 
+### Your Turn
 
 Take a few minutes with the human next to you to think of a few real life analogies for event listeners. On your own, pick one of the analogies and translate this concept into visual form in your notebook.
 
 ## Event Propagation
 
-Event propagation is an important yet misunderstood topic/term when talking about events. Event propagation is an _overarching term_ that includes the three different phases of DOM Events: capturing, targeting, and bubbling. Event propagation is bi-directional (starts at the window... goes to the target... and ends at the window) and is often improperly used as a synonym for event bubbling. Everytime an event occurs, event propagation is occuring behind the scenes. 
+Event propagation is an important yet misunderstood topic/term when talking about events. Event propagation is an _overarching term_ that includes the three different phases of DOM Events: capturing, targeting, and bubbling. Event propagation is bi-directional (starts at the window... goes to the target... and ends at the window) and is often improperly used as a synonym for event bubbling. Everytime an event occurs, event propagation is occuring behind the scenes.
 
-![Graphical representation of an event dispatched in a DOM tree using the DOM event flow](/assets/images/eventpropagation.svg)
+![Graphical representation of an event dispatched in a DOM tree using the DOM event flow](/assets/images/eventpropagation.png)
 
 * Event capture phase - When an event occurs in the DOM, notification of the event is passed starting at the top of the DOM tree and passing down through all parent element nodes all the way to the target node where the event occurred.
 * Event target phase - After the capturing phase occurs, the Target phase occurs. The target phase only includes a notification of Node where the event took place.
@@ -42,11 +42,11 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 
 ### Your Turn
 
-Now that you know that you have a handle on event propagation, take a few minutes to update your visual representation of event listeners to show that these event phases are occuring behind the scenes. 
+Now that you know that you have a handle on event propagation, take a few minutes to update your visual representation of event listeners to show that these event phases are occuring behind the scenes.
 
 ## Event Bubbling
 
-Now we've talked about the very basics of events, let's turn our attention to event bubbling, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to children of those nodes. 
+Now we've talked about the very basics of events, let's turn our attention to event bubbling, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to children of those nodes.
 
 Many people question why more attention isn't paid to the capturing phase. Simply put, it's unlikely that you'll have to use it. IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both.
 
@@ -110,7 +110,7 @@ As noted above, we are focusing on the bubbling phase because there are _very_ f
 
 Open your journal and address the following:
 * Describe event propagation in your own words
-* Pretend you have event handlers on _every_ element in the snippet below because you want to see which ones are working. If you click on the `<p>` element, what is the sequence that the handlers will fire during the capture phase? What about the bubbling phase? 
+* Pretend you have event handlers on _every_ element in the snippet below because you want to see which ones are working. If you click on the `<p>` element, what is the sequence that the handlers will fire during the capture phase? What about the bubbling phase?
 
 ```html
 <form>
@@ -148,7 +148,7 @@ Modify the code above to log the event itself (as opposed to the `target` proper
 
 ## Adding and Removing Event Listeners
 
-A common obstacle that many JavaScript developers struggle with is understanding the timing in which they bind event listeners to DOM nodes. When we add event listeners to DOM nodes, we're only adding them to the nodes that are currently on the page. We are _not_ adding listeners to nodes that may be added to the page in the future. 
+A common obstacle that many JavaScript developers struggle with is understanding the timing in which they bind event listeners to DOM nodes. When we add event listeners to DOM nodes, we're only adding them to the nodes that are currently on the page. We are _not_ adding listeners to nodes that may be added to the page in the future.
 
 ### Experiment
 
@@ -192,9 +192,9 @@ document.querySelector('body').addEventListener('click', function(event) {
   }
 });
 ```
-### Your Turn 
+### Your Turn
 
-What is a real life analogy that you could use to explain how event delegation works? Create a new visual representation of this in your notebook. 
+What is a real life analogy that you could use to explain how event delegation works? Create a new visual representation of this in your notebook.
 
 <!-- <p data-height="300" data-theme-id="23788" data-slug-hash="AXVgOj" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXVgOj/">event-delegation</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
@@ -211,4 +211,4 @@ What is a real life analogy that you could use to explain how event delegation w
 ### Resources
 
 - Now that you have some jQuery under your belt - you should know that jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/)
-- A very detailed piece that desribes[event order](https://www.quirksmode.org/js/events_order.html) can be found here
+- A very detailed piece that desribes [event order](https://www.quirksmode.org/js/events_order.html) can be found here
