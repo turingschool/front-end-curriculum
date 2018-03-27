@@ -4,13 +4,13 @@ length: 120
 tags: javascript, dom, browser, events
 ---
 
-## Learning Goals
+### Learning Goals
 
 - Understand and describe propagation 
 - Understand and apply event delegation
 - Utilize the event object
 
-### Vocabulary
+## Vocabulary
 
 - Event handlers
 - Event propagation
@@ -200,7 +200,7 @@ What is a real life analogy that you could use to explain how event delegation w
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
  -->
 
- ### Summary
+## Summary
 
  Using your journal, take a few minutes to answer the following:
 
