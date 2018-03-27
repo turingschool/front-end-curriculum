@@ -30,7 +30,7 @@ For a review of how to set event handlers, please refer to the [DOM Manipulation
 
 Take a few minutes with the human next to you to think of a few real life analogies for event listeners. On your own, pick one of the analogies and translate this concept into visual form in your notebook.
 
-## Things to know
+## Event Propagation
 
 Event propagation is an important yet misunderstood topic/term when talking about events. Event propagation is an _overarching term_ that includes the three different phases of DOM Events: capturing, targeting, and bubbling. Event propagation is bi-directional (starts at the window... goes to the target... and ends at the window) and is often improperly used as a synonym for event bubbling. Everytime an event occurs, event propagation is occuring behind the scenes. 
 
@@ -120,7 +120,7 @@ Open your journal and address the following:
 </form>
 ```
 
-### The Event Object
+## The Event Object
 
 Sometimes inside an event handler function, you might see a parameter specified with a name such as `event`, `evt`, or simply `e`. This is called the event object, and it is automatically passed to event handlers to provide extra features and information. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
 
