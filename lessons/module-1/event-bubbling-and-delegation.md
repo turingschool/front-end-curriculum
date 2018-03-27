@@ -206,9 +206,9 @@ What is a real life analogy that you could use to explain how event delegation w
 
   - What are three things that you learned today?
   - What are two things that you still have a question about?
-  - What is one thing you can take from this lesson to apply to you current projects?
+  - What is one thing you can take from this lesson to apply to your current projects?
 
 ### Resources
 
-- Now that you have some jQuery under your belt - you should know that jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/).
-- [Event Order](https://www.quirksmode.org/js/events_order.html)
+- Now that you have some jQuery under your belt - you should know that jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/)
+- A very detailed piece that desribes[event order](https://www.quirksmode.org/js/events_order.html) can be found here
