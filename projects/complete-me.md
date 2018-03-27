@@ -64,7 +64,7 @@ In our example here we have two parent nodes. `a` and `e` they have children nod
 
 Everybody uses auto complete. In this project you are going to be building a low level version of an auto complete system in javascript.
 
-You will use this [repo](https://github.com/turingschool-examples/tdd).
+You will use your TDD repo (created during the config lesson).
 
 ### Hint
 You can use `console.log` along with `JSON.stringify` to view your trie in your console when running your tests.
@@ -169,7 +169,14 @@ completion.suggest("piz")
 
 ## Evaluation Rubric
 
-The project will have two parts: an in-person live code, and a code review of the complete project.
+The project evaluation will have two parts: 
+* an in-person live code
+  - implement a new method
+  - this demonstrates your problem-solving process
+* submission of the complete project
+  - complete functionality
+  - complete testing suite
+  - instructors will do code reviews
 
 Complete Me will be assessed with the following rubric:
 
