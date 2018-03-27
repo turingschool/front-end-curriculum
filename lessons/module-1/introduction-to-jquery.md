@@ -73,7 +73,7 @@ The following things are happening in the example above:
 
 Now, when a user clicks on that button. The browser will run the function we provided to the event listener!
 
-We can also listen for things other thank clicks. Here are some other events from the [jQuery documentation](http://api.jquery.com/Types/#Event).
+We can also listen for things other than clicks. Here are some other events from the [jQuery documentation](http://api.jquery.com/Types/#Event).
 
 - `click`
 - `contextmenu`
@@ -172,8 +172,7 @@ Let's take a look at the example below:
 <p data-height="300" data-theme-id="23788" data-slug-hash="EyKxpp" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/EyKxpp/">$(this)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
 #### Try It
-
-Can you create a class that adds a border and then toggle that class on the specific box that is hovered over? (For your own sanity, you probably want to remove the alert!)  
+Can you change the text in each box to 'Unicorn' when that specific box is hovered over? (For your own sanity, you probably want to remove the alert!)
 
 ## Traversing the DOM
 
