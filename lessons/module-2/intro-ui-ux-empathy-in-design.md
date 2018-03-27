@@ -14,6 +14,13 @@ _this is what you don't necessarily want your users to feel when they use your a
 - Be able to recognize bad UX design
 - Have an understanding of the tools you can use to create good UX design
 
+## Vocab
+
+- `UI` User interface
+- `UX` User experience
+- `UXD` User experience design
+- `Usability` How easy your design is to understand and use
+
 ## User Experience Design
 
 This might be an opinion at the moment, but time will reveal it to be a **HARD FACT**:

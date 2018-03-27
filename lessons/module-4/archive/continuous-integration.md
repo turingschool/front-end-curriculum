@@ -1,7 +1,7 @@
 ---
-title: Continuous Integration with TravisCI
-length: 1.5 hours
-tags: continuous integration, travisCI
+title: Continuous Integration with CircleCI
+length: 1 hour
+tags: continuous integration, circleCI
 module: 4
 ---
 
@@ -11,82 +11,53 @@ By the end of this lesson, you will:
 
 * Understand what continuous integration is and why it's important
 * Be familiar with a typical deployment flow for agile teams
-* Be able to implement TravisCI for continuous integration and automatic deployments
+* Be able to implement CircleCI for continuous integration and deployments
 
 ## What is Continuous Integration
 Continuous Integration is a jargony buzzword that means "releasing changes fast and often". The goal of CI is to ensure stability by releasing smaller changesets at a time that are each fully tested. Many projects these days will rely on some sort of automated service to handle testing these changesets and facilitating frequent releases.
 
-Some of the most common CI services you'll hear about are [TravisCI](https://travis-ci.org/), [CircleCI](https://circleci.com/) and Jenkins. They all behave in a similar manner, though the setup and configuration process for each tool is slightly different. Today we'll focus on integrating TravisCI to perform a full build of an application, test it using our test suite, and once that is finished, automatically deploy our changes to Heroku.
+Some of the most common CI services you'll hear about are [TravisCI](https://travis-ci.org/), [CircleCI](https://circleci.com/) and Jenkins. They all behave in a similar manner, though the setup and configuration process for each tool is slightly different. Today we'll focus on integrating CircleCI to perform a full build of an application, test it, and deploy it to Heroku.
 
 ## Why Use a CI Tool?
-Being able to run and test a full build of your application before you release it to production is important. Think of how easy it was to deploy new changes to your production apps on Heroku. You would make a commit, and it would immediately be reflected on production after running `git push heroku master`. What if that commit introduced breaking changes? There is no safeguard or filter against pushing up bad code. With a CI tool like TravisCI, we can still take advantage of automatic deployments, but we also get an extra layer of assurance that our app is in good condition before any changes are pushed live.
+Being able to run and test a full build of your application before you release it to production is important. Think of how easy it was to deploy new changes to your production apps on Heroku. You would make a commit, and it would immediately be reflected on production after running `git push heroku master`. What if that commit introduced breaking changes? There is no safeguard or filter against pushing up bad code. With a CI tool like CircleCI, we can still take advantage of automatic deployments, but we also get an extra layer of assurance that our app is in good condition before any changes are pushed live.
 
-TravisCI will also help you catch errors that you might not find locally. By more closely mimicking a production environment, we can recognize any differences that might be causing inconsistent behavior between environments. For example, if I am developing an app locally and I did an `npm install` months ago, and I did not explicitly lock down the version numbers for each of my dependencies in my `package.json`, I might not notice that my production environment received more updated packages during the `npm install` phase. Some of these packages may have included breaking changes that would only be exposed in production, and impossible to reproduce locally until another `npm install` was run.
+CircleCI will also help you catch errors that you might not find locally. By more closley mimicking a production environment, we can recognize any differences that might be causing inconsistent behavior between environments. For example, if I am developing an app locally and I did an `npm install` months ago, and I did not explicitly lock down the version numbers for each of my dependencies in my `package.json`, I might not notice that my production environment received more updated packages during the `npm install` phase. Some of these packages may have included breaking changes that would only be exposed in production, and impossible to reproduce locally until another `npm install` was run.
 
-## Getting Started with TravisCI
+## Getting Started with CircleCI
+1. Sign up for a CircleCI account [here](https://circleci.com/) and login with your github account.
 
-1. Sign up for a TravisCI account [here](https://travis-ci.org/) and login with your GitHub account (the **`.org`** version of TravisCI is FREE, the `.com` version of TravisCI is NOT free).
+2. On the dashboard, navigate to 'Add Projects' and you'll see a list of all the organizations you belong to (including your own). Click on your account and select a repository that you'd like to start automating with CircleCI. *Note: You can still build and push to a fork of a repository. So if you want to work with a forked repository, select it here and push changes directly to your fork rather than the origin repo.*
 
-2. Authorize TravisCI to access information about your GitHub repos (it's ok)
+![Add New Project][add-new-project]
 
-3. Start to your repository using the `+` button next to "My Repositories" on the left pane
+3. Click on 'build project' and CircleCI will start creating a new build of the master branch of your application. This means it's going to automatically install any dependencies and run any tests to make sure everything is in working order.
 
-4. Search for the name of the repository using the `Filter repositories` box (you might have to click the `Sync account` button on the top right)
+That's it!! Easy, right? Any time you push new commits to your remote repository, CircleCI will automatically kick off a new build so you can keep an eye on the overall health and stability of your application.
 
-5. Flip the switch!
+### Configuring CircleCI
 
-6. Go back to your TravisCI dashboard (Click on the `Travis CI` icon on the top left of the page)
+CircleCI automatically infers a lot of information about your application. This allows it to work straight out of the box for us when we first start following a new repo. However, as our applications get more complex, we're likely going to want to configure certain build settings to ensure a correct representation of our application's stability.
 
-That's it! Easy, right? Just kidding.
-
-Now, any time you push new commits to your remote repository, TravisCI will automatically kick off a new build so you can keep an eye on the overall health and stability of your application.
-
-### Configuring TravisCI
-
-As you may have noticed, front-end repos are made up of 90% config files and 10% actual code. In order for TravisCI to be able to run our code and run our tests, we need to add a `circle.yml` file to the root of our repository. Any time TravisCI runs a build, it will look for this file and follow any instructions we provide.
+As you may have noticed, front-end repos are made up of 90% config files and 10% actual code. In order to configure CircleCI, we're going to add a `circle.yml` file to the root of our repository. Any time CircleCI runs a build, it will look for this file and follow any instructions we provide.
 
 ## What is a Build?
 
 Think of all the steps you have to take if you want to collaborate on a classmate's project. You have to fork their repo, clone it down locally, make sure you have an up-to-date version of Node (or some other platform) on your machine, install any dependencies, start up a server and maybe run a file watcher. Sometimes more complex projects require additional steps. This setup process is called a "build". It's all the things you need to do to get your app up and running. CI tools will run through all of these steps (and then some!) to make sure the application is in a stable, working state before it goes to production.
 
-Add a `.travis.yml` file to the root of your project. Yes, there is a dot in front of the filename because it is a hidden file.
-
 ## Phases of the Build Process
+The yml file can define settings for various phases of the build process. The phases of a build process are:
 
-The yml file can define settings for various phases of the build lifecycle. In TravisCI, there are two main phases of the [build lifecycle](https://docs.travis-ci.com/user/customizing-the-build/#The-Build-Lifecycle), three if you add on automatic deployment:
+* **machine:** adjust the behavior of the virtual machine (VM)
+* **checkout:** checkout and clone code from a repository
+* **dependencies:** install your project’s language-specific dependencies
+* **database:** prepare a database for tests
+* **compile:** compile your project
+* **test:** run your tests
+* **deployment:** deploy your code to your web servers
 
-* **install:** install any dependencies required (configure the virtual machine (VM) to be able to run your code)
-* **script:** run the build script (run your code and tests)
-* **deploy:** deploy your code to your web servers
+An example of how a `circle.yml` file might configure these build phases can be found in the documentation [here](https://circleci.com/docs/config-sample/).
 
-### Test
-
-Before we get started configuring the TravisCI installation, script, and deployment phases, let's make sure we have our test script set up.
-
-By default, in our Node projects the TravisCI test section will simply try to run `npm test`. If you don't currently have a command in here for your test script in your `package.json` file, update it to reflect the command you've been using to run your tests. That might look something like this:
-
-```js
-"scripts": {
-  "start": "node server.js",
-  "test": "NODE_ENV=test mocha --exit"
-}
-```
-
-**Run `npm test` to make sure your tests are passing locally.** If they are, you're ready to move on to the next steps. If not, then fix or skip the tests temporarily to get a passing test suite.
-
-## Begin TravisCI Configuration
-
-You take it from here. Let's push up our `.travis.yml` file to the master branch on GitHub, look at the TravisCI build, and squash those errors!
-
-## Checking Pull Requests
-
-After we have configured pushes to our master branch to successfully build, what about checking pull requests before they are merged?
-
-## Badges
-
-What about those cool badges you see in GitHub repositories that show if the latest build has passed all of the tests in TravisCI? How do we add this?
-
-<!-- ### Machine
+### Machine
 
 Let's create our circle.yml file and set some configuration options for our virtual machine. At the very least, you should pin down a timezone and the version of node you're running:
 
@@ -96,6 +67,17 @@ machine:
     America/Denver
   node:
     version: 7.10.0
+```
+
+### Test
+
+By default, in our node projects the CircleCI test section will simply try to run `npm test`. If you don't currently have a command in here for your test script in your `package.json` file, I would update it to reflect the command you've been using to run your tests. That might look something like this:
+
+```js
+"scripts": {
+  "test": "./node_modules/.bin/mocha",
+  "start": "node server.js"
+}
 ```
 
 Without changing our `package.json`, we could also override CircleCI's default test section (or any section for that matter) with:
@@ -184,8 +166,8 @@ You'll often see build status icons on the README files of popular open source l
 [heroku-deployments]: /assets/images/lessons/git-hooks/heroku-deployments.png
 [configure-deploys]: /assets/images/lessons/git-hooks/configure-deploys.png
 [wait-for-ci]: /assets/images/lessons/git-hooks/wait-for-ci.png
-[status-badges]: /assets/images/lessons/git-hooks/status-badges.png -->
+[status-badges]: /assets/images/lessons/git-hooks/status-badges.png
 
 ## Resources
 
-* [TravisCI Documentation](https://docs.travis-ci.com/)
+* [CircleCI Documentation](https://circleci.com/docs/)

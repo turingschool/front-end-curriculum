@@ -4,14 +4,21 @@ length:
 tags: javascript, js, array, object, 
 ---
 
-### Goals
+## Goals
 
 By the end of this lesson, students should be able to:
 
 * define technical debt
 * identify several code smells and areas for improvement in codebases
 
+## Vocab
 
+- `Technical Debt` The build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain
+- `Code Smell` A surface level indication of bad code that usually corresponds to a deeper, more fundamental problem
+- `Refactoring` The process of changing the internals of a system (it's factoring), without changing its external behavior
+- `Interface` The external boundary of a software component
+
+## The Basics
 
 Refactoring your code is an important part of reducing <b>technical debt</b>. Technical debt is the build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain.
  

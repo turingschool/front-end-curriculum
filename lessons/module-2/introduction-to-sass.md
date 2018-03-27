@@ -12,6 +12,11 @@ body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',san
 hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 </style>
 
+## Vocab
+
+- `CSS Preprocessor` A tool that processes some CSS-like language and turns it into CSS
+
+
 
 ## Intro to Sass
 

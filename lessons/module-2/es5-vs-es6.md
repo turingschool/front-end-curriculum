@@ -12,6 +12,11 @@ By the end of the lesson, you will
 * Be familiar with some of ES6 syntax and know how it relates to ES5
 * Know how inheritance works and be able to explain it
 
+## Vocab
+
+- `Scope` Where variables and functions are accessible
+- `Prototypal Inheritance` Inheritance by means of delegating message passing through a chain of objects (aka prototypes)
+
 ## The differences between ES5 and ES6
 
 Up until now, you've mostly been writing ECMAScript 5. (You can read more about ECMAScript [here](https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5).)

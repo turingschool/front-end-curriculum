@@ -12,6 +12,14 @@ By the end of this lesson, you will know/be able to:
 * Understand why cross-browser discrepencies occur and know how to resolve them
 * Utilize existing tools & strategies to ensure your apps are as consistent as possible across browsers and platforms
 
+## Vocab
+
+- `Progressive Enhancement` Stating that the base user experience will be one with the least features, then increasing the features supported as browser compatibility allows
+- `Graceful Degradation` Stating that the base user experience will be one with the most features, then removing features if a user's browser doesn't support it
+- `Fallback` Providing a plan B when your plan A isn't supported in a browser
+- `Polyfill` / `Shim` A user-provided stopgap to allow developers to program against the newest browser APIs while keeping as much compatibility as possible
+
+
 ## What is Cross-Browser Compatibility
 
 Cross-Browser compatibility describes the issues and strategies behind making sure your applications work in a consistent manner across as many browsers and platforms as possible. It is mainly an accessibility concern. As we have introduced more devices, operating systems and browsers into the world, attempting to support all of them has become a significant challenge. Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.

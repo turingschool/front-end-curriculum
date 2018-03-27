@@ -5,8 +5,6 @@ module: 2
 tags: npm, node, package
 ---
 
-**source:** Stolen and altered from Meeka's [mod 4 lesson](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/lessons/build-an-npm-module.md)
-
 ## Goals
 
 By the end of this lesson, you will know/be able to:
@@ -38,6 +36,129 @@ Note: as you read, prepare answers to the following discussion points
 
 - How might the fact that you don't control the version of the package that your users use affect your workflow?
 
+
+
+<div id="do"></div>
+
+## Set Up a Basic NPM Module
+
+### Sign up for an NPM account
+
+First you need to sign up for an NPM account over at [npmjs.org](https://npmjs.org). Remember the username you use to create an account - you'll need this later!
+
+Also make sure you verify the email address that you sign up with. They will likely send you an email confirmation to verify.
+
+### Create a new GitHub Repo
+
+Create a new GitHub repo from the GitHub web UI to host your npm package. You can name it whatever you'd like. (Something like `fake-package` is just fine.) 
+
+Make sure when you create your new GitHub repo you check the box that says 'Initialize this repository with a README', and add a `.gitignore` file. From the dropdown menu of pre-generated `.gitignore` files, choose 'Node'.
+
+### Create the Package Directory
+
+Create a new directory named after your new fancy node module (**USE lowercase and hyphens ONLY!**). It would make sense if it was named the same thing as your newly created GitHub repo. 
+
+```
+$ mkdir name-of-module
+$ cd name-of-module
+```
+
+Next, you'll initialize this directory as a git repo:
+
+```
+$ git init
+$ git remote add origin <github url>
+```
+
+Now let's add some files: 
+* an index.js file to contain our code (more complex packages may use more than one file)
+* A test folder with a test.js file in it
+
+```
+$ mkdir test
+$ touch index.js test/test.js
+```
+
+Next we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`)
+
+```
+$ npm init --scope=username
+```
+
+Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
+* **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
+* **License:** ISC is fine, [but what is it?](http://semver.org/)
+
+One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
+
+```
+$ npm i mocha -D
+$ npm i chai -D
+```
+
+Fun facts!
+
+`-D` is the same as `--save-dev`  
+`-S` is the same as `--save`
+
+
+In your `test.js` file include the following:
+
+```
+const chai = require('chai');
+const expect = chai.expect;
+```
+
+In your `index.js` file include the following:
+
+```
+const bubbleSort = (array) => {
+  for (let j = 0; j < array.length; j++) {
+    for (let i = 0; i < array.length - 1; i++) {
+      if (array[i] > array[i + 1]) {
+        [ array[i], array[i + 1] ] = [ array[i + 1], array[i] ]
+      }
+    }
+  }
+  return array;
+};
+
+module.exports = {
+  bubbleSort
+};
+```
+
+#### STOP!
+**If** we were going to publish this, we'd do ...
+
+  ```
+  npm publish --access=public
+  ```
+
+  Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
+
+  Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
+
+  ```
+  npm unpublish --force
+  ```
+
+**But instead, we're going to do this:**
+
+#### There's Another Way!
+
+You can actually import modules/packaged code from GitHub repos. It's as easy as typing:
+
+```
+npm install [GitHub URL] -S
+```
+
+and then requiring a specific module in your js file as you would with any other module.
+
+For this to work, make sure you are still bundling up your code with that `module.exports`.
+
+
+--------
 
 
 ## Cheatsheet
@@ -146,106 +267,7 @@ Then:
 - The `--save-dev` flag means that the dependency is only used by developers. The `--save` flag means that this dependency has to be used for the package to work in production. It really matters here. When people include your npm module in their `node_modules` folder, the dev dependencies won't come along for the ride. That's important, because number of lines of code matter for the speed of an application. If you completely omit the `--save` flag, then your npm module won't work when other folks pull it down.
 
 ---
-<div id="do"></div>
 
-## Set Up a Basic NPM Module
-
-Create a new directory named after your new fancy node module (**USE lowercase ONLY!**) 
-
-```
-$ mkdir name-of-module
-```
-
-We'll want to add some files: 
-* A README.md to explain how to set up and use our module
-* an index.js file to contain our code (more complex packages may use more than one file)
-* A test folder with a test.js file in it
-
-```
-$ echo "# Name of Node Module" >> README.md
-$ mkdir test
-$ touch index.js test/test.js
-```
-
-Next we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`)
-
-```
-$ npm init --scope=username
-```
-
-Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
-* **name:** the default will be `@username/project-name`, you need to change "@username" to be your npm account username
-* **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
-* **License:** ISC is fine, [but what is it?](http://semver.org/)
-
-One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
-
-```
-$ echo "node_modules/" >> .gitignore
-$ npm i mocha -D
-$ npm i chai -D
-```
-
-Fun facts!
-
-`-D` is the same as `--save-dev`  
-`-S` is the same as `--save`
-
-
-In your `test.js` file include the following:
-
-```
-const chai = require('chai')
-const expect = chai.expect
-```
-
-In your `index.js` file include the following:
-
-```
-const bubbleSort = (array) => {
-  for (let j = 0; j < array.length; j++) {
-    for (let i = 0; i < array.length - 1; i++) {
-      if (array[i] > array[i + 1]) {
-        [ array[i], array[i + 1] ] = [ array[i + 1], array[i] ]
-      }
-    }
-  }
-  return array;
-};
-
-module.exports = {
-  bubbleSort
-};
-```
-
-#### STOP!
-**If** we were going to publish this, we'd do ...
-
-  ```
-  npm publish --access=public
-  ```
-
-  Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
-
-  Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
-
-  ```
-  npm unpublish --force
-  ```
-
-**But instead, we're going to do this:**
-
-#### There's Another Way!
-
-You can actually import modules/packaged code from GitHub repos. It's as easy as typing:
-
-```
-npm install [GitHub URL] -S
-```
-
-and then requiring a specific module in your js file as you would with any other module.
-
-For this to work, make sure you are still bundling up your code with that `module.exports`.
 
 --------
 ## tl;dr

@@ -17,6 +17,13 @@ In this lesson, we will hand-roll the repo that we'll use for our Sorting Suite 
 3. Create two files: `lib/index.js` and `README.md`
 4. Initialize git and push your project to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
 
+## Vocab
+
+- `Dependency` Something your program needs in order to do it's job that is provided by an external source
+- `NPM` Node Package Manager is a repository of JavaScript libraries
+- `Webpack` Broadly, a thing that takes your many files and combines them into just a few files a web browser can understand
+- `Linter` A tool that checks your code for any obvious errors
+
 ---
 
 ## NPM

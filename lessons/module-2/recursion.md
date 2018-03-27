@@ -15,6 +15,10 @@ module: 2
 - Be able to solve problems using recursion
 - Understand the limitations of recursion in JS
 
+## Vocab
+
+- `Recursive Function` a function that calls itself
+
 ## What is recursion?
 
 Recursion is an important programming technique in which a function _calls itself_.

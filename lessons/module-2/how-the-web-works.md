@@ -5,6 +5,19 @@ tags: javascript
 module: 2
 ---
 
+## Vocab
+
+- `Client` A computer that is consuming data (and is a client of a server)
+- `Server` A computer that is providing (serving) data
+- `URI` Uniform Resource Identifier
+- `URL` Uniform Resource Locator
+- `HTTP` Hyper Text Transfer Protocol
+- `DNS` Domain Name System
+- `RNS` Resolving Name Server
+- `TLD` Top Level Domain
+- `ANS` Authoritative Name Server
+- `IP Address` Internet Protocol Address
+
 ## The Why.
 
 We all use the internet. It's engrained in everything thing that we do. If our career's are going to be centered around the web we might want to have a general understanding of how the web actually works.
