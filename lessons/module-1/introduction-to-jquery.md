@@ -4,6 +4,16 @@ length: 180
 tags: jquery, javascript
 ---
 
+## Learning Goals
+- Learn what jquery is
+- Understand basic differences between jquery object and dom element
+- Find elements in the DOM
+- Add event listeners
+- Retrieve info from the DOM
+- Add/remove css classes
+- Traverse the DOM
+- Add to the DOM
+
 jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about 78% of the top million web pages, so it's worth while getting comfortable with it.
 
 #### Loading the jQuery library
