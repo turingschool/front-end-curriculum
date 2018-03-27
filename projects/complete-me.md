@@ -143,57 +143,6 @@ completion.suggest("piz")
 
 ## Phase 4
 
-The common gripe about autocomplete systems is that they give us
-suggestions that are technically valid but not at all what we wanted.
-
-A solution to this problem is to "train" the completion dictionary
-over time based on the user's actual selections. So, if a user
-consistently selects "pizza" in response to completions for "pizz",
-it probably makes sense to recommend that as their first suggestion.
-
-Your library should support a `select` method
-which takes a suggested word. You
-will need to record this selection in your trie and use it
-to influence future suggestions.
-
-Here's what that interaction model should look like:
-
-```
-import Trie from "./lib/Trie"
-
-const text = "/usr/share/dict/words"
-
-const dictionary = fs.readFileSync(text).toString().trim().split('\n')
-
-const completion = new Trie()
-
-completion.populate(dictionary)
-
-completion.suggest("piz")
-=> ["pize", "pizza", "pizzeria", "pizzicato", "pizzle", ...]
-
-completion.select("pizzeria")
-
-completion.suggest("piz")
-=> ["pizzeria", "pize", "pizza", "pizzicato", "pizzle", ...]
-
-```
-
-## Phase 5
-
-Sometimes auto-completes give suggestions which we never want to see. Add a delete method to your Trie. 
-```js
-completion.suggest("piz")
-=> ["pizzeria", "pize", "pizza", "pizzicato", "pizzle", ...]
-
-completion.delete("pizzle");
-
-completion.suggest("piz")
-=> ["pizzeria", "pize", "pizza", "pizzicato", ...]
-```
-
-## Phase 6
-
 Next week you will create a Weather App that needs an autocomplete feature.
 Package your complete-me trie in a node module so that you can import it into
 future projects. (Note: don't publish to npm, you can install your package from github)
@@ -204,31 +153,46 @@ future projects. (Note: don't publish to npm, you can install your package from 
 
 See if you can implement a front facing application for your `trie`. The user should be able to submit a word and then receive the suggestions on the dom.
 
+### Delete method
+
+Sometimes auto-completes give suggestions which we never want to see. Add a delete method to your Trie. 
+
+```
+completion.suggest("piz")
+=> ["pizzeria", "pize", "pizza", "pizzicato", "pizzle", ...]
+
+completion.delete("pizzle");
+
+completion.suggest("piz")
+=> ["pizzeria", "pize", "pizza", "pizzicato", ...]
+```
+
 ## Evaluation Rubric
 
-The project will be assessed with the following rubric:
+The project will have two parts: an in-person live code, and a code review of the complete project.
 
-### 1. Fundamental JavaScript & Style
+Complete Me will be assessed with the following rubric:
+
+### 1. Process
+
+* 4: Developer demonstrates a clear understanding of their own problem solving process. Logically breaks down large problems into manageable challenges. Has a thoughtful, refined strategy for approaching complex challenges. Developer clearly articulates thought processes.
+* 3: Developer has strategies for approaching complex challenges. Can explain thought process and strategy when prompted. 
+* 2: Developer demonstrates a haphazard, trial and error approach, without clear strategy. Developer does not articulate thought process clearly, and cannot explain the problem-solving strategies they utilized.
+* 1: Developer does not demonstrate any strategy or process. No meaningful code is written and developer cannot articulate their process.
+
+### 2. Fundamental JavaScript & Style
 
 * 4:  Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring
 * 3:  Application shows strong effort towards organization, content, and refactoring
 * 2:  Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring
 * 1:  Application generates syntax error or crashes during execution
 
+### 3. Test-Driven Development & Code Sanitation
 
-### 2. Test-Driven Development
-
-* 4: Application is broken into components which are well tested in both isolation and integration using appropriate data
-* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality
-* 2: Application makes some use of tests, but the coverage is insufficient
-* 1: Application does not demonstrate strong use of TDD
-
-### 3. Encapsulation / Breaking Logic into Components
-
-* 4: Application is expertly divided into logical components each with a clear, single responsibility
-* 3: Application effectively breaks logical components apart but breaks the principle of SRP
-* 2: Application shows some effort to break logic into components, but the divisions are inconsistent or unclear
-* 1: Application logic shows poor decomposition with too much logic mashed together
+* 4: Application is broken into components which are well tested in both isolation and integration using appropriate data. Linting shows 0 complaints.
+* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality. Linting shows five or fewer complaints.
+* 2: Application makes some use of tests, but the coverage is insufficient. Linting shows ten or fewer complaints.
+* 1: Application does not demonstrate strong use of TDD. Linting shows more than ten complaints.
 
 ### 4. Functional Expectations
 
@@ -236,15 +200,6 @@ The project will be assessed with the following rubric:
 * 3: Application meets all requirements as laid out per the specification.
 * 2: Application runs, but does not work properly, or does not meet specifications.
 * 1: Application does not run, crashes on start.
-
-### 5. Code Sanitation
-
-The output from ESLint shows…
-
-* 4 - Zero complaints
-* 3 - Five or fewer complaints
-* 2 - Six to ten complaints
-* 1 - More than ten complaints
 
 
 ## Additional Rescources
