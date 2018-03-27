@@ -5,8 +5,6 @@ module: 2
 tags: npm, node, package
 ---
 
-**source:** Stolen and altered from Meeka's [mod 4 lesson](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/lessons/build-an-npm-module.md)
-
 ## Goals
 
 By the end of this lesson, you will know/be able to:
@@ -150,6 +148,20 @@ Then:
 
 ## Set Up a Basic NPM Module
 
+### Sign up for an NPM account
+
+First you need to sign up for an NPM account over at [npmjs.org](https://npmjs.org). Remember the username you use to create an account - you'll need this later!
+
+Also make sure you verify the email address that you sign up with. They will likely send you an email confirmation to verify.
+
+### Create a new GitHub Repo
+
+Create a new GitHub repo from the GitHub web UI to host your npm package. You can name it whatever you'd like. (Something like `fake-package` is just fine.) 
+
+Make sure when you create your new GitHub repo you check the box that says 'Initialize this repository with a README', and add a `.gitignore` file. From the dropdown menu of pre-generated `.gitignore` files, choose 'Node'.
+
+### Create the Package Directory
+
 Create a new directory named after your new fancy node module (**USE lowercase ONLY!**) 
 
 ```
@@ -157,12 +169,10 @@ $ mkdir name-of-module
 ```
 
 We'll want to add some files: 
-* A README.md to explain how to set up and use our module
 * an index.js file to contain our code (more complex packages may use more than one file)
 * A test folder with a test.js file in it
 
 ```
-$ echo "# Name of Node Module" >> README.md
 $ mkdir test
 $ touch index.js test/test.js
 ```
@@ -174,14 +184,12 @@ $ npm init --scope=username
 ```
 
 Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
-* **name:** the default will be `@username/project-name`, you need to change "@username" to be your npm account username
 * **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
 * **License:** ISC is fine, [but what is it?](http://semver.org/)
 
 One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
 
 ```
-$ echo "node_modules/" >> .gitignore
 $ npm i mocha -D
 $ npm i chai -D
 ```
@@ -195,8 +203,8 @@ Fun facts!
 In your `test.js` file include the following:
 
 ```
-const chai = require('chai')
-const expect = chai.expect
+const chai = require('chai');
+const expect = chai.expect;
 ```
 
 In your `index.js` file include the following:
