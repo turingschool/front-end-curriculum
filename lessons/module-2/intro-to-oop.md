@@ -10,6 +10,17 @@ module: 2
 * Be able to speak to the benefits of OOP
 * Understand inheritance
 
+## Vocab
+
+- `OOP` Object Oriented Programming
+- `Object` A grouping of data and behavior
+- `Inheritance` The practice of allowing new objects to take on the data and behavior of their parents
+- `Encapsulation` Hiding the details of how an object works & grouping data and behavior
+- `Instance` One specific copy of an object
+- `Message Passing` The way in which Objects talk to each other
+- `SRP` Single Responsibility Principle
+- `Coupling` The level of connectedness between two objects
+
 ---
 
 # What is Object Oriented Programming?

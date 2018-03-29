@@ -16,6 +16,11 @@ By the end of this lesson, you will:
   * Findind A Value
   * Depth First vs Breadth First Search
 
+## Vocab
+
+  - `Data Structure` A way of structuring data, usually so that it can be used by an algorithm
+  - `Algorithm` A set of rules and processes for solving a problem
+
 ## Data Structures
 
 A common theme in computer programming is deciding how to store and organize data within an application. The particular approach used to organize the data is called a "data structure". These can come in many shapes and sizes - think an array, or an object. They can also come in more complex forms like a stack, linked list, or in today's case, a binary search tree.

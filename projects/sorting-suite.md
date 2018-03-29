@@ -22,8 +22,6 @@ For your testing start with testing small arrays of numbers and/or letters.
 For more advanced testing you will need to generate arrays of numbers to see how large of an array your different
 sorting algorithms can sort.
 
-You will use this [repo](https://github.com/turingschool-examples/tdd).
-
 ## 1. Bubble Sort
 
 ### Big Picture
@@ -319,11 +317,15 @@ The evaluation will be pass/fail.
 
 You will be need to be able to explain any of the four sorting algorithms using numbered cards.
 
-You will need to be able to write either quick sort or merge sort after explaining how it works.
+You will need to be able to write either quick sort or merge sort after explaining how it works:
+ - Demonstrating your thought process (this is NOT a memorization exercise)
+ - Using ES6 syntax when comfortable
 
 ### Testing Requirements
 
 To stress test your sorting algorithms you will need to sort large arrays of random numbers. You will need to create a function to generate large arrays of random numbers.
+
+Your tests should demonstrate the differing efficiencies of each sort. For example, mergeSort will be able to handle much larger arrays than bubbleSort, and your tests should reflect that.
 
 In your tests see how large of an array you can consistently sort before the test times out.
 

@@ -15,6 +15,12 @@ By the end of the lesson, you will know:
 * How to create closures
 * What IIFEs are
 
+## Vocab
+
+- `Scope` Where variables and functions are accessible
+- `Closure` An inner function that has access to (aka closes over) the variables declared outside itself
+- `IIFE` Immediately invoked function expressions. An anonymous function that's declared and invoked at the same time
+
 ## What is scope?
 
 Scope refers to where variables and functions are accessible, and in what context the code is being executed.

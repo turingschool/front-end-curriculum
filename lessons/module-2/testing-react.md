@@ -40,6 +40,17 @@ npm test
 * Have some understanding of how to test it
 * Be super pumped to go test every component in your app
 
+## Vocab (from the TDD lesson)
+
+- `TDD` Test Driven Development / Design
+- `Four Phase Test` A test that is organized into the phases [Setup, Execution, Assertion, Teardown]
+- `Assertion` An expression containing some testable logic
+- `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
+- `Testing Framework` A library that determines how tests are organized and executed
+- `SUT` or `Subject Under Test` The unit being tested
+- `The Testing Pyramid` A diagram describing, roughly, the amount of unit, system, and UI tests to have in a test suite
+- `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
+
 ---
 
 ## Jest

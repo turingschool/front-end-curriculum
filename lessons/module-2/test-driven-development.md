@@ -10,6 +10,17 @@ mod: 2
   - Discuss Mocha and Chai on a deeper level  
   - Write some tests!  
 
+## Vocab
+
+- `TDD` Test Driven Development / Design
+- `Four Phase Test` A test that is organized into the phases [Setup, Execution, Assertion, Teardown]
+- `Assertion` An expression containing some testable logic
+- `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
+- `Testing Framework` A library that determines how tests are organized and executed
+- `SUT` or `Subject Under Test` The unit being tested
+- `The Testing Pyramid` A diagram describing, roughly, the amount of unit, system, and UI tests to have in a test suite
+- `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
+
 ## Review: What is TDD?
 
 TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.   

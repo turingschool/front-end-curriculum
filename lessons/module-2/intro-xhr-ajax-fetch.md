@@ -11,6 +11,11 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 * Understand how network requests work
 * Know what a `GET` request does and how to use it
 
+## Vocab
+
+- `Async` / `Asynchronous` Executing code without blocking the execution of code after it
+- `AJAX` Updating a webpage based on data from the network without reloading the whole thing
+
 ---
 
 ### What is this asynchronous thing all about?

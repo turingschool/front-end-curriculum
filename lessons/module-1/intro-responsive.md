@@ -1,14 +1,32 @@
 ---
 title: Intro to Responsive Layouts
+length: 60
+tags: html, css
 ---
 
-# Overview & Docs
+### Learning Goals
+- Understand and describe page layout
+- Understand and apply media queries
 
-We can't control how our users interact with our products, but we *can* make sure that our work looks good and functions correctly on all screen sizes. Your product lives online, it's important to make sure that no matter how a user accesses it they are able to use it successfully and without frustration.
+## Vocabulary
 
-A general understanding of responsive website design and how to use media queries and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your toolbelt.
+- Page layout
+  - static, liquid, adaptive, and responsive
+- Media query
+- Breakpoint
+- CSS reset
+- Viewport meta tag
+
+## Introduction
+
+We can't control how our users interact with our products, but we *can* make sure that our work looks good and functions correctly on all screen sizes. Your product lives online, it's important to make sure that no matter how a user accesses it they are able to use it successfully.
+
+A general understanding of responsive website design, how to use media queries, and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your toolbelt.
 
 In this session, we'll be diving into responsive page layouts and using media queries to control your page content at all screen sizes. This lesson assumes you are familiar with HTML and CSS fundamentals.
+
+**Page Layout**
+The arrangement and sizing of visual elements on a web page
 
 There are four primary page layout types:
 
@@ -99,7 +117,7 @@ We'll keep this content simple for now so we can focus on getting the HTML eleme
 <!doctype html>
 <html>
 <head>
-    <title>Responsive Site Example</title>
+  <title>Responsive Site Example</title>
 </head>
 <body>
   <header>
@@ -201,7 +219,7 @@ Boom! We have a simple site! Now, try making your browser window big and then ma
 
 If we open our developer tools, we'll be able to see the pixel width of the screen as we change the width. Let's figure out at what point it starts to look bad at large and small sizes.
 
-Our site looks pretty good at medium screen sizes, but the ``main-content`` and ``secondary-content`` sections start looking too wide beyond 900px. On smaller screens, our ``secondary-content `` starts looking a too crowded below 550px. Great! We'll use 900px as our breakpoint for larger screens and 550px as our breakpoint for smaller screens. This is a very simple site, so those should be sufficient for now.
+Our site looks pretty good at medium screen sizes, but the ``main-content`` and ``secondary-content`` sections start looking too wide beyond 900px. On smaller screens, our ``secondary-content `` starts looking too crowded below 550px. Great! We'll use 900px as our breakpoint for larger screens and 550px as our breakpoint for smaller screens. This is a very simple site, so those should be sufficient for now.
 
 Now, you may be thinking that this seems like a pretty imprecise way to identify your breakpoints. The fact is that we are at the mercy of our content and we must make breakpoint decisions based on what works best for each specific project rather than the screen sizes and resolutions of a particular device. There are so many devices and so many ways to view a website that it's safer to make sure your site just works right at any size. If you want to take a look at a list of device-specific media queries (which can be helpful to get an idea of what you're up against or if you're wrangling a specific issue), CSS-Tricks has a [great post](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/) for you.
 
@@ -220,7 +238,8 @@ initial-scale=1
 In more human terms these say..
 
 * __Width__: Make the width of the page the same width as whatever screen it is being shown on.
-* __Initial Scale__: If the page is shown in landscape (a phone turned sideways) make the page as wide as it can be within that screen.
+* __Initial Scale__: Controls the zoom level when the page is first loaded.
+
 Let's start with our media query for large screens. We know we want our breakpoint to be 900px. Let's add a loud background color to our ``body`` just to make sure it's hooked up.
 
 ```css
