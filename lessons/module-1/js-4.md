@@ -187,7 +187,7 @@ restaurant2.name;
 ```
 
 ## Adding methods to our constructed objects
-The constructor function prototype is a blueprint that is inherited by each object instance.
+The constructor function prototype is a blueprint that is inherited by each object created by the constructor function.
 ```javascript
   Restaurant.prototype.checkAvailability = function () {
     return this.tables - this.reservations;
