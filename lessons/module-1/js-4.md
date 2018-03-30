@@ -168,15 +168,6 @@ Let's talk about what's going on here:
 - Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma  
 - Constructor functions begin w/ capital letters (PascalCase), unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
 
-## Adding methods to our constructed objects
-The constructor function prototype is a blueprint that 
-```javascript
-  Restaurant.prototype.checkAvailability = function () {
-    return this.tables - this.reservations;
-  }
-```
-- Each object created will inherit this method for checking availability.
-
 ## Revisiting `this`
 The keyword `this` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, `this` refers to the restaurant object created when the function runs. Let's look at this real quick with an abbreviated version of our Restaurant constructor:
 
@@ -194,6 +185,15 @@ var restaurant2 = new Restaurant("Chilis");
 restaurant1.name;
 restaurant2.name;
 ```
+
+## Adding methods to our constructed objects
+The constructor function prototype is a blueprint that is inherited by each object instance.
+```javascript
+  Restaurant.prototype.checkAvailability = function () {
+    return this.tables - this.reservations;
+  }
+```
+- Each object created will inherit this method for checking availability.
 
 ### Your Turn
 
