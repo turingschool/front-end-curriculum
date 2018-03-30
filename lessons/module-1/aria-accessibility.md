@@ -261,7 +261,7 @@ If time allows, reconvene with the class to discuss the answers to these questio
 
 All information in this lesson plan was pulled as a summary of the following two videos:
 
-* [Aria Roles, States, and Properites](https://www.youtube.com/watch?v=JptGV3XqNNk)
+* [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
 * [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
 
 This is the documentation for ARIA. As you can see it is super dense and hard to
@@ -270,3 +270,6 @@ pull out the practical pieces:
 * [Aria Documentation](https://www.w3.org/TR/wai-aria)
 * [MDN Documnentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 * [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
+
+Tools
+* [aXe Chrome Plugin](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
