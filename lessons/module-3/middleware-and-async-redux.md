@@ -1,3 +1,8 @@
+---
+title: Middleware and Async Redux
+tags: middleware, thunk, redux-thunk, redux
+---
+
 # MIDDLEWARE and ASYNC REDUX
 
 We often need to send data to and get data from a database. Now that we are implemeting Redux in our applications, let's take a look at how middleware can help us deal with our asynchronous Redux code.
@@ -22,7 +27,7 @@ A thunk is just another name for a function. But it's not just any old function.
 
 ```javascript
 const notAThunk = () => {
-	return () => console.log('do stuff now')
+   return () => console.log('do stuff now')
 }
 ```
 Here, the inner function that is returned is a thunk. You've probably seen this patter before; you just didn't know it was a thunk. If you want to execute the `do stuff now` part, you would have to call it like `notAThunk()()` - calling it twice, basically.
@@ -51,9 +56,9 @@ If we take a look at `App.js`, we can see that our component's state currently h
 ```javascript
 // App.js
 this.state = {
-	staff: [],
-	isLoading: false,
-	hadErrored: false
+   staff: [],
+   isLoading: false,
+   hadErrored: false
 }
 ```
 ##### Take a few minutes and review the `fetchStaff`, `fetchBios`, and `commponentDidMount` methods that are being used to fetch our data and handle our loading and error cases.
@@ -82,18 +87,18 @@ Let's create an `actions` folder with an `index.js` to hold all of our actions. 
 // actions/index.js
 
 export const isLoading = (bool) => ({
-	type: 'IS_LOADING',
-	isLoading: bool
+   type: 'IS_LOADING',
+   isLoading: bool
 })
 	
 export const hasErrored = (bool) => ({
-	type: 'HAS_ERRORED',
-	hasErrored: bool
+   type: 'HAS_ERRORED',
+   hasErrored: bool
 })
 
 export const staffFetchDataSuccess = (staff) => ({
-	type: 'STAFF_FETCH_DATA_SUCCESS',
-	staff
+   type: 'STAFF_FETCH_DATA_SUCCESS',
+   staff
 })
 ```
 Now that we have the 3 actions that will represent our state, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize our `redux-thunk` middleware.
