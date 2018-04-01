@@ -4,8 +4,6 @@ tags: middleware, thunk, redux-thunk, redux
 module: 3
 ---
 
-# MIDDLEWARE and ASYNC REDUX
-
 We often need to send data to and get data from a database. Now that we are implemeting Redux in our applications, let's take a look at how middleware can help us deal with our asynchronous Redux code.
 
 Once we fetch our data, we no longer want to store it in our component's state. We now want to be able to put it in the Redux store when it comes back.
