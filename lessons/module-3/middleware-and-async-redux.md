@@ -1,6 +1,7 @@
 ---
 title: Middleware and Async Redux
 tags: middleware, thunk, redux-thunk, redux
+module: 3
 ---
 
 # MIDDLEWARE and ASYNC REDUX
