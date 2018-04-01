@@ -22,7 +22,7 @@ If we think about it, there are 3 stages of an asynchronous request:
 
 Our state needs to account for each of these stages. 
 
-## Thunk
+## Thunk, n.
 
 A thunk is just another name for a function. But it's not just any old function... it's a special name for a function that wraps an expression to delay its evaluation. Let's take a look at a very basic example of a thunk.
 
