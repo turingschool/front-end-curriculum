@@ -1,5 +1,5 @@
 ---
-title: REDUX-THUNK MIDDLEWARE
+title: **REDUX-THUNK MIDDLEWARE**
 tags: middleware, thunk, redux-thunk, redux
 module: 3
 ---
