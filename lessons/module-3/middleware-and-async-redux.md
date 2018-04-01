@@ -12,7 +12,7 @@ Once we fetch our data, we no longer want to store it in our component's state. 
 
 ## What is Middleware?
 
-Middleware provides a 3rd party between dispatching an action and the moment it reaches a reducer. It basically allows us to hook into the lifecycle of Redux and perform some kind of actions between the time an action is dipatched and the time it gets to the reducer.
+Middleware provides a 3rd party between dispatching an action and the moment it reaches a reducer. It basically allows us to hook into the lifecycle of Redux and run some other code between the time an action is dipatched and the time it gets to the reducer.
 
 If we think about it, there are 3 stages of an asynchronous request:
 
