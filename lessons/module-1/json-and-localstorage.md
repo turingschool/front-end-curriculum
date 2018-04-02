@@ -4,6 +4,16 @@ length: 60
 tags: web apis, storage, persistence
 ---
 
+### Learning Goals
+
+- Understand and utilize localStorage
+- Understand and utilize JSON
+
+### Vocabulary
+
+- localStorage
+- JSON
+
 ### What is Local Storage?
 
 [`localStorage`][ls-mdn] is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
@@ -48,7 +58,7 @@ When we're communicating with servers, we use a transport protocol called HTTP.
 
 HTTP powers the web, but it does have one limitation. All information can only be sent back and forth using strings. Strings are great, but it's not hard to imagine a world where we might want to send slightly more complicated data structures back (e.g. objects and arrays) back and forth between the client and the server.
 
-JSON stands for "JavaScript Object Notation" and is an alternative to [XML](https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53) as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. All JSON objects are valid JavaScript, but not all JavaScript objects are valid JSON. JSON is a language-independent data format.
+JSON stands for "JavaScript Object Notation" and is an alternative to [XML](https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53) as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. JSON is a language-independent data format that is easy for humans to read and write and easy for machines to parse and generate.
 
 JSON has the following rules:
 
