@@ -306,7 +306,7 @@ var dogs = [
 ```
 
 * Return the dog named Elmer. Store what is returned in the variable `DavidsDog`.
-* Return the dog who is medium in size. Store what is returned in the variable `firstMediumDog`.
+* Return the dog that is medium in size. Store what is returned in the variable `firstMediumDog`.
 
 #### Journal
 
