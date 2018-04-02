@@ -276,7 +276,7 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 ### Array.prototype.find
 
-[`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it only returns the first element where the callback function returns a truthy value. If the callback function returns a falsy value for all of the elements the `.find` method will return `undefined`.
+[`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it returns the first element in the array that satisfies the testing function. In the event that you are testing truthy vs falsy values like the example below, `find()` will return `undefined` if there are no truthy values found.
 
 ```js
 var beatles = [
@@ -290,6 +290,10 @@ var aLivingBeatle = beatles.find(function (beatle) {
   return beatle.living;
 });
 ```
+
+One key difference between `filter()` and `find()` is the fact that the `filter()` method will run through the end of the array wheras `find()` will stop once it comes across the first element that satisfies the testing function.
+
+Another thing to note is that this method is not supported by any version of Internet Explorer. However, this method is supported by Edge.
 
 #### Your Turn
 
