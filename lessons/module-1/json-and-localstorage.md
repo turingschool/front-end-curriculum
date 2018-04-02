@@ -5,6 +5,7 @@ tags: web apis, storage, persistence
 ---
 
 ### Learning Goals
+- Understand the difference between server-side and client-side storage
 - Understand and utilize localStorage
 - Understand and utilize JSON
 
