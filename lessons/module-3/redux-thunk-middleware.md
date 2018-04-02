@@ -31,7 +31,7 @@ const notAThunk = () => {
    return () => console.log('do stuff now')
 }
 ```
-Here, the inner function that is returned is a thunk. You've probably seen this patter before; you just didn't know it was a thunk. If you want to execute the `do stuff now` part, you would have to call it like `notAThunk()()` - calling it twice, basically.
+Here, the inner function that is returned is a thunk. You've probably seen this pattern before; you just didn't know it was a thunk. If you want to execute the `do stuff now` part, you would have to call it like `notAThunk()()` - calling it twice, basically.
 
 ## Redux-Thunk
 
