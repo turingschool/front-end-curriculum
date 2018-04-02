@@ -133,10 +133,14 @@ Finding a Node in our linked list structure is a bit more difficult than when we
   }
 ```
 
-#### Shift
-#### Unshift
-#### Insert
-#### Remove
+#### On Your Own: Insert & Remove
+
+* Create an `insert` method that allows you to insert a new Node at any place in the LinkedList.
+* Create a `delete` method that allows you to remove any Node in the LinkedList.
+
+Remember to read the tests to see how these methods should behave!
+
+
 
 ### Extensions
 
