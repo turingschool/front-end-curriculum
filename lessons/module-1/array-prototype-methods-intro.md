@@ -6,9 +6,23 @@ tags: JavaScript, array, prototype
 
 ### Learning Goals
 
-In this segment, you'll learn the following:
+- Understand and know when to implement the following arrray prototype methods:
 
-* How to use the `Array.prototype` `forEach()`, `map()`, `filter()`, `find()`, `reduce()`, and `sort()` methods.
+- forEach()
+- map()
+- filter()
+- find()
+- reduce()
+- sort()
+
+## Vocabulary
+
+- callback function
+- element
+- value
+- index
+- iterate
+- truthy/falsy
 
 ### Context
 
@@ -79,9 +93,9 @@ Notice that the condition is crucial in controlling the flow of our loop. If the
 
 #### Your Turn
 
-1. Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+* Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
 
-2. Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+* Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
 
 ### Array.prototype.forEach
 
@@ -127,7 +141,7 @@ This will log the following output to the console:
 
 JavaScript allows you to omit arguments without raising an error. You can use this to your advantage by leaving out the index and the full array if you're not using them, which is common and what we did in the first example. However, if you do need either or both the index or the full array, you have access to them.
 
-`forEach()` has a few advantages over using a `for` loop. First, it's quicker to write and easier to read. Secondly, JavaScript has function scope, but not block scope. This means that `number` in our first example is scoped only to our callback function, whereas `i` is accessible outside of the loop body, which is the global scope in this case. The latter could have some unintended consequences.
+`forEach()` has a few advantages over using a `for` loop. First, it's quicker to write and easier to read. Secondly, JavaScript has function scope, but not block scope. This means that `letter` in our first example is scoped only to our callback function, whereas `i` is accessible outside of the loop body, which is the global scope in this case. The latter could have some unintended consequences.
 
 `forEach()` is the foundation for many of the other methods we'll explore today and you can accomplish much of the same functionality with `forEach()` that other methods specialize in. That said, just because you _can_ use it, it doesn't mean it's the best choice and that you _should_ use it. More on this later.
 
@@ -262,6 +276,18 @@ var aLivingBeatle = beatles.find(function (beatle) {
 ```
 
 
+#### Your Turn
+
+```js
+var dogs = [
+  { name: 'Pandora', size: 'small', toys: ['ball', 'squeaky bone'] },
+  { name: 'Antigone', size: 'medium', toys: ['ball', 'cowbell'] },
+  { name: 'Elmer', toys: size: 'medium', ['frisbee', 'ball', 'cowbell' ] }
+];
+```
+
+* Return the dog named Elmer that is saved to the variable `DavidsDog`.
+* Return the dog who is medium in size. Store what is returned in the variable `firstMediumDog`.
 
 ### Array.prototype.reduce
 
@@ -373,6 +399,10 @@ console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 * Sort the numbers in the array in descending order: `[2, 56, 5, 8, 1, 100]`.
 
 * Sort the words in alphabetical order according to the second letter in the word: `["couch", "blender", "island", "cereal", "chair"]`.
+
+## Summary
+
+
 
 ### Additional Resources
 
