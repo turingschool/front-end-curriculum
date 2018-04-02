@@ -301,7 +301,7 @@ Another thing to note is that this method is not supported by any version of Int
 var dogs = [
   { name: 'Pandora', size: 'small', toys: ['ball', 'squeaky bone'] },
   { name: 'Antigone', size: 'medium', toys: ['ball', 'cowbell'] },
-  { name: 'Elmer', toys: size: 'medium', ['frisbee', 'ball', 'cowbell' ] }
+  { name: 'Elmer', size: 'medium', toys: ['frisbee', 'ball', 'cowbell' ] }
 ];
 ```
 
