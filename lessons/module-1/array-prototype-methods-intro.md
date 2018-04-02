@@ -17,12 +17,12 @@ tags: JavaScript, array, prototype
 
 ## Vocabulary
 
-- callback function
-- element
-- value
-- index
-- iteration
-- truthy/falsy
+- `callback function` Also known as a higher-order function. A function that is passed to another function
+- `array` A data structure consisting of a collection of elements (values or variables)
+- `index` The position of each element within an array
+- `iteration` A set of instructions or structures that are repeated in a sequence a specificed number of times _or_ until a condition is met
+- `truthy` A value that is considered true when evaluated in a Boolean context
+- `falsy` A values that is considered false when evaluated in a Boolean context
 
 ### Context
 
