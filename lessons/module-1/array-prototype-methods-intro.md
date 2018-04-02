@@ -8,12 +8,12 @@ tags: JavaScript, array, prototype
 
 - Understand and know when to implement the following arrray prototype methods:
 
-- forEach()
-- map()
-- filter()
-- find()
-- reduce()
-- sort()
+- `forEach()`
+- `map()`
+- `filter()`
+- `find()`
+- `reduce()`
+- `sort()`
 
 ## Vocabulary
 
@@ -21,7 +21,7 @@ tags: JavaScript, array, prototype
 - element
 - value
 - index
-- iterate
+- iteration
 - truthy/falsy
 
 ### Context
@@ -159,6 +159,12 @@ And one additional:
 
 * If we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
 
+#### Journal
+
+Open your journal and answer the following questions:
+- What are the most important/significant ideas or elements of the `forEach()` method?
+- Why do stores like `forEach()`?
+
 ### Array.prototype.map
 
 `forEach()` will iterate through each element in an array and pass that element to an anonymous function. It's not uncommon that we find ourselves in a position where we need to transform the contents of an array.
@@ -198,6 +204,11 @@ Like `forEach()`, `map()` accepts an anonymous function that it calls on each el
 * From before, if we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. This time we should end up with an array `[5, 7, 9]`.
 
 * Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius; `degreesF = [67, 32, 55, 102]`. It should roughly become `[19.44, 0, 12.77, 38.88]`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm) to convert from Fahrenheit to Celsius.
+
+#### Journal
+
+- What parts of `map()` are similar to `forEach()`? What parts are differents? 
+- Why do geneticists use `map()`? 
 
 ### Array.prototype.filter
 
@@ -258,8 +269,13 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 * Filter on the array to return objects that are not thirsty: `[{name: "Martha", thirsty: true}, {name: "Pam", thirsty: false}, {name: "Roberta", thirsty: true}]`.
 
+#### Journal
+
+- How could you put `filter()` into practice on one of your current projects?
+- Why does `filter()` make such a good private investigator? 
 
 ### Array.prototype.find
+
 [`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it only returns the first element where the callback function returns a truthy value. If the callback function returns a falsy value for all of the elements the `.find` method will return `undefined`.
 
 ```js
@@ -275,7 +291,6 @@ var aLivingBeatle = beatles.find(function (beatle) {
 });
 ```
 
-
 #### Your Turn
 
 ```js
@@ -286,8 +301,12 @@ var dogs = [
 ];
 ```
 
-* Return the dog named Elmer that is saved to the variable `DavidsDog`.
+* Return the dog named Elmer. Store what is returned in the variable `DavidsDog`.
 * Return the dog who is medium in size. Store what is returned in the variable `firstMediumDog`.
+
+#### Journal
+
+- Expain the difference between `filter` and `find` in your own words.
 
 ### Array.prototype.reduce
 
@@ -325,6 +344,12 @@ The second argument that we pass to the `reduce()` method is an empty array, whi
 * For the shopping cart array `[{item: "shoes", price: 79.99}, {item: "gloves", price: 29.75}, {item: "pants", price: 39.99}]`, add the items to get the total cost of the shopping cart (should be equal to 149.73).
 
 * Say we have created an array of arrays `[["gears", 20], ["diameter", 26], ["height", 19.5]]`. What we really want is a single object with these as key-value pairs: `{gears: 20, diameter: 26, height: 19.5}`.
+
+### Journal
+
+- When should you use reduce?
+- Why wouldn’t `reduce()` talk to the junior dev?
+
 
 ### Array.prototype.sort
 
@@ -400,11 +425,13 @@ console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 
 * Sort the words in alphabetical order according to the second letter in the word: `["couch", "blender", "island", "cereal", "chair"]`.
 
-## Summary
+### Journal
 
-
+- What is unique about `sort()` when compared to the other methods we've discussed?
+- Why is `sort()` so bad at math?
 
 ### Additional Resources
 
+* All jokes courtesy of Patrick McLaughlin, FE-1711 @Patrick McLaughlin 
 * [MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls and DOM manipulation.
 * [Array Prototype Methods documentation by MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) - for a full list of array methods given to you by default in JavaScript.
