@@ -311,6 +311,7 @@ var dogs = [
 #### Journal
 
 - Expain the difference between `filter` and `find` in your own words.
+- Why did filter put find out of business?
 
 ## Array.prototype.reduce
 
