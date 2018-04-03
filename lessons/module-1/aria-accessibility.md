@@ -44,6 +44,8 @@ Example:
 <!-- The above markup has an implicit role of "heading" -->
 ```
 
+[Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
+
 Explicit roles are those that you specifically attach to a given element outside of what is provided by default in the HTML itself. Ie: A `<div></div>` that is serving to hold a hero image at the top of your webpage, or a set of images that are only there for decoration and add no crucial meaning to the content.
 
 Example:
@@ -164,6 +166,16 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
   clear in the dom.
 
 [Learn more about the extensive list of properties and states available in the documentation](https://msdn.microsoft.com/en-us/library/hh801958(v=vs.85).aspx).
+
+## Your Turn
+
+What is a role?
+
+When do you not need to use a role?
+
+What is state?
+
+What are properties?
 
 ## Video ##
 
