@@ -115,9 +115,9 @@ As a team, come up with your own Definition of Done. Have at least 5 criteria fo
 
 ### Deployment (40 points)
 
-* **40 points:** Application is automatically deployed to production via CircleCI.
-* **20 points:** Application is deployed to Heroku but not automatically via CircleCI.
-* **0 points:** Application is not building with CircleCI and not deployed.
+* **40 points:** Application is automatically deployed to production via TravisCI.
+* **20 points:** Application is deployed to Heroku but not automatically via TravisCI.
+* **0 points:** Application is not building with TravisCI and not deployed.
 
 ### JavaScript Style (60 points)
 
