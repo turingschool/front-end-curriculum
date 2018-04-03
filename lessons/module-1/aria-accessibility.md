@@ -63,17 +63,14 @@ Things to Avoid:
 
 * Redundancy
 * Replacement
-* Modification
 
 ```html
 <h1 role="heading"></h1>
 <!-- Redundancy. H1 implicitly has a role of heading and a level of 1.  -->
 
-<p role="heading"></p>
-<!-- Replacement. You're using a paragraph but telling it to be an h1. Just use an h1.  -->
 
-<h1 role="heading"></h1>
-<!-- Modification. Just use an h2 here instead of tweaking an element when a more logical choice exists.  -->
+<p role="heading"></p>
+<!-- Replacement. You're using a paragraph but telling it to be a header. Just use an h1-h6 element.  -->
 ```
 
 As much as possible, if there's an element that accomplishes the "role" you are trying to achieve, use it. HTML 5 has provided a boatload of really great, semantically rich elements that not only convey the appropriate role, but also handle all of the behavioral keyboard interactions without requiring additional javascript.
@@ -97,7 +94,7 @@ What this doesn't tell you is if the menu is already open or closed, which is fi
 Luckily ARIA provides state information that we can add to our markup.
 
 ```html
-<button
+<button 
   aria-expanded="true"
 >
   Toggle Menu
