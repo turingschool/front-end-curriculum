@@ -18,6 +18,18 @@ There are other flavors of linked lists, including [doubly linked lists](https:/
 
 Linked lists seem very similar to Arrays, and you might be wondering when or why we would use one over the other. Read through some of the answers on this [stackoverflow](https://stackoverflow.com/questions/393556/when-to-use-a-linked-list-over-an-array-array-list) question to learn about the differences between the two data structures and their pros vs. cons. We'll discuss them together as a class.
 
+TLDR:
+
+
+| Arrays                           | Linked Lists                     |
+| -------------------------------- |:--------------------------------:|
+| Built-in to JS by default        | Must be implemented by you       |
+| Expensive to add & remove items  | Cheap to add & remove items      |
+| Easy to access random items      | Difficult to access random items |
+
+
+
+
 
 ## Code Along
 
@@ -121,10 +133,14 @@ Finding a Node in our linked list structure is a bit more difficult than when we
   }
 ```
 
-#### Shift
-#### Unshift
-#### Insert
-#### Remove
+#### On Your Own: Insert & Remove
+
+* Create an `insert` method that allows you to insert a new Node at any place in the LinkedList.
+* Create a `delete` method that allows you to remove any Node in the LinkedList.
+
+Remember to read the tests to see how these methods should behave!
+
+
 
 ### Extensions
 

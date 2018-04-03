@@ -26,9 +26,11 @@ ARIA provides a series of tools and approaches to enhancing the meaning of your 
 
 ## Roles, States, and Properties ##
 
+[MDN List of Aria Roles, States, Properties](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
+
 ### Roles ###
 
-Roles define what an element is - what function it serves on the page.
+Roles define what an element is - what function it serves on the page. They give screen readers more information about how to interact with the element.
 
 These can be either **implicit** or **explicit**.
 
@@ -39,7 +41,7 @@ Example:
 ```html
 <h1>Hello World</h1>
 
-<!-- The above markup has an implicit role of "heading", with an attribute specifying that it has a property of aria-level 1.-->
+<!-- The above markup has an implicit role of "heading" -->
 ```
 
 Explicit roles are those that you specifically attach to a given element outside of what is provided by default in the HTML itself. Ie: A `<div></div>` that is serving to hold a hero image at the top of your webpage, or a set of images that are only there for decoration and add no crucial meaning to the content.
@@ -61,17 +63,14 @@ Things to Avoid:
 
 * Redundancy
 * Replacement
-* Modification
 
 ```html
-<h1 role="heading" aria-level="1"></h1>
+<h1 role="heading"></h1>
 <!-- Redundancy. H1 implicitly has a role of heading and a level of 1.  -->
 
-<p role="heading" aria-level="1"></p>
-<!-- Replacement. You're using a paragraph but telling it to be an h1. Just use an h1.  -->
 
-<h1 role="heading" aria-level="2"></h1>
-<!-- Modification. Just use an h2 here instead of tweaking an element when a more logical choice exists.  -->
+<p role="heading"></p>
+<!-- Replacement. You're using a paragraph but telling it to be a header. Just use an h1-h6 element.  -->
 ```
 
 As much as possible, if there's an element that accomplishes the "role" you are trying to achieve, use it. HTML 5 has provided a boatload of really great, semantically rich elements that not only convey the appropriate role, but also handle all of the behavioral keyboard interactions without requiring additional javascript.
@@ -95,7 +94,7 @@ What this doesn't tell you is if the menu is already open or closed, which is fi
 Luckily ARIA provides state information that we can add to our markup.
 
 ```html
-<button
+<button 
   aria-expanded="true"
 >
   Toggle Menu

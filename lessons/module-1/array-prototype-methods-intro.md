@@ -6,17 +6,31 @@ tags: JavaScript, array, prototype
 
 ### Learning Goals
 
-In this segment, you'll learn the following:
+- Understand and know when to implement the following arrray prototype methods:
 
-* How to use the `Array.prototype` `forEach()`, `map()`, `filter()`, `find()`, `reduce()`, and `sort()` methods.
+- `forEach()`
+- `map()`
+- `filter()`
+- `find()`
+- `reduce()`
+- `sort()`
 
-### Context
+## Vocabulary
+
+- `callback function` Also known as a higher-order function. A function that is passed to another function
+- `array` A data structure consisting of a collection of elements (values or variables)
+- `index` The position of each element within an array
+- `iteration` A set of instructions or structures that are repeated in a sequence a specificed number of times _or_ until a condition is met
+- `truthy` A value that is considered true when evaluated in a Boolean context
+- `falsy` A value that is considered false when evaluated in a Boolean context
+
+## Context
 
 Sometimes we have a collection of items that we want to use. When we talk about a collection, we usually mean a series of items stored in an array. We could want to change the items in the collection, sort them, add all of the values in the collection, retrieve some items in the collection based on some condition, or many other scenarios.
 
 We could do these things by hand using a `for` loop, which we will introduce below, but we would have to implement our own logic to work with the array. Alternatively, we can use methods that the JavaScript language provides for us. These methods are in a group called array prototype methods. They are called this because Array is a JavaScript object, and there are methods that act on array objects. You'll see how these methods work in this lesson.
 
-### For Loops...
+## For Loops...
 
 Let's talk about how traditional `for` loops work and why they can be something to stay away from. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
 
@@ -77,13 +91,13 @@ c
 
 Notice that the condition is crucial in controlling the flow of our loop. If the condition is never false, then the loop will become an infinite loop and never stop running until we stop it or our computer runs out of memory. This is one delicate part of `for` loops to watch out for.
 
-#### Your Turn
+### Your Turn
 
-1. Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+* Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
 
-2. Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+* Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
 
-### Array.prototype.forEach
+## Array.prototype.forEach
 
 Let's get into the array prototype methods. One of the first methods we'll explore together is [`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FforEach), which iterates over the array and passes each element into a callback function that you provide.
 
@@ -127,13 +141,13 @@ This will log the following output to the console:
 
 JavaScript allows you to omit arguments without raising an error. You can use this to your advantage by leaving out the index and the full array if you're not using them, which is common and what we did in the first example. However, if you do need either or both the index or the full array, you have access to them.
 
-`forEach()` has a few advantages over using a `for` loop. First, it's quicker to write and easier to read. Secondly, JavaScript has function scope, but not block scope. This means that `number` in our first example is scoped only to our callback function, whereas `i` is accessible outside of the loop body, which is the global scope in this case. The latter could have some unintended consequences.
+`forEach()` has a few advantages over using a `for` loop. First, it's quicker to write and easier to read. Secondly, JavaScript has function scope, but not block scope. This means that `letter` in our first example is scoped only to our callback function, whereas `i` is accessible outside of the loop body, which is the global scope in this case. The latter could have some unintended consequences.
 
 `forEach()` is the foundation for many of the other methods we'll explore today and you can accomplish much of the same functionality with `forEach()` that other methods specialize in. That said, just because you _can_ use it, it doesn't mean it's the best choice and that you _should_ use it. More on this later.
 
 One interesting thing to note is that `forEach()` does not return anything. If you have a return statement in your callback function it is likely not doing anything for you. This is different from map which we will look at next.
 
-#### Your Turn
+### Your Turn
 
 These look familiar...let's compare the structure to what we had before using the `for` loop now with `forEach`.
 
@@ -145,7 +159,13 @@ And one additional:
 
 * If we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
 
-### Array.prototype.map
+#### Journal
+
+Open your journal and answer the following questions:
+- What are the most important/significant ideas or elements of the `forEach()` method?
+- Why do stores like `forEach()`?
+
+## Array.prototype.map
 
 `forEach()` will iterate through each element in an array and pass that element to an anonymous function. It's not uncommon that we find ourselves in a position where we need to transform the contents of an array.
 
@@ -179,13 +199,18 @@ The example above will give us the same result as the one before it: `['A', 'B',
 
 Like `forEach()`, `map()` accepts an anonymous function that it calls on each element of the array it's called on. `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
 
-#### Your Turn
+### Your Turn
 
 * From before, if we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. This time we should end up with an array `[5, 7, 9]`.
 
 * Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius; `degreesF = [67, 32, 55, 102]`. It should roughly become `[19.44, 0, 12.77, 38.88]`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm) to convert from Fahrenheit to Celsius.
 
-### Array.prototype.filter
+#### Journal
+
+- What parts of `map()` are similar to `forEach()`? What parts are differents? 
+- Why do geneticists use `map()`? 
+
+## Array.prototype.filter
 
 [`Array.prototype.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), like `map()`, returns a new array based on the return value of the callback function you pass it. The mechanics, however, differ slightly.
 
@@ -238,15 +263,20 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 });
 ```
 
-#### Your Turn
+### Your Turn
 
 * From the array `[34, 2, 55, 75, -1, 100]`, return an array with only numbers greater that 50.
 
 * Filter on the array to return objects that are not thirsty: `[{name: "Martha", thirsty: true}, {name: "Pam", thirsty: false}, {name: "Roberta", thirsty: true}]`.
 
+#### Journal
 
-### Array.prototype.find
-[`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it only returns the first element where the callback function returns a truthy value. If the callback function returns a falsy value for all of the elements the `.find` method will return `undefined`.
+- How could you put `filter()` into practice on one of your current projects?
+- Why does `filter()` make such a good private investigator? 
+
+## Array.prototype.find
+
+[`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it returns the first element in the array that satisfies the testing function. In the event that you are testing truthy vs falsy values like the example below, `find()` will return `undefined` if there are no truthy values found.
 
 ```js
 var beatles = [
@@ -261,9 +291,29 @@ var aLivingBeatle = beatles.find(function (beatle) {
 });
 ```
 
+One key difference between `filter()` and `find()` is the fact that the `filter()` method will run through the end of the array wheras `find()` will stop once it comes across the first element that satisfies the testing function.
 
+Another thing to note is that this method is not supported by any version of Internet Explorer. However, this method is supported by Edge.
 
-### Array.prototype.reduce
+### Your Turn
+
+```js
+var dogs = [
+  { name: 'Pandora', size: 'small', toys: ['ball', 'squeaky bone'] },
+  { name: 'Antigone', size: 'medium', toys: ['ball', 'cowbell'] },
+  { name: 'Elmer', size: 'medium', toys: ['frisbee', 'ball', 'cowbell' ] }
+];
+```
+
+* Return the dog named Elmer. Store what is returned in the variable `DavidsDog`.
+* Return the dog that is medium in size. Store what is returned in the variable `firstMediumDog`.
+
+#### Journal
+
+- Expain the difference between `filter` and `find` in your own words.
+- Why did filter put find out of business?
+
+## Array.prototype.reduce
 
 [`Array.prototype.reduce()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FReduce) is a lot like `map()`, but with one important distinction: it returns one single value as opposed to an array of new values. Consider this example:
 
@@ -294,13 +344,19 @@ console.log(capitalLetters); // Logs ["A", "B", "C"]
 
 The second argument that we pass to the `reduce()` method is an empty array, which is then set as the initial value for `newArray`. Next, we push in a capital version of the current letter. [`push()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fpush) returns the current length of the array after the new element has been pushed in, so we have to explicitly return `newArray` to pass it along to the next iteration in our `reduce()`.
 
-#### Your Turn
+### Your Turn
 
 * For the shopping cart array `[{item: "shoes", price: 79.99}, {item: "gloves", price: 29.75}, {item: "pants", price: 39.99}]`, add the items to get the total cost of the shopping cart (should be equal to 149.73).
 
 * Say we have created an array of arrays `[["gears", 20], ["diameter", 26], ["height", 19.5]]`. What we really want is a single object with these as key-value pairs: `{gears: 20, diameter: 26, height: 19.5}`.
 
-### Array.prototype.sort
+#### Journal
+
+- When should you use reduce?
+- Why wouldn’t `reduce()` talk to the junior dev?
+
+
+## Array.prototype.sort
 
 [`Array.prototype.sort()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) will sort all of the elements in the array. We can invoke it without a callback function.
 
@@ -368,13 +424,19 @@ var sortedBeatles = beatles.sort(function (a, b) {
 console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 ```
 
-#### Your Turn
+### Your Turn
 
 * Sort the numbers in the array in descending order: `[2, 56, 5, 8, 1, 100]`.
 
 * Sort the words in alphabetical order according to the second letter in the word: `["couch", "blender", "island", "cereal", "chair"]`.
 
+#### Journal
+
+- What is unique about `sort()` when compared to the other methods we've discussed?
+- Why is `sort()` so bad at math?
+
 ### Additional Resources
 
+* All jokes courtesy of Patrick McLaughlin, FE-1711 @Patrick McLaughlin 
 * [MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls and DOM manipulation.
 * [Array Prototype Methods documentation by MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) - for a full list of array methods given to you by default in JavaScript.
