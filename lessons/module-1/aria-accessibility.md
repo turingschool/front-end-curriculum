@@ -44,8 +44,6 @@ Example:
 <!-- The above markup has an implicit role of "heading" -->
 ```
 
-[Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
-
 Explicit roles are those that you specifically attach to a given element outside of what is provided by default in the HTML itself. Ie: A `<div></div>` that is serving to hold a hero image at the top of your webpage, or a set of images that are only there for decoration and add no crucial meaning to the content.
 
 Example:
@@ -76,6 +74,8 @@ Things to Avoid:
 ```
 
 As much as possible, if there's an element that accomplishes the "role" you are trying to achieve, use it. HTML 5 has provided a boatload of really great, semantically rich elements that not only convey the appropriate role, but also handle all of the behavioral keyboard interactions without requiring additional javascript.
+
+[Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
 ### States ###
 
