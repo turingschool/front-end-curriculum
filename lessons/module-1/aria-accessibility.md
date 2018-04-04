@@ -77,6 +77,14 @@ As much as possible, if there's an element that accomplishes the "role" you are 
 
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
+Use the table of elements and look up the following elements and their implicit roles
+- body
+- div
+- article
+- footer
+- img
+- input
+
 #### Your Turn
 
 - Turn to your neighbor take turns explaining what a role is.
