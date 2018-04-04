@@ -199,13 +199,13 @@ Watch the following video (roughly 30 min)
 
 Answer the following questions:
 
-1. What is the difference between the DOM tree and an Accessibility Tree?
+- What is the difference between the DOM tree and an Accessibility Tree?
 
 <!--  
   Accessibility tree is a seperate tree used by screen readers to navigate the DOM
 -->
 
-2. What 3 main types of information are available through the Accessibility Tree? Describe each of these types of information and provide an example.
+- What 3 main types of information are available through the Accessibility Tree? Describe each of these types of information and provide an example.
 
 <!-- 
   Role - what purpose does the element have?
@@ -213,7 +213,7 @@ Answer the following questions:
   Properties - additional information about the element
 -->
 
-3. Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
+- Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
 
 <!-- 
   using keyboard shortcuts you can easily navigate the page in different ways.
@@ -222,33 +222,33 @@ Answer the following questions:
   users can scan a page in multiple ways
 -->
 
-4. True or False: You can use JavaScript to directly interact with the Accessibility Tree. Elaborate.
+- True or False: You can use JavaScript to directly interact with the Accessibility Tree. Elaborate.
 
 <!-- 
   No, hopefully in the future.
   We can use ARIA attributes to override the default accessibility tree
 -->
 
-5. How does a screen reader interact with `<div>` and `<span>` tags?
+- How does a screen reader interact with `<div>` and `<span>` tags?
 <!-- 
   semantically neutral, treats it like plain text
 -->
 
-6. What could you do in order to tell a screen reader to treat an element, for instance a `<span></span>` tag, as a button? What does this do to the functionality of this element?
+- What could you do in order to tell a screen reader to treat an element, for instance a `<span></span>` tag, as a button? What does this do to the functionality of this element?
 
 <!-- 
   <span role="button"></span>
   screen reader will treat like a button, won't give it the ability of a button, still have to do that with js
 -->
 
-7. Seeing as adding a role doesn't actually change the elements functionality or behavior, what could you do to make sure a screen reader catches an element as it tabs through the page?
+- Seeing as adding a role doesn't actually change the elements functionality or behavior, what could you do to make sure a screen reader catches an element as it tabs through the page?
 
 <!-- 
   <span role="button" tabindex="0"></span>
   add tabIndex to the element
  -->
 
-8. Write the necessary CSS that indicates visual changes have happened when hovering or focusing on something with the role of a button.
+- Write the necessary CSS that indicates visual changes have happened when hovering or focusing on something with the role of a button.
 
 <!-- 
   [role="button"]:hover [role="button"]:focus {
@@ -256,20 +256,20 @@ Answer the following questions:
   }
  -->
 
-9. What ARIA property gives a user a shortcut to content associated with a particular button?
+- What ARIA property gives a user a shortcut to content associated with a particular button?
 
 <!-- 
 aria-controls
 <span role="button" aria-controls="navigation-pane"></span>
  -->
 
-10. When should you use `aria-hidden` and why?
+- When should you use `aria-hidden` and why?
 
 <!-- 
   if content is not needed for screen reader - remove content from accessibility tree
  -->
 
-11. What does this mean in terms of what you need to do within your JavaScript to make sure your ARIA markup stays accurate?
+- What does this mean in terms of what you need to do within your JavaScript to make sure your ARIA markup stays accurate?
 
 <!-- 
   You have to use JS to update the aria properties to make sure they stay current with what is being displayed
