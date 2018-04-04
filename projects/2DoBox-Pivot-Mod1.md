@@ -319,3 +319,12 @@ Note: TimeZones are hard - consider using a library like [MomentJS](http://momen
 * Exceptional  
 
 <br>
+
+## TERMINOLOGY
+
+#### Technical Vocabulary
+
+* Novice
+* Advanced Beginner
+* Proficient
+* Exceptional 
