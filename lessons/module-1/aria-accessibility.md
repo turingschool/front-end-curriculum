@@ -77,6 +77,11 @@ As much as possible, if there's an element that accomplishes the "role" you are 
 
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
+#### Your Turn
+
+- Turn to your neighbor take turns explaining what a role is.
+- What is the difference between implicit and explicit roles?
+
 ### States ###
 
 States describe how you are interacting with an element.
@@ -108,6 +113,11 @@ This also allows you to target these elements using the `aria-expanded` attribut
 Here is a good [menu example][Menu-Example] that you can use with voiceover to see how screen readers interact with aria-expanded.
 
 [Menu-Example]: https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
+
+#### Your Turn
+
+- Turn to your neighbor take turns explaining what states are.
+- What would be another example of state that your app might need?
 
 ### Properties ###
 
@@ -171,16 +181,11 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 [Learn more about the extensive list of properties and states available in the documentation](https://msdn.microsoft.com/en-us/library/hh801958(v=vs.85).aspx).
 
-## Your Turn
+### Your Turn
 <!-- Turn and discuss with your neighbor. Answer these questions and come up with an analogies for role, state and properties -->
 
-What is a role?
-
-When do you not need to add a role to an element?
-
-What are states?
-
-What are properties?
+Turn to your neighbor and explain what a property is?
+How are properties different from state?
 
 ## Video ##
 
