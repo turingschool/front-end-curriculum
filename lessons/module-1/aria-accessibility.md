@@ -184,8 +184,10 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 ### Your Turn
 <!-- Turn and discuss with your neighbor. Answer these questions and come up with an analogies for role, state and properties -->
 
-Turn to your neighbor and explain what a property is?
-How are properties different from state?
+- Turn to your neighbor and explain what a property is?
+- Come up with a good analogy for property?
+- How are properties different from state?
+
 
 ## Video ##
 
