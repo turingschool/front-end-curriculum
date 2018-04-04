@@ -13,7 +13,7 @@ length: 150
 * Explore current industry patterns for organizing CSS files, understanding their differences and pros/cons
 * Learn the difference in CSS transitions, transformations, animations and how to implement various interactions utilizing all of them
 
-**
+***
 
 ## Structure
 "Jigsaw" lesson! Today, you'll be creating your own learning. We've arranged "learning groups" whereby you collaborate on the research of assigned subject matter and then share your learnings with fellow students from other groups. There are six sessions designed to guide us through the process.
