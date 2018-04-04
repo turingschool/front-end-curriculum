@@ -15,10 +15,10 @@ length: 150
 
 ***
 
-# Structure
+## Structure
 "Jigsaw" lesson! Today, you'll be creating your own learning. We've arranged "learning groups" whereby you collaborate on the research of assigned subject matter and then share your learnings with fellow students from other groups. There are six sessions designed to guide us through the process.
 
-### Introduction (5 min)
+## Introduction (5 min)
 Each student is part of a Research Group investigating one of four content areas:
 
 * Reset vs Normalize CSS files & Idiomatic CSS
@@ -29,7 +29,7 @@ Each student is part of a Research Group investigating one of four content areas
 <!-- ### Session 1: Warmup (10 min)
 For warmup, before you get into your Research Group, spend ten minutes getting your feet wet with your research topic. -->
 
-### Session 1: Research (35 min)
+## Session 1: Research (35 min)
 In this session your goal is to "build expertise". Gather into your "Research Groups" specified in the outline. During this time your group is collaborating to put together a collection of notes / key understandings such as:
 
 * What is this thing?
@@ -47,7 +47,7 @@ Additional requirements to note:
 
 ## BREAK (5 min)
 
-### Session 2: Expert Presentations (10 min each)
+## Session 2: Expert Presentations (10 min each)
 Recombine into your "Learning Groups" specified in the outline. You should have one person from each of the Research Groups.
 A representative from each of the research groups will take turns sharing their findings from the respective content areas as follows:
 
@@ -65,7 +65,7 @@ A representative from each of the research groups will take turns sharing their 
 * Assign a time keeper to WATCH THE CLOCK so the presenter doesn't have to keep track, and the group ends up with a comprehensive set of notes, understandings, and questions across each of the subjects by the end of the session
 * Write down any questions that your group wasn't clear on for instructors
 
-### Session 3: Wrap Up (5 mins)
+## Session 3: Wrap Up (5 mins)
 
 Give instructors group questions so we can circle back around on them at a later lesson.
 
