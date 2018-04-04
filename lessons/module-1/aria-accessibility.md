@@ -144,7 +144,11 @@ You can then use JavaScript to keep this information up to date - for example, o
 
 Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with it.
 
-**NOTE**: Use this with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
+Open this [menu example][Menu-Example] and use voiceover to see how screen readers interact with aria-expanded.
+
+[Menu-Example]: https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
+
+**NOTE**: Use `aria-label` with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
 
 #### Other Properties ####
 
@@ -152,8 +156,7 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 * `aria-label` - Described above. Provides additional information about an element.
 * `aria-live` - **CRUCIAL** This Indicates an area of the page that might change, which tells the screen reader to watch this section of the DOM and announce any changes if necessary. (Ie: your facebook feed). Values are `polite` and `assertive`.
-* `aria-atomic` - Assistive technologies will present the entire region as a
-  whole. 
+* `aria-atomic` - Assistive technologies will present the entire region as a whole. This can be used with `aria-live` when you only update part of a view but you want the screen reader to read the entire section.
 * `aria-required` - Tells a user if they need to provide input on an element
   before a form is submitted.
 
@@ -162,18 +165,20 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 * `aria-controls` - Seen above. References an element that is controlled by the current element.
 * `aria-labelledby` - Sister to `aria-label`, references the ID of another element, which is a short title for the element.
 * `aria-describedby` - is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
-* `aria-owns` - References child elements if that relationship is not already
-  clear in the dom.
+* `aria-owns` - References child elements if that relationship is not already clear in the dom. [Example][aria-owns-example]
+
+[aria-owns-example]: https://www.w3.org/TR/wai-aria-practices/examples/combobox/aria1.1pattern/listbox-combo.html
 
 [Learn more about the extensive list of properties and states available in the documentation](https://msdn.microsoft.com/en-us/library/hh801958(v=vs.85).aspx).
 
 ## Your Turn
+<!-- Turn and discuss with your neighbor. Answer these questions and come up with an analogies for role, state and properties -->
 
 What is a role?
 
-When do you not need to use a role?
+When do you not need to add a role to an element?
 
-What is state?
+What are states?
 
 What are properties?
 
@@ -279,6 +284,7 @@ This is the documentation for ARIA. As you can see it is super dense and hard to
 pull out the practical pieces: 
 
 * [Aria Documentation](https://www.w3.org/TR/wai-aria)
+* [Aria Examples & Design Patterns](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
 * [MDN Documnentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
 * [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
 
