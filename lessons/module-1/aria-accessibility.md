@@ -105,6 +105,10 @@ Luckily ARIA provides state information that we can add to our markup.
 
 This also allows you to target these elements using the `aria-expanded` attribute when interacting with them in your JavaScript.
 
+Here is a good [menu example][Menu-Example] that you can use with voiceover to see how screen readers interact with aria-expanded.
+
+[Menu-Example]: https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
+
 ### Properties ###
 
 Properties give an element special characteristics that you can relate to other documents or elements.
@@ -143,10 +147,6 @@ You can also use something called an `aria-label` property. Think of this like a
 You can then use JavaScript to keep this information up to date - for example, once `aria-expanded="false"`, you'd set your `aria-label` to `"Open sidebar navigation menu"`.
 
 Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with it.
-
-Open this [menu example][Menu-Example] and use voiceover to see how screen readers interact with aria-expanded.
-
-[Menu-Example]: https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
 
 **NOTE**: Use `aria-label` with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
 
