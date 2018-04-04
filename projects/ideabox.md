@@ -281,3 +281,10 @@ Student chooses an additional feature or performance optimization to add to the 
 |Advanced Beginner  | Can identify deltas in skill level and collaborate on methods whereby both pairs can share equitably in the workload. Can revisit the DTR to address changes that arise, and/or simply to keep one another reminded of the working plan.|
 |Proficient         | Can diplomatically handle issues that arise between the pair through respectful, focused, targeted feedback and implement changes to positively adapt the working relationship and keep the project on track. Can effectively implement tactics to support their partner's learning and project goals, while also honoring their own personal learning and project goals, should the two be different or at different levels due to skill delta. |
 |Exceptional        | Pair collaboration and communication is exceptional, with the distribution of work being equal and balanced, and both partners experiencing a good working flow, able to handle stress, deadlines, issues with calm and focused demeanor.|
+
+## Technical Vocabulary
+
+|Novice             | Can articulate what is going on in the overall codebase. Doesn't use the correct terminology.
+|Advanced Beginner  | Can articulate what is going on in the overall codebase and uses the correct terminology some of the time.
+|Proficient         | Can articulate what is going on in the codebase, line by line, using the correct terminology most of the time. Developer can speak to and answer questions that utilize technical vocabulary.
+|Exceptional        | Can articulate what is going on in the codebase, line by line, using the correct terminology. Developer is confident and comfortable speaking to and answering questions that utilize technical vocabulary.
