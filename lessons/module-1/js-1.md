@@ -67,6 +67,8 @@ Numbers can also be negative and decimals (also called "floats"), so we can writ
 
 Note that we _do not_ enclose a number data type in quotes.
 
+In JavaScript, there is no distinction between integer and floating-point values; a JavaScript number can be either. This is an important distinction to remember, since other programming languages support multiple data types for numbers.
+
 ## String Data Type
 
 The string data type handles letters and other characters. It is always enclosed in quotes, and looks like this:
