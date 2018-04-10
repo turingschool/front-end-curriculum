@@ -12,6 +12,13 @@ tags: jquery, javascript
 
 jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about 78% of the top million web pages, so it's worth while getting comfortable with it.
 
+## Vocab
+
+- `jQuery` A library built to get around the pain points of early Javascript
+- `CDN` Content Delivery Network
+- `Minified` A file that the browser can still interpret correctly, but has none of the bits helpful to humans. Used to reduce the size of a file
+- `Selector` A description of how to find an element on the page
+
 #### Loading the jQuery library
 
 To use the jQuery library, you'll need to include the following lines in your HTML:

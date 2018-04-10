@@ -9,12 +9,12 @@ tags: web apis, storage, persistence
 - Understand and utilize localStorage
 - Understand and utilize JSON
 
-### Vocabulary
+### Vocab
 
-- Client-side storage
-- Server-side storage
-- localStorage
-- JSON
+- `Client-side Storage` Storage on the client (usually the browser)
+- `Server-side storage` Storage on the server
+- `localStorage` An implementation of Client-side Storage
+- `JSON` (JavaScript Object Notation) is a lightweight data-interchange format.
 
 ### Client-side vs. Server-side Storage
 

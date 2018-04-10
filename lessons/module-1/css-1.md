@@ -4,7 +4,7 @@ length: 180
 tags: css, introduction, practice
 ---
 
-# Overview & Docs
+## Overview & Docs
 
 The front-end of the web is based on three major technologies:
 
@@ -19,6 +19,15 @@ This lesson is all about the presentation layer, CSS. We'll take this opportunit
 * Build a small static site and style our markup using a separate style sheet of basic CSS
 
 But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.com/)
+
+## Vocab
+
+- `CSS` Cascading Style Sheet
+- `CSS property` The name of a display property of an HTML element (e.g., color, border)
+- `HTML element` A building block that makes up the structure of a web page
+- `tag` Usually used interchangeably with 'HTML element'
+- `id` / `class` Ways to identify HTML elements
+
 
 ## CSS The Basics
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old tag names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.

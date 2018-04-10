@@ -7,6 +7,14 @@ tags: ARIA, accessibility
 
 Roles, States, Properties, and Why You Should Care.
 
+## Vocab
+
+- `Accessibility` Broadly, creating an experience that is available to literally anyone
+- `ARIA` Accessible Rich Internet Applications
+- `Role` The function an element serves on the page
+- `State` The state of an element on a page (e.g., expanded, disabled)
+- `Property` ARIA information about an element
+
 ## What Is ARIA ##
 
 **Accessible Rich Internet Applications**.

@@ -12,6 +12,19 @@ The front-end of the web is based on three major technologies:
 * __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
 * __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
 
+## Vocab
+
+- `HTML` HyperText Markup Language
+- `CSS` Cascading Style Sheet
+- `CSS Property` The name of a display property of an HTML element (e.g., color, border)
+- `HTML Element` A building block that makes up the structure of a web page
+- `Tag` Usually used interchangeably with 'HTML element'
+- `Id` / `Class` Ways to identify HTML elements
+- `Attribute` Additional values that configure HTML elements and adjust their behavior
+- `Hyperlink` Colloquially, a Link
+- `Block` A block-level element occupies the entire space of its parent element (container), thereby creating a "block."
+- `Inline` Elements which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.
+
 ## What is HTML?
 
  * HTML = HyperText Markup Language  

@@ -4,7 +4,7 @@ tags: css, introduction, practice
 length: 150
 ---
 
-# Learning Goals
+## Learning Goals
 
 * Understand the differences between reset and normalize css files
 * Learn how to write consistent and idiomatic CSS with an understanding of why it is important
@@ -13,7 +13,12 @@ length: 150
 * Explore current industry patterns for organizing CSS files, understanding their differences and pros/cons
 * Learn the difference in CSS transitions, transformations, animations and how to implement various interactions utilizing all of them
 
-***
+## Vocab
+
+- `CSS Reset` A set of CSS rules that resets the styling of all HTML elements to a consistent baseline
+- `CSS Normalize` Like a CSS reset, but preserves useful browser defaults
+
+---
 
 ## Structure
 "Jigsaw" lesson! Today, you'll be creating your own learning. We've arranged "learning groups" whereby you collaborate on the research of assigned subject matter and then share your learnings with fellow students from other groups. There are six sessions designed to guide us through the process.
@@ -71,7 +76,7 @@ Give instructors group questions so we can circle back around on them at a later
 
 ***
 
-# Content
+## Content
 
 ### Reset v. Normalize CSS Files & Idiomatic CSS
 

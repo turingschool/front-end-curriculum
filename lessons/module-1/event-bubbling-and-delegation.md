@@ -10,13 +10,13 @@ tags: javascript, dom, browser, events
 - Understand and apply event delegation
 - Utilize the event object
 
-## Vocabulary
+## Vocab
 
-- Event handlers
-- Event propagation
-- Event capturing
-- Event targeting
-- Event bubbling
+- `Event Handlers` Functions that will run when an event happens
+- `Event Propagation` Roughly, the order in which different DOM elements are notified of an event
+- `Event Capturing` Part of the event propagation model wherein listeners are fired from the top the DOM tree, down
+- `Event Targeting` Part of the event propagation model wherein listeners are fired on the source of the event
+- `Event Bubbling` Part of the event propagation model wherein listeners are fired from the target of the event, up
 
 ## Event Basics
 
@@ -32,7 +32,7 @@ Take a few minutes with the human next to you to think of a few real life analog
 
 ## Event Propagation
 
-Event propagation is an important yet misunderstood topic/term when talking about events. Event propagation is an _overarching term_ that includes the three different phases of DOM Events: capturing, targeting, and bubbling. Event propagation is bi-directional (starts at the window... goes to the target... and ends at the window) and is often improperly used as a synonym for event bubbling. Everytime an event occurs, event propagation is occuring behind the scenes.
+Event propagation is an important yet misunderstood topic/term when talking about events. Event propagation is an _overarching term_ that includes the three different phases of DOM Events: capturing, targeting, and bubbling. Event propagation is bi-directional (starts at the window... goes to the target... and ends at the window) and is often improperly used as a synonym for event bubbling. Every time an event occurs, event propagation is occurring behind the scenes.
 
 ![Graphical representation of an event dispatched in a DOM tree using the DOM event flow](/assets/images/eventpropagation.png)
 
