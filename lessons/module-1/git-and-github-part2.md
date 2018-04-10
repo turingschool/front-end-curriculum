@@ -11,6 +11,15 @@ In this lesson, you will learn how to:
 * Use a version control system (Git) in conjunction with an online/remote repository (GitHub)
 * Start a project locally and synchronize your changes with the remote repository
 
+## Vocab
+
+- `SSH Key` Similar to a password, except it's really long and complex, and you don't have to remember it. Does the same thing as a password, but is used differently
+- `Remote` Remote, as in, a remote repository. As in, not a local repository. A remote is a repository that's stored somewhere that's not your local machine
+- `Feature Branch` A branch created to hold a new feature while it's in development, as opposed to committing parts of an unfinished feature on master
+- `Pull Request` A request to merge a branch into the default branch (usually master). Allows for control of the merge process as well as providing a place to review changes
+- `Merge Conflicts` Two different sets of changes to the same code result in merge conflicts. It's your job to figure out how to merge the two 
+- `Fork` A copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. 
+
 ## GitHub
 
 ### Prework Setup: 

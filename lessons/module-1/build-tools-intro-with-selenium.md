@@ -11,6 +11,13 @@ By the end of this lesson, you will:
 * Have an understanding of what client side build tools are
 * Have a basic understanding of what Webpack is and what it does for us
 
+## Vocab
+
+- `Frontend/Client Side Build Tool` A tool that usually does two main things: 1. Take all your files and crunch them into one file 2. Change your code so that you can things using new, shiny features before all those features are implemented in all the browsers
+- `Webpack` A frontend build tool. Aside: Webpack is currently the most popular build tool. In the span of about five years or so, three different build tools have come into and gone out of favor. This stuff changes fast, folks!
+- `Selenium` A tool that allows programs to control a web browser
+- `npm` Node Package Manager is tool that gives you access to a repository of JavaScript libraries. Does the same thing as Homebrew, but for Javascript instead of Mac programs
+
 ## Code Along - Setting Up Webpack
 
 We'll walk through actually rebuilding a project and adding Webpack!

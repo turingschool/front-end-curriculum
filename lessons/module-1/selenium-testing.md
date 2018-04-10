@@ -14,6 +14,12 @@ __Video:__ [Introduction to Selenium](https://www.youtube.com/watch?v=BL4-_tVx2r
 * Learn the basics of constructing selenium tests in javascript
 * Learn about testing best practices
 
+# Vocab
+
+- `Unit (testing)` The smallest component of software. Usually a Class or a single function
+- `Unit Test` Tests that interact with and examine Units 
+- `Integration Testing` Tests that examine how Units interact and 'integrate' with each other
+
 ***
 
 # Overview

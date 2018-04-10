@@ -10,12 +10,11 @@ tags: html, css
 
 ## Vocabulary
 
-- Page layout
-  - static, liquid, adaptive, and responsive
-- Media query
-- Breakpoint
-- CSS reset
-- Viewport meta tag
+- `Page Layout` - static, liquid, adaptive, and responsive
+- `Media Query` A CSS feature that makes it possible to apply styling based on various parameters or device characteristics
+- `Breakpoint` A set of rules (usually based on the size of a page) determining which styling to apply
+- `CSS Reset` A set of styles that applies default styling
+- `Viewport Meta Tag` A tag that is used to describe attributes that affect the affect how the page is displayed
 
 ## Introduction
 

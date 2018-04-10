@@ -4,7 +4,7 @@ length: 180
 tags: JavaScript, array, prototype
 ---
 
-### Learning Goals
+## Learning Goals
 
 - Understand and know when to implement the following arrray prototype methods:
 
@@ -15,7 +15,7 @@ tags: JavaScript, array, prototype
 - `reduce()`
 - `sort()`
 
-## Vocabulary
+## Vocab
 
 - `callback function` Also known as a higher-order function. A function that is passed to another function
 - `array` A data structure consisting of a collection of elements (values or variables)
@@ -435,7 +435,7 @@ console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 - What is unique about `sort()` when compared to the other methods we've discussed?
 - Why is `sort()` so bad at math?
 
-### Additional Resources
+## Additional Resources
 
 * All jokes courtesy of Patrick McLaughlin, FE-1711 @Patrick McLaughlin 
 * [MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls and DOM manipulation.

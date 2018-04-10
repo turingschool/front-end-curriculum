@@ -4,6 +4,17 @@ length: 120
 tags: git, github
 ---
 
+## Vocab
+
+- `Repository` A collection of code managed by git. Tends to be the folder your source files are in
+- `Commit` A snapshot of what your code looked like at a particular time
+- `Branch` A list of commits, one after another, one based on the next
+- `Working Area` Where unstaged files live. Untracked files are not in the working area
+- `Staging Area` Where staged files live
+- `Untracked Files` Files that are not managed by Git
+
+## Git, but more in depth
+
 At this point, we have talked about Git from a few different directions. We started with an introduction to Git when implemented locally on our machines. Then, we introduced Github.com, and learned how to leverage the power of Git's version control system to push our local repos up into a public repository that other developers can access.  
 
 Today, we are going to dive a little deeper, and also do some significant review, of what exactly is happening with Git under the hood.
