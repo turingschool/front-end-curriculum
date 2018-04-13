@@ -3,7 +3,7 @@ title: CSS Transitions, Transformations, Animations
 tags: css, introduction, practice
 ---
 
-# Overview & Docs
+## Overview & Docs
 
 Let's review our three building blocks for front end development:
 

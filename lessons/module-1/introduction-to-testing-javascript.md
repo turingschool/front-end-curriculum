@@ -4,6 +4,15 @@ length: 120
 tags: javascript, browser, testing, tdd
 ---
 
+## Vocab
+
+- `TDD` Test Driven Development / Design
+- `Four Phase Test` A test that is organized into the phases [Setup, Execution, Assertion, Teardown]
+- `Assertion` An expression containing some testable logic
+- `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
+- `Testing Framework` A library that determines how tests are organized and executed
+- `SUT` or `Subject Under Test` The unit being tested
+
 ## What does it mean to unit test your code?
 
 We're always testing our code. We pull it up in the browser and poke at it. Does it do the thing we were expecting it to do? Yes? Then the code works. It's time to go and celebrate. No? Well then, back to the drawing board, right?

@@ -14,6 +14,14 @@ tags: javascript, jquery
 * Add event listeners to elements currently in the DOM
 * Understand that adding an event listener will not effect elements you add to the DOM in the future
 
+## Vocab
+
+- `jQuery` A library built to get around the pain points of early Javascript
+- `Selector` A description of how to find an element on the page
+- `Attribute` Additional values that configure HTML elements and adjust their behavior
+- `Filtering` Reducing an original set of items down to a smaller set, based on some rule
+- `Traversal` In the context of DOM nodes, to move over and examine nodes and their relations
+
 ## Part One: Selectors
 
 ### Basic Selectors

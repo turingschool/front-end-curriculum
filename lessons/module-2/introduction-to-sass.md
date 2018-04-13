@@ -347,7 +347,7 @@ To use:
 
 ```
 / Example
-@mixin border-radius($radius) {
+@mixin rounded-corners($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
@@ -355,7 +355,7 @@ To use:
 }
 
 .box { 
-  @include border-radius(10px); 
+  @include rounded-corners(10px); 
 }
 ```
     

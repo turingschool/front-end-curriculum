@@ -4,7 +4,33 @@ length: 60
 tags: node, setup, tools
 ---
 
-Before we can do much programming, we need to make sure our machines are properly configured with a functional Development environment. Let's walk through this process now to make sure we have what we need.
+## Vocab
+
+- `Development Environment` The collection of tools and configurations on your computer that enable you to program effectively
+- `Text Editor` Like MS Word or Google Docs Writer, but for programmers. This is how you write code!
+- `Terminal` A program that allows a user to interact with The Command Line
+- `A Shell` A low level interface for your computer. Instead of pointing and clicking on things, you type words and run commands
+- `The Command Line` The same thing as a shell - often used interchangeably 
+- `bash` A particular type of shell found on Unix systems
+- `Git` A tool for managing the code you write
+- `Xcode` A set of development tools built and distributed by Apple
+
+### A note on interchangeable terms above
+
+Most people use the terms `terminal`, `shell`, `command line`, and `bash` interchangeably.
+That's okay! The problem comes when they're used _incorrectly_.
+
+Here's a few examples of correct usage:
+- "We need to open up **the command line** here."
+- "Let's use **the shell** for this task."
+- "Can you increase the font size of **your terminal**?"
+- "I don't like using **bash** - I think fish is better"
+
+Additionally, there's a Mac application just called `Terminal`. That's a specific program that accesses the command line.
+
+## Configuring a development environment
+
+Before we can do much programming, we need to make sure our machines are properly configured with a functional development environment. Let's walk through this process now to make sure we have what we need.
 
 Here are the basics we're going to go over:
 
@@ -15,7 +41,7 @@ Here are the basics we're going to go over:
 - Homebrew -- This is a "package manager" for installing other developer-related programs. You can think of it as the "App Store for nerds."
 - Git (An application for handling "version control" of our software projects)
 
-### Xcode & Command Line Tools
+## Xcode & Command Line Tools
 
 Xcode is a huge suite of development tools published by Apple. If we wanted to develop software for the Apple Ecosystem (iPhone apps, macOS apps, etc), we would use Xcode as our editor. But even if we aren't working in this ecosystem, Xcode provides some system dependencies that we'll want to have available.
 
@@ -27,7 +53,7 @@ Open `terminal` and run `xcode-select --install`, enter your user password
 
 Now you should have the underlying tools we need to move forward.
 
-### Homebrew
+## Homebrew
 
 [Homebrew](http://brew.sh) is a package management system that makes it easy to install hundreds of open source projects and compile them from source for maximum performance on your machine.
 
@@ -40,7 +66,7 @@ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/
 It will ask you for your password. This is the password to log in to your account on the computer.
 It needs this because it installs its packages in a place that all users of this computer can access.
 
-#### Verifying Homebrew
+### Verifying Homebrew
 
 When it has completed the installation run `brew doctor` and it should tell you that everything is fine:
 
@@ -49,7 +75,7 @@ brew doctor
 Your system is ready to brew.
 ```
 
-### Modifying your PATH
+## Modifying your PATH
 
 If you got a warning from Homebrew about your path, do the following:
 
@@ -60,7 +86,7 @@ source ~/.bash_profile
 
 Now run `brew doctor` again and the warning should be gone.
 
-#### Aside: `PATH`
+### Aside: `PATH`
 
 Your `PATH` is a system configuration
 property which tells your computer which places to look for underlying programs
@@ -71,7 +97,7 @@ will help the system know where on the system to find ruby. By adding this direc
 to our `PATH`, we're telling the system how to find the various applications we will
 install using Homebrew
 
-#### Aside: `~/.bash_profile`
+### Aside: `~/.bash_profile`
 
 When we use our terminal, we're actually using a program called a "Shell" to interact
 with the underlying Operating System. Specifically, we're using a shell called [Bash](https://en.wikipedia.org/wiki/Bash_(Unix_shell)).
@@ -80,7 +106,7 @@ The file `~/.bash_profile` contains settings and commands to help us configure t
 so when we have a bit of configuration code such as setting our `PATH`, it often goes
 in our `~/.bash_profile`.
 
-### Git
+## Git
 
 [Git](http://git-scm.com/) is the version control system of choice in the web development community.
 Xcode installed an older version of Git for you, but let's update it.

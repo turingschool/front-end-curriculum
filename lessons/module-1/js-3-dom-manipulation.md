@@ -12,6 +12,12 @@ tags: javascript, dom, browser
 * Continue to develop a basic understanding for JavaScript syntax
 * Understand how to query and update a page after its been loaded
 
+## Vocab
+
+- `DOM` Document Object Model
+- `HTML Element` A building block that makes up the structure of a web page
+- 
+
 ## The Document Object Model (DOM)
 [DOM Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 

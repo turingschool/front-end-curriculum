@@ -12,6 +12,18 @@ In this lesson, you will learn how to:
 * Start a project with Git
 * Make local version contributions to a project using Git
 
+## Vocab
+
+- `Version Control System` A category of tool for managing the code you write
+- `Git` A specific tool for managing the code you write
+- `GitHub` A service / website that helps make using Git a little easier by hosting repositories. Not the same thing as Git
+- `Repository` A collection of code managed by git. Tends to be the folder your source files are in
+- `Commit` A snapshot of what your code looked like at a particular time
+- `Branch` A list of commits, one after another, one based on the next
+- `Working Area` Where unstaged files live. Untracked files are not in the working area
+- `Staging Area` Where staged files live
+- `Untracked Files` Files that are not managed by Git
+
 ## Git
 
 ### Some Context: What is Git, and why should we use it?
@@ -75,7 +87,7 @@ Additionally, if we use `ls -la` to look in the directory, we can see a `.git` h
 # ![Git Areas](/assets/images/lessons/git/github-diagrams.001.jpeg)
 
 1. Working Area
-  * Where **untracked files** live
+  * Where **unstaged files** live
 2. Staging Area
   * Where files that are going to be a part of the next commit live
 3. The Repository

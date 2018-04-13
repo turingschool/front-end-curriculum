@@ -122,6 +122,8 @@ Once you're done discussing please visit `idea-box-jhun.herokuapp.com` with your
 
 DNS stands for the Domain Name System and this is how our browser is able to find the specific location of the website or file we are looking for on the web. Without this system the internet as we know it would be completely different.
 
+[This video](https://www.youtube.com/watch?v=72snZctFFtA) explains DNS!
+
 There was a time before cell phones when people had to memorize phone numbers. Then everyone got a cell phone and the cell phone keeps track of that information for you. So when I want to call my mom I don't have to type her phone number into my phone I can just look her up in my contacts and give her a call.
 
 Now if I wanted to find a specific number of a business and I didn't have that number saved into my contacts I have to look it up. I either google search that or check the yellow-pages ( I don't really do this haha). The same goes for the internet.

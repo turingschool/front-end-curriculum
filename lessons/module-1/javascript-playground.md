@@ -6,14 +6,18 @@ tags: javascript, introduction, practice
 
 ## Learning Goals
 
-Get more practice with JavaScript:
+Get more practice with JavaScript!
 
-* Terminology
-* Variables
-* Arrays
-* Operators (assignment, arithmetic, logical, comparison)
-* Conditionals
-* Functions
+## Vocab
+
+- `Variable` A container for a value. The main building block for all programming
+- `Function` A predefined and reusable group of behavior
+- `Expression` An executable piece of code
+- `Array` A list of values
+- `Operator` Symbols that are used to assign, compare, and perform operations
+- `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
+
+## Lets go!
 
 Open the console in your browser, and let's get going!
 
