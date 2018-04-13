@@ -35,12 +35,11 @@ This project should encapsulate what you've learned throughout Turing, and anyth
 * React Native (can be done as an extension, not as your entire application)
 * Service Workers & Background Sync/Push Notifications
 
-
 ## Brainstorming
 
-### Part 1: Solo (15 minutes)
+### Part 1: Solo (10 minutes)
 
-On the whiteboard or with pen and paper, summarize the data that is returned from your BYOB endpoints. While you don't **have** to use your BYOB project as a base, we have found it greatly helps students to have that foundation. You are welcome to create another backend API if there is an application you strongly want to build, but remember that will require setting up new schemas and seeds.
+With pen and paper, summarize the data that is returned from your BYOB endpoints. While you don't **have** to use your BYOB project as a base, we have found it greatly helps students to have that foundation. You are welcome to create another backend API if there is an application you strongly want to build, but remember that will require setting up new schemas and seeds.
 
 **Example**
 
@@ -48,20 +47,15 @@ On the whiteboard or with pen and paper, summarize the data that is returned fro
 * Medical Procedures (belong to patient)
 * Readings (belong to procedure)
 
+THink about some applications that could use this data from BYOB.
+
 ### Part 2: Solo (15 minutes)
 
-Summarize and post your ideas of what kind of applications you could build off of your BYOB (or a new backend you'd like to build). For *each idea* create
-an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project). Summarize the idea in the following format:
+Think of any other data that you're interested (unrelated to BYOB). Are there applications that you can think of that leverage that data?
 
-Issue Name: (Name of the Project)  
-Issue Description:
-* Problem it solves:
-* How it solves it:
-* Technical challenges:
+What would the schema look like? What is the goal of that application?
 
-If a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
-
-### Part 3: Small Groups (30 minutes)
+### Part 3: Small Groups of 3 (30 minutes)
 
 Get together in small groups or with a partner:
 
@@ -70,17 +64,28 @@ Get together in small groups or with a partner:
 * Select 1 or 2 of your favorite ideas
 * Practice a pitch to sell your ideas to the class
 
+Summarize and post your ideas of what kind of applications you could build off of your BYOB (or a new backend you'd like to build). For *each idea* create
+an issue on the [Turing Mastery Project repo](https://github.com/turingschool/mastery_project). Summarize the idea in the following format:
+
+Issue Name: (Name of the Project)  
+Issue Description:
+* Problem it solves
+* How it solves it
+* Technical challenges
+
+If a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
+
 ### Part 4: Pitch (30 minutes)
 
-We'll get back together as a class and each person will pitch their project ideas. Spend less than two minutes on each pitch.
+Each person will pitch their project ideas to the class. Spend less than two minutes on each pitch.
 
 ### Part 5: Voting
 
-Everyone will write down their top 5 choices of a project to work on. Rank them in order of what you'd most like to work on. Instructors will create teams based on these rankings.
+On a sheet of paper, everyone write down your top-5 projects you would like to work on. Rank them in order of what you'd most like to work on. Instructors will create teams based on these rankings.
 
 ### Part 6: Teaming
 
-We will team up by interest in projects. Teams will be between 2 - 4 people.
+We will team up by interest in projects. Teams will be between 2-3 people.
 
 ### Part 7: Pick Your API (15 minutes)
 With the project and team established, get together with your group to decide whose API you will be utilizing, or if you'll be building a new one. Feel free to use more than one if it makes sense.
