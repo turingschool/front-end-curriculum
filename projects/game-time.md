@@ -33,11 +33,10 @@ You can use any of the following JavaScript libraries:
 ## Game Choices
 
 - Lights Out
+- Snake
 - Centipede
-- Connect Four
 - Othello/Reversi
 - Frogger
-- Breakout
 - Tron
 - Missile Command
 - Winterbells
