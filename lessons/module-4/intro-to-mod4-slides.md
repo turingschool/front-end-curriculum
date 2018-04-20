@@ -91,6 +91,7 @@ layout: presentation
   </section>
   <section>
     <p>Let's take 5 minutes to brainstorm ideas (via a survey).</p>
+    <p><a href="https://goo.gl/forms/kGacv2Gw0TaoMmkp2">https://goo.gl/forms/kGacv2Gw0TaoMmkp2</a></p>
   </section>
 </section>
 
