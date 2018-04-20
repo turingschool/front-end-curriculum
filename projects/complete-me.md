@@ -115,11 +115,11 @@ file containing a list of standard dictionary words.
 It lives at `/usr/share/dict/words`
 
 Using the unix utility `wc` (word count), we can see that the file
-contains 235886 words:
+contains 234371 words:
 
 ```
 $ cat /usr/share/dict/words | wc -l
-=> 235886
+=> 234371
 ```
 
 We are going to load that data set into our trie.
@@ -135,7 +135,7 @@ const completion = new Trie()
 completion.populate(dictionary)
 
 completion.count()
-=> 235886
+=> 234371
 
 completion.suggest("piz")
 => ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
