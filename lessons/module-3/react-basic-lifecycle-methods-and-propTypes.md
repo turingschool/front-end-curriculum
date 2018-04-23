@@ -28,7 +28,7 @@ constructor() {
 
 Per [the docs](https://facebook.github.io/react/docs/react-component.html#constructor), the `constructor()` method is called before the component is mounted onto the DOM. It is the first and only function called automatically whenever a `class` based component is created.  
 
-Within the constructor it's important to immediately call `super()`, which allows `this` to have a defined value **within the constructor**. 
+Within the constructor, it's important to immediately call `super()` in cases where our class extends any other class that also has a defined constructor. Calling `super()` calls the constructor for our parent class and allows it to initialize itself. This allows `this` to have a defined value **within the constructor**. Constructors are great for setting up our component and initializing state. However, this is **NOT** a place you should consider making a network request.
 
 This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting this.
 
@@ -88,6 +88,14 @@ method - the `render()` method sets its own context.
 Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class), class components should
 always pass props to the base constructor. However there is some debate as to why this is suggested, since React will
 automatically set the props for you once the constructor has fired.
+
+### componentWillMount - ***deprecated***
+
+There is not a huge difference between `constructor()` and `componentWillMount()`. Like all other lifecycle methods withing the Birth/Mounting phase, `componentWillMount()` is only called once. Historically, there were some reasons to use `componentWillMount()` over `constructor()`, but that practice has since been deprecated. You should just know that it exitst, but **DON'T USE IT**
+
+### render
+
+
 
 ### componentDidMount
 
