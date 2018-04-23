@@ -7,7 +7,7 @@ module: 3
 
 A React Component goes through 3 phases during it's Lifecycle:
 
-* Birth/Mounting
+* Birth/Mounting (***only occurs once***)
 * Growth/Updating
 * Death/Unmounting
 
