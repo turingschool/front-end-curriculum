@@ -194,3 +194,10 @@ For each of the subject matter areas of focus, we've applied these levels with a
 |Exceptional        | Is well versed in the Sources tab of the dev tools and can implement breakpoints, watch changing values of variables, and can work with debugger statements in place of console logs.|
 
 <br>
+
+## Technical Vocabulary
+
+|Novice             | Can articulate what is going on in the overall codebase. Doesn't use the correct terminology.
+|Advanced Beginner  | Can articulate what is going on in the overall codebase and uses the correct terminology some of the time.
+|Proficient         | Can articulate what is going on in the codebase, line by line, using the correct terminology most of the time. Developer can speak to and answer questions that utilize technical vocabulary.
+|Exceptional        | Can articulate what is going on in the codebase, line by line, using the correct terminology. Developer is confident and comfortable speaking to and answering questions that utilize technical vocabulary.
