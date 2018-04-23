@@ -89,6 +89,14 @@ Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-st
 always pass props to the base constructor. However there is some debate as to why this is suggested, since React will
 automatically set the props for you once the constructor has fired.
 
+### static getDerivedStateFromProps()
+
+This is a new lifecycle method that was added with React 16.3. Check out what the [docs](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) have to say about it. Because this is a static method, we don't have access to `this` inside the method. Per the docs, this method gets invoked under 2 circumstances:
+  * after a component is instantiated
+  * when the component receives new props
+
+It takes in `nextProps` and `prevState` and returns an object to update state, or null if the new props do not require any state updates.
+
 ### componentWillMount() - ***deprecated***
 
 There is not a huge difference between `constructor()` and `componentWillMount()`. Like all other lifecycle methods withing the Birth/Mounting phase, `componentWillMount()` is only called once. Historically, there were some reasons to use `componentWillMount()` over `constructor()`, but that practice has since been deprecated. You should just know that it exitst, but **DON'T USE IT**
