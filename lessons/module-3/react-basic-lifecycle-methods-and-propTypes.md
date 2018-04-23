@@ -13,7 +13,7 @@ A React Component goes through 3 phases during it's Lifecycle:
 
 This lesson will focus on the Birth/Mounting phase and we will cover the other 2 later this week.
 
-### constructor && super
+### constructor() && super()
 
 Let's talk about the first methods we see in a class based React component.  
 
@@ -38,7 +38,7 @@ Let's take a minute to fire up a react component and watch the errors fire as we
 
 You'll notice that React has some incredibly verbose and helpful error messages. Make sure you take time to read these as you build out projects this mod, they will almost always point you in the direction of happiness.  
 
-### What is this `super` business?  
+### What is this `super()` business?  
 
 Try this in your component and check out the error message:
 
@@ -89,20 +89,24 @@ Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-st
 always pass props to the base constructor. However there is some debate as to why this is suggested, since React will
 automatically set the props for you once the constructor has fired.
 
-### componentWillMount - ***deprecated***
+### componentWillMount() - ***deprecated***
 
 There is not a huge difference between `constructor()` and `componentWillMount()`. Like all other lifecycle methods withing the Birth/Mounting phase, `componentWillMount()` is only called once. Historically, there were some reasons to use `componentWillMount()` over `constructor()`, but that practice has since been deprecated. You should just know that it exitst, but **DON'T USE IT**
 
-### render
+### render()
 
+Now that our component has been initialized and configured, we can begin rendering some content/elements on the page. This is the lifecycle method that React developers are most familiar with. It is the one lifecycle method that exists arcoss all phases of a React component. It's important to remember to always keep `render()` a **pure method**. This means we should never call `this.setState()` within `render()`. If we take a minute to think about this, it makes total sense... it would put us in an infinate loop of re-rendering.  
 
+#### Managing Children Components and Mounting
 
-### componentDidMount
+The React Element that has been rendered by the initial `render()` may possibly have a number of children that need to be rendered as well. This is where each of those children kickoff their own lifecycle methods... `constructor()`, `render()`, and `componentDidMount()`. Once all the children have been successfully created, initialized and mounted, the parent's `componentDidMount()` will finally be called.
+
+### componentDidMount()
 
 Per [the docs](https://reactjs.org/docs/react-component.html#componentdidmount), `componentDidMount()` is invoked "immediately 
 after a component is mounted." When `componentDidMount()` is called, this signalizes that the component - and all its sub-componentes - have rendered properly. Any functionality that is dependent on existing DOM nodes should live here. For example, let's say you want to set state which affects a `<p>` tag, you need to wait until that `<p>` tag exists before you can throw any additional information into it.
 
-This is also the go-to location to fire off an API call or network request.  
+This is also the go-to location to fire off an API call or network request (**BEST PRACTICE**).  
 
 **NOTE:** Setting state in this method **WILL** trigger a re-render.
 
