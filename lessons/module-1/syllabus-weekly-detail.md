@@ -36,7 +36,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 5: Practice for Proficiency in the Fundamentals
 
 |Mindset     | _Brave, supportive, can-do-attitude_. |
-|Lessons     | Breakout Groups, Worktime & Study/Review for Pentathlon, [Design IV](https://github.com/turingschool-examples/mod1-gestalt-principals-foundations) |
+|Lessons     | Breakout Groups, Worktime & Study/Review for Quadrathlon, [Design IV](https://github.com/turingschool-examples/mod1-gestalt-principals-foundations) |
 |Assignment  | __DUE__:  Tue 5/29 ~ Static Comp Challenge #2 by *8:00 AM* |
 |Assignment  | __DUE__:  Thu 5/31 ~ Lightning Talk |
 |Assignment  | __EVAL__: Thu 5/31 ~ ToDoBox |
