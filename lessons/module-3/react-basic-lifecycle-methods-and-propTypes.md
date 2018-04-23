@@ -156,12 +156,11 @@ Warning: Failed prop type: Invalid prop `name` of type `array` supplied to `Main
     in App
 ```
 
+### Review then Turn & Talk 
+
 Check out a complete list of `propTypes` and examples of usage [here](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#react.proptypes).  
 
-By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where 
-your component will not function correctly without that particular prop. To add a validation that will fire an error message if 
-a prop does not show up at all, simply add `.isRequired` to the end of the propType delcaration.  
-
+By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where your component will not function correctly without that particular prop. To add a validation that will fire an error message if a prop does not show up at all, simply add `.isRequired` to the end of the propType delcaration.  
 
 ```js
 Main.propTypes = {
@@ -169,15 +168,13 @@ Main.propTypes = {
 }
 ```
 
-You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. 
-Instead of specifying a particular JS primitive you can use `.any`.
+You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. Instead of specifying a particular JS primitive you can use `.any`.
 
 ```js
 Main.propTypes = {
   name: PropTypes.any.isRequired
 }
 ```
-
 
 ### Your Turn
 
@@ -210,9 +207,7 @@ Main.defaultProps = {
 }
 ```  
 
-**Note:** The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props 
-to fill themselves in before any warning messages are thrown.  
-
+**Note:** The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props to fill themselves in before any warning messages are thrown.  
 
 ### Your Turn  
 
