@@ -13,7 +13,7 @@ A React Component goes through 3 phases during it's Lifecycle:
 
 This lesson will focus on the Birth/Mounting phase and we will cover the other 2 later this week.
 
-### Constructor && Super
+### constructor && super
 
 Let's talk about the first methods we see in a class based React component.  
 
