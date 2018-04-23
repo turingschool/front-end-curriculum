@@ -5,6 +5,14 @@ module: 3
 
 ## Basic React Lifecycle Methods
 
+A React Component goes through 3 phases during it's Lifecycle:
+
+* 1. Birth/Mounting
+* 2. Growth/Updating
+* 3. Death/Unmounting
+
+This lesson will focus on the Birth/Mounting phase and we will cover the other 2 later this week.
+
 ### Constructor && Super
 
 Let's talk about the first methods we see in a class based React component.  
