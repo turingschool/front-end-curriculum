@@ -34,6 +34,7 @@ SPLIT UP:
 - [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
 - [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
 - [React Lifecycle Docs](https://reactjs.org/docs/react-component.html)
+- [Dan Abramov's Twitter chart/convo on modern React lifecycle methods](https://twitter.com/dan_abramov/status/981712092611989509)
 
 ## Components and API Calls
 
