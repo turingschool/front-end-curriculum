@@ -15,37 +15,37 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 
 |Mindset     | _Open, optimistic, invested_. |
 |Lessons     |[JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
-|Assignment  | __DUE__: Wed 3/21 end of day Dog Party Static Comp |
-|Assignment  | __EVAL__: Thu 3/22 ~ Number Guesser |
+|Assignment  | __DUE__: Wed 5/9 end of day Dog Party Static Comp |
+|Assignment  | __EVAL__: Thu 5/10 ~ Number Guesser |
 
 ### WK 3: Level Up
 
 |Mindset     | _Dig Deep, show grit, be vocal, be resourceful_. |
 |Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [jQuery](http://frontend.turing.io/lessons/module-1/introduction-to-jquery.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/module-1/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) |
-|Assignment  | __EVAL__: Wed 3/28 ~ Mid Mock Assessment |
-|Assignment  | __EVAL__: Thu 3/28 ~ Linked List |
+|Assignment  | __EVAL__: Wed 5/16 ~ Mid Mock Assessment |
+|Assignment  | __EVAL__: Thu 5/17 ~ Linked List |
 
 ### WK 4: Build on a Solid Foundation
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
 |Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/array-prototype-methods-intro) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
-|Assignment  | __DUE__:   Tues 4/3 ~ Static Comp Challenge #1 by *8:00 AM* |
-|Assignment  | __EVAL__:  Thu 4/5 ~ Ideabox |
-|Assignment  | __DUE__: Fri 4/6 ~ Mythical Creatures |
+|Assignment  | __DUE__:   Tues 5/22 ~ Static Comp Challenge #1 by *8:00 AM* |
+|Assignment  | __EVAL__:  Thu 5/24 ~ Ideabox |
+|Assignment  | __DUE__: Fri 5/25 ~ Mythical Creatures |
 
 ### WK 5: Practice for Proficiency in the Fundamentals
 
 |Mindset     | _Brave, supportive, can-do-attitude_. |
 |Lessons     | Breakout Groups, Worktime & Study/Review for Pentathlon, [Design IV](https://github.com/turingschool-examples/mod1-gestalt-principals-foundations) |
-|Assignment  | __DUE__:  Tue 4/10 ~ Static Comp Challenge #2 by *8:00 AM* |
-|Assignment  | __DUE__:  Thu 4/12 ~ Lightning Talk |
-|Assignment  | __EVAL__: Thu 4/12 ~ ToDoBox |
+|Assignment  | __DUE__:  Tue 5/29 ~ Static Comp Challenge #2 by *8:00 AM* |
+|Assignment  | __DUE__:  Thu 5/31 ~ Lightning Talk |
+|Assignment  | __EVAL__: Thu 5/31 ~ ToDoBox |
 
 ### WK 6: Mastery of Module
 
 |Mindset     | _Independent, confident problem solver, successful team member_. |
 |Lessons     | N/A Final Assessment Week|
-|Pentathlon  | __EVAL__: Mon 4/16 ~ DOM Challenge I |
-|Pentathlon  | __EVAL__: Tue 4/17 ~ Vanilla JS Logic Challenge II |
-|Pentathlon  | __EVAL__: Wed 4/18 ~ Static Comp Challenge #3 & Quizlette|
-|Pentathlon  | __EVAL__: Thu 4/19 ~ Portfolio Defense |
+|Pentathlon  | __EVAL__: Mon 6/4 ~ DOM Challenge I |
+|Pentathlon  | __EVAL__: Tue 6/5 ~ Vanilla JS Logic Challenge II |
+|Pentathlon  | __EVAL__: Wed 6/6 ~ Static Comp Challenge #3|
+|Pentathlon  | __EVAL__: Thu 6/7 ~ Portfolio Defense |
