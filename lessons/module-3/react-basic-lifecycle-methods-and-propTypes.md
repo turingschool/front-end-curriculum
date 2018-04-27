@@ -99,7 +99,7 @@ It takes in `nextProps` and `prevState` and returns an object to update state, o
 
 ### componentWillMount() - ***deprecated***
 
-There is not a huge difference between `constructor()` and `componentWillMount()`. Like all other lifecycle methods withing the Birth/Mounting phase, `componentWillMount()` is only called once. Historically, there were some reasons to use `componentWillMount()` over `constructor()`, but that practice has since been deprecated. You should just know that it exitst, but **DON'T USE IT**
+There is not a huge difference between `constructor()` and `componentWillMount()`. Like all other lifecycle methods withing the Birth/Mounting phase, `componentWillMount()` is only called once. Historically, there were some reasons to use `componentWillMount()` over `constructor()`, but that practice has since been deprecated. You should just know that it exitsts, but **DON'T USE IT**
 
 ### render()
 
@@ -114,7 +114,7 @@ The React Element that has been rendered by the initial `render()` may possibly 
 Per [the docs](https://reactjs.org/docs/react-component.html#componentdidmount), `componentDidMount()` is invoked "immediately 
 after a component is mounted." When `componentDidMount()` is called, this signalizes that the component - and all its sub-componentes - have rendered properly. Any functionality that is dependent on existing DOM nodes should live here. For example, let's say you want to set state which affects a `<p>` tag, you need to wait until that `<p>` tag exists before you can throw any additional information into it.
 
-This is also the go-to location to fire off an API call or network request (**BEST PRACTICE**).  
+This is also the go-to location to fire off an API call or network request (**BEST PRACTICE**). This is a great [blog post](https://www.robinwieruch.de/react-fetching-data/) that discusses how to fetch data in React. 
 
 **NOTE:** Setting state in this method **WILL** trigger a re-render.
 
