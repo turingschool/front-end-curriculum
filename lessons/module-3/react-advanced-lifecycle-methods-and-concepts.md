@@ -8,15 +8,13 @@ tags: React
 
 Take 10 minutes to read up on your assigned life cycle method. Documentation can be found [here](https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle)  
 
-WE WENT OVER THESE EARLIER THIS WEEK (see [previous lesson](http://frontend.turing.io/lessons/module-3/react-basic-lifecycle-methods-and-propTypes.html)): 
-## Phase 1: Birth/Mounting  
+## Phase 1: Birth/Mounting (see [previous lesson](http://frontend.turing.io/lessons/module-3/react-basic-lifecycle-methods-and-propTypes.html)) 
 ### constructor()
 ### componentWillMount() - *will be deprecated with React 17*
 ### static getDerivedStateFrom Props - *NEW with React 16.3.0*
 ### render()
 ### componentDidMount()
-
-SPLIT UP:  
+ 
 ## Phase 2: Growth/Updating  
 ### componentWillReceiveProps() - *will be deprecated with React 17*
 ### static getDerivedStateFrom Props - *NEW*
