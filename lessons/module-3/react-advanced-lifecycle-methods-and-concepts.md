@@ -10,27 +10,27 @@ Take 10 minutes to read up on your assigned life cycle method. Documentation can
 
 WE WENT OVER THESE EARLIER THIS WEEK (see [previous lesson](http://frontend.turing.io/lessons/module-3/react-basic-lifecycle-methods-and-propTypes.html)): 
 ### Phase 1: Birth/Mounting  
-1. constructor()
-2. componentWillMount() - *will be deprecated with React 17*
-3. static getDerivedStateFrom Props - *NEW with React 16.3.0*
-4. render()
-5. componentDidMount()
+* constructor()
+* componentWillMount() - *will be deprecated with React 17*
+* static getDerivedStateFrom Props - *NEW with React 16.3.0*
+* render()
+* componentDidMount()
 
 SPLIT UP:  
 ### Phase 2: Growth/Updating  
-6. componentWillReceiveProps() - *will be deprecated with React 17*
-7. static getDerivedStateFrom Props - *NEW*
-8. shouldComponentUpdate()
-9. componentWillUpdate() - *will be deprecated with React 17*
-10. getSnapshotBeforeUpdate - *NEW with React 16.3.0*
-11. render()
-12. componentDidUpdate()
+* componentWillReceiveProps() - *will be deprecated with React 17*
+* static getDerivedStateFrom Props - *NEW*
+* shouldComponentUpdate()
+* componentWillUpdate() - *will be deprecated with React 17*
+* getSnapshotBeforeUpdate - *NEW with React 16.3.0*
+* render()
+* componentDidUpdate()
 
 ### Phase 3: Death/Unmounting  
-10. componentWillUnmount()
+* componentWillUnmount()
 
 ### Error Handling
-11. componentDidCatch() - *just know this exists*
+* componentDidCatch() - *just know this exists*
 
 ## Here are some great life-cycle resources for you to check out and reference
 
