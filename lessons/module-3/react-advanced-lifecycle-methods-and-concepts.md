@@ -4,33 +4,33 @@ module: 3
 tags: React
 ---
 
-## LifeCycle Methods: An Interactive Adventure
+# LifeCycle Methods: An Interactive Adventure
 
 Take 10 minutes to read up on your assigned life cycle method. Documentation can be found [here](https://facebook.github.io/react/docs/react-component.html#the-component-lifecycle)  
 
 WE WENT OVER THESE EARLIER THIS WEEK (see [previous lesson](http://frontend.turing.io/lessons/module-3/react-basic-lifecycle-methods-and-propTypes.html)): 
-### Phase 1: Birth/Mounting  
-* constructor()
-* componentWillMount() - *will be deprecated with React 17*
-* static getDerivedStateFrom Props - *NEW with React 16.3.0*
-* render()
-* componentDidMount()
+## Phase 1: Birth/Mounting  
+### constructor()
+### componentWillMount() - *will be deprecated with React 17*
+### static getDerivedStateFrom Props - *NEW with React 16.3.0*
+### render()
+### componentDidMount()
 
 SPLIT UP:  
-### Phase 2: Growth/Updating  
-* componentWillReceiveProps() - *will be deprecated with React 17*
-* static getDerivedStateFrom Props - *NEW*
-* shouldComponentUpdate()
-* componentWillUpdate() - *will be deprecated with React 17*
-* getSnapshotBeforeUpdate - *NEW with React 16.3.0*
-* render()
-* componentDidUpdate()
+## Phase 2: Growth/Updating  
+### componentWillReceiveProps() - *will be deprecated with React 17*
+### static getDerivedStateFrom Props - *NEW*
+### shouldComponentUpdate()
+### componentWillUpdate() - *will be deprecated with React 17*
+### getSnapshotBeforeUpdate - *NEW with React 16.3.0*
+### render()
+### componentDidUpdate()
 
-### Phase 3: Death/Unmounting  
-* componentWillUnmount()
+## Phase 3: Death/Unmounting  
+### componentWillUnmount()
 
-### Error Handling
-* componentDidCatch() - *just know this exists*
+## Error Handling
+### componentDidCatch() - *just know this exists*
 
 ## Here are some great life-cycle resources for you to check out and reference
 
