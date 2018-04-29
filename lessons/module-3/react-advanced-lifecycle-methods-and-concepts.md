@@ -87,9 +87,7 @@ This is important because it lets us declaratively tell each component what valu
 Imperative: Oh, user changed something, we need to go figure out what the value is...wait...something else changed...figure that out too...wait...does anyone know what this value should be right now??
 Declarative: The value of the input matches the value of that piece of state. Period.
 
-## A Few Additional Comments
-
-### Props: Functional vs Class Based Components
+## Props: Functional vs Class Based Components
 
 The first question you should ask yourself is: "Do I need this component to know about state directly?"
 
