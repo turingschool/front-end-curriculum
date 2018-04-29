@@ -17,7 +17,7 @@ Take 10 minutes to read up on your assigned life cycle method. Documentation can
  
 ## Phase 2: Growth/Updating  
 ### componentWillReceiveProps() - *will be deprecated with React 17*
-### static getDerivedStateFrom Props - *NEW*
+### static getDerivedStateFrom Props - *NEW with React 16.3.0*
 ### shouldComponentUpdate()
 ### componentWillUpdate() - *will be deprecated with React 17*
 ### getSnapshotBeforeUpdate - *NEW with React 16.3.0*
