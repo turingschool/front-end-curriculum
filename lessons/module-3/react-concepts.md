@@ -3,6 +3,8 @@ title: "React: Important Concepts
 module: 3
 ---
 
+# Important React Concepts
+
 ## Components and API Calls
 
 A common question as we get into heavier React app is "Where exactly do I make my API calls?". React is great in that it's really flexible and technically "lets" you fire off a request in various places in your app. Let's talk about best practices.
