@@ -1,4 +1,4 @@
-# JS V
+# JavaScript Fundamentals: Data Types & Structures
 
 ## Vocab
 
@@ -10,11 +10,11 @@
 - `Value` / `Property` / `Attribute` The value referenced by a Key in an Object
 - `Array` A list of values
 - `Function` A grouping of executable code. Can be manipulated just like any other Object
-- `Scope` Where variables and functions are accessible
+- `Method` A function that's defined as a property of an object
+- `Scope` / `Context` Where variables and functions are accessible
 - `Parameters` The variables a function says it will take in when it runs. Declared inside parens
 - `Arguments` The actual variables a function uses when it runs
 
-## Data Types Review
 
 ## Simple Data Types
 
