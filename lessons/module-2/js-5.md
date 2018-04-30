@@ -14,6 +14,7 @@
 - `Scope` / `Context` Where variables and functions are accessible
 - `Parameters` The variables a function says it will take in when it runs. Declared inside parens
 - `Arguments` The actual variables a function uses when it runs
+- `Prototype` An object that allows a one object to inherit methods and properties from another
 
 
 ## Simple / Primitive Data Types
