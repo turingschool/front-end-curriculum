@@ -17,10 +17,12 @@ Take 10 minutes to read up on your assigned life cycle method. Documentation can
  
 ## Phase 2: Growth/Updating  
 ### componentWillReceiveProps() - *will be deprecated with React 17*
-### static getDerivedStateFrom Props - *NEW with React 16.3.0*
+### static getDerivedStateFromProps - *NEW with React 16.3.0*
+Since this method is static, you can't reference `this`. Whatever is returned from the method, that's what will be updated (or null if nothing is needed). This new method will be called on the initial mounting of the component as well as when it's re-rendered.
 ### shouldComponentUpdate()
 ### componentWillUpdate() - *will be deprecated with React 17*
 ### getSnapshotBeforeUpdate - *NEW with React 16.3.0*
+This method is called right before any DOM mutations are made. If you need to do any calculations that you'd like to use in componentDidUpdate(), you can return those in this method and they will get passed along as the third argument to componentDidUpdate().
 ### render()
 ### componentDidUpdate()
 
