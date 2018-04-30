@@ -32,7 +32,7 @@ This method is called right before any DOM mutations are made. If you need to do
 ## Error Handling
 ### componentDidCatch() - *just know this exists*
 
-### Here are some great life-cycle resources for you to check out and reference
+## Here are some great life-cycle resources for you to check out and reference
 
 - [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
 - [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
