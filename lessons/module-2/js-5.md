@@ -16,7 +16,7 @@
 - `Arguments` The actual variables a function uses when it runs
 
 
-## Simple Data Types
+## Simple / Primitive Data Types
 
 ```js
 // boolean values
@@ -246,3 +246,13 @@ _Note: we can also simply pass the invoked function directly to the console.log:
 #### Exercises
 Create a function `add2` that takes in a parameter of `number` and returns the parameter plus 2.
 
+
+### Checks for understanding
+* What are some characteristics of primitive data types?
+* What's the difference between null and undefined?
+* Give an example of when you might use an array. An object?
+
+### Links & Resources
+* [Prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+* [Primitive Data Types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+* [Complex Data Types & Structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)
