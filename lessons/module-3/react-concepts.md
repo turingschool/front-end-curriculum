@@ -94,7 +94,7 @@ Notice that in state based components props are available anywhere using `this.p
 
 ## Resources  
 - [How to Fetch Data in React](https://www.robinwieruch.de/react-fetching-data/)
-- [On Ajax Library Comparisons](http://andrewhfarmer.com/ajax-libraries/)  
+- [Top JavaScript Libraries for Making Ajax Calls](https://dzone.com/articles/top-javascript-libraries-for-making-ajax-calls)  
 
 
 
