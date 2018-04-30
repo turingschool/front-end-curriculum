@@ -89,7 +89,7 @@ Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-st
 always pass props to the base constructor. However there is some debate as to why this is suggested, since React will
 automatically set the props for you once the constructor has fired.
 
-### static getDerivedStateFromProps()
+### static getDerivedStateFromProps() - ***NEW***
 
 This is a new lifecycle method that was added with React 16.3. Check out what the [docs](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) have to say about it. Because this is a static method, we don't have access to `this` inside the method. Per the docs, this method gets invoked under 2 circumstances:
   * after a component is instantiated
