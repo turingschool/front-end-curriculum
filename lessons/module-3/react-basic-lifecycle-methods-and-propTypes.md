@@ -11,7 +11,7 @@ A React Component goes through 3 phases during it's Lifecycle:
 * Growth/Updating
 * Death/Unmounting
 
-This lesson will focus on the Birth/Mounting phase and we will cover the other 2 later this week.
+This lesson will focus on the Birth/Mounting phase and we will cover the others later this week.
 
 ### constructor() && super()
 
