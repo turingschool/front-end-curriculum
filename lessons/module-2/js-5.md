@@ -172,9 +172,30 @@ var fancyName = 'scientificName';
 ---
 
 ### Arrays
-[Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are objects where there exists a relationship between any properties which correspond with an integer and the length property. In addition, array objects inherit from the Array.prototype which gives them additional helper functions (i.e. `push`, `pop`, `forEach`, etc). 
+[Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are list-like objects, used for storing a list of related values. If you were making a list of pizza toppings, you might store them in an array like so:
 
-Basically what this means is that arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to add and remove properties, as well as methods which make it easier to interact with all of their properties.
+
+```js
+var toppings = ['cheese', 'peppers', 'onions', 'garlic'];
+```
+
+
+Remember we said arrays are actually objects under the hood. Though it might not seem like arrays have a set of key-value pairs like the objects we just discussed, each value in the array actually has a numbered key associated with it that counts from 0. For example, written as an object, the toppings array might look like this:
+
+```js
+var toppings = {
+	0: 'cheese',
+	1: 'peppers',
+	2: 'onions',
+	3: 'garlic'
+};
+```
+
+This syntax is a lot more verbose, and the numbered keys don't really give us any useful information **except** where the value exists within the array. This can be important when we want to use some of the built-in helper methods that come with arrays.
+
+Array objects inherit from the Array.prototype which gives us access to methods like `push`, `pop`, and `forEach`, which allow us to manipulate and interact with our arrays.
+
+TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.
 
 #### Exercises
 In the console, take a look at `Array.prototype`. What methods do you recognize? What methods are new to you?
