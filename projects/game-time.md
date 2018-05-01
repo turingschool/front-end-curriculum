@@ -41,8 +41,6 @@ You can use any of the following JavaScript libraries:
 - Frogger
 - Missile Command
 
-(Any other game requires instructor approval.)
-
 Rank your top three game choices and submit them to instructors by starting a direct message that includes both project partners and all module instructors. (Game requests sent to only one instructor, or missing the project partner, do not count.) Instructors will try to assign you a game in your top three choices, but may suggest a different one based on how many students choose a particular game and difficulty levels.
 
 ## Playability Features
