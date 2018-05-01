@@ -18,12 +18,12 @@ The front-end of the web is based on three major technologies:
 - `CSS` Cascading Style Sheet
 - `CSS Property` The name of a display property of an HTML element (e.g., color, border)
 - `HTML Element` A building block that makes up the structure of a web page
-- `Tag` Usually used interchangeably with 'HTML element'
+- `HTML Tag` Used to create HTML elements. Some elements have an opening and closing tag, others only have an opening tag.
 - `Id` / `Class` Ways to identify HTML elements
 - `Attribute` Additional values that configure HTML elements and adjust their behavior
-- `Hyperlink` Colloquially, a Link
-- `Block` A block-level element occupies the entire space of its parent element (container), thereby creating a "block."
-- `Inline` Elements which only occupy the space bounded by the tags defining the element, instead of breaking the flow of the content.
+- `Hyperlink` A reference to an external resource
+- `Block` A block-level element occupies the entire width of its parent element (container), thereby creating a "block."
+- `Inline` An inline-level element only occupies the space bounded by the tags defining the element, instead of breaking the flow of the content.
 
 ## What is HTML?
 
