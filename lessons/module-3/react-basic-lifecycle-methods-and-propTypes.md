@@ -30,7 +30,7 @@ Per [the docs](https://facebook.github.io/react/docs/react-component.html#constr
 
 Within the constructor, it's important to immediately call `super()` in cases where our class extends any other class that also has a defined constructor. Calling `super()` calls the constructor for our parent class and allows it to initialize itself. This allows `this` to have a defined value **within the constructor**. Constructors are great for setting up our component and initializing state. However, this is **NOT** a place you should consider making a network request.
 
-This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting this.
+This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting this. Basically, if you don't need to initialize state or bind any methods, you don't need to implement a constructor for your component. It will get called automatically behind the scenes.
 
 Rule of thumb, though, is typically "if you have a constructor in your code, you must call super". In fact, browsers today will throw an error if you are using ES6 syntax and try to call a constructor method without `super()`.
 
@@ -79,8 +79,7 @@ constructor(props) {
 ```
 
 Without passing the props down into this method, `this.props` will return as `undefined` **within the `constructor` method**.  
-This is bad because it's the first function called when your component is instantiated as a class - knowing the context of `this` 
-from the get go can be a big deal.   
+This is bad because it's the first function called when your component is instantiated as a class - knowing the context of `this` from the get go can be a big deal.   
 
 Note that whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` 
 method - the `render()` method sets its own context.  
