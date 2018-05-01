@@ -12,8 +12,8 @@ tags: command line, terminal
 - `bash` A particular type of shell found on Unix systems
 - `Directory` Same thing as a Folder
 - `command` - A set of instructions for the computer to execute - provided via the command line
-- `argument` - A piece of information needed to run a certain command
-- `flag` - an optional argument usually prefixed by a '-' or '--'
+- `argument` - A piece of information needed to run a certain command ie. `touch sample.txt` where sample.txt is the argument
+- `flag` - An optional argument usually prefixed by a `-` or `--` ie. `ls -a` where -a is the flag
 
 ### A note on interchangeable terms above
 
