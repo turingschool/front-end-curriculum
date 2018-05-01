@@ -39,9 +39,7 @@ You can use any of the following JavaScript libraries:
 - Centipede
 - Othello/Reversi
 - Frogger
-- Tron
 - Missile Command
-- Winterbells
 
 (Any other game requires instructor approval.)
 

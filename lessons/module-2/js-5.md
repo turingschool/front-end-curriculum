@@ -197,6 +197,7 @@ Array objects inherit from the Array.prototype which gives us access to methods 
 
 TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.
 
+
 #### Exercises
 In the console, take a look at `Array.prototype`. What methods do you recognize? What methods are new to you?
 
