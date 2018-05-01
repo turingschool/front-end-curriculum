@@ -98,8 +98,6 @@ In the terminal, we don't have Finder to visually tell us what is contained with
 
 We can use the command `ls` to list the content in our current directory. You can see directories and files in the current directory, but you cannot see directories and files that are inside other directories.
 
-For a more detailed list of content, type `ls -la` - note the space between the characters. The addition of `-la` gives more information about when that file or directory was last modified, permissions, and also lists [hidden files/directories](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory).
-
 ### Your Turn
 
 * Open your terminal and enter the command `pwd`. What do you see? Can you find this same location using Finder?
@@ -107,6 +105,8 @@ For a more detailed list of content, type `ls -la` - note the space between the 
 * Enter the command `ls`. What directories and files do you see?
 
 * Enter `ls -la`. How does this list change? Do you see the same files and directories when you use Finder?
+
+For a more detailed list of content, type `ls -la` - note the space between the characters. The addition of `-la` gives more information about when that file or directory was last modified, permissions, and also lists [hidden files/directories](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory).
 
 ## Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
 
