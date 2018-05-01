@@ -4,12 +4,27 @@ length: 90
 tags: command line, terminal
 ---
 
-
 ## Vocab
 
-- See the Vocab in [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html)
+- `Terminal` A program that allows a user to interact with The Command Line
+- `A Shell` A low level interface for your computer. Instead of pointing and clicking on things, you type words and run commands
+- `The Command Line` The same thing as a shell - often used interchangeably 
+- `bash` A particular type of shell found on Unix systems
 - `Directory` Same thing as a Folder
+- `command` - A set of instructions for the computer to execute - provided via the command line
 
+### A note on interchangeable terms above
+
+Most people use the terms `terminal`, `shell`, `command line`, and `bash` interchangeably.
+That's okay! The problem comes when they're used _incorrectly_.
+
+Here's a few examples of correct usage:
+- "Can you increase the font size of **your terminal**?"
+- "We need to open up **the command line** here."
+- "Let's use **the shell** for this task."
+- "I don't like using **bash** - I think fish is better"
+
+Additionally, there's a Mac application just called `Terminal`. That's a specific program that accesses the command line.
 
 ## Context
 
