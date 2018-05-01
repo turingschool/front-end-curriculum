@@ -76,6 +76,39 @@ Here is an example of a slightly more robust document:
   What are the tags vs what is the element?
 -->
 
+# Setup for Today
+
+### Code Pen
+Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account setup.
+
+***
+
+# Practice
+
+### Containing Elements, Semantics & Text
+Let's experiment with the following tags in codepen:
+
+* `header`
+* `footer`
+* `h1 - h6`
+* `section`
+* `article`
+* `p`
+* `ul` and `ol`
+* `div`
+
+Use these tags to create the structure of the newspaper. Do not worry about recreating exactly, the goal is just to create the structure.
+
+![Alien Paper](/assets/images/alien-paper.png)
+
+<p data-height="300" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<!--
+  Journal
+  What limitations do you notice only using html to create our newspaper site?
+-->
+
 ### Images and Attributes
 
 We use HTML tags to mark up text to show its semantic meaning. The browser uses these tags to structure the document. _Most_ tags have an opening and closing tag, but a few do not. Images—defined using the `<img>` tag do not have a closing tag for instance.
@@ -193,39 +226,6 @@ Instead we'll focus on two elements:
 * Also, check out the cheat sheets in independent study
 
 ***
-
-# Setup for Today
-
-### Code Pen
-Let's head over to [codepen.io](http://codepen.io/) for a quick tour + account setup.
-
-***
-
-# Practice
-
-### Containing Elements, Semantics & Text
-Let's experiment with the following tags in codepen:
-
-* `header`
-* `footer`
-* `h1 - h6`
-* `section`
-* `article`
-* `p`
-* `ul` and `ol`
-* `div`
-
-Use these tags to create the structure of the newspaper. Do not worry about recreating exactly, the goal is just to create the structure.
-
-![Alien Paper](/assets/images/alien-paper.png)
-
-<p data-height="300" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-<!--
-  Journal
-  What limitations do you notice only using html to create our newspaper site?
--->
 
 ### For Placement Only (FPO)
 Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
