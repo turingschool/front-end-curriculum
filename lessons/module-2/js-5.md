@@ -1,4 +1,4 @@
-# JS V
+# JavaScript Fundamentals: Data Types & Structures
 
 ## Vocab
 
@@ -7,16 +7,17 @@
 - `Complex Data Types` Data types that are not Primitives. E.g., Objects, Arrays
 - `Object` A data structure made up of Keys and Values
 - `Key` The name used to refer to a Value in an Object
-- `Value` / `Property` / `Attribute` The value referenced by a Key in an Object
+- `Value` The value referenced by a Key in an Object
 - `Array` A list of values
 - `Function` A grouping of executable code. Can be manipulated just like any other Object
-- `Scope` Where variables and functions are accessible
+- `Method` A function that's defined as a property of an object
+- `Scope` / `Context` Where variables and functions are accessible
 - `Parameters` The variables a function says it will take in when it runs. Declared inside parens
 - `Arguments` The actual variables a function uses when it runs
+- `Prototype` An object that allows a one object to inherit methods and properties from another
 
-## Data Types Review
 
-## Simple Data Types
+## Simple / Primitive Data Types
 
 ```js
 // boolean values
@@ -171,9 +172,31 @@ var fancyName = 'scientificName';
 ---
 
 ### Arrays
-[Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are objects where there exists a relationship between any properties which correspond with an integer and the length property. In addition, array objects inherit from the Array.prototype which gives them additional helper functions (i.e. `push`, `pop`, `forEach`, etc). 
+[Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are list-like objects, used for storing a list of related values. If you were making a list of pizza toppings, you might store them in an array like so:
 
-Basically what this means is that arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to add and remove properties, as well as methods which make it easier to interact with all of their properties.
+
+```js
+var toppings = ['cheese', 'peppers', 'onions', 'garlic'];
+```
+
+
+Remember we said arrays are actually objects under the hood. Though it might not seem like arrays have a set of key-value pairs like the objects we just discussed, each value in the array actually has a numbered key associated with it that counts from 0. For example, written as an object, the toppings array might look like this:
+
+```js
+var toppings = {
+	0: 'cheese',
+	1: 'peppers',
+	2: 'onions',
+	3: 'garlic'
+};
+```
+
+This syntax is a lot more verbose, and the numbered keys don't really give us any useful information **except** where the value exists within the array. This can be important when we want to use some of the built-in helper methods that come with arrays.
+
+Array objects inherit from the Array.prototype which gives us access to methods like `push`, `pop`, and `forEach`, which allow us to manipulate and interact with our arrays.
+
+TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.
+
 
 #### Exercises
 In the console, take a look at `Array.prototype`. What methods do you recognize? What methods are new to you?
@@ -246,3 +269,13 @@ _Note: we can also simply pass the invoked function directly to the console.log:
 #### Exercises
 Create a function `add2` that takes in a parameter of `number` and returns the parameter plus 2.
 
+
+### Checks for understanding
+* What are some characteristics of primitive data types?
+* What's the difference between null and undefined?
+* Give an example of when you might use an array. An object?
+
+### Links & Resources
+* [Prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+* [Primitive Data Types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+* [Complex Data Types & Structures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures)

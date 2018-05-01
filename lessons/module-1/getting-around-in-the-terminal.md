@@ -4,12 +4,29 @@ length: 90
 tags: command line, terminal
 ---
 
-
 ## Vocab
 
-- See the Vocab in [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html)
+- `Terminal` A program that allows a user to interact with The Command Line
+- `A Shell` A low level interface for your computer. Instead of pointing and clicking on things, you type words and run commands
+- `The Command Line` The same thing as a shell - often used interchangeably 
+- `bash` A particular type of shell found on Unix systems
 - `Directory` Same thing as a Folder
+- `command` - A set of instructions for the computer to execute - provided via the command line
+- `argument` - A piece of information needed to run a certain command ie. `touch sample.txt` where sample.txt is the argument
+- `flag` - An optional argument usually prefixed by a `-` or `--` ie. `ls -a` where -a is the flag
 
+### A note on interchangeable terms above
+
+Most people use the terms `terminal`, `shell`, `command line`, and `bash` interchangeably.
+That's okay! The problem comes when they're used _incorrectly_.
+
+Here's a few examples of correct usage:
+- "Can you increase the font size of **your terminal**?"
+- "We need to open up **the command line** here."
+- "Let's use **the shell** for this task."
+- "I don't like using **bash** - I think fish is better"
+
+Additionally, there's a Mac application just called `Terminal`. That's a specific program that accesses the command line.
 
 ## Context
 
@@ -81,8 +98,6 @@ In the terminal, we don't have Finder to visually tell us what is contained with
 
 We can use the command `ls` to list the content in our current directory. You can see directories and files in the current directory, but you cannot see directories and files that are inside other directories.
 
-For a more detailed list of content, type `ls -la` - note the space between the characters. The addition of `-la` gives more information about when that file or directory was last modified, permissions, and also lists [hidden files/directories](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory).
-
 ### Your Turn
 
 * Open your terminal and enter the command `pwd`. What do you see? Can you find this same location using Finder?
@@ -90,6 +105,8 @@ For a more detailed list of content, type `ls -la` - note the space between the 
 * Enter the command `ls`. What directories and files do you see?
 
 * Enter `ls -la`. How does this list change? Do you see the same files and directories when you use Finder?
+
+For a more detailed list of content, type `ls -la` - note the space between the characters. The addition of `-la` gives more information about when that file or directory was last modified, permissions, and also lists [hidden files/directories](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory).
 
 ## Make Folders & Create/Remove Files: `mkdir`, `touch`, `rm`
 

@@ -2,7 +2,7 @@
 title: Syllabus Overview & Expectations
 ---
 
-## Mar 12, 2018 - Apr 20, 2018
+## Apr 30, 2018 - June 8, 2018
 
 | Instructors     | Slack         | Email            |
 | ----------------|---------------| -----------------|
@@ -86,7 +86,7 @@ By the end of module one, students will:
 | Attendance & Tardiness| Class begins promptly at 9:00 AM for the morning session, and 1:00 PM for the afternoon session. You are expected to be on time and in attendance every day.<br> We understand issues arise, and ask that you communicate with instructors when you are going to be late or absent. |
 | Evals | Per project assessments that should be included in your portfolio.|
 |Mid Mock Assessment| This assessment is not included in your portfolio, but is prep for the final assessment week.|
-|Quizlette| Weekly pop quiz questions.|
-|Pentathlon| Week six of the program, coined the “Pentathlon”, is a summative assessment to determine your eligibility to advance to module two. The assessment is comprised of: <br>1. DOM coding challenge <br>2. Vanilla Javascript logic based coding challenge <br>3. A comprehensive quizlette <br>4. Static Comp #3 evaluation <br>5. Portfolio defense.|
+|Mystery Fun Time| Weekly reviews of concepts from lecture|
+|Quadrathlon| Week six of the program, coined the “Quadrathlong”, is a summative assessment to determine your eligibility to advance to module two. The assessment is comprised of: <br>1. DOM coding challenge <br>2. Vanilla Javascript logic based coding challenge <br>3. Static Comp #3 evaluation <br>4. Portfolio defense.|
 |Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments.<br>Detailed information can be found on the Turing School [Portfolios Repo](https://github.com/turingschool/portfolios).|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|

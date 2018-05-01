@@ -5,7 +5,15 @@ module: 3
 
 ## Basic React Lifecycle Methods
 
-### Constructor && Super
+A React Component goes through 3 phases during it's Lifecycle:
+
+* Birth/Mounting 
+* Growth/Updating
+* Death/Unmounting
+
+This lesson will focus on the Birth/Mounting phase and we will cover the others later this week.
+
+### constructor() && super()
 
 Let's talk about the first methods we see in a class based React component.  
 
@@ -20,9 +28,9 @@ constructor() {
 
 Per [the docs](https://facebook.github.io/react/docs/react-component.html#constructor), the `constructor()` method is called before the component is mounted onto the DOM. It is the first and only function called automatically whenever a `class` based component is created.  
 
-Within the constructor it's important to immediately call `super()`, which allows `this` to have a defined value **within the constructor**. 
+Within the constructor, it's important to immediately call `super()` in cases where our class extends any other class that also has a defined constructor. Calling `super()` calls the constructor for our parent class and allows it to initialize itself. This allows `this` to have a defined value **within the constructor**. Constructors are great for setting up our component and initializing state. However, this is **NOT** a place you should consider making a network request.
 
-This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting this.
+This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting this. Basically, if you don't need to initialize state or bind any methods, you don't need to implement a constructor for your component. It will get called automatically behind the scenes.
 
 Rule of thumb, though, is typically "if you have a constructor in your code, you must call super". In fact, browsers today will throw an error if you are using ES6 syntax and try to call a constructor method without `super()`.
 
@@ -30,7 +38,7 @@ Let's take a minute to fire up a react component and watch the errors fire as we
 
 You'll notice that React has some incredibly verbose and helpful error messages. Make sure you take time to read these as you build out projects this mod, they will almost always point you in the direction of happiness.  
 
-### What is this `super` business?  
+### What is this `super()` business?  
 
 Try this in your component and check out the error message:
 
@@ -71,8 +79,7 @@ constructor(props) {
 ```
 
 Without passing the props down into this method, `this.props` will return as `undefined` **within the `constructor` method**.  
-This is bad because it's the first function called when your component is instantiated as a class - knowing the context of `this` 
-from the get go can be a big deal.   
+This is bad because it's the first function called when your component is instantiated as a class - knowing the context of `this` from the get go can be a big deal.   
 
 Note that whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` 
 method - the `render()` method sets its own context.  
@@ -81,14 +88,32 @@ Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-st
 always pass props to the base constructor. However there is some debate as to why this is suggested, since React will
 automatically set the props for you once the constructor has fired.
 
-### componentDidMount
+### static getDerivedStateFromProps() - ***NEW***
+
+This is a new lifecycle method that was added with React 16.3. Check out what the [docs](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) have to say about it. Because this is a static method, we don't have access to `this` inside the method. Per the docs, this method gets invoked under 2 circumstances:
+  * after a component is instantiated
+  * when the component receives new props
+
+It takes in `nextProps` and `prevState` and returns an object to update state, or null if the new props do not require any state updates.
+
+### componentWillMount() - ***deprecated***
+
+There is not a huge difference between `constructor()` and `componentWillMount()`. Like all other lifecycle methods withing the Birth/Mounting phase, `componentWillMount()` is only called once. Historically, there were some reasons to use `componentWillMount()` over `constructor()`, but that practice has since been deprecated. You should just know that it exitsts, but **DON'T USE IT**
+
+### render()
+
+Now that our component has been initialized and configured, we can begin rendering some content/elements on the page. This is the lifecycle method that React developers are most familiar with. It is the one lifecycle method that exists arcoss all phases of a React component. It's important to remember to always keep `render()` a **pure method**. This means we should never call `this.setState()` within `render()`. If we take a minute to think about this, it makes total sense... it would put us in an infinate loop of re-rendering.  
+
+#### Managing Children Components and Mounting
+
+The React Element that has been rendered by the initial `render()` may possibly have a number of children that need to be rendered as well. This is where each of those children kickoff their own lifecycle methods... `constructor()`, `render()`, and `componentDidMount()`. Once all the children have been successfully created, initialized and mounted, the parent's `componentDidMount()` will finally be called.
+
+### componentDidMount()
 
 Per [the docs](https://reactjs.org/docs/react-component.html#componentdidmount), `componentDidMount()` is invoked "immediately 
-after a component is mounted." Any functionality that is dependent on existing DOM nodes should live here. For example, let's 
-say you want to set state which affects a `<p>` tag, you need to wait until that `<p>` tag exists before you can throw any additional 
-information into it.
+after a component is mounted." When `componentDidMount()` is called, this signalizes that the component - and all its sub-components - have rendered properly. Any functionality that is dependent on existing DOM nodes should live here. For example, let's say you want to set state which affects a `<p>` tag, you need to wait until that `<p>` tag exists before you can throw any additional information into it.
 
-This is also the go-to location to fire off an API call or network request.  
+This is also the go-to location to fire off an API call or network request (**BEST PRACTICE**). This is a great [blog post](https://www.robinwieruch.de/react-fetching-data/) that discusses how and where to fetch data in React. 
 
 **NOTE:** Setting state in this method **WILL** trigger a re-render.
 
@@ -138,12 +163,11 @@ Warning: Failed prop type: Invalid prop `name` of type `array` supplied to `Main
     in App
 ```
 
+### Review then Turn & Talk 
+
 Check out a complete list of `propTypes` and examples of usage [here](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#react.proptypes).  
 
-By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where 
-your component will not function correctly without that particular prop. To add a validation that will fire an error message if 
-a prop does not show up at all, simply add `.isRequired` to the end of the propType delcaration.  
-
+By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where your component will not function correctly without that particular prop. To add a validation that will fire an error message if a prop does not show up at all, simply add `.isRequired` to the end of the propType delcaration.  
 
 ```js
 Main.propTypes = {
@@ -151,15 +175,13 @@ Main.propTypes = {
 }
 ```
 
-You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. 
-Instead of specifying a particular JS primitive you can use `.any`.
+You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. Instead of specifying a particular JS primitive you can use `.any`.
 
 ```js
 Main.propTypes = {
   name: PropTypes.any.isRequired
 }
 ```
-
 
 ### Your Turn
 
@@ -192,9 +214,7 @@ Main.defaultProps = {
 }
 ```  
 
-**Note:** The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props 
-to fill themselves in before any warning messages are thrown.  
-
+**Note:** The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props to fill themselves in before any warning messages are thrown.  
 
 ### Your Turn  
 

@@ -25,6 +25,8 @@ You can use any of the following JavaScript libraries:
 * [Mocha](http://mochajs.org/)
 * [Moment.js](http://momentjs.com)
 * [Numeral.js](http://numeraljs.com)
+* [p5.js](https://p5js.org/)
+* [p5.collide.js](https://github.com/bmoren/p5.collide2D)
 
 (Other libraries may be used *only* with instructor approval.)
 
@@ -33,30 +35,25 @@ You can use any of the following JavaScript libraries:
 ## Game Choices
 
 - Lights Out
+- Snake
 - Centipede
-- Connect Four
 - Othello/Reversi
 - Frogger
-- Breakout
-- Tron
 - Missile Command
-- Winterbells
 
-(Any other game requires instructor approval.)
-
-No more than 3 groups will be allowed to do the same game. Choices are first come, first served, and game requests are submitted by starting a direct message that must include both project partners and all module instructors. (Game requests sent to only one instructor, or missing the project partner, do not count.)
+Rank your top three game choices and submit them to instructors by starting a direct message that includes both project partners and all module instructors. (Game requests sent to only one instructor, or missing the project partner, do not count.) Instructors will try to assign you a game in your top three choices, but may suggest a different one based on how many students choose a particular game and difficulty levels.
 
 ## Playability Features
 
-We want your game to be full-featured and playable — not just a proof of concept of the gameplay and rendering features.
-
-To this end, make sure to include sufficient UX to allow the user to fully interact with the game. This would include:
+We want your game to be as full-featured as possible. Make sure to include sufficient UX to allow the user to fully interact with the game. This would include:
 
 * Indicate when the game is over and won or lost
 * Allow the user to start a new game
 * Display a score (if applicable)
-* Include a clean UI surrounding the actual game interface itself, including thorough instructions
-* Create multiple rounds of difficulty (consider increasing factors such as game speed, randomness of starting setup, etc)
+* Include a clean UI surrounding the actual game interface itself (this might include instructions on how to play, a high score saved in localStorage, etc. Think of what would be most intuitive for your particular game.)
+
+<!-- * Create multiple rounds of difficulty (consider increasing factors such as game speed, randomness of starting setup, etc) -->
+
 
 ## Code organization
 
@@ -64,7 +61,7 @@ Your game should make use of at least two classes; the exact number will depend 
 
 You should use [inheritance](https://www.sitepoint.com/understanding-ecmascript-6-class-inheritance/) with your classes.
   - a parent class should have properties that might be shared by several other child classes
-  - a parent class's properties and methods should be shard by all the child classes
+  - a parent class's properties and methods should be shared by all the child classes
   - a child classes should inherit those properties from the parent class
 
 Each class should have its own file with the filename capitalized. The class should be capitalized as well. Only code that is a part of this class should be in this file.
@@ -90,7 +87,6 @@ class Villain extends Person {
 ## User Interface
 
 The UI of the game should be clean, intuitive, and informative:
- - instructions to begin and play the game
  - tell the user when the game is over (due to losing, winning, or completing the game)
  - tell the user the score or number of lives remaining (if applicable)
  - allow the user to start a new game
@@ -99,7 +95,7 @@ If your game uses the arrow keys, you should prevent the page from scrolling whe
 
 ## Testing
 
-Each javascript file in your project should have its own test file
+Each JavaScript file in your project should have its own test file
 e.g.
 if you have a `MasterChief.js` class file, all the tests for that class should be located in `MasterChief-test.js`
 
