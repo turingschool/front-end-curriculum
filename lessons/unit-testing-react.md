@@ -94,10 +94,23 @@ Try it out - run `npm test` to fire up the testing server. Currently our app has
 
 Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with the facebook convention for the purposes of this tutorial.  
 
-Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) they  "recommend that you use a separate tool for browser end-to-end tests if you need them. They are beyond the scope of Create React App." This means implementing our super friend `Enzyme`!  
+Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) they  "recommend that you use a separate tool for browser end-to-end tests if you need them. They are beyond the scope of Create React App."
+
+#### Installing Enzyme
+
+The next tool we need to install is `Enzyme`!
+Follow the [Create React App documentation](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#testing-components) on how to install it.
 
 ```
-npm install --save-dev enzyme react-addons-test-utils
+npm install --save enzyme enzyme-adapter-react-16 react-test-renderer
+```
+
+`src/setupTests.js`
+```
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
 ```
 
 ### Big Picture
