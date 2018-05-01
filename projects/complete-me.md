@@ -64,7 +64,7 @@ In our example here we have two parent nodes. `a` and `e` they have children nod
 
 Everybody uses auto complete. In this project you are going to be building a low level version of an auto complete system in javascript.
 
-You will use your TDD repo (created during the config lesson).
+You will start from the [TDD boilerplate](https://github.com/turingschool-examples/tdd).
 
 ### Hint
 You can use `console.log` along with `JSON.stringify` to view your trie in your console when running your tests.
