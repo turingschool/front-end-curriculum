@@ -70,6 +70,11 @@ Here is an example of a slightly more robust document:
 </p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+<!-- 
+  Write a simplified example on the board,
+  Turn and Talk
+  What are the tags vs what is the element?
+-->
 
 ### Images and Attributes
 
@@ -105,6 +110,12 @@ In this case, the `<a>` tag needs to know which url it should be linked to. We u
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="yJYdyb" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/yJYdyb/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+<!-- 
+  Turn and Talk
+  What are attributes and what are they used for?
+  Why do some elements have two tags and others just have one?
+ -->
 
 ### Block and Inline Elements
 
@@ -211,7 +222,10 @@ Use these tags to create the structure of the newspaper. Do not worry about recr
 <p data-height="300" data-theme-id="26495" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-
+<!--
+  Journal
+  What limitations do you notice only using html to create our newspaper site?
+-->
 
 ### For Placement Only (FPO)
 Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
