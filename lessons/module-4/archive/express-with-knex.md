@@ -240,7 +240,7 @@ Let's write some code to pull stuff out of the database.
 
 ```js
 const environment = process.env.NODE_ENV || 'development';
-const configuration = require('../knexfile')[environment];
+const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 
 ...

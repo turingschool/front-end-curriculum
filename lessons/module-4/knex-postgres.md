@@ -386,7 +386,7 @@ Let's write some express code to interact with our newly seeded database. Set up
 
 ```js
 const environment = process.env.NODE_ENV || 'development';
-const configuration = require('../knexfile')[environment];
+const configuration = require('./knexfile')[environment];
 const database = require('knex')(configuration);
 ```
 
