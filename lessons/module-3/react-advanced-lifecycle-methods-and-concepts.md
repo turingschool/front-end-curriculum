@@ -43,6 +43,4 @@ This method is called right before any DOM mutations are made. If you need to do
 - [Dan Abramov's Twitter chart/convo on modern React lifecycle methods](https://twitter.com/dan_abramov/status/981712092611989509)
 - [Update on Async Rendering](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
 
-## Resources  
-- [How to Fetch Data in React](https://www.robinwieruch.de/react-fetching-data/)
-- [On Ajax Library Comparisons](http://andrewhfarmer.com/ajax-libraries/)  
+  
