@@ -225,6 +225,7 @@ Instead we'll focus on two elements:
 
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
+* [HTML Styleguide](https://github.com/turingschool-examples/html)
 * Also, check out the cheat sheets in independent study
 
 ***
@@ -267,6 +268,7 @@ First thing's first, you'll need to [download the assets](https://drive.google.c
 Now, in your `dog-party` site directory, begin laying out the HTML for this site:
 
 # ![Dog Party](/assets/images/dog-party.png)
+
 
 
 <!-- 
