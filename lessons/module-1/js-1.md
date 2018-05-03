@@ -98,7 +98,7 @@ Strings can be used for any kind of text. We use them regularly to add text to a
 
 ### Your Turn
 
-Let's take a couple of minutes to pair up and explain these three data types to your neighbor. Take turns, and make sure both of you have a chance to explain. This is to practice using the vocabulary and talking about code. Practice using your console to show the different data types.
+Let's take a couple of minutes to pair up and explain these the following data types to your neighbor: `null`, `undefined`, `boolean`, `number`, and `string`. Take turns, and make sure both of you have a chance to explain. This is to practice using the vocabulary and talking about code. Practice using your console to show the different data types.
 
 # Variables in JavaScript
 
@@ -155,7 +155,7 @@ Until you've added the assignment operator and the variable value, the variable 
 ### Your Turn (in the console)
 
 * Assign values to your "quantity" and "mythicalCreature" variables.
-  * What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
+* What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
 * Create three more variables, and give them each different data types (numbers, strings, booleans)
 
 ## Using Variables Together
