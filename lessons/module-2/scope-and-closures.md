@@ -247,11 +247,11 @@ var counter = (function () {
   var counter = 0;
 
   return {
-	add: function () {
-  counter++;
-},
-	getCount: function () {
-	  return counter;
+  	add: function () {
+      counter++;
+    },
+  	getCount: function () {
+  	  return counter;
     }
   };
 })();
