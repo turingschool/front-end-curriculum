@@ -22,7 +22,7 @@ But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.c
 
 ## Vocab
 
-- `CSS` Cascading Style Sheet
+- `CSS` Cascading Style Sheets
 - `CSS property` The name of a display property of an HTML element (e.g., color, border)
 - `HTML element` A building block that makes up the structure of a web page
 - `tag` Usually used interchangeably with 'HTML element'
