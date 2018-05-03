@@ -224,7 +224,23 @@ What will log? How does this change if we change variable declaration to use `va
 
 (The scope chain is the chain the code follows when it's looking for variables; if a variable is referenced but not declared in a block, the code goes out to the next available scope and looks there. This process continues - the code traverses the chain until it finds the variable declaration.)
 
-Let's take a look at an example of a closure:
+Here's a basic example of a closure:
+
+```js
+function init() {
+  var name = 'Turing'; // name is a local variable created by init
+
+  function displayName() { // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function    
+  }
+
+  displayName();    
+}
+init();
+```
+
+
+Let's take a look at another example of a closure:
 
 ```
 var counter = (function () {
@@ -256,7 +272,7 @@ What's the point of doing something like this?
 
 You'll notice that there's no way to mutate or overwrite the `count` variable, because it is completely protected within the closure. It's only accessible through the functinos provided by the closure itself.
 
-Here's another interesting example of a closure in action:
+<!-- Here's another interesting example of a closure in action:
 
 ```
 function add (x) {
@@ -281,6 +297,8 @@ Then, once we have those new functions, we can pass in a second parameter and ge
 tl;dr: The `add` function is the factory. `add5` and `add9` are closures: they contain the same code but refer to different scopes.
 
 (This is also known as [currying](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe), a concept from functional programming.)
+ -->
+
 
 ## IIFE (immediately invoked function expressions)
 
