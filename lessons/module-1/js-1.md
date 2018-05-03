@@ -19,18 +19,18 @@ In this lesson we'll cover:
 
 - `Variable` A container for a value. The main building block for all programming
 - `Function` A predefined and reusable group of behavior
-- `Expression` An executable piece of code, the result of which may be assigned to a variable
+- `Expression` An executable piece of code, the result of which may be assigned to a variable. Expressions result in a single value
 - `Statement` An executable piece of code (the result of which may or may not be able to be assigned to a variable)
 - `Array` A list of values
 - `Operator` Symbols that are used to assign, compare, and perform operations
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 - `Data Type` A kind of data, defined by the values it can hold and the operations that can be done on it
-- `Primitive` A kind of data type. In Javascript it is all data types that are not objects and have no methods. Primitives in Javascript are [string, number, boolean, null, undefined, symbol]
-- `Assignment` Assigning a value to a variable (distinct from assignment)
+- `Primitive type` A kind of data type. Primitives in Javascript are [string, number, boolean, null, undefined, symbol]
+- `Assignment` Assigning a value to a variable
 - `Declare` Creating a new variable (distinct from assignment)
-- `Call` Running a function
-- `Parameters` The variables declared in a function definition (similar, but different that Arguments)
-- `Arguments` The variables given to a function when it's called (similar, but different than Parameters)
+- `Call/Invoke` Running a function
+- `Parameters` The variables declared in a function definition 
+- `Arguments` The variables passed to a function when it's called/invoked
 
 ## History of JavaScript
 
