@@ -74,6 +74,9 @@ Here is an example of a slightly more robust document:
   Write a simplified example on the board,
   Turn and Talk
   What are the tags vs what is the element?
+
+  Check for understanding
+  How do we feel about creating elements?
 -->
 
 # Setup for Today
@@ -147,6 +150,7 @@ In this case, the `<a>` tag needs to know which url it should be linked to. We u
 <!-- 
   Turn and Talk
   What are attributes and what are they used for?
+  What are some other attributes you have used?
   Why do some elements have two tags and others just have one?
  -->
 
@@ -170,8 +174,6 @@ We use `<em>` and `<strong>` to denote the semantic meaning of the content.
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
 You may notice that the `<em>` tags are italicized and the `<strong>` tags are displayed in bold. The browser does this by default. That said, you should still only use these tags to convey meaning. We can change the way stuff looks later with CSS.
-
-
 
 ### `<span>` and `<div>`
 
@@ -265,3 +267,10 @@ First thing's first, you'll need to [download the assets](https://drive.google.c
 Now, in your `dog-party` site directory, begin laying out the HTML for this site:
 
 # ![Dog Party](/assets/images/dog-party.png)
+
+
+<!-- 
+Wrap up questions
+What role does HTML play in our web applications?
+What are semantic tags and why do we use them? 
+-->
