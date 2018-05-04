@@ -63,7 +63,7 @@ We have several scopes available to us. Global, function, block, and eval (more 
 
 Let's consider the following code:
 
-```
+```js
 function buildLaser () {
   var message = 'Laser Built';
   console.log(message);
@@ -92,7 +92,7 @@ As the call stack builds up, each function has its own execution context.
 
 **Global scope:**
 
-```
+```js
 var count = 20;
 
 console.log(window.count);
@@ -104,7 +104,7 @@ Tools like webpack can help us avoid this by creating scope for each file it bun
 
 **Function scope (returning values):**
 
-```
+```js
 function makeNumber () {
   var number = 5;
 
@@ -126,7 +126,7 @@ If we want to use values created by functions, we must return those values out o
 
 `const number = makeNumber();` could be one way; assigning the returned value of the function to a new variable allows us to "store" or "capture" the value to be used elsewhere.
 
-```
+```js
 function makeNumber () {
   var number = 5;
 
@@ -142,7 +142,7 @@ console.log(makeNumber()); // 5
 
 **Function scope (child and parent scopes):**
 
-```
+```js
 function makeArray () {
   const array = [ 5, 4, 3, 2, 1 ];
 
@@ -169,7 +169,7 @@ If we think about the house analogy, everyone in the house has access to common 
 
 Exercise 1:
 
-```
+```js
 function makeNumber () {
   let number = 5;  
   return number;
@@ -192,7 +192,7 @@ The above code is broken. Why? How can we make it work?
 
 Exercise 2:
 
-```
+```js
 let favoriteVillain = 'Ursula';
 
 function getFavoriteVillain () {
@@ -224,18 +224,34 @@ What will log? How does this change if we change variable declaration to use `va
 
 (The scope chain is the chain the code follows when it's looking for variables; if a variable is referenced but not declared in a block, the code goes out to the next available scope and looks there. This process continues - the code traverses the chain until it finds the variable declaration.)
 
-Let's take a look at an example of a closure:
+Here's a basic example of a closure:
 
+```js
+function init() {
+  var name = 'Turing'; // name is a local variable created by init
+
+  function displayName() { // displayName() is the inner function, a closure
+    alert(name); // use variable declared in the parent function    
+  }
+
+  displayName();    
+}
+init();
 ```
+
+
+Let's take a look at another example of a closure:
+
+```js
 var counter = (function () {
   var counter = 0;
 
   return {
-	add: function () {
-  counter++;
-},
-	getCount: function () {
-	  return counter;
+    add: function () {
+      counter++;
+    },
+    getCount: function () {
+      return counter;
     }
   };
 })();
@@ -256,7 +272,7 @@ What's the point of doing something like this?
 
 You'll notice that there's no way to mutate or overwrite the `count` variable, because it is completely protected within the closure. It's only accessible through the functinos provided by the closure itself.
 
-Here's another interesting example of a closure in action:
+<!-- Here's another interesting example of a closure in action:
 
 ```
 function add (x) {
@@ -281,10 +297,12 @@ Then, once we have those new functions, we can pass in a second parameter and ge
 tl;dr: The `add` function is the factory. `add5` and `add9` are closures: they contain the same code but refer to different scopes.
 
 (This is also known as [currying](https://medium.com/@kbrainwave/currying-in-javascript-ce6da2d324fe), a concept from functional programming.)
+ -->
+
 
 ## IIFE (immediately invoked function expressions)
 
-```
+```js
 (function myScope () {
   var functionScopedVariable = "Safety!"
 })();
@@ -301,7 +319,7 @@ The function `myScope` is wrapped in parentheses, and then a pair of parentheses
 
 We can make use of IIFEs to create modules.
 
-```
+```js
 window.myStringModule = (function () {
   var allCapsString = "SAFETY!"
 
@@ -329,7 +347,7 @@ Read more about the JS Module Pattern:
 
 Functions are hoisted to the top of their scope.
 
-```
+```js
 log();
 
 function log () {
@@ -341,7 +359,7 @@ The above code will work, because the function is hoisted so it is declared and 
 
 Contrast this against the way variables are hoisted to the top of their scopes:
 
-```
+```js
 var age = 32065;
 
 function setAge () {
@@ -356,7 +374,7 @@ Why is that console log in `setAge` undefined, rather than 29 or even 32065?
 
 This is what JavaScript thinks is happening:
 
-```
+```js
 var age = 32065;
 
 function setAge () {
@@ -376,7 +394,7 @@ The variable declaration is hoisted to the top of the scope, but the definition 
 
 **Exercise 1**
 
-```
+```js
 let number = 10;
 
 function foo () {
@@ -393,7 +411,7 @@ console.log(number);		// 3 - what will log here?
 
 **Exercise 2**
 
-```
+```js
 let number = 10;
 
 function foo () {
@@ -410,7 +428,7 @@ console.log(number);		// 3 - what will log here?
 
 **Exercise 3**
 
-```
+```js
 function foo () {
   var localNumber = 20;
   number = localNumber;  
@@ -423,7 +441,7 @@ console.log(number);  // what will log here?
 
 **Exercise 4**
 
-```
+```js
 var name = "Nathaniel Foster";
 
 function printGreeting(name) {
@@ -436,7 +454,7 @@ printGreeting();			// what will log here?
 
 **Exercise 5**
 
-```
+```js
 let array = [];
 
 for (var i = 0; i < 10; i++) {
@@ -450,7 +468,7 @@ array[5]()	// what will log here?
 
 **Exercise 6**
 
-```
+```js
 let array = [];
 
 for (let i = 0; i < 10; i++) {
