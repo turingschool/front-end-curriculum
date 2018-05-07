@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     textAlign: 'center',
-    top: 200,
+    top: 200
   }
 });
 ```
