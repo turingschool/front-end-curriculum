@@ -181,8 +181,8 @@ Consider the following:
 
 To access the value from an input element we can do the following
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="akwjjr" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/deZKNP?editors=1011">Color Box - Get Color</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="300" data-theme-id="23788" data-slug-hash="deZKNP" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Color Box - Get Color" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/deZKNP/">Color Box - Get Color</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Let's use this pen for practice
 
