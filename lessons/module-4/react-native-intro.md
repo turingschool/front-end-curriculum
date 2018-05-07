@@ -45,12 +45,9 @@ npm i -g react-native-cli
 Now we are ready to create our first mobile app. We will be building a really simple app that scrolls through a few images and has a couple of UI components that change state. Using the React Native CLI, it's super easy to get your project up and running. We are going to focus today on just iOS because we don't need to install or sign up for an iOS emulator - xcode provides us with one. Here are some commands you can use to setup and emulate a React Native app:
 
 ```bash
-# Create our app
-$ react-native init DinoBounce
-$ cd DinoBounce
 # To run in iOS
 $ react-native run-ios
-# To run in Android
+# To run in Android, but you'll need to install other tooling to do this
 $ react-native run-android
 # If you want to pick a specific device on iOS, set it with the simulator flag
 $ react-native run-ios --simulator="iPhone 4s"
@@ -156,7 +153,8 @@ import { DinoScroll } from './app/DinoScroll';
 export default class App extends Component {
 
   constructor() {
-    this.state = {horizontalIsOn: false}
+    super();
+    this.state = { horizontalIsOn: false };
   }
 
   render() {
