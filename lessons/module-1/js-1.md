@@ -15,6 +15,9 @@ In this lesson we'll cover:
 * Conditionals and when to use them
 * How to declare and call functions with or without parameters
 
+## Resources
+[JS Style Guide](https://github.com/turingschool-examples/javascript)
+
 ## Vocab
 
 - `Variable` A container for a value. The main building block for all programming
