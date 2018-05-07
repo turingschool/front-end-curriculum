@@ -68,7 +68,7 @@ The DOM has been updated to the following:
 <p id="third" class="awesome">The is the third paragraph.</p>
 ```
 
-Grab the first paragraph element and change the text to 'The Original Paragraph'.
+**Your Turn**: Grab the first paragraph element and change the text to 'The Original Paragraph'.
 
 ```html
 <!-- The following line of HTML will be used in the next side track example -->
