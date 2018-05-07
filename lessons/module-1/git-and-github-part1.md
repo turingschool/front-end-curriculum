@@ -14,14 +14,13 @@ In this lesson, you will learn how to:
 
 ## Vocab
 
-- `Version Control System` A category of tool for managing the code you write
-- `Git` A specific tool for managing the code you write
-- `GitHub` A service / website that helps make using Git a little easier by hosting repositories. Not the same thing as Git
+- `Version Control System (VCS)` A tool that keeps track of the differences in code bases at different points in time
+- `Git` The most commonly used VCS
+- `GitHub` A service/website that allows people to host git repositories online
 - `Repository` A collection of code managed by git. Tends to be the folder your source files are in
 - `Commit` A snapshot of what your code looked like at a particular time
-- `Branch` A list of commits, one after another, one based on the next
-- `Working Area` Where unstaged files live. Untracked files are not in the working area
 - `Staging Area` Where staged files live
+- `Working Area` Where unstaged files live. Untracked files are not in the working area
 - `Untracked Files` Files that are not managed by Git
 
 ## Git
