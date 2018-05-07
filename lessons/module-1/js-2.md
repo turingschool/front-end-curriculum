@@ -14,17 +14,6 @@ Before we get started with new material, let's go over over what we've learned s
 - Conditionals
 - Functions
 
-## Vocab
-
-- See [vocab](http://frontend.turing.io/lessons/module-1/js-1.html) for JS I
-- `Scope` Where variables and functions are accessible
-- `Literal` (Array, Object) A way of declaring a data structure and its values at the same time
-- `Control Flow Statement` A part of a programming language that controls which code is executed when
-- `For Loop` A control flow statement that executes code multiple times
-- `Anonymous Function` A function without a name
-- `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
-- 
-
 ## Learning Goals
 
 In this lesson we'll cover:
@@ -34,6 +23,21 @@ In this lesson we'll cover:
 * Array literals  
 * Adding/changing values to arrays via their indices  
 * `for` loops  
+
+## Resources
+[JS Style Guide](https://github.com/turingschool-examples/javascript)
+
+## Vocab
+
+- See [vocab](http://frontend.turing.io/lessons/module-1/js-1.html) for JS I
+- `Anonymous Function` A function without a name
+- `Scope` Determines the accessibility/visibility of variables and other expressions
+- `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
+- `Literal`  A way of declaring a data structure and its values at the same time
+- `Array` Used to store a list of data items/multiple values under a single variable name
+- `Loops` A quick and easy way to do something repeatedly
+- `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops. 
+
 
 # More on Functions
 
