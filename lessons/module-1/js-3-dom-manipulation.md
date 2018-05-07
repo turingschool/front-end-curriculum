@@ -179,6 +179,13 @@ Consider the following:
 
 ### Getting User Input from Forms
 
+To access the value from an input element we can do the following
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="akwjjr" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/deZKNP?editors=1011">Color Box - Get Color</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+Let's use this pen for practice
+
 <p data-height="300" data-theme-id="23788" data-slug-hash="akwjjr" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/akwjjr/">Color Box</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
