@@ -13,8 +13,7 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
 ## Pre-lesson Homework
 
 1. Create a directory named `TDD`
-2. Create a sub-directory called `lib`
-3. Create a sub-directory called `test`
+2. Create sub-directorys called `lib` and `test`
 3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
 4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
 
