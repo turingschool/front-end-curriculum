@@ -14,6 +14,19 @@ Before we get started with new material, let's go over over what we've learned s
 - Conditionals
 - Functions
 
+## Learning Goals
+
+In this lesson we'll cover:
+
+* More about functions and their uses  
+* Variable scope  
+* Array literals  
+* Adding/changing values to arrays via their indices  
+* `for` loops  
+
+## Resources
+[JS Style Guide](https://github.com/turingschool-examples/javascript)
+
 ## Vocab
 
 - See [vocab](http://frontend.turing.io/lessons/module-1/js-1.html) for JS I
@@ -25,16 +38,6 @@ Before we get started with new material, let's go over over what we've learned s
 - `Loops` A quick and easy way to do something repeatedly
 - `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops. 
 
-
-## Learning Goals
-
-In this lesson we'll cover:
-
-* More about functions and their uses  
-* Variable scope  
-* Array literals  
-* Adding/changing values to arrays via their indices  
-* `for` loops  
 
 # More on Functions
 
