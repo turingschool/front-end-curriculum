@@ -5,12 +5,12 @@ module: 3
 
 ### Vocab
 
-`Asynchronous` Executing functions, where the second does not wait for the first to complete
-`Synchronous` Executing functions, where the second waits for the first to complete
-`Parallelism` Executing more than one operation at a time
-`Promise` An object representing the _eventual_ completion or error of an operation, along with a value
-`Callback` A function given to another function to be called at a later time
-`Higher Order Function` A function that either takes a another function as a parameter or returns a function, or both
+- `Asynchronous` Executing functions, where the second does not wait for the first to complete
+- `Synchronous` Executing functions, where the second waits for the first to complete
+- `Parallelism` Executing more than one operation at a time
+- `Promise` An object representing the _eventual_ completion or error of an operation, along with a value
+- `Callback` A function given to another function to be called at a later time
+- `Higher Order Function` A function that either takes a another function as a parameter or returns a function, or both
 
 ### Goals
 
