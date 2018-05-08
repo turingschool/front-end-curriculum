@@ -121,11 +121,11 @@ What we have so far is an api that serves up a collection of members [here](http
 So the API given to us doesn't automatically give us all the info needed to display the staff members. There is a second nested endpoint we will need to fetch..
 
 The endpoints given to us are:
-* http://localhost:3001/api/frontend-staff - this returns an object with a key of bio and the value is an array of objects that contain the name of each staff member and another endpoint to grab some additional info (bio & image).
+* [http://localhost:3001/api/frontend-staff](http://localhost:3001/api/frontend-staff) - this returns an object with a key of bio and the value is an array of objects that contain the name of each staff member and another endpoint to grab some additional info (bio & image).
 
 ![api/frontend-staff](../../assets/images/api-frontend-staff.png)
 
-* http://localhost:3001//api/bio/:id - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
+* [http://localhost:3001//api/bio/:id]() - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
 
 #### Let's do a little pseudo-coding
 * make initial fetch
