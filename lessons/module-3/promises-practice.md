@@ -8,7 +8,7 @@ module: 3
 
 This repo was created using `create-react-app`
 
-Clone this repo and the [promises-api](https://github.com/turingschool-examples/promises-api) repo down.
+Clone [this repo](https://github.com/turingschool-examples/promises-practice) and the [promises-api](https://github.com/turingschool-examples/promises-api) repo down.
 
 For both:
 
