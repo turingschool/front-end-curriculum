@@ -170,7 +170,7 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 2. Edit the `scripts` portion of the `package.json` file:
 
     ```
-    "test": "./node_modules/mocha/bin/mocha",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register test",
     "start": "webpack"
     ```
 3. Install the following dev dependencies:
@@ -181,6 +181,10 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - webpack
   - babel
   - babel-loader
+  - babel-cli
+  - babel-core
+  - babel-eslint
+  - babel-preset-env
   - style-loader
   - css-loader
 
@@ -212,7 +216,7 @@ While webpack can be difficult to understand at first, it makes our lives much e
 
 - We can even bundle up our HTML and CSS files by using loaders, further reducing the number of files the browser has to request and process.
 
-### Configuring Webpack
+### Configuring Webpack (and Babel)
 
 [Core Webpack Concepts](https://webpack.js.org/concepts/)
 
@@ -298,6 +302,14 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 ### In your TDD repo:
 
 1. Create a new file in the root of your repo: `webpack.config.js`
+2. Create a new file in the root of your repo: `.babelrc`
+3. Paste the following code into the `.babelrc` file:
+
+  ```
+  {
+  "presets": ["es2015"]
+  }
+  ```
 4. Paste the following code to the `webpack.config.js` file:
 
   ```
