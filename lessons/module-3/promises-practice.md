@@ -110,7 +110,7 @@ Hope that review was helpful!
 
 ## Let's dive in and build a Front-end Turing staff website
 
-![spec](../assets/images/spec.png)
+![spec](../src/assets/images/spec.png)
 
 ---
 
@@ -123,7 +123,7 @@ So the API given to us doesn't automatically give us all the info needed to disp
 The endpoints given to us are:
 * http://localhost:3001/api/frontend-staff - this returns an object with a key of bio and the value is an array of objects that contain the name of each staff member and another endpoint to grab some additional info (bio & image).
 
-![api/frontend-staff](../assets/images/api-frontend-staff.png)
+![api/frontend-staff](../src/assets/images/api-frontend-staff.png)
 
 * http://localhost:3001//api/bio/:id - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
 
