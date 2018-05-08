@@ -346,7 +346,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 5. In the `test/index-test.js` file, let's require chai:
 
   ```
-  import { assert } from 'chai';
+  const { assert } = require('chai');
   ```
 
 6. In the `test/index-test.js` file, let's write one test to see that mocha and chai are properly hooked up:
