@@ -35,6 +35,22 @@ iCantExecuteUntilSlowPokeAboveMeIsDone();
 
 **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. This comes in handy when we want to pull a slow or expensive operation out of the default synchronous flow of execution. The newest, hippest way to do this is by using [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
+
+## An Aside - The Event Loop
+
+Firstly, watch [this talk](https://www.youtube.com/watch?v=8aGhZQkoFbQ).
+You can read [this explanation on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop), too, if you like.
+
+The JavaScript runtime is made up of:
+- A `Heap` which holds variables and the like
+- A `Stack` which holds a list of the currently executing functions and their arguments and local variables (_frames_). The `Stack` is Last In First Out (_LIFO_)
+- A `Queue` which holds a list of functions (_messages, actually, that point to functions_). The `Queue` is First In First Out (_FIFO_)
+- An `Event Loop` which watches the `Queue` and the `Stack`, and takes the first function from the `Queue` and puts it on the `Stack` when the `Stack` is empty.
+
+Executing programs by adding and removing _stack frames_ is synchronous.
+Adding events to the `Queue` so that functions may be executed later is asynchronous.
+
+
 ## Enter Promises
 
 Promises allow us to kick off an asynchronous process in the background and respond to its result when it becomes available. Using a Promise typically looks like this:

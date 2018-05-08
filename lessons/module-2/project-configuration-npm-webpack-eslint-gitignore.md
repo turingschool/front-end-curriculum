@@ -1,21 +1,21 @@
 ---
 title: Configuring Your Projects
 length: 90 minutes
-tags: javascript, webpack, eslint, npm, gitignore, config, configuration, configure
+tags: javascript, webpack, eslint, npm, babel, gitignore, config, configuration, configure
 ---
 
 # Configuring Your Projects
 
 Adding dependencies, bundling your JavaScript files with Webpack, adding style loaders writing npm scripts, linting your code, preventing files from being added to github ... This lesson will begin to draw back the veil on these mysteries!
 
-In this lesson, we will hand-roll the repo that we'll use for our Sorting Suite and Complete Me projects.
+In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sorting Suite homework and Complete Me project.
 
 ## Pre-lesson Homework
 
 1. Create a directory named `TDD`
-2. Create a sub-directory called `lib`
-3. Create two files: `lib/index.js` and `README.md`
-4. Initialize git and push your project to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
+2. Create sub-directories called `lib` and `test`
+3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
+4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
 
 ## Vocab
 
@@ -166,19 +166,21 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 
 ### In your TDD repo:
 
-- Run `npm init --yes` to create the `package.json` file.
-- Edit the `scripts` portion of the `package.json` file:
+1. Run `npm init --yes` to create the `package.json` file.
+2. Edit the `scripts` portion of the `package.json` file:
 
     ```
     "test": "./node_modules/mocha/bin/mocha",
     "start": "webpack"
     ```
-- Install the following dev dependencies:
+3. Install the following dev dependencies:
   - mocha
   - chai
   - eslint
-- Install the following dependencies:
+4. Install the following dependencies:
   - webpack
+  - babel
+  - babel-loader
   - style-loader
   - css-loader
 
@@ -295,10 +297,8 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 
 ### In your TDD repo:
 
-1. Create a new file: `webpack.config.js`
-2. Create a new directory: `test`
-3. Create a new file: `test/index-test.js`
-4. Paste the following code to the webpack.config.js file:
+1. Create a new file in the root of your repo: `webpack.config.js`
+4. Paste the following code to the `webpack.config.js` file:
 
   ```
   const path = require('path');
@@ -319,6 +319,13 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
           test: /\.css$/,
           exclude: /node_modules/,
           loader: "style-loader!css-loader"
+        },
+        {
+          test: /\.js$/,
+          loader: 'babel-loader',
+          query: {
+            presets: ['es2015']
+          }
         }
       ]
     },
@@ -327,15 +334,14 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
     }
   };
   ```
-  
-5. In the index-test.js file, let's require chai:
+
+5. In the `test/index-test.js` file, let's require chai:
 
   ```
-  const chai = require('chai');
-  const assert = chai.assert;
+  import { assert } from 'chai';
   ```
-  
-6. In the index-test.js file, let's write one test to see that mocha and chai are properly hooked up:
+
+6. In the `test/index-test.js` file, let's write one test to see that mocha and chai are properly hooked up:
 
   ```
   describe('test', function() {
@@ -344,7 +350,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
     });
   });
   ```
-  
+
 7. In your terminal, run `npm test`
 
 ---
@@ -362,7 +368,7 @@ What are the benefits of consistent code?
 
 ### In your TDD repo:
 
-1. Create a new file in your repo: `.eslintrc`
+1. Create a new file in the root of your repo: `.eslintrc`
 2. In that file, add this code:
 
     ```
@@ -450,13 +456,13 @@ What are the benefits of consistent code?
       }
     }
     ```
-    
+
 3. In the `scripts` object of the `package.json` file in your repo, add this key-value pair:
 
     ```
     "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
     ```
-    
+
 4. In the terminal, run `npm run eslint`
   - It will output a list of all errors and warnings to be corrected in the code, including the file and line in which the errors are found.
 
@@ -483,7 +489,7 @@ Common things to add to your `.gitignore` file are:
 
 ### In your TDD repo:
 
-1. Create a new file: `.gitignore`
+1. Create a new file in the root of your repo: `.gitignore`
 2. In that file, add the filepaths of the directories or files we don't want added to github.
 
 That's it!
