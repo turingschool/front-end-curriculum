@@ -33,8 +33,6 @@ In this lesson, you will learn how to:
 - `Remote` Remote, as in, a remote repository. As in, not a local repository. A remote is a repository that's stored somewhere that's not your local machine
 - `Feature Branch` A branch created to hold a new feature while it's in development, as opposed to committing parts of an unfinished feature on master
 - `Pull Request` A request to merge a branch into the default branch (usually master). Allows for control of the merge process as well as providing a place to review changes
-- `Merge Conflicts` Two different sets of changes to the same code result in merge conflicts. It's your job to figure out how to merge the two 
-- `Fork` A copy of a repository. Forking a repository allows you to freely experiment with changes without affecting the original project. 
 
 ## Git
 
@@ -180,7 +178,9 @@ Type `git log` in the terminal. What do you see? Discuss with you partner what y
 
 Checkout a condensed version of that report by running `git log --oneline`. What information gets left out compared to the `git log` command?  
 
-### Create repository on GitHub (this step will only happen once)
+## Incorporating GitHub
+
+### Create repository on GitHub
 
 Now let's create a repository on GitHub. This repository will sync with your local repository - the code you develop locally will be synced with this online repository so you can share code and collaborate.
 
@@ -198,7 +198,7 @@ The name of the remote, by convention, is typically `origin`. If we go to the re
 
 So all together, enter the command `git remote add origin git@github.com:damwhit/git-and-github-intro.git` into the terminal.  
 
-The local and remote repositories are now linked!
+The local and remote repositories are now linked! (we can confirm that is the case by running `git remote -v`)
 
 ![Git Areas](/assets/images/lessons/git/github-diagrams.002.jpeg)
 
@@ -229,6 +229,7 @@ Since we want to add these changes to our project (and the version history of th
 Now that the changes are in the staging area, if we use `git status` to check the status of the repository again, there are now "changes to be committed".
 
 Commit the changes. For this commit, we added content to our `index.html` file, so the commit command (with message!) is: `git commit -m "Add HTML structure and h1 title"`
+Push your changes to the master branch by running: `git push origin master`
 
 #### The master branch
 
@@ -404,6 +405,10 @@ To get the changes from the master branch on GitHub to our local master branch, 
 In this case, enter the command: `git pull origin master`
 
 Our changes are now completely synced. The master branch locally is the same as the master branch on GitHub. We can make more feature branches, add more features, and repeat the same process!
+
+### Your turn
+
+Your instructor has started a thread in slack. Please take a few minutes to ask any questions that have come up in going through this workflow.
 
 ### Fetching 
 
