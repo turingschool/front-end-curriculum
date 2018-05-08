@@ -14,7 +14,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 2: Putting the Pieces Together
 
 |Mindset     | _Open, optimistic, invested_. |
-|Lessons     |[JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git](http://frontend.turing.io/lessons/module-1/git-and-github-part1.html) &nbsp; [Intro Github](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
+|Lessons     |[JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git & Github](http://frontend.turing.io/lessons/module-1/git-and-github.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
 |Assignment  | __DUE__: Wed 5/9 end of day Dog Party Static Comp |
 |Assignment  | __EVAL__: Thu 5/10 ~ Number Guesser |
 
