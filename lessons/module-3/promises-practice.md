@@ -67,7 +67,7 @@ So what we have is a function `foo(b)` that returns `10 + b + 11`.
   Lets watch the call stack:
 
   ![call-stack](http://g.recordit.co/Hov4MmHhX2.gif)
-  
+
 As we see the stack starts by pushing `console.log(bar(7))` because it was the first executed code we have. Which then calls `bar(7)` to execute `foo(x * y)`
   to execute the inner operation `x * y`. So far we have just been pushing things to the stack. Until after `x * y` has finished executing then it gets popped off!
 
@@ -79,7 +79,7 @@ Go try it out [here](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZm9vKGIpIHsKI
   * `Single threaded:` Threads are basic units of CPU utilization.
   * `Asynchronous:` JavaScript call stack carries out tasks to completion instead of task switching and the same holds for events.
   * `Non-blocking:` Blocking occurs when the application state is suspended as a thread runs.
-  
+
 
 #### Non-blocking
 
@@ -110,7 +110,7 @@ Hope that review was helpful!
 
 ## Let's dive in and build a Front-end Turing staff website
 
-![spec](./public/spec.png)
+![spec](../assets/images/spec.png)
 
 ---
 
@@ -123,19 +123,19 @@ So the API given to us doesn't automatically give us all the info needed to disp
 The endpoints given to us are:
 * http://localhost:3001/api/frontend-staff - this returns an object with a key of bio and the value is an array of objects that contain the name of each staff member and another endpoint to grab some additional info (bio & image).
 
-![api/frontend-staff](./public/api-frontend-staff.png)
+![api/frontend-staff](../assets/images/api-frontend-staff.png)
 
 * http://localhost:3001//api/bio/:id - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
 
 #### Let's do a little pseudo-coding
 * make initial fetch
-* map over the array of staff members 
+* map over the array of staff members
   * I need to fetch each endpoint
   * this map is going to return a promise
 * Promise.all(promises)
   * returns a single promise
-  
-The first thing we need ask ourselves is where do we want to fetch our data from. This [article](https://www.robinwieruch.de/react-fetching-data/) does a really solid job of answering that question. Looks like componentDidMount() is our best option. With componentDidMount(), We can be assured that our component has mounted on the DOM and we can also setState there once we get our data back. 
+
+The first thing we need ask ourselves is where do we want to fetch our data from. This [article](https://www.robinwieruch.de/react-fetching-data/) does a really solid job of answering that question. Looks like componentDidMount() is our best option. With componentDidMount(), We can be assured that our component has mounted on the DOM and we can also setState there once we get our data back.
 
 #### Fetch
 
@@ -163,7 +163,7 @@ When we make a request and the response comes back as JSON, the first thing we n
 
 Now that we have our initial fetch set up, we need to iterate over the array to fetch the other information we need. Yes, we could make 10 different fetch calls, but all our data is going to come back at different times. That's not going to make for a great UI experience. How can we fetch the additional data, but wait for all the data to be returned before we do anything with it? Enter Promise.all()
 
-So Promise.all() takes an array of promises and returns a single promise that will either `resolve` when every promise has resolved or `reject` with the reason of the first value in the array that reject. If the promise array resolves completely, the resulting values will be an array of values whose results are ordered by the order of the promises in the original array - regardless of which promises resolve first. 
+So Promise.all() takes an array of promises and returns a single promise that will either `resolve` when every promise has resolved or `reject` with the reason of the first value in the array that reject. If the promise array resolves completely, the resulting values will be an array of values whose results are ordered by the order of the promises in the original array - regardless of which promises resolve first.
 
 How can we use this to our advantage? So when we make our request to 'api/frontend-staff' we receive an `array` of staff members containing info to make more `fetch calls`.
 
@@ -182,7 +182,7 @@ fetch('http://localhost:3001/api/frontend-staff')
 
 ```
 
-So we're probably going to have to iterate over this array to make a fetch call for all the bios and images. 
+So we're probably going to have to iterate over this array to make a fetch call for all the bios and images.
 
 ``` javascript
 fetchBios = (staff) => {
