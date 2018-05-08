@@ -170,7 +170,7 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 2. Edit the `scripts` portion of the `package.json` file:
 
     ```
-    "test": "./node_modules/mocha/bin/mocha",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register test",
     "start": "webpack"
     ```
 3. Install the following dev dependencies:
@@ -181,6 +181,10 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - webpack
   - babel
   - babel-loader
+  - babel-cli
+  - babel-core
+  - babel-eslint
+  - babel-preset-env
   - style-loader
   - css-loader
 
@@ -346,7 +350,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 5. In the `test/index-test.js` file, let's require chai:
 
   ```
-  const { assert } = require('chai');
+  import { assert } from 'chai';
   ```
 
 6. In the `test/index-test.js` file, let's write one test to see that mocha and chai are properly hooked up:
