@@ -122,16 +122,20 @@ import { shallow } from 'enzyme';
 import AddGroceryForm from './AddGroceryForm';
 
 describe('AddGroceryForm', () => {
-  const mockGrocery = { name: 'Oranges', quantity: 3 }
+  let mockEvent
+  let mockUpdateGroceryList
+  let mockGrocery
+  let mockGroceries
 
-  const mockGroceries = [
-    {id: 1, name: 'Pineapples', quantity: 10},
-    {id: 2, name: 'Oranges', quantity: 3}
-  ]
-
-  const mockEvent = { preventDefault: jest.fn() }
-
-  const mockUpdateGroceryList = jest.fn()
+  beforeEach(() => {
+    mockEvent = { preventDefault: jest.fn() }
+    mockUpdateGroceryList = jest.fn()
+    mockGrocery = { name: 'Oranges', quantity: 3 }
+    mockGroceries = [
+      {id: 1, name: 'Pineapples', quantity: 10},
+      {id: 2, name: 'Oranges', quantity: 3}
+    ]
+  })
 
   it('calls fetch with the correct data when adding a new grocery', () => {
   })
@@ -171,26 +175,25 @@ import { shallow } from 'enzyme';
 import AddGroceryForm from './AddGroceryForm';
 
 describe('AddGroceryForm', () => {
-  const mockGrocery = { name: 'Oranges', quantity: 3 }
-
-  const mockGroceries = [
-    {id: 1, name: 'Pineapples', quantity: 10},
-    {id: 2, name: 'Oranges', quantity: 3}
-  ]
-
-  const mockEvent = { preventDefault: jest.fn() }
-
-  const mockUpdateGroceryList = jest.fn()
-
-  window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-    json: () => Promise.resolve({
-      groceries: mockGroceries,
-    })
-  }))
-
+  let mockEvent
+  let mockUpdateGroceryList
+  let mockGrocery
+  let mockGroceries
   let renderedComponent
 
   beforeEach(() => {
+    mockEvent = { preventDefault: jest.fn() }
+    mockUpdateGroceryList = jest.fn()
+    mockGrocery = { name: 'Oranges', quantity: 3 }
+    mockGroceries = [
+      {id: 1, name: 'Pineapples', quantity: 10},
+      {id: 2, name: 'Oranges', quantity: 3}
+    ]
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        groceries: mockGroceries,
+      })
+    }))
     const renderedComponent = shallow(<AddGroceryForm 
                                       updateGroceryList={mockUpdateGroceryList}
                                     />)
