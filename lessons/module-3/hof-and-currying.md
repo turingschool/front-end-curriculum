@@ -72,3 +72,19 @@ triple(3) //=> returns 9
 This gives our multiply function more reusability than it would otherwise have.
 Obviously this is a somewhat contrived example, but this is a common pattern in
 functional programming.
+
+## Lets get our hands dirty
+
+Open up [this Repl](https://repl.it/@wvmitchell/ninjaCurryStart) and fork it to
+your own account. On your own, spend 15 minutes working on the first problem.
+We'll do some show and tell once you're done. Then, in pairs, work through the
+second problem for another 15 minutes, and we'll do the same thing.
+
+## Ok, but when will I use this?
+
+You're going to see Higher Order Functions at work very soon when we start
+Redux. We'll do less currying in this class, but as previously mentioned, it's a
+favorite pattern in functional programming. If you're interested in learning
+more about functional programming,
+[this](https://opensource.com/article/17/6/functional-javascript) article is a
+great starting point.
