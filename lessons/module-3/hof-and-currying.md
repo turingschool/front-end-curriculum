@@ -47,6 +47,11 @@ compute(subtract, 5, 2) //=> returns 3
 In this case, our compute function is a Higher Order Function, because its takes
 a function as one of its parameters.
 
+## First Class Citizens
+In JavaScript we say that functions are 'First Class Citizens'. What do we mean
+by this? Take five minutes to read whatever blog posts or docs you can find, and
+we'll come back to discuss as a class.
+
 ## Curry
 Curried functions are a special flavor of Higher Order Functions. When we curry
 a function, we break down it's arguments into a series of chained functions.
