@@ -127,7 +127,7 @@ All three of these are rendered with [route props](https://reacttraining.com/rea
 * [location](https://reacttraining.com/react-router/web/api/location)
 * [history](https://reacttraining.com/react-router/web/api/history)
 
-**Important Note:** If you have a component that is not rendered by a Route, but still needs access to the route props (match/location/history), you will need to use the withRouter method provided by React Router. This will be necessary to make any of your React Router components (Link, Route, Redirect, Switch, etc.) work correctly. Check out [this article](https://hackernoon.com/withrouter-advanced-features-of-react-router-for-single-page-apps-42b2a1a0d315) for more info. 
+**Important Note:** If you have a component that is not rendered by a Route, but still needs access to the route props (match/location/history), you will need to use the `withRouter` method provided by React Router. This will be necessary to make any of your React Router components (Link, Route, Redirect, Switch, etc.) work correctly. Check out [this article](https://hackernoon.com/withrouter-advanced-features-of-react-router-for-single-page-apps-42b2a1a0d315) for more info. 
 
 **Take 10 minutes to read about these**
 
