@@ -11,7 +11,6 @@ tags: javascript, browser, testing, tdd
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
-- `SUT` or `Subject Under Test` The unit being tested
 
 ## What does it mean to unit test your code?
 
