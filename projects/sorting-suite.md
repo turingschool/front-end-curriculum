@@ -6,7 +6,26 @@ title: Sorting Suite
 
 Sorting algorithms are one of the common domains for studying Computer Science data structures and algorithms. They give us an opportunity to focus on algorithms of various complexity all solving a relatively simple problem.
 
-In this project, you are challenged to implement *four*
+**This is mythical creatures for Mod 2.**
+
+Writing sorting algorithms will help you:
+- Practice using ES6 syntax like destructuring and the spread operator
+- Familiarize you with recursion
+- Give you the space to hone and refine your problem solving process
+  * through whiteboarding
+  * through pseudocoding
+  * through pair programming
+
+The goals of Sorting Suite are as follows:
+- Come to recognize how you solve problems
+- Come to trust and rely on your classmates
+- Learn to wrestle with a difficult problem instead of waiting for someone else to show you the answer
+- Practice articulating code
+- Learn to think algorithmically
+- Begin to understand optimization and efficiency
+- Learn to write (and love) unit tests
+
+In this homework project, you are challenged to implement *four*
 fundamental sorting algorithms. Your final submission should include at least these eight files:
 
 * `bubbleSort.js`
@@ -18,9 +37,14 @@ fundamental sorting algorithms. Your final submission should include at least th
 * `quickSort.js`
 * `quickSort-test.js`
 
-For your testing start with testing small arrays of numbers and/or letters.
+For your testing start with testing small arrays of numbers and/or letters. We want to see the test suite scale up in complexity.
+
 For more advanced testing you will need to generate arrays of numbers to see how large of an array your different
 sorting algorithms can sort.
+
+The test suites between sorts will be very similar; however, we want to see you stress-test the sorting algorithms. Some are more efficient than others and can get through larger arrays. How much more efficient is merge sort than bubble sort?
+
+Your testing utilities give each test 2 seconds to run. How many numbers can each of your algorithms *consistently* sort in that amount of time?
 
 ## 1. Bubble Sort
 
@@ -311,22 +335,16 @@ quickSort([9, 8, 5, 6])
 ### Extension
 Use your favorite sorting algorithm to reimplement the functionality of [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
+<!---
 ## Evaluation
-
 The evaluation will be pass/fail.
-
 You will be need to be able to explain any of the four sorting algorithms using numbered cards.
-
 You will need to be able to write either quick sort or merge sort after explaining how it works:
  - Demonstrating your thought process (this is NOT a memorization exercise)
  - Using ES6 syntax when comfortable
-
 ### Testing Requirements
-
 To stress test your sorting algorithms you will need to sort large arrays of random numbers. You will need to create a function to generate large arrays of random numbers.
-
 Your tests should demonstrate the differing efficiencies of each sort. For example, mergeSort will be able to handle much larger arrays than bubbleSort, and your tests should reflect that.
-
 In your tests see how large of an array you can consistently sort before the test times out.
-
 We will look at your tests to determine if they are sufficient.
+--->
