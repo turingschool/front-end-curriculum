@@ -70,8 +70,8 @@ Beyond the issue of general motivation—let's face it, you're never going to go
 
 Let's say we were writing a function that squared a number and we wanted to write a unit test to see if it worked. Here's how that test would look:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="VjzroE" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/VjzroE/">Your First Test</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="265" data-theme-id="light" data-slug-hash="xjYeoY" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Your First Test" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/xjYeoY/">Your First Test</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Let's talk a little bit about what's going on here:
 
