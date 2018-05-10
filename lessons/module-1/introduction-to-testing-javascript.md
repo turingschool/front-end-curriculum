@@ -134,7 +134,7 @@ In Mod 1, we will be using the Mocha testing framework along with the assertion 
 Below you will find the general syntax for assertions for most of the methods available:
 
 ```js
-  assert.method(actual, expected, [message]
+  assert.method(actual, expected, [message])
 ```
 
 You'll notice that our method takes three arguments (the third being optional, as denoted by the square brackets): 
