@@ -158,6 +158,7 @@ One important thing to note is that TDD is not about writing tests. Writing test
 
 ![TDD cycle](/assets/images/tdd-cycle.png)
 
+<!-- Write on board -->
 1. Think and write test cases - this step ensures that you understand the functionality that is required
 2. Red –  In this step, you try to run your test. You have no implementation code, so your test should fail.
 3. Green – Write the minimum code required to get the test to pass
@@ -172,3 +173,14 @@ Enough talking about testing. Let's actually write some tests to see this in act
 Check out [this repository][rep] to get your hands dirty.
 
 [rep]: http://github.com/turingschool-examples/testing-javascript
+
+### Wrap Up
+What is the TDD process?
+
+Think back to your Number Guesser project. 
+- What are the smallest pieces of functionality?
+<!-- 
+  generateRandomNumber(min, max)
+  getUserFeedback(min, max, guess)
+-->
+- How could you write tests for that functionality?
