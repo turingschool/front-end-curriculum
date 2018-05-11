@@ -307,7 +307,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 
   ```
   {
-  "presets": ["es2015"]
+  "presets": ["env"]
   }
   ```
 4. Paste the following code to the `webpack.config.js` file:
