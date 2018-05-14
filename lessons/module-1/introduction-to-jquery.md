@@ -10,14 +10,14 @@ tags: jquery, javascript
 - Find elements in the DOM with jQuery
 - Event listeners with jQuery
 
-jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about 78% of the top million web pages, so it's worth while getting comfortable with it.
+jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about [71% of the top million web pages](https://trends.builtwith.com/javascript), so it's worth while getting comfortable with it.
 
 ## Vocab
 
 - `jQuery` A library built to get around the pain points of early Javascript
 - `CDN` Content Delivery Network
 - `Minified` A file that the browser can still interpret correctly, but has none of the bits helpful to humans. Used to reduce the size of a file
-- `Selector` A description of how to find an element on the page
+- `CSS Selector` A description of how to find an element on the page
 
 #### Loading the jQuery library
 
@@ -32,9 +32,13 @@ Let's talk about what's going on here:
 
 In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.3.1` (as of the writing of this lesson).   
 
+<!-- 
+Main benefit of loading from a CDN vs your own server, is that your user likely has a copy of google's cdn jquery already cached in their browser. 
+ -->
+
 In the second line, we're including a link to a local set of jQuery files that we've downloaded to our machine and included in the directory for our project. This line isn't strictly required for us to use jQuery, but rather is a fallback to make sure that we can still access the library in the event that we are unable to access the CDN for some reason (better safe than sorry, right?). You can [download a copy of jQuery here.](http://jquery.com/download/) **Note: be sure to download the same version that you're referencing in the Google CDN link.**  
 
-Note: If you look at the file extension you'll see the file says `jquery.min.js` - that `min` extensions indicates that its a `minified` version of the jQuery library. jQuery is a large library, and in order to maximize performance (especially on larger code bases), reducing how much space your code takes up is incredibly important. A minified file indicates that it has been abbreviated using one of many different encryption techniques. You can read more about it [in this Wikipedia article](https://en.wikipedia.org/wiki/Minification_(programming)) (sorry for the Wiki reference...it actually does a pretty good job of digging into the details) if you are interested in the what and why of minification.   
+Note: If you look at the file extension you'll see the file says `jquery.min.js` - that `min` extensions indicates that its a `minified` version of the jQuery library. jQuery is a large library, and in order to maximize performance (especially on larger code bases), reducing how much space your code takes up is incredibly important. A minified file indicates that it has been abbreviated using one of many different encryption techniques. You can read more about it [in this Wikipedia article](https://en.wikipedia.org/wiki/Minification_(programming)) if you are interested in the what and why of minification.
 
 ## First Lines of jQuery
 
@@ -378,11 +382,11 @@ Let's take a look at some approaches of changing content in the DOM.
 Let's compare and contrast.
 
 ```js
-var vanilla = document.querySelector('.some-element');
-var jq = $('.some-element');
+var header = document.querySelector('h1');
+var $header = $('h1');
 
-vanilla.textContent = 'New text.';
-jq.text('New text.');
+header.innerText = 'New Header Text';
+$header.text('New Header Text');
 ```
 
 ### `html()`
