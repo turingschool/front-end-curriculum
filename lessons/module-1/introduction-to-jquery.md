@@ -17,7 +17,7 @@ jQuery is a library that allows us to use CSS selectors to find elements on the 
 - `jQuery` A library built to get around the pain points of early Javascript
 - `CDN` Content Delivery Network
 - `Minified` A file that the browser can still interpret correctly, but has none of the bits helpful to humans. Used to reduce the size of a file
-- `Selector` A description of how to find an element on the page
+- `CSS Selector` A description of how to find an element on the page
 
 #### Loading the jQuery library
 
@@ -31,6 +31,10 @@ To use the jQuery library, you'll need to include the following lines in your HT
 Let's talk about what's going on here:
 
 In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.3.1` (as of the writing of this lesson).   
+
+<!-- 
+Main benefit of loading from a CDN vs your own server, is that your user likely has a copy of google's cdn jquery already cached in their browser. 
+ -->
 
 In the second line, we're including a link to a local set of jQuery files that we've downloaded to our machine and included in the directory for our project. This line isn't strictly required for us to use jQuery, but rather is a fallback to make sure that we can still access the library in the event that we are unable to access the CDN for some reason (better safe than sorry, right?). You can [download a copy of jQuery here.](http://jquery.com/download/) **Note: be sure to download the same version that you're referencing in the Google CDN link.**  
 
@@ -378,11 +382,11 @@ Let's take a look at some approaches of changing content in the DOM.
 Let's compare and contrast.
 
 ```js
-var vanilla = document.querySelector('.some-element');
-var jq = $('.some-element');
+var header = document.querySelector('h1');
+var $header = $('h1');
 
-vanilla.textContent = 'New text.';
-jq.text('New text.');
+header.innerText = 'New Header Text';
+$header.text('New Header Text');
 ```
 
 ### `html()`
