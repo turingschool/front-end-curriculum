@@ -37,8 +37,8 @@ Let's look at an example:
 var objectName = {
   property1: value1,
   property2: value2,
-  property3: function() {
-    return "I'm value3!";
+  method1: function() {
+    return "I'm method, because I am a function!";
   }
 };
 ```
@@ -107,20 +107,20 @@ Let's goof off in the console a bit. As a group, we'll practice working with an 
 
 ```javascript
 // Create an object in honor of @jhunbug
-var myLitObject = {
-  burritoType: "carne asada"
+var burrito = {
+  type: "carne asada"
 };
 
-// 1. Get the value of myLitObject
-// 2. Get the value of burritoType
+// 1. Get the value of burrito
+// 2. Get the value of type
 // 3. Add a new property of your choosing
-// 4. Check the value of myLitObject again
-// 5. Ask myLitObject for the value of the new property you set, but utilize a different notation than when you asked for the value of burritoType in step #2
-// 6. Change the value of burritoType
-// 7. Get the value of myLitObject
-// 8. Create a method on myLitOjbect that logs "Skateboarding is fun" to the console
-// 9. Check the value of myLitObject. Do you see your method?
-// 10. Use myLitObject to log "Skateboarding is fun"
+// 4. Check the value of burrito again
+// 5. Ask burrito for the value of the new property you set, but utilize a different notation than when you asked for the value of type in step #2
+// 6. Change the value of type
+// 7. Get the value of burrito
+// 8. Create a method on burrito that logs "Why am I so delicious?" to the console
+// 9. Check the value of burrito. Do you see your method?
+// 10. Use burrito to log "Skateboarding is fun"
 ```
 
 ### What is `this`: a 10,000ft Introduction
@@ -153,14 +153,14 @@ We feel pretty good about using literal notation to create an object. We know th
 Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
 ```javascript
-var myLitObject = new Object();
-myLitObject;
+var burrito = new Object();
+burrito;
 ```
 And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation.
 
 ## Creating Many Objects
 
-Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ to spit out little objects that you define. Everytime you call ```new``` on this constructor you get an instance of the object. These are called `constructor functions`, and you can think of them like cookie cutters that produce the same shape of cookie every time you use them. Let's take a look:
+Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ create similar objects. Everytime you call ```new``` on this constructor you get an instance of that constructor. These are called `constructor functions`, and you can think of them like cookie cutters that produce the same shape of cookie every time you use them. Let's take a look:
 
 ```javascript
 function Restaurant(name, tables, reservations) {
@@ -197,21 +197,12 @@ restaurant1.name;
 restaurant2.name;
 ```
 
-## Adding methods to our constructed objects
-The constructor function prototype is a blueprint that is inherited by each object created by the constructor function.
-```javascript
-  Restaurant.prototype.checkAvailability = function () {
-    return this.tables - this.reservations;
-  }
-```
-- Each object created will inherit this method for checking availability.
-
 ### Your Turn
 
 With a partner:
 
-* Take a few minutes and make a constructor function and use it to make two new objects.
-* Take a few minutes to come up with an analogy for constructor functions.
+* Make a constructor function and use it to make two new objects.
+* Come up with an analogy for constructor functions.
 
 ## Which `this` is which?
 
@@ -291,6 +282,15 @@ human.getName();
 
 **PRO TIP:** The context of this within a function will be determined by WHERE THE FUNCTION GETS CALLED.
 
+## Adding methods to our constructed objects
+The constructor function prototype is a blueprint that is inherited by each object created by the constructor function.
+```javascript
+  Restaurant.prototype.checkAvailability = function () {
+    return this.tables - this.reservations;
+  }
+```
+- Each object created will inherit this method for checking availability.
+
 ## Prototypes & Inheritance: A First Look
 All JavaScript objects **inherit** the properties and methods from their `prototype`.  
 
@@ -300,17 +300,16 @@ There is nothing special about a prototype object. There are no special-out-of-t
 
 ```javascript
 // Let's make a constructor function
-function DumbObjectMaker() {}
+function Singer() {}
 
-// Let's ask DumbObjectMaker for the value of it's prototype
-function DumbObjectMaker() {}
-DumbObjectMaker.prototype;
+// Let's ask Singer for the value of it's prototype
+function Singer() {} Singer.prototype;
 ```
 
 As a review, constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
 
 ```js
-function DumbObjectMaker() {
+function Singer() {
   this.name = "Elvis";
 }
 ```
@@ -320,19 +319,19 @@ Similarly, a `prototype` in javascript can be _any object_ and it is responsible
 Let's look at some code examples.  
 
 ```javascript
-// Outfit constructor whose only job is to create instances of outfits all day. It takes pants, socks, and shirt parameters, so it can make different outfits all day.
-function Outfit(pants, shirt) {
-  this.pants = pants;
-  this.shirt = shirt;
+// Pie constructor whose only job is to create instances of pies. It takes pants, socks, and shirt parameters so it can make different pies.
+function Pie(type, toppings) {
+  this.type = type;
+  this.toppings = toppings;
 }
 
-Outfit.prototype.compliment = function() {
-  console.log('Nice ' + this.pants + ' pants and ' + this.shirt + '  shirt!');
+Pie.prototype.bake = function() {
+  console.log(`The delicious ${this.type} pie with ${this.toppings} is in the oven!`);
 }
 
-// Now we can create instances of an Outfit and use our compliment function to fire off the same behavior for every outfit we create.
+// Now we can create instances of an Pie and use our compliment function to fire off the same behavior for every outfit we create.
 
-var casual = new Outfit('denim', 'cat')
+var casual = new Pie('denim', 'cat')
 casual.compliment();
 ```
 
