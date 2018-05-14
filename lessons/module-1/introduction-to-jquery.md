@@ -118,6 +118,8 @@ We're using a jQuery method called `toggleClass()`. When the user clicks on the 
   - `slideToggle()`
   - `fadeToggle()`
 
+_Note: You will need to remove the css transition property for these to animate correctly_
+
 ## Getting Values from the User
 
 We're getting somewhere! We can respond to actions and change elements. It would be cool if we could also get some information from the user. If you recall, HTML provides `<input>` elements for just this kind of situation. jQuery helps out by providing the `.val()` method for getting the value out of a selected `<input>` element.
