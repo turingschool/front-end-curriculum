@@ -18,6 +18,8 @@ module: 2
 ## Vocab
 
 - `Recursive Function` a function that calls itself
+- `Base Case` the case where inputs produce a result without recursion
+- `Recursive Case` the case where inputs produce a result with recursion
 
 ## What is recursion?
 
@@ -32,7 +34,7 @@ While it can be used in many situations, it is most effective for solving proble
 Every recursive function (again, just a function that calls itself) must have these two pieces:
 
 1. A simple **base case** (or cases): a terminating scenario that _does not use recursion_ to produce an answer
-2. A set of rules that get all other cases closer toward the base case
+2. A **recursive case**: A set of instructions, moving closer towards the base case, that end in a call to the same function
 
 ## Exercises
 

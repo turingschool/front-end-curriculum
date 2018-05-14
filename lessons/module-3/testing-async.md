@@ -122,16 +122,20 @@ import { shallow } from 'enzyme';
 import AddGroceryForm from './AddGroceryForm';
 
 describe('AddGroceryForm', () => {
-  const mockGrocery = { name: 'Oranges', quantity: 3 }
+  let mockEvent
+  let mockUpdateGroceryList
+  let mockGrocery
+  let mockGroceries
 
-  const mockGroceries = [
-    {id: 1, name: 'Pineapples', quantity: 10},
-    {id: 2, name: 'Oranges', quantity: 3}
-  ]
-
-  const mockEvent = { preventDefault: jest.fn() }
-
-  const mockUpdateGroceryList = jest.fn()
+  beforeEach(() => {
+    mockEvent = { preventDefault: jest.fn() }
+    mockUpdateGroceryList = jest.fn()
+    mockGrocery = { name: 'Oranges', quantity: 3 }
+    mockGroceries = [
+      {id: 1, name: 'Pineapples', quantity: 10},
+      {id: 2, name: 'Oranges', quantity: 3}
+    ]
+  })
 
   it('calls fetch with the correct data when adding a new grocery', () => {
   })
@@ -171,26 +175,25 @@ import { shallow } from 'enzyme';
 import AddGroceryForm from './AddGroceryForm';
 
 describe('AddGroceryForm', () => {
-  const mockGrocery = { name: 'Oranges', quantity: 3 }
-
-  const mockGroceries = [
-    {id: 1, name: 'Pineapples', quantity: 10},
-    {id: 2, name: 'Oranges', quantity: 3}
-  ]
-
-  const mockEvent = { preventDefault: jest.fn() }
-
-  const mockUpdateGroceryList = jest.fn()
-
-  window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-    json: () => Promise.resolve({
-      groceries: mockGroceries,
-    })
-  }))
-
+  let mockEvent
+  let mockUpdateGroceryList
+  let mockGrocery
+  let mockGroceries
   let renderedComponent
 
   beforeEach(() => {
+    mockEvent = { preventDefault: jest.fn() }
+    mockUpdateGroceryList = jest.fn()
+    mockGrocery = { name: 'Oranges', quantity: 3 }
+    mockGroceries = [
+      {id: 1, name: 'Pineapples', quantity: 10},
+      {id: 2, name: 'Oranges', quantity: 3}
+    ]
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve({
+        groceries: mockGroceries,
+      })
+    }))
     const renderedComponent = shallow(<AddGroceryForm 
                                       updateGroceryList={mockUpdateGroceryList}
                                     />)
@@ -245,13 +248,13 @@ also asynchronous, we need to chain the Promise, and update the component before
 it('resets the state after adding a new grocery', () => {
   renderedComponent.setState({grocery: mockGrocery})
 
-  new Promise((resolve) => {
-    resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
-  }).then(() => {
-    renderedComponent.update()
-  }).then(() => {
-    expect(renderedComponent.state('grocery')).toEqual({name: '', quantity: ''})
-  })
+  Promise.resolve(renderedComponent.instance().handleAddGrocery(mockEvent)))
+    .then(() => {
+      renderedComponent.update()
+    })
+    .then(() => {
+      expect(renderedComponent.state('grocery')).toEqual({name: '', quantity: ''})
+    })
 })
 ```
 
@@ -262,11 +265,10 @@ assert that our `updateGroceryList` mock was called, we don't need to update the
 // AddGroceryForm.test.js
 
 it('calls the updateGroceryList callback after adding a new grocery', () => {
-  new Promise((resolve) => {
-    resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
-  }).then(() => {
-    expect(mockUpdateGroceryList).toHaveBeenCalledWith(mockGroceries)
-  })
+  Promise.resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
+    .then(() => {
+      expect(mockUpdateGroceryList).toHaveBeenCalledWith(mockGroceries)
+    })
 })
 ```
 
@@ -278,19 +280,20 @@ need to update our component twice, otherwise we won't see the state change.
 // AddGroceryForm.test.js
 
 it('sets an error when the fetch fails', () => {
-  window.fetch = jest.fn().mockImplementationOnce(() => new Promise((resolve, reject) => {
-    reject(new Error('failed'))
-  }))
+  window.fetch = jest.fn().mockImplementationOnce(() => Promise.reject(
+    new Error('failed')
+  )
 
-  new Promise((resolve) => {
-    resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
-  }).then(() => {
-    renderedComponent.update()
-  }).then(() => {
-    renderedComponent.update()
-  }).then(() => {
-    expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
-  })
+  Promise.resolve(renderedComponent.instance().handleAddGrocery(mockEvent)))
+    .then(() => {
+      renderedComponent.update()
+    })
+    .then(() => {
+      renderedComponent.update()
+    })
+    .then(() => {
+      expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
+    })
 })
 ```
 
@@ -376,26 +379,26 @@ describe('addGrocery', () => {
       }
     ]
 
-    addGrocery(mockGrocery)
+    await addGrocery(mockGrocery)
     expect(window.fetch).toHaveBeenCalledWith(...expected)
   })
 
-  it('returns an object if status code is ok', () => {
+  it('returns an object if status code is ok', async () => {
     const mockGrocery = {name: 'Oranges', quantity: 3}
     const mockGroceries = [
       {id: 1, name: 'Pineapples', quantity: 10},
       {id: 2, name: 'Oranges', quantity: 3}
     ]
 
-    expect(addGrocery(mockGrocery)).resolves.toEqual({groceries: mockGroceries})
+    await expect(addGrocery(mockGrocery)).resolves.toEqual({groceries: mockGroceries})
   })
 
-  it('throws an error if status code is not ok', () => {
+  it('throws an error if status code is not ok', async () => {
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 500,
     }))
 
-    expect(addGrocery()).rejects.toEqual(Error('Error adding grocery'))
+    await expect(addGrocery()).rejects.toEqual(Error('Error adding grocery'))
   })
 })
 

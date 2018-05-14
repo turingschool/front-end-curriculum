@@ -45,6 +45,8 @@ Let's try out some queries:
 * `document.querySelector('#third')` will return the paragraph with the id `third`.
 * `document.querySelectorAll('.awesome')` will return a collection containing the two paragraphs with the class `awesome`.
 
+### Updating our HTML
+
 [Elements](https://developer.mozilla.org/en-US/docs/Web/API/Element) have a number of useful properties and methods.
 
 Let's say we wanted to change the contents of our `<h1>` element. We could modify it's contents with the following JavaScript.
@@ -67,6 +69,10 @@ The DOM has been updated to the following:
 <p class="awesome">The is the second paragraph.</p>
 <p id="third" class="awesome">The is the third paragraph.</p>
 ```
+
+**Your Turn**: Grab the first paragraph element and change the text to 'The original paragraph'.
+
+### .innerText vs .innerHTML vs .textContent
 
 ```html
 <!-- The following line of HTML will be used in the next side track example -->
@@ -197,3 +203,11 @@ Let's use this pen for practice
 Here is an example of the second task:
 
 ![Custom CSS Color Box](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif)
+
+Review Questions
+- What is the DOM?
+- How do we get information out of the DOM and into our JS?
+- How do we add information to the DOM?
+- How can change the CSS of elements?
+- What is the preferred method for updating our CSS using JS?
+

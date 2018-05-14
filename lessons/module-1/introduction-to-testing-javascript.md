@@ -11,7 +11,6 @@ tags: javascript, browser, testing, tdd
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
-- `SUT` or `Subject Under Test` The unit being tested
 
 ## What does it mean to unit test your code?
 
@@ -70,8 +69,8 @@ Beyond the issue of general motivation—let's face it, you're never going to go
 
 Let's say we were writing a function that squared a number and we wanted to write a unit test to see if it worked. Here's how that test would look:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="VjzroE" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/VjzroE/">Your First Test</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="265" data-theme-id="light" data-slug-hash="xjYeoY" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Your First Test" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/xjYeoY/">Your First Test</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Let's talk a little bit about what's going on here:
 
@@ -82,7 +81,9 @@ Let's talk a little bit about what's going on here:
 ```js
 describe('square', function () {
   it('returns the square of a number', function () {
-    assert.equal(square(2), 4);
+    var result = square(2);
+
+    assert.equal(result, 4);
   });
 });
 ```
@@ -99,7 +100,9 @@ function square(n) {
 ```js
 describe('square', function () {
 //  it('returns the square of a number', function () {
-//    assert.equal(square(2), 4);
+//    var result = square(2);
+//
+//    assert.equal(result, 4);
 //  });
 });
 ```
@@ -109,7 +112,9 @@ describe('square', function () {
 ```js
 //describe('square', function () {
   it('returns the square of a number', function () {
-    assert.equal(square(2), 4);
+    var result = square(2);
+
+    assert.equal(result, 4);
   });
 //});
 
@@ -120,7 +125,9 @@ describe('square', function () {
 ```js
 //describe('square', function () {
 //  it('returns the square of a number', function () {
-    assert.equal(square(2), 4);
+    var result = square(2);
+
+    assert.equal(result, 4);
 //  });
 //});
 ```
@@ -134,12 +141,12 @@ In Mod 1, we will be using the Mocha testing framework along with the assertion 
 Below you will find the general syntax for assertions for most of the methods available:
 
 ```js
-  assert.method(actual, expected, [message]
+  assert.method(actual, expected, [message])
 ```
 
 You'll notice that our method takes three arguments (the third being optional, as denoted by the square brackets): 
 
-- actual: The actual JS code that you want to run from the codebase
+- actual: The result we get when we run our JS code 
 - expected: The expected output that should be returned based on test requirements
 - message: A (String) message to yourself on what is being tested
 
@@ -150,6 +157,7 @@ One important thing to note is that TDD is not about writing tests. Writing test
 
 ![TDD cycle](/assets/images/tdd-cycle.png)
 
+<!-- Write on board -->
 1. Think and write test cases - this step ensures that you understand the functionality that is required
 2. Red –  In this step, you try to run your test. You have no implementation code, so your test should fail.
 3. Green – Write the minimum code required to get the test to pass
@@ -164,3 +172,14 @@ Enough talking about testing. Let's actually write some tests to see this in act
 Check out [this repository][rep] to get your hands dirty.
 
 [rep]: http://github.com/turingschool-examples/testing-javascript
+
+### Wrap Up
+What is the TDD process?
+
+Think back to your Number Guesser project. 
+- What are the smallest pieces of functionality?
+<!-- 
+  generateRandomNumber(min, max)
+  getUserFeedback(min, max, guess)
+-->
+- How could you write tests for that functionality?
