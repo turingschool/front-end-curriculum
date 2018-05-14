@@ -126,7 +126,7 @@ var burrito = {
 // 7. Get the value of burrito
 // 8. Create a method on burrito that logs "Why am I so delicious?" to the console
 // 9. Check the value of burrito. Do you see your method?
-// 10. Use burrito to log "Skateboarding is fun"
+// 10. Use burrito to log "Why am I so delicious?"
 ```
 
 ### What is `this`: a 10,000ft Introduction
