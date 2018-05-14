@@ -9,19 +9,18 @@ In this lesson we'll cover:
 * Objects
 * What a constructor function is
 * When you need an array or object data structure
-* Introduction to ```this```
+* Introduction to `this`
 
 ## Vocab
 
-- `Object` A bundle of behavior (functions/methods) and state (variables)
-- `Constructor Function` A function that produces a new object
+- `Object` A bundle of behavior (methods) and state (properties)
 - `Property` Another word for the 'Key' portion of a key-value pair on an object
 - `Key` The name used to reference a Value on an Object
 - `Value` The data referenced by a Key
-- `Function` A predefined and reusable group of behavior
 - `Method` A function on an Object
 - `Dot Notation` Notation to access a Value on an Object, explicitly specifies the Key
 - `Bracket Notation` Notation to access a Value on an Object, usually specifies a Key via a variable
+- `Constructor Function` A function that produces a new object
 - `this` A variable that changes depending on the context in which it's used 
 
 # Objects
