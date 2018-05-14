@@ -16,7 +16,7 @@ The secondary focus of this project is prepping your Capstone project so you hav
 
 ### Find a Data Source
 
-Data source MUST BE LOCKED IN by Tuesday EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
+Data source MUST BE LOCKED IN by Monday EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
 Possible sources of data:
 
@@ -89,7 +89,6 @@ Don't worry about fancy styling of your documentation. You can put your document
 ### Testing & Linting
 
 * All endpoints need to be tested for happy and sad paths. You should assert that proper status codes are being returned as well as appropriate response data and error messages.
-
 * You are expected to use a linter on this project and have 0 linting errors. Use the linting configuration from your first project (Palette Picker). Bonus points for using a git hook that prevents you from committing any unlinted code.
 
 ### Deployment
@@ -138,7 +137,7 @@ The following set of points are distributed at the discretion of the instructor.
 
 -----------------------------------------------
 
-#### Projects are due on Friday of week 4 at 1PM. Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1710/mod-4/byob/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
+#### Projects are due on Friday of week 4 at 1PM. Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1711/mod-4/byob/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
 
 To get a **3** on this project, you need to score **125** points or higher  
 To get a **4** on this project, you need to score **145** points or higher  

@@ -93,16 +93,13 @@ Now, when a user clicks on that button. The browser will run the function we pro
 We can also listen for things other than clicks. Here are some other events from the [jQuery documentation](http://api.jquery.com/Types/#Event).
 
 - `click`
-- `contextmenu`
 - `dblclick`
-- `hover`
 - `mousedown`
 - `mouseenter`
 - `mouseleave`
 - `mousemove`
-- `mouseout`
 - `mouseover`
-- `mouseup`
+- `change`
 
 Take a moment to investigate and play with some of them.
 
@@ -120,6 +117,8 @@ We're using a jQuery method called `toggleClass()`. When the user clicks on the 
   - `toggle()`
   - `slideToggle()`
   - `fadeToggle()`
+
+_Note: You will need to remove the css transition property for these to animate correctly_
 
 ## Getting Values from the User
 
