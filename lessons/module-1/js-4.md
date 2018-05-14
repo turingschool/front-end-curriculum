@@ -337,7 +337,7 @@ Pie.prototype.bake = function() {
 
 // Now we can create instances of an Pie and use our compliment function to fire off the same behavior for every outfit we create.
 
-var applePie = new Pie('apple', 'whipped cream')
+var pie = new Pie('apple', 'whipped cream')
 pie.bake();
 ```
 
