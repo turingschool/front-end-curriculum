@@ -67,6 +67,8 @@ Each group will present the work they accomplished (or didn't accomplish) to the
 3. **What was new and interesting?** Teach us about a new framework, library or tool that you had to use in the project. (5 minutes)
 4. **What issues did you resolve?** If you resolved any issues, walk us through your implementation in the codebase and update us on the github activity for your patch. (Was there any conversation in the github issue? Did you submit a pull request yet?) If you were unable to resolve any issues, walk us through the problems you ran into. (5 minutes)
 
+In your presentations, do not walk through files of code in your text editor. It is too difficult to see what you're trying to explain, and there is often too much information on the screen for anyone to be able to parse.
+
 ### Blog Posts
 
 Put your presentation into writing. Each person must write their own blog post. You can write about all four sections described in the presentation, or pick a single one to go in-depth on. Regardless of what you choose, each blog post should be about 1,000 words.
