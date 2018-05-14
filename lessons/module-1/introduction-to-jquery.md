@@ -10,7 +10,7 @@ tags: jquery, javascript
 - Find elements in the DOM with jQuery
 - Event listeners with jQuery
 
-jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about 78% of the top million web pages, so it's worth while getting comfortable with it.
+jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about [71% of the top million web pages](https://trends.builtwith.com/javascript), so it's worth while getting comfortable with it.
 
 ## Vocab
 
@@ -38,7 +38,7 @@ Main benefit of loading from a CDN vs your own server, is that your user likely 
 
 In the second line, we're including a link to a local set of jQuery files that we've downloaded to our machine and included in the directory for our project. This line isn't strictly required for us to use jQuery, but rather is a fallback to make sure that we can still access the library in the event that we are unable to access the CDN for some reason (better safe than sorry, right?). You can [download a copy of jQuery here.](http://jquery.com/download/) **Note: be sure to download the same version that you're referencing in the Google CDN link.**  
 
-Note: If you look at the file extension you'll see the file says `jquery.min.js` - that `min` extensions indicates that its a `minified` version of the jQuery library. jQuery is a large library, and in order to maximize performance (especially on larger code bases), reducing how much space your code takes up is incredibly important. A minified file indicates that it has been abbreviated using one of many different encryption techniques. You can read more about it [in this Wikipedia article](https://en.wikipedia.org/wiki/Minification_(programming)) (sorry for the Wiki reference...it actually does a pretty good job of digging into the details) if you are interested in the what and why of minification.   
+Note: If you look at the file extension you'll see the file says `jquery.min.js` - that `min` extensions indicates that its a `minified` version of the jQuery library. jQuery is a large library, and in order to maximize performance (especially on larger code bases), reducing how much space your code takes up is incredibly important. A minified file indicates that it has been abbreviated using one of many different encryption techniques. You can read more about it [in this Wikipedia article](https://en.wikipedia.org/wiki/Minification_(programming)) if you are interested in the what and why of minification.
 
 ## First Lines of jQuery
 
