@@ -91,7 +91,7 @@ export const addTodo = (text) => {
 Given a string as text, (let's say "Go to the Vault"), we expect it to return an 
 object with a key of `'ADD_TODO'` and the text "Go to the Vault".  
 
-### Action Test
+### Action Creator Tests
 `actions/todos.test.js`  
 
 Step one, let's just make sure everything is wired up.
@@ -147,7 +147,7 @@ describe('actions', () => {
 
 Write two more unit tests to cover the other two Action Creators.
 
-### Reducer Tests
+### Reducers
 
 Recall that Reducers digest actions that have been dispatched to the store, and
 then return a new state. In other words, a reducer receives an action, and
@@ -177,6 +177,8 @@ const todosReducer = (state=[], action) => {
 
 export default todosReducer
 ```
+
+### Reducer Tests
 
 Make the new test file:  
 `reducers/todosReducer.test.js`  
@@ -220,7 +222,7 @@ it('should toggle the completed status of a new todo', () => {
 })
 ```
 
-### Container Tests
+### Containers
 
 Testing React Containers is a lot of what you already know, with a little of
 what you don't mixed in. Remember that a container is just a Redux connected
@@ -293,6 +295,8 @@ container file, rather than all in one file. Both are reasonable approaches,
 the former being mostly for container reusability._
 
 ---
+
+### Container Tests
 
 When we go to test this container, as mentioned before, we don't want to test
 through `connect`. This means when importing into our test file, we don't want
