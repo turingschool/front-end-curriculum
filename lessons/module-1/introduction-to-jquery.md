@@ -5,10 +5,8 @@ tags: jquery, javascript
 ---
 
 ## Learning Goals
-- Learn what jQuery is
-- Understand basic differences between jQuery object and DOM element
-- Find elements in the DOM with jQuery
-- Event listeners with jQuery
+- What is jQuery?
+- How to use jQuery to Interact with the DOM
 
 jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about [71% of the top million web pages](https://trends.builtwith.com/javascript), so it's worth while getting comfortable with it.
 
