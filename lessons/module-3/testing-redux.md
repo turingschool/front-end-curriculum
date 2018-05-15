@@ -308,4 +308,4 @@ For async action creators that hit a third party middleware (such as [redux thun
 ### Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
 [Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)  
-[Blog Post About Testing Containers]http://www.wsbrunson.com/react/redux/test/2016/05/08/testing-redux-containers.html  
+[Blog Post About Testing Containers](http://www.wsbrunson.com/react/redux/test/2016/05/08/testing-redux-containers.html)  
