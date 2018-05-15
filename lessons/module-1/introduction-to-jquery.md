@@ -114,9 +114,9 @@ We're using a jQuery method called `toggleClass()`. When the user clicks on the 
 - Can you create some additional CSS classes and toggle them?
 - Can you also change the text?
 - Try out the following methods:
-  - `toggle()`
-  - `slideToggle()`
-  - `fadeToggle()`
+  - [.toggle()](http://api.jquery.com/toggle/)
+  - [.slideToggle()](http://api.jquery.com/slidetoggle/)
+  - [.fadeToggle()](http://api.jquery.com/fadetoggle/)
 
 _Note: You will need to remove the css transition property for these to animate correctly_
 
