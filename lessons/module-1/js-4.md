@@ -337,8 +337,8 @@ Pie.prototype.bake = function() {
 
 // Now we can create instances of an Pie and use our compliment function to fire off the same behavior for every outfit we create.
 
-var casual = new Pie('denim', 'cat')
-casual.compliment();
+var pie = new Pie('apple', 'whipped cream')
+pie.bake();
 ```
 
 _Note_: We will get WAY MORE INTO prototype methods and what is happening behind the scenes as we progress through this mod/program. This is not the last time we will talk about these concepts so if prototypes and the word "this" make you feel panicky...thats ok.  
