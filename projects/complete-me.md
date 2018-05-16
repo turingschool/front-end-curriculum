@@ -4,36 +4,27 @@ title: Complete-Me
 
 ## What is a trie?
 
-A `trie` is a data structure in computer science. The word `trie` is derived from the word retrieval (as in re-`trie`-val). So catchy 🤓!
+A trie is a data structure in computer science. The word trie is derived from the word retrieval (as in re-`trie`-val).
 
-Now there are many types of `tries` and one you will hear a lot about is the `binary search trie`. It's like a linked list the only difference is that each `node` has a left and right `node` attached to it.
-
-The benefits of something like a `trie` is that it makes dealing with large sets of data easier to handle.
+Now there are many types of tries and one you will hear a lot about is the `binary search trie`. It is similar to a linked list the difference being that each child node has a single left and right node attached to it.
 
 ## What do you mean by data structure?
 
-I'm not the most organized human being as you've noticed. My wife who is pretty amazing is. She has files stored in folders, she has spread sheets, and she knows where everything typically is.
+A data structure is just a particular way of organizing data so that it can be accessed and modified efficiently and quickly. Up to this point you've used data structures that are built into javascript to manage how your data is accessed and manipulated (Array and Object). 
 
-I've always struggled with that. Organizing my things in way that makes grabbing something or finding something easily has kind of been difficult for me.
-
-Sometimes what I tend to do is put all the things in one place. Just because everything that is important is found in a single place doesn't mean it's optimal. If me and my wife were to have a race on retrieve a specific form, or calendar date I'm coming in last place.
-
-We are currently doing things that are similar inside of our programs. We find something that is important and we store it inside of a data structure. In our case that data-structure is an array. In some cases it also can be saved inside of an object. Now as our data set grows it can become more and more difficult to manage that information.
-
-Array's are great but what you will find is that they can get kind of slow because you are only going in a straight line. You can do somethings to optimize the speed of traversing through the array but what you will notice is that because the data set is not organized optimally it can lead to some problems.
-
-You are essentially sorting through information that can typically be ruled out. It feels like keeping all your important documents in one folder instead of sorting it out into a parts or pieces.
-
+Although Arrays and Objects are great for smaller sets of data it becomes a lot more difficult to manage 
 
 Consider the following gif.
 
 ![](https://i.gyazo.com/77f415128f0ea9ae46b80a61a127d9dc.gif)
 
-If we structure our data in a way that it becomes easier to access all of a sudden pulling information out of a large set of data becomes a lot easier and performant. We can rule out data that doesn't have to be sifted through or looked at. I can essentially look at one section for the information I need.
+If we structure our data in such a way that it becomes easier to access we can rule out data that doesn't have to be sifted through or looked at. This makes queuing our data set more performant, predictable, and manageable. 
 
 ## Let's talk about a prefix trie
 
-Whats really great about a prefix trie is that every parent node will typically have a node for every possible answer. So in our case if we're talking about a prefix trie each node can have up to 26 nodes (each for letter in the alphabet). If I was looking to add names to my trie it would look like this.
+A prefix trie is comprised of nodes. The distinguishing factor of the prefix trie is that every node will house every possible solution. In our case that means a child node can have up to 26 children (every letter of the alphabet).
+
+Here's an arbitrary example of what a potential prefix tree could look like if you were storing names. 
 
            [ root ]
             /     \
@@ -57,8 +48,8 @@ Whats really great about a prefix trie is that every parent node will typically 
          |
         [e]
 
-In our example here we have two parent nodes. `a` and `e` they have children nodes of `m`, `n`, `m`, `z`. And it continues to trickle down.
-
+In our example here we have two parent nodes. `a` and `e` they have children nodes of `m`, `n`, `m`, `z`. It continues to trickle down until we get to a completed name.
+If we query the trie for names that begin with `a` our data set is sizably reduced because we can ignore any name that doesn't start with an `a`. Thus making our response time faster and more predictable. 
 
 ## Complete Me
 
@@ -74,36 +65,39 @@ You can use `console.log` along with `JSON.stringify` to view your trie in your 
 
 The first thing your `trie` should be able to do is take in a word. It should also keep a count of how many words have been inserted.
 
-```
-import Trie from "./lib/Trie"
+```js
+import Trie from "./lib/Trie";
 
-var completion = new Trie()
+var completion = new Trie();
 
-completion.insert("pizza")
+completion.insert("hello");
 
-completion.count()
+completion.count();
 => 1
 
-completion.insert('apple')
+completion.insert('world');
 
-completion.count()
+completion.count();
 => 2
 ```
 
 ## Phase 2
-Once the words are placed into the `trie` it should be able to offer some suggestions based on a word prefix.
 
-```
-completion.suggest("piz")
-=> ["pizza"]
+Once the words are placed into the `trie` it should be able to offer some suggestions based on a word prefix. 
 
-completion.insert("pizzeria")
+You will need to write a method called `suggest` that will take in a word prefix and return an array of words that match the desired prefix. 
 
-completion.suggest("piz")
-=> ["pizza", "pizzeria"]
+```js
+completion.suggest('he');
+=> ['hello']
 
-completion.suggest('a')
-=> ["apple"]
+completion.insert("hellen");
+
+completion.suggest("he");
+=> ["hello", "hellen"]
+
+completion.suggest('w');
+=> ["world"]
 ```
 
 ## Phase 3
@@ -120,23 +114,23 @@ $ cat /usr/share/dict/words | wc -l
 => 234371
 ```
 
-We are going to load that data set into our trie.
+Our next objective is to load the dictionary into our trie. It should have a method called `populate` that will take a the desired data set and inject it into our trie.
 
-```
+```js
 import fs from 'fs';
 
-const text = "/usr/share/dict/words"
-const dictionary = fs.readFileSync(text).toString().trim().split('\n')
+const text = "/usr/share/dict/words";
+const dictionary = fs.readFileSync(text).toString().trim().split('\n');
 
-const completion = new Trie()
+const completion = new Trie();
 
-completion.populate(dictionary)
+completion.populate(dictionary);
 
-completion.count()
+completion.count();
 => 234371
 
-completion.suggest("piz")
-=> ["pize", "pizza", "pizzeria", "pizzicato", "pizzle"]
+completion.suggest('world');
+=> [ 'world', 'worlded', 'worldful', 'worldish', ...]
 ```
 
 ## Phase 4
@@ -155,14 +149,15 @@ See if you can implement a front facing application for your `trie`. The user sh
 
 Sometimes auto-completes give suggestions which we never want to see. Add a delete method to your Trie. 
 
-```
-completion.suggest("piz")
-=> ["pizzeria", "pize", "pizza", "pizzicato", "pizzle", ...]
+```js
+completion.suggest('world')
+=> ['world', 'worlded', 'worldful', 'worldish', ...]
 
-completion.delete("pizzle");
+completion.delete('worldful');
 
-completion.suggest("piz")
-=> ["pizzeria", "pize", "pizza", "pizzicato", ...]
+completion.suggest('world')
+=> ['world', 'worlded','worldish', ...]
+
 ```
 
 ## Evaluation Rubric
@@ -207,7 +202,7 @@ Complete Me will be assessed with the following rubric:
 * 1: Application does not run, crashes on start.
 
 
-## Additional Rescources
+## Additional Resources
 
 Take a moment and read more about Tries:
 
@@ -215,6 +210,6 @@ Take a moment and read more about Tries:
 * [Tries Wikipedia Article](https://en.wikipedia.org/wiki/Trie)
 
 
-If you like watching kewl videos:
+If you would like to watch an informative video on tries:
 
 * [Tries Video](https://www.youtube.com/watch?v=zIjfhVPRZCg)
