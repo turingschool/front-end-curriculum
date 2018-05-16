@@ -231,7 +231,7 @@ There are a few different ways to chain selectors to use them together. You can 
 
 * Comma: `$('p, #heading, .important')` just combines all of the selectors together.
 * Space: `$('p #heading .important')` treats each selector as a child of the previous. This will give you items of the class `important` that are children of the id `heading` which are inside a `<p>` tag.
-* Nothing: * `$('p#heading.important')` matches elements that have all three selectors. This selector would select a paragraph which was defined like this: `<p id="heading" class="important">`
+* Nothing: `$('p#heading.important')` matches elements that have all three selectors. This selector would select a paragraph which was defined like this: `<p id="heading" class="important">`
 
 ### Attribute Selectors
 
