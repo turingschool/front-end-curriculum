@@ -3,9 +3,31 @@ title: ES6 Generators
 module: 3
 ---
 
+## Agenda
+
+- What is a generator?
+- Generators vs Regular functions
+- What does the syntax of generator look like?
+- How do you call a generator?
+- Generators calling generators
+- What would you use this for?
+
+## Learning Goals
+
+- You should be able to make your own generator
+- You should be able to iterate over your generator
+- You should know how to pass values to the generator iterator
+
+## Vocab
+
+- Generator
+- Generator iterator
+- Generator object
+
 
 ### What is an ES6 Generator Function?
 
+Generators are functions that can be exited, and then re-entered, and save context (variable bindings) across re-entrances.
 Let's start with an example of familiar JS syntax.
 
 ```js
@@ -82,12 +104,14 @@ What do you expect to happen here? In a perfect world, I still want to see `skol
 
 This is where Generators come in to save the day.  
 
-A generator is a special kind of function in ES6 that can be paused in the middle, allowing other code to run, and then resumed when needed.  
+Generators are functions that can be exited, and then re-entered, and save context (variable bindings) across re-entrances.
 
+---
+_**Context:** The async/await pattern in ES7 is built on top of the pattern of generators. They were introduced to the language primarily as a way to avoid the 'callback hell' that was prevelant in JavaScript before the introduction of Promises._
 
-They all you to produce iterable sequences of values one at a time.  
+---
 
-Essentially we are talking about making synchronous code act like asynchronous code, which with the help of generators and Promises is far easier than it used to be.   
+Let's take a look at a simple example:
 
 ```js
 function* doSomething() {
@@ -98,13 +122,14 @@ function* doSomething() {
 
 There are a few things to note here. First, generator functions are indicated with an asterisk.  
 
-*Note* The asterisk can be next to either the word `function*` or the function name `*doSomething`.  
+_**Note**: The asterisk can be next to either the word `function*` or the function name `*doSomething`._
 
-Second, the content within the function starts with a `yield expression`. This is what tells the generator to pause.
+Second, the content within the function starts with a `yield expression`. This is what tells the generator to pause. Once the generator function is called, it will only execute the code up until it encounters the special word `yield`. This tells the generator function to return whatever is to the right of the yield, and then pause until told to continue.  
 
-Once the generator function is called, it will only execute the code up until it encounters the special word `yield`. This tells the generator function to return whatever is to the right of the yield, and then pause until told to continue.  
+After executing the code to the right of the first `yield`, it cannot continue until you tell it to, which is done using a **Generator Iterator**. When you tell it to continue, it will only execute as far as the next `yield` statement.
 
-After executing the code to the right of the first `yield`, it cannot continue until you tell it to, which is done using a **Generator Iterator**.
+It's also important to note that we cannot use the arrow syntax to define a
+generator. We need to use the keyword `function`.
 
 ### Generator Iterators
 
@@ -117,11 +142,13 @@ function* doSomething() {
 }
 ```
 
-What do you expect to see if you run `doSomething()`?  
+---
+_**Stop and think:** What do you expect to see if you run `doSomething()`? What do we actually get?_
 
-What do we actually get?  
+---
 
 ```js
+doSomething()
 => //....radio silence
 ```
 
@@ -146,11 +173,9 @@ console.log(normalFunction())
 => huzzah!
 ```
 
-Simply calling a generator function (ie: just calling `doSomething()`) doesn't actually execute it's contents, instead it returns a Generator Object. We need additional magic.
+Simply calling a generator function (ie: just calling `doSomething()`) doesn't actually execute it's contents, instead it returns a Generator Object. We need something more. Luckily, there's this thing called a **Generator Iterator**. To everyone's surprise, it...iterates...over a generator. Let's see what that actually looks like:   
 
-Luckily, there's this thing called a **Generator Iterator**. To everyone's surprise, it...iterates...over a generator. Let's see what that actually looks like.   
-
-First off, we need to construct the iterator. This is usually done by first saving your generator function to a variable for easy access.
+First off, we need to construct the iterator. This is done by first saving your generator function to a variable for easy access.
 
 ```js
 const words = doSomething()
@@ -205,7 +230,7 @@ function *numbers() {
 const generator = numbers()
 ```
 
-If you were to call `generator.next()` 5 times, you would get 5 numbers. Seems legit. But like always, calling a function 5 times to do the same thing defeats the purpose of being a lazy programmer.  
+If you were to call `generator.next()` 5 times, you would get 5 generator objects. Seems legit. But like always, calling a function 5 times to do the same thing defeats the purpose of being a lazy programmer.  
 
 Instead, we can call a [for of](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of) loop (which, shockingly, is also ES6).
 
