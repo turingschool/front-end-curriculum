@@ -10,11 +10,11 @@ tags: html, css
 
 ## Vocabulary
 
-- `Page Layout` - static, liquid, adaptive, and responsive
-- `Media Query` A CSS feature that makes it possible to apply styling based on various parameters or device characteristics
-- `Breakpoint` A set of rules (usually based on the size of a page) determining which styling to apply
+- `Page Layout` - The size and positioning of elements on a page. Examples are static, liquid, adaptive, and responsive
+- `Media Query` A CSS feature that makes it possible to apply styling based on boolean logic
+- `Breakpoint` The specific amounts that media queries reference (usually in pixels)
 - `CSS Reset` A set of styles that applies default styling
-- `Viewport Meta Tag` A tag that is used to describe attributes that affect the affect how the page is displayed
+- `Viewport Meta Tag` An html tag that is used to describe attributes that affect the affect how the page is displayed
 
 ## Introduction
 
@@ -120,7 +120,7 @@ We'll keep this content simple for now so we can focus on getting the HTML eleme
 </head>
 <body>
   <header>
-    <h2>A Link Here</h2>
+    <a href="#">A Link Here</a>
   </header>
   <section class="container">
     <article class="main-content">
@@ -156,8 +156,13 @@ header {
   text-align: center;
 }
 
-header h2:hover {
-  cursor: pointer;
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover {
   color: white;
 }
 ```
@@ -176,8 +181,13 @@ On to our body content!
 
 ```css
 .container {
-  height: 400px;
   margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .main-content {
@@ -254,7 +264,6 @@ Once we've established that our query is working, we can update the styles we wa
 ```css
 @media screen and (min-width: 900px) {
   .container {
-    margin: 0 auto;
     width: 90%;
   }
 }
@@ -264,10 +273,6 @@ Now let's dig into our media query for smaller screens. We can see that our asid
 
 ```css
 @media screen and (max-width: 550px) {
-  .container {
-    height: 100%;
-  }
-
   .main-content {
     float: none;
     height: 400px;
