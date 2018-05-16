@@ -5,10 +5,8 @@ tags: jquery, javascript
 ---
 
 ## Learning Goals
-- Learn what jQuery is
-- Understand basic differences between jQuery object and DOM element
-- Find elements in the DOM with jQuery
-- Event listeners with jQuery
+- What is jQuery?
+- How to use jQuery to Interact with the DOM
 
 jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about [71% of the top million web pages](https://trends.builtwith.com/javascript), so it's worth while getting comfortable with it.
 
@@ -114,9 +112,9 @@ We're using a jQuery method called `toggleClass()`. When the user clicks on the 
 - Can you create some additional CSS classes and toggle them?
 - Can you also change the text?
 - Try out the following methods:
-  - `toggle()`
-  - `slideToggle()`
-  - `fadeToggle()`
+  - [.toggle()](http://api.jquery.com/toggle/)
+  - [.slideToggle()](http://api.jquery.com/slidetoggle/)
+  - [.fadeToggle()](http://api.jquery.com/fadetoggle/)
 
 _Note: You will need to remove the css transition property for these to animate correctly_
 
@@ -331,26 +329,29 @@ Here are some of the all-stars of the DOM traversing world:
 
 The `parent()` method will take the currently selected element and go one level up the DOM tree.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="AXQkEZ" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXQkEZ/">jQuery Parent</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="aGjRwm" data-default-tab="html,result" data-user="nfosterky" data-embed-version="2" data-pen-title="jQuery Parent" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/aGjRwm/">jQuery Parent</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### `parents()`
 
 This one will include all of the parents—all the way up to the `<body>` of the page. Additionally, you can pass it a selector. `$('.some-selector').parents('.active')` will traverse up the DOM, but only return the elements with the class of `.active`.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="AXQkXA" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXQkXA/">jQuery Parents</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="vjaVWd" data-default-tab="html,result" data-user="nfosterky" data-embed-version="2" data-pen-title="jQuery Parents" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/vjaVWd/">jQuery Parents</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### `children()`
 
 This method returns all of the direct childen of the given selection. It will _not_ search their children. Like `parents()`, `children()` will also take a selector. `$('.some-selector').children('.active')` will go through the children of the current query and only return the elements with the class of `.active`.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="VjrOjp" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/VjrOjp/">jQuery Children</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="vjaVep" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="jQuery Children" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/vjaVep/">jQuery Children</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### `siblings()`
 
 `siblings()` will select all of the sibling elements based on the current query. Like its friends, it will also take a selector if you're polite.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="Gqrapr" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Gqrapr/">Siblings</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p data-height="265" data-theme-id="light" data-slug-hash="XqBxVd" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Siblings" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/XqBxVd/">Siblings</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### `find()`
 
@@ -358,7 +359,8 @@ One you have queried for some elements using jQuery, you can use `find()` to dri
 
 It's useful to think of `find()` as a more powerful alternative for `children()`. The `children()` method will look only one level down the tree. `find()` will search the children, the grandchildren, the great-grandchildren, and so on. The method will look at anything you currently have selected and then search within those results.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="dXVEpN" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/dXVEpN/">jQuery Find</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="MGBPQY" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="jQuery Find" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/MGBPQY/">jQuery Find</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Which one do you use? It depends, do you want to traverse all the way down the tree or just down one level.
 
@@ -376,7 +378,7 @@ Let's take a look at some approaches of changing content in the DOM.
 
 ### `text()`
 
-`text()` is like using `innerText` or `textContent`. There is an important difference. The vanilla DOM manipulation tools allow you to assign the new value to `innerText`. The jQuery methods on the other hand work on everything as if it were a method.
+`text()` is like using `innerText` or `textContent`. There is an important difference. The vanilla DOM manipulation tools allow you to assign the new value to `innerText`. The jQuery methods on the other hand must be passed the new value as an argument.
 
 Let's compare and contrast.
 
@@ -402,7 +404,8 @@ $header.text('New Header Text');
 
 In order to take both `append()` and `prepend()` for a spin, let's try the following code in the exercise below.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="pbWXgg" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/pbWXgg/">Append/Prepend</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="light" data-slug-hash="LmBgMO" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Append/Prepend" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/LmBgMO/">Append/Prepend</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Exercise, Part Four: Dead Presidents
 
