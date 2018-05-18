@@ -89,7 +89,7 @@ this.state = {
 
 To start, we will need to add Redux, React-Redux, and Redux-Thunk as dependencies of our project so that we can use them. I'm also going to go ahead and install the redux-devtools-extention. I have found that this is easier to use when passing multiple arguments to `createStore()`.
 
-`npm install --save redux react-redux redux-thunk redux-devtools-extention`
+`npm install --save redux react-redux redux-thunk redux-devtools-extension`
 
 ### Designing our state
 
