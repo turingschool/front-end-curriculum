@@ -76,6 +76,16 @@ const crashReporter = store => next => action => {
 }
 ```
 
+### Side Effects
+
+[Redux Saga](https://github.com/redux-saga/redux-saga) bills itself as an
+`alternative side effect model for Redux apps`, so what exactly does that mean? 
+
+Side effects are anything asychronous in our applications, such as API calls,
+fetching information for the browser cache or local storage, or logging
+information to an external service. These kinds of things are error prone, and
+often difficult to test. Sagas aim to make this easier on us as developers.
+
 
 ### applyMiddleware()
 
