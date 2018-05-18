@@ -76,6 +76,13 @@ const crashReporter = store => next => action => {
 }
 ```
 
+Notice anything familiar about this pattern? It's one of those curried functions
+that we went over. In both cases, we have access to our store, the action
+that was dispatched, as well as function `next`, which allows us to continue on
+to the next middlware, or onto the reducer. For more information on rolling your
+own middlware, check out [this
+post](https://medium.com/netscape/creating-custom-middleware-in-react-redux-961570459ecb)
+
 ### Side Effects
 
 [Redux Saga](https://github.com/redux-saga/redux-saga) bills itself as an
@@ -119,10 +126,6 @@ const store = createStore(
 // then run the saga (we haven't learned what mySaga is yet, do worry, we will)
 sagaMiddleware.run(mySaga)
 ```
-
-### What Is Redux-Saga
-
-Redux-Saga is a library that makes performing in-between events easier in a React/Redux application. Similar to `redux-thunk`, `redux-saga` gets added to your Redux store right when it is created. Remember that this is when the `applyMiddlware()` function gets called, at which time you pass in an array of middleware, which now includes `redux-saga`.
 
 ### Setting Up Additional Dependencies
 
