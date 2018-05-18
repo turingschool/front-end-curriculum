@@ -127,15 +127,25 @@ const store = createStore(
 sagaMiddleware.run(mySaga)
 ```
 
-### Setting Up Additional Dependencies
+## Code Along
 
-Let's kick things off by running `create-react-app redux-saga-workshop`.
+Alright! Now that we've reviewed what middlware is, and seen how we'd add it to
+our store, we're ready to start working with Redux-Saga.
 
-Then, `cd` into your directory and let's add some additional libraries.
+### Getting Started
 
-`yarn install redux react-redux redux-saga`.
+We've got a minimal client and server application set up for this lesson, go
+ahead and clone it down, then follow the instructions in the README to get
+things up and running.
 
-If you run `npm start` at this time, you should see the default React app with the spinning teal logo. Take a minute to clean this up so you're working from a clean slate. (Feel free to keep the file structure, we just don't need the default boilerplate HTML being rendered by the `App.js` file.)  
+`git clone https://github.com/turingschool-examples/redux-sagas-demo`
+
+---
+_**Take five minutes**: Read through this project. It's okay that you haven't
+seen it before, reading code you haven't written will be a big part of you job.
+What is this application doing?_
+
+---
 
 ### Wire Up Redux
 
