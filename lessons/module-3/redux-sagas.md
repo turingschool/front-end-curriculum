@@ -86,12 +86,39 @@ fetching information for the browser cache or local storage, or logging
 information to an external service. These kinds of things are error prone, and
 often difficult to test. Sagas aim to make this easier on us as developers.
 
+### What is Redux-Saga
 
-### applyMiddleware()
+Redux-Saga is a library that makes performing these in-between side effects
+easier in React/Redux applications. Similarly to `redux-thunk`, `redux-saga`
+gets added to your Redux store when it's created. We're able to do this with a
+helper method that we get from redux, `applyMiddleware()`.
 
-In order to tell Redux to use middleware in the first place, we need to implement this method, passing in all necessary middleware libraries.
+In order to tell Redux to use middleware in the first place, we need to
+implement this method, passing in all the middlware libraries we want to use.
+`applyMiddleware` gives each middleware library access to the important Redux
+methods `getState()` and `dispatch()`. 
 
-This method then hands specific Redux methods to each library - `getState()` and `dispatch(action)`
+Here's an example of how we'd add redux-saga middleware to our store:
+
+```javascript
+import { createStore, applyMiddleware } from 'redux'
+import createSagaMiddleware from 'redux-saga'
+
+import rootReducer from './reducers'
+import mySaga from './sagas'
+
+// create the saga middleware
+const sagaMiddleware = createSagaMiddleware()
+
+// mount it on the Store
+const store = createStore(
+  rootReducer,
+  applyMiddleware(sagaMiddleware)
+)
+
+// then run the saga (we haven't learned what mySaga is yet, do worry, we will)
+sagaMiddleware.run(mySaga)
+```
 
 ### What Is Redux-Saga
 
