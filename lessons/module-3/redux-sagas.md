@@ -3,8 +3,35 @@ title: Redux Saga
 tags: React, Redux, Sagas
 ---
 
-## FOLLOW UP:
-  - Currying with ES6
+## Agenda
+
+Now that we've learned about [Generators](es6-generators.html), we're going to
+explore a real use case! Redux Sagas are another popular middlware for handling
+side effects in Redux, and as an added bonus, they're super easy to test!
+
+Today, we'll go over:
+
+- A review of what middlware is in Redux
+- What we mean by 'side-effect'
+- What the API of redux saga looks like
+- How to create a listener saga
+- How to create a side effect saga
+- How to test both types of sagas
+
+## Learning Goals
+
+- Be able to write your own listener and side effect sagas
+- Be able to write tests for each of your saga types
+
+## Vocab
+
+- Middleware
+- applyMiddleware
+- Redux saga
+- put
+- call
+- takeEvery
+- takeLatest
 
 
 ### A Review of middleware
