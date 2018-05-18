@@ -36,11 +36,21 @@ Today, we'll go over:
 
 ### A Review of middleware
 
-According to [the docs](http://redux.js.org/docs/advanced/Middleware.html), middleware is `some code you can put between the framework receiving a request, and the framework generating a response.` There are lots of different steps you may need to take in between two primary stages of an application that a given framework isn't set up to deal with. The useful part of middleware is that it's "composable", meaning you can chain together a lot of different third-party libraries to perform these different necessary actions.
+According to [the docs](http://redux.js.org/docs/advanced/Middleware.html),
+middleware is `some code you can put between the framework receiving a request,
+and the framework generating a response.` That's a mouthfull. Think of it this
+way: Middleware sits in between the dispatching of an action, and the digestion
+of that action by a reducer.
 
-More specifically, Redux needs middleware to create a check point between firing off an action and hitting a reducer. There are many different redux middleware libraries that perform tasks like logging, asynchronous API calls, routing, etc.
+A useful characteristic of middleware is that it's 'composable', meaning that
+you can chain together a lot of different third-party libraries to perform these
+different necessary actions. Redux needs middlware to create a check point
+between firing off an action and hitting a reducer. There are many different
+Redux middleware libraries for performing familiar tasks such as logging,
+asychronous API call, and routing, just to name a few.
 
-If you dig into the docs, you'll see an example of handrolling what middleware is doing behind the scenes. It looks something like this:
+If you dig into the docs, you'll see an example of handrolling what middlware is
+doing behind the scenes. It looks something like this:
 
 ```js
 const logger = store => next => action => {
