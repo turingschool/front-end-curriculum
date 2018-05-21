@@ -4,19 +4,20 @@ length: 60
 tags: web apis, storage, persistence
 ---
 
-### Learning Goals
+## Learning Goals
 - Understand the difference between server-side and client-side storage
 - Understand and utilize localStorage
 - Understand and utilize JSON
+- Understand when and why one would use `data-` attributes
 
-### Vocab
+## Vocab
 
 - `Client-side Storage` Storage on the client (usually the browser)
 - `Server-side storage` Storage on the server
 - `localStorage` An implementation of Client-side Storage
 - `JSON` (JavaScript Object Notation) is a lightweight data-interchange format.
 
-### Client-side vs. Server-side Storage
+## Client-side vs. Server-side Storage
 
 Up until this point, the data in our projects has disappeared whenever we refresh our page, which is problematic. It would be nice if we could keep our ideas on the page without having to recreate them every time we want to see our CSS changes. There are two places we could store our data to make that happen.
 
@@ -28,13 +29,13 @@ There are two primary ways of storing data in web applications, which are - serv
 
 **Your turn** With a partner, come up with an analogies for server-side and client-side storage.
 
-### Client-side storage
+## Client-side storage
 
 Browsers provide two main types of immediate storage that is accessible without messing with a database: [`sessionStorage`][ss-mdn] which gets reset whenever your browser session restarts, and [`localStorage`][ls-mdn], which has no specified expiration date. Today we will strictly be talking about `localStorage`.
 
 The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site. 
 
-### Local Storage 
+## Local Storage 
 
 [`localStorage`][ls-mdn] is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
 
@@ -49,7 +50,7 @@ The web storage API is a secure way your browser can store key value pairs that 
 [ss-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [gs-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/globalStorage
 
-## Your Turn
+### Your Turn
 
 Open up the developer tools on this page and try the following:
 
@@ -66,7 +67,9 @@ Open up the developer tools on this page and try the following:
 
 What are your observations?
 
-### What is JSON?
+Check out the docs. What other methods are available to you when using localStorage?
+
+## What is JSON?
 
 When we're communicating with servers, we use a transport protocol called HTTP.
 
@@ -116,13 +119,36 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 7. `var parsedObject = JSON.parse(retrievedObject);`
 8. `parsedObject` (We are now back to our original object!)
 
-### Storage Events
+## Data Attributes
+
+In addition to giving our html elements `id` and `class` attributes, sometimes it may be more appropriate to give our elements a `data-` attribute instead.
+`data-` attributes are used to store information related to the data of the content your showing.
+For instance, if you have a lot of objects of the same type and they are all represented on the web page the same way, then you can use a `data-` attribute to identify them via the dom. 
+Here we can see an html example of using a `data-` attribute on an element. Note that whatever comes after the `-` is totally up to the developer.
+
+```html
+<article data-name="cookie"></article>
+```
+
+And now in our javascript we can access that article using it's data attribute.
+
+```js
+var article = document.querySelector('article');
+article.dataset.name // "cookie"
+```
+
+The js and jquery docs are both great and more easy to read than most when it comes to `data-` attributes. They are linked in the dig deeper section below.
+
+
+## Storage Events
 
 Whenever you change a value in localStorage, the DOM will fire a `storage` event in every other page currently open on that domain.
 
 Open [this CodePen](http://codepen.io/team/turing/pen/xOYdBG) up in two different windows to see.  
 
-### Dig Deeper
+## Dig Deeper
 * [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
 * [Mozilla Docs on Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 
 * [Google Docs on Storing/Caching Data in Chrome](https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage)
+* [Mozilla Docs on data- attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
+* [jQuery Docs on data- attributes](https://api.jquery.com/data/#data2)
