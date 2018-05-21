@@ -226,7 +226,9 @@ letters.forEach(function (letter) {
 console.log(uppercaseLetters);
 ```
 
-This will work. The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap):
+This will work. The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap).  
+
+Like `forEach()`, `map()` takes a callback function and runs that function for each element in the array. Where they differ is that `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
 
 ```js
 var letters = ['a', 'b', 'c'];
@@ -238,11 +240,19 @@ var uppercaseLetters = letters.map(function (letter) {
 console.log(uppercaseLetters);
 ```
 
-The example above will give us the same result as the one before it: `['A', 'B', 'C']`. That said, it's about half the length and doesn't involve mutating an existing array.
-
-Like `forEach()`, `map()` accepts an anonymous function that it calls on each element of the array it's called on. `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
+The example above will give us the same result as the one before it: `['A', 'B', 'C']`. That said, it's about half the length and doesn't involve mutating the original array.
 
 ### Your Turn
+
+* Use the prices array below to create a new array of increased prices.
+
+```js
+// increase prices by 1.00
+var prices = [4.99, 5.50, 7.00, 10.25];
+var increasedPrices = [];
+
+// use map to loop over the array and add new increased prices to the increasedPrices array
+```
 
 * From before, if we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. This time we should end up with an array `[5, 7, 9]`.
 
