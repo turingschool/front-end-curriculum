@@ -11,8 +11,6 @@ tags: JavaScript, array, prototype
 - `forEach()`
 - `map()`
 - `filter()`
-- `find()`
-- `reduce()`
 - `sort()`
 
 ## Vocab
@@ -164,6 +162,9 @@ And one additional:
 Open your journal and answer the following questions:
 - What are the most important/significant ideas or elements of the `forEach()` method?
 - Why do stores like `forEach()`?
+<!-- 
+  Because it does not return anything.
+-->
 
 ## Array.prototype.map
 
@@ -209,6 +210,9 @@ Like `forEach()`, `map()` accepts an anonymous function that it calls on each el
 
 - What parts of `map()` are similar to `forEach()`? What parts are differents? 
 - Why do geneticists use `map()`? 
+<!-- 
+  They don't want to mutate the original subject!
+-->
 
 ## Array.prototype.filter
 
@@ -273,7 +277,9 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 - How could you put `filter()` into practice on one of your current projects?
 - Why does `filter()` make such a good private investigator? 
+<!-- because it only returns truth -->
 
+<!-- 
 ## Array.prototype.find
 
 [`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it returns the first element in the array that satisfies the testing function. In the event that you are testing truthy vs falsy values like the example below, `find()` will return `undefined` if there are no truthy values found.
@@ -354,7 +360,7 @@ The second argument that we pass to the `reduce()` method is an empty array, whi
 
 - When should you use reduce?
 - Why wouldn’t `reduce()` talk to the junior dev?
-
+-->
 
 ## Array.prototype.sort
 
