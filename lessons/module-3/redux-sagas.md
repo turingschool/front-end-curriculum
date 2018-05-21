@@ -514,3 +514,16 @@ describe('submitLoginUser on error', () => {
   })
 })
 ```
+
+### Conclusion
+
+That's it! Sagas are a popular side-effect tool for applications that use Redux,
+and are gaining in popularity due to their approach to testing. Much like Redux
+itself, you don't always need Sagas, but their a good tool to have at your
+disposal.
+
+### References
+
+[Redux Saga](https://github.com/redux-saga/redux-saga)
+[Redux Saga
+Tutorial](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html)
