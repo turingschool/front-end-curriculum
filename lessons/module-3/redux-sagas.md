@@ -158,28 +158,57 @@ project from the repo, and install `redux-saga`
 
 ### Step 1: Organize Dependencies/Setup Store
 
-The centerpiece of any redux application is the Redux Store. This is the engine behind the scenes that keeps track of your application's state, and communicates with your React components to update or mutate that state.
+The centerpiece of and redux application is the Redux Store. That's not any
+different in this application, but we are going to need to add in sagas as
+middleware. 
+
+---
+_**Don't look below yet!** Take 5 minutes, and based on the example above, and
+the Redux Sagas documentation, see if you can figure out how you'd add redux to
+the store._
+
+---
+
+We're going to need to import `applyMiddleware` from the redux library, and
+we'll need to import the redux-saga library as `createSagaMiddleware`. 
+
+Also, we're going import a yet to be created saga, `listenForSubmitLoginUser`,
+and we need to tell our saga middlware to run that saga. Don't worry too much
+about what that means just yet, we'll see what it looks like in a minute.
 
 Update your main `index.js` file to match the following:  
 (Keep in mind that everything will broken until we put together one entire piece of the codebase).
 
 ```js
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-import App from './components/App/App';
 import './index.css';
-
+import App from './components/App';
 import rootReducer from './reducers';
+import listenForSubmitLoginUser from './sagas'
+import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(rootReducer);
+const sagaMiddleware = createSagaMiddleware()
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(sagaMiddleware)
+)
+
+sagaMiddleware.run(listenForSubmitLoginUser)
+
+const app = <Provider store={store}>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </Provider>
+
+ReactDOM.render(app, document.getElementById('root'));
+registerServiceWorker();
 ```
