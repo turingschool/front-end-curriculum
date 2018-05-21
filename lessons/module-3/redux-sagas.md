@@ -371,6 +371,12 @@ function* submitLoginUser(action) {
 If you've wired everything up correctly, and your server is running, your saga
 should now be called onSubmit of the Login form!
 
+This pattern of having a listener saga that delegates to another, side effect
+saga, is extremely common in the real world when sagas are being used. Next up,
+we'll see how to take advantage of one of redux-saga main draws, ease of
+testing!
+
+
 ---
 _**Turn and talk:** We can still use try/catch! That's awesome, but what should
 we be doing in the event of an error?_
