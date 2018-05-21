@@ -524,6 +524,6 @@ disposal.
 
 ### References
 
-[Redux Saga](https://github.com/redux-saga/redux-saga)
+[Redux Saga](https://github.com/redux-saga/redux-saga)  
 [Redux Saga
 Tutorial](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html)
