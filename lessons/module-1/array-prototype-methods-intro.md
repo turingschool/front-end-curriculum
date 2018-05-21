@@ -24,13 +24,13 @@ tags: JavaScript, array, prototype
 
 ## Context
 
-Sometimes we have a collection of items that we want to use. When we talk about a collection, we usually mean a series of items stored in an array. We could want to change the items in the collection, sort them, add all of the values in the collection, retrieve some items in the collection based on some condition, or many other scenarios.
+Sometimes we have a collection of items that we want to use. An array is a collection which is commonly used to store related items. We often want to manipulate arrays, sort them, add all of the values, retrieve items based on some condition...
 
-We could do these things by hand using a `for` loop, which we will introduce below, but we would have to implement our own logic to work with the array. Alternatively, we can use methods that the JavaScript language provides for us. These methods are in a group called array prototype methods. They are called this because Array is a JavaScript object, and there are methods that act on array objects. You'll see how these methods work in this lesson.
+We could do these things by hand using a `for` loop, but we would have to implement our own logic to work with the array. Alternatively, we can use methods that the JavaScript language provides for us. These methods are in a group called array prototype methods. They are called this because Array is a JavaScript object, and these are methods that act on array objects. You'll see how these methods work in this lesson.
 
 ## For Loops...
 
-Let's talk about how traditional `for` loops work and why they can be something to stay away from. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
+Let's talk about how traditional `for` loops work. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
 
 ```js
 for ([initialization]; [condition]; [final-expression]) {
@@ -91,9 +91,26 @@ Notice that the condition is crucial in controlling the flow of our loop. If the
 
 ### Your Turn
 
-* Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+* 
+```
+// increase prices by 1.00
+var prices = [4.99, 5.50, 7.00, 10.25];
+var increasedPrices = [];
 
-* Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+// use a for loop to add 1.00 to each price and add to the increasedPrices array
+
+```
+<!-- 
+```
+for (var i = 0; i < prices.length; i++) {
+  increasedPrices.push( prices[i] * 1.2 );
+}
+``` 
+-->
+
+<!-- * Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console. -->
+
+* Using the array `[ {name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
 
 ## Array.prototype.forEach
 
