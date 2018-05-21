@@ -212,3 +212,135 @@ const app = <Provider store={store}>
 ReactDOM.render(app, document.getElementById('root'));
 registerServiceWorker();
 ```
+
+### Step 2: Adding my first saga
+
+Right now, whenever a user submits the login form, I'm logged in and can see the
+main page. Great for demo purposes, but pretty insecure. What I actually want to
+have happen is for the user to make a request to the server when they submit the
+form, and have the 'LOGIN_USER' action dispatch if my credentials are correct.
+Sounds like a great opportunity for a Saga!
+
+Take a look at `Login/index.js`:
+
+```js
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions'
+
+class Login extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      email: '',
+      password: '',
+    }
+  }
+
+  componentWillMount = () => {
+    if(this.props.loggedIn) {
+      this.props.history.push('/main')
+    }
+  }
+
+  componentWillReceiveProps = (nextProps) => {
+    if(nextProps.loggedIn) {
+      this.props.history.push('/main')
+    }
+  }
+
+  handleChange = event => {
+    event.preventDefault()
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  submitLogin = async event => {
+    event.preventDefault()
+    await this.props.loginUser(this.state)
+  }
+
+  render = () => (
+    <div>
+      <form onSubmit={this.submitLogin}>
+        <input
+          type='text'
+          name='email'
+          placeholder='Email'
+          onChange={this.handleChange} />
+        <input
+          type='password'
+          name='password'
+          placeholder='Password'
+          onChange={this.handleChange}/>
+        <button type='submit'>Submit</button>
+      </form>
+    </div>
+  )
+}
+
+const mapStateToProps = (state) => ({
+  loggedIn: state.authentication.loggedIn
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  loginUser: (user) => dispatch(actions.loginUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
+```
+
+Right now, we're dispatching our 'LOGIN_USER' action as soon as the form is
+submitted. That won't do, let's change it to dispatch a new action type,
+'SUBMIT_LOGIN_USER'. This will require changes to our `submitLogin` event
+handler method, and our `mapDispatchToProps`:
+
+```js
+submitLogin = async event => {
+  event.preventDefault()
+  this.props.submitLoginUser(this.state.email, this.state.password)
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  submitLoginUser: (email, password) => dispatch(actions.submitLoginUser(email, password))
+})
+```
+
+If we're going to go dispatching a new action, we better create that action too.
+Go ahead and add this action to your `actions/index.js`:
+
+```js
+export const submitLoginUser = (email, password) => ({
+  type: 'SUBMIT_LOGIN_USER',
+  email,
+  password
+})
+```
+
+Finally, let's create our first Saga! Create a new directory, `sagas/` and add
+an `index.js` file. Go ahead and add the following:
+
+```js
+import { call, put, takeLatest } from 'redux-saga/effects'
+import * as api from '../api'
+import * as actions from '../actions'
+
+function* listenForSubmitLoginUser() {
+  yield takeLatest('SUBMIT_LOGIN_USER', submitLoginUser)
+}
+
+export default listenForSubmitLoginUser
+```
+
+Hey look! Sagas are generators! In this case, the `listenForSubmitLoginUser` is
+going to take the latest dispatched 'SUBMIT_LOGIN_USER' action, and then call
+another saga, `submitLoginUser`. We'll define that in a minute, but first, let's
+explore the `redux-saga/effects` API a bit.
+
+---
+_**Turn and talk:** What is being imported from redux-saga/effects? What do you
+think each method is for? After you've ventured a guess for each one, go ahead
+and read some documentation. Were you right?_
+
+---
