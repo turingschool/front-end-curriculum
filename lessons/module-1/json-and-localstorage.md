@@ -15,7 +15,8 @@ tags: web apis, storage, persistence
 - `Client-side Storage` Storage on the client (usually the browser)
 - `Server-side storage` Storage on the server
 - `localStorage` An implementation of Client-side Storage
-- `JSON` (JavaScript Object Notation) is a lightweight data-interchange format.
+- `JSON` (JavaScript Object Notation) is a lightweight data-interchange format
+- `data-` attributes, a way of storing information related to the data model on an html element
 
 ## Client-side vs. Server-side Storage
 
