@@ -289,6 +289,20 @@ console.log(truths); // Logs [true, true, true]
 As you can see in the example above, `false` is omitted from the resulting array. This works, but it's not very useful. Let's look at something slightly more interesting:
 
 ```js
+var numbers = [15, 6, 14, 2, 9, 22];
+
+var numbersLargerThanTen = numbers.filter(function (number) {
+  return number > 10;
+});
+
+console.log(numbersLargerThanTen);
+```
+
+All the numbers greater than 10 will be added to our new array.
+
+Let's look at a slightly more complicated example.
+
+```js
 var numbers = [1, 2, 3, 4, 5, 6, 7];
 
 var oddNumbers = numbers.filter(function (number) {
@@ -321,9 +335,17 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 ### Your Turn
 
-* From the array `[34, 2, 55, 75, -1, 100]`, return an array with only numbers greater that 50.
+* From the array `[34, 2, 55, 75, -1, 100]`, return an array with only numbers greater than 50.
 
-* Filter on the array to return objects that are not thirsty: `[{name: "Martha", thirsty: true}, {name: "Pam", thirsty: false}, {name: "Roberta", thirsty: true}]`.
+* Filter the array to return objects that are not thirsty: 
+
+```js
+var people = [
+  {name: "Martha", thirsty: true}, 
+  {name: "Pam", thirsty: false}, 
+  {name: "Roberta", thirsty: true}
+];
+```
 
 #### Journal
 
