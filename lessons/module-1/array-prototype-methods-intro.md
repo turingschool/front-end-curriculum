@@ -91,15 +91,14 @@ Notice that the condition is crucial in controlling the flow of our loop. If the
 
 ### Your Turn
 
-* Work through the challenge below
+* Use the prices array below to create a new array of increased prices.
 
-```
+```js
 // increase prices by 1.00
 var prices = [4.99, 5.50, 7.00, 10.25];
 var increasedPrices = [];
 
-// use a for loop to add 1.00 to each price and add to the increasedPrices array
-
+// use a for loop to loop over the array and add new increased prices to the increasedPrices array
 ```
 <!-- 
 ```
@@ -111,7 +110,15 @@ for (var i = 0; i < prices.length; i++) {
 
 <!-- * Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console. -->
 
-* Using the array `[ {name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+* Using the array below, log the dog's name and how many legs it has.
+
+```js
+var dogs = [ 
+  {name: "Fido", numLegs: 4}, 
+  {name: "Greg", numLegs: 5} 
+];
+```
+
 
 ## Array.prototype.forEach
 
@@ -167,13 +174,30 @@ One interesting thing to note is that `forEach()` does not return anything. If y
 
 These look familiar...let's compare the structure to what we had before using the `for` loop now with `forEach`.
 
-* Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+<!-- * Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console. -->
 
-* Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+* Use the prices array below to create a new array of increased prices.
+
+```js
+// increase prices by 1.00
+var prices = [4.99, 5.50, 7.00, 10.25];
+var increasedPrices = [];
+
+// use forEach to loop over the array and add new increased prices to the increasedPrices array
+```
+
+* Using dogs array below, log the dog's name and how many legs it has.
+
+```js
+var dogs = [ 
+  {name: "Fido", numLegs: 4}, 
+  {name: "Greg", numLegs: 5} 
+];
+```
 
 And one additional:
 
-* If we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
+* If we have two arrays, add the pairwise items in those arrays and log them to the console; `var array1 = [1, 2, 3]` and `var array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
 
 #### Journal
 
