@@ -3,6 +3,14 @@ title: Higher Order Functions & Currying
 module: 3
 ---
 
+## Agenda
+
+- What's the definition of a Higher Order Function?
+- What's the definition of a Curried function?
+- When have we been using HOF's already?
+- Live code some HOF's and Curried functions
+- Write some curried functions as a class
+
 ## Learning Goals
 Understanding of:
 * Currying
