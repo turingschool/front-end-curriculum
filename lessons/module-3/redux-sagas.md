@@ -344,3 +344,35 @@ think each method is for? After you've ventured a guess for each one, go ahead
 and read some documentation. Were you right?_
 
 ---
+
+
+### Step 3: Sagas calling sagas
+
+Our first saga is just a listener saga; it's going to keep an eye out for any
+dispatched 'SUBMIT_LOGIN_USER' actions. Now however, we want to actually make
+our api request, using a new saga `submitLoginUser`. We want the saga to first
+call the api, with the credentials from the action object, and then dispatch our
+'LOGIN_USER' action to the Store.
+
+Add the following saga to your `sagas/index.js`:
+
+```js
+function* submitLoginUser(action) {
+  try {
+    const user = yield call(api.postLoginUser, action.email, action.password)
+    yield put(actions.loginUser(user))
+  } catch(err) {
+    // What should we put here?
+    // yield something, but what?
+  }
+}
+```
+
+If you've wired everything up correctly, and your server is running, your saga
+should now be called onSubmit of the Login form!
+
+---
+_**Turn and talk:** We can still use try/catch! That's awesome, but what should
+we be doing in the event of an error?_
+
+---
