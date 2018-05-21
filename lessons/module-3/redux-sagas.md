@@ -382,3 +382,135 @@ _**Turn and talk:** We can still use try/catch! That's awesome, but what should
 we be doing in the event of an error?_
 
 ---
+
+
+### Step 4: Testing sagas
+
+The key to testing sagas is to remember to only test what the saga itself does,
+and not to concern yourself with the side effect behavior that is happening. We
+don't care what happens when the api is called, we only care that the saga can
+make the call in the first place. So that we can easily test both our sagas at a
+unit level, lets make them both named exports.
+
+```js
+export function* submitLoginUser(action) {
+  try {
+    const user = yield call(api.postLoginUser, action.email, action.password)
+    yield put(actions.loginUser(user))
+  } catch(err) {
+    yield put(actions.loginError(err.message))
+  }
+}
+
+export function* listenForSubmitLoginUser() {
+  yield takeLatest('SUBMIT_LOGIN_USER', submitLoginUser)
+}
+```
+
+Recall from our generators lesson, that generators can be exited and re-entered,
+maintaining context between calls. We'll take advantage of this for our tests.
+For our first saga, we want to assert that the first `yield` statement takes the
+latest 'SUBMIT_LOGIN_USER' action, and calls the `submitLoginUser` saga. Then we
+need to assert that the generator is done. Take a look at how that is done:
+
+```js
+import * as sagas from '../index'
+import { call, put, takeLatest } from 'redux-saga/effects'
+import * as api from '../../api'
+import * as actions from '../../actions'
+
+describe('the sagas', () => {
+  describe('listenForSubmitLoginUser', () => {
+    let generator
+
+    beforeAll(() => {
+      generator = sagas.listenForSubmitLoginUser()
+    })
+
+    it('should takeLatest SUBMIT_LOGIN_USER', () => {
+      const value = generator.next().value
+      const expected = takeLatest('SUBMIT_LOGIN_USER', sagas.submitLoginUser)
+      expect(value).toEqual(expected)
+    })
+
+    it('should be done', () => {
+      const done = generator.next().done
+      expect(done).toBe(true)
+    })
+  })
+})
+```
+
+Note that I'm not actually *doing* what the saga does, I'm only asserting what
+the yield statements are supposed to be. That make these tests a lot simpler to
+write. For our next saga, we need to test two yield statements, and we have the
+added complexity of having to mock an action, which this saga expects. Here's
+how you would do that:
+
+```js
+describe('submitLoginUser', () => {
+  let mockAction
+  let generator
+
+  beforeAll(() => {
+    mockAction = {
+      type: 'SUBMIT_LOGIN_USER',
+      email: 'will@turing.io',
+      password: 'password'
+    }
+
+    generator = sagas.submitLoginUser(mockAction)
+  })
+
+  it('should call the api', () => {
+    const value = generator.next().value
+    const expected = call(api.postLoginUser, mockAction.email, mockAction.password)
+    expect(value).toEqual(expected)
+  })
+
+  it('should put the next action into place', () => {
+    const mockUser = {
+      id: 0,
+      email: 'will@turing.io'
+    }
+    const value = generator.next(mockUser).value
+    const expected = put(actions.loginUser(mockUser))
+    expect(value).toEqual(expected)
+  })
+
+  it('should be done', () => {
+    const done = generator.next().done
+    expect(done).toBe(true)
+  })
+})
+```
+
+What about our error state though? How do we test that that last yield statement
+happens if all we're doing is asserting on the value of the `next()` iteration
+of the generator? The key is to take advantage of another part of generators,
+`throw()`, which is like `next`, but allows us to simulate an error being thrown. 
+It actually ends up looking very similar to our previous tests:
+
+```js
+describe('submitLoginUser on error', () => {
+  let mockAction
+  let generator
+
+  beforeAll(() => {
+    mockAction = {
+      type: 'SUBMIT_LOGIN_USER',
+      email: 'will@turing.io',
+      password: 'password'
+    }
+
+    generator = sagas.submitLoginUser(mockAction)
+    generator.next()
+  })
+
+  it('should yield an error on error', () => {
+    const value = generator.throw(Error('an error')).value
+    const expected = put(actions.loginError('an error'))
+    expect(value).toEqual(expected)
+  })
+})
+```
