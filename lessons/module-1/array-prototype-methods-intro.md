@@ -11,28 +11,26 @@ tags: JavaScript, array, prototype
 - `forEach()`
 - `map()`
 - `filter()`
-- `find()`
-- `reduce()`
 - `sort()`
 
 ## Vocab
 
-- `callback function` Also known as a higher-order function. A function that is passed to another function
-- `array` A data structure consisting of a collection of elements (values or variables)
+- `callback function` A function that is passed to another function to be ran at a later time
+- `array` A data structure consisting of a collection of elements (values or variables), each element is identified by an index
 - `index` The position of each element within an array
-- `iteration` A set of instructions or structures that are repeated in a sequence a specificed number of times _or_ until a condition is met
+- `iteration` A set of instructions that are repeated a specificed number of times _or_ until a condition is met
 - `truthy` A value that is considered true when evaluated in a Boolean context
 - `falsy` A value that is considered false when evaluated in a Boolean context
 
 ## Context
 
-Sometimes we have a collection of items that we want to use. When we talk about a collection, we usually mean a series of items stored in an array. We could want to change the items in the collection, sort them, add all of the values in the collection, retrieve some items in the collection based on some condition, or many other scenarios.
+Sometimes we have a collection of items that we want to use. An array is a collection which is commonly used to store related items. We often want to manipulate arrays, sort them, add all of the values, retrieve items based on some condition...
 
-We could do these things by hand using a `for` loop, which we will introduce below, but we would have to implement our own logic to work with the array. Alternatively, we can use methods that the JavaScript language provides for us. These methods are in a group called array prototype methods. They are called this because Array is a JavaScript object, and there are methods that act on array objects. You'll see how these methods work in this lesson.
+We could do these things by hand using a `for` loop, but we would have to implement our own logic to work with the array. Alternatively, we can use methods that the JavaScript language provides for us. These methods are in a group called array prototype methods. They are called this because Array is a JavaScript object, and these are methods that act on array objects. You'll see how these methods work in this lesson.
 
 ## For Loops...
 
-Let's talk about how traditional `for` loops work and why they can be something to stay away from. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
+Let's talk about how traditional `for` loops work. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
 
 ```js
 for ([initialization]; [condition]; [final-expression]) {
@@ -93,9 +91,34 @@ Notice that the condition is crucial in controlling the flow of our loop. If the
 
 ### Your Turn
 
-* Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+* Use the prices array below to create a new array of increased prices.
 
-* Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+```js
+// increase prices by 1.00
+var prices = [4.99, 5.50, 7.00, 10.25];
+var increasedPrices = [];
+
+// use a for loop to loop over the array and add new increased prices to the increasedPrices array
+```
+<!-- 
+```
+for (var i = 0; i < prices.length; i++) {
+  increasedPrices.push( prices[i] * 1.2 );
+}
+``` 
+-->
+
+<!-- * Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console. -->
+
+* Using the array below, log the dog's name and how many legs it has.
+
+```js
+var dogs = [ 
+  {name: "Fido", numLegs: 4}, 
+  {name: "Greg", numLegs: 5} 
+];
+```
+
 
 ## Array.prototype.forEach
 
@@ -151,19 +174,39 @@ One interesting thing to note is that `forEach()` does not return anything. If y
 
 These look familiar...let's compare the structure to what we had before using the `for` loop now with `forEach`.
 
-* Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console.
+<!-- * Using the array `[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]`, log only odd numbers to the console. -->
 
-* Using the array `[{name: "Fido", numLegs: 4}, {name: "Greg", numLegs: 5} ]`, log the dog's name and how many legs it has.
+* Use the prices array below to create a new array of increased prices.
+
+```js
+// increase prices by 1.00
+var prices = [4.99, 5.50, 7.00, 10.25];
+var increasedPrices = [];
+
+// use forEach to loop over the array and add new increased prices to the increasedPrices array
+```
+
+* Using dogs array below, log the dog's name and how many legs it has.
+
+```js
+var dogs = [ 
+  {name: "Fido", numLegs: 4}, 
+  {name: "Greg", numLegs: 5} 
+];
+```
 
 And one additional:
 
-* If we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
+* If we have two arrays, add the pairwise items in those arrays and log them to the console; `var array1 = [1, 2, 3]` and `var array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
 
 #### Journal
 
 Open your journal and answer the following questions:
 - What are the most important/significant ideas or elements of the `forEach()` method?
 - Why do stores like `forEach()`?
+<!-- 
+  Because it does not return anything.
+-->
 
 ## Array.prototype.map
 
@@ -183,7 +226,9 @@ letters.forEach(function (letter) {
 console.log(uppercaseLetters);
 ```
 
-This will work. The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap):
+This will work. The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap).  
+
+Like `forEach()`, `map()` takes a callback function and runs that function for each element in the array. Where they differ is that `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
 
 ```js
 var letters = ['a', 'b', 'c'];
@@ -195,11 +240,19 @@ var uppercaseLetters = letters.map(function (letter) {
 console.log(uppercaseLetters);
 ```
 
-The example above will give us the same result as the one before it: `['A', 'B', 'C']`. That said, it's about half the length and doesn't involve mutating an existing array.
-
-Like `forEach()`, `map()` accepts an anonymous function that it calls on each element of the array it's called on. `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
+The example above will give us the same result as the one before it: `['A', 'B', 'C']`. That said, it's about half the length and doesn't involve mutating the original array.
 
 ### Your Turn
+
+* Use the prices array below to create a new array of increased prices.
+
+```js
+// increase prices by 1.00
+var prices = [4.99, 5.50, 7.00, 10.25];
+var increasedPrices = [];
+
+// use map to loop over the array and add new increased prices to the increasedPrices array
+```
 
 * From before, if we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. This time we should end up with an array `[5, 7, 9]`.
 
@@ -209,6 +262,9 @@ Like `forEach()`, `map()` accepts an anonymous function that it calls on each el
 
 - What parts of `map()` are similar to `forEach()`? What parts are differents? 
 - Why do geneticists use `map()`? 
+<!-- 
+  They don't want to mutate the original subject!
+-->
 
 ## Array.prototype.filter
 
@@ -231,6 +287,20 @@ console.log(truths); // Logs [true, true, true]
 ```
 
 As you can see in the example above, `false` is omitted from the resulting array. This works, but it's not very useful. Let's look at something slightly more interesting:
+
+```js
+var numbers = [15, 6, 14, 2, 9, 22];
+
+var numbersLargerThanTen = numbers.filter(function (number) {
+  return number > 10;
+});
+
+console.log(numbersLargerThanTen);
+```
+
+All the numbers greater than 10 will be added to our new array.
+
+Let's look at a slightly more complicated example.
 
 ```js
 var numbers = [1, 2, 3, 4, 5, 6, 7];
@@ -265,15 +335,25 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 ### Your Turn
 
-* From the array `[34, 2, 55, 75, -1, 100]`, return an array with only numbers greater that 50.
+* From the array `[34, 2, 55, 75, -1, 100]`, return an array with only numbers greater than 50.
 
-* Filter on the array to return objects that are not thirsty: `[{name: "Martha", thirsty: true}, {name: "Pam", thirsty: false}, {name: "Roberta", thirsty: true}]`.
+* Filter the array to return objects that are not thirsty: 
+
+```js
+var people = [
+  {name: "Martha", thirsty: true}, 
+  {name: "Pam", thirsty: false}, 
+  {name: "Roberta", thirsty: true}
+];
+```
 
 #### Journal
 
 - How could you put `filter()` into practice on one of your current projects?
 - Why does `filter()` make such a good private investigator? 
+<!-- because it only returns truth -->
 
+<!-- 
 ## Array.prototype.find
 
 [`Array.prototype.find()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find), is very similar to filter.  It is different in that it returns the first element in the array that satisfies the testing function. In the event that you are testing truthy vs falsy values like the example below, `find()` will return `undefined` if there are no truthy values found.
@@ -354,7 +434,7 @@ The second argument that we pass to the `reduce()` method is an empty array, whi
 
 - When should you use reduce?
 - Why wouldn’t `reduce()` talk to the junior dev?
-
+-->
 
 ## Array.prototype.sort
 
