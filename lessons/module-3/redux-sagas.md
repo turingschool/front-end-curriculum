@@ -105,7 +105,7 @@ implement this method, passing in all the middlware libraries we want to use.
 `applyMiddleware` gives each middleware library access to the important Redux
 methods `getState()` and `dispatch()`. 
 
-Here's an example of how we'd add redux-saga middleware to our store:
+Here's an example from the docs of how we'd add redux-saga middleware to our store:
 
 ```javascript
 import { createStore, applyMiddleware } from 'redux'
@@ -147,9 +147,14 @@ What is this application doing?_
 
 ---
 
-### Wire Up Redux
 
-As the name indicates, we can't use `redux-saga` until we're wired up and ready to go with Redux.
+### Add Redux Sagas
+
+We can't do much unless we install the library. `cd` into the `saga-client`
+project from the repo, and install `redux-saga`
+
+`npm i -S redux-saga`
+
 
 ### Step 1: Organize Dependencies/Setup Store
 
