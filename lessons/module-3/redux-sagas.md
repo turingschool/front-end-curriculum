@@ -105,7 +105,7 @@ implement this method, passing in all the middlware libraries we want to use.
 `applyMiddleware` gives each middleware library access to the important Redux
 methods `getState()` and `dispatch()`. 
 
-Here's an example of how we'd add redux-saga middleware to our store:
+Here's an example from the docs of how we'd add redux-saga middleware to our store:
 
 ```javascript
 import { createStore, applyMiddleware } from 'redux'
@@ -147,34 +147,383 @@ What is this application doing?_
 
 ---
 
-### Wire Up Redux
 
-As the name indicates, we can't use `redux-saga` until we're wired up and ready to go with Redux.
+### Add Redux Sagas
+
+We can't do much unless we install the library. `cd` into the `saga-client`
+project from the repo, and install `redux-saga`
+
+`npm i -S redux-saga`
+
 
 ### Step 1: Organize Dependencies/Setup Store
 
-The centerpiece of any redux application is the Redux Store. This is the engine behind the scenes that keeps track of your application's state, and communicates with your React components to update or mutate that state.
+The centerpiece of and redux application is the Redux Store. That's not any
+different in this application, but we are going to need to add in sagas as
+middleware. 
+
+---
+_**Don't look below yet!** Take 5 minutes, and based on the example above, and
+the Redux Sagas documentation, see if you can figure out how you'd add redux to
+the store._
+
+---
+
+We're going to need to import `applyMiddleware` from the redux library, and
+we'll need to import the redux-saga library as `createSagaMiddleware`. 
+
+Also, we're going import a yet to be created saga, `listenForSubmitLoginUser`,
+and we need to tell our saga middlware to run that saga. Don't worry too much
+about what that means just yet, we'll see what it looks like in a minute.
 
 Update your main `index.js` file to match the following:  
 (Keep in mind that everything will broken until we put together one entire piece of the codebase).
 
 ```js
 import React from 'react';
-import ReactDOM, { render } from 'react-dom';
-import { Provider } from 'react-redux';
+import ReactDOM from 'react-dom';
 import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
+import { Provider } from 'react-redux';
+import { BrowserRouter } from 'react-router-dom';
 
-import App from './components/App/App';
 import './index.css';
-
+import App from './components/App';
 import rootReducer from './reducers';
+import listenForSubmitLoginUser from './sagas'
+import registerServiceWorker from './registerServiceWorker';
 
-const store = createStore(rootReducer);
+const sagaMiddleware = createSagaMiddleware()
 
-render(
-  <Provider store={store}>
-    <App />
-  </Provider>,
-  document.getElementById('root')
-);
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(sagaMiddleware)
+)
+
+sagaMiddleware.run(listenForSubmitLoginUser)
+
+const app = <Provider store={store}>
+              <BrowserRouter>
+                <App />
+              </BrowserRouter>
+            </Provider>
+
+ReactDOM.render(app, document.getElementById('root'));
+registerServiceWorker();
 ```
+
+### Step 2: Adding my first saga
+
+Right now, whenever a user submits the login form, I'm logged in and can see the
+main page. Great for demo purposes, but pretty insecure. What I actually want to
+have happen is for the user to make a request to the server when they submit the
+form, and have the 'LOGIN_USER' action dispatch if my credentials are correct.
+Sounds like a great opportunity for a Saga!
+
+Take a look at `Login/index.js`:
+
+```js
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import * as actions from '../../actions'
+
+class Login extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      email: '',
+      password: '',
+    }
+  }
+
+  componentWillMount = () => {
+    if(this.props.loggedIn) {
+      this.props.history.push('/main')
+    }
+  }
+
+  componentWillReceiveProps = (nextProps) => {
+    if(nextProps.loggedIn) {
+      this.props.history.push('/main')
+    }
+  }
+
+  handleChange = event => {
+    event.preventDefault()
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+
+  submitLogin = async event => {
+    event.preventDefault()
+    await this.props.loginUser(this.state)
+  }
+
+  render = () => (
+    <div>
+      <form onSubmit={this.submitLogin}>
+        <input
+          type='text'
+          name='email'
+          placeholder='Email'
+          onChange={this.handleChange} />
+        <input
+          type='password'
+          name='password'
+          placeholder='Password'
+          onChange={this.handleChange}/>
+        <button type='submit'>Submit</button>
+      </form>
+    </div>
+  )
+}
+
+const mapStateToProps = (state) => ({
+  loggedIn: state.authentication.loggedIn
+})
+
+const mapDispatchToProps = (dispatch) => ({
+  loginUser: (user) => dispatch(actions.loginUser(user))
+})
+
+export default connect(mapStateToProps, mapDispatchToProps)(Login)
+```
+
+Right now, we're dispatching our 'LOGIN_USER' action as soon as the form is
+submitted. That won't do, let's change it to dispatch a new action type,
+'SUBMIT_LOGIN_USER'. This will require changes to our `submitLogin` event
+handler method, and our `mapDispatchToProps`:
+
+```js
+submitLogin = async event => {
+  event.preventDefault()
+  this.props.submitLoginUser(this.state.email, this.state.password)
+}
+
+const mapDispatchToProps = (dispatch) => ({
+  submitLoginUser: (email, password) => dispatch(actions.submitLoginUser(email, password))
+})
+```
+
+If we're going to go dispatching a new action, we better create that action too.
+Go ahead and add this action to your `actions/index.js`:
+
+```js
+export const submitLoginUser = (email, password) => ({
+  type: 'SUBMIT_LOGIN_USER',
+  email,
+  password
+})
+```
+
+Finally, let's create our first Saga! Create a new directory, `sagas/` and add
+an `index.js` file. Go ahead and add the following:
+
+```js
+import { call, put, takeLatest } from 'redux-saga/effects'
+import * as api from '../api'
+import * as actions from '../actions'
+
+function* listenForSubmitLoginUser() {
+  yield takeLatest('SUBMIT_LOGIN_USER', submitLoginUser)
+}
+
+export default listenForSubmitLoginUser
+```
+
+Hey look! Sagas are generators! In this case, the `listenForSubmitLoginUser` is
+going to take the latest dispatched 'SUBMIT_LOGIN_USER' action, and then call
+another saga, `submitLoginUser`. We'll define that in a minute, but first, let's
+explore the `redux-saga/effects` API a bit.
+
+---
+_**Turn and talk:** What is being imported from redux-saga/effects? What do you
+think each method is for? After you've ventured a guess for each one, go ahead
+and read some documentation. Were you right?_
+
+---
+
+
+### Step 3: Sagas calling sagas
+
+Our first saga is just a listener saga; it's going to keep an eye out for any
+dispatched 'SUBMIT_LOGIN_USER' actions. Now however, we want to actually make
+our api request, using a new saga `submitLoginUser`. We want the saga to first
+call the api, with the credentials from the action object, and then dispatch our
+'LOGIN_USER' action to the Store.
+
+Add the following saga to your `sagas/index.js`:
+
+```js
+function* submitLoginUser(action) {
+  try {
+    const user = yield call(api.postLoginUser, action.email, action.password)
+    yield put(actions.loginUser(user))
+  } catch(err) {
+    // What should we put here?
+    // yield something, but what?
+  }
+}
+```
+
+If you've wired everything up correctly, and your server is running, your saga
+should now be called onSubmit of the Login form!
+
+This pattern of having a listener saga that delegates to another, side effect
+saga, is extremely common in the real world when sagas are being used. Next up,
+we'll see how to take advantage of one of redux-saga main draws, ease of
+testing!
+
+
+---
+_**Turn and talk:** We can still use try/catch! That's awesome, but what should
+we be doing in the event of an error?_
+
+---
+
+
+### Step 4: Testing sagas
+
+The key to testing sagas is to remember to only test what the saga itself does,
+and not to concern yourself with the side effect behavior that is happening. We
+don't care what happens when the api is called, we only care that the saga can
+make the call in the first place. So that we can easily test both our sagas at a
+unit level, lets make them both named exports.
+
+```js
+export function* submitLoginUser(action) {
+  try {
+    const user = yield call(api.postLoginUser, action.email, action.password)
+    yield put(actions.loginUser(user))
+  } catch(err) {
+    yield put(actions.loginError(err.message))
+  }
+}
+
+export function* listenForSubmitLoginUser() {
+  yield takeLatest('SUBMIT_LOGIN_USER', submitLoginUser)
+}
+```
+
+Recall from our generators lesson, that generators can be exited and re-entered,
+maintaining context between calls. We'll take advantage of this for our tests.
+For our first saga, we want to assert that the first `yield` statement takes the
+latest 'SUBMIT_LOGIN_USER' action, and calls the `submitLoginUser` saga. Then we
+need to assert that the generator is done. Take a look at how that is done:
+
+```js
+import * as sagas from '../index'
+import { call, put, takeLatest } from 'redux-saga/effects'
+import * as api from '../../api'
+import * as actions from '../../actions'
+
+describe('the sagas', () => {
+  describe('listenForSubmitLoginUser', () => {
+    let generator
+
+    beforeAll(() => {
+      generator = sagas.listenForSubmitLoginUser()
+    })
+
+    it('should takeLatest SUBMIT_LOGIN_USER', () => {
+      const value = generator.next().value
+      const expected = takeLatest('SUBMIT_LOGIN_USER', sagas.submitLoginUser)
+      expect(value).toEqual(expected)
+    })
+
+    it('should be done', () => {
+      const done = generator.next().done
+      expect(done).toBe(true)
+    })
+  })
+})
+```
+
+Note that I'm not actually *doing* what the saga does, I'm only asserting what
+the yield statements are supposed to be. That make these tests a lot simpler to
+write. For our next saga, we need to test two yield statements, and we have the
+added complexity of having to mock an action, which this saga expects. Here's
+how you would do that:
+
+```js
+describe('submitLoginUser', () => {
+  let mockAction
+  let generator
+
+  beforeAll(() => {
+    mockAction = {
+      type: 'SUBMIT_LOGIN_USER',
+      email: 'will@turing.io',
+      password: 'password'
+    }
+
+    generator = sagas.submitLoginUser(mockAction)
+  })
+
+  it('should call the api', () => {
+    const value = generator.next().value
+    const expected = call(api.postLoginUser, mockAction.email, mockAction.password)
+    expect(value).toEqual(expected)
+  })
+
+  it('should put the next action into place', () => {
+    const mockUser = {
+      id: 0,
+      email: 'will@turing.io'
+    }
+    const value = generator.next(mockUser).value
+    const expected = put(actions.loginUser(mockUser))
+    expect(value).toEqual(expected)
+  })
+
+  it('should be done', () => {
+    const done = generator.next().done
+    expect(done).toBe(true)
+  })
+})
+```
+
+What about our error state though? How do we test that that last yield statement
+happens if all we're doing is asserting on the value of the `next()` iteration
+of the generator? The key is to take advantage of another part of generators,
+`throw()`, which is like `next`, but allows us to simulate an error being thrown. 
+It actually ends up looking very similar to our previous tests:
+
+```js
+describe('submitLoginUser on error', () => {
+  let mockAction
+  let generator
+
+  beforeAll(() => {
+    mockAction = {
+      type: 'SUBMIT_LOGIN_USER',
+      email: 'will@turing.io',
+      password: 'password'
+    }
+
+    generator = sagas.submitLoginUser(mockAction)
+    generator.next()
+  })
+
+  it('should yield an error on error', () => {
+    const value = generator.throw(Error('an error')).value
+    const expected = put(actions.loginError('an error'))
+    expect(value).toEqual(expected)
+  })
+})
+```
+
+### Conclusion
+
+That's it! Sagas are a popular side-effect tool for applications that use Redux,
+and are gaining in popularity due to their approach to testing. Much like Redux
+itself, you don't always need Sagas, but their a good tool to have at your
+disposal.
+
+### References
+
+[Redux Saga](https://github.com/redux-saga/redux-saga)
+[Redux Saga
+Tutorial](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html)
