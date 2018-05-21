@@ -91,7 +91,8 @@ Notice that the condition is crucial in controlling the flow of our loop. If the
 
 ### Your Turn
 
-* 
+* Work through the challenge below
+
 ```
 // increase prices by 1.00
 var prices = [4.99, 5.50, 7.00, 10.25];
