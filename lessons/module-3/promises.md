@@ -3,23 +3,33 @@ title: Async JavaScript with Promises
 module: 3
 ---
 
-### Vocab
+## Agenda
+
+- Learn about the difference between synchronous and asynchronous code.
+- Talk about the event loop, and how it works in JavaScript
+- Introduce Promises, discuss the problem they solve
+- Write some Promises
+- Discuss `fetch` and how it relates to Promises
+
+## Learning Goals
+
+By the end of this lesson, you will:
+
+- Understand the difference between synchronous and asynchronous JavaScript
+- Understand the 'Event Loop', and how it relates to asynchronous JavaScript
+- Be able to implement a network request using the `fetch` API
+- Know when and how to use Promises and why they're useful
+- Understand the relationship between Promises and callbacks
+
+## Vocab
 
 - `Asynchronous` Executing functions, where the second does not wait for the first to complete
 - `Synchronous` Executing functions, where the second waits for the first to complete
+- Event Loop
 - `Parallelism` Executing more than one operation at a time
 - `Promise` An object representing the _eventual_ completion or error of an operation, along with a value
 - `Callback` A function given to another function to be called at a later time
 - `Higher Order Function` A function that either takes a another function as a parameter or returns a function, or both
-
-### Goals
-
-By the end of this lesson, you will:
-
-* Understand the difference between synchronous and asynchronous JavaScript
-* Be able to implement a network request using the `fetch` API
-* Know when and how to use Promises and why they're useful
-* Understand the relationship between Promises and callbacks
 
 ## Synchronous vs. Asynchronous JavaScript
 
@@ -249,7 +259,7 @@ But wait, there's more.
 ## When to use Promises
 Now that we have a better understanding of how and why to use Promises, what about the when? When do you actually want to use a Promise?
 
-The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`.
+The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`. Here's the same example from above, except using the `fetch` API.
 
 When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback. So for once, we don't really have to be in charge of making a decision here -- we can let the tools and technologies we're using dictate whether or not we should be using promises.
 
