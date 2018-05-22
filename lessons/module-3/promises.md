@@ -259,7 +259,19 @@ But wait, there's more.
 ## When to use Promises
 Now that we have a better understanding of how and why to use Promises, what about the when? When do you actually want to use a Promise?
 
-The short answer: whenever you're handed a promise by an API you didn't write, where the author chose to use promises. This includes many modern browser APIs such as `fetch`. Here's the same example from above, except using the `fetch` API.
+The short answer: whenever you're handed a promise by an API you didn't write,
+where the author chose to use promises. This includes many modern browser APIs
+such as `fetch`. Here's the same example from above, except using the `fetch`
+API:
+
+```js
+fetch('/api/students.json')
+ .then(response => response.json())
+ .then(students => getProjectsForStudents(students))
+ .then(projects => getGradesForProjects(projects))
+ .then(grades => doSomethingImportantWithAllThisData(grades))
+ .catch(error => console.log('error'));
+```
 
 When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback. So for once, we don't really have to be in charge of making a decision here -- we can let the tools and technologies we're using dictate whether or not we should be using promises.
 
