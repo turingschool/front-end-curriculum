@@ -31,7 +31,7 @@ By the end of this lesson, you will:
 - `Callback` A function given to another function to be called at a later time
 - `Higher Order Function` A function that either takes a another function as a parameter or returns a function, or both
 
-## Synchronous vs. Asynchronous JavaScript
+### Synchronous vs. Asynchronous JavaScript
 
 Before we get into dissecting Promises, we need to make sure we understand the difference between synchronous and asynchronous JavaScript. In client-side JavaScript, most of the code we write will be **synchronous**. This means that our code is read and executed line-by-line, in the order that it's written:
 
@@ -46,7 +46,7 @@ iCantExecuteUntilSlowPokeAboveMeIsDone();
 **Asynchronous** JavaScript, on the other hand, will be processed in the background -- it will not block the execution of the code that follows it. This comes in handy when we want to pull a slow or expensive operation out of the default synchronous flow of execution. The newest, hippest way to do this is by using [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise).
 
 
-## An Aside - The Event Loop
+#### An Aside - The Event Loop
 
 Firstly, watch [this talk](https://www.youtube.com/watch?v=8aGhZQkoFbQ).
 You can read [this explanation on MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop), too, if you like.
@@ -61,7 +61,7 @@ Executing programs by adding and removing _stack frames_ is synchronous.
 Adding events to the `Queue` so that functions may be executed later is asynchronous.
 
 
-## Enter Promises
+### Enter Promises
 
 Promises allow us to kick off an asynchronous process in the background and respond to its result when it becomes available. Using a Promise typically looks like this:
 
@@ -94,7 +94,7 @@ If the function fails for any reason, our Promise object is considered **rejecte
 ![Image of Promise Flow](https://wtcindia.files.wordpress.com/2016/06/promises.png?w=605)
 (Photo credit from [WalkingTree](https://blogs.walkingtree.tech/2016/07/03/using-promises-in-ext-js-6/))
 
-## The Promise-Based Fetch API
+### The Promise-Based Fetch API
 
 The most common example of an async process we'll run into on the client-side is a network request. Making a trip to the server can take a significant amount of time, and our applications would be painfully slow if they stopped the rest of our code from executing. Combining this knowledge with what we've just learned about Promises, it's reasonable to assume that there would be a web API that facilitates making promise-based network requests. Though still relatively new, the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch) allows us to do just that. A typical `fetch` request might look like this:
 
@@ -132,7 +132,7 @@ While we wait for the server to return our response, the rest of our application
 
 Converting the body to a JSON data structure with `response.json()` actually returns *another* promise. (Converting the data to a particular type can take significant time, which is why we have this additional promise step before we can begin working with our data.) Because we're getting another promise object back, we can simply chain an additional `.then()` block where we actually receive our project data. We can then render it to the DOM with our imaginary `renderDetailsForProjects()` function. If for any reason the request failed, the `.catch()` block will be fired and we will log the error to the console.
 
-## Why Use Promises?
+### Why Use Promises?
 
 Promises allow you to multi-task a bit in JavaScript. They provide a cleaner and more standardized method of dealing with tasks that need to happen in sequence. (For example, we couldn't have possibly called `renderDetailsForProjects()` until we actually received the projects data from `getProjectsForStudents()`). With Promises, we have more control over what happens with the outcomes of our async processes.
 
@@ -256,7 +256,7 @@ But wait, there's more.
 - `Promise.race` takes an array of promises and resolves as soon as any one of them fulfill. This would allow you to hit 3 API endpoints and then move on when we heard back from whichever one came back first.
 
 
-## When to use Promises
+### When to use Promises
 Now that we have a better understanding of how and why to use Promises, what about the when? When do you actually want to use a Promise?
 
 The short answer: whenever you're handed a promise by an API you didn't write,
@@ -276,7 +276,7 @@ fetch('/api/students.json')
 When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback. So for once, we don't really have to be in charge of making a decision here -- we can let the tools and technologies we're using dictate whether or not we should be using promises.
 
 
-## Further Learning: the Promise Object
+### Further Learning: the Promise Object
 
 Unless you're making a library or creating an abstraction over something complicated, you're likely to consume promises more than you create them. The syntax can look squirrelly, but if we pull it apart, it's not that bad. If you open up the console in your browser dev tools, you can actually create your own Promise object and inspect its inner workings:
 
