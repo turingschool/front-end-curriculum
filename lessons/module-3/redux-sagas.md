@@ -47,7 +47,7 @@ you can chain together a lot of different third-party libraries to perform these
 different necessary actions. Redux needs middlware to create a check point
 between firing off an action and hitting a reducer. There are many different
 Redux middleware libraries for performing familiar tasks such as logging,
-asychronous API call, and routing, just to name a few.
+asynchronous API call, and routing, just to name a few.
 
 If you dig into the docs, you'll see an example of handrolling what middlware is
 doing behind the scenes. It looks something like this:
