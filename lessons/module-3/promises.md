@@ -275,6 +275,25 @@ fetch('/api/students.json')
 
 When you read the documentation for a library that uses promises, one of the first sentences will likely say 'this is a promise-based library'. There are some APIs that still use callbacks rather than promises (the `geolocation` API, for example). You'll want to read the documentation closely to see if the library expects you to use a promise or callback. So for once, we don't really have to be in charge of making a decision here -- we can let the tools and technologies we're using dictate whether or not we should be using promises.
 
+### ES7 async/await
+
+Just like everything else in JavaScript, there is the way to use promises that
+you just saw, and then there is the new flashy way. ES7 introduced the
+async/await pattern for resolving Promises. Under the hood, the same thing is
+still happening, but the new syntax keeps us from having to chain .then()
+methods together. Here's the same example from above, inside a React lifecycle
+method, using the new async/await syntax.
+
+```js
+async componentDidMount() {
+  const response = await fetch('/api/students.json')
+  const students = await response.json()
+  const projects = await getProjectsForStudents(students)
+  const grades = await getGradesForProjects(projects)
+  await doSomethingImportantWithAllThisData(grades)
+}
+```
+
 
 ### Further Learning: the Promise Object
 
