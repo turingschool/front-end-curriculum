@@ -61,6 +61,46 @@ for this pattern, you will find it all over the place.
 
 ### Ok, by why would I ever use it?
 
+You've already been using it! Let's consider a super simple example:
+
+```js
+import React, { Component } from 'react';
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      count: 0,
+    }
+  }
+
+  handleCounter = (event) => {
+    const increment = event.target.name === '+' ? 1 : -1
+    this.setState({count: this.state.count + increment})
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <h1>{this.state.count}</h1>
+        <button onClick={this.handleCounter} name="-">-</button>
+        <button onClick={this.handleCounter} name="+">+</button>
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+Sure this is about as basic as it gets, but even this simple counter has all
+three of our architectural components. Can you identify each one?
+
+---
+_**Turn and talk:** What part of the application above is the Model? How about
+the Controller and the View? How would your answer change if this was just a
+stateless component accepting props?_
+
 ### Where have I seen this before?
 
 ### Are there other options if I don't like MVC?
