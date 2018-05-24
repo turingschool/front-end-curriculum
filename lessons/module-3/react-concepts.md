@@ -1,5 +1,5 @@
 ---
-title: "React: Important Concepts
+title: Important React Concepts
 module: 3
 ---
 
