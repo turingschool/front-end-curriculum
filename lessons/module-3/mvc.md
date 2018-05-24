@@ -111,15 +111,22 @@ stateless component accepting props?_
 Several frameworks that you're already familiar with use the MVC pattern, some
 of the big names are:
 
-* React.js
-* Angular.js
-* Ember.js
-* Backbone.js
+* [React.js](https://reactjs.org/)
+* [Angular.js](https://angularjs.org/)
+* [Ember.js](https://www.emberjs.com/)
+* [Backbone.js](http://backbonejs.org/)
 
 ### Why should I bother?
 
 
 ### Are there other options if I don't like MVC?
+
+There are, although they're less common in web application development. A
+few MVP (Model View Presenter) frameworks that you may come across are:
+
+* [CodeIgniter](https://codeigniter.com/)
+* [Nette](https://nette.org/en/)
+* [JavaFX](http://www.oracle.com/technetwork/java/javase/overview/javafx-overview-2158620.html)
 
 ### Wrapping it up
 
