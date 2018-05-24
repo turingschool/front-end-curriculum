@@ -14,4 +14,10 @@ module: 3
 
 ## Learning Goals
 
+- Be able to explain each of the layers of MVC
+- Understand the benefits of separating concerns
+- Be able to identify frameworks that use the MVC pattern
+- Be able to identify frameworks that use a different design pattern
+
 ## Vocab
+
