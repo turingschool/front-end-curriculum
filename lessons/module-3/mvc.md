@@ -35,6 +35,30 @@ what some other options are for project architecture.
 
 ### What is it?
 
+MVC is an architectural pattern that separates applications into three main
+categories; the model, the view, and the controller. In this pattern, each
+component has its own specific responsibility. While implemented slightly
+differently in various frameworks, the general pattern is one of the most
+frequently used industry standards for creating scalable and extensible
+software.
+
+The **Model** is focused solely on the data, and data related logic of the
+application. This could be business data for the application, or data that is
+being transacted between the View and Controller.
+
+The **View** is concerned only with the UI of the application, and should not
+know what the business logic of the application is. The only logic a view should
+be concerned with is how to display data, based on what kind of data it was
+handed.
+
+The **Controller** acts as the go-between for the Model and the View. It handles
+any user interaction coming from the View, and uses the determines any changes
+that may need to be made to the Model. It can also manipulate data from the
+Model to give to the View, for rendering a final output.
+
+That might seem like a lot of word salad right now, but once you start looking
+for this pattern, you will find it all over the place.
+
 ### Ok, by why would I ever use it?
 
 ### Where have I seen this before?
