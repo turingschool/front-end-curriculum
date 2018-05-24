@@ -32,3 +32,15 @@ MVC (Model View Controller) is a design pattern that you'll find pops up all
 over the place in software development. In this lesson, we'll learn what it is,
 why it's important, what frameworks you're already familiar with use it, and
 what some other options are for project architecture.
+
+### What is it?
+
+### Ok, by why would I ever use it?
+
+### Where have I seen this before?
+
+### Are there other options if I don't like MVC?
+
+### Wrapping it up
+
+## References
