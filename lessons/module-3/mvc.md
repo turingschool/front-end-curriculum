@@ -59,6 +59,9 @@ Model to give to the View, for rendering a final output.
 That might seem like a lot of word salad right now, but once you start looking
 for this pattern, you will find it all over the place.
 
+![MVC interactions](https://www.tutorialspoint.com/sencha_touch/images/mvc.jpg
+"Data flow in MVC")
+
 ### Ok, by why would I ever use it?
 
 You've already been using it! Let's consider a super simple example:
@@ -101,7 +104,20 @@ _**Turn and talk:** What part of the application above is the Model? How about
 the Controller and the View? How would your answer change if this was just a
 stateless component accepting props?_
 
-### Where have I seen this before?
+---
+
+### Where will I see this?
+
+Several frameworks that you're already familiar with use the MVC pattern, some
+of the big names are:
+
+* React.js
+* Angular.js
+* Ember.js
+* Backbone.js
+
+### Why should I bother?
+
 
 ### Are there other options if I don't like MVC?
 
