@@ -25,3 +25,10 @@ module: 3
 - View
 - Controller
 - Separation of Concerns
+
+## MVC Architecture
+
+MVC (Model View Controller) is a design pattern that you'll find pops up all
+over the place in software development. In this lesson, we'll learn what it is,
+why it's important, what frameworks you're already familiar with use it, and
+what some other options are for project architecture.
