@@ -21,3 +21,7 @@ module: 3
 
 ## Vocab
 
+- Model
+- View
+- Controller
+- Separation of Concerns
