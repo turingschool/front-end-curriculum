@@ -116,8 +116,15 @@ of the big names are:
 * [Ember.js](https://www.emberjs.com/)
 * [Backbone.js](http://backbonejs.org/)
 
-### Why should I bother?
+### Why should I bother with a framework?
 
+Frameworks 'force' you to reap the benefits of the MVC design pattern. Having
+some common, accepted standards for how to build out a project helps teams move
+faster, and not have to make so many decisions along the way.
+
+Additionally, frameworks are generally easier to test, and the tests that you
+write will start to follow a natural pattern. Separation of concerns make this
+possible.
 
 ### Are there other options if I don't like MVC?
 
@@ -129,5 +136,8 @@ few MVP (Model View Presenter) frameworks that you may come across are:
 * [JavaFX](http://www.oracle.com/technetwork/java/javase/overview/javafx-overview-2158620.html)
 
 ### Wrapping it up
+
+In small groups draw out the MVC of your most recent application. How does Redux
+play into this? Work on this for 10 minutes, then we'll reconvene.
 
 ## References
