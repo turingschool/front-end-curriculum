@@ -106,6 +106,12 @@ stateless component accepting props?_
 
 ---
 
+### Where will I see this?
+
+This pattern is all over the place in software development. Consider a simple
+webpage. What does the HTML represent? How about the CSS? What about the browser
+itself?
+
 ### MVC Frameworks
 
 Several frameworks that you're already familiar with use the MVC pattern, some
