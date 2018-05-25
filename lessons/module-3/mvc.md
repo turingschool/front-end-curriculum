@@ -106,7 +106,7 @@ stateless component accepting props?_
 
 ---
 
-### Where will I see this?
+### MVC Frameworks
 
 Several frameworks that you're already familiar with use the MVC pattern, some
 of the big names are:
@@ -141,3 +141,8 @@ In small groups draw out the MVC of your most recent application. How does Redux
 play into this? Work on this for 10 minutes, then we'll reconvene.
 
 ## References
+
+[Understanding
+MVC](https://blog.codinghorror.com/understanding-model-view-controller/)  
+[MVC
+Architecture](https://developer.mozilla.org/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)  
