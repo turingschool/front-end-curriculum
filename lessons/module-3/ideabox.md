@@ -77,6 +77,130 @@ class NewIdeaForm extends Component {
 }
 ```
 
+Notice how the value of each input is defined by whatever is in state? That gets
+us our first critical piece of what makes up a controlled form, but what about
+when the user changes the input? Right now nothing would happen, we need to
+handle that `onChange` event.
+
+```js
+import React, { Component } from 'react'
+
+class NewIdeaForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: '',
+      description: ''
+    }
+  }
+
+  handleNameChange(e) {
+    const value = name.target.value
+    this.setState({name: value})
+  }
+
+  render() {
+    return (
+      <form>
+        <input name="name" value={this.state.name} onChange={this.handleNameChange}  />
+        <input name="description" value={this.state.description} />
+        <button>Submit</button>
+      </form>
+    )
+  }
+}
+```
+
+Now we're handling the name change with our `handleNameChange` function. But
+wait! When we run this code, we get an error: `cannot read property 'setState'
+of undefined`. What does that mean?
+
+---
+_**Turn and Talk:** Why did we get that error? What are our options for solving it?_
+
+---
+
+Ok, so once we've properly bound our function, it should work for us. Here is
+one possible binding solution:
+
+```js
+import React, { Component } from 'react'
+
+class NewIdeaForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: '',
+      description: ''
+    }
+  }
+
+  handleNameChange = (e) => {
+    const value = name.target.value
+    this.setState({name: value})
+  }
+
+  render() {
+    return (
+      <form>
+        <input name="name" value={this.state.name} onChange={this.handleNameChange}  />
+        <input name="description" value={this.state.description} />
+        <button>Submit</button>
+      </form>
+    )
+  }
+}
+```
+
+This uses the ES6 arrow syntax to automatically bind `handleNameChange` to
+`this`. That allows us to call methods on `this` inside of handleNameChange.
+That's great for our first input, but what about our second input?
+
+We *could* make another function that specifically handles the description
+change, but that is going to get repitious pretty quickly. Instead, let's use
+the name property on the input, and take advantage of JavaScript's dynamic key
+assignment, refactoring our `handleNameChange` function to be more generic
+
+```js
+import React, { Component } from 'react'
+
+class NewIdeaForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: '',
+      description: ''
+    }
+  }
+
+  handleChange = (e) => {
+    const {name, value} = name.target
+    this.setState({[name]: value})
+  }
+
+  render() {
+    return (
+      <form>
+        <input
+          name="name"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+        <input
+          name="description"
+          value={this.state.description}
+          onChange={this.handleChange}
+        />
+        <button>Submit</button>
+      </form>
+    )
+  }
+}
+```
+
+Great! Now our `handleChange` function will handle changes to either input, in
+each case updating state with the correct data.
+
 ### addNewIdea
 
 ### Display ideas on page
