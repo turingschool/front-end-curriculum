@@ -17,6 +17,14 @@ module: 3
 
 ## Vocab
 
+- Data down
+- Actions up
+- Controlled form component
+- Passing props
+- Destructure
+- Binding
+- Autobinding
+
 ## Building Ideabox in React
 
 ### What components do we need?
