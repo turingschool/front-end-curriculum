@@ -5,6 +5,14 @@ module: 3
 
 ## Agenda
 
+- Review React
+- Discuss what we're building
+- Talk about Data vs Actions
+- Build the controlled form component
+- Add ideas to our App state
+- Display ideas on the page
+- Remove ideas that have been added
+
 ## Learning Goals
 
 ## Vocab
