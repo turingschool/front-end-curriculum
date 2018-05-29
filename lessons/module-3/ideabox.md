@@ -27,6 +27,11 @@ module: 3
 
 ## Building Ideabox in React
 
+Today we're going to explore some React patterns that will become very familiar
+to us over the next few weeks. While this Ideabox may seem pretty contrived,
+you'll find that many application out in the real world are just high end
+Ideaboxes. 
+
 ### What components do we need?
 
 ### Controlled Form Component
