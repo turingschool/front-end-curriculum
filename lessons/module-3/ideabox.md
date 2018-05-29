@@ -10,3 +10,17 @@ module: 3
 ## Vocab
 
 ## Building Ideabox in React
+
+### What components do we need?
+
+### Controlled Form Component
+
+### addNewIdea
+
+### Display ideas on page
+
+### removeIdea
+
+### Wrapping it up
+
+## References
