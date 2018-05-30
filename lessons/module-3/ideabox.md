@@ -283,6 +283,59 @@ some changes to our form to make it work.
 
 ### handleSubmit
 
+Our form is getting the `addIdea` function passed as a prop, but right now we're not
+doing anything with it. Lets add another function to handle the `onSubmit` of
+the form, and then call our `addIdea` prop function:
+
+```js
+// NewIdeaForm.js
+
+import React, { Component } from 'react'
+
+class NewIdeaForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = {
+      name: '',
+      description: ''
+    }
+  }
+
+  handleChange = (e) => {
+    const {name, value} = name.target
+    this.setState({[name]: value})
+  }
+
+  handleSubmit = (e) => {
+    e.preventDefault()
+    this.props.addIdea(this.state)
+  }
+
+  render() {
+    return (
+      <form onSubmit>
+        <input
+          name="name"
+          value={this.state.name}
+          onChange={this.handleChange}
+        />
+        <input
+          name="description"
+          value={this.state.description}
+          onChange={this.handleChange}
+        />
+        <button>Submit</button>
+      </form>
+    )
+  }
+}
+```
+
+Great! Now, `onSubmit` our `handleSubmit` function will be called, and call the
+`addIdea` function it was passed from `App` as a prop. This is what we mean when
+we say 'data down, actions up'. We're passing the function down (yes, functions
+are a data type as well), and then the action that the user takes submitting the
+form gets passed back up to the `App` when that function is called.
 
 ### Display ideas on page
 
