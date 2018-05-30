@@ -54,6 +54,8 @@ the component will update whenever someone types in the form field. Here's the
 boilerplate:
 
 ```js
+// NewIdeaForm.js
+
 import React, { Component } from 'react'
 
 class NewIdeaForm extends Component {
@@ -83,6 +85,8 @@ when the user changes the input? Right now nothing would happen, we need to
 handle that `onChange` event.
 
 ```js
+// NewIdeaForm.js
+
 import React, { Component } from 'react'
 
 class NewIdeaForm extends Component {
@@ -124,6 +128,8 @@ Ok, so once we've properly bound our function, it should work for us. Here is
 one possible binding solution:
 
 ```js
+// NewIdeaForm.js
+
 import React, { Component } from 'react'
 
 class NewIdeaForm extends Component {
@@ -162,6 +168,8 @@ the name property on the input, and take advantage of JavaScript's dynamic key
 assignment, refactoring our `handleNameChange` function to be more generic
 
 ```js
+// NewIdeaForm.js
+
 import React, { Component } from 'react'
 
 class NewIdeaForm extends Component {
@@ -202,6 +210,79 @@ Great! Now our `handleChange` function will handle changes to either input, in
 each case updating state with the correct data.
 
 ### addNewIdea
+
+Now that we've got a form that can handle user input, we need to take that state
+and create new ideas with it. Let's look again at our `App` component:
+
+```js
+// App.js
+
+import React, { Component } from 'react'
+import NewIdeaForm from './NewIdeaForm'
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      ideas: []
+    }
+  }
+
+  render() {
+    return(
+      <div>
+        <NewIdeaForm />
+      </div>
+    )
+  }
+}
+```
+
+We need some kind of function that can add new ideas to our array. You might be
+tempted to use the array prototype method `push` here, but that's not a great
+idea. If we did something like `this.state.ideas.push(idea)`, we're mutating the
+state in place, and we're not taking advantage of the React lifecycle methods.
+Instead, we want to set the state with a new ideas array:
+
+```js
+// App.js
+
+import React, { Component } from 'react'
+import NewIdeaForm from './NewIdeaForm'
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      ideas: []
+    }
+  }
+
+  addIdea = (idea) => {
+    const newIdea = {...idea, id: Date.now()}
+    const ideas = [...this.state.ideas, newIdea]
+    this.setState({ ideas })
+  }
+
+  render() {
+    return(
+      <div>
+        <NewIdeaForm addIdea={this.addIdea} />
+      </div>
+    )
+  }
+}
+```
+
+Notice that our `addIdea` method also adds an `id` to each new idea. This will
+prove useful later when we want to remove ideas. 
+
+Also, we're passing our new `addIdea` method down to our form as a prop. This
+gives our form access to this function, but we're still going to need to make
+some changes to our form to make it work.
+
+### handleSubmit
+
 
 ### Display ideas on page
 
