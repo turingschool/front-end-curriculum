@@ -54,21 +54,9 @@ Create a new GitHub repo from the GitHub web UI to host your npm package. You ca
 
 Make sure when you create your new GitHub repo you check the box that says 'Initialize this repository with a README', and add a `.gitignore` file. From the dropdown menu of pre-generated `.gitignore` files, choose 'Node'.
 
-### Create the Package Directory
+Clone this repo down and `cd` into it from your terminal
 
-Create a new directory named after your new fancy node module (**USE lowercase and hyphens ONLY!**). It would make sense if it was named the same thing as your newly created GitHub repo. 
-
-```
-$ mkdir name-of-module
-$ cd name-of-module
-```
-
-Next, you'll initialize this directory as a git repo:
-
-```
-$ git init
-$ git remote add origin <github url>
-```
+### Create Some Files!
 
 Now let's add some files: 
 * an index.js file to contain our code (more complex packages may use more than one file)

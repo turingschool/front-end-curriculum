@@ -181,8 +181,6 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 "What Am I"
 
 * `aria-label` - Described above. Provides additional information about an element.
-* `aria-live` - **CRUCIAL** This Indicates an area of the page that might change, which tells the screen reader to watch this section of the DOM and announce any changes if necessary. (Ie: your facebook feed). Values are `polite` and `assertive`.
-* `aria-atomic` - Assistive technologies will present the entire region as a whole. This can be used with `aria-live` when you only update part of a view but you want the screen reader to read the entire section.
 * `aria-required` - Tells a user if they need to provide input on an element
   before a form is submitted.
 
@@ -191,9 +189,9 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 * `aria-controls` - Seen above. References an element that is controlled by the current element.
 * `aria-labelledby` - Sister to `aria-label`, references the ID of another element, which is a short title for the element.
 * `aria-describedby` - is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
-* `aria-owns` - References child elements if that relationship is not already clear in the dom. [Example][aria-owns-example]
-
-[aria-owns-example]: https://www.w3.org/TR/wai-aria-practices/examples/combobox/aria1.1pattern/listbox-combo.html
+<!-- * `aria-owns` - References child elements if that relationship is not already clear in the dom. [Example][aria-owns-example]
+ -->
+<!-- [aria-owns-example]: https://www.w3.org/TR/wai-aria-practices/examples/combobox/aria1.1pattern/listbox-combo.html -->
 
 [Learn more about the extensive list of properties and states available in the documentation](https://msdn.microsoft.com/en-us/library/hh801958(v=vs.85).aspx).
 

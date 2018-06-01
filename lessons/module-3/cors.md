@@ -4,12 +4,30 @@ tags: security, http
 module: 3
 ---
 
+## Agenda
+
+- Discuss how the web works
+- Discuss challenges associated with building web applications
+- What makes applications 'slow'?
+- What is a CDN?
+- Why/What is CORS?
+
 ## Learning Goals
 
-* Student understands why CORS was created
-* Student can explain why CORS is not very secure
-* Student can determine whether two URLs have a matching origin
-* Student can set `Access-Control-Allow-Origin` in a NodeJS app
+- Student understands why CORS was created
+- Student can explain why CORS is not very secure
+- Student can determine whether two URLs have a matching origin
+- Student can set `Access-Control-Allow-Origin` in a NodeJS app
+
+## Vocab
+
+- Request
+- Response
+- HTTP
+- Verbs (GET, PUT, POST, PATCH, DELETE)
+- Content Delivery Network (CDN)
+- Cross Origin Resource Sharing (CORS)
+
 
 ## Lesson
 

@@ -47,7 +47,7 @@ you can chain together a lot of different third-party libraries to perform these
 different necessary actions. Redux needs middlware to create a check point
 between firing off an action and hitting a reducer. There are many different
 Redux middleware libraries for performing familiar tasks such as logging,
-asychronous API call, and routing, just to name a few.
+asynchronous API call, and routing, just to name a few.
 
 If you dig into the docs, you'll see an example of handrolling what middlware is
 doing behind the scenes. It looks something like this:
@@ -421,20 +421,20 @@ import * as actions from '../../actions'
 
 describe('the sagas', () => {
   describe('listenForSubmitLoginUser', () => {
-    let generator
+    let iterator
 
     beforeAll(() => {
-      generator = sagas.listenForSubmitLoginUser()
+      iterator = sagas.listenForSubmitLoginUser()
     })
 
     it('should takeLatest SUBMIT_LOGIN_USER', () => {
-      const value = generator.next().value
+      const value = iterator.next().value
       const expected = takeLatest('SUBMIT_LOGIN_USER', sagas.submitLoginUser)
       expect(value).toEqual(expected)
     })
 
     it('should be done', () => {
-      const done = generator.next().done
+      const done = iterator.next().done
       expect(done).toBe(true)
     })
   })
@@ -450,7 +450,7 @@ how you would do that:
 ```js
 describe('submitLoginUser', () => {
   let mockAction
-  let generator
+  let iterator
 
   beforeAll(() => {
     mockAction = {
@@ -459,11 +459,11 @@ describe('submitLoginUser', () => {
       password: 'password'
     }
 
-    generator = sagas.submitLoginUser(mockAction)
+    iterator = sagas.submitLoginUser(mockAction)
   })
 
   it('should call the api', () => {
-    const value = generator.next().value
+    const value = iterator.next().value
     const expected = call(api.postLoginUser, mockAction.email, mockAction.password)
     expect(value).toEqual(expected)
   })
@@ -473,13 +473,13 @@ describe('submitLoginUser', () => {
       id: 0,
       email: 'will@turing.io'
     }
-    const value = generator.next(mockUser).value
+    const value = iterator.next(mockUser).value
     const expected = put(actions.loginUser(mockUser))
     expect(value).toEqual(expected)
   })
 
   it('should be done', () => {
-    const done = generator.next().done
+    const done = iterator.next().done
     expect(done).toBe(true)
   })
 })
@@ -494,7 +494,7 @@ It actually ends up looking very similar to our previous tests:
 ```js
 describe('submitLoginUser on error', () => {
   let mockAction
-  let generator
+  let iterator
 
   beforeAll(() => {
     mockAction = {
@@ -503,12 +503,12 @@ describe('submitLoginUser on error', () => {
       password: 'password'
     }
 
-    generator = sagas.submitLoginUser(mockAction)
-    generator.next()
+    iterator = sagas.submitLoginUser(mockAction)
+    iterator.next()
   })
 
   it('should yield an error on error', () => {
-    const value = generator.throw(Error('an error')).value
+    const value = iterator.throw(Error('an error')).value
     const expected = put(actions.loginError('an error'))
     expect(value).toEqual(expected)
   })
@@ -524,6 +524,6 @@ disposal.
 
 ### References
 
-[Redux Saga](https://github.com/redux-saga/redux-saga)
+[Redux Saga](https://github.com/redux-saga/redux-saga)  
 [Redux Saga
 Tutorial](https://redux-saga.js.org/docs/introduction/BeginnerTutorial.html)
