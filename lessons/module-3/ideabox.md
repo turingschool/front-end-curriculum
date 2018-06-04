@@ -381,7 +381,9 @@ removing an idea from the page.
 
 ### removeIdea
 
-
 ### Wrapping it up
 
 ## References
+
+[React Docs](https://reactjs.org/)
+[Create React App](https://github.com/facebook/create-react-app)
