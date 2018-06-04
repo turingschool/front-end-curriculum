@@ -4,7 +4,7 @@ tags: React, Redux, Testing
 module: 3
 ---
 
-# Agenda
+## Agenda
 
 - Talk about the different types of tests related to Redux
 - Work through Action Creator tests
@@ -12,13 +12,13 @@ module: 3
 - Discuss how NOT to test Containers
 - Work through mapStateToProps and mapDispatchToProps tests
 
-# Learning Goals
+## Learning Goals
 
 - Know how to test Action Creators
 - Know how to test Reducers
 - Know how to test mapStateToProps and mapDispatchToProps
 
-# Vocab
+## Vocab
 
 - Dispatch
 - Pure functions
@@ -455,7 +455,7 @@ called._
 
 ---
 
-### Final Thoughts
+## Final Thoughts
 
 Test Redux can be your favorite thing in the world if you lean into it. All of
 the pieces of the Redux flow have been design so they are easy to test. You can
@@ -464,7 +464,7 @@ do it, give it a shot!
 There are some additional resources below if you'd like to dive into the topic
 further.
 
-### Resources
+## Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
 [Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)  
 [Blog Post About Testing Containers](http://www.wsbrunson.com/react/redux/test/2016/05/08/testing-redux-containers.html)  
