@@ -347,10 +347,11 @@ in state to it as a prop.
 // IdeasContainer.js
 
 import React from 'react'
+import IdeaCard from './IdeaCard'
 
-const IdeasContainer = (props) => {
+const IdeasContainer = ({ideas}) => {
 
-  const ideaCards = props.ideas.map(idea => <IdeaCard idea={idea} />)
+  const ideaCards = ideas.map(idea => <IdeaCard {...idea} />)
 
   return(
     <div className='IdeasContainer">
@@ -360,7 +361,26 @@ const IdeasContainer = (props) => {
 }
 ```
 
+Notice we're mapping over all our ideas to create an array of IdeaCard
+components. We haven't created that component yet though! Let's fix that.
+
+```js
+import React from 'react'
+
+const IdeaCard = ({name, description, id}) => (
+  <div className="IdeaCard">
+    <h1>{name}</h1>
+    <p>{description}</p>
+  </div>
+)
+```
+
+Great! Now we're displaying our ideas on the page via our two functional
+(stateless) components IdeasContainer and IdeaCard. Next up, we'll work though
+removing an idea from the page.
+
 ### removeIdea
+
 
 ### Wrapping it up
 
