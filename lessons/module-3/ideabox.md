@@ -15,6 +15,11 @@ module: 3
 
 ## Learning Goals
 
+- Build stateful/stateless react components
+- Pass data down, and actions up
+- Be able to explain what a bound function is, and how to make one
+- Be able to destructure props coming into a component
+
 ## Vocab
 
 - Data down
