@@ -339,6 +339,27 @@ form gets passed back up to the `App` when that function is called.
 
 ### Display ideas on page
 
+We're adding our ideas to the `App` state, but we're not yet displaying those on
+the page. Let's make a new component called `IdeasContainer` and pass the ideas
+in state to it as a prop.
+
+```js
+// IdeasContainer.js
+
+import React from 'react'
+
+const IdeasContainer = (props) => {
+
+  const ideaCards = props.ideas.map(idea => <IdeaCard idea={idea} />)
+
+  return(
+    <div className='IdeasContainer">
+      { ideaCards }
+    </div>
+  )
+}
+```
+
 ### removeIdea
 
 ### Wrapping it up
