@@ -476,5 +476,5 @@ continue to learn about the library.
 
 ## References
 
-[React Docs](https://reactjs.org/)
+[React Docs](https://reactjs.org/)  
 [Create React App](https://github.com/facebook/create-react-app)
