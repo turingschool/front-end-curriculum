@@ -381,6 +381,86 @@ removing an idea from the page.
 
 ### removeIdea
 
+Before we show off any solutions, take a moment to think about the problem. If
+we need to remove an idea from the page, what is the best way to do that? Where
+do our ideas live? Where should the code to remove them live? Take 5 minutes and
+discuss how you would solve the problem in small groups.
+
+There are a number of different ways that we could solve this, but for this
+exercise, let's create a `removeIdea` function in the App component, then pass it
+down as a prop.
+
+```js
+// App.js
+
+import React, { Component } from 'react'
+import NewIdeaForm from './NewIdeaForm'
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      ideas: []
+    }
+  }
+
+  addIdea = (idea) => {
+    const newIdea = {...idea, id: Date.now()}
+    const ideas = [...this.state.ideas, newIdea]
+    this.setState({ ideas })
+  }
+
+  removeIdea = (id) => {
+    const ideas = this.state.ideas.filter(idea => idea.id !== id)
+    this.setState({ideas})
+  }
+
+  render() {
+    return(
+      <div>
+        <NewIdeaForm addIdea={this.addIdea} />
+        <IdeasContainer ideas={this.state.ideas} removeIdea={this.removeIdea}/>
+      </div>
+    )
+  }
+}
+```
+
+When `removeIdea` is called, we'll iterate over the ideas in state, and filter
+out any idea whose id doesn't match the id that the function is called with.
+Let's update our IdeasContainer and IdeaCard to call this function when a remove
+button is clicked.
+
+```js
+// IdeasContainer.js
+
+import React from 'react'
+import IdeaCard from './IdeaCard'
+
+const IdeasContainer = ({ideas, removeIdea}) => {
+
+  const ideaCards = ideas.map(idea => <IdeaCard {...idea} removeIdea={removeIdea} />)
+
+  return(
+    <div className='IdeasContainer">
+      { ideaCards }
+    </div>
+  )
+}
+```
+
+```js
+import React from 'react'
+
+const IdeaCard = ({name, description, id, removeIdea}) => (
+  <div className="IdeaCard">
+    <h1>{name}</h1>
+    <p>{description}</p>
+    <button onClick={() => removeIdea(id)}>Remove</button>
+  </div>
+)
+```
+
 ### Wrapping it up
 
 ## References
