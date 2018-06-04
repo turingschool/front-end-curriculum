@@ -463,6 +463,12 @@ const IdeaCard = ({name, description, id, removeIdea}) => (
 
 ### Wrapping it up
 
+Not too shabby! We've built a small application that can take user input, store
+this in the application, display the user input on the browser, and update the
+remove the same data. While this might seem contrived, this pattern is the
+essence of what React is all about, and we'll see it over and over again as we
+continue to learn about the library.
+
 ## References
 
 [React Docs](https://reactjs.org/)
