@@ -3,6 +3,15 @@ title: Unit Testing React Components
 module: 3
 ---
 
+## Agenda
+
+- Discuss Unit testing vs Integration Testing vs Acceptance Testing
+- Learn about Jest and what we use it for
+- Learn what Enzyme is and what we use it for
+- Use Jest and Enzyme to take a snapshot of the UI
+- Use Jest and Enzyme to test that a function was called on click
+- Use Jest and Enzyme to unit test individual funtions
+
 
 ## Unit Testing React Components
 
