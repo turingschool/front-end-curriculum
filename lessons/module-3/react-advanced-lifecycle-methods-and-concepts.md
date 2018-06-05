@@ -108,6 +108,10 @@ any other necessary cleanup tasks.
 
 ### componentDidCatch() - *just know this exists*
 
+`componentDidCatch` allows you to set up error boundaries in your application,
+and display fallback UI rather than just letting the error crash into the
+console.
+
 ## References
 
 - [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
