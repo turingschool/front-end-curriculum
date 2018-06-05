@@ -4,6 +4,13 @@ module: 3
 tags: React
 ---
 
+## Agenda
+
+- Break into groups, learn about individual lifecycle methods
+- Teach each lifecycle method to the larger group
+- Learn about `componentDidCatch`, and how to use it
+
+
 ## LifeCycle Methods: An Interactive Adventure
 
 Later this year (2018), the React team will unveil **async rendering**. Per the
