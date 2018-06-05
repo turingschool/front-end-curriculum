@@ -12,6 +12,12 @@ module: 3
 - Use Jest and Enzyme to test that a function was called on click
 - Use Jest and Enzyme to unit test individual funtions
 
+## Learning Goals
+
+- Know how to add Enzyme to a project
+- Know how to use Enzyme and Jest to take a snapshot of UI
+- Know how to use Enzyme to simulate user behavior
+- Know how to unit test a class method using Jest
 
 ## Unit Testing React Components
 
