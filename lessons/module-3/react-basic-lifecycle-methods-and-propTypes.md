@@ -3,6 +3,13 @@ title: "React: Basic Lifecycle Methods and propTypes"
 module: 3
 ---
 
+## Agenda
+
+- Discuss component constructor and super
+- Learn about common lifecycle methods
+- Learn about props, and prop-types
+
+
 ## Basic React Lifecycle Methods
 
 A React Component goes through 3 phases during it's Lifecycle:
