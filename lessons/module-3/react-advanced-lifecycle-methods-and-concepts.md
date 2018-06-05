@@ -24,9 +24,19 @@ This legacy method is now **unsafe** to use and should be replaced with
 
 ### static getDerivedStateFrom Props - *NEW with React 16.3.0*
 
+See the explaination in growth/updating.
+
 ### render()
 
+Yup, render is a lifecycle method. You should be returning JSX from it. Also,
+render isn't the place for any complex logic. Keep it as dumb as possible.
+
 ### componentDidMount()
+
+`componentDidMount' is just called one time, in this birth/mounting process.
+This is important to remember when you're making API calls. If you need to make
+an API call *after* the component has allready call `componentDidMount`, you'll
+need to do it somewhere else.
  
 ## Phase 2: Growth/Updating  
 
