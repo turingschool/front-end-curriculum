@@ -4,22 +4,31 @@ module: 3
 ---
 
 
-## Unit testing 
+## Unit Testing React Components
 
 **Golden Rule**: No copy and pasting. Part of the point of this exercise is to
 build up some muscle memory.
+
+When testing React apps, or really when testing any kind of application, most of
+the tests your write will be *unit tests*. Unit tests make sure this small,
+isolated, parts (units) of our application behave as expected. The more we can
+write our code in a way that is testable at the unit level, the easier it will
+be to scale and extend our applications.
 
 ## A Bit Of Background
 
 [Create React App](https://github.com/facebookincubator/create-react-app) is a 
 new, officially-supported way to easily create React apps. 
 
+---
 From the Create-React-App Documentation:
 
-> If you’re getting started with React, use create-react-app to automate the 
+*If you’re getting started with React, use create-react-app to automate the 
 build of your app. There is no configuration file, and react-scripts is the only 
 extra build dependency in your package.json. Your environment will have everything 
-you need to build a modern React app.
+you need to build a modern React app.*
+
+---
 
 **Stop and Read:**: [Create Apps with No Configuration](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)  
 
@@ -30,12 +39,15 @@ additional features, or modify your `webpack.config` file, you must `npm eject`
 out of the boilerplate. This will effectively spit out all of the files being 
 maintained behind the scenes and allow for custom configuration.    
 
-From the Create React App Documentation
+---
+From the Create React App Documentation:
 
-> The feature set is intentionally limited. It doesn’t support advanced features 
+*The feature set is intentionally limited. It doesn’t support advanced features 
 such as server rendering or CSS modules. The tool is also non-configurable because 
 it is hard to provide a cohesive experience and easy updates across a set of tools 
-when the user can tweak anything.
+when the user can tweak anything.*
+
+---
 
 Keep in mind that although `create-react-app` is extremely popular, there are other 
 boilerplates being built as well that you can explore that include more features, 
