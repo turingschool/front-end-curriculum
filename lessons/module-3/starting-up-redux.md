@@ -4,25 +4,60 @@ tags: React, JavaScript, Webpack, Redux
 module: 3
 ---
 
-# Agenda
+## Agenda
 
-Redux is a difficult concept to explain.
+Redux is a difficult concept to explain. In today's lesson, we'll first discuss
+the Redux data flow, and how this is used alongside React, at a high level.
+Redux involves a lot of terms that you're unfamiliar with, but at it's core,
+it's just built from functions and objects.
 
-So in today's tutorial, we are going to implement Redux and explain as we go.
-
-At the end of this lesson, you will:
-
-- Create an application that uses Redux
-- Learn a little bit about Redux
-- Still be kind of confused about Redux
-
-Don't worry, this isn't the last Redux lesson we're going to teach.
+After our discussion as a group, we'll get our hands dirty, actually writing 
+an application that uses Redux. Don't worry, this isn't the last Redux lesson 
+we're going to teach.
 
 Hold on to your butts.
 
-# Code Along
+## Learning Goals
 
-## Step One: Getting Started
+- Know what an action is, and what an action creator is
+- Know what a reducer is, and how an action is sent to it
+- Have an idea of what the store is, and how it realates to state
+- Know what Provider is
+- Know what mapStateToProps and mapDispatchToProps are
+- Know what `connect` is, and how to use it
+
+## Vocab
+
+- Action
+- Action Creator
+- Dispatch
+- Reducer
+- combineReducers
+- Store
+- createStore
+- Provider
+- context
+- mapStateToProps
+- mapDispatchToProps
+- connect
+- container
+
+## Draw the 30,000 foot view
+
+The most difficult thing about Redux is understanding what all of the various
+parts are for. We're going to go through this one step at a time, but let's
+first see where we're headed. The diagram below is the whole flow, starting with
+the users, and moving towards the actions. Don't worry if you don't understand
+each step yet, this is just your first time seeing this after all.
+
+![Redux Diagram](https://i.redd.it/hl2aytgofz6x.png) 
+
+As we're going over each piece of this diagram in class, draw your own version,
+and make sure to take some notes on what each piece is for.
+
+## Code Along
+
+### Getting Started
 
 - Clone this repo: https://github.com/turingschool-examples/redux-lesson-boilerplate
 
@@ -30,21 +65,34 @@ Hold on to your butts.
 
 ### While We NPM Install
 
-In a nutshell, Redux is a *predictable state manager* for your app.
+In a nutshell, Redux is a *predictable state manager* for your app. Another way
+of saying this is that Redux gives you a *single source of truth* for the data
+flowing through your application.
 
 When an application fires up, it has an initial state.
 
-Every action that happens after things fire up modifies your state. 
+Every action that is dispatched after the application launches will describe
+some kind of change to the application state, and the reducers will make this
+change happen.
 
-As an application scales, maintaining where state changes and when, and which components need to know about it, and how to trickle that information down to the 500th grandchild of the component who knows about state, becomes less fun.
+As an application scales, maintaining state across components, an making sure
+everything that needs to trickle down to the great-great-great-great-grandchild
+components becomes much less fun. This is where Redux comes in.
 
-Redux is an approach to managing data that adds a ton of complexity to a clientside app in order to make state management more predictable.
+Redux is an approach to managing data that adds a ton of complexity to a 
+clientside app in order to make state management more predictable.
 
-You don't always need Redux. But you should always know what it can do.
+You don't always need Redux. But you should always know what it can do, because
+when you're working on a large application, Redux will be your best friend.
 
 ### Installing Dependencies
 
-- Install redux and react-redux: `npm i -S redux react-redux`
+Although Redux pairs very nicely with React, it's not explicitly required to use
+them together. Redux can easily be used with a number of other front end
+frameworks. For that reason, we need the adapter library `react-redux`, as well
+as `redux` itself.
+
+Install redux and react-redux: `npm i -S redux react-redux`
 
 ### Organizing An App
 

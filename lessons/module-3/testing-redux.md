@@ -1,32 +1,81 @@
 ---
-title: Unit Testing Redux
+title: Testing Redux
 tags: React, Redux, Testing
 module: 3
 ---
 
+## Agenda
+
+- Talk about the different types of tests related to Redux
+- Work through Action Creator tests
+- Work through Reducer tests
+- Discuss how NOT to test Containers
+- Work through mapStateToProps and mapDispatchToProps tests
+
+## Learning Goals
+
+- Know how to test Action Creators
+- Know how to test Reducers
+- Know how to test mapStateToProps and mapDispatchToProps
+
+## Vocab
+
+- Dispatch
+- Pure functions
+- Container
+- Vocab from [Starting Up Redux](starting-up-redux.html)
+
+## Getting Started
+
+We're going to be using the TodoList application that we made when we were
+exploring Redux for the first time. Go ahead and clone it, and switch to the
+begin-testing branch:
+
+```bash
+git clone https://github.com/turingschool-examples/redux-lesson-boilerplate
+cd redux-lesson-boilerplate
+git fetch
+git checkout begin-testing
+```
+
 ### Unit Testing
 
-Unit tests, as always, aim to modularly test individual pieces of code as thoroughly as possible. In React apps, these targeted chunks of code include classes, functions, components, helper files...etc. Things that you refactor and split up. Unit testing makes your life as a developer easier and makes refactoring possible.  
-
-After giving your function the expected arguments, do you get back what you expected?
-
-An interesting comment I read in [this blog post](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking) referred to unit testing as "tests written for developers", whereas integration (or acceptance) tests are written for users.  
+Unit tests, aim to modularly test individual pieces of code as throughly as
+possible. In React apps, these targeted pieces include classes, functions,
+components, and helper files. Unit testing makes your life easier as a
+developer, and makes it simpler to refactor your code. When testing in Redux,
+most of our tests will be unit tests.
 
 ### Testing in Redux  
 
-In order to test Redux, there are a few things you need to mentally organize. Tests in Redux include Action tests, Reducer tests, Component tests, and any other middleware or additional libraries you may have included.  
+In order to test Redux, we need to first consider the pieces that will require
+testing. We'll need Action Creator tests, Reducer tests, Container tests, and
+tests for any Redux Middleware we may be using. For this lesson, we're just
+going to focus on the first three.
 
-Let's look at an example of a unit test in English.  
+Testing in Redux can actually be a very plesant experience, because all the
+functions you'll be writing while using Redux are *pure*. This means that given
+the same inputs for a function, we'll always get back the same output. For more
+explaination of pure functions, check out [this
+post](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/).
 
-"I want to make sure that my todos reducer returns an array with an incremented length value in my state after receiving the ADD_TODO event."  
-
-This differs from an integration test which alternatively would make sure that "As a user, when I'm on the home page, and I type in a Todo, and I click "Add Todo" then I see my new Todo on the page".  
-
-Let's start with Action tests.
+Let's start with Action Creator tests.
 
 ### Action Creators
 
-Action creators in Redux are functions that simply return a plain object. When testing action creators we want to test whether the correct action creator was called and also whether the right action was returned.  
+Action creators in Redux are functions that return an Action object. Actions
+describe changes to our Redux store. Action creators are *pure*, and thus are
+not too difficult to test.
+
+---
+_**Stop and think**: Why do we even need Action Creators? Couldn't we just create
+objects where we need them?_
+
+---
+
+Action Creators are functions that return a plain object. When testing action
+creators we want to test that the returned object is what we expect, based on
+the input parameters.
 
 Take for example our `addTodo()` action.  
 
@@ -39,61 +88,44 @@ export const addTodo = (text) => {
 }
 ```
 
-Given a string as text, (let's say "Find A Pumpkin"), we expect it to return an object with a key of `'ADD_TODO'` and the text "Find A Pumpkin".  
+Given a string as text, (let's say "Go to the Vault"), we expect it to return an 
+object with a key of `'ADD_TODO'` and the text "Go to the Vault".  
 
-### Setup Testing with Jest  
-
-As you learned with yesterdays Testing React lesson, Jest is a great testing framework for both unit tests AND it makes popping on Enzyme for integration tests a breeeeze! It's like Christmas!  
-
-`npm i -D jest babel-jest`  
-
-Make sure you have the following in your `.babelrc` file:  
-
-```js
-  {
-    "presets": ["es2015"]
-  }
-```
-
-Then make a quick change to the test part of `scripts` in your `package.json`.  
-
-```js
-{
-  "scripts":{
-    ...
-    "test": "jest",
-    "test:watch": "npm test -- --watch"
-    ...
-  }
-}
-```
-
-Next, let's set up our test.  
-
-### Action Test
-`test/actions/todos.test.js`  
+### Action Creator Tests
+`actions/todos.test.js`  
 
 Step one, let's just make sure everything is wired up.
 
 ```js
-import * as actions from '../../src/actions'
+import * as actions from '../actions'
 
 describe('actions', () => {
-  it('should create an action to add a todo', () => {
-    expect(true).toEqual(true)
+  it('should have a type of ADD_TODO', () => {
+    expect(true).toEqual(false)
   })
 })
 
 ```
-Run `npm test` to run your suite once, or `npm run test:watch` to test on any file changes.  
+Run `npm test` to run your suite. We should see it fail, because true doesn't
+equal false.
 
-Assuming you have a passing test, let's add some substance.  
+```bash
+expect(received).toEqual(expected)
+
+Expected value to equal:
+  false
+Received:
+  true
+```
+
+Great, our test suite is ready to run, lets actually write our action test.
 
 ```js
-import * as actions from '../../src/actions'
+import * as actions from '../actions'
 
 describe('actions', () => {
-  it('should create an action to add a todo', () => {
+  it('should have a type of ADD_TODO', () => {
+    // Setup
     const text = "Go to the Vault"
     const id = 1
     const expectedAction = {
@@ -101,27 +133,33 @@ describe('actions', () => {
       text: "Go to the Vault",
       id: 1
     }
-    expect(actions.addTodo(text, id)).toEqual(expectedAction)
+
+    // Execution
+    const result = actions.addTodo(text, id)
+
+    // Expectation
+    expect(result).toEqual(expectedAction)
   })
 })
 ```
 
 #### YOUR TURN!
 
-Write two more unit tests to verify the functions in `actions/index.js`. file.
+Write two more unit tests to cover the other two Action Creators.
 
-### Reducer Tests
+### Reducers
 
-Recall that Reducers connect actions to state, returning an updated state based on a given action.
-
-In other words, a reducer receives an action and decides how to change the state based on the behavior defined in the action. We want to test that behavior.
+Recall that Reducers digest actions that have been dispatched to the store, and
+then return a new state. In other words, a reducer receives an action, and
+decides what the new state will be based on the type of the action. We want to
+test that behavior.
 
 Take a look at our todos reducer.
 
 ```js
-// reducers/todos.js
+// reducers/todosReducer.js
 
-const todos = (state=[], action) => {
+const todosReducer = (state=[], action) => {
   switch (action.type) {
     case 'ADD_TODO':
       return [...state, {id: action.id, text: action.text, completed: false}]
@@ -137,20 +175,31 @@ const todos = (state=[], action) => {
   }
 }
 
-export default todos
+export default todosReducer
 ```
 
-Make the new directory:  
-`test/reducers/todos.test.js`  
+### Reducer Tests
 
-To test this reducer, let's start by testing what happens if we don't pass this reducer any action. We want to get the default state back, which for us is an empty array.
+Make the new test file:  
+`reducers/todosReducer.test.js`  
+
+To test this reducer, let's start by testing what happens if the action is
+undefined. What we want to have happen in this case is for the reducer to return
+whatever the state was when the reducer function was called.
 
 ```js
-import reducer from '../../src/reducers/todos'
+import todosReducer from '../todosReducer'
 
-describe('todos reducer', () => {
+describe('todosReducer', () => {
   it('should return the initial state', () => {
-    expect( reducer(undefined, {}) ).toEqual([])
+    // Setup
+    const expected = []
+
+    // Execution
+    const result = todosReducer(undefined, {})
+
+    // Expectation
+    expect(result).toEqual(expected)
   })
 })
 
@@ -173,139 +222,249 @@ it('should toggle the completed status of a new todo', () => {
 })
 ```
 
-### Component Tests
-As we've seen, it's important to separate our React components into "Presentational" vs "Container".
+### Containers
 
-Presentational component testing generally involves minor mocking and stubbing, and can be thrown into the "Testing React" bucket which you are all familiar with.
+Testing React Containers is a lot of what you already know, with a little of
+what you don't mixed in. Remember that a container is just a Redux connected
+React component. We connect the React component to the Redux store using the
+`connect` method.
 
-Container components, however, are hooked up to Redux and use the `connect` method. Connect allows components to receive props directly from the redux `store`, rather than having to pass them through parent components.  
+While we could try to mock out our store, and test through the `connect` method,
+we're not going to do that. We didn't write `connect`, and it's a real challenge
+to test through it. Even the [Redux Testing Docs](https://redux.js.org/recipes/writing-tests#connected-components)
+suggest that this is unwise.
 
-These props are accessed using the method `mapStateToProps`. Connect is a beast to try to test, and even the [Official Redux Testing Documentation](http://redux.js.org/docs/recipes/WritingTests.html) suggests somewhat ignoring connect and testing the component itself.  
+With that in mind, there are three main areas of our container that need to be
+tested; our Component, our mapStateToProps function, and our mapDispatchToProps
+function.
 
-But, because we're unique snowflakes, let's give it a go. This will be more of a conversation about various approaches to mocking data in your test files. The tests themselves could use some significant improvement.  
-
-First, if you don't have it already, make sure Enzyme and it's test-utils buddy are installed.  
-`npm i -D enzyme react-addons-test-utils`   
-
-The container component is connected to the Redux store, which is passed down to components through the  `<Provider>` parent component. In order to test our containers we need to include the `<Provider>`, the target presentational component, and fake out a store that Provider can access.
-
-One way to fake the redux store is to hand write a helper file and import that "store" into your test file.
+Lets take a look at our container to remind ourselves:
 
 ```js
-// test/containers/fakeStore.js
+// containers/AddTodoFormContainer.js
 
-export const fakeStore = (state) => {
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addTodo } from '../actions'
+
+class AddTodoForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { text: '' }
+  }
+
+  render() {
+    console.log(this.props);
+    const { handleSubmit, todos } = this.props;
+    return (
+      <section>
+        <form onSubmit={  (e) => {
+              e.preventDefault()
+              handleSubmit(this.state.text, todos.length)
+        }}>
+          <input  value={this.state.text}
+                  placeholder="Add A Todo"
+                  onChange={(e) => this.setState({ text: e.target.value} )} />
+          <button>Add Todo</button>
+        </form>
+      </section>
+    )
+  }
+}
+
+const mapStateToProps = (state) => {
+  console.log(state)
+  return { todos: state.todosReducer }
+}
+
+const mapDispatchToProps = (dispatch) => {
   return {
-    default: () => {},
-    subscribe: () => {},
-    dispatch: () => {},
-    getState: () => {
-      return { ...state }
+    handleSubmit: (text, id) => {
+      console.log(text, id);
+      dispatch(addTodo(text, id))
     }
-  };
+  }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
 
-You might get a [syntax error about that spread operator](https://babeljs.io/docs/plugins/transform-object-rest-spread/) in your fake store file. If that happens, do the following:  
-* run `npm install --save-dev babel-plugin-transform-object-rest-spread`  
-* in `.babelrc` add `  "plugins": ["transform-object-rest-spread"]
-`
+---
+_**Context:** In some projects, you'll see the component imported into the
+container file, rather than all in one file. Both are reasonable approaches,
+the former being mostly for container reusability._
 
-Then in your test file, you'd reference your fake store like this:  
+---
 
-```js
-import { fakeStore } from './fakeStore'
-```
-Option two is to run `npm i -D redux-mock-store`. Then at the top of your test file, include the following lines:
+### Container Tests
 
-```js
-import configureMockStore from 'redux-mock-store'
-const fakeStore = configureMockStore()({todos: []})
-```
-
-Next, let's set up the information our test will need in a `setup()` function so we only have to do that part once.
+When we go to test this container, as mentioned before, we don't want to test
+through `connect`. This means when importing into our test file, we don't want
+the default export `connect`, but instead want to import the component on it's
+own, as well as mapStateToProps and mapDispatchToProps. To achieve this, we'll
+need to add named exports to all three, like so:
 
 ```js
-// test/containers/AddTodoFormContainer.test.js
+// containers/AddTodoFormContainer.js
 
-import React from 'react'
-import { mount  } from 'enzyme'
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { addTodo } from '../actions'
 
-import AddTodoFormContainer from '../../src/containers/AddTodoFormContainer'
-import AddTodoForm from '../../src/components/AddTodoForm'
-import { Provider } from 'react-redux'
-
-// get your fake store data like this if you created a helper file
-import { fakeStore } from './fakeStore'
-
-// or like this if you're using the redux module
-import configureMockStore from 'redux-mock-store'
-const fakeStore = configureMockStore()({todos: []})
-
-
-const setup = () => {
-  const props = {
-    handleSubmit: jest.fn(),
+export class AddTodoForm extends Component {
+  constructor(props) {
+    super(props)
+    this.state = { text: '' }
   }
 
-  const wrapper = mount(
-    // if you were to test your Provider or Container components you'd need the following
-    // <Provider store={fakeStore}>
-    //   <AddTodoFormContainer {...props}/>
-    // </Provider>
+  render() {
+    console.log(this.props);
+    const { handleSubmit, todos } = this.props;
+    return (
+      <section>
+        <form onSubmit={  (e) => {
+              e.preventDefault()
+              handleSubmit(this.state.text, todos.length)
+        }}>
+          <input  value={this.state.text}
+                  placeholder="Add A Todo"
+                  onChange={(e) => this.setState({ text: e.target.value} )} />
+          <button>Add Todo</button>
+        </form>
+      </section>
+    )
+  }
+}
 
-    <AddTodoForm handleSubmit={props.handleSubmit} todos={props.todos} />
+export const mapStateToProps = (state) => {
+  console.log(state)
+  return { todos: state.todosReducer }
+}
 
-  )
-
-  const Component = wrapper.find(AddTodoForm)
-
+export const mapDispatchToProps = (dispatch) => {
   return {
-    props,
-    Component
+    handleSubmit: (text, id) => {
+      console.log(text, id);
+      dispatch(addTodo(text, id))
+    }
   }
 }
+
+export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
 
-Then in that same file, for now we can test that the component triggers our mocked out function when we submit our form.
+Now we can export everything individually, making it easier to test. The tests
+for the component will be exactly as we've tested those in the past. If you need
+a refresher, check out the [testing lesson](unit-testing-react.html). The new
+test we're going to need are for `mapStateToProps` and `mapDispatchToProps`.
+Let's start with `mapStateToProps`.
+
+First, create a new file containers/AddTodoFormContainer.test.js
+
+The key in testing `mapStateToProps` is understanding what it's role is. It will
+take in the state of the Redux store, and return to us an object that has parsed
+out just the data which our container will need.
+
+A test description might be 'it should return an object with the todos array'
 
 ```js
-//... setup() code goes here
 
-describe('components', () => {
-  describe('AddTodoForm', () => {
+// containers/AddTodoFormContainer.test.js
 
-  it('should render something', () => {
-      const { Component } = setup()
+import { AddTodoForm, mapStateToProps, mapDispatchToProps }
 
-      expect(Component.find('form').length).toEqual(1)
+describe('AddTodoFormContainer', () => {
+  describe('AddTodoForm component', () => {
+    // Write these tests on your own
+    // You already know how!
+  })
 
-      expect(Component.length).toEqual(1)
-    })
+  describe('mapStateToProps', () => {
+    it('should return an object with the todos array', () => {
+      // Setup
+      const mockState = {
+        todos: [{text: 'Learn Redux!', id: 0}],
+        filter: 'SHOW_ALL'
+      }
+      const expected = {
+        todos: [{text: 'Learn Redux!', id: 0}]
+      }
 
-    it('should call addTodo when Add Todo button is clicked', () => {
-      const { props, Component } = setup()
+      // Execution
+      const mappedProps = mapStateToProps(mockState)
 
-      let form = Component.find('form')
-
-      form.simulate('submit')
-      console.log(props);
-      expect(props.handleSubmit).toBeCalled()
-
-    // Or to verify how many times a function has been called
-      expect(props.handleSubmit.mock.calls.length).toBe(1)
+      // Expectation
+      expect(mappedProps).toEqual(expected)
     })
   })
 })
 
 ```
 
-### Middleware Testing  
+---
+_**Stop and think:** Why do we include the **filter** key in the mockState?_
 
-For async action creators that hit a third party middleware (such as [redux thunk](https://github.com/gaearon/redux-thunk)), you'll need to completely Mock out the redux store (hence the difficulty). There are tools for this like [redux-mock-store](https://github.com/arnaudbenard/redux-mock-store), or [nock](https://github.com/pgte/nock) to replicate HTTP requests.  
+---
 
+Ok, hopefully that wasn't too bad! Now let's turn our attention to
+`mapDispatchToProps`, what do we need to test here? `mapDispatchToProps` is
+similar to `mapStateToProps` in that it returns a object, however the values
+are pretty different. Each key/value pair represents a callback function, that
+will ultimately call dispatch.
 
-### Resources
+Remember, we didn't write dispatch, so all we really need to test here is that
+dispatch is called with the correct action when one of our mapped prop functions 
+is called. Let's take a look at how that is done:
+
+```js
+
+// containers/AddTodoFormContainer.test.js
+
+import { AddTodoForm, mapStateToProps, mapDispatchToProps }
+import { addTodo } from '../actions'
+
+describe('AddTodoFormContainer', () => {
+  describe('AddTodoForm component', () => {
+    // Write these tests on your own
+    // You already know how!
+  })
+
+  describe('mapDispatchToProps', () => {
+    it('calls dispatch with an addTodo action when handleSubmit is called', () => {
+      // Setup
+      const mockDispatch = jest.fn()
+      const actionToDispatch = addTodo('Learn Redux!', 0)
+
+      // Execution
+      const mappedProps = mapDispatchToProps(mockDispatch)
+      mappedProps.handleSubmit('Learn Redux!', 0)
+
+      // Expectaion
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
+    })
+  })
+})
+
+```
+
+---
+_**Discuss with a partner:** Assume we have another action removeTodo, and that
+our todosReducer digests it properly. Write a test that checks dispatch is
+called with this removeTodo action, whenever the mappedProp of handleRemove is
+called._
+
+---
+
+## Final Thoughts
+
+Test Redux can be your favorite thing in the world if you lean into it. All of
+the pieces of the Redux flow have been design so they are easy to test. You can
+do it, give it a shot!
+
+There are some additional resources below if you'd like to dive into the topic
+further.
+
+## Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
 [Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)  
-[Blog Post About Testing Containers]http://www.wsbrunson.com/react/redux/test/2016/05/08/testing-redux-containers.html  
+[Blog Post About Testing Containers](http://www.wsbrunson.com/react/redux/test/2016/05/08/testing-redux-containers.html)  

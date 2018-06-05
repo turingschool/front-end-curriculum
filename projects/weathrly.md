@@ -16,7 +16,7 @@ In this project you will be getting your first real interactions with ReactJS, a
 - fetch for api requests
 - [weather underground API](https://www.wunderground.com/weather/api/)
 
-Use [this react starter kit repo](https://github.com/turingschool-examples/react-starter-kit).
+Use [create-react-app](https://www.npmjs.com/package/create-react-app) for your project. We'll learn how to configure the testing environment in our testing lesson later this week.
 
 ## Requirements
 

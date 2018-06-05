@@ -3,6 +3,31 @@ title: "React: Basic Lifecycle Methods and propTypes"
 module: 3
 ---
 
+## Agenda
+
+- Discuss component constructor and super
+- Learn about common lifecycle methods
+- Learn about props, and prop-types
+
+## Learning Goals
+
+- Be able to explain what the constructor does in a component
+- Be able to explain what super is, and why we have to call it
+- Be able to explain when componentDidMount is called, and what we might use it
+  for
+- Be able to explain how getDerivedStateFromProps is used, and when we might use
+  it
+- Be able to explain what PropTypes are, why they are important, and what
+  problem they solve for us
+
+## Vocab
+
+- super
+- lifecycle methods
+- componentDidMount
+- getDerivedStateFromProps
+- PropTypes
+
 ## Basic React Lifecycle Methods
 
 A React Component goes through 3 phases during it's Lifecycle:

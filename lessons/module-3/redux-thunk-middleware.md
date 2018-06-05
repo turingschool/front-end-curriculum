@@ -1,16 +1,37 @@
 ---
-title: **REDUX-THUNK MIDDLEWARE**
+title: REDUX-THUNK MIDDLEWARE
 tags: middleware, thunk, redux-thunk, redux
 module: 3
 ---
 
-# REDUX-THUNK MIDDLEWARE
+## Agenda
 
-We often need to send data to and get data from a database. Now that we are implemeting Redux in our applications, let's take a look at how middleware can help us deal with our asynchronous Redux code.
+We often need to send or get data from a database. Now that we are implementing
+Redux in our applications, let's take a look at how middleware can help us deal
+with our asynchronous Redux code.
 
-Once we fetch our data, we no longer want to store it in our component's state. We now want to be able to put it in the Redux store when it comes back.
+Once we fetch our data, we no longer want to store it in our component's state.
+We want to be able to put it in the Redux store when it comes back.
 
-## What is Middleware?
+Today, we will:
+- Discuss what middlware is, and what it is used for
+- Learn about Thunks, and the problems they solve for us
+- Explore a familiar project, and discuss where we could use thunks
+- Write some thunks
+
+## Learning goals
+
+- Be able to explain why middleware is helpful
+- Be able to add middleware to your redux project
+- Be able to write your own thunks
+
+## Vocab
+
+- Middleware
+- Thunks
+- redux-thunk
+
+### What is Middleware?
 
 Middleware provides a 3rd party between dispatching an action and the moment it reaches a reducer. It basically allows us to hook into the lifecycle of Redux and run some other code between the time an action is dipatched and the time it gets to the reducer.
 
@@ -22,7 +43,7 @@ If we think about it, there are 3 stages of an asynchronous request:
 
 Our state needs to account for each of these stages. 
 
-## Thunk, n.
+### Thunk, n.
 
 A thunk is just another name for a function. But it's not just any old function... it's a special name for a function that wraps an expression to delay its evaluation. Let's take a look at a very basic example of a thunk.
 
@@ -33,7 +54,7 @@ const notAThunk = () => {
 ```
 Here, the inner function that is returned is a thunk. You've probably seen this pattern before; you just didn't know it was a thunk. If you want to execute the `do stuff now` part, you would have to call it like `notAThunk()()` - calling it twice, basically.
 
-## Redux-Thunk
+### Redux-Thunk
 
 Up until this point, we've only seen Redux actions as objects that don't do anything. Pretty boring, right? Wouldn't it be cool if we could actually make them do something... like make a fetch request or trigger other actions? Enter **redux-thunk**!
 
@@ -64,11 +85,11 @@ this.state = {
 ```
 ##### Take a few minutes and review the `fetchStaff`, `fetchBios`, and `commponentDidMount` methods that are being used to fetch our data and handle our loading and error cases.
 
-## Converting to Redux
+### Converting to Redux
 
 To start, we will need to add Redux, React-Redux, and Redux-Thunk as dependencies of our project so that we can use them. I'm also going to go ahead and install the redux-devtools-extention. I have found that this is easier to use when passing multiple arguments to `createStore()`.
 
-`npm install --save redux react-redux redux-thunk redux-devtools-extention`
+`npm install --save redux react-redux redux-thunk redux-devtools-extension`
 
 ### Designing our state
 
@@ -145,6 +166,7 @@ export const fetchBios = (staffArray) => {
   }
 }
 ```
+
 ### Creating our reducers
 
 Now that we have all our action creators defined, we need to write our reducers that take our actions and return a new copy of our state. This should be nothing new.
@@ -195,6 +217,7 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 ```
+
 ### Create our store and provide it to our app
 
 This is great! All that's left to do is head over to our `index.js` and configure our store, pass it to our application, and then connect our componenet to the store. This is where we will tell the store about `redux-thunk` and it will give us access to `dispatch` in our action creators. 
