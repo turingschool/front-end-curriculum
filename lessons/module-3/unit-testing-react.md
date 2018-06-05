@@ -19,6 +19,17 @@ module: 3
 - Know how to use Enzyme to simulate user behavior
 - Know how to unit test a class method using Jest
 
+## Vocab
+
+- Jest
+- Enzyme
+- Mock
+- Spy
+- Snapshot
+- Unit test
+- Integration test
+- Acceptance test
+
 ## Unit Testing React Components
 
 **Golden Rule**: No copy and pasting. Part of the point of this exercise is to
