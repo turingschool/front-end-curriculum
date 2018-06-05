@@ -69,6 +69,11 @@ as when it's re-rendered.
 
 ### shouldComponentUpdate()
 
+`shouldComponentUpdate` returns true or false, and is an opportunity to optimize
+your application. If `shouldComponentUpdate` returns false, the  rest of the
+lifecycle methods will not fire (i.e. render). Think about why you might want
+this behavior.
+
 ### componentWillUpdate() - *will be deprecated with React 17*
 
 This legacy method is now **unsafe** and shouldn't be used going forward.
@@ -82,7 +87,14 @@ argument to componentDidUpdate()
 
 ### render()
 
+The same render as in Birth/Mounting phase
+
 ### componentDidUpdate()
+
+Per the docs: "Use this as an opportunity to operate on the DOM when the
+component has been updated. This is also a good place to do network requests as
+long as you compare the current props to the previous props (e.g. a network
+request may not be necessary if the props have not changed)."
 
 ## Phase 3: Death/Unmounting  
 
