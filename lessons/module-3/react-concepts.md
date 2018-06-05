@@ -3,9 +3,21 @@ title: Important React Concepts
 module: 3
 ---
 
-# Important React Concepts
+## Agenda
 
-## Components and API Calls
+- Discuss making API calls in React, and where this should happen
+- Learn about Controlled Form Components
+- Discuss the differences between functional and stateful components
+
+
+## Important React Concepts
+
+You will hear that 'React is a library not a framework' because React tries to
+be unopinionated about how you structure your React project. However that
+doesn't mean there aren't common patterns and concepts that should be followed.
+We'll discuss some of the most important pieces below.
+
+### Components and API Calls
 
 A common question as we get into heavier React app is "Where exactly do I make my API calls?". React is great in that it's really flexible and technically "lets" you fire off a request in various places in your app. Let's talk about best practices.
 
@@ -22,7 +34,7 @@ A final comment about `componentDidMount()`. From [this stack overflow post](htt
 Inside a react component tree, `componentDidMount()` is fired after **all children components** have also been mounted. This means, that any child component's `componentDidMount()` is fired before its parent has been mounted.
 ```
 
-## Controlled Form Components
+### Controlled Form Components
 I highly recommend you breeze through [this blog post](http://lorenstewart.me/2016/10/31/react-js-forms-controlled-components/) that goes into awesome detail about controlled form components.
 
 A controlled form component is a form element (like an input field, radio button, text box, etc) where the value is being told what to be through props or state, as well as user interaction. The blog post referenced above defines them this way:
@@ -55,7 +67,7 @@ This is important because it lets us declaratively tell each component what valu
 Imperative: Oh, user changed something, we need to go figure out what the value is...wait...something else changed...figure that out too...wait...does anyone know what this value should be right now??
 Declarative: The value of the input matches the value of that piece of state. Period.
 
-## Props: Functional vs Class Based Components
+### Props: Functional vs Class Based Components
 
 The first question you should ask yourself is: "Do I need this component to know about state directly?"
 
@@ -95,6 +107,3 @@ Notice that in state based components props are available anywhere using `this.p
 ## Resources  
 - [How to Fetch Data in React](https://www.robinwieruch.de/react-fetching-data/)
 - [Top JavaScript Libraries for Making Ajax Calls](https://dzone.com/articles/top-javascript-libraries-for-making-ajax-calls)  
-
-
-
