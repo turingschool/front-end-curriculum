@@ -10,6 +10,11 @@ tags: React
 - Teach each lifecycle method to the larger group
 - Learn about `componentDidCatch`, and how to use it
 
+## Learning goals
+
+- Be able to identify when each lifecycle method is called
+- Be able to give an example of how you might use each lifecycle method
+
 
 ## LifeCycle Methods: An Interactive Adventure
 
