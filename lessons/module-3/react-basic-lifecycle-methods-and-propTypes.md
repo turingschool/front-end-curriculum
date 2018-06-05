@@ -20,6 +20,13 @@ module: 3
 - Be able to explain what PropTypes are, why they are important, and what
   problem they solve for us
 
+## Vocab
+
+- super
+- lifecycle methods
+- componentDidMount
+- getDerivedStateFromProps
+- PropTypes
 
 ## Basic React Lifecycle Methods
 
