@@ -15,6 +15,15 @@ tags: React
 - Be able to identify when each lifecycle method is called
 - Be able to give an example of how you might use each lifecycle method
 
+## Vocab
+
+- getDerivedStateFromProps
+- shouldComponentUpdate
+- componentWillUpdate
+- getSnapshotBeforeUpdate
+- componentDidUpdate
+- componentWillUnmount
+- componentDidCatch
 
 ## LifeCycle Methods: An Interactive Adventure
 
