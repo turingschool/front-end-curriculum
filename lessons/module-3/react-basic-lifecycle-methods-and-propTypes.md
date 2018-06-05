@@ -9,6 +9,17 @@ module: 3
 - Learn about common lifecycle methods
 - Learn about props, and prop-types
 
+## Learning Goals
+
+- Be able to explain what the constructor does in a component
+- Be able to explain what super is, and why we have to call it
+- Be able to explain when componentDidMount is called, and what we might use it
+  for
+- Be able to explain how getDerivedStateFromProps is used, and when we might use
+  it
+- Be able to explain what PropTypes are, why they are important, and what
+  problem they solve for us
+
 
 ## Basic React Lifecycle Methods
 
