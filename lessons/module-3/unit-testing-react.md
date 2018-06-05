@@ -359,11 +359,9 @@ user interface with "Quantity: NaN" or anything along those lines.
 
 Let's start with a test:
 
-```
-Grocery.test.js
-```
-
 ```js
+// Grocery.test.js
+
 it('should have a p.Grocery-quantity element if a quantity is passed as a prop', () => {
   const wrapper = shallow(
     <Grocery name="Bananas" quantity={'17 bunches'} />
