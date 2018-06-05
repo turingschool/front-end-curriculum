@@ -100,6 +100,10 @@ request may not be necessary if the props have not changed)."
 
 ### componentWillUnmount()
 
+This is invoked just once, before the component is unmounted and destroyed. It's
+a good place to invalidate any open network requests, kill any timers, and do
+any other necessary cleanup tasks.
+
 ## Error Handling
 
 ### componentDidCatch() - *just know this exists*
