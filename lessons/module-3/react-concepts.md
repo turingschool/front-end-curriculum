@@ -16,6 +16,14 @@ module: 3
 - Know the difference between a functional and class based component, as well as
   when you would use each kind
 
+## Vocab
+
+- componentDidMount
+- data down
+- actions up
+- controlled form
+- functional component
+- class component
 
 ## Important React Concepts
 
