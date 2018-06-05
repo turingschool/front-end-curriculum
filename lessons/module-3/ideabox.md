@@ -476,5 +476,6 @@ continue to learn about the library.
 
 ## References
 
+[Important React Concepts](react-concepts.html)  
 [React Docs](https://reactjs.org/)  
 [Create React App](https://github.com/facebook/create-react-app)
