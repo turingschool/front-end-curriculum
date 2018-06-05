@@ -9,6 +9,13 @@ module: 3
 - Learn about Controlled Form Components
 - Discuss the differences between functional and stateful components
 
+## Learning Goals
+
+- Know where to make API calls in React
+- Be able to explain what characteristics a controlled form has
+- Know the difference between a functional and class based component, as well as
+  when you would use each kind
+
 
 ## Important React Concepts
 
