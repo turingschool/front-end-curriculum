@@ -10,6 +10,12 @@ layout: presentation
 
 <section>
   <section>
+    <h2>Welcome - You Know a Lot!</h2>
+    <p>Be proud of how far you've gotten so far.</p>
+    <p>You know how to be a front-end engineer!</p>
+    <p>If you haven't started calling yourself a developer yet, then start today.</p>
+  </section>
+  <section>
     <h2>Why?</h2>
   </section>
   <section>
@@ -19,11 +25,11 @@ layout: presentation
   </section>
   <section>
     <h4>Set Yourself Apart</h4>
-    <p>Mod4 is designed to separate you from the pack of other bootcamp graduates and front-end junior developers.</p>
+    <p>Mod4 is designed to separate you from the pack of other front-end junior developers and progress your own developer personality.</p>
   </section>
   <section>
     <h4>Empower Yourself</h4>
-    <p>Mod4 gives you the tools to build full, professional web apps without the reliance on third-party APIs.</p>
+    <p>Mod4 gives you the tools to build professional web apps without the reliance on third-party APIs.</p>
   </section>
 </section>
 
@@ -32,18 +38,16 @@ layout: presentation
     <h2>What is Mod 4?</h2>
   </section>
   <section>
-    <p>You're building your own backend APIs and learning cutting-edge browser technologies.</p>
-  </section>
-  <section>
-    <h3>Tons of new technologies and material to learn</h3>
+    <h3>Tons of new technologies and material to learn:</h3>
     <ul>
       <li>Node</li>
       <li>Express</li>
       <li>RESTful API design</li>
       <li>Database schema design</li>
-      <li>Environments</li>
       <li>PostgreSQL</li>
       <li>Knex query builder</li>
+      <li>Environments</li>
+      <li>Deployment</li>
       <li>Continuous Integration</li>
       <li>Git hooks</li>
       <li>Service Workers</li>
@@ -124,17 +128,6 @@ layout: presentation
 
 <section>
   <section>
-    <h2>Motivation</h2>
-  </section>
-  <section>
-    <p>What motivates you to want to be a developer?</p>
-    <p>What has prevented you from doing your best work in the past?</p>
-    <p>What motivates you to do your best work?</p>
-  </section>
-</section>
-
-<section>
-  <section>
     <h2>Asking for Help</h2>
   </section>
   <section>
@@ -147,6 +140,7 @@ layout: presentation
 <section>
   <section>
     <h2>Questions?</h2>
+    <p>Fin your developer personality - you're a developer!</p>
     <p>We'll go over what the prework is right after this.</p>
   </section>
 </section>
