@@ -140,7 +140,7 @@ layout: presentation
 <section>
   <section>
     <h2>Questions?</h2>
-    <p>Fin your developer personality - you're a developer!</p>
+    <p>Find your developer personality - you're a developer!</p>
     <p>We'll go over what the prework is right after this.</p>
   </section>
 </section>
