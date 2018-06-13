@@ -64,8 +64,7 @@ The `students.js` file contains an array of student objects, and we are loading 
 Now let's install our testing tools from the terminal.
 
 ```shell
-npm install -D mocha chai
-npm install -D https://github.com/chaijs/chai-http#3ea4524 # Must use this version for correct error handling
+npm install -D mocha chai chai-http
 ```
 
 Create a directory called `test` and create a new test file called `routes.spec.js` within the `test` directory. Open the new test file.
@@ -99,6 +98,8 @@ Run the test suite with the command `mocha` (you'll have to have mocha installed
 
 This makes sense because we don't have any tests yet, but now we're all setup to add tests!
 
+**Note:** If your tests are running, but "hanging" and not exiting (you have to enter `control + c` to exit the tests), then you might have to add `--exit` to your mocha command. To run the tests, enter `mocha --exit`.
+
 ### Happy Path
 
 The happy path is a test case we write for when we expect everything to go well. This includes a well-formed request and an appropriate response.
@@ -109,16 +110,14 @@ The test for the route `/` becomes:
 
 ```javascript
 describe('Client Routes', () => {
-  it('should return the homepage with text', () => {
-    return chai.request(server)
+  it('should return the homepage with text', done => {
+    chai.request(server)
     .get('/')
-    .then(response => {
+    .end((err, response) => {
       response.should.have.status(200);
       response.should.be.html;
       response.res.text.should.equal('We\'re going to test all the routes!');
-    })
-    .catch(err => {
-      throw err;
+      done();
     });
   });
 });
@@ -127,11 +126,11 @@ describe('Client Routes', () => {
 Here is the breakdown of the test:
 
 1. Start a request to the server
-2. For a specific route, use the request verb
+2. For a specific route, use the appropriate request verb
 3. When you get the response from the server, test what the response contains
-- If you cannot return a promise from the test, then you need to use the `done()` function to tell mocha that the test has completed (or else the test will timeout and fail - we'll see this later in the lesson)
+- We use the `done()` function to tell mocha that the test has completed (or else the test will pass prematurely or it could timeout and fail)
 
-The tests are written using `should`, but you can choose to use `expect` or `assert` - just be consistent. See the [chai docs](http://chaijs.com/api/) for more info.
+The tests in this lesson are written using `should`, but you can choose to use `expect` or `assert` - just be consistent. See the [chai docs](http://chaijs.com/api/) for more info on different ways to make test assertions.
 
 ### Sad Path
 
@@ -139,27 +138,23 @@ Let's test a route that doesn't exist in our app. All we have to do is make a re
 
 ```javascript
 describe('Client Routes', () => {
-  it('should return the homepage with text', () => {
-    return chai.request(server)
+  it('should return the homepage with text', done => {
+    chai.request(server)
     .get('/')
-    .then(response => {
+    .end((err, response) => {
       response.should.have.status(200);
       response.should.be.html;
       response.res.text.should.equal('We\'re going to test all the routes!');
-    })
-    .catch(err => {
-      throw err;
+      done();
     });
   });
 
-  it('should return a 404 for a route that does not exist', () => {
-    return chai.request(server)
+  it('should return a 404 for a route that does not exist', done => {
+    chai.request(server)
     .get('/sad')
-    .then(response => {
+    .end((err, response) => {
       response.should.have.status(404);
-    })
-    .catch(err => {
-      throw err;
+      done();
     });
   });
 });
