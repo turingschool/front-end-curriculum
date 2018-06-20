@@ -294,6 +294,11 @@ async componentDidMount() {
 }
 ```
 
+Things to remember about *async/await*:
+* The word *async* before a function means that function *ALWAYS RETURNS A PROMISE*
+* The keyword *await* makes JavaScript wait until that promise settles and returns that result (you can not use the await keyword in a function that has not been declared *async*)
+* Error handling with async/await is best accomplished with try...catch statements
+
 
 ### Further Learning: the Promise Object
 
