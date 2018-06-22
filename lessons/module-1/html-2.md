@@ -19,7 +19,7 @@ HTML Guide and form structure
 
 Dev Tools
 * [Chrome Dev Tools Docs](https://developers.google.com/web/tools/chrome-devtools/)
-* [Code School Chrome Dev Tools](http://discover-devtools.codeschool.com/)
+* [The Basic of Chrome Dev Tools](https://www.udemy.com/devtools-2017-the-basics-of-chrome-developer-tools/)
 
 Accessibility
 * [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
