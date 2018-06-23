@@ -25,8 +25,6 @@ You can use any of the following JavaScript libraries:
 * [Mocha](http://mochajs.org/)
 * [Moment.js](http://momentjs.com)
 * [Numeral.js](http://numeraljs.com)
-* [p5.js](https://p5js.org/)
-* [p5.collide.js](https://github.com/bmoren/p5.collide2D)
 
 (Other libraries may be used *only* with instructor approval.)
 
@@ -36,7 +34,7 @@ You can use any of the following JavaScript libraries:
 
 - Lights Out
 - Snake
-- Centipede
+- Tron
 - Othello/Reversi
 - Frogger
 - Missile Command
