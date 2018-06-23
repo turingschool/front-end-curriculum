@@ -50,8 +50,6 @@ We want your game to be as full-featured as possible. Make sure to include suffi
 * Display a score (if applicable)
 * Include a clean UI surrounding the actual game interface itself (this might include instructions on how to play, a high score saved in localStorage, etc. Think of what would be most intuitive for your particular game.)
 
-<!-- * Create multiple rounds of difficulty (consider increasing factors such as game speed, randomness of starting setup, etc) -->
-
 
 ## Code organization
 
@@ -106,16 +104,17 @@ The test suite will test all functionality of the game (excepting anything touch
 
 ## Extensions
 
+* Create multiple rounds of difficulty (consider increasing factors such as game speed, randomness of starting setup, etc)
 * Create an AI player
 * Get your game hosted on GitHub pages 
 * Write a blog post on Medium detailing your experiences building a game with HTML5 Canvas and OOP
 
 ### Functional Expectations
 
-* 4 - Application is fully playable and exceeds the expectations set by instructors
-* 3 - Application is fully playable without crashes or bugs
-* 2 - Application has some missing functionality but no crashes
-* 1 - Application crashes during normal usage
+* 4 - Application is fully playable and exceeds the expectations set by instructors. At least one extension is in place.
+* 3 - Application is fully playable and exceeds the expectations set by instructors.
+* 2 - Application has some missing functionality but no bugs or broken functionality.
+* 1 - Application is unplayable due to lack of functionality or broken logic.
 
 ### User Interface
 
@@ -131,20 +130,13 @@ The test suite will test all functionality of the game (excepting anything touch
 * 2 - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested. ESLint shows 5+ complaints.
 * 1 - There is little or no evidence of testing in this application. ESLint shows 10+ complaints.
 
-### JavaScript Style
+### JavaScript Style & OOP
 
-* 4 - Application has exceptionally well-factored code with little or no duplication. SRP (single responsibility principle) and DRY (don't repeat yourself) principles are utilized. There are _zero_ instances where an instructor would recommend taking a different approach.
-* 3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* 2 - Your application has a significant amount of duplication and one or more major bugs.
-* 1 - Your client-side application does not function. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity.
-* 0 - There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
+* 4 - Application has exceptionally well-factored code with little or no duplication. SRP (single responsibility principle) and DRY (don't repeat yourself) principles are utilized. There are _zero_ instances where an instructor would recommend taking a different approach. Application is organized into classes (and correctly uses inheritance) and there are no instances where instructor would suggest moving logic or data to another class. The business-logic code driving functionality is cleanly separated from rendering, view-related code.
+* 3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing. Application is organized into classes (and correctly uses inheritance) with some misplaced logic and no major bugs. Business-logic code is mostly separated from view-related code. Developer can speak to choices made in the code and knows what each line of code is doing.
+* 2 - Your application has a significant amount of duplication and one or more major bugs. Application is organized into classes that do not display a good understanding of encapsulation, and logic is not well-divided. Developer cannot articulate what each line of code is doing. There are one or more major bugs.
+* 1 - Your client-side application does not function. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity. Application is not separated into classes, or methods and properties are illogically assigned to classes. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity. Business-side logic and view-related code is not separated at all.
 
-### Application Organization
-
-* 4 - Application is organized into classes (and correctly uses inheritance) and there are no instances where instructor would suggest moving logic or data to another class. The business-logic code driving functionality is cleanly separated from rendering, view-related code.
-* 3 - Application is organized into classes (and correctly uses inheritance) with some misplaced logic and no major bugs. Business-logic code is mostly separated from view-related code. Developer can speak to choices made in the code and knows what each line of code is doing.
-* 2 - Application is organized into classes that do not display a good understanding of encapsulation, and logic is not well-divided. Developer cannot articulate what each line of code is doing. There are one or more major bugs.
-* 1 - Application is not separated into classes, or methods and properties are illogically assigned to classes. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity. Business-side logic and view-related code is not separated at all.
 
 ### Workflow
 
