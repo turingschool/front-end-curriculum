@@ -104,7 +104,10 @@ fetch('/api/v1/projects', {
   body: JSON.stringify({
     projectName: 'Foo',
     totalPoints: 100
-  })
+  }),
+  headers: {
+    'content-type': 'application/json'
+  }
 });
 ```
 
@@ -121,7 +124,10 @@ fetch('/api/v1/projects', {
   body: JSON.stringify({
     projectName: 'Foo',
     totalPoints: 100
-  })
+  }),
+  headers: {
+    'content-type': 'application/json'
+  }
 })
 .then(response => response.json())
 .then(projects => renderDetailsForProjects(projects))
