@@ -6,7 +6,7 @@ tags: node, express, back-end, server, http
 
 ### Pre-reqs
 
-* Download [Postman from Chrome](https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop?hl=en)
+* Download the [Postman native app](https://app.getpostman.com/app/download/osx64)
 
 ### Goals
 
@@ -71,9 +71,10 @@ This pattern is exactly how we can define and handle any routes in an Express ap
 Let's go ahead and install some dependencies that we'll need to get things rolling.
 
 ```
-mkdir chat-box
+mkdir chat-box && cd chat-box
 npm init --yes
 npm i express --save
+touch server.js
 ```
 
 We'll get a basic server running using some code I stole from [the Express documentation](http://expressjs.com/starter/hello-world.html) and modified slightly to fit my tastes.
