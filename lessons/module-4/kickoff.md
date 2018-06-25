@@ -19,14 +19,17 @@ This includes libraries like React Native, and **Progressive Web Apps** that use
 We'll be talking about security at a high-level and implementing some strategies for making our applications more secure. 
 This includes protecting endpoints with JSON web tokens, understanding the difference between HTTP and HTTPS, and implementing OAuth.
 
-### Week 4-6: Reinforcement of Fundamentals, Differentiation with Real-World Topics & Interview Prep
+### Week 4-6: Reinforcement of Fundamentals, Interview Prep & Differentiation
 
-We'll be moving away from boilerplates and frameworks in this module to get you used to building things from scratch again. 
 We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. 
 Many of these challenges will better prepare you for the technical interviews you'll be going on.
 
 _All of the questions and challenges we give you are taken from interviews given to graduates._
 
+You'll also spend time diving into a new technology (like websockets, localization, or others) where you probably have little to no experience. 
+You can pick from a list of awesome technologies that we haven't covered, but you will learn on your own, build something, and present to the class what you learned.
+
+And then there's capstone! We encourage you to take risks with new technologies, show off your skills, and make something to wow the judges at demo night.
 
 ## Graduation Requirements
 
@@ -68,3 +71,8 @@ This will be mentioned again during your week-one professional development kicko
 
 On the final Thursday of the module, you will give a 10-minute presentation about your experience in module 4, Turing, and your action plan going forward. 
 The details about it can be found [here](https://github.com/turingschool/portfolios/blob/master/README.markdown) under "Module 4 (Front-End)".
+
+
+## Go Forth!
+
+Learn how to build a backend! Be a front-end developer! Explore your passion!
