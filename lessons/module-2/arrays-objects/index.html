@@ -127,7 +127,7 @@
           <p>Sometimes we want to make a copy of a pre-existing object. It might seem simple enough to do something like this:</p>
 <pre>
   <code>
-    let pizzaOne = {
+    let brittanysPizza = {
       crust: 'thin',
       sauce: 'tomato',
       size: 14,
@@ -135,14 +135,14 @@
       toppings: ['onions', 'garlic', 'peppers']
     };
 
-    let pizzaTwo = pizzaOne;
+    let pamsPizza = brittanysPizza;
   </code>
 </pre>
-          <p>But this actually has a major pitfall. When we assign objects to new variables, we're not truly creating a new, independent copy of the object. We're simply telling our new variable (<code>pizzaTwo</code>) to reference the pre-existing object (<code>pizzaOne</code>). So now there are two variables pointing to the same exact object in memory. This becomes problematic if we decide we want to update one of the pizza objects, but not the other. For example:</p>
+          <p>But this actually has a major pitfall. When we assign objects to new variables, we're not truly creating a new, independent copy of the object. We're simply telling our new variable (<code>pamsPizza</code>) to reference the pre-existing object (<code>brittanysPizza</code>). So now there are two variables pointing to the same exact object in memory. This becomes problematic if we decide we want to update one of the pizza objects, but not the other. For example:</p>
 <pre>
   <code>
-    pizzaTwo.sauce = 'vodka';
-    console.log(pizzaOne.sauce); // 'vodka'
+    pamsPizza.sauce = 'vodka';
+    console.log(brittanysPizza.sauce); // 'vodka'
   </code>
 </pre>
 
@@ -150,7 +150,7 @@
 
 <pre>
   <code>
-    let pizzaOne = {
+    let brittanysPizza = {
       crust: 'thin',
       sauce: 'tomato',
       size: 14,
@@ -158,12 +158,12 @@
       toppings: ['onions', 'garlic', 'peppers']
     };
 
-    let pizzaTwo = Object.assign({}, pizzaOne);
+    let pamsPizza = Object.assign({}, brittanysPizza);
 
-    pizzaTwo.sauce = 'vodka';
+    pamsPizza.sauce = 'vodka';
 
-    console.log(pizzaTwo.sauce); // 'vodka'
-    console.log(pizzaOne.sauce); // 'tomato'
+    console.log(pamsPizza.sauce); // 'vodka'
+    console.log(brittanysPizza.sauce); // 'tomato'
   </code>
 </pre>
 
