@@ -38,9 +38,10 @@
           <p>Students should be able to:</p>
           <ul>
             <li>define what an array is; define what an object is</li>
-            <li>articulate the difference between arrays and objects</li>
+            <li>articulate the difference between arrays and objects, and understand when you would use each one</li>
+            <li>define what a prototype method is and what it allows you to do</li>
             <li>list several prototype methods for both arrays and objects</li>
-            <li>understand how to manipulate arrays and objects and use-cases for different methods</li>
+            <li>understand how to manipulate arrays and objects, and the use-cases for different prototype methods</li>
           </ul>
         </section>
         <hr />
@@ -60,12 +61,15 @@
                an example of what an array looks like vs. what an object looks like -->
 
           <p>An <b>array</b> is essentially a comma-separated list of related values. For example:</p>
+
 <pre>
   <code class="js">
     let pizzaToppings = ['onions', 'garlic', 'peppers'];
   </code>
 </pre>
+
           <p>An <b>object</b> is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:</p>
+
 <pre>
   <code class="javascript">
     let pizza = {
@@ -77,6 +81,12 @@
     };
   </code>
 </pre>
+
+          <h3>Prototype Methods</h3>
+          <p>In order to understand what a prototype method is, let's break down the terms individually. A <b>prototype</b> is a model of something and how it should look or behave. We can build off of prototypes to create multiple copies of similar models. A <b>method</b> in JavaScript is simply a function that's defined on an object.</p>
+          <p>Prototype methods are functions that allow you to manipulate the value of a particular data type or class. JavaScript comes with several built-in data types that each have their own prototype methods, that allow you to interact with them in certain ways. For example, you might want to add or remove an item from an array. Or inspect the properties on an object. Prototype methods allow you to perform these actions and manipulate your values.</p>
+
+
         </section>
         <hr />
 
@@ -87,8 +97,9 @@
           <h3><code>Object.keys(<i>objectName</i>)</code></h3>
           <ul>
             <li><b>Purpose:</b> iterating over each property of an object</li>
-            <li><b>Use Case:</b> appending each property and its value to the DOM</li>
-            <li><b>Parameters:</b> an object</li>
+            <li><b>Potential Use Case:</b> appending each property and its value to the DOM</li>
+            <li><b>Parameters:</b> an object whose keys you want access to</li>
+            <li><b>Returns:</b> an array of the keys on the object passed in</li>
           </ul>
 
           <p><code>Object.keys()</code> is a method that will return an array of all the properties for the object you pass in. For example:</p>
@@ -118,8 +129,9 @@
           <h3><code>Object.assign(<i>targetObject, ...sourceObjects</i>)</code></h3>
           <ul>
             <li><b>Purpose:</b> making a copy of a pre-existing object, merging two or more objects together</li>
-            <li><b>Use Case:</b> creating a new object based on pre-existing objects</li>
+            <li><b>Potential Use Case:</b> creating a new object based on pre-existing objects</li>
             <li><b>Parameters:</b> a target object (where the new object will exist), unlimited source objects (pre-existing objects that you might want to merge)</li>
+            <li><b>Returns:</b> the target object</li>
           </ul>
           <p>The <code>Object.assign()</code> method can be used to copy all the values from one or more objects to a brand new object - called a <i>target object</i>. It can be used for creating a fresh copy of a single object, or for combining properties of multiple objects. The method will return the <i>target object</i>.</p>
 
@@ -382,6 +394,7 @@
           <ul>
             <li>What is an array?</li>
             <li>What is an object?</li>
+            <li>What is a prototype method?</li>
             <li>Name three prototype methods for an object.</li>
             <li>Name three prototype methods for an array.</li>
             <li>When might you use <code>Object.assign()</code>?</li>
