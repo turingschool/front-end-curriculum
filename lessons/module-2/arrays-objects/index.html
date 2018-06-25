@@ -38,9 +38,10 @@
           <p>Students should be able to:</p>
           <ul>
             <li>define what an array is; define what an object is</li>
-            <li>articulate the difference between arrays and objects</li>
+            <li>articulate the difference between arrays and objects, and understand when you would use each one</li>
+            <li>define what a prototype method is and what it allows you to do</li>
             <li>list several prototype methods for both arrays and objects</li>
-            <li>understand how to manipulate arrays and objects and use-cases for different methods</li>
+            <li>understand how to manipulate arrays and objects, and the use-cases for different prototype methods</li>
           </ul>
         </section>
         <hr />
@@ -60,12 +61,15 @@
                an example of what an array looks like vs. what an object looks like -->
 
           <p>An <b>array</b> is essentially a comma-separated list of related values. For example:</p>
+
 <pre>
   <code class="js">
     let pizzaToppings = ['onions', 'garlic', 'peppers'];
   </code>
 </pre>
+
           <p>An <b>object</b> is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:</p>
+
 <pre>
   <code class="javascript">
     let pizza = {
@@ -77,6 +81,11 @@
     };
   </code>
 </pre>
+
+          <h3>Prototype Methods</h3>
+          <p>Prototype methods are functions that allow you to manipulate the value of a particular data type or class. JavaScript comes with several built-in data types that each have their own prototype methods, that allow you to interact with them in certain ways. For example, you might want to add or remove an item from an array. Or inspect the properties on an object.</p>
+
+
         </section>
         <hr />
 
@@ -382,6 +391,7 @@
           <ul>
             <li>What is an array?</li>
             <li>What is an object?</li>
+            <li>What is a prototype method?</li>
             <li>Name three prototype methods for an object.</li>
             <li>Name three prototype methods for an array.</li>
             <li>When might you use <code>Object.assign()</code>?</li>
