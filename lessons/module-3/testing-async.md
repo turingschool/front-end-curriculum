@@ -20,6 +20,15 @@ By the end of this lesson, you will:
 * Know how to test React components that contain methods with async JavaScript
 * Understand how and what to test when making API calls with fetch
 
+## Vocab
+
+* mock
+* control flow
+* then
+* async/await
+
+## Testing Async JavaScript & API Calls
+
 ### Getting Started
 
 Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin). 
