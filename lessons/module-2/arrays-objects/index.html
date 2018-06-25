@@ -120,11 +120,11 @@
   </code>
 </pre>
 
-          <div class="discuss">
+<!--           <div class="discuss">
             <h4>Practice Together</h4>
             <p>Save <a href="https://gist.github.com/brittanystoroz/639a7d579d623a5baa72a3fa03f18df5">this boilerplate gist</a> to your computer and open it up in your browser.</p>
             <p>Let's say we are an online food delivery service, and this pizza object was an order that a user just put into their shopping cart. We want to display all the order details in an unordered list so that the user can review their order before placing it.</p>
-          </div>
+          </div> -->
 
           <h3><code>Object.assign(<i>targetObject, ...sourceObjects</i>)</code></h3>
           <ul>
@@ -292,7 +292,7 @@
           <p>Iteration methods generally take in a callback function as their first argument.</p>
 
           <h4><code>Array.map(<i>callbackFunction</i>)</code></h4>
-          <p><b>Use Case:</b> when you want a new array based on your original, with some modification</p>
+          <p><b>Use Case:</b> when you want a new array based on your original, with some modification to each item</p>
           <p>The <code>map()</code> method is very similar to <code>forEach()</code>, except that each time the callback is executed, whatever is returned from the callback is added to a new array that map returns.</p>
 
 <pre>
@@ -317,14 +317,14 @@
     let pets = [
       { name: 'harvey', age: 1 },
       { name: 'julius', age: 3 },
-      { name: 'mishu', age: 15 },
+      { name: 'mishu', age: 3 },
     ];
 
-    let mishu = pets.find(pet => {
-      return pet.name === 'mishu'
+    let threeYearOldPup = pets.find(pet => {
+      return pet.age === 3
     });
 
-    console.log(mishu); // { name: 'mishu', age: 15 }
+    console.log(threeYearOldPup); // { name: 'julius', age: 3 }
   </code>
 </pre>
 
@@ -335,15 +335,15 @@
     let pets = [
       { name: 'harvey', age: 1 },
       { name: 'julius', age: 5 },
-      { name: 'mishu', age: 15 },
+      { name: 'mishu', age: 5 },
     ];
 
     let adultPets = pets.filter(pet => {
-      return pet.age > 3;
+      return pet.age === 5;
     });
 
     console.log(adultPets);
-    // [{name: 'julius', age: 5}, {name: 'mishu', age: 15}]
+    // [{name: 'julius', age: 5}, {name: 'mishu', age: 5}]
   </code>
 </pre>
 
