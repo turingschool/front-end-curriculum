@@ -83,7 +83,7 @@ getDerivedStateFromProps()`.
 
 ### static getDerivedStateFromProps - *NEW with React 16.3.0*
 
-Since this method is static, you can't refernece `this` in it. Whatever object
+This method exists for only one purpose... it enables a component to update its internal state as the result of changes in props. Since this method is static, you can't refernece `this` in it. Whatever object
 is returned from this method is what the state of the component will be set to.
 This new method will be called on the initial mounting of the component, as well
 as when it's re-rendered.
