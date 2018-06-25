@@ -299,11 +299,12 @@ If we are returning a value out of a function that we wish to use elsewhere in o
 #### Exercises
 Create a function `add2` that takes in a parameter of `number` and returns the parameter plus 2.
 
-
-### Checks for understanding
+### Journal
 * What are some characteristics of primitive data types?
+* What is typeof?
 * What's the difference between null and undefined?
-* Give an example of when you might use an array. An object?
+* When should you store information in an object.
+* When should you store information in an array.
 
 ### Links & Resources
 * [Prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
