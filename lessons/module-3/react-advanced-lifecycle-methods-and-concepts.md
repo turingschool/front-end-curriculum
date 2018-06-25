@@ -69,9 +69,9 @@ render isn't the place for any complex logic. Keep it as dumb as possible.
 
 ### componentDidMount()
 
-`componentDidMount' is just called one time, in this birth/mounting process.
+`componentDidMount` is just called one time, in this birth/mounting process.
 This is important to remember when you're making API calls. If you need to make
-an API call *after* the component has allready call `componentDidMount`, you'll
+an API call *after* the component has already called `componentDidMount`, you'll
 need to do it somewhere else.
  
 ## Phase 2: Growth/Updating  
