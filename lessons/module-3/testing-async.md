@@ -4,7 +4,16 @@ module: 3
 tags: testing, react, async, fetch
 ---
 
-## Goals
+## Agenda
+
+* Discuss async testing goals and pitfalls
+* Pseudocode tests for async code
+* Write tests using .then() promise resolution
+* Refactor tests to use async/await
+* Refactor fetch out of the component
+* Use manual mocks to update and refactor test suite
+
+## Learning Goals
 
 By the end of this lesson, you will:
 
