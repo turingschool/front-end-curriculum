@@ -1,5 +1,5 @@
 ---
-title: HTML II - Forms, Devtools, Accessibility Best Practices
+title: HTML II - Forms and Devtools
 length: 180
 tags: html, introduction, practice
 ---
@@ -69,7 +69,7 @@ Debugging your front-end code can be an intimidating part of the development pro
 
 The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.  
 
-Take 5 minutes to read through [this section](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) of the chrome devtools docs. 
+Take 5 minutes to read through [this section](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) of the chrome devtools docs.
 
 ### Developer Tools
 One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). To open developer tools in Chrome:
@@ -132,4 +132,3 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 ## Additional Resources
 
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
-
