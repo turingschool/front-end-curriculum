@@ -131,7 +131,7 @@ any other necessary cleanup tasks.
 
 `componentDidCatch` allows you to set up error boundaries in your application,
 and display fallback UI rather than just letting the error crash into the
-console.
+console. Check the references below for more information.
 
 ## References
 
@@ -139,4 +139,6 @@ console.
 - [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
 - [React Lifecycle Docs](https://reactjs.org/docs/react-component.html)
 - [Dan Abramov's Twitter chart/convo on modern React lifecycle methods](https://twitter.com/dan_abramov/status/981712092611989509)
+- [Error handling in React
+  16](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
 - [Update on Async Rendering](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
