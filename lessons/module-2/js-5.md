@@ -40,6 +40,16 @@ undefined
 '34'
 'JavaScript is great!'
 ```
+#### [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
+The typeof operator returns a string indicating the type of the operand.
+
+Exercise: 
+Make a variable for every data type and use typeof to see what string is returned.
+
+<!-- 
+	typeof is very useful for determining if something is a string, number, boolean, object or function
+	typeof null === 'object' bug explained http://2ality.com/2013/10/typeof-null.html
+-->
 
 ---
 
@@ -67,7 +77,8 @@ var dogAge = 3;
 var dogBreed = 'Labradoodle';
 ```
 
-We could store the same information in an object. Objects are the fundamental building block for organizing the information in our application.
+We could store the same information in an object. Objects are the fundamental building block for organizing the information in our application. Objects are made up of properties. A property has two parts a key and a value.
+
 
 ```js
 var dog = {
@@ -75,6 +86,20 @@ var dog = {
 	age: 3,
 	breed: 'Labradoodle'
 };
+```
+
+#### Create An Object
+Take a moment and create an object. Make one of the properties have a value which is another object. Object ideas: favorite book, movie, album, game, instrument, sport...
+
+```
+// example
+var book = {
+  title: 'Moby Dick',
+  author: {
+    name: 'Herman Melville',
+    born: '01 August 1819'
+  }
+}
 ```
 
 #### Adding properties to an object
@@ -119,6 +144,9 @@ console.log(dog); // { name: 'Boris' }
 ```
 
 Typically you will want to store your key in a variable when you don't know what the key is or if the key might change.
+<!-- 
+	example of production vs development environment, where an environment string is stored in a variable which then determines which api is called, background color... 
+-->
 
 ```js
 var storeItems = [ 'hammer', 'chisel', 'rake' ];
@@ -142,6 +170,8 @@ console.log(totalCost);
 
 It can also be used if you have a key with a space/other character in it or that starts with a number. Typically you want to avoid doing this but you might on occasion find you have to do it.
 
+#### Add Properties To Your Object
+Add three properties to the object you made using each of the three methods discussed; dot notation, bracket string literal, bracket string variable
 
 #### Accessing object properties
 We can also use dot and bracket notation to access or use an object's properties.
@@ -161,6 +191,7 @@ Create an object with the following keys:
 eg: `{ book1: 1, book2: 2`...`book199: 199, book200: 200 }`
 
 Given the following object and variable, access the value `'Apis mellifera'` in three different ways:
+
 ```js
 var honeybee = {
   scientificName: 'Apis mellifera'
@@ -179,7 +210,6 @@ var fancyName = 'scientificName';
 var toppings = ['cheese', 'peppers', 'onions', 'garlic'];
 ```
 
-
 Remember we said arrays are actually objects under the hood. Though it might not seem like arrays have a set of key-value pairs like the objects we just discussed, each value in the array actually has a numbered key associated with it that counts from 0. For example, written as an object, the toppings array might look like this:
 
 ```js
@@ -195,13 +225,11 @@ This syntax is a lot more verbose, and the numbered keys don't really give us an
 
 Array objects inherit from the Array.prototype which gives us access to methods like `push`, `pop`, and `forEach`, which allow us to manipulate and interact with our arrays.
 
-TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.
+<!--TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.-->
 
 
-#### Exercises
+#### Exercise
 In the console, take a look at `Array.prototype`. What methods do you recognize? What methods are new to you?
-
-In the console, create your own array `myArray` filled with any values. Look at `myArray.__proto__`.
 
 ---
 
@@ -264,7 +292,9 @@ console.log(mabelGreeting);
 ##### One very important thing to remember!
 If we are returning a value out of a function that we wish to use elsewhere in our code, it must be stored in a way that will allow us to reference it later. The easiest way to do this is to capture the value with a variable. In the above example, we are creating a new variable named `mabelGreeting` in which we are storing our newly created greeting (aka the value being returned by invoking `makeGreeting` with an argument of `'Mabel'`).
 
-_Note: we can also simply pass the invoked function directly to the console.log: `console.log( makeGreeting('Mabel') );`_
+#### Turn and talk: 
+- What happens to code when it is not in a function?
+- How is this different from when code is in a function?
 
 #### Exercises
 Create a function `add2` that takes in a parameter of `number` and returns the parameter plus 2.
