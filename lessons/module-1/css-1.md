@@ -1,5 +1,5 @@
 ---
-title: CSS I
+title: CSS I: Structure, Box Model, and Positioning
 length: 180
 tags: css, introduction, practice
 ---
