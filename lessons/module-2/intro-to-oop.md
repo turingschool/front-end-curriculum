@@ -64,7 +64,7 @@ While some languages such as Java, C++ and Ruby are specifically object-oriented
 
 ![object breakdown](http://www.teachitza.com/delphi/object.gif)
 
-When you're considering creating an object you should look at the `Law of Demeter` or the `Principal of Least Knowledge`. If you're wondering what that is you should probably check it out [here](http://wiki.c2.com/?LawOfDemeter). It can also be summarized by the following:
+When you're considering creating an object you should follow the `Principal of Least Knowledge`. This principle can  be summarized by the following:
 
 * Each unit should have only limited knowledge about other units: only units "closely" related to the current unit.
 * Each unit should only talk to its friends; don't talk to strangers.
@@ -113,32 +113,52 @@ So back to the car examples above...Although each new instance of the car class 
 #### Old Way:
 
 ```
-function Product(name, price) {
+function Vehicle(color, price) {
   this.name = name;
   this.price = price;
-  this.thing = 'stuff';
 }
 
-function Food(name, price) {
+Vehicle.prototype.manualDrive = function() {
+  // manually drive the car!
+}
+
+function SchoolBus(color, , price) {
   Product.call(this, name, price);
   this.category = 'food';
+}
+
+function Tesla(color, price) {
+  Vehicle.call(color, price);
+  this.chargingPort = 'microUsb';
+}
+
+Tesla.prototype.autoDrive = function() {
+  // automatically drive the car!
 }
 ```
 
 #### New Way:
 
 ```
-class Product {
-  constructor(name, price) {
-	  this.name = name;
+class Vehicle {
+  constructor(color, price) {
+	  this.color = color;
     this.price = price;
-    this.thing = 'stuff'
+  }
+
+  manualDrive() {
+    // manually drive the car!
   }
 }
 
-class Food extends Product {
-  constructor(name, price) {
-    super(name, price)
+class Tesla extends Vehicle {
+  constructor(color, price) {
+    super(color, price);
+    this.chargingPort = 'microUsb';
+  }
+
+  autoDrive() {
+    // automatically drive the car!
   }
 }
 
@@ -153,7 +173,7 @@ class Food extends Product {
 ![message example](https://www3.ntu.edu.sg/home/ehchua/programming/java/images/OOP_Objects.png)
 
 
-This is how objects interact with each other. Now having one object just simply isn't enough. In real life this process isn't too difficult to understand. If I'm being annoying my wife communicates to me that I am being annoying and that I need to stop. If I'm driving my car and the gas tank light comes on it's pretty apparent that I need to then put gas in the car.
+This is how objects interact with each other. For example, if I'm driving my car and the gas tank light comes on, my car (an object) is sending me (another object) a message that I need to put gas in the car.
 
 In order for objects to interact with each other they must communicate with messages. Messages are parameters that are essentially passed back and forth from object to object. The messages use parameters to make sure the information is precise. If the receiving object does not have enough information, it will not be able to properly carry out the method
 
