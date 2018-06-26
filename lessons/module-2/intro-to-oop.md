@@ -75,23 +75,17 @@ When you're considering creating an object you should follow the `Principal of L
 You want to think of an object like it were a template and an instance of that object is a specific version or type of that original template.
 
 
-TRY IT: With someone next to you, brainstorm five types of objects and specific instances of that object that are at Turing. For example:
+TRY IT: With someone next to you, brainstorm a type of object and specific instances of that object. What types of properties and methods should they have? For example:
 
-**Type of object**: Cubby
+**Type of object (Class)**: Cubby
 
-**Specific instances**:
+Properties: dimensions, location, items
+Methods: addItems, removeItems
 
-* alter-nate's cubby
-* limbo's cubby
-* student cubbies
+**Specific objects (Instances)**:
 
-**Type of object**: Refrigerator
-
-**Specific objects**:
-
-* Staff refrigerator
-* Staff kegerator
-* Mod-specific refrigerators
+* Student cubby: 5x5, FE2, notebook
+* Staff cubby: 7x7, staffArea, studentRoster
 
 In the cases above, what we called "type of object" is called a Class, and what we called "specific objects" are called instances.
 
