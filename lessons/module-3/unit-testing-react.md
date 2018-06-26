@@ -247,30 +247,81 @@ If you run `npm test` you should see your one test pass (two if you still have t
 generic App test). You can keep this process running. The test suite will automatically 
 run whenever you make a change to the test file.
 
-#### Testing for a class
+This test works, but you might be thinking right now, 'hey don't my PropTypes
+cover that kind of behavior?' You're absolutely right! If you're using PropTypes
+throughout your application you really don't need these kinds of tests. In fact,
+there is a much simpler way of testing your UI, snapshot tests!
 
-A common mistake developers make when testing components is writing assertions that are 
-very closely tied to the actual content and text on the page. This is problematic because 
-copy is much more likely to change on a regular basis. For example, if we write an 
-assertion to test that the title of our application exists and contains the text 'Grocery 
-List', and then we decide to change it to 'Shopping Cart', now we have a failing test 
-when nothing is actually broken.
+### Snapshot testing
 
-For this reason, (among others), it's usually more reliable to test things that are less 
-likely to change, such as a class name on an element. An easy way to do that is to test if 
-it matches a given css selector.
+The first thing to realize is that snap shot tests are not really TDD. Instead,
+we use snapshot tests to compare against a previous 'snapshot' of what our
+component looked like. If something has changed, the snapshot will fail. Then,
+if we're expected that change, we can `update` our snapshot to use the newest
+version. Add the following test:
 
-```js
-// Grocery.test.js  
+```javascript
+import React from 'react';
+import { shallow, mount } from 'enzyme';
 
-it('has a class of .Grocery', () => {
-  const wrapper = shallow(<Grocery name="Bananas" />);
+import Grocery from './Grocery';
 
-  expect(wrapper.is('.Grocery')).toEqual(true);
-});
+describe('Grocery', () => {
+
+  it('should match the snapshot with all data passed in correctly', () => {
+    const wrapper = shallow(<Grocery
+                              name='apples'
+                              quantity='10'
+                              notes='granny smith'
+                              purchased='10-22-18'
+                              starred=false
+                              onStar={jest.fn()}
+                              onPurchase={jest.fn()}
+                              onDelete={jest.fn()}
+                            />)
+    expect(wrapper).toMatchSnapshot()
+  })
+})
 ```
 
-Now you should have three passing tests.  
+Go ahead and run this test. It passes, and you should see the line `1 snapshot
+created`
+
+Ok, well that's great, but what are we actually testing? The first time we run
+the snapshot test, it doesn't have anything to compare against, so it records
+the snapshot, and puts it in a new directory `__snapshots__/` next to wherever
+your test lives. Go ahead and look at this now.
+
+How do we make this test fail? We'd have to change what our component actually
+looks like. Do that now:
+
+```js
+// Grocery.js
+
+import React from 'react';
+
+const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
+  return (
+    <article className="Grocery">
+      <h3>{name}</h3>
+      <p>Quantity: {quantity}</p>
+      <p>Notes: {notes}</p>
+    </article>
+  );
+};
+
+export default Grocery;
+```
+
+Running the tests now, you should see a failure for the snapshot test, with the
+differences between the two snapshots in the console. Here is where you have to
+consider, 'am I ok with those changes?' If so, you can update the tests by
+typing `u` while `Jest` is still in watch mode. Alternatively, you can restart
+your test suite and run `npm test --updateSnapshot`.
+
+Again, snapshots aren't TDD, however they do give us a simple way of testing
+large chunks of our UI easily, and you'll want to have them as one of the tools
+in you arsenal.
 
 ### Testing for dynamic changes  
 
