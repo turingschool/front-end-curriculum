@@ -69,22 +69,6 @@ create-react-app grocery-list --use-npm
 
 Next `cd` into the `grocery-list` directory and lets get to work.  
 
-### Setting Up Linting
-
-Linting is a powerful tool for maintaining code quality. Create React App uses ESLint 
-for code linting. One thing that you'll notice as you build your application is that 
-you'll see warnings in the console and the command line.
-
-Add the following to your `package.json`:
-
-```js
-"eslintConfig": {
-  "extends": "react-app"
-}
-```
-
-[Source: this thread](https://github.com/AtomLinter/linter-eslint/issues/664)
-
 ### Clean Up Extra Stuff
 
 Out of the box, `create-react-app` hooks you up with some boilerplate HTML and CSS that 
