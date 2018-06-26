@@ -552,11 +552,9 @@ Now, see if you can write a test for the other method, on your own!
 
 ![](/assets/images/lessons/unit-testing-react/grocery-list-component.gif)
 
-(**Important Note for Careful Readers**: You're not responsible for the form... just the 
-list below...which means you'll probably need to provide some fake grocery data in your tests)
-
 The list should have the following functionality (test driven, of course):
 
+- It has the GroceryForm that we're calling in App.js
 - It shows all of the groceries. Can you test to make sure that it shows the appropriate number of groceries?
 - There is a "Clear Groceries" button that is disabled unless there are one or more groceries on the list.
 - When the "Clear Groceries" button has been pressed the `onClearGroceries` property function should be called.
