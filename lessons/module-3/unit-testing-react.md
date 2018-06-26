@@ -319,10 +319,6 @@ consider, 'am I ok with those changes?' If so, you can update the tests by
 typing `u` while `Jest` is still in watch mode. Alternatively, you can restart
 your test suite and run `npm test --updateSnapshot`.
 
-Again, snapshots aren't TDD, however they do give us a simple way of testing
-large chunks of our UI easily, and you'll want to have them as one of the tools
-in you arsenal.
-
 ### Testing for dynamic changes  
 
 When you're testing your components, you're mainly testing presentation logic. Given our UI 
@@ -408,113 +404,6 @@ const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar
 
 export default Grocery;
 ```
-
-#### Your Turn
-
-When `starred` is true, it will be included as a class name. But, how do we 
-know that it's not always included? Also, what about the `purchased` property?
-
-Write the following tests and the implementation to match:
-
-- `it('should not have a className of "starred" if it is not starred')`
-- `it('should have a className of "purchased" if it is purchased')`
-- `it('should not have a className of "purchased" if it is not purchased')`
-
-### Optional Components
-
-Sometimes Steve's son has strong opinions on how many of something he should get. 
-For example, Wes wanted _two_ packs of "[circle cheeses][]" the other day. The same 
-is true for how he feels about specifics. He _does not_ like the "Light" variety 
-and he better end up with the cheddar-flavored derivatives.
-
-To help with this, our grocery application allows the user to specify an optional 
-quantity or notes. These aren't always needed. Let's say you know exactly what kind 
-of vegan sardines you want. In these cases, you shouldn't have to clutter up the 
-user interface with "Quantity: NaN" or anything along those lines.
-
-[circle cheeses]: http://mini-babybel.com/products/
-
-Let's start with a test:
-
-```js
-// Grocery.test.js
-
-it('should have a p.Grocery-quantity element if a quantity is passed as a prop', () => {
-  const wrapper = shallow(
-    <Grocery name="Bananas" quantity={'17 bunches'} />
-  );
-
-  expect(wrapper.find('.Grocery-quantity').length).toEqual(1);
-});
-```
-
-Like jQuery, Enzyme has the `find` command which will traverse the component to find 
-what I'm looking for.
-
-Depending on what projects you've worked on, you may or may not have experience 
-conditionally displaying elements. So, I'll help you out with this one. There are 
-multiple ways to do this, but here we'll use an `&&` conditional to create a clean 
-in-line statement in our JSX.
-
-```js
-const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
-  return (
-    <article className={classnames('Grocery', { starred, purchased })}>
-      <h3>{name}</h3>
-      { quantity && <p className="Grocery-quantity">Quantity: {quantity}</p> } // Our new code.
-    </article>
-  );
-};
-```
-
-#### Your Turn
-
-So, does that functionality even work? Let's write a test to make sure the element 
-isn't present if there is no quantity. While we're at it, let's do the same for the 
-notes as well. Write the following tests and implement the features to get them to pass.
-
-- `it('should not have a p.Grocery-quantity element if a quantity is not passed as a prop')`
-- `it('should have a p.Grocery-notes element if notes are passed as a prop')`
-- `it('should not have a p.Grocery-notes element if notes are not passed as a prop')`
-
-### Testing for the Changing Text on the Buttons
-
-First of all, we need buttons to exist at the base of our Grocery item. As noted in the 
-screenshot above, those buttons will say "Purchase" and "Star" (and "Remove" but we'll 
-get to that later) on component mount. When a user clicks on these buttons they should 
-change to "Un-purchase" or "Unstar".
-
-```js
-describe('.Grocery-purchase button', () => {
-
-  it('should have a text of "Purchase" if purchased is false', () => {
-    const wrapper = shallow(
-      <Grocery name="Bananas" purchased={undefined} />
-    );
-
-    expect(wrapper.find('.Grocery-purchase').text()).toEqual('Purchase');
-  });
-
-  it('should have a text of "Unpurchase" if purchased is true', () => {
-    const wrapper = shallow(
-      <Grocery name="Bananas" purchased={true} />
-    );
-
-    expect(wrapper.find('.Grocery-purchase').text()).toEqual('Unpurchase');
-  });
-
-});
-```
-
-#### Your Turn
-
-- Can you implement the functionality that passes the tests above?
-- Can you write the tests and implementation for the "Star" button as well?
-- Can you make a "Remove" button? It's probably not _super_ important but we're 
-  going to need it in the next section and now seems like as good a time as any to make 
-  it, right? Don't worry about the functionality for now, just make it exist.
-- Can you write a test to see if the quantity field has the correct text in it?
-- Can you write a test to see if the notes field has the correct text in it?
 
 ### Testing the Button Functionality
 
