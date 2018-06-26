@@ -41,9 +41,14 @@ isolated, parts (units) of our application behave as expected. The more we can
 write our code in a way that is testable at the unit level, the easier it will
 be to scale and extend our applications.
 
-## A Bit Of Background
+---
+**_Turn and talk_: We hear a lot about unit, integration, and acceptance tests.
+What is the difference between the three of these. Take 5 minutes and see what
+you can find out**
 
-## Getting Started
+---
+
+### Getting Started
 
 If you haven't already, install the `create-react-app` command line tool as a global 
 dependency. (To check for globally installed dependencies run the command 
