@@ -31,9 +31,9 @@ module: 2
 
 ###### Here's another definition from [techterms.com](https://techterms.com/definition/oop)
 
-* _OOP (not Oops!) refers to a programming methodology based on objects, instead of just functions and procedures. These objects are organized into classes, which allow individual objects to be group together._
+* _OOP (not Oops!) refers to a programming methodology based on objects, instead of just functions and procedures. These objects are organized into classes, which allow individual objects to be grouped together._
 
-While some languages such as Java, C++ and Ruby are specifically object-oriented languages, javascript is very flexible and has the ability to be functional (partial functions, currying, etc) or object oriented.
+While some languages such as Java, C++ and Ruby are specifically object-oriented languages, JavaScript is very flexible and has the ability to be functional (partial functions, currying, etc.) or object-oriented.
 
 ### Examples:
 
