@@ -20,6 +20,8 @@ module: 2
 - `Message Passing` The way in which Objects talk to each other
 - `SRP` Single Responsibility Principle
 - `Coupling` The level of connectedness between two objects
+- `Classes`
+- `Subclasses`
 
 ---
 
@@ -166,17 +168,20 @@ This is how objects interact with each other. For example, if I'm driving my car
 
 In order for objects to interact with each other they must communicate with messages. Messages are parameters that are essentially passed back and forth from object to object. The messages use parameters to make sure the information is precise. If the receiving object does not have enough information, it will not be able to properly carry out the method
 
-# SRP and Coupling
+<!-- # SRP and Coupling
 
 Objects have expectations. When creating objects, you should always strive to have them know as little as possible or basically follow the SRP ([Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)). The more each object knows essentially the more dependencies that are added. That means that there is a higher likely hood that something will break.
 
 Coupling refers to the level of connectedness between two objects. Objects will need to interact with one another and therefore can create dependencies. A good goal as a programmer is to make objects as independent as possible, meaning they can be tested as stand-alone units and don't have too many dependencies on other objects to perform their respective duties.
 
-
-
-
+ -->
 # Code Along
 
 Clone [this repo](https://github.com/brittanystoroz/flash-cards-oop) and `cd` into the project directory. Run `npm install` in your terminal, and open the project in your text editor.
 
 We'll be building out some classes to create a minimal flash card application.
+
+
+## Further Reading
+
+* [Class-based vs. prototypal inheritance](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
