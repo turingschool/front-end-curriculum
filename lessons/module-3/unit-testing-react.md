@@ -132,9 +132,46 @@ they "recommend that you use a separate tool for browser end-to-end tests if you
 them. They are beyond the scope of Create React App." This means implementing our super 
 friend `Enzyme`!  
 
+### Setting up Enzyme
+
+Enzyme is a fantasic tool for testing our React components in a virtual way,
+without actually having to use a browser. This makes running tests related to
+our UI much faster. First off, let's get Enzyme installed:
+
 ```bash
-npm install --save-dev enzyme react-addons-test-utils
+npm install --save-dev enzyme
 ```
+
+You're also going need the enzyme adapter for the version of React that you're
+using. As of this writing, it's enzyme-adapter-react-16, but that will change in
+the future, when create-react-app starts using version 17 of React. Just make sure 
+you have the right one.
+
+```bash
+npm install --save-dev enzyme-adapter-react-16
+```
+
+As a last step, we need to make sure that the adapter is configured before our
+test suite runs. Setting up some kind of configuration before a test suite runs
+is a really common task actually. So common in fact, that the create-react-app
+team has a specific way you need to do this.
+
+Inside of `src/`, create a file called `setupTests.js`.
+
+Jest will run this file before you test suite starts up, so it's the ideal place
+to do any kind of configuration or setup for the test suite. Add the following
+to `setupTests.js`:
+
+```javascript
+// src/setupTests.js
+
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+```
+
+Great! Now we're all ready to start using Enzyme to test our React components!
 
 ### Big Picture
 
