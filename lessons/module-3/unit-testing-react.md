@@ -43,44 +43,6 @@ be to scale and extend our applications.
 
 ## A Bit Of Background
 
-[Create React App](https://github.com/facebookincubator/create-react-app) is a 
-new, officially-supported way to easily create React apps. 
-
----
-From the Create-React-App Documentation:
-
-*If you’re getting started with React, use create-react-app to automate the 
-build of your app. There is no configuration file, and react-scripts is the only 
-extra build dependency in your package.json. Your environment will have everything 
-you need to build a modern React app.*
-
----
-
-**Stop and Read:**: [Create Apps with No Configuration](https://facebook.github.io/react/blog/2016/07/22/create-apps-with-no-configuration.html)  
-
-It's *important to note* that `create-react-app` was intentionally built without 
-some of the features we are used to seeing in our apps, like Sass, specific testing 
-frameworks, or access to your `webpack.config` file. In order to implement 
-additional features, or modify your `webpack.config` file, you must `npm eject` 
-out of the boilerplate. This will effectively spit out all of the files being 
-maintained behind the scenes and allow for custom configuration.    
-
----
-From the Create React App Documentation:
-
-*The feature set is intentionally limited. It doesn’t support advanced features 
-such as server rendering or CSS modules. The tool is also non-configurable because 
-it is hard to provide a cohesive experience and easy updates across a set of tools 
-when the user can tweak anything.*
-
----
-
-Keep in mind that although `create-react-app` is extremely popular, there are other 
-boilerplates being built as well that you can explore that include more features, 
-such as [react-boilerplate](https://github.com/mxstbr/react-boilerplate).  
-
-**Stop and Read**: [Conversation About Lack of Features](https://github.com/facebookincubator/create-react-app/issues/78)
-
 ## Getting Started
 
 If you haven't already, install the `create-react-app` command line tool as a global 
@@ -97,7 +59,7 @@ Once you have the command line tool installed, you can create a new project usin
 the following command:
 
 ```bash
-create-react-app grocery-list
+create-react-app grocery-list --use-npm
 ```
 
 Next `cd` into the `grocery-list` directory and lets get to work.  
