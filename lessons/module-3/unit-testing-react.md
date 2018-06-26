@@ -469,6 +469,85 @@ it('should call the onPurchase prop when clicked', () => {
   ([Hint](https://facebook.github.io/jest/docs/expect.html#content))
 - Can you write the tests and implementation for the "Star" and "Remove" buttons?
 
+### Testing a class method
+
+So far, we've only been concerned with the tests for the is small, stateless
+component. What about testing our class components? How will that differ? Take a
+look again at our `App.js` file (with some new features added in):
+
+```js
+// App.js
+
+import React, { Component } from 'react';
+import './App.css';
+
+import Grocery from './Grocery'
+
+class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      groceries: []
+    }
+  }
+
+  addGrocery = (grocery) => {
+    const newGrocery = {...grocery, starred: false}
+
+    this.setState({
+      groceries: [...this.state.groceries, newGrocery]
+    })
+  }
+
+  groceryList = () => (
+    this.state.groceries.map(grocery => (
+      <Grocery {...grocery} />
+    ))
+  )
+
+  render() {
+    return (
+      <div>
+        <GroceryForm addGrocery={this.addGrocery} />
+        { groceryList() }
+      </div>
+    );
+  }
+}
+
+export default App;
+```
+
+Here, our App is bit more full featured, with two class methods. This first adds
+Groceries to our state, and the second gives us a list of JSX elements. What
+we'd like to be able to do is test those methods in isolation. Fortunately,
+Enzyme has a really handy tool for doing just that, `instance()`.
+
+Calling `instance()` on our wrapper will give us access to all the class methods
+of that instance, in this case, `addGrocery` and `groceryList`. Let's write a
+test for `addGrocery`.
+
+```javascript
+// App.test.js
+
+describe('App', () => {
+  it('should update the state with a grocery when addGrocery is called', () => {
+    // Setup
+    const wrapper = shallow(<App />)
+    const mockGrocery = { name: 'apples', quantity: '10' }
+    const expected = [{name: 'apples', quantity: '10', starred: 'false'}]
+
+    // Execution
+    wrapper.instance().addGrocery(mockGrocery)
+
+    // Expectation
+    expect(wrapper.state('groceries')).toEqual(expected)
+  })
+})
+```
+
+Now, see if you can write a test for the other method, on your own!
+
 ### Homework: Implementing the Grocery List
 
 ![](/assets/images/lessons/unit-testing-react/grocery-list-component.gif)
