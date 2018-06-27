@@ -26,11 +26,13 @@ By the end of this lesson, you will know/be able to:
 
 Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
 The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
+
 __Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
 Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
+
 Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s) to see how far accessible technologies in web development have come.
 
-## Ways to Make You Websites More Accessible
+## Ways to Make Your Websites More Accessible
 
 This lesson is largely focused on writing code in a way that is accessible for people with visual disabilities.
 In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 have low vision."
@@ -40,8 +42,8 @@ In terms of statistics, the World Health Organization estimates that "285 millio
 WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
 
 * __Roles__: define the purpose of an element
+* __States__: indicate what an element is doing right now ie. is a checkbox checked?
 * __Properties__: help better describe an element or what an element can do
-* __States__: like properties that are designed to change – normally with the help of Javascript
 * An element can only have one role at a time, but can have as many properties and states as necessary
 
 An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
@@ -59,17 +61,20 @@ Semantic html is very important for 3 reasons:
 1. developer empathy - It makes code much easier to read and debug
 2. accessibility - It allows screen readers to move through the web page seamlessly
   * semantic html provides implicit aria roles to html elements 
+
 ```html
 <nav></nav> tags have an implicit role="navigation".
 ```
+
 3. seo - it will make your webpage more discoverable 
 
 __Side Note__: Documentation is your best friend when developing a website. Here are some super useful docs for better knowing what element to use and when, as well as what the implicit role of a given element is.
+
 I will often search google to find documentation for an html element that fulfills a purpose. 
+
 Example google search: `html element to seperate content mdn` formula for a search `[what you want to search for] [documentation source]`
 
 * [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
-* [Table of elements with implicit Aria roles](https://www.w3.org/TR/html-aria/#docconformance)
 
 ### Roles, States, and Properties 
 
@@ -85,6 +90,7 @@ Implicit roles are those that are pre-defined by default in HTML. Ie: `<h1></h1>
 If you are writing good semantic HTML, the role will likely be implicit. Remember you can always check the role [here](https://www.w3.org/TR/html-aria/#docconformance)
 
 Implicit Role Example:
+
 ```html
 <h1>Hello World</h1>
 <!-- The above markup has an implicit role of "heading level 1" -->
@@ -95,6 +101,7 @@ Implicit Role Example:
 ```
 
 Explicit Role Example:
+
 ```html
 <form role='search'></form>
 A form element has a role of 'form' by default. We can override that role using the `role` attribute and providing it another value. Like in the case above where we are using the role of search.
