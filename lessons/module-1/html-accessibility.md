@@ -1,12 +1,12 @@
 ---
-title: HTML Accessibility
+title: Web Accessibility
 length: 90
 tags: html, ARIA, accessibility
 ---
 
 ## Vocab
 
-- `Accessibility` Broadly, creating an experience that is available to literally anyone
+- `Accessibility` Broadly, creating an experience that is available to anyone and everyone
 - `ARIA` Accessible Rich Internet Applications
 - `Role` The function an element serves on the page
 - `State` The state of an element on a page (e.g., expanded, disabled)
@@ -19,7 +19,7 @@ By the end of this lesson, you will know/be able to:
 
 * Speak to why website accessibility is important
 * Implement Semantic HTML to make websites more accessible
-* Implement ARIA to make websites more available
+* Implement ARIA to make websites more accessible
 * Learn basic osx screen reader commands to test accessibility
 
 # Accessibility
@@ -57,31 +57,50 @@ If you can use native HTML elements and attributes to communicate the proper sem
 
 ### Semantic HTML
 
+There are two different elements that are semantically neutral: `span` and `div` elements
 Semantic html is very important for 3 reasons:
 1. developer empathy - It makes code much easier to read and debug
 2. accessibility - It allows screen readers to move through the web page seamlessly
-  * semantic html provides implicit aria roles to html elements 
-
-```html
-<nav></nav> tags have an implicit role="navigation".
-```
-
 3. seo - it will make your webpage more discoverable 
 
-__Side Note__: Documentation is your best friend when developing a website. Here are some super useful docs for better knowing what element to use and when, as well as what the implicit role of a given element is.
-
-I will often search google to find documentation for an html element that fulfills a purpose. 
-
-Example google search: `html element to seperate content mdn` formula for a search `[what you want to search for] [documentation source]`
+__Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
 
 * [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-### Roles, States, and Properties 
+I will often search google to find documentation for an html element that fulfills a purpose. 
+
+Example google search: `html element for navigation mdn` formula for a search `[what you want to search for] [documentation source]`
+
+### Testing for Accessibility
+ 
+#### Using your screen reader (basic commands)
+
+When people with visual disabilities are using your website they will be using some sort of screen reader. 
+Luckily for us, we have one that comes with our computer! It's called VoiceOver and here are some basic commands we can use to test the accessibility of our webpages.
+
+* Starting/Stopping voiceover - `command + F5`
+* Moving your VoiceOver cursor - `control + option + arrow key` ie. `control + option + right arrow`
+* Moving your VoiceOver cursor into your web page's content - `control + option + shift + down arrow`
+* Moving your VoiceOver cursor out of your web page's content - `control + option + shift + up arrow`
+
+##### Your Turn
+
+By yourself:
+* Open this [code pen](https://codepen.io/damwhit/pen/JZmeqQ)
+* Plug in your headphones and turn on VoiceOver
+* Use the key combination above to move your VoiceOver cursor into the web content of the code pen.
+* Close your eyes, and interact with the site using the VoiceOver key combos to move the cursor.
+* When you are finished, do the same thing with this [code pen](https://codepen.io/damwhit/pen/WyaMaQ)
+
+With a partner, answer the following questions:
+* What was your experience like?
+* What differences did you notice between the two code pens?
+
+### Aria Roles, States, and Properties 
 
 #### Roles 
 
-Roles define what an element is - what function it serves on the page. They give screen readers more information about how to interact with the element.
-They answer the question: `What am I?`
+Roles define what an element is - what function it serves on the page. They give screen readers more information about how to interact with the element (`What am I?`)
 
 These can be either **implicit** or **explicit**.
 
@@ -97,7 +116,6 @@ Implicit Role Example:
 
 <nav></nav>
 <!-- The above markup has an implicit role of "navigation" -->
-
 ```
 
 Explicit Role Example:
@@ -107,29 +125,9 @@ Explicit Role Example:
 A form element has a role of 'form' by default. We can override that role using the `role` attribute and providing it another value. Like in the case above where we are using the role of search.
 ```
 
-#### Roles: Avoiding Redundancy 
-
-As previously mentioned, many semantic HTML5 elements have implicit roles that are hooked up for free in the markup itself. It's important to avoid bloating your code with redundant markup both for DRYness, and to avoid confusion for any users running your markup through assistive technology.
-
-Things to Avoid:
-
-* Redundancy
-* Replacement
-
-```html
-<h1 role="heading"></h1>
-<!-- Redundancy. H1 implicitly has a role of heading and a level of 1.  -->
-
-
-<p role="heading"></p>
-<!-- Replacement. You're using a paragraph but telling it to be a header. Just use an h1-h6 element.  -->
-```
-
-As much as possible, if there's an element that accomplishes the "role" you are trying to achieve, use it. HTML 5 has provided a boatload of really great, semantically rich elements that not only convey the appropriate role, but also handle all of the behavioral keyboard interactions without requiring additional javascript.
-
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
-##### Your Turn
+#### Your Turn
 - Use the table of elements and look up the following elements and their implicit roles
   - div
   - footer
@@ -137,9 +135,8 @@ As much as possible, if there's an element that accomplishes the "role" you are 
 - Turn to your neighbor take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
 
-#### States 
+### States 
 
-checkbox is checked
 States describe how you are interacting with an element (What am I doing right now?)
 
 For example, think about websites that have a sidebar menu that can be toggled open or closed. You might see something like this:
@@ -176,7 +173,7 @@ Here is a good [menu example][Menu-Example] that you can use with voiceover to s
 - What would be another example of state that your app might need?
     * properties
 
-### Properties ###
+### Properties 
 
 Properties - Give an element special characteristics and relate them to other elements
 What do you need to know about me?
@@ -222,7 +219,7 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 **NOTE**: Use `aria-label` with caution. The screen reader will now REPLACE whatever exists as the default button text and instead read the `aria-label` content.
 
-#### Other Properties ####
+#### Other Properties
 
 * `aria-label` - Described above. Provides additional information about an element.
 * `aria-required` - Tells a user if they need to provide input on an element
@@ -236,18 +233,7 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 - Come up with a good analogy for property?
 - How are properties different from state?
 
-## Testing for Accessibility
- 
-### Using your screen reader (basic commands)
-
-When people with visual disabilities are using your website they will be using some sort of screen reader. 
-Luckily for us, we have one that comes with our computer! It's called VoiceOver and here are some basic commands we can use to test the accessibility of our webpages.
-
-* Starting/Stopping voiceover - `command + F5`
-* Moving your VoiceOver cursor - `control + option + arrow key` ie. `control + option + right arrow`
-* Moving your VoiceOver cursor into your web page's content - `control + option + shift + down arrow`
-
-#### Other Low Hanging Fruit to Make Your Sites More Accessible
+## Other Low Hanging Fruit to Make Your Sites More Accessible
 
 ### Alt Attributes for Yo Images!
 
