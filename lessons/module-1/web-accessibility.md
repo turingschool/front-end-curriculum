@@ -20,7 +20,7 @@ By the end of this lesson, you will know/be able to:
 * Speak to why website accessibility is important
 * Implement Semantic HTML to make websites more accessible
 * Implement ARIA to make websites more accessible
-* Learn basic osx screen reader commands to test accessibility
+* Learn basic VoiceOver screen reader commands to test accessibility
 
 # Accessibility
 
@@ -81,7 +81,7 @@ Example google search: `html element for navigation mdn` formula for a search `[
 When people with visual disabilities are using your website they will be using some sort of screen reader. 
 Luckily for us, we have one that comes with our computer! It's called VoiceOver and here are some basic commands we can use to test the accessibility of our webpages.
 
-* Starting/Stopping voiceover - `command + F5`
+* Starting/Stopping VoiceOver - `command + F5`
 * Moving your VoiceOver cursor - `control + option + arrow key` ie. `control + option + right arrow`
 * Moving your VoiceOver cursor into your web page's content - `control + option + shift + down arrow`
 * Moving your VoiceOver cursor out of your web page's content - `control + option + shift + up arrow`
