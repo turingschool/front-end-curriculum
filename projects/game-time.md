@@ -28,7 +28,7 @@ You can use any of the following JavaScript libraries:
 
 (Other libraries may be used *only* with instructor approval.)
 
-**Nota bene**: We provide a [Game Time Starter Kit](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) that has been preconfigured with webpack. You should probably use this starter kit.
+**Nota bene**: We provide a [Game Time Starter Kit](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) that has been preconfigured with webpack. You should use this starter kit.
 
 ## Game Choices
 
@@ -49,7 +49,7 @@ We want your game to be as full-featured as possible. Make sure to include suffi
 * Allow the user to start a new game
 * Display a score (if applicable)
 * Include a clean UI surrounding the actual game interface itself (this might include instructions on how to play, a high score saved in localStorage, etc. Think of what would be most intuitive for your particular game.)
-
+* Include multiple levels of difficulty
 
 ## Code organization
 
@@ -59,6 +59,8 @@ You should use [inheritance](https://www.sitepoint.com/understanding-ecmascript-
   - a parent class should have properties that might be shared by several other child classes
   - a parent class's properties and methods should be shared by all the child classes
   - a child classes should inherit those properties from the parent class
+
+The game-time-starter-kit starts with a GamePiece class from which your other classes should inherit.
 
 Each class should have its own file with the filename capitalized. The class should be capitalized as well. Only code that is a part of this class should be in this file.
 
