@@ -24,10 +24,9 @@ By the end of this lesson, you will know/be able to:
 
 # Accessibility
 
-* Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
-* The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
-* __Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
-
+Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
+The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
+__Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
 Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
 Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s) to see how far accessible technologies in web development have come.
 
@@ -41,78 +40,64 @@ In terms of statistics, the World Health Organization estimates that "285 millio
 WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
 
 * __Roles__: define the purpose of an element
-* __Properties__: help better describe what an element can do
+* __Properties__: help better describe an element or what an element can do
 * __States__: like properties that are designed to change – normally with the help of Javascript
-* An element can only have one ARIA role at a time, but can have as many properties and states as necessary
+* An element can only have one role at a time, but can have as many properties and states as necessary
 
-An important point about WAI-ARIA attributes is that they don't affect anything about the web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
+An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
 
 ![Aria Tree](/assets/images/aria.jpg)
 
-## Rules of ARIA Use
-There are a few core rules to keep in mind when using ARIA:
+#### Rules of ARIA Use
+The core rules to keep in mind when using ARIA are:
 
-* If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
-* Don’t change native semantics, unless you really have to.
-* All interactive controls such as a button, sliding control, or drag-and-drop widget must be usable by the keyboard.
-* There are 2 ways to hide information from the accessibility tree, which should be used very sparingly for situations where content is unimportant or meant to be hidden. An example of this would be hiding icons that have been added to display extra decoration or branding. You can do this either with `role=”presentation”` or `aria-hidden=”true”`. __You should never use these on an element that is visible and can be focused with the keyboard, such as an input field or a link__.
-* Lastly, all interactive elements such as form fields should have a name associated with them. Something like a `<label>` is perfect, and with ARIA, you can even specify that a certain element is labelled by or described by another element.
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
 
 ### Semantic HTML
 
-Think about the information provided by a set of `<div></div>` tags. What do we know about the content within those tags? Really, we know nothing. It's a semantically neutral element that controls the APPEARANCE of its content - by default it is a `block` style element, but beyond that it could theoretically be literally any kind of data - a title, a paragraph, an image, a random red decorative sidebar...etc.
-* Elements such as `<nav>`, `<button>`, `<header>`, `<aside>` when read aloud help clarify what part of the html page someone is focused on.
-* These elements have default implicit ARIA roles.
-* Keep an eye on these so you can avoid writing redundant code.
-* Semantic HTML (which improves accessibility) also improves SEO, making your site more findable/marketable.
-
-### More Obscure Semantic HTML5 Elements
-
-* `<q></q>`: inline quoted text
-* `<time></time>`: date or specific time
-* `<cite></cite>`: reference to a cited book, play, etc
-* `<input type="email"></input>`: specific type of input field
-* `<figcaption></figcaption>`: detailed caption on an image
-* `<code></code>`: code snippet
-* `<aside></aside>`: chunk of text that isn't the primary focus of the page
-* `<abbr></abbr>`: abbreviation
-
+Semantic html is very important for 3 reasons:
+1. developer empathy - It makes code much easier to read and debug
+2. accessibility - It allows screen readers to move through the web page seamlessly
+  * semantic html provides implicit aria roles to html elements 
+```html
+<nav></nav> tags have an implicit role="navigation".
 ```
-Example: <nav></nav> tags have an implicit role="navigation".
-```
+3. seo - it will make your webpage more discoverable 
+
+__Side Note__: Documentation is your best friend when developing a website. Here are some super useful docs for better knowing what element to use and when, as well as what the implicit role of a given element is.
+I will often search google to find documentation for an html element that fulfills a purpose. 
+Example google search: `html element to seperate content mdn` formula for a search `[what you want to search for] [documentation source]`
+
+* [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 * [Table of elements with implicit Aria roles](https://www.w3.org/TR/html-aria/#docconformance)
 
-## Roles, States, and Properties ##
+### Roles, States, and Properties 
 
-### Roles 
-
-explicit role could be tab-panel
-input with role of checkbox, implicit
+#### Roles 
 
 Roles define what an element is - what function it serves on the page. They give screen readers more information about how to interact with the element.
-question: What am I? Can be implicit or explicit
+They answer the question: `What am I?`
 
 These can be either **implicit** or **explicit**.
 
 Implicit roles are those that are pre-defined by default in HTML. Ie: `<h1></h1>`, `<button></button>`, `<ul></ul>`. The semantic meanings of these elements are already clear by the element themselves and assistive technologies have this information too.
 
-Example:
+If you are writing good semantic HTML, the role will likely be implicit. Remember you can always check the role [here](https://www.w3.org/TR/html-aria/#docconformance)
 
+Implicit Role Example:
 ```html
 <h1>Hello World</h1>
+<!-- The above markup has an implicit role of "heading level 1" -->
 
-<!-- The above markup has an implicit role of "heading" -->
+<nav></nav>
+<!-- The above markup has an implicit role of "navigation" -->
+
 ```
 
-Explicit roles are those that you specifically attach to a given element outside of what is provided by default in the HTML itself. Ie: A `<div></div>` that is serving to hold a hero image at the top of your webpage, or a set of images that are only there for decoration and add no crucial meaning to the content.
-
-Example:
-
+Explicit Role Example:
 ```html
-<div role="banner"></div>
-<span role="separator"> --------------- </span>
-
-<!-- The above markup might have a background image set by CSS that is acting as as Hero Image, or a "banner", followed by a thin line that separates sections of content. The elements themsleves don't provide this additional information, requiring us to include an explicit role as an attribute  -->
+<form role='search'></form>
+A form element has a role of 'form' by default. We can override that role using the `role` attribute and providing it another value. Like in the case above where we are using the role of search.
 ```
 
 #### Roles: Avoiding Redundancy 
@@ -137,27 +122,18 @@ As much as possible, if there's an element that accomplishes the "role" you are 
 
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
-Use the table of elements and look up the following elements and their implicit roles
-- body
-- div
-- article
-- footer
-- img
-- input
-
-#### Your Turn
-
+##### Your Turn
+- Use the table of elements and look up the following elements and their implicit roles
+  - div
+  - footer
+  - input
 - Turn to your neighbor take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
-  * states
 
-### States 
+#### States 
 
-States - How you are interacting with this element
-question: What am I doing right now? Open or close a menu toggle
-aria live can be polite or assertive
 checkbox is checked
-States describe how you are interacting with an element.
+States describe how you are interacting with an element (What am I doing right now?)
 
 For example, think about websites that have a sidebar menu that can be toggled open or closed. You might see something like this:
 
@@ -241,14 +217,9 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 #### Other Properties ####
 
-"What Am I"
-
 * `aria-label` - Described above. Provides additional information about an element.
 * `aria-required` - Tells a user if they need to provide input on an element
   before a form is submitted.
-
-"Who am I Related To?"
-
 * `aria-controls` - Seen above. References an element that is controlled by the current element.
 * `aria-labelledby` - Sister to `aria-label`, references the ID of another element, which is a short title for the element.
 * `aria-describedby` - is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
@@ -269,6 +240,7 @@ Luckily for us, we have one that comes with our computer! It's called VoiceOver 
 * Moving your VoiceOver cursor - `control + option + arrow key` ie. `control + option + right arrow`
 * Moving your VoiceOver cursor into your web page's content - `control + option + shift + down arrow`
 
+#### Other Low Hanging Fruit to Make Your Sites More Accessible
 
 ### Alt Attributes for Yo Images!
 
@@ -442,9 +414,7 @@ Helping one group of people is a good place to start. There's a temptation with 
 
 ## Additional Resources
 
-* [MDN List of Aria Roles, States, Properties](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques)
 * [MDN Documnentation](https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
-* [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
 * [Aria Documentation](https://www.w3.org/TR/wai-aria)
 * [Aria Examples & Design Patterns](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
 * [Web Accessibility in Mind](https://webaim.org/articles/userperspective/)
@@ -456,4 +426,5 @@ Tools
 Videos
 * [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
 * [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
+* [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
 
