@@ -39,24 +39,6 @@ This lesson is largely focused on writing code in a way that is accessible for p
 
 In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 have low vision."
 
-### WAI-ARIA
-
-WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
-
-* __Roles__: define the purpose of an element
-* __States__: indicate what an element is doing right now ie. is a checkbox checked?
-* __Properties__: help better describe an element or what an element can do
-* An element can only have one role at a time, but can have as many properties and states as necessary
-
-An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
-
-![Aria Tree](/assets/images/aria.jpg)
-
-#### Rules of ARIA Use
-The core rules to keep in mind when using ARIA are:
-
-If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
-
 ### Semantic HTML
 
 There are two different elements that are semantically neutral: Those are `span` and `div` elements. Avoid using them except in instances that are purely for styling.
@@ -98,6 +80,24 @@ By yourself:
 With a partner, answer the following questions:
 * What was your experience like?
 * What differences did you notice between the two code pens?
+
+### WAI-ARIA
+
+WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich Internet Applications). WAI-ARIA is a specification written by the W3C, defining a set of additional HTML attributes that can be applied to elements to provide additional semantics and improve accessibility wherever it is lacking. ARIA breaks down into 3 categories:
+
+* __Roles__
+* __States__
+* __Properties__
+* An element can only have one role at a time, but can have as many properties and states as necessary
+
+An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
+
+![Aria Tree](/assets/images/aria.jpg)
+
+#### Rules of ARIA Use
+The core rules to keep in mind when using ARIA are:
+
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
 
 ### Aria Roles, States, and Properties 
 
