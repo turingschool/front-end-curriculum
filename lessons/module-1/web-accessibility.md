@@ -228,8 +228,8 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 * `aria-describedby` - is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
 
 #### Your Turn
-- Turn to your neighbor and explain what a property is?
-- Come up with a good analogy for property?
+- Turn to your neighbor and explain what a property is
+- Come up with a good analogy for property
 - How are properties different from state?
 
 ## Accessibility in Practice Moving forward
@@ -238,7 +238,7 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 * The time to use them is if the answer to the following question is yes:
   * Will sighted users see content that people with visual disabilities cannot?
 
-Below are some low hanging fruit that you should always incorporate in lessons
+__Below are some low hanging fruit that you should always incorporate in lessons__
 
 ### Alt Attributes for Yo Images!
 
