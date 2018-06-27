@@ -10,7 +10,7 @@ tags: html, ARIA, accessibility
 - `ARIA` Accessible Rich Internet Applications
 - `Role` The function an element serves on the page
 - `State` The state of an element on a page (e.g., expanded, disabled)
-- `Property` ARIA information about an element
+- `Property` Additional information about an element or other elements its related to
 - `VoiceOver` A screen reader that is built into apple computers
 
 ### Learning Goals
@@ -28,6 +28,7 @@ Accessibility in Web development means enabling as many people as possible to us
 The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
 
 __Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
+
 Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
 
 Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s) to see how far accessible technologies in web development have come.
@@ -35,6 +36,7 @@ Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?
 ## Ways to Make Your Websites More Accessible
 
 This lesson is largely focused on writing code in a way that is accessible for people with visual disabilities.
+
 In terms of statistics, the World Health Organization estimates that "285 million people are estimated to be visually impaired worldwide: 39 million are blind and 246 have low vision."
 
 ### WAI-ARIA
@@ -57,7 +59,8 @@ If you can use native HTML elements and attributes to communicate the proper sem
 
 ### Semantic HTML
 
-There are two different elements that are semantically neutral: `span` and `div` elements
+There are two different elements that are semantically neutral: Those are `span` and `div` elements. Avoid using them except in instances that are purely for styling.
+
 Semantic html is very important for 3 reasons:
 1. developer empathy - It makes code much easier to read and debug
 2. accessibility - It allows screen readers to move through the web page seamlessly
@@ -83,7 +86,7 @@ Luckily for us, we have one that comes with our computer! It's called VoiceOver 
 * Moving your VoiceOver cursor into your web page's content - `control + option + shift + down arrow`
 * Moving your VoiceOver cursor out of your web page's content - `control + option + shift + up arrow`
 
-##### Your Turn
+#### Your Turn
 
 By yourself:
 * Open this [code pen](https://codepen.io/damwhit/pen/JZmeqQ)
@@ -132,7 +135,7 @@ A form element has a role of 'form' by default. We can override that role using 
   - div
   - footer
   - input
-- Turn to your neighbor take turns explaining what a role is.
+- Turn to your neighbor and take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
 
 ### States 
@@ -161,7 +164,9 @@ Luckily ARIA provides state information that we can add to our markup.
 </button>
 ```
 
-This also allows you to target these elements using the `aria-expanded` attribute when interacting with them in your JavaScript.
+This also allows you to target these elements using the `aria-expanded` attribute when interacting with them in your JavaScript or CSS.
+
+States can also be implicit, imagine a checkbox element in html. If you toggle the checked property that state will change as well.
 
 Here is a good [menu example][Menu-Example] that you can use with voiceover to see how screen readers interact with aria-expanded.
 
@@ -169,16 +174,10 @@ Here is a good [menu example][Menu-Example] that you can use with voiceover to s
 
 #### Your Turn
 
-- Turn to your neighbor take turns explaining what states are.
+- Turn to your neighbor and take turns explaining what states are.
 - What would be another example of state that your app might need?
-    * properties
 
 ### Properties 
-
-Properties - Give an element special characteristics and relate them to other elements
-What do you need to know about me?
-Required, label, described by
-accessible-name
 
 Properties give an element special characteristics that you can relate to other documents or elements.
 
@@ -233,7 +232,13 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 - Come up with a good analogy for property?
 - How are properties different from state?
 
-## Other Low Hanging Fruit to Make Your Sites More Accessible
+## Accessibility in Practice Moving forward
+
+* Most of the above mentioned aria attributes should be used sparingly.
+* The time to use them is if the answer to the following question is yes:
+  * Will sighted users see content that people with visual disabilities cannot?
+
+Below are some low hanging fruit that you should always incorporate in lessons
 
 ### Alt Attributes for Yo Images!
 
@@ -244,10 +249,10 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 
 ```html
 bad 
-<img src="mountain.jpg" alt="mountain" />
+<img src="mountain.jpg" alt="mountain">
 
 good 
-<img src="mountain.jpg" alt="The cascade mountains at sunset in January" />
+<img src="mountain.jpg" alt="The cascade mountains at sunset in January">
 ```
 
 ### Title Attributes for Yo Links that have no text!
@@ -298,68 +303,15 @@ Below you will find a code example of defining three landmark roles:
 ```
 -------------------------------------------------
 
-__Label and Describe Elements__
+__Label Input Elements that do not have a label element associated with them__
 
 * `aria-label`: property that defines a short title for an element
-* `aria-labelledby`: references the ID of another element, which is a short title for the element
-* `aria-describedby`: is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
 
 ```html
 <input type="text" aria-label="First name" placeholder="Grace">
 ```
 
-```html
-<button aria-describedby="revertTooltip">Revert</button>
-<div role="tooltip" id="revertTooltip">Reverting will undo any changes that have been made since the last save.</div>
-```
-
-Now it’s important to remember that we don’t need to label everything, especially if there’s already a predefined way of labelling an element such as a `<figcaption>`, `title` attribute, or an image’s `alt` attribute. We only need to label something if the HTML doesn’t clearly indicate the purpose of an important element.
-
 -------------------------------------------------
-
-__Forms__
-
-There are a lot of various ARIA roles and attributes that can be applied to forms, but we're just going to highlight some of the more important ones to include:
-
-* `form`: simple and an implicit role for `<form>`
-* `search`: role for a form with the primary function of searching data
-* `aria-required`: property indicating whether a field is required
-* `aria-invalid`: property indicating that the value of an input field is
-  invalid (wait until after form submission to add this)
-
-Important to remember:
-
-1. Each form field should have a valid `<label>` that is referenced with the `for` attribute. If this isn’t possible, then you can use the ARIA labelling methods discussed above. You cannot substitute the placeholder attribute for a label because it’s not meant to be handled as a label; a placeholder is meant to simply be an example of what you’re supposed to enter in that field.
-2. Forms are often tabbed-through via the keyboard, so tab order should make sense. Normally this isn’t a concern, but if you position or hide certain input fields via CSS/Javascript, then the tab order might become unintuitive. When this happens, you can set the tabindex attribute of an element to make sure that the tab order is how you expect it to be.
-
-```html
-<p id="formLabel">Information Form</p>
-<form role="form" aria-labelledby="formLabel">
-
-  <label for="name">Name</label>
-  <input id="name" type="text" placeholder="John Doe" value="">
-
-  <label for="email">Email*</label>
-  <input id="email" type="email" placeholder="foo@bar.com" value="" aria-required="true">
-
-  <span id="genderLabel">Gender</span>
-  <div role="radiogroup" aria-labelledby="genderLabel">
-    <input type="radio" role="radio" name="gender" id="male" value="Male">
-    <label for='male'>Male</label>
-    <br>
-    <input type="radio" role="radio" name="gender" id="female" value="Female">
-    <label for='female'>Female</label>
-    <br>
-    <input type="radio" role="radio" name="gender" id="other" value="Other">
-    <label for='other'>Other</label>
-  </div>
-
-  <label for="comment">Comment*</label>
-  <textarea id="comment" aria-multiline="true" aria-required="true"></textarea>
-
-  <input type="submit" value="Submit">
-</form>
-```
 
 ## Your Challenge
 Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes.
