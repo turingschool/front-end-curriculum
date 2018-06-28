@@ -36,7 +36,7 @@ module: 3
 build up some muscle memory.
 
 When testing React apps, or really when testing any kind of application, most of
-the tests your write will be *unit tests*. Unit tests make sure this small,
+the tests your write will be *unit tests*. Unit tests make sure that small,
 isolated, parts (units) of our application behave as expected. The more we can
 write our code in a way that is testable at the unit level, the easier it will
 be to scale and extend our applications.

@@ -324,14 +324,16 @@ window.myStringModule = (function () {
   var allCapsString = "SAFETY!"
 
   function setString (newString) {
-	  allCapsString = newString.toUpperCase();
+    allCapsString = newString.toUpperCase();
+  }
+  
+  function getString () {
+    return allCapsString;
   }
 
   return {
-	  setString: setString,
-	  getString: function () {
-      return allCapsString;
-    }
+    setString: setString,
+    getString: getString
   };
 })();  
 ```
