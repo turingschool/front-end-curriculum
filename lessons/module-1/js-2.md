@@ -14,6 +14,17 @@ Before we get started with new material, let's go over over what we've learned s
 - Conditionals
 - Functions
 
+<!-- - Break students into groups of 3-4 people (4 max) each to review 1 of the 4 subjects above. There may be a few groups covering the same topic. Groups should answer the following 3 questions on chart paper:
+
+What would be an example of ___________ ?
+
+What are the most important/significant things someone should know about ___________________?
+
+What might be a metaphor or analogy for  ________________?
+
+Groups have 8 mins to answer questions and draw/write out their answers. End with groups sharing out.
+ -->
+
 ## Learning Goals
 
 In this lesson we'll cover:
