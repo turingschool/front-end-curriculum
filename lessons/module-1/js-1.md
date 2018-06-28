@@ -1,5 +1,5 @@
 ---
-title: JS I: Data Types, Variables, Conditionals, and Functions
+title: JS I - Data Types, Variables, Conditionals, and Functions
 length: 180
 tags: javascript, introduction, foundation, variables
 ---
