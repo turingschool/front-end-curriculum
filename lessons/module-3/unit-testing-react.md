@@ -48,6 +48,19 @@ you can find out**
 
 ---
 
+### Write in a notebook
+
+Write your own answers to the following questions. Take 5 minutes, then we'll
+discuss as a group.
+
+1) Why do we test?
+
+2) Who benefits from our testing?
+
+3) When should we test?
+
+4) When do we not need to test?
+
 ### Getting Started
 
 If you haven't already, install the `create-react-app` command line tool as a global 

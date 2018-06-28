@@ -40,7 +40,7 @@ are now considered UNSAFE to use and adding a few new lifecycle methods.
 We talked earlier this week about the Birth/Mounting Phase that a class based
 React component goes through when it is created. Today, we are going to spend a
 little time learning about the other 2 phases of a component's lifecycle. You're
-going to split up into groups and each group will be give a lifecycle method
+going to split up into groups and each group will be given a lifecycle method
 to research and learn about. You will then teach the rest of the class about
 your assigned lifecycle method. There are a number of resources at the bottom of
 this lesson that you can use, but by no means are you limited to just the ones
