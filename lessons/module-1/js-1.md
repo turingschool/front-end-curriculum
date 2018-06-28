@@ -1,6 +1,5 @@
 ---
-title: Introduction to JavaScript — Part I
-title: JS I
+title: JS I: Data Types, Variables, Conditionals, and Functions
 length: 180
 tags: javascript, introduction, foundation, variables
 ---
@@ -54,8 +53,8 @@ Now that we know a little bit about JavaScript, let's talk about how to actually
 There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
 Javascript has six primitive data types: 
-- Null
-- Undefined
+- `null`
+- `undefined`
 - Boolean
 - Number
 - String
@@ -138,7 +137,7 @@ Declare 2 variables, one named "quantity" and one named "mythicalCreature"
 So, we have our variable. Now what? When we first create a variable, its value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to our `myVariableName` variable:
 
 ```javascript
-var myVariableName = "Hello, variable!";
+var name = "Fred Rogers";
 ```
 
 We've added a couple of things to our variable. Let's go through them:
@@ -151,7 +150,7 @@ Okay, let's ask the console to give us the value of our variable. How do we do t
 
 - Step 1: declare the variable and it's value
 - Step 2: call the variable
-- Step 3: dance for joy at seeing our assigned value of "Hello, variable!"
+- Step 3: dance for joy at seeing our assigned value of "Fred Rogers"
 
 Until you've added the assignment operator and the variable value, the variable is considered _undefined_.
 
@@ -200,6 +199,17 @@ var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature +
 ```
 This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and concatenate the data from our variable.
 
+# Statements
+
+A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon.
+
+Example statements:
+
+```javascript
+console.log('BOOM');
+alert('POW');
+```
+
 # Expressions
 
 An _expression_ results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
@@ -221,17 +231,6 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
-
-# Statements
-
-A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon.
-
-Example statements:
-
-```javascript
-console.log('BOOM');
-alert('POW');
-```
 
 ## Your Turn
 
