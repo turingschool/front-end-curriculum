@@ -35,11 +35,10 @@ module: 3
 **Golden Rule**: No copy and pasting. Part of the point of this exercise is to
 build up some muscle memory.
 
-When testing React apps, or really when testing any kind of application, most of
-the tests your write will be *unit tests*. Unit tests make sure this small,
-isolated, parts (units) of our application behave as expected. The more we can
-write our code in a way that is testable at the unit level, the easier it will
-be to scale and extend our applications.
+When testing any kind of application, most of
+the tests your write will be *unit tests*.  For practical purposes a unit is a
+function. When we write code that is testable at the unit level, we can more
+easily scale and extend our applications.
 
 ---
 **_Turn and talk_: We hear a lot about unit, integration, and acceptance tests.
@@ -50,9 +49,11 @@ you can find out**
 
 ### Getting Started
 
-If you haven't already, install the `create-react-app` command line tool as a global 
-dependency. (To check for globally installed dependencies run the command 
-`npm list -g --depth=0`)
+See if you have `create-react-app` command line tool as a global 
+dependency by typing in the terminal: 
+```npm list -g --depth=0```
+
+If you do not have the dependency installed:
 
 ```bash
 npm install -g create-react-app
@@ -60,20 +61,20 @@ npm install -g create-react-app
 
 ### Setting Up the Project
 
-Once you have the command line tool installed, you can create a new project using 
-the following command:
+Create a new project using the following command:
 
 ```bash
 create-react-app grocery-list --use-npm
 ```
 
-Next `cd` into the `grocery-list` directory and lets get to work.  
+`cd` into the `grocery-list` directory.  
 
 ### Clean Up Extra Stuff
 
-Out of the box, `create-react-app` hooks you up with some boilerplate HTML and CSS that 
-we won't be using. Let's clean up the existing files before we get started. First, you 
-can delete the `logo.svg` file. Next, update the following files to match below:  
+`create-react-app` has boilerplate HTML and CSS that we won't be using. 
+
+First, delete the `logo.svg` file. 
+Next, update the following files to match below:  
 
 ```js
 App.css
@@ -107,59 +108,62 @@ export default App;
 
 ### Running Tests
 
-As we mentioned before, `create-react-app` has a built in testing framework that cannot 
-be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test 
+`create-react-app` has a built in testing framework that includes a test 
 runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
 
-In order to run the tests, type `npm test`. Normally, our suite runs and then we return 
-to the command line. With Create React App, `npm test` starts up a server that is 
-constantly watching for changes. When you modify a file, the test suite will 
-automatically rerun. Even better — by default, it will only watch files that have 
-changed since the last time you made a git commit.
+In order to run the tests, type in the terminal:
 
-Try it out - run `npm test` to fire up the testing server. Currently our app has only 
-one test file, `App.test.js`. Take a few seconds to look at that file.
+```npm test``` 
+
+When using some other testing frameworks, our suite may run and then we return to the 
+command line. However, a feature of Create React App is that `npm test` starts up a server that is 
+constantly watching for changes. The watching we refer to means that when you modify a file,
+the test suite will automatically run again. Another related feature is that by default, the server is
+watching just the files that have changed since the last git commit.
+
+Currently our app has only one test file, `App.test.js`. 
+Inspect that file.
 
 **Stop and Read**: [This section on file naming conventions](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#filename-conventions).  
 
-Traditionally, we have always put our tests into their own directory. That is absolutely 
-still possible, but the Facebook team makes some good points for keeping test files in 
-the same directory as their implementation. Whatever you decide to do in the future is 
-up to you, but let's go with the facebook convention for the purposes of this tutorial.  
+### File Structure
 
-Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) 
-they "recommend that you use a separate tool for browser end-to-end tests if you need 
-them. They are beyond the scope of Create React App." This means implementing our super 
-friend `Enzyme`!  
+Traditionally, test files were kept in one dedicated test directory. Today, the Facebook team 
+makes some good points for keeping test files in the same directory as the corresponding
+implementation file. Follow the Facebook convention for this lesson. 
 
+Jest is the good unit testing framework for your app.
+
+Enzyme is the tool for for browser end-to-end tests. Create React App does not include Enzyme, so you set
+it up yourself:
+[react docs on testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) 
+   
 ### Setting up Enzyme
 
-Enzyme is a fantasic tool for testing our React components in a virtual way,
-without actually having to use a browser. This makes running tests related to
-our UI much faster. First off, let's get Enzyme installed:
+The purpose of enzyme is to allow testing of rendered elements but avoid actually 
+rendering to the DOM. This makes running tests related to the UI much faster. 
+
+Install Enzyme as a dev dependancy:
 
 ```bash
 npm install --save-dev enzyme
 ```
 
-You're also going need the enzyme adapter for the version of React that you're
-using. As of this writing, it's enzyme-adapter-react-16, but that will change in
-the future, when create-react-app starts using version 17 of React. Just make sure 
+Next, install the enzyme adapter as a dev dependancy for the version of React that you're
+using. As of this writing, the adapter is enzyme-adapter-react-16, but that will change
+when create-react-app starts using version 17 of React. Make sure 
 you have the right one.
 
 ```bash
 npm install --save-dev enzyme-adapter-react-16
 ```
 
-As a last step, we need to make sure that the adapter is configured before our
-test suite runs. Setting up some kind of configuration before a test suite runs
-is a really common task actually. So common in fact, that the create-react-app
-team has a specific way you need to do this.
+Setting up a configuration (special file and code) before a test suite runs
+is a really common task. The create-react-app team has a specific way to do this:
 
 Inside of `src/`, create a file called `setupTests.js`.
 
-Jest will run this file before you test suite starts up, so it's the ideal place
-to do any kind of configuration or setup for the test suite. Add the following
+Jest will run this file before the test suite is run.  Add the following
 to `setupTests.js`:
 
 ```javascript
@@ -171,17 +175,17 @@ import Adapter from 'enzyme-adapter-react-16';
 configure({ adapter: new Adapter() });
 ```
 
-Great! Now we're all ready to start using Enzyme to test our React components!
+Now Enzyme is available for testing our React components!
 
-### Big Picture
+### A Grocery List App
 
-For this tutorial, we are building a app that allows us to make and edit a grocery list. 
-In it, you can add groceries to a list, mark them `starred` or `purchased`, and filter 
-based on `starred` or `purchased` tags.  
+In this tutorial, we code an app so a user can make and edit a grocery list. 
+A user can add individual grocery items to a list, mark them `starred` or `purchased`,
+and filter the list based on `starred` or `purchased` tags.  
 
 ### Building and Testing the Grocery Component
 
-We're going to start by test driving a single `<Grocery>` React component.
+We're going to start by testing a single `<Grocery>` React component.
 
 ![React Component](/assets/images/lessons/unit-testing-react/grocery-component.gif)
 
@@ -191,12 +195,12 @@ Notice the following:
 - The "Purchase" button says "Unpurchase" when the item is purchased.
 - The "Star" button says "Unstar" when the item is starred.
 
-To get started, make the following two files in the `src` folder of your project:
+Make the following two files in the `src` folder of your project:
 
 - `Grocery.js`
 - `Grocery.test.js`
 
-In `Grocery.js`, let's add a simple component:
+In `Grocery.js`, create a stateless functional component with several destructured props:
 
 ```js
 import React from 'react';
@@ -212,52 +216,17 @@ const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar
 export default Grocery;
 ```
 
-It's a functional, stateless component. Right now, we're not using a number of the 
-properties we're passing. Don't worry, we will.
-
-In `Grocery.test.js`, we'll start with a simple test to see if the `name` property 
-is properly rendered in the component when passed in as a prop.
-
-```js
-import React from 'react';
-import { shallow, mount } from 'enzyme';
-
-import Grocery from './Grocery';
-
-describe('Grocery', () => {
-
-  it('renders the name of the grocery in <h3> tags', () => {
-    const wrapper = shallow(<Grocery name="Bananas" />);
-    const title = <h3>Bananas</h3>;
-
-    expect(wrapper.contains(title)).toEqual(true);
-  });
-
-});
-```
-
-As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) 
-instead of Mocha. That said, you'll notice that the syntax is surprising similar. One 
-difference is that Jest includes its own expectation library which is similar to Chai's 
-`expect` syntax instead of an `assert` syntax.  
-
-[Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
-
-If you run `npm test` you should see your one test pass (two if you still have the 
-generic App test). You can keep this process running. The test suite will automatically 
-run whenever you make a change to the test file.
-
-This test works, but you might be thinking right now, 'hey don't my PropTypes
-cover that kind of behavior?' You're absolutely right! If you're using PropTypes
-throughout your application you really don't need these kinds of tests. In fact,
-there is a much simpler way of testing your UI, snapshot tests!
+(Some of the props are included now to be used later.)
 
 ### Snapshot testing
 
-The first thing to realize is that snap shot tests are not really TDD. Instead,
-we use snapshot tests to compare against a previous 'snapshot' of what our
-component looked like. If something has changed, the snapshot will fail. Then,
-if we're expected that change, we can `update` our snapshot to use the newest
+Here is a simple way of testing the UI, snapshot tests:
+
+Snapshot tests are not really TDD. Instead, snapshot tests compare against
+a previous snapshot of a component. If something in the UI has changed since the
+previous snapshot was created, the new snapshot will be different and the 
+snapshot testwill fail.  If the change is what we expect because we coded
+some change, we can `update` the snapshot to use the newest
 version. Add the following test:
 
 ```javascript
@@ -284,16 +253,24 @@ describe('Grocery', () => {
 })
 ```
 
-Go ahead and run this test. It passes, and you should see the line `1 snapshot
-created`
+Run:
 
-Ok, well that's great, but what are we actually testing? The first time we run
+```npm test```
+
+See your one test pass (two if you still have the generic App test). 
+You should see the line `1 snapshot created`
+The test suite will keep watching.  When you make a change to the code, 
+then the test suite will automatically run again.
+
+What does the snapshot test actually test? The first time we run
 the snapshot test, it doesn't have anything to compare against, so it records
 the snapshot, and puts it in a new directory `__snapshots__/` next to wherever
-your test lives. Go ahead and look at this now.
+your test lives. 
 
-How do we make this test fail? We'd have to change what our component actually
-looks like. Do that now:
+Find the new snapshot file.
+
+Changing the component makes the test fail.
+Do that now:
 
 ```js
 // Grocery.js
@@ -313,20 +290,40 @@ const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar
 export default Grocery;
 ```
 
-Running the tests now, you should see a failure for the snapshot test, with the
-differences between the two snapshots in the console. Here is where you have to
-consider, 'am I ok with those changes?' If so, you can update the tests by
-typing `u` while `Jest` is still in watch mode. Alternatively, you can restart
-your test suite and run `npm test --updateSnapshot`.
+Run:
 
-### Testing for dynamic changes  
+```npm test```
 
-When you're testing your components, you're mainly testing presentation logic. Given our UI 
-will change based on application data (our component props), we'll want to make sure we 
-have tests for any conditional logic or dynamic changes. For example, our grocery component 
-changes visually based on whether or not the grocery item has been starred or purchased. 
+You should see a failure for the snapshot test, with the
+differences between the two snapshots in the console. Here is where
+you have to consider, 'am I ok with those changes?' 
 
-We could start out with a simple test to see if it has the appropriate class if it's starred.
+Since the changes are intentional, update the 
+snapshots in one of two ways: 
+
+- 1. Type `u` while `Jest` is still in watch mode. 
+- 2. Cancel the test suite, then run
+```npm test --updateSnapshot```
+
+Run:
+
+```npm test```
+
+### Testing Dynamic Changes 
+
+Above we said that `create-react-app` uses Jest as a test-runner [Jest](http://facebook.github.io/jest/) 
+(instead of Mocha). Jest also includes its own expectation library.  
+The syntax is notably similar to Chai's but there are differences. One 
+difference is `expect` syntax instead of `assert` syntax.  
+
+[Jest Expectations](https://facebook.github.io/jest/docs/api.html) 
+
+When testing React components, you are mainly testing presentation logic. The UI 
+changes based on application data (our component props), so we 
+create tests for any conditional logic or dynamic changes. For example, our grocery component 
+changes in the browser window based on whether the grocery item is starred or purchased. 
+
+Start with a simple test to see if the grocery item has the expected className if it is starred.
 
 ```js
 it('should have a className of "starred" if is starred', () => {
@@ -338,9 +335,10 @@ it('should have a className of "starred" if is starred', () => {
 });
 ```
 
-This will fail. To fix it, we need to set up a conditional within our component that checks 
-if the property `starred` has been passed in as a prop. Let's be fancy and use either a 
+The test fails. To pass the test, set up a conditional within our component that checks 
+if the property `starred` has been passed in as a prop. Use either a 
 ternary or an `&&` condition in a template literal interpolation in `Grocery.js`.
+Try both, separately, to verify that each can get the test passing:
 
 ```jsx
 <article className={`Grocery ${starred ? 'starred' : ''}`}>
@@ -350,18 +348,19 @@ ternary or an `&&` condition in a template literal interpolation in `Grocery.js`
 <article className={`Grocery ${ starred && 'starred' }`}>
 ```
 
-Try both of those out and verify that they get the test passing. Then let the uneasy feeling 
-settle in as you consider that as time goes on, you'll have to do this repeatedly — first 
-with `purchased` and then possibly with more properties as requirements change down the line.
+Recognize that as your app develops, you will write a similar test for the 
+`purchased` className. Then for more properties as the requirements for the app extend to more features.
 
-**Stop and Read**: To make our lives easier, we'll use the [classnames](https://www.npmjs.com/package/classnames) 
-package from npm. Check out the documentation before moving forward. You can install it with 
-`npm install -S classnames`.
+### Add Classnames Package
 
-[classnames]: https://www.npmjs.com/package/classnames
+**Stop and Read**:  [classnames](https://www.npmjs.com/package/classnames) 
+To make our lives easier, use the classnames package from npm. Check out the documentation 
+before moving forward. You can install it with:
+```npm install -S classnames```
 
-We'll import it into the module, add some pre-made css, and refactor our `Grocery.js` 
-component as follows:
+Now classnames is installed into the node module so we can 
+
+add some pre-made css... 
 
 ```bash
 touch src/Grocery.css
@@ -389,6 +388,8 @@ touch src/Grocery.css
 }
 ```
 
+and refactor our `Grocery.js`, remembering to import classnames...
+
 ```js
 import React from 'react';
 import classnames from 'classnames';
@@ -405,37 +406,33 @@ const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar
 export default Grocery;
 ```
 
-### Testing the Button Functionality
+### TDD for the Button Functions
 
-So, the buttons say the right things. That's cool, but how do we know that they do 
-the things we expect them to?
+In order to write good tests for the buttons, be clear about what should happen when 
+the button is clicked. Notice that `onPurchase`, `onStar`, and `onRemove` properties are being 
+passed in. Reasonably, the onPurchase function will be called when a Purchased button is clicked.
+Similarly, clicking a Star button should call the onStar function.
+Clicking a Delete button should call the onDelete function.
 
-First, we should start by being clear about what should happen. If you look closely 
-at the code, you'll see that `onPurchase`, `onStar`, and `onRemove` properties are being 
-passed in. It stands to reason that these functions should be called when one of those 
-fancy buttons we just made are tested.
+#### Write the test first:
+**Mocks** allow us to confirm a function is being called. Mocks are stubbed-in ("faked") 
+functions that allows us to unit test specific parts of our code where a function is
+being called. A mock will override the behavior of a specific function and provide 
+you with utilities to test the code's interaction with the mock instead.
 
-At this point, we don't necessarily care what the functions are doing -- just that they 
-are being called appropriately. This is where **mocks** come in handy. Mocks are stubbed-in 
-or "faked" functionality that allows us to unit test specific parts of our code without having 
-to worry about others. A mock will override the behavior of a specific function and provide 
-you with utilities to test the interaction with the mock instead.
+When testing applications that use a framework/library like React, making mocks is common and necessary. 
+The general rule here is: if you are not testing the actual behavior **within** the code, then you are mocking 
+that behavior.
 
-You'll find when testing applications that use a framework like React, you'll need to make 
-a significant amount of mocks. And that's ok! Sometimes it may feel like you're faking too 
-much of your code by mocking so many pieces of functionality. The general rule here is if 
-you're not testing the actual behavior **within** the code you are mocking, it's perfectly 
-fine to mock it.
+Use mocks to test that the functions that were passed in as props are being called appropriately.
 
-So let's use mocks to test that the functions we passed in are being called appropriately.
-
-Consider the following test:
+Add this test:
 
 ```js
 it('should call the onPurchase prop when clicked', () => {
   const onPurchaseMock = jest.fn();
 
-  const wrapper = mount(
+  const wrapper = mount( //mount is good for testing methods on components, see below
     <Grocery
       name="Bananas"
       purchased={true}
@@ -449,7 +446,7 @@ it('should call the onPurchase prop when clicked', () => {
 });
 ```
 
-- `jest.fn()` returns a special mock function that we can use but also test to see if 
+- `jest.fn()` returns a special mock function that we can test to see if 
   it was called.
 - `wrapper.find('.Grocery-purchase').simulate('click');` will simulate a click event.
 - `expect(onPurchaseMock).toBeCalled()` asks our mock function if it was called. Ideally, 
@@ -461,17 +458,33 @@ it('should call the onPurchase prop when clicked', () => {
 
 #### Your Turn
 
-- Can you add an `onClick` function to the "Purchase" button and be the hero who makes 
-  the test pass?
+- To the Grocery component, add an `onClick` function to a "Purchase" button and make the test pass.
 - We likely want to pass in a grocery ID or grocery name to the `onPurchase` method so 
-  we can keep track of what has been purchased. Can you add an assertion to the previous 
-  test to check that `onPurchaseMock` was called with the correct arguments? 
+  we can keep track of what has been purchased. 
+- Add an assertion to the previous test to check that `onPurchaseMock` was called with the correct arguments? 
   ([Hint](https://facebook.github.io/jest/docs/expect.html#content))
-- Can you write the tests and implementation for the "Star" and "Remove" buttons?
+- Write the tests and implementation for the "Star" and "Remove" buttons?
 
-### Testing a class method
+- Here is some revised code to get you started: 
+```
+const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
+  return (
+    <article className={classnames('Grocery', { starred })}>
+      <h3>{name}</h3>
+      <button 
+       className="Grocery-purchase"
+       onClick={() => onPurchase(name)}>Purchased
+      </button>
+      <button>Star</button>//
+      <button>Delete</button>//
+    </article>
+  );
+};
+```
 
-So far, we've only been concerned with the tests for the is small, stateless
+### Testing a Method on a Class
+
+So far, we've only been concerned with the tests for the a stateless functional
 component. What about testing our class components? How will that differ? Take a
 look again at our `App.js` file (with some new features added in):
 
@@ -499,11 +512,11 @@ class App extends Component {
     })
   }
 
-  groceryList = () => (
+  groceryList = () => {
     this.state.groceries.map(grocery => (
       <Grocery {...grocery} />
     ))
-  )
+  }
 
   render() {
     return (
@@ -518,7 +531,7 @@ class App extends Component {
 export default App;
 ```
 
-Here, our App is bit more full featured, with two class methods. This first adds
+Here, our App has two class methods on it. This first adds
 Groceries to our state, and the second gives us a list of JSX elements. What
 we'd like to be able to do is test those methods in isolation. Fortunately,
 Enzyme has a really handy tool for doing just that, `instance()`.
