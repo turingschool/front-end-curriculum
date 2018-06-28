@@ -98,7 +98,10 @@ import Grocery from './Grocery'
 class App extends Component {
   render() {
     return (
-      <Grocery name='bananas' starred={false}/>
+      <Grocery 
+        name='bananas' 
+        starred={false}
+      />
     );
   }
 }
@@ -108,15 +111,15 @@ export default App;
 
 ### Running Tests
 
-`create-react-app` has a built in testing framework that includes a test 
-runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
+`create-react-app` has a built in testing framework called `Jest` that includes a test 
+runner. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
 
 In order to run the tests, type in the terminal:
 
 ```npm test``` 
 
-When using some other testing frameworks, our suite may run and then we return to the 
-command line. However, a feature of Create React App is that `npm test` starts up a server that is 
+When using some other testing frameworks, our suite may run, finish, and then return to the 
+command prompt. However, a feature of Create React App is that `npm test` starts up a server that is 
 constantly watching for changes. The watching we refer to means that when you modify a file,
 the test suite will automatically run again. Another related feature is that by default, the server is
 watching just the files that have changed since the last git commit.
@@ -130,24 +133,26 @@ Inspect that file.
 
 Traditionally, test files were kept in one dedicated test directory. Today, the Facebook team 
 makes some good points for keeping test files in the same directory as the corresponding
-implementation file. Follow the Facebook convention for this lesson. 
+implementation file. **Follow the Facebook convention** for this lesson. 
 
-Jest is the good unit testing framework for your app.
+Jest is the good unit testing framework for your React app.
 
-Enzyme is the tool for for browser end-to-end tests. Create React App does not include Enzyme, so you set
+Enzyme is the testing utility(tool) for for browser end-to-end tests. Create-React-App does not include Enzyme, so you set
 it up yourself:
 [react docs on testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) 
    
-### Setting up Enzyme
+### Install Enzyme
 
-The purpose of enzyme is to allow testing of rendered elements but avoid actually 
-rendering to the DOM. This makes running tests related to the UI much faster. 
+The purpose of enzyme is to allow testing of rendered elements but to avoid actually 
+rendering to the DOM. This makes running tests related to the UI much faster.  
+Enzyme replaces "headless browsers", making testing much easier.
 
 Install Enzyme as a dev dependancy:
 
 ```bash
 npm install --save-dev enzyme
 ```
+### Install the Enzyme Adapter
 
 Next, install the enzyme adapter as a dev dependancy for the version of React that you're
 using. As of this writing, the adapter is enzyme-adapter-react-16, but that will change
@@ -157,6 +162,7 @@ you have the right one.
 ```bash
 npm install --save-dev enzyme-adapter-react-16
 ```
+### Create the Configuration File - setupTests.js
 
 Setting up a configuration (special file and code) before a test suite runs
 is a really common task. The create-react-app team has a specific way to do this:
@@ -225,7 +231,7 @@ Here is a simple way of testing the UI, snapshot tests:
 Snapshot tests are not really TDD. Instead, snapshot tests compare against
 a previous snapshot of a component. If something in the UI has changed since the
 previous snapshot was created, the new snapshot will be different and the 
-snapshot testwill fail.  If the change is what we expect because we coded
+snapshot test will fail.  If the change is what we expect because we coded
 some change, we can `update` the snapshot to use the newest
 version. Add the following test:
 
@@ -258,7 +264,9 @@ Run:
 ```npm test```
 
 See your one test pass (two if you still have the generic App test). 
-You should see the line `1 snapshot created`
+The first time a snapshot test runs, it always passes because there
+is no previous snapshot to compare against. 
+You should see the line `1 snapshot created`.
 The test suite will keep watching.  When you make a change to the code, 
 then the test suite will automatically run again.
 
@@ -319,7 +327,7 @@ difference is `expect` syntax instead of `assert` syntax.
 [Jest Expectations](https://facebook.github.io/jest/docs/api.html) 
 
 When testing React components, you are mainly testing presentation logic. The UI 
-changes based on application data (our component props), so we 
+does change based on application data (our component props), so we 
 create tests for any conditional logic or dynamic changes. For example, our grocery component 
 changes in the browser window based on whether the grocery item is starred or purchased. 
 
@@ -349,7 +357,7 @@ Try both, separately, to verify that each can get the test passing:
 ```
 
 Recognize that as your app develops, you will write a similar test for the 
-`purchased` className. Then for more properties as the requirements for the app extend to more features.
+`purchased` className. Then again, for more properties as the requirements for the app extend to more features.
 
 ### Add Classnames Package
 
@@ -358,9 +366,9 @@ To make our lives easier, use the classnames package from npm. Check out the doc
 before moving forward. You can install it with:
 ```npm install -S classnames```
 
-Now classnames is installed into the node module so we can 
+Now classnames is installed into the node module so we can... 
 
-add some pre-made css... 
+add this pre-made css... 
 
 ```bash
 touch src/Grocery.css
@@ -388,7 +396,7 @@ touch src/Grocery.css
 }
 ```
 
-and refactor our `Grocery.js`, remembering to import classnames...
+...and refactor our `Grocery.js`, remembering to import classnames...
 
 ```js
 import React from 'react';
@@ -408,7 +416,7 @@ export default Grocery;
 
 ### TDD for the Button Functions
 
-In order to write good tests for the buttons, be clear about what should happen when 
+In order to write good tests for buttons, be clear about what should happen when 
 the button is clicked. Notice that `onPurchase`, `onStar`, and `onRemove` properties are being 
 passed in. Reasonably, the onPurchase function will be called when a Purchased button is clicked.
 Similarly, clicking a Star button should call the onStar function.
@@ -416,12 +424,12 @@ Clicking a Delete button should call the onDelete function.
 
 #### Write the test first:
 **Mocks** allow us to confirm a function is being called. Mocks are stubbed-in ("faked") 
-functions that allows us to unit test specific parts of our code where a function is
+functions that allow us to unit test specific parts of our code where a function is
 being called. A mock will override the behavior of a specific function and provide 
 you with utilities to test the code's interaction with the mock instead.
 
 When testing applications that use a framework/library like React, making mocks is common and necessary. 
-The general rule here is: if you are not testing the actual behavior **within** the code, then you are mocking 
+The general rule here is: if you are not testing the actual behavior **within** the code, then you should be mocking 
 that behavior.
 
 Use mocks to test that the functions that were passed in as props are being called appropriately.
@@ -461,11 +469,11 @@ it('should call the onPurchase prop when clicked', () => {
 - To the Grocery component, add an `onClick` function to a "Purchase" button and make the test pass.
 - We likely want to pass in a grocery ID or grocery name to the `onPurchase` method so 
   we can keep track of what has been purchased. 
-- Add an assertion to the previous test to check that `onPurchaseMock` was called with the correct arguments? 
+- Add an assertion to the previous test to check that `onPurchaseMock` was called with the correct arguments. 
   ([Hint](https://facebook.github.io/jest/docs/expect.html#content))
-- Write the tests and implementation for the "Star" and "Remove" buttons?
+- Write the tests and implementation for the "Star" and "Remove" buttons.
 
-- Here is some revised code to get you started: 
+- Here is some code to help get you started: 
 ```
 const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
   return (
@@ -534,7 +542,7 @@ export default App;
 Here, our App has two class methods on it. This first adds
 Groceries to our state, and the second gives us a list of JSX elements. What
 we'd like to be able to do is test those methods in isolation. Fortunately,
-Enzyme has a really handy tool for doing just that, `instance()`.
+Enzyme has a really handy method for doing just that, `instance()`.
 
 Calling `instance()` on our wrapper will give us access to all the class methods
 of that instance, in this case, `addGrocery` and `groceryList`. Let's write a
