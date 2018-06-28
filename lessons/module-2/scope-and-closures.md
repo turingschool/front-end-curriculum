@@ -259,18 +259,20 @@ init();
 Let's take a look at another example of a closure:
 
 ```js
-var counter = (function () {
-  var counter = 0;
+function makeCounter () {
+  var count = 0;
 
   return {
     add: function () {
-      counter++;
+      count++;
     },
     getCount: function () {
-      return counter;
+      return count;
     }
   };
-})();
+}
+
+var counter = makeCounter();
 
 console.log(counter.getCount()); // 0
 counter.add();
