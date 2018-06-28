@@ -165,6 +165,22 @@ In the above example, the console log inside `makeArray` fails because parent sc
 
 If we think about the house analogy, everyone in the house has access to common areas, but (and, yes, this house is highly unusual and trusting) no one has access to anything inside individuals' rooms besides the owner of the room.
 
+**Block scope**
+
+variables declared with the keyword `let` or `const` are block scoped. This means that they are scoped to the block statement (if, for...) in which they are declared.
+
+```js
+let message = 'You are doing great!';
+
+if (message.length > 0) {
+  let message = 'I think you are amazing!';
+
+  console.log(message);
+}
+
+console.log(message);
+```
+
 **Try it yourself**
 
 Exercise 1:
@@ -270,7 +286,7 @@ This means that the value of `counter` is an object. The only way to access the 
 
 What's the point of doing something like this?
 
-You'll notice that there's no way to mutate or overwrite the `count` variable, because it is completely protected within the closure. It's only accessible through the functinos provided by the closure itself.
+You'll notice that there's no way to mutate or overwrite the `count` variable, because it is completely protected within the closure. It's only accessible through the functions provided by the closure itself.
 
 <!-- Here's another interesting example of a closure in action:
 
