@@ -8,7 +8,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 1: Hello Turing! Hello Front End Engineering!
 
 |Mindset     | _We are a team. This week is about building trust with one another_.|
-|Lessons     | [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html) &nbsp; [Terminal](http://frontend.turing.io/lessons/module-1/getting-around-in-the-terminal.html) &nbsp; [HTML I](http://frontend.turing.io/lessons/module-1/html-1.html) &nbsp; [HTML II](http://frontend.turing.io/lessons/module-1/html-2.html) &nbsp; [Intro CSS](http://frontend.turing.io/lessons/module-1/css-1.html) &nbsp; [JS I](http://frontend.turing.io/lessons/module-1/js-1.html)
+|Lessons     | [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html) &nbsp; [Terminal](http://frontend.turing.io/lessons/module-1/getting-around-in-the-terminal.html) &nbsp; [HTML I](http://frontend.turing.io/lessons/module-1/html-1.html) &nbsp; [Accessibility](http://frontend.turing.io/lessons/module-1/web-accessibility.html) &nbsp; [HTML II](http://frontend.turing.io/lessons/module-1/html-2.html) &nbsp; [Intro CSS](http://frontend.turing.io/lessons/module-1/css-1.html) &nbsp; [JS I](http://frontend.turing.io/lessons/module-1/js-1.html)
 |Assignment  | Establish a __routine__. Set healthy study __habits__ early. Write __code everyday__. |
 
 ### WK 2: Putting the Pieces Together
