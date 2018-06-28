@@ -149,7 +149,7 @@ div {
 
 ### Position Property
 
-- We can manipulate this [code pen](https://codepen.io/damwhit/pen/POxbPV) to play around with the following values for our position property.
+- We can manipulate this [code pen](https://codepen.io/LouisaBarrett/pen/ZyreoM) to play around with the following values for our position property.
 - `relative`: A relatively positioned element preserves its space. The adjacent elements aren’t repositioned to occupy the reserved space for this element. However, the offsets of this element don’t occupy space. They’re completely ignored from the other elements, and hence that may causes elements to overlap each other.
 - `absolute`: An absolutely positioned element is completely removed from the normal flow. The adjacent sibling elements occupy its space.
 - `fixed`: A fixed positioned element (subcategory of the absolute positioning) is positioned relative to the viewport. It will stick in place despite any scrolling or resizing of the viewport
