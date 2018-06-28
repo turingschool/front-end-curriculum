@@ -125,7 +125,7 @@ When we write a very simple variable like this, it's called _declaring_ the vari
 - You cannot use keywords or reserved words (such as `var` or `for`).
 - All variables are case sensitive.
 - Use names that describe the kind of information you plan to assign the variable.
-- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case (thisIsMyVariableName).
+- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`.
 
 ### Your Turn (in the console)
 
@@ -133,10 +133,10 @@ Declare 2 variables, one named "quantity" and one named "mythicalCreature"
 
 ## Variable Values: Assignment
 
-So, we have our variable. Now what? When we first create a variable, its value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to our `myVariableName` variable:
+So, we have our variable. Now what? When we first create a variable, its value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to a `excellentHuman` variable:
 
 ```javascript
-var name = "Fred Rogers";
+var excellentHuman = "Fred Rogers";
 ```
 
 We've added a couple of things to our variable. Let's go through them:
@@ -296,38 +296,38 @@ Functions are a way to group statements together to perform a specific task. Fun
 
 ## Anatomy of a Function:
 ```javascript
-function makeStatement() {
-  var myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
-  alert('This is my second statement!');
+function makeStatements() {
+  var firstStatement = 'Pizza is amazing';
+  alert('Pizza is AMAZING!');
   console.log(myFirstStatement);
-}]
+}
 ```
 
 - You declare a function using the keyword `function`.
 - You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
 - Since functions perform some action, it is generally a good idea to use and action verb in the function name. i.e. `getSize`, `saveNote`, `generateRandomNumber`.
 - You must follow the name of the function with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
-- Calling the function is quite easy. Simply type the function name with it's parenthesis and any associated parameters.
+- Calling the function is quite easy. Simply type the function name with it's parentheses and any associated parameters.
 
-## Call a Function:
+## Invoke a Function:
 ```javascript
-// Calling a function w/out arguments
-makeStatement();
+// Invoke a function w/out arguments
+makeStatements();
 
-// Calling a function with arguments
-makeStatement(arg1, arg2);
+// Invoke a function with arguments
+makeStatements(arg1, arg2);
 ```
 
-When this code is read, `makeStatement()` is "called", all three statements within the function's body (those curly braces) get run.
+When this code is read, `makeStatements()` is "invoked", all three statements within the function's body (those curly braces) get run.
 
 ### Your Turn
-Let's go ahead and declare makeStatement in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
+Go ahead and declare the makeStatements function in the console and then invoke it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
 Create your own functions in the console:
 
 - Write a function that declares a `firstName` variable and a `lastName` variable, then alerts the user with a message that incorporates the full name, and then logs a random number to the console.
 
-- Write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables
+- Write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables.
 
 - Write a function that alerts the user with a message of "YO!", and then logs to the console a sum of eight different integers.
 
@@ -374,8 +374,9 @@ function addTwoNumbers(num1, num2) {
 The return statement ends function execution and specifies a value to be returned to the function caller. It looks like this:
 
 ```javascript
-return [[expression]]
-// The expression to return. If omitted, undefined is returned instead.
+// This is the formula:
+return [expression];
+// The expression to return. If omitted, undefined is returned instead. The [] are meant to show that the expression is dynamic.
 ```
 
 When a `return` statement is called in a function, the execution of this function is stopped. If specified, a given value is returned to the function caller. If the expression is omitted, undefined is returned instead. The following return statements all break the function execution:
