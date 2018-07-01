@@ -1,5 +1,5 @@
 ---
-title: Introduction to JavaScript — Part II
+title: JavaScript II - Scope, Arrays, and For Loops
 title: JS II
 length: 120
 tags: javascript, introduction, foundation, variables
@@ -14,16 +14,19 @@ Before we get started with new material, let's go over over what we've learned s
 - Conditionals
 - Functions
 
-<!-- - Break students into groups of 3-4 people (4 max) each to review 1 of the 4 subjects above. There may be a few groups covering the same topic. Groups should answer the following 3 questions on chart paper:
+<!-- 
+  Break students into groups of 3-4 people (4 max) each to review 1 of the 4 subjects above. There may be a few groups covering the same topic. Groups should answer the following 3 questions on chart paper:
 
-What would be an example of ___________ ?
+  Optional groups to add for more granularity are: parameters + arguments, statements + expressions
 
-What are the most important/significant things someone should know about ___________________?
+  What would be an example of ___________ ?
 
-What might be a metaphor or analogy for  ________________?
+  What are the most important/significant things someone should know about ___________________?
 
-Groups have 8 mins to answer questions and draw/write out their answers. End with groups sharing out.
- -->
+  What might be a metaphor or analogy for  ________________?
+
+  Groups have 8 mins to answer questions and draw/write out their answers. End with groups sharing out.
+-->
 
 ## Learning Goals
 
@@ -107,19 +110,19 @@ This type of function does not require the keyword `var` to kick it off. Even wi
 
 ```javascript
 // Declare a named function
-function myRadFunction(parameter) {
-  console.log(parameter);
+function logMessage(message) {
+  console.log(message);
   alert("All done!");
 }
 
 // Call that named function to execute
-myRadFunction("Boom");
+logMessage("Boom");
 
 // You can even call the function INSIDE ITSELF, which is called "recursion".
-function myRadFunction(parameter) {
-  console.log(parameter)
+function logMessage(parameter) {
+  console.log(parameter);
   if (someCondition) {
-    myRadFunction(parameter)
+    logMessage(argument);
   }
 }
 ```
@@ -130,17 +133,17 @@ Another type of function is the *anonymous function*, which does not have a name
 
 ```js
 setTimeout(function() {
-  alert('BOO!')
-}, 1000)
+  alert('BOO!');
+}, 1000);
 ```  
 
 They are also commonly referred to as a *function expression* because the function is assigned to a variable, which makes the anonymous function part of a larger `expression`.  
 
 ```js
-var alienAlert = function() {
-  alert('E.T. PHONE HOME')
+var alertAliens = function() {
+  alert('E.T. PHONE HOME');
 };
-alienAlert();
+alertAliens();
 ```
 
 Take a moment to recall what an `expression` does in JavaScript. How do you think that applies here?  
@@ -163,7 +166,7 @@ var calculateArea = function(width, height) {
 };
 
 // We call this function using the variable that we assigned our anonymous function to
-calculateArea(2, 1)
+calculateArea(2, 1);
 
 // We can even assign that function call as the value of another variable. How would we run our 'area' function now?
 var size = calculateArea(3, 4);
@@ -243,7 +246,7 @@ Variables sans the keyword `var`
 The good news is all you have to do to avoid this is to always remember to use the `var` keyword when declaring a new variable!
 
 # Arrays
-An array is a special type of variable. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
+An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
 
 You can put different types of data into an array:
 
@@ -257,9 +260,11 @@ var myFavoriteThings = ['Broccoli', 1024, 'Sherlock'];
 You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets ([]), and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
 
 ```javascript
-colors = ['white',
-          'black',
-          'pink']
+var colors = [
+  'white',
+  'black',
+  'pink'
+];
 ```
 
 ## Accessing Values in Arrays
@@ -271,7 +276,7 @@ Indices begin at 0 and order incrementally. So in the above `colors` example, th
 - color black has an index of 1
 - color pink has an index of 2
 
-You can change values in an array by their index. Let's walk through it in the console:
+You can change values in an array by using their index. Let's walk through it in the console:
 
 ```javascript
 // Create the array
@@ -389,14 +394,14 @@ The statement within the curly braces executes each time the loop runs. In this 
 `for` loops are commonly used to iterate over the items in a array. To do this, we use the property `length` and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array. Let's see what that looks like in practice:
 
 ```js
-var fruitList = ['apples', 'oranges', 'bananas'];
+var fruits = ['apples', 'oranges', 'bananas'];
 
-for (var i = 0; i < fruitList.length; i++) {
-  console.log("I have some " + fruitList[i]);
+for (var i = 0; i < fruits.length; i++) {
+  console.log("I have some " + fruits[i]);
 }
 ```
 
-You can see that instead of using a hardcoded number, we are using `fruitList.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
+You can see that instead of using a hardcoded number, we are using `fruits.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
 
 ### Loops and Performance Issues
 It's important to be aware of the potential performance problems that loops can cause. When a browser hits Javascript, it stops executing anything else on the page until it has processed that script. Since loops can be run on arrays or containers of unknown -- and potentially enormous -- size, it's possible for our loop to make a page much, much slower to load.
@@ -427,3 +432,4 @@ If you're curious, check out this [jsPerf analysis](https://jsperf.com/for-vs-fo
 
 * [Seven JS Quirks I Wish I'd Known About](http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/#expdec)  
 * [Adequately Good JS](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)  
+
