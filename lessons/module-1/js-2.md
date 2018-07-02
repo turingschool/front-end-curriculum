@@ -1,6 +1,5 @@
 ---
 title: JavaScript II - Scope, Arrays, and For Loops
-title: JS II
 length: 120
 tags: javascript, introduction, foundation, variables
 ---
