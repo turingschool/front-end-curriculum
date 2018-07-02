@@ -45,12 +45,13 @@ In this lesson we'll cover:
 
 - See [vocab](http://frontend.turing.io/lessons/module-1/js-1.html) for JS I
 - `Anonymous Function` A function without a name
-- `Scope` Determines the accessibility/visibility of variables and other expressions
+- `Scope` Determines the accessibility/visibility of variables and functions
 - `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
 - `Literal`  A way of declaring a data structure and its values at the same time
-- `Array` Used to store a list of data items/multiple values under a single variable name
+- `Array` Used to store a collection of data items/multiple values under a single variable name
 - `Loops` A quick and easy way to do something repeatedly
 - `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops. 
+- `DRY` Programming principle that means `Don't Repeat Yourself`
 
 
 # More on Functions
@@ -58,7 +59,7 @@ In this lesson we'll cover:
 Can't get enough.  
 
 ## Part 1: Calling functions inside of other functions
-When writing Javascript, you want to do your best to keep your code DRY. That means keeping functions concise and single responsibility. It's not uncommon to do a first pass at solving a problem and end up with a more verbose solution, and then revisit your code to tighten it up. This process of cleaning up your working code is called `refactoring`. When we refactor, one of the things we look for is unnecessary duplication. If we see a line of code being used in multiple places, we can pull it out into its own separate functions of reusable code.
+When writing Javascript, you want to do your best to keep your code DRY (Don't Repeat Yourself). That means keeping functions concise and single responsibility. It's not uncommon to do a first pass at solving a problem and end up with a more verbose solution, and then revisit your code to tighten it up. This process of cleaning up your working code is called `refactoring`. When we refactor, one of the things we look for is unnecessary duplication. If we see a line of code being used in multiple places, we can pull it out into its own separate function of reusable code.
 
 Let's take a crack at refactoring some functions and calling functions within other functions. Below we see two very important functions:
 
@@ -66,15 +67,17 @@ Let's take a crack at refactoring some functions and calling functions within ot
 function karateChop() {
   console.log("KARATE CHOP!");
   alert("KAPOW!");
+  alert("JUDO CHOP!");
 }
 
 function ninjaAttack() {
   alert("KAPOW!");
+  alert("JUDO CHOP!");
   console.log("NINJA SURPRISE!");
 }
 ```
 
-We can see that we have some duplication going on between these two functions. We see we have an `alert` that is exactly the same in both functions, which means it is a prime candidate to get pulled into its own function. This will let us reuse this code without retyping it repeatedly (which helps reduce human error and typos), and gives us the flexibility to easily use it in future functions as well. Let's see what that looks like:
+We can see that we have some duplication going on between these two functions. We see we have two `alert` statements that are exactly the same in both functions, which means it is a prime candidate to get pulled into its own function. This will let us reuse this code without retyping it repeatedly (which helps reduce human error and typos), and gives us the flexibility to easily use it in future functions as well. Let's see what that looks like:
 
 ```js
 function kapow() {
@@ -110,19 +113,19 @@ This type of function does not require the keyword `var` to kick it off. Even wi
 
 ```javascript
 // Declare a named function
-function logMessage(message) {
+function showMessage(message) {
   console.log(message);
   alert("All done!");
 }
 
 // Call that named function to execute
-logMessage("Boom");
+showMessage("Boom");
 
 // You can even call the function INSIDE ITSELF, which is called "recursion".
-function logMessage(parameter) {
+function showMessage(parameter) {
   console.log(parameter);
   if (someCondition) {
-    logMessage(argument);
+    showMessage(argument);
   }
 }
 ```
@@ -386,12 +389,12 @@ Let's dig into the three statements separated by semicolons that make up or our 
 
 - We begin with **initialization**. Where do we want our loop to start? The first statement `var i = 0;` creates a variable that is assigned the value of 0. This variable is commonly named `i`, or `index`, and will act as the counter. It is created the first time the loop is run.  
 - The next statement **sets the condition** that tells the loop when to stop running: `i < 10;`. In this case, the condition indicates that the loop will stop when `i` equals 10. The condition may use a variable that is assigned a value.
-- Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i + 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i - 1`.
+- Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i += 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i -= 1`.
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
 ### Looping Over Arrays
-`for` loops are commonly used to iterate over the items in a array. To do this, we use the property `length` and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array. Let's see what that looks like in practice:
+`for` loops are commonly used to iterate over the items in an array. To do this, we use the property `length` and call it on the variable associated with the array we want to iterate over. This property returns the length of, or number of elements in, an array. Let's see what that looks like in practice:
 
 ```js
 var fruits = ['apples', 'oranges', 'bananas'];
