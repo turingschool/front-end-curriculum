@@ -79,17 +79,18 @@ function ninjaAttack() {
 We can see that we have some duplication going on between these two functions. We see we have two `alert` statements that are exactly the same in both functions, which means it is a prime candidate to get pulled into its own function. This will let us reuse this code without retyping it repeatedly (which helps reduce human error and typos), and gives us the flexibility to easily use it in future functions as well. Let's see what that looks like:
 
 ```js
-function kapow() {
+function alertAttack() {
   alert("KAPOW!");
+  alert("JUDO CHOP!);
 }
 
 function karateChop() {
   console.log("KARATE CHOP!");
-  kapow();
+  alertAttack();
 }
 
 function ninjaAttack() {
-  kapow();
+  alertAttack();
   console.log("NINJA SURPRISE!");
 }
 ```
