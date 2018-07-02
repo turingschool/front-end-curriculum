@@ -81,7 +81,7 @@ We can see that we have some duplication going on between these two functions. W
 ```js
 function alertAttack() {
   alert("KAPOW!");
-  alert("JUDO CHOP!);
+  alert("JUDO CHOP!");
 }
 
 function karateChop() {
