@@ -120,14 +120,6 @@ function showMessage(message) {
 
 // Call that named function to execute
 showMessage("Boom");
-
-// You can even call the function INSIDE ITSELF, which is called "recursion".
-function showMessage(parameter) {
-  console.log(parameter);
-  if (someCondition) {
-    showMessage(argument);
-  }
-}
 ```
 
 ### Anonymous Functions and Function Expressions
@@ -140,7 +132,7 @@ setTimeout(function() {
 }, 1000);
 ```  
 
-They are also commonly referred to as a *function expression* because the function is assigned to a variable, which makes the anonymous function part of a larger `expression`.  
+They are also commonly used within *function expressions*, where the function is assigned to a variable, which makes the anonymous function part of a larger `expression`.  
 
 ```js
 var alertAliens = function() {
@@ -389,7 +381,7 @@ Let's dig into the three statements separated by semicolons that make up or our 
 
 - We begin with **initialization**. Where do we want our loop to start? The first statement `var i = 0;` creates a variable that is assigned the value of 0. This variable is commonly named `i`, or `index`, and will act as the counter. It is created the first time the loop is run.  
 - The next statement **sets the condition** that tells the loop when to stop running: `i < 10;`. In this case, the condition indicates that the loop will stop when `i` equals 10. The condition may use a variable that is assigned a value.
-- Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i += 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i -= 1`.
+- Finally, with the statement `i++` we **update the value** of our counter `i`. This adds 1 to the value of `i`. This syntax is using the increment operator `++`, which is a way of writing `i = i + 1`. It is also possible to decrement downwards using the decrement operator `--`, which is a way of writing `i = i - 1`.
 
 The statement within the curly braces executes each time the loop runs. In this case, we can see we are logging the value of `i` to the console.
 
