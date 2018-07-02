@@ -107,16 +107,17 @@ Into something like this:
 
 ```js
 const API_HOSTNAME = 'https://weatherunderground.com/api/v1';
+const CITY = 'denver';
 
-fetch('/7day-forecast/denver')
+fetch(`/7day-forecast/${CITY}`)
   .then(forecast => doThingsWithForecast(forecast))
   .catch(error => throw error);
   
-fetch('/hourly-forecast/denver')
+fetch(`/hourly-forecast/${CITY}`)
   .then(forecast => doThingsWithForecast(forecast))
   .catch(error => throw error);
   
-fetch('/radar-map/denver')
+fetch(`/radar-map/${CITY}`)
   .then(forecast => doThingsWithForecast(forecast))
   .catch(error => throw error);
 ```

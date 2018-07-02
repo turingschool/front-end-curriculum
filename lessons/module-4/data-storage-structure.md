@@ -24,7 +24,7 @@ Up until now, you have mostly seen non-relational databases. Non-relational data
 
 Non-relational databases:
 
-* **Allow for complex data types to be stored** - allows for a more nested data structure as you can store lists and objects in any field
+* **Allow for irregular data to be stored** - allows for a more nested data structure as you can store lists and objects in any field
 * **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast, but it also means it's safe from SQL injection attacks.
 
 Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient).

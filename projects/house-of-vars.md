@@ -79,50 +79,52 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ### [Open Food Network](https://github.com/openfoodfoundation/openfoodnetwork)
 
-**Potential Issues:**
+**Issues:**
+* [All Issues](https://github.com/openfoodfoundation/openfoodnetwork/issues)
 * [Marked as good for beginners](https://github.com/openfoodfoundation/openfoodnetwork/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
-* [#1806](https://github.com/openfoodfoundation/openfoodnetwork/issues/1806)
-* [#1938](https://github.com/openfoodfoundation/openfoodnetwork/issues/1938)
-* [#1913](https://github.com/openfoodfoundation/openfoodnetwork/issues/1913)
 
 
 ### [Denver Startup Week](https://github.com/denverstartupweek/dsw-site)
-* [Issues](https://github.com/denverstartupweek/dsw-site/issues)
 
-
-### [Git Point](https://github.com/gitpoint/git-point)
-
-**Potential Issues:**
-* [Marked as good for beginners](https://github.com/gitpoint/git-point/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+for+beginners%22)
+**Issues:**
+* [All Issues](https://github.com/denverstartupweek/dsw-site/issues)
 
 
 ### [Iodide](https://github.com/iodide-project/iodide)
 
-**Potential Issues:**
+**Issues:**
+* [All Issues](https://github.com/iodide-project/iodide/issues)
 * [Marked as Good First Issue](https://github.com/iodide-project/iodide/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 
 ### [Refined GitHub](https://github.com/sindresorhus/refined-github)
 
-**Potential Issues:**
+**Issues:**
+* [All Issues](https://github.com/sindresorhus/refined-github/issues)
 * [Marked as Good First Issue](https://github.com/sindresorhus/refined-github/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
-<!-- ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
+
+### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
+
+**Issues:**
+* [All Issues](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues)
+* [Marked as newcomer friendly](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues?q=is%3Aissue+is%3Aopen+label%3A%22newcomer+friendly%22)
+
+
+<!-- ### [Git Point](https://github.com/gitpoint/git-point)
 
 **Potential Issues:**
-* [Marked as newcomer friendly](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues?q=is%3Aissue+is%3Aopen+label%3A%22newcomer+friendly%22)
-* [#1351](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1351)
-* [#1510](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1510)
-* [#1459](https://github.com/WikiEducationFoundation/WikiEduDashboard/issues/1459) -->
+* [Marked as good for beginners](https://github.com/gitpoint/git-point/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+for+beginners%22) -->
+
 
 <!-- ### [Code for Social Good](https://github.com/Code4SocialGood/c4sg-web)
 
 **Potential Issues:**
 * [#1733](https://github.com/Code4SocialGood/c4sg-web/issues/1733)
-* [#1727](https://github.com/Code4SocialGood/c4sg-web/issues/1727)
- -->
+* [#1727](https://github.com/Code4SocialGood/c4sg-web/issues/1727) -->
 
-<!-- ### Other Potential Repos -->
+
+<!-- ### Other Potential Repos
 <!-- https://github.com/vuetifyjs/vuetify -->
 <!-- https://github.com/wekan/wekan -->
 <!-- https://github.com/alphagov/accessible-autocomplete -->
