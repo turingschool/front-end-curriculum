@@ -4,12 +4,30 @@ module: 3
 tags: testing, react, async, fetch
 ---
 
-## Goals
+## Agenda
+
+* Discuss async testing goals and pitfalls
+* Pseudocode tests for async code
+* Write tests using .then() promise resolution
+* Refactor tests to use async/await
+* Refactor fetch out of the component
+* Use manual mocks to update and refactor test suite
+
+## Learning Goals
 
 By the end of this lesson, you will:
 
 * Know how to test React components that contain methods with async JavaScript
 * Understand how and what to test when making API calls with fetch
+
+## Vocab
+
+* mock
+* control flow
+* then
+* async/await
+
+## Testing Async JavaScript & API Calls
 
 ### Getting Started
 

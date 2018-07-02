@@ -165,6 +165,22 @@ In the above example, the console log inside `makeArray` fails because parent sc
 
 If we think about the house analogy, everyone in the house has access to common areas, but (and, yes, this house is highly unusual and trusting) no one has access to anything inside individuals' rooms besides the owner of the room.
 
+**Block scope**
+
+variables declared with the keyword `let` or `const` are block scoped. This means that they are scoped to the block statement (if, for...) in which they are declared.
+
+```js
+let message = 'You are doing great!';
+
+if (message.length > 0) {
+  let message = 'I think you are amazing!';
+
+  console.log(message);
+}
+
+console.log(message);
+```
+
 **Try it yourself**
 
 Exercise 1:
@@ -243,18 +259,20 @@ init();
 Let's take a look at another example of a closure:
 
 ```js
-var counter = (function () {
-  var counter = 0;
+function makeCounter () {
+  var count = 0;
 
   return {
     add: function () {
-      counter++;
+      count++;
     },
     getCount: function () {
-      return counter;
+      return count;
     }
   };
-})();
+}
+
+var counter = makeCounter();
 
 console.log(counter.getCount()); // 0
 counter.add();
@@ -270,7 +288,7 @@ This means that the value of `counter` is an object. The only way to access the 
 
 What's the point of doing something like this?
 
-You'll notice that there's no way to mutate or overwrite the `count` variable, because it is completely protected within the closure. It's only accessible through the functinos provided by the closure itself.
+You'll notice that there's no way to mutate or overwrite the `count` variable, because it is completely protected within the closure. It's only accessible through the functions provided by the closure itself.
 
 <!-- Here's another interesting example of a closure in action:
 
@@ -324,14 +342,16 @@ window.myStringModule = (function () {
   var allCapsString = "SAFETY!"
 
   function setString (newString) {
-	  allCapsString = newString.toUpperCase();
+    allCapsString = newString.toUpperCase();
+  }
+  
+  function getString () {
+    return allCapsString;
   }
 
   return {
-	  setString: setString,
-	  getString: function () {
-      return allCapsString;
-    }
+    setString: setString,
+    getString: getString
   };
 })();  
 ```

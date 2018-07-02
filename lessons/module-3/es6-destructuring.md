@@ -186,6 +186,6 @@ var singers = [
 ```
 
 
-http://www.sbs.com.au/theboat/ - interactive graphic novel about the vietnam war using CSS/JS/Parallax
-https://threejs.org/examples/#css3d_periodictable - Sick interactive periodic table (i like the Helix version)
-http://codepen.io/dissimulate/pen/KrAwx - Codepen of tearable cloth rendering with CSS/JS
+[The Boat](http://www.sbs.com.au/theboat/) - interactive graphic novel about the vietnam war using CSS/JS/Parallax
+[Periodic Table](https://threejs.org/examples/#css3d_periodictable) - Sick interactive periodic table (i like the Helix version)
+[Tearable cloth](http://codepen.io/dissimulate/pen/KrAwx) - Codepen of tearable cloth rendering with CSS/JS

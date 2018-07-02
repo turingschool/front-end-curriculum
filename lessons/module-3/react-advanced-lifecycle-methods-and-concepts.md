@@ -37,10 +37,10 @@ release, React has begun making some changes that will help prepare us for async
 rendering. Among those changes are getting rid of some lifecycle methods that
 are now considered UNSAFE to use and adding a few new lifecycle methods.
 
-We talked earlier this week about the Birth/Mounting Phase that a class base
+We talked earlier this week about the Birth/Mounting Phase that a class based
 React component goes through when it is created. Today, we are going to spend a
 little time learning about the other 2 phases of a component's lifecycle. You're
-going to split up into 5 groups and each group will be give a lifecycle method
+going to split up into groups and each group will be given a lifecycle method
 to research and learn about. You will then teach the rest of the class about
 your assigned lifecycle method. There are a number of resources at the bottom of
 this lesson that you can use, but by no means are you limited to just the ones
@@ -50,7 +50,7 @@ here.
 
 ### constructor()
 
-You've seen this before, this is where we call the inherited constructor
+You've seen this before... this is where we call the inherited constructor
 (`super`), and set our initial state.
 
 ### componentWillMount() - *will be deprecated with React 17*
@@ -69,9 +69,9 @@ render isn't the place for any complex logic. Keep it as dumb as possible.
 
 ### componentDidMount()
 
-`componentDidMount' is just called one time, in this birth/mounting process.
+`componentDidMount` is just called one time, in this birth/mounting process.
 This is important to remember when you're making API calls. If you need to make
-an API call *after* the component has allready call `componentDidMount`, you'll
+an API call *after* the component has already called `componentDidMount`, you'll
 need to do it somewhere else.
  
 ## Phase 2: Growth/Updating  
@@ -83,7 +83,7 @@ getDerivedStateFromProps()`.
 
 ### static getDerivedStateFromProps - *NEW with React 16.3.0*
 
-Since this method is static, you can't refernece `this` in it. Whatever object
+This method exists for only one purpose... it enables a component to update its internal state as the result of changes in props. Since this method is static, you can't refernece `this` in it. Whatever object
 is returned from this method is what the state of the component will be set to.
 This new method will be called on the initial mounting of the component, as well
 as when it's re-rendered.
@@ -131,12 +131,15 @@ any other necessary cleanup tasks.
 
 `componentDidCatch` allows you to set up error boundaries in your application,
 and display fallback UI rather than just letting the error crash into the
-console.
+console. Check the references below for more information.
 
 ## References
 
-- [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
-- [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
 - [React Lifecycle Docs](https://reactjs.org/docs/react-component.html)
+- [The React Life Cycle](https://developmentarc.gitbooks.io/react-indepth/content/life_cycle/introduction.html)
+- [Understanding Component Lifecycle](https://medium.com/@baphemot/understanding-reactjs-component-life-cycle-823a640b3e8d)
+- [Lifecycle Simulators](https://reactarmory.com/guides/lifecycle-simulators)
 - [Dan Abramov's Twitter chart/convo on modern React lifecycle methods](https://twitter.com/dan_abramov/status/981712092611989509)
+- [Error handling in React
+  16](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
 - [Update on Async Rendering](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)

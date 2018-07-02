@@ -197,28 +197,6 @@ function f (x, y = 7, z = 42) {
 f(1) // 50
 ```
 
-**Rest parameters:**
-
-Consider the following code:
-
-```
-// es5
-function f (x, y) {
-    var a = Array.prototype.slice.call(arguments, 2);
-    return (x + y) * a.length;
-};
-
-f(1, 2, "hello", true, 7) // 9
-
-// es6
-function f (x, y, ...arguments) {
-    return (x + y) * arguments.length
-}
-
-f(1, 2, "hello", true, 7) // 9
-```
-
-Instead of slicing the arguments, ES6 gives us the ability to grab all the rest of the parameters. The spread operator (`...`) takes the additional parameters and puts them all in an array that can be referenced later.
 
 **Spread operator:**
 

@@ -89,7 +89,7 @@ Because of this rule, I can create a function once, add it to whichever objects 
 
 Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
 
-Exercise: Move the logThis function so that when you execute the function it logs some of the following nested objects.
+**Exercise:** Move the logThis function so that when you execute the function it logs some of the following nested objects.
 ```js
 function logThis () {
   console.log( this );
@@ -115,28 +115,8 @@ const denver = {
 
 ## Rule 3 - _this_ in function code invoked using the new operator refers to the newly created object.
 
-The `new` keyword is used with constructor functions to create a new instance of an object.
+When the `new` keyword is used to invoke a constructor function or class, `this` refers to the newly created object (or instance).
 
-When the `new` keyword is used to invoke a function, `this` inside of the function refers to the newly created object.
-
-```javascript
-function SpaceProbe(title, classification) {
-  
-  // new empty object will log
-  console.log(this);  
-
-  this.title = title;
-  this.classification = classification
-
-  // object with added properties will log
-  console.log(this);  
-}
-
-var voyager1 = new SpaceProbe('Voyager 1', 'Space Probe');
-var voyager2 = new SpaceProbe('Voyager 2', 'Space Probe');
-```
-
-With ES6 classes, the class constructor function replaces our old ES5 constructor function.
 
 ```javascript
 class SpaceProbe {
@@ -152,12 +132,17 @@ class SpaceProbe {
     // object with added properties will log
     console.log(this);  
   }
+
+  loo() { 
+    console.log('Loo method! ', this);
+  }
   
 }
 ```
-When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created object.
 
+When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created instance.
 
+<!-- 
 ## Rule 4 - When a function is called with either call, apply or bind, _this_ is set to the first argument passed to call, apply or bind
 
 ```
@@ -179,7 +164,7 @@ logThis.apply(voyager1);
 var logVoyager = logThis.bind(voyager1);
 
 logVoyager();
-```
+``` -->
 
 ## The difference between `function () {}` and `() => {}`
 

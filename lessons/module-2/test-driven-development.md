@@ -158,17 +158,6 @@ Here is another more in-depth global lifecycle for best testing practices:
 
 ![Global Lifecycle](http://i.imgur.com/CL6Pr58.png)  
 
-
-## Testing Styles: \_Unit vs BDD
-
-```
-In the beginning, there weren't really testing frameworks, and it was not good.
-Then some programmers made _Unit testing frameworks. It was pretty good.
-Later, some other programmers made BDD testing frameworks. It was a little better.
-```
-
-The biggest two styles of testing frameworks are `_Unit` (there's a bunch of different versions for every language around: jUnit, nUnit, xUnit, sUnit, etc.) and `BDD` (behavior driven development). Today we'll be learning about BDD.
-
 ## BDD
 
 The idea with BDD is to specify behavior in a very natural, human way.
@@ -176,7 +165,7 @@ For example, tests should read like "Given X, when I do Y, then Z should happen.
 
 ## Testing Framework: Mocha  
 
-For now, we'll focus on the BDD testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
+For now, we'll focus on the testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
 
 [Mocha](https://mochajs.org/) is a testing framework that runs on Node.js in your terminal, and can also be run in your browser window.  
 
@@ -191,7 +180,7 @@ describe('unicorn', function() {
 })
 ```
 
-The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that `eating accumulates calories`. You'll write the code above with any BDD framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
+The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that `eating accumulates calories`. You'll write the code above with any framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
 
 ## Testing Practice: Adding Mocha and Chai   
 

@@ -1,6 +1,5 @@
 ---
-title: Introduction to JavaScript — Part I
-title: JS I
+title: JS I - Data Types, Variables, Conditionals, and Functions
 length: 180
 tags: javascript, introduction, foundation, variables
 ---
@@ -20,19 +19,18 @@ In this lesson we'll cover:
 
 ## Vocab
 
-- `Variable` A container for a value. The main building block for all programming
-- `Function` A predefined and reusable group of behavior
-- `Expression` An executable piece of code, the result of which may be assigned to a variable. Expressions result in a single value
-- `Statement` An executable piece of code (the result of which may or may not be able to be assigned to a variable)
-- `Array` A list of values
-- `Operator` Symbols that are used to assign, compare, and perform operations
-- `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 - `Data Type` A kind of data, defined by the values it can hold and the operations that can be done on it
 - `Primitive type` A kind of data type. Primitives in Javascript are [string, number, boolean, null, undefined, symbol]
-- `Assignment` Assigning a value to a variable
+- `Variable` A container for a value. The main building block for all programming
 - `Declare` Creating a new variable (distinct from assignment)
+- `Assignment` Assigning a value to a variable
+- `Statement` An executable piece of code
+- `Expression` An executable piece of code that resolves to a single value. The result of which may be assigned to a variable.
+- `Operator` Symbols that are used to assign, compare, and perform operations
+- `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
+- `Function` A predefined and reusable group of behavior
 - `Call/Invoke` Running a function
-- `Parameters` The variables declared in a function definition 
+- `Parameters` The variables declared in a function definition
 - `Arguments` The variables passed to a function when it's called/invoked
 
 ## History of JavaScript
@@ -53,9 +51,9 @@ Now that we know a little bit about JavaScript, let's talk about how to actually
 
 There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
 
-Javascript has six primitive data types: 
-- Null
-- Undefined
+Javascript has six primitive data types:
+- `null`
+- `undefined`
 - Boolean
 - Number
 - String
@@ -127,7 +125,7 @@ When we write a very simple variable like this, it's called _declaring_ the vari
 - You cannot use keywords or reserved words (such as `var` or `for`).
 - All variables are case sensitive.
 - Use names that describe the kind of information you plan to assign the variable.
-- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case (thisIsMyVariableName).
+- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`.
 
 ### Your Turn (in the console)
 
@@ -135,10 +133,10 @@ Declare 2 variables, one named "quantity" and one named "mythicalCreature"
 
 ## Variable Values: Assignment
 
-So, we have our variable. Now what? When we first create a variable, its value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to our `myVariableName` variable:
+So, we have our variable. Now what? When we first create a variable, its value is undefined because it doesn't have a value yet. This is because we have to set that value! Let's add a value to a `excellentHuman` variable:
 
 ```javascript
-var myVariableName = "Hello, variable!";
+var excellentHuman = "Fred Rogers";
 ```
 
 We've added a couple of things to our variable. Let's go through them:
@@ -151,7 +149,7 @@ Okay, let's ask the console to give us the value of our variable. How do we do t
 
 - Step 1: declare the variable and it's value
 - Step 2: call the variable
-- Step 3: dance for joy at seeing our assigned value of "Hello, variable!"
+- Step 3: dance for joy at seeing our assigned value of "Fred Rogers"
 
 Until you've added the assignment operator and the variable value, the variable is considered _undefined_.
 
@@ -200,6 +198,17 @@ var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature +
 ```
 This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and concatenate the data from our variable.
 
+# Statements
+
+A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon.
+
+Example statements:
+
+```javascript
+console.log('BOOM');
+alert('POW');
+```
+
 # Expressions
 
 An _expression_ results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
@@ -221,17 +230,6 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
-
-# Statements
-
-A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon.
-
-Example statements:
-
-```javascript
-console.log('BOOM');
-alert('POW');
-```
 
 ## Your Turn
 
@@ -298,38 +296,38 @@ Functions are a way to group statements together to perform a specific task. Fun
 
 ## Anatomy of a Function:
 ```javascript
-function makeStatement() {
-  var myFirstStatement = "Assigning a string to a variable called 'myFirstStatement'";
-  alert('This is my second statement!');
-  console.log(myFirstStatement);
-}]
+function makeStatements() {
+  var firstStatement = 'Pizza is amazing';
+  alert('Pizza is AMAZING!');
+  console.log(firstStatement);
+}
 ```
 
 - You declare a function using the keyword `function`.
 - You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
 - Since functions perform some action, it is generally a good idea to use and action verb in the function name. i.e. `getSize`, `saveNote`, `generateRandomNumber`.
 - You must follow the name of the function with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
-- Calling the function is quite easy. Simply type the function name with it's parenthesis and any associated parameters.
+- Calling the function is quite easy. Simply type the function name with it's parentheses and any associated parameters.
 
-## Call a Function:
+## Invoke a Function:
 ```javascript
-// Calling a function w/out arguments
-makeStatement();
+// Invoke a function w/out arguments
+makeStatements();
 
-// Calling a function with arguments
-makeStatement(arg1, arg2);
+// Invoke a function with arguments
+makeStatements(arg1, arg2);
 ```
 
-When this code is read, `makeStatement()` is "called", all three statements within the function's body (those curly braces) get run.
+When this code is read, `makeStatements()` is "invoked", all three statements within the function's body (those curly braces) get run.
 
 ### Your Turn
-Let's go ahead and declare makeStatement in the console together and then call it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
+Go ahead and declare the makeStatements function in the console and then invoke it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
 Create your own functions in the console:
 
 - Write a function that declares a `firstName` variable and a `lastName` variable, then alerts the user with a message that incorporates the full name, and then logs a random number to the console.
 
-- Write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables
+- Write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables.
 
 - Write a function that alerts the user with a message of "YO!", and then logs to the console a sum of eight different integers.
 
@@ -376,8 +374,9 @@ function addTwoNumbers(num1, num2) {
 The return statement ends function execution and specifies a value to be returned to the function caller. It looks like this:
 
 ```javascript
-return [[expression]]
-// The expression to return. If omitted, undefined is returned instead.
+// This is the formula:
+return [expression];
+// The expression to return. If omitted, undefined is returned instead. The [] are meant to show that the expression is dynamic.
 ```
 
 When a `return` statement is called in a function, the execution of this function is stopped. If specified, a given value is returned to the function caller. If the expression is omitted, undefined is returned instead. The following return statements all break the function execution:
