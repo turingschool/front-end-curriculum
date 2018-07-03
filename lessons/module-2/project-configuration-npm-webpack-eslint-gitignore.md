@@ -305,65 +305,61 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 2. Create a new file in the root of your repo: `.babelrc`
 3. Paste the following code into the `.babelrc` file:
 
-  ```js
-  {
-    "presets": ["env"]
-  }
-  ```
+    ```js
+    {
+      "presets": ["env"]
+    }
+    ```
 4. Paste the following code to the `webpack.config.js` file:
 
-  ```js
-  const path = require('path');
+    ```js
+    const path = require('path');
 
-  module.exports = {
-    devtool: 'inline-source-map',
-    entry: {
-      main: "./lib/index.js",
-      test: "mocha!./test/index.js"
-    },
-    output: {
-      path: __dirname,
-      filename: "[name].bundle.js"
-    },
-    module: {
-      loaders: [
-        {
-          test: /\.css$/,
-          exclude: /node_modules/,
-          loader: "style-loader!css-loader"
-        },
-        {
-          test: /\.js$/,
-          loader: 'babel-loader',
-          query: {
-            presets: ['es2015']
+    module.exports = {
+      devtool: 'inline-source-map',
+      entry: {
+        main: "./lib/index.js",
+        test: "mocha!./test/index.js"
+      },
+      output: {
+        path: __dirname,
+        filename: "[name].bundle.js"
+      },
+      module: {
+        loaders: [
+          {
+            test: /\.css$/,
+            exclude: /node_modules/,
+            loader: "style-loader!css-loader"
+          },
+          {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015']
+            }
           }
-        }
-      ]
-    },
-    resolve: {
-      extensions: ['', '.js', '.json', '.css']
-    }
-  };
-  ```
+        ]
+      },
+      resolve: {
+        extensions: ['', '.js', '.json', '.css']
+      }
+    };
+    ```
 
-5. In the `test/index-test.js` file, let's require chai:
+5. In the `test/index-test.js` file, let's require chai and write one test to see that mocha and chai are properly hooked up:
 
-  ```js
-  import { assert } from 'chai';
-  ```
-
-6. In the `test/index-test.js` file, let's write one test to see that mocha and chai are properly hooked up:
-
-  ```js
-  describe('test', function() {
-    it('should return true', function() {
-      assert.equal(true, true);
+    ```js
+    import { assert } from 'chai';
+    
+    describe('test', function() {
+      it('should return true', function() {
+        assert.equal(true, true);
+      });
     });
-  });
-  ```
+    ```
 
-7. In your terminal, run `npm test`
+6. In your terminal, run `npm test`
 
 ---
 
