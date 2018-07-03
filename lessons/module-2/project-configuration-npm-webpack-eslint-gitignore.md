@@ -170,7 +170,7 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 2. Edit the `scripts` portion of the `package.json` file:
 
     ```js
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register test",
+    "test": "./node_modules/mocha/bin/mocha --require babel-core/register test",
     "start": "webpack"
     ```
 3. Install the following dev dependencies:
