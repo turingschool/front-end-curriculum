@@ -170,7 +170,7 @@ Calculate a number to a specific power.
 // e.g.
 let base = 2;
 let power = 4;
-let product = power(base, power)  // 2 to the 4th power
+let product = power(base, exponent)  // 2 to the 4th power
 
 console.log(product);  // 16
 ```
