@@ -33,6 +33,6 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1sZeNIWS9YVMDrW7d1kk8mVgX4RZAmuG78IycV_4CTgg/edit?usp=sharing)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/13mO2QfKlMWsQKvlmQLLIVOAyTGIhwzj8JFFj2gtC3Kk/edit#gid=0)
 
 ![static-comp-challenge-2](/assets/images/static-comp-challenge-2.jpg)
