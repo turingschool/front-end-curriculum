@@ -1,5 +1,5 @@
 ---
-title: JS IV: Objects, `this`, and Constructor Functions
+title: JS IV - Objects, `this`, and Constructor Functions
 tags: js, introduction, constructor functions, this
 ---
 ### Goals
