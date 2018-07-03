@@ -347,15 +347,11 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
     };
     ```
 
-5. In the `test/index-test.js` file, let's require chai:
+5. In the `test/index-test.js` file, let's require chai and write one test to see that mocha and chai are properly hooked up:
 
     ```js
     import { assert } from 'chai';
-    ```
-
-6. In the `test/index-test.js` file, let's write one test to see that mocha and chai are properly hooked up:
-
-    ```js
+    
     describe('test', function() {
       it('should return true', function() {
         assert.equal(true, true);
@@ -363,7 +359,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
     });
     ```
 
-7. In your terminal, run `npm test`
+6. In your terminal, run `npm test`
 
 ---
 
