@@ -98,6 +98,6 @@ This is layout that takes a good amount of time to build. Don't wait until Monda
 
 ## Submission Details
 
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1sZeNIWS9YVMDrW7d1kk8mVgX4RZAmuG78IycV_4CTgg/edit?usp=sharing)
+* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/13mO2QfKlMWsQKvlmQLLIVOAyTGIhwzj8JFFj2gtC3Kk/edit#gid=0)
 
 ![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
