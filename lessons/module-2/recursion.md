@@ -174,3 +174,21 @@ let product = power(base, exponent)  // 2 to the 4th power
 
 console.log(product);  // 16
 ```
+
+### Exercise 5
+
+The Collatz conjecture applies to positive numbers and speculates that is alway possible to `get back to 1` if you follow these steps:
+
+- If `n` is 1, stop.
+- Otherwise, if `n` is even, repeate this process on `n/2`
+- Otherise, if `n` is odd, repeat this process on `3n + 1`
+
+Write a recursive function that calculatees how many steps it takes to get to 1
+
+n | collatz(n) |Steps
+--- | :---: | --- 
+2 | 1 | 2 -> 1 
+3 | 7 | 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+4 | 2 | 4 -> 2 -> 1
+5 | 5 | 5 -> 16 -> 8 -> 4 -> 2 -> 1
+6 | 8 | 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
