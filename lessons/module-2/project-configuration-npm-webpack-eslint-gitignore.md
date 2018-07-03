@@ -57,7 +57,7 @@ The `package.json` file is created when we initialize npm in a repo (the termina
 
 Let's take a look at an example `package.json` file:
 
-```
+```js
 {
   "name": "Super Rad App Name",
   "version": "1.0.0",
@@ -169,7 +169,7 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
 1. Run `npm init --yes` to create the `package.json` file.
 2. Edit the `scripts` portion of the `package.json` file:
 
-    ```
+    ```js
     "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register test",
     "start": "webpack"
     ```
@@ -179,10 +179,10 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - eslint
 4. Install the following dependencies:
   - webpack
-  - babel
+  <!-- - babel -->
   - babel-loader
   - babel-cli
-  - babel-core
+  <!-- - babel-core -->
   - babel-eslint
   - babel-preset-env
   - style-loader
@@ -224,7 +224,7 @@ While webpack can be difficult to understand at first, it makes our lives much e
 
 Here is the `webpack.config.js` file from the [gametime](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) repo:
 
-```
+```js
 const path = require('path');
 
 module.exports = {
@@ -279,7 +279,7 @@ Let's walk through how the `css-loader` was added to the react starter kit repo.
 `npm install style-loader css-loader --save-dev`
 2. In the `webpack.config.js` file, we add our configuration object
 
-```
+```js
 {
   test: /\.css$/,
   exclude: /node_modules/,
@@ -305,14 +305,14 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 2. Create a new file in the root of your repo: `.babelrc`
 3. Paste the following code into the `.babelrc` file:
 
-  ```
+  ```js
   {
-  "presets": ["env"]
+    "presets": ["env"]
   }
   ```
 4. Paste the following code to the `webpack.config.js` file:
 
-  ```
+  ```js
   const path = require('path');
 
   module.exports = {
@@ -349,13 +349,13 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 
 5. In the `test/index-test.js` file, let's require chai:
 
-  ```
+  ```js
   import { assert } from 'chai';
   ```
 
 6. In the `test/index-test.js` file, let's write one test to see that mocha and chai are properly hooked up:
 
-  ```
+  ```js
   describe('test', function() {
     it('should return true', function() {
       assert.equal(true, true);
@@ -383,7 +383,7 @@ What are the benefits of consistent code?
 1. Create a new file in the root of your repo: `.eslintrc`
 2. In that file, add this code:
 
-    ```
+    ```js
     {
       "extends": "eslint:recommended",
       "env": {
