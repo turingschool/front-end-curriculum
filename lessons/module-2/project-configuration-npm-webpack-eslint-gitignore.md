@@ -305,11 +305,11 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 2. Create a new file in the root of your repo: `.babelrc`
 3. Paste the following code into the `.babelrc` file:
 
-  ```js
-  {
-    "presets": ["env"]
-  }
-  ```
+    ```js
+    {
+      "presets": ["env"]
+    }
+    ```
 4. Paste the following code to the `webpack.config.js` file:
 
   ```js
