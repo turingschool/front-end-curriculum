@@ -369,9 +369,9 @@ As we mentioned above, the simpler way of testing your UI is snapshot tests.
 ### Testing Dynamic Changes 
 
 Above we said that `create-react-app` uses Jest as a test-runner [Jest](http://facebook.github.io/jest/) 
-(instead of Mocha). Jest also includes its own expectation library.  
-The syntax is notably similar to Chai's but there are differences. One 
-difference is `expect` syntax instead of `assert` syntax.  
+(instead of Mocha). Jest also includes its own expectation library as well as an assertion library.  
+The syntax is notably similar to Chai's but there are differences. You will see that in these lessons,
+we primarily use the `expect` syntax that Jest provides.  
 
 [Jest Expectations](https://facebook.github.io/jest/docs/api.html) 
 
