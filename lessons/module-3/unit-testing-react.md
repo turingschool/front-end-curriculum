@@ -35,10 +35,11 @@ module: 3
 **Golden Rule**: No copy and pasting. Part of the point of this exercise is to
 build up some muscle memory.
 
-When testing any kind of application, most of
-the tests your write will be *unit tests*.  For practical purposes a unit is a
-function. When we write code that is testable at the unit level, we can more
-easily scale and extend our applications.
+When testing React apps or when testing any kind of application, most of
+the tests we write are *unit tests*. Unit tests make sure that individual units 
+(small parts that can be isolated) within our code behave as we intend them to.
+The more we can write our code in a way that is testable at the unit level, 
+the easier it will be to scale and extend our applications.
 
 ---
 **_Turn and talk_: We hear a lot about unit, integration, and acceptance tests.
@@ -224,9 +225,18 @@ export default Grocery;
 
 (Some of the props are included now to be used later.)
 
-### Snapshot testing
+## Two Ways to Test for Correctly Rendered Element Tags
 
-Here is a simple way of testing the UI, snapshot tests:
+### Snapshot Testing and Tag Rendering Testing
+
+TDD can begin by testing that the basic DOM is being rendered as we wish. There are
+two ways to test that the elements we expect are being rendered: snapshot tests or
+basic tag rendering tests. Tag rendering tests are an earlier approach.  Snapshot 
+tests are a newer way to test for the same things.  You should use snapshot tests
+in our projects, but be familiar with the tag rendering tests, too.
+
+
+### Snapshot Tests:
 
 Snapshot tests are not really TDD. Instead, snapshot tests compare against
 a previous snapshot of a component. If something in the UI has changed since the
@@ -316,6 +326,45 @@ snapshots in one of two ways:
 Run:
 
 ```npm test```
+
+### Tag Rendering Tests
+
+Delete or comment out the snapshot test you just wrote.
+
+Now, in `Grocery.test.js`, we can write a simple test to see if the `name` property 
+is properly rendered in the component when passed in as a prop.
+
+-```js
+-import React from 'react';
+-import { shallow, mount } from 'enzyme';
+-
+-import Grocery from './Grocery';
+-
+-describe('Grocery', () => {
+-
+-  it('renders the name of the grocery in <h3> tags', () => {
+-    const wrapper = shallow(<Grocery name="Bananas" />);
+-    const title = <h3>Bananas</h3>;
+-
+-    expect(wrapper.contains(title)).toEqual(true);
+-  });
+-
+-});
+-```
+-
+As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) 
+instead of Mocha. One difference is that Jest includes its own expectation library which
+is similar to Chai's `expect` syntax instead of an `assert` syntax.  
+
+-[Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
+
+If you run `npm test` you can see your new test pass, or you may see that you have kept
+your test process running and that the new test has run automatically.
+
+### PropTypes
+PropTypes, though not a test, also cover the kind of behavior handled by the test we just wrote.
+If you use PropTypes throughout your application you probably do not need the Tag Rendering test.
+As we mentioned above, the simpler way of testing your UI is snapshot tests.
 
 ### Testing Dynamic Changes 
 
@@ -440,7 +489,7 @@ Add this test:
 it('should call the onPurchase prop when clicked', () => {
   const onPurchaseMock = jest.fn();
 
-  const wrapper = mount( //mount is good for testing methods on components, see below
+  const wrapper = shallow( 
     <Grocery
       name="Bananas"
       purchased={true}
@@ -520,11 +569,11 @@ class App extends Component {
     })
   }
 
-  groceryList = () => {
-    this.state.groceries.map(grocery => (
-      <Grocery {...grocery} />
-    ))
-  }
+  groceryList = () => (                     // Notice the two implicit returns,
+    this.state.groceries.map(grocery => (   // recognizeable by wrapping parentheses.
+      <Grocery {...grocery} />              // Can you spot them?                                         
+    ))                                      // Do you understand them?
+  )
 
   render() {
     return (
