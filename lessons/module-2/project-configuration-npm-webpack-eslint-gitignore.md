@@ -316,7 +316,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
       },
       output: {
         path: __dirname,
-        filename: "[name].bundle.js"
+        filename: "dist/[name].bundle.js"
       },
       module: {
         rules: [
