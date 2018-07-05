@@ -12,7 +12,7 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
 
 ## Pre-lesson Homework
 
-1. Create a directory named `TDD`
+1. Create a directory named `boilerplate`
 2. Create sub-directories called `lib` and `test`
 3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
 4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
@@ -164,7 +164,7 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
  Run custom script located in `package.json`
 
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Run `npm init --yes` to create the `package.json` file.
 2. Edit the `scripts` portion of the `package.json` file:
@@ -299,7 +299,7 @@ You can read more about loaders [here](https://webpack.js.org/concepts/#loaders)
 
 In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it references the all-neatly-bundled-up JS file that webpack made for us!
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Create a new file in the root of your repo: `webpack.config.js`
 2. Create a new file in the root of your repo: `.babelrc`
@@ -374,7 +374,7 @@ What are the benefits of consistent code?
 - It reduces the chances of syntax errors
 - A consistent style makes it easier to begin understanding and writing code in an unfamiliar project
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Create a new file in the root of your repo: `.eslintrc`
 2. In that file, add this code:
@@ -495,7 +495,7 @@ Common things to add to your `.gitignore` file are:
 - API keys, other sensitive data
     (note: there are better ways to obscure and protect data that will be covered in Mod 4)
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Create a new file in the root of your repo: `.gitignore`
 2. In that file, add the filepaths of the directories or files we don't want added to github.
