@@ -177,12 +177,12 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - mocha
   - chai
   - eslint
+  
 4. Install the following dependencies:
   - webpack
-  <!-- - babel -->
+  - webpack-cli
   - babel-loader
   - babel-cli
-  <!-- - babel-core -->
   - babel-eslint
   - babel-preset-env
   - style-loader
