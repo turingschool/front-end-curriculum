@@ -182,6 +182,7 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - webpack
   - webpack-cli
   - babel-loader
+  - babel-preset-es2015
   - babel-cli
   - babel-eslint
   - babel-preset-env
@@ -225,36 +226,37 @@ While webpack can be difficult to understand at first, it makes our lives much e
 Here is the `webpack.config.js` file from the [gametime](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) repo:
 
 ```js
-const path = require('path');
+ const path = require('path');
 
-module.exports = {
-  devtool: 'inline-source-map',
-  entry: {
-    main: "./lib/index.js",
-    test: "mocha!./test/index.js"
-  },
-  output: {
-    path: __dirname,
-    filename: "[name].bundle.js"
-  },
-  module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        loader: "style-loader!css-loader"
-      }
-    ]
-  },
-  resolve: {
-    extensions: ['', '.js', '.json', '.css']
-  }
-};
+ module.exports = {
+   devtool: 'inline-source-map',
+   entry: {
+     main: "./lib/index.js"
+   },
+   output: {
+     path: __dirname,
+     filename: "[name].bundle.js"
+   },
+   module: {
+     rules: [
+       {
+         test: /\.css$/,
+         exclude: /node_modules/,
+         loader: "style-loader!css-loader"
+       },
+       {
+         test: /\.js$/,
+         loader: 'babel-loader',
+         query: {
+           presets: ['es2015']
+         }
+       }
+     ]
+   },
+   resolve: {
+     extensions: ['.js', '.json', '.css']
+   }
+ };
 ```
 
 #### devtool
