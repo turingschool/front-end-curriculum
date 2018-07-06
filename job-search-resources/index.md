@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Front-End Postwork
+title: Job Search Resources
 ---
 
 After you leave Turing you will undoubtedly have a bookmarks tab full of all the technology you should be learning, all the blog posts you should read, all the videos you should watch, etc etc etc.
