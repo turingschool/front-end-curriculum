@@ -12,7 +12,7 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
 
 ## Pre-lesson Homework
 
-1. Create a directory named `TDD`
+1. Create a directory named `boilerplate`
 2. Create sub-directories called `lib` and `test`
 3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
 4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
@@ -57,7 +57,7 @@ The `package.json` file is created when we initialize npm in a repo (the termina
 
 Let's take a look at an example `package.json` file:
 
-```
+```js
 {
   "name": "Super Rad App Name",
   "version": "1.0.0",
@@ -164,25 +164,26 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
  Run custom script located in `package.json`
 
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Run `npm init --yes` to create the `package.json` file.
 2. Edit the `scripts` portion of the `package.json` file:
 
-    ```
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register test",
+    ```js
+    "test": "./node_modules/mocha/bin/mocha --require babel-core/register test",
     "start": "webpack"
     ```
 3. Install the following dev dependencies:
   - mocha
   - chai
   - eslint
+  
 4. Install the following dependencies:
   - webpack
-  - babel
+  - webpack-cli
   - babel-loader
+  - babel-preset-es2015
   - babel-cli
-  - babel-core
   - babel-eslint
   - babel-preset-env
   - style-loader
@@ -224,35 +225,28 @@ While webpack can be difficult to understand at first, it makes our lives much e
 
 Here is the `webpack.config.js` file from the [gametime](https://github.com/turingschool-examples/game-time-starter-kit-FEm1) repo:
 
-```
+```js
 const path = require('path');
 
 module.exports = {
   devtool: 'inline-source-map',
   entry: {
     main: "./lib/index.js",
-    test: "mocha!./test/index.js"
+    test: "mocha-loader!./test/index.js"
   },
+  mode: 'development',
   output: {
     path: __dirname,
     filename: "[name].bundle.js"
   },
   module: {
-    loaders: [
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
-      },
-      {
-        test: /\.css$/,
-        exclude: /node_modules/,
-        loader: "style-loader!css-loader"
-      }
+    rules: [
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
+      { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] }
     ]
   },
   resolve: {
-    extensions: ['', '.js', '.json', '.css']
+    extensions: ['.js', '.json', '.css']
   }
 };
 ```
@@ -279,7 +273,7 @@ Let's walk through how the `css-loader` was added to the react starter kit repo.
 `npm install style-loader css-loader --save-dev`
 2. In the `webpack.config.js` file, we add our configuration object
 
-```
+```js
 {
   test: /\.css$/,
   exclude: /node_modules/,
@@ -299,71 +293,66 @@ You can read more about loaders [here](https://webpack.js.org/concepts/#loaders)
 
 In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it references the all-neatly-bundled-up JS file that webpack made for us!
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Create a new file in the root of your repo: `webpack.config.js`
 2. Create a new file in the root of your repo: `.babelrc`
 3. Paste the following code into the `.babelrc` file:
 
-  ```
-  {
-  "presets": ["env"]
-  }
-  ```
+    ```js
+    {
+      "presets": ["env"]
+    }
+    ```
 4. Paste the following code to the `webpack.config.js` file:
 
-  ```
-  const path = require('path');
+    ```js
+    const path = require('path');
 
-  module.exports = {
-    devtool: 'inline-source-map',
-    entry: {
-      main: "./lib/index.js",
-      test: "mocha!./test/index.js"
-    },
-    output: {
-      path: __dirname,
-      filename: "[name].bundle.js"
-    },
-    module: {
-      loaders: [
-        {
-          test: /\.css$/,
-          exclude: /node_modules/,
-          loader: "style-loader!css-loader"
-        },
-        {
-          test: /\.js$/,
-          loader: 'babel-loader',
-          query: {
-            presets: ['es2015']
+    module.exports = {
+      devtool: 'inline-source-map',
+      entry: {
+        main: "./lib/index.js"
+      },
+      output: {
+        path: __dirname,
+        filename: "dist/[name].bundle.js"
+      },
+      module: {
+        rules: [
+          {
+            test: /\.css$/,
+            exclude: /node_modules/,
+            loader: "style-loader!css-loader"
+          },
+          {
+            test: /\.js$/,
+            loader: 'babel-loader',
+            query: {
+              presets: ['es2015']
+            }
           }
-        }
-      ]
-    },
-    resolve: {
-      extensions: ['', '.js', '.json', '.css']
-    }
-  };
-  ```
+        ]
+      },
+      resolve: {
+        extensions: ['.js', '.json', '.css']
+      }
+    };
+    ```
 
-5. In the `test/index-test.js` file, let's require chai:
+5. In the `test/index-test.js` file, let's require chai and write one test to see that mocha and chai are properly hooked up:
 
-  ```
-  import { assert } from 'chai';
-  ```
-
-6. In the `test/index-test.js` file, let's write one test to see that mocha and chai are properly hooked up:
-
-  ```
-  describe('test', function() {
-    it('should return true', function() {
-      assert.equal(true, true);
+    ```js
+    import { assert } from 'chai';
+    
+    describe('test', function() {
+      it('should return true', function() {
+        assert.equal(true, true);
+      });
     });
-  });
-  ```
+    ```
 
-7. In your terminal, run `npm test`
+6. In your terminal, run `npm test`
 
 ---
 
@@ -378,12 +367,12 @@ What are the benefits of consistent code?
 - It reduces the chances of syntax errors
 - A consistent style makes it easier to begin understanding and writing code in an unfamiliar project
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Create a new file in the root of your repo: `.eslintrc`
 2. In that file, add this code:
 
-    ```
+    ```js
     {
       "extends": "eslint:recommended",
       "env": {
@@ -499,7 +488,7 @@ Common things to add to your `.gitignore` file are:
 - API keys, other sensitive data
     (note: there are better ways to obscure and protect data that will be covered in Mod 4)
 
-### In your TDD repo:
+### In your boilerplate repo:
 
 1. Create a new file in the root of your repo: `.gitignore`
 2. In that file, add the filepaths of the directories or files we don't want added to github.

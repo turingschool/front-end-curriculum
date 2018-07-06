@@ -117,9 +117,7 @@ Visit <a href="http://codepen.io/team/turing/pen/GqEBqg" target="_blank">this pa
 #### Challenging
 
 * Select an element and set `contentEditable` to true. Now, click on the element. What happened?
-* Take a look at the [MDN documentation for DOM events][mdndom]. Can you bind a function to the click event of the element?
-
-[mdndom]: https://developer.mozilla.org/en-US/docs/Web/API/Event
+* Take a look at the [MDN documentation for DOM events][events-mdn]. Can you bind a function to the click event of the element?
 
 ## Adding Event Listeners
 

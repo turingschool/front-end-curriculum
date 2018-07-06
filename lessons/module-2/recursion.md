@@ -169,71 +169,26 @@ Calculate a number to a specific power.
 
 // e.g.
 let base = 2;
-let power = 4;
-let product = power(base, power)  // 2 to the 4th power
+let exponent = 4;
+let product = power(base, exponent)  // 2 to the 4th power
 
 console.log(product);  // 16
 ```
 
-
 ### Exercise 5
 
-Flatten a nested object so that all the values stored in any array is returned in one array.
+The Collatz conjecture applies to positive numbers and speculates that is alway possible to `get back to 1` if you follow these steps:
 
-```
-const groceryList = {
-  produce: {
-    fruit: ['apples', 'bananas', 'avocados'],
-    vegetables: ['bell peppers', 'carrots'],
-    herbs: ['basil', 'cilantro', 'parsley']
-  },
-  dairy: {
-    milk: ['2 percent milk', 'soy milk'],
-    cheese: ['cheddar', 'brie']
-  },
-  dryGoods: {
-    canned: ['vegetable broth', 'diced tomatoes'],
-    boxedOrBagged: ['angel hair pasta']
-  },
-  frozen: {
-    vegetables: ['corn', 'peas', 'edamame'],
-    desserts: ['ice cream sandwiches']
-  }
-}
+- If `n` is 1, stop.
+- Otherwise, if `n` is even, repeate this process on `n/2`
+- Otherise, if `n` is odd, repeat this process on `3n + 1`
 
-flatten(groceryList);
-// [
-    'apples',
-    'bananas',
-    'avocados',
-    'bell peppers',
-    'carrots',
-    'basil',
-    'cilantro',
-    'parsley',
-    '2 percent milk',
-    'soy milk',
-    'cheddar',
-    'brie',
-    'vegetable broth',
-    'diced tomatoes',
-    'angel hair pasta',
-    'corn',
-    'peas',
-    'edamame',
-    'ice cream sandwiches'
-   ]
-```
+Write a recursive function that calculatees how many steps it takes to get to 1
 
-### Exercise 6
-
-Write a recursive function to determine if two different objects have the same properties and values.
-
-```
-const obj1 = { name: 'Avery', age: 7, faveColor: 'green' };
-const obj2 = { name: 'Avery', age: 7, faveColor: 'green' };
-const obj3 = { name: 'Jesse', age: 7, faveColor: 'orange' };
-
-deepEqual( obj1, obj2 ); // true
-deepEqual( obj1, obj3 ); // false
-```
+n | collatz(n) |Steps
+--- | :---: | --- 
+2 | 1 | 2 -> 1 
+3 | 7 | 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+4 | 2 | 4 -> 2 -> 1
+5 | 5 | 5 -> 16 -> 8 -> 4 -> 2 -> 1
+6 | 8 | 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1

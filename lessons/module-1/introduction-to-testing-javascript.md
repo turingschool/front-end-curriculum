@@ -81,9 +81,7 @@ Let's talk a little bit about what's going on here:
 ```js
 describe('square', function () {
   it('returns the square of a number', function () {
-    var result = square(2);
-
-    assert.equal(result, 4);
+    assert.equal(square(2), 4);
   });
 });
 ```
@@ -100,9 +98,7 @@ function square(n) {
 ```js
 describe('square', function () {
 //  it('returns the square of a number', function () {
-//    var result = square(2);
-//
-//    assert.equal(result, 4);
+//    assert.equal(square(2), 4);
 //  });
 });
 ```
@@ -112,9 +108,7 @@ describe('square', function () {
 ```js
 //describe('square', function () {
   it('returns the square of a number', function () {
-    var result = square(2);
-
-    assert.equal(result, 4);
+    assert.equal(square(2), 4);
   });
 //});
 
@@ -125,9 +119,7 @@ describe('square', function () {
 ```js
 //describe('square', function () {
 //  it('returns the square of a number', function () {
-    var result = square(2);
-
-    assert.equal(result, 4);
+    assert.equal(square(2), 4);
 //  });
 //});
 ```
@@ -146,7 +138,7 @@ Below you will find the general syntax for assertions for most of the methods av
 
 You'll notice that our method takes three arguments (the third being optional, as denoted by the square brackets): 
 
-- actual: The result we get when we run our JS code 
+- actual: The actual JS code that you want to run from the codebase
 - expected: The expected output that should be returned based on test requirements
 - message: A (String) message to yourself on what is being tested
 
