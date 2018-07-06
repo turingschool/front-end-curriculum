@@ -17,7 +17,7 @@ For example, if you're on vacation, commit to doing two hours of code with your 
 
 ## Interview Practice
 
-### [Interview Practice and Lesson Plan Links](http://frontend.turing.io/lessons/module-4/interview-question-practice.html)
+### [Interview Practice and Lesson Plan Links](http://frontend.turing.io/lessons/module-4/practice-interview-questions/interview-questions.html)
 
 ## Code Resources
 
