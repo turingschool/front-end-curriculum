@@ -30,8 +30,8 @@ for these endpoints first. Start with the GET endpoint and then move on to the P
 
 ### What is it?
 
-Middleware got the name because it is a function that is run in the _middle_ of your request. So a request is received by your server 
-and before it gets to the route handler (the endpoint), Express will run any middleware for that endpoint.
+Middleware got the name because it is a regular JavaScript function that is run in the _middle_ of your request. So a request is 
+received by your server and before it gets to the route handler (the endpoint), Express will run any middleware for that endpoint.
 
 We can take it step-by-step:
 
@@ -52,6 +52,11 @@ Instead we'll make our own!
 
 As a primer, read through the introduction on [this Express documentation page](https://expressjs.com/en/guide/using-middleware.html) and the 
 first example under the section "Application-level middleware".
+
+#### Your Turn
+
+Turn to someone next to you and talk about the documentation you just read. What does a middleware function look like and how do you 
+apply a middleware function to an endpoint?
 
 ### First Middleware
 
@@ -81,3 +86,10 @@ Next, in the server file there is a commented section something like this:
 
 Again, create a function that starts small by console logging, apply the middleware _only_ to the POST request, and test a request. Then 
 add the functionality listed in the comments.
+
+### Checks for Understanding
+
+* Describe the flow of a middleware function. At what point in the request-response cycle is it run?
+* What three arguments must be passed into a middleware function?
+* How do you apply a middleware function to all endpoints?
+* How do you apply a middleware function to a single endpoint?
