@@ -1,18 +1,40 @@
-This lesson goes with [this repo](https://github.com/turingschool-examples/react-router-example)
+---
+title: React Router 4
+tags: React, Router
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Agenda
 
-# React Router (v4)
+* Discuss the need for routing
+* Learn about the building blocks of React Router
+* Learn about the different types of `<Route />`
+* Learn about Link, NavLink, Redirect, and Switch
+* Build some routes
+* Build some dynamic routes using url params
 
-### By the end of this lesson you should...
-* Explain the need for routing
+## Learning Goals
+* Be able to explain the need for routing
 * Be able to implement React Router in a project
 * Articulate what each of these components do:
     * BrowserRouter
     * Route
     * Link / NavLink
     * Switch
-    
+
+## Vocab
+* Route
+* BrowserRouter
+* Link
+* NavLink
+* Redirect
+* Switch
+* match
+
+## React Router (v4)
+This lesson goes with [this repo](https://github.com/turingschool-examples/react-router-example)
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
 ### Why Routing?
 
 Up until now you've been creating single page applications that conditionally render based on a boolean in state. Something along the lines of...
@@ -154,7 +176,7 @@ _Provides declarative, accessible navigation around your application._
 
 ### NavLink
 
-_A special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL._
+_A special version of the `<Link>` that will add styling attributes to the rendered element when it matches the current URL._
 
 It can take the following attributes:
 
@@ -175,7 +197,7 @@ It can take the following attributes:
 
 ### Redirect
 
-_Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
+_Rendering a `<Redirect>` will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
 
 It can take the following attributes:
 
@@ -192,9 +214,9 @@ It can take the following attributes:
 
 ### Switch
 
-_Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively**(only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively**(more than one route can match and render at a time)_
+_Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively** (only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively** (more than one route can match and render at a time)_
 
-```
+```javascript
 <Switch>
   <Route exact path='/' component={Home} />
   <Route path='/users/add' component={UserAddPage} />
