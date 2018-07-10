@@ -176,7 +176,7 @@ _Provides declarative, accessible navigation around your application._
 
 ### NavLink
 
-_A special version of the Link that will add styling attributes to the rendered element when it matches the current URL._
+_A special version of the `<Link>` that will add styling attributes to the rendered element when it matches the current URL._
 
 It can take the following attributes:
 
@@ -197,7 +197,7 @@ It can take the following attributes:
 
 ### Redirect
 
-_Rendering a Redirect will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
+_Rendering a `<Redirect>` will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
 
 It can take the following attributes:
 
