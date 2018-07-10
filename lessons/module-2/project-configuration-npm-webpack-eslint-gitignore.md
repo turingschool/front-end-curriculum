@@ -318,6 +318,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
         path: __dirname,
         filename: "dist/[name].bundle.js"
       },
+      mode: 'development',
       module: {
         rules: [
           {
