@@ -197,7 +197,7 @@ It can take the following attributes:
 
 ### Redirect
 
-_Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
+_Rendering a Redirect will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
 
 It can take the following attributes:
 
