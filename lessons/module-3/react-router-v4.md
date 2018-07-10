@@ -5,6 +5,13 @@ tags: React, Router
 
 ## Agenda
 
+* Discuss the need for routing
+* Learn about the building blocks of React Router
+* Learn about the different types of `<Route />`
+* Learn about Link, NavLink, Redirect, and Switch
+* Build some routes
+* Build some dynamic routes using url params
+
 ## Learning Goals
 * Be able to explain the need for routing
 * Be able to implement React Router in a project
@@ -15,15 +22,19 @@ tags: React, Router
     * Switch
 
 ## Vocab
-
+* Route
+* BrowserRouter
+* Link
+* NavLink
+* Redirect
+* Switch
+* match
 
 ## React Router (v4)
 This lesson goes with [this repo](https://github.com/turingschool-examples/react-router-example)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
-### By the end of this lesson you should...
-    
 ### Why Routing?
 
 Up until now you've been creating single page applications that conditionally render based on a boolean in state. Something along the lines of...
@@ -165,7 +176,7 @@ _Provides declarative, accessible navigation around your application._
 
 ### NavLink
 
-_A special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL._
+_A special version of the Link that will add styling attributes to the rendered element when it matches the current URL._
 
 It can take the following attributes:
 
