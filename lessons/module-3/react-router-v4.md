@@ -111,7 +111,7 @@ Render differs slightly from Component, let's check out the [docs](https://react
 **Children**
 
 ```javascript
-<Route path='/other-unicorns children={ () => <Unicorns /> } />
+<Route path='/other-unicorns' children={ () => <Unicorns /> } />
 ```
 It works exactly like render except that it gets called whether there is a match or not.
 
