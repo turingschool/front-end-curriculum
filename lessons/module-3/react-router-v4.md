@@ -214,7 +214,7 @@ It can take the following attributes:
 
 ### Switch
 
-_Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively**(only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively**(more than one route can match and render at a time)_
+_Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively** (only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively** (more than one route can match and render at a time)_
 
 ```javascript
 <Switch>
