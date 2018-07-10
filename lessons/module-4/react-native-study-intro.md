@@ -24,6 +24,7 @@ open a new tab in terminal and run
 `exp ios`
 
 ## Native vs React-Native vs PWA 
+
 |                   | Native        | React-Native | PWA | 
 | ---               |   :-:         |   :-:  | :-: | 
 | UI                | Native        | Native | Web / Can look Native |
