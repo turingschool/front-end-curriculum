@@ -1,17 +1,28 @@
-This lesson goes with [this repo](https://github.com/turingschool-examples/react-router-example)
+---
+title: React Router 4
+tags: React, Router
+---
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+## Agenda
 
-# React Router (v4)
-
-### By the end of this lesson you should...
-* Explain the need for routing
+## Learning Goals
+* Be able to explain the need for routing
 * Be able to implement React Router in a project
 * Articulate what each of these components do:
     * BrowserRouter
     * Route
     * Link / NavLink
     * Switch
+
+## Vocab
+
+
+## React Router (v4)
+This lesson goes with [this repo](https://github.com/turingschool-examples/react-router-example)
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+### By the end of this lesson you should...
     
 ### Why Routing?
 
