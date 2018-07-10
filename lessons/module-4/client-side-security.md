@@ -42,7 +42,7 @@ In groups of three, pick one of the following articles to read:
 
 - [Scenario 1](https://wptavern.com/ryan-hellyers-aws-nightmare-leaked-access-keys-result-in-a-6000-bill-overnight)
 - [Scenario 2](https://www.theguardian.com/business/2013/apr/23/ap-tweet-hack-wall-street-freefall)
-- Scenario 3 [Small Example](http://www.html5gamedevs.com/topic/26341-have-your-games-been-stolen-check-here/) & [Large Example](https://arstechnica.com/gaming/2016/06/what-drove-one-half-life-2-super-fan-to-hack-into-valves-servers/)
+- [Scenario](https://arstechnica.com/gaming/2016/06/what-drove-one-half-life-2-super-fan-to-hack-into-valves-servers/)
 - [Scenario 4](http://www.bbc.com/news/technology-30575104)
 - [Scenario 5](https://www.theguardian.com/technology/2017/jan/10/browser-autofill-used-to-steal-personal-details-in-new-phising-attack-chrome-safari)
 - Scenario 6 [Watch (pertinent part at 0:45](https://www.youtube.com/watch?v=-hxX_Q5CnaA) & [Read](http://www.businessinsider.com/when-amazon-launched-a-bug-allowed-users-to-get-paid-by-the-company-2011-10)
