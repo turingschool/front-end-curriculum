@@ -8,6 +8,8 @@ A trie is a data structure in computer science. The word trie is derived from th
 
 Now there are many types of tries and one you will hear a lot about is the `binary search trie`. It is similar to a linked list the difference being that each child node has a single left and right node attached to it.
 
+The benefits of something like a `trie` is that it makes dealing with large sets of data easier to handle.
+
 ## What do you mean by data structure?
 
 A data structure is just a particular way of organizing data so that it can be accessed and modified efficiently and quickly. Up to this point you've used data structures that are built into javascript to manage how your data is accessed and manipulated (Array and Object). 
@@ -53,7 +55,7 @@ If we query the trie for names that begin with `a` our data set is sizably reduc
 
 ## Complete Me
 
-Autocomplete features are a very common convention for text inputs on search fields. In this project you are going to be building a low level version of an auto complete system in JavaScript.
+Autocomplete features are a very common convention for text inputs on search fields. In this project you are going to be building a low level version of an auto complete system in JavaScript. Use the boilerplate repos you created during the project configuration lesson.
 
 ### Hint
 You can use `console.log` along with `JSON.stringify` to view your trie in your console when running your tests.
@@ -142,7 +144,7 @@ future projects. (Note: don't publish to npm, you can install your package from 
 
 ### Front Facing Application
 
-See if you can implement a front facing application for your `trie`. The user should be able to submit a word and then receive the suggestions on the dom.
+See if you can implement a front facing application for your `trie`. The user should be able to submit a word and then receive the suggestions on the DOM.
 
 ### Delete method
 
