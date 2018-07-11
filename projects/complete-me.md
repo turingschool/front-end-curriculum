@@ -55,7 +55,33 @@ If we query the trie for names that begin with `a` our data set is sizably reduc
 
 ## Complete Me
 
-Autocomplete features are a very common convention for text inputs on search fields. In this project you are going to be building a low level version of an auto complete system in JavaScript. Use the boilerplate repos you created during the project configuration lesson.
+Autocomplete features are a very common convention for text inputs on search fields. In this project you are going to be building a low level version of an auto complete system in JavaScript. You'll use the boilerplate repos you created during the project configuration lesson by following these steps:
+
+1. Retrieve the git remote URL for your boilerplate repo by navigating to your repo at github.com. It should be something like `https://github.com/brittanystoroz/boilerplate.git`. Copy this to your clipboard.
+
+2. In your terminal, create a new project directory called `complete-me`. CD into it and run `git init`
+
+3. Add your boilerplate repo as a remote called `boilerplate` with the following command:
+
+`git remote add boilerplate https://github.com/brittanystoroz/boilerplate.git`
+
+4. Copy your `boilerplate` master into your `complete-me` master with the following command:
+
+`git pull boilerplate master`
+
+5. Go back to github in the browser and create a new repository called `complete-me`. Do **not** add a `.gitignore` file and do **not** add a license.
+
+6. Click the 'Create Repository' button and copy the git URL for your new repo to your clipboard. It should be something like `https://github.com/brittanystoroz/complete-me.git`
+
+7. In your terminal, in your `complete-me` directory, add your new github repo as a remote with the following command:
+
+`git remote add origin https://github.com/brittanystoroz/complete-me.git`
+
+8. Push up your current master branch to your origin remote:
+
+`git push origin master`
+
+
 
 ### Hint
 You can use `console.log` along with `JSON.stringify` to view your trie in your console when running your tests.
