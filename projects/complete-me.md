@@ -132,7 +132,7 @@ prefixTrie.suggest('world');
 => [ 'world', 'worlded', 'worldful', 'worldish', ...]
 ```
 
-## Phase 4
+## Phase 4 (not due upon evals)
 
 Next week you will create a Weather App that needs an autocomplete feature.
 Package your complete-me trie in a node module so that you can import it into
