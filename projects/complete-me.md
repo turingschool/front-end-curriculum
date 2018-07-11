@@ -53,7 +53,7 @@ If we query the trie for names that begin with `a` our data set is sizably reduc
 
 ## Complete Me
 
-Everybody uses auto complete. In this project you are going to be building a low level version of an auto complete system in javascript.
+Autocomplete features are a very common convention for text inputs on search fields. In this project you are going to be building a low level version of an auto complete system in JavaScript.
 
 ### Hint
 You can use `console.log` along with `JSON.stringify` to view your trie in your console when running your tests.
@@ -68,16 +68,16 @@ The first thing your `trie` should be able to do is take in a word. It should al
 ```js
 import Trie from "./lib/Trie";
 
-var completion = new Trie();
+var prefixTrie = new Trie();
 
-completion.insert("hello");
+prefixTrie.insert("hello");
 
-completion.count();
+prefixTrie.count();
 => 1
 
-completion.insert('world');
+prefixTrie.insert('world');
 
-completion.count();
+prefixTrie.count();
 => 2
 ```
 
@@ -88,33 +88,32 @@ Once the words are placed into the `trie` it should be able to offer some sugges
 You will need to write a method called `suggest` that will take in a word prefix and return an array of words that match the desired prefix. 
 
 ```js
-completion.suggest('he');
+prefixTrie.suggest('he');
 => ['hello']
 
-completion.insert("hellen");
+prefixTrie.insert("hellen");
 
-completion.suggest("he");
+prefixTrie.suggest("he");
 => ["hello", "hellen"]
 
-completion.suggest('w');
+prefixTrie.suggest('w');
 => ["world"]
 ```
 
 ## Phase 3
 
-Our Trie won't be very useful without a good dataset to populate it. Our computers ship with a special
-file containing a list of standard dictionary words.
+Our Trie won't be very useful without a good dataset to populate it. Our computers ship with a special file containing a list of standard dictionary words.
+
 It lives at `/usr/share/dict/words`
 
-Using the unix utility `wc` (word count), we can see that the file
-contains 234371 words:
+Using the unix utility `wc` (word count), we can see that the file contains 234371 words:
 
 ```
 $ cat /usr/share/dict/words | wc -l
 => 234371
 ```
 
-Our next objective is to load the dictionary into our trie. It should have a method called `populate` that will take a the desired data set and inject it into our trie.
+Our next objective is to load the dictionary into our trie. It should have a method called `populate` that will take in the desired data set and inject it into our trie.
 
 ```js
 import fs from 'fs';
@@ -122,14 +121,14 @@ import fs from 'fs';
 const text = "/usr/share/dict/words";
 const dictionary = fs.readFileSync(text).toString().trim().split('\n');
 
-const completion = new Trie();
+const prefixTrie = new Trie();
 
-completion.populate(dictionary);
+prefixTrie.populate(dictionary);
 
-completion.count();
+prefixTrie.count();
 => 234371
 
-completion.suggest('world');
+prefixTrie.suggest('world');
 => [ 'world', 'worlded', 'worldful', 'worldish', ...]
 ```
 
@@ -150,12 +149,12 @@ See if you can implement a front facing application for your `trie`. The user sh
 Sometimes auto-completes give suggestions which we never want to see. Add a delete method to your Trie. 
 
 ```js
-completion.suggest('world')
+prefixTrie.suggest('world')
 => ['world', 'worlded', 'worldful', 'worldish', ...]
 
-completion.delete('worldful');
+prefixTrie.delete('worldful');
 
-completion.suggest('world')
+prefixTrie.suggest('world')
 => ['world', 'worlded','worldish', ...]
 
 ```
@@ -163,9 +162,10 @@ completion.suggest('world')
 ## Evaluation Rubric
 
 The project evaluation will have two parts: 
-* an in-person live code
-  - implement a new method
-  - this demonstrates your problem-solving process
+* an in-person live code/whiteboarding session
+  - be able to whiteboard/draw out how methods like insert or find would work in the trie 
+  - implement a new method, and/or remove and re-implement a pre-existing method
+  - demonstrate your problem-solving process
 * submission of the complete project
   - complete functionality
   - complete testing suite
