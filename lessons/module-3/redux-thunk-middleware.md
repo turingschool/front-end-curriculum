@@ -24,6 +24,7 @@ Today, we will:
 - Be able to explain why middleware is helpful
 - Be able to add middleware to your redux project
 - Be able to write your own thunks
+- Be able to test thunks
 
 ## Vocab
 
@@ -99,11 +100,11 @@ From what we already have, we know our state needs to have 3 propertes:
 * **isLoading** 
 * **hasErrored** 
 
-We will need to create an action for each of these, but we will probably also need an additional 2 action creators that will call our other 3 action (creators) depending on the status of fetching the data. These additional 2 action creators will look very similar to our `fetchStaff` and `fetchBios` methods, but instead of directly setting state with `this.setState({ isLoading: true })`, we'll `dispatch` an action to do the same: `dispatch(isLoading(true))`.
+We will need to create an action for each of these, but we will probably also need an additional 2 action creators that will call our other 3 action (creators) depending on the status of fetching the data. These additional 2 action creators will look very similar to our asynchronous `fetchStaff` and `fetchBios` methods, but instead of directly setting state with `this.setState({ isLoading: true })`, we'll `dispatch` an action to do the same: `dispatch(isLoading(true))`.
 
 ### Creating our actions
 
-Let's create an `actions` folder with an `index.js` to hold all of our actions. We'll start with our 3 simple actions that we know we will need:
+Let's create an `actions` folder with an `index.js` to hold our synchronous actions and a `thunks` folder to hold our asynchronous actions. Let's start with our 3 simple synchronous actions that we know we will need:
 
 ```javascript
 // actions/index.js
@@ -123,10 +124,13 @@ export const staffFetchDataSuccess = (staff) => ({
    staff
 })
 ```
-Now that we have the 3 actions that will represent our state, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize our `redux-thunk` middleware.
+Now that we have the 3 actions that will represent the state of our network request, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize our `redux-thunk` middleware. Let's make a separate file for each of these methods (it will make them easier to test down the road!). We will also need to import any actions that we might need to dispatch.
 
 ```javascript
-// actions/index.js
+// thunks/fetchStaff.js
+
+import { isLoading, hasErrored } from '../actions'
+import { fetchBios } from './fetchBios.js'
 
 export const fetchStaff = (url) => {
   return (dispatch) =>  {
@@ -145,6 +149,12 @@ export const fetchStaff = (url) => {
     .catch(() => dispatch(hasErrored(true)))
   }
 }
+```
+
+```javascript
+// thunks/fetchBios.js
+
+import { isLoading, hasErrored } from '../actions'
 
 export const fetchBios = (staffArray) => {
   return (dispatch) => {
