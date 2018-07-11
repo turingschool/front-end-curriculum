@@ -51,7 +51,7 @@ At first glance, a response site looks a lot like an adaptive site. But start re
 
 * The site [Liquidapsive](http://www.liquidapsive.com/) is a great resource showing simple examples of all the layout types in action.
 * [MDN's Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-* [MDN's Responsive Design Overview](https://developer.mozilla.org/en-US/Apps/Progressive/Responsive)
+<!-- * [MDN's Responsive Design Overview](https://developer.mozilla.org/en-US/Apps/Progressive/Responsive) -->
 * [MDN's Explanation Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
 * Brad Frost's [This is Responsive](http://bradfrost.github.io/this-is-responsive/), patterns and resources for creating responsive websites.
 
