@@ -183,7 +183,7 @@ The Collatz conjecture applies to positive numbers and speculates that is alway 
 - Otherwise, if `n` is even, repeate this process on `n/2`
 - Otherise, if `n` is odd, repeat this process on `3n + 1`
 
-Write a recursive function that calculatees how many steps it takes to get to 1
+Write a recursive function that calculates how many steps it takes to get to 1
 
 n | collatz(n) |Steps
 --- | :---: | --- 
