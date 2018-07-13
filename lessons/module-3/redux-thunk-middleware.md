@@ -24,6 +24,7 @@ Today, we will:
 - Be able to explain why middleware is helpful
 - Be able to add middleware to your redux project
 - Be able to write your own thunks
+- Be able to test thunks
 
 ## Vocab
 
@@ -99,11 +100,11 @@ From what we already have, we know our state needs to have 3 propertes:
 * **isLoading** 
 * **hasErrored** 
 
-We will need to create an action for each of these, but we will probably also need an additional 2 action creators that will call our other 3 action (creators) depending on the status of fetching the data. These additional 2 action creators will look very similar to our `fetchStaff` and `fetchBios` methods, but instead of directly setting state with `this.setState({ isLoading: true })`, we'll `dispatch` an action to do the same: `dispatch(isLoading(true))`.
+We will need to create an action for each of these, but we will probably also need an additional 2 action creators that will call our other 3 action (creators) depending on the status of fetching the data. These additional 2 action creators will look very similar to our asynchronous `fetchStaff` and `fetchBios` methods, but instead of directly setting state with `this.setState({ isLoading: true })`, we'll `dispatch` an action to do the same: `dispatch(isLoading(true))`.
 
 ### Creating our actions
 
-Let's create an `actions` folder with an `index.js` to hold all of our actions. We'll start with our 3 simple actions that we know we will need:
+Let's create an `actions` folder with an `index.js` to hold our synchronous actions and a `thunks` folder to hold our asynchronous actions. Let's start with our 3 simple synchronous actions that we know we will need:
 
 ```javascript
 // actions/index.js
@@ -123,10 +124,13 @@ export const staffFetchDataSuccess = (staff) => ({
    staff
 })
 ```
-Now that we have the 3 actions that will represent our state, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize our `redux-thunk` middleware.
+Now that we have the 3 actions that will represent the state of our network request, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize our `redux-thunk` middleware. Let's make a separate file for each of these methods (it will make them easier to test down the road!). We will also need to import any actions that we might need to dispatch.
 
 ```javascript
-// actions/index.js
+// thunks/fetchStaff.js
+
+import { isLoading, hasErrored } from '../actions'
+import { fetchBios } from './fetchBios.js'
 
 export const fetchStaff = (url) => {
   return (dispatch) =>  {
@@ -145,6 +149,12 @@ export const fetchStaff = (url) => {
     .catch(() => dispatch(hasErrored(true)))
   }
 }
+```
+
+```javascript
+// thunks/fetchBios.js
+
+import { isLoading, hasErrored } from '../actions'
 
 export const fetchBios = (staffArray) => {
   return (dispatch) => {
@@ -263,6 +273,145 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 Previously, we had destructured `staff`, `isLoading`, and `hasErrored` off of state. We now are destructuring them off of props. Lastly, we just need to call `this.props.fetchStaff(url)` in `componentDidMount()`. 
 
 ### Voila... we have successfully removed our data fetching logic from our component/UI logic into action creators. Because this is such a common pattern, `redux-thunk` is one of the most popular libraries in the Redux ecosystem.
+
+## Testing Thunks
+
+```javascript
+// thunks/__tests__/fetchStaff.js
+
+import { fetchStaff } from '../fetchStaff'
+import { fetchBios } from '../fetchBios'
+import { isLoading, hasErrored, staffFetchDataSuccess } from '../../actions'
+
+describe('fetchStaff', () => {
+  let mockUrl
+  let mockDispatch
+  
+  beforeEach(() => {
+    mockUrl = 'www.someurl.com'
+    mockDispatch = jest.fn()
+  })
+  
+  it('calls dispatch with the isLoading action', () => {
+    const thunk = fetchStaff(mockUrl) // this is the inner function that is returned
+    
+    thunk(mockDispatch)
+    
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
+  })
+})
+```
+
+```javascript
+// thunks/__tests__/fetchStaff.js
+
+it('should dispatch hasErrored(true) if the response is not ok', async () => {
+  window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+    ok: false
+  }))
+  
+  const thunk = fetchStaff(mockUrl) // again, this is the inner function that is returned
+  
+  await thunk(mockDispatch)
+  
+  expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true))
+  expect(mockDispatch).not.toHaveBeenCalledWith(isLoading(false))
+})
+
+it('should dispatch isLoading(false) if the response is ok', async () => {
+  window.fetch = jest.fn().mockImplementation(() => Promise.resove({
+    ok: true
+  }))
+  
+  const thunk = fetchStaff(mockUrl) // inner function
+  
+  await thunk(mockDispatch)
+  
+  expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
+})
+```
+
+```javascript
+// thunks/__tests__/fetchStaff.js
+
+it('should dispatch fetchBios with the correct param', async () => {
+  const mockStaff = ['Christie', 'Will']
+  
+  window.fetch = jest.fn().mockImplpementation(() => Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve({
+      bio: mockStaff
+    })
+  }))
+  
+  const thunk = fetchStaff(mockUrl)
+  
+  await thunk(mockDispatch)
+  
+  expect(mockDispatch).toHaveBeenCalledWith(fetchBios(mockStaff))
+})
+```
+
+```javascript
+// thunks/__tests__/fetchBios.js
+
+import { fetchBios } from '../fetchBios'
+import { isLoading, hasErrored } from '../../actions'
+
+describe('fetchBios', () => {
+  let mockStaffArray
+  let mockDispatch
+  
+  beforeEach(() => {
+    mockStaffArray = ['Christie', 'Will']
+    moockDispatch = jest.fn()
+  })
+  
+  it('should call dispatch with isLoading(true)', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+        bio: 'Some info about a staff member',
+	image: 'http://localhost:3001/christie.jpg'
+      })
+    }))
+    
+    const thunk = fetchBios(mockStaffArray)
+    
+    await thunk(mockDispatch)
+    
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
+  })
+  
+  it('should dispatch isLoading(false) if the response is ok', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+        bio: 'Some info about a staff member',
+	image: 'http://localhost:3001/christie.jpg'
+      })
+    }))
+    
+    const thunk = fetchBios(mockStaffArray)
+    
+    await thunk(mockDispatch)
+    
+    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
+  })
+  
+  it('should dispatch hasErrored(true) if the response is not ok', async () => {
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: false
+    }))
+    
+    const thunk = fetchBios(mockStaffArray)
+    
+    await thunk(mockDispatch)
+    
+    expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true))
+  })
+})
+```
 
 ## Resources
 * [Stack Overflow](https://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559)
