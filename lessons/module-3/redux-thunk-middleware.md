@@ -276,6 +276,8 @@ Previously, we had destructured `staff`, `isLoading`, and `hasErrored` off of st
 
 ## Testing Thunks
 
+So, think back to last week when we were testing `mapDispatchToProps`... What were we actually testing? Testing thunks is going to be very similar. We don't actually want to test dispatch (we didn't write dispatch). So we probably want to mock dispatch and just test that it was called with the correct action.
+
 ```javascript
 // thunks/__tests__/fetchStaff.js
 
