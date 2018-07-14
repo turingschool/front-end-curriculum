@@ -59,7 +59,7 @@ Here, the inner function that is returned is a thunk. You've probably seen this 
 
 Up until this point, we've only seen Redux actions as objects that don't do anything. Pretty boring, right? Wouldn't it be cool if we could actually make them do something... like make a fetch request or trigger other actions? Enter **redux-thunk**!
 
-`Redux-Thunk` is a middleware that allows our action creators to return a function instead of an action object. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. It looks at every action that passed thrugh the system; and if it's a function, it calls that function. Brilliant!!
+`Redux-Thunk` is a middleware that allows our action creators to return a function instead of an action object. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. It looks at every action that passed thrugh the system; and if it's a function, it calls that function. This is just another tool that can help us decouple our application logic from our view rendering. 
 
 Redux passes 2 arguments to thunk funcitons: `dispatch` so that we can dispatch new actions if we need to, and `getState` so that we can access the current state. 
 
@@ -124,7 +124,9 @@ export const staffFetchDataSuccess = (staff) => ({
    staff
 })
 ```
-Now that we have the 3 actions that will represent the state of our network request, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize our `redux-thunk` middleware. Let's make a separate file for each of these methods (it will make them easier to test down the road!). We will also need to import any actions that we might need to dispatch.
+Now that we have the 3 actions that will represent the state of our network request, we need to create our other 2 action creators that will reflect our `fetchStaff` and `fetchBios` methods. By default, Redux action creators don't support async actions like fetching data, so here's is where we will utilize the `redux-thunk` middleware. We can transition `fetchStaff` and `fetchBios` into asynchronous action creators by returning a function instead of an object. The functions that we return from `fetchStaff` and `fetchBios` can safely perform a network request and dispatch a synchrounous action with the response data. 
+
+Let's make a separate file for each of our thunk action creators (it will make them easier to test down the road!). We will also need to import any actions that we might need to dispatch.
 
 ```javascript
 // thunks/fetchStaff.js
@@ -276,7 +278,13 @@ Previously, we had destructured `staff`, `isLoading`, and `hasErrored` off of st
 
 ## Testing Thunks
 
-So, think back to last week when we were testing `mapDispatchToProps`... What were we actually testing? Testing thunks is going to be very similar. We don't actually want to test dispatch (we didn't write dispatch). So we probably want to mock dispatch and just test that it was called with the correct action.
+So, think back to last week when we were testing `mapDispatchToProps`... What were we actually testing? Testing thunks is going to be very similar. We don't actually want to test dispatch (we didn't write dispatch). So we're probably going to want to mock dispatch and just test that it was called with the correct action. That doesn't sound so bad, right?
+
+Let's start with `fetchStaff`. What is the first action that gets dispatched? Are we doing anything asynchronous at this point? Nope! We're just dispatching `isLoading` right before we kick off our network request. We already said we were going to mock dispatch, so the only other mock we need is just a url.
+
+First things first... We need to import `fetchStaff` and `fetchBios` (it gets called in `fetchStaff`) and all of our synchronous actions that get dispatched (`isLoading`, `hasErrored`, and `staffFetchDataSuccess`). 
+
+With the help of `redux-thunk`, when we call `fetchStaff` with our mockUrl, we are returned a function that then takes dispatch as an argument. We then call that function, passing it our mockDispatch. Now we can expect that our mockDispatch was called with `isLoading(true)`.
 
 ```javascript
 // thunks/__tests__/fetchStaff.js
@@ -303,6 +311,8 @@ describe('fetchStaff', () => {
   })
 })
 ```
+
+Ok, here's where we get into async land. Our network request has been kicked off and we now need to test what actions are dispatched if the response is not ok and what actions are dispatched if the response is ok. If you need a refresher on how to mock fetch or resolve a Promise in our tests, take some time to go back and review the [Testing Async Javascript & API Calls](http://frontend.turing.io/lessons/module-3/testing-async.html)lesson.
 
 ```javascript
 // thunks/__tests__/fetchStaff.js
@@ -333,8 +343,22 @@ it('should dispatch isLoading(false) if the response is ok', async () => {
 })
 ```
 
+We've made our initial fetch and gotten back a good response. Now it's time to dispatch our other asynchronous action creator / thunk. We don't necessarily care what `fetchBios` is doing. We are just concerned about whether or not it got dispatched. Since that's the case, we can just mock out `fetchBios`. 
+
+Remember back when we were creating our thunks and we decided to put each of them in their own file? This is why we did that... we wanted to be able to mock `fetchBios` individually. So, now let's go create a manual mock of `fetchBios`. We will need to create a mocks directory that lives at the same level as the file we are mocking (it is a **MUST** that they ***live at the same level*** and the mock be ***named exactly the same*** as the original).
+
+```javascript
+// thunks/__mocks__/fetchBios.js
+
+export const fetchBios = jest.fn()
+```
+
+Now we need to tell our `fetchStaff` test to look for a mock directory with the same file name.
+
 ```javascript
 // thunks/__tests__/fetchStaff.js
+
+jest.mock('../fetchBios') // this is the file path for the original, not the mock
 
 it('should dispatch fetchBios with the correct param', async () => {
   const mockStaff = ['Christie', 'Will']
@@ -353,6 +377,11 @@ it('should dispatch fetchBios with the correct param', async () => {
   expect(mockDispatch).toHaveBeenCalledWith(fetchBios(mockStaff))
 })
 ```
+
+And that's how you use a manual mock!!!
+
+
+### Your Turn! Without scrolling down and looking at the code, see if you can write the tests for `fetchBios`.
 
 ```javascript
 // thunks/__tests__/fetchBios.js
