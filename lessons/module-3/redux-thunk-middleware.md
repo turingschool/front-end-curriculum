@@ -381,7 +381,9 @@ it('should dispatch fetchBios with the correct param', async () => {
 And that's how you use a manual mock!!!
 
 
-### Your Turn! Without scrolling down and looking at the code, see if you can write the tests for `fetchBios`.
+## YOUR TURN! 
+
+### Without scrolling down and looking at the code, see if you can write the tests for `fetchBios`.
 
 ```javascript
 // thunks/__tests__/fetchBios.js
