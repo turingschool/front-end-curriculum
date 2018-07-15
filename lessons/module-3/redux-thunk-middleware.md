@@ -381,70 +381,8 @@ it('should dispatch fetchBios with the correct param', async () => {
 And that's how you use a manual mock!!!
 
 
-## YOUR TURN! 
+### YOUR TURN! See if you can write the tests for `fetchBios`. 
 
-### Without scrolling down and looking at the code, see if you can write the tests for `fetchBios`.
-
-```javascript
-// thunks/__tests__/fetchBios.js
-
-import { fetchBios } from '../fetchBios'
-import { isLoading, hasErrored } from '../../actions'
-
-describe('fetchBios', () => {
-  let mockStaffArray
-  let mockDispatch
-  
-  beforeEach(() => {
-    mockStaffArray = ['Christie', 'Will']
-    moockDispatch = jest.fn()
-  })
-  
-  it('should call dispatch with isLoading(true)', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({
-        bio: 'Some info about a staff member',
-	image: 'http://localhost:3001/christie.jpg'
-      })
-    }))
-    
-    const thunk = fetchBios(mockStaffArray)
-    
-    await thunk(mockDispatch)
-    
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
-  })
-  
-  it('should dispatch isLoading(false) if the response is ok', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({
-        bio: 'Some info about a staff member',
-	image: 'http://localhost:3001/christie.jpg'
-      })
-    }))
-    
-    const thunk = fetchBios(mockStaffArray)
-    
-    await thunk(mockDispatch)
-    
-    expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
-  })
-  
-  it('should dispatch hasErrored(true) if the response is not ok', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: false
-    }))
-    
-    const thunk = fetchBios(mockStaffArray)
-    
-    await thunk(mockDispatch)
-    
-    expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true))
-  })
-})
-```
 
 ## Resources
 * [Stack Overflow](https://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559)
