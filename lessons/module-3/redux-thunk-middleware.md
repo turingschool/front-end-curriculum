@@ -381,7 +381,7 @@ it('should dispatch fetchBios with the correct param', async () => {
 And that's how you use a manual mock!!!
 
 
-### YOUR TURN! See if you can write the tests for `fetchBios`. 
+### YOUR TURN! Pair up with a partner and see if you can write the tests for `fetchBios`. 
 
 
 ## Resources
