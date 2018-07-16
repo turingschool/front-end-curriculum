@@ -154,59 +154,14 @@
           <p>Props allow us to pass information from parent components to child components. We can pass strings, numbers, booleans, arrays, objects, functions, pretty much any piece of data we want access to in our child component. We can name them whatever we'd like, as long as we're consistent and semantic with the names that we choose.</p>
           <p>When we pass props down to a child component, it comes through as a simple JavaScript object with key value pairs.</p>
 
+          <h3>Grocery List Component</h3>
           <img src="../../assets/images/lessons/intro-to-react/grocery-list-item-component.png" width="100%" /><br />
+
+          <h3>Grocery List App</h3>
           <img src="../../assets/images/lessons/intro-to-react/grocery-list-app.png" width="100%" /><br />
+          
+          <h3>Grocery List App using .map</h3>
           <img src="../../assets/images/lessons/intro-to-react/grocery-list_app-map.png" width="100%" /><br />
-
-          <pre>
-            <code class="js">
-              import React from 'react';
-              import './App.css';
-              import GroceryItem from './GroceryItem.js';
-
-              function App () {
-                return (
-                  <div className="App">
-                    <h1>Grocery List</h1>
-                    <GroceryItem title='Apple' count='5' />
-                    <GroceryItem title='Orange' count='15' />
-                    <GroceryItem title='Cucumber' count='2' />
-                  </div>
-                );
-              }
-
-              export default App;
-            </code>
-          </pre>
-
-          <pre>
-            <code class="js">
-              import React from 'react';
-              import './App.css';
-              import GroceryItem from './GroceryItem.js';
-
-              const items = [
-                { title: 'Apple', count: 5 },
-                { title: 'Orange', count: 15 },
-                { title: 'Pear', count: 2 }
-              ]
-
-              function App () {
-                return (
-                  <div className="App">
-                    <h1>Grocery List</h1>
-                    {
-                      items.map(item => {
-                        return <GroceryItem title={item.title} count={item.count} />
-                      } )
-                    }
-                  </div>
-                );
-              }
-
-              export default App;
-            </code>
-          </pre>
 
           <h3>State</h3>
           <p>State is slightly different than props: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.</p>
