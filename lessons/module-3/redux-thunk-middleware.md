@@ -342,21 +342,6 @@ it('should dispatch isLoading(false) if the response is ok', async () => {
   expect(mockDispatch).toHaveBeenCalledWith(isLoading(false))
 })
 
-it('should dispatch staffFetchDataSuccess', async () => {
-    const mockStaff = ['Christie', 'Will']
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({
-        bio: mockStaff
-      })
-    }))
-
-    const thunk = fetchStaff(mockUrl)
-
-    await thunk(mockDispatch)
-
-    expect(mockDispatch).toHaveBeenCalledWith(staffFetchDataSuccess())
-  })
 ```
 
 We've made our initial fetch and gotten back a good response. Now it's time to dispatch our other asynchronous action creator / thunk. We don't necessarily care what `fetchBios` is doing. We are just concerned about whether or not it got dispatched. Since that's the case, we can just mock out `fetchBios`. 
@@ -396,6 +381,28 @@ it('should dispatch fetchBios with the correct param', async () => {
 
 And that's how you use a manual mock!!!
 
+Only 1 test left for `fetchStaff`...
+
+```javascript
+// thunks/__tests__/fetchStaff.js
+
+it('should dispatch staffFetchDataSuccess', async () => {
+    const mockStaff = ['Christie', 'Will']
+    
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+        bio: mockStaff
+      })
+    }))
+
+    const thunk = fetchStaff(mockUrl)
+
+    await thunk(mockDispatch)
+
+    expect(mockDispatch).toHaveBeenCalledWith(staffFetchDataSuccess())
+  })
+  ```
 
 ### YOUR TURN! Pair up with a partner and see if you can write the tests for `fetchBios`. 
 
