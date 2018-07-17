@@ -1,5 +1,5 @@
 ---
-title: "New Technologies - Capstone Risk Taking"
+title: "New Technologies - Capstone Differentiation"
 length: 1 hour
 tags: node, express, progressive web app, localization
 ---
