@@ -14,7 +14,7 @@ tags: node, express, progressive web app, localization
 
 * IndexedDB (PWA)
 * Background Sync and Push Notifications (PWA)
-* Performance?
+* Performance
 * Localization and Internationalization
 * Websockets
 
