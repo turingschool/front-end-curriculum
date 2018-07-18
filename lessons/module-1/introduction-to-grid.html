@@ -17,31 +17,59 @@ layout: presentation
 </section>
 
 <section>
+  <h2>Why tho? - Some History</h2>
+  <p>CSS has always been used to layout web pages, but was never very good at it. Flexbox helped out, but it's intended for simpler one-dimensional layouts, not complex two-dimensional ones (Flexbox and Grid actually work very well together).</p>
+</section>
+
+<section>
   <h2>Normal Block Elements</h2>
   <p data-height="500" data-theme-id="23788" data-slug-hash="XBKNgE" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/XBKNgE/">Grid Lab 1</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 </section>
 
 <section>
   <h2>What happens if we turn on Grid?</h2>
-  <p data-height="300" data-theme-id="23788" data-slug-hash="xJORLy" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/xJORLy/">Grid Lab 2</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="xJORLy" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/xJORLy/">Grid Lab 2</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <p>Nothing yet. We need to specify our grid-template</p>
 </section>
 
 <section>
   <h2>The <code>grid-template-columns</code> Property</h2>
-  <p data-height="300" data-theme-id="23788" data-slug-hash="XBKNeq" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/XBKNeq/">Grid Lab 3</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="XBKNeq" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/XBKNeq/">Grid Lab 3</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <p>We can give each column fixed units</p>
 </section>
 
 <section>
   <h2>The <code>fr</code> Unit</h2>
-  <p data-height="300" data-theme-id="23788" data-slug-hash="wxWoZJ" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/wxWoZJ">Grid Lab 4</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-  <p>We can also use a new unit that will take up an equal fraction of the screen based on the number of columns</p>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="wxWoZJ" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/wxWoZJ">Grid Lab 4</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p>We can also use a new unit that will take up a fraction of the grid.</p>
+  <p>Your turn - check out the grid in the 'Layout' area of your firefox devtools</p>
 </section>
 
 <section>
   <h2>Dry it up using <code>repeat()</code> Notation</h2>
-  <p data-height="300" data-theme-id="23788" data-slug-hash="wxWoZJ" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/wxWoZJ/">Grid Lab 5</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="xJOgRK" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/xJOgRK/">Grid Lab 5</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+</section>
+
+<section>
+  <h2>The <code>grid-template-rows</code> Property</h2>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="QBEMLY" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/QBEMLY/">Grid Lab 6</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p>Thus far, our grid rows have been implicity set. But you can also explicitly set them using this property.</p>
+</section>
+
+<section>
+  <h2>The <code>grid-gap</code> Properties</h2>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="XBKeXz" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/XBKeXz/">Grid Lab 7</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p>Your turn - How do you add space between only rows? What about between only columns?</p>
+</section>
+
+<section>
+  <h2>Changing the size and position of elements</h2>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="ZjOXXa" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/ZjOXXa/">Grid Lab 8</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+</section>
+
+<section>
+  <h2>Changing the size and position of elements ...continued</h2>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="yqJzQp" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="https://codepen.io/damwhit/pen/yqJzQp/">Grid Lab 8</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 </section>
 
 <section>
@@ -105,6 +133,6 @@ footer {
 
 <section>
   <h2>Practice Time</h2>
-  <p data-height="300" data-theme-id="23788" data-slug-hash="zBELWR" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/damwhit/pen/zBELWR/">Grid Practice</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+  <p data-height="500" data-theme-id="23788" data-slug-hash="zBELWR" data-default-tab="result" data-user="damwhit" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/damwhit/pen/zBELWR/">Grid Practice</a> by David Whitaker (<a href="http://codepen.io/damwhit">@damwhit</a>) on <a href="http://codepen.io">CodePen</a>.</p>
   <p><strong>Your mission</strong>: Open the example above in Code Pen. What kind of layouts can you implement using Grid?</p>
 </section>
