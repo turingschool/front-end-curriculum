@@ -1,34 +1,10 @@
-This lesson goes with [this repo](https://github.com/turingschool-examples/testing-react)
-
-# Testing React
-
-Install the dependencies:
-
-```
-npm install
-```
-
-To fire up a development server:
-
-```
-npm start
-```
+Clone the following [repo](https://github.com/turingschool-examples/testing-react) and `cd` into it from your terminal. Then run `npm install` and `npm start`.
 
 Once the server is running, you can visit:
 
 * `http://localhost:8080` to run your application.
 
-To build the static files:
-
-```
-npm run build
-```
-
-To run tests in Node:
-
-```
-npm test
-```
+We'll be running tests with the `npm test` command.
 
 ---
 
@@ -47,9 +23,6 @@ npm test
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
-- `SUT` or `Subject Under Test` The unit being tested
-- `The Testing Pyramid` A diagram describing, roughly, the amount of unit, system, and UI tests to have in a test suite
-- `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
 
 ---
 
@@ -60,9 +33,8 @@ _Jest is the de facto unit testing framework for ReactJS project. It is provided
 **Top features are:**
 
 * Automatically finds tests
-* Automatically mocks dependencies
+* Automatically mocks React dependencies
 * Runs your tests with a fake DOM implementation
-* Runs tests in parallel processes
 
 ### Installation: 
 

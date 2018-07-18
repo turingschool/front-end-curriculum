@@ -26,6 +26,25 @@ We'll have four components:
 
 ## Communication Flow
 
+Our component heirarchy looks something like this:
+
+
+
+Our App component has two children - TriviaList and Controls. This makes the TriviaList and Controls siblings. In React, sibling components can't directly speak to each other. For example, I can't update my question limit in the Controls component, and have it tell the TriviaList component to re-render itself with the appropriate amount of questions.
+
+Instead, I have to communicate through their shared parent component. Both siblings need to know about the question limit:
+
+* Controls must know about it so its text input can reflect that value
+* TriviaList must know about it so it can render the correct amount of questions
+
+The question limit is a data point that effects the way the app is rendered, and can change based on user interaction. **This makes it a good candidate for going into state.**
+
+But where do we store that state? 
+
+We're going to put it in our top-level App component.
+
+
+
 * Data down, actions up
   * What is data?
   * What are actions?
