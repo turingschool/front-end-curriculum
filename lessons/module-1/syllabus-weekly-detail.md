@@ -28,7 +28,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 4: Build on a Solid Foundation
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
-|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/array-prototype-methods-intro) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
+|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/array-prototype-methods-intro) &nbsp; [Grid](http://frontend.turing.io/lessons/module-1/introduction-to-grid.html) &nbsp; [CSS Jigsaw](http://frontend.turing.io/lessons/module-1/css-2.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
 |Assignment  | __DUE__:   Tues 7/17 ~ Static Comp Challenge #1 by *8:00 AM* |
 |Assignment  | __EVAL__:  Thu 7/19 ~ Ideabox |
 |Assignment  | __DUE__: Fri 7/20 ~ Mythical Creatures |
