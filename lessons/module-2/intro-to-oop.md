@@ -155,6 +155,10 @@ class Tesla extends Vehicle {
 
 ```
 
+##### super keyword
+The above example uses the super keyword. The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor function of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class. Then we can add properties that are unique to the child class to the new instance of our class.
+
+
 # Messages
 
 
