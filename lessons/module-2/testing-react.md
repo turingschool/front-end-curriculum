@@ -1,8 +1,8 @@
-Clone the following [repo](https://github.com/turingschool-examples/testing-react) and `cd` into it from your terminal. Then run `npm install` and `npm start`.
+Clone the following [repo](https://github.com/turingschool-examples/react-testing-intro) and `cd` into it from your terminal. Then run `npm install` and `npm start`.
 
 Once the server is running, you can visit:
 
-* `http://localhost:8080` to run your application.
+* `http://localhost:3000` to run your application.
 
 We'll be running tests with the `npm test` command.
 
@@ -28,19 +28,13 @@ We'll be running tests with the `npm test` command.
 
 ## Jest
 
-_Jest is the de facto unit testing framework for ReactJS project. It is provided and used by Facebook._
+Jest is the de facto unit testing framework for ReactJS project. It is provided and used by Facebook, and installed by default when using create-react-app.
 
 **Top features are:**
 
 * Automatically finds tests
 * Automatically mocks React dependencies
 * Runs your tests with a fake DOM implementation
-
-### Installation: 
-
-```
-npm install --save-dev jest
-```
 
 Just like `chai`, jest uses the `expect` keyword, only with some slight differences. One syntactical difference you'll want to make note of is the simple check that something equals and expected result...
 
@@ -78,8 +72,21 @@ Enzyme renders our components and turns them into chunks of HTML. We can interac
 ### Installation:
 
 ```
-npm i --save-dev enzyme
+npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer
 ```
+
+We also need to create a setup file to bootstrap our tests. Create the following file `/src/setupTests.js`:
+
+
+```js
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+```
+
+This will get enzyme up and running for us, and also allow us to do any additional setup or configuration we might need later on.
+
 
 ###### There are two methods we'll use from enzyme to render our component HTML.
 
