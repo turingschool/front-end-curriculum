@@ -88,7 +88,18 @@ configure({ adapter: new Adapter() });
 This will get enzyme up and running for us, and also allow us to do any additional setup or configuration we might need later on.
 
 
-###### There are two methods we'll use from enzyme to render our component HTML.
+#### Work time!
+
+Enzyme comes with a lot of helper methods that will allow us to test our components. Let's spend another 10 minutes researching your assigned method (same groups as before):
+
+1. find()
+2. props()
+3. instance()
+4. children()
+5. text()
+6. state()
+
+In addition to these methods, there are two important ones we'll be using in order to allow Enzyme to actually render our components: `shallow` and `mount`.
 
 * [shallow](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md)
 Shallow renders our component's HTML, if our component has child components then it will only render stubs for the child components. It will not render the child components HTML. Because shallow does not render the child components it is much faster and should be used by default.
@@ -183,17 +194,6 @@ The mount output of our App component will be the following. Notice that our Lis
 </div>
 ```
 
-
-#### Work time!
-
-Enzyme also comes with some methods of its own. Let's spend another 10 minutes researching your assigned method (same groups as before):
-
-1. find()
-2. props()
-3. instance()
-4. children()
-5. text()
-6. state()
 
 ## Why Test? 
 
