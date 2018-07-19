@@ -94,9 +94,7 @@ This will get enzyme up and running for us, and also allow us to do any addition
 Shallow renders our component's HTML, if our component has child components then it will only render stubs for the child components. It will not render the child components HTML. Because shallow does not render the child components it is much faster and should be used by default.
 
 * [mount](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md)
-Mount renders our component's HTML, if our component has child components then it will render the child components HTML. It also gives us triggers some of the child components life cycle methods.
-
-For a more detailed look at the differences, check out [this breakdown](https://gist.github.com/fokusferit/e4558d384e4e9cab95d04e5f35d4f913)
+Mount renders our component's HTML, if our component has child components then it will render the child components HTML. It also gives us triggers some of the components life cycle methods.
 
 Let's look at what happens when we use shallow or mount. Consider the following components...
 
@@ -218,13 +216,6 @@ Some things to consider...
     
 ## Time to Test!
 
-We will use [this repo](https://github.com/turingschool-examples/testing-react) to work through some tests. This app _should_ look familiar. 
-
-* Clone this repo and `cd` into it
-* `git checkout in-class`
-* run `npm i`
-* open up your text editor and lets work through some tests!
-
 ---
 
 Let's spend a few minutes walking through the code base to familiarize ourselves with the layout...
@@ -232,11 +223,11 @@ Let's spend a few minutes walking through the code base to familiarize ourselves
 Because jest finds our tests automatically, we don't need to import it. We do however need `React` and `Enzyme`. Let's create the first test file and bring those in:
 
 ```
-touch app.test.js
+touch ./src/App.test.js
 ```
 
 ```
-// app.test.js
+// App.test.js
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
@@ -245,7 +236,7 @@ import { shallow, mount } from 'enzyme';
 We'll also need to import our `App` component:
 
 ```
-import App from '../lib/components/App';
+import App from './App';
 ```
 
 Now let's create an easy first test to ensure everything is hooked up and working:
@@ -264,7 +255,7 @@ describe('App', () => {
 Now let's look at our app's `render` function, it returns a `Header` and a `ToDontList` component. Let's make sure those exist. We can use the [find](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html#findselector--shallowwrapper) method to find those components inside of our rendered HTML.
 
 ```
-// lib/components/App.js
+// ./App.js
 
   render() {
     const { toDonts } = this.state;
@@ -285,7 +276,7 @@ Now let's look at our app's `render` function, it returns a `Header` and a `ToDo
 ```
 
 ```
-// tests/app.test.js
+// ./App.test.js
 
   it('should render the Header and ToDontList component', () => {
     const wrapper = shallow(<App />)
@@ -300,7 +291,7 @@ But wait, we've now defined wrapper twice so let's pull that out into a `beforeE
 ```
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../lib/components/App';
+import App from './App';
 
 describe('App', () => {
   let wrapper;
@@ -354,12 +345,12 @@ Ah snap! What's this all about?
 ReferenceError: localStorage is not defined
 ```
 
-Because we're not dealing with a browser, `localStorage` isn't something our tests know about. This means we will have to do some extra work to mock localStorage for our tests. Jest makes this _somewhat_ easy for us by allowing us to set up some [configurations](http://facebook.github.io/jest/docs/en/configuration.html#content) in our `package.json` before each test. But first, we need to create a fake local storage. Give it a shot!
+Because we're not dealing with a browser, `localStorage` isn't something our tests know about. This means we will have to do some extra work to mock localStorage for our tests. We can do this by adding some setup configuration to that same `setupTests.js` file we worked with earlier. Let's create a fake local storage:
 
 We'll store this in a test-helpers folder and assign it to a global property called...localStorage!
 
 ```
-// __test-helpers__/storageMock.js
+// ./src/setupTests.js
 
 class LocalStorage {
   constructor() {
@@ -381,17 +372,7 @@ class LocalStorage {
 
 global.localStorage = new LocalStorage;
 ```
-Next we need to set up our jest configurations using the [setupFiles](http://facebook.github.io/jest/docs/en/configuration.html#setupfiles-array) option. This will run any code we want before each test.
 
-```
-// package.json
-
-"jest": {
-    "setupFiles": [
-      "./__test-helpers__/storageMock.js"
-    ]
-  },
-```
 
 Our test should now pass!
 
