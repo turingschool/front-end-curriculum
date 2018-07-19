@@ -666,6 +666,22 @@ describe('header component', () => {
 })
 ```
 
+First let's test that our state is updating whenever our input values change:
+
+```js
+  it('should update state when input values are changed', () => {
+   const titleInput = wrapper.find('input').first()
+   const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
+   const submitButton = wrapper.find('button')
+
+   titleInput.simulate('change', { target: { value: 'title 1'}})
+   bodyInput.simulate('change', { target: { value: 'body 1'}})
+
+   expect(wrapper.state().title).toEqual('title 1')
+   expect(wrapper.state().body).toEqual('body 1')
+  })
+```
+
 Now for the tricky part. Our goal is to test that when the submit button is clicked, it calls the correct function it's supposed to. To do this, we'll need to do a couple things:
 * Stub in a [jest.fn()](http://facebook.github.io/jest/docs/jest-object.html#jestfnimplementation) in place of our actual function
 * Find the specific button
@@ -674,64 +690,47 @@ Now for the tricky part. Our goal is to test that when the submit button is clic
 The test will look something like this...
 
 ```
-it('should call submitIdea when button is clicked', () => {
- wrapper.instance().submitIdea = jest.fn()
+  it('should call submitIdea when button is clicked', () => {
+   wrapper.instance().submitIdea = jest.fn()
 
- const submitButton = wrapper.find('button')
+   const submitButton = wrapper.find('button')
 
- submitButton.simulate('click')
+   submitButton.simulate('click')
 
- expect(wrapper.instance().submitIdea).toHaveBeenCalledTimes(1)
-})
+   expect(wrapper.instance().submitIdea).toHaveBeenCalled()
+   expect(wrapper.instance().submitIdea).toHaveBeenCalledTimes(1)
+  })
 ```
 
-That's a great test, it assures us that our button executes the correct method. But let's take it a step further. Take a few minutes to review this test and then talk to the person next to you about what is happening.
-
-```
-it('should call submitIdea and update state when button is clicked', () => {
- wrapper.instance().submitIdea = jest.fn()
-
- const titleInput = wrapper.find('input').first()
- const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
- const submitButton = wrapper.find('button')
-
- titleInput.simulate('change', { target: { value: 'title 1'}})
- bodyInput.simulate('change', { target: { value: 'body 1'}})
-
- submitButton.simulate('click')
-
- expect(wrapper.instance().submitIdea).toHaveBeenCalled()
- expect(wrapper.instance().submitIdea).toHaveBeenCalledTimes(1)
-})
-```
-
-What if we want to dig into the `submitIdea` function and ensure that the props.addToDont gets called within that method...given the infromation you gained above, take 5 minutes to talk to the person next to you about how you might accomplish this.
+That's a great test, it assures us that our button executes the correct method. But let's take it a step further. What if we want to dig into the `submitIdea` function and ensure that the props.addToDont gets called within that method...given the infromation you gained above, take 5 minutes to talk to the person next to you about how you might accomplish this.
 
 ![thinking dog](http://dy5jipgyozh6.cloudfront.net/wp-content/uploads/2016/11/03202021/dog-thinking1.jpg)
 
 Here is what it might look like...
 
 ```
-it('should call this.props.toDont and clear state fields', () => {
- const mockFn = jest.fn()
- wrapper = mount(<Header addToDont={ mockFn }/>)
+  it('should call this.props.addToDont and clear state fields when submitIdea is fired', () => {
+   const mockFn = jest.fn()
+   wrapper = mount(<Header addToDont={ mockFn }/>)
 
- const titleInput = wrapper.find('input').first()
- const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
- const submitButton = wrapper.find('button')
+   const titleInput = wrapper.find('input').first()
+   const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
+   const submitButton = wrapper.find('button')
 
- titleInput.simulate('change', { target: { value: 'title 1'}})
- bodyInput.simulate('change', { target: { value: 'body 1'}})
+   titleInput.simulate('change', { target: { value: 'title 1'}})
+   bodyInput.simulate('change', { target: { value: 'body 1'}})
 
- expect(wrapper.state().title).toEqual('title 1')
- expect(wrapper.state().body).toEqual('body 1')
+   expect(wrapper.state().title).toEqual('title 1')
+   expect(wrapper.state().body).toEqual('body 1')
 
- submitButton.simulate('click')
+   submitButton.simulate('click')
 
- expect(wrapper.props().addToDont).toHaveBeenCalled()
- expect(wrapper.state().title).toEqual('')
- expect(wrapper.state().body).toEqual('')
-})
+   expect(wrapper.props().addToDont).toHaveBeenCalled()
+   expect(wrapper.props().addToDont).toHaveBeenCalledTimes(1)
+   expect(wrapper.state().title).toEqual('')
+   expect(wrapper.state().body).toEqual('')
+  })
+
 ```
 
 WOOF, That's it! 
