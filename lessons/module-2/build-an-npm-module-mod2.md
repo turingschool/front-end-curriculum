@@ -25,9 +25,9 @@ Note: as you read, prepare answers to the following discussion points
 
 ### Reading Discussion Points
 
-- What is SemVer
+- What is SemVer?
 
-- What is the difference between `npm install --save-prod`, `npm install`, `npm install -g`, and `npm install --save-dev`
+- What is the difference between `npm install --save-prod`, `npm install`, `npm install -g`, and `npm install --save-dev`?
 
 - Why is it _important_ to use the `--save-prod` and `--save-dev` flags appropriately for an NPM package?
 
