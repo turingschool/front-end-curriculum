@@ -74,7 +74,7 @@ $ npm init --scope=username
 
 Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
 * **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
-* **License:** ISC is fine, [but what is it?](http://semver.org/)
+* **License:** ISC is fine, [but what is it?](https://opensource.org/licenses/ISC)
 
 One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
 
