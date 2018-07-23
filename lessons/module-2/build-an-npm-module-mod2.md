@@ -66,7 +66,7 @@ $ mkdir test
 $ touch index.js test/test.js
 ```
 
-Next we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`)
+Next we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`). Replace username in the following command with your npm username.
 
 ```
 $ npm init --scope=username
