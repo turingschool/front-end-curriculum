@@ -92,8 +92,7 @@ Fun facts!
 In your `test.js` file include the following:
 
 ```
-const chai = require('chai');
-const expect = chai.expect;
+const { expect } = require('chai');
 ```
 
 In your `index.js` file include the following:
@@ -144,6 +143,37 @@ and then requiring a specific module in your js file as you would with any other
 
 For this to work, make sure you are still bundling up your code with `module.exports`.
 
+#### Time to test our package
+
+In your terminal move out of your package repo.
+
+We need to create a test repo where we can install our new package.
+
+Create a new folder for our test repo and cd into that folder.
+
+`mkdir npm-test-repo && cd npm-test-repo`
+
+Install your package
+
+`npm install [GitHub URL] -S`
+
+Create an index.js file
+
+`touch index.js`
+
+Add the following code to your index.js file
+
+```js
+const { bubbleSort } = require('@nfosterky/npm-sort');
+
+const sorted = bubbleSort([6, 3, 77, 32, 45]);
+
+console.log(sorted);
+```
+
+In your terminal, run your index.js file using Node
+
+`Node index.js`
 
 --------
 
