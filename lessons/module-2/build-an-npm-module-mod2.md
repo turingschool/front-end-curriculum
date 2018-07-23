@@ -164,7 +164,7 @@ Create an index.js file
 Add the following code to your index.js file
 
 ```js
-const { bubbleSort } = require('@nfosterky/npm-sort');
+const { bubbleSort } = require('@[username]/npm-sort');
 
 const sorted = bubbleSort([6, 3, 77, 32, 45]);
 
@@ -274,6 +274,7 @@ Then:
 - [NPM docs - How NPM works](https://docs.npmjs.com/how-npm-works/packages)
 - [NPM cheatsheet](http://browsenpm.org/help)
 - [Certified Modules](https://nodesource.com/blog/hello-certified-modules-the-future-of-trust-in-node-js-dependencies/) - How devs are trying to keep you and NPM itself safe
+- [How one programmer broke the internet by deleting a tiny piece of code](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/)
 
 ---
 
