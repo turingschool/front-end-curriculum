@@ -101,5 +101,11 @@ One of the more confusing things about React is when to make a component statefu
 
 ![React Lifecycle Diagram](../../assets/images/lessons/intro-to-react-stateful-components/react-lifecycle.png)
 
+React lifecycle methods are inherited from React Component. These methods should never be invoked directly. Instead, they are invoked by react as the components are used.
+
+For our purposes we will only focus on `componentDidMount`. A component is "mounted" after it finishes rendering for the first time. After the component finishes rendering, the componentDidMount method will be invoked.
+
+A component's state cannot be updated before it is rendered. If a component's state needs to be updated after it is loaded, componentDidMount is a good place to fetch or load that data.
 
 ## Conditional Rendering
+
