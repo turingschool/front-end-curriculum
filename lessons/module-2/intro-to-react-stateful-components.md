@@ -4,6 +4,14 @@ length:
 tags: javascript, react
 ---
 
+## Vocabulary
+
+- `State` The current data stored in relation to a particular part of a computer program.
+- `Stateful Component` A component which stores and updates the information which it uses to render HTML.
+- `Lifecycle` The process where a component is created, updated and destroyed.
+- `Lifecycle Method` A function that is invoked at some point during a component's lifecycle.
+- `Conditional Rendering` Part of the user interface which is only displayed if some condition is met.
+
 In our previous lesson, we learned how to create stateless components. Stateless components are great if we just need to create html that will be be different based on what parameters/properties we pass into our component. Sometimes our components need to be able to store the information they display and change that information based on user interaction. When this is the case, you will want to use a stateful component.
 
 ## Stateful Components
