@@ -61,7 +61,7 @@ class Counter extends Component {
 
 Now when we update our state, our component will rerender and display the correct count.
 
-#### setState(newState, [callback])
+### setState(newState, [callback])
 The setState method is used to update the state of the application. It takes two arguments, the first is an object that represents the new state of the application. the second is an optional callback, that will be invoked after state is updated.
 
 Let's add a method to update our state when our button is clicked.
@@ -119,7 +119,7 @@ Let's add some conditional rendering to our counter example. If our count is bel
 
 There are a variety of ways to conditionaly render UI in React. We will look at three ways: if/else, using the `&&` operator, and using ternary statements.
 
-#### if/else
+### if/else
 
 We can add an if/else statement to our render method. Inside of our if/else blocks we will return the html that we want to render. Note that you cannot put an if/else statement in your HTML. The if/else must go outside of your return statement.
 
@@ -147,7 +147,7 @@ render() {
 ```
 This achieves our desired result but can result in a lot of repeated html code.
 
-#### Short-circuit operator (&&)
+### Short-circuit operator (&&)
 With the `&&` operator, our code takes the following form: { js statement && HTML }. If our js statement evaluates to a truthy value, then our HTML will render. Unlike our if/else statement, we can put this in our returned HTML and it will evaluate before rendering.
 
 ```jsx
@@ -169,7 +169,7 @@ render() {
 }
 ```
 
-#### Ternary
+### Ternary
 
 Similar to our ampersand (&&) operator, we can use ternaries in our HTML. If our js statement evaluates to a truthy value the first h2 will render, otherwise the second h2 will render.
 
