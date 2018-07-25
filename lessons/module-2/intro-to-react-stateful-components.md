@@ -143,50 +143,6 @@ render() {
 ```
 This achieves our desired result but can result in a lot of repeated html code.
 
-##### Full component code
-```jsx
-import React, { Component } from 'react';
-
-class Counter extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      count: 5
-    }
-  }
-
-  increaseCount = () => {
-    const newState = {
-      count: this.state.count + 1
-    }
-
-    this.setState(newState);
-  }
-
-  render() {
-    if (this.state.count < 10) {
-      return (
-        <section>
-          <h2>Can you count to 10?</h2>
-          <span>{this.state.count}</span>
-          <button onClick={this.increaseCount} >Add 1</button>
-        </section>
-      )
-
-    } else {
-      return (
-        <section>
-          <h2>You counted to 10!</h2>
-          <span>{this.state.count}</span>
-          <button onClick={this.increaseCount} >Add 1</button>
-        </section>
-      )
-    }
-  }
-}
-```
-
 #### Short-circuit operator (&&)
 With the `&&` operator, our code takes the following form: { js statement && HTML }. If our js statement evaluates to a truthy value, then our HTML will render. Unlike our if/else statement, we can put this in our returned HTML and it will evaluate before rendering.
 
@@ -206,46 +162,6 @@ render() {
       <button onClick={this.increaseCount} >Add 1</button>
     </section>
   )
-}
-```
-
-##### Full component code
-```jsx
-import React, { Component } from 'react';
-
-class Counter extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      count: 5
-    }
-  }
-
-  increaseCount = () => {
-    const newState = {
-      count: this.state.count + 1
-    }
-
-    this.setState(newState);
-  }
-
-  render() {
-    return (
-      <section>
-        { 
-          this.state.count < 10 && 
-          <h2>Can you count to 10?</h2>
-        }
-        {
-          this.state.count >= 10 && 
-          <h2>You counted to 10!</h2>
-        }
-        <span>{this.state.count}</span>
-        <button onClick={this.increaseCount} >Add 1</button>
-      </section>
-    )
-  }
 }
 ```
 
