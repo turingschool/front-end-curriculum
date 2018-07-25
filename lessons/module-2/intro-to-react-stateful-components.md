@@ -109,3 +109,171 @@ A component's state cannot be updated before it is rendered. If a component's st
 
 ## Conditional Rendering
 
+Conditional rendering is hiding or showing UI elements based on information in state or passed in as props.
+
+Let's add some conditional rendering to our counter example. If our count is below 10 we will display "Can you count to 10?". If our count is 10 or more we will display "You counted to 10!".
+
+There are a variety of ways to conditionaly render UI in React. We will look at three ways: if/else, using the `&&` operator, and using ternary statements.
+
+#### if/else
+
+We can add an if/else statement to our render method. Inside of our if/else blocks we will return the html that we want to render. Note that you cannot put an if/else statement in your HTML. The if/else must go outside of your return statement.
+
+```jsx
+render() {
+  if (this.state.count < 10) {
+    return (
+      <section>
+        <h2>Can you count to 10?</h2>
+        <span>{this.state.count}</span>
+        <button onClick={this.increaseCount} >Add 1</button>
+      </section>
+    )
+
+  } else {
+    return (
+      <section>
+        <h2>You counted to 10!</h2>
+        <span>{this.state.count}</span>
+        <button onClick={this.increaseCount} >Add 1</button>
+      </section>
+    )
+  }
+}
+```
+This achieves our desired result but can result in a lot of repeated html code.
+
+##### Full component code
+```jsx
+import React, { Component } from 'react';
+
+class Counter extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      count: 5
+    }
+  }
+
+  increaseCount = () => {
+    const newState = {
+      count: this.state.count + 1
+    }
+
+    this.setState(newState);
+  }
+
+  render() {
+    if (this.state.count < 10) {
+      return (
+        <section>
+          <h2>Can you count to 10?</h2>
+          <span>{this.state.count}</span>
+          <button onClick={this.increaseCount} >Add 1</button>
+        </section>
+      )
+
+    } else {
+      return (
+        <section>
+          <h2>You counted to 10!</h2>
+          <span>{this.state.count}</span>
+          <button onClick={this.increaseCount} >Add 1</button>
+        </section>
+      )
+    }
+  }
+}
+```
+
+#### Short-circuit operator (&&)
+With the `&&` operator, our code takes the following form: { js statement && HTML }. If our js statement evaluates to a truthy value, then our HTML will render. Unlike our if/else statement, we can put this in our returned HTML and it will evaluate before rendering.
+
+```jsx
+render() {
+  return (
+    <section>
+      { 
+        this.state.count < 10 && 
+        <h2>Can you count to 10?</h2>
+      }
+      {
+        this.state.count >= 10 && 
+        <h2>You counted to 10!</h2>
+      }
+      <span>{this.state.count}</span>
+      <button onClick={this.increaseCount} >Add 1</button>
+    </section>
+  )
+}
+```
+
+##### Full component code
+```jsx
+import React, { Component } from 'react';
+
+class Counter extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      count: 5
+    }
+  }
+
+  increaseCount = () => {
+    const newState = {
+      count: this.state.count + 1
+    }
+
+    this.setState(newState);
+  }
+
+  render() {
+    return (
+      <section>
+        { 
+          this.state.count < 10 && 
+          <h2>Can you count to 10?</h2>
+        }
+        {
+          this.state.count >= 10 && 
+          <h2>You counted to 10!</h2>
+        }
+        <span>{this.state.count}</span>
+        <button onClick={this.increaseCount} >Add 1</button>
+      </section>
+    )
+  }
+}
+```
+
+#### Ternary
+
+Similar to our ampersand (&&) operator, we can use ternaries in our HTML. If our js statement evaluates to a truthy value the first h2 will render, otherwise the second h2 will render.
+
+```jsx
+render() {
+  return (
+    <section>
+      { 
+        this.state.count < 10 
+        ? <h2>Can you count to 10?</h2>
+        : <h2>You counted to 10!</h2>
+      }
+      <span>{this.state.count}</span>
+      <button onClick={this.increaseCount} >Add 1</button>
+    </section>
+  )
+}
+```
+
+Check out this [article](https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e) to see additional conditional rendering options.
+
+
+
+
+
+
+
