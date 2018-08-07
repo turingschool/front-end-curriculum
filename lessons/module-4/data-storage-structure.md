@@ -178,6 +178,10 @@ Authors can publish many research papers
 
 What relationship does this describe? How might it be modeled in a relational vs. non-relational database?
 
+## Partner Up!
+
+With a partner, get a sheet of paper, and think of your own one-to-many relationship. Draw out what your tables would look like (column names and data types) and how the tables connect (primary keys and foreign keys). Then insert some data into the tables.
+
 ### Mapping Out a Schema
 Choosing a Database Management System for your application is highly dependent on what kind of data you plan to store. It's important to map out what your ideal data structure might look like before choosing a DBMS. There are tools to help you visualize the schemas you create, such as [Schema Designer](http://ondras.zarovi.cz/sql/demo/)
 
