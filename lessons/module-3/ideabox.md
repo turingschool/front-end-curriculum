@@ -318,7 +318,7 @@ class NewIdeaForm extends Component {
 
   render() {
     return (
-      <form onSubmit>
+      <form onSubmit={this.handleSubmit}>
         <input
           name="name"
           value={this.state.name}
