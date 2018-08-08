@@ -104,7 +104,7 @@ class NewIdeaForm extends Component {
   }
 
   handleNameChange(e) {
-    const value = name.target.value
+    const value = e.target.value
     this.setState({name: value})
   }
 
@@ -147,7 +147,7 @@ class NewIdeaForm extends Component {
   }
 
   handleNameChange = (e) => {
-    const value = name.target.value
+    const value = e.target.value
     this.setState({name: value})
   }
 
@@ -187,7 +187,7 @@ class NewIdeaForm extends Component {
   }
 
   handleChange = (e) => {
-    const {name, value} = name.target
+    const {name, value} = e.target
     this.setState({[name]: value})
   }
 
