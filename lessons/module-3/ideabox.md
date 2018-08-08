@@ -359,7 +359,7 @@ const IdeasContainer = ({ideas}) => {
   const ideaCards = ideas.map(idea => <IdeaCard {...idea} />)
 
   return(
-    <div className='IdeasContainer">
+    <div className="IdeasContainer">
       { ideaCards }
     </div>
   )
@@ -447,7 +447,7 @@ const IdeasContainer = ({ideas, removeIdea}) => {
   const ideaCards = ideas.map(idea => <IdeaCard {...idea} removeIdea={removeIdea} />)
 
   return(
-    <div className='IdeasContainer">
+    <div className="IdeasContainer">
       { ideaCards }
     </div>
   )
