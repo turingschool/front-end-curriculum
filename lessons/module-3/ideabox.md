@@ -104,7 +104,7 @@ class NewIdeaForm extends Component {
   }
 
   handleNameChange(e) {
-    const value = name.target.value
+    const value = e.target.value
     this.setState({name: value})
   }
 
@@ -147,7 +147,7 @@ class NewIdeaForm extends Component {
   }
 
   handleNameChange = (e) => {
-    const value = name.target.value
+    const value = e.target.value
     this.setState({name: value})
   }
 
@@ -187,7 +187,7 @@ class NewIdeaForm extends Component {
   }
 
   handleChange = (e) => {
-    const {name, value} = name.target
+    const {name, value} = e.target
     this.setState({[name]: value})
   }
 
@@ -307,7 +307,7 @@ class NewIdeaForm extends Component {
   }
 
   handleChange = (e) => {
-    const {name, value} = name.target
+    const {name, value} = e.target
     this.setState({[name]: value})
   }
 
@@ -318,7 +318,7 @@ class NewIdeaForm extends Component {
 
   render() {
     return (
-      <form onSubmit>
+      <form onSubmit={this.handleSubmit}>
         <input
           name="name"
           value={this.state.name}
@@ -359,7 +359,7 @@ const IdeasContainer = ({ideas}) => {
   const ideaCards = ideas.map(idea => <IdeaCard {...idea} />)
 
   return(
-    <div className='IdeasContainer">
+    <div className="IdeasContainer">
       { ideaCards }
     </div>
   )
@@ -447,7 +447,7 @@ const IdeasContainer = ({ideas, removeIdea}) => {
   const ideaCards = ideas.map(idea => <IdeaCard {...idea} removeIdea={removeIdea} />)
 
   return(
-    <div className='IdeasContainer">
+    <div className="IdeasContainer">
       { ideaCards }
     </div>
   )
