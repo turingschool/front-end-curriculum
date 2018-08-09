@@ -49,6 +49,14 @@ Throughout this process, make sure you are conforming to any stylistic conventio
 
 Excluding the two comments mentioned above, you must have both instructors review and approve **any other comment or communication** that you make on an issue or pull request. You must also have us review your code changes and your pull request descriptions before submitting.
 
+Before you make a PR draft and send it to instructors, your PR should contain the following:
+
+1. A link to the issue the PR addresses (you can do this by saying `Closes #151` for issue number 151)
+1. A short description to what you have changed
+1. Screenshots/gifs of the problem before and after you changed code (if applicable - this would not apply for adding tests)
+1. Format any code snippets or filename text using backticks (The PR can contain any markdown formatting! Make it look neat and professional.)
+1. Run the test suite provided - if there are failing tests that have _absolutely_ nothing to do with you changes, then address those tests in your PR
+
 #### Giving Your Teammates Credit
 
 Because this is a group project, you might be pairing to resolve a single issue. Just because one person is driving, doesn't mean they have to be the only one to get credit for the contribution. If you do submit a pull request, make sure to give your teammates credit! You can update the author on a commit with the following command:
