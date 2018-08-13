@@ -16,9 +16,54 @@ module: 2
 </div>
 
 
+
+
 ## Data Types Review
 
-Blah blah blah
+JavaScript has the following data types:
+
+* Boolean
+* Null
+* Undefined
+* Number
+* String
+* Symbol 
+* Object
+
+Data types allow us to declare what kind of information it is that we're working with. Programming languages provide us with data types so that we can more easily interact and manipulate them in a useful way. For example, if we declare a variable that's a Number, we can assume some common things we might want to do with that number:
+
+* add/subtract/multiply/divide it with another
+* round it up or down
+
+When we're working with strings, we might want to do things like:
+
+* uppercase/lowercase them
+* grab a portion of the string to work with
+* count how many characters it contains
+
+
+
+
+
+JavaScript is a dynamically or loosely typed language. This means that when we declare and assign a variable, it can be of any data type and it can be reassigned to a new data type at any time. Take a look at the following example:
+
+```js
+var moo = 'cow'; // moo is a string
+moo = 2; // moo is a number
+moo = true // moo is a boolean
+```
+
+This is an important and unique feature of JavaScript. It differs from many other languages, which are strongly typed, meaning a variable must be told what data type it represents. That data type cannot change after it's been declared. Here's an example of declaring a variable in Java, a strongly typed language:
+
+```java
+int moo = 20;
+```
+
+In this example, we first define that the variable we're about to declare is an integer, with `int`. Then we declare the name of the variable, and assign it an integer value. For the rest of it's lifetime, `moo` must now be an integer. We cannot convert it to a string or boolean later.
+
+The dynamic nature of JavaScript makes it more flexible to work with variables, but also makes it much easier to introduce bugs into your application. Recognizing that variable data types can change will help you prevent bugs and catch them more easily when you do encounter an error.
+
+
 
 ### ES5 vs ES6 Review
 
