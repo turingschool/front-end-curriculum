@@ -132,6 +132,7 @@ If you read the comments on this blog post over at [CSS-Tricks](https://css-tric
 * default parameters
 * spread operator
 * destructuring
+* template literals
 * classes
 
 
@@ -147,6 +148,7 @@ If you read the comments on this blog post over at [CSS-Tricks](https://css-tric
 
 <hr />
 
-## Further Reading
+## Further Reading & Resources
 
 * [JavaScript Primitives](https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
+* [Comprehensive changes with ES6](http://es6-features.org/#Constants)
