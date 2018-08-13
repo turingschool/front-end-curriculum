@@ -1,71 +1,99 @@
-## Making a Game with Canvas
+---
+title: Making a Game with HTML Canvas
+length:
+tags: html, api
+module: 2
+---
 
-The canvas element was introduced with HTML5. It gives us a bitmap which we can use to draw and interact with a grid of pixels. Interaction with it is done through a context. There are a few contexts provided, 2d and 3d...?
+### Goals
+* Learn the basics drawing using the canvas api
+* Creating an animation loop
+* Collision detection
+* Object Oriented Inheritance
 
-We will use the 2d context to create our games. 
+## Introduction to Game Time Starter Kit
 
-The first step is to create a canvas element in our HTML. Make sure to give it width and height properties.
+### Project Organization
 
-```html
-<canvas id="game" width="600" height="600" />
+##### index.js
+DOM interaction
+Event Listeners
+
+##### Game.js
+Game setup
+Game status
+What to do when objects collide
+Tracking score...
+Event handling
+
+##### GamePiece.js
+Draw
+Movement
+Collision detection
+
+##### Block.js
+Specialized functions
+
+## Canvas API
+
+#### Canvas Coordinate System
+
+The canvas is a grid of pixels. When we use the canvas to draw 2d pictures, each pixel has a x and a y location that determines where it is on the canvas. In the image below four pixels are shaded gray and their addresses are listed with the x-coordinate first followed by the y-coordinate.
+
+![Canvas Coordinate System](../../assets/images/lessons/making-a-game-with-canvas/canvas-coordinate-system.gif)
+
+#### Canvas Context
+The canvas context is the API which we will use to interact with the canvas.
+
 ```
-
-Now that we have canvas element we can grab it with our JS.
-
-```js
-const canvas = document.getElementById('game');
-
-// get our 2d context
+const canvas = document.querySelector('#game');
 const ctx = canvas.getContext('2d');
 ```
 
-We can use our context (ctx) to interact with our canvas.
+#### .fillRect(x, y, width, height)
+We can use the context `fillRect` method to draw solid rectangles on our canvas. It takes four arguments, 
 
-### ctx.fillRect( x, y, w, h )
+* **x**: the starting position on the horizontal axis for the rectangle
+* **y**: the starting position on the vertical axis for the rectangle
+* **width**: the width in pixels of the rectangle 
+* **height**: the height in pixels of the rectangle
 
-Our context has a `fillRect` method which will draw a rectangle at a position we specify with a width and a height. It takes four arguments
-
-- x: the position on the x-axis where we want to start drawing our rectangle
-- y: the position on the y-axis where we want to start drawing our rectangle
-- w: the width of our rectangle (in pixels)
-- y: the height of our rectangle (in pixels)
-
-If we want to draw a rectangle at position 50, 50, with a width and height of 10 we could do the following
-`ctx.fillRect( 50, 50, 10, 10 )`
-
-##### Exercises: 
-
-- Change the values passed into fillRect so that our rectangle is painted in the bottom right corner of the canvas.
-
-- Change the color of the rectangle to blue
-
-### ctx.fillStyle
-The default color of our context is black (`#000000`). The context has a fillStyle property which we can set to any color we want.
-e.g.
-
-```js
-ctx.fillStyle = '#FF0000';
+```
+ctx.fillRect(x, y, width, height);
 ```
 
-This will change the color of everything we draw next to red.
+#### .fillStyle
+The context fillStyle property is used to change the color of the filled rectangle we draw.
 
-## Animation
-So far, we have learned how to draw a rectangle to our canvas and how to change the color of that rectangle.
-
-Now we want to get our rectangle moving.
-
-### window.requestAnimationFrame(callbackFn)
-
-The window has a method called requestAnimationFrame. This method takes a callback function as an argument. The next times the window repaints the view, it will execute the callback function. The window repaints the view about 60 times a second.
-
-We can create a gameLoop function that will animate one frame of our game. By continously passing our game function to requestAnimationFrame we can animate our game.
-
-```js
-function gameLoop () {
-    // do game stuff
-    
-    // animate the next frame of our game
-    requestAnimationFrame( gameLoop );
-}
 ```
+ctx.fillStyle = 'green';
+```
+
+#### .clearRect(x, y, width, height)
+The context clearRect method is used to clear our canvas between animation frames. It takes the same arguments as fillRect.
+
+```
+ctx.clearRect(x, y, width, height);
+```
+
+## Animation Loop
+
+#### requestAnimationFrame(callback)
+#### speed
+
+## Collision Detection
+
+![Collision Detection](../../assets/images/lessons/making-a-game-with-canvas/collisions_overlap.png)
+
+
+[Great Blog Post on Collision Detection](https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection)
+
+#### Collision Between Rectangles
+#### Collision With Boundaries
+
+## Object Oriented Programming - Inheritance
+
+#### extends
+#### super
+
 
