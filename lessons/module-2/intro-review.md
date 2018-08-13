@@ -103,7 +103,12 @@ If you read the comments on this blog post over at [CSS-Tricks](https://css-tric
 ### ES5 vs ES6 Review
 
 
-Blah blah blah
+* let and const (block scope)
+* arrow functions (this)
+* default parameters
+* spread operator
+* destructuring
+* classes
 
 
 ### Further Reading
