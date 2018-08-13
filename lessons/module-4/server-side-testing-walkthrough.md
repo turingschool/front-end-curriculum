@@ -14,7 +14,7 @@ Change into the new directory and run `npm install`.
 
 To see that the server is running, run the command `node server.js` in the terminal, and head over to `localhost:3000` in your browser. You should see a page with the text "We're going to test all the routes!"
 
-To stop the server, just enter `control + c` in the terminal.
+To stop the server, enter `control + c` in the terminal.
 
 ### Setup
 
@@ -573,19 +573,3 @@ app.listen(app.get('port'), () => {
 
 module.exports = app;
 ```
-
-## Checks for Understanding
-
-* What libraries do we use to test server-side endpoints?
-* What is the difference between happy and sad path tests?
-* What about a response should we test?
-
-## On Your Own - In True TDD Style
-
-Add tests for these requests, and then implement the routes:
-
-* GET request for one student based on their name (happy path)
-  - Normally, this will be an ID, but here we'll use the name of the student. The route would look something like `/api/v1/students/knuth`
-* GET request for one student based on their name that does not exist in the database (sad path)
-* PUT request to change a student's information (happy path)
-* DELETE request to _destroy_ a student (happy path)
