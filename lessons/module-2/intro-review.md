@@ -113,11 +113,11 @@ So even though we have these primitive data types, an important generalization w
 If you read the comments on this blog post over at [CSS-Tricks](https://css-tricks.com/the-javascript-ah-ha-moment/) you'll see how this concept set a lightbulb off for many developers. It's ok if that moment isn't quite there yet for you, just file this information away in the back of your mind and it will come :) 
 
 
-### ES5 vs ES6 Review
+## ES5 vs ES6 Review
 
 [ES6 Overview](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html)
 
-#### Main Themes:
+### Main Themes:
 
 * let and const (block scope)
 * arrow functions (this)
@@ -127,13 +127,13 @@ If you read the comments on this blog post over at [CSS-Tricks](https://css-tric
 * classes
 
 
-### Checks for Understanding
+## Checks for Understanding
 
 * What does it mean when we say a primitive data type is "immutable"?
 * What does it mean when we say everything in JavaScript is an object?
 * Why is it important to recognize that JavaScript is a loosely typed language?
 * What are the main changes made to the language with ES6?
 
-### Further Reading
+## Further Reading
 
 * [JavaScript Primitives](https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
