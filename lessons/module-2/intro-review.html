@@ -59,10 +59,6 @@ The dynamic nature of JavaScript makes it more flexible to work with variables, 
 
 ### Primitives vs. Objects
 
-All of JavaScript's data types besides objects are considered **primitives**. This means that they are immutable, unlike objects. Read through the documentation on primitives [here](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) and then we'll discuss it further as a class.
-
-If you read the comments on this blog post over at [CSS-Tricks](https://css-tricks.com/the-javascript-ah-ha-moment/) you'll see how this concept set a lightbulb off for many developers. It's ok if that moment isn't quite there yet for you, just file this information away in the back of your mind and it will come :) 
-
 
 #### Objects
 
@@ -79,10 +75,38 @@ var pizza = {
 
 But objects are actually quite a bit more than that. Read through the documentation [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Objects) to identify what else is considered an object in JavaScript.
 
- 
+
+#### Primitives
+
+All of JavaScript's data types besides objects are considered **primitives**. This means that they are immutable, and they have no methods, unlike objects. Read through the documentation on primitives [here](https://developer.mozilla.org/en-US/docs/Glossary/Primitive) and then we'll discuss it further as a class.
+
+
+#### Everything is an Object
+
+We said that primitives have no methods. If a string is a primitive, then how can we call a method on it like so:
+
+```js
+var moo = 'mooooo cow';
+moo.toUpperCase();
+```
+
+In this example, it looks like strings **do** have methods. The reason we can do this is that JavaScript provides a wrapper object around the primitive string so that we can call specific methods on it. Whenever we call a method on our primitive string, behind the scenes, JavaScript coerces this primitive into an object really quickly, then converts it back to a primitive when the operation is complete.
+
+This provides some insight into why primitives are immutable. The string primitive itself never actually changes, but you can perform actions on it through the use of this wrapper object that allow you to create a modified value that you might want to work with. When JavaScript converts your string back into a primitive, the original value has not changed.
+
+So even though we have these primitive data types, an important generalization we can make is that **everything in JavaScript is an object**.
+
+If you read the comments on this blog post over at [CSS-Tricks](https://css-tricks.com/the-javascript-ah-ha-moment/) you'll see how this concept set a lightbulb off for many developers. It's ok if that moment isn't quite there yet for you, just file this information away in the back of your mind and it will come :) 
+
+
 
 
 ### ES5 vs ES6 Review
 
 
 Blah blah blah
+
+
+### Further Reading
+
+* [JavaScript Primitives](https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
