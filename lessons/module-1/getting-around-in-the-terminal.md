@@ -4,6 +4,11 @@ length: 90
 tags: command line, terminal
 ---
 
+## Learning Goals
+* Understand what the terminal is and why you should use it
+* Become familiar with terminal commands to navigate your file structure
+* Learn how to create, remove, copy, and paste directories and files
+
 ## Vocab
 
 - `Terminal` A program that allows a user to interact with The Command Line
