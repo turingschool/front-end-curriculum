@@ -6,10 +6,15 @@ module: 2
 ---
 
 
-## In Pairs/Threes 
+<style type="text/css">
+  .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}
+</style>
 
-Discuss your prework. What was new and interesting? What was difficult or confusing? Did you get tripped up on anything during the tutorials, installations, etc.
 
+<div class="discuss">
+  <h4>In Pairs/Threes</h4>
+  <p>Discuss your prework. What was new and interesting? What was difficult or confusing? Did you get tripped up on anything during the tutorials, installations, etc.</p>
+</div>
 
 ## Data Types Review
 
