@@ -21,10 +21,15 @@ Students should be able to:
 * identify some of the main changes brought about in ES6
 
 
+<hr />
+
 <div class="discuss">
   <h4>In Pairs/Threes</h4>
   <p>Discuss your prework. What was new and interesting? What was difficult or confusing? Did you get tripped up on anything during the tutorials, installations, etc.</p>
 </div>
+
+
+<hr />
 
 ## Data Types Review
 
@@ -111,6 +116,9 @@ This provides some insight into why primitives are immutable. The string primiti
 So even though we have these primitive data types, an important generalization we can make is that **everything in JavaScript is an object**.
 
 If you read the comments on this blog post over at [CSS-Tricks](https://css-tricks.com/the-javascript-ah-ha-moment/) you'll see how this concept set a lightbulb off for many developers. It's ok if that moment isn't quite there yet for you, just file this information away in the back of your mind and it will come :) 
+
+
+<hr />
 
 
 ## ES5 vs ES6 Review
