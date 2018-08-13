@@ -11,7 +11,6 @@ module: 2
 Discuss your prework. What was new and interesting? What was difficult or confusing? Did you get tripped up on anything during the tutorials, installations, etc.
 
 
-
 ## Data Types Review
 
 JavaScript has the following data types:
