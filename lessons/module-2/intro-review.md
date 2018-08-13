@@ -145,6 +145,8 @@ If you read the comments on this blog post over at [CSS-Tricks](https://css-tric
 * Why is it important to recognize that JavaScript is a loosely typed language?
 * What are the main changes made to the language with ES6?
 
+<hr />
+
 ## Further Reading
 
 * [JavaScript Primitives](https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
