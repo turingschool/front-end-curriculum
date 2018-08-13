@@ -75,6 +75,8 @@ Partner up, and let's look at the documentation for the libraries we'll use for 
 - [chai](http://chaijs.com/) gives us the ability to make assertions
 - [chai-http](https://github.com/chaijs/chai-http) lets us make requests to our own server to check what the endpoints return
 
+Use your partner as a teammate: let them know when you've found something, ask them questions, and communicate your process when you figure something out.
+
 ### Mocha
 
 Take a look at the mocha documentation first. What do we need to run a test file using mocha? We want to be able to run the command `mocha --exit` in the terminal and have a test file run. What do we need to do?
