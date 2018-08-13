@@ -6,10 +6,30 @@ module: 2
 ---
 
 
-## In Pairs/Threes 
+<style type="text/css">
+  article a:link, article a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}#view-toggle span.active, h3{color:#333;font-weight:600}, h4 code{font-size: 20px;color:#fc4b60}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container {color:#555}hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0} .discuss h4, h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666} h2, h2 a{color:#000} h3{margin:0;padding:20px 0 0} p{line-height:1.5em} ul{-webkit-padding-start:20px} code{font-size:16px;color:#fc4b60} .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee} img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+</style>
 
-Discuss your prework. What was new and interesting? What was difficult or confusing? Did you get tripped up on anything during the tutorials, installations, etc.
 
+## Lesson Goals
+
+Students should be able to:
+
+* identify the different data types JavaScript provides us with
+* describe the difference between loosely typed languages and strongly typed languages
+* describe the differene between primitives and objects in JavaScript
+* identify some of the main changes brought about in ES6
+
+
+<hr />
+
+<div class="discuss">
+  <h4>In Pairs/Threes</h4>
+  <p>Discuss your prework. What was new and interesting? What was difficult or confusing? Did you get tripped up on anything during the tutorials, installations, etc.</p>
+</div>
+
+
+<hr />
 
 ## Data Types Review
 
@@ -98,14 +118,37 @@ So even though we have these primitive data types, an important generalization w
 If you read the comments on this blog post over at [CSS-Tricks](https://css-tricks.com/the-javascript-ah-ha-moment/) you'll see how this concept set a lightbulb off for many developers. It's ok if that moment isn't quite there yet for you, just file this information away in the back of your mind and it will come :) 
 
 
+<hr />
 
 
-### ES5 vs ES6 Review
+## ES5 vs ES6 Review
+
+[ES6 Overview](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html)
+
+### Main Themes:
+
+* let and const (block scope)
+* arrow functions (this)
+* default parameters
+* spread operator
+* destructuring
+* template literals
+* classes
 
 
-Blah blah blah
+<hr />
 
 
-### Further Reading
+## Checks for Understanding
+
+* What does it mean when we say a primitive data type is "immutable"?
+* What does it mean when we say everything in JavaScript is an object?
+* Why is it important to recognize that JavaScript is a loosely typed language?
+* What are the main changes made to the language with ES6?
+
+<hr />
+
+## Further Reading & Resources
 
 * [JavaScript Primitives](https://javascriptweblog.wordpress.com/2010/09/27/the-secret-life-of-javascript-primitives/)
+* [Comprehensive changes with ES6](http://es6-features.org/#Constants)
