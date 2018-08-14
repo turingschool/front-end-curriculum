@@ -143,7 +143,23 @@ isCollidingWith(object) {
     );
   }
 ```
- 
+
+<!--
+Create two objects and demonstrate that the collision detection works.
+
+// Game constructor
+this.blocks = [
+  new Block(50, 50, 10, 10, 'red', 'black'),
+  new Block(59, 59, 10, 10, 'green', 'black')
+];
+
+// Game animate
+const { blocks } = this;
+const collision = blocks[0].isCollidingWith(blocks[1]);
+
+console.log(collision)
+-->
+
 
 #### Collision With Canvas Boundaries
 
@@ -195,6 +211,10 @@ class Block extends GamePiece {
     }
 }
 ```
+<!--
+Place a debugger before the super invokation. Then walk through dev tools and show how the super invokes the parent constructor method.
+-->
+
 
 It can also be used in other methods to invoke parent class methods.
 
@@ -219,6 +239,10 @@ class Block extends GamePiece {
     }
 }
 ```
+
+<!--
+Comment out `super.draw(ctx)` to show the difference in hw the block(s) render
+-->
 
 ## Event Handling
 Our event listeners go in our index.js file. Once an event fires, the event listener can notify the game that an event occured, then the game can determine how it should handle that event. This ensures seperation of concerns, index is only concerned with detecting events, and the game file is only concerned with doing something when an event occurs. This also makes writing tests easier.
