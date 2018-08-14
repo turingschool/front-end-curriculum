@@ -16,23 +16,23 @@ module: 2
 ### Project Organization
 
 ##### index.js
-DOM interaction
-Event Listeners
+* DOM interaction
+* Event Listeners
 
 ##### Game.js
-Game setup
-Game status
-What to do when objects collide
-Tracking score...
-Event handling
+* Game setup
+* Game status
+* What to do when objects collide
+* Tracking score
+* Event handling
 
 ##### GamePiece.js
-Draw
-Movement
-Collision detection
+* Draw
+* Movement
+* Collision detection
 
 ##### Block.js
-Specialized functions
+* Specialized functions
 
 ## Canvas API
 
@@ -43,7 +43,7 @@ The canvas is a grid of pixels. When we use the canvas to draw 2d pictures, each
 ![Canvas Coordinate System](../../assets/images/lessons/making-a-game-with-canvas/canvas-coordinate-system.gif)
 
 #### Canvas Context
-The canvas context is the API which we will use to interact with the canvas.
+The canvas context is the API which we will use to interact with the canvas. [2d Rendering Context Documentation](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
 
 ```js
 const canvas = document.querySelector('#game');
@@ -51,7 +51,7 @@ const ctx = canvas.getContext('2d');
 ```
 
 #### .fillRect(x, y, width, height)
-We can use the context `fillRect` method to draw solid rectangles on our canvas. It takes four arguments, 
+The `fillRect` method to draw solid rectangles on our canvas. It takes four arguments, 
 
 * **x**: the starting position on the horizontal axis for the rectangle
 * **y**: the starting position on the vertical axis for the rectangle
@@ -63,7 +63,7 @@ ctx.fillRect(x, y, width, height);
 ```
 
 #### .fillStyle
-The context fillStyle property is used to change the color of the filled rectangle we draw.
+The fillStyle property is used to change the color of the filled rectangle we draw using the fillRect method.
 
 ```js
 ctx.fillStyle = 'green';
@@ -76,9 +76,32 @@ The context clearRect method is used to clear our canvas between animation frame
 ctx.clearRect(x, y, width, height);
 ```
 
-## Animation Loop
+## Animation
+So far we have learned how to draw one a picture on our canvas. This picture is called a frame. To create an animation we need to draw many frames one after another. 
+
+![Frames Per Second](../../assets/images/lessons/making-a-game-with-canvas/fps.jpg)
+
+To create the illusion that all of these frames are connected and represent a moving image we need to create a lot of images very rapidly. To achieve a believable animation, we need to create 60 frames per second. Modern browsers are constantly updating and repainting the screen we see. Luckily for us, there is a built in method that we can use to run some code when the browser repaints itself. 
 
 #### requestAnimationFrame(callback)
+requestAnimationFrame takes a function as an argument. This function will run when the browser repaints itself. If you want to create an animation this function will have to call requestAnimationFrame again to paint the next frame.
+
+```js
+// start animation loop
+window.requestAnimationFrame(gameLoop);
+
+function gameLoop () {
+    // clear previous frame
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    // draw this frame
+    game.animate();
+
+    // draw next frame
+    window.requestAnimationFrame(gameLoop)
+}
+```
+
 #### speed
 
 ## Collision Detection
