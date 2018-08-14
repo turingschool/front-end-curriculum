@@ -152,10 +152,41 @@ Coupling refers to the level of connectedness between two objects. It's inevitab
 
 ## Single Responsibility Principle/Principle of Least Knowledge
 
-Avoiding these dependencies means following the single responsibility principle. The single responsibility principle states that each of our objects should know as little as possible in order to perform its job. This creates fewer dependencies and prevents bugs from creeping into our codebase. A good comparison would be to think about how our organs work - a [heart](https://www.youtube.com/watch?v=HYWmYJNg5Jw) can be maintained for transplant in a box because it's completely unaware of its surroundings and doesn't know that it's not inside a body because it has a single responsibility: to beat, and knows as little as possible about the rest of the system it's attached to.
+Avoiding these dependencies means following the single responsibility principle and the principle of least knowledge. These concepts suggest that each of our objects should have a single, focused duty, and should know only as much information as it needs to perform it. This creates fewer dependencies and prevents bugs from creeping into our codebase. A good comparison would be to think about how our organs work - a [heart](https://www.youtube.com/watch?v=HYWmYJNg5Jw) can be maintained for transplant in a box because it's completely unaware of its surroundings and doesn't know that it's not inside a body because it has a single responsibility: to beat, and knows as little as possible about the rest of the system it's attached to.
 
 ## Inheritance
 
+
+Let's say we want to be able to create some Teaching Assistants, which are a more specific type of instructor. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. Because TAs have so much in common with Instructors, we can create a **child class** or a **sub class** that inherits all of the properties and methods from our Instructor class. The only new behavior we need TAs to perform is to schedule check-ins.
+
+We can create a child class like so:
+
+
+```js
+class TA extends Instructor {
+  constructor(name, module, traits) {
+    super(name, module, traits);
+  }
+
+  scheduleCheckIns() {
+    console.log('Scheduling checkins!');
+  }
+}
+
+
+let bob = new TA('Bob', 2, ['serious']);
+```
+
+**Syntax breakdown:**
+
+* We create a new class called `TA` that **extends** from `Instructor` (this tells our TA that it is going to be subclass of `Instructor`)
+* We create our constructor, which takes in the same parameters as our `Instructor` class
+* Within our constructor, we invoke the built-in `super` function, passing through **only** the properties that it needs to inherit from the parent class
+* We add our additional behavior method - scheduling check-ins
+
+##### More about super
+
+The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor function of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class.
 
 
 ## Practice
@@ -269,10 +300,6 @@ class Tesla extends Vehicle {
 
 ```
 
-##### super keyword
-The above example uses the super keyword. The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor function of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class. Then we can add properties that are unique to the child class to the new instance of our class.
-
-
 # Messages
 
 
@@ -286,14 +313,6 @@ This is how objects interact with each other. For example, if I'm driving my car
 
 In order for objects to interact with each other they must communicate with messages. Messages are parameters that are essentially passed back and forth from object to object. The messages use parameters to make sure the information is precise. If the receiving object does not have enough information, it will not be able to properly carry out the method
  -->
-<!-- # SRP and Coupling
-
-Objects have expectations. When creating objects, you should always strive to have them know as little as possible or basically follow the SRP ([Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)). The more each object knows essentially the more dependencies that are added. That means that there is a higher likely hood that something will break.
-
-Coupling refers to the level of connectedness between two objects. Objects will need to interact with one another and therefore can create dependencies. A good goal as a programmer is to make objects as independent as possible, meaning they can be tested as stand-alone units and don't have too many dependencies on other objects to perform their respective duties.
-
- -->
-
 
 
 <!-- # Code Along
