@@ -10,6 +10,10 @@ tags: git, github
 
 In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/). This [video](https://www.youtube.com/watch?v=XsPVWGKK0qI) will walk you through the process and likely save you time.
 
+#### Git
+
+The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete the first exercise, [Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
+
 ### Learning Goals
 
 In this lesson, you will learn how to:
@@ -490,6 +494,8 @@ There are certain times where you will need to work on a codebase that you do no
 ### Your Turn
 
 Practice by pushing up your Dog Party or Number Guesser project to GitHub.
+
+To get even more practice, try completing the rest of the exercises under Basic Git Workflow at [CodeCademy](https://www.codecademy.com/learn/learn-git).  Specifically, do the exercises Manhattan Zoo and SnapFit Robots, Inc.  It is highly recommended that you also complete the quiz to solidify your understanding!
 
 ## Additional Resources
 
