@@ -62,6 +62,8 @@ The `fillRect` method to draw solid rectangles on our canvas. It takes four argu
 ctx.fillRect(x, y, width, height);
 ```
 
+![Rectangle on Grid](../../assets/images/lessons/making-a-game-with-canvas/grid-rectangle.png)
+
 #### .fillStyle
 The fillStyle property is used to change the color of the filled rectangle we draw using the fillRect method.
 
@@ -70,10 +72,11 @@ ctx.fillStyle = 'green';
 ```
 
 #### .clearRect(x, y, width, height)
-The context clearRect method is used to clear our canvas between animation frames. It takes the same arguments as fillRect.
+The context clearRect method is used to clear our canvas between animation frames. It takes the same arguments as fillRect. If we want to clear our entire canvase we will want to start at the top left corner of our canvas (x: 0, y: 0) and go to the bottom right corner of our canvas (x: canvasWidth, y: canvasHeight).
 
 ```js
-ctx.clearRect(x, y, width, height);
+// ctx.clearRect(x, y, width, height);
+ctx.clearRect(0, 0, canvasWidth, canvasHeight);
 ```
 
 ## Animation
@@ -108,15 +111,44 @@ function gameLoop () {
 
 ![Collision Detection](../../assets/images/lessons/making-a-game-with-canvas/collisions_overlap.png)
 
-
 [Great Blog Post on Collision Detection](https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection)
 
 #### Collision Between Rectangles
 There are two common ways to determine if two rectangles are colliding. The first is to determine if one of the first rectangles corners is inside the border of the second rectangle. The second is a little bit less intuitive but easier to implement. It is easier to check if one of the first rectangle's corners are not inside the second rectangle. If this is the case then they are not colliding, otherwise they are colliding.
 
+If any of the following are true than our first rectangle (r1) is not colliding with our second rectangle (r2).
+
+* r1.x + width < r2.x
+* r1.y + height < r2.y
+* r1.x > r2.x + width
+* r1.y > r2.y + height
+
+It is easier to determine if two blocks are not colliding, after checking those conditions we can invert the result to see if they are colliding.
+
+```js
+isCollidingWith(object) {
+    return !(
+        this.x + this.width < object.x   ||
+        this.y + this.height < object.y  ||
+        this.x > object.x + object.width || 
+        this.y > object.y + object.height
+    );
+}
+```
+ 
+
 #### Collision With Canvas Boundaries
 
-To determine if our block is inside our canvas, we need to check four things
+To determine if our block is inside our canvas, we need to check if each side of our rectangle is inside our canvas.
+
+![Rectangle on Grid](../../assets/images/lessons/making-a-game-with-canvas/grid-rectangle.png)
+
+If the following four statements are true than our rectangle is inside of our canvas.
+
+* x is greater than 0
+* y is greater than 0
+* x + width is less than our canvas width
+* y + height is less than our canvas height
 
 ## Object Oriented Programming - Inheritance
 
