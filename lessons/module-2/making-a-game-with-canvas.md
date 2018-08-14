@@ -5,6 +5,24 @@ tags: html, api
 module: 2
 ---
 
+### Vocabulary
+* Canvas Element
+* Pixel
+* Canvas Context
+* Animation
+* Frame
+* Collision
+
+<!--
+* Canvas Element - The HTML 5 element which allows to directly control pixels
+* Pixel - Picture Element
+* Canvas Context - The API we use to interact with the canvas
+* Animation - A series of frames shown in quick succession to create a moving picture
+* Frame - A single picture in our animation
+* Collision - When two objects occupy the same space
+
+-->
+
 ### Goals
 * Learn the basics drawing using the canvas api
 * Creating an animation loop
@@ -280,4 +298,4 @@ function handleKeyPress(event) {
 * When the mouse is clicked create a new block and add it to the game's blocks array
 
 ## Closing
-There are a lot of moving pieces when creating a game. This gametime starter kit aims to provide some structure and guidance as you create your game so you can focus on creating objects that interact with each other.
+There are a lot of moving pieces when creating a game. This gametime starter kit aims to provide some structure and guidance around interacting with the canvas and solves some common game challenges. This will allow you to focus on the Object Oriented Programming challenges of creating different classes and managing the objects you create from those classes.
