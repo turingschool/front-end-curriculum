@@ -119,31 +119,29 @@ function gameLoop () {
 
 ## Collision Detection
 
-![Collision Detection](../../assets/images/lessons/making-a-game-with-canvas/collisions_overlap.png)
-
-[Great Blog Post on Collision Detection](https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection)
+[Great MDN Article on Collision Detection](https://developer.mozilla.org/en-US/docs/Games/Techniques/2D_collision_detection)
 
 #### Collision Between Rectangles
-There are two common ways to determine if two rectangles are colliding. The first is to determine if one of the first rectangles corners is inside the border of the second rectangle. The second is a little bit less intuitive but easier to implement. It is easier to check if the first rectangle is not inside the second rectangle. If this is the case then they are not colliding, otherwise they are colliding.
+An easy way to determine if two rectangles are colliding is with the Axis-Aligned Bounding Box. We can check if there is no gap between any of the sides of the two rectangles than they must be colliding.
 
-If any of the following are true than our first rectangle (r1) is not colliding with our second rectangle (r2).
+If all of following are true than our first rectangle (r1) is colliding with our second rectangle (r2).
 
-* r1.x + width < r2.x
-* r1.y + height < r2.y
-* r1.x > r2.x + width
-* r1.y > r2.y + height
+* r1.x < r2.x + r2.width
+* r1.x + r1.width > r2.x
+* r1.y < r2.y + r2.height
+* r1.y + r1.height > r2.y
 
-It is easier to determine if two blocks are not colliding, after checking those conditions we can invert the result to see if they are colliding.
+Our GamePiece class has an isCollidingWith method that takes an object as an argument. This method determines if the object parameter is colliding with this particular GamePiece. In our code, `this` represents rectangle1 and the object parameter represents rectangle2.
 
 ```js
 isCollidingWith(object) {
-    return !(
-        this.x + this.width < object.x   ||
-        this.y + this.height < object.y  ||
-        this.x > object.x + object.width || 
-        this.y > object.y + object.height
+    return (
+        this.x < object.x + object.width && 
+        this.x + this.width > object.x &&
+        this.y < object.y + object.height &&
+        this.y + this.height > object.y
     );
-}
+  }
 ```
  
 
