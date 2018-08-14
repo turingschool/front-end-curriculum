@@ -112,7 +112,11 @@ function gameLoop () {
 [Great Blog Post on Collision Detection](https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection)
 
 #### Collision Between Rectangles
-#### Collision With Boundaries
+There are two common ways to determine if two rectangles are colliding. The first is to determine if one of the first rectangles corners is inside the border of the second rectangle. The second is a little bit less intuitive but easier to implement. It is easier to check if one of the first rectangle's corners are not inside the second rectangle. If this is the case then they are not colliding, otherwise they are colliding.
+
+#### Collision With Canvas Boundaries
+
+To determine if our block is inside our canvas, we need to check four things
 
 ## Object Oriented Programming - Inheritance
 
@@ -165,5 +169,18 @@ class Block extends GamePiece {
 }
 ```
 
+## Event Handling
+Our event listeners go in our index.js file. Once an event fires, the event listener can notify the game that an event occured, then the game can determine how it should handle that event. This ensures seperation of concerns, index is only concerned with detecting events, and the game file is only concerned with doing something when an event occurs. This also makes writing tests easier.
+
+```js
+// Add key press event handler
+document.addEventListener('keydown', handleKeyPress);
+
+function handleKeyPress(event) {
+  game.handleKeyPress(event);
+}
+```
 
 
+## Closing
+There are a lot of moving pieces when creating a game. This gametime starter kit aims to provide some structure and guidance as you create your game so you can focus on creating objects that interact with each other.
