@@ -38,7 +38,9 @@ module: 2
 
 #### Canvas Coordinate System
 
-The canvas is a grid of pixels. When we use the canvas to draw 2d pictures, each pixel has a x and a y location that determines where it is on the canvas. In the image below four pixels are shaded gray and their addresses are listed with the x-coordinate first followed by the y-coordinate.
+The canvas is a grid of pixels. When we use the canvas to draw 2d pictures, each pixel has a x and a y location that describes where it is on the canvas. In the image below four pixels are shaded gray and their addresses are listed with the x-coordinate first followed by the y-coordinate.
+
+<!-- draw (x, y) on the board -->
 
 ![Canvas Coordinate System](../../assets/images/lessons/making-a-game-with-canvas/canvas-coordinate-system.gif)
 
@@ -64,6 +66,14 @@ ctx.fillRect(x, y, width, height);
 
 ![Rectangle on Grid](../../assets/images/lessons/making-a-game-with-canvas/grid-rectangle.png)
 
+<!-- 
+draw coordinates on the board for each point in the picture 
+(x, y) -> (3, 3)
+(x + width, y) -> (3 + 4, 3)
+(x, y + height) -> (3, 3 + 4)
+(x + width, y + height) -> (3 + 4, 3 + 4)
+-->
+
 #### .fillStyle
 The fillStyle property is used to change the color of the filled rectangle we draw using the fillRect method.
 
@@ -84,10 +94,10 @@ So far we have learned how to draw one a picture on our canvas. This picture is 
 
 ![Frames Per Second](../../assets/images/lessons/making-a-game-with-canvas/fps.jpg)
 
-To create the illusion that all of these frames are connected and represent a moving image we need to create a lot of images very rapidly. To achieve a believable animation, we need to create 60 frames per second. Modern browsers are constantly updating and repainting the screen we see. Luckily for us, there is a built in method that we can use to run some code when the browser repaints itself. 
+To create the illusion that all of these frames are connected and represent a moving image we need to create a lot of images and show them one after the other very rapidly. To achieve a believable animation, we need to draw 60 frames per second on our canvas. Modern browsers are constantly updating and repainting the screen we see. Luckily for us, there is a built in method that we can use to run some code when the browser repaints itself which is 60 times per second. 
 
 #### requestAnimationFrame(callback)
-requestAnimationFrame takes a function as an argument. This function will run when the browser repaints itself. If you want to create an animation this function will have to call requestAnimationFrame again to paint the next frame.
+requestAnimationFrame takes a callback function as an argument. The callback function will run when the browser repaints itself. If you want to create an animation, the callback function will need to call requestAnimationFrame again to paint the next frame.
 
 ```js
 // start animation loop
@@ -114,7 +124,7 @@ function gameLoop () {
 [Great Blog Post on Collision Detection](https://learnopengl.com/In-Practice/2D-Game/Collisions/Collision-detection)
 
 #### Collision Between Rectangles
-There are two common ways to determine if two rectangles are colliding. The first is to determine if one of the first rectangles corners is inside the border of the second rectangle. The second is a little bit less intuitive but easier to implement. It is easier to check if one of the first rectangle's corners are not inside the second rectangle. If this is the case then they are not colliding, otherwise they are colliding.
+There are two common ways to determine if two rectangles are colliding. The first is to determine if one of the first rectangles corners is inside the border of the second rectangle. The second is a little bit less intuitive but easier to implement. It is easier to check if the first rectangle is not inside the second rectangle. If this is the case then they are not colliding, otherwise they are colliding.
 
 If any of the following are true than our first rectangle (r1) is not colliding with our second rectangle (r2).
 
@@ -139,16 +149,27 @@ isCollidingWith(object) {
 
 #### Collision With Canvas Boundaries
 
-To determine if our block is inside our canvas, we need to check if each side of our rectangle is inside our canvas.
+To determine if our block is inside our canvas, we need to check if any of our rectangle sides are outside our canvas.
 
 ![Rectangle on Grid](../../assets/images/lessons/making-a-game-with-canvas/grid-rectangle.png)
 
-If the following four statements are true than our rectangle is inside of our canvas.
+If any of the following four statements are true than our rectangle is inside of our canvas.
 
-* x is greater than 0
-* y is greater than 0
-* x + width is less than our canvas width
-* y + height is less than our canvas height
+* x < 0
+* x + width > canvas.width
+* y < 0
+* y + height > canvas.height
+
+```js
+isCollidingWithWall(canvasWidth, canvasHeight) {
+    return (
+        this.x < 0 ||
+        this.x + this.width > canvasWidth ||
+        this.y < 0 || 
+        this.y + this.height > canvasHeight
+    )
+}
+```
 
 ## Object Oriented Programming - Inheritance
 
