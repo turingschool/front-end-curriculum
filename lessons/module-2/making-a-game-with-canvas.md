@@ -45,7 +45,7 @@ The canvas is a grid of pixels. When we use the canvas to draw 2d pictures, each
 #### Canvas Context
 The canvas context is the API which we will use to interact with the canvas.
 
-```
+```js
 const canvas = document.querySelector('#game');
 const ctx = canvas.getContext('2d');
 ```
@@ -58,21 +58,21 @@ We can use the context `fillRect` method to draw solid rectangles on our canvas.
 * **width**: the width in pixels of the rectangle 
 * **height**: the height in pixels of the rectangle
 
-```
+```js
 ctx.fillRect(x, y, width, height);
 ```
 
 #### .fillStyle
 The context fillStyle property is used to change the color of the filled rectangle we draw.
 
-```
+```js
 ctx.fillStyle = 'green';
 ```
 
 #### .clearRect(x, y, width, height)
 The context clearRect method is used to clear our canvas between animation frames. It takes the same arguments as fillRect.
 
-```
+```js
 ctx.clearRect(x, y, width, height);
 ```
 
@@ -93,7 +93,54 @@ ctx.clearRect(x, y, width, height);
 
 ## Object Oriented Programming - Inheritance
 
+#### Inheritance
+With Object Oriented Programming we organize our code by creating classes. These classes are templates for different objects which we will use in our application. 
+
+Inheritance is when a child class inherits properties and methods from a parent class. When we create a child method we can tell it to inherit from another class using the `extends` and `super` keywords.
+
 #### extends
+The `extends` keyword allows to tell a class that it will inherit from another class. In our example below, Block will inherit all the properties and methods of GamePiece. The Block class can add additional properties and methods to all blocks.
+
+```js
+class Block extends GamePiece {
+}
+```
+
 #### super
+The super keyword is used to invoke parent class methods. When it is used directly in the child constructor function, it invokes the parent class constructor function.
+
+```js
+class Block extends GamePiece {
+    constructor(x, y, width, height) {
+        // invoke GamePiece constructor method
+        super(x, y, width, height);
+    }
+}
+```
+
+It can also be used in other methods to invoke parent class methods.
+
+```js
+class Block extends GamePiece {
+    constructor(x, y, height, width, color, borderColor) {
+        // invoke parent class constructor
+        super(x, y, height, width, color);
+
+        this.borderColor = borderColor;
+    } 
+
+    draw(ctx) {
+        const {x, y, height, width, borderColor } = this;
+
+        // invoke GamePiece draw method
+        super.draw(ctx);
+
+        // draw block border
+        ctx.strokeStyle = borderColor;
+        ctx.strokeRect(x, y, width, height);
+    }
+}
+```
+
 
 
