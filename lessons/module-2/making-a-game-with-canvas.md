@@ -30,6 +30,7 @@ module: 2
 * Object Oriented Inheritance
 
 ## Introduction to Game Time Starter Kit
+This lesson uses the [Game-Time-Starter-Kit Repo](https://github.com/turingschool-examples/game-time-starter-kit-FEm1)
 
 ### Project Organization
 
