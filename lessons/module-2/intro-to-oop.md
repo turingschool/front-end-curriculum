@@ -360,3 +360,4 @@ We'll be building out some classes to create a minimal flash card application.
 
 * [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 * [Class-based vs. prototypal inheritance](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
+* [MDN Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
