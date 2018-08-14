@@ -156,7 +156,17 @@ Avoiding these dependencies means following the single responsibility principle 
 
 ## Inheritance
 
-Let's say we want to be able to create some Teaching Assistants, which are a more specific type of instructor. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. Because TAs have so much in common with Instructors, we can create a **child class** or a **sub class** that inherits all of the properties and methods from our Instructor class. The only new behavior we need TAs to perform is to schedule check-ins.
+Inheritance allows you to create an object based on another one. Let's look at an example of an inheritance structure:
+
+![instrument example](https://koenig-media.raywenderlich.com/uploads/2017/05/ObjectOrientedProgramming-graph-2.png)
+
+We have a top-level **parent class** called `Instrument`. An `Instrument` might have a name, and be able to play music. But then we can branch out further from there, and create guitars, pianos, violins, etc. 
+
+Each of these more specific instruments should all still have a name and be able to play music - but they might start having their own behaviors and properties. For example, a guitar might have a property that denotes if it's acoustic or electric. A piano might have a property that denotes how many keys it has.
+
+As we get more specific, we create new classes that are based on our parent `Instrument`, and we allow them to each **inherit** the name property and the ability to play music from that parent. This allows us to share a single method across many subclasses, keeping our code DRY and performant.
+
+Let's go back to our previous example and create some Teaching Assistants, which are a more specific type of instructor. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. Because TAs have so much in common with Instructors, we can create a **child class** or a **sub class** that inherits all of the properties and methods from our Instructor class. The only new behavior we need TAs to perform is to schedule check-ins.
 
 We can create a child class like so:
 
