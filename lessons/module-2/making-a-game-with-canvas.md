@@ -32,7 +32,7 @@ module: 2
 * Collision detection
 
 ##### Block.js
-* Specialized functions
+* Block specific properties and methods
 
 ## Canvas API
 
@@ -46,6 +46,10 @@ The canvas is a grid of pixels. When we use the canvas to draw 2d pictures, each
 
 #### Canvas Context
 The canvas context is the API which we will use to interact with the canvas. [2d Rendering Context Documentation](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)
+
+<!--
+Take a moment to explore the 2d context documentation
+-->
 
 ```js
 const canvas = document.querySelector('#game');
@@ -185,6 +189,9 @@ isCollidingWithWall(canvasWidth, canvasHeight) {
 }
 ```
 
+#### Exercise
+* When a block hits the border, do not end the game, instead reverse the blocks direction.
+
 ## Object Oriented Programming - Inheritance
 
 #### Inheritance
@@ -255,7 +262,13 @@ function handleKeyPress(event) {
   game.handleKeyPress(event);
 }
 ```
+#### Exercise 1
+* Pause the game when the letter p is pressed
+* When the game is paused no animations should happen
 
+#### Exercise 2
+* Add a mouse event listener and event handler
+* When the mouse is clicked create a new block and add it to the game's blocks array
 
 ## Closing
 There are a lot of moving pieces when creating a game. This gametime starter kit aims to provide some structure and guidance as you create your game so you can focus on creating objects that interact with each other.
