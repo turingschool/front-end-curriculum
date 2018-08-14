@@ -198,6 +198,15 @@ let bob = new TA('Bob', 2, ['serious']);
 The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor function of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class.
 
 
+### Prototypal Inheritance
+
+Let's add a debugger after we instantiate our `bob` TA so that we can inspect it in the developer tools. In the console tab, you should be able to type in `bob` and get a representation of the bob object like so:
+
+![prototypal](https://i.imgur.com/E01qcn7.png)
+
+Here you can see the entire prototype chain, and how `bob` is inheriting properties and methods from the `Instructor` class. This is called **prototypal inheritance**.
+
+
 ## Practice
 
 With a partner, think about the Turing basement and come up with something that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. Create a repl for them!
