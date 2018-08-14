@@ -156,7 +156,6 @@ Avoiding these dependencies means following the single responsibility principle 
 
 ## Inheritance
 
-
 Let's say we want to be able to create some Teaching Assistants, which are a more specific type of instructor. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. Because TAs have so much in common with Instructors, we can create a **child class** or a **sub class** that inherits all of the properties and methods from our Instructor class. The only new behavior we need TAs to perform is to schedule check-ins.
 
 We can create a child class like so:
@@ -191,7 +190,12 @@ The super keyword is used to access and invoke methods on the parent class. In t
 
 ## Practice
 
-With a partner, think about the Turing basement and come up with something that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones.
+With a partner, think about the Turing basement and come up with something that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. Create a repl for them!
+
+
+## Practice 2
+
+Pick an application you use regularly -- it can be a social media app, e-commerce site, etc. Think about what kinds of classes you might use to build it. What components of the application should be reusable? What kinds of properties and behaviors should they have? Could anything inherit from them?
 
 
 
