@@ -164,6 +164,16 @@ const collision = blocks[0].isCollidingWith(blocks[1]);
 console.log(collision)
 -->
 
+#### Exercise - Test The Collision Method
+* Add a second block of a different color to your Game class's blocks array (make sure to change the x, y coordinates)
+* Add the following code to your Game class's animate method
+
+```js
+const { blocks } = this;
+const collision = blocks[0].isCollidingWith(blocks[1]);
+
+console.log(collision)
+```
 
 #### Collision With Canvas Boundaries
 
@@ -171,7 +181,7 @@ To determine if our block is inside our canvas, we need to check if any of our r
 
 ![Rectangle on Grid](../../assets/images/lessons/making-a-game-with-canvas/grid-rectangle.png)
 
-If any of the following four statements are true than our rectangle is inside of our canvas.
+If any of the following four statements are true, than our rectangle is inside of our canvas.
 
 * x < 0
 * x + width > canvas.width
@@ -200,7 +210,7 @@ With Object Oriented Programming we organize our code by creating classes. These
 Inheritance is when a child class inherits properties and methods from a parent class. When we create a child method we can tell it to inherit from another class using the `extends` and `super` keywords.
 
 #### extends
-The `extends` keyword allows to tell a class that it will inherit from another class. In our example below, Block will inherit all the properties and methods of GamePiece. The Block class can add additional properties and methods to all blocks.
+The `extends` keyword allows us to tell a class that it will inherit properties and methods from another class. In our example below, Block will inherit all the properties and methods of GamePiece. The Block class can add additional properties and methods to all blocks.
 
 ```js
 class Block extends GamePiece {
@@ -221,7 +231,6 @@ class Block extends GamePiece {
 <!--
 Place a debugger before the super invokation. Then walk through dev tools and show how the super invokes the parent constructor method.
 -->
-
 
 It can also be used in other methods to invoke parent class methods.
 
