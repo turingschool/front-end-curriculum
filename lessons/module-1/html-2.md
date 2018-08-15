@@ -3,13 +3,13 @@ title: HTML II - Forms and Devtools
 length: 180
 tags: html, introduction, practice
 ---
+<!--  NOTE from LB: this lesson is being reworked as of 1808 -- the forms section was moved into HTML 1, and the dev tools section is being rethought to find a better home for it. For the time being the link to this lesson has been commented out in lessons/index.html -->
 
 # Overview
 Now that you have a handle on the basics of structuring content for an HTML file:
 
 * Let's discuss building more robust HTML __forms__
 * Let's start using our __devtools__
-* Let's put __accessibility__ best practices into place
 
 # Docs
 
@@ -20,10 +20,10 @@ HTML Guide and form structure
 Dev Tools
 * [Chrome Dev Tools Docs](https://developers.google.com/web/tools/chrome-devtools/)
 * [The Basic of Chrome Dev Tools](https://www.udemy.com/devtools-2017-the-basics-of-chrome-developer-tools/)
-
+<!--
 Accessibility
 * [MDN Accessibility](https://developer.mozilla.org/en-US/docs/Web/Accessibility)
-* [MDN Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
+* [MDN Element Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Element) -->
 
 ***
 
@@ -61,18 +61,18 @@ Copy the form code below into your own Pen, and then refactor as follows:
 <p data-height="458" data-theme-id="26495" data-slug-hash="Lbjgwy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjgwy/">Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-***
+  ***
 
-# Chrome Dev Tools
+  # Chrome Dev Tools
 
-Debugging your front-end code can be an intimidating part of the development process, but it's also one of the most powerful skills you can acquire Developers of all levels spend a significant amount of time troubleshooting code, but the more comfortable you are with debugging tools, the easier it will be to isolate, identify and fix broken code.
+  Debugging your front-end code can be an intimidating part of the development process, but it's also one of the most powerful skills you can acquire Developers of all levels spend a significant amount of time troubleshooting code, but the more comfortable you are with debugging tools, the easier it will be to isolate, identify and fix broken code.
 
-The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.  
+  The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.  
 
-Take 5 minutes to read through [this section](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) of the chrome devtools docs.
+  Take 5 minutes to read through [this section](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) of the chrome devtools docs.
 
-### Developer Tools
-One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). To open developer tools in Chrome:
+  ### Developer Tools
+  One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). To open developer tools in Chrome:
   - Mac: `Cmd` + `Opt` + `i`
   - (or) Right click on the browser window and select `inspect`
   - (or) Select `View` in the navbar, then `Developer`, then `Developer Tools`
