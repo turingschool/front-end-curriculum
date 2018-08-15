@@ -304,14 +304,10 @@ When we ran the command `npm init --yes` it generated a `package.json` file for 
 ```  
 
 **Install Mocha**:  
-`npm install --global mocha` (Installs the `mocha` command globally so you can use it everywhere)  
 `npm install --save-dev mocha` (Installs the `mocha` command locally within your project as a development dependency.)  
-
-We need to install Mocha globally here because we are going to tell our package.json that the command `mocha` is what we will use to run our tests. This command will be executed in our terminal on a global level. We also need this package locally so when it sees the describe blocks within our code it knows what to do.  
 
 **Install Chai**:  
 `npm install --save-dev chai`  
-(Installs chai locally - we don't need this package globally because our assertions will only ever be within our tests themselves.)  
 
 You'll now see that in your `package.json` you have the following new dependencies (your version numbers might be different):  
 
@@ -339,7 +335,7 @@ Update the scripts object to run Mocha:
 
 ```js
 "scripts": {
-  "test": "mocha"
+  "test": "./node_modules/mocha/bin/mocha"
 },
 ```
 
