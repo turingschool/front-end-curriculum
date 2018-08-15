@@ -85,6 +85,11 @@ Typically, the deciding factor in what should be tested is whether or not tests 
 - they take time to maintain
 - updating features is slower when you've got to fix tests, too
 
+<!-- 
+  Take some time and think about the game which you are building. 
+  What are some the key pieces of functionality in your game?
+-->
+
 ## Types of Tests
 
 ![The Testing Pyramid](https://i.imgur.com/8nDly8J.png)
@@ -111,6 +116,111 @@ You're welcome.
 Here is another more in-depth global lifecycle for best testing practices:  
 
 ![Global Lifecycle](http://i.imgur.com/CL6Pr58.png)  
+
+## Testing Framework: Mocha  
+
+For now, we'll focus on the testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
+
+[Mocha](https://mochajs.org/) is a testing framework that runs on Node.js in your terminal, and can also be run in your browser window.  
+
+Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai that we will talk about in a minute.
+
+First, lets look at the syntax provided from Mocha:    
+
+```js
+describe('unicorn', function() {
+  it('calling eat accumulates calories', function() {
+  });
+})
+```
+
+The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that `eating accumulates calories`. You'll write the code above with any framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
+
+## Assertion Library: Chai  
+
+An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect.  
+
+In english, here are a few examples of things we might want to assert:  
+
+"After I create a new instance of a unicorn, the unicorn **should have a name**"  
+"After I create a new instance of a unicorn, and tell it to sing, the unicorn **should return a string of text from a song**"  
+"After I create a new instance of a unicorn, and the unicorn eats three times, the unicorn **should have 300 calories**"  
+
+If you think of each of these simple english sentences, the "assertion" piece is the part in bold. In that last example, in other words, after I create a unicorn and it eats three times, I want to assert that its calorie count is **EQUAL TO** 300.  
+
+The assertion library we are going to use today is called [Chai](http://chaijs.com/). Chai can be inserted into many different testing frameworks, but it works seamlessly with Mocha which is what we'll focus on today. Before we get back to our tests, lets look at some of the syntax options Chai provides:  
+
+![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)  
+
+You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to stick with the [Assert API](http://chaijs.com/api/assert/), since it might seem the most familiar coming off of mythical creatures in mod 1.  
+
+The [Assert API](http://chaijs.com/api/assert/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
+
+```js
+assert.method(actual, expected, [message])
+```
+
+In other words, we call `assert`, then the method we want, and the method takes three arguments.
+`actual`: The actual javascript code you want to run from your codebase  
+`expected`: What you expect to be returned for this test to pass  
+`message`: String (Optional), a message to yourself to indicate what is being tested  
+
+Note: Not all methods take three arguments. Keep the docs handy!  
+
+## Common Chai Assertions  
+
+Let's look at a few of the methods you might use most often:
+
+Assert equality:  
+
+```js
+assert.equal(2 + 2, 4, 'adding two plus two returns 4');
+```
+
+Assert inequality:  
+
+```js
+assert.notEqual(3, 4, 'these numbers are not equal');
+```
+
+Assert existence:  
+
+```js
+var foo = 'hi';
+
+assert.exists(foo, 'foo is neither `null` nor `undefined`');
+```
+
+Assert the type of something:  
+
+```js
+assert.typeOf({ tea: 'chai' }, 'object', 'we have an object');
+assert.typeOf(['chai', 'jasmine'], 'array', 'we have an array');
+```
+
+Assert inclusion:  
+
+```js
+assert.include([1,2,3], 2, 'array includes a value of 2');
+```
+
+*PAUSE: What's the difference between equal vs deepEqual?*
+
+At some point you may have seen an assertion that something `deeply equals` something else. This is because JavaScript is trying to make your life easy and fill in some gaps for you. Sometimes we don't want those gaps filled. Lets look at a quick example:
+
+```js
+assert.equal({ tea: 'green' }, { tea: 'green' });
+```
+
+Using the `equal` method, this test will fail. These two objects look the same but they are in fact two distinct objects with the same contents. You can think of them as if they were genetic twins. Genetic twins share the same genetic DNA but they are not the same person. The `equal` method checks if two things are exactly the same.
+
+Now, lets look at `deepEqual`.
+
+```js
+  assert.deepEqual({ tea: 'green' }, { tea: 'green' });
+```
+
+If use `deepEqual` instead, the same test will pass. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is the same. The `deepEqual` method checks if two things contain the same information.
 
 ## BDD
 
@@ -161,25 +271,6 @@ describe('Unicorn', function() {
   });
 })
 ```
-
-## Testing Framework: Mocha  
-
-For now, we'll focus on the testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
-
-[Mocha](https://mochajs.org/) is a testing framework that runs on Node.js in your terminal, and can also be run in your browser window.  
-
-Mocha itself is the framework that runs the tests and dictates the syntax of the test block as a whole. This is separate from the assertion library Chai that we will talk about in a minute.
-
-First, lets look at the syntax provided from Mocha:    
-
-```js
-describe('unicorn', function() {
-  it('calling eat accumulates calories', function() {
-  });
-})
-```
-
-The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that `eating accumulates calories`. You'll write the code above with any framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
 
 ## Testing Practice: Adding Mocha and Chai   
 
@@ -312,92 +403,6 @@ Box
 
 1 passing (10ms)  
 ```
-
-## Assertion Library: Chai  
-
-An assertion is the crucial piece of the test that actually checks that when certain pieces of are code are executed, what we're getting back is what we expect.  
-
-In english, here are a few examples of things we might want to assert:  
-
-"After I create a new instance of a unicorn, the unicorn **should have a name**"  
-"After I create a new instance of a unicorn, and tell it to sing, the unicorn **should return a string of text from a song**"  
-"After I create a new instance of a unicorn, and the unicorn eats three times, the unicorn **should have 300 calories**"  
-
-If you think of each of these simple english sentences, the "assertion" piece is the part in bold. In that last example, in other words, after I create a unicorn and it eats three times, I want to assert that its calorie count is **EQUAL TO** 300.  
-
-The assertion library we are going to use today is called [Chai](http://chaijs.com/). Chai can be inserted into many different testing frameworks, but it works seamlessly with Mocha which is what we'll focus on today. Before we get back to our tests, lets look at some of the syntax options Chai provides:  
-
-![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)  
-
-You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to stick with the [Assert API](http://chaijs.com/api/assert/), since it might seem the most familiar coming off of mythical creatures in mod 1.  
-
-The [Assert API](http://chaijs.com/api/assert/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
-
-```js
-assert.method(actual, expected, [message])
-```
-
-In other words, we call `assert`, then the method we want, and the method takes three arguments.
-`actual`: The actual javascript code you want to run from your codebase  
-`expected`: What you expect to be returned for this test to pass  
-`message`: String (Optional), a message to yourself to indicate what is being tested  
-
-Note: Not all methods take three arguments. Keep the docs handy!  
-
-## Common Chai Assertions  
-
-Let's look at a few of the methods you might use most often:
-
-Assert equality:  
-
-```js
-assert.equal(2 + 2, 4, 'adding two plus two returns 4');
-```
-
-Assert inequality:  
-
-```js
-assert.notEqual(3, 4, 'these numbers are not equal');
-```
-
-Assert existence:  
-
-```js
-var foo = 'hi';
-
-assert.exists(foo, 'foo is neither `null` nor `undefined`');
-```
-
-Assert the type of something:  
-
-```js
-assert.typeOf({ tea: 'chai' }, 'object', 'we have an object');
-assert.typeOf(['chai', 'jasmine'], 'array', 'we have an array');
-```
-
-Assert inclusion:  
-
-```js
-assert.include([1,2,3], 2, 'array includes a value of 2');
-```
-
-*PAUSE: What's the difference between equal vs deepEqual?*
-
-At some point you may have seen an assertion that something `deeply equals` something else. This is because JavaScript is trying to make your life easy and fill in some gaps for you. Sometimes we don't want those gaps filled. Lets look at a quick example:
-
-```js
-assert.equal({ tea: 'green' }, { tea: 'green' });
-```
-
-Using the `equal` method, this test will fail. These two objects look the same but they are in fact two distinct objects with the same contents. You can think of them as if they were genetic twins. Genetic twins share the same genetic DNA but they are not the same person. The `equal` method checks if two things are exactly the same.
-
-Now, lets look at `deepEqual`.
-
-```js
-  assert.deepEqual({ tea: 'green' }, { tea: 'green' });
-```
-
-If use `deepEqual` instead, the same test will pass. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is the same. The `deepEqual` method checks if two things contain the same information.
 
 ## Testing Practice: Iteration 1  
 
