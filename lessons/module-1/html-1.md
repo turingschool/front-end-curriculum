@@ -321,6 +321,7 @@ Now, in your `dog-party` site directory, begin laying out the HTML for this site
 ## Additional Resources
 
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
+* [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
 
 <!--
 Wrap up questions
