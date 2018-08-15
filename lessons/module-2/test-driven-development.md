@@ -417,8 +417,7 @@ We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refa
 ```js
 // test/Box-test.js
 
-const chai = require('chai');
-const assert = chai.assert;
+const { assert } = require('chai');
 const Box = require('../Box.js');
 
 describe('Box', function() {
