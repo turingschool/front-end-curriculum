@@ -90,7 +90,7 @@ We might already be familiar with several environment variables from our project
 
 ```js
 // the port our node/express server runs on
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3000);
 ```
 
 ```js
@@ -153,11 +153,31 @@ SECRET_API_KEY=a1b2c3d4e5f6
 We make sure to include this file in our `.gitignore` so that it never gets committed to GitHub. Then, elsewhere in our codebase, where we want to access this environment variable, we can use a package like [dotenv](https://www.npmjs.com/package/dotenv) to parse this file and give us the results:
 
 ```js
-require('dotenv').config()
+require('dotenv').config();
 
 console.log('SECRET_API_KEY: ', process.env.SECRET_API_KEY);
 ```
 
+
+### Trying It Out
+
+Make a new directory, say `env-vars`, then `npm init` and install Express.
+
+Here is the server file we will use:
+
+```javascript
+const express = require('express');
+const app = express();
+
+app.set('port', process.env.PORT || 3000);
+
+app.listen(app.get('port'), () => {
+  console.log(`Trying out environment variables over on http://localhost:${app.get('port')}`);
+});
+```
+
+1. Let's set the port to a new value in the command line when we start the server.
+1. Let's add some logic to look at the `NODE_ENV` environment variable - we can make some decisions based on the `NODE_ENV` value, which is used to control the environment like: test, development, or production.
 
 ## Checks for Understanding
 
@@ -168,4 +188,4 @@ console.log('SECRET_API_KEY: ', process.env.SECRET_API_KEY);
 ## Resources
 
 * [Understanding the node process object](https://egghead.io/lessons/node-js-understand-the-node-js-process-object){:target="_blank"}
-* [Working with Environment Variables in NodeJS](https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html)
+* [Working with Environment Variables in NodeJS](https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html){:target="_blank"}
