@@ -472,16 +472,18 @@ Take a minute to make those tests pass **WITHOUT LOOKING AHEAD**. Here's a pictu
 
 ```js
 // Box.js  
-function Box(height, width) {
-  this.height = height || 100,
-  this.width = width || 100
-}
+class Box {
+  constructor(height = 100, width = 100) {
+    this.height = height;
+    this.width = width;
+  }
 
-Box.prototype.area = function() {
-  const height = this.height;
-  const width = this.width;
-  const area = height * width;
-  return area;
+  area() {
+    const height = this.height;
+    const width = this.width;
+    const area = height * width;
+    return area;  
+  }
 }
 
 module.exports = Box;
@@ -494,7 +496,7 @@ Look at the implementation of the `Box.prototype.area()` function as its written
 ```js
 // Box.js  
 
-Box.prototype.area = function() {
+area() {
   return this.height * this.width;
 }
 
