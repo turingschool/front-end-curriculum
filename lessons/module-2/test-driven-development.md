@@ -18,7 +18,6 @@ mod: 2
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 - `SUT` or `Subject Under Test` The unit being tested
-- `The Testing Pyramid` A diagram describing, roughly, the amount of unit, system, and UI tests to have in a test suite
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
 
 ## Review: What is TDD?
@@ -67,51 +66,6 @@ Think about a time when you changed something and then a method somewhere else b
 Without tests, the only way you'd know if something broke is to go poke at it manually.
 With tests, you know right away.
 These benefits scale as your app grows larger.
-
-## Structure of a Test  
-
-Good tests have **Four Phases**:  
-1. Setup - Setup the conditions required to execute the action on your `SUT`
-2. Execution - Execute some action on your `SUT`
-3. Assertion - Assert that the action you did had the results you expect
-4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time)
-
-All four of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
-Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes.
-
-**Good tests:**
-- test one thing
-- don't test what didn't happen
-- have no control flow (`if`, `when`, `for`) statements
-- can be used as documentation for the code they test
-- are clear and easy to read
-
-Look at the following example and read the comments that talk about each line of our test:  
-
-```js
-// Before anything can happen, we need a describe block to group related tests together
-// In this case, the tests within our describe block are all related to the 'Unicorn' class
-describe('Unicorn', function() {
-
-  // Next, an 'it block' contains the context of each specific test
-  it('should accumulate calories after eating', function() {
-
-    // 1. "Setup"
-    // Instantiate an instance of our unicorn
-    var unicorn = new Unicorn('Susan');
-
-    // 2. "Execution"
-    // Run appropriate functions that execute the behavior indicated by our test title
-    unicorn.eat();
-    unicorn.eat();
-    unicorn.eat();
-
-    // 3. "Assertion"
-    // Make an assertion to verify that after executing certain functions, we end up with what we expect
-    assert.equal(unicorn.calories, 300);
-  });
-})
-```
 
 ## What Should Be Tested?
 
@@ -162,6 +116,51 @@ Here is another more in-depth global lifecycle for best testing practices:
 
 The idea with BDD is to specify behavior in a very natural, human way.
 For example, tests should read like "Given X, when I do Y, then Z should happen."
+
+## Structure of a Test  
+
+Good tests have **Four Phases**:  
+1. Setup - Setup the conditions required to execute the action on your `SUT`
+2. Execution - Execute some action on your `SUT`
+3. Assertion - Assert that the action you did had the results you expect
+4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time)
+
+All four of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
+Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes.
+
+**Good tests:**
+- test one thing
+- don't test what didn't happen
+- have no control flow (`if`, `when`, `for`) statements
+- can be used as documentation for the code they test
+- are clear and easy to read
+
+Look at the following example and read the comments that talk about each line of our test:  
+
+```js
+// Before anything can happen, we need a describe block to group related tests together
+// In this case, the tests within our describe block are all related to the 'Unicorn' class
+describe('Unicorn', function() {
+
+  // Next, an 'it block' contains the context of each specific test
+  it('should add 100 calories after eating', function() {
+
+    // 1. "Setup"
+    // Instantiate an instance of our unicorn
+    var unicorn = new Unicorn('Susan');
+
+    // 2. "Execution"
+    // Run appropriate functions that execute the behavior indicated by our test title
+    unicorn.eat();
+    unicorn.eat();
+    unicorn.eat();
+
+    // 3. "Assertion"
+    // Make an assertion to verify that after executing certain functions, we end up with what we expect
+    assert.equal(unicorn.calories, 300);
+  });
+})
+```
 
 ## Testing Framework: Mocha  
 
