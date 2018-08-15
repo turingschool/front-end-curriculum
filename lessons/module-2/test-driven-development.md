@@ -378,8 +378,7 @@ Import Chai and the `assert` library, at the top of your test file:
 ```js
 // test/Box-test.js  
 
-const chai = require('chai');
-const assert = chai.assert;
+const { assert } = require('chai');
 
 describe('Box', function() {
   it('should return true', function() {
@@ -388,7 +387,7 @@ describe('Box', function() {
 });
 ```
 
-*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` comes from ES6, which needs some additional tools in order to run. Right now we have a very simple JS application and are not incorporating any Babel compilers to help us navigate ES6 syntax. For now we will stick to ES5 syntax.*  
+*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` needs some additional tools in order to run. Right now we have a very simple JS application so we will stick to `require` syntax*  
 
 If you run `npm test` now, we should have a passing test.  
 
