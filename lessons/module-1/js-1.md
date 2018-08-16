@@ -304,9 +304,9 @@ function makeStatements() {
 ```
 
 - You declare a function using the keyword `function`.
-- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
 - Since functions perform some action, it is generally a good idea to use and action verb in the function name. i.e. `getSize`, `saveNote`, `generateRandomNumber`.
-- You must follow the name of the function with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
+- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
+- You must follow the parentheses with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
 - Calling the function is quite easy. Simply type the function name with it's parentheses and any associated parameters.
 
 ## Invoke a Function:
