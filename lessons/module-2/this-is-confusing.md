@@ -14,9 +14,13 @@ tags: javascript, js, this, keyword
 
 ## Introduction
 
-The keyword `this` in javascript can be confusing. Depending on where `this` is used in code, it can refer to different things.
+The keyword `this` in JavaScript can be confusing. Here are a couple of definitions that might help clarify:
 
-One key thing to remember is we can only change the value of the keyword `this` inside of an traditional function. There are a few ways we can invoke/execute a traditional function to change the value of this inside of the function.
+* `this` refers to the current *context* (or owner) of the code being executed
+* `this` refers to the object on which the current function is called
+
+
+Depending on where `this` is used, it can refer to different things. One key thing to remember is we can only change the value of the keyword `this` inside of an traditional function. There are a few ways we can invoke/execute a traditional function to change the value of this inside of the function.
 
 In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions where the value of `this` is determined when the arrow function is declared.
 
@@ -198,3 +202,9 @@ var vampire = {
 
 vampire.whatDoYouDislike()
 ```
+
+
+
+## Further Reading
+
+* [Scope vs. Context](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
