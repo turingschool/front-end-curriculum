@@ -35,7 +35,7 @@ Once we realize that our JavaScript code is read line by line by the browser's e
 1   var modTwoTeachers = ['Brittany', 'Naniel', 'Pam'];
 2
 3   function calculateEvals (teachers, classSize) {
-4    return classSize / teachers;
+4    return teachers.length / classSize;
 5   }
 6
 7   var numEvals = calculateEvals(modTwoTeachers, currentCohort);
