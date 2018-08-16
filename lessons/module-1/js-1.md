@@ -10,6 +10,7 @@ In this lesson we'll cover:
 
 * JavaScript data types
 * What a variable is and how to use it
+* Adding variables to strings (concatenation and interpolation)
 * Operators and how to use them
 * Conditionals and when to use them
 * How to declare and call functions with or without parameters
@@ -208,7 +209,10 @@ var creatureCount = "<p>I have " + quantity + " very fancy " + mythicalCreature 
 // using a template literal
 var creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 ```
+
 This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and add the data from our variable.
+
+One important thing to keep in mind is that template literals are not as widely [supported](https://caniuse.com/#feat=template-literals) as concatenation.
 
 # Statements
 
