@@ -20,7 +20,7 @@ The keyword `this` in JavaScript can be confusing. Here are a couple of definiti
 * `this` refers to the object on which the current function is called
 
 
-Depending on where `this` is used, it can refer to different things. One key thing to remember is **we can only change the value of the keyword `this` inside of a function**. There are a few ways we can invoke/execute a function to change the value of `this`.
+Depending on where `this` is used, it can refer to different things. One key thing to remember is **we can only change the value of** `this` **inside of a function**. There are a few ways we can invoke/execute a function to change the value of `this`.
 
 In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions, where the value of `this` is determined when the arrow function is declared.
 
