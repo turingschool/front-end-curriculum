@@ -185,18 +185,30 @@ Now change the value of your quantity variable and ask the console for the creat
 
 Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
 
-## Concatenating Variable Values
+## Adding Variable Values to Strings
+
+There are two different ways to add values to strings.
+1. Via _concatenation_
+2. Via _interpolation_
 
 In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
 
-We can concatenate html tags, text, numbers, and variable values. Let's revisit our example above to concatenate a more readable phrase as the value of our creatureCount variable:
+Template literals are special strings that allow us to interpolate information. They use backticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
+
+We can concatenate or interpolate html tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
+
 
 ```javascript
 var quantity = 3;
-var mythicalCreature = " unicorns";
-var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature + "</p>"
+var mythicalCreature = "unicorns";
+
+// using concatenation
+var creatureCount = "<p>I have " + quantity + " very fancy " + mythicalCreature + "</p>"
+
+// using a template literal
+var creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 ```
-This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and concatenate the data from our variable.
+This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and add the data from our variable.
 
 # Statements
 
@@ -311,17 +323,14 @@ function makeStatements() {
 
 ## Invoke a Function:
 ```javascript
-// Invoke a function w/out arguments
+// Invoke a function
 makeStatements();
-
-// Invoke a function with arguments
-makeStatements(arg1, arg2);
 ```
 
 When this code is read, `makeStatements()` is "invoked", all three statements within the function's body (those curly braces) get run.
 
 ### Your Turn
-Go ahead and declare the makeStatements function in the console and then invoke it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
+Go ahead and declare the makeStatements function in the console (or a [repl](https://repl.it) and then invoke it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
 Create your own functions in the console:
 
