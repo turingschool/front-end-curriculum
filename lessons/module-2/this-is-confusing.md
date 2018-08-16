@@ -14,11 +14,15 @@ tags: javascript, js, this, keyword
 
 ## Introduction
 
-The keyword `this` in javascript can be confusing. Depending on where `this` is used in code, it can refer to different things.
+The keyword `this` in JavaScript can be confusing. Here are a couple of definitions that might help clarify:
 
-One key thing to remember is we can only change the value of the keyword `this` inside of an traditional function. There are a few ways we can invoke/execute a traditional function to change the value of this inside of the function.
+* `this` refers to the current *context* (or owner) of the code being executed
+* `this` refers to the object on which the current function is called
 
-In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions where the value of `this` is determined when the arrow function is declared.
+
+Depending on where `this` is used, it can refer to different things. One key thing to remember is **we can only change the value of** `this` **inside of a function**. There are a few ways we can invoke/execute a function to change the value of `this`.
+
+In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions, where the value of `this` is determined when the arrow function is declared.
 
 With that being said, there are several rules which determine what the value of `this` is at any given point in time.
 
@@ -90,6 +94,7 @@ Because of this rule, I can create a function once, add it to whichever objects 
 Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
 
 **Exercise:** Move the logThis function so that when you execute the function it logs some of the following nested objects.
+
 ```js
 function logThis () {
   console.log( this );
@@ -174,8 +179,9 @@ The value of _this_ is set when the function is executed.
 ### () => {}
 The value of _this_ is set when the function is created.
 
-Example
-```
+**Example**
+
+```js
 var vampire = {
   name: 'dracula',
   dislikes: [
@@ -198,3 +204,9 @@ var vampire = {
 
 vampire.whatDoYouDislike()
 ```
+
+
+
+## Further Reading
+
+* [Scope vs. Context](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
