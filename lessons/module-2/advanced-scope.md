@@ -51,7 +51,7 @@ Knowing this, one might estimate that the code above is interpreted by the engin
 1. Line 1 - A variable named `modTwoTeachers` is declared and assigned the value of an array of strings
 2. Line 3 - We declare a function named `calculateEvals` that takes two parameters
 3. Line 4 - The result of the `classSize` parameter divided by the `teachers` parameter is returned out of the function
-4. Line 7 - The function `calculateEvals` is invoked and is passed two variables as arguments, `modTwoTeachers` and `currentCohort`
+4. Line 7 - The function `calculateEvals` is invoked and is passed two variables as arguments, `modTwoTeachers` and `currentCohort`. The returned value is stored in the variable `numEvals`
 5. Line 9 - A variable named `currentCohort` is declared and assigned the value of 32.
 6. Line 10 - The console logs `NaN` as the value of `numEvals`
 
@@ -64,7 +64,7 @@ It is reasonable to believe that the interpreter would read your JS file from to
 2. The interpreter stores the variable declarations of `modTwoTeachers`, `numEvals`, and `currentCohort` into global memory
 3. Line 1 - `modTwoTeachers` is assigned the value of an array of strings
 4. Line 7 - `calculateEvals` is invoked and passed two variables as arguments, `modTwoTeachers` and `currentCohort`
-5. The interpreter runs through the body of the function `calculateEvals`, which creates a new execution context. The parameter of `teachers` is assigned the value of an array and the parameter of `classSize` is assigned the value of undefined. These values are stored in local memory. The function completes by returning the quotient of these two parameters. Once the function has returned, the parameters of `teachers` and `classSize` are eligible for garbage collection
+5. The interpreter runs through the body of the function `calculateEvals`, which creates a new execution context. The parameter of `teachers` is assigned the value of an array and the parameter of `classSize` is assigned the value of `undefined`. These values are stored in local memory. The function completes by returning the quotient of these two parameters. Once the function has returned, the parameters of `teachers` and `classSize` are eligible for garbage collection
 6. The returned value from the function call on line 7 is assigned to the variable labeled `numEvals`
 7. Line 9 - `currentCohort` is assigned the value of 32
 8. The console prints `NaN`
@@ -73,20 +73,20 @@ Although the second explanation of how the interpreter reads code may seem a bit
 
 The second `Better` explanation shows how the JavaScript engine runs through two different phases while executing code: a creation phase and an execution phase. 
 
-During the creation phase, the Javascript engine runs through the entirety of the code and sets aside memory for the variables and functions that it identifies (hoisting). Something called the `scope chain` is also initialized (more on that further down) and the value of `this` is determined. 
+During the creation phase, the Javascript engine runs through the entirety of the code and sets aside memory for the variables and functions that it identifies (hoisting). Something called the `scope chain` is also initialized (more on that further down) and the value of `this` is determined for the different parts of the code. 
 
 In the execution phase, code is interpreted and executed on a single-thread. This is when our variable declarations are assigned values.
 
 *Some additional things to note:*
 
-- #1 & #2 in our `Better Explanation` shows how the interpreter deals with hoisting variable and function declarations. Many explanations for hoisting will describe hoisting as _The process of implicitly moving the declaration of variables and functions to the top of their scope_. Many people interpret this to mean that these declarations are literally moved and most visuals online show just that. What really happens is that these declarations are stored in memory during the compile phase of the code.
-- #5 states that invoking the function `calculateEvals` creates a new execution context. This happens whenever a function is invoked. Conceptually, you could think of the  execution context as an object that keeps track of scope and the variable environment within that function, the scope chain, and that value of `this`.
+- #1 & #2 in our `Better Explanation` shows how the interpreter deals with hoisting variables and function declarations. Many explanations for hoisting will describe hoisting as _The process of implicitly moving the declaration of variables and functions to the top of their scope_. Many people interpret this to mean that these declarations are literally moved and most visuals online show just that. What really happens is that these declarations are stored in memory during the compile phase of the code.
+- #5 states that invoking the function `calculateEvals` creates a new execution context. This happens whenever a function is invoked. Conceptually, you could think of the execution context as an object that keeps track of scope and the variable environment within that function, the scope chain, and that value of `this`.
 - #5 also talks about the function returning - which is another way of saying that the function has completed. It also references [garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management) - which is a process where the JavaScript engine 'automatically' frees up values stored in memory that are not used anymore.
 
 
 #### Turn and Talk
 
-With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. We will come back together as a class to discuss:
+With a partner, take turns explaining how the following JavaScript code would be translated by the interpreter. We will come back together as a class to discuss:
 
 
 ```js
@@ -183,9 +183,9 @@ At the most basic level, variables/values can be either globally or locally scop
 
 Our variable of `foo` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `birdNoise` is limited to the scope of `baz` and is thus said to be scoped locally.
 
-In the example above, the interpreter is working in the global execution context until line 8, when the `baz` function is invoked. Once this function is invoked, a new execution context (local) is created. This creates a local variable environment where any parameters or variables declared within that function are locally scoped and made inaccesible in the global space. *Note: The exception to this are when variables are initialized without the keywords var, let, or const - in which is bad practice.*
+In the example above, the interpreter is working in the global execution context until line 8, when the `baz` function is invoked. Once this function is invoked, a new execution context (local) is created. This creates a local variable environment where any parameters or variables declared within that function are locally scoped and made inaccesible in the global space. *Note: The exception to this are when variables are initialized without the keywords var, let, or const - which is bad practice.*
 
-We have several scopes available to us. Global, function, block, and eval (the latter we won't be covering in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
+We have several scopes available to us. Global, function, block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
 
 **Global scope:**
 - Global scope is the default.
@@ -251,7 +251,7 @@ function makeArray () {
 makeArray();
 ```
 
-##### Let and const can be block scoped
+##### Let and const are block scoped
 
 Variables declared with the keyword `let` or `const` are block scoped. This means that they are scoped to the block statement (if, for...) in which they are declared.
 
@@ -267,17 +267,19 @@ if (message.length > 0) {
 console.log(message);
 ```
 
+If they are not found within the context of a block statement, then let and const will remain functionally scoped, like `var`
+
 #### Journal
 
-In your journal complete the following prompts:
+Complete the following prompts in your journal
 
 Describe scope in your own words. What are the similarities and differences between `var`, `let`, and `const`?
 
-What might be a metaphor or analogy for scope? Draw or diagram it out
+What might be a metaphor or analogy for scope? Draw or diagram it out.
 
 ## Scope Chain
 
-Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in a local context and moves into the global space. Remember that the scope chain is initialized during the "creation phase" of the interpreter running through the code. This is important to note, as the scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are invoked. 
+Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in a local context and moves into the global space. Remember that the scope chain is initialized during the "creation phase" of the interpreter running through the code. This is important to note, as the scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are _invoked_. 
 
 Every time a variable is initialized, the interpreter will first look in its own scope to see if the label can be found. If it is not found, it will look "up" the scope chain to the parent scope to try to resolve the variable in the parent context. It will climb up the scope chain examining every execution context looking for a match to the variable name. If that name is never found, the interpreter will declare it globally on the window and the variable will be scoped as such.
 
@@ -303,7 +305,7 @@ Every time a variable is initialized, the interpreter will first look in its own
 2. Line 1 - `number` is assigned the value of 10
 3. Line 8 - prints `B 10` to the console
 4. Line 10 - `foo` is invoked, creating a new execution context
-5. Line 4 - A variabe is declared without the ketword `var` and assigned a value. The interpreter search in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20 both locally and globally.
+5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searchs in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20 both locally and globally.
 6. Line 5 - prints `A 20` to the console
 7. Line 12 - prints `C 20` to the console
 
@@ -388,7 +390,7 @@ Let's take a look at another example of a closure:
 
 In the example above, you'll notice that the value of counter on line 16 prints `{add: ƒ, getCount: ƒ}` - which is what we expect given the return statement in `makeCounter`. 
 
-This is when closures get interesting - when that inner functionality is returned. You'll notice that when we actually call the methods that are stored in the `counter`object (lines 17-19) we still have access to the variable `count`. 
+_This_ is when closures get interesting - when that inner functionality is returned. You'll notice that when we actually call the methods that are stored in the `counter` object (lines 17-19) we still have access to the variable `count`. 
 
 Because of the way that our code is written and returned, JavaScript knows not to garbage collect the variable of count. There is no way to mutate or overwrite it `count` because it is completely protected within the closure. It's only accessible through the functions provided by the closure itself. Simply put, a closure is the ability of a function to remember the environment in which it was created.
 
