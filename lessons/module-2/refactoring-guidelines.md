@@ -34,6 +34,8 @@ When you file issues for technical debt, it's helpful to put a label on them so 
 
 <em>Note: For Turing students specifically, filing issues is incredibly important. While you're interviewing, issues indicate to an employer that you know how to improve your projects. Even if you don't have time to resolve all of the issues you file (you won't), you can at least signify to potential employers that you're aware x, y, and z are broken and you plan on fixing them. (Filing these issues will also give you nice, bite-sized work to do after graduation when you're trying to keep coding.)</em>
 
+<!-- go through an example of opening an issue on gametime project -->
+
 ## Write Your Tests
 
 Testing your application is an important part of keeping technical debt under control. The more test coverage you have, the easier it will be to refactor your code later. Often, the scariest part of refactoring your code is not knowing whether or not something is going to break based on the changes you made. Unit tests and acceptance tests will let you know if your changes have broken any existing functionality, so you can safeguard yourself against adding bugs to your project.
@@ -91,15 +93,15 @@ Hardcoded values are often strings or other values that you use in multiple plac
 
 ```js
 fetch('https://weatherunderground.com/api/v1/7day-forecast/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleDayForecast(forecast))
   .catch(error => throw error);
   
 fetch('https://weatherunderground.com/api/v1/hourly-forecast/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleHourForecast(forecast))
   .catch(error => throw error);
   
 fetch('https://weatherunderground.com/api/v1/radar-map/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleRadarMap(forecast))
   .catch(error => throw error);
 ```
 
@@ -111,15 +113,15 @@ const API_HOSTNAME = 'https://weatherunderground.com/api/v1';
 const CITY = 'denver';
 
 fetch(`${API_HOSTNAME}/7day-forecast/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleDayForecast(forecast))
   .catch(error => throw error);
   
 fetch(`${API_HOSTNAME}/hourly-forecast/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleHourForecast(forecast))
   .catch(error => throw error);
   
 fetch(`${API_HOSTNAME}/radar-map/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleRadarMap(forecast))
   .catch(error => throw error);
 ```
 
