@@ -17,6 +17,7 @@ By the end of this lesson, students should be able to:
 - `Code Smell` A surface level indication of bad code that usually corresponds to a deeper, more fundamental problem
 - `Refactoring` The process of changing the internals of a system (it's factoring), without changing its external behavior
 - `Interface` The external boundary of a software component
+- `DRY` Don't Repeat Yourself
 
 ## The Basics
 
