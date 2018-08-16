@@ -94,6 +94,7 @@ Because of this rule, I can create a function once, add it to whichever objects 
 Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
 
 **Exercise:** Move the logThis function so that when you execute the function it logs some of the following nested objects.
+
 ```js
 function logThis () {
   console.log( this );
@@ -178,8 +179,9 @@ The value of _this_ is set when the function is executed.
 ### () => {}
 The value of _this_ is set when the function is created.
 
-Example
-```
+**Example**
+
+```js
 var vampire = {
   name: 'dracula',
   dislikes: [
