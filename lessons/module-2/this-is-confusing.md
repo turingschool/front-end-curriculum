@@ -96,8 +96,8 @@ Now typically, if we find ourselves creating multiple objects with the same prop
 **Exercise:** Move the logThis function so that when you execute the function it logs some of the following nested objects.
 
 ```js
-function logThis () {
-  console.log( this );
+function logThis() {
+  console.log(this);
 }
 
 const denver = {
@@ -126,7 +126,7 @@ When the `new` keyword is used to invoke a constructor function or class, `this`
 ```javascript
 class SpaceProbe {
 
-  constructor (title, classification) {
+  constructor(title, classification) {
   
     // new empty object will log
     console.log(this);  
@@ -189,16 +189,16 @@ var vampire = {
     'crosses',
     'stakes'
   ],
-  whatDoYouDislike: function () {
+  whatDoYouDislike: function() {
     // console.log(this)
     
     // this.dislikes.forEach(( item ) => {
     //   console.log(this.name + ' dislikes ' + item)
     // })
     
-    this.dislikes.forEach(function ( item ) {
-      console.log(this.name + ' dislikes ' + item)
-    }.bind(this))
+    this.dislikes.forEach(function(item) {
+      console.log(this.name + ' dislikes ' + item);
+    });
   }
 }
 
