@@ -15,7 +15,7 @@ By the end of this lesson, students should be able to:
 
 ## Vocab
 
-- `Javascript Engine/Interpreter` A program that executes JavaScript code most commonly used in web browsers
+- `Javascript Engine/Interpreter` A program that executes JavaScript code. Most commonly used in web browsers
 - `Scope` The scope in which a variable can be accessed
 - `Execution context` The environment a function executes in
 - `Closure` An inner function that has access to (aka closes over) the variables declared outside itself
