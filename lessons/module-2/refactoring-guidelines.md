@@ -17,6 +17,7 @@ By the end of this lesson, students should be able to:
 - `Code Smell` A surface level indication of bad code that usually corresponds to a deeper, more fundamental problem
 - `Refactoring` The process of changing the internals of a system (it's factoring), without changing its external behavior
 - `Interface` The external boundary of a software component
+- `DRY` Don't Repeat Yourself
 
 ## The Basics
 
@@ -32,6 +33,8 @@ First things first: before you even begin to prioritize working on technical deb
 When you file issues for technical debt, it's helpful to put a label on them so you can filter through them later. Often times you'll see issues labeled 'P1', 'P2', 'P3', which represents the priority level of the issue. Usually refactoring issues are labeled with a lower priority (P3 is lower than P1). You might also add a label called 'technical-debt' or 'enhancement'. Feel free to use whatever label name makes sense to you, but those are some popular ones you'll see in the wild.
 
 <em>Note: For Turing students specifically, filing issues is incredibly important. While you're interviewing, issues indicate to an employer that you know how to improve your projects. Even if you don't have time to resolve all of the issues you file (you won't), you can at least signify to potential employers that you're aware x, y, and z are broken and you plan on fixing them. (Filing these issues will also give you nice, bite-sized work to do after graduation when you're trying to keep coding.)</em>
+
+<!-- go through an example of opening an issue on gametime project -->
 
 ## Write Your Tests
 
@@ -90,15 +93,15 @@ Hardcoded values are often strings or other values that you use in multiple plac
 
 ```js
 fetch('https://weatherunderground.com/api/v1/7day-forecast/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleDayForecast(forecast))
   .catch(error => throw error);
   
 fetch('https://weatherunderground.com/api/v1/hourly-forecast/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleHourForecast(forecast))
   .catch(error => throw error);
   
 fetch('https://weatherunderground.com/api/v1/radar-map/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleRadarMap(forecast))
   .catch(error => throw error);
 ```
 
@@ -110,15 +113,15 @@ const API_HOSTNAME = 'https://weatherunderground.com/api/v1';
 const CITY = 'denver';
 
 fetch(`${API_HOSTNAME}/7day-forecast/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleDayForecast(forecast))
   .catch(error => throw error);
   
 fetch(`${API_HOSTNAME}/hourly-forecast/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleHourForecast(forecast))
   .catch(error => throw error);
   
 fetch(`${API_HOSTNAME}/radar-map/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleRadarMap(forecast))
   .catch(error => throw error);
 ```
 
