@@ -143,3 +143,4 @@ console. Check the references below for more information.
 - [Error handling in React
   16](https://reactjs.org/blog/2017/07/26/error-handling-in-react-16.html)
 - [Update on Async Rendering](https://reactjs.org/blog/2018/03/27/update-on-async-rendering.html)
+- [React v16.3.0: New Lifecycles](https://reactjs.org/blog/2018/03/29/react-v-16-3.html)
