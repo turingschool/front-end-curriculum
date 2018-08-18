@@ -23,7 +23,7 @@ By the end of this lesson, students should be able to:
 
 # The JS Interpreter 
 
-A fundamental part of writing better code and digging into more advanced topics is understanding how the Javascript interpreter works. Can you build out applications without this knowledge? Of course. But a lot of developers find that having having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code. 
+A fundamental part of writing better code and digging into more advanced topics is understanding how the Javascript interpreter works. Can you build out applications without this knowledge? Of course. But a lot of developers find that having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code. 
 
 We won't get into the nitty gritty details of the different JavaScript engines (Chrome uses Chrome v8, Mozilla uses SpiderMonkey, etc.) or the differences between interpreted vs compiled languages (you can read [this](https://www.upwork.com/hiring/development/the-basics-of-compiled-languages-interpreted-languages-and-just-in-time-compilers/) if you would like to dig into these concepts more). Just know that JavaScript is an interpreted language - meaning that JavaScript is translated (or interpreted) by the engine line by line at the _same_ time that the program is being executed. JavaScript is a single-threaded language, making it so that only one task can be executed at a time.
 
@@ -44,21 +44,7 @@ Once we realize that our JavaScript code is read line by line by the browser's e
 10  console.log(numEvals);
 ```
 
-Knowing this, one might estimate that the code above is interpreted by the engine as such:
-
-##### A Good Guess
-
-1. Line 1 - A variable named `modTwoTeachers` is declared and assigned the value of an array of strings
-2. Line 3 - We declare a function named `calculateEvals` that takes two parameters
-3. Line 4 - The result of the `classSize` parameter divided by the `teachers` parameter is returned out of the function
-4. Line 7 - The function `calculateEvals` is invoked and is passed two variables as arguments, `modTwoTeachers` and `currentCohort`. The returned value is stored in the variable `numEvals`
-5. Line 9 - A variable named `currentCohort` is declared and assigned the value of 32.
-6. Line 10 - The console logs `NaN` as the value of `numEvals`
-
-It is reasonable to believe that the interpreter would read your JS file from top to bottom like this explanation shows; however, the steps that are listed above are not entirely accurate. A more accurate representation of how the interpreter goes through these lines is listed below:
-
-
-##### A Better Explanation
+##### Steps for code execution
 
 1. The interpreter stores the function declaration (including its definition) in global memory
 2. The interpreter stores the variable declarations of `modTwoTeachers`, `numEvals`, and `currentCohort` into global memory
@@ -69,9 +55,7 @@ It is reasonable to believe that the interpreter would read your JS file from to
 7. Line 9 - `currentCohort` is assigned the value of 32
 8. The console prints `NaN`
 
-Although the second explanation of how the interpreter reads code may seem a bit too meticulous at times, it is important to inspect the code at this level of granularity so that more advanced JavaScript topics are easier to understand.
-
-The second `Better` explanation shows how the JavaScript engine runs through two different phases while executing code: a creation phase and an execution phase. 
+Although this explanation of how the interpreter runs through the code may seem a bit too meticulous at times, it is important to inspect the code at this level of granularity so that more advanced JavaScript topics are easier to understand. This depicts how the JavaScript engine runs through two different phases while executing code: a creation phase and an execution phase. 
 
 During the creation phase, the Javascript engine runs through the entirety of the code and sets aside memory for the variables and functions that it identifies (hoisting). Something called the `scope chain` is also initialized (more on that further down) and the value of `this` is determined for the different parts of the code. 
 
@@ -79,9 +63,9 @@ In the execution phase, code is interpreted and executed on a single-thread. Thi
 
 *Some additional things to note:*
 
-- #1 & #2 in our `Better Explanation` shows how the interpreter deals with hoisting variables and function declarations. Many explanations for hoisting will describe hoisting as _The process of implicitly moving the declaration of variables and functions to the top of their scope_. Many people interpret this to mean that these declarations are literally moved and most visuals online show just that. What really happens is that these declarations are stored in memory during the compile phase of the code.
+- #1 & #2 show how the interpreter deals with hoisting variables and function declarations. Many explanations for hoisting will describe hoisting as _The process of implicitly moving the declaration of variables and functions to the top of their scope_. Many people interpret this to mean that these declarations are literally moved up... and most visuals online show just that. What really happens is that these declarations are stored in memory during the compile phase of the code.
 - #5 states that invoking the function `calculateEvals` creates a new execution context. This happens whenever a function is invoked. Conceptually, you could think of the execution context as an object that keeps track of scope and the variable environment within that function, the scope chain, and that value of `this`.
-- #5 also talks about the function returning - which is another way of saying that the function has completed. It also references [garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management) - which is a process where the JavaScript engine 'automatically' frees up values stored in memory that are not used anymore.
+- #5 also talks about the function returning - which is another way of saying that the function has completed. It also references [garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management) - which is a process where the JavaScript engine 'automatically' frees up values stored in memory that are not being used anymore.
 
 
 #### Turn and Talk
@@ -166,7 +150,7 @@ console.log(sum)
 
 ## Global, Functional, and Block Scope
 
-Now that we understand how the interpreter works and a little bit about the concept of the execution context, we can dive deeper into the concept of scope. The first thing to address is that scope and the execution context are _not_ technically the same thing, although you'll often see these terms used interchangeably. Whereas execution context is a concept that roughly equates to the 'environment' a function executes in (among other things - remember our conceptual object mentioned above?), scope is literally the scope in which a variable or value can be accessed.
+Now that we understand how the interpreter works and a little bit about the concept of the execution context, we can dive deeper into the concept of scope. The first thing to address is that scope and the execution context are _not_ technically the same thing, although you'll often see these terms used interchangeably. Whereas execution context is a concept that roughly equates to the 'environment' a function executes in (among other things - remember our conceptual object mentioned above), scope is literally the scope in which a variable or value can be accessed.
 
 At the most basic level, variables/values can be either globally or locally scoped. Take the following example: 
 
@@ -191,6 +175,7 @@ We have several scopes available to us. Global, function, block, and eval (the l
 - Global scope is the default.
 - Everyone and everything has access to the global scope.
 - Functions and variables in the global scope are "vulnerable" because they can be accessed by everything and potentially mutated.
+- `var`, `let`, and `const` can be globally scoped.
 
 **Function scope:**
 - Variables declared in the function (using `var`, `let`, or `const`) can only be accessed by the other code inside the function.
@@ -198,7 +183,7 @@ We have several scopes available to us. Global, function, block, and eval (the l
 
 **Block scope:**
 - Variables declared in the [block statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block) (`if` blocks, `for` loops, etc) using `let` or `const` can only be accessed by other code inside the block.
-- Variables declared in block statements using `var` will not be scoped within the block (as this is a special feature of `let` and `const`). Variables declared with `var` will only ever be functionally or locally scoped.
+- Variables declared in block statements using `var` will not be scoped within the block (as this is a special feature of `let` and `const`). Variables declared with `var` will "leak out"
 
 
 *Important things to know when dealing with scope and code execution*
@@ -228,7 +213,7 @@ If we want to use values created by functions, we must return those values out o
 
 `const number = makeNumber();` could be one way; assigning the returned value of the function to a new variable allows us to "store" or "capture" the value to be used elsewhere.
 
-##### Parent scopes do not have access to child scopes
+##### Parent scopes do not have access to child scopes BUT child scopes do have access to their parent scope
 
 In the example below, the console log inside `makeArray` fails because parent scopes do not have access to variables declared in child scopes. However, the child has access to the variables declared in the parent scope (`array`).
 
@@ -253,7 +238,7 @@ makeArray();
 
 ##### Let and const are block scoped
 
-Variables declared with the keyword `let` or `const` are block scoped. This means that they are scoped to the block statement (if, for...) in which they are declared.
+Variables declared with the keyword `let` or `const` will be block scoped if declared within a block. This means that they are scoped to the block statement (if, for...) in which they are declared.
 
 ```js
 let message = 'You are doing great!';
@@ -392,13 +377,13 @@ In the example above, you'll notice that the value of counter on line 16 prints 
 
 _This_ is when closures get interesting - when that inner functionality is returned. You'll notice that when we actually call the methods that are stored in the `counter` object (lines 17-19) we still have access to the variable `count`. 
 
-Because of the way that our code is written and returned, JavaScript knows not to garbage collect the variable of count. There is no way to mutate or overwrite it `count` because it is completely protected within the closure. It's only accessible through the functions provided by the closure itself. Simply put, a closure is the ability of a function to remember the environment in which it was created.
+Because of the way that our code is written and returned, JavaScript knows not to garbage collect the variable of count. There is no way to mutate or overwrite `count` because it is completely protected within the closure. It's only accessible through the functions provided by the closure itself. Simply put, a closure is the ability of a function to remember the environment in which it was created.
 
 You can find some practical uses for closure [here](https://stackoverflow.com/questions/2728278/what-is-a-practical-use-for-a-closure-in-javascript).
 
 #### Your challenge
 
-Create a function called `createGreeting` that declares a variable called `myName` and an inner function that is returned. When the created function is called, it should log `'Hello' + <yournamehere>` to the console. 
+Create a function called `createGreeting` that declares a variable called `myName` and an inner function that is returned. When the `yourGreeting` function is called, it should log `'Hello' + <yournamehere>` to the console.  
 
 ```js
 function createGreeting() {
