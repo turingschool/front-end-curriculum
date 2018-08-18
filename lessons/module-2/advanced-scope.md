@@ -316,10 +316,10 @@ console.log(number);  // what will log here?
 Example 2:
 
 ```js
-var name = "Bananiels Foster";
+var givenName = "Bananiels Foster";
 
-function printGreeting(name) {
-  console.log("Hello " + name);
+function printGreeting() {
+  console.log("Hello " + givenName);
 }
 
 printGreeting("Danger");  // what will log here?
