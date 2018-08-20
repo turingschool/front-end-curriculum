@@ -12,7 +12,7 @@ In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are 
 
 #### Git
 
-The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
+The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete the first exercise, [Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
 
 ### Learning Goals
 
@@ -108,7 +108,7 @@ Additionally, if we use `ls -a` to look in the directory, we can see a `.git` hi
 
 #### Add a file
 
-Let's make this a real project and actually add some content! Add a new text file from the terminal using `touch pizza.txt`.
+Let's make this a real project and actually add some content! Add a new HTML file from the terminal using `touch index.html`.
 
 #### Check status (`git status`)
 
@@ -124,14 +124,14 @@ No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	pizza.txt
+	index.html
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 #### Add file to staging area (`git add`)
 
-If in the future we want to add these changes to our repository (and we do), then we need to add this file to the "staging area". To add the file to the staging area, use the command `git add pizza.txt`. This command is saying to add the file named `pizza.txt` to the staging area.
+If in the future we want to add these changes to our repository (and we do), then we need to add this file to the "staging area". To add the file to the staging area, use the command `git add index.html`. This command is saying to add the file named `index.html` to the staging area.
 
 If we wanted to add all of the untracked files or changes, then we could use the command `git add .`. The dot `.` after `add` says add all untracked files in this repository.
 
@@ -145,7 +145,7 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   pizza.txt
+	new file:   index.html
 ```
 
 #### Commit the file (`git commit`)
@@ -220,19 +220,19 @@ nothing to commit, working directory clean
 
 #### Edit the file
 
-Let's add some basic markup to our `pizza.txt` file. In that file file, type `html` and then hit tab to spit out a basic html skeleton, and add an appropriate title like "Git & GitHub Introduction"
+Let's add some basic markup to our `index.html` file. In that file file, type `html` and then hit tab to spit out a basic html skeleton, and add an appropriate title like "Git & GitHub Introduction"
 
 Also, add an h1 title to the page of your choosing
 
-Let's check the status of our repository again (`git status`). Git saw our changes! We know this because it says under "changes not staged for commit" that the `pizza.txt` was modified.
+Let's check the status of our repository again (`git status`). Git saw our changes! We know this because it says under "changes not staged for commit" that the `index.html` was modified.
 
 Running `git status` tells us what file has been modified but does not give us anything more. If we want to see exactly what changes occurred we can invoke the command `git diff` to see what they were.
 
-Since we want to add these changes to our project (and the version history of the project), we need to add them to the staging area: `git add pizza.txt`
+Since we want to add these changes to our project (and the version history of the project), we need to add them to the staging area: `git add index.html`
 
 Now that the changes are in the staging area, if we use `git status` to check the status of the repository again, there are now "changes to be committed".
 
-Commit the changes. For this commit, we added content to our `pizza.txt` file, so the commit command (with message!) is: `git commit -m "Add HTML structure and h1 title"`
+Commit the changes. For this commit, we added content to our `index.html` file, so the commit command (with message!) is: `git commit -m "Add HTML structure and h1 title"`
 Push your changes to the master branch by running: `git push origin master`
 
 #### The master branch
@@ -281,23 +281,35 @@ Let's checkout the new branch using the command `git checkout add-body-content`.
 
 #### Make changes on the new branch
 
-Now that we've checked out the new feature branch, we can start making changes on the branch. Let's add another text file to log toppings 
+Now that we've checked out the new feature branch, we can start making changes on the branch. Let's add a CSS file and some more content to the body.
 
-To add the CSS file, `touch toppings.txt`. In the CSS file, add a simple rule:
+To add the CSS file, `touch styles.css`. In the CSS file, add a simple rule:
 
+```css
+body {
+  background-color: lightgray;
+}
 ```
-pepperoni
-```
 
-Link the stylesheet in the `<head>` of the `pizza.txt` file.
+Link the stylesheet in the `<head>` of the `index.html` file.
 
-Add the file to staging, and commit the changes: `git add toppings.txt` and then `git commit -m "Add CSS file with background color"`.
+Add the file to staging, and commit the changes: `git add styles.css` and then `git commit -m "Add CSS file with background color"`.
 Now push your changes to the remote `git push origin add-body-content`
 
 Now let's add some content to the body (like our feature branch name said we were going to do) - just a chunk of paragraph text. So the HTML so far looks like:
 
-```
-
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Git & GitHub Introduction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Whoa git & github are the bees knees!</h1>
+  <p>Are they?</p>
+</body>
+</html>
 ```
 
 Add and commit your changes - **Do not push yet**
@@ -333,6 +345,17 @@ We reverted back to a state where we didn't have paragraph content, which seems 
 No add some finalized content to the paragraph instead. It should look like this:
 
 ```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Git & GitHub Introduction</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Whoa git & github are the bees knees!</h1>
+  <p>Yeah they are!</p>
+</body>
+</html>
 ```
 
 Add, commit, and push your changes!
