@@ -153,16 +153,18 @@ Could be converted into something like this:
 
 ```js
 const keyboard = {
-  '37': () => game.toad.moveToad('left', canvas),
-  '38': () => game.toad.moveToad('up', canvas),
-  '39': () => game.toad.moveToad('right', canvas),
-  '40': () => game.toad.moveToad('down', canvas),
-  '72': () => game.winLevel()
+  'key37': () => game.toad.moveToad('left', canvas),
+  'key38': () => game.toad.moveToad('up', canvas),
+  'key39': () => game.toad.moveToad('right', canvas),
+  'key40': () => game.toad.moveToad('down', canvas),
+  'key72': () => game.winLevel()
 };
 
 function evalInput(event) {
-  if (keyboard[event.keyCode]) {
-    keyboard[`key${event}`]()
+  const property = `key${event.keyCode}`;
+
+  if (keyboard[property]) {
+    keyboard[property]()
   }
 }
 ```
