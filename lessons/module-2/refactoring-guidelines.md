@@ -230,6 +230,57 @@ if (explode === 'no') {
 ```
 
 #### Example 2
+
+```js
+/* ----------- Do not refactor this section ----------- */
+class Slot {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
+
+/* -------------- Refactor this section -------------- */
+let slots = [];
+let firstRow = 40;
+let secondRow = 40;
+let thirdRow = 40;
+let fourthRow = 40;
+let fifthRow = 40;
+let sixthRow = 40;
+
+for (let i = 0; i < 42; i++) {
+  if (i < 7) {
+    slots.push(new Slot(sixthRow, 550));
+    sixthRow += 95;
+
+  } else if (i < 14) {
+    slots.push(new Slot(fifthRow, 470));
+    fifthRow += 95;
+
+  } else if (i < 21) {
+    slots.push(new Slot(fourthRow, 390));
+    fourthRow += 95;
+
+  } else if (i < 28) {
+    slots.push(new Slot(thirdRow, 310));
+    thirdRow += 95;
+
+  } else if (i < 35) {
+    slots.push(new Slot(secondRow, 230));
+    secondRow += 95;
+    
+  } else if (i < 42) {
+    slots.push(new Slot(firstRow, 150));
+    firstRow += 95;
+  }
+}
+
+console.log(slots);
+```
+
+
+#### Example 3
 If a token is successfuly placed, it is added to the array, then a new token is created for the other player, otherwise a new token is created for the original player.
 
 Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the tokens alternate between the two players.
@@ -287,56 +338,6 @@ for (let i = 0; i < 10; i++) {
 }
 
 console.log(newArray)
-```
-
-#### Example 3
-
-```js
-/* ----------- Do not refactor this section ----------- */
-class Slot {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
-/* -------------- Refactor this section -------------- */
-let slots = [];
-let firstRow = 40;
-let secondRow = 40;
-let thirdRow = 40;
-let fourthRow = 40;
-let fifthRow = 40;
-let sixthRow = 40;
-
-for (let i = 0; i < 42; i++) {
-  if (i < 7) {
-    slots.push(new Slot(sixthRow, 550));
-    sixthRow += 95;
-
-  } else if (i < 14) {
-    slots.push(new Slot(fifthRow, 470));
-    fifthRow += 95;
-
-  } else if (i < 21) {
-    slots.push(new Slot(fourthRow, 390));
-    fourthRow += 95;
-
-  } else if (i < 28) {
-    slots.push(new Slot(thirdRow, 310));
-    thirdRow += 95;
-
-  } else if (i < 35) {
-    slots.push(new Slot(secondRow, 230));
-    secondRow += 95;
-    
-  } else if (i < 42) {
-    slots.push(new Slot(firstRow, 150));
-    firstRow += 95;
-  }
-}
-
-console.log(slots);
 ```
 
 
