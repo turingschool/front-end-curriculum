@@ -281,9 +281,9 @@ console.log(slots);
 
 
 #### Example 3
-If a token is successfuly placed, it is added to the array, then a new token is created for the other player, otherwise a new token is created for the original player.
+The following code is used to toggle between two players. If a player successfuly places a token in the array, a token is created for the other player. If a player does not successfuly place a token a new token is created for the original player.
 
-Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the tokens alternate between the two players.
+Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the placed tokens alternate between the two players.
 ```js
 /* ----------- Do not refactor this section ----------- */
 class Token {
