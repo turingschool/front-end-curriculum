@@ -183,94 +183,158 @@ Take the following three code examples and try to identify what code smells you 
 #### Example 1
 
 ```js
-if (this.explode === 'no') {
+/* ----------- Do not refactor this section ----------- */
+class Image{}
+
+function drawImage(img, x, y, w, h) {
+  console.log(img, x, y, w, h);
+}
+
+const x = 5;
+const y = 10;
+const width = 20;
+const height = 40;
+
+// switch explode between 'yes' & 'no' to check your results.
+const explode = 'yes'; 
+
+/* ------------- Refactor this section ------------- */
+
+if (explode === 'no') {
   let playerImage = new Image();
 
   playerImage.src = 'assets/airplane.png';
-  context.drawImage(
+  drawImage(
     playerImage,
-    this.x,
-    this.y,
-    this.width,
-    this.height
+    x,
+    y,
+    width,
+    height
   );
 
-} else if (this.explode === 'yes') {
+} else if (explode === 'yes') {
   let playerImage = new Image();
 
   playerImage.src = 'assets/kapow.png';
 
-  context.drawImage(
+  drawImage(
     playerImage,
-    this.x,
-    this.y,
-    this.width,
-    this.height
+    x,
+    y,
+    width,
+    height
   )
 }
 ```
 
 #### Example 2
+If a token is successfuly placed, it is added to the array, then a new token is created for the other player, otherwise a new token is created for the original player.
 
+Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the tokens alternate between the two players.
 ```js
-function togglePlayer(currentToken) {
-  if (currentToken.player === "Player One") {
-    var placedToken = currentToken.moveDown(currentToken, newArray)
+/* ----------- Do not refactor this section ----------- */
+class Token {
+  constructor(player) {
+    this.player = player;
+  }
 
-    if (placedToken) {
-      newArray.push(placedToken);
-      return new Token("Player Two", context, canvas);
+  place(token, array) {
+    let success = Math.floor(Math.random() * 2);
 
+    if (success) {
+      return token;
     } else {
-      return new Token("Player One", context, canvas);
-    }
-
-  } else {
-    var placedToken = currentToken.moveDown(currentToken, newArray)
-
-    if (placedToken) {
-      newArray.push(placedToken);
-      return new Token("Player One", context, canvas);
-
-    } else {
-      return new Token("Player Two", context, canvas);
+      return false;
     }
   }
 }
+
+const newArray = [];
+
+/* -------------- Refactor this section -------------- */
+function togglePlayer(currentToken) {
+  if (currentToken.player === "Player One") {
+    var placedToken = currentToken.place(currentToken, newArray)
+
+    if (placedToken) {
+      newArray.push(placedToken);
+      return new Token("Player Two");
+
+    } else {
+      return new Token("Player One");
+    }
+
+  } else {
+    var placedToken = currentToken.place(currentToken, newArray)
+
+    if (placedToken) {
+      newArray.push(placedToken);
+      return new Token("Player One");
+
+    } else {
+      return new Token("Player Two");
+    }
+  }
+}
+
+/* ----------- Do not refactor this section ----------- */
+let currentToken = new Token('Player One');
+
+for (let i = 0; i < 10; i++) {
+  currentToken = togglePlayer(currentToken)
+}
+
+console.log(newArray)
 ```
 
 #### Example 3
 
 ```js
-var slots = [];
-var firstRow = 40;
-var secondRow = 40;
-var thirdRow = 40;
-var fourthRow = 40;
-var fifthRow = 40;
-var sixthRow = 40;
+/* ----------- Do not refactor this section ----------- */
+class Slot {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+}
 
-for (var i = 0; i < 42; i++) {
+/* -------------- Refactor this section -------------- */
+let slots = [];
+let firstRow = 40;
+let secondRow = 40;
+let thirdRow = 40;
+let fourthRow = 40;
+let fifthRow = 40;
+let sixthRow = 40;
+
+for (let i = 0; i < 42; i++) {
   if (i < 7) {
-    slots.push(new Slot(sixthRow, 550, context, canvas));
+    slots.push(new Slot(sixthRow, 550));
     sixthRow += 95;
+
   } else if (i < 14) {
-    slots.push(new Slot(fifthRow, 470,context, canvas));
+    slots.push(new Slot(fifthRow, 470));
     fifthRow += 95;
+
   } else if (i < 21) {
-    slots.push(new Slot(fourthRow, 390,context, canvas));
+    slots.push(new Slot(fourthRow, 390));
     fourthRow += 95;
+
   } else if (i < 28) {
-    slots.push(new Slot(thirdRow, 310,context, canvas));
+    slots.push(new Slot(thirdRow, 310));
     thirdRow += 95;
+
   } else if (i < 35) {
-    slots.push(new Slot(secondRow, 230,context, canvas));
+    slots.push(new Slot(secondRow, 230));
     secondRow += 95;
+    
   } else if (i < 42) {
-    slots.push(new Slot(firstRow, 150,context, canvas));
+    slots.push(new Slot(firstRow, 150));
     firstRow += 95;
   }
 }
+
+console.log(slots);
 ```
 
 
