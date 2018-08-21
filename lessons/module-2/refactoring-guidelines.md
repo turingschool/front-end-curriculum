@@ -164,7 +164,7 @@ function evalInput(event) {
   const property = `key${event.keyCode}`;
 
   if (keyboard[property]) {
-    keyboard[property]()
+    keyboard[property]();
   }
 }
 ```
