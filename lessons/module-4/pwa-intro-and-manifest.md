@@ -41,6 +41,22 @@ The application should adapt and progress to enhance the user experience. For in
 In order to do that, the PWA should detect if a `serviceWorker` is available in that version of the browser. If it is, then cache static assets to be able to use those 
 assets offline. In other words, the app has used browser feature detection to know if the app can use more advanced features to enhance the user experience.
 
+Some features we can focus on including in a PWA to match what is expected of a native app:
+
+* Responsive design
+* Performant on slower network speeds
+* Installable and launchable from the home screen (manifest)
+* All content served over HTTPS
+* Provides some form of offline experience (service worker caching assets)
+
+## Issues for PWAs
+
+The main issue surrounding PWA development right now is feature availability across browsers. For instance, if we look at the compatibility for the manifest file 
+across browsers currently, [we see this](https://caniuse.com/#search=manifest).
+
+Chrome, Edge, and iOS Safari support the manifest feature, but there are many browsers that do not have support. This can be seen for other features in the PWA landscape 
+like service workers, push notifications, background sync, and others.
+
 ## Let's Look at Some PWAs
 
 Gather around someone who has an Android phone. The best PWA experience is still seen by using Android (iOS is catching up).
@@ -50,9 +66,17 @@ Then go to your homescreen and load the app from the homescreen icon. What do yo
 
 Did you notice the splash screen? Does this PWA feel more like a native app? Why?
 
+### Auditing a PWA
+
+There is an app called [Lighthouse](https://developers.google.com/web/tools/lighthouse/) that is now integrated into the Chrome developer tools. It is a tool that can 
+check your application to see if it abides by the recommendations that Google has set forth for progressive web apps.
+
+You can run an audit of a progressive web app by going in your developer tools, selecting the `Audits` tab, then select `Progressive Web App` from the Audits list. 
+Click `Run Audits`, and you can see where the app meets/fails expectations for progressive web apps.
+
 ## Manifest File - Structure
 
-Progressive Web App (PWA) development usually begins with adding what is called an "app manifest".
+So you want to make a progressive web app. PWA development usually begins with adding what is called an "app manifest".
 
 The manifest file is a `json` file that contains an object with key-value pairs.
 
@@ -91,6 +115,10 @@ Once you create the manifest file, you need to link the file in your top-level H
 ```html
 <link rel="manifest" href="manifest.webmanifest">
 ```
+
+To check if your manifest is valid and loaded, load up your app in the browser and open the developer tools. Select the `Application` tab, and click the 
+`Manifest` pane on the left. If the manifest has loaded, then you should see details about the app's manifest in the right pane. Otherwise, you might see 
+something like "No manifest detected".
 
 ### Key-Value Pairs
 
