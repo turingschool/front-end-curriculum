@@ -30,7 +30,7 @@ In this lesson, you will learn how to:
 - `Git` The most commonly used VCS
 - `GitHub` A service/website that allows people to host git repositories online
 - `Repository` A collection of code managed by git. Tends to be the folder your source files are in
-- `Working Area` Where untracked and unstaged files live. 
+- `Working Area` Where untracked and unstaged files live
 - `Staging Area` Where staged files live
 - `Commit` A snapshot of what your code looked like at a particular time
 - `Remote` Remote, as in, a remote repository. As in, not a local repository. A remote is a repository that's stored somewhere that's not your local machine
