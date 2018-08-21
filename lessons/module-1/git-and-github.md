@@ -364,7 +364,7 @@ Add, commit, and push your changes!
 
 Merging a branch means that you are updating one branch with another branch's changes.
 
-#### Merge feature work to master branch (`git merge`)
+#### Merge work locally (`git merge`)
 
 To merge changes locally between branches, you should first move to the branch you want to update. Then run the command `git merge [branch you want to merge changes from]`. In our case, we want to make sure that we have all of the latest changes from master. 
 
