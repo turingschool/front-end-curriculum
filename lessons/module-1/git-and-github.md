@@ -12,7 +12,7 @@ In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are 
 
 #### Git
 
-The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete the first exercise, [Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
+The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
 
 ### Learning Goals
 
