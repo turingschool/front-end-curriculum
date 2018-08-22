@@ -31,8 +31,8 @@ Why Mobile?
 
 Why Cross-Platform?
 
-
 ## Native vs React-Native vs PWA 
+
 |                   | Native        | React-Native | PWA
 | ---               |   :-:         |   :-:  | :-: 
 | UI                | Native        | Native | Web / Can look Native 
@@ -40,6 +40,7 @@ Why Cross-Platform?
 | Cross Platform    | No            | Yes    | Yes 
 | Native API Access | Full          | Partial to High | Partial & Getting Better 
 | Skill Set         | Swift/Java    | React-Native | HTML, CSS, JS  
+
 
 ## HTML vs React-Native Components
 
