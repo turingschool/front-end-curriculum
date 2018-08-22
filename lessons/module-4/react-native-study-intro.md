@@ -23,15 +23,23 @@ open a new tab in terminal and run
 
 `exp ios`
 
-## Native vs React-Native vs PWA 
+## What is React-Native? 
 
-|                   | Native        | React-Native | PWA | 
-| ---               |   :-:         |   :-:  | :-: | 
-| UI                | Native        | Native | Web / Can look Native |
-| App Store         | Yes           | Yes    | No  |
-| Cross Platform    | No            | Yes    | Yes |
-| Native API Access | Full          | Partial to High | Partial & Getting Better |
-| Skill Set         | Swift/Java    | React-Native | HTML, CSS, JS |
+React-Native is an easy way to make cross-platform mobile apps. In our case iOS and Android mobile apps.
+
+Why Mobile?
+
+Why Cross-Platform?
+
+
+## Native vs React-Native vs PWA 
+|                   | Native        | React-Native | PWA
+| ---               |   :-:         |   :-:  | :-: 
+| UI                | Native        | Native | Web / Can look Native 
+| App Store         | Yes           | Yes    | No  
+| Cross Platform    | No            | Yes    | Yes 
+| Native API Access | Full          | Partial to High | Partial & Getting Better 
+| Skill Set         | Swift/Java    | React-Native | HTML, CSS, JS  
 
 ## HTML vs React-Native Components
 
@@ -70,3 +78,12 @@ const styles = StyleSheet.create({
   }
 });
 ```
+
+## Exercise
+
+#### Step 1
+Create an input and a button. When you click the button it should console.warn whatever is in the input field.
+
+#### Step 2
+Create a FlatList where the data is an empty array stored in state. Update your button click handler so that it takes the input field text and add it to the list array stored in state.
+
