@@ -100,6 +100,8 @@ Put your presentation into writing. Each person must write their own blog post. 
 
 ### [Iodide](https://github.com/iodide-project/iodide)
 
+[Contributing Guidelines](https://github.com/iodide-project/iodide/blob/master/CONTRIBUTING.md)
+
 **Issues:**
 * [All Issues](https://github.com/iodide-project/iodide/issues)
 * [Marked as Good First Issue](https://github.com/iodide-project/iodide/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
