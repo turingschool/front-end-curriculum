@@ -15,7 +15,7 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
 1. Create a directory named `boilerplate`
 2. Create sub-directories called `lib` and `test`
 3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
-4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
+4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github.html#incorporating-github) from Mod 1)
 
 ## Vocab
 
