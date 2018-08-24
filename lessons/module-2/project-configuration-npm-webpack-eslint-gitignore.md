@@ -64,10 +64,8 @@ Let's take a look at an example `package.json` file:
   "description": "It does super rad stuff",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.15.3",
-    "knex": "^0.13.0",
-    "node": "6.11.1",
-    "pg": "^6.4.0"
+    "jquery": "^3.3.1",
+    "node": "6.11.1"
   },
   "devDependencies": {
     "chai": "^4.0.2",
@@ -92,7 +90,7 @@ Let's break this down. The package.json is just meta data about our installed pa
 
 #### dependencies (production):
 
-We're listing what ingredients we need for the app to run: we need express, and we need version 4.15.3 or any version compatible with 4.15.3.
+We're listing what ingredients we need for the app to run: we need jquery, and we need version 3.3.1 or any version compatible with 3.3.1.
 (You can read up on the what the symbols by the package version numbers mean [here](https://docs.npmjs.com/files/package.json#dependencies), and learn a bit about what the version numbers themselves even mean [here](https://semver.org/).)
 
 To install a package as a production dependency:
@@ -103,7 +101,7 @@ When you install a package this way, a new key-value pair with that package's in
 
 #### devDependencies (development):
 
-Some of our ingredients won't end up in the cake that users eat, but they're important tools that chefs will need in order to work on our app - like our testing libraries, mocha and chai. The end user of an app will not need to have mocha and chai on their computers, since they will never be running the testing suite of the app. We designate those libraries as `devDependencies` because they are packages that only developers working on the app will use.
+The devDependencies are the tools that our chefs will need in order to work on our app - like our testing libraries, mocha and chai. The end user of an app will not need to have mocha and chai on their computers, since they will never be running the testing suite of the app. We designate those libraries as `devDependencies` because they are packages that only developers working on the app will use.
 
 To install a package as a development dependency:
 `npm install [PACKAGE NAME OR GITHUB URL] --save-dev`
