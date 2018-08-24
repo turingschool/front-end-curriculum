@@ -180,7 +180,6 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - webpack
   - webpack-cli
   - babel-loader
-  - babel-preset-es2015
   - babel-cli
   - babel-eslint
   - babel-preset-env
