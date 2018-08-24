@@ -13,8 +13,20 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
 ## Pre-lesson Homework
 
 1. Create a directory named `boilerplate`
+    ```bash
+    mkdir boilerplate && cd boilerplate
+    ```
+    
 2. Create sub-directories called `lib` and `test`
+    ```bash
+    mkdir lib test
+    ```
+
 3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
+    ```bash
+    touch lib/index.js test/index-test.js README.md 
+    ```
+
 4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github.html#incorporating-github) from Mod 1)
 
 ## Vocab
@@ -176,9 +188,9 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - chai
   - eslint
 
-```bash
-npm install --save-dev mocha chai eslint
-```
+    ```bash
+    npm install --save-dev mocha chai eslint
+    ```
   
 4. Install the following dependencies:
   - webpack
@@ -190,9 +202,9 @@ npm install --save-dev mocha chai eslint
   - style-loader
   - css-loader
 
-```bash
-npm install webpack webpack-cli babel-loader babel-cli babel-eslint babel-preset-env style-loader css-loader
-```
+    ```bash
+    npm install webpack webpack-cli babel-loader babel-cli babel-eslint babel-preset-env style-loader css-loader
+    ```
 ---
 
 ## Webpack Basics
@@ -301,6 +313,11 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 
 1. Create a new file in the root of your repo: `webpack.config.js`
 2. Create a new file in the root of your repo: `.babelrc`
+
+    ```bash
+    touch webpack.config.js .babelrc
+    ```
+
 3. Paste the following code into the `.babelrc` file:
 
     ```js
