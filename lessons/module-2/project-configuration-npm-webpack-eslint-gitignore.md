@@ -277,11 +277,11 @@ This is where webpack will start bundling up our app. It should be the entry poi
 This defines where where webpack will create your bundled code and what it will name the file.
 
 #### loaders
-Let's focus on the `loaders` key-value pair inside the `module` object.
+Let's focus on the `rules` key-value pair inside the `module` object.
 
 Loaders transform different non-JS code into valid JS modules so they can be included when webpack bundles everything up into a single file for the browser.
 
-Loaders have two parts: an npm module, and a configuration object which is added to the `webpack.config.js` file.
+Loaders have two parts: a npm module, and a configuration object which is added to the `webpack.config.js` file.
 
 Let's walk through how the `css-loader` was added to the react starter kit repo.
 
