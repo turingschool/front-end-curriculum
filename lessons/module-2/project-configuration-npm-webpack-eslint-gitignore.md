@@ -175,6 +175,10 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - mocha
   - chai
   - eslint
+
+```bash
+npm install --save-dev mocha chai eslint
+```
   
 4. Install the following dependencies:
   - webpack
@@ -186,6 +190,9 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - style-loader
   - css-loader
 
+```bash
+npm install webpack webpack-cli babel-loader babel-cli babel-eslint babel-preset-env style-loader css-loader
+```
 ---
 
 ## Webpack Basics
