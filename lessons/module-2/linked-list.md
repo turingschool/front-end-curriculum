@@ -45,9 +45,9 @@ Let's create a `Node.js` file in the `scripts` directory:
 
 ```javascript
 export default class Node {
-  constructor (data) {
-    this.data = data || null;
-    this.next = null;
+  constructor (data, next = null) {
+    this.data = data;
+    this.next = next;
   }
 }
 ```
