@@ -25,7 +25,7 @@ By the end of this lesson, you will know/be able to:
 # Accessibility
 
 Accessibility in Web development means enabling as many people as possible to use Web sites, even when those people's abilities are limited in some way.
-The Web is fundamentally designed to work for all people, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
+The Web is fundamentally designed to work for __all people__, whatever their hardware, software, language, culture, location, or physical or mental ability. When the Web meets this goal, it is accessible to people with a diverse range of hearing, movement, sight, and cognitive ability.
 
 __Good News!__ _A great deal of web content can be made accessible just by making sure the correct HTML elements are used for the correct purpose at all times._
 
