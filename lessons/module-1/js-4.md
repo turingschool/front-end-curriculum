@@ -38,7 +38,7 @@ var objectName = {
   property1: value1,
   property2: value2,
   method1: function() {
-    return "I'm method, because I am a function!";
+    return "I'm a method, because I am a function!";
   }
 };
 ```
@@ -102,11 +102,13 @@ Default to using Dot Notation unless you find a need to use bracket notation.
 
 
 ### Your Turn
-Turn to your neighbor and explain the following object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
+Step 1: Take a few minutes to write about the below individually:
 - To start, go ahead and make an object or two together.
 - How do you create an object using literal notation?
 - What is an object and what is it made up of?
+- We've already been using objects... can you think of an example of a dom method or property you've used?
 - When we assign a function as the value of a key inside an object, what do we call it?
+Step 2: Turn to your neighbor and explain the following object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
 
 ### Your Turn, Part 2
 Let's goof off in the console a bit. As a group, we'll practice working with an object:
@@ -236,6 +238,11 @@ We feel pretty good about using literal notation to create an object. We know th
 Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
 ```javascript
+// literal notation
+var burrito = {};
+burrito;
+
+// constructor notation
 var taco = new Object();
 taco;
 ```
@@ -309,12 +316,12 @@ There is nothing special about a prototype object. There are no special-out-of-t
 function Singer() {}
 
 // Let's ask Singer for the value of it's prototype
-function Singer() {} Singer.prototype;
+Singer.prototype;
 ```
 
 As a review, constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
 
-```js
+```javascript
 function Singer() {
   this.name = "Elvis";
 }
