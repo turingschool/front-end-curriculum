@@ -60,11 +60,11 @@ The browser will then validate the SSL certificate based on the information it p
 
 ![how-ssl-works](/assets/images/lessons/https-ssl/how-ssl-works.jpg)
 
-### Extended Validation SSL
+### Security indicators in Chrome
 
-You'll notice many sites running on HTTPS will have a green padlock icon next to their name in the URL bar of the browser. This not only signifies to the user that you're communicating over HTTPS, but it also tells us that the site owners have gone through a stricter series of checks and conformed to more advanced protocol security measures.
+You'll notice that sites running on HTTPS will have a green padlock icon or the word `SECURE` next to their name in the URL bar of the browser. This signifies to the user that you're communicating over HTTPS.
 
-These sites have what's called an Extended Validation SSL Certificate (EV SSL). It is the highest class of SSL available and provides the strongest encryption level. The organization can present its own verified identity to visitors. An EV certificate is a stronger guarantee to users that the application has passed a more thorough identification process and abides by standards set by the CA forum.
+However, [Chrome is moving toward](https://blog.chromium.org/2018/05/evolving-chromes-security-indicators.html) only indicating when a site is not secured with HTTPS. The thinking goes: the web should be secure and safe by default, and as the majority of sites are now secured with HTTPS, it makes more sense to only indicate a warning when a site is unsecured.
 
 ## Switching from HTTP to HTTPS
 
