@@ -328,11 +328,11 @@ export class AddTodoForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
+export const mapStateToProps = (state) => ({
   todos: state.todos
 })
 
-const mapDispatchToProps = (dispatch) => ({
+export const mapDispatchToProps = (dispatch) => ({
   handleSubmit: (text, id) => dispatch(addToDo(text, id))
 })
 
