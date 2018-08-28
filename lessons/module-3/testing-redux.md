@@ -269,19 +269,14 @@ class AddTodoForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log(state)
-  return { todos: state.todosReducer }
-}
+const mapStateToProps = (state) => ({
+  todos: state.todos
+})
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleSubmit: (text, id) => {
-      console.log(text, id);
-      dispatch(addTodo(text, id))
-    }
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  handleSubmit: (text, id) => dispatch(addToDo(text, id))
+})
+ 
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
@@ -333,19 +328,13 @@ export class AddTodoForm extends Component {
   }
 }
 
-export const mapStateToProps = (state) => {
-  console.log(state)
-  return { todos: state.todosReducer }
-}
+const mapStateToProps = (state) => ({
+  todos: state.todos
+})
 
-export const mapDispatchToProps = (dispatch) => {
-  return {
-    handleSubmit: (text, id) => {
-      console.log(text, id);
-      dispatch(addTodo(text, id))
-    }
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  handleSubmit: (text, id) => dispatch(addToDo(text, id))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
