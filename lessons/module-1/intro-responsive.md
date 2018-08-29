@@ -14,7 +14,7 @@ tags: html, css
 - `Media Query` A CSS feature that makes it possible to apply styling based on boolean logic
 - `Breakpoint` The specific amounts that media queries reference (usually in pixels)
 - `CSS Reset` A set of styles that applies default styling
-- `Viewport Meta Tag` An html tag that is used to describe attributes that affect the affect how the page is displayed
+- `Viewport Meta Tag` An html tag that is used to describe attributes that affect how the page is displayed
 
 ## Introduction
 
@@ -45,7 +45,7 @@ Because adaptive layouts typically take less time to build than true responsive 
 The primary drawback to this strategy is that screen widths that fall between the set breakpoints can feel awkward, with contents looking either too crowded or with far too much space.
 
 **Responsive Page Layout**
-At first glance, a response site looks a lot like an adaptive site. But start resizing your screen, and you'll see why it's the best solution. A true responsive page layout combines the best parts of a liquid layout and an adaptive layout to create the best experience for your users as they move between devices and screen sizes. By using both relative units and media queries, a responsive site allows us to transition through screen sizes seamlessly and effortlessly.
+At first glance, a responsive site looks a lot like an adaptive site. But start resizing your screen, and you'll see why it's the best solution. A true responsive page layout combines the best parts of a liquid layout and an adaptive layout to create the best experience for your users as they move between devices and screen sizes. By using both relative units and media queries, a responsive site allows us to transition through screen sizes seamlessly and effortlessly.
 
 ## Docs
 
