@@ -21,15 +21,14 @@ For example, if you're on vacation, commit to doing two hours of code with your 
 
 ## Code Resources
 
-### [The 2017 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2017) by Frontend Masters
+### [The 2018 Front-End Handbook](https://github.com/FrontendMasters/front-end-handbook-2018) by Frontend Masters
 
 ```
-This is a guide that anyone could use to learn about the practice of front-end development. It broadly outlines and discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2016.
+This is a guide that anyone could use to learn about the practice of front-end development. It broadly outlines and discusses the practice of front-end engineering: how to learn it and what tools are used when practicing it in 2018.
 ```
 
-Download in .pdf, .epub or .mobi [here](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/details)
+If you'd like a downloaded version of the old handbook (a downloadable version of 2018 isn't available), download the 2017 version in .pdf, .epub or .mobi [here](https://www.gitbook.com/book/frontendmasters/front-end-handbook-2017/details)
 
-If you don't want to download a pdf, check out the easier to browse 2016 version [here](https://www.frontendhandbook.com/)
 
 Review this book when you're feeling imposter syndrome coming on. Think about how many of the topics listed here you already know! 
 
