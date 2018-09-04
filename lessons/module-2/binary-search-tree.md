@@ -284,6 +284,6 @@ We will be implementing a BST using this [repo](https://github.com/turingschool-
 
 ## Resources
 
-* [Hacker Noon Binary Search Tree Explanation](https://hackernoon.com/data-structures-in-javascript-pt-1-binary-search-trees-2c231cf2c8e1)
+* [Breadth First vs Depth First](https://www.youtube.com/watch?v=9RHO6jU--GU)
 * [Cheesy but well explained BST video](https://www.youtube.com/watch?v=ZNH0MuQ51m4)
 * [Binary Search Tree Video](https://www.youtube.com/watch?time_continue=10&v=5cU1ILGy6dM)

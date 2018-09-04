@@ -66,7 +66,7 @@ Things to check off for your role:
 
 Here is a script that you should start out with:
 
-**Interviewer:** Hello, my name is ___. Welcome to Googlebook. Today, we're going to go through this JavaScript problem together.
+**Interviewer:** Hello, my name is ___. Welcome to Googlebook/MyFace/SnapApp. Today, we're going to go through this JavaScript problem together.
 
 **Interviewee:** Great, thank you for having me come in today.
 
@@ -89,7 +89,7 @@ What was it like?? Take 3 minutes to write in your notebook:
 <!-- * Talk aloud through the problem so that the interviewer can know you read through everything -->
 <!-- * Ask any clarifying questions or any questions about assumptions made for the problem -->
 <!-- * It's ok to draw something on paper first or pseudocode -->
-<!-- * Talk it out (silence is deafening in an interview pairing situation). The interviewer wants to know what your thinking and what your thought process is like -->
+<!-- * Talk it out (silence is deafening in an interview pairing situation). The interviewer wants to know what you're thinking and what your thought process is like -->
 <!-- * Is someone able to adjust when things go wrong? -->
 
 ## Switch! (45 minutes)
@@ -100,6 +100,13 @@ Reverse the roles!
 
 As the interviewer, what is some constructive feedback you could give to your interviewee? Write them down in your notebook.
 As the interviewee, what were some specific things you thought went well and did not go so well in your pairing? Write them down in your notebook.
+
+<!-- Some things to consider for pairing interviews: -->
+<!-- Did you display enthusiasm? Are you excited to work on the problem with them? -->
+<!-- Do you come across as comfortable or freaking out? -->
+<!-- Did you demonstrate a familiarity with solving code challenges, or is the format completely new to you? -->
+<!-- Did you know basic syntax, or did you have to look basic things up in the documentation? (classes, functions, basic array prototypes) -->
+<!-- Were you communicative? That's the biggest takeaway. -->
 
 **Share out:** Any other observations?
 

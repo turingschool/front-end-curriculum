@@ -165,11 +165,8 @@ const todosReducer = (state=[], action) => {
       return [...state, {id: action.id, text: action.text, completed: false}]
     case 'TOGGLE_TODO':
       return state.map(todo => {
-        if (todo.id !== action.id) {
-          return todo
-        }
-        return Object.assign({}, todo, {completed: !todo.completed})
-      })
+        return todo.id === action.id ? {...todo, completed: !todo.completed} : todo
+      })   
     default:
       return state
   }
@@ -272,19 +269,14 @@ class AddTodoForm extends Component {
   }
 }
 
-const mapStateToProps = (state) => {
-  console.log(state)
-  return { todos: state.todosReducer }
-}
+const mapStateToProps = (state) => ({
+  todos: state.todos
+})
 
-const mapDispatchToProps = (dispatch) => {
-  return {
-    handleSubmit: (text, id) => {
-      console.log(text, id);
-      dispatch(addTodo(text, id))
-    }
-  }
-}
+const mapDispatchToProps = (dispatch) => ({
+  handleSubmit: (text, id) => dispatch(addToDo(text, id))
+})
+ 
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```
@@ -336,19 +328,13 @@ export class AddTodoForm extends Component {
   }
 }
 
-export const mapStateToProps = (state) => {
-  console.log(state)
-  return { todos: state.todosReducer }
-}
+export const mapStateToProps = (state) => ({
+  todos: state.todos
+})
 
-export const mapDispatchToProps = (dispatch) => {
-  return {
-    handleSubmit: (text, id) => {
-      console.log(text, id);
-      dispatch(addTodo(text, id))
-    }
-  }
-}
+export const mapDispatchToProps = (dispatch) => ({
+  handleSubmit: (text, id) => dispatch(addToDo(text, id))
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm)
 ```

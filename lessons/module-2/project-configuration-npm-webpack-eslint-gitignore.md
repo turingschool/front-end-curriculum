@@ -13,9 +13,21 @@ In this lesson, we will hand-roll a boilerplate repo that we'll use for our Sort
 ## Pre-lesson Homework
 
 1. Create a directory named `boilerplate`
+    ```bash
+    mkdir boilerplate && cd boilerplate
+    ```
+    
 2. Create sub-directories called `lib` and `test`
+    ```bash
+    mkdir lib test
+    ```
+
 3. Create three files: `lib/index.js`, `test/index-test.js` and `README.md`
-4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github-part2.html) from Mod 1)
+    ```bash
+    touch lib/index.js test/index-test.js README.md 
+    ```
+
+4. Initialize git and push your repo to GitHub (hint: you can use [this lesson](http://frontend.turing.io/lessons/module-1/git-and-github.html#incorporating-github) from Mod 1)
 
 ## Vocab
 
@@ -64,10 +76,8 @@ Let's take a look at an example `package.json` file:
   "description": "It does super rad stuff",
   "main": "index.js",
   "dependencies": {
-    "express": "^4.15.3",
-    "knex": "^0.13.0",
-    "node": "6.11.1",
-    "pg": "^6.4.0"
+    "jquery": "^3.3.1",
+    "node": "6.11.1"
   },
   "devDependencies": {
     "chai": "^4.0.2",
@@ -92,7 +102,7 @@ Let's break this down. The package.json is just meta data about our installed pa
 
 #### dependencies (production):
 
-We're listing what ingredients we need for the app to run: we need express, and we need version 4.15.3 or any version compatible with 4.15.3.
+We're listing what ingredients we need for the app to run: we need jquery, and we need version 3.3.1 or any version compatible with 3.3.1.
 (You can read up on the what the symbols by the package version numbers mean [here](https://docs.npmjs.com/files/package.json#dependencies), and learn a bit about what the version numbers themselves even mean [here](https://semver.org/).)
 
 To install a package as a production dependency:
@@ -103,7 +113,7 @@ When you install a package this way, a new key-value pair with that package's in
 
 #### devDependencies (development):
 
-Some of our ingredients won't end up in the cake that users eat, but they're important tools that chefs will need in order to work on our app - like our testing libraries, mocha and chai. The end user of an app will not need to have mocha and chai on their computers, since they will never be running the testing suite of the app. We designate those libraries as `devDependencies` because they are packages that only developers working on the app will use.
+The devDependencies are the tools that our chefs will need in order to work on our app - like our testing libraries, mocha and chai. The end user of an app will not need to have mocha and chai on their computers, since they will never be running the testing suite of the app. We designate those libraries as `devDependencies` because they are packages that only developers working on the app will use.
 
 To install a package as a development dependency:
 `npm install [PACKAGE NAME OR GITHUB URL] --save-dev`
@@ -177,18 +187,24 @@ _Another note: Additional reading about the `package-lock.json` file [here](http
   - mocha
   - chai
   - eslint
+
+    ```bash
+    npm install --save-dev mocha chai eslint
+    ```
   
 4. Install the following dependencies:
   - webpack
   - webpack-cli
   - babel-loader
-  - babel-preset-es2015
   - babel-cli
   - babel-eslint
   - babel-preset-env
   - style-loader
   - css-loader
 
+    ```bash
+    npm install webpack webpack-cli babel-loader babel-cli babel-eslint babel-preset-env style-loader css-loader
+    ```
 ---
 
 ## Webpack Basics
@@ -241,7 +257,7 @@ module.exports = {
   },
   module: {
     rules: [
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
+      { test: /\.css$/, exclude: /node_modules/, use: [ 'style-loader', 'css-loader' ]},
       { test: /\.js$/, exclude: /node_modules/, use: ['babel-loader'] }
     ]
   },
@@ -261,11 +277,11 @@ This is where webpack will start bundling up our app. It should be the entry poi
 This defines where where webpack will create your bundled code and what it will name the file.
 
 #### loaders
-Let's focus on the `loaders` key-value pair inside the `module` object.
+Let's focus on the `rules` key-value pair inside the `module` object.
 
 Loaders transform different non-JS code into valid JS modules so they can be included when webpack bundles everything up into a single file for the browser.
 
-Loaders have two parts: an npm module, and a configuration object which is added to the `webpack.config.js` file.
+Loaders have two parts: a npm module, and a configuration object which is added to the `webpack.config.js` file.
 
 Let's walk through how the `css-loader` was added to the react starter kit repo.
 
@@ -277,7 +293,7 @@ Let's walk through how the `css-loader` was added to the react starter kit repo.
 {
   test: /\.css$/,
   exclude: /node_modules/,
-  loader: 'style-loader!css-loader'
+  use: 'style-loader!css-loader'
 }
 ```
 
@@ -297,6 +313,11 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
 
 1. Create a new file in the root of your repo: `webpack.config.js`
 2. Create a new file in the root of your repo: `.babelrc`
+
+    ```bash
+    touch webpack.config.js .babelrc
+    ```
+
 3. Paste the following code into the `.babelrc` file:
 
     ```js
@@ -318,6 +339,7 @@ In the HTML of the project, we point our `<script>` tag to `"bundle.js"`, so it 
         path: __dirname,
         filename: "dist/[name].bundle.js"
       },
+      mode: 'development',
       module: {
         rules: [
           {

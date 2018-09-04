@@ -35,26 +35,26 @@ TLDR:
 
 We'll create a linked list and program methods for interacting with it. Think about the operations you can perform on a standard array - adding, removing, manipulating data with methods like `shift`, `unshift`, `pop`, `push`, `find`, etc. We want our linked list to include similar functionality.
 
-Clone down [this repo](https://github.com/turingschool-examples/linked-lists/tree/master) to follow along. We have several test cases written out for us already that will guide us in the right direction - run these in your terminal with `npm run test` and see that they're currently all failing. Take a couple of minutes to read through the tests before we start coding to give yourself some insight into what we're trying to achieve.
+Clone down [this repo](https://github.com/turingschool-examples/linked-lists/tree/master) to follow along. We have several test cases written out for us already that will guide us in the right direction - run these in your terminal with `npm run test` and see that the linked-list tests are currently failing. Take a couple of minutes to read through the tests before we start coding to give yourself some insight into what we're trying to achieve.
 
 ### The Node Class
 
 Remember what we mentioned about nodes earlier in the lesson: in a standard linked list, they will contain some data that could be of any data type, as well as a reference to the next node. Because we're going to be creating many Nodes, it makes sense to create a Node class so we can spin up multiple instances of a Node that vary only in their property values.
 
-Let's create a `Node.js` file in the `scripts` directory:
+Check out the `Node.js` file in the `scripts` directory:
 
 ```javascript
 export default class Node {
-  constructor (data) {
-    this.data = data || null;
-    this.next = null;
+  constructor (data, next = null) {
+    this.data = data;
+    this.next = next;
   }
 }
 ```
 
 This allows us to create a new Node that accepts a data parameter and defaults the next node reference to null. (Every time we add a new Node, we'll update the `next` value for the last Node to point to our new one.)
 
-If we re-run our tests, we should see our Node tests passing.
+If we run our tests, we should see our Node tests passing.
 
 ### The Linked List
 

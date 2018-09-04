@@ -130,12 +130,12 @@ For example, if you want to target an anchor tag within a navigation element wit
 
 ```
 $main-text-dark: #000;
-$red: #FF0000;
+$dark-red: #FF0000;
 $link-light: #fff;
 
 header {
   color: $main-text-dark;
-  nav: {
+  nav {
     background-color: $dark-red;
     a { color: $link-light; }
   }

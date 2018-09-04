@@ -1,5 +1,5 @@
 ---
-title: CSS I: Structure, Box Model, and Positioning
+title: "CSS I: Structure, Box Model, and Positioning"
 length: 180
 tags: css, introduction, practice
 ---
@@ -227,3 +227,6 @@ Key Points:
 Style that dog party like a BOSS! :smirk:
 
 # ![Dog Party](/assets/images/dog-party.png)
+
+## Additional Resources
+* [Turing CSS Style Guide](https://github.com/turingschool-examples/css) 

@@ -37,13 +37,9 @@ We know you've got a lot on your plate, so we've broken this out across three we
 
 ## Week One of Pattrn Party
 
-Accordion Tabs
+Accordion Tabs & Flexible Cards
 
 ## Week Two of Pattrn Party
-
-Flexible Cards
-
-## Week Three of Pattrn Party
 
 Header Bar
 

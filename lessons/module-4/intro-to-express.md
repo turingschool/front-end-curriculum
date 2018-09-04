@@ -16,6 +16,14 @@ By the end of this lesson, you will:
 * Know how Express abstracts difficult server-side logic and makes it easier to write endpoints
 * Create a simple Express app that implements all of the basic CRUD methods
 
+## But First!
+
+Before we look at how Express works, let's review the HTTP request-response cycle.
+
+On your own, draw a diagram of the request response cycle. What are the two parties communicating to each other, and what information is sent back and forth between them? How does one party know what the other party wants to do (verbs?...)?
+
+Compare your diagram with a partner next to you. Then let's talk about the request-response cycle.
+
 ## What is Express?
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
 

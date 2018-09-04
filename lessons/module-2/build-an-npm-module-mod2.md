@@ -25,18 +25,17 @@ Note: as you read, prepare answers to the following discussion points
 
 ### Reading Discussion Points
 
-- What is SemVer
+- What is SemVer?
 
-- What is the difference between `npm install --save-prod` `npm install` `npm install -g` and `npm install --save-dev`
-  - Why might it be _very important_ to use the `--save-prod` and `--save-dev` flags appropriately for an NPM package?
+- What is the difference between `npm install --save-prod`, `npm install`, `npm install -g`, and `npm install --save-dev`?
+
+- Why is it _important_ to use the `--save-prod` and `--save-dev` flags appropriately for an NPM package?
 
 - Having read this blog, what steps might be missing for you to create your own node module and deploy it?
 
 - What npm packages do you depend on? Have you ever looked at their source code?
 
-- How might the fact that you don't control the version of the package that your users use affect your workflow?
-
-
+- If you do not control the version of your package, how might that affect anyone who uses it as a dependancy?
 
 <div id="do"></div>
 
@@ -67,7 +66,7 @@ $ mkdir test
 $ touch index.js test/test.js
 ```
 
-Next we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`)
+Next we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`). Replace username in the following command with your npm username.
 
 ```
 $ npm init --scope=username
@@ -75,7 +74,7 @@ $ npm init --scope=username
 
 Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
 * **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
-* **License:** ISC is fine, [but what is it?](http://semver.org/)
+* **License:** ISC is fine, [but what is it?](https://opensource.org/licenses/ISC)
 
 One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
 
@@ -93,8 +92,7 @@ Fun facts!
 In your `test.js` file include the following:
 
 ```
-const chai = require('chai');
-const expect = chai.expect;
+const { expect } = require('chai');
 ```
 
 In your `index.js` file include the following:
@@ -143,8 +141,39 @@ npm install [GitHub URL] -S
 
 and then requiring a specific module in your js file as you would with any other module.
 
-For this to work, make sure you are still bundling up your code with that `module.exports`.
+For this to work, make sure you are still bundling up your code with `module.exports`.
 
+#### Time to test our package
+
+In your terminal move out of your package repo.
+
+We need to create a test repo where we can install our new package.
+
+Create a new folder for our test repo and cd into that folder.
+
+`mkdir npm-test-repo && cd npm-test-repo`
+
+Install your package
+
+`npm install [GitHub URL] -S`
+
+Create an index.js file
+
+`touch index.js`
+
+Add the following code to your index.js file
+
+```js
+const { bubbleSort } = require('@[username]/npm-sort');
+
+const sorted = bubbleSort([6, 3, 77, 32, 45]);
+
+console.log(sorted);
+```
+
+In your terminal, run your index.js file using Node
+
+`Node index.js`
 
 --------
 
@@ -245,6 +274,7 @@ Then:
 - [NPM docs - How NPM works](https://docs.npmjs.com/how-npm-works/packages)
 - [NPM cheatsheet](http://browsenpm.org/help)
 - [Certified Modules](https://nodesource.com/blog/hello-certified-modules-the-future-of-trust-in-node-js-dependencies/) - How devs are trying to keep you and NPM itself safe
+- [How one programmer broke the internet by deleting a tiny piece of code](https://qz.com/646467/how-one-programmer-broke-the-internet-by-deleting-a-tiny-piece-of-code/)
 
 ---
 

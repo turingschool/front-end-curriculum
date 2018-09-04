@@ -1,34 +1,10 @@
-This lesson goes with [this repo](https://github.com/turingschool-examples/testing-react)
-
-# Testing React
-
-Install the dependencies:
-
-```
-npm install
-```
-
-To fire up a development server:
-
-```
-npm start
-```
+Clone the following [repo](https://github.com/turingschool-examples/react-testing-intro) and `cd` into it from your terminal. Then run `npm install` and `npm start`.
 
 Once the server is running, you can visit:
 
-* `http://localhost:8080` to run your application.
+* `http://localhost:3000` to run your application.
 
-To build the static files:
-
-```
-npm run build
-```
-
-To run tests in Node:
-
-```
-npm test
-```
+We'll be running tests with the `npm test` command.
 
 ---
 
@@ -47,28 +23,18 @@ npm test
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
-- `SUT` or `Subject Under Test` The unit being tested
-- `The Testing Pyramid` A diagram describing, roughly, the amount of unit, system, and UI tests to have in a test suite
-- `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
 
 ---
 
 ## Jest
 
-_Jest is the de facto unit testing framework for ReactJS project. It is provided and used by Facebook._
+Jest is the de facto unit testing framework for ReactJS project. It is provided and used by Facebook, and installed by default when using create-react-app.
 
 **Top features are:**
 
 * Automatically finds tests
-* Automatically mocks dependencies
+* Automatically mocks React dependencies
 * Runs your tests with a fake DOM implementation
-* Runs tests in parallel processes
-
-### Installation: 
-
-```
-npm install --save-dev jest
-```
 
 Just like `chai`, jest uses the `expect` keyword, only with some slight differences. One syntactical difference you'll want to make note of is the simple check that something equals and expected result...
 
@@ -106,18 +72,40 @@ Enzyme renders our components and turns them into chunks of HTML. We can interac
 ### Installation:
 
 ```
-npm i --save-dev enzyme
+npm install --save-dev enzyme enzyme-adapter-react-16 react-test-renderer
 ```
 
-###### There are two methods we'll use from enzyme to render our component HTML.
+We also need to create a setup file to bootstrap our tests. Create the following file `/src/setupTests.js`:
+
+
+```js
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+configure({ adapter: new Adapter() });
+```
+
+This will get enzyme up and running for us, and also allow us to do any additional setup or configuration we might need later on.
+
+
+#### Work time!
+
+Enzyme comes with a lot of helper methods that will allow us to test our components. Let's spend another 10 minutes researching your assigned method (same groups as before):
+
+1. find()
+2. props()
+3. instance()
+4. children()
+5. text()
+6. state()
+
+In addition to these methods, there are two important ones we'll be using in order to allow Enzyme to actually render our components: `shallow` and `mount`.
 
 * [shallow](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md)
 Shallow renders our component's HTML, if our component has child components then it will only render stubs for the child components. It will not render the child components HTML. Because shallow does not render the child components it is much faster and should be used by default.
 
 * [mount](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md)
-Mount renders our component's HTML, if our component has child components then it will render the child components HTML. It also gives us triggers some of the child components life cycle methods.
-
-For a more detailed look at the differences, check out [this breakdown](https://gist.github.com/fokusferit/e4558d384e4e9cab95d04e5f35d4f913)
+Mount renders our component's HTML, if our component has child components then it will render the child components HTML. It also gives us triggers some of the components life cycle methods.
 
 Let's look at what happens when we use shallow or mount. Consider the following components...
 
@@ -207,17 +195,6 @@ The mount output of our App component will be the following. Notice that our Lis
 ```
 
 
-#### Work time!
-
-Enzyme also comes with some methods of its own. Let's spend another 10 minutes researching your assigned method (same groups as before):
-
-1. find()
-2. props()
-3. instance()
-4. children()
-5. text()
-6. state()
-
 ## Why Test? 
 
 If we haven't done a good job of explaining the benefits of testing your code already...maybe [this article](https://daveceddia.com/what-to-test-in-react-app/) will help!
@@ -239,13 +216,6 @@ Some things to consider...
     
 ## Time to Test!
 
-We will use [this repo](https://github.com/turingschool-examples/testing-react) to work through some tests. This app _should_ look familiar. 
-
-* Clone this repo and `cd` into it
-* `git checkout in-class`
-* run `npm i`
-* open up your text editor and lets work through some tests!
-
 ---
 
 Let's spend a few minutes walking through the code base to familiarize ourselves with the layout...
@@ -253,11 +223,11 @@ Let's spend a few minutes walking through the code base to familiarize ourselves
 Because jest finds our tests automatically, we don't need to import it. We do however need `React` and `Enzyme`. Let's create the first test file and bring those in:
 
 ```
-touch app.test.js
+touch ./src/App.test.js
 ```
 
 ```
-// app.test.js
+// App.test.js
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
@@ -266,7 +236,7 @@ import { shallow, mount } from 'enzyme';
 We'll also need to import our `App` component:
 
 ```
-import App from '../lib/components/App';
+import App from './App';
 ```
 
 Now let's create an easy first test to ensure everything is hooked up and working:
@@ -285,7 +255,7 @@ describe('App', () => {
 Now let's look at our app's `render` function, it returns a `Header` and a `ToDontList` component. Let's make sure those exist. We can use the [find](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html#findselector--shallowwrapper) method to find those components inside of our rendered HTML.
 
 ```
-// lib/components/App.js
+// ./App.js
 
   render() {
     const { toDonts } = this.state;
@@ -306,7 +276,7 @@ Now let's look at our app's `render` function, it returns a `Header` and a `ToDo
 ```
 
 ```
-// tests/app.test.js
+// ./App.test.js
 
   it('should render the Header and ToDontList component', () => {
     const wrapper = shallow(<App />)
@@ -321,7 +291,7 @@ But wait, we've now defined wrapper twice so let's pull that out into a `beforeE
 ```
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import App from '../lib/components/App';
+import App from './App';
 
 describe('App', () => {
   let wrapper;
@@ -375,12 +345,12 @@ Ah snap! What's this all about?
 ReferenceError: localStorage is not defined
 ```
 
-Because we're not dealing with a browser, `localStorage` isn't something our tests know about. This means we will have to do some extra work to mock localStorage for our tests. Jest makes this _somewhat_ easy for us by allowing us to set up some [configurations](http://facebook.github.io/jest/docs/en/configuration.html#content) in our `package.json` before each test. But first, we need to create a fake local storage. Give it a shot!
+Because we're not dealing with a browser, `localStorage` isn't something our tests know about. This means we will have to do some extra work to mock localStorage for our tests. We can do this by adding some setup configuration to that same `setupTests.js` file we worked with earlier. Let's create a fake local storage:
 
 We'll store this in a test-helpers folder and assign it to a global property called...localStorage!
 
 ```
-// __test-helpers__/storageMock.js
+// ./src/setupTests.js
 
 class LocalStorage {
   constructor() {
@@ -402,17 +372,7 @@ class LocalStorage {
 
 global.localStorage = new LocalStorage;
 ```
-Next we need to set up our jest configurations using the [setupFiles](http://facebook.github.io/jest/docs/en/configuration.html#setupfiles-array) option. This will run any code we want before each test.
 
-```
-// package.json
-
-"jest": {
-    "setupFiles": [
-      "./__test-helpers__/storageMock.js"
-    ]
-  },
-```
 
 Our test should now pass!
 
@@ -706,6 +666,22 @@ describe('header component', () => {
 })
 ```
 
+First let's test that our state is updating whenever our input values change:
+
+```js
+  it('should update state when input values are changed', () => {
+   const titleInput = wrapper.find('input').first()
+   const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
+   const submitButton = wrapper.find('button')
+
+   titleInput.simulate('change', { target: { value: 'title 1'}})
+   bodyInput.simulate('change', { target: { value: 'body 1'}})
+
+   expect(wrapper.state().title).toEqual('title 1')
+   expect(wrapper.state().body).toEqual('body 1')
+  })
+```
+
 Now for the tricky part. Our goal is to test that when the submit button is clicked, it calls the correct function it's supposed to. To do this, we'll need to do a couple things:
 * Stub in a [jest.fn()](http://facebook.github.io/jest/docs/jest-object.html#jestfnimplementation) in place of our actual function
 * Find the specific button
@@ -714,64 +690,47 @@ Now for the tricky part. Our goal is to test that when the submit button is clic
 The test will look something like this...
 
 ```
-it('should call submitIdea when button is clicked', () => {
- wrapper.instance().submitIdea = jest.fn()
+  it('should call submitIdea when button is clicked', () => {
+   wrapper.instance().submitIdea = jest.fn()
 
- const submitButton = wrapper.find('button')
+   const submitButton = wrapper.find('button')
 
- submitButton.simulate('click')
+   submitButton.simulate('click')
 
- expect(wrapper.instance().submitIdea).toHaveBeenCalledTimes(1)
-})
+   expect(wrapper.instance().submitIdea).toHaveBeenCalled()
+   expect(wrapper.instance().submitIdea).toHaveBeenCalledTimes(1)
+  })
 ```
 
-That's a great test, it assures us that our button executes the correct method. But let's take it a step further. Take a few minutes to review this test and then talk to the person next to you about what is happening.
-
-```
-it('should call submitIdea and update state when button is clicked', () => {
- wrapper.instance().submitIdea = jest.fn()
-
- const titleInput = wrapper.find('input').first()
- const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
- const submitButton = wrapper.find('button')
-
- titleInput.simulate('change', { target: { value: 'title 1'}})
- bodyInput.simulate('change', { target: { value: 'body 1'}})
-
- submitButton.simulate('click')
-
- expect(wrapper.instance().submitIdea).toHaveBeenCalled()
- expect(wrapper.instance().submitIdea).toHaveBeenCalledTimes(1)
-})
-```
-
-What if we want to dig into the `submitIdea` function and ensure that the props.addToDont gets called within that method...given the infromation you gained above, take 5 minutes to talk to the person next to you about how you might accomplish this.
+That's a great test, it assures us that our button executes the correct method. But let's take it a step further. What if we want to dig into the `submitIdea` function and ensure that the props.addToDont gets called within that method...given the infromation you gained above, take 5 minutes to talk to the person next to you about how you might accomplish this.
 
 ![thinking dog](http://dy5jipgyozh6.cloudfront.net/wp-content/uploads/2016/11/03202021/dog-thinking1.jpg)
 
 Here is what it might look like...
 
 ```
-it('should call this.props.toDont and clear state fields', () => {
- const mockFn = jest.fn()
- wrapper = mount(<Header addToDont={ mockFn }/>)
+  it('should call this.props.addToDont and clear state fields when submitIdea is fired', () => {
+   const mockFn = jest.fn()
+   wrapper = mount(<Header addToDont={ mockFn }/>)
 
- const titleInput = wrapper.find('input').first()
- const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
- const submitButton = wrapper.find('button')
+   const titleInput = wrapper.find('input').first()
+   const bodyInput = wrapper.find('input').filterWhere(x => x.props().placeholder === 'Body')
+   const submitButton = wrapper.find('button')
 
- titleInput.simulate('change', { target: { value: 'title 1'}})
- bodyInput.simulate('change', { target: { value: 'body 1'}})
+   titleInput.simulate('change', { target: { value: 'title 1'}})
+   bodyInput.simulate('change', { target: { value: 'body 1'}})
 
- expect(wrapper.state().title).toEqual('title 1')
- expect(wrapper.state().body).toEqual('body 1')
+   expect(wrapper.state().title).toEqual('title 1')
+   expect(wrapper.state().body).toEqual('body 1')
 
- submitButton.simulate('click')
+   submitButton.simulate('click')
 
- expect(wrapper.props().addToDont).toHaveBeenCalled()
- expect(wrapper.state().title).toEqual('')
- expect(wrapper.state().body).toEqual('')
-})
+   expect(wrapper.props().addToDont).toHaveBeenCalled()
+   expect(wrapper.props().addToDont).toHaveBeenCalledTimes(1)
+   expect(wrapper.state().title).toEqual('')
+   expect(wrapper.state().body).toEqual('')
+  })
+
 ```
 
 WOOF, That's it! 

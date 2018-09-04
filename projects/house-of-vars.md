@@ -49,6 +49,14 @@ Throughout this process, make sure you are conforming to any stylistic conventio
 
 Excluding the two comments mentioned above, you must have both instructors review and approve **any other comment or communication** that you make on an issue or pull request. You must also have us review your code changes and your pull request descriptions before submitting.
 
+Before you make a PR draft and send it to instructors, your PR should contain the following:
+
+1. A link to the issue the PR addresses (you can do this by saying `Closes #151` for issue number 151)
+1. A short description to what you have changed
+1. Screenshots/gifs of the problem before and after you changed code (if applicable - this would not apply for adding tests)
+1. Format any code snippets or filename text using backticks (The PR can contain any markdown formatting! Make it look neat and professional.)
+1. Run the test suite provided - if there are failing tests that have _absolutely_ nothing to do with you changes, then address those tests in your PR
+
 #### Giving Your Teammates Credit
 
 Because this is a group project, you might be pairing to resolve a single issue. Just because one person is driving, doesn't mean they have to be the only one to get credit for the contribution. If you do submit a pull request, make sure to give your teammates credit! You can update the author on a commit with the following command:
@@ -97,13 +105,6 @@ Put your presentation into writing. Each person must write their own blog post. 
 * [Marked as Good First Issue](https://github.com/iodide-project/iodide/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
 
 
-### [Refined GitHub](https://github.com/sindresorhus/refined-github)
-
-**Issues:**
-* [All Issues](https://github.com/sindresorhus/refined-github/issues)
-* [Marked as Good First Issue](https://github.com/sindresorhus/refined-github/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22)
-
-
 ### [WikiEdu Dashboard](https://github.com/WikiEducationFoundation/WikiEduDashboard)
 
 **Issues:**
@@ -128,5 +129,8 @@ Put your presentation into writing. Each person must write their own blog post. 
 <!-- https://github.com/vuetifyjs/vuetify -->
 <!-- https://github.com/wekan/wekan -->
 <!-- https://github.com/alphagov/accessible-autocomplete -->
+
+
+<!-- [Refined GitHub](https://github.com/sindresorhus/refined-github) They do not work well with new developers, do not use this repo -->
 
 If, as a group, you are all struggling to make progress toward a contribution, you are free to choose another open-source codebase to work with. You all must agree on another codebase as we only want a single presentation per group. A good way to search for additional repos is to search GitHub for open issues with labels like "HTML", "CSS", "UI", "UX", "design", "docs", "enhancement". An example search query can be found [here](https://github.com/issues?utf8=%E2%9C%93&q=is%3Aopen+is%3Aissue+label%3Acss).

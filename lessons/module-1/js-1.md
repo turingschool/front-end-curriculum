@@ -10,6 +10,7 @@ In this lesson we'll cover:
 
 * JavaScript data types
 * What a variable is and how to use it
+* Adding variables to strings (concatenation and interpolation)
 * Operators and how to use them
 * Conditionals and when to use them
 * How to declare and call functions with or without parameters
@@ -185,18 +186,33 @@ Now change the value of your quantity variable and ask the console for the creat
 
 Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
 
-## Concatenating Variable Values
+## Adding Variable Values to Strings
+
+There are two different ways to add values to strings.
+1. Via _concatenation_
+2. Via _interpolation_
 
 In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
 
-We can concatenate html tags, text, numbers, and variable values. Let's revisit our example above to concatenate a more readable phrase as the value of our creatureCount variable:
+Template literals are special strings that allow us to interpolate information. They use backticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
+
+We can concatenate or interpolate html tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
+
 
 ```javascript
 var quantity = 3;
-var mythicalCreature = " unicorns";
-var creatureCount = "<p>I have " + quantity + " very fancy" + mythicalCreature + "</p>"
+var mythicalCreature = "unicorns";
+
+// using concatenation
+var creatureCount = "<p>I have " + quantity + " very fancy " + mythicalCreature + "</p>"
+
+// using a template literal
+var creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 ```
-This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and concatenate the data from our variable.
+
+This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and add the data from our variable.
+
+One important thing to keep in mind is that template literals are not as widely [supported](https://caniuse.com/#feat=template-literals) as concatenation.
 
 # Statements
 
@@ -225,11 +241,11 @@ This expression results in 5
 
 Expressions rely on operators to calculate their single value. There are 5 basic types of operators to get you started:
 
-1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment_operators) assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
-2. [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic_operators) perform basic math. `var addTwo = 2 + 2;`
-3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
-4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison_operators) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
-5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical_operators) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
+1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment) assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
+2. [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic) perform basic math. `var addTwo = 2 + 2;`
+3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
+4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
+5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
 ## Your Turn
 
@@ -304,24 +320,21 @@ function makeStatements() {
 ```
 
 - You declare a function using the keyword `function`.
-- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
 - Since functions perform some action, it is generally a good idea to use and action verb in the function name. i.e. `getSize`, `saveNote`, `generateRandomNumber`.
-- You must follow the name of the function with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
+- You can name the function anything you want, but it must include a set of parentheses after the name, which can be empty or accept parameters.
+- You must follow the parentheses with a set of curly braces, which act as bookends to hold the set of statements you want the function to run when it is called.
 - Calling the function is quite easy. Simply type the function name with it's parentheses and any associated parameters.
 
 ## Invoke a Function:
 ```javascript
-// Invoke a function w/out arguments
+// Invoke a function
 makeStatements();
-
-// Invoke a function with arguments
-makeStatements(arg1, arg2);
 ```
 
 When this code is read, `makeStatements()` is "invoked", all three statements within the function's body (those curly braces) get run.
 
 ### Your Turn
-Go ahead and declare the makeStatements function in the console and then invoke it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
+Go ahead and declare the makeStatements function in the console (or a [repl](https://repl.it) and then invoke it. What do you notice about the code as it is being run? What do you notice about the code being run if you swap the 2nd and 3rd statements?
 
 Create your own functions in the console:
 

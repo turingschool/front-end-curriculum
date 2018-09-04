@@ -17,6 +17,7 @@ By the end of this lesson, students should be able to:
 - `Code Smell` A surface level indication of bad code that usually corresponds to a deeper, more fundamental problem
 - `Refactoring` The process of changing the internals of a system (it's factoring), without changing its external behavior
 - `Interface` The external boundary of a software component
+- `DRY` Don't Repeat Yourself
 
 ## The Basics
 
@@ -32,6 +33,8 @@ First things first: before you even begin to prioritize working on technical deb
 When you file issues for technical debt, it's helpful to put a label on them so you can filter through them later. Often times you'll see issues labeled 'P1', 'P2', 'P3', which represents the priority level of the issue. Usually refactoring issues are labeled with a lower priority (P3 is lower than P1). You might also add a label called 'technical-debt' or 'enhancement'. Feel free to use whatever label name makes sense to you, but those are some popular ones you'll see in the wild.
 
 <em>Note: For Turing students specifically, filing issues is incredibly important. While you're interviewing, issues indicate to an employer that you know how to improve your projects. Even if you don't have time to resolve all of the issues you file (you won't), you can at least signify to potential employers that you're aware x, y, and z are broken and you plan on fixing them. (Filing these issues will also give you nice, bite-sized work to do after graduation when you're trying to keep coding.)</em>
+
+<!-- go through an example of opening an issue on gametime project -->
 
 ## Write Your Tests
 
@@ -90,15 +93,15 @@ Hardcoded values are often strings or other values that you use in multiple plac
 
 ```js
 fetch('https://weatherunderground.com/api/v1/7day-forecast/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleDayForecast(forecast))
   .catch(error => throw error);
   
 fetch('https://weatherunderground.com/api/v1/hourly-forecast/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleHourForecast(forecast))
   .catch(error => throw error);
   
 fetch('https://weatherunderground.com/api/v1/radar-map/denver')
-  .then(forecast => doThingsWithForecast(forecast))
+  .then(forecast => handleRadarMap(forecast))
   .catch(error => throw error);
 ```
 
@@ -109,16 +112,16 @@ Into something like this:
 const API_HOSTNAME = 'https://weatherunderground.com/api/v1';
 const CITY = 'denver';
 
-fetch(`/7day-forecast/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+fetch(`${API_HOSTNAME}/7day-forecast/${CITY}`)
+  .then(forecast => handleDayForecast(forecast))
   .catch(error => throw error);
   
-fetch(`/hourly-forecast/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+fetch(`${API_HOSTNAME}/hourly-forecast/${CITY}`)
+  .then(forecast => handleHourForecast(forecast))
   .catch(error => throw error);
   
-fetch(`/radar-map/${CITY}`)
-  .then(forecast => doThingsWithForecast(forecast))
+fetch(`${API_HOSTNAME}/radar-map/${CITY}`)
+  .then(forecast => handleRadarMap(forecast))
   .catch(error => throw error);
 ```
 
@@ -158,8 +161,10 @@ const keyboard = {
 };
 
 function evalInput(event) {
-  if (keyboard[event]) {
-    keyboard[`key${event}`]()
+  const property = `key${event.keyCode}`;
+
+  if (keyboard[property]) {
+    keyboard[property]();
   }
 }
 ```
@@ -180,29 +185,46 @@ Take the following three code examples and try to identify what code smells you 
 #### Example 1
 
 ```js
-if (this.explode === 'no') {
+/* ----------- Do not refactor this section ----------- */
+class Image{}
+
+function drawImage(img, x, y, w, h) {
+  console.log(img, x, y, w, h);
+}
+
+const x = 5;
+const y = 10;
+const width = 20;
+const height = 40;
+
+// switch explode between 'yes' & 'no' to check your results.
+const explode = 'yes'; 
+
+/* ------------- Refactor this section ------------- */
+
+if (explode === 'no') {
   let playerImage = new Image();
 
   playerImage.src = 'assets/airplane.png';
-  context.drawImage(
+  drawImage(
     playerImage,
-    this.x,
-    this.y,
-    this.width,
-    this.height
+    x,
+    y,
+    width,
+    height
   );
 
-} else if (this.explode === 'yes') {
+} else if (explode === 'yes') {
   let playerImage = new Image();
 
   playerImage.src = 'assets/kapow.png';
 
-  context.drawImage(
+  drawImage(
     playerImage,
-    this.x,
-    this.y,
-    this.width,
-    this.height
+    x,
+    y,
+    width,
+    height
   )
 }
 ```
@@ -210,64 +232,112 @@ if (this.explode === 'no') {
 #### Example 2
 
 ```js
-function togglePlayer(currentToken) {
-  if (currentToken.player === "Player One") {
-    var placedToken = currentToken.moveDown(currentToken, newArray)
-
-    if (placedToken) {
-      newArray.push(placedToken);
-      return new Token("Player Two", context, canvas);
-
-    } else {
-      return new Token("Player One", context, canvas);
-    }
-
-  } else {
-    var placedToken = currentToken.moveDown(currentToken, newArray)
-
-    if (placedToken) {
-      newArray.push(placedToken);
-      return new Token("Player One", context, canvas);
-
-    } else {
-      return new Token("Player Two", context, canvas);
-    }
+/* ----------- Do not refactor this section ----------- */
+class Slot {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
   }
 }
-```
 
-#### Example 3
+/* -------------- Refactor this section -------------- */
+let slots = [];
+let firstRow = 40;
+let secondRow = 40;
+let thirdRow = 40;
+let fourthRow = 40;
+let fifthRow = 40;
+let sixthRow = 40;
 
-```js
-var slots = [];
-var firstRow = 40;
-var secondRow = 40;
-var thirdRow = 40;
-var fourthRow = 40;
-var fifthRow = 40;
-var sixthRow = 40;
-
-for (var i = 0; i < 42; i++) {
+for (let i = 0; i < 42; i++) {
   if (i < 7) {
-    slots.push(new Slot(sixthRow, 550, context, canvas));
+    slots.push(new Slot(sixthRow, 550));
     sixthRow += 95;
+
   } else if (i < 14) {
-    slots.push(new Slot(fifthRow, 470,context, canvas));
+    slots.push(new Slot(fifthRow, 470));
     fifthRow += 95;
+
   } else if (i < 21) {
-    slots.push(new Slot(fourthRow, 390,context, canvas));
+    slots.push(new Slot(fourthRow, 390));
     fourthRow += 95;
+
   } else if (i < 28) {
-    slots.push(new Slot(thirdRow, 310,context, canvas));
+    slots.push(new Slot(thirdRow, 310));
     thirdRow += 95;
+
   } else if (i < 35) {
-    slots.push(new Slot(secondRow, 230,context, canvas));
+    slots.push(new Slot(secondRow, 230));
     secondRow += 95;
+    
   } else if (i < 42) {
-    slots.push(new Slot(firstRow, 150,context, canvas));
+    slots.push(new Slot(firstRow, 150));
     firstRow += 95;
   }
 }
+
+console.log(slots);
+```
+
+
+#### Example 3
+The following code is used to toggle between two players. If a player successfuly places a token in the array, a token is created for the other player. If a player does not successfuly place a token a new token is created for the original player.
+
+Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the placed tokens alternate between the two players.
+```js
+/* ----------- Do not refactor this section ----------- */
+class Token {
+  constructor(player) {
+    this.player = player;
+  }
+
+  place(token, array) {
+    let success = Math.floor(Math.random() * 2);
+
+    if (success) {
+      return token;
+    } else {
+      return false;
+    }
+  }
+}
+
+const newArray = [];
+
+/* -------------- Refactor this section -------------- */
+function togglePlayer(currentToken) {
+  if (currentToken.player === "Player One") {
+    var placedToken = currentToken.place(currentToken, newArray)
+
+    if (placedToken) {
+      newArray.push(placedToken);
+      return new Token("Player Two");
+
+    } else {
+      return new Token("Player One");
+    }
+
+  } else {
+    var placedToken = currentToken.place(currentToken, newArray)
+
+    if (placedToken) {
+      newArray.push(placedToken);
+      return new Token("Player One");
+
+    } else {
+      return new Token("Player Two");
+    }
+  }
+}
+
+/* ----------- Do not refactor this section ----------- */
+let currentToken = new Token('Player One');
+
+for (let i = 0; i < 10; i++) {
+  currentToken = togglePlayer(currentToken)
+}
+
+console.log(newArray)
 ```
 
 

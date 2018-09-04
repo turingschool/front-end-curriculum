@@ -32,7 +32,7 @@ The front-end of the web is based on three major technologies:
  * Each page contains a series of connections to other pages called hyperlinks
  * HTML ensures the proper formatting of content (text, images, video) so that your internet browser can display them as intended
  * HTML is made up of many Elements
- * Elements are used to hold our content and define how the browser must format and display the content. 
+ * Elements are used to hold our content and define how the browser must format and display the content.
  * Elements are created with either one or two tags.
  * Tags are created with angle brackets `<>` and are used to create elements
  * Markup = the set of tags to structure a page
@@ -70,7 +70,7 @@ Here is an example of a slightly more robust document:
 </p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<!-- 
+<!--
   Write a simplified example on the board,
   Turn and Talk
   What are the tags vs what is the element?
@@ -147,7 +147,7 @@ In this case, the `<a>` tag needs to know which url it should be linked to. We u
 <p data-height="300" data-theme-id="23788" data-slug-hash="yJYdyb" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/yJYdyb/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-<!-- 
+<!--
   Turn and Talk
   What are attributes and what are they used for?
   What are some other attributes you have used?
@@ -192,21 +192,7 @@ There is just one important difference between the two.
 - `<div>` is a block element.
 - `<span>` is an inline element.
 
-We'll discuss these more in a bit when we talk about CSS. But, for now, let's move on to forms.
-
-### Forms: Inputs and Buttons
-
-So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms.
-
-There is a lot to forms that we'll go into depth later, but for now just blissfully ignore.
-
-Instead we'll focus on two elements:
-
-- `<input>` creates an input field. `<input>` is like `<img>` in that it does not require or support a closing tag. It can take an optional `type` attribute that helps validate user input in some browsers.
-- `<button>` creates a button. `<button>` on the other hand does support a closing tag.
-
-<p data-height="300" data-theme-id="23788" data-slug-hash="MeaMEr" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Inputs and Buttons" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/MeaMEr/">Inputs and Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+We'll discuss these more in a later lesson when we talk about CSS.
 
 ## Required Structure of any HTML Page
 
@@ -221,6 +207,18 @@ Instead we'll focus on two elements:
 
 ***
 
+# Your Challenge
+
+Layout the structure of these following sites. Only use HTML for these challenges. The goal is build the structure of your application.
+
+### Create this table
+You can use codepen or create your own html file.
+** Hint: Research the [table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) in HTML
+
+# ![Flags Table](/assets/images/flags-table.jpg)
+
+***
+
 # Docs
 
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
@@ -230,8 +228,67 @@ Instead we'll focus on two elements:
 
 ***
 
-### For Placement Only (FPO)
-Let's take a moment to digress and discuss important things. Like "For Placement Only" (FPO) options in design. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
+# Forms
+
+So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms. Forms are an important part of a website. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own.
+
+### Docs
+
+HTML Guide and form structure
+* [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
+* [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
+
+### Form Basics: Inputs and Buttons
+
+So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms.
+
+There is a lot to forms that we'll go into depth in a moment, to start we'll focus on two elements:
+
+- `<input>` creates an input field. `<input>` is like `<img>` in that it does not require or support a closing tag. It can take an optional `type` attribute that helps validate user input in some browsers.
+- `<button>` creates a button. `<button>` on the other hand does support a closing tag.
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="MeaMEr" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Inputs and Buttons" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/MeaMEr/">Inputs and Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Forms: Next Level
+Basic input and button elements are a great starting point, but to build a truly usable form we need to use the following base elements:
+
+* `form`
+* `label`
+* `input`
+* `submit`
+
+<p data-height="300" data-theme-id="26495" data-slug-hash="JbyeZM" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Super Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/JbyeZM/">Super Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+## Your Challenges (2)
+
+### Part One:
+Partner up and answer the following questions:
+
+* What is the attribute `for` indicate on the `label` element? Do you always have to use it? Why or why not?
+* What are 5 values for the `type` attribute of an `input` element and how do they work?
+* What is the significance of the `name` attribute in a form?
+* What is a `fieldset` element?
+* Why would a `legend` element be important?
+
+### Part Two:
+Copy the form code below into your own Pen, and then refactor as follows:
+
+* Validate for email type
+* Add a set of radio buttons with at least three options - only allowing one to be selected at a time
+* Include placeholders for name, email, and message
+* Add a drop down for favorite color with at least three options
+* Use an input for submit instead of a button
+
+<p data-height="458" data-theme-id="26495" data-slug-hash="Lbjgwy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjgwy/">Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+
+***
+
+# For Placement Only (FPO)
+Let's take a moment to digress and discuss _important things_. Like "For Placement Only" (FPO) options for use in design layouts. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
 
 * [Meet the Ipsums](http://meettheipsums.com/)
 * [FPOImg](http://fpoimg.com/)
@@ -245,19 +302,10 @@ Let's take a moment to digress and discuss important things. Like "For Placement
 
 ***
 
-# Your Challenges (2)
+# Your Challenge
 
-Layout the structure of these following sites. Only use HTML for these challenges. The goal is build the structure of your application.
 
-### 1. Create this table
-You can use codepen or create your own html file.
-** Hint: Research the [table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) in HTML
-
-# ![Flags Table](/assets/images/flags-table.jpg)
-
-***
-
-### 2. Create this Dog Party
+### Create this Dog Party
 
 * Create a directory called `dog-party`
 * Create a sub-directory called `images`
@@ -270,9 +318,13 @@ Now, in your `dog-party` site directory, begin laying out the HTML for this site
 # ![Dog Party](/assets/images/dog-party.png)
 
 
+## Additional Resources
 
-<!-- 
+* [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
+* [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
+
+<!--
 Wrap up questions
 What role does HTML play in our web applications?
-What are semantic tags and why do we use them? 
+What are semantic tags and why do we use them?
 -->

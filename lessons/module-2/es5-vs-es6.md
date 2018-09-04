@@ -12,7 +12,8 @@ By the end of the lesson, you will
 * Be familiar with some of ES6 syntax and know how it relates to ES5
 * Know how inheritance works and be able to explain it
 
-## Vocab
+
+## Vocabulary
 
 - `Scope` Where variables and functions are accessible
 - `Prototypal Inheritance` Inheritance by means of delegating message passing through a chain of objects (aka prototypes)
@@ -58,7 +59,7 @@ callbacks[2]() === 4;
 
 (If we did not wrap the contents of the `for` loop in a function, when we executed `callbacks[0]`, `callbacks[1]`, and `callbacks[2]` they would all return 4, because `i` would be hoisted out of the `for` loop block and defined in the global scope. The `for` loop would increment it up, so each of the functions would reference that global variable. Hence wrapping the contents of the `for` loop in a function.)
 
-And here's how we would do it with ES6:
+And here's how we would do it with ES6 syntax:
 
 ```
 // es6 block scope

@@ -8,6 +8,8 @@ A trie is a data structure in computer science. The word trie is derived from th
 
 Now there are many types of tries and one you will hear a lot about is the `binary search trie`. It is similar to a linked list the difference being that each child node has a single left and right node attached to it.
 
+The benefits of something like a `trie` is that it makes dealing with large sets of data easier to handle.
+
 ## What do you mean by data structure?
 
 A data structure is just a particular way of organizing data so that it can be accessed and modified efficiently and quickly. Up to this point you've used data structures that are built into javascript to manage how your data is accessed and manipulated (Array and Object). 
@@ -53,7 +55,33 @@ If we query the trie for names that begin with `a` our data set is sizably reduc
 
 ## Complete Me
 
-Everybody uses auto complete. In this project you are going to be building a low level version of an auto complete system in javascript.
+Autocomplete features are a very common convention for text inputs on search fields. In this project you are going to be building a low level version of an auto complete system in JavaScript. You'll use the boilerplate repos you created during the project configuration lesson by following these steps:
+
+1. Retrieve the git remote URL for your boilerplate repo by navigating to your repo at github.com. It should be something like `https://github.com/brittanystoroz/boilerplate.git`. Copy this to your clipboard.
+
+2. In your terminal, create a new project directory called `complete-me`. CD into it and run `git init`
+
+3. Add your boilerplate repo as a remote called `boilerplate` with the following command:
+
+`git remote add boilerplate https://github.com/brittanystoroz/boilerplate.git`
+
+4. Copy your `boilerplate` master into your `complete-me` master with the following command:
+
+`git pull boilerplate master`
+
+5. Go back to github in the browser and create a new repository called `complete-me`. Do **not** add a `.gitignore` file and do **not** add a license.
+
+6. Click the 'Create Repository' button and copy the git URL for your new repo to your clipboard. It should be something like `https://github.com/brittanystoroz/complete-me.git`
+
+7. In your terminal, in your `complete-me` directory, add your new github repo as a remote with the following command:
+
+`git remote add origin https://github.com/brittanystoroz/complete-me.git`
+
+8. Push up your current master branch to your origin remote:
+
+`git push origin master`
+
+
 
 ### Hint
 You can use `console.log` along with `JSON.stringify` to view your trie in your console when running your tests.
@@ -68,16 +96,16 @@ The first thing your `trie` should be able to do is take in a word. It should al
 ```js
 import Trie from "./lib/Trie";
 
-var completion = new Trie();
+var prefixTrie = new Trie();
 
-completion.insert("hello");
+prefixTrie.insert("hello");
 
-completion.count();
+prefixTrie.count();
 => 1
 
-completion.insert('world');
+prefixTrie.insert('world');
 
-completion.count();
+prefixTrie.count();
 => 2
 ```
 
@@ -88,33 +116,32 @@ Once the words are placed into the `trie` it should be able to offer some sugges
 You will need to write a method called `suggest` that will take in a word prefix and return an array of words that match the desired prefix. 
 
 ```js
-completion.suggest('he');
+prefixTrie.suggest('he');
 => ['hello']
 
-completion.insert("hellen");
+prefixTrie.insert("hellen");
 
-completion.suggest("he");
+prefixTrie.suggest("he");
 => ["hello", "hellen"]
 
-completion.suggest('w');
+prefixTrie.suggest('w');
 => ["world"]
 ```
 
 ## Phase 3
 
-Our Trie won't be very useful without a good dataset to populate it. Our computers ship with a special
-file containing a list of standard dictionary words.
+Our Trie won't be very useful without a good dataset to populate it. Our computers ship with a special file containing a list of standard dictionary words.
+
 It lives at `/usr/share/dict/words`
 
-Using the unix utility `wc` (word count), we can see that the file
-contains 234371 words:
+Using the unix utility `wc` (word count), we can see that the file contains 234371 words:
 
 ```
 $ cat /usr/share/dict/words | wc -l
 => 234371
 ```
 
-Our next objective is to load the dictionary into our trie. It should have a method called `populate` that will take a the desired data set and inject it into our trie.
+Our next objective is to load the dictionary into our trie. It should have a method called `populate` that will take in the desired data set and inject it into our trie.
 
 ```js
 import fs from 'fs';
@@ -122,18 +149,18 @@ import fs from 'fs';
 const text = "/usr/share/dict/words";
 const dictionary = fs.readFileSync(text).toString().trim().split('\n');
 
-const completion = new Trie();
+const prefixTrie = new Trie();
 
-completion.populate(dictionary);
+prefixTrie.populate(dictionary);
 
-completion.count();
+prefixTrie.count();
 => 234371
 
-completion.suggest('world');
+prefixTrie.suggest('world');
 => [ 'world', 'worlded', 'worldful', 'worldish', ...]
 ```
 
-## Phase 4
+## Phase 4 (not due upon evals)
 
 Next week you will create a Weather App that needs an autocomplete feature.
 Package your complete-me trie in a node module so that you can import it into
@@ -143,19 +170,19 @@ future projects. (Note: don't publish to npm, you can install your package from 
 
 ### Front Facing Application
 
-See if you can implement a front facing application for your `trie`. The user should be able to submit a word and then receive the suggestions on the dom.
+See if you can implement a front facing application for your `trie`. The user should be able to submit a word and then receive the suggestions on the DOM.
 
 ### Delete method
 
 Sometimes auto-completes give suggestions which we never want to see. Add a delete method to your Trie. 
 
 ```js
-completion.suggest('world')
+prefixTrie.suggest('world')
 => ['world', 'worlded', 'worldful', 'worldish', ...]
 
-completion.delete('worldful');
+prefixTrie.delete('worldful');
 
-completion.suggest('world')
+prefixTrie.suggest('world')
 => ['world', 'worlded','worldish', ...]
 
 ```
@@ -163,9 +190,10 @@ completion.suggest('world')
 ## Evaluation Rubric
 
 The project evaluation will have two parts: 
-* an in-person live code
-  - implement a new method
-  - this demonstrates your problem-solving process
+* an in-person live code/whiteboarding session
+  - be able to whiteboard/draw out how methods like insert or find would work in the trie 
+  - implement a new method, and/or remove and re-implement a pre-existing method
+  - demonstrate your problem-solving process
 * submission of the complete project
   - complete functionality
   - complete testing suite

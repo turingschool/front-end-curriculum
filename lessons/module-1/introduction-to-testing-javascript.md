@@ -4,6 +4,12 @@ length: 120
 tags: javascript, browser, testing, tdd
 ---
 
+## Learning Goals
+* Understand what testing is, why it is important, and the various types of tests
+* Recognizing the importance of Test Driven Development (TDD)
+* Ability to read/create tests
+* Understanding how to import/export files specifically for testing
+
 ## Vocab
 
 - `TDD` Test Driven Development / Design
@@ -35,7 +41,7 @@ We test our code at a number of different levels:
 #### Acceptance Tests  
 - Acceptance tests act like a user and visit the page. When I put in a bogus zip code, do I get the error on the page that I'm expecting? Acceptance tests don't typically care about what's happening under the hood. They just care that we got the desired result. Everything could be a total mess in the code base.
 
-### End-to-End Tests  
+#### End-to-End Tests  
 - End-to-end tests test every component of the system. Let's say you have a back-end application and a front-end application. Your end-to-end tests would test both and make sure they are working together as expected.
 
 Today, we're just talking about _unit_ tests. Why? The bulk of your tests for an application are likely to be unit tests. 
@@ -48,6 +54,10 @@ Today, we're just talking about _unit_ tests. Why? The bulk of your tests for an
 * Unit tests provide documentation by telling a living story about your application
 * Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
 
+### Your Turn
+
+* Take a minute to talk with the person next to you and discuss the differences between each of the four tests.  Why might it be important to have tests on multiple levels?
+
 ## What is test-driven development?
 
 Test-driven development (TDD) is one of those things that is deceptively simple to explain and incredibly hard to do. The basic premise is that we write our test for a piece of required functionality _before_ writing any implementation code. The test should fail when its first run, and then, you write the code to make it pass. Once the test passes, you can then safely refactor your code.
@@ -56,6 +66,25 @@ If you think about it, this is not too far off from how you're already thinking 
 
 With TDD, we're basically automating this process. You're forcing yourself to write down assertions about how the code should work _before_ trying to make said assertions into code. One of the main advantages of TDD is that if you're diligent and stay on the path, then almost all of your code will be covered by tests and you can rest better at night. If a change to one part of your code base breaks some other part of your code base, then you'll know it immediately and be able to fix it quickly.
 
+## The Testing Cycle
+
+One important thing to note is that TDD is not about writing tests. Writing tests is writing tests, period. TDD is more than that - it’s a methodology in which three activities are tightly interwoven: testing (in the form of unit testing), coding, and design (in the form of refactoring). In order to do TDD well, you should follow the following steps:
+
+
+![TDD cycle](/assets/images/tdd-cycle.png)
+
+<!-- Write on board -->
+1. Think and write test cases - this step ensures that you understand the functionality that is required
+2. Red –  In this step, you try to run your test. You have no implementation code, so your test should fail.
+3. Green – Write the minimum code required to get the test to pass
+4. Green – Ensure that no old tests fail.
+5. Refactor - Refactor to ensure functionality is intact and the code is refined.
+6. Repeat this cycle - Steps 1 - 5 are repeated multiple times so that all the features are covered in TDD cycles
+
+### Your Turn
+
+* Explain the steps of TDD in your own words with a different partner from before.  
+* Brainstorm and write down three reasons as to why TDD is important and why it might save you headaches in the future.
 
 ## So what happens if you don't test first?
 
@@ -142,24 +171,37 @@ You'll notice that our method takes three arguments (the third being optional, a
 - expected: The expected output that should be returned based on test requirements
 - message: A (String) message to yourself on what is being tested
 
-## The Testing Cycle
+## Importing/Exporting Files
+As mentioned earlier, tests are typically separate from its implementation code.  In order for this to work properly, we need to be able to export the functionality from one file and import it into the test file.  Let's take a look at an example:
 
-One important thing to note is that TDD is not about writing tests. Writing tests is writing tests, period. TDD is more than that - it’s a methodology in which three activities are tightly interwoven: testing (in the form of unit testing), coding, and design (in the form of refactoring). In order to do TDD well, you should follow the following steps:
+*Implementation.js*
 
+```js
+function Hello() {
+  return 'Hello World';
+}
 
-![TDD cycle](/assets/images/tdd-cycle.png)
+module.exports = Hello;
+```
 
-<!-- Write on board -->
-1. Think and write test cases - this step ensures that you understand the functionality that is required
-2. Red –  In this step, you try to run your test. You have no implementation code, so your test should fail.
-3. Green – Write the minimum code required to get the test to pass
-4. Green – Ensure that no old tests fail.
-5. Refactor - Refactor to ensure functionality is intact and the code is refined.
-6. Repeat this cycle - Steps 1 - 5 are repeated multiple times so that all the featuers are covered in TDD cycles
+The `module.exports` allows us to export a piece of functionality.  In this instance, we want to export our function Hello, so that is what we assign it.    
+
+*Test.js*
+```js
+  var Hello = require('./implementation')
+
+  describe('hello', function () {
+  it('returns the string Hello World', function () {
+    assert.equal(Hello(), 'Hello World');
+  });
+});
+```
+
+By adding `require('./implementation')` to our test file, we are importing that function and assigning it to a variable.  Then we can test it by asserting what value is returned after invoking our imported function!
 
 ## Let's practice
 
-Enough talking about testing. Let's actually write some tests to see this in action. We'll do some together and then you'll do some on your own.
+Enough talk about testing. Let's actually write some tests to see this in action. We'll do some together and then you'll do some on your own.
 
 Check out [this repository][rep] to get your hands dirty.
 

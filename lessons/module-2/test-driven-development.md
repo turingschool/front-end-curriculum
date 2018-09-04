@@ -18,7 +18,6 @@ mod: 2
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 - `SUT` or `Subject Under Test` The unit being tested
-- `The Testing Pyramid` A diagram describing, roughly, the amount of unit, system, and UI tests to have in a test suite
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
 
 ## Review: What is TDD?
@@ -68,51 +67,6 @@ Without tests, the only way you'd know if something broke is to go poke at it ma
 With tests, you know right away.
 These benefits scale as your app grows larger.
 
-## Structure of a Test  
-
-Good tests have **Four Phases**:  
-1. Setup - Setup the conditions required to execute the action on your `SUT`
-2. Execution - Execute some action on your `SUT`
-3. Assertion - Assert that the action you did had the results you expect
-4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time)
-
-All four of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
-Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes.
-
-**Good tests:**
-- test one thing
-- don't test what didn't happen
-- have no control flow (`if`, `when`, `for`) statements
-- can be used as documentation for the code they test
-- are clear and easy to read
-
-Look at the following example and read the comments that talk about each line of our test:  
-
-```js
-// Before anything can happen, we need a describe block to group related tests together
-// In this case, the tests within our describe block are all related to the 'Unicorn' class
-describe('Unicorn', function() {
-
-  // Next, an 'it block' contains the context of each specific test
-  it('should accumulate calories after eating', function() {
-
-    // 1. "Setup"
-    // Instantiate an instance of our unicorn
-    var unicorn = new Unicorn('Susan');
-
-    // 2. "Execution"
-    // Run appropriate functions that execute the behavior indicated by our test title
-    unicorn.eat();
-    unicorn.eat();
-    unicorn.eat();
-
-    // 3. "Assertion"
-    // Make an assertion to verify that after executing certain functions, we end up with what we expect
-    assert.equal(unicorn.calories, 300);
-  });
-})
-```
-
 ## What Should Be Tested?
 
 This is the age old question!
@@ -130,6 +84,11 @@ Typically, the deciding factor in what should be tested is whether or not tests 
 - they don't make the business money
 - they take time to maintain
 - updating features is slower when you've got to fix tests, too
+
+<!-- 
+  Take some time and think about the game which you are building. 
+  What are some the key pieces of functionality in your game?
+-->
 
 ## Types of Tests
 
@@ -158,11 +117,6 @@ Here is another more in-depth global lifecycle for best testing practices:
 
 ![Global Lifecycle](http://i.imgur.com/CL6Pr58.png)  
 
-## BDD
-
-The idea with BDD is to specify behavior in a very natural, human way.
-For example, tests should read like "Given X, when I do Y, then Z should happen."
-
 ## Testing Framework: Mocha  
 
 For now, we'll focus on the testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
@@ -181,138 +135,6 @@ describe('unicorn', function() {
 ```
 
 The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that `eating accumulates calories`. You'll write the code above with any framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
-
-## Testing Practice: Adding Mocha and Chai   
-
-To practice, let's kick off a brand new project to demonstrate how you would add Mocha and Chai to a project, and write a couple basic tests.  
-
-In your terminal, create your project directory, initialize an npm directory, and add a javascript file.  
-
-```bash
-mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes && touch Box.js  
-```
-
-Open up this project in your text editor.  
-
-When we ran the command `npm init --yes` it generated a `package.json` file for us automatically. This file is where we will store all of the dependencies our project will need to run smoothly. The `--yes` command allowed us to bypass answering any config questions when generating this file, which means we have a bare-bones skeleton that looks like this:  
-
-```json
-// package.json  
-
-{
-  "name": "unit-testing-practice",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}
-```  
-
-**Install Mocha**:  
-`npm install --global mocha` (Installs the `mocha` command globally so you can use it everywhere)  
-`npm install --save-dev mocha` (Installs the `mocha` command locally within your project as a development dependency.)  
-
-We need to install Mocha globally here because we are going to tell our package.json that the command `mocha` is what we will use to run our tests. This command will be executed in our terminal on a global level. We also need this package locally so when it sees the describe blocks within our code it knows what to do.  
-
-**Install Chai**:  
-`npm install --save-dev chai`  
-(Installs chai locally - we don't need this package globally because our assertions will only ever be within our tests themselves.)  
-
-You'll now see that in your `package.json` you have the following new dependencies (your version numbers might be different):  
-
-```json
-"devDependencies": {
-  "chai": "^4.1.1",
-  "mocha": "^3.5.0"
-}
-```
-
-**Update package.json**:  
-Finally, we need to tell our package.json what to do when we want to run our tests. You'll notice there is a section within our `package.json` file called `scripts`. This is where our node app goes to figure out if the command we told it to execute from our terminal exists in within our application. Right now, we should have the following unhelpful line of code:  
-
-```js
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-```
-
-Before we change anything, run the command `npm test` from your terminal. You should see text printout that looks suspiciously similar to the snippet above.  
-
-*Pause: Command Breakdown: `npm` tells node to check package.json scripts for whatever command we type next. `test` tells node to execute the line of code indicated by the key `test` in our scripts object, which in this case is simply echoing a string in our terminal.*  
-
-Update the scripts object to run Mocha:  
-
-```js
-"scripts": {
-  "test": "mocha"
-},
-```
-
-Run `npm test` again. You should see a line of code that says something like:
-
-```bash
-Warning: Could not find any test files matching pattern: test
-```
-
-This makes sense! We don't have a directory called `test`, which is what Mocha is looking for by default, nor do we have any test files for it to run.
-
-Let's practice writing a couple tests in true TDD fashion - this first one will just help verify that everything is wired up correctly - plus it's always nice to start with an easy win.  
-
-```bash
-mkdir test && touch test/Box-test.js
-```
-
-```js
-// test/Box-test.js  
-
-describe('Box', function() {
-  it('should return true', function() {
-    assert.equal(true, true);
-  });
-});
-```
-
-If you run `npm test` now, you'll see an expected error. It's important to recognize this error, because it will happen a lot. Mocha and Chai are two different libraries - which is indicated by this error message:  
-
-```bash
-1) Box should return true:
-   ReferenceError: assert is not defined
-    at Context.<anonymous> (test/Box-test.js:3:5)
-```
-
-It's saying that it doesn't know what `assert` is, and recall that `assert` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
-
-Import Chai and the `assert` library, at the top of your test file:  
-
-```js
-// test/Box-test.js  
-
-const chai = require('chai');
-const assert = chai.assert;
-
-describe('Box', function() {
-  it('should return true', function() {
-    assert.equal(true, true);
-  });
-});
-```
-
-*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` comes from ES6, which needs some additional tools in order to run. Right now we have a very simple JS application and are not incorporating any Babel compilers to help us navigate ES6 syntax. For now we will stick to ES5 syntax.*  
-
-If you run `npm test` now, we should have a passing test.  
-
-```bash
-Box
-  ✓ should return true
-
-
-1 passing (10ms)  
-```
 
 ## Assertion Library: Chai  
 
@@ -400,6 +222,183 @@ Now, lets look at `deepEqual`.
 
 If use `deepEqual` instead, the same test will pass. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is the same. The `deepEqual` method checks if two things contain the same information.
 
+## BDD
+
+The idea with BDD is to specify behavior in a very natural, human way.
+For example, tests should read like "Given X, when I do Y, then Z should happen."
+
+## Structure of a Test  
+
+Good tests have **Four Phases**:  
+1. Setup - Setup the conditions required to execute the action on your `SUT`
+2. Execution - Execute some action on your `SUT`
+3. Assertion - Assert that the action you did had the results you expect
+4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time)
+
+All four of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
+Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes.
+
+**Good tests:**
+- test one thing
+- don't test what didn't happen
+- have no control flow (`if`, `when`, `for`) statements
+- can be used as documentation for the code they test
+- are clear and easy to read
+
+Look at the following example and read the comments that talk about each line of our test:  
+
+```js
+// Before anything can happen, we need a describe block to group related tests together
+// In this case, the tests within our describe block are all related to the 'Unicorn' class
+describe('Unicorn', function() {
+
+  // Next, an 'it block' contains the context of each specific test
+  it('should add 100 calories after eating', function() {
+
+    // 1. "Setup"
+    // Instantiate an instance of our unicorn
+    var unicorn = new Unicorn('Susan');
+
+    // 2. "Execution"
+    // Run appropriate functions that execute the behavior indicated by our test title
+    unicorn.eat();
+    unicorn.eat();
+    unicorn.eat();
+
+    // 3. "Assertion"
+    // Make an assertion to verify that after executing certain functions, we end up with what we expect
+    assert.equal(unicorn.calories, 300);
+  });
+})
+```
+
+## Testing Practice: Adding Mocha and Chai   
+
+To practice, let's kick off a brand new project to demonstrate how you would add Mocha and Chai to a project, and write a couple basic tests.  
+
+In your terminal, create your project directory, initialize an npm directory, and add a javascript file.  
+
+```bash
+mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes && touch Box.js  
+```
+
+Open up this project in your text editor.  
+
+When we ran the command `npm init --yes` it generated a `package.json` file for us automatically. This file is where we will store all of the dependencies our project will need to run smoothly. The `--yes` command allowed us to bypass answering any config questions when generating this file, which means we have a bare-bones skeleton that looks like this:  
+
+```json
+// package.json  
+
+{
+  "name": "unit-testing-practice",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+```  
+
+**Install Mocha**:  
+`npm install --save-dev mocha` (Installs the `mocha` command locally within your project as a development dependency.)  
+
+**Install Chai**:  
+`npm install --save-dev chai`  
+
+You'll now see that in your `package.json` you have the following new dependencies (your version numbers might be different):  
+
+```json
+"devDependencies": {
+  "chai": "^4.1.1",
+  "mocha": "^3.5.0"
+}
+```
+
+**Update package.json**:  
+Finally, we need to tell our package.json what to do when we want to run our tests. You'll notice there is a section within our `package.json` file called `scripts`. This is where our node app goes to figure out if the command we told it to execute from our terminal exists in within our application. Right now, we should have the following unhelpful line of code:  
+
+```js
+"scripts": {
+  "test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+
+Before we change anything, run the command `npm test` from your terminal. You should see text printout that looks suspiciously similar to the snippet above.  
+
+*Pause: Command Breakdown: `npm` tells node to check package.json scripts for whatever command we type next. `test` tells node to execute the line of code indicated by the key `test` in our scripts object, which in this case is simply echoing a string in our terminal.*  
+
+Update the scripts object to run Mocha:  
+
+```js
+"scripts": {
+  "test": "./node_modules/mocha/bin/mocha"
+},
+```
+
+Run `npm test` again. You should see a line of code that says something like:
+
+```bash
+Warning: Could not find any test files matching pattern: test
+```
+
+This makes sense! We don't have a directory called `test`, which is what Mocha is looking for by default, nor do we have any test files for it to run.
+
+Let's practice writing a couple tests in true TDD fashion - this first one will just help verify that everything is wired up correctly - plus it's always nice to start with an easy win.  
+
+```bash
+mkdir test && touch test/Box-test.js
+```
+
+```js
+// test/Box-test.js  
+
+describe('Box', function() {
+  it('should return true', function() {
+    assert.equal(true, true);
+  });
+});
+```
+
+If you run `npm test` now, you'll see an expected error. It's important to recognize this error, because it will happen a lot. Mocha and Chai are two different libraries - which is indicated by this error message:  
+
+```bash
+1) Box should return true:
+   ReferenceError: assert is not defined
+    at Context.<anonymous> (test/Box-test.js:3:5)
+```
+
+It's saying that it doesn't know what `assert` is, and recall that `assert` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
+
+Import Chai and the `assert` library, at the top of your test file:  
+
+```js
+// test/Box-test.js  
+
+const { assert } = require('chai');
+
+describe('Box', function() {
+  it('should return true', function() {
+    assert.equal(true, true);
+  });
+});
+```
+
+*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` needs some additional tools in order to run. Right now we have a very simple JS application so we will stick to `require` syntax*  
+
+If you run `npm test` now, we should have a passing test.  
+
+```bash
+Box
+  ✓ should return true
+
+
+1 passing (10ms)  
+```
+
 ## Testing Practice: Iteration 1  
 
 Obviously this test isn't doing anything helpful, but we know our files are wired up. Let's add some more interesting tests. Let's pretend we just received a spec, and the first iteration looks something like this:  
@@ -418,8 +417,7 @@ We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refa
 ```js
 // test/Box-test.js
 
-const chai = require('chai');
-const assert = chai.assert;
+const { assert } = require('chai');
 const Box = require('../Box.js');
 
 describe('Box', function() {
@@ -474,16 +472,18 @@ Take a minute to make those tests pass **WITHOUT LOOKING AHEAD**. Here's a pictu
 
 ```js
 // Box.js  
-function Box(height, width) {
-  this.height = height || 100,
-  this.width = width || 100
-}
+class Box {
+  constructor(height = 100, width = 100) {
+    this.height = height;
+    this.width = width;
+  }
 
-Box.prototype.area = function() {
-  const height = this.height;
-  const width = this.width;
-  const area = height * width;
-  return area;
+  area() {
+    const height = this.height;
+    const width = this.width;
+    const area = height * width;
+    return area;  
+  }
 }
 
 module.exports = Box;
@@ -496,7 +496,7 @@ Look at the implementation of the `Box.prototype.area()` function as its written
 ```js
 // Box.js  
 
-Box.prototype.area = function() {
+area() {
   return this.height * this.width;
 }
 

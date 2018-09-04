@@ -10,6 +10,10 @@ tags: git, github
 
 In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/). This [video](https://www.youtube.com/watch?v=XsPVWGKK0qI) will walk you through the process and likely save you time.
 
+#### Git
+
+The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
+
 ### Learning Goals
 
 In this lesson, you will learn how to:
@@ -26,8 +30,7 @@ In this lesson, you will learn how to:
 - `Git` The most commonly used VCS
 - `GitHub` A service/website that allows people to host git repositories online
 - `Repository` A collection of code managed by git. Tends to be the folder your source files are in
-- `Untracked Files` Files that are not managed by Git
-- `Working Area` Where unstaged files live. Untracked files are not in the working area
+- `Working Area` Where untracked and unstaged files live
 - `Staging Area` Where staged files live
 - `Commit` A snapshot of what your code looked like at a particular time
 - `Remote` Remote, as in, a remote repository. As in, not a local repository. A remote is a repository that's stored somewhere that's not your local machine
@@ -360,7 +363,7 @@ Add, commit, and push your changes!
 
 Merging a branch means that you are updating one branch with another branch's changes.
 
-#### Merge feature work to master branch (`git merge`)
+#### Merge work locally (`git merge`)
 
 To merge changes locally between branches, you should first move to the branch you want to update. Then run the command `git merge [branch you want to merge changes from]`. In our case, we want to make sure that we have all of the latest changes from master. 
 
@@ -490,6 +493,8 @@ There are certain times where you will need to work on a codebase that you do no
 ### Your Turn
 
 Practice by pushing up your Dog Party or Number Guesser project to GitHub.
+
+To get even more practice, try completing the rest of the exercises under Basic Git Workflow at [CodeCademy](https://www.codecademy.com/learn/learn-git).  Specifically, do the exercises Manhattan Zoo and SnapFit Robots, Inc.  It is highly recommended that you also complete the quiz to solidify your understanding!
 
 ## Additional Resources
 
