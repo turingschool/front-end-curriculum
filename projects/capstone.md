@@ -25,9 +25,12 @@ This is a unique opportunity that presents some valuable goals:
 1. Any new pitches for projects you want to work on?
 1. Group forming
 1. Instructors finalize teams
-1. Get into your teams
+1. Gather into your teams
 1. Go through project expectations
 1. Start working on Day 1 deliverables!
+  * Go through project expectations again with your team
+  * Ask us any questions along the way!
+1. Instructors meet with teams to look through Day 1 deliverables
 
 ## Expectations
 
