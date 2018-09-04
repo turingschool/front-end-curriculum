@@ -116,4 +116,16 @@ Instructors will serve as project managers and hold check-ins with teams at leas
 
 Midway through the project, each team will present to the class and instructors about their progress toward MVP as well as difficulties/roadblocks they’ve encountered.
 
+### End-of-Project Demos
+
+Wednesday morning of week 6 your team will demo your application to the class and instructors (the application should be demo'd using _production_). It will be a great preparation for demo night so you can nail your demos!
+
 ### Evaluation
+
+Evaluation will take place Wednesday afternoon of week 6. Each team will meet with a BE and FE instructor to:
+
+* Walk through the application (FE and BE) and justifications of code
+* Run the test suites
+* Show the application is running on production
+* Show application is using continuous integration
+* Talk about lessons learned
