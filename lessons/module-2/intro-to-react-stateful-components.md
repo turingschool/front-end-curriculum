@@ -44,7 +44,24 @@ Application data that affects how our app renders is stored in state.
 
 <!-- Compare to gametime GamePiece class, the object x/y coordinates would be in state -->
 
-State is slightly different than props: state holds data that represents the actual state of our application. State is private and local to a component, whereas props are passed into a component. State can be changed and mutated through user interactions, whereas props should remain immutable.
+State is slightly different than props: state holds data that represents the actual state of our component. State is private and local to a component, whereas props are passed into a component. State can be changed and mutated through user interactions, whereas props should remain immutable.
+
+Before you store information in state it should fit two criteria
+
+* That information will affect how your component is displayed
+* That information can change based on user interaction
+
+<!-- 
+  whiteboard
+ state -> determines -> UI
+   ^ 
+   |                    |
+updates                 |
+   ^                    |
+   |                    v
+
+     User Interaction
+ -->
 
 To create state we will initialize it in our class's constructor function. Note: The super method must be called before adding state. After adding state, we can use it in our render method instead of hardcoding our count.
 
