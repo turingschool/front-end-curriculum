@@ -15,6 +15,7 @@ tags: javascript, react
 In our previous lesson, we learned how to create stateless components. Stateless components are great if we just need to create html that will be be different based on what parameters/properties we pass into our component. Sometimes our components need to be able to store the information they display and change that information based on user interaction. When this is the case, you will want to use a stateful component.
 
 ## Stateful Components
+
 Stateful components are ES6 classes that extend an abstract 'Component' class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM.
 
 In this example, we will create a counter class. This class will render a count and a button to increase the count.
@@ -40,6 +41,9 @@ In our example above, the application data we will want to keep of track of is t
 Application data that affects how our app renders is stored in state.
 
 ## State
+
+<!-- Compare to gametime GamePiece class, the object x/y coordinates would be in state -->
+
 State is slightly different than props: state holds data that represents the actual state of our application. State is private and local to a component, whereas props are passed into a component. State can be changed and mutated through user interactions, whereas props should remain immutable.
 
 To create state we will initialize it in our class's constructor function. Note: The super method must be called before adding state. After adding state, we can use it in our render method instead of hardcoding our count.
@@ -108,6 +112,10 @@ class Counter extends Component {
 In our example above we create our increaseCount method as an arrow function. This will insure that the keyword `this` in our function will always refer to this specific instance of our counter.
 
 One of the more confusing things about React is when to make a component stateful. A general rule of thumb to keep in mind is that, if you're not sure if a component should be stateless or stateful, start with a stateless component. Add state if you find that you need it. Stateful components are a lot heavier than stateless component. Keep your app as lean as possible!
+
+##### Turn and Talk
+
+* What is the difference between props and state?
 
 ## Lifecycle Methods
 
