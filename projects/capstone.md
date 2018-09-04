@@ -9,7 +9,14 @@ For the first time ever, you get to work across programs and create a project th
 
 This is a unique opportunity that presents some valuable goals:
 
-* Demonstrate knowledge you've gained throughout Turing 
+* Ultimately, demonstrate knowledge you've gained throughout Turing 
+* Use an agile process to turn well defined requirements into deployed and production ready software
+* Gain experience Dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged. 
+* Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing
+* Practice an advanced, professional git workflow (see whole-team expectations)
+* Gain more experience using continuous integration tools to build and automate the deployment of features in various environments
+* Build applications that execute in development, test, CI, and production environments
+* Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec
 
 ## Kick-Off
 
@@ -35,6 +42,7 @@ Generally, this project will consist of a front-end (FE) and back-end (BE) with 
 * Early and consistent deployment to production (instructors will check build history)
 * In-depth `README.md` for each repository describing the project, setup procedure, testing procedure, and screenshots, if applicable (API documentation, if applicable)
 * Each student should have a goal for something you would like to learn about the other stack (BE student creates learning goal for something about the FE, and vice versa)
+* Create and use pull request templates that document and create discussion for finished features - use rebasing instead of merging in git workflow
 
 If you do not see your project following this outline, then speak to your instructors about it.
 
@@ -43,7 +51,7 @@ If you do not see your project following this outline, then speak to your instru
 * Use service oriented architecture patterns that split the application into their respective parts and responsibilities
 * Create various services that serve up JSON, so that an FE system can effectively utilize the data from the BE
 * Test the BE:
-  * If you use Rails for your BE, then we expect total test coverage
+  * If you use Rails for your BE, then we expect above 85% test coverage
   * If you experiment with a new BE language/framework outside of Rails, then BE test coverage is expected to be at least 25%
 * Implement a stretch goal (listed below)
 
@@ -58,7 +66,7 @@ Possible stretch goals:
 
 * Interface with the BE team’s API(s) that serve JSON data and incorporate that data into your FE
 * Test the FE:
-  * If you use React/Redux for your FE, then we expect total test coverage
+  * If you use React/Redux for your FE, then we expect above 85% test coverage
   * If you experiment with a new FE framework outside of React/Redux, then FE test coverage is expected to be at least 25%
 * Implement a stretch goal (listed below)
 
@@ -69,6 +77,8 @@ Possible stretch goals:
 * Implement OAuth and store user data in the BE database as needed
 * Implement Progressive Web App (PWA) technologies like: background sync, IndexedDB, static assets caching using a Service Worker
 * Utilize websockets rather than traditional HTTP/HTTPS (maybe [socket.io](https://socket.io/))
+
+**Note:** FE students can be the BE creators and vice versa, if it fits into your learning goals
 
 ## Day 1 Deliverables
 
