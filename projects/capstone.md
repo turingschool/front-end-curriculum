@@ -5,11 +5,11 @@ module: 4
 
 For the first time ever, you get to work across programs and create a capstone that might not be possible otherwise! In this project plan, we'll kick-off the capstone project and define expectations and deliverables for capstone teams.
 
-## Learning Goals
+<!-- ## Learning Goals
 
 This is a unique opportunity that presents some valuable goals:
 
-* 
+*  -->
 
 ## Kick-Off
 
