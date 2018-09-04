@@ -3,13 +3,13 @@ title: Cross-Pollination Capstone Project
 module: 4
 ---
 
-For the first time ever, you get to work across programs and create a capstone that might not be possible otherwise! In this project plan, we'll kick-off the capstone project and define expectations and deliverables for capstone teams.
+For the first time ever, you get to work across programs and create a project that might not be possible otherwise! In this project plan, we'll kick-off the project and define expectations and deliverables for teams.
 
-<!-- ## Learning Goals
+## Learning Goals
 
 This is a unique opportunity that presents some valuable goals:
 
-*  -->
+* Demonstrate knowledge you've gained throughout Turing 
 
 ## Kick-Off
 
@@ -70,7 +70,6 @@ Possible stretch goals:
 * Implement Progressive Web App (PWA) technologies like: background sync, IndexedDB, static assets caching using a Service Worker
 * Utilize websockets rather than traditional HTTP/HTTPS (maybe [socket.io](https://socket.io/))
 
-
 ## Day 1 Deliverables
 
 By the end of the kick-off session today, you should have a full proposal of your project, which should include:
@@ -79,8 +78,8 @@ By the end of the kick-off session today, you should have a full proposal of you
 * Initialize your repositories (don't write any code just yet!)
 * Set up your scrum board and connect them to your repositories (you can have multiple repositories connected to a single Waffle board)
 * Each student create your goal for something you would like to learn about the other stack (BE student creates learning goal for something about the FE, and vice versa)
-* Normalize on git workflow (we recommend using a "rebase" workflow, as opposed to "merge", as it is most common on the job)
-* Determine MVP (knowing it could change as capstone continues)
+* Normalize on git workflow (we recommend using a "rebase" workflow, as opposed to "merge", as it is most common on the job) - use a PR template
+* Determine MVP (knowing it could change as the project continues)
 * Create user stories
 * Create wireframes
 * Construct schema design
