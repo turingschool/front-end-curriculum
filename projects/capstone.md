@@ -11,7 +11,7 @@ This is a unique opportunity that presents some valuable goals:
 
 * Ultimately, demonstrate knowledge you've gained throughout Turing 
 * Use an agile process to turn well defined requirements into deployed and production ready software
-* Gain experience Dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged. 
+* Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged. 
 * Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing
 * Practice an advanced, professional git workflow (see whole-team expectations)
 * Gain more experience using continuous integration tools to build and automate the deployment of features in various environments
