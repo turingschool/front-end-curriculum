@@ -63,8 +63,8 @@ measuring your apps performance. Learning how to use your developer tools will e
 Umm...when you want something to be faster.
 
 #### Resources and Tutorials
-* [Performance lesson](http://frontend.turing.io/lessons/module-4/intro-to-performance.html)
-* [Intro to Performance lesson](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
+* [Intro to Performance lesson](http://frontend.turing.io/lessons/module-4/intro-to-performance.html)
+* [Chrome Performance Tools](https://developers.google.com/web/tools/chrome-devtools/evaluate-performance/reference)
 
 #### Expectations
 Measure performance of the application _before_ and _after_ you make any changes so you have a performance metric to compare to.
