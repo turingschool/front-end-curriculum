@@ -521,6 +521,8 @@ We've now tested that App component!
 
 ## Testing our ToDontList component
 
+---
+
 Now let's go look at testing a scenario where we're adding and removing items from the DOM. Let's test the `ToDontList` component next. Let's get the file set up and create an initial test to ensure everything is hooked up correctly.
 
 ```js
