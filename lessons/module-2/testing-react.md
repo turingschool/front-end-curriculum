@@ -109,7 +109,7 @@ Mount renders our component's HTML, if our component has child components then i
 
 Let's look at what happens when we use shallow or mount. Consider the following components...
 
-```jsx
+```js
 // List stateless component
 function List (props) {
   return (
@@ -145,7 +145,7 @@ class App extends React.Component {
 
 Now let's shallow the App component.
 
-```
+```js
 // App-test.js
 import App from '../lib/App';
 
@@ -226,7 +226,7 @@ Because jest finds our tests automatically, we don't need to import it. We do ho
 touch ./src/App.test.js
 ```
 
-```
+```js
 // App.test.js
 
 import React from 'react';
@@ -235,13 +235,13 @@ import { shallow, mount } from 'enzyme';
 
 We'll also need to import our `App` component:
 
-```
+```js
 import App from './App';
 ```
 
 Now let's create an easy first test to ensure everything is hooked up and working:
 
-```
+```js
 describe('App', () => {
   
   it('should exist', () => {
@@ -254,7 +254,7 @@ describe('App', () => {
 
 Now let's look at our app's `render` function, it returns a `Header` and a `ToDontList` component. Let's make sure those exist. We can use the [find](http://airbnb.io/enzyme/docs/api/ShallowWrapper/find.html#findselector--shallowwrapper) method to find those components inside of our rendered HTML.
 
-```
+```js
 // ./App.js
 
   render() {
@@ -275,7 +275,7 @@ Now let's look at our app's `render` function, it returns a `Header` and a `ToDo
   }
 ```
 
-```
+```js
 // ./App.test.js
 
   it('should render the Header and ToDontList component', () => {
@@ -288,7 +288,7 @@ Now let's look at our app's `render` function, it returns a `Header` and a `ToDo
 
 But wait, we've now defined wrapper twice so let's pull that out into a `beforeEach`. Our test file should now look like this:
 
-```
+```js
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import App from './App';
@@ -315,7 +315,7 @@ describe('App', () => {
 
 Now that we've tested the basic rendering of our App, let's look into some of the methods of our class. The first called is the `constructor()`, so let's make sure when we first mount our component (and localStorage is empty) that it has a state of `toDonts` set to an empty array. There are a couple tests we could write to accomplish this:
 
-```
+```js
 it('initially should have a state of toDonts set to an empty array', () => {
 
     expect(wrapper.state()).toEqual({ toDonts: [] })
@@ -325,7 +325,7 @@ it('initially should have a state of toDonts set to an empty array', () => {
 
 Next up is our `componentDidMount` which means we'll need to use `mount` (from enzyme). If there is data saved in localStorage under the key `'toDonts'`, this method will call our `getFromLocal` method, pull items from localStorage and set them to 'toDonts' in state. Seems easy enough...
 
-```
+```js
 it('should retrieve data from local storage on mount', () => {
     const toDonts = [
       {title: 'title', body: 'body', id: 1}, 
@@ -349,7 +349,7 @@ Because we're not dealing with a browser, `localStorage` isn't something our tes
 
 We'll store this in a test-helpers folder and assign it to a global property called...localStorage!
 
-```
+```js
 // ./src/setupTests.js
 
 class LocalStorage {
@@ -378,7 +378,7 @@ Our test should now pass!
 
 Now we will continue down the line testing the various methods within our App. Next up is `addToDont` which is the method that updates both state and local storage. Take a crack at writing a test for this! Here is some pseudo code to help you out.
 
-```
+```js
 // set up an 'it' block (obvi)
 // our 'beforeEach' has already created the wrapper
 // write a test to check that the wrapper's state of 'toDonts' has a length of 0 
@@ -392,7 +392,7 @@ Now we will continue down the line testing the various methods within our App. N
 
 Your test should looks something like this:
 
-```
+```js
 
   it('should be able to add a toDont to state', () => {
     expect(wrapper.state().toDonts.length).toEqual(0)
@@ -425,7 +425,7 @@ Now try to write a test for the `updateLocalStorage()` method. Don't look ahead 
 
 Here is what your test should look like:
 
-```
+```js
 it('should update local storage', () => {
     const toDonts = [
       { title: 'title1', body: 'body1', id: 1 },
@@ -448,7 +448,7 @@ Again...don't upset the puppy!
 
 ![angry pup 2](http://doglers.com/wp-content/gallery/cavalier-king-charles-spaniel-1/Angry-puppy-face-cavalier-king-charles-spaniel.jpg)
 
-```
+```js
   it('should be able to update a specific card', () => {
 
     const toDonts = [
@@ -474,7 +474,7 @@ Again...don't upset the puppy!
   
   Here is the test...
   
-  ```
+  ```js
   it('should be able to delete a specific card', () => {
     const card1 = { title: 'title1', body: 'body1', id: 1 }
     const card2 = { title: 'title2', body: 'body2', id: 2 }
@@ -494,8 +494,7 @@ Again...don't upset the puppy!
     expect(wrapper.state().toDonts.length).toEqual(1)
     expect(itemsInStorage).toEqual(1)
 
-  })
-  ```
+  })```
 
 We've now tested that App component! 
 
@@ -503,7 +502,7 @@ We've now tested that App component!
 
 Now let's go look at testing a scenario where we're adding and removing items from the DOM. Let's test the `ToDontList` component next. Let's get the file set up and create an initial test to ensure everything is hooked up correctly.
 
-```
+```js
 // toDontList.test.js
 
 import React from 'react';
@@ -532,7 +531,7 @@ Well butter my buns and call me a buscuit! That didn't work.
 
 Looks like our component is expecting some props to be passed through, let's give the component what it wants. For now we can just pass an empty array.
 
-```
+```js
 beforeEach(() => {
   wrapper = shallow(<ToDontList toDonts={ [] } />)
 })
@@ -552,7 +551,7 @@ Give the first scenario a try and DON'T PISS OFF THE CATS!
 
 The first thing we need to do is find the `<div>` with the message in it. Let's use **.debug()** to look at what we've got.
 
-```
+```js
 const noToDontMessage = wrapper.find('div')
 
 console.log(noToDontMessage.debug())
@@ -575,7 +574,7 @@ Here is what our console log shows:
 
 That's awesome that we can take a peak into what we're getting from the wrapper, but we will have a hard time separating between the two divs. Let's be more specific. We could use a different HTML tag...or we could simply look for the class we want:
 
-```
+```js
 const noToDontMessage = wrapper.find('.no-todonts-msg')
 
 console.log(noToDontMessage.debug())
@@ -589,7 +588,7 @@ console.log(noToDontMessage.debug())
 
 BOOM! JACKPOT! Now let's write a test to check the message:
 
-```
+```js
 it('should show message if no toDonts exist', () => {
   const messageDiv = wrapper.find('.no-todonts-msg')
 
@@ -602,7 +601,7 @@ Let's try to tackle the second bullet. If we pass through an array with toDonts 
 
 ![angry cat 2](http://i.imgur.com/d3BV5DM.jpg)
 
-```
+```js
 it('should append the correct number of ToDontCard\'s to the DOM', () => {
   const toDonts = [
     {title: 'title1', body: 'body1', id: 1},
@@ -621,7 +620,7 @@ Cool, what are some other tests we could add to really test that this is working
 
 Here are a couple I came up with:
 
-```
+```js
 it('should append the correct number of ToDontCard\'s to the DOM', () => {
     const toDonts = [
       {title: 'title1', body: 'body1', id: 1},
@@ -647,7 +646,7 @@ Oh hells yea! Component tested!
 
 Last thing we'll work on is some functional testing to ensure buttons and other clickable stuff works the way we expect. Let's set up the new file:
 
-```
+```js
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Header from '../lib/components/Header';
@@ -689,7 +688,7 @@ Now for the tricky part. Our goal is to test that when the submit button is clic
 
 The test will look something like this...
 
-```
+```js
   it('should call submitIdea when button is clicked', () => {
    wrapper.instance().submitIdea = jest.fn()
 
@@ -708,7 +707,7 @@ That's a great test, it assures us that our button executes the correct method. 
 
 Here is what it might look like...
 
-```
+```js
   it('should call this.props.addToDont and clear state fields when submitIdea is fired', () => {
    const mockFn = jest.fn()
    wrapper = mount(<Header addToDont={ mockFn }/>)
