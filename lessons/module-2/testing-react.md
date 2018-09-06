@@ -229,7 +229,7 @@ Some things to consider...
     * When you delete an item, is the count updated correctly? 
     
     
-## Time to Test!
+## Time to Test Our App component!
 
 ---
 
@@ -518,6 +518,8 @@ Again...don't upset the puppy!
 We've now tested that App component! 
 
 ![happy pup](https://i.imgflip.com/o593c.jpg)
+
+## Testing our ToDontList component
 
 Now let's go look at testing a scenario where we're adding and removing items from the DOM. Let's test the `ToDontList` component next. Let's get the file set up and create an initial test to ensure everything is hooked up correctly.
 
