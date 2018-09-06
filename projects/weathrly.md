@@ -18,6 +18,28 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 Use [create-react-app](https://www.npmjs.com/package/create-react-app) for your project. We'll learn how to configure the testing environment in our testing lesson later this week.
 
+## ESLint
+
+After initializing your create-react-app project, add eslint to the project.
+
+*Install eslint*
+
+`npm install eslint --save-dev`
+
+*Add an eslint command to your package.json scripts property*
+```
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js"
+},
+```
+
+*Add this .eslintrc file to the root of your project*
+[.eslintrc](./assets/weathrly/.eslintrc)
+
 ## Requirements
 
 Your weather underground API key should not be stored on github. Store it in a seperate file. This file should be added to your `.gitignore` file.
