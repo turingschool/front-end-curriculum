@@ -378,7 +378,7 @@ Our test should now pass!
 
 Now we will continue down the line testing the various methods within our App. Next up is `addToDont` which is the method that updates both state and local storage. Take a crack at writing a test for this! Here is some pseudo code to help you out.
 
-```js
+```
 // set up an 'it' block (obvi)
 // our 'beforeEach' has already created the wrapper
 // write a test to check that the wrapper's state of 'toDonts' has a length of 0 
