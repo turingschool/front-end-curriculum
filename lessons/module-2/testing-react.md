@@ -1,20 +1,12 @@
-Clone the following [repo](https://github.com/turingschool-examples/react-testing-intro) and `cd` into it from your terminal. Then run `npm install` and `npm start`.
-
-Once the server is running, you can visit:
-
-* `http://localhost:3000` to run your application.
-
-We'll be running tests with the `npm test` command.
-
+---
+title: Testing React
+tags: javascript, testing, jest, enzyme, react
+module: 2
 ---
 
-## By the end of this lesson you should...
-* Understand how to navigate the jest docs
-* Understand how to navigate the enzyme docs
-* Have a good idea of why we test
-* Have a good idea of what to test
-* Have some understanding of how to test it
-* Be super pumped to go test every component in your app
+### Learning Goals
+* Feel comfortable navigating the jest and enzyme docs
+* Understand why we test and be implement tests in React
 
 ## Vocab (from the TDD lesson)
 
@@ -26,27 +18,43 @@ We'll be running tests with the `npm test` command.
 
 ---
 
+### Warm Up
+
+1. What is the fundamental concept of a test in JavaScript?
+
+2. What are the implications of not testing your application? What are the implications of prioritizing testing?
+
+3. Consider this quote: "I don’t think it matters whether you write the test before or after the production code, as long as you write enough tests to make you feel confident that your production code is ready." Do you agree? Why or why not? 
+
+4. Clone the following [repo](https://github.com/turingschool-examples/react-testing-intro) and `cd` into it from your terminal. Then run `npm install` and `npm start`. Once the server is running, go to `http://localhost:3000` to run your application.
+
+_We'll be running tests with the `npm test` command._
+
+---
+
 ## Jest
 
 Jest is the de facto unit testing framework for ReactJS project. It is provided and used by Facebook, and installed by default when using create-react-app.
 
 **Top features are:**
 
-* Automatically finds tests
+* Automatically finds tests in your codebase
 * Automatically mocks React dependencies
 * Runs your tests with a fake DOM implementation
 
-Just like `chai`, jest uses the `expect` keyword, only with some slight differences. One syntactical difference you'll want to make note of is the simple check that something equals and expected result...
+Just like `chai`, jest uses the `expect` keyword to check that values meet certain conditions, only with some slight differences. One syntactical difference you'll want to make note of is the simple check that something equals and expected result...
 
-###### Chai:
+*Chai:*
 `expect(something).to.equal(true)`
 
-###### Jest: 
+*Jest:* 
 `expect(something).toEqual(true)`
 
-<!-- #### Work time!
+The best way to check that we are writing tests correctly is to reference the docs. Let's check out the [expect documentation](https://facebook.github.io/jest/docs/expect.html#content) to take a look at some commons methods you may use for your testing React applications:
 
-check out the [expect documentation](https://facebook.github.io/jest/docs/expect.html#content). Count off 1 thru 6, find your team and spend 10 mins reading up on your assigned method:
+#### Research
+
+With a partner, research the following methods in the `jest` documentation: 
 
 1. toBeDefined()
 2. toHaveBeenCalled()
@@ -54,7 +62,7 @@ check out the [expect documentation](https://facebook.github.io/jest/docs/expect
 4. toEqual()
 5. toBe()
 6. toBeTruthy() && toBeFalsy() 
- -->
+
 ## Enzyme
 
 From the [enzyme](https://github.com/airbnb/enzyme) docs:
@@ -88,9 +96,9 @@ configure({ adapter: new Adapter() });
 This will get enzyme up and running for us, and also allow us to do any additional setup or configuration we might need later on.
 
 
-#### Work time!
+#### Research
 
-Enzyme comes with a lot of helper methods that will allow us to test our components. Let's spend another 10 minutes researching your assigned method (same groups as before):
+Enzyme comes with a lot of helper methods that will allow us to test our components. In your assigned groups, take 10 minutes to research your assigned method. Be ready to present to the class with examples:
 
 1. find()
 2. props()
@@ -99,10 +107,13 @@ Enzyme comes with a lot of helper methods that will allow us to test our compone
 5. text()
 6. state()
 
+
+## Shallow vs Mount
+
 In addition to these methods, there are two important ones we'll be using in order to allow Enzyme to actually render our components: `shallow` and `mount`.
 
 * [shallow](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md)
-Shallow renders our component's HTML, if our component has child components then it will only render stubs for the child components. It will not render the child components HTML. Because shallow does not render the child components it is much faster and should be used by default.
+Shallow renders our component's HTML, if our component has child components then it will only render stubs for the child components. It will not render the child components HTML. Because shallow does not render the child components it is much faster and *should be used by default.*
 
 * [mount](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md)
 Mount renders our component's HTML, if our component has child components then it will render the child components HTML. It also gives us triggers some of the components life cycle methods.
@@ -194,10 +205,14 @@ The mount output of our App component will be the following. Notice that our Lis
 </div>
 ```
 
+#### Turn and Talk
+
+With your partner, descibe the difference between using `shallow` and `mount` by referencing the examples that we discussed above
+
 
 ## Why Test? 
 
-If we haven't done a good job of explaining the benefits of testing your code already...maybe [this article](https://daveceddia.com/what-to-test-in-react-app/) will help!
+The main reason to write tests is to ensure that your app works the way it should. Take five minutes to read [this article](https://daveceddia.com/what-to-test-in-react-app/) on what you should consider testing in your React applications.
 
 ## What to Test?
 
