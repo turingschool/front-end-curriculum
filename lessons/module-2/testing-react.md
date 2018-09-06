@@ -482,7 +482,7 @@ Again...don't upset the puppy!
   })
   ```
   
-  #### On Your Own 
+#### On Your Own 
 
   Try this last one on you're own: `deleteCard(card)`
   
@@ -492,7 +492,7 @@ Again...don't upset the puppy!
   
   Here is the test...
 
-  ```
+  ```js
   it('should be able to delete a specific card', () => {
     const card1 = { title: 'title1', body: 'body1', id: 1 }
     const card2 = { title: 'title2', body: 'body2', id: 2 }
@@ -517,7 +517,7 @@ Again...don't upset the puppy!
 
 We've now tested that App component! 
 
-![happy pup](http://justcuteanimals.com/wp-content/uploads/2016/02/french-bulldog-puppy-cute-dogs-pictures.jpg)
+![happy pup](https://i.imgflip.com/o593c.jpg)
 
 Now let's go look at testing a scenario where we're adding and removing items from the DOM. Let's test the `ToDontList` component next. Let's get the file set up and create an initial test to ensure everything is hooked up correctly.
 
