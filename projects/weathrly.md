@@ -38,7 +38,10 @@ After initializing your create-react-app project, add eslint to the project.
 ```
 
 ####Add this .eslintrc file to the root of your project
-[.eslintrc](./assets/weathrly/.eslintrc)
+
+Make sure to name it .eslintrc
+
+[.eslintrc](./assets/weathrly/eslintrc.json)
 
 ## Requirements
 
