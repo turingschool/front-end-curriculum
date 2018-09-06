@@ -22,11 +22,11 @@ Use [create-react-app](https://www.npmjs.com/package/create-react-app) for your 
 
 After initializing your create-react-app project, add eslint to the project.
 
-*Install eslint*
+**Install eslint**
 
 `npm install eslint --save-dev`
 
-*Add an eslint command to your package.json scripts property*
+**Add an eslint command to your package.json scripts property**
 ```
 "scripts": {
     "start": "react-scripts start",
@@ -37,7 +37,7 @@ After initializing your create-react-app project, add eslint to the project.
 },
 ```
 
-*Add this .eslintrc file to the root of your project*
+**Add this .eslintrc file to the root of your project**
 [.eslintrc](./assets/weathrly/.eslintrc)
 
 ## Requirements
