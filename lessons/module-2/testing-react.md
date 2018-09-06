@@ -396,8 +396,8 @@ Now we will continue down the line testing the various methods within our App. N
 ```
 // set up an 'it' block (obvi)
 // our 'beforeEach' has already created the wrapper
-// write a test to check that the wrapper's state of 'toDonts' has a length of 0 
-   (or add some and test whatever length is applicable)
+// Add some toDonts and set them to state
+// write a test to check that the wrapper's state of 'toDonts' has a length of whatever is applicable
 // create a toDont...something like { title: 'title', body: 'body', id: 1 }
 // call the addToDont() method -- if you run into errors, check out instance() in the shallow docs
 // write a test to check that the state of toDonts has increased by 1
@@ -410,8 +410,6 @@ Your test should looks something like this:
 ```js
 
   it('should be able to add a toDont to state', () => {
-    expect(wrapper.state().toDonts.length).toEqual(0)
-
     const toDonts = [
       { title: 'title1', body: 'body1', id: 1 },
       { title: 'title2', body: 'body2', id: 2 }
@@ -433,6 +431,9 @@ Your test should looks something like this:
   })
 
 ```
+
+
+
 
 Now try to write a test for the `updateLocalStorage()` method. Don't look ahead or this disappointed puppy will be even MORE dissapointed in you...
 
