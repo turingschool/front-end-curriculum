@@ -519,8 +519,8 @@ We've now tested that App component!
 
 ![happy pup](https://i.imgflip.com/o593c.jpg)
 
-## Testing our ToDontList component
 
+## Testing our ToDontList component
 ---
 
 Now let's go look at testing a scenario where we're adding and removing items from the DOM. Let's test the `ToDontList` component next. Let's get the file set up and create an initial test to ensure everything is hooked up correctly.
@@ -530,7 +530,7 @@ Now let's go look at testing a scenario where we're adding and removing items fr
 
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import ToDontList from '../lib/components/ToDontList';
+import ToDontList from './ToDontList';
 
 describe('toDontList component', () => {
   let wrapper;
@@ -620,7 +620,9 @@ it('should show message if no toDonts exist', () => {
 })
 ```
 
-Let's try to tackle the second bullet. If we pass through an array with toDonts to the `<ToDontList />` component, we should be able to test that the correct number of `<ToDontCard />` components exist. Give it a shot before you check the answer!
+#### Turn and Code
+
+Now try to tackle the second bullet with a partner. If we pass through an array with toDonts to the `<ToDontList />` component, we should be able to test that the correct number of `<ToDontCard />` components exist. Give it a shot before you check the answer!
 
 ![angry cat 2](http://i.imgur.com/d3BV5DM.jpg)
 
@@ -641,7 +643,7 @@ Cool, what are some other tests we could add to really test that this is working
 
 ![watching cat](http://www.coverbash.com/wp-content/covers/black-cat.jpg)
 
-Here are a couple I came up with:
+Here are a couple more assertions that you might consider:
 
 ```js
 it('should append the correct number of ToDontCard\'s to the DOM', () => {
@@ -663,16 +665,18 @@ it('should append the correct number of ToDontCard\'s to the DOM', () => {
   })
 ```
 
-Oh hells yea! Component tested!
+Oh hells yeah! Component tested!
 
 ![cat with gun](https://media2.giphy.com/media/bcqAMUTUHoLDy/200_s.gif)
 
-Last thing we'll work on is some functional testing to ensure buttons and other clickable stuff works the way we expect. Let's set up the new file:
+## But what about functional testing???
+
+Last thing we'll work on is some testing to ensure buttons and other clickable stuff is working the way we expect. Let's set up the new file:
 
 ```js
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-import Header from '../lib/components/Header';
+import Header from './Header';
 
 describe('header component', () => {
   let wrapper;
@@ -724,7 +728,12 @@ The test will look something like this...
   })
 ```
 
-That's a great test, it assures us that our button executes the correct method. But let's take it a step further. What if we want to dig into the `submitIdea` function and ensure that the props.addToDont gets called within that method...given the infromation you gained above, take 5 minutes to talk to the person next to you about how you might accomplish this.
+That's a great test, it assures us that our button executes the correct method. But let's take it a step further. 
+
+
+#### Turn and Talk 
+
+What if we want to dig into the `submitIdea` function and ensure that the props.addToDont gets called within that method? Given the infromation you gained above, take 5 minutes to talk to the person next to you about how you might accomplish this.
 
 ![thinking dog](http://dy5jipgyozh6.cloudfront.net/wp-content/uploads/2016/11/03202021/dog-thinking1.jpg)
 
