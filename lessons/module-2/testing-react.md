@@ -391,7 +391,10 @@ global.localStorage = new LocalStorage;
 
 Our test should now pass!
 
-Now we will continue down the line testing the various methods within our App. Next up is `addToDont` which is the method that updates both state and local storage. Take a crack at writing a test for this! Here is some pseudo code to help you out.
+
+#### Turn and Code
+
+Now we will continue down the line testing the various methods within our App. Next up is `addToDont` which is the method that updates both state and local storage. Take a crack at writing a test for this with a new partner! Here is some pseudo code to help you out.
 
 ```
 // set up an 'it' block (obvi)
@@ -405,7 +408,7 @@ Now we will continue down the line testing the various methods within our App. N
 
 ```
 
-Your test should looks something like this:
+Your test should look something like this:
 
 ```js
 
@@ -432,10 +435,7 @@ Your test should looks something like this:
 
 ```
 
-
-
-
-Now try to write a test for the `updateLocalStorage()` method. Don't look ahead or this disappointed puppy will be even MORE dissapointed in you...
+Now that you have the hang of this, let's write two more tests in your pair. First, write a test for the `updateLocalStorage()` method. Don't look ahead or this disappointed puppy will be even MORE dissapointed in you...
 
 ![mad pup](http://i.huffpost.com/gen/3245948/thumbs/n-EARL-THE-GRUMPY-DOG-PUPPY-768x768.jpg)
 
@@ -482,15 +482,17 @@ Again...don't upset the puppy!
   })
   ```
   
-  Last one: `deleteCard(card)`
+  #### On Your Own 
+
+  Try this last one on you're own: `deleteCard(card)`
   
   Again, no cheating!
   
   ![angry pup 3](http://www.urdogs.com/wp-content/uploads/2015/03/Came-and-catch-me-if-you-can.jpg)
   
   Here is the test...
-  
-  ```js
+
+  ```
   it('should be able to delete a specific card', () => {
     const card1 = { title: 'title1', body: 'body1', id: 1 }
     const card2 = { title: 'title2', body: 'body2', id: 2 }
@@ -510,7 +512,8 @@ Again...don't upset the puppy!
     expect(wrapper.state().toDonts.length).toEqual(1)
     expect(itemsInStorage).toEqual(1)
 
-  })```
+  })
+  ```
 
 We've now tested that App component! 
 
