@@ -213,7 +213,7 @@ npm version minor -m 'Add quickSort algorithm'
 Update your index.js to use our new faster sorting method.
 
 ```js
-const { quickSort } = require('@[username]/npm-sort');
+const { quickSort } = require('@[username]/sorting-algorithms');
 
 const sorted = quickSort([6, 3, 77, 32, 45]);
 
