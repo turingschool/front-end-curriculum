@@ -142,7 +142,7 @@ Create an index.js file
 Add the following code to your index.js file
 
 ```js
-const { bubbleSort } = require('@[username]/npm-sort');
+const { bubbleSort } = require('@[username]/sorting-algorithms');
 
 const sorted = bubbleSort([6, 3, 77, 32, 45]);
 
