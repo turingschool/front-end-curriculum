@@ -44,12 +44,15 @@ The `package.json` file is created when we initialize npm in a repo (the termina
 
 SemVer stands for Semantic Versioning. With Semantic Versioning a package's version is made up of three numbers seperated by periods. Each number is incremented when different types of changes are made to the package. The first number represents major changes which are not backwards compatible. The second number represents minor updates which are backwards compatible with previous versions. The last number represents patches or bug fixes to your repo. 
 
-- Why is it _important_ to use the `--save-prod` and `--save-dev` flags appropriately for an NPM package?
-<!-- - If you do not control the version of your package, how might that affect anyone who uses it as a dependancy? -->
+<!-- - Why is it _important_ to use the `--save-prod` and `--save-dev` flags appropriately for an NPM package? -->
+- If you do not control the version of your package, how might that affect anyone who uses it as a dependancy?
 
 ## Set Up a Basic NPM Module
 
-### Sign up for an NPM account
+### Classroom Organization
+We are going to split up into developers and users.
+
+### DEVELOPER: Sign up for an NPM account
 
 First you need to sign up for an NPM account over at [npmjs.org](https://npmjs.org). Remember the username you use to create an account - you'll need this later!
 
