@@ -200,7 +200,11 @@ module.exports = {
 };
 ```
 
-Add and commit your changes. Then update your version number `npm version --minor -m 'Add quickSort algorithm'`.
+Add and commit your changes. Then update your version number 
+
+```
+npm version minor -m 'Add quickSort algorithm'
+```
 
 ### USER: Install the Update
 
