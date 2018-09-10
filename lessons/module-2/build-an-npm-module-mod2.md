@@ -15,7 +15,7 @@ By the end of this lesson, you will know/be able to:
 
 ## Reading
 
-[Read this Gold Standard Level blog post by Joanne Daudier](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)
+[Read this blog post by Joanne Daudier](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)
 
 Note: don't code along, that will come later
 
@@ -31,8 +31,6 @@ Note: as you read, prepare answers to the following discussion points
 
 - Why is it _important_ to use the `--save-prod` and `--save-dev` flags appropriately for an NPM package?
 
-- Having read this blog, what steps might be missing for you to create your own node module and deploy it?
-
 - What npm packages do you depend on? Have you ever looked at their source code?
 
 - If you do not control the version of your package, how might that affect anyone who uses it as a dependancy?
@@ -47,9 +45,10 @@ First you need to sign up for an NPM account over at [npmjs.org](https://npmjs.o
 
 Also make sure you verify the email address that you sign up with. They will likely send you an email confirmation to verify.
 
-### Create a new GitHub Repo
 
-Create a new GitHub repo from the GitHub web UI to host your npm package. You can name it whatever you'd like. (Something like `fake-package` is just fine.) 
+### DEVELOPER: Create a new GitHub Repo
+
+Create a new GitHub repo from the GitHub web UI to host your npm package. Name it sorting-algorithms
 
 Make sure when you create your new GitHub repo you check the box that says 'Initialize this repository with a README', and add a `.gitignore` file. From the dropdown menu of pre-generated `.gitignore` files, choose 'Node'.
 
@@ -57,48 +56,26 @@ Clone this repo down and `cd` into it from your terminal
 
 ### Create Some Files!
 
-Now let's add some files: 
-* an index.js file to contain our code (more complex packages may use more than one file)
-* A test folder with a test.js file in it
+First we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`). Replace username in the following command with your npm username.
 
 ```
-$ mkdir test
-$ touch index.js test/test.js
-```
-
-Next we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`). Replace username in the following command with your npm username.
-
-```
-$ npm init --scope=username
+$ npm init --scope=npm_username
 ```
 
 Follow the instructions in your terminal to complete your `package.json` file. Some things to keep in mind:
 * **Version:** think about what you read about [Semantic Versioning](http://semver.org/)
 * **License:** ISC is fine, [but what is it?](https://opensource.org/licenses/ISC)
 
-One more thing before we write the code for our module, we need to bring in `mocha` for testing and set up our test file:
+Now let's add our project code. Create an index.js file to contain our code (more complex packages may use more than one file)
 
 ```
-$ npm i mocha -D
-$ npm i chai -D
-```
-
-Fun facts!
-
-`-D` is the same as `--save-dev`  
-`-S` is the same as `--save`
-
-
-In your `test.js` file include the following:
-
-```
-const { expect } = require('chai');
+$ touch index.js
 ```
 
 In your `index.js` file include the following:
 
 ```
-const bubbleSort = (array) => {
+function bubbleSort(array) {
   for (let j = 0; j < array.length; j++) {
     for (let i = 0; i < array.length - 1; i++) {
       if (array[i] > array[i + 1]) {
@@ -107,47 +84,35 @@ const bubbleSort = (array) => {
     }
   }
   return array;
-};
+}
 
 module.exports = {
   bubbleSort
 };
 ```
 
-#### STOP!
-**If** we were going to publish this, we'd do ...
+Now that we have our functionality in place, add and commit your changes and push them up to github. 
 
-  ```
-  npm publish --access=public
-  ```
+### Add to NPM
 
-  Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
-
-  Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
-
-  ```
-  npm unpublish --force
-  ```
-
-**But instead, we're going to do this:**
-
-#### There's Another Way!
-
-You can actually import modules/packaged code from GitHub repos. It's as easy as typing:
+We will briefly publish our package to NPM to see how easily it is done.
 
 ```
-npm install [GitHub URL] -S
+npm publish --access=public
 ```
 
-and then requiring a specific module in your js file as you would with any other module.
+Log into your [npm account](https://www.npmjs.com) and see your published module live on the internets! To bring it into another project, all you have to do is `npm install your-module` and require it into any file where you need to use it. Voila! That's it! 
 
-For this to work, make sure you are still bundling up your code with `module.exports`.
+Now unpublish your node module so we're not muddying up npm with a bunch of repetitive modules :). 
 
-#### Time to test our package
+```
+npm unpublish --force
+```
 
-In your terminal move out of your package repo.
+For this to work, make sure you are bundling up your code with `module.exports`.
 
-We need to create a test repo where we can install our new package.
+
+### USER: Install repo Github
 
 Create a new folder for our test repo and cd into that folder.
 
@@ -175,45 +140,72 @@ In your terminal, run your index.js file using Node
 
 `Node index.js`
 
---------
 
+### DEVELOPER: Update your package.json
+
+Lets add a second sorting algorithm to our package.
+
+Update your index.js file to the following:
+
+```
+function bubbleSort(array) {
+  for (let j = 0; j < array.length; j++) {
+    for (let i = 0; i < array.length - 1; i++) {
+      if (array[i] > array[i + 1]) {
+        [ array[i], array[i + 1] ] = [ array[i + 1], array[i] ]
+      }
+    }
+  }
+  return array;
+}
+
+function quickSort (unsortedArray) {
+  const left = [];
+  const right = [];
+  
+  if (unsortedArray.length <= 1) {
+    return unsortedArray;
+  }
+  
+  const pivot = unsortedArray.pop();
+
+  unsortedArray.forEach( number => {
+    if (number < pivot) {
+      left.push(number);
+      
+    } else {
+      right.push(number)
+    }
+  })
+  
+  return [ ...quickSort(left), pivot, ...quickSort(right) ];
+}
+
+module.exports = {
+  bubbleSort,
+  quickSort
+};
+```
+
+Add and commit your changes. Then update your version number `npm version --minor -m 'Add quickSort algorithm'`.
+
+### USER: Install the Update
+
+`npm install [GitHub URL] -S`
+
+Update your index.js to use our new faster sorting method.
+
+```js
+const { quickSort } = require('@[username]/npm-sort');
+
+const sorted = quickSort([6, 3, 77, 32, 45]);
+
+console.log(sorted);
+```
 
 ## Cheatsheet
 
 Relevant NPM commands
-
-#### `link`
-
-[docs](https://docs.npmjs.com/cli/link)
-
-If you have a local directory containing an npm package, you can link this package locally. 
-
-```
-cd module-name
-npm link
-```
-
-When you want to use a local linked package, you can do so with link
-
-```
- mkdir newapp/
- cd newapp/
- npm link module-name
-```
-
-To unlink a package from an application:
-
-```
-cd newapp/
-npm unlink module-name
-```
-
-To unlink a package from your system:
-
-```
- cd module-name
- npm unlink
- ```
 
 #### `addUser` or `login`
 
@@ -281,7 +273,8 @@ Then:
 
 ## Reading Discussion Point Answers
 
-- SemVer stands for semantic versioning
+- SemVer stands for semantic versioning. With Semantic Versioning a package's version is three numbers seperated by periods. e.g. (9.7.0) Each number is incremented when different types of changes are made to the package. The last number 0, represents patches or bug fixes to your repo. The second number (7) represents minor updates which are backwards compatible with previous versions. The first number (9) represents major changes which are not backwards compatible.
+
 - The `--save-dev` flag means that the dependency is only used by developers. The `--save` flag means that this dependency has to be used for the package to work in production. It really matters here. When people include your npm module in their `node_modules` folder, the dev dependencies won't come along for the ride. That's important, because number of lines of code matter for the speed of an application. If you completely omit the `--save` flag, then your npm module won't work when other folks pull it down.
 
 ---
