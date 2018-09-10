@@ -13,29 +13,39 @@ By the end of this lesson, you will know/be able to:
 * Better understand the pros and cons of node modules
 * Push a node module up to NPM 
 
-## Reading
+#### What is NPM?
+**N**ode **P**ackage **M**anager
 
-[Read this blog post by Joanne Daudier](https://medium.com/@jdaudier/how-to-create-and-publish-your-first-node-js-module-444e7585b738)
+A **package** is a bit of reusable code!
+- usually solves a single problem
+- SOMEONE wrote it and shared it
+- makes your life easier
 
-Note: don't code along, that will come later
+You can write your own packages, bundle them up, and publish them (either on the [NPM library](https://www.npmjs.com/) or on GitHub) for other devs to use!
 
-Note: don't worry about things you don't understand or recognize (i.e. mentions of Travis CI or Coveralls)
+Why do we use packages? Think about your previous projects. You've probably used some packages (jQuery, mocha, chai, moment.js, etc).  These packages solve a problem and help us from having to reinvent the wheel. They also reduce the bulk of our code.
 
-Note: as you read, prepare answers to the following discussion points
+NPM is a **manager**; it includes a set of tools that let you use and control node packages. Using it, you can:
+- install packages into your project as dependencies (aka, code that your project _depends_ on)
+- create custom scripts to run code
+- specify specific packages to use when deploying your app to production
 
-### Reading Discussion Points
+You are so far pretty familiar with cloning down a repo, changing into the directory, and running `npm install`. Let's unpack what's happening when you do that!
 
-- What is SemVer?
+### package.json
+[package.json documentation](https://docs.npmjs.com/files/package.json)
 
-- What is the difference between `npm install --save-prod`, `npm install`, `npm install -g`, and `npm install --save-dev`?
+The `package.json` file is created when we initialize npm in a repo (the terminal command is `npm init`). It keeps track of our dependencies, lets us write npm scripts, and is the instruction manual NPM follows when we run `npm install`.
+
+## What is SemVer?
+
+![SemVer](../../assets/images/lessons/build-an-npm-module/semver.png)
+<!-- source https://viblo.asia/p/semver-and-tags-version-924lJMMmZPM -->
+
+SemVer stands for Semantic Versioning. With Semantic Versioning a package's version is made up of three numbers seperated by periods. Each number is incremented when different types of changes are made to the package. The first number represents major changes which are not backwards compatible. The second number represents minor updates which are backwards compatible with previous versions. The last number represents patches or bug fixes to your repo. 
 
 - Why is it _important_ to use the `--save-prod` and `--save-dev` flags appropriately for an NPM package?
-
-- What npm packages do you depend on? Have you ever looked at their source code?
-
-- If you do not control the version of your package, how might that affect anyone who uses it as a dependancy?
-
-<div id="do"></div>
+<!-- - If you do not control the version of your package, how might that affect anyone who uses it as a dependancy? -->
 
 ## Set Up a Basic NPM Module
 
@@ -273,7 +283,7 @@ Then:
 
 ## Reading Discussion Point Answers
 
-- SemVer stands for semantic versioning. With Semantic Versioning a package's version is three numbers seperated by periods. e.g. (9.7.0) Each number is incremented when different types of changes are made to the package. The last number 0, represents patches or bug fixes to your repo. The second number (7) represents minor updates which are backwards compatible with previous versions. The first number (9) represents major changes which are not backwards compatible.
+- SemVer stands for semantic versioning. With Semantic Versioning a package's version is made up of three numbers seperated by periods. e.g. (9.7.0) Each number is incremented when different types of changes are made to the package. The last number 0, represents patches or bug fixes to your repo. The second number (7) represents minor updates which are backwards compatible with previous versions. The first number (9) represents major changes which are not backwards compatible.
 
 - The `--save-dev` flag means that the dependency is only used by developers. The `--save` flag means that this dependency has to be used for the package to work in production. It really matters here. When people include your npm module in their `node_modules` folder, the dev dependencies won't come along for the ride. That's important, because number of lines of code matter for the speed of an application. If you completely omit the `--save` flag, then your npm module won't work when other folks pull it down.
 
