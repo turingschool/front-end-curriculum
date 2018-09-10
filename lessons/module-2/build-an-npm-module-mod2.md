@@ -67,6 +67,13 @@ Make sure when you create your new GitHub repo you check the box that says 'Init
 
 Clone this repo down and `cd` into it from your terminal
 
+### Log into NPM
+
+In your terminal type
+```
+npm login
+```
+
 ### Create Some Files!
 
 First we need to describe our package with a `package.json` file. Because we're not creating any revolutionary node modules that thousands of developers will use, we should namespace our module to ensure we don't take up any hot module names (i.e. don't name it `jquery-2`). Replace username in the following command with your npm username.
