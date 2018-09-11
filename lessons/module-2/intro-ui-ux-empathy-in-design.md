@@ -174,19 +174,6 @@ User testing helps account for any biases we might have as developers. We can't 
 
 No matter how empathetic and diligent you are, you can't assume you know everything about your users, or that you've closed all the gaps in your own assumptions.
 
-### One last note
-
-As in your code, when it comes to design, avoid cleverness for the sake of cleverness.
-
-Take a look at [this](http://web.archive.org/web/20170513210443/http://bolden.nl/) website.
-
-![clever but stupid design](http://g.recordit.co/HaFXd9kUEL.gif)
-
-This is a great example of clever but stupid design. It's really cool! A super fun bit of interaction and animation, and it hearkens back to decoder rings and secret messages that most kids love. But from a usability standpoint, it is awful. You have to mouse pretty far to the sides of the screen to trigger the color overlays that reveal the text.
-
-It's even worse from an accessibility standpoint.
-
-The point is, something like this is cool as a part of a design portfolio - it shouldn't be the landing page of your website.
 
 ## Summary
 
