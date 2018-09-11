@@ -12,11 +12,18 @@ body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',san
 hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 </style>
 
+### Learning Goals
+* Understand that Sass has two syntaxes: SASS and SCSS files
+* Understand and apply the basics of Sass
+* Speak to the pros and cons of using a CSS Preprocessor
+
 ## Vocab
 
 - `CSS Preprocessor` A tool that processes some CSS-like language and turns it into CSS
 
+### Warm Up
 
+1. 
 
 ## Intro to Sass
 
@@ -434,7 +441,7 @@ Compiles to:
 [Check it out](https://codepen.io/atideman/pen/QKJmaO)
 
 <hr />
-
+<!-- 
 ## Control directives
 
 ### @if
@@ -517,7 +524,7 @@ $z:1;
     $z: $z + 1;
 };
 ```
-
+ -->
 
 <hr />
 
