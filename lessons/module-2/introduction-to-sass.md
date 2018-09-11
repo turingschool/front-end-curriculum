@@ -14,7 +14,7 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 
 ### Learning Goals
 * Understand that Sass has two syntaxes: SASS and SCSS files
-* Understand and apply the basics of Sass
+* Understand and apply the basics of Sass to follow the DRY principle
 * Speak to the pros and cons of using a CSS Preprocessor
 
 ## Vocab
@@ -23,7 +23,6 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 
 ### Warm Up
 
-1. 
 
 ## Intro to Sass
 
@@ -438,7 +437,7 @@ Compiles to:
 }
 ```
   
-[Check it out](https://codepen.io/atideman/pen/QKJmaO)
+<!-- [Check it out](https://codepen.io/atideman/pen/QKJmaO) -->
 
 <hr />
 <!-- 
@@ -526,7 +525,7 @@ $z:1;
 ```
  -->
 
-<hr />
+<!-- <hr /> -->
 
 ## Disadvantages of Using a CSS Preprocessor
 
