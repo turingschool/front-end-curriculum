@@ -236,6 +236,8 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 * How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
 * With your partner, find two different ways to set up your file structure with Sass
 
+<hr />
+
 ## Mixins
 
 A mixin allows you to define a set of styles that you want to reuse throughout your codebase. It also gives you the option to pass in values that make your mixin more flexible.
@@ -280,7 +282,7 @@ _Note: Just like variables, common convention is to place your mixins in a parti
   <p>Head over to the <a href="http://www.colorzilla.com/gradient-editor/">CSS Background Gradient Generator</a> and grab some of the generated code to put in a codepen. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
 </div>
 
----
+<hr />
 
 ## Extend
 
@@ -336,6 +338,9 @@ You may have noticed that `@extend` and `@mixin` can be seen as accomplishing th
 #### Research and Talk
 
 In pairs, take 10 minutes to read two articles around this debate. Come together to discuss what you found. 
+
+<hr />
+
 
 ## Colors
 
