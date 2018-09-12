@@ -30,6 +30,10 @@ Each morning, we'll cover one of the three concepts as a class through instructi
 
 *On a scale of 1-4, how confident do you feel that you understand the material covered this morning?*
 
+
+------------------------------------------------------------------
+
+
 Based on your ranking here, we will break you into groups of 3-4 for the afternoon to work through some of the problems in the repo for that concept. In your small groups:
 
 * Each person should walk the group through a solution to at least one problem
@@ -62,14 +66,11 @@ const result = undefined;
 return result;
 
 // On line 1, we're declaring a global variable called `text`, and assigning it to a string of 'outside!'.
-// Then on line 3 we declare a function named `log`, but because it hasn't been invoked yet, we will skip over
-// the code inside of it, and head down to line 8 where we do the invocation of the `log` function.
+// Then on line 3 we declare a function named `log`, but because it hasn't been invoked yet, we will skip over the code inside of it, and head down to line 8 where we do the invocation of the `log` function.
 // This brings us back up to line 4 to begin executing the contents of `log`, and puts us into a new function scope.
-// On line 5 we run our console.log, and on line 6 we declare a new variable of `text` within our function scope,
-// assigning it to a string of 'inside'.
+// On line 5 we run our console.log, and on line 6 we declare a new variable of `text` within our function scope, assigning it to a string of 'inside'.
 // The console.log returns undefined because our variable declaration on line 6 was hoisted to the top of our function scope
-// prior to execution. Because hoisting takes only the variable declaration, and not the varaible assignment, our `text` variable 
-// is undefined at the time our console.log is run.
+// prior to execution. Because hoisting takes only the variable declaration, and not the varaible assignment, our `text` variable is undefined at the time our console.log is run.
 ```
 
 
