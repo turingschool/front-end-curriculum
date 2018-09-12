@@ -603,6 +603,7 @@ We've talked about a lot of the strengths/advantages of using Sass without ackno
 
 ## Resources
 
+- Follow [Facebook's README](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc) to add Sass to your `create-react-app` project
 - [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
 - [Why Sass?](http://alistapart.com/article/why-sass)
 - [Cooler things you can do with Sass](https://gist.github.com/jareware/4738651)
