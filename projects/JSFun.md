@@ -69,8 +69,7 @@ return result;
 // Then on line 3 we declare a function named `log`, but because it hasn't been invoked yet, we will skip over the code inside of it, and head down to line 8 where we do the invocation of the `log` function.
 // This brings us back up to line 4 to begin executing the contents of `log`, and puts us into a new function scope.
 // On line 5 we run our console.log, and on line 6 we declare a new variable of `text` within our function scope, assigning it to a string of 'inside'.
-// The console.log returns undefined because our variable declaration on line 6 was hoisted to the top of our function scope
-// prior to execution. Because hoisting takes only the variable declaration, and not the varaible assignment, our `text` variable is undefined at the time our console.log is run.
+// The console.log returns undefined because our variable declaration on line 6 was hoisted to the top of our function scope prior to execution. Because hoisting takes only the variable declaration, and not the varaible assignment, our `text` variable is undefined at the time our console.log is run.
 ```
 
 
