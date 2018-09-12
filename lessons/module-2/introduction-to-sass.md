@@ -597,13 +597,13 @@ We've talked about a lot of the strengths/advantages of using Sass without ackno
 
 ## Resources
 
-- [Downsides of using a CSS preprocessor](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
-- [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
-- [Sass to CSS Translator](http://www.sassmeister.com/)
-- [Why Sass?](http://alistapart.com/article/why-sass)
 - [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
-- [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+- [Why Sass?](http://alistapart.com/article/why-sass)
 - [Cooler things you can do with Sass](https://gist.github.com/jareware/4738651)
+- [Downsides of using a CSS preprocessor](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
+- [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
+- [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
+- [Sass to CSS Translator](http://www.sassmeister.com/)=
 
 ### Instructor Resources
 
