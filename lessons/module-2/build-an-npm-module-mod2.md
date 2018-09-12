@@ -37,6 +37,12 @@ You are so far pretty familiar with cloning down a repo, changing into the direc
 
 The `package.json` file is created when we initialize npm in a repo (the terminal command is `npm init`). It keeps track of our dependencies, lets us write npm scripts, and is the instruction manual NPM follows when we run `npm install`.
 
+The three most important properties in your package.json that make it a node module are:
+
+* **name**: specifies the name of your package and should be unique from other node module package names
+* **version**: specifies the current version of the package. Whenever the package is updated, this number should increment.
+* **main**: specifies where the primary entry point to your program is. It is relative to your project root so if main is index.js, there should be an index.js file in the root folder of your project.
+
 ## What is SemVer?
 
 ![SemVer](../../assets/images/lessons/build-an-npm-module/semver.png)

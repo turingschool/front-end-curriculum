@@ -11,9 +11,19 @@ author: Nathaniel Foster
 
 By the end of the lesson, you will know:
 * What types of scope are available
-* How to create scope
+* How scopes are created
 * How to create closures
 * What IIFEs are
+
+## Core Concepts
+
+In order to fully understand scope, you must have a thorough understanding of the following concepts:
+
+* variable assignment, reassignment, and declaration
+* the three scoping levels: global, functional and block
+* the scoping levels that var/let/const adhere to
+* hoisting
+* the order in which JavaScript is read and executed
 
 ## Vocab
 
