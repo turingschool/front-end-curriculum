@@ -609,7 +609,7 @@ We've talked about a lot of the strengths/advantages of using Sass without ackno
 - [Downsides of using a CSS preprocessor](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
 - [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
 - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
-- [Sass to CSS Translator](http://www.sassmeister.com/)=
+- [Sass to CSS Translator](http://www.sassmeister.com/)
 
 ### Instructor Resources
 
