@@ -76,7 +76,7 @@ return result;
 
 ## Evaluation
 
-Repos are due on **Friday of week 1 at 12PM**. Instructors will run your solutions through an automated test suite to evaluate the accuracy of your solutions. In class on Monday of week 2, we will divide the class into equal parts to work with a single instructor. Each person will receive a problem at random and articulate their way through a solution.
+Repos are due on **Friday of week 1 at 12PM**. Instructors will run your solutions through an automated test suite to evaluate for accuracy. On Monday of week 2, we will divide the class into equal parts to work with a single instructor. Each person will receive a problem at random and articulate their way through a solution.
 
 ### Accuracy 
 
