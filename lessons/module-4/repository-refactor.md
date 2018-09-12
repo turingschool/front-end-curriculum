@@ -58,3 +58,4 @@ Where do you need to improve? What things about successful READMEs that we ident
 What other things about repositories should be taken into consideration beside the README?
 
 <!-- File issues for future plans, refactoring work, or known bugs/issues -->
+<!-- Evidence of using a .gitignore (a clean repo), no DS_STORE or node_modules -->
