@@ -13,8 +13,8 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 </style>
 
 ### Learning Goals
-* Understand that Sass has two syntaxes: SASS and SCSS files
-* Understand and apply the basics of Sass to follow the DRY principle
+* Understand that Sass has two syntaxes: SASS and SCSS
+* Understand and apply the basics of Sass to follow the principles of DRY and KISS
 * Speak to the pros and cons of using a CSS Preprocessor
 
 ## Vocab
@@ -23,6 +23,12 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 
 ### Warm Up
 
+* In past projects, how have you refactored your CSS to follow the DRY principle?
+* In past projects, how have you organized your CSS?
+* Check Sublime to make sure that you have the color scheme for Sass installed by following these steps:
+  1. Type `cmd + shift + p` 
+  2. Search for `Package Control: List Packages` and search for `Sass`
+  3. If the `Sass` package is not installed, follow Step 1 again and search/select `Package Control: Install Package`. Install `Sass` from here.
 
 ## Intro to Sass
 
@@ -30,7 +36,7 @@ Sass stands for Syntactically Awesome StyleSheets. Sass allows you to add more a
 
 A pre-processor is a tool that will process your code and compile it to a new format that adheres to the requirements of your environment. Think babel - this compiles our fancy ES6 syntax back down to ES5 so that it can be supported in older browsers.
 
-### Sass vs. SCSS vs. CSS
+### Sass
 
 Sass was originally part of another preprocessor called Haml. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules. Like so:
 
@@ -51,12 +57,19 @@ Even if you've never worked with SCSS before, this syntax is a little bit easier
 
 Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:
 
-1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. Such is not the case for Sass.
-2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make Jhun cry, BUT through the tears your stylesheet will still function properly.
+1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. This not the case for pure Sass with the `.sass` file extension.
+2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make your teachers cry, BUT through the tears, your stylesheet will still function properly.
+
+_Note: For our purposes here, be aware that we will be working strictly with the SCSS syntax when we are working with Sass._
+
+#### Turn and Talk
+
+- What is the difference between the SASS and SCSS syntax?
+- How would you explain what a preprocessor is to a five year old?
 
 ### Why would we use Sass?
 
-CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY.
+CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY. This is the one of the key principles of Sass - *DO NOT REPEAT YOURSELF* .
 
 Some of the cool tricks include defining variables that can be peppered across multiple CSS files, nesting elements to visibly reflect the HTML element relationships, using math equations to adjust sizes and values, adjusting colors using more intuitive language like "darken" and "lighten", and bundling groups of styles together to easily reference throughout your CSS...to name a few.
 
@@ -68,13 +81,17 @@ One of the most obvious and immediately useful features of Sass is the ability t
 
 As developers we strive to write DRY, clean code, and storing values for CSS styles as variables contributes to that. This means we can make color changes in one place, and the change will be reflected anywhere that the variable is referenced.
 
+Similar to JavaScript, variables can hold a variety of data types: numbers, colors, strings, booleans, lists (array like objects), and maps (data structures that are key/value pairs).
+
+#### Variable Syntax
+
 Variables are defined by a `$` immediately preceding the name of the variable (like jQuery), and a colon separating the name of the variable from the value.
 
 ```
-$favorite-text-color: chartreuse;
+$favorite-text-color: lime;
 ```
 
-They can then be used anywhere in your stylesheet in place of that style.
+They can then be used anywhere in your stylesheet in place of that style. If I wanted all of my paragraph tags to have this color, my selector would look like this: 
 
 ```css
 p {
@@ -98,31 +115,7 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 }
 ```
 
-Variables are easiest to change if they're all located in the same stylesheet. Let's say you create a file called `variables.scss` that houses all of your variables. Then you simply need to require said file in your other stylesheets using the syntax `@import "variables"`
-
-```
-// variables.scss
-
-// Colors
-$favorite-text-color: chartreuse;
-$gray-link: #aaa;
-
-// Fonts
-$frilly-font: "Fantasy", cursive;
-$main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
-
-// Transitions
-$button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
-```
-
-```
-// home-page.scss
-@import "variables";
-
-body {
-  color: $favorite-text-color;
-}
-```
+Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right.
 
 <hr />
 
@@ -130,11 +123,11 @@ body {
 
 Nesting makes representing relationships between elements in HTML possible in CSS.
 
-For example, if you want to target an anchor tag within a navigation element within a particular header tag, you can wrap the elements inside each other as you would in HTML.
+For example, if you were writing pure CSS and wanted to target an anchor tag that was within a navigation element that was within a particular header tag, you can wrap the elements inside of each other to show the same visual hierarchy that you are used to seeing in your HTML:
 
 ##### Sass
 
-```
+```css
 $main-text-dark: #000;
 $dark-red: #FF0000;
 $link-light: #fff;
@@ -156,7 +149,8 @@ header nav { background-color: #ff0000; }
 header nav a { color: white; }
 ```
 
-*IMPORTANT NOTE* Notice how the CSS output contains very specific CSS style rules. Although nesting can make writing CSS easier, it can also make targeting future elements more difficult when you need to make changes. Try to avoid excessive levels of nesting unless absolutely necessary.
+*IMPORTANT NOTE* Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific. Try to avoid excessive levels of nesting unless absolutely necessary.
+
 
 #### Nesting & Psuedo-Selectors
 
@@ -169,6 +163,10 @@ a {
   &:hover { color: pink; }
 }
 ```
+
+It is common to use the parent selector for situations where a secondary class changes a style.
+
+#### Turn and Code
 
 <div class="discuss">
 <h4>Practice</h4>
@@ -195,9 +193,154 @@ Let's say that your client wants everything thats red to be teal.  Pretend that 
 
 <hr />
 
-## Color Functions
+## Partials and Importing
 
-Color functions in Sass let you adjust defined color values with ease.
+One of the main benefits of Sass is having the ability to split your codebase across several CSS files without impacting **PERFORMANCE** - which brings us to the use of `@import` with Sass.
+
+You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request.
+
+In the world of Sass, the `@import` directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
+
+Generally, your structure will have the following:
+
+* Partial files that have an underscore prefix
+* A main file where you will be importing these partial files
+
+```css
+// _variables.scss
+
+// Colors
+$favorite-text-color: chartreuse;
+$gray-link: #aaa;
+
+// Fonts
+$frilly-font: "Fantasy", cursive;
+$main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
+
+// Transitions
+$button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
+```
+
+```css
+// main.scss
+@import "reset";
+@import "variables";
+@import "buttons";
+...
+...
+
+```
+
+#### Turn and Talk
+* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
+* With your partner, find two different ways to set up your file structure with Sass
+
+## Mixins
+
+A mixin allows you to define a set of styles that you want to reuse throughout your codebase. It also gives you the option to pass in values that make your mixin more flexible.
+
+To use:
+
+1. You name them with @mixin name(arguments) { style }.
+2. To include them you use @include name.
+
+##### SCSS
+```css
+/ Example
+@mixin rounded-corners($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { 
+  @include rounded-corners(50px); 
+}
+```
+
+##### CSS Output
+
+```css
+.box {
+  -webkit-border-radius: 50px;
+  -moz-border-radius: 50px;
+  -ms-border-radius: 50px;
+  border-radius: 50px;
+}
+```
+
+_Note: Just like variables, common convention is to place your mixins in a partial file that is separate from other styles_
+    
+#### Turn and Code
+
+<div class="discuss">
+  <h4>Practice</h4>
+  <p>Head over to the <a href="http://www.colorzilla.com/gradient-editor/">CSS Background Gradient Generator</a> and grab some of the generated code to put in a codepen. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
+</div>
+
+---
+
+## Extend
+
+Another way to keep your code reuseable and simple is to make use of the `@extend` feature of Sass. Extend allows you to inherit properties from other selectors. Think of as parent styles -- short, green eyes, big feet. Their children and grandchildren have the same base styles but with new age flair and coolness of their own.
+
+```
+.message {
+  border: 1px solid #ccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  @extend .message;
+  border-color: green;
+}
+
+.error {
+  @extend .message;
+  border-color: red;
+}
+
+.warning {
+  @extend .message;
+  border-color: yellow;
+}
+```
+
+Compiles to:
+
+```  
+.message, .success, .error, .warning {
+  border: 1px solid #cccccc;
+  padding: 10px;
+  color: #333;
+}
+
+.success {
+  border-color: green;
+}
+
+.error {
+  border-color: red;
+}
+
+.warning {
+  border-color: yellow;
+}
+```
+
+You may have noticed that `@extend` and `@mixin` can be seen as accomplishing the same thing in a different way since they are both geared towards reusing styles across your project. A common question developers have with Sass is when you should choose to use one over the other, and why.
+
+#### Research and Talk
+
+In pairs, take 10 minutes to read two articles around this debate. Come together to discuss what you found. 
+
+## Colors
+
+Sass offers build in color functions that allow you to adjust defined color values with ease. Most of the color functions operate by manipulating a single color value - while others can be used to combine colors in different ways.
+
+Color is one of the most powerful components available to us in art and design; yet, it is something that is often underutilized by many programmers. Chances are that you've defined most (if not all) of the colors in your project using the predefined color names from the browsers, hex codes, or RGBA. This is all well and good; however, it fails to give you the same control over your colors as when you use HSLA.
 
 ### Defining Colors
 
@@ -209,11 +352,11 @@ Stands For: Red, Green, Blue, Alpha(Opacity)
 Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`  
 Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)  
 
-Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation of red, blue and green respectively, and blends them together.
+Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation/intensity of red, blue and green respectively, and blends them together.
 
 #### Hexadecimal Code
 
-Stands For: A form of RGB notation written as pairs of hexadecimal values.  
+A form of RGB notation written as pairs of hexadecimal values.  
 Syntax: `#rrggbb` or `#rgb`.  
 Example: `#f00` or `#ff0000` (red)  
 
@@ -229,13 +372,30 @@ Example: `hsla(0, 100%, 50%, 1)` (red)
 
 Think of the letters RGB distributed equally clockwise around a circle. (R)ed is at 0 or 360, (G)reen is at 120, (B)lue is at 240.
 
-[Color Wheel](https://uwdigipub.files.wordpress.com/2014/11/hsl-color-wheel-pagespeed-ce-if6-exzipy.png)
+![Color Wheel](https://uwdigipub.files.wordpress.com/2014/11/hsl-color-wheel-pagespeed-ce-if6-exzipy.png)
 
 **Saturation:** A percentage of the grayscale from 0% (no color) to 100% (full color).
 
 **Lightness:** A percentage of white value from 0% (completely dark) to 100% (completely light); Standard colors default to 50%.
 
 **Alpha:** A decimal value indicating transparency from 0 (invisible) to 1 (completely opaque).
+
+---
+Using RGBA to try to adjust lightness or saturation can be impractical and frustrating. In order to do this, you would need to shift each of the color channels - which would likely change the original color (hue). This matters most when you are looking to make color variations (fading, gradients, etc) from the same color. Using HSLA is a lot more predictable than RGBA, as seen in this [demo tool](https://css-tricks.com/examples/HSLaExplorer/)
+
+Light is an important piece of the design puzzle when it comes to working with color - something that is true for all mediums of [art](https://www.newyorker.com/humor/daily-shouts/a-few-thoughts-from-monet-on-those-stacks-of-wheat) and design, including the digital mediums we use as FE developers. 
+
+
+#### Jigsaw
+
+In groups of four, research your assigned built-in color function. Reference the descriptions below, the [Sass documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html) on color functions, and the examples you are given. Make sure to play around with the code in a codepen - are there differences in using hex, rgba, and hsla? Why is this function relevant?
+  
+  * complement()
+  * mix()
+  * lighten/darken()
+  * desaturate/saturate()
+
+## Color Functions
 
 #### complement(color)
 
@@ -314,132 +474,10 @@ desaturate(hsla(240, 100%, 50%, 1), 80%);
 }
 ```
 
-<hr />
+<!-- <hr /> -->
 
-## Math
-
-Another cool trick in Sass is using Math to handle simple changes to numerical values.
-
-For example, you can define the width of your window using a variable like `$windowWidth` and then make a div that has a width of `windowWidth/3`.  Let's see this in action.
-
-##### SCSS
-
-```css
-$content-width: 900px;
-
-.innerContent {
-  width: $contentWidth/3;
-}
-```
-
-##### CSS
-
-```css
-.innerContent {
-  width: 300px;
-}
-```
-
-<hr />
-
-## Mixins and Functions
-
-A mixin allows you to define a set of styles along with the option to pass in arguments that you can include in HTML elements, classes or IDs. Mixins are great for reducing repetitive styles in your CSS.
-
-To use:
-
-1. You name them with @mixin name(arguments) { style }.
-2. To include them you use @include name.
-
-```
-/ Example
-@mixin rounded-corners($radius) {
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-
-.box { 
-  @include rounded-corners(10px); 
-}
-```
-    
-
-<div class="discuss">
-  <h4>Practice</h4>
-  <p>Head over to the <a href="http://www.colorzilla.com/gradient-editor/">CSS Background Gradient Generator</a> and grab some of the generated code to put in a codepen. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
-</div>
-
----
-
-A similar feature is a Sass function, with the difference being that a function returns a single value. These are very useful in doing logic in your styles. You are already using some of the built in Sass functions such as rgba(200,0,100,.5) or darken(#500, %10). You name them with @function and set the return value with @return.
-
-```
-@function make-pinker($value) {
-  @return $value + rgb(100,0,0);
-}
-
-p {
-    background: make-pinker(gray);
-}
-```
-
-<hr />
-
-
-## Extend
-
-Extend allows you to inherit properties from other classes and IDs. Think of as parent styles -- short, green eyes, big feet. Their children and grandchildren have the same base styles but with new age flair and coolness of their own.
-
-```
-.message {
-  border: 1px solid #ccc;
-  padding: 10px;
-  color: #333;
-}
-
-.success {
-  @extend .message;
-  border-color: green;
-}
-
-.error {
-  @extend .message;
-  border-color: red;
-}
-
-.warning {
-  @extend .message;
-  border-color: yellow;
-}
-```
-
-Compiles to:
-
-```  
-.message, .success, .error, .warning {
-  border: 1px solid #cccccc;
-  padding: 10px;
-  color: #333;
-}
-
-.success {
-  border-color: green;
-}
-
-.error {
-  border-color: red;
-}
-
-.warning {
-  border-color: yellow;
-}
-```
-  
 <!-- [Check it out](https://codepen.io/atideman/pen/QKJmaO) -->
 
-<hr />
 <!-- 
 ## Control directives
 
@@ -527,12 +565,39 @@ $z:1;
 
 <!-- <hr /> -->
 
-## Disadvantages of Using a CSS Preprocessor
+<!-- ## Operators
 
-The downsides of using a CSS preprocessor are pretty minimal, but here's a giant list [anyway](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
+One last cool trick that we wanted to cover: Sass allows you to use Math to handle simple changes to numerical values.
+
+For example, you can define the width of your window using a variable like `$windowWidth` and then make a div that has a width of `windowWidth/3`.  Let's see this in action.
+
+##### SCSS
+
+```css
+$content-width: 900px;
+
+.innerContent {
+  width: $contentWidth/3;
+}
+```
+
+##### CSS
+
+```css
+.innerContent {
+  width: 300px;
+}
+```
+ -->
+<hr />
+
+## Summary
+
+We've talked about a lot of the strengths/advantages of using Sass without acknowledging that there are downsides. Given what you know, make a case for possible _disadvantages_ of using Sass
 
 ## Resources
 
+- [Downsides of using a CSS preprocessor](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
 - [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 - [Sass to CSS Translator](http://www.sassmeister.com/)
 - [Why Sass?](http://alistapart.com/article/why-sass)
