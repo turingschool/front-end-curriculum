@@ -30,7 +30,13 @@ Here is a set of repositories, each representing a candidate:
 
 You have 20 minutes to go through these repositories and determine who you want to bring in for the interview.
 
-On your chart paper, you should write about what you looked for in the READMEs. What should every README have? What stood out about good READMEs? At the end of the 20 minutes, One person from each group will share out their findings and reasoning.
+On your chart paper, you should write about what you looked for in the READMEs. 
+
+* What should every README have?
+* What stood out about good READMEs?
+* Anything you should avoid in a README?
+
+At the end of the 20 minutes, One person from each group will share out their findings and reasoning.
 
 ### The Decision
 
