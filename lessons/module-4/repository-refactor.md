@@ -44,7 +44,7 @@ Bring your chart papers to the front of the class, and let's talk about commonal
 
 Who do you bring in for the interview? Why?
 
-<!-- Things a README should include: title, description, learning goals, timeframe of project, screenshots, setup instructions, test suite instructions, contributors -->
+<!-- Things a README should include: title, description, learning goals, text formatting, timeframe of project, screenshots, setup instructions, test suite instructions, contributors -->
 
 
 ## Self Assessment and Planning
@@ -65,3 +65,4 @@ What other things about repositories should be taken into consideration beside t
 
 <!-- File issues for future plans, refactoring work, or known bugs/issues -->
 <!-- Evidence of using a .gitignore (a clean repo), no DS_STORE or node_modules -->
+<!-- Concise, meaningful, appropriate commit messages - no swearing...amend these commits -->
