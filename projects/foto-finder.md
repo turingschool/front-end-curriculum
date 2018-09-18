@@ -4,7 +4,7 @@ title: Foto Finder
 
 ## Specification
 
-With some jQuery lessons under your belt, it's time to try your hand at building a small application: a photo album called Foto Finder! For this project, you can use either vanilla JavaScript (`document.querySelector()`) or the jQuery library (`$()`). If you're going to use jQuery, don't forget to pull in the library.
+Now that you've got the main foundations down to build out a frontend application, it's time to prove to yourself that you own those skills!  It's time to build out a photo album app called Foto Finder! For this project, you can use either vanilla JavaScript (`document.querySelector()`) or the jQuery library (`$()`). If you're going to use jQuery, don't forget to pull in the library.
 
 In it's simplest form, the application should have the following:
 
@@ -44,6 +44,7 @@ This phase is all about setting up the user inputs and general structure of the 
   - [This article](https://tympanus.net/codrops/2015/09/15/styling-customizing-file-inputs-smart-way/) can help you with styling the file upload button
 - One "Add to Album" button for adding the photo to the album so you see it on the page
 - A section for all of the photos in the album to live
+  - Inside of this section, there should be a "View Favorites" button.
 
 ### Phase Two
 
@@ -54,13 +55,13 @@ This phase builds on Phase 1 and gives some functionality to the page.
   - The photo
   - The title of the photo
   - The caption of the photo
-  - A button to mark the photo as a "Favorite"
+  - A button to mark the photo as a "Favorite" (counter on "View Favorites" button should reflect how many photos have been favorited)
   - A button to "Remove" the photo from the album
+- Each photo card should persist (in localStorage) and should be present upon reloading the page.
 - The application should be responsive and work equally well on desktop and mobile
-- When the user clicks on the "Favorite" button, the photo card background turns (a different color), and the button should stay in the active (pink) state
+- When the user clicks on the "Favorite" button, the photo card background turns (a different color), and the button should stay in the active (pink) state.  (this favorited state should persist after a page refresh)
 - When the user clicks on the "Remove" button, the photo should be removed from the page
-
-Note: If you refresh the page, the photos disappear! This is OK. You do not need to worry about photo persistence on page refresh (we'll handle that in later projects).
+  - The photo should also be removed from localStorage (should not re-appear on next page load).
 
 ### Phase Three
 
@@ -70,15 +71,11 @@ Let's improve the user experience in this phase.
 - If there are no photos in the album yet, then there should be an indication to the user to add photos, displayed in the empty photo section.
 - The file selector should only allow image file types
 
-### Extensions
+Finally, let's let our user be able to view only their favorites.
 
-**Sorting:** If a user marks a photo as a "Favorite", then that photo (an all other photos marked as favorites) should show at the top of the page before any other photos.
+- The user should only see their favorites when they click on the "View Favorites" button. (consequently, the text on the button should then say "View All Photos")
+- Clicking on the "View All Photos" button, the user should be able to see all of their photo cards.
 
-**Image Analysis:** Mathematically determine the most prominent color of the photos in the album, and change the background of the album section to that prominent color. The background color should be calculated every time a new photo is added to the album.
-
-**Animations:** When a user removes a photo, the photos in the album shift almost instantly, which is a sharp, hard transition. Add a soft, brief animation that lets the remaining photos move smoothly.
-
-**Zoom View:** When a user clicks on an image card, the application should pop up a large view of the image overlaid on the rest of the album. Once in zoom view, the user should be able to click something on the image (like an "X") to exit out of the zoom view and see all of the images in the album as before.
 
 ### Layout Comps
 
