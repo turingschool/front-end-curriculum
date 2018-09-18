@@ -6,6 +6,8 @@ title: Foto Finder
 
 Now that you've got the main foundations down to build out a frontend application, it's time to prove to yourself that you own those skills!  It's time to build out a photo album app called Foto Finder! For this project, you can use either vanilla JavaScript (`document.querySelector()`) or the jQuery library (`$()`). If you're going to use jQuery, don't forget to pull in the library.
 
+Note: Now that you have started to learn some es6, feel free to implement all of those new es6 features (arrow functions, classes, etc.).  However, if es5 syntax is still more comfortable for you, then stick with what you know.  You'll get a lot more practice and instruction with es6 next mod!
+
 In it's simplest form, the application should have the following:
 
 ### Setup: File Structure
