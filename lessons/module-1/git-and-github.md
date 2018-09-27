@@ -6,10 +6,6 @@ tags: git, github
 
 ### Prework Setup: 
 
-#### Add a public key to your github account
-
-In order to push up to GitHub, you'll need to generate an SSH key. SSH keys are a way to identify trusted computers without involving passwords. You can generate an SSH key and add the public key to your GitHub account by following the procedures outlined in this [tutorial from GitHub](https://help.github.com/articles/connecting-to-github-with-ssh/). This [video](https://www.youtube.com/watch?v=XsPVWGKK0qI) will walk you through the process and likely save you time.
-
 #### Git
 
 The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
