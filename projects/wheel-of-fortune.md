@@ -1,5 +1,5 @@
 ---
-title: Game Time
+title: Wheel of !Fortune
 length: 2 weeks
 tags: javascript, jquery, svg, mocha, testing
 ---
@@ -107,18 +107,18 @@ Wheel,
 As a player,
   I should be able to quit/start a new game at any time.
   I have three options when it is my turn:
-    1) Solve the puzzle
-      - If I guess correctly, my grand total score is increased by the amount for my current score for the round. This will end the round
-      - If I guess incorrectly, my turn is over
-    2) Spin the wheel
-      - A random element will be chosen for my spin
-      - If a bankrupt element is chosen, my score/account will be reset to 0
-      - If a lose-a-turn element is chosen, my turn will end
-      - If an element is chosen with a dollar amount, I will be prompted to choose a consonant
-    3) Buy a vowel
-      - The cost or buying a vowel is $100 - which is taken from the player's current score/account for the round. The dollar amount is subtracted regardless of whether the vowel is part of the puzzle.
-      - I should be prompted to enter what vowel I would like to buy
-
+  1) Solve the puzzle
+    - If I guess correctly, my grand total score is increased my current score and the round is over
+    - If I guess incorrectly, my turn is over
+  2) Spin the wheel
+    - A random element will be chosen for my spin
+    - If a bankrupt element is chosen, my score/account will be reset to 0
+    - If a lose-a-turn element is chosen, my turn will end
+    - If an element is chosen with a dollar amount, I will be prompted to choose a consonant
+  3) Buy a vowel
+    - The cost or buying a vowel is $100
+    - I should be prompted to enter what vowel I would like to buy
+    - $100 is subtracted from my score/account regardless of whether the vowel is part of the puzzle.
 ```
 
 ## Extensions
