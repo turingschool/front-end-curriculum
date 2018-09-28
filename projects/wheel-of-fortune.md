@@ -87,7 +87,8 @@ Game play,
 Puzzle,
   - The game should have at least one bank of puzzles. One bank should be chosen at the start of the game
   - A word puzzle is randomly chosen at the start of every round
-  - The letters of the puzzle will be hidden, but there will be clear indications in the UI to indicate letters and spaces
+  - Initially, the letters of the puzzle will be hidden
+  - There will be clear indications in the UI to indicate hidden letters and spaces
   - The UI will keep track of what letters have already been guessed
   - The category for the puzzle will be displayed as a hint 
   - Each puzzle has a category (or class) (e.g. "phrase," "person," "things," etc)
@@ -98,7 +99,7 @@ Puzzle,
 Wheel,
   - A wheel is chosen at the start of the game
   - Wheel must have at least six elements
-  - A wheel element can either be a positive whole dollar amount (no decimals), a "Lose-a-turn", or a "Bankruptcy" element
+  - An element can either be a positive whole dollar amount, a "Lose-a-turn", or a "Bankruptcy" element
   - The elements of a wheel are in a 'randomized' order
 ```
 
