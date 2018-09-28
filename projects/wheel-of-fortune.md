@@ -87,12 +87,12 @@ Game play,
 Puzzle,
   - The game should have at least one bank of puzzles. One bank should be chosen at the start of the game
   - A word puzzle is randomly chosen at the start of every round
+  - Each puzzle has a category (or class) (e.g. "phrase," "person," "things," etc)
+  - Each puzzle is one or more words that is an instance of the category/class
   - Initially, the letters of the puzzle will be hidden
   - There will be clear indications in the UI to indicate hidden letters and spaces
   - The UI will keep track of what letters have already been guessed
   - The category for the puzzle will be displayed as a hint 
-  - Each puzzle has a category (or class) (e.g. "phrase," "person," "things," etc)
-  - Each puzzle is one or more words that is an instance of the category/class
 ```
 
 ```
