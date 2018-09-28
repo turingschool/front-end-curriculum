@@ -17,7 +17,9 @@ Building software, at its core, is about solving problems. Generally speaking, t
 ## Goals and Objectives
 
 - Write a program from scratch
-- Design and implement OOP patterns 
+- Design and implement OOP patterns
+- Understand and implement ES6 classes
+- Write code that follows SRP (Single Responibility Principle) 
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 
 ## Outline
@@ -27,7 +29,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 |Day | Status| Deliverables |
 |--- |---    |--- |
 |*1* | Kick-off and exploration| What is OOP? Why is OOP useful? How is OOP used in games?|
-|*2* | Understanding/Planning| Initialize repo with a README that includes a link to your pair's DTR, a description of the game, the basic rules, and a wireframe for your game|
+|*2* | Understanding/Planning| Initialize repo with a README that includes a link to your pair's DTR and a wireframe for your game. Start diagram for OOP design/classes|
 |*3* | Understanding/Planning| Diagram for OOP design/classes due|
 |*5* | Check-in| Pair-to-Pair feedback|
 
@@ -129,4 +131,7 @@ As a player,
 * Choose your own extension (instructor approval)
 
 # Rubric
+
+
+
 
