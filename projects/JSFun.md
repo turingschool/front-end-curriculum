@@ -20,7 +20,7 @@ There are two ways we'd like you to demonstrate mastery of these concepts:
 
 ## Work Time
 
-Fork this [repo]() of practice exercises. There are three folders of problems to work through, each corresponding with a concept to be mastered.
+Fork this [repo](https://github.com/turingschool-examples/jsFun) of practice exercises. There are three folders of problems to work through, each corresponding with a concept to be mastered.
 
 
 
@@ -34,7 +34,7 @@ Each morning, we'll cover one of the three concepts as a class through instructi
 ------------------------------------------------------------------
 
 
-Based on your ranking here, we will break you into groups of 3-4 for the afternoon to work through some of the problems in the repo for that concept. In your small groups:
+We will break you into groups of 3-4 for the afternoon to work through some of the problems in the repo for that concept. In your small groups:
 
 * Each person should walk the group through a solution to at least one problem
 * Before moving on to the next problem, each person in the group must thoroughly understand how and why the group came to that solution. If someone in the group feels they do not thoroughly grasp the problem, take turns working through it again. Sometimes it won't click the first time around, and simply hearing someone different work through the problem can help set the lightbulbs off.
@@ -44,34 +44,7 @@ Based on your ranking here, we will break you into groups of 3-4 for the afterno
 
 ### At Home
 
-There will be many more problems in the repo than you'll have time to solve during class. At home, you should work on the remaining problems for that concept on your own. Do not worry about completing *all* of the problems. Focus more on being able to thoroughly understand and articulate the solution to the problems you do make it through. For each problem you solve, also add an annotation for how you would walk someone through arriving at that solution. For example, given the following scope exercise:
-
-
-```js
-var text = 'outside!';
-
-function log() {
-  console.log(text);
-  var text = 'inside!';
-}
-
-log();
-```
-
-Your solution should look like the following:
-
-
-```js
-const result = undefined;
-return result;
-
-// On line 1, we're declaring a global variable called `text`, and assigning it to a string of 'outside!'.
-// Then on line 3 we declare a function named `log`, but because it hasn't been invoked yet, we will skip over the code inside of it, and head down to line 8 where we do the invocation of the `log` function.
-// This brings us back up to line 4 to begin executing the contents of `log`, and puts us into a new function scope.
-// On line 5 we run our console.log, and on line 6 we declare a new variable of `text` within our function scope, assigning it to a string of 'inside'.
-// The console.log returns undefined because our variable declaration on line 6 was hoisted to the top of our function scope prior to execution. Because hoisting takes only the variable declaration, and not the varaible assignment, our `text` variable is undefined at the time our console.log is run.
-```
-
+There will be many more problems in the repo than you'll have time to solve during class. At home, you should work on the remaining problems for that concept on your own. Do not worry about completing *all* of the problems. Focus more on being able to thoroughly understand and articulate the solution to the problems you do make it through. For each problem you solve, also add an annotation for how you would walk someone through arriving at that solution.
 
 ## Evaluation
 
