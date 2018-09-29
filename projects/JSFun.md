@@ -20,7 +20,7 @@ There are two ways we'd like you to demonstrate mastery of these concepts:
 
 ## Work Time
 
-Fork this [repo](https://github.com/turingschool-examples/jsFun) of practice exercises. There are three folders of problems to work through, each corresponding with a concept to be mastered.
+**Fork** this [repo](https://github.com/turingschool-examples/jsFun) of practice exercises. There are three folders of problems to work through, each corresponding with a concept to be mastered.
 
 
 
