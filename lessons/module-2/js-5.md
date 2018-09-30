@@ -1,5 +1,9 @@
 # JavaScript Fundamentals: Data Types & Structures
 
+### Learning Goals
+* Review and discuss JavaScript fundamentals: functions and data types
+* Practice working with functions, primitive, and complex data types
+
 ## Vocab
 
 - `Data Type` A kind of data, e.g., String, Object, Boolean, etc.
@@ -15,6 +19,13 @@
 - `Parameters` The variables a function says it will take in when it runs. Declared inside parens
 - `Arguments` The actual variables a function uses when it runs
 - `Prototype` An object that allows a one object to inherit methods and properties from another
+
+### Warm Up
+
+*
+*
+*
+*
 
 
 ## Simple / Primitive Data Types
@@ -303,8 +314,8 @@ Create a function `add2` that takes in a parameter of `number` and returns the p
 * What are some characteristics of primitive data types?
 * What is typeof?
 * What's the difference between null and undefined?
-* When should you store information in an object.
-* When should you store information in an array.
+* When should you store information in an object?
+* When should you store information in an array?
 
 ### Links & Resources
 * [Prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
