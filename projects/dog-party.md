@@ -33,10 +33,11 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 
 1. Create a new repository on GitHub by clicking that green button on the home page that says `New Repository`
 2. Enter in a relevant name for this project (i.e. `Dog Party`)
-3. Leave it set as `public` because you want to others to see your work and then click `Create Repository`!
-4. Follow the steps on the next page and enter each command into your terminal
-5. Once you see your code up in your repository, go to Settings and publish your site on GitHub pages!
-5. Finally, place your links in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1xmpBJ2_Wydg_wqVmq-fOgBV8svM1FUvLVeAXrFpEspk/edit#gid=0)
+3. Do NOT initialize the repository with a README.  You have already created one locally on your computer.
+4. Leave it set as `public` because you want to others to see your work and then click `Create Repository`!
+5. Follow the steps on the next page and enter each command into your terminal
+6. Once you see your code up in your repository, go to Settings and publish your site on GitHub pages!
+7. Finally, place your links in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1xmpBJ2_Wydg_wqVmq-fOgBV8svM1FUvLVeAXrFpEspk/edit#gid=0)
 
 #### Example Steps for Part 4
 
@@ -47,7 +48,6 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 5. `git push -u origin master`
 
 # ![Dog Party](/assets/images/dog-party.png)
-
 
 ### Peer Review
 
@@ -60,3 +60,4 @@ With your partner, go through the list of questions below.  Take note of the dif
 5. How did you center the main image?
 6. What was your thought process in centering the logos in the footer?
 7. What are three tips you would have told yourself a week ago?
+8. How did your partner do things differently from you?  What are some things you would like to change on yours?
