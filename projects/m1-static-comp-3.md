@@ -1,5 +1,5 @@
 ---
-title: Static Comp Challenge 3
+title: Static Comp Challenge 2
 ---
 
 ## Specification
@@ -98,6 +98,6 @@ This is layout that takes a good amount of time to build. Don't wait until Monda
 
 ## Submission Details
 
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/17QYln6ZaklCezsBS8gCF7ds3aHSmwECZxyrepnNtNcg/edit#gid=496549355)
+* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1xmpBJ2_Wydg_wqVmq-fOgBV8svM1FUvLVeAXrFpEspk/edit#gid=496549355)
 
 ![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
