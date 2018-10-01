@@ -171,10 +171,9 @@ function sayHi() {
 // es6 syntax
 const sayHi = () => console.log('Hi!');
 ```
+#### Turn and Talk
 
-#### Turn and Research
-
-With a partner, research some of the pitfalls of using arrow functions. Specifically, when should you _not_ use arrow functions? 
+What are the benefits of using arrow functions over function declarations?
 
 ## Handling Parameters
 
@@ -305,6 +304,7 @@ The square brackets are just part of the destructuring syntax here.
 
 You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
+
 ### Classes and Prototypal Inheritance
 
 You've already seen the syntax for ES6 classes in your mythical creatures.
@@ -369,6 +369,15 @@ Rectangle.prototype.constructor = Rectangle;
 ```
 
 We can create classes that inherit from another class by using the ES6 keyword `extends` and the method `super()`.
+
+### Journal
+
+* What new changes did ES6 bring in so far as the following:
+  * scope
+  * functions
+  * classes
+
+* What is prototypal inheritance?
 
 
 ### Additional Resources:
