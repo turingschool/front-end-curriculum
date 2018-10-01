@@ -172,6 +172,10 @@ function sayHi() {
 const sayHi = () => console.log('Hi!');
 ```
 
+#### Turn and Research
+
+With a partner, research some of the pitfalls of using arrow functions. Specifically, when should you _not_ use arrow functions? 
+
 ### Handling Parameters
 
 ES6 gives us more ways to handle parameters.
