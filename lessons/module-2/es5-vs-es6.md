@@ -94,7 +94,7 @@ If an array or object is declared using the keyword `const`, the contents of tha
 
 What are var, let, and const similar? How are they different?
 
-### Arrow Functions
+## Arrow Functions
 
 ES6 gives us another way to write functions. They're called arrow functions because they have an arrow in them. Neat!
 
@@ -176,7 +176,7 @@ const sayHi = () => console.log('Hi!');
 
 With a partner, research some of the pitfalls of using arrow functions. Specifically, when should you _not_ use arrow functions? 
 
-### Handling Parameters
+## Handling Parameters
 
 ES6 gives us more ways to handle parameters.
 
