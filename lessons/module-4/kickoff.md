@@ -32,6 +32,12 @@ _All of the questions and challenges we give you are taken from interviews given
 
 And then there's your last group project! You'll get a chance to work with back-end teammates to create something really special. We encourage you to take risks with new technologies, show off your skills, and make something to wow the judges at demo night.
 
+### Week 6: Final Assessment and Graduation
+
+Your final assessment will be a take-home style challenge that you will work on independently (we'll talk about this more as the weeks go on).
+
+Everyone will also need to complete a successful mock interview.
+
 ## Graduation Requirements
 
 In order to graduate from Module 4, students must complete each of the following:
@@ -41,7 +47,7 @@ In order to graduate from Module 4, students must complete each of the following
 Students must notify instructors of any absences, and are required to make up any work missed during the time they were out. 
 If missing class for an interview, students must record the interview questions they received and add them to this [doc](https://docs.google.com/document/d/1PPfnfGOmzVRPXVa9t9qzl1G6vYM52teL7NksRQbfqiQ/edit?usp=sharing)
 
-### Final Assessment - Coding
+### Final Assessment
 
 This will be week 6. The assessment will be similar to a take-home challenge you could see for an interview. Students must earn a score of `3` or greater in *each* category of the final assessment rubric.
 
