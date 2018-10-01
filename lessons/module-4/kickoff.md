@@ -38,6 +38,7 @@ Your final assessment will be a take-home style challenge that you will work on 
 
 Everyone will also need to complete a successful mock interview.
 
+
 ## Graduation Requirements
 
 In order to graduate from Module 4, students must complete each of the following:
@@ -74,6 +75,12 @@ This will be mentioned again during your week-one professional development kicko
 
 On the final Thursday of the module, you will give a 10-minute presentation about your experience in module 4, Turing, and your action plan going forward. 
 The details about it can be found [here](https://github.com/turingschool/portfolios/blob/master/README.markdown) under "Module 4 (Front-End)".
+
+
+## Odds and Ends
+
+* Classroom door code
+* Fire safety instructions
 
 
 ## Go Forth!
