@@ -20,13 +20,17 @@
 - `Arguments` The actual variables a function uses when it runs
 - `Prototype` An object that allows a one object to inherit methods and properties from another
 
-### Warm Up
+### Journal Warm Up
 
-*
-*
-*
-*
+* Explain a function to a five year old
+* What might be an example of why you would use an array?
+* What are the most important/signifant things someone should know about objects?
+* Consider this [code](https://codepen.io/plovett/pen/vVOGxN?editors=1112). The `log` will return `object`. Why do you think this is?
 
+```js
+  const pets = ['Pandora', 'Antigone'];
+  console.log(typeof pets)
+```
 
 ## Simple / Primitive Data Types
 
