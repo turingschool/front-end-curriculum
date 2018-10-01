@@ -223,10 +223,5 @@ Key Points:
 
 ***
 
-# Your Turn
-Style that dog party like a BOSS! :smirk:
-
-# ![Dog Party](/assets/images/dog-party.png)
-
 ## Additional Resources
 * [Turing CSS Style Guide](https://github.com/turingschool-examples/css) 

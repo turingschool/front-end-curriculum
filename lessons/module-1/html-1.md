@@ -302,22 +302,6 @@ Let's take a moment to digress and discuss _important things_. Like "For Placeme
 
 ***
 
-# Your Challenge
-
-
-### Create this Dog Party
-
-* Create a directory called `dog-party`
-* Create a sub-directory called `images`
-* Create a file called `index.html`
-
-First thing's first, you'll need to [download the assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing).
-
-Now, in your `dog-party` site directory, begin laying out the HTML for this site:
-
-# ![Dog Party](/assets/images/dog-party.png)
-
-
 ## Additional Resources
 
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
