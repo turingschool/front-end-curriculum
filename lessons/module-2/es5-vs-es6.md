@@ -4,19 +4,22 @@ tags: javascript, ES6, destructuring, spread operator, block scope
 module: 2
 ---
 
-[Slides](https://drive.google.com/open?id=1ISEwW7suiVzmDb7sJg1Y_kFaKu6OaRFzLGPbk3XVAHg)
-
-### Lesson objectives:
-
-By the end of the lesson, you will
-* Be familiar with some of ES6 syntax and know how it relates to ES5
-* Know how inheritance works and be able to explain it
-
+<!-- [Slides](https://drive.google.com/open?id=1ISEwW7suiVzmDb7sJg1Y_kFaKu6OaRFzLGPbk3XVAHg)
+ -->
+### Learning Goals
+* Compare ES5 vs. ES6
+* Understand and explain prototypal inheritance in JavaScript
 
 ## Vocabulary
 
 - `Scope` Where variables and functions are accessible
 - `Prototypal Inheritance` Inheritance by means of delegating message passing through a chain of objects (aka prototypes)
+
+### Warm Up
+
+* What do you think of when you hear the word prototype? 
+* When have you used prototypes in your code?
+* Do you prefer template literals to concatenation? Why or why not?
 
 ## The differences between ES5 and ES6
 
@@ -24,9 +27,11 @@ Up until now, you've mostly been writing ECMAScript 5. (You can read more about 
 
 ES5 is comfortable and familiar, but we ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
 
+## Scope
+
 ### Block Scope
 
-We're familiar with global and function scope. Scope, in a nutshell, refers to where variables and functions are accessible, and in what context it is being executed.
+We're familiar with global and function scope. <S></S>cope is literally the scope in which a variable or value can be accessed.
 
 We already know that variables declared (using the keyword `var`) inside of a function will remain scoped to that function. In other words, it won't be accessible outside of the function.
 
@@ -34,30 +39,27 @@ ES6 gives us two new variable keywords: `let` and `const`. These two variable ke
 
 What is a block? The most common ones that you will be familiar with are `if` statements and `for` loops. You can read more about block statements [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block).
 
-Previously, when we wanted a variable to remain scoped to a block, we had to wrap the contents of the block in a function.
+#### Turn and Code
 
-Consider the following example: let's set up a `for` loop to create a bunch of functions that return the value of `i` multiplied by 2, and then push those functions into an array.
-
-Here's how we would achieve that in ES5:
+With a partner, consider the example below. What is happening within the body of our for loop? What will be returned? Why?
 
 ```
 // es5 block scope
 var callbacks = [];
 
 for (var i = 0; i <= 2; i++) {
-  (function (i) {
+
     callbacks[i] = function () { 
       return i * 2; 
-    };
-  })(i);
+    }
 }
 
-callbacks[0]() === 0;
-callbacks[1]() === 2;
-callbacks[2]() === 4;
+callbacks[0](); // What will this return?
+callbacks[1](); // What will this return?
+callbacks[2](); // What will this return?
 ```
 
-(If we did not wrap the contents of the `for` loop in a function, when we executed `callbacks[0]`, `callbacks[1]`, and `callbacks[2]` they would all return 4, because `i` would be hoisted out of the `for` loop block and defined in the global scope. The `for` loop would increment it up, so each of the functions would reference that global variable. Hence wrapping the contents of the `for` loop in a function.)
+Previously, when we wanted a variable to remain scoped to a block, we had to wrap the contents of the block in a function.
 
 And here's how we would do it with ES6 syntax:
 
@@ -80,7 +82,7 @@ callbacks[2]() === 4
 
 The major differences are:
 * using the keyword `let` instead of `var` in the `for` loop, which will remain scoped to that block
-* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a hoisted global variable
+* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally
 
 **The differences between let and const:**
 
@@ -88,7 +90,11 @@ Variables declared with `let` can be reassigned, whereas variables declared with
 
 If an array or object is declared using the keyword `const`, the contents of that array or object can be changed, but that variable name will always point to that same piece of memory.
 
-### Arrow Functions
+#### Turn and Talk
+
+What are var, let, and const similar? How are they different?
+
+## Arrow Functions
 
 ES6 gives us another way to write functions. They're called arrow functions because they have an arrow in them. Neat!
 
@@ -166,7 +172,11 @@ function sayHi() {
 const sayHi = () => console.log('Hi!');
 ```
 
-### Handling Parameters
+#### Turn and Research
+
+With a partner, research some of the pitfalls of using arrow functions. Specifically, when should you _not_ use arrow functions? 
+
+## Handling Parameters
 
 ES6 gives us more ways to handle parameters.
 
