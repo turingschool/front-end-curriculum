@@ -39,7 +39,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 6. Once you see your code up in your repository, go to Settings and publish your site on GitHub pages!
 7. Finally, place your links in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1xmpBJ2_Wydg_wqVmq-fOgBV8svM1FUvLVeAXrFpEspk/edit#gid=0)
 
-#### Example Steps for Part 4
+#### Example Steps for Part 5
 
 1. `git init` inside of your `dog-party` directory
 2. `git add .` 
