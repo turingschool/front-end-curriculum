@@ -46,9 +46,11 @@ In addition to the functional requirement, on a separate dedicated git branch, g
 
 ## Tech Stack
 
-**Backend:** build using Express, knex, and PostgreSQL. Server-side testing should be done using mocha, chai, and chai-http. There should be one client-side route (`'/'`), and other endpoints should be API endpoints (`'api/v1/...'`). Each API endpoint should respond with JSON-formatted data.
+**Back-End:** build using Express, knex, and PostgreSQL. There should be one client-side route (`'/'`), and other endpoints should be API endpoints (`'api/v1/...'`). Each API endpoint should respond with JSON-formatted data.
 
-**Frontend:** build using vanilla JavaScript or **jQuery** (you cannot use React or other libraries for this project - we want to keep the client-side code as simple as possible to reduce complexity and focus on the backend).
+**Front-End:** build using vanilla JavaScript or **jQuery** (you cannot use React or other libraries for this project - we want to keep the client-side code as simple as possible to reduce complexity and focus on the backend).
+
+Neither the back-end or front-end should be tested for this project (we'll get into back-end testing in the next project).
 
 **Project File Structure:** Here is how we would like you to structure your project files.
 
@@ -75,16 +77,17 @@ palette-picker
 
 In order to ensure you're on pace for finishing the project successfully and on-time, you should try to be meeting each of these checkpoints:
 
-**EOD Monday:** Express server is set up and serving static assets; front-end is in place (though likely not polished); You have thought about what API endpoints you need and perhaps you've implemented one or two using data from `app.locals`
+**EOD Monday:** Express server is set up and serving static assets; front-end is in place (though likely not polished); You have thought about what API endpoints you need and perhaps you've implemented one or two in your Express server using data from `app.locals` (these endpoints will likely change, but that's ok!). You have wireframes complete.
 
-**EOD Tuesday:** You have solidified what API endpoints you need and have implemented them using data from `app.locals`; You have put more thought into your front-end and design and it is starting to shape up and become more polished
+**EOD Tuesday:** At a high level, you have solidified what API endpoints you need and have implemented most of them using data from `app.locals`; You have put more thought into your front-end and design and it is starting to shape up and become more polished.
 
-**EOD Wednesday:** You have set up your postgres database and refactored most of your endpoints that were using `app.locals` to communicate with the database instead; You have had someone attempt to use your application and received feedback on UI/UX
+**EOD Wednesday:** You have set up your postgres database and refactored most of your endpoints that were using `app.locals` to communicate with the database instead. You have had someone attempt to use your application and received feedback on UI/UX.
 
-**EOD Thursday:** You have finished refactoring your endpoints to communicate with your postgres database; You've setup your test database and written your happy/sad path tests for each of your endpoints; You've polished your front-end
+**EOD Thursday:** You have finished refactoring your endpoints to communicate with your postgres database using `knex`. You have successfully deployed your application to Heroku (even if everything is not functioning.)
 
-**Noon Friday:** You have successfully deployed your application to Heroku; You have commented out your server file line-by-line; You have filled out your submission template
+**EOD Friday:** You have commented out your server file line-by-line. Functionality should be nearly complete.
 
+**Weekend:** It's time for polish. Your app has all required features implemented, and you are refactoring server-side code as well as polishing your front-end UI. You have filled out your submission template.
 
 
 ## Instructor Evaluation Points
@@ -103,13 +106,6 @@ The following set of points are distributed at the discretion of the instructor.
 * **15 points** - User interface is mostly intuitive, though the instructor might need some guidance on interactions. Styling is mostly consistent, but could use some clean up. Application may be missing some relevant feedback that would help guide the user. 
 * **7 points** - User interface demonstrates some effort, but is not intuitive and the instructor needs help figuring out how to use the application. Styling has several inconsistencies and it's sometimes unclear what elements a user can interact with. Application lacks useful feedback for the user.  
 * **0 points** - User interface does not demonstrate effort and is unintuitive. The instructor cannot use the application on their own. Styling is inconsistent and user interactions are unclear. Application lacks useful feedback for the user.
-
-### Testing
-
-* **20 points** - Project has a running test suite that tests every server-side endpoint with many happy and sad path cases.
-* **15 points** - Project has a running test suite that tests every server-side endpoint, but only has a couple sad path cases.
-* **7 points** - Project has sporadic testing of some server-side endpoints. There are happy path tests, but there are is one or zero sad path cases.
-* **0 points** - There is little or no evidence of testing in this application. Most or all of the tests in the test suite are failing.
 
 ### Commented Server File
 
@@ -132,10 +128,10 @@ The following set of points are distributed at the discretion of the instructor.
 * **10 points** - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
 * **5 points**  - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
 
-## Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1803/mod-4/palette-picker/submission-template.md) by copying it to a new file called YOURNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo by 1pm on Friday of week 1.
+## Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1804/mod-4/palette-picker/submission-template.md) by copying it to a new file called YOURNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo by 8:30am on Monday of week 2.
 
-### Project is worth 150 points
+### Project is worth 130 points
 
-### To get a 3 on this project, you need to score 110 points or higher
+### To get a 3 on this project, you need to score 95 points or higher
 
-### To get a 4 on this project, you need to score 130 points or higher
+### To get a 4 on this project, you need to score 115 points or higher
