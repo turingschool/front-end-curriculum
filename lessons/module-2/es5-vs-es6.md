@@ -171,10 +171,9 @@ function sayHi() {
 // es6 syntax
 const sayHi = () => console.log('Hi!');
 ```
+#### Turn and Talk
 
-#### Turn and Research
-
-With a partner, research some of the pitfalls of using arrow functions. Specifically, when should you _not_ use arrow functions? 
+What are the benefits of using arrow functions over function declarations?
 
 ## Handling Parameters
 
@@ -369,6 +368,13 @@ Rectangle.prototype.constructor = Rectangle;
 ```
 
 We can create classes that inherit from another class by using the ES6 keyword `extends` and the method `super()`.
+
+### Journal
+
+* What new changes did ES6 bring in so far as the following:
+  * scope
+  * functions
+  * classes
 
 
 ### Additional Resources:
