@@ -23,6 +23,8 @@ As part of your submission template, we'd like you to do some design research. P
 
 I really like the subtle drop-shadows on these [notifications](https://dribbble.com/shots/1467222-Notifications), and the way the notification icons vary slightly in color by being slightly lighter than the rest of the background. I will incorporate these types of drop-shadows on elements in my project and play with this particular use of color.
 
+In your project submission, you will link to _your wireframes and to your design inspiration(s)_.
+
 ## Specifications
 
 Your application should have the following functionality. A user should be able to:
