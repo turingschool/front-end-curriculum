@@ -44,6 +44,8 @@ Your application should have the following functionality. A user should be able 
 * Delete a palette from a project folder, which removes it from the page and database
 * Never need to refresh the page to see new information
 
+## Articulation Requirement
+
 In addition to the functional requirement, on a separate dedicated git branch, go through each line of the server file and put a comment on each line that explains what that line of code is doing. Be as explicit as you can.
 
 ## Tech Stack
