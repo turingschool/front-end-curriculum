@@ -284,22 +284,6 @@ Copy the form code below into your own Pen, and then refactor as follows:
 <p data-height="458" data-theme-id="26495" data-slug-hash="Lbjgwy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjgwy/">Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-
-***
-
-# For Placement Only (FPO)
-Let's take a moment to digress and discuss _important things_. Like "For Placement Only" (FPO) options for use in design layouts. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
-
-* [Meet the Ipsums](http://meettheipsums.com/)
-* [FPOImg](http://fpoimg.com/)
-<!--* [PlaceKitten](http://placekitten.com/) no longer works :( -->
-* [FillMurray](http://www.fillmurray.com/)
-* [Lorem Pixel](http://lorempixel.com/)
-* [Unsplash](https://unsplash.com/)
-* [SampleVideos](http://www.sample-videos.com/)
-* [Article with useful sites for free icons, image assets, etc.](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online)
-
-
 ***
 
 ## Additional Resources
@@ -307,8 +291,13 @@ Let's take a moment to digress and discuss _important things_. Like "For Placeme
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
 * [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
 
-<!--
-Wrap up questions
-What role does HTML play in our web applications?
-What are semantic tags and why do we use them?
--->
+### For Placement Only (FPO)
+Let's take a moment to digress and discuss _important things_. Like "For Placement Only" (FPO) options for use in design layouts. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
+
+* [Meet the Ipsums](http://meettheipsums.com/)
+* [FPOImg](http://fpoimg.com/)
+* [FillMurray](http://www.fillmurray.com/)
+* [Lorem Pixel](http://lorempixel.com/)
+* [Unsplash](https://unsplash.com/)
+* [SampleVideos](http://www.sample-videos.com/)
+* [Article with useful sites for free icons, image assets, etc.](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online)
