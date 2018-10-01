@@ -4,32 +4,33 @@ title: Module 4 KickOff
 
 ## Learning Goals & Focus
 
-### Week 1: Server-Side Skills
+### Week 1: Server-Side Intro
 
-Learning technologies like Node and Express will round out your skill set and make you a more flexible developer. 
-Front-end developers still need a solid understanding of how to work with the back-end in order to be successful.
+Learning technologies like Node and Express will round out your skill set and make you a more flexible developer. Front-end developers still need a solid understanding of how to work with the back-end in order to be successful.
 
-### Week 2: Mobile Dev & Progressive Web Apps
+**Palette Picker:** Your first server-side challenge. You'll build an API that holds data in a persistent database. You'll also make a front-end (with jQuery) to interact with your API.
 
-This module, we'll introduce some of the current technologies being used for creating mobile applications. 
-This includes libraries like React Native, and **Progressive Web Apps** that use Web APIs like service workers, background sync, and push notifications.
+### Week 2: Server-Side Reinforcement and Advanced Topics
 
-### Week 3: Security
+You'll take what you learned during week 1 and expand on it. You'll learn how to deal with development in multiple environments, server-side testing, continuous integration, and also experiment with webscraping.
 
-We'll be talking about security at a high-level and implementing some strategies for making our applications more secure. 
-This includes protecting endpoints with JSON web tokens, understanding the difference between HTTP and HTTPS, and implementing OAuth.
+Week 2 will also be a time when we start giving code challenges to prepare you for interviewing.
 
-### Week 4-6: Reinforcement of Fundamentals, Interview Prep & Differentiation
+**BYOB BE:** Build an API with full "CRUD" functionality that is fully tested. It will also use continuous integration for automatic deployment.
 
-We'll be providing smaller challenges throughout the module that will reinforce fundamental skills and refresh some of the previous content you learned. 
-Many of these challenges will better prepare you for the technical interviews you'll be going on.
+### Week 3: More Advanced FE - Mobile Dev & Progressive Web Apps
+
+This module, we'll introduce some of the current technologies being used for creating mobile applications. This includes libraries like React Native, and **Progressive Web Apps** (PWAs) that use Web APIs like service workers, background sync, and push notifications.
+
+**BYOB FE:** Using your BYOB back-end API, you will create a front-end to connect to the API and display the data. You'll also add some PWA technologies to your front-end.
+
+### Weeks 4 & 5: Reinforcement of Fundamentals, Interview Prep & Cross-Pollination
+
+We'll be providing a ton of small, interview-style challenges throughout these two weeks that will reinforce fundamental skills and refresh some of the previous content you learned (everyone seems to forget how to write a class from memory...). 
 
 _All of the questions and challenges we give you are taken from interviews given to graduates._
 
-You'll also spend time diving into a new technology (like websockets, localization, or others) where you probably have little to no experience. 
-You can pick from a list of awesome technologies that we haven't covered, but you will learn on your own, build something, and present to the class what you learned.
-
-And then there's capstone! We encourage you to take risks with new technologies, show off your skills, and make something to wow the judges at demo night.
+And then there's your last group project! You'll get a chance to work with back-end teammates to create something really special. We encourage you to take risks with new technologies, show off your skills, and make something to wow the judges at demo night.
 
 ## Graduation Requirements
 
@@ -42,7 +43,7 @@ If missing class for an interview, students must record the interview questions 
 
 ### Final Assessment - Coding
 
-This will be week 4. The assessment will cover material from module 4 (it is not cumulative of every module). Students must earn a score of `3` or greater in *each* category of the final assessment rubric.
+This will be week 6. The assessment will be similar to a take-home challenge you could see for an interview. Students must earn a score of `3` or greater in *each* category of the final assessment rubric.
 
 ### Mock Interview
 
@@ -52,15 +53,11 @@ Students must do a mock interview with one of the instructors. You will be given
 
 * Prework Assignments
 * Palette Picker
-* Pattrn Party
-* House of Vars Blog Post
 
 ### Group Work
 
-* House of Vars
-* Build-Your-Own-Backend
-* Differentiation Project (To-Be-Cleverly-Named)
-* Capstone Project
+* Build-Your-Own-Backend (BE and FE)
+* Cross-Pollination Project
 
 ### Career Development
 
@@ -75,4 +72,4 @@ The details about it can be found [here](https://github.com/turingschool/portfol
 
 ## Go Forth!
 
-Learn how to build a backend! Be a front-end developer! Explore your passion!
+Learn how to build a back-end! Be a front-end developer! Explore your passion!
