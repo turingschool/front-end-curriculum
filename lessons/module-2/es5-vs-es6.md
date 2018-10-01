@@ -304,6 +304,7 @@ The square brackets are just part of the destructuring syntax here.
 
 You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
 
+
 ### Classes and Prototypal Inheritance
 
 You've already seen the syntax for ES6 classes in your mythical creatures.
@@ -375,6 +376,8 @@ We can create classes that inherit from another class by using the ES6 keyword `
   * scope
   * functions
   * classes
+
+* What is prototypal inheritance?
 
 
 ### Additional Resources:
