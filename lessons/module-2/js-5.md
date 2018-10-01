@@ -28,7 +28,7 @@
 * Consider this [code](https://codepen.io/plovett/pen/vVOGxN?editors=1112). The `log` will return `object`. Why do you think this is?
 
 ```js
-  const pets = ['Pandora', 'Antigone'];
+  var pets = ['Pandora', 'Antigone'];
   console.log(typeof pets)
 ```
 
