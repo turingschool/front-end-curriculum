@@ -29,7 +29,7 @@ Constantly poking at our code is tedious and it's not the best use of our time. 
 
 ## Unit Tests
 
-The bulk of your tests for an application are likely to be unit tests.  Unit tests test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment). 
+The bulk of your tests for an application are likely to be unit tests.  Unit tests test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment).
 
 #### Benefits
 
@@ -37,9 +37,14 @@ The bulk of your tests for an application are likely to be unit tests.  Unit tes
 * Unit tests provide documentation by telling a living story about your application
 * Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
 
+## Integration Tests
+Integration tests test the interaction between two units to make sure that they play together nicely and work the way we expect them to work.  You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
+
 ### Your Turn
 
-* Take a minute to write in your journal and explain why unit tests are so important in your own words.  Do you think it might be important to write tests before you have implmented the code for some kind of functionality or afterwards? Are there benefits to both?  
+* Take a minute to write in your journal and explain why unit tests are so important in your own words.  
+* When building out a piece of functionality, should you focus on writing unit tests first or integration tests?  Why?
+* Do you think it might be important to write tests before you have implemented the code for some kind of functionality or afterwards? Are there benefits to both?  
 
 ## What is test-driven development?
 
