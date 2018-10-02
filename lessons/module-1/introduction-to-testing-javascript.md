@@ -13,7 +13,6 @@ tags: javascript, browser, testing, tdd
 ## Vocab
 
 - `TDD` Test Driven Development / Design
-- `Four Phase Test` A test that is organized into the phases [Setup, Execution, Assertion, Teardown]
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
@@ -28,25 +27,9 @@ Even worse: we can end up in a situation where changing code in one place causes
 
 Constantly poking at our code is tedious and it's not the best use of our time. We're better off writing some code that tests our other code for us. This sounds almost like a joke about programmers, but it's actually a really efficient way to maintain quality in our code base.
 
-## What are some of the different kinds of tests?
+## Unit Tests
 
-We test our code at a number of different levels:
-
-#### Unit Tests
-- Unit tests test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  
-
-#### Integration Tests  
-- Integration tests test the interaction between two units to make sure that they play together nicely and work the way we expect them to work.   
-
-#### Acceptance Tests  
-- Acceptance tests act like a user and visit the page. When I put in a bogus zip code, do I get the error on the page that I'm expecting? Acceptance tests don't typically care about what's happening under the hood. They just care that we got the desired result. Everything could be a total mess in the code base.
-
-#### End-to-End Tests  
-- End-to-end tests test every component of the system. Let's say you have a back-end application and a front-end application. Your end-to-end tests would test both and make sure they are working together as expected.
-
-Today, we're just talking about _unit_ tests. Why? The bulk of your tests for an application are likely to be unit tests. 
-
-![Testing pyramid](/assets/images/testing-pyramid.png)
+The bulk of your tests for an application are likely to be unit tests.  Unit tests test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment). 
 
 #### Benefits
 
@@ -56,7 +39,7 @@ Today, we're just talking about _unit_ tests. Why? The bulk of your tests for an
 
 ### Your Turn
 
-* Take a minute to talk with the person next to you and discuss the differences between each of the four tests.  Why might it be important to have tests on multiple levels?
+* Take a minute to write in your journal and explain why unit tests are so important in your own words.  Do you think it might be important to write tests before you have implmented the code for some kind of functionality or afterwards? Are there benefits to both?  
 
 ## What is test-driven development?
 
@@ -83,7 +66,7 @@ One important thing to note is that TDD is not about writing tests. Writing test
 
 ### Your Turn
 
-* Explain the steps of TDD in your own words with a different partner from before.  
+* Explain the steps of TDD in your own words in a notebook.  
 * Brainstorm and write down three reasons as to why TDD is important and why it might save you headaches in the future.
 
 ## So what happens if you don't test first?
@@ -190,7 +173,7 @@ The `module.exports` allows us to export a piece of functionality.  In this inst
 ```js
   var Hello = require('./implementation')
 
-  describe('hello', function () {
+  describe('Hello', function () {
   it('returns the string Hello World', function () {
     assert.equal(Hello(), 'Hello World');
   });
@@ -206,6 +189,16 @@ Enough talk about testing. Let's actually write some tests to see this in action
 Check out [this repository][rep] to get your hands dirty.
 
 [rep]: http://github.com/turingschool-examples/testing-javascript
+
+## The Testing Process
+
+It takes some time to build out solid habits when testing.  Often we'll see some developers run the test without even looking at the test first, or start writing the implementation code before they have even run the test.  Develop these good habits early so you really know what you are testing for and can speak to the process.
+
+1. _Read the test_.  This includes the description, paying attention to what it is asking for, and then what the assertions are.
+2. _Run the test_.  It should fail.  Take a look at the error and what it is saying.  Pay attention also to what line the test fails on.
+3. Then begin to _write implementation code_.  Going off of what the error says, write the _minimum_ amount of code it is asking for.
+4. _Run the test_ again.  If it still fails, see if the error has changed.  Is a different line of code failing?  Rinse and repeat until it passes.
+5. Then make sure that all of the _previous tests are passing_.  If not, go back and follow steps 1-4.  Otherwise, continue on to the next one.
 
 ### Wrap Up
 What is the TDD process?
