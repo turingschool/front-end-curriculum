@@ -8,7 +8,7 @@ tags: javascript, js, this, keyword
 
 ### Learning Goals
 
-* Understand and determine what `this` in points to in a codebase 
+* Understand and determine what `this` points to in a codebase
 
 ## Vocab
 
@@ -19,8 +19,8 @@ tags: javascript, js, this, keyword
 ### Warm Up
 
 * What do you understand `this` to represent in JavaScript? 
-* Where have you seen/utilized the word `this` in your J
-*
+* Where have you seen/utilized the word `this` in your JavaScript projects thus far?
+* 
 
 ## Introduction
 
@@ -220,3 +220,4 @@ vampire.whatDoYouDislike()
 ## Further Reading
 
 * [Scope vs. Context](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
+* [When not to use an arrow function](https://wesbos.com/arrow-function-no-no/)
