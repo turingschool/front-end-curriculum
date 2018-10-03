@@ -68,6 +68,13 @@ Play around with the following example using jQuery.
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="zBrJpV" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/gMPdzx/">Event Listeners</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
+### Your Turn
+
+In your jounral, write out the syntax for selecting these elements in vanilla Javascript and jQuery.
+
+* Change the text of an `h1` element to "I'm learning jQuery!".
+* Select an element with a class of `important-msg` and change it's text to "Understanding the difference between Javascript and jQuery."
+
 ## Responding to User Events
 
 jQuery and, of course, JavaScript are used to change and manipulate web pages. Just like JavaScript, jQuery has the ability to add event listeners based on user interaction.
@@ -88,18 +95,11 @@ The following things are happening in the example above:
 
 Now, when a user clicks on that button. The browser will run the function we provided to the event listener!
 
-We can also listen for things other than clicks. Here are some other events from the [jQuery documentation](http://api.jquery.com/Types/#Event).
+For a list of other events other than click, look at the [jQuery documentation](http://api.jquery.com/Types/#Event).
 
-- `click`
-- `dblclick`
-- `mousedown`
-- `mouseenter`
-- `mouseleave`
-- `mousemove`
-- `mouseover`
-- `change`
+### Your Turn
 
-Take a moment to investigate and play with some of them.
+* Write out event listener for a `button` element that listens to a click.  First, in vanilla Javascript, and then in jQuery.  Take note of the differences.
 
 ## Try It: Adding a CSS Class
 
@@ -111,12 +111,11 @@ We're using a jQuery method called `toggleClass()`. When the user clicks on the 
 
 - Can you create some additional CSS classes and toggle them?
 - Can you also change the text?
-- Try out the following methods:
-  - [.toggle()](http://api.jquery.com/toggle/)
-  - [.slideToggle()](http://api.jquery.com/slidetoggle/)
-  - [.fadeToggle()](http://api.jquery.com/fadetoggle/)
 
-_Note: You will need to remove the css transition property for these to animate correctly_
+### Your Turn
+
+* Discuss with the person across from you on the differences between adding/removing a class using Javascript and jQuery.  
+* Is there anything like `toggleClass()` in Javascript?
 
 ## Getting Values from the User
 
@@ -131,6 +130,11 @@ In this example, we're doing the following:
 - We're adding an event listener to the "Change Me" button.
 - When it's clicked, we're grabbed the value of the input field and storing it into a variable.
 - We're then updating the contents of the `<h1>` to the value we stored from the input field.
+
+### Your Turn
+
+* Write out how you would grab the value of an input in Javascript.  Now in jQuery.
+* Now, how would you change the value of the input using both Javascript & jQuery?
 
 ### A Note on Working with Numbers
 
@@ -188,7 +192,6 @@ Let's take a look at the example below:
 #### Try It
 Can you create a class that adds a border and then toggle that class on the specific box that is hovered over? (For your own sanity, you probably want to remove the alert!)  
 
-
 ## Traversing the DOM
 
 A little while ago, we wanted to figure out how to tell which element we clicked. But, what if we wanted to find an element in relation to the element we clicked? jQuery lets us navigate from one element to another. When the browser parses our HTML, it creates a big tree-like structure. jQuery lets us hop from branch to branch.
@@ -245,8 +248,6 @@ Here are some examples:
 
 See the API documentation [here](http://api.jquery.com/category/selectors/attribute-selectors/).
 
-Let's take a look at [this simple form](https://turingschool-examples.github.io/jquery-playgrounds/form.html) and try out some selectors.
-
 ### The Special `:checked` Selector
 
 It's not uncommon that you might want to go look for all of the "checked" elements. This includes drop downs, checkboxes, and radio buttons.
@@ -255,6 +256,8 @@ It's not uncommon that you might want to go look for all of the "checked" elemen
 - `$('input[type="radio"]:checked')` will return all of the checked radio buttons.
 
 ### Quick Practice
+
+Let's take a look at [this simple form](https://turingschool-examples.github.io/jquery-playgrounds/form.html) and try out some selectors.
 
 - Can you find all of the check boxes?
 - Can you find all of the radio buttons?
@@ -265,7 +268,7 @@ Use Chrome Developer Tools to select the form fields above. When properly select
 
 ### Laboratory
 
-[Here is an little experiment][exp] where you can play around and try out some different selectors.
+[Here is an little experiment][exp] where you can play around and try out some different selectors.  This has some nice visual cues and allows you to toggle multiple selectors.
 
 [exp]: http://codylindley.com/jqueryselectors/
 
