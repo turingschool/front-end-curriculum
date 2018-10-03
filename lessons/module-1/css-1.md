@@ -30,7 +30,7 @@ But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.c
 
 
 ## CSS The Basics
-It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old tag names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
+It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
 
 ## Anatomy of a Basic CSS Rule
 
@@ -46,11 +46,12 @@ It’s a “style sheet language” that lets you style the HTML elements on you
 
 ### Your turn
 
-With your partner, answer the questions below.
-    * Can you add two classes to an element?
-    * Which class takes precedent?
-    * Can you add both an id and a class to an element?
-    * which takes precedent?
+With your partner, answer the questions below:
+
+* Can you add two classes to an element?
+* Which class takes precedent?
+* Can you add both an id and a class to an element?
+* which takes precedent?
 
 ## All the Elements are Boxes
 Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
