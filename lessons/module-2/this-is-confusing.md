@@ -6,11 +6,21 @@ tags: javascript, js, this, keyword
 
 ## [Slides](https://drive.google.com/open?id=1oF5k17fEaN_I4KIQOdBK-eEaNBf_S0_DrZhFzbPrA2w)
 
+### Learning Goals
+
+* Understand and determine what `this` in points to in a codebase 
+
 ## Vocab
 
 - `Invoke` / `Execute` To run a function. e.g., "I've invoked the function here"
 - `Declare` To write a function definition. Usually distinct from function execution
 - `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object 
+
+### Warm Up
+
+* What do you understand `this` to represent in JavaScript? 
+* Where have you seen/utilized the word `this` in your J
+*
 
 ## Introduction
 
