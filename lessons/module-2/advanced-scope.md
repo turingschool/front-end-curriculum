@@ -10,16 +10,16 @@ module: 2
 By the end of this lesson, students should be able to:
 
 * Technically speak to how the JavaScript interpreter executes code
+* Describe the differences between var, let and const and when to use each
 * Predict how variables will behave when multiple scopes are involved
-* Implement and describe how closures are working 
 
 ## Vocab
 
-- `Javascript Engine/Interpreter` A program that executes JavaScript code. Most commonly used in web browsers
-- `Scope` The scope in which a variable can be accessed
+- `JavaScript Engine/Interpreter` A program that executes JavaScript code. Most commonly used in web browsers
+- `Scope` The level in which a variable can be accessed
 - `Execution context` The environment a function executes in
 - `Closure` An inner function that has access to (aka closes over) the variables declared outside itself
-
+- `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
 
 # The JS Interpreter 
 
@@ -74,20 +74,23 @@ With a partner, take turns explaining how the following JavaScript code would be
 
 
 ```js
-1  var bestDog = 'Tammy';
+1  var hungriestDog = 'Tess';
 2 
-3  function moveAway(seconds) {
+3  function begForTreats(seconds) {
 4   var result = seconds * 2;
 5
 6   if (result > 5) {
-7    return 'I HAVE TO GO NOW';
+7    return 'This human is rude, not giving me treats. Onto the next one.';
 8   } else {
-9    return 'Man, it sure is rainy over there'
+9    return 'Yum, Human food!'
 10  }
 11 }
-12
-13 var num = 21;
-14 moveAway(3);
+12 
+13 var beggingTime = 20;
+14
+15 begForTreats(beggingTime);
+16
+17 beggingTime = 30;
 ```
 
 ## Execution Call Stack
@@ -215,7 +218,7 @@ If we want to use values created by functions, we must return those values out o
 
 ##### Parent scopes do not have access to child scopes BUT child scopes do have access to their parent scope
 
-In the example below, the console log inside `makeArray` fails because parent scopes do not have access to variables declared in child scopes. However, the child has access to the variables declared in the parent scope (`array`).
+In the example below, the console log inside `makeArray` fails because parent scopes do not have access to variables declared in child scopes. However, the child has access to the variables declared in the parent scope (`array`). Think of this like tinted windows in a car -- if you're inside the car, you can see **out**, but if you're outside of the car, you cannot see in.
 
 ```js
 function makeArray () {
