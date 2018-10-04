@@ -1,6 +1,6 @@
 ---
-title: Array Prototype Methods Introduction
-length: 180
+title: Array Prototype Iteration Methods
+length: 120
 tags: JavaScript, array, prototype
 ---
 

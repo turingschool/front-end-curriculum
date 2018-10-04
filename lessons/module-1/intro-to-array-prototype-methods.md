@@ -1,7 +1,7 @@
 ---
 title: Intro to Array Prototype Methods
 tags: JavaScript, array, prototype, introduction
-length: 150
+length: 90
 ---
 
 ## Learning Goals
@@ -126,11 +126,25 @@ var vegetables = ['broccoli', 'cucumber', 'asparagus', 'kale'];
 ```js
 var userNames = ['Justin', 'Tiffany', 'David', 'Brandon', 'Kristen', 'Heather'];
 
-//console output
+// console output
 => 3
 ```
 
 Bonus: What value gets returned if I try to find the index of `Karin`?
+
+11.  I have an array of halloween costumes that I need to add a string of `'are super scary!'`.  Without using a `for` loop to iterate through the array, what other array prototype methods could I use to iterate through and manipulate this data?
+
+```js
+var scaryCostumes = ['Pumpkins', 'Ghosts', 'Vampires', 'Skeletons'];
+
+// console output
+=>  [
+      'Pumpkins are super scary!', 
+      'Ghosts are super scary!', 
+      'Vampires are super scary!', 
+      'Skeletons are super scary!'
+    ];
+```
 
 ## Summary
 
