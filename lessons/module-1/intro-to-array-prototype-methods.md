@@ -30,7 +30,7 @@ This is where array prototype methods can become very useful.  These methods are
 
 Let's do this in a [Repl](https://repl.it) instead of the console since it's a bit easier to do basic Javascript in there.
 
-1. Insert a dog at the end off the array
+* Insert a dog at the end off the array
 
 ```js
 // How might I add a dog, 'Collie' at the end using an array prototype method?
@@ -40,7 +40,7 @@ var dogs = ['Golden Retriever', 'Pug', 'German Shepherd'];
 => ['Golden Retriever', 'Pug', 'German Shepherd', 'Collie'];
 ```
 
-2. How might I insert another favorite food to the beginning of the array?
+* How might I insert another favorite food to the beginning of the array?
 
 ```js
 // Let's try adding a 'breakfast burrito' to the beginning of the array.
@@ -53,7 +53,7 @@ var favoriteFoods = ['pizza', 'fruits', 'tacos'];
 ## Your Turn
 Now it's your turn to jump into the docs and try some things out!  Cheers!
 
-3. Let's go off our favoriteFoods example from #2.  Let's say, I no longer like tacos and I want to take it off the array.  How might I do this?
+* Let's go off our favoriteFoods example from #2.  Let's say, I no longer like tacos and I want to take it off the array.  How might I do this?
 
 ```js
 var favoriteFoods = ['breakfast burrito', 'pizza', 'fruits', 'tacos'];
@@ -62,7 +62,7 @@ var favoriteFoods = ['breakfast burrito', 'pizza', 'fruits', 'tacos'];
 => ['breakfast burrito', 'pizza', 'fruits'];
 ```
 
-4. Cool, now that you have figured out how to remove the last value from an array, what if I wanted to remove the first value instead?  Take a look at the example below:
+* Cool, now that you have figured out how to remove the last value from an array, what if I wanted to remove the first value instead?  Take a look at the example below:
 
 ```js
 var recipe = ['sugar', 'eggs', 'milk', 'flour'];
@@ -74,7 +74,7 @@ var recipe = ['sugar', 'eggs', 'milk', 'flour'];
 ## Next Steps
 Awesome, now that we've learned how to insert/remove values from the beginning/end of an array, let's do another one that requires us using multiple array prototype methods.
 
-5. I have an array of movies but have decided I want to replace `Billy Madison` with `Wedding Crashers`.  How might I do this?
+* I have an array of movies but have decided I want to replace `Billy Madison` with `Wedding Crashers`.  How might I do this?
 
 ```js
 var myMovies = ['Avengers', 'Sherlock Holmes', 'V for Vendetta', 'Fight Club', 'Billy Madison'];
@@ -83,7 +83,7 @@ var myMovies = ['Avengers', 'Sherlock Holmes', 'V for Vendetta', 'Fight Club', '
 => ['Avengers', 'Sherlock Holmes', 'V for Vendetta', 'Fight Club', 'Wedding Crashers'];
 ```
 
-6. Let's do one more.  Let's say I have a list of numbers and want to take the last number off and add 0 to the beginning.  Using what you have learned from the previous exercises, how could you do this?
+* Let's do one more.  Let's say I have a list of numbers and want to take the last number off and add 0 to the beginning.  Using what you have learned from the previous exercises, how could you do this?
 
 ```js
 var numbers = [1, 2, 3, 4, 5, 6];
@@ -95,7 +95,7 @@ var numbers = [1, 2, 3, 4, 5, 6];
 ## Exploring a Few More Methods
 Nice work!  You should have learned atleast 4 different array prototype methods from the exercises before.  Maybe more!  Now that you're getting pretty good at looking through the docs, let's do a few more exercises and try some different methods.
 
-7. I have an array of animals but they are all jumbled up.  How can we sort these animals alphabetically?
+* I have an array of animals but they are all jumbled up.  How can we sort these animals alphabetically?
 
 ```js
 var animals = ['zebra', 'giraffe', 'horse', 'red panda', 'polar bear', 'aardvark'];
@@ -104,7 +104,7 @@ var animals = ['zebra', 'giraffe', 'horse', 'red panda', 'polar bear', 'aardvark
 => ['aardvark', 'giraffe', 'horse', 'polar bear', 'red panda', 'zebra'];
 ```
 
-8. What if I had another array of numbers and just wanted to reverse the order so it was descending instead of ascending?  Which array prototype method could you use?
+* What if I had another array of numbers and just wanted to reverse the order so it was descending instead of ascending?  Which array prototype method could you use?
 
 ```js
 var jewelry = ['pearl necklace', 'golden ring', 'diamond earrings', 'bracelet'];
@@ -113,7 +113,7 @@ var jewelry = ['pearl necklace', 'golden ring', 'diamond earrings', 'bracelet'];
 => ['bracelet', 'diamond earrings', 'golden ring', 'pearl necklace'];
 ```
 
-9. I have two arrays, `healthyFoods` and `vegetables`, that I want to combine together.  Without using a `for` loop, how could we implement this?
+* I have two arrays, `healthyFoods` and `vegetables`, that I want to combine together.  Without using a `for` loop, how could we implement this?
 
 ```js
 var healthyFoods = ['bananas', 'chicken', 'salmon', 'pecans'];
@@ -123,7 +123,7 @@ var vegetables = ['broccoli', 'cucumber', 'asparagus', 'kale'];
 => ['bananas', 'chicken', 'salmon', 'pecans', 'broccoli', 'cucumber', 'asparagus', 'kale'];
 ```
 
-10. I have an array of user names and would like to find the index of `Brandon`.  Is there an array prototype method that allows me to find what index he is in the array?
+* I have an array of user names and would like to find the index of `Brandon`.  Is there an array prototype method that allows me to find what index he is in the array?
 
 ```js
 var userNames = ['Justin', 'Tiffany', 'David', 'Brandon', 'Kristen', 'Heather'];
@@ -134,7 +134,7 @@ var userNames = ['Justin', 'Tiffany', 'David', 'Brandon', 'Kristen', 'Heather'];
 
 Bonus: What value gets returned if I try to find the index of `Karin`?
 
-11.  I have an array of halloween costumes that I need to add a string of `'are super scary!'`.  Without using a `for` loop to iterate through the array, what other array prototype methods could I use to iterate through and manipulate this data?
+*  I have an array of halloween costumes that I need to add a string of `'are super scary!'`.  Without using a `for` loop to iterate through the array, what other array prototype methods could I use to iterate through and manipulate this data?
 
 ```js
 var scaryCostumes = ['Pumpkins', 'Ghosts', 'Vampires', 'Skeletons'];
