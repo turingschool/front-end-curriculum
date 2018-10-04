@@ -70,7 +70,7 @@ Play around with the following example using jQuery.
 
 ### Your Turn
 
-In your jounral, write out the syntax for selecting these elements in vanilla Javascript and jQuery.
+In your journal, write out the syntax for selecting these elements in vanilla Javascript and jQuery.
 
 * Change the text of an `h1` element to "I'm learning jQuery!".
 * Select an element with a class of `important-msg` and change it's text to "Understanding the difference between Javascript and jQuery."
