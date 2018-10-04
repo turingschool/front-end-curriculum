@@ -22,7 +22,7 @@ length: 90
 
 As discussed previously, arrays often contain a collection of related values.  We've also talked about how you can loop through an array using a `for` loop.  However, you'll soon find out that having a static array isn't always useful.  There might be times where we need to add something to an array or take something out of it.  Other times you might want to find out where a value is in an array (it's index).
 
-This is where array prototype methods can become very useful.  These methods are functions that you have access to on any array.  There are definitely a lot of them.  Just look at the [MDN Docs][exp]!  There's no need to memorize everyone single one, but it is useful to learn how to go through the docs.  Understanding how to read docs, check syntax, and look at examples is extremely useful in helping you find what you need efficiently.  This relates to not only array prototype methods but also documentation in general (you're a developer.  Trust me, you will be going through documentation a lot!)  So let's dive in!
+This is where array prototype methods can become very useful.  These methods are functions that you have access to on any array.  There are definitely a lot of them.  Just look at the [MDN Docs][exp]!  There's no need to memorize every single one, but it is useful to learn how to go through the docs.  Understanding how to read docs, check syntax, and look at examples is extremely useful in helping you find what you need efficiently.  This relates to not only array prototype methods but also documentation in general (you're a developer.  Trust me, you will be going through documentation a lot!)  So let's dive in!
 
 [exp]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype#Methods
 
@@ -31,6 +31,7 @@ This is where array prototype methods can become very useful.  These methods are
 Let's do this in a [Repl](https://repl.it) instead of the console since it's a bit easier to do basic Javascript in there.
 
 1. Insert a dog at the end off the array
+
 ```js
 // How might I add a dog, 'Collie' at the end using an array prototype method?
 var dogs = ['Golden Retriever', 'Pug', 'German Shepherd'];
@@ -40,6 +41,7 @@ var dogs = ['Golden Retriever', 'Pug', 'German Shepherd'];
 ```
 
 2. How might I insert another favorite food to the beginning of the array?
+
 ```js
 // Let's try adding a 'breakfast burrito' to the beginning of the array.
 var favoriteFoods = ['pizza', 'fruits', 'tacos'];
