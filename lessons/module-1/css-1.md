@@ -99,12 +99,12 @@ Let's setup a small static page to experiment with our HTML and CSS.
 ```html
 <!doctype html>
 <html>
-  <head>  
+  <head>
     <title>CSS Playground</title>
-  </head>  
-  <body>  
+  </head>
+  <body>
     <article>article 1</article>
-  </body>  
+  </body>
 </html>
 ```
 
@@ -142,6 +142,7 @@ The document flow is the model by which elements are rendered by default in the 
 
 ### Display Property
 
+- The display property allows us to manipulate the layout of elements on a page without taking them out of the normal page flow.
 - The default value for all elements is inline. Most "User Agent stylesheets" (the default styles the browser applies to all sites) reset many elements to "block".
 - **Inline:** `<span>`, `<em>` Text wraps around me! I accept margin and padding, and push things horizontally, not vertically. I am ignore height and width instructions.
 - **Inline-Block:** An element set to `inline-block` is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a `width` and `height` which will be respected. They also apply 2px of margin that does not register in dev tools.
@@ -178,7 +179,7 @@ Quick tip: If you want to center an element, you can give the `margin` property 
   * What might be a useful scenario for using position absolute?
   * What about relative?
   * Fixed?
-  * z-index? 
+  * z-index?
 
 ### Floats
 "Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element as seen [here](https://codepen.io/damwhit/pen/RMRKaW).
@@ -247,4 +248,4 @@ Key Points:
 ***
 
 ## Additional Resources
-* [Turing CSS Style Guide](https://github.com/turingschool-examples/css) 
+* [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
