@@ -47,7 +47,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 4. `git remote add origin git@github.com:Kalikoze/Dog-Party.git`
 5. `git push -u origin master`
 
-#### Extensions
+## Extensions
 * Make your Dog Party site mobile.  Experiment using your DevTools and `media queries`
   * How could you handle the nav bar?  Maybe change it into a menu icon?
   * How will you handle the columns? Will they still fit if they are in 3 columns?
