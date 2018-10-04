@@ -49,15 +49,29 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 
 # ![Dog Party](/assets/images/dog-party.png)
 
-### Peer Review
+### Peer Review (10 min each)
 
-With your partner, go through the list of questions below.  Take note of the different or similar ways you may have approached the comp focusing on the structure of your HTML and how you implemented your styles.  Taking a moment to reflect can help you strategize even better for your next project.
+With your partner, go through the list of questions below.  Take note of the different or similar ways you may have approached the comp focusing on the structure of your HTML and how you implemented your styles.  Taking a moment to reflect can help you strategize what you can improve on and how you can perform even better for your next project.
 
 1. What was your biggest win?  Biggest struggle?
-2. How did you implement the background image?
-3. How did you approach the header?
-4. What was your strategy for setting up each column?
-5. How did you center the main image?
-6. What was your thought process in centering the logos in the footer?
-7. What are three tips you would have told yourself a week ago?
-8. How did your partner do things differently from you?  What are some things you would like to change on yours?
+2. What is something you are still working on or struggling with?  Maybe your partner has advice?
+3. How did you implement the background image?
+4. How did you approach the header?
+5. What was your strategy for setting up each column?
+6. How did you center the main image?
+7. What was your thought process in centering the logos in the footer?
+8. What are three tips you would have told yourself a week ago?
+9. How did your partner do things similarly/differently from you?  
+10. What are some things you would like to continue to work on?
+
+### Journal Writing (5 min)
+Take a few minutes and write out an action plan for the next few days.
+- This can include restructuring your HTML layout.  
+  - Making it cleaner
+  - Using more semantic HTML over divs
+  - Making sure it follows the styleguide
+- How you could refactor your CSS?
+  - Making sure classes are named appropriately
+  - Organize your styles according to sections
+  - Alphabetizing style properties
+  - Grouping classes together that share similar styles
