@@ -30,19 +30,28 @@ But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.c
 
 
 ## CSS The Basics
-It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old tag names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
+It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
 
 ## Anatomy of a Basic CSS Rule
 
 # ![CSS Rule](/assets/images/css-rule.png)
 
-* Can target via tag name
+* Can target via element name
 * Can target via class name
 * Can target via id name
 * Can target via a combination of above
 
 <p data-height="300" data-theme-id="26495" data-slug-hash="KNvbQX" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="CSS Rules" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/KNvbQX/">CSS Rules</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+### Your turn
+
+With your partner, answer the questions below:
+
+* Can you add two classes to an element?
+* Which class takes precedent?
+* Can you add both an id and a class to an element?
+* which takes precedent?
 
 ## All the Elements are Boxes
 Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
@@ -90,12 +99,12 @@ Let's setup a small static page to experiment with our HTML and CSS.
 ```html
 <!doctype html>
 <html>
-  <head>  
+  <head>
     <title>CSS Playground</title>
-  </head>  
-  <body>  
-    <h1>Static Site Experiments in Here!</h1>
-  </body>  
+  </head>
+  <body>
+    <article>article 1</article>
+  </body>
 </html>
 ```
 
@@ -108,7 +117,7 @@ Let's setup a small static page to experiment with our HTML and CSS.
 
 In HTML, you can visualize each element as its own rectangular box. There are a number of CSS properties that can affect the final width and height of each of these boxes. The CSS Box Model describes how the final height and width of an element is determined.
 
-We have a `div` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The DevTools panel provides a handy graphic of how our div is being rendered.
+We have an `article` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The DevTools panel provides a handy graphic of how our article is being rendered.
 
 This is the default behavior for the rendering of block elements in CSS and is due to the `box sizing` property having a default value of `content-box`. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
 
@@ -124,7 +133,7 @@ Setting the `box-sizing` property to `border-box` will alter the model so that t
 
 ## Document Flow is Important
 
-The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according by their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
+The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according to their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
 
 - CSS divides HTML elements into two types: inline and block
 - After block elements, browsers render a new line
@@ -133,9 +142,10 @@ The document flow is the model by which elements are rendered by default in the 
 
 ### Display Property
 
+- The display property allows us to manipulate the layout of elements on a page without taking them out of the normal page flow.
 - The default value for all elements is inline. Most "User Agent stylesheets" (the default styles the browser applies to all sites) reset many elements to "block".
-- **Inline:** `<span>`, `<em>` Text wraps around me! I accept margin and padding, but only push things horizontally, not vertically. I am going to politely ignore your height and width instructions.
-- **Inline-Block:** An element set to `inline-block` is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a `width` and `height` which will be respected.
+- **Inline:** `<span>`, `<em>` Text wraps around me! I accept margin and padding, and push things horizontally, not vertically. I am ignore height and width instructions.
+- **Inline-Block:** An element set to `inline-block` is very similar to inline in that it will set inline with the natural flow of text (on the "baseline"). The difference is that you are able to set a `width` and `height` which will be respected. They also apply 2px of margin that does not register in dev tools.
 - **Block:**  A number of elements are set to block by UA stylesheets, usually container elements. `<div>`, `<ul>`, `<section>`, and a bunch more. Also, text blocks like: `<p>`, `<h1>`. I do not sit inline! I will take up as much horizontal space as possible!
 
 ```css
@@ -147,15 +157,29 @@ div {
 }
 ```
 
-### Position Property
+Quick tip: If you want to center an element, you can give the `margin` property a value of `auto` to center a block like element.
+
+### Your turn:
+* With a partner:
+  * How can you right align a block like element using the margin property?
+
+## Position Property
 
 - We can manipulate this [code pen](https://codepen.io/LouisaBarrett/pen/ZyreoM) to play around with the following values for our position property.
+- The `position` property in CSS will take elements out of the normal page flow, and should therefore be used sparingly.
 - `relative`: A relatively positioned element preserves its space. The adjacent elements aren’t repositioned to occupy the reserved space for this element. However, the offsets of this element don’t occupy space. They’re completely ignored from the other elements, and hence that may causes elements to overlap each other.
 - `absolute`: An absolutely positioned element is completely removed from the normal flow. The adjacent sibling elements occupy its space.
 - `fixed`: A fixed positioned element (subcategory of the absolute positioning) is positioned relative to the viewport. It will stick in place despite any scrolling or resizing of the viewport
 - You specify the position of your element via offset properties: `auto` (default), `top`, `bottom`, `right`, `left`
 - An element whose position property is set to absolute or fixed is called an absolutely positioned element.
 - A positioned element can take advantage of the `z-index` property to specify its stack order. The stack order is the order in which elements in the same space lay on top of one another. For example, an element with a `z-index` of `2` will appear above an element with a `z-index` of `1` if they happen to overlap. Without any z-index value, elements stack in the order they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning will always appear on top of elements with default static positioning. Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can never be higher than element B.
+
+### Your turn:
+* With a partner:
+  * What might be a useful scenario for using position absolute?
+  * What about relative?
+  * Fixed?
+  * z-index?
 
 ### Floats
 "Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element as seen [here](https://codepen.io/damwhit/pen/RMRKaW).
@@ -224,4 +248,4 @@ Key Points:
 ***
 
 ## Additional Resources
-* [Turing CSS Style Guide](https://github.com/turingschool-examples/css) 
+* [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
