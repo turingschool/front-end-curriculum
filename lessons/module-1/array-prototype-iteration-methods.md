@@ -4,33 +4,11 @@ length: 120
 tags: JavaScript, array, prototype
 ---
 
-## Learning Goals
+## Prework
 
-- Understand and know when to implement the following arrray prototype methods:
+Before we dive into array prototype iteration methods, we'd like you to review `for` loops.  A lot of these methods work very similar in that they iterate through an array.  Understanding how a `for` loop works and is used will help you in your understanding of this lesson. 
 
-- `forEach()`
-- `map()`
-- `filter()`
-- `sort()`
-
-## Vocab
-
-- `callback function` A function that is passed to another function to be ran at a later time
-- `array` A data structure consisting of a collection of elements (values or variables), each element is identified by an index
-- `index` The position of each element within an array
-- `iteration` A set of instructions that are repeated a specificed number of times _or_ until a condition is met
-- `truthy` A value that is considered true when evaluated in a Boolean context
-- `falsy` A value that is considered false when evaluated in a Boolean context
-
-## Context
-
-Sometimes we have a collection of items that we want to use. An array is a collection which is commonly used to store related items. We often want to manipulate arrays, sort them, add all of the values, retrieve items based on some condition...
-
-We could do these things by hand using a `for` loop, but we would have to implement our own logic to work with the array. Alternatively, we can use methods that the JavaScript language provides for us. These methods are in a group called array prototype methods. They are called this because Array is a JavaScript object, and these are methods that act on array objects. You'll see how these methods work in this lesson.
-
-## For Loops...
-
-Let's talk about how traditional `for` loops work. If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
+If we look at the [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for) documentation, we can see the syntax of a `for` loop:
 
 ```js
 for ([initialization]; [condition]; [final-expression]) {
@@ -89,7 +67,31 @@ c
 
 Notice that the condition is crucial in controlling the flow of our loop. If the condition is never false, then the loop will become an infinite loop and never stop running until we stop it or our computer runs out of memory. This is one delicate part of `for` loops to watch out for.
 
+## Learning Goals
+
+- Understand and know when to implement the following array prototype methods:
+  - `forEach()`
+  - `map()`
+  - `filter()`
+
+## Vocab
+
+- `callback function` A function that is passed to another function to be ran at a later time
+- `array` A data structure consisting of a collection of elements (values or variables), each element is identified by an index
+- `index` The position of each element within an array
+- `iteration` A set of instructions that are repeated a specificed number of times _or_ until a condition is met
+- `truthy` A value that is considered true when evaluated in a Boolean context
+- `falsy` A value that is considered false when evaluated in a Boolean context
+
+## Context
+
+We went over some of the different array prototype methods we have available to us.  Today we want to focus more on methods that are more focused on iterating through arrays. There are many times we want to manipulate arrays, add all of their values, retrieve items based on some condition...
+
+We could do these things by hand using a `for` loop, but we would have to implement our own logic to work with the array.  So instead, let's use the methods that the Javascript language provides us.
+
 ### Your Turn
+
+Let's see what it's like to use a `for` loop to solve these problems first.  We'll then see the difference between this and an array prototype method shortly!  
 
 * Use the prices array below to create a new array of increased prices.
 
@@ -434,7 +436,6 @@ The second argument that we pass to the `reduce()` method is an empty array, whi
 
 - When should you use reduce?
 - Why wouldn’t `reduce()` talk to the junior dev?
--->
 
 ## Array.prototype.sort
 
@@ -514,6 +515,27 @@ console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 
 - What is unique about `sort()` when compared to the other methods we've discussed?
 - Why is `sort()` so bad at math?
+ -->
+
+## Summary
+
+#### forEach()
+
+* How is forEach() better than a `for` loop?
+* In what scenario would I use forEach()?
+* Does forEach return anything to me?  Can I store it in a variable?
+
+#### map()
+
+* In what scenario would I use map?
+* Does map return anything to me?  Can I store it in a variable?
+* Using map, can I return an array of a different length from the original?
+
+#### filter()
+
+* In what scenario would I use filter?
+* Does filter return anything to me? Can I store it in a variable?
+* Using filter, can I return an array of a different length from the original?
 
 ## Additional Resources
 
