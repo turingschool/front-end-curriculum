@@ -21,7 +21,6 @@ In this lesson, you will learn how to:
 
 ## Vocab
 
-- `SSH Key` Similar to a password, except it's really long and complex, and you don't have to remember it. Does the same thing as a password, but is used differently
 - `Version Control System (VCS)` A tool that keeps track of the differences in code bases at different points in time
 - `Git` The most commonly used VCS
 - `GitHub` A service/website that allows people to host git repositories online
@@ -467,24 +466,6 @@ To summarize the example above, a typical workflow for a new project with Git an
 11. Locally, pull down master to your local master branch (to sync the remote with your local repository)
 
 [Here is an excellent team workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.html)
-
-## High Level Concepts
-
-### Cloning 
-
-# ![Git Clone Diagram](/assets/images/lessons/git/github-diagrams.003.jpeg)
-
-In order to move a remote repository to your local machine (a process known as cloning), you can use the `git clone [remote url]` command. GitHub makes this easy for us by providing a big green button that says 'Clone or Download' on all repository pages. 
-
-Let's clone the repo you just created in a new directory. Go to a new directory on your local machine that does not contain the `github-and-github-intro` directory. Go to the `github-and-github-intro` repository page on GitHub. Click on the 'Clone or Download' button, and copy the expanded url to your clipboard.
-
-Now, from your terminal run `git clone [copied url]`. This will copy the github repo into a directory of the same name on your local machine.
-
-### Forking
-
-# ![Fork Diagram](/assets/images/lessons/git/github-diagrams.004.jpeg)
-
-There are certain times where you will need to work on a codebase that you do not have `push` access rights to. This is the case when you need to update `turingschool/portfolios` repo. In situations like this we can `fork` the remote repo, which will create another remote repo of the same name under your own username, which in this case would be `damwhit/portfolios`. Now I have `push` access rights to the 'forked' repo and can create pull requests on the original repo.
 
 ### Your Turn
 

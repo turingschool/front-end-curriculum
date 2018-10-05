@@ -1,0 +1,1 @@
+@brittany @thatpamiam I moved our web accessibility lesson to `frontend-curriculum/lessons/floating` 1808 has already received it, but could maybe be a good thing to include for 1810. Or maybe in another upper mod if y'all don't have room?
