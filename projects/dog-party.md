@@ -107,11 +107,7 @@ Write out atleast three or more points of feedback in each section.
 [CSS Style Guide](https://github.com/turingschool-examples/css)
 
 * Take a look through the style guide and check if your partner's code follows these rules.
-* Are the styles organized in a logical way?  Are the properties for each class organized alphabetically or by similar groups (widths and heights, margins and paddings, etc.)
+* Are the styles organized in a logical way?  Are the properties for each rule organized alphabetically or by similar groups (widths and heights, margins and paddings, etc.)
 * Do the class names clearly explain what elements they are meant to style?
-* Are classes that share similar styles grouped together?  If multiple classes share similar styles, could it be refactored into one class?
+* Are classes that share similar styles grouped together?  If multiple classes share similar styles, how could it be refactored into one class?
 * Are there instances where your partner is using `!important`?
-
-#### Terminology
-* Is the student able to effectively explain their code and defend their decisions made?
-* As the student presents their project and explains their code, are they using correct terminology?
