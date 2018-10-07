@@ -19,6 +19,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 - Write a program from scratch
 - Design and implement OOP patterns
 - Understand and implement ES6 classes
+- Implement array iterator and mutator methods to work with game data
 - Write code that follows SRP (Single Responibility Principle) 
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 
