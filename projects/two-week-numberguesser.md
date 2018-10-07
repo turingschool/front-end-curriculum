@@ -50,7 +50,7 @@ The application should have the following user interface components:
 - Upon successful win, user's range is updated:
   - Every time the user wins a round increase the maximum number by 10.
   - Every time the user wins a round decrease the minimum number by 10.
-- Incorporate a scoring system based on how quickly user guesses correct number
+- Incorporate a scoring system based on how quickly user guesses correct number (NOTE: this may take some UI tweaks to incorporate -- make sure you're honoring the comp and visual patterns that already exist!)
 
 #### Layout comps
 
