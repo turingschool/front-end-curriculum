@@ -29,7 +29,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 |Day | Status| Deliverables |
 |--- |---    |--- |
 |*1* | Kick-off and exploration| What is OOP? Why is OOP useful? How is OOP used in games?|
-|*2* | Understanding/Planning| Initialize repo with a README that includes a link to your pair's DTR, a wireframe for your game, and some potential design inspiration. Start diagram for OOP design/classes|
+|*2* | Understanding/Planning| [Initialize a repo](https://gist.github.com/brittanystoroz/7ffa5c4e1d39aa92b3e95d3358d9d6fd) with a README that includes a link to your pair's DTR, a wireframe for your game, and some potential design inspiration. Start diagram for OOP design/classes|
 |*3* | Understanding/Planning| Diagram for OOP design/classes due|
 |*5* | Check-in| Pair-to-Pair feedback|
 
