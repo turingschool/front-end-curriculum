@@ -8,6 +8,8 @@ title: Number Guesser Doubles
 - Care and attention to detail should be clearly demonstrated in execution of the comp
 - Include a README.md in your project that summarizes the project (this does not mean paste this project spec into your README)
 
+##### NOTE: work to have the functionality outlined in this project spec completed before the Week 2 Spec/Additions is kicked off at the end of the week.
+
 ## Phase One: Basic Requirements
 
 The application should have the following user interface components:
