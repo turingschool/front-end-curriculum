@@ -43,7 +43,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 
 ## Restrictions
 
-To populate your data for WOF, you will be using [this data](https://repl.it/@thatpamiam/WheelOfFortune). Copy this into a separate file that you then import into the necessary file.
+To populate your data for WOF, you will be using [this data](https://repl.it/@thatpamiam/WheelOfFortune). Copy this into a separate file that you can then import into the necessary file.
 
 You can use any of the following JavaScript libraries:
 
