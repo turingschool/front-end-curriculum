@@ -1,5 +1,5 @@
 ---
-title: Number Guesser Doubles
+title: Number Guesser Doubles - Week 1
 ---
 
 ## Overview: Week 1
