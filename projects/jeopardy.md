@@ -1,10 +1,10 @@
 ---
-title: Wheel of !Fortune
+title: Jeopardy
 length: 2 weeks
 tags: javascript, jquery, svg, mocha, testing
 ---
 
-# Wheel of !Fortune
+# Jeopardy
 
 2 week paired project for FE Mod 2 (week 2-3)
 
@@ -22,6 +22,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 - Implement array iterator and mutator methods to work with game data
 - Write modular, reusable code that follows SRP (Single Responibility Principle) 
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
+
 
 ## Outline
 
@@ -42,8 +43,6 @@ Building software, at its core, is about solving problems. Generally speaking, t
 |*11* | Assessment| Formal Code Review or Class Code Review|
 
 ## Restrictions
-
-To populate your data for WOF, you will be using [this data](https://repl.it/@thatpamiam/WheelOfFortune). Copy this into a separate file that you can then import into the necessary file.
 
 You can use any of the following JavaScript libraries:
 
@@ -82,49 +81,43 @@ These user stories may be worked on in any order that makes sense to your pair.
 ``` 
 Game play,
   - Must have 3 players
-  - Must have 4 rounds - 4 rounds make up 1 game
+  - Must have 3 rounds - 3 rounds make up 1 game
   - The winner is determined by the player with the highest grand total score at the end all rounds
   - Each player starts with a score/account of 0 at the start of every round
   - Each player's score should be displayed by their name
-  - At the end of a round, each player's score will be added to a grand total score.
+  - At the end of a round, each player's score will be added to their grand total score
 ```
 
 ```
-Puzzle,
-  - The game should have at least one bank of puzzles. One bank should be chosen at the start of the game
-  - A word puzzle is randomly chosen at the start of every round
-  - Each puzzle has a category (or class) (e.g. "phrase," "person," "things," etc)
-  - Each puzzle is one or more words that is an instance of the category/class
-  - Initially, the letters of the puzzle will be hidden
-  - There will be clear indications in the UI to indicate hidden letters and spaces
-  - The UI will keep track of what letters have already been guessed
-  - The category for the puzzle will be displayed as a hint 
+Rounds,
+  - 1st Round must have 4 categories, with 5 clues each, and point values ranging from 100 - 500
+  - One clue in the first round must be a 'Daily Double'
+  - 2nd Round must have 4 categories, with 5 clues each, and point values ranging from 200 - 1,000
+  - Two clues in the second round must be a 'Daily Double'
+  - 3rd Round must have a single category and a single clue that behaves like a 'Daily Double'
+  - 3rd Round must only display the category, allow each player to input a wager, then display the clue
+
 ```
 
 ```
-Wheel,
-  - A wheel is chosen at the start of the game
-  - Wheel must have at least six elements
-  - An element can either be a positive whole dollar amount, a "Lose-a-turn", or a "Bankruptcy" element
-  - The elements of a wheel are in a 'randomized' order
+Clues,
+  - Each clue should only appear once per game
+  - 'Daily Double' clues must accept a wager from the player who selects it
+  - The wager can range from a minimum of 5 points to a maximum of either:
+    - the player's current total score
+    - the highest point value remaining on the board
+    - (whichever is greater)
 ```
 
 ```
 As a player,
-  I should be able to quit/start a new game at any time.
-  I have three options when it is my turn:
-  1) Solve the puzzle
-    - If I guess correctly, my grand total score is increased my current score and the round is over
-    - If I guess incorrectly, my turn is over
-  2) Spin the wheel
-    - A random element will be chosen for my spin
-    - If a bankrupt element is chosen, my score/account will be reset to 0
-    - If a lose-a-turn element is chosen, my turn will end
-    - If an element is chosen with a dollar amount, I will be prompted to choose a consonant
-  3) Buy a vowel
-    - The cost or buying a vowel is $100
-    - I should be prompted to enter what vowel I would like to buy
-    - $100 is subtracted from my score/account regardless of whether the vowel is part of the puzzle.
+  - I should be able to quit/start a new game at any time
+  - I should be able to enter my name
+  - When it is my turn:
+    - I should be able to select a category and point value off the board, as long as it hasn't already been previously selected
+    - I should be able to input a wager if I have selected a 'Daily Double' clue
+    - I should be able to input an answer after the clue I selected has been revealed
+    - My score should increment or decrement by the point value of the clue if I answered right or wrong, respectively
 ```
 
 ## Extensions
