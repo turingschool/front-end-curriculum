@@ -125,8 +125,9 @@ As a player,
 ## Extensions
 
 * Get your game hosted on GitHub pages
-* Create AI players
+* Research and use a CSS3 Transition/Animation in your UI
 * Write a blog post to publish on Medium that details your experience with implementing OOP designs in your game
+* Create AI players
 * Choose your own extension (instructor approval)
 
 # Rubric
