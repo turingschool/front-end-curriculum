@@ -135,7 +135,7 @@ To create new instances of an Instructor, we would do the following:
 
 ```js
 let pam = new Instructor('Pamela Lovett', 2, ['funny', 'smart']);
-let brittany = new Instructor('Brittany Storoz', 2, ['honest']);  
+let brittany = new Instructor('Brittany Storoz', 2, ['honest', 'smart']);  
 ```
 
 We declare a new variable, and use the `new` keyword to instantiate a new object from our Instructor class.
