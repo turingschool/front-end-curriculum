@@ -178,7 +178,7 @@ function foo() {
 function bar() {
   console.log('y1', y);
   var y = 2;
-  consolelog('y2', y);
+  console.log('y2', y);
 }
 ```
 
