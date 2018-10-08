@@ -44,6 +44,8 @@ Building software, at its core, is about solving problems. Generally speaking, t
 
 ## Restrictions
 
+To populate your data for Jeopardy, you will be using [this data](https://repl.it/@thatpamiam/WheelOfFortune). Copy this into a separate file that you can then import into the necessary file.
+
 You can use any of the following JavaScript libraries:
 
 * [jQuery](http://jquery.com/)
@@ -66,7 +68,7 @@ You should have at least one use-case for [inheritance](https://www.sitepoint.co
 
 ## Testing
 
-You should be testing your the correctness of your code throughout your project. Each JavaScript file in your project should have its own test file. (e.g. Your `Wheel.js` class file should have a corresponding testing file called `Wheel-test.js`)
+You should be testing your the correctness of your code throughout your project. Each JavaScript file in your project should have its own test file. (e.g. Your `Clue.js` class file should have a corresponding testing file called `Clue-test.js`)
 
 Your testing suite should test all of the functionality of the game, including the following:
 
