@@ -403,12 +403,6 @@ for (var i = 0; i > -1; i++) {
 
 We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.  
 
-### Benchmarking Loops ( in case you're curious )
-We haven't talked about other kinds of loops yet, but there are many different ways to loop over a data set, and each of them have pros and cons.  
-
-If you're curious, check out this [jsPerf analysis](https://jsperf.com/for-vs-foreach/66) of how long various `for`/`forEach`/`while` loops take to run when executing the same code.  
-
-
 ### Additional Practice  
 
 * [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
