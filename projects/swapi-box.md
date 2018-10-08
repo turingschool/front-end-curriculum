@@ -18,8 +18,8 @@ Using a "Modular Structure" means that all of the files associated with a given 
 
 For example:  
 ```js
-App/
-  Components/
+src/
+  components/
     Button/
       Button.js
       Button.scss
