@@ -84,10 +84,10 @@ These user stories may be worked on in any order that makes sense to your pair.
 Game play,
   - Must have 3 players
   - Must have 3 rounds - 3 rounds make up 1 game
-  - The winner is determined by the player with the highest grand total score at the end all rounds
-  - Each player starts with a score/account of 0 at the start of every round
+  - The winner is determined by the player with the highest total score at the end all rounds
+  - Each player starts with a score of 0
   - Each player's score should be displayed by their name
-  - At the end of a round, each player's score will be added to their grand total score
+  - Each player gets an individual turn (rather than every player racing to answer the question)
 ```
 
 ```
