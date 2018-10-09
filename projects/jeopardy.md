@@ -10,9 +10,9 @@ tags: javascript, jquery, svg, mocha, testing
 
 ## Background and Description
 
-For this project you will learn object-oriented programming (OOP) principles by building the game Wheel of Fortune. This is an opportunity to work with classes to build a program at a larger scale than you have with previous projects. This is also an opportunity for you to build out a program based on user stories - which is more aligned to what you can expect to see working with product managers in a production environment.
+For this project you will learn object-oriented programming (OOP) principles by building the game Jeopardy. This is an opportunity to work with classes to build a program at a larger scale than you have with previous projects. This is also an opportunity for you to build out a program based on user stories - which is more aligned to what you can expect to see working with product managers in a production environment.
 
-Building software, at its core, is about solving problems. Generally speaking, the first step in finding a solution to the problem is to be sure that you have clearly identified the problem as well what features the solution must incorporate. From here, we can flesh out the _requirements_ that specify what our program should have. For the problem of building Wheel of Fortune, the rules of this game will serve as the requirements for the spec.
+Building software, at its core, is about solving problems. Generally speaking, the first step in finding a solution to the problem is to be sure that you have clearly identified the problem as well what features the solution must incorporate. From here, we can flesh out the _requirements_ that specify what our program should have. For the problem of building Jeopardy, the rules of this game will serve as the requirements for the spec.
 
 ## Goals and Objectives
 
