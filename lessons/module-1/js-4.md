@@ -228,36 +228,3 @@ human.getName();
 
 **PRO TIP:** The context of this within a function will be determined by WHERE THE FUNCTION GETS CALLED.
 
-## Which Data Structure?
-When deciding on an approach, you must consider how the data will be used. Let's think about a few scenarios:
-
-When the order of objects is important, they should be stored in an array.  
-When you want to access objects using their name, they work well as properties of another object.
-
-#### Objects in an Array
-
-```javascript
-var people = [
-  {name: 'Mike', age: 65, active: true},
-  {name: 'Becca', age: 23, active: false},
-  {name: 'Tony', age: 40, active: false},
-  {name: 'Penelope', age: 23, active: true}
-];
-people[1].name;
-people[3].age;
-people[2].active;
-```
-
-#### Objects as Properties
-
-```javascript
-var people = {
-  Hercules: {age: 65, active: true},
-  Aphrodite: {age: 23, active: false},
-  Zeus: {age: 40, active: false},
-  Magneto: {age: 23, active: true}
-};
-people.Magneto.age;
-people.Hercules.active;
-people.Aphrodite.age;
-```
