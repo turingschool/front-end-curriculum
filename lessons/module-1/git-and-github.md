@@ -312,7 +312,7 @@ Edit the title of the pull request, if necessary, and add some more content in t
 
 For instance, let's add another file to our project called `checklist.md`.
 
-Inside of that file, I'll create a very important checklist.
+Inside of that file, let's create a very important checklist.
 
 ```markdown
 * [ ] make tacos
@@ -363,9 +363,9 @@ Individually (use your neighbors if you get stuck), use the above workflow to cr
 In your group of 4, use the post-it notes you wrote commands on earlier, as well as the chart paper and marker on your table to create a visual diagram of all of the steps in the workflow we've been following. 
 
 Things to consider:
-What steps repeat?
-What steps won't?
-If there are commands used in both of the above, feel free to add another post-it
+What steps repeat? - what shape of diagram could be used to show that?
+What steps won't? - should these be separate from the ones that do?
+If there are commands used in both of the above, feel free to add another post-it for that duplicate command
 Add any intermittent information that you think is useful
 
 ### Next steps
