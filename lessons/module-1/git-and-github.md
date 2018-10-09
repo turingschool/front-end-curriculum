@@ -363,10 +363,11 @@ Individually (use your neighbors if you get stuck), use the above workflow to cr
 In your group of 4, use the post-it notes you wrote commands on earlier, as well as the chart paper and marker on your table to create a visual diagram of all of the steps in the workflow we've been following. 
 
 Things to consider:
-What steps repeat? - what shape of diagram could be used to show that?
-What steps won't? - should these be separate from the ones that do?
-If there are commands used in both of the above, feel free to add another post-it for that duplicate command
-Add any intermittent information that you think is useful
+* What steps repeat? - what shape of diagram could be used to show that?
+* What steps won't? - should these be separate from the ones that do?
+* If there are commands used in both of the above, feel free to add another post-it for that duplicate command
+* What steps are useful for pulse checking? Could they exist outside of the flow as helpers?
+* Add any intermittent information that you think is useful
 
 ### Next steps
 
@@ -379,8 +380,6 @@ To get even more practice, try completing the rest of the exercises under Basic 
   * [Team Workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.html)
   * [Common git commands and a link to a giant cheetsheet](http://frontend.turing.io/lessons/module-1/git-commands.html)
   * [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/)
-  * [Awesome Git Tutorial](https://githowto.com/)
   * [GitHub Tutorials](https://guides.github.com/)
-  * [Visual Documentation and Examples for Git and GitHub](https://www.atlassian.com/git/tutorials/)
   * [git docs](https://git-scm.com/docs)
 
