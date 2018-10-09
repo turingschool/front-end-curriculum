@@ -5,7 +5,7 @@ tags: javascript, object oriented programming, oop
 module: 2
 ---
 
-## After this lesson you should...
+### Learning Goals
 * Have a high-level understanding of what OOP is and be able to define it
 * Be able to speak to the principles and benefits of OOP
 
@@ -18,11 +18,28 @@ module: 2
 - `Instance` One specific copy of an object
 - `Inheritance` The practice of allowing new objects to take on the data and behavior of their parents
 - `Encapsulation` Hiding the details of how an object works & grouping data and behavior
-- `Message Passing` The way in which Objects talk to each other
 - `SRP` Single Responsibility Principle
 - `Coupling` The level of connectedness between two objects
 
 ---
+
+### Journal Warm Up
+
+* Describe something new that you learned about OOP from your research yesterday
+* Generally define the following words in your own words:
+  - Encapsulate
+  - Inherit
+  - Abstract
+  - Morph
+* Is forgetting to invoke the keyword of `new` with the constructor function below problematic? Will your code still work? Why or why not?
+
+```js
+function Unicorn(name) {
+  this.name = name;
+}
+
+const unicorn = new Unicorn('Brittany')
+```
 
 # What is Object Oriented Programming?
 
@@ -69,6 +86,8 @@ If we map this back to JavaScript, we can assume:
 * **noun:** the name of our object (or properties on our object that are not methods)
 * **adjectives:** the values of our properties (sometimes these will not actually be adjectives, but the idea here is that the values of our properties are descriptors for our object)
 * **verbs:** the methods on our object
+
+#### Turn and Code
 
 Remembering these vocabulary rules will help you with creating semantic naming conventions for your objects and their properties. Take the following sentence and create an object based off of it:
 
@@ -120,7 +139,7 @@ Let's break down this syntax a bit:
 
 The constructor method should be the first thing you set up within your class. The constructor method is built into classes by default (JavaScript gives this to you). It takes in any property values you'd like to set on your object, and assigns them as **instance properties**.
 
-We know we want our instructor to have a name, module, and traits, so we're going to allow users to pass these values in when they go to create a new instructor. You'll notice we're assigning each instance property with `this.nameOfProperty = propertyValue`. You must prefix each instance property with `this`. We'll dig into `this` more in another lesson.
+We know we want our instructor to have a name, module, and traits, so we're going to allow users to pass these values in when they go to create a new instructor. You'll notice we're assigning each instance property with `this.nameOfProperty = propertyValue`. You must prefix each instance property with `this`
 
 ## Creating Instances
 
@@ -153,6 +172,11 @@ Coupling refers to the level of connectedness between two objects. It's inevitab
 ## Single Responsibility Principle/Principle of Least Knowledge
 
 Avoiding these dependencies means following the single responsibility principle and the principle of least knowledge. These concepts suggest that each of our objects should have a single, focused duty, and should know only as much information as it needs to perform it. This creates fewer dependencies and prevents bugs from creeping into our codebase. A good comparison would be to think about how our organs work - a [heart](https://www.youtube.com/watch?v=HYWmYJNg5Jw) can be maintained for transplant in a box because it's completely unaware of its surroundings and doesn't know that it's not inside a body because it has a single responsibility: to beat, and knows as little as possible about the rest of the system it's attached to.
+
+#### Turn and Talk
+
+- Explain classes and class instances to the person next to you
+- Describe SRP in your own words
 
 ## Inheritance
 
@@ -197,22 +221,19 @@ let bob = new TA('Bob', 2, ['serious']);
 
 The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor function of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class.
 
+## Practice
+
+With a partner, think about the Turing basement and come up with something that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. Create a repl for them!
 
 ### Prototypal Inheritance
 
-Let's add a debugger after we instantiate our `bob` TA so that we can inspect it in the developer tools. In the console tab, you should be able to type in `bob` and get a representation of the bob object like so:
+Let's inspect our `bob` TA in the developer tools. In the console tab, you should be able to type in `bob` and get a representation of the bob object like so:
 
 ![prototypal](https://i.imgur.com/E01qcn7.png)
 
 Here you can see the entire prototype chain, and how `bob` is inheriting properties and methods from the `Instructor` class. This is called **prototypal inheritance**.
 
-
-## Practice
-
-With a partner, think about the Turing basement and come up with something that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. Create a repl for them!
-
-
-## Practice 2
+## More Practice
 
 Pick an application you use regularly -- it can be a social media app, e-commerce site, etc. Think about what kinds of classes you might use to build it. What components of the application should be reusable? What kinds of properties and behaviors should they have? Could anything inherit from them?
 
@@ -349,15 +370,16 @@ We'll be building out some classes to create a minimal flash card application.
 
 ## Checks for Understanding
 
-* What is a class? What is an instance of a class?
 * What is OOP?
+* What is a class? What is an instance of a class?
 * What are the core benefits of OOP?
 * What does the `constructor` method do?
-* Explain how inheritance works.
+* Explain how inheritance works
 
 
 ## Further Reading
 
+* [Intro to OOP](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
 * [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 * [Class-based vs. prototypal inheritance](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
 * [MDN Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
