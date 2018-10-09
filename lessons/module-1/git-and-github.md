@@ -358,11 +358,11 @@ To summarize the example above, a typical workflow for a project tracked with Gi
 
 ### Your Turn: using the workflow
 
-Individually (use your neighbors if you get stuck), use the above workflow to create a practice git repo:
+Individually (use your neighbors if you get stuck), use the above workflow to create a practice git repo and work through some features:
 * Be sure to follow every step along the way.
 * [ ]  The repo should have an html file and a css file when you push its initial structure
-* [ ]  Work on a feature branch called `add-html-structure` to add structure to your html file. When finished, submit and merge a pull request to update master with your changes
-* [ ]  Work on a feature branch called `add-styles` that changes the background of your page to `blanchedalmond`. When finished, submit and merge a pull request to update master with your changes.
+* [ ]  Work on a feature branch called `add-html-structure` to add structure to your html file.
+* [ ]  Work on a feature branch called `add-styles` that changes the background of your page to `blanchedalmond`.
 
 ### Your Turn: creating a flow diagram
 
