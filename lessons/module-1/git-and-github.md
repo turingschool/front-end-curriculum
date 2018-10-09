@@ -6,7 +6,7 @@ tags: git, github
 
 ### Prework: 
 
-The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
+The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git) (up to, but not including 'Manhattan Zoo'), before the lesson.
 
 ### Learning Goals
 
@@ -56,7 +56,7 @@ Discuss with your number guesser pair. The person with longer hair should start.
 
 At this point, you will not need your computers. Please take notes as the instructor walks through a basic Git and GitHub workflow.
 
-In addition, you have a set of post-it notes and a chartboard on your table. 
+In addition, you have a set of post-it notes and a piece of chart paper on your table.
 
 Write each command (without the definition) on a post-it note as we walk through this workflow (one post-it for each command per table). Don't worry about the chart paper for now.
 
@@ -190,6 +190,10 @@ Go to your GitHub profile. Click the green button called **New Repository**.
 
 Under "Repository name", let's give this the same name as the directory we made locally. The convention is to keep these names the same to avoid any confusion.
 
+Create it without a README.md, since we have already created one.
+
+Once it's created, we can follow the instructions under '... or push an existing repository from the command line' - the steps are broken down below.
+
 #### Add remote (origin) to local repository (`git remote`)
 
 Now that we have an online (remote) repository, we have to connect it to our local repository. Git has a concept of a "remote". The remote is a place where we can push our code externally (like the cloud - GitHub).
@@ -308,7 +312,7 @@ Edit the title of the pull request, if necessary, and add some more content in t
 
 **Note** I can continue to make changes to my pull request until it gets merged.
 
-For instance, let's add another file to our project called `checklist.md`.
+Let's add another file to our project called `checklist.md`.
 
 Inside of that file, let's create a very important checklist.
 
@@ -317,6 +321,10 @@ Inside of that file, let's create a very important checklist.
 * [ ] eat tacos
 * [ ] be happy
 ```
+
+Let's also add another line to our readme file.
+
+**Note** Since we've made a change to our existing readme, we can check what change has occurred using `git diff`
 
 Now, let's add, commit, and push our changes.
 
@@ -352,9 +360,9 @@ To summarize the example above, a typical workflow for a project tracked with Gi
 
 Individually (use your neighbors if you get stuck), use the above workflow to create a practice git repo:
 * Be sure to follow every step along the way.
-* [ ] The repo should have an html file and a css file when you push its initial structure
-* [ ] Work on a feature branch called `add-html-structure` to add structure to your html file. When finished, submit and merge a pull request to update master with your changes
-* [ ] Work on a feature branch called `add-styles` that changes the background of your page to `blanchedalmond`. When finished, submit and merge a pull request to update master with your changes.
+* [ ]  The repo should have an html file and a css file when you push its initial structure
+* [ ]  Work on a feature branch called `add-html-structure` to add structure to your html file. When finished, submit and merge a pull request to update master with your changes
+* [ ]  Work on a feature branch called `add-styles` that changes the background of your page to `blanchedalmond`. When finished, submit and merge a pull request to update master with your changes.
 
 ### Your Turn: creating a flow diagram
 
