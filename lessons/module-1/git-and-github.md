@@ -4,9 +4,7 @@ length: 120
 tags: git, github
 ---
 
-### Prework Setup: 
-
-#### Git
+### Prework: 
 
 The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git), before the lesson.
 
@@ -38,7 +36,7 @@ In this lesson, you will learn how to:
 
 Git is a version control system (VCS). VCSs keep track of the differences in file systems at different points in time. We interact with Git **from the command line**. We use Git to commit changes to our project. These commits serve as snapshots in time (or versions) of the project. A project that uses Git has a complete history of the code changes made throughout its existence, which can be powerful if you want to look at the origin of a bug, or if you want to revert to an old version of a project. Git is used throughout the software development community, not only for web development - it gives developers a robust way to collaborate, share, and maintain code bases.
 
-### What Git is NOT
+### What is GitHub, and why should we use it?
 
 **Git is NOT the same as GitHub**.
 
@@ -46,25 +44,33 @@ Despite their similar names, Git and GitHub are **not the same thing**. They wor
 
 GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo on GitHub, and then, as work is done, the code is committed and pushed from the developer's local repo and added to the repo on GitHub.
 
-## An Example Journey Through Git
+### Before we start
 
-#### Create a new directory
+In your journal:
 
-In your terminal, change into a directory where you can add Turing related exercises. Once you are in that directory, create a new directory called `git-and-github-intro`. Change into that directory.
+Think back to how you used git and github for dog party - what did you notice? Have you tried using Git and GitHub for number guesser? What questions have come up?
 
-Just to confirm we are starting from scratch, run the command `ls -a`. This will print out a list of files or directories nested within our current directory. At this time you should only see `./` and `../`.  
+Discuss with your number guesser pair. The person with longer hair should start.
+
+## An example journey through Git and GitHub
+
+At this point, you will not need your computers. Please take notes as the instructor walks through a basic Git and GitHub workflow.
+
+In addition, you have a set of post-it notes and a chartboard on your table. 
+
+Write each command (without the definition) on a post-it note as we walk through this workflow (one post-it for each command per table). Don't worry about the chart paper for now.
 
 #### Initialize git locally (`git init`)
 
-Once you are in the `git-and-github-intro` directory, in the terminal, type `git status`. You should see a line that looks something like this:  
+Inside of a `git-and-github-intro` directory, in the terminal, type `git status`. You should see a line that looks something like this:  
 
 ```shell
 fatal: Not a git repository (or any of the parent directories): .git
 ```
 
-By running the command `git status`, you are essentially telling the current directory "hey, go find a file called `.git`, and find out the status of tracking my files through."  
+By running the command `git status`, you are essentially telling the current directory "hey, go find a file called `.git`, and find out the status of tracking my files."
 
-The error we get says that we haven't created a `.git` file, which means the directory we're in is not a git repository, and the terminal can't do what you're trying to ask of it.  
+The error we get says that we haven't created a `.git` directory, which means the directory we're in is not a git repository, and the terminal can't do what you're trying to ask of it.  
 
 For the terminal to recognize the command `git status` and give you useful information, we must initialize git for this specific directory.  
 
@@ -102,7 +108,7 @@ Additionally, if we use `ls -a` to look in the directory, we can see a `.git` hi
 
 #### Add a file
 
-Let's make this a real project and actually add some content! Add a new HTML file from the terminal using `touch index.html`.
+Let's make this a real project and actually add some content! Add a readme file from the terminal using `touch README.md`.
 
 #### Check status (`git status`)
 
@@ -118,14 +124,14 @@ No commits yet
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
 
-	index.html
+	README.md
 
 nothing added to commit but untracked files present (use "git add" to track)
 ```
 
 #### Add file to staging area (`git add`)
 
-If in the future we want to add these changes to our repository (and we do), then we need to add this file to the "staging area". To add the file to the staging area, use the command `git add index.html`. This command is saying to add the file named `index.html` to the staging area.
+If in the future we want to add these changes to our repository (and we do), then we need to add this file to the "staging area". To add the file to the staging area, use the command `git add README.md`. This command is saying to add the file named `README.md` to the staging area.
 
 If we wanted to add all of the untracked files or changes, then we could use the command `git add .`. The dot `.` after `add` says add all untracked files in this repository.
 
@@ -139,7 +145,7 @@ No commits yet
 Changes to be committed:
   (use "git rm --cached <file>..." to unstage)
 
-	new file:   index.html
+	new file:   README.md
 ```
 
 #### Commit the file (`git commit`)
@@ -166,19 +172,19 @@ Please read [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commi
 
 If we check the status of the repository now (`git status`), then it tells us that there is "nothing to commit" because all of the changes we have made in this directory have been committed.
 
-### Turn and Share
+#### Look at your commit history (`git log`)
 
-Now that we have worked through the basic git workflow, turn to someone you're sitting next to and explain what we just did and why each step is necessary.
+`git log` allows us to see our commit history locally.
 
-### Turn and Share: Look at your commit history (`git log`)
+We can also check a condensed version of that report by running `git log --oneline`.
 
-Type `git log` in the terminal. What do you see? Discuss with you partner what you think is being displayed in the terminal.  
+##### Turn and Share
 
-Checkout a condensed version of that report by running `git log --oneline`. What information gets left out compared to the `git log` command?  
+Now that we have worked through the basic git workflow, turn to someone you're sitting next to and explain what we just did and why each step was necessary.
 
 ## Incorporating GitHub
 
-### Create repository on GitHub
+#### Create repository on GitHub
 
 Now let's create a repository on GitHub. This repository will sync with your local repository - the code you develop locally will be synced with this online repository so you can share code and collaborate.
 
@@ -186,7 +192,7 @@ Go to your GitHub profile. Click the green button called **New Repository**.
 
 Under "Repository name", let's give this the same name as the directory we made locally. The convention is to keep these names the same to avoid any confusion.
 
-### Add remote (origin) to local repository (`git remote`)
+#### Add remote (origin) to local repository (`git remote`)
 
 Now that we have an online (remote) repository, we have to connect it to our local repository. Git has a concept of a "remote". The remote is a place where we can push our code externally (like the cloud - GitHub).
 
@@ -200,10 +206,12 @@ The local and remote repositories are now linked! (we can confirm that is the ca
 
 ![Git Areas](/assets/images/lessons/git/github-diagrams.002.jpeg)
 
-### Push up initial files (`git push`)
+#### Push up initial files (`git push`)
 Finally, we need to push up our initial code from our local repository (aka your computer), to the remote repository (aka GitHub.com).  
 
 `git push -u origin master`
+
+*Note* the `-u` flag only needs to be used on the initial push, all subsequent pushes can leave it out.
 
 Go back and visit the repository on github.com and refresh the page. If all went well you should see your files.  
 
@@ -212,22 +220,9 @@ On branch master
 nothing to commit, working directory clean
 ```
 
-#### Edit the file
+Now, our initial setup is complete. We have successfully hosted our site, at this point in time, on GitHub
 
-Let's add some basic markup to our `index.html` file. In that file file, type `html` and then hit tab to spit out a basic html skeleton, and add an appropriate title like "Git & GitHub Introduction"
-
-Also, add an h1 title to the page of your choosing
-
-Let's check the status of our repository again (`git status`). Git saw our changes! We know this because it says under "changes not staged for commit" that the `index.html` was modified.
-
-Running `git status` tells us what file has been modified but does not give us anything more. If we want to see exactly what changes occurred we can invoke the command `git diff` to see what they were.
-
-Since we want to add these changes to our project (and the version history of the project), we need to add them to the staging area: `git add index.html`
-
-Now that the changes are in the staging area, if we use `git status` to check the status of the repository again, there are now "changes to be committed".
-
-Commit the changes. For this commit, we added content to our `index.html` file, so the commit command (with message!) is: `git commit -m "Add HTML structure and h1 title"`
-Push your changes to the master branch by running: `git push origin master`
+### Getting into our continous workflow
 
 #### The master branch
 
@@ -236,6 +231,8 @@ When we type `git status`, part of the message we get back is "On branch master"
 In Git, there is this concept of branches. They represent a line of development. The master branch is typically the branch where the code works without known bugs.  
 
 Ideally, we want to keep the master branch "clean" of bugs. So if we want to write new code, then we can branch off of master.
+
+The initial commit should be the only commit that you commit on and push directly to master.
 
 When you branch off of the master branch, that new branch can serve as a `sandbox` for development where you can make changes or experiment with a `research spike` without affecting the master branch.
 
@@ -255,19 +252,19 @@ We only have the default branch master right now, so it lists only `master`. The
 
 Let's make a new branch! The command to make a new branch is `git branch [branch name]`.
 
-Type `git branch add-body-content` in the terminal. Now check `git branch` again. What do we see? We see our new branch name! However, the `*` is still next to the master branch.  
+Type `git branch add-readme-info` in the terminal. Now check `git branch` again. What do we see? We see our new branch name! However, the `*` is still next to the master branch.  
 
 ```shell
-add-body-content
+add-readme-info
 * master
 ```
 
 To change to our new branch, we need to "checkout" the branch.  
 
-Let's checkout the new branch using the command `git checkout add-body-content`. To checkout any branch, the command is `git checkout [branch name]`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
+Let's checkout the new branch using the command `git checkout add-readme-info`. To checkout any branch, the command is `git checkout [branch name]`. Now if we enter `git branch`, the asterisk shows we are on the new branch we just created.
 
 ```shell
-* add-body-content
+* add-readme-info
   master
 ```
 
@@ -275,84 +272,15 @@ Let's checkout the new branch using the command `git checkout add-body-content`.
 
 #### Make changes on the new branch
 
-Now that we've checked out the new feature branch, we can start making changes on the branch. Let's add a CSS file and some more content to the body.
+Now that we've checked out the new feature branch, we can start making changes on the branch. Let's add some content to our readme.
 
-To add the CSS file, `touch styles.css`. In the CSS file, add a simple rule:
-
-```css
-body {
-  background-color: lightgray;
-}
+```markdown
+# Git and GitHub Intro
+## Git and GitHub are the bees knees!
 ```
 
-Link the stylesheet in the `<head>` of the `index.html` file.
-
-Add the file to staging, and commit the changes: `git add styles.css` and then `git commit -m "Add CSS file with background color"`.
-Now push your changes to the remote `git push origin add-body-content`
-
-Now let's add some content to the body (like our feature branch name said we were going to do) - just a chunk of paragraph text. So the HTML so far looks like:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Git & GitHub Introduction</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Whoa git & github are the bees knees!</h1>
-  <p>Are they?</p>
-</body>
-</html>
-```
-
-Add and commit your changes - **Do not push yet**
-
-#### Revert to old versions/snapshots (`git reset`)
-
-You know, I don't like the changes we made to add text to the body. I wish there was a way we could go back to code we had before. Well, there is! This is the advantage of making small commits - we can revert our project back to one of these commits that served as a snapshot in time.
-
-Type `git log` in the terminal to see a history of our commits. For each commit, there is a special string of characters that uniquely identify each commit that is called a "hash", or a "sha". So there is the title of each commit, and then something like `commit 2951dd271a636583b394e19802c9703c260f45ac`. That giant string of numbers/letters is the "sha" or "hash" (those words are frequently used interchangeably).
-
-We want to go back to the commit where we added the CSS file. To revert back to a commit, we have to use the hash to identify the unique commit. If we had 100 commits, and two of them had the same hash, then that would cause issues. So the hash is calculated to be a unique string.
-
-In my case, the commit hash for the snapshot I want to go back to looks like this:
-
-```shell
-commit 2951dd271a636583b394e19802c9703c260f45ac
-```
-
-Your exact commit hash WILL BE DIFFERENT from the one above.
-
-The command to revert to a previous commit is `git reset [commit hash]`. So in this case, the command would be `git reset 2951dd271a636583b394e19802c9703c260f45ac`
-
-Note - this will keep all changes since the previous commit as unstaged changes.
-
-To reset to a previous commit and erase all changes since that commit, you can add the `--hard` flag, which is something to be careful with. Doing so will make the whole command look like this instead: `git reset --hard [commit hash]`.
-
-Lets go ahead and run `git reset --hard [commit hash]`
-
-Now if we look at `git log`, the commit we reverted back to is the most recent and the commit with the paragraph content is no longer there.  
-
-We reverted back to a state where we didn't have paragraph content, which seems trivial. We could have just deleted the paragraph! Imagine if you have multiple files with many changes. In that case, resetting to a previous commit makes grouping all of those changes much easier.
-
-No add some finalized content to the paragraph instead. It should look like this:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Git & GitHub Introduction</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <h1>Whoa git & github are the bees knees!</h1>
-  <p>Yeah they are!</p>
-</body>
-</html>
-```
-
-Add, commit, and push your changes!
+Add the file to staging, and commit the changes: `git add README.md` and then `git commit -m "Add level 1 and level 2 headings to readme"`.
+Now push your changes to the remote `git push origin add-readme-info`
 
 ### Two ways to merge
 
@@ -368,7 +296,7 @@ Therefore we can run `git merge master`. Since our master branch has not been up
 Already up to date.
 ```
 
-This step is most important when working on a team. We will want to make sure that our feature branch has merged master locally before we create a pull request.
+This step is most important when working on a team. It is a safeguard, to ensure that our feature branch has all of the latest changes from master, before we create our pull request.
 
 **Note** Ideally you are only merging the changes from master into features branches locally and merging changes from feature branches into master via pull requests
 
@@ -380,7 +308,21 @@ Now we can create a pull request (PR). A pull request is a formal way of merging
 
 Edit the title of the pull request, if necessary, and add some more content in the description box about what you changed and why. When you are done describing the changes, click **Create pull request**.
 
-### Merge pull request (PR)
+**Note** I can continue to make changes to my pull request until it gets merged.
+
+For instance, let's add another file to our project called `checklist.md`.
+
+Inside of that file, I'll create a very important checklist.
+
+```markdown
+* [ ] make tacos
+* [ ] eat tacos
+* [ ] be happy
+```
+
+Now, let's add, commit, and push our changes.
+
+#### Merge pull request (PR)
 
 Normally at this point, a coworker or project partner would view the pull request, make comments on the changes, and say if it should be merged or not. Since we are working by ourselves for this, our code is perfect! Let's merge the code into the master branch.
 
@@ -390,11 +332,11 @@ Now that it has been reviewed, click **Merge pull request** and then **Confirm m
 
 Our changes from our branch that we pushed up to GitHub are now merged to the master branch **on GitHub**.
 
-### What is going on locally?
+##### What is going on locally?
 
 Back in your local repository, checkout the master branch and notice the changes that were merged on GitHub are NOT on our local machine. We need to get those code changes from the remote repository so our local code is in sync.
 
-### Pull remote master into our local version
+#### Pull remote master into our local version (`git pull`)
 
 If you haven't already, checkout the master branch: `git checkout master`
 
@@ -404,80 +346,41 @@ In this case, enter the command: `git pull origin master`
 
 Our changes are now completely synced. The master branch locally is the same as the master branch on GitHub. We can make more feature branches, add more features, and repeat the same process!
 
-### Your turn
+#### A Typical Workflow
 
-Your instructor has started a thread in slack. Please take a few minutes to ask any questions that have come up in going through this workflow.
+To summarize the example above, a typical workflow for a project tracked with Git and GitHub is layed out well [here](http://frontend.turing.io/lessons/module-1/git-team-workflow.html).
 
-### Fetching 
+### Your Turn: using the workflow
 
-Let's say that one of your co-worker's is working on a feature branch, and is having trouble finding a bug. As long as your co-worker has pushed up their feature branch to GitHub, we can use the `git fetch` command to pull that branch, and all other remote branches to our local machine.
+Individually (use your neighbors if you get stuck), use the above workflow to create a practice git repo:
+* Be sure to follow every step along the way.
+* [ ] The repo should have an html file and a css file when you push its initial structure
+* [ ] Work on a feature branch called `add-html-structure` to add structure to your html file. When finished, submit and merge a pull request to update master with your changes
+* [ ] Work on a feature branch called `add-styles` that changes the background of your page to `blanchedalmond`. When finished, submit and merge a pull request to update master with your changes.
 
-### Merge Conflicts
+### Your Turn: creating a flow diagram
 
-You might be wondering what happens if you're working on a project with a partner and you both make changes to the same line of code. This is called a merge conflict.
+In your group of 4, use the post-it notes you wrote commands on earlier, as well as the chart paper and marker on your table to create a visual diagram of all of the steps in the workflow we've been following. 
 
-Merge conflicts happen when two different commits can't be automatically merged and they need to be resolved. Conflicts can occur when you pull down from origin or when you are creating a pull request to merge to master on GitHub.
+Things to consider:
+What steps repeat?
+What steps won't?
+If there are commands used in both of the above, feel free to add another post-it
+Add any intermittent information that you think is useful
 
-In the event that this happens, you might get a message like this:
+### Next steps
 
-```
-CONFLICT(content): Merge conflict in boots-and-pants.js
-Automatic merge failed. Fix conflicts and commit the results.
-```
-This happens because GitHub doesn't know what code to believe.
-
-Below is an example of what a conflict might look like upon inspection of the flagged file:
-
-```javascript
-// boots-and-pants.js
-
-var a = 1;
-<<<<<<<<<HEAD
-var b = 2;
-=========
-var b = 0;
->>>>>>>>>39457094865893724234798326445
-var d = 5;
-var e = 3;
-var r = 18;
-
-```
-
-The lines of code between HEAD and the set of equals signs (so in this case, var b = 2) are all of the changes you made that are in conflict. These are change that you have made on your computer.
-
-Everything between the set of equals signs and the greater than signs followed by the conflicting commit number (var b = 0) are all of the changes from GitHub that you’re trying to pull down that are conflicting.
-
-To resolve conflicts, you have to decide which of the two conflicting lines you want to keep and then remove the HEAD, the set of equals, and the conflicting commit line.
-
-### A Typical Workflow
-
-To summarize the example above, a typical workflow for a new project with Git and GitHub includes:
-
-1. Initialize a new Git repository (repo) and make initial file structure
-2. Create a new repository on GitHub
-3. Link your local and GitHub repository (add remote)
-4. Push structure to remote repository (on the master branch)
-5. Check out a feature branch
-6. Make changes to files
-7. Add files to staging area
-8. Commit changes
-9. Push up the feature branch and make a PR
-10. Go on GitHub, view the PR, and merge the PR
-11. Locally, pull down master to your local master branch (to sync the remote with your local repository)
-
-[Here is an excellent team workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.html)
-
-### Your Turn
-
-Practice by pushing up your Dog Party or Number Guesser project to GitHub.
+Practice by pushing up your Number Guesser project to GitHub.
 
 To get even more practice, try completing the rest of the exercises under Basic Git Workflow at [CodeCademy](https://www.codecademy.com/learn/learn-git).  Specifically, do the exercises Manhattan Zoo and SnapFit Robots, Inc.  It is highly recommended that you also complete the quiz to solidify your understanding!
 
-## Additional Resources
+### Additional Resources
 
-  * [git docs](https://git-scm.com/docs)
-  * [Awesome Git Tutorial](https://githowto.com/)
-  * [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/)
-  * [Visual Documentation and Examples for Git and GitHub](https://www.atlassian.com/git/tutorials/)
-  * [GitHub Tutorials](https://guides.github.com/)
+  * [Team Workflow](http://frontend.turing.io/lessons/module-1/git-team-workflow.html)
   * [Common git commands and a link to a giant cheetsheet](http://frontend.turing.io/lessons/module-1/git-commands.html)
+  * [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/)
+  * [Awesome Git Tutorial](https://githowto.com/)
+  * [GitHub Tutorials](https://guides.github.com/)
+  * [Visual Documentation and Examples for Git and GitHub](https://www.atlassian.com/git/tutorials/)
+  * [git docs](https://git-scm.com/docs)
+
