@@ -168,8 +168,6 @@ Basic rules of a decent commit message:
 * Use the imperative mood in the subject line
 * Explain what and why vs. how
 
-Please read [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/) for homework as it goes into more detail on what makes a great commit message.
-
 If we check the status of the repository now (`git status`), then it tells us that there is "nothing to commit" because all of the changes we have made in this directory have been committed.
 
 #### Look at your commit history (`git log`)
@@ -371,9 +369,13 @@ Things to consider:
 
 ### Next steps
 
-Practice by pushing up your Number Guesser project to GitHub.
+Mandatory:
+* Practice by pushing up your Number Guesser project to GitHub.
+* Read this page about [pull requests](https://help.github.com/articles/about-pull-requests/) to solidify your understanding.
 
-To get even more practice, try completing the rest of the exercises under Basic Git Workflow at [CodeCademy](https://www.codecademy.com/learn/learn-git).  Specifically, do the exercises Manhattan Zoo and SnapFit Robots, Inc.  It is highly recommended that you also complete the quiz to solidify your understanding!
+Optional:
+* To get even more practice, try completing the rest of the exercises under Basic Git Workflow at [CodeCademy](https://www.codecademy.com/learn/learn-git).  Specifically, do the exercises Manhattan Zoo and SnapFit Robots, Inc.  It is highly recommended that you also complete the quiz to solidify your understanding!
+* Read [Rules of Git Commit Messages](http://chris.beams.io/posts/git-commit/), which goes into more detail on what makes a great commit message.
 
 ### Additional Resources
 
