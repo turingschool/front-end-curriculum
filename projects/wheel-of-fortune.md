@@ -130,7 +130,7 @@ As a player,
     - $100 is subtracted from my score/account regardless of whether the vowel is part of the puzzle.
   
   I will participate in the Bonus Round if I am the top player at the end of 4 rounds. I will be given a new puzzle with up to six consonants revealed. I can pick 1 vowel and 3 consonants before attempting to solve the puzzle.
-    - If I guess correctly, I will win the prize or cash award from the bonus wheel in addition to the money in my grand total account.
+    - If I guess correctly, I will win the prize or cash award from the bonus wheel and the money from my grand total account
     - If I guess incorrectly, I will win the money from the grand total account only. 
 ```
 
