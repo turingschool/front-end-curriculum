@@ -44,7 +44,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 
 ## Restrictions
 
-To populate your data for Jeopardy, you will be using [this data](https://repl.it/@brittanystoroz/Jeopardy). Copy this into a separate file that you can then import into the necessary file.
+To populate your data for Jeopardy, you will be using [this data](https://repl.it/@brittanystoroz/Jeopardy). Copy this into a separate `js` file that you can include as a `script` tag in your HTML file.
 
 You can use any of the following JavaScript libraries:
 
