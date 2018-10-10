@@ -43,7 +43,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 
 ## Restrictions
 
-To populate your data for WOF, you will be using [this data](https://repl.it/@thatpamiam/WheelOfFortune). Copy this into a separate file that you can then import into the necessary file.
+To populate your data for WOF, you will be using [this data](https://repl.it/@thatpamiam/WheelOfFortune). Copy this into a separate `js` file that you can include as a `script` tag in your HTML file.
 
 You can use any of the following JavaScript libraries:
 
@@ -107,6 +107,7 @@ Wheel,
   - Wheel must have at least six elements
   - An element can either be a positive whole dollar amount, a "Lose-a-turn", or a "Bankruptcy" element
   - The elements of a wheel are in a 'randomized' order
+  - 
 ```
 
 ```
@@ -114,7 +115,7 @@ As a player,
   I should be able to quit/start a new game at any time.
   I have three options when it is my turn:
   1) Solve the puzzle
-    - If I guess correctly, my grand total score is increased my current score and the round is over
+    - If I guess correctly, my grand total score is increased by my current score and the round is over
     - If I guess incorrectly, my turn is over
   2) Spin the wheel
     - A random element will be chosen for my spin
