@@ -83,10 +83,11 @@ These user stories may be worked on in any order that makes sense to your pair.
 Game play,
   - Must have 3 players
   - Must have 4 rounds - 4 rounds make up 1 game
-  - The winner is determined by the player with the highest grand total score at the end all rounds
+  - The winner is determined by the player with the highest grand total score at the end of all rounds
   - Each player starts with a score/account of 0 at the start of every round
   - Each player's score should be displayed by their name
-  - At the end of a round, each player's score will be added to a grand total score.
+  - The player who solves the puzzle is the only one keeps all of the money from their account for the current round. This money is added to their grand total score
+  - The player with the highest score after 4 Rounds will play in a Bonus Round with a Bonus Wheel.
 ```
 
 ```
@@ -103,16 +104,17 @@ Puzzle,
 
 ```
 Wheel,
-  - A wheel is chosen at the start of the game
+  - A new randomized wheel is chosen at the start of every round
   - Wheel must have at least six elements
   - An element can either be a positive whole dollar amount, a "Lose-a-turn", or a "Bankruptcy" element
   - The elements of a wheel are in a 'randomized' order
-  - 
+  - The Bonus Wheel elements can either be a special prize or a dollar amount.
 ```
 
 ```
 As a player,
   I should be able to quit/start a new game at any time.
+  
   I have three options when it is my turn:
   1) Solve the puzzle
     - If I guess correctly, my grand total score is increased by my current score and the round is over
@@ -126,6 +128,10 @@ As a player,
     - The cost or buying a vowel is $100
     - I should be prompted to enter what vowel I would like to buy
     - $100 is subtracted from my score/account regardless of whether the vowel is part of the puzzle.
+  
+  I will participate in the Bonus Round if I am the top player at the end of 4 rounds. I will be given a new puzzle with up to six consonants revealed. I can pick 1 vowel and 3 consonants before attempting to solve the puzzle.
+    - If I guess correctly, I will win the prize or cash award from the bonus wheel in addition to the money in my grand total account.
+    - If I guess incorrectly, I will win the money from the grand total account only. 
 ```
 
 ## Extensions
