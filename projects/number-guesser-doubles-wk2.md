@@ -48,7 +48,7 @@ Display final result of each match in card UI
 
 - Both player name 1 and player name 2 should be displayed
 - Winning player is indicated
-- total guess count is displayed
+- total combined guess count of both players is displayed
 - delete button removes the card from page
 
 ## Phase Two: Level Up extensions (if you complete all of these, reach out to instructors for more goodies)
@@ -56,6 +56,7 @@ Display final result of each match in card UI
 Work through these **in order**:
 
 - Display how quickly user guesses correct number
+- Include at least 3 different animations (example: one for when a card gets created/deleted)
 - Easter Egg: use a [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) to display some secret surprise for users -- have fun, get weird, be creative!!
 
 #### Layout comps
