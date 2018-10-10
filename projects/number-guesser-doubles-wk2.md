@@ -42,7 +42,7 @@ The application should have full functionality through Phase Three from [Number 
   - If their guess is too low, it should display the error message: "That's too low"
   - If the guess is correct, it should display the success message: "BOOM!" and create a new card to display results _(card details outline in Phase Four)_
 
-## Phase Four: More Better
+## Phase One: More Better
 
 Display final result of each match in card UI
 
@@ -51,9 +51,12 @@ Display final result of each match in card UI
 - total guess count is displayed
 - delete button removes the card from page
 
-## Phase Five: Level Up
+## Phase Two: Level Up extensions (if you complete all of these, reach out to instructors for more goodies)
+
+Work through these **in order**:
 
 - Display how quickly user guesses correct number
+- Easter Egg: use a [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) to display some secret surprise for users -- have fun, get weird, be creative!!
 
 #### Layout comps
 
@@ -86,8 +89,8 @@ Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/
 
 - Novice: Application meets most of the expectations of phase one _and_ execution of UI is somewhat unpolished.
 - Advanced Beginner: Application meets all of the expectations of phase one _and_ execution of UI is somewhat unpolished but shows attention to detail.
-- Proficient: Application meets all of the expectations of phase two _and_ demonstrates good execution and control of the UI.
-- Exceptional: Application meets all of the expectations of phase two _and_ demonstrates exceptional execution and control of the UI.
+- Proficient: Application meets some of the phase two extensions _and_ demonstrates good execution and control of the UI.
+- Exceptional: Application meets all of the phase two extensions _and_ demonstrates exceptional execution, creativity, and control of the UI.
 
 <br>
 
