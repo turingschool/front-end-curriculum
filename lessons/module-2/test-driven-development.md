@@ -193,7 +193,7 @@ The assertion library we are going to use today is called [Chai](http://chaijs.c
 
 ![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)  
 
-You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to go with the [Expect API](http://chaijs.com/api/expect/).
+You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to go with the [Expect API](https://www.chaijs.com/api/bdd/).
 <!-- 
 The [Expect API](http://chaijs.com/api/expect/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
 
