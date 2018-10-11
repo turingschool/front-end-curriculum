@@ -386,6 +386,7 @@ Import Chai and the `expect` library, at the top of your test file:
 
 const chai = require('chai');
 const expect = chai.expect;
+const Box = require('../Box.js');
 
 describe('Box', function() {
   it('should return true', function() {
@@ -424,6 +425,7 @@ We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refa
 
 const chai = require('chai');
 const expect = chai.expect;
+const Box = require('../Box.js');
 
 describe('Box', function() {
   it('should return true', function() {
@@ -529,6 +531,111 @@ ie: `box.incrementHeight(10)`
 - Refactor to allow for a single method to do both jobs
 ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`  
 ```
+
+## DOM Manipulation
+
+One of the biggest hurdles you'll have when building frontend applications is keeping your codebase from becoming a complicated mess as your application grows. Chances are good that you are currently intermixing your DOM Manipulation with code that is handling the state of your application. However, the classes in your game file should be completely oblivious to the DOM - they should only store state and broadcast their changes to the DOM... not handle DOM manipulation directly.
+
+Now that we have our class of Box, let's make this into a full-fledged game by setting up some functionality to display the box height and width to the DOM when the application loads. First, add a file to house all of your DOM Manipulation:
+
+```bash
+touch domUpdates.js
+```
+
+Next, set up a boilerplate in your HTML file with script tags for every JS file:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Display Box Game</title>
+</head>
+  <body>
+
+    <output class="display-height"></output>
+    <output class="display-width"></output>
+
+  <script type="text/javascript" src="Box.js"></script>
+  <script type="text/javascript" src="domUpdates.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
+```
+
+Let's take the `increaseWidth` and `increaseHeight` methods that you created earlier and get these updated numbers to display to the DOM directly whenever these methods are called. Let's start by modifying our test for `increaseWidth`.
+
+Since we aren't worried about actually testing our DOM manipulation at this point, we are going to use a [`spy`](https://github.com/chaijs/chai-spies) to verify whether our method that displays the score has been called. *Note: Spies will help you verify calls to methods without actually calling them.*
+
+First, let's install and require `chai-spies`:
+
+**Install**
+`npm install --save-dev chai-spies`
+
+```js
+const chai = require('chai');
+const expect = chai.expect;
+const Box = require('../Box.js');
+const spies = require('chai-spies')
+chai.use(spies);
+```
+
+Next, require the `domUpdates` files that we will be using to store our DOM manipulation methods:
+
+```js
+global.domUpdates = require('../domUpdates.js');
+chai.spy.on(global.domUpdates, ['displayHeight','displayWidth'], () => true);
+```
+
+And lastly, let's update our test for `increaseWidth` to verify that our method of `displayWidth` (that we have yet to write) is being called:
+
+```js
+  it('should have an increment method that will increase the width by a provided value', function() {
+    box.increaseWidth(10);
+
+    assert.equal(box.width, 110);
+    expect(domUpdates.displayWidth).to.have.been.called(1);
+    expect(domUpdates.displayWidth).to.have.been.called(1);
+  });
+
+```
+
+Run `npm test`
+
+Your test should fail and you should get an assertion error that doesn't show the method has been called (as it doesn't exist). Let's fix that. Go to your `domUpdates` file to create that method:
+
+```js
+// domUpdates.js
+
+const domUpdates = {
+  displayWidth(width){
+    document.querySelector('.display-width').innerText = width;
+  }
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = domUpdates;
+}
+
+```
+
+You'll want to add the conditional that you see at the bottom to your `Box` file as well - so that exports don't affect the client side but will still happen for testing.
+
+Finally, we can call that method in the appropriate place and see that our test is passing.
+
+```
+//Box.js
+
+increaseWidth(val) {
+  this.width += val;
+  domUpdates.displayWidth(this.width);
+}
+```
+
+*Note - if you would like to see this actually update client-side, you will have to create a new instance of Box and call the increaseWidth method in index.js*
+
+
+#### Your Turn
+Set up functionality and tests to display the width and the height to the DOM when the application loads.
 
 ## Homework: Adventures of Blocky  
 
