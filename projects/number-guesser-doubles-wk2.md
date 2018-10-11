@@ -56,7 +56,7 @@ Display final result of each match in card UI
 Work through these **in order**:
 
 - Display how quickly user guesses correct number
-- Include at least 3 different animations (example: one for when a card gets created/deleted)
+- Include at least 3 different animations. Example: one for when a card gets created/deleted. Check of [this link of great examples for inspiration](https://dribbble.com/johnyvino/projects/443331-Premium-Interaction-design-IxD)
 - Easter Egg: use a [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) to display some secret surprise for users -- have fun, get weird, be creative!!
 
 #### Layout comps
