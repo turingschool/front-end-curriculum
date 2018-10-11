@@ -33,7 +33,10 @@ The application should have full functionality through Phase Three from [Number 
   - An input field for guessing the number which can only accept numeric values
   - An input field for their name that can accept any alpha-numeric character
 - One button that submits both players guesses
+- A button for clearing the input field, which *does not* reset the random number
 - One button that resets the game and generates a new random number
+- The clear button should be disabled if there is nothing to clear.
+- The reset button should be disabled if there is nothing to reset.
 
 #### Players Guess State:
 - Display both player's most recent guesses
