@@ -269,7 +269,7 @@ describe('Unicorn', function() {
 
     // 3. "Assertion"
     // Make an assertion to verify that after executing certain functions, we end up with what we expect
-    assert.equal(unicorn.calories, 300);
+    expect(unicorn.calories).to.equal(300);
   });
 })
 ```
