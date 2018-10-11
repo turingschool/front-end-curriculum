@@ -633,7 +633,7 @@ increaseWidth(val) {
 
 
 #### Your Turn
-Set up functionality and tests to display the width and the height to the DOM when the application loads.
+Set up the functionality to display the width and height to the DOM - using your `domUpdates file` to keep this code separate from the state of your app. Be sure to update your testing accordingly.
 
 ## Homework: Adventures of Blocky  
 
