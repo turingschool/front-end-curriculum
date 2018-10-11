@@ -276,10 +276,16 @@ describe('Unicorn', function() {
 
 To practice, let's kick off a brand new project to demonstrate how you would add Mocha and Chai to a project, and write a couple basic tests.  
 
-In your terminal, create your project directory, initialize an npm directory, and add a javascript file.  
+In your terminal, create your project directory and initialize an npm directory 
 
 ```bash
-mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes && touch Box.js  
+mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes  
+```
+
+Next, let's add some of our base files
+
+```bash
+touch index.html index.js Box.js Game.js
 ```
 
 Open up this project in your text editor.  
@@ -358,7 +364,7 @@ mkdir test && touch test/Box-test.js
 
 describe('Box', function() {
   it('should return true', function() {
-    assert.equal(true, true);
+    expect(true).to.equal(true);
   });
 });
 ```
@@ -367,27 +373,26 @@ If you run `npm test` now, you'll see an expected error. It's important to recog
 
 ```bash
 1) Box should return true:
-   ReferenceError: assert is not defined
+   ReferenceError: expect is not defined
     at Context.<anonymous> (test/Box-test.js:3:5)
 ```
 
-It's saying that it doesn't know what `assert` is, and recall that `assert` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
+It's saying that it doesn't know what `expect` is, and recall that `expect` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
 
-Import Chai and the `assert` library, at the top of your test file:  
+Import Chai and the `expect` library, at the top of your test file:  
 
 ```js
 // test/Box-test.js  
 
-const { assert } = require('chai');
+const chai = require('chai');
+const expect = chai.expect;
 
 describe('Box', function() {
   it('should return true', function() {
-    assert.equal(true, true);
+    expect(true).to.equal(true);
   });
 });
 ```
-
-*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` needs some additional tools in order to run. Right now we have a very simple JS application so we will stick to `require` syntax*  
 
 If you run `npm test` now, we should have a passing test.  
 
@@ -417,32 +422,32 @@ We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refa
 ```js
 // test/Box-test.js
 
-const { assert } = require('chai');
-const Box = require('../Box.js');
+const chai = require('chai');
+const expect = chai.expect;
 
 describe('Box', function() {
   it('should return true', function() {
-    assert.equal(true, true);
+    expect(true).to.equal(true);
   });
 
   it('should have a default height and a width', function() {
     var box = new Box();
 
-    assert.equal(box.height, 100);
-    assert.equal(box.width, 100);
+    expect(box.height).to.equal(100);
+    expect(box.widht).to.equal(100);
   });
 
   it('should have take a height and a width as arguments', function() {
     var box = new Box(50, 40);
 
-    assert.equal(box.height, 50);
-    assert.equal(box.width, 40);
+    expect(box.height).to.equal(50);
+    expect(box.width).to.equal(40);
   });
 
   it('should calculate its area', function() {
     var box = new Box(30, 30);
 
-    assert.equal(box.area(), 900);
+    expect(box.area()).to.equal(900);
   })
 });
 ```
@@ -452,15 +457,15 @@ Run the tests and watch them fail (RED).
 ```bash
 1) Box should have a default height and a width:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:12:15)
+    at Context.<anonymous> (test/Box-test.js:11:15)
 
 2) Box should have take a height and a width as arguments:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:19:15)
+    at Context.<anonymous> (test/Box-test.js:18:15)
 
 3) Box should calculate its area:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:26:15)
+    at Context.<anonymous> (test/Box-test.js:25:15)
 ```
 
 Write some code to implement the functionality one test at a time. You can use the method `.skip` on any tests you want to skip so you can isolate individual tests you want to run.  
