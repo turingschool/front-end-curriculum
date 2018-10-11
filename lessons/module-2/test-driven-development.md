@@ -17,12 +17,11 @@ mod: 2
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
-- `SUT` or `Subject Under Test` The unit being tested
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
 
 ## Review: What is TDD?
 
-TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.   
+TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.
 
 Think back to some of your module 1 projects, the workflow probably looked something like this:
 * Read project spec and feel kind of panicky  
@@ -59,13 +58,24 @@ The primary difference between the two, is that with a test driven approach you 
 
 ## Why TDD?
 
-Tests are useful because testing everything by hand is tedious, error prone, and slow. Computers can test things faster and better than humans (that's why they will some day take over the world).
-TDD is good because it provides a process for writing tests well.
+The main **benefits** of TDD are:
 
-Think about a time when you changed something and then a method somewhere else broke.
-Without tests, the only way you'd know if something broke is to go poke at it manually.
-With tests, you know right away.
-These benefits scale as your app grows larger.
+* **Computers can test things faster and more accurately than humans:** testing things manually in the browser is tedious, error prone and slow
+* **Forces you to slow down and pseudocode:** which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you right any code than to refactor broken code after it's been written
+* **Provides a blueprint for new developers to see how the codebase should work:** if your tests are thorough and well-written, a new developer should be able to hop directly into the test folder and get a solid understanding of how each piece of the codebase works
+* **Provides future integrity for your code as you iterate on your application:** applications are never done and can always be improved, added to, pivoted, etc. Tests ensure that as we make these changes, we won't accidentally introduce new bugs
+
+Some very minimal **downsides** of TDD are:
+
+* **It takes more time to write and maintain your codebase, which slows down development:** this can be problematic if you're working in an evironment where meeting deadlines is a top priority (like working in a newsroom)
+* **They don't make the business money:** tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
+
+
+## What Makes Testing Hard?
+
+* Still using a trial-by-error approach to development
+* So many libraries and frameworks to choose from, differing syntax in documentation
+
 
 ## What Should Be Tested?
 
@@ -113,9 +123,6 @@ Then clean up your code with some refactoring now that we have a test to keep an
 ![Mr Green Refactor](http://i.imgur.com/rIduOzg.jpg)  
 You're welcome.  
 
-Here is another more in-depth global lifecycle for best testing practices:  
-
-![Global Lifecycle](http://i.imgur.com/CL6Pr58.png)  
 
 ## Testing Framework: Mocha  
 
