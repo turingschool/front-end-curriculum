@@ -33,13 +33,12 @@ In addition to these benefits, having an up-to-date list of issues will also ind
 
 The first thing you will do when you create an issue is give it a title:
 
-<!-- Insert Screenshot of title here -->
-<!-- Create child class of DailyDouble that inherits from Question Class -->
+![Example of a good title](/assets/images/lessons/github-issues/issues-title.png)
 
 This is an example of a good title. Although it is concise, it is still descriptive enough to really hone in on what the issue is.
 
-<!-- Insert screenshot of description here -->
-<!-- The only way the daily double will differ from the questions is that it will be able to accept a wager, maybe we need another method here.  -->
+
+![Example of a good description](/assets/images/lessons/github-issues/issues-description.png)
 
 This is an example of a good description. Remember, a description should serve as a reminder to yourself about all of the _pertinent_ additional details that you need to know in order to address this issue. Someone coming to your repo should be able to read the issue and understand what is going on from the description - allowing them to jump right in. Conventionally, you will see people write using full sentences, bullet points, or a mixture of both.
 
@@ -56,7 +55,7 @@ Additionally, there are other features that will likely use as you're creating, 
 
 Issue tagging with labels are an important part of keeping engineering and product teams aligned and organized across repositories. Below you'll see a great example of an internal tagging system that is currently being used at [Robin](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/). You'll notice that each category has a different color, which allows other team members to easily filter for what the issue is and who can help out with it.
 
-<!-- Insert image from blog post here -->
+![Internal Tagging System](/assets/images/lessons/github-issues/labels.png)
 
 Here are the ones that we want you to focus on when working on your project:
 
@@ -80,15 +79,13 @@ These are the low priority labels; however, these labels are very applicable for
 
 You will manage and track issues on your repo by assigning yourself or other team members via the assignment section in GitHub. Once someone wants to get around to it, you can assign someone to an issue - which will allow you to keep track of who is responsible for getting it done.
 
-<!-- Insert picture of assigning someone something on GitHub -->
-
+![Assigning an issue](/assets/images/lessons/github-issues/assign-issues.png)
 
 ### Milestones
 
 Milestones are a helpful way to prioritize and create deadlines for your project. For example, a milestone on one of your projects at Turing might be titled `MVP` (minimum viable product) and would include all the features and functionality that you would need to have completed (by a certain due date) that meet the MVP you've defined. Other possible milestones for your Turing might include `Nice-to-haves`, `Extensions`, or `Post-graduation`.
 
-<!-- Insert some milestone sschtuff -->
-
+![Issues Milestones](/assets/images/lessons/github-issues/issues-milestones.png)
 
 ### Additional Tooling for Issue Tracking
 
