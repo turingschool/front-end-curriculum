@@ -84,6 +84,45 @@ Some very minimal **downsides** of TDD are:
 
 When talking about what should be tested, we say that we want to test the **outcome** or **result** of a particular piece of code execution. This is an important distinction and can help clarify one of the key pieces of what makes testing hard.
 
+For example, let's say we have a quiz application that checks a user's answers and adds/removes points from their score:
+
+```js
+class Question {
+  constructor(questionText, correctAnswer) {
+    this.questionText = questionText;
+    this.correctAnswer = correctAnswer;
+  }
+
+  checkAnswer(answer) {
+    if (answer === geographyQuestion.correctAnswer) {
+      player.score++
+    } else {
+      player.score--
+    }
+  }
+}
+```
+
+What kind of assertion would we write to test the functionality of the `checkAnswer` method?
+
+
+```js
+describe('Question Class', () => {
+  it('should increment a player score when their answer is correct', () => {
+
+  });
+
+  it('should decrement a player score when their answer is incorrect', () => {
+
+  });
+});
+
+```
+
+
+
+
+
 <!-- This is the age old question!
 This is a matter of culture and personal opinion and will vary widely depending on what software development team you join. Some teams want to test everything, others want you to test only the _really_ important stuff.
 Typically, the deciding factor in what should be tested is whether or not tests deliver enough value vs. the cost it takes to create and maintain them.
@@ -103,7 +142,7 @@ There are many types of tests, and a lot of them go by different names.
 This lesson will focus on unit tests because a they are the fastest and least costly.
 Most tests you write will be unit tests. -->
 
-## The Testing Cycle
+<!-- ## The Testing Cycle
 
 You'll often hear the following catch phrase in nerd-circles when talking about TDD:
 
@@ -117,7 +156,7 @@ Then clean up your code with some refactoring now that we have a test to keep an
 
 ![Mr Green Refactor](http://i.imgur.com/rIduOzg.jpg)  
 You're welcome.  
-
+ -->
 
 ## Testing Framework: Mocha  
 
@@ -154,9 +193,9 @@ The assertion library we are going to use today is called [Chai](http://chaijs.c
 
 ![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)  
 
-You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to stick with the [Assert API](http://chaijs.com/api/assert/), since it might seem the most familiar coming off of mythical creatures in mod 1.  
-
-The [Assert API](http://chaijs.com/api/assert/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
+You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to go with the [Expect API](http://chaijs.com/api/expect/).
+<!-- 
+The [Expect API](http://chaijs.com/api/expect/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
 
 ```js
 assert.method(actual, expected, [message])
@@ -224,10 +263,16 @@ Now, lets look at `deepEqual`.
 
 If use `deepEqual` instead, the same test will pass. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is the same. The `deepEqual` method checks if two things contain the same information.
 
-## BDD
 
-The idea with BDD is to specify behavior in a very natural, human way.
-For example, tests should read like "Given X, when I do Y, then Z should happen."
+ -->
+
+
+
+
+
+
+
+
 
 ## Structure of a Test  
 
