@@ -261,7 +261,7 @@ mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes
 Next, let's add some of our base files
 
 ```bash
-touch index.html index.js Box.js Game.js
+touch index.html index.js Box.js
 ```
 
 Open up this project in your text editor.  
