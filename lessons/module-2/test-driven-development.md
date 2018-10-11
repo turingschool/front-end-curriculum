@@ -569,6 +569,7 @@ Since we aren't worried about actually testing our DOM manipulation at this poin
 First, let's install and require `chai-spies`:
 
 **Install**
+
 `npm install --save-dev chai-spies`
 
 ```js
@@ -589,14 +590,13 @@ chai.spy.on(global.domUpdates, ['displayHeight','displayWidth'], () => true);
 And lastly, let's update our test for `increaseWidth` to verify that our method of `displayWidth` (that we have yet to write) is being called:
 
 ```js
-  it('should have an increment method that will increase the width by a provided value', function() {
-    box.increaseWidth(10);
+it('should have an increment method that will increase the width by a provided value', function() {
+  box.increaseWidth(10);
 
-    assert.equal(box.width, 110);
-    expect(domUpdates.displayWidth).to.have.been.called(1);
-    expect(domUpdates.displayWidth).to.have.been.called(1);
-  });
-
+  assert.equal(box.width, 110);
+  expect(domUpdates.displayWidth).to.have.been.called(1);
+  expect(domUpdates.displayWidth).to.have.been.called(1);
+});
 ```
 
 Run `npm test`
@@ -615,7 +615,6 @@ const domUpdates = {
 if (typeof module !== 'undefined') {
   module.exports = domUpdates;
 }
-
 ```
 
 You'll want to add the conditional that you see at the bottom to your `Box` file as well - so that exports don't affect the client side but will still happen for testing.
