@@ -95,13 +95,13 @@ Typically, the deciding factor in what should be tested is whether or not tests 
   What are some the key pieces of functionality in your game?
 -->
 
-## Types of Tests
+<!-- ## Types of Tests
 
 ![The Testing Pyramid](https://i.imgur.com/8nDly8J.png)
 
 There are many types of tests, and a lot of them go by different names.
 This lesson will focus on unit tests because a they are the fastest and least costly.
-Most tests you write will be unit tests.
+Most tests you write will be unit tests. -->
 
 ## The Testing Cycle
 
@@ -131,7 +131,7 @@ First, lets look at the syntax provided from Mocha:
 
 ```js
 describe('unicorn', function() {
-  it('calling eat accumulates calories', function() {
+  it('should accumulate calories when calling eat', function() {
   });
 })
 ```
