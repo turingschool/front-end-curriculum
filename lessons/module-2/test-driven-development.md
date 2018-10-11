@@ -529,8 +529,8 @@ Next, set up a boilerplate in your HTML file with script tags for every JS file:
   <body>
     <output class="display-height"></output>
     <output class="display-width"></output>
-  <script type="text/javascript" src="Box.js"></script>
   <script type="text/javascript" src="domUpdates.js"></script>
+  <script type="text/javascript" src="Box.js"></script>
   <script type="text/javascript" src="index.js"></script>
   </body>
 </html>
