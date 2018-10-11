@@ -571,6 +571,7 @@ it('should have an increment method that will increase the width by a provided v
 
   assert.equal(box.width, 110);
   expect(domUpdates.displayWidth).to.have.been.called(1);
+  expect(domUpdates.displayWidth).to.have.been.called.with(110);
 });
 ```
 
