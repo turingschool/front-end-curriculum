@@ -620,7 +620,7 @@ You'll want to add the conditional that you see at the bottom to your `Box` file
 
 Finally, we can call that method in the appropriate place and see that our test is passing.
 
-```
+```js
 //Box.js
 
 increaseWidth(val) {
