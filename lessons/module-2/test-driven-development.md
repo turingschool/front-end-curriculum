@@ -60,40 +60,35 @@ The primary difference between the two, is that with a test driven approach you 
 
 The main **benefits** of TDD are:
 
-* **Computers can test things faster and more accurately than humans:** testing things manually in the browser is tedious, error prone and slow
-* **Forces you to slow down and pseudocode:** which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you right any code than to refactor broken code after it's been written
-* **Provides a blueprint for new developers to see how the codebase should work:** if your tests are thorough and well-written, a new developer should be able to hop directly into the test folder and get a solid understanding of how each piece of the codebase works
-* **Provides future integrity for your code as you iterate on your application:** applications are never done and can always be improved, added to, pivoted, etc. Tests ensure that as we make these changes, we won't accidentally introduce new bugs
+* *Computers can test things faster and more accurately than humans:* testing things manually in the browser is tedious, error prone and slow
+* *Forces you to slow down and pseudocode:* which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you right any code than to refactor broken code after it's been written
+* *Provides a blueprint for new developers to see how the codebase should work:* if your tests are thorough and well-written, a new developer should be able to hop directly into the test folder and get a solid understanding of how each piece of the codebase works
+* *Provides future integrity for your code as you iterate on your application:* applications are never done and can always be improved, added to, pivoted, etc. Tests ensure that as we make these changes, we won't accidentally introduce new bugs
+* *Forces you to write more module, SRP-style code:* often times you'll only recognize opportunities to refactor as you go to write tests for you code and find that it's not testable
 
 Some very minimal **downsides** of TDD are:
 
-* **It takes more time to write and maintain your codebase, which slows down development:** this can be problematic if you're working in an evironment where meeting deadlines is a top priority (like working in a newsroom)
-* **They don't make the business money:** tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
+* *It takes more time to write and maintain your codebase, which slows down development:* this can be problematic if you're working in an evironment where meeting deadlines is a top priority (like working in a newsroom)
+* *They don't make the business money:* tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
 
 
 ## What Makes Testing Hard?
 
-* Still using a trial-by-error approach to development
+* Not knowing what to test
 * So many libraries and frameworks to choose from, differing syntax in documentation
+* Difficult to see the benefit until you've been saved by a failing test
+* Still using a trial-by-error approach to development
 
 
 ## What Should Be Tested?
 
-This is the age old question!
+When talking about what should be tested, we say that we want to test the **outcome** or **result** of a particular piece of code execution. This is an important distinction and can help clarify one of the key pieces of what makes testing hard.
+
+<!-- This is the age old question!
 This is a matter of culture and personal opinion and will vary widely depending on what software development team you join. Some teams want to test everything, others want you to test only the _really_ important stuff.
 Typically, the deciding factor in what should be tested is whether or not tests deliver enough value vs. the cost it takes to create and maintain them.
 
-**Some value associated with testing:**
-- confidence that your code does the right thing
-- confidence that you didn't break anything when your code changed
-- the speed at which the points above can be verified
-- code that is tested tends to be better than code that is not
-
-**Some costs associated with testing:**
-- they take more time to write
-- they don't make the business money
-- they take time to maintain
-- updating features is slower when you've got to fix tests, too
+ -->
 
 <!-- 
   Take some time and think about the game which you are building. 
