@@ -175,20 +175,20 @@ Asking questions if something doesn't make sense to you is an important skill to
 
 Take a few minutes to read through [this Twitter thread](https://twitter.com/brittanystoroz/status/1049675860309991425) about the PR process. What are some things you can take away from this based on the experience of others? We will come back together as a group to discuss.
 
-  <!-- Whiteboard student answers
+<!-- Whiteboard student answers
 
-    Some bullet points to consider noting:
-  * Be careful of your tone
-    - include positive comments
-    - make sure critical feedback is actionable
-    - framing suggestions as questions
+Some bullet points to consider noting:
+Be careful of your tone
+- include positive comments
+- make sure critical feedback is actionable
+- framing suggestions as questions
 
-  * Acknowledge the effort
-    - Positive words! Thanks
+Acknowledge the effort
+ - Positive words! Thanks
 
-  * Keep the code review two-sided rather than dominating it 
-    Not a list of demands
- -->
+Keep the code review two-sided rather than dominating it 
+  Not a list of demands -->
+
 
 
 ### Summary
