@@ -32,13 +32,13 @@ In addition to these benefits, having an up-to-date list of issues will also ind
 ### Filing An Issue
 
 The first thing you will do when you create an issue is give it a title:
----
+
 ![Example of a good title](/assets/images/lessons/github-issues/issues-title.png)
----
+
 This is an example of a good title. Although it is concise, it is still descriptive enough to really hone in on what the issue is.
----
+
 ![Example of a good description](/assets/images/lessons/github-issues/issues-description.png)
----
+
 This is an example of a good description. Remember, a description should serve as a reminder to yourself about all of the _pertinent_ additional details that you need to know in order to address this issue. Someone coming to your repo should be able to read the issue and understand what is going on from the description - allowing them to jump right in. Conventionally, you will see people write using full sentences, bullet points, or a mixture of both.
 
 
@@ -53,9 +53,9 @@ Additionally, there are other features that will likely use as you're creating, 
 ### Labels
 
 Issue tagging with labels are an important part of keeping engineering and product teams aligned and organized across repositories. Below you'll see a great example of an internal tagging system that is currently being used at [Robin](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/). You'll notice that each category has a different color, which allows other team members to easily filter for what the issue is and who can help out with it.
----
+
 ![Internal Tagging System](/assets/images/lessons/github-issues/labels.png)
----
+
 Here are the ones that we want you to focus on when working on your project:
 
 ##### Platform 
