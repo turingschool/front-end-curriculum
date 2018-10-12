@@ -32,14 +32,13 @@ In addition to these benefits, having an up-to-date list of issues will also ind
 ### Filing An Issue
 
 The first thing you will do when you create an issue is give it a title:
-
+---
 ![Example of a good title](/assets/images/lessons/github-issues/issues-title.png)
-
+---
 This is an example of a good title. Although it is concise, it is still descriptive enough to really hone in on what the issue is.
-
-
+---
 ![Example of a good description](/assets/images/lessons/github-issues/issues-description.png)
-
+---
 This is an example of a good description. Remember, a description should serve as a reminder to yourself about all of the _pertinent_ additional details that you need to know in order to address this issue. Someone coming to your repo should be able to read the issue and understand what is going on from the description - allowing them to jump right in. Conventionally, you will see people write using full sentences, bullet points, or a mixture of both.
 
 
@@ -54,12 +53,12 @@ Additionally, there are other features that will likely use as you're creating, 
 ### Labels
 
 Issue tagging with labels are an important part of keeping engineering and product teams aligned and organized across repositories. Below you'll see a great example of an internal tagging system that is currently being used at [Robin](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/). You'll notice that each category has a different color, which allows other team members to easily filter for what the issue is and who can help out with it.
-
+---
 ![Internal Tagging System](/assets/images/lessons/github-issues/labels.png)
-
+---
 Here are the ones that we want you to focus on when working on your project:
 
-*Platform* 
+###### Platform
 These labels are good for filtering issues - showing what makes sense for a person to tackle. 
 
 Often you will also see priority levels listed on these labels with `P1` for priority 1, `P2` for priority 2, etc.
@@ -68,10 +67,10 @@ Often you will also see priority levels listed on these labels with `P1` for pri
 - P2 Costing the business money
 - P3 Not a big deal but may be annoying for users
 
-*Experience*
+###### Experience
 These labels are good for when you want particular contributers for your project. Is design or UI/UX your area of expertise? Angular? With these labels, people know where they can contribute the most.
 
-*Improvement*
+###### Improvement
 These are the low priority labels; however, these labels are very applicable for the projects you are building at Turing. Because of that, this is something we expect to see in your projects. An example would be `nice-to-have` features that you want to add to your project.
 
 
@@ -153,10 +152,10 @@ At first glance, PRs are a way for an engineer to let others know that they've c
 
 #### Benefits
 
-*Multiple people are involved and responsible for that code that is written.*
+###### Multiple people are involved and responsible for that code that is written.
 If `Developer A` submits a bug and then `Developer B` merges it, they are both at fault. PRs can help catch these things before they happen
 
-*Level up your communication skills*
+###### Level up your communication skills
 Following a PR workflow will improve your communication skills. Sometimes (particularly if you work remotely) code reviews are the main interaction you will have with the people on your team. In general, if you are the person creating a PR you will want to do the following:
 
   - Summarize the changes that you made.
@@ -165,10 +164,10 @@ Following a PR workflow will improve your communication skills. Sometimes (parti
 
 It is important as the creator of the PR that you are giving other developers some context of what they are reviewing as well as what they should looking for in the change. Asking for feedback/help is a valuable skill that you should have as a developer. 
 
-*Improve your technical skills*
+###### Improve your technical skills
 The PR workflow can be very enlightening on a technical level as well. It is common to hear developers state that they have learned more/ramped up quicker in code reviews than while pairing, reading blog posts, watching videos, etc. When you are creating PRs, it is helpful to know if what you're trying to technically communicate isn't clear. On the flip side of that, reading someone else's code is insightful due to the exposure code that you haven't written through the review process/asking clarifying questions.
 
-*ASK QUESTIONS*
+###### ASK QUESTIONS
 Asking questions if something doesn't make sense to you is an important skill to have, both here and in the wild.
 
 #### Turn and Talk
