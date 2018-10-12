@@ -58,7 +58,7 @@ Issue tagging with labels are an important part of keeping engineering and produ
 ---
 Here are the ones that we want you to focus on when working on your project:
 
-###### Platform
+##### Platform 
 These labels are good for filtering issues - showing what makes sense for a person to tackle. 
 
 Often you will also see priority levels listed on these labels with `P1` for priority 1, `P2` for priority 2, etc.
@@ -67,10 +67,10 @@ Often you will also see priority levels listed on these labels with `P1` for pri
 - P2 Costing the business money
 - P3 Not a big deal but may be annoying for users
 
-###### Experience
+##### Experience
 These labels are good for when you want particular contributers for your project. Is design or UI/UX your area of expertise? Angular? With these labels, people know where they can contribute the most.
 
-###### Improvement
+##### Improvement
 These are the low priority labels; however, these labels are very applicable for the projects you are building at Turing. Because of that, this is something we expect to see in your projects. An example would be `nice-to-have` features that you want to add to your project.
 
 
@@ -152,10 +152,10 @@ At first glance, PRs are a way for an engineer to let others know that they've c
 
 #### Benefits
 
-###### Multiple people are involved and responsible for that code that is written.
+##### Multiple people are involved and responsible for that code that is written.
 If `Developer A` submits a bug and then `Developer B` merges it, they are both at fault. PRs can help catch these things before they happen
 
-###### Level up your communication skills
+##### Level up your communication skills
 Following a PR workflow will improve your communication skills. Sometimes (particularly if you work remotely) code reviews are the main interaction you will have with the people on your team. In general, if you are the person creating a PR you will want to do the following:
 
   - Summarize the changes that you made.
@@ -164,10 +164,10 @@ Following a PR workflow will improve your communication skills. Sometimes (parti
 
 It is important as the creator of the PR that you are giving other developers some context of what they are reviewing as well as what they should looking for in the change. Asking for feedback/help is a valuable skill that you should have as a developer. 
 
-###### Improve your technical skills
+##### Improve your technical skills
 The PR workflow can be very enlightening on a technical level as well. It is common to hear developers state that they have learned more/ramped up quicker in code reviews than while pairing, reading blog posts, watching videos, etc. When you are creating PRs, it is helpful to know if what you're trying to technically communicate isn't clear. On the flip side of that, reading someone else's code is insightful due to the exposure code that you haven't written through the review process/asking clarifying questions.
 
-###### ASK QUESTIONS
+##### ASK QUESTIONS
 Asking questions if something doesn't make sense to you is an important skill to have, both here and in the wild.
 
 #### Turn and Talk
