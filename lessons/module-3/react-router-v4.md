@@ -233,9 +233,10 @@ The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job
 
 Enough talk, let's implement React Router!
 
-* Clone this repo and `cd` into it
+* Clone [this repo](https://github.com/turingschool-examples/react-router-example) and `cd` into it
 * checkout the `in-class` branch
-* npm i
+* `npm i`
+* `npm start`
 * open your text editor
 
 ---
@@ -275,7 +276,7 @@ Next we will go to our `App.js` file and begin constructing the routes for our a
 ```javascript
 //App.js
 
-import { Route, NavLink, Link } from 'react-router-dom'
+import { Route, NavLink } from 'react-router-dom'
 ```
 
 Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `activeClassName` attribute. 
@@ -369,7 +370,7 @@ import unicornData from './data/unicorn-data'
 
 const Unicorns = () => {
 
-  const displayUnicorns = unicornData.map((unicorn, i) => <img src={unicorn.image} className='app-img' key={unicorn.type + i}/>)
+  const displayUnicorns = unicornData.map((unicorn, i) => <img src={unicorn.image} className='app-img' key={unicorn.id}/>)
 
   return (
     <div className='image-display'>
@@ -458,13 +459,11 @@ Let's poke the bear a little bit. Paste this route into your `App.js` file:
 //App.js
 
 <Route path='/unicorns/:id' render={({ match }) => {
-	console.log(match)
+   console.log(match)
 	      
-	return (
-		<div>
-			New Unicorn Route!
-		</div>
-	)
+   return (
+      <div>New Unicorn Route!</div>
+   )
 }} />
 ```
 
@@ -530,7 +529,7 @@ Then we just wrap what we returned before with a `<Link>` as such:
 ```javascript
 const displayUnicorns = unicornData.map((unicorn, i) => {
 	return (
-	  <Link to={`/unicorns/${unicorn.id}`} key={unicorn.type + i}>
+	  <Link to={`/unicorns/${unicorn.id}`} key={unicorn.id}>
 	    <img src={unicorn.image} className='app-img' />
 	  </Link>
 	)
@@ -550,7 +549,7 @@ import ImageCard from './ImageCard';
 const Unicorns = () => {
 
 	const displayUnicorns = unicornData.map((unicorn, i) => 
-		<ImageCard {...unicorn} key={unicorn.name + i} className='app-img'/>
+		<ImageCard {...unicorn} key={unicorn.id} className='app-img'/>
 	)
 
 	return (
@@ -590,3 +589,6 @@ And that's it! Go ahead and work on setting up dynamic routes for the other two 
 
 * [React Router Training](https://reacttraining.com/react-router/web/guides/philosophy)
 * [Watch This Video](https://www.youtube.com/watch?v=Mf0Fy8iHp8k&feature=youtu.be)
+* [The Hitchhiker’s Guide To React Router v4: Grok React Router in 20 minutes](https://medium.freecodecamp.org/hitchhikers-guide-to-react-router-v4-a957c6a5aa18)
+* [The Hitchhiker’s Guide to React Router v4: [match, location, history] — your best friends!](https://medium.freecodecamp.org/hitchhikers-guide-to-react-router-v4-4b12e369d10)
+* [A Little Bit of History](https://medium.com/@pshrmn/a-little-bit-of-history-f245306f48dd)
