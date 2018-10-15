@@ -14,7 +14,7 @@ A common application architecture is to host a front-end (user-interfacing) appl
 
 You might have done this before - an Express server and create-react-app application in one repository. We won't be doing that because it's against the architecture we're looking for.
 
-We're also not going to deal with proxies today, and we certainly won't be using any Chrome extensions for CORS.
+We're also not going to deal with proxies today, and we certainly won't be using any Chrome extensions for CORS (if it's on now, turn it off).
 
 ## Create a Back-End
 
@@ -50,7 +50,7 @@ With a partner, look through [this MDN page](https://developer.mozilla.org/en-US
 
 Now that we know what an origin is, what is Cross-Origin Resource Sharing, and why won't it let our front-end talk to our back-end application?
 
-Read through [this MDN page]() about CORS - specifically the "Introduction", "What requests use CORS?", "Functional Overview", the **Simple requests** portion of "Examples of access control scenarios", and "The HTTP response headers".
+Read through [this MDN page](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) about CORS - specifically the "Introduction", "What requests use CORS?", "Functional Overview", the **Simple requests** portion of "Examples of access control scenarios", and "The HTTP response headers".
 
 Now in each group at your tables on a piece of chart paper:
 
