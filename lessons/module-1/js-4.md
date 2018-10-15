@@ -355,12 +355,12 @@ Now lets look at a slightly less contrived example:
 
 ```javascript
 class Fridge {
-  constructor(color, temperature, isPluggedIn, contents)
+  constructor(color, temperature, isPluggedIn, contents) {
     this.color = color;
     this.temperature = temperature;
     this.isPluggedIn = isPluggedIn;
     this.contents = contents;
-  end
+  }
 }
 ```
 
