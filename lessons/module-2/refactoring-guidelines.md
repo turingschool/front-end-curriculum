@@ -16,7 +16,7 @@ By the end of this lesson, students should be able to:
 - `Technical Debt` The build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain
 - `Code Smell` A surface level indication of bad code that usually corresponds to a deeper, more fundamental problem
 - `Refactoring` The process of changing the internals of a system (it's factoring), without changing its external behavior
-/* - `Interface` The external boundary of a software component */
+<!-- `Interface` The external boundary of a software component -->
 - `DRY` Don't Repeat Yourself
 
 ## The Basics
@@ -129,10 +129,10 @@ fetch(`${API_HOSTNAME}/radar-map/${CITY}`)
 
 Try to keep your if-else statements to a legitimate if, else, and nothing more. Relying heavily on `else if`'s is a sure sign your conditional logic is getting a little out of control. Some ways to refactor unruly if-else statements is to convert them into `switch` statements, or create an object of key-value pairs that you can use as a reference map for certain conditions. 
 
-Turn to the person sitting next to you, and spend the next two to three minutes
+Turn to the person sitting next to you, and spend the next 5 minutes
 talking about how you could refactor this code example: 
 
-/* CODE REFACTOR MOVED TO BOTTOM (IF-ELSE REFACTOR) */
+<!-- CODE REFACTOR SOLUTION MOVED TO BOTTOM (IF-ELSE REFACTOR) -->
 
 ```js
 function evalInput(event) {
@@ -170,7 +170,7 @@ libraries that your codebase depends on.
 
 ## Practice
 
-Take the following three code examples and try to identify what code smells you find. Then make an attempt at refactoring them.
+Take the following code examples and try to identify what code smells you find. Then make an attempt at refactoring them.
 
 #### Example 1
 
@@ -220,57 +220,6 @@ if (explode === 'no') {
 ```
 
 #### Example 2
-
-```js
-/* ----------- Do not refactor this section ----------- */
-class Slot {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
-/* -------------- Refactor this section -------------- */
-let slots = [];
-let firstRow = 40;
-let secondRow = 40;
-let thirdRow = 40;
-let fourthRow = 40;
-let fifthRow = 40;
-let sixthRow = 40;
-
-for (let i = 0; i < 42; i++) {
-  if (i < 7) {
-    slots.push(new Slot(sixthRow, 550));
-    sixthRow += 95;
-
-  } else if (i < 14) {
-    slots.push(new Slot(fifthRow, 470));
-    fifthRow += 95;
-
-  } else if (i < 21) {
-    slots.push(new Slot(fourthRow, 390));
-    fourthRow += 95;
-
-  } else if (i < 28) {
-    slots.push(new Slot(thirdRow, 310));
-    thirdRow += 95;
-
-  } else if (i < 35) {
-    slots.push(new Slot(secondRow, 230));
-    secondRow += 95;
-    
-  } else if (i < 42) {
-    slots.push(new Slot(firstRow, 150));
-    firstRow += 95;
-  }
-}
-
-console.log(slots);
-```
-
-
-#### Example 3
 The following code is used to toggle between two players. If a player successfuly places a token in the array, a token is created for the other player. If a player does not successfuly place a token a new token is created for the original player.
 
 Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the placed tokens alternate between the two players.
@@ -338,9 +287,7 @@ console.log(newArray)
 * When should we prioritize resolving technical debt?
 
 
-### SOLUTION
-
-**IF-ELSE REFACTOR**
+### IF-ELSE REFACTOR SOLUTION
 
 Switch Statement Example: 
 ```js
