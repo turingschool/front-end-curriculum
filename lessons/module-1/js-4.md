@@ -430,8 +430,9 @@ With your partner, answer the questions below.
     * What is an Instance?
     * What is an Object?
     * How are these three things alike/different?
-    * What happens when a new instance is created? What method is run?
-    * What code do you have to write to create a Class? What code do you have to write to create an instance? What code do you write to create a one-off object?
+    * What code do you have to write to create a Class? 
+    * What code do you have to write to create an instance? 
+    * What code do you write to create a one-off object?
 * Properties & Methods
     * What is a property? How can we query a property?
     * How can we reassign the value of a property?
