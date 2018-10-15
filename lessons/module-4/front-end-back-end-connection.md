@@ -42,20 +42,20 @@ If it's not working, check out the console of your React app...
 
 ### CORS! - Some Group Work
 
-You've heard of it before - Cross-Origin Resource Sharing. What even is an origin? And why is it bad that we want to share resource?
+You've heard of it before - Cross-Origin Resource Sharing. What even is an origin? And why do we want to share resources?
 
 With a partner, look through [this MDN page](https://developer.mozilla.org/en-US/docs/Web/Security/Same-origin_policy) about what an origin is. See if you can describe an origin for our use cases in 1 or 2 sentences.
 
 ---
 
-Now that we know what an origin is, what is Cross-Origin Resource Sharing, and why won't it let us talk to our back-end application.
+Now that we know what an origin is, what is Cross-Origin Resource Sharing, and why won't it let our front-end talk to our back-end application?
 
 Read through [this MDN page]() about CORS - specifically the "Introduction", "What requests use CORS?", "Functional Overview", the **Simple requests** portion of "Examples of access control scenarios", and "The HTTP response headers".
 
 Now in each group at your tables on a piece of chart paper:
 
-* Diagram the "conversation" between the client and server that caused the CORS issue in the first place
-* Then diagram a new conversation where the client is able to request a resource from another origin (what needs to change?)
+* Diagram the "conversation" between the back-end and front-end that caused the CORS issue in the first place
+* Then diagram a new conversation where the front-end is able to request a resource from the back-end, which is another origin (what needs to change?)
 
 ---
 
