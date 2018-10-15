@@ -540,7 +540,7 @@ Let's take the `increaseWidth` and `increaseHeight` methods that you created ear
 
 Since we aren't worried about actually testing our DOM manipulation at this point, we are going to use a [`spy`](https://github.com/chaijs/chai-spies) to verify whether our method that displays the score has been called. *Note: Spies will help you verify calls to methods without actually calling them.*
 
-First, let's install and require `chai-spies`:
+First, let's install and require `chai-spies`. Let's also require the `domUpdates` files that we are using to store our DOM manipulation methods:
 
 **Install**
 
@@ -549,15 +549,16 @@ First, let's install and require `chai-spies`:
 ```js
 const chai = require('chai');
 const expect = chai.expect;
-const Box = require('../Box.js');
 const spies = require('chai-spies')
 chai.use(spies);
+
+const Box = require('../Box.js');
+global.domUpdates = require('../domUpdates.js');
 ```
 
-Next, require the `domUpdates` files that we will be using to store our DOM manipulation methods:
+Next, we will take advange of the `.on()` method from the [Chai-spies](https://github.com/chaijs/chai-spies#user-content-spyon) to spy on the methods that we want to test:
 
 ```js
-global.domUpdates = require('../domUpdates.js');
 chai.spy.on(global.domUpdates, ['displayHeight','displayWidth'], () => true);
 ```
 
