@@ -29,7 +29,7 @@ if (this.explode === 'no') {
 }
 ```
 
-### After
+### After V1
 ```js
 let playerImage = new Image();
 
@@ -39,6 +39,23 @@ if (this.explode === 'no') {
 } else if (this.explode === 'yes') {
   playerImage.src = 'assets/kapow.png';
 }
+
+context.drawImage(
+  playerImage,
+  this.x,
+  this.y,
+  this.width,
+  this.height
+);
+```
+
+### AFTER V2
+```js
+let playerImage = new Image();
+
+const isExploded = () => ( this.explode === 'yes' )
+const imageSource = isExploded ? 'assets/kapow.png' : 'assets/airplane.png'
+playerImage.src = imageSource
 
 context.drawImage(
   playerImage,
