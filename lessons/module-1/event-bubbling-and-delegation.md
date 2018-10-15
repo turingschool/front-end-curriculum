@@ -17,6 +17,7 @@ tags: javascript, dom, browser, events
 - `Event Capturing` Part of the event propagation model wherein listeners are fired from the top the DOM tree, down
 - `Event Targeting` Part of the event propagation model wherein listeners are fired on the source of the event
 - `Event Bubbling` Part of the event propagation model wherein listeners are fired from the target of the event, up
+- `Event Delegation` The process of using event propagation to handle events at a higher level in the DOM than the element on which the event originated
 
 ## Event Basics
 
