@@ -173,4 +173,7 @@ Take some time to go through your projects together.  The first group should pre
 8. Do class names follow naming conventions? Is your CSS organized well for developer empathy?
 9. Are you removing repetitive lines of code in your styles by grouping classes and following the DRY principle?
 10. Is your JavaScript organized and clearly laid out?  Are there functions that could have a clearer SRP?
+
+#### Summary
+At the end, take a few minutes to write some notes and update your plan for the remaining few days.  What feedback did you get?  What areas in your application would you like to improve on before your eval?  List out atleast 3 goals that you want to accomplish and bring up in your next DTR.
  
