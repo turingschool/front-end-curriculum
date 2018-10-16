@@ -1,5 +1,5 @@
 ---
-title: IdeaBox Groups
+title: IdeaBox Triples
 ---
 
 Every developer has more ideas than time. As David Allen likes to say "the human brain is for creating
