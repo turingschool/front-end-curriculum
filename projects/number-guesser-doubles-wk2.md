@@ -153,3 +153,27 @@ Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/
 - Hot Fire
 - Sparkles
 - Magic
+
+### Number Guesser Checkins (25 minutes each)
+
+Take some time to go through your projects together.  The first group should present their project and the functionality of their app so far, and vice versa.  Take some time to go through the code including HTML, CSS, and JavaScript.  Use the questions below as a guide to think about when giving each other feedback.   
+
+#### Application/Functionality Focused
+
+1. What has been your biggest win so far?  What is something you are still struggling with?
+2. What strategies have helped your team collaborate?  What is your plan for the next few days? If you don't have a plan yet, write one out now. (mentor, pairings, grouping up with classmates, etc.)
+3. How close does the application match the comp?  Pay attention to fonts, colors, spacing, and responsiveness.
+4. Pay attention to the UX.  Play a game together.  What stands out that makes the experience confusing?  Is the error handling clear? 
+5. Have you started working on extensions yet?  How did you implement them?  If not, what is one extension you would like to complete before evals?
+
+
+#### Code/Style Focused
+6. How is the style of the code (Does it match the styleguides for [HTML](https://github.com/turingschool-examples/html), [CSS](https://github.com/turingschool-examples/css), and [JavaScript](https://github.com/turingschool-examples/javascript/tree/master/es5))?
+7. Is HTML structure clean and easy to read? Are you using semantic HTML elements?
+8. Do class names follow naming conventions? Is your CSS organized well for developer empathy?
+9. Are you removing repetitive lines of code in your styles by grouping classes and following the DRY principle?
+10. Is your JavaScript organized and clearly laid out?  Are there functions that could have a clearer SRP?
+
+#### Summary
+At the end, take a few minutes to write some notes and update your plan for the remaining few days.  What feedback did you get?  What areas in your application would you like to improve on before your eval?  List out atleast 3 goals that you want to accomplish and bring up in your next DTR.
+ 
