@@ -4,6 +4,8 @@ title: Whateverly
 
 # Context
 
+TBD
+
 
 # Technologies
 
@@ -23,6 +25,8 @@ You'll be working with some new technologies for this project:
 
 * At least one of your datasets must have more than 30 records. (if your dataset is an object, it should have 30 keys. if it's an array, it should have 30 elements)
 
+* Your users will only be able to **retrieve** your data, not modify it. (Similar to Jeopardy: you, as a developer, are allowed to manipulate the dataset to make it easier to work with, but the players interacting with your app cannot)
+
 
 ## Search Functionality & Autocomplete
 
@@ -31,9 +35,53 @@ You'll be working with some new technologies for this project:
 * The search functionality will include an autocomplete feature that "guesses" what the user is trying to type in. This means that the information your users are searching for should be part of one of your datasets that it can pull suggestions from. 
 
 
+
+
+
+
+
+
+
+
+## Outline
+
+### Week 4
+
+|Day | Status| Deliverables |
+|--- |---    |--- |
+|*Friday* (wk 3) | Kick-off and brainstorming | Practice with the React static comp, brainstorm project ideas and datasets |
+|*Monday* | 2 project ideas & draft datasets [due]() |
+|*3* | Understanding/Planning| Diagram for OOP design/classes due|
+|*5* | Check-in| Pair-to-Pair feedback|
+
+### Week 5
+
+|Day | Status| Deliverables |
+|--- |---    |--- |
+|*8* | Check-in| Instructor pairing|
+|*11* | Assessment| Formal Code Review or Class Code Review|
+
+
+
+
+
+#### Submitting Your Project Ideas & Datasets
+
+You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data)
+
+
+
+
+
+
+--------------------------------------------------------------
+
+
+
+
 # Repo Initialization
 
-* Use [create-react-app](https://www.npmjs.com/package/create-react-app) for your project.
+* Use [create-react-app](https://www.npmjs.com/package/create-react-app) to create a new project
 * ESLint
 
 After initializing your create-react-app project, add eslint to the project.
@@ -62,148 +110,14 @@ Make sure to name it .eslintrc
 
 
 
-
-
 ## Design Requirements
 Your Readme should include wireframes of your app.
 
-## Phase one
-
-Create your Current Weather component
-
-You will create your User Interface using mock data. This will speed up your development time by not waiting for api requests. You can find the mock data [here](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). Copy it into a seperate file that you can then import into your App file.
-
-Your Current Weather component should display the following information
-
-  * the name of the current city
-  * the current condition
-  * the current day
-  * the current temperature
-  * the expected high and expected low for the day
-  * a summary of what the weather is going to be like that day ("Windy, chance of a few late night showers. Lows overnight in the mid 50s.)
-
-## Phase two
-
-* The application should have a 7 hour weather forecast component. Each hour should be a card component and should display
-   * the hour
-   * an image that reflects the weather
-   * the projected temperature
-
-* Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive.
-
-## Phase three
-
-* The application should have a 10 day forecast component. Each day should be a card component and should display
-  * the name of the day
-  * an image that reflects the weather
-  * the projected high and low temperature
-
-## Phase four
-
-* Your application should have a welcome page that greets the user. The welcome page has a search component.
-
-The search component consists of an input field and a submit button that allows the user to search for a location (the location should work with both a zip code and city/state).
-
-* Once the desired location is submitted there should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
-
-* location persists after refresh.
-
-## Phase five
-
-* Add autocomplete functionality to your search input
-* import your completeMe into your Weathrly project. Populate it with this [list of city/states](https://drive.google.com/file/d/0B7Bgu1dKc7BzSVRjb2xMS0R5M2M/view?usp=sharing). When a user starts typing in a city/state or zip code display a list of possible suggestions using your completeMe's suggest function.
 
 ## Extensions
-
-* If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
-   * For each hour it should display an image that reflects the weather
-   * For each hour it should display the projected temperature and the hour
 
 * Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
 
 * The application is fully accessible.
    * The application can be used without a mouse
    * zero axe-core violations
-
-
-
-
-
-
-
-
-# Instructor Evaluation Points
-
-## Specification Adherence
-
-4 - The application meets all of the requirements listed above and implements one or more of the extensions.
-
-3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from above that make the application feel incomplete or hard to use.
-
-2 - The application is in a usable state, but is missing 1 or more of the features outline in the specification above.
-
-1 - The application is missing 3 or more smaller features or 1 major feature essential to having a complete application.
-
-0 - The application is unusable.
-
-## User Interface
-
-4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor without guidance from the developer.
-
-3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality. The application less than 3 aXe-core violations
-
-2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
-
-1 - The application is confusing or difficult to use.
-
-## HTML Style
-
-4 - Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
-
-3 - Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
-
-2 - Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
-
-1 - Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
-
-## CSS/Sass Style
-
-4 - Application has exceptionally well-factored CSS/Sass with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
-
-3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS/Sass is doing.
-
-2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-
-1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS/Sass is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
-
-## JavaScript / React Style
-
-4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are zero instances where an instructor would recommend taking a different approach to design and component architecture.
-
-3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing. Application has at least 6 components built out.
-
-2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing. The application has large components and logic could be broken out to smaller stateless components.
-
-1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
-
-0 - Your client-side application does not function or the application does not make use of localStorage for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
-
-## Testing
-
-4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
-
-3 - Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of feature testing.
-
-2 - Project has sporadic use of tests and multiple levels. The application contains numerous holes in testing and/or many features are untested.
-
-1 - There is little or no evidence of testing in this application.
-
-## Workflow
-
-4 - The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application.
-
-3 - The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base.
-
-2 - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
-
-1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
