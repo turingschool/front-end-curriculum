@@ -83,4 +83,4 @@ Take a few minutes and write out an action plan for the next few days.
   - Grouping classes together that share similar styles
 
 ### Peer Review
-Use [this template](/projects/static-comp-peer-review.md)
+Use [this template](/projects/static-comp-peer-review.html)
