@@ -76,15 +76,14 @@ else
   * Strict equals looks more like an assignment than a strict equals
  -->
 - High level vs low level
-<!-- 
-* Be talking as you write! Don't feel rude for looking away, it takes too long to look at the person and talk, then write, then talk, then write. Talk loud so they can hear you while you write on the board
+
+<!-- * Be talking as you write! Don't feel rude for looking away, it takes too long to look at the person and talk, then write, then talk, then write. Talk loud so they can hear you while you write on the board
 
 * Pay close attention to the amount of space you have! Don't start writing huge and in the dead center of the board, you'll run out of room. If you *do* start running out of room, don't worry about putting things in different places - the whiteboarded code doesnt have to read perfectly top-to-bottom, you can make use of horizontal space.
 
 * DON'T WIPE THE WHITEBOARD WITH YOUR HAND WHEN YOU ERASE THINGS. Youll get marker on your hand, then you'll be nervous and sweating and you'll wipe a bead of sweat off your face with your marker hands and then you'll have marker on your forehead and you'll look like a total nerd and then you'll go to shake the interviewer's hand at the end of the interview and you'll get marker on them.
 
-* How much specificity should you have as you speak about what you're doing - where can you be vague, where do you need to go into detail? - Not sure how to demonstrate this balancing act to them
- -->
+* How much specificity should you have as you speak about what you're doing - where can you be vague, where do you need to go into detail? - Not sure how to demonstrate this balancing act to them-->
 
 #### Turn and Talk
 
@@ -158,7 +157,7 @@ Which could also be written like this:
 #### Group Exercise: 
 
 In your group, solve the following IRL task in psuedocode: 
-> Break out the recipe for making grilled cheese into discrete steps. Note: A cheese sandwich is a basic sandwich generally made with one or more varieties of cheese on any sort of bread. A grilled cheese sandwich is made by grilling the sandwich with butter or toasting it.
+_Break out the recipe for making grilled cheese into discrete steps. Note: A cheese sandwich is a basic sandwich generally made with one or more varieties of cheese on any sort of bread. A grilled cheese sandwich is made by grilling the sandwich with butter or toasting it._
 
 <!-- 
 Groups This should produce the most comprehensive model because we synthesize several points of view. When people work together under the right circumstances - group models are preferred.
