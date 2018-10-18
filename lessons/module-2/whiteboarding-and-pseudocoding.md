@@ -48,6 +48,7 @@ In the context of interviewing for a job, being able to whiteboard is important 
 - Talk as you write
 - Pay attention to the amount of space you have to write
 - DON'T WIPE THE WHITEBOARD WITH YOUR HAND WHEN YOU ERASE THINGS
+- High level vs low level
 - Develop a shorthand for writing code:
 
 ```js
@@ -75,7 +76,7 @@ else
   * No full-blown if/else statements (ifs are replaced with question marks)
   * Strict equals looks more like an assignment than a strict equals
  -->
-- High level vs low level
+
 
 <!-- * Be talking as you write! Don't feel rude for looking away, it takes too long to look at the person and talk, then write, then talk, then write. Talk loud so they can hear you while you write on the board
 
