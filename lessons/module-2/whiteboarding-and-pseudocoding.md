@@ -63,12 +63,12 @@ if (foo === 'bar') {
 Could be written as shorthand:
 
 ```js
-// foo = baz?
-//   changeFoo(bar)
-// foo = bar?
-//   changeFoo(baz)
-// else 
-//   changeFoo(caw caw)
+foo = baz?
+  changeFoo(bar)
+foo = bar?
+  changeFoo(baz)
+else 
+  changeFoo(caw caw)
 ```
 <!-- * What do you notice about the difference in these two code examples?
   * No curly braces
