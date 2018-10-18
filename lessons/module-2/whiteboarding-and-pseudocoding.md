@@ -63,12 +63,12 @@ if (foo === 'bar') {
 Could be written as shorthand:
 
 ```js
-foo = baz?
-  changeFoo(bar)
-foo = bar?
-  changeFoo(baz)
-else 
-  changeFoo(caw caw)
+// foo = baz?
+//   changeFoo(bar)
+// foo = bar?
+//   changeFoo(baz)
+// else 
+//   changeFoo(caw caw)
 ```
 <!-- * What do you notice about the difference in these two code examples?
   * No curly braces
@@ -133,7 +133,7 @@ Here's another IRL example of how I may choose a certain path (based on the weat
 _Iterations_: Iterations allow us to repeat steps until a certain condition is met. They _always_ begin with a choice. Here's another IRL example of preheating my oven:
 
 ```js
-While the oven is _not_ 350 degrees, wait
+// While the oven is not 350 degrees, wait
 ```
 
 Which could also be written like this:
