@@ -42,7 +42,6 @@ You'll be working with some new technologies for this project:
 
 
 
-
 ## Outline
 
 ### Week 4
@@ -67,7 +66,19 @@ You'll be working with some new technologies for this project:
 
 #### Submitting Your Project Ideas & Datasets
 
-You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data)
+You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and include the following information:
+
+* One or two sentence description of the application
+* What use-case it will have for search functionality/auto-complete
+
+Your datasets should be added in a single file to the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like:
+
+```
+module.exports = {
+  instructors,
+  students
+}
+```
 
 
 
@@ -76,7 +87,7 @@ You should pull request your project ideas and their corresponding datasets [her
 
 --------------------------------------------------------------
 
-
+ALL OF THIS SHIT NEEDS TO BE REDONE. Eslint instructions don't need to be so verbose, just link them to the new configuration file.
 
 
 # Repo Initialization
@@ -97,7 +108,7 @@ After initializing your create-react-app project, add eslint to the project.
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js"
+    "lint": "./node_modules/eslint/bin/eslint.js ./src/*.js"
 },
 ```
 
@@ -110,11 +121,14 @@ Make sure to name it .eslintrc
 
 
 
+
 ## Design Requirements
 Your Readme should include wireframes of your app.
 
 
 ## Extensions
+
+SHOULD PROBABLY COME UP WITH MORE EXTENSIONS
 
 * Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
 
