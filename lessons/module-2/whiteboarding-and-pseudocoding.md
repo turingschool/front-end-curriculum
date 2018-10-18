@@ -1,5 +1,5 @@
 ---
-title: Whiteboarding and Psuedocoding
+title: Whiteboarding and Pseudocoding
 length: 120
 tags: whiteboarding, interviews, pseudocoding
 module: 2
