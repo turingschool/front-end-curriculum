@@ -17,6 +17,7 @@ tags: javascript, dom, browser, events
 - `Event Capturing` Part of the event propagation model wherein listeners are fired from the top the DOM tree, down
 - `Event Targeting` Part of the event propagation model wherein listeners are fired on the source of the event
 - `Event Bubbling` Part of the event propagation model wherein listeners are fired from the target of the event, up
+- `Event Delegation` The process of using event propagation to handle events at a higher level in the DOM than the element on which the event originated
 
 ## Event Basics
 
@@ -210,5 +211,6 @@ What is a real life analogy that you could use to explain how event delegation w
 
 ### Resources
 
-- Now that you have some jQuery under your belt - you should know that jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/)
+<!-- For now, we no longer teach jQuery so commenting this out for the time being. -->
+<!-- - Now that you have some jQuery under your belt - you should know that jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/) -->
 - A very detailed piece that desribes [event order](https://www.quirksmode.org/js/events_order.html) can be found here

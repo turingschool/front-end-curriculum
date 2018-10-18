@@ -62,7 +62,7 @@ CREATE DATABASE name;
 CREATE TABLE students (
   id serial PRIMARY KEY,
   name varchar (50) NOT NULL,
-  program varchar (50) NOT NULL,
+  program varchar (50) NOT NULL
 );
 
 # View records in a table

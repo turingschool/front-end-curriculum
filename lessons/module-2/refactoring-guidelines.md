@@ -16,7 +16,7 @@ By the end of this lesson, students should be able to:
 - `Technical Debt` The build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain
 - `Code Smell` A surface level indication of bad code that usually corresponds to a deeper, more fundamental problem
 - `Refactoring` The process of changing the internals of a system (it's factoring), without changing its external behavior
-- `Interface` The external boundary of a software component
+<!-- `Interface` The external boundary of a software component -->
 - `DRY` Don't Repeat Yourself
 
 ## The Basics
@@ -26,7 +26,7 @@ Refactoring your code is an important part of reducing <b>technical debt</b>. Te
 As we work under strict deadlines, we often write less-than-ideal code that might suffer from the above ailments. No codebase will ever be perfect, but we can take a lot of simple steps to clean up our projects and keep our technical debt in check.
 
 
-## File Issues
+## Tracking Technical Debt: Github Issues
 
 First things first: before you even begin to prioritize working on technical debt, keep track of it. This is a great use-case for GitHub issues. Because resolving technical debt is usually a lower priority, and not as urgent as bug fixes and feature completion, it's important to file issues that will remind you of what needs fixing up once you have some downtime.
 
@@ -127,7 +127,12 @@ fetch(`${API_HOSTNAME}/radar-map/${CITY}`)
 
 ### Long, Gnarly if-else Statements
 
-Try to keep your if-else statements to a legitimate if, else, and nothing more. Relying heavily on `else if`'s is a sure sign your conditional logic is getting a little out of control. Some ways to refactor unruly if-else statements is to convert them into `switch` statements, or create an object of key-value pairs that you can use as a reference map for certain conditions. For example, this:
+Try to keep your if-else statements to a legitimate if, else, and nothing more. Relying heavily on `else if`'s is a sure sign your conditional logic is getting a little out of control. Some ways to refactor unruly if-else statements is to convert them into `switch` statements, or create an object of key-value pairs that you can use as a reference map for certain conditions. 
+
+Turn to the person sitting next to you, and spend the next 5 minutes
+talking about how you could refactor this code example: 
+
+<!-- CODE REFACTOR SOLUTION MOVED TO BOTTOM (IF-ELSE REFACTOR) -->
 
 ```js
 function evalInput(event) {
@@ -149,27 +154,6 @@ function evalInput(event) {
 }
 ```
 
-Could be converted into something like this:
-
-```js
-const keyboard = {
-  'key37': () => game.toad.moveToad('left', canvas),
-  'key38': () => game.toad.moveToad('up', canvas),
-  'key39': () => game.toad.moveToad('right', canvas),
-  'key40': () => game.toad.moveToad('down', canvas),
-  'key72': () => game.winLevel()
-};
-
-function evalInput(event) {
-  const property = `key${event.keyCode}`;
-
-  if (keyboard[property]) {
-    keyboard[property]();
-  }
-}
-```
-
-
 ## When to Prioritize Refactoring
 
 We mentioned earlier that refactoring is often a secondary priority. It's hard to know when exactly to prioritize resolving technical debt, but there are a couple of scenarios where it makes sense:
@@ -177,10 +161,16 @@ We mentioned earlier that refactoring is often a secondary priority. It's hard t
 * **When you have some down time.** Some teams will even dedicate some sacred time to resolving technical debt each week to make sure it doesn't get out of hand.
 * **When refactoring will make it faster or easier to implement a new feature.** Sometimes the time spent refactoring upfront will save you time down the road. If you're running into a serious roadblock with pre-existing code that's making it difficult to work on your higher-priority tasks, this might be a good time to do some refactoring.
 * **When you can resolve the technical debt quickly without taking yourself off your current task.** If you notice something small (e.g. a linter or code style error) that can be cleaned up while you're working on another feature, feel free to fix it right away rather than filing an issue to fix it later. In this scenario, you would still want to create a separate commit for the refactoring fix, to prevent cluttering up the diff on your feature commits.
+* **When you dont have a choice** Many dev teams use something called
+"Continuous Integration", or "CI". These are various "hooks" or scripts that
+run before your code can be merged into master. Often times, these hooks
+include running your code linter, your test files, or any other maintenance
+libraries that your codebase depends on. 
+
 
 ## Practice
 
-Take the following three code examples and try to identify what code smells you find. Then make an attempt at refactoring them.
+Take the following code examples and try to identify what code smells you find. Then make an attempt at refactoring them.
 
 #### Example 1
 
@@ -230,57 +220,6 @@ if (explode === 'no') {
 ```
 
 #### Example 2
-
-```js
-/* ----------- Do not refactor this section ----------- */
-class Slot {
-  constructor(x, y) {
-    this.x = x;
-    this.y = y;
-  }
-}
-
-/* -------------- Refactor this section -------------- */
-let slots = [];
-let firstRow = 40;
-let secondRow = 40;
-let thirdRow = 40;
-let fourthRow = 40;
-let fifthRow = 40;
-let sixthRow = 40;
-
-for (let i = 0; i < 42; i++) {
-  if (i < 7) {
-    slots.push(new Slot(sixthRow, 550));
-    sixthRow += 95;
-
-  } else if (i < 14) {
-    slots.push(new Slot(fifthRow, 470));
-    fifthRow += 95;
-
-  } else if (i < 21) {
-    slots.push(new Slot(fourthRow, 390));
-    fourthRow += 95;
-
-  } else if (i < 28) {
-    slots.push(new Slot(thirdRow, 310));
-    thirdRow += 95;
-
-  } else if (i < 35) {
-    slots.push(new Slot(secondRow, 230));
-    secondRow += 95;
-    
-  } else if (i < 42) {
-    slots.push(new Slot(firstRow, 150));
-    firstRow += 95;
-  }
-}
-
-console.log(slots);
-```
-
-
-#### Example 3
 The following code is used to toggle between two players. If a player successfuly places a token in the array, a token is created for the other player. If a player does not successfuly place a token a new token is created for the original player.
 
 Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the placed tokens alternate between the two players.
@@ -346,3 +285,53 @@ console.log(newArray)
 * What is technical debt?
 * What are some things we can do to keep technical debt under control?
 * When should we prioritize resolving technical debt?
+
+
+### IF-ELSE REFACTOR SOLUTION
+
+Switch Statement Example: 
+```js
+const keyMapping = key => (
+  switch(key) {
+    case 'key37': 
+      return 'left';
+    case 'key38':
+      return 'up';
+    case 'key39': 
+      return 'right';
+    case 'key40':
+      return 'down';
+    default:
+      return 'up';
+  }
+)
+
+const evalInput = event => {
+ if (event.keyCode === 72) {
+  return game.winLevel();
+ } 
+
+ const direction = keyMapping(event.keyCode)
+ return game.toad.moveToad(direction, canvas)
+}
+```
+
+Object Map Example:
+```js
+const keyboard = {
+  'key37': () => game.toad.moveToad('left', canvas),
+  'key38': () => game.toad.moveToad('up', canvas),
+  'key39': () => game.toad.moveToad('right', canvas),
+  'key40': () => game.toad.moveToad('down', canvas),
+  'key72': () => game.winLevel()
+};
+
+function evalInput(event) {
+  const property = `key${event.keyCode}`;
+
+  if (keyboard[property]) {
+    keyboard[property]();
+  }
+}
+```
+

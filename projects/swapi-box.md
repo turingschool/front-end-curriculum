@@ -18,8 +18,8 @@ Using a "Modular Structure" means that all of the files associated with a given 
 
 For example:  
 ```js
-App/
-  Components/
+src/
+  components/
     Button/
       Button.js
       Button.scss
@@ -32,23 +32,33 @@ App/
 
 ## Project Goals & Requirements:
 
-1. Get comfortable whipping together React components on your own with the additional complexity of implementing React Router (if you want to).  
-2. Write **squeaky clean**, well refactored code using ES6 syntax.  
-3. Make informed design decisions to create a user-friendly application.  
-4. Keep state based components to a minimum and leverage more functional components.  
-5. Use a modular architecture for your application file structure.  
-6. Think deeply about React Lifecycle Methods.  
-6. Use `propTypes` for every component receiving props.  
+1. Learn how to wireframe and know why it is important.
+2. Get comfortable whipping together React components on your own with the additional complexity of implementing React Router. 
+3. Write **squeaky clean**, well refactored code using ES6 & ES7 syntax.  
+4. Make informed design decisions to create a user-friendly application.  
+5. Keep state based components to a minimum and leverage more functional components.  
+6. Use a modular architecture for your application file structure.  
+7. Think deeply about React Lifecycle Methods.  
+8. Use `propTypes` for every component receiving props.  
 
 ### Important Notes  
 
 - The API we are using is completely unsecured. This means we will be making all requests for this particular project directly from our browser. We will not be sending any advanced communication from a local server.  
-- Although there are many resources out there for making API calls, you are asked to exclusively use the native [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API for this project. That being said, you are **highly** encouraged to experiment with [`axios`](https://github.com/mzabriskie/axios) and any other fun libraries you wish for comparison purposes.  
-- The data does not need to persist. Feel free to implement Firebase or localStorage if you are so moved (it is also listed as an extension).  
+- Although there are many resources out there for making API calls, you are asked to exclusively use the native [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API for this project. 
+- The data does need to persist in localStorage.
 
 ## Specifications
 
-### Iteration 0: Landing Page
+### Iteration O: Wireframing
+
+- Utilize a wireframing tool of your choice to plan the design of your application before you start building.
+  * Sketch
+  * Draw.io
+  * Balsamiq
+  * Adobe XD CC 
+  * InVision
+
+### Iteration 1: Landing Page
 
 - When the app starts up `'/'` the user should see the opening `scrolling text` of a random film, with the title of the film and release year listed below.  
 - There should be buttons to browse three different categories: People, Planets, and Vehicles.  
@@ -56,7 +66,7 @@ App/
 
 ![Landing Page](http://i.imgur.com/opKLFZ8.png)
 
-### Iteration 1: Get People
+### Iteration 2: Get People
 
 - When a user clicks on `People`, the page is populated with cards with data for each person.
 - The cards should have:  
@@ -70,7 +80,7 @@ App/
 
 ![People](http://i.imgur.com/7bKxgS5.png)  
 
-### Iteration 2: Get Planets/Vehicles
+### Iteration 3: Get Planets/Vehicles
 - When a user clicks on any of the other buttons, the data should then represent the button pressed.  
 
 - Planet Cards:  
@@ -87,34 +97,41 @@ App/
   - Class  
   - Number of Passengers 
   - A button to "Favorite" the vehicle 
+  
+### Iteration 4: LocalStorage
 
-### Iteration 3: Favorites
+- Use LocalStorage to persist data. People, Planets, and Vehicles should all be saved in LocalStorage. Secondary calls for data should be made to LocalStorage (i.e. you should not be fetching the data once you already have it).
+
+### Iteration 5: Favorites
 
 - There should be a button on each card to save it to Favorites.  
 
 ![Favorite Button](http://i.imgur.com/iTGJNu5.png)  
 
-- There should also be a button that when clicked, displays only the favorited cards.  
+- There should also be a button that when clicked, displays only the favorited cards. 
+- This button should also show the count of favorited items in the button text.
 
 ![Favorites Page](http://i.imgur.com/AVPEopf.png)  
 
 - Users should be able to unfavorite a card.  
-- If there are no favorites, there should be a message indicating that there are no favorites.  
+- If there are no favorites, there should be a message indicating that there are no favorites.
 
-## Extensions
+### Iteration 6: React Router
 
-- Implement a `More` button. When clicked, the next 10 items of that category should be shown.   There should be a `Back` button to go back to the previous page.  
-- Use `localStorage` to persist data.  
-- Implement `React Router`  
-  - The URL should match the category chosen. For example, clicking on the `People` button routes the user to `'/people'`and display the people cards.  
-  - When a user visits `'/favorites'` the favorited cards are displayed.  
+- The URL should match the category chosen. For example, clicking on the `People` button routes the user to `'/people'`and display the people cards.  
+- When a user visits `'/favorites'` the favorited cards are displayed.  
+
+## Extension
+
+- Implement a `More` button. When clicked, the next 10 items of that category should be shown. There should be a `Back` button to go back to the previous page.  
+
 
 ## Rubric
 
 ### Specification Adherence
 
-- 4 - The application completes all 3 iterations above and implements one or more of the extensions.
-- 3 - The application completes all 3 iterations.
+- 4 - The application completes all 6 iterations above and implements the extension.
+- 3 - The application completes all 6 iterations.
 - 2 - The application is in a usable state, but is missing some of the features outlined in the specification above.
 - 1 - The application is missing multiple features essential to having a complete application.
 
@@ -132,12 +149,24 @@ App/
 - 2 - Developer has made intentional design decisions to create a user friendly application but Louisa would be mad. Attempts to follow [10 Essential Usability Guidelines.](https://speckyboy.com/10-essential-web-application-usability-guidelines/)
 - 1 - Developer did minimal to no CSS for this project besides what was indicated in the comp.
 
+### React Router
+
+- 4: Application is a single page and uses the React Router to display appropriate components based on URL.
+- 3: Application is a single page and uses the React Router but does not display the appropriate components upon navigating.
+- 2: Application does not render/cannot find additional routes.
+- 1: Application did not use a Router
+
 ### Testing
 
 - 4 - Every component is tested from both a unit and acceptance standpoint, all crucial functionality is tested
 - 3 - Almost all components are tested to a level that indicates developer has an understanding of testing
 - 2 - A valid attempt was made to test functionality with obvious gaps where functionality is not tested
 - 1 - There was little to no attempt to test this application.
+
+### Wireframes
+
+- Pass - Developer team laid out their thinking using wireframes before building their project
+- Fail - No wireframes were used to build this project
 
 ### PropType Implementation
 
@@ -161,7 +190,7 @@ The output from ESLint shows…
 
 ### Workflow
 
-- 4 - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
+- 4 - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) are using a rebase workflow, effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
 
 - 3 - Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
 

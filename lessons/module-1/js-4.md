@@ -1,15 +1,15 @@
 ---
-title: JS IV - Objects, `this`, and Constructor Functions
-tags: js, introduction, constructor functions, this
+title: JS IV - Objects, `this`, classes, and instances
+length: 120
+tags: js, introduction, constructor functions, this, classes, objects
 ---
-### Goals
 
-In this lesson we'll cover:
+## Learning Goals
 
-* Objects
-* What a constructor function is
-* When you need an array or object data structure
-* Introduction to `this`
+* Describe what an object literal is
+* Understand how to define properties and methods in an object literal
+* Understand what `this` is and how it changes based on context
+* Understand what a class is and what instances are.
 
 ## Vocab
 
@@ -20,13 +20,17 @@ In this lesson we'll cover:
 - `Method` A function on an Object
 - `Dot Notation` Notation to access a Value on an Object, explicitly specifies the Key
 - `Bracket Notation` Notation to access a Value on an Object, usually specifies a Key via a variable
-- `this` A variable that changes depending on the context in which it's used 
-- `Constructor Function` A function that produces a new object
+- `this` A variable that changes depending on the context in which it's used
+- `class` A construct that allows us to create multiple instances
+- `instance` An object of a certain type
 
 # Objects
 
 ### High Level
 Objects are an abstraction, or the representation of real world things in computer programming.
+They are meant to store two things:
+1. State
+2. Behavior
 
 ### Anatomy of Objects
 Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. Each property in an object must be unique. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
@@ -89,7 +93,7 @@ var schoolName = school['name'];
 var schoolCapacity = school['capacity'];
 ```
 
-Bracket Notation is usually used when the name of the property is stored in a variable. 
+Bracket Notation is usually used when the name of the property is stored in a variable.
 
 ```js
 var prop = 'name';
@@ -108,13 +112,14 @@ Step 1: Take a few minutes to write about the below individually:
 - What is an object and what is it made up of?
 - We've already been using objects... can you think of an example of a dom method or property you've used?
 - When we assign a function as the value of a key inside an object, what do we call it?
+
 Step 2: Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
 
 ### Your Turn, Part 2
-Let's goof off in the console a bit. As a group, we'll practice working with an object:
+In the console (or a repl), in pairs, practice the following:
 
 ```javascript
-// Create an object in honor of @jhunbug
+// use this object literal
 var burrito = {
   type: "carne asada"
 };
@@ -145,15 +150,19 @@ var school = {
 };
 ```
 
-You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`? 
+You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`?
 
-Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is dependent on the _context_ of where it is referenced. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`. In the context of an object, `this` refers to and is bound to the object itself.
+Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is dependent on the _context_ of where it is referenced.
+
+There are two primary rules of thumb when it comes to `this`:
+1. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
+2. In the context of an object, `this` refers to and is bound to the object itself.
 
 In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
 
 `capacity` and `currentStudents` are properties of the `school` object, so when used in this context `this` refers to `school`.
 
-## Which `this` is which?
+### Which `this` is which?
 
 **ProTip:** The default context of `this` is the `window` object. Try it out: In your console (not a repl), run `console.log(this);`. So without giving our browser ANY additional information, it tells us that the object we are working within is the `window`, which makes sense.
 
@@ -175,7 +184,7 @@ var showWidth = function() {
 };
 showWidth();
 
-// METHOD OF AN OBJECT - when does a function become a method? When it is defined INSIDE an object. In a method, "THIS" refers to the containing object.
+// METHOD OF AN OBJECT - when does a function become a method? When it is defined INSIDE an object. In a method, `this` refers to the containing object.
 var room = {
   width: 800,
   height: 400,
@@ -224,162 +233,214 @@ human.getName();
 
 // What do your results tell you about the context of this now?
 
-// Spoiler alert: `This` no longer refers to the global context (Elvis), because it is now a method scoped to a specific object (human), so "this" refers to that containing objects name property (Cher).
+// Spoiler alert: `this` no longer refers to the global context (Elvis), because it is now a method scoped to a specific object (human), so "this" refers to that containing objects name property (Cher).
 
 // Create a second object with a different name value and use the same getName/sayName key value pair.
 ```
 
 **PRO TIP:** The context of this within a function will be determined by WHERE THE FUNCTION GETS CALLED.
 
-## Objects: Constructor Notation
+Lets use [this codepen](https://codepen.io/damwhit/pen/XxeZpg?editors=1011) for another activity:
 
-We feel pretty good about using literal notation to create an object. We know that all we really need is `{}`, but it's a good idea to assign an empty object to a variable to we can actually put things in it.
+1. Individually, determine what the value of `this` is inside of your event listener.
+2. Why is that the value of `this`, in this scenario?
 
-Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
+## Classes and Instances
+
+Thus far, we've only talked about creating one-off objects using object literals, but what happens if we want to create many objects with the same attributes?
+
+This is where classes come in. **Classes** can serve as object factories that allow us to create multiple objects of the same type, which are commonly referred to as **instances**.
+
+### Warmup
+
+In your notebook brainstorm five **types** of objects and **specific** instances of that object that are at Turing.
+
+For example:
+
+* Type of object: Chair
+* Specific instances:
+    * Louisa's chair
+    * Travis' chair
+    * David's chair
+
+### Syntax
+
+The syntax for defining a class is as follows:
 
 ```javascript
-// literal notation
-var burrito = {};
-burrito;
-
-// constructor notation
-var taco = new Object();
-taco;
-```
-And just like before, you can add/change properties and methods on this object, using dot and/or bracket notation.
-
-### Creating Many Objects
-
-Sometimes, you want to create a bunch of objects that are similar. Object constructors can use a function as a _template_ create similar objects. Everytime you call ```new``` on this constructor you get an instance of that constructor. These are called `constructor functions`, and you can think of them like cookie cutters that produce the same shape of cookie every time you use them. Let's take a look:
-
-```javascript
-function Restaurant(name, tables, reservations) {
-  this.name = name;
-  this.tables = tables;
-  this.reservations = reservations;
+class NameOfClass {
 }
 ```
 
-Let's talk about what's going on here:
-
-- A function called `Restaurant` is a template for creating new objects that represent individual "instances" of restaurants  
-- Therefore, every time the function is invoked, it creates a new instance (object of a certain type) of a Restaurant 
-- The function has three parameters (`name`, `tables`, `reservations`)  
-- Each parameter sets the _value_ of a _property_ in the object  
-- The `this` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
-- Different from an object literal, each statement in a constructor object ends in a semicolon instead of a comma  
-- Constructor functions begin w/ capital letters (PascalCase), unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
-
-## Revisiting `this`
-The keyword `this` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Restaurant constructor function, `this` refers to the restaurant object that is being created when the function runs. Let's look at this with an abbreviated version of our Restaurant constructor:
+So, for example, if we wanted to create a Dog class, we could do the following:
 
 ```javascript
-// Declare a constructor function for making restaurant objects that accepts a parameter of "name".
-function Restaurant(name) {
-  this.name = name;
+class Dog {
 }
-
-// Make two restaurant objects, one named "KFC" and the other named "Chilis"
-var restaurant1 = new Restaurant("KFC");
-var restaurant2 = new Restaurant("Chilis");
-
-// Get the name of the restaurant1 and the restaurant2
-restaurant1.name;
-restaurant2.name;
 ```
 
-### Your Turn
+Generally we will want to put more information in our classes to make them useful to us, but those two lines (even with no other information) will create a class.
 
-With a partner:
+### Practice
 
-* Make a constructor function and use it to make two new objects.
-* Come up with an analogy for constructor functions.
+Let's practice together with a Fridge class. Make a new node repl and let's put the following in that file:
 
-## Adding methods to our constructed objects
-The constructor function prototype is a blueprint that is inherited by each object created by the constructor function.
 ```javascript
-  Restaurant.prototype.checkAvailability = function () {
-    return this.tables - this.reservations;
+class Fridge {
+}
+
+var fridge1 = new Fridge();
+console.log(`Number 1: ${fridge1}`);
+
+var fridge2  = new Fridge();
+console.log(`Number 2: ${fridge2}`);
+```
+
+Run the repl to see what the fridges are showing at this point. We currently have no state or behavior for these fridge instances. But it is clear that they are instances of a fridge because they show up with `Fridge` before their `{}`.
+
+### Independent Practice
+
+**TRY IT**: With your pair, define a Dog class in a repl and create instances of that class.
+
+### Constructor
+
+When we run `new Fridge();` in javascript, what actually happens? We can see from the last example that different Fridge objects (or instances) are created. Other than that, nothing happens. If we want some specific code to run when we first create a new Fridge, we need to tell JavaScript what should happen when a new Fridge instance (or object) is created. We do this with the constructor method.
+
+```javascript
+class Fridge {
+  constructor() {
+    // constructor code here
+  }
+}
+```
+
+This method is run once and only once during an instance's lifetime, when we use the `new` keyword in conjunction with `Fridge();`.
+
+
+### Modeling State with Attributes
+
+The instances of the classes we've defined so far are basically useless.
+
+Remember, objects are useful because they can store *State* and *Behavior*. Let's give our refrigerator some state.
+
+### Practice
+
+In our repl, we'll add some attributes to the `Fridge` class.
+
+We can leverage our good friend `this` to add some properties to our instances. Inside of a class, `this` refers to an instance of that class.
+
+For instance if we wanted to use a class to create a pizza object, here's what that would look like next to an object literal that accomplishes the same thing.
+
+```javascript
+// object literal
+var pizza1 = {
+  crust: 'thin',
+  sauce: 'red',
+  toppings: ['pepperoni']
+}
+
+// class
+class Pizza {
+  constructor(crust, sauce, toppings) {
+    this.crust = crust;
+    this.sauce = sauce;
+    this.toppings = toppings;
+  }
+}
+var pizza2 = new Pizza('thin', 'red', ['pepperoni']);
+
+```
+
+Now lets look at a slightly less contrived example:
+
+```javascript
+class Fridge {
+  constructor(color, temperature, isPluggedIn, contents) {
+    this.color = color;
+    this.temperature = temperature;
+    this.isPluggedIn = isPluggedIn;
+    this.contents = contents;
+  }
+}
+```
+
+Now we are able to actually create some fridges with some variation. Let's try creating a couple of instances in our repl.
+
+```javascript
+var fridge1 = new Fridge("silver", 36, true, ["leftover pizza", "yogurt", "soylent"]);
+var fridge2 = new Fridge("black", 40, true, []);
+```
+
+Note that the arguments that we pass to our `Class()` are order dependent.
+
+### Independent Practice
+
+**TRY IT**: With your pair, give your Dog class some attributes and create some instances of Dog.
+
+## Other Methods
+
+We can also create other methods that will allow us update the state of our Fridge class. For example, let's say we wanted to add eggs to our Fridge. We currently have a way to see what the `contents` of the Fridge are, but we don't have any way to add to them. Let's do that by creating a method called `addFood` that will add a food to the `contents` array.
+
+### Practice
+
+Define an `addFood` method that allows you to put foods in your fridge. 
+
+```javascript
+class Fridge {
+  // ... constructor code 
+
+  addFood(food) {
+    this.contents.push(food);
   }
 ```
-- Each object created will inherit this method for checking availability.
 
-## Prototypes & Inheritance: A First Look
-All JavaScript objects **inherit** the properties and methods from their `prototype`.  
+Update your repl so that you:
 
-In other words, each object has an internal link to another object called its `prototype`. That prototype object has another prototype of its own, and so on and so on until an object is reached with `null` as its prototype. ```null```, by definition, has no prototype, and acts as the final link in this _prototype chain_.  
+1. Create a new instance of Fridge.
+2. Log the contents of that Fridge.
+3. Add something to the contents of the Fridge.
+4. Log the new contents of the Fridge.
 
-There is nothing special about a prototype object. There are no special-out-of-the-box methods or magic to a prototype. Let's look:
+### Independent Practice
 
-```javascript
-// Let's make a constructor function
-function Singer() {}
+**TRY IT**: With your pair, create a `celebrateBirthday` method for your Dog class. This should increase the age of that dog by 1.
 
-// Let's ask Singer for the value of it's prototype
-Singer.prototype;
-```
+## In Pairs
 
-As a review, constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
+### Create a Book Class
 
-```javascript
-function Singer() {
-  this.name = "Elvis";
-}
-```
+With your partner, create a book class. Make sure that your book class has at least 3 attributes and 2 methods. Log those instances using your repl console or console.logs
 
-Similarly, a `prototype` in javascript can be _any object_ and it is responsible for defining the **behavior** of instances. This behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. Creating prototype functions is essentially defining your objects' instance methods.  
+### Create a Library Class
 
-Let's look at some code examples.  
+With your partner, create a Library class. Add attributes as you wish, but the be sure to include a `collection` property that starts as an empty array.
 
-```javascript
-// Pie constructor whose only job is to create instances of pies. It takes pants, socks, and shirt parameters so it can make different pies.
-function Pie(type, toppings) {
-  this.type = type;
-  this.toppings = toppings;
-}
+If you have time:
 
-Pie.prototype.bake = function() {
-  console.log(`The delicious ${this.type} pie with ${this.toppings} is in the oven!`);
-}
+* Add an `addBook` method that takes an instance of book and adds it to your collection.
+* Add a `titles` method that iterates over your collection of books and returns only their titles.
+* Add an `authors` method that iterates over your collection of books and returns the authors for each book.
 
-// Now we can create instances of an Pie and use our compliment function to fire off the same behavior for every outfit we create.
+### Check for Understanding
 
-var pie = new Pie('apple', 'whipped cream')
-pie.bake();
-```
+With your partner, answer the questions below.
 
-_Note_: We will get WAY MORE INTO prototype methods and what is happening behind the scenes as we progress through this mod/program. This is not the last time we will talk about these concepts so if prototypes and the word "this" make you feel panicky...thats ok.  
+* Classes, instances, objects
+    * What is a Class?
+    * What is an Instance?
+    * What is an Object?
+    * How are these three things alike/different?
+    * What code do you have to write to create a Class? 
+    * What code do you have to write to create an instance? 
+    * What code do you write to create a one-off object?
+* Properties & Methods
+    * What is a property? How can we query a property?
+    * How can we reassign the value of a property?
+    * What is a method?
+* `this`
+    * What is the default value of this?
+    * What scenarios change that value?
 
-## Which Data Structure?
-When deciding on an approach, you must consider how the data will be used. Let's think about a few scenarios:
+## Additional Resources
+* [Objects and Mythical Creatures Video](https://www.youtube.com/watch?v=wfrwMYn2BCg)
 
-When the order of objects is important, they should be stored in an array.  
-When you want to access objects using their name, they work well as properties of another object.
-
-#### Objects in an Array
-
-```javascript
-var people = [
-  {name: 'Mike', age: 65, active: true},
-  {name: 'Becca', age: 23, active: false},
-  {name: 'Tony', age: 40, active: false},
-  {name: 'Penelope', age: 23, active: true}
-];
-people[1].name;
-people[3].age;
-people[2].active;
-```
-
-#### Objects as Properties
-
-```javascript
-var people = {
-  Hercules: {age: 65, active: true},
-  Aphrodite: {age: 23, active: false},
-  Zeus: {age: 40, active: false},
-  Magneto: {age: 23, active: true}
-};
-people.Magneto.age;
-people.Hercules.active;
-people.Aphrodite.age;
-```

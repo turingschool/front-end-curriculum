@@ -11,6 +11,7 @@ tags: node, setup, tools
 - `Terminal` A program that allows a user to interact with The Command Line
 - `Git` A tool for managing the code you write
 - `Xcode` A set of development tools built and distributed by Apple
+- `node` Something that allows us to run javascript from the command line
 
 ## Configuring a development environment
 
@@ -24,6 +25,7 @@ Here are the basics we're going to go over:
 - macOS "Command Line Tools" -- these are some system dependencies needed for some of the tools we will use.
 - Homebrew -- This is a "package manager" for installing other developer-related programs. You can think of it as the "App Store for nerds."
 - Git (An application for handling "version control" of our software projects)
+- node JS -- Something that allows us to run javascript from the command line
 
 ## Xcode & Command Line Tools
 
@@ -144,7 +146,7 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
 
 ### Add config setting to set tab size
 
-  - While sublime is open, Press command-comma to open your config file
+  - While sublime is open, Press command-comma (this opens up the settings for any application on a mac) to open your config file
   - Add the following lines of code within the curly braces:
 
 ```

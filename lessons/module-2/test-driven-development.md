@@ -17,12 +17,11 @@ mod: 2
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
-- `SUT` or `Subject Under Test` The unit being tested
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
 
 ## Review: What is TDD?
 
-TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.   
+TDD, or Test Driven Development, is the concept of writing a series of assertions in a test file BEFORE writing any of the applicable code that supports the tested functionality.
 
 Think back to some of your module 1 projects, the workflow probably looked something like this:
 * Read project spec and feel kind of panicky  
@@ -59,46 +58,91 @@ The primary difference between the two, is that with a test driven approach you 
 
 ## Why TDD?
 
-Tests are useful because testing everything by hand is tedious, error prone, and slow. Computers can test things faster and better than humans (that's why they will some day take over the world).
-TDD is good because it provides a process for writing tests well.
+The main **benefits** of TDD are:
 
-Think about a time when you changed something and then a method somewhere else broke.
-Without tests, the only way you'd know if something broke is to go poke at it manually.
-With tests, you know right away.
-These benefits scale as your app grows larger.
+* *Computers can test things faster and more accurately than humans:* testing things manually in the browser is tedious, error prone and slow
+* *Forces you to slow down and pseudocode:* which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you right any code than to refactor broken code after it's been written
+* *Provides a blueprint for new developers to see how the codebase should work:* if your tests are thorough and well-written, a new developer should be able to hop directly into the test folder and get a solid understanding of how each piece of the codebase works
+* *Provides future integrity for your code as you iterate on your application:* applications are never done and can always be improved, added to, pivoted, etc. Tests ensure that as we make these changes, we won't accidentally introduce new bugs
+* *Forces you to write more module, SRP-style code:* often times you'll only recognize opportunities to refactor as you go to write tests for you code and find that it's not testable
+
+Some very minimal **downsides** of TDD are:
+
+* *It takes more time to write and maintain your codebase, which slows down development:* this can be problematic if you're working in an evironment where meeting deadlines is a top priority (like working in a newsroom)
+* *They don't make the business money:* tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
+
+
+## What Makes Testing Hard?
+
+* Not knowing what to test
+* So many libraries and frameworks to choose from, differing syntax in documentation
+* Difficult to see the benefit until you've been saved by a failing test
+* Still using a trial-by-error approach to development
+
 
 ## What Should Be Tested?
 
-This is the age old question!
+When talking about what should be tested, we say that we want to test the **outcome** or **result** of a particular piece of code execution. This is an important distinction and can help clarify one of the key pieces of what makes testing hard.
+
+For example, let's say we have a quiz application that checks a user's answers and adds/removes points from their score:
+
+```js
+class Question {
+  constructor(questionText, correctAnswer) {
+    this.questionText = questionText;
+    this.correctAnswer = correctAnswer;
+  }
+
+  checkAnswer(answer) {
+    if (answer === geographyQuestion.correctAnswer) {
+      player.score++
+    } else {
+      player.score--
+    }
+  }
+}
+```
+
+What kind of assertion would we write to test the functionality of the `checkAnswer` method?
+
+
+```js
+describe('Question Class', () => {
+  it('should increment a player score when their answer is correct', () => {
+
+  });
+
+  it('should decrement a player score when their answer is incorrect', () => {
+
+  });
+});
+
+```
+
+
+
+
+
+<!-- This is the age old question!
 This is a matter of culture and personal opinion and will vary widely depending on what software development team you join. Some teams want to test everything, others want you to test only the _really_ important stuff.
 Typically, the deciding factor in what should be tested is whether or not tests deliver enough value vs. the cost it takes to create and maintain them.
 
-**Some value associated with testing:**
-- confidence that your code does the right thing
-- confidence that you didn't break anything when your code changed
-- the speed at which the points above can be verified
-- code that is tested tends to be better than code that is not
-
-**Some costs associated with testing:**
-- they take more time to write
-- they don't make the business money
-- they take time to maintain
-- updating features is slower when you've got to fix tests, too
+ -->
 
 <!-- 
   Take some time and think about the game which you are building. 
   What are some the key pieces of functionality in your game?
 -->
 
-## Types of Tests
+<!-- ## Types of Tests
 
 ![The Testing Pyramid](https://i.imgur.com/8nDly8J.png)
 
 There are many types of tests, and a lot of them go by different names.
 This lesson will focus on unit tests because a they are the fastest and least costly.
-Most tests you write will be unit tests.
+Most tests you write will be unit tests. -->
 
-## The Testing Cycle
+<!-- ## The Testing Cycle
 
 You'll often hear the following catch phrase in nerd-circles when talking about TDD:
 
@@ -112,10 +156,7 @@ Then clean up your code with some refactoring now that we have a test to keep an
 
 ![Mr Green Refactor](http://i.imgur.com/rIduOzg.jpg)  
 You're welcome.  
-
-Here is another more in-depth global lifecycle for best testing practices:  
-
-![Global Lifecycle](http://i.imgur.com/CL6Pr58.png)  
+ -->
 
 ## Testing Framework: Mocha  
 
@@ -129,7 +170,7 @@ First, lets look at the syntax provided from Mocha:
 
 ```js
 describe('unicorn', function() {
-  it('calling eat accumulates calories', function() {
+  it('should accumulate calories when calling eat', function() {
   });
 })
 ```
@@ -152,80 +193,15 @@ The assertion library we are going to use today is called [Chai](http://chaijs.c
 
 ![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)  
 
-You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to stick with the [Assert API](http://chaijs.com/api/assert/), since it might seem the most familiar coming off of mythical creatures in mod 1.  
+You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to go with the [Expect API](https://www.chaijs.com/api/bdd/).
 
-The [Assert API](http://chaijs.com/api/assert/) from Chai provides a plethora of methods to allow for in-depth, dynamic testing. The general syntax looks something like this:  
 
-```js
-assert.method(actual, expected, [message])
-```
 
-In other words, we call `assert`, then the method we want, and the method takes three arguments.
-`actual`: The actual javascript code you want to run from your codebase  
-`expected`: What you expect to be returned for this test to pass  
-`message`: String (Optional), a message to yourself to indicate what is being tested  
 
-Note: Not all methods take three arguments. Keep the docs handy!  
 
-## Common Chai Assertions  
 
-Let's look at a few of the methods you might use most often:
 
-Assert equality:  
 
-```js
-assert.equal(2 + 2, 4, 'adding two plus two returns 4');
-```
-
-Assert inequality:  
-
-```js
-assert.notEqual(3, 4, 'these numbers are not equal');
-```
-
-Assert existence:  
-
-```js
-var foo = 'hi';
-
-assert.exists(foo, 'foo is neither `null` nor `undefined`');
-```
-
-Assert the type of something:  
-
-```js
-assert.typeOf({ tea: 'chai' }, 'object', 'we have an object');
-assert.typeOf(['chai', 'jasmine'], 'array', 'we have an array');
-```
-
-Assert inclusion:  
-
-```js
-assert.include([1,2,3], 2, 'array includes a value of 2');
-```
-
-*PAUSE: What's the difference between equal vs deepEqual?*
-
-At some point you may have seen an assertion that something `deeply equals` something else. This is because JavaScript is trying to make your life easy and fill in some gaps for you. Sometimes we don't want those gaps filled. Lets look at a quick example:
-
-```js
-assert.equal({ tea: 'green' }, { tea: 'green' });
-```
-
-Using the `equal` method, this test will fail. These two objects look the same but they are in fact two distinct objects with the same contents. You can think of them as if they were genetic twins. Genetic twins share the same genetic DNA but they are not the same person. The `equal` method checks if two things are exactly the same.
-
-Now, lets look at `deepEqual`.
-
-```js
-  assert.deepEqual({ tea: 'green' }, { tea: 'green' });
-```
-
-If use `deepEqual` instead, the same test will pass. `deepEqual` tells Chai to dig deeper into the objects themselves and look at the internal data, which in this case is the same. The `deepEqual` method checks if two things contain the same information.
-
-## BDD
-
-The idea with BDD is to specify behavior in a very natural, human way.
-For example, tests should read like "Given X, when I do Y, then Z should happen."
 
 ## Structure of a Test  
 
@@ -267,7 +243,7 @@ describe('Unicorn', function() {
 
     // 3. "Assertion"
     // Make an assertion to verify that after executing certain functions, we end up with what we expect
-    assert.equal(unicorn.calories, 300);
+    expect(unicorn.calories).to.equal(300);
   });
 })
 ```
@@ -276,10 +252,16 @@ describe('Unicorn', function() {
 
 To practice, let's kick off a brand new project to demonstrate how you would add Mocha and Chai to a project, and write a couple basic tests.  
 
-In your terminal, create your project directory, initialize an npm directory, and add a javascript file.  
+In your terminal, create your project directory and initialize an npm directory 
 
 ```bash
-mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes && touch Box.js  
+mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes  
+```
+
+Next, let's add some of our base files
+
+```bash
+touch index.html index.js Box.js
 ```
 
 Open up this project in your text editor.  
@@ -358,7 +340,7 @@ mkdir test && touch test/Box-test.js
 
 describe('Box', function() {
   it('should return true', function() {
-    assert.equal(true, true);
+    expect(true).to.equal(true);
   });
 });
 ```
@@ -367,27 +349,27 @@ If you run `npm test` now, you'll see an expected error. It's important to recog
 
 ```bash
 1) Box should return true:
-   ReferenceError: assert is not defined
+   ReferenceError: expect is not defined
     at Context.<anonymous> (test/Box-test.js:3:5)
 ```
 
-It's saying that it doesn't know what `assert` is, and recall that `assert` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
+It's saying that it doesn't know what `expect` is, and recall that `expect` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
 
-Import Chai and the `assert` library, at the top of your test file:  
+Import Chai and the `expect` library, at the top of your test file:  
 
 ```js
 // test/Box-test.js  
 
-const { assert } = require('chai');
+const chai = require('chai');
+const expect = chai.expect;
+const Box = require('../Box.js');
 
 describe('Box', function() {
   it('should return true', function() {
-    assert.equal(true, true);
+    expect(true).to.equal(true);
   });
 });
 ```
-
-*NOTE: You might have seen syntax like `import { assert } from 'chai'` instead of this `require('chai')` business. `import` needs some additional tools in order to run. Right now we have a very simple JS application so we will stick to `require` syntax*  
 
 If you run `npm test` now, we should have a passing test.  
 
@@ -417,32 +399,33 @@ We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refa
 ```js
 // test/Box-test.js
 
-const { assert } = require('chai');
+const chai = require('chai');
+const expect = chai.expect;
 const Box = require('../Box.js');
 
 describe('Box', function() {
   it('should return true', function() {
-    assert.equal(true, true);
+    expect(true).to.equal(true);
   });
 
   it('should have a default height and a width', function() {
     var box = new Box();
 
-    assert.equal(box.height, 100);
-    assert.equal(box.width, 100);
+    expect(box.height).to.equal(100);
+    expect(box.widht).to.equal(100);
   });
 
   it('should have take a height and a width as arguments', function() {
     var box = new Box(50, 40);
 
-    assert.equal(box.height, 50);
-    assert.equal(box.width, 40);
+    expect(box.height).to.equal(50);
+    expect(box.width).to.equal(40);
   });
 
   it('should calculate its area', function() {
     var box = new Box(30, 30);
 
-    assert.equal(box.area(), 900);
+    expect(box.area()).to.equal(900);
   })
 });
 ```
@@ -452,15 +435,15 @@ Run the tests and watch them fail (RED).
 ```bash
 1) Box should have a default height and a width:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:12:15)
+    at Context.<anonymous> (test/Box-test.js:11:15)
 
 2) Box should have take a height and a width as arguments:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:19:15)
+    at Context.<anonymous> (test/Box-test.js:18:15)
 
 3) Box should calculate its area:
    TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:26:15)
+    at Context.<anonymous> (test/Box-test.js:25:15)
 ```
 
 Write some code to implement the functionality one test at a time. You can use the method `.skip` on any tests you want to skip so you can isolate individual tests you want to run.  
@@ -524,6 +507,109 @@ ie: `box.incrementHeight(10)`
 - Refactor to allow for a single method to do both jobs
 ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`  
 ```
+
+## DOM Manipulation
+
+One of the biggest hurdles you'll have when building frontend applications is keeping your codebase from becoming a complicated mess as your application grows. Chances are good that you are currently intermixing your DOM Manipulation with code that is handling the state of your application. However, the classes in your game file should be completely oblivious to the DOM - they should only store state and broadcast their changes to the DOM... not handle DOM manipulation directly.
+
+Now that we have our class of Box, let's make this into a full-fledged game by setting up some functionality to display the box height and width to the DOM when the application loads. First, add a file to house all of your DOM Manipulation:
+
+```bash
+touch domUpdates.js
+```
+
+Next, set up a boilerplate in your HTML file with script tags for every JS file:
+
+```html
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Display Box Game</title>
+</head>
+  <body>
+    <output class="display-height"></output>
+    <output class="display-width"></output>
+  <script type="text/javascript" src="domUpdates.js"></script>
+  <script type="text/javascript" src="Box.js"></script>
+  <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>
+```
+
+Let's take the `increaseWidth` and `increaseHeight` methods that you created earlier and get these updated numbers to display to the DOM directly whenever these methods are called. Let's start by modifying our test for `increaseWidth`.
+
+Since we aren't worried about actually testing our DOM manipulation at this point, we are going to use a [`spy`](https://github.com/chaijs/chai-spies) to verify whether our method that displays the score has been called. *Note: Spies will help you verify calls to methods without actually calling them.*
+
+First, let's install and require `chai-spies`. Let's also require the `domUpdates` files that we are using to store our DOM manipulation methods:
+
+**Install**
+
+`npm install --save-dev chai-spies`
+
+```js
+const chai = require('chai');
+const expect = chai.expect;
+const spies = require('chai-spies')
+chai.use(spies);
+
+const Box = require('../Box.js');
+global.domUpdates = require('../domUpdates.js');
+```
+
+Next, we will take advange of the `.on()` method from the [Chai-spies](https://github.com/chaijs/chai-spies#user-content-spyon) to spy on the methods that we want to test:
+
+```js
+chai.spy.on(global.domUpdates, ['displayHeight','displayWidth'], () => true);
+```
+
+And lastly, let's update our test for `increaseWidth` to verify that our method of `displayWidth` (that we have yet to write) is being called:
+
+```js
+it('should have an increment method that will increase the width by a provided value', function() {
+  box.increaseWidth(10);
+
+  assert.equal(box.width, 110);
+  expect(domUpdates.displayWidth).to.have.been.called(1);
+  expect(domUpdates.displayWidth).to.have.been.called.with(110);
+});
+```
+
+Run `npm test`
+
+Your test should fail and you should get an assertion error that doesn't show the method has been called (as it doesn't exist). Let's fix that. Go to your `domUpdates` file to create that method:
+
+```js
+// domUpdates.js
+
+const domUpdates = {
+  displayWidth(width){
+    document.querySelector('.display-width').innerText = width;
+  }
+}
+
+if (typeof module !== 'undefined') {
+  module.exports = domUpdates;
+}
+```
+
+You'll want to add the conditional that you see at the bottom to your `Box` file as well - so that exports don't affect the client side but will still happen for testing.
+
+Finally, we can call that method in the appropriate place and see that our test is passing.
+
+```js
+//Box.js
+
+increaseWidth(val) {
+  this.width += val;
+  domUpdates.displayWidth(this.width);
+}
+```
+
+*Note - if you would like to see this actually update client-side, you will have to create a new instance of Box and call the increaseWidth method in index.js*
+
+
+#### Your Turn
+Set up the functionality to display the width and height to the DOM - using your `domUpdates file` to keep this code separate from the state of your app. Be sure to update your testing accordingly.
 
 ## Homework: Adventures of Blocky  
 

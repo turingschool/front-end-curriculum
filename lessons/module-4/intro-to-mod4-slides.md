@@ -20,8 +20,7 @@ layout: presentation
   </section>
   <section>
     <h4>Bare Minimum</h4>
-    <p>Finishing mod3, you know the bare minimum to become a junior front-end engineer.</p>
-    <p>Who is excited about the bare minimum?</p>
+    <p>Finishing mod3, you know a lot, but in a narrow field so far.</p>
   </section>
   <section>
     <h4>Set Yourself Apart</h4>
@@ -29,7 +28,7 @@ layout: presentation
   </section>
   <section>
     <h4>Empower Yourself</h4>
-    <p>Mod4 gives you the tools to build professional web apps without the reliance on third-party APIs.</p>
+    <p>Mod4 gives you the tools to build more professional web apps without the reliance on third-party APIs.</p>
   </section>
 </section>
 
@@ -38,7 +37,7 @@ layout: presentation
     <h2>What is Mod 4?</h2>
   </section>
   <section>
-    <h3>Tons of new technologies and material to learn:</h3>
+    <h3>Tons of new technologies and material:</h3>
     <ul>
       <li>Node</li>
       <li>Express</li>
@@ -48,21 +47,20 @@ layout: presentation
       <li>Knex query builder</li>
       <li>Environments</li>
       <li>Deployment</li>
-      <li>Continuous Integration</li>
-      <li>Git hooks</li>
-      <li>Service Workers</li>
+      <li>Continuous integration (CI)</li>
+      <li>Professional git workflow</li>
     </ul>
   </section>
   <section>
     <ul>
-      <li>IndexedDB</li>
-      <li>Background Sync</li>
-      <li>Push notifications</li>
-      <li>Websockets</li>
+      <li>Progressive Web Apps</li>
+      <li>Service workers</li>
       <li>React Native</li>
-      <li>Build your own style guide</li>
-      <li>HTTPS, JWTs, and OAuth</li>
-      <li>Localization and Internationalization</li>
+      <li>Refresh CSS and design</li>
+      <li>Security and HTTPS</li>
+      <li>OAuth</li>
+      <li>Connecting separate BE and FE apps</li>
+      <li>Lots of interview prep</li>
       <li>And more...</li>
     </ul>
   </section>
@@ -75,17 +73,16 @@ layout: presentation
   <section>
     <ul>
       <li>Prework</li>
-      <li>Projects: Palette Picker, BYOB, House of Vars, Pattern Party, Capstone</li>
-      <li>Homework</li>
+      <li>Projects: Palette Picker, BYOB BE and FE, Cross-Pollination</li>
       <li>Gear Up - You Lead!</li>
       <li>Professional Development</li>
-      <li>Final Assessment</li>
+      <li>Final Assessment - Mock Interview</li>
     </ul>
   </section>
   <section>
-    <p>Week one is tough - new material every day that you'll have to implement the same day.</p>
+    <p>Week one is tough - new material every day that you'll have to implement that same day.</p>
     <p>If you are demoing the first week, you won't have much time to work on your mod3 project.</p>
-    <p>You will have to use jQuery for the first project. Review it.</p>
+    <p>You will have to use jQuery for the first project. Review it - build something using it.</p>
   </section>
 </section>
 
@@ -104,8 +101,7 @@ layout: presentation
     <h2>Job Support</h2>
   </section>
   <section>
-    <p>Dedicated small-group coach to help refine your resumes, cover letters, and outreach emails</p>
-    <p>Schedule mock interviews during office hours</p>
+    <p>Dedicated small-group coach to help refine your resumes, cover letters, and outreach</p>
     <p>Develop a 30-day, post-grad action plan to set yourself up for success after graduation</p>
   </section>
 </section>
@@ -115,13 +111,13 @@ layout: presentation
     <h2>Attendance</h2>
   </section>
   <section>
-    <h4>The expectation is still 90% attendance</h4>
+    <h4>The expectation is still >90% attendance</h4>
     <p>If you have an appointment or interview, then you need to let us know the day before.</p>
     <p>Instructors respect your time for job hunting in mod4, but you still need to be professional about it. Unexcused absences and tardiness will be recorded.</p>
   </section>
   <section>
-    <h4>90% attendance minimum - 100% of the work completed</h4>
-    <p>If you miss a class for an interview, you are still expected to go over the material and complete any required homework.</p>
+    <h4>>90% attendance minimum - 100% of the work completed</h4>
+    <p>If you miss a class for an interview, you are still expected to go over the material and complete any required in-class work.</p>
     <p>Classes are usually written in a tutorial style and can be worked through on your own.</p>
   </section>
 </section>
@@ -140,7 +136,8 @@ layout: presentation
 <section>
   <section>
     <h2>Questions?</h2>
-    <p>Find your developer personality - you're a developer!</p>
+    <p>Find your developer personality - through design, technology, wherever your passion is.</p>
+    <p>You're a developer!</p>
     <p>We'll go over what the prework is right after this.</p>
   </section>
 </section>

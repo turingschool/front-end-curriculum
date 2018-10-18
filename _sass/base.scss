@@ -24,6 +24,15 @@ li {
   line-height: 2em;
 }
 
+li.task-list-item {
+  list-style-type: none;
+  text-indent: -1.5em;
+
+  input {
+    margin-right: 7px;
+  }
+}
+
 strong {
   font-weight: 600;
 }

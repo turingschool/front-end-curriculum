@@ -146,11 +146,8 @@ var calculateArea = function(width, height) {
   return width * height;
 };
 
-// We call this function using the variable that we assigned our anonymous function to
+// We call this function the same way - using the variable that we assigned our anonymous function to
 calculateArea(2, 1);
-
-// We can even assign that function call as the value of another variable. How would we run our 'area' function now?
-var size = calculateArea(3, 4);
 ```
 
 Why does this matter? Seems like everyone just wants to make life hard with all these different ways of doing what seems like the same thing. Enter...
@@ -175,6 +172,13 @@ function foo() {
   var x;
   bar();
   x = 1;
+}
+
+// Which can be seen here:
+function bar() {
+  console.log('y1', y);
+  var y = 2;
+  console.log('y2', y);
 }
 ```
 
@@ -398,12 +402,6 @@ for (var i = 0; i > -1; i++) {
 ```
 
 We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.  
-
-### Benchmarking Loops ( in case you're curious )
-We haven't talked about other kinds of loops yet, but there are many different ways to loop over a data set, and each of them have pros and cons.  
-
-If you're curious, check out this [jsPerf analysis](https://jsperf.com/for-vs-foreach/66) of how long various `for`/`forEach`/`while` loops take to run when executing the same code.  
-
 
 ### Additional Practice  
 

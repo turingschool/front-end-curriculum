@@ -25,10 +25,14 @@ You may NOT take liberties with the layout, but your creative license includes:
   - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
   - Push your final work to [github pages](https://pages.github.com/)
 
+### Additional Requirements
+ - Site must work across Firefox, Safari, Chrome
+ - Developer must use normalize instead of reset file in CSS
+
 ***
 
 ## Submission Details
 
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/17QYln6ZaklCezsBS8gCF7ds3aHSmwECZxyrepnNtNcg/edit#gid=0)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1xmpBJ2_Wydg_wqVmq-fOgBV8svM1FUvLVeAXrFpEspk/edit#gid=1037661414)
 
-![static-comp-challenge-1](/assets/images/static-comp-challenge-1.jpg)
+![static-comp-challenge-2](/assets/images/static-comp-challenge-2.jpg)

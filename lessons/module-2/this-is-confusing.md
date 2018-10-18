@@ -6,11 +6,22 @@ tags: javascript, js, this, keyword
 
 ## [Slides](https://drive.google.com/open?id=1oF5k17fEaN_I4KIQOdBK-eEaNBf_S0_DrZhFzbPrA2w)
 
+### Learning Goals
+
+* Understand and describe what `this` is in JavaScript
+* Determine what `this` is referencing in a codebase
+
 ## Vocab
 
 - `Invoke` / `Execute` To run a function. e.g., "I've invoked the function here"
 - `Declare` To write a function definition. Usually distinct from function execution
 - `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object 
+
+### Warm Up
+
+* What do you understand `this` to represent in JavaScript? 
+* Where have you seen/utilized the word `this` in your JavaScript projects thus far?
+* Why do you think the keyword `this` exists? 
 
 ## Introduction
 
@@ -18,6 +29,7 @@ The keyword `this` in JavaScript can be confusing. Here are a couple of definiti
 
 * `this` refers to the current *context* (or owner) of the code being executed
 * `this` refers to the object on which the current function is called
+* Context is most often determined by how a function is invoked
 
 
 Depending on where `this` is used, it can refer to different things. One key thing to remember is **we can only change the value of** `this` **inside of a function**. There are a few ways we can invoke/execute a function to change the value of `this`.
@@ -39,6 +51,8 @@ function logThis() {
 
 logThis();
 ```
+
+
 
 ## Rule 2 - When executing a function as a method on an object, _this_ refers to that object.
 
@@ -205,8 +219,12 @@ var vampire = {
 vampire.whatDoYouDislike()
 ```
 
+### Closing
 
+* What are the rules for determining `this`?
+* What is `this` in JavaScript?
 
 ## Further Reading
 
 * [Scope vs. Context](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
+* [When not to use an arrow function](https://wesbos.com/arrow-function-no-no/)

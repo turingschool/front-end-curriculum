@@ -10,7 +10,7 @@ tags: git, github
 1. Initialize a new Git repository (repo) and make initial file structure
 2. Create a new repository on GitHub
 3. Link your local and GitHub repository (add remote)
-4. Push structure to remote repository (on the master branch)
+4. Push structure to remote repository (add, commit, and push on the master branch)
 5. Add all team members as collaborators
 
 #### Once the repository is setup, repeat this process
