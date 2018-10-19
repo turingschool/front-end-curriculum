@@ -10,6 +10,14 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 interface. To this end, we'll rely on JavaScript and to implement snappy filtering in the
 browser, and `localStorage` to persist our wonderful ideas between sessions.
 
+## Learning Goals
+
+* Continue to improve on building a responsive client-side application with good user feedback
+* Understand how to implement client-side data persistence using `localStorage`
+* Understand what it looks like to have a separate data model (using a class) and dom model
+* Understand how to utilize `data-*` attributes
+* Understand how to iterate over dom elements in order to filter what is being displayed
+
 ## Project Requirements
 
 ### Architecture
@@ -194,7 +202,7 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 * [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
 * [ ]  Advanced Beginner - Application adds to the above by using `data-*` attributes for all data related things
 * [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
-* [ ]  Exceptional - Application adds to the above by using BEM, SMACCS, or another set of naming conventions for classes
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
 
@@ -203,13 +211,13 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 * [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
 * [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
 * [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle 
-* [ ]  Exceptional - Application adds to the above by using BEM, SMACCS, or another set of naming conventions for classes
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
 
 ### JAVASCRIPT - Style and Implementation
 
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
-* [ ]  Advanced Beginner - Application correctly implements data model for the `Idea` class including all required methods
-* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices
-* [ ]  Exceptional - Application refactors all for loops into the proper array prototype iteration method
+* [ ]  Advanced Beginner - Application adds to the above by correctly implementing a data model for the `Idea` class including all required methods
+* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions
+* [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods
