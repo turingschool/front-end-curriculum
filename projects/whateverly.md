@@ -58,7 +58,8 @@ You'll be working with some new technologies for this project:
 
 * Your group must create **two** related datasets that will represent your application data. 
 
-Below you will find some datasets for inspiration. **You'll want to make sure that you install the Chrome Extension JSONView to make the JSON more readable**
+Below you will find some datasets for inspiration.  
+**You'll want to make sure that you install the Chrome Extension JSONView to make the JSON more readable**
 
 [Nobel Prize](http://api.nobelprize.org/v1/prize.json)  
 [Silicon Valley Episodes](http://api.tvmaze.com/singlesearch/shows?q=silicon-valley&embed=episodes)  
