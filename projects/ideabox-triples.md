@@ -12,11 +12,12 @@ browser, and `localStorage` to persist our wonderful ideas between sessions.
 
 ## Learning Goals
 
-* Continue to improve on building a responsive client-side application with good user feedback
+* Continue to improve on building responsive client-side applications with good user feedback
 * Understand how to implement client-side data persistence using `localStorage`
 * Understand what it looks like to have a separate data model (using a class) and dom model
 * Understand how to utilize `data-*` attributes
 * Understand how to iterate over dom elements in order to filter what is being displayed
+* Understand how to craft code with clean style, using small functions that show trends toward DRYness and SRP
 
 ## Project Requirements
 
@@ -200,9 +201,10 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 ### HTML - Style and Implementation
 
 * [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
-* [ ]  Advanced Beginner - Application adds to the above by using `data-*` attributes for all data related things
+* [ ]  Advanced Beginner - Application adds to the above by using appropriate semantic elements and using `data-*` attributes for all data related things
 * [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes and:
+  * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
 
 ------------------------------------------------------------------
 
@@ -210,7 +212,7 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 
 * [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
 * [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
-* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle 
+* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
@@ -219,5 +221,10 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 * [ ]  Advanced Beginner - Application adds to the above by correctly implementing a data model for the `Idea` class including all required methods
-* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions
-* [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods
+* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
+  * [ ]  All functions are less than 10 lines
+  * [ ]  There are less than 3 global variables
+  * [ ]  There are no nested if else statements
+* [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and: 
+  * [ ] Using logical operators instead of if/else
+
