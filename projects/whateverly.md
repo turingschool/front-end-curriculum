@@ -9,13 +9,13 @@ tags: javascript, react, jsx, sass
 
 ## Background and Description
 
-For this project you will be working in a group to write a program that requires you to construct your own dataset as well as work within the constraints of the React framework.
+For this project you will be working in a group to write a program in React. This is an opportunity to  reinforce and solidify the concepts we've covered thus far - JS fundamentals, OOP, working with large datasets, and developing workflows. This is also an opportunity for you to have more autonomy over what you are building and for _whom_.
 
 [Weathrly App](http://gs-jm-weatherly.herokuapp.com/)
 
 ## Goals and Objectives
 
-- Synthesize knowledge of OOP and classes to create an application using React
+- Synthesize knowledge of OOP, classes, and JS fundamentals to create an application using React
 - Construct complex dataset to be used to implement array mutator and iterator methods to work with data
 - Collaborate and create (and iterate) on user stories 
 - Demonstrate good GitHub collaboration and workflow within a large group
