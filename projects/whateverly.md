@@ -40,8 +40,8 @@ You'll be working with some new technologies for this project:
 |Day           | Status| Assigments/Deliverables |
 |---           |---    |--- |
 |*Friday*      | Kick-off and brainstorming | React static comp, brainstorm project ideas and datasets|
-|*Day 1 - Mon* | Groups assigned | 2 project ideas & draft datasets due from each student|
-|*Day 3*       | Structuring project| User stories due by 4 pm|
+|*Day 1 - Mon* | Groups assigned | 1 project idea & datasets due from each student|
+|*Day 2*       | Structuring project| User stories due by 5pm|
 |*Day 5*       | 1st PR | PR due w/both instructors tagged|
 
 ### Week 5
@@ -56,8 +56,6 @@ You'll be working with some new technologies for this project:
 
 ## Custom Dataset
 
-* Your group must create **two** related datasets that will represent your application data. 
-
 Below you will find some datasets for inspiration.  
 **You'll want to make sure that you install the Chrome Extension JSONView to make the JSON more readable**
 
@@ -67,7 +65,7 @@ Below you will find some datasets for inspiration.
 [Current US Senators](https://www.govtrack.us/api/v2/role?current=true&role_type=senator)  
 [How many people are in space right now](http://api.open-notify.org/astros.json)  
 
-<!-- For example, if you were building a weather forecast application, your datasets might look like [this](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). -->
+* You must create **two** related datasets that will represent your application data. Each group will be assigned a dataset
 
 * At least one of your datasets must have more than 30 records. (if your dataset is an object, it should have 30 keys. if it's an array, it should have 30 elements)
 
@@ -134,3 +132,47 @@ After initializing your create-react-app project, add eslint to the project.
 
 Add a file named `.eslintrc` to the root of your project and copy these [restrictions](./assets/weathrly/eslintrc.json) into said file.
 
+
+- Synthesize knowledge of OOP, classes, and JS fundamentals to create an application using React
+- Construct complex dataset to be used to implement array mutator and iterator methods to work with data
+- Collaborate and create (and iterate) on user stories 
+- Demonstrate good GitHub collaboration and workflow within a large group
+
+
+<!-- ## Specification Adherence
+
+PASS: Project uses the assigned dataset. Includes README. Codebase has an organized file structure for components.
+
+FAIL: Project does not use the assigned dataset. README is missing or incomplete. All t
+
+## UI/UX
+
+4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor without guidance from the developer.
+
+3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality. The application less than 3 aXe-core violations
+
+2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
+
+1 - The application is confusing or difficult to use.
+
+## CSS/Sass Style
+
+4 - Application has exceptionally well-factored CSS/Sass with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
+
+3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS/Sass is doing.
+
+2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+
+1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS/Sass is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
+
+## JavaScript / React Style
+
+## Workflow
+
+4 - The developers effectively use Git branches and make small, atomic commits that document the evolution of their application. Developers submit t
+
+3 - The developers makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base.
+
+2 - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
+
+1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application. -->
