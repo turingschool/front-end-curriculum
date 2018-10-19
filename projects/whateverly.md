@@ -1,15 +1,17 @@
 ---
 title: Whateverly
+length: 2 weeks
+tags: javascript, react, jsx, sass
 ---
 
-# Whateverly
 
 2 week group project for FE Mod 2 (weeks 4-5)
 
-
 ## Background and Description
 
-For this project you will be working in a group to write a program that requires you to construct your own dataset as well as work within the constraints of the React framework. 
+For this project you will be working in a group to write a program that requires you to construct your own dataset as well as work within the constraints of the React framework.
+
+[Weathrly App](http://gs-jm-weatherly.herokuapp.com/)
 
 ## Goals and Objectives
 
@@ -18,7 +20,7 @@ For this project you will be working in a group to write a program that requires
 - Collaborate and create (and iterate) on user stories 
 - Demonstrate good GitHub collaboration and workflow within a large group
 
-# Technologies
+## Technologies
 
 You'll be working with some new technologies for this project:
 
@@ -33,10 +35,10 @@ You'll be working with some new technologies for this project:
 
 |Day           | Status| Assigments/Deliverables |
 |---           |---    |--- |
-|*Friday*      | Kick-off and brainstorming | React static comp, brainstorm project ideas and datasets |
-|*Day 1 - Mon* | Groups assigned | 2 project ideas & draft datasets due from each student |
+|*Friday*      | Kick-off and brainstorming | React static comp, brainstorm project ideas and datasets|
+|*Day 1 - Mon* | Groups assigned | 2 project ideas & draft datasets due from each student|
 |*Day 3*       | Structuring project| User stories due by 4 pm|
-|*Day 5*       | 1st PR | PR due w/both instructors tagged |
+|*Day 5*       | 1st PR | PR due w/both instructors tagged|
 
 ### Week 5
 
@@ -50,7 +52,9 @@ You'll be working with some new technologies for this project:
 
 ## Custom Dataset
 
-* Your group must create **two** related datasets that will represent your application data. For example, if you were building a weather forecast application, your datasets might look like [this]().
+* Your group must create **two** related datasets that will represent your application data. 
+
+<!-- For example, if you were building a weather forecast application, your datasets might look like [this](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). -->
 
 * At least one of your datasets must have more than 30 records. (if your dataset is an object, it should have 30 keys. if it's an array, it should have 30 elements)
 
@@ -88,7 +92,7 @@ Your README should include the following, in this order:
 - Install/Setup instructions
 - Everything else (must include wireframes and screenshot/GIF of finished project)
 
-#### Submitting Your Project Ideas & Datasets
+# Submitting Your Project Ideas & Datasets
 
 You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and include the following information:
 
@@ -117,10 +121,3 @@ After initializing your create-react-app project, add eslint to the project.
 
 Add a file named `.eslintrc` to the root of your project and copy these [restrictions](./assets/weathrly/eslintrc.json) into said file.
 
-## Extensions
-
-* Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
-
-* The application is fully accessible.
-   * The application can be used without a mouse
-   * zero axe-core violations
