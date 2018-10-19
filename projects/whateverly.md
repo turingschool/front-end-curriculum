@@ -58,6 +58,14 @@ You'll be working with some new technologies for this project:
 
 * Your group must create **two** related datasets that will represent your application data. 
 
+Below you will find some datasets for inspiration. _Note:You'll want to make sure that you install the Chrome Extension JSONView to make the JSON more readable_
+
+[Nobel Prize](http://api.nobelprize.org/v1/prize.json)
+[Silicon Valley Episodes](http://api.tvmaze.com/singlesearch/shows?q=silicon-valley&embed=episodes)
+[Pokemon](https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.json)
+[Current US Senators](https://www.govtrack.us/api/v2/role?current=true&role_type=senator)
+[How many people are in space right now](http://api.open-notify.org/astros.json)
+
 <!-- For example, if you were building a weather forecast application, your datasets might look like [this](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). -->
 
 * At least one of your datasets must have more than 30 records. (if your dataset is an object, it should have 30 keys. if it's an array, it should have 30 elements)
