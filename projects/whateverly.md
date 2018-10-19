@@ -4,14 +4,18 @@ length: 2 weeks
 tags: javascript, react, jsx, sass
 ---
 
-
 2 week group project for FE Mod 2 (weeks 4-5)
 
 ## Background and Description
 
-For this project you will be working in a group to write a program in React. This is an opportunity to  reinforce and solidify the concepts we've covered thus far - JS fundamentals, OOP, working with large datasets, and developing workflows. This is also an opportunity for you to have more autonomy over what you are building and for _whom_.
+For this project you will be working in a group to write a program in React. This is an opportunity to reinforce and solidify the concepts we've covered thus far - JS fundamentals, OOP, working with large datasets, and developing workflows. This is also an opportunity for you to have more autonomy over what you are building.
 
-[Weathrly App](http://gs-jm-weatherly.herokuapp.com/)
+Remember that software, at its core, is about solving problems. Some things to think about as you brainstorm:
+
+- What problem are you solving?
+- What features must the solution include to solve this problem?
+
+Check out the following application that solves the problem of not readily having access to the weather conditions: [Weathrly App](http://gs-jm-weatherly.herokuapp.com/)
 
 ## Goals and Objectives
 
