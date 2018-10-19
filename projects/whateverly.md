@@ -2,10 +2,21 @@
 title: Whateverly
 ---
 
-# Context
+# Whateverly
 
-TBD
+2 week group project for FE Mod 2 (weeks 4-5)
 
+
+## Background and Description
+
+For this project you will be working in a group to write a program that requires you to construct your own dataset as well as work within the constraints of the React framework. 
+
+## Goals and Objectives
+
+- Synthesize knowledge of OOP and classes to create an application using React
+- Construct complex dataset to be used to implement array mutator and iterator methods to work with data
+- Collaborate and create (and iterate) on user stories 
+- Demonstrate good GitHub collaboration and workflow within a large group
 
 # Technologies
 
@@ -15,6 +26,23 @@ You'll be working with some new technologies for this project:
 * **ReactJS** for organizing your application into components
 * **JSX** for writing your component templates
 * **Sass** for getting fancy with your CSS
+
+## Outline
+
+### Week 4
+
+|Day | Status| Assigments/Deliverables |
+|--- |---    |--- |
+|*Friday*| Kick-off and brainstorming | Practice with the React static comp, brainstorm project ideas and datasets |
+|*Day 1 (Mon)*| Groups assigned | 2 project ideas & draft datasets [due](https://github.com/turingschool-examples/whateverly-data) from each student |
+|*Day 3*|  | User stories due by 4 pm|
+|*Day 5*| 1st PR | PR due w/both instructors tagged |
+### Week 5
+
+|Day | Status| Deliverables |
+|--- |---    |--- |
+|*8* | 2nd PR| PR due w/both instructors tagged|
+|*11* | Assessment| Formal Demo|
 
 
 # Requirements
@@ -34,35 +62,30 @@ You'll be working with some new technologies for this project:
 
 * The search functionality will include an autocomplete feature that "guesses" what the user is trying to type in. This means that the information your users are searching for should be part of one of your datasets that it can pull suggestions from. 
 
+## Code Organization
 
+Your codebase should be organized with a file structure that works for your group. See the [React docs](https://reactjs.org/docs/faq-structure.html) for some common approaches. 
 
+## GitHub Collab & Workflow
 
+The requirements for collaboration and workflow are more constrained within this project considering this project's learning goals:
 
+- A minimum of two PRs must tag both instructors
+- PR should be around 400 lines of code (significant enough for your partners to have some serious code to review, think about, and ask questions about, but not so big that it’s overwhelming and the reviewer is just going to skim over it/miss potential mistakes)
+- You should be reviewing each other's code by leaving line-by-line comments
+- If you have feedback for one of your partners to change something, *DO NOT* merge the PR before that person has a chance to make the change
 
+## User Stories
 
+Smaller companies don’t have product teams. As front-end engineers, one of the most valuable assets you bring is the ability to think about the end user's perspective. Creating user stories is a mind shift that forces you to understand that you are building features and software for other people. 
 
+## README
 
-## Outline
+Your README should include the following, in this order:
 
-### Week 4
-
-|Day | Status| Deliverables |
-|--- |---    |--- |
-|*Friday* (wk 3) | Kick-off and brainstorming | Practice with the React static comp, brainstorm project ideas and datasets |
-|*Monday* | 2 project ideas & draft datasets [due]() |
-|*3* | Understanding/Planning| Diagram for OOP design/classes due|
-|*5* | Check-in| Pair-to-Pair feedback|
-
-### Week 5
-
-|Day | Status| Deliverables |
-|--- |---    |--- |
-|*8* | Check-in| Instructor pairing|
-|*11* | Assessment| Formal Code Review or Class Code Review|
-
-
-
-
+- Abstract at the top (A sentence or two describing the project)
+- Install/Setup instructions
+- Everything else (must include wireframes and screenshot/GIF of finished project)
 
 #### Submitting Your Project Ideas & Datasets
 
@@ -80,16 +103,6 @@ module.exports = {
 }
 ```
 
-
-
-
-
-
---------------------------------------------------------------
-
-ALL OF THIS SHIT NEEDS TO BE REDONE. Eslint instructions don't need to be so verbose, just link them to the new configuration file.
-
-
 # Repo Initialization
 
 * Use [create-react-app](https://www.npmjs.com/package/create-react-app) to create a new project
@@ -101,34 +114,9 @@ After initializing your create-react-app project, add eslint to the project.
 
 `npm install eslint --save-dev`
 
-#### Add an eslint command to your package.json scripts property
-```
-"scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "lint": "./node_modules/eslint/bin/eslint.js ./src/*.js"
-},
-```
-
-#### Add this .eslintrc file to the root of your project
-
-Make sure to name it .eslintrc
-
-[.eslintrc](./assets/weathrly/eslintrc.json)
-
-
-
-
-
-## Design Requirements
-Your Readme should include wireframes of your app.
-
+Add a file named `.eslintrc` to the root of your project and copy these [restrictions](./assets/weathrly/eslintrc.json) into said file.
 
 ## Extensions
-
-SHOULD PROBABLY COME UP WITH MORE EXTENSIONS
 
 * Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
 
