@@ -33,9 +33,9 @@ You'll be working with some new technologies for this project:
 
 |Day | Status| Assigments/Deliverables |
 |--- |---    |--- |
-|*Friday*| Kick-off and brainstorming | Practice with the React static comp, brainstorm project ideas and datasets |
+|*Friday*| Kick-off and brainstorming | React static comp, brainstorm project ideas and datasets |
 |*Day 1 (Mon)*| Groups assigned | 2 project ideas & draft datasets [due](https://github.com/turingschool-examples/whateverly-data) from each student |
-|*Day 3*|  | User stories due by 4 pm|
+|*Day 3*| Structuring project| User stories due by 4 pm|
 |*Day 5*| 1st PR | PR due w/both instructors tagged |
 ### Week 5
 
