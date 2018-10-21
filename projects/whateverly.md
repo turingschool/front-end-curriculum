@@ -141,11 +141,11 @@ Add a file named `.eslintrc` to the root of your project and copy these [restric
 
 ## Specification Adherence
 
-* [ ] Novice - README is missing or incomplete. Codebase is not organized (see spec). User stories from group are either late or never turned in at all. Application does not solve the presented problem.
+* [ ] Novice - README is missing or incomplete. Codebase is not organized. User stories from group are never submitted. Application does not solve the presented problem.
 
-* [ ] Advanced Beginner -  README is complete, per the spec. Codebase is organized. User stories are completed; however, may be late. Some user stories may be unclear or hard to understand. Application is close to solving presented problem
+* [ ] Advanced Beginner -  README is complete. Codebase is organized. User stories are completed; however, may be late. Some user stories may be unclear or hard to understand. Application is close to solving presented problem.
 
-* [ ] Proficient - Project includes a README that follows requirements listed in project spec. Codebase has an organized file structure. Developers turn in user stories on time and iterate on user stories throughout the life of the project, as needed. Application solves the presented problem.
+* [ ] Proficient - Developers turn in user stories on time and iterate on user stories throughout the life of the project, as needed. Application solves the presented problem.
 
 * [ ] Exceptional - Meets all expectations for `Proficient`. In addition, developers may use personas to help guide their user stories. Developers may also incorporate other tools to assist in planning - workflow diagrams, story maps, etc.
 
@@ -191,7 +191,7 @@ Add a file named `.eslintrc` to the root of your project and copy these [restric
 
 * [ ] Novice - Developers do not tag instructors in the two required PRs by due dates listed in the project outline or tagged PR has fewer than 200 lines of code. The developer creating the PR does not summarize the changes or why the changes were made. Reviewers are not leaving line-by-line feedback/comments _or_ are merging the PR before changes are made.
 
-* [ ] Advanced Beginner -  Developers tag instructors in both required PRs by due dates _or_ in one of the two required. PR has between 200 - 350 lines of code. The developer creating the PR summarizes the changes made but does not explain _why_ those changes were necessary. Reviewers do not leave line-by-line feedback. May be merging PR before feedback is incorporated.
+* [ ] Advanced Beginner -  Developers tag instructors in both required PRs by due dates _or_ in one of the two required. PR has less than the required lines of code in PR. Reviewers do not leave line-by-line feedback. May be merging PR before feedback is incorporated.
 
 * [ ] Proficient - Developers tag instructors in both required PRs by due dates. PR is between 350 - 450 lines of code. The developer creating the PR summarizes the changes made, why those changes were necessary, and asks for insights. Reviewers leave line-by-line comments/feedback and wait to merge PR until feedback is incorporated.
 
