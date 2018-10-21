@@ -132,47 +132,67 @@ After initializing your create-react-app project, add eslint to the project.
 
 Add a file named `.eslintrc` to the root of your project and copy these [restrictions](./assets/weathrly/eslintrc.json) into said file.
 
-
 - Synthesize knowledge of OOP, classes, and JS fundamentals to create an application using React
 - Construct complex dataset to be used to implement array mutator and iterator methods to work with data
 - Collaborate and create (and iterate) on user stories 
 - Demonstrate good GitHub collaboration and workflow within a large group
 
+# Rubric
 
-<!-- ## Specification Adherence
+## Specification Adherence
 
-PASS: Project uses the assigned dataset. Includes README. Codebase has an organized file structure for components.
+* [ ] Novice - README is missing or incomplete. Codebase is not organized (see spec). User stories from group are either late or never turned in at all. Application does not solve the presented problem.
 
-FAIL: Project does not use the assigned dataset. README is missing or incomplete. All t
+* [ ] Advanced Beginner -  README is complete, per the spec. Codebase is organized. User stories are completed; however, may be late. Some user stories may be unclear or hard to understand. Application is close to solving presented problem
+
+* [ ] Proficient - Project includes a README that follows requirements listed in project spec. Codebase has an organized file structure. Developers turn in user stories on time and iterate on user stories throughout the life of the project, as needed. Application solves the presented problem.
+
+* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, developers may use personas to help guide their user stories. Developers may also incorporate other tools to assist in planning - workflow diagrams, story maps, etc.
+
+------------------------------------------------------------------
 
 ## UI/UX
 
-4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor without guidance from the developer.
+* [ ] Novice - The application is confusing or difficult to use. The final project presents an interface that is incomplete.
 
-3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality. The application less than 3 aXe-core violations
+* [ ] Advanced Beginner - The application may be confusing or difficult to use at times. The application shows effort in the interface, but the result is not effective as there are holes in the UX, UI, or both. It is not clear that the user stories helped to guide UX.
 
-2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
+* [ ] Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team.
 
-1 - The application is confusing or difficult to use.
+* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality.
+
+------------------------------------------------------------------
 
 ## CSS/Sass Style
 
-4 - Application has exceptionally well-factored CSS/Sass with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
+* [ ] Novice - There are several (10+) instances of duplication and one or two major bugs. Developers write code with unnecessary selectors or tags which do not increase clarity.
 
-3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS/Sass is doing.
+* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unncessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
 
-2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+* [ ] Proficient - Application is thoughtfully put together with comments to help guide organization. There may be some duplication (fewer than 5 instances) present.  Comments are present to assist with organization of code.
 
-1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS/Sass is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
+* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application has exceptionally well-factored CSS/Sass with all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
+
+------------------------------------------------------------------
 
 ## JavaScript / React Style
 
-## Workflow
+* [ ] Novice - There is a significant amount of duplication and one or two major bugs. JavaScript does not follow the principles of `DRY`
 
-4 - The developers effectively use Git branches and make small, atomic commits that document the evolution of their application. Developers submit t
+* [ ] Advanced Beginner - There is some duplication and there may be one or two major bugs. The application has large components and logic could be broken apart into smaller, stateless components. JavaScript may be hard to read/follow.
 
-3 - The developers makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base.
+* [ ] Proficient - Application has little to no duplication and no major bugs. Application has several components built out that logically break apart the functionality. JavaScript may be hard to follow at times but is generally easy to read/understand. 
 
-2 - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
+* [ ] Exceptional - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are zero instances where an instructor would recommend taking a different approach to design and component architecture. DRY and SRP practices are incorporated, making JavaScript very easy to follow/read.
 
-1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application. -->
+------------------------------------------------------------------
+
+## GitHub Collaboration/Workflow
+
+* [ ] Novice - Developers do not tag instructors in the two required PRs by due dates listed in the project outline or tagged PR has fewer than 200 lines of code. The developer creating the PR does not summarize the changes or why the changes were made. Reviewers are not leaving line-by-line feedback/comments _or_ are merging the PR before changes are made.
+
+* [ ] Advanced Beginner -  Developers tag instructors in both required PRs by due dates _or_ in one of the two required. PR has between 200 - 350 lines of code. The developer creating the PR summarizes the changes made but does not explain _why_ those changes were necessary. Reviewers do not leave line-by-line feedback. May be merging PR before feedback is incorporated.
+
+* [ ] Proficient - Developers tag instructors in both required PRs by due dates. PR is between 350 - 450 lines of code. The developer creating the PR summarizes the changes made, why those changes were necessary, and asks for insights. Reviewers leave line-by-line comments/feedback and wait to merge PR until feedback is incorporated.
+
+* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the feedback is both kind _and_ insightful. There may be numerous threads of conversation where developers go back and forth to find the best solution to the problems they are solving together.
