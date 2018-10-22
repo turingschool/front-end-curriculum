@@ -85,7 +85,7 @@ Notice that the condition is crucial in controlling the flow of our loop. If the
 
 ## Context
 
-We went over some of the different array prototype methods we have available to us.  Today we want to focus more on methods that are more focused on iterating through arrays. There are many times we want to manipulate arrays, add all of their values, retrieve items based on some condition...
+We went over some of the different array prototype methods we have available to us.  Today we want to focus on methods that are more focused on iterating through arrays. There are many times we want to manipulate arrays, add all of their values, retrieve items based on some condition...
 
 We could do these things by hand using a `for` loop, but we would have to implement our own logic to work with the array.  So instead, let's use the methods that the Javascript language provides us.
 
@@ -124,7 +124,7 @@ var dogs = [
 
 ## Array.prototype.forEach
 
-Let's get into the array prototype methods. One of the first methods we'll explore together is [`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FforEach), which iterates over the array and passes each element into a callback function that you provide.
+Let's get into array prototype methods. One of the first methods we'll explore together is [`Array.prototype.forEach()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2FforEach), which iterates over the array and passes each element into a callback function that you provide.
 
 ```js
 var letters = ['a', 'b', 'c'];
@@ -134,7 +134,7 @@ letters.forEach(function (letter) {
 });
 ```
 
-This will log the following output to the console, just like our `for` loop example above:
+This will log the following output to the console, just like our `for` loop example in the prework:
 
 ```
 a
@@ -142,7 +142,7 @@ b
 c
 ```
 
-In the example above, we work through each letter one by one and pass it into an anonymous function that logs each letter to the console. `forEach()` passes three arguments to the callback function: the current element for this iteration, the index of that element, and a full copy of the array that we're iterating through.
+`forEach()` passes three arguments to the callback function: the current element for this iteration, the index of that element, and a full copy of the array that we're iterating through.
 
 ```js
 var letters = ['a', 'b', 'c'];
@@ -164,13 +164,17 @@ This will log the following output to the console:
 {currentValue: "c", currentIndex: 2, fullArray: ["a", "b", "c"]}
 ```
 
-JavaScript allows you to omit arguments without raising an error. You can use this to your advantage by leaving out the index and the full array if you're not using them, which is common and what we did in the first example. However, if you do need either or both the index or the full array, you have access to them.
+The index and array parameters are optional and do not need to be included if you are not using them.
 
-`forEach()` has a few advantages over using a `for` loop. First, it's quicker to write and easier to read. Secondly, JavaScript has function scope, but not block scope. This means that `letter` in our first example is scoped only to our callback function, whereas `i` is accessible outside of the loop body, which is the global scope in this case. The latter could have some unintended consequences.
 
-`forEach()` is the foundation for many of the other methods we'll explore today and you can accomplish much of the same functionality with `forEach()` that other methods specialize in. That said, just because you _can_ use it, it doesn't mean it's the best choice and that you _should_ use it. More on this later.
+### Advantages of forEach()
+  - Easier to write/read
+  - The first parameter, `letter` is block scoped whereas `i` in a `for` loop is globally scoped
+  - Is the foundation for many other array prototype methods (specifically ones we are covering today)
 
-One interesting thing to note is that `forEach()` does not return anything. If you have a return statement in your callback function it is likely not doing anything for you. This is different from map which we will look at next.
+### One Note:
+
+One thing to note is that `forEach` does not return anything back to you.  Having a return statement in the callback function will not give you anything back.  This is a major difference compared to the other array prototype methods we will go through today.
 
 ### Your Turn
 
@@ -209,7 +213,7 @@ Open your journal and answer the following questions:
 
 ## Array.prototype.map
 
-`forEach()` will iterate through each element in an array and pass that element to an anonymous function. It's not uncommon that we find ourselves in a position where we need to transform the contents of an array.
+It's not uncommon that we find ourselves in a position where we need to transform the contents of an array.
 
 In theory, we could use `forEach()` like this:
 
@@ -225,9 +229,17 @@ letters.forEach(function (letter) {
 console.log(uppercaseLetters);
 ```
 
-This will work. The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap).  
+The `console.log` statement will log `['A', 'B', 'C']` — we've mapped each element in the array to its uppercase equivalent. However, JavaScript's `Array` provides us with a better way to do this — [`Array.prototype.map()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map?redirectlocale=en-US&redirectslug=JavaScript%2FReference%2FGlobal_Objects%2FArray%2Fmap).  
 
-Like `forEach()`, `map()` takes a callback function and runs that function for each element in the array. Where they differ is that `forEach()` returns `undefined` when its finished. `map()`, on the other hand, returns a new array made up of the values returned by the callback function on each iteration.
+
+#### How is map() similar to forEach()?
+  - `map()` takes a callback function and runs through each element in the array
+  - It also has the same parameters as a `forEach()` method including the `index` and `array` as optional parameters
+
+#### How are they different?
+  - `forEach()` returns `undefined`.  `map()` returns a new array based on the values returned by the callback function.
+  - `map()` is most commonly used to manipulate the data from an array into a new one
+
 
 ```js
 var letters = ['a', 'b', 'c'];
@@ -239,7 +251,7 @@ var uppercaseLetters = letters.map(function (letter) {
 console.log(uppercaseLetters);
 ```
 
-The example above will give us the same result as the one before it: `['A', 'B', 'C']`. That said, it's about half the length and doesn't involve mutating the original array.
+Although this produces the same result, the code is significantly cleaner and doesn't mutate the original data.
 
 ### Your Turn
 
@@ -264,9 +276,19 @@ var increasedPrices = [];
 
 ## Array.prototype.filter
 
-[`Array.prototype.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), like `map()`, returns a new array based on the return value of the callback function you pass it. The mechanics, however, differ slightly.
+Something to note is that `map()` always returns an array of the same length.  What if I wanted to shorten my array based on some conditional?  That's where [`Array.prototype.filter()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter) comes in!
 
-`filter()` will only add an element to the new array if the callback function returns a truthy value. If the callback function returns a falsy value it will be omitted.
+#### How is filter() similar to map()?
+  - Returns a new array based on the value returned from the callback function
+  - It also has the same parameters as `forEach()` and `map()` including the `index` and `array` as optional parameters
+
+#### How are they different?
+  - The value returned from the callback function must be truthy or falsy. (more on this shortly)
+  - `filter()` is used for taking values out of an array based on a conditional.  You cannot manipulate the data like you can with `map()`.
+
+### Truthy vs. Fasley
+
+`filter()` will only add an element to the new array if the callback function returns a [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value. If the callback function returns a [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) value it will be omitted.
 
 What makes a value truthy or falsy? Let's start with the easy ones: `true` is truthy and `false` is falsy. `0`, `null`, `undefined`, `NaN`, and an empty string are all falsy as well. Everything else is truthy.
 
@@ -282,7 +304,7 @@ var truths = booleans.filter(function (value) {
 console.log(truths); // Logs [true, true, true]
 ```
 
-As you can see in the example above, `false` is omitted from the resulting array. This works, but it's not very useful. Let's look at something slightly more interesting:
+The `false` values are omitted from the resulting array.  Let's look at a more practical example:
 
 ```js
 var numbers = [15, 6, 14, 2, 9, 22];
@@ -294,9 +316,9 @@ var numbersLargerThanTen = numbers.filter(function (number) {
 console.log(numbersLargerThanTen);
 ```
 
-All the numbers greater than 10 will be added to our new array.
+All the numbers greater than 10 will be added to our new array, `numbersLargerThanTen`.
 
-Let's look at a slightly more complicated example.
+Here's another example that focuses on truthy/falsy values:
 
 ```js
 var numbers = [1, 2, 3, 4, 5, 6, 7];
@@ -308,9 +330,9 @@ var oddNumbers = numbers.filter(function (number) {
 console.log(oddNumbers); // Logs [1, 3, 5, 7]
 ```
 
-For all of the even numbers, `number % 2` returns `0`, which—as we saw earlier—is falsy. As a result, all of the even numbers are omitted from the new array. For all of the odd numbers, `number % 2` returns `1`, which is truthy. As a result, the odd numbers are placed in the new array and ultimately returned by the filter method.
+All of the even numbers are omitted from the new array because `number % 2` returns the falsy value `0`. For all of the odd numbers, `number % 2` returns `1`, which is truthy. As a result, a new array of odd numbers are returned.
 
-We can also get a little bit more nuanced in how we filter elements in our array. Let's take a look at the following example:
+He's one final example where we can use filter on an array of objects:
 
 ```js
 var beatles = [
@@ -532,6 +554,5 @@ console.log(sortedBeatles); // Logs ['Paul', 'John', 'George', 'Ringo']
 
 ## Additional Resources
 
-* All jokes courtesy of Patrick McLaughlin, FE-1711 @Patrick McLaughlin 
 * [MDN Array Prototypes with AJAX](https://github.com/mdn/advanced-js-fundamentals-ck/tree/gh-pages/tutorials/01-array-prototype-methods) - similar to this lesson but with the addition of AJAX calls and DOM manipulation.
 * [Array Prototype Methods documentation by MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype) - for a full list of array methods given to you by default in JavaScript.
