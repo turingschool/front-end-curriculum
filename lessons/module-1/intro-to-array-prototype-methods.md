@@ -107,10 +107,10 @@ var animals = ['zebra', 'giraffe', 'horse', 'red panda', 'polar bear', 'aardvark
 * What if I had another array of numbers and just wanted to reverse the order so it was descending instead of ascending?  Which array prototype method could you use?
 
 ```js
-var jewelry = ['pearl necklace', 'golden ring', 'diamond earrings', 'bracelet'];
+var numbers = [0, 15, 17, 48, 92, 131];
 
 // console output
-=> ['bracelet', 'diamond earrings', 'golden ring', 'pearl necklace'];
+=> [131, 92, 48, 17, 15, 0];
 ```
 
 * I have two arrays, `healthyFoods` and `vegetables`, that I want to combine together.  Without using a `for` loop, how could we implement this?
