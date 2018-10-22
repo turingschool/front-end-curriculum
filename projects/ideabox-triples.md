@@ -34,7 +34,7 @@ You will have two javascript files:
 1. An `idea.js` file that contains an `Idea` class.
   * `Idea` methods must include, but are not limited to:
     1. `constructor`
-    2. `saveToStorage` (should be used when creating and updating ideas)
+    2. `saveToStorage` (should only have one job which is to save the instance to storage, and should be invoked in all of the methods below)
     3. `deleteFromStorage`
     4. `updateSelf`
     5. `updateQuality`
