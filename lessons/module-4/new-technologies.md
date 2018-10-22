@@ -1,5 +1,5 @@
 ---
-title: "New Technologies - Capstone Differentiation"
+title: "New Technologies - Differentiation"
 length: 1 hour
 tags: node, express, progressive web app, localization
 ---
@@ -7,7 +7,7 @@ tags: node, express, progressive web app, localization
 ## Goals
 
 - Introduce yourself to new, advanced topics for front-end development
-- See what interests you enough to learn on your own and incorporate into your capstone project
+- See what interests you enough to learn on your own and incorporate into your cross-pollination project
 - Differentiation!
 
 ## Topics
