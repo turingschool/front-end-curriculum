@@ -185,10 +185,10 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 
 ### Comp Recreation
 
-* [ ]  Novice - Application implements all major comp details correctly (colors, fonts, icons, etc.)
-* [ ]  Advanced Beginner - Application adds adequate sizing and spacing of elements on at least 1 screen size
-* [ ]  Proficient - Application adds adequate sizing and spacing of elements at all screen sizes
-* [ ]  Exceptional - Application adds exceptional sizing and spacing of elements at all screen sizes
+* [ ]  Novice - Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
+* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
+* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
+* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
 
 ------------------------------------------------------------------
 
