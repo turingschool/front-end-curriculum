@@ -156,14 +156,9 @@ Desktop layout:
 
 ![desktop specs][desktop-base]
 
-Mobile layout:
-
-![mobile specs][mobile-base]
-
 Full mobile layout:
 
 ![full mobile layout][mobile-full]
-
 
 Color, font, and icon spec:
 
@@ -171,12 +166,11 @@ Color, font, and icon spec:
 
 #### Link to icon files
 
-You will need the `svg` files for the delete, upvote, and downvote icons. [Here's the link.](https://drive.google.com/open?id=0B_lPnjyMN6-CaHpTQlRUdzNnZ0U)
+You will need the `svg` files for the delete, upvote, and downvote icons. [Here's the link.](https://drive.google.com/drive/folders/1q3-CHruC1rtfsFe_pMa9gLUr3My71_Uq?usp=sharing)
 
-[desktop-base]: /assets/images/projects/ideabox/ideabox-01.png
-[mobile-base]: /assets/images/projects/ideabox/ideabox-02.png
-[mobile-full]: /assets/images/projects/ideabox/ideabox-03.png
-[button-hover-specs]: /assets/images/projects/ideabox/ideabox-04.png
+[desktop-base]: /assets/images/projects/ideabox/ideabox-triples-01.jpg
+[mobile-full]: /assets/images/projects/ideabox/ideabox-triples-02.jpg
+[button-hover-specs]: /assets/images/projects/ideabox/ideabox-triples-03.jpg
 
 ## Rubric
 
@@ -225,6 +219,5 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
   * [ ]  All functions are less than 10 lines
   * [ ]  There are less than 3 global variables
   * [ ]  There are no nested if else statements
-* [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and: 
+* [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
   * [ ] Using logical operators instead of if/else
-
