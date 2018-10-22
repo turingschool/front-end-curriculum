@@ -4,6 +4,13 @@ length: 90 mins
 tags: javascript, backend
 ---
 
+<!-- In introduction, say that learning this architecture will set themselves apart from other bootcamp graduates -->
+<!-- Create backend to start out with instead of making it from scratch - have them walk through the app (connect the walkthrough to an interview question) -->
+<!-- They were engaged with the CORS section - can they be divided in groups to find out what protocol, host, port is? Have them write it on the board while they are working - can utilize the back whiteboards as well (write down the questions on the boards)-->
+<!-- Have them close computers for the diagramming portion - make sure they are taking notes! -->
+<!-- Once they have drawn the diagrams and I have corrected what they have on the board, have them reassess their diagrams and force them to correct what they did - drives a deeper level of understanding -->
+<!-- For the final summary piece, use ONLY notes that you took, summarize all the steps we took today -->
+
 ## Objectives
 
 Create a back-end and front-end application in two separate repositories and allow them to talk to each other - even on production.
