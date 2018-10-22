@@ -251,7 +251,7 @@ var uppercaseLetters = letters.map(function (letter) {
 console.log(uppercaseLetters);
 ```
 
-Althought this produces the same result, the code is significantly cleaner and doesn't mutate the original data.
+Although this produces the same result, the code is significantly cleaner and doesn't mutate the original data.
 
 ### Your Turn
 
