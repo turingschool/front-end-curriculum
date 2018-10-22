@@ -91,7 +91,7 @@ We could do these things by hand using a `for` loop, but we would have to implem
 
 ### Your Turn
 
-Let's see what it's like to use a `for` loop to solve these problems first.  We'll then see the difference between this and an array prototype method shortly!  
+Let's see what it's like to use a `for` loop to solve these problems first.  We'll then see how we can use array prototype methods to solve them and the benefits they provide!  
 
 * Use the prices array below to create a new array of increased prices.
 
@@ -205,10 +205,7 @@ And one additional:
 
 Open your journal and answer the following questions:
 - What are the most important/significant ideas or elements of the `forEach()` method?
-- Why do stores like `forEach()`?
-<!-- 
-  Because it does not return anything.
--->
+- When might you use a `forEach` method in the project you are currently work on?
 
 ## Array.prototype.map
 
@@ -262,11 +259,8 @@ var increasedPrices = [];
 
 #### Journal
 
-- What parts of `map()` are similar to `forEach()`? What parts are differents? 
-- Why do geneticists use `map()`? 
-<!-- 
-  They don't want to mutate the original subject!
--->
+- What parts of `map()` are similar to `forEach()`? What parts are different?
+- What is a situation where you might use `map()`? List 2-3 examples. 
 
 ## Array.prototype.filter
 
@@ -351,9 +345,8 @@ var people = [
 
 #### Journal
 
+- How is `filter()` similar to `map()`?  How are they different?
 - How could you put `filter()` into practice on one of your current projects?
-- Why does `filter()` make such a good private investigator? 
-<!-- because it only returns truth -->
 
 <!-- 
 ## Array.prototype.find
