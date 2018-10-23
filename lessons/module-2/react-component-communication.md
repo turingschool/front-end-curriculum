@@ -16,12 +16,12 @@ By the end of this lesson, students should be able to:
 * What are components in React? What are the benefits of using components?
 * What is the difference between state and props in React?
 * When should you make a component stateful?
+
 <!-- Review from previous lessons on React
 * functions or an extended ES6 class; return one, single JSX element (remember, functions can only return one thing!); there are two types of components: stateless and stateful; modular and reuseability
 * props passed as object with key/value pairs; state holds data that represents the state; props immutable, state mutable;
 * Most of your components should simply take some data from props and render it. However, sometimes you need to respond to user input, a server request or the passage of time. For this you use state.
-You might conceptualize state as private to that component.
- -->
+You might conceptualize state as private to that component.-->
 
 ## Structuring React Applications
 
@@ -117,20 +117,14 @@ In your own words, explain the term `Data Down, Actions Up`
 
 # Exercise: React Trivia App
 
-1. Clone down [this](https://github.com/turingschool-examples/react-trivia-app) repo, and `cd` into it.
+* Clone down [this](https://github.com/turingschool-examples/react-trivia-app) repo, and `cd` into it.
 
-2. Run:
+* Run: `npm install`
 
-```bash
-npm install
-```
+* Checkout the branch `start-morning`
 
-3. Checkout the branch `start-morning`
+* Start your server with `npm start`
 
-4. Start your server:
-```bash
-npm start
-```
 Once the server is running you can visit `http://localhost:8080/` to run your application.
 
 ## Phase 1: App & TriviaList
@@ -162,8 +156,8 @@ Now that you have successfully created a basic app that showcases component comm
   - Update your `Controls` component to include a `select` element that allows the user to also filter for the category of triviaQuestions . Use the `categories` that are being imported in line 3 in `App.js`
 
 _Completed version of Phases 1-3 can be found on the branch `complete-morning`_
-<!-- ## Code Steps
 
+<!-- ## Code Steps
 * App.js: Import triviaList
 * App.js: add triviaList to state
 * App.js: render TriviaList component with questions prop
@@ -175,8 +169,7 @@ _Completed version of Phases 1-3 can be found on the branch `complete-morning`_
 * App.js: render controls component
 * Controls.js: create controls component
 * Controls.js: add button with onClick
-* App.js: add filterQuestions method & pass it down as a prop, bind - explain again
- -->
+* App.js: add filterQuestions method & pass it down as a prop, bind - explain again-->
 
 ### Summary
 
