@@ -118,7 +118,7 @@ We'd like our users to be able to easily find specific ideas they already create
 * Clearing the search box should restore all the ideas to the list.
   * There is no need to make persisting changes to the data model to achieve this functionality.
 
-#### Filter by Importance
+#### Filtering by Importance
 
 The application should allow users to filter the idea list based on level of quality.
 
@@ -150,6 +150,13 @@ The application is able to count the number of characters inside of the input fi
 
 The submit button should be disabled when there is not valid content in both input fields **and** if the input field character count exceeds 120 characters.
 
+#### Adds two more qualities
+
+* Making 5 qualities total
+* Implementation should store each quality as an integer on the instance
+* Upvote and downvote happen by increasing or decreasing the integer
+* How the idea is displayed should be done using an array of quality strings, where the integer value is used to pull a certain string via its index.
+
 #### Layout comps
 
 Desktop layout:
@@ -178,17 +185,17 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 
 * [ ]  Novice - Application meets all of the basic functional expectations of create, edit, delete, and those changes persist in `localStorage`
 * [ ]  Advanced Beginner - Application adds 'Changing the quality of an idea' and enables 'Filtering and Searching by Text' as defined in the spec
-* [ ]  Proficient - Applications adds 'Filter by Importance' and 'Recent Ideas' as outlined in the spec
-* [ ]  Exceptional - Application adds at least one of the extensions
+* [ ]  Proficient - Applications adds 'Filtering by Importance' and 'Recent Ideas' as outlined in the spec
+* [ ]  Exceptional - Application adds all of the extensions
 
 ------------------------------------------------------------------
 
 ### Comp Recreation
 
 * [ ]  Novice - Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
-* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
-* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
-* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
+* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.). Transitions between screen sizes may not be smooth
+* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward
+* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps
 
 ------------------------------------------------------------------
 
@@ -220,4 +227,8 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
   * [ ]  There are less than 3 global variables
   * [ ]  There are no nested if else statements
 * [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
-  * [ ] Using logical operators instead of if/else
+  * [ ]  Using logical operators instead of if/else
+  * [ ]  Application changes anonymous functions to arrow functions and changes all variables to be block scoped (`let` and `const`)
+  * [ ]  Application stores all ideas in one array in local storage, instead of individually
+  * [ ]  When 'Filtering and Searching by Text' and 'Flitering by Importance' All ideas that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
+
