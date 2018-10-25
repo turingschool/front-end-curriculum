@@ -286,7 +286,7 @@ Something to note is that `map()` always returns an array of the same length.  W
   - The value returned from the callback function must be truthy or falsy. (more on this shortly)
   - `filter()` is used for taking values out of an array based on a conditional.  You cannot manipulate the data like you can with `map()`.
 
-### Truthy vs. Fasley
+### Truthy vs. Falsy
 
 `filter()` will only add an element to the new array if the callback function returns a [truthy](https://developer.mozilla.org/en-US/docs/Glossary/Truthy) value. If the callback function returns a [falsy](https://developer.mozilla.org/en-US/docs/Glossary/Falsy) value it will be omitted.
 
