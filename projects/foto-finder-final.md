@@ -16,7 +16,7 @@ Note: Now that you have started to learn some es6, feel free to implement all of
   * DRY JavaScript
   * localStorage to persist data
 * Iterate through/filter dom elements using for loops/array prototype methods
-* High understanding of "data model" and "dom model"
+* Understands the difference between the data model and how the data is displayed on the DOM
 * Ability to match/recreate a UI and create a great UX
 
 ### Architecture
@@ -167,9 +167,9 @@ Work through these **in order**:
 ### Comp Recreation
 
 * [ ]  Novice - Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
-* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
-* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
-* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
+* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
+* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
+* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
 
 ------------------------------------------------------------------
 
@@ -178,7 +178,7 @@ Work through these **in order**:
 * [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
 * [ ]  Advanced Beginner - Application adds to the above by using `data-*` attributes for all data related things
 * [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
-* [ ]  Exceptional - Application adds to the above by using BEM, SMACCS, or another set of naming conventions for classes
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
     * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
 
 ------------------------------------------------------------------
@@ -188,7 +188,7 @@ Work through these **in order**:
 * [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
 * [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
 * [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle 
-* [ ]  Exceptional - Application adds to the above by using BEM, SMACCS, or another set of naming conventions for classes
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
 
@@ -201,5 +201,5 @@ Work through these **in order**:
   * [ ]  There are less than 3 global variables
   * [ ]  There are no nested if/else statements
 * [ ]  Exceptional - Application refactors all for loops into the proper array prototype iteration method
-   * [ ] Using logical operators instead of if/else
+   * [ ] Uses logical operators instead of if/else statements where applicable
    * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
