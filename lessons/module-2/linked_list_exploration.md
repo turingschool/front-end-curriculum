@@ -101,9 +101,7 @@ This approach has some serious limitations:
 
 #### Exploring a Variable-Length Array
 
-**[TODO: Build the starter heap to allow for this work]**
-
-* You've been provided the "snapshot" of a heap with 64 addressed slots
+* You've been provided the "snapshot" of a heap with 64 addressed slots [link to printable map](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/lessons/module-2/linked_list_exploration_memory_map.md)
 * The marker for "Array Start" is 126
 * The slot after an "Array Start" is the address of the first value
 * The slot after that first value is the address of the second value
@@ -111,10 +109,10 @@ This approach has some serious limitations:
 * The marker for "Array End" is 127
 
 1. Write out the values in this array in normal JavaScript notation
-2. Modify your heap by adding a new value, `112`, on to the end of the array. You should only change the values stored in three slots of the heap.
+2. Modify your heap by adding a new value, `112`, on to the end of the array. You should only change the values stored in three slots of the heap (two blanks, one with existing data).
 3. Modify your heap by adding a new value, `111`, to the beginning of the array. You should only change the values stored in three slots of the heap.
 4. You can `count` the number of elements by following one link after another. How many "jumps" does it take to get from the Array Start to the Array End? How does this compare to the count? What formula would you write to find the number of data elements relative to the number of jumps?
-5. *Extension*: Remove the fifth element of the array by only changing the value of one slot. What does this imply about the relationship between variable-length arrays and garbage collection?
+5. *Extension*: Remove the fifth element of the current array by only changing the value of one slot. What does this imply about the relationship between variable-length arrays and garbage collection?
 
 ## Modeling a Linked List
 
@@ -211,6 +209,10 @@ As a whole group, answer general student questions. Then wrap things up with:
 * In binary that's `0010 1110 1000 1111`
 * Flip of 3, 6, 9, and 11 is `0011 1100 1101 1111` becomes 3, 12, 13, 15
 
+### Memory Map
+
+* Original array is 14 57 30 16 51 84 17 34 113 93 42 66
+
 ### Physical Space Exercise Notes
 
 * #6 Tail = 61
@@ -220,3 +222,5 @@ As a whole group, answer general student questions. Then wrap things up with:
 * #14 Count = 6
 * #15 Index = 2
 * Final List: 21, 42, 63, 28, 37, 59
+
+
