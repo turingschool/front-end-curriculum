@@ -58,18 +58,16 @@ Make sense for simple data? Let's do a little exercise:
 
 #### Check Your Understanding
 
-* Draw a head with four boxes
+* Draw a heap with four boxes
 * Each box is going to represent just *4* bits of data
 * Insert 15 into slot 3
 * Insert 8 into slot 2
-* Insert 2 into slot 4
-* Insert 5 into slot 0
-* Draw the resulting heap as a line of 32 bits
-* Extension: if you "flip" (aka change a 1 to a 0 or a 0 to a 1) the value of bits 3, 6, 9, and 13, what would be the resulting four-box heap look like?
+* Insert 2 into slot 0
+* Insert 14 into slot 1
+* Draw the resulting heap as a line of 32 bits (Note: Every number needs to be four bits)
+* Extension: if you "flip" (aka change a 1 to a 0 or a 0 to a 1) the value of bits 3, 6, 9, and 11, what would the resulting four-box heap look like?
 
 Hint: Google will convert decimal to binary for you if you search like "22 in binary". It'll give you an answer like `0b10110` where the `0b` on the front just means it's a binary number. So 22 in binary is `10110`.
-
-[TODO: Walk through this to see if it makes sense]
 
 ### Heaps with Complex Data
 
@@ -167,13 +165,11 @@ Got it? Great, now let's get more complicated:
 8. `Push` the value 37
 9. What is the `index` of the value 63?
 10 `Replace` the value of the node with index 4 with the value 28
-11. Des your list `include` the value 61? How about 21?
+11. Does your list `include` the value 61? How about 21?
 12. `Delete` the node with index 0 from the list
 13. What is the value of your `head` (aka the first node in the list)
 14. `Push` the value 59 then run a `count` to find how many nodes are in the list
 15. What is the `index` of the value 63?
-
-[TODO: Walk through this to get the answers / check feasibility]
 
 Compare your resulting Linked List model to the person next to you. If there are any discrepancies, walk through it again together.
 
@@ -210,6 +206,12 @@ As a whole group, answer general student questions. Then wrap things up with:
 5. What's the hardest think about Linked Lists?
 
 ## Addendum
+
+### The Heap - CFU
+
+* Heap is 2, 14, 8, 15
+* In binary that's `0010 1110 1000 1111`
+* Flip of 3, 6, 9, and 11 is `0011 1100 1101 1111` becomes 3, 12, 13, 15
 
 ### Physical Space Exercise Notes
 
