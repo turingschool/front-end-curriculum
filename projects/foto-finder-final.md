@@ -37,10 +37,15 @@ You will have two javascript files:
 * An photo has an _id_, _title_, _caption_, _file_, and a _favorite_ property.
   * The _id_ should be a unique identifier.
   * _title_ and _caption_ are free-form strings.
-  * _file_ is an object.
+  * _file_ is a URL string.
+    * Use this [method](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL) in order to convert a [blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) object into a URL.
   * _favorite_ will be a boolean.
 
 Each photo should be created as an instance of the `Photo` class.
+
+#### Important Note:
+
+For this project, you will need to open your application using a server.  You'll learn more about servers next mod, but for the purposes of this project, instead of doing `open index.html`, you will need to run `python -m SimpleHTTPServer` in your project directory.  Then go to `localhost:8000` and you should see your app there!
 
 ### Phase One: Building out the UI
 
