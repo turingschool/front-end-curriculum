@@ -166,8 +166,8 @@ Got it? Great, now let's get more complicated:
 7. `Insert` the value 42 into the position with index 2 (pushing the later nodes down, nothing is destroyed)
 8. `Push` the value 37
 9. What is the `index` of the value 63?
-10. Does your list `include` the value 61? How about 21?
-11. `Replace` the value of the node with index 4 with the value 28
+10 `Replace` the value of the node with index 4 with the value 28
+11. Des your list `include` the value 61? How about 21?
 12. `Delete` the node with index 0 from the list
 13. What is the value of your `head` (aka the first node in the list)
 14. `Push` the value 59 then run a `count` to find how many nodes are in the list
@@ -208,3 +208,15 @@ As a whole group, answer general student questions. Then wrap things up with:
 3. Why did older languages use fixed-size arrays?
 4. What's the difference between `push` and `pop`?
 5. What's the hardest think about Linked Lists?
+
+## Addendum
+
+### Physical Space Exercise Notes
+
+* #6 Tail = 61
+* #9 Index = 3
+* #11 Include = Yes, No
+* #13 Head = 21
+* #14 Count = 6
+* #15 Index = 2
+* Final List: 21, 42, 63, 28, 37, 59
