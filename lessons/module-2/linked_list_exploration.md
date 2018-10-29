@@ -162,13 +162,12 @@ Got it? Great, now let's get more complicated:
 7. `Insert` the value 42 into the position with index 2 (pushing the later nodes down, nothing is destroyed)
 8. `Push` the value 37
 9. What is the `index` of the value 63?
-10. Does your list `include?` the value 61? How about 21?
+10. Does your list `include` the value 61? How about 21?
 11. `Replace` the value of the node with index 4 with the value 28
 12. `Delete` the node with index 0 from the list
 13. What is the value of your `head` (aka the first node in the list)
-14. What is the `max` value in the list? `min`?
-15. `Push` the value 59 then run a `count` to find how many nodes are in the list
-16. What is the `index` of the value 63?
+14. `Push` the value 59 then run a `count` to find how many nodes are in the list
+15. What is the `index` of the value 63?
 
 Compare your resulting Linked List model to the person next to you. If there are any discrepancies, walk through it again together.
 
@@ -183,7 +182,7 @@ Write your own definition for each of these key Linked List operations:
 * `Count`
 * `Insert`
 * `Delete`
-* `Include?`
+* `Include`
 * `Index`
 
 ## Paired Practice
@@ -191,8 +190,6 @@ Write your own definition for each of these key Linked List operations:
 * Clone the repo at https://github.com/turingschool-examples/linked-lists/
 * Work with a new pair to build a linked list that passes the included tests
 * You're welcome to add additional tests if they help you
-
-[TODO: Edit the test file to remove shift/unshift and others we don't need]
 
 ## Review
 
