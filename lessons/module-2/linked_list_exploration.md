@@ -193,8 +193,6 @@ Write your own definition for each of these key Linked List operations:
 * Work with a new pair to build a linked list that passes the included tests
 * You're welcome to add additional tests if they help you
 
-[TODO: Get Brittany's OK on this exercise]
-
 ## Review
 
 As a whole group, answer general student questions. Then wrap things up with:
