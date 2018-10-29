@@ -101,7 +101,7 @@ This approach has some serious limitations:
 
 #### Exploring a Variable-Length Array
 
-* You've been provided the "snapshot" of a heap with 64 addressed slots [link to printable map](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/lessons/module-2/linked_list_exploration_memory_map.md)
+* You've been provided the "snapshot" of a heap with addressed slots numbers 64-99 [link to printable map, 60% scale for single page](https://github.com/turingschool/front-end-curriculum/blob/gh-pages/lessons/module-2/linked_list_exploration_memory_map.md)
 * The marker for "Array Start" is 126
 * The slot after an "Array Start" is the address of the first value
 * The slot after that first value is the address of the second value
