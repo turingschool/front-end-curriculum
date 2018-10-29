@@ -24,6 +24,8 @@ tags: linked list, javascript, doubly linked list, circular linked list, tdd, da
 * Implementing (Pairs) - 55 minutes
 * Review - 25 minutes
 
+[TODO: Review the feasibility of this timing]
+
 ## Warmup - 5 minutes
 
 How many data types can you list? Write out the names.
@@ -66,6 +68,8 @@ Make sense for simple data? Let's do a little exercise:
 * Extension: if you "flip" (aka change a 1 to a 0 or a 0 to a 1) the value of bits 3, 6, 9, and 13, what would be the resulting four-box heap look like?
 
 Hint: Google will convert decimal to binary for you if you search like "22 in binary". It'll give you an answer like `0b10110` where the `0b` on the front just means it's a binary number. So 22 in binary is `10110`.
+
+[TODO: Walk through this to see if it makes sense]
 
 ### Heaps with Complex Data
 
@@ -169,6 +173,8 @@ Got it? Great, now let's get more complicated:
 14. `Push` the value 59 then run a `count` to find how many nodes are in the list
 15. What is the `index` of the value 63?
 
+[TODO: Walk through this to get the answers / check feasibility]
+
 Compare your resulting Linked List model to the person next to you. If there are any discrepancies, walk through it again together.
 
 #### Synthesize
@@ -190,6 +196,8 @@ Write your own definition for each of these key Linked List operations:
 * Clone the repo at https://github.com/turingschool-examples/linked-lists/
 * Work with a new pair to build a linked list that passes the included tests
 * You're welcome to add additional tests if they help you
+
+[TODO: Get Brittany's OK on this exercise]
 
 ## Review
 
