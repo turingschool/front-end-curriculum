@@ -45,7 +45,7 @@ a {
   border-bottom: 2px solid lighten($medium-gray, 20);
   color: darken($teal, 30);
   text-decoration: none;
-  transition: all 0.5s;
+  transition: all 0.3s;
 
   &:hover {
     border-color: $dark-gray;
@@ -88,12 +88,16 @@ footer {
 /* Layout */
 
 .container {
-  display: flex;
+  // display: flex;
 
   min-height: 100vh;
   @media (max-width: $tablet-width) {
     flex-direction: column;
   }
+}
+
+.hide {
+  display: none;
 }
 
 /* Header */

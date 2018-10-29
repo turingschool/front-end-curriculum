@@ -1,0 +1,42 @@
+nav {
+  border-bottom: 2px solid $light-gray;
+  font-family: $standard-copy;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: -webkit-flex;
+  display: flex;
+  list-style: none;
+  text-align: right;
+  margin: 0 30px;
+  padding-left: 0;
+
+  li:first-child {
+    margin-right: auto;
+  }
+
+  li {
+    margin: auto 20px;
+    line-height: normal;
+  }
+
+  a {
+    color: $dark-gray;
+    padding-bottom: 3px;
+    border-bottom: none;
+
+    &:hover {
+      color: $medium-gray;
+    }
+  }
+
+  .home-logo-link img {
+    height: 80px;
+    margin: 10px;
+  }
+}
+
+.nav-links a.active-link {
+  border-bottom: 3px solid $teal;
+}

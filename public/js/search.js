@@ -2,12 +2,12 @@ $(function(config){
   var algolia = algoliasearch(config.applicationId, config.apiKey);
   var index = algolia.initIndex(config.indexName);
 
-  $('.clear-search-btn').on('click', function() {
-    $('.sidebar-navigation--search input').val('');
+  $('.clear-search').on('click', function() {
+    $('.search-bar input').val('');
     hideSearch();
   });
 
-  $('.sidebar-navigation--search input').on('input', function() {
+  $('.search-bar input').on('input', function() {
     var query = $(this).val();
     updateSearchQuery(query);
   });
