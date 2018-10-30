@@ -41,7 +41,7 @@ Based on your successful environment, what questions would you ask?
 
 You can test if they are too vague if you can ask how/why a couple times until you get to a more tangible question.
 
-> For example, "How do you mentor junior developers?" I need to think what about mentorship is important to me? Is it pair programming, code reviews, going to conferences? If it's going to conferences, then I'll ask something like "Tell me about your continuing education policies? Is there a budget for atttending conferences?"
+For example, "How do you mentor junior developers?" I need to think what about mentorship is important to me? Is it pair programming, code reviews, going to conferences? If it's going to conferences, then I'll ask something like "Tell me about your continuing education policies? Is there a budget for atttending conferences?"
 
 ### Closing (5 minutes)
 
