@@ -247,7 +247,7 @@ Lets use [this codepen](https://codepen.io/damwhit/pen/XxeZpg?editors=1011) for 
 
 ## Classes and Instances
 
-Thus far, we've only talked about creating one-off objects using object literals, but what happens if we want to create many objects with the same attributes?
+Thus far, we've only talked about creating one-off objects using object literals, but what happens if we want to create many objects with the same properties?
 
 This is where classes come in. **Classes** can serve as object factories that allow us to create multiple objects of the same type, which are commonly referred to as **instances**.
 
@@ -317,7 +317,7 @@ class Fridge {
 This method is run once and only once during an instance's lifetime, when we use the `new` keyword in conjunction with `Fridge();`.
 
 
-### Modeling State with Attributes
+### Modeling State with Properties
 
 The instances of the classes we've defined so far are basically useless.
 
@@ -409,11 +409,11 @@ Update your repl so that you:
 
 ### Create a Book Class
 
-With your partner, create a book class. Make sure that your book class has at least 3 attributes and 2 methods. Log those instances using your repl console or console.logs
+With your partner, create a book class. Make sure that your book class has at least 3 properties and 2 methods. Log those instances using your repl console or console.logs
 
 ### Create a Library Class
 
-With your partner, create a Library class. Add attributes as you wish, but the be sure to include a `collection` property that starts as an empty array.
+With your partner, create a Library class. Add properties as you wish, but the be sure to include a `collection` property that starts as an empty array.
 
 If you have time:
 
