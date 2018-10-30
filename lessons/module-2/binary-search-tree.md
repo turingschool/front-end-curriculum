@@ -361,7 +361,7 @@ We will be implementing a BST using this [repo](https://github.com/turingschool-
 
 Finish the functionality for `delete` on your BST:
 
-*The algorithm for deleting*
+*The algorithm for deleting*  
 You need to find the smallest node in the RIGHT SUBTREE of the node that you are deleting... not just the smallest node.
 
 ```js            
