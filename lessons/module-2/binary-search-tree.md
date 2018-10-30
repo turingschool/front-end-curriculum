@@ -5,7 +5,7 @@ tags: javascript, js, data structure
 module: 2
 ---
 
-### Goals
+### Lesson goals
 
 By the end of this lesson, you will:
 
@@ -14,12 +14,36 @@ By the end of this lesson, you will:
 * Know how to interact with a tree the following ways:
   * Inserting Values
   * Findind A Value
-  * Depth First vs Breadth First Search
 
 ## Vocab
 
   - `Data Structure` A way of structuring data, usually so that it can be used by an algorithm
   - `Algorithm` A set of rules and processes for solving a problem
+
+### Warm up
+
+- Imagine that your friend is playing your old Number Guesser from Mod 1 and that the range is currently set from 1 - 30. The progam generates a random number within that range and gives feedback on whether the guess is too low or too high. If you wanted to help your friend, what's an efficient algorithm he/she could use to get to the answer? What is the max number of guesses that are needed?
+
+<!-- Assume random number is 30.
+Linear Search
+Worst case: 30 guesses
+Best case: 1 guess
+Average: 15 guesses
+
+Binary Search
+15 - too low
+16 - 30 left ====> (30 + 16) / 2 = 23
+23 - too low
+24 - 30 left ====> (30 + 24) / 2 = 27
+27 - too low
+28 - 30 left ====> (30 + 28) / 2 = 29
+29 - too low
+30 left ====> Correct number 
+
+Binary Search
+Worst case: 5 guesses
+Best case: 1 guess
+Average: 5 guesses      -->
 
 ## Data Structures
 
@@ -40,6 +64,10 @@ Let's take a look at what a small BST might look like:
        /
     6
 ```
+
+#### Turn and Talk
+
+* What patterns, if any, do you see with how the numbers are arranged?
 
 ## Dig Deeper: Why Use A BST?
 Before we continue to look at this structure, let's talk about what we mean by "cheap". Think about what an array looks like:
@@ -67,6 +95,14 @@ There are a few main rules:
 4. Each child node linked to the right (`12`) has a data value greater than the parent node.
 
 What's sweet about this structure is that if an algorithm is trying to insert or find a particular node in the tree, you can automatically rule out large chunks of data just by knowing the value of a few nodes.  Let's look at some examples.
+
+#### On Your Own
+
+Use the following totally randomized data to build out a BST:
+
+```js
+const numbers =  [7, 9, 8, 4, 6, 2, 10];
+```
 
 ## Building A Binary Search Tree (Insertion)
 
@@ -196,6 +232,29 @@ Sorted Values `[3, 5, 6, 7, 10, 12, 19]`
 
 Finally we check for any right child nodes. There are none, so our sorting is complete. -->
 
+#### Turn and Talk 
+
+Reset Human #1's array:
+
+```js
+const numbers = [7, 9, 8, 4, 6, 2, 10];
+```
+
+Human #1 should build out a BST and talk through the steps for insertion.
+
+Reset Human #2's array again:
+
+```js
+const numbers = [4, 2, 6, 7, 8, 9, 10];
+```
+
+Human #2 should build out a BST and talk through the steps for insertion.
+
+
+* How are the two trees different? How are they similar? What conclusions can you draw about the data that you are using when working with a BST? 
+
+
+
 ## Finding Values in a BST
 
 Since our information is stored in a sorted order, this structure is incredibly useful for finding specific values. Assuming our tree is relatively balanced, we can automatically rule out almost half of the tree just from our root node. Let's talk about what this looks like.
@@ -250,7 +309,7 @@ We just need to move to the right of `5`. BAM. Found our node.
 
 Let's pretend for a second that we were looking for `8`. We would see that `7` is not `8` and we would want to check the right node. At this point we would see that there is no right child node so we would know that `8` is not in our BST.
 
-## Search Methods
+<!-- ## Search Methods
 
 There are two main methods for traversing around a tree like structure:
   1. **Depth First Search**
@@ -272,6 +331,21 @@ First Found: `[10]`
 Second Round: `[5, 12]`
 Third Round: `[3, 7, 19]`
 Fourth Round: `[6]`
+ -->
+
+
+#### Turn and Talk
+
+Working with a partner, use this data:
+```js
+const numbers = [10, 5, 12, 7, 3, 19, 6];
+```
+
+Human #1 should implement a linked list based on this data
+Human #2 should implement a binary searct tree based on this data
+
+How many steps does it take for you to find the number 6 in your linked list? In your BST?
+
 
 ## Checks For Understanding
 
