@@ -357,6 +357,32 @@ How many steps does it take for you to find the number 6 in your linked list? In
 
 We will be implementing a BST using this [repo](https://github.com/turingschool-examples/binary-search-tree). Use the tests to build out a few methods to navigate around a Binary Search Tree.
 
+#### Extension
+
+Finish the functionality for `delete` on your BST:
+
+*The algorithm for deleting*
+You need to find the smallest node in the RIGHT SUBTREE of the node that you are deleting... not just the smallest node.
+
+```js            
+                6
+              /   \
+             2    10
+            / \     \
+           0    5    19
+              /
+            4
+```
+So if we were looking to delete the 2 in this example - your tree would end up looking like this:
+
+```js            
+                6
+              /   \
+             4    10
+            / \     \
+           0    5    19
+```
+
 ## Resources
 
 * [Breadth First vs Depth First](https://www.youtube.com/watch?v=9RHO6jU--GU)
