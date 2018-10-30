@@ -17,7 +17,7 @@ nav {
   }
 
   li {
-    margin: auto 20px;
+    margin: auto 15px;
     line-height: normal;
   }
 
@@ -33,7 +33,27 @@ nav {
 
   .home-logo-link img {
     height: 80px;
+    width: 80px;
     margin: 10px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 0.9rem;
+    margin: 0 10px;
+
+    li {
+      margin: auto 10px;
+    }
+
+    .home-logo-link img {
+      height: 55px;
+      width: 55px;
+      margin: 5px;
+    }
+  }
+
+  @media (max-width: 550px) {
+    
   }
 }
 

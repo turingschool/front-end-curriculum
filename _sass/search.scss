@@ -8,6 +8,10 @@
   &::placeholder {
     color: $medium-gray;
   }
+
+  @media (max-width: $tablet-width) {
+    width: 150px;
+  }
 }
 
 .clear-search {
@@ -34,8 +38,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    top: 12px;
-    right: 15px;
+    right: 35px;
   }
 }
 
