@@ -13,7 +13,7 @@ By the end of this lesson, you will:
 * Be familiar with why binary search trees are used and what purpose they serve
 * Know how to interact with a tree the following ways:
   * Inserting Values
-  * Findind A Value
+  * Finding A Value
 
 ## Vocab
 
@@ -242,7 +242,9 @@ const numbers = [7, 9, 8, 4, 6, 2, 10];
 
 Human #1 should build out a BST and talk through the steps for insertion.
 
-Reset Human #2's array again:
+___
+
+Reset Human #2's array:
 
 ```js
 const numbers = [4, 2, 6, 7, 8, 9, 10];
@@ -345,7 +347,6 @@ Human #1 should implement a linked list based on this data
 Human #2 should implement a binary searct tree based on this data
 
 How many steps does it take for you to find the number 6 in your linked list? In your BST?
-
 
 ## Checks For Understanding
 
