@@ -61,3 +61,21 @@ While your applications don't have to be as complex as the following examples, *
 * [FlexBox Froggy](https://flexboxfroggy.com/)
 * [Flow Chart Click-Through](http://learntocode.westminster.ac.uk/codeVisAlpha.php)
 
+
+
+
+
+# Rubric
+
+## React / JavaScript Style
+## UI / UX
+## CSS/Sass Style
+
+
+
+# Evaluations
+
+* Remote code reviews? Only because I'm gunna be out for most of the eval day for a doctor's appointment. 
+
+Instructors must be able to follow instructions in the README in order to successfully clone down and start your app in the browser. Orrrr do we make it a requirement for them to deploy to GH pages? I don't know what this actually entails, but Jake did it for WOF so it is definitely possible. 
+
