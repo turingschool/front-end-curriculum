@@ -203,7 +203,7 @@ Work through these **in order**:
 * [ ]  Advanced Beginner - Application correctly implements data model for the `Photo` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices
   * [ ]  All functions are less than 10 lines
-  * [ ]  There are less than 3 global variables
+  * [ ]  There are no global variables aside from query selectors and an array for your photos
   * [ ]  There are no nested if/else statements
 * [ ]  Exceptional - Application refactors all for loops into the proper array prototype iteration method
    * [ ] Uses logical operators instead of if/else statements where applicable
