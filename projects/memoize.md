@@ -15,9 +15,8 @@ For this project you will be working on your own to write a program in React. Sp
 ## Goals and Objectives
 
 - Build a study application with React and Sass
-- Construct dataset to be used to implement array mutator and iterator methods to work with data
 - Demonstrate your ability to communicate expert-level knowledge on a technical topic
-- Write modular, reusable code that follows SRP (Single Responibility Principle)
+- Write modular, reusable code that follows SRP (Single Responsibility Principle)
 
 # Requirements
 
