@@ -101,7 +101,7 @@ You are free to pick from this list, use it as inspiration, or pitch your own to
 * [ ]  Novice - The application is missing multiple features/requirements outlined above. 
 * [ ]  Advanced Beginner - The application is in a useable state, but is missing part of one or more of the technologies outlined above.
 * [ ]  Proficient - The application uses the above technologies to a professional level. 
-* [ ]  Exceptional - Meets all expectations of `Proficient`. In addition, the application has additional features/extenstions implemented that are not specified.
+* [ ]  Exceptional - Meets all expectations of `Proficient`. In addition, the application has additional features/extensions implemented that go above and beyond the project requirements.
 
 ## UI/UX
 
