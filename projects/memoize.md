@@ -56,8 +56,15 @@ Technologies not listed above *require* instructor approval
 
 ## Local Storage
 
-* Your application should have a use-case for persisting client-side information
+* Your application should have a use-case for persisting information client-side
 
+## README
+
+Your README should include the following, in this order:
+
+- Abstract at the top (A sentence or two describing the project)
+- Install/Setup instructions
+- Everything else (must include wireframes and screenshot/GIF of finished project)
 
 ## Topic
 
@@ -89,12 +96,12 @@ You are free to pick from this list, use it as inspiration, or pitch your own to
 
 # Rubric
 
-## Functional Expectations
+## Specification Adherence
 
-* [ ]  Novice - 
-* [ ]  Advanced Beginner -
-* [ ]  Proficient - 
-* [ ]  Exceptional - 
+* [ ]  Novice - The application is missing multiple features/requirements outlined above. 
+* [ ]  Advanced Beginner - The application is in a useable state, but is missing part of one or more of the technologies outlined above.
+* [ ]  Proficient - The application uses the above technologies to a professional level. 
+* [ ]  Exceptional - Meets all expectations of `Proficient`. In addition, the application
 
 ## UI/UX
 
