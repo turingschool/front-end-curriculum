@@ -57,6 +57,10 @@ _Or other optional topic that is instructor approved_
 
 * You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset [here](). Your datasets should be added in a single file to the `/datasets` directory. Be sure to export at the bottom of your file.
 
+* You must save data to localStorage about correct / incorrect answers to localStorage so that the next time a user visits the page, they will only be shown the flash cards they got incorrect / still need to practice
+
+
+
 # Path 2 
 
 ## Choose your own adventure 
