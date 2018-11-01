@@ -32,6 +32,7 @@ While the application you build doesn't have to be as complex as the examples ab
 
 ## Technologies
 
+* **the web storage API** for persisting data
 * **the fetch API** for sending/receiving data
 * **ReactJS** for organizing your application into components
 * **JSX** for writing your component templates
@@ -52,6 +53,11 @@ Technologies not listed above *require* instructor approval
 * App must have some form of interactivity for the user
   * it should **not** just be text on a page with links, though it may include some instructions or resources to learn more
   * interactivity should help your users understand the topic you've selected (e.g. if your topic is DOM manipulation with jQuery, maybe the user can click an element on the page and some text would appear to show them how they would select it with jQuery code) 
+
+## Local Storage
+
+* Your application should have a use-case for persisting client-side information
+
 
 ## Topic
 
