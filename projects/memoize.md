@@ -71,6 +71,8 @@ Check out some of these learning tools from the wild:
 * [Git Branching](https://learngitbranching.js.org/)
 * [FlexBox Froggy](https://flexboxfroggy.com/)
 * [Flow Chart Click-Through](http://learntocode.westminster.ac.uk/codeVisAlpha.php)
+* [Code Wars](http://codewars.com)
+* [Exercism](https://exercism.io/)
 
 While the application you build doesn't have to be as complex as the examples above, know that you have the freedom to be ambitious and take your study tool in whatever direction you choose.
 
