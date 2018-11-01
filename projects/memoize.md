@@ -46,7 +46,7 @@ Your README should include the following, in this order:
 
 # Path 1 
 
-## Flashcards App with Custom Dataset 
+## Build a custom dataset
 
 Memoize as a Flashcards Study tool that quizzes the user on technical vocabulary
 _Or other optional topic that is instructor approved_
@@ -59,7 +59,7 @@ _Or other optional topic that is instructor approved_
 
 # Path 2 
 
-## Memoize application 
+## Choose your own adventure 
 
 Memoize as a study tool for a technical topic that you've learned or heard about in Mod 1/2, and:
   * demonstrate your expert knowledge on the concept
