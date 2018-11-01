@@ -139,21 +139,12 @@ Work through these **in order**:
 ![Foto Finder Mobile][mobile-base]
 
 
-#### Desktop and Mobile Full View
-
-![Foto Finder Mobile Expanded][mobile-expanded]
-
-![Foto Finder Desktop Expanded][desktop-expanded]
-
-
 #### Color and font spec:
 
 ![Design Specs][design-specs]
 
-[desktop-base]: /assets/images/projects/foto-finder/fotofinder-1.png
-[mobile-base]: /assets/images/projects/foto-finder/fotofinder-2.png
-[desktop-expanded]: /assets/images/projects/foto-finder/fotofinder-3.png
-[mobile-expanded]: /assets/images/projects/foto-finder/fotofinder-4.png
+[desktop-base]: /assets/images/projects/foto-finder/fotofinder2-1.png
+[mobile-base]: /assets/images/projects/foto-finder/fotofinder2-2.png
 [design-specs]: /assets/images/projects/foto-finder/fotofinder-5.png
 
 ------------------------------------------------------------------
@@ -192,7 +183,7 @@ Work through these **in order**:
 
 * [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
 * [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
-* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle 
+* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
