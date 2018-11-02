@@ -23,11 +23,13 @@ nav {
 
   a {
     color: $dark-gray;
-    padding-bottom: 3px;
     border-bottom: none;
+  }
 
-    &:hover {
-      color: $medium-gray;
+  li:not(:first-child) {
+    // Hover border does not apply to logo
+    a:hover {
+      border-bottom: 3px solid $teal;
     }
   }
 
@@ -52,11 +54,13 @@ nav {
     }
   }
 
-  @media (max-width: 550px) {
+  @media (max-width: $phone-width) {
     
   }
 }
 
 .nav-links a.active-link {
+  // This border does not get applied to logo
+  // because of code in active-links.js file
   border-bottom: 3px solid $teal;
 }
