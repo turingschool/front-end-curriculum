@@ -12,27 +12,16 @@ tags: javascript, react
 
 For this project you will be working on your own to write a program in React. Specifically, you will be creating an application that solves a common problem that most students face when reviewing course material/concepts - finding effective study techniques to optimize learning retention and recall.
 
-Check out some of these learning tools from the wild:  
-
-* [Visualizing the Call Stack](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
-* [Git Branching](https://learngitbranching.js.org/)
-* [FlexBox Froggy](https://flexboxfroggy.com/)
-* [Flow Chart Click-Through](http://learntocode.westminster.ac.uk/codeVisAlpha.php)
-
-While the application you build doesn't have to be as complex as the examples above, know that you have the freedom to be ambitious and take your study tool in whatever direction you choose.
-
 ## Goals and Objectives
 
-- Build an application with React and Sass
-- Construct dataset to be used to implement array mutator and iterator methods to work with data
+- Build a study application with React and Sass
 - Demonstrate your ability to communicate expert-level knowledge on a technical topic
-- Write modular, reusable code that follows SRP (Single Responibility Principle)
+- Write modular, reusable code that follows SRP (Single Responsibility Principle)
 
 # Requirements
 
 ## Technologies
 
-* **the web storage API** for persisting data
 * **the fetch API** for sending/receiving data
 * **ReactJS** for organizing your application into components
 * **JSX** for writing your component templates
@@ -40,23 +29,11 @@ While the application you build doesn't have to be as complex as the examples ab
 
 Technologies not listed above *require* instructor approval
 
-## Custom Dataset
-
-* You must create one dataset that will represent your application data.
-
-* Your dataset must have at least 15 records (If your dataset is an object, it should have 15 keys. If it's an array, it should have 15 elements)
-
-* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset [here](). Your datasets should be added in a single file to the `/datasets` directory. Be sure to export at the bottom of your file.
-
 ## Interactivity
 
 * App must have some form of interactivity for the user
   * it should **not** just be text on a page with links, though it may include some instructions or resources to learn more
   * interactivity should help your users understand the topic you've selected (e.g. if your topic is DOM manipulation with jQuery, maybe the user can click an element on the page and some text would appear to show them how they would select it with jQuery code) 
-
-## Local Storage
-
-* Your application should have a use-case for persisting information client-side
 
 ## README
 
@@ -66,11 +43,41 @@ Your README should include the following, in this order:
 - Install/Setup instructions
 - Everything else (must include wireframes and screenshot/GIF of finished project)
 
-## Topic
+# Path 1 
 
-* App must be centered around a technical topic that you've learned or heard about in Mod 1/2, and:
+## Build a custom dataset
+
+Memoize as a Flashcards Study tool that quizzes the user on technical vocabulary
+_Or other optional topic that is instructor approved_
+
+* You must create one dataset that will represent your application data.
+
+* Your dataset must have at least 30 records (If your dataset is an object, it should have 30 keys. If it's an array, it should have 30 elements)
+
+* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset [here](https://github.com/turingschool-examples/memoize). Your datasets should be added in a single file to the `/datasets` directory. Be sure to export at the bottom of your file.
+
+* You must save data to localStorage about correct / incorrect answers to localStorage so that the next time a user visits the page, they will only be shown the flash cards they got incorrect / still need to practice
+
+
+
+# Path 2 
+
+## Choose your own adventure 
+
+Memoize as a study tool for a technical topic that you've learned or heard about in Mod 1/2, and:
   * demonstrate your expert knowledge on the concept
-  * allow others to learn and practice the concept
+  * allow others to learn and practice the concept  
+
+Check out some of these learning tools from the wild: 
+
+* [Visualizing the Call Stack](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
+* [Git Branching](https://learngitbranching.js.org/)
+* [FlexBox Froggy](https://flexboxfroggy.com/)
+* [Flow Chart Click-Through](http://learntocode.westminster.ac.uk/codeVisAlpha.php)
+* [Code Wars](http://codewars.com)
+* [Exercism](https://exercism.io/)
+
+While the application you build doesn't have to be as complex as the examples above, know that you have the freedom to be ambitious and take your study tool in whatever direction you choose.
 
 ### Potential Topic Ideas
 
@@ -83,7 +90,6 @@ Your README should include the following, in this order:
 * Prototype Methods
 * Git/GitHub Workflow
 * Terminal Commands/Navigating the Terminal
-* Technical Vocabulary
 * Sorting Algorithms
 * Pseudocoding/Whiteboarding
 * LocalStorage
