@@ -189,8 +189,8 @@ Work through these **in order**:
   * [ ]  All functions are less than 10 lines
   * [ ]  There are no global variables aside from query selectors, an array for your photos, and your instantiation of a [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
   * [ ]  There are no nested if/else statements
-* [ ]  Exceptional - Application refactors all for loops into the proper array prototype iteration method
+* [ ] Exceptional - Application refactors all for loops into the proper array prototype iteration method
   * [ ] Uses logical operators instead of if/else statements where applicable
   * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
-  * [ ]  Application stores all photos in one array in local storage, instead of individually
-  * [ ]  When 'Filtering and Searching by Text' and 'Viewing Phtos', photos that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
+  * [ ] Application stores all photos in one array in local storage, instead of individually
+  * [ ] When 'Filtering and Searching by Text' and 'Viewing Photos', photos that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
