@@ -1,9 +1,10 @@
  .search-bar input {
   font-weight: 500;
   outline-color: $teal;
-  padding: 0.15em 0.75em 0.2em 0.5em;
+  padding-left: 0.5em;
   position: relative;
   border: 1px solid $medium-gray;
+  width: 200px;
 
   &::placeholder {
     color: $medium-gray;
@@ -11,6 +12,11 @@
 
   @media (max-width: $tablet-width) {
     width: 150px;
+  }
+
+  @media (max-width: $phone-width) {
+    margin-top: 5px;
+    width: 200px;
   }
 }
 

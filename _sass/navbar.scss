@@ -5,20 +5,19 @@ nav {
 }
 
 .nav-links {
-  display: -webkit-flex;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 100px 100px 100px 200px;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 0 10px;
+
   list-style: none;
-  text-align: right;
   margin: 0 30px;
   padding-left: 0;
 
   li:first-child {
-    margin-right: auto;
-  }
-
-  li {
-    margin: auto 15px;
-    line-height: normal;
+    justify-self: left;
+    margin-top: 5px;
   }
 
   a {
@@ -36,26 +35,37 @@ nav {
   .home-logo-link img {
     height: 80px;
     width: 80px;
-    margin: 10px;
   }
 
   @media (max-width: $tablet-width) {
     font-size: 0.9rem;
-    margin: 0 10px;
-
-    li {
-      margin: auto 10px;
-    }
+    grid-template-columns: auto 80px 80px 80px 150px;
 
     .home-logo-link img {
       height: 55px;
       width: 55px;
-      margin: 5px;
     }
   }
 
   @media (max-width: $phone-width) {
-    
+    margin: 15px;
+    font-size: 1rem;
+    grid-template-columns: auto 200px;
+    justify-items: right;
+
+    li {
+      grid-column: 2;
+    }
+
+    li:first-child {
+      grid-column: 1;
+      grid-row: 1 / 5;
+    }
+
+    .home-logo-link img {
+      height: 70px;
+      width: 70px;
+    }
   }
 }
 
