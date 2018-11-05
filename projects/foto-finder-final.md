@@ -37,14 +37,10 @@ You will have two javascript files:
   * The _id_ should be a unique identifier.
   * _title_ and _caption_ are strings.
   * _file_ is a URL string.
-    * Use this [method](https://developer.mozilla.org/en-US/docs/Web/API/URL/createObjectURL) in order to convert a [blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) object into a URL.
+    * Use this [method](https://developer.mozilla.org/en-US/docs/Web/API/FileReader/readAsDataURL) in order to convert a [blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) object into a URL.
   * _favorite_ will be a boolean.
 
 Each photo should be created as an instance of the `Photo` class.
-
-#### Important Note:
-
-For this project, you will need to open your application using a server.  You'll learn more about servers next mod, but for the purposes of this project, instead of doing `open index.html`, you will need to run `python -m SimpleHTTPServer` in your project directory.  Then go to `localhost:8000` and you should see your app there!
 
 ### Phase One: Building out the UI
 
@@ -191,7 +187,7 @@ Work through these **in order**:
 * [ ]  Advanced Beginner - Application correctly implements data model for the `Photo` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices
   * [ ]  All functions are less than 10 lines
-  * [ ]  There are no global variables aside from query selectors and an array for your photos
+  * [ ]  There are no global variables aside from query selectors, an array for your photos, and your instantiation of a [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
   * [ ]  There are no nested if/else statements
 * [ ]  Exceptional - Application refactors all for loops into the proper array prototype iteration method
   * [ ] Uses logical operators instead of if/else statements where applicable
