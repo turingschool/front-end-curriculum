@@ -22,8 +22,8 @@
 
 .clear-search {
   position: absolute;
-  top: 43px;
-  right: 55px;
+  right: 40px;
+  top: 34px;
   border: none;
   background: none;
   outline: none;
@@ -44,7 +44,12 @@
   }
 
   @media (max-width: $tablet-width) {
-    right: 35px;
+    top: 24px;
+  }
+
+  @media (max-width: $phone-width) {
+    right: 25px;
+    top: 120px;
   }
 }
 
@@ -53,9 +58,9 @@
   border: 1px solid #BBB;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   position: absolute;
-  top: 5%;
+  top: 12%;
   z-index: 100;
-  width: 65%;
+  width: 75%;
   padding: 0 10px;
   margin-bottom: 30px;
 
@@ -76,8 +81,8 @@
     }
   }
 
-  @media (max-width: $tablet-width) {
-    top: 150px;
+  @media (max-width: $phone-width) {
+    top: 200px;
     width: 95%;
     left: 10px;
   }
