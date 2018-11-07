@@ -209,10 +209,9 @@ We'll also need to require and use it in our `server.js`.
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 ```
 
-This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other (we're only going to use JSON, but I am leaving it here for reference).
+This will add in support for parsing JSON.
 
 Here is what my server looks like so far:
 
@@ -222,7 +221,6 @@ const app = express();
 const bodyParser = require('body-parser');
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Chat Box';
