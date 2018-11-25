@@ -7,10 +7,10 @@ module: 2
 
 ## Goals
 
-By the end of this lesson, students should be able to:
+By the end of this lesson, you will be able to:
 
 * Technically speak to how the JavaScript interpreter executes code
-* Describe the differences between var, let and const and when to use each
+* Describe the differences between `var`, `let` and `const` and when to use each
 * Predict how variables will behave when multiple scopes are involved
 
 ## Vocab
@@ -23,7 +23,7 @@ By the end of this lesson, students should be able to:
 
 # The JS Interpreter 
 
-A fundamental part of writing better code and digging into more advanced topics is understanding how the Javascript interpreter works. Can you build out applications without this knowledge? Of course. But a lot of developers find that having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code. 
+A fundamental part of writing better code and digging into more advanced topics is understanding how the JavaScript interpreter works. Can you build out applications without this knowledge? Of course. But a lot of developers find that having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code. 
 
 We won't get into the nitty gritty details of the different JavaScript engines (Chrome uses Chrome v8, Mozilla uses SpiderMonkey, etc.) or the differences between interpreted vs compiled languages (you can read [this](https://www.upwork.com/hiring/development/the-basics-of-compiled-languages-interpreted-languages-and-just-in-time-compilers/) if you would like to dig into these concepts more). Just know that JavaScript is an interpreted language - meaning that JavaScript is translated (or interpreted) by the engine line by line at the _same_ time that the program is being executed. JavaScript is a single-threaded language, making it so that only one task can be executed at a time.
 
@@ -32,10 +32,10 @@ We won't get into the nitty gritty details of the different JavaScript engines (
 Once we realize that our JavaScript code is read line by line by the browser's engine, it becomes more apparent why the order of things matters when we are writing our programs. 
 
 ```js
-1   var modTwoTeachers = ['Brittany', 'Naniel', 'Pam'];
+1   var modTwoTeachers = ['Brittany', 'Robbie', 'Pam'];
 2
 3   function calculateEvals (teachers, classSize) {
-4    return teachers.length / classSize;
+4     return classSize / teachers.length;
 5   }
 6
 7   var numEvals = calculateEvals(modTwoTeachers, currentCohort);
@@ -46,7 +46,10 @@ Once we realize that our JavaScript code is read line by line by the browser's e
 
 ##### Steps for code execution
 
-1. The interpreter stores the function declaration (including its definition) in global memory
+<!-- Create a drawing on the board with boxes that act as containers in memory, and then refer to those boxes as the code executes, separate global and local memory? -->
+<!-- Also draw out the execution context and the greater, "global" context -->
+
+1. The interpreter stores the function declaration, `calculateEvals` (including its definition) in global memory
 2. The interpreter stores the variable declarations of `modTwoTeachers`, `numEvals`, and `currentCohort` into global memory
 3. Line 1 - `modTwoTeachers` is assigned the value of an array of strings
 4. Line 7 - `calculateEvals` is invoked and passed two variables as arguments, `modTwoTeachers` and `currentCohort`
@@ -57,7 +60,7 @@ Once we realize that our JavaScript code is read line by line by the browser's e
 
 Although this explanation of how the interpreter runs through the code may seem a bit too meticulous at times, it is important to inspect the code at this level of granularity so that more advanced JavaScript topics are easier to understand. This depicts how the JavaScript engine runs through two different phases while executing code: a creation phase and an execution phase. 
 
-During the creation phase, the Javascript engine runs through the entirety of the code and sets aside memory for the variables and functions that it identifies (hoisting). Something called the `scope chain` is also initialized (more on that further down) and the value of `this` is determined for the different parts of the code. 
+During the creation phase, the JavaScript engine runs through the entirety of the code and sets aside memory for the variables and functions that it identifies (hoisting). Something called the `scope chain` is also initialized (more on that further down) and the value of `this` is determined for the different parts of the code. 
 
 In the execution phase, code is interpreted and executed on a single-thread. This is when our variable declarations are assigned values.
 
@@ -82,7 +85,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 6   if (result > 5) {
 7    return 'This human is rude, not giving me treats. Onto the next one.';
 8   } else {
-9    return 'Yum, Human food!'
+9    return 'Yum, human food!'
 10  }
 11 }
 12 
@@ -97,7 +100,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 
 Chances are good that you have come across information that references `The stack`, `The call stack`, or the `Execution Call Stack`. A [call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack) is a way for the JavaScript interpreter to keep track of its place (its current execution context) in a script that calls multiple functions — what function is currently being run, what functions are called from within that function and should be called next, etc.
 
-A stack is a fundamental data structure in Computer Science that follows "First-In-Last-Out" (FILO) semantics. Any time a new function is invoked (and a new execution context is created) this execution context is pushed to the stack. Once a function has returned, the call is popped off the stack:
+A stack is a fundamental data structure in Computer Science that follows "First-In-Last-Out" (FILO) semantics. Any time a new function is invoked (and a new execution context is created) this execution context is pushed to the stack. Once a function has returned, the call is popped off the stack. The stack is used to determine in what order the code runs. Let's look at this example:
 
 ```js
 function buildLaser () {
@@ -123,7 +126,7 @@ As the call stack builds up, each function has its own execution context.
 1. We start in the global execution context
 2. `ransomTheWorld` is called, creating a new call on the stack
 3. `buildMoonBase` is called creating a new call on the stack. Within this funciton, a variable is decalred and `buildLaser` is called
-4.  `buildLaser` being invoked creates a new call on the stack
+4. `buildLaser` being invoked creates a new call on the stack
 5. `buildLaser` declares a variable, prints the variable to the console, and is returned and popped off the call stack... bringing us back to the context of `buildMoonBase`
 6. `buildMoonBase` prints the previously declared variable to the console and is returned and popped off the call stack... bringing us back to the context of `ransomTheWorld`
 7. `ransomTheWorld` returns and is popped off. Our stack frame is empty and we are back in the global execution context.
@@ -132,7 +135,7 @@ As the call stack builds up, each function has its own execution context.
 
 #### Turn and Talk
 
-With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. While one person is speaking, the other person should be diagramming this process. Your diagram should include columns for the call stack, the global execution context (as well as any local contexts), and global memory.
+With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. While one person is speaking, the other person should be diagramming this process. Your diagram should include a column with rows for the call stack, the global execution context (as well as any local contexts), and global memory.
 
 ```js
 var myNum = 21;
@@ -147,15 +150,15 @@ function hello() {
 }
 
 var sum = addTwo(myNum);
-console.log(sum)
+console.log(sum);
 ```
 
 
 ## Global, Functional, and Block Scope
 
-Now that we understand how the interpreter works and a little bit about the concept of the execution context, we can dive deeper into the concept of scope. The first thing to address is that scope and the execution context are _not_ technically the same thing, although you'll often see these terms used interchangeably. Whereas execution context is a concept that roughly equates to the 'environment' a function executes in (among other things - remember our conceptual object mentioned above), scope is literally the scope in which a variable or value can be accessed.
+Now that we understand how the interpreter works and a little bit about the concept of the execution context, we can dive deeper into the concept of scope. The first thing to address is that scope and the execution context are _not_ technically the same thing, although you'll often see these terms used interchangeably. Whereas execution context is a concept that roughly equates to the 'environment' a function executes in (among other things - remember our conceptual object mentioned above), scope is the place in which a variable or value can be accessed.
 
-At the most basic level, variables/values can be either globally or locally scoped. Take the following example: 
+At the most basic level, variables can be either globally or locally scoped. Take the following example: 
 
 ```js
 1  var foo = 'bar';
@@ -170,19 +173,20 @@ At the most basic level, variables/values can be either globally or locally scop
 
 Our variable of `foo` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `birdNoise` is limited to the scope of `baz` and is thus said to be scoped locally.
 
-In the example above, the interpreter is working in the global execution context until line 8, when the `baz` function is invoked. Once this function is invoked, a new execution context (local) is created. This creates a local variable environment where any parameters or variables declared within that function are locally scoped and made inaccesible in the global space. *Note: The exception to this are when variables are initialized without the keywords var, let, or const - which is bad practice.*
+In the example above, the interpreter is working in the global execution context until line 8, when the `baz` function is invoked. Once this function is invoked, a new execution context (local) is created. This creates a local variable environment where any parameters or variables declared within that function are locally scoped and made inaccesible in the global space. *Note: The exception to this is when variables are initialized without the keywords var, let, or const - which is bad practice.*
 
-We have several scopes available to us. Global, function, block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
+We have several scopes available to us: global, function, block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
 
 **Global scope:**
 - Global scope is the default.
 - Everyone and everything has access to the global scope.
-- Functions and variables in the global scope are "vulnerable" because they can be accessed by everything and potentially mutated.
+- Functions and variables in the global scope are "vulnerable" because they can be accessed by everything and potentially mutated (changed).
 - `var`, `let`, and `const` can be globally scoped.
 
 **Function scope:**
 - Variables declared in the function (using `var`, `let`, or `const`) can only be accessed by the other code inside the function.
 - You control what you create.
+- The global scope cannot access function scope.
 
 **Block scope:**
 - Variables declared in the [block statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block) (`if` blocks, `for` loops, etc) using `let` or `const` can only be accessed by other code inside the block.
@@ -201,16 +205,16 @@ function makeNumber () {
   var number = 5;
 
   return number;
-}
+};
 
-makeNumber()
+makeNumber();
 
 console.log(number); // undefined
 console.log(makeNumber); // function () {...}
 console.log(makeNumber()); // 5
 ```
 
-It's **important to note** that the variable name does not come with the returned value. Above, you can see that when we run the function `makeNumber()`, the variable `number` does not become visible to the global scope. However, when we run the function in the last `console.log`, the function evaluates to 5.
+It's **important to note** that the variable name does not come with the returned value. Above, you can see that when we run the function `makeNumber()`, the variable `number` is not visible to the global scope. However, when we run the function in the last `console.log`, the function evaluates to 5.
 
 If we want to use values created by functions, we must return those values out of the function. Additionally, if that value needs to be used elsewhere in our code, we must capture it with a variable.
 
@@ -218,30 +222,24 @@ If we want to use values created by functions, we must return those values out o
 
 ##### Parent scopes do not have access to child scopes BUT child scopes do have access to their parent scope
 
-In the example below, the console log inside `makeArray` fails because parent scopes do not have access to variables declared in child scopes. However, the child has access to the variables declared in the parent scope (`array`). Think of this like tinted windows in a car -- if you're inside the car, you can see **out**, but if you're outside of the car, you cannot see in.
+In the example below, the `console.log` fails because parent scopes do not have access to variables declared in child scopes. However, the child has access to the variables declared in the parent scope (`array`). Think of this like tinted windows in a car -- if you're inside the car, you can see **out**, but if you're outside of the car, you cannot see in.
 
 ```js
-function makeArray () {
-  const array = [ 5, 4, 3, 2, 1 ];
+const array = [ 5, 4, 3, 2, 1 ];
 
-  function getFirstNumber () {
-    const firstNumber = array[0];
-    return firstNumber;
-  }
-  
-  getFirstNumber();
-
-  console.log(firstNumber);  // why can't we access firstNumber?
-
-  return array;
+function getFirstNumber () {
+  const firstNumber = array[0];
+  return firstNumber;
 }
 
-makeArray();
+getFirstNumber(); // this works, why?
+
+console.log(firstNumber);  // why can't we access firstNumber?
 ```
 
 ##### Let and const are block scoped
 
-Variables declared with the keyword `let` or `const` will be block scoped if declared within a block. This means that they are scoped to the block statement (if, for...) in which they are declared.
+Variables declared with the keyword `let` or `const` will be block scoped if declared within a block. This means that they are scoped to the block statement (`if`, `for`...) in which they are declared. When you see `{` and `}`, those curly brackets are likely creating a scope, - as with `function`, `if`, and `for`.
 
 ```js
 let message = 'You are doing great!';
@@ -255,13 +253,13 @@ if (message.length > 0) {
 console.log(message);
 ```
 
-If they are not found within the context of a block statement, then let and const will remain functionally scoped, like `var`
+If they are not found within the context of a block statement, then `let` and `const` will be functionally scoped, like `var`.
 
 #### Journal
 
-Complete the following prompts in your journal
+Complete the following prompts in your journal:
 
-Describe scope in your own words. What are the similarities and differences between `var`, `let`, and `const`?
+Describe "scope" in your own words. What are the similarities and differences between `var`, `let`, and `const`?
 
 What might be a metaphor or analogy for scope? Draw or diagram it out.
 
@@ -276,13 +274,13 @@ Every time a variable is initialized, the interpreter will first look in its own
 1  let number = 10;
 2 
 3  function foo () {
-4   number = 20;
-5   console.log('A', number);  // prints 20
+4    number = 20;
+5    console.log('A', number);  // prints 20
 6  }
 7 
-8  console.log('B, number);    // prints 10
+8  console.log('B', number);  // prints 10
 9  
-10 foo()
+10  foo();
 11
 12  console.log('C', number);    // prints 20
 ```
@@ -319,21 +317,21 @@ console.log(number);  // what will log here?
 Example 2:
 
 ```js
-var givenName = "Bananiels Foster";
+var givenName = 'Bananiels Foster';
 
 function printGreeting() {
-  console.log("Hello " + givenName);
+  console.log(`Hello ${givenName}`);
 }
 
-printGreeting("Danger");  // what will log here?
+printGreeting('Danger');  // what will log here?
 printGreeting();      // what will log here?
 ```
 
 ## Closures
 
-[Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) are expressions (usually functions) which can work with variables set within a certain context. In other words, a closure is formed when nested function is defined inside of another function. This allows us to access to the outer function's variables via the scope chain.
+[Closures](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures) are expressions (usually functions) which can work with variables set within a certain context. In other words, a closure is formed when a function is defined inside of another function (one function nested inside of another function). This allows the inner function to access to the outer function's variables via the scope chain.
 
-Here's a basic example of a closure:
+Here's an example of a closure:
 
 ```js
 function init() {
@@ -345,12 +343,13 @@ function init() {
 
   displayName();    
 }
+
 init();
 ```
 
 You're probably asking, 'So what?'... which is totally fair. It's hard to see the real value of closures until the nested functionality is returned.
 
-Returning the nested functionality allows you to maintain access to the local variables in its associated (lexical) scope. Unlike what we've mentioned before with garbage collection, the interpreter is smart enough to know that any referenced variables within this returned function should not be garbage-collected.
+Returning the nested functionality allows you to maintain access to the local variables in its associated scope. Unlike what we've mentioned before with garbage collection, the interpreter is smart enough to know that any referenced variables within this returned function should not be garbage-collected.
 
 Let's take a look at another example of a closure:
 
@@ -401,6 +400,6 @@ function createGreeting() {
 
 Using your journal, take a few minutes to answer the following:
 
-- What are the most important/significant ideas or elements about the JS engine executes code?
+- What are the most important/significant ideas or elements about how the JS engine executes code?
 - Why is it important to understand scope?
 - What makes closures special?
