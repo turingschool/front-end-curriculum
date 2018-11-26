@@ -52,8 +52,6 @@ function logThis() {
 logThis();
 ```
 
-
-
 ## Rule 2 - When executing a function as a method on an object, _this_ refers to that object.
 
 This is a long rule, another way to think about this rule is if a function is executed and there is a `.` before the name of the function, `this` refers to whatever comes before the `.`. 
@@ -65,7 +63,7 @@ function logThis() {
   console.log(this);
 }
 
-var voyager1 = {
+const voyager1 = {
   classification: 'Space Probe',
   title: 'Voyager 1',
   logThis: logThis  // adding logThis function to voyager1
@@ -77,20 +75,20 @@ voyager1.logThis();
 
 One important thing to remember here is that the value of `this` is set when the above ES5 function is executed.
 
-If I move the function to a different object, then execute the function on that object, `this` inside the function will refer to the new object it is a method of.
+If I move the function to a different object, then execute the function on that object, `this` inside the function will refer to the new object that it is a method of.
 
 ```javascript
 function logThis() {
   console.log(this);
 }
 
-var voyager1 = {
+const voyager1 = {
   classification: 'Space Probe',
   title: 'Voyager 1',
   logThis: logThis
 }
 
-var voyager2 = {
+const voyager2 = {
   classification: 'Space Probe',
   title: 'Voyager 2',
   logThis: logThis
@@ -107,7 +105,27 @@ Because of this rule, I can create a function once, add it to whichever objects 
 
 Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
 
-**Exercise:** Move the logThis function so that when you execute the function it logs some of the following nested objects.
+#### Your Turn
+
+Using the rules that you've learned thus far, determine the value of`this` when the last two lines execute (without checking in your console). Write your answer in your journal. Check your work.
+
+```js
+const obj = {
+  value: 'hi',
+  printThis: function() {
+    console.log(this);
+  }
+};  
+
+const print = obj.printThis;
+
+obj.printThis(); // What will print here? Why?
+print(); // -> What will print here? Why?
+```
+
+#### Turn and Code
+
+Taking turns for each prompt in driver/navigator fashion, use the code snippet below and complete the following:
 
 ```js
 function logThis() {
@@ -132,34 +150,42 @@ const denver = {
 };
 ```
 
+1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
+      `{buildings: {…}, restaurants: Array(2), logThis: ƒ}`
+2. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
+      `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }`
+
 ## Rule 3 - _this_ in function code invoked using the new operator refers to the newly created object.
 
-When the `new` keyword is used to invoke a constructor function or class, `this` refers to the newly created object (or instance).
+When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
 
+1. `this` is set to a new empty object
+2. The prototype property of the constructor function (Unicorn.prototype in the example below) is set as the prototype of the new object, which was set to `this` in the first step
+3. The body of our function runs
+4. Our new object, `this`, is returned from the constructor
 
 ```javascript
-class SpaceProbe {
-
-  constructor(title, classification) {
-  
+class Unicorn {
+  constructor(name, color) {
     // new empty object will log
     console.log(this);  
 
-    this.title = title;
-    this.classification = classification
+    this.name = name;
+    this.color = color;
 
     // object with added properties will log
     console.log(this);  
   }
 
-  loo() { 
-    console.log('Loo method! ', this);
+  says(words) { 
+    console.log('Toilet Sparkle is my favorite pony', this);
   }
-  
 }
 ```
 
 When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created instance.
+
+
 
 <!-- 
 ## Rule 4 - When a function is called with either call, apply or bind, _this_ is set to the first argument passed to call, apply or bind
@@ -187,13 +213,14 @@ logVoyager();
 
 ## The difference between `function () {}` and `() => {}`
 
+ES6 introduced arrow functions, which allow us to write functions with shorter syntax (among other things). Beside being quicker to write/read, arrow functions also lexically bind the `this` value implicitly:
+
 ### function () {}
-The value of _this_ is set when the function is executed.
+The value of _this_ is set when the function is *executed*.
 
 ### () => {}
-The value of _this_ is set when the function is created.
+The value of _this_ is set when the function is *created*.
 
-**Example**
 
 ```js
 var vampire = {
@@ -206,10 +233,12 @@ var vampire = {
   whatDoYouDislike: function() {
     // console.log(this)
     
+    // ES6
     // this.dislikes.forEach(( item ) => {
     //   console.log(this.name + ' dislikes ' + item)
     // })
     
+    // ES5
     this.dislikes.forEach(function(item) {
       console.log(this.name + ' dislikes ' + item);
     });
@@ -218,6 +247,10 @@ var vampire = {
 
 vampire.whatDoYouDislike()
 ```
+
+#### Your Turn
+
+- Delete the ES6 function and modify the ES5 function so that we don't lose the value of `this`
 
 ### Closing
 
