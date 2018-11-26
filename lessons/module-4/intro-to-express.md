@@ -372,7 +372,7 @@ Things to consider:
 
 ### Student Exploration (20 mins)
 
-* Implement a PUT route for a specific pet to edit the pet of the pet
+* Implement a PUT route for a specific pet to edit the name of the pet
 * Implement a DELETE route for a specific pet to remove it
 
 **BONUS:**
