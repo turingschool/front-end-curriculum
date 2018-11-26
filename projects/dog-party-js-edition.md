@@ -8,7 +8,14 @@ It's a dog party! As a frontend developer, you're going to need to be able to ac
 
 Similar to what you might be asked to do on the job, we've given you a comp with a set of technical specs to go along with it and your challenge is to build it.
 
-### Steps to setup
+#### Learning Goals
+
+- practice accurately building a comp
+- write well structured, semantic HTML
+- craft clean, DRY CSS
+- try out working with Javascript to interact with the DOM
+
+### Steps to setup your project files
 
 - Using your terminal, create a directory called `dog-party`
 - Inside of your `dog-party` directory, create a sub-directory called `images`
@@ -17,12 +24,26 @@ Similar to what you might be asked to do on the job, we've given you a comp with
 
 Note: Do not use CSS `flex-box` or `grid` for this project (If you don't know what this is, no worries! You'll learn more about these techniques in the coming weeks!)
 
-### Next Steps
+## Your Tasks
 
-- Start by focusing on the HTML and using semantic tags to create a clean structure.
+- Start by building the HTML and using semantic tags to create a clean structure for your page.
 - Style your site using CSS -- aim to get it as close to the comp as possible.
-- Once you have the HTML structure built and styled using CSS, experiment with adding in interaction using Javascript: Build functionality to allow a user to type a dog name in the input field and then have that dog name shown in the layout when the user clicks the button.
-- Finally, create a `README.md` file that gives a brief overview of your project (don't forget to make sure to include the comp as well as a screen grab of your finished site!)
+- Create a `README.md` file that gives a brief overview of your project (don't forget to make sure to include the comp as well as a screen grab of your finished site!)
+
+## Extensions
+
+We won't cover how to do these in class before this project will end -- challenge yourself and investigate how to tackle these tasks. And remember: it is ok if you're not sure how to do these and it is ok to experiment, we'll go cover this material together soon!
+
+#### CSS
+
+* Make your Dog Party site mobile.  Experiment using your DevTools and `media queries`
+  * How could you handle the nav bar?  Maybe change it into a menu icon?
+  * How will you handle the columns? Will they still fit if they are in 3 columns?
+* Make the `What Is Dog` buttons horizontally aligned no matter how much text is in each column.
+
+#### Javascript
+
+* Once you have the HTML structure built and styled using CSS, experiment with adding in interaction using Javascript: Build functionality to allow a user to type a dog name in the input field and then, when the user clicks the button, have that dog name replace the text `Some Dogs` in the main `A Site About Some Dogs` title and clear out the input field. For example: if I typed `Fido` into the input, when I click the button the main title of the page should change to read `A Site About Fido`
 
 ## Submission Details
 
@@ -49,12 +70,6 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 3. `git commit -m "Initial commit"`
 4. `git remote add origin git@github.com:Kalikoze/Dog-Party.git`
 5. `git push -u origin master`
-
-## Extensions
-* Make your Dog Party site mobile.  Experiment using your DevTools and `media queries`
-  * How could you handle the nav bar?  Maybe change it into a menu icon?
-  * How will you handle the columns? Will they still fit if they are in 3 columns?
-* Make the `What Is Dog` buttons horizontally aligned no matter how much text is in each column.
 
 # ![Dog Party](/assets/images/dog-party-js-edition.jpg)
 
