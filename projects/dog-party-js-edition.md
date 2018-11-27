@@ -69,7 +69,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 4. Leave it set as `public` because you want to others to see your work and then click `Create Repository`!
 5. Follow the steps on the next page and enter each command into your terminal
 6. Once you see your code up in your repository, go to Settings and publish your site on GitHub pages!
-7. Finally, place your links in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1xmpBJ2_Wydg_wqVmq-fOgBV8svM1FUvLVeAXrFpEspk/edit#gid=0)
+7. Finally, place your links in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=0)
 
 #### Example Steps for Part 5
 
