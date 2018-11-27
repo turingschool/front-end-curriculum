@@ -1,5 +1,9 @@
---- title: Unit Testing React Components module: 3 length: 120 tags: react,
-testing ---
+--- 
+title: Unit Testing React Components 
+module: 3 
+length: 120 
+tags: react, testing 
+---
 
 ## Agenda
 
