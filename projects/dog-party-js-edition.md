@@ -28,11 +28,12 @@ Similar to what you might be asked to do on the job, we've given you a comp with
 
 #### Step 1
 
-Start by building the HTML and using semantic tags to create a clean structure for your page.
+Start by building the HTML and using semantic tags to create a clean structure for your page. Work to craft your HTML according to the [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
+
 
 #### Step 2
 
-Style your site using CSS -- aim to get it as visually close to the comp as possible.
+Style your site using CSS -- aim to get it as visually close to the comp as possible. Work to craft your CSS according to the [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
 
 #### Step 3
 
@@ -52,6 +53,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 #### Javascript
 
 * Once you have the HTML structure built and styled using CSS, experiment with adding in interaction using Javascript: Build functionality to allow a user to type a dog name in the input field and then, when the user clicks the button, have that dog name replace the text `Some Dogs` in the main `A Site About Some Dogs` header and clear out the input field. For example: if I typed `Fido` into the input, when I click the button the main header of the page should change to read `A Site About Fido`.
+* Work to craft your Javascript according to the [Turing Javascript Style Guide](https://github.com/turingschool-examples/javascript)
 
 ## Submission Details
 
