@@ -261,3 +261,34 @@ vampire.whatDoYouDislike()
 
 * [Scope vs. Context](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
 * [When not to use an arrow function](https://wesbos.com/arrow-function-no-no/)
+<!-- 
+====================================================
+====================================================
+====================================================
+
+REVIEW PROMPT
+
+_**Context**_
+Prompt for students:
+* What are the most important/significant things someone should know about:
+    * Arrow functions
+    * this
+
+What is the result of the following code? Explain your answer
+```js 
+var fullname = 'Pamela Lovett';
+var foo = {
+   fullName: 'Brittany Storoz',
+   prop: {
+      fullname: 'Robbie McJaeger',
+      getFullname: function() {
+         return this.fullname;
+      }
+   }
+};
+
+var test = foo.prop.getFullname;
+
+console.log(foo.prop.getFullname()); // What will log here? Why?
+console.log(test()); // What will log here? Why?
+``` -->
