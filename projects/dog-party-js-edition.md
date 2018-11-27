@@ -110,5 +110,5 @@ Take a few minutes and write out an action plan for the next few days.
   - Alphabetizing style properties
   - Grouping classes together that share similar styles
 
-### Peer Review
+### Final Eval Peer Review
 Use [this template](/projects/static-comp-peer-review.html)
