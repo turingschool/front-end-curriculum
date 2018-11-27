@@ -20,9 +20,9 @@ Similar to what you might be asked to do on the job, we've given you a comp with
 - Using your terminal, create a directory called `dog-party`
 - Inside of your `dog-party` directory, create a sub-directory called `images`
 - Also create three files called `index.html`, `styles.css`, and `main.js`
-- You will also need to [download the assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing) and insert them into your `images` directory
+- You will also need to [download the image assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing) and insert them into your `images` directory
 
-**Note: Do not use CSS `flex-box` or `grid` for this project (If you don't know what this is, no worries! You'll learn more about these techniques in the coming weeks!)**
+**Note: DO NOT use CSS `flex-box` or `grid` for this project (If you don't know what this is, no worries! You'll learn more about these techniques in the coming weeks!)**
 
 ## Basic Project Requirements
 
@@ -65,21 +65,19 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 
 #### Setting up Repository on GitHub and Pushing up
 
-1. Create a new repository on GitHub by clicking that green button on the home page that says `New Repository`
+1. Go to Github and create a new repository, also called a repo, by clicking that green button on the home page that says `New Repository`
 2. Enter in a relevant name for this project (i.e. `Dog Party`)
-3. Do NOT initialize the repository with a README.  You have already created one locally on your computer.
-4. Leave it set as `public` because you want to others to see your work and then click `Create Repository`!
-5. Follow the steps on the next page and enter each command into your terminal
-6. Once you see your code up in your repository, go to Settings and publish your site on GitHub pages!
-7. Finally, place your links in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=0)
+3. Do NOT initialize the repository with a `README`.  You have already created one locally on your computer.
+4. Leave the repo set as `public` and then click `Create Repository`
+5. In your terminal, follow steps below in order and enter each command into your terminal
+  * `git init` inside of your `dog-party` directory
+  * `git add .`
+  * `git commit -m "Initial commit"`
+  * `git remote add origin git@github.com:Kalikoze/Dog-Party.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Dog-Party.git` -- this step makes the connection between your local files and the repo that lives on GitHub)
+  * `git push -u origin master` (this step pushes your local code up to your GitHub repo)
+6. Once you see your code up in your repository on GitHub, go to `Settings` and publish your site on GitHub Pages, a great way to host static sites directly through GitHub
+7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1xmpBJ2_Wydg_wqVmq-fOgBV8svM1FUvLVeAXrFpEspk/edit#gid=0)
 
-#### Example Steps for Part 5
-
-1. `git init` inside of your `dog-party` directory
-2. `git add .`
-3. `git commit -m "Initial commit"`
-4. `git remote add origin git@github.com:Kalikoze/Dog-Party.git`
-5. `git push -u origin master`
 
 ## Design Comp
 
