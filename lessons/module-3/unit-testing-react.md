@@ -450,7 +450,7 @@ So far, we've only been concerned with the tests for this small, stateless
 component. What about testing our class components? How will that differ? Take a
 look again at our `App.js` file (with some new features added in):
 
-```js
+```jsx
 // App.js
 
 import React, { Component } from 'react';
@@ -477,7 +477,7 @@ class App extends Component {
   groceryList = () => (
     this.state.groceries.map(grocery => (
       <Grocery {...grocery} />
-    ));
+    ))
   );
 
   render() {
@@ -500,7 +500,7 @@ Enzyme has a really handy tool for doing just that, `instance()`.
 
 Calling `instance()` on our wrapper will give us access to all the class' instance methods, in this case, `addGrocery` and `groceryList`. Let's write a test for `addGrocery`.
 
-```javascript
+```jsx
 // App.test.js
 
 describe('App', () => {
