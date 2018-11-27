@@ -1,16 +1,18 @@
 ---
 title: Unit Testing React Components
 module: 3
+length: 120
+tags: react, testing
 ---
 
 ## Agenda
 
 - Discuss Unit testing vs Integration Testing vs Acceptance Testing
-- Learn about Jest and what we use it for
-- Learn what Enzyme is and what we use it for
+- Learn what Jest is why it's used
+- Learn what Enzyme is it's used
 - Use Jest and Enzyme to take a snapshot of the UI
 - Use Jest and Enzyme to test that a function was called on click
-- Use Jest and Enzyme to unit test individual funtions
+- Use Jest and Enzyme to unit test individual functions
 
 ## Learning Goals
 
@@ -21,14 +23,13 @@ module: 3
 
 ## Vocab
 
-- Jest
-- Enzyme
-- Mock
-- Spy
-- Snapshot
 - Unit test
 - Integration test
 - Acceptance test
+- Jest
+- Enzyme
+- Snapshot
+- Mock
 
 ## Unit Testing React Components
 
@@ -61,23 +62,12 @@ discuss as a group.
 
 4) When do we not need to test?
 
-### Getting Started
-
-If you haven't already, install the `create-react-app` command line tool as a global 
-dependency. (To check for globally installed dependencies run the command 
-`npm list -g --depth=0`)
-
-```bash
-npm install -g create-react-app
-```
-
 ### Setting Up the Project
 
-Once you have the command line tool installed, you can create a new project using 
-the following command:
+Let's create a react app called `grocery-list`:
 
 ```bash
-create-react-app grocery-list --use-npm
+create-react-app grocery-list
 ```
 
 Next `cd` into the `grocery-list` directory and lets get to work.  
@@ -88,29 +78,25 @@ Out of the box, `create-react-app` hooks you up with some boilerplate HTML and C
 we won't be using. Let's clean up the existing files before we get started. First, you 
 can delete the `logo.svg` file. Next, update the following files to match below:  
 
-```js
-App.css
-```
-
 ```css
+<!-- App.css -->
+
 .App {
-  max-width: 500px;
   margin: auto;
+  max-width: 500px;
 }
 ```
 
-```js
+```jsx
 // App.js
 
 import React, { Component } from 'react';
 import './App.css';
 
-import Grocery from './Grocery'
-
 class App extends Component {
   render() {
     return (
-      <Grocery name='bananas' starred={false}/>
+      <div>blah<div>
     );
   }
 }
@@ -133,14 +119,14 @@ changed since the last time you made a git commit.
 Try it out - run `npm test` to fire up the testing server. Currently our app has only 
 one test file, `App.test.js`. Take a few seconds to look at that file.
 
-**Stop and Read**: [This section on file naming conventions](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#filename-conventions).  
+**Stop and Read**: [This section on file naming conventions](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md#filename-conventions).  
 
 Traditionally, we have always put our tests into their own directory. That is absolutely 
 still possible, but the Facebook team makes some good points for keeping test files in 
 the same directory as their implementation. Whatever you decide to do in the future is 
 up to you, but let's go with the facebook convention for the purposes of this tutorial.  
 
-Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md#running-tests) 
+Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md) 
 they "recommend that you use a separate tool for browser end-to-end tests if you need 
 them. They are beyond the scope of Create React App." This means implementing our super 
 friend `Enzyme`!  
@@ -171,11 +157,11 @@ team has a specific way you need to do this.
 
 Inside of `src/`, create a file called `setupTests.js`.
 
-Jest will run this file before you test suite starts up, so it's the ideal place
+Jest will run this file before your test suite starts up, so it's the ideal place
 to do any kind of configuration or setup for the test suite. Add the following
 to `setupTests.js`:
 
-```javascript
+```js
 // src/setupTests.js
 
 import { configure } from 'enzyme';
@@ -183,6 +169,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 ```
+**Note** be sure to restart your test runner after adding this configuration, otherwise it won't take effect.
 
 Great! Now we're all ready to start using Enzyme to test our React components!
 
@@ -211,10 +198,10 @@ To get started, make the following two files in the `src` folder of your project
 
 In `Grocery.js`, let's add a simple component:
 
-```js
+```jsx
 import React from 'react';
 
-const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
+const Grocery = ({ name, quantity, purchased, starred, onPurchase, onStar, onDelete }) => {
   return (
     <article className="Grocery">
       <h3>{name}</h3>
@@ -231,10 +218,9 @@ properties we're passing. Don't worry, we will.
 In `Grocery.test.js`, we'll start with a simple test to see if the `name` property 
 is properly rendered in the component when passed in as a prop.
 
-```js
+```jsx
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-
 import Grocery from './Grocery';
 
 describe('Grocery', () => {
@@ -252,7 +238,7 @@ describe('Grocery', () => {
 As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) 
 instead of Mocha. That said, you'll notice that the syntax is surprising similar. One 
 difference is that Jest includes its own expectation library which is similar to Chai's 
-`expect` syntax instead of an `assert` syntax.  
+`expect` syntax (as opposed to the `assert` syntax).  
 
 [Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
 
@@ -270,31 +256,31 @@ there is a much simpler way of testing your UI, snapshot tests!
 The first thing to realize is that snap shot tests are not really TDD. Instead,
 we use snapshot tests to compare against a previous 'snapshot' of what our
 component looked like. If something has changed, the snapshot will fail. Then,
-if we're expected that change, we can `update` our snapshot to use the newest
+if we've expected that change, we can `update` our snapshot to use the newest
 version. Add the following test:
 
-```javascript
+```jsx
 import React from 'react';
 import { shallow, mount } from 'enzyme';
-
 import Grocery from './Grocery';
 
 describe('Grocery', () => {
-
   it('should match the snapshot with all data passed in correctly', () => {
-    const wrapper = shallow(<Grocery
-                              name='apples'
-                              quantity='10'
-                              notes='granny smith'
-                              purchased='10-22-18'
-                              starred=false
-                              onStar={jest.fn()}
-                              onPurchase={jest.fn()}
-                              onDelete={jest.fn()}
-                            />)
-    expect(wrapper).toMatchSnapshot()
-  })
-})
+    const wrapper = shallow(
+      <Grocery 
+        name="Bananas" 
+        quantity="7"
+        purchased="false"
+        starred="false"
+        onStar={jest.fn()}
+        onPurchase={jest.fn()}
+        onDelete={jest.fn()}
+      />
+    );
+
+    expect(wrapper).toMatchSnapshot();
+  });
+});
 ```
 
 Go ahead and run this test. It passes, and you should see the line `1 snapshot
@@ -313,15 +299,14 @@ looks like. Do that now:
 
 import React from 'react';
 
-const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
+function Grocery({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
   return (
     <article className="Grocery">
       <h3>{name}</h3>
       <p>Quantity: {quantity}</p>
-      <p>Notes: {notes}</p>
     </article>
   );
-};
+}
 
 export default Grocery;
 ```
@@ -341,7 +326,7 @@ changes visually based on whether or not the grocery item has been starred or pu
 
 We could start out with a simple test to see if it has the appropriate class if it's starred.
 
-```js
+```jsx
 it('should have a className of "starred" if is starred', () => {
   const wrapper = shallow(
     <Grocery name="Bananas" starred={true} />
@@ -367,14 +352,7 @@ Try both of those out and verify that they get the test passing. Then let the un
 settle in as you consider that as time goes on, you'll have to do this repeatedly — first 
 with `purchased` and then possibly with more properties as requirements change down the line.
 
-**Stop and Read**: To make our lives easier, we'll use the [classnames](https://www.npmjs.com/package/classnames) 
-package from npm. Check out the documentation before moving forward. You can install it with 
-`npm install -S classnames`.
-
-[classnames]: https://www.npmjs.com/package/classnames
-
-We'll import it into the module, add some pre-made css, and refactor our `Grocery.js` 
-component as follows:
+If you want, you can add some css that will reflect state changes:
 
 ```bash
 touch src/Grocery.css
@@ -400,22 +378,6 @@ touch src/Grocery.css
   background-color: rgb(91,126,154);
   color: rgb(160,182,196);
 }
-```
-
-```js
-import React from 'react';
-import classnames from 'classnames';
-import './Grocery.css';
-
-const Grocery = ({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
-  return (
-    <article className={classnames('Grocery', { starred })}>
-      <h3>{name}</h3>
-    </article>
-  );
-};
-
-export default Grocery;
 ```
 
 ### Testing the Button Functionality
@@ -444,7 +406,7 @@ So let's use mocks to test that the functions we passed in are being called appr
 
 Consider the following test:
 
-```js
+```jsx
 it('should call the onPurchase prop when clicked', () => {
   const onPurchaseMock = jest.fn();
 
@@ -484,7 +446,7 @@ it('should call the onPurchase prop when clicked', () => {
 
 ### Testing a class method
 
-So far, we've only been concerned with the tests for the is small, stateless
+So far, we've only been concerned with the tests for this small, stateless
 component. What about testing our class components? How will that differ? Take a
 look again at our `App.js` file (with some new features added in):
 
@@ -509,14 +471,14 @@ class App extends Component {
 
     this.setState({
       groceries: [...this.state.groceries, newGrocery]
-    })
+    });
   }
 
   groceryList = () => (
     this.state.groceries.map(grocery => (
       <Grocery {...grocery} />
-    ))
-  )
+    ));
+  );
 
   render() {
     return (
@@ -536,9 +498,7 @@ Groceries to our state, and the second gives us a list of JSX elements. What
 we'd like to be able to do is test those methods in isolation. Fortunately,
 Enzyme has a really handy tool for doing just that, `instance()`.
 
-Calling `instance()` on our wrapper will give us access to all the class methods
-of that instance, in this case, `addGrocery` and `groceryList`. Let's write a
-test for `addGrocery`.
+Calling `instance()` on our wrapper will give us access to all the class' instance methods, in this case, `addGrocery` and `groceryList`. Let's write a test for `addGrocery`.
 
 ```javascript
 // App.test.js
@@ -565,7 +525,7 @@ Now, see if you can write a test for the other method, on your own!
 
 ![](/assets/images/lessons/unit-testing-react/grocery-list-component.gif)
 
-The list should have the following functionality (test driven, of course):
+The list should have the following functionality (test driven, if you can):
 
 - It has the GroceryForm that we're calling in App.js
 - It shows all of the groceries. Can you test to make sure that it shows the appropriate number of groceries?
