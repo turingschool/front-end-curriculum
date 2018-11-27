@@ -353,16 +353,17 @@ describe('App', () => {
   it('should update state with an idea when addIdea is called', () => { 
     // Setup 
     const wrapper = shallow(<App />);
-    const mockIdea = { title: 'sweaters for pugs', body: 'why not?' }; 
-    const expected = [{title: 'sweater for pugs', body: 'why not?'}];
+    const mockIdea = { title: 'sweaters for pugs', body: 'why not?', id: Date.now() }; 
+    const expected = [mockIdea];
 
     // Execution 
-    wrapper.instance().addGrocery(mockGrocery);
+    wrapper.instance().addIdea(mockIdea);
 
     // Expectation 
-    expect(wrapper.state('groceries')).toEqual(expected);
+    expect(wrapper.state('ideas')).toEqual(expected);
   });
 });
+
 ```
 
 ### Homework: Finish testing your ideabox
