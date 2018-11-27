@@ -299,7 +299,7 @@ looks like. Do that now:
 
 import React from 'react';
 
-function Grocery({ name, quantity, notes, purchased, starred, onPurchase, onStar, onDelete }) => {
+function Grocery({ name, quantity, purchased, starred, onPurchase, onStar, onDelete }) => {
   return (
     <article className="Grocery">
       <h3>{name}</h3>
