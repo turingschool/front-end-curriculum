@@ -87,6 +87,6 @@ By the end of module one, students will:
 | Evals | Per project assessments that should be included in your portfolio.|
 |Mid Mock Assessment| This assessment is not included in your portfolio, but is prep for the final assessment week.|
 |Mystery Fun Time| Weekly reviews of concepts from lecture|
-|Quadrathlon| Week six of the program, coined the “Quadrathlong”, is a summative assessment to determine your eligibility to advance to module two. The assessment is comprised of: <br>1. DOM coding challenge <br>2. Vanilla Javascript logic based coding challenge <br>3. Static Comp #3 evaluation <br>4. Portfolio defense.|
+|Final Assessment| Week six of the program, there are two summative assessments to determine your eligibility to advance to module two. This will include a final exam and project.
 |Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments.<br>Detailed information can be found on the Turing School [Portfolios Repo](https://github.com/turingschool/portfolios).|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|
