@@ -201,7 +201,7 @@ eg: `{ book1: 1, book2: 2`...`book199: 199, book200: 200 }`
 
 Destructuring assignment allows us to unpack values from objects and arrays into their own distinct variables.
 
-```
+```js
 const dog = {
   name: 'Spot',
   breed: 'pug',
@@ -261,7 +261,7 @@ In the console, take a look at `Array.prototype`. What methods do you recognize?
 
 Similar to objects, we can use destructuring to unpack values from an array (using position) to create distinct variables
 
-```
+```js
 const sisters = ['Charlotte', 'Emily', 'Anne'];
 let [first, second, third] = sisters;
 
@@ -272,7 +272,7 @@ console.log(second); // 'Emily'
 
 Destructuring also lets you swap values in an array without using a temporary variable.
 
-```
+```js
 const list = [1, 2, 3];
 
 // es5
