@@ -275,14 +275,14 @@ Every time a variable is initialized, the interpreter will first look in its own
 2 
 3  function foo () {
 4    number = 20;
-5    console.log('A', number);  // prints 20
+5    console.log('A', number);  // prints 'A', 20
 6  }
 7 
-8  console.log('B', number);  // prints 10
+8  console.log('B', number);  // prints 'B', 10
 9  
 10  foo();
 11
-12  console.log('C', number);    // prints 20
+12  console.log('C', number);    // prints 'C', 20
 ```
 
 ##### Scope chain at work
