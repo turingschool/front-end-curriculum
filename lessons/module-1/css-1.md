@@ -29,7 +29,7 @@ But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.c
 - `id` / `class` Ways to identify HTML elements
 
 
-## CSS The Basics
+## What is CSS?
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
 
 ## Anatomy of a Basic CSS Rule
@@ -53,14 +53,14 @@ With your partner, answer the questions below:
 * Can you add both an id and a class to an element?
 * which takes precedent?
 
+***
+
 ## All the Elements are Boxes
 Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
 
 # ![Box Model](/assets/images/box-model.jpg)
 
-***
-
-# The Docs
+### The Docs
 
 * [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 * [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
@@ -68,15 +68,17 @@ Each element is a rectangular box. CSS leverages "the box model" to control layo
 
 ***
 
-## Don't Forget Your Dev Tools!
+## Dev Tools and CSS
 
-#### Editing CSS
+Developer Tools, or Dev Tools, are available to use in every browser. They help us debug, experiment, and test assumptions in our HTML, CSS, and Javascript quickly and at low-risk in the browser. They're your friend when it comes to understanding how CSS works (or untangling why it *isn't* working) -- get in the habit of using them early and often!
+
+### Editing CSS
 To the right of the HTML pane, there's a small sidebar that gives us styling information for the currently selected element. Similar to the HTML pane, we can add or remove styles and adjust CSS property values from this pane. You can click on any style property associated with the selected element and change its value. You can also use the blue checkbox to toggle the style on or off.
 
 ![Editing CSS](/assets/images/lessons/debugging-with-devtools/editing-css.png)
 
 
-### Your Challenge
+### Your Dev Tools Challenge
 Directly from the css pane, we can edit the css and see the changes reflected immediately.
 
 Let's work with the following edits on [girldevelopit.com](https://www.girldevelopit.com/):
@@ -86,15 +88,18 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 * Change the "flourish" logo in the headline to have a height of 20px
 * Hide the element that contains the map using css
 
+***
 
-# Practice
+## CSS Practice Time!
 Let's setup a small static page to experiment with our HTML and CSS.
+
+First, let's flex those command-line muscles you've been building:
 
 * Create a directory called static-site-playground
 * Create a file `index.html` with the html provided below
 * Create a file `main.css`
 * Link the index and main files you just made
-* Test things are working as expected
+* Test things are working as expected by adding in the following HTML:
 
 ```html
 <!doctype html>
@@ -108,16 +113,16 @@ Let's setup a small static page to experiment with our HTML and CSS.
 </html>
 ```
 
-## Let's draw some boxes and play with some basic CSS properties
+### Let's draw some boxes and play with some basic CSS properties
 
 * Box Model things: `width`, `height`, `border`, `padding`, `margin`
 * Aesthetic things: `color`, `font`, `background`
 
-### Box-Sizing and the CSS Box Model:
+## Box-Sizing and the CSS Box Model
 
 In HTML, you can visualize each element as its own rectangular box. There are a number of CSS properties that can affect the final width and height of each of these boxes. The CSS Box Model describes how the final height and width of an element is determined.
 
-We have an `article` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The DevTools panel provides a handy graphic of how our article is being rendered.
+We have an `article` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The Dev Tools panel provides a handy graphic of how our article is being rendered.
 
 This is the default behavior for the rendering of block elements in CSS and is due to the `box sizing` property having a default value of `content-box`. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
 
@@ -131,6 +136,12 @@ This is the default behavior for the rendering of block elements in CSS and is d
 
 Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. Its `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
 
+### CSS Practice Time, the remix!
+
+Revisit the static page you just made and add the `box sizing` property above to your CSS. How does it change what's rendered in the browser?
+
+***
+
 ## Document Flow is Important
 
 The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according to their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
@@ -140,7 +151,7 @@ The document flow is the model by which elements are rendered by default in the 
 - Inline elements: `img`, `a`, `br`, `em`, `strong`
 - Block elements: `p`, `h1`, `ul`, `li`, almost everything else
 
-### Display Property
+## Display Property
 
 - The display property allows us to manipulate the layout of elements on a page without taking them out of the normal page flow.
 - The default value for all elements is inline. Most "User Agent stylesheets" (the default styles the browser applies to all sites) reset many elements to "block".
@@ -181,7 +192,7 @@ Quick tip: If you want to center an element, you can give the `margin` property 
   * Fixed?
   * z-index?
 
-### Floats
+## Floats
 "Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element as seen [here](https://codepen.io/damwhit/pen/RMRKaW).
 
 - Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.
@@ -203,12 +214,13 @@ Quick tip: If you want to center an element, you can give the `margin` property 
 
 ***
 
-# CSS Specificity
+## CSS Specificity
 __Specificity__ is how the browser decides which CSS values are the most relevant to an element and whether or not they should be used.
 __Specificity__ is a weight that is applied to a given CSS declaration and is determined by the number of each selector type in the matching selector.
 Basically, it’s a mechanism within the CSS cascade, which helps browsers in conflicts resolution. Suppose, you have two (or more) conflicting CSS rules that are being applied to the same element, then there are going to be some basic rules which a browser will follow to determine which one is most specific and that particular CSS declaration will win.
 
 ### What does specificity look like?
+
 ```css
 
 // This makes all the <li> tags magenta
@@ -239,7 +251,7 @@ Examples:-
 Key Points:
 
 * In case of conflicting styles declaration, the declaration with higher specificity will win regardless of order.
-* The universal selector (*) has no specificity value.
+* The universal selector (\*) has no specificity value.
 * Pseudo-classes have specificity of 10 while pseudo-elements (e.g. :first-line) has a specificity of 1. [Pseudo-class vs. Pseudo-element](https://www.smashingmagazine.com/2016/05/an-ultimate-guide-to-css-pseudo-classes-and-pseudo-elements/)
 * The pseudo-class :not() adds no specificity by itself, only elements inside its parenthesis will add to specificity weight.
 * When an !important rule is used on a style declaration, it will override any other declarations.
