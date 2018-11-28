@@ -146,8 +146,10 @@ Color and font spec:
 ### CSS - Style and Implementation
 
 * [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
-* [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
-* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle 
+* [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules and
+  * [ ] Has 5 or less media queries for responsiveness
+* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle and
+  * [ ] Has 3 or less media queries for responsiveness
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
