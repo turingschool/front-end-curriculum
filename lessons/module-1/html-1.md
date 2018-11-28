@@ -257,7 +257,7 @@ You can use codepen or create your own html file.
 * [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
 * [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
 * [HTML Styleguide](https://github.com/turingschool-examples/html)
-* Also, check out the cheat sheets in independent study
+* Also, check out the cheat sheets in [independent study](http://frontend.turing.io/independent-study/)
 
 ***
 
@@ -275,7 +275,7 @@ HTML Guide and form structure
 
 So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms.
 
-There is a lot to forms that we'll go into depth in a moment, to start we'll focus on two elements:
+There is a lot to forms that we'll go more into depth with in a moment, but to start we'll focus on two elements:
 
 - `<input>` creates an input field. `<input>` is like `<img>` in that it does not require or support a closing tag. It can take an optional `type` attribute that helps validate user input in some browsers.
 - `<button>` creates a button. `<button>` on the other hand does support a closing tag.

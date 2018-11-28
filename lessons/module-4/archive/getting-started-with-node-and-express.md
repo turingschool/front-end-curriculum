@@ -282,7 +282,6 @@ Add the following towards the top of `server.js` after you've defined `app`:
 ```js
 const bodyParser = require('body-parser');
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
 ```
 
 Run the test suite again. The tests pass.

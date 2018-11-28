@@ -6,7 +6,7 @@ tags: node, express, back-end, server, http
 
 ### Pre-reqs
 
-* Download the [Postman native app](https://app.getpostman.com/app/download/osx64)
+* Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64) (you may already have the browser extension, which is now deprecated; please download the desktop application)
 
 ### Goals
 
@@ -16,11 +16,25 @@ By the end of this lesson, you will:
 * Know how Express abstracts difficult server-side logic and makes it easier to write endpoints
 * Create a simple Express app that implements all of the basic CRUD methods
 
+### Vocabulary
+
+* HTTP request/response cycle
+* server
+* client
+* middleware
+* route
+* route handler
+* CRUD
+
 ## But First!
 
 Before we look at how Express works, let's review the HTTP request-response cycle.
 
-On your own, draw a diagram of the request response cycle. What are the two parties communicating to each other, and what information is sent back and forth between them? How does one party know what the other party wants to do (verbs?...)?
+*Journal:*
+
+On your own, in your notebook, draw a diagram of the request response cycle. What are the two parties communicating to each other, and what information is sent back and forth between them? How does one party know what the other party wants to do (verbs?...)?
+
+*Turn and Talk:*
 
 Compare your diagram with a partner next to you. Then let's talk about the request-response cycle.
 
@@ -53,6 +67,7 @@ While the Express flow might look more complex, it actually makes the developer'
 [express-flow]: /assets/images/lessons/express/express-flow.png
 
 ## Routing & Middleware
+
 Earlier we mentioned that with plain Node `http`, you would create a single function to handle requests. This single function can get large and unwieldy as your application grows in complexity. Express middleware allows you to break this single function into many smaller functions that only handle one thing at a time.
 
 Most of the Express code that you write will be routing middleware. Middleware is basically the "glue" between two systems that helps them work together (in our case, Node and Express). Our code will be concerned with responding to client requests to different URLs with different methods (GET, POST, etc).
@@ -79,7 +94,7 @@ This pattern is exactly how we can define and handle any routes in an Express ap
 Let's go ahead and install some dependencies that we'll need to get things rolling.
 
 ```
-mkdir chat-box && cd chat-box
+mkdir pet-box && cd pet-box
 npm init --yes
 npm i express --save
 touch server.js
@@ -92,10 +107,10 @@ const express = require('express');
 const app = express();
 
 app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Chat Box';
+app.locals.title = 'Pet Box';
 
 app.get('/', (request, response) => {
-  response.send('Oh hey Chat Box');
+  response.send('Oh hey Pet Box');
 });
 
 app.listen(app.get('port'), () => {
@@ -119,43 +134,44 @@ nodemon server.js
 
 ### A Simple GET Request
 
-We've already made one GET request, that's simply returning some text. Let's make another one using some actual data that will return JSON for us. 
+We've already made one GET request, that's simply returning some text. Let's make another one using some actual data that will return JSON for us.
 
-For now, we'll store an array of messages in a variable called `app.locals`, which is automatically given to us through express:
+For now, we'll store an array of pets in a variable called `app.locals`, which is automatically given to us through express:
 
 ```js
-app.locals.messages = [];
+app.locals.pets = [];
 ```
 
 Let's put some fake data in for now:
 
 ```js
-app.locals.messages = [
-  { id: 'a1', message: 'Hello World' },
-  { id: 'b2', message: 'Goodbye World' }
+app.locals.pets = [
+  { id: 'a1', name: 'Rover', type: 'dog' },
+  { id: 'b2', name: 'Marcus Aurelius', type: 'parakeet' },
+  { id: 'c3', name: 'Craisins', type: 'cat' }
 ];
 ```
 
 The GET request:
 
 ```js
-app.get('/api/v1/messages', (request, response) => {
-  const messages = app.locals.messages;
+app.get('/api/v1/pets', (request, response) => {
+  const pets = app.locals.pets;
 
-  response.json({ messages });
+  return response.json({ pets });
 });
 ```
 
 
 ### Making a Dynamic Route
 
-Let's say we wanted to get a specific message based on its ID. We want anyone to be able to retrieve a single resource by indicating the ID associated with the object they want to retrieve. In order to do this, we must add a dynamic portion to our URL.
+Let's say we wanted to get a specific pet based on its ID. We want anyone to be able to retrieve a single resource by indicating the ID associated with the object they want to retrieve. In order to do this, we must add a dynamic portion to our URL.
 
 Consider the following:
 
 ```js
-app.get('/api/v1/messages/:id', (request, response) => {
-  response.json({
+app.get('/api/v1/pets/:id', (request, response) => {
+  return response.json({
     id: request.params.id
   });
 });
@@ -169,24 +185,25 @@ Some things to notice:
 - It automatically serializes our object as JSON.
 
 
-Here is the feature we want to implement: when a user requests a message by its `id`, we want to return that message's message and id.
+Here is the feature we want to implement: when a user requests a pet by its `id`, we want to return that pet's pet and id.
 
 ```js
-app.get('/api/v1/messages/:id', (request, response) => {
+app.get('/api/v1/pets/:id', (request, response) => {
   const { id } = request.params;
-  const message = app.locals.messages.find(message => message.id === id);
-  return response.status(200).json(message);
+  const pet = app.locals.pets.find(pet => pet.id === id);
+
+  return response.status(200).json(pet);
 });
 ```
 
-Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the message. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
+Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the pet. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
 
 ```js
-app.get('/api/v1/messages/:id', (request, response) => {
+app.get('/api/v1/pet/:id', (request, response) => {
   const { id } = request.params;
-  const message = app.locals.messages.find(message => message.id === id);
-  if (message) { 
-    return response.status(200).json(message);
+  const pet = app.locals.pets.find(pet => pet.id === id);
+  if (pet) {
+    return response.status(200).json(pet);
   } else {
     return response.sendStatus(404);
   }
@@ -195,7 +212,7 @@ app.get('/api/v1/messages/:id', (request, response) => {
 
 ### Sending Data With A Post Request
 
-It would be cool if we could store messages in addition to just being able to retrieve the prepopulated ones.
+It would be cool if we could store pets in addition to just being able to retrieve the prepopulated ones.
 
 Express did this thing a while back, where they took a bunch of stuff out of the core framework. This makes it smaller and means you don't have cruft you're not using, but it also means that sometimes you have to mix those things back in. One of those components that was pulled out was the ability to parse the body of an HTTP request. That's okay, we can just mix it back in.
 
@@ -208,11 +225,10 @@ We'll also need to require and use it in our `server.js`.
 ```js
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use( bodyParser.json() );
 ```
 
-This will add in support for parsing JSON as well as HTML forms. If you only need one of those, you can go ahead and remove the other (we're only going to use JSON, but I am leaving it here for reference).
+This will add in support for parsing JSON.
 
 Here is what my server looks like so far:
 
@@ -221,31 +237,31 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use( bodyParser.json() );
 
 app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Chat Box';
-app.locals.messages = [
-  { id: 'a1', message: 'Hello World' },
-  { id: 'b2', message: 'Goodbye World' }
+app.locals.title = 'Pet Box';
+app.locals.pets = [
+  { id: 'a1', name: 'Rover', type: 'dog' },
+  { id: 'b2', name: 'Marcus Aurelius', type: 'parakeet' },
+  { id: 'c3', name: 'Craisins', type: 'cat' }
 ];
 
 app.get('/', (request, response) => {
   response.send('Hello World!');
 });
 
-app.get('/api/v1/messages', (request, response) => {
-  const messages = app.locals.messages;
+app.get('/api/v1/pets', (request, response) => {
+  const pets = app.locals.pets;
 
-  response.json({ messages });
+  response.json({ pets });
 });
 
-app.get('/api/v1/messages/:id', (request, response) => {
+app.get('/api/v1/pets/:id', (request, response) => {
   const { id } = request.params;
-  const message = app.locals.messages.find(message => message.id === id);
-  if (message) { 
-    return response.status(200).json(message);
+  const pet = app.locals.pets.find(pet => pet.id === id);
+  if (pet) {
+    return response.status(200).json(pet);
   } else {
     return response.sendStatus(404);
   }
@@ -261,60 +277,60 @@ app.listen(app.get('port'), () => {
 We'll use our super secure method of generating random IDs:
 
 ```js
-app.post('/api/v1/messages', (request, response) => {
+app.post('/api/v1/pets', (request, response) => {
   const id = Date.now();
-  const { message } = request.body;
+  const { pet } = request.body;
 
-  app.locals.messages.push(message);
+  app.locals.pets.push(pet);
 
-  response.status(201).json({ id, message });
+  response.status(201).json({ id, pet });
 });
 ```
 
-This approach has a bunch of flaws:
+IMPORTANT NOTE: this approach has a BUNCH of flaws.
 
 - We're storing data in memory, which will be wiped out when the server goes down.
 - Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
 
 
-#### The Unhappy Path
+#### The Sad Path
 
-What happens if the user doesn't give us a message parameter?
+What happens if the user doesn't give us a pet parameter?
 
 We should tell them that we got some bad data.
 
-In our previous example, we simply stored a new message object that we received from the client-side and sent it back as a successful response. When we successfully create a new record in a collection of application data, we can signal this success to our end-user by setting an [HTTP Status Code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). There are many different status codes to use in various situations. Upon a successful 'creation' you'll want to set the status code to `201` before sending back the response object.
+In our previous example, we simply stored a new pet object that we received from the client-side and sent it back as a successful response. When we successfully create a new record in a collection of application data, we can signal this success to our end-user by setting an [HTTP Status Code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). There are many different status codes to use in various situations. Upon a successful 'creation' you'll want to set the status code to `201` before sending back the response object.
 
 Take a minute to look through some of the other available status codes that can be used. These are a quick way to determine what happened to our request when it was sent to the server, and are easily viewed in the 'Network' panel of your browser developer tools.
 
-Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that 'message' is a required property when submitting a new message, and we want to respond with an error if it's missing:
+Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that 'pet' is a required property when submitting a new pet, and we want to respond with an error if it's missing:
 
 ```js
-app.post('/api/v1/messages', (request, response) => {
-  const { message } = request.body;
+app.post('/api/v1/pets', (request, response) => {
+  const { pet } = request.body;
   const id = Date.now();
 
-  if (!message) {
+  if (!pet) {
     return response.status(422).send({
-      error: 'No message property provided'
+      error: 'No pet property provided'
     });
   } else {
-    app.locals.messages.push({ id, message });
-    return response.status(201).json({ id, message });
+    app.locals.pets.push({ id, pet });
+    return response.status(201).json({ id, pet });
   }
 })
 ```
 
-If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error message we sent along with the 422 response.
+If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error pet we sent along with the 422 response.
 
-It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response message is the best way to write a user-friendly API.
+It's important to handle errors and write descriptive error pets so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response pet is the best way to write a user-friendly API.
 
-<!-- 
+<!--
 ### Generating Unique Keys
 
 At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
 
-For the time being, we'll use an MD5 hash, which is a unique value based on the content of the message. You've seen them in Github gists among other places.
+For the time being, we'll use an MD5 hash, which is a unique value based on the content of the pet. You've seen them in Github gists among other places.
 
 ```
 npm i md5 --save
@@ -329,25 +345,25 @@ const md5 = require('md5');
 Finally, let's replace `Date.now()` in our `POST` action.
 
 ```js
-app.post('/api/v1/messages', (request, response) => {
-  const { message } = request.body;
-  const id = md5(message);
+app.post('/api/v1/pets', (request, response) => {
+  const { pet } = request.body;
+  const id = md5(pet);
 
-  if (!message) {
+  if (!pet) {
     return response.status(422).send({
-      error: 'No message property provided'
+      error: 'No pet property provided'
     });
   } else {
-    app.locals.messages.push({ id, message });
-    return response.status(201).json({ id, message });
+    app.locals.pets.push({ id, pet });
+    return response.status(201).json({ id, pet });
   }
 });
 ```
  -->
 
- 
+
 ### Using Postman
-Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit, or delete data if there isn't a UI to do so. In our case, it's handy to add messages, edit a specific message, or delete a message. Get familiar with Postman because it will be your best friend for all things API from here on out.
+Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit, or delete data if there isn't a UI to do so. In our case, it's handy to add pets, edit a specific pet, or delete a pet. Get familiar with Postman because it will be your best friend for all things API from here on out.
 
 Things to consider:
 
@@ -356,12 +372,12 @@ Things to consider:
 
 ### Student Exploration (20 mins)
 
-* Implement a PUT route for a specific message to edit the message of the message
-* Implement a DELETE route for a specific message to remove it
+* Implement a PUT route for a specific pet to edit the name of the pet
+* Implement a DELETE route for a specific pet to remove it
 
 **BONUS:**
 
-Can you implement a GET route that shows only the messages that have been edited?
+Can you implement a GET route that shows only the pets that have been edited?
 
 ### Static Files in Express
 To serve static files like an `index.html` file, you need to let Express know. To do this, tell Express what directory your static files live in with:
