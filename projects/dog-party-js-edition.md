@@ -81,6 +81,14 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 
 ## Design Comp
 
+#### Hex Codes:
+
+Light blue: #75e2e6
+Dark blue: #048eaa
+Background color: #ffffff
+White text: #ffffff
+Body text: #000000
+
 # ![Dog Party](/assets/images/dog-party-js-edition.jpg)
 
 ## Peer Review (10 min each)
