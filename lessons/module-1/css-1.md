@@ -193,7 +193,7 @@ Quick tip: If you want to center an element, you can give the `margin` property 
   * z-index?
 
 ## Floats
-"Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element as seen [here](https://codepen.io/damwhit/pen/RMRKaW).
+"Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element as seen [here](https://codepen.io/LouisaBarrett/pen/GwwKGN).
 
 - Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.
 - You can specify a) whether an element is floated or not, and b) which side it ﬂoats on.
