@@ -55,19 +55,6 @@ With your partner, answer the questions below:
 
 ***
 
-## All the Elements are Boxes
-Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
-
-# ![Box Model](/assets/images/box-model.jpg)
-
-### The Docs
-
-* [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
-* [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
-* [Visual Guide to CSS](http://cssreference.io/)
-
-***
-
 ## Dev Tools and CSS
 
 Developer Tools, or Dev Tools, are available to use in every browser. They help us debug, experiment, and test assumptions in our HTML, CSS, and Javascript quickly and at low-risk in the browser. They're your friend when it comes to understanding how CSS works (or untangling why it *isn't* working) -- get in the habit of using them early and often!
@@ -90,6 +77,17 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 
 ***
 
+## All the Elements are Boxes
+Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
+
+# ![Box Model](/assets/images/box-model.jpg)
+
+### The Docs
+
+* [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
+* [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
+* [Visual Guide to CSS](http://cssreference.io/)
+
 ## CSS Practice Time!
 Let's setup a small static page to experiment with our HTML and CSS.
 
@@ -108,15 +106,24 @@ First, let's flex those command-line muscles you've been building:
     <title>CSS Playground</title>
   </head>
   <body>
-    <article>article 1</article>
+    <article class="article-1">article 1</article>
+    <article class="article-2">article 2</article>
   </body>
 </html>
 ```
 
+Next, we'll use this HTML to do some experimenting with Box Model behavior.
+
 ### Let's draw some boxes and play with some basic CSS properties
+
+Use `.article-1` and `.article-2` as the selectors you're targeting in your `main.css` file.
+
+Try adding some properties that impact the Box Model and some properties that impact the aesthetics of your page:
 
 * Box Model things: `width`, `height`, `border`, `padding`, `margin`
 * Aesthetic things: `color`, `font`, `background`
+
+What do you notice when you add or adjust the Box Model properties? What happens to the size of the element?
 
 ## Box-Sizing and the CSS Box Model
 
@@ -138,7 +145,7 @@ Setting the `box-sizing` property to `border-box` will alter the model so that t
 
 ### CSS Practice Time, the remix!
 
-Revisit the static page you just made and add the `box sizing` property above to your CSS. How does it change what's rendered in the browser?
+Revisit the static page you just made and add the CSS rule shown above that applies the `box-sizing` property to your CSS. How does it change what's rendered in the browser? How is the size of the elements impacted?
 
 ***
 
