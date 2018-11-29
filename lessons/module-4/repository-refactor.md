@@ -16,7 +16,7 @@ Who do you bring in for the interview? How do you decide?
 
 ## Who do You Interview?
 
-Break up into groups of three, and get a piece of chart paper with a marker.
+Break up into small groups, and get a piece of chart paper with a marker.
 
 ### The Candidates
 
@@ -28,7 +28,7 @@ Here is a set of repositories, each representing a candidate:
 * [Narwhal Assault](https://github.com/Obleo33/game-time)
 * [Club Reads](https://github.com/lindsaywparker/club-reads-frontend) <!-- high, text needs some formatting help, but pretty good -->
 
-You have 20 minutes to go through these repositories and determine who you want to bring in for the interview.
+You have 20 minutes to go through these repositories and determine who you want to bring in for the interview - _READMEs only_.
 
 On your chart paper, you should write about what you looked for in the READMEs. 
 
@@ -36,7 +36,7 @@ On your chart paper, you should write about what you looked for in the READMEs.
 * What stood out about good READMEs?
 * Anything you should avoid in a README?
 
-At the end of the 20 minutes, One person from each group will share out their findings and reasoning.
+At the end of the 20 minutes, One person from each group will share out their findings and reasoning for choosing who they would hire.
 
 ### The Decision
 

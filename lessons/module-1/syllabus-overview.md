@@ -2,13 +2,13 @@
 title: Syllabus Overview & Expectations
 ---
 
-## Oct 1, 2018 - Nov 9, 2018
+## Nov 26, 2018 - Jan 11, 2019
 
-| Instructors     | Slack         | Email            |
-| ----------------|---------------| -----------------|
-| Louisa Barrett  | @louisa       | louisa@turing.io |
-| David Whitaker  | @damwhit      | david@turing.io  |
-| Travis Rollins  | @kalikoze     | travis@turing.io |
+| Instructors     | Slack            | Email            |
+| ----------------|------------------| -----------------|
+| Louisa Barrett  | @louisa          | louisa@turing.io |
+| Travis Rollins  | @kalikoze        | travis@turing.io |
+| Khalid Williams | @Khalid Williams | khalid@turing.io |
 
 ## Module Overview
 Welcome! We are excited to share the first six weeks of the program with you. As the first of four modules in the Front End program this six weeks is about developing a solid foundation in the fundamentals of HTML, CSS, and Javascript. Additionally, we’ll introduce you to test driven development, version control, refactoring, and object oriented programming. Module one also includes an introduction to Turing citizenship via special curriculum in community Fridays for M1 students and professional development courses to cultivate your unique developer identity in anticipation of entering the job market as a front end engineer.
@@ -87,6 +87,6 @@ By the end of module one, students will:
 | Evals | Per project assessments that should be included in your portfolio.|
 |Mid Mock Assessment| This assessment is not included in your portfolio, but is prep for the final assessment week.|
 |Mystery Fun Time| Weekly reviews of concepts from lecture|
-|Quadrathlon| Week six of the program, coined the “Quadrathlong”, is a summative assessment to determine your eligibility to advance to module two. The assessment is comprised of: <br>1. DOM coding challenge <br>2. Vanilla Javascript logic based coding challenge <br>3. Static Comp #3 evaluation <br>4. Portfolio defense.|
+|Final Assessment| Week six of the program, there are two summative assessments to determine your eligibility to advance to module two. This will include a final exam and project.
 |Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments.<br>Detailed information can be found on the Turing School [Portfolios Repo](https://github.com/turingschool/portfolios).|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|

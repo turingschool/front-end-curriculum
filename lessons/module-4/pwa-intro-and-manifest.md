@@ -136,13 +136,23 @@ Here are some that are important to know:
 
 Break up into small groups. Each group should take one of these keys to research and find out what it means and what it does for the PWA.
 
+<!-- 
+name - for use in the Web App Install banner
+short_name - for use as the text on the user's home screen
+start_url - where it should be launched when the user clicks on the launch icon, relative path (relative to location of manifest file)
+icons - when a user adds your site to their home screen, you can define a set of icons for the browser to use. Also the splash screen image is drawn from the icons array
+background_color - Chrome uses this color on the splash screen the instant the web app is launched and the color remains on the screen until the web app's first render
+theme_color - sets the color of the toolbar (the top bar showing your battery level and other apps running, and the tint of the URL bar if you're using it)
+display - control the display type and page orientation - standalone hides the browser's UI (URL bar)
+ -->
+
 ## HTTPS
 
 If you create a PWA, then on production the application must be served over HTTPS (e.g. `https://www.google.com` vs. `http://www.google.com`).
 
 If someone tries to go to your website using `http` instead of `https` in the URL, then your application should redirect the client to the `https` version of your application.
 
-You can add code to your backend server to redirect a client to the `https` version of your website. An example of this code is something like this:
+You can add code to your backend server to redirect a client to the `https` version of your website. An example of this code for Express is a middleware function like this:
 
 ```javascript
 const requireHTTPS = (req, res, next) => {

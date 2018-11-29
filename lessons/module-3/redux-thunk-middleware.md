@@ -410,5 +410,6 @@ it('should dispatch staffFetchDataSuccess', async () => {
 ## Resources
 * [Stack Overflow](https://stackoverflow.com/questions/35411423/how-to-dispatch-a-redux-action-with-a-timeout/35415559#35415559)
 * [Understanding how redux-thunk works](https://medium.com/@gethylgeorge/understanding-how-redux-thunk-works-72de3bdebc50) by Gethyl George Kurian
+* [Thunks in Redux](https://medium.com/fullstack-academy/thunks-in-redux-the-basics-85e538a3fe60) by Gabriel Lebec
 * [Introduction to React with Redux and Redux Thunk: How to fetch data from an API](http://work.haufegroup.io/intro-redux/) by Camil Bradea
 * [A Dummy's Guide to Redux and Thunk in React](https://codepen.io/stowball/post/a-dummy-s-guide-to-redux-and-thunk-in-react) by Matt Stow
