@@ -117,7 +117,7 @@ Color and font spec:
 
 ### Functional Expectations
 
-* [ ] Novice: Application meets most of the expectations of phase one.
+* [ ] Novice: Application meets all of the expectations of phase one.
 * [ ] Advanced Beginner: Application meets all of the expectations of phase two.
 * [ ] Proficient: Application meets all of the expectations of phase three.
 * [ ] Exceptional: Application adds three or more of the extensions from phase four.
@@ -136,9 +136,9 @@ Color and font spec:
 ### HTML - Style and Implementation
 
 * [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
-* [ ]  Advanced Beginner - Application adds to the above with HTML incorporates semantic HTML elements and has a simple, clean HTML structure.
-* [ ]  Proficient - Application adds to the above with markup that is easy to read and follow across naming conventions
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
+* [ ]  Advanced Beginner - Application adds to the above with HTML that incorporates semantic HTML elements and has a simple, clean HTML structure.
+* [ ]  Proficient - Application adds to the above with markup that is easy to read and follows across naming conventions
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes and:
     * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
 
 ------------------------------------------------------------------
@@ -157,13 +157,13 @@ Color and font spec:
 ### JAVASCRIPT - Style and Implementation
 
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
-* [ ]  Advanced Beginner - Displays good understanding of arguments vs parameters and
+* [ ]  Advanced Beginner - Displays good understanding of arguments vs parameters and:
   * [ ] Uses function declarations over anonymous functions in event listeners
   * [ ] Uses if/else statements to handle multiple paths of logic/error handling
-* [ ]  Proficient - Application uses event delegation correctly on dynamic elements and
+* [ ]  Proficient - Application uses event delegation correctly on dynamic elements and:
   * [ ] Keeps functions SRP and can call functions within functions
   * [ ] There are no nested if/else statements
-* [ ]  Exceptional - Functions and code are well-refactored and show developer empathy and
+* [ ]  Exceptional - Functions and code are well-refactored and show developer empathy and:
   * [ ] No global variables aside from query selectors, min & max, number of guesses, and start time
   * [ ] All functions are less than 10 lines
   * [ ] Uses logical operators instead of if/else statements where applicable
