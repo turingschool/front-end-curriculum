@@ -611,8 +611,10 @@ increaseWidth(val) {
 #### Your Turn
 Set up the functionality to display the width and height to the DOM - using your `domUpdates file` to keep this code separate from the state of your app. Be sure to update your testing accordingly.
 
-## Homework: Adventures of Blocky  
+<!-- Commenting out the section below because this repo uses canvas, which is not taught anymore -->
+<!-- ## Homework: Adventures of Blocky  
 
 [Adventures Of Blocky](http://frontend.turing.io/lessons/module-2/adventures-of-blocky.html)  
 
 Now that you have a grasp of testing on a deeper level, its time to really get after it and drive home the concepts we've talked about. Click on the lesson repo above to begin your testing adventure!  
+ -->
