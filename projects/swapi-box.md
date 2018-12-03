@@ -165,7 +165,7 @@ src/
 
 * 4 - All requirements from 3 met, all async functionality is tested, tests are
   passing and run efficiently (using mount only when appropriate).
-* 3 - All requirements from 2 are met and a valid attempt to test asynchronous functionality has been made
+* 3 - All requirements from 2 are met and a valid attempt to test asynchronous functionality has been made.
 * 2 - Nearly all unit tests are in place. No attempt to test async functionality was made.
 * 1 - A valid attempt to test this application was made, but there are obvious gaps, with missing unit tests.
 
