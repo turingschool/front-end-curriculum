@@ -161,7 +161,7 @@ Color and font spec:
   * [ ] Uses function declarations over anonymous functions in event listeners
   * [ ] Uses if/else statements to handle multiple paths of logic/error handling
 * [ ]  Proficient - Application uses event delegation correctly on dynamic elements and:
-  * [ ] Keeps functions SRP and can call functions within functions
+  * [ ] Keeps functions DRY with a focus on SRP and can call functions within functions
   * [ ] There are no nested if/else statements
 * [ ]  Exceptional - Functions and code are well-refactored and show developer empathy and:
   * [ ] No global variables aside from query selectors, min & max, number of guesses, and start time
