@@ -403,3 +403,43 @@ Using your journal, take a few minutes to answer the following:
 - What are the most important/significant ideas or elements about how the JS engine executes code?
 - Why is it important to understand scope?
 - What makes closures special?
+
+
+<!-- 
+====================================================
+====================================================
+====================================================
+
+
+## Review Prompt
+
+_**Scope**_
+Prompt for students:
+* Describe the two phases that the JS interpreter uses to run your code.
+* Give and example of when you would see a global execution context and a local execution context.
+
+What is the result of each `console.log()`? Explain your answer.
+```js 
+var alarmTime = 8;
+
+function testAlarm() {
+   let alarmTime = 22;
+   if (alarmTime > 10) {
+     console.log('A', alarmTime); 
+     console.log('Wake up!');
+   }
+}
+
+console.log('B', alarmTime);
+
+for (let i=0; i<5; i++) {
+   alarmTime++;
+}
+
+console.log('C', alarmTime);
+
+testAlarm();
+
+console.log('D', alarmTime);
+```
+ -->
