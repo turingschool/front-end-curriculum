@@ -29,16 +29,16 @@ Building software, at its core, is about solving problems. Generally speaking, t
 
 |Day | Status| Deliverables |
 |--- |---    |--- |
-|*1* | Kick-off and exploration| What is OOP? Why is OOP useful? How is OOP used in games?|
-|*2* | Understanding/Planning| [Initialize a repo](https://gist.github.com/brittanystoroz/7ffa5c4e1d39aa92b3e95d3358d9d6fd) with a README that includes a link to your pair's DTR, a wireframe for your game, and some potential design inspiration. Start diagram for OOP design/classes|
-|*3* | Understanding/Planning| Diagram for OOP design/classes due|
-|*5* | Check-in| Instructor Pairing|
+|*1* | Kick-off and exploration| What is OOP? Why is OOP useful? How is OOP used in games?, Wireframe & Design Inspiration |
+|*2* | Understanding/Planning| Diagram for OOP design/classes due|
+|*3* | Setup and Coding| [Initialize a repo](https://gist.github.com/brittanystoroz/7ffa5c4e1d39aa92b3e95d3358d9d6fd) with a README that includes a link to your pair's DTR, your final wireframes and chosen design inspiration|
+|*4* | Check-in| Instructor Pairing|
 
 ### Week 2
 
 |Day | Status| Deliverables |
 |--- |---    |--- |
-|*8* | Check-in| Pair to Pair Feedback|
+|*8* | Check-in| Pair-to-Pair feedback|
 |*11* | Assessment| Formal Code Review or Class Code Review|
 
 ## Restrictions
