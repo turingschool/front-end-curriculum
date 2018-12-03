@@ -57,7 +57,6 @@ You can use any of the following JavaScript libraries:
 ## Code Organization
 
 You should have at least one use-case for [inheritance](https://www.sitepoint.com/understanding-ecmascript-6-class-inheritance/) with your classes.
-  - a parent class should have properties that might be shared by several other child classes
   - a parent class's properties and methods should be shared by all the child classes
   - a child class should inherit those properties and methods from the parent class
   - a child class should add additional properties or methods, or override the functionality of a parent method
