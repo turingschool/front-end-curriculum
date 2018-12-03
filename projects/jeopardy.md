@@ -33,13 +33,13 @@ Building software, at its core, is about solving problems. Generally speaking, t
 |*1* | Kick-off and exploration| What is OOP? Why is OOP useful? How is OOP used in games?|
 |*2* | Understanding/Planning| [Initialize a repo](https://gist.github.com/brittanystoroz/7ffa5c4e1d39aa92b3e95d3358d9d6fd) with a README that includes a link to your pair's DTR, a wireframe for your game, and some potential design inspiration. Start diagram for OOP design/classes|
 |*3* | Understanding/Planning| Diagram for OOP design/classes due|
-|*5* | Check-in| Pair-to-Pair feedback|
+|*5* | Check-in| Instructor Pairing|
 
 ### Week 2
 
 |Day | Status| Deliverables |
 |--- |---    |--- |
-|*8* | Check-in| Instructor pairing|
+|*8* | Check-in| Pair-to-Pair feedback|
 |*11* | Assessment| Formal Code Review or Class Code Review|
 
 ## Restrictions
@@ -75,6 +75,11 @@ Your testing suite should test all of the functionality of the game, including t
 * Class default properties
 * Class methods
 * Anything that updates class properties
+
+For the purposes of this project, you will keep your state logic completely separate from your view logic. In other words, your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
+
+To do this, you will utlize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/test-driven-development.html#dom-manipulation).
+
 
 ## User Stories
 
