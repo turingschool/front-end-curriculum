@@ -402,3 +402,45 @@ We'll be building out some classes to create a minimal flash card application.
 * [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 * [Class-based vs. prototypal inheritance](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
 * [MDN Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+<!-- ## Review Prompt
+
+_**Review**_
+
+Given these two classes, create a parent class of `Pet` and refactor `Dog` and `Cat` so they inherit from it. 
+
+```js
+// Dog.js
+
+class Dog {
+  constructor(name, breed, tricksArray) {
+    this.name = name;
+    this.breed = breed;
+    this.tricks = tricksArray;
+  }
+
+  learnTrick() {
+    if (typeof trick === 'string' && !this.tricks.includes(trick) ) {
+      this.tricks.push(trick);
+    }
+  }
+}
+
+// Cat.js
+
+class Cat {
+  constructor(name, breed, faveTreat) {
+    this.name = name;
+    this.breed = breed;
+    this.faveTreat = faveTreat;
+  }
+
+  feedTreat(treat) {
+    if ( this.faveTreat == treat ) {
+      return `${this.name} eats a treat: ${treat}`
+    } else {
+      return `${this.name} casually sniffs the ${treat} and then ignores it.`
+    }
+  }
+}
+``` -->
