@@ -6,7 +6,9 @@ tags: git, github
 
 ### Prework: 
 
-The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.  Luckily, CodeCademy has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git) (up to, but not including 'Manhattan Zoo'), before the lesson.
+The first time you start using Git and GitHub, understanding how it all works can be a lot to take in.   Luckily, one of the staff at Turing recently wrote a [blog](https://www.coursereport.com/blog/what-is-github) about what Git is and why it is so important in the developer community.    
+
+CodeCademy also has a great walkthrough for Git on how the entire process works and some of the commands you'll commonly use.  Please complete [Section 1: Basic Git Workflow](https://www.codecademy.com/learn/learn-git) (up to, but not including 'Manhattan Zoo'), before the lesson.
 
 ### Learning Goals
 
