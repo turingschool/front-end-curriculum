@@ -166,7 +166,7 @@ We can also modify the CSS styling of any element on the page using JavaScript.
 There are three approaches:
 
 1. We can directly manipulate the style of the element through inline styles.
-**2. We can add or remove classes from the element (the preferred way).**
+2. **We can add or remove classes from the element (the preferred way).**
 3. You can modify the stylesheet itself with JavaScript.
 
 We're only going to talk about the first two today.
