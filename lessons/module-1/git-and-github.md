@@ -52,7 +52,7 @@ In your journal:
 
 Think back to how you used git and github for dog party - what did you notice? Have you tried using Git and GitHub for number guesser? What questions have come up?
 
-Discuss with your number guesser pair. The person with longer hair should start.
+Discuss with your number guesser pair. The person with soonest birthday should start.
 
 ## An example journey through Git and GitHub
 
@@ -70,7 +70,7 @@ Inside of a `git-and-github-intro` directory, in the terminal, type `git status`
 fatal: Not a git repository (or any of the parent directories): .git
 ```
 
-By running the command `git status`, you are essentially telling the current directory "hey, go find a file called `.git`, and find out the status of tracking my files."
+By running the command `git status`, you are essentially telling the current directory "hey, go find a directory called `.git`, and find out the status of tracking my files."
 
 The error we get says that we haven't created a `.git` directory, which means the directory we're in is not a git repository, and the terminal can't do what you're trying to ask of it.  
 
@@ -202,9 +202,9 @@ Now that we have an online (remote) repository, we have to connect it to our loc
 
 The command to add a remote is, surprise, `git remote`. To add the remote, the generalized command is `git remote add [name-of-remote] [address-of-repository]`. Now we have to fill in these fields.
 
-The name of the remote, by convention, is typically `origin`. If we go to the repository on GitHub, then the address is also given to us. For instance, my repository address is `git@github.com:damwhit/git-and-github-intro.git`.
+The name of the remote, by convention, is typically `origin`. If we go to the repository on GitHub, then the address is also given to us. For instance, my repository address is `git@github.com:kalikoze/git-and-github-intro.git`.
 
-So all together, enter the command `git remote add origin git@github.com:damwhit/git-and-github-intro.git` into the terminal.  
+So all together, enter the command `git remote add origin git@github.com:kalikoze/git-and-github-intro.git` into the terminal.  
 
 The local and remote repositories are now linked! (we can confirm that is the case by running `git remote -v`)
 
@@ -215,7 +215,7 @@ Finally, we need to push up our initial code from our local repository (aka your
 
 `git push -u origin master`
 
-*Note* the `-u` flag only needs to be used on the initial push, all subsequent pushes can leave it out.
+*Note* the `-u` (also known as **set upstream**) flag only needs to be used on the initial push, all subsequent pushes can leave it out.
 
 Go back and visit the repository on github.com and refresh the page. If all went well you should see your files.  
 
@@ -376,6 +376,33 @@ Things to consider:
 * If there are commands used in both of the above, feel free to add another post-it for that duplicate command
 * What steps are useful for pulse checking? Could they exist outside of the flow as helpers?
 * Add any intermittent information that you think is useful
+
+### A Note About Merge Conflicts
+ You might be wondering what happens if you're working on a project with a partner and you both make changes to the same line of code. This is called a merge conflict.
+ Merge conflicts happen when two different commits can't be automatically merged and they need to be resolved. Conflicts can occur when you pull down from origin or when you are creating a pull request to merge to master on GitHub.
+ In the event that this happens, you might get a message like this:
+ ```
+CONFLICT(content): Merge conflict in boots-and-pants.js
+Automatic merge failed. Fix conflicts and commit the results.
+```
+This happens because GitHub doesn't know what code to believe.
+Below is an example of what a conflict might look like upon inspection of the flagged file:
+
+```javascript
+// boots-and-pants.js
+ var a = 1;
+<<<<<<<<<HEAD
+var b = 2;
+=========
+var b = 0;
+>>>>>>>>>39457094865893724234798326445
+var d = 5;
+var e = 3;
+var r = 18;
+ ```
+ The lines of code between HEAD and the set of equals signs (so in this case, var b = 2) are all of the changes you made that are in conflict. These are changes that you have made on your computer.
+ Everything between the set of equals signs and the greater than signs followed by the conflicting commit number (var b = 0) are all of the changes from GitHub that you’re trying to pull down that are conflicting.
+ To resolve conflicts, you have to decide which of the two conflicting lines you want to keep and then remove the HEAD, the set of equals, and the conflicting commit line.
 
 ### Next steps
 
