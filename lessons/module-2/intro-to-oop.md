@@ -30,17 +30,6 @@ By the end of this lesson, you will be able to:
 ### Journal Warm Up
 
 * Describe one new or interesting thing that you learned about OOP from your research yesterday
-* What is going on in the code snippet below? What will print to the console?
-
-```js
-function hello() {
-  console.log('hello');
-}
-
-hello.greeting = 'It's in the console!';
-
-console.log(hello.greeting) // What will this return?
-```
 * Rewrite this class as a function called `createUnicorn` that creates an object and returns it. The object should still have the same properties of `name` and `color` as well as a reference to a `sparkle` function that is declared outside of `createUnicorn`.
 
 ```js
