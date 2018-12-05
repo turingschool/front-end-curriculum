@@ -28,10 +28,10 @@ Take a few minutes to read through your assigned article. We will come back toge
  - What is confusing?
  - What stands out?
 
-[Article 1](https://dbader.org/blog/write-a-great-readme-for-your-github-project)
-[Article 2](https://www.giacomodebidda.com/how-to-write-a-killer-readme/)
-[Article 3](https://thejunkland.com/blog/how-to-write-good-readme.html)
-[Article 4](https://ponyfoo.com/articles/readme-driven-development)
+* [Article 1](https://dbader.org/blog/write-a-great-readme-for-your-github-project)
+* [Article 2](https://www.giacomodebidda.com/how-to-write-a-killer-readme/)
+* [Article 3](https://thejunkland.com/blog/how-to-write-good-readme.html)
+* [Article 4](https://ponyfoo.com/articles/readme-driven-development)
 
 ### Writing READMEs at Turing
 
