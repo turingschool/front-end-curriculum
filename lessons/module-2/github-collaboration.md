@@ -24,6 +24,7 @@ A README is often the first thing people will see when they visit an open source
 #### Research and Talk
 
 Take a few minutes to read through your assigned article. We will come back together as a group to discuss what you find. Here are some questions to consider as you read:
+
  - What do you agree with? What do you disagree with?
  - What is confusing?
  - What stands out?
