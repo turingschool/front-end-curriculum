@@ -13,6 +13,49 @@ By the end of this lesson, students should be able to:
 * Recognize what makes a README useful
 * File and organize issues with labels, that are closed through PRs
 
+
+## Writing READMEs 
+
+A README is often the first thing people will see when they visit an open source project. It's vital that this document provides visitors with the information they need in a clear and efficient manner. Often times, the README determines whether or not people will work with or explore your project further.
+
+#### Research and Talk
+
+Take a few minutes to read through your assigned article. We will come back together as a group to discuss what you find. Here are some questions to consider as you read:
+ - What do you agree with? What do you disagree with?
+ - What is confusing?
+ - What stands out?
+
+[Article 1](https://dbader.org/blog/write-a-great-readme-for-your-github-project)
+[Article 2](https://www.giacomodebidda.com/how-to-write-a-killer-readme/)
+[Article 3](https://thejunkland.com/blog/how-to-write-good-readme.html)
+[Article 4](https://ponyfoo.com/articles/readme-driven-development)
+
+### Writing READMEs at Turing
+
+For your projects at Turing, your goal is to demonstrate to employers that you understand the purpose of a README. Your READMEs should be set up so employers can clone things down and use your application. Other things to highlight would be your reflection of your work, how you attacked the project, how you collaborated, etc. Remember, the goal is to really showcase your work!
+
+For your time at Turing, your README should have the following flow:
+
+- _Abstract_ A sentence of two describing the project
+
+- _Install/Setup instructions_
+
+- _Everything else_
+
+Your abstract and installation/setup instruction should be prioritized since this is the common convention for how READMEs are set up in the wild.
+
+#### Turn and Talk
+
+Who would you hire from these READMES?
+
+* [Poker Season Tracker](https://github.com/notmarkmiranda/poker_season_tracker) <!-- medium, image is not working, all text... -->
+* [Narwhal Assault](https://github.com/Obleo33/game-time)
+* [School Finder](https://github.com/sljohnson32/school-finder)
+* [Flex Sandbox](https://github.com/Mickyfen17/flex-sandbox)
+* [Club Reads](https://github.com/lindsaywparker/club-reads-frontend) <!-- high, text needs some formatting help, but pretty good -->
+
+
+
 ## Filing Issues
 
 Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on will have a tracker of some kind (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers connect directly to GitHub issues but offer a more robust UI experience. For today's lesson, we are going to be working with GitHub’s built-in tracker called `Issues` - which has its own section in every repository. 
@@ -103,43 +146,10 @@ Working in your project pairs, take a look at the the project spec and user stor
 
 Remember, you can also file issues for things that you haven't figured out.
 
-## Writing READMEs 
 
-A README is often the first thing people will see when they visit an open source project. It's vital that this document provides visitors with the information they need in a clear and efficient manner. Often times, the README determines whether or not people will work with or explore your project further.
 
-#### Research and Talk
 
-Take a few minutes to read through your assigned article. We will come back together as a group to discuss what you find. Here are some questions to consider as you read:
- - What do you agree with? What do you disagree with?
- - What is confusing?
- - What stands out?
 
-[Article 1](https://dbader.org/blog/write-a-great-readme-for-your-github-project)
-[Article 2](https://www.giacomodebidda.com/how-to-write-a-killer-readme/)
-[Article 3](https://thejunkland.com/blog/how-to-write-good-readme.html)
-[Article 4](https://ponyfoo.com/articles/readme-driven-development)
-
-### Writing READMEs at Turing
-
-For your projects at Turing, your goal is to demonstrate to employers that you understand the purpose of a README. Your READMEs should be set up so employers can clone things down and use your application. Other things to highlight would be your reflection of your work, how you attacked the project, how you collaborated, etc. Remember, the goal is to really showcase your work!
-
-For your time at Turing, your README should have the following flow:
-
-- _Abstract_ A sentence of two describing the project
-
-- _Install/Setup instructions_
-
-- _Everything else_
-
-Your abstract and installation/setup instruction should be priortized since this is the common convention for how READMEs are set up in the wild.
-
-#### Turn and Talk
-
-<!-- Who would you hire from these READMES?
-
-Add 4 READMEs of varying quality
-
--->
 
 
 ## Code Review
