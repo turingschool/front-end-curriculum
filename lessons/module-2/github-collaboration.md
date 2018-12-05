@@ -14,6 +14,9 @@ By the end of this lesson, students should be able to:
 * File and organize issues with labels, that are closed through PRs
 
 
+-------------------------------------------------------------
+
+
 ## Writing READMEs 
 
 A README is often the first thing people will see when they visit an open source project. It's vital that this document provides visitors with the information they need in a clear and efficient manner. Often times, the README determines whether or not people will work with or explore your project further.
@@ -56,6 +59,9 @@ Who would you hire from these READMES?
 
 
 
+
+
+-------------------------------------------------------------
 
 
 ## Filing Issues
@@ -150,6 +156,9 @@ Remember, you can also file issues for things that you haven't figured out.
 
 
 
+
+
+-------------------------------------------------------------
 
 
 
