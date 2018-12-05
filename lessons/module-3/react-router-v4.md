@@ -22,8 +22,8 @@ tags: React, Router
     * Switch
 
 ## Vocab
-* Route
 * BrowserRouter
+* Route
 * Link
 * NavLink
 * Redirect
@@ -39,24 +39,24 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Up until now you've been creating single page applications that conditionally render based on a boolean in state. Something along the lines of...
 
-```javascript
+```jsx
 class SomeComponent extends Component {
   constructor() {
-     super()
-     this.state = {
-         showWelcome: false
-     }
+    super();
+    this.state = {
+      showWelcome: false
+    }
   }
   
   render() {
-     return (
-         { this.state.showWelcome && <Welcome /> }
-     )
+    return (
+      { this.state.showWelcome && <Welcome /> }
+    )
   }
 }
 ```
 
-This works...but as our applications grow larger and we need to render more components, these conditinal toggles can become difficult to manage. 
+This works...but as our applications grow larger and we need to render more components, these conditinal toggles can become difficult to manage.
 
 Suppose you have a long list of movies and you only want to show a user's favorites when they click on a `Favorites` button... 
 You can easily accomplish this with React Router!
@@ -65,7 +65,7 @@ Enter [React Router](https://reacttraining.com/react-router/web/guides/philosoph
 
 **From the Docs**
 
-React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering
+React Router is a collection of navigational components that compose declaratively with your application. Whether you want to have bookmarkable URLs for your web app or a composable way to navigate in React Native, React Router works wherever React is rendering.
 
 **In a nutshell...**
 
@@ -120,11 +120,11 @@ This also allows you to define and pass specific properties to a component dynam
 <Route path='/ideas/:id' render={({ match }) => {
   const idea = ideas.find(idea => idea.id === parseInt(match.params.id));
   
-  if (idea) {
-    return <ListItem match={match} {...idea} />;
+  if (!idea) {
+    return (<div>This idea does not exist! </div>);  
   }
+  return <ListItem match={match} {...idea} />
   
-  return (<div>This idea does not exist! </div>);
 }} />
 ```
 

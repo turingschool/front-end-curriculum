@@ -266,11 +266,9 @@ also asynchronous, we need to chain the Promise, and update the component before
 it('resets the state after adding a new grocery', () => {
   renderedComponent.setState({grocery: mockGrocery})
 
-  Promise.resolve(renderedComponent.instance().handleAddGrocery(mockEvent)))
-    .then(() => {
-      renderedComponent.update()
-    })
-    .then(() => {
+  // Execution and Expectation - this assumes that handleAddGrocery method returns a promise
+  renderedComponent.instance().handleAddGrocery(mockEvent)
+k   .then(() => {
       expect(renderedComponent.state('grocery')).toEqual({name: '', quantity: ''})
     })
 })
@@ -302,13 +300,7 @@ it('sets an error when the fetch fails', () => {
     new Error('failed')
   )
 
-  Promise.resolve(renderedComponent.instance().handleAddGrocery(mockEvent)))
-    .then(() => {
-      renderedComponent.update()
-    })
-    .then(() => {
-      renderedComponent.update()
-    })
+  renderedComponent.instance().handleAddGrocery(mockEvent)
     .then(() => {
       expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
     })
