@@ -65,7 +65,7 @@ Who would you hire from these READMES?
 
 ## Filing Issues
 
-Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on will have a tracker of some kind (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers connect directly to GitHub issues but offer a more robust UI experience. For today's lesson, we are going to be working with GitHub’s built-in tracker called `Issues` - which has its own section in every repository. 
+Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on will have a tracker of some kind (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers often connect directly to GitHub issues, but offer a more robust UI experience. For today's lesson, we are going to be working with GitHub’s built-in tracker called `Issues` - which has its own section in every repository. 
 
 Filing issues is an important part of the workflow process. It allows you to:
 
@@ -135,16 +135,6 @@ You will manage and track issues on your repo by assigning yourself or other tea
 Milestones are a helpful way to prioritize and create deadlines for your project. For example, a milestone on one of your projects at Turing might be titled `MVP` (minimum viable product) and would include all the features and functionality that you would need to have completed (by a certain due date) that meet the MVP you've defined. Other possible milestones for your Turing might include `Nice-to-haves`, `Extensions`, or `Post-graduation`.
 
 ![Issues Milestones](/assets/images/lessons/github-issues/issues-milestones.png)
-
-### Additional Tooling for Issue Tracking
-
-Besides GitHub issues, there are other popular issue tracking tools that you might utilize on the job. Some of the more common are:
-
-* Trello
-* Waffle.io
-* Jira
-
-Often times, these tools provide you with a slightly more robust tracking interface for your projects, and still have the ability to hook directly into GitHub issues.
 
 
 #### Turn and Talk (20 mins)
