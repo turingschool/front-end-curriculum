@@ -126,74 +126,55 @@ src/
 - Implement a `More` button. When clicked, the next 10 items of that category should be shown. There should be a `Back` button to go back to the previous page.  
 
 
-## Rubric
+## Rubric 
 
 ### Specification Adherence
 
-- 4 - The application completes all 6 iterations above and implements the extension.
-- 3 - The application completes all 6 iterations.
-- 2 - The application is in a usable state, but is missing some of the features outlined in the specification above.
-- 1 - The application is missing multiple features essential to having a complete application.
+* 4 - All requirements from 3 are met. The application completes all iterations above and implements one or 
+  more of the extensions. And the evaluator has no recommendations for design changes.
+* 3 - The application completes all iterations above without error. Evaluator has minimal
+  recommendations for design changes.
+* 2 - The application is in a usable state, but is missing part of one or more of the 
+  features outlined above. Evaluator has multiple recommendations for design
+  changes.
+* 1 - The application is missing multiple features outlined above. Developer did
+  minimal to no CSS for this project.
+  
+  [10 Essential Usability Guidelines.](https://speckyboy.com/10-essential-web-application-usability-guidelines/)
 
-### Code Quality
+### Project Professionalism
 
-- 4 - Developer demonstrates complete understanding of React with appropriately separated components and exceptionally well refactored code.
-- 3 - Developer appears comfortable in React. There are minor opportunities to refactor.
-- 2 - Developer selected appropriate libraries and frameworks to build the app but did not use them as intended. Significant refactoring necessary.
-- 1 - Developer did not make any effort to use React effectively or refactor code.
-
-### CSS/Design
-
-- 4 - Developer has made a targeted effort to make the app appealing and user friendly. Evaluator has minimal recommendations for design changes. Follows [10 Essential Usability Guidelines.](https://speckyboy.com/10-essential-web-application-usability-guidelines/)
-- 3 - Developer has made a targeted effort to make the app appealing and user friendly. Evaluator has multiple recommendations for design changes. Follows majority of the [10 Essential Usability Guidelines.](https://speckyboy.com/10-essential-web-application-usability-guidelines/)
-- 2 - Developer has made intentional design decisions to create a user friendly application but Louisa would be mad. Attempts to follow [10 Essential Usability Guidelines.](https://speckyboy.com/10-essential-web-application-usability-guidelines/)
-- 1 - Developer did minimal to no CSS for this project besides what was indicated in the comp.
-
-### React Router
-
-- 4: Application is a single page and uses the React Router to display appropriate components based on URL.
-- 3: Application is a single page and uses the React Router but does not display the appropriate components upon navigating.
-- 2: Application does not render/cannot find additional routes.
-- 1: Application did not use a Router
+* 4 - All requirements from 3 met, codebase has zero linter errors/warnings and
+  readme contains screenshots of application. Project team uses a rebase
+  workflow, taking advantage of github issues to track work. Project shows a
+  complete mastery of React architecture.
+* 3 - PropType functionality is complete, the codebase has less than 5 linter
+  errors, README has been updated with all group members. Project utilized
+  wireframes from the outset. All git commits are atomic, made first to
+  branches, and use descriptive and consise commit messages. Project
+  demonstrates a fundamental understanding of React architecture.
+* 2 - Project is missing PropTypes, README updates, wireframes, or has more
+  than 5 linter errors. Project team makes large infrequent git commits.
+  Project shows a basic understanding of React.
+* 1 - PropTypes are substantially unused, README is incomplete, wireframes were
+  not used, or more than 10 linter errors are present. Git history does not show
+  evolution of project, with many large and inconsistent commits. Project shows
+  little understanding of React and significant refactoring is required.
 
 ### Testing
 
-- 4 - Every component is tested from both a unit and acceptance standpoint, all crucial functionality is tested
-- 3 - Almost all components are tested to a level that indicates developer has an understanding of testing
-- 2 - A valid attempt was made to test functionality with obvious gaps where functionality is not tested
-- 1 - There was little to no attempt to test this application.
+* 4 - All requirements from 3 met, all async functionality is tested, tests are
+  passing and run efficiently (using mount only when appropriate).
+* 3 - All requirements from 2 are met and a valid attempt to test asynchronous functionality has been made.
+* 2 - Nearly all unit tests are in place. No attempt to test async functionality was made.
+* 1 - A valid attempt to test this application was made, but there are obvious gaps, with missing unit tests.
 
-### Wireframes
 
-- Pass - Developer team laid out their thinking using wireframes before building their project
-- Fail - No wireframes were used to build this project
+### Routing
 
-### PropType Implementation
-
-- Pass - Proptype validation is implemented for any component receiving props.
-- Fail - There are components missing proptype validation.
-
-### README Updates
-
-- Pass - The README.md file has been updated with a description of the project, the team, and how to get it up and
-  running
-- Fail - The boilerplate README is still in place
-
-### Code Sanitation
-
-The output from ESLint shows…
-
-- 4 - Zero complaints
-- 3 - Five or fewer complaints
-- 2 - Six to ten complaints
-- 1 - More than ten complaints
-
-### Workflow
-
-- 4 - Developer(s) make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developer(s) are using a rebase workflow, effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. There are no instances where the developer(s) have committed source code that should be .gitignored. There are no instances of "dead" or commented-out code and debugger statements like console.log.
-
-- 3 - Developer(s) make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developer(s) have committed source code that should be .gitignored. There may be some instances of "dead" or commented-out code and debugger statements like console.log that need to be cleaned up.
-
-- 2 - Developer(s) make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be .gitignored and instances of dead code and/or debugger statements.
-
-- 1 - Developer(s) make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be .gitignored and many instances of dead code and/or debugger statements.
+* 4 - All requirements from 3 met, and always chooses the correct component for
+  rendering, as well as the correct Route API. Application should account for
+  undefined routes.
+* 3 - Application uses React Router to display appropriate components based on URL.
+* 2 - Application uses React Router, but does not display the appropriate components upon navigating.
+* 1 - Application uses React Router, but does not render/use all routes.

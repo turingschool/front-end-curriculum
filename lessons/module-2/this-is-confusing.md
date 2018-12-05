@@ -38,21 +38,7 @@ In ES5 functions, the value of this is determined when the function is executed.
 
 With that being said, there are several rules which determine what the value of `this` is at any given point in time.
 
-## Rule 1 - Default _this_ refers to the global object
-
-By default _this_ refers to the global object. In a browser, the global object is the window. If we don't change what the value of `this` is, it will refer to the global object.
-
-```javascript
-console.log(this);
-
-function logThis() {
-  console.log(this);
-}
-
-logThis();
-```
-
-## Rule 2 - When executing a function as a method on an object, _this_ refers to that object.
+## Rule 1 - When executing a function as a method on an object, _this_ refers to that object.
 
 This is a long rule, another way to think about this rule is if a function is executed and there is a `.` before the name of the function, `this` refers to whatever comes before the `.`. 
 
@@ -120,8 +106,60 @@ const obj = {
 const print = obj.printThis;
 
 obj.printThis(); // What will print here? Why?
-print(); // -> What will print here? Why?
 ```
+
+## Rule 2 - _this_ in function code invoked using the new operator refers to the newly created object.
+
+When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
+
+1. `this` is set to a new empty object
+2. The prototype property of the constructor function (Unicorn.prototype in the example below) is set as the prototype of the new object, which was set to `this` in the first step
+3. The body of our function runs
+4. Our new object, `this`, is returned from the constructor
+
+```javascript
+class Unicorn {
+  constructor(name, color) {
+    // new empty object will log
+    console.log(this);  
+
+    this.name = name;
+    this.color = color;
+
+    // object with added properties will log
+    console.log(this);  
+  }
+
+  says(words) { 
+    console.log('Toilet Sparkle is my favorite pony', this);
+  }
+}
+```
+
+When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created instance.
+
+## Rule 3 - Default _this_ refers to the global object
+
+By default _this_ refers to the global object if you are not running your program in strict mode. This means that in the event that one of the first two rules _don't_ apply... _this_ will refer to the global object. (In a browser, the global object is the window). 
+
+#### Strict Mode
+
+Strict Mode is a new feature in ECMAScript 5 that allows you to place a program, or a function, in a “strict” operating context. This strict context prevents certain actions from being taken and throws more exceptions. The statement “use strict”; instructs the browser to use the Strict mode, which is a reduced and safer feature set of JavaScript.
+
+If your program is running in strict mode _and_ neither of the first two rules apply, then _this_ will be undefined. 
+
+
+```javascript
+console.log(this);
+
+function logThis() {
+  console.log(this);
+}
+
+logThis();
+```
+
+*Note:This is also assuming that we don't explicitly change the value of _this_ using a method like `call`, `apply`, or `bind` to set _this_. This is an additional rule that you will likely see as you research _this_ in JavaScript. For our purposes here, we will only be focusing on the 3 rules covered*
 
 #### Turn and Code
 
@@ -154,37 +192,6 @@ const denver = {
       `{buildings: {…}, restaurants: Array(2), logThis: ƒ}`
 2. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
       `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }`
-
-## Rule 3 - _this_ in function code invoked using the new operator refers to the newly created object.
-
-When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
-
-1. `this` is set to a new empty object
-2. The prototype property of the constructor function (Unicorn.prototype in the example below) is set as the prototype of the new object, which was set to `this` in the first step
-3. The body of our function runs
-4. Our new object, `this`, is returned from the constructor
-
-```javascript
-class Unicorn {
-  constructor(name, color) {
-    // new empty object will log
-    console.log(this);  
-
-    this.name = name;
-    this.color = color;
-
-    // object with added properties will log
-    console.log(this);  
-  }
-
-  says(words) { 
-    console.log('Toilet Sparkle is my favorite pony', this);
-  }
-}
-```
-
-When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created instance.
-
 
 
 <!-- 

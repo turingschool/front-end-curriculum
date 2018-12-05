@@ -294,14 +294,14 @@ if (hoursOfSleep < 6) {
 ```
 
 ```javascript
-var cookie = "chocolate chip";
+var nextLocation = "home";
 
-if (cookie === "chocolate chip") {
-  alert("This cookie is a chocolate chip cookie!");
-} else if (cookie === "oatmeal raisin") {
-  alert("This cookie is not chocolate chip :(");
+if (nextLocation === "home") {
+  alert("It's been a long day, let's go home!");
+} else if (nextLocation === "work") {
+  alert("Good morning, finding the fastest route to work!");
 } else {
-  alert("I bet you wish you had a chocolate chip cookie");
+  alert("Finding location.  Found it!  Let's go!");
 }
 ```
 

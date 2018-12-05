@@ -143,7 +143,7 @@ Let's take a look at the syntax and then we'll talk about what's happening.
 1. Take the JavaScript that you wrote during the previous pair practice session.
 2. Add a `<button>` to the HTML markup of the page.
 3. Add an event listener to that button.
-4. When the button is clicked, all of your JavaScript from the previous session should execute.
+4. When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).
 
 #### Extensions
 
@@ -165,8 +165,8 @@ We can also modify the CSS styling of any element on the page using JavaScript.
 
 There are three approaches:
 
-1. We can directly manipulate the style of the element.
-2. We can add or remove classes from the element.
+1. We can directly manipulate the style of the element through inline styles.
+2. **We can add or remove classes from the element (the preferred way).**
 3. You can modify the stylesheet itself with JavaScript.
 
 We're only going to talk about the first two today.
@@ -202,10 +202,10 @@ Here is an example of the second task:
 
 ![Custom CSS Color Box](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif)
 
-Review Questions
+### Summary
 - What is the DOM?
 - How do we get information out of the DOM and into our JS?
 - How do we add information to the DOM?
-- How can change the CSS of elements?
+- How can we change the CSS of elements?
 - What is the preferred method for updating our CSS using JS?
 

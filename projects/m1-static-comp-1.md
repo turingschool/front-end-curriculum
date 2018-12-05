@@ -28,6 +28,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 ### Additional Requirements
  - Site must work across Firefox, Safari, Chrome
  - Developer must use normalize instead of reset file in CSS
+ - **You are allowed to use `flex-box` for this project (and will likely want to).  However, DO NOT use `grid`**
 
 ***
 
