@@ -35,17 +35,15 @@ Take a few minutes to read through your assigned article. We will come back toge
 
 ### Writing READMEs at Turing
 
-For your projects at Turing, your goal is to demonstrate to employers that you understand the purpose of a README. Your READMEs should be set up so employers can clone things down and use your application. Other things to highlight would be your reflection of your work, how you attacked the project, how you collaborated, etc. Remember, the goal is to really showcase your work!
+For your projects at Turing, your goal is to demonstrate to employers that you understand the purpose of a README. Your READMEs should be set up so employers can clone things down and use your application. Other things you might want to highlight would be a small reflection of your work, how you attacked the project, how you collaborated, etc. Remember, the goal is to really showcase your work!
 
 For your time at Turing, your README should have the following flow:
 
-- _Abstract_ A sentence of two describing the project
+- _Abstract_ A sentence of two describing the project, with a link to the hosted version if applicable
+- _Install/Setup instructions_ How someone can clone down the project and run it locally
+- _Everything else_ This might include mentioning other contributors, the wireframes and design inspiration used for developing the UI, a reflection of the project as a whole, etc.
 
-- _Install/Setup instructions_
-
-- _Everything else_
-
-Your abstract and installation/setup instruction should be prioritized since this is the common convention for how READMEs are set up in the wild.
+*Your abstract and installation/setup instruction should be prioritized since this is the common convention for how READMEs are set up in the wild.*
 
 #### Turn and Talk
 
