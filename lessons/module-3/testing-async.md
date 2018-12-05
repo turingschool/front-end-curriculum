@@ -486,19 +486,18 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import AddGroceryForm from './AddGroceryForm'
 import { addGrocery } from '.apiCalls'
-
-const mockGrocery = { name: 'extra flaming hot cheetos', quantity: 15 }
-const mockGroceries = [{ name: 'apple', quantity: 12 }, mockGrocery]
-
-jest.mock('./apiCalls', () => {
-  addGrocery: () => mockGroceries
-})
+jest.mock('./apiCalls')
 
 describe('AddGroceryForm', () => {
   const mockGrocery = { name: 'Oranges', quantity: 3 }
+  const mockGroceries = [{ name: 'apple', quantity: 12 }, mockGrocery]
   const mockUpdateGroceryList = jest.fn()
   const mockEvent = { preventDefault: jest.fn() }
   let renderedComponent
+  
+  beforeAll(() =>{
+    addGrocery.mockImplementation(() => mockGroceries);
+  })
 
   beforeEach(() => { 
     renderedComponent = shallow(<AddGroceryForm 
@@ -518,10 +517,12 @@ describe('AddGroceryForm', () => {
   })
 
   it('sets an error when the fetch fails', async () => {
-    await renderedComponent.instance().addGrocery(mockEvent)
+    addGrocery.mockImplementation(() => {
+      throw new Error('Error adding grocery')
+    });
+    await renderedComponent.instance().handleAddGrocery(mockEvent)
     expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
   })
-
 })
 ```
 
