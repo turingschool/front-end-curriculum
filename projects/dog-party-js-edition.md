@@ -75,6 +75,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
   * `git commit -m "Initial commit"`
   * `git remote add origin git@github.com:Kalikoze/Dog-Party.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Dog-Party.git` -- this step makes the connection between your local files and the repo that lives on GitHub)
   * `git push -u origin master` (this step pushes your local code up to your GitHub repo)
+> Side note: `git init` creates a **hidden** `.git` directory that's used to track changes. Run `ls -a` in the project directory to ensure your `.git` directory exists. 
 6. Once you see your code up in your repository on GitHub, go to `Settings` and publish your site on GitHub Pages, a great way to host static sites directly through GitHub
 7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=0)
 
