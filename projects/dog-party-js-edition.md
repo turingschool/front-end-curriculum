@@ -70,7 +70,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 3. Do NOT initialize the repository with a `README`.  You have already created one locally on your computer.
 4. Leave the repo set as `public` and then click `Create Repository`
 5. In your terminal, follow steps below in order and enter each command into your terminal
-  * `git init` inside of your `dog-party` directory
+  * `git init` inside of your `dog-party` directory (**Side Note:** `git init` creates a *hidden* `.git` directory that's used to track changes. Run `ls -a` in the project directory to ensure your `.git` directory exists. )
   * `git add .`
   * `git commit -m "Initial commit"`
   * `git remote add origin git@github.com:Kalikoze/Dog-Party.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Dog-Party.git` -- this step makes the connection between your local files and the repo that lives on GitHub)

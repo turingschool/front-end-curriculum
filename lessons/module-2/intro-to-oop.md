@@ -407,7 +407,7 @@ We'll be building out some classes to create a minimal flash card application.
 
 _**Review**_
 
-Given these two classes, create a parent class of `Pet` and refactor `Dog` and `Cat` so they inherit from it. 
+// Given these two classes, what properties and/or methods would a parent class of Pet have? What would need to modified/removed/added on our classes of `Dog` and `Cat` for them to inherit from `Pet`?
 
 ```js
 // Dog.js
