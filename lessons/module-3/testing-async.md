@@ -56,7 +56,7 @@ handleAddGrocery(event) {
   const { updateGroceryList } = this.props;
   const grocery = this.state.grocery;
 
-  fetch('/api/v1/groceries', {
+  return fetch('/api/v1/groceries', {
     method: 'POST',
     body: JSON.stringify({ grocery }),
     headers: {
@@ -435,7 +435,7 @@ export const addGrocery = async (grocery) => {
     }
   })
 
-  if(response.status >= 400) {
+  if(response.status >= 300) {
     throw(new Error('Error adding grocery'))
   } else {
     return await response.json()
@@ -473,34 +473,11 @@ Now that we've isoloated and tested our fetch functionality, testing our compone
 mock the response from our new `addGrocery` function. We no longer need to test that fetch is being called in the
 component tests, we only need to test that the data is handled correctly after the function is called.
 
-To facilitate this, we're going to create a mock file, which will override the addGrocery helper method we just created.
-
-```javascript
-// __mocks__/apiCalls.js
-
-export const addGrocery = jest.fn()
-  .mockImplementationOnce(() => ({
-    groceries: [
-      { id: 1489863729151, name: 'Rutabagas', quantity: 10, purchased: false, starred: false },
-      { id: 1489863740047, name: 'Beef Jerky', quantity: 1000, purchased: false, starred: false },
-    ],
-  }))
-  .mockImplementationOnce(() => ({
-    groceries: [
-      { id: 1489863729151, name: 'Rutabagas', quantity: 10, purchased: false, starred: false },
-      { id: 1489863740047, name: 'Beef Jerky', quantity: 1000, purchased: false, starred: false },
-    ],
-  }))
-  .mockImplementationOnce(() => {
-    throw(new Error('Error adding grocery'))
-  })
-```
+To facilitate this, we're going to create a mock, which will override the addGrocery helper method we just created.
 
 Using Jest's `mockImplementationOnce` helper, we can control what is returned from our function each time it is
 called. This greatly simplifies our three tests. When we call `jest.mock('./apiCalls')`, jest overwrites any functions
-that are found in `apiCalls.js` with the functions of the same signature in `__mocks__/apiCalls.js`. Note that it's
-critical that the `__mocks__` directory live next to the actual functional code, otherwise Jest won't be able to find
-it.
+that are found in `apiCalls.js` with whatever we specify in the second argument to that mock function call.
 
 ```javascript
 // AddGroceryForm.test.js
@@ -508,14 +485,19 @@ it.
 import React from 'react'
 import { shallow } from 'enzyme'
 import AddGroceryForm from './AddGroceryForm'
-
+import { addGrocery } from '.apiCalls'
 jest.mock('./apiCalls')
 
 describe('AddGroceryForm', () => {
   const mockGrocery = { name: 'Oranges', quantity: 3 }
+  const mockGroceries = [{ name: 'apple', quantity: 12 }, mockGrocery]
   const mockUpdateGroceryList = jest.fn()
   const mockEvent = { preventDefault: jest.fn() }
   let renderedComponent
+  
+  beforeAll(() =>{
+    addGrocery.mockImplementation(() => mockGroceries);
+  })
 
   beforeEach(() => { 
     renderedComponent = shallow(<AddGroceryForm 
@@ -525,20 +507,22 @@ describe('AddGroceryForm', () => {
 
   it('resets the state after adding a new grocery', async () => {
     renderedComponent.setState({grocery: mockGrocery})
-    await renderedComponent.instance().addGrocery(mockEvent)
+    await renderedComponent.instance().handleAddGrocery(mockEvent)
     expect(renderedComponent.state('grocery')).toEqual({name: '', quantity: ''})
   })
 
   it('calls the updateGroceryList callback after adding a new grocery', async () => {
-    await renderedComponent.instance().addGrocery(mockEvent)
+    await renderedComponent.instance().handleAddGrocery(mockEvent)
     expect(mockUpdateGroceryList).toHaveBeenCalled()
   })
 
   it('sets an error when the fetch fails', async () => {
-    await renderedComponent.instance().addGrocery(mockEvent)
+    addGrocery.mockImplementation(() => {
+      throw new Error('Error adding grocery')
+    });
+    await renderedComponent.instance().handleAddGrocery(mockEvent)
     expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
   })
-
 })
 ```
 
