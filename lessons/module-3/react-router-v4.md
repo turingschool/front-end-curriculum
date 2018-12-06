@@ -75,17 +75,20 @@ React Router allows us to:
 * Bookmark specific page/view within our application to reference at a later time
 * Utilize the `back` and `forward` buttons in our browser
 
+* In your notebook. What does this lead to? Why or how? - Take a minute to write and then discuss with a partner.
+
 ### Router
 
 There are many high-level routers that come with the `react-router-dom` module:
 
 * `<BrowserRouter>`
-* `<HashRouter>`
-* `<MemoryRouter>`
-* `<NativeRouter>`
-* `<StaticRouter>`
+* `<HashRouter>` - for legacy browsers
+* `<MemoryRouter>` - for testing
+* `<StaticRouter>` - for server side rendering
 
 We will be focusing on **`BrowserRouter`** which is _A Router that uses the HTML5 history API to keep your UI in sync with the URL._
+
+We will wrap our entire app with this router.
 
 Ultimately it will allow our users to bookmark specific paths and utilize their forward/back buttons. 
 
@@ -140,7 +143,7 @@ It works exactly like render except that it gets called whether there is a match
 
 **Component > Render > Children**
 
-`Component` supercedes `Render` which supercedes `Children` so be sure to only include one within a route.
+`Component` supersedes `Render` which supersedes `Children` so be sure to only include one within a route.
 
 ### Route Props
 
@@ -181,7 +184,7 @@ _A special version of the `<Link>` that will add styling attributes to the rende
 
 It can take the following attributes:
 
-* activeClassName: string
+* **activeClassName: string** - defaults to `active`
 * activeStyle: object
 * exact: bool
 * strict: bool
@@ -199,10 +202,11 @@ It can take the following attributes:
 ### Redirect
 
 _Rendering a `<Redirect>` will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
+More of a nice to know for now. This is something that can be used if the user does something wrong. ie. went to a route they don't have permissions to access.
 
 It can take the following attributes:
 
-* to: string
+* **to: string**
 * to: object
 * push: bool
 * from: string
