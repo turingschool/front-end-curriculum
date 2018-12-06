@@ -172,7 +172,7 @@ First, lets look at the syntax provided from Mocha:
 describe('unicorn', function() {
   it('should accumulate calories when calling eat', function() {
   });
-})
+});
 ```
 
 The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that `eating accumulates calories`. You'll write the code above with any framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
@@ -194,13 +194,6 @@ The assertion library we are going to use today is called [Chai](http://chaijs.c
 ![Chai Syntax Libraries](http://i.imgur.com/T7Q4YkE.png)  
 
 You'll notice that Chai provides three different interfaces that accomplish the same task - as a developer you can choose which version feels best to you. For today we are going to go with the [Expect API](https://www.chaijs.com/api/bdd/).
-
-
-
-
-
-
-
 
 
 ## Structure of a Test  
@@ -245,7 +238,7 @@ describe('Unicorn', function() {
     // Make an assertion to verify that after executing certain functions, we end up with what we expect
     expect(unicorn.calories).to.equal(300);
   });
-})
+});
 ```
 
 ## Testing Practice: Adding Mocha and Chai   
@@ -303,7 +296,7 @@ You'll now see that in your `package.json` you have the following new dependenci
 **Update package.json**:  
 Finally, we need to tell our package.json what to do when we want to run our tests. You'll notice there is a section within our `package.json` file called `scripts`. This is where our node app goes to figure out if the command we told it to execute from our terminal exists in within our application. Right now, we should have the following unhelpful line of code:  
 
-```js
+```json
 "scripts": {
   "test": "echo \"Error: no test specified\" && exit 1"
 },
@@ -315,7 +308,7 @@ Before we change anything, run the command `npm test` from your terminal. You sh
 
 Update the scripts object to run Mocha:  
 
-```js
+```json
 "scripts": {
   "test": "./node_modules/mocha/bin/mocha"
 },
@@ -412,7 +405,7 @@ describe('Box', function() {
     var box = new Box();
 
     expect(box.height).to.equal(100);
-    expect(box.widht).to.equal(100);
+    expect(box.width).to.equal(100);
   });
 
   it('should have take a height and a width as arguments', function() {
@@ -481,7 +474,7 @@ Look at the implementation of the `Box.prototype.area()` function as its written
 
 area() {
   return this.height * this.width;
-}
+};
 
 ```
 
@@ -568,7 +561,7 @@ And lastly, let's update our test for `increaseWidth` to verify that our method 
 it('should have an increment method that will increase the width by a provided value', function() {
   box.increaseWidth(10);
 
-  assert.equal(box.width, 110);
+  expect(box.width).to.equal(110);
   expect(domUpdates.displayWidth).to.have.been.called(1);
   expect(domUpdates.displayWidth).to.have.been.called.with(110);
 });
@@ -602,7 +595,7 @@ Finally, we can call that method in the appropriate place and see that our test 
 increaseWidth(val) {
   this.width += val;
   domUpdates.displayWidth(this.width);
-}
+};
 ```
 
 *Note - if you would like to see this actually update client-side, you will have to create a new instance of Box and call the increaseWidth method in index.js*
@@ -610,6 +603,10 @@ increaseWidth(val) {
 
 #### Your Turn
 Set up the functionality to display the width and height to the DOM - using your `domUpdates file` to keep this code separate from the state of your app. Be sure to update your testing accordingly.
+
+### Checks for Understanding
+
+
 
 <!-- Commenting out the section below because this repo uses canvas, which is not taught anymore -->
 <!-- ## Homework: Adventures of Blocky  
