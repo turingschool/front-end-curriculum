@@ -97,7 +97,7 @@ Let's say we were writing a function that squared a number and we wanted to writ
 
 Let's talk a little bit about what's going on here:
 
-1. Typically, our test files are separate from our implementation code.
+* Typically, our test files are separate from our implementation code.
 
 *Test.js*
 
@@ -116,7 +116,7 @@ function square(n) {
 }
 ```
 
-2. We have a `describe()` block which denotes that we're going to start writing a number of tests about the same unit.
+* We have a `describe()` block which denotes that we're going to start writing a number of tests about the same unit.
 
 ```js
 describe('square', function () {
@@ -126,7 +126,7 @@ describe('square', function () {
 });
 ```
 
-3. We make a statement about our code with the `it()` block.
+* We make a statement about our code with the `it()` block.
 
 ```js
 //describe('square', function () {
@@ -137,7 +137,7 @@ describe('square', function () {
 
 ```
 
-4. We write an _assertion_ about our code. Here, we're asserting that when we pass the number 2 into `square()` that the result should be 4.
+* We write an _assertion_ about our code. Here, we're asserting that when we pass the number 2 into `square()` that the result should be 4.
 
 ```js
 //describe('square', function () {
