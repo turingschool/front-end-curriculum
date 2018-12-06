@@ -5,9 +5,13 @@ tags: javascript, object oriented programming, oop
 module: 2
 ---
 
-### Learning Goals
-* Have a high-level understanding of what OOP is and be able to define it
-* Be able to speak to the principles and benefits of OOP
+## Learning Goals
+
+By the end of this lesson, you will be able to:
+
+* Understand and describe OOP and its benefits
+* Implement and structure a basic program around objects
+* Understand prototypal inheritance
 
 ## Vocab
 
@@ -25,29 +29,49 @@ module: 2
 
 ### Journal Warm Up
 
-* Describe something new that you learned about OOP from your research yesterday
-* Generally define the following words in your own words:
-  - Encapsulate
-  - Inherit
-  - Abstract
-  - Morph
-* Is forgetting to invoke the keyword of `new` with the constructor function below problematic? Will your code still work? Why or why not?
+* Describe one new or interesting thing that you learned about OOP from your research yesterday
+* Rewrite this class as a function called `createUnicorn` that creates an object and returns it. The object should still have the same properties of `name` and `color` as well as a reference to a `sparkle` function that is declared outside of `createUnicorn`.
 
 ```js
-function Unicorn(name) {
-  this.name = name;
-}
+class Unicorn {
+  constructor(name, color) {
+    this.name = name;
+    this.color = color;
+  }
 
-const unicorn = new Unicorn('Brittany')
+  sparkle() {
+    console.log('**!*')
+  }
+}
 ```
 
-# What is Object Oriented Programming?
+# Programming Paradigms 
 
-Object-Oriented Programming is a methodology, paradigm, or design pattern for organizing your code. The OOP approach structures your code around objects rather than functions and procedures.
+A programming paradigm is a "style" or way of thinking about and approaching problems. JavaScript is considered a multi-paradigm language that allows you to freely mix and match object-oriented, procedural, and functional paradigms.
 
-*(Side Note: Functional and procedural programming are other paradigms for code structure that are beyond the scope of this lesson.)*
+In all programs, there are two primary components:
+  1. Data (stuff a program knows)
+  2. Behaviors (stuff a program can do to/with that data) 
 
-Some programming languages are specifically object-oriented (Ruby, Java and C++) and the nature of the language forces you into writing object-oriented code. JavaScript is very flexible and has the ability to be object-oriented, functional or procedural.
+
+| | Functional | Procedural | Object-Oriented |
+|--- |--- |--- |--- |
+| **Focal Point** | Functions | Instructions | Objects |
+| **Data/Behavior** | Separate: distinctly different| Global: shared by functions| Encapsulated: single location|
+
+
+# OOP
+
+Object Oriented Programming (OOP) will be our primary focus for this lesson - which is an approach that structures your code around objects rather than functions and procedures. *(Functional and procedural programming are beyond the scope of this lesson.)*
+
+In OOP, real-world objects are each viewed as seperate entities having their own state which is modified only by built in procedures, called methods. Because objects operate independently, they are encapsulated into modules which contain both local environments and methods. Communication with an object is done by message passing.
+
+## Benefits
+
+* Code reusability
+* Encapsulation: values are scoped to the specific object
+* Design & Scalability: OOP forces programmers to meticulously plan the project. OOP is also much more maintainable for larger programs
+* Maintainable: OOP tends to be easier to modify specific pieces of the code without affecting the larger program
 
 ## Objects
 
@@ -60,7 +84,7 @@ let instructor = {
   name: 'Pam',
   module: 2,
   traits: ['funny', 'smart'],
-  teachLesson: (topic, duration) => {
+  teachLesson: function(topic, duration) {
     let lessonDuration = duration;
 
     if (lessonDuration > 3) {
@@ -69,7 +93,9 @@ let instructor = {
       return `Gunna teach you all real good about ${topic}`;
     }
   },
-  gradeProject: (student, project) => `${student} got an A on ${project}!`
+  gradeProject: function(student, project){
+    `${student} got an A on ${project}!`;
+  }
 }
 ```
 
@@ -134,6 +160,10 @@ Let's break down this syntax a bit:
 3. we open up some curly braces (just like a regular object)
 4. we immediately set up a **constructor** method (where we set our instance properties)
 5. we define our own custom methods of `teachLesson` and `gradeProjects`
+
+#### Turn and Code
+
+Take the chair object that you created above and rewrite it as a class.
 
 ### The Constructor Method
 
@@ -221,9 +251,9 @@ let bob = new TA('Bob', 2, ['serious']);
 
 The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor function of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class.
 
-#### Turn and Code
+#### OOP: Animals and the Zoo
 
-With a partner, think about the Turing basement and come up with something that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. Create a repl for them!
+With a partner, think about your last trip to the Zoo and come up with at least three things that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. Create a repl for them!
 
 ### Prototypal Inheritance
 
@@ -233,14 +263,9 @@ Let's inspect our `bob` TA in the developer tools. In the console tab, you shoul
 
 Here you can see the entire prototype chain, and how `bob` is inheriting properties and methods from the `Instructor` class. This is called **prototypal inheritance**.
 
-## More Practice
+<!-- ## More Practice
 
-Pick an application you use regularly -- it can be a social media app, e-commerce site, etc. Think about what kinds of classes you might use to build it. What components of the application should be reusable? What kinds of properties and behaviors should they have? Could anything inherit from them?
-
-
-
-
-
+Pick an application you use regularly -- it can be a social media app, e-commerce site, etc. Think about what kinds of classes you might use to build it. What components of the application should be reusable? What kinds of properties and behaviors should they have? Could anything inherit from them? -->
 
 <!-- 
 
@@ -261,12 +286,7 @@ Pick an application you use regularly -- it can be a social media app, e-commerc
 ![instrument example](https://koenig-media.raywenderlich.com/uploads/2017/05/ObjectOrientedProgramming-graph-2.png)
 
 
-# Benefits
 
-* Code reusability
-* Encapsulation: values are scoped to the specific object
-* Design & Scalability: OOP forces programmers to meticulously plan the project. OOP is also much more maintainable for larger programs
-* Maintainable: OOP tends to be easier to modify specific pieces of the code without affecting the larger program
 
 # How do objects work?
 
@@ -371,7 +391,6 @@ We'll be building out some classes to create a minimal flash card application.
 ## Checks for Understanding
 
 * What is OOP?
-* What is a class? What is an instance of a class?
 * What are the core benefits of OOP?
 * What does the `constructor` method do?
 * Explain how inheritance works
@@ -383,3 +402,45 @@ We'll be building out some classes to create a minimal flash card application.
 * [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
 * [Class-based vs. prototypal inheritance](https://medium.com/javascript-scene/master-the-javascript-interview-what-s-the-difference-between-class-prototypal-inheritance-e4cd0a7562e9)
 * [MDN Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
+
+<!-- ## Review Prompt
+
+_**Review**_
+
+// Given these two classes, what properties and/or methods would a parent class of Pet have? What would need to modified/removed/added on our classes of `Dog` and `Cat` for them to inherit from `Pet`?
+
+```js
+// Dog.js
+
+class Dog {
+  constructor(name, breed, tricksArray) {
+    this.name = name;
+    this.breed = breed;
+    this.tricks = tricksArray;
+  }
+
+  learnTrick() {
+    if (typeof trick === 'string' && !this.tricks.includes(trick) ) {
+      this.tricks.push(trick);
+    }
+  }
+}
+
+// Cat.js
+
+class Cat {
+  constructor(name, breed, faveTreat) {
+    this.name = name;
+    this.breed = breed;
+    this.faveTreat = faveTreat;
+  }
+
+  feedTreat(treat) {
+    if ( this.faveTreat == treat ) {
+      return `${this.name} eats a treat: ${treat}`
+    } else {
+      return `${this.name} casually sniffs the ${treat} and then ignores it.`
+    }
+  }
+}
+``` -->
