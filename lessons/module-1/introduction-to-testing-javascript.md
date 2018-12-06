@@ -176,9 +176,9 @@ The `module.exports` allows us to export a piece of functionality.  In this inst
 
 *Test.js*
 ```js
-  var Hello = require('./implementation')
+var Hello = require('./implementation')
 
-  describe('Hello', function () {
+describe('Hello', function () {
   it('returns the string Hello World', function () {
     assert.equal(Hello(), 'Hello World');
   });
