@@ -16,6 +16,10 @@ p {
   line-height: 1.6em;
 }
 
+.uppercase {
+  text-transform: uppercase;
+}
+
 blockquote p {
   font-size: 1em;
 }
@@ -88,8 +92,6 @@ footer {
 /* Layout */
 
 .container {
-  // display: flex;
-
   min-height: 100vh;
   @media (max-width: $tablet-width) {
     flex-direction: column;
