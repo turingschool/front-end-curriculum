@@ -70,7 +70,7 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 
 ### Your Turn
 
-Now that you know that you have a handle on event propagation, take a few minutes to update your visual representation of event listeners to show that these event phases are occuring behind the scenes.
+Take a couple minutes to create an analogy and visual representation of event propagation to show how these event phases occur behind the scenes.
 
 ## Event Bubbling
 
