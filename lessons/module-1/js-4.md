@@ -33,6 +33,8 @@ They are meant to store two things:
 2. Behavior
 
 ### Anatomy of Objects
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
+
 Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. Each property in an object must be unique. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
 Let's look at an example:
@@ -75,8 +77,6 @@ checkOpenspots: function() {
 }
 ```
 
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
-
 There are two ways to access the properties or methods of an object:
 
 The most common is Dot Notation:
@@ -110,19 +110,19 @@ What if we wanted to add another property to an object after we already created 
 
 ```js
 school.address = '7701 E 1st Pl, Denver, CO 80230'
+console.log(school);
 
-// Log the school afterwards and you should get
-
-{
-  name: 'International School of Denver',
-  capacity: 250,
-  languageImmersion: true,
-  currentStudents: 75,
-  checkOpenSpots: function() {
-    return this.capacity - this.currentStudents;
-  },
-  address: '7701 E 1st Pl, Denver, CO 80230'
-}
+// console output
+// => {
+//   name: 'International School of Denver',
+//   capacity: 250,
+//   languageImmersion: true,
+//   currentStudents: 75,
+//   checkOpenSpots: function() {
+//     return this.capacity - this.currentStudents;
+//   },
+//   address: '7701 E 1st Pl, Denver, CO 80230'
+// }
 ```
 
 
@@ -144,18 +144,18 @@ In a [repl](https://repl.it), in pairs, practice the following:
 var burrito = {
   type: "carne asada"
 };
-
-// 1. Get the value of burrito
-// 2. Get the value of type
-// 3. Add a new property of your choosing
-// 4. Check the value of burrito again
-// 5. Ask burrito for the value of the new property you set, but utilize a different notation than when you asked for the value of type in step #2
-// 6. Change the value of type
-// 7. Get the value of burrito
-// 8. Create a method on burrito that logs "Why am I so delicious?" to the console
-// 9. Check the value of burrito. Do you see your method?
-// 10. Use burrito to log "Why am I so delicious?"
 ```
+
+1. Get the value of burrito
+2. Get the value of type
+3. Add a new property of your choosing
+4. Check the value of burrito again
+5. Ask burrito for the value of the new property you set, but utilize a different notation than when you asked for the value of type in step #2
+6. Change the value of type
+7. Get the value of burrito
+8. Create a method on burrito that logs "Why am I so delicious?" to the console
+9. Check the value of burrito. Do you see your method?
+10. Use burrito to log "Why am I so delicious?"
 
 ### What is `this`: a 10,000ft Introduction
 Let's consider our school object from before
@@ -173,7 +173,7 @@ var school = {
 
 You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`?
 
-Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is dependent on the _context_ of where it is referenced.
+Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is ***dependent on the `context` of where it is referenced***.
 
 There are two primary rules of thumb when it comes to `this`:
 1. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
