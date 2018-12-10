@@ -1,5 +1,5 @@
 ---
-title: JS IV - Objects, `this`, classes, and instances
+title: JS IV - Objects, `this`, Classes, & Instances
 length: 120
 tags: js, introduction, constructor functions, this, classes, objects
 ---
@@ -21,7 +21,7 @@ tags: js, introduction, constructor functions, this, classes, objects
 - `Dot Notation` Notation to access a Value on an Object, explicitly specifies the Key
 - `Bracket Notation` Notation to access a Value on an Object, usually specifies a Key via a variable
 - `this` A variable that changes depending on the context in which it's used
-- `class` A construct that allows us to create multiple instances
+- `class` A constructor that allows us to create multiple instances
 - `instance` An object of a certain type
 
 # Objects
@@ -33,6 +33,8 @@ They are meant to store two things:
 2. Behavior
 
 ### Anatomy of Objects
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
+
 Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. Each property in an object must be unique. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
 Let's look at an example:
@@ -75,8 +77,6 @@ checkOpenspots: function() {
 }
 ```
 
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
-
 There are two ways to access the properties or methods of an object:
 
 The most common is Dot Notation:
@@ -93,7 +93,7 @@ var schoolName = school['name'];
 var schoolCapacity = school['capacity'];
 ```
 
-Bracket Notation is usually used when the name of the property is stored in a variable.
+Bracket Notation is usually used when the name of the property is stored in a variable.  This can make it dynamic, since the value in a variable can _vary_.
 
 ```js
 var prop = 'name';
@@ -104,37 +104,58 @@ Another example can be seen [here](https://github.com/turingschool-examples/java
 
 Default to using Dot Notation unless you find a need to use bracket notation.
 
+#### Adding a Property
+
+What if we wanted to add another property to an object after we already created it?  Easy!  By accessing the object and using Dot Notation, we can create another unique property and assign it whatever value we want.  This works almost exactly like a variable.  Take a look at an example below:
+
+```js
+school.address = '7701 E 1st Pl, Denver, CO 80230'
+console.log(school);
+
+// console output
+// => {
+//   name: 'International School of Denver',
+//   capacity: 250,
+//   languageImmersion: true,
+//   currentStudents: 75,
+//   checkOpenSpots: function() {
+//     return this.capacity - this.currentStudents;
+//   },
+//   address: '7701 E 1st Pl, Denver, CO 80230'
+// }
+```
+
 
 ### Your Turn
 Step 1: Take a few minutes to write about the below individually:
 - To start, go ahead and make an object or two.
 - How do you create an object using literal notation?
 - What is an object and what is it made up of?
-- We've already been using objects... can you think of an example of a dom method or property you've used?
+- We've already been using objects... can you think of an example of a DOM method or property you've used?
 - When we assign a function as the value of a key inside an object, what do we call it?
 
 Step 2: Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
 
 ### Your Turn, Part 2
-In the console (or a repl), in pairs, practice the following:
+In a [repl](https://repl.it), in pairs, practice the following:
 
 ```javascript
 // use this object literal
 var burrito = {
   type: "carne asada"
 };
-
-// 1. Get the value of burrito
-// 2. Get the value of type
-// 3. Add a new property of your choosing
-// 4. Check the value of burrito again
-// 5. Ask burrito for the value of the new property you set, but utilize a different notation than when you asked for the value of type in step #2
-// 6. Change the value of type
-// 7. Get the value of burrito
-// 8. Create a method on burrito that logs "Why am I so delicious?" to the console
-// 9. Check the value of burrito. Do you see your method?
-// 10. Use burrito to log "Why am I so delicious?"
 ```
+
+1. Get the value of burrito
+2. Get the value of type
+3. Add a new property of your choosing
+4. Check the value of burrito again
+5. Ask burrito for the value of the new property you set, but utilize a different notation than when you asked for the value of type in step #2
+6. Change the value of type
+7. Get the value of burrito
+8. Create a method on burrito that logs "Why am I so delicious?" to the console
+9. Check the value of burrito. Do you see your method?
+10. Use burrito to log "Why am I so delicious?"
 
 ### What is `this`: a 10,000ft Introduction
 Let's consider our school object from before
@@ -152,7 +173,7 @@ var school = {
 
 You may have noticed that we used a familiar word in a strange way in the `checkOpenSpots` method of our `school` object. What the heck is `this`?
 
-Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is dependent on the _context_ of where it is referenced.
+Like `var` and `function`, `this` is a special keyword in Javascript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is ***dependent on the `context` of where it is referenced***.
 
 There are two primary rules of thumb when it comes to `this`:
 1. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
@@ -196,7 +217,8 @@ var room = {
 
 ```
 
-**YOUR TURN**: Take a few minutes with the person BEHIND/IN FRONT OF you and work through the next series of code examples. If you've been following along with the code above in a repl/script file, comment all of it out so you are starting with a clean slate.
+### YOUR TURN
+ Take a few minutes with the person next to you and work through the next series of code examples. If you've been following along with the code above in a repl/script file, comment all of it out so you are starting with a clean slate.
 
 **Rule #1: No Copy Pasting.**
 
@@ -214,7 +236,7 @@ var human = {
 };
 
 // Create a function like we did before (refer to the the GLOBAL VARIABLES example where we created a function called showWidth to log an object's width with "this.width" to the console), but this time leverage the context of `this` to print a name.
-var sayName = function() {
+function sayName() {
   console.log('Hello! My name is ' + this.name);
 }
 
@@ -240,7 +262,7 @@ human.getName();
 
 **PRO TIP:** The context of this within a function will be determined by WHERE THE FUNCTION GETS CALLED.
 
-Lets use [this codepen](https://codepen.io/damwhit/pen/XxeZpg?editors=1011) for another activity:
+Lets use [this codepen](https://codepen.io/Kalikoze/pen/REwyxE?editors=0011) for another activity:
 
 1. Individually, determine what the value of `this` is inside of your event listener.
 2. Why is that the value of `this`, in this scenario?
@@ -257,11 +279,11 @@ In your notebook brainstorm five **types** of objects and **specific** instances
 
 For example:
 
-* Type of object: Chair
+* Type of object: laptop
 * Specific instances:
-    * Louisa's chair
-    * Travis' chair
-    * David's chair
+    * Louisa's laptop
+    * Travis' laptop
+    * Khalid's laptop
 
 ### Syntax
 
@@ -272,10 +294,10 @@ class NameOfClass {
 }
 ```
 
-So, for example, if we wanted to create a Dog class, we could do the following:
+So, for example, if we wanted to create a Laptop class, we could do the following:
 
 ```javascript
-class Dog {
+class Laptop {
 }
 ```
 
@@ -283,24 +305,24 @@ Generally we will want to put more information in our classes to make them usefu
 
 ### Practice
 
-Let's practice together with a Fridge class. Make a new node repl and let's put the following in that file:
+Let's practice together with a Fridge class. Make a new JavaScript repl and let's put the following in that file:
 
 ```javascript
 class Fridge {
 }
 
 var fridge1 = new Fridge();
-console.log(`Number 1: ${fridge1}`);
+console.log(fridge1);
 
 var fridge2  = new Fridge();
-console.log(`Number 2: ${fridge2}`);
+console.log(fridge2);
 ```
 
 Run the repl to see what the fridges are showing at this point. We currently have no state or behavior for these fridge instances. But it is clear that they are instances of a fridge because they show up with `Fridge` before their `{}`.
 
-### Independent Practice
+### Your Turn
 
-**TRY IT**: With your pair, define a Dog class in a repl and create instances of that class.
+With your pair, define a LapTop class in a repl and create instances of that class.
 
 ### Constructor
 
@@ -373,9 +395,9 @@ var fridge2 = new Fridge("black", 40, true, []);
 
 Note that the arguments that we pass to our `Class()` are order dependent.
 
-### Independent Practice
+### Your Turn
 
-**TRY IT**: With your pair, give your Dog class some attributes and create some instances of Dog.
+With your pair, give your Laptop class some attributes and create some instances of Laptop.
 
 ## Other Methods
 
@@ -401,38 +423,38 @@ Update your repl so that you:
 3. Add something to the contents of the Fridge.
 4. Log the new contents of the Fridge.
 
-### Independent Practice
+### Your Turn
 
-**TRY IT**: With your pair, create a `celebrateBirthday` method for your Dog class. This should increase the age of that dog by 1.
+With your pair, create a `turnOn` method for your Laptop class. This should set the power of that laptop to _true_.
 
-## In Pairs
+<!-- ## Extra Practice
 
 ### Create a Book Class
 
-With your partner, create a book class. Make sure that your book class has at least 3 properties and 2 methods. Log those instances using your repl console or console.logs
+Create a book class. Make sure that your book class has at least 3 properties and 2 methods. Log those instances using your repl console or console.logs
 
 ### Create a Library Class
 
-With your partner, create a Library class. Add properties as you wish, but the be sure to include a `collection` property that starts as an empty array.
+Create a Library class. Add properties as you wish, but the be sure to include a `collection` property that starts as an empty array.
 
 If you have time:
 
 * Add an `addBook` method that takes an instance of book and adds it to your collection.
 * Add a `titles` method that iterates over your collection of books and returns only their titles.
-* Add an `authors` method that iterates over your collection of books and returns the authors for each book.
+* Add an `authors` method that iterates over your collection of books and returns the authors for each book. -->
 
 ### Check for Understanding
 
 With your partner, answer the questions below.
 
 * Classes, instances, objects
+    * What is an Object?
     * What is a Class?
     * What is an Instance?
-    * What is an Object?
     * How are these three things alike/different?
+    * What code do you write to create a one-off object?
     * What code do you have to write to create a Class? 
     * What code do you have to write to create an instance? 
-    * What code do you write to create a one-off object?
 * Properties & Methods
     * What is a property? How can we query a property?
     * How can we reassign the value of a property?

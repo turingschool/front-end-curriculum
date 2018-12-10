@@ -88,7 +88,7 @@ functional programming.
 
 ## Lets get our hands dirty
 
-Open up [this Repl](https://repl.it/@wvmitchell/ninjaCurryStart) and fork it to
+Open up [this Repl](https://repl.it/@clynam/ninjaCurryStart) and fork it to
 your own account. On your own, spend 15 minutes working on the first problem.
 We'll do some show and tell once you're done. Then, in pairs, work through the
 second problem for another 15 minutes, and we'll do the same thing.

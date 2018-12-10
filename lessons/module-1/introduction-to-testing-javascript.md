@@ -84,6 +84,12 @@ Beyond the issue of general motivation—let's face it, you're never going to go
 
 ## Your First Test
 
+In Mod 1, we will be using the Mocha testing framework along with the assertion library Chai.
+
+* [Mocha](https://mochajs.org/) is a testing framework that runs on Node.js in your terminal, and can also be run in your browser window. This is what allows us to organize and execute our tests.
+
+* [Chai](http://www.chaijs.com/) is an assertion library that plugs in to Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
+
 Let's say we were writing a function that squared a number and we wanted to write a unit test to see if it worked. Here's how that test would look:
 
 <p data-height="265" data-theme-id="light" data-slug-hash="xjYeoY" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Your First Test" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/xjYeoY/">Your First Test</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
@@ -91,7 +97,7 @@ Let's say we were writing a function that squared a number and we wanted to writ
 
 Let's talk a little bit about what's going on here:
 
-1. Typically, our test files are separate from our implementation code.
+* Typically, our test files are separate from our implementation code.
 
 *Test.js*
 
@@ -110,7 +116,7 @@ function square(n) {
 }
 ```
 
-2. We have a `describe()` block which denotes that we're going to start writing a number of tests about the same unit.
+* We have a `describe()` block which denotes that we're going to start writing a number of tests about the same unit.
 
 ```js
 describe('square', function () {
@@ -120,7 +126,7 @@ describe('square', function () {
 });
 ```
 
-3. We make a statement about our code with the `it()` block.
+* We make a statement about our code with the `it()` block.
 
 ```js
 //describe('square', function () {
@@ -131,7 +137,7 @@ describe('square', function () {
 
 ```
 
-4. We write an _assertion_ about our code. Here, we're asserting that when we pass the number 2 into `square()` that the result should be 4.
+* We write an _assertion_ about our code. Here, we're asserting that when we pass the number 2 into `square()` that the result should be 4.
 
 ```js
 //describe('square', function () {
@@ -140,12 +146,6 @@ describe('square', function () {
 //  });
 //});
 ```
-
-In Mod 1, we will be using the Mocha testing framework along with the assertion library Chai.
-
-* [Mocha](https://mochajs.org/) is a testing framework that runs on Node.js in your terminal, and can also be run in your browser window. This is what allows us to organize and execute our tests.
-
-* [Chai](http://www.chaijs.com/) is an assertion library that plugs in to Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
 
 Below you will find the general syntax for assertions for most of the methods available:
 
@@ -176,9 +176,9 @@ The `module.exports` allows us to export a piece of functionality.  In this inst
 
 *Test.js*
 ```js
-  var Hello = require('./implementation')
+var Hello = require('./implementation')
 
-  describe('Hello', function () {
+describe('Hello', function () {
   it('returns the string Hello World', function () {
     assert.equal(Hello(), 'Hello World');
   });

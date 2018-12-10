@@ -27,9 +27,36 @@ It is, however, possible for us to use JavaScript to set up handlers for events 
 
 For a review of how to set event handlers, please refer to the [DOM Manipulation with JavaScript Lesson](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html)
 
-### Your Turn
+## The Problem with Dynamic Elements
 
-Take a few minutes with the human next to you to think of a few real life analogies for event listeners. On your own, pick one of the analogies and translate this concept into visual form in your notebook.
+A common obstacle that many JavaScript developers struggle with is understanding the timing in which they bind event listeners to DOM nodes. When we add event listeners to DOM nodes, we're only adding them to the nodes that are currently on the page. We are _not_ adding listeners to nodes that may be added to the page in the future.
+
+### Experiment
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="OXzGGR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/team/turing/pen/OXzGGR/">Events: Adding a New Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
+
+1. Click each of the "Click me!" buttons and verify that each one fires an `alert` notifying you that the button has in fact been clicked.
+2. Add an additional button using the "Add a new button below." button.
+3. Click on your new button and observe the results.
+
+What did you notice?
+
+The event listeners are only bound to the buttons that were present when the page code was first loaded. The buttons we added later were not around when we added the listeners.
+
+### Pair Practice
+
+Modify the function that adds new buttons so that it adds an event listener to the element _before_ it appends to the page
+
+### A Note About Add/Removing Event Listeners
+
+Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
+
+Also, You can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
+
+So how else can we listen for events on dynamic content?  Let's dive into how events work a little more first and then come back to this question.
 
 ## Event Propagation
 
@@ -43,7 +70,7 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 
 ### Your Turn
 
-Now that you know that you have a handle on event propagation, take a few minutes to update your visual representation of event listeners to show that these event phases are occuring behind the scenes.
+Take a couple minutes to create an analogy and visual representation of event propagation to show how these event phases occur behind the scenes.
 
 ## Event Bubbling
 
@@ -147,36 +174,9 @@ document.querySelector('#click-me').addEventListener('click', function (event) {
 
 Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful? What happens when you log `this` in each of the separate elements above?
 
-## Adding and Removing Event Listeners
-
-A common obstacle that many JavaScript developers struggle with is understanding the timing in which they bind event listeners to DOM nodes. When we add event listeners to DOM nodes, we're only adding them to the nodes that are currently on the page. We are _not_ adding listeners to nodes that may be added to the page in the future.
-
-### Experiment
-
-<p data-height="300" data-theme-id="23788" data-slug-hash="OXzGGR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/team/turing/pen/OXzGGR/">Events: Adding a New Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
-
-You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
-
-1. Click each of the "Click me!" buttons and verify that each one fires an `alert` notifying you that the button has in fact been clicked.
-2. Add an additional button using the "Add a new button below." button.
-3. Click on your new button and observe the results.
-
-What did you notice?
-
-The event listeners are only bound to the buttons that were present when the page code was first loaded. The buttons we added later were not around when we added the listeners.
-
-### Pair Practice
-
-Modify the function that adds new buttons so that it adds an event listener to the element _before_ it appends to the page
-
 ## Event Delegation
 
-Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
-
-Also, You can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
-
-Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
+With the understanding of **event propagation** and the **event object**, we can now go back to the original issue with handling events on dynamic content.  Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
 
 In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements. Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
 
@@ -187,12 +187,18 @@ The algorithim:
  3. If the event happened inside an element that interests us, then handle the event
 
 ```js
-document.querySelector('body').addEventListener('click', function(event) {
-  if (event.target.tagName.toLowerCase() === 'li') {
-    // do your action on your 'li' or whatever it is you're listening for
+var buttonDiv = document.querySelector('.parent');
+
+buttonDiv.addEventListener('click', function(event) {
+  if (event.target.className === 'button') {
+    // do your action on your 'button' or whatever it is you're listening for
   }
 });
 ```
+
+<p data-height="300" data-theme-id="23788" data-slug-hash="OXzGGR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/team/turing/pen/OXzGGR/">Events: Adding a New Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
 ### Your Turn
 
 What is a real life analogy that you could use to explain how event delegation works? Create a new visual representation of this in your notebook.
