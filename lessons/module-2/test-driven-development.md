@@ -501,9 +501,22 @@ ie: `box.incrementHeight(10)`
 ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`  
 ```
 
-## DOM Manipulation
+## DOM Manipulation and Spies
 
-One of the biggest hurdles you'll have when building frontend applications is keeping your codebase from becoming a complicated mess as your application grows. Chances are good that you are currently intermixing your DOM Manipulation with code that is handling the state of your application. However, the classes in your game file should be completely oblivious to the DOM - they should only store state and broadcast their changes to the DOM... not handle DOM manipulation directly.
+One of the biggest hurdles you'll have when building frontend applications is keeping your codebase clean and testable. Chances are good that you are currently intermixing your DOM Manipulation with code that is handling the state of your classes. However, the classes in your game file should be completely oblivious to the DOM - they should only store state and broadcast their changes to the DOM... not handle DOM manipulation directly.
+
+This is because, unfortunately, Mocha and Chai do not have the ability to test if changes have been applied to the DOM (the browser page) successfully. We can't test anything happening on the DOM. For instance, if a class method is structured like this:
+
+```js
+increaseCount(){
+  this.count++
+  document.querySelector('#item').innerText('Change to this text please.'); // Some DOM manipulation here
+};
+```
+
+By running the test that uses this method, Mocha will say that it has no idea what the `document` is, and the test will _fail_... So we want to test this method while still keeping the DOM manipulation functionality a part of the method. How do we do that? By pulling the DOM manipulation functionality out of the method and using a "spy".
+
+What is a spy? A spy is a tool that listens for a specific function, `functionA`, to be called. When `functionA` is called in as part of a test, the spy takes over control of `functionA`. The spy runs a "fake" function that returns a value as if `functionA` had actually run.
 
 Now that we have our class of Box, let's make this into a full-fledged game by setting up some functionality to display the box height and width to the DOM when the application loads. First, add a file to house all of your DOM Manipulation:
 
@@ -531,13 +544,15 @@ Next, set up a boilerplate in your HTML file with script tags for every JS file:
 
 Let's take the `increaseWidth` and `increaseHeight` methods that you created earlier and get these updated numbers to display to the DOM directly whenever these methods are called. Let's start by modifying our test for `increaseWidth`.
 
-Since we aren't worried about actually testing our DOM manipulation at this point, we are going to use a [`spy`](https://github.com/chaijs/chai-spies) to verify whether our method that displays the score has been called. *Note: Spies will help you verify calls to methods without actually calling them.*
+Since we cannot actually test our DOM manipulation, we are going to use a [`spy`](https://github.com/chaijs/chai-spies) to verify whether our method that displays the score has been called. *Note: Spies will help you verify calls to methods without actually calling them.*
 
 First, let's install and require `chai-spies`. Let's also require the `domUpdates` files that we are using to store our DOM manipulation methods:
 
 **Install**
 
 `npm install --save-dev chai-spies`
+
+**Setup**
 
 ```js
 const chai = require('chai');
@@ -553,6 +568,11 @@ Next, we will take advange of the `.on()` method from the [Chai-spies](https://g
 
 ```js
 chai.spy.on(global.domUpdates, ['displayHeight','displayWidth'], () => true);
+
+// chai.spy.on([an object that contains the methods to spy on],
+//             [[an array of the method names you want to spy on]], 
+//             [a callback function with what you intend the spy to return instead of your function, 'displayWidth' or 'displayHeight', actually running]
+//            )
 ```
 
 And lastly, let's update our test for `increaseWidth` to verify that our method of `displayWidth` (that we have yet to write) is being called:
@@ -567,9 +587,9 @@ it('should have an increment method that will increase the width by a provided v
 });
 ```
 
-Run `npm test`
+Run `npm test`.
 
-Your test should fail and you should get an assertion error that doesn't show the method has been called (as it doesn't exist). Let's fix that. Go to your `domUpdates` file to create that method:
+Your test should fail, and you should get an assertion error that doesn't show the method has been called (as it doesn't exist). Let's fix that. Go to your `domUpdates` file to create that method:
 
 ```js
 // domUpdates.js
@@ -585,7 +605,7 @@ if (typeof module !== 'undefined') {
 }
 ```
 
-You'll want to add the conditional that you see at the bottom to your `Box` file as well - so that exports don't affect the client side but will still happen for testing.
+You'll want to add the conditional that you see at the bottom to your `Box` file as well - so that exports don't affect the client side (browser) but will still run for testing with Mocha.
 
 Finally, we can call that method in the appropriate place and see that our test is passing.
 
