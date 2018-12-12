@@ -22,7 +22,8 @@ nav {
 
   a {
     color: $dark-gray;
-    border-bottom: none;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s;
   }
 
   li:not(:first-child) {
