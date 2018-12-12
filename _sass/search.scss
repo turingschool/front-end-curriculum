@@ -23,7 +23,7 @@
 
 .clear-search {
   position: absolute;
-  right: 30px;
+  right: 50px;
   top: 34px;
   border: none;
   background: none;
@@ -45,6 +45,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    right: 35px;
     top: 24px;
   }
 
