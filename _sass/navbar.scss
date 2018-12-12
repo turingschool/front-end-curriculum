@@ -12,7 +12,7 @@ nav {
   grid-gap: 0 10px;
 
   list-style: none;
-  margin: 0 30px;
+  margin: 0 50px;
   padding-left: 0;
 
   li:first-child {
@@ -38,8 +38,9 @@ nav {
   }
 
   @media (max-width: $tablet-width) {
+    margin: 0 35px;
     font-size: 0.9rem;
-    grid-template-columns: auto 80px 80px 80px 150px;
+    grid-template-columns: auto 75px 75px 75px 150px;
 
     .home-logo-link img {
       height: 55px;
