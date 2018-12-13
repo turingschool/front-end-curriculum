@@ -29,11 +29,11 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=496549355)
 
-![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
-
 ## PRO-TIP
 
 This is layout that takes a good amount of time to build. Don't wait until the week of to get started.
+
+![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
 
 ***
 
