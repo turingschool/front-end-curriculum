@@ -25,14 +25,15 @@ You may NOT take liberties with the layout, but your creative license includes:
   - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
   - Push your final work to [github pages](https://pages.github.com/)
 
-### Additional Requirements
+## Submission Details
 
-  - This final challenge is a part of your portfolio
-  - Note the rubric below for evaluation criteria
+Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=496549355)
+
+![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
 
 ## PRO-TIP
 
-This is layout that takes a good amount of time to build. Don't wait until Monday of week 6 to get started.
+This is layout that takes a good amount of time to build. Don't wait until the week of to get started.
 
 ***
 
@@ -95,9 +96,3 @@ This is layout that takes a good amount of time to build. Don't wait until Monda
 <br>
 
 ------------------------------------------------------------------
-
-## Submission Details
-
-* Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=496549355)
-
-![static-comp-challenge-3](/assets/images/static-comp-challenge-3.jpg)
