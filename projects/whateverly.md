@@ -72,12 +72,6 @@ Below you will find some datasets for inspiration.
 * Your users will only be able to **retrieve** your data, not modify it. (Similar to Jeopardy: you, as a developer, are allowed to manipulate the dataset to make it easier to work with, but the players interacting with your app cannot)
 
 
-## Search Functionality & Autocomplete
-
-* Your app must have a use-case for search functionality. For example, if you were building a weather forecast application, your users would be able to search for a city name and retrieve the forecast for that city.
-
-* The search functionality will include an autocomplete feature that "guesses" what the user is trying to type in. This means that the information your users are searching for should be part of one of your datasets that it can pull suggestions from. 
-
 ## Code Organization
 
 Your codebase should be organized with a file structure that works for your group. See the [React docs](https://reactjs.org/docs/faq-structure.html) for some common approaches. 
@@ -105,7 +99,7 @@ Your README should include the following, in this order:
 
 # Submitting Your Project Ideas & Datasets
 
-You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and include the following information:
+You should pull request your project ideas and their corresponding datasets [here](https://www.youtube.com/watch?v=dQw4w9WgXcQ). Your project ideas should be in the description of your PR and include the following information:
 
 * One or two sentence description of the application
 * What use-case it will have for search functionality/auto-complete
