@@ -243,9 +243,7 @@ const keyboard = {
 }
 
 function evalInput(event) {
-  if ( keyboard[event] ) {
-    keyboard[event]()
-  }
+  keyboard[event]();
 }
 
 ```

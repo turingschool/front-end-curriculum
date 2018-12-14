@@ -34,9 +34,10 @@ class Counter extends Component {
   }
 }
 ```
+
 Stateful components keep track of some sort of application data. This application data is used to determine how the component should render. As the application is used, the application data will change causing the view to change.
 
-In our example above, the application data we will want to keep of track of is the current count.
+In our example above, the application data we will want to keep track of is the current count.
 
 Application data that affects how our app renders is stored in state.
 
