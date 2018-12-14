@@ -5,32 +5,33 @@ module: 4
 
 ## Abstract
 
-BYOB is a two week long paired project. In Week One of the project, you will be building a fully-tested API, complete with thorough documentation. In Week Two of the project, you will be building a front-end to consume and use the data from your (or potentially another group's) API.
+BYOB is a two week long paired project. In Week One of the project, you will be building a fully-tested API, complete with professional-grade documentation.
 
-Practice makes practice. Last week's project had you dive head first into a full-stack application with Node, Express, Knex, and a front-end to boot. That was a lot thrown at you in one week, so this time around we are going to expand our skills in the backend. You will be:
+During Week Two of the project, you will be turning your completed back-end into an open source project (you will maintain your own repository as well as work on contributing to another group's repository), and you will create a separate front-end site that functions as an interactive documentation site (similar to [this](https://opentdb.com/api_config.php)).
 
+Last week, Palette Picker had you dive head first into a full-stack application with Node, Express, Knex, and a front-end to boot. That was a lot thrown at you in one week, so this time around we are going to expand our skills in the backend. You will be:
 
 - building your own API for a large dataset of your choosing
 - writing a complete server side test suite
-- setting up continuous integration
+- setting up continuous integration and deploying to Heroku
 - setting up a separate front-end application to consume your API
 
-The main focus of this project will be to reinforce your understanding of CRUD methods, querying a database, responding with JSON data, and testing the back-end. You can complete this project with a single new lesson (server-side testing).
+The main focus of this project will be to reinforce your understanding of CRUD methods, querying a database, responding with JSON data, and testing the back-end. You can complete this project with only two new lessons (server-side testing and continuous integration).
 
-A secondary focus for this project is beginning to develop professional-level workflow habits. This includes:
+The second focus for this project is developing professional-level workflow habits. This includes:
 
 - using a PR template
-- conducting code reviews in your PRs
+- conducting actual code reviews in your PRs
 - detailed agile workflow using a kanban system or GH issues
 - keeping track of MVP features and nice-to-have features
 - agreeing to a commit message template
 - exploring `git rebase` and squashing
-- Highly semantic and specific documentation (README, API documentation, etc)
+- Highly semantic, specific, professional documentation (README, API documentation, etc)
 
 
 ## Base Expectations
 
-### Find a Data Source
+### WEEK 1: Find a Data Source
 
 Data source MUST BE LOCKED IN by Monday EOD . We don't want you wasting the whole week trying to find data. Having production API endpoints well tested is more important.
 
@@ -44,11 +45,13 @@ Possible sources of data:
 * Parse CSVs or JSON files (Node has built-in modules for parsing CSVs)
 * Create the data yourself. You must create a ‘seed file’ with a minimum of ~30 rows of data for each main table
 
-### Relationships
+### WEEK 1: Relationships
 
 At minimum, you must have at least 2 different tables with at least 1 relationship (e.g. one-to-one, one-to-many, many-to-many).
 
-### Required endpoints
+Each table must have no fewer than three columns.
+
+### WEEK 1: Required endpoints
 
 * 4 GET endpoints
   * 2 GET endpoints for all of one resource (i.e. '/api/v1/merchants')
@@ -57,7 +60,7 @@ At minimum, you must have at least 2 different tables with at least 1 relationsh
 * 2 PUT or PATCH endpoints
 * 2 DELETE endpoints
 
-### Status Codes & Error Handling
+### WEEK 1: Status Codes & Error Handling
 
 All endpoints should respond with the minimum status code results:
 
@@ -72,11 +75,11 @@ If you have a critical server error, you should respond with
 
 * 500: Internal Server Error
 
-You are welcome to use other status codes.
+You are welcome to use other appropriate status codes.
 
 In addition to responding with the appropriate status code, you are expected to send back clear, informative error messages when something goes wrong. Do not simply `console.log` 'WHATEVER'. If a `POST` request fails because the request didn't include a required parameter, respond with something like `'Entity requires a <fieldName> but none was provided.'`
 
-### Custom API Endpoints
+### WEEK 1: Custom API Endpoints
 
 * Developer must use query params on at least one endpoint, which would allow the user to narrow down the nature of their request or filter their results. So for example, you may have an endpoint like:
 
@@ -88,7 +91,7 @@ In addition to responding with the appropriate status code, you are expected to 
 
 <!-- * Developer must secure at least 4 endpoints with a JWT. Though this project doesn't have an explicit frontend, at the `/` root of your application, return an `index.html` file with a form that allows a user to request a JWT. The user must submit an email address and an app name. If the email address ends in `@turing.io`, the JWT should include admin privileges. Require a JWT with admin privileges for any 'write' requests (POST/PUT/PATCH/DELETE). -->
 
-### Documentation
+### WEEK 1: Documentation
 
 In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://developer.github.com/v3/repos/) Pay attention to the information provided and the format that it's presented in.
 
@@ -100,63 +103,51 @@ Some things you want to considering having in your API documentation:
 
 You can put your documentation in the README of your BYOB GitHub repository. Remember, improperly formatted information can make it very difficult to read even if it's all accurate, so be sure to utilize markdown syntax styling/formatting.
 
-### Testing & Linting
+### WEEK 1: Testing & Linting
 
 * All endpoints need to be tested for happy AND sad paths. You should assert that proper status codes are being returned as well as appropriate response data and error messages.
-* You are expected to use a linter on this project and have 0 linting errors. You are expected to set up and configure a linter. Consider using a git hook that prevents you from committing any unlinted code.
+* You are expected to use a linter on this project and have 0 linting errors. You are expected to set up and configure a linter. Consider using a git hook that prevents you from committing any un-linted code.
 
-### Deployment
+### WEEK 1: Deployment
 
 * Your application should be automatically deployed to Heroku via TravisCI
 * TravisCI should be running your tests and linter
 
------------------------------------------------
+### WEEK 2: "Open Source" mini project
 
-## Instructor Evaluation Points
+AS A MAINTAINER:
 
-The following set of points are distributed at the discretion of the instructor.
+* Your back-end application should be fully documented with SETUP instructions and CONTRIBUTING guidelines.
+* Your scrum board should be publicly viewable and several issues should be available for contributors to choose from.
+* Available issues should be thoroughly documented, giving good context and laying out clear expectations in order for contributors to have a clear idea of what to work on.
+* When contributors create a PR, conduct a thorough code review, leave comments with requests for tweaks, and eventually close or merge the PR.
 
-### Documentation
+AS A CONTRIBUTOR:
 
-* **10 points** -  The README includes documentation for all available endpoints and how to use them. Instructor can easily follow the documentation for using the API.
-* **5 points** -  The README documentation is out-of-date or inaccurate in some places. Instructor can not successfully use every endpoint based on following the documentation.
-* **0 points** - The README documentation is too sparse or inaccurate to be helpful.
+* You will find an open issue to work on and communicate your intent to work on that issue to the maintainers.
+* Set up the repo according to the SETUP instructions documented in the repo you will be working on.
+* Be sure your contributions conform to the standards provided by the maintainer's CONTRIBUTING documentation.
+* Respond to requests for updates or changes on your PR.
 
+### WEEK 2: Front-End Documentation site
 
-### Back-End Feature Completion
-
-* **60 points** - Developer has implemented all 10 endpoints, and at least one is a custom endpoint that filters data based on query params. The database is seeded with at least two tables and one relationship.
-* **40 points** - Developer has implemented all 10 endpoints but did not have a custom endpoint based on query params. The database is seeded with at least two tables but without an appropriate relationship.
-* **20 points** - Developer is missing endpoints and has not customized any of the ones that have been implemented. The database is not seeded with two tables and one relationship.
-
-### Testing & Linting & Error Handling
-
-* **40 points** - Project has a running test suite that covers all happy and sad paths for the appropriate endpoints. Error handling is informative and helpful for the end-user. The project has a linting configuration that passes with no errors.
-* **20 points** - Project has a running test suite that covers most happy and sad paths for each endpoint. Error handling has been implemented but does not cover all possible scenarios or is unhelpful for the end-user. Linter has some errors that need fixing.
-* **10 points** - Project has significant lack of testing for happy and sad paths of endpoints. Error handling is non-existent or missing status codes and helpful messages. Linter is failing on multiple lines.
-
-### Front-End Feature Completion
-
-* **40 points** - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
-* **20 points** - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* **15 points** - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-* **10 points** - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
-
-### Workflow
-
-* **20 points** - Developers make many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Commit messages are concise and consistent in syntax and tense. Developers effectively use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing directly to master. Developers utilize PR process to full extent, conducting code reviews and never merging in faulty code. There are no instances where the developers have committed source code that should be `.gitignore`d. There are no instances of "dead" or commented-out code and debugger statements like `console.log`.
-* **15 points** - Developers make many small, atomic commits that document the evolution of the application but sometimes contain irrelevant changesets and inconsistent commit messages. Developers use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may contain little or no code review. There may be slight instances where the developers have committed source code that should be `.gitignore`d. There may be some instances of "dead" or commented-out code and debugger statements like `console.log` that need to be cleaned up.
-* **10 points** - Developers make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developers rarely use git branches and frequently incorporate changes directly into master with little or no review process. There are instances of committed source code that should be `.gitignore`d and instances of dead code and/or debugger statements.
-* **5 points**  - Developers make very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests were not used and changesets were applied directly to master. There are many instances of committed source code that should be `.gitignore`d and many instances of dead code and/or debugger statements.
+* Create a _separate_ front-end repository that will consume and document the back-end repository.
+* Provide a page that documents the available endpoints, the data that will be received, and the data the user must send.
+* The site should be interactive, allowing a developer to "try out" endpoints. Think of building out something like Postman specifically for your back-end.
+* This front-end documentation site should be a single page and can be written in Javascript, jQuery, or React.
+* The documentation site must be deployed to Heroku using continuous integration with TravisCI.
 
 -----------------------------------------------
 
-#### Projects are due on Friday of at 1PM. Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1804/mod-4/byob/submission-template.md) by copying it to a new file called YOURNAME-PARTNERSNAME.md in the same directory. Submit it as a PR to the front-end-submissions repo.
+## Evaluations
 
-To get a **3** on this project, you need to score **125** points or higher  
-To get a **4** on this project, you need to score **145** points or higher  
+We will have two evaluations throughout the course of the project.
 
-# Final Score: x / 170
+At the end of Week 1, we will have a benchmark to see whether or not the Week 1 expectations are met.
+
+At the end of Week 2, we will have an evaluation to look over the server, the PRs from the mini open source project, and the front-end documentation site.
+
+To pass the project, all base expectations must be met in a timely manner.
 
 -----------------------------------------------
 
