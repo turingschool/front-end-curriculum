@@ -102,7 +102,7 @@ Your README should include the following, in this order:
 You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-1810). Your project ideas should be in the description of your PR and include the following information:
 
 * One or two sentence description of the application
-* What use-case it will have for search functionality/auto-complete
+* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset
 
 Your datasets should be added in a single file to the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like:
 
@@ -112,6 +112,8 @@ module.exports = {
   students
 }
 ```
+
+
 
 # Repo Initialization
 
