@@ -59,7 +59,7 @@ and make sure to take some notes on what each piece is for.
 
 ### Getting Started
 
-- Clone this repo: https://github.com/turingschool-examples/redux-lesson-boilerplate
+- Clone [this repo](https://github.com/turingschool-examples/redux-lesson-boilerplate)
 
 - `npm install`
 
