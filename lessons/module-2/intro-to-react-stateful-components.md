@@ -231,7 +231,7 @@ render() {
 
 Check out this [article](https://blog.logrocket.com/conditional-rendering-in-react-c6b0e5af381e) to see additional conditional rendering options.
 
-
+Why do we use `super()` in the constructor of a component? [This article](https://javascript.info/class-inheritance) goes through why.
 
 
 
