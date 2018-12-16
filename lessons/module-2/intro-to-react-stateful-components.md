@@ -146,7 +146,7 @@ For our purposes we will only focus on `componentDidMount`. A component is "moun
 
 A component's state cannot be updated before it is rendered. If a component's state needs to be updated after it is loaded, componentDidMount is a good place to fetch or load that data.
 
-To read more about component lifecycle methods, you can read this [Medium article](https://code.likeagirl.io/understanding-react-component-life-cycle-49bf4b8674de).
+To read more about component lifecycle methods, you can read this [Medium article](https://code.likeagirl.io/understanding-react-component-life-cycle-49bf4b8674de) (where the image above is from).
 
 ## Conditional Rendering
 
@@ -154,11 +154,11 @@ Conditional rendering is hiding or showing UI elements based on information in s
 
 Let's add some conditional rendering to our counter example. If our count is below 10 we will display "Can you count to 10?". If our count is 10 or more we will display "You counted to 10!".
 
-There are a variety of ways to conditionaly render UI in React. We will look at three ways: if/else, using the `&&` operator, and using ternary statements.
+There are a variety of ways to conditionally render UI in React. We will look at three ways: if/else, using the `&&` operator, and using ternary statements.
 
 ### if/else
 
-We can add an if/else statement to our render method. Inside of our if/else blocks we will return the html that we want to render. Note that you cannot put an if/else statement in your HTML. The if/else must go outside of your return statement.
+We can add an if/else statement to our render method. Inside of our if/else blocks we will return the HTML that we want to render. Note that you cannot put an if/else statement in your HTML. The if/else must go outside of your return statement.
 
 ```jsx
 render() {
