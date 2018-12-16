@@ -137,13 +137,16 @@ One of the more confusing things about React is when to make a component statefu
 
 ## Lifecycle Methods
 
-![React Lifecycle Diagram](../../assets/images/lessons/intro-to-react-stateful-components/react-lifecycle.png)
+<!-- ![React Lifecycle Diagram](../../assets/images/lessons/intro-to-react-stateful-components/react-lifecycle.png) -->
+![React Lifecycle Diagram](https://cdn-images-1.medium.com/max/2000/1*cEWErpe-oY-_S1dOaT1NtA.jpeg)
 
 React lifecycle methods are inherited from React Component. These methods should never be invoked directly. Instead, they are invoked by react as the components are used.
 
 For our purposes we will only focus on `componentDidMount`. A component is "mounted" after it finishes rendering for the first time. After the component finishes rendering, the componentDidMount method will be invoked.
 
 A component's state cannot be updated before it is rendered. If a component's state needs to be updated after it is loaded, componentDidMount is a good place to fetch or load that data.
+
+To read more about component lifecycle methods, you can read this [Medium article](https://code.likeagirl.io/understanding-react-component-life-cycle-49bf4b8674de).
 
 ## Conditional Rendering
 
