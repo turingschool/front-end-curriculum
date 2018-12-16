@@ -134,6 +134,9 @@ One of the more confusing things about React is when to make a component statefu
 ##### Turn and Talk
 
 * What is the difference between props and state?
+* What should go into every stateful component's constructor?
+* Why is it important to use the `setState()` method instead of modifying `state` directly?
+* What is the optional argument in `setState()` for and why?
 
 ## Lifecycle Methods
 
