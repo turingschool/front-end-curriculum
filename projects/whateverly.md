@@ -198,7 +198,7 @@ Add a file named `.eslintrc` to the root of your project and copy these [restric
 
 * [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
 
-* [ ] Advanced - Project has a running test suite that exercises the application used Enzyme. The test suite covers almost all aspects of the application.
+* [ ] Exceptional - Project has a running test suite that exercises the application used Enzyme. The test suite covers almost all aspects of the application.
 
 ------------------------------------------------------------------
 
