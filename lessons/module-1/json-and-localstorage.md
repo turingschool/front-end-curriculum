@@ -38,7 +38,7 @@ The web storage API is a secure way your browser can store key value pairs that 
 
 ## Local Storage 
 
-[`localStorage`][ls-mdn] is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
+<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a> is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
 
 `localStorage` supports the following methods:
 
@@ -82,7 +82,7 @@ When we're communicating with servers, we use a transport protocol called HTTP.
 
 HTTP powers the web, but it does have one limitation. All information can only be sent back and forth using strings. Strings are great, but it's not hard to imagine a world where we might want to send slightly more complicated data structures back (e.g. objects and arrays) back and forth between the client and the server.
 
-JSON stands for "JavaScript Object Notation" and is an alternative to [XML](https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53) as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. **JSON** is a language-independent data format that is easy for humans to read and write and easy for machines to parse and generate.
+JSON stands for "JavaScript Object Notation" and is an alternative to <a target="_blank" href="https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53">XML</a> as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. **JSON** is a language-independent data format that is easy for humans to read and write and easy for machines to parse and generate.
 
 JSON has the following rules:
 
@@ -155,7 +155,7 @@ The js and jquery docs are both great and more easy to read than most when it co
 
 Whenever you change a value in localStorage, the DOM will fire a `storage` event in every other page currently open on that domain.
 
-Open [this CodePen](http://codepen.io/team/turing/pen/xOYdBG) up in two different windows to see.  
+Open <a target="_blank" href="http://codepen.io/team/turing/pen/xOYdBG">this CodePen</a> up in two different windows to see.  
 
 ## Dig Deeper
 * [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
