@@ -89,10 +89,6 @@ The requirements for collaboration and workflow are more constrained within this
 
 Smaller companies don’t have product teams. As front-end engineers, one of the most valuable assets you bring is the ability to think about the end user's perspective. Creating user stories is a mind shift that forces you to understand that you are building features and software for other people. 
 
-## Testing
-
-
-
 ## README
 
 Your README should include the following, in this order:
@@ -194,7 +190,7 @@ Add a file named `.eslintrc` to the root of your project and copy these [restric
 
 ------------------------------------------------------------------
 
-### Testing
+## Testing
 
 * [ ] Novice - There is little or no evidence of testing in the application.
 
