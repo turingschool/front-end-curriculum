@@ -127,7 +127,7 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 8. `parsedObject` (We are now back to our original object!)
 
 ### JSON in Action
-<p data-height="265" data-theme-id="0" data-slug-hash="ReBRmM" data-default-tab="js,result" data-user="khalidwilliams" data-pen-title="JSON EX" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/ReBRmM/">JSON EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p data-height="265" data-theme-id="0" data-slug-hash="zyKqYX" data-default-tab="js,result" data-user="khalidwilliams" data-pen-title="JSON Example" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/zyKqYX/">JSON Example</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Data Attributes
