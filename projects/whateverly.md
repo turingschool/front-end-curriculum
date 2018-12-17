@@ -89,6 +89,10 @@ The requirements for collaboration and workflow are more constrained within this
 
 Smaller companies don’t have product teams. As front-end engineers, one of the most valuable assets you bring is the ability to think about the end user's perspective. Creating user stories is a mind shift that forces you to understand that you are building features and software for other people. 
 
+## Testing
+
+
+
 ## README
 
 Your README should include the following, in this order:
@@ -190,12 +194,24 @@ Add a file named `.eslintrc` to the root of your project and copy these [restric
 
 ------------------------------------------------------------------
 
+### Testing
+
+* [ ] Novice - There is little or no evidence of testing in the application.
+
+* [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The applicaiton contains numberous holes in testing and/or many features are untested.
+
+* [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
+
+* [ ] Advanced - Project has a running test suite that exercises the application used Enzyme. The test suite covers almost all aspects of the application.
+
+------------------------------------------------------------------
+
 ## Presentation
 
 * [ ] Novice - Not all presenters speak. Presenters give too much or too little information about the application. Presenters do not use audio/visual aids or media.
 
 * [ ] Advanced Beginner - Everyone in the group speaks. Presenters do a live demo of the application. The group may speak about the planning/challenges/rewards of the project; however, the delivery does not seem thought out/well-planned. 
 
-* [ ] Proficient - Everyone in the group has an opporunity to speak during the presentation. The group has a visual of the application to demo (e.g. slides, recordings of interactions, live demo). The group talks about the app, to include the planning, challenges, rewards, and collaborative aspects of the project.
+* [ ] Proficient - Everyone in the group has an opporunity to speak during the presentation. The group has a visual of the application to demo (e.g. slides, recordings of interactions, live demo). The group talks about the app, speaking to the challenges, rewards, and collaborative aspects of the project.
 
 * [ ] Exceptional - Meets all expectations of `Proficient`. In addition, the presentation runs smoothly w/no hiccups - indicating that it was planned/rehearsed/polished. The presentation is so engaging that there is no time that the evaluators find themselves checking the time/clock.
