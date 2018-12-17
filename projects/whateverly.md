@@ -122,12 +122,6 @@ module.exports = {
 
 After initializing your create-react-app project, add eslint to the project.
 
-#### Install eslint
-
-`npm install eslint --save-dev`
-
-Add a file named `.eslintrc` to the root of your project and copy these [restrictions](./assets/weathrly/eslintrc.json) into said file.
-
 # Rubric
 
 ## Specification Adherence
