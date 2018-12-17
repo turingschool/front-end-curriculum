@@ -32,13 +32,13 @@ There are two primary ways of storing data in web applications, which are - serv
 
 ## Client-side storage
 
-Browsers provide two main types of immediate storage that is accessible without messing with a database: [`sessionStorage`][ss-mdn] which gets reset whenever your browser session restarts, and [`localStorage`][ls-mdn], which has no specified expiration date. Today we will strictly be talking about `localStorage`.
+Browsers provide two main types of immediate storage that is accessible without messing with a database: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> which gets reset whenever your browser session restarts, and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a>, which has no specified expiration date. Today we will strictly be talking about `localStorage`.
 
 The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site. 
 
 ## Local Storage 
 
-[`localStorage`][ls-mdn] is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
+<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a> is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
 
 `localStorage` supports the following methods:
 
@@ -70,13 +70,19 @@ What are your observations?
 
 Check out the docs. What other methods are available to you when using localStorage?
 
+### localStorage in Action
+How can we improve the functionality of the following codepen with local storage?
+
+<p data-height="265" data-theme-id="0" data-slug-hash="vVaGLo" data-default-tab="html,result" data-user="khalidwilliams" data-pen-title="Local Storage EX" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/vVaGLo/">Local Storage EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## What is JSON?
 
 When we're communicating with servers, we use a transport protocol called HTTP.
 
 HTTP powers the web, but it does have one limitation. All information can only be sent back and forth using strings. Strings are great, but it's not hard to imagine a world where we might want to send slightly more complicated data structures back (e.g. objects and arrays) back and forth between the client and the server.
 
-JSON stands for "JavaScript Object Notation" and is an alternative to [XML](https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53) as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. **JSON** is a language-independent data format that is easy for humans to read and write and easy for machines to parse and generate.
+JSON stands for "JavaScript Object Notation" and is an alternative to <a target="_blank" href="https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53">XML</a> as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. **JSON** is a language-independent data format that is easy for humans to read and write and easy for machines to parse and generate.
 
 JSON has the following rules:
 
@@ -120,6 +126,10 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 7. `var parsedObject = JSON.parse(retrievedObject);`
 8. `parsedObject` (We are now back to our original object!)
 
+### JSON in Action
+<p data-height="265" data-theme-id="0" data-slug-hash="ReBRmM" data-default-tab="js,result" data-user="khalidwilliams" data-pen-title="JSON EX" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/ReBRmM/">JSON EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## Data Attributes
 
 In addition to giving our html elements `id` and `class` attributes, sometimes it may be more appropriate to give our elements a `data-` attribute instead.
@@ -145,7 +155,7 @@ The js and jquery docs are both great and more easy to read than most when it co
 
 Whenever you change a value in localStorage, the DOM will fire a `storage` event in every other page currently open on that domain.
 
-Open [this CodePen](http://codepen.io/team/turing/pen/xOYdBG) up in two different windows to see.  
+Open <a target="_blank" href="http://codepen.io/team/turing/pen/xOYdBG">this CodePen</a> up in two different windows to see.  
 
 ## Dig Deeper
 * [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
