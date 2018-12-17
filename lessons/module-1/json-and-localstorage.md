@@ -32,7 +32,7 @@ There are two primary ways of storing data in web applications, which are - serv
 
 ## Client-side storage
 
-Browsers provide two main types of immediate storage that is accessible without messing with a database: [`sessionStorage`][ss-mdn] which gets reset whenever your browser session restarts, and [`localStorage`][ls-mdn], which has no specified expiration date. Today we will strictly be talking about `localStorage`.
+Browsers provide two main types of immediate storage that is accessible without messing with a database: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> which gets reset whenever your browser session restarts, and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a>, which has no specified expiration date. Today we will strictly be talking about `localStorage`.
 
 The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site. 
 
@@ -69,6 +69,12 @@ Open up the developer tools on this page and try the following:
 What are your observations?
 
 Check out the docs. What other methods are available to you when using localStorage?
+
+### localStorage in Action
+How can we improve the functionality of the following codepen with local storage?
+
+<p data-height="265" data-theme-id="0" data-slug-hash="vVaGLo" data-default-tab="html,result" data-user="khalidwilliams" data-pen-title="Local Storage EX" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/vVaGLo/">Local Storage EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## What is JSON?
 
@@ -119,6 +125,10 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 6. `retrievedObject` (Notice this is still the stringified version of our object - we need it to be a real object again, not a string)
 7. `var parsedObject = JSON.parse(retrievedObject);`
 8. `parsedObject` (We are now back to our original object!)
+
+### JSON in Action
+<p data-height="265" data-theme-id="0" data-slug-hash="ReBRmM" data-default-tab="js,result" data-user="khalidwilliams" data-pen-title="JSON EX" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/ReBRmM/">JSON EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Data Attributes
 
