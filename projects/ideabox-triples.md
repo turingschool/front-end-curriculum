@@ -123,7 +123,7 @@ We'd like our users to be able to easily find specific ideas they already create
 The application should allow users to filter the idea list based on level of quality.
 
 * Your application should have 3 buttons corresponding to each level of importance (swill, plausible, and genius).
-* When one of the filter buttons is clicked, the TODO list should only display TODOs with the selected importance.
+* When one of the filter buttons is clicked, the idea list should only display the ideas with the selected quality.
   * There is no need to make persisting changes to the data model to achieve this functionality.
 
 #### Recent Ideas
