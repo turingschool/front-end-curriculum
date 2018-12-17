@@ -36,7 +36,7 @@ You will have two javascript files:
     1. `constructor`
     2. `saveToStorage` (should only have one job which is to save the instance to storage)
     3. `deleteFromStorage`
-    4. `updateText`
+    4. `updateContent` (should be able to update the title or body of the idea)
     5. `updateQuality`
 2. A `main.js` file that contains all dom related javascript.
 
@@ -81,8 +81,8 @@ _Note:_ `localStorage` will not track the type of object, so on page reload you 
 
 When viewing the idea list:
 
-* Each idea in the list should have a link or button to remove it from both the data model and the dom.
-* Upon clicking "Delete", the appropriate idea should be removed from the list.
+* Each idea in the list should have a button to remove it from both the data model and the dom.
+* Upon clicking the "Delete" button, the appropriate idea should be removed from the list.
 * The page _should not_ reload when an idea is deleted.
 * The idea should be removed from `localStorage`. It should not re-appear on next page load.
   * This update of the data model should happen in a `deleteFromStorage` method that is defined in the `Idea` class.
@@ -93,7 +93,7 @@ When viewing the idea list:
 * When a user clicks the title or body of an idea in the list, that text should become an editable text field, pre-populated with the existing idea title or body.
 * The user should be able to "commit" their changes by pressing "Enter/Return" or by clicking outside of the text field.
 * If the user reloads the page, their edits will be reflected.
-  * This update of the data model should occur in an `updateSelf` method that is defined in the `Idea` class.
+  * This update of the data model should occur in an `updateContent` method that is defined in the `Idea` class.
   * How the dom gets updated using javascript should happen in the `main.js` file (where you should can still leverage your idea instance)
 
 #### Changing the quality of an idea
