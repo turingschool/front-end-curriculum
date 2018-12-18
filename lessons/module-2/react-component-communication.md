@@ -134,7 +134,7 @@ To start, let's follow the 4 stop process that we covered at the beginning of th
 
 Given this, we know that are needing to communicate from sibling to sibling. `Login` will get the name that we need and will pass that information up to `App` via the action of a button click. From there, `App` will pass the data (our user's name) down to `Greeting` to be displayed.
 
-```js
+```jsx
 class App extends Component {
   constructor() {
     super();
@@ -167,7 +167,7 @@ class App extends Component {
 Above, we can see our "data" in the form of our method `setUserName` being passed down to `Login`. You'll notice that we are binding `this` in our constructor. This is not React-specific behavior; it is a part of how functions work in JavaScript. Generally, if you refer to a method without () after it, such as when we are passing this method down, you should bind that method.
 
 
-```js
+```jsx
 class Login extends Component {
   constructor() {
     super();
@@ -206,7 +206,7 @@ Now `Login` has access a way to communicate to `App` via `this.props.setUserName
 Generally, you should be binding in the constructor or using the `class fields syntax` for avoiding performance issues.
 
 
-```js
+```jsx
 const Greeting = ({villainName, compliment}) => {
 
   return (
