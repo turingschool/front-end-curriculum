@@ -115,6 +115,118 @@ As we discussed earlier, communicating from sibling to sibling (in instances whe
 
 In your own words, explain the term `Data Down, Actions Up` 
 
+### Component Communication Flow
+
+Now that we are familiar with the different stateless and stateful components (as well as how they communicate) let's take a look at how `Data Down, Actions Up` is implemented in React.
+
+With this example, we will be implementing some functionality for a simple application that take's a user's name and then displays a greeting on screen. Our application consists of 3 components: `App`, `Greeting`, and `Login`. 
+
+To start, let's follow the 4 stop process that we covered at the beginning of the lesson:
+1. Identify every component that renders something based on that state.
+  _We know that `Greeting` will render our Villian's name. We also know that `Login` will be rendering a login form to get our user's information._
+2.  Find a common owner component (a single component above all the components that need the state in the hierarchy).
+  _The common component between these two is `App`._
+3. Either the common owner or another component higher up in the hierarchy should own the state.
+  _This is a TEENY TINY application... so `App` will own state in this example.
+4. If you can’t find a component where it makes sense to own the state, create a new component simply for holding the state and add it somewhere in the hierarchy above the common owner component.
+  _Found the component - we're good_
+
+
+Given this, we know that are needing to communicate from sibling to sibling. `Login` will get the name that we need and will pass that information up to `App` via the action of a button click. From there, `App` will pass the data (our user's name) down to `Greeting` to be displayed.
+
+```js
+class App extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      userName: ''
+    };
+
+    this.setUserName = this.setUserName.bind(this);
+  }
+
+  setUserName(name) {
+    this.setState({ userName: name });
+  }
+
+  render() {
+    return (
+      <div>
+        <Login setUserName={this.setUserName} />
+        <Greeting 
+          villianName={this.state.userName}
+          compliment="Your hair looks great today"/>
+      </div>
+    )
+  }
+
+}
+```
+
+Above, we can see our "data" in the form of our method `setUserName` being passed down to `Login`. You'll notice that we are binding `this` in our constructor. This is not React-specific behavior; it is a part of how functions work in JavaScript. Generally, if you refer to a method without () after it, such as when we are passing this method down, you should bind that method.
+
+
+```js
+class Login extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      logInValue: ''
+    };
+  }
+
+  logInState = (event) => {
+    this.setState({ logInValue: event.target.value });
+  }
+
+  setUserName = () => {
+    this.props.setUserName(this.state.logInValue);
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Please Log In</h2>
+        <input
+          type='text'
+          value={this.state.logInValue}
+          onChange={this.logInState}
+        ></input>
+        <button onClick={this.setUserName}>SUBMIT</button>
+      </div>
+    )
+  }
+}
+```
+
+Now `Login` has access a way to communicate to `App` via `this.props.setUserName`. This is not to be confused with the `setUserName` method in our class of `Login` - which is a method that is triggered on the click of our `button` element. You'll also notice a different syntax for our methods in `Login`. This syntax (called `class fields`) is *experimental* and is enabled by default in Create React App. Using this particular syntax will also ensure that the value of `this` is bound.
+
+Generally, you should be binding in the constructor or using the `class fields syntax` for avoiding performance issues.
+
+
+```js
+const Greeting = ({villainName, compliment}) => {
+
+  return (
+    <div>
+      <h2>{villainName}</h2>
+      <p>{compliment}</p>
+    </div>
+  )
+}
+
+export default Greeting;
+```
+
+After `Login` passes our information (in the form of a user's name) back to `App`, we will set the updated userName to state. Calling `setState` will trigger a re-render, allowing us to pass the updated data to `Greeting`
+
+#### Turn and Talk
+
+Turn to the person next to you and take turns walking through this data flow.
+
+
 # Exercise: React Trivia App
 
 * Clone down [this](https://github.com/turingschool-examples/react-trivia) repo, and `cd` into it.
