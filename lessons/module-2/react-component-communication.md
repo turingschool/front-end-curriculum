@@ -169,8 +169,8 @@ Above, we can see our "data" in the form of our method `setUserName` being passe
 
 ```jsx
 class Login extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       logInValue: ''
