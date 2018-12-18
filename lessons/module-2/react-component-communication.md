@@ -133,9 +133,9 @@ In your own words, explain the term `Data Down, Actions Up`
 ## Phase 2: Question
 - Display the title of question in `Question`
 - Initialize state in `Question` according to pseudocode in file
-- Follow psuedocode to implement `toggleAnswer` method 
-    *HINT 1: Check out [the docs](https://reactjs.org/docs/handling-events.html) on how to handle Events in React*
-  *HINT 2: Generally, if you refer to a method without () after it, you should bind that method!*
+- Follow psuedocode to implement `toggleAnswer` method  
+*HINT 1: Check out [the docs](https://reactjs.org/docs/handling-events.html) on how to handle Events in React*  
+*HINT 2: Generally, if you refer to a method without () after it, you should bind that method!*
 - Implement conditional rendering a `span` element with our answer when `showAnswer` is true 
   *HINT: Check out [the docs](https://reactjs.org/docs/conditional-rendering.html) on inline conditional rendering*
 - **BONUS** Implement conditional in psuedocode that updates our icon based on state
