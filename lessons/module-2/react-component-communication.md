@@ -117,15 +117,11 @@ In your own words, explain the term `Data Down, Actions Up`
 
 # Exercise: React Trivia App
 
-* Clone down [this](https://github.com/turingschool-examples/react-trivia-app) repo, and `cd` into it.
+* Clone down [this](https://github.com/turingschool-examples/react-trivia) repo, and `cd` into it.
 
 * Run: `npm install`
 
-* Checkout the branch `start-morning`
-
 * Start your server with `npm start`
-
-Once the server is running you can visit `http://localhost:8080/` to run your application.
 
 ## Phase 1: App & TriviaList
 - Update state in `App` to include `triviaQuestions`
@@ -137,19 +133,22 @@ Once the server is running you can visit `http://localhost:8080/` to run your ap
 ## Phase 2: Question
 - Display the title of question in `Question`
 - Initialize state in `Question` according to pseudocode in file
-- Follow psuedocode to implement `addToggle` method *HINT: Check out [the docs](https://reactjs.org/docs/handling-events.html)on how to handle Events in React*
-- Implement conditional rendering a `span` element with our answer when `showAnswer` is true *HINT: Check out [the docs](https://reactjs.org/docs/conditional-rendering.html) on inline conditional rendering*
+- Follow psuedocode to implement `toggleAnswer` method 
+    *HINT 1: Check out [the docs](https://reactjs.org/docs/handling-events.html) on how to handle Events in React*
+  *HINT 2: Generally, if you refer to a method without () after it, you should bind that method!*
+- Implement conditional rendering a `span` element with our answer when `showAnswer` is true 
+  *HINT: Check out [the docs](https://reactjs.org/docs/conditional-rendering.html) on inline conditional rendering*
 - **BONUS** Implement conditional in psuedocode that updates our icon based on state
 
 ## Phase 3: Controls
-- Import `Controls` into `App` and create `Controls` component by following psuedocode in file. Remember to render `Controls` within `App`
+- Import `Controls` into `App` and create a `Controls` component by following psuedocode in file. Remember to render `Controls` within `App`
 - Remember that `App` will serve as the parent component between `Controls` and `TriviaList` to handle the state of how many questions to filter. How do we get these siblings to communicate with one another? 
 
   * `Controls` takes input from user
   * Updates parent of how many questions to filter
   * Parent updates `TriviaList` to display the correct info
 
-*HINTS: Check to see if your state is updating as expected with dev tools. Also, if you run into trouble... remember that you are ultimately still dealing with a `form` element in your Controls component. What is the default behavior of forms? When we pull a value from an input, what data type are we dealing with? #MOD1*
+*HINTS: Check to see if your state is updating as expected with React dev tools. Also, if you run into trouble... remember that you are ultimately still dealing with a `form` element in your Controls component. What is the default behavior of forms? When we pull a value from an input, what data type are we dealing with? #MOD1*
 
 ## Phase 4: Extension!!!
 Now that you have successfully created a basic app that showcases component communication in React, let's add to what we have
