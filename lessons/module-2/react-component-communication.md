@@ -91,7 +91,7 @@ This is your `Data Down`. `Props` allow you to send data from a parent to a chil
 
 This is your `Actions Up`. This allows us to send data from a child to a parent. Generally, there are two ways of doing this:
 
-  1. Callback functions - The parent will pass the child a function as a prop:
+Callback functions - The parent will pass the child a function as a prop:
 
   ```js
   <MyChild myFunc={this.handleChildFunc} />
@@ -103,7 +103,6 @@ This is your `Actions Up`. This allows us to send data from a child to a parent.
   this.props.myFunc(newData)
   ```
 
-  2. Event bubbling - Like callbacks, this is a way to send data up from a child to a parent component. This is useful when you want a parent component to capture DOM events that originated in the child component.
 
 ### Sibling-to-Sibling
 
