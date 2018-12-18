@@ -29,7 +29,7 @@ Let's say we're at a Red Robin for a night out on the town...Here's how the expe
 
 #### Example: `setTimeout()`
 
-```
+```js
 console.log("Legen...");
 
 setTimeout(() => {
@@ -81,7 +81,7 @@ Each network request takes time - they're _expensive_. Imagine if you had to wai
 
 Network requests are expensive no matter what we do. However, we can run them _asynchronously_, saving some time.
 
-### The first development: AJAX
+### AJAX
 
 [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX)
 
@@ -89,14 +89,11 @@ Cool, but really, what is it?
 
 _“the method of exchanging data with a server, and updating parts of a web page – without reloading the entire page.”_
 
-##### The two main benefits of AJAX are:
-
-1. Make requests to the server without reloading the entire page
-2. Receive and work with data from the server
+Once we get a response from the server with the data, we can work with data and display it on the page.
 
 ### How?
 
-1. An event occurs in a web page (the page is loaded, a button is clicked)
+1. An event occurs in a web page (the page is loaded, or maybe a button is clicked)
 2. An XMLHttpRequest object is created by JavaScript
 3. The XMLHttpRequest object sends a request to a web server
 4. The server processes the request
@@ -137,7 +134,7 @@ Open up your console and walk through these steps:
 
 First create a new instance of an XMLHttpRequest Object:
 
-```
+```js
 var xhttp = new XMLHttpRequest();
 ```
 
@@ -145,13 +142,13 @@ Next let's initialize the request using the [`open()`](https://developer.mozilla
 
 We will hit this [trivia API](https://opentdb.com/api_config.php). We'll need to use the `GET` method, define our endpoint, and provide a 3rd argument of `TRUE` which tells the request to be asynchronous:
 
-```
+```js
 xhttp.open("GET", "https://opentdb.com/api.php?amount=10&category=27&type=multiple", true);
 ```
 
 Now let's send the request:
 
-```
+```js
 xhttp.send()
 ```
 
@@ -159,7 +156,7 @@ If it worked, you should be able to type `xhttp` and see the results in your XML
 
 ---
 
-### Isn't There an Easier Way???
+<!-- ### Isn't There an Easier Way???
 
 Like basically all things in Javascript, developers have come up with synctatic sugar to make our lives easier.
 
@@ -189,9 +186,9 @@ $.get("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .catch(error => //do something if an error is returned)
 ```
 
-Some additional information on the specifc methods can be found [here](https://api.jquery.com/jquery.get/)
+Some additional information on the specifc methods can be found [here](https://api.jquery.com/jquery.get/) -->
 
-### ES6: fetch()
+### Isn't There an Easier Way??? ES6: fetch()
 
 Another great tool to help with network requests is the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). This is what we'll focus on in Mod 2, since we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery)!
 
@@ -203,13 +200,13 @@ _The fetch() method takes one mandatory argument, the path to the resource you w
 
 We can nearly mimic the syntax above to perform the same network request, with a few minor tweaks. First we need to pass in the path we want to fetch from:
 
-```
+```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 ```
 
 Next we see that fetch returns a promise that resolves to the response of of our request. We haven't talked about promises yet, but all you need to know for now is that we can add `.then(callback)` to our fetch. The callback parameter inside the `.then()` method will execute as soon as the response comes in. In other words, it will wait until we have ALL of the data (or an error) back, `THEN` it will execute whatever we say to do next with that data.
 
-```
+```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => console.log(data))
 ```
@@ -222,7 +219,7 @@ From the docs, the `.json()` method returns "A promise that resolves with the re
 
 In short, it gives us access to the data!
 
-```
+```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => data.json())
   .then(data => console.log(data))
@@ -230,7 +227,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 
 Lastly, we can add in a `.catch()` to account for any errors we may run into.
 
-```
+```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => data.json())
   .then(data => console.log(data))
@@ -247,7 +244,7 @@ In our case, we can think of Promises as a placeholder that will do something on
 
 The great thing about promises is that since they are just objects we can move them around like an object and can return them from functions.
 
-```
+```js
 function getTrivia(number, categoryId) {
 	const root = 'https://opentdb.com/api.php';
 	const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
