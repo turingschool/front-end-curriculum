@@ -18,53 +18,6 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 
 ---
 
-### What is this asynchronous thing all about?
-
-Let's say we're at a Red Robin for a night out on the town...Here's how the experience would go in each scenario:
-
-* **Synchronous:** I order my food, everyone in the restaurant has to wait until I get my food before the next person can order
-
-* **Asynchronous:** Like, a normal restaurant experience where you'd tip the server at least 20%
-
-
-#### Example: `setTimeout()`
-
-```js
-console.log("Legen...");
-
-setTimeout(() => {
-  console.log("DARY!");
-}, 2000);
-
-console.log("Wait for it...");
-```
-
-setTimeout is actually an asynchronous function, which executes its callback after waiting for the allotted time to expire.
-
-#### Example 2:
-
-* **Synchronous:**
-
-```
-|<----A---->||<-----B--------->||<----C-------------->|
-```
-
-* **Asynchronous:**
-```
-|<-----------------A---------------------------->|
-     |<------------B---------------------------------->|
-             |<----C-------------->|
-```
-
-
-#### Questions:
-
-* Why are async operations necessary?
-* Have you run into a situation on past projects where you needed async operations to accomplish it?
-
-
----
-
 ## The history of network requests
 
 What is a network request?
@@ -102,8 +55,6 @@ Once we get a response from the server with the data, we can work with data and 
 7. Proper action (like page update) is performed by JavaScript
 
 Using the `XMLHttpRequest` object, developers can `GET` information to/from remote servers (among other tasks you'll learn more about in future mods). Depending on how the information is transmitted, the server should respond back with a [status code](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html). Here is a high-level summary of the status code ranges:
-
-_the XHR or `XMLHttpRequest` is a tool specific to the browser_
 
 ```
 1XX status codes have informational purposes
@@ -149,44 +100,12 @@ xhttp.open("GET", "https://opentdb.com/api.php?amount=10&category=27&type=multip
 Now let's send the request:
 
 ```js
-xhttp.send()
+xhttp.send();
 ```
 
 If it worked, you should be able to type `xhttp` and see the results in your XMLHttpRequest object with a status of `200` as well as some responseText containing the specific trivia returned.
 
 ---
-
-<!-- ### Isn't There an Easier Way???
-
-Like basically all things in Javascript, developers have come up with synctatic sugar to make our lives easier.
-
-### jQuery: $.get()
-
-jQuery has incorporated AJAX functionality into its library to allow us to perform asynchronous tasks in a more readable fashion. Here is a sample request matching what we did above:
-
-```
-$.get("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-```
-
-Of course there is more to it in order to use the data returned by the server, but this is all it takes to ping those endpoints and request the data.
-
-If we want to do something with the data, we can set a `callback` as a second argument that handles the data returned:
-
-```
-$.get("https://opentdb.com/api.php?amount=1&category=27&type=multiple", (data) => {
-  //do something with the data
-})
-```
-
-But what about if we request something that doesn't exist or the server is busted, how can we account for that? Great question! Because jQuery returns a jqXHR (or just an XMLHttpRequest object), we get with it a variety of tools for how to deal with the response. Here's one example:
-
-```
-$.get("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-  .then(data => //do something if data is returned)
-  .catch(error => //do something if an error is returned)
-```
-
-Some additional information on the specifc methods can be found [here](https://api.jquery.com/jquery.get/) -->
 
 ### Isn't There an Easier Way??? ES6: fetch()
 
@@ -201,14 +120,14 @@ _The fetch() method takes one mandatory argument, the path to the resource you w
 We can nearly mimic the syntax above to perform the same network request, with a few minor tweaks. First we need to pass in the path we want to fetch from:
 
 ```js
-fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
+fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
 ```
 
 Next we see that fetch returns a promise that resolves to the response of of our request. We haven't talked about promises yet, but all you need to know for now is that we can add `.then(callback)` to our fetch. The callback parameter inside the `.then()` method will execute as soon as the response comes in. In other words, it will wait until we have ALL of the data (or an error) back, `THEN` it will execute whatever we say to do next with that data.
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-  .then(data => console.log(data))
+  .then(data => console.log(data));
 ```
 
 If you plug the code above into your console, you should see the Response object come back!
@@ -222,7 +141,7 @@ In short, it gives us access to the data!
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => data.json())
-  .then(data => console.log(data))
+  .then(data => console.log(data));
 ```
 
 Lastly, we can add in a `.catch()` to account for any errors we may run into.
@@ -231,7 +150,7 @@ Lastly, we can add in a `.catch()` to account for any errors we may run into.
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(data => data.json())
   .then(data => console.log(data))
-  .catch(err => /* do something else */)
+  .catch(err => /* do something else */);
 ```
 
 ---
@@ -260,6 +179,36 @@ getTrivia(10, 27)
 ```
 ---
 
+### What is this asynchronous thing all about?
+
+Let's say we're at a restaurant for a night out on the town...Here's how the experience would go in each scenario:
+
+* **Synchronous:** I order my food, everyone in the restaurant has to wait until I get my food before the next person can order.
+
+* **Asynchronous:** I order my food, the order is put into a queue, other food is made in the meantime, my food is ready, and the server brings it to me.
+
+
+#### A Non-AJAX Example: `setTimeout()`
+
+```js
+console.log("Legen...");
+
+setTimeout(() => {
+  console.log("DARY!");
+}, 2000);
+
+console.log("Wait for it...");
+```
+
+`setTimeout()` is actually an asynchronous function, which executes its callback after waiting for the allotted time to expire.
+
+
+#### Questions:
+
+* Why are async operations necessary?
+* Have you run into a situation on past projects where you needed async operations to accomplish it?
+
+
 ## Practice Time!
 
 In your console do the following...
@@ -268,6 +217,12 @@ In your console do the following...
 - Fetch 20 geography questions and for each trivia console.log the answer only
 - Fetch 20 geography questions and console.log the response status code.
 - Fetch 30 geography questions and console.log an array of only the hard trivia
+
+## More Practice Time! With React
+
+The lifecycle method `componentDidMount()` is important to talk about with respect to AJAX (using `fetch`).
+
+Continue with [this](https://github.com/turingschool-examples/react-trivia) trivia app repo. In the `App` component, modify it so that the questions are requested via the trivia API (used in this lesson), and then update `state`.
 
 ## Even more practice time:
 
@@ -279,6 +234,6 @@ Try it out!
 
 ##### Further Reading:
 
-* [The Evolution of Asyncronous Javascript](https://blog.risingstack.com/asynchronous-javascript/)
+* [The Evolution of Asyncronous JavaScript](https://blog.risingstack.com/asynchronous-javascript/)
 * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
