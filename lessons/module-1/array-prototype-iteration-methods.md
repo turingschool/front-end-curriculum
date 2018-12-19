@@ -214,9 +214,10 @@ var dogs = [
 And one additional:
 
 * If we have two arrays, add the pairwise items in those arrays and log them to the console.
+
 ```js
-var array1 = [1, 2, 3]
-var array2 = [4, 5, 6]
+var array1 = [1, 2, 3];
+var array2 = [4, 5, 6];
   
 // console output
 => 5, 7, 9
@@ -284,6 +285,7 @@ var increasedPrices = [];
 ```
 
 * If we have two arrays, add the pairwise items in those arrays and log them to the console.
+
 ```js
 var array1 = [1, 2, 3]
 var array2 = [4, 5, 6]
@@ -404,9 +406,7 @@ var people = [
 ];
 
 // console output
-=> [
-  {name: "Pam", thirsty: false}
-]
+=> [ { name: "Pam", thirsty: false } ]
 ```
 
 #### Journal
