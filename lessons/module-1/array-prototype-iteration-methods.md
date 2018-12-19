@@ -203,7 +203,7 @@ var dogs = [
 
 // console output
 => 'Fido has 4 legs.'
-   'Greg has 5 legs.
+   'Greg has 5 legs.'
 ```
 
 And one additional:
