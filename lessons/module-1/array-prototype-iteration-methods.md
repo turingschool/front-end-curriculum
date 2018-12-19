@@ -190,6 +190,7 @@ var prices = [4.99, 5.50, 7.00, 10.25];
 var increasedPrices = [];
 
 // use forEach to loop over the array and add new increased prices to the increasedPrices array
+=> [5.99, 6.5, 8, 11.25]
 ```
 
 * Using dogs array below, log the dog's name and how many legs it has.
@@ -199,11 +200,22 @@ var dogs = [
   {name: "Fido", numLegs: 4}, 
   {name: "Greg", numLegs: 5} 
 ];
+
+// console output
+=> 'Fido has 4 legs.'
+   'Greg has 5 legs.'
 ```
 
 And one additional:
 
-* If we have two arrays, add the pairwise items in those arrays and log them to the console; `var array1 = [1, 2, 3]` and `var array2 = [4, 5, 6]`. So we should end up with `5, 7, 9`.
+* If we have two arrays, add the pairwise items in those arrays and log them to the console.
+```js
+var array1 = [1, 2, 3]
+var array2 = [4, 5, 6]
+  
+// console output
+=> 5, 7, 9
+```
 
 #### Journal
 
@@ -263,11 +275,26 @@ var prices = [4.99, 5.50, 7.00, 10.25];
 var increasedPrices = [];
 
 // use map to loop over the array and add new increased prices to the increasedPrices array
+=> [5.99, 6.5, 8, 11.25]
 ```
 
-* From before, if we have two arrays, add the pairwise items in those arrays and log them to the console; `array1 = [1, 2, 3]` and `array2 = [4, 5, 6]`. This time we should end up with an array `[5, 7, 9]`.
+* If we have two arrays, add the pairwise items in those arrays and log them to the console.
+```js
+var array1 = [1, 2, 3]
+var array2 = [4, 5, 6]
+  
+// console output
+=> 5, 7, 9
+```
 
-* Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius; `degreesF = [67, 32, 55, 102]`. It should roughly become `[19.44, 0, 12.77, 38.88]`. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm) to convert from Fahrenheit to Celsius.
+* Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm) to convert from Fahrenheit to Celsius.
+
+```js
+var degreesF = [67, 32, 55, 102]
+
+// console output
+=> [19.44, 0, 12.77, 38.88] 
+ ```
 
 #### Journal
 
@@ -355,6 +382,13 @@ var guitarPlayingBeatles = beatles.filter(function (beatle) {
 
 * From the array `[34, 2, 55, 75, -1, 100]`, return an array with only numbers greater than 50.
 
+```js
+var numbers = [34, 2, 55, 75, -1, 100];
+
+// console output
+=> [55, 75, 100];
+```
+
 * Filter the array to return objects that are not thirsty: 
 
 ```js
@@ -363,6 +397,11 @@ var people = [
   {name: "Pam", thirsty: false}, 
   {name: "Roberta", thirsty: true}
 ];
+
+// console output
+=> [
+  {name: "Pam", thirsty: false}
+]
 ```
 
 #### Journal
