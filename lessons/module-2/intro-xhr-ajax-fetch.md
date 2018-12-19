@@ -222,7 +222,7 @@ In your console do the following...
 
 Since `fetch` is asyncronous, it's important to think about when we should make the request for data. The lifecycle method `componentDidMount()` is important to talk about with respect to AJAX (using `fetch`).
 
-Continue with [this](https://github.com/turingschool-examples/react-trivia) trivia app repo. In the `App` component, modify it so that the questions are requested via the trivia API (used in this lesson), and then update `state`.
+Continue with [this](https://github.com/turingschool-examples/react-trivia) trivia app repo. In the `App` component, modify it so that the questions are requested via the trivia API (used in this lesson), and then update `state` with the information received from the API.
 
 ## Even more practice time:
 
