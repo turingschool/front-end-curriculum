@@ -18,7 +18,7 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 
 ---
 
-## The history of network requests
+## Network Requests
 
 What is a network request?
 
@@ -26,7 +26,7 @@ Open up your dev tools and navigate to the Network tab. Refresh the page and wat
 
 ![network dev tool example](https://i.imgur.com/C5brbyU.png)
 
-Each item on a webpage is coming from some server somewhere. The link tags in your HTML connecting your stylesheets and JavaScript files prompt network requests. Webpack saves us time because it bundles up all our files into a single JavaScript file, necessitating a single network request, rather than dozens of individual requests.
+Each item on a webpage is coming from some server somewhere. The link tags in your HTML connecting your stylesheets and JavaScript files prompt network requests.
 
 Why is it important to keep this in mind?
 
@@ -220,7 +220,7 @@ In your console do the following...
 
 ## More Practice Time! With React
 
-The lifecycle method `componentDidMount()` is important to talk about with respect to AJAX (using `fetch`).
+Since `fetch` is asyncronous, it's important to think about when we should make the request for data. The lifecycle method `componentDidMount()` is important to talk about with respect to AJAX (using `fetch`).
 
 Continue with [this](https://github.com/turingschool-examples/react-trivia) trivia app repo. In the `App` component, modify it so that the questions are requested via the trivia API (used in this lesson), and then update `state`.
 
