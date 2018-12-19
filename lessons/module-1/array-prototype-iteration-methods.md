@@ -101,6 +101,7 @@ var prices = [4.99, 5.50, 7.00, 10.25];
 var increasedPrices = [];
 
 // use a for loop to loop over the array and add new increased prices to the increasedPrices array
+=> [5.99, 6.5, 8, 11.25]
 ```
 <!-- 
 ```
@@ -119,6 +120,10 @@ var dogs = [
   {name: "Fido", numLegs: 4}, 
   {name: "Greg", numLegs: 5} 
 ];
+
+// console output
+=> 'Fido has 4 legs.'
+   'Greg has 5 legs.'
 ```
 
 
