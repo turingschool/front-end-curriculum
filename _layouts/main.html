@@ -4,26 +4,10 @@
   <head>
     {% include head.html %}
   </head>
-
   <body>
-    <div class="container">
-      {% include navigation.html %}
-      <section class="content">
-        <article>
-          <header>
-            <h1>
-              Turing School of Software and Design
-              <small>Front-End Engineering Program</small>
-            </h1>
-          </header>
-          <section class="main-content">
-          {{content}}
-          </section>
-        </article>
-        {% include footer.html %}
-        {% include search.html %}
-      </section>
-    </div>
+    {% include navigation.html %}
+    {{content}}
+    {% include search.html %}
     <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
     <script src="/public/js/active-links.js"></script>
   </body>

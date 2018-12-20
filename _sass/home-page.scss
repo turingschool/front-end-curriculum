@@ -1,0 +1,22 @@
+.hero-section {
+	background: url('/assets/images/front-page-hero.jpg');
+  background-size: cover;
+  height: 450px;
+  opacity: 0.7;
+  display: flex;
+ 	align-items: center;
+}
+
+.hero-text {
+	color: #FFF;
+	margin: auto 0;
+
+	h1 {
+		font-size: 4em;
+		margin: 0 20px;
+	}
+
+	h4 {
+		margin: 0 20px;	
+	}
+}
