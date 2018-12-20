@@ -2,17 +2,29 @@
 	background: url('/assets/images/front-page-hero.jpg');
   background-size: cover;
   height: 450px;
-  opacity: 0.7;
   display: flex;
  	align-items: center;
+ 	position: relative;
+
+ 	&:after {
+ 		background-color: rgba(0,0,0,0.3);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+ 	}
 }
 
 .hero-text {
 	color: #FFF;
 	margin: auto 0;
+	z-index: 2;
 
 	h1 {
-		font-size: 4em;
+		font-size: 5em;
 		margin: 0 20px;
 	}
 
