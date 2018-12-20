@@ -71,7 +71,7 @@ To demonstrate how `redux-thunk` actually works, we're going to be using this sa
 
 * You will want to clone down [promises-api](https://github.com/turingschool-examples/promises-api), run `npm install` and `npm start`. The server should now be running on `localhost:3001`
 * Now you will want to clone down [promises-practice](https://github.com/turingschool-examples/promises-practice) and `npm install` 
-* You will then want to checkout the branch `pre-redux` by running `git checkout pre-redux`
+* You will then want to checkout the branch `pre-redux-aa` by running `git checkout pre-redux-aa`
 * Then start up the application `npm start`
 
 If we take a look at `App.js`, we can see that our component's state currently has 3 properties. These properties correspond to the 3 stages of our async request that we need to account for.
@@ -81,7 +81,7 @@ If we take a look at `App.js`, we can see that our component's state currently h
 this.state = {
    staff: [],
    isLoading: false,
-   hadErrored: false
+   error: ''
 }
 ```
 ##### Take a few minutes and review the `fetchStaff`, `fetchBios`, and `commponentDidMount` methods that are being used to fetch our data and handle our loading and error cases.
@@ -114,9 +114,9 @@ export const isLoading = (bool) => ({
    isLoading: bool
 })
 	
-export const hasErrored = (bool) => ({
+export const hasErrored = (message) => ({
    type: 'HAS_ERRORED',
-   hasErrored: bool
+   message
 })
 
 export const staffFetchDataSuccess = (staff) => ({
@@ -195,10 +195,10 @@ export const isLoading = (state = false, action) => {
   }
 }
 
-export const hasErrored = (state = false, action) => {
+export const hasErrored = (state = '', action) => {
   switch(action.type) {
     case 'HAS_ERRORED':
-      return action.hasErrored
+      return action.message
     default:
       return state
   }
@@ -224,7 +224,7 @@ import { isLoading, hasErrored, staff } from './staffReducer';
 const rootReducer = combineReducers({
   staff,
   isLoading,
-  hasErrored
+  error: hasErrored
 })
 
 export default rootReducer;
@@ -263,7 +263,7 @@ Now we just need to clean up our App component and allow it to use the Redux sto
 const mapStateToProps = (state) => ({
   staff: state.staff,
   isLoading: state.isLoading,
-  hasErrored: state.hasErrored
+  error: state.error
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -272,7 +272,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
-Previously, we had destructured `staff`, `isLoading`, and `hasErrored` off of state. We now are destructuring them off of props. Lastly, we just need to call `this.props.fetchStaff(url)` in `componentDidMount()`. 
+Previously, we had destructured `staff`, `isLoading`, and `error` off of state. We now are destructuring them off of props. Lastly, we just need to call `this.props.fetchStaff(url)` in `componentDidMount()`. 
 
 ### Voila... we have successfully removed our data fetching logic from our component/UI logic into action creators. Because this is such a common pattern, `redux-thunk` is one of the most popular libraries in the Redux ecosystem.
 
