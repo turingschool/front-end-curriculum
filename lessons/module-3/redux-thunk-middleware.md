@@ -69,10 +69,11 @@ To demonstrate how `redux-thunk` actually works, we're going to be using this sa
 
 #### Start Up Instructions 
 
-* You will want to clone down [promises-api](https://github.com/turingschool-examples/promises-api), run `npm install` and `npm start`. The server should now be running on `localhost:3001`
-* Now you will want to clone down [promises-practice](https://github.com/turingschool-examples/promises-practice) and `npm install` 
-* You will then want to checkout the branch `pre-redux-aa` by running `git checkout pre-redux-aa`
-* Then start up the application `npm start`
+* Clone down [promises-api](https://github.com/turingschool-examples/promises-api), run `npm install` and `npm start`. The server should now be running on `localhost:3001`
+* Clone down [promises-practice](https://github.com/turingschool-examples/promises-practice)
+* Checkout the branch pre-redux-aa `git checkout pre-redux-aa`
+* Install the dependencies `npm install`
+* Start up the application `npm start`
 
 If we take a look at `App.js`, we can see that our component's state currently has 3 properties. These properties correspond to the 3 stages of our async request that we need to account for.
 
@@ -98,7 +99,7 @@ From what we already have, we know our state needs to have 3 propertes:
 
 * **staff**
 * **isLoading** 
-* **hasErrored** 
+* **error** 
 
 We will need to create an action for each of these, but we will probably also need an additional 2 action creators that will call our other 3 action (creators) depending on the status of fetching the data. These additional 2 action creators will look very similar to our asynchronous `fetchStaff` and `fetchBios` methods, but instead of directly setting state with `this.setState({ isLoading: true })`, we'll `dispatch` an action to do the same: `dispatch(isLoading(true))`.
 
@@ -135,20 +136,20 @@ import { isLoading, hasErrored } from '../actions'
 import { fetchBios } from './fetchBios.js'
 
 export const fetchStaff = (url) => {
-  return (dispatch) =>  {
-    dispatch(isLoading(true))
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw Error(response.statusText)
-        }
-        dispatch(isLoading(false))
-        return response
-    })
-    .then(response => response.json())
-    .then(data => dispatch(fetchBios(data.bio)))
-    .then(staff => dispatch(staffFetchDataSuccess(staff)))
-    .catch(() => dispatch(hasErrored(true)))
+  return async (dispatch) =>  {
+    try {
+      dispatch(isLoading(true))
+      const response = await fetch(url)
+      if(!response.ok) {
+        throw Error(response.statusText)
+      }
+      dispatch(isLoading(false))
+      const data = await response.json()
+      const staff = await dispatch(fetchBios(data.bio))
+      dispatch(staffFetchDataSuccess(staff))
+    } catch (error) {
+      dispatch(hasErrored(error.message))
+    }
   }
 }
 ```
@@ -161,20 +162,20 @@ import { isLoading, hasErrored } from '../actions'
 export const fetchBios = (staffArray) => {
   return (dispatch) => {
     dispatch(isLoading(true))
-    const unresolvedPromises = staffArray.map(staffMember => {
-      return fetch(staffMember.info)
-      .then(response => {
-        if (!response.ok) {
+    const unresolvedPromises = staffArray.map(async staffMember => {
+      try {
+        const response = await fetch(staffMember.info)
+        if(!response.ok) {
           throw Error(response.statusText)
         }
         dispatch(isLoading(false))
-        return response
+        const data = await response.json()
+        return { ...data, name: staffMember.name}
+      } catch (error) {
+        dispatch(hasErrored(error.message))
+        }
       })
-      .then(response => response.json())
-      .then(data => ({...data, name: staffMember.name}))
-      .catch(() => dispatch(hasErrored(true)))
-    })
-    return Promise.all(unresolvedPromises);
+    return Promise.all(unresolvedPromises)
   }
 }
 ```
@@ -317,17 +318,17 @@ Ok, here's where we get into async land. Our network request has been kicked off
 ```javascript
 // thunks/__tests__/fetchStaff.js
 
-it('should dispatch hasErrored(true) if the response is not ok', async () => {
+it('should dispatch hasErrored with a message if the response is not ok', async () => {
   window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-    ok: false
+    ok: false,
+    statusText: 'Something went wrong'
   }))
   
   const thunk = fetchStaff(mockUrl) // again, this is the inner function that is returned
   
   await thunk(mockDispatch)
   
-  expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true))
-  expect(mockDispatch).not.toHaveBeenCalledWith(isLoading(false))
+  expect(mockDispatch).toHaveBeenCalledWith(hasErrored('Something went wrong'))
 })
 
 it('should dispatch isLoading(false) if the response is ok', async () => {
@@ -362,7 +363,7 @@ Now we need to tell our `fetchStaff` test to look for a mock directory with the 
 jest.mock('../fetchBios') // this is the file path for the original, not the mock
 
 it('should dispatch fetchBios with the correct param', async () => {
-  const mockStaff = ['Christie', 'Will']
+  const mockStaff = ['Christie', 'David']
   
   window.fetch = jest.fn().mockImplpementation(() => Promise.resolve({
     ok: true,
@@ -387,7 +388,7 @@ Only 1 test left for `fetchStaff`...
 // thunks/__tests__/fetchStaff.js
 
 it('should dispatch staffFetchDataSuccess', async () => {
-    const mockStaff = ['Christie', 'Will']
+    const mockStaff = ['Christie', 'David']
     
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
