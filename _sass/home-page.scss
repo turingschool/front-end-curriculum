@@ -1,13 +1,13 @@
 .hero-section {
-	background: url('/assets/images/front-page-hero.jpg');
+	background: url('/assets/images/front-page-hero.jpg') 70%;
   background-size: cover;
-  height: 450px;
+  height: 500px;
   display: flex;
  	align-items: center;
  	position: relative;
 
  	&:after {
- 		background-color: rgba(0,0,0,0.3);
+ 		background-color: rgba(0,0,0,0.4);
     content: '';
     position: absolute;
     top: 0;
@@ -21,14 +21,12 @@
 .hero-text {
 	color: #FFF;
 	margin: auto 0;
+	max-width: 700px;
 	z-index: 2;
 
 	h1 {
-		font-size: 5em;
-		margin: 0 20px;
-	}
-
-	h4 {
-		margin: 0 20px;	
+		font-size: 7em;
+		margin-left: 80px;
+		line-height: 1em;
 	}
 }
