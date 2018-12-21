@@ -277,24 +277,18 @@ _Note: Just like variables, common convention is to place your mixins in a parti
     
 #### Turn and Code
 
-<div class="discuss">
-  <h4>Practice</h4>
-  <p>In a CodePen, build the following chunk of html and SASS using `mixins`: 
-
+In a CodePen, build the following chunk of html and SASS using `mixins`
   1. Create a mixin called `level-one-header` that has a font size of 32px, a
      font weight of 800, and a font family of Helvetica.  
   2. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
      weight of 300, and a font family of Arial.   
-  3. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100, and a font family of Times New Roman.   
+  3. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.   
   4. Using these mixins, create a small chunk of html. The HTML should have the following: 
     - One h1 element using the appropriate mixin.
     - Two divs, each with an h2 and a paragraph tag.
     - For the two h2 elements, one should have a class of "pink", which should have pink font, and one
       with a class of "subheader" that is grey, underlined, and all caps.
-    - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.</p>
-</div>
-
-<hr />
+    - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
 
 ## Extend
 
