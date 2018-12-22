@@ -1,6 +1,7 @@
 .hero-section {
-	background: url('/assets/images/front-page-hero.jpg') 70%;
+	background: url('/assets/images/front-page-hero.jpg') 80%;
   background-size: cover;
+  border-bottom: 10px solid $front-end;
   height: 500px;
   display: flex;
  	align-items: center;
@@ -25,8 +26,96 @@
 	z-index: 2;
 
 	h1 {
+		font-family: $heavy-copy, sans-serif;
 		font-size: 7em;
 		margin-left: 80px;
 		line-height: 1em;
+		letter-spacing: -5px;
+	}
+}
+
+// Links below hero image
+
+.resource-link-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: auto;
+}
+
+.resource-link {
+	flex-basis: 300px;
+	min-width: 200px;
+	padding: 20px;
+
+	color: $medium-dark-gray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+%resource-link-shared {
+	font-family: $light-copy, sans-serif;
+	font-size: 1.25em;
+}
+
+%link-icon-shared {
+  margin: 25px;
+  width: 5.5em;
+  height: 5.5em;
+  stroke-width: 0;
+}
+
+%resource-heading-shared {
+	font-size: 3em;
+	font-family: $heavy-copy, sans-serif;
+	margin: 0;
+	padding: 10px;
+	text-align: center;
+}
+
+.daily-links, .prework {
+	background-color: #F2F2F2;
+	padding: 30px;
+
+	h3 {
+		color: $medium-dark-gray;
+		@extend %resource-heading-shared;
+	}
+
+	.link-icon {
+		@extend %link-icon-shared;
+	  stroke: $medium-dark-gray;
+	  fill: $medium-dark-gray;
+	}
+
+	a {
+		color: $medium-dark-gray;
+		@extend %resource-link-shared	
+	}
+}
+
+.other-resources {
+	background-color: #222222;
+	padding: 30px;
+
+	h3 {
+		color: #C0C0C0;
+		@extend %resource-heading-shared;
+	}
+
+	.link-icon {
+		@extend %link-icon-shared;
+	  stroke: #C0C0C0;
+	  fill: #C0C0C0;
+	}
+
+	a {
+		color: #C0C0C0;
+		@extend %resource-link-shared	
+	}
+
+	.resource-link-container {
+		max-width: 1000px;
 	}
 }
