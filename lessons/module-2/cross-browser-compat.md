@@ -207,3 +207,10 @@ __________________________________________
 * [Polyfills vs. Shims](http://www.2ality.com/2011/12/shim-vs-polyfill.html)
 * [IE Conditional Comments](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/)
 * [BrowserStack](https://www.browserstack.com/)
+__________________________________________
+
+## Checks for Understanding
+
+* You’re building an app that relies on knowing a person’s location. You want to use the geolocation API but it’s unsupported in some of the platforms your audience uses. What steps will you take to resolve this discrepancy? 
+* What research must you first do to determine whether you’ll take a progressive enhancement or graceful degradation approach?
+
