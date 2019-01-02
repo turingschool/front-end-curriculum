@@ -101,6 +101,7 @@ var prices = [4.99, 5.50, 7.00, 10.25];
 var increasedPrices = [];
 
 // use a for loop to loop over the array and add new increased prices to the increasedPrices array
+=> [5.99, 6.5, 8, 11.25]
 ```
 <!-- 
 ```
@@ -119,6 +120,10 @@ var dogs = [
   {name: "Fido", numLegs: 4}, 
   {name: "Greg", numLegs: 5} 
 ];
+
+// console output
+=> 'Fido has 4 legs.'
+   'Greg has 5 legs.'
 ```
 
 
@@ -209,9 +214,10 @@ var dogs = [
 And one additional:
 
 * If we have two arrays, add the pairwise items in those arrays and log them to the console.
+
 ```js
-var array1 = [1, 2, 3]
-var array2 = [4, 5, 6]
+var array1 = [1, 2, 3];
+var array2 = [4, 5, 6];
   
 // console output
 => 5, 7, 9
@@ -278,13 +284,14 @@ var increasedPrices = [];
 => [5.99, 6.5, 8, 11.25]
 ```
 
-* If we have two arrays, add the pairwise items in those arrays and log them to the console.
+* If we have two arrays, add the pairwise items in those arrays and create a sums array based on the returned values
+
 ```js
 var array1 = [1, 2, 3]
 var array2 = [4, 5, 6]
   
 // console output
-=> 5, 7, 9
+=> [5, 7, 9]
 ```
 
 * Using an array of temperature data in Fahrenheit, convert the date to degrees Celsius. [Here is the formula](http://www.rapidtables.com/convert/temperature/how-fahrenheit-to-celsius.htm) to convert from Fahrenheit to Celsius.
@@ -374,7 +381,7 @@ var livingBeatles = beatles.filter(function (beatle) {
 });
 
 var guitarPlayingBeatles = beatles.filter(function (beatle) {
-  return beatle.instruments.indexOf('guitar') !== -1;
+  return beatle.instruments.includes('guitar');
 });
 ```
 
@@ -399,9 +406,7 @@ var people = [
 ];
 
 // console output
-=> [
-  {name: "Pam", thirsty: false}
-]
+=> [ { name: "Pam", thirsty: false } ]
 ```
 
 #### Journal

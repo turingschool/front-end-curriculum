@@ -22,7 +22,11 @@ By the end of this lesson, you will know/be able to:
 
 ## What is Cross-Browser Compatibility
 
-Cross-Browser compatibility describes the issues and strategies behind making sure your applications work in a consistent manner across as many browsers and platforms as possible. It is mainly an accessibility concern. As we have introduced more devices, operating systems and browsers into the world, attempting to support all of them has become a significant challenge. Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
+Cross-Browser compatibility describes the issues and strategies behind making sure your applications look and behave in a consistent manner across as many browsers and platforms as possible. As we have introduced more devices, operating systems and browsers into the ecosystem, attempting to support all of them has become a significant challenge for front-end developers. 
+
+### Standardization
+
+Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
 
 Take a few minutes to look through either of the standards websites, think about something in HTML you used in your last project, and find the standard that describes it. Put yourself in the position of a developer who wants to create a new browser, even better than Chrome!
 

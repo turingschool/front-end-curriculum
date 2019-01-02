@@ -69,10 +69,11 @@ To demonstrate how `redux-thunk` actually works, we're going to be using this sa
 
 #### Start Up Instructions 
 
-* You will want to clone down [promises-api](https://github.com/turingschool-examples/promises-api), run `npm install` and `npm start`. The server should now be running on `localhost:3001`
-* Now you will want to clone down [promises-practice](https://github.com/turingschool-examples/promises-practice) and `npm install` 
-* You will then want to checkout the branch `pre-redux` by running `git checkout pre-redux`
-* Then start up the application `npm start`
+* Clone down [promises-api](https://github.com/turingschool-examples/promises-api), run `npm install` and `npm start`. The server should now be running on `localhost:3001`
+* Clone down [promises-practice](https://github.com/turingschool-examples/promises-practice)
+* Checkout the branch pre-redux-aa `git checkout pre-redux-aa`
+* Install the dependencies `npm install`
+* Start up the application `npm start`
 
 If we take a look at `App.js`, we can see that our component's state currently has 3 properties. These properties correspond to the 3 stages of our async request that we need to account for.
 
@@ -81,7 +82,7 @@ If we take a look at `App.js`, we can see that our component's state currently h
 this.state = {
    staff: [],
    isLoading: false,
-   hadErrored: false
+   error: ''
 }
 ```
 ##### Take a few minutes and review the `fetchStaff`, `fetchBios`, and `commponentDidMount` methods that are being used to fetch our data and handle our loading and error cases.
@@ -98,7 +99,7 @@ From what we already have, we know our state needs to have 3 propertes:
 
 * **staff**
 * **isLoading** 
-* **hasErrored** 
+* **error** 
 
 We will need to create an action for each of these, but we will probably also need an additional 2 action creators that will call our other 3 action (creators) depending on the status of fetching the data. These additional 2 action creators will look very similar to our asynchronous `fetchStaff` and `fetchBios` methods, but instead of directly setting state with `this.setState({ isLoading: true })`, we'll `dispatch` an action to do the same: `dispatch(isLoading(true))`.
 
@@ -114,9 +115,9 @@ export const isLoading = (bool) => ({
    isLoading: bool
 })
 	
-export const hasErrored = (bool) => ({
+export const hasErrored = (message) => ({
    type: 'HAS_ERRORED',
-   hasErrored: bool
+   message
 })
 
 export const staffFetchDataSuccess = (staff) => ({
@@ -135,20 +136,20 @@ import { isLoading, hasErrored } from '../actions'
 import { fetchBios } from './fetchBios.js'
 
 export const fetchStaff = (url) => {
-  return (dispatch) =>  {
-    dispatch(isLoading(true))
-    fetch(url)
-      .then(response => {
-        if (!response.ok) {
-          throw Error(response.statusText)
-        }
-        dispatch(isLoading(false))
-        return response
-    })
-    .then(response => response.json())
-    .then(data => dispatch(fetchBios(data.bio)))
-    .then(staff => dispatch(staffFetchDataSuccess(staff)))
-    .catch(() => dispatch(hasErrored(true)))
+  return async (dispatch) =>  {
+    try {
+      dispatch(isLoading(true))
+      const response = await fetch(url)
+      if(!response.ok) {
+        throw Error(response.statusText)
+      }
+      dispatch(isLoading(false))
+      const data = await response.json()
+      const staff = await dispatch(fetchBios(data.bio))
+      dispatch(staffFetchDataSuccess(staff))
+    } catch (error) {
+      dispatch(hasErrored(error.message))
+    }
   }
 }
 ```
@@ -161,20 +162,20 @@ import { isLoading, hasErrored } from '../actions'
 export const fetchBios = (staffArray) => {
   return (dispatch) => {
     dispatch(isLoading(true))
-    const unresolvedPromises = staffArray.map(staffMember => {
-      return fetch(staffMember.info)
-      .then(response => {
-        if (!response.ok) {
+    const unresolvedPromises = staffArray.map(async staffMember => {
+      try {
+        const response = await fetch(staffMember.info)
+        if(!response.ok) {
           throw Error(response.statusText)
         }
         dispatch(isLoading(false))
-        return response
+        const data = await response.json()
+        return { ...data, name: staffMember.name}
+      } catch (error) {
+        dispatch(hasErrored(error.message))
+        }
       })
-      .then(response => response.json())
-      .then(data => ({...data, name: staffMember.name}))
-      .catch(() => dispatch(hasErrored(true)))
-    })
-    return Promise.all(unresolvedPromises);
+    return Promise.all(unresolvedPromises)
   }
 }
 ```
@@ -195,10 +196,10 @@ export const isLoading = (state = false, action) => {
   }
 }
 
-export const hasErrored = (state = false, action) => {
+export const hasErrored = (state = '', action) => {
   switch(action.type) {
     case 'HAS_ERRORED':
-      return action.hasErrored
+      return action.message
     default:
       return state
   }
@@ -224,7 +225,7 @@ import { isLoading, hasErrored, staff } from './staffReducer';
 const rootReducer = combineReducers({
   staff,
   isLoading,
-  hasErrored
+  error: hasErrored
 })
 
 export default rootReducer;
@@ -263,7 +264,7 @@ Now we just need to clean up our App component and allow it to use the Redux sto
 const mapStateToProps = (state) => ({
   staff: state.staff,
   isLoading: state.isLoading,
-  hasErrored: state.hasErrored
+  error: state.error
 })
 
 const mapDispatchToProps = (dispatch) => ({
@@ -272,7 +273,7 @@ const mapDispatchToProps = (dispatch) => ({
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
-Previously, we had destructured `staff`, `isLoading`, and `hasErrored` off of state. We now are destructuring them off of props. Lastly, we just need to call `this.props.fetchStaff(url)` in `componentDidMount()`. 
+Previously, we had destructured `staff`, `isLoading`, and `error` off of state. We now are destructuring them off of props. Lastly, we just need to call `this.props.fetchStaff(url)` in `componentDidMount()`. 
 
 ### Voila... we have successfully removed our data fetching logic from our component/UI logic into action creators. Because this is such a common pattern, `redux-thunk` is one of the most popular libraries in the Redux ecosystem.
 
@@ -317,17 +318,17 @@ Ok, here's where we get into async land. Our network request has been kicked off
 ```javascript
 // thunks/__tests__/fetchStaff.js
 
-it('should dispatch hasErrored(true) if the response is not ok', async () => {
+it('should dispatch hasErrored with a message if the response is not ok', async () => {
   window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-    ok: false
+    ok: false,
+    statusText: 'Something went wrong'
   }))
   
   const thunk = fetchStaff(mockUrl) // again, this is the inner function that is returned
   
   await thunk(mockDispatch)
   
-  expect(mockDispatch).toHaveBeenCalledWith(hasErrored(true))
-  expect(mockDispatch).not.toHaveBeenCalledWith(isLoading(false))
+  expect(mockDispatch).toHaveBeenCalledWith(hasErrored('Something went wrong'))
 })
 
 it('should dispatch isLoading(false) if the response is ok', async () => {
@@ -362,7 +363,7 @@ Now we need to tell our `fetchStaff` test to look for a mock directory with the 
 jest.mock('../fetchBios') // this is the file path for the original, not the mock
 
 it('should dispatch fetchBios with the correct param', async () => {
-  const mockStaff = ['Christie', 'Will']
+  const mockStaff = ['Christie', 'David']
   
   window.fetch = jest.fn().mockImplpementation(() => Promise.resolve({
     ok: true,
@@ -387,7 +388,7 @@ Only 1 test left for `fetchStaff`...
 // thunks/__tests__/fetchStaff.js
 
 it('should dispatch staffFetchDataSuccess', async () => {
-    const mockStaff = ['Christie', 'Will']
+    const mockStaff = ['Christie', 'David']
     
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
