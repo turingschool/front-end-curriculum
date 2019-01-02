@@ -24,12 +24,6 @@ By the end of this lesson, you will know/be able to:
 
 Cross-Browser compatibility describes the issues and strategies behind making sure your applications look and behave in a consistent manner across as many browsers and platforms as possible. As we have introduced more devices, operating systems and browsers into the ecosystem, attempting to support all of them has become a significant challenge for front-end developers. 
 
-### Standardization
-
-Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
-
-Take a few minutes to look through either of the standards websites, think about something in HTML you used in your last project, and find the standard that describes it. Put yourself in the position of a developer who wants to create a new browser, even better than Chrome!
-
 ### Prioritizing Functionality
 
 When aiming to serve as large of an audience as possible, we need a clear outline of what pieces of functionality and experience are highest priority. Delivering a completely consistent experience across all platforms isn't necessarily the goal, and is honestly kind of impossible. The real goal is simply to provide an acceptable experience for as many users as possible. This means we need to ask ourselves a few questions about what we're building:
@@ -61,9 +55,14 @@ __________________________________________
 
 ## Causes of Compatibility Discrepancies
 
+
+### Standardization
+
 Sometimes browsers implement APIs in different ways. Companies like Google, Mozilla, and Microsoft have "Platform Engineering" teams who are responsible for building Chrome, Firefox, and Internet Explorer, respectively. These engineers are in charge of implementing the features and APIs we use in our web applications -- from HTML tags such as `video` and `audio`, and JavaScript APIs such as `serviceWorkers` and `geolocation`.
 
-As mentioned earlier, there now exist standards bodies such as W3C and WHATWG that provide definitions for how these features should be implemented in browsers. But this wasn't always the case. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
+Spec writers, API developers and platform engineers have learned the importance of standdardizing the usage and behavior of these types of elements and APIs as a means to make cross-browser compat easier for front-end developers. The more closely these engineers abide by standards, the more your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
+
+These standards bodies didn't always exist to provide definitions for how these features should be implemented. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
 
 Though we've all agreed to standardize, feature implementation discrepancies still exist in some contexts. The most bleeding-edge APIs are often changing rapidly as spec writers debate how they should behave. While the specification is in-flux, so is the implementation. Platform engineers will get started on the implementation right away, and they might contain bugs or outdated APIs while the spec is being solidified. This is unavoidable and our best bet in these scenarios is to simply be patient while we wait for a more stable release before using these features in production.
 
