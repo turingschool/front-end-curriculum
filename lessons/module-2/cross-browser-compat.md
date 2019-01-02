@@ -179,7 +179,7 @@ Modernizr is a popular library that provides tons of polyfills for APIs which va
 
 Including a `normalize.css` or `reset.css` file in your application has become a common practice for standardizing the styling of certain browser elements. Each browser has a natural styling for things like form elements, and starting with a clean slate or consistent styling for these elements makes it easier to provide visual consistency across browsers. Normalization files will standardize the styling for these elements, while reset files will strip the elements of their styling.
 
-### [Selenium Testing](http://www.seleniumhq.org/)
+<!-- ### [Selenium Testing](http://www.seleniumhq.org/)
 
 Selenium provides a way for you to author tests that reproduce interactions that your users will engage in on your application. It can automate the process of filling in forms, clicking buttons and verifies that content is being displayed appropriately and the app is reacting as expected.
 
@@ -187,7 +187,7 @@ You can test different browsers by using different [`drivers`](https://github.co
 
 ### [Sauce Labs](https://saucelabs.com/)
 
-Sauce Labs is a company that provides extensive automated testing for different areas of coverage. They include specific cross-browser compatibility testing leveraging technologies like Selenium. You can manually test your application in a specified browser version and platform of your choosing, but they also allow you to set up automated tests for the same purposes that will run your application through each interaction in whichever environments you choose.
+Sauce Labs is a company that provides extensive automated testing for different areas of coverage. They include specific cross-browser compatibility testing leveraging technologies like Selenium. You can manually test your application in a specified browser version and platform of your choosing, but they also allow you to set up automated tests for the same purposes that will run your application through each interaction in whichever environments you choose. -->
 
 ### Virtual Machines
 
