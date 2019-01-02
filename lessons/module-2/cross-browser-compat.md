@@ -122,18 +122,6 @@ Because browsers will skip properties they don't understand, we can add a `filte
 
 You'll also notice we are specifying our gradients with indicators such as `-moz-linear-gradient` and `-webkit-linear-gradient`. These are called **vendor prefixes**, and can be used to target a specific browser vendor (Firefox or Chrome/Safari, in this case). These are useful when a new CSS declaration is added to the spec and platform engineers are still attempting to implement it. Eventually, when the implementation is more stable, these can be dropped in favor of the more generic `linear-gradient` declaration that all modern browsers will recognize.
 
-### IE Conditional Comments
-If you happen to end up working on a codebase that needs to support ancient IE browsers, you might run into some comments within the HTML that look like this:
-
-```html
-<!--[if lte IE 8]>
-  <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-```
-
-These are conditional comments that are only recognized by IE. This particular example says "If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files." Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
-
 ### Feature Detection
 Feature detection is similar to fallbacks, though it's more about the process of determining whether or not a browser supports a particular piece of code. We can write our own conditional code to detect feature support, and within each condition, provide the best possible user experience for that scenario. For example, some browsers might support the new [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/notification) that allows for mobile-style push notifications from the browser. In an application where we want to provide this functionality, we'd want to detect whether or not the browser recognizes the API with a conditional like this:
 
@@ -166,6 +154,23 @@ if (window.Promise && window.fetch) {
 ```
 
 The polyfills for these APIs look like the following: [fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js), [promise polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js). You'll notice at the bottom of each polyfill file, it will return a newly defined object for either `fetch` or `Promise`. This allows our application code to be written as it would for modern browsers, and cuts down on the amount of conditional code we have to write.
+
+
+
+### IE Conditional Comments
+
+*(This section is a nice to know, not a need to know)*
+
+If you happen to end up working on a codebase that needs to support ancient IE browsers, you might run into some comments within the HTML that look like this:
+
+```html
+<!--[if lte IE 8]>
+  <script src="ie-fix.js"></script>
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+```
+
+These are conditional comments that are only recognized by IE. This particular example says "If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files." Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
 
 __________________________________________
 
