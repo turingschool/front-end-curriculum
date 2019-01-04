@@ -26,6 +26,15 @@ module: 3
 - Controller
 - Separation of Concerns
 
+## Warm up
+Answer the following questions on your own for 4 minutes, and take another couple minutes of minutes to discuss with a partner.
+
+In the context of computer programming:
+
+1. What is a pattern?
+2. What patterns have you seen in software career?
+3. Why are patterns useful?
+
 ## MVC Architecture
 
 MVC (Model View Controller) is a design pattern that you'll find pops up all
