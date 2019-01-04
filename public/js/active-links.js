@@ -1,6 +1,6 @@
-$('.sidebar-navigation--links li').each(function(idx, link) {
+$('.nav-links a:not(.home-logo-link)').each(function(idx, link) {
   var currentPath = window.location.pathname;
-  var linkPath = $(link).find('a').attr('href');
+  var linkPath = $(link).attr('href');
 
   if (currentPath.includes(linkPath)) {
     $(link).toggleClass('active-link');

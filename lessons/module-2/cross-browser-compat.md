@@ -24,12 +24,6 @@ By the end of this lesson, you will know/be able to:
 
 Cross-Browser compatibility describes the issues and strategies behind making sure your applications look and behave in a consistent manner across as many browsers and platforms as possible. As we have introduced more devices, operating systems and browsers into the ecosystem, attempting to support all of them has become a significant challenge for front-end developers. 
 
-### Standardization
-
-Spec writers, API developers and platform engineers have learned the importance of standardization as a means to keep this snowballing problem under control, and have put massive effort towards ensuring your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
-
-Take a few minutes to look through either of the standards websites, think about something in HTML you used in your last project, and find the standard that describes it. Put yourself in the position of a developer who wants to create a new browser, even better than Chrome!
-
 ### Prioritizing Functionality
 
 When aiming to serve as large of an audience as possible, we need a clear outline of what pieces of functionality and experience are highest priority. Delivering a completely consistent experience across all platforms isn't necessarily the goal, and is honestly kind of impossible. The real goal is simply to provide an acceptable experience for as many users as possible. This means we need to ask ourselves a few questions about what we're building:
@@ -61,9 +55,14 @@ __________________________________________
 
 ## Causes of Compatibility Discrepancies
 
+
+### Standardization
+
 Sometimes browsers implement APIs in different ways. Companies like Google, Mozilla, and Microsoft have "Platform Engineering" teams who are responsible for building Chrome, Firefox, and Internet Explorer, respectively. These engineers are in charge of implementing the features and APIs we use in our web applications -- from HTML tags such as `video` and `audio`, and JavaScript APIs such as `serviceWorkers` and `geolocation`.
 
-As mentioned earlier, there now exist standards bodies such as W3C and WHATWG that provide definitions for how these features should be implemented in browsers. But this wasn't always the case. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
+Spec writers, API developers and platform engineers have learned the importance of standdardizing the usage and behavior of these types of elements and APIs as a means to make cross-browser compat easier for front-end developers. The more closely these engineers abide by standards, the more your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
+
+These standards bodies didn't always exist to provide definitions for how these features should be implemented. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
 
 Though we've all agreed to standardize, feature implementation discrepancies still exist in some contexts. The most bleeding-edge APIs are often changing rapidly as spec writers debate how they should behave. While the specification is in-flux, so is the implementation. Platform engineers will get started on the implementation right away, and they might contain bugs or outdated APIs while the spec is being solidified. This is unavoidable and our best bet in these scenarios is to simply be patient while we wait for a more stable release before using these features in production.
 
@@ -122,18 +121,6 @@ Because browsers will skip properties they don't understand, we can add a `filte
 
 You'll also notice we are specifying our gradients with indicators such as `-moz-linear-gradient` and `-webkit-linear-gradient`. These are called **vendor prefixes**, and can be used to target a specific browser vendor (Firefox or Chrome/Safari, in this case). These are useful when a new CSS declaration is added to the spec and platform engineers are still attempting to implement it. Eventually, when the implementation is more stable, these can be dropped in favor of the more generic `linear-gradient` declaration that all modern browsers will recognize.
 
-### IE Conditional Comments
-If you happen to end up working on a codebase that needs to support ancient IE browsers, you might run into some comments within the HTML that look like this:
-
-```html
-<!--[if lte IE 8]>
-  <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
-<![endif]-->
-```
-
-These are conditional comments that are only recognized by IE. This particular example says "If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files." Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
-
 ### Feature Detection
 Feature detection is similar to fallbacks, though it's more about the process of determining whether or not a browser supports a particular piece of code. We can write our own conditional code to detect feature support, and within each condition, provide the best possible user experience for that scenario. For example, some browsers might support the new [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/notification) that allows for mobile-style push notifications from the browser. In an application where we want to provide this functionality, we'd want to detect whether or not the browser recognizes the API with a conditional like this:
 
@@ -167,6 +154,23 @@ if (window.Promise && window.fetch) {
 
 The polyfills for these APIs look like the following: [fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js), [promise polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js). You'll notice at the bottom of each polyfill file, it will return a newly defined object for either `fetch` or `Promise`. This allows our application code to be written as it would for modern browsers, and cuts down on the amount of conditional code we have to write.
 
+
+
+### IE Conditional Comments
+
+*(This section is a nice to know, not a need to know)*
+
+If you happen to end up working on a codebase that needs to support ancient IE browsers, you might run into some comments within the HTML that look like this:
+
+```html
+<!--[if lte IE 8]>
+  <script src="ie-fix.js"></script>
+  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+```
+
+These are conditional comments that are only recognized by IE. This particular example says "If the browser is less than or equal to IE 8, load our IE-specific scripts and CSS files." Because the entire block is a comment, other browsers will parse it as such and it will thus have no effect on what happens in your application. The IE browsers implemented these conditional comments in order to ease developer's frustrations when trying to support their browsers, which strongly strayed from the others in how they parsed HTML/CSS/JavaScript. Because they veered so off course, it was often easier for developers to create entire files of *just* hacks for Internet Explorer, which helped them keep their more modern and standard code cleaner and more readable.
+
 __________________________________________
 
 ## Cross-Browser Compat Tools
@@ -179,7 +183,7 @@ Modernizr is a popular library that provides tons of polyfills for APIs which va
 
 Including a `normalize.css` or `reset.css` file in your application has become a common practice for standardizing the styling of certain browser elements. Each browser has a natural styling for things like form elements, and starting with a clean slate or consistent styling for these elements makes it easier to provide visual consistency across browsers. Normalization files will standardize the styling for these elements, while reset files will strip the elements of their styling.
 
-### [Selenium Testing](http://www.seleniumhq.org/)
+<!-- ### [Selenium Testing](http://www.seleniumhq.org/)
 
 Selenium provides a way for you to author tests that reproduce interactions that your users will engage in on your application. It can automate the process of filling in forms, clicking buttons and verifies that content is being displayed appropriately and the app is reacting as expected.
 
@@ -187,7 +191,7 @@ You can test different browsers by using different [`drivers`](https://github.co
 
 ### [Sauce Labs](https://saucelabs.com/)
 
-Sauce Labs is a company that provides extensive automated testing for different areas of coverage. They include specific cross-browser compatibility testing leveraging technologies like Selenium. You can manually test your application in a specified browser version and platform of your choosing, but they also allow you to set up automated tests for the same purposes that will run your application through each interaction in whichever environments you choose.
+Sauce Labs is a company that provides extensive automated testing for different areas of coverage. They include specific cross-browser compatibility testing leveraging technologies like Selenium. You can manually test your application in a specified browser version and platform of your choosing, but they also allow you to set up automated tests for the same purposes that will run your application through each interaction in whichever environments you choose. -->
 
 ### Virtual Machines
 
@@ -207,3 +211,10 @@ __________________________________________
 * [Polyfills vs. Shims](http://www.2ality.com/2011/12/shim-vs-polyfill.html)
 * [IE Conditional Comments](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/)
 * [BrowserStack](https://www.browserstack.com/)
+__________________________________________
+
+## Checks for Understanding
+
+* You’re building an app that relies on knowing a person’s location. You want to use the geolocation API but it’s unsupported in some of the platforms your audience uses. What steps will you take to resolve this discrepancy? 
+* What research must you first do to determine whether you’ll take a progressive enhancement or graceful degradation approach?
+

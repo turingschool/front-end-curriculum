@@ -7,7 +7,7 @@ module: 3
 
 - Discuss what MVC is, why we use it
 - Discuss alternative models to MVC
-- Learn about the MVC devisions
+- Learn about the MVC divisions
 - Find familiar examples of MVC
 - Discuss popular frameworks that lean on MVC
 - Discuss how we use the MVC pattern with React/Redux
@@ -25,6 +25,15 @@ module: 3
 - View
 - Controller
 - Separation of Concerns
+
+## Warm up
+Answer the following questions on your own for 4 minutes, and take another couple minutes of minutes to discuss with a partner.
+
+In the context of computer programming:
+
+1. What is a pattern?
+2. What patterns have you seen in software career?
+3. Why are patterns useful?
 
 ## MVC Architecture
 
@@ -100,9 +109,11 @@ Sure this is about as basic as it gets, but even this simple counter has all
 three of our architectural components. Can you identify each one?
 
 ---
-_**Turn and talk:** What part of the application above is the Model? How about
-the Controller and the View? How would your answer change if this was just a
-stateless component accepting props?_
+_**Turn and talk:**_
+
+* What part of the application above is the Model? 
+* How about the Controller and the View? 
+* How would your answer change if this was just a stateless component accepting props?
 
 ---
 
@@ -117,10 +128,10 @@ itself?
 Several frameworks that you're already familiar with use the MVC pattern, some
 of the big names are:
 
-* [React.js](https://reactjs.org/)
 * [Angular.js](https://angularjs.org/)
 * [Ember.js](https://www.emberjs.com/)
 * [Backbone.js](http://backbonejs.org/)
+* [React.js (kind of)](https://reactjs.org/)
 
 ### Why should I bother with a framework?
 
@@ -148,7 +159,7 @@ play into this? Work on this for 10 minutes, then we'll reconvene.
 
 ## References
 
-[Understanding
-MVC](https://blog.codinghorror.com/understanding-model-view-controller/)  
 [MVC
 Architecture](https://developer.mozilla.org/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)  
+[Understanding
+MVC](https://blog.codinghorror.com/understanding-model-view-controller/)  
