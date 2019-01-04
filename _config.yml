@@ -29,6 +29,9 @@ defaults:
     values:
       layout: "page"
 
+sass:
+  style: compressed
+
 assets:
   root_url: '/assets'
 

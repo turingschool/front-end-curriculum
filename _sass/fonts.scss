@@ -1,0 +1,24 @@
+$heavy-copy: 'Helvetica Neue Heavy';
+$bold-copy: 'Helvetica Neue Bold';
+$standard-copy: 'Helvetica Neue';
+$light-copy: 'Helvetica Neue Light';
+
+@font-face {
+  font-family: 'Helvetica Neue Heavy';
+  src: url('../assets/fonts/HelveticaNeueLTStd-Hv.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Bold';
+  src: url('../fonts/HelveticaNeueLTStd-Bd.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Standard';
+  src: url('../fonts/HelveticaNeueLTStd-Lt.otf');
+}
+
+@font-face {
+  font-family: 'Helvetica Neue Light';
+  src: url('../fonts/HelveticaNeueLTStd-Th.otf');
+}
