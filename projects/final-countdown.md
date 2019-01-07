@@ -19,7 +19,7 @@ To demonstrate:
 
 ## Timeline
 
-Instructors will give you the spec on Monday morning at 9am - we will kickoff together in class.
+Instructors will give you the spec on Monday - we will kickoff together in class.
 
 You're expected to still be at Turing 9am-4pm. Instructors will be around during the day to answer questions.
 
