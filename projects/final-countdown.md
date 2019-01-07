@@ -19,13 +19,13 @@ To demonstrate:
 
 ## Timeline
 
-Instructors will give you the spec on Monday morning at 9am - we will kickoff together in class.
+Instructors will give you the spec on Monday - we will kickoff together in class.
 
 You're expected to still be at Turing 9am-4pm. Instructors will be around during the day to answer questions.
 
 ## Deliverables
 
-You will be given the spec at 9am on Monday of Week 6.
+You will be given the spec at on Monday of Week 6.
 
 **Due Date:** Wednesday of Week 6 at 12:00pm.
 
