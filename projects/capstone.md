@@ -128,4 +128,4 @@ Evaluation will take place Wednesday afternoon of week 6. Each team will meet wi
 * Run the test suites
 * Show the application is running on production
 * Show application is using continuous integration
-* Talk about lessons learned
+* Talk about lessons learned (how will you talk about this project to future employers?)
