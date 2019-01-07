@@ -25,7 +25,7 @@ You're expected to still be at Turing 9am-4pm. Instructors will be around during
 
 ## Deliverables
 
-You will be given the spec at 9am on Monday of Week 6.
+You will be given the spec at on Monday of Week 6.
 
 **Due Date:** Wednesday of Week 6 at 12:00pm.
 
