@@ -74,7 +74,7 @@ This will be mentioned again during your week-one professional development kicko
 ### Portfolio Presentation
 
 On the final Thursday of the module, you will give a 10-minute presentation about your experience in module 4, Turing, and your action plan going forward. 
-The details about it can be found [here](https://github.com/turingschool/portfolios/blob/master/README.markdown) under "Module 4 (Front-End)".
+The details about it can be found [here](https://docs.google.com/document/d/1eb1H7GsfsD7vFP1Bx7UWyVOeltZ9ng_HtLr7R-_fCJg/edit?usp=sharing) under "Module 4 (Front-End)".
 
 
 ## Odds and Ends
