@@ -1,47 +1,65 @@
 # Setting up eslint
+(Non-React projects)
 
-create a new file name `.eslintrc` in the root of your directory.
+The following directions can also be found in the docs for ESLint [here](https://eslint.org/docs/user-guide/getting-started)
 
-Add the following content
-```
-{
-  "parser": "babel-eslint",
-  "extends": [
-    "eslint:recommended"
-  ],
+1. Make sure that you have initialized your directory for npm by changing into that directory and running:
+
+`npm init --yes`
+
+2. Save ESLint as a dev dependency locally:
+
+`npm install eslint --save-dev`
+
+3. Set up a config file:
+
+`./node_modules/.bin/eslint --init`
+
+Follow the prompt for answering the questions about your style, selecting whatever is listed as the default. This will automatically create an `.eslintrc.js` in the root of your directory
+
+Replace whatever is initialized in your eslintrc file with the following:
+
+```js
+module.exports = {
   "env": {
     "browser": true,
-    "mocha": true,
-    "node": true,
-    "es6": true
+    "commonjs": true,
+    "es6": true,
+    "mocha": true
   },
-  // Having a problem with one of these rules? Learn more about it here: https://eslint.org/docs/rules/
+  "extends": "eslint:recommended",
+  "parserOptions": { "sourceType": "module" },
   "rules": {
     "eqeqeq": ["error", "always"],
-    "getter-return": ["error", { "allowImplicit": true }],
+    "brace-style": "error",
+    "comma-spacing": ["warn", { "before": false, "after": true }],
+    "curly": "error",
+    "semi-spacing": ["error", { "before": false, "after": true }],
     "indent": ["warn", 2],
-    "no-template-curly-in-string": "error",
-    "semi": ["error", "always"]
-  },
-  "globals": {
-    "expect": true
+    "key-spacing": ["error", { "beforeColon": false, "afterColon": true }],
+    "keyword-spacing": ["error", { "before": true, "after": true }],
+    "linebreak-style": ["error", "unix"],
+    "max-len": ["warn", 80],
+    "new-cap": ["error", { "newIsCap": true }],
+    "object-shorthand": ["error", "always"],
+    "space-before-blocks": ["error", { "functions": "always", "keywords": "always", "classes": "always" }],
+    "space-infix-ops": ["error", { "int32Hint": false }]
   }
 }
 ```
 
-// save eslint globally
-`npm i -g eslint`
+After that, you can run ESLint in your project’s root directory like this:
 
-// install locally
-`npm i --save-dev eslint`
+`./node_modules/.bin/eslint yourfile.js`
 
-// install babel-eslint
-`npm i --save-dev babel-eslint`
 
 ### Add to package.json
+
+Additionally, you can also set up a script to run in your package.json so that you're not having to type out the file path every single time.
+
 ```
 "scripts": {
   // ...,
-  "eslint": "./node_modules/eslint/bin/eslint.js ./lib/*.js"
+  "eslint": "./node_modules/eslint/bin/eslint your.file.js"
 },
 ```
