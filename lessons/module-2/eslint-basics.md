@@ -3,15 +3,15 @@
 
 The following directions can also be found in the docs for ESLint [here](https://eslint.org/docs/user-guide/getting-started)
 
-1. Make sure that you have initialized your directory for npm by changing into that directory and running:
+Make sure that you have initialized your directory for npm by changing into that directory and running:
 
-`npm init --yes`
+ `npm init --yes`
 
-2. Save ESLint as a dev dependency locally:
+Save ESLint as a dev dependency locally:
 
 `npm install eslint --save-dev`
 
-3. Set up a config file:
+Set up a config file:
 
 `./node_modules/.bin/eslint --init`
 
@@ -60,6 +60,6 @@ Additionally, you can also set up a script to run in your package.json so that y
 ```
 "scripts": {
   // ...,
-  "eslint": "./node_modules/eslint/bin/eslint your.file.js"
+  "eslint": "./node_modules/eslint/bin/eslint yourfile.js"
 },
 ```
