@@ -1,3 +1,5 @@
+# Setting up eslint
+
 (Non-React projects)
 
 The following directions can also be found in the docs for ESLint [here](https://eslint.org/docs/user-guide/getting-started)
