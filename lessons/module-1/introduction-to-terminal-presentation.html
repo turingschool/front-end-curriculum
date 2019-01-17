@@ -1,7 +1,240 @@
 ---
 title: Introduction to the Terminal
-layout: presentation---
+layout: presentation
+---
 
 <section>
     <h1>Introduction to the Terminal</h1>
+</section>
+
+<section>
+    <h2>Overview:</h2>
+    <ul>
+        <li>Examine files and directories (<code>pwd, ls</code>)</li>
+        <li>Make and remove files and directories
+            <ul>
+                <li>Files: <code>touch [filepath]</code>, <code>rm [filepath]</code></li>
+                <li>Directories: <code>mkdir [dir name]</code>, <code>rmdir [path to empty dir]</code></li>
+            </ul>
+        </li>
+        <li>Naivigating through directories: <code>cd [dir path]</code></li>
+        <li>Copy and move files: <code>cp [filepath] [destination path]</code>, <code>mv [filepath] [destination path]</code></li>
+        <li>Copy and paste file contents: 
+            <ul>
+                <li>Copy: <code>pbcopy < [filepath]</code></li>
+                <li>Paste: <code>pbpaste > [destination filepath]</code></li>
+            </ul> 
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Vocab:</h2>
+    <ul>
+        <li><strong>Terminal - </strong>Program for interacting with the <em>command line</em></li>
+        <li><strong>Shell  / Command Line - </strong>Low level, text-based interface for the computer</li>
+        <li><strong>Bash - </strong>A type of shell found on Unix systems</li>
+        <br>
+        <br>
+        <li><strong>Directory - </strong>folder</li>
+        <li><strong>command - </strong>instructions for a computer to execute via the command line</li>
+        <li><strong>argument - </strong>info needed to run a certain command</li>
+        <li><strong>flag - </strong>an optional arugment, usually prefixed by - or  --</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Anatomy of a command</h2>
+    <p><code>$ mkdir -p Turing/Week01</code></p>
+    <p><code>$ [command] [flag] [argument]</code></p> 
+</section>
+
+<section>
+    <h2>Why use the command line?</h2>
+    <ul>
+        <li>Speed / Efficiency</li>
+        <li>Sometimes you really need it</li>
+        <li>Computer competency (it make you look good)</li>
+    </ul>
+    <img src="https://i.giphy.com/media/WGI0ILFL5G8VO/source.gif" alt="Old Hacker Gif">
+</section>
+
+<section>
+    <h2>Get the terminal open:</h2>
+    On a mac:
+    <ul>
+        <li>Press <code>command + spacebar</code> to open Spotlight </li>
+        <li>Type <code>terminal</code></li>
+        <li>Press <code>enter</code></li>
+    </ul>
+</section>
+
+<section>
+   <h2>Checking out File Structure</h2> 
+   <ul>
+       <li>
+           <code>pwd</code> - print working directory
+           <ul>
+               <li>Check the current directory you're in</li>
+           </ul>
+       </li>
+       <li>
+           <code>ls</code> - list
+            <ul>
+                <li>List the items in the directory (both files and other directories)</li>
+                <li> Flags: 
+                    <ul>
+                        <li><code>-l</code> gives more detail about the items</li>
+                        <li><code>-a</code> reveals hidden files</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+   </ul>
+</section>
+
+<section>
+    <h2>Your Turn</h2>
+    <ol>
+        <li> In the terminal, figure out the name of your <em>root directory</em> (base directory that the terminal starts in)</li>
+        <li>Figure out what files / directories are in the root directory</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Making and Removing Directories and Files</h2>
+    <ul>
+        <li><code>mkdir [dir name]</code> - make a new directory</li>
+        <li><code>touch [file name / file path]</code> - create a new file</li>
+        <li>
+            <code>rm [file path]</code> - remove (delete) file (permanantly)
+            <ul>
+                <li>
+                    Flags:
+                    <ul>
+                        <li><code>-R</code> remove a directory and its contents</li>
+                        <li><code>-i</code> require confirmation before removing</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li><code>rmdir [directory name]</code> - remove <em>empty</em> directory</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Navigating through directories</h2>
+    <ul>
+        <li>
+            <code>cd [directory path]</code> - change directory
+            <ul>
+                <li>To move up a level (out of a directory): <code>cd ..</code></li>
+                <li>To get to root directory: <code>cd ~</code></li>
+                <li>Separate folders by <code> / </code></li>
+                <li>Use <code>tab</code> to autocomplete</li>
+            </ul>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Give it a try</h2>
+    <ol>
+        <li>Navigate to the root directory</li>
+        <li>List its contents</li>
+        <li>Make a new directory</li>
+        <li>Make another directory inside that directory</li>
+        <li>Make three more nested directories</li>
+        <li>Delete them one by one</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Take a break</h2>
+</section>
+
+<section>
+    <h2>Adding files / directories from your working directory</h2>
+    <ul>
+        <li>
+            Chain things together with <code>/</code>
+        </li>
+        <li>
+            Works for <code>cd</code>, <code>ls</code>, and <code>touch</code>
+        </li>
+        <li>
+            Need <code>-p</code> flag for <code>mkdir</code>
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Copy and Move Files / Directories</h2>
+    <ul>
+        <li>
+            <code>cp [source path] [destination path]</code> - make copy of file / directory and pastes in the destination
+        </li>
+        <li>
+            <code>mv [source path] [destination path]</code> - move file / directory from source to destination
+        </li>
+    </ul>
+</section>
+
+<section>
+    <h2>Give it a shot</h2>
+    <ol>
+        <li>Make three nested directories</li>
+        <li>Make a .txt file in each directory</li>
+        <li>Copy the file from the top directory into the second one</li>
+        <li>Move the file in the bottom directory into the top one</li>
+        <li>Extra: try renaming the files using <code>mv</code> or <code>cp</code></li>
+    </ol>
+</section>
+
+<section>
+    <h2>Copy and paste file contents</h2>
+    <ul>
+        <li><code>pbcopy < [file path]</code> - copy file contents</li>
+        <li><code>pbpaste > [destination file path]</code> - paste copied file contents</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Try it out</h2>
+    <ol>
+        <li>Open a file you made in the last exercises in Sublime (try it in the command line)</li>
+        <li>Add some text and save it</li>
+        <li>Copy the file's contents</li>
+        <li>Paste the contents into a file in another directory</li>
+        <li>Open the edited file in Sublime to make sure it worked</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Learn More</h2>
+    <ul>
+        <li>Keep practicing in the terminal!</li>
+        <li>Use <a href="https://gist.github.com/poopsplat/7195274" target="_blank">cheatsheets</a></li>
+        <li>
+            Use <code>info [command]</code> or <code>man [command]</code> to get more information on commands
+            <ul>
+                <li>type <code>q</code> to exit these menus</li>
+            </ul>
+        </li>
+        <li>Check out the <a href="./getting-around-in-the-terminal.html" target="_blank">advanced topics</a> at the bottom of the lesson plans</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Review</h2>
+    <ul>
+        <li>What's the difference between <code>mv</code> and <code>cp</code>?</li>
+        <li>How do we move between files?</li>
+        <li>What does <code>mkdir</code> do?</li>
+        <li>How do you make a file?</li>
+        <li>What is a flag? Give an example.</li>
+        <li>What is a shell?</li>
+        <li>How do we remove a file?</li>
+        <li>How do we remove a directory?</li>
+    </ul>
 </section>
