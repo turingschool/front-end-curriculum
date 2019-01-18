@@ -3,7 +3,7 @@ title: Introduction to the Terminal
 length: 90
 tags: command line, terminal
 ---
-
+<a href="./introduction-to-terminal-presentation.html" target="_blank">Slides for class</a>
 ## Learning Goals
 * Understand what the terminal is and why you should use it
 * Become familiar with terminal commands to navigate your file structure
