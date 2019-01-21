@@ -12,14 +12,19 @@ The front-end of the web is based on three major technologies:
 * __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
 * __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
 
+## Learning Goals
+
+* Understand what HTML stands for and it's purpose
+* Learn about the HTML structure and how to incorporate semantic HTML elements
+* How to utilize images, hyperlinks, and tables
+* Create semantic forms including labels, inputs, and buttons
+
 ## Vocab
 
 - `HTML` HyperText Markup Language
 - `CSS` Cascading Style Sheet
-- `CSS Property` The name of a display property of an HTML element (e.g., color, border)
 - `HTML Element` A building block that makes up the structure of a web page
 - `HTML Tag` Used to create HTML elements. Some elements have an opening and closing tag, others only have an opening tag.
-- `Id` / `Class` Ways to identify HTML elements
 - `Attribute` Additional values that configure HTML elements and adjust their behavior
 - `Hyperlink` A reference to an external resource
 - `Block` A block-level element occupies the entire width of its parent element (container), thereby creating a "block."
@@ -29,15 +34,9 @@ The front-end of the web is based on three major technologies:
 
 # What is HTML?
 
- * HTML is used to create electronic documents (pages) that are displayed on the Web
- * Each page contains a series of connections to other pages called `hyperlinks`
- * HTML ensures the proper formatting of content (text, images, video) so that your internet browser can display them as intended.
- * HTML is made up of many Elements
- * Elements are used to hold our content and define how the browser must format and display the content.
- * Elements are created with either one or two tags.
- * Tags are created with angle brackets `<>` and are used to create elements
- * Most elements consist of an opening and closing tag which wraps content (like text)
- * Markup = the set of tags used to structure a page
+HTML is used to create electronic documents (pages) that are displayed on the Web.  It was first developed by Tim Berners-Lee and released in 1990.  It was originally created to allow people to publish & exchange scientific documents.  This exchange was possible as a result of `hyperlinks` which allowed pages to have links to other documents.  However, because HTML was so accessible and had the potential to be used for other applications, it moved over to the mainstream in browsers like Netscape and Internet Explorer.  
+
+HTML ensures the proper formatting of content (text, images, video) so that your internet browser can display them as intended.  As a result, HTML is made up of many elements.  These elements are used to hold our content and define how the browser must format and display the content. The term `markup` refers to the set of tags used to structure a page.
 
 ***
 
@@ -46,9 +45,9 @@ The front-end of the web is based on three major technologies:
 ![Anatomy of an HTML Tag](/assets/images/html-tag.jpg)
 
 ## Elements
-Elements are created with one or more tags. They are used to describe and hold our content.
+Elements are created with either one or more tags and are used to describe and hold our content. These tags are created by using angle brackets `<>`.  Most elements consist of an opening and closing tag which wraps content like text.
 
-Elements which are created with only one tag are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) and cannot have any child elements. Examples of this are `<img>` and `<input>`.
+Elements which are created with only one tag are called [empty elements](https://developer.mozilla.org/en-US/docs/Glossary/Empty_element) (also known as self-closing elements) and cannot have any child elements. Examples of this are `<img>` and `<input>`.
 
 Elements which can contain child elements are created with an opening and closing tag which surround the child elements and/or text content. `<h1>Text Content</h1>`
 
@@ -80,7 +79,7 @@ Here is an example of a slightly more robust document:
 * What is an HTML tag?
 * What is an element?
 * What makes an HTML element different that an HTML tag?
-* What is the difference between a “regular” element and an self-closing, or empty, element?
+* What is the difference between a “regular” element and a self-closing, or empty, element?
 
 ***
 
@@ -88,7 +87,7 @@ Here is an example of a slightly more robust document:
 
 Every page that is built with HTML needs to have the four same elements to start:
 
-* `<!doctype html>` declaration: The doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the page is written in.  
+* `<!DOCTYPE html>` declaration: The doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the page is written in.  
   - [W3C DTD Docs](https://www.w3.org/QA/2002/04/valid-dtd-list.html)  
 * `<html></html>` tag wraps the entire document
 * `<head></head>` tag wraps elements that shouldn't be rendered: information about the page and how to process it
@@ -114,28 +113,24 @@ As front-end developers, you'll use HTML to build layouts given to you by a desi
 
 HTML5 has a variety of _semantic tags_, or HTML tags that provide additional meaning through descriptive naming, available for us to use. These tags are an easy way to not only make our code more understandable and clear to other developers (and our future selves), but they are also a great way to incorporate basic accessibility into your HTML for users who may need to access your website in non-traditional ways.
 
-Let's experiment with the following semantic tags in codepen:
+### Your Turn
 
-* `header`
-* `footer`
-* `h1 - h6`
-* `section`
-* `article`
-* `p`
-* `ul` and `ol`
-* `div`
+In your groups, use the following semantic HTML tags to create the basic structure of this newspaper on your chartboard.  Click the links below to read the docs for each HTML element.  (notice they all send you to the MDN docs).  Think about which elements are most fitting and how it could be used to create the basic structure of the page.
 
-Use these tags to create the structure of the newspaper. Do not worry about recreating exactly, the goal is just to create the structure.
+* [header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
+* [footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
+* [h1 - h6](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
+* [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
+* [article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
+* [p](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
+* [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
+* [ol](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
+* [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
 
 ![Alien Paper](/assets/images/alien-paper.png)
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-
-### Turn and Talk
-
-*  What limitations did you notice only using raw HTML to create your newspaper site?
 
 ***
 
@@ -143,7 +138,7 @@ Use these tags to create the structure of the newspaper. Do not worry about recr
 
 ### Block and Inline Elements
 
-You might have noticed that some tags behave a little differently in a layout than others. Some tags make content stack, while others let content sit next to each other. What's that about?
+You might notice that some tags behave a little differently in a layout than others. Some tags make content stack, while others let content sit next to each other. What's that about?
 
 This is an important distinction:
 
@@ -212,7 +207,6 @@ Let's update our page with the image above.
 
 * What are attributes and what are they used for?
 * What are some other attributes you have used?
-* Why do some elements have two tags and others just have one?
 
 
 ## Hyperlinks
@@ -232,6 +226,18 @@ In this case, the `<a>` tag needs to know which url it should be linked to. We u
 <p data-height="300" data-theme-id="23788" data-slug-hash="yJYdyb" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/yJYdyb/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
+Something to note, you will often see hyperlinks in a [nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav) element.  Many sites often have navigation links on their page, so it's important to keep the syntax of this in mind.  Take a look at an example below:
+
+```html
+<nav>
+  <ul>
+    <li><a href="home">Home</a></li>
+    <li><a href="about">About</a></li>
+    <li><a href="store">Store</li>
+  </ul>
+</nav>
+```
+
 
 ***
 
@@ -250,34 +256,15 @@ You can use codepen or create your own html file.
 
 # ![Flags Table](/assets/images/flags-table.jpg)
 
-***
-
-### Docs
-
-* [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
-* [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
-* [HTML Styleguide](https://github.com/turingschool-examples/html)
-* Also, check out the cheat sheets in [independent study](http://frontend.turing.io/independent-study/)
-
-***
-
 # Forms
 
 So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms. Forms are an important part of a website. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own.
 
-### Docs
-
-HTML Guide and form structure
-* [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
-* [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
-
 ### Form Basics: Inputs and Buttons
-
-So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms.
 
 There is a lot to forms that we'll go more into depth with in a moment, but to start we'll focus on two elements:
 
-- `<input>` creates an input field. `<input>` is like `<img>` in that it does not require or support a closing tag. It can take an optional `type` attribute that helps validate user input in some browsers.
+- `<input>` creates an input field. `<input>` is like `<img>` in that it does not require or support a closing tag. It can take an optional `type` attribute that helps validate user input in some browsers ([click here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) to find out more).
 - `<button>` creates a button. `<button>` on the other hand does support a closing tag.
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="MeaMEr" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Inputs and Buttons" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/MeaMEr/">Inputs and Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
@@ -306,7 +293,7 @@ Partner up and answer the following questions:
 * Why would a `legend` element be important?
 
 ### Part Two:
-Copy the form code below into your own Pen, and then refactor as follows:
+Fork the code below into your own Pen, andthen refactor as follows:
 
 * Validate for email type
 * Add a set of radio buttons with at least three options - only allowing one to be selected at a time
@@ -317,12 +304,10 @@ Copy the form code below into your own Pen, and then refactor as follows:
 <p data-height="458" data-theme-id="26495" data-slug-hash="Lbjgwy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjgwy/">Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 
-***
+### Additional Resources on Forms
 
-# Additional Resources
-
-* [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
-* [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
+* [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
+* [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
 
 ### For Placement Only (FPO)
 "For Placement Only" (FPO) options are placeholder content for use in design layouts. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
@@ -334,3 +319,13 @@ Copy the form code below into your own Pen, and then refactor as follows:
 * [Unsplash](https://unsplash.com/)
 * [SampleVideos](http://www.sample-videos.com/)
 * [Article with useful sites for free icons, image assets, etc.](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online)
+
+***
+
+# Additional Resources
+
+* [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
+* [Check out the cheat sheets in independent study](http://frontend.turing.io/independent-study/)
+* [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
+* [MDN HTML Overview](https://developer.mozilla.org/en-US/docs/Web/HTML)
+* [MDN HTML Reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference)
