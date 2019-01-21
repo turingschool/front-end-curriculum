@@ -1,7 +1,16 @@
 # HTML and Accessbility
 
 ## **Vocab:**
-* 
+- **Accessibility** - Making your applications and webpages usable by anyone
+- **ARIA** - Accessibile rich interneet applications
+- **Role** - The function an element serves on the page
+- **State** - Information about how an element is currently represented
+- **Property** - Additional information about an element
+
+## **Game plan**
+- Understand how semantics are interpretted
+- Learn about ARIA
+- Understand how to test applications for accessibility 
 
 ## **Introduction**
 We talk a lot about writing sematnic HTML, but what does that mean besides using `sections` and `articles`? Let's take a deeper dive into how semantics are interpretted by assistive technology, and how to make the most informed decisions when developing accessible applications.
@@ -123,12 +132,9 @@ There are a variety of resources available to developers for accessibilty testin
 Mac VoiceOver
 - This is the native screen reader for OSX. It can be strange with Chrome, but is good for testing accessbility in Safari, oer any desktop applications you may develop down the line
 
-## Lets make a nav bar
+## Resources
+<a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Roles" target="_blank">MDN Docs for ARIA Roles, States and Properties</a>
 
+<a href="https://www.w3.org/WAI/PF/aria-1.1/" target="_blank">W3C Spec for ARIA</a>
 
-- roles
-- tabindex
-- add event listeners for keyboard controls
-- expanded: provides info on the state of the widget
-- aria-controls
-- aria-hidden
+<a href="https://www.w3.org/WAI/PF/aria-1.1/states_and_properties#aria-label" target="_blank">W3C List of supported States and Properties</a>
