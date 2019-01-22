@@ -236,7 +236,9 @@ var characters = [...string]; // ['h', 'e', 'l', 'l', 'o']
 
 In this case, the `split` method is not terribly complex, but using the spread operator makes the code more readable at a glance; you can see that the result is an array.
 
-### Destructuring
+
+<!-- Destructring moved to fundamentals lesson -->
+<!-- ### Destructuring
 
 **Importing:**
 
@@ -303,7 +305,7 @@ console.log(list); // [3, 2, 1]
 The square brackets are just part of the destructuring syntax here.
 
 You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
-
+ -->
 
 ### Classes and Prototypal Inheritance
 
