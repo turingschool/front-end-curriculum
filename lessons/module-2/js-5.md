@@ -193,9 +193,10 @@ const honeybee = {
 const fancyName = 'scientificName';
 ```
 
-2. Create an object with the following keys:
+<!-- 2. Create an object with the following keys:
 `book1, book2`...`book199, book200`, whose values are their corresponding number
 eg: `{ book1: 1, book2: 2`...`book199: 199, book200: 200 }`
+ -->
 
 ### Destructuring
 
@@ -255,18 +256,18 @@ const toppings = {
 
 This syntax is a lot more verbose, and the numbered keys don't really give us any useful information **except** where the value exists within the array. This can be important when we want to use some of the built-in helper methods that come with arrays.
 
-Array objects inherit from the Array.prototype which gives us access to methods like `push`, `pop`, and `forEach`, which allow us to manipulate and interact with our arrays.
+<!-- Array objects inherit from the Array.prototype which gives us access to methods like `push`, `pop`, and `forEach`, which allow us to manipulate and interact with our arrays.
 
-<!--TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.-->
-
+TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.-->
+<!-- 
 #### Your turn
 In the console, take a look at `Array.prototype`. What methods do you recognize? What methods are new to you?
 
 ### Destructuring
 
 Similar to objects, we can use destructuring to unpack values from an array (using position) to create distinct variables
-
-```js
+ -->
+<!-- ```js
 const sisters = ['Charlotte', 'Emily', 'Anne'];
 let [first, second, third] = sisters;
 
@@ -276,8 +277,8 @@ console.log(second); // 'Emily'
 **Reassigning values:**
 
 Destructuring also lets you swap values in an array without using a temporary variable.
-
-```js
+ -->
+<!-- ```js
 const list = [1, 2, 3];
 
 // es5
@@ -294,8 +295,8 @@ console.log(list); // [3, 2, 1];
 The square brackets are just part of the destructuring syntax here.
 
 You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
-
-#### Turn and Code
+ -->
+<!-- #### Turn and Code
 
 ```js
 const numbers = [4, 5, 6, [3, 5, 7], 4];
@@ -306,7 +307,7 @@ Using our `numbers` array, use destructuring assignment to do the following:
   1. Create two variables called `first` and `second` that hold the values from the first two elements of the `numbers` array
   2. Create a variable called `nestedArray` that holds the value of our nested array, `[3, 5, 7]`
   3. Swap the values of `5` and `6` so that the order of our array is such:  `[4, 6, 5, [3, 5, 7], 4]`
-
+ -->
 <!--   Answers:
   1. const [first, second] = numbers;
   2. const [,,,nestedArray] = numbers;
