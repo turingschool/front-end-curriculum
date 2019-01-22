@@ -1,7 +1,7 @@
-# HTML and Accessbility
+# HTML and Accessibility
 
 ## **Vocab:**
-- **Accessibility** - Making your applications and webpages usable by anyone
+- **Accessibility** - Making an experience that's usable by anyone
 - **ARIA** - Accessibile rich interneet applications
 - **Role** - The function an element serves on the page
 - **State** - Information about how an element is currently represented
@@ -13,7 +13,7 @@
 - Understand how to test applications for accessibility 
 
 ## **Introduction**
-We talk a lot about writing sematnic HTML, but what does that mean besides using `sections` and `articles`? Let's take a deeper dive into how semantics are interpretted by assistive technology, and how to make the most informed decisions when developing accessible applications.
+We talk a lot about writing semantic HTML, but what does that mean besides using `sections` and `articles`? Let's take a deeper dive into how semantics are interpretted by assistive technology, and how to make the most informed decisions when developing accessible applications.
 
 ## **The Accessibilty Tree** 
 When the browser loads content, it creates the DOM tree. We can use scripting to interact with what's being displayed through the tree. By leveraging Accessibility APIs, the browser also creates what's know as the Accessibilty Tree. This loads information that's available to assistive technologies, such as screen readers and screen magnifiers.
@@ -23,12 +23,12 @@ Writing clean, semantic HTML communicates information about the web page to the 
 ## **ARIA**
 **Accessibile Rich Internet Applications**
 
-ARIA is a set of rules and standards developed by W3C to make web applications more accessible. By utilitizing various ARIA attributes in your markup, you can send more meaningful information to the Accessibility Tree, allowing assisted users a more vomplete experience with your applications. Outside of accessiblity, ARIA allows you to make your code more semantically menaingful. This helps clarify why you wrote what you wrote to other developers, and your future self.
+ARIA is a set of rules and standards developed by W3C to make web applications more accessible. By utilitizing various ARIA attributes in your markup, you can send more meaningful information to the Accessibility Tree, allowing assisted users a more complete experience with your applications. It also allows the accessibilty tree to be updated without reloading the whole page. Outside of accessiblity, ARIA allows you to make your code more semantically menaingful. This helps clarify why you wrote what you wrote to other developers, and your future self.
 
 ARIA provides a ton of tools to enhance the meaning of your markup. Today we'll look at three main aspects of ARIA: roles, state and properties.
 
 ### **Roles**
-A role tells the browser what an element's intended purpose is. Every html element has an *implicit role* that is communicated to assistive technologies through the accessbility tree.
+A role tells the browser what an element's intended purpose is. Every html element has an *implicit role* that is communicated to assistive technologies through the accessibility tree.
 
 ```html
 <!-- The following markup has an implicit role of "heading" -->
@@ -102,7 +102,7 @@ The `aria-label` element works like an alt-tag for accessibilty. The screen read
 ```
 After the button is pressed, you can use Javascript to change the `aria-label` to "See less information".
 
-There are many more properties within ARIA that can help clarify your markup. A few useful ones are listed bleow:
+There are many more properties within ARIA that can help clarify your markup. A few useful ones are listed below:
 
 "What Am I"
 
@@ -117,7 +117,7 @@ There are many more properties within ARIA that can help clarify your markup. A 
 
 Links to more comprehensive lists of properties are in the Resources at the end of this lesson.
 
-## Testing for Accessilbity
+## Testing for Accessibility
 
 There are a variety of resources available to developers for accessibilty testing.
 
@@ -130,7 +130,7 @@ There are a variety of resources available to developers for accessibilty testin
 - This plugin is a screenreader you can install in Chrome. It makes manual testing easy, and is used by Google's own devlopers.
 
 Mac VoiceOver
-- This is the native screen reader for OSX. It can be strange with Chrome, but is good for testing accessbility in Safari, oer any desktop applications you may develop down the line
+- This is the native screen reader for OSX. It can be strange with Chrome, but is good for testing accessibility in Safari, oer any desktop applications you may develop down the line
 
 ## Resources
 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Roles" target="_blank">MDN Docs for ARIA Roles, States and Properties</a>
@@ -138,3 +138,5 @@ Mac VoiceOver
 <a href="https://www.w3.org/WAI/PF/aria-1.1/" target="_blank">W3C Spec for ARIA</a>
 
 <a href="https://www.w3.org/WAI/PF/aria-1.1/states_and_properties#aria-label" target="_blank">W3C List of supported States and Properties</a>
+
+<a href="https://www.shopify.com/partners/blog/website-accessibility-testing" target="_blank">9 Tools for Website Accessibility</a>
