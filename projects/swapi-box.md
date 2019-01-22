@@ -98,7 +98,7 @@ src/
   - Number of Passengers 
   - A button to "Favorite" the vehicle 
   
-### Iteration 5: Favorites
+### Iteration 4: Favorites
 
 - There should be a button on each card to save it to Favorites.  
 
@@ -114,7 +114,8 @@ src/
 
 ## Extension
 
-- Implement a `More` button. When clicked, the next 10 items of that category should be shown. There should be a `Back` button to go back to the previous page.  
+1. Implement a `More` button. When clicked, the next 10 items of that category should be shown. There should be a `Back` button to go back to the previous page.  
+2. Have your data persist in `localStorage`. Think about when you want to store it.
 
 ## Rubric 
 
