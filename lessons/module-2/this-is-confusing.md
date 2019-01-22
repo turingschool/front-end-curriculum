@@ -91,22 +91,38 @@ Because of this rule, I can create a function once, add it to whichever objects 
 
 Now typically, if we find ourselves creating multiple objects with the same properties and using the same functions it would be better to create a constructor function to create the objects or use ES6's new class constructor
 
-#### Your Turn
+#### Turn and Code
 
-Using the rules that you've learned thus far, determine the value of`this` when the last two lines execute (without checking in your console). Write your answer in your journal. Check your work.
+Taking turns for each prompt in driver/navigator fashion, use the code snippet below and complete the following:
 
 ```js
-const obj = {
-  value: 'hi',
-  printThis: function() {
-    console.log(this);
-  }
-};  
+function logThis() {
+  console.log(this);
+}
 
-const print = obj.printThis;
-
-obj.printThis(); // What will print here? Why?
+const denver = {
+   buildings: {
+    athletic: [
+      { name: "Coors Field", floors: 4, completed: 1995, height: 64 },
+      { name: "Pepsi Center", floors: 5, completed: 1999, height: 68 }
+    ],
+    medical: [
+      { name: "Saint Joseph Hospital", floors: 12, completed: 1873, height: 120, beds: 365 },
+      { name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }
+    ]
+  },
+  restaurants: [
+    { name: "Fruition Restaurant", type: "Fine Dining", number_of_reviews: 788 },
+    { name: "Sam's No. 3", type: "Cheap Eats", number_of_reviews: 1870 },
+  ]
+};
 ```
+
+1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
+      `{buildings: {…}, restaurants: Array(2), logThis: ƒ}`
+2. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
+      `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }`
+
 
 ## Rule 2 - _this_ in function code invoked using the new operator refers to the newly created object.
 
@@ -161,37 +177,22 @@ logThis();
 
 *Note:This is also assuming that we don't explicitly change the value of _this_ using a method like `call`, `apply`, or `bind` to set _this_. This is an additional rule that you will likely see as you research _this_ in JavaScript. For our purposes here, we will only be focusing on the 3 rules covered*
 
-#### Turn and Code
+#### Your Turn
 
-Taking turns for each prompt in driver/navigator fashion, use the code snippet below and complete the following:
+Using the rules that you've learned thus far, determine the value of`this` when the last two lines execute (without checking in your console). Write your answer in your journal. Check your work.
 
 ```js
-function logThis() {
-  console.log(this);
-}
+const obj = {
+  value: 'hi',
+  printThis: function() {
+    console.log(this);
+  }
+};  
 
-const denver = {
-   buildings: {
-    athletic: [
-      { name: "Coors Field", floors: 4, completed: 1995, height: 64 },
-      { name: "Pepsi Center", floors: 5, completed: 1999, height: 68 }
-    ],
-    medical: [
-      { name: "Saint Joseph Hospital", floors: 12, completed: 1873, height: 120, beds: 365 },
-      { name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }
-    ]
-  },
-  restaurants: [
-    { name: "Fruition Restaurant", type: "Fine Dining", number_of_reviews: 788 },
-    { name: "Sam's No. 3", type: "Cheap Eats", number_of_reviews: 1870 },
-  ]
-};
+const print = obj.printThis;
+
+obj.printThis(); // What will print here? Why?
 ```
-
-1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
-      `{buildings: {…}, restaurants: Array(2), logThis: ƒ}`
-2. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
-      `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }`
 
 
 <!-- 
