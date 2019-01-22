@@ -228,6 +228,11 @@ Using the code example for our `dog` object above, use destructuring assignment 
   2. Create a variable called `robbiesFavoriteDog` that holds the value from our property of `breed`
   3. Create variables for the following tricks: `beg`, and `playDead` (`playDead` should default to `false`)
 
+<!--   Answers
+  1. const { rollOver } = dog.tricksLearned;
+  2. const { breed: robbiesFavoriteDog } = dog;
+  3. const { beg, playDead = false} = dog.tricksLearned; -->
+
 ---
 
 ### Arrays
@@ -301,6 +306,11 @@ Using our `numbers` array, use destructuring assignment to do the following:
   1. Create two variables called `first` and `second` that hold the values from the first two elements of the `numbers` array
   2. Create a variable called `nestedArray` that holds the value of our nested array, `[3, 5, 7]`
   3. Swap the values of `5` and `6` so that the order of our array is such:  `[4, 6, 5, [3, 5, 7], 4]`
+
+<!--   Answers:
+  1. const [first, second] = numbers;
+  2. const [,,,nestedArray] = numbers;
+  3. [numbers[1], numbers[2]] = [numbers[2], numbers[1]]; -->
 
 ---
 
