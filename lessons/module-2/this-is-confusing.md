@@ -179,7 +179,7 @@ logThis();
 
 #### Your Turn
 
-Using the rules that you've learned thus far, determine the value of`this` when the last two lines execute (without checking in your console). Write your answer in your journal. Check your work.
+Using the rules that you've learned thus far, determine the value of `this` when the last two lines execute (without checking in your console). Write your answer in your journal. Check your work.
 
 ```js
 const obj = {
@@ -192,6 +192,7 @@ const obj = {
 const print = obj.printThis;
 
 obj.printThis(); // What will print here? Why?
+print(); // What will print here? Why?
 ```
 
 
