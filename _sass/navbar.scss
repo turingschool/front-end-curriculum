@@ -17,7 +17,7 @@ nav {
 
   li:first-child {
     justify-self: left;
-    margin-top: 5px;
+    margin: 5px 0;
   }
 
   a {
@@ -34,6 +34,7 @@ nav {
   }
 
   .home-logo-link img {
+    display: block;
     height: 80px;
     width: 80px;
   }
