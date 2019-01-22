@@ -267,12 +267,12 @@ vampire.whatDoYouDislike()
 ## Further Reading
 
 * [Scope vs. Context](http://ryanmorr.com/understanding-scope-and-context-in-javascript/)
-* [When not to use an arrow function](https://wesbos.com/arrow-function-no-no/)
-<!-- 
-====================================================
-====================================================
-====================================================
+* [When not to use an arrow function](https://wesbos.com/arrow-function-no-no/)  
 
+
+
+
+<!-- 
 REVIEW PROMPT
 
 _**Context**_
@@ -298,4 +298,4 @@ var test = foo.prop.getFullname;
 
 console.log(foo.prop.getFullname()); // What will log here? Why?
 console.log(test()); // What will log here? Why?
-``` -->
+```  -->
