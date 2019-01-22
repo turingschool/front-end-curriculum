@@ -33,19 +33,17 @@ src/
 ## Project Goals & Requirements:
 
 1. Learn how to wireframe and know why it is important.
-2. Get comfortable whipping together React components on your own with the additional complexity of implementing React Router. 
-3. Write **squeaky clean**, well refactored code using ES6 & ES7 syntax.  
-4. Make informed design decisions to create a user-friendly application.  
-5. Keep state based components to a minimum and leverage more functional components.  
-6. Use a modular architecture for your application file structure.  
-7. Think deeply about React Lifecycle Methods.  
-8. Use `propTypes` for every component receiving props.  
+2. Write **squeaky clean**, well refactored code using ES6 & ES7 syntax.  
+3. Make informed design decisions to create a user-friendly application.  
+4. Keep state based components to a minimum and leverage more functional components.  
+5. Use a modular architecture for your application file structure.  
+6. Think deeply about React Lifecycle Methods.  
+7. Use `propTypes` for every component receiving props.  
 
 ### Important Notes  
 
 - The API we are using is completely unsecured. This means we will be making all requests for this particular project directly from our browser. We will not be sending any advanced communication from a local server.  
 - Although there are many resources out there for making API calls, you are asked to exclusively use the native [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API for this project. 
-- The data does need to persist in localStorage.
 
 ## Specifications
 

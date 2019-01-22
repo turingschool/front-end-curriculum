@@ -124,15 +124,15 @@ const denver = {
       `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }`
 
 
-## Rule 2 - _this_ in function code invoked using the new operator refers to the newly created object.
+## Rule 2 - _this_ in function code invoked using the new operator refers to the new instance of that object.
 
-When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
+<!-- When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
 
 1. `this` is set to a new empty object
 2. The prototype property of the constructor function (Unicorn.prototype in the example below) is set as the prototype of the new object, which was set to `this` in the first step
 3. The body of our function runs
 4. Our new object, `this`, is returned from the constructor
-
+ -->
 ```javascript
 class Unicorn {
   constructor(name, color) {
@@ -241,16 +241,12 @@ var vampire = {
   ],
   whatDoYouDislike: function() {
     // console.log(this)
-    
-    // ES6
-    // this.dislikes.forEach(( item ) => {
-    //   console.log(this.name + ' dislikes ' + item)
-    // })
-    
-    // ES5
-    this.dislikes.forEach(function(item) {
-      console.log(this.name + ' dislikes ' + item);
-    });
+
+    // this.dislikes.forEach(insert callback here);
+    // how should you write your callback function in order
+    // for the following line of code to work:
+    // console.log(this.name + ' dislikes ' + item)
+    // as an arrow function or as a traditional ES5 function?
   }
 }
 
@@ -259,7 +255,7 @@ vampire.whatDoYouDislike()
 
 #### Your Turn
 
-- Delete the ES6 function and modify the ES5 function so that we don't lose the value of `this`
+- Write the callback function inside of the `forEach` in order for the console.log snippet to work appropriately (e.g. each dislike should log `dracula dislikes garlic/crosses/stakes`)
 
 ### Closing
 
