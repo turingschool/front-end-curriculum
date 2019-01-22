@@ -126,13 +126,13 @@ const denver = {
 
 ## Rule 2 - _this_ in function code invoked using the new operator refers to the new instance of that object.
 
-When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
+<!-- When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
 
 1. `this` is set to a new empty object
 2. The prototype property of the constructor function (Unicorn.prototype in the example below) is set as the prototype of the new object, which was set to `this` in the first step
 3. The body of our function runs
 4. Our new object, `this`, is returned from the constructor
-
+ -->
 ```javascript
 class Unicorn {
   constructor(name, color) {
