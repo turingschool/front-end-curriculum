@@ -27,7 +27,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 ## Submission Details
 
-Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=496549355)
+Place submissions in appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1Gfvrp74oj80tCadz4_J0YeQBha92Cf3nWx-ACKssBMw/edit#gid=496549355)
 
 ## PRO-TIP
 
