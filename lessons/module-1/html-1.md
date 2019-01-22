@@ -4,14 +4,6 @@ length: 180
 tags: html, introduction, practice
 ---
 
-# Overview
-
-The front-end of the web is based on three major technologies:
-
-* __HTML aka "STRUCTURE"__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
-* __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
-* __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
-
 ## Learning Goals
 
 * Understand what HTML stands for and it's purpose
@@ -29,6 +21,16 @@ The front-end of the web is based on three major technologies:
 - `Hyperlink` A reference to an external resource
 - `Block` A block-level element occupies the entire width of its parent element (container), thereby creating a "block."
 - `Inline` An inline-level element only occupies the space bounded by the tags defining the element, instead of breaking the flow of the content.
+
+***
+
+# Overview
+
+The front-end of the web is based on three major technologies:
+
+* __HTML aka "STRUCTURE"__:  HyperText Markup Language (HTML) defines the structure and semantics of web pages on the web.
+* __CSS aka "PRESENTATION"__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
+* __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
 
 ***
 
@@ -79,7 +81,7 @@ Here is an example of a slightly more robust document:
 * What is an HTML tag?
 * What is an element?
 * What makes an HTML element different that an HTML tag?
-* What is the difference between a “regular” element and a self-closing, or empty, element?
+* What is the difference between a “regular” element and a self-closing, or empty element?
 
 ***
 
@@ -129,8 +131,9 @@ In your groups, use the following semantic HTML tags to create the basic structu
 
 ![Alien Paper](/assets/images/alien-paper.png)
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<!-- Commenting this out for now since we're having them do it on chartboard paper instead of doing it in a codepen -->
+<!-- <p data-height="300" data-theme-id="23788" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> -->
 
 ***
 
