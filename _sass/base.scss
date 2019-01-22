@@ -93,9 +93,6 @@ footer {
 
 .container {
   min-height: 100vh;
-  @media (max-width: $tablet-width) {
-    flex-direction: column;
-  }
 }
 
 .hide {
