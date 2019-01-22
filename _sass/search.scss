@@ -61,8 +61,9 @@
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   position: absolute;
   top: 12%;
+  left: 5%;
   z-index: 100;
-  width: 75%;
+  width: 85%;
   padding: 0 10px;
   margin-bottom: 30px;
 
@@ -85,7 +86,7 @@
 
   @media (max-width: $phone-width) {
     top: 200px;
-    width: 95%;
+    width: 90%;
     left: 10px;
   }
 }
