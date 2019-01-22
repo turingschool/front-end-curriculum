@@ -98,10 +98,6 @@ src/
   - Number of Passengers 
   - A button to "Favorite" the vehicle 
   
-### Iteration 4: LocalStorage
-
-- Use LocalStorage to persist data. People, Planets, and Vehicles should all be saved in LocalStorage. Secondary calls for data should be made to LocalStorage (i.e. you should not be fetching the data once you already have it).
-
 ### Iteration 5: Favorites
 
 - There should be a button on each card to save it to Favorites.  
@@ -116,15 +112,9 @@ src/
 - Users should be able to unfavorite a card.  
 - If there are no favorites, there should be a message indicating that there are no favorites.
 
-### Iteration 6: React Router
-
-- The URL should match the category chosen. For example, clicking on the `People` button routes the user to `'/people'`and display the people cards.  
-- When a user visits `'/favorites'` the favorited cards are displayed.  
-
 ## Extension
 
 - Implement a `More` button. When clicked, the next 10 items of that category should be shown. There should be a `Back` button to go back to the previous page.  
-
 
 ## Rubric 
 
@@ -169,12 +159,3 @@ src/
 * 2 - Nearly all unit tests are in place. No attempt to test async functionality was made.
 * 1 - A valid attempt to test this application was made, but there are obvious gaps, with missing unit tests.
 
-
-### Routing
-
-* 4 - All requirements from 3 met, and always chooses the correct component for
-  rendering, as well as the correct Route API. Application should account for
-  undefined routes.
-* 3 - Application uses React Router to display appropriate components based on URL.
-* 2 - Application uses React Router, but does not display the appropriate components upon navigating.
-* 1 - Application uses React Router, but does not render/use all routes.
