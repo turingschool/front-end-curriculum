@@ -8,14 +8,14 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 1: Hello Turing! Hello Front End Engineering!
 
 |Mindset     | _We are a team. This week is about building trust with one another_.|
-|Lessons     | [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html) &nbsp; [Terminal](http://frontend.turing.io/lessons/module-1/getting-around-in-the-terminal.html) &nbsp; [HTML I](http://frontend.turing.io/lessons/module-1/html-1.html) &nbsp; [HTML II](http://frontend.turing.io/lessons/module-1/html-2.html) &nbsp; [Intro CSS](http://frontend.turing.io/lessons/module-1/css-1.html) &nbsp; [JS I](http://frontend.turing.io/lessons/module-1/js-1.html)
+|Lessons     | [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html) &nbsp; [Terminal](http://frontend.turing.io/lessons/module-1/getting-around-in-the-terminal.html) &nbsp; [HTML I](http://frontend.turing.io/lessons/module-1/html-1.html) &nbsp; [Intro CSS](http://frontend.turing.io/lessons/module-1/css-1.html) &nbsp;
 |Assignment  | Establish a __routine__. Set healthy study __habits__ early. Write __code everyday__. |
 |Assignment  | __CHECK-IN__: Thu 1/24 ~ Dog Party |
 
 ### WK 2: Putting the Pieces Together
 
 |Mindset     | _Open, optimistic, invested_. |
-|Lessons     |[JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git & Github](http://frontend.turing.io/lessons/module-1/git-and-github.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
+|Lessons     |[JS I](http://frontend.turing.io/lessons/module-1/js-1.html) &nbsp; [JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git & Github](http://frontend.turing.io/lessons/module-1/git-and-github.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
 |Assignment  | __Eval__: Mon 1/28 ~ Dog Party
 |Assignment  | __CHECK-IN__: Thu 1/31 ~ Number Guesser |
 
