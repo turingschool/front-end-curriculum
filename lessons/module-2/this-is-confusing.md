@@ -222,7 +222,7 @@ logVoyager();
 
 ## The difference between `function () {}` and `() => {}`
 
-ES6 introduced arrow functions, which allow us to write functions with shorter syntax (among other things). Beside being quicker to write/read, arrow functions also lexically bind the `this` value implicitly:
+ES6 introduced arrow functions, which allow us to write functions with shorter syntax [among other things](http://frontend.turing.io/lessons/module-2/es5-vs-es6.html#arrow-functions). Beside being quicker to write/read, arrow functions also lexically bind the `this` value implicitly:
 
 ### function () {}
 The value of _this_ is set when the function is *executed*.
