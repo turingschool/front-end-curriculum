@@ -22,7 +22,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 3: Level Up
 
 |Mindset     | _Dig Deep, show grit, be vocal, be resourceful_. |
-|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [jQuery](http://frontend.turing.io/lessons/module-1/introduction-to-jquery.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/module-1/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) |
+|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/module-1/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) |
 |Assignment  | __EVAL__: Tue 2/5 ~ Mid Mock Assessment |
 |Assignment  | __DUE__: Tue 2/5 ~ Static Comp Challenge #1 by *5:00 PM* |
 |Assignment  | __CHECK-IN__: Wed 2/6 ~ Number Guesser |
@@ -31,7 +31,7 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 4: Build on a Solid Foundation
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
-|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/array-prototype-methods-intro) &nbsp; [Grid](http://frontend.turing.io/lessons/module-1/introduction-to-grid.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
+|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/intro-to-array-prototype-methods.html) &nbsp; [Grid](http://frontend.turing.io/lessons/module-1/introduction-to-grid.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
 |Assignment  | __CHECK-IN__:  Thu 2/14 ~ Ideabox |
 |Assignment  | __EVAL__: Thu 2/14 ~ Mock Assessment |
 |Assignment  | __DUE__: Fri 2/15 ~ Mythical Creatures |
