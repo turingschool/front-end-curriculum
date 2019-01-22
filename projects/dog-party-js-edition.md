@@ -65,7 +65,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 
 #### Setting up Repository on GitHub and Pushing up
 
-1. Go to Github and create a new repository, also called a repo, by clicking that green button on the home page that says `New Repository`
+1. Go to Github and create a new repository, also called a repo, by clicking that green button on the home page that says `New` on the left
 2. Enter in a relevant name for this project (i.e. `Dog Party`)
 3. Do NOT initialize the repository with a `README`.  You have already created one locally on your computer.
 4. Leave the repo set as `public` and then click `Create Repository`
@@ -76,7 +76,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
   * `git remote add origin git@github.com:Kalikoze/Dog-Party.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Dog-Party.git` -- this step makes the connection between your local files and the repo that lives on GitHub)
   * `git push -u origin master` (this step pushes your local code up to your GitHub repo)
 6. Once you see your code up in your repository on GitHub, go to `Settings` and publish your site on GitHub Pages, a great way to host static sites directly through GitHub
-7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1JJ4vf7qcH2SX5qi8uUE8cVvCbcGkf55wA0DpQP5ooWc/edit#gid=0)
+7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1Gfvrp74oj80tCadz4_J0YeQBha92Cf3nWx-ACKssBMw/edit#gid=0)
 
 
 ## Design Comp
