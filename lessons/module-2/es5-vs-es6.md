@@ -236,7 +236,9 @@ var characters = [...string]; // ['h', 'e', 'l', 'l', 'o']
 
 In this case, the `split` method is not terribly complex, but using the spread operator makes the code more readable at a glance; you can see that the result is an array.
 
-### Destructuring
+
+<!-- Destructring moved to fundamentals lesson -->
+<!-- ### Destructuring
 
 **Importing:**
 
@@ -303,72 +305,7 @@ console.log(list); // [3, 2, 1]
 The square brackets are just part of the destructuring syntax here.
 
 You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
-
-
-### Classes and Prototypal Inheritance
-
-You've already seen the syntax for ES6 classes in your mythical creatures.
-
-```
-// es6
-class Shape {
-    constructor (id, x, y) {
-        this.id = id
-        this.move(x, y)
-    }
-
-    move (x, y) {
-        this.x = x
-        this.y = y
-    }
-}
-```
-
-Here's how you would have to write the same thing in ES5:
-
-```
-function Shape (id, x, y) {
-    this.id = id;
-    this.move(x, y);
-};
-
-Shape.prototype.move = function (x, y) {
-    this.x = x;
-    this.y = y;
-};
-```
-
-It's a lot more code and is less readable.
-
-ES6 class inheritance syntax is also much easier:
-
-```
-class Rectangle extends Shape {
-  constructor (id, x, y, width, height) {
-    super(id, x, y)
-    this.width = width
-    this.height = height
-  }
-}
-```
-
-And here is how that would be accomplished in ES5:
-
-```
-var Rectangle = function (id, x, y, width, height) {
-  Shape.call(this, id, x, y);
-  this.width = width;
-  this.height = height;
-};
-
-Rectangle.prototype = Object.create(   
-  Shape.prototype
-);
-
-Rectangle.prototype.constructor = Rectangle;
-```
-
-We can create classes that inherit from another class by using the ES6 keyword `extends` and the method `super()`.
+ -->
 
 ### Journal
 

@@ -323,7 +323,7 @@ app.post('/api/v1/pets', (request, response) => {
 
 If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error pet we sent along with the 422 response.
 
-It's important to handle errors and write descriptive error pets so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response pet is the best way to write a user-friendly API.
+It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response pet is the best way to write a user-friendly API.
 
 <!--
 ### Generating Unique Keys
