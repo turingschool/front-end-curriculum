@@ -241,16 +241,12 @@ var vampire = {
   ],
   whatDoYouDislike: function() {
     // console.log(this)
-    
-    // ES6
-    // this.dislikes.forEach(( item ) => {
-    //   console.log(this.name + ' dislikes ' + item)
-    // })
-    
-    // ES5
-    this.dislikes.forEach(function(item) {
-      console.log(this.name + ' dislikes ' + item);
-    });
+
+    // this.dislikes.forEach(insert callback here);
+    // how should you write your callback function in order
+    // for the following line of code to work:
+    // console.log(this.name + ' dislikes ' + item)
+    // as an arrow function or as a traditional ES5 function?
   }
 }
 
@@ -259,7 +255,7 @@ vampire.whatDoYouDislike()
 
 #### Your Turn
 
-- Delete the ES6 function and modify the ES5 function so that we don't lose the value of `this`
+- Write the callback function inside of the `forEach` in order for the console.log snippet to work appropriately (e.g. each dislike should log `dracula dislikes garlic/crosses/stakes`)
 
 ### Closing
 
