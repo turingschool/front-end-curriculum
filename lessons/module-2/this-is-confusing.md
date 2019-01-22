@@ -124,7 +124,7 @@ const denver = {
       `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }`
 
 
-## Rule 2 - _this_ in function code invoked using the new operator refers to the newly created object.
+## Rule 2 - _this_ in function code invoked using the new operator refers to the new instance of that object.
 
 When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
 
