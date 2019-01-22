@@ -1,4 +1,8 @@
-# HTML and Accessibility
+---
+title: "HTML and Accessibility"
+length: 90
+tags: html, aria, accessibility 
+---
 
 ## **Vocab:**
 - **Accessibility** - Making an experience that's usable by anyone
