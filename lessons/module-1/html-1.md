@@ -241,6 +241,59 @@ Something to note, you will often see hyperlinks in a [nav](https://developer.mo
 </nav>
 ```
 
+***
+
+# Chrome Dev Tools
+
+Debugging your front-end code can be an intimidating part of the development process, but it's also one of the most powerful skills you can acquire Developers of all levels spend a significant amount of time troubleshooting code, but the more comfortable you are with debugging tools, the easier it will be to isolate, identify and fix broken code.
+
+The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.
+
+### Developer Tools
+One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). To open developer tools in Chrome:
+- Mac: `Cmd` + `Opt` + `i`
+- (or) Right click on the browser window and select `inspect`
+- (or) Select `View` in the navbar, then `Developer`, then `Developer Tools`
+
+Personally I find that pinning the dev tools to the upper right is the most convenient. (You can also expand them into their own window.)
+
+![devtools window][devtools-window]
+
+### The Panels
+Once you have your DevTools window open, you'll notice a toolbar across the top with several different tabs. Clicking on these tabs will bring you to different debugging panels, each built to help troubleshoot specific areas of your front-end code.
+
+As mentioned earlier, there are a lot of places on the front-end where code can go wrong. This means the first and most important step in solving a bug is **isolating the problem**. DevTools has already done some of this step for us by categorizing the most commmon areas where developers run into problems, and providing us with specific debugging panels for each.
+
+![devtools toolbar][devtools-toolbar]
+
+For now, we're only going to focus on the first panel: Elements.
+
+[devtools-window]: /assets/images/lessons/debugging-with-devtools/devtools-window.gif
+[devtools-toolbar]: /assets/images/lessons/debugging-with-devtools/devtools-toolbar.png
+
+---------------------------------------
+
+### The Elements Panel: Debugging HTML, CSS & DOM Events
+
+##### HELPFUL FOR:
+* debugging layout and styling issues
+* checking DOM Events
+
+The elements panel lets you view the entire HTML source of the current page you are viewing. From here, you can edit, add or remove content and elements directly on the page. Though your changes won't be saved (any changes made here will be lost upon refreshing the page), sometimes it's helpful to make tweaks directly in this panel so you can see what effect the changes will have on your application before you implement them.
+
+![Elements Panel][elements-panel]
+
+### Selecting Elements to work with
+You'll notice hovering over an HTML element in the devtools panel will also highlight that element on the page. This makes it easier to find and select the content you'd like to work with.
+
+You can also select elements directly on the page by clicking the ![Square Arrow](http://i.imgur.com/ODylyUu.png) icon in the toolbar, then hovering over the element on the page. This will automatically bring you to the corresponding code for that element in the devtools panel.
+
+If you're having trouble finding the element you'd like to work with, you can search through the entire HTML with `Cmd + F`. You'll notice a searchbar appear at the bottom of the panel where you can enter any string to find a match. This is useful if you'd like to search for an element by a known ID or class.
+
+![Find in HTML][find-in-html]
+
+[elements-panel]: /assets/images/lessons/debugging-with-devtools/elements-panel.png
+[find-in-html]: /assets/images/lessons/debugging-with-devtools/find-in-html.gif
 
 ***
 
