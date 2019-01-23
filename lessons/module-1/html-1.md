@@ -9,6 +9,7 @@ tags: html, introduction, practice
 * Understand what HTML stands for and it's purpose
 * Learn about the HTML structure and how to incorporate semantic HTML elements
 * How to utilize images, hyperlinks, and tables
+* Understand what devtools are and how can you use them
 * Create semantic forms including labels, inputs, and buttons
 
 ## Vocab
