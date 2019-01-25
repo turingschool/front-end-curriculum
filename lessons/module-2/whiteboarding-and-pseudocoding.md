@@ -184,7 +184,7 @@ Array.prototype.myFilter = function(callback) {
  -->
 
 
-#### Group Exercise: 
+#### Turn and Code: 
 
 In pairs, pull up a JSFun prototype problem that neither of you have solved.
 
