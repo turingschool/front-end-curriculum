@@ -149,7 +149,7 @@ Which could also be written like this:
     * *Otherwise, do something different* - "otherwise" represents an else condition (`else ()`) -->
 
 ## PIA (Psuedocoding in action)
-
+ 
 Task: Create your own `filter` function (on `Array.prototype`) to really understand/see how `filter` is working under the hood. You should implemenet a filter function that is like the `<Array>.filter()` in JavaScript.
 
 ```js
@@ -188,15 +188,15 @@ Array.prototype.myFilter = function(callback) {
 
 In pairs, pull up a JSFun prototype problem that neither of you have solved.
 
-Phase I => (Understand and Plan) Break out the way that you would solve this problem in pseudocode. Remember, psuedocode is _not_ code... but a way to work through the logic of the problem without worrying about syntax
+>**Phase I => (Understand and Plan)** Break out the way that you would solve this problem in pseudocode. Remember, psuedocode is _not_ code... but a way to work through the logic of the problem without worrying about syntax
 
-Person A: Driver
-Person B: Navigator
+**Person A: Driver**
+**Person B: Navigator**
 
-Phase II => (Solve) Using your psuedocode as a guide (but adjusting when necessary) start to implement your solution in code
+>**Phase II => (Solve)** Using your psuedocode as a guide (feeling free to make adjustments as necessary) to start to implement your solution in code
 
-Person B: Navigator
-Person A: Driver
+**Person B: Navigator**
+**Person A: Driver**
 
 Break out the way that you would solve this problem in psuedocode. One person should be driving 
 
