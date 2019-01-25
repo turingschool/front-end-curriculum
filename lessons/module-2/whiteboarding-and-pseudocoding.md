@@ -198,9 +198,6 @@ In pairs, pull up a JSFun prototype problem that neither of you have solved.
 **Person B: Navigator**  
 **Person A: Driver**  
 
-Break out the way that you would solve this problem in psuedocode. One person should be driving 
-
-_Break out the recipe for making grilled cheese into discrete steps. Note: A cheese sandwich is a basic sandwich generally made with one or more varieties of cheese on any sort of bread. A grilled cheese sandwich is made by grilling the sandwich with butter or toasting it._
 
 ### Some possible pitfalls to problem solving
 
