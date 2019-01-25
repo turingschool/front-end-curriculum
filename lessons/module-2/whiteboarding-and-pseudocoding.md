@@ -175,10 +175,10 @@ Array.prototype.myFilter = function(callback) {
   
   this.forEach(function(i) {
     if (callback(i)) {
-      newArray.push(i)
+      filteredData.push(i)
     }
   })
-  return newArray;
+  return filteredData;
 }
 ```
  -->
