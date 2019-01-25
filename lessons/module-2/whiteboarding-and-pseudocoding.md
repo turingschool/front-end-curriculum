@@ -148,7 +148,7 @@ Which could also be written like this:
     * *Check if foo equals bar* - "if" represents an if condition (`if (foo ==== bar)`)
     * *Otherwise, do something different* - "otherwise" represents an else condition (`else ()`) -->
 
-#### Create Your Own Filter Method
+## PIA (Psuedocoding in action)
 
 Task: Create your own `filter` function (on `Array.prototype`) to really understand/see how `filter` is working under the hood. You should implemenet a filter function that is like the `<Array>.filter()` in JavaScript.
 
