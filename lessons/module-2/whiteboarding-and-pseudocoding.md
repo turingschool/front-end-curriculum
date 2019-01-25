@@ -86,13 +86,6 @@ else
 
 * How much specificity should you have as you speak about what you're doing - where can you be vague, where do you need to go into detail? - Not sure how to demonstrate this balancing act to them-->
 
-#### Turn and Talk
-
-With a partner, draw out the process of making a sunbutter and jelly sandwich with blank post-its and the table space in front of you as your "whiteboard." Do not write words to describe this process!
-
-<!-- Sticky note drawings typically produce richer pictures with steps that are more clear. Moveable cards produce better systems models - because we iterate much more fluidly
- -->
-
 ## Pseudocoding
 
 Pseudocode is an artificial and informal language that helps programmers develop algorithms to solve problems. A key thing to remember is that psuedocode is _not_ code. It is a way to force yourself to slow down and think about how to solve problems at a high-level, using natural language.
@@ -155,15 +148,59 @@ Which could also be written like this:
     * *Check if foo equals bar* - "if" represents an if condition (`if (foo ==== bar)`)
     * *Otherwise, do something different* - "otherwise" represents an else condition (`else ()`) -->
 
+#### Create Your Own Filter Method
+
+Task: Create your own `filter` function (on `Array.prototype`) to really understand/see how `filter` is working under the hood. You should implemenet a filter function that is like the `<Array>.filter()` in JavaScript.
+
+```js
+[1,2,3,4].filter((num)=>{ return num > 3}) // Should return [4]
+```
+
+<!-- PSEUDOCODE:
+
+Define myFilter(callback) on prototype
+Initialize empty filtered array
+Iterate over array
+if return from callback(element) = true
+push element into filtered array
+
+return filteredarray
+
+CODE ANSWER:
+
+
+```js
+Array.prototype.myFilter = function(callback) {
+  var filteredData = [];
+  
+  this.forEach(function(i) {
+    if (callback(i)) {
+      newArray.push(i)
+    }
+  })
+  return newArray;
+}
+```
+ -->
+
+
 #### Group Exercise: 
 
-In your group, solve the following IRL task in psuedocode: 
+In pairs, pull up a JSFun prototype problem that neither of you have solved.
+
+Phase I => (Understand and Plan) Break out the way that you would solve this problem in pseudocode. Remember, psuedocode is _not_ code... but a way to work through the logic of the problem without worrying about syntax
+
+Person A: Driver
+Person B: Navigator
+
+Phase II => (Solve) Using your psuedocode as a guide (but adjusting when necessary) start to implement your solution in code
+
+Person B: Navigator
+Person A: Driver
+
+Break out the way that you would solve this problem in psuedocode. One person should be driving 
+
 _Break out the recipe for making grilled cheese into discrete steps. Note: A cheese sandwich is a basic sandwich generally made with one or more varieties of cheese on any sort of bread. A grilled cheese sandwich is made by grilling the sandwich with butter or toasting it._
-
-<!-- 
-Groups This should produce the most comprehensive model because we synthesize several points of view. When people work together under the right circumstances - group models are preferred.
-
-You start with a question, you collect the nodes, refine, refine, refine - patterns will emerge -->
 
 ### Some possible pitfalls to problem solving
 
