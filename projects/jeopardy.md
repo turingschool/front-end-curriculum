@@ -55,6 +55,12 @@ You can use any of the following JavaScript libraries:
 
 # Requirements
 
+## Initial Setup
+
+For this project, you need to use this [Gametime Starter Kit](https://github.com/turingschool-examples/gametime-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
+
+There are additional notes in the README about where your game logic code goes and where your test code goes as well. Be sure to read through the README before you start coding because for this starter kit to work correctly, it has some underlying assumptions of where files live.
+
 ## Code Organization
 
 You should have at least one use-case for [inheritance](https://www.sitepoint.com/understanding-ecmascript-6-class-inheritance/) with your classes.
