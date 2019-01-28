@@ -57,15 +57,13 @@ The application should have the following user interface components:
 
 ## Phase Two: More Better
 
-- All input fields should only accept numerical entries
+- Range and guess input fields should only accept numerical entries
 - The `Guess` fields should only accept values that fall within the defined min and max range.
 - The application should display an error message if the value entered in the `Max Range` input is less than the value in the `Min Range` input
 - The application should display an error message if the value entered in the `Min Range` input is greater than the value in the `Max Range` input
 - The application should display an error message if either guess is not a number (e.g. `parseInt()` returns `NaN`).
 - The application should display an error if either guess is outside of the range of possible answers.
 - The application should display an error if the `Update` or `Submit Guess` buttons are clicked when their associated input fields do not have a value entered
-- The clear button should be disabled if there is nothing to clear.
-- The reset button should be disabled if there is nothing to reset.
 
 ## Phase Three: Level Up
 
@@ -89,6 +87,13 @@ Work through these **in order**:
 - Have a **Clear All** button that removes all of the cards from the page.
 - Have a sort button that organizes the game cards by the least amount of guesses to the greatest.
   - Incorporate in the UI which game has the **High Score**!
+
+
+## Week 1 Check-ins
+- Have all of phase 1 completed and start phase 2
+  - Finished UI on desktop views
+  - Logic for showing last guess
+  - Should append a card when a user wins the game
 
 #### Layout comps
 
