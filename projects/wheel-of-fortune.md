@@ -31,7 +31,7 @@ Building software, at its core, is about solving problems. Generally speaking, t
 |--- |---    |--- |
 |*1* | Kick-off and exploration| What is OOP? Why is OOP useful? How is OOP used in games?, Wireframe & Design Inspiration |
 |*2* | Understanding/Planning| Diagram for OOP design/classes due|
-|*3* | Setup and Coding| [Initialize a repo](https://github.com/turingschool-examples/gametime-starter) following the instructions in the README. In your forked repo, update the README to include a link to your pair's DTR, your final wireframes and chosen design inspiration|
+|*3* | Setup and Coding| [Initialize a repo](https://github.com/turingschool-examples/gametime-starter) following the starting with "Initial Setup" below and then continue with the instructions in the README. In your forked repo, update the README to include a link to your pair's DTR, your final wireframes and chosen design inspiration|
 |*4* | Check-in| Instructor Pairing|
 
 ### Week 2
