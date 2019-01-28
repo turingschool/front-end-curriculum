@@ -54,7 +54,7 @@
 
           <div class="discuss">
             <h4>In Your Notebook</h4>
-            <p>Write down everything you know about arrays. Everything you know about objects. Think about when you've used them in the past, where you've seen them, and what you've done with them.</p>
+            <p>Write down everything you know about arrays. Everything you know about objects. Think about when you've used them in the past, where you've seen them, and what you've done with them. What do people mean with they say that "everything is an object" in JavaScript?</p>
           </div>
 
           <!-- Instructor: Discuss what they wrote in their notebook, then whiteboard
@@ -249,7 +249,7 @@
 
           <h3>Mutator Methods</h3>
           <p><b>Directly modify the existing array</b></p>
-          <p>Mutator methods can be used for adding or removing items from an array, sorting the array, reversing it, etc. They modify the existing array and might return the modified array, or the single array item that was effected.</p>
+          <p>Mutator methods can be used for adding or removing items from an array, sorting the array, reversing it, etc. They modify the existing array and might return the modified array, or the single array item that was affected.</p>
           <p>As an example, one of the mutator methods you can call on an array is <code>sort()</code>. The <code>sort()</code> method will sort strings alphabetically and integers numerically by default:</p>
 
 <pre>
@@ -267,9 +267,9 @@
 
 <pre>
   <code>
-    let lesson = ['module2', 'javascript', 'arrays'];
-    lesson.join('-'); // module2-javascript-arrays
-    console.log(lesson); // ['module2', 'javascript', 'arrays']
+    let lessons = ['module2', 'javascript', 'arrays'];
+    lessons.join('-'); // module2-javascript-arrays
+    console.log(lessons); // ['module2', 'javascript', 'arrays']
   </code>
 </pre>
 
@@ -347,12 +347,12 @@
   </code>
 </pre>
 
-        <h4><code>Array.reduce(<i>callbackFunction, accumulator</i>)</code></h4>
+        <h4><code>Array.reduce(<i>callbackFunction, initialValue</i>)</code></h4>
 
         <p><code>Array.reduce()</code> can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:</p>
         <ul>
           <li><b>a callback function</b> - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over</li>
-          <li><b>an accumulator</b> - The accumulator is this 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.</li>
+          <li><b>an initial value</b> - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.</li>
         </ul>
 
 <pre>
