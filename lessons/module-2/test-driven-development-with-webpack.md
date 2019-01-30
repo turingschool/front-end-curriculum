@@ -97,8 +97,8 @@ class Question {
     this.correctAnswer = correctAnswer;
   }
 
-  checkAnswer(answer) {
-    if (answer === geographyQuestion.correctAnswer) {
+  checkAnswer(playerAnswer) {
+    if (playerAnswer === this.correctAnswer) {
       player.score++
     } else {
       player.score--
