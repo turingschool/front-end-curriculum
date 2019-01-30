@@ -137,7 +137,7 @@ First, lets look at the syntax provided from Mocha:
 ```js
 describe('unicorn', function() {
   it('should accumulate calories when calling eat', function() {
-    
+
   });
 });
 ```
@@ -429,10 +429,10 @@ Implement iteration 2 for our box per the spec outlined below.
 ```
 Iteration 2:  
 
-- You should be able to increment the width by a provided value.
+- You should be able to increase the width by a provided value.
 ie: `box.increaseWidth(10)`
-- You should be able to increment the height of your box by a provided value
-ie: `box.incrementHeight(10)`  
+- You should be able to increase the height of your box by a provided value
+ie: `box.increaseHeight(10)`  
 - Refactor to allow for a single method to do both jobs
 ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`  
 ```
