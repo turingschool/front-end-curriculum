@@ -190,7 +190,73 @@ Together, let's recap where we started and what we did to get to a passing test.
 ### Your Turn
 Set up the functionality to display the width to the DOM - using your `domUpdates file` to keep this code separate from the state of your app. Be sure to update your testing accordingly.
 
-## Using Spies in Multiple Tests
+## On Your Own Time: Using Spies in Multiple Tests
 
-Stay Tuned. Coming soon...
+When you have added spies for your `domUpdates` functions, you might have multiple tests that call the same spied function. For instance, multiple tests in a test file might call `displayHeight`.
+
+With the current spy setup, the first test that encounters `displayHeight` being called will log that function being called once. But then in a following test where `displayHeight` is called, you will have to expect that the function should have been called twice:
+
+```js
+// (Other test code above...)
+
+it('should increment height', function() {
+  box.increaseHeight(10);
+
+  expect(box.height).to.equal(110);
+  expect(domUpdates.displayHeight).to.have.been.called(1);
+  expect(domUpdates.displayHeight).to.have.been.called.with(110);
+});
+
+it('should decrement height if negative value is given', function() {
+  box.increaseHeight(-10);
+
+  expect(box.height).to.equal(90);
+  expect(domUpdates.displayHeight).to.have.been.called(2); // this needs to be 2 because the function was called once above
+  expect(domUpdates.displayHeight).to.have.been.called.with(90);
+});
+
+// (other test code below...)
+```
+
+This is not ideal because our tests are not running in _isolation_. If we were to switch the order of these tests, then we would need to modify the `.to.have.been.called()` value.
+
+To fix this, utilize the Mocha hooks to set up the spy before each test and then reset the spy after each test:
+
+```js
+describe('Box', function() {
+  beforeEach(function() {
+    chai.spy.on(domUpdates, 'displayHeight', () => true);
+  })
+
+  afterEach(function() {
+    chai.spy.restore(domUpdates);
+  })
+
+  // ("it" blocks with tests below...)
+});
+```
+
+Now the tests can be updated to be able to run in isolation with `.to.have.been.called(1)` in _both_ tests:
+
+```js
+// (Other test code above...)
+
+it('should increment height', function() {
+  box.increaseHeight(10);
+
+  expect(box.height).to.equal(110);
+  expect(domUpdates.displayHeight).to.have.been.called(1);
+  expect(domUpdates.displayHeight).to.have.been.called.with(110);
+});
+
+it('should decrement height if negative value is given', function() {
+  box.increaseHeight(-10);
+
+  expect(box.height).to.equal(90);
+  expect(domUpdates.displayHeight).to.have.been.called(1); // this is now 1
+  expect(domUpdates.displayHeight).to.have.been.called.with(90);
+});
+
+// (other test code below...)
+```
 
