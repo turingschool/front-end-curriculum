@@ -270,9 +270,10 @@ describe('Box', function() {
 If you run `npm test` now, you'll see an expected error. It's important to recognize this error, because it will happen a lot. Mocha and Chai are two different libraries - which is indicated by this error message:  
 
 ```bash
-1) Box should return true:
-   ReferenceError: expect is not defined
-    at Context.<anonymous> (test/Box-test.js:3:5)
+1) Box
+       should return true:
+     ReferenceError: expect is not defined
+      at Context.<anonymous> (dist/webpack:/test/Box-test.js:5:1)
 ```
 
 It's saying that it doesn't know what `expect` is, and recall that `expect` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between different assertion styles: `should`, `expect`, or `assert`).

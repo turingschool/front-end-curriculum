@@ -51,8 +51,8 @@ Let's add some functionality to the `increaseHeight` method in the `Box` class t
 // Box.js
 
 increaseHeight(val) {
-  this.width += val;
-  document.querySelector('#box-height-display').innerText = this.width;
+  this.height += val;
+  document.querySelector('#box-height-display').innerText = this.height;
 };
 ```
 
@@ -80,6 +80,14 @@ npm test
 ```
 
 And we now see the test for the `increaseHeight` method fails...
+
+```bash
+1) Box
+       should increase the height:
+     ReferenceError: document is not defined
+      at Box.increaseHeight (dist/webpack:/src/Box.js:13:1)
+      at Context.<anonymous> (dist/webpack:/test/Box-test.js:33:1)
+```
 
 Now we know we need to fundamentally change the structure of our code in order to continue testing methods that involve DOM manipulation.
 
