@@ -413,10 +413,10 @@ _**Review**_
 // Dog.js
 
 class Dog {
-  constructor(name, breed, tricksArray) {
+  constructor(name, breed, tricks) {
     this.name = name;
     this.breed = breed;
-    this.tricks = tricksArray;
+    this.tricks = tricks;
   }
 
   learnTrick() {
