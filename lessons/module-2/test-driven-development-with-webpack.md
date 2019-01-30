@@ -1,23 +1,24 @@
 ---
 title: Test Driven Development
-tags: TDD, unit testing, mocha, chai
+tags: TDD, unit testing, mocha, chai, webpack
 mod: 2
 ---
 
 ## Game Plan:
-  - Review the what and why of Test Driven Development  
-  - Look at the structure of a test and the testing lifecycle  
-  - Discuss Mocha and Chai on a deeper level  
-  - Write some tests!  
+
+- Talk through the what and why of Test Driven Development  
+- Look at the structure of a test and the testing lifecycle  
+- Discuss Mocha and Chai
+- Write some tests!
 
 ## Vocab
 
 - `TDD` Test Driven Development / Design
-- `Four Phase Test` A test that is organized into the phases [Setup, Execution, Assertion, Teardown]
 - `Assertion` An expression containing some testable logic
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
+- `Four Phase Test` A test that is organized into the phases [Setup, Execution, Assertion, Teardown]
 
 ## Review: What is TDD?
 
@@ -37,7 +38,7 @@ Think back to some of your module 1 projects, the workflow probably looked somet
 * New stuff works, old stuff is broken  
 * Throw computer in the river.  
 
-Building an application without tests is similar to building a house without blueprints. Just because this one column looks good, once you build the second column how do you know its going to be the same height and hold up the roof with the first column? You don't.  
+Building an application without tests is similar to building a house without blueprints. Just because this one column looks good, once you build the second column how do you know it's going to be the same height and hold up the roof with the first column? You don't.  
 
 Take a look at the workflow when you start with testing:
 * Read project spec and feel kind of panicky  
@@ -58,7 +59,7 @@ The primary difference between the two, is that with a test driven approach you 
 
 ## Why TDD?
 
-The main **benefits** of TDD are:
+The main **benefits** of writing tests are:
 
 * *Computers can test things faster and more accurately than humans:* testing things manually in the browser is tedious, error prone and slow
 * *Forces you to slow down and pseudocode:* which helps you think more thoroughly about potential pitfalls *before* you write your code; it's much easier to course-correct yourself before you right any code than to refactor broken code after it's been written
@@ -68,16 +69,19 @@ The main **benefits** of TDD are:
 
 Some very minimal **downsides** of TDD are:
 
-* *It takes more time to write and maintain your codebase, which slows down development:* this can be problematic if you're working in an evironment where meeting deadlines is a top priority (like working in a newsroom)
+* *It takes more time to write and maintain your codebase, which slows down development:* this can be problematic if you're working in an environment where meeting deadlines is a top priority (like working in a newsroom)
 * *They don't make the business money:* tests aren't features, and if your company is relying on investors to keep itself going, making progress on the application functionality is going to be of utmost importance
+
+The main benefit of Test Driven Development is that you are forced to look at the problem you are solving at a high level and not worry about the little details for implementing your solution.
+
+For example, if you are writing a test for a function, you focus on the scenario: for a given input to the function, what is the expected output? The test does not care what exactly happens within the function as long as the output is what is expected.
 
 
 ## What Makes Testing Hard?
 
-* Not knowing what to test
+* At first, not knowing what to test
 * So many libraries and frameworks to choose from, differing syntax in documentation
 * Difficult to see the benefit until you've been saved by a failing test
-* Still using a trial-by-error approach to development
 
 
 ## What Should Be Tested?
@@ -120,44 +124,6 @@ describe('Question Class', () => {
 ```
 
 
-
-
-
-<!-- This is the age old question!
-This is a matter of culture and personal opinion and will vary widely depending on what software development team you join. Some teams want to test everything, others want you to test only the _really_ important stuff.
-Typically, the deciding factor in what should be tested is whether or not tests deliver enough value vs. the cost it takes to create and maintain them.
-
- -->
-
-<!-- 
-  Take some time and think about the game which you are building. 
-  What are some the key pieces of functionality in your game?
--->
-
-<!-- ## Types of Tests
-
-![The Testing Pyramid](https://i.imgur.com/8nDly8J.png)
-
-There are many types of tests, and a lot of them go by different names.
-This lesson will focus on unit tests because a they are the fastest and least costly.
-Most tests you write will be unit tests. -->
-
-<!-- ## The Testing Cycle
-
-You'll often hear the following catch phrase in nerd-circles when talking about TDD:
-
-**Red, Green, Refactor**  
-
-![Red, Green, Refactor](http://i.imgur.com/lwHNsic.png)
-
-In other words, write a test and watch it fail.  
-Implement some code to make the test pass  
-Then clean up your code with some refactoring now that we have a test to keep an eye on the correct functionality.  
-
-![Mr Green Refactor](http://i.imgur.com/rIduOzg.jpg)  
-You're welcome.  
- -->
-
 ## Testing Framework: Mocha  
 
 For now, we'll focus on the testing framework [Mocha](https://mochajs.org/), along with an assertion library called [Chai](http://chaijs.com/).  
@@ -176,6 +142,7 @@ describe('unicorn', function() {
 ```
 
 The code above simply indicates that we want to test a piece of functionality that is associated with `unicorn`. In English, we want to test that `eating accumulates calories`. You'll write the code above with any framework, but nothing is actually being tested yet. This is where we need to pull in something called an `assertion library`. Most testing frameworks provide the tools to run your tests in Node, or your browser, but the specific syntax for what you are verifying is true (aka "asserting"), can be done lots of different ways.
+
 
 ## Assertion Library: Chai  
 
@@ -208,11 +175,10 @@ All four of these phases deal with the **Subject Under Test** (`SUT`, or just `s
 Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes.
 
 **Good tests:**
-- test one thing
-- don't test what didn't happen
-- have no control flow (`if`, `when`, `for`) statements
-- can be used as documentation for the code they test
-- are clear and easy to read
+- Test one thing
+- Do not have control flow (`if`, `when`, `for`) statements
+- Can be used as documentation for the code they test
+- Are clear and easy to read
 
 Look at the following example and read the comments that talk about each line of our test:  
 
@@ -241,92 +207,55 @@ describe('Unicorn', function() {
 });
 ```
 
-## Testing Practice: Adding Mocha and Chai   
+## Testing Practice: Setup, Mocha, and Chai   
 
-To practice, let's kick off a brand new project to demonstrate how you would add Mocha and Chai to a project, and write a couple basic tests.  
+To practice, let's kick off a small project to demonstrate how you would utilize Mocha and Chai to write a couple tests.  
 
-In your terminal, create your project directory and initialize an npm directory 
-
-```bash
-mkdir unit-testing-practice && cd unit-testing-practice && npm init --yes  
-```
-
-Next, let's add some of our base files
+In your terminal, clone down the gametime starter kit and name the cloned repo `testing-practice`:
 
 ```bash
-touch index.html index.js Box.js
+git clone git@github.com:turingschool-examples/gametime-starter.git testing-practice  
 ```
-
-Open up this project in your text editor.  
-
-When we ran the command `npm init --yes` it generated a `package.json` file for us automatically. This file is where we will store all of the dependencies our project will need to run smoothly. The `--yes` command allowed us to bypass answering any config questions when generating this file, which means we have a bare-bones skeleton that looks like this:  
-
-```json
-// package.json  
-
-{
-  "name": "unit-testing-practice",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
-}
-```  
-
-**Install Mocha**:  
-`npm install --save-dev mocha` (Installs the `mocha` command locally within your project as a development dependency.)  
-
-**Install Chai**:  
-`npm install --save-dev chai`  
-
-You'll now see that in your `package.json` you have the following new dependencies (your version numbers might be different):  
-
-```json
-"devDependencies": {
-  "chai": "^4.1.1",
-  "mocha": "^3.5.0"
-}
-```
-
-**Update package.json**:  
-Finally, we need to tell our package.json what to do when we want to run our tests. You'll notice there is a section within our `package.json` file called `scripts`. This is where our node app goes to figure out if the command we told it to execute from our terminal exists in within our application. Right now, we should have the following unhelpful line of code:  
-
-```json
-"scripts": {
-  "test": "echo \"Error: no test specified\" && exit 1"
-},
-```
-
-Before we change anything, run the command `npm test` from your terminal. You should see text printout that looks suspiciously similar to the snippet above.  
-
-*Pause: Command Breakdown: `npm` tells node to check package.json scripts for whatever command we type next. `test` tells node to execute the line of code indicated by the key `test` in our scripts object, which in this case is simply echoing a string in our terminal.*  
-
-Update the scripts object to run Mocha:  
-
-```json
-"scripts": {
-  "test": "./node_modules/mocha/bin/mocha"
-},
-```
-
-Run `npm test` again. You should see a line of code that says something like:
 
 ```bash
-Warning: Could not find any test files matching pattern: test
+cd testing-practice
+npm install
 ```
 
-This makes sense! We don't have a directory called `test`, which is what Mocha is looking for by default, nor do we have any test files for it to run.
+See if everything is working:
+
+```bash
+npm start
+```
+
+Head over to `http://localhost:8080` and you should see some boilerplate HTML on the page as well as green in your terminal (no big scary red errors).
+
+---
+
+Let's look at the tooling we have in place already - go to the `package.json` file!
+
+Things to note:
+
+* Libraries in `devDependencies`: mocha, chai, and mochapack
+* `npm test` script (this script looks in a specific place for test files)
+
+Next, let's add some of our base files:
+
+```bash
+touch src/Box.js
+
+touch test/Box-test.js
+```
+
+In our test file, we need to import our assertion library: chai.
+
+```js
+// test/Box-test.js  
+
+import chai from 'chai';
+```
 
 Let's practice writing a couple tests in true TDD fashion - this first one will just help verify that everything is wired up correctly - plus it's always nice to start with an easy win.  
-
-```bash
-mkdir test && touch test/Box-test.js
-```
 
 ```js
 // test/Box-test.js  
@@ -346,16 +275,15 @@ If you run `npm test` now, you'll see an expected error. It's important to recog
     at Context.<anonymous> (test/Box-test.js:3:5)
 ```
 
-It's saying that it doesn't know what `expect` is, and recall that `expect` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between `should`, `expect`, or `assert`).
+It's saying that it doesn't know what `expect` is, and recall that `expect` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between different assertion styles: `should`, `expect`, or `assert`).
 
 Import Chai and the `expect` library, at the top of your test file:  
 
 ```js
 // test/Box-test.js  
 
-const chai = require('chai');
+import chai from 'chai';
 const expect = chai.expect;
-const Box = require('../Box.js');
 
 describe('Box', function() {
   it('should return true', function() {
@@ -392,9 +320,10 @@ We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refa
 ```js
 // test/Box-test.js
 
-const chai = require('chai');
+import chai from 'chai';
 const expect = chai.expect;
-const Box = require('../Box.js');
+
+import Box from '../src/Box';
 
 describe('Box', function() {
   it('should return true', function() {
@@ -426,17 +355,20 @@ describe('Box', function() {
 Run the tests and watch them fail (RED).
 
 ```bash
-1) Box should have a default height and a width:
-   TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:11:15)
+1) Box
+     should have a default height and a width:
+   TypeError: _src_Box__WEBPACK_IMPORTED_MODULE_1___default.a is not a constructor
+    at Context.<anonymous> (dist/webpack:/test/Box-test.js:12:1)
 
-2) Box should have take a height and a width as arguments:
-   TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:18:15)
+2) Box
+     should have take a height and a width as arguments:
+   TypeError: _src_Box__WEBPACK_IMPORTED_MODULE_1___default.a is not a constructor
+    at Context.<anonymous> (dist/webpack:/test/Box-test.js:19:1)
 
-3) Box should calculate its area:
-   TypeError: Box is not a constructor
-    at Context.<anonymous> (test/Box-test.js:25:15)
+3) Box
+     should calculate its area:
+   TypeError: _src_Box__WEBPACK_IMPORTED_MODULE_1___default.a is not a constructor
+    at Context.<anonymous> (dist/webpack:/test/Box-test.js:26:1)
 ```
 
 Write some code to implement the functionality one test at a time. You can use the method `.skip` on any tests you want to skip so you can isolate individual tests you want to run.  
@@ -462,7 +394,7 @@ class Box {
   }
 }
 
-module.exports = Box;
+export default Box;
 ```
 
 Run `npm test` and watch the tests pass! (GREEN).
@@ -482,11 +414,13 @@ Run `npm test` again to make sure we didn't break anything. (REFACTOR).
 
 SWEET! There we go with the first cycle of our RED-GREEN-REFACTOR TDD approach.  
 
-## Testing Practice: Hooks & Iteration 2
+## Testing Practice: Hooks
 
 You may have noticed that every time we wrote a test, we had to instantiate a new instance of our box. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some lifecycle `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks).   
 
 Using the docs linked above, add a `beforeEach()` hook that instantiates a new box before every test, this should allow you to remove the line `var box = new Box()` from all of your tests. If you're getting an error about box not being defined, check out [this stackoverflow conversation](https://stackoverflow.com/questions/38044111/basic-but-proper-use-of-beforeeach-or-aftereach-with-mocha-js-and-chai-js).  
+
+## Testing Practice: Iteration 2
 
 Implement iteration 2 for our box per the spec outlined below.  
 
@@ -501,137 +435,10 @@ ie: `box.incrementHeight(10)`
 ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`  
 ```
 
-## DOM Manipulation and Spies
-
-One of the biggest hurdles you'll have when building frontend applications is keeping your codebase clean and testable. Chances are good that you are currently intermixing your DOM Manipulation with code that is handling the state of your classes. However, the classes in your game file should be completely oblivious to the DOM - they should only store state and broadcast their changes to the DOM... not handle DOM manipulation directly.
-
-This is because, unfortunately, Mocha and Chai do not have the ability to test if changes have been applied to the DOM (the browser page) successfully. We can't test anything happening on the DOM. For instance, if a class method is structured like this:
-
-```js
-increaseCount(){
-  this.count++
-  document.querySelector('#item').innerText('Change to this text please.'); // Some DOM manipulation here
-};
-```
-
-By running the test that uses this method, Mocha will say that it has no idea what the `document` is, and the test will _fail_... So we want to test this method while still keeping the DOM manipulation functionality a part of the method. How do we do that? By pulling the DOM manipulation functionality out of the method and using a "spy".
-
-What is a spy? A spy is a tool that listens for a specific function, `functionA`, to be called. When `functionA` is called in as part of a test, the spy takes over control of `functionA`. The spy runs a "fake" function that returns a value as if `functionA` had actually run.
-
-Now that we have our class of Box, let's make this into a full-fledged game by setting up some functionality to display the box height and width to the DOM when the application loads. First, add a file to house all of your DOM Manipulation:
-
-```bash
-touch domUpdates.js
-```
-
-Next, set up a boilerplate in your HTML file with script tags for every JS file:
-
-```html
-<!DOCTYPE html>
-<html>
-<head>
-  <title>The Display Box Game</title>
-</head>
-  <body>
-    <output class="display-height"></output>
-    <output class="display-width"></output>
-  <script type="text/javascript" src="domUpdates.js"></script>
-  <script type="text/javascript" src="Box.js"></script>
-  <script type="text/javascript" src="index.js"></script>
-  </body>
-</html>
-```
-
-Let's take the `increaseWidth` and `increaseHeight` methods that you created earlier and get these updated numbers to display to the DOM directly whenever these methods are called. Let's start by modifying our test for `increaseWidth`.
-
-Since we cannot actually test our DOM manipulation, we are going to use a [`spy`](https://github.com/chaijs/chai-spies) to verify whether our method that displays the score has been called. *Note: Spies will help you verify calls to methods without actually calling them.*
-
-First, let's install and require `chai-spies`. Let's also require the `domUpdates` files that we are using to store our DOM manipulation methods:
-
-**Install**
-
-`npm install --save-dev chai-spies`
-
-**Setup**
-
-```js
-const chai = require('chai');
-const expect = chai.expect;
-const spies = require('chai-spies')
-chai.use(spies);
-
-const Box = require('../Box.js');
-global.domUpdates = require('../domUpdates.js');
-```
-
-Next, we will take advange of the `.on()` method from the [Chai-spies](https://github.com/chaijs/chai-spies#user-content-spyon) to spy on the methods that we want to test:
-
-```js
-chai.spy.on(global.domUpdates, ['displayHeight','displayWidth'], () => true);
-
-// chai.spy.on([an object that contains the methods to spy on],
-//             [[an array of the method names you want to spy on]], 
-//             [a callback function with what you intend the spy to return instead of your function, 'displayWidth' or 'displayHeight', actually running]
-//            )
-```
-
-And lastly, let's update our test for `increaseWidth` to verify that our method of `displayWidth` (that we have yet to write) is being called:
-
-```js
-it('should have an increment method that will increase the width by a provided value', function() {
-  box.increaseWidth(10);
-
-  expect(box.width).to.equal(110);
-  expect(domUpdates.displayWidth).to.have.been.called(1);
-  expect(domUpdates.displayWidth).to.have.been.called.with(110);
-});
-```
-
-Run `npm test`.
-
-Your test should fail, and you should get an assertion error that doesn't show the method has been called (as it doesn't exist). Let's fix that. Go to your `domUpdates` file to create that method:
-
-```js
-// domUpdates.js
-
-const domUpdates = {
-  displayWidth(width){
-    document.querySelector('.display-width').innerText = width;
-  }
-}
-
-if (typeof module !== 'undefined') {
-  module.exports = domUpdates;
-}
-```
-
-You'll want to add the conditional that you see at the bottom to your `Box` file as well - so that exports don't affect the client side (browser) but will still run for testing with Mocha.
-
-Finally, we can call that method in the appropriate place and see that our test is passing.
-
-```js
-//Box.js
-
-increaseWidth(val) {
-  this.width += val;
-  domUpdates.displayWidth(this.width);
-};
-```
-
-*Note - if you would like to see this actually update client-side, you will have to create a new instance of Box and call the increaseWidth method in index.js*
-
-
-#### Your Turn
-Set up the functionality to display the width and height to the DOM - using your `domUpdates file` to keep this code separate from the state of your app. Be sure to update your testing accordingly.
 
 ### Checks for Understanding
 
-
-
-<!-- Commenting out the section below because this repo uses canvas, which is not taught anymore -->
-<!-- ## Homework: Adventures of Blocky  
-
-[Adventures Of Blocky](http://frontend.turing.io/lessons/module-2/adventures-of-blocky.html)  
-
-Now that you have a grasp of testing on a deeper level, its time to really get after it and drive home the concepts we've talked about. Click on the lesson repo above to begin your testing adventure!  
- -->
+* What is the difference between Mocha and Chai?
+* What are the four typical phases of a test?
+* What is the `describe()` block used for, and what is the `it()` block used for?
+* What are hooks, and why can they be useful?
