@@ -46,9 +46,7 @@ What did you notice?
 
 The event listeners are only bound to the buttons that were present when the page code was first loaded. The buttons we added later were not around when we added the listeners.
 
-### Pair Practice
-
-Modify the function that adds new buttons so that it adds an event listener to the element _before_ it appends to the page
+Could we modify the function that adds new buttons so that it adds an event listener to the element before it appends to the page?  Yes we can, but unfortunately this isn't preferred for reasons below.
 
 ### A Note About Add/Removing Event Listeners
 
