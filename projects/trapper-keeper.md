@@ -6,6 +6,8 @@ Trapper Keeper?! For this project you'll be building a simplified version of [Go
 The project will require you to put together a complex ui using react, redux, and react router. That frontend 
 application will ping an api that you build using node and express.
 
+![Trapper keeper with puppies on it](/assets/images/trapper-keeper-puppies.jpg =250x)
+
 ## Learning Goals
 
 * Continue to improve on building client-side applications using react, redux, and react router
@@ -29,17 +31,18 @@ The frontend will be built using react, redux, and react router.
     * The user can dynamically add an indefinite number of list items for that note.
     * The user can dynamically remove any or all of those list items (one at a time).
     * The user can delete the note (similar to the archiving in the gif below), and when they delete the note, they should be returned back to the home page.
+    * The user can mark list items as completed. When they do so, the completed list item should move to the bottom of the form.
   * When a user visits `/notes/:id` it should take you to a note form for the note with the id in the params.
     * The note form should prepopulate with all of the information from that note.
     * ie. If that note has 5 list items, those 5 list items should be populated in the form.
+    * The user can edit the note exactly as specified above under `/new-note`.
   * A form should be saved when the user clicks the save button.
 
 This workflow should look similar to this recording from Google Keep:
 
 ![Google Keep Workflow](/assets/images/google-keep.gif)
 
-Note that you don't need all of the bells and whistles from the gif. *Only*, the features specified above.
-
+Note that you don't need all of the bells and whistles from the recording. *Only*, the features specified above.
 
 ### Backend
 
@@ -63,9 +66,9 @@ Your should have the following endpoints:
 
 ### Specification Adherence
 
-* 4 - All requirements from 3 are met. The application completes all iterations above and implements one or
+* 4 - All requirements from 3 are met. The application completes all requirements above and implements one or
   more of the extensions. And the evaluator has no recommendations for design changes.
-* 3 - The application completes all iterations above without error. Evaluator has minimal
+* 3 - The application completes all requirements above without error. Evaluator has minimal
   recommendations for design changes.
 * 2 - The application is in a usable state, but is missing part of one or more of the 
   features outlined above. Evaluator has multiple recommendations for design
@@ -110,7 +113,7 @@ Your should have the following endpoints:
 
 * 4 - All requirements from 3 met, and no duplication of data exists in the
   store. Data in the store remains flat (not nested).
-* 3 - Appropriate components are wrapped in connected Redux container components. The Redux store contains all necessary      application data. All state changes are handled through Redux actions and reducers.
+* 3 - Appropriate components are wrapped in connected Redux container components. The Redux store contains all necessary application data. All state changes are handled through Redux actions and reducers.
 * 2 - At least one component is not connected with Redux appropriately. Application state is mutated by more than just Redux. The Redux store is missing application data that it should be handling.
 * 1 - Application state is mostly outside the control of Redux. Application did not make use of Redux actions and reducers to mutate state. Components do not demonstrate a clear understanding of stateful vs. statelessness.
 
@@ -123,3 +126,9 @@ Your should have the following endpoints:
 * 2 - Application uses React Router, but does not display the appropriate components upon navigating.
 * 1 - Application uses React Router, but does not render/use all routes.
 
+### Server side
+
+* 4 - All requirements from 3 met, and all endpoints are tested (both happy and sad paths).
+* 3 - Application hosts all required endpoints, and an effort has been made to test them.
+* 2 - Application hosts all required endpoints, but none are tested.
+* 1 - Application does not host all required endpoints.
