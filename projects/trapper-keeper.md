@@ -6,7 +6,7 @@ Trapper Keeper?! For this project you'll be building a simplified version of [Go
 The project will require you to put together a complex ui using react, redux, and react router. That frontend 
 application will ping an api that you build using node and express.
 
-![Trapper keeper with puppies on it](/assets/images/trapper-keeper-puppies.jpg =250x)
+![Trapper keeper with puppies on it](/assets/images/trapper-keeper-puppies.jpg)
 
 ## Learning Goals
 
