@@ -34,8 +34,11 @@ The frontend will be built using react, redux, and react router.
     * ie. If that note has 5 list items, those 5 list items should be populated in the form.
   * A form should be saved when the user clicks the save button.
 
-This workflow should look similar to this recording from Google Keep:  
+This workflow should look similar to this recording from Google Keep:
+
 ![Google Keep Workflow](/assets/images/google-keep.gif)
+
+Note that you don't need all of the bells and whistles from the gif. *Only*, the features specified above.
 
 
 ### Backend
@@ -56,11 +59,11 @@ Your should have the following endpoints:
     * This is similar to how both [Google Forms](https://docs.google.com/forms) and [Google Keep](https://keep.google.com) save forms/notes.
     * hint: You won't want to make a request every time a user presses a key, so you may need to implement a queue based on a timer.
 
-## Rubric 
+## Rubric
 
 ### Specification Adherence
 
-* 4 - All requirements from 3 are met. The application completes all iterations above and implements one or 
+* 4 - All requirements from 3 are met. The application completes all iterations above and implements one or
   more of the extensions. And the evaluator has no recommendations for design changes.
 * 3 - The application completes all iterations above without error. Evaluator has minimal
   recommendations for design changes.
