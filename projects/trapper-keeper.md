@@ -57,7 +57,9 @@ Your should have the following endpoints:
     * Responds with a status code and message that the note was successfully deleted.
 
 #### Extensions
-  * Remove the save button
+  * Add a button to the card which will change the card's color. [Google Keep](https://keep.google.com) also has that functionality.
+  * Add drag and drop functionality that allows you to change the order of notes on the page.
+  * Nix the save button
     * Instead, a note should be saved on both keypress and blur of the form.
     * This is similar to how both [Google Forms](https://docs.google.com/forms) and [Google Keep](https://keep.google.com) save forms/notes.
     * hint: You won't want to make a request every time a user presses a key, so you may need to implement a queue based on a timer.
