@@ -118,9 +118,9 @@ Node has an intentionally small standard library. The standard library is docume
 The standard library modules can be required from any Node program. You do not have to give a relative path of where the module lives on your local machine - all you need to do is require the module using the CommonJS `require` syntax.
 
 ```js
-const http = require('http)
+const http = require('http')
 const fs = require('fs')
-const url = require('url)
+const url = require('url')
 const path = require('path')
 ```
 
