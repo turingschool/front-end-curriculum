@@ -1,24 +1,27 @@
 ---
 title: "Introduction to Node.js"
 length: 2 hours
-module: 4
+module: 3
 ---
 
 ### Goals
 
 By the end of this lesson, you will:
 
-* Know the differences in client-side JavaScript and server-side JavaScript
-* Know what a server is and how requests and responses are handled using the Node HTTP library
+* Know what a server is and how requests and responses are handled using the Node `http` module
+* Be able to articulate the differences between client-side JavaScript and server-side JavaScript
 * Understand how the client and server relationship works
-* Understand a little more about the language and terminology of back-end developers
+* Be able to build a simple HTTP server
+* Know which appropriate RESTful method to send in a request
 
-## HTTP, REST and Building a Simple Node Server
+
+## Intro to Node.js and Server-Side JavaScript
 
 Even as a front-end developer, it's important to have a basic understanding of what's going on behind the scenes in the back-end. You'll often be working with back-end developers on your team that will have a huge effect on how your application interacts with its data. The better you understand the back-end, the more prepared you'll be to build an application on top of it.
 
 ### The Server
-A server is simply a computer or program that handles sending, retrieving, and manipulating resources for a client. There are many different types of servers, but when we build web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably or simply shortened to "server".
+
+A server is simply a computer or program that handles sending, retrieving, and manipulating resources for a client. There are many different types of servers, but when we build web applications, we're most concerned with what's called a **Web Server** or an **HTTP Server**. You'll often hear these two terms used interchangeably or simply shortened to 'server'.
 
 An **HTTP Server** handles any network requests by providing responses that can be HTML pages, files, data, etc. For example, when we navigate to [https://www.turing.io/](https://www.turing.io/) in our browser (**Web Client**), we are really making a request to an HTTP server. The server is then responding with all of the HTML needed to render the page. We can even visually see this by looking in the **Network** tab of our developer tools:
 
@@ -35,62 +38,17 @@ Click on the **Response** tab, and you'll see the entire markup of the HTML docu
 [network-requests]: /assets/images/lessons/backend-primer/network-requests.png
 [network-response]: /assets/images/lessons/backend-primer/network-response.png
 
-#### Making Requests to the Server
-Our applications will request HTML documents, CSS files, images, and data. The way each of these requests are made is quite different:
+### Backend Frameworks
 
-* Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
-* Including a link tag to request an external stylesheet: `<link href="https://www.turing.io/css/styles.css" />`
-* Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`.
-* Making a fetch request to retrieve data: `fetch('https://www.turing.io/api/v1/curriculum/')`
+Unlike the frontend, where the main language used is JavaScript, the backend can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building backends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a frontend JavaScript framework is more about preference and opinion, your choices for a backend framework are often limited to the language you choose to write. Whatever language and framework is chosen for the backend of an application should have little effect on the frontend, as the only interface for communication between the two is requests and responses through URLs.
 
-While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
+For the following lessons, we'll focus on using [node](https://nodejs.org/en/){:target="_blank"} and [express](http://expressjs.com/){:target="_blank"} for building a backend. We will use Node today to create a simple HTTP server with several endpoints.
 
-![url-pic](https://www.normshield.com/wp-content/uploads/2017/05/example.png)
+## Small Group Review: The Request-Response Cycle
 
-When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints.
+With your group, draw a diagram of the request-response cycle as you know it. Include the a client, a server, and how they communicate between each other. After a few minutes, we'll go over it.
 
-*Note on HTTP: It is simply the protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.*
-
-
-### Some Introspection
-Take 10 minutes to think about API endpoints that you've used before. How were they structured? Did you have to use different HTTP methods? Write down some URLs that you had to use to make API requests.
-
-### Back-End Frameworks
-Unlike the front-end, where the main language used is JavaScript, the back-end can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building back-ends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a front-end JavaScript framework is more about preference and opinion, your choices for a back-end framework are often limited to the language you choose to write. Whatever language and framework is chosen for the back-end of an application should have little effect on the front-end, as the only interface for communication between the two is requests and responses through URLs.
-
-For the following lessons, we'll focus on using [node](https://nodejs.org/en/){:target="_blank"} and [express](http://expressjs.com/){:target="_blank"} for building a back-end. We will use Node today to create a simple HTTP server with several endpoints.
-
-#### NodeJS
-What are the benefits/disadvantages of using Node versus other server technologies?
-
-Awesomeness of Node includes:
-
-* Everything in JS - you don't have to learn a new language! (even though that's not a bad thing)
-* Fast, non-blocking code
-* Supports real-time communications with sockets (run on TCP instead of HTTP)
-* Not multi-threaded (good for memory)
-
-Disadvantages of Node:
-
-* Lack of libraries (very new ORM package, image processing)
-* Frequent changes to Node API
-* Gotta deal with async
-* Not multi-threaded (bad for computations)
-
-In the past, we've used Node.js to build our client-side applications (think Webpack). We've even used it to spin up development servers to make it easier to develop our client-side applications. We've used Node.js as a tool for development, but we haven't written much for the platform itself. Luckily, given the fact that they both share some common technologies, we're already in possession of a bit of pre-requisite knowledge.
-
-Here are some things we already know:
-
-- JavaScript
-- CommonJS module system (`require` and `module.exports`)
-- npm
-- `package.json`
-
-### Review: The Request-Response Cycle
-
-On your own, draw a diagram of the request-response cycle as you know it. Include the a client, a server, and how they communicate between each other. After a few minutes, we'll go over it.
-
-### Request-Response Cycle: Some Basics
+### Basics of the Request-Response Cycle
 
 Here is what a sample GET request looks like to a server:
 
@@ -123,19 +81,114 @@ If we break down the response, we can see that the server is sending back:
 * The `200 OK` refers to the status of the response - in this case it was successful
 * Following the status is header information. This sample is a very limited number of the headers typically seen in a response, but headers are just more information about the response. Then the body of the response contains the HTML content of the page, which the browser parses and shows in the browser window.
 
+## Node.js
+
+So far, we've just been building apps that run in the browser. Now it's time for us to explore building server-side applications with Nodejs. Nodejs is an open-source JavaScript runtime environment built on Chrome's V8 JavaScript engine. With Nodejs, we have the awesome oppotunity to build server-side applications in a language we already know. Despite the fact that it's all just JavaScript, there are still some pretty significant differences.
+
+### Browser v. Node.js
+
+| Browser | Node |
+|---------|------|
+|Build interactive apps for the web|Build server-side apps|
+|DOM, Window|No DOM, No Window|
+|No control over user's choice of browser|You control the environment / version of Node|	
+|ES Modules (import/export)|CommonJS module system (require()/module.exports)|
+|Cannot access the filesystem|Can access the filesystem|
+|Async|Async|
+|Browser-based APIs (fetch, etc.)|No browser based APIs|
+
+### Benefits of Node.js
+
+* FAST (async/non-blocking)
+* SIMPLE
+* JAVASCRIPT
+* V8 (open-source/always being updated)
+* NPM (huge number of libraries)
+
+### Modules
+
+Simply put, modules are just pieces of encapsulated code. While working in Nodejs, we will encounter 3 different kinds of modules: internal modules that ship with Node, modules that we as developers create, and remote modules that we can download and use from the internet.
+
+#### Internal Modules 
+
+Node has an intentionally small standard library. The standard library is documented in the [Node API Documentation][apidocs]{:target="_blank"}.
+
+[apidocs]: http://nodejs.org/documentation/api/
+
+The standard library modules can be required from any Node program. You do not have to give a relative path of where the module lives on your local machine - all you need to do is require the module using the CommonJS `require` syntax.
+
+```js
+const http = require('http)
+const fs = require('fs')
+const url = require('url)
+const path = require('path')
+```
+
+#### Your Code
+
+All Nodejs code that we as developers write and export are modules. As the author, you decide how and what to expose from your modules to other modules. We do this with the `module` global object provided to us by Nodejs.
+
+```
+//code.js
+
+const me = 'Christie'
+
+const greeting = (name) => {
+	return `Hi ${name}!`
+} 
+
+//if I just want to export 1 thing from this file
+module.exports = me 
+
+//if I want to export more than one thing from this file
+module.exports = { me, greeting }
+```
+
+When we want to use these modules in another file, we have to import them. Nodejs provides us with another global, `require`, to accomplish this. This function takes a relative path to the module that you want to consume, and synchronously load it by returning whatever the target module exported.
+
+```js
+//index.js
+
+//if I have a single export from a file
+const me = require('./code')
+
+//if I have multiple exports from the same file
+const { me, greeting } = require('./code')
+```
+
+#### Remote Modules
+
+By now, we are all very familiar with NPM. NPM ships with Node and is the CLI most developers use to manage remote modules. Once we have installed a remote module, we can access it the same way we access Node's internal modules.
+
+```
+const _ = require('lodash')
+```
+
+### How is code evaluated in Node.js?
+
+* **Interactive REPL**
+	- This is our playground in the terminal
+	- Great for trying things out (similar to the console in the browser)
+	- Just type `node` with no arguments and begin
+	- Try it out!!!
+
+* **CLI Executable**
+	- This is what we use to execute our code
+	- Just type `node path/to/your/file.js`
+
+#### Exercise
+
+* Create a directory that we can do some practice in 
+* In that directory, create a file and write a function - it can do anyting you want
+* Now export that module 
+* Create another file that will require your first module and use that code in some way
+* Use the Node CLI executable to run your code
+
 ## Practice: Handling Requests in Node.js
 
 We're going to set up a simple Node server for handling a dataset of messages. Each message object contains a `user` and a `message` property. You might have worked with the Express framework on the server-side, which has a lot of very helpful functions for getting a server up and running. Today, we will just be using the Node HTTP library to remind ourselves that life is sometimes harder without frameworks - it will also give us an idea of the low-level programming that a server needs to handle requests.
 
-If you don't already have [Postman](https://www.getpostman.com/){:target="_blank"}, install it now. Postman is a tool we can use to generate requests (GET, POST, PATCH, etc.) that we would otherwise not be able to do through the browser alone.
-
-Nodemon will also be helpful. Nodemon is an npm package that will auto-reload your server any time you make changes so you can see them take effect immediately. Without nodemon, you would have to restart your server every time you made a change to your code. Install nodemon globally with:
-
-```bash
-npm i -g nodemon
-```
-
-Next, create and cd into a new directory:
+Create and cd into a new directory:
 
 ```bash
 mkdir messages && cd messages
@@ -147,64 +200,50 @@ Auto-generate a `package.json` file (with default "yes" to each of the standard 
 npm init --yes
 ```
 
-### Require Built-In Modules
+### Create a Simple HTTP Server
 
-Node has an intentionally small standard library. The standard library is documented in the [Node API Documentation][apidocs]{:target="_blank"}.
-
-[apidocs]: http://nodejs.org/documentation/api/
-
-The standard library modules can be required from any Node program. You do not have to give a relative path of where the module lives on your local machine - all you need to do is require the module using the CommonJS `require` syntax.
-
-Include the HTTP and URL libraries:
-
-``` js
-const http = require('http');
-const url = require('url');
-```
-
-### A Simple HTTP Server
-
-Create a new file called `server.js`, and in that file, require in the libraries we need:
+Create a new file called `server.js` and add the following code.
 
 ```js
-const http = require("http");
-const url = require('url');
-const server = http.createServer();
-```
+const http = require('http')
 
-The built-in `http.createServer` module inherits from `EventEmitter`. This means when we create our server, it can listen and respond to particular events, such as requests from a client:
+const port = 3000
 
-```js
-server.listen(3000, () => {
-  console.log('The HTTP server is listening at Port 3000.');
-});
+const server = http.createServer()
 
 server.on('request', (request, response) => {
-  response.writeHead(200, { 'Content-Type': 'text/plain' });
-  response.write('Hello World\n');
-  response.end();
-});
+  response.statusCode = 200
+  response.setHeader('Content-Type', 'text/plain')
+  response.write('Hello World\n')
+  response.end()
+})
+
+server.listen(port, () => {
+  console.log(`The HTTP server is running on port ${port}.`)
+})
 ```
 
-Before we run the server and see it in action, take a few minutes to read through the documentation to know more about each of the response functions.
+Let's talk about what's going on here. This code first includes the Node.js `http` module. The `createServer()` method of `http` returns a new instance of HTTP server. At the bottom of the file, the server is set to listen on the port we have specified. When the server is ready, the callback function is called and informs us that the server is running.
 
-Read through these sections of the Node documentation:
-
-- [response.writeHead](https://nodejs.org/api/http.html#http_response_writehead_statuscode_statusmessage_headers){:target="_blank"}
-- [response.write](https://nodejs.org/api/http.html#http_response_write_chunk_encoding_callback){:target="_blank"}
-- [response.end](https://nodejs.org/api/http.html#http_response_end_data_encoding_callback){:target="_blank"}
-
-Can you describe in one or two sentences what each of these methods do?
+Before we run the server and see it in action, take a few minutes to read through the [documentation](https://nodejs.org/api/http.html){:target="_blank"} to learn more about each of the response functions we're using. Can you describe in one or two sentences what each of these methods is doing?
 
 ### Run Your Server
 
+First, let's install a super helpful tool. Nodemon is an npm package that will auto-reload your server any time you make changes so you can see them take effect immediately. Without nodemon, you would have to restart your server every time you made a change to your code. Install nodemon globally with:
+
+```bash
+npm i -g nodemon
+```
+
+To start up our server, run `nodemon server.js` in your terminal. You should be alerted that `The HTTP server is running on port 3000.` Now, using Postman, make a GET request to `http://localhost:3000` and see what happens. You should see a 'Hello World' response returned.
+
 When the server receives a request from a client, a "request" event is emitted, and the server responds with a simple HTTP response.
 
-Now run your server in your terminal with: `nodemon server.js`. Using Postman, make a GET request to `localhost:3000` and see what happens. You should see a 'Hello World' response returned.
-
-[Here is a video](https://www.youtube.com/watch?v=ptvV_Fc3hd8&list=PLM-7VG-sgbtCJYpjQfmLCcJZ6Yd74oytQ){:target="_blank"} about the basics of using Postman to make requests.
-
 ### The Inner Workings of the Request and Response
+
+The `request` object is an instance of [IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage){:target="_blank"} and allows us to access all sorts of information about the request, like the response status, headers and data. 
+
+The `response` object is an instance of [ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse){:target="_blank"} and provides numerous methods for sending data back to the client. 
 
 #### Headers
 
@@ -227,12 +266,12 @@ If we look at a response in our browser, we can check out the headers:
 
 [network-header]: /assets/images/lessons/http-rest-node-server/network-header.png
 
-There is a lot of information in the headers, but the one of the most important parts is the status code returned to the client. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rules are:
+There is a lot of information in the headers, but one of the most important parts is the status code that is returned to the client. This tells us what happened to our request. Check out [https://www.w3.org](https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html) to see all of the status codes for HTTP 1.1, but the general rules are:
 
 * 200 range means everything is OK, the request was successful
 * 300 range means you are probably being redirected
 * 400 range means you sent a bad request. Do it again, but better
-* 500 range means that something is screwed up with the server (thanks back-end...) but my request is OK
+* 500 range means that something is screwed up with the server (thanks backend...) but my request is OK
 
 #### Body
 
@@ -242,8 +281,8 @@ Requests and responses also might have a body. For example, when you make a `PAT
 fetch('/api/v1/books', {
   method: 'PATCH',
   body: JSON.stringify({
-    'title': 'The Gene: An Intimate History',
-    'author': 'Siddhartha Mukherjee'
+    'title': 'Oh, the Places You'll Go!',
+    'author': 'Dr. Seuss'
   })
 });
 ```
@@ -253,44 +292,24 @@ This is an example of sending a body with your request so that the server can pa
 ```js
 // response body
 {
-  'title': 'The Gene: An Intimate History',
-  'author': 'Siddhartha Mukherjee',
-  'isbn': '978-1476733524',
-  'published': '2015'
+  'title': 'Oh, the Places You'll Go!',
+  'author': 'Dr. Seuss',
+  'isbn': '13: 9780679805274',
+  'published': '1990'
 }
 ```
 
-## RESTful API design
 
-REST stands for representational state transfer. This means that web resources communicate using a set of stateless, uniform operations.
-
-The six architectural constraints of REST are:
-
-1. Client-server - Separation of GUI and data
-2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
-3. Cacheable - Server responses are defined as cacheable or not. (Speeds up future interactions)
-4. Layered system - Modularity, each 'layer' serves only a single high-level purpose - multiple servers can handle steps of a request (data/authentication), but the user cannot tell that their request/response went through multiple servers
-5. Code on demand - (i.e. instead of just JSON or XML, return JS script tag within HTML document) - optional feature; can still be considered RESTful without this
-6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
-
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, and Destroy) are as follows:
-
-1. GET - Retrieve resource information identified by the request
-2. POST - Create a new resource
-3. PUT - Fully update a specific resource in its entirety
-4. PATCH - Update only a portion of a specific resource
-5. DELETE - Destroy an entire specific resource by the request
-
-### Practice: Handling Multiple Requests in Node.js
+## Practice: Handling Multiple Requests in Node.js
 
 Right now, our server responds with `Hello World` no matter what request we make. Let's make our server a bit more useful. First, we'll want to set up some initial messages in our server file to interact with:
 
 ```js
-let messages = [
-  { 'id': 1, 'user': 'brittany storoz', 'message': 'hi there!' },
-  { 'id': 2, 'user': 'bob loblaw', 'message': 'check out my law blog' },
-  { 'id': 3, 'user': 'lorem ipsum', 'message': 'dolor set amet' }
-];
+const messages = [
+  { 'id': 1, 'user': 'christie lynam', 'message': 'react and redux are cool!' },
+  { 'id': 2, 'user': 'david whitaker', 'message': 'servers are cool!' },
+  { 'id': 3, 'user': 'jeff casimir', 'message': 'jobs are cool!' }
+]
 ```
 
 And we'll edit our request handler to handle the RESTful HTTP methods: GET and POST.
@@ -298,21 +317,24 @@ And we'll edit our request handler to handle the RESTful HTTP methods: GET and P
 ```js
 server.on('request', (request, response) => {
   if (request.method === 'GET') {
-    getAllMessages(response);
+    getAllMessages(response)
   }
 
   else if (request.method === 'POST') {
-    let newMessage = { 'id': new Date() };
+    let newMessage 
 
     request.on('data', (data) => {
-      newMessage = Object.assign(newMessage, JSON.parse(data));
-    });
+      newMessage = {
+        id: new Date(),
+        ...JSON.parse(data)
+      }
+    })
 
     request.on('end', () => {
       addMessage(newMessage, response);
-    });
+    })
   }
-});
+})
 ```
 
 We can see now that the `request` object contains information about the request made by the client. We can access the request method using `request.method`.
@@ -325,9 +347,9 @@ The response for a GET request to `localhost:3000/` should be:
 
 ```js
 [
-  { 'id': 1, 'user': 'brittany storoz', 'message': 'hi there!' },
-  { 'id': 2, 'user': 'bob loblaw', 'message': 'check out my law blog' },
-  { 'id': 3, 'user': 'lorem ipsum', 'message': 'dolor set amet' }
+  { 'id': 1, 'user': 'christie lynam', 'message': 'react and redux are cool!' },
+  { 'id': 2, 'user': 'david whitaker', 'message': 'servers are cool!' },
+  { 'id': 3, 'user': 'jeff casimir', 'message': 'jobs are cool!' }
 ]
 ```
 
@@ -340,7 +362,7 @@ POST to localhost:3000/
 And the response for this POST request should be something like:
 
 ```js
-{ 'id': 4, 'user': 'alex trebek', 'message': 'answer in the form of a question' } // with a response status code of 201
+{ 'id': 4, 'user': 'cardi b', 'message': 'i'm livin' my best life!' } // with a response status code of 201
 ```
 
 ### Check For Understanding - Research on Your Own
