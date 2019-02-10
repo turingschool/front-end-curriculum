@@ -282,7 +282,7 @@ fetch('/api/v1/books', {
   method: 'PATCH',
   body: JSON.strigify({
     title: '',
-    author: ''
+    author: 'Dr. Seuss'
   })
 })
 ```
