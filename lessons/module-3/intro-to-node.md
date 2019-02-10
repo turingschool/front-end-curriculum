@@ -42,7 +42,7 @@ Click on the **Response** tab, and you'll see the entire markup of the HTML docu
 
 Unlike the frontend, where the main language used is JavaScript, the backend can be built in PHP, Python, Ruby, etc. Developers have built frameworks for building backends with each of these languages (CakePHP, Django, Ruby on Rails, etc.). So while deciding on a frontend JavaScript framework is more about preference and opinion, your choices for a backend framework are often limited to the language you choose to write. Whatever language and framework is chosen for the backend of an application should have little effect on the frontend, as the only interface for communication between the two is requests and responses through URLs.
 
-For the following lessons, we'll focus on using [node](https://nodejs.org/en/){:target="_blank"} and [express](http://expressjs.com/){:target="_blank"} for building a backend. We will use Node today to create a simple HTTP server with several endpoints.
+For the following lessons, we'll focus on using [node](https://nodejs.org/en/) and [express](http://expressjs.com/) for building a backend. We will use Node today to create a simple HTTP server with several endpoints.
 
 ## Small Group Review: The Request-Response Cycle
 
@@ -111,7 +111,7 @@ Simply put, modules are just pieces of encapsulated code. While working in Nodej
 
 #### Internal Modules 
 
-Node has an intentionally small standard library. The standard library is documented in the [Node API Documentation][apidocs]{:target="_blank"}.
+Node has an intentionally small standard library. The standard library is documented in the [Node API Documentation][apidocs].
 
 [apidocs]: http://nodejs.org/documentation/api/
 
@@ -225,7 +225,7 @@ server.listen(port, () => {
 
 Let's talk about what's going on here. This code first includes the Node.js `http` module. The `createServer()` method of `http` returns a new instance of HTTP server. At the bottom of the file, the server is set to listen on the port we have specified. When the server is ready, the callback function is called and informs us that the server is running.
 
-Before we run the server and see it in action, take a few minutes to read through the [documentation](https://nodejs.org/api/http.html){:target="_blank"} to learn more about each of the response functions we're using. Can you describe in one or two sentences what each of these methods is doing?
+Before we run the server and see it in action, take a few minutes to read through the [documentation](https://nodejs.org/api/http.html) to learn more about each of the response functions we're using. Can you describe in one or two sentences what each of these methods is doing?
 
 ### Run Your Server
 
@@ -241,9 +241,9 @@ When the server receives a request from a client, a "request" event is emitted, 
 
 ### The Inner Workings of the Request and Response
 
-The `request` object is an instance of [IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage){:target="_blank"} and allows us to access all sorts of information about the request, like the response status, headers and data. 
+The `request` object is an instance of [IncomingMessage](https://nodejs.org/api/http.html#http_class_http_incomingmessage) and allows us to access all sorts of information about the request, like the response status, headers and data. 
 
-The `response` object is an instance of [ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse){:target="_blank"} and provides numerous methods for sending data back to the client. 
+The `response` object is an instance of [ServerResponse](https://nodejs.org/api/http.html#http_class_http_serverresponse) and provides numerous methods for sending data back to the client. 
 
 #### Headers
 
