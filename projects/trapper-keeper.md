@@ -49,9 +49,9 @@ Note that you don't need all of the bells and whistles from the recording. *Only
 Your should have the following endpoints:
 
   * `get /notes` - Responds with all of the notes stored on the server.
-  * `post /notes` - Used for both creating and updating notes.
-    * You will need logic to determine if it should create or update a note.
-    * Responds with all of the notes stored on the server.
+  * `post /notes` - Used for both creating new notes. Responds with the newly created note.
+  * `put /notes/:id` - Used to update the note that has the id provided via the params. 
+    * Responds with the successfully updated note.
   * `get /notes/:id` - Responds with the note that has the id provided via the params.
   * `delete /notes/:id` - Deletes the note that has the id provided via the params.
     * Responds with a status code and message that the note was successfully deleted.

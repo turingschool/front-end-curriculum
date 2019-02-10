@@ -26,15 +26,24 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 * Typing a URL like `https://www.turing.io` into the browser makes a request for an HTML document
 * Including a link tag to request an external stylesheet: `<link href="https://www.turing.io/css/styles.css" />`
 * Adding an image element to display a logo: `<img src="https://www.turing.io/images/logo.png" />`.
-* Making a fetch request to retrieve data: `fetch('https://www.turing.io/api/v1/curriculum/')`
+* Making a fetch request to retrieve data: `fetch('https://www.turing.io/api/v1/users')`
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
 
-The first 3 requests were fetching a static asset, whereas the last one is requesting data from an api.
+The first 3 requests were fetching a static asset, whereas the last one is requesting data from an api endpoint.
 
 ![url-pic](https://www.normshield.com/wp-content/uploads/2017/05/example.png)
 
-When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/curriculum/`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints.
+When fetching data, you'll often hear the URL referred to as an "endpoint". These endpoints (e.g. `https://www.turing.io/api/v1/users`) are created by the back-end developers on a team to help the front-end developers access and interact with application data. Just like the front-end, there are many frameworks and libraries that back-end developers will use to to set up a proper HTTP Server with all the necessary endpoints.
+
+Endpoints have two main components:
+  1. HTTP method
+  2. The url (sometimes shortened to only the path)
+
+Therefore if you were to write documentation for the example endpoint above, you could do so in a few ways:
+  1. GET `https://www.turing.io/api/v1/users` - the whole shabang
+  2. GET `/api/v1/users` - just the path (assuming we know the base url)
+  3. GET `users` - specific part of the path that changes (assuming we know the base url including the api structure info)
 
 *Note on HTTP: It is simply the protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.*
 
@@ -64,10 +73,8 @@ RESTful architecture includes sending HTTP methods to a URL to get back informat
 5. DELETE - Destroy an entire specific resource by the request
 
 Typically there are only 2 paths for RESTFUL endpoints. For example, if we have an ideabox app. Those two paths would be:
-  1. `/ideas`
-  2. `/ideas/:id`
-
-The first is typically used to generically identify the type of resource we're worried about and the second is to identify a specific resource of that type.
+  1. `/ideas` - used to generically identify the type of resource. Because we may not have an id yet or we want a collection. 
+  2. `/ideas/:id` - used to identify a specific resource of that type.
 
 ### Some alternatives
 
