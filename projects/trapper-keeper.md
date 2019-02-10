@@ -46,6 +46,8 @@ Note that you don't need all of the bells and whistles from the recording. *Only
 
 ### Backend
 
+The backend will be built using node and express. It'll use jest and supertest for testing.
+
 Your should have the following endpoints:
 
   * `get /notes` - Responds with all of the notes stored on the server.
