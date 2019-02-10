@@ -279,7 +279,8 @@ Requests and responses also might have a body. For example, when you make a `PAT
 
 ```js
 fetch('/api/v1/books', {
-
+  method: 'PATCH',
+  body: JSON.strigify()
 })
 ```
 
