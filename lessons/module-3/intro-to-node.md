@@ -380,4 +380,4 @@ And the response for this POST request should be something like:
 
 ### Instructor Resources
 
-* [Completed Server Example](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/node.md)
+* [Completed Server Example](https://github.com/turingschool/front-end-keys/blob/master/module-3/lesson-plans/intro-to-node.md)
