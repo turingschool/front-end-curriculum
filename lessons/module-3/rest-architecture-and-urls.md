@@ -13,6 +13,13 @@ By the end of this lesson, you will:
 * Know what REST is and what some alternatives are
 * Understand a little more about the language and terminology of back-end developers
 
+### Vocab
+
+* Static Asset
+* Endpoint
+* CRUD
+* REST
+
 ## The anatomy of a URL
 Our applications will request HTML documents, CSS files, images, and data. The way each of these requests are made is quite different:
 
@@ -22,6 +29,8 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 * Making a fetch request to retrieve data: `fetch('https://www.turing.io/api/v1/curriculum/')`
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
+
+The first 3 requests were fetching a static asset, whereas the last one is requesting data from an api.
 
 ![url-pic](https://www.normshield.com/wp-content/uploads/2017/05/example.png)
 
@@ -37,14 +46,6 @@ Take 5 minutes to think about API endpoints that you've used before. How were th
 
 REST stands for representational state transfer. This means that web resources communicate using a set of stateless, uniform operations.
 
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, and Destroy) are as follows:
-
-1. GET - Retrieve resource information identified by the request
-2. POST - Create a new resource
-3. PUT - Fully update a specific resource in its entirety
-4. PATCH - Update only a portion of a specific resource
-5. DELETE - Destroy an entire specific resource by the request
-
 The six architectural constraints of REST are:
 
 1. Client-server - Separation of GUI and data
@@ -54,14 +55,28 @@ The six architectural constraints of REST are:
 5. Code on demand - (i.e. instead of just JSON or XML, return JS script tag within HTML document) - optional feature; can still be considered RESTful without this
 6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
 
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, and Destroy) are as follows:
+
+1. GET - Retrieve resource information identified by the request
+2. POST - Create a new resource
+3. PUT - Fully update a specific resource in its entirety
+4. PATCH - Update only a portion of a specific resource
+5. DELETE - Destroy an entire specific resource by the request
+
+Typically there are only 2 paths for RESTFUL endpoints. For example, if we have an ideabox app. Those two paths would be:
+  1. `/ideas`
+  2. `/ideas/:id`
+
+The first is typically used to generically identify the type of resource we're worried about and the second is to identify a specific resource of that type.
+
 ### Some alternatives
 
-[SOAP](https://en.wikipedia.org/wiki/SOAP) or Simple Object Access Protocol was the standard for a long time before rest.
-[GraphQL](https://graphql.org/) is becoming more and more popular because you only get what you ask for in a request.
+* [SOAP](https://en.wikipedia.org/wiki/SOAP) or Simple Object Access Protocol was the standard for a long time before rest.
+* [GraphQL](https://graphql.org/) is becoming more and more popular because you only get what you ask for in a request.
 
 ### Activity time!
-With a partner, design an api that implements CRUD for sharks, puppies, or unicorns.
-  * What enpoints do you need?
+With a partner, design an api that implements CRUD for sharks, puppies, OR unicorns.
+  * What enpoints will you need?
   * For each endpoint:
     * What information do you need in the request?
     * What will you send back in the response?
