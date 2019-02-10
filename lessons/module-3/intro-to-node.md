@@ -277,19 +277,19 @@ There is a lot of information in the headers, but one of the most important part
 
 Requests and responses also might have a body. For example, when you make a `PATCH` request to update a resource, your `fetch` call might look like this:
 
-```js
+```
 fetch('/api/v1/books', {
   method: 'PATCH',
   body: JSON.stringify({
-    'title': 'Oh, the Places You'll Go',
-    'author': 'Dr. Seuss'
+    title: 'Oh, the Places You'll Go!',
+    author: 'Dr. Seuss'
   })
-});
+})
 ```
 
 This is an example of sending a body with your request so that the server can parse the data in it and update a resource based on the resulting body object. When the resource is successfully updated, the server will send a response with a status code of `200`, and usually a body object that contains the entire resource, reflecting the new changes that were just made:
 
-```js
+```
 // response body
 {
   'title': 'Oh, the Places You'll Go',
@@ -298,7 +298,6 @@ This is an example of sending a body with your request so that the server can pa
   'published': '1990'
 }
 ```
-
 
 ## Practice: Handling Multiple Requests in Node.js
 
