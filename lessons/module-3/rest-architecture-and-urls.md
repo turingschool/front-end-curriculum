@@ -30,7 +30,7 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
 
-The first 3 requests were fetching a static asset, whereas the last one is requesting data from an api endpoint.
+The first 3 requests we're fetching a static asset, whereas the last one is requesting data from an api endpoint.
 
 ![url-pic](https://www.normshield.com/wp-content/uploads/2017/05/example.png)
 
@@ -42,16 +42,17 @@ Endpoints have two main components:
 
 Therefore if you were to write documentation for the example endpoint above, you could do so in a few ways:
   1. GET `https://www.turing.io/api/v1/users` - the whole shabang
-  2. GET `/api/v1/users` - just the path (assuming we know the base url)
+  2. GET `/api/v1/users` - just the path (assuming we know the domain)
   3. GET `users` - specific part of the path that changes (assuming we know the base url including the api structure info)
 
 *Note on HTTP: It is simply the protocol for transmitting documents across the internet. There are a bunch more (SSH, POP,FTP...) but we will focus on HTTP since it's primarily used for communication between web browsers and web servers. Hypertext is just structured text that uses links (hyperlinks) between other nodes of structured text. The key to HTTP is that it is stateless, the server doesn’t save data between requests.*
-
 
 ### Some Introspection
 Take 5 minutes to think about API endpoints that you've used before. How were they structured? Did you have to use different HTTP methods? Write down some URLs that you had to use to make API requests.
 
 ## RESTful API design
+
+During your time as a frontend developer, you've already been hitting RESTful endpoints. What is rest exactly?
 
 REST stands for representational state transfer. This means that web resources communicate using a set of stateless, uniform operations.
 
@@ -83,8 +84,8 @@ Typically there are only 2 paths for RESTFUL endpoints. For example, if we have 
 
 ### Activity time!
 With a partner, design an api that implements CRUD for sharks, puppies, OR unicorns.
-  * What enpoints will you need?
+  * What endpoints will you need?
   * For each endpoint:
     * What information do you need in the request?
-    * What will you send back in the response?
+    * What will you send back in the response? What data? What response status?
   
