@@ -281,7 +281,7 @@ Requests and responses also might have a body. For example, when you make a `PAT
 fetch('/api/v1/books', {
   method: 'PATCH',
   body: JSON.strigify({
-    title: 'Oh, the Places Youll Go!',
+    title: 'Oh, the Places You\'ll Go!',
     author: 'Dr. Seuss'
   })
 })
@@ -293,7 +293,7 @@ This is an example of sending a body with your request so that the server can pa
 // response body
 
 {
-  'title': 'Oh, the Places Youll Go!',
+  'title': 'Oh, the Places You\'ll Go!',
   'author': 'Dr. Seuss',
   'isbn': '13 9780679805274',
   'published': '1990'
