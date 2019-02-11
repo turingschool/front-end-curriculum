@@ -52,7 +52,7 @@ Your should have the following endpoints:
 
   * `get /notes` - Responds with all of the notes stored on the server.
   * `post /notes` - Used for both creating new notes. Responds with the newly created note.
-  * `put /notes/:id` - Used to update the note that has the id provided via the params. 
+  * `put/patch /notes/:id` - Used to update the note that has the id provided via the params. 
     * Responds with the successfully updated note.
   * `get /notes/:id` - Responds with the note that has the id provided via the params.
   * `delete /notes/:id` - Deletes the note that has the id provided via the params.
