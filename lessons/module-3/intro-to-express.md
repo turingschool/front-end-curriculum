@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals of Express and HTTP Methods"
+title: "Introduction to Express JS"
 length: 2 hours
 tags: node, express, back-end, server, http
 ---
