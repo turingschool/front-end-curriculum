@@ -223,6 +223,7 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 * [ ]  Advanced Beginner - Application adds to the above by correctly implementing a data model for the `Idea` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
+  * [ ]  Uses event delegation correctly on dynamic elements for deleting and editing an idea (clicking outside of the text field) and
   * [ ]  All functions are less than 10 lines
   * [ ]  There are no global variables aside from query selectors and an array for your ideas
   * [ ]  There are no nested if else statements
