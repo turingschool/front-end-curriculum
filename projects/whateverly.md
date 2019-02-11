@@ -119,9 +119,8 @@ module.exports = {
 # Repo Initialization
 
 * Use [create-react-app](https://www.npmjs.com/package/create-react-app) to create a new project
-* ESLint
 
-After initializing your create-react-app project, add eslint to the project.
+
 
 # Rubric
 
