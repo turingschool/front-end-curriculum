@@ -77,6 +77,8 @@ Typically there are only 2 paths for RESTFUL endpoints. For example, if we have 
   1. `/ideas` - used to generically identify the type of resource. Because we may not have an id yet or we want a collection. 
   2. `/ideas/:id` - used to identify a specific resource of that type.
 
+That's a lot of words, at a high level, REST is really just a pattern that matches CRUD operations to endpoints.
+
 ### Some alternatives
 
 * [SOAP](https://en.wikipedia.org/wiki/SOAP) or Simple Object Access Protocol was the standard for a long time before rest.
