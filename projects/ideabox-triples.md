@@ -157,6 +157,12 @@ The submit button should be disabled when there is not valid content in both inp
 * Upvote and downvote happen by increasing or decreasing the integer
 * How the idea is displayed should be done using an array of quality strings, where the integer value is used to pull a certain string via its index.
 
+## Week 1 Check-ins
+* UI mostly completed
+* Can append each idea card on the DOM
+* Ideas are stored in localStorage
+* Idea cards persist after page refresh
+
 #### Layout comps
 
 Desktop layout:
