@@ -99,12 +99,13 @@ Your README should include the following, in this order:
 
 # Submitting Your Project Ideas & Datasets
 
-You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and include the following information:
+You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and clearly describe what kind of application you will build and how it will utilize the datasets you've created.
 
-* One or two sentence description of the application
-* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset
+When submitting your data:
 
-Your datasets should be added in a single file to the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like:
+* you must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset to make sure you don't have any syntax errors
+* you must **not** delete **any files or datasets** that currently exist in the repo. Do not replace them with your data and do not remove them
+* you must only create **one** single file that holds **both** datasets inside the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like so:
 
 ```
 module.exports = {
