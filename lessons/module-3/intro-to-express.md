@@ -26,18 +26,6 @@ By the end of this lesson, you will:
 * route handler
 * CRUD
 
-## But First!
-
-Before we look at how Express works, let's review the HTTP request-response cycle.
-
-*Journal:*
-
-On your own, in your notebook, draw a diagram of the request response cycle. What are the two parties communicating to each other, and what information is sent back and forth between them? How does one party know what the other party wants to do (verbs?...)?
-
-*Turn and Talk:*
-
-Compare your diagram with a partner next to you. Then let's talk about the request-response cycle.
-
 ## What is Express?
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
 
@@ -114,7 +102,7 @@ app.get('/', (request, response) => {
 });
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
+  console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 });
 ```
 
@@ -212,20 +200,12 @@ app.get('/api/v1/pet/:id', (request, response) => {
 
 ### Sending Data With A Post Request
 
-It would be cool if we could store pets in addition to just being able to retrieve the prepopulated ones.
+It would be cool if we could create pets in addition to just being able to retrieve the prepopulated ones.
 
-Express did this thing a while back, where they took a bunch of stuff out of the core framework. This makes it smaller and means you don't have cruft you're not using, but it also means that sometimes you have to mix those things back in. One of those components that was pulled out was the ability to parse the body of an HTTP request. That's okay, we can just mix it back in.
-
-```
-npm i body-parser --save
-```
-
-We'll also need to require and use it in our `server.js`.
+You'll need the following line so that your app parses json by default.
 
 ```js
-const bodyParser = require('body-parser');
-
-app.use( bodyParser.json() );
+app.use(express.json());
 ```
 
 This will add in support for parsing JSON.
@@ -235,9 +215,8 @@ Here is what my server looks like so far:
 ```js
 const express = require('express');
 const app = express();
-const bodyParser = require('body-parser');
 
-app.use( bodyParser.json() );
+app.use(express.json());
 
 app.set('port', process.env.PORT || 3000);
 app.locals.title = 'Pet Box';
@@ -268,7 +247,7 @@ app.get('/api/v1/pets/:id', (request, response) => {
 });
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
+  console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 });
 ```
 
@@ -287,7 +266,7 @@ app.post('/api/v1/pets', (request, response) => {
 });
 ```
 
-IMPORTANT NOTE: this approach has a BUNCH of flaws.
+IMPORTANT NOTE: this approach has a few of flaws.
 
 - We're storing data in memory, which will be wiped out when the server goes down.
 - Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
@@ -325,43 +304,6 @@ If either property is missing, we will see an error in the Network tab of our de
 
 It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response pet is the best way to write a user-friendly API.
 
-<!--
-### Generating Unique Keys
-
-At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
-
-For the time being, we'll use an MD5 hash, which is a unique value based on the content of the pet. You've seen them in Github gists among other places.
-
-```
-npm i md5 --save
-```
-
-Now, in our `server.js`, we can require the module.
-
-```js
-const md5 = require('md5');
-```
-
-Finally, let's replace `Date.now()` in our `POST` action.
-
-```js
-app.post('/api/v1/pets', (request, response) => {
-  const { pet } = request.body;
-  const id = md5(pet);
-
-  if (!pet) {
-    return response.status(422).send({
-      error: 'No pet property provided'
-    });
-  } else {
-    app.locals.pets.push({ id, pet });
-    return response.status(201).json({ id, pet });
-  }
-});
-```
- -->
-
-
 ### Using Postman
 Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit, or delete data if there isn't a UI to do so. In our case, it's handy to add pets, edit a specific pet, or delete a pet. Get familiar with Postman because it will be your best friend for all things API from here on out.
 
@@ -370,7 +312,7 @@ Things to consider:
 * If you are including information in the body of the request, then one of the headers needs to include `Content-Type: application/json`
 * Remember to check which HTTP method you are using before sending the request
 
-### Student Exploration (20 mins)
+### Student Exploration (10 mins)
 
 * Implement a PUT route for a specific pet to edit the name of the pet
 * Implement a DELETE route for a specific pet to remove it
