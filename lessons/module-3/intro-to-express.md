@@ -202,54 +202,13 @@ app.get('/api/v1/pet/:id', (request, response) => {
 
 It would be cool if we could create pets in addition to just being able to retrieve the prepopulated ones.
 
-You'll need the following line so that your app parses json by default.
+You'll need the following line so that your app parses the request body to json by default.
 
 ```js
 app.use(express.json());
 ```
 
 This will add in support for parsing JSON.
-
-Here is what my server looks like so far:
-
-```js
-const express = require('express');
-const app = express();
-
-app.use(express.json());
-
-app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Pet Box';
-app.locals.pets = [
-  { id: 'a1', name: 'Rover', type: 'dog' },
-  { id: 'b2', name: 'Marcus Aurelius', type: 'parakeet' },
-  { id: 'c3', name: 'Craisins', type: 'cat' }
-];
-
-app.get('/', (request, response) => {
-  response.send('Hello World!');
-});
-
-app.get('/api/v1/pets', (request, response) => {
-  const pets = app.locals.pets;
-
-  response.json({ pets });
-});
-
-app.get('/api/v1/pets/:id', (request, response) => {
-  const { id } = request.params;
-  const pet = app.locals.pets.find(pet => pet.id === id);
-  if (pet) {
-    return response.status(200).json(pet);
-  } else {
-    return response.sendStatus(404);
-  }
-});
-
-app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
-});
-```
 
 ### Creating a POST Route
 
@@ -269,8 +228,7 @@ app.post('/api/v1/pets', (request, response) => {
 IMPORTANT NOTE: this approach has a few of flaws.
 
 - We're storing data in memory, which will be wiped out when the server goes down.
-- Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
-
+- Multiple pets could have the same time stamp. Something like [shortid](https://github.com/dylang/shortid) would be better for id generation.
 
 #### The Sad Path
 
@@ -342,6 +300,56 @@ app.get('/', (request, response) => {
 Express assumes a structure for our static assets. The response for the root path, `'/'` or `localhost:3000/`, first goes to the root of the `public` directory and looks for a file called `index.html`.
 
 So now you can add a directory called `public` and in that directory add a file called `index.html` with some basic HTML. Restart the server, head over to `localhost:3000`, and you should see your HTML file being served.
+
+## Incorporating babel
+
+Babel is a compiler that takes newer flavors of javascript and turns it into more compatible code.
+
+By default, create-react-app pulls in babel so that we can use more modern javascript feature such as importing and exporting. 
+If we want to be able to use import export statements, we'll manually have to pull in babel. Let's do that.
+
+First, let's install the dependencies we'll need for development:
+
+`npm install --save-dev @babel/core @babel/preset-env @babel/node`
+
+Next, we need a `.babelrc` file in our root to define how to compile our code.
+
+Inside of that file, add these contents:
+```
+// .babelrc
+{
+  "presets": ["@babel/preset-env"]
+}
+``` 
+
+Now, we can add a start script so that when we start our development server, it'll use babel to compile our code into something node can understand.
+Add `nodemon --exec babel-node server.js` as the start script.
+
+When you're all finished, your package.json should look something like:
+
+```json
+{
+  "name": "pet-box",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js"
+  }
+}
+```
+
+You should be able to use imports/exports now and when you run `npm start` it'll work error free!
+
+For more details on how to update your other scripts to use babel, check out this [article](https://hackernoon.com/using-babel-7-with-node-7e401bc28b04).
 
 ## Checks For Understanding
 
