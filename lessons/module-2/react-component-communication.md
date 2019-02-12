@@ -244,8 +244,8 @@ Turn to the person next to you and take turns walking through this data flow.
 - Follow psuedocode to implement `toggleAnswer` method  
 *HINT 1: Check out [the docs](https://reactjs.org/docs/handling-events.html) on how to handle Events in React*  
 *HINT 2: Generally, if you refer to a method without () after it, you should bind that method!*
-- Implement conditional rendering a `span` element with our answer when `showAnswer` is true 
-  *HINT: Check out [the docs](https://reactjs.org/docs/conditional-rendering.html) on inline conditional rendering*
+- Implement conditional rendering with our answer when `showAnswer` is true 
+  *HINT: Check out [the docs](https://reactjs.org/docs/conditional-rendering.html) to see all the ways to conditionally render. Use a `span` if you choose render inline*
 - **BONUS** Implement conditional in psuedocode that updates our icon based on state
 
 ## Phase 3: Controls
