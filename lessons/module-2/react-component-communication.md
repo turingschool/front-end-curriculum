@@ -89,7 +89,7 @@ This is your `Data Down`. `Props` allow you to send data from a parent to a chil
 
 ![Child-to-Parent](/assets/images/lessons/react-communication/child-to-parent.png)
 
-This is your `Actions Up`. This allows us to send data from a child to a parent. Generally, there are two ways of doing this:
+This is your `Actions Up`. This allows us to send data from a child to a parent. Generally, this is a two stop process:
 
 Callback functions - The parent will pass the child a function as a prop:
 
@@ -137,9 +137,8 @@ Given this, we know that are needing to communicate from sibling to sibling. `Lo
 class App extends Component {
   constructor() {
     super();
-
     this.state = {
-      userName: ''
+      userName: ""
     };
 
     this.setUserName = this.setUserName.bind(this);
@@ -147,19 +146,19 @@ class App extends Component {
 
   setUserName(name) {
     this.setState({ userName: name });
-  }
+  };
 
   render() {
     return (
       <div>
         <Login setUserName={this.setUserName} />
-        <Greeting 
+        <Greeting
           villianName={this.state.userName}
-          compliment="Your hair looks great today"/>
+          compliment="Your hair looks great today"
+        />
       </div>
-    )
+    );
   }
-
 }
 ```
 
@@ -170,34 +169,35 @@ Above, we can see our "data" in the form of our method `setUserName` being passe
 class Login extends Component {
   constructor(props) {
     super(props);
-
     this.state = {
-      logInValue: ''
+      value: ""
     };
   }
 
-  logInState = (event) => {
-    this.setState({ logInValue: event.target.value });
-  }
+  handleChange = event => {
+    this.setState({ value: event.target.value });
+  };
 
-  setUserName = () => {
-    this.props.setUserName(this.state.logInValue);
-  }
+  handleSubmit = event => {
+    event.preventDefault();
+    this.props.setUserName(this.state.value);
+  };
 
   render() {
     return (
-      <div>
+      <form onSubmit={this.handleSubmit}>
         <h2>Please Log In</h2>
         <input
-          type='text'
-          value={this.state.logInValue}
-          onChange={this.logInState}
-        ></input>
-        <button onClick={this.setUserName}>SUBMIT</button>
-      </div>
-    )
+          type="text"
+          value={this.state.value}
+          onChange={this.handleChange}
+        />
+        <input type="submit" value="Submit" />
+      </form>
+    );
   }
 }
+
 ```
 
 Now `Login` has access a way to communicate to `App` via `this.props.setUserName`. This is not to be confused with the `setUserName` method in our class of `Login` - which is a method that is triggered on the click of our `button` element. You'll also notice a different syntax for our methods in `Login`. This syntax (called `class fields`) is *experimental* and is enabled by default in Create React App. Using this particular syntax will also ensure that the value of `this` is bound.
@@ -206,17 +206,14 @@ Generally, you should be binding in the constructor or using the `class fields s
 
 
 ```jsx
-const Greeting = ({villainName, compliment}) => {
-
+const Greeting = ({villianName, compliment}) => {
   return (
     <div>
-      <h2>{villainName}</h2>
+      <h2>Hello {villianName}</h2>
       <p>{compliment}</p>
     </div>
   )
 }
-
-export default Greeting;
 ```
 
 After `Login` passes our information (in the form of a user's name) back to `App`, we will set the updated userName to state. Calling `setState` will trigger a re-render, allowing us to pass the updated data to `Greeting`
