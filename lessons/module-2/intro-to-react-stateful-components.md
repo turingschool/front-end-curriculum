@@ -1,5 +1,5 @@
 ---
-title: Intro to Stateful React Components
+title: Intro to React Class Components and State
 length:
 tags: javascript, react
 ---
@@ -7,16 +7,17 @@ tags: javascript, react
 ## Vocabulary
 
 - `State` The current data stored in relation to a particular part of a computer program.
-- `Stateful Component` A component which stores and updates the information which it uses to render HTML.
+- `Class Component` An ES6 class that extends an abstract `Component` class to give more functionality to the component.
+- `Stateful Component` A class component which stores and updates the information which it uses to render HTML (using state).
 - `Lifecycle` The process where a component is created, updated and destroyed.
 - `Lifecycle Method` A function that is invoked at some point during a component's lifecycle.
 - `Conditional Rendering` Part of the user interface which is only displayed if some condition is met.
 
-In our previous lesson, we learned how to create stateless components. Stateless components are great if we just need to create html that will be be different based on what parameters/properties we pass into our component. Sometimes our components need to be able to store the information they display and change that information based on user interaction. When this is the case, you will want to use a stateful component.
+In our previous lesson, we learned how to create stateless components. Stateless components are great if we just need to create HTML that will be be different based on what parameters/properties we pass into our component. Sometimes our components need to be able to store the information they display and change that information based on user interaction. When this is the case, you will want to use a class component.
 
-## Stateful Components
+## Class Components
 
-Stateful components are ES6 classes that extend an abstract 'Component' class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM.
+Class components are ES6 classes that extend an abstract `Component` class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM.
 
 In this example, we will create a counter class. This class will render a count and a button to increase the count.
 
@@ -35,7 +36,7 @@ class Counter extends Component {
 }
 ```
 
-Stateful components keep track of some sort of application data. This application data is used to determine how the component should render. As the application is used, the application data will change causing the view to change.
+Class components with state keep track of some sort of application data. This application data is used to determine how the component should render. As the application is used, the application data will change causing the view to change.
 
 In our example above, the application data we will want to keep track of is the current count.
 
@@ -129,12 +130,12 @@ class Counter extends Component {
 
 In our example above we create our increaseCount method as an arrow function. This will insure that the keyword `this` in our function will always refer to this specific instance of our counter.
 
-One of the more confusing things about React is when to make a component stateful. A general rule of thumb to keep in mind is that, if you're not sure if a component should be stateless or stateful, start with a stateless component. Add state if you find that you need it. Stateful components are a lot heavier than stateless component. Keep your app as lean as possible!
+One of the more confusing things about React is when to make a component a class component. A general rule of thumb to keep in mind is that, if you're not sure if a component should be functional or a class, start with a functional component. Convert it to a class if you find that you need state, custom methods, or access to lifecycle methods. Class components are a lot heavier than function components. Keep your app as lean as possible!
 
 ##### Turn and Talk
 
 * What is the difference between props and state?
-* What should go into every stateful component's constructor?
+* What should go into every class component's constructor?
 * Why is it important to use the `setState()` method instead of modifying `state` directly?
 * What is the optional argument in `setState()` for and why?
 
