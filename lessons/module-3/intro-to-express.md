@@ -301,6 +301,17 @@ Express assumes a structure for our static assets. The response for the root pat
 
 So now you can add a directory called `public` and in that directory add a file called `index.html` with some basic HTML. Restart the server, head over to `localhost:3000`, and you should see your HTML file being served.
 
+## CORS
+
+Cross Origin Resource Sharing (CORS) is a protocol that prevents domains to make requests to other domains. This is in place for security reasons.
+
+By default the CORS policy in express apps prevents you from making api calls from other domains. In order to allow api calls from other domains you need follow these two steps:
+
+1. Install cors as a dependency `npm install cors`
+2. Insert this config line into your server file: `app.use(cors());`
+
+Without it, you will get cors errors if you try to make a request from a react repo hosted at another domain. ie. trying to make requests from `http://localhost:3000` to `http://localhost:3001`
+
 ## Incorporating babel
 
 Babel is a compiler that takes newer flavors of javascript and turns it into more compatible code.
