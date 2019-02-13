@@ -1,7 +1,7 @@
 ---
 title: Managing Technical Debt - Refactoring & Reformatting
 length:
-tags: javascript, js, array, object, 
+tags: javascript, js, refactoring
 ---
 
 ## Goals
@@ -16,7 +16,6 @@ By the end of this lesson, students should be able to:
 - `Technical Debt` The build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain
 - `Code Smell` A surface level indication of bad code that usually corresponds to a deeper, more fundamental problem
 - `Refactoring` The process of changing the internals of a system (it's factoring), without changing its external behavior
-<!-- `Interface` The external boundary of a software component -->
 - `DRY` Don't Repeat Yourself
 
 ## The Basics
@@ -26,7 +25,7 @@ Refactoring your code is an important part of reducing <b>technical debt</b>. Te
 As we work under strict deadlines, we often write less-than-ideal code that might suffer from the above ailments. No codebase will ever be perfect, but we can take a lot of simple steps to clean up our projects and keep our technical debt in check.
 
 
-## Tracking Technical Debt: Github Issues
+## Tracking Technical Debt: GitHub Issues
 
 First things first: before you even begin to prioritize working on technical debt, keep track of it. This is a great use-case for GitHub issues. Because resolving technical debt is usually a lower priority, and not as urgent as bug fixes and feature completion, it's important to file issues that will remind you of what needs fixing up once you have some downtime.
 
@@ -54,7 +53,7 @@ Take a look at how much of a difference linting can make for readability:
 
 ## Maintain a Healthy Git Workflow
 
-Many linters will catch things like debugger statements and `console.logs()`, but occessionally some of the things that we do in development will sneak through the linter and into our codebase. For example, a lot of new developers will try out several solutions to solve a problem, and leave a bunch of commented-out code from their prior attempts in place. There is no reason to commit commented-out code. You can hold onto those types of things through git in a number of ways. `git stash` is a great way to temporarily hang onto some code, and ensure it doesn't sneak into your commits. You should also get into the habit of adding code to your commits in patches rather than in bulk: `git add --patch`.
+Many linters will catch things like debugger statements and `console.logs()`, but occasionally some of the things that we do in development will sneak through the linter and into our codebase. For example, a lot of new developers will try out several solutions to solve a problem, and leave a bunch of commented-out code from their prior attempts in place. There is no reason to commit commented-out code. You can hold onto those types of things through git in a number of ways. `git stash` is a great way to temporarily hang onto some code, and ensure it doesn't sneak into your commits. You should also get into the habit of adding code to your commits in patches rather than in bulk: `git add --patch`.
 
 Similarly, you want to make sure you don't accidentally leave "dead" code in your codebase. Any functions, methods, variables that you were using at one point, but aren't any more, should be removed. Leaving in dead code makes it really difficult for new developers to jump into the codebase and understand what's happening.
 
@@ -220,9 +219,10 @@ if (explode === 'no') {
 ```
 
 #### Example 2
-The following code is used to toggle between two players. If a player successfuly places a token in the array, a token is created for the other player. If a player does not successfuly place a token a new token is created for the original player.
+The following code is used to toggle between two players. If a player successfully places a token in the array, a token is created for the other player. If a player does not successfully place a token a new token is created for the original player.
 
 Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the placed tokens alternate between the two players.
+
 ```js
 /* ----------- Do not refactor this section ----------- */
 class Token {
@@ -290,6 +290,7 @@ console.log(newArray)
 ### IF-ELSE REFACTOR SOLUTION
 
 Switch Statement Example: 
+
 ```js
 const keyMapping = key => (
   switch(key) {
@@ -317,6 +318,7 @@ const evalInput = event => {
 ```
 
 Object Map Example:
+
 ```js
 const keyboard = {
   'key37': () => game.toad.moveToad('left', canvas),
