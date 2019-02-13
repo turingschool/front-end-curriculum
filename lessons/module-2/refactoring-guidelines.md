@@ -1,5 +1,5 @@
 ---
-title: Managing Technical Debt - Refactoring & Reformatting
+title: "Managing Technical Debt - Refactoring & Reformatting"
 length:
 tags: javascript, js, refactoring
 ---
@@ -66,11 +66,11 @@ Additionally, both commented-out code and dead code are often dead giveaways tha
 One of the most common code smells is redundant code. Ever find yourself copy and pasting chunks of code from one part of a file to another? Don't do that! Any time you see the same exact code in multiple places, or even just very similar code, you've got some refactoring to do. "Don't Repeat Yourself" is a core pillar of maintaining a healthy codebase. DRY up your code as much as possible. Here's an example where no line of code is exactly the same, but it still could use some DRYing up:
 
 ```js
-const color1 = $('#color1').children('p').text()
-const color2 = $('#color2').children('p').text()
-const color3 = $('#color3').children('p').text()
-const color4 = $('#color4').children('p').text()
-const color5 = $('#color5').children('p').text()
+const color1 = $('#color1').children('p').text();
+const color2 = $('#color2').children('p').text();
+const color3 = $('#color3').children('p').text();
+const color4 = $('#color4').children('p').text();
+const color5 = $('#color5').children('p').text();
 ```
 
 Notice that only the number is changing in each line. We could refactor this using a for loop:
@@ -160,7 +160,7 @@ We mentioned earlier that refactoring is often a secondary priority. It's hard t
 * **When you have some down time.** Some teams will even dedicate some sacred time to resolving technical debt each week to make sure it doesn't get out of hand.
 * **When refactoring will make it faster or easier to implement a new feature.** Sometimes the time spent refactoring upfront will save you time down the road. If you're running into a serious roadblock with pre-existing code that's making it difficult to work on your higher-priority tasks, this might be a good time to do some refactoring.
 * **When you can resolve the technical debt quickly without taking yourself off your current task.** If you notice something small (e.g. a linter or code style error) that can be cleaned up while you're working on another feature, feel free to fix it right away rather than filing an issue to fix it later. In this scenario, you would still want to create a separate commit for the refactoring fix, to prevent cluttering up the diff on your feature commits.
-* **When you dont have a choice** Many dev teams use something called
+* **When you don't have a choice** Many dev teams use something called
 "Continuous Integration", or "CI". These are various "hooks" or scripts that
 run before your code can be merged into master. Often times, these hooks
 include running your code linter, your test files, or any other maintenance
@@ -174,27 +174,11 @@ Take the following code examples and try to identify what code smells you find. 
 #### Example 1
 
 ```js
-/* ----------- Do not refactor this section ----------- */
-class Image{}
-
-function drawImage(img, x, y, w, h) {
-  console.log(img, x, y, w, h);
-}
-
-const x = 5;
-const y = 10;
-const width = 20;
-const height = 40;
-
-// switch explode between 'yes' & 'no' to check your results.
-const explode = 'yes'; 
-
-/* ------------- Refactor this section ------------- */
-
 if (explode === 'no') {
   let playerImage = new Image();
 
   playerImage.src = 'assets/airplane.png';
+
   drawImage(
     playerImage,
     x,
@@ -221,71 +205,36 @@ if (explode === 'no') {
 #### Example 2
 The following code is used to toggle between two players. If a player successfully places a token in the array, a token is created for the other player. If a player does not successfully place a token a new token is created for the original player.
 
-Only refactor the togglePlayer function. For this exercise, a different number of tokens will be successfully placed each time you run the code. The important thing is that the placed tokens alternate between the two players.
-
 ```js
-/* ----------- Do not refactor this section ----------- */
-class Token {
-  constructor(player) {
-    this.player = player;
-  }
-
-  place(token, array) {
-    let success = Math.floor(Math.random() * 2);
-
-    if (success) {
-      return token;
-    } else {
-      return false;
-    }
-  }
-}
-
-const newArray = [];
-
-/* -------------- Refactor this section -------------- */
 function togglePlayer(currentToken) {
   if (currentToken.player === "Player One") {
-    var placedToken = currentToken.place(currentToken, newArray)
+    var placedToken = currentToken.place(currentToken, newArray);
 
     if (placedToken) {
       newArray.push(placedToken);
       return new Token("Player Two");
-
     } else {
       return new Token("Player One");
     }
 
   } else {
-    var placedToken = currentToken.place(currentToken, newArray)
+    var placedToken = currentToken.place(currentToken, newArray);
 
     if (placedToken) {
       newArray.push(placedToken);
       return new Token("Player One");
-
     } else {
       return new Token("Player Two");
     }
   }
 }
-
-/* ----------- Do not refactor this section ----------- */
-let currentToken = new Token('Player One');
-
-for (let i = 0; i < 10; i++) {
-  currentToken = togglePlayer(currentToken)
-}
-
-console.log(newArray)
 ```
-
 
 ## Checks for Understanding
 
 * What is technical debt?
 * What are some things we can do to keep technical debt under control?
 * When should we prioritize resolving technical debt?
-
 
 ### IF-ELSE REFACTOR SOLUTION
 
@@ -312,8 +261,8 @@ const evalInput = event => {
   return game.winLevel();
  } 
 
- const direction = keyMapping(event.keyCode)
- return game.toad.moveToad(direction, canvas)
+const direction = keyMapping(event.keyCode)
+  return game.toad.moveToad(direction, canvas);
 }
 ```
 
