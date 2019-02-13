@@ -54,8 +54,8 @@ context.drawImage(
 let playerImage = new Image();
 
 const isExploded = () => ( this.explode === 'yes' )
-const imageSource = isExploded ? 'assets/kapow.png' : 'assets/airplane.png'
-playerImage.src = imageSource
+const imageSource = isExploded ? 'assets/kapow.png' : 'assets/airplane.png';
+playerImage.src = imageSource;
 
 context.drawImage(
   playerImage,
@@ -72,23 +72,21 @@ context.drawImage(
 ```js
 function togglePlayer(currentToken) {
   if (currentToken.player === "Player One") {
-    var placedToken = currentToken.moveDown(currentToken, newArray)
+    var placedToken = currentToken.moveDown(currentToken, newArray);
 
     if (placedToken) {
       newArray.push(placedToken);
       return new Token("Player Two", context, canvas);
-
     } else {
       return new Token("Player One", context, canvas);
     }
 
   } else {
-    var placedToken = currentToken.moveDown(currentToken, newArray)
+    var placedToken = currentToken.moveDown(currentToken, newArray);
 
     if (placedToken) {
       newArray.push(placedToken);
       return new Token("Player One", context, canvas);
-
     } else {
       return new Token("Player Two", context, canvas);
     }
@@ -99,7 +97,7 @@ function togglePlayer(currentToken) {
 ### After
 ```js
 function togglePlayer(currentToken) {
-  let placedToken = currentToken.moveDown(currentToken, newArray)
+  let placedToken = currentToken.moveDown(currentToken, newArray);
   let playerName = '';
   
   if (placedToken) {
@@ -107,10 +105,9 @@ function togglePlayer(currentToken) {
   }
   
   if (currentToken.player === "Player One") {
-    playerName = "Player Two"
-      
+    playerName = "Player Two";
   } else {
-    playerName = "Player One"
+    playerName = "Player One";
   }
     
   return new Token(playerName, context, canvas);
@@ -176,6 +173,7 @@ initializeBoard();
 ## Example 4
 
 ### Before
+
 ```js
 requestAnimationFrame(function gameLoop() {
   game.drawBackground();
@@ -191,12 +189,13 @@ requestAnimationFrame(function gameLoop() {
 ```
 
 ### After
+
 ```js
 // move all the game animate things into one function
 requestAnimationFrame(function gameLoop() {
   game.animate();
   requestAnimationFrame(gameLoop);
-}
+};
 ```
 
 ## Example 5
@@ -253,25 +252,25 @@ function evalInput(event) {
 <!-- This one could be refactored more and also probably in a different way -->
 
 ### Before
-```
+```js
 switch (level) {
   case 1:
     autos = this.buildRoadRow(Tractor, 614.5, 1, 2, 8, 2, 4, 'black');
-    autos = autos.concat(this.buildRoadRow(SlowCar, 564.5, 1, -1, 4, 4, 4, 'black'))
+    autos = autos.concat(this.buildRoadRow(SlowCar, 564.5, 1, -1, 4, 4, 4, 'black'));
     autos = autos.concat(this.buildRoadRow(FastCar, 514.5, 1, 3, 3, 4, 1, 'black'));
     autos = autos.concat(this.buildRoadRow(Semi, 464.5, 2, -3, 3, 5, 3, 'black'));
     break;
 
   case 2:
     autos = this.buildRoadRow(Tractor, 614.5, 1, 2, 4, 4, 4, 'black');
-    autos = autos.concat(this.buildRoadRow(SlowCar, 564.5, 1, -1, 4, 4, 4, 'black'))
+    autos = autos.concat(this.buildRoadRow(SlowCar, 564.5, 1, -1, 4, 4, 4, 'black'));
     autos = autos.concat(this.buildRoadRow(FastCar, 514.5, 1, 3, 3, 4, 1, 'black'));
     autos = autos.concat(this.buildRoadRow(Semi, 464.5, 2, -3, 3, 5, 3, 'black'));
     break;
 
   case 3:
     autos = this.buildRoadRow(Tractor, 614.5, 1, 3, 4, 4, 4, 'black');
-    autos = autos.concat(this.buildRoadRow(SlowCar, 564.5, 1, -1, 4, 4, 4, 'black'))
+    autos = autos.concat(this.buildRoadRow(SlowCar, 564.5, 1, -1, 4, 4, 4, 'black'));
     autos = autos.concat(this.buildRoadRow(FastCar, 514.5, 1, 15, 3, 2, 1, 'black'));
     autos = autos.concat(this.buildRoadRow(Semi, 464.5, 2, -3, 3, 5, 3, 'black'));
     break;
@@ -280,7 +279,7 @@ switch (level) {
 
 After
 
-```
+```js
 let autoParams = {
   1: [
     [ Auto, 614.5, 1, 2, 8, 2, 4, 'black', tractorImg  ],
@@ -302,13 +301,12 @@ let autoParams = {
   ]
 };
 
-let params = autoParams[this.currentLevel]
+let params = autoParams[this.currentLevel];
 
 for (var i = 0; i < params.length; i++) {
   let nextRow = this.buildRoadRow(...params[i]);
   
   autos = [ ...autos, ...nextRow ];
 }
-
 ```
 

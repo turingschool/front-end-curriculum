@@ -5,6 +5,7 @@ tags: javascript, js, refactoring
 ---
 
 ## Goals
+<!-- "goat's milk" sounds like "code smell" if you say it fast enough -->
 
 By the end of this lesson, students should be able to:
 
@@ -20,20 +21,20 @@ By the end of this lesson, students should be able to:
 
 ## The Basics
 
-Refactoring your code is an important part of reducing <b>technical debt</b>. Technical debt is the build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain.
+Refactoring your code is an important part of reducing **technical debt**. Technical debt is the build up of code that might be inefficient, fragile, unreadable, and/or difficult to maintain.
  
 As we work under strict deadlines, we often write less-than-ideal code that might suffer from the above ailments. No codebase will ever be perfect, but we can take a lot of simple steps to clean up our projects and keep our technical debt in check.
 
 
 ## Tracking Technical Debt: GitHub Issues
 
-First things first: before you even begin to prioritize working on technical debt, keep track of it. This is a great use-case for GitHub issues. Because resolving technical debt is usually a lower priority, and not as urgent as bug fixes and feature completion, it's important to file issues that will remind you of what needs fixing up once you have some downtime.
+Before you even begin to prioritize working on technical debt, keep track of it. This is a great use-case for GitHub issues. Because resolving technical debt is usually a lower priority, and not as urgent as bug fixes and feature completion, it's important to file issues that will remind you of what needs fixing up once you have some downtime.
 
-When you file issues for technical debt, it's helpful to put a label on them so you can filter through them later. Often times you'll see issues labeled 'P1', 'P2', 'P3', which represents the priority level of the issue. Usually refactoring issues are labeled with a lower priority (P3 is lower than P1). You might also add a label called 'technical-debt' or 'enhancement'. Feel free to use whatever label name makes sense to you, but those are some popular ones you'll see in the wild.
+When you file issues for technical debt, it's helpful to put a label on them so you can filter through them later. Often times you'll see project issues labeled 'P1', 'P2', 'P3', which represents the priority level of the issue. Usually refactoring issues are labeled with a lower priority (P3 is lower than P1). You might also add a label called 'technical-debt' or 'enhancement'. Feel free to use whatever label makes sense to you, but those are some popular ones you'll see in the wild.
 
-<em>Note: For Turing students specifically, filing issues is incredibly important. While you're interviewing, issues indicate to an employer that you know how to improve your projects. Even if you don't have time to resolve all of the issues you file (you won't), you can at least signify to potential employers that you're aware x, y, and z are broken and you plan on fixing them. (Filing these issues will also give you nice, bite-sized work to do after graduation when you're trying to keep coding.)</em>
+_Note: For Turing students specifically, filing issues is incredibly important. While you're interviewing, issues indicate to an employer that you know how to improve your projects. Even if you don't have time to resolve all of the issues you file (you won't), you can at least signify to potential employers that you're aware x, y, and z are broken and you plan on fixing them. (Filing these issues will also give you nice, bite-sized work to do after graduation when you're trying to keep coding.)_
 
-<!-- go through an example of opening an issue on gametime project -->
+<!-- go through an example of opening an issue on a project -->
 
 ## Write Your Tests
 
@@ -53,17 +54,19 @@ Take a look at how much of a difference linting can make for readability:
 
 ## Maintain a Healthy Git Workflow
 
-Many linters will catch things like debugger statements and `console.logs()`, but occasionally some of the things that we do in development will sneak through the linter and into our codebase. For example, a lot of new developers will try out several solutions to solve a problem, and leave a bunch of commented-out code from their prior attempts in place. There is no reason to commit commented-out code. You can hold onto those types of things through git in a number of ways. `git stash` is a great way to temporarily hang onto some code, and ensure it doesn't sneak into your commits. You should also get into the habit of adding code to your commits in patches rather than in bulk: `git add --patch`.
+Many linters will catch things like debugger statements and `console.log()`, but occasionally some of the things that we do in development will sneak through the linter and into our codebase. For example, a lot of new developers will try out several solutions to solve a problem, and leave a bunch of commented-out code from their prior attempts in place. There is no reason to commit commented-out code. You can hold onto those types of things through git in a number of ways. `git stash` is a great way to temporarily hang onto some code, and ensure it doesn't sneak into your commits.
 
-Similarly, you want to make sure you don't accidentally leave "dead" code in your codebase. Any functions, methods, variables that you were using at one point, but aren't any more, should be removed. Leaving in dead code makes it really difficult for new developers to jump into the codebase and understand what's happening.
+You should also get into the habit of having small commits - each commit adds/removes one piece of functionality. If you find yourself in the situation where you haven't committed in a long time and your commit is 300+ lines...then at that point you can actually split your changes into multiple commits (or patches) using: `git add --patch`.
 
-Additionally, both commented-out code and dead code are often dead giveaways that you are throwing solutions at the wall rather than taking a purposeful, logical approach to solving a problem. Leaving these things in can affect people's confidence in the stability of the codebase and the developers working on it.
+Similarly, you want to make sure you don't accidentally leave "dead" code in your codebase. Any functions, methods, variables that you were using at one point, but aren't any more, should be removed. Leaving in dead code makes it really difficult for new developers to jump into the codebase and understand what's happening. There is a saying with commented code or unused code: YAGNI (You aren't gonna need it).
+
+Leaving these things in can affect people's confidence in the stability of the codebase and the developers working on it.
 
 ## Types of Code Smells
 
 ### Repetitive Code
 
-One of the most common code smells is redundant code. Ever find yourself copy and pasting chunks of code from one part of a file to another? Don't do that! Any time you see the same exact code in multiple places, or even just very similar code, you've got some refactoring to do. "Don't Repeat Yourself" is a core pillar of maintaining a healthy codebase. DRY up your code as much as possible. Here's an example where no line of code is exactly the same, but it still could use some DRYing up:
+One of the most common code smells is repetitive code. Ever find yourself copy and pasting chunks of code from one part of a file to another? Don't do that! Any time you see the same exact code in multiple places, or even just very similar code, you've got some refactoring to do. "Don't Repeat Yourself" is a core pillar of maintaining a healthy codebase. DRY up your code as much as possible. Here's an example where no line of code is exactly the same, but it still could use some DRYing up:
 
 ```js
 const color1 = $('#color1').children('p').text();
