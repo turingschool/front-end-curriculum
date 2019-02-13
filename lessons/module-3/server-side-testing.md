@@ -1,5 +1,5 @@
 ---
-title: "Introduction to Express JS"
+title: "Server Side Testing using Jest and supertest"
 length: 2 hours
 tags: node, express, back-end, server, http
 ---
