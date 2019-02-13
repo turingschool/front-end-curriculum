@@ -219,7 +219,7 @@ describe('post /api/v1/pets', () => {
 
 1. Write tests for the put endpoint (this will require the most tests). 
   hint: You'll also need to add a test that checks your data model in addition to the response.
-2. Write tests for hte delete endpoint.
+2. Write tests for the delete endpoint.
 3. What duplication do we have? Can you write some helper functions to wrap duplicate statements in the api implementation? Do your tests still pass?
 
 ## Checks For Understanding
