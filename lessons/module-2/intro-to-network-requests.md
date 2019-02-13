@@ -8,7 +8,7 @@ tags: javascript, network requests, fetch, ajax, promises
 We have access to it out there, but how do we get it?
 Introduce the request-response cycle.
 HTTP is a structured language - what goes into a request? what comes back in a response?
-Why do we still talk about XHR? If we're barely making an effort even for jQuery. They will never see this...it still is technically asynchronous.
+Why do we still talk about XHR? Context? ...it still is technically asynchronous.
 In reality, requests take time.
 Make an example using setTimeout that shows how a request might work. Make this as simple as possible.
 What do we do? Use fetch with promises.
