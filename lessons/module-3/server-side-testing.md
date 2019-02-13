@@ -27,6 +27,8 @@ In your notebooks:
 
 We'll be working off of [this repo](https://github.com/turingschool-examples/pet-box)
 
+Clone it and install the dependencies.
+
 Checkout to the `start-testing` branch.
 
 Make sure that you have jest installed globally. If you're not sure, run `npm install jest -g`.
