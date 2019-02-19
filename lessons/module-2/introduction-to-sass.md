@@ -350,7 +350,7 @@ In pairs, take 10 minutes to read two articles around this debate. Come together
 
 ## Colors
 
-Sass offers build in color functions that allow you to adjust defined color values with ease. Most of the color functions operate by manipulating a single color value - while others can be used to combine colors in different ways.
+Sass offers built-in color functions that allow you to adjust defined color values with ease. Most of the color functions operate by manipulating a single color value - while others can be used to combine colors in different ways.
 
 Color is one of the most powerful components available to us in art and design; yet, it is something that is often underutilized by many programmers. Chances are that you've defined most (if not all) of the colors in your project using the predefined color names from the browsers, hex codes, or RGBA. This is all well and good; however, it fails to give you the same control over your colors as when you use HSLA.
 
