@@ -224,10 +224,13 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 ```
 
 ```css
-// main.scss
-@import "reset";
-@import "variables";
-@import "buttons";
+// index.scss
+@import 'variables';
+@import 'Header';
+@import 'Button';
+@import 'Author';
+@import 'Story';
+@import 'Stories';
 ...
 ...
 
