@@ -46,6 +46,19 @@ using JavaScript and React.
 
 ### Bootstraping our application
 
+To create our first React Native application, we're going to use the Expo CLI,
+go ahead and download it globally.
+
+`npm i -g expo-cli`
+
+Once installed, we can use the CLI to create our first application:
+
+```
+expo init ConceptBox
+cd ConceptBox
+npm start
+```
+
 ### Running the application on a device
 
 To take advantage of Expo, you'll need to download the Expo client app to your
