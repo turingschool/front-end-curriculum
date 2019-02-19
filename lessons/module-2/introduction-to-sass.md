@@ -31,7 +31,7 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
   3. If the `Sass` package is not installed, follow Step 1 again and search/select `Package Control: Install Package`. Install `Sass` from here.
   4. Scroll down to the very bottom and start reading through the additional resources in the last section, starting with `A Complete Beginner’s Guide to Learning Sass in a Weekend`
  -->
- 
+
 ## Intro to Sass
 
 Sass stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. It is a CSS preprocessor that converts SCSS (Sassy CSS) into vanilla CSS.
@@ -60,7 +60,7 @@ Even if you've never worked with SCSS before, this syntax is a little bit easier
 Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:
 
 1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. This not the case for pure Sass with the `.sass` file extension.
-2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make your teachers cry, BUT through the tears, your stylesheet will still function properly.
+2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make your teachers cry, BUT through our tears, your stylesheet will still function properly.
 
 _Note: For our purposes here, be aware that we will be working strictly with the SCSS syntax when we are working with Sass._
 
@@ -199,7 +199,7 @@ Let's say that your client wants everything thats red to be teal.  Pretend that 
 
 One of the main benefits of Sass is having the ability to split your codebase across several CSS files without impacting **PERFORMANCE** - which brings us to the use of `@import` with Sass.
 
-You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request.
+You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request).
 
 In the world of Sass, the `@import` directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
 
@@ -284,12 +284,11 @@ In a CodePen, build the following chunk of html and SASS using `mixins`
   2. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
      weight of 300, and a font family of Arial.   
   3. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.   
-  4. Using these mixins, create a small chunk of html. The HTML should have the following: 
-    - One h1 element using the appropriate mixin.
-    - Two divs, each with an h2 and a paragraph tag.
-    - For the two h2 elements, one should have a class of "pink", which should have pink font, and one
-      with a class of "subheader" that is grey, underlined, and all caps.
-    - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
+  4. Using these mixins, create a small chunk of html. The HTML should have the following:  
+  - One h1 element using the appropriate mixin.  
+  - Two divs, each with an h2 and a paragraph tag.  
+  - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.  
+  - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
 
 ## Extend
 
