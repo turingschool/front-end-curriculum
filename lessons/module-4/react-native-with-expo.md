@@ -102,6 +102,10 @@ and see what you can learn about the following components:
 [Text](https://facebook.github.io/react-native/docs/text)
 [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity)
 
+Additionally, read through the documentation on StyleSheet:
+
+[StyleSheet](https://facebook.github.io/react-native/docs/stylesheet)
+
 For each of these, make sure you know:
 - How do I add it to my component?
 - Can it respond to touch events? How?
@@ -111,3 +115,47 @@ For each of these, make sure you know:
 After you've read about each of the components, turn and talk with a partner,
 and discuss the answers to the above questions.
 
+### Lets actually build something
+
+Having an app running on our device is neat, but we want to do more than that.
+Our app is called ConceptBox, and we want to build something that can display
+user inputed 'concepts'. Clever huh?
+
+To start, we'll need to use the
+[TextInput](https://facebook.github.io/react-native/docs/textinput) component
+from the React Native library. Modify your App.js to look like what I have
+below:
+
+```
+import React from 'react';
+import { StyleSheet, TextInput, View } from 'react-native';
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={ styles.container }>
+        <TextInput
+          style={ styles.conceptInput }
+        />
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    paddingTop: 100,
+  },
+  conceptInput: {
+    height: 30,
+    width: 200,
+    fontSize: 30,
+    borderColor: 'black',
+    borderWidth: 1,
+  },
+});
+```
