@@ -10,7 +10,7 @@ By the end of this lesson, you will:
 
 * Understand the differences between React and React Native
 * Know how to bootstrap a React Native application using Expo
-* Understand how to use an iOS simulator
+* Understand how to preview your application in the Expo app
 * Understand the different native components and how to style them
 * Know how to debug React Native with warnings, errors, and Chrome debugger
 * Be familiar with when to use the different React lifecycle methods for mobile development
@@ -91,4 +91,23 @@ any kind of proxy running (like a VPN).
 If everything worked, you should see the render of App.js on the screen. Cool!
 Open up App.js and make a small change, then save the file. Your device should
 have updated as well. Super cool!
+
+### React Native Components
+
+In React Native, we don't use HTML tags in our rendering, instead relying on
+specialized components to build out our UI. Before we move on, take 5 minutes
+and see what you can learn about the following components:
+
+[View](https://facebook.github.io/react-native/docs/view)
+[Text](https://facebook.github.io/react-native/docs/text)
+[TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity)
+
+For each of these, make sure you know:
+- How do I add it to my component?
+- Can it respond to touch events? How?
+- How do I add styles to it?
+- What would I use this for?
+
+After you've read about each of the components, turn and talk with a partner,
+and discuss the answers to the above questions.
 
