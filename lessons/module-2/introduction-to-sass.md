@@ -233,7 +233,7 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 
 ```
 
-But what about media queries? There are a lot of [different approaches](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32), though keeping the responsive styling in the component that it deals with is a clean approach. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844) that walks through how to handle that.
+But what about media queries? There are a lot of [different approaches](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32) that you can take. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844) that walks through setting up responsive mixins for each component.
 
 #### Turn and Talk
 * How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
