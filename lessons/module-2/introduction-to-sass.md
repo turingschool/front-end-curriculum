@@ -21,7 +21,7 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 
 - `CSS Preprocessor` A tool that processes some CSS-like language and turns it into CSS
 
-### Warm Up
+<!-- ### Warm Up
 
 * In past projects, how have you refactored your CSS to follow the DRY principle?
 * In past projects, how have you organized your CSS?
@@ -30,7 +30,8 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
   2. Search for `Package Control: List Packages` and search for `Sass`
   3. If the `Sass` package is not installed, follow Step 1 again and search/select `Package Control: Install Package`. Install `Sass` from here.
   4. Scroll down to the very bottom and start reading through the additional resources in the last section, starting with `A Complete Beginner’s Guide to Learning Sass in a Weekend`
-
+ -->
+ 
 ## Intro to Sass
 
 Sass stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. It is a CSS preprocessor that converts SCSS (Sassy CSS) into vanilla CSS.
