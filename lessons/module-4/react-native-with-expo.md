@@ -53,14 +53,42 @@ go ahead and download it globally.
 
 Once installed, we can use the CLI to create our first application:
 
+`expo init ConceptBox`
+
+After running this command you'll be prompted with some questions. Choose a
+*blank* starter project, and a *managed* workflow. You can try this again later
+with different options, but for now we want to work from the simplest example
+possible. Next, you'll be asked to give your ConceptBox a display name.
+Choose whatever you like here. Next, you'll be asked if you'd like to use Yarn
+for managing dependencies. This is largely a personal choice, but we'll say no,
+and just stick with npm.
+
+That's it! We've just created our first React Native project. Let's move into
+the project and start it up.
+
 ```
-expo init ConceptBox
 cd ConceptBox
 npm start
 ```
+
+This will launch Metro Bundler for you, and enable you to run your application
+on a device (as long as you're on the same wireless network as your computer).
+To do that though, we'll need to download the Expo client onto our device.
 
 ### Running the application on a device
 
 To take advantage of Expo, you'll need to download the Expo client app to your
 device. There are variants for both [iOS and Android](https://expo.io/tools#client).
+Go ahead and download whatever works for you, and get an account set up with
+Expo.
+
+Once you have the Expo app on your device, you should be be able to scan that QR
+code that you see in the terminal and browser, which will launch your
+application inside the Expo app. If its not working for you, make sure that your
+phone is on the same wireless network as your computer, and that you don't have
+any kind of proxy running (like a VPN).
+
+If everything worked, you should see the render of App.js on the screen. Cool!
+Open up App.js and make a small change, then save the file. Your device should
+have updated as well. Super cool!
 
