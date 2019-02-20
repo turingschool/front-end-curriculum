@@ -138,8 +138,6 @@ const PetListWithPets = withPets(PetList)
 const NavWithPets = withPets(Nav)
 ```
 
-// Problems with HOCs
-
 #### Render Props
 
 The Render Props pattern is a way for us to create a component that provides some kind of data to a child component. The basic idea is that we have a component that just perfoms some functionality and serves its result to a child component.  
