@@ -172,3 +172,15 @@ our concepts. Take the next 20 minutes and try to accomplish the following:
 - BONUS: A concept should be removable from the screen
 
 We'll come back together and share our learnings after 20 minutes.
+
+### Lets talk debugging
+
+Debugging is a critical part of development on any platform, and React Native is
+no different. If you're running the app on a device, shake the device to bring
+up the Expo menu. You should see an option to 'Start remote debugging'. Click
+that.
+
+This opens up a browser window where you have access to the console and
+debugger. Open up the console and select the `Pause on Exceptions` button. Then
+throw a debugger into your JS and save, causing the app to reload. The debugger
+should trigger, allowing you to inspect `this`, `props`, etc.
