@@ -98,22 +98,59 @@ In React Native, we don't use HTML tags in our rendering, instead relying on
 specialized components to build out our UI. Before we move on, take 5 minutes
 and see what you can learn about the following components:
 
-[View](https://facebook.github.io/react-native/docs/view)
-[Text](https://facebook.github.io/react-native/docs/text)
-[TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity)
-
-Additionally, read through the documentation on StyleSheet:
-
-[StyleSheet](https://facebook.github.io/react-native/docs/stylesheet)
+- [View](https://facebook.github.io/react-native/docs/view)
+- [Text](https://facebook.github.io/react-native/docs/text)
+- [TouchableOpacity](https://facebook.github.io/react-native/docs/touchableopacity)
 
 For each of these, make sure you know:
 - How do I add it to my component?
+- What props does this accept?
 - Can it respond to touch events? How?
-- How do I add styles to it?
 - What would I use this for?
 
 After you've read about each of the components, turn and talk with a partner,
 and discuss the answers to the above questions.
+
+### Styling our components
+
+Adding style to our React Native components is a point of significant difference
+from regular React. Rather than using CSS, we'll be using an abstraction from
+React Native called [StyleSheet](https://facebook.github.io/react-native/docs/stylesheet).
+
+Looking at the documentation, we see that writing these styles does feel similar
+to CSS. In order to add specific styles to a component, we use the style prop on
+the component. Take a look:
+
+```
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+
+export default class App extends React.Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.text}>Open up App.js to start working on your app!</Text>
+      </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  text: {
+    color: 'red',
+  },
+});
+```
+
+Here, I've added a `text` property to the styles StyleSheet, and I'm passing
+that style to the specific component that needs it. Try adding some styles of
+your own.
 
 ### Lets actually build something
 
@@ -173,7 +210,7 @@ our concepts. Take the next 20 minutes and try to accomplish the following:
 
 We'll come back together and share our learnings after 20 minutes.
 
-### Lets talk debugging
+## Lets talk debugging
 
 Debugging is a critical part of development on any platform, and React Native is
 no different. If you're running the app on a device, shake the device to bring
@@ -185,21 +222,28 @@ debugger. Open up the console and select the `Pause on Exceptions` button. Then
 throw a debugger into your JS and save, causing the app to reload. The debugger
 should trigger, allowing you to inspect `this`, `props`, etc.
 
-### A Refresher in the React Component Lifecycle
+## A Refresher in the React Component Lifecycle
 
 Just like normal React, we have access to the component lifecycle API. Here is a quick rundown of how each method is utilized for mobile:
 
-#### Mounting Cycle
+### Mounting Cycle
 
 * constructor(props) - Instantiate the component class and pass in props from the parent component (or container). Can also set local state in the component.
 * componentWillMount() - Invoked just once, right before component renders.
 * render() - Renders a React component or null.
 * componentDidMount() - Invoked just once right after component renders. Good time to make API call or execute delayed code.
 
-#### Updating Cycle
+### Updating Cycle
 
 * componentWillReceiveProps(nextProps) - Parent of component has passed in new props. This component will now re-render. Good time to set local state before the re-render (if necessary)
 * shouldComponentUpdate(nextProps, nextState) - Returns either true or false. Defaults to true. If true, the component will re-render. If false, the component will not re-render. Usually used by comparing current props to passed in props.
 * componentWillUpdate(nextProps, nextState) - Called once the component decides it will re-render. Can't set local state here.
 * render() - Renders a React component or null if shouldComponentUpdate returns true.
 * componentDidUpdate(prevProps, prevState) - Invoked right after component re-renders.
+
+## Resources
+
+- [React Native Docs](https://facebook.github.io/react-native/)
+- [Expo Docs](https://docs.expo.io/versions/latest/)
+- [React Native Styles Cheat
+Sheet](https://github.com/vhpoet/react-native-styling-cheat-sheet)
