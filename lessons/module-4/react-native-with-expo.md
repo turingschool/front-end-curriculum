@@ -241,6 +241,14 @@ Just like normal React, we have access to the component lifecycle API. Here is a
 * render() - Renders a React component or null if shouldComponentUpdate returns true.
 * componentDidUpdate(prevProps, prevState) - Invoked right after component re-renders.
 
+## Conclusion
+
+This is just a taste of what you could do with React Native, but you should
+realize by know that you really already know how do do most of the difficult
+parts. Mobile apps often require a bit more configuration that what you may be
+used to from the Web, but if you can work through that, you can add a valuable
+skill to your toolset with React Native.
+
 ## Resources
 
 - [React Native Docs](https://facebook.github.io/react-native/)
