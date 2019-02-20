@@ -159,3 +159,16 @@ const styles = StyleSheet.create({
   },
 });
 ```
+
+### Build on your own
+
+We have a text input now that can accept user input, but we need to do more with
+our concepts. Take the next 20 minutes and try to accomplish the following:
+
+- When a user type in the TextInput, it should update the state of our component
+- There should be a button for the user to press, adding the concept to an array
+  in state
+- The component should list all of the available concepts on the device
+- BONUS: A concept should be removable from the screen
+
+We'll come back together and share our learnings after 20 minutes.
