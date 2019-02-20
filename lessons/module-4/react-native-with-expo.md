@@ -184,3 +184,22 @@ This opens up a browser window where you have access to the console and
 debugger. Open up the console and select the `Pause on Exceptions` button. Then
 throw a debugger into your JS and save, causing the app to reload. The debugger
 should trigger, allowing you to inspect `this`, `props`, etc.
+
+### A Refresher in the React Component Lifecycle
+
+Just like normal React, we have access to the component lifecycle API. Here is a quick rundown of how each method is utilized for mobile:
+
+#### Mounting Cycle
+
+* constructor(props) - Instantiate the component class and pass in props from the parent component (or container). Can also set local state in the component.
+* componentWillMount() - Invoked just once, right before component renders.
+* render() - Renders a React component or null.
+* componentDidMount() - Invoked just once right after component renders. Good time to make API call or execute delayed code.
+
+#### Updating Cycle
+
+* componentWillReceiveProps(nextProps) - Parent of component has passed in new props. This component will now re-render. Good time to set local state before the re-render (if necessary)
+* shouldComponentUpdate(nextProps, nextState) - Returns either true or false. Defaults to true. If true, the component will re-render. If false, the component will not re-render. Usually used by comparing current props to passed in props.
+* componentWillUpdate(nextProps, nextState) - Called once the component decides it will re-render. Can't set local state here.
+* render() - Renders a React component or null if shouldComponentUpdate returns true.
+* componentDidUpdate(prevProps, prevState) - Invoked right after component re-renders.
