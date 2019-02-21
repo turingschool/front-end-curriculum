@@ -61,6 +61,8 @@ import PetList from './PetList'
 
 function App() {
   const [pets, setPets] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
 
   const getPets = async () => {
     setError('')
