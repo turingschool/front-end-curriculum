@@ -257,7 +257,7 @@ function usePets() {
     getPets()
   }, [])
 
-  return {pets, isLoading, isError, getPets}
+  return {pets, isLoading, isError}
 }
 
 export default usePets
