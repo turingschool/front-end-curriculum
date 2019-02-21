@@ -37,11 +37,14 @@ import PetList from './PetList'
 
 function App() {
   const [pets, setPets] = useState([])
+  const [isLoading, setIsLoading] = useState(false)
+  const [error, setError] = useState('')
   
   return (
     <div className='App'>
       <h1>PetBox</h1>
-      <PetList pets={pets} />
+      {isError && <div>Something went wrong...</div>
+      {isLoading ? <div>Loading...</div> : <PetList pets={pets} />
     </div>
   )
 }
@@ -60,10 +63,17 @@ function App() {
   const [pets, setPets] = useState([])
 
   const getPets = async () => {
-    const url = 'http://localhost:3001/api/v1/pets'
-    const response = await fetch(url)
-    const pets = await response.json()
-    setPets(pets)
+    setError('')
+    setIsLoading(true)
+    try {
+      const url = 'http://localhost:3001/api/v1/pets'
+      const response = await fetch(url)
+      const pets = await response.json()
+      setPets(pets)
+    } catch(error) {
+      setError(error.message)
+    }
+    setIsLoading(false)
   }
 
   useEffect(() => {
