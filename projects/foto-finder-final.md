@@ -185,11 +185,12 @@ Work through these **in order**:
 
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 * [ ]  Advanced Beginner - Application correctly implements data model for the `Photo` class including all required methods
-* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices
+* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
+  * [ ]  Uses event delegation correctly on dynamic elements for deleting, favoriting, and editing a photo (clicking outside of the text field)
   * [ ]  All functions are less than 10 lines
   * [ ]  There are no global variables aside from query selectors, an array for your photos, and your instantiation of a [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
   * [ ]  There are no nested if/else statements
-* [ ] Exceptional - Application refactors all for loops into the proper array prototype iteration method
+* [ ] Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
   * [ ] Uses logical operators instead of if/else statements where applicable
   * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
   * [ ] Application stores all photos in one array in local storage, instead of individually
