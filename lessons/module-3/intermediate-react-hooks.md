@@ -185,20 +185,20 @@ class Fetch extends Component {
     pets: []
   }
   
-  componentDidMount() {
-    this.fetchData()
-  }
-  
   fetchData = async () => {
     const response = await fetch(this.props.url)
     cosnt pet = await response.json()
     this.setState({ pets }) 
   }
   
+  componentDidMount() {
+    this.fetchData()
+  }
+  
   render() {
     const { pets } = this.state
     return (
-      {!pets.length ? null : this.props.render(pet)}
+      {!pets.length ? null : this.props.render(pets)}
     )  
   }
 }
@@ -214,7 +214,7 @@ componentDidUpdate(prevProps) {
 }
 ```
 
-Ok... GROSS! Both of these complex patterns add additional non-presentational components and unnecessary nesting to our component tree and make our code somewhat difficult to follow. Wouldn't life be easier if there was just one simple and common way to reuse code?!?
+Ok... GROSS! Both of these complex patterns add additional non-presentational components and unnecessary nesting to our component tree and make our code somewhat difficult to follow. Wouldn't life be easier if there was just one simple, common way to reuse code?!?
 
 ### Custom Hooks to the Rescue
 
