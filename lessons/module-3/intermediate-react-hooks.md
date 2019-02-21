@@ -8,7 +8,7 @@ module: 3
 
 ## React Introduces Hooks (v16.8 - February 2019)
 
-**Note - I am using [this repo](https://github.com/christielynam/pet-box-api) as my backend for this lesson**
+**Note - I am using [this repo](https://github.com/christielynam/pet-box-api) as my backend for this lesson and [this repo](https://github.com/christielynam/petbox-hooks) as the client-side starting point**
 
 Hooks are functions that let you "hook into" React state and lifecycle features from functional components. React gives us a few built-in hooks that we'll take a look at shortly, but we can also create our own custom hooks that will allow us to reuse/share stateful logic.
 
