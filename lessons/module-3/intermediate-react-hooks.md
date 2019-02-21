@@ -187,7 +187,7 @@ class Fetch extends Component {
   
   fetchData = async () => {
     const response = await fetch(this.props.url)
-    cosnt pet = await response.json()
+    cosnt pets = await response.json()
     this.setState({ pets }) 
   }
   
