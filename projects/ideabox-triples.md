@@ -234,7 +234,7 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
   * [ ]  There are no global variables aside from query selectors and an array for your ideas
   * [ ]  There are no nested if else statements
 * [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
-  * [ ]  Using logical operators instead of if/else statements where applicable
+  * [ ]  Uses logical operators instead of if/else statements where applicable
   * [ ]  Application changes anonymous functions to arrow functions and changes all variables to be block scoped (`let` and `const`)
   * [ ]  Application stores all ideas in one array in local storage, instead of individually
   * [ ]  When 'Filtering and Searching by Text' and 'Filtering by Importance', ideas that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
