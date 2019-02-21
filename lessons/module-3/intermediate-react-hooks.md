@@ -282,3 +282,4 @@ export default App
 * [React Docs on Higher Order Components](https://reactjs.org/docs/higher-order-components.html)
 * [The amazing Render props pattern for React.js — lifecycle begone!](https://itnext.io/the-amazing-render-props-pattern-for-react-js-lifecycle-begone-14e520fc3821) by Christoffer Noring
 * [How to fetch data with React Hooks](https://www.robinwieruch.de/react-hooks-fetch-data/) by Robin Wieruch
+* [How the useEffect Hook Works](https://daveceddia.com/useeffect-hook-examples/) by Dave Ceddia
