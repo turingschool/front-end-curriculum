@@ -149,7 +149,9 @@ function PetList({ pets }) {
   ))
   
   return (
-    {displayPets}
+    <div>
+      {displayPets}
+    </div>
   )
 }
 
