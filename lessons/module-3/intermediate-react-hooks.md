@@ -43,8 +43,8 @@ function App() {
   return (
     <div className='App'>
       <h1>PetBox</h1>
-      {isError && <div>Something went wrong...</div>
-      {isLoading ? <div>Loading...</div> : <PetList pets={pets} />
+      { isError && <div>Something went wrong...</div> }
+      { isLoading ? <div>Loading...</div> : <PetList pets={pets} /> }
     </div>
   )
 }
@@ -83,7 +83,8 @@ function App() {
   return (
     <div className='App'>
       <h1>PetBox</h1>
-      <PetList pets={pets} />
+      { isError && <div>Something went wrong...</div> }
+      { isLoading ? <div>Loading...</div> : <PetList pets={pets} /> }
     </div>
   )
 }
