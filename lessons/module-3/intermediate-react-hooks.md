@@ -218,7 +218,7 @@ Ok... GROSS! Both of these complex patterns add additional non-presentational co
 
 ### Custom Hooks to the Rescue
 
-We've already talked about a few of the built-in hooks that React gives us access to. Now let's check out how we can create a custom hook that can fetch data (or do whatever you want) that we might be able to reuse in multiple places.
+We've already talked about a few of the built-in hooks that React gives us access to. Now let's check out how we can create a custom hook that can fetch data (or do whatever you want) that we can reuse in multiple places.
 
 ```js
 import { useState, useEffect } from 'react'
