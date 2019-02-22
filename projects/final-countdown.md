@@ -21,7 +21,7 @@ To demonstrate:
 
 Instructors will give you the spec on Monday - we will kickoff together in class.
 
-You're expected to still be at Turing 9am-4pm. Instructors will be around during the day to answer questions.
+Instructors will be around during the day to answer questions, but - like a real take-home code challenge - may not provide help through pairing, or answer all questions. Please still ask, though! When you do, form your questions the way you would ask the person who issued the take-home code challenge in a technical interview.
 
 ## Deliverables
 
