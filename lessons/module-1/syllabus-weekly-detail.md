@@ -8,48 +8,47 @@ This is a breakdown of your classes and assignments per each of the six weeks of
 ### WK 1: Hello Turing! Hello Front End Engineering!
 
 |Mindset     | _We are a team. This week is about building trust with one another_.|
-|Lessons     | [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html) &nbsp; [Terminal](http://frontend.turing.io/lessons/module-1/getting-around-in-the-terminal.html) &nbsp; [HTML I](http://frontend.turing.io/lessons/module-1/html-1.html) &nbsp; [Intro CSS](http://frontend.turing.io/lessons/module-1/css-1.html) &nbsp;
+|Lessons     | [Computer Setup](http://frontend.turing.io/lessons/module-1/computer-setup.html) &nbsp; [Terminal](http://frontend.turing.io/lessons/module-1/getting-around-in-the-terminal.html) &nbsp; [HTML I](http://frontend.turing.io/lessons/module-1/html-1.html) &nbsp; [Intro CSS](http://frontend.turing.io/lessons/module-1/css-1.html) &nbsp; [JS I](http://frontend.turing.io/lessons/module-1/js-1.html) &nbsp; [JS II](http://frontend.turing.io/lessons/module-1/js-2.html)
 |Assignment  | Establish a __routine__. Set healthy study __habits__ early. Write __code everyday__. |
-|Assignment  | __CHECK-IN__: Thu 1/24 ~ Dog Party |
+|Assignment  | __CHECK-IN__: Thu 3/14 ~ Dog Party |
 
 ### WK 2: Putting the Pieces Together
 
 |Mindset     | _Open, optimistic, invested_. |
-|Lessons     |[JS I](http://frontend.turing.io/lessons/module-1/js-1.html) &nbsp; [JS II](http://frontend.turing.io/lessons/module-1/js-2.html) &nbsp; [JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Intro Git & Github](http://frontend.turing.io/lessons/module-1/git-and-github.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
-|Assignment  | __Eval__: Mon 1/28 ~ Dog Party
-|Assignment  | __CHECK-IN__: Thu 1/31 ~ Number Guesser |
+|Lessons     |[JS III](http://frontend.turing.io/lessons/module-1/js-3-dom-manipulation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Intro Git & Github](http://frontend.turing.io/lessons/module-1/git-and-github.html) &nbsp; [Unit Testing](http://frontend.turing.io/lessons/module-1/introduction-to-testing-javascript.html) &nbsp; [JS Foundations Exercises](https://github.com/turingschool-examples/javascript-foundations) &nbsp; [Design I](http://frontend.turing.io/lessons/module-1/design-1.html) |
+|Assignment  | __Eval__: Sun 3/17 ~ Dog Party by *5:00 PM* |
+|Assignment  | __CHECK-IN__: Thu 3/21 ~ Number Guesser |
 
 ### WK 3: Level Up
 
 |Mindset     | _Dig Deep, show grit, be vocal, be resourceful_. |
-|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/module-1/event-bubbling-and-delegation.html) &nbsp; [Flexbox](http://frontend.turing.io/lessons/module-1/introduction-to-flexbox.html) &nbsp; [Responsive Unicorn](https://github.com/turingschool-examples/responsive-rescue) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) |
-|Assignment  | __EVAL__: Tue 2/5 ~ Mid Mock Assessment |
-|Assignment  | __DUE__: Tue 2/5 ~ Static Comp Challenge #1 by *5:00 PM* |
-|Assignment  | __CHECK-IN__: Wed 2/6 ~ Number Guesser |
-|Assignment  | __EVAL__: Thu 2/7 ~ Number Guesser |
+|Lessons     | [JS IV](http://frontend.turing.io/lessons/module-1/js-4.html) &nbsp; [Intro Responsive](http://frontend.turing.io/lessons/module-1/intro-responsive.html) &nbsp; [Event Bubbling & Delegation](http://frontend.turing.io/lessons/module-1/event-bubbling-and-delegation.html) &nbsp; [Grid](http://frontend.turing.io/lessons/module-1/introduction-to-grid.html) |
+|Assignment  | __CHECK-IN__: Tue 3/26 ~ Number Guesser |
+|Assignment  | __EVAL__: Wed 3/27 ~ Mid Mock Assessment |
+|Assignment  | __EVAL__: Thu 3/28 ~ Number Guesser |
 
 ### WK 4: Build on a Solid Foundation
 
 |Mindset     | _Self-driven, self-aware, personal and interpersonal responsibility_. |
-|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/intro-to-array-prototype-methods.html) &nbsp; [Grid](http://frontend.turing.io/lessons/module-1/introduction-to-grid.html) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
-|Assignment  | __CHECK-IN__:  Thu 2/14 ~ Ideabox |
-|Assignment  | __EVAL__: Thu 2/14 ~ Mock Assessment |
-|Assignment  | __DUE__: Fri 2/15 ~ Mythical Creatures |
+|Lessons     | [JSON & Local Storage](http://frontend.turing.io/lessons/module-1/json-and-localstorage.html) &nbsp; [Array Prototypes](http://frontend.turing.io/lessons/module-1/intro-to-array-prototype-methods.html) &nbsp; [Design II](https://github.com/turingschool-examples/mod1-typography-foundations) &nbsp; [Design III](https://github.com/turingschool-examples/mod1-color-theory-foundations/blob/master/readme.md) |
+|Assignment  | __CHECK-IN__:  Thu 4/4 ~ IdeaBox |
+|Assignment  | __EVAL__: Thu 4/4 ~ Mock Assessment |
+|Assignment  | __DUE__: Fri 4/5 ~ Mythical Creatures |
 
 ### WK 5: Practice for Proficiency in the Fundamentals
 
 |Mindset     | _Brave, supportive, can-do-attitude_. |
 |Lessons     | Breakout Groups, Worktime & Study/Review for Final Project & Exam, [Design IV](https://github.com/turingschool-examples/mod1-gestalt-principals-foundations) |
-|Assignment  | __EVAL__: Tue 2/19 ~ Mock Assessment |
-|Assignment  | __DUE__:  Tue 2/19 ~ Static Comp Challenge #2 by *5:00 PM* |
-|Assignment  | __DUE__:  Thu 2/21 ~ Lightning Talk |
-|Assignment  | __EVAL__: Thu 2/21 ~ IdeaBox |
+|Assignment  | __CHECK-IN__:  Tue 4/9 ~ IdeaBox |
+|Assignment  | __EVAL__: Tue 4/9 ~ Mock Assessment |
+|Assignment  | __EVAL__: Thu 4/11 ~ IdeaBox |
+|Assignment  | __DUE__:  Thu 4/11 ~ Lightning Talk |
 
 ### WK 6: Mastery of Module
 
 |Mindset     | _Independent, confident problem solver, successful team member_. |
 |Lessons     | N/A Final Assessment Week|
-|Assignment  | __CHECK-IN__: Mon 2/25 ~ Foto Finder |
-|Final Exam  | __EVAL__: Tue 2/26 ~ Final Exam |
-|Assignment  | __EVAL__: Wed 2/27 ~ Foto Finder|
-|Assignment  | __EVAL__: Thu 2/28 ~ Portfolio Defense |
+|Assignment  | __CHECK-IN__: Mon 4/15 ~ Check Yo'self |
+|Final Exam  | __EVAL__: Tue 4/16 ~ Final Exam |
+|Assignment  | __EVAL__: Wed 4/17 ~ Check Yo'self |
+|Assignment  | __EVAL__: Thu 4/18 ~ Portfolio Defense |
