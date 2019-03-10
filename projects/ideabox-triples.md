@@ -163,6 +163,10 @@ The submit button should be disabled when there is not valid content in both inp
 * Ideas are stored in localStorage
 * Idea cards persist after page refresh
 
+## Submission Details
+
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=496549355)
+
 #### Layout comps
 
 Desktop layout:
@@ -180,6 +184,7 @@ Color, font, and icon spec:
 #### Link to icon files
 
 You will need the `svg` files for the delete, upvote, and downvote icons. [Here's the link.](https://drive.google.com/drive/folders/1q3-CHruC1rtfsFe_pMa9gLUr3My71_Uq?usp=sharing)
+
 
 [desktop-base]: /assets/images/projects/ideabox/ideabox-triples-01.jpg
 [mobile-full]: /assets/images/projects/ideabox/ideabox-triples-02.jpg
