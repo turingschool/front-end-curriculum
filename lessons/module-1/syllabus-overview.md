@@ -2,7 +2,7 @@
 title: Syllabus Overview & Expectations
 ---
 
-## Jan 22, 2019 - Mar 1, 2019
+## Mar 11, 2019 - Apr 19, 2019
 
 | Instructors     | Slack            | Email            |
 | ----------------|------------------| -----------------|
