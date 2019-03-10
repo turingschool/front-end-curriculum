@@ -95,6 +95,10 @@ Work through these **in order**:
   - Logic for showing last guess
   - Should append a card when a user wins the game
 
+## Submission Details
+
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=1037661414)
+
 #### Layout comps
 
 Desktop layout:
