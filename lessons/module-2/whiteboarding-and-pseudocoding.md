@@ -200,6 +200,30 @@ In pairs, pull up and fork [this codepen](https://codepen.io/plovett/pen/NeXzQe?
 **Person A: Driver**  
 
 
+<!-- Possible Solution 
+
+  function totalLicks(env) {
+  var totalLicks = 252;
+  var toughestChallenge = {challenge: "", value: 0};
+
+  Object.keys(env).forEach((el) => {
+    totalLicks += env[el];
+    
+    if(env[el] > 0 && env[el] > toughestChallenge.value) {
+      toughestChallenge.challenge = el;
+      toughestChallenge.value = env[el];
+    }
+  })
+  
+  if (!toughestChallenge.challenge) {
+    return `It took ${totalLicks} licks to get to the tootsie roll center of a tootsie pop.`
+  } else {
+    return `It took ${totalLicks} licks to get to the tootsie roll center of a tootsie pop. The toughest challenge was ${toughestChallenge.challenge}.`
+  }
+}
+
+-->
+
 ### Some possible pitfalls to problem solving
 
 * Mental set - Persist in approaching a problem in a way that has worked in the past but is clearly not working now
