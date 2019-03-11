@@ -1,4 +1,4 @@
----
+  ---
 title: Whiteboarding and Pseudocoding
 length: 120
 tags: whiteboarding, interviews, pseudocoding
@@ -150,7 +150,7 @@ Which could also be written like this:
 
 ## PIA (Psuedocoding in action)
  
-Task: Create your own `filter` function (on `Array.prototype`) to really understand/see how `filter` is working under the hood. You should implemenet a filter function that is like the `<Array>.filter()` in JavaScript.
+Task: Create your own `filter` function (on `Array.prototype`) to really understand/see how `filter` is working under the hood. You should implement a filter function that is like the `<Array>.filter()` in JavaScript.
 
 ```js
 [1,2,3,4].filter((num)=>{ return num > 3}) // Should return [4]
@@ -186,7 +186,8 @@ Array.prototype.myFilter = function(callback) {
 
 #### Turn and Code: 
 
-In pairs, pull up a JSFun prototype problem that neither of you have solved.
+In pairs, pull up and fork [this codepen](https://codepen.io/plovett/pen/NeXzQe?editors=1010). You should be completing both phases for each individual test. Be sure that you are actively switching between being the driver and the navigator.
+
 
 >Phase I => (Understand and Plan) Break out the way that you would solve this problem in pseudocode. Remember, psuedocode is _not_ code... but a way to work through the logic of the problem without worrying about syntax.
 
