@@ -24,14 +24,13 @@ var Nightmare = require('nightmare');
 var nightmare = Nightmare({ show: true }); // this opens a browser. Normally we don't want that to happen, as it slows things down
 
 nightmare
-  .goto('https://www.turing.io')
-  .click('a.btn-lg.btn-primary.btn[href=\'/why-hire-grad\']') // These long selectors came from a selector extension
-  .click('a.btn-lg.btn-primary.btn[href=\'/alumni-portfolios\']')  // Notice where I had to escape a \'
-  .wait('div.views-field.views-field-field-picture')
+  .goto('https://turing.io/team/')
+  .click('a[href="/team/instructors"]')
+  .wait('h3')
   .evaluate(function () {
-    var nameNodes = document.querySelectorAll('h3.thin.field-content')
+    var nameNodes = document.querySelectorAll('h3');
     var list = [].slice.call(nameNodes); // Why did I have to do this?
-    return list.map(function(node){ 
+    return list.map(function(node){
       return node.innerText
     });
   })
@@ -42,6 +41,7 @@ nightmare
   .catch(function (error) {
     console.error('Search failed:', error);
   });
+
 ```
 
 Minimum needed code is:
@@ -132,7 +132,7 @@ cd webscraping-workshop
 
 6. Run `npm i nightmare --save`
 
-7. Create a script file... something like `script.js`
+7. Create a script file... something like `scrape.js`
 
 8. Run your code using Node! So in the terminal `node scrape.js`
 
