@@ -24,7 +24,7 @@ Similar to what you might be asked to do on the job, we've given you a comp with
 
 **Note: DO NOT use CSS `flex-box` or `grid` for this project (If you don't know what this is, no worries! You'll learn more about these techniques in the coming weeks!)**
 
-## Basic Project Requirements
+## Phase One: Basic Requirements
 
 #### Step 1
 
@@ -39,7 +39,7 @@ Style your site using CSS -- aim to get it as visually close to the comp as poss
 
 Create a `README.md` file that gives a brief overview of your project (don't forget to make sure to include the comp as well as a screen grab of your finished site!)
 
-## Extensions
+## Phase Two: More Better
 
 We won't cover how to do these in class before this project ends -- challenge yourself and investigate how to tackle these tasks. And remember: it is ok if you're not sure how to do these so take a crack at it and experiment, we'll go over this material together soon!
 
