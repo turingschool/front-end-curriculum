@@ -309,7 +309,7 @@ Build the structure of these following layout. Only use HTML for this challenge.
 ### Create this table
 You can use codepen or create your own html file.
 
-** Hint: Research the [table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) in HTML
+**Hint**: Research the [table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) in HTML
 
 # ![Flags Table](/assets/images/flags-table.jpg)
 
@@ -350,7 +350,7 @@ Partner up and answer the following questions:
 * Why would a `legend` element be important?
 
 ### Part Two:
-Fork the code below into your own Pen, andthen refactor as follows:
+Fork the code below into your own Pen, and then refactor as follows:
 
 * Validate for email type
 * Add a set of radio buttons with at least three options - only allowing one to be selected at a time
