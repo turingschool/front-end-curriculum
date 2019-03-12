@@ -190,7 +190,7 @@ We have several scopes available to us: global, function, block, and eval (the l
 
 **Function scope:**
 - Variables declared in the function (using `var`, `let`, or `const`) can only be accessed by the other code inside the function.
-- You control what you create.
+- You control what's in the function scope, it cannot be meddled with by anyone or anything else.
 - The global scope cannot access function scope.
 
 **Block scope:**
