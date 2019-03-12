@@ -161,7 +161,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 
 
 
-## Global, Functional, and Block Scope
+## Scope
 
 Now that we understand the order of execution a bit, we can dive deeper into the concept of scope. Scope is the place in which a variable or value can be accessed.
 
@@ -179,6 +179,10 @@ At the most basic level, variables can be either globally or locally scoped. Tak
 ```
 
 Our variable of `foo` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `birdNoise` is limited to the scope of `baz` and is thus said to be scoped locally.
+
+
+
+### Global, Functional, and Block Scope
 
 We have several scopes available to us: global, function, block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
 
