@@ -90,6 +90,10 @@ var sum = addTwo(myNum);
 console.log(sum);
 ```
 
+
+
+In the example above, the interpreter is working in the global execution context until line 8, when the `baz` function is invoked. Once this function is invoked, a new execution context (local) is created. This creates a local variable environment where any parameters or variables declared within that function are locally scoped and made inaccesible in the global space. *Note: The exception to this is when variables are initialized without the keywords var, let, or const - which is bad practice.*
+
  -->
 
 
@@ -274,8 +278,6 @@ At the most basic level, variables can be either globally or locally scoped. Tak
 ```
 
 Our variable of `foo` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `birdNoise` is limited to the scope of `baz` and is thus said to be scoped locally.
-
-In the example above, the interpreter is working in the global execution context until line 8, when the `baz` function is invoked. Once this function is invoked, a new execution context (local) is created. This creates a local variable environment where any parameters or variables declared within that function are locally scoped and made inaccesible in the global space. *Note: The exception to this is when variables are initialized without the keywords var, let, or const - which is bad practice.*
 
 We have several scopes available to us: global, function, block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
 
