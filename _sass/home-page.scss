@@ -1,0 +1,59 @@
+.splash {
+  background: url('/assets/images/home-page-splash.jpg') 100%;
+  background-size: cover;
+  border-bottom: 10px solid $front-end-primary;
+  height: 475px;
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  &:after {
+    background-color: rgba(0,0,0,0.4);
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.splash-text {
+  color: #FFF;
+  margin: auto 0;
+  max-width: 700px;
+  z-index: 2;
+
+  h1 {
+    font-family: $heavy-copy, sans-serif;
+    font-size: 7em;
+    margin-left: 80px;
+    line-height: 1em;
+    letter-spacing: -5px;
+  }
+}
+
+@media (max-width: $tablet-width) {
+  .splash {
+    height: 350px;
+  }
+
+  .splash-text h1 {
+    font-size: 5em;
+    margin-left: 50px;
+    letter-spacing: -4px;
+  }
+}
+
+@media (max-width: $phone-width) {
+  .splash {
+    height: 275px;
+  }
+
+  .splash-text h1 {
+    font-size: 3.5em;
+    margin-left: 15px;
+    letter-spacing: -3px;
+  }   
+}
