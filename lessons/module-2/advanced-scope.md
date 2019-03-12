@@ -168,14 +168,16 @@ Now that we understand the order of execution a bit, we can dive deeper into the
 At the most basic level, variables can be either globally or locally scoped. Take the following example: 
 
 ```js
-1  var foo = 'bar';
+1  var animalNoise = 'moo';
 2
-3  function baz() {
-4    var birdNoise = 'caw';
-5    return birdNoise;
+3  function makeNoise() {
+4    var animalNoise = 'meow';
+5    return animalNoise;
 6  }
 7  
-8  var noise = baz();
+8  console.log('Animal Noise: ', animalNoise);
+9  var noise = makeNoise();
+10 console.log('Noise: ', noise);
 ```
 
 Our variable of `foo` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `birdNoise` is limited to the scope of `baz` and is thus said to be scoped locally.
