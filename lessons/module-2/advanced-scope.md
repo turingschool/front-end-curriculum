@@ -1,54 +1,16 @@
----
-title: Scope
-length: 120
-tags: javascript, scope, scope chain, closures, lexical scope, execution call stack, execution context
-module: 2
----
+<!-- We won't get into the nitty gritty details of the different JavaScript engines (Chrome uses Chrome v8, Mozilla uses SpiderMonkey, etc.) or the differences between interpreted vs compiled languages (you can read [this](https://www.upwork.com/hiring/development/the-basics-of-compiled-languages-interpreted-languages-and-just-in-time-compilers/) if you would like to dig into these concepts more). 
 
-## Goals
+Just know that JavaScript is an interpreted language - meaning that JavaScript is translated (or interpreted) by the engine line by line at the _same_ time that the program is being executed. JavaScript is a single-threaded language, making it so that only one task can be executed at a time.
 
-By the end of this lesson, you will be able to:
 
-* Technically speak to how the JavaScript interpreter executes code
-* Describe the differences between `var`, `let` and `const` and when to use each
-* Predict how variables will behave when multiple scopes are involved
 
-## Vocab
 
-- `JavaScript Engine/Interpreter` A program that executes JavaScript code. Most commonly used in web browsers
-- `Scope` The level in which a variable can be accessed
-- `Execution context` The environment a function executes in
-- `Closure` An inner function that has access to (aka closes over) the variables declared outside itself
-- `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
-
-# The JS Interpreter 
-
-A fundamental part of writing better code and digging into more advanced topics is understanding how the JavaScript interpreter works. Can you build out applications without this knowledge? Of course. But a lot of developers find that having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code. 
-
-We won't get into the nitty gritty details of the different JavaScript engines (Chrome uses Chrome v8, Mozilla uses SpiderMonkey, etc.) or the differences between interpreted vs compiled languages (you can read [this](https://www.upwork.com/hiring/development/the-basics-of-compiled-languages-interpreted-languages-and-just-in-time-compilers/) if you would like to dig into these concepts more). Just know that JavaScript is an interpreted language - meaning that JavaScript is translated (or interpreted) by the engine line by line at the _same_ time that the program is being executed. JavaScript is a single-threaded language, making it so that only one task can be executed at a time.
-
-## How the JS Engine Interprets Code
-
-Once we realize that our JavaScript code is read line by line by the browser's engine, it becomes more apparent why the order of things matters when we are writing our programs. 
-
-```js
-1   var modTwoTeachers = ['Brittany', 'Robbie', 'Pam'];
-2
-3   function calculateEvals (teachers, classSize) {
-4     return classSize / teachers.length;
-5   }
-6
-7   var numEvals = calculateEvals(modTwoTeachers, currentCohort);
-8
-9   var currentCohort = 32;
-10  console.log(numEvals);
-```
 
 ##### Steps for code execution
 
-<!-- Create a drawing on the board with boxes that act as containers in memory, and then refer to those boxes as the code executes, separate global and local memory? -->
+Create a drawing on the board with boxes that act as containers in memory, and then refer to those boxes as the code executes, separate global and local memory? -->
 <!-- Also draw out the execution context and the greater, "global" context -->
-
+<!-- 
 1. The interpreter stores the function declaration, `calculateEvals` (including its definition) in global memory
 2. The interpreter stores the variable declarations of `modTwoTeachers`, `numEvals`, and `currentCohort` into global memory
 3. Line 1 - `modTwoTeachers` is assigned the value of an array of strings
@@ -70,31 +32,6 @@ In the execution phase, code is interpreted and executed on a single-thread. Thi
 - #5 states that invoking the function `calculateEvals` creates a new execution context. This happens whenever a function is invoked. Conceptually, you could think of the execution context as an object that keeps track of scope and the variable environment within that function, the scope chain, and that value of `this`.
 - #5 also talks about the function returning - which is another way of saying that the function has completed. It also references [garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management) - which is a process where the JavaScript engine 'automatically' frees up values stored in memory that are not being used anymore.
 
-
-#### Turn and Talk
-
-With a partner, take turns explaining how the following JavaScript code would be translated by the interpreter. We will come back together as a class to discuss:
-
-
-```js
-1  var hungriestDog = 'Tess';
-2 
-3  function begForTreats(seconds) {
-4   var result = seconds * 2;
-5
-6   if (result > 5) {
-7    return 'This human is rude, not giving me treats. Onto the next one.';
-8   } else {
-9    return 'Yum, human food!'
-10  }
-11 }
-12 
-13 var beggingTime = 20;
-14
-15 begForTreats(beggingTime);
-16
-17 beggingTime = 30;
-```
 
 ## Execution Call Stack
 
@@ -153,10 +90,175 @@ var sum = addTwo(myNum);
 console.log(sum);
 ```
 
+ -->
+
+
+---
+title: Scope
+length: 120
+tags: javascript, scope, scope chain, closures, lexical scope, execution call stack, execution context
+module: 2
+---
+
+## Goals
+
+By the end of this lesson, you will be able to:
+
+* Understand the order of execution for JavaScript code and why it matters
+* Describe the differences between `var`, `let` and `const` and when to use each
+* Predict how variables will behave when multiple scopes are involved
+
+## Vocab
+
+- `JavaScript Engine/Interpreter` A program that executes JavaScript code. Most commonly used in web browsers
+- `Scope` The level in which a variable can be accessed
+- `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
+
+# How JavaScript is Read
+
+A fundamental part of writing better code and digging into more advanced topics is understanding how JavaScript is read by the browser. Can you build out applications without this knowledge? Of course. But a lot of developers find that having a good grasp on what is going on 'under the hood' ends up making other things infinitely easier - including, but not limited to, self-teaching new concepts, debugging, and writing solid JavaScript code. 
+
+Each browser has what's called a 'JavaScript Engine' that translates (or interprets) your code line by line as it executes, which allows your application to perform the behaviors and interactions you've programmed. For example, if you've written the following code:
+
+```
+var header = document.getElementById('header');
+header.innerText = 'Lorem Ipsum Dolor'
+```
+
+The JavaScript engine will read and interpret these two lines in the order they've been written: first the browser will find the header element, then it will update its inner text. You can think of the JavaScript engine as a foreign language translator, who acts as an intermediary between two people who don't speak the same language. As developers, we understand how to write JavaScript, the JavaScript Engine knows how to read JavaScript, and can pass those instructions onto the rest of the browser.
+
+
+## Understanding the Order of Execution
+
+In our previous example, we mentioned the JS Engine will read the two lines of code in the order they were written. Just like we might read a book, we must completely finish reading one line before we move onto the next (otherwise that book wouldn't make much sense to us)! In programming languages, this is what we call **single-threaded**. 
+
+JavaScript is a **single-threaded** language, which means each line of code must fully finish executing before it can move onto the next -- only one task can be executed at a time.
+
+Let's look at a more complex example:
+
+
+```js
+1   var modTwoTeachers = ['Brittany', 'Robbie', 'Pam'];
+2
+3   function calculateEvals (teachers, classSize) {
+4     return classSize / teachers.length;
+5   }
+6
+7   var numEvals = calculateEvals(modTwoTeachers, currentCohort);
+8
+9   var currentCohort = 32;
+10  console.log(numEvals);
+```
+
+### In Your Notebook
+
+**What would you expect to be logged when we get to line 10? Why?**
+
+
+
+Let's do a quick breakdown of what the interpreter did here to read this code:
+
+1. **Line 1:** The `modTwoTeachers` variable is assigned to an array of instructor names.
+2. **Line 7:** We then skip down to line 7, because we are not currently invoking the function that's been declared, so we skip over that for now. On line 7, the `numEvals` variable is assigned to the invocation of `calculateEvals`.
+3. **Line 3:** Because line 7 told us to invoke `calculateEvals`, the interpreter will jump back up to line 3 and begin executing that function.
+4. **Line 4:** return `classSize / teachers.length`
+5. **Line 9:** Our function has finished executing, so we're going to pop out of that and pick up where we left off, which is on line 9, where the `currentCohort` variable is assigned to the number 32.
+6. **Line 10:** We console log the value of our `numEvals` variable, which gives us NaN.
+
+
+Based on this order of execution, we ultimately receive NaN as our result because the value of our `currentCohort` is not assigned until **after** we already do the math within `calculateEvals`. At the time `calculateEvals` executes, the value of our `currentCohort` variable is `undefined`. So what our function is really doing is trying to return `undefined / 3` -- which will always result in NaN.
+
+
+Let's look at another example:
+
+
+```
+1  var moo = mooLikeACow();
+2  
+3  function mooLikeACow() {
+4    return 'Moooo!';
+5  }
+6 
+7  console.log('Animal Sound: ', moo);
+```
+
+**What would we expect to be logged when line 7 executes? Why? Is the actual behavior different than you expected?**
+
+Based on our previous example, where we received `NaN` because our variable hadn't been assigned a value yet, we might expect this new example to throw some sort of error as well. But it appears to work just fine! We get back `Animal Sound: Moooo!` when line 7 is executed.
+
+
+### Hoisting & The Creation Phase
+
+In order to understand what's happening here, we must explore another step the interpreter takes before executing our code.
+
+The interpreter takes a first pass to skim over our code and get a general idea of what we're doing and what variables and functions we'll be using. This is called the **creation phase**. In the creation phase, the interpreter sets aside some space in memory to store any variables and functions we might need access to.
+
+Using the first code example, the interpreter recognizes that we're going to be working with a function called `calculateEvals` and some variables - `modTwoTeachers`, `numEvals`, and `currentCohort`. In trying to be helpful, the interpreter **hoists** these functions and variables to the top of our scope. Behind the scenes, the interpreter would essentially be changing our code to look something like this:
+
+```
+1   var modTwoTeachers, numEvals, currentCohort;
+2   function calculateEvals(teachers, classSize) {
+3     return classSize / teachers.length;
+4   }
+5
+6   modTwoTeachers = ['Brittany', 'Robbie', 'Pam'];
+7
+8   numEvals = calculateEvals(modTwoTeachers, currentCohort);
+9
+10  currentCohort = 32;
+11  console.log(numEvals);
+```
+
+Our variable **declarations** are hoisted to the top of our code block, but their **initialization** or **assignment** remains on the original line it was written. Therefore, all three of our variables are `undefined` until the execution phase when the interpreter reaches the lines where we assign them values.
+
+Our function is also hoisted to the top of our code block, with its entire definition alongside it. This gives us insight into why our second example still worked without throwing an error:
+
+```
+1  function mooLikeACow() {
+2    return 'Moooo!';
+3  }
+4
+5  var moo = mooLikeACow();
+6  
+7  console.log('Animal Sound: ', moo);
+```
+
+When functions are hoisted to the top of our code block, it hoists not just the function name, but the code inside of it as well. This means we can invoke functions before we've declared them without running into errors. 
+
+This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time. 
+
+
+
+#### Turn and Talk
+
+With a partner, take turns explaining how the following JavaScript code would be translated by the interpreter. We will come back together as a class to discuss:
+
+
+```js
+1  var hungriestDog = 'Tess';
+2 
+3  function begForTreats(seconds) {
+4   var result = seconds * 2;
+5
+6   if (result > 5) {
+7    return 'This human is rude, not giving me treats. Onto the next one.';
+8   } else {
+9    return 'Yum, human food!'
+10  }
+11 }
+12 
+13 var beggingTime = 20;
+14
+15 begForTreats(beggingTime);
+16
+17 beggingTime = 30;
+```
+
+
 
 ## Global, Functional, and Block Scope
 
-Now that we understand how the interpreter works and a little bit about the concept of the execution context, we can dive deeper into the concept of scope. The first thing to address is that scope and the execution context are _not_ technically the same thing, although you'll often see these terms used interchangeably. Whereas execution context is a concept that roughly equates to the 'environment' a function executes in (among other things - remember our conceptual object mentioned above), scope is the place in which a variable or value can be accessed.
+Now that we understand the order of execution a bit, we can dive deeper into the concept of scope. Scope is the place in which a variable or value can be accessed.
 
 At the most basic level, variables can be either globally or locally scoped. Take the following example: 
 
