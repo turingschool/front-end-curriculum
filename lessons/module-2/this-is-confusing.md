@@ -68,7 +68,7 @@ class Unicorn {
 
 When the `new` keyword is used with our ES6 class, the constructor function is executed and `this` inside the constructor function refers to the newly created instance.
 
-## Rule 1 - When executing a function as a method on an object, _this_ refers to that object.
+## Rule 2 - When executing a function as a method on an object, _this_ refers to that object.
 
 This is a long rule, another way to think about this rule is if a function is executed and there is a `.` before the name of the function, `this` refers to whatever comes before the `.`. 
 
