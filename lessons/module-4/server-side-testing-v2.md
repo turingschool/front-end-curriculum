@@ -32,3 +32,43 @@ test file. This is possible becuase our `knexfile.js` has a specific key/value
 pair for `test`, and Jest will automatically set the NODE_ENV to `test` when
 running our test suite.
 
+## Wrting our first test, GET all students
+
+We're going to try to test drive all the interactions with this database, and
+with that in mind, here's a brief outline of the functionality we want to test:
+
+  - test that we GET all students from the DB  
+  - test that we GET one student from the DB  
+  - test that we POST a student to the DB  
+  - test that we PUT an existing student in the DB  
+  - test that we DELETE an existing student from the DB  
+
+We will start with getting all the students. Assuming we've seeded our database,
+the number of students we get back from the endpoint should be the same as the
+number in our seedfile. At the top of the testfile, import those students that
+we seeded in:
+
+```js
+import students from './students'
+```
+
+Now, we can write our first test! Add the following to your app.test.js file:
+
+```js
+describe('GET /students', () => {
+  it('should return all the students in the DB', async () => {
+    // setup
+    const expectedStudents = students.length
+
+    // execution
+    const res = await request(app).get('/students')
+    const result = res.body
+
+    // expectation
+    expect(result.length).toEqual(expectedStudents)
+  })
+})
+```
+
+When we run this test, it should fail, that's TDD for you! Go ahead and write
+the code to make it pass.
