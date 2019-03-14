@@ -76,7 +76,30 @@ the code to make it pass.
 ## GET a single student
 
 Take 5 minutes and see if you can write a test to get a single student back from
-a new `/students/:id` endpoint. Once you have a failing test make it pass!
+a new `/students/:id` endpoint. Once you have a failing test make it pass! No
+looking ahead!
 
 If you've made it that far, consider this: Are we adequately testing these
 endpoints so far? What is missing?
+
+Here's one way you could write the test:
+
+```js
+describe('GET /students/1', () => {
+  it('should return a single student', async () => {
+    // setup
+    const expectedStudent = students[0]
+
+    // execution
+    const student = await database('students').first()
+    const id = student.id
+    const res = await request(app).get(`/students/${id}`)
+    const result = res.body[0]
+
+    // expectation
+    expect(result.lastname).toEqual(expectedStudent.lastname)
+    expect(result.program).toEqual(expectedStudent.program)
+    expect(result.enrolled).toEqual(expectedStudent.enrolled)
+  })
+})
+```
