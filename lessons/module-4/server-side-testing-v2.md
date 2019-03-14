@@ -163,3 +163,9 @@ describe('POST /students', () => {
 Ok, you should be feeling a bit more confident now. Working on your own, or with
 a partner, see if you can write out the tests for the `PUT /students/:id` and
 `DELETE students/:id` endpoints, and then implement them.
+
+## Checks for Understanding
+
+* What libraries do we use to test server-side endpoints?
+* Why is it important to use a test DB when testing DB interactions?
+* Is it necessary to seed the database before we test? Why or why not?
