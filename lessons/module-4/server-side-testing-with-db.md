@@ -11,8 +11,9 @@ That's a great way to start, but generally, we'll be interacting with a database
 of some kind. In this lesson, we'll review how to test the endpoints of our
 express applications, layering on how to test their database interactions.
 
-Before we begin, spend 2 minutes exploring our [starter
-repo](https://github.com/turingschool-examples/test-express). Why do you think
+Before we begin, spend 5 minutes exploring our [starter
+repo](https://github.com/turingschool-examples/test-express). Go ahead and
+follow the instructions in the readme to get everything setup. Why do you think
 we have separate keys for development and test in our knexfile?
 
 ## Getting started
