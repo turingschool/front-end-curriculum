@@ -72,3 +72,11 @@ describe('GET /students', () => {
 
 When we run this test, it should fail, that's TDD for you! Go ahead and write
 the code to make it pass.
+
+## GET a single student
+
+Take 5 minutes and see if you can write a test to get a single student back from
+a new `/students/:id` endpoint. Once you have a failing test make it pass!
+
+If you've made it that far, consider this: Are we adequately testing these
+endpoints so far? What is missing?
