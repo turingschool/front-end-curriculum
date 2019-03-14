@@ -88,18 +88,72 @@ Here's one way you could write the test:
 describe('GET /students/1', () => {
   it('should return a single student', async () => {
     // setup
-    const expectedStudent = students[0]
+    const expectedStudent = await database('students').first()
+    const id = student.id
 
     // execution
-    const student = await database('students').first()
-    const id = student.id
     const res = await request(app).get(`/students/${id}`)
     const result = res.body[0]
 
     // expectation
-    expect(result.lastname).toEqual(expectedStudent.lastname)
-    expect(result.program).toEqual(expectedStudent.program)
-    expect(result.enrolled).toEqual(expectedStudent.enrolled)
+    expect(result).toEqual(expectedStudent)
+  })
+})
+```
+
+## POST a new student
+
+Before we dive into testing that we can POST a new student to the DB, we need to
+think about how that will affect our other tests. If, for some reason, jest
+decides to run our POST test first, all our other tests are at risk of failing
+because they're not starting from the same point. 
+
+This suggests that we need some way to clean-up any behavior from previous
+tests. There are many ways to accomplish this, so for starters, let's just take
+a look at our seed file again:
+
+```js
+const students = require('../../../students')
+
+exports.seed = function(knex, Promise) {
+  return knex('students').del()
+    .then(function () {
+      return knex('students').insert(students);
+    });
+};
+```
+
+Notice how we're deleting all the entries before seeding the db? We can take
+advantage of this in a `beforeEach`, ensuring we always start from the same
+place. Add the following to your test file, just inside the first describe
+block:
+
+```js
+beforeEach(async () => {
+  await database.seed.run()
+})
+```
+
+Now we're ready to write our test POSTing a new student to the database:
+
+```js
+describe('POST /students', () => {
+  it('should post a new student to the db', async () => {
+    // setup
+    const newStudent = { lastname: 'Mitchell', program: 'BE', enrolled: false }
+
+    // execution
+    const res = await request(app)
+                        .post('/students')
+                        .send(newStudent)
+
+    const students = await database('students').where('id', res.body.id).select()
+    const student = students[0]
+
+
+    // expectation
+    expect(res.status).toBe(200)
+    expect(student.lastname).toEqual(newStudent.lastname)
   })
 })
 ```
