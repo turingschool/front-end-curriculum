@@ -17,11 +17,11 @@ tags: javascript, js, this, keyword
 - `Declare` To write a function definition. Usually distinct from function execution
 - `Constructor Function` The function called to create a new instance of an object. Usually contains the code to set up the object 
 
-### Warm Up
+<!-- ### Warm Up
 
-* What do you understand `this` to represent in JavaScript? 
+* Write down everything that you know about `this` in JavaScript
 * Where have you seen/utilized the word `this` in your JavaScript projects thus far?
-* Why do you think the keyword `this` exists? 
+ -->
 
 ## Introduction
 
@@ -34,7 +34,7 @@ The keyword `this` in JavaScript can be confusing. Here are a couple of definiti
 
 Depending on where `this` is used, it can refer to different things. One key thing to remember is **we can only change the value of** `this` **inside of a function**. There are a few ways we can invoke/execute a function to change the value of `this`.
 
-In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions, where the value of `this` is determined when the arrow function is declared.
+In ES5 functions, the value of this is determined when the function is executed. This is in contrast to arrow functions, where the value of `this` is determined by its lexical scope.
 
 With that being said, there are several rules which determine what the value of `this` is at any given point in time.
 
