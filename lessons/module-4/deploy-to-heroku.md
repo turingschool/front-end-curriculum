@@ -18,7 +18,7 @@ By the end of this lesson, you will:
 We need to install the Heroku command-line tools to be able to run commands that communicate with our deployed application. Run this command to install the Heroku CLI:
 
 ```bash
-brew install heroku/brew/heroku
+brew tap heroku/brew && brew install heroku
 ```
 
 

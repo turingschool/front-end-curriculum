@@ -24,7 +24,7 @@
 .clear-search {
   position: absolute;
   right: 50px;
-  top: 34px;
+  top: 45px;
   border: none;
   background: none;
   outline: none;
@@ -46,12 +46,12 @@
 
   @media (max-width: $tablet-width) {
     right: 35px;
-    top: 24px;
+    top: 33px;
   }
 
   @media (max-width: $phone-width) {
     right: 25px;
-    top: 120px;
+    top: 135px;
   }
 }
 

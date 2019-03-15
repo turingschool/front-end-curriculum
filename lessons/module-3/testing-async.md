@@ -307,6 +307,14 @@ it('sets an error when the fetch fails', () => {
 })
 ```
 
+### A note on error handling
+
+When using fetch calls, there are two main times when we want to check for errors. The first is when our fetch rejects, which is the case we tested above.
+
+The second is when the response is not ok. In that case we should manually throw an error that we'll catch elsewhere. We'll show how that's done later on in this lesson.
+
+## Refactoring to async/await
+
 Awesome, now all the critical functionality of our addGrocery method is tested! Already though, you should be thinking
 that there may be an easier, or at least more succinct way of writing this code. Rather than chaining Promises, I'd like
 to use the new ES7 `async/await` syntax. Let's lean on our new test suite to refactor our code.
