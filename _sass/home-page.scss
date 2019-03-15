@@ -28,9 +28,15 @@
   h1 {
     font-family: $heavy-copy, sans-serif;
     font-size: 7em;
-    margin-left: 80px;
+    margin: 0px 0px 0px 80px;
     line-height: 1em;
     letter-spacing: -5px;
+  }
+
+  p {
+    font-family: $standard-copy, sans-serif;
+    font-size: 1.1em;
+    margin: 0px 0px 0px 80px;
   }
 }
 
@@ -44,6 +50,11 @@
     margin-left: 50px;
     letter-spacing: -4px;
   }
+
+  .splash-text p {
+    font-size: 1em;
+    margin: 0px 0px 0px 50px;
+  }
 }
 
 @media (max-width: $phone-width) {
@@ -55,5 +66,10 @@
     font-size: 3.5em;
     margin-left: 15px;
     letter-spacing: -3px;
-  }   
+  }
+
+  .splash-text p {
+    font-size: 0.9em;
+    margin: 0px 0px 0px 15px;
+  }
 }
