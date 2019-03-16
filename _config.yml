@@ -65,7 +65,6 @@ algolia:
     - lessons/module-3/archive/**/*
     - lessons/module-4/archive/**/*
     - mentor-posse-info/**/*
-    - open-source/**/*
     - portal/**/*
     - postwork/**/*
     - module-0-capstone/**/*
