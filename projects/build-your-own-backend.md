@@ -78,7 +78,13 @@ You can put your documentation in the README of your BYOB GitHub repository. Rem
 
 * Your application should be deployed to Heroku
 
+## Articulation Requirement
+
+In addition to the functional requirement, on a separate dedicated git branch, go through each line of the server file and put a comment on each line that explains what that line of code is doing. Be as explicit as you can.
+
 ### Extension: Create a FE documentation in your BE repo
+
+If all other expectations and requirements are met, you may:
 
 * Create a front-end (in the same repository as BYOB) that will document the API.
 * Provide a page that documents the available endpoints, the data that will be received, and the data the user must send.
