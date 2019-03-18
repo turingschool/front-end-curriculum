@@ -5,6 +5,12 @@ tags: npm, webpack, build processes
 module: 2
 ---
 
+
+<style type="text/css">
+    section .discuss {padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}
+</style>
+
+
 ## Build Processes with NPM & Webpack
 
 ### Learning Goals
@@ -49,6 +55,8 @@ Looking at the top-level, root directory of our boilerplate, we already have mor
 * `package.json` - describes our application to NPM and what dependencies we need in order to use and develop the app
 * `webpack.config.js` - tells webpack how to read and build our files
 
+
+With the exception of the `README.md` file, each of these is some sort of configuration file. A **configuration file** is a file that allows you to define how a particular tool you're using should interact with your codebase.
 
 <!-- INSTRUCTOR NOTES 
 
