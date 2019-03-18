@@ -7,7 +7,7 @@ module: 2
 
 
 <style type="text/css">
-    section .discuss {padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}
+    section .discuss {padding:20px;font-size:15px;background-color:#fdfdfd;border:1px solid #eee}
 </style>
 
 
@@ -36,7 +36,7 @@ In the real world, you're going to see codebases that contain many more files, o
 
 <div class="discuss">
   <h4>In Your Notebook</h4>
-  <p>Take a look at the files and directory structure of [this repo](https://github.com/mozilla/normandy). What are some things that seem new to you? Can you decipher what type of file each directory holds? Why are so many files prefixed with a dot?</p>
+  <p>Take a look at the files and directory structure of <a href="https://github.com/mozilla/normandy" target="_blank">this repo</a> What are some things that seem new to you? Can you decipher what type of file each directory holds? Why are so many files prefixed with a dot?</p>
 </div>
 
 You can expect the apps you work on in the future to be much closer to this size and structure than the simple 5-file, 3-folder structure you've started out with. It's important that we feel comfortable navigating large codebases and understand the how and why they require the complexity that we see here.
