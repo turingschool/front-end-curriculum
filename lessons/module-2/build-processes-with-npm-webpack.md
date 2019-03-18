@@ -7,9 +7,10 @@ module: 2
 
 
 <style type="text/css">
-    a:link,a:visited{text-decoration:none !important;color:#05c2d1}
-    section .discuss {padding:20px;font-size:15px;background-color:#fdfdfd;border:1px solid #eee}
+    a:link,a:visited{border-bottom: 0px;color:#05c2d1}
+    section .discuss {padding:20px;font-size:0.95em;background-color:#fcfcfc;border:1px solid #eee}
     hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
+    ul li {line-height: 1.5em;font-size: 0.95em;}
 </style>
 
 
