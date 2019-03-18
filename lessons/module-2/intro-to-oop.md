@@ -26,7 +26,7 @@ By the end of this lesson, you will be able to:
 - `Coupling` The level of connectedness between two objects
 
 ---
-
+<!-- 
 ### Journal Warm Up
 
 * Describe one new or interesting thing that you learned about OOP from your research yesterday
@@ -43,7 +43,7 @@ class Unicorn {
     console.log('**!*')
   }
 }
-```
+``` -->
 
 # Programming Paradigms 
 
