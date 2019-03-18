@@ -204,7 +204,13 @@ Besides more closely mimicking and following the rules of HTTP, having a local s
 
 ### Bundling & Pre-Processing Files
 
+This retrieval process we discussed, where a server goes to fetch any resources we might need (like an HTML or CSS file), can take quite a bit of time. Every time a resource is requested, we have to wait for that request to make a trip all the way to the server, wait for the server to find the file we're looking for, then wait for the server to send it back to us so we can actually utilize it.
 
+Because this process can be quite slow, we want to make as few trips to the server as possible. This means requesting the smallest amount of files that we can. One way to facilitate this would be to put all of our code into a single file. But that could get quite hairy and hard to organize! Our codebases are much more maintainable if we can separate our files out into independent, logical pieces of functionality.
+
+Webpack allows us to do just this. We can create as many JavaScript files as we want, to separate out and organize our logic, without having to worry about requesting all of those files later. During the **build process**, Webpack will find all of the files we need and combine them into a single file that will automatically be requested as we're viewing our application.
+
+This single file it generates is called a **bundle file**. We can see this generated code by running: `npm run build` in our terminal. This will create a `dist` directory with a file named `main.bundle.js`. You'll notice the bundle file is quite large and difficult to read. That's ok! You should never have to even look at this file as you're building your application. 
 
 
 
