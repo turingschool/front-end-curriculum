@@ -150,8 +150,8 @@ More often than not, you'll be using NPM to incorporate other people's code into
 
 ### Checks for Understanding
 
-* What are three main benefits that we get by using a tool like Webpack?
-* Why don’t we commit the `node_modules` directory?
 * Why is it important to have a `.gitignore` file in your repos?
+* Why don’t we commit the `node_modules` directory?
 * What is a server responsible for?
+* What are three main benefits that we get by using a tool like Webpack?
 * What is the purpose of the `package.json` file?
