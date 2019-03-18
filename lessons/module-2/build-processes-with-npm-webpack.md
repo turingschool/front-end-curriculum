@@ -7,7 +7,7 @@ module: 2
 
 
 <style type="text/css">
-    a:link,a:visited{border-bottom: 0px;color:#05c2d1}
+    section a:link,section a:visited{border-bottom: 0px;color:#05c2d1}
     section .discuss {color: #555;padding:20px;font-size:0.95em;background-color:#fcfcfc;border:1px solid #eee}
     hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
     ul li {line-height: 1.5em;font-size: 0.95em;}
@@ -165,9 +165,19 @@ Webpack is a robust and versatile development tool that provides us with several
 * bundles and minifies all of our JavaScript files into a single, condensed file to reduce network requests
 * pre-processes our code so we can write it how we like, then optimize it during the build process
 
-### The Development Server
+### Development Servers
+
+In order to understand why it's useful to have a development server, we must first understand what a server is and why it's helpful.
 
 We noticed earlier in our `package.json` file that we had a script called `start` -- typing `npm run start` into our terminal will fire up a development server and open our app in the browser at a URL like `localhost:8080`.
+
+### Bundling & Pre-Processing Files
+
+
+
+
+
+
 
 
 <hr />
