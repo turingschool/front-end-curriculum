@@ -145,8 +145,17 @@ You'll notice we could take that script value and run it directly in our termina
 
 More often than not, you'll be using NPM to incorporate other people's code into your projects, (as opposed to publishing your own packages). In fact, we've already been doing this quite frequently!
 
-- dependencies
-- devDependencies
+When we incorporate an NPM package into our codebase, we call it a **dependency**. There are two types of dependencies we're concerned with:
+
+* **devDependencies:** these are packages needed only for you, as the developer, to efficiently and effectively work on your application
+* **dependencies:** these are packages that are required for a user to actually view and interact with your application
+
+We can see the types of dependencies we might have for our project by looking at the above to sections in our `package.json` file. Some examples of `devDependencies` include:
+
+* eslint
+* mocha and chai
+
+Regular dependencies that will need to be included in our application for our users might be things like `jQuery`.
 
 <!-- gitignore file - includes node_modules -->
 
