@@ -7,7 +7,7 @@ module: 2
 
 
 <style type="text/css">
-    a:link,a:visited{text-decoration:none;color:#05c2d1}
+    a:link,a:visited{text-decoration:none !important;color:#05c2d1}
     section .discuss {padding:20px;font-size:15px;background-color:#fdfdfd;border:1px solid #eee}
 </style>
 
@@ -103,17 +103,34 @@ Instead of having us all re-invent the wheel, and waste time writing the same pi
 <!-- NPM is more for publishing code that is solving a very tiny, common problem that many developers will face. Other developers will download a package from NPM when they want to take advantage of its functionality in their project. GitHub is for publishing entire projects (that may or may not rely on NPM packages). Other developers will only download your project from GitHub if they want to contribute to it. That said, NPM packages are still published to GitHub for version control purposes, but full-blown GitHub projects have no real reason to be published to NPM. Think about idea-box from mod 1. You wouldn't publish that to NPM because most people aren't building projects that need an ideabox inside of them. -->
 
 
-More often than not, you'll be using NPM to incorporate other people's code into your projects. In fact, we've already been doing this quite frequently!
+#### Examining the package.json
+
+**Understanding scripts**
+
+- npm install
+- npm start
+- npm test
+- npm lint
+
+<!-- gitignore file - includes node_modules -->
+
+**Understanding Dependencies & Semver**
+
+More often than not, you'll be using NPM to incorporate other people's code into your projects, (as opposed to publishing your own packages). In fact, we've already been doing this quite frequently!
+
+- dependencies
+- devDependencies
+
 
 
 
 ### Webpack
 
-
-
-
-
-
+- Ability to separate out files for better organization and more isolation
+- Bundles them together into a single, minified file to reduce network requests
+- Gives us a development server to work with to more closely mimic being on the real internet
+- Live reload edits
+- Pre-process code so we can write it how we want
 
 
 
