@@ -4,7 +4,7 @@ length: 2 weeks
 tags: javascript, jquery, data, prototype methods, chai, mocha, testing
 ---
 
-2 week paired project for FE Mod 2 (week 2-3)
+2 week paired project for FE Mod 2 (weeks 2-3)
 
 ## Background and Description
 
