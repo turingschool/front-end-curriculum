@@ -26,11 +26,11 @@ By the end of this lesson, students should be able to:
 
 Up until now, the codebases you've created have been fairly bare-bones. The file structure may have looked something like this:
 
-* index.html
-* README.md
-* js/main.js
-* css/styles.css
-* images/logo.jpg
+* `index.html`
+* `README.md`
+* `js/main.js`
+* `css/styles.css`
+* `images/logo.jpg`
 
 In the real world, you're going to see codebases that contain many more files, organized in a much more complex manner. 
 
