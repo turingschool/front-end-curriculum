@@ -155,9 +155,20 @@ We can see the types of dependencies we might have for our project by looking at
 * eslint
 * mocha and chai
 
-Regular dependencies that will need to be included in our application for our users might be things like `jQuery`.
+If a user is viewing our application in their browser, it's unlikely they're trying to run our tests or lint the code we've written. So these dependencies are specifically for us, as developers, to enhance our development experience.
 
-<!-- gitignore file - includes node_modules -->
+Regular dependencies that will need to be included in our application for our users might be things like `jQuery` -- without jQuery, our DOM interactions would be broken. The users viewing our app in the browser would not be able to click on buttons or interact with forms, etc.
+
+As we determine that our project needs certain dependencies, we install them by running something like: `npm install <packageName>` in our terminal. This will automatically add that package to our `dependencies` section of the `package.json`. If we only need a development dependency, we can specify for NPM to store it in our `devDependencies` by modifying the command slightly: `npm install <packageName --save-dev`
+
+
+As we install dependencies, we populate a directory called `node_modules` - this is where our application looks for all of the packages our project relies on. It's important to note that **we do not commit the `node_modules` directory to GitHub**. Looking back at the root of our repo, we noticed a `.gitignore` file that told git specifically not to commit certain files and directories. Included in this list of ignored files was our `node_modules` directory. 
+
+
+<div class="discuss">
+  <h4>Turn and Talk</h4>
+  <p>Why wouldn't we want to commit our `node_modules` directory? If this directory is not being pushed up to GitHub, how do other developers still have access to each of our project's dependencies?</p>
+</div>
 
 
 <hr />
