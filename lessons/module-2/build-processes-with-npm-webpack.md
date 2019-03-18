@@ -7,11 +7,10 @@ module: 2
 
 
 <style type="text/css">
+    a:link,a:visited{text-decoration:none;color:#05c2d1}
     section .discuss {padding:20px;font-size:15px;background-color:#fdfdfd;border:1px solid #eee}
 </style>
 
-
-## Build Processes with NPM & Webpack
 
 ### Learning Goals
 
@@ -58,13 +57,60 @@ Looking at the top-level, root directory of our boilerplate, we already have mor
 
 With the exception of the `README.md` file, each of these is some sort of configuration file. A **configuration file** is a file that allows you to define how a particular tool you're using should interact with your codebase.
 
-<!-- INSTRUCTOR NOTES 
 
-Go into each of the configuration files a bit more descriptively:
+<div class="discuss">
+  <h4>Turn and Talk</h4>
+  <p>Based on the files in our root, what tools are we going to be using to facilitate the development of our application? (It's ok if you don't know what these tools do just yet.)</p>
+</div>
 
-* gitignore: Why would we want to ignore files? Why wouldn't we want to push up node_modules? If we don't push up our node_modules, how to other people *get* our node_modules?
+<!-- eslint, git, NPM, webpack -->
 
--->
+Let's dig deeper into some of these tools we've identified to help us better understand the files and structure we'll be working with.
+
+### NPM
+
+**The NPM Files:** `package.json` and `package-lock.json`
+
+NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish small, reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). 
+
+With this definition, there are two more words we'll run into that should be clarified:
+
+* **a package** is a small, independent piece of reusable code
+* **a dependency** is a package that your project relies on in order to work
+
+As an example, pretend that the `.filter()` method did not exist in JavaScript for filtering arrays. Developers would constantly have to write some sort of function that would allow them to easily filter any array they might need to work with. This means developers all over the world would be spending time writing some kind of code that looked like the following:
+
+```js
+Array.prototype.filter = function(callback) {
+  var filteredData = [];
+  
+  this.forEach(function(i) {
+    if (callback(i)) {
+      filteredData.push(i)
+    }
+  })
+  return filteredData;
+}
+```
+
+Instead of having us all re-invent the wheel, and waste time writing the same piece of code over and over again, NPM would allow someone to write this code once and publish it to the registry. From there, all other developers could simply download this code snippet and incorporate it into their project without having to write it from scratch.
+
+<div class="discuss">
+  <h4>Table Talk</h4>
+  <p>How does NPM differ from GitHub? They both seem to be places where developers can publish and download code.</p>
+</div>
+
+<!-- NPM is more for publishing code that is solving a very tiny, common problem that many developers will face. Other developers will download a package from NPM when they want to take advantage of its functionality in their project. GitHub is for publishing entire projects (that may or may not rely on NPM packages). Other developers will only download your project from GitHub if they want to contribute to it. That said, NPM packages are still published to GitHub for version control purposes, but full-blown GitHub projects have no real reason to be published to NPM. Think about idea-box from mod 1. You wouldn't publish that to NPM because most people aren't building projects that need an ideabox inside of them. -->
+
+
+More often than not, you'll be using NPM to incorporate other people's code into your projects. In fact, we've already been doing this quite frequently!
+
+
+
+### Webpack
+
+
+
 
 
 
