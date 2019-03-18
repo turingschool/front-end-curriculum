@@ -116,14 +116,28 @@ Instead of having us all re-invent the wheel, and waste time writing the same pi
 
 ### Examining the package.json
 
+Let's explore the [package.json](https://github.com/turingschool-examples/gametime-starter/blob/master/package.json) file a bit. This is a configuration file that provides NPM with important information about our project. It is automatically generated for us when we start a new project and run the command `npm init`. (This is very similar to when you start a new git repo!)
+
+We have some more generic information, like the title, description and author of our app, and a link to the repository and where to file issues. The more involved pieces of this file that we'll explore are the `scripts` and the `dependencies`/`devDependencies` sections.
+
 **Understanding scripts**
 
-- npm install
-- npm start
-- npm test
-- npm lint
+The scripts section of our `package.json` file allows us to specify commands to perform certain actions on our application that are helpful for the development process. These can include things like:
 
-<!-- gitignore file - includes node_modules -->
+* running an automated test suite
+* linting our code
+* starting up a local development server (more on this later)
+* running a build of our files (more on this later)
+
+Take the lint script for example:
+
+* We've specified a command with a key of `lint` - this means that we'll be able to type `npm run lint` in our terminal (we must be in the root directory of our repo)
+* The value of our `lint` key is `./node_modules/.bin/eslint 'src/**.js' 'test/**.js'` - this tells NPM that whenever we type `npm run lint` in our terminal, run this command to lint any JavaScript files in our `src` and `test` directory
+
+You'll notice we could take that script value and run it directly in our terminal and get the same results - but isn't it so much easier to type `npm run lint`? Pretty handy!
+
+*Note: Some NPM scripts are so common (like start and test) that you can even just type `npm test` instead of `npm run test` -- this shorthand won't work for all scripts. When in doubt, just type `npm run <command>`*
+
 
 **Understanding Dependencies & Semver**
 
@@ -131,6 +145,8 @@ More often than not, you'll be using NPM to incorporate other people's code into
 
 - dependencies
 - devDependencies
+
+<!-- gitignore file - includes node_modules -->
 
 
 <hr />
