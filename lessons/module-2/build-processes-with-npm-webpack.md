@@ -189,7 +189,18 @@ Webpack is a robust and versatile development tool that provides us with several
 
 In order to understand why it's useful to have a development server, we must first understand what a server is and why it's helpful.
 
-We noticed earlier in our `package.json` file that we had a script called `start` -- typing `npm run start` into our terminal will fire up a development server and open our app in the browser at a URL like `localhost:8080`.
+**What is a Server?**
+
+A server is a computer or program that handles the sending and retrieving of resources. There are many different types of servers, but when we build web applications, we’re most concerned with what’s called a Web Server or an HTTP Server. (You’ll often hear these two terms used interchangeably or simply shortened to “server”.) With web applications, the server retrieves any files we need in order to view our application. These can be HTML files, CSS files, images, JS files, etc.
+
+When we're viewing applications on the internet, this retrieval process follows certain rules and protocols *...you may have heard of hypertext transfer protocol ;)* The specifics of these rules are not important just yet, but recognize that accessing a website over HTTP behaves slightly differently than accessing an HTML file from your filesystem.
+
+If we were simply using the filesystem to open our application files in the browser, the environment we'd be building in would behave slightly differently than if we were interacting with an HTTP server. In order to reduce any potential differences here, we can set up our own HTTP server that runs on our machine. This is one of the first main benefits we get from webpack.
+
+
+We noticed earlier in our `package.json` file that we had a script called `start` -- typing `npm run start` into our terminal will fire up a development server and open our app in the browser at a URL like `localhost:8080`. This is how you'll most frequently be viewing your applications from now on as you develop them.
+
+Besides more closely mimicking and following the rules of HTTP, having a local server provides another added benefit of live-reloading our changes as we make them! In the past, you likely had to make a change to your file, save it, then refresh your browser to view the edit. Now when we make edits, we can see the browser page refresh automatically.
 
 ### Bundling & Pre-Processing Files
 
