@@ -212,13 +212,19 @@ Webpack allows us to do just this. We can create as many JavaScript files as we 
 
 This single file it generates is called a **bundle file**. We can see this generated code by running: `npm run build` in our terminal. This will create a `dist` directory with a file named `main.bundle.js`. You'll notice the bundle file is quite large and difficult to read. That's ok! You should never have to even look at this file as you're building your application. 
 
-
-
-
-
+<!-- practice adding a basic Game.js file in the /src directory and importing it into your index.js file, discuss the import/export syntax -->
 
 <hr />
 
+
+### Further Reading
+
+* [Import/Export Syntax](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f)
+* [MDN Export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export)
+* [MDN Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+* [Semver](https://semver.org/) | [NPM Semver](https://docs.npmjs.com/about-semantic-versioning)
+
+<hr />
 
 ### Checks for Understanding
 
