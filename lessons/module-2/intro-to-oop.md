@@ -99,26 +99,6 @@ let instructor = {
 }
 ```
 
-Based on this object, we can say: "Our instructor is funny and smart and can teach lessons and grade projects." 
-
-Let's think back to our primary education, and highlight the parts of speech in this sentence.
-
-* **noun:** instructor
-* **adjectives:** funny, smart
-* **verbs:** teach, grade
-
-If we map this back to JavaScript, we can assume:
-
-* **noun:** the name of our object (or properties on our object that are not methods)
-* **adjectives:** the values of our properties (sometimes these will not actually be adjectives, but the idea here is that the values of our properties are descriptors for our object)
-* **verbs:** the methods on our object
-
-#### Turn and Code
-
-Remembering these vocabulary rules will help you with creating semantic naming conventions for your objects and their properties. Take the following sentence and create an object based off of it:
-
-<blockquote>The chair has a padded cushion and four legs with wheels that allow it to move from room to room.</blockquote>
-
 ## Classes
 
 Let's go back to the instructor object we created earlier - say we're building an application for Turing that provides profiles for all the instructors on staff. We'd have to create about 30 different instructor objects that all have the same properties and methods, but whose values each vary. (e.g. each instructor has a different name). This could be really repetitive and exhausting to build out individually.
