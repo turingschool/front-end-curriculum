@@ -67,7 +67,7 @@ With the exception of the `README.md` file, each of these is some sort of config
 
 Let's dig deeper into some of these tools we've identified to help us better understand the files and structure we'll be working with.
 
-### NPM
+## NPM
 
 **The NPM Files:** `package.json` and `package-lock.json`
 
@@ -103,7 +103,7 @@ Instead of having us all re-invent the wheel, and waste time writing the same pi
 <!-- NPM is more for publishing code that is solving a very tiny, common problem that many developers will face. Other developers will download a package from NPM when they want to take advantage of its functionality in their project. GitHub is for publishing entire projects (that may or may not rely on NPM packages). Other developers will only download your project from GitHub if they want to contribute to it. That said, NPM packages are still published to GitHub for version control purposes, but full-blown GitHub projects have no real reason to be published to NPM. Think about idea-box from mod 1. You wouldn't publish that to NPM because most people aren't building projects that need an ideabox inside of them. -->
 
 
-#### Examining the package.json
+### Examining the package.json
 
 **Understanding scripts**
 
@@ -124,7 +124,7 @@ More often than not, you'll be using NPM to incorporate other people's code into
 
 
 
-### Webpack
+## Webpack
 
 - Ability to separate out files for better organization and more isolation
 - Bundles them together into a single, minified file to reduce network requests
