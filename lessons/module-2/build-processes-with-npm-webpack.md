@@ -9,6 +9,7 @@ module: 2
 <style type="text/css">
     a:link,a:visited{text-decoration:none !important;color:#05c2d1}
     section .discuss {padding:20px;font-size:15px;background-color:#fdfdfd;border:1px solid #eee}
+    hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 </style>
 
 
@@ -19,6 +20,9 @@ By the end of this lesson, students should be able to:
 * Define packages and modules
 * Articulate why we use tools like Webpack and NPM, and explain the benefits of each
 * Define what a "build process" is and why it's helpful to have one
+
+
+<hr />
 
 
 ## Codebase Organization
@@ -41,6 +45,9 @@ In the real world, you're going to see codebases that contain many more files, o
 You can expect the apps you work on in the future to be much closer to this size and structure than the simple 5-file, 3-folder structure you've started out with. It's important that we feel comfortable navigating large codebases and understand the how and why they require the complexity that we see here.
 
 In order to demystify some of the complex structure we'll see in the future, let's explore the [gametime-starter](https://github.com/turingschool-examples/gametime-starter) repo.
+
+
+<hr />
 
 
 ## Configuration Files
@@ -66,6 +73,10 @@ With the exception of the `README.md` file, each of these is some sort of config
 <!-- eslint, git, NPM, webpack -->
 
 Let's dig deeper into some of these tools we've identified to help us better understand the files and structure we'll be working with.
+
+
+<hr />
+
 
 ## NPM
 
@@ -122,6 +133,7 @@ More often than not, you'll be using NPM to incorporate other people's code into
 - devDependencies
 
 
+<hr />
 
 
 ## Webpack
@@ -133,7 +145,7 @@ More often than not, you'll be using NPM to incorporate other people's code into
 - Pre-process code so we can write it how we want
 
 
-
+<hr />
 
 
 ### Checks for Understanding
