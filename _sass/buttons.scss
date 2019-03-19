@@ -17,3 +17,24 @@ button.active {
   background-color: #E0E0E0;
   border: 1px solid #AEAEAE;
 }
+
+// This will eventually replace the button style above
+.btn {
+  font-family: $bold-copy;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 50px;
+  text-transform: uppercase;
+  padding: 18px 30px 12px;
+  margin: 5px;
+}
+
+.btn-dark {
+  background-color: $dark-gray;
+  color: $light-gray;
+}
+
+.btn-light {
+  background-color: $light-gray;
+  color: $dark-gray;
+}
