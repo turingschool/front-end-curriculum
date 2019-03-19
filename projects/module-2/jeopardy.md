@@ -27,9 +27,9 @@ Game play,
 
 ```
 Rounds,
-  - 1st Round must have 4 categories, with 5 clues each, and point values ranging from 100 - 500
+  - 1st Round must have 4 categories, with 4 clues each, and point values ranging from 100 - 400
   - One clue in the first round must be a 'Daily Double'
-  - 2nd Round must have 4 categories, with 5 clues each, and point values ranging from 200 - 1,000
+  - 2nd Round must have 4 categories, with 4 clues each, and point values ranging from 200 - 800
   - Two clues in the second round must be a 'Daily Double'
   - 3rd Round must have a single category and a single clue that behaves like a 'Daily Double'
   - 3rd Round must only display the category, allow each player to input a wager, then display the clue
