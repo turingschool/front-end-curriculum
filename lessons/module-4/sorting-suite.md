@@ -6,7 +6,7 @@ title: Sorting Suite
 
 Sorting algorithms are one of the common domains for studying Computer Science data structures and algorithms. They give us an opportunity to focus on algorithms of various complexity all solving a relatively simple problem.
 
-**This is mythical creatures for Mod 2.**
+**This is mythical creatures for Mod 4. Technical interviews love giving sorting algorithms as challenges**
 
 Writing sorting algorithms will help you:
 - Practice using ES6 syntax like destructuring and the spread operator
@@ -25,8 +25,7 @@ The goals of Sorting Suite are as follows:
 - Begin to understand optimization and efficiency
 - Learn to write (and love) unit tests
 
-In this homework project, you are challenged to implement *four*
-fundamental sorting algorithms. Your final submission should include at least these eight files:
+The challenge is to implement *four* fundamental sorting algorithms. Create these eight files:
 
 * `bubbleSort.js`
 * `bubbleSort-test.js`
@@ -37,12 +36,12 @@ fundamental sorting algorithms. Your final submission should include at least th
 * `quickSort.js`
 * `quickSort-test.js`
 
-For your testing start with testing small arrays of numbers and/or letters. We want to see the test suite scale up in complexity.
+For your testing start with testing (you can use simple unit tests, like in Mythical Creatures; we recommend mocha and chai) small arrays of numbers and/or letters. The test suite should scale up in complexity.
 
 For more advanced testing you will need to generate arrays of numbers to see how large of an array your different
 sorting algorithms can sort.
 
-The test suites between sorts will be very similar; however, we want to see you stress-test the sorting algorithms. Some are more efficient than others and can get through larger arrays. How much more efficient is merge sort than bubble sort?
+The test suites between sorts will be very similar; however, be sure to stress-test the sorting algorithms. Some are more efficient than others and can get through larger arrays. How much more efficient is merge sort than bubble sort?
 
 Your testing utilities give each test 2 seconds to run. How many numbers can each of your algorithms *consistently* sort in that amount of time?
 
@@ -220,7 +219,7 @@ Since we have no more elements in the unsorted section of our array, we are done
 
 Merge sort is much faster than bubble and insertion sort. It typically has two parts
 1: a merge function which takes two sorted arrays and merges them into one sorted array
-2: a mergeSort function which splits an unsorted array into pieces so that they can be sorted. 
+2: a mergeSort function which splits an unsorted array into pieces so that they can be sorted.
 
 It can be solved elegantly with a recursive solution.
 
@@ -297,7 +296,7 @@ Example of one iteration.
 
 // Move larger elements to the right of the pivot
 // Move smaller elements to the left of the pivot
-               
+
          p
 [ 2, 1, (3), 9, 8, 5, 6 ]
 ```
@@ -308,7 +307,7 @@ We can now use a recursive solution to quick sort all the numbers on each side o
 something like...
 ```
 quickSort([2, 1]);
-    
+
     p
 [2, 1]
 
@@ -316,7 +315,7 @@ quickSort([2, 1]);
     p
 [1, 2]
 
-// quickSort([1]) 
+// quickSort([1])
 // since an array of one item is already sorted, return array
 
 quickSort([9, 8, 5, 6])
@@ -332,8 +331,11 @@ quickSort([9, 8, 5, 6])
 // quicksort([8, 9])
 ```
 
-### Extension
-Use your favorite sorting algorithm to reimplement the functionality of [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
+### Push Yourself (extensions)
+
+* Look into implementing radix sort, one of the most efficient algorithms!
+* Try out heap sort!
+* Use your favorite sorting algorithm to reimplement the functionality of [Array.prototype.sort](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 
 <!---
 ## Evaluation
