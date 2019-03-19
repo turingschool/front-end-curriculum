@@ -1,6 +1,6 @@
 ---
 title: JSON and localStorage
-length: 60
+length: 180
 tags: web apis, storage, persistence
 ---
 
@@ -73,7 +73,11 @@ Check out the docs. What other methods are available to you when using localStor
 ### localStorage in Action
 How can we improve the functionality of the following codepen with local storage?
 
-<p data-height="265" data-theme-id="0" data-slug-hash="vVaGLo" data-default-tab="html,result" data-user="khalidwilliams" data-pen-title="Local Storage EX" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/vVaGLo/">Local Storage EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="khalidwilliams" data-slug-hash="zeWjwM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Local Storage Contact EX">
+  <span>See the Pen <a href="https://codepen.io/khalidwilliams/pen/zeWjwM/">
+  Local Storage Contact EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## What is JSON?
@@ -127,7 +131,11 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 8. `parsedObject` (We are now back to our original object!)
 
 ### JSON in Action
-<p data-height="265" data-theme-id="0" data-slug-hash="zyKqYX" data-default-tab="js,result" data-user="khalidwilliams" data-pen-title="JSON Example" class="codepen">See the Pen <a href="https://codepen.io/khalidwilliams/pen/zyKqYX/">JSON Example</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="khalidwilliams" data-slug-hash="ErELRJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="JSON Contact Example">
+  <span>See the Pen <a href="https://codepen.io/khalidwilliams/pen/ErELRJ/">
+  JSON Contact Example</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Data Attributes

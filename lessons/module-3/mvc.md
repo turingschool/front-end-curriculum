@@ -160,6 +160,6 @@ play into this? Work on this for 10 minutes, then we'll reconvene.
 ## References
 
 [MVC
-Architecture](https://developer.mozilla.org/en-US/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture)  
+Architecture](https://developer.mozilla.org/en-US/docs/Glossary/MVC)
 [Understanding
 MVC](https://blog.codinghorror.com/understanding-model-view-controller/)  

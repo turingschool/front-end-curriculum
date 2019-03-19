@@ -24,7 +24,7 @@ Similar to what you might be asked to do on the job, we've given you a comp with
 
 **Note: DO NOT use CSS `flex-box` or `grid` for this project (If you don't know what this is, no worries! You'll learn more about these techniques in the coming weeks!)**
 
-## Basic Project Requirements
+## Phase One: Basic Requirements
 
 #### Step 1
 
@@ -39,7 +39,7 @@ Style your site using CSS -- aim to get it as visually close to the comp as poss
 
 Create a `README.md` file that gives a brief overview of your project (don't forget to make sure to include the comp as well as a screen grab of your finished site!)
 
-## Extensions
+## Phase Two: More Better
 
 We won't cover how to do these in class before this project ends -- challenge yourself and investigate how to tackle these tasks. And remember: it is ok if you're not sure how to do these so take a crack at it and experiment, we'll go over this material together soon!
 
@@ -76,7 +76,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
   * `git remote add origin git@github.com:Kalikoze/Dog-Party.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Dog-Party.git` -- this step makes the connection between your local files and the repo that lives on GitHub)
   * `git push -u origin master` (this step pushes your local code up to your GitHub repo)
 6. Once you see your code up in your repository on GitHub, go to `Settings` and publish your site on GitHub Pages, a great way to host static sites directly through GitHub
-7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1Gfvrp74oj80tCadz4_J0YeQBha92Cf3nWx-ACKssBMw/edit#gid=0)
+7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=0)
 
 
 ## Design Comp

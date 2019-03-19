@@ -297,17 +297,17 @@ if (hoursOfSleep < 6) {
 var nextLocation = "home";
 
 if (nextLocation === "home") {
-  alert("It's been a long day, let's go home!");
+  console.log("It's been a long day, let's go home!");
 } else if (nextLocation === "work") {
-  alert("Good morning, finding the fastest route to work!");
+  console.log("Good morning, finding the fastest route to work!");
 } else {
-  alert("Finding location.  Found it!  Let's go!");
+  console.log("Finding location.  Found it!  Let's go!");
 }
 ```
 
 #### Your Turn
 
-Write a conditional that gives a different alert message based on your favorite kind of animal.
+Write a conditional that logs a different message based on your favorite kind of animal.
 
 ## Functions
 Functions are a way to group statements together to perform a specific task. Functions are reusable blocks of code. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
@@ -315,8 +315,8 @@ Functions are a way to group statements together to perform a specific task. Fun
 ### Anatomy of a Function:
 ```javascript
 function makeStatements() {
-  var firstStatement = 'Pizza is amazing';
-  alert('Pizza is AMAZING!');
+  var firstStatement = 'Pizza is AMAZING!';
+  console.log('Burritos taste delicious!');
   console.log(firstStatement);
 }
 ```
@@ -338,11 +338,11 @@ When this code is read, `makeStatements()` is "invoked", all three statements wi
 #### Your Turn
 With the person across from you, create your own functions in the console:
 
-- Write a function that alerts the user with a message of "YO!", and then logs to the console a sum of eight different integers.
+- Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.
 
-- Write a function that assigns three different math equations to three different variables, then log the sum of the values of all three variables.
+- Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
 
-- Write a function that declares a `firstName` variable and a `lastName` variable, then alerts the user with a message that incorporates the full name, and then logs a [random number]( http://frontend.turing.io/independent-study/random-numbers.html) to the console.
+- Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number]( http://frontend.turing.io/independent-study/random-numbers.html) to the console.
 
 ### Passing Information to a Function:
 Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_ in the function declaration. These are place holders that you identify with appropriately named labels inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as a means to pass values.

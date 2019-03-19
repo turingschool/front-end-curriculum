@@ -1,7 +1,7 @@
 # JavaScript Fundamentals: Data Types & Structures
 
 ### Learning Goals
-* Review and discuss JavaScript fundamentals: functions and data types
+* Review and discuss JavaScript fundamentals
 * Practice working with functions, primitive, and complex data types
 
 ## Vocab
@@ -23,8 +23,7 @@
 ### Journal Warm Up
 
 * Explain a function to a five year old
-* What might be an example of why you would use an array?
-* What are the most important/signifant things someone should know about objects?
+* Imagine you are on a technical interview, and an engineer asks you 'what is a data type?' How would you respond?
 
 <!-- * Consider this [code](https://codepen.io/plovett/pen/vVOGxN?editors=1112). The `log` will return `object`. Why do you think this is? -->
 <!-- 
@@ -34,6 +33,14 @@
 ``` -->
 
 ## Simple / Primitive Data Types
+
+### Read
+
+[Primitive Data Types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
+
+* What are the 6 primitive data types?
+* What are 3 characteristics of primitive data types?
+
 
 ```js
 // boolean values
@@ -56,6 +63,8 @@ undefined
 '34'
 'JavaScript is great!'
 ```
+
+
 ##### [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
 The typeof operator returns a string indicating the type of the operand.
 

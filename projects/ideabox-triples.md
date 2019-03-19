@@ -157,6 +157,16 @@ The submit button should be disabled when there is not valid content in both inp
 * Upvote and downvote happen by increasing or decreasing the integer
 * How the idea is displayed should be done using an array of quality strings, where the integer value is used to pull a certain string via its index.
 
+## Week 1 Check-ins
+* UI mostly completed
+* Can append each idea card on the DOM
+* Ideas are stored in localStorage
+* Idea cards persist after page refresh
+
+## Submission Details
+
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=496549355)
+
 #### Layout comps
 
 Desktop layout:
@@ -174,6 +184,7 @@ Color, font, and icon spec:
 #### Link to icon files
 
 You will need the `svg` files for the delete, upvote, and downvote icons. [Here's the link.](https://drive.google.com/drive/folders/1q3-CHruC1rtfsFe_pMa9gLUr3My71_Uq?usp=sharing)
+
 
 [desktop-base]: /assets/images/projects/ideabox/ideabox-triples-01.jpg
 [mobile-full]: /assets/images/projects/ideabox/ideabox-triples-02.jpg
@@ -223,11 +234,12 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 * [ ]  Advanced Beginner - Application adds to the above by correctly implementing a data model for the `Idea` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
+  * [ ]  Uses event delegation correctly on dynamic elements for deleting and editing an idea (clicking outside of the text field)
   * [ ]  All functions are less than 10 lines
   * [ ]  There are no global variables aside from query selectors and an array for your ideas
   * [ ]  There are no nested if else statements
 * [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
-  * [ ]  Using logical operators instead of if/else statements where applicable
+  * [ ]  Uses logical operators instead of if/else statements where applicable
   * [ ]  Application changes anonymous functions to arrow functions and changes all variables to be block scoped (`let` and `const`)
   * [ ]  Application stores all ideas in one array in local storage, instead of individually
   * [ ]  When 'Filtering and Searching by Text' and 'Filtering by Importance', ideas that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view

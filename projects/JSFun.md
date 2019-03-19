@@ -44,17 +44,8 @@ We will break you into groups of 3-4 for the afternoon to work through some of t
 
 ### At Home
 
-There will be many more problems in the repo than you'll have time to solve during class. At home, you should work on the remaining problems for that concept on your own. Do not worry about completing *all* of the problems. Focus more on being able to thoroughly understand and articulate the solution to the problems you do make it through. For each problem you solve, also add an annotation for how you would walk someone through arriving at that solution.
+There will be many more problems in the repo than you'll have time to solve during class. At home, you should work on the remaining problems for that concept on your own. Do not worry about completing *all* of the problems. Focus more on being able to thoroughly understand and articulate the solution to the problems you do make it through. For each problem you solve, also add an annotation for how you would walk someone through arriving at that solution. This will help with your articulation piece during evaluations.
 
-## Evaluation
-
-Repos are due on **Friday of week 1 at 12PM**. Instructors will run your solutions through an automated test suite to evaluate for accuracy. On Monday of week 2, we will divide the class into equal parts to work with a single instructor. Each person will receive a problem at random and articulate their way through a solution.
-
-### Accuracy 
-
-The automated test suite will ensure that your solutions are returning the correct results. For prototype problems, it will also ensure that you've used the correct prototype methods to arrive at your solution. (While there are often many different ways to solve prototype problems, and some aren't necessarily "wrong", there is usually a preferred approach, which is what we will assess against.) Instructors will send you the results of your test suite that will include an accuracy percentage for each core concept.
-
-*Note: We are aware you can simply run the scope and context exercises in a repl and receive the correct solutions. We encourage you to attempt them on your own first, and leave your initial solutions & annotations in place even if they are incorrect. You are more than welcome to add the correct solutions and annotations as comments in your codebase after the fact, but we'd still like to see where you may have initially gone wrong. This feedback will allow us to more accurately assess where concepts are foggy, what we might need to teach more thoroughly, and where you might need extra help. Remember that this project has no effect on your final grade for the inning, so feel comfortable making mistakes!*
 
 ### Articulation
 
@@ -65,5 +56,5 @@ Eloquent articulation:
 * is understandable to both senior and junior engineers
 * makes use of proper vocabulary terms and avoids meaningless words like "thing" and "stuff"
 * clearly demonstrates a solid understanding of the concepts needed to solve the problem
-* is not lazy - it does not skip over important explanatory details
+* does not skip over important explanatory details
 

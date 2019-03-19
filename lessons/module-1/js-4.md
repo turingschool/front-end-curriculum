@@ -93,16 +93,19 @@ var schoolName = school['name'];
 var schoolCapacity = school['capacity'];
 ```
 
-Bracket Notation is usually used when the name of the property is stored in a variable.  This can make it dynamic, since the value in a variable can _vary_.
+Bracket Notation is usually used when the name of the property is stored in a variable or parameter.  This can make it dynamic, since the value in a variable can _vary_.
 
 ```js
-var prop = 'name';
-var schoolName = school[prop];
+function getSchoolValue(prop) {
+  return school[prop];
+}
+
+getSchoolValue('name');
 ```
 
 Another example can be seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
 
-Default to using Dot Notation unless you find a need to use bracket notation.
+Default to using Dot Notation unless you need to access properties with a variable/parameter.  
 
 #### Adding a Property
 
@@ -125,6 +128,7 @@ console.log(school);
 // }
 ```
 
+**Note:** We are also able to reassign the value of a property in a similar way. Try reassigning the property, `currentStudents`, to 100.
 
 ### Your Turn
 Step 1: Take a few minutes to write about the below individually:
@@ -275,7 +279,7 @@ This is where classes come in. **Classes** can serve as object factories that al
 
 ### Warmup
 
-In your notebook brainstorm five **types** of objects and **specific** instances of that object that are at Turing.
+With the person next to you, brainstorm five **types** of objects and **specific** instances of that object that are at Turing.
 
 For example:
 
@@ -322,7 +326,7 @@ Run the repl to see what the fridges are showing at this point. We currently hav
 
 ### Your Turn
 
-With your pair, define a LapTop class in a repl and create instances of that class.
+With your pair, define a Laptop class in a repl and create instances of that class.
 
 ### Constructor
 
@@ -347,8 +351,6 @@ Remember, objects are useful because they can store *State* and *Behavior*. Let'
 
 ### Practice
 
-In our repl, we'll add some attributes to the `Fridge` class.
-
 We can leverage our good friend `this` to add some properties to our instances. Inside of a class, `this` refers to an instance of that class.
 
 For instance if we wanted to use a class to create a pizza object, here's what that would look like next to an object literal that accomplishes the same thing.
@@ -358,7 +360,7 @@ For instance if we wanted to use a class to create a pizza object, here's what t
 var pizza1 = {
   crust: 'thin',
   sauce: 'red',
-  toppings: ['pepperoni']
+  toppings: ['cheese', 'pepperoni', 'black olives']
 }
 
 // class
@@ -369,11 +371,11 @@ class Pizza {
     this.toppings = toppings;
   }
 }
-var pizza2 = new Pizza('thin', 'red', ['pepperoni']);
 
+var pizza2 = new Pizza('thin', 'red', ['cheese', 'pepperoni', 'black olives']);
 ```
 
-Now lets look at a slightly less contrived example:
+Now lets look at a slightly less contrived example by adding some attributes to our `Fridge` class.:
 
 ```javascript
 class Fridge {

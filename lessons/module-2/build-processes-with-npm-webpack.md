@@ -5,252 +5,233 @@ tags: npm, webpack, build processes
 module: 2
 ---
 
-## Build Processes with NPM & Webpack
+
+<style type="text/css">
+    section a:link,section a:visited{border-bottom: 0px;color:#05c2d1}
+    section .discuss {color: #555;padding:20px;font-size:0.95em;background-color:#fcfcfc;border:1px solid #eee}
+    hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
+    ul li {line-height: 1.5em;font-size: 0.95em;}
+    em { font-size: 0.85em; }
+</style>
+
 
 ### Learning Goals
 
 By the end of this lesson, students should be able to:
 
 * Define packages and modules
-* Articulate why package managers exist as well how they are helpful to developers
+* Articulate why we use tools like Webpack and NPM, and explain the benefits of each
+* Define what a "build process" is and why it's helpful to have one
 
-### Warm Up
 
-In your journal, pretend you're asked the following question on a technical interview:
+<hr />
 
-- What is a package or module in NPM? What is the difference?
+
+## Codebase Organization
+
+Up until now, the codebases you've created have been fairly bare-bones. The file structure may have looked something like this:
+
+* `index.html`
+* `README.md`
+* `js/main.js`
+* `css/styles.css`
+* `images/logo.jpg`
+
+In the real world, you're going to see codebases that contain many more files, organized in a much more complex manner. 
+
+<div class="discuss">
+  <h4>In Your Notebook</h4>
+  <p>Take a look at the files and directory structure of <a href="https://github.com/mozilla/normandy" target="_blank">this repo</a> What are some things that seem new to you? Can you decipher what type of file each directory holds? Why are so many files prefixed with a dot?</p>
+</div>
+
+You can expect the apps you work on in the future to be much closer to this size and structure than the simple 5-file, 3-folder structure you've started out with. It's important that we feel comfortable navigating large codebases and understand the how and why they require the complexity that we see here.
+
+In order to demystify some of the complex structure we'll see in the future, let's explore the [gametime-starter](https://github.com/turingschool-examples/gametime-starter) repo.
+
+
+<hr />
+
+
+## Configuration Files
+
+Looking at the top-level, root directory of our boilerplate, we already have more files than we're used to working with at a time:
+
+* `.eslintrc` - defines our rules for stylistic conventions we want our code to follow
+* `.gitignore` - tells git not to push certain files to our remote repo
+* `README.md` - allows us to describe our application and provide any instructions to people trying to use or contribute to it
+* `package-lock.json` - builds a dependency tree of any third-party code we are relying on and what versions of those packages our app is using
+* `package.json` - describes our application to NPM and what dependencies we need in order to use and develop the app
+* `webpack.config.js` - tells webpack how to read and build our files
+
+
+With the exception of the `README.md` file, each of these is some sort of configuration file. A **configuration file** is a file that allows you to define how a particular tool you're using should interact with your codebase.
+
+
+<div class="discuss">
+  <h4>Turn and Talk</h4>
+  <p>Based on the files in our root, what tools are we going to be using to facilitate the development of our application? (It's ok if you don't know what these tools do just yet.)</p>
+</div>
+
+<!-- eslint, git, NPM, webpack -->
+
+Let's dig deeper into some of these tools we've identified to help us better understand the files and structure we'll be working with.
+
+
+<hr />
+
 
 ## NPM
 
-<!-- npmjs.org documentation--> 
-<!-- command line tool for npm install and npm init -->
+**The NPM Files:** `package.json` and `package-lock.json`
 
-Up until now, you have not had to deal with build processes or worry much about NPM since you've been building out pretty basic applications. From this point forward, you will be seeing a lot of build processes, so it's important that you have a high-level understanding of what is happening behind the scenes.
+NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish small, reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). 
 
+With this definition, there are two more words we'll run into that should be clarified:
 
-When need to clarify and build on some of the things that you already know
-- Introduce this now because you will see a lot of these build processes going forward... infinite amount of stuff in your repo - lots of things happening behind the scenes
+* **a package** is a small, independent piece of reusable code
+* **a dependency** is a package that your project relies on in order to work
 
-Why do we need all of these things???
+As an example, pretend that the `.filter()` method did not exist in JavaScript for filtering arrays. Developers would constantly have to write some sort of function that would allow them to easily filter any array they might need to work with. This means developers all over the world would be spending time writing some kind of code that looked like the following:
 
-Then you can be more comfortable jumping into other codebases that have these types of things
-
-
-### What is NPM?
-
-* What is a package or module? Why do they exist?
-* What is a package manager? Why do they exist?
-
-Per the documention:
-* A package is a file or directory that is described by a package.json. This can happen in a bunch of different ways! For more info, see "What is a package?, below.
-* A module is any file or directory that can be loaded by Node.js' require(). Again, there are several configurations that allow this to happen. For more info, see "What is a module?", below.
-
-Package/module: a small piece of independent and reusable code that solves a problem for developers. 
-
-Node Package Manager: 
-
-
-It's hard to come up with definitons for things. We've talked about modular code and we've been working with packages since mod 1
-
-- Small piece of independent and reusable code => definition 
-
-Examples of packages we have installed so far
-- mocha
-- chai
-- eslint
-- jquery (version of it that is just a JS fiel that makes it a library; however, you can include this as a package with npm install. This is the packaged version of the jquery library)
-
- Mocha and chai allowed all of us to test our codebases. Difference between a oacjage and method on a class => packages solve a problem for all developers. A method just solves a problem for the one developer. Package makes it so any dev who wants  to use it to incorporate it into their project.
-
-The number of packages you install will destroy your computer. 
-
-What is NPM? -----> Node Package Manager
-
-
-#### Turn and Talk
-Before we talk about this sccccchtuffff, here are some articles to read based on your assinged numner. Write down anything that seems like a useful piece of information for defining what NPM is. Anything that is confusing and stands out
-
-1. https://medium.freecodecamp.org/javascript-package-managers-101-9afd926add0a (stop when you get to ‘flat vs. nested dependencies’)
-2. https://spring.io/understanding/javascript-package-managers (stop when you get to ‘using JS package managers’)
-3. https://docs.npmjs.com/getting-started/what-is-npm (stop when you get to ‘where do I start?’)
-4. https://www.codecademy.com/articles/what-is-node (stop when you get to “why node”)
-
-- How is this different from GitHub??? => Good question to ask students as part of the turn and talk. (Your code will only serve you whereas npm packages allow for others to use your code)
-
-- Node ecosystem kept the same as the FE dev system
-- Gives you the ability to publish your work/access the work of others
-- Packages are a little more general - they solve general problems for developers
-- Bower allows you to install packages to anything FE 
-
-- Pacakages within NPM are more strictly related to code that you are running on a server or in  your terminal (good segue into the next section)
-
-(Spies - were an additional piece of code tha twe used to adapt the chai paca)
-
-
-Definition: NPM: A centralized place to publish your work and access the work of others
-
-
-### Working with NPM
-    * Init
-    * Installations: —save, —save-dev, —global
-    * Examining the package.json file
-
-
-Code Along portion
-```bash
-mkdir foo
-cd foo
-npm init
-
-
+```js
+Array.prototype.filter = function(callback) {
+  var filteredData = [];
+  
+  this.forEach(function(i) {
+    if (callback(i)) {
+      filteredData.push(i)
+    }
+  })
+  return filteredData;
+}
 ```
 
-Anatomy of a package json
+Instead of having us all re-invent the wheel, and waste time writing the same piece of code over and over again, NPM would allow someone to write this code once and publish it to the registry. From there, all other developers could simply download this code snippet and incorporate it into their project without having to write it from scratch.
 
-Fill out the package json file
-name - jeopardy
-version 1.0.0
-desc: this is a jeopardy game
-entry point : index.js
-test command: mocha test.js
-git repo: (url for git repositry)
-authors: your name and the other people working on the project
-license: ISC
+<div class="discuss">
+  <h4>Table Talk</h4>
+  <p>How does NPM differ from GitHub? They both seem to be places where developers can publish and download code.</p>
+</div>
 
-Package jsons track dependencies - but it also allows you to set metadata that describes your project
+<!-- NPM is more for publishing code that is solving a very tiny, common problem that many developers will face. Other developers will download a package from NPM when they want to take advantage of its functionality in their project. GitHub is for publishing entire projects (that may or may not rely on NPM packages). Other developers will only download your project from GitHub if they want to contribute to it. That said, NPM packages are still published to GitHub for version control purposes, but full-blown GitHub projects have no real reason to be published to NPM. Think about idea-box from mod 1. You wouldn't publish that to NPM because most people aren't building projects that need an ideabox inside of them. -->
 
 
-npm init 
-* Install npm packages
-create package yourself
+### Examining the package.json
 
-The require is what allows to bring in these modules
+Let's explore the [package.json](https://github.com/turingschool-examples/gametime-starter/blob/master/package.json) file a bit. This is a configuration file that provides NPM with important information about our project. It is automatically generated for us when we start a new project and run the command `npm init`. (This is very similar to when you start a new git repo!)
 
-If someone has a suggestion, they can set up a PR on that person's PR to improve the package
+We have some more generic information, like the title, description and author of our app, and a link to the repository and where to file issues. The more involved pieces of this file that we'll explore are the `scripts` and the `dependencies`/`devDependencies` sections.
 
+**Understanding scripts**
 
-https://docs.npmjs.com/getting-started/installing-npm-packages-globally
-https://docs.npmjs.com/cli/install
+The scripts section of our `package.json` file allows us to specify commands to perform certain actions on our application that are helpful for the development process. These can include things like:
 
-<!-- 
-    Turn and Talk should include:
-Installation and the flags that you are using are important to know... Know that you can add commands for whatever you want to run.
- -->
+* running an automated test suite
+* linting our code
+* starting up a local development server (more on this later)
+* running a build of our files (more on this later)
 
-## Servers
+Take the lint script for example:
 
-In your journal:
-- What is an HTTP server?
-- What is the difference between client-side and server-side?
+* We've specified a command with a key of `lint` - this means that we'll be able to type `npm run lint` in our terminal (we must be in the root directory of our repo)
+* The value of our `lint` key is `./node_modules/.bin/eslint 'src/**.js' 'test/**.js'` - this tells NPM that whenever we type `npm run lint` in our terminal, run this command to lint any JavaScript files in our `src` and `test` directory
 
-Client-side
-Code that runs after the webpage is loaded
+You'll notice we could take that script value and run it directly in our terminal and get the same results - but isn't it so much easier to type `npm run lint`? Pretty handy!
 
-Server-side
-Code that run before a page is loaded
-Very specific to fetching files
-This more for mod4
-Going into a DB and grabbing any application data that is needed to present that data to the user.
-Resource identification
+*Note: Some NPM scripts are so common (like start and test) that you can even just type `npm test` instead of `npm run test` -- this shorthand won't work for all scripts. When in doubt, just type `npm run <command>`*
 
 
-HTTP server/webserver
-Hypertext transfer protocol
-Implementation of that in software
+**Understanding Dependencies & Semver**
 
-Program that serves information to users that are reqesting it via HTTP 
+More often than not, you'll be using NPM to incorporate other people's code into your projects, (as opposed to publishing your own packages). In fact, we've already been doing this quite frequently!
 
-A server is a computer or a program that handles sending/receiving resources to a client (the client is the browser)
+When we incorporate an NPM package into our codebase, we call it a **dependency**. There are two types of dependencies we're concerned with:
 
-Files are the resources that we need
-The server sees what kind of resources exist and then it's sent to the browser for everything that is needed.
+* **devDependencies:** these are packages needed only for you, as the developer, to efficiently and effectively work on your application
+* **dependencies:** these are packages that are required for a user to actually view and interact with your application
 
-* What is a server?
-* Benefits of using a server?
-    * Allows us to run our app in an environment that behaves more like the real internet
-    * Adheres to the same rules and protocols of the internet
-* Setup HTTP server with NPM script
-* Refactor all of those module.exports to export defaults
-* See how you have to stop the server and start it again every time you make a change
+We can see the types of dependencies we might have for our project by looking at the above to sections in our `package.json` file. Some examples of `devDependencies` include:
 
+* eslint
+* mocha and chai
 
-REFACTOR MINI GAMETIME TO USE A SERVER
+If a user is viewing our application in their browser, it's unlikely they're trying to run our tests or lint the code we've written. So these dependencies are specifically for us, as developers, to enhance our development experience.
 
-If we are not running a local server - we are not getting a very realistic environment of what our apps will look like on the internet. It is not doing a client/server interaction - it's just grabbing a file off my machine and just opening it up. When we publish/deploy our application, it might 
+Regular dependencies that will need to be included in our application for our users might be things like `jQuery` -- without jQuery, our DOM interactions would be broken. The users viewing our app in the browser would not be able to click on buttons or interact with forms, etc.
 
-Pros of using a server
-- Know that our app is adhering to the rules of the internet - more realstic envionment
-- Take advantage of a lot of server side tools that make development easier.
-
-```bash
-npm install http-server --save-dev
-
-```
-Add a script called in package json
-"start": "http-server"
-
-localhost:8080 or local:host3000
-
-The node server give us this nice syntax for importing/exporting modules 
+As we determine that our project needs certain dependencies, we install them by running something like: `npm install <packageName>` in our terminal. This will automatically add that package to our `dependencies` section of the `package.json`. If we only need a development dependency, we can specify for NPM to store it in our `devDependencies` by modifying the command slightly: `npm install <packageName --save-dev`
 
 
-Could get rid of those extra sript tags
+As we install dependencies, we populate a directory called `node_modules` - this is where our application looks for all of the packages our project relies on. It's important to note that **we do not commit the `node_modules` directory to GitHub**. Looking back at the root of our repo, we noticed a `.gitignore` file that told git specifically not to commit certain files and directories. Included in this list of ignored files was our `node_modules` directory. 
 
 
-Since you are adhering to HTTP 
+<div class="discuss">
+  <h4>Turn and Talk</h4>
+  <p>Why wouldn't we want to commit our `node_modules` directory? If this directory is not being pushed up to GitHub, how do other developers still have access to each of our project's dependencies?</p>
+</div>
+
+
+<hr />
+
 
 ## Webpack
 
-* What does web pack do for us? -> https://www.npmjs.com/package/webpack
-    * Install web pack, install webpack-cli
-    * Create configuration file
-    * Install webpack-dev-server
-* What is the bundle file?
-    * Don’t open it
+**The Webpack Files:** `webpack.config.js`
+
+Webpack is a robust and versatile development tool that provides us with several significant benefits:
+
+* provides us with a development server to more closely mimic how the internet works
+* allows us to view our edits immediately without reloading
+* bundles and minifies all of our JavaScript files into a single, condensed file to reduce network requests
+* pre-processes our code so we can write it how we like, then optimize it during the build process
+
+### Development Servers
+
+In order to understand why it's useful to have a development server, we must first understand what a server is and why it's helpful.
+
+**What is a Server?**
+
+A server is a computer or program that handles the sending and retrieving of resources. There are many different types of servers, but when we build web applications, we’re most concerned with what’s called a Web Server or an HTTP Server. (You’ll often hear these two terms used interchangeably or simply shortened to “server”.) With web applications, the server retrieves any files we need in order to view our application. These can be HTML files, CSS files, images, JS files, etc.
+
+When we're viewing applications on the internet, this retrieval process follows certain rules and protocols *...you may have heard of hypertext transfer protocol ;)* The specifics of these rules are not important just yet, but recognize that accessing a website over HTTP behaves slightly differently than accessing an HTML file from your filesystem.
+
+If we were simply using the filesystem to open our application files in the browser, the environment we'd be building in would behave slightly differently than if we were interacting with an HTTP server. In order to reduce any potential differences here, we can set up our own HTTP server that runs on our machine. This is one of the first main benefits we get from webpack.
 
 
-The pros are all you need to know:
+We noticed earlier in our `package.json` file that we had a script called `start` -- typing `npm run start` into our terminal will fire up a development server and open our app in the browser at a URL like `localhost:8080`. This is how you'll most frequently be viewing your applications from now on as you develop them.
 
-Pros of using webpack
-- See any chanes immediately without refreshing (live reloading). Runs behind the scenes and checks/updates
-- Allows you to bundle up as many files as you want - you can keep separate files and will bundle them all up into a single file to bundle up your application.
+Besides more closely mimicking and following the rules of HTTP, having a local server provides another added benefit of live-reloading our changes as we make them! In the past, you likely had to make a change to your file, save it, then refresh your browser to view the edit. Now when we make edits, we can see the browser page refresh automatically.
 
-If you have 20 JS files.... it takes a long time to get that info back. This speeds up the process. 1 file means 1 network request from this bundle file in webpack - 
+### Bundling & Pre-Processing Files
 
+This retrieval process we discussed, where a server goes to fetch any resources we might need (like an HTML or CSS file), can take quite a bit of time. Every time a resource is requested, we have to wait for that request to make a trip all the way to the server, wait for the server to find the file we're looking for, then wait for the server to send it back to us so we can actually utilize it.
 
-Code along
-```bash
-npm install webpack --save-dev
-npm install -g webpack-cli
-```
+Because this process can be quite slow, we want to make as few trips to the server as possible. This means requesting the smallest amount of files that we can. One way to facilitate this would be to put all of our code into a single file. But that could get quite hairy and hard to organize! Our codebases are much more maintainable if we can separate our files out into independent, logical pieces of functionality.
 
-FE development and repos are 90% config files. 
+Webpack allows us to do just this. We can create as many JavaScript files as we want, to separate out and organize our logic, without having to worry about requesting all of those files later. During the **build process**, Webpack will find all of the files we need and combine them into a single file that will automatically be requested as we're viewing our application.
 
-Show config file
+This single file it generates is called a **bundle file**. We can see this generated code by running: `npm run build` in our terminal. This will create a `dist` directory with a file named `main.bundle.js`. You'll notice the bundle file is quite large and difficult to read. That's ok! You should never have to even look at this file as you're building your application. 
 
-Webpack will likely be set up on whatever job you have. Potentially you are setting up webpack 
+<!-- practice adding a basic Game.js file in the /src directory and importing it into your index.js file, discuss the import/export syntax -->
 
-Important things
-- entry point
-index.js is what kicks everything off - base file that incorporates every single file that we possible need in our codebase
-- output - this is what is incorporated in the indexhtml file
-
-module - just bundles up our code and ignore the node modules
+<hr />
 
 
-change start script to dig into node module directory - finds the webacp dev server - this allows for th live reloading. THis is hwy we are using this server instead of the http server that we were using before
+### Further Reading
 
-build script - tells webpack to bundle up files .... webpack runs that build process, bundles up your files, and that doens't do anything else
+* [Import/Export Syntax](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f)
+* [MDN Export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export)
+* [MDN Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
+* [Semver](https://semver.org/) | [NPM Semver](https://docs.npmjs.com/about-semantic-versioning)
 
+<hr />
 
+### Checks for Understanding
 
-### Summary
+* Why is it important to have a `.gitignore` file in your repos?
+* Why don’t we commit the `node_modules` directory?
+* What is a server responsible for?
+* What are three main benefits that we get by using a tool like Webpack?
+* What is the purpose of the `package.json` file?
 
-
-
-#### Additional Resources:
-Fuzzy/opportunities for extensions:
-- lock files
-- process
-- other package managers exist for slightly different packages
-
+<!-- Quiz Review with CFUs: https://goo.gl/forms/7V5rtBeKZM2zTL1U2 -->

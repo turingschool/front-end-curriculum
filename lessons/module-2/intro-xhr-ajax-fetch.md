@@ -237,3 +237,26 @@ Try it out!
 * [The Evolution of Asyncronous JavaScript](https://blog.risingstack.com/asynchronous-javascript/)
 * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+
+
+
+<!-- Review Session for the following morning:
+
+  Interview-style questions:
+
+  * In as much detail as possible, describe the request-response cycle when attempting to retrieve a network resource from a server.
+  * Describe the difference between synchronous and asynchronous code.
+  * What are 4 different levels of HTTP status codes and what does each level mean?
+
+  Write out another fetch call in Chrome DevTools (Trivia Database API is fine):
+    * Assign the whole fetch call to a variable
+    * Console log the response object in the first .then()
+    * Console log the parsed data in the second .then()
+    * Inspect the response object & the parsed data
+    * Log the variable you created for the entire fetch call to the console, see that it
+      returns a Promise object and inspect it to solidify that Promise syntax
+
+-->
+
+
+

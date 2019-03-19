@@ -21,7 +21,7 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
 
 - `CSS Preprocessor` A tool that processes some CSS-like language and turns it into CSS
 
-### Warm Up
+<!-- ### Warm Up
 
 * In past projects, how have you refactored your CSS to follow the DRY principle?
 * In past projects, how have you organized your CSS?
@@ -30,6 +30,7 @@ hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
   2. Search for `Package Control: List Packages` and search for `Sass`
   3. If the `Sass` package is not installed, follow Step 1 again and search/select `Package Control: Install Package`. Install `Sass` from here.
   4. Scroll down to the very bottom and start reading through the additional resources in the last section, starting with `A Complete Beginner’s Guide to Learning Sass in a Weekend`
+ -->
 
 ## Intro to Sass
 
@@ -59,7 +60,7 @@ Even if you've never worked with SCSS before, this syntax is a little bit easier
 Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:
 
 1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. This not the case for pure Sass with the `.sass` file extension.
-2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make your teachers cry, BUT through the tears, your stylesheet will still function properly.
+2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make your teachers cry, BUT through our tears, your stylesheet will still function properly.
 
 _Note: For our purposes here, be aware that we will be working strictly with the SCSS syntax when we are working with Sass._
 
@@ -198,7 +199,7 @@ Let's say that your client wants everything thats red to be teal.  Pretend that 
 
 One of the main benefits of Sass is having the ability to split your codebase across several CSS files without impacting **PERFORMANCE** - which brings us to the use of `@import` with Sass.
 
-You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request.
+You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request).
 
 In the world of Sass, the `@import` directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
 
@@ -223,14 +224,21 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 ```
 
 ```css
-// main.scss
-@import "reset";
-@import "variables";
-@import "buttons";
+// index.scss
+@import 'reset';
+@import 'variables';
+
+@import 'Header';
+@import 'Button';
+@import 'Author';
+@import 'Story';
+@import 'Stories';
 ...
 ...
 
 ```
+
+But what about media queries? There are a lot of [different approaches](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32) that you can take. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844) that walks through setting up responsive mixins for each component.
 
 #### Turn and Talk
 * How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
@@ -283,12 +291,11 @@ In a CodePen, build the following chunk of html and SASS using `mixins`
   2. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
      weight of 300, and a font family of Arial.   
   3. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.   
-  4. Using these mixins, create a small chunk of html. The HTML should have the following: 
-    - One h1 element using the appropriate mixin.
-    - Two divs, each with an h2 and a paragraph tag.
-    - For the two h2 elements, one should have a class of "pink", which should have pink font, and one
-      with a class of "subheader" that is grey, underlined, and all caps.
-    - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
+  4. Using these mixins, create a small chunk of html. The HTML should have the following:  
+  - One h1 element using the appropriate mixin.  
+  - Two divs, each with an h2 and a paragraph tag.  
+  - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.  
+  - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
 
 ## Extend
 
@@ -350,7 +357,7 @@ In pairs, take 10 minutes to read two articles around this debate. Come together
 
 ## Colors
 
-Sass offers build in color functions that allow you to adjust defined color values with ease. Most of the color functions operate by manipulating a single color value - while others can be used to combine colors in different ways.
+Sass offers built-in color functions that allow you to adjust defined color values with ease. Most of the color functions operate by manipulating a single color value - while others can be used to combine colors in different ways.
 
 Color is one of the most powerful components available to us in art and design; yet, it is something that is often underutilized by many programmers. Chances are that you've defined most (if not all) of the colors in your project using the predefined color names from the browsers, hex codes, or RGBA. This is all well and good; however, it fails to give you the same control over your colors as when you use HSLA.
 
@@ -609,7 +616,7 @@ We've talked about a lot of the strengths/advantages of using Sass without ackno
 
 ## Resources
 
-- Follow [Facebook's README](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-a-css-preprocessor-sass-less-etc) to add Sass to your `create-react-app` project
+- Follow [Facebook's guidelines](https://facebook.github.io/create-react-app/docs/adding-a-sass-stylesheet) to add Sass to your `create-react-app` project
 - [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
 - [Why Sass?](http://alistapart.com/article/why-sass)
 - [Cooler things you can do with Sass](https://gist.github.com/jareware/4738651)

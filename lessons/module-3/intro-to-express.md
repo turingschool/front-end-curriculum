@@ -1,5 +1,5 @@
 ---
-title: "Fundamentals of Express and HTTP Methods"
+title: "Introduction to Express JS"
 length: 2 hours
 tags: node, express, back-end, server, http
 ---
@@ -25,18 +25,6 @@ By the end of this lesson, you will:
 * route
 * route handler
 * CRUD
-
-## But First!
-
-Before we look at how Express works, let's review the HTTP request-response cycle.
-
-*Journal:*
-
-On your own, in your notebook, draw a diagram of the request response cycle. What are the two parties communicating to each other, and what information is sent back and forth between them? How does one party know what the other party wants to do (verbs?...)?
-
-*Turn and Talk:*
-
-Compare your diagram with a partner next to you. Then let's talk about the request-response cycle.
 
 ## What is Express?
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
@@ -114,7 +102,7 @@ app.get('/', (request, response) => {
 });
 
 app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
+  console.log(`${app.locals.title} is running on http://localhost:${app.get('port')}.`);
 });
 ```
 
@@ -212,65 +200,15 @@ app.get('/api/v1/pet/:id', (request, response) => {
 
 ### Sending Data With A Post Request
 
-It would be cool if we could store pets in addition to just being able to retrieve the prepopulated ones.
+It would be cool if we could create pets in addition to just being able to retrieve the prepopulated ones.
 
-Express did this thing a while back, where they took a bunch of stuff out of the core framework. This makes it smaller and means you don't have cruft you're not using, but it also means that sometimes you have to mix those things back in. One of those components that was pulled out was the ability to parse the body of an HTTP request. That's okay, we can just mix it back in.
-
-```
-npm i body-parser --save
-```
-
-We'll also need to require and use it in our `server.js`.
+You'll need the following line so that your app parses the request body to json by default.
 
 ```js
-const bodyParser = require('body-parser');
-
-app.use( bodyParser.json() );
+app.use(express.json());
 ```
 
 This will add in support for parsing JSON.
-
-Here is what my server looks like so far:
-
-```js
-const express = require('express');
-const app = express();
-const bodyParser = require('body-parser');
-
-app.use( bodyParser.json() );
-
-app.set('port', process.env.PORT || 3000);
-app.locals.title = 'Pet Box';
-app.locals.pets = [
-  { id: 'a1', name: 'Rover', type: 'dog' },
-  { id: 'b2', name: 'Marcus Aurelius', type: 'parakeet' },
-  { id: 'c3', name: 'Craisins', type: 'cat' }
-];
-
-app.get('/', (request, response) => {
-  response.send('Hello World!');
-});
-
-app.get('/api/v1/pets', (request, response) => {
-  const pets = app.locals.pets;
-
-  response.json({ pets });
-});
-
-app.get('/api/v1/pets/:id', (request, response) => {
-  const { id } = request.params;
-  const pet = app.locals.pets.find(pet => pet.id === id);
-  if (pet) {
-    return response.status(200).json(pet);
-  } else {
-    return response.sendStatus(404);
-  }
-});
-
-app.listen(app.get('port'), () => {
-  console.log(`${app.locals.title} is running on ${app.get('port')}.`);
-});
-```
 
 ### Creating a POST Route
 
@@ -287,11 +225,10 @@ app.post('/api/v1/pets', (request, response) => {
 });
 ```
 
-IMPORTANT NOTE: this approach has a BUNCH of flaws.
+IMPORTANT NOTE: this approach has a few of flaws.
 
 - We're storing data in memory, which will be wiped out when the server goes down.
-- Using the current time is a terrible idea for a number of reasons. Most obviously, it's super easy to guess IDs and steal secrets.
-
+- Multiple pets could have the same time stamp. Something like [shortid](https://github.com/dylang/shortid) would be better for id generation.
 
 #### The Sad Path
 
@@ -325,43 +262,6 @@ If either property is missing, we will see an error in the Network tab of our de
 
 It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response pet is the best way to write a user-friendly API.
 
-<!--
-### Generating Unique Keys
-
-At this moment, we're using a key-value store that we whipped up to hold our data. That said, we're going to need some unique keys. We could use something like the current date, but there is a tiny, tiny chance that we could get two requests at the exact same millisecond. I'm personally not willing to risk it.
-
-For the time being, we'll use an MD5 hash, which is a unique value based on the content of the pet. You've seen them in Github gists among other places.
-
-```
-npm i md5 --save
-```
-
-Now, in our `server.js`, we can require the module.
-
-```js
-const md5 = require('md5');
-```
-
-Finally, let's replace `Date.now()` in our `POST` action.
-
-```js
-app.post('/api/v1/pets', (request, response) => {
-  const { pet } = request.body;
-  const id = md5(pet);
-
-  if (!pet) {
-    return response.status(422).send({
-      error: 'No pet property provided'
-    });
-  } else {
-    app.locals.pets.push({ id, pet });
-    return response.status(201).json({ id, pet });
-  }
-});
-```
- -->
-
-
 ### Using Postman
 Postman is a super cool tool for sending requests to endpoints. You can use Postman to add, edit, or delete data if there isn't a UI to do so. In our case, it's handy to add pets, edit a specific pet, or delete a pet. Get familiar with Postman because it will be your best friend for all things API from here on out.
 
@@ -370,7 +270,7 @@ Things to consider:
 * If you are including information in the body of the request, then one of the headers needs to include `Content-Type: application/json`
 * Remember to check which HTTP method you are using before sending the request
 
-### Student Exploration (20 mins)
+### Student Exploration (10 mins)
 
 * Implement a PUT route for a specific pet to edit the name of the pet
 * Implement a DELETE route for a specific pet to remove it
@@ -400,6 +300,67 @@ app.get('/', (request, response) => {
 Express assumes a structure for our static assets. The response for the root path, `'/'` or `localhost:3000/`, first goes to the root of the `public` directory and looks for a file called `index.html`.
 
 So now you can add a directory called `public` and in that directory add a file called `index.html` with some basic HTML. Restart the server, head over to `localhost:3000`, and you should see your HTML file being served.
+
+## CORS
+
+Cross Origin Resource Sharing (CORS) is a protocol that prevents domains to make requests to other domains. This is in place for security reasons.
+
+By default the CORS policy in express apps prevents you from making api calls from other domains. In order to allow api calls from other domains you need follow these two steps:
+
+1. Install cors as a dependency `npm install cors`
+2. Insert this config line into your server file: `app.use(cors());`
+
+Without it, you will get cors errors if you try to make a request from a react repo hosted at another domain. ie. trying to make requests from `http://localhost:3000` to `http://localhost:3001`
+
+## Incorporating babel
+
+Babel is a compiler that takes newer flavors of javascript and turns it into more compatible code.
+
+By default, create-react-app pulls in babel so that we can use more modern javascript feature such as importing and exporting. 
+If we want to be able to use import export statements, we'll manually have to pull in babel. Let's do that.
+
+First, let's install the dependencies we'll need for development:
+
+`npm install --save-dev @babel/core @babel/preset-env @babel/node`
+
+Next, we need a `.babelrc` file in our root to define how to compile our code.
+
+Inside of that file, add these contents:
+```
+// .babelrc
+{
+  "presets": ["@babel/preset-env"]
+}
+``` 
+
+Now, we can add a start script so that when we start our development server, it'll use babel to compile our code into something node can understand.
+Add `nodemon --exec babel-node server.js` as the start script.
+
+When you're all finished, your package.json should look something like:
+
+```json
+{
+  "name": "pet-box",
+  "version": "1.0.0",
+  "main": "server.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node server.js"
+  }
+}
+```
+
+You should be able to use imports/exports now and when you run `npm start` it'll work error free!
+
+For more details on how to update your other scripts to use babel, check out this [article](https://hackernoon.com/using-babel-7-with-node-7e401bc28b04).
 
 ## Checks For Understanding
 

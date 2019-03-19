@@ -70,7 +70,7 @@ algolia:
     - open-source/**/*
     - portal/**/*
     - postwork/**/*
-    - prework/**/*
+    - module-0-capstone/**/*
     - professional-development/**/*
     - projects/**/*
     - public/**/*

@@ -99,12 +99,13 @@ Your README should include the following, in this order:
 
 # Submitting Your Project Ideas & Datasets
 
-You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-1810). Your project ideas should be in the description of your PR and include the following information:
+You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and clearly describe what kind of application you will build and how it will utilize the datasets you've created.
 
-* One or two sentence description of the application
-* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset
+When submitting your data:
 
-Your datasets should be added in a single file to the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like:
+* you must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset to make sure you don't have any syntax errors
+* you must **not** delete **any files or datasets** that currently exist in the repo. Do not replace them with your data and do not remove them
+* you must only create **one** single file that holds **both** datasets inside the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like so:
 
 ```
 module.exports = {
@@ -118,9 +119,8 @@ module.exports = {
 # Repo Initialization
 
 * Use [create-react-app](https://www.npmjs.com/package/create-react-app) to create a new project
-* ESLint
 
-After initializing your create-react-app project, add eslint to the project.
+
 
 # Rubric
 
@@ -178,7 +178,7 @@ After initializing your create-react-app project, add eslint to the project.
 
 * [ ] Advanced Beginner - Developers tag instructors in both required PRs by due dates _or_ in one of the two required. PR has less than the required lines of code in PR. Reviewers do not leave line-by-line feedback. May be merging PR before feedback is incorporated.
 
-* [ ] Proficient - Developers tag instructors in both required PRs by due dates. PR is between 350 - 450 lines of code. The developer creating the PR summarizes the changes made, why those changes were necessary, and asks for insights. Reviewers leave line-by-line comments/feedback and wait to merge PR until feedback is incorporated.
+* [ ] Proficient - Developers tag instructors in both required PRs by due dates. PR is over 100 lines of code. The developer creating the PR summarizes the changes made, why those changes were necessary, and asks for insights. Reviewers leave line-by-line comments/feedback and wait to merge PR until feedback is incorporated.
 
 * [ ] Exceptional - Meets all expectations for `Proficient`. The feedback is both kind _and_ insightful. There may be numerous threads of conversation where developers go back and forth to find the best solution to the problems they are solving together.
 

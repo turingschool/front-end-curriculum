@@ -7,6 +7,7 @@ nav {
 .nav-links {
   display: grid;
   grid-template-columns: auto 100px 100px 100px 200px;
+  grid-template-rows: 120px;
   align-items: center;
   justify-items: center;
   grid-gap: 0 10px;
@@ -38,22 +39,34 @@ nav {
     height: 80px;
     width: 80px;
   }
+}
 
-  @media (max-width: $tablet-width) {
+.nav-links a.active-link {
+  // This border does not get applied to logo
+  // because of code in active-links.js file
+  border-bottom: 3px solid $turing-primary;
+}
+
+@media (max-width: $tablet-width) {
+  .nav-links {
     margin: 0 35px;
     font-size: 0.9rem;
     grid-template-columns: auto 75px 75px 75px 150px;
+    grid-template-rows: 90px;
 
     .home-logo-link img {
       height: 55px;
       width: 55px;
     }
   }
+}
 
-  @media (max-width: $phone-width) {
+@media (max-width: $phone-width) {
+  .nav-links {
     margin: 15px;
     font-size: 1rem;
     grid-template-columns: auto 200px;
+    grid-template-rows: 35px 35px 35px 55px;
     justify-items: right;
 
     li {
@@ -70,10 +83,4 @@ nav {
       width: 70px;
     }
   }
-}
-
-.nav-links a.active-link {
-  // This border does not get applied to logo
-  // because of code in active-links.js file
-  border-bottom: 3px solid $turing-primary;
 }
