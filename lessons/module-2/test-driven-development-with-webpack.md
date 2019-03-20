@@ -215,7 +215,7 @@ To practice, let's kick off a small project to demonstrate how you would utilize
 In your terminal, clone down the gametime starter kit and name the cloned repo `testing-practice`:
 
 ```bash
-git clone git@github.com:turingschool-examples/gametime-starter.git testing-practice  
+git clone https://github.com/turingschool-examples/gametime-starter.git  
 ```
 
 ```bash
@@ -237,7 +237,7 @@ Let's look at the tooling we have in place already - go to the `package.json` fi
 
 Things to note:
 
-* Libraries in `devDependencies`: mocha, chai, and mochapack
+* Libraries in `devDependencies`: mocha and chai
 * `npm test` script (this script looks in a specific place for test files)
 
 Next, let's add some of our base files:
