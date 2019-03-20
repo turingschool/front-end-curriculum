@@ -82,6 +82,8 @@ Let's dig deeper into some of these tools we've identified to help us better und
 
 ## NPM
 
+<!-- Students have wayyyy too many questions about NPM each time I teach this. They are good questions, but if you entertain all of them, you'll never make it through the lesson. I'd recommend starting a questions thread in the slack channel -->
+
 **The NPM Files:** `package.json` and `package-lock.json`
 
 NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish small, reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). 
@@ -171,6 +173,10 @@ As we install dependencies, we populate a directory called `node_modules` - this
 </div>
 
 
+
+<!-- I discuss semver here as well but at a high-level, very briefly. --> 
+
+
 <hr />
 
 
@@ -202,6 +208,7 @@ We noticed earlier in our `package.json` file that we had a script called `start
 
 Besides more closely mimicking and following the rules of HTTP, having a local server provides another added benefit of live-reloading our changes as we make them! In the past, you likely had to make a change to your file, save it, then refresh your browser to view the edit. Now when we make edits, we can see the browser page refresh automatically.
 
+
 ### Bundling & Pre-Processing Files
 
 This retrieval process we discussed, where a server goes to fetch any resources we might need (like an HTML or CSS file), can take quite a bit of time. Every time a resource is requested, we have to wait for that request to make a trip all the way to the server, wait for the server to find the file we're looking for, then wait for the server to send it back to us so we can actually utilize it.
@@ -212,7 +219,7 @@ Webpack allows us to do just this. We can create as many JavaScript files as we 
 
 This single file it generates is called a **bundle file**. We can see this generated code by running: `npm run build` in our terminal. This will create a `dist` directory with a file named `main.bundle.js`. You'll notice the bundle file is quite large and difficult to read. That's ok! You should never have to even look at this file as you're building your application. 
 
-<!-- practice adding a basic Game.js file in the /src directory and importing it into your index.js file, discuss the import/export syntax -->
+<!-- show them how to add a basic Game.js file in the /src directory and import it into your index.js file, discuss the import/export syntax -->
 
 <hr />
 
@@ -222,7 +229,7 @@ This single file it generates is called a **bundle file**. We can see this gener
 * [Import/Export Syntax](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f)
 * [MDN Export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export)
 * [MDN Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-* [Semver](https://semver.org/) | [NPM Semver](https://docs.npmjs.com/about-semantic-versioning)
+* [Semver](https://semver.org/), [NPM Semver](https://docs.npmjs.com/about-semantic-versioning)
 
 <hr />
 
