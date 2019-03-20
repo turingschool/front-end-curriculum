@@ -32,7 +32,7 @@ By the end of this lesson, students should:
 <div class="discuss">
   <h4>Turn and Talk</h4>
   <p>What are the four phases of a test? What type of logic do you write in each phase of a test? (Think back to your GameTime projects - what are some specific examples of code you wrote in each phase?)</p>
-  <p>(All of these same phases and concepts are going to apply when testing our React applications!)</p>
+  <p><em>(All of these same phases and concepts are going to apply when testing our React applications!)</em></p>
 </div>
 
 <!-- Instructor Review/Whiteboard the 4 phases of a test:
