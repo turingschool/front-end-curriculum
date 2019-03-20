@@ -107,7 +107,7 @@ Next we need to update our `package.json` files to configure some of our test ou
     }
 ```
 
-<!-- This configuration makes the snapshot files infinitely easier to read and make sense of. If you don't have it in there, you can still do all the snapshot testings, it's just harder to show the students what a snapshot actually represents. Christie and David mentioned that students were having problems with this package/configuration in Mod 3 and it was breaking their testing suites for some reason, but we've never had any issues with it in Mod 2. We need to figure out if both mods are all working with the same versions of create react app/react/jest/enzyme/etc. Link up with them to get more details on how this package was breaking people's apps. -->
+<!-- This configuration makes the snapshot files infinitely easier to read and make sense of. If you don't have it in there, you can still do all the snapshot testings, it's just harder to show the students what a snapshot actually represents. Christie and David mentioned that students were having problems with this package/configuration in Mod 3 and it was breaking their testing suites for some reason, but we've never had any issues with it in Mod 2. We need to figure out if both mods are all working with the same versions of create react app/react/jest/enzyme/etc. Link up with them to get more details on how this package was breaking people's apps. I think it's fine to keep having them include this for now if we don't run into any issues with it, but we'll probably want to figure that discrepency out at some time soon. -->
 
 Lastly, we need to tell React to use the Enzyme adapter we just installed. In your `/src` directory, alongside all of your components and their test files, create a new file called `setupTests.js`.
 
@@ -261,10 +261,100 @@ it('should update the answer state when toggleAnswer is called', () => {
 
 ## Testing User Interactions
 
+Now that we know how to test rendered output and state changes, the last piece we want to make sure we can validate is that our user interactions are hooked up properly. This means that any click, change, focus, blur, etc. events that should be triggering a method are doing just that!
+
+Let's take a look at the `Controls.test.js` file, where we have some user interaction to test. One event we'll want to test is this `click` handler we specified to set the limit of our questions:
+
+```js
+<button className="set-filter" onClick={this.handleClick}>FILTER QUESTIONS</button>
+```
+
+We'll want to make sure that when a user clicks on that button, our `handleClick` method is invoked and does what it's supposed to. If we take a look at the `handleClick` method, we can see it's invoking a method called `setLimit` that was passed down as a prop.
+
+Because this method was passed down as a prop, we can assume that the method exists in some other component (`App.js`). We only ever test the functionality of our methods where they exist. (e.g. we'll test the functionality of `setLimit` in the `App.js` component). So for our `Controls` component, instead of testing the functionality of `setLimit`, we'll simply test that it was called. **Is this pattern familiar from testing GameTime? What can you liken this to?**
+
+**Creating a Mock Function**
+
+We saw that we need to pass in `setLimit` as a prop to our `Controls` component. Because we don't care about the functionality inside of `setLimit`, we'll set up a mock function:
+
+```js
+const mockSetLimit = jest.fn();
+```
+
+Mock functions created with `jest.fn()` allow us to assert against the fact that they've been called, without having to worry about what logic was actually inside of them. Now we can pass in `mockSetLimit` as a prop to our component, as we've been doing:
+
+```js
+describe('Controls', () => {
+
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <Controls
+        setLimit={setLimitMock}
+      />
+    );
+  });
+```
+
+And we'll be able to test that it was called by expecting `setLimitMock.toBeCalled()`
+
+
+**Finding Elements in the Component**
+
+The first step to testing a user interaction is finding the element we want to interact with. In our case, it's a button with the class `set-filter`. We can find elements in a component with the following syntax:
+
+```js
+wrapper.find('.set-filter')
+```
+
+<div class="discuss">
+  <h4>Solo Research</h4>
+  <p>What does this syntax remind you of? Explore the documentation on <a href="https://airbnb.io/enzyme/docs/api/ReactWrapper/find.html" target="_blank">find()</a> and take note of the many ways you can search for an element in your component.</p>
+</div>
+
+The second step is to **simulate an event on your element**. We want to simulate a click event on our `set-filter` button.
+
+
+<div class="discuss">
+  <h4>Solo Research</h4>
+  <p>Take a moment to read the documentation on the <a href="https://airbnb.io/enzyme/docs/api/ReactWrapper/simulate.html">simulate</a> method before beginning. What arguments does it take in? How would we need to write our simulation for our button click?</p>
+</div>
+
+Try taking the following pseudocode and turning it into an actual expectation:
+
+```js
+// it should invoke setLimit when button is clicked
+// find the button by its class name of set-filter
+// simulate a click event on that button
+// expect that our mockSetLimit function was actually called
+```
+
+
+<!-- Here I ask for a volunteer to help me try to type out the simulation. They get really tripped up on the second argument where we pass in an event object. We need to pass in an object with preventDefault so that handleClick doesn't yell at us, but we don't care what preventDefault actually does - so we just set it to an empty arrow function 
+
+```js
+it('should invoke setLimit when button is clicked', () => {
+  wrapper.find('.set-filter').simulate('click', { 
+    preventDefault: () => {}
+  });
+  expect(setLimitMock).toBeCalled();
+});
+```
+
+They will learn other ways to do this type of test in Mod 3, with spyOn. You can mention that but when Christie showed the syntax to me it looked too difficult to teach at the time (I forget why.) so I stuck with this. -->
+
+
+<div class="discuss">
+  <h4>On Your Own</h4>
+  <p>Test the user interaction that triggers the updateCount method. What event do we need to simulate? What information might we need to pass into our simulate method? What expectations should we be writing?</p>
+</div>
 
 
 
 <hr />
+
+### Additional Practice
 
 <div class="discuss">
   <h4>Turn and Talk</h4>
@@ -280,15 +370,5 @@ it('should update the answer state when toggleAnswer is called', () => {
 
 * [Testing Component Methods](https://bambielli.com/til/2018-03-04-directly-test-react-component-methods/#)
 * [Enzyme Documentation](https://airbnb.io/enzyme/)
-
-
-<!-- 
-
-Controls
-  together - simulating a click event for set-filter, mock method that belongs to App
-  alone - updateCount method - simulate change event
-  alone - default state
--->
-
 
 
