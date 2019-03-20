@@ -10,7 +10,7 @@ module: 2
 
 <style type="text/css">
     section a:link,section a:visited{border-bottom: 0px;color:#05c2d1}
-    section .discuss {color: #555;padding:20px;font-size:0.95em;background-color:#fcfcfc;border:1px solid #eee}
+    section .discuss {color: #555;padding:20px;font-size:0.9em;background-color:#fcfcfc;border:1px solid #eee}
     hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
     ul li {line-height: 1.5em;font-size: 0.95em;}
     em { font-size: 0.85em; }
@@ -273,6 +273,8 @@ it('should update the answer state when toggleAnswer is called', () => {
 
 <!-- They usually never make it to actually writing the tests for the App component, we run out of time. But that could be a good follow-up review session. Asking them what tests they needed to write and having them come up and write them. -->
 
+
+<hr />
 
 ### Further Reading
 
