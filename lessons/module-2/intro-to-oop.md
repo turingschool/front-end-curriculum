@@ -30,19 +30,7 @@ By the end of this lesson, you will be able to:
 ### Journal Warm Up
 
 * Describe one new or interesting thing that you learned about OOP from your research yesterday
-* Rewrite this class as a function called `createUnicorn` that creates an object and returns it. The object should still have the same properties of `name` and `color` as well as a reference to a `sparkle` function that is declared outside of `createUnicorn`.
-
-```js
-class Unicorn {
-  constructor(name, color) {
-    this.name = name;
-    this.color = color;
-  }
-
-  sparkle() {
-    console.log('**!*')
-  }
-}
+* Create an object based on this sentence: This school is a non-profit, in a basement, that opens at 9 and closes at 5.
 ``` -->
 
 # Programming Paradigms 
@@ -143,7 +131,7 @@ Let's break down this syntax a bit:
 
 #### Turn and Code
 
-Take the chair object that you created above and rewrite it as a class.
+Take the school object that you created during the warm up and rewrite it as a class.
 
 ### The Constructor Method
 
@@ -224,12 +212,12 @@ let bob = new TA('Bob', 2, ['serious']);
 
 * We create a new class called `TA` that **extends** from `Instructor` (this tells our TA that it is going to be subclass of `Instructor`)
 * We create our constructor, which takes in the same parameters as our `Instructor` class
-* Within our constructor, we invoke the built-in `super` function, passing through **only** the properties that it needs to inherit from the parent class
+* Within our constructor, we can invoke the built-in `super` function to call the constructor method of the parent class, passing through **only** the properties that it needs to inherit from the parent class
 * We add our additional behavior method - scheduling check-ins
 
 ##### More about super
 
-The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor function of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class.
+The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor method of the parent class. This will allow the parent constructor to add any inherited properties to the new instance of our class. 
 
 #### OOP: Animals and the Zoo
 
@@ -422,5 +410,5 @@ class Cat {
       return `${this.name} casually sniffs the ${treat} and then ignores it.`
     }
   }
-}
+} 
 ``` -->
