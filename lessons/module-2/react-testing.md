@@ -162,7 +162,42 @@ const mockQuestionCount = 2;
 
 **What kind of setup do we need to do?**
 
+We'll need to set up our component so that we have something to write our expectations against. This is where that handy `shallow` function will come into play. 
 
+Remember we always write our set up code in a `beforeEach` block, to reduce the amount of duplication in our `it` blocks:
+
+```js
+describe('TriviaList', () => {
+  let wrapper;
+
+  beforeEach(() => {
+    wrapper = shallow(
+      <TriviaList
+        triviaQuestions={mockQuestions}
+        questionCount={mockQuestionCount}
+      />
+    );
+  });
+});
+```
+
+The shallow render will create an Enzyme 'wrapper' for us around an instance of our component. Now, in each of our tests, we'll be able to interact with this `wrapper` variable as if it were our `TriviaList` component.
+
+**Writing the Snapshot**
+
+Finally, after all this set up, we're ready to write our snapshot assertion:
+
+```js
+it('should match the snapshot with all data passed in', () => {
+  expect(wrapper).toMatchSnapshot();
+});
+```
+
+This expectation will tell our testing tools to generate a file that includes a representation of our rendered output. If we head over to our terminal and run our tests with `npm test` - we should see that we have a passing App test.
+
+<!-- I stop here and explain to them how the test runner works differently in React apps. It will automatically look for changes and re-run just the tests that were affected by your changes. Sometimes as a sanity check, I just like to always run all my tests by typing 'a' or 'Enter'. It will constantly be running in your terminal tab, so you have to open a new tab if you want to do other things. -->
+
+You can also check out the snaphshot file that was generated for us by writing this expectation. In your `/src` directory, you should now see a `__snapshots__` folder that includes a `TriviaList.test.js.snap` file. Take a moment to look over the contents of that file.
 
 
 <div class="discuss">
@@ -246,12 +281,12 @@ it('should update the answer state when toggleAnswer is called', () => {
 
 
 <!-- 
-TriviaList
-  together — setup and snapshot
 
 Controls
   together - simulating a click event for set-filter, mock method that belongs to App
   alone - updateCount method - simulate change event
   alone - default state
+-->
+
 
 
