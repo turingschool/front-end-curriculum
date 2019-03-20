@@ -179,7 +179,12 @@ const mockQuestionCount = 2;
 
 ## Testing State
 
-Now that we know how to test our rendered output, we can start testing some application changes like state updates. This `Question` component you just tested is a bit more involved than the `TriviaList` component from earlier - it has some state that can change in response to a user interaction. Let's first write a test that validates the default state of our component.
+Now that we know how to test our rendered output, we can start testing some application changes like state updates. This `Question` component you just tested is a bit more involved than the `TriviaList` component from earlier - it has some state that can change in response to a user interaction.
+
+
+**Validating Default State**
+
+Let's first write a test that validates the default state of our component.
 
 In a new `it` block, we want to assert that our state value for `showAnswer` is initially false. We will make use of another handy method from Enzyme called `state()` in order to access the state of our component:
 
@@ -191,10 +196,31 @@ it('should have the proper default state', () => {
 
 <div class="discuss">
   <h4>Solo Research</h4>
-  <p>Read the Enzyme documentation on `wrapper.state()` <a href="https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html" target="_blank">here</a>. Based on this documentation, what's an alternative way we could have written the above assertion?</p>
+  <p>Read the Enzyme documentation on <a href="https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html" target="_blank">wrapper.state()</a>. Based on this documentation, what's an alternative way we could have written the above assertion?</p>
 </div>
 
 <!-- I talk about why this is handy as a method -- testing the entire state object or passing in a key to test just a single piece of state that you expect to be updating. They have a hard time understanding initially why wrapper.state() is a method and not just a property like wrapper.state. I recommend when you test default state, just use wrapper.state(), but when we test a method that changes a piece of state, pass in the key that you actually care about. -->
+
+
+**Validating a State Change**
+
+Not only do we want to check that our default state looks OK, we want to make sure any methods that call state changes also behave as expected. In our `Question` component, we have a method called `toggleState` that flips the boolean value of `showAnswer` answer in our state. We want to make sure that any time we invoke this method, `showAnswer` has been updated.
+
+There are [several ways to test methods on a component](https://bambielli.com/til/2018-03-04-directly-test-react-component-methods/#). For this example, we will **directly** test the `showAnswer` method by invoking it.
+
+In a new `it` block, we want to first assert the default value of `showAnswer`, then invoke our `toggleAnswer` method, then assert that the value of `showAnswer` has changed:
+
+```js
+it('should update the answer state when toggleAnswer is called', () => {
+  expect(wrapper.state('showAnswer')).toEqual(false);
+  wrapper.instance().toggleAnswer();
+  expect(wrapper.state('showAnswer')).toEqual(true);
+});
+```
+
+*Note: We cannot simply call `wrapper.toggleAnswer()` to invoke our method. The wrapper returned to us from our shallow render has a lot of Enzyme-related padding around it, so we need to dig into the actual instance of our component in order to access the methods we've defined on it.*
+
+
 
 <hr />
 
@@ -205,29 +231,27 @@ it('should have the proper default state', () => {
 
 <hr />
 
+<div class="discuss">
+  <h4>Turn and Talk</h4>
+  <p>The last component to be tested is our App component. With your table, discuss what tests need to be written for this component. Once you've decided on the tests to be written, with your partner, write them!</p>
+</div>
+
+<!-- They usually never make it to actually writing the tests for the App component, we run out of time. But that could be a good follow-up review session. Asking them what tests they needed to write and having them come up and write them. -->
+
+
 ### Further Reading
 
 * [Testing Component Methods](https://bambielli.com/til/2018-03-04-directly-test-react-component-methods/#)
-
+* [Enzyme Documentation](https://airbnb.io/enzyme/)
 
 
 <!-- 
 TriviaList
   together — setup and snapshot
-Question
-  alone - toggleAnswer method
-
-
 
 Controls
   together - simulating a click event for set-filter, mock method that belongs to App
   alone - updateCount method - simulate change event
   alone - default state
-App
-  together - what tests do we need here?
-  alone - write them -->
-
-
-
 
 
