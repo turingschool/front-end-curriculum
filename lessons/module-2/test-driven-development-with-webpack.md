@@ -215,7 +215,7 @@ To practice, let's kick off a small project to demonstrate how you would utilize
 In your terminal, clone down the gametime starter kit and name the cloned repo `testing-practice`:
 
 ```bash
-git clone https://github.com/turingschool-examples/gametime-starter.git  
+git clone https://github.com/turingschool-examples/gametime-starter.git testing-practice 
 ```
 
 ```bash
