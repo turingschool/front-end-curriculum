@@ -30,13 +30,13 @@ Out of the box, jQuery supports the selector syntax from CSS to find elements on
 
 That said, let's review some of the different ways we can find an element on page:
 
-* `$('p')`, selects all of a given element.
+* `$('article')`, selects all of a given element.
 * `$('#heading')`, selects the element with a given id.
 * `$('.important')`, selects all of the elements with a given class.
 
 You can also use multiple selectors in the same statement:
 
-* `$('p, #heading, .important')`, selects everything listed above.
+* `$('article #important .heading'')`, selects everything listed above.
 
 ### Chaining Selectors
 
@@ -268,7 +268,7 @@ Our main focus today is going to be on the `.on()` method. As of jQuery 1.7 and 
 
 #### Knowing Which Element We Clicked
 
-jQuery makes it do stuff to many elements ate the same time, but if we add event listeners to a bunch of boxes at the same time, then how we know which one the user clicked? Consider a situation where we have three boxes. When that particular box is clicked, we want to toggle a class. How do we know which box was clicked?
+jQuery makes it do stuff to many elements at the same time, but if we add event listeners to a bunch of boxes at the same time, then how we know which one the user clicked? Consider a situation where we have three boxes. When that particular box is clicked, we want to toggle a class. How do we know which box was clicked?
 
 It turns out that when we add an event listener using jQuery, we get a special little variable called `this`. Lucky for us, `this` is set to the box we clicked on.
 
