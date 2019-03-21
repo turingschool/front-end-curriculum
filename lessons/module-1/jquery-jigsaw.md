@@ -19,7 +19,7 @@ tags: javascript, jquery
 
 ## Structure
 
-### Introduction (5 minutes)
+### Introduction & Warm Up (10 minutes)
 
 What is a jigsaw lesson? What is the purpose? Why can't you just talk at us?
 
@@ -32,11 +32,10 @@ What is a jigsaw lesson? What is the purpose? Why can't you just talk at us?
   * Report out on what you've learned to someone else
   * Have questions about the topic that are still unclear that you can ask to a team member that has experience in that subject
 
-### Warm Up (10 minutes)
+## Warm Up 
 
-Review the base prework as a group:
+Take 5 minutes to read this blog post:
 
-* [What is jQuery?](https://www.youtube.com/watch?v=T2mFyPxL-fU)
 * [The basics of jQuery and the selector.](https://medium.com/@jaeger.rob/jquery-selectors-the-absolute-basics-d781500c722c#.q6q4j61fj)
 
 ### Research (35 minutes)
@@ -78,7 +77,7 @@ Post your CodePen demos to Slack for later reference.
 
 Have one person from each Learning Group write that group’s unanswered questions on the front board.
 
-### Review Questions (25 minutes)
+### Review Questions (Up to 25 minutes)
 
 Let's review and attempt to answer all the questions on the board together.
 
