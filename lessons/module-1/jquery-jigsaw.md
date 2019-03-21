@@ -6,14 +6,9 @@ tags: javascript, jquery
 
 ## Learning Goals
 
-* Use jQuery selectors to find content
-* Understand that jQuery collections allow you to manipulate multiple elements with a single method
-* Use jQuery's DOM traversal methods to move around the DOM
-* Add CSS class manipulation using jQuery
-* Append new content to the DOM
-* Add event listeners to elements currently in the DOM
-* Understand that adding an event listener will not effect elements you add to the DOM in the future
-* Get familiar with the documentation
+* Understand how to utilize jQuery for DOM Manipulation: selectors, values, and events
+* Get familiar and comfortable with referencing documentation to discover information
+* Reinforce prework research/exposure on jQuery through teaching others
 
 ***
 
