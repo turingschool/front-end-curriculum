@@ -21,7 +21,7 @@ tags: javascript, jquery
 
 ### Introduction (5 minutes)
 
-What is a jigsaw lesson? What is the purpose? What can't you just talk at us like usual?...
+What is a jigsaw lesson? What is the purpose? Why can't you just talk at us?
 
 * This lesson is a brief experience in what it will be like on the job when you are given a task that you have not had experience with in the past
 * Jigsaw-style lessons provide a cooperative learning experience in the safe environment of your peers and instructors
