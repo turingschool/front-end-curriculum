@@ -347,15 +347,7 @@ it('should dispatch isLoading(false) if the response is ok', async () => {
 
 We've made our initial fetch and gotten back a good response. Now it's time to dispatch our other asynchronous action creator / thunk. We don't necessarily care what `fetchBios` is doing. We are just concerned about whether or not it got dispatched. Since that's the case, we can just mock out `fetchBios`. 
 
-Remember back when we were creating our thunks and we decided to put each of them in their own file? This is why we did that... we wanted to be able to mock `fetchBios` individually. So, now let's go create a manual mock of `fetchBios`. We will need to create a mocks directory that lives at the same level as the file we are mocking (it is a **MUST** that they ***live at the same level*** and the mock be ***named exactly the same*** as the original).
-
-```javascript
-// thunks/__mocks__/fetchBios.js
-
-export const fetchBios = jest.fn()
-```
-
-Now we need to tell our `fetchStaff` test to look for a mock directory with the same file name.
+Remember back when we were creating our thunks and we decided to put each of them in their own file? This is why we did that... we wanted to be able to mock `fetchBios` individually. So, now let's go create a manual mock of `fetchBios`.
 
 ```javascript
 // thunks/__tests__/fetchStaff.js
