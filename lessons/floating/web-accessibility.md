@@ -69,7 +69,7 @@ Luckily for us, we have one that comes with our computer! It's called VoiceOver 
 * Moving your VoiceOver cursor out of your web page's content - `control + option + shift + up arrow`
 
 
-*PLEASE NOTE*
+***PLEASE NOTE***
 
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation. 
 
