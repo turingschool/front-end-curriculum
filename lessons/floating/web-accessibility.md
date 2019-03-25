@@ -68,6 +68,14 @@ Luckily for us, we have one that comes with our computer! It's called VoiceOver 
 * Moving your VoiceOver cursor into your web page's content - `control + option + shift + down arrow`
 * Moving your VoiceOver cursor out of your web page's content - `control + option + shift + up arrow`
 
+
+*PLEASE NOTE*
+
+DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation. 
+
+This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
+
+
 #### Your Turn
 
 By yourself:
