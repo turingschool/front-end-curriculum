@@ -33,8 +33,12 @@ A common obstacle that many JavaScript developers struggle with is understanding
 
 ### Experiment
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="OXzGGR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/Kalikoze/pen/NJmRaO">Events: Adding a New Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="Kalikoze" data-slug-hash="NJmRaO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Events: Adding a New Event Listener">
+  <span>See the Pen <a href="https://codepen.io/Kalikoze/pen/NJmRaO/">
+  Events: Adding a New Event Listener</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
 
@@ -84,8 +88,12 @@ Let's start with a quick experiment.
 
 In the following code pen, we have three nested HTML elements in `index.html`:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="ZOvkVo" data-default-tab="html,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/Kalikoze/pen/qvwaQm">Event Bubbling Example</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="Kalikoze" data-slug-hash="qvwaQm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Event Bubbling Example">
+  <span>See the Pen <a href="https://codepen.io/Kalikoze/pen/qvwaQm/">
+  Event Bubbling Example</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Pair Practice
 
@@ -198,8 +206,12 @@ parent.addEventListener('click', function(event) {
 });
 ```
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="OXzGGR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/team/turing/pen/OXzGGR/">Events: Adding a New Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="Kalikoze" data-slug-hash="NJmRaO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Events: Adding a New Event Listener">
+  <span>See the Pen <a href="https://codepen.io/Kalikoze/pen/NJmRaO/">
+  Events: Adding a New Event Listener</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Your Turn
 
