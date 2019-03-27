@@ -54,7 +54,7 @@ _Or other optional topic that is instructor approved_
 
 * Your dataset must have at least 30 records (If your dataset is an object, it should have 30 keys. If it's an array, it should have 30 elements)
 
-* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset [here](https://github.com/turingschool-examples/memoize). Your datasets should be added in a single file to the `/datasets` directory. Be sure to export at the bottom of your file.
+* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset [here](https://github.com/turingschool-examples/fe-apps). Your datasets should be added in a single file to the `/datasets` directory. Be sure to export at the bottom of your file.
 
 * You must save data to localStorage about correct / incorrect answers to localStorage so that the next time a user visits the page, they will only be shown the flash cards they got incorrect / still need to practice
 

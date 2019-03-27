@@ -99,7 +99,7 @@ Your README should include the following, in this order:
 
 # Submitting Your Project Ideas & Datasets
 
-You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and clearly describe what kind of application you will build and how it will utilize the datasets you've created.
+You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/fe-apps). Your project ideas should be in the description of your PR and clearly describe what kind of application you will build and how it will utilize the datasets you've created.
 
 When submitting your data:
 
