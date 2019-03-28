@@ -105,7 +105,8 @@ When submitting your data:
 
 * you must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset to make sure you don't have any syntax errors
 * you must **not** delete **any files or datasets** that currently exist in the repo. Do not replace them with your data and do not remove them
-* you must only create **one** single file that holds **both** datasets inside the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like so:
+* you must only create **one** single file that holds **both** datasets inside your cohort folder in the `whateverly` directory
+* They should be in JSON format and you should export both datasets at the bottom of the file like so:
 
 ```
 module.exports = {
@@ -113,7 +114,6 @@ module.exports = {
   students
 }
 ```
-
 
 
 # Repo Initialization
