@@ -83,7 +83,7 @@ If we break down the response, we can see that the server is sending back:
 
 ## Node.js
 
-So far, we've just been building apps that run in the browser. Now it's time for us to explore building server-side applications with Nodejs. Nodejs is an open-source JavaScript runtime environment built on Chrome's V8 JavaScript engine. With Nodejs, we have the awesome oppotunity to build server-side applications in a language we already know. Despite the fact that it's all just JavaScript, there are still some pretty significant differences.
+So far, we've just been building apps that run in the browser. Now it's time for us to explore building server-side applications with Nodejs. Nodejs is an open-source JavaScript runtime environment built on Chrome's V8 JavaScript engine. With Nodejs, we have the awesome opportunity to build server-side applications in a language we already know. Despite the fact that it's all just JavaScript, there are still some pretty significant differences.
 
 ### Browser v. Node.js
 
@@ -161,7 +161,7 @@ const { me, greeting } = require('./code')
 By now, we are all very familiar with NPM. NPM ships with Node and is the CLI most developers use to manage remote modules. Once we have installed a remote module, we can access it the same way we access Node's internal modules.
 
 ```
-const _ = require('lodash')
+const fetch = require('node-fetch')
 ```
 
 ### How is code evaluated in Node.js?
