@@ -10,6 +10,7 @@ By the end of this lesson, you will:
 
 * Know how to talk about the various parts of a url
 * Know what CRUD is
+* Know what an API is
 * Know what REST is and what some alternatives are
 * Understand a little more about the language and terminology of back-end developers
 
@@ -17,6 +18,7 @@ By the end of this lesson, you will:
 
 * Static Asset
 * Endpoint
+* API
 * CRUD
 * REST
 
@@ -30,7 +32,7 @@ Our applications will request HTML documents, CSS files, images, and data. The w
 
 While the syntax for each of these requests looks significantly different, they all share one thing in common: *Every request we make to an HTTP Server requires a URL.*
 
-The first 3 requests we're fetching a static asset, whereas the last one is requesting data from an api endpoint.
+In the first 3 requests we're fetching a static asset, whereas the last one is requesting data from an api endpoint.
 
 ![url-pic](https://www.normshield.com/wp-content/uploads/2017/05/example.png)
 
