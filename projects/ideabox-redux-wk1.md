@@ -96,7 +96,7 @@ When viewing the idea list:
 
 * When a user clicks the title or body of an idea in the list, that text should become an editable text field, pre-populated with the existing idea title or body.
 * The user should be able to "commit" their changes by pressing "Enter/Return" and by clicking outside of the text field.
-- When the user clicks on the "Star" button, the button should stay in the active (yellow) state. 
+- When the user clicks on the "Star" button, the button should stay in the active (yellow) state.
 * If the user reloads the page, their edits will be reflected.
   * This update of the data model should occur in an `updateIdea` method that is defined in the `Idea` class.
   * How the dom gets updated using javascript should happen in the `main.js` file (where you can still leverage your idea instance)
@@ -129,7 +129,29 @@ We'd like our users to be able to easily find specific ideas they already create
 
 Desktop layout:
 
-Color and font spec:
+![desktop specs][desktop-base]
+
+Full mobile layout:
+
+![full mobile layout][mobile-full]
+
+Full mobile layout with open navigation:
+
+![full mobile layout with navigation][mobile-full-navigation]
+
+<!-- Color, font, and icon spec:
+
+![color font and icon specs][button-hover-specs] -->
+
+<!-- #### Link to icon files
+
+You will need the `svg` files for the delete, upvote, and downvote icons. [Here's the link.](https://drive.google.com/drive/folders/1q3-CHruC1rtfsFe_pMa9gLUr3My71_Uq?usp=sharing) -->
+
+
+[desktop-base]: /assets/images/projects/ideabox/ideabox-redux-01.jpg
+[mobile-full]: /assets/images/projects/ideabox/ideabox-redux-02.jpg
+[mobile-full-navigation]: /assets/images/projects/ideabox/ideabox-redux-03.jpg
+<!-- [button-hover-specs]: /assets/images/projects/ideabox/ideabox-redux-04.jpg -->
 
 ------------------------------------------------------------------
 
@@ -185,4 +207,3 @@ Color and font spec:
   * [ ]  Uses logical operators instead of if/else statements where applicable
   * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
   * [ ]  When 'Filtering and Searching by Text' and 'Filtering by Importance', ideas that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
-
