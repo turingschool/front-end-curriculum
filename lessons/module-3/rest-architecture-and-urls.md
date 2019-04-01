@@ -58,16 +58,7 @@ During your time as a frontend developer, you've already been hitting RESTful en
 
 REST stands for representational state transfer. This means that web resources communicate using a set of stateless, uniform operations.
 
-The six architectural constraints of REST are:
-
-1. Client-server - Separation of GUI and data
-2. Stateless - No client context is stored by server, each client request provides all the information to fulfill the request.
-3. Cacheable - Server responses are defined as cacheable or not. (Speeds up future interactions)
-4. Layered system - Modularity, each 'layer' serves only a single high-level purpose - multiple servers can handle steps of a request (data/authentication), but the user cannot tell that their request/response went through multiple servers
-5. Code on demand - (i.e. instead of just JSON or XML, return JS script tag within HTML document) - optional feature; can still be considered RESTful without this
-6. Uniform interface - Ability to identify resources and manipulate them based on standard information provided 
-
-RESTful architecture includes sending HTTP methods to a URL to get back information from a request. This is the implementation of that 'uniform interface' constraint. The primary methods, which are often called CRUD methods (Create, Read, Update, and Destroy) are as follows:
+RESTful architecture includes sending HTTP methods to a URL to get back information from a request. The primary methods, which are often called CRUD methods (Create, Read, Update, and Destroy) are as follows:
 
 1. GET - Retrieve resource information identified by the request
 2. POST - Create a new resource
@@ -75,11 +66,13 @@ RESTful architecture includes sending HTTP methods to a URL to get back informat
 4. PATCH - Update only a portion of a specific resource
 5. DELETE - Destroy an entire specific resource by the request
 
-Typically there are only 2 paths for RESTFUL endpoints. For example, if we have an ideabox app. Those two paths would be:
+Typically there are only 2 paths for a given resource when it comes to RESTFUL endpoints. For example, if we have an ideabox app. Those two paths would be:
   1. `/ideas` - used to generically identify the type of resource. Because we may not have an id yet or we want a collection. 
   2. `/ideas/:id` - used to identify a specific resource of that type.
 
 That's a lot of words, at a high level, REST is really just a pattern that matches CRUD operations to endpoints.
+
+What RESTful api endpoint have you used in the past? How do you know they're RESTful?
 
 ### Some alternatives
 
