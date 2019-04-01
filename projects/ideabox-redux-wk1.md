@@ -131,9 +131,9 @@ Desktop layout:
 
 ![desktop specs][desktop-base]
 
-<!-- Color, font, and icon spec:
+Color, font, and icon spec:
 
-![color font and icon specs][button-hover-specs] -->
+![color font and icon specs][button-hover-specs]
 
 <!-- #### Link to icon files
 
@@ -141,7 +141,7 @@ You will need the `svg` files for the delete, upvote, and downvote icons. [Here'
 
 
 [desktop-base]: /assets/images/projects/ideabox/ideabox-redux-01.jpg
-<!-- [button-hover-specs]: /assets/images/projects/ideabox/ideabox-redux-04.jpg -->
+[button-hover-specs]: /assets/images/projects/ideabox/ideabox-redux-04.jpg
 
 ------------------------------------------------------------------
 
