@@ -62,6 +62,7 @@ When visiting the application, the user should:
 
 * See a list of all existing ideas, including the title, body, star, and quality for each idea.
 * Ideas should appear in descending chronological order (with the most recently created idea at the top left).
+  * If there are no ideas yet, then there should be an indication to the user to create an idea, displayed in the empty idea section.
 
 #### Adding a new idea
 
