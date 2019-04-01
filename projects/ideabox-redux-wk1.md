@@ -70,7 +70,7 @@ On the application's main page, a user should:
 
 * See two text boxes for entering the "Title" and "Body" for a new idea,
   and a "Save" button for committing that idea.
-* The "Save" button should be disabled if either the "Title" and "Body" inputs are empty.
+* The "Save" button should be disabled if either the "Title" or "Body" inputs are empty.
 
 When a user clicks "Save":
 
