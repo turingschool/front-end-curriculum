@@ -76,9 +76,16 @@ The submit button should be disabled when there is not valid content in both inp
 
 #### Layout comps
 
-Mobile layout:
+Full mobile layout:
 
-Color and font spec:
+![full mobile layout][mobile-full]
+
+Full mobile layout with open navigation:
+
+![full mobile layout with navigation][mobile-full-navigation]
+
+[mobile-full]: /assets/images/projects/ideabox/ideabox-redux-02.jpg
+[mobile-full-navigation]: /assets/images/projects/ideabox/ideabox-redux-03.jpg
 
 ------------------------------------------------------------------
 
@@ -126,11 +133,11 @@ Color and font spec:
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 * [ ]  Advanced Beginner - Application adds to the above by correctly implementing a data model for the `Idea` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
-  * [ ]  Uses event delegation correctly on dynamic elements for deleting, editing, & starring an idea (clicking outside of the text field)
+  * [ ]  Uses event delegation correctly on dynamic elements for deleting, editing, & starring an idea
   * [ ]  All functions are less than 10 lines
   * [ ]  There are no global variables aside from query selectors and two arrays for your ideas and qualities
   * [ ]  There are no nested if else statements
 * [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
   * [ ]  Uses logical operators instead of if/else statements where applicable
-  * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
+  * [ ]  Uses arrow functions, block scoped variables, and destructuring correctly.
   * [ ]  When 'Filtering and Searching by Text' and 'Filtering by Importance', ideas that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
