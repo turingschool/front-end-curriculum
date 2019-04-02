@@ -97,10 +97,10 @@ Callback functions - The parent will pass the child a function as a prop:
   <MyChild myFunc={this.handleChildFunc} />
   ```
 
-  The child would then call the function to communicate with its parent:
+  The child would then call the function to communicate with its parent, usually in response to a user interaction/event:
 
   ```js
-  this.props.myFunc(newData)
+  <button onClick={() => this.props.myFunc(newData)}>Submit</button>
   ```
 
 

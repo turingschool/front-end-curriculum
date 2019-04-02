@@ -72,6 +72,19 @@ Below you will find some datasets for inspiration.
 * Your users will only be able to **retrieve** your data, not modify it. (Similar to Jeopardy: you, as a developer, are allowed to manipulate the dataset to make it easier to work with, but the players interacting with your app cannot)
 
 
+## Search & Filter Functionality
+
+* Your app idea should lend itself to a useful implementation of search functionality. You **must** have at least a single text input that searches at least one of your datasets for particular entries. 
+
+* Your app should be able to filter the search results / datasets based on user-provided parameters. e.g. if I were building a podcast app, I should be able to filter by genre so that I'm only shown podcast results listed in the comedy genre.
+
+
+## LocalStorage
+
+* Your app should have a use-case for implementing localStorage. For example, if I were building a podcast app and I wanted to favorite certain podcasts that I was interested in subscribing to, maybe those podcasts would be saved to localStorage so that I could revisit just my favorites.
+
+
+
 ## Code Organization
 
 Your codebase should be organized with a file structure that works for your group. See the [React docs](https://reactjs.org/docs/faq-structure.html) for some common approaches. 
@@ -99,13 +112,14 @@ Your README should include the following, in this order:
 
 # Submitting Your Project Ideas & Datasets
 
-You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/whateverly-data). Your project ideas should be in the description of your PR and clearly describe what kind of application you will build and how it will utilize the datasets you've created.
+You should pull request your project ideas and their corresponding datasets [here](https://github.com/turingschool-examples/fe-apps). Your project ideas should be in the description of your PR and clearly describe what kind of application you will build and how it will utilize the datasets you've created.
 
 When submitting your data:
 
-* you must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset to make sure you don't have any syntax errors
+* you must run your dataset through a [JSON validator](https://jsonformatter.curiousconcept.com/) before submitting a pull request for your datasets to make sure you don't have any syntax errors [like so](https://imgur.com/jecJoe9)
 * you must **not** delete **any files or datasets** that currently exist in the repo. Do not replace them with your data and do not remove them
-* you must only create **one** single file that holds **both** datasets inside the `/datasets` directory. They should be in JSON format and you should export both datasets at the bottom of the file like so:
+* you must only create **one** single file that holds **both** datasets inside your cohort folder in the `whateverly` directory. that file should be named `yourGithubUsername.js`
+* They should be in JSON format and you should export both datasets at the bottom of the file like so:
 
 ```
 module.exports = {
@@ -114,6 +128,7 @@ module.exports = {
 }
 ```
 
+* See additional instructions and sample files in the [README](https://github.com/turingschool-examples/fe-apps#student-instructions)
 
 
 # Repo Initialization
