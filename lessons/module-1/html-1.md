@@ -132,7 +132,7 @@ In your groups, use the following semantic HTML tags to create the basic structu
 
 ![Alien Paper](/assets/images/alien-paper.png)
 
-<!-- Commenting this out for now since we're having them do it on chartboard paper instead of doing it in a codepen -->
+<!-- Commenting the codepen example of this solution (below) out for now since we're having them do it on chartboard paper instead of doing it in a codepen -->
 <!-- <p data-height="300" data-theme-id="23788" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> -->
 
