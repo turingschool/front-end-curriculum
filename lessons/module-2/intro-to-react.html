@@ -39,9 +39,9 @@
           <h2><a name="LessonGoals">Lesson Goals</a></h2>
           <p>Students should be able to:</p>
           <ul>
-            <li>define what React is and what it does for us</li>
-            <li>explain why we would use a tool like React</li>
-            <li>build a React page using stateless & stateful components</li>
+            <li>Define what React is and what it does for us</li>
+            <li>Explain why we would use a tool like React</li>
+            <li>Build a React page using functional & class components</li>
           </ul>
         </section>
         <hr />
@@ -122,26 +122,26 @@
           <p>You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. In React, components have the following characteristics:</p>
           
           <ul>
-            <li>they are either functions or an extended ES6 class</li>
-            <li>they return one, single JSX element (remember, functions can only return one thing!)</li>
-            <li>there are two types of components: stateless and stateful</li>
+            <li>They are either functions or an extended ES6 class</li>
+            <li>They return one, single JSX element (remember, functions can only return one thing!)</li>
+            <li>Components can be functional or classes</li>
           </ul>
 
-          <p>We'll start investigating these characteristics by practicing with stateless components.</p>
+          <p>We'll start investigating these characteristics by practicing with functional components.</p>
 
           <div class="discuss">
             <h4>Code Along</h4>
-            <p>Fork <a href="https://github.com/turingschool-examples/intro-to-react">this repo</a> and in your terminal, run <code>npm install</code> then <code>npm start</code>. Open up your app at localhost:8080 and you should see a simple string of text that says 'Evil Deeds'</p>
+            <p>Fork <a href="https://github.com/turingschool-examples/intro-to-react" target="_blank">this repo</a> and in your terminal, run <code>npm install</code> then <code>npm start</code>. Open up your app at localhost:8080 and you should see a simple string of text that says 'Evil Deeds'</p>
           </div>
 
-          <h3>Stateless Components</h3>
-          <p>Stateless components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Stateless components are just functions that return the HTML you want rendered to the DOM. Examine the following example:</p>
+          <h3>Functional Components</h3>
+          <p>Functional components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Functional components are just functions that return the HTML you want rendered to the DOM. Examine the following example:</p>
 
           <img src="../../assets/images/lessons/intro-to-react/stateless-component.png" width="100%" />
 
 
-          <h3>Stateful Components</h3>
-          <p>Stateful components are ES6 classes that extend an abstract 'Component' class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM, and they keep track of some sort of application data.</p>
+          <h3>Class Components</h3>
+          <p>Class components are ES6 classes that extend an abstract 'Component' class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM, and they keep track of some sort of application data.</p>
 
         </section>
         <hr />
@@ -165,7 +165,7 @@
 
           <h3>State</h3>
           <p>State is slightly different than props: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.</p>
-          <p>One of the more confusing things about React is when to make a component stateful. A general rule of thumb to keep in mind is that, if you're not sure if a component should be stateless or stateful, start with a stateless component. Add state if you find that you need it. Stateful components are a lot heavier than stateless component. Keep your app as lean as possible!</p>
+          <p>One of the more confusing things about React is when to make a component a class instead of a function. A general rule of thumb to keep in mind is that, if you're not sure if a component should be functional or a class, start with a functional component. Add state if you find that you need it. Class components are a lot heavier than functional components. Keep your app as lean as possible!</p>
 
           <div class="discuss">
             <h4>Read</h4>
@@ -179,7 +179,7 @@
           <h2><a name="Checks">Checks for Understanding</a></h2>
           <ul>
             <li>How does React improve the process of manipulating the DOM?</li>
-            <li>What is the difference between stateless and stateful components?</li>
+            <li>What are some differences between functional and class components?</li>
             <li>What is the difference between props and state?</li>
           </ul>
         </section>
