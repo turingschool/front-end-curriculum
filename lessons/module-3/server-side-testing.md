@@ -21,7 +21,7 @@ By the end of this lesson, you will:
 In your notebooks: 
 
 1. When we're testing api calls on the front end, what are you concerned about testing? Try to get into as much detail as possible.
-2. In the backend, what do you think we'll be concerned about testing? Is overlap needed?
+2. In the backend, what do you think we should be concerned about testing? Is overlap needed?
 
 ## Code Along
 
@@ -201,10 +201,14 @@ describe('post /api/v1/pets', () => {
   it('should return a 201 and a new pet (with an id) if things go well', async () => {
     const goodPetInfo = { name: 'Fido', type: 'dog' };
     Date.now = jest.fn().mockImplementation(() => 10);
+    expect(app.locals.pets.length).toBe(3);
+
     const response = await request(app).post('/api/v1/pets')
       .send(goodPetInfo);
+
     expect(response.status).toBe(201);
     expect(response.body).toEqual({ id: 10, ...goodPetInfo });
+    expect(app.locals.pets.length).toBe(4);
   });
 
   it('should return a 422 and error message if the info sent is not ok', async () => {
