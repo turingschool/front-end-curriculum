@@ -125,7 +125,11 @@ checkForFreeShipping({ "Shampoo": 5.99, "Rubber Ducks": 15.99 }) ➞ false
 
 checkForFreeShipping({ "Flatscreen TV": 399.99 }) ➞ true
 
-checkForFreeShipping({ "Monopoly": 11.99, "Secret Hitler": 35.99, "Bananagrams": 13.99 }) ➞ true
+checkForFreeShipping({ 
+  "Monopoly": 11.99, 
+  "Secret Hitler": 35.99, 
+  "Bananagrams": 13.99 
+  }) ➞ true
 ```
 
 ##### Notes
@@ -139,7 +143,7 @@ Create a function that checks to see if two object arguments are equal to one an
 ##### Examples
 
 ```js
-checkIfSame({
+checkIfDataIsSame({
   name: "Benny",
   phone: "3325558745",
   email: "benny@edabit.com"
@@ -151,7 +155,7 @@ checkIfSame({
 
 ➞ false
 
-checkIfSame({
+checkIfDataIsSame({
   name: "Jason",
   phone: "9853759720",
   email: "jason@edabit.com"
