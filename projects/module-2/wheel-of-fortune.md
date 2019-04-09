@@ -16,8 +16,8 @@ Copy [this dataset](https://repl.it/@thatpamiam/WheelOfFortune) into a `.js` fil
 These user stories may be worked on in any order that makes sense to your pair.
 
 
-*EPIC: Game Mechanics* _#Game Mechanics_
-*EPIC: Core Application* _#Core Application_
+***EPIC: Game Mechanics*** _#Game Mechanics_  
+***EPIC: Core Application*** _#Core Application_  
 
 
 ```
@@ -39,7 +39,7 @@ child of #Core Application
 ```
 [ ] done
 
-User Story 2,Game Mechanics, Puzzle
+User Story 2, Game Mechanics, Puzzle
 
 As a developer of the game,
 I must generate a list of puzzle words (or phrases).
@@ -56,7 +56,7 @@ child of #Core Application
 ```
 [ ] done
 
-User Story 3,Game Mechanics, Wheels
+User Story 3, Game Mechanics, Wheels
 
 As a developer of the game,
 I need to be able to randomly generate a "wheel" for each round.
@@ -102,7 +102,7 @@ depends on #Story 1
 ```
 [ ] done
 
-User Story 5, Seeting Up a New Game
+User Story 5, Setting Up a New Game
 
 As a visitor,
 When I begin a new game,
@@ -121,7 +121,7 @@ depends on #Story 4
 ```
 
 
-*EPIC: Playing a Round* _#Playing A Round_
+***EPIC: Playing a Round*** _#Playing A Round_
 
 
 ```
@@ -239,7 +239,7 @@ depends on #Story 8
 ```
 
 
-*EPIC: Spinning the Wheel* _#Spinning the Wheel_
+***EPIC: Spinning the Wheel*** _#Spinning the Wheel_
 
 
 ```
@@ -361,7 +361,7 @@ child of #Core Application
 depends on #Story 15
 ```
 
-*EPIC: Solving the Puzzle* _#Solving the Puzzle_
+***EPIC: Solving the Puzzle*** _#Solving the Puzzle_
 
 ```
 [ ] done
