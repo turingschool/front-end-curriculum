@@ -61,7 +61,7 @@ be concerned with is how to display data, based on what kind of data it was
 handed.
 
 The **Controller** acts as the go-between for the Model and the View. It handles
-any user interaction coming from the View, and uses the determines any changes
+any user interaction coming from the View, and determines any changes
 that may need to be made to the Model. It can also manipulate data from the
 Model to give to the View, for rendering a final output.
 
