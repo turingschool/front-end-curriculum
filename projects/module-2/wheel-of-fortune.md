@@ -246,7 +246,7 @@ child of #Spinning the Wheel
 
 child of #Core Application
 
-depends on #Story 8
+depends on #8
 ```
 
 *Issue title*  
