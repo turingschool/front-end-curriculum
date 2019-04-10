@@ -17,7 +17,6 @@ These user stories should be worked on in the order presented, accounting for de
 
 
 ***EPIC: Game Mechanics*** _#Game Mechanics_  
-***EPIC: Core Application*** _#Core Application_  
 
 
 ```
@@ -96,7 +95,7 @@ child of #Game Mechanics
 
 child of #Core Application
 
-depends on #Story 1
+depends on #1
 ```
 
 ```
@@ -117,7 +116,7 @@ child of #Game Mechanics
 
 child of #Core Application
 
-depends on #Story 4
+depends on #4
 ```
 
 
@@ -142,11 +141,11 @@ child of #Playing A Round
 
 child of #Core Application
 
-depends on #Story 5
+depends on #5
 
-depends on #Story 3
+depends on #3
 
-depends on #Story 2
+depends on #2
 ```
 
 ```
@@ -166,7 +165,7 @@ child of #Playing A Round
 
 child of #Core Application
 
-depends on #Story 6
+depends on #6
 ```
 
 ```
@@ -190,7 +189,7 @@ child of #Playing A Round
 
 child of #Core Application
 
-depends on #Story 7
+depends on #7
 ```
 
 ```
@@ -207,11 +206,11 @@ child of #Playing A Round
 
 child of #Core Application
 
-depends on #Story 7
+depends on #7
 
-depends on #Story 15
+depends on #15
 
-depends on #Story 10
+depends on #10
 ```
 
 ```
@@ -235,7 +234,7 @@ And my turn is over.
 
 -----
 
-depends on #Story 8
+depends on #8
 ```
 
 
@@ -276,7 +275,7 @@ child of #Spinning the Wheel
 
 child of #Core Application
 
-depends on #Story 11
+depends on #11
 ```
 
 ```
@@ -296,7 +295,7 @@ child of #Spinning the Wheel
 
 child of #Core Application
 
-depends on #Story 11
+depends on #11
 ```
 
 ```
@@ -314,7 +313,7 @@ child of #Spinning the Wheel
 
 child of #Core Application
 
-depends on #Story 11
+depends on #11
 ```
 
 ```
@@ -339,7 +338,7 @@ child of #Spinning the Wheel
 
 child of #Core Application
 
-depends on #Story 11
+depends on #11
 ```
 
 ```
@@ -358,7 +357,7 @@ child of #Spinning the Wheel
 
 child of #Core Application
 
-depends on #Story 15
+depends on #15
 ```
 
 ***EPIC: Solving the Puzzle*** _#Solving the Puzzle_
@@ -381,7 +380,7 @@ child of #Solving the Puzzle
 
 child of #Core Application
 
-depends on #Story 8
+depends on #8
 ```
 
 ```
@@ -402,7 +401,7 @@ child of #Solving the Puzzle
 
 child of #Core Application
 
-depends on #Story 17
+depends on #17
 ```
 
 *EPIC: Bonus Round*
@@ -425,7 +424,7 @@ child of #Bonus Round
 
 child of #Core Application
 
-depends on #Story 18
+depends on #18
 ```
 
 ```
@@ -443,7 +442,7 @@ child of #Bonus Round
 
 child of #Core Application
 
-depends on #Story 19
+depends on #19
 ```
 
 ```
@@ -464,7 +463,7 @@ child of #Bonus Round
 
 child of #Core Application
 
-depends on #Story 20
+depends on #20
 ```
 
 ```
@@ -482,7 +481,7 @@ child of #Bonus Round
 
 child of #Core Application
 
-depends on #Story 21
+depends on #21
 ```
 
 ```
@@ -499,7 +498,7 @@ No accumulated money is updated.
 
 -----
 
-depends on #Story 22
+depends on #22
 ```
 
 ```
@@ -520,7 +519,7 @@ child of #Bonus Round
 
 child of #Core Application
 
-depends on #Story 23
+depends on #23
 ```
 
 ```
@@ -541,5 +540,5 @@ child of #Bonus Round
 
 child of #Core Application
 
-depends on #Story 23
+depends on #23
 ```
