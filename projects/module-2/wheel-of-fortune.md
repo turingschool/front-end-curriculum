@@ -13,7 +13,7 @@ Copy [this dataset](https://repl.it/@thatpamiam/WheelOfFortune) into a `.js` fil
 
 ## User Stories
 
-These user stories may be worked on in any order that makes sense to your pair.
+These user stories should be worked on in the order presented, accounting for dependencies between stories.
 
 
 ***EPIC: Game Mechanics*** _#Game Mechanics_  
