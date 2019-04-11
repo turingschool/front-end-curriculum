@@ -24,12 +24,12 @@ Note: If you have started to learn some es6, feel free to implement all of those
 Your entire application will consist of one HTML page or template. You will have two javascript files:
 
 1. A `todo-list.js` file that contains a `ToDoList` class.
-	* `ToDoList` methods must include, but are not limited to:
+	* `ToDoList` methods must include, _but are not limited to_:
 		1. `constructor`
 		2. `saveToStorage`
 		3. `deleteFromStorage`
 		4. `updateToDo` (should update the todo's title and urgency)
-    5. `updateTask` (should update a task's content and if it has been completed)
+		5. `updateTask` (should update a task's content and if it has been completed)
 2. A `main.js` file that contains all DOM related javascript
 
 ### Data Model
@@ -119,7 +119,7 @@ A user should be able to mark their todo cards urgent so that they know which th
 We'd like our users to be able to easily find their todos, so let's provide them a search bar to filter through their list.
 
 * At the top of the application, include a text field labeled `Search`.
-* As a user types in the search box, the list of todos should filter in real time to only display todo cards whose title include the user's text. The page _should not_ reload.
+* As a user types in the search box, the list of todos on the DOM should filter in real time to only display todo cards whose title include the user's text. The page _should not_ reload.
 * Clearing the search box should restore all todo cards on the list.
 * There is no need to make persisting changes to the data model to achieve this functionality.
 
