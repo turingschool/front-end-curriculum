@@ -55,7 +55,7 @@ When a user clicks `Make Todo List`:
 * The `Make ToDo List` button should be disabled if either the title input or checklist is empty.
 * The page _should not_ reload.
 * The todo card should be persisted. It should still be present upon reloading the page.
-* The todo should be added to `localStorage` using the `saveToStorage` method defined in the `ToDo` class.
+* The todo should be added to `localStorage` using the `saveToStorage` method defined in the `ToDoList` class.
 
 When a user clicks `Clear All`:
 * Both the title input and list of tasks should be cleared.
@@ -69,7 +69,7 @@ After a user has completed a task on their checklist, they should be able to che
 
 * There should be a visual cue so that the user knows what they have completed and what is still left to do.
 * Tasks that are checked off should persist upon reloading the page.
-* The update of the data model should occur in the `updateToDo` method that is defined in the `ToDo` class.
+* The update of the data model should occur in the `updateToDo` method that is defined in the `ToDoList` class.
 * How the DOM gets updated using javascript should happen in the `main.js` file.
 
 #### Deleting an Existing ToDo Card
@@ -79,7 +79,7 @@ After creating a todo card, the user should be able to remove it once they have 
 * Each todo card in the list should have a button to remove it from both the data model and the dom.
 * The "Delete" button should only be enabled if all of the tasks on the checklist have been checked off.
 * Upon clicking the "Delete" button, the appropriate todo list should be removed from the list.
-* The update of the data model should happen in the `deleteFromStorage` method that is defined in the `ToDo` class.
+* The update of the data model should happen in the `deleteFromStorage` method that is defined in the `ToDoList` class.
 * How the DOM gets updated using javascript should happen in the `main.js` file
 
 #### Marking a ToDo Card Urgent
@@ -88,7 +88,7 @@ A user should be able to mark their todo cards urgent so that they know which th
 
 * When the user clicks on the `Urgent` button, the button should stay in the active state. 
 * ToDo cards that are marked as urgent should persist upon reloading the page.
-* This update of the data model should occur in the `updateToDo` method that is defined in the `ToDo` class.
+* This update of the data model should occur in the `updateToDo` method that is defined in the `ToDoList` class.
 * How the DOM gets updated using javascript should happen in the `main.js` file
 
 ### Phase Three: Specifying what Content is Viewed
@@ -120,7 +120,7 @@ A user would likely want to edit the title of a todo or update their task later 
 
 * When a user clicks the title or any of the tasks on the checklist of a todo card, that text should become an editable text field, pre-populated with the existing todo title or task.
 * The user should be able to "commit" their changes by pressing "Enter/Return" and by clicking outside of the text field.
-* This change should be saved in localStorage using the `updateToDo` method defined in the `ToDo` class.
+* This change should be saved in localStorage using the `updateToDo` method defined in the `ToDoList` class.
 
 #### Improving The Search Functionality
 
@@ -189,7 +189,7 @@ The user might also might to add more tasks to their checklist after they have c
 ### JAVASCRIPT - Style and Implementation
 
 * [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
-* [ ]  Advanced Beginner - Application correctly implements data model for the `ToDo` class including all required methods
+* [ ]  Advanced Beginner - Application correctly implements data model for the `ToDoList` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
   * [ ]  Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
   * [ ]  All functions are less than 10 lines
