@@ -21,7 +21,27 @@ Note: If you have started to learn some es6, feel free to implement all of those
 
 ### Architecture
 
+Your entire application will consist of one HTML page or template. You will have two javascript files:
+
+1. A `todo-list.js` file that contains a `ToDoList` class.
+	* `ToDoList` methods must include, but are not limited to:
+		1. `constructor`
+		2. `saveToStorage`
+		3. `deleteFromStorage`
+		4. `updateTodo`
+2. A `main.js` file that contains all DOM related javascript
+
 ### Data Model
+* A to-do list has an _id_, _title_, _tasks_, and _urgent_ property.
+	* The _id_ property should be a unique indentifier
+	* _title_ is a string
+	* _urgent_ is a boolean value
+	* _tasks_ should be an array of objects 
+		* Each _task_ in the array should be an object (you'll need a way to identify these objects, track whether the task has been completed, and store the task's text...)
+
+* See above for the required methods of the `ToDoList` class.
+
+Each todo list on the page should be created as an instance of the `ToDoList` class. 
 
 ### Phase One: Beginning User Flow
 
@@ -76,9 +96,9 @@ After a user has completed a task on their checklist, they should be able to che
 
 After creating a todo card, the user should be able to remove it once they have completed their checklist.
 
-* Each todo card in the list should have a button to remove it from both the data model and the dom.
+* Each todo card in the DOM should have a button to remove it from both the data model and the dom.
 * The "Delete" button should only be enabled if all of the tasks on the checklist have been checked off.
-* Upon clicking the "Delete" button, the appropriate todo list should be removed from the list.
+* Upon clicking the "Delete" button, the appropriate todo list should be removed from the DOM.
 * The update of the data model should happen in the `deleteFromStorage` method that is defined in the `ToDoList` class.
 * How the DOM gets updated using javascript should happen in the `main.js` file
 
@@ -88,7 +108,7 @@ A user should be able to mark their todo cards urgent so that they know which th
 
 * When the user clicks on the `Urgent` button, the button should stay in the active state. 
 * ToDo cards that are marked as urgent should persist upon reloading the page.
-* This update of the data model should occur in the `updateToDo` method that is defined in the `ToDoList` class.
+* This update of the data model should occur in the `completeTask` method that is defined in the `ToDoList` class.
 * How the DOM gets updated using javascript should happen in the `main.js` file
 
 ### Phase Three: Specifying what Content is Viewed
