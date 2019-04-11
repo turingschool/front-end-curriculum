@@ -198,6 +198,5 @@ The user might also might to add more tasks to their checklist after they have c
 * [ ] Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
   * [ ] Uses logical operators instead of if/else statements where applicable
   * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
-  * [ ] Application stores all todos in one array in local storage, instead of individually
   * [ ] When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', todos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
 
