@@ -165,6 +165,28 @@ The user might also might to add more tasks to their checklist after they have c
 
 ### Layout Comps
 
+Desktop layout:
+
+![Check Yo'Self Desktop][desktop-base]
+
+Desktop layout adding a task:
+
+![Check Yo'Self Desktop Adding A Task][desktop-new-task]
+
+Desktop layout filtering by urgency:
+
+![Check Yo'Self Desktop Filtering By Urgency][desktop-urgent-cards]
+
+Color, font, and icon spec:
+
+![color font and icon specs][button-hover-specs]
+
+
+[desktop-base]: /assets/images/projects/check-yo-self/check-yo-self-01.jpg
+[desktop-new-task]: /assets/images/projects/check-yo-self/check-yo-self-02.jpg
+[desktop-urgent-cards]: /assets/images/projects/check-yo-self/check-yo-self-03.jpg
+[button-hover-specs]: /assets/images/projects/check-yo-self/check-yo-self-04.jpg
+
 ----------------------------------------------------------
 
 ## Rubric
