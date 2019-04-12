@@ -4,8 +4,6 @@ length: 1 week
 tags: javascript, react
 ---
 
-# Memoize
-
 1 week solo project for FE Mod 2 (Week 6)
 
 ## Background and Description
