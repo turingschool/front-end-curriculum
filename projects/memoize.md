@@ -56,7 +56,7 @@ _Or other optional topic that is instructor approved_
 
 * You must save data to localStorage about correct / incorrect answers to localStorage so that the next time a user visits the page, they will only be shown the flash cards they got incorrect / still need to practice
 
-
+* Only 3 of any one topic will be accepted/approved. (e.g. If 3 people in the cohort have been approved to do a flashcards app covering prototypes, no other pitches submitted for covering prototypes will be approved). Pitches/datasets will be approved in the order they are received.
 
 # Path 2 
 
@@ -75,7 +75,8 @@ Check out some of these learning tools from the wild:
 * [Code Wars](http://codewars.com)
 * [Exercism](https://exercism.io/)
 
-While the application you build doesn't have to be as complex as the examples above, know that you have the freedom to be ambitious and take your study tool in whatever direction you choose. Check out some successful student projects from the past like [CSS-Animate](https://css-animate.com) and [Rabbit Hole](https://jarushford.github.io/rabbit-hole/).
+While the application you build doesn't have to be as complex as the examples above, know that you have the freedom to be ambitious and take your study tool in whatever direction you choose. Check out some successful student projects from the past like [CSS-Animate](https://css-animate.com), [Rabbit Hole](https://jarushford.github.io/rabbit-hole/), and [Terminal Commander](https://terminal-commander.herokuapp.com/).
+
 
 ### Potential Topic Ideas
 

@@ -96,7 +96,7 @@ When viewing the idea list:
 
 * When a user clicks the title or body of an idea in the list, that text should become an editable text field, pre-populated with the existing idea title or body.
 * The user should be able to "commit" their changes by pressing "Enter/Return" and by clicking outside of the text field.
-- When the user clicks on the "Star" button, the button should stay in the active (yellow) state.
+- When the user clicks on the "Star" button, the button should stay in the active state.
 * If the user reloads the page, their edits will be reflected.
   * This update of the data model should occur in an `updateIdea` method that is defined in the `Idea` class.
   * How the dom gets updated using javascript should happen in the `main.js` file (where you can still leverage your idea instance)
