@@ -37,12 +37,12 @@ Your entire application will consist of one HTML page or template. You will have
 	* The _id_ property should be a unique indentifier
 	* _title_ is a string
 	* _urgent_ is a boolean value
-	* _tasks_ should be an array of objects 
+	* _tasks_ should be an array of objects
 		* Each _task_ in the array should be an object (you'll need a way to identify these objects, track whether the task has been completed, and store the task's text...)
 
 * See above for the required methods of the `ToDoList` class.
 
-Each todo list on the page should be created as an instance of the `ToDoList` class. 
+Each todo list on the page should be created as an instance of the `ToDoList` class.
 
 ### Phase One: Beginning User Flow
 
@@ -60,12 +60,12 @@ On the left side of the page, a user should see:
 
 * Two inputs for entering the title and adding a new task to the list.
 * Two buttons including a `Make Task List` button for committing the checklist and a `Clear All` button to clear the title and checklist.
-* Lastly, there should be a `Filter by Urgency` button. 
+* Lastly, there should be a `Filter by Urgency` button.
 
 When a user adds a new `Task Item`:
 
-* The task is added to the bottom of the checklist in between the `Task Title` and `Task Item` inputs 
-* Each task on the checklist should also be able to be removed by clicking the respective "delete" button. 
+* The task is added to the bottom of the checklist in between the `Task Title` and `Task Item` inputs
+* Each task on the checklist should also be able to be removed by clicking the respective "delete" button.
 * It should not add a task to the checklist if the input is empty.
 * Tasks on the checklist of the form _do not need to persist_.
 
@@ -107,7 +107,7 @@ After creating a todo card, the user should be able to remove it once they have 
 
 A user should be able to mark their todo cards urgent so that they know which they need to complete first.
 
-* When the user clicks on the `Urgent` button, the button should stay in the active state. 
+* When the user clicks on the `Urgent` button, the button should stay in the active state.
 * Todo cards that are marked as urgent should persist upon reloading the page.
 * This update of the data model should occur in the `updateToDo` method that is defined in the `ToDoList` class.
 * How the DOM gets updated using javascript should happen in the `main.js` file
@@ -154,7 +154,7 @@ Our user might want to be able to search their cards not only by their title, bu
 
 #### Adding More Tasks To Each Card
 
-The user might also might to add more tasks to their checklist after they have created a todo card. 
+The user might also might to add more tasks to their checklist after they have created a todo card.
 
 * Add an input to the bottom of each card so that the user can add more tasks later.
 * Each task added should appear at the bottom of the list unchecked.
@@ -165,6 +165,8 @@ The user might also might to add more tasks to their checklist after they have c
 * Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=557400577)
 
 ### Layout Comps
+
+Here are the [links to the icon SVG files](https://drive.google.com/drive/folders/13Pi2uJWrZd9hlZclSDNn653ZmEL_mKuy?usp=sharing).
 
 Desktop layout:
 
@@ -178,6 +180,10 @@ Desktop layout filtering by urgency:
 
 ![Check Yo'Self Desktop Filtering By Urgency][desktop-urgent-cards]
 
+Mobile layout:
+
+![Check Yo'Self Desktop][mobile-base]
+
 Color, font, and icon spec:
 
 ![color font and icon specs][button-hover-specs]
@@ -186,7 +192,8 @@ Color, font, and icon spec:
 [desktop-base]: /assets/images/projects/check-yo-self/check-yo-self-01.jpg
 [desktop-new-task]: /assets/images/projects/check-yo-self/check-yo-self-02.jpg
 [desktop-urgent-cards]: /assets/images/projects/check-yo-self/check-yo-self-03.jpg
-[button-hover-specs]: /assets/images/projects/check-yo-self/check-yo-self-04.jpg
+[mobile-base]: /assets/images/projects/check-yo-self/check-yo-self-04.jpg
+[button-hover-specs]: /assets/images/projects/check-yo-self/check-yo-self-05.jpg
 
 ----------------------------------------------------------
 
@@ -242,4 +249,3 @@ Color, font, and icon spec:
   * [ ] Uses logical operators instead of if/else statements where applicable
   * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
   * [ ] When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', todos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
-
