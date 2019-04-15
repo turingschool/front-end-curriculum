@@ -34,7 +34,7 @@ Your entire application will consist of one HTML page or template. You will have
 
 ### Data Model
 * A to-do list has an _id_, _title_, _tasks_, and _urgent_ property.
-	* The _id_ property should be a unique indentifier
+	* The _id_ property should be a unique identifier
 	* _title_ is a string
 	* _urgent_ is a boolean value
 	* _tasks_ should be an array of objects
