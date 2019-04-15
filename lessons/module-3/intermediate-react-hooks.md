@@ -211,7 +211,9 @@ class Fetch extends Component {
   render() {
     const { pets } = this.state
     return (
-      {!pets.length ? null : this.props.render(pets)}
+      <div>
+        {!pets.length ? null : this.props.render(pets)}
+      </div>
     )  
   }
 }
