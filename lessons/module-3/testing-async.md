@@ -36,6 +36,7 @@ Follow along with a modified version of the grocery list application [here](http
 Clone the repo, checkout the **async-begin** branch, and install the dependencies. 
 
 ```bash
+git clone git@github.com:turingschool-examples/grocery-list.git
 git checkout async-begin
 npm install
 ```
