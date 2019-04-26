@@ -24,7 +24,7 @@ Through each iteration, you should use TDD to drive implementation of your code.
 
 ## Initial Setup
 
-For this project, you need to use this [Flashcards Starter]() repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
+For this project, you need to use this [Flashcards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
 
 There are additional notes in the README about the logic that is provided to you (utils.js) for finishing Iteration 3. Be sure to read through the README before you start coding - for this starter kit to work correctly, it has some underlying assumptions of where files live. 
 
@@ -168,6 +168,7 @@ Now that we have all of our classes and methods set up, we can connect this to t
 As you may have noticed, your `Game` class has some the `printMessage` ad `printQuestion` methods fleshed out already.  We are going to abandon testing for these methods - as the techniques for this type of testing are beyond the scope of this project.
 
 - Your `Game` class should meet these other requirements:
+  - Should keep track of the `currentRound`
   - `start`: method that starts everything
     * Creates `Cards`
     * Puts `Cards` in a `Deck`
@@ -176,6 +177,13 @@ As you may have noticed, your `Game` class has some the `printMessage` ad `print
     * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI 
 
     _Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._
+
+For example: 
+
+```js
+game.currentRound // => Round {...} (The new Round object that has been instatiated)
+```
+
 
 ## Iteration 4:
 
