@@ -191,18 +191,18 @@ game.currentRound // => Round {...} (The new Round object that has been instatia
 
 _Note: These extensions may require modifying pre-existing code that was given to you_
 
-*Build out another study/flashcards dataset.*
+* Build out another study/flashcards dataset.
 
 Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created
 
-*More practice*
+* More practice
 
 Add functionality so that a score of less than 90% will require the user to go through the entire dataset again
 
-*Review incorrect answers*
+* Review incorrect answers
 Add functionality so that the `Round` (and thus, the `Game`) does not end after you've gone through all of the cards. The player should then be prompted to try to guess again, reviewing only those cards that are stored as incorrect
 
-### CYOE (Choose Your Own Extension)
+* CYOE (Choose Your Own Extension)
 
 Collaborate with instructors to personalize an extension for this project
 
@@ -211,9 +211,8 @@ Collaborate with instructors to personalize an extension for this project
 The project will be assessed with the following guidelines:
 
 ### Functional Expectations
-
-* 4: Application fulfills all expectations of iterations 1 - 5 with no bugs, crashes, or missing functionality *as well as* an extensions.
-* 3: Application fulfills expectations of iterations 1 - 5 with no bugs, crashes, or missing functionality.
+* 4: Application fulfills all expectations of iterations 1 - 4 with no bugs, crashes, or missing functionality *as well as* an extension.
+* 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
@@ -223,7 +222,6 @@ The project will be assessed with the following guidelines:
 * 3:  Application shows strong effort towards organization, content, and refactoring.
 * 2:  Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
 * 1:  Application generates syntax error or crashes during execution.
-
 
 ### Test-Driven Development
 
