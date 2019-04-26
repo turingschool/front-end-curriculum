@@ -79,7 +79,7 @@ turn.returnCard()     // => { id: 1,
 turn.evaluateGuess()  // => false
 
 
-turn.fiveFeeback()    // => incorrect!
+turn.giveFeedback()    // => incorrect!
 ```
 
 ## Iteration 2:
