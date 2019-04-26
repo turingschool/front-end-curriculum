@@ -33,17 +33,16 @@ By the end of this lesson, you will:
 
 Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin). 
 
-Clone the repo and checkout the **async-begin** branch. 
+Clone the repo, checkout the **async-begin** branch, and install the dependencies. 
+
+```bash
+git checkout async-begin
+npm install
+```
 
 Open the code up in your editor.
 
-Open two tabs in your terminal and run the following commands to get started:
-
-```bash
-npm install
-node server.js
-npm start
-```
+Open two tabs in your terminal and run `npm run server` in one terminal window and `npm start` in the other terminal window to get started.
 
 ## Testing API Calls
 When our application makes a request to an API endpoint, we typically want to test our app's **reaction** to the response it receives from that request. We don't really care about what goes on in the back-end, we just want to know that we can handle the response appropriately. This makes API calls a good scenario for using mocks. However, we're usually placing our fetch requests within other functions or methods, and we might not want to override the functionality of the entire method with a mock. Consider the following example from our [AddGroceryForm Component](https://github.com/turingschool-examples/grocery-list/blob/async-complete/src/AddGroceryForm.js):
