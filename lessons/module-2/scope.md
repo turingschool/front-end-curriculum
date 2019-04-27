@@ -348,6 +348,102 @@ Using your journal, take a few minutes to answer the following:
 - What makes closures special?
 
 
+
+<!-- ## Exercises
+
+**Exercise 1**
+
+```js
+let number = 10;
+
+function foo () {
+  number = 20;
+  console.log(number);  // 1 - what will log here?
+}
+
+console.log(number);    // 2 - what will log here?
+
+foo()
+
+console.log(number);    // 3 - what will log here?
+```
+
+**Exercise 2**
+
+```js
+let number = 10;
+
+function foo () {
+  let number = 20;
+  console.log(number);  // 1 - what will log here?
+}
+
+console.log(number);    // 2 - what will log here?
+
+foo()
+
+console.log(number);    // 3 - what will log here?
+```
+
+**Exercise 3**
+
+```js
+function foo () {
+  var localNumber = 20;
+  number = localNumber;  
+}
+
+foo()
+
+console.log(number);  // what will log here?
+```
+
+**Exercise 4**
+
+```js
+var name = "Nathaniel Foster";
+
+function printGreeting(name) {
+  console.log("Hello " + name);
+}
+
+printGreeting("Danger");  // what will log here?
+printGreeting();      // what will log here?
+```
+
+**Exercise 5**
+
+```js
+let array = [];
+
+for (var i = 0; i < 10; i++) {
+  array[i] = function () {
+    console.log('You clicked: ' + i);
+  };
+}
+
+array[5]()  // what will log here?
+```
+
+**Exercise 6**
+
+```js
+let array = [];
+
+for (let i = 0; i < 10; i++) {
+  array[i] = function () {
+    console.log('You clicked: ' + i);
+  };
+}
+
+array[5]()  // what will log here?
+``` -->
+
+
+
+
+
+
 <!-- 
 ====================================================
 ====================================================
