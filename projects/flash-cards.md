@@ -64,7 +64,7 @@ For example:
 
 ```js
 const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-const turn = new Turn('function', card);
+const turn = new Turn('pug', card);
 
 turn.returnGuess()    // => 'pug'
 
