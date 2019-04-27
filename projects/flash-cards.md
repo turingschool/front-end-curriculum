@@ -36,6 +36,16 @@ Your README should include the following, in this order:
 - A GIF of the working application
 - Install/Setup instructions
 
+## Testing
+
+You should be using the prompts below to develop tests that will drive your implementation of code. Each JavaScript file in your project should have its own test file. (e.g. Your `Game.js` class file should have a corresponding testing file called `Game-test.js`)
+
+Your testing suite should test all of the functionality of the game, including the following:
+
+* Class default properties
+* Class methods
+* Anything that updates class properties
+
 # Iterations
 
 ## Iteration 1: 
@@ -109,7 +119,7 @@ Your `Round` class will be the object that takes in responses and records these 
   - `takeTurn`: method that updates `turns` count, evaluates guesses, gives feedback, and stores ids of incorrect guesses
 
     * When a guess is made, a new `Turn` instance is created.
-    * `Turns` count is updated, regardless of whether the guess is correct or incorrect
+    * The `turns` count is updated, regardless of whether the guess is correct or incorrect
     * The next card becomes current card
     * Guess is evaluated/recorded. Incorrect guesses will be stored (via the id) in an array of `incorrectGuesses`
     * Feedback is returned regarding whether the guess is incorrect or correct
@@ -165,7 +175,7 @@ Now that we have all of our classes and methods set up, we can connect this to t
 
 ***Game***
 
-As you may have noticed, your `Game` class has some the `printMessage` ad `printQuestion` methods fleshed out already.  We are going to abandon testing for these methods - as the techniques for this type of testing are beyond the scope of this project.
+As you may have noticed, your `Game` class has two methods fleshed out already: `printMessage` and `printQuestion`.  We are going to abandon testing for these methods - as the techniques for this type of testing are beyond the scope of this project.
 
 - Your `Game` class should meet these other requirements:
   - Should keep track of the `currentRound`
