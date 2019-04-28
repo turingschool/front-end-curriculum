@@ -267,7 +267,7 @@ it('resets the state after adding a new grocery', () => {
   // Execution and Expectation - this assumes that handleAddGrocery method returns a promise
   wrapper.instance().handleAddGrocery(mockEvent)
    .then(() => {
-      expect(renderedComponent.state('grocery')).toEqual(expected)
+      expect(wrapper.state('grocery')).toEqual(expected)
     })
 })
 ```
@@ -279,14 +279,14 @@ assert that our `updateGroceryList` mock was called, we don't need to update the
 // AddGroceryForm.test.js
 
 it('calls the updateGroceryList callback after adding a new grocery', () => {
-  Promise.resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
+  wrapper.instance().handleAddGrocery(mockEvent)
     .then(() => {
       expect(mockUpdateGroceryList).toHaveBeenCalledWith(mockGroceries)
     })
 })
 ```
 
-Our final test asserts that our catch statement set the state correct if the fetch call fails. However in order to
+Our final test asserts that our catch statement sets the state correctly if the fetch call fails. However in order to
 simulate this failure, we're going to need to mock our fetch call again. Also, due to an Enzyme oddity, we're going to
 need to update our component twice, otherwise we won't see the state change.
 
@@ -300,7 +300,7 @@ it('sets an error when the fetch fails', () => {
 
   wrapper.instance().handleAddGrocery(mockEvent)
     .then(() => {
-      expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
+      expect(wrapper.state('errorStatus')).toEqual('Error adding grocery')
     })
 })
 ```
