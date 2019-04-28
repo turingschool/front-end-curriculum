@@ -9,7 +9,7 @@ module: 2
 
 By the end of this lesson, you will be able to:
 
-* Understand how classes are functioning under the hood
+* Understand how classes are functioning under the hood 
 * Understand how `this` operates when working with instances created via the `new` operator
 
 ## Vocab
@@ -71,7 +71,8 @@ Based on this object, we can say: "Our instructor is funny and smart and can tea
 
  Remembering these vocabulary rules will help you with creating semantic naming conventions for your objects and their properties. This will also help you with structuring your programs around objects when we dive further into object-orienting programming
 
-#### On Your Own
+### Your Turn
+
 Take the following sentence and create an object based off of it:  
 
 `The chair has a padded cushion and four legs with wheels that allow it to move from room to room.`
@@ -183,16 +184,9 @@ function Instructor(name, module, traits) {
 }
 ```
 
+<!-- #### Closing
 
+Using your journal, take a few minutes to answer the following:
 
-
-
-
-
-
-
-
-
-
-
-
+- Why would you make use of a constructor function?
+ -->
