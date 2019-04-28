@@ -2,13 +2,13 @@
 title: Syllabus Overview & Expectations
 ---
 
-## Mar 11, 2019 - Apr 19, 2019
+## Apr 29, 2019 - Jun 7, 2019
 
 | Instructors     | Slack            | Email            |
 | ----------------|------------------| -----------------|
-| Louisa Barrett  | @louisa          | louisa@turing.io |
 | Travis Rollins  | @kalikoze        | travis@turing.io |
 | Khalid Williams | @Khalid Williams | khalid@turing.io |
+| Eric Weissman   | @Eric Weissman   | eric@turing.io   |
 
 ## Module Overview
 Welcome! We are excited to share the first six weeks of the program with you. As the first of four modules in the Front End program this six weeks is about developing a solid foundation in the fundamentals of HTML, CSS, and Javascript. Additionally, we’ll introduce you to test driven development, version control, refactoring, and object oriented programming. Module one also includes an introduction to Turing citizenship via special curriculum in community Fridays for M1 students and professional development courses to cultivate your unique developer identity in anticipation of entering the job market as a front end engineer.
