@@ -323,7 +323,7 @@ to use the new ES7 `async/await` syntax. Let's lean on our new test suite to ref
 async handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
-  const grocery = this.state.grocery;
+  const { grocery } = this.state;
 
   try {
     const response = await fetch('/api/v1/groceries', {
@@ -386,11 +386,11 @@ describe('addGrocery', () => {
     const expected = [
       '/api/v1/groceries', 
       {
+        method: 'POST',
         body: JSON.stringify({ grocery: mockGrocery }),
         headers: {
-          "Content-Type": "application/json"
-        },
-        method: "POST"
+          'Content-Type': 'application/json'
+        }
       }
     ]
 
@@ -441,7 +441,7 @@ export const addGrocery = async (grocery) => {
     }
   })
 
-  if(response.status >= 300) {
+  if(!response.ok) {
     throw(new Error('Error adding grocery'))
   } else {
     return await response.json()
@@ -458,7 +458,7 @@ function from apiCalls.js.
 async addGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
-  const grocery = this.state.grocery;
+  const { grocery } = this.state;
 
   try {
     const data = await addGrocery(grocery)
@@ -495,17 +495,21 @@ import { addGrocery } from '.apiCalls'
 jest.mock('./apiCalls')
 
 describe('AddGroceryForm', () => {
-  const mockGrocery = { name: 'Oranges', quantity: 3 }
-  const mockGroceries = [{ name: 'apple', quantity: 12 }, mockGrocery]
-  const mockUpdateGroceryList = jest.fn()
-  const mockEvent = { preventDefault: jest.fn() }
+  let mockGrocery
+  let mockGroceries 
+  let mockUpdateGroceryList 
+  let mockEvent 
   let wrapper
   
-  beforeAll(() =>{
+  beforeAll(() => {
     addGrocery.mockImplementation(() => mockGroceries);
   })
 
-  beforeEach(() => { 
+  beforeEach(() => {
+    mockGrocery = { name: 'Oranges', quantity: 3 }
+    mockGroceries = [{ name: 'apple', quantity: 12 }, mockGrocery]
+    mockUpdateGroceryList = jest.fn()
+    mockEvent = { preventDefault: jest.fn() }
     wrapper = shallow(<AddGroceryForm updateGroceryList={mockUpdateGroceryList} />)
   })
 
