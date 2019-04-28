@@ -249,7 +249,7 @@ it('calls fetch with the correct data when adding a new grocery', () => {
 
   wrapper.setState({grocery: mockGrocery})
   wrapper.instance().handleAddGrocery(mockEvent)
-  expect(window.fetch).toHaveBeenCalledWith('/api/v1/groceries', options)
+  expect(window.fetch).toHaveBeenCalledWith(url, options)
 })
 ```
 
