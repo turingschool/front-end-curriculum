@@ -24,7 +24,7 @@ A fundamental part of writing better code and digging into more advanced topics 
 
 Each browser has what's called a 'JavaScript Engine' that translates (or interprets) your code line by line as it executes, which allows your application to perform the behaviors and interactions you've programmed. For example, if you've written the following code:
 
-```
+```js
 var header = document.getElementById('header');
 header.innerText = 'Lorem Ipsum Dolor'
 ```
@@ -76,7 +76,7 @@ Based on this order of execution, we ultimately receive NaN as our result becaus
 Let's look at another example:
 
 
-```
+```js
 1  var moo = mooLikeACow();
 2  
 3  function mooLikeACow() {
@@ -99,7 +99,7 @@ The interpreter takes a first pass to skim over our code and get a general idea 
 
 Using the first code example, the interpreter recognizes that we're going to be working with a function called `calculateEvals` and some variables - `modTwoTeachers`, `numEvals`, and `currentCohort`. In trying to be helpful, the interpreter **hoists** these functions and variables to the top of our scope. Behind the scenes, the interpreter would essentially be changing our code to look something like this:
 
-```
+```js
 1   var modTwoTeachers, numEvals, currentCohort;
 2   function calculateEvals(teachers, classSize) {
 3     return classSize / teachers.length;
@@ -117,7 +117,7 @@ Our variable **declarations** are hoisted to the top of our code block, but thei
 
 Our function is also hoisted to the top of our code block, with its entire definition alongside it. This gives us insight into why our second example still worked without throwing an error:
 
-```
+```js
 1  function mooLikeACow() {
 2    return 'Moooo!';
 3  }
