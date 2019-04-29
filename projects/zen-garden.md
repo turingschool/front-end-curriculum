@@ -4,7 +4,7 @@ title: Zen Garden
 
 ## Overview
 
-As a frontend developer, you're going to need to be able to accurately build out the UI (user interface) for websites based on [comps](https://en.wikipedia.org/wiki/Comprehensive_layout) provided by a designer. For your first project, you'll build a 1-page static site to practice writing well structured, semantic HTML with clean, precise CSS, as well as take a first crack at adding some user interaction with Javascript and the DOM.  Something to note is that you will need to style the comp two different ways using two different css stylesheets.  This is based off of the [CSS Zen Garden site](http://www.csszengarden.com/).  Although you will need to have two stylesheets, the HTML structure will need to stay the same (only one index.html file).  This is to help you focus on what is necessary for your HTML structure so that it can work for multiple layouts.
+As a frontend developer, you're going to need to be able to accurately build out the UI (user interface) for websites based on [comps](https://en.wikipedia.org/wiki/Comprehensive_layout) provided by a designer. For your first project, you'll build a 1-page static site to practice writing well structured, semantic HTML with clean, precise CSS, as well as take a first crack at adding some user interaction with Javascript and the DOM.  Something to note is that you will need to style the comp two different ways using two different css stylesheets.  This is based off of the [CSS Zen Garden site](http://www.csszengarden.com/).  **Although you will need to have two stylesheets, the same HTML file and structure will be used for both layouts** (aka even though you'll have two stylesheets, you'll have only one index.html file).  This is to help you focus on what is necessary for your HTML structure so that it can work for multiple layouts.
 
 Similar to what you might be asked to do on the job, we've given you the comps with a set of technical specs to go along with it and your challenge is to build it.
 
@@ -24,6 +24,8 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 **Note: DO NOT use CSS `flex-box` or `grid` for this project (If you don't know what this is, no worries! You'll learn more about these techniques in the coming weeks!)**
 
+---
+
 ## Phase One: Basic Requirements
 
 #### Step 1
@@ -39,17 +41,50 @@ Style your site using CSS -- aim to get it as visually close to the comp as poss
 
 Create a `README.md` file that gives a brief overview of your project (don't forget to make sure to include the comps as well as the screen grabs of your finished site!)
 
+---
+
 ## Phase Two: More Better
 
 We won't cover how to do these in class before this project ends -- challenge yourself and investigate how to tackle these tasks. And remember: it is ok if you're not sure how to do these so take a crack at it and experiment, we'll go over this material together soon!
 
 #### CSS
 
-* Make your Zen Garden site mobile.  Experiment using your DevTools and `media queries`
+* Make your Zen Garden sites mobile. We haven't given you layouts for mobile, so think about how you'll approach making each layout work best for small screens. Do side-by-side columns on large screens stack when viewed on a phone? What about larger sections of content? Experiment using your DevTools and `media queries`!
 
 #### Javascript
 
+* Once you have the HTML structure built and successfully being styled to work for both layouts using your two CSS files, experiment with adding in interaction using Javascript: Build functionality to allow a user to type a dog name in the input field and then, when the user clicks the button, have that dog name replace the text `Some Dogs` in the main `A Site About Some Dogs` header and clear out the input field. For example: if I typed `Fido` into the input, when I click the button the main header of the page should change to read `A Site About Fido`.
+* Work to craft your Javascript according to the [Turing Javascript Style Guide](https://github.com/turingschool-examples/javascript)
 
+---
+
+## Design Comp 1
+
+#### Hex Codes:
+
+* Light blue: #75e2e6
+* Dark blue: #048eaa
+* Background color: #ffffff
+* White text: #ffffff
+* Body text: #000000
+
+# ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
+
+---
+
+## Design Comp 2
+
+#### Hex Codes:
+
+* Light purple: #9A969C
+* Dark purple: #3E3544
+* Background color: #ffffff
+* White text: #ffffff
+* Body text: #000000
+
+# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
+
+---
 
 ## Submission Details
 
