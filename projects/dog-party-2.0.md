@@ -1,5 +1,5 @@
 ---
-title: Zen Garden
+title: Dog Party 2.0 (Positioning Is Ruff)
 ---
 
 ## Overview
@@ -49,12 +49,29 @@ We won't cover how to do these in class before this project ends -- challenge yo
 
 #### CSS
 
-* Make your Zen Garden sites mobile. We haven't given you layouts for mobile, so think about how you'll approach making each layout work best for small screens. Do side-by-side columns on large screens stack when viewed on a phone? What about larger sections of content? Experiment using your DevTools and `media queries`!
+* Make your Dog Party sites mobile. We haven't given you layouts for mobile, so think about how you'll approach making each layout work best for small screens. Do side-by-side columns on large screens stack when viewed on a phone? What about larger sections of content? Experiment using your DevTools and `media queries`!
 
 #### Javascript
 
 * Once you have the HTML structure built and successfully being styled to work for both layouts using your two CSS files, experiment with adding in interaction using Javascript: Build functionality to allow a user to type a dog name in the input field and then, when the user clicks the button, have that dog name replace the text `Some Dogs` in the main `A Site About Some Dogs` header and clear out the input field. For example: if I typed `Fido` into the input, when I click the button the main header of the page should change to read `A Site About Fido`.
 * Work to craft your Javascript according to the [Turing Javascript Style Guide](https://github.com/turingschool-examples/javascript)
+
+---
+
+## Phase Three: Extensions
+
+#### Minimize/Maximize
+
+* Add functionality to each of the buttons in each column.  When the user clicks on the button, it should hide the content in that specific column (still having the picture and button be displayed).  When the user clicks the button again, the text should display once more.  
+  * Bonus: add a nice animation to this to give a better transition 
+
+#### Adding ToolTips
+
+* Add a tooltip to each of the elements in the navigation bar.  When a user hovers over one of them, a tool tip should appear giving more information as to what that page is about.
+
+#### Updating Each Column
+
+* Add another input and textarea to the form that can update the text in each column.  The input should either be a dropdown or radio/checkboxes to specify which column's text is being updated.
 
 ---
 
@@ -71,7 +88,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 
 # ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
 
----
+<!-- ---
 
 ## Design Comp 2
 
@@ -84,7 +101,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 * Body text: #000000
 * Font: Roboto
 
-# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
+# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
 
 ---
 
@@ -99,7 +116,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 #### Setting up Repository on GitHub and Pushing up
 
 1. Go to Github and create a new repository, also called a repo, by clicking that green button on the home page that says `New` on the left
-2. Enter in a relevant name for this project (i.e. `Zen Garden`)
+2. Enter in a relevant name for this project (i.e. `Dog Party`)
 3. Do NOT initialize the repository with a `README`.  You have already created one locally on your computer.
 4. Leave the repo set as `public` and then click `Create Repository`
 5. In your terminal, follow steps below in order and enter each command into your terminal
