@@ -17,8 +17,8 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 ## Steps to Set Up Your Project Files
 
-- Using your terminal, create a directory called `zen-garden`
-- Inside of your `zen-garden` directory, create a sub-directory called `images`
+- Using your terminal, create a directory called `dog-party`
+- Inside of your `dog-party` directory, create a sub-directory called `images`
 - Also create three files called `index.html`, `styles1.css`, `styles2.css`, and `main.js`
 - You will also need to [download the image assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing) and insert them into your `images` directory
 
@@ -120,10 +120,10 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 3. Do NOT initialize the repository with a `README`.  You have already created one locally on your computer.
 4. Leave the repo set as `public` and then click `Create Repository`
 5. In your terminal, follow steps below in order and enter each command into your terminal
-  * `git init` inside of your `zen-garden` directory (**Side Note:** `git init` creates a *hidden* `.git` directory that's used to track changes. Run `ls -a` in the project directory to ensure your `.git` directory exists. )
+  * `git init` inside of your `dog-party` directory (**Side Note:** `git init` creates a *hidden* `.git` directory that's used to track changes. Run `ls -a` in the project directory to ensure your `.git` directory exists. )
   * `git add .`
   * `git commit -m "Initial commit"`
-  * `git remote add origin git@github.com:Kalikoze/Zen-Garden.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Zen-Garden.git` -- this step makes the connection between your local files and the repo that lives on GitHub)
+  * `git remote add origin git@github.com:Kalikoze/Dog-Party.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Dog-Party.git` -- this step makes the connection between your local files and the repo that lives on GitHub)
   * `git push -u origin master` (this step pushes your local code up to your GitHub repo)
 6. Once you see your code up in your repository on GitHub, go to `Settings` and publish your site on GitHub Pages, a great way to host static sites directly through GitHub
 7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=0)
