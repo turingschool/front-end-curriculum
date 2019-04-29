@@ -67,6 +67,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 * Background color: #ffffff
 * White text: #ffffff
 * Body text: #000000
+* Font: Open Sans
 
 # ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
 
@@ -81,6 +82,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 * Background color: #ffffff
 * White text: #ffffff
 * Body text: #000000
+* Font: Roboto
 
 # ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
 
