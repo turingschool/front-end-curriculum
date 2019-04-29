@@ -134,7 +134,7 @@ There are a variety of resources available to developers for accessibilty testin
 - This plugin is a screenreader you can install in Chrome. It makes manual testing easy, and is used by Google's own devlopers.
 
 Mac VoiceOver
-- This is the native screen reader for OSX. It can be strange with Chrome, but is good for testing accessibility in Safari, oer any desktop applications you may develop down the line
+- This is the native screen reader for OSX. It can be strange with Chrome, but is good for testing accessibility in Safari, or any desktop applications you may develop down the line
 
 ## Resources
 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Roles" target="_blank">MDN Docs for ARIA Roles, States and Properties</a>
