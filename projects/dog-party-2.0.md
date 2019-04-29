@@ -128,10 +128,9 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
 6. Once you see your code up in your repository on GitHub, go to `Settings` and publish your site on GitHub Pages, a great way to host static sites directly through GitHub
 7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=0)
 
+---
 
-## Design Comp
-
-## Peer Review (10 min each)
+## Checkins - Peer Review (10 min each)
 
 With your partner, go through the list of questions below.  Take note of the different or similar ways you may have approached the comp focusing on the structure of your HTML and how you implemented your styles.  Taking a moment to reflect can help you strategize what you can improve on and how you can perform even better for your next project.
 
