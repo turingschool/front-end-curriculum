@@ -22,7 +22,7 @@ We talk a lot about writing semantic HTML, but what does that mean besides using
 ## **The Accessibilty Tree** 
 When the browser loads content, it creates the DOM tree. We can use scripting to interact with what's being displayed through the tree. By leveraging Accessibility APIs, the browser also creates what's know as the Accessibilty Tree. This loads information that's available to assistive technologies, such as screen readers and screen magnifiers.
 
-Writing clean, semantic HTML communicates information about the web page to the assistive technologies, but things can get tricky when creating custom widgets or more complex applications. Using a `div` to create a dropdown menu midget doesn't explain how a sightless user is meant to interact with it. This is where ARIA comes in.
+Writing clean, semantic HTML communicates information about the web page to the assistive technologies, but things can get tricky when creating custom widgets or more complex applications. Using a `div` to create a dropdown menu widget doesn't explain how a sightless user is meant to interact with it. This is where ARIA comes in.
 
 ## **ARIA**
 **Accessibile Rich Internet Applications**
