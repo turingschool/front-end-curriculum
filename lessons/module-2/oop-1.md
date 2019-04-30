@@ -221,7 +221,7 @@ Avoiding these dependencies means following the single responsibility principle 
 
 # The keyword `this` 
 
-The keyword `this` is commonly used inside functions and objects - just as our examples have shown. Since the keyword of `this` can be confusing in JavaScipt, here are a couple of definitions to help clarify:
+The keyword `this` is commonly used inside functions and objects - just as our examples abovehave shown. Since the keyword of `this` can be confusing in JavaScript, here are a couple of definitions to help clarify:
 
 * `this` refers to the current context (or owner) of the code being executed
 * `this` refers to the object on which the current function is called
@@ -263,8 +263,8 @@ var instructor = new Instructor('Pam', 2, ['funny', 'smart']);
 
 *Why?*
 
-Q. _How_ are constructor functions _and_ classes invoked?
-A. With the `new` operator
+Q. _How_ are constructor functions _and_ classes invoked?  
+A. With the `new` operator  
 
 RULE: The keyword `this` in functions invoked using the `new` operator refers to the new instance of that object. 
 
@@ -297,8 +297,8 @@ instructor.teachLesson(3);
 
 *Why?*
 
-Q. _How_ are the functions in this example being invoked?
-A. The function (`teachLesson`) will be executed as a method on an object
+Q. _How_ are the functions in this example being invoked?  
+A. The function (`teachLesson`) will be executed as a method on an object  
 
 RULE: When executing a function as a method on a object, `this` refers to that object.
 
