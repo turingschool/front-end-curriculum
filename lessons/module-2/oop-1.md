@@ -1,7 +1,7 @@
 ---
-title: Intro to Object Oriented Programming
-length: 60
-tags: javascript, objects, constructors, this, oop
+title: Objects: literals, constructors, and `this`
+length: 180
+tags: javascript, objects, constructors, classes this, oop
 module: 2
 ---
 
@@ -9,27 +9,61 @@ module: 2
 
 By the end of this lesson, you will be able to:
 
-* Understand how classes are functioning under the hood 
-* Understand how `this` operates when working with instances created via the `new` operator
+* Define OOP and its benefits
+* Describe how classes allow us to reuse code and create encapsulation
+* Understand and describe what `this` is in JavaScript
 
 ## Vocab
 
+- `OOP` Object Oriented Programming
+- `Programming paradigm` A style or way of thinking about and approaching programming problems
 - `Object` A data structure of key value pairs that groups related data and behavior
-- `Constructor function` A special function used to define and initialize multiple objects
-- `this` refers to the current *context* (or owner) of the code being executed
+- `Constructor Function` 
+- `Class` A blueprint or template of an object that describes what information it should contain and how it should interact with the data
+- `Instance` One specific copy of an object
+- `Encapsulation` Hiding the details of how an object works & grouping data and behavior
+- `SRP` Single Responsibility Principle
+- `Coupling` The level of connectedness between two objects
+- `this` keyword that references the current context (or owner) of the code being executed
 
 ---
 
 <!-- 
 ### Journal Warm Up
-
-* Describe all of the things that you know about objects at this point
-* Create an object based on this sentence: This school is a non-profit, in a basement, that opens at 9 and closes at 5.
+  * What might be a benefit of placing methods inside of objects (as opposed to defining them as functions outside of objects)? 
+  * Create an object based on this sentence: This school is a non-profit, in a basement, that opens at 9 and closes at 5.
 ``` -->
+
+# Programming Paradigms 
+
+A programming paradigm is a "style" or way of thinking about and approaching problems. JavaScript is considered a multi-paradigm language that allows you to freely mix and match object-oriented, procedural, and functional paradigms.
+
+In all programs, there are two primary components:
+  1. Data (stuff a program knows)
+  2. Behaviors (stuff a program can do to/with that data) 
+
+
+| | Functional | Procedural | Object-Oriented |
+|--- |--- |--- |--- |
+| **Focal Point** | Functions | Instructions | Objects |
+| **Data/Behavior** | Separate: distinctly different| Global: shared by functions| Encapsulated: single location|
+
+
+# OOP
+Object Oriented Programming (OOP) will be our primary focus for this lesson - which is an approach that structures your code around objects rather than functions and procedures. *(Functional and procedural programming are beyond the scope of this lesson.)*
+
+In OOP, real-world objects are each viewed as seperate entities having their own state which is modified only by built-in procedures, called methods. Because objects operate independently, they are encapsulated into modules which contain both local environments and methods. Communication with an object is done by message passing.
+
+## Benefits
+
+* Code reusability
+* Encapsulation: values are scoped to the specific object
+* Design & Scalability: OOP forces programmers to meticulously plan the project. OOP is also much more maintainable for larger programs
+* Maintainable: OOP tends to be easier to modify specific pieces of the code without affecting the larger program
 
 ## Objects
 
-Since Object-oriented programming structures your code around objects, we are going to review what an object is in the context of OOP.
+We said that OOP structures your code around objects. Let's review what an object is and what it means in the context of OOP.
 
 An **object** is a data structure that allows us to group related information and behaviors into key-value pairs. Let's take a look at the following example:
 
@@ -38,53 +72,48 @@ let instructor = {
   name: 'Pam',
   module: 2,
   traits: ['funny', 'smart'],
-  teachLesson: function(topic, duration) {
-    let lessonDuration = duration;
-
-    if (lessonDuration > 3) {
-      return `This lesson is too long, I'm not teaching that.`;
+  primaryLesson: 'OOP',
+  teachLesson: function(duration) {
+    if (duration > 3) {
+      return `${this.name} can\'t teach a lesson that long!`;
     } else {
-      return `Gunna teach you all real good about ${topic}`;
+      return `Gunna teach you all real good about ${this.primaryLesson}`;
     }
-  },
-  gradeProject: function(student, project){
-    `${student} got an A on ${project}!`;
+  }
+
+  gradeProject: function(project) {
+    return `${this.name} is grading ${project}.`
   }
 }
 ```
 
 Based on this object, we can say: "Our instructor is funny and smart and can teach lessons and grade projects."   
 
- Let's think back to our primary education, and highlight the parts of speech in this sentence. 
+Let's think back to our primary education, and highlight the parts of speech in this sentence. 
 
- * **noun:** instructor 
+* **noun:** instructor 
 * **adjectives:** funny, smart  
 * **verbs:** teach, grade 
 
- If we map this back to JavaScript, we can assume:  
+If we map this back to JavaScript, we can assume:  
 
- * **noun:** the name of our object (or properties on our object that are not methods)  
+* **noun:** the name of our object (or properties on our object that are not methods)  
 * **adjectives:** the values of our properties (sometimes these will not actually be adjectives, but the idea here is that the values of our properties are descriptors for our object) 
 * **verbs:** the methods on our object  
 
- #### Turn and Code 
+Remembering these vocabulary rules will help you with creating semantic naming conventions for your objects and their properties. This will also help you with structuring your programs around objects when we dive further into object-orienting programming.
 
- Remembering these vocabulary rules will help you with creating semantic naming conventions for your objects and their properties. This will also help you with structuring your programs around objects when we dive further into object-orienting programming
+#### Your Turn
 
-### Your Turn
+Take a moment to examine the school object that you created during the warm-up. Does it follow these naming conventions?
 
-Take the following sentence and create an object based off of it:  
+## Creating Many Objects
 
-`The chair has a padded cushion and four legs with wheels that allow it to move from room to room.`
+### Constructor functions
 
+Let's go back to the instructor object we created earlier - say we're building an application for Turing that provides profiles for all the instructors on staff. We'd have to create about 20 different instructor objects that all have the same properties and methods, but whose values each vary. (e.g. each instructor has a different name). We would also have to constructor 100s of chair objects to keep track of every chair in the basement. This could be really repetitive and exhausting to build out individually.
 
-# Constructor Notation
-
-### Creating Many Objects
-
-Let's go back to the instructor object we created earlier - say we're building an application for Turing that provides profiles for all the instructors on staff. We'd have to create about 20 different instructor objects that all have the same properties and methods, but whose values each vary. (e.g. each instructor has a different name). This could be really repetitive and exhausting to build out individually.
-
-Object constructors can use a function as a _template_ create similar objects. Everytime you call ```new``` on this constructor you get an instance of that constructor. These are called `constructor functions`, and you can think of them like cookie cutters that produce the same shape of cookie every time you use them. Let's take a look:
+This is where object constructor functions come into play. **Constructor Functions** are essentially just regular functions in JavaScript allow us to create multiple objects from a template. In order to do this, we invoke these functions with the `new` keyword:
 
 ```javascript
 function Instructor(name, module, traits) {
@@ -92,101 +121,193 @@ function Instructor(name, module, traits) {
   this.module = module;
   this.traits = traits;
 }
-```
 
-Let's talk about what's going on here:
-
-- A function called `Instructor` is a template for automatically creating new objects that represent individual "instances" of instructors  
-- Therefore, every time the function is invoked, it creates a new instance (object of a certain type) of an `Instructor`
-- The function has three parameters (`name`, `module`, `traits`)  
-- Each parameter sets the _value_ of a _property_ in the object  
-- The `this` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function automatically creates and returns to us
-- Constructor functions begin w/ capital letters (PascalCase), unlike our other functions which tend toward beginning w/ lowercase. Why? The hope is to remind developers to use the keyword new with this function. Will it still work if you don't use capitals? YES.  
-
-### Your Turn
-
-With a partner:
-
-* Make a constructor function and use it to make two new objects.
-* Come up with an analogy for constructor functions.
-
-## Prototypes & Inheritance: A First Look
-
-All JavaScript objects **inherit** the properties and methods from their `prototype`.  
-
-In other words, each object has an internal link to another object named `prototype`. 
-
-There is nothing special about a prototype object. There are no special-out-of-the-box methods or magic to a prototype. Let's look:
-
-```javascript
-// Let's make a constructor function
-function Student() {}
-
-// Let's ask Student for the value of it's prototype
-Student.prototype;
-```
-
-Let's add some initial properties in our constructor function so every `Student` object has a name:
-
-```javascript
-function Student(name) {
-  this.name = name;
-}
-```
-
-Similarly, a `prototype` in javascript can be _any object_ and it is responsible for defining the **behavior** of instances. This behavior is defined by modifying the prototype directly, e.g. by adding methods to the prototype object. Creating prototype functions is essentially defining your objects' instance methods.  
-
-Let's look at some code examples.  
-
-```javascript
-// Student constructor whose only job is to create instances of students. It has the parameters of name ad program to differentiate instances.
-
-function Student(name, program) {
-  this.name = name;
-  this.program = program;
+Instructor.prototype.teachLesson = function(duration) {
+  if (duration > 3) {
+    return `${this.name} can\'t teach a lesson that long!`;
+  } else {
+    return `Gunna teach you all real good about ${this.primaryLesson}`;
+  } 
 }
 
-Student.prototype.study = function() {
-  console.log(`Can\'t hang out today, gang - have to study hard for my ${this.program} assessment!`);
+Instructor.prototype.gradeProjects = function(project) {
+  return `${this.name} is grading ${project}.`
 }
 
-// Now we can create multiple instances of an Student and each one will have access to our `study` method
-
-var student = new Student('Leta', 'FE')
-student.bake();
-var student2 = newStudent('Mike', 'BE');
-student2.bake(); 
+var instructor = new Instructor('Pam', 2, ['funny', 'smart']);
 ```
 
-## Revisiting `this`
-The keyword `this` is commonly used inside functions and objects. It always refers to one object, usually the object in which the function operates. In our Instructor constructor function, `this` refers to the instructor object that is being created for us automatically when the function runs. Let's look at this with an abbreviated version of our Instructor constructor:
+#### Turn and Talk
 
-### Rule 1 - _this_ in function code invoked using the new operator refers to the new instance of that object.
+* With a partner, compare the instructor object literal that we started with to the constructor function above. What is similar? What is different? 
 
-When we use the new keyword to call our function as a constructor, a few things happen behind the scenes:
+### Classes
 
-1. `this` is set to a new empty object
-2. The prototype property of the constructor function (Unicorn.prototype in the example below) is set as the prototype of the new object, which was set to `this` in the first step
-3. The body of our function runs
-4. Our new object, `this`, is returned from the constructor
+Since 2015, we now have a much cleaner, nicer way to create multiple objects: classes. **Classes** in JavaScript are templates, or blueprints, for creating many objects that share properties and behaviors, but might vary in their values.
 
-```javascript
-function Instructor(name, module, traits) {
-  // new empty object will log
-  console.log(this);
+*(Nice-to-Know Note: You might hear some people say that 'JavaScript doesnt have classes.' This is technically true, but a moot point. Classes in JavaScript are simply syntactic sugar over constructor functions.)*
 
-  this.name = name;
-  this.module = module;
-  this.traits = traits;
+For our Turing application, we can create an Instructor class - which allows to define a constructor and a set of a methods in a single place:
 
-  //object with added properties will log
-  console.log(this)
+```js
+class Instructor {
+  constructor(name, module, traits) {
+    this.name = name;
+    this.module = module;
+    this.traits = traits;
+  }
+
+  teachLesson(duration) {
+    if (duration > 3) {
+      return `${this.name} can\'t teach a lesson that long!`;
+    } else {
+      return `Gunna teach you all real good about ${this.primaryLesson}`;
+    }
+  }
+
+  gradeProject(project) {
+    return `${this.name} is grading ${project}.`
+  }
 }
+
+var instructor = new Instructor('Pam', 2, ['funny', 'smart']);
 ```
 
-<!-- #### Closing
+Let's break down this syntax a bit:
 
-Using your journal, take a few minutes to answer the following:
+1. we start off using the keyword `class`
+2. we name our class `Instructor`, starting with a capital letter (this is convention for denoting it's a special type of object -- it's a class)
+3. we open up some curly braces (just like a regular object)
+4. we immediately set up a **constructor** method (where we set our instance properties). This provides us with the actual constructor function that is bound to the name of the Class
+5. we define our own custom methods of `teachLesson` and `gradeProjects`
 
-- Why would you make use of a constructor function?
- -->
+
+## Creating Instances
+
+Now that we have our Instructor class, we can spin up a bunch of instructor objects by creating instances. An **instance** is a single object created based on the template provided by the class. 
+
+When thinking about the relationship between classes and instances, we would say:
+
+* a class is the template for each instance
+* each instance is an object based off of the class template
+
+To create new instances of an Instructor, we would do the following:
+
+```js
+let pam = new Instructor('Pamela Lovett', 2, ['funny', 'smart']);
+let brittany = new Instructor('Brittany Storoz', 2, ['honest', 'smart']);  
+```
+
+We declare a new variable, and use the `new` keyword to instantiate a new object from our Instructor class.
+
+This is a lot more concise than creating separate object literals for each of our instructors, saves memory (as both instances now share the same `teach` and `grade` methods), and DRYs up our code significantly. Being able to re-use a class template to create multiple objects is one of the core benefits of OOP. 
+
+Another benefit we see here is called **encapsulation**. Only the `pam` variable knows anything about that instance's name, module, and trait properties. The `brittany` variable doesn't know anything about pam, and it doesn't have to! Each instance property is scoped directly to that particular instance. We want our objects to know as little as possible about each other. This prevents them from having unintended effects on each other, and allows them to work independently.
+
+For example, if `brittany` relied on `pam` being funny and smart, and all of a sudden `pam` became boring and stupid, now `brittany` could potentially be broken.
+
+This connectedness between the two objects is referred to as **coupling**. The more objects depend on each other, the more **tightly coupled** they are. A good goal as a programmer is to make objects as independent as possible, meaning they can be tested as stand-alone units and don't have too many dependencies on other objects to perform their respective duties.
+
+Coupling refers to the level of connectedness between two objects. It's inevitable that objects will need to interact with one another, and therefore can create dependencies. A good goal as a programmer is to make objects as independent as possible, meaning they can be tested as stand-alone units and don't have too many dependencies on other objects to perform their respective duties.
+
+## Single Responsibility Principle/Principle of Least Knowledge
+
+Avoiding these dependencies means following the single responsibility principle and the principle of least knowledge. These concepts suggest that each of our objects should have a single, focused duty, and should know only as much information as it needs to perform it. This creates fewer dependencies and prevents bugs from creeping into our codebase. A good comparison would be to think about how our organs work - a [heart](https://www.youtube.com/watch?v=HYWmYJNg5Jw) can be maintained for transplant in a box because it's completely unaware of its surroundings and doesn't know that it's not inside a body because it has a single responsibility: to beat, and knows as little as possible about the rest of the system it's attached to.
+
+#### Turn and Talk
+
+- Explain classes and class instances to the person next to you
+- Describe SRP in your own words
+
+# The keyword `this` 
+
+The keyword `this` is commonly used inside functions and objects - just as our examples have shown. Since the keyword of `this` can be confusing in JavaScipt, here are a couple of definitions to help clarify:
+
+* `this` refers to the current context (or owner) of the code being executed
+* `this` refers to the object on which the current function is called
+* Context is most often determined by how a function is invoked
+
+---
+
+In our Instructor class below, `this` is bound to the new instance being constructed by our class.
+
+```js
+class Instructor {
+  constructor(name, module, traits) {
+    // new empty object will log
+    console.log(this);  
+
+    this.name = name;
+    this.module = module;
+    this.traits = traits;
+
+    // object with added properties will log
+    console.log(this);
+  }
+
+  teachLesson(duration) {
+    if (duration > 3) {
+      return `${this.name} can\'t teach a lesson that long!`;
+    } else {
+      return `Gunna teach you all real good about ${this.primaryLesson}`;
+    }
+  }
+
+  gradeProject(project) {
+    return `${this.name} is grading ${project}.`
+  }
+}
+
+var instructor = new Instructor('Pam', 2, ['funny', 'smart']);
+```
+
+*Why?*
+
+Q. _How_ are constructor functions _and_ classes invoked?
+A. With the `new` operator
+
+RULE: The keyword `this` in functions invoked using the `new` operator refers to the new instance of that object. 
+
+---
+
+In our instructor object literal, `this` is going to reference the object in our example: 
+
+
+```js
+let instructor = {
+  name: 'Pam',
+  module: 2,
+  traits: ['funny', 'smart'],
+  primaryLesson: 'OOP',
+  teachLesson: function(duration) {
+    if (duration > 3) {
+      return `${this.name} can\'t teach a lesson that long!`;
+    } else {
+      return `Gunna teach you all real good about ${this.primaryLesson}`;
+    }
+  }
+
+  gradeProject: function(project) {
+    return `${this.name} is grading ${project}.`
+  }
+}
+
+instructor.teachLesson(3);
+```
+
+*Why?*
+
+Q. _How_ are the functions in this example being invoked?
+A. The function (`teachLesson`) will be executed as a method on an object
+
+RULE: When executing a function as a method on a object, `this` refers to that object.
+
+#### Turn and Talk
+- With a partner, describe how we can determine the context of code that is being executed. What are the two rules that we've covered thus far?
+
+
+## Checks for Understanding
+
+* What is OOP and some of the benefits that we've discussed today?
+* Describe what a class is. Why would you use one? What does the `constructor` method within a class do?
+* What is `this` in JavaScript?
