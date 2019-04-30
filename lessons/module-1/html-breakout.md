@@ -144,3 +144,5 @@ Mac VoiceOver
 <a href="https://www.w3.org/WAI/PF/aria-1.1/states_and_properties#aria-label" target="_blank">W3C List of supported States and Properties</a>
 
 <a href="https://www.shopify.com/partners/blog/website-accessibility-testing" target="_blank">9 Tools for Website Accessibility</a>
+
+<a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference" target="_blank">Chrome Dev Tools Accessibilty Reference</a>
