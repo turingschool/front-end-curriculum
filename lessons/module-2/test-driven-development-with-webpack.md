@@ -1,6 +1,6 @@
 ---
 title: Test Driven Development
-tags: TDD, unit testing, mocha, chai, webpack
+tags: TDD, unit testing, mocha, chai
 mod: 2
 ---
 
@@ -273,8 +273,8 @@ If you run `npm test` now, you'll see an expected error. It's important to recog
 ```bash
 1) Box
        should return true:
-     ReferenceError: expect is not defined
-      at Context.<anonymous> (dist/webpack:/test/Box-test.js:5:1)
+       ReferenceError: expect is not defined
+      at (/test/Box-test.js:5:1)
 ```
 
 It's saying that it doesn't know what `expect` is, and recall that `expect` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between different assertion styles: `should`, `expect`, or `assert`).
