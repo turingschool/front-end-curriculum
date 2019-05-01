@@ -54,7 +54,7 @@ When our application makes a request to an API endpoint, we typically want to te
 handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
-  const grocery = this.state.grocery;
+  const { grocery } = this.state;
 
   return fetch('/api/v1/groceries', {
     method: 'POST',
@@ -149,8 +149,8 @@ describe('AddGroceryForm', () => {
     mockEvent = { preventDefault: jest.fn() }
     mockGrocery = { name: 'Oranges', quantity: 3 }
     mockGroceries = [
-      {id: 1, name: 'Pineapples', quantity: 10},
-      {id: 2, name: 'Oranges', quantity: 3}
+      {name: 'Pineapples', quantity: 10},
+      {name: 'Oranges', quantity: 3}
     ]
     mockUpdateGroceryList = jest.fn()
   })
@@ -375,11 +375,10 @@ describe('addGrocery', () => {
   beforeEach(() => {
     mockGrocery = {name: 'Oranges', quantity: 3}
     mockGroceries = [
-      {id: 1, name: 'Pineapples', quantity: 10},
-      {id: 2, name: 'Oranges', quantity: 3}
+      {name: 'Pineapples', quantity: 10},
+      {name: 'Oranges', quantity: 3}
     ]
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      status: 200,
       ok: true,
       json: () => Promise.resolve(mockGroceries),
     }))
@@ -410,7 +409,6 @@ describe('addGrocery', () => {
 
   it('throws an error if status code is not ok', async () => {
     window.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({
-      status: 500,
       ok: false
     }))
 
@@ -423,7 +421,7 @@ describe('addGrocery', () => {
 Here, I've assumed that I have a helper method `addGrocery` in my apiCalls.js file. Using a similar mocking strategy as
 before, I've mocked fetch. This time, I'm also adding a status code to the resolved object. This will exist on the
 response object as well, and will be considered 'ok', if the status is less than 400. Thus, if the status code is less
-than 400, my helper function should resolve to an object, otherwise, I should expect an error. Note the
+than 400, my helper function should resolve to an array of groceries, otherwise, I should expect an error. Note the
 `resolves/rejects` happening in the test. These expectation helpers are built into Jest, and allow you get the resolved
 or rejected values from asynchronous functions.
 
