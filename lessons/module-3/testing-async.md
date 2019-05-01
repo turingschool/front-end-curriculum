@@ -389,7 +389,7 @@ describe('addGrocery', () => {
       '/api/v1/groceries', 
       {
         method: 'POST',
-        body: JSON.stringify(mockGrocery),
+        body: JSON.stringify({grocery: mockGrocery}),
         headers: {
           'Content-Type': 'application/json'
         }

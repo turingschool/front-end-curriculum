@@ -26,7 +26,7 @@ Through each iteration, you should use TDD to drive implementation of your code.
 
 For this project, you need to use this [Flashcards Starter](https://github.com/turingschool-examples/flashcards-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
 
-There are additional notes in the README about the logic that is provided to you (utils.js) for finishing Iteration 3. Be sure to read through the README before you start coding - for this starter kit to work correctly, it has some underlying assumptions of where files live. 
+Please note that there is logic provided to you (util.js) to make this game playable via the command line. Completion of Iterations I and II are required before you are able to utilize the command line interface to verify that your code is functioning properly. Prior to this, you should be using your tests to confirm functionality is working as you expect.
 
 ## README
 
