@@ -18,7 +18,7 @@ mod: 2
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
-- `Four Phase Test` A test that is organized into the phases [Setup, Execution, Assertion, Teardown]
+- `Test Phases` A test that is organized into the phases [Setup, Execution, Assertion, Teardown*]
 
 ## Review: What is TDD?
 
@@ -170,10 +170,10 @@ Good tests have **Four Phases**:
 1. Setup - Setup the conditions required to execute the action on your `SUT`
 2. Execution - Execute some action on your `SUT`
 3. Assertion - Assert that the action you did had the results you expect
-4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time)
+<!-- 4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time) -->
 
-All four of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
-Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes.
+All of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
+<!-- Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes. -->
 
 **Good tests:**
 - Test one thing
@@ -416,11 +416,11 @@ Run `npm test` again to make sure we didn't break anything. (REFACTOR).
 
 SWEET! There we go with the first cycle of our RED-GREEN-REFACTOR TDD approach.  
 
-## Testing Practice: Hooks
+<!-- ## Testing Practice: Hooks
 
 You may have noticed that every time we wrote a test, we had to instantiate a new instance of our box. This is super repetitive, and kind of irritating to have to do every time. Luckily, Mocha provides some lifecycle `hooks` that help automate stuff like this. Take a second to look at [the documentation](https://mochajs.org/#hooks).   
 
-Using the docs linked above, add a `beforeEach()` hook that instantiates a new box before every test, this should allow you to remove the line `var box = new Box()` from all of your tests. If you're getting an error about box not being defined, check out [this stackoverflow conversation](https://stackoverflow.com/questions/38044111/basic-but-proper-use-of-beforeeach-or-aftereach-with-mocha-js-and-chai-js).  
+Using the docs linked above, add a `beforeEach()` hook that instantiates a new box before every test, this should allow you to remove the line `var box = new Box()` from all of your tests. If you're getting an error about box not being defined, check out [this stackoverflow conversation](https://stackoverflow.com/questions/38044111/basic-but-proper-use-of-beforeeach-or-aftereach-with-mocha-js-and-chai-js).   -->
 
 ## Testing Practice: Iteration 2
 
@@ -441,6 +441,6 @@ ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
 ### Checks for Understanding
 
 * What is the difference between Mocha and Chai?
-* What are the four typical phases of a test?
+* What are the phases of a test?
 * What is the `describe()` block used for, and what is the `it()` block used for?
-* What are hooks, and why can they be useful?
+<!-- * What are hooks, and why can they be useful? -->
