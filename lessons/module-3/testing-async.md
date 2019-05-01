@@ -451,7 +451,7 @@ function from apiCalls.js.
 ```javascript
 // AddGroceryForm.js
 
-async addGrocery(event) {
+async handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
   const { grocery } = this.state;
