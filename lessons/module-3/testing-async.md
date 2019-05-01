@@ -253,9 +253,7 @@ it('calls fetch with the correct data when adding a new grocery', () => {
 })
 ```
 
-Our second test asserts that the state of the component was properly set after our fetch call fired. Because fetch is
-asynchronous, we'll need to write a Promise to wait for the component to actually update. Since setting the state is
-also asynchronous, we need to chain the Promise, and update the component before our expectation.
+Our second test asserts that the state of the component was properly set after our fetch call fired. We'll want to step through the asynchronous behavior of the function to make sure the state gets reset after a successful fetch. If we take a look at our code, the `handleAddGrocery` function is not currently returning anything. However, if we update our code and `return` the fetch, `handleAddGrocery` is now returning a Promise that we can chain behavior to. 
 
 ```javascript
 // AddGroceryForm.test.js
