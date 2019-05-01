@@ -384,7 +384,7 @@ describe('addGrocery', () => {
     }))
   })
 
-  it('fetch is called with the correct params', async () => {
+  it('fetch is called with the correct params', () => {
     const expected = [
       '/api/v1/groceries', 
       {
@@ -430,19 +430,20 @@ With our test in hands, lets write our function:
 ```javascript
 // apiCalls.js
 
-export const addGrocery = async (grocery) => {
-  const response = await fetch('/api/v1/groceries', {
+export const addGrocery = (grocery) => {
+  return fetch('/api/v1/groceries', {
     method: 'POST',
     body: JSON.stringify({ grocery }),
     headers: {
       'Content-Type': 'application/json'
     }
   })
-
-  if(!response.ok) {
-    throw(new Error('Error adding grocery'))
-  } else {
-    return await response.json()
+  .then(response => {
+    if(!response.ok) {
+      throw Error('Error adding grocery')
+    } else {
+      return response.json()
+    }
   }
 }
 ```
