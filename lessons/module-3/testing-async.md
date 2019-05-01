@@ -82,7 +82,7 @@ handleAddGrocery(event) {
 
 If we would like to test this method, containing a fetch request, we're going to run into some issues when it executes. Mainly, `fetch` won't be available when running our tests in the console and we wouldn't have access to the API endpoint. There are a bunch of libraries that you could use to handle this behavior, some that you'll come across may include [nock](https://github.com/node-nock/nock) or [fetch-mock](http://www.wheresrhys.co.uk/fetch-mock/). The thing is, [Jest](https://facebook.github.io/jest) has some really great utilities for mocking built into it, so using an external library beyond Jest here really isn't necessary.
 
-Let's take a closer look at the previous example. Building off of our Grocery List application, we've now added a back-end for persisting the grocery data we're working with. When we submit a new grocery, we now make a `POST` request to our server to add that grocery item. We don't want to override the entire `addGrocery` method, but we do want to intercept that `POST` request so that we can return some fake data to work with.
+Let's take a closer look at the previous example. Building off of our Grocery List application, we've now added a back-end for persisting the grocery data we're working with. When we submit a new grocery, we now make a `POST` request to our server to add that grocery item. We don't want to override the entire `handleAddGrocery` method, but we do want to intercept that `POST` request so that we can return some fake data to work with.
 
 Let's start by adding a test file for this component named `AddGroceryForm.test.js`. At the top of our new test file, we'll import the React and Enzyme dependencies, and the component we're testing:
 
@@ -120,14 +120,14 @@ describe('AddGroceryForm', () => {
   it('calls the updateGroceryList callback after adding a new grocery', () => {
   })
 
-  it('sets an error when the fetch fails', () => {
+  it('sets the error in state if the fetch fails', () => {
   })
 })
 ```
 
-Now that we have our test placeholders, let's consider what we'll need to mock to effectively test our `addGrocery`
+Now that we have our test placeholders, let's consider what we'll need to mock to effectively test our `handleAddGrocery`
 method. We're going to need a `mockGrocery`, to simulate the actual data that is being posted. We'll need some
-`mockGroceries` to return from our fetch. We're going to need a `mockEvent`, because our `addGrocery` method is
+`mockGroceries` to return from our fetch. We're going to need a `mockEvent`, because our `handleAddGrocery` method is
 expecting an event as a param, and finally, we're going to need a `mockUpdateGroceryList` function, to pass to our
 component as a param.
 
@@ -141,18 +141,18 @@ import AddGroceryForm from './AddGroceryForm';
 
 describe('AddGroceryForm', () => {
   let mockEvent
-  let mockUpdateGroceryList
   let mockGrocery
   let mockGroceries
+  let mockUpdateGroceryList
 
   beforeEach(() => {
     mockEvent = { preventDefault: jest.fn() }
-    mockUpdateGroceryList = jest.fn()
     mockGrocery = { name: 'Oranges', quantity: 3 }
     mockGroceries = [
       {id: 1, name: 'Pineapples', quantity: 10},
       {id: 2, name: 'Oranges', quantity: 3}
     ]
+    mockUpdateGroceryList = jest.fn()
   })
 
   it('calls fetch with the correct data when adding a new grocery', () => {
@@ -164,7 +164,7 @@ describe('AddGroceryForm', () => {
   it('calls the updateGroceryList callback after adding a new grocery', () => {
   })
 
-  it('sets an error when the fetch fails', () => {
+  it('sets the error in state if the fetch fails', () => {
   })
 })
 ```
@@ -222,7 +222,7 @@ describe('AddGroceryForm', () => {
   it('calls the updateGroceryList callback after adding a new grocery', () => {
   })
 
-  it('sets an error when the fetch fails', () => {
+  it('sets the error in state if the fetch fails', () => {
   })
 })
 ```
@@ -232,7 +232,7 @@ on it, which itself returns a Promise. Using our Jest mock, it's easy to recreat
 everything. We can start writing our tests.
 
 Our first test needs to assert that fetch was called with the expected parameters. Since the fetch params pull from the
-state of the component, we'll need to set the state of our `renderedComponent` before we call the `addGrocery` method.
+state of the component, we'll need to set the state of our `wrapper` before we call the `handleAddGrocery` method.
 
 ```javascript
 // AddGroceryForm.test.js
