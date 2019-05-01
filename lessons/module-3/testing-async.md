@@ -270,8 +270,7 @@ it('resets the state after adding a new grocery', () => {
 })
 ```
 
-Our third test looks similar to our first, however because we don't care about any state changes, and just want to
-assert that our `updateGroceryList` mock was called, we don't need to update the component.
+Our third test looks similar to our first. We need to step through the asynchronous behavior of a successful fetch to determine if our `mockUpdateGroceryList` was called with the correct param.
 
 ```javascript
 // AddGroceryForm.test.js
@@ -285,15 +284,14 @@ it('calls the updateGroceryList callback after adding a new grocery', () => {
 ```
 
 Our final test asserts that our catch statement sets the state correctly if the fetch call fails. However in order to
-simulate this failure, we're going to need to mock our fetch call again. Also, due to an Enzyme oddity, we're going to
-need to update our component twice, otherwise we won't see the state change.
+simulate this failure, we're going to need to mock our fetch call again to simulate a failed fetch. 
 
 ```javascript
 // AddGroceryForm.test.js
 
 it('sets an error when the fetch fails', () => {
   window.fetch = jest.fn().mockImplementationOnce(() => Promise.reject(
-    new Error('failed')
+    new Error('Fetch failed')
   )
 
   wrapper.instance().handleAddGrocery(mockEvent)
@@ -307,7 +305,7 @@ it('sets an error when the fetch fails', () => {
 
 When using fetch calls, there are two main times when we want to check for errors. The first is when our fetch rejects, which is the case we tested above.
 
-The second is when the response is not ok. In that case we should manually throw an error that we'll catch elsewhere. We'll show how that's done later on in this lesson.
+The second is when the fetch doesn't fail, but the response is not ok. In that case we should manually throw an error that we'll catch elsewhere. We'll show how that's done later on in this lesson.
 
 ## Refactoring to async/await
 
