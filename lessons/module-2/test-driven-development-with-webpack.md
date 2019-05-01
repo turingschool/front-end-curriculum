@@ -248,12 +248,12 @@ touch src/Box.js
 touch test/Box-test.js
 ```
 
-In our test file, we need to import our assertion library: chai.
+In our test file, we need to require our assertion library: chai.
 
 ```js
 // test/Box-test.js  
 
-import chai from 'chai';
+const chai = require('chai');
 ```
 
 Let's practice writing a couple tests in true TDD fashion - this first one will just help verify that everything is wired up correctly - plus it's always nice to start with an easy win.  
@@ -279,12 +279,12 @@ If you run `npm test` now, you'll see an expected error. It's important to recog
 
 It's saying that it doesn't know what `expect` is, and recall that `expect` comes from the Chai library. At this point we haven't told our file to care about Chai, nor have we told it which API we want to use (remember Chai lets us choose between different assertion styles: `should`, `expect`, or `assert`).
 
-Import Chai and the `expect` library, at the top of your test file:  
+Require Chai and the `expect` library, at the top of your test file:  
 
 ```js
 // test/Box-test.js  
 
-import chai from 'chai';
+const chai = require('chai');
 const expect = chai.expect;
 
 describe('Box', function() {
@@ -322,10 +322,10 @@ We will work through the TDD testing cycle we mentioned earlier: `Red-Green-Refa
 ```js
 // test/Box-test.js
 
-import chai from 'chai';
+const chai = require('chai');
 const expect = chai.expect;
 
-import Box from '../src/Box';
+const Box = require('../src/Box');
 
 describe('Box', function() {
   it('should return true', function() {
@@ -358,19 +358,16 @@ Run the tests and watch them fail (RED).
 
 ```bash
 1) Box
-     should have a default height and a width:
-   TypeError: _src_Box__WEBPACK_IMPORTED_MODULE_1___default.a is not a constructor
-    at Context.<anonymous> (dist/webpack:/test/Box-test.js:12:1)
+    should have a default height and a width:
+    some error at (/test/Box-test.js:12:1)
 
 2) Box
-     should have take a height and a width as arguments:
-   TypeError: _src_Box__WEBPACK_IMPORTED_MODULE_1___default.a is not a constructor
-    at Context.<anonymous> (dist/webpack:/test/Box-test.js:19:1)
+    should have take a height and a width as arguments:
+    some error (/test/Box-test.js:19:1)
 
 3) Box
-     should calculate its area:
-   TypeError: _src_Box__WEBPACK_IMPORTED_MODULE_1___default.a is not a constructor
-    at Context.<anonymous> (dist/webpack:/test/Box-test.js:26:1)
+    should calculate its area:
+    some error at (/test/Box-test.js:26:1)
 ```
 
 Write some code to implement the functionality one test at a time. You can use the method `.skip` on any tests you want to skip so you can isolate individual tests you want to run.  
@@ -396,7 +393,7 @@ class Box {
   }
 }
 
-export default Box;
+module.exports = Box;
 ```
 
 Run `npm test` and watch the tests pass! (GREEN).
