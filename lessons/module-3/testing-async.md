@@ -369,7 +369,15 @@ apiCalls.test.js. Since we're TTD style developers, let's write our tests first,
 import { addGrocery } from './apiCalls'
 
 describe('addGrocery', () => {
+  let mockGrocery
+  let mockGroceries
+  
   beforeEach(() => {
+    mockGrocery = {name: 'Oranges', quantity: 3}
+    mockGroceries = [
+      {id: 1, name: 'Pineapples', quantity: 10},
+      {id: 2, name: 'Oranges', quantity: 3}
+    ]
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       status: 200,
       ok: true,
@@ -378,34 +386,30 @@ describe('addGrocery', () => {
   })
 
   it('fetch is called with the correct params', async () => {
-    const mockGrocery = {name: 'Oranges', quantity: 3}
     const expected = [
       '/api/v1/groceries', 
       {
         method: 'POST',
-        body: JSON.stringify({ grocery: mockGrocery }),
+        body: JSON.stringify(mockGrocery),
         headers: {
           'Content-Type': 'application/json'
         }
       }
     ]
 
-    await addGrocery(mockGrocery)
+    addGrocery(mockGrocery)
+    
     expect(window.fetch).toHaveBeenCalledWith(...expected)
   })
 
-  it('returns an object if status code is ok', async () => {
-    const mockGrocery = {name: 'Oranges', quantity: 3}
-    const mockGroceries = [
-      {id: 1, name: 'Pineapples', quantity: 10},
-      {id: 2, name: 'Oranges', quantity: 3}
-    ]
+  it('returns an array of groceries if status code is ok', async () => {
+    const result = await addGrocery(mockGrocery)
 
-    await expect(addGrocery(mockGrocery)).resolves.toEqual({groceries: mockGroceries})
+    expect(result).toEqual(mockGroceries)
   })
 
   it('throws an error if status code is not ok', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+    window.fetch = jest.fn().mockImplementationOnce(() => Promise.resolve({
       status: 500,
       ok: false
     }))
@@ -457,13 +461,13 @@ async handleAddGrocery(event) {
   const { grocery } = this.state;
 
   try {
-    const data = await addGrocery(grocery)
+    const groceries = await addGrocery(grocery)
     this.setState({
       grocery: {
         name: '',
         quantity: ''
       }
-    }, updateGroceryList(data.groceries));
+    }, updateGroceryList(groceries));
   } catch(error) {
     this.setState({
       errorStatus: 'Error adding grocery'
