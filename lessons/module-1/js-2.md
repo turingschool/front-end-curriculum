@@ -230,6 +230,20 @@ Variables sans the keyword `var`
   - will be considered global variable, even if declared _inside_ a function
   - are bad practice
 
+Here's an example of what this looks like:
+
+```js
+function defineVariables() {
+  num1 = 10;
+  var num2 = 20;
+}
+
+defineVariables();
+
+console.log(num1);  // This will display 10.
+console.log(num2);  // This will give a ReferenceError: : num2 is not defined.
+```
+
 The good news is all you have to do to avoid this is to always remember to use the `var` keyword when declaring a new variable!
 
 ## Name Your Parameters Carefully
