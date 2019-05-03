@@ -175,7 +175,7 @@ Make 4 new variables. Assign values with numeric data types to two of them, and 
 
 There are two different ways to add values to strings.
 
-#### 1. Via Concatentation
+#### 1. Via Concatenation
 
 In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
 
@@ -405,7 +405,7 @@ return x + y / 3;
 1. What are the six primitive data types?
 2. How are variables useful and what is an example of one that has a value assigned to it?
 3. Write out an example of string concatenation.  Now write that same example using a template literal.
-4. Write out the basical structure of an if/else conditional.
+4. Write out the basic structure of an if/else conditional.
 5. Write out a function declaration and then what it looks like to invoke it.
 6. What is the difference between parameters and arguments?
 
