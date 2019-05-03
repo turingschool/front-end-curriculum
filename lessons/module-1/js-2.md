@@ -72,11 +72,11 @@ function surpriseAttack() {
 
 function karateChop() {
   console.log("KARATE CHOP!");
-  alertAttack();
+  surpriseAttack();
 }
 
 function ninjaAttack() {
-  alertAttack();
+  surpriseAttack();
   console.log("NINJA SURPRISE!");
 }
 ```
