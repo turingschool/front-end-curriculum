@@ -197,54 +197,29 @@ game.currentRound // => Round {...} (The new Round object that has been instatia
 
 ## Iteration 4:
 
-***Extensions***
+_Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
-_Note: These extensions may require modifying pre-existing code that was given to you_
+***Build out another study/flashcards dataset*** 
+Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
 
-* Build out another study/flashcards dataset.  
+***More practice***   
+Add functionality so that a score of less than 90% will require the user to go through the entire dataset again.
 
-Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created
+***Review incorrect answers***  
+Add functionality so that the `Round` (and thus, the `Game`) does not end after you've gone through all of the cards. The player should then be prompted to try to guess again, reviewing only those cards that are stored as incorrect.
 
-* More practice  
+***Timer***  
+At the end of the game, report how much time it took to complete the game (in minutes and seconds).
 
-Add functionality so that a score of less than 90% will require the user to go through the entire dataset again
+***Report Card***  
+At the end of the game, create a report card that would detail any answers that the user got wrong as well as how many tries each question took.
 
-* Review incorrect answers  
+***Options for mixed datasets***  
+At the beginning of the game, give options for choosing to study different subjects (have a dataset for one subject and another subject), as well as the option for mixing all of the subjects together.
 
-Add functionality so that the `Round` (and thus, the `Game`) does not end after you've gone through all of the cards. The player should then be prompted to try to guess again, reviewing only those cards that are stored as incorrect
-
-* CYOE (Choose Your Own Extension)  
-
+***CYOE (Choose Your Own Extension)***  
 Collaborate with instructors to personalize an extension for this project
 
 # Evaluation Rubric
 
-The project will be assessed with the following guidelines:
-
-### Functional Expectations
-* 4: Application fulfills all expectations of iterations 1 - 4 with no bugs, crashes, or missing functionality *as well as* an extension.
-* 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.
-* 2: Application is usable but has some missing functionality.
-* 1: Application crashes during normal usage.
-
-### Fundamental Javascript & Style
-
-* 4:  Application demonstrates excellent knowledge of Javascript syntax, style, and refactoring.
-* 3:  Application shows strong effort towards organization, content, and refactoring.
-* 2:  Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
-* 1:  Application generates syntax error or crashes during execution.
-
-### Test-Driven Development
-
-* 4: Application is broken into components which are well tested in both isolation and integration using appropriate data.
-* 3: Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality.
-* 2: Application makes some use of tests, but the coverage is insufficient given projet requirements.
-* 1: Application does not demonstrate strong use of TDD.
-
-### Encapsulation / Breaking Logic into Components
-
-* 4: Application is expertly divided into logical components each with a clear, single responsibility.
-* 3: Application effectively breaks logical components apart but breaks the principle of SRP.
-* 2: Application shows some effort to break logic into components, but the divisions are inconsistent or unclear.
-* 1: Application logic shows poor decomposition with too much logic mashed together.
-
+The project and structure for the evaluation for this project can be found [here](http://frontend.turing.io/projects/flash-cards-eval)
