@@ -70,166 +70,166 @@ As part of your evaluation for this project, you are required to self-assign sco
 Please list the score you would assign yourself, based on the rubric. Please also list 3 questions or comments for each section:
 
 *Functional Expectations*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
+  
+  
+  
+  
+  
+  
+  
 *Fundamental JavaScript & Style*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
+  
+  
+  
+  
+  
+  
+  
 *Test-Driven Development*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp;  
-*Encapsulation*
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp;  
-Please answer the following questions:
+  
+  
+  
+  
+  
+  
+  
+*Encapsulation*  
+  
+  
+  
+  
+  
+  
+  
+Please answer the following questions:  
 
 * What was the most important thing you learned (both technical and professional)  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-* What are the big ideas/takeaways that you have from this project?  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-* What was the most interesting thing about this project?  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-* What would you do differently if approaching this project again?
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-* How will you use what you learned in the future?  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp;  
+  
+  
+  
+  
+  
+  
 
+* What are the big ideas/takeaways that you have from this project?  
+  
+  
+  
+  
+  
+  
+  
+* What was the most interesting thing about this project?  
+  
+  
+  
+  
+  
+  
+  
+* What would you do differently if approaching this project again?  
+  
+  
+  
+  
+  
+  
+* How will you use what you learned in the future?  
+  
+  
+  
+  
+  
+  
+  
+  
 ## Part II: Peer Feedback I
 
-Using the rubric above, please assign scores for the project you are reviewing. Write out at least 3 pieces of feedback for each section.
 
-Student Name:
-&nbsp; 
+Using the rubric above, please assign scores for the project you are reviewing. Write out at least 3 pieces of feedback for each section.  
 
-Project:
-&nbsp;  
+Student Name:  
+  
+
+
+Project:  
+  
+
 
 *Functional Expectations*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
+  
+  
+  
+  
+  
+  
+  
 *Fundamental JavaScript & Style*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
+  
+  
+  
+  
+  
+  
+  
 *Test-Driven Development*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-*Encapsulation*
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp;  
+  
+  
+  
+  
+  
+  
+  
+*Encapsulation*  
+  
+  
+  
+  
+  
+  
+  
   
 ## Part III: Peer Feedback II
 
-Using the rubric above, please assign scores for the project you are reviewing. Write out at least 3 pieces of feedback for each section.
+Using the rubric above, please assign scores for the project you are reviewing. Write out at least 3 pieces of feedback for each section.  
 
-Student Name:
-&nbsp; 
+Student Name:  
+  
 
-Project:
-&nbsp;  
+
+Project:  
+  
+
 
 *Functional Expectations*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
+  
+  
+  
+  
+  
+  
+  
 *Fundamental JavaScript & Style*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
+  
+  
+  
+  
+  
+  
+  
 *Test-Driven Development*  
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-*Encapsulation*
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp; 
-&nbsp;  
-
-Write out at least three pieces of feedback in each section.
-
-
+  
+  
+  
+  
+  
+  
+  
+*Encapsulation*  
+  
+  
+  
+  
+  
+  
+  
