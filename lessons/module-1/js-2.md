@@ -17,14 +17,14 @@ Before we get started with new material, let's go over over what we've learned s
 
 In this lesson we'll cover:
 
-* More about functions and their uses  
-* Variable scope  
+* More about functions and their uses 
+  - Calling functions inside of other functions
+  - Function expressions and anonymous functions
+* Hoisting & Variable scope  
 * Array literals  
 * Adding/changing values to arrays via their indices  
-* `for` loops  
+* `for` loops and how to iterate through arrays using loops
 
-## Resources
-[JS Style Guide](https://github.com/turingschool-examples/javascript)
 
 ## Vocab
 
@@ -51,13 +51,13 @@ Let's take a crack at refactoring some functions and calling functions within ot
 ```js
 function karateChop() {
   console.log("KARATE CHOP!");
-  alert("KAPOW!");
-  alert("JUDO CHOP!");
+  console.log("KAPOW!");
+  console.log("JUDO CHOP!");
 }
 
 function ninjaAttack() {
-  alert("KAPOW!");
-  alert("JUDO CHOP!");
+  console.log("KAPOW!");
+  console.log("JUDO CHOP!");
   console.log("NINJA SURPRISE!");
 }
 ```
@@ -65,18 +65,18 @@ function ninjaAttack() {
 We can see that we have some duplication going on between these two functions. We see we have two `alert` statements that are exactly the same in both functions, which means it is a prime candidate to get pulled into its own function. This will let us reuse this code without retyping it repeatedly (which helps reduce human error and typos), and gives us the flexibility to easily use it in future functions as well. Let's see what that looks like:
 
 ```js
-function alertAttack() {
-  alert("KAPOW!");
-  alert("JUDO CHOP!");
+function surpriseAttack() {
+  console.log("KAPOW!");
+  console.log("JUDO CHOP!");
 }
 
 function karateChop() {
   console.log("KARATE CHOP!");
-  alertAttack();
+  surpriseAttack();
 }
 
 function ninjaAttack() {
-  alertAttack();
+  surpriseAttack();
   console.log("NINJA SURPRISE!");
 }
 ```
@@ -118,6 +118,8 @@ setTimeout(function() {
 }, 1000);
 ```  
 
+You will see anonymous functions as arguments in the future in things like *event listeners* and *array prototype methods*.  (More on those in future lessons)
+
 They are also commonly used within *function expressions*, where the function is assigned to a variable, which makes the anonymous function part of a larger `expression`.  
 
 ```js
@@ -134,7 +136,7 @@ Things to think about:
 - Can a function return a value?
 - Can a function be an expression?  
 
-Recall that anywhere the interpreter expects to find an expression, like when you declare a variable name, we can use an expression that is NOT named as the value. In the context of functions, we call this an *anonymous function*. Remember that an expression simply returns a value, so it makes sense that we should be able to accomplish that with an function.
+Recall that anywhere the interpreter expects to find an expression, like when you declare a variable name, we can use an expression that is NOT named as the value. In the context of functions, we call this an *anonymous function*. Remember that an expression simply returns a value, so it makes sense that we should be able to accomplish that with a function.
 
 To reiterate, `function expressions` define a function, but instead of giving the name to the function itself, the function is left anonymous and the name is instead assigned to a variable.  
 
@@ -228,7 +230,152 @@ Variables sans the keyword `var`
   - will be considered global variable, even if declared _inside_ a function
   - are bad practice
 
+Here's an example of what this looks like:
+
+```js
+function defineVariables() {
+  num1 = 10;
+  var num2 = 20;
+}
+
+defineVariables();
+
+console.log(num1);  // This will display 10.
+console.log(num2);  // This will give a ReferenceError: : num2 is not defined.
+```
+
 The good news is all you have to do to avoid this is to always remember to use the `var` keyword when declaring a new variable!
+
+## Name Your Parameters Carefully
+
+Now that we've talked a little bit about scope, we know that we have access to global variables inside of a function, right?  However, what happens if I name a parameter the same as a global variable?  In this scenario, the interpreter will try to use which one it thinks you are talking about.  In most scenarios, it will work as you'd expect.  Let's take a look below at a happy path:
+
+```js
+var number = 10;
+
+function test(number) {
+  console.log(number + 2);
+}
+
+test(number);  // This will give 12
+test(15);  // This will give 17
+```
+
+Here it will work just fine because the Javascript interpreter knows to refer to the number *parameter* when we invoke the function as opposed to the *global variable* number.  However, this is not always the case.  Let's look at a scenario where this doesn't work:
+
+```js
+var number = 10;
+
+function test(number) {
+  number = number + 2;
+  console.log(number); // This will give 12
+}
+
+test(number);
+
+console.log(number); // This will give 10
+```
+
+Here we are trying to reassign our global variable to whatever value I pass through as an argument plus two in our test function.  It logs the value we expect, when the function is invoked.  However, when we log what the global variable is, it remains the same as before.  The global variable wasn't reassigned...rather the parameter was reassigned a different value.
+
+This is all very confusing.  But there's an easy way to avoid this confusion...make sure your parameters have a different name from your global variables!  Let's try that now...
+
+```js
+var num = 10;
+
+function test(number) {
+  num = number + 2;
+  console.log(num); // This will give 12
+}
+
+test(num)
+
+console.log(num); // This will also give 12
+```
+
+Hooray!  Now we are getting what we expected both inside of the function and globally.  Because we are using a different name, the interpreter knows which variable we are referring to.
+
+# Refactoring Visited Again
+
+Now that we have covered calling functions within functions, hoisting, and scope...Let's look at a more real world example of refactoring.  There will likely be many scenarios in your applications where a user must be logged in to perform an action.  We will need to check if their password is correct when we sign in, as well as when a user posts a comment.  Let's look at what this might look like:
+
+```js
+function signIn() {
+  var onlineStatus = false;
+  var password = 'blueberries123';
+  if (password === 'airplanes765') {
+    onlineStatus = true;
+  } else {
+    onlineStatus = false;
+  }
+
+  if (onlineStatus === true) {
+    console.log('User has just signed in.')
+  } else {
+    console.log('That is not the correct password.')
+  }
+}
+
+function postMessage() {
+  var onlineStatus = false;
+  var password = 'blueberries123';
+  if (password === 'airplanes765') {
+    onlineStatus = true;
+  } else {
+    onlineStatus = false;
+  }
+
+  if (onlineStatus === true) {
+    console.log('Posting a message now')
+  } else {
+    console.log('Please sign in first.')
+  }
+}
+```
+
+Are you seeing some repetitive lines of code here?  This is often referred to as `code smell`.  Seeing multiple lines of code that are repeated throughout can be a bit of a red flag.  We notice that both functions are checking to see if their password is correct and then updating their onlineStatus.  We also can see that we are doing a check to see if they are online using a conditional and then performing an action based on that. Let's break apart these functions to be smaller and more reusable:
+
+```js
+function signIn() {
+  var onlineStatus = validatePassword();
+  executeAction(
+    onlineStatus,
+    'User has just signed in.',
+    'That is not the correct password.' 
+  )
+}
+
+function postMessage() {
+  var onlineStatus = validatePassword();
+  executeAction(
+    onlineStatus,
+    'Posting a message now',
+    'Please sign in first.' 
+  )
+}
+
+function validatePassword() {
+  var password = 'blueberries123';
+  if (password === 'airplanes765') {
+    return true
+  } else {
+    return false
+  }
+}
+
+function executeAction(status, happyMsg, sadMsg) {
+  if (status === true) {
+    console.log(happyMsg);
+  } else {
+    console.log(sadMsg)
+  }
+}
+```
+
+We have broken the password validation into its own function and then return true or false based on if they have guessed the correct password.  We also have broken out what is going to happen if the user is signed in using arguments and parameters.  Finding ways to simplify our code and make our logic more modular can make our functions more reusable for other scenarios.  
+
+### You Turn
+How could you use parameters and arguments to make the password more dynamic so that the user can actually sign in?
 
 # Arrays
 An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
@@ -409,6 +556,7 @@ We can see that this condition will never return `false` and we'll be stuck in t
 
 ### Dig Deeper  
 
+* [JS Style Guide](https://github.com/turingschool-examples/javascript)
 * [Seven JS Quirks I Wish I'd Known About](http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/#expdec)  
 * [Adequately Good JS](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)  
 
