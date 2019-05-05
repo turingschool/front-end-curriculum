@@ -201,20 +201,25 @@ game.currentRound // => Round {...} (The new Round object that has been instatia
 
 _Note: These extensions may require modifying pre-existing code that was given to you_
 
-* Build out another study/flashcards dataset.  
+*Build out another study/flashcards dataset*  
+Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
 
-Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created
+*More practice*    
+Add functionality so that a score of less than 90% will require the user to go through the entire dataset again.
 
-* More practice  
+*Review incorrect answers*
+Add functionality so that the `Round` (and thus, the `Game`) does not end after you've gone through all of the cards. The player should then be prompted to try to guess again, reviewing only those cards that are stored as incorrect.
 
-Add functionality so that a score of less than 90% will require the user to go through the entire dataset again
+*Timer*
+At the end of the game, report how much time it took to complete the game (in minutes and seconds).
 
-* Review incorrect answers  
+*Report Card*
+At the end of the game, create a report card that would detail any answers that the user got wrong as well as how many tries each question took.
 
-Add functionality so that the `Round` (and thus, the `Game`) does not end after you've gone through all of the cards. The player should then be prompted to try to guess again, reviewing only those cards that are stored as incorrect
+*Options for mixed datasets*
+At the beginning of the game, give options for choosing to study different subjects (have a dataset for one subject and another subject), as well as the option for mixing all of the subjects together.
 
-* CYOE (Choose Your Own Extension)  
-
+*CYOE (Choose Your Own Extension)* 
 Collaborate with instructors to personalize an extension for this project
 
 # Evaluation Rubric
