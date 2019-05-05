@@ -70,38 +70,50 @@ As part of your evaluation for this project, you are required to self-assign sco
 Please list the score you would assign yourself, based on the rubric. Please also list 3 questions or comments for each section:
 
 *Functional Expectations*  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 *Fundamental JavaScript & Style*  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 *Test-Driven Development*  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 *Encapsulation*  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
-  
-  
-  
-  
-  
-Please answer the following questions:  
+Please answer the following questions in your journal:  
 
 * What was the most important thing you learned (both technical and professional)  
   
@@ -157,79 +169,96 @@ Project:
 
 
 *Functional Expectations*  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 *Fundamental JavaScript & Style*  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 *Test-Driven Development*  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 *Encapsulation*  
-  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 ## Part III: Peer Feedback II
 
 Using the rubric above, please assign scores for the project you are reviewing. Write out at least 3 pieces of feedback for each section.  
-
 Student Name:  
-  
-
 
 Project:  
+
+*Functional Expectations* 
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
 
-
-*Functional Expectations*  
-  
-  
-  
-  
-  
-  
-  
 *Fundamental JavaScript & Style*  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
-  
-  
-  
-  
-  
-  
+
 *Test-Driven Development*  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
   
 *Encapsulation*  
-  
-  
-  
-  
-  
-  
+
+* Score:  
+
+*  
+
+*  
+
+*  
   
