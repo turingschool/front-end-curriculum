@@ -197,9 +197,7 @@ game.currentRound // => Round {...} (The new Round object that has been instatia
 
 ## Iteration 4:
 
-***Extensions***
-
-_Note: These extensions may require modifying pre-existing code that was given to you_
+_Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
 ***Build out another study/flashcards dataset*** 
 Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
