@@ -224,4 +224,4 @@ Collaborate with instructors to personalize an extension for this project
 
 # Evaluation Rubric
 
-The project and structure for the evaluation for this project can be found [here](http://frontend.turing.io/projects/module-2/flash-cards-eval):
+The project and structure for the evaluation for this project can be found [here](http://frontend.turing.io/projects/module-2/flash-cards-eval)
