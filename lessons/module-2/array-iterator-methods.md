@@ -157,7 +157,7 @@ let cleanArray = messyArray.reduce((accumulator, currentElement) => {
 ```
 
 
-## What About Objects
+## What About Objects?
 
 How do we iterate through objects?... Hint: `Object.keys()` or `Object.values()`. Go over to the docs (MDN maybe), and read about what these do and when you might use them.
 
