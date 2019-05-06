@@ -20,7 +20,7 @@ In this project, you will be given data from an activity tracker for many users.
 
 ![Example Fitbit dashboard](https://static1.fitbit.com/simple.b-cssdisabled-png.h7c5d2beb7af823f15fe022b8ff33daf8.pack?items=%2Fcontent%2Fassets%2Fapp2%2Fimages%2Fmacbook-pro.png)
 
-The image above is _not_ a comp. We expect you to design your own dashboard layout that is relevant to the data that was logged and the calculated data for a user or group of users.
+The image above is _not_ a comp. We expect you to design your own dashboard layout that is relevant to the data that was logged and the calculated data for a user or group of users. Use inspiration from Fitbit and other fitness/activity apps, but do not copy something directly.
 
 This project is broken into a series of iterations - complete each iteration in order, one-by-one. Through each iteration, you should use TDD to drive implementation of your code.
 
@@ -52,7 +52,7 @@ As a note, the data values are randomly generated.
 
 ## Project Iterations
 
-Complete each iteration in order, one-by-one. Each iteration has a "Data" section and "Dashboard" section. Data deals with using the data to calculate something useful for the user. The Dashboard section deals with what to display on the page.
+Complete each iteration in order, one-by-one. Each iteration has a "Data" section and "Dashboard" section. Data deals with using the data to calculate something useful for the user. The Dashboard section deals with what to display on the page. Unlike your week-1 project, the classes and method names are not completely drawn out for you.
 
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on class structure and the calculation methods, and then move on to the dashboard display. Things don't have to look good until later iterations.
 
@@ -73,7 +73,8 @@ new UserRepository(dataFilepath);
 ```
 
 * A `UserRepository` holds onto all the `User` objects
-* Should have a methods to:
+* Should have methods to:
+  * Given a user's ID, what is their user data?
   * Average step goal amongst all users
   * What state are the most users from?
 
@@ -85,7 +86,7 @@ new User(userData);
 
 * A `User` represents a single user
 * Each user holds on to the user properties from the data file
-* Should have a methods to:
+* Should have a method to:
   * Return a user's first name only
 
 
@@ -116,6 +117,8 @@ Using a similar class structure for a user and a user repository, create methods
 * For a user, how many fluid ounces they consumed for a specific day (identified by a date)
 * For a user, how many fluid ounces of water consumed each day over the course of a week (7 days)
 
+You have to decide which classes should contain each method. Think about whose responsibility it is to own the method.
+
 **Dashboard:**
 For your user (or any user you choose), add:
 
@@ -132,7 +135,7 @@ Keep the displays simple for now and make them fancy later. Do not use and addit
 Using a similar class structure for a user and a user repository, create methods that can calculate:
 
 * For a user (identified by their `userID`), the average number of hours slept per day
-* For a user (identified by their `userID`), their average sleep quality per day
+* For a user, their average sleep quality per day
 * For a user, how many hours they slept for a specific day (identified by a date)
 * For a user, their sleep quality for a specific day (identified by a date)
 * For a user, how many hours slept each day over the course of a week (7 days)
@@ -145,27 +148,40 @@ Using a similar class structure for a user and a user repository, create methods
 **Dashboard:**
 Items to add to the dashboard:
 
-* Sleep data for the latest day (hours slept and quality of sleep)
-* Sleep data over the course of the latest week (hours slept and quality of sleep)
-* A user's all-time average sleep quality and number of hours slept
+* For a user, their sleep data for the latest day (hours slept and quality of sleep)
+* For a user, their sleep data over the course of the latest week (hours slept and quality of sleep)
+* For a user, their all-time average sleep quality and number of hours slept
 
 
 ### Iteration 4 - Activity
 
-
 **Data:**
 Using a similar class structure for a user and a user repository, create methods that can calculate:
 
-* For a specific day, convert a user's number of steps to miles
+* For a specific day, convert a user's number of steps to miles (use the `strideLength` to help calculate this)
+* For a user, (identified by their `userID`)
+* For a given day (specified by a date), did a user reach their step goal?
+* Find all the days where a user exceeded their step goal
+* For a user, find their all-time stair record
+
 * Make a metric of your own!
 
 **Dashboard:**
+Items to add to the dashboard:
+
+* For a user, the number of steps for the latest day
+* For a user, the distance they have walked (in miles) for the latest day based on their step count
+* For a user, a weekly view of their step count
 
 
 
 ### Iteration 5 - Trends and Challenges
 
-Step Challenge amongst friends?
+1. Design a step challenge between friends. Give your user a few friends from the user data file. Add the methods you need and a display on the dashboard to see their friends step count for a whole week, and then show who had the most steps for that week.
+1. Calculate and display this trend: for a user, what days had increasing steps for 3 or more days?
+1. Think of your own trend for one user or many users. Calculate it and display it.
+
+
 
 ### Extensions
 
@@ -174,6 +190,7 @@ Step Challenge amongst friends?
 * Create more kinds of Fitbit-like activity or habit data for users. What other that sleep, daily activity, and hydration would you want to keep track of?
 * **Admin** view. Modify your HTML page, or create a new HTML page that is an admin dashboard display. The admin would want to see views of data from all users. What are the trends of all users? How can you display data from all users in a meaningful way?
 * Other extensions you can think of! Let your instructors know.
+
 
 
 ## Rubric
