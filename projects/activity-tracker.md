@@ -107,7 +107,7 @@ You should _not_ use the original data files in the `data` directory for testing
 
 Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.
 
-Write tests for all classes, their properties, and their methods from now on for all iterations.
+**Write tests for all classes, their properties, and their methods from now on for all iterations.**
 
 ---
 
