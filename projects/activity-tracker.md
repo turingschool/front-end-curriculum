@@ -199,8 +199,8 @@ Items to add to the dashboard:
 ## Rubric
 
 ### Functional Expectations
-* 4: Application fulfills all expectations of iterations 1 - 5 with no bugs, crashes, or missing functionality *as well as* an extension.
-* 3: Application fulfills expectations of iterations 1 - 4 with no bugs, crashes, or missing functionality.
+* 4: Application fulfills all expectations of iterations 1 - 5 with no bugs or missing functionality *as well as* an extension.
+* 3: Application fulfills expectations of iterations 1 - 5 with no bugs or missing functionality.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.
 
