@@ -39,7 +39,6 @@ console.log('Cat Noise outside Function: ', catNoise);
 Our variable of `cowNoise` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `catNoise` is limited to the scope of `makeNoise` and is thus said to be scoped locally.
 
 
-
 ### Global, Functional, and Block Scope
 
 We have several scopes available to us: global, function, block, and eval (the latter won't be covered in this lesson - but you can read more on it [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/eval)).
@@ -158,11 +157,11 @@ Every time a variable is initialized, the interpreter will first look in its own
 2. Line 1 - `number` is assigned the value of 10
 3. Line 8 - prints `B 10` to the console
 4. Line 10 - `foo` is invoked, creating a new execution context
-5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searchs in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20 both locally and globally.
+5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searchs in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20, both locally and globally.
 6. Line 5 - prints `A 20` to the console
 7. Line 12 - prints `C 20` to the console
 
-**It is important to note that the interpreter moving up the scope chain to resolve variable values is _NOT_ hoisting. Which bears repeating. The process of traversing the scope chain is *NOT* hoisting. Remember that the JS interpreter hoists declarations (storing them in memory) during the creation phase of execution, not when the code itself is being executed.**
+**It is important to note that the interpreter moving up the scope chain to resolve variable values is _NOT_ hoisting. Which bears repeating. The process of traversing the scope chain is *NOT* hoisting. Remember that the JS interpreter hoists declarations (storing them in memory) during the creation phase, not when the code itself is being executed.**
 
 #### Turn and Talk
 
@@ -184,13 +183,13 @@ console.log(number);  // what will log here?
 Example 2:
 
 ```js
-var givenName = 'Bananiels Foster';
+var givenName = 'Robbie McJaeger';
 
 function printGreeting() {
   console.log(`Hello ${givenName}`);
 }
 
-printGreeting('Danger');  // what will log here?
+printGreeting('Bob-o');  // what will log here?
 printGreeting();      // what will log here?
 ```
 
@@ -308,8 +307,6 @@ array[5]()  // what will log here?
 
 _**Scope**_
 Prompt for students:
-* Describe the two phases that the JS interpreter uses to run your code.
-* Give and example of when you would see a global execution context and a local execution context.
 
 What is the result of each `console.log()`? Explain your answer.
 ```js 
