@@ -48,13 +48,15 @@ There are different activity files that have ALL users' data for many days
  -> activity.js (what is someone doing to be active each day?)
 ```
 
-The data values are randomly generated.
+As a note, the data values are randomly generated.
 
 ## Project Iterations
 
 Complete each iteration in order, one-by-one. Each iteration has a "Data" section and "Dashboard" section. Data deals with using the data to calculate something useful for the user. The Dashboard section deals with what to display on the page.
 
 Don't get too caught up with polishing your dashboard too early. You'll want to focus your energies first on class structure and the calculation methods, and then move on to the dashboard display. Things don't have to look good until later iterations.
+
+**Note:** For this dataset, "today" is the last date in the data.
 
 
 ### Iteration 1 - Get Familiar with the Data and Users
@@ -99,40 +101,86 @@ Choose a user at random - someone with a randomly generated name that speaks to 
 
 You should _not_ use the original data files in the `data` directory for testing. These are big files to begin with, and a real-world dataset would have millions of records. That's far too big to use every time you want to run a test.
 
-Instead, for your tests, you should create small, sample datasets that match the structure of the application data.
+Instead, for your tests, you should create small, sample datasets that match the structure of the application data. By creating this sample dataset, you will also know if your methods are working correctly because you can do the calculations by hand with a much smaller dataset.
 
-Write tests for all classes, their properties, and their methods.
+Write tests for all classes, their properties, and their methods from now on for all iterations.
+
 
 
 ### Iteration 2 - Hydration
+
+**Data:**
+Using a similar class structure for a user and a user repository, create methods that can calculate:
+
+* For a user (identified by their `userID`), the average fluid ounces consumed per day
+* For a user, how many fluid ounces they consumed for a specific day (identified by a date)
+* For a user, how many fluid ounces of water consumed each day over the course of a week (7 days)
+
+**Dashboard:**
+For your user (or any user you choose), add:
+
+* A display to show how much water they have consumed today
+* How much water they have consumed each day over the course of the latest week
+
+Keep the displays simple for now and make them fancy later. Do not use and additional 3rd-party libraries to display information on the page unless you get instructor approval first. This goes for other sources of data as well.
 
 
 
 ### Iteration 3 - Sleep
 
+**Data:**
+Using a similar class structure for a user and a user repository, create methods that can calculate:
+
+* For a user (identified by their `userID`), the average number of hours slept per day
+* For a user (identified by their `userID`), their average sleep quality per day
+* For a user, how many hours they slept for a specific day (identified by a date)
+* For a user, their sleep quality for a specific day (identified by a date)
+* For a user, how many hours slept each day over the course of a week (7 days)
+* For a user, their sleep quality each day over the course of a week (7 days)
+* For all users, the average sleep quality
+* Find all users who average a sleep quality greater than `3` for the latest week (7 days)
+* For a given day (identified by the date), find the users who slept the most number of hours (one or more if they tied)
+* Make a metric of your own!
+
+**Dashboard:**
+Items to add to the dashboard:
+
+* Sleep data for the latest day (hours slept and quality of sleep)
+* Sleep data over the course of the latest week (hours slept and quality of sleep)
+* A user's all-time average sleep quality and number of hours slept
 
 
 ### Iteration 4 - Activity
 
-* Method to convert steps to miles
 
-Step Challenge?
+**Data:**
+Using a similar class structure for a user and a user repository, create methods that can calculate:
 
-### Iteration 5 - Trends
+* For a specific day, convert a user's number of steps to miles
+* Make a metric of your own!
+
+**Dashboard:**
 
 
+
+### Iteration 5 - Trends and Challenges
+
+Step Challenge amongst friends?
 
 ### Extensions
 
-* Drag and drop widgets (if you did not go with a widget theme, then add some widgets for this extension).
+* Drag-and-drop widgets (if you did not go with a widget theme, then add some widgets for this extension). You can use a 3rd-party library to help you accomplish this.
 * Priority stats - give the user the ability to select the widgets they always want to see at the top of the page. This is a customization the user would want to make, and you would want to save this customization to `localStorage`.
 * Create more kinds of Fitbit-like activity or habit data for users. What other that sleep, daily activity, and hydration would you want to keep track of?
 * **Admin** view. Modify your HTML page, or create a new HTML page that is an admin dashboard display. The admin would want to see views of data from all users. What are the trends of all users? How can you display data from all users in a meaningful way?
+* Other extensions you can think of! Let your instructors know.
 
 
 ## Rubric
+<!-- Include something in the rubric about using any for loops as a 2, but array prototoypes as a 3 -->
 
 
 <!-- Things we can do to ratchet up the difficulty:
 * Add something with inheritance to the classes (maybe a different kind of user?)
+* Give the user a date selector to be able to select a specific date for data (and then a button to go back to "today")
  -->
