@@ -208,44 +208,6 @@ const fancyName = 'scientificName';
 eg: `{ book1: 1, book2: 2`...`book199: 199, book200: 200 }`
  -->
 
-### Destructuring
-
-Destructuring assignment allows us to unpack values from objects and arrays into their own distinct variables.
-
-```js
-const dog = {
-  name: 'Spot',
-  breed: 'pug',
-  tricksLearned: {
-    sit: true,
-    stay: true,
-    rollOver: false,
-    beg: true,
-    speak: false
-  }
-}
-
-let { name, breed } = dog;
-let { sit, stay, speak } = dog.tricksLearned;
-
-console.log(name); // 'Spot'
-console.log(stay); // true
-```
-
-#### Turn and Code
-Taking turns for each prompt in driver/navigator fashion, complete the following:
-Using the code example for our `dog` object above, use destructuring assignment to do the following:
-  1. Create a variable called `rollOver` that holds the value of `false`
-  2. Create a variable called `robbiesFavoriteDog` that holds the value from our property of `breed`
-  3. Create variables for the following tricks: `beg`, and `playDead` (`playDead` should default to `false`)
-
-<!--   Answers
-  1. const { rollOver } = dog.tricksLearned;
-  2. const { breed: robbiesFavoriteDog } = dog;
-  3. const { beg, playDead = false} = dog.tricksLearned; -->
-
----
-
 ### Arrays
 [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are list-like objects, used for storing a list of related values. If you were making a list of pizza toppings, you might store them in an array like so:
 

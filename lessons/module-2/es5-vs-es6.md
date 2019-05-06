@@ -8,18 +8,6 @@ module: 2
  -->
 ### Learning Goals
 * Compare ES5 vs. ES6
-* Understand and explain prototypal inheritance in JavaScript
-
-## Vocabulary
-
-- `Scope` Where variables and functions are accessible
-- `Prototypal Inheritance` Inheritance by means of delegating message passing through a chain of objects (aka prototypes)
-
-### Warm Up
-
-* What do you think of when you hear the word prototype? 
-* When have you used prototypes in your code?
-* Do you prefer template literals to concatenation? Why or why not?
 
 ## The differences between ES5 and ES6
 
@@ -237,8 +225,35 @@ var characters = [...string]; // ['h', 'e', 'l', 'l', 'o']
 In this case, the `split` method is not terribly complex, but using the spread operator makes the code more readable at a glance; you can see that the result is an array.
 
 
-<!-- Destructring moved to fundamentals lesson -->
-<!-- ### Destructuring
+### Destructuring
+
+Destructuring assignment allows us to unpack values from objects and arrays into their own distinct variables.
+
+```js
+const dog = {
+  name: 'Spot',
+  breed: 'pug',
+  tricksLearned: {
+    sit: true,
+    stay: true,
+    rollOver: false,
+    beg: true,
+    speak: false
+  }
+}
+
+let { name, breed } = dog;
+let { sit, stay, speak } = dog.tricksLearned;
+
+console.log(name); // 'Spot'
+console.log(stay); // true
+```
+
+<!--   Answers
+  1. const { rollOver } = dog.tricksLearned;
+  2. const { breed: robbiesFavoriteDog } = dog;
+  3. const { beg, playDead = false} = dog.tricksLearned; -->
+
 
 **Importing:**
 
@@ -256,66 +271,23 @@ ES6 shortens up the importing syntax. Destructuring helps us define variables pu
 
 **Creating variables based on key value pairs:**
 
-```
-const dog = {
-  name: 'Spot',
-  breed: 'corgi',
-  tricksLearned: {
-    sit: true,
-    stay: true,
-    rollOver: false,
-    beg: true,
-    speak: false
-  }
-}
+#### Turn and Code
+Taking turns for each prompt in driver/navigator fashion, complete the following:
+Using the code example for our `dog` object above, use destructuring assignment to do the following:
+  1. Create a variable called `rollOver` that holds the value of `false`
+  2. Create a variable called `robbiesFavoriteDog` that holds the value from our property of `breed`
+  3. Create variables for the following tricks: `beg`, and `playDead` (`playDead` should default to `false`)
 
-let { name, breed } = dog;
-let { sit, stay, speak } = dog.tricksLearned;
-
-console.log(name); // 'Spot'
-console.log(stay); // true
-
-
-
-const strings = ['one', 'two', 'three'];
-let [one, two, three] = strings;
-
-console.log(two); // 'two'
-```
-
-**Reassigning values:**
-
-Destructuring also lets you swap values in an array without using a temporary variable.
-
-```
-var list = [1, 2, 3];
-
-// es5
-temp = list[0];
-list[0] = list[2];
-list[2] = temp;
-
-// es6
-[ list[0], list[2] ] = [ list[2], list[0] ];
-
-console.log(list); // [3, 2, 1]
-
-```
-
-The square brackets are just part of the destructuring syntax here.
 
 You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
- -->
+
 
 ### Journal
 
 * What new changes did ES6 bring in so far as the following:
   * scope
   * functions
-  * classes
-
-* What is prototypal inheritance?
-
+  * parameters
 
 ### Additional Resources:
 
