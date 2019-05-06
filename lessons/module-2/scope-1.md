@@ -17,6 +17,7 @@ By the end of this lesson, you will be able to:
 - `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
 - `Creation Phase` The phase where the interpreter sets aside some space in memory to store any variables and functions we might need access to.
 - `Execution Phase` The phase where the interpreter executes Javascript code, line-by-line.
+- `Execution Call Stack` A tool (data structure) for the interpreter to keep track of its place in a script that calls multiple functions
 
 # How JavaScript is Read
 
@@ -58,8 +59,6 @@ Let's look at a more complex example:
 
 **What would you expect to be logged when we get to line 10? Why?**
 
-
-
 Let's do a quick breakdown of what the interpreter did here to read this code:
 
 1. **Line 1:** The `modTwoTeachers` variable is assigned to an array of instructor names.
@@ -72,9 +71,7 @@ Let's do a quick breakdown of what the interpreter did here to read this code:
 
 Based on this order of execution, we ultimately receive NaN as our result because the value of our `currentCohort` is not assigned until **after** we already do the math within `calculateEvals`. At the time `calculateEvals` executes, the value of our `currentCohort` variable is `undefined`. So what our function is really doing is trying to return `undefined / 3` -- which will always result in NaN.
 
-
 Let's look at another example:
-
 
 ```js
 1  var moo = mooLikeACow();
@@ -157,6 +154,54 @@ With a partner, take turns explaining how the following JavaScript code would be
 16
 17 beggingTime = 30;
 ```
+
+## Execution Call Stack 
+
+Chances are good that you have come across information that references `The stack`, `The call stack`, or the `Execution Call Stack`. A [call stack](https://developer.mozilla.org/en-US/docs/Glossary/Call_stack) is a way for the JavaScript interpreter to keep track of its place (its current execution context) in a script that calls multiple functions — what function is currently being run, what functions are called from within that function and should be called next, etc. 
+A stack is a fundamental data structure in Computer Science that follows "First-In-Last-Out" (FILO) semantics. Any time a new function is invoked (and a new execution context is created) this execution context is pushed to the stack. Once a function has returned, the call is popped off the stack. The stack is used to determine in what order the code runs. Let's look at this example:  
+
+```js  
+function buildLaser () {  
+  var message = 'Laser Built';  
+  console.log(message); 
+} 
+ function buildMoonBase () {  
+  var message = 'Moon Base Built';  
+  buildLaser(); 
+  console.log(message); 
+} 
+ function ransomTheWorld () { 
+  buildMoonBase();  
+} 
+ ransomTheWorld();  
+``` 
+
+As the call stack builds up, each function has its own execution context.  
+1. We start in the global execution context  
+2. `ransomTheWorld` is called, creating a new call on the stack 
+3. `buildMoonBase` is called creating a new call on the stack. Within this funciton, a variable is decalred and `buildLaser` is called  
+4. `buildLaser` being invoked creates a new call on the stack 
+5. `buildLaser` declares a variable, prints the variable to the console, and is returned and popped off the call stack... bringing us back to the context of `buildMoonBase`  
+6. `buildMoonBase` prints the previously declared variable to the console and is returned and popped off the call stack... bringing us back to the context of `ransomTheWorld`  
+7. `ransomTheWorld` returns and is popped off. Our stack frame is empty and we are back in the global execution context.  
+ ![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif) 
+
+#### Turn and Talk 
+
+With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. While one person is speaking, the other person should be diagramming this process.
+
+```js  
+var myNum = 21; 
+ function addTwo(num) { 
+  hello();  
+  return num + 2; 
+} 
+ function hello() { 
+  console.log('hello'); 
+} 
+ var sum = addTwo(myNum); 
+console.log(sum); 
+``` 
 
 
 #### Closing

@@ -1,7 +1,7 @@
 ---
 title: Scope
 length: 120
-tags: javascript, scope, scope chain
+tags: javascript, scope, var, let, const, scope chain
 module: 2
 ---
 
@@ -11,6 +11,7 @@ By the end of this lesson, you will be able to:
 
 * Describe the differences between `var`, `let` and `const` and when to use each
 * Predict how variables will behave when multiple scopes are involved
+* Understand how the scope chain is initialized and utilized to resolve variables
 
 ## Vocab
 
@@ -36,7 +37,6 @@ console.log('Cat Noise outside Function: ', catNoise);
 ```
 
 Our variable of `cowNoise` can be accessed and changed from anywhere in our code base because it is globally scoped. Our variable `catNoise` is limited to the scope of `makeNoise` and is thus said to be scoped locally.
-
 
 
 ### Global, Functional, and Block Scope
@@ -131,9 +131,9 @@ What might be a metaphor or analogy for scope? Draw or diagram it out.
 
 ## Scope Chain
 
-Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in a local context and moves into the global space. Remember that the scope chain is initialized during the "creation phase" of the interpreter running through the code. This is important to note, as the scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are _invoked_. 
+Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in the most immediate (local) scope and moves towards the global space. Remember that the scope chain is initialized during the "creation phase" of the interpreter running through the code. This is important to note, as the scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are _invoked_. 
 
-Every time a variable is initialized, the interpreter will first look in its own scope to see if the label can be found. If it is not found, it will look "up" the scope chain to the parent scope to try to resolve the variable in the parent context. It will climb up the scope chain examining every execution context looking for a match to the variable name. If that name is never found, the interpreter will declare it globally on the window and the variable will be scoped as such.
+Every time a variable is initialized, the interpreter will first look in its own scope to see if the label can be found. If it is not found, it will look "up" the scope chain to the parent scope to try to resolve the variable in the parent context. It will climb up the scope chain examining every scope, looking for a match to the variable name. If that name is never found, the interpreter will declare it globally on the window and the variable will be scoped as such.
 
 
 ```js
@@ -157,11 +157,11 @@ Every time a variable is initialized, the interpreter will first look in its own
 2. Line 1 - `number` is assigned the value of 10
 3. Line 8 - prints `B 10` to the console
 4. Line 10 - `foo` is invoked, creating a new execution context
-5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searchs in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20 both locally and globally.
+5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searchs in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20, both locally and globally.
 6. Line 5 - prints `A 20` to the console
 7. Line 12 - prints `C 20` to the console
 
-**It is important to note that the interpreter moving up the scope chain to resolve variable values is _NOT_ hoisting. Which bears repeating. The process of traversing the scope chain is *NOT* hoisting. Remember that the JS interpreter hoists declarations (storing them in memory) during the creation phase of execution, not when the code itself is being executed.**
+**It is important to note that the interpreter moving up the scope chain to resolve variable values is _NOT_ hoisting. Which bears repeating. The process of traversing the scope chain is *NOT* hoisting. Remember that the JS interpreter hoists declarations (storing them in memory) during the creation phase, not when the code itself is being executed.**
 
 #### Turn and Talk
 
@@ -183,13 +183,13 @@ console.log(number);  // what will log here?
 Example 2:
 
 ```js
-var givenName = 'Bananiels Foster';
+var givenName = 'Robbie McJaeger';
 
 function printGreeting() {
   console.log(`Hello ${givenName}`);
 }
 
-printGreeting('Danger');  // what will log here?
+printGreeting('Bob-o');  // what will log here?
 printGreeting();      // what will log here?
 ```
 
@@ -199,7 +199,6 @@ printGreeting();      // what will log here?
 Using your journal, take a few minutes to answer the following:
 
 - Why is it important to understand scope?
-- What makes closures special?
 
 
 
@@ -308,8 +307,6 @@ array[5]()  // what will log here?
 
 _**Scope**_
 Prompt for students:
-* Describe the two phases that the JS interpreter uses to run your code.
-* Give and example of when you would see a global execution context and a local execution context.
 
 What is the result of each `console.log()`? Explain your answer.
 ```js 
