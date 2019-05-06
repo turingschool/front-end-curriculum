@@ -9,7 +9,7 @@ tags: javascript, oop, mocha, testing
 ## Goals and Objectives
 
 - Follow spec/prompts to make a working application
-- Implement ES6 classes
+- Implement ES6 classes that communicate to each other as needed
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
 - Implement a robust testing suite using TDD
 - **Use object and array prototype methods to perform data manipulation**
