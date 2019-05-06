@@ -35,6 +35,8 @@ For this project, you need to use this [Activity Tracker Starter](https://github
 
 There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/) and [chai](https://www.chaijs.com/) documentation pages.
 
+DOM functionality cannot and should not be tested in this project.
+
 ### Activity Data
 
 The shape and structure of the data is outlined in the starter kit repo README. A basic overview of the data is:
@@ -58,6 +60,7 @@ Don't get too caught up with polishing your dashboard too early. You'll want to 
 
 **Note:** For this dataset, "today" is the last date in the data.
 
+---
 
 ### Iteration 1 - Get Familiar with the Data and Users
 
@@ -106,7 +109,7 @@ Instead, for your tests, you should create small, sample datasets that match the
 
 Write tests for all classes, their properties, and their methods from now on for all iterations.
 
-
+---
 
 ### Iteration 2 - Hydration
 
@@ -127,7 +130,7 @@ For your user (or any user you choose), add:
 
 Keep the displays simple for now and make them fancy later. Do not use and additional 3rd-party libraries to display information on the page unless you get instructor approval first. This goes for other sources of data as well.
 
-
+---
 
 ### Iteration 3 - Sleep
 
@@ -152,6 +155,7 @@ Items to add to the dashboard:
 * For a user, their sleep data over the course of the latest week (hours slept and quality of sleep)
 * For a user, their all-time average sleep quality and number of hours slept
 
+---
 
 ### Iteration 4 - Activity
 
@@ -162,8 +166,7 @@ Using a similar class structure for a user and a user repository, create methods
 * For a user, (identified by their `userID`)
 * For a given day (specified by a date), did a user reach their step goal?
 * Find all the days where a user exceeded their step goal
-* For a user, find their all-time stair record
-
+* For a user, find their all-time stair climbing record
 * Make a metric of your own!
 
 **Dashboard:**
@@ -173,7 +176,7 @@ Items to add to the dashboard:
 * For a user, the distance they have walked (in miles) for the latest day based on their step count
 * For a user, a weekly view of their step count
 
-
+---
 
 ### Iteration 5 - Trends and Challenges
 
@@ -181,7 +184,7 @@ Items to add to the dashboard:
 1. Calculate and display this trend: for a user, what days had increasing steps for 3 or more days?
 1. Think of your own trend for one user or many users. Calculate it and display it.
 
-
+---
 
 ### Extensions
 
@@ -191,11 +194,39 @@ Items to add to the dashboard:
 * **Admin** view. Modify your HTML page, or create a new HTML page that is an admin dashboard display. The admin would want to see views of data from all users. What are the trends of all users? How can you display data from all users in a meaningful way?
 * Other extensions you can think of! Let your instructors know.
 
-
+---
 
 ## Rubric
-<!-- Include something in the rubric about using any for loops as a 2, but array prototoypes as a 3 -->
 
+### Functional Expectations
+* 4: Application fulfills all expectations of iterations 1 - 5 with no bugs, crashes, or missing functionality *as well as* an extension.
+* 3: Application fulfills expectations of iterations 1 - 4 with no bugs, crashes, or missing functionality.
+* 2: Application is usable but has some missing functionality.
+* 1: Application crashes during normal usage.
+
+### Fundamental JavaScript & Style
+* 4:  Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
+* 3:  Class methods use array and object prototypes - `for` loops are not used in the application. Application shows strong effort towards organization, content, and refactoring. 
+* 2:  Class methods use a mix of array and object prototypes and `for` loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
+* 1:  Application generates syntax error or crashes during execution.
+
+### Test-Driven Development
+* 4: Application is broken into components which are well tested in both isolation and integration using appropriate data.
+* 3: All classes and methods are tested. Application is well tested but does not balance isolation and integration tests, using only the data necessary to test the functionality.
+* 2: Application makes some use of tests, but the coverage is insufficient given project requirements.
+* 1: Application does not demonstrate strong use of TDD.
+
+### Encapsulation / Breaking Logic into Components
+* 4: Application is expertly divided into logical components each with a clear, single responsibility.
+* 3: Application effectively breaks logical components apart but breaks the principle of SRP.
+* 2: Application shows some effort to break logic into components, but the divisions are inconsistent or unclear.
+* 1: Application logic shows poor decomposition with too much logic mashed together.
+
+### Workflow
+* 4 - The team effectively uses Git branches and many small, atomic commits that document the evolution of their application with descriptive commit messages. The team displays good pairing practices (driver-navigator, dividing up work, etc.) and utilizes a planning tool more than GitHub issues (GitHub Projects, Trello, etc).
+* 3 - The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Both members contribute meaningfully to the application.
+* 2 - The team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
+* 1 - The team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 
 <!-- Things we can do to ratchet up the difficulty:
 * Add something with inheritance to the classes (maybe a different kind of user?)
