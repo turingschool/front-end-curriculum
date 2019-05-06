@@ -29,7 +29,7 @@ This project is broken into a series of iterations - complete each iteration in 
 
 ### Initial Setup
 
-For this project, you need to use this [Activity Tracker Starter](https://github.com/turingschool-examples/activity-tracker) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
+For this project, you need to use this [Activity Tracker Starter](https://github.com/turingschool-examples/activity-tracker-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
 
 ## Testing Setup
 
