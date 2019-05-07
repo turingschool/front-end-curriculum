@@ -99,7 +99,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 * Background color: #ffffff
 * White text: #ffffff
 * Body text: #000000
-* Font: Roboto
+* Font: Roboto Slab
 
 # ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
 
