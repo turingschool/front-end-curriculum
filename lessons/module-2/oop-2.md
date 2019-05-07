@@ -9,12 +9,12 @@ module: 2
 
 By the end of this lesson, you will be able to:
 
-* Speak to and understand the difference between prototoype and [[prototype]]
+* Speak to and understand the difference between `prototoype` and `[[prototype]]`
 * Understand and explain how prototypal inheritance works via the prototype chain.
 
 ## Vocab
 
-`prototype` A special object which is assigned to functions that you make in JavaSciprt
+`prototype` A special object which is assigned to functions that you make in JavaScript  
 `[[prototype]]` A hidden link on every object that links objects to one another, allowing objects to share behaviors
 
 
