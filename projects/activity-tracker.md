@@ -166,7 +166,7 @@ Items to add to the dashboard:
 **Data:**
 Using a similar class structure idea for a user and a user repository, create classes and methods that can calculate:
 
-* For a specific day, convert a user's number of steps to miles (use the `strideLength` to help calculate this)
+* For a specific day (specified by a date), return the miles a user has walked based on their number of steps (use their `strideLength` to help calculate this)
 * For a user, (identified by their `userID`) how many minutes were they active for a given day (specified by a date)?
 * For a user, how many minutes active did they average for a given week (7 days)?
 * For a user, did they reach their step goal for a given day (specified by a date)?
