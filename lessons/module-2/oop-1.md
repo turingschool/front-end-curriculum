@@ -305,9 +305,12 @@ RULE: When executing a function as a method on a object, `this` refers to that o
 #### Turn and Talk
 - With a partner, describe how we can determine the context of code that is being executed. What are the two rules that we've covered thus far?
 
-
 ## Checks for Understanding
 
 * What is OOP and some of the benefits that we've discussed today?
 * Describe what a class is. Why would you use one? What does the `constructor` method within a class do?
 * What is `this` in JavaScript?
+
+## Further Reading
+* [Intro to OOP](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS)
+* [Single Responsibility Principle](https://en.wikipedia.org/wiki/Single_responsibility_principle)
