@@ -61,8 +61,8 @@ Read the first section of [this blog post](https://medium.com/dailyjs/why-you-sh
 
 ### Setting Up a Linter
 
-1. Install the package as a development dependency - we are using `eslint`
-1. Add the configuration file - called `.eslintrc`
+1. Install the package as a development dependency - we are using `eslint`, so `npm install --save-dev eslint`
+1. Add the configuration file to the project root - called `.eslintrc`
 1. Add a script to the `package.json` file to make things convenient - something like `lint`
 
 Let's add a linter to this repo!
