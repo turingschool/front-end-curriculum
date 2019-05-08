@@ -59,7 +59,7 @@ A linter cares about the text you have written in your code. It doesn't know wha
 
 Read the first section of [this blog post](https://medium.com/dailyjs/why-you-should-always-use-a-linter-and-or-pretty-formatter-bb5471115a76), up to "Automation".
 
-### Structure of a Linter
+### Setting Up a Linter
 
 1. Install the package as a development dependency - we are using `eslint`
 1. Add the configuration file - called `.eslintrc`
