@@ -281,7 +281,7 @@ So, think back to last week when we were testing `mapDispatchToProps`... What we
 
 Let's start with `fetchStaff`. What is the first action that gets dispatched? Are we doing anything asynchronous at this point? Nope! We're just dispatching `isLoading` right before we kick off our network request. We already said we were going to mock dispatch, so the only other mock we need is just a url.
 
-First things first... We need to import `fetchStaff` and `fetchBios` (it gets called in `fetchStaff`) and all of our synchronous actions that get dispatched (`isLoading`, `hasErrored`, and `staffFetchDataSuccess`). 
+First things first... We need to import `fetchStaff` and `fetchBios` (it gets called in `fetchStaff`) and all of our synchronous actions that get dispatched (`isLoading`, `hasErrored`, and `setStaff`). We can also go ahead and create any mocks that we are going to need.
 
 With the help of `redux-thunk`, when we call `fetchStaff` with our mockUrl, we are returned a function that then takes dispatch as an argument. We then call that function, passing it our mockDispatch. Now we can expect that our mockDispatch was called with `isLoading(true)`.
 
@@ -294,24 +294,40 @@ import { isLoading, hasErrored, setStaff } from '../../actions'
 
 describe('fetchStaff', () => {
   let mockUrl
+  let mockStaff
   let mockDispatch
   
   beforeEach(() => {
     mockUrl = 'www.someurl.com'
+    mockStaff = [{name: 'Christie', info: 'www.somemoreinfo.com'}, {name: 'Will', info: 'www.somemoreinfo.com'}]
     mockDispatch = jest.fn()
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      ok: true,
+      json: () => Promise.resolve({
+        bio: mockStaff
+      })
+    }))
   })
   
-  it('calls dispatch with the isLoading action', () => {
+  it('calls dispatch with isLoading(true)', () => {
     const thunk = fetchStaff(mockUrl) // this is the inner function that is returned
     
     thunk(mockDispatch)
     
     expect(mockDispatch).toHaveBeenCalledWith(isLoading(true))
   })
+  
+  it('calls fetch with the correct param', () => {
+    const thunk = fetchStaff(mockUrl)
+
+    thunk(mockDispatch)
+
+    expect(window.fetch).toHaveBeenCalledWith(mockUrl)
+  })
 })
 ```
 
-Ok, here's where we get into async land. Our network request has been kicked off and we now need to test what actions are dispatched if the response is not ok and what actions are dispatched if the response is ok. If you need a refresher on how to mock fetch or resolve a Promise in our tests, take some time to go back and review the [Testing Async Javascript & API Calls](http://frontend.turing.io/lessons/module-3/testing-async.html) lesson.
+Ok, here's where we get into async land. We've kicked off our network request and now need to test what gets dispatched if the response is ok/not ok. If you need a refresher on how to mock fetch or resolve a Promise in our tests, take some time to go back and review the [Testing Async Javascript & API Calls](http://frontend.turing.io/lessons/module-3/testing-async.html) lesson.
 
 ```javascript
 // thunks/__tests__/fetchStaff.js
@@ -329,11 +345,9 @@ it('should dispatch hasErrored with a message if the response is not ok', async 
   expect(mockDispatch).toHaveBeenCalledWith(hasErrored('Something went wrong'))
 })
 
+
+
 it('should dispatch isLoading(false) if the response is ok', async () => {
-  window.fetch = jest.fn().mockImplementation(() => Promise.resove({
-    ok: true
-  }))
-  
   const thunk = fetchStaff(mockUrl) // inner function
   
   await thunk(mockDispatch)
@@ -353,15 +367,6 @@ Remember back when we were creating our thunks and we decided to put each of the
 jest.mock('../fetchBios') // this is the file path for the original, not the mock
 
 it('should dispatch fetchBios with the correct param', async () => {
-  const mockStaff = ['Christie', 'David']
-  
-  window.fetch = jest.fn().mockImplpementation(() => Promise.resolve({
-    ok: true,
-    json: () => Promise.resolve({
-      bio: mockStaff
-    })
-  }))
-  
   const thunk = fetchStaff(mockUrl)
   
   await thunk(mockDispatch)
@@ -370,30 +375,23 @@ it('should dispatch fetchBios with the correct param', async () => {
 })
 ```
 
-And that's how you use a manual mock!!!
-
 Only 1 test left for `fetchStaff`...
 
 ```javascript
 // thunks/__tests__/fetchStaff.js
 
-it('should dispatch setStaff', async () => {
-    const mockStaff = ['Christie', 'David']
-    
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      ok: true,
-      json: () => Promise.resolve({
-        bio: mockStaff
-      })
-    }))
+it('should dispatch setStaff with the correct params', async () => {
+  const finalStaff = [{name: 'Christie', bio: 'Christie bio', image: 'Christie image'}, {name: 'Will', bio: 'Will bio', image:   'Will image'}]
+  
+  const thunk = fetchStaff(mockUrl)
+  
+  mockDispatch = jest.fn().mockImplementation(() => finalStaff)
 
-    const thunk = fetchStaff(mockUrl)
+  await thunk(mockDispatch)
 
-    await thunk(mockDispatch)
-
-    expect(mockDispatch).toHaveBeenCalledWith(setStaff())
-  })
-  ```
+  expect(mockDispatch).toHaveBeenCalledWith(setStaff(finalStaff))
+})
+```
 
 ### YOUR TURN! Pair up with a partner and see if you can write the tests for `fetchBios`. 
 
