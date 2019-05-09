@@ -299,7 +299,10 @@ describe('fetchStaff', () => {
   
   beforeEach(() => {
     mockUrl = 'www.someurl.com'
-    mockStaff = [{name: 'Christie', info: 'www.somemoreinfo.com'}, {name: 'Will', info: 'www.somemoreinfo.com'}]
+    mockStaff = [
+      {name: 'Christie', info: 'www.somemoreinfo.com'}, 
+      {name: 'Will', info: 'www.somemoreinfo.com'}
+    ]
     mockDispatch = jest.fn()
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
       ok: true,
@@ -381,7 +384,10 @@ Only 1 test left for `fetchStaff`...
 // thunks/__tests__/fetchStaff.js
 
 it('should dispatch setStaff with the correct params', async () => {
-  const finalStaff = [{name: 'Christie', bio: 'Christie bio', image: 'Christie image'}, {name: 'Will', bio: 'Will bio', image:   'Will image'}]
+  const finalStaff = [
+    {name: 'Christie', bio: 'Christie bio', image: 'Christie image'}, 
+    {name: 'Will', bio: 'Will bio', image:   'Will image'}
+  ]
   
   const thunk = fetchStaff(mockUrl)
   
