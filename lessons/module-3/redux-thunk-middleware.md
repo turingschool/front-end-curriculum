@@ -120,8 +120,8 @@ export const hasErrored = (message) => ({
    message
 })
 
-export const staffFetchDataSuccess = (staff) => ({
-   type: 'STAFF_FETCH_DATA_SUCCESS',
+export const setStaff = (staff) => ({
+   type: 'SET_STAFF',
    staff
 })
 ```
@@ -132,7 +132,7 @@ Let's make a separate file for each of our thunk action creators (it will make t
 ```javascript
 // thunks/fetchStaff.js
 
-import { isLoading, hasErrored } from '../actions'
+import { isLoading, hasErrored, setStaff } from '../actions'
 import { fetchBios } from './fetchBios.js'
 
 export const fetchStaff = (url) => {
@@ -143,10 +143,10 @@ export const fetchStaff = (url) => {
       if(!response.ok) {
         throw Error(response.statusText)
       }
-      dispatch(isLoading(false))
       const data = await response.json()
       const staff = await dispatch(fetchBios(data.bio))
-      dispatch(staffFetchDataSuccess(staff))
+      dispatch(isLoading(false))
+      dispatch(setStaff(staff))
     } catch (error) {
       dispatch(hasErrored(error.message))
     }
@@ -157,18 +157,16 @@ export const fetchStaff = (url) => {
 ```javascript
 // thunks/fetchBios.js
 
-import { isLoading, hasErrored } from '../actions'
+import { hasErrored } from '../actions'
 
 export const fetchBios = (staffArray) => {
   return (dispatch) => {
-    dispatch(isLoading(true))
     const unresolvedPromises = staffArray.map(async staffMember => {
       try {
         const response = await fetch(staffMember.info)
         if(!response.ok) {
           throw Error(response.statusText)
         }
-        dispatch(isLoading(false))
         const data = await response.json()
         return { ...data, name: staffMember.name}
       } catch (error) {
@@ -207,7 +205,7 @@ export const hasErrored = (state = '', action) => {
 
 export const staff = (state = [], action) => {
   switch(action.type) {
-    case 'STAFF_FETCH_DATA_SUCCESS':
+    case 'SET_STAFF':
       return action.staff
     default:
       return state
@@ -292,7 +290,7 @@ With the help of `redux-thunk`, when we call `fetchStaff` with our mockUrl, we a
 
 import { fetchStaff } from '../fetchStaff'
 import { fetchBios } from '../fetchBios'
-import { isLoading, hasErrored, staffFetchDataSuccess } from '../../actions'
+import { isLoading, hasErrored, setStaff } from '../../actions'
 
 describe('fetchStaff', () => {
   let mockUrl
@@ -379,7 +377,7 @@ Only 1 test left for `fetchStaff`...
 ```javascript
 // thunks/__tests__/fetchStaff.js
 
-it('should dispatch staffFetchDataSuccess', async () => {
+it('should dispatch setStaff', async () => {
     const mockStaff = ['Christie', 'David']
     
     window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
@@ -393,7 +391,7 @@ it('should dispatch staffFetchDataSuccess', async () => {
 
     await thunk(mockDispatch)
 
-    expect(mockDispatch).toHaveBeenCalledWith(staffFetchDataSuccess())
+    expect(mockDispatch).toHaveBeenCalledWith(setStaff())
   })
   ```
 
