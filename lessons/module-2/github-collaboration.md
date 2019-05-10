@@ -139,7 +139,7 @@ Milestones are a helpful way to prioritize and create deadlines for your project
 
 #### Turn and Talk (20 mins)
 
-Working in your project pairs, take a look at the the project spec and user stories for GameTime. Start to talk about some categories/labels that you want to do for your project and file at least 10 issues for GameTime.
+Working in your project pairs, take a look at the the project spec and user stories for Activity Tracker. Start to talk about some categories/labels that you want to do for your project and file at least 10 issues for Activity Tracker.
 
 Remember, you can also file issues for things that you haven't figured out.
 
