@@ -219,5 +219,5 @@ Keep the code review two-sided rather than dominating it
 Answer the following in your journal:
 
 - What makes a README useful? 
-- Why should you should file issues on your student projects?
+- Why should you file issues on your student projects?
 - What are some benefits of the PR workflow and the code review process?
