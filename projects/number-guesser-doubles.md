@@ -82,7 +82,7 @@ Display final result of each match in card UI
 Work through these **in order**:
 
 - Display how quickly user guesses correct number
-- Include at least 3 different animations. Example: one for when a card gets created/deleted. Check out [this link of great examples for inspiration](https://dribbble.com/johnyvino/projects/443331-Premium-Interaction-design-IxD)
+- Include at least 3 different animations. Example: one for when a card gets created/deleted. Check out [this link of great examples for inspiration](https://uxplanet.org/functional-animation-in-ux-design-what-makes-a-good-transition-d6e7b4344e5e)
 - Easter Egg: use a [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) to display some secret surprise for users -- have fun, get weird, be creative!!
 - Have a **Clear All** button that removes all of the cards from the page.
 - Have a sort button that organizes the game cards by the least amount of guesses to the greatest.
