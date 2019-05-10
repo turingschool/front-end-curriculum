@@ -292,6 +292,5 @@ You can read more about destructuring and the things it can do [here](https://de
 ### Additional Resources:
 
 * Babel (ES6 -> ES5)		  [https://babeljs.io/repl/](https://babeljs.io/repl/)
-* Lebab	(ES5 -> ES6)		  [https://lebab.io/try-it](https://lebab.io/try-it)
 * ES6 Features 		    	  [http://es6-features.org](http://es6-features.org)
 * Browser Compatability		[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)

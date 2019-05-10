@@ -65,7 +65,7 @@ The application should have the following user interface components:
 - The application should display an error if either guess is outside of the range of possible answers.
 - The application should display an error if the `Update` or `Submit Guess` buttons are clicked when their associated input fields do not have a value entered
 
-<!-- ## Phase Three: Level Up
+## Phase Three: Level Up
 
 Upon successful win, user's range is updated:
 - Every time the user wins a round increase the maximum number by 10.
@@ -82,11 +82,11 @@ Display final result of each match in card UI
 Work through these **in order**:
 
 - Display how quickly user guesses correct number
-- Include at least 3 different animations. Example: one for when a card gets created/deleted. Check out [this link of great examples for inspiration](https://dribbble.com/johnyvino/projects/443331-Premium-Interaction-design-IxD)
+- Include at least 3 different animations. Example: one for when a card gets created/deleted. Check out [this link of great examples for inspiration](https://uxplanet.org/functional-animation-in-ux-design-what-makes-a-good-transition-d6e7b4344e5e)
 - Easter Egg: use a [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) to display some secret surprise for users -- have fun, get weird, be creative!!
 - Have a **Clear All** button that removes all of the cards from the page.
 - Have a sort button that organizes the game cards by the least amount of guesses to the greatest.
-  - Incorporate in the UI which game has the **High Score**! -->
+  - Incorporate in the UI which game has the **High Score**!
 
 
 ## Week 1 Check-ins
@@ -106,9 +106,9 @@ Desktop layout:
 ![Number Guesser Desktop][desktop-base]
 ![Number Guesser Desktop Error Messages][desktop-error-base]
 
-<!-- Mobile layout:
+Mobile layout:
 
-![Number Guesser Mobile][mobile-base] -->
+![Number Guesser Mobile][mobile-base]
 
 Color and font spec:
 
