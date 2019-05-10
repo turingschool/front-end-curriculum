@@ -202,12 +202,17 @@ Keep the code review two-sided rather than dominating it
 
 ##### Code Review Examples
 
+*GOOD*
 * [Pop Motion](https://github.com/Popmotion/popmotion/pull/276) (click ‘show outdated’ links to expand to see the conversations).
 
 <!-- Good! Lots of acknowledgement for the effort with thank yous and compliments, lots of suggestions phrased as questions (though not always!), and a thorough discussion of potential problems -->
+
+*AVERAGE*
 * [Bytenik](https://github.com/bytenik/Seq.App.Slack/pull/27)
 
 <!-- Average: Lots of the feedback is just little nitpicks here and there, stylistic things, which are important - but don’t add a ton of learning for either person. Some acknowledgment and thanks for the effort put in. Some really terse/short questions from the reviewer, which could potentially come off as harsh, but balanced out with lots of smiley faces. (Emojis are fair game!) -->
+
+*BAD*
 * [Bootstrap](https://github.com/twbs/bootstrap/issues/3057) (This is actually an issue, not a PR, but the same concepts still apply.) 
 
 <!-- Bad: Douglas Crockford (a glorified techie) starts the conversation using a lot of aggressive and insulting language which sets the tone for the rest of the comments going forward and allows it to spiral out of control. -->
