@@ -263,6 +263,8 @@ good
 <img src="mountain.jpg" alt="The cascade mountains at sunset in January">
 ```
 
+*Below you will find a REAL example of how alt text helps to paint a picture of what a missing image depicts:*
+
 ![Great example of alt tag](/assets/images/alt-example.png)
 
 ### Title Attributes for Yo Links that have no text!
