@@ -263,6 +263,8 @@ good
 <img src="mountain.jpg" alt="The cascade mountains at sunset in January">
 ```
 
+![Great example of alt tag](/assets/images/alt-example.png)
+
 ### Title Attributes for Yo Links that have no text!
 
 * Low hanging fruit on anchor tags.
