@@ -1,6 +1,5 @@
 ---
 title: Cross-Pollination Capstone Project
-module: 4
 ---
 
 For the first time ever, you get to work across programs and create a project that might not be possible otherwise! In this project plan, we'll kick-off the project and define expectations and deliverables for teams.
@@ -9,9 +8,9 @@ For the first time ever, you get to work across programs and create a project th
 
 This is a unique opportunity that presents some valuable goals:
 
-* Ultimately, demonstrate knowledge you've gained throughout Turing 
+* Ultimately, demonstrate knowledge you've gained throughout Turing
 * Use an agile process to turn well defined requirements into deployed and production ready software
-* Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged. 
+* Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged.
 * Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing
 * Practice an advanced, professional git workflow (see whole-team expectations)
 * Gain more experience using continuous integration tools to build and automate the deployment of features in various environments
@@ -39,8 +38,7 @@ This is a unique opportunity that presents some valuable goals:
 Generally, this project will consist of a front-end (FE) and back-end (BE) with the following:
 
 * The FE and BE applications live in separate repositories that communicate to each other using API requests
-* FE and BE teams utilize a scrum board, like [Waffle.io](https://waffle.io/), and tasks/stories updated accordingly on a daily basis as they are initialized, implemented, and deployed
-* Midway through the project, you will give a presentation on your team's progression
+* FE and BE teams utilize a scrum board and tasks/stories updated accordingly on a daily basis as they are initialized, implemented, and deployed
 * Both the FE and BE should be deployed to production and using continuous integration (like TravicCI) for automated deployment
 * Early and consistent deployment to production (instructors will check build history)
 * In-depth `README.md` for each repository describing the project, setup procedure, testing procedure, and screenshots, if applicable (API documentation, if applicable)
@@ -54,16 +52,16 @@ If you do not see your project following this outline, then speak to your instru
 * Use service oriented architecture patterns that split the application into their respective parts and responsibilities
 * Create various services that serve up JSON, so that an FE system can effectively utilize the data from the BE
 * Test the BE:
-  * If you use Rails for your BE, then we expect above 85% test coverage
+  * If you use Rails for your BE, then we expect above 80% test coverage
   * If you experiment with a new BE language/framework outside of Rails, then BE test coverage is expected to be at least 25%
 * Implement a stretch goal (listed below)
 
-Possible stretch goals:
+Pick **2** of the following stretch goals:
 
 * Implement BE in a framework or language you have not used before in a project
-* Utilize background workers and caching mechanisms for the sake of performance gains, if applicable
+* Create a Backend API using GraphQL
+* Create a micro service or two and abstract out functionality into a separate application
 * Utilize websockets rather than traditional HTTP/HTTPS
-* Set up a Content Delivery Network (CDN) to serve up assets that the front-end portion of the application can utilize
 
 ### Front-End Creators
 
@@ -112,9 +110,6 @@ Instructors will serve as project managers and hold check-ins with teams at leas
 * Spikes (dedicated time for research and experiments)
 * Next steps
 
-### Mid-Project Presentations
-
-Midway through the project, each team will present to the class and instructors about their progress toward MVP as well as difficulties/roadblocks they’ve encountered.
 
 ### End-of-Project Demos
 
@@ -122,10 +117,12 @@ Wednesday morning of week 6 your team will demo your application to the class an
 
 ### Evaluation
 
-Evaluation will take place Wednesday afternoon of week 6. Each team will meet with a BE and FE instructor to:
+Evaluation will take place Thursday afternoon of week 5. Each team will meet with a BE and FE instructor to:
 
 * Walk through the application (FE and BE) and justifications of code
 * Run the test suites
 * Show the application is running on production
 * Show application is using continuous integration
-* Talk about lessons learned (how will you talk about this project to future employers?)
+* Talk about lessons learned
+
+Teams - it's your responsibility to keep an ensure you are on track to meet expectations of the rubric, which can be found [here](./cross_pollination_rubric).
