@@ -25,21 +25,17 @@ Though we haven't put a name to it until now, our conversations around scope and
 You can see lexical scope by looking directly at code, as it reads:
 
 ```js
-    function eatSnack() {
-      var hunger -= 25;
-      // Log A: hunger
-      gorgeYourself();
+function eatSnack() {
+  var hunger = 25;
 
-      function gorgeYourself() {
-        console.log('I am sooooooo HANGRY!')
-        // Log B: hunger
-      }
+  gorgeYourself();
 
-      // Log C: hunger
-    }
+  function gorgeYourself() {
+    console.log('I am sooooooo HANGRY!');
+  }
+}
 
-    eatSnack();
-
+eatSnack();
 ```
 
 Lexical scope can be thought of as the ‘outer’ scope of a function. In our example above, the lexical scope for our `gorgeYourself` function is the scope (and any variables) that are contained within `eatSnack`.
