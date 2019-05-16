@@ -8,7 +8,7 @@ tags: javascript, jquery, data, prototype methods, chai, mocha, testing
 
 ## Background and Description
 
-For this project you will learn object-oriented programming (OOP) principles by building out a game show. This is an opportunity to work with classes to build a program at a larger scale than you have with previous projects. This is also an opportunity for you to build out a program based on user stories - which is more aligned to what you can expect to see working with product managers in a production environment.
+For this project you will solidify your understanding of object-oriented programming (OOP) principles by building out a game show. This is an opportunity to work with classes to build a program at a larger scale than you have with previous projects. This is also an opportunity for you to build out a program based on user stories - which is more aligned to what you can expect to see working with product managers in a production environment.
 
 Building software, at its core, is about solving problems. Generally speaking, the first step in finding a solution to the problem is to be sure that you have clearly identified the problem as well what features the solution must incorporate. From here, we can flesh out the _requirements_ that specify what our program should have. You will be assigned to build one of the following games:
 
@@ -22,29 +22,35 @@ The rules of your assigned game will serve as the requirements for the spec.
 ## Goals and Objectives
 
 - Write a program from scratch
-- Design and implement OOP patterns
-- Understand and implement ES6 classes
-- Implement array iterator and mutator methods to work with game data
+- Synthesize knowledge of OOP, classes, and JS fundamentals to create a playable game
+- Demonstrate good GitHub collaboration and workflow within a large group
 - Write modular, reusable code that follows SRP (Single Responibility Principle) 
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
+- Implement array iterator and mutator methods to work with game data
+
+## Technologies
+
+You'll be working with some new technologies for this project:
+
+* **the fetch API** for sending/receiving data
+* **Sass** for getting fancy with your CSS
 
 ## Outline
 
-### Week 1
+### Week 4
 
 |Day | Status| Deliverables |
 |--- |---    |--- |
-|*1* | Kick-off and exploration| What is OOP? Why is OOP useful? How is OOP used in games? Set up DTR and explore boilerplate repo |
-|*2* | Understanding/Planning| Diagram for OOP design/classes due|
-|*3* | Setup and Coding| [Fork this repo](https://github.com/turingschool-examples/gametime-starter) by following the "Initial Setup" below and then continue with the instructions in the README. In your forked repo, update the README to include a link to your pair's DTR, your final wireframes, and chosen design inspiration|
-|*4* | Check-in| Instructor Pairing|
+|*1* | Kick-off| Set up DTR, explore boilerplate repo, design wireframes|
+|*2* | Setup and Coding| [Fork this repo](https://github.com/turingschool-examples/gametime-starter) by following the "Initial Setup" below and then continue with the instructions in the README. In your forked repo, update the README to include a link to your pair's DTR, your final wireframes, and chosen design inspiration|
+|*5*       | 1st PR | PR due w/both instructors tagged|
 
-### Week 2
+### Week 5
 
 |Day | Status| Deliverables |
 |--- |---    |--- |
-|*8* | Check-in| Pair-to-Pair feedback|
-|*11* | Assessment| Formal Code Review or Class Code Review|
+|*8* | 2nd PR| PR due w/both instructors tagged|
+|*11* | Assessment| Formal Demo|
 
 ## Restrictions
 
@@ -54,7 +60,7 @@ To populate the data for your assigned game, you will be using one of the follow
 * [Jeopardy](https://repl.it/@brittanystoroz/Jeopardy)
 * [Family Feud](https://repl.it/@brittanystoroz/FamilyFeud)
 
-Copy your assigned data into a separate `js` file that you can then include in your repository.
+Copy your assigned data into a separate `js` file that you can then include in your repository. 
 
 You will be using the following JavaScript libraries:
 
@@ -80,6 +86,8 @@ You should have at least one use-case for [inheritance](https://www.sitepoint.co
 
   Each class should have its own file with the filename capitalized (e.g. `Level.js`). The class should be capitalized as well. Only code that is a part of this class should be in this file.
 
+  
+
 
 ## Testing
 
@@ -103,6 +111,22 @@ These user stories may be worked on in any order that makes sense to your pair. 
 * [Jeopardy User Stories](http://frontend.turing.io/projects/module-2/jeopardy)
 * [Family Feud User Stories](http://frontend.turing.io/projects/module-2/family-feud)
 
+## GitHub Collab & Workflow
+
+The requirements for collaboration and workflow are more constrained within this project considering this project's learning goals:
+
+- A minimum of two PRs must tag both instructors
+- PR should be around 100 lines of code (significant enough for your partners to have some serious code to review, think about, and ask questions about, but not so big that it’s overwhelming and the reviewer is just going to skim over it/miss potential mistakes)
+- You should be reviewing each other's code by leaving line-by-line comments
+- If you have feedback for one of your partners to change something, *DO NOT* merge the PR before that person has a chance to make the change
+
+## README
+
+Your README should include the following, in this order:
+
+- Abstract at the top (A sentence or two describing the project)
+- Install/Setup instructions
+- Everything else (must include wireframes and screenshot/GIF of finished project)
 
 ## Extensions
 
@@ -135,13 +159,13 @@ These user stories may be worked on in any order that makes sense to your pair. 
 * [ ] Proficient - Developers can apply fundamental design concepts that demonstrates a thoughtful, purposeful, cohesive strategy that does not detract from legibility or overall design integrity.
 * [ ] Exceptional - Meets all expectations for `Proficient`. In addition, typography, color choices, and layout decisions are thoughtful and appropriate, and strongly enhance the layout and legibility of the design.
 
-### Testing
 
-* [ ] Novice - There is little or no evidence of testing in this application. ESLint shows 10+ complaints.
-* [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested. ESLint shows 5+ complaints.
-* [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of integration testing. ESLint shows < 5 complaints.
-* [ ] Exceptional - Meets all requires of `Proficient`. In addition, the test suite makes use of mocks and stubs when appropriate. ESLint shows 0 complaints.
+### CSS/Sass Style
 
+* [ ] Novice - There are several (10+) instances of duplication and one or two major bugs. Developers write code with unnecessary selectors or tags which do not increase clarity.
+* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unncessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
+* [ ] Proficient - Application is thoughtfully put together with comments to help guide organization. There may be some duplication (fewer than 5 instances) present. Comments are present to assist with organization of code.
+* [ ] Exceptional - Meets all expectations for `Proficient`. The application has exceptionally well-factored CSS/Sass with all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
 
 ### JavaScript Style & OOP
 
@@ -150,8 +174,23 @@ These user stories may be worked on in any order that makes sense to your pair. 
 * [ ] Proficient - Application is thoughtfully put together with some duplication. Developers can speak to choices made in the code and knows what every line of code is doing. Application is organized into classes (and correctly uses inheritance) with some misplaced logic. Business-logic code is mostly separated from view-related code. 
 * [ ] Exceptional - Meets all requirements of `Proficient`. In addition, application has exceptionally well-factored code with little or no duplication. SRP (single responsibility principle) and DRY (don't repeat yourself) principles are utilized. There are _zero_ instances where an instructor would recommend taking a different approach. There are no instances where instructor would suggest moving logic or data to another class. The business-logic code driving functionality is cleanly separated from rendering, view-related code.
 
-### Workflow
-* [ ] Novice - The developer/team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
-* [ ] Advanced Beginner - The developer/team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
-* [ ] Proficient - The developer/team makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. The team conducts a DTR (Define the Relationship) that is linked in the README. Both members contribute meaningfully to the application.
-* [ ] Exceptional - Meets all requirements for `Proficient`. In addition, the developer/team effectively uses Git branches and many small, atomic commits that document the evolution of their application with descriptive commit messages. The team displays good pairing practices (driver-navigator, dividing up work, etc) and utilizes some sort of planning tool (GitHub issues, Waffle, Trello, etc). 
+### Testing
+
+* [ ] Novice - There is little or no evidence of testing in this application. ESLint shows 10+ complaints.
+* [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested. ESLint shows 5+ complaints.
+* [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of integration testing. ESLint shows < 5 complaints.
+* [ ] Exceptional - Meets all requires of `Proficient`. In addition, the test suite makes use of mocks and stubs when appropriate. ESLint shows 0 complaints.
+
+### GitHub Collaboration/Workflow
+
+* [ ] Novice - Developers do not tag instructors in the two required PRs by due dates listed in the project outline or tagged PR has fewer than 200 lines of code. The developer creating the PR does not summarize the changes or why the changes were made. Reviewers are not leaving line-by-line feedback/comments _or_ are merging the PR before changes are made.
+* [ ] Advanced Beginner - Developers tag instructors in both required PRs by due dates _or_ in one of the two required. PR has less than the required lines of code in PR. Reviewers do not leave line-by-line feedback. May be merging PR before feedback is incorporated.
+* [ ] Proficient - Developers tag instructors in both required PRs by due dates. PR is over 100 lines of code. The developer creating the PR summarizes the changes made, why those changes were necessary, and asks for insights. Reviewers leave line-by-line comments/feedback and wait to merge PR until feedback is incorporated.
+* [ ] Exceptional - Meets all expectations for `Proficient`. The feedback is both kind _and_ insightful. There may be numerous threads of conversation where developers go back and forth to find the best solution to the problems they are solving together.
+
+### Presentation
+
+* [ ] Novice - Not all presenters speak. Presenters give too much or too little information about the application. Presenters do not use audio/visual aids or media.
+* [ ] Advanced Beginner - Everyone in the group speaks. Presenters do a live demo of the application. The group may speak about the planning/challenges/rewards of the project; however, the delivery does not seem thought out/well-planned. 
+* [ ] Proficient - Everyone in the group has an opporunity to speak during the presentation. The group has a visual of the application to demo (e.g. slides, recordings of interactions, live demo). The group talks about the app, speaking to the challenges, rewards, and collaborative aspects of the project.
+* [ ] Exceptional - Meets all expectations of `Proficient`. In addition, the presentation runs smoothly w/no hiccups - indicating that it was planned/rehearsed/polished. The presentation is so engaging that there is no time that the evaluators find themselves checking the time/clock.
