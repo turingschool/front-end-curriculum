@@ -12,8 +12,9 @@ Copy [this dataset](https://repl.it/@brittanystoroz/Jeopardy) into a `.js` file 
 
 ## User Stories
 
-These user stories should be worked on in the order presented, accounting for dependencies between stories.
+These user stories may be worked on in any order that makes sense to your group.
 
+<!-- 
 
 ***EPIC: Game Mechanics*** _#Game Mechanics_  
 ***EPIC: Core Application*** _#Core Application_  
@@ -573,23 +574,7 @@ depends on #23
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-These user stories may be worked on in any order that makes sense to your pair.
+ -->
 
 ``` 
 Game play,

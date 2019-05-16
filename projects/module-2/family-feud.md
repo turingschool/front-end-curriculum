@@ -13,7 +13,7 @@ Copy [this dataset](https://repl.it/@brittanystoroz/FamilyFeud) into a `.js` fil
 
 ## User Stories
 
-These user stories may be worked on in any order that makes sense to your pair.
+These user stories may be worked on in any order that makes sense to your group.
 
 ``` 
 Game play,
