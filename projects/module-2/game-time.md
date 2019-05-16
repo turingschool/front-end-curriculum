@@ -98,7 +98,7 @@ Your testing suite should test all of the functionality of the game, including t
 
 For the purposes of this project, you will keep your state logic completely separate from your view logic. In other words, your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
 
-To do this, you will utlize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/testing-with-chai.spies.html).
+To do this, you will utlize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
 
 ## User Stories
 
