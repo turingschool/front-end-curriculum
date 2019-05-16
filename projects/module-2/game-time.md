@@ -4,7 +4,7 @@ length: 2 weeks
 tags: javascript, jquery, data, prototype methods, chai, mocha, testing
 ---
 
-2 week paired project for FE Mod 2 (weeks 2-3)
+2 week group project for FE Mod 2 (weeks 4-5)
 
 ## Background and Description
 
@@ -86,9 +86,6 @@ You should have at least one use-case for [inheritance](https://www.sitepoint.co
 
   Each class should have its own file with the filename capitalized (e.g. `Level.js`). The class should be capitalized as well. Only code that is a part of this class should be in this file.
 
-  
-
-
 ## Testing
 
 You should be testing your the correctness of your code throughout your project. Each JavaScript file in your project should have its own test file. (e.g. Your `Game.js` class file should have a corresponding testing file called `Game-test.js`)
@@ -115,7 +112,7 @@ These user stories may be worked on in any order that makes sense to your pair. 
 
 The requirements for collaboration and workflow are more constrained within this project considering this project's learning goals:
 
-- A minimum of two PRs must tag both instructors
+- Two PRs must be submitted where instructors are tagged. PRs should be submitted according to the outline listed in the spec.
 - PR should be around 100 lines of code (significant enough for your partners to have some serious code to review, think about, and ask questions about, but not so big that it’s overwhelming and the reviewer is just going to skim over it/miss potential mistakes)
 - You should be reviewing each other's code by leaving line-by-line comments
 - If you have feedback for one of your partners to change something, *DO NOT* merge the PR before that person has a chance to make the change
