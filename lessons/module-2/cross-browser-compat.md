@@ -154,10 +154,12 @@ if (window.Notification && Notification.permission === "granted") {
 
 #### Your Turn
 
-Open your `Activity Tracker` project's HTML and CSS files. Using [*HTML5 PLEASE*](https://html5please.com/) 
+Open your `Activity Tracker` project's HTML and CSS files and go to the[*HTML5 PLEASE*](https://html5please.com/) website.
 
-* Take 5 - 10 minutes to check some of those new, shiny HTML tagss and CSS3 features that you implemented.
+* Take 5 - 10 minutes to check some of those new, shiny HTML5 tags and CSS3 properties that you implemented.
   * Do you need a fallback? Something called a polyfill? Neither?
+
+_*Note: Another popular site to check for compatability issues is ["Can I Use"](https://caniuse.com/). This site is nice in that it provides up-to-date browser support tables*_
 
 ### Polyfills & Shims
 
