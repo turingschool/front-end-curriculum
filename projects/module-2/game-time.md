@@ -43,13 +43,13 @@ You'll be working with some new technologies for this project:
 |---           |---    |--- |
 |*Day 1 (Thur)* | Kick-off| Set up DTR, explore boilerplate repo, design wireframes|
 |*Day 2 (Fri)* | Setup & Coding| [Fork this repo](https://github.com/turingschool-examples/gametime-starter) by following the "Initial Setup" below and then continue with the instructions in the README. In your forked repo, update the README to include a link to your pair's DTR, your final wireframes, and chosen design inspiration|
-|*Day 5 (Mon)*       | 1st PR | PR due w/instructors tagged|
+|*Day 6 (Tue)*       | 1st PR | PR due w/instructors tagged|
 
 ### Week 5
 
 |Day | Status| Deliverables |
 |--- |---    |--- |
-|*Day 9 (Fri)* | 2nd PR| PR due w/instructors tagged|
+|*Day 11 (Mon)* | 2nd PR| PR due w/instructors tagged|
 |*Day 14 (Wed)* | Assessment| Formal Demo|
 
 ## Restrictions
