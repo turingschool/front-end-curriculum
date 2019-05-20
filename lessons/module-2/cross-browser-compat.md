@@ -44,6 +44,12 @@ Another reason discrepancies continue to exist is because people are still using
 
 Finally, some companies are hesitant to stop supporting older browsers simply for financial reasons. The New York Times makes much more of its money off of online subscriptions and advertisements in recent years. Previously, they continued to support older versions of IE because not doing so could have had drastic effects on their revenue if they happened to lose that portion of their user base. (They eventually dropped support for IE8 in 2014 and IE9 in 2015. When doing so, they put an indicator on the UI for reader's using those browsers to let them know their browser would soon no longer be supported. The response was overwhelmingly positive. A large percentage of users were able to upgrade their browsers and did so.)
 
+
+#### Turn and Talk
+
+* In your own words, describe an API.
+* What are examples of browser APIs that you have used in past projects? (Be sure that you Check the browser compatability chart in the documentation)
+
 __________________________________________
 
 
@@ -75,6 +81,16 @@ At a high-level, there are two popular approaches for tackling the cross-compat 
 **Graceful degradation** means that you are building your application with as many of the latest and greatest bells and whistles you'd like to provide from the start. Your default experience is targeted towards the most modern platforms, but then you will degrade it gracefully for older environments - your app will support a lower level of user experience in older browsers.
 
 While these two approaches usually produce similar results, the big difference between them lies in where your initial priorities are targeted. Do you want to start by building the most complex and advanced application possible, then try to "fix" the experience for older platforms? (Graceful Degradation) Or do you want to nail down the basic user experience for lesser, maybe more common environments, and slowly extend and advance it for future platforms? (Progressive Enhancement)
+
+
+#### Turn and Talk
+
+Both progressive enhancement and graceful degradation assist in making websites more accessible. With this in mind, discuss the following:
+
+* Which is better overall? Why?
+* Which would be better for testing? Why?
+* What is the difference between progressive enhancement and graceful degradation?
+
 __________________________________________
 
 ## Strategies & Solutions
@@ -136,6 +152,13 @@ if (window.Notification && Notification.permission === "granted") {
 }
 ```
 
+#### Your Turn
+
+Open your `Activity Tracker` project's HTML and CSS files. Using [*HTML5 PLEASE*](https://html5please.com/) 
+
+* Take 5 - 10 minutes to check some of those new, shiny HTML tagss and CSS3 features that you implemented.
+  * Do you need a fallback? Something called a polyfill? Neither?
+
 ### Polyfills & Shims
 
 A shim allows you to bring a new API to an older environment. Usually these are libraries or other included files that you'll add to your application to support some functionality in an older browser.
@@ -157,7 +180,9 @@ if (window.Promise && window.fetch) {
 
 The polyfills for these APIs look like the following: [fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js), [promise polyfill](https://raw.githubusercontent.com/taylorhakes/promise-polyfill/master/dist/polyfill.js). You'll notice at the bottom of each polyfill file, it will return a newly defined object for either `fetch` or `Promise`. This allows our application code to be written as it would for modern browsers, and cuts down on the amount of conditional code we have to write.
 
+#### Turn and Talk
 
+In your own words, describe a polyfill. What is a helpful analogy for thinking about polyfills?
 
 ### IE Conditional Comments
 
