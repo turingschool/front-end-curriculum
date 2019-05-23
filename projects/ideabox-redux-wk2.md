@@ -24,7 +24,7 @@ The application should allow users to filter the idea list based on level of qua
 Let's also let our user be able to view only their starred ideas.
 
 * The user should only see the ideas that are starred when they click on the `Show Starred Ideas` button. (consequently, the text on the button should then say `View All Ideas`)
-* Clicking on the `View All Ideas` button, the user should be able to see all of their photo cards.
+* Clicking on the `View All Ideas` button, the user should be able to see all of their idea cards.
 * When viewing starred ideas, the search field should only search through the starred ideas.
     * If there are no starred ideas yet, then there should be an indication to the user to star some ideas, displayed in the empty idea section.
   * Do not need to persist changes in between sessions.
