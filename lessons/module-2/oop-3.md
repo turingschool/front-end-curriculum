@@ -1,5 +1,5 @@
 ---
-title: "Objects: Inheritence"
+title: "Objects: Inheritance"
 length: 60
 tags: javascript, object oriented programming, oop
 module: 2
