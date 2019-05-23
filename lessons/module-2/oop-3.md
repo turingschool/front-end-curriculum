@@ -21,9 +21,9 @@ By the end of this lesson, you will be able to:
 - `Subclass` A class that inherits from a parent class (also known as a child class)
 - `Instance` One specific copy of an object
 - `Inheritance` The practice of allowing new objects to take on the data and behavior of their parents
-<!-- - `Encapsulation` Hiding the details of how an object works & grouping data and behavior
-- `SRP` Single Responsibility Principle
-- `Coupling` The level of connectedness between two objects -->
+<!-- - `Encapsulation` Hiding the details of how an object works & grouping data and behavior -->
+<!-- - `SRP` Single Responsibility Principle -->
+<!-- - `Coupling` The level of connectedness between two objects -->
 
 
 ## Benefits
