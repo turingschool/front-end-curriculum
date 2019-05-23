@@ -1,5 +1,5 @@
 ---
-title: Intro to Object Oriented Programming
+title: "Objects: Inheritance"
 length: 60
 tags: javascript, object oriented programming, oop
 module: 2
@@ -46,7 +46,33 @@ Each of these more specific instruments should all still have a name and be able
 
 As we get more specific, we create new classes that are based on our parent `Instrument`, and we allow them to each **inherit** the name property and the ability to play music from that parent. This allows us to share a single method across many subclasses, keeping our code DRY and performant.
 
-Let's go back to our previous example and create some Teaching Assistants, which are a more specific type of instructor. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. Because TAs have so much in common with Instructors, we can create a **child class** or a **sub class** that inherits all of the properties and methods from our Instructor class. The only new behavior we need TAs to perform is to schedule check-ins.
+Let's go back to our previous example with an Instructor:
+
+```js
+class Instructor {
+  constructor(name, module, traits) {
+    this.name = name;
+    this.module = module;
+    this.traits = traits;
+  }
+
+  teachLesson(duration) {
+    if (duration > 3) {
+      return `${this.name} can\'t teach a lesson that long!`;
+    } else {
+      return `Gunna teach you all real good about ${this.primaryLesson}`;
+    }
+  }
+
+  gradeProject(project) {
+    return `${this.name} is grading ${project}.`
+  }
+}
+
+var instructor = new Instructor('Pam', 2, ['funny', 'smart']);
+```
+
+We can now create some Teaching Assistants, which are a more specific type of instructor. Teaching Assistants should have a name, module, and traits property, just like instructors do. They should also be able to teach lessons, grade projects, and schedule check-ins. Because TAs have so much in common with Instructors, we can create a **child class** or a **sub class** that inherits all of the properties and methods from our Instructor class. The only new behavior we need TAs to perform is to schedule check-ins.
 
 We can create a child class like so:
 
@@ -81,7 +107,7 @@ The super keyword is used to access and invoke methods on the parent class. In t
 
 The super keyword allos us to call a function (the class we are extending) that is definied somewhere else, but keep the current context (of our child class). 
 
- This will allow the parent constructor to add any inherited properties to the new instance of our class. 
+This will allow the parent constructor to add any inherited properties to the new instance of our class. 
 
 #### OOP: Animals and the Zoo
 
@@ -117,6 +143,7 @@ Tesla.prototype.autoDrive = function() {
 ## Checks for Understanding
 
 * Explain how inheritance works
+* Why do we call `super()` in the inherited class's constructor?
 
 
 ## Further Reading
