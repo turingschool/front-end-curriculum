@@ -14,7 +14,7 @@ By the end of this session, you will be able to:
 - Assess the pros and cons of approaching the same problem in a variety of ways
 - Identify code smells
 
-## Structure
+## Structure (5 mins)
 
 * 30 mins of research and journaling
 * 15 mins of group discussion
@@ -44,7 +44,7 @@ After you have finished reading the four articles, answer the following question
 
 #### Discussion (15 mins)
 
-Using the journal questions to guide you, start a discussion within your small groups. 
+Using the journal questions to guide you, start a discussion within your small groups.
 
 #### Code Review & Paired Discussion
 
@@ -54,7 +54,14 @@ Using the journal questions to guide you, start a discussion within your small g
 While reviewing the code, ask yourself the following questions:
 
 * Is all the code easily understood?
-* Does it conform to Turing's Style Guide? These will usually cover location of braces, variable and function names, line length, indentations, formatting, and comments.
 * Is there any redundant or duplicate code?
 * Does the code follow the principle of single responsibility?
 * Do the names used in the application convey intent?
+* Looking back at the reading covering code smells - find two examples of a code smell in either of the codebases. What changes would you make to this particular piece of code to not make it smell?
+* Find two examples of good OOP design, based on the readings
+
+### Closing
+
+Within your pair, discuss the following questions - 
+* Of the two repos you are reviewing, which does a better job at following the principles of good OOP design? Why?
+* 
