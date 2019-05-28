@@ -46,10 +46,14 @@ After you have finished reading the four articles, answer the following question
 
 Using the journal questions to guide you, start a discussion within your small groups.
 
-#### Code Review & Paired Discussion
+#### Code Review & Group Discussion
 
 [*Jeopardy*](https://github.com/turingschool-examples/oop-review/tree/master/jeopardy)  
 [*Wheel of Fortune*](https://github.com/turingschool-examples/oop-review/tree/master/wheel-of-fortune)
+
+*Get in your GameTime groups. You will know be reviewing two codebases that have implemented games in OOP*
+
+<!-- WOF groups should be reviewing Jeopardy and vice versa. Family Feud can review either. Goal is to have groups review an unfamiliar codebase -->
 
 While reviewing the code, ask yourself the following questions:
 
@@ -62,6 +66,6 @@ While reviewing the code, ask yourself the following questions:
 
 ### Closing
 
-Within your pair, discuss the following questions - 
+Within your original group, discuss the following questions - 
 * Of the two repos you are reviewing, which does a better job at following the principles of good OOP design? Why?
-* 
+* What new information have you learned from the readings? From the code review?
