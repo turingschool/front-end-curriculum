@@ -1,3 +1,5 @@
+# jsFUN Self-Directed Review
+
 In addition to working through any JSFun problems you may not have solved, you'll be tasked with doing the following:
 
 Write a blog post on one of the three fundamental concepts taught this week. Your blog post can be published anywhere (portfolio site, medium, etc.), but make sure it will be visible to the public. Blog posts should be about 4-5 paragraphs demonstrating your understanding of the concept and its relevance. This will add to your portfolio for employers when you get to the job hunt phase in Mod 4 and help you ‘pre-prove’ your skills and knowledge. Below are some bullet points to help guide your content for whichever topic you choose.
