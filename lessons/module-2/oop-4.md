@@ -48,7 +48,7 @@ Using the journal questions to guide you, start a discussion within your small g
 
 #### Code Review & Paired Discussion
 
-[*Jeopardy*](https://github.com/turingschool-examples/oop-review/tree/master/jeopardy)
+[*Jeopardy*](https://github.com/turingschool-examples/oop-review/tree/master/jeopardy)  
 [*Wheel of Fortune*](https://github.com/turingschool-examples/oop-review/tree/master/wheel-of-fortune)
 
 While reviewing the code, ask yourself the following questions:
