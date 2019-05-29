@@ -20,7 +20,7 @@ For this project, you will be building a hotel management tool for hotel staff t
 
 ## Technologies
 
-* **the fetch API** for sending/receiving data 
+* **the fetch API** for retrieve data 
 * **jQuery** for making the DOM easier to handle
 * **Sass** for getting fancy with your CSS
 
@@ -255,6 +255,6 @@ If purchases are made for room service, these changes will be reflected on the `
 ## Testing
 
 * [ ] Novice - There is little or no evidence of testing in the application.
-* [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The applicaiton contains numberous holes in testing and/or many features are untested.
+* [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
 * [ ] Exceptional - Project has a running test suite that exercises the application used Enzyme. The test suite covers almost all aspects of the application.
