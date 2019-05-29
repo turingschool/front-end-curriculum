@@ -13,16 +13,16 @@ For this project, you will be building a hotel management tool for hotel staff t
 ## Goals and Objectives
 
 - Use OOP to drive the design of the application and the code
-- Sepearte business-logic code from view-related code
+- Separate business-logic code from view-related code
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 
 # Requirements
 
 ## Technologies
 
-* **the fetch API** *
-* **jQuery** * 
-* **Sass** * 
+* **the fetch API** for sending/receiving data 
+* **jQuery** for making the DOM easier to handle
+* **Sass** for getting fancy with your CSS
 
 ## Initial Setup
 
