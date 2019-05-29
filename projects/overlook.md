@@ -61,10 +61,10 @@ I must allow a visitor (hotel manager) to see all daily room service charges and
 
 ```
 As a developer of the application,
-I need to give the visitor the ability to search for and add new customers from the `Customers` page. 
+I need to give the visitor the ability to search for and add new customers from the `Customers` tab. 
 If a valid customer result is returned while searching or a new customer is added,
-all pages besides the `Main` page will be specific to that customer.
-If there are no valid results found, I will implement error handling for this case and all pages will continue to display generalized information.
+all the tabs besides the `Main` tab will be specific to that customer.
+If there are no valid results found, I will implement error handling for this case and all tab will continue to display generalized information.
 ```
 
 ```
@@ -81,7 +81,7 @@ I need to make sure a valid customer has been selected in order for a visitor to
 
 ```
 As a visitor,
-when I visit the main application page,
+when I visit the main application tab,
 I will be presented with a dashboard that displays today's date. The dashboard will also have the following information:
 
 - Total Rooms Available for today's date
@@ -91,51 +91,51 @@ I will be presented with a dashboard that displays today's date. The dashboard w
 
 ```
 As a visitor,
-when I visit the main applications page,
-I will also see four icons that allow me to visit four distinct pages:
+when I visit the main applications tab,
+I will also see four icons that allow me to visit four distinct tabs:
 
 - Main
 - Orders
 - Rooms
 - Customer
 
-Clicking on `Orders`, `Rooms`, or `Customer` will redirect the visitor to these pages.
-Clicking on the `Main` link from any of the pages will redirect to the main dashboard.
+Clicking on `Orders`, `Rooms`, or `Customer` show a take the customer to a new tab.
+Clicking on the `Main` link from any of the tabs will redirect to the main dashboard.
 ```
 
 ### Epic: Customer
 
 ```
 As a visitor,
-When I visit the main application page,
-clicking on the `Customer` icon will take me to the `Customer` page.
+When I visit the main application tab,
+clicking on the `Customer` icon will take me to the `Customer` tab.
 The UI will prompt to either search for a current customer or create a new customer.
 If I create a new customer, 
 I will have to submit the customer's name and this customer will automatically be selected.
 I will know that a customer has been selected,
-because the customer name will be displayed across all pages.
+because the customer name will be displayed at the top of the page.
 ```
 
 ```
 As a visitor,
-When I visit the main application page,
-clicking on the `Customer` icon will take me to the `Customer` page.
+When I visit the main application tab,
+clicking on the `Customer` icon will take me to the `Customer` tab.
 The UI will prompt me to either search for a current customer or create a new customer.
 If I search for a current customer,
 finding that customer will give me the option to select that customer.
 If that customer does not exist,
 the UI will state that this customer does not exist.
 I will know that a customer has been selected,
-because the customer name will be displayed across all pages.
+because the customer name will be displayed at the top of the page.
 ```
 
 ### Epic: Orders
 
 ```
 As a visitor,
-When I visit the main application page,
-clicking on the `Orders` icon  will take me to the `Orders` page.
-The `Orders` page will default to display _all_ orders for room service for today's date.
+When I visit the main application tab,
+clicking on the `Orders` icon  will take me to the `Orders` tab.
+The `Orders` tab will default to display _all_ orders for room service for today's date.
 
 I will also see an input that will allow me to search for all orders for room service for a specified date.
 ```
@@ -143,11 +143,13 @@ I will also see an input that will allow me to search for all orders for room se
 ```
 As a visitor,
 when a valid customer has been selected,
-clicking on the `Orders` icon  will take me to the `Orders` page.
-The `Orders` page will display customer specific information:
+clicking on the `Orders` icon  will take me to the `Orders` tab.
+The `Orders` tab will display customer specific information:
 
 - Breakdown of dates and dollar amounts for room service
-- Total dollar amount spent on room service
+- Total dollar amount spent on room service for a particular day
+- Total dollar amount spent on room service for a all days ever
+
 
 If there is no valid information for this customer,
 I will be notified that no valid data exists.
@@ -157,9 +159,9 @@ I will be notified that no valid data exists.
 
 ```
 As a visitor,
-When I visit the main application page,
-clicking on the `Rooms` icon will take me to the `Rooms` page.
-The `Rooms` page will default to display the following:
+When I visit the main application tab,
+clicking on the `Rooms` icon will take me to the `Rooms` tab.
+The `Rooms` tab will default to display the following:
 
 - Most popular booking date 
 - The date with the most rooms available
@@ -170,7 +172,7 @@ I will also see an input that will allow me to search for what rooms are availab
 ```
 As a visitor,
 when a valid customer has been selected,
-The `Rooms` page will display all the following customer specific information:
+The `Rooms` tab will display all the following customer specific information:
 
 - Summary of all past and current bookings
 
@@ -182,7 +184,7 @@ I will be notified that no valid data exists.
 As a visitor,
 when a valid customer has been selected,
 and there is not a current booking for today's date,
-the UI for the `Rooms` page will show a button for creating a new booking.
+the UI for the `Rooms` tab will show a button for creating a new booking.
 Clicking this button will reveal a menu that allows for filtering rooms by type.
 
 If the desired room type is available for the current date, that room information will be displayed and be available for booking.
@@ -192,7 +194,7 @@ If the desired room type is _not_ available for the current date, all other avai
 ```
 As a visitor, 
 when a valid customer has been selected,
-and there are rooms that are available for booking on the `Rooms` page,
+and there are rooms that are available for booking on the `Rooms` tab,
 all available rooms will show me the following information:
 
 - type
@@ -210,7 +212,7 @@ and a new booking has been made for the current date,
 a button will be available to add room service.
 Clicking this button will reveal a menu that has a list of food and prices that are available to purchase.
 
-If purchases are made for room service, these changes will be reflected on the `Orders` page.
+If purchases are made for room service, these changes will be reflected on the `Orders` tab.
 ```
 
 # Rubric
