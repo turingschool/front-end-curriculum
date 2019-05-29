@@ -121,7 +121,7 @@ As a visitor,
 When I visit the main application page,
 clicking on the `Customer` icon will take me to the `Customer` page.
 The UI will prompt me to either search for a current customer or create a new customer.
-If I search for a new current customer,
+If I search for a current customer,
 finding that customer will give me the option to select that customer.
 If that customer does not exist,
 the UI will state that this customer does not exist.
