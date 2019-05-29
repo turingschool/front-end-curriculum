@@ -20,7 +20,7 @@ For this project, you will be building a hotel management tool for hotel staff t
 
 ## Technologies
 
-* **the fetch API** for retrieve data 
+* **the fetch API** to retrieve data 
 * **jQuery** for making the DOM easier to handle
 * **Sass** for getting fancy with your CSS
 
@@ -227,7 +227,7 @@ If purchases are made for room service, these changes will be reflected on the `
 ## Specification Adherence
 
 * [ ]  Novice - The application is missing multiple features/requirements outlined above. 
-* [ ]  Advanced Beginner - The application is in a useable state, but is missing part of one or more of the technologies outlined above.
+* [ ]  Advanced Beginner - The application is in a usable state, but is missing part of one or more of the technologies outlined above.
 * [ ]  Proficient - The application uses the above technologies to a professional level. 
 * [ ]  Exceptional - Meets all expectations of `Proficient`. In addition, the application has additional features/extensions implemented that go above and beyond the project requirements.
 
@@ -248,7 +248,7 @@ If purchases are made for room service, these changes will be reflected on the `
 ## CSS/Sass Style
 
 * [ ] Novice - There are several (10+) instances of duplication and one or two major bugs. Developers write code with unnecessary selectors or tags which do not increase clarity.
-* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unncessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
+* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
 * [ ] Proficient - Application is thoughtfully put together with comments to help guide organization. There may be some duplication (fewer than 5 instances) present. Comments are present to assist with organization of code.
 * [ ] Exceptional - Meets all expectations for `Proficient`. The application has exceptionally well-factored CSS/Sass with all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
 
