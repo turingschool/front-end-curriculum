@@ -61,11 +61,10 @@ I must allow a visitor (hotel manager) to see all daily room service charges and
 
 ```
 As a developer of the application,
-I need to give the visitor the ability to search for customers from the `Customers` page. 
-This page will allow a visitor to search for a customer name or add a new customer.
-If a valid customer result is returned while searching,
-all pages besides the `Main` page will be specific to that user.
-If there are no valid results found, I will implement error handling for this case and all pages will continue to display generalized information
+I need to give the visitor the ability to search for and add new customers from the `Customers` page. 
+If a valid customer result is returned while searching or a new customer is added,
+all pages besides the `Main` page will be specific to that customer.
+If there are no valid results found, I will implement error handling for this case and all pages will continue to display generalized information.
 ```
 
 ```
@@ -101,7 +100,7 @@ I will also see four icons that allow me to visit four distinct pages:
 - Customer
 
 Clicking on `Orders`, `Rooms`, or `Customer` will redirect the visitor to these pages.
-Clicking on the `Main` link from any of the pages will redirect to the dashboard with the summary referenced above.
+Clicking on the `Main` link from any of the pages will redirect to the main dashboard.
 ```
 
 ### Epic: Customer
@@ -121,7 +120,7 @@ because the customer name will be displayed across all pages.
 As a visitor,
 When I visit the main application page,
 clicking on the `Customer` icon will take me to the `Customer` page.
-The UI will prompt to either search for a current customer or create a new customer.
+The UI will prompt me to either search for a current customer or create a new customer.
 If I search for a new current customer,
 finding that customer will give me the option to select that customer.
 If that customer does not exist,
@@ -183,18 +182,18 @@ I will be notified that no valid data exists.
 As a visitor,
 when a valid customer has been selected,
 and there is not a current booking for today's date,
-the `Rooms` page's UI will display a button for creating a new booking.
-Clicking this button will reveal an options menu that allows for filtering rooms by type.
+the UI for the `Rooms` page will show a button for creating a new booking.
+Clicking this button will reveal a menu that allows for filtering rooms by type.
 
 If the desired room type is available for the current date, that room information will be displayed and be available for booking.
-If there desired room type is _not_ available for the current date, all other available rooms will be displayed and be available for booking.
+If the desired room type is _not_ available for the current date, all other available rooms will be displayed and be available for booking.
 ```
 
 ```
 As a visitor, 
 when a valid customer has been selected,
 and there are rooms that are available for booking on the `Rooms` page,
-all available rooms will list the following information:
+all available rooms will show me the following information:
 
 - type
 - number of beds
@@ -209,7 +208,7 @@ As a visitor,
 when a valid customer has been selected,
 and a new booking has been made for the current date,
 a button will be available to add room service.
-Clicking this button will reveal an options menu that has a list of food and prices that are available to purchase.
+Clicking this button will reveal a menu that has a list of food and prices that are available to purchase.
 
 If purchases are made for room service, these changes will be reflected on the `Orders` page.
 ```
