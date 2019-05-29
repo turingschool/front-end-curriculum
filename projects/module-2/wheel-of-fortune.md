@@ -307,7 +307,8 @@ child of #Core Application
 depends on #8
 ```
 
-*Issue title*  
+*Issue title* 
+User Story 12, Spin the Wheel, Losing a Turn 
 User Story 12, ```
 As a visitor,
 when a valid customer has been selected,
