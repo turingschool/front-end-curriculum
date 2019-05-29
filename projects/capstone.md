@@ -125,4 +125,4 @@ Evaluation will take place Thursday afternoon of week 5. Each team will meet wit
 * Show application is using continuous integration
 * Talk about lessons learned
 
-Teams - it's your responsibility to keep an ensure you are on track to meet expectations of the rubric, which can be found [here](./cross_pollination_rubric).
+Teams - it's your responsibility to keep an ensure you are on track to meet expectations of the rubric, which can be found [here](http://backend.turing.io/module4/projects/cross_pollination/cross_pollination_rubric).
