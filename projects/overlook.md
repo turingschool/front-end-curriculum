@@ -215,6 +215,13 @@ Clicking this button will reveal a menu that has a list of food and prices that 
 If purchases are made for room service, these changes will be reflected on the `Orders` tab.
 ```
 
+## Data Endpoints
+
+* [Users](https://fe-apps.herokuapp.com/api/v1/overlook/1903/users/users)
+* [Rooms](https://fe-apps.herokuapp.com/api/v1/overlook/1903/rooms/rooms)
+* [Bookings](https://fe-apps.herokuapp.com/api/v1/overlook/1903/bookings/bookings)
+* [Room Services](https://fe-apps.herokuapp.com/api/v1/overlook/1903/room-services/roomServices)
+
 # Rubric
 
 ## Specification Adherence
