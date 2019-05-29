@@ -26,7 +26,7 @@ For this project, you will be building a hotel management tool for hotel staff t
 
 ## Initial Setup
 
-For this project, you need to use this [Webpack Starter Kit]() repo.
+For this project, you need to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo.
 
 ## Testing
 
