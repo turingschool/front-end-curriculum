@@ -72,7 +72,7 @@ The submit button should be disabled when there is not valid content in both inp
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=496549355)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=496549355)
 
 #### Layout comps
 
