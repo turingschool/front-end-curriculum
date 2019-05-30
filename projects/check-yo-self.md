@@ -162,7 +162,7 @@ The user might also might to add more tasks to their checklist after they have c
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=557400577)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=557400577)
 
 ### Layout Comps
 
