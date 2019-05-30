@@ -160,6 +160,13 @@ The user might also might to add more tasks to their checklist after they have c
 * Each task added should appear at the bottom of the list unchecked.
 * The user should not be able to add blank tasks if the input is empty.
 
+## What is a Masonry Layout?
+
+This type of layout is known as a *Masonry layout*.  This layout refers to when items of uneven size are laid out in a way where there are no uneven gaps.  Due to this scenario, this is *NOT* good scenario for using `grid`.  This is because we can't define where each card is going to be in the layout.  There are a number of ways to solve this solution.  Here are a couple of links to check out to achieve this goal:
+
+* [CSS Tricks Examples](https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/)
+* [Code Pen Example](https://codepen.io/Kalikoze/pen/XQaJYd)
+
 ## Submission Details
 
 * Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=557400577)
