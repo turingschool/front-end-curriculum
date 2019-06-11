@@ -326,6 +326,13 @@ __Label Input Elements that do not have a label element associated with them__
 -------------------------------------------------
 
 ## Your Challenge
+
+Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accesible. Find your project partner/s and start implementing! 
+
+
+<!-- The challenge below would be good to use for review the next morning  -->
+
+<!-- 
 Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes.
 
 ```html
@@ -358,6 +365,7 @@ Take the following HTML snippet and make it accessible using explicit semantic H
   <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
 </div>
 ```
+ -->
 <!-- solution: http://codepen.io/team/turing/pen/PWKMga?editors=1000 -->
 
 ## Perfect is the enemy of good
