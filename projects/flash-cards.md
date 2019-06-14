@@ -1,10 +1,7 @@
 ---
 title: Flash Cards
-length: 1 week
 tags: javascript, oop, mocha, testing
 ---
-
-1 week solo project for FE Mod 1 (Week 1)
 
 ## Goals and Objectives
 
@@ -59,7 +56,7 @@ For example:
 
 ```js
 const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
-````
+```
 
 ***Turns***
 
@@ -76,20 +73,20 @@ For example:
 const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
 const turn = new Turn('pug', card);
 
-turn.returnGuess()    // => 'pug'
+turn.returnGuess();    // => 'pug'
 
 
-turn.returnCard()     // => { id: 1,
-                      //      question: 'What is Robbie\'s favorite animal',
-                      //      answers: ['sea otter', 'pug', 'capybara'],
-                      //      correctAnswer: 'sea otter' 
-                      //    }
+turn.returnCard();     // => { id: 1,
+                       //      question: 'What is Robbie\'s favorite animal',
+                       //      answers: ['sea otter', 'pug', 'capybara'],
+                       //      correctAnswer: 'sea otter' 
+                       //    }
 
 
-turn.evaluateGuess()  // => false
+turn.evaluateGuess();  // => false
 
 
-turn.giveFeedback()    // => incorrect!
+turn.giveFeedback();   // => incorrect!
 ```
 
 ## Iteration 2:
@@ -107,7 +104,7 @@ const card3 = new Card(12, 'What is Travis\'s middle name?', ['Lex', 'William', 
 
 const deck = new Deck([card1, card2, card3]);
 
-deck.countCards() // => 3
+deck.countCards(); // => 3
 ```
 
 ***Round***
@@ -138,33 +135,33 @@ const deck = new Deck([card1, card2, card3]);
 
 const round = new Round(deck);
 
-round.deck   // => [card1, card2, card3];
+round.deck;   // => [card1, card2, card3];
 
-round.returnCurrentCard() // => { id: 1,
-                          //      question: 'What is Robbie\'s favorite animal',
-                          //      answers: ['sea otter', 'pug', 'capybara'],
-                          //      correctAnswer: 'sea otter' 
-                          //    }
+round.returnCurrentCard(); // => { id: 1,
+                           //      question: 'What is Robbie\'s favorite animal',
+                           //      answers: ['sea otter', 'pug', 'capybara'],
+                           //      correctAnswer: 'sea otter' 
+                           //    }
 
-round.turns // => 0
+round.turns; // => 0
 
-round.incorrectGuesses     // => []
+round.incorrectGuesses;     // => []
 
-round.takeTurn('capybara') // => 'correct!' 
+round.takeTurn('capybara'); // => 'correct!' 
 
-round.takeTurn('spleen')   // => 'incorrect!'
+round.takeTurn('spleen');   // => 'incorrect!'
 
-round.turns // => 2
+round.turns; // => 2
 
-round.incorrectGuesses     // => [14]
+round.incorrectGuesses;     // => [14]
 
-round.currentCard()    // => { id: 12,
-                       //      question: 'What is Travis\'s favorite stress reliever?',
-                       //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
-                       //      correctAnswer: 'playing with bubble wrap' 
-                       //    }
+round.currentCard();    // => { id: 12,
+                        //      question: 'What is Travis\'s favorite stress reliever?',
+                        //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
+                        //      correctAnswer: 'playing with bubble wrap' 
+                        //    }
 
-round.calculatePercentCorrect() // => 50 
+round.calculatePercentCorrect(); // => 50 
 ```
 
 ## Iteration 3:
@@ -191,9 +188,8 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
 For example: 
 
 ```js
-game.currentRound // => Round {...} (The new Round object that has been instatiated)
+game.currentRound; // => Round {...} (The new Round object that has been instatiated)
 ```
-
 
 ## Iteration 4:
 
