@@ -67,6 +67,18 @@ Go look into the `data` directory and explore the data (there is also an outline
 
 Once you have looked over each data file, start with the `users.js` data file. To work with this data, this is the class structure you should start out with:
 
+_UserRepository_ class
+
+```js
+new UserRepository(data);
+```
+
+* A `UserRepository` holds onto all of the `User` objects
+* It should have a parameter to take in user `data`
+* It should have methods to determine:
+  * Given a user's ID, what is their user data?
+  * The average step goal amongst all users
+
 _User_ class
 
 ```js
@@ -79,22 +91,9 @@ new User(userData);
 * Should have a method to:
   * Return a user's first name only
 
-_UserRepository_ class
-
-```js
-new UserRepository(dataFilepath);
-```
-
-* A `UserRepository` holds onto all of the `User` objects
-* It should have a parameter to take in a `dataFilepath` as a string
-* It should have methods to determine:
-  * Given a user's ID, what is their user data?
-  * Average step goal amongst all users
-  * What state are the most users from?
-
 
 **Dashboard:**
-Use the `scripts.js` file to add information to the DOM. This JS file should call methods from your classes to retrieve information. There should not be any DOM manipulation within the _User_ or _UserRepository_ classes.
+Use the `scripts.js` file to add information to the DOM. This JS file should call methods from your classes to retrieve information. There should not be any DOM manipulation within the _User_ or _UserRepository_ class files.
 
 To develop this dashboard, first choose a user at random - someone with a randomly generated name that speaks to you. On the dashboard for a user:
 
