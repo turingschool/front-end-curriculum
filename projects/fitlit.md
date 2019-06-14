@@ -121,7 +121,7 @@ if (typeof module !== 'undefined') {
 }
 ```
 
-Where `someClassName` is the name of your class - like `UserRepository`. Read through this a few times - what does this do, and why do you need it in your code sometimes?
+Where `someClassName` is the name of your class - like `UserRepository`. Read through this a few times - what does this conditional do? Pick it apart. Why do you need it in your code sometimes?
 
 ---
 
