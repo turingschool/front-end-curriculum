@@ -1,10 +1,7 @@
 ---
-title: Activity Tracker
-length: 2 week
-tags: javascript, oop, mocha, testing
+title: FitLit
+tags: javascript, oop, mocha, chai, testing
 ---
-
-2 week paired project for FE Mod 2 (Week 2)
 
 ## Goals and Objectives
 
