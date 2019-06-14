@@ -109,6 +109,20 @@ Instead, for your tests, you should create small, sample datasets that match the
 
 **Write tests for all classes, their properties, and their methods from now on for all iterations.**
 
+**Note:** When you test a JavaScript class file, you need to use `module.exports` in your class file so the test can use the code - just like Mythical Creatures. However, in this project when you call that same class in the browser, the browser has no idea what `module` is. So your code crashes. The `module` object is something your tests know how to use, but the browser has no idea what it is. To fix this, you'll want to include something like this in your class file (for each class file that you create):
+
+```js
+// Instead of:
+module.exports = someClassName;
+
+// You will need to use:
+if (typeof module !== 'undefined') {
+  module.exports = someClassName;
+}
+```
+
+Where `someClassName` is the name of your class - like `UserRepository`. Read through this a few times - what does this do, and why do you need it in your code sometimes?
+
 ---
 
 ### Iteration 2 - Hydration
