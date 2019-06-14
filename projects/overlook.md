@@ -64,7 +64,7 @@ As a developer of the application,
 I need to give the visitor the ability to search for and add new customers from the `Customers` tab. 
 If a valid customer result is returned while searching or a new customer is added,
 all the tabs besides the `Main` tab will be specific to that customer.
-If there are no valid results found, I will implement error handling for this case and all tab will continue to display generalized information.
+If there are no valid results found, I will implement error handling for this case and all tabs will continue to display generalized information/content.
 ```
 
 ```
@@ -99,8 +99,8 @@ I will also see four icons that allow me to visit four distinct tabs:
 - Rooms
 - Customer
 
-Clicking on `Orders`, `Rooms`, or `Customer` show a take the customer to a new tab.
-Clicking on the `Main` link from any of the tabs will redirect to the main dashboard.
+Clicking on `Orders`, `Rooms`, or `Customer` should take me to a new tab with new content.
+Clicking on the `Main` tab from any of the other tabs will redirect me to the main dashboard/tab.
 ```
 
 ### Epic: Customer
