@@ -22,7 +22,7 @@ jQuery is a library that allows us to use CSS selectors to find elements on the 
 To use the jQuery library, you'll need to include the following lines in your HTML:
 
 ```html
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>window.jQuery || document.write('<script src="path/to/your/jquery.min.js"><\/script>')</script>
 ```
 
