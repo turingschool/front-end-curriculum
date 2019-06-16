@@ -17,10 +17,16 @@
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
   margin-bottom: 40px;
   border-left: 8px solid $turing-primary;
-  padding: 5px 25px;
+  padding: 5px 35px;
 }
 
 .medium {
   width: 50%;
-  margin: 15px;
+  margin: 15px 10px;
+}
+
+.medium-large {
+  width: 70%;
+  margin: 20px 10px;
+  display: block;
 }
