@@ -1,6 +1,6 @@
 ---
-title: HTML I - Structure, Semantics, Forms
-length: 180
+title: HTML I - Structure & Semantics
+length: 120
 tags: html, introduction, practice
 ---
 
@@ -12,6 +12,10 @@ tags: html, introduction, practice
 * Understand what Developer Tools are and how can you use them
 * Create semantic forms including labels, inputs, and buttons
 
+## Prep
+
+Students should spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome-dev-tools) resource before attending class.
+
 ## Vocabulary
 
 - `HTML` HyperText Markup Language
@@ -22,6 +26,7 @@ tags: html, introduction, practice
 - `Hyperlink` A reference to an external resource
 - `Block` A block-level element occupies the entire width of its parent element (container), thereby creating a "block."
 - `Inline` An inline-level element only occupies the space bounded by the tags defining the element, instead of breaking the flow of the content.
+- `Nesting` when an element lives inside of another element
 
 ***
 
@@ -42,8 +47,6 @@ Today, we will build a foundation of HTML knowledge and skills.
 HTML is used to create electronic documents (pages) that are displayed on the Web.  It was first developed by Tim Berners-Lee and released in 1990.  It was originally created to allow people to publish and exchange scientific documents.  This exchange was possible as a result of `hyperlinks` which allowed pages to have links to other documents.  However, because HTML was so accessible and had the potential to be used for other applications, it moved over to the mainstream in browsers like Netscape and Internet Explorer.  
 
 HTML ensures the proper formatting of content (text, images, video) so that your internet browser can display them as intended.  As a result, HTML is made up of many elements.  These elements are used to hold our content and define how the browser must format and display the content. The term `markup` refers to the set of tags used to structure a page.
-
-***
 
 ## Elements & Tags
 
@@ -77,24 +80,27 @@ We use `<p>` to signal to the browser that everything that's about to follow is 
 
 Here is an example of a slightly more robust document:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="VjvOyd" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Very Basic HTML Page" data-editable="true" class="codepen">
-  See the Pen <a href="http://codepen.io/team/turing/pen/VjvOyd/">Very Basic HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.
+<p class="codepen" data-height="450" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="RzaRBd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Very Basic HTML Page">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/RzaRBd/">
+  Very Basic HTML Page</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-### Turn and Talk:
-
-* What makes an HTML element different than an HTML tag?
-* What is the difference between a “regular” element and a self-closing, or empty element?
-* What will the browser do if it doesn't see a closing tag for a given element?
-
-***
+<div class="turn-and-talk">
+    <h3>Turn & Talk</h3>
+    <ul>
+      <li>What makes an HTML element different than an HTML tag?</li>
+      <li>What is the difference between a “regular” element and a self-closing, or empty element?</li>
+      <li>What will the browser do if it doesn't see a closing tag for a given element?</li>
+    </ul>
+</div>
 
 ## HTML Attributes
 
 Any HTML element can have attributes. An attribute provides additional information about an element. It must be specified in the opening tag of an element, and usually come in name/value pairs. A `class` is a commonly used attribute:
 
-```
+```html
 <p class="paragraph"></p>
 ```
 
@@ -102,7 +108,7 @@ The name of the attribute in the example above is class, and the value is `"para
 
 Attribute names are determined for us by HTML; we must comply with the list of available names to use. The values are determined by us as developers. Different attributes are used for different purposes; we will explore some of those today, and continue learning the use-cases for others as we move into CSS and JavaScript.
 
-## Images
+### Attributes in Images
 
 We use HTML tags to mark up text to show its semantic meaning. The browser uses these tags to structure the document. As we talked about earlier in this lesson, _most_ tags have an opening and closing tag, but a few do not. For example, images defined using the `<img>` tag do not have a closing tag.
 
@@ -116,16 +122,11 @@ Consider the following:
 
 Our browser is more than happy to load up an image, but we need to tell it where that image is located. Our `<img>` tag needs extra information to know which image to display. That's where the `src` attribute comes in. The `alt` attribute provides alternative text in the case the user is not able to view the image.
 
-![Anatomy of an HTML Tag](/assets/images/html-tag-anatomy.png)
+<img class="medium" src="/assets/images/html-tag-anatomy.png" alt="Labeled HTML tag">
 
-Let's update our page with the image above.
+### Attributes in Hyperlinks
 
-<p data-height="471" data-theme-id="23788" data-slug-hash="XKmwqR" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with an Image" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/XKmwqR/">A Page with an Image</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-## Hyperlinks
-
-Another important tag is the `<a>` tag. These are the tags we use for creating hyperlinks. You might have noticed that the `<a>` tag behaves a little differently than the `<h1>`, `<h2>`, and `<p>` tags. We can use the `<a>` tag to mark up a few words, while the other tags denote a big section - let's call it a "block" — of our page.
+Another important tag is the `<a>` tag. These are the tags we use for creating hyperlinks. You might have noticed that the `<a>` tag behaves a little differently than the `<h1>`, `<h2>`, and `<p>` tags. We can use the `<a>` tag to mark up a few words, while the other tags denote a big section - what we might call a "block" — of our page.
 
 Consider the following example:
 
@@ -137,27 +138,13 @@ Consider the following example:
 
 In this case, the `<a>` tag needs to know which url it should be linked to. We use the `href` attribute to set the links destination. `href` is an abbreviation for "hypertext reference."
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="yJYdyb" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/yJYdyb/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-Something to note, you will often see hyperlinks in a [nav](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav) element.  Many sites often have navigation links on their page, so it's important to keep the syntax of this in mind.  Take a look at an example below:
-
-```html
-<nav>
-  <ul>
-    <li><a href="home">Home</a></li>
-    <li><a href="about">About</a></li>
-    <li><a href="store">Store</a></li>
-  </ul>
-</nav>
-```
-
-## Turn & Talk
-
-* What are HTML attributes?
-* Which attributes have you seen be used before, and what was the purpose of each of those?
-
-***
+<div class="turn-and-talk">
+    <h3>Turn & Talk</h3>
+    <ul>
+      <li>What are HTML attributes?</li>
+      <li>Which attributes have you seen used before, and what was the purpose of each of those?</li>
+    </ul>
+</div>
 
 ## Block and Inline Elements
 
@@ -175,10 +162,14 @@ Most elements are block elements. Some common inline tags you might see in the w
 
 We use `<em>` and `<strong>` to denote the semantic meaning of the content.
 
-<p data-height="583" data-theme-id="23788" data-slug-hash="ezpwZe" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A Page with a Link" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/ezpwZe/">A Page with a Link</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="EBKyrE" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline v Block Elements">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/EBKyrE/">
+  Inline v Block Elements</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-You may notice that the `<em>` tags are italicized and the `<strong>` tags are displayed in bold. The browser does this by default. That said, you should still only use these tags to convey meaning. We can change the way stuff looks later with CSS.
+You may notice that the `<em>` tags are italicized and the `<strong>` tags are displayed in bold. The browser does this by default. That said, you should still only use these tags to convey meaning. We can change the way elements appear by using CSS - later.
 
 ### `<span>` and `<div>`
 
@@ -186,23 +177,24 @@ All of the tags we discussed above have some kind of semantic meaning. Assistive
 
 Sometimes, however, you don't want a tag to have any meaning. Typically, this is when you just want to target a certain portion of the page with CSS or JavaScript and none of the semantic tags really apply.
 
-<aside>
-  <strong>Disclaimer</strong>: There are many, many more semantic tags than the ones we're discussing today.
-</aside>
+**Disclaimer**: There are many, many more semantic tags than the ones we're discussing today.
 
-I like to think of `<span>` and `<div>` as the flavorless Jello of HTML tags, they don't have any meaning in and of themselves and they typically don't come with any built-in styling from the browser.
+Some think of `<span>` and `<div>` as the flavorless Jello of HTML tags; they don't have any meaning in and of themselves and they typically don't come with any built-in styling from the browser.
 
-There is just one important difference between the two.
+There is just one important difference between the two:
 
 - `<div>` is a block element.
 - `<span>` is an inline element.
 
 We'll discuss these more in a later lesson when we talk about CSS.
 
-### Turn & Talk
-
-* What is the difference between block and inline elements?
-* Are `<img>` elements block or inline? `<a>`? Explain and/or prove it.
+<div class="turn-and-talk">
+    <h3>Turn & Talk</h3>
+    <ul>
+    <li>What is the difference between block and inline elements?</li>
+    <li>Are <code>img</code> elements block or inline? <code>a</code> elements? Explain and/or prove it.</li>
+    </ul>
+</div>
 
 ## Nesting HTML Elements
 
@@ -225,6 +217,7 @@ As sites become more complex, more elements are used, and more are used in relat
   </section>
 </main>
 ```
+
 The `<nav>` and `<main>` elements are on the same level - or sibling elements. We know this because they sit on the same indentation line, and they are not wrapped around one or another.
 
 Nested inside the `<main>` element is a `<section>`. Nested inside the `<section>` is an `<h2>`, `<p>` and another `<p>`. We can communicate the same relationship by saying "the `<section>` is wrapped around the `<h2>` and both `<p>`s."
@@ -249,8 +242,12 @@ Every page that is built with HTML needs to have the following four elements to 
 * `<head></head>` tag wraps elements that shouldn't be rendered - information about the page and how to process it
 * `<body></body>` tag wraps elements that should be displayed - the actual content that will appear in the browser
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="gLxjjy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="A complete but small document" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/gLxjjy/">A complete but small document</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="xoVEVQ" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Required Structure of HTML">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/xoVEVQ/">
+  Required Structure of HTML</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Layout Structure
 
@@ -262,7 +259,7 @@ HTML5 has a variety of _semantic tags_, or HTML tags that provide additional mea
 
 ### Planning a Layout
 
-In your groups, use the following semantic HTML tags to create the basic structure of this newspaper on your chart paper.  Click the links below to read the docs for each HTML element.  (notice they all send you to the MDN docs).  Think about which elements are most fitting and how it could be used to create the basic structure of the page.
+In your groups, use the following semantic HTML tags to create the basic structure of a twitter profile on your chart paper.  Click the links below to read the docs for each HTML element.  (notice they all send you to the MDN docs).  Think about which elements are most fitting and how it could be used to create the basic structure of the page.
 
 Recommended starting point: Mark up the hard copy of the image with the elements you would use for each part, then consider the ordering/nesting necessary to achieve that as you write your HTML on the chart paper.
 
@@ -276,152 +273,11 @@ Recommended starting point: Mark up the hard copy of the image with the elements
 * [ol](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
 * [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
 
-![Alien Paper](/assets/images/alien-paper.png)
+![Twitter Profile](/assets/images/twitter-profile.png)
 
 <!-- Commenting the codepen example of this solution (below) out for now since we're having them do it on chartboard paper instead of doing it in a codepen -->
 <!-- <p data-height="300" data-theme-id="23788" data-slug-hash="oYePxJ" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Blank" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/oYePxJ/">Blank</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> -->
-
-***
-
-## Chrome Dev Tools
-
-Debugging your front-end code can be an intimidating part of the development process, but it's also one of the most powerful skills you can acquire Developers of all levels spend a significant amount of time troubleshooting code, but the more comfortable you are with debugging tools, the easier it will be to isolate, identify and fix broken code.
-
-The front-end languages (HTML, CSS and JavaScript) are run entirely in the browser, so the technique for troubleshooting broken code can happen in many places. Luckily, modern browsers are aware of this and give us a collection of advanced tools to help us debug.
-
-### Developer Tools
-
-One of the first tools you should familiarize yourself with when doing front-end development are the built-in browser [DevTools](https://developer.chrome.com/devtools). To open developer tools in Chrome:
-- Mac: `Cmd` + `Opt` + `i`
-- (or) Right click on the browser window and select `inspect`
-- (or) Select `View` in the navbar, then `Developer`, then `Developer Tools`
-
-Personally I find that pinning the dev tools to the upper right is the most convenient. (You can also expand them into their own window.)
-
-![devtools window][devtools-window]
-
-### The Panels
-
-Once you have your DevTools window open, you'll notice a toolbar across the top with several different tabs. Clicking on these tabs will bring you to different debugging panels, each built to help troubleshoot specific areas of your front-end code.
-
-As mentioned earlier, there are a lot of places on the front-end where code can go wrong. This means the first and most important step in solving a bug is **isolating the problem**. DevTools has already done some of this step for us by categorizing the most commmon areas where developers run into problems, and providing us with specific debugging panels for each.
-
-![devtools toolbar][devtools-toolbar]
-
-For now, we're only going to focus on the first panel: Elements.
-
-[devtools-window]: /assets/images/lessons/debugging-with-devtools/devtools-window.gif
-[devtools-toolbar]: /assets/images/lessons/debugging-with-devtools/devtools-toolbar.png
-
-### The Elements Panel: Debugging HTML, CSS & DOM Events
-
-Most helpful for:
-* debugging layout and styling issues
-* checking DOM Events
-
-The elements panel lets you view the entire HTML source of the current page you are viewing. From here, you can edit, add or remove content and elements directly on the page. Though your changes won't be saved (any changes made here will be lost upon refreshing the page), sometimes it's helpful to make tweaks directly in this panel so you can see what effect the changes will have on your application before you implement them.
-
-![Elements Panel][elements-panel]
-
-### Selecting Elements to work with
-
-You'll notice hovering over an HTML element in the devtools panel will also highlight that element on the page. This makes it easier to find and select the content you'd like to work with.
-
-You can also select elements directly on the page by clicking the ![Square Arrow](http://i.imgur.com/ODylyUu.png) icon in the toolbar, then hovering over the element on the page. This will automatically bring you to the corresponding code for that element in the devtools panel.
-
-If you're having trouble finding the element you'd like to work with, you can search through the entire HTML with `Cmd + F`. You'll notice a searchbar appear at the bottom of the panel where you can enter any string to find a match. This is useful if you'd like to search for an element by a known ID or class.
-
-![Find in HTML][find-in-html]
-
-[elements-panel]: /assets/images/lessons/debugging-with-devtools/elements-panel.png
-[find-in-html]: /assets/images/lessons/debugging-with-devtools/find-in-html.gif
-
-***
-
-## Your Challenge
-
-We've covered a lot of ground so far, but there's one element we haven't talked about yet: `<table>`
-
-And -- surprise! -- we're not going to cover it together: you're going to test out your Googling skills!
-
-Build the structure of these following layout. Only use HTML for this challenge. The goal is to focus on building the structure of your application.
-
-### Create this table
-
-You can use codepen or create your own html file.
-
-**Hint**: Research the [table element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table) in HTML
-
-# ![Flags Table](/assets/images/flags-table.jpg)
-
-# Forms
-
-So far, we've done an excellent job of displaying information to the user, but we haven't really asked them for their input. HTML also includes a set of elements for building forms. Forms are an important part of a website. They allow users to send data to the web site. Most of the time that data is sent to the web server, but the web page can also intercept it to use it on its own.
-
-### Form Basics: Inputs and Buttons
-
-There is a lot to forms that we'll go more into depth with in a moment, but to start we'll focus on two elements:
-
-- `<input>` creates an input field. `<input>` is like `<img>` in that it does not require or support a closing tag. It can take an optional `type` attribute that helps validate user input in some browsers ([click here](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input) to find out more).
-- `<button>` creates a button. `<button>` on the other hand does support a closing tag.
-
-<p data-height="300" data-theme-id="23788" data-slug-hash="MeaMEr" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Inputs and Buttons" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/MeaMEr/">Inputs and Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-### Forms: Next Level
-
-Basic input and button elements are a great starting point, but to build a truly usable form we need to use the following base elements:
-
-* `form`
-* `label`
-* `input`
-* `submit`
-
-<p data-height="300" data-theme-id="26495" data-slug-hash="JbyeZM" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Super Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/JbyeZM/">Super Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-## Your Challenges (2)
-
-### Part One:
-
-Partner up and answer the following questions:
-
-* What is the attribute `for` indicate on the `label` element? Do you always have to use it? Why or why not?
-* What are 5 values for the `type` attribute of an `input` element and how do they work?
-* What is the significance of the `name` attribute in a form?
-* What is a `fieldset` element?
-* Why would a `legend` element be important?
-
-### Part Two:
-
-Fork the code below into your own Pen, and then refactor as follows:
-
-* Validate for email type
-* Add a set of radio buttons with at least three options - only allowing one to be selected at a time
-* Include placeholders for name, email, and message
-* Add a drop down for favorite color with at least three options
-* Use an input for submit instead of a button
-
-<p data-height="458" data-theme-id="26495" data-slug-hash="Lbjgwy" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="Basic HTML Form" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/Lbjgwy/">Basic HTML Form</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-### Additional Resources on Forms
-
-* [MDN HTML Forms Guide](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms)
-* [MDN How to Structure an HTML Form](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/Forms/How_to_structure_an_HTML_form)
-
-### For Placement Only (FPO)
-
-"For Placement Only" (FPO) options are placeholder content for use in design layouts. Often, you will find yourself forced to build interfaces before you have content. In such cases, you can use FPO content. There are many options for FPO copy, images, and video on the interwebs. Here are some to get you started:
-
-* [Meet the Ipsums](http://meettheipsums.com/)
-* [FPOImg](http://fpoimg.com/)
-* [FillMurray](http://www.fillmurray.com/)
-* [Lorem Pixel](http://lorempixel.com/)
-* [Unsplash](https://unsplash.com/)
-* [SampleVideos](http://www.sample-videos.com/)
-* [Article with useful sites for free icons, image assets, etc.](https://www.elegantthemes.com/blog/resources/10-of-the-best-places-to-find-free-icons-and-image-assets-online)
 
 ***
 
