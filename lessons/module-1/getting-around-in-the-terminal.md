@@ -95,6 +95,9 @@ We will dive into the details shortly, but here's a quick preview of the command
 - `mkdir`
 - `touch`
 - `rm`
+- `rmdir`
+
+On the graphic organizer provided, complete each column for the command as we discuss it in class. If you aren't sure how to complete a given box, please let your partner or instructor know!
 
 ### `pwd` (print working directory)
 
@@ -173,7 +176,15 @@ There is **no return value** for this command.
 
 <img class="medium-large" src="./assets/images/terminal/touch.png" alt="Side-by-side comparison of creating a new file">
 
-### `rm` (remove)
+### `rmdir` (remove directory)
+
+We also need a way to remove a directory. We can use the command `rmdir [directory name]` when navigated to its parent directory.
+
+There is **no return value** for this command.
+
+<img class="medium-large" src="./assets/images/terminal/rmdir.png" alt="Side-by-side comparison of removing/deleting a directory">
+
+### `rm` (remove file)
 
 So we can make directories and new files, but we want to be able to remove them. That is where the `rm` command comes in. If we're not happy with our `new-file.html` file, then we can delete it.
 
