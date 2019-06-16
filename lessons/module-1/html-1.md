@@ -7,10 +7,9 @@ tags: html, introduction, practice
 ## Learning Goals
 
 * Understand what HTML stands for and it's purpose
-* Learn about the HTML structure and how to incorporate semantic HTML elements
-* Know how to utilize images, hyperlinks, and tables
-* Understand what Developer Tools are and how can you use them
-* Create semantic forms including labels, inputs, and buttons
+* Know how to identify and use attributes for appropriate elements
+* Know and explain the difference between block and inline elements
+* Begin using semantic elements to build an HTML layout
 
 ## Prep
 
