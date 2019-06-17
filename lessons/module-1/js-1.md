@@ -24,10 +24,10 @@ In this lesson we'll cover:
 - `Assignment` Assigning a value to a variable
 - `Type coercion` The process of converting a value from one type to another (such as a number to a string).
 - `Concatenation` The binding of multiple strings together using the `+` string operator
-- `Interpolation`  - The process of injecting a variable directly into a string. 
+- `Interpolation`  - The process of injecting a variable directly into a string.
 - `Template literal` - Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
 - `Statement` An executable piece of code
-- `Expression` An executable piece of code that resolves to a single value. The result of which may be assigned to a variable.
+- `Expression` An executable piece of code that resolves to a single value, the result of which may be assigned to a variable.
 - `Operator` Symbols that are used to assign, compare, and perform operations
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 - `Function` A predefined and reusable group of behavior
@@ -49,6 +49,13 @@ It's a highly versatile and flexible language, and has become the most commonly 
 
 Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
+## Side Note: The console
+Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run Javascript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
+
+To open the console in Chrome, either:
+* Click `View` > `Developer` > `Javascript Console`
+* Or use the hotkeys `command+option+J` / `command+option+I`
+
 ## Data Types
 
 There are different data types in JavaScript. It's important to understand what type of data you're dealing with as you're writing code, and knowing the types of data are available to you is the first step.
@@ -65,19 +72,19 @@ Javascript has six primitive data types:
 
 ### Null Data Type
 
-* The datatype _null_ only has one value which is `null`. 
+* The datatype _null_ only has one value which is `null`.
 * Shows an intentional absence of a value
 * Often is used when creating a variable that could have a value later.
 
 ### Undefined Data Type
 
-* The datatype _undefined_ only has one value which is `undefined`. 
-* A variable which has not been assigned a value has a datatype of `undefined`. 
+* The datatype _undefined_ only has one value which is `undefined`.
+* A variable which has not been assigned a value has a datatype of `undefined`.
 * A function returns `undefined` unless another value is returned.
 
 ### Boolean Data Type
 
-* A boolean has one of two values: `true` or `false`. 
+* A boolean has one of two values: `true` or `false`.
   * Can act like a light switch: it's either on or off.
 * Booleans can be very useful to help determine which part of a script should be run (as in conditionals, which we will talk about later).
 
