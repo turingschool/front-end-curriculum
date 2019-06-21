@@ -12,6 +12,15 @@ tags: javascript, react
 
 ## Vocab
 
+- `framework` A software framework provides a standard way to build and deploy applications. It is a universal, reusable software environment that provides particular functionality as part of a larger software platform to facilitate development of software applications, products and solutions
+- `Virtual DOM` An in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
+- `JSX` A mix of JavaScript and XML that facilitates rendering the appropriate HTML Components: standalone, independent parts of an application that are responsible for handling only a single UI element
+- `Components` Components are standalone, independent parts of an application that are responsible for handling only a single UI element
+- `Functional components` Functional Components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing.
+- `Class Components ` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typicall keep track of some sort of application data.
+- `Props`
+- `State`
+
 ## What is React?
 
 People will define React in many different ways, but at its core, React is:
@@ -32,7 +41,7 @@ We'll see this demonstrated a bit better when we get into the code along, but Re
 
 * **The Virtual DOM:** an in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
 * **JSX:** a mix of JavaScript and XML that facilitates rendering the appropriate HTML
-**Components:** standalone, independent parts of an application that are responsible for handling only a single UI element
+* **Components:** standalone, independent parts of an application that are responsible for handling only a single UI element
 * **Props & State:** objects in React where we can store application data and other values that will affect the rendering of our components 
 
 We'll go more in-depth into each of these features throughout the lesson, but for now just remember that in order to leverage all of these features, we have to write our code in a very specific way that React understands. This has implications on our directory structure, our separation of concerns, and the way we interact with our application through code.
@@ -72,12 +81,7 @@ React lets us alter this virtual DOM first, then renders the change for us - mak
 
 This idea of a Virtual DOM isn't unique to React. It's found in many other client-side frameworks, and can even be implemented with vanilla JavaScript, using DocumentFragments. Take a look at the following codepen:
 
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="brittanystoroz" data-slug-hash="LzXqrR" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="DocumentFragments Example">
-  <span>See the Pen <a href="https://codepen.io/brittanystoroz/pen/LzXqrR/">
-  DocumentFragments Example</a> by Brittany Storoz (<a href="https://codepen.io/brittanystoroz">@brittanystoroz</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe src="https://codesandbox.io/embed/tender-napier-eq5e6?fontsize=14" title="DocumentFragments Example" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 If you run the jQuery solution to appending all of those elements to the DOM, then run the DocumentFragment solution, you'll see exactly how much of a performance benefit using a Virtual DOM gives us.
 
@@ -89,7 +93,25 @@ JSX syntax takes some getting used to, and it might seem to fly in the face of w
 
 First, let's take a look at the JSX syntax:
 
-![jsx example](/assets/images/lessons/intro-to-react/jsx-example.png)
+```js
+const listItems = [
+  { name: "peaches" },
+  { name: "raspberries" },
+  { name: "mint" }
+]
+
+const groceryList =
+  <div className="grocery" onClick={someFunc}>
+    <h1>My Rad Grocery List</h1>
+    <ul>
+      {
+        listItems.map(item => <li>{item.name}</li>)
+      }
+    </ul>
+  </div>
+
+ReactDOM.render(groceryList, document.body);
+```
 
 What looks familiar? What looks different? You might notice the curly braces around things like `onClick={someFunc}`. These curly braces are allowing us to interpolate JavaScript in our HTML. Think about how you may have used template strings in vanilla JavaScript in the past: we use the `${}` syntax to denote that this particular chunk of the string is a dynamic value that should be evaluated and parsed as a dynamic JavaScript value, rather than plain text. The curly braces in React give us similar functionality. Anywhere in our JSX where we want to tell our application "This is JavaScript, so don't render it character by character like HTML, we can wrap that code in curly braces to signal that.
 
@@ -115,15 +137,9 @@ You'll hear the term 'component' used in many different areas of programming, an
 
 We'll start investigating these characteristics by practicing with functional components.
 
-#### Code Along
-
-Fork [this repo](https://github.com/turingschool-examples/intro-to-react) and in your terminal, run `npm install` then `npm start`. Open up your app at localhost:8080 and you should see a simple string of text that says 'Evil Deeds'.
-
 ### Functional Components
 
 Functional components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Functional components are just functions that return the HTML you want rendered to the DOM. Examine the following example:
-
-<!-- ![stateless component](/assets/images/lessons/intro-to-react/stateless-component.png) -->
 
 ```js
 const App = () => (
@@ -141,11 +157,13 @@ Class components are ES6 classes that extend an abstract 'Component' class, give
 import React, { Component } from 'react';
 
 export default class App extends Component {
-  return (
-    <div>
-      Hello World
-    </div>
-  )
+  render() {
+    return (
+      <div>
+        Hello World
+      </div>
+    )
+  }
 }
 ```
 
