@@ -93,25 +93,7 @@ JSX syntax takes some getting used to, and it might seem to fly in the face of w
 
 First, let's take a look at the JSX syntax:
 
-```js
-const listItems = [
-  { name: "peaches" },
-  { name: "raspberries" },
-  { name: "mint" }
-]
-
-const groceryList =
-  <div className="grocery" onClick={someFunc}>
-    <h1>My Rad Grocery List</h1>
-    <ul>
-      {
-        listItems.map(item => <li>{item.name}</li>)
-      }
-    </ul>
-  </div>
-
-ReactDOM.render(groceryList, document.body);
-```
+<iframe src="https://codesandbox.io/embed/jsx-syntax-example-kdw4u?fontsize=14" title="JSX Syntax Example" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 What looks familiar? What looks different? You might notice the curly braces around things like `onClick={someFunc}`. These curly braces are allowing us to interpolate JavaScript in our HTML. Think about how you may have used template strings in vanilla JavaScript in the past: we use the `${}` syntax to denote that this particular chunk of the string is a dynamic value that should be evaluated and parsed as a dynamic JavaScript value, rather than plain text. The curly braces in React give us similar functionality. Anywhere in our JSX where we want to tell our application "This is JavaScript, so don't render it character by character like HTML, we can wrap that code in curly braces to signal that.
 
