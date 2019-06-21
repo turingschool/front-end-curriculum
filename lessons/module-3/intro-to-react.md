@@ -161,67 +161,9 @@ Props allow us to pass information from parent components to child components. W
 
 When we pass props down to a child component, it comes through as a simple JavaScript object with key value pairs.
 
-#### Grocery Item Component
-
-```js
-import React from 'react';
-
-const GroceryItem = props => {
-  return (
-    {props.title} - {props.count}
-  );
-}
-```
-
 #### Grocery List App
 
-```js
-import React from 'react';
-import './App.css';
-import GroceryItem from './GroceryItem.js';
-
-const App = () => {
-  return (
-    <div className='App'>
-      <h1>Grocery List</h1>
-      <GroceryItem title='Apple' count='5' />
-      <GroceryItem title='Orange' count='15' />
-      <GroceryItem title='Banana' count='2' />
-    </div>
-  );
-}
-
-export default App;
-```
-
-#### Grocery List App using .map()
-
-```js
-import React from 'react';
-import './App.css';
-import GroceryItem from './GroceryItem.js';
-
-const items = [
-  { title: 'Apple', count: '5' },
-  { title: 'Orange', count: '15' },
-  { title: 'Banana', count: '2' }
-];
-
-const App = () => {
-  const groceryList = items.map(item => {
-    return <GroceryItem title={item.title} count={item.title} />
-  });
-
-  return (
-    <div className='App'>
-      <h1>Grocery List</h1>
-      {groceryList}
-    </div>
-  );
-}
-
-export default App;
-```
+<iframe src="https://codesandbox.io/embed/eloquent-bartik-b2182?fontsize=14" title="eloquent-bartik-b2182" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
 ### State
 
