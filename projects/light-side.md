@@ -88,7 +88,6 @@ src/
   - Terrain  
   - Diameter  
   - Population  
-  - Residents  
   - A button to "Favorite" the planet  
 
 - Vehicle Cards:  
