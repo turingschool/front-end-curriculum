@@ -1,14 +1,20 @@
 ---
-title: Intro to React
+title: React I: the What & the Why
 length: 3
 tags: javascript, react
 ---
 
 ## Learning Goals
 
+* Understand why we use JS frameworks
 * Define what React is and what it does for us
 * Explain why we would use a tool like React
-* Build a React page using functional & class components
+* Understand React concepts:
+  - the virtual DOM
+  - JSX
+  - functional & class components
+  - state
+  - props
 
 ## Vocab
 
@@ -21,7 +27,7 @@ tags: javascript, react
 - `Props`
 - `State`
 
-## What is React?
+## WHAT is React?
 
 People will define React in many different ways, but at its core, React is:
 
@@ -42,7 +48,7 @@ We'll see this demonstrated a bit better when we get into the code along, but Re
 * **The Virtual DOM:** an in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
 * **JSX:** a mix of JavaScript and XML that facilitates rendering the appropriate HTML
 * **Components:** standalone, independent parts of an application that are responsible for handling only a single UI element
-* **Props & State:** objects in React where we can store application data and other values that will affect the rendering of our components 
+* **Props & State:** objects in React where we can store application data and other values that will affect the rendering of our components
 
 We'll go more in-depth into each of these features throughout the lesson, but for now just remember that in order to leverage all of these features, we have to write our code in a very specific way that React understands. This has implications on our directory structure, our separation of concerns, and the way we interact with our application through code.
 
@@ -63,7 +69,7 @@ Think about all the content you see on a site like Facebook - user profiles, the
 
 React allows us to ensure our application UI is displaying all the correct information at any given time, no matter how frequently it changes.
 
-## Why Do We Use React?
+## WHY Do We Use React?
 
 ### Facilitates creating fast, interactive applications
 
@@ -167,7 +173,7 @@ When we pass props down to a child component, it comes through as a simple JavaS
 
 ### State
 
-State is slightly different than props: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.
+**State** is slightly different than **props**: state holds data that represents the actual state of our application. State can be changed and mutated through user interactions, whereas props should remain immutable.
 
 One of the more confusing things about React is when to make a component a class instead of a function. A general rule of thumb to keep in mind is that, if you're not sure if a component should be functional or a class, start with a functional component. Add state if you find that you need it. Class components are a lot heavier than functional components. Keep your app as lean as possible!
 
@@ -185,11 +191,3 @@ Understanding the difference between props and state can be tricky. Read through
 * [ReactJS Docs](https://reactjs.org/)
 * [React DevTools](http://frontend.turing.io/lessons/module-2/intro-to-react.html)
 * [Props vs. State](https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react)
-
-
-
-
-
-
-
-
