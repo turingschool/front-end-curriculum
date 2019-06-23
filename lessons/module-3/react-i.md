@@ -13,8 +13,8 @@ tags: javascript, react
   - the virtual DOM
   - JSX
   - functional & class components
-  - state
   - props
+  - state
 
 ## Vocab
 
@@ -22,10 +22,10 @@ tags: javascript, react
 - `Virtual DOM` An in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
 - `JSX` A mix of JavaScript and XML that facilitates rendering the appropriate HTML Components: standalone, independent parts of an application that are responsible for handling only a single UI element
 - `Components` Components are standalone, independent parts of an application that are responsible for handling only a single UI element
-- `Functional components` Functional Components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing.
-- `Class Components ` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typicall keep track of some sort of application data.
-- `Props`
-- `State`
+- `Functional components` Functional Components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing
+- `Class Components` Class components are ES6 classes that extend an abstract ‘Component’ class, given to us by default by React. They typicall keep track of some sort of application data
+- `Props` This is shorthand for properties.  Props is an object that is given from it's parent component down to the child functional/class component.  Props should remain immutable
+- `State` State holds data that represents the actual state of an application.  State can be changed and mutated through user interactions
 
 ## WHAT is React?
 
@@ -46,7 +46,7 @@ Frameworks, on the other hand, offer us a bit more than just abstractions - they
 We'll see this demonstrated a bit better when we get into the code along, but React gives us a lot of cool features:
 
 * **The Virtual DOM:** an in-memory object that represents a DOM structure and can be manipulated with JavaScript before updating the real DOM
-* **JSX:** a mix of JavaScript and XML that facilitates rendering the appropriate HTML
+* **JSX:** a mix of JavaScript and [XML](https://developer.mozilla.org/en-US/docs/Web/XML/XML_introduction) (Extensible Markup Language) that facilitates rendering the appropriate HTML
 * **Components:** standalone, independent parts of an application that are responsible for handling only a single UI element
 * **Props & State:** objects in React where we can store application data and other values that will affect the rendering of our components
 
@@ -101,7 +101,7 @@ First, let's take a look at the JSX syntax:
 
 <iframe src="https://codesandbox.io/embed/jsx-syntax-example-kdw4u?fontsize=14" title="JSX Syntax Example" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-What looks familiar? What looks different? You might notice the curly braces around things like `onClick={someFunc}`. These curly braces are allowing us to interpolate JavaScript in our HTML. Think about how you may have used template strings in vanilla JavaScript in the past: we use the `${}` syntax to denote that this particular chunk of the string is a dynamic value that should be evaluated and parsed as a dynamic JavaScript value, rather than plain text. The curly braces in React give us similar functionality. Anywhere in our JSX where we want to tell our application "This is JavaScript, so don't render it character by character like HTML, we can wrap that code in curly braces to signal that.
+What looks familiar? What looks different? You might notice the curly braces around things like `onClick={clickGroceryList}`. These curly braces are allowing us to interpolate JavaScript in our HTML. Think about how you may have used template strings in vanilla JavaScript in the past: we use the `${}` syntax to denote that this particular chunk of the string is a dynamic value that should be evaluated and parsed as a dynamic JavaScript value, rather than plain text. The curly braces in React give us similar functionality. Anywhere in our JSX where we want to tell our application "This is JavaScript, so don't render it character by character like HTML, we can wrap that code in curly braces to signal that.
 
 ## Components
 
@@ -119,9 +119,8 @@ Pick a web app that you frequently use and try to break it down into components 
 
 You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. In React, components have the following characteristics:
 
-* They are either functions or an extended ES6 class
+* Components can be either functions or an extended ES6 class
 * They return one, single JSX element (remember, functions can only return one thing!)
-* Components can be functional or classes
 
 We'll start investigating these characteristics by practicing with functional components.
 
@@ -135,6 +134,8 @@ const App = () => (
     Hello World
   </div>
 );
+
+export default App;
 ```
 
 ### Class Components
@@ -170,6 +171,10 @@ When we pass props down to a child component, it comes through as a simple JavaS
 #### Grocery List App
 
 <iframe src="https://codesandbox.io/embed/eloquent-bartik-b2182?fontsize=14" title="eloquent-bartik-b2182" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
+
+#### Your Turn
+
+Imagine if we have 50 different grocery items.  That is going to make our code look messy if we have to write the GroceryItem component 50 times.  How could we refactor this using an array of data and the `.map()` array prototype method?
 
 ### State
 
