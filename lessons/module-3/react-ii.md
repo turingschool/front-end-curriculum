@@ -662,7 +662,7 @@ But we need to write some functions. Let's start by making sure that when we typ
 // Form.js
 
   handleChange = event => {
-    this.setState({{event.target.name}: event.target.value})
+    this.setState({ [event.target.name]: event.target.value });
   }
 
   render() {
