@@ -4,6 +4,8 @@ length: 3
 tags: javascript, react
 ---
 
+# React II: the How - building IdeaBox in React
+
 ## Learning Goals
 
 * Create class components
