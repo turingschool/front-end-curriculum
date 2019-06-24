@@ -1,5 +1,5 @@
 ---
-title: Objects: prototype chain
+title: "Objects: prototype chain"
 length: 90
 tags: oop, prototype chain
 module: 2

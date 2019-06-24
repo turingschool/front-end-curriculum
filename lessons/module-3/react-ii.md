@@ -1,11 +1,9 @@
 ---
-title: React II: the How - building IdeaBox
+title: "React II: the How - building IdeaBox"
 length: 3 hours
 tags: react, ideabox
 module: 3
 ---
-
-# React II: the How - building IdeaBox
 
 ## Learning Goals
 

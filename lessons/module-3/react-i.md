@@ -1,11 +1,9 @@
 ---
-title: React I: the What & the Why
+title: "React I: the What & the Why"
 length: 3 hours
 tags: javascript, react
 module: 3
 ---
-
-# React I: the What & the Why
 
 ## Learning Goals
 
