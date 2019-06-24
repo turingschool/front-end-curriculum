@@ -4,7 +4,7 @@ length: 1 week
 tags: javascript, oop, testing, jquery
 ---
 
-1 week solo project for FE Mod 2 (Week 6)
+<!-- 1 week solo project for FE Mod 2 (Week 6)
 
 ## Background and Description
 
@@ -258,3 +258,4 @@ If purchases are made for room service, these changes will be reflected on the `
 * [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
 * [ ] Exceptional - Project has a running test suite that exercises the application used Enzyme. The test suite covers almost all aspects of the application.
+ -->
