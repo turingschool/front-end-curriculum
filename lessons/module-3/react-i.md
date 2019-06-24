@@ -1,8 +1,11 @@
 ---
 title: React I: the What & the Why
-length: 3
+length: 3 hours
 tags: javascript, react
+module: 3
 ---
+
+# React I: the What & the Why
 
 ## Learning Goals
 
@@ -52,6 +55,11 @@ We'll see this demonstrated a bit better when we get into the code along, but Re
 
 We'll go more in-depth into each of these features throughout the lesson, but for now just remember that in order to leverage all of these features, we have to write our code in a very specific way that React understands. This has implications on our directory structure, our separation of concerns, and the way we interact with our application through code.
 
+### What do we mean when we say 'application data'?
+
+Think about all the content you see on a site like Facebook - user profiles, their posts, comments on those posts, etc. All of this is considered application data. One of the core differences between building a web site and building a web app is that web apps have to manage a large amount of data that can be manipulated by its users. For example, Facebook users can add and delete posts, edit comments, change their profile information, etc. A web application has to store and maintain all of this data even as it updates based on user interaction.
+
+React allows us to ensure our application UI is displaying all the correct information at any given time, no matter how frequently it changes.
 
 ### How does React make DOM manipulation easy and efficient?
 
@@ -62,12 +70,6 @@ Trust me, it's bad.
 Standard methods of DOM manipulation are tedious, slow and brittle. It requires us to manually target elements, it takes a long time for the browser to process DOM manipulations, and the amount of code it requires makes it really fragile. There are too many places where we could go wrong with a simple typo.
 
 React solves all three of these problems by providing us with a Virtual DOM, which helps us reduce the amount of code and time it takes to update our UI. More on this later!
-
-### What do we mean when we say 'application data'?
-
-Think about all the content you see on a site like Facebook - user profiles, their posts, comments on those posts, etc. All of this is considered application data. One of the core differences between building a web site and building a web app is that web apps have to manage a large amount of data that can be manipulated by its users. For example, Facebook users can add and delete posts, edit comments, change their profile information, etc. A web application has to store and maintain all of this data even as it updates based on user interaction.
-
-React allows us to ensure our application UI is displaying all the correct information at any given time, no matter how frequently it changes.
 
 ## WHY Do We Use React?
 
