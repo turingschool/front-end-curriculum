@@ -2,11 +2,11 @@
 title: Syllabus Overview & Expectations
 ---
 
-## Apr 29, 2019 - Jun 7, 2019
+## Jun 24, 2019 - Aug 2, 2019
 
 | Instructors     | Slack            | Email            |
 | ----------------|------------------| -----------------|
-| Travis Rollins  | @kalikoze        | travis@turing.io |
+| Amy Holt        | @ameseee         | amy@turing.io    |
 | Khalid Williams | @Khalid Williams | khalid@turing.io |
 | Eric Weissman   | @Eric Weissman   | eric@turing.io   |
 
@@ -86,7 +86,7 @@ By the end of module one, students will:
 | Attendance & Tardiness| Class begins promptly at 9:00 AM for the morning session, and 1:00 PM for the afternoon session. You are expected to be on time and in attendance every day.<br> We understand issues arise, and ask that you communicate with instructors when you are going to be late or absent. |
 | Evals | Per project assessments that should be included in your portfolio.|
 |Mid Mock Assessment| This assessment is not included in your portfolio, but is prep for the final assessment week.|
-|Mystery Fun Time| Weekly reviews of concepts from lecture|
+|Quizlettes| Weekly reviews of concepts from lecture|
 |Final Assessment| Week six of the program, there are two summative assessments to determine your eligibility to advance to module two. This will include a final exam and project.
 |Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments.<br>Detailed information can be found on the Turing School [Portfolios Repo](https://github.com/turingschool/portfolios).|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|
