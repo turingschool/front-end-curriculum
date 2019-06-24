@@ -1,5 +1,5 @@
 ---
-title: Scope
+title: Scope - Execution Contexts
 length: 120
 tags: javascript, execution, creation, hoisting
 module: 2
