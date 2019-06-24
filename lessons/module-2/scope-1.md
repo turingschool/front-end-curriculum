@@ -10,6 +10,7 @@ module: 2
 By the end of this lesson, you will be able to:
 
 * Understand the order of execution for JavaScript code and why it matters
+* Explain what an execution context is and describe what happens in both of its phases
 
 ## Vocab
 
