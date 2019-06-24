@@ -59,7 +59,7 @@ Another way to target specific relationships among elements is to use CSS combin
 #### Descendant Combinator
 ```css
 section p {
-    /* some rules */
+    /* some rules */ 
 }
 ```
 This combinator will target the second element that is a direct descendant of the first element. In the above example, this combinator will target all `p` tags that are descendants of a section tag.
