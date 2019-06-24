@@ -63,7 +63,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 #### Minimize/Maximize
 
 * Add functionality to each of the buttons in each column.  When the user clicks on the button, it should hide the content in that specific column (still having the picture and button be displayed).  When the user clicks the button again, the text should display once more.  
-  * Bonus: add a nice animation to this to give a better transition 
+  * Bonus: add a nice animation to this to give a better transition
 
 #### Adding ToolTips
 
@@ -89,7 +89,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 # ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
 
 ---
-
+<!--
 ## Design Comp 2
 
 #### Hex Codes:
@@ -101,7 +101,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 * Body text: #000000
 * Font: Roboto Slab
 
-# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
+# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
 
 ---
 
