@@ -79,12 +79,12 @@ let instructor = {
     } else {
       return `Gunna teach you all real good about ${this.primaryLesson}`;
     }
-  }
+  },
 
   gradeProject: function(project) {
     return `${this.name} is grading ${project}.`
   }
-}
+};
 ```
 
 Based on this object, we can say: "Our instructor is funny and smart and can teach lessons and grade projects."   
@@ -285,12 +285,12 @@ let instructor = {
     } else {
       return `Gunna teach you all real good about ${this.primaryLesson}`;
     }
-  }
+  },
 
   gradeProject: function(project) {
     return `${this.name} is grading ${project}.`
   }
-}
+};
 
 instructor.teachLesson(3);
 ```
