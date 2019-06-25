@@ -53,35 +53,35 @@ With your partner, answer the questions below:
 * Can you add both an id and a class to an element?
 * Which takes precedent?
 
-## CSS Combinators
-Another way to target specific relationships among elements is to use CSS combinators. We will review a few of the common selectors, but be sure to reference [the documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators) to get a more in-depth explanation of how these rules operate.
+## CSS Combinators and Complex Selectors
+Another way to target specific relationships among elements is to use CSS combinators. We will review a few of the common selectors, but be sure to reference [the documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators) and [this guide](https://learn.shayhowe.com/advanced-html-css/complex-selectors/) for more explanation on some of these complex selectors. 
+
+#### Use of Commas
+```css
+h1, 
+h2, 
+h3, 
+h4 {
+  /* some rules */
+}
+```
+If you want to apply the SAME styles to multiple elements, you can use a comma to link the elements that you want to apply the styling rules to. In the rule above, all of the headings would have the same styles applied to them. 
 
 #### Descendant Combinator
+```html
+<section>
+  <p>Some text</p>
+</section>
+<p>Even more cool text</p>
+```
 ```css
 section p {
     /* some rules */ 
 }
 ```
-This combinator will target the second element that is a direct descendant of the first element. In the above example, this combinator will target all `p` tags that are descendants of a section tag.
-Syntax: space between selectors
+This combinator will target the second element that is a direct descendant of the first element. In the above example, this combinator will target all `p` tags that are descendants of a section tag. In this case, the rules would only apply to the first paragraph on the page, but not the second since it is not nested within a `section` tag. 
 
-#### Adjacent Sibling Combinator
-```css
-h2 + p {
-  /* some rules */
-}
-```
-This combinator will target any adjacent siblings, which means that the second element (`p`) directly/immediately follows the first element (`h2`) and they are children of the same parent element. The above example targets any `p` that come directly after an `h2`.
-Syntax: `+` between selectors
-
-#### Child Combinator
-```css
-ul > li {
-  /* some rules */
-}
-```
-This combinator will match only those elements that are matched by the second selector that are the children of elements matched by the first. So in this case, it will target all `li` elements that are children of a `ul` element. This is a stricter version of the descendants combinator.
-Syntax: `>` between selectors
+Syntax: `space` between selectors
 
 ## Dev Tools and CSS
 
