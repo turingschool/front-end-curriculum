@@ -58,7 +58,10 @@ Another way to target specific relationships among elements is to use CSS combin
 
 #### Use of Commas
 ```css
-h1, h2, h3, h4 {
+h1, 
+h2, 
+h3, 
+h4 {
   /* some rules */
 }
 ```
