@@ -63,7 +63,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 #### Minimize/Maximize
 
 * Add functionality to each of the buttons in each column.  When the user clicks on the button, it should hide the content in that specific column (still having the picture and button be displayed).  When the user clicks the button again, the text should display once more.  
-  * Bonus: add a nice animation to this to give a better transition 
+  * Bonus: add a nice animation to this to give a better transition
 
 #### Adding ToolTips
 
@@ -89,7 +89,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 # ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
 
 ---
-
+<!--
 ## Design Comp 2
 
 #### Hex Codes:
@@ -101,7 +101,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 * Body text: #000000
 * Font: Roboto Slab
 
-# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
+# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
 
 ---
 
@@ -126,7 +126,7 @@ In order to push up your work to GitHub, you'll need to generate an SSH key. SSH
   * `git remote add origin git@github.com:Kalikoze/Dog-Party.git` (but use the origin of your own GitHub repo that you just created rather than `git@github.com:Kalikoze/Dog-Party.git` -- this step makes the connection between your local files and the repo that lives on GitHub)
   * `git push -u origin master` (this step pushes your local code up to your GitHub repo)
 6. Once you see your code up in your repository on GitHub, go to `Settings` and publish your site on GitHub Pages, a great way to host static sites directly through GitHub
-7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=0)
+7. Finally, place the links for both you GitHub repo and the live GitHub Pages site in the appropriate tab of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1CS4BipxFi1VPh5NJFsn0yoeDTQQL_yjwcIM0fccVOGc/edit?usp=sharing)
 
 ---
 

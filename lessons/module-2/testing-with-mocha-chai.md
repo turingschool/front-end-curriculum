@@ -9,7 +9,7 @@ mod: 2
 - Talk through the what and why of Test Driven Development  
 - Look at the structure of a test and the testing lifecycle  
 - Discuss Mocha and Chai
-- Write some tests!
+- Write some tests!`
 
 ## Vocab
 
@@ -107,7 +107,7 @@ class Question {
 }
 ```
 
-What kind of assertion would we write to test the functionality of the `checkAnswer` method?
+What would we want to verify about the `checkAnswer` method? What should this method do?
 
 
 ```js
@@ -120,9 +120,33 @@ describe('Question Class', () => {
 
   });
 });
-
 ```
 
+
+### Practice
+
+Take a look at the following code. What would you want to test about this function?
+
+```js
+function reverseWord(word) {
+  let letters = word.split();
+  letters.reverse();
+  return letters;
+}
+
+reverseWord('turing'); // gnirut
+```
+
+
+<!--
+
+describe('reverseWord', () => {
+  it('should return the given word in reverse order', () => {
+    expect(reverse('javascript')).to.equal('tpircsavaj');
+  });
+});
+
+-->
 
 ## Testing Framework: Mocha  
 
@@ -212,24 +236,13 @@ describe('Unicorn', function() {
 
 To practice, let's kick off a small project to demonstrate how you would utilize Mocha and Chai to write a couple tests.  
 
-In your terminal, clone down the gametime starter kit and name the cloned repo `testing-practice`:
+In your terminal, clone down this [starter repo](https://github.com/turingschool-examples/our-first-tests) and run `npm install`:
 
 ```bash
-git clone https://github.com/turingschool-examples/gametime-starter.git testing-practice 
-```
-
-```bash
-cd testing-practice
+git clone https://github.com/turingschool-examples/our-first-tests 
+cd our-first-tests
 npm install
 ```
-
-See if everything is working:
-
-```bash
-npm start
-```
-
-Head over to `http://localhost:8080` and you should see some boilerplate HTML on the page as well as green in your terminal (no big scary red errors).
 
 ---
 
@@ -240,15 +253,8 @@ Things to note:
 * Libraries in `devDependencies`: mocha and chai
 * `npm test` script (this script looks in a specific place for test files)
 
-Next, let's add some of our base files:
 
-```bash
-touch src/Box.js
-
-touch test/Box-test.js
-```
-
-In our test file, we need to require our assertion library: chai.
+We already have two files in place for us: `/src/Box.js` and `/test/Box-test.js` In our test file, we need to require our assertion library: chai.
 
 ```js
 // test/Box-test.js  
@@ -423,9 +429,18 @@ Iteration 2:
 - You should be able to increase the width by a provided value.
 ie: `box.increaseWidth(10)`
 - You should be able to increase the height of your box by a provided value
-ie: `box.increaseHeight(10)`  
-- Refactor to allow for a single method to do both jobs
-ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`  
+ie: `box.increaseHeight(10)` 
+```
+
+## Testing Practice: Iteration 3
+
+Implement iteration 3 for our box per the spec outlined below;
+
+```
+Iteration 3:
+
+- Refactor your code so that instead of having increaseWidth and increaseHeight methods, you can have a single method to do both jobs
+ie: `box.increment(10, 'height')` or `box.increment(10, 'width')` 
 ```
 
 

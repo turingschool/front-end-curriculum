@@ -38,7 +38,7 @@
 
 [Primitive Data Types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
 
-* What are the 6 primitive data types?
+* What are the 7 primitive data types?
 * What are 3 characteristics of primitive data types?
 
 

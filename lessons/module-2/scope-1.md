@@ -10,6 +10,7 @@ module: 2
 By the end of this lesson, you will be able to:
 
 * Understand the order of execution for JavaScript code and why it matters
+* Explain what an execution context is and describe what happens in both of its phases
 
 ## Vocab
 
@@ -209,3 +210,12 @@ console.log(sum);
 Using your journal, take a few minutes to answer the following:
 
 - What are the most important/significant ideas or elements about how the JS engine executes code?
+
+
+
+### Further Reading
+
+* [Ultimate Guide to Execution Contexts, Hoisting, Scopes and Closures](https://www.youtube.com/watch?v=Nt-qa_LlUH0)
+* [JavaScript Visualizer](https://tylermcginnis.com/javascript-visualizer/)
+* [Creation Phase & Hoisting](https://www.youtube.com/watch?v=FJNRmUdLlfw)
+* [Function Expressions vs. Function Declarations](https://gomakethings.com/function-expressions-vs-function-declarations)
