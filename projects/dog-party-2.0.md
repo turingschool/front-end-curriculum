@@ -89,7 +89,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 # ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
 
 ---
-<!--
+
 ## Design Comp 2
 
 #### Hex Codes:
@@ -101,7 +101,7 @@ We won't cover how to do these in class before this project ends -- challenge yo
 * Body text: #000000
 * Font: Roboto Slab
 
-# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
+# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
 
 ---
 
