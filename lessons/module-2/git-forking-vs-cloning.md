@@ -56,119 +56,85 @@ So the important thing to remember here is that your files aren't actually consi
 
 ### Remote Repos
 
-Now this is great, I have my local repo all set up and I have the full git experience with commits/branches/merges/etc. with just a local repository. BUT, there are still some limitations to local repos:
+Though local repos provide you with full-blown version control, there are still some limitations:
 
-* it's hard to dig into your past commits and really see the history of your app so that you can make use of the version control - if I wanted to go back to a particular state of my application, it would be a little trickier for me to navigate there from my terminal when I can't really see what the codebase looks like at each one of my previous commits
-* if my computer gets hit by a bus, the whole app is gone
+* it's hard to dig into your past commits and really see the history of your app so that you can make use of the version control - if you wanted to go back to a particular state of you application, it would be a little trickier to navigate there from the terminal when you can't really see what the codebase looks like at each one of the previous commits
+* if your computer gets hit by a bus, the whole app is gone
 * only you can work on your local code
 
 So, we often link our local repos to a remote repo! Remote repos:
 
 * usually live somewhere (like GitHub) that has a nicer interface for us to navigate the app at different points in history
 * provide us with a backup copy in case our laptop gets hit by a bus
-* allows us to publish our code to the world and allow them to read or write it (imagine if you had a group project with no remote repo and you had to keep passing the laptop around for everyone to contribute)
+* allows us to publish our code to the world so they can read or write it (imagine if you had a group project with no remote repo and you had to keep passing the laptop around for everyone to contribute)
 
-So let's say I want to back up this local repo I just created, or I want to be able to share it with Robbie so he can make his own copy of it, I need to create a remote repository that I can link it to. [ create a remote repo on github ]
+So if we want to create a backup of a local repo, or share a repo with others, we need to create a remote repository that we can link our local to. You can tell a local repository about a remote counterpart by adding a remote with the following command:
 
-So this is where I am going to push my local repo to. But first I have to tell my local repository that this remote one exists. I can do this by going to my local repo and running:
+`git remote add <nameForRemote> <remoteRepoUrl>`
 
-`git remote add origin <remoteRepoUrl>`
+Usually the default remote name is `origin` - which is how we get the command we're most frequently running: `git push origin master`. 
 
-And that's how we get this command that we've been running all this time, `git push origin master` -- origin is the name of our remote repo, and master is the name of the branch we're pushing to.
+Most frequently, you'll be working with one local repo linked to one remote repo, but we can actually have as many remote repos as we want, as long as they all have their own unique names. (e.g. we could add a remote called 'turing' by running `git remote add turing <url>`).
 
-The word origin is just used generally as a default remote name, but we could have named this remote anything we wanted, we could have said `git remote add turing <remoteRepoUrl>` and now instead of `git push origin master` I would say `git push turing master`.
-
-So far we've pretty much been working with one local repo linked to one remote repo, but we can actually have as many remote repos as we want, they just all have to have their own unique names. So for example let's say I wanted to give Turing an official copy of this repo, I could create another remote under the Turing GitHub organization and add this to my local repo with `git remote add turing <remoteRepoUrl>` and now I can push to this remote repo as well!
-
-You won't come across a *ton* of scenarios where you're going to be pushing and pulling from multiple remotes, but it's important to remember that it doesn't have to be a strict 1-1 relationship between a local and remote repo. I'll show you an example later this morning where you will definitely need 2 remotes for one local repo.
+You won't come across a *ton* of scenarios where you're going to be pushing and pulling from multiple remotes, but it's important to remember that it doesn't have to be a strict 1-1 relationship between a local and remote repo.
 
 
 ## Forking vs. Cloning
 
-Speaking of remotes, let's talk about the two ways we can get a copy of a remote repository: cloning and forking. These work in slightly different ways.
+Now that we know the difference between our local and remote repos, let's talk about the two ways we can get a copy of a remote repository: cloning and forking. These work in slightly different ways.
 
-* **Cloning:** a remote repository will make a local copy on your machine with a single remote (`origin`). This creates a 1-1 relationship between that remote and your local copy. You can only push and pull to that remote
-* **Forking:** a remote repository creates another remote repository, but not a local one. So in order to create a local one for ourselves, we'd have to clone our forked remote
+### Cloning
 
-![forking-vs-cloning](/assets/images/lessons/git/forking-vs-cloning.png)
-
-So that's the process for each of these two different copying methods. Now let's get into **why** you would do one over the other:
-
-* **Cloning:** is great when you are copying a remote repository that you have full access to -- you're going to be pushing and pulling changes to this repo and you're in charge of it. On your group projects, you're all going to be making each other collaborators on your remote repos, so in a scenario like that you might just clone
-* **Forking:** is great when you **don't** have full permissions for the remote repository you are copying. For example, a lot of the turing repos here you are not collaborators on -- you aren't allowed to willy nilly push your changes to the Turing staff repos. So if you wanted to save and push your changes that you've made to a repo (like the `our-first-tests`) repo, you'd need to have your own forked version that you could push to
-
-Let's go ahead and do that. Navigate back to the `our-first-tests` repo on GitHub, and make a fork of it. Now use that remote repo URL and add it as a remote to your local copy. (I usually use my name or github handle as my remote name):
-
-`git remote add bstoroz <>`
-
-Now do a `git push bstoroz master` and you should see your saved changes on your forked version. Notice if you tried to do a `git push origin master`, you'd get a permissions error. Now let's say I updated this testing repo with some changes to our master branch. You'd want to be able to pull these changes down into your local copy. So you can do a `git pull origin master` and get the most up-to-date copy of this testing repo.
-
-So a lot of times when you have more than one remote for a local repository, it's because you're *pulling* from one, and *pushing* to another, rather than pulling/pushing to both.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-
-## Cloning
-
-Cloning allows you to copy down the original repo from github into a local directory. When you clone a repo, the local directory it creates is automatically mapped to the remote github repo. By default, it creates a remote for you called 'origin', and gives you access to any and all of the branches that exist on that remote repository.
+Cloning a remote repositoy copies it to your machine as a local repository. When you clone a repo, the local repo it creates is automatically mapped to the remote (`origin`). Your local copy will have access to all of the branches that exist on that remote repository.
 
 If new remote branches have been created since you initially cloned down, or any of the remote branches have been updated, you can update all of those remote branches by running `git fetch`.
 
-While cloning allows you to copy down the original repo, if you are not a collaborator on that repo, and you want to save any local changes you've made to github, you'll have to create a new remote repository to push them to.
+While cloning allows you to copy down the original repo, if you are not a collaborator on that repo, and you want to push any local changes you've made to GitHub, you'll have to create a new remote repository to push them to.
 
 Which brings us to...
 
+### Forking
 
+Forking creates a brand new remote repository on your GitHub account that's a copy of the original. In order to work locally, you would then want to clone down your forked version of the repo. The forked version is now your `origin` remote where you can push and pull your local changes.
 
-## Forking
+When you fork a repo, although it creates a copy of the original, it does not give you access to all the original branches. You still only have one origin remote when you fork, except now that origin points to all the branches on **your** GitHub under **your** username, and not the original repo.
 
-When you don't have collaboration access on a particular remote repository, but you want to contribute to it or save your own version of it, you should fork the repository.
-
-Forking creates a brand new remote repository that is essentially a copy of the original. By default, this will also create a new remote for you called 'origin'. 
-
-When you fork a repo, although it creates a copy of the original, it does not give you access to all the original branches. You still only have one origin remote when you fork, except now that origin points to all the branches on **your** github under **your** username, and not the original repo. In order to gain access to all of those branches, you need to do a couple of things:
-
-**Add a new remote repository for your local one to reference.**
-
-You only have an `origin` remote right now that points to **your** remote repository. If you want access to the original repo, you must add a new remote like so:
+In order to gain access to all of those branches, and keep up with (pull down) any future changes that occur in the original repo, you would need to add a remote link to that repo that your local copy could access. We can accomplish this with the following command:
 
 `git remote add <remote_name> <repo_url>`
 
-You should then be able to see in your terminal a list of all the remote repositories your local one is linked to by running `git remote -v`
+We could then pull down future changes like so:
 
-**Fetch all branches from the new remote**
+`git pull <remote_name> <branch_name>`
 
-Then you need to fetch all the branches from the remote repository you just created:
+and fetch all branches like so:
 
 `git fetch --all`
 
-This will fetch and create a reference to all the branches from every single one of your remote repositories.
 
-**Checkout a new local branch based on an existing remote**
-
-If you want to create a new local branch, based on an existing remote branch, you can then do:
+<!-- If you want to create a new local branch, based on an existing remote branch, you can then do:
 
 `git checkout -b <new_branch_name> <remote_name>/<remote_branch_name>`
+ -->
+
+
+
+#### TO SUMMARIZE
+
+
+* **Cloning:** a remote repository will make a local copy on your machine with a single remote (`origin`). Your local copy will now have access to all the commits and branches that exist on the remote repository. You can push and pull to that remote only if you are an approved collaborator on that remote.
+* **Forking:** a remote repository creates another remote repository, but not a local one. It does **not** automatically give you access to all the branches that exist on the original remote repository. You must clone down your fork in order to push your changes. 
+
+![forking-vs-cloning](/assets/images/lessons/git/forking-vs-cloning.png)
+
+
+
+### How to Choose Between Cloning and Forking
+
+* **Choose Cloning:** when you are copying a remote repository that you have full access to -- you're going to be pushing and pulling changes to this repo and you're in charge of it. On your group projects, you're all going to be making each other collaborators on your remote repos, so in a scenario like that you might just clone
+
+* **Choose Forking:** when you **don't** have full permissions for the remote repository you are copying. For example, a lot of the Turing repos here you are not collaborators on -- you aren't allowed to willy nilly push your changes to the Turing staff repos. So if you wanted to save and push your changes that you've made to a repo, you'd need to have your own forked version that you could push to.
+
 
 
 ## Example Workflow
@@ -180,6 +146,7 @@ If you clone down this repo, you will have access to both of those branches no p
 Your workflow would involve a couple of steps and look like this:
 
 1. Fork the repo
-2. Add the turing repo as a remote: `git remote add turing http://github.com/turing/foo-bar`
-3. Fetch all the branches from the newly added remote: `get fetch --all`
-4. Create a new local branch based on the turing `tutorial-begin` branch: `git checkout -b tutorial-begin turing/tutorial-begin` -->
+2. Clone down your fork
+3. Add the turing repo as a remote: `git remote add turing http://github.com/turing/foo-bar`
+4. Fetch all the branches from the newly added remote: `get fetch --all`
+5. Create a new local branch based on the turing `tutorial-begin` branch: `git checkout -b tutorial-begin turing/tutorial-begin` -->
