@@ -32,9 +32,9 @@ CREATE DATABASE publications;
 Create a new directory and cd into it, then run `npm init --yes`. Install knex globally and in your project, and pg (postgres) in your project from npm:
 
 ```
-npm install -g knex
-npm install knex --save
-npm install pg --save
+npm i -g knex
+npm i knex --save
+npm i pg --save
 ```
 
 We will use a knexfile to configure our database for all of our environments. Create that file using the below command with some default values:
@@ -129,11 +129,11 @@ The `initial` word here is just a descriptor of what the migration is doing. (Th
 The file created should look something like this:
 
 ```js
-exports.up = function(knex, Promise) {
+exports.up = function(knex) {
 
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function(knex) {
 
 };
 ```
@@ -149,7 +149,7 @@ To see all the different options on building and modifying a table, review [the 
 Let's edit the migration to create a `papers` table and a `footnotes` table. We will work with a one-to-many relationship here, where one paper can have many footnotes, but a footnote can only belong to one paper:
 
 ```js
-exports.up = function(knex, Promise) {
+exports.up = function(knex) {
   return Promise.all([
     knex.schema.createTable('papers', function(table) {
       table.increments('id').primary();
@@ -172,7 +172,7 @@ exports.up = function(knex, Promise) {
 };
 
 
-exports.down = function(knex, Promise) {
+exports.down = function(knex) {
   return Promise.all([
     knex.schema.dropTable('footnotes'),
     knex.schema.dropTable('papers')
@@ -180,7 +180,7 @@ exports.down = function(knex, Promise) {
 };
 ```
 
-But, why is `Promise` passed in as a second argument? Knex is expecting that these methods return a promise of some sort. All Knex methods return a promise, so we fulfilled our end of the bargin in the example above. `Promise.all` allows you to do multiple things and return one promise. Knex passes us a reference to `Promise`, because it's not natively supported in some previous versions of Node. We're not using it at this moment, but we will in a second.
+_Note: In some examples online, you are likely to see a second argument of `Promise` passed in. Before the latest version of Knex (0.18.0), Knex utilized the bluebird promise library for promise functionality instead of native promises. As of the newest version, Knex no longer supports versions of Node.js that are older than 8_
 
 ### Running Your Migrations
 
@@ -198,7 +198,7 @@ Now what if we realized we made a mistake in our schema and we wanted to add a c
 And in this particular migration we'll want to add a column on the `up`, and drop it on the `down`:
 
 ```js
-exports.up = function(knex, Promise) {
+exports.up = function(knex) {
   return Promise.all([
     knex.schema.table('papers', function(table) {
       table.string('publisher');
@@ -206,7 +206,7 @@ exports.up = function(knex, Promise) {
   ]);
 };
 
-exports.down = function(knex, Promise) {
+exports.down = function(knex) {
   return Promise.all([
     knex.schema.table('papers', function(table) {
       table.dropColumn('publisher');
@@ -253,7 +253,7 @@ knex seed:make papers
 Again, this creates a default file for you that we'll want to configure with our own tables and data:
 
 ```js
-exports.seed = function(knex, Promise) {
+exports.seed = function(knex) {
   // Deletes ALL existing entries
   return knex('table_name').del()
     .then(function () {
@@ -278,7 +278,7 @@ Because we are working with papers **and** footnotes, we need to:
 The logic here gets a little hairy, but ultimately will end up looking like this:
 
 ```js
-exports.seed = function(knex, Promise) {
+exports.seed = function(knex) {
   // We must return a Promise from within our seed function
   // Without this initial `return` statement, the seed execution
   // will end before the asynchronous tasks have completed
@@ -364,7 +364,7 @@ const createFootnote = (knex, footnote) => {
   return knex('footnotes').insert(footnote);
 };
 
-exports.seed = (knex, Promise) => {
+exports.seed = (knex) => {
   return knex('footnotes').del() // delete footnotes first
     .then(() => knex('papers').del()) // delete all papers
     .then(() => {
