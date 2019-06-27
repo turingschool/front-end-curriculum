@@ -1,5 +1,5 @@
 ---
-title: Git Review - forking vs. cloning
+title: Git Review - remotes vs. locals and forking vs. cloning
 length:
 tags: git, tooling, workflow
 ---
