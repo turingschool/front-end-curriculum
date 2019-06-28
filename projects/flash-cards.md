@@ -193,6 +193,8 @@ game.currentRound; // => Round {...} (The new Round object that has been instati
 
 ## Iteration 4:
 
+Choose one or more of these extensions for this iteration.
+
 _Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
 ***Build out another study/flashcards dataset*** 
