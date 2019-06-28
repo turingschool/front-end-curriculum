@@ -97,9 +97,7 @@ Which brings us to...
 
 Forking creates a brand new remote repository on your GitHub account that's a copy of the original. In order to work locally, you would then want to clone down your forked version of the repo. The forked version is now your `origin` remote where you can push and pull your local changes.
 
-When you fork a repo, although it creates a copy of the original, it does not give you access to all the original branches. You still only have one origin remote when you fork, except now that origin points to all the branches on **your** GitHub under **your** username, and not the original repo.
-
-In order to gain access to all of those branches, and keep up with (pull down) any future changes that occur in the original repo, you would need to add a remote link to that repo that your local copy could access. We can accomplish this with the following command:
+In order to keep up with (pull down) any future changes that occur in the original repo, you would need to add a remote link to that repo that your local copy could access. We can accomplish this with the following command:
 
 `git remote add <remote_name> <repo_url>`
 
@@ -107,15 +105,11 @@ We could then pull down future changes like so:
 
 `git pull <remote_name> <branch_name>`
 
-and fetch all branches like so:
 
-`git fetch --all`
-
-
-<!-- If you want to create a new local branch, based on an existing remote branch, you can then do:
+If you want to checkout a new local branch, based on an existing remote branch, you can then do:
 
 `git checkout -b <new_branch_name> <remote_name>/<remote_branch_name>`
- -->
+
 
 
 
@@ -123,7 +117,7 @@ and fetch all branches like so:
 
 
 * **Cloning:** a remote repository will make a local copy on your machine with a single remote (`origin`). Your local copy will now have access to all the commits and branches that exist on the remote repository. You can push and pull to that remote only if you are an approved collaborator on that remote.
-* **Forking:** a remote repository creates another remote repository, but not a local one. It does **not** automatically give you access to all the branches that exist on the original remote repository. You must clone down your fork in order to push your changes. 
+* **Forking:** a remote repository creates another remote repository, but not a local one. You must clone down your fork in order to push your changes. 
 
 ![forking-vs-cloning](/assets/images/lessons/git/forking-vs-cloning.png)
 
