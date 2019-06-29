@@ -119,7 +119,7 @@ Great! Now we're all ready to start using Enzyme to test our React components!
 
 First, we'll have to create a test file called `Card.test.js`. In `Card.test.js`, we'll start with a simple test to see if the `name` property is properly rendered in the component when passed in as a prop.
 
-```js
+```jsx
 // Card.test.js
 
 import React from 'react';
@@ -164,7 +164,7 @@ Let's begin by testing the UI.
 
 The first thing to realize is that snap shot tests are not really TDD. Instead, we use snapshot tests to compare against a previous 'snapshot' of what our component looked like. If something has changed, the snapshot will fail. Then, if we've expected that change, we can `update` our snapshot to use the newest version. Add the following test:
 
-```js
+```jsx
 import React from 'react';
 import { shallow, mount } from 'enzyme';
 import Card from './Card';
@@ -189,7 +189,7 @@ Ok, well that's great, but what are we actually testing? The first time we run t
 
 How do we make this test fail? We'd have to change what our component actually looks like. Let's change the description to be an h4 instead of a p tag. Do that now:
 
-```js
+```jsx
 // Card.js
 
 const Card = ({ title, description, id, deleteIdea }) => {
@@ -213,7 +213,7 @@ We'll learn about conditional rendering in React III. For now, let's add some co
 
 Let's say that a Card could be created with an extra property, called "isFavorite" - and if "isFavorite" is true, then the Card will have an additional class of "favorite".
 
-```js
+```jsx
 // Card.js
 
 import React from 'react';
@@ -238,7 +238,7 @@ Just know that, when `isFavorited` is passed into Card with a value of `true`, t
 
 We could start out with a simple test to see if a card has the appropriate class if it's starred.
 
-```js
+```jsx
 it('should have a className of "favorite" if isFavorite', () => { const
   wrapper = shallow( <Card title="Bananas" isFavorite={true} />);
 
@@ -248,7 +248,7 @@ it('should have a className of "favorite" if isFavorite', () => { const
 
 Alternatively, we could write a second snapshot test that looks at a different wrapper instance:
 
-```js
+```jsx
 // Card.test.js
 
 it('should match the favorited snapshot', () => {
@@ -284,7 +284,7 @@ So let's use mocks to test that the removeIdea function we passed in is being ca
 
 Consider the following test:
 
-```js
+```jsx
 it('should call the deleteIdea prop with the Card\'s id when clicked', () => {
   const deleteIdeaMock = jest.fn();
 
@@ -328,7 +328,7 @@ Calling `instance()` on our wrapper will give us access to all the class instanc
 
 Let's write a test for `addIdea`:
 
-```js
+```jsx
 // App.test.js
 
 describe('App', () => {
