@@ -111,7 +111,7 @@ You can read up on how to configure the CORS middleware in the [documentation he
 
 In the fetch call of our FE application, we hardcoded the URL we are querying. But `localhost` won't work when we get to our production application. How can we make the URL dynamic?
 
-Go to `create-react-app` docs for the section on [environment variables](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md#adding-custom-environment-variables).
+Go to `create-react-app` docs for the section on [environment variables](https://facebook.github.io/create-react-app/docs/adding-custom-environment-variables#docsNav).
 
 Take a few minutes to read through that section. Can you find out how to add a custom environment variable and any caveats about them?
 
