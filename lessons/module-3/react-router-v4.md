@@ -74,7 +74,7 @@ React Router allows us to:
 
 There are many high-level routers that come with the `react-router-dom` module:
 
-* `<BrowserRouter>` - 
+* `<BrowserRouter>` - for current browsers
 * `<HashRouter>` - for legacy browsers
 * `<MemoryRouter>` - for testing and non-browser environments like React Native
 * `<StaticRouter>` - for server side rendering
@@ -596,8 +596,6 @@ Then we just wrap what we returned before with a `<Link>` as such:
     )
   });
 ```
-
-If we really wanted to be efficent, we could turn this into a separate component since our `Puppies` and `Sharks` components are likely to operate the same way. So instead we can just render the component and pass through all of the data as such:
 
 And that's it! Go ahead and work on setting up dynamic routes for the other two components!
 
