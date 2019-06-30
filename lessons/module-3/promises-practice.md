@@ -4,34 +4,21 @@ tags: promises, event loop, heap, task queue, single-threaded, non-blocking, cal
 module: 3
 ---
 
-## Promises Practice Repo
-
-This repo was created using `create-react-app`
-
-Clone [this repo](https://github.com/turingschool-examples/promises-practice) and the [promises-api](https://github.com/turingschool-examples/promises-api) repo down.
-
-For both:
-
-`npm install`
-
-`npm start`
-
 
 ### Learning Goals
+Brief Understanding of:
+* `single-threaded JS` - JavaScript runs on a single call stack aka it is single-threaded..
+* `asynchronous JS` This refers to the concept of more than one thing occuring at the same time in JavaScript.
+* `non-blocking` - Used to describe how the event loop model in JavaScript works.  It is non-blocking.  I/O is performed via events and callbacks so that even when your application awaits a query or HTTP request, the application can still process things like user input.
+* ` call stack` The call stack is where javascript code gets pushed and executed one by one as the interpreter reads your program.  It is then popped out once the execution finishes
+* `task queue` The task queue is where asynchronous code gets pushed to and waits for the execution.
+* `event loop` An event loop has one or more task queues.  This is to help coordinate events, user interactions, scripts, rendering, networking, and etc.  It runs continuously and checks the call stack to see if there are any frames to execute
+* `heap` The heap denotes a large mostly unstructured region of memory where objects are allocated
+
 Understanding of:
 * Why promises over callbacks
 * How to implement a promise
 * How to use Promise.all()
-
-Brief Understanding of:
-* single-threaded JS
-* asynchronous JS
-* non-blocking
-* call stack
-* task queue
-* event loop
-* heap
-
 
 ### Quick Review
 
@@ -87,7 +74,14 @@ A very interesting property of the event loop model is that JavaScript, unlike a
 
 Heres a great example:
 
-[Example](https://codepen.io/anon/pen/QwXbLy?editors=1011) -->  When Big Loop handler runs the browser appears frozen. We know JavaScript’s call stack is synchronous soBig Loop executes on the call stack until completion. It’s also non-blocking where Do Stuff clicks are still received even if they didn’t execute immediately.
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="js,result" data-user="Kalikoze" data-slug-hash="dBdMpB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Non-Blocking JS">
+  <span>See the Pen <a href="https://codepen.io/Kalikoze/pen/dBdMpB/">
+  Non-Blocking JS</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+When Big Loop handler runs the browser appears frozen. We know JavaScript’s call stack is synchronous soBig Loop executes on the call stack until completion. It’s also non-blocking where Do Stuff clicks are still received even if they didn’t execute immediately.
 
 
 #### Asynchronous
@@ -99,7 +93,9 @@ How does that work? Well for a long time the web has used `callbacks` to help so
 
 Here's an example:
 ![example](http://recordit.co/XF9fvyv04x/gif/notify)
-[try it yourself](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D)
+
+You can try it yourself [here](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D).
+
 When your code first executes, it loads events and saves them in [`heap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Heap) , but for now lets reference it by the web api box. So the call stack starts running through our code and `setTimeout(function timeout{...})`(line 9) gets put on the call stack. Which sends it over to the web api box for storage until it's ready to execute the callback after 5 seconds! Once the wait is done, it will send the callback to the `callback queue / task queue` while the `event loop` waits for a good time to throw it on the stack / till the stack is cleared. ( event loop is the orange loop in this example )
 
 Now we also saw that the `DOM event listener`, when put on the call stack(line 1) is pushed to the web apis storage and waits/listens for its time to be called. You'll notice that once I trigger the event by clicking the 'Click me!' button, that callback is pushed to the `callback queue / task queue`. Once the stack has cleared the `event loop` will trigger the next callback.
@@ -114,11 +110,19 @@ Hope that review was helpful!
 
 ---
 
+## Promises Practice Repo
+
+We're going to be building out this site with two different repos.  One for the client side code and another is an api that serves up a collection of members.  Something to note is that the API given to us doesn't automatically give us all of the info needed to display the staff members. There is a second nested endpoint we will need to fetch... More on this in a moment.
+
+Clone [this repo](https://github.com/turingschool-examples/promises-practice) and the [promises-api](https://github.com/turingschool-examples/promises-api) repo down.
+
+For both:
+
+`npm install`
+
+`npm start`
+
 ### What we're working with
-
-What we have so far is an api that serves up a collection of members [here](https://github.com/turingschool-examples/promises-api). We also have our client side code located on this [repo](https://github.com/turingschool-examples/promises-practice).
-
-So the API given to us doesn't automatically give us all the info needed to display the staff members. There is a second nested endpoint we will need to fetch..
 
 The endpoints given to us are:
 * [http://localhost:3001/api/frontend-staff](http://localhost:3001/api/frontend-staff) - this returns an object with a key of bio and the value is an array of objects that contain the name of each staff member and another endpoint to grab some additional info (bio & image).
@@ -151,7 +155,7 @@ componentDidMount() {
   const url = 'http://localhost:3001/api/frontend-staff'
   fetch(url)
   .then(response => response.json())
-  .then(data => this.fetchBios(data.bios)) // we'll write this function that will fetch all of the nested endpoints shortly
+  .then(data => this.fetchBios(data.bio)) // we'll write this function that will fetch all of the nested endpoints shortly
   .then(staff => this.setState({ staff }))
   .catch(error => console.log(error))
 }
