@@ -5,6 +5,15 @@ tags: npm, node modules
 mod: 2
 ---
 
+<style type="text/css">
+    section a:link,section a:visited{border-bottom: 0px;color:#05c2d1}
+    section .discuss {color: #555;padding:20px;font-size:0.9em;background-color:#fcfcfc;border:1px solid #eee}
+    hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
+    ul li {line-height: 1.5em;font-size: 0.95em;}
+    em { font-size: 0.85em; }
+</style>
+
+
 ### Vocab
 
 * `Package Manager` - a registry where developers can publish small, reusable pieces of code that they've written and would like others to be able to incorporate into their projects
@@ -69,11 +78,6 @@ With the exception of the `README.md` file, each of these is some sort of config
 </div>
 
 <!-- eslint, git, NPM, mocha/chai -->
-
-### Linting & .eslintrc
-
-# LETS EXPLORE THE ESLINT CONFIGURATION
-
 
 
 ## NPM
