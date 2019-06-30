@@ -63,7 +63,7 @@ So what we have is a function `foo(b)` that returns `10 + b + 11`.
 
   Lets watch the call stack:
 
-  ![call-stack](http://g.recordit.co/Hov4MmHhX2.gif)
+  ![call-stack](https://camo.githubusercontent.com/67e568d40665a1738a14494f9562c26a0563bf93/687474703a2f2f672e7265636f726469742e636f2f486f76344d6d486858322e676966)
 
 As we see the stack starts by pushing `console.log(bar(7))` because it was the first executed code we have. Which then calls `bar(7)` to execute `foo(x * y)`
   to execute the inner operation `x * y`. So far we have just been pushing things to the stack. Until after `x * y` has finished executing then it gets popped off!
@@ -103,7 +103,7 @@ How does that work? Well for a long time the web has used `callbacks` to help so
 
 Here's an example:
 
-![asynchronous-js](http://recordit.co/XF9fvyv04x/gif/notify)
+![asynchronous-js](https://camo.githubusercontent.com/ea4e7a098581e809bb96565777b98a0e3b7f1312/687474703a2f2f7265636f726469742e636f2f584639667679763034782f6769662f6e6f74696679)
 
 You can try it yourself [here](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D).
 
