@@ -1,16 +1,9 @@
 ---
 title: React Router 4
+length: 3 hours
 tags: React, Router
+module: 3
 ---
-
-## Agenda
-
-* Discuss the need for routing
-* Learn about the building blocks of React Router
-* Learn about the different types of `<Route />`
-* Learn about Link, NavLink, Redirect, and Switch
-* Build some routes
-* Build some dynamic routes using url params
 
 ## Learning Goals
 * Be able to explain the need for routing
@@ -19,25 +12,25 @@ tags: React, Router
     * BrowserRouter
     * Route
     * Link / NavLink
+    * Redirect
     * Switch
+* Utilize url params to build dynamic routes
 
 ## Vocab
-* BrowserRouter
-* Route
-* Link
-* NavLink
-* Redirect
-* Switch
-* match
+* `BrowserRouter` A <Router> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
+* `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
+* `Link` Links provide declarative, accessible navigation around your application
+* `NavLink` A special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL.
+* `Redirect` Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
+* `Switch` Renders the first child <Route> or <Redirect> that matches the location. <Switch> is unique in that it renders a route exclusively (only one route wins).
+* `match` A match object contains information about how a <Route path> matched the URL.
 
 ## React Router (v4)
-This lesson goes with [this repo](https://github.com/turingschool-examples/react-router-example)
 
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 ### Why Routing?
 
-Up until now you've been creating single page applications that conditionally render based on a boolean in state. Something along the lines of...
+Up until now you've been creating single page applications that maybe have utilized conditional rendering based on a boolean in state. Something along the lines of...
 
 ```jsx
 class SomeComponent extends Component {
@@ -58,7 +51,7 @@ class SomeComponent extends Component {
 
 This works...but as our applications grow larger and we need to render more components, these conditinal toggles can become difficult to manage.
 
-Suppose you have a long list of movies and you only want to show a user's favorites when they click on a `Favorites` button... 
+Suppose you have list of star wars characters and you only want to show a user's favorites when they click on a `Favorites` button... 
 You can easily accomplish this with React Router!
 
 Enter [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
@@ -81,9 +74,9 @@ React Router allows us to:
 
 There are many high-level routers that come with the `react-router-dom` module:
 
-* `<BrowserRouter>`
+* `<BrowserRouter>` - 
 * `<HashRouter>` - for legacy browsers
-* `<MemoryRouter>` - for testing
+* `<MemoryRouter>` - for testing and non-browser environments like React Native
 * `<StaticRouter>` - for server side rendering
 
 We will be focusing on **`BrowserRouter`** which is _A Router that uses the HTML5 history API to keep your UI in sync with the URL._
@@ -259,7 +252,7 @@ First let's install `react-router-dom`
 npm i --save react-router-dom
 ```
 
-Next let's go import it and wrap it around our main entry point `App`:
+Next let's go import it and wrap <BrowserRouter> around our main entry point `App`:
 
 ```jsx
 //index.js
@@ -293,15 +286,13 @@ export default class App extends Component {
   
   render() {
     return (
-      <div className='App'>
-        <div className='header-section'>
-          <header>
-            <NavLink to='/unicorns' className='nav'> Unicorns </NavLink>
-            <NavLink to='/puppies' className='nav'> Puppies </NavLink>
-            <NavLink to='/sharks' className='nav'> Sharks </NavLink>
-          </header>
-        </div>
-      </div>
+      <main className='App'>
+        <header>
+          <NavLink to='/unicorns' className='nav'> Unicorns </NavLink>
+          <NavLink to='/puppies' className='nav'> Puppies </NavLink>
+          <NavLink to='/sharks' className='nav'> Sharks </NavLink>
+        </header>
+      </main>
     );
   }
 }
@@ -318,10 +309,10 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div>
+    <section>
       <h1>Welcome!</h1>
       <h4>Click on the links above to see a variety of creatures</h4>
-    </div>
+    </section>
   )
 }
 
@@ -336,7 +327,7 @@ Now let's define the route:
 <Route path='/' component={Home} />
 ```
 
-### Your Turn!
+#### Your Turn!
 
 Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` Route working by displaying `<h1> Unicorns! </h1>`.
 
@@ -344,7 +335,9 @@ _hint: You'll probably need to create a new component to render when on the `/un
 
 ![unicorn](http://www.chickensmoothie.com/oekaki/image/image.php?id=410567&size=large&format=auto&rev=1302806499)
 
-Here's how we can do it using the `component` render method on a `Route`:
+### Using the component render method
+
+Let's start out with using the `component` render method on a `Route`:
 
 ```jsx
 //App.js
@@ -375,14 +368,20 @@ import unicornData from './data/unicorn-data'
 
 const Unicorns = () => {
 
-  const displayUnicorns = unicornData.map((unicorn, i) => <img src={unicorn.image} className='app-img' key={unicorn.id}/>)
+  const displayUnicorns = unicornData.map(unicorn => {
+    return <img 
+      src={unicorn.image} 
+      className='app-img' 
+      key={unicorn.id}
+    />
+  });
 
   return (
-    <div className='image-display'>
+    <>
       <h1>Unicorns!</h1>
       {displayUnicorns}
-    </div>
-  )
+    </>
+  );
 }
 
 export default Unicorns;
@@ -390,7 +389,7 @@ export default Unicorns;
 
 We should now be able to see a bunch of unicorns displaying on the page!
 
-### Your Turn!
+#### Your Turn!
 
 Take some time to mimic these steps for `Puppies` and `Sharks` so that each respective route shows images of their respective creatures.
 
@@ -413,6 +412,65 @@ Take some time to mimic these steps for `Puppies` and `Sharks` so that each resp
 	* `/sharks`
 * Each route renders a different component
 * The `Home` route requires an `exact` attribute because all of the routes contain `/`
+
+### Refactor using the render method
+
+Taking a look at this, you might notice that we have three separate components for unicorns, puppies, and sharks.  This kind of defeats the purpose of React though since we are essentially displaying the same information with different data for each route.  Let's try reusing the same component to display that data!  We can pull the data that is imported inside the App and pass the data down to a `<Creatures />` component using the render attribute on the `<Route />` component.
+
+```jsx
+// App.js
+
+import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom'
+import Home from './Home'
+import Creatures from './Creatures'
+import unicornData from './data/unicorn-data'
+import puppyData from './data/puppy-data'
+import sharkData from './data/shark-data'
+import './App.css';
+
+export default class App extends Component {
+
+  render() {
+    return (
+      <main className="App">
+          <header>
+            <NavLink to='/unicorns' className='nav'> Unicorns </NavLink>
+            <NavLink to='/puppies' className='nav'> Puppies </NavLink>
+            <NavLink to='/sharks' className='nav'> Sharks </NavLink>
+          </header>
+          <Route exact path='/' component={Home} />
+          <Route path='/unicorns' render={() => <Creatures data={unicornData} />} />
+          <Route path='/puppies' render={() => <Creatures data={puppyData} />} />
+          <Route path='/sharks' render={() => <Creatures data={sharkData} />} />
+      </main>
+    );
+  }
+}
+```
+
+```jsx
+// Creatures.js
+
+import React from 'react';
+import './image-display.css';
+
+const Creatures = ({data}) => {
+  const displayCreatures = data.map(creature => {
+    const { id, image } = creature;
+    return <img src={image} className='app-img' key={id} />
+  });
+
+  return (
+    <>
+      <h1>Creatures!</h1>
+      {displayCreatures}
+    </>
+  );
+}
+
+export default Creatures;
+```
 
 Hopefully this seems pretty straight forward so far, but what if we want to go a level deeper? When a user clicks on an image, we want to send them to a new view where they can see information specific to _that_ creature only. This is where we get into **dynamic routing**.
 
@@ -481,9 +539,9 @@ It's because we didn't specify the `exact` attribute in our `/unicorns` route, s
 ```jsx
 //App.js
 
-<Route exact path='/unicorns' component={Unicorns} />
-<Route exact path='/sharks' component={Sharks} />
-<Route exact path='/puppies' component={Puppies} />
+<Route exact path='/unicorns' render={() => <Creatures data={unicornData} />} />
+<Route exact path='/puppies' render={() => <Creatures data={puppyData} />} />
+<Route exact path='/sharks' render={() => <Creatures data={sharkData} />} />
 ```
 
 Ok back to business!
@@ -510,10 +568,7 @@ Here's the code:
 <Route path='/unicorns/:id' render={({ match }) => {
 	const { id } = match.params
 	const creature = unicornData.find(uni => uni.id === parseInt(id))
-	      
-	if (creature) {
-	  return <CreatureDetails {...creature} />
-	}
+  return creature && <CreatureDetails {...creature} />
 }} />
 ```
 
@@ -521,71 +576,28 @@ Now if we visit `http://localhost:3000/unicorns/1` we should see a view specific
 
 ### Your Turn!
 
-See if you can modify your `Unicorn` component so that each image can be clicked and `Link` to the correct Route / path / URL.
+See if you can modify your `Creatures` component so that each image can be clicked and `Link` to the correct Route / path / URL.
 
 ![tunacorn](http://www.nataliedee.com/081905/tuna-plus-unicorn.jpg)
 
-Here's a simple addition to `Unicorn.js`.
+Here's a simple addition to `Creatures.js`.
 
 First we `import { Link } from 'react-router-dom'`
 
 Then we just wrap what we returned before with a `<Link>` as such:
 
 ```jsx
-const displayUnicorns = unicornData.map((unicorn, i) => {
-	return (
-	  <Link to={`/unicorns/${unicorn.id}`} key={unicorn.id}>
-	    <img src={unicorn.image} className='app-img' />
-	  </Link>
-	)
-})
+  const displayCreatures = data.map(creature => {
+    const { id, image, type } = creature;
+    return (
+      <Link to={`/${type}/${id}`} key={id}>      
+        <img src={image} className='app-img' />
+      </Link>
+    )
+  });
 ```
 
 If we really wanted to be efficent, we could turn this into a separate component since our `Puppies` and `Sharks` components are likely to operate the same way. So instead we can just render the component and pass through all of the data as such:
-
-```jsx
-// Unicorn.js
-
-import React from 'react';
-import './image-display.css';
-import unicornData from './data/unicorn-data.js';
-import ImageCard from './ImageCard';
-
-const displayUnicorns = unicornData.map((unicorn, i) => 
-  <ImageCard {...unicorn} key={unicorn.id} className='app-img'/>
-)
-
-const Unicorns = () => {
-
-	return (
-		<div className='image-display'>
-		  <h1>Unicorns!</h1>
-		  {displayUnicorns}
-		</div>
-	)
-}
-
-export default Unicorns;
-```
-
-```jsx
-// ImageCard.js
-
-import React from 'react';
-import './image-display.css';
-import { Link } from 'react-router-dom';
-
-const ImageCard = ({ name, bio, image, id, type }) => {
-
-  return (
-      <Link to={`${type}/${id}`}>
-        <img src={image} className='app-img' />
-      </Link>
-  )
-}
-
-export default ImageCard;
-```
 
 And that's it! Go ahead and work on setting up dynamic routes for the other two components!
 
