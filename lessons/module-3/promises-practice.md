@@ -5,8 +5,23 @@ module: 3
 ---
 
 
-### Learning Goals
+## Learning Goals
 Brief Understanding of:
+* single-threaded JS
+* asynchronous JS
+* non-blocking
+* call stack
+* task queue
+* event loop
+* heap
+
+Understanding of:
+* Why promises over callbacks
+* How to implement a promise
+* How to use Promise.all()
+
+## Vocab
+
 * `single-threaded JS` - JavaScript runs on a single call stack aka it is single-threaded..
 * `asynchronous JS` This refers to the concept of more than one thing occuring at the same time in JavaScript.
 * `non-blocking` - Used to describe how the event loop model in JavaScript works.  It is non-blocking.  I/O is performed via events and callbacks so that even when your application awaits a query or HTTP request, the application can still process things like user input.
@@ -15,16 +30,11 @@ Brief Understanding of:
 * `event loop` An event loop has one or more task queues.  This is to help coordinate events, user interactions, scripts, rendering, networking, and etc.  It runs continuously and checks the call stack to see if there are any frames to execute
 * `heap` The heap denotes a large mostly unstructured region of memory where objects are allocated
 
-Understanding of:
-* Why promises over callbacks
-* How to implement a promise
-* How to use Promise.all()
-
-### Quick Review
+## Quick Review
 
 Javascript is `a single-threaded, non-blocking, asynchronous, concurrent language`. That's a mouth full... Let's break things down into sections that are a bit more manageable.
 
-#### Single-threaded
+### Single-threaded
 
 As we know javascript has a single-threaded `call stack` that has stack frames. As our code is run, each stack frame is pushed and popped from the top of the call stack, the top being the current code being executed. Think of a can of Pringles... the first in is the last out (FILO).
 
@@ -68,7 +78,7 @@ Go try it out [here](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZm9vKGIpIHsKI
   * `Non-blocking:` Blocking occurs when the application state is suspended as a thread runs.
 
 
-#### Non-blocking
+### Non-blocking
 
 A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for a network request to return, it can still process other things like user input.[*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Never_blocking)
 
@@ -84,7 +94,7 @@ Heres a great example:
 When Big Loop handler runs the browser appears frozen. We know JavaScript’s call stack is synchronous soBig Loop executes on the call stack until completion. It’s also non-blocking where Do Stuff clicks are still received even if they didn’t execute immediately.
 
 
-#### Asynchronous
+### Asynchronous
 
 Let's continue on with asynchronous. With non-blocking code, we can have a user click a button and continue on with I/O without making them wait.
 
@@ -141,7 +151,7 @@ The endpoints given to us are:
 
 The first thing we need ask ourselves is where do we want to fetch our data from. This [article](https://www.robinwieruch.de/react-fetching-data/) does a really solid job of answering that question. Looks like componentDidMount() is our best option. With componentDidMount(), We can be assured that our component has mounted on the DOM and we can also setState there once we get our data back.
 
-#### Fetch
+### Fetch
 
 If you're not feeling totally comfortable with `fetch` yet, I suggest taking a five minutes to review the [docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
@@ -163,7 +173,7 @@ componentDidMount() {
 ```
 When we make a request and the response comes back as JSON, the first thing we need to do is parse the JSON. Notice also that we are chaining another .then() to the response.json(). We can do this because .json() returns a promise that resolves with the result of parsing the body text as JSON.
 
-#### Promise.all()
+### Promise.all()
 
 Now that we have our initial fetch set up, we need to iterate over the array to fetch the other information we need. Yes, we could make 10 different fetch calls, but all our data is going to come back at different times. That's not going to make for a great UI experience. How can we fetch the additional data, but wait for all the data to be returned before we do anything with it? Enter Promise.all()
 
