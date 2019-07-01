@@ -159,7 +159,7 @@ Color and font spec:
   * [ ] Has 5 or less media queries for responsiveness
 * [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle and
   * [ ] Has 3 or less media queries for responsiveness
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
 
