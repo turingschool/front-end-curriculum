@@ -6,7 +6,7 @@ module: 3
 
 
 ## Learning Goals
-Brief Understanding of:
+Review these concepts:
 * single-threaded JS
 * asynchronous JS
 * non-blocking
