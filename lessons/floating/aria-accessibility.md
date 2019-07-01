@@ -117,7 +117,7 @@ What this doesn't tell you is if the menu is already open or closed, which is fi
 Luckily ARIA provides state information that we can add to our markup.
 
 ```html
-<button 
+<button
   aria-expanded="true"
 >
   Toggle Menu
@@ -216,12 +216,12 @@ Answer the following questions:
 - What is the difference between the DOM tree and an Accessibility Tree?
 
 <!--  
-  Accessibility tree is a seperate tree used by screen readers to navigate the DOM
+  Accessibility tree is a separate tree used by screen readers to navigate the DOM
 -->
 
 - What 3 main types of information are available through the Accessibility Tree? Describe each of these types of information and provide an example.
 
-<!-- 
+<!--
   Role - what purpose does the element have?
   State - what is element doing currently? - Will likely change
   Properties - additional information about the element
@@ -229,42 +229,42 @@ Answer the following questions:
 
 - Talk about the two different types of site navigation using a screen reader: Semantic Nagivation vs Landmark Navigation. How are they different? How are they the same? Why are these tools helpful for users on a screen reader?
 
-<!-- 
+<!--
   using keyboard shortcuts you can easily navigate the page in different ways.
-  Semantic navigation: moving through list tags, heading tags 
+  Semantic navigation: moving through list tags, heading tags
   Landmark Navigation: using semantic tags you can navigate between article, section, footer, main...  
   users can scan a page in multiple ways
 -->
 
 - True or False: You can use JavaScript to directly interact with the Accessibility Tree. Elaborate.
 
-<!-- 
+<!--
   No, hopefully in the future.
   We can use ARIA attributes to override the default accessibility tree
 -->
 
 - How does a screen reader interact with `<div>` and `<span>` tags?
-<!-- 
+<!--
   semantically neutral, treats it like plain text
 -->
 
 - What could you do in order to tell a screen reader to treat an element, for instance a `<span></span>` tag, as a button? What does this do to the functionality of this element?
 
-<!-- 
+<!--
   <span role="button"></span>
   screen reader will treat like a button, won't give it the ability of a button, still have to do that with js
 -->
 
 - Seeing as adding a role doesn't actually change the elements functionality or behavior, what could you do to make sure a screen reader catches an element as it tabs through the page?
 
-<!-- 
+<!--
   <span role="button" tabindex="0"></span>
   add tabIndex to the element
  -->
 
 - Write the necessary CSS that indicates visual changes have happened when hovering or focusing on something with the role of a button.
 
-<!-- 
+<!--
   [role="button"]:hover [role="button"]:focus {
     // css properties here
   }
@@ -272,20 +272,20 @@ Answer the following questions:
 
 - What ARIA property gives a user a shortcut to content associated with a particular button?
 
-<!-- 
+<!--
 aria-controls
 <span role="button" aria-controls="navigation-pane"></span>
  -->
 
 - When should you use `aria-hidden` and why?
 
-<!-- 
+<!--
   if content is not needed for screen reader - remove content from accessibility tree
  -->
 
 - What does this mean in terms of what you need to do within your JavaScript to make sure your ARIA markup stays accurate?
 
-<!-- 
+<!--
   You have to use JS to update the aria properties to make sure they stay current with what is being displayed
  -->
 
@@ -303,7 +303,7 @@ All information in this lesson plan was pulled as a summary of the following two
 * [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
 
 This is the documentation for ARIA. As you can see it is super dense and hard to
-pull out the practical pieces: 
+pull out the practical pieces:
 
 * [Aria Documentation](https://www.w3.org/TR/wai-aria)
 * [Aria Examples & Design Patterns](https://www.w3.org/TR/wai-aria-practices/#aria_ex)
