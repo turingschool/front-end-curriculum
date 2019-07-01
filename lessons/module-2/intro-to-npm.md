@@ -61,7 +61,15 @@ In order to demystify some of the complex structure we'll see in the future, let
 
 ## Configuration Files
 
-Looking at the top-level, root directory of our boilerplate, we already have quite a few files:
+Looking at the top-level, root directory of our boilerplate, we already have quite a few files.
+
+
+<div class="discuss">
+  <h4>Turn and Talk</h4>
+  <p>Based on the files in our root, what tools are we going to be using to facilitate the development of our application?</p>
+</div>
+
+<!-- eslint, git, NPM, mocha/chai -->
 
 * `.eslintrc` - defines our rules for stylistic conventions we want our code to follow
 * `.gitignore` - tells git not to push certain files to our remote repo
@@ -71,13 +79,6 @@ Looking at the top-level, root directory of our boilerplate, we already have qui
 
 With the exception of the `README.md` file, each of these is some sort of configuration file. A **configuration file** is a file that allows you to define how a particular tool you're using should interact with your codebase.
 
-
-<div class="discuss">
-  <h4>Turn and Talk</h4>
-  <p>Based on the files in our root, what tools are we going to be using to facilitate the development of our application?</p>
-</div>
-
-<!-- eslint, git, NPM, mocha/chai -->
 
 
 ## NPM
@@ -167,6 +168,16 @@ As we install dependencies, we populate a directory called `node_modules` - this
   <h4>Turn and Talk</h4>
   <p>Why wouldn't we want to commit our `node_modules` directory? If this directory is not being pushed up to GitHub, how do other developers still have access to each of our project's dependencies?</p>
 </div>
+
+
+You'll notice that the dependencies we install each have a value associated with them like '1.4.6' -- these values are the version numbers of our dependencies.
+
+
+<div class="discuss">
+  <h4>Reading</h4>
+  <p>Read through the following <a href="https://semver.org/">documentation</a>. What do each of the numbers in a version number represent?</p>
+</div>
+
 
 
 <!-- I discuss semver here but at a high-level, very briefly. --> 
