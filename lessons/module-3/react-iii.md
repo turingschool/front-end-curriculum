@@ -1,5 +1,5 @@
 ---
-title: React III: Advanced data management
+title: React III - Advanced data management
 length: 180
 tags: react, ideabox, lifecycle methods, prop types, conditional rendering
 module: 3
@@ -418,7 +418,7 @@ Refactor IdeaBox to use these endpoints. Hint: you might need to write more fetc
 
 ### Take a look ahead to our async testing lesson and...
 
-Pull the fetches into their own files and try to write out a few async tests!
+...pull the fetches into their own files and try to write out a few async tests!
 
 ## References
 
