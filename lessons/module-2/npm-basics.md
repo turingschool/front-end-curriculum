@@ -1,5 +1,5 @@
 ---
-title: NPM Basics
+title: NPM Cheat Sheet
 length: 30 min
 tags: npm, node modules
 mod: 2

@@ -111,10 +111,22 @@ src/
 - Users should be able to unfavorite a card.  
 - If there are no favorites, there should be a message indicating that there are no favorites.
 
-## Extension
+## Extensions (DO THESE IN ORDER)
 
-1. Implement a `More` button. When clicked, the next 10 items of that category should be shown. There should be a `Back` button to go back to the previous page.  
-2. Have your data persist in `localStorage`. Think about when you want to store it.
+1. Get more exciting data on our People and Planet cards!
+
+- People Cards:
+  - Homeworld
+  - Species  
+  - Population of Homeworld 
+
+- Planet Cards:
+  - Population  
+  - Climate  
+  - Residents  
+
+2. Implement a `More` button. When clicked, the next 10 items of that category should be shown. There should be a `Back` button to go back to the previous page.  
+3. Have your data persist in `localStorage`. Think about when you want to store it.
 
 ## Rubric 
 

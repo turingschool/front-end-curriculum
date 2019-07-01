@@ -11,8 +11,8 @@ title: Number Guesser Doubles
 * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Understand event bubbling and use event delegation on dynamic elements
 
-## Overview: 
-- Build a game where two users can guess a number between 1 and 100, with the ability 
+## Overview:
+- Build a game where two users can guess a number between 1 and 100, with the ability
 for the user to add custom ranges for increased difficulty of play
 - Display the current guess of both players
 - Display the final results of each match in card UI
@@ -97,7 +97,7 @@ Work through these **in order**:
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=1037661414)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1CS4BipxFi1VPh5NJFsn0yoeDTQQL_yjwcIM0fccVOGc/edit?usp=sharing)
 
 #### Layout comps
 

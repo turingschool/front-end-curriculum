@@ -6,7 +6,7 @@ module: 3
 
 
 ## Learning Goals
-Brief Understanding of:
+Review these concepts:
 * single-threaded JS
 * asynchronous JS
 * non-blocking
@@ -140,7 +140,7 @@ The endpoints given to us are:
 
 ![api/frontend-staff](../../assets/images/api-frontend-staff.png)
 
-* [http://localhost:3001//api/bio/:id]() - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
+* [http://localhost:3001/api/bio/:id](http://localhost:3001/api/bio/1) - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
 
 #### Let's do a little pseudo-coding
 * make initial fetch
