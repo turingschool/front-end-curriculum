@@ -169,8 +169,11 @@ As we install dependencies, we populate a directory called `node_modules` - this
   <p>Why wouldn't we want to commit our `node_modules` directory? If this directory is not being pushed up to GitHub, how do other developers still have access to each of our project's dependencies?</p>
 </div>
 
+**Semantic Versioning**
 
-You'll notice that the dependencies we install each have a value associated with them like '1.4.6' -- these values are the version numbers of our dependencies.
+You'll notice that the dependencies we install each have a value associated with them like '1.4.6' -- these values are the version numbers of our dependencies. As developers update their packages, they must increase the version number of their package to allow any projects relying on it some lee-way before they update.
+
+Think back to the filter example code from earlier. Imagine the developer who created that package decided to change the name of the method from `filter` to `sift`. If this change took effect immediately, as soon as the developer pushed it to GitHub, now anybody using the `filter` method would have a broken application. Version numbers allow us to rely on a particular representation of a package (e.g. `filter` at version `1.2.3`), then update manually to a newer version (e.g. `sift` at version 2.0.0) when we have the time and knowledge to refactor our applications to work with the new changes.
 
 
 <div class="discuss">
