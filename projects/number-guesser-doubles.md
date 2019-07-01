@@ -147,7 +147,7 @@ Color and font spec:
 * [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
 * [ ]  Advanced Beginner - Application adds to the above with HTML that incorporates semantic HTML elements and has a simple, clean HTML structure.
 * [ ]  Proficient - Application adds to the above with markup that is easy to read and follows across naming conventions
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes and:
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes and:
     * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
 
 ------------------------------------------------------------------
