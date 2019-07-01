@@ -136,7 +136,7 @@ The final step here is to migrate our production database so it has the appropri
 heroku run 'knex migrate:latest'
 ```
 
-
+Note that at this point, your production database will not having anything in it - which is what we would expect. Remember that the seeds we've been running in our project up until this point have been 'dummy data' that we have used for development purposes. 
 
 ## Common Errors & Troubleshooting
 
