@@ -25,7 +25,7 @@ Students should read the first portion of the lesson (all sections marked with �
 
 ## What is FlexBox? ✅
 
-Flexbox is a part of CSS that provides a more efficient way to lay out, align and distribute space among items in a container. It helps us when we have those silly block elements, that even with display: inline-block, can be hard to do just what we want them to do.
+Flexbox is a part of CSS that provides a more efficient way to lay out, align and distribute space among items in a container. It helps us when we have those silly block elements, that even with `display: inline-block`, can be hard to do just what we want them to do.
 
 ## Parents and Children ✅
 
