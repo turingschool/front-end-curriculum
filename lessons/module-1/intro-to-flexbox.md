@@ -1,5 +1,5 @@
 ---
-title: Intro to CSS
+title: Intro to Flexbox
 length: 60
 tags: css, flexbox, layout
 ---
