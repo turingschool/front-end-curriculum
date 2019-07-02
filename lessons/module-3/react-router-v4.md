@@ -249,7 +249,7 @@ Additionally we will add a dynamic route to dig deeper into a specific creatures
 First let's install `react-router-dom`
 
 ```bash
-npm i --save react-router-dom
+npm i react-router-dom -S
 ```
 
 Next let's go import it and wrap <BrowserRouter> around our main entry point `App`:
