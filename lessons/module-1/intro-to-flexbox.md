@@ -61,8 +61,8 @@ In the code above, we now have these `h2` elements nested inside of the `article
 
 When we use Flexbox, we will make the parent elements `flex containers` and the children elements `flex items`. There isn't really a difference between the two, but you'll need to know that vocabulary to successfully navigate documentation.
 
-<img class="small" src="./assets/images/flexbox/parent-container.svg" alt="graphic of parent/container">
-<img class="small" src="./assets/images/flexbox/child-item.svg" alt="graphic of child/item">
+<img class="medium" src="./assets/images/flexbox/parent-container.svg" alt="graphic of parent/container">
+<img class="medium" src="./assets/images/flexbox/child-item.svg" alt="graphic of child/item">
 (Graphics from <a target="blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" >CSS Tricks</a>)
 
 <div class="turn-and-talk">
