@@ -81,7 +81,7 @@ endpoints so far? What is missing?
 Here's one way you could write the test:
 
 ```js
-describe('GET /students/1', () => {
+describe('GET /students/:id', () => {
   it('should return a single student', async () => {
     // setup
     const expectedStudent = await database('students').first()
