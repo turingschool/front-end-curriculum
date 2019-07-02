@@ -368,7 +368,7 @@ import unicornData from './data/unicorn-data'
 
 const Unicorns = () => {
   const displayUnicorns = unicornData.map(unicorn => {
-    const { id, image } = creature;
+    const { id, image } = unicorn;
     return <img src={image} className='app-img' key={id} />
   });
 
