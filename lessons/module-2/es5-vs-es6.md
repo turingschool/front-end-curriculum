@@ -15,6 +15,21 @@ Up until now, you've mostly been writing ECMAScript 5. (You can read more about 
 
 ES5 is comfortable and familiar, but we ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
 
+## Template Literals
+
+Constructing strings while interpolating variables:
+
+```js
+// es5 
+var name = 'Brittany';
+var greeting = 'Hello' + name + '!';
+
+// es6
+var name = 'Brittany';
+var greeting = `Hello ${name}!`;
+```
+
+
 ## Scope
 
 ### Block Scope
