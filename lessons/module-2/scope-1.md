@@ -33,7 +33,6 @@ header.innerText = 'Lorem Ipsum Dolor'
 
 The JavaScript engine will read and interpret these two lines in the order they've been written: first the browser will find the header element, then it will update its inner text. You can think of the JavaScript engine as a foreign language translator, who acts as an intermediary between two people who don't speak the same language. As developers, we understand how to write JavaScript, the JavaScript Engine knows how to read JavaScript, and can pass those instructions onto the rest of the browser.
 
-
 ## Understanding the Order of Execution
 
 In our previous example, we mentioned the JS Engine will read the two lines of code in the order they were written. Just like we might read a book, we must completely finish reading one line before we move onto the next (otherwise that book wouldn't make much sense to us)! In programming languages, this is what we call **single-threaded**. 
@@ -56,9 +55,11 @@ Let's look at a more complex example:
 10  console.log(numEvals);
 ```
 
+<section class="lesson-segment">
 ### In Your Notebook
 
-**What would you expect to be logged when we get to line 10? Why?**
+What would you expect to be logged when we get to line 10? Why?
+</section>
 
 Let's do a quick breakdown of what the interpreter did here to read this code:
 
@@ -84,7 +85,9 @@ Let's look at another example:
 7  console.log('Animal Sound: ', moo);
 ```
 
-**What would we expect to be logged when line 7 executes? Why? Is the actual behavior different than you expected?**
+<section class="lesson-segment">
+What would we expect to be logged when line 7 executes? Why? Is the actual behavior different than you expected?
+</section>
 
 Based on our previous example, where we received `NaN` because our variable hadn't been assigned a value yet, we might expect this new example to throw some sort of error as well. But it appears to work just fine! We get back `Animal Sound: Moooo!` when line 7 is executed.
 
@@ -127,11 +130,16 @@ Our function is also hoisted to the top of our code block, with its entire defin
 
 When functions are hoisted to the top of our code block, it hoists not just the function name, but the code inside of it as well. This means we can invoke functions before we've declared them without running into errors. 
 
-This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time. 
+
+<section class="note">
+### Note
+
+This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time.
+</section>
 
 
-
-#### Turn and Talk
+<section class="lesson-segment">
+### Turn and Talk
 
 With a partner, take turns explaining how the following JavaScript code would be translated by the interpreter. We will come back together as a class to discuss:
 
@@ -145,7 +153,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 6   if (result > 5) {
 7    return 'This human is rude, not giving me treats. Onto the next one.';
 8   } else {
-9    return 'Yum, human food!'
+9    return 'Yum, human food!';
 10  }
 11 }
 12 
@@ -155,6 +163,7 @@ With a partner, take turns explaining how the following JavaScript code would be
 16
 17 beggingTime = 30;
 ```
+</section>
 
 ## Execution Call Stack 
 
@@ -165,52 +174,62 @@ A stack is a fundamental data structure in Computer Science that follows "First-
 function buildLaser () {  
   var message = 'Laser Built';  
   console.log(message); 
-} 
- function buildMoonBase () {  
+}
+
+function buildMoonBase () {  
   var message = 'Moon Base Built';  
   buildLaser(); 
   console.log(message); 
-} 
- function ransomTheWorld () { 
+}
+
+function ransomTheWorld () { 
   buildMoonBase();  
-} 
- ransomTheWorld();  
-``` 
+}
+
+ransomTheWorld();  
+```
 
 As the call stack builds up, each function has its own execution context.  
 1. We start in the global execution context  
-2. `ransomTheWorld` is called, creating a new call on the stack 
-3. `buildMoonBase` is called creating a new call on the stack. Within this funciton, a variable is decalred and `buildLaser` is called  
-4. `buildLaser` being invoked creates a new call on the stack 
-5. `buildLaser` declares a variable, prints the variable to the console, and is returned and popped off the call stack... bringing us back to the context of `buildMoonBase`  
-6. `buildMoonBase` prints the previously declared variable to the console and is returned and popped off the call stack... bringing us back to the context of `ransomTheWorld`  
-7. `ransomTheWorld` returns and is popped off. Our stack frame is empty and we are back in the global execution context.  
- ![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif) 
+1. `ransomTheWorld` is called, creating a new call on the stack 
+1. `buildMoonBase` is called creating a new call on the stack. Within this funciton, a variable is decalred and `buildLaser` is called  
+1. `buildLaser` being invoked creates a new call on the stack 
+1. `buildLaser` declares a variable, prints the variable to the console, and is returned and popped off the call stack... bringing us back to the context of `buildMoonBase`  
+1. `buildMoonBase` prints the previously declared variable to the console and is returned and popped off the call stack... bringing us back to the context of `ransomTheWorld`
+1. `ransomTheWorld` returns and is popped off. Our stack frame is empty and we are back in the global execution context.  
 
-#### Turn and Talk 
+![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif) 
+
+<section class="lesson-segment">
+### Turn and Talk 
 
 With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. While one person is speaking, the other person should be diagramming this process.
 
 ```js  
 var myNum = 21; 
- function addTwo(num) { 
+
+function addTwo(num) { 
   hello();  
   return num + 2; 
-} 
- function hello() { 
+}
+
+function hello() { 
   console.log('hello'); 
-} 
- var sum = addTwo(myNum); 
+}
+
+var sum = addTwo(myNum); 
 console.log(sum); 
-``` 
+```
+</section>
 
 
-#### Closing
+<section class="checks-for-understanding">
+### Check for Understanding
 
-Using your journal, take a few minutes to answer the following:
+Using your journal, take a few minutes to answer the question:
 
-- What are the most important/significant ideas or elements about how the JS engine executes code?
-
+What are the most important/significant ideas or elements about how the JS engine executes code?
+</section>
 
 
 ### Further Reading
