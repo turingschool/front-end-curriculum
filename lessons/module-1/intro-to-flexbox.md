@@ -9,11 +9,7 @@ tags: css, flexbox, layout
 * Explain the difference between a parent and child element, be able to identify direct children
 * Apply Flexbox to containers in order to achieve a desired layout
 
-## Prep
-
-Students should read the first portion of the lesson (all sections marked with ✅), until you see the Stop Signs (🛑).
-
-## Vocabulary ✅
+## Vocabulary
 
 * parent
 * child
@@ -23,11 +19,11 @@ Students should read the first portion of the lesson (all sections marked with �
 * property
 * value
 
-## What is FlexBox? ✅
+## What is FlexBox?
 
 Flexbox is a part of CSS that provides a more efficient way to lay out, align and distribute space among items in a container. It helps us when we have those silly block elements, that even with `display: inline-block`, can be hard to do just what we want them to do.
 
-## Parents and Children ✅
+## Parents and Children
 
 As we start working with Flexbox, a very important distinction should be pointed out. We need to be careful about the CSS rules we apply to a parent element vs. those to a child element. A **parent** element wraps other elements, a **child** is nested inside the parent.
 
@@ -67,12 +63,9 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 (Graphics from <a target="blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" >CSS Tricks</a>)
 
 <div class="turn-and-talk">
-  <h3>Explore Flexbox ✅</h3>
+  <h3>Explore Flexbox</h3>
   <p>Fork <a href="https://codepen.io/ameseee/pen/PrQObO">this</a> CodePen to your account. One-by-one, uncomment lines 3, 4, 12, 13, and 14. Take note of what impact each "uncomment" has. Identify the containers and items each time Flexbox is used. After you make predictions about what each declaration does, read up on them on <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks</a>. Do <strong>not</strong> read about every single thing on the page; use <code>cmd + f</code> to search for specific properties!</p>
 </div>
-
-
-🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑 🛑
 
 **NOTE:** Many of the examples used in this document contain a set of colored boxes. However, you won't find the styles for those boxes in the CSS. They are loaded in the CSS Pen settings, thanks to whoever made this: https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/flexbox-playground.css !
 
