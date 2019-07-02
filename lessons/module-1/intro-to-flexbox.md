@@ -79,9 +79,9 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 
 Without Flexbox, 10 colorful `article`s might look like this:
 
-<p class="codepen" data-height="300" data-theme-id="36709" data-default-tab="html,result" data-user="turing-kwk" data-slug-hash="bJKmLB" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Normal Block Elements">
-  <span>See the Pen <a href="https://codepen.io/turing-kwk/pen/bJKmLB/">
-  Flexbox: Normal Block Elements</a> by Turing KWK (<a href="https://codepen.io/turing-kwk">@turing-kwk</a>)
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="RzMYNj" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Normal Blocks Els">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/RzMYNj/">
+  Flexbox: Normal Blocks Els</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -89,9 +89,9 @@ Without Flexbox, 10 colorful `article`s might look like this:
 
 But with Flexbox, we can start having some control over them:
 
-<p class="codepen" data-height="300" data-theme-id="36709" data-default-tab="html,result" data-user="turing-kwk" data-slug-hash="Pgayxz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1.0em 0; padding: 1em;" data-pen-title="Flexbox: Applying Flexbox">
-  <span>See the Pen <a href="https://codepen.io/turing-kwk/pen/Pgayxz/">
-  Flexbox: Applying Flexbox</a> by Turing KWK (<a href="https://codepen.io/turing-kwk">@turing-kwk</a>)
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="WqzgbL" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Creating a Container">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/WqzgbL/">
+  Flexbox: Creating a Container</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -120,30 +120,59 @@ We frequently see white space (margin or padding) used, and the content is **cen
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 <br>
 
-But the items are still all crunched together. They might need some breathing room too, which can be achieved with margin.
+But the items are still all crunched together. They might need some breathing room too, which can be achieved with margin!
 
-<div class="try-it">
+<div class="turn-and-talk">
   <h2>Try It: Justify Content</h2>
   <p>On the container's CSS rule, change the code to: <code class="try-it-code">justify-content: space-between;</code>. What happens?</p>
-  <p>Now try: <code class="try-it-code">justify-content: space-around;</code>. What is the difference between around and space-between?</p>
+  <p>Now try: <code class="try-it-code">justify-content: space-around;</code>. What is the difference between space-around and space-between?</p>
   <p>Finished early? Learn about even more values that we can provide to <code class="try-it-code">justify-content</code> with <a target="blank" href="https://css-tricks.com/almanac/properties/j/justify-content/">CSS Tricks</a>.</p>
 </div>
 
 The `justify-content` property allows us to control how our content sits _on the main axis_.
 
-<div class="try-it">
+<div class="turn-and-talk">
   <h2>Try It: Justify Content</h2>
   <p>On the container's CSS rule, change the code to: <code class="try-it-code">flex-direction: column; justify-content: center;</code>. What happens? Why do you think that is?</p>
 </div>
 
+In the section above, you should have observed that `justify-content: center;` had a different impact - it centered the items vertically. Since `flex-direction: column;` was applied, the _main axis_ was the vertical axis. `justify-content` will apply it's values to the items along the _main axis_.
+
 ## Align Items
 
-Just like we can control how our content sits on the main axis with `justify-content`, we have a tool to control how our content sits _on the cross-axis_. Check out the CodePen below. Try changing the value for `align-items` to `flex-end`, then `flex-start`, and see what happens!
+Just like we can control how our content sits on the main axis with `justify-content`, we have a tool to control how our content sits _on the cross-axis_. Check out the CodePen below.
 
-<p class="codepen" data-height="300" data-theme-id="36709" data-default-tab="html,result" data-user="turing-kwk" data-slug-hash="mgKQOR" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Align Items">
-  <span>See the Pen <a href="https://codepen.io/turing-kwk/pen/mgKQOR/">
-  Flexbox: Align Items</a> by Turing KWK (<a href="https://codepen.io/turing-kwk">@turing-kwk</a>)
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="GbxXRQ" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Align-Items">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/GbxXRQ/">
+  Flexbox: Align-Items</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 <br>
+
+Since `display: flex;` was applied and no further declarations were made for the direction, the default direction is row, or horizontal. So, `align-items: center;` centered the items in relation to the vertical axis, or the _cross-axis_.
+
+If we add the declaration `flex-direction: column`, we will see the items center themselves along the vertical axis, or _cross-axis_.
+
+## Practice
+
+You and your partner will be assigned a portion of the Dog Party comp to recreate - but with Flexbox this time! You'll be given a starter kit with the HTML you should use and _some_ CSS. Follow the protocol below:
+
+* Decide who will drive and who will navigate.
+* The driver should fork the CodePen to their account.
+* Navigator - use notes from this lesson and navigate your driver towards implementing Flexbox!
+* Once you've achieved the comp, the driver should explain what each new line of CSS is doing.
+* If time, switch driver/navigator and select a different part of Dog Party to style with Flexbox, and repeat.
+
+Dog Party Starter Kits:
+- [Nav](https://codepen.io/ameseee/pen/MMVEym)
+- [Top Section](https://codepen.io/ameseee/pen/zVWEEa)
+- [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ)
+
+## Further Exploration
+
+While you may not use the following properties as frequently, it's working reading through some documentation on them should you have a use-case in the future:
+
+* `flex-wrap`
+* `flex-grow`
+* `align-contents`
