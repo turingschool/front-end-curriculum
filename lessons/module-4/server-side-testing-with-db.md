@@ -58,10 +58,10 @@ describe('GET /students', () => {
 
     // execution
     const res = await request(app).get('/students')
-    const result = res.body
+    const students = res.body
 
     // expectation
-    expect(result.length).toEqual(expectedStudents)
+    expect(students).toEqual(expectedStudents)
   })
 })
 ```
