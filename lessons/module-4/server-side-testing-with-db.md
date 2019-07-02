@@ -45,21 +45,16 @@ with that in mind, here's a brief outline of the functionality we want to test:
   - test that we DELETE an existing student from the DB  
 
 We will start with getting all the students. Assuming we've seeded our database,
-the number of students we get back from the endpoint should be the same as the
-number in our seedfile. At the top of the testfile, import those students that
-we seeded in:
+the students we get back from the endpoint should be the same as the
+students in our database.
 
-```js
-import students from './students'
-```
-
-Now, we can write our first test! Add the following to your app.test.js file:
+Let's write our first test! Add the following to your app.test.js file:
 
 ```js
 describe('GET /students', () => {
   it('should return all the students in the DB', async () => {
     // setup
-    const expectedStudents = students.length
+    const expectedStudents = database('students').select()
 
     // execution
     const res = await request(app).get('/students')
