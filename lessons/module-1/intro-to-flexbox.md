@@ -63,6 +63,7 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 
 <img class="small" src="./assets/images/flexbox/parent-container.svg" alt="graphic of parent/container">
 <img class="small" src="./assets/images/flexbox/child-item.svg" alt="graphic of child/item">
+<br>
 (Graphics from <a target="blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" >CSS Tricks</a>)
 
 <div class="turn-and-talk">
