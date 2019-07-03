@@ -118,22 +118,22 @@ We can map over that array to create new arrays of `odds`, `pairs`, and `nums`:
 
 ```
 // es5 syntax examples
-var odds = evens.map(function (v) { 
-  return v + 1; 
+var odds = evens.map(function (num) { 
+  return num + 1; 
 });
 
-var pairs = evens.map(function (v) {   
-  return { even: v, odd: v + 1 }; 
+var pairs = evens.map(function (num) {   
+  return { even: num, odd: num + 1 }; 
 });
 
-var nums = evens.map(function (v, i) { 
-  return v + i; 
+var nums = evens.map(function (num, i) { 
+  return num + i; 
 });
 
 var fives = [];
-nums.forEach(function (v) {
-  if (v % 5 === 0) {
-    fives.push(v);
+nums.forEach(function (num) {
+  if (num % 5 === 0) {
+    fives.push(num);
   }
 });
 ```
@@ -141,22 +141,22 @@ nums.forEach(function (v) {
 Compare that to arrow function syntax:
 
 ```
-var odds = evens.map(v => 
-  v + 1
+var odds = evens.map(num => 
+  num + 1
 );
 
-var pairs = evens.map(v => 
-  ({ even: v, odd: v + 1 })
+var pairs = evens.map(num => 
+  ({ even: num, odd: num + 1 })
 );
 
-var nums = evens.map((v, i) => 
-  v + i
+var nums = evens.map((num, i) => 
+  num + i
 );
 
 var fives = [];
-nums.forEach(v => {  
-  if (v % 5 === 0) {
-    fives.push(v)
+nums.forEach(num => {  
+  if (num % 5 === 0) {
+    fives.push(num)
   }
 });
 ```
@@ -183,6 +183,7 @@ function sayHi() {
 // es6 syntax
 const sayHi = () => console.log('Hi!');
 ```
+
 #### Turn and Talk
 
 What are the benefits of using arrow functions over function declarations?
@@ -200,12 +201,8 @@ Consider the following code:
 ```
 // es5
 function f (x, y, z) {
-    if (y === undefined) {
-        y = 7;
-    }
-    if (z === undefined) {
-        z = 42;
-    }
+    y = y || 7
+    z = z || 42
     return x + y + z;
 };
 
