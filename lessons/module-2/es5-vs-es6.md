@@ -90,7 +90,7 @@ The major differences are:
 
 ### Hoisting
 
-Another difference between `var` vs. `let` and `const` is that variables declared with let/const will not be hoisted to the top of their scope in the same way `var` is. Instead, if you try to access a variable declared with `let` or `const` before it's declared, you will get a `ReferenceError`
+Another difference between `var` vs. `let` and `const` is that variables declared with let/const will not respond to hoisting in the same way `var` does. Instead, if you try to access a variable declared with `let` or `const` before it's declared, you will get a `ReferenceError: Cannot access <variableName> before initialization`.
 
 
 
