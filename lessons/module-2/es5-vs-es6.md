@@ -13,7 +13,7 @@ module: 2
 
 Up until now, you've mostly been writing ECMAScript 5. (You can read more about ECMAScript [here](https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5).)
 
-ES5 is comfortable and familiar, but we ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
+ES5 is comfortable and familiar, but ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
 
 ## Template Literals
 
@@ -34,7 +34,7 @@ var greeting = `Hello ${name}!`;
 
 ### Block Scope
 
-We're familiar with global and function scope. <S></S>cope is literally the scope in which a variable or value can be accessed.
+We're familiar with global and function scope. Scope is literally the area of code in which a variable or value can be accessed.
 
 We already know that variables declared (using the keyword `var`) inside of a function will remain scoped to that function. In other words, it won't be accessible outside of the function.
 
@@ -85,7 +85,14 @@ callbacks[2]() === 4
 
 The major differences are:
 * using the keyword `let` instead of `var` in the `for` loop, which will remain scoped to that block
-* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally
+* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally.
+
+
+### Hoisting
+
+Another difference between `var` vs. `let` and `const` is that variables declared with let/const will not be hoisted to the top of their scope in the same way `var` is. Instead, if you try to access a variable declared with `let` or `const` before it's declared, you will get a `ReferenceError`
+
+
 
 **The differences between let and const:**
 
@@ -96,6 +103,8 @@ If an array or object is declared using the keyword `const`, the contents of tha
 #### Turn and Talk
 
 What are var, let, and const similar? How are they different?
+
+
 
 ## Arrow Functions
 
