@@ -192,3 +192,14 @@ n | collatz(n) |Steps
 4 | 2 | 4 -> 2 -> 1
 5 | 5 | 5 -> 16 -> 8 -> 4 -> 2 -> 1
 6 | 8 | 6 -> 3 -> 10 -> 5 -> 16 -> 8 -> 4 -> 2 -> 1
+
+
+### Exercise 6
+
+In mathematics, the factorial of a non-negative integer is the product of all positive integers less than or equal to n. For example, the factorial of 5 is 120.
+
+```js
+5 x 4 x 3 x 2 x 1 = 120
+```
+
+Write a JavaScript program to calculate the factorial of a number.

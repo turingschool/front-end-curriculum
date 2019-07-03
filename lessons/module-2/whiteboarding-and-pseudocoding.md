@@ -149,6 +149,20 @@ Which could also be written like this:
     * *Check if foo equals bar* - "if" represents an if condition (`if (foo ==== bar)`)
     * *Otherwise, do something different* - "otherwise" represents an else condition (`else ()`) -->
 
+
+## Solving a JS Problem with Pseudocode
+
+Imagine you were given the following prompt on a technical interview:
+
+>Create a function that determines if a string is a palindrome or not. Your function should return a boolean (true if the given word is a palindrome, false if it is not).
+
+1. Try writing some pseudocode that will lead you to an answer in JavaScript
+2. Use your pseudocode to write a solution -- if it doesn't lead you to one, where did your pseudocode go wrong? Was it too vague? Was it inaccurate? Was it out of order?
+3. Compare your solution, or lack thereof, to the one [here](https://repl.it/@brittanystoroz/DeeppinkAromaticEngineer)
+4. Write a new draft of pseudocode that would have more easily led you to the solution above
+
+
+
 ## PIA (Psuedocoding in action)
  
 Task: Create your own `filter` function (on `Array.prototype`) to really understand/see how `filter` is working under the hood. You should implement a filter function that is like the `<Array>.filter()` in JavaScript.

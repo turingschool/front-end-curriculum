@@ -11,8 +11,8 @@ title: Number Guesser Doubles
 * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
 * Understand event bubbling and use event delegation on dynamic elements
 
-## Overview: 
-- Build a game where two users can guess a number between 1 and 100, with the ability 
+## Overview:
+- Build a game where two users can guess a number between 1 and 100, with the ability
 for the user to add custom ranges for increased difficulty of play
 - Display the current guess of both players
 - Display the final results of each match in card UI
@@ -97,7 +97,7 @@ Work through these **in order**:
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=1037661414)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1CS4BipxFi1VPh5NJFsn0yoeDTQQL_yjwcIM0fccVOGc/edit?usp=sharing)
 
 #### Layout comps
 
@@ -147,8 +147,8 @@ Color and font spec:
 * [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
 * [ ]  Advanced Beginner - Application adds to the above with HTML that incorporates semantic HTML elements and has a simple, clean HTML structure.
 * [ ]  Proficient - Application adds to the above with markup that is easy to read and follows across naming conventions
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes and:
-    * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes and:
+    * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/aria-accessibility.html)
 
 ------------------------------------------------------------------
 
@@ -159,7 +159,7 @@ Color and font spec:
   * [ ] Has 5 or less media queries for responsiveness
 * [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle and
   * [ ] Has 3 or less media queries for responsiveness
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
+* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
 
 ------------------------------------------------------------------
 

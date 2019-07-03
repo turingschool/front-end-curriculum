@@ -128,7 +128,7 @@ We'll start investigating these characteristics by practicing with functional co
 
 Functional components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Functional components are just functions that return the HTML you want rendered to the DOM. Examine the following example:
 
-```js
+```jsx
 const App = () => (
   <div>
     Hello World
@@ -142,7 +142,7 @@ export default App;
 
 Class components are ES6 classes that extend an abstract 'Component' class, given to us by default by React. They each have a render method that allows us to specify what should be rendered to the DOM, and they keep track of some sort of application data.
 
-```js
+```jsx
 import React, { Component } from 'react';
 
 export default class App extends Component {

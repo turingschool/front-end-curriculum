@@ -382,7 +382,7 @@ exports.seed = (knex) => {
 
 ## Fetching From the Database
 
-Let's write some express code to interact with our newly seeded database. Set up a simple express server and we'll add some configuration to work with the knex database:
+Let's write some express code to interact with our newly seeded database. [Set up a simple express server](http://frontend.turing.io/lessons/module-3/intro-to-express.html) and we'll add some configuration to work with the knex database:
 
 ```js
 const environment = process.env.NODE_ENV || 'development';

@@ -156,9 +156,8 @@ This is also the go-to location to fire off an API call or network request (**BE
 ### PropTypes
 
 PropTypes allow you to specify what type of props you are expecting in a certain component. This is also known as "typechecking".
-Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/)
-for this exact purpose, but even without any additional technologies, the `prop-type` module lets you establish a safety net with
-very little effort.
+
+Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, the `prop-type` module lets you establish a safety net with very little effort.
 
 The overall benefit of using PropTypes is that it gives your error-message goblins more tools to provide you with helpful, specific errors to better debug your code.
 
@@ -167,8 +166,10 @@ Let's say you declare a component `<Main title={this.state.title}/>`. Here, your
 Previously, PropTypes was built into the React library itself, however it has since been extracted into its own module. You can install it like any other module.
 
 ```sh
-$ npm install --save prop-types
+$ npm install prop-types -S
 ```
+
+_hint: the `-S` flag is the same as the `--save` flag, and as of npm version 5, all dependencies installed without a flag default to being saved as regular dependencies._
 
 In React, `PropTypes` are declared like this:
 
