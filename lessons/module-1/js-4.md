@@ -7,11 +7,12 @@ tags: js, introduction, constructor functions, this, classes, objects
 ## Learning Goals
 
 * Describe what an object literal is
-* Understand how to define properties and methods in an object literal
+* Define properties and methods in an object literal
+* Access values and methods from an object using dot and bracket notation
 * Understand what `this` is and how it changes based on context
-* Understand what a class is and what instances are.
+* Understand what a class is and what instances are
 
-## Vocab
+## Vocabulary
 
 - `Object` A bundle of behavior (methods) and state (properties)
 - `Key` The name used to reference a Value on an Object
@@ -22,7 +23,6 @@ tags: js, introduction, constructor functions, this, classes, objects
 - `Bracket Notation` Notation to access a Value on an Object, usually specifies a Key via a variable
 - `this` A variable that changes depending on the context in which it's used
 - `class` A constructor that allows us to create multiple instances
-- `instance` An object of a certain type
 
 # Objects
 
@@ -407,11 +407,11 @@ We can also create other methods that will allow us update the state of our Frid
 
 ### Practice
 
-Define an `addFood` method that allows you to put foods in your fridge. 
+Define an `addFood` method that allows you to put foods in your fridge.
 
 ```javascript
 class Fridge {
-  // ... constructor code 
+  // ... constructor code
 
   addFood(food) {
     this.contents.push(food);
@@ -455,8 +455,8 @@ With your partner, answer the questions below.
     * What is an Instance?
     * How are these three things alike/different?
     * What code do you write to create a one-off object?
-    * What code do you have to write to create a Class? 
-    * What code do you have to write to create an instance? 
+    * What code do you have to write to create a Class?
+    * What code do you have to write to create an instance?
 * Properties & Methods
     * What is a property? How can we query a property?
     * How can we reassign the value of a property?
@@ -467,4 +467,3 @@ With your partner, answer the questions below.
 
 ## Additional Resources
 * [Objects and Mythical Creatures Video](https://www.youtube.com/watch?v=wfrwMYn2BCg)
-
