@@ -141,9 +141,10 @@ console.log(school);
 ```
 
 <div class="turn-and-talk">
-  <h3>Solo Practice: Reassigning</h3>
+  <h3>Solo Practice: Reassigning & Adding</h3>
   <p>We are also able to reassign the value of a property in a similar way.</p>
-  <p>Go back to the repl you were working on before, and try re-assigning <code>user1</code>'s age to 9. Then, re-assign <code>user2</code>'s hobbies to an array of your choice!</p>
+  <p>Go back to the repl you were working on before, and add a property of "bestFriend" to <code>user1</code>. Assign it to a string of anything you want.</p>
+  <p>Now try re-assigning <code>user1</code>'s age to 9. Then, re-assign <code>user2</code>'s hobbies to an array of your choice!</p>
   <p>🤞Remember to call the object or the property on the last line of the file, and run the repl to verify the outcome!</p>
 </div>
 
