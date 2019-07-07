@@ -24,30 +24,31 @@ tags: js, introduction, constructor functions, this, classes, objects
 - `this` A variable that changes depending on the context in which it's used
 - `class` A constructor that allows us to create multiple instances
 
-# Objects
-
-### High Level
+## Objects
 
 Objects are an abstraction, or the representation of real world things in computer programming.
-They are meant to store two things:
-1. State
-2. Behavior
+They are meant to bundle together two things:
 
-### Anatomy of Objects
+1. State (data)
+2. Behavior (functions)
 
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
+## Anatomy of Objects
 
-Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. Each property in an object must be unique. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
+
+Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is like a _name_ that holds a value. You're actually used to working with key-value pairs already, because a key-value pair in an object is similar to a variable - the variable name serves as a label for the data we really care about referencing.
+
+In the context of objects, that variable is called a _property_ of the object. Each property in an object **must be unique**. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
 
 Let's look at an example:
 
 ```javascript
 var objectName = {
-  property1: value1,
-  property2: value2,
+  property1: "value1",
+  property2: "value2",
   method1: function() {
     return "I'm a method, because I am a function!";
-  }
+  },
 };
 ```
 
@@ -59,9 +60,9 @@ var school = {
   capacity: 250,
   languageImmersion: true,
   currentStudents: 75,
-  checkOpenSpots: function() {
-    return this.capacity - this.currentStudents;
-  }
+  sendWelcomeMessage: function() {
+    return "Welcome to International School of Denver!"
+  },
 };
 ```
 The ```school``` object has four properties:
@@ -74,19 +75,26 @@ The ```school``` object has four properties:
 The ```school``` object has one method:
 
 ```js
-checkOpenspots: function() {
-  return this.capacity - this.currentStudents;
-}
+sendWelcomeMessage: function() {
+  return "Welcome to International School of Denver!"
+},
 ```
+### Access Properties
 
 There are two ways to access the properties or methods of an object:
 
-The most common is Dot Notation:
+The most common is dot notation:
 
 ```js
 var schoolName = school.name;
 var schoolCapacity = school.capacity;
 ```
+
+<div class="turn-and-talk">
+  <h3>Partner Practice: Accessing Properties</h3>
+    <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/Dot-Notation-Practice">this repl.it</a>.</p>
+    <p>Together, complete each exercise listed in the comments below the two object literals. Write the code with a given direction directly below it, and do not delete code as you go.</p>
+</div>
 
 There is also bracket notation:
 
@@ -95,7 +103,7 @@ var schoolName = school['name'];
 var schoolCapacity = school['capacity'];
 ```
 
-Bracket Notation is usually used when the name of the property is stored in a variable or parameter.  This can make it dynamic, since the value in a variable can _vary_.
+Bracket notation is usually used when the name of the property is stored in a variable or parameter.  This can make it dynamic, since the value in a variable can _vary_.
 
 ```js
 function getSchoolValue(prop) {
@@ -109,9 +117,9 @@ Another example can be seen [here](https://github.com/turingschool-examples/java
 
 Default to using Dot Notation unless you need to access properties with a variable/parameter.  
 
-#### Adding a Property
+### Adding a Property
 
-What if we wanted to add another property to an object after we already created it?  Easy!  By accessing the object and using Dot Notation, we can create another unique property and assign it whatever value we want.  This works almost exactly like a variable.  Take a look at an example below:
+What if we wanted to add another property to an object after we already created it? By accessing the object and using dot notation, we can create another unique property and assign it whatever value we want. This works almost exactly like a variable. Take a look at an example below:
 
 ```js
 school.address = '7701 E 1st Pl, Denver, CO 80230'
@@ -123,47 +131,36 @@ console.log(school);
 //   capacity: 250,
 //   languageImmersion: true,
 //   currentStudents: 75,
-//   checkOpenSpots: function() {
-//     return this.capacity - this.currentStudents;
+//   sendWelcomeMessage: function() {
+//      return "Welcome to International School of Denver!"
 //   },
 //   address: '7701 E 1st Pl, Denver, CO 80230'
 // }
 ```
 
-**Note:** We are also able to reassign the value of a property in a similar way. Try reassigning the property, `currentStudents`, to 100.
+<div class="turn-and-talk">
+  <h3>Solo Practice: Reassigning</h3>
+  <p>We are also able to reassign the value of a property in a similar way.</p>
+  <p>Go back to the repl you were working on before, and try re-assigning <code>user1</code>'s age to 9. Then, re-assign <code>user2</code>'s hobbies to an array of your choice!</p>
+  <p>🤞Remember to call the object or the property on the last line of the file, and run the repl to verify the outcome!</p>
+</div>
 
-### Your Turn
+### Stop and Reflect
 
-Step 1: Take a few minutes to write about the below individually:
+**First:** Independently, take a few minutes to write about each prompt below:
 - To start, go ahead and make an object or two.
 - How do you create an object using literal notation?
 - What is an object and what is it made up of?
-- We've already been using objects... can you think of an example of a DOM method or property you've used?
+- We've already been using objects; can you think of a DOM method or property you've used?
 - When we assign a function as the value of a key inside an object, what do we call it?
 
-Step 2: Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
+**Then:** Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain.
 
-### Your Turn, Part 2
-
-In a [repl](https://repl.it), in pairs, practice the following:
-
-```javascript
-// use this object literal
-var burrito = {
-  type: "carne asada"
-};
-```
-
-1. Get the value of burrito
-2. Get the value of type
-3. Add a new property of your choosing
-4. Check the value of burrito again
-5. Ask burrito for the value of the new property you set, but utilize a different notation than when you asked for the value of type in step #2
-6. Change the value of type
-7. Get the value of burrito
-8. Create a method on burrito that logs "Why am I so delicious?" to the console
-9. Check the value of burrito. Do you see your method?
-10. Use burrito to log "Why am I so delicious?"
+<div class="turn-and-talk">
+  <h3>Partner Practice: Access and Update</h3>
+  <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/Partner-Practice">this repl.it</a>.</p>
+  <p>Together, complete each exercise listed in the comments below the provided object literal. Write the code with a given direction directly below it, and do not delete code as you go.</p>
+</div>
 
 ### What is `this`: a 10,000ft Introduction
 
