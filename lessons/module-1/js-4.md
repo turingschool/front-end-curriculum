@@ -57,7 +57,7 @@ Which looks like this when we implement it in code:
 
 ```javascript
 var school = {
-  name: 'International School of Denver',
+  name: "International School of Denver",
   capacity: 250,
   languageImmersion: true,
   currentStudents: 75,
@@ -66,14 +66,14 @@ var school = {
   },
 };
 ```
-The ```school``` object has four properties:
+The `school` object has four properties:
 
-- ```name: 'International School of Denver'```
-- ```capacity: 250```
-- ```languageImmersion: true```
-- ```currentStudents: 75```
+- `name: "International School of Denver"`
+- `capacity: 250`
+- `languageImmersion: true`
+- `currentStudents: 75`
 
-The ```school``` object has one method:
+The `school` object has one method:
 
 ```js
 sendWelcomeMessage: function() {
@@ -101,8 +101,8 @@ var schoolCapacity = school.capacity;
 There is also bracket notation:
 
 ```js
-var schoolName = school['name'];
-var schoolCapacity = school['capacity'];
+var schoolName = school["name"];
+var schoolCapacity = school["capacity"];
 ```
 
 Bracket notation is usually used when the name of the property is stored in a variable or parameter.  This can make it dynamic, since the value in a variable can _vary_.
@@ -112,7 +112,7 @@ function getSchoolValue(prop) {
   return school[prop];
 }
 
-getSchoolValue('name');
+getSchoolValue("name");
 ```
 
 Another example can be seen [here](https://github.com/turingschool-examples/javascript/tree/master/es5#properties).
@@ -124,19 +124,19 @@ Default to using Dot Notation unless you need to access properties with a variab
 What if we wanted to add another property to an object after we already created it? By accessing the object and using dot notation, we can create another unique property and assign it whatever value we want. This works almost exactly like a variable. Take a look at an example below:
 
 ```js
-school.address = '7701 E 1st Pl, Denver, CO 80230'
+school.address = "7701 E 1st Pl, Denver, CO 80230"
 console.log(school);
 
 // console output
 // => {
-//   name: 'International School of Denver',
+//   name: "International School of Denver",
 //   capacity: 250,
 //   languageImmersion: true,
 //   currentStudents: 75,
 //   sendWelcomeMessage: function() {
 //      return "Welcome to International School of Denver!"
 //   },
-//   address: '7701 E 1st Pl, Denver, CO 80230'
+//   address: "7701 E 1st Pl, Denver, CO 80230"
 // }
 ```
 
@@ -171,7 +171,7 @@ Let's consider our school object from before, but with a different method:
 
 ```javascript
 var school = {
-  name: 'International School of Denver',
+  name: "International School of Denver",
   capacity: 250,
   languageImmersion: true,
   currentStudents: 75,
@@ -247,7 +247,7 @@ var room = {
   width: 800,
   height: 400,
   getArea: function() {
-    console.log('in the room object', this);
+    console.log("in the room object", this);
     return this.width * this.height;
   },
 };
@@ -269,7 +269,7 @@ var room = {
 
 // The line below creates a function like we did before (refer to the the GLOBAL VARIABLES example where we created a function called showWidth to log an object's width with "this.width" to the console), but this time leverage the context of `this` to print a name.
 function sayName() {
-  console.log('Hello! My name is ' + this.name);
+  console.log("Hello! My name is " + this.name);
 }
 
 // Call the sayName function now
@@ -381,9 +381,9 @@ For instance, if we wanted to use a class to create a pizza object, here's what 
 ```javascript
 // object literal
 var pizza1 = {
-  crust: 'thin',
-  sauce: 'red',
-  toppings: ['cheese', 'pepperoni', 'black olives']
+  crust: "thin",
+  sauce: "red",
+  toppings: ["cheese", "pepperoni", "black olives"]
 }
 
 // class
@@ -395,7 +395,7 @@ class Pizza {
   }
 }
 
-var pizza2 = new Pizza('thin', 'red', ['cheese', 'pepperoni', 'black olives']);
+var pizza2 = new Pizza("thin", "red", ["cheese", "pepperoni", "black olives"]);
 ```
 
 Now lets look at a slightly less contrived example by adding some attributes to our `Fridge` class.:
