@@ -80,6 +80,7 @@ sendWelcomeMessage: function() {
   return "Welcome to International School of Denver!"
 },
 ```
+
 ### Access Properties
 
 There are two ways to access the properties or methods of an object:
@@ -301,19 +302,17 @@ human.getName();
 
 Thus far, we've only talked about creating one-off objects using object literals, but what happens if we want to create many objects with the same properties?
 
-This is where classes come in. **Classes** can serve as object factories that allow us to create multiple objects of the same type, which are commonly referred to as **instances**.
+This is where classes come in. **Classes** can serve as object factories that allow us to create multiple objects of the same type, which are commonly referred to as **object instances**.
 
-### Warm Up
-
-With the person next to you, brainstorm five **types** of objects and **specific** instances of that object that are at Turing.
-
-For example:
-
-* Type of object: laptop
-* Specific instances:
-    * Louisa's laptop
-    * Travis' laptop
-    * Khalid's laptop
+<div class="turn-and-talk">
+  <h3>Brainstorm</h3>
+  <p>With the person next to you, brainstorm three <strong>types</strong> of objects and <strong>specific</strong> instances of that object that are at Turing.</p>
+  <p>For example:</p>
+  <ul>
+    <li><strong>Type of Object:</strong> Laptop</li>
+    <li><strong>Specific Instances:</strong> Louisa's laptop, Travis' laptop, Khalid's laptop</li>
+  </ul>
+</div>
 
 ### Syntax
 
@@ -333,9 +332,9 @@ class Laptop {
 
 Generally we will want to put more information in our classes to make them useful to us, but those two lines (even with no other information) will create a class.
 
-### Practice
+### Creating Object Instances
 
-Let's practice together with a Fridge class. Make a new JavaScript repl and let's put the following in that file:
+Let's practice together with a Fridge class.
 
 ```javascript
 class Fridge {
@@ -348,15 +347,18 @@ var fridge2  = new Fridge();
 console.log(fridge2);
 ```
 
-Run the repl to see what the fridges are showing at this point. We currently have no state or behavior for these fridge instances. But it is clear that they are instances of a fridge because they show up with `Fridge` before their `{}`.
+We can run the repl to see what the fridges are showing at this point. We currently have no state or behavior for these fridge instances. But it is clear that they are instances of a fridge because they show up with `Fridge` before their `{}`.
 
-### Your Turn
-
-With your pair, define a Laptop class in a repl and create instances of that class.
+<div class="turn-and-talk">
+  <h3>Practice: Creating Object Instances</h3>
+  <p>Determine who will drive and who will navigate.</p>
+  <p>In a brand-new repl file, define a <code>Laptop</code> class, then create 2-3 object instances from that class.</p>
+  <p>Keep this repl file open in a tab; we will come back to it throughout the next few sections of class.</p>
+</div>
 
 ### Constructor
 
-When we run `new Fridge();` in javascript, what actually happens? We can see from the last example that different Fridge objects (or instances) are created. Other than that, nothing happens. If we want some specific code to run when we first create a new Fridge, we need to tell JavaScript what should happen when a new Fridge instance (or object) is created. We do this with the constructor method.
+When we run `new Fridge();` in javascript, what actually happens? We can see from the last example that different Fridge object instances are created and returned. Other than that, nothing happens. If we want some specific code to run when we first create a new Fridge, we need to tell JavaScript what should happen when a new Fridge object instance is created. We do this with the constructor method.
 
 ```javascript
 class Fridge {
@@ -366,20 +368,15 @@ class Fridge {
 }
 ```
 
-This method is run once and only once during an instance's lifetime, when we use the `new` keyword in conjunction with `Fridge();`.
+This method is run **once and only once** during an object instance's lifetime, when we use the `new` keyword in conjunction with the class to the class, in this case, `Fridge();`.
 
+## Modeling State with Properties
 
-### Modeling State with Properties
-
-The instances of the classes we've defined so far are basically useless.
-
-Remember, objects are useful because they can store *State* and *Behavior*. Let's give our refrigerator some state.
-
-### Practice
+The object instances of the classes we've defined so far are basically useless. Remember, objects are useful because they can store *state* and *behavior*. Let's give our refrigerator some state.
 
 We can leverage our good friend `this` to add some properties to our instances. Inside of a class, `this` refers to an instance of that class.
 
-For instance if we wanted to use a class to create a pizza object, here's what that would look like next to an object literal that accomplishes the same thing.
+For instance, if we wanted to use a class to create a pizza object, here's what that would look like next to an object literal that accomplishes the same thing.
 
 ```javascript
 // object literal
@@ -417,23 +414,22 @@ class Fridge {
 Now we are able to actually create some fridges with some variation. Let's try creating a couple of instances in our repl.
 
 ```javascript
-var fridge1 = new Fridge("silver", 36, true, ["leftover pizza", "yogurt", "soylent"]);
+var fridge1 = new Fridge("silver", 36, true, ["spinach", "chicken", "strawberries"]);
 var fridge2 = new Fridge("black", 40, true, []);
 ```
 
 Note that the arguments that we pass to our `Class()` are order dependent.
 
-### Your Turn
+<div class="turn-and-talk">
+  <h3>Practice: Adding Attributes</h3>
+  <p>With your partner, build on the Laptop class you started earlier. Give your <code>Laptop</code> class some attributes and create some instances of Laptop.</p>
+</div>
 
-With your pair, give your Laptop class some attributes and create some instances of Laptop.
+## Implementing Behavior with Methods
 
-## Other Methods
+We can also create methods that will allow us update the state of our Fridge class. For example, let's say we wanted to add eggs to our Fridge. We currently have a way to see what the `contents` of the Fridge are, but we don't have any way to add to them. Let's do that by creating a method called `addFood` that will add a food to the `contents` array.
 
-We can also create other methods that will allow us update the state of our Fridge class. For example, let's say we wanted to add eggs to our Fridge. We currently have a way to see what the `contents` of the Fridge are, but we don't have any way to add to them. Let's do that by creating a method called `addFood` that will add a food to the `contents` array.
-
-### Practice
-
-Define an `addFood` method that allows you to put foods in your fridge.
+Let's define an `addFood` method that allows us to put foods in your fridge.
 
 ```javascript
 class Fridge {
@@ -442,54 +438,35 @@ class Fridge {
   addFood(food) {
     this.contents.push(food);
   }
+}
 ```
 
-Update your repl so that you:
+<div class="turn-and-talk">
+  <h3>Turn & Talk</h3>
+  <p>How would one invoke the <code>addFood</code> function/method? Be specific.</p>
+  <p>Describe, in detail, what the <code>addFood</code> function/method does, and how it does it.</p>
+</div>
+
+Let's update our code so that we:
 
 1. Create a new instance of Fridge.
 2. Log the contents of that Fridge.
 3. Add something to the contents of the Fridge.
 4. Log the new contents of the Fridge.
 
-### Your Turn
+<div class="turn-and-talk">
+  <h3>Practice: Adding Behavior</h3>
+  <p>With your partner, create a <code>turnOn</code> method for your Laptop class. This should set the power of that laptop to <em>true</em>.</p>
+  <p>Finished Early? Complete the exercise in <a href="https://repl.it/@ameseee/Classes-Extra-Practice">this repl</a>. Remember, the quantity of work you get through is not what matters most, it's the depth of your understanding and ability to articulate your understanding of how things are working. Don't race through this and do continue to talk through each line with your partner!</p>
+</div>
 
-With your pair, create a `turnOn` method for your Laptop class. This should set the power of that laptop to _true_.
+### Check For Understanding
 
-<!-- ## Extra Practice
+Take the last few minutes of class to self-assess by completing the form below. Once you submit, you will be emailed your responses and be able to view the "solutions" - this is just one solution/answer, yours may vary but still be accurate! Use this as an opportunity to identify what you understand and what you need to brush up on.
+<br>
+<br>
 
-### Create a Book Class
-
-Create a book class. Make sure that your book class has at least 3 properties and 2 methods. Log those instances using your repl console or console.logs
-
-### Create a Library Class
-
-Create a Library class. Add properties as you wish, but the be sure to include a `collection` property that starts as an empty array.
-
-If you have time:
-
-* Add an `addBook` method that takes an instance of book and adds it to your collection.
-* Add a `titles` method that iterates over your collection of books and returns only their titles.
-* Add an `authors` method that iterates over your collection of books and returns the authors for each book. -->
-
-### Check for Understanding
-
-With your partner, answer the questions below.
-
-* Classes, instances, objects
-    * What is an Object?
-    * What is a Class?
-    * What is an Instance?
-    * How are these three things alike/different?
-    * What code do you write to create a one-off object?
-    * What code do you have to write to create a Class?
-    * What code do you have to write to create an instance?
-* Properties & Methods
-    * What is a property? How can we query a property?
-    * How can we reassign the value of a property?
-    * What is a method?
-* `this`
-    * What is the default value of this?
-    * What scenarios change that value?
+<iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdYAham4iJ8PGaPL2rZQ0OHrIkIt4MJ8tiVWoA7-EfwavNUBQ/viewform?embedded=true" width="100%" height="600px">Loading...</iframe>
 
 ## Additional Resources
 * [Objects and Mythical Creatures Video](https://www.youtube.com/watch?v=wfrwMYn2BCg)
