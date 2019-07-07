@@ -99,9 +99,9 @@ WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich In
 * An element can only have one role at a time, but can have as many properties and states as necessary
 
 An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
-
+<!-- 
 ![Aria Tree](/assets/images/aria.jpg)
-
+ -->
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
