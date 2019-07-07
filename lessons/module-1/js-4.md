@@ -27,12 +27,14 @@ tags: js, introduction, constructor functions, this, classes, objects
 # Objects
 
 ### High Level
+
 Objects are an abstraction, or the representation of real world things in computer programming.
 They are meant to store two things:
 1. State
 2. Behavior
 
 ### Anatomy of Objects
+
 There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
 
 Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is just a _name_ that holds a value. That sounds familiar, doesn't it? You're actually used to working with key-value pairs already, because a key-value pair in an object is essentially a variable. In the context of objects, that variable is called a _property_ of the object. Each property in an object must be unique. You cannot have two properties with the same name. When we assign a function as the value to one of our keys (remember that a function is a tool we use to return a value!), we call that function a _method_.
@@ -131,6 +133,7 @@ console.log(school);
 **Note:** We are also able to reassign the value of a property in a similar way. Try reassigning the property, `currentStudents`, to 100.
 
 ### Your Turn
+
 Step 1: Take a few minutes to write about the below individually:
 - To start, go ahead and make an object or two.
 - How do you create an object using literal notation?
@@ -141,6 +144,7 @@ Step 1: Take a few minutes to write about the below individually:
 Step 2: Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain:
 
 ### Your Turn, Part 2
+
 In a [repl](https://repl.it), in pairs, practice the following:
 
 ```javascript
@@ -162,6 +166,7 @@ var burrito = {
 10. Use burrito to log "Why am I so delicious?"
 
 ### What is `this`: a 10,000ft Introduction
+
 Let's consider our school object from before
 ```javascript
 var school = {
@@ -221,7 +226,8 @@ var room = {
 
 ```
 
-### YOUR TURN
+### Your Turn
+
  Take a few minutes with the person next to you and work through the next series of code examples. If you've been following along with the code above in a repl/script file, comment all of it out so you are starting with a clean slate.
 
 **Rule #1: No Copy Pasting.**
