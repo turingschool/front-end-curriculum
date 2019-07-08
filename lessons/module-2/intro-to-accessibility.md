@@ -61,7 +61,7 @@ For each of these types of limitations:
 ## Station One
 
 
-<section class="lesson-segment">
+<section class="call-to-action">
 ### Experiment I - Using a Screen Reader
 
 * Watch the following [video to see how a screen reader understands a page](https://youtu.be/qdB8SRhqvFc?t=417) up until the 9:40 mark.
@@ -86,7 +86,7 @@ Here are some helpful VoiceOver commands:
 * Did you cheat and open your eyes?
 </section>
 
-<section class="lesson-segment">
+<section class="call-to-action">
 ### Experiment II - Color Blindness
  
 Install a colorblind simulator for Chrome. Try one (or both) of the following:
@@ -109,7 +109,7 @@ Navigate to some of your most visited sites -- especially those that have some s
 
 ## Station Two
 
-<section class="lesson-segment">
+<section class="call-to-action">
 ### Experiment I - Tabbing
 
 Watch the following [video](https://youtu.be/hKIQkgPVXH4?t=307) up until the 9:50 mark.
@@ -125,7 +125,7 @@ Go to the [Enterprise Car Sales](https://www.enterprisecarsales.com//) website a
 * How was the focus on your current selection? Did you tab into the drop down menus for selecting a car make and model?
 </section>
 
-<section class="lesson-segment">
+<section class="call-to-action">
 ### Experiment II - Accessible Text
 
 Check out the following [site](http://geon.github.io/programming/2016/03/03/dsxyliea) that replicates what it *could* be like to read text with Dyslexia. 
@@ -164,7 +164,7 @@ Read through the passing, failing and manual audits:
 
 
 <section class="checks-for-understanding">
-  <h3 id="check-for-understanding">Exit Ticket</h3>
+### Exit Ticket
 
-  <p>What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?</p>
+What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?
 </section>
