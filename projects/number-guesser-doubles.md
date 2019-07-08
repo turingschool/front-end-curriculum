@@ -120,6 +120,9 @@ Color and font spec:
 [mobile-base]: /assets/images/projects/number-guesser/week2-numberguesser-03.jpg
 [design-specs]: /assets/images/projects/number-guesser/week1-numberguesser-03.jpg
 
+Error Icon:
+![Error Icon](https://drive.google.com/drive/folders/1xMuapAlmwswiz28L3SUGCma9AUHEQ-uD?usp=sharing)
+
 ------------------------------------------------------------------
 
 ## Rubric
