@@ -31,6 +31,42 @@ And after all dependencies are installed, you can run the following to start you
 bundle exec jekyll serve
 ```
 
+
+### Styling Your Lesson Plans
+
+You can add styled boxes to your lesson plans for different areas of content.
+
+The following code:
+
+```js
+<section class="lesson-segment">
+### In Your Notebook
+
+What would you expect to be logged when we get to line 10? Why?
+</section>
+```
+
+Will result in the following styled box:
+
+[!styled-box](https://user-images.githubusercontent.com/17582916/60548262-e75fd180-9cde-11e9-8964-03c4ee6152d9.png)
+
+
+You can create a yellow-styled "note" box with the following code:
+
+```js
+<section class="note">
+### Note
+
+This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time.
+</section>
+```
+
+
+**DO NOT INDENT YOUR MARKDOWN** within the section tag, or else it will not work.
+
+
+
+
 ### Algolia Search
 
 The site uses [Algolia](https://www.algolia.com/dashboard) for search indexing. To re-index the search when new lessons are added or lessons are removed, run this 
