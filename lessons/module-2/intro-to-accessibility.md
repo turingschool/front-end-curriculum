@@ -98,6 +98,11 @@ Navigate to some of your most visited sites -- especially those that have some s
 
 
 
+
+----------------------------------------------
+
+
+
 ## Station Two
 
 ### Experiment I - Tabbing
@@ -127,6 +132,13 @@ Read the following [article on strategies for making text more accessible]( http
 * How might you accommodate those with dyslexia while maintaining the original experience for those without?
 
 
+
+
+
+----------------------------------------------
+
+
+
 ## Audits
 
 Browser vendors are beginning to work some accessibility checks directly into our good friend, dev tools. Let's see what we can learn from them! 
@@ -141,4 +153,4 @@ Read through the passing, failing and manual audits:
 * What strategies may you have learned based on the failing audits? Passing audits?
 
 
-### EXIT TICKET: What are THREE easy and actionable accessibility steps you can take in all of your projects from here on out?
+**EXIT TICKET:** What are THREE easy and actionable accessibility steps you can take in all of your projects from here on out?
