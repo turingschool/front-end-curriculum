@@ -1,5 +1,5 @@
 ---
-title: Web Accessibility
+title: WAI ARIA
 length: 90
 tags: html, ARIA, accessibility
 ---
