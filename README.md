@@ -61,7 +61,7 @@ This hoisting behavior adds some complexity to the JavaScript language, and is i
 </section>
 ```
 
-![yellow-box](https://user-images.githubusercontent.com/17582916/60548280-f2b2fd00-9cde-11e9-848c-6d58f4b6ebde.png)
+![note-box](https://user-images.githubusercontent.com/17582916/60548280-f2b2fd00-9cde-11e9-848c-6d58f4b6ebde.png)
 
 #### CFU/Exit Ticket Box:
 

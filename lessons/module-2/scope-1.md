@@ -132,12 +132,7 @@ Our function is also hoisted to the top of our code block, with its entire defin
 
 When functions are hoisted to the top of our code block, it hoists not just the function name, but the code inside of it as well. This means we can invoke functions before we've declared them without running into errors. 
 
-
-<section class="note">
-### Note
-
 This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time.
-</section>
 
 
 <section class="call-to-action">
