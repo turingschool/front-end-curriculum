@@ -48,7 +48,7 @@ What would you expect to be logged when we get to line 10? Why?
 
 Will result in the following styled box:
 
-[!styled-box](https://user-images.githubusercontent.com/17582916/60548262-e75fd180-9cde-11e9-8964-03c4ee6152d9.png)
+![styled-box](https://user-images.githubusercontent.com/17582916/60548262-e75fd180-9cde-11e9-8964-03c4ee6152d9.png)
 
 
 You can create a yellow-styled "note" box with the following code:
