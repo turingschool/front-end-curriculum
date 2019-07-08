@@ -153,4 +153,11 @@ Read through the passing, failing and manual audits:
 * What strategies may you have learned based on the failing audits? Passing audits?
 
 
-**EXIT TICKET:** What are THREE easy and actionable accessibility steps you can take in all of your projects from here on out?
+-----------------------------------------------
+
+
+<section class="checks-for-understanding">
+  <h3 id="check-for-understanding">Exit Ticket</h3>
+
+  <p>What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?</p>
+</section>
