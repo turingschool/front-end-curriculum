@@ -50,6 +50,7 @@
   @extend %lesson-segment-shared;
   border-left: 8px solid lighten($front-end-secondary, 25%);
   background-color: lighten($front-end-primary, 40%);
+}
 
 .google-form {
   border: none;
