@@ -36,7 +36,7 @@ bundle exec jekyll serve
 
 You can add styled boxes to your lesson plans for different areas of content.
 
-The following code:
+#### Standard Box:
 
 ```js
 <section class="lesson-segment">
@@ -51,7 +51,7 @@ Will result in the following styled box:
 ![styled-box](https://user-images.githubusercontent.com/17582916/60548262-e75fd180-9cde-11e9-8964-03c4ee6152d9.png)
 
 
-You can create a yellow-styled "note" box with the following code:
+#### Note Box:
 
 ```js
 <section class="note">
@@ -61,6 +61,19 @@ This hoisting behavior adds some complexity to the JavaScript language, and is i
 </section>
 ```
 
+![yellow-box](https://user-images.githubusercontent.com/17582916/60548280-f2b2fd00-9cde-11e9-848c-6d58f4b6ebde.png)
+
+#### CFU/Exit Ticket Box:
+
+```js
+<section class="checks-for-understanding">
+  <h3 id="check-for-understanding">Exit Ticket</h3>
+
+  <p>What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?</p>
+</section>
+```
+
+![cfu-box](https://user-images.githubusercontent.com/17582916/60548305-ff375580-9cde-11e9-9e06-739244d68973.png)
 
 **DO NOT INDENT YOUR MARKDOWN** within the section tag, or else it will not work.
 

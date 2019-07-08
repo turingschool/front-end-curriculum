@@ -45,6 +45,7 @@ Let's talk about some types of limitations our users might have. We can categori
 * cognitive
 * mobility
 
+
 For each of these types of limitations:
 * discuss a potential limitation
 * what kind of web content or devices might they have difficulty interacting with?
