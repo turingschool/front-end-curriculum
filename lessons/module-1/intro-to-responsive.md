@@ -83,6 +83,13 @@ There are [several different media types](https://developer.mozilla.org/en-US/do
 
 Above is an example of the syntax for a media query with a breakpoint set for screens 900px and larger. We also have a breakpoint set for screens 700px and smaller. When the screen size is 900px or greater, the body should have a magenta background. When it is 700px or less, it should have a teal background. When it is in between, it will be the background color specified in CSS or white, if it was not specified.
 
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="css,result" data-user="khalidwilliams" data-slug-hash="wLQqzK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Media Queries Demo">
+  <span>See the Pen <a href="https://codepen.io/khalidwilliams/pen/wLQqzK/">
+  Media Queries Demo</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## Viewport Meta Tag
 
 Before we write any queries, you'll want to add a viewport meta tag in the `head` of your main html file (which is often named `index.html`). This tag will make sure that our site works on devices. It is a frustrating surprise to find that your responsive site works locally and in device simulators, only to try it out on your phone and find out it looks terrible.
