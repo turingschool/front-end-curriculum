@@ -60,6 +60,8 @@ For each of these types of limitations:
 
 ## Station One
 
+
+<section class="lesson-segment">
 ### Experiment I - Using a Screen Reader
 
 * Watch the following [video to see how a screen reader understands a page](https://youtu.be/qdB8SRhqvFc?t=417) up until the 9:40 mark.
@@ -82,8 +84,9 @@ Here are some helpful VoiceOver commands:
 * What effect does the way we write our HTML have on a screen reader?
 * What was difficult about using a screen reader?
 * Did you cheat and open your eyes?
+</section>
 
-
+<section class="lesson-segment">
 ### Experiment II - Color Blindness
  
 Install a colorblind simulator for Chrome. Try one (or both) of the following:
@@ -96,7 +99,7 @@ Navigate to some of your most visited sites -- especially those that have some s
 **Questions:**
 * What would be difficult about navigating the web while color blind?
 * What might you do to help the color blind more clearly interact with your applications?
-
+</section>
 
 
 
@@ -106,6 +109,7 @@ Navigate to some of your most visited sites -- especially those that have some s
 
 ## Station Two
 
+<section class="lesson-segment">
 ### Experiment I - Tabbing
 
 Watch the following [video](https://youtu.be/hKIQkgPVXH4?t=307) up until the 9:50 mark.
@@ -119,7 +123,9 @@ Go to the [Enterprise Car Sales](https://www.enterprisecarsales.com//) website a
 **Questions:**
 * What was your experience like? Was anything frustrating or confusing about the process? What could you do to solve the frustrations you encountered?
 * How was the focus on your current selection? Did you tab into the drop down menus for selecting a car make and model?
+</section>
 
+<section class="lesson-segment">
 ### Experiment II - Accessible Text
 
 Check out the following [site](http://geon.github.io/programming/2016/03/03/dsxyliea) that replicates what it *could* be like to read text with Dyslexia. 
@@ -131,7 +137,7 @@ Read the following [article on strategies for making text more accessible]( http
 **Questions:**
 * What strategies for accessible text could you implement?
 * How might you accommodate those with dyslexia while maintaining the original experience for those without?
-
+</section>
 
 
 
