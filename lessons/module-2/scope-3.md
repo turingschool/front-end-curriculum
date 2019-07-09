@@ -117,18 +117,14 @@ function analyzeGrades() {
       privateGrades = privateGrades.map(grade => {
         return grade + 5;
       });
-    }
-    
-    viewGrades() {
+      
       return privateGrades;
     }
-  };
+  }
+};
   
-  console.log(privateGrades) // undefined
-  console.log(analyzeGrades) // fn definition
-  console.log(analyzeGrades()) // object with changeGrades method
+
   console.log(analyzeGrades().changeGrades()) // [93, 95, 88, 5...]
-  console.log(analyzeGrades().viewGrades()); // [98, 100, 93...]
 ```
 
 Our most thorough definition of a closure is now **when an inner function has access to the outer function's variables and can remember the environment in which it was created. The outer function's variables are protected by the closure and can only be manipulated by code defined within that function.**
