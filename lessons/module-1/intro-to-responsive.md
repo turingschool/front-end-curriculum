@@ -62,10 +62,11 @@ There are [several different media types](https://developer.mozilla.org/en-US/do
 
 **Breakpoints** are the pixel widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied. It may seem natural to set breakpoints for certain devices; it's actually best practice to choose a breakpoint when the layout of content needs to change.
 
-<div class="lesson-segment">
-  <h3>Turn & Talk</h3>
-  <p>Review the two media queries written below. Predict the result of this code. Be ready to share out!</p>
-</div>
+<section class="call-to-action">
+### Turn & Talk
+
+Review the two media queries written below. Predict the result of this code. Be ready to share out!
+</section>
 
 ```css
 @media screen and (min-width: 900px) {
@@ -113,12 +114,15 @@ In more human terms, these say:
 * __Width__: Make the width of the page the same width as whatever screen it is being shown on.
 * __Initial Scale__: Controls the zoom level when the page is first loaded.
 
-<div class="checks-for-understanding">
-  <h3>Practice</h3>
-  <p>To build on your CSS skills and now practice working with media queries, complete this set of <a href="https://github.com/turingschool-examples/responsive-layout-challenges">Responsive Layout Challenges</a>.</p>
-  <p>Before you start to build out the HTML, familiarize yourself with all required layouts. Map out which boxes need to be grouped in containers in order to satisfy all required layouts. Then, start writing code!</p>
-  <p><strong>Challenge/Early Finisher:</strong> Refactor <a href="https://github.com/turingschool-examples/responsive-rescue">this not-very-responsive site</a>.</p>
-</div>
+<section class="checks-for-understanding">
+### Practice
+
+To build on your CSS skills and now practice working with media queries, complete this set of <a href="https://github.com/turingschool-examples/responsive-layout-challenges">Responsive Layout Challenges</a>.
+
+Before you start to build out the HTML, familiarize yourself with all required layouts. Map out which boxes need to be grouped in containers in order to satisfy all required layouts. Then, start writing code!
+
+**Challenge/Early Finisher:** Refactor <a href="https://github.com/turingschool-examples/responsive-rescue">this not-very-responsive site</a>.
+</section>
 
 ## Documentation & Resources
 
