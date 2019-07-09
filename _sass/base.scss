@@ -84,9 +84,18 @@ blockquote {
 }
 
 footer {
-  border-top: 1px dashed lighten($medium-gray, 10);
-  margin-top: 5em;
-  padding-top: 2em;
+  background-color: $background-secondary;
+  color: $dark-gray;
+  padding: 15px 10px;
+  text-align: center;
+
+  p {
+    margin: 5px auto;
+
+    @media (max-width: $phone-width) {
+      font-size: 0.8em;
+    }
+  }
 }
 
 /* Layout */
