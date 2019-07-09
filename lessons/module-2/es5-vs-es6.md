@@ -8,30 +8,33 @@ module: 2
  -->
 ### Learning Goals
 * Compare ES5 vs. ES6
-* Understand and explain prototypal inheritance in JavaScript
-
-## Vocabulary
-
-- `Scope` Where variables and functions are accessible
-- `Prototypal Inheritance` Inheritance by means of delegating message passing through a chain of objects (aka prototypes)
-
-### Warm Up
-
-* What do you think of when you hear the word prototype? 
-* When have you used prototypes in your code?
-* Do you prefer template literals to concatenation? Why or why not?
 
 ## The differences between ES5 and ES6
 
 Up until now, you've mostly been writing ECMAScript 5. (You can read more about ECMAScript [here](https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5).)
 
-ES5 is comfortable and familiar, but we ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
+ES5 is comfortable and familiar, but ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
+
+## Template Literals
+
+Constructing strings while interpolating variables:
+
+```js
+// es5 
+var name = 'Brittany';
+var greeting = 'Hello' + name + '!';
+
+// es6
+var name = 'Brittany';
+var greeting = `Hello ${name}!`;
+```
+
 
 ## Scope
 
 ### Block Scope
 
-We're familiar with global and function scope. <S></S>cope is literally the scope in which a variable or value can be accessed.
+We're familiar with global and function scope. Scope is literally the area of code in which a variable or value can be accessed.
 
 We already know that variables declared (using the keyword `var`) inside of a function will remain scoped to that function. In other words, it won't be accessible outside of the function.
 
@@ -82,7 +85,14 @@ callbacks[2]() === 4
 
 The major differences are:
 * using the keyword `let` instead of `var` in the `for` loop, which will remain scoped to that block
-* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally
+* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally.
+
+
+### Hoisting
+
+Another difference between `var` vs. `let` and `const` is that variables declared with let/const will not respond to hoisting in the same way `var` does. Instead, if you try to access a variable declared with `let` or `const` before it's declared, you will get a `ReferenceError: Cannot access <variableName> before initialization`.
+
+
 
 **The differences between let and const:**
 
@@ -93,6 +103,8 @@ If an array or object is declared using the keyword `const`, the contents of tha
 #### Turn and Talk
 
 What are var, let, and const similar? How are they different?
+
+
 
 ## Arrow Functions
 
@@ -106,22 +118,22 @@ We can map over that array to create new arrays of `odds`, `pairs`, and `nums`:
 
 ```
 // es5 syntax examples
-var odds = evens.map(function (v) { 
-  return v + 1; 
+var odds = evens.map(function (num) { 
+  return num + 1; 
 });
 
-var pairs = evens.map(function (v) {   
-  return { even: v, odd: v + 1 }; 
+var pairs = evens.map(function (num) {   
+  return { even: num, odd: num + 1 }; 
 });
 
-var nums = evens.map(function (v, i) { 
-  return v + i; 
+var nums = evens.map(function (num, i) { 
+  return num + i; 
 });
 
 var fives = [];
-nums.forEach(function (v) {
-  if (v % 5 === 0) {
-    fives.push(v);
+nums.forEach(function (num) {
+  if (num % 5 === 0) {
+    fives.push(num);
   }
 });
 ```
@@ -129,22 +141,22 @@ nums.forEach(function (v) {
 Compare that to arrow function syntax:
 
 ```
-var odds = evens.map(v => 
-  v + 1
+var odds = evens.map(num => 
+  num + 1
 );
 
-var pairs = evens.map(v => 
-  ({ even: v, odd: v + 1 })
+var pairs = evens.map(num => 
+  ({ even: num, odd: num + 1 })
 );
 
-var nums = evens.map((v, i) => 
-  v + i
+var nums = evens.map((num, i) => 
+  num + i
 );
 
 var fives = [];
-nums.forEach(v => {  
-  if (v % 5 === 0) {
-    fives.push(v)
+nums.forEach(num => {  
+  if (num % 5 === 0) {
+    fives.push(num)
   }
 });
 ```
@@ -171,6 +183,7 @@ function sayHi() {
 // es6 syntax
 const sayHi = () => console.log('Hi!');
 ```
+
 #### Turn and Talk
 
 What are the benefits of using arrow functions over function declarations?
@@ -188,12 +201,8 @@ Consider the following code:
 ```
 // es5
 function f (x, y, z) {
-    if (y === undefined) {
-        y = 7;
-    }
-    if (z === undefined) {
-        z = 42;
-    }
+    y = y || 7
+    z = z || 42
     return x + y + z;
 };
 
@@ -237,8 +246,35 @@ var characters = [...string]; // ['h', 'e', 'l', 'l', 'o']
 In this case, the `split` method is not terribly complex, but using the spread operator makes the code more readable at a glance; you can see that the result is an array.
 
 
-<!-- Destructring moved to fundamentals lesson -->
-<!-- ### Destructuring
+### Destructuring
+
+Destructuring assignment allows us to unpack values from objects and arrays into their own distinct variables.
+
+```js
+const dog = {
+  name: 'Spot',
+  breed: 'pug',
+  tricksLearned: {
+    sit: true,
+    stay: true,
+    rollOver: false,
+    beg: true,
+    speak: false
+  }
+}
+
+let { name, breed } = dog;
+let { sit, stay, speak } = dog.tricksLearned;
+
+console.log(name); // 'Spot'
+console.log(stay); // true
+```
+
+<!--   Answers
+  1. const { rollOver } = dog.tricksLearned;
+  2. const { breed: robbiesFavoriteDog } = dog;
+  3. const { beg, playDead = false} = dog.tricksLearned; -->
+
 
 **Importing:**
 
@@ -256,70 +292,26 @@ ES6 shortens up the importing syntax. Destructuring helps us define variables pu
 
 **Creating variables based on key value pairs:**
 
-```
-const dog = {
-  name: 'Spot',
-  breed: 'corgi',
-  tricksLearned: {
-    sit: true,
-    stay: true,
-    rollOver: false,
-    beg: true,
-    speak: false
-  }
-}
+#### Turn and Code
+Taking turns for each prompt in driver/navigator fashion, complete the following:
+Using the code example for our `dog` object above, use destructuring assignment to do the following:
+  1. Create a variable called `rollOver` that holds the value of `false`
+  2. Create a variable called `robbiesFavoriteDog` that holds the value from our property of `breed`
+  3. Create variables for the following tricks: `beg`, and `playDead` (`playDead` should default to `false`)
 
-let { name, breed } = dog;
-let { sit, stay, speak } = dog.tricksLearned;
-
-console.log(name); // 'Spot'
-console.log(stay); // true
-
-
-
-const strings = ['one', 'two', 'three'];
-let [one, two, three] = strings;
-
-console.log(two); // 'two'
-```
-
-**Reassigning values:**
-
-Destructuring also lets you swap values in an array without using a temporary variable.
-
-```
-var list = [1, 2, 3];
-
-// es5
-temp = list[0];
-list[0] = list[2];
-list[2] = temp;
-
-// es6
-[ list[0], list[2] ] = [ list[2], list[0] ];
-
-console.log(list); // [3, 2, 1]
-
-```
-
-The square brackets are just part of the destructuring syntax here.
 
 You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
- -->
+
 
 ### Journal
 
 * What new changes did ES6 bring in so far as the following:
   * scope
   * functions
-  * classes
-
-* What is prototypal inheritance?
-
+  * parameters
 
 ### Additional Resources:
 
 * Babel (ES6 -> ES5)		  [https://babeljs.io/repl/](https://babeljs.io/repl/)
-* Lebab	(ES5 -> ES6)		  [https://lebab.io/try-it](https://lebab.io/try-it)
 * ES6 Features 		    	  [http://es6-features.org](http://es6-features.org)
 * Browser Compatability		[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)

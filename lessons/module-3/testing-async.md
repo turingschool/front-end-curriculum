@@ -31,19 +31,19 @@ By the end of this lesson, you will:
 
 ### Getting Started
 
-Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin). 
+Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin).
 
-Clone the repo and checkout the **async-begin** branch. 
+Clone the repo, checkout the **async-begin** branch, and install the dependencies.
+
+```bash
+git clone git@github.com:turingschool-examples/grocery-list.git
+git checkout async-begin
+npm install
+```
 
 Open the code up in your editor.
 
-Open two tabs in your terminal and run the following commands to get started:
-
-```bash
-npm install
-node server.js
-npm start
-```
+Open two tabs in your terminal and run `npm run server` in one terminal window and `npm start` in the other terminal window to get started.
 
 ## Testing API Calls
 When our application makes a request to an API endpoint, we typically want to test our app's **reaction** to the response it receives from that request. We don't really care about what goes on in the back-end, we just want to know that we can handle the response appropriately. This makes API calls a good scenario for using mocks. However, we're usually placing our fetch requests within other functions or methods, and we might not want to override the functionality of the entire method with a mock. Consider the following example from our [AddGroceryForm Component](https://github.com/turingschool-examples/grocery-list/blob/async-complete/src/AddGroceryForm.js):
@@ -54,7 +54,7 @@ When our application makes a request to an API endpoint, we typically want to te
 handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
-  const grocery = this.state.grocery;
+  const { grocery } = this.state;
 
   return fetch('/api/v1/groceries', {
     method: 'POST',
@@ -82,7 +82,7 @@ handleAddGrocery(event) {
 
 If we would like to test this method, containing a fetch request, we're going to run into some issues when it executes. Mainly, `fetch` won't be available when running our tests in the console and we wouldn't have access to the API endpoint. There are a bunch of libraries that you could use to handle this behavior, some that you'll come across may include [nock](https://github.com/node-nock/nock) or [fetch-mock](http://www.wheresrhys.co.uk/fetch-mock/). The thing is, [Jest](https://facebook.github.io/jest) has some really great utilities for mocking built into it, so using an external library beyond Jest here really isn't necessary.
 
-Let's take a closer look at the previous example. Building off of our Grocery List application, we've now added a back-end for persisting the grocery data we're working with. When we submit a new grocery, we now make a `POST` request to our server to add that grocery item. We don't want to override the entire `addGrocery` method, but we do want to intercept that `POST` request so that we can return some fake data to work with.
+Let's take a closer look at the previous example. Building off of our Grocery List application, we've now added a back-end for persisting the grocery data we're working with. When we submit a new grocery, we now make a `POST` request to our server to add that grocery item. We don't want to override the entire `handleAddGrocery` method, but we do want to intercept that `POST` request so that we can return some fake data to work with.
 
 Let's start by adding a test file for this component named `AddGroceryForm.test.js`. At the top of our new test file, we'll import the React and Enzyme dependencies, and the component we're testing:
 
@@ -120,14 +120,14 @@ describe('AddGroceryForm', () => {
   it('calls the updateGroceryList callback after adding a new grocery', () => {
   })
 
-  it('sets an error when the fetch fails', () => {
+  it('sets the error in state if the fetch fails', () => {
   })
 })
 ```
 
-Now that we have our test placeholders, let's consider what we'll need to mock to effectively test our `addGrocery`
+Now that we have our test placeholders, let's consider what we'll need to mock to effectively test our `handleAddGrocery`
 method. We're going to need a `mockGrocery`, to simulate the actual data that is being posted. We'll need some
-`mockGroceries` to return from our fetch. We're going to need a `mockEvent`, because our `addGrocery` method is
+`mockGroceries` to return from our fetch. We're going to need a `mockEvent`, because our `handleAddGrocery` method is
 expecting an event as a param, and finally, we're going to need a `mockUpdateGroceryList` function, to pass to our
 component as a param.
 
@@ -141,18 +141,18 @@ import AddGroceryForm from './AddGroceryForm';
 
 describe('AddGroceryForm', () => {
   let mockEvent
-  let mockUpdateGroceryList
   let mockGrocery
   let mockGroceries
+  let mockUpdateGroceryList
 
   beforeEach(() => {
     mockEvent = { preventDefault: jest.fn() }
-    mockUpdateGroceryList = jest.fn()
     mockGrocery = { name: 'Oranges', quantity: 3 }
     mockGroceries = [
-      {id: 1, name: 'Pineapples', quantity: 10},
-      {id: 2, name: 'Oranges', quantity: 3}
+      {name: 'Pineapples', quantity: 10},
+      {name: 'Oranges', quantity: 3}
     ]
+    mockUpdateGroceryList = jest.fn()
   })
 
   it('calls fetch with the correct data when adding a new grocery', () => {
@@ -164,7 +164,7 @@ describe('AddGroceryForm', () => {
   it('calls the updateGroceryList callback after adding a new grocery', () => {
   })
 
-  it('sets an error when the fetch fails', () => {
+  it('sets the error in state if the fetch fails', () => {
   })
 })
 ```
@@ -197,25 +197,21 @@ describe('AddGroceryForm', () => {
   let mockUpdateGroceryList
   let mockGrocery
   let mockGroceries
-  let renderedComponent
+  let wrapper
 
   beforeEach(() => {
     mockEvent = { preventDefault: jest.fn() }
     mockUpdateGroceryList = jest.fn()
     mockGrocery = { name: 'Oranges', quantity: 3 }
     mockGroceries = [
-      {id: 1, name: 'Pineapples', quantity: 10},
-      {id: 2, name: 'Oranges', quantity: 3}
+      {name: 'Pineapples', quantity: 10},
+      {name: 'Oranges', quantity: 3}
     ]
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      json: () => Promise.resolve({
-        groceries: mockGroceries,
-      })
-    }))
-    const renderedComponent = shallow(<AddGroceryForm 
-                                      updateGroceryList={mockUpdateGroceryList}
-                                    />)
+    wrapper = shallow(<AddGroceryForm updateGroceryList={mockUpdateGroceryList} />)
   })
+    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
+      json: () => Promise.resolve(mockGroceries)
+    }))
 
   it('calls fetch with the correct data when adding a new grocery', () => {
   })
@@ -226,7 +222,7 @@ describe('AddGroceryForm', () => {
   it('calls the updateGroceryList callback after adding a new grocery', () => {
   })
 
-  it('sets an error when the fetch fails', () => {
+  it('sets the error in state if the fetch fails', () => {
   })
 })
 ```
@@ -236,13 +232,14 @@ on it, which itself returns a Promise. Using our Jest mock, it's easy to recreat
 everything. We can start writing our tests.
 
 Our first test needs to assert that fetch was called with the expected parameters. Since the fetch params pull from the
-state of the component, we'll need to set the state of our `renderedComponent` before we call the `addGrocery` method.
+state of the component, we'll need to set the state of our `wrapper` before we call the `handleAddGrocery` method.
 
 ```javascript
 // AddGroceryForm.test.js
 
 it('calls fetch with the correct data when adding a new grocery', () => {
-  const expectedFetchBody = {
+  const url = '/api/v1/groceries'
+  const options = {
     method: 'POST',
     body: JSON.stringify({ grocery: mockGrocery }),
     headers: {
@@ -250,59 +247,56 @@ it('calls fetch with the correct data when adding a new grocery', () => {
     }
   }
 
-  renderedComponent.setState({grocery: mockGrocery})
-  renderedComponent.instance().handleAddGrocery(mockEvent)
-  expect(window.fetch).toHaveBeenCalledWith('/api/v1/groceries', expectedFetchBody)
+  wrapper.setState({grocery: mockGrocery})
+  wrapper.instance().handleAddGrocery(mockEvent)
+  expect(window.fetch).toHaveBeenCalledWith(url, options)
 })
 ```
 
-Our second test asserts that the state of the component was properly set after our fetch call fired. Because fetch is
-asynchronous, we'll need to write a Promise to wait for the component to actually update. Since setting the state is
-also asynchronous, we need to chain the Promise, and update the component before our expectation.
+Our second test asserts that the state of the component was properly set after our fetch call fired. We'll want to step through the asynchronous behavior of the function to make sure the state gets reset after a successful fetch. If we take a look at our code, the `handleAddGrocery` function is not currently returning anything. However, if we update our code and `return` the fetch, `handleAddGrocery` is now returning a Promise that we can chain behavior to.
 
 ```javascript
 // AddGroceryForm.test.js
 
 it('resets the state after adding a new grocery', () => {
-  renderedComponent.setState({grocery: mockGrocery})
+  const expected = { name: '', quantity: '' }
+  wrapper.setState({grocery: mockGrocery})
 
   // Execution and Expectation - this assumes that handleAddGrocery method returns a promise
-  renderedComponent.instance().handleAddGrocery(mockEvent)
-k   .then(() => {
-      expect(renderedComponent.state('grocery')).toEqual({name: '', quantity: ''})
+  wrapper.instance().handleAddGrocery(mockEvent)
+   .then(() => {
+      expect(wrapper.state('grocery')).toEqual(expected)
     })
 })
 ```
 
-Our third test looks similar to our first, however because we don't care about any state changes, and just want to
-assert that our `updateGroceryList` mock was called, we don't need to update the component.
+Our third test looks similar to our first. We need to step through the asynchronous behavior of a successful fetch to determine if our `mockUpdateGroceryList` was called with the correct param.
 
 ```javascript
 // AddGroceryForm.test.js
 
 it('calls the updateGroceryList callback after adding a new grocery', () => {
-  Promise.resolve(renderedComponent.instance().handleAddGrocery(mockEvent))
+  wrapper.instance().handleAddGrocery(mockEvent)
     .then(() => {
       expect(mockUpdateGroceryList).toHaveBeenCalledWith(mockGroceries)
     })
 })
 ```
 
-Our final test asserts that our catch statement set the state correct if the fetch call fails. However in order to
-simulate this failure, we're going to need to mock our fetch call again. Also, due to an Enzyme oddity, we're going to
-need to update our component twice, otherwise we won't see the state change.
+Our final test asserts that our catch statement sets the state correctly if the fetch call fails. However in order to
+simulate this failure, we're going to need to mock our fetch call again to simulate a failed fetch.
 
 ```javascript
 // AddGroceryForm.test.js
 
 it('sets an error when the fetch fails', () => {
   window.fetch = jest.fn().mockImplementationOnce(() => Promise.reject(
-    new Error('failed')
+    new Error('Fetch failed')
   )
 
-  renderedComponent.instance().handleAddGrocery(mockEvent)
+  wrapper.instance().handleAddGrocery(mockEvent)
     .then(() => {
-      expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
+      expect(wrapper.state('errorStatus')).toEqual('Error adding grocery')
     })
 })
 ```
@@ -311,13 +305,11 @@ it('sets an error when the fetch fails', () => {
 
 When using fetch calls, there are two main times when we want to check for errors. The first is when our fetch rejects, which is the case we tested above.
 
-The second is when the response is not ok. In that case we should manually throw an error that we'll catch elsewhere. We'll show how that's done later on in this lesson.
+The second is when the fetch doesn't fail, but the response is not ok. In that case we should manually throw an error that we'll catch elsewhere. We'll show how that's done later on in this lesson.
 
 ## Refactoring to async/await
 
-Awesome, now all the critical functionality of our addGrocery method is tested! Already though, you should be thinking
-that there may be an easier, or at least more succinct way of writing this code. Rather than chaining Promises, I'd like
-to use the new ES7 `async/await` syntax. Let's lean on our new test suite to refactor our code.
+Awesome, now all the critical functionality of our addGrocery method is tested! Already though, you should be thinking that there may be an easier, or at least more succinct way of writing this code. Rather than chaining Promises, I'd like to use the new ES7 `async/await` syntax. Let's lean on our new test suite to refactor our code.
 
 ```javascript
 // AddGroceryForm.js
@@ -325,7 +317,7 @@ to use the new ES7 `async/await` syntax. Let's lean on our new test suite to ref
 async handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
-  const grocery = this.state.grocery;
+  const { grocery } = this.state;
 
   try {
     const response = await fetch('/api/v1/groceries', {
@@ -350,24 +342,57 @@ async handleAddGrocery(event) {
 }
 ```
 
-Using `async/await` with `try/catch` allows us to `await` all our asynchronous behavior. Should any of our `await`ed
-Promises fail, they will be caught by the `catch` statement. In this example, our code is now moderately more terse, and
-I would say a fair bit more readable. Let's use this new syntax to now update our tests.
+Using `async/await` with `try/catch` allows us to `await` all our asynchronous behavior. Should any of our `await`ed Promises fail, they will be caught by the `catch` statement. In this example, our code is now moderately more terse, and I would say a fair bit more readable. Let's use this new syntax to now update our tests.
 
-Our first test is unchanged, as there is nothing asynchronous happening. In small groups, work to refactor the rest of 
-the tests, using the ES7 `async/await` syntax.
+Our first test is unchanged, as there is nothing asynchronous happening. In small groups, work to refactor the rest of  the tests, using the ES7 `async/await` syntax.
 
-## Refactoring out fetch
+## Refactoring fetch(es) into a separate file
 
-While this works for us now, I'm not totally satisfied with our workflow here. Making naked fetch calls inside of our
-component code isn't ideal, for a couple reasons. For starters, if we had more fetch calls inside this component, it
-would get harder to correctly mock them. Additionally, if another component in our application needs to post to our
-'/api/v1/groceries', we'd need to rewrite our fetch call. Instead of doing this, I prefer to pull all of my API calls
-into their own file. This will make it easier to test the behavior of these fetch calls, as well as how our component
-digests the data.
+While this works for us now, I'm not totally satisfied with our workflow here. Making naked fetch calls inside of our component code isn't ideal, for a couple reasons.
 
-Let's create a new file that will hold our API calls, named apiCalls.js, as well as an accompanying test file,
-apiCalls.test.js. Since we're TTD style developers, let's write our tests first, and then our actual method.
+1. For starters, if we had more than one fetch call inside this component, it would get harder to correctly mock them when testing our components.
+1. Additionally, if another component in our application needs to POST to our '/api/v1/groceries', we'd need to rewrite our fetch call.
+
+Instead of doing this, I prefer to pull all of my API calls into their own file. This will make it easier to test the behavior of these fetch calls, as well as how our component digests the data.
+
+Let's create a new file that will hold our API calls, named apiCalls.js, as well as an accompanying test file, apiCalls.test.js.
+
+```sh
+$ touch src/apiCalls.js src/apiCalls.test.js
+```
+
+### Writing the fetch in apiCalls.js
+
+Let's write our function! Remember, we are replacing the fetch from our handleAddGrocery function.
+
+```javascript
+// apiCalls.js
+
+export const addGrocery = grocery => {
+  return fetch('/api/v1/groceries', {
+    method: 'POST',
+    body: JSON.stringify({ grocery }),
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(response => {
+    if(!response.ok) {
+      throw Error('Error adding grocery')
+    } else {
+      return response.json()
+    }
+  }
+}
+```
+
+Take a second and compare this with the fetch in the updateGroceryList method in AddGroceryForm. What's the same? What's different?
+
+Notice that our fetch is also parsing the json!
+
+### Testing the fetch in isolation
+
+Let's test this fetch now that it's not stuck inside our AddGroceryForm component code.
 
 ```javascript
 // apiCalls.test.js
@@ -375,101 +400,89 @@ apiCalls.test.js. Since we're TTD style developers, let's write our tests first,
 import { addGrocery } from './apiCalls'
 
 describe('addGrocery', () => {
+  let mockGrocery
+  let mockGroceriesResponse
+
   beforeEach(() => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      status: 200,
-      json: () => Promise.resolve({
-        groceries: mockGroceries,
-      }),
-    }))
+    mockGrocery = { name: 'ice cream', quantity: '5000' }
+    mockGroceriesResponse = [
+      { name: 'ice cream cones', quantity: '3000' },
+      mockGrocery
+    ]
+
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockGroceriesResponse)
+      })
+    })
   })
 
-  it('fetch is called with the correct params', async () => {
-    const mockGrocery = {name: 'Oranges', quantity: 3}
+  // fetch called w/ correct params
+  it('should be called with correct params', () => {
     const expected = [
-      "/api/v1/groceries", 
+      '/api/v1/groceries',
       {
-        body: JSON.stringify({ grocery: mockGrocery }),
+        method: 'POST',
+        body: JSON.stringify({grocery: mockGrocery}),
         headers: {
-          "Content-Type": "application/json"
-        },
-        method: "POST"
+          'Content-Type': 'application/json'
+        }
       }
     ]
 
-    await addGrocery(mockGrocery)
-    expect(window.fetch).toHaveBeenCalledWith(...expected)
+    addGrocery(mockGrocery);
+
+    expect(window.fetch).toHaveBeenCalledWith(...expected);
   })
 
-  it('returns an object if status code is ok', async () => {
-    const mockGrocery = {name: 'Oranges', quantity: 3}
-    const mockGroceries = [
-      {id: 1, name: 'Pineapples', quantity: 10},
-      {id: 2, name: 'Oranges', quantity: 3}
-    ]
+  // returns a response if the status is ok
+  it('should return a parsed response if status is ok', async () => {
+    const result = await addGrocery(mockGrocery);
 
-    await expect(addGrocery(mockGrocery)).resolves.toEqual({groceries: mockGroceries})
+    expect(result).toEqual(mockGroceriesResponse);
   })
 
-  it('throws an error if status code is not ok', async () => {
-    window.fetch = jest.fn().mockImplementation(() => Promise.resolve({
-      status: 500,
-    }))
+  // return an error if the status is not ok
+  it('should return an error if status is not ok', async () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: false
+      })
+    })
 
     await expect(addGrocery()).rejects.toEqual(Error('Error adding grocery'))
   })
 })
-
 ```
 
-Here, I've assumed that I have a helper method `addGrocery` in my apiCalls.js file. Using a similar mocking strategy as
-before, I've mocked fetch. This time, I'm also adding a status code to the resolved object. This will exist on the
-response object as well, and will be considered 'ok', if the status is less than 400. Thus, if the status code is less
-than 400, my helper function should resolve to an object, otherwise, I should expect an error. Note the
-`resolves/rejects` happening in the test. These expectation helpers are built into Jest, and allow you get the resolved
-or rejected values from asynchronous functions.
+Our helper method `addGrocery` uses a similar mocking strategy as before. This time, I'm also adding a status code to the resolved object. This will exist on the response object as well, and will be considered 'ok', if the status is less than 400. Thus, if the status code is less than 400, my helper function should resolve to an array of grocery objects; otherwise, I should expect an error. Note the `resolves/rejects` happening in the test. These expectation helpers are built into Jest, and allow you get the resolved or rejected values from asynchronous functions.
 
-With our test in hands, lets write our function:
-
-```javascript
-// apiCalls.js
-
-export const addGrocery = async (grocery) => {
-  const response = await fetch('/api/v1/groceries', {
-    method: 'POST',
-    body: JSON.stringify({ grocery }),
-    headers: {
-      'Content-Type': 'application/json'
-    }
-  })
-
-  if(response.status >= 300) {
-    throw(new Error('Error adding grocery'))
-  } else {
-    return await response.json()
-  }
-}
-```
+### Refactoring AddGroceryForm to use our new, isolated fetch
 
 With our new reusable function, our component method now knows nothing of fetch, and instead `await`'s our asynchronous
 function from apiCalls.js.
 
+Notice that we don't need to parse our response, because we're parsing it before we send it!
+
 ```javascript
 // AddGroceryForm.js
 
-async addGrocery(event) {
+import { addGrocery } from './apiCalls.js'
+
+async handleAddGrocery(event) {
   event.preventDefault();
   const { updateGroceryList } = this.props;
-  const grocery = this.state.grocery;
+  const { grocery } = this.state;
 
   try {
-    const data = await addGrocery(grocery)
+    const groceries = await addGrocery(grocery)
     this.setState({
       grocery: {
         name: '',
         quantity: ''
       }
-    }, updateGroceryList(data.groceries));
+    }, updateGroceryList(groceries));
   } catch(error) {
     this.setState({
       errorStatus: 'Error adding grocery'
@@ -477,15 +490,12 @@ async addGrocery(event) {
   };
 }
 ```
-Now that we've isoloated and tested our fetch functionality, testing our component method is simplified, because we can
-mock the response from our new `addGrocery` function. We no longer need to test that fetch is being called in the
-component tests, we only need to test that the data is handled correctly after the function is called.
+
+Now that we've isolated and tested our fetch functionality, testing our component method handleAddGrocery is simplified, because we can mock the response from our new `addGrocery` function. We no longer need to test that fetch is being called in the component tests, we only need to test that the data is handled correctly after the function is called.
 
 To facilitate this, we're going to create a mock, which will override the addGrocery helper method we just created.
 
-Using Jest's `mockImplementationOnce` helper, we can control what is returned from our function each time it is
-called. This greatly simplifies our three tests. When we call `jest.mock('./apiCalls')`, jest overwrites any functions
-that are found in `apiCalls.js` with whatever we specify in the second argument to that mock function call.
+Using Jest's `mockImplementationOnce` helper, we can control what is returned from our function each time it is called. This greatly simplifies our three tests. When we call `jest.mock('./apiCalls')`, jest overwrites any functions that are found in `apiCalls.js` with whatever we specify in the second argument to that mock function call.
 
 ```javascript
 // AddGroceryForm.test.js
@@ -494,50 +504,63 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import AddGroceryForm from './AddGroceryForm'
 import { addGrocery } from '.apiCalls'
+// The line below is what allows us to mock addGrocery and make it return our mockGroceries array
 jest.mock('./apiCalls')
 
 describe('AddGroceryForm', () => {
-  const mockGrocery = { name: 'Oranges', quantity: 3 }
-  const mockGroceries = [{ name: 'apple', quantity: 12 }, mockGrocery]
-  const mockUpdateGroceryList = jest.fn()
-  const mockEvent = { preventDefault: jest.fn() }
-  let renderedComponent
-  
-  beforeAll(() =>{
+  let mockGrocery
+  let mockGroceries
+  let mockUpdateGroceryList
+  let mockEvent
+  let wrapper
+
+  // We add a beforeAll to mock addGrocery, ensuring that it returns our mockGroceries array when it's called
+  beforeAll(() => {
     addGrocery.mockImplementation(() => mockGroceries);
   })
 
-  beforeEach(() => { 
-    renderedComponent = shallow(<AddGroceryForm 
-                                  updateGroceryList={mockUpdateGroceryList}
-                                />)
+  beforeEach(() => {
+    mockGrocery = { name: 'Oranges', quantity: 3 }
+    mockGroceries = [{ name: 'apple', quantity: 12 }, mockGrocery]
+    mockUpdateGroceryList = jest.fn()
+    mockEvent = { preventDefault: jest.fn() }
+    wrapper = shallow(<AddGroceryForm updateGroceryList={mockUpdateGroceryList} />)
   })
 
+  // We no longer need to test that the fetch is happening! We tested the fetch in isolation in apiCalls.test.js already!
+
   it('resets the state after adding a new grocery', async () => {
-    renderedComponent.setState({grocery: mockGrocery})
-    await renderedComponent.instance().handleAddGrocery(mockEvent)
-    expect(renderedComponent.state('grocery')).toEqual({name: '', quantity: ''})
+    wrapper.setState({grocery: mockGrocery})
+    await wrapper.instance().handleAddGrocery(mockEvent)
+    expect(wrapper.state('grocery')).toEqual({name: '', quantity: ''})
   })
 
   it('calls the updateGroceryList callback after adding a new grocery', async () => {
-    await renderedComponent.instance().handleAddGrocery(mockEvent)
+    await wrapper.instance().handleAddGrocery(mockEvent)
     expect(mockUpdateGroceryList).toHaveBeenCalled()
   })
 
   it('sets an error when the fetch fails', async () => {
+    // We have to overwrite the original mock of addGrocery to make sure that it sends back an error!
     addGrocery.mockImplementation(() => {
       throw new Error('Error adding grocery')
     });
-    await renderedComponent.instance().handleAddGrocery(mockEvent)
-    expect(renderedComponent.state('errorStatus')).toEqual('Error adding grocery')
+    await wrapper.instance().handleAddGrocery(mockEvent)
+    expect(wrapper.state('errorStatus')).toEqual('Error adding grocery')
   })
 })
 ```
 
+Moving the fetch into its own file and testing it in isolation allows us to streamline our component tests.
+
+We make sure that the fetch works in its own test (`apiCalls.test.js`), and we make sure that the overall expected functionality works in our component tests (`AddGroceryForm.test.js`).
+
 ## Final thoughts
+
 As a rule of thumb, code is easier to test when it is doing less. By separating our API calls from component code, it’s easier to test the expected behavior of both pieces. By using the mocking and asynchronous expectations that are available in Jest, it’s easy to mimic the behavior of an API, and ensure that your application responds as you expect it should.
 
 ## Your turn
-This isn't the only fetch call which needs to be tested. Notice the fetch call that's happening in the
-`componentDidMount` method of App.js? With a partner, extract that functionality into a helper method, and test both the
-helper method, and the App, using the same patterns we just went over.
+
+This isn't the only fetch call which needs to be tested. Notice the fetch call that's happening in the `componentDidMount` method of App.js? With a partner, extract that functionality into a helper method, and test both the helper method, and the App, using the same patterns we just went over.
+
+## Instructor Notes

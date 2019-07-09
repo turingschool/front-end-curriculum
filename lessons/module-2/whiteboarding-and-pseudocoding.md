@@ -1,4 +1,4 @@
-  ---
+---
 title: Whiteboarding and Pseudocoding
 length: 120
 tags: whiteboarding, interviews, pseudocoding
@@ -12,7 +12,6 @@ module: 2
 * Identify common roadblocks to effective problem-solving
 
 ### Warm Up
-* When you are presented with a problem, how do you solve it?
 * In your journal, draw out the process of how you make toast. You must start with a clean sheet of paper and you are not allowed to write/use any words.
 
 <!-- Most solutions should have nodes and links. On average, should be between 4 and 8 nodes. Sweet spot is between 5 and 13 - not too simple, not too complex. Helps us understand the situations as systems with nodes and their relationships-->
@@ -96,6 +95,16 @@ Pseudocode:
 - demonstrates your logic
 - takes syntax errors out of the equation
 
+<!-- 
+* Important because it gives you a plan for solving the problem that you can stick to, and fall back on when you get stuck
+
+* Allows interviewers to intervene before you start writing code - it's easier for them to correct your pseudocode than it is to correct your actual code
+
+* Demonstrates that you can logically solve the problem at a high-level, which is the most important step/most insightful for people who are evaluating your skill level
+
+* If you can pseudocode, you can solve the problem with JavaScript - maybe you just run into little syntax errors or something that most people will be kind enough to point out to you -->
+
+
 ### Basic Structure for Pseudocoding
 
 _Sequences_: Sequences are the most straightforward part of structuring pseudocode. At the most basic level, a sequence is made up of commands or steps that must be followed. Any commands in a sequence are generally written as a list.
@@ -133,20 +142,26 @@ Which could also be written like this:
 ```js
 // Until the oven is 350 degrees, wait
 ```
-<!-- 
-* Important because it gives you a plan for solving the problem that you can stick to, and fall back on when you get stuck
-
-* Allows interviewers to intervene before you start writing code - it's easier for them to correct your pseudocode than it is to correct your actual code
-
-* Demonstrates that you can logically solve the problem at a high-level, which is the most important step/most insightful for people who are evaluating your skill level
-
-* If you can pseudocode, you can solve the problem with JavaScript - maybe you just run into little syntax errors or something that most people will be kind enough to point out to you -->
 
 <!-- * How to convert plain english lines of pseudocode into actual JavaScript
   * Find keywords in your pseudocode that represent operators/patterns in code. e.g.
     * *Create the key & set it equal to an empty array* - "set it equal to" represents the assignment operator (`=`)
     * *Check if foo equals bar* - "if" represents an if condition (`if (foo ==== bar)`)
     * *Otherwise, do something different* - "otherwise" represents an else condition (`else ()`) -->
+
+
+## Solving a JS Problem with Pseudocode
+
+Imagine you were given the following prompt on a technical interview:
+
+>Create a function that determines if a string is a palindrome or not. Your function should return a boolean (true if the given word is a palindrome, false if it is not).
+
+1. Try writing some pseudocode that will lead you to an answer in JavaScript
+2. Use your pseudocode to write a solution -- if it doesn't lead you to one, where did your pseudocode go wrong? Was it too vague? Was it inaccurate? Was it out of order?
+3. Compare your solution, or lack thereof, to the one [here](https://repl.it/@brittanystoroz/DeeppinkAromaticEngineer)
+4. Write a new draft of pseudocode that would have more easily led you to the solution above
+
+
 
 ## PIA (Psuedocoding in action)
  
@@ -186,7 +201,34 @@ Array.prototype.myFilter = function(callback) {
 
 #### Turn and Code: 
 
-In pairs, pull up and fork [this codepen](https://codepen.io/plovett/pen/NeXzQe?editors=1010). You should be completing both phases for each individual test. Be sure that you are actively switching between being the driver and the navigator.
+In pairs, you will be working through two problems. Be sure that you are actively switching between being the driver and the navigator role. 
+
+[Problem I](https://repl.it/@thatpamiam/Problem-I-Psuedo-coding)  
+<!-- Possible solution:
+```js
+function returnIndexValues(indices, list) {
+  return indices.reduce((values, index) => {
+    values.push(list[index])
+    return values;
+  }, []);
+}
+``` -->
+[Problem II](https://repl.it/@thatpamiam/Problem-II-Psuedo-coding)  
+
+<!-- Possible solution:
+```js
+function reverseOddWords(words) {
+  const reversed = words.split(' ').map((word, index) => {
+    if (index % 2 !== 0) {
+      return word.split('').reverse().join('');
+    }
+
+    return word;
+  });
+
+  return reversed.join(' ');
+}
+``` -->
 
 
 >Phase I => (Understand and Plan) Break out the way that you would solve this problem in pseudocode. Remember, psuedocode is _not_ code... but a way to work through the logic of the problem without worrying about syntax.
@@ -200,29 +242,6 @@ In pairs, pull up and fork [this codepen](https://codepen.io/plovett/pen/NeXzQe?
 **Person A: Driver**  
 
 
-<!-- Possible Solution 
-
-  function totalLicks(env) {
-  var totalLicks = 252;
-  var toughestChallenge = {challenge: "", value: 0};
-
-  Object.keys(env).forEach((el) => {
-    totalLicks += env[el];
-    
-    if(env[el] > 0 && env[el] > toughestChallenge.value) {
-      toughestChallenge.challenge = el;
-      toughestChallenge.value = env[el];
-    }
-  })
-  
-  if (!toughestChallenge.challenge) {
-    return `It took ${totalLicks} licks to get to the tootsie roll center of a tootsie pop.`
-  } else {
-    return `It took ${totalLicks} licks to get to the tootsie roll center of a tootsie pop. The toughest challenge was ${toughestChallenge.challenge}.`
-  }
-}
-
--->
 
 ### Some possible pitfalls to problem solving
 

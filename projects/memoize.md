@@ -4,8 +4,6 @@ length: 1 week
 tags: javascript, react
 ---
 
-# Memoize
-
 1 week solo project for FE Mod 2 (Week 6)
 
 ## Background and Description
@@ -54,11 +52,11 @@ _Or other optional topic that is instructor approved_
 
 * Your dataset must have at least 30 records (If your dataset is an object, it should have 30 keys. If it's an array, it should have 30 elements)
 
-* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset [here](https://github.com/turingschool-examples/memoize). Your datasets should be added in a single file to the `/datasets` directory. Be sure to export at the bottom of your file.
+* You must run your dataset through a [JSON validator](https://jsonlint.com/) before submitting a pull request for your dataset [here](https://github.com/turingschool-examples/fe-apps). Your datasets should be added in a single file to the `/datasets` directory. Be sure to export at the bottom of your file.
 
 * You must save data to localStorage about correct / incorrect answers to localStorage so that the next time a user visits the page, they will only be shown the flash cards they got incorrect / still need to practice
 
-
+* Only 3 of any one topic will be accepted/approved. (e.g. If 3 people in the cohort have been approved to do a flashcards app covering prototypes, no other pitches submitted for covering prototypes will be approved). Pitches/datasets will be approved in the order they are received.
 
 # Path 2 
 
@@ -77,7 +75,8 @@ Check out some of these learning tools from the wild:
 * [Code Wars](http://codewars.com)
 * [Exercism](https://exercism.io/)
 
-While the application you build doesn't have to be as complex as the examples above, know that you have the freedom to be ambitious and take your study tool in whatever direction you choose. Check out some successful student projects from the past like [CSS-Animate](https://css-animate.com) and [Rabbit Hole](https://jarushford.github.io/rabbit-hole/).
+While the application you build doesn't have to be as complex as the examples above, know that you have the freedom to be ambitious and take your study tool in whatever direction you choose. Check out some successful student projects from the past like [CSS-Animate](https://css-animate.com), [Rabbit Hole](https://jarushford.github.io/rabbit-hole/), and [Terminal Commander](https://terminal-commander.herokuapp.com/).
+
 
 ### Potential Topic Ideas
 

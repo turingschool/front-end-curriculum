@@ -24,6 +24,37 @@ By the end of this lesson, you will know/be able to:
 
 Cross-Browser compatibility describes the issues and strategies behind making sure your applications look and behave in a consistent manner across as many browsers and platforms as possible. As we have introduced more devices, operating systems and browsers into the ecosystem, attempting to support all of them has become a significant challenge for front-end developers. 
 
+__________________________________________
+
+
+## Causes of Compatibility Discrepancies
+
+Sometimes browsers implement APIs in different ways. Companies like Google, Mozilla, and Microsoft have "Platform Engineering" teams who are responsible for building Chrome, Firefox, and Internet Explorer, respectively. These engineers are in charge of implementing the features and APIs we use in our web applications -- from HTML tags such as `video` and `audio`, and JavaScript APIs such as `serviceWorkers` and `geolocation`.
+
+Spec writers, API developers and platform engineers have learned the importance of standardizing the usage and behavior of these types of elements and APIs as a means to make cross-browser compat easier for front-end developers. The more closely these engineers abide by standards, the more your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
+
+These standards bodies didn't always exist to provide definitions for how these features should be implemented. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
+
+Though we've all agreed to standardize, feature implementation discrepancies still exist in some contexts. The most bleeding-edge APIs are often changing rapidly as spec writers debate how they should behave. While the specification is in-flux, so is the implementation. Platform engineers will get started on the implementation right away, and they might contain bugs or outdated APIs while the spec is being solidified. This is unavoidable and our best bet in these scenarios is to simply be patient while we wait for a more stable release before using these features in production.
+
+For instance, take a look at the documentation page for the [Network InformationAPI
+](https://developer.mozilla.org/en-US/docs/Web/API/Network_Information_API). The top banner says it all.
+
+Another reason discrepancies continue to exist is because people are still using old browsers and environments that are no longer being updated. For example, some larger companies that provide all their employees with Windows and a copy of Internet Explorer 8 might not have the resources to upgrade the entire staff to a new environment. Meanwhile, the teams over at Microsoft are busy working on more bleeding-edge versions of Internet Explorer, and trying to keep up with the newer APIs coming out. The support and resources they put into IE8 is minimal, if any, and thus that browser will never come up to par with more modern ones.
+
+Finally, some companies are hesitant to stop supporting older browsers simply for financial reasons. The New York Times makes much more of its money off of online subscriptions and advertisements in recent years. Previously, they continued to support older versions of IE because not doing so could have had drastic effects on their revenue if they happened to lose that portion of their user base. (They eventually dropped support for IE8 in 2014 and IE9 in 2015. When doing so, they put an indicator on the UI for reader's using those browsers to let them know their browser would soon no longer be supported. The response was overwhelmingly positive. A large percentage of users were able to upgrade their browsers and did so.)
+
+
+#### Turn and Talk
+
+* In your own words, describe an API.
+* What are examples of browser APIs that you have used in past projects? (Be sure that you Check the browser compatability chart in the documentation)
+
+__________________________________________
+
+
+## Considerations for Building Cross-Browser Compatible Apps
+
 ### Prioritizing Functionality
 
 When aiming to serve as large of an audience as possible, we need a clear outline of what pieces of functionality and experience are highest priority. Delivering a completely consistent experience across all platforms isn't necessarily the goal, and is honestly kind of impossible. The real goal is simply to provide an acceptable experience for as many users as possible. This means we need to ask ourselves a few questions about what we're building:
@@ -51,26 +82,14 @@ At a high-level, there are two popular approaches for tackling the cross-compat 
 
 While these two approaches usually produce similar results, the big difference between them lies in where your initial priorities are targeted. Do you want to start by building the most complex and advanced application possible, then try to "fix" the experience for older platforms? (Graceful Degradation) Or do you want to nail down the basic user experience for lesser, maybe more common environments, and slowly extend and advance it for future platforms? (Progressive Enhancement)
 
-__________________________________________
 
-## Causes of Compatibility Discrepancies
+#### Turn and Talk
 
+Both progressive enhancement and graceful degradation assist in making websites more accessible. With this in mind, discuss the following:
 
-### Standardization
-
-Sometimes browsers implement APIs in different ways. Companies like Google, Mozilla, and Microsoft have "Platform Engineering" teams who are responsible for building Chrome, Firefox, and Internet Explorer, respectively. These engineers are in charge of implementing the features and APIs we use in our web applications -- from HTML tags such as `video` and `audio`, and JavaScript APIs such as `serviceWorkers` and `geolocation`.
-
-Spec writers, API developers and platform engineers have learned the importance of standdardizing the usage and behavior of these types of elements and APIs as a means to make cross-browser compat easier for front-end developers. The more closely these engineers abide by standards, the more your apps will behave in a predictable manner when run on the platforms they build. Standardization bodies such as [WHATWG](https://whatwg.org/) and [W3C](https://www.w3.org/) have been delivering well-defined specifications for how common application features should be implemented to help facilitate consistent experiences.
-
-These standards bodies didn't always exist to provide definitions for how these features should be implemented. Years ago, browser vendors deliberately provided custom feature implementations in an attempt to gain a competitive advantage. This made developer's jobs incredibly difficult -- getting a single feature working across multiple browsers often meant writing the functionality multiple times, once for each browser that needed to be supported. Eventually we all made up and agreed we were being silly and began to prioritize standardization. (Also, browser companies began to make money in different ways and no longer needed to rely on their browser for financial stability.)
-
-Though we've all agreed to standardize, feature implementation discrepancies still exist in some contexts. The most bleeding-edge APIs are often changing rapidly as spec writers debate how they should behave. While the specification is in-flux, so is the implementation. Platform engineers will get started on the implementation right away, and they might contain bugs or outdated APIs while the spec is being solidified. This is unavoidable and our best bet in these scenarios is to simply be patient while we wait for a more stable release before using these features in production.
-
-For instance, take a look at the documentation page for the [Web VR API](https://developer.mozilla.org/en-US/docs/Web/API/WebVR_API). The top banner says it all.
-
-Another reason discrepancies continue to exist is because people are still using old browsers and environments that are no longer being updated. For example, some larger companies that provide all their employees with Windows and a copy of Internet Explorer 8 might not have the resources to upgrade the entire staff to a new environment. Meanwhile, the teams over at Microsoft are busy working on more bleeding-edge versions of Internet Explorer, and trying to keep up with the newer APIs coming out. The support and resources they put into IE8 is minimal, if any, and thus that browser will never come up to par with more modern ones.
-
-Finally, some companies are hesitant to stop supporting older browsers simply for financial reasons. The New York Times makes much more of its money off of online subscriptions and advertisements in recent years. Previously, they continued to support older versions of IE because not doing so could have had drastic effects on their revenue if they happened to lose that portion of their user base. (They eventually dropped support for IE8 in 2014 and IE9 in 2015. When doing so, they put an indicator on the UI for reader's using those browsers to let them know their browser would soon no longer be supported. The response was overwhelmingly positive. A large percentage of users were able to upgrade their browsers and did so.)
+* Which is better overall? Why?
+* Which would be better for testing? Why?
+* What is the difference between progressive enhancement and graceful degradation?
 
 __________________________________________
 
@@ -133,6 +152,15 @@ if (window.Notification && Notification.permission === "granted") {
 }
 ```
 
+#### Your Turn
+
+Open your `Activity Tracker` project's HTML and CSS files and go to the[*HTML5 PLEASE*](https://html5please.com/) website.
+
+* Take 5 - 10 minutes to check some of those new, shiny HTML5 tags and CSS3 properties that you implemented.
+  * Do you need a fallback? Something called a polyfill? Neither?
+
+_*Note: Another popular site to check for compatability issues is ["Can I Use"](https://caniuse.com/). This site is nice in that it provides up-to-date browser support tables*_
+
 ### Polyfills & Shims
 
 A shim allows you to bring a new API to an older environment. Usually these are libraries or other included files that you'll add to your application to support some functionality in an older browser.
@@ -152,9 +180,11 @@ if (window.Promise && window.fetch) {
 }
 ```
 
-The polyfills for these APIs look like the following: [fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js), [promise polyfill](https://raw.githubusercontent.com/stefanpenner/es6-promise/master/dist/es6-promise.js). You'll notice at the bottom of each polyfill file, it will return a newly defined object for either `fetch` or `Promise`. This allows our application code to be written as it would for modern browsers, and cuts down on the amount of conditional code we have to write.
+The polyfills for these APIs look like the following: [fetch polyfill](https://raw.githubusercontent.com/github/fetch/master/fetch.js), [promise polyfill](https://raw.githubusercontent.com/taylorhakes/promise-polyfill/master/dist/polyfill.js). You'll notice at the bottom of each polyfill file, it will return a newly defined object for either `fetch` or `Promise`. This allows our application code to be written as it would for modern browsers, and cuts down on the amount of conditional code we have to write.
 
+#### Turn and Talk
 
+In your own words, describe a polyfill. What is a helpful analogy for thinking about polyfills?
 
 ### IE Conditional Comments
 

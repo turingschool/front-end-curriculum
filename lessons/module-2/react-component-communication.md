@@ -97,10 +97,10 @@ Callback functions - The parent will pass the child a function as a prop:
   <MyChild myFunc={this.handleChildFunc} />
   ```
 
-  The child would then call the function to communicate with its parent:
+  The child would then call the function to communicate with its parent, usually in response to a user interaction/event:
 
   ```js
-  this.props.myFunc(newData)
+  <button onClick={() => this.props.myFunc(newData)}>Submit</button>
   ```
 
 
@@ -262,7 +262,7 @@ Turn to the person next to you and take turns walking through this data flow.
 Now that you have successfully created a basic app that showcases component communication in React, let's add to what we have
   - Update your `Controls` component to include a `select` element that allows the user to also filter for the category of triviaQuestions . Use the `categories` that are being imported in line 3 in `App.js`
 
-_Completed version of Phases 1-3 can be found on the branch `complete-morning`_
+_Completed version of Phases 1-3 can be found on the branch `complete`_
 
 <!-- ## Code Steps
 * App.js: Import triviaList

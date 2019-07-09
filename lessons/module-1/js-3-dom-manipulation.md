@@ -77,7 +77,7 @@ The DOM has been updated to the following:
 ```html
 <!-- The following line of HTML will be used in the next side track example -->
 <!-- Note the extra spaces after hello - that is intentional -->
-<p id="inner-text-example">Hello    <span>1711</span></p>
+<p id="inner-text-example">Hello    <span>1906</span></p>
 ```
 
 **Side Track**: You may have heard about a few different ways to target/manipulate the text of an HTML page. The two most common are `innerText` and `innerHTML`, with a third being `textContent`. [The first answer in this convo](https://teamtreehouse.com/community/innertext-vs-innerhtml) gives you a quick answer, but if you're curious run the following few lines of code in your console:
@@ -208,4 +208,3 @@ Here is an example of the second task:
 - How do we add information to the DOM?
 - How can we change the CSS of elements?
 - What is the preferred method for updating our CSS using JS?
-

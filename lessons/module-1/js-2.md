@@ -17,18 +17,20 @@ Before we get started with new material, let's go over over what we've learned s
 
 In this lesson we'll cover:
 
-* More about functions and their uses  
-* Variable scope  
+* More about functions and their uses 
+  - Calling functions inside of other functions
+  - Function expressions and anonymous functions
+* Hoisting & Variable scope  
 * Array literals  
 * Adding/changing values to arrays via their indices  
-* `for` loops  
+* `for` loops and how to iterate through arrays using loops
 
-## Resources
-[JS Style Guide](https://github.com/turingschool-examples/javascript)
 
 ## Vocab
 
 - See [vocab](http://frontend.turing.io/lessons/module-1/js-1.html) for JS I
+- `DRY` Programming principle that means `Don't Repeat Yourself`
+- `Refactoring` - the process of cleaning up your working code to be more concise
 - `Anonymous Function` A function without a name
 - `Scope` Determines the accessibility/visibility of variables and functions
 - `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
@@ -36,15 +38,61 @@ In this lesson we'll cover:
 - `Array` Used to store a collection of data items/multiple values under a single variable name
 - `Loops` A quick and easy way to do something repeatedly
 - `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops. 
-- `DRY` Programming principle that means `Don't Repeat Yourself`
 
 
 # More on Functions
 
 Can't get enough.  
 
-## Part 1: Calling functions inside of other functions
-When writing Javascript, you want to do your best to keep your code DRY (Don't Repeat Yourself). That means keeping functions concise and single responsibility. It's not uncommon to do a first pass at solving a problem and end up with a more verbose solution, and then revisit your code to tighten it up. This process of cleaning up your working code is called `refactoring`. When we refactor, one of the things we look for is unnecessary duplication. If we see a line of code being used in multiple places, we can pull it out into its own separate function of reusable code.
+## Part 1: Refactoring + Calling functions inside of other functions
+
+When you are just starting to learn how to program, your main objective should be to get things working. It doesn't need to be pretty, it doesn't need to be clever - it just needs to work. However, after you have things working, you'll want to take some time to **refactor** your code. Refactoring is the process of cleaning up your already working code to remove repetitive, unnecessary or non-functioning code from your codebase. 
+
+In programming, you'll often hear about keeping your code 'DRY' - which stands for 'Don't Repeat Yourself'. That means keeping functions concise and single responsibility (each function only has one task/job). This idea goes hand in hand with refactoring and is a good starting place to see where you can clean up your code. Simply put, if you find areas where you are writing the same lines of code over and over again, you can likely break these repetitive lines of code out into their own smaller functions.
+
+Another common example of refactoring is for functions that are very long/verbose. While there isn't a "perfect length" of a function, typically, the smaller (and more modular), the better. Let's take a look at the example below:
+
+```js
+function geezerAttack() {
+  console.log('What in tarnation?!')
+  console.log('Who is making all that racket on my porch?')
+  console.log('If I miss one second of my television program I am gonna lose it!')
+  console.log('***Struggles out of reclining chair...***')
+  console.log('***Bangs knee on coffee table...***')
+  console.log('***Drops TV remote on slippered foot...***')
+  console.log('~~~Whack on the head with a newspaper~~~')
+  console.log('~~~Throw slipper at victim~~~')
+  console.log('~~~Smack with hickory cane~~~')
+}
+```
+
+The above function is pretty long and there is a lot of things happening. This could be a great opportunity to refactor by breaking this function out into smaller functions and calling them within our main function, `geezerAttack()`. Looking at this functionality, there seems to be three main themes: warnings, struggles and fightingMoves. We could break this up into three other functions! See below:
+
+```js
+function geezerWarnings() {
+  console.log('What in tarnation?!')
+  console.log('Who is making all the racket on my porch?')
+  console.log('If I miss one second of my television program I am gonna lose it!')
+}
+
+function geezerStruggles() {
+  console.log('***Struggles out of reclining chair...***')
+  console.log('***Bangs knee on coffee table...***')
+  console.log('***Drops TV remote on slippered foot...***')
+}
+
+function geezerFightingMoves() {
+  console.log('~~~Whack on the head with a newspaper~~~')
+  console.log('~~~Throw slipper at victim~~~')
+  console.log('~~~Smack with hickory cane~~~')
+}
+
+function geezerAttack() {
+  geezerWarnings()
+  geezerStruggles()
+  geezerFightingMoves()
+}
+```
 
 Let's take a crack at refactoring some functions and calling functions within other functions. Below we see two very important functions:
 
@@ -65,18 +113,18 @@ function ninjaAttack() {
 We can see that we have some duplication going on between these two functions. We see we have two `alert` statements that are exactly the same in both functions, which means it is a prime candidate to get pulled into its own function. This will let us reuse this code without retyping it repeatedly (which helps reduce human error and typos), and gives us the flexibility to easily use it in future functions as well. Let's see what that looks like:
 
 ```js
-function alertAttack() {
+function surpriseAttack() {
   alert("KAPOW!");
   alert("JUDO CHOP!");
 }
 
 function karateChop() {
   console.log("KARATE CHOP!");
-  alertAttack();
+  surpriseAttack();
 }
 
 function ninjaAttack() {
-  alertAttack();
+  karateChop();
   console.log("NINJA SURPRISE!");
 }
 ```
@@ -85,7 +133,8 @@ function ninjaAttack() {
 
 Turn to your neighbor and explain how the functions above work. Remember, getting practice using the vocabulary is important so make sure you both have a chance to talk through it!  
 
-How would you use parameters and arguments to make the logged string be different each time we call the function?
+How would you use parameters and arguments to make the logged string in `ninjaAttack()` be different each time we call the function?
+
 
 ## Part 2: Declarations vs Expressions
 
@@ -118,6 +167,8 @@ setTimeout(function() {
 }, 1000);
 ```  
 
+You will see anonymous functions as arguments in the future in things like *event listeners* and *array prototype methods*.  (More on those in future lessons)
+
 They are also commonly used within *function expressions*, where the function is assigned to a variable, which makes the anonymous function part of a larger `expression`.  
 
 ```js
@@ -134,7 +185,7 @@ Things to think about:
 - Can a function return a value?
 - Can a function be an expression?  
 
-Recall that anywhere the interpreter expects to find an expression, like when you declare a variable name, we can use an expression that is NOT named as the value. In the context of functions, we call this an *anonymous function*. Remember that an expression simply returns a value, so it makes sense that we should be able to accomplish that with an function.
+Recall that anywhere the interpreter expects to find an expression, like when you declare a variable name, we can use an expression that is NOT named as the value. In the context of functions, we call this an *anonymous function*. Remember that an expression simply returns a value, so it makes sense that we should be able to accomplish that with a function.
 
 To reiterate, `function expressions` define a function, but instead of giving the name to the function itself, the function is left anonymous and the name is instead assigned to a variable.  
 
@@ -228,7 +279,71 @@ Variables sans the keyword `var`
   - will be considered global variable, even if declared _inside_ a function
   - are bad practice
 
+Here's an example of what this looks like:
+
+```js
+function defineVariables() {
+  num1 = 10;
+  var num2 = 20;
+}
+
+defineVariables();
+
+console.log(num1);  // This will display 10.
+console.log(num2);  // This will give a ReferenceError: : num2 is not defined.
+```
+
 The good news is all you have to do to avoid this is to always remember to use the `var` keyword when declaring a new variable!
+
+## Name Your Parameters Carefully
+
+Now that we've talked a little bit about scope, we know that we have access to global variables inside of a function, right?  However, what happens if I name a parameter the same as a global variable?  In this scenario, the interpreter will try to use which one it thinks you are talking about.  In most scenarios, it will work as you'd expect.  Let's take a look below at a happy path:
+
+```js
+var number = 10;
+
+function test(number) {
+  console.log(number + 2);
+}
+
+test(number);  // This will give 12
+test(15);  // This will give 17
+```
+
+Here it will work just fine because the Javascript interpreter knows to refer to the number *parameter* when we invoke the function as opposed to the *global variable* number.  However, this is not always the case.  Let's look at a scenario where this doesn't work:
+
+```js
+var number = 10;
+
+function test(number) {
+  number = number + 2;
+  console.log(number); // This will give 12
+}
+
+test(number);
+
+console.log(number); // This will give 10
+```
+
+Here we are trying to reassign our global variable to whatever value I pass through as an argument plus two in our test function.  It logs the value we expect, when the function is invoked.  However, when we log what the global variable is, it remains the same as before.  The global variable wasn't reassigned...rather the parameter was reassigned a different value.
+
+This is all very confusing.  But there's an easy way to avoid this confusion...make sure your parameters have a different name from your global variables!  Let's try that now...
+
+```js
+var num = 10;
+
+function test(number) {
+  num = number + 2;
+  console.log(num); // This will give 12
+}
+
+test(num)
+
+console.log(num); // This will also give 12
+```
+
+Hooray!  Now we are getting what we expected both inside of the function and globally.  Because we are using a different name, the interpreter knows which variable we are referring to.
+
 
 # Arrays
 An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
@@ -401,7 +516,8 @@ for (var i = 0; i > -1; i++) {
 }
 ```
 
-We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.  
+We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them. 
+
 
 ### Additional Practice  
 
@@ -409,6 +525,7 @@ We can see that this condition will never return `false` and we'll be stuck in t
 
 ### Dig Deeper  
 
+* [JS Style Guide](https://github.com/turingschool-examples/javascript)
 * [Seven JS Quirks I Wish I'd Known About](http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/#expdec)  
 * [Adequately Good JS](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)  
 

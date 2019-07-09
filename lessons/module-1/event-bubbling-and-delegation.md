@@ -33,8 +33,12 @@ A common obstacle that many JavaScript developers struggle with is understanding
 
 ### Experiment
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="OXzGGR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/team/turing/pen/OXzGGR/">Events: Adding a New Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="Kalikoze" data-slug-hash="NJmRaO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Events: Adding a New Event Listener">
+  <span>See the Pen <a href="https://codepen.io/Kalikoze/pen/NJmRaO/">
+  Events: Adding a New Event Listener</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
 
@@ -84,8 +88,12 @@ Let's start with a quick experiment.
 
 In the following code pen, we have three nested HTML elements in `index.html`:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="ZOvkVo" data-default-tab="html,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/ZOvkVo/">Event Bubbling Example</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="Kalikoze" data-slug-hash="qvwaQm" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Event Bubbling Example">
+  <span>See the Pen <a href="https://codepen.io/Kalikoze/pen/qvwaQm/">
+  Event Bubbling Example</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Pair Practice
 
@@ -108,15 +116,19 @@ When an event occurs, the browser checks the element to see if there are any eve
 Try out the following code in the example code pen:
 
 ```js
-  document.querySelector('.grandparent').addEventListener('click', function (event) {
+  var grandParent = document.querySelector('.grandparent');
+  var parent = document.querySelector('.parent');
+  var button = document.querySelector('#click-me');
+
+  grandParent.addEventListener('click', function (event) {
     console.log('Grandparent');
   });
 
-  document.querySelector('.parent').addEventListener('click', function (event) {
+  parent.addEventListener('click', function (event) {
     console.log('Parent');
   });
 
-  document.querySelector('#click-me').addEventListener('click', function (event) {
+  button.addEventListener('click', function (event) {
     console.log('Button');
   });
 ```
@@ -126,7 +138,7 @@ If you click on the button, you'll see that the events all bubble up through the
 As noted above, we are focusing on the bubbling phase because there are _very_ few instances where you will have to be consiously aware of the event phases. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```js
- document.querySelector('#click-me').addEventListener('click', function (event) {
+ button.addEventListener('click', function (event) {
     console.log('Button');
   }, true);
 
@@ -155,15 +167,15 @@ Each type of event supports a number of different properties. `MouseEvent`s cont
 Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` of the event.
 
 ```js
-document.querySelector('.grandparent').addEventListener('click', function (event) {
+grandParent.addEventListener('click', function (event) {
   console.log(event.target);
 });
 
-document.querySelector('.parent').addEventListener('click', function (event) {
+parent.addEventListener('click', function (event) {
   console.log(event.target);
 });
 
-document.querySelector('#click-me').addEventListener('click', function (event) {
+button.addEventListener('click', function (event) {
   console.log(event.target);
 });
 ```
@@ -185,17 +197,21 @@ The algorithim:
  3. If the event happened inside an element that interests us, then handle the event
 
 ```js
-var buttonDiv = document.querySelector('.parent');
+var parent = document.querySelector('.parent');
 
-buttonDiv.addEventListener('click', function(event) {
-  if (event.target.className === 'button') {
+parent.addEventListener('click', function(event) {
+  if (event.target.className === 'click-me') {
     // do your action on your 'button' or whatever it is you're listening for
   }
 });
 ```
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="OXzGGR" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="https://codepen.io/team/turing/pen/OXzGGR/">Events: Adding a New Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="js,result" data-user="Kalikoze" data-slug-hash="NJmRaO" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Events: Adding a New Event Listener">
+  <span>See the Pen <a href="https://codepen.io/Kalikoze/pen/NJmRaO/">
+  Events: Adding a New Event Listener</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ### Your Turn
 

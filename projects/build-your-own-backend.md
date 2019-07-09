@@ -78,7 +78,13 @@ You can put your documentation in the README of your BYOB GitHub repository. Rem
 
 * Your application should be deployed to Heroku
 
+## Articulation Requirement
+
+In addition to the functional requirement, on a separate dedicated git branch, go through each line of the server file and put a comment on each line that explains what that line of code is doing. Be as explicit as you can.
+
 ### Extension: Create a FE documentation in your BE repo
+
+If all other expectations and requirements are met, you may:
 
 * Create a front-end (in the same repository as BYOB) that will document the API.
 * Provide a page that documents the available endpoints, the data that will be received, and the data the user must send.
@@ -97,7 +103,6 @@ We will have one check in over the course of the project.
 
 * Often, people think they have to do all their seeding in one step, but you can take whatever steps you need. Scraping data from the web? Consuming another API? You can do those all in separate steps! Get your data, _then_ clean it, _then_ write your seed file!
 * You'll probably have to do some sort of data manipulation/massaging before you try to seed. Think about how YOU want YOUR data to look before just dumping the data you found into your database. Do any manipulations you need to on your dataset before trying to seed. (e.g. you might want to rename, delete, or add columns)
-* The data records you pull might already have unique IDs on them. Feel free to use these as your primary keys instead of wiping them out and creating new ones.
 * You're going to be seeding a lot of data all at once. Recall the "Seeding Large Datasets" example from the [Knex Lesson Plan](http://frontend.turing.io/lessons/module-4/knex-postgres.html) and brush up on how to work with `Promise.all()`
 * Remember you often have to RETURN the Promises you're using in your seed file. If you aren't getting any errors, but your data isn't being seeded, you're likely forgetting a `return` statement.
 * If you're trying to transform data from a CSV file, avoid using [this library](https://www.npmjs.com/package/knex-seed-file).

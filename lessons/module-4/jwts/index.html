@@ -132,7 +132,7 @@
                 <li>If there is <em>not</em> an error with the token, then verify that the <code>appName</code> part of the token contains a valid application (you can determine the list of approved applications), and then call the express <code>next()</code> helper to complete the request handler.</li>
                 <li>If the <code>appName</code> in the token is invalid, then respond with a <code>403</code> and message that says 'Invalid application'.</li>
               </ul>
-            <li>Apply your middleware function to the <code>PATCH</code> request so that only an admin can edit the status of a train line.</li>
+              <li>Apply your middleware function to the <code>PATCH</code> request so that only an admin can edit the status of a train line.</li>
           </ul>
           <h3>End Goal</h3>
           <ul>

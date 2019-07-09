@@ -11,3 +11,47 @@
     }
   }
 }
+
+.small {
+  width: 40%;
+  margin: 15px 10px;
+}
+
+.medium {
+  width: 50%;
+  margin: 15px 10px;
+}
+
+.medium-large {
+  width: 70%;
+  margin: 20px 10px;
+  display: block;
+}
+
+%lesson-segment-shared {
+  margin-top: 30px;
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
+  margin-bottom: 40px;
+  padding: 5px 30px;
+}
+
+.lesson-segment {
+  @extend %lesson-segment-shared;
+  border-left: 8px solid lighten($turing-secondary, 25%);
+}
+
+.checks-for-understanding {
+  @extend %lesson-segment-shared;
+  border-left: 8px solid lighten($turing-secondary, 25%);
+  background-color: lighten($turing-primary, 40%);
+}
+
+.note {
+  @extend %lesson-segment-shared;
+  border-left: 8px solid lighten($front-end-secondary, 25%);
+  background-color: lighten($front-end-primary, 40%);
+}
+
+.google-form {
+  border: none;
+}

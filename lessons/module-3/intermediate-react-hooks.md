@@ -43,7 +43,7 @@ function App() {
   return (
     <div className='App'>
       <h1>PetBox</h1>
-      { isError && <div>Something went wrong...</div> }
+      { error && error }
       { isLoading ? <div>Loading...</div> : <PetList pets={pets} /> }
     </div>
   )
@@ -65,10 +65,10 @@ function App() {
   const [error, setError] = useState('')
 
   const getPets = async () => {
+    const url = 'http://localhost:3001/api/v1/pets'
     setError('')
     setIsLoading(true)
     try {
-      const url = 'http://localhost:3001/api/v1/pets'
       const response = await fetch(url)
       const pets = await response.json()
       setPets(pets)
@@ -85,7 +85,7 @@ function App() {
   return (
     <div className='App'>
       <h1>PetBox</h1>
-      { isError && <div>Something went wrong...</div> }
+      { error && error }
       { isLoading ? <div>Loading...</div> : <PetList pets={pets} /> }
     </div>
   )
@@ -211,7 +211,9 @@ class Fetch extends Component {
   render() {
     const { pets } = this.state
     return (
-      {!pets.length ? null : this.props.render(pets)}
+      <div>
+        {!pets.length ? null : this.props.render(pets)}
+      </div>
     )  
   }
 }
@@ -239,18 +241,18 @@ import { useState, useEffect } from 'react'
 function usePets() {
   const [pets, setPets] = useState([])
   const [isLoading, setIsLoading] = useState(false)
-  const [isError, setIsError] = useState('')
+  const [error, setError] = useState('')
 
   const getPets = async () => {
-    setIsError('')
+  const url = 'http://localhost:3001/api/v1/pets'
+    setError('')
     setIsLoading(true)
     try {
-      const url = 'http://localhost:3001/api/v1/pets'
       const response = await fetch(url)
       const pets = await response.json()
       setPets(pets)
     } catch(error) {
-      setIsError(error.message)
+      setError(error.message)
     }
     setIsLoading(false)
   }
@@ -259,7 +261,7 @@ function usePets() {
     getPets()
   }, [])
 
-  return {pets, isLoading, isError}
+  return {pets, isLoading, error}
 }
 
 export default usePets
@@ -273,12 +275,12 @@ import PetList from './PetList'
 import usePets from './usePets'
 
 function App() {
-  const {pets, isLoading, isError} = usePets()
+  const {pets, isLoading, error} = usePets()
   
   return (
     <div className='App'>
       <h1>PetBox</h1>
-      {isError && <div>Something went wrong...</div>}
+      {error && error}
       {isLoading ? <div>Loading...</div> : <PetList pets={pets} />}
     </div>
   )

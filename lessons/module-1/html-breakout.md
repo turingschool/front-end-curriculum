@@ -22,7 +22,7 @@ We talk a lot about writing semantic HTML, but what does that mean besides using
 ## **The Accessibilty Tree** 
 When the browser loads content, it creates the DOM tree. We can use scripting to interact with what's being displayed through the tree. By leveraging Accessibility APIs, the browser also creates what's know as the Accessibilty Tree. This loads information that's available to assistive technologies, such as screen readers and screen magnifiers.
 
-Writing clean, semantic HTML communicates information about the web page to the assistive technologies, but things can get tricky when creating custom widgets or more complex applications. Using a `div` to create a dropdown menu midget doesn't explain how a sightless user is meant to interact with it. This is where ARIA comes in.
+Writing clean, semantic HTML communicates information about the web page to the assistive technologies, but things can get tricky when creating custom widgets or more complex applications. Using a `div` to create a dropdown menu widget doesn't explain how a sightless user is meant to interact with it. This is where ARIA comes in.
 
 ## **ARIA**
 **Accessibile Rich Internet Applications**
@@ -134,7 +134,7 @@ There are a variety of resources available to developers for accessibilty testin
 - This plugin is a screenreader you can install in Chrome. It makes manual testing easy, and is used by Google's own devlopers.
 
 Mac VoiceOver
-- This is the native screen reader for OSX. It can be strange with Chrome, but is good for testing accessibility in Safari, oer any desktop applications you may develop down the line
+- This is the native screen reader for OSX. It can be strange with Chrome, but is good for testing accessibility in Safari, or any desktop applications you may develop down the line
 
 ## Resources
 <a href="https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/ARIA_Techniques#Roles" target="_blank">MDN Docs for ARIA Roles, States and Properties</a>
@@ -144,3 +144,5 @@ Mac VoiceOver
 <a href="https://www.w3.org/WAI/PF/aria-1.1/states_and_properties#aria-label" target="_blank">W3C List of supported States and Properties</a>
 
 <a href="https://www.shopify.com/partners/blog/website-accessibility-testing" target="_blank">9 Tools for Website Accessibility</a>
+
+<a href="https://developers.google.com/web/tools/chrome-devtools/accessibility/reference" target="_blank">Chrome Dev Tools Accessibilty Reference</a>
