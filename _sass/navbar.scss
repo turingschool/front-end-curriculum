@@ -44,7 +44,7 @@ nav {
 .nav-links a.active-link {
   // This border does not get applied to logo
   // because of code in active-links.js file
-  border-bottom: 3px solid $turing-primary;
+  border-bottom: 3px solid lighten($turing-secondary, 25%);
 }
 
 @media (max-width: $tablet-width) {
