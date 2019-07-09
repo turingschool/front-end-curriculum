@@ -28,26 +28,26 @@
   display: block;
 }
 
-%lesson-segment-shared {
+%call-to-action-shared {
   margin-top: 30px;
   box-shadow: 0 2px 8px 0 rgba(0,0,0,0.15);
   margin-bottom: 40px;
   padding: 5px 30px;
 }
 
-.lesson-segment {
-  @extend %lesson-segment-shared;
+.call-to-action {
+  @extend %call-to-action-shared;
   border-left: 8px solid lighten($turing-secondary, 25%);
 }
 
 .checks-for-understanding {
-  @extend %lesson-segment-shared;
+  @extend %call-to-action-shared;
   border-left: 8px solid lighten($turing-secondary, 25%);
   background-color: lighten($turing-primary, 40%);
 }
 
 .note {
-  @extend %lesson-segment-shared;
+  @extend %call-to-action-shared;
   border-left: 8px solid lighten($front-end-secondary, 25%);
   background-color: lighten($front-end-primary, 40%);
 }
