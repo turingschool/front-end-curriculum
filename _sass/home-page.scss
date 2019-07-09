@@ -2,7 +2,7 @@
   background: url('/assets/images/home-page-splash.jpg') 100%;
   background-size: cover;
   border-bottom: 8px solid $front-end-primary;
-  height: 475px;
+  height: 525px;
   display: flex;
   align-items: center;
   position: relative;
@@ -42,7 +42,7 @@
 
 .resources-section {
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
 
   h2 {
     font-family: $heavy-copy;
@@ -52,39 +52,22 @@
     padding: 60px 0 20px;
   }
 
-  h3 {
-    font-size: 1.5em;
-    font-family: $serif-light-copy;
-    margin: 20px 0;
+  img {
+    margin: 20px;
+    width: 450px;
   }
 
-  .group-container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-  }
-
-  .link-container {
-    flex-grow: 1;
-    flex-basis: 0;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .btn {
-    align-self: center;
+  p {
+    margin: 0 auto 50px;
+    max-width: 800px;
+    padding: 0 15px;
   }
 }
 
 .section-light {
   background-color: $background-secondary;
 
-  h2 {
-    color: $dark-gray;
-  }
-
-  h3 {
+  h2, p {
     color: $dark-gray;
   }
 }
@@ -96,8 +79,8 @@
     color: $light-gray;
   }
 
-  h3 {
-    color: $light-gray;
+  p, a {
+    color: $medium-gray;
   }
 }
 
@@ -116,6 +99,13 @@
     font-size: 1em;
     margin: 0px 0px 0px 50px;
   }
+
+  .resources-section {
+    img {
+      margin: 10px;
+      width: 350px;
+    }
+  }
 }
 
 @media (max-width: $phone-width) {
@@ -132,5 +122,12 @@
   .splash-text p {
     font-size: 0.9em;
     margin: 0px 0px 0px 15px;
+  }
+
+  .resources-section {
+    img {
+      margin: 5px;
+      width: 275px;
+    }
   }
 }
