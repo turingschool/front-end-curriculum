@@ -15,26 +15,29 @@ module: 2
 </style>
 
 
+### Vocab
+
+`Build Process` - a phase of development where source code is converted into some other final format
+
+
 ### Learning Goals
 
 By the end of this lesson, students should be able to:
 
-* Define packages and modules
-* Articulate why we use tools like Webpack and NPM, and explain the benefits of each
-* Define what a "build process" is and why it's helpful to have one
+* identify the benefits of a tool like webpack
+* define what a "build process" is and why it's helpful to have one
 
 
 <hr />
 
 
-
-## Webpack
+## What is Webpack
 
 **The Webpack Files:** `webpack.config.js`
 
 Webpack is a robust and versatile development tool that provides us with several significant benefits:
 
-* provides us with a development server to more closely mimic how the internet works
+* provides us with a development server to more closely mimic how the internet works while we develop our app
 * allows us to view our edits immediately without reloading
 * bundles and minifies all of our JavaScript files into a single, condensed file to reduce network requests
 * pre-processes our code so we can write it how we like, then optimize it during the build process
