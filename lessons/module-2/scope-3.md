@@ -176,15 +176,12 @@ function $(selector) {
 
 So rather than trying to hide sensitive information, we're using a closure here to hide information that the user of jQuery (us! developers!) doesn't need. This makes the interface for working with the library a little less overwhelming. We only expose what's necessary for someone to develop with jQuery, and we hide all the extra inner magic that it takes to get it to work.
 
+## Practice
+
+Use the closure pattern to create a "private" counter. The counter variable should be protected by an outter function. The outter function should return an object of methods that allow a user to `incrementCounter`, `decrementCounter` and `getCounterValue`. 
 
 
 <!-- 
-
- You're probably asking, 'So what?'... which is totally fair. It's hard to see the real value of closures until the nested functionality is returned. 
-
- Returning the nested functionality allows you to maintain access to the local variables in its associated scope. Unlike what we've mentioned before with garbage collection, the interpreter is smart enough to know that any referenced variables within this returned function should not be garbage-collected.  
-
- Let's take a look at another example of a closure: 
 
 ```js 
 1  function makeCounter () {  
@@ -208,26 +205,7 @@ So rather than trying to hide sensitive information, we're using a closure here 
 19 console.log(counter.getCount()); // 1  
 ``` 
 
- In the example above, you'll notice that the value of counter on line 16 prints `{add: ƒ, getCount: ƒ}` - which is what we expect given the return statement in `makeCounter`.   
 
- _This_ is when closures get interesting - when that inner functionality is returned. You'll notice that when we actually call the methods that are stored in the `counter` object (lines 17-19) we still have access to the variable `count`.  
-
- Because of the way that our code is written and returned, JavaScript knows not to garbage collect the variable of count. There is no way to mutate or overwrite `count` because it is completely protected within the closure. It's only accessible through the functions provided by the closure itself. Simply put, a closure is the ability of a function to remember the environment in which it was created.  
-
- You can find some practical uses for closure [here](https://stackoverflow.com/questions/2728278/what-is-a-practical-use-for-a-closure-in-javascript).  
-
-#### Your challenge  
-
-Create a function called `createGreeting` that declares a variable called `myName` and an inner function that is returned. When the `yourGreeting` function is called, it should log `'Hello' + <yournamehere>` to the console.    
-
-```js
-function createGreeting() { 
-  // your code here 
-} 
- // var yourGreeting = createGreeting();  
-// yourGreeting(); //should log the string of 'Hello' with your name 
-``` -->
-<!-- 
 
 ## IIFE (immediately invoked function expressions)
 
@@ -279,5 +257,4 @@ Read more about the JS Module Pattern:
 In your journal, take a few minutes to answer the following:
 
 - What is lexical scope?
-- What is a closure?
-- How would you use a closure to create a private counter?
+- What is a closure and how can it be helpful?
