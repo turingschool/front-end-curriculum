@@ -253,9 +253,9 @@ Read more about the JS Module Pattern:
 - [http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html)
 - [https://toddmotto.com/mastering-the-module-pattern/](https://toddmotto.com/mastering-the-module-pattern/) -->
 
-### Closing 
-
-In your journal, take a few minutes to answer the following:
+<section class="checks-for-understanding">
+### Checks for Understanding 
 
 - What is lexical scope?
 - What is a closure and how can it be helpful?
+</section>
