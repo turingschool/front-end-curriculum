@@ -55,7 +55,7 @@ Let's look at a more complex example:
 10  console.log(numEvals);
 ```
 
-<section class="lesson-segment">
+<section class="call-to-action">
 ### In Your Notebook
 
 What would you expect to be logged when we get to line 10? Why?
@@ -85,7 +85,9 @@ Let's look at another example:
 7  console.log('Animal Sound: ', moo);
 ```
 
-<section class="lesson-segment">
+<section class="call-to-action">
+### On Your Own  
+
 What would we expect to be logged when line 7 executes? Why? Is the actual behavior different than you expected?
 </section>
 
@@ -130,15 +132,10 @@ Our function is also hoisted to the top of our code block, with its entire defin
 
 When functions are hoisted to the top of our code block, it hoists not just the function name, but the code inside of it as well. This means we can invoke functions before we've declared them without running into errors. 
 
-
-<section class="note">
-### Note
-
 This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time.
-</section>
 
 
-<section class="lesson-segment">
+<section class="call-to-action">
 ### Turn and Talk
 
 With a partner, take turns explaining how the following JavaScript code would be translated by the interpreter. We will come back together as a class to discuss:
@@ -200,7 +197,7 @@ As the call stack builds up, each function has its own execution context.
 
 ![callstack building up](https://media.giphy.com/media/3ohs4rkYvzISB83cqY/giphy.gif) 
 
-<section class="lesson-segment">
+<section class="call-to-action">
 ### Turn and Talk 
 
 With a partner, take turns explaining how the the following JavaScript code would be translated by the interpreter. While one person is speaking, the other person should be diagramming this process.

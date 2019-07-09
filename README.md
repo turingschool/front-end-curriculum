@@ -38,8 +38,8 @@ You can add styled boxes to your lesson plans for different areas of content.
 
 #### Standard Box:
 
-```js
-<section class="lesson-segment">
+```html
+<section class="call-to-action">
 ### In Your Notebook
 
 What would you expect to be logged when we get to line 10? Why?
@@ -53,7 +53,7 @@ Will result in the following styled box:
 
 #### Note Box:
 
-```js
+```html
 <section class="note">
 ### Note
 
@@ -61,15 +61,15 @@ This hoisting behavior adds some complexity to the JavaScript language, and is i
 </section>
 ```
 
-![yellow-box](https://user-images.githubusercontent.com/17582916/60548280-f2b2fd00-9cde-11e9-848c-6d58f4b6ebde.png)
+![note-box](https://user-images.githubusercontent.com/17582916/60548280-f2b2fd00-9cde-11e9-848c-6d58f4b6ebde.png)
 
 #### CFU/Exit Ticket Box:
 
-```js
+```html
 <section class="checks-for-understanding">
-  <h3 id="check-for-understanding">Exit Ticket</h3>
+### Exit Ticket
 
-  <p>What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?</p>
+What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?
 </section>
 ```
 
