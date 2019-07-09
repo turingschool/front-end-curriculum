@@ -92,7 +92,7 @@ var schoolName = school.name;
 var schoolCapacity = school.capacity;
 ```
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Partner Practice: Accessing Properties</h3>
     <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/Dot-Notation-Practice">this repl.it</a>.</p>
     <p>Together, complete each exercise listed in the comments below the two object literals. Write the code with a given direction directly below it, and do not delete code as you go.</p>
@@ -140,7 +140,7 @@ console.log(school);
 // }
 ```
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Solo Practice: Reassigning & Adding</h3>
   <p>We are also able to reassign the value of a property in a similar way.</p>
   <p>Go back to the repl you were working on before, and add a property of "bestFriend" to <code>user1</code>. Assign it to a string of anything you want.</p>
@@ -159,7 +159,7 @@ console.log(school);
 
 **Then:** Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Partner Practice: Access and Update</h3>
   <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/Partner-Practice">this repl.it</a>.</p>
   <p>Together, complete each exercise listed in the comments below the provided object literal. Write the code with a given direction directly below it, and do not delete code as you go.</p>
@@ -186,7 +186,7 @@ You may have noticed that we used a familiar word, this, in a strange way in the
 
 Like `var` and `function`, `this` is a special keyword in JavaScript. The value of it can change inside of function code. Invoking a function in different ways can change the value of `this`. It is ***dependent on the `context` of where it is referenced***.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Explore <code>this</code></h3>
   <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/this">this repl.it</a>.</p>
   <p>Together, un-comment out each <code>console.log</code> one at a time, starting with line 10. Before you run the code, predict what will print out.</p>
@@ -196,7 +196,7 @@ There are two primary rules of thumb when it comes to `this`:
 1. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
 2. In the context of an object, `this` refers to and is bound to the object itself.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Turn & Talk</h3>
   <p>With the key point above in mind, why did you sometimes get a value (string, number, array), and sometimes get undefined in the previous activity? Explain with as much technical vocabulary and precision as possible.</p>
 </div>
@@ -255,7 +255,7 @@ var room = {
 
 ```
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Practice</h3>
   <p>Work with your partner through the exercise in the code snippet below. Make sure you start with a clean file.</p>
   <p><strong>The only rule:</strong> No copy pasting!</p>
@@ -292,7 +292,7 @@ human.getName();
 
 **KEY TAKEAWAY:** The context of this within a function will be determined by _what object the function gets called on_.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Explore: <code>this</code> and the DOM</h3>
   <p>Visit <a href="">this CodePen</a>. Make sure the CodePen console is opened. Enter something in the input then click submit. What logs to the console?</p>
   <p>Before talking with your partner, try to reason through why the value of <code>this</code> is what it is.</p>
@@ -305,7 +305,7 @@ Thus far, we've only talked about creating one-off objects using object literals
 
 This is where classes come in. **Classes** can serve as object factories that allow us to create multiple objects of the same type, which are commonly referred to as **object instances**.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Brainstorm</h3>
   <p>With the person next to you, brainstorm three <strong>types</strong> of objects and <strong>specific</strong> instances of that object that are at Turing.</p>
   <p>For example:</p>
@@ -350,7 +350,7 @@ console.log(fridge2);
 
 We can run the repl to see what the fridges are showing at this point. We currently have no state or behavior for these fridge instances. But it is clear that they are instances of a fridge because they show up with `Fridge` before their `{}`.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Practice: Creating Object Instances</h3>
   <p>Determine who will drive and who will navigate.</p>
   <p>In a brand-new repl file, define a <code>Laptop</code> class, then create 2-3 object instances from that class.</p>
@@ -421,7 +421,7 @@ var fridge2 = new Fridge("black", 40, true, []);
 
 Note that the arguments that we pass to our `Class()` are order dependent.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Practice: Adding Attributes</h3>
   <p>With your partner, build on the Laptop class you started earlier. Give your <code>Laptop</code> class some attributes and create some instances of Laptop.</p>
 </div>
@@ -442,7 +442,7 @@ class Fridge {
 }
 ```
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Turn & Talk</h3>
   <p>How would one invoke the <code>addFood</code> function/method? Be specific.</p>
   <p>Describe, in detail, what the <code>addFood</code> function/method does, and how it does it.</p>
@@ -455,7 +455,7 @@ Let's update our code so that we:
 3. Add something to the contents of the Fridge.
 4. Log the new contents of the Fridge.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Practice: Adding Behavior</h3>
   <p>With your partner, create a <code>turnOn</code> method for your Laptop class. This should set the power of that laptop to <em>true</em>.</p>
   <p>Finished Early? Complete the exercise in <a href="https://repl.it/@ameseee/Classes-Extra-Practice">this repl</a>. Remember, the quantity of work you get through is not what matters most, it's the depth of your understanding and ability to articulate your understanding of how things are working. Don't race through this and do continue to talk through each line with your partner!</p>

@@ -47,7 +47,7 @@ Page Layout refers to the arrangement and sizing of visual elements on a web pag
 
 * At first glance, a responsive site looks a lot like an adaptive site. But start resizing your screen, and you'll see why it's the best solution. A true responsive page layout combines the best parts of a liquid layout and an adaptive layout to create the best experience for your users as they move between devices and screen sizes. By using both relative units and media queries, a responsive site allows us to transition through screen sizes seamlessly and effortlessly.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Explore Page Layouts</h3>
   <p>Take a few minutes to explore <a target="blank" href="http://www.liquidapsive.com/">Liquidapsive</a>. One by one, select each option from the drop-down in the top right corner. Change the screen width and observe what happens. Jot down any observations/learnings in your graphic organizer.</p>
 </div>
@@ -62,7 +62,7 @@ There are [several different media types](https://developer.mozilla.org/en-US/do
 
 **Breakpoints** are the pixel widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied. It may seem natural to set breakpoints for certain devices; it's actually best practice to choose a breakpoint when the layout of content needs to change.
 
-<div class="turn-and-talk">
+<div class="lesson-segment">
   <h3>Turn & Talk</h3>
   <p>Review the two media queries written below. Predict the result of this code. Be ready to share out!</p>
 </div>
@@ -82,6 +82,13 @@ There are [several different media types](https://developer.mozilla.org/en-US/do
 ```
 
 Above is an example of the syntax for a media query with a breakpoint set for screens 900px and larger. We also have a breakpoint set for screens 700px and smaller. When the screen size is 900px or greater, the body should have a magenta background. When it is 700px or less, it should have a teal background. When it is in between, it will be the background color specified in CSS or white, if it was not specified.
+
+<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="css,result" data-user="khalidwilliams" data-slug-hash="wLQqzK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Media Queries Demo">
+  <span>See the Pen <a href="https://codepen.io/khalidwilliams/pen/wLQqzK/">
+  Media Queries Demo</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Viewport Meta Tag
 
@@ -106,7 +113,7 @@ In more human terms, these say:
 * __Width__: Make the width of the page the same width as whatever screen it is being shown on.
 * __Initial Scale__: Controls the zoom level when the page is first loaded.
 
-<div class="turn-and-talk">
+<div class="checks-for-understanding">
   <h3>Practice</h3>
   <p>To build on your CSS skills and now practice working with media queries, complete this set of <a href="https://github.com/turingschool-examples/responsive-layout-challenges">Responsive Layout Challenges</a>.</p>
   <p>Before you start to build out the HTML, familiarize yourself with all required layouts. Map out which boxes need to be grouped in containers in order to satisfy all required layouts. Then, start writing code!</p>
