@@ -176,10 +176,11 @@ function $(selector) {
 
 So rather than trying to hide sensitive information, we're using a closure here to hide information that the user of jQuery (us! developers!) doesn't need. This makes the interface for working with the library a little less overwhelming. We only expose what's necessary for someone to develop with jQuery, and we hide all the extra inner magic that it takes to get it to work.
 
-## Practice
+<section class="call-to-action">
+### Practice
 
 Use the closure pattern to create a "private" counter. The counter variable should be protected by an outter function. The outter function should return an object of methods that allow a user to `incrementCounter`, `decrementCounter` and `getCounterValue`. 
-
+</section>
 
 <!-- 
 
