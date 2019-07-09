@@ -42,11 +42,16 @@ Webpack is a robust and versatile development tool that provides us with several
 * bundles and minifies all of our JavaScript files into a single, condensed file to reduce network requests
 * pre-processes our code so we can write it how we like, then optimize it during the build process
 
+As the applications we build gain more complexity, it helps to have tooling in place that makes the development process easier. The above benefits can significantly speed up our development and help ensure the app is in an appropriate state when it comes time to push it live.
+
+Let's dig into each of these benefits by working with our [Game Time Webpack Starter Kit Repo](https://github.com/turingschool-examples/webpack-starter-kit). **Clone** the starter repo to your machine. We'll make a handful of changes that you can trash when we're done with `git checkout .`
+
+
 ### Development Servers
 
 In order to understand why it's useful to have a development server, we must first understand what a server is and why it's helpful.
 
-**What is a Server?**
+#### What is a Server
 
 A server is a computer or program that handles the sending and retrieving of resources. There are many different types of servers, but when we build web applications, we’re most concerned with what’s called a Web Server or an HTTP Server. (You’ll often hear these two terms used interchangeably or simply shortened to “server”.) With web applications, the server retrieves any files we need in order to view our application. These can be HTML files, CSS files, images, JS files, etc.
 
@@ -54,10 +59,13 @@ When we're viewing applications on the internet, this retrieval process follows 
 
 If we were simply using the filesystem to open our application files in the browser, the environment we'd be building in would behave slightly differently than if we were interacting with an HTTP server. In order to reduce any potential differences here, we can set up our own HTTP server that runs on our machine. This is one of the first main benefits we get from webpack.
 
+We talked earlier about NPM, and briefly discussed the scripts section of our `package.json` file. If we use the `start` command from this scrips section, by typing `npm run start` into our terminal, we will fire up a development server and open our app in the browser at a URL like `localhost:8080`. This is how you'll most frequently be viewing your applications from now on as you develop them.
 
-We noticed earlier in our `package.json` file that we had a script called `start` -- typing `npm run start` into our terminal will fire up a development server and open our app in the browser at a URL like `localhost:8080`. This is how you'll most frequently be viewing your applications from now on as you develop them.
+#### Live Reloading Changes
 
 Besides more closely mimicking and following the rules of HTTP, having a local server provides another added benefit of live-reloading our changes as we make them! In the past, you likely had to make a change to your file, save it, then refresh your browser to view the edit. Now when we make edits, we can see the browser page refresh automatically.
+
+Make a change to your CSS file and save it. Watch the change take effect immediately! Webpack is essentially "watching" any files that we might be working with, and when it detects a change, it will reload our app to reflect that update.
 
 
 ### Bundling & Pre-Processing Files
