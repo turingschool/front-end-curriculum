@@ -20,17 +20,17 @@ By the end of this lesson, you will be able to:
 
 ## Lexical Scope
 
-Though we haven't put a name to it until now, our conversations around scope and the scope chain are directly related to lexical scoping. So what is lexical scoping?
+Though we haven't put a name to it until now, our conversations around scope and the scope chain are directly related to what we call **lexical scoping**.
 
-You can see lexical scope by looking directly at code, as it reads:
+Lexical scoping means that our scope is **statically** bound, and therefore perfectly predictable upon authoring our code. You can see lexical scope by looking directly at code, as it reads:
 
 ```js
 function eatSnack() {
   var hunger = 25;
 
-  gorgeYourself();
+  getHangry();
 
-  function gorgeYourself() {
+  function getHangry() {
     console.log('I am sooooooo HANGRY!');
   }
 }
@@ -38,7 +38,7 @@ function eatSnack() {
 eatSnack();
 ```
 
-Lexical scope can be thought of as the ‘outer’ scope of a function. In our example above, the lexical scope for our `gorgeYourself` function is the scope (and any variables) that are contained within `eatSnack`.
+In our example above, the lexical scope for our `getHangry` function is the scope (and any variables) that are contained within `eatSnack`.
 
 All inner functions (since functions create new scope) are statically (lexically) bound during the Creation Phase to the parent context in which the inner function was physically defined in the source/program code.
 
