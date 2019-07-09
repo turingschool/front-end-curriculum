@@ -30,7 +30,7 @@ nav {
   li:not(:first-child) {
     // Hover border does not apply to logo
     a:hover {
-      border-bottom: 3px solid $turing-primary;
+      border-bottom: 3px solid lighten($turing-secondary, 25%);
     }
   }
 
