@@ -76,7 +76,7 @@ Because this process can be quite slow, we want to make as few trips to the serv
 
 Webpack allows us to do just this. We can create as many JavaScript files as we want, to separate out and organize our logic, without having to worry about requesting all of those files later. During the **build process**, Webpack will find all of the files we need and combine them into a single file that will automatically be requested as we're viewing our application.
 
-This single file it generates is called a **bundle file**. We can see this generated code by running: `npm run build` in our terminal. This will create a `dist` directory with a file named `main.bundle.js`. You'll notice the bundle file is quite large and difficult to read. That's ok! You should never have to even look at this file as you're building your application. 
+This single file it generates is called a **bundle file**. We can see this generated code by running: `npm run build` in our terminal. This will create a `dist` directory with a file named `main.bundle.js`. You'll notice the bundle file is quite large and difficult to read. That's ok! You should never have to even look at this file as you're building your application.
 
 <!-- show them how to add a basic Game.js file in the /src directory and import it into your index.js file, discuss the import/export syntax -->
 
