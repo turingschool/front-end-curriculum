@@ -3,28 +3,20 @@ title: MVC Architecture
 module: 3
 ---
 
-## Agenda
-
-- Discuss what MVC is, why we use it
-- Discuss alternative models to MVC
-- Learn about the MVC divisions
-- Find familiar examples of MVC
-- Discuss popular frameworks that lean on MVC
-- Discuss how we use the MVC pattern with React/Redux
-
 ## Learning Goals
 
-- Be able to explain each of the layers of MVC
+- Be able to explain each of the layers of MVC & why we use it
 - Understand the benefits of separating concerns
 - Be able to identify frameworks that use the MVC pattern
 - Be able to identify frameworks that use a different design pattern
+- Understand how we can use the MVC pattern with React/Redux
 
 ## Vocab
 
-- Model
-- View
-- Controller
-- Separation of Concerns
+- `Model` The Model is focused solely on the data, and data related logic of the application. The data can both relate to the business data of the application, or the data that is being transacted between the View and Controller.
+- `View` The View is concerned only with the UI of the application, and should not know what the business logic of the application is. The only logic it should be concerned with is how to display data.
+- `Controller` The Controller acts as the go-between for the Model and the View. It handles user interaction coming from the View, and determines any changes that may need to be made to the Model. Vice versa, it can also manipulate data from the Model to give to the View, for rendering a final output.
+- `Separation of Concerns` This refers to the idea that each module or layer in an application is only responsible for one thing and should not contain code that deals with other parts of the application. Separating concerns reduces code complexity by breaking a large application down into many smaller units of encapsulated functionality.
 
 ## Warm up
 Answer the following questions on your own for 4 minutes, and take another couple minutes of minutes to discuss with a partner.
@@ -56,7 +48,7 @@ application. This could be business data for the application, or data that is
 being transacted between the View and Controller.
 
 The **View** is concerned only with the UI of the application, and should not
-know what the business logic of the application is. The only logic a view should
+know what the business logic of the application is. The only logic the View should
 be concerned with is how to display data, based on what kind of data it was
 handed.
 
