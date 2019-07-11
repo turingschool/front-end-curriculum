@@ -1,4 +1,8 @@
-# JavaScript Fundamentals: Data Types & Structures
+---
+title: "JavaScript Fundamentals: Data Types & Structures"
+tags: javascript, data types, data structures
+module: 2
+---
 
 ### Learning Goals
 * Review and discuss JavaScript fundamentals
