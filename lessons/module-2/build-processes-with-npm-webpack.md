@@ -94,10 +94,7 @@ This single file it generates is called a **bundle file**. We can see this gener
 
 ### Checks for Understanding
 
-* Why is it important to have a `.gitignore` file in your repos?
-* Why don’t we commit the `node_modules` directory?
 * What is a server responsible for?
 * What are three main benefits that we get by using a tool like Webpack?
-* What is the purpose of the `package.json` file?
 
 <!-- Quiz Review with CFUs: https://goo.gl/forms/7V5rtBeKZM2zTL1U2 -->
