@@ -218,17 +218,6 @@ In your console do the following...
 - Fetch 20 geography questions and console.log the response status code.
 - Fetch 30 geography questions and console.log an array of only the hard trivia
 
-## More Practice Time! With React
-
-Since `fetch` is asyncronous, it's important to think about when we should make the request for data. The lifecycle method `componentDidMount()` is important to talk about with respect to AJAX (using `fetch`).
-
-Continue with [this](https://github.com/turingschool-examples/react-trivia) trivia app repo. In the `App` component, modify it so that the questions are requested via the trivia API (used in this lesson), and then update `state` with the information received from the API.
-
-## Even more practice time:
-
-This [repo](https://github.com/turingschool-examples/ajax-lesson-FE) has instructions in the README for implementing a fetch request into a basic React app.
-
-Try it out!
 
 ---
 
