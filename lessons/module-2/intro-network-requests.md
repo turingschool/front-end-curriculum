@@ -19,9 +19,7 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 </section>
 ---
 
-## Network Requests
-
-What is a network request?
+## What is a network request?
 
 Open up your dev tools and navigate to the Network tab. Refresh the page and watch what happens.
 
