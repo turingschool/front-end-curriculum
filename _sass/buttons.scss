@@ -7,15 +7,18 @@ button {
   margin: 10px;
   font-size: 1.25em;
   color: #5F7D99;
+  transition: all 0.3s;
 
   &:hover {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
   }
 }
 
 button.active {
-  background-color: #E0E0E0;
-  border: 1px solid #AEAEAE;
+  background-color: #05c2d1;
+  border: 1px solid #09afbd87;
+  color: #fff;
 }
 
 // This will eventually replace the button style above
@@ -33,6 +36,10 @@ button.active {
 .btn-dark {
   background-color: $dark-gray;
   color: $light-gray;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .btn-light {
