@@ -17,7 +17,6 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 * `Async` / `Asynchronous` Executing code without blocking the execution of code after it
 * `AJAX` Updating a webpage based on data from the network without reloading the whole thing
 </section>
----
 
 ## What is a network request?
 
@@ -33,7 +32,7 @@ Each network request takes time - they're _expensive_. Imagine if you had to wai
 
 Network requests are expensive no matter what we do. However, we can run them _asynchronously_, saving some time.
 
-### AJAX
+## AJAX
 
 [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX)
 
