@@ -24,7 +24,7 @@ Answer the following questions on your own for 4 minutes, and take another coupl
 In the context of computer programming:
 
 1. What is a pattern?
-2. What patterns have you seen in software career?
+2. What patterns have you seen so far in your software career?
 3. Why are patterns useful?
 
 ## MVC Architecture

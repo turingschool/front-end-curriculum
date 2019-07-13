@@ -12,6 +12,10 @@
 .btn-dark {
   background-color: $dark-gray;
   color: $light-gray;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .btn-dark.active {
