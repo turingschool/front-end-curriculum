@@ -7,6 +7,10 @@
   text-transform: uppercase;
   padding: 18px 30px 12px;
   margin: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .btn-dark {
