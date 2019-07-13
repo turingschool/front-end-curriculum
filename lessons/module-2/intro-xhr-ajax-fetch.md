@@ -4,6 +4,7 @@ length: 180 minutes
 tags: javascript, browser, network requests, fetch, ajax, xhr
 ---
 
+<section class="call-to-action">
 ### By the end of this lesson you should...
 
 * Understand the difference between synchronous and asynchronous operations
@@ -11,11 +12,11 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 * Understand how network requests work
 * Know what a `GET` request does and how to use it
 
-## Vocab
+### Vocab
 
-- `Async` / `Asynchronous` Executing code without blocking the execution of code after it
-- `AJAX` Updating a webpage based on data from the network without reloading the whole thing
-
+* `Async` / `Asynchronous` Executing code without blocking the execution of code after it
+* `AJAX` Updating a webpage based on data from the network without reloading the whole thing
+</section>
 ---
 
 ## Network Requests
