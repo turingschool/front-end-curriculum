@@ -2,7 +2,7 @@ $(function() {
   initializeLocalStorage();
   let modulePreference = getModulePreference();
   activateButton(modulePreference);
-  showOrHideLessonContainer(modulePreference, 0);
+  showOrHideModuleContainer(modulePreference, 0);
 
   $('.module-selector').on('click', function(event) {
     let previousModulePreference = getModulePreference();
@@ -11,7 +11,7 @@ $(function() {
     let selection = $(event.target).data('module');
     setModulePreference(selection);
     activateButton(selection);
-    showOrHideLessonContainer(selection, 100);
+    showOrHideModuleContainer(selection, 100);
   });
 
   function initializeLocalStorage() {
@@ -20,14 +20,14 @@ $(function() {
     }
   };
 
-  function showOrHideLessonContainer(moduleSelection, ease) {
-    if (moduleSelection == 0) { return $('.lesson-container').show(ease) };
+  function showOrHideModuleContainer(moduleSelection, ease) {
+    if (moduleSelection == 0) { return $('.module-content').show(ease) };
 
-    $('.lesson-container').each(function(idx, lessonContainer) {
-      if ($(lessonContainer).data('module') == moduleSelection) {
-        $(lessonContainer).show(ease);
+    $('.module-content').each(function(idx, moduleContainer) {
+      if ($(moduleContainer).data('module') == moduleSelection) {
+        $(moduleContainer).show(ease);
       } else {
-        $(lessonContainer).hide(ease);
+        $(moduleContainer).hide(ease);
       }
     });
   };
