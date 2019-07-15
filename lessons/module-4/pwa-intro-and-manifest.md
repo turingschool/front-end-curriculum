@@ -106,6 +106,10 @@ Here is a sample manifest file:
     "src": "https://placebear.com/192/192",
     "type": "image/png",
     "sizes": "192x192"
+  }, {
+    "src": "https://placebear.com/512/512",
+    "type": "image/png",
+    "sizes": "512x512"
   }]
 }
 ```
@@ -113,7 +117,7 @@ Here is a sample manifest file:
 Once you create the manifest file, you need to link the file in your top-level HTML file. Here is an example of that link:
 
 ```html
-<link rel="manifest" href="manifest.webmanifest">
+<link rel="manifest" href="manifest.json">
 ```
 
 To check if your manifest is valid and loaded, load up your app in the browser and open the developer tools. Select the `Application` tab, and click the 
@@ -175,3 +179,4 @@ Note that this function `requireHTTPS` is used only in the production environmen
 * [Manifest File - Google Developers](https://developers.google.com/web/fundamentals/web-app-manifest/)
 * [Manifest File - MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 * [Installation Banner](https://developers.google.com/web/fundamentals/app-install-banners/)
+* [Service Workers with Create-React-App](https://karannagupta.com/using-custom-workbox-service-workers-with-create-react-app/)
