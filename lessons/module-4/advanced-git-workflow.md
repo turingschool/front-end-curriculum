@@ -16,7 +16,7 @@ By the end of this lesson, you will:
 
 ## Git Hooks
 
-As developers, we're constantly looking for ways to automate tedious tasks. We're essentially trying to put ourselves out of the job by writing scripts that will do it for us. Let's talk about git hooks.
+As developers, we're constantly looking for ways to automate tedious tasks. We're essentially trying to put ourselves out of work by writing scripts that will complete tasks for us. Let's talk about git hooks.
 
 [Git hooks](https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks) are custom scripts that you can write to execute particular tasks during certain points of the git workflow process. They let you interrupt the flow of a git event -- such as a commit -- to do things like verify that the code you're committing is linted and tested. They can be written in any language understood by the terminal (bash, node, ruby, python, etc.) When used in conjunction with other workflow tools and processes, you can create some really seamless patterns for maintaining any kind of codebase.
 
@@ -129,6 +129,15 @@ After making a commit, if you realize you want to add another change to that com
 
 This will add any staged changes to the previous commit, and open up the commit message for an opportunity to modify that as well. It's important to note that this feature **rewrites history**. Because you'll be amending a pre-existing commit, it will change the unique SHA (identifier) of that commit. If anyone else has based work off of the original commit, they'll get into a bad state where git doesn't know how to resolve the changes. Amending commits is useful for when you are working locally and/or individually, and nobody else is relying on your work. 
 
+<!-- 
+For Sublime, students may need to edit their .gitconfig file to set Sublime as their default editor:
+
+```bash
+editor = sublime -n -w
+``` 
+-->
+
+
 ## Staging in Patches
 
 One way to avoid making mistakes in your commits (either by adding too much to a single commit, or including debugger statements), is by staging your changes in patches. Often times, you'll get carried away working on a particular feature that includes a lot of code changes. Instead of having to stop and commit regularly, you can allow yourself to continue working through the entire feature - then break up your changes into smaller, more accurate commits when you're done.
@@ -144,6 +153,7 @@ Git will automatically determine how to separate your changes into "chunks" so t
 * y - stage this hunk
 * n - do not stage this hunk
 * a - stage this and all the remaining hunks in the file
+* q - quit; do not stage this hunk or any of the remaining ones
 * d - do not stage this hunk nor any of the remaining hunks in the file
 * g - select a hunk to go to
 * / - search for a hunk matching the given regex
