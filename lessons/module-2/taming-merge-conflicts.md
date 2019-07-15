@@ -69,9 +69,9 @@ What you've been doing so far is considered the **merge** workflow:
 * merge commits are generated any time we have to resolve conflicts
 * makes it more difficult to read the history
 
-![merge-vs-rebase][merge-vs-rebase]
+![merge-workflow][merge-workflow]
 
-[merge-vs-rebase]: /assets/images/lessons/merge-rebase/merge-vs-rebase.png
+[merge-workflow]: /assets/images/lessons/merge-rebase/merge-workflow.png
 
 
 ### Rebase Workflow
