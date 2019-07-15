@@ -4,10 +4,11 @@ tags: TDD, unit testing, mocha, chai, webpack, spies
 mod: 2
 ---
 
+<section class="call-to-action">
 We'll continue working with the [our-first-tests repo](https://github.com/turingschool-examples/our-first-tests). Commit any changes you may have made, then checkout the `spies-begin` branch by running the following command:
 
  `git checkout -b spies-begin origin/spies-begin`
-
+</section>
 
 ## Why Spy with Our Little Eyes?
 
