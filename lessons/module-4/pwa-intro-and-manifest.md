@@ -179,4 +179,4 @@ Note that this function `requireHTTPS` is used only in the production environmen
 * [Manifest File - Google Developers](https://developers.google.com/web/fundamentals/web-app-manifest/)
 * [Manifest File - MDN](https://developer.mozilla.org/en-US/docs/Web/Manifest)
 * [Installation Banner](https://developers.google.com/web/fundamentals/app-install-banners/)
-* [Service Workers with Create-React-App](https://karannagupta.com/using-custom-workbox-service-workers-with-create-react-app/)
+* [Service Workers with Create-React-App](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
