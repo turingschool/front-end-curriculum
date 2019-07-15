@@ -1,4 +1,4 @@
-.btn {
+%button-shared {
   font-family: $bold-copy;
   font-size: 0.9em;
   border: none;
@@ -14,6 +14,7 @@
 }
 
 .btn-dark {
+  @extend %button-shared;
   background-color: $dark-gray;
   color: $light-gray;
 
@@ -28,6 +29,7 @@
 }
 
 .btn-light {
+  @extend %button-shared;
   background-color: $light-gray;
   color: $dark-gray;
 }
