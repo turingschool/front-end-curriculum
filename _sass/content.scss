@@ -25,6 +25,10 @@
 .content a:visited {
   color: $turing-secondary;
   text-shadow: 0;
+
+  &:hover {
+    color: black;
+  }
 }
 
 .small {
