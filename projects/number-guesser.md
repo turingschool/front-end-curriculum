@@ -4,8 +4,9 @@ title: Number Guesser
 
 ## Overview
 - Build a game where the user guesses a number between 1 and 100.
-- Phases 1-3 = MASTER branch for evaluation. 
-- If you elect Phase 4, create a separate branch for that work. 
+<!-- - Build out phases 1-3 and push them to Github via the MASTER branch for evaluation. -->
+- Phase 4 is optional. If you execute phase 4, create a separate branch in Git for that work for evaluation (using Git is an extra challenge -- investigate how to initialize a Git repo and make a branch! We'll go over how to do this in class in a few days, so this is a great time to investigate on your own).
+<!-- - Include a README.md in your project that summarizes the project (this does not mean paste this project spec into your README) -->
 
 ## Phase One: Basic Requirements
 
@@ -15,11 +16,11 @@ The application should have the following user interface components:
 - An input field for guessing the number
 - A button for submitting a guess
 - A button for clearing the input field
-- A button that resets the game 
+- A button that resets the game
 
 #### User's Guess State:
 - Display the user's most recent guess
-- Display results and feedback: 
+- Display results and feedback:
   - If their guess is too high, it should display: "That is too high"
   - If their guess is too low, it should display: "That is too low"
   - If the guess is correct, it should display: "BOOM!"
@@ -49,7 +50,9 @@ The application should have the following user interface components:
 (**Pro-tip**: You'll need to adjust the input fields to accept the new minimum and maximum numbers.)
 
 ## Phase Four: Choose Your Own Adventure
+
 You have liberty with the UI.
+
 - Make it two player.
 - Incorporate a scoring system based on how quickly user guesses correct number.
 - Turn it into a game to teach basic arithmetic to kids.
@@ -60,10 +63,6 @@ Desktop layout:
 
 ![Number Guesser Desktop][desktop-base]
 
-Mobile layout:
-
-![Number Guesser Mobile][mobile-base]
-
 Color and font spec:
 
 ![Design Specs][design-specs]
@@ -73,40 +72,70 @@ Color and font spec:
 [mobile-base]: /assets/images/projects/number-guesser/numberguesser2.png
 [design-specs]: /assets/images/projects/number-guesser/numberguesser3.png
 
-## Rubric
+------------------------------------------------------------------
 
-### UX/UI Expectations
+# Scoring Rubric
 
-- 4: Application matches comp exactly. There are no omitted details. Any extensions are intuitive, well designed, easy to use, and in keeping with the visuals outlined in the comp. Virtually no major improvements are needed in the UX or UI.
-- 3: Application shows strong effort towards matching the comp, but some details have been missed. Any extensions are simple, clean design, content organization, and well thought out experience and user interactions.
-- 2: Application meets the basic spirit of the comp but overlooks many details. Extensions show questionable design decisions that negatively impact the overall UX/UI.
-- 1: Application does not match the comp, is lacking in basic best practices, and user struggles to understand how to use it.
+Remember to [check out the Syllabus](http://frontend.turing.io/lessons/module-1/syllabus-eval-progression.html) for more details on how we evaluate your progression!
 
-### Functional Expectations
+## Functional Expectations
 
-- :sparkles: You completed Phase Three and did something with Phase Four
-- 4: Application meets all of the functional expectations in Phase Three
-- 3: Application meets all of the functional expectations in Phase Two
-- 2: Application meets all of the functional expectations in Phase One
-- 1: Application does not meet the requirements in Phase One
+- Novice: Application meets all of the expectations of phase one.
+- Advanced Beginner: Application meets all of the expectations of phase two.
+- Proficient: Application meets all of the expectations of phase three.
+- Exceptional: Application meets all of the expectations of phase three and one or more of the extensions.
 
-### Fundamental HTML
+<br>
 
-- 4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
-- 3:  Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
-- 2:  Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
-- 1:  Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
+## COMP RECREATION / DESIGN
 
-### Fundamental CSS
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
 
-- 4: Application has exceptionally well-factored CSS with little or no duplication. There are zero instances where an instructor would recommend taking a different approach.
-- 3:  Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS is doing.
-- 2:  Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-- 1:  Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
+<br>
 
-### Fundamental JavaScript
+## HTML
 
-- 4: Application demonstrates excellent knowledge of JavaScript syntax, style, and there are no areas of suggested improvement
-- 3: Application shows strong effort towards organization, content, and proper syntax
-- 2: Application runs but the code is confusing with unnecessary or poorly named variables, functions, and unclear organization, structure, and/or duplication
-- 1: Application generates syntax error or crashes during execution
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
+
+<br>
+
+##  CSS
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
+
+<br>
+
+##  JS/jQuery
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
+
+<br>
+
+<!-- ## Git/Github
+
+- Novice
+- Advanced Beginner
+- Proficient
+- Exceptional
+
+<br> -->
+
+
+## Surprise and Delight (reminder: have fun!)
+
+- Unicorn Rainbows
+- Hot Fire
+- Sparkles
+- Magic

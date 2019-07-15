@@ -1,0 +1,86 @@
+nav {
+  border-bottom: 2px solid $light-gray;
+  font-family: $standard-copy;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: grid;
+  grid-template-columns: auto 100px 100px 100px 200px;
+  grid-template-rows: 120px;
+  align-items: center;
+  justify-items: center;
+  grid-gap: 0 10px;
+
+  list-style: none;
+  margin: 0 50px;
+  padding-left: 0;
+
+  li:first-child {
+    justify-self: left;
+    margin: 5px 0;
+  }
+
+  a {
+    color: $dark-gray;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s;
+  }
+
+  li:not(:first-child) {
+    // Hover border does not apply to logo
+    a:hover {
+      border-bottom: 3px solid lighten($turing-secondary, 25%);
+    }
+  }
+
+  .home-logo-link img {
+    display: block;
+    height: 80px;
+    width: 80px;
+  }
+}
+
+.nav-links a.active-link {
+  // This border does not get applied to logo
+  // because of code in active-links.js file
+  border-bottom: 3px solid lighten($turing-secondary, 25%);
+}
+
+@media (max-width: $tablet-width) {
+  .nav-links {
+    margin: 0 35px;
+    font-size: 0.9rem;
+    grid-template-columns: auto 75px 75px 75px 150px;
+    grid-template-rows: 90px;
+
+    .home-logo-link img {
+      height: 55px;
+      width: 55px;
+    }
+  }
+}
+
+@media (max-width: $phone-width) {
+  .nav-links {
+    margin: 15px;
+    font-size: 1rem;
+    grid-template-columns: auto 200px;
+    grid-template-rows: 35px 35px 35px 55px;
+    justify-items: right;
+
+    li {
+      grid-column: 2;
+    }
+
+    li:first-child {
+      grid-column: 1;
+      grid-row: 1 / 5;
+    }
+
+    .home-logo-link img {
+      height: 70px;
+      width: 70px;
+    }
+  }
+}

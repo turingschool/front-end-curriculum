@@ -24,5 +24,6 @@
   "bugs": {
     "url": "https://github.com/turingschool/front-end-curriculum/issues"
   },
-  "homepage": "https://github.com/turingschool/front-end-curriculum#readme"
+  "homepage": "https://github.com/turingschool/front-end-curriculum#readme",
+  "keywords": []
 }

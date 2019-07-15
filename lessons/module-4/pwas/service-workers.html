@@ -1,0 +1,132 @@
+<html>
+  <head>
+    <title>Intro to Service Workers</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{font-size:0.85em;padding:5px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to Service Workers</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>General Web &raquo; Offlining with Service Workers</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">What is a Service Worker?</a></li>
+          <li><a href="#Characteristics">Characteristics of a Service Worker</a></li>
+          <li><a href="#Inspecting">Inspecting Service Workers</a></li>
+          <li><a href="#LifeCycle">Service Worker Life Cycle</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Further Reading & Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>understand when and why to use service workers</li>
+            <li>implement a service worker for offlining application assets</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Introduction">What is a Service Worker?</a></h2>
+          <p>A service worker is a new API that allows you to run a script in <em>background</em> of your application, and facilitates creating <em>Progressive Web Apps</em>.</p>
+          <p>There are some key pieces of functionality that service workers allow you to implement, including:</p>
+          <ul>
+            <li><b>Offlining your application:</b> Cache assets so users can still view content when they lose their internet connection</li>
+            <li><b>Implementing background sync:*</b> Allow interactions like network requests to go through at a later point in time, e.g. when you have a spotty network connection, don't send a POST request through until it's stable</li>
+            <li><b>Enabling push notifications*:</b> Notify users with desktop notifications that something has happened, even if they're not currently looking at or using the application</li>
+          </ul>
+          <p>Background sync and push notifications we'll discuss in a future lesson, but I've left an asterisk next to them because they are actually both their own separate APIs. These APIs, however, are only made possible by service workers. So although a service worker isn't solely responsible for enabling background sync and push notifications, it is the backbone and foundation of getting these features to work.</p>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Characteristics">Characteristics of a Service Worker</a></h2>
+          <p>Let's pick apart that definition of a service worker a little further and talk about some characteristics.</p>
+          <h3>Runs in the Background</h3>
+          <ul>
+            <li>web workers are single JavaScript files, run on own thread</li>
+            <li>don't block execution of other client-side code</li>
+            <li>handle time-intensive operations without locking UI</li>
+            <li>service workers are a type of web worker</li>
+            <li>service workers allow background processing that specifically relates to handling network requests</li>
+          </ul>
+          <h3>Cannot Interact with the DOM</h3>
+          <ul>
+            <li>can't access the DOM tree to do any manipulations</li>
+            <li>must communicate through sending messages back and forth</li>
+          </ul>
+
+          <h3>Event-Based</h3>
+          <ul>
+            <li>service worker can 'go to sleep' at any time</li>
+            <li>is only woken up and utilized during events</li>
+          </ul>
+          <img src="https://mdn.mozillademos.org/files/12632/sw-events.png" />
+
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Inspecting">Inspecting Service Workers</a></h2>
+          <p>We can debug and inspect service workers for any application by navigating to the 'Application' tab in Chrome Developer Tools, and selecting the 'Service Workers' tab on the left-hand side. Take a look at all the service workers that have been registered on sites you've visited in the recent past. While this is still a relatively new API, people have clearly not been hesitant to start using them in production applications.</p>
+          
+          <div class="discuss">
+            <h4>Code Along</h4>
+            <p>Clone down <a href="https://github.com/turingschool-examples/markdown-previewer">this repo</a> and run <code>npm install</code> then <code>npm run start</code>. Navigate to localhost:3000 in your browser and you should see a little markdown application. We'll code along together to add a service worker that will allow us to offline this application.</p>
+          </div>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Lifecycle">Service Worker Lifecycle</a></h2>
+          <p>Service Workers may seem like they behave in unpredictable ways when you first start developing with them, but some clarity can be brought to this by understanding their lifecycle process.</p>
+          <ul>
+            <li><b>1. Registration:</b> browser is aware that we have a service worker that needs to be recognized, and will kick off the installation step upon a successful registration</li>
+            <li><b>2. Installation:</b> the service worker is installed, but doesn’t actually control anything on the page just yet. This is a good phase to cache assets for offline use.</li>
+            <li><b>3. Activation:</b> the service worker has been installed and is activated. This is a good place for us to manage old cached assets and update the service worker.</li>
+            <li><b>4. Full Page Control:</b> the service worker has been activated and now has full control over any pages that fall under its scope</li>
+          </ul>
+        </section>
+        <hr />
+
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What is a Service Worker?</li>
+            <li>What are the three things a service worker allows you to do?</li>
+            <li>What does it mean when we say a script "runs in the background"?</li>
+            <li>What events can "wake up" a service worker?</li>
+            <li>Describe the different phases of the service worker lifecycle.</li>
+          </ul>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="https://aarontgrogg.com/blog/2015/07/20/the-difference-between-service-workers-web-workers-and-websockets/">What's the Difference between Service Workers, Web Workers, and Web Sockets></a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

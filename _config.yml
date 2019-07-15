@@ -1,5 +1,5 @@
 title: "Front-End Engineering Curriculum - Turing School of Software and Design"
-description: "Open source curriulum for the Turing School of Software and Design's front end engineering program."
+description: "Open source curriculum for the Turing School of Software and Design's front end engineering program."
 url: "http://frontend.turing.io/"
 
 baseurl: ''
@@ -9,13 +9,18 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  parse_block_html: true
 
 exclude: [
   'Gemfile',
   'Gemfile.lock',
   'README.md',
   'LICENSE',
-  'CNAME'
+  'CNAME',
+  'lessons/module-1/archive',
+  'lessons/module-2/archive',
+  'lessons/module-3/archive',
+  'lessons/module-4/archive'
 ]
 
 defaults:
@@ -25,11 +30,48 @@ defaults:
     values:
       layout: "page"
 
+sass:
+  style: compressed
+
 assets:
   root_url: '/assets'
 
 images:
   root_url: '/assets/images'
 
-gems:
+plugins:
   - jemoji
+  - jekyll-algolia
+
+algolia:
+  application_id: 'OOLQ64CUYT'
+  index_name:     'front-end-curriculum'
+  search_only_api_key: '5b955c38c514d8e5cb906c983c8c24db'
+  extensions_to_index: 'html,md'
+  settings:
+    attributeForDistinct: 'title'
+    distinct: true
+  files_to_exclude:
+    - _includes
+    - _layouts
+    - _sass
+    - _site
+    - _templates
+    - assets/**/*
+    - books/**/*
+    - calendars/**/*
+    - challenges/**/*
+    - lessons/module-1/archive/**/*
+    - lessons/module-2/archive/**/*
+    - lessons/module-3/archive/**/*
+    - lessons/module-4/archive/**/*
+    - mentor-posse-info/**/*
+    - portal/**/*
+    - postwork/**/*
+    - module-0-capstone/**/*
+    - professional-development/**/*
+    - projects/**/*
+    - public/**/*
+    - stylesheets/**/*
+    - today/**/*
+    - index.html

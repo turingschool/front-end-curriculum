@@ -1,7 +1,6 @@
 ---
-title: 2DoBox-Pivot-Mod1
+title: 2DoBox Pivot
 ---
-# 2DoBox Pivot (Module 1)
 
 Do you remember that project IdeaBox?...
 
@@ -9,39 +8,58 @@ We thought they were pretty great, but, we think it's time to pivot those projec
 
 You will be inheriting someone's previous IdeaBox and pivoting it over to 2DoBox.
 
-Your projects will utilize webpack & its awesome development server.
-
-Keeping accessibility in mind we will be grading you based on how accessible your application is.
-
-Lastly, you will implement feature tests using selenium webdriver and follow (and see the benefits of) Test Driven Development (TDD).
-
-# Getting Started (Should I Fork or Clone?!)
+## Getting Started (Should I Fork or Clone?!)
 
 Beginning The Pivot
 
-Once you've explored the base project, the team leader will:
+For this project, go ahead and clone the code base. Once you've explored the base project, the team leader will:
 
 - Create a new, blank repository on GitHub named `2DoBox-Pivot`
 - Clone the IdeaBox project that you'll be working with to your local machine
 - Go into that local project directory and `git remote rm origin`
 - Add the new repository as a remote `git remote add origin` `git://new_repo_url` (this will be different based on your actual remote URL)
-- Push the code  `git push origin master`
+- Push the code `git push origin master`
 - Add the other team members as collaborators in GitHub
-- Once the team leader has done this, the other team members can fork the new repo.
+- Once the team leader has done this, the other team members, if applicable, can clone the new repo.
 
-# Restrictions and Outside Code
+## Phase 1: Refactor
 
 Your project should evolve, refactor, and clean up the code you inherit. This includes deleting redundant, broken, or obsolete code. However, **you should not throw out the previous work wholesale**.
 
 Furthermore, there should be no reduction in functionality except when explicitly called for by new requirements.
 
-# NEW PHASE 1: Refactoring
+There are no new features in this phase, however it is a good idea to generalize your application. For example, if there is an HTML element with the class of `idea-save-button`, then it should be updated to `save-btn`, which is less coupled to content and tied more to functionality.
 
-Write tests for all existing functionality
+**Note:** While refactoring, if there is functionality missing from the base IdeaBox project, you will need to implement that functionality as well in this refactor phase.
 
-Then start refactoring: tell them what they should focus on for refactoring (naming, shorter functions, etc.)
+### Refactoring Guidelines
 
-# Phase 1
+Here are some refactoring points we want to see in your project:
+
+  * Small JavaScript functions focused on single responsibility (SRP) - for example, one function should not handle both disabled button state and rendering elements to the DOM
+  * Consistent formatting, indentation, and naming schemes
+  * Smart, concise comments (only when absolutely needed for clarity)
+  * Little to no duplication in JavaScript (DRY principle)
+  * Avoid deep nesting (for if/else conditionals)
+  * Line lengths (keep them short and readable to avoid horizontal scrolling in your text editor)
+  * File and folder organization (images, CSS directories)
+
+Specifically, we're going to set some constraints:
+
+  * You cannot use any _nested_ if/else statements
+  * When you can, you should not use anonymous functions (mainly looking at event event listeners for this)
+    * For example, if you find an anonymous function in an event listener, pull it out of the event listener and use a function reference as the callback function
+  * HTML must follow basic accessibility guidelines (semantic tagging, image attributes, roles)
+  * No use of global variables (we're not saying you should never use global variables in life, but for this project it will be an exercise in not using global variables)
+  * Functions cannot be longer than 8 lines (including event listeners)
+
+When you "refactor," you make changes to the code without changing any of its functionality. You can think of it like a "clean up," for the sake of improving readability and quality.
+
+This doesn't include bug fixes or the addition of any new 2DoBox functionality. You might refactor code that you have written the day before, while it's still fresh in your head, so that it is more readable and reusable when you may potentially look at it two months from now. As the motto says: "refactor early, refactor often."
+
+## Phase 2: Pivot
+
+This is the existing IdeaBox functionality that should be pivoted for the 2DoBox user interface:
 
 ### Adding a new TODO
 
@@ -57,7 +75,6 @@ On the application’s main page, a user should:
 
 * The `Save` button should be disabled when there is not valid content in both input fields.
 
-
 ### Deleting an existing TODO
 
 When viewing the TODO list:
@@ -66,7 +83,6 @@ When viewing the TODO list:
   * Upon clicking `Delete`, the appropriate TODO should be removed from the list.
   * The page should not reload when an idea is deleted.
   * The TODO should be removed from localStorage - it should not re-appear on next page load.
-
 
 ### Editing an existing TODO
 
@@ -85,20 +101,16 @@ We’d like our users to be able to easily find specific TODOs they've already c
   * The page should not reload.
   * Clearing the filter box should restore all the ideas to the list.
 
-# Phase 2
+## Phase 3: Add New Features
 
 ### Marking a TODO as completed
 
 When viewing the TODO list:
 
   * Each TODO in the list should have a button called `Completed Task`.
-  * When a the user clicks the `Completed Task` button, the idea should be either grayed out and/or shown with a strike through text.
-  * On reloading the page the page, the completed TODOs should be exempted (but not deleted) from the list.
+  * When a user clicks the `Completed Task` button, the idea should be either grayed out and/or shown with a strike through text.
+  * On reloading the page, the completed TODOs should be exempted (but not deleted) from the list.
   * When the user clicks the `show completed TODOs`, the completed TODOs should be loaded back onto the top of the TODO list.
-
-### Accessibility
-
-Your web application should pass aXe-core tests and should be tab-index accessible. For tab indexing, refer to this [resource](http://archive.tlt.psu.edu/accessibility/tabindex0.html#whyzero)
 
 ### Importance
 
@@ -106,7 +118,7 @@ Each TODO should be given a level of importance.
 
   * As a user, I should be able to change the level of importance by up-voting or down-voting that specific TODO.
   * Each TODO should start with a level of `Normal`.
-      * Levels of Importance are as follows:
+      * Levels of importance are as follows:
 
         1) Critical
 
@@ -120,36 +132,34 @@ Each TODO should be given a level of importance.
 
   * The change of importance should persist after a page refresh.
 
-# Phase 3
-
 ### Recent TODOs
 
 The application should only show the ten most recent TODOS.
 
-  * The application should contain a button labeled `Show more TODOs ...`.
-  * When a user clicks on the `Show more TODOs...` button, this list should load additional messages from the past.
+* The application should contain a button labeled `Show more TODOs ...`.
+* When a user clicks on the `Show more TODOs...` button, this list should load additional messages from the past.
 
 ### Filter by Importance
 
 The application should allow users to filter the TODO list based on level of importance.
 
-  * Your application should have 5 buttons corresponding to each level of importance (Critical, High, Normal, Low, and None).
-  * When one of the filter buttons is clicked, the TODO list should only display TODOs with the selected importance.
+* Your application should have 5 buttons corresponding to each level of importance (Critical, High, Normal, Low, and None).
+* When one of the filter buttons is clicked, the TODO list should only display TODOs with the selected importance.
+
+## Extensions
 
 ### Character Counter
 
 The application is able to count the number of characters inside of the input field in real time.
 
-  * As the user types, the character count should increment up.
-  * If the user deletes characters, then the character count should decrease.
+* As the user types, the character count should increment up.
+* If the user deletes characters, then the character count should decrease.
 
-### Submit button disabled
+### Submit button disabled based on character count
 
 The submit button should be disabled when there is not valid content in both input fields **and** if the input field character count exceeds 120 characters.
 
-# Extensions
-
-## TODO Due Dates
+### TODO Due Dates
 
 When viewing the TODO list:
 
@@ -158,80 +168,163 @@ When viewing the TODO list:
 
 Note: TimeZones are hard - consider using a library like [MomentJS](http://momentjs.com/)
 
-# Instructor Evaluation Points
+------------------------------------------------------------------
 
-## Specification Adherence
+## Functional Expectations
 
-4 - The application meets all of the phase requirements listed above and implements one or more of the extensions.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-3 - The application consists of one page with all of the major functionality being provided by jQuery. No approach was taken that is counter to the spirit of the project and its learning goals. There are no features missing from the above phases that make the application feel incomplete or hard to use.
+<br>
 
-2 - The application is in a usable state, but is missing 1 or more of the features outline in the specification above.
+------------------------------------------------------------------
 
-1 - The application is missing 3 or more smaller features or 1 major feature essential to having a complete application.
+## HTML
 
-0 - The application is unusable.
+#### Accessibility
 
-## Accessibility
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-4 - The application demonstrates an exceptional knowledge of web accessibility. The application has no aXe-core violations, is fully functional without using a mouse, and the application uses HTML/CSS to 'chunk' content into more manageable pieces. The application utilizes semantic HTML.
+#### Style
 
-3 - The application has a strong accessibility presence. The developer showed a strong effort to keep accessibility in mind from the beginning of the project. The application has 0-3 aXe-core violations.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-2 - The application shows glimpses of good accessibility practices, but fails to deliver a truly accessible product. The application has 4-6 aXe-core violations.
+<br>
 
-1 - Developer did not keep accessibility in mind. The application has 6+ aXe-core violations.
+------------------------------------------------------------------
 
-## User Interface
+## CSS
 
-4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor without guidance from the developer.
+#### Structure of Code
 
-3 - The application has many strong pages/interactions, but a few holes in lesser-used functionality. The application less than 3 aXe-core violations.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-2 - The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
+#### Implementation
 
-1 - The application is confusing or difficult to use.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-## HTML Style
+<br>
 
-4 - Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
+------------------------------------------------------------------
 
-3 - Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
+## JAVASCRIPT
 
-2 - Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
+#### Data Types
 
-1 - Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-## JavaScript Style
+#### Conditional Logic
 
-4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There zero instances where an instructor would recommend taking a different approach.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
+#### Functions & Scope
 
-2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
+#### Arrays
 
-0 - Your client-side application does not function or the application does not make use of localStorage for updating information on the client. Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-## Testing
+#### Objects & Prototypes
 
-4 - Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-3 - Project has a running test suite that tests and multiple levels but fails to cover some features. The application makes some use of feature testing.
+#### DOM Manipulation
 
-2 - Project has sporadic use of tests. The application contains numerous holes in testing and/or many features are untested.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-1 - There is little or no evidence of testing in this application.
+#### Style
 
-## Workflow
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
 
-4 - The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application.
+<br>
 
-3 - The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base.
+------------------------------------------------------------------
 
-2 - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
+## GIT & GITHUB
 
-1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
+#### Git
 
-0 - The application was not checked into version control.
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
+
+#### Github
+
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
+
+<br>
+
+------------------------------------------------------------------
+
+## DESIGN
+
+#### Design Concepts
+
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
+
+<br>
+
+------------------------------------------------------------------
+
+## PAIRING
+
+#### Collaboration
+
+* Novice  
+* Advanced Beginner  
+* Proficient  
+* Exceptional  
+
+<br>
+
+## TERMINOLOGY
+
+#### Technical Vocabulary
+
+* Novice
+* Advanced Beginner
+* Proficient
+* Exceptional 

@@ -6,14 +6,18 @@ tags: javascript, introduction, practice
 
 ## Learning Goals
 
-Get more practice with JavaScript:
+Get more practice with JavaScript!
 
-* Terminology
-* Variables
-* Arrays
-* Operators (assignment, arithmetic, logical, comparison)
-* Conditionals
-* Functions
+## Vocab
+
+- `Variable` A container for a value. The main building block for all programming
+- `Function` A predefined and reusable group of behavior
+- `Expression` An executable piece of code
+- `Array` A list of values
+- `Operator` Symbols that are used to assign, compare, and perform operations
+- `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
+
+## Lets go!
 
 Open the console in your browser, and let's get going!
 
@@ -309,7 +313,6 @@ When you search for JavaScript questions, you will often find a link to W3School
 
 Practice, practice, practice! Repetition, repetition, repetition!
 
-* [Functions Practice](http://www.ling.gu.se/~lager/kurser/webtechnology/lab4.html)
 * If you want more of a challenging problem that deals with conditionals, try to solve [SuperFizzBuzz](https://github.com/turingschool/challenges/blob/620f4a12ab4e3c1a3f258bb4347e0c2c569a934d/super_fizz.markdown), but don't worry about the extensions.
 * [JavaScript Exercisms](http://exercism.io/languages/javascript)
 * Exercises at the end of each chapter in [Eloquent JavaScript](http://eloquentjavascript.net/)

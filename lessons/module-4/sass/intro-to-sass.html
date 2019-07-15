@@ -1,0 +1,118 @@
+<html>
+  <head>
+    <title>Intro to SASS</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:300i" rel="stylesheet">
+    <style type="text/css">
+    #meta,h1{color:#fff}body,html{background-color:#f5f5f5;height:100%;margin:0;font-family:'Open Sans',sans-serif}a:link,a:visited{text-decoration:none;color:#05c2d1}#toc a:hover,a:hover{color:#000}blockquote{font-family:Lato,sans-serif;font-size:28px;width:90%}header{background-color:#3c4040}h1{margin:0;padding:20px 30px;font-weight:200}#view-toggle span.active,section h3{color:#333;font-weight:600}#meta{background-color:#05c2d1;font-size:11px;padding:1px 25px;left:0;bottom:0}#meta span{margin:0 5px}#wrapper{display:flex;min-height:100%}#toc{flex-grow:1;background:#f5f5f5;border-right:1px solid #ccc;box-shadow:inset 1px 1px 3px #666;padding:25px 30px;min-width:20%;z-index:2}#toc ol{list-style-type:none;padding:0;margin:0}#toc ol li{padding:3px 0}#toc a:link,#toc a:visited{color:#3c4040}#content-container{flex-grow:3;padding:50px 60px;margin:-30px 8px 0 0;background:#fff;box-shadow:-1px -1px 2px #0097a2;position:relative}#content-container section{color:#555}#content-container hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}section .discuss h4,section h2{margin:0}#view-toggle{position:absolute;top:8px;right:10px;font-size:11px;color:#666}section h2,section h2 a{color:#000}section h3{margin:0;padding:20px 0 0}section p{line-height:1.5em}section ul{-webkit-padding-start:20px}section code{font-size:16px;color:#fc4b60}section .discuss{padding:20px;font-size:13px;background-color:#fefefe;border:1px solid #eee}section img.right{float:right;margin:20px 0 0 50px;max-width:45%}
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Intro to SASS</h1>
+      <div id="meta">
+        <p><span>Module 4</span> | <span>CSS &raquo; Preprocessors</span></p>
+      </div>
+    </header>
+    <div id="wrapper">
+      <nav id="toc">
+        <ol>
+          <li><a href="#LessonGoals">Lesson Goals</a></li>
+          <li><a href="#Introduction">Introduction</a></li>
+          <li><a href="#Features">Features</a></li>
+          <li><a href="#ProsCons">Pros & Cons</a></li>
+          <li><a href="#Checks">Checks for Understanding</a></li>
+          <li><a href="#Resources">Resources</a></li>
+        </ol>
+      </nav>
+      <div id="content-container">
+        <nav id="view-toggle">
+          <span>Slides</span> | <span class="active">Long Form</span>
+        </nav>
+        <section>
+          <h2><a name="LessonGoals">Lesson Goals</a></h2>
+          <p>Students should be able to:</p>
+          <ul>
+            <li>articulate what Sass is and why it's useful</li>
+            <li>write Sass in a semantic way</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Introduction">Intro to Sass</a></h2>
+          <p>Sass stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. It is a CSS preprocessor that converts SCSS (Sassy CSS) into vanilla CSS.</p>
+          <p>A <b>pre-processor</b> is a tool that will process your code and compile it to a new format that adheres to the requirements of your environment. Think babel - this compiles our fancy ES6 syntax back down to ES5 so that it can be supported in older browsers.</p>
+          <h3>Sass vs. SCSS vs. CSS</h3>
+          <p>Sass was originally part of another preprocessor called Haml. It used no curly braces or semi-colons, and the syntax adhered to strict spacing and indentation rules. Like so:</p>
+          <img width="50%" src="../../../assets/images/lessons/sass/sass-syntax.png" />
+          <p>Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.</p>
+          <div class="discuss">
+            <h4>Practice</h4>
+            <p>Take a look at the SCSS in <a href="https://codepen.io/the_ruther4d/pen/ormbi">this codepen</a>. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.</p>
+          </div>
+          <p>Although both Sass and SCSS are both still viable languages to use, movement has shifted significantly toward SCSS for several reasons:</p>
+          <ul>
+            <li>All modern CSS is valid SCSS. That means that you can rename an entire .css file .scss and nothing will yell at you. Such is not the case for Sass.</li>
+            <li>There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you’ll make Jhun cry, BUT even through the tears your stylesheet will still function properly.</li>
+          </ul>
+
+          <h3>Why would we use Sass?</h3>
+          <p>CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY.</p>
+          <p>Some of the cool tricks include defining variables that can be peppered across multiple CSS files, nesting elements to visibly reflect the HTML element relationships, using math equations to adjust sizes and values, adjusting colors using more intuitive language like “darken” and “lighten”, and bundling groups of styles together to easily reference throughout your CSS…to name a few.</p>
+
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Features">Features</a></h2>
+          <h3>Variables</h3>
+          <p>One of the most obvious and immediately useful features of Sass is the ability to define variables.</p>
+          <p>As developers we strive to write DRY, clean code, and storing values for CSS styles as variables contributes to that. This means we can make color changes in one place, and the change will be reflected anywhere that the variable is referenced.
+          <p>Variables are defined by a $ immediately preceding the name of the variable (like jQuery!), and a colon separating the name of the variable from the value. For example: <code>$favorite-text-color: chartreuse;</code></p>
+          <h3>Nesting</h3>
+          <h3>Color Functions</h3>
+          <h3>Math Functions</h3>
+          <h3>Mixins</h3>
+          <h3>Extend</h3>
+          <h3>Control Directives</h3>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="ProsCons">Advantages & Disadvantages</a></h2>
+          <p>Downsides pretty minimal but there's this big list anyway: https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/</p>
+        </section>
+        <hr />
+
+        <section>
+          <h2><a name="Checks">Checks for Understanding</a></h2>
+          <ul>
+            <li>What is a preprocessor?</li>
+            <li>What are three features of SASS that can make your code more DRY?</li>
+            <li>What are considered some disadvantages of using a CSS preprocessor?</li>
+          </ul>
+        </section>
+        <hr />
+        <section>
+          <h2><a name="Resources">Further Reading & Resources</a></h2>
+          <ul>
+            <li><a href="http://alistapart.com/article/why-sass">Why Sass?</a></li>
+            <li><a href="http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/">A Complete Beginner’s Guide to Learning Sass in a Weekend</a></li>
+            <li><a href="http://thesassway.com/beginner/how-to-structure-a-sass-project">How to Structure a Sass Project</a></li>
+            <li><a href="http://sass-lang.com/documentation/Sass/Script/Functions.html">Color Functions Documentation</a></li>
+            <li><a href="http://www.sassmeister.com/">Sass to CSS Translator</a></li>
+          </ul>
+          <h3>Instructor Resources</h3>
+          <ul>
+            <li><a href="https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/intro-to-sass.md">Practice Solutions</a></li>
+          </ul>
+        </section>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./main.js"></script>
+  </body>
+</html>

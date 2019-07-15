@@ -2,11 +2,19 @@
 # Main style files. Everything else is located in _sass.
 ---
 
-@import 'syntax';
 @import 'variables';
+@import 'fonts';
+@import 'syntax';
 @import 'base';
-@import 'sidebar';
+@import 'navbar';
+@import 'home-page';
 @import 'content';
 @import 'code-samples';
 @import 'outlines';
 @import 'table';
+@import 'expander';
+@import 'search';
+@import 'print';
+@import 'cards';
+@import 'buttons';
+@import '404';

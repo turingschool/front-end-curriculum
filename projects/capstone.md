@@ -1,119 +1,128 @@
 ---
-title: Capstone Project
-module: 4
+title: Cross-Pollination Capstone Project
 ---
 
-## Goals
+For the first time ever, you get to work across programs and create a project that might not be possible otherwise! In this project plan, we'll kick-off the project and define expectations and deliverables for teams.
 
-By the end of this session we will have established Capstone projects that'll
-guide your last three weeks in the program.
+## Learning Goals
 
-### Part 1: Solo
+This is a unique opportunity that presents some valuable goals:
 
-Take the first 15 minutes to summarize and post your ideas. For *each one* create
-an issue on https://github.com/turingschool/mastery_project and, in the description,
-summarize the idea in the following format:
+* Ultimately, demonstrate knowledge you've gained throughout Turing
+* Use an agile process to turn well defined requirements into deployed and production ready software
+* Gain experience dividing applications into components and domains of responsibilities to facilitate multi-developer teams. Service oriented architecture concepts and patterns are highly encouraged.
+* Explore and implement new concepts, patterns, or libraries that have not been explicitly taught while at Turing
+* Practice an advanced, professional git workflow (see whole-team expectations)
+* Gain more experience using continuous integration tools to build and automate the deployment of features in various environments
+* Build applications that execute in development, test, CI, and production environments
+* Focus on communication between front-end and back-end teams in order to complete and deploy features that have been outlined by the project spec
 
-* Name:
-* Problem it solves:
-* How it solves it:
-* Technical challenges:
+## Kick-Off
 
-If your a proposal similar to yours is already in the list of issues, please add to that issue with your refinements. We'll rename the issue to the name you choose, but this will help us limit the number of duplicate ideas.
+### Schedule
 
-### Part 2: Small Groups
+1. Any new pitches for projects you want to work on?
+1. Group forming
+1. Instructors finalize teams
+1. Gather into your teams
+1. Go through project expectations
+1. Start working on Day 1 deliverables!
+  * Go through project expectations again with your team
+  * Ask us any questions along the way!
+1. Instructors meet with teams to look through Day 1 deliverables
 
-Then get together in assigned groups of four to:
+## Expectations
 
-* Review/discuss each of your ideas
-* Refine them
-* Add comments to the issue
-* Select your two favorites (from the entire group, they could be from the same person)
+### Whole-Team
 
-### Part 3: Pitch & Merge
+Generally, this project will consist of a front-end (FE) and back-end (BE) with the following:
 
-Then we'll get back together and each group of four will come up to pitch their
-two ideas. Spend less than two minutes on each pitch.
+* The FE and BE applications live in separate repositories that communicate to each other using API requests
+* FE and BE teams utilize a scrum board and tasks/stories updated accordingly on a daily basis as they are initialized, implemented, and deployed
+* Both the FE and BE should be deployed to production and using continuous integration (like TravicCI) for automated deployment
+* Early and consistent deployment to production (instructors will check build history)
+* In-depth `README.md` for each repository describing the project, setup procedure, testing procedure, and screenshots, if applicable (API documentation, if applicable)
+* Each student should have a goal for something you would like to learn about the other stack (BE student creates learning goal for something about the FE, and vice versa)
+* Create and use pull request templates that document and create discussion for finished features - use rebasing instead of merging in git workflow
 
-After pitches, we'll merge any ideas that are very similar.
+If you do not see your project following this outline, then speak to your instructors about it.
 
-### Part 4: Voting
+### Back-End Creators
 
-Then we'll plot the four ideas on the board. Each of you should then pass through
-and mark the **three** ideas **you most want to exist**.
+* Use service oriented architecture patterns that split the application into their respective parts and responsibilities
+* Create various services that serve up JSON, so that an FE system can effectively utilize the data from the BE
+* Test the BE:
+  * If you use Rails for your BE, then we expect above 80% test coverage
+  * If you experiment with a new BE language/framework outside of Rails, then BE test coverage is expected to be at least 25%
+* Implement a stretch goal (listed below)
 
-After all votes are cast, the top four vote getters are selected. If there are any ties, Steve will cast the deciding votes.
+Pick **2** of the following stretch goals:
 
-### Part 5: Teaming
+* Implement BE in a framework or language you have not used before in a project
+* Create a Backend API using GraphQL
+* Create a micro service or two and abstract out functionality into a separate application
+* Utilize websockets rather than traditional HTTP/HTTPS
 
-Using a randomly generated list, you'll select your project. No project may
-have more than four people.
+### Front-End Creators
 
-### Part 6: Wireframing & Design
+* Interface with the BE team’s API(s) that serve JSON data and incorporate that data into your FE
+* Test the FE:
+  * If you use React/Redux for your FE, then we expect above 85% test coverage
+  * If you experiment with a new FE framework outside of React/Redux, then FE test coverage is expected to be at least 25%
+* Implement a stretch goal (listed below)
 
-With the project and team established, get together with your group to wireframe
-the key screens / interactions and figure out how you'll implement services.
+Possible stretch goals:
 
-Below are the key concepts from our instructional sessions which may inform some
-of your thinking:
+* Implement FE in a framework you have not used before in a project
+* Utilize internationalization and localization tools to localize the FE based on the user's locale
+* Implement OAuth and store user data in the BE database as needed
+* Implement Progressive Web App (PWA) technologies like: background sync, IndexedDB, static assets caching using a Service Worker
+* Utilize websockets rather than traditional HTTP/HTTPS (maybe [socket.io](https://socket.io/))
 
-- Building applications for the web, desktop, and mobile platforms
-- Offline applications and progressive web applications
-- Building real-time web applications with WebSockets
-- Building servers to store and share data between users
+**Note:** FE students can be the BE creators and vice versa, if it fits into your learning goals
 
-### Part 7: Workflow
+## Day 1 Deliverables
 
-Steve will create repositories for the selected projects. If you have a clever name, now is the time.
+By the end of the kick-off session today, you should have a full proposal of your project, which should include:
 
-## Rubric
+* DTR
+* Initialize your repositories (don't write any code just yet!)
+* Set up your scrum board and connect them to your repositories (you can have multiple repositories connected to a single Waffle board)
+* Each student create your goal for something you would like to learn about the other stack (BE student creates learning goal for something about the FE, and vice versa)
+* Normalize on git workflow (we recommend using a "rebase" workflow, as opposed to "merge", as it is most common on the job) - use a PR template
+* Determine MVP (knowing it could change as the project continues)
+* Create user stories
+* Create wireframes
+* Construct schema design
+* Decide on rough tech stack
 
-### Production (75 points)
+Instructors will come around to each team to make sure these items are complete.
 
-- 75: Application is deployed and in production.
-- 0: Application is not deployed and in production.
+## Going Forward
 
-### JavaScript Style (50 points)
+### Check-Ins
 
-* 50: Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There _zero_ instances where an instructor would recommend taking a different approach.
-* 35: Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
-* 15: Application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-* 10: Application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
-* 5: Developer writes code with unnecessary variables, operations, or steps which do not increase clarity.
-* 0: There is little or no client-side code. Developer writes code that is difficult to understand. Application logic shows poor decomposition with too much logic mashed together.
+Instructors will serve as project managers and hold check-ins with teams at least every other day to check:
 
-### User Interface (40 points)
+* Progress and focus toward MVP
+* Check deployment and build logs to make sure teams are deploying regularly
+* Difficulties, roadblocks, and bugs
+* Spikes (dedicated time for research and experiments)
+* Next steps
 
-* 40: The application is pleasant, logical, and easy to use. There no holes in functionality and the application stands on it own to be used by the instructor _without_ guidance from the developer.
-* 30: The application has many strong pages/interactions, but a few holes in lesser-used functionality.
-* 20: The application shows effort in the interface, but the result is not effective. The evaluator has some difficulty using the application when reviewing the features in the user stories.
-* 0: The application is confusing or difficult to use.
 
-### Risk Taking and Creativity (60 points)
+### End-of-Project Demos
 
-Instructor/developers will select one feature in the project to review for this section of the rubric.
+Wednesday morning of week 6 your team will demo your application to the class and instructors (the application should be demo'd using _production_). It will be a great preparation for demo night so you can nail your demos!
 
-- 60: Developers pushed themselves and their team by taking risks which is demonstrated by a delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
-- 50: Developers pushed themselves and their team by taking risks which is demonstrated by an almost delivered feature. Developers explored concepts and technologies outside the scope of the curriculum.
-- 30: Developers attempted to implement feature using technologies not covered in class but it did not result in a delivered feature.
-- 10: Developers did not build any features.
+### Evaluation
 
-### Testing (50 Points)
+Evaluation will take place Thursday afternoon of week 5. Each team will meet with a BE and FE instructor to:
 
-* 50: Project has a running test suite that exercises the application at multiple levels (feature and unit). The test suite covers almost all aspects of the application.
-* 40: Project has a running test suite that tests and multiple levels but fails to cover some features. All functionality is covered by tests. The application makes some use of feature testing.
-* 30: Project has sporadic use of tests and multiple levels. The application contains numerous holes in testing and/or many features are untested.
-* 20: Testing in the application is sporadic and does not add confidence that the application would note break during refactoring.
-* 0: There is little or no evidence of testing in this application.
+* Walk through the application (FE and BE) and justifications of code
+* Run the test suites
+* Show the application is running on production
+* Show application is using continuous integration
+* Talk about lessons learned
 
-### Workflow (50 Points)
-
-* 20: The developer effectively uses Git branches and many small, atomic commits that document the evolution of their application. There is visible evidence of code review happening in pull requests and discussion around approaches.
-* 15: The developer makes a series of small, atomic commits that document the evolution of their application. There are no formatting issues in the code base. There is little evidence of code review.
-* 5: The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. There are formatting issues in the code base. (This is important. These issues should not be able to make it past code review.)
-* 1: The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
-* 0: The application was not checked into version control.
-
-#### Extensions (20 points each)
-
-- Developer contributes to or creates an npm module/library.
+Teams - it's your responsibility to keep an ensure you are on track to meet expectations of the rubric, which can be found [here](http://backend.turing.io/module4/projects/cross_pollination/cross_pollination_rubric).

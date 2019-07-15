@@ -1,14 +1,31 @@
 ---
-title: Intro to Responsive Design
+title: Intro to Responsive Layouts
+length: 60
+tags: html, css
 ---
 
-# Overview & Docs
+### Learning Goals
+- Understand and describe page layout
+- Understand and apply media queries
 
-We can't control how our users interact with our products, but we *can* make sure that our work looks good and functions correctly on all screen sizes. Your product lives online, it's important to make sure that no matter how a user accesses it they are able to use it successfully and without frustration.
+## Vocabulary
 
-A general understanding of responsive website design and how to use media queries and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your toolbelt.
+- `Page Layout` - The size and positioning of elements on a page. Examples are static, liquid, adaptive, and responsive
+- `Media Query` A CSS feature that makes it possible to apply styling based on boolean logic
+- `Breakpoint` The specific amounts that media queries reference (usually in pixels)
+- `CSS Reset` A set of styles that applies default styling
+- `Viewport Meta Tag` An html tag that is used to describe attributes that affect how the page is displayed
+
+## Introduction
+
+We can't control how our users interact with our products, but we *can* make sure that our work looks good and functions correctly on all screen sizes. Your product lives online, it's important to make sure that no matter how a user accesses it they are able to use it successfully.
+
+A general understanding of responsive website design, how to use media queries, and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your toolbelt.
 
 In this session, we'll be diving into responsive page layouts and using media queries to control your page content at all screen sizes. This lesson assumes you are familiar with HTML and CSS fundamentals.
+
+**Page Layout**
+The arrangement and sizing of visual elements on a web page
 
 There are four primary page layout types:
 
@@ -28,13 +45,13 @@ Because adaptive layouts typically take less time to build than true responsive 
 The primary drawback to this strategy is that screen widths that fall between the set breakpoints can feel awkward, with contents looking either too crowded or with far too much space.
 
 **Responsive Page Layout**
-At first glance, a response site looks a lot like an adaptive site. But start resizing your screen, and you'll see why it's the best solution. A true responsive page layout combines the best parts of a liquid layout and an adaptive layout to create the best experience for your users as they move between devices and screen sizes. By using both relative units and media queries, a responsive site allows us to transition through screen sizes seamlessly and effortlessly.
+At first glance, a responsive site looks a lot like an adaptive site. But start resizing your screen, and you'll see why it's the best solution. A true responsive page layout combines the best parts of a liquid layout and an adaptive layout to create the best experience for your users as they move between devices and screen sizes. By using both relative units and media queries, a responsive site allows us to transition through screen sizes seamlessly and effortlessly.
 
 ## Docs
 
 * The site [Liquidapsive](http://www.liquidapsive.com/) is a great resource showing simple examples of all the layout types in action.
 * [MDN's Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
-* [MDN's Responsive Design Overview](https://developer.mozilla.org/en-US/Apps/Progressive/Responsive)
+<!-- * [MDN's Responsive Design Overview](https://developer.mozilla.org/en-US/Apps/Progressive/Responsive) -->
 * [MDN's Explanation Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
 * Brad Frost's [This is Responsive](http://bradfrost.github.io/this-is-responsive/), patterns and resources for creating responsive websites.
 
@@ -60,7 +77,7 @@ To get started, we'll set up our HTML skeleton so we have a roadmap of where we'
 <!doctype html>
 <html>
 <head>
-    <title></title>
+  <title></title>
 </head>
 <body>
 
@@ -70,17 +87,11 @@ To get started, we'll set up our HTML skeleton so we have a roadmap of where we'
 
 Now that we have our basic HTML page structure written, we can think about how we want to structure the contents. We know we want to have nav, main content, some secondary content in a sidebar on the right side of the screen, and a footer so we'll go ahead and add the appropriate tags for those chunks of content.
 
-Working in ``index.html``, let's start at the top and work our way down the page. For our primary navigation, we'll use the semantic ``header`` tag to wrap a ``nav`` tag that contains the unordered list that will become our navigation links.
+Working in ``index.html``, let's start at the top and work our way down the page. For our primary navigation, we'll keep it simple and use the semantic ``header`` tag. If we wanted to flush it out as a navigation bar with links inside our header, we could wrap a ``nav`` tag around an unordered list to become our navigation links.
 
 ```html
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
+  <header></header>
 </body>
 ```
 
@@ -88,16 +99,10 @@ Next, we'll add an ``article`` tag to hold the main content, an ``aside`` tag to
 
 ```html
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li></li>
-            </ul>
-        </nav>
-    </header>
-    <article></article>
-    <aside></aside>
-    <footer></footer>
+  <header></header>
+  <article></article>
+  <aside></aside>
+  <footer></footer>
 </body>
 ```
 
@@ -111,27 +116,23 @@ We'll keep this content simple for now so we can focus on getting the HTML eleme
 <!doctype html>
 <html>
 <head>
-    <title>Responsive Site Example</title>
+  <title>Responsive Site Example</title>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li>A Link Here</li>
-            </ul>
-        </nav>
-    </header>
-    <section class="container">
-        <article class="main-content">
-            <h1>Main Content</h1>
-        </article>
-        <aside class="secondary-content">
-            <h2>Secondary Content</h2>
-        </aside>
-    </section>
-    <footer>
-        <h3>Footer Content</h3>
-    </footer>
+  <header>
+    <a href="#">A Link Here</a>
+  </header>
+  <section class="container">
+    <article class="main-content">
+      <h2>Main Content</h2>
+    </article>
+    <aside class="secondary-content">
+      <h2>Secondary Content</h2>
+    </aside>
+  </section>
+  <footer>
+      <h2>Footer Content</h2>
+  </footer>
 </body>
 </html>
 ```
@@ -151,14 +152,17 @@ header {
   background: grey;
   height: 50px;
   margin-bottom: 25px;
+  padding-top: 30px;
   text-align: center;
 }
 
-nav {
-  padding-top: 15px;
+
+a {
+  color: black;
+  text-decoration: none;
 }
 
-nav:hover {
+a:hover {
   color: white;
 }
 ```
@@ -171,14 +175,19 @@ For the header tag, we've done the following things:
 - added a 25px margin to the bottom so the contents of our page don't crowd our nav bar
 - centered all the content.
 
-Since our ``header`` tag wraps our ``nav`` tag, we don't have to write as many styles here. We've added top padding to vertically center the link, and added a ``:hover`` pseudo element that changes the text color to white so our users can tell when they move their cursor over it that it's clickable. And with that, our header navigation is good to go!
+Since our ``header`` tag wraps an ``h2`` tag, we don't have to write as many styles here. We've added top padding to vertically center the link, and added a ``:hover`` pseudo element that changes the text color to white so our users can tell when they move their cursor over it that it's clickable. And with that, our header 'navigation' is good to go!
 
 On to our body content!
 
 ```css
 .container {
-  height: 400px;
   margin: 0 auto;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .main-content {
@@ -211,6 +220,7 @@ footer {
   background: grey;
   height: 50px;
   margin-top: 25px;
+  padding-top: 30px;
   text-align: center;
 }
 ```
@@ -218,7 +228,7 @@ Boom! We have a simple site! Now, try making your browser window big and then ma
 
 If we open our developer tools, we'll be able to see the pixel width of the screen as we change the width. Let's figure out at what point it starts to look bad at large and small sizes.
 
-Our site looks pretty good at medium screen sizes, but the ``main-content`` and ``secondary-content`` sections start looking too wide beyond 900px. On smaller screens, our ``secondary-content `` starts looking a too crowded below 550px. Great! We'll use 900px as our breakpoint for larger screens and 550px as our breakpoint for smaller screens. This is a very simple site, so those should be sufficient for now.
+Our site looks pretty good at medium screen sizes, but the ``main-content`` and ``secondary-content`` sections start looking too wide beyond 900px. On smaller screens, our ``secondary-content `` starts looking too crowded below 550px. Great! We'll use 900px as our breakpoint for larger screens and 550px as our breakpoint for smaller screens. This is a very simple site, so those should be sufficient for now.
 
 Now, you may be thinking that this seems like a pretty imprecise way to identify your breakpoints. The fact is that we are at the mercy of our content and we must make breakpoint decisions based on what works best for each specific project rather than the screen sizes and resolutions of a particular device. There are so many devices and so many ways to view a website that it's safer to make sure your site just works right at any size. If you want to take a look at a list of device-specific media queries (which can be helpful to get an idea of what you're up against or if you're wrangling a specific issue), CSS-Tricks has a [great post](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/) for you.
 
@@ -227,14 +237,25 @@ Before we write any queries, let's add a viewport meta tag in the ``head`` of ou
 ```html
 <meta name="viewport" content="width=device-width, initial-scale=1">
 ```
+The viewport metatag shown above is saying...
+
+```
+width=device-width
+initial-scale=1
+```
+
+In more human terms these say..
+
+* __Width__: Make the width of the page the same width as whatever screen it is being shown on.
+* __Initial Scale__: Controls the zoom level when the page is first loaded.
 
 Let's start with our media query for large screens. We know we want our breakpoint to be 900px. Let's add a loud background color to our ``body`` just to make sure it's hooked up.
 
 ```css
 @media screen and (min-width: 900px) {
-    body {
-        background: yellow;
-    }
+  body {
+    background: yellow;
+  }
 }
 ```
 
@@ -242,10 +263,9 @@ Once we've established that our query is working, we can update the styles we wa
 
 ```css
 @media screen and (min-width: 900px) {
-    .container {
-        margin: 0 auto;
-        width: 90%;
-    }
+  .container {
+    width: 90%;
+  }
 }
 ```
 
@@ -253,10 +273,6 @@ Now let's dig into our media query for smaller screens. We can see that our asid
 
 ```css
 @media screen and (max-width: 550px) {
-  .container {
-    height: 100%;
-  }
-
   .main-content {
     float: none;
     height: 400px;

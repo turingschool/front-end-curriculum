@@ -1,9 +1,19 @@
-$teal: #05c2d1;
-$dark-gray: #3c4040;
-$medium-gray: #98a1a2;
-$light-gray: lighten(#98a1a2, 30);
-$yellow: rgb(244, 213, 152);
+$turing-primary: #12F1FC;
+$turing-secondary: #036575;
+$front-end-primary: #F9AE06;
+$front-end-secondary: #965D0B;
+$back-end-primary: #EF3852;
+$back-end-secondary: #9B0428;
 
-$tablet-width: 720px;
-$sidebar-width: 220px;
+$dark-gray: #5F5F5F; 
+$medium-gray: #929292;
+$light-gray: lighten(#929292, 30);
+
+$phone-width: 550px;
+$tablet-width: 800px;
+$sidebar-width: 240px;
 $content-block-spacing: 2em;
+
+$background-primary: #FFF;
+$background-secondary: #F2F2F2;
+$background-tertiary: #212121;

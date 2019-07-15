@@ -13,42 +13,112 @@ In this project you will be getting your first real interactions with ReactJS, a
 ## Required Technology
 
 - ReactJS
-- jQuery for AJAX only (No DOM manipulation)
-- Sass
-- API (written by yung-Jhun) [Link](http://weatherly-api.herokuapp.com/api/weather)
+- fetch for api requests
+- [weather underground API](https://www.wunderground.com/weather/api/)
+
+Use [create-react-app](https://www.npmjs.com/package/create-react-app) for your project. We'll learn how to configure the testing environment in our testing lesson later this week.
+
+## ESLint
+
+After initializing your create-react-app project, add eslint to the project.
+
+#### Install eslint
+
+`npm install eslint --save-dev`
+
+#### Add an eslint command to your package.json scripts property
+```
+"scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "eslint": "./node_modules/eslint/bin/eslint.js ./src/*.js"
+},
+```
+
+#### Add this .eslintrc file to the root of your project
+
+Make sure to name it .eslintrc
+
+[.eslintrc](./assets/weathrly/eslintrc.json)
+
+## Requirements
+
+Your weather underground API key should not be stored on github. Store it in a seperate file. This file should be added to your `.gitignore` file.
+
+Your app should have at a minimum the following components.
+
+- App
+- Welcome
+- Search
+- Current Weather
+- 7 Hour Forecast
+- 10 Day Forecast
+- Card (used in 7 hour and 10 day)
+
+## Design Requirements
+Your Readme should include wireframes of your app.
 
 ## Phase one
 
-* Your application should have a welcome page that greets the user. The welcome page has an input field that asks the user for it's  current location / desired location
+Create your Current Weather component
 
-* Once the desired location is submitted a weekly forecast overview (weather for next 7 days) is shown.
+You will create your User Interface using mock data. This will speed up your development time by not waiting for api requests. You can find the mock data [here](https://repl.it/@NathanielFoster/Weatherly-Mock-Data). Copy it into a seperate file that you can then import into your App file.
 
-* There should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
+Your Current Weather component should display the following information
 
-* utilize sass variables and color scheme of app changes based on the weather and temp.
-
-* location persists after refresh.
-
+  * the name of the current city
+  * the current condition
+  * the current day
+  * the current temperature
+  * the expected high and expected low for the day
+  * a summary of what the weather is going to be like that day ("Windy, chance of a few late night showers. Lows overnight in the mid 50s.)
 
 ## Phase two
 
-* Display likely-hood of weather event happening
-
-* Each day should have a summary of what the weather will look like ex: `Today: Sunny Today, It's currently 42, the high will be 46`
+* The application should have a 7 hour weather forecast component. Each hour should be a card component and should display
+   * the hour
+   * an image that reflects the weather
+   * the projected temperature
 
 * Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive.
 
-
-
 ## Phase three
 
-* Application should render an image that best reflects the weather.
+* The application should have a 10 day forecast component. Each day should be a card component and should display
+  * the name of the day
+  * an image that reflects the weather
+  * the projected high and low temperature
 
-* Have an alert if an extreme weather event is forecasted in the area the user has specified (tornado watch, flood watch, blizzard watch, etc).
+## Phase four
 
-## Extension
+* Your application should have a welcome page that greets the user. The welcome page has a search component.
 
-* If a user clicks on a specific day on the 7 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
+The search component consists of an input field and a submit button that allows the user to search for a location (the location should work with both a zip code and city/state).
+
+* Once the desired location is submitted there should be a way for the user to change location information. Once the location information is changed the weather should reflect the desired location.
+
+* location persists after refresh.
+
+## Phase five
+
+* Add autocomplete functionality to your search input
+* import your completeMe into your Weathrly project. Populate it with this [list of city/states](https://drive.google.com/file/d/0B7Bgu1dKc7BzSVRjb2xMS0R5M2M/view?usp=sharing). When a user starts typing in a city/state or zip code display a list of possible suggestions using your completeMe's suggest function.
+
+## Extensions
+
+* If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
+   * For each hour it should display an image that reflects the weather
+   * For each hour it should display the projected temperature and the hour
+
+* Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
+
+* The application is fully accessible.
+   * The application can be used without a mouse
+   * zero axe-core violations
+
+* Use Sass / SCSS to style your projects
 
 # Instructor Evaluation Points
 
@@ -64,16 +134,6 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 0 - The application is unusable.
 
-## Accessibility
-
-4 - The application demonstrates an exceptional knowledge of web accessibility. The application has no aXe-core violations, is fully functional without using a mouse, and the application uses HTML/CSS to 'chunk' content into more manageable pieces. The application utilizes semantic HTML.
-
-3 - The application has a strong accessibility presence. The developer showed a strong effort to keep accessibility in mind from the beginning of the project. The application has 0-3 aXe-core violations.
-
-2 - The application shows glimpses of good accessibility practices, but fails to deliver a truly accessible product. The application has 4-6 aXe-core violations
-
-1- Developer did not keep accessibility in mind. The application has 6+ aXe-core violations.
-
 ## User Interface
 
 4 - The application is pleasant, logical, and easy to use. The application is fully responsive, and has clearly had special consideration around usability on devices. There no holes in functionality and the application stands on it own to be used by the instructor without guidance from the developer.
@@ -86,31 +146,31 @@ In this project you will be getting your first real interactions with ReactJS, a
 
 ## HTML Style
 
-4: Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
+4 - Developer is able to craft HTML that is semantically correct and clearly organized. There are zero instances where an instructor would recommend taking a different approach. Developer writes markup that is exceptionally clear and well-factored. Application is expertly organized and logically structured with with a clear, thoughtful use of tags and selectors.
 
-3: Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
+3 - Developer solves structural problems with a balance between conciseness and clarity. Developer can speak to choices made in the code and knows what every line of code and every tag and selector is doing.
 
-2: Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
+2 - Developer writes effective HTML, but does not write semantically correct and clearly organized code. Application shows some effort to use semantically correct HTML, but the divisions are inconsistent or unclear. There are many un-semantic tags and unnecessary selectors and it is not clear to the evaluator what a given section of code represents visually. Developer cannot speak to every line of code.
 
-1: Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
+1 - Developer writes code with unnecessary tags, selectors, or nesting which do not increase clarity. Developer writes code that is difficult to understand. Application markup shows poor structure with no understanding of semantics.
 
 ## CSS/Sass Style
 
-4: Application has exceptionally well-factored CSS/Sass with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
+4 - Application has exceptionally well-factored CSS/Sass with little or no duplication and all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
 
-3: Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS/Sass is doing.
-
-2: Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
-
-1: Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS/Sass is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
-
-## JavaScript Style
-
-4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There zero instances where an instructor would recommend taking a different approach.
-
-3- Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing.
+3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of CSS/Sass is doing.
 
 2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing.
+
+1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of CSS/Sass is doing. Developer writes code with unnecessary selectors or tags which do not increase clarity.
+
+## JavaScript / React Style
+
+4 - Application has exceptionally well-factored code with little or no duplication and all components separated out into logical components. There are zero instances where an instructor would recommend taking a different approach to design and component architecture.
+
+3 - Application is thoughtfully put together with some duplication and no major bugs. Developer can speak to choices made in the code and knows what every line of code is doing. Application has at least 6 components built out.
+
+2 - Your application has some duplication and minor bugs. Developer can speak to most choices made in the code and knows what every line is doing. The application has large components and logic could be broken out to smaller stateless components.
 
 1 - Your application has a significant amount of duplication and one or more major bugs. Developer cannot speak to most choices and does not know what every line of code is doing.
 
@@ -135,17 +195,3 @@ In this project you will be getting your first real interactions with ReactJS, a
 2 - The developer makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application.
 
 1 - The developer committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
-
-0 - The application was not checked into version control.
-
-## Code Sanitation
-
-The output from a code sanitizer (either JSHint or ESLint) shows…
-
-4 - Zero complaints
-
-3 - Five or fewer complaints
-
-2 - Six to ten complaints
-
-1 - More than ten complaints

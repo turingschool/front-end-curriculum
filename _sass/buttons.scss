@@ -1,0 +1,38 @@
+.btn {
+  font-family: $bold-copy;
+  font-size: 0.9em;
+  border: none;
+  border-radius: 50px;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 18px 30px 12px;
+  margin: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.btn-dark {
+  background-color: $dark-gray;
+  color: $light-gray;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-dark.active {
+  background-color: $turing-secondary;
+  color: $turing-primary;
+}
+
+.btn-light {
+  background-color: $light-gray;
+  color: $dark-gray;
+}
+
+.btn-light.active {
+  background-color: $turing-primary;
+  color: $turing-secondary;
+}
