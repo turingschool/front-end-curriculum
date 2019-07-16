@@ -12,9 +12,7 @@ module: 3
 
 ## Vocab
 
-- Dispatch
 - `Pure functions` A pure function is a function that returns the same output given the same input.  It has no side affects and modifies no other variables outside of its scope.
-- Container
 - Vocab from [Starting Up Redux](starting-up-redux.html)
 
 ## Getting Started
