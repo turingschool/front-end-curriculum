@@ -89,9 +89,10 @@ Finish early? You're probably curious about other things you can do with arrays.
 To make sure we have a clear way to explain how these array prototype methods work and have a reference, each group of 3-4 will be assigned one. It's your job to create an anchor chart that students can use as a reference!
 
 Consider including:
-- use case
+- use case - what does it do?
 - example for syntax
 - info about arguments expected
+- return value of this array prototype method
 - any analogy or fun/interesting way to remember what it does!
 
 ## Summary
