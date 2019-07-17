@@ -5,13 +5,6 @@ tags: css, sass, scss
 module: 2
 ---
 
-<style type="text/css">
-.discuss{padding:20px !important;font-size:13px !important;background-color:#fefefe;border:1px solid #eee !important}
-.discuss h4{margin:0 !important}
-body,html{background-color:#fff;height:100%;margin:0;font-family:'Open Sans',sans-serif, color: #555;}.content a:link, .content a:visited{border-bottom:0px !important;text-decoration:none;color:#05c2d1}.content p { color: #555 !important; }
-hr{width:100%;height:1px;background-color:#eee;border:0;margin:50px 0}
-</style>
-
 ### Learning Goals
 * Understand that Sass has two syntaxes: SASS and SCSS
 * Understand and apply the basics of Sass to follow the principles of DRY and KISS
@@ -50,10 +43,11 @@ With this version, variables were assigned using `!` and CSS styles were defined
 
 SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced with more recognizable syntax.
 
-<div class="discuss">
-  <h4>Practice</h4>
-  <p>Take a look at the SCSS in <a href="https://codepen.io/the_ruther4d/pen/ormbi">this codepen</a>. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.</p>
-</div>
+<section class="call-to-action">
+#### Practice
+
+Take a look at the SCSS in [this codepen](https://codepen.io/the_ruther4d/pen/ormbi). Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.
+</section>
 
 Even if you've never worked with SCSS before, this syntax is a little bit easier to understand since it is so much closer to the languages that we use every day. Variables look like jQuery variables, things are nested in these guys: `{}`, wrong indentation won't break your code, and assignments happen using `:` just like in normal CSS.
 
@@ -64,10 +58,12 @@ Although both Sass and SCSS are both still viable languages to use, movement has
 
 _Note: For our purposes here, be aware that we will be working strictly with the SCSS syntax when we are working with Sass._
 
+<section class="call-to-action">
 #### Turn and Talk
 
 - What is the difference between the SASS and SCSS syntax?
 - How would you explain what a preprocessor is to a five year old?
+</section>
 
 ### Why would we use Sass?
 
@@ -89,13 +85,13 @@ Similar to JavaScript, variables can hold a variety of data types: numbers, colo
 
 Variables are defined by a `$` immediately preceding the name of the variable (like jQuery), and a colon separating the name of the variable from the value.
 
-```
+```scss
 $favorite-text-color: lime;
 ```
 
 They can then be used anywhere in your stylesheet in place of that style. If I wanted all of my paragraph tags to have this color, my selector would look like this: 
 
-```css
+```scss
 p {
   color: $favorite-text-color;
 }
@@ -103,7 +99,7 @@ p {
 
 It's also nice to avoid typing long, specific styles more than once. Instead we can reference a semantically logical variable.
 
-```css
+```scss
 $frilly-font: "Fantasy", cursive;
 $main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
 
@@ -129,7 +125,7 @@ For example, if you were writing pure CSS and wanted to target an anchor tag tha
 
 ##### Sass
 
-```css
+```scss
 $main-text-dark: #000;
 $dark-red: #FF0000;
 $link-light: #fff;
@@ -145,14 +141,15 @@ header {
 
 ##### CSS Output
 
-```css
+```scss
 header { color: #000; }
 header nav { background-color: #ff0000; }
 header nav a { color: white; }
 ```
 
+<section class="note">
 *IMPORTANT NOTE* Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific. Try to avoid excessive levels of nesting unless absolutely necessary.
-
+</section>
 
 #### Nesting & Psuedo-Selectors
 
@@ -160,7 +157,7 @@ A common scenario, when nesting is a good option, is when dealing with psuedo se
 
 To target a parent element and apply a psuedo selector, use `&:psuedo-selector`, as in the following syntax:
 
-```
+```scss
 a {
   &:hover { color: pink; }
 }
@@ -168,18 +165,16 @@ a {
 
 It is common to use the parent selector for situations where a secondary class changes a style.
 
+<section class="call-to-action">
 #### Turn and Code
 
-<div class="discuss">
-<h4>Practice</h4>
-<p>Write SCSS for the following HTML using nesting & variables, following the following criteria:</p>
-<ul>
-  <li>Link text font family should be Arial, Tahoma, or sans-serif.</li>
-  <li>On hover, make the link text red, and the button text white.</li>
-  <li>On hover, make the button have a box shadow of some kind.</li>
-  <li>For practice, define all styles as variables.</li>
-</ul>
-</div>
+Write SCSS for the following HTML using nesting & variables, following the following criteria:
+
+* Link text font family should be Arial, Tahoma, or sans-serif.
+* On hover, make the link text red, and the button text white.
+* On hover, make the button have a box shadow of some kind.
+* For practice, define all styles as variables.
+</section>
 
 ```html
   <nav class="nested-magic">
@@ -208,7 +203,7 @@ Generally, your structure will have the following:
 * Partial files that have an underscore prefix
 * A main file where you will be importing these partial files
 
-```css
+```scss
 // _variables.scss
 
 // Colors
@@ -223,7 +218,7 @@ $main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
 $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
 ```
 
-```css
+```scss
 // index.scss
 @import 'reset';
 @import 'variables';
@@ -233,16 +228,19 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 @import 'Author';
 @import 'Story';
 @import 'Stories';
-...
-...
+/*...*/
+/*...*/
 
 ```
 
 But what about media queries? There are a lot of [different approaches](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32) that you can take. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844) that walks through setting up responsive mixins for each component.
 
+<section class="call-to-action">
 #### Turn and Talk
+
 * How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
 * With your partner, find two different ways to set up your file structure with Sass
+</section>
 
 <hr />
 
@@ -253,10 +251,11 @@ A mixin allows you to define a set of styles that you want to reuse throughout y
 To use:
 
 1. You name them with @mixin name(arguments) { style }.
-2. To include them you use @include name.
+1. To include them you use @include name.
 
 ##### SCSS
-```css
+
+```scss
 / Example
 @mixin rounded-corners($radius) {
   -webkit-border-radius: $radius;
@@ -272,7 +271,7 @@ To use:
 
 ##### CSS Output
 
-```css
+```scss
 .box {
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
@@ -282,26 +281,28 @@ To use:
 ```
 
 _Note: Just like variables, common convention is to place your mixins in a partial file that is separate from other styles_
-    
+   
+<section class="call-to-action">
 #### Turn and Code
 
 In a CodePen, build the following chunk of html and SASS using `mixins`
   1. Create a mixin called `level-one-header` that has a font size of 32px, a
      font weight of 800, and a font family of Helvetica.  
-  2. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
+  1. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
      weight of 300, and a font family of Arial.   
-  3. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.   
-  4. Using these mixins, create a small chunk of html. The HTML should have the following:  
+  1. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.   
+  1. Using these mixins, create a small chunk of html. The HTML should have the following:  
   - One h1 element using the appropriate mixin.  
   - Two divs, each with an h2 and a paragraph tag.  
   - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.  
   - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
+</section> 
 
 ## Extend
 
 Another way to keep your code reuseable and simple is to make use of the `@extend` feature of Sass. Extend allows you to inherit properties from other selectors. Think of as parent styles -- short, green eyes, big feet. Their children and grandchildren have the same base styles but with new age flair and coolness of their own.
 
-```
+```scss
 .message {
   border: 1px solid #ccc;
   padding: 10px;
@@ -326,7 +327,7 @@ Another way to keep your code reuseable and simple is to make use of the `@exten
 
 Compiles to:
 
-```  
+```scss
 .message, .success, .error, .warning {
   border: 1px solid #cccccc;
   padding: 10px;
@@ -348,9 +349,11 @@ Compiles to:
 
 You may have noticed that `@extend` and `@mixin` can be seen as accomplishing the same thing in a different way since they are both geared towards reusing styles across your project. A common question developers have with Sass is when you should choose to use one over the other, and why.
 
+<section class="call-to-action">
 #### Research and Talk
 
-In pairs, take 5 minutes to read two articles around this debate. Come together to discuss what you found. Bonus points if you also look into `placeholder`. 
+In pairs, take 5 minutes to read two articles around this debate. Come together to discuss what you found. Bonus points if you also look into `placeholder`.
+</section>
 
 <hr />
 
@@ -423,7 +426,7 @@ Identical function to `adjust-hue(color, 180deg)`
 
 Take a peek at the [Color Wheel](https://uwdigipub.files.wordpress.com/2014/11/hsl-color-wheel-pagespeed-ce-if6-exzipy.png) again for clarity.
 
-```css
+```scss
 $color1: hsla(240, 100%, 50%, 1);
 complement(hsla(240, 100%, 50%, 1));
 => hsla(60, 100%, 50%, 1);
@@ -439,7 +442,7 @@ Mixes two given colors based on the weight percentage provided.
 
 `$weight` in this function is relative to the two defined colors. Closer to `100%` gives more weight to `$color1`, closer to `0%` gives more weight to `$color2`.
 
-```css
+```scss
 $color1: hsla(0, 100%, 50%, 1);
 $color2: hsla(240, 100%, 50%, 1);
 mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 75%);
@@ -458,7 +461,7 @@ mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 35%);
 
 Takes a color and a percentage value, returning a color with a lightness increased or decreased by given amount.
 
-```css
+```scss
 $color1: hsla(240, 100%, 50%, 1);
 lighten(hsla(240, 100%, 50%, 1), 30%);
 darken(hsla(240, 100%, 50%, 1), 30%);
@@ -478,7 +481,7 @@ Remember that saturation is a colors representation on a gray scale.
 `desaturate()` Will reduce a color's saturation by that percentage.
 `saturate()` Will increase a color's saturation by that percentage.
 
-```css
+```scss
 $full-color: hsla(240, 100%, 50%, 1);
 $duller-color: hsla(240, 50%, 50%, 1);
 saturate(hsla(240, 50%, 50%, 1), 10%);
