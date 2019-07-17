@@ -1,5 +1,5 @@
 ---
-title: Refactor
+title: Refactor Workshop
 tags: refactor, JavaScript, DRY, clean code
 length: 60
 ---
@@ -28,7 +28,7 @@ As you watch a real person refactor in real time, take note of the questions the
 <section class="checks-for-understanding">
 ### Your Turn
 
-Clone down [this repo](). Make sure you are familiar with the current functionality (i.e., run the app in the browser!)
+Clone down [this repo](https://github.com/turingschool-examples/num-guess-refactor). Make sure you are familiar with the current functionality (i.e., run the app in the browser!)
 - There are many refactoring opportunities here. With your partner, decide on **one** area to focus your energy.
 - Decide if you want to pair or work solo, but either way, work on the same goal.
 - While you are refactoring, make sure you are utilizing `console.log` and checking what is happening in the browser.
