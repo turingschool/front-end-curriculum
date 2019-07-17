@@ -17,8 +17,9 @@ length: 60
 <section class="call-to-action">
 ### Warm Up
 
-In your notebook, jot down your responses to the following:
-- If someone says "this needs to be refactored", what might they see that makes them say that?
+Talk with your partner: If someone says "this needs to be refactored", what might they see that makes them say that?
+
+Then, scroll through [this `main.js` for a Number Guesser project](https://github.com/turingschool-examples/num-guess-refactor/blob/master/main.js) (do NOT clone it down right now), and take note of 2-3 opportunities for refactoring.
 </section>
 
 ## Modeling a Refactor
