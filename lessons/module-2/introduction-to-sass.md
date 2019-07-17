@@ -148,7 +148,9 @@ header nav a { color: white; }
 ```
 
 <section class="note">
-*IMPORTANT NOTE* Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific. Try to avoid excessive levels of nesting unless absolutely necessary.
+### Note
+
+Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific. Try to avoid excessive levels of nesting unless absolutely necessary.
 </section>
 
 #### Nesting & Psuedo-Selectors
