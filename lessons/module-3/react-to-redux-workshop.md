@@ -397,6 +397,117 @@ export const coWorkers = (state=[], action) => {
 }
 ```
 
+The neat thing about how we're setting this up is that in the future, when we create other methods for adding co-workers, removing co-workers, we can re-use our actions for handling loading & errors.  It's going to take practice, but finding ways to reuse actions/reducers can help for keeping a flatter store!
 
+---
+_**Your Turn**: We've created our reducers now.  What is the next part of the flow?  How can we connected these to our store?  Take a few minutes and get these pieces connected._
 
+---
+
+```js
+// reducers/index.js
+
+import { combineReducers } from 'redux';
+import { selectedReducer } from './selectedReducer';
+import { isLoading, hasErrored, coWorkers } from './coWorkersReducer';
+
+export const rootReducer = combineReducers({
+  selectedId: selectedReducer,
+  isLoading,
+  errorMsg: hasErrored,
+  coWorkers,
+});
+```
+
+#### Finishing setting up Redux-Thunk
+
+We're almost there!  We have installed `redux-thunk` and set up our thunk action creators, but we need to make sure the store is aware that we are using thunks so that we have access to `dispatch`!  Let's head back to our *index.js* file in our *src* folder.
+
+```js
+// src/index.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App/App';
+import './index.css';
+import { rootReducer } from './reducers';
+import { createStore, applyMiddleware, compose } from 'redux';
+import { Provider } from 'react-redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
+import thunk from 'redux-thunk';
+
+const store = createStore(
+  rootReducer,
+  composeWithDevTools(applyMiddleware(thunk))
+)
+
+ReactDOM.render(
+  <Provider store={store}>
+    <App />
+  </Provider>, 
+  document.getElementById('root')
+);
+```
+
+We'll need to import `thunk` from `redux-thunk` and include it in our **composeWithDevTools** method.  You can read more about this in the [docs here](https://github.com/zalmoxisus/redux-devtools-extension), but this is the recommended way of including middleware with our DevTools extension.
+
+#### Connecting the Store to our Props
+
+Lastly, we need to connect the store to our props.  You've done this already.  Go back to your *App.js* and think about how we added to our props previously.  We need to feed both an action and our state to you App.
+
+---
+_**Your Turn**: Before looking at the solution below, experiment with passing state from your store to your props.  You've already done this before!  You likely will also need to set up your container so it can accept actions as well.  Think about which action you need to dispatch._
+
+---
+
+```js
+import { fetchCoWorkers } from '../thunks/fetchCoWorkers';
+
+class App extends Component {
+  async componentDidMount() {
+    await this.props.fetchCoWorkers()
+  }
+
+  render() {
+    const { coWorkers, selectedId, errorMsg } = this.props;
+    const foundUser = coWorkers.find(coWorker => coWorker.id === selectedId);
+    return (
+      <div className="app">
+          <Form addCoWorker={this.addCoWorker} />
+        <main>
+          <Dashboard 
+            coWorkers={coWorkers} 
+            error={errorMsg} 
+            removeCoWorker={this.removeCoWorker} 
+          />
+        <Profile selected={foundUser} />
+        </main>
+      </div>
+    );
+  }
+}
+
+export const mapStateToProps = ({ selectedId, isLoading, coWorkers, errorMsg }) => ({
+  selectedId,
+  isLoading,
+  coWorkers,
+  errorMsg
+})
+
+export const mapDispatchToProps = dispatch => (
+   bindActionCreators({fetchCoWorkers}, dispatch)
+)
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
+```
+
+We will actually dispatch our **fetchCoWorkers** method. Remember, this is our thunk action creator.  This will later dispatch our actions for **isLoading**, **hasErrored**, and **getCoWorkers**.
+
+Comment out our **constructor**, **addCoWorker**, and **removeWorker** methods.  Going back to your app, it should load your co-workers.  If you change the url in your **fetchCoWorkers** method to break it, it should still display an error.  We're now fully utilizing our Redux store!  
+
+### Next Steps
+
+Now that we have implemented getting the co-workers, try and do the same for adding a co-worker and removing a co-worker.  You can still utilize those functions in the *apiCalls.js* file.  Create a couple more thunk files and adjust the functions as needed.  Then practice writing out our actions & reducers and connect what pieces you need to the App.  You got this!
+
+Keep practicing.  If you get stuck, check out the `convert-to-redux` branch to see the final version.  Cheers!
 
