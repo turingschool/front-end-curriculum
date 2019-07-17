@@ -46,7 +46,7 @@ SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced wit
 <section class="call-to-action">
 #### Practice
 
-Take a look at the SCSS in [this codepen](https://codepen.io/the_ruther4d/pen/ormbi). Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.
+Take a look at the SCSS in [this codepen](https://codepen.io/the_ruther4d/pen/ormbi){:target="_blank"}. Write down any syntactical similarities and differences you notice between SCSS and the plain CSS you're familiar with.
 </section>
 
 Even if you've never worked with SCSS before, this syntax is a little bit easier to understand since it is so much closer to the languages that we use every day. Variables look like jQuery variables, things are nested in these guys: `{}`, wrong indentation won't break your code, and assignments happen using `:` just like in normal CSS.
