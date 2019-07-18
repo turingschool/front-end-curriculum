@@ -55,9 +55,13 @@ go ahead and download it globally.
 
 `npm i -g expo-cli`
 
-Once installed, we can use the CLI to create our first application:
 
-`expo init ConceptBox`
+Once installed and logged in, let's login and use the CLI to create our first application:
+
+```
+expo login  
+expo init ConceptBox
+```
 
 After running this command you'll be prompted with some questions. Choose a
 *blank* starter project, and a *managed* workflow. You can try this again later
