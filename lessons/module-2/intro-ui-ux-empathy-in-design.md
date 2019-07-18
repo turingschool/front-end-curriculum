@@ -81,7 +81,7 @@ But as developers, when you hear "design", you should be thinking "functionality
 
 **Good design anticipates users' needs.**
 
-## Usability Considerations
+## Usability Considerations & Processes
 
 ![usability tools](https://blog.therestaurantzone.com/wp-content/uploads/2017/01/restaurant-recruiting-tools.jpg)
 
@@ -115,10 +115,6 @@ User experience designers use a number of tools to help them keep the end user i
 - Intuitive (does an app work the way a user expects based on previous experience?)
 - Consistent (layout, interactions, functionality should be consistent from one page to the next)
 - Seamless learning curve (the onboarding process should be painless and intuitive)
-
-Note: sometimes you will see the phrase "empathic design" - this means the same thing. Be empathetic. You don't have to be empathic.
-
-![like counselor troi](http://images6.fanpop.com/image/photos/39700000/Counselor-Deanna-Troi-counselor-deanna-troi-39723861-245-188.gif)
 
 
 ### Content Analysis - Context
