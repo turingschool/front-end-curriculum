@@ -91,20 +91,11 @@ But as developers, when you hear "design", you should be thinking "functionality
 
 
 
-
 ### Audience Research
 
-Empathy is crucial and vital to UXD. It's like an oxygen tank when scuba diving; you need it, but you also need additional tools to make it useful and effective.
+Empathy is crucial and vital to UXD. Empathy in User Experience Design means understanding and serving the needs, motivations, difficulties, and goals of your end user.
 
-![a cat scuba diving!](https://media.giphy.com/media/VAdLjRLRaFAmA/giphy.gif)
-
-Empathy in User Experience Design means understanding and serving the needs, motivations, difficulties, and goals of your end user.
-
-It is a first step - the second step is actually bringing in your users and getting their real, live perspectives (and not just your imagined users' perspectives). Remember, you will still drown if you have an oxygen tank but no hoses or scuba mask. We'll get to examples of software designed with empathy but without user testing, and how the results are strong but also sometimes disastrous.
-
-But let's start unpacking how we can begin to build empathy for our users, and informing our [designs with empathy in mind](https://www.uxpin.com/studio/blog/deconstructing-6-examples-of-empowering-ux-design/).
-
-**Empathetic Design**
+In order to develop this, we need to do audience research. We might want to know the following about our users and how they interact with our application:
 
 Consider your user:
 - Their familiarity with technology
@@ -130,7 +121,7 @@ Note: sometimes you will see the phrase "empathic design" - this means the same 
 ![like counselor troi](http://images6.fanpop.com/image/photos/39700000/Counselor-Deanna-Troi-counselor-deanna-troi-39723861-245-188.gif)
 
 
-### Content Analysis
+### Content Analysis - Context
 
 Your app should give the user what they need, when they need it.
 
