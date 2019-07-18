@@ -430,8 +430,7 @@ Take a peek at the [Color Wheel](https://uwdigipub.files.wordpress.com/2014/11/h
 
 ```scss
 $color1: hsla(240, 100%, 50%, 1);
-complement(hsla(240, 100%, 50%, 1));
-=> hsla(60, 100%, 50%, 1);
+// complement(hsla(240, 100%, 50%, 1)); ==> hsla(60, 100%, 50%, 1);
 
 .complement-background {
   background: complement($color1)
@@ -447,8 +446,8 @@ Mixes two given colors based on the weight percentage provided.
 ```scss
 $color1: hsla(0, 100%, 50%, 1);
 $color2: hsla(240, 100%, 50%, 1);
-mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 75%);
-mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 35%);
+// mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 75%);
+// mix(hsla(0, 100%, 50%, 1), hsla(240, 100%, 50%, 1), 35%);
 
 .redder-background {
   background: mix($color1, $color2, 75%);
@@ -465,8 +464,8 @@ Takes a color and a percentage value, returning a color with a lightness increas
 
 ```scss
 $color1: hsla(240, 100%, 50%, 1);
-lighten(hsla(240, 100%, 50%, 1), 30%);
-darken(hsla(240, 100%, 50%, 1), 30%);
+// lighten(hsla(240, 100%, 50%, 1), 30%);
+// darken(hsla(240, 100%, 50%, 1), 30%);
 
 .lighter-background {
   background: lighten($color1, 30%);
@@ -486,8 +485,8 @@ Remember that saturation is a colors representation on a gray scale.
 ```scss
 $full-color: hsla(240, 100%, 50%, 1);
 $duller-color: hsla(240, 50%, 50%, 1);
-saturate(hsla(240, 50%, 50%, 1), 10%);
-desaturate(hsla(240, 100%, 50%, 1), 80%);
+// saturate(hsla(240, 50%, 50%, 1), 10%);
+// desaturate(hsla(240, 100%, 50%, 1), 80%);
 
 .vibrant-background {
   background: saturate($duller-color, 30%);
