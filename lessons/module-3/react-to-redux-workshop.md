@@ -158,7 +158,7 @@ _**Hint**: You might want to install your redux devtools so that you have access
 // src/index.js
 
 import { rootReducer } from './reducers';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 
@@ -187,8 +187,10 @@ _**Your Turn**: Hook up your App component so it has access to `selectedId` in i
 ```jsx
 // App.js
 
+import { connect } from 'react-redux';
+
 render() {
-    const { coWorkers } = this.props;
+    const { selectedId } = this.props;
     const foundUser = coWorkers.find(coWorker => coWorker.id === selectedId);
     return (
       <div className="app">
@@ -206,8 +208,8 @@ render() {
   }
 }
 
-export const mapStateToProps = ({ selectedId }) => ({
-  selectedId,
+const mapStateToProps = ({ selectedId }) => ({
+  selectedId
 });
 
 export default connect(mapStateToProps)(App);
@@ -244,7 +246,7 @@ const CoWorkerTab = ({ id, status, name, role, location, removeCoWorker, selectU
   )
 }
 
-export const mapDispatchToProps = dispatch => (
+const mapDispatchToProps = dispatch => (
   bindActionCreators({ selectUser }, dispatch)
 )
 
@@ -344,12 +346,12 @@ export const fetchCoWorkers = () => {
       dispatch(isLoading(true));
       const response = await fetch(url);
       if (!response.ok) {
+        dispatch(isLoading(false));
         return dispatch(hasErrored('There was an error getting your co-workers.'));
       }
       const coWorkers= await response.json();
       dispatch(isLoading(false));
       dispatch(getCoWorkers(coWorkers));
-      return coWorkers 
     } catch(error) {
       dispatch(isLoading(false));
       dispatch(hasErrored(error.message));
@@ -431,7 +433,7 @@ import ReactDOM from 'react-dom';
 import App from './App/App';
 import './index.css';
 import { rootReducer } from './reducers';
-import { createStore, applyMiddleware, compose } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk from 'redux-thunk';
@@ -463,6 +465,7 @@ _**Your Turn**: Before looking at the solution below, experiment with passing st
 ```jsx
 // Components/App
 
+import { bindActionCreators } from 'redux';
 import { fetchCoWorkers } from '../thunks/fetchCoWorkers';
 
 class App extends Component {
@@ -489,14 +492,14 @@ class App extends Component {
   }
 }
 
-export const mapStateToProps = ({ selectedId, isLoading, coWorkers, errorMsg }) => ({
+const mapStateToProps = ({ selectedId, isLoading, coWorkers, errorMsg }) => ({
   selectedId,
   isLoading,
   coWorkers,
   errorMsg
 })
 
-export const mapDispatchToProps = dispatch => (
+const mapDispatchToProps = dispatch => (
    bindActionCreators({fetchCoWorkers}, dispatch)
 )
 
