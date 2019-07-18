@@ -81,53 +81,18 @@ But as developers, when you hear "design", you should be thinking "functionality
 
 **Good design anticipates users' needs.**
 
-## Principles of Usability
+## Usability Considerations
 
 ![usability tools](https://blog.therestaurantzone.com/wp-content/uploads/2017/01/restaurant-recruiting-tools.jpg)
 
-Here is your starting toolkit to create usable designs for your apps!
-- Context
-- Empathy
+- Audience Research
+- Content Analysis
 - User Testing
 
-### Context
 
-Your app should give the user what they need, when they need it.
 
-A great real world example of this principle is [TurboTax](https://www.appcues.com/blog/how-turbotax-makes-a-dreadful-user-experience-a-delightful-one/
-). (And actually the TurboTax site is a great example of UXD in general.)
 
-![turbotax has great UXD](https://blog.appcues.com/hs-fs/hubfs/Blog/turbotax-refund.gif?t=1511982576695&width=1280&name=turbotax-refund.gif)
-
-**Why TurboTax works:**
-- Doesn't swamp the user with all the info at once
-- Breaks it down into digestible, manageable bits without being condescending
-- Is reassuring and conversational
-- Is goal-oriented (basically no one uses TurboTax because they thrill at the act of filing taxes - they do it because it's mandatory, and to get a refund)
-
-It's important to anticipate what a user needs to know. It's poor UXD to withhold necessary information (instructions, etc), and it's also poor UXD to slam them with everything they might need ever, because humans are notoriously poor at sifting carefully and thoughtfully through a pile of data, especially when most of it is irrelevant to what we're trying to accomplish.
-
-**Contextual Design**
-
-When designing an app, keep in mind the user's context:
-- Metadata (time of day, location, language, etc)
-- Explicit interaction (the user actively and consciously changes the design of the app)
-    - Changes the color in the settings
-    - Sets the location or time of day
-    - etc
-- Implicit interaction (the app changes its design without the user consciously making the change)
-    - Detecting the time of day and showing the nighttime mode
-    - Remembering the user's last search and showing that info
-    - Detecting the location and updating displayed info
-    - etc
-- Give the information a user needs when they need it
-    - Microinteractions to improve the onboarding experience
-    - Real-time feedback through error-messaging
-    - etc
-
-Of course, knowing the user's context is dependent on our next UXD tool ...
-
-### Empathy
+### Audience Research
 
 Empathy is crucial and vital to UXD. It's like an oxygen tank when scuba diving; you need it, but you also need additional tools to make it useful and effective.
 
@@ -164,6 +129,43 @@ Note: sometimes you will see the phrase "empathic design" - this means the same 
 
 ![like counselor troi](http://images6.fanpop.com/image/photos/39700000/Counselor-Deanna-Troi-counselor-deanna-troi-39723861-245-188.gif)
 
+
+### Content Analysis
+
+Your app should give the user what they need, when they need it.
+
+A great real world example of this principle is [TurboTax](https://www.appcues.com/blog/how-turbotax-makes-a-dreadful-user-experience-a-delightful-one/
+). (And actually the TurboTax site is a great example of UXD in general.)
+
+![turbotax has great UXD](https://blog.appcues.com/hs-fs/hubfs/Blog/turbotax-refund.gif?t=1511982576695&width=1280&name=turbotax-refund.gif)
+
+**Why TurboTax works:**
+- Doesn't swamp the user with all the info at once
+- Breaks it down into digestible, manageable bits without being condescending
+- Is reassuring and conversational
+- Is goal-oriented (basically no one uses TurboTax because they thrill at the act of filing taxes - they do it because it's mandatory, and to get a refund)
+
+It's important to anticipate what a user needs to know. It's poor UXD to withhold necessary information (instructions, etc), and it's also poor UXD to slam them with everything they might need ever, because humans are notoriously poor at sifting carefully and thoughtfully through a pile of data, especially when most of it is irrelevant to what we're trying to accomplish.
+
+**Contextual Design**
+
+When designing an app, keep in mind the user's context:
+- Metadata (time of day, location, language, etc)
+- Explicit interaction (the user actively and consciously changes the design of the app)
+    - Changes the color in the settings
+    - Sets the location or time of day
+    - etc
+- Implicit interaction (the app changes its design without the user consciously making the change)
+    - Detecting the time of day and showing the nighttime mode
+    - Remembering the user's last search and showing that info
+    - Detecting the location and updating displayed info
+    - etc
+- Give the information a user needs when they need it
+    - Microinteractions to improve the onboarding experience
+    - Real-time feedback through error-messaging
+    - etc
+
+
 ### User Testing
 
 ![users will always find ways to misunderstand how to use your app, so do user testing!](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/07/1436502693image00.gif)
@@ -177,20 +179,3 @@ User testing helps account for any biases we might have as developers. We can't 
 [Steve Krug](https://www.sensible.com/dmmt.html)'s excellent book on usability and user testing, [Don't Make Me Think](http://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) is worth reading if you're interested in making your apps more usable. Hint: everyone should be interested in making their apps more usable.
 
 No matter how empathetic and diligent you are, you can't assume you know everything about your users, or that you've closed all the gaps in your own assumptions.
-
-
-## Summary
-
-Good design is about making an app usable. Creating a usable app requires empathy and seeking out and listening to the app's end users.
-
-**Usability tools:**
-
-- User Testing
-- Empathy
-  - Personas
-  - User stories
-- Context
-  - Explicit interactions
-  - Implicit interactions
-  - Info when the user needs it
-- When you run across bad design, take a minute to analyze _what makes it bad_ and _how you can make it better_!
