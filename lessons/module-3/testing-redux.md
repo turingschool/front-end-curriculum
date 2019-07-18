@@ -436,12 +436,11 @@ called._
 
 ## Final Thoughts
 
-Test Redux can be your favorite thing in the world if you lean into it. All of
-the pieces of the Redux flow have been design so they are easy to test. You can
+Testing Redux can be your favorite thing in the world if you lean into it. All of
+the pieces of the Redux flow have been designed so that they are easy to test. You can
 do it, give it a shot!
 
-There are some additional resources below if you'd like to dive into the topic
-further.
+Feel free to check out the `finish-testing` branch for the solutions to the actions, reducers, & containers we tested in this session. There are also some additional resources below if you'd like to dive into the topic further.
 
 ## Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
