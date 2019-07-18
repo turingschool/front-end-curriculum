@@ -3,14 +3,6 @@ title: Intro to UI/UX
 module: 2
 ---
 
-## aka Empathy &  Usability in Design
-
-[slides](https://docs.google.com/presentation/d/1V2Pn6ejC78e0u9T4e9rP8fDpZ29Vm7G-eLVAxFdMDBU/edit#slide=id.g1c033f9cd5_0_35)
-
-![what you don't want your users to experience](https://media.giphy.com/media/9QeSVgwB6i5Ik/giphy.gif)
-
-_this is what you don't necessarily want your users to feel when they use your apps - yeah, there's awe, but also confusion and horror_
-
 ## Learning goals:
 **By the end of the lesson, you will:**
 - Have an understanding of basic user experience (UX) principles
