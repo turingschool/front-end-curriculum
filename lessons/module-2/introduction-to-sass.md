@@ -176,7 +176,6 @@ Write SCSS for the following HTML using nesting & variables, following the follo
 * On hover, make the link text red, and the button text white.
 * On hover, make the button have a box shadow of some kind.
 * For practice, define all styles as variables.
-</section>
 
 ```html
   <nav class="nested-magic">
@@ -187,6 +186,7 @@ Write SCSS for the following HTML using nesting & variables, following the follo
     </ul>
   </nav>
 ```
+</section>
 
 Let's say that your client wants everything thats red to be teal.  Pretend that your CSS file is huge. Isn't it awesome that you only have to change the CSS in one tiny little place?
 
