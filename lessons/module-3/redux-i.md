@@ -37,6 +37,12 @@ So far, our React applications have been fairly small. Take a look at the follow
 
 ![symbolic diagram of a small React app](https://i.imgur.com/MzlHk5K.png)
 
+<section class="call-to-action">
+### In Your Notebook
+
+Draw out a symbolic representation of a recent React app you've built! Mark which components have state, and draw lines connecting them to represent props being passed.
+</section>
+
 Managing state in an application this size is fairly straightforward. If we think of IdeaBox, we can remember that we created a function called `deleteIdea` in the `App` component, because `App`'s state held onto our list of Ideas. We passed the `deleteIdea` function down to our `IdeasContainer` component. Now, that component didn't itself invoke that function. Instead, it passed the function to each of the `IdeaCard` components that it created.
 
 That's a bit of a mouthful, even though it's just one function.
@@ -75,7 +81,7 @@ You need some way to get the money to the teller!
 
 But even with this tube, there's more information you have to include with your money! The teller needs to know what to do with it. Are you donating it to the teller's personal vacation fund? Are you depositing it? How much of it is being deposited? Into whose account?? What if the teller adds it to your worst enemy's account?! Are you bribing the teller to withdraw a bunch of money from your boss's account? WHO KNOWS?! You gotta help the teller out by filling out a deposit slip along with your money.
 
-![Deposit slip with info about the account and amount](https://i.imgur.com/t8eBK7B.png)
+![Closeup of a deposit slip with info about the account and amount](https://i.imgur.com/t8eBK7B.png)
 
 Once you've made sure to include the necessary information, you have to put all of it into the small tube which goes into the bigger vacuum tube. If you didn't, the teller would just get a bunch of little shreds of paper. Sad.
 
@@ -95,6 +101,17 @@ Niiiiiiiice.
 
 ### Okay but what does this have to do with Redux?
 
+Let's demystify this analogy a bit.
+
+| Bank | Redux |
+| --- | --- |
+| You | Component |
+| You putting stuff in small tube | Action creator |
+| Deposit slip & money | Action object (type & payload) |
+| Small tube shooting through big tube | Dispatch |
+| Teller | Reducer |
+| Computer with all bank accounts info | Store |
+| Your bank account | A specific piece of state in the store |
 
 
 
