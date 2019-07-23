@@ -39,7 +39,7 @@ Create a diagram similar to the article to demonstrate what happens when we use 
 
 How can JavaScript keep track of what code or function is running at any given time? How can we keep track or visualize how to expect the code to behave? JavaScript handles this using a few tools: the call stack, event loop, and a queue.
 
-Let's take a look at snippets of [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) that has some great visualizations for the call stack, event loop, and queue.
+Let's take a look at snippets of [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:target="_blank"} that has some great visualizations for the call stack, event loop, and queue.
 
 * 4:15-6:00 (call stack with synchronous functions)
 * 6:40 (stack overflow example)
