@@ -59,6 +59,7 @@ algolia:
     - _sass
     - _site
     - _templates
+    - archive/**/*
     - assets/**/*
     - books/**/*
     - calendars/**/*
