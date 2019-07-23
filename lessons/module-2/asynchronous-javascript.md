@@ -49,5 +49,9 @@ Let's take a look at snippets of [this video](https://www.youtube.com/watch?v=8a
 
 After this point, the talk is good but gets into a lot of detail.
 
+<section class="checks-for-understanding">
+### Check for Understanding
+
 Let's take this event loop example with `setTimeout` and translate it to what we have seen with `fetch` and promises. Note that the event loop will wait until the call stack is empty to run the `.then` from a fetch call.
+</section>
 
