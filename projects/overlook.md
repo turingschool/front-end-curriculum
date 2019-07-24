@@ -4,7 +4,7 @@ length: 1 week
 tags: javascript, oop, testing, jquery
 ---
 
-<!-- 1 week solo project for FE Mod 2 (Week 6)
+1 week solo project for FE Mod 2 (Week 6)
 
 ## Background and Description
 
@@ -31,14 +31,16 @@ For this project, you need to use this [Webpack Starter Kit](https://github.com/
 ## Testing
 
 You should be testing your the correctness of your code throughout your project. 
-Each JavaScript file in your project should have its own test file. 
+
+Each JavaScript file in your project should have its own test file.
+
 Your testing suite should test all of the functionality of the application, including the following:
 
 * Class default properties
 * Class methods
 * Anything that updates class properties
 
-For the purposes of this project, you will keep your state logic completely separate from your view logic. In other words, your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
+For the purposes of this project, you will keep your state logic separate from your view logic. In other words, ideally your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
 
 To do this, you will utilize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
 
@@ -46,9 +48,9 @@ To do this, you will utilize a separate `domUpdates.js` file that handles any DO
 
 Your README should include the following, in this order:
 
-- Abstract at the top (A sentence or two describing the project)
+- Abstract at the top (a sentence or two describing the project)
 - Install/Setup instructions
-- Everything else (must include wireframes and screenshot/GIF of finished project)
+- Everything else (include wireframes and screenshot/GIF of finished project)
 
 ## User Stories
 
@@ -56,12 +58,12 @@ Your README should include the following, in this order:
 
 ```
 As a developer of the application,
-I must allow a visitor (hotel manager) to see all daily room service charges and booking information. This information should be available regardless of whether a valid customer has been selected.
+I must allow a visitor (hotel manager) to see all daily room service charges and bookings information. This information should be available regardless of whether a valid customer has been selected.
 ```
 
 ```
 As a developer of the application,
-I need to give the visitor the ability to search for and add new customers from the `Customers` tab. 
+I need to give the visitor the ability to search for an existing customer or add a new customer from the `Customers` tab. 
 If a valid customer result is returned while searching or a new customer is added,
 all the tabs besides the `Main` tab will be specific to that customer.
 If there are no valid results found, I will implement error handling for this case and all tabs will continue to display generalized information/content.
@@ -85,7 +87,7 @@ when I visit the main application tab,
 I will be presented with a dashboard that displays today's date. The dashboard will also have the following information:
 
 - Total Rooms Available for today's date
-- Total of debt's owed/earned for today's date
+- Total revenue for today's date
 - Percentage of rooms occupied for today's date
 ```
 
@@ -112,8 +114,7 @@ clicking on the `Customer` icon will take me to the `Customer` tab.
 The UI will prompt to either search for a current customer or create a new customer.
 If I create a new customer, 
 I will have to submit the customer's name and this customer will automatically be selected.
-I will know that a customer has been selected,
-because the customer name will be displayed at the top of the page.
+I will know that a customer has been selected because the customer name will be displayed at the top of the page.
 ```
 
 ```
@@ -148,7 +149,7 @@ The `Orders` tab will display customer specific information:
 
 - Breakdown of dates and dollar amounts for room service
 - Total dollar amount spent on room service for a particular day
-- Total dollar amount spent on room service for a all days ever
+- Total dollar amount spent on room service for all days ever
 
 
 If there is no valid information for this customer,
@@ -217,10 +218,10 @@ If purchases are made for room service, these changes will be reflected on the `
 
 ## Data Endpoints
 
-* [Users](https://fe-apps.herokuapp.com/api/v1/overlook/1903/users/users)
-* [Rooms](https://fe-apps.herokuapp.com/api/v1/overlook/1903/rooms/rooms)
-* [Bookings](https://fe-apps.herokuapp.com/api/v1/overlook/1903/bookings/bookings)
-* [Room Services](https://fe-apps.herokuapp.com/api/v1/overlook/1903/room-services/roomServices)
+* [Users](https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users)
+* [Rooms](https://fe-apps.herokuapp.com/api/v1/overlook/1904/rooms/rooms)
+* [Bookings](https://fe-apps.herokuapp.com/api/v1/overlook/1904/bookings/bookings)
+* [Room Services](https://fe-apps.herokuapp.com/api/v1/overlook/1904/room-services/roomServices)
 
 # Rubric
 
@@ -258,4 +259,3 @@ If purchases are made for room service, these changes will be reflected on the `
 * [ ] Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
 * [ ] Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
 * [ ] Exceptional - Project has a running test suite that exercises the application used Enzyme. The test suite covers almost all aspects of the application.
- -->
