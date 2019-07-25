@@ -167,7 +167,7 @@ This type of layout is known as a *Masonry layout*.  This layout refers to when 
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1IjeLYwVGMm0z6tfRsvoaBIXLATcTtvnmwtzg0d66FWk/edit#gid=557400577)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1CS4BipxFi1VPh5NJFsn0yoeDTQQL_yjwcIM0fccVOGc/edit#gid=557400577)
 
 ### Layout Comps
 
