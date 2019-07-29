@@ -23,6 +23,8 @@ Get set up by cloning down [this repo](https://github.com/turingschool-examples/
 1. Write **squeaky clean**, well refactored code using ES6 syntax.  
 2. Learn to pass information between components using props.
 3. Learn to write readable JSX (your render methods/return statements should be clean and simple).
+4. Use `propTypes` for every component receiving props.  
+5. Learn how to unit test React components including snapshot testing, methods, and changes in state.
 
 ## Specifications
 
@@ -38,19 +40,25 @@ Notice that we have multiple stylesheets - one for each component. You are welco
 
 Create a Cohort component, which will act as a container that renders each of our Person cards. For now, the Cohort being displayed will be "Staff". Figure out how to pass information from `App.js` to `Cohort.js`!
 
-### Iteration 2
-
-Create a Person component. Each Person card will display: the image, the name, the quote, and the superlative (see the screenshot above for an idea).
+Then create a Person component. Each Person card will display: the image, the name, the quote, and the superlative (see the screenshot above for an idea).
 
 In your Cohort component, create Person cards that have the information each needs to display properly.
 
-### Iteration 3 (extension - do not attempt until iterations 0 - 2 are completed)
+### Iteration 2
 
 In the `yearbook-data.js` file, un-comment-out the "students" information. Get that information displaying, too. How can you reuse components?
 
+Then create a controlled component that allows a user to add a new student.
+
+### Iteration 3 (extension - do not attempt until iterations 0 - 2 are completed)
+
+Add in the functionality so that a user can click and edit a student's information.  A user should be able to update the name, quote, and superlative.  
+
+Lastly, add a delete button on each card that allowers a user to remove students that are no longer attending.
+
 ### Iteration 4 (extension - do not attempt until iterations 0 - 3 are completed)
 
-Create a controlled component that allows people to add a new student.
+Test all of your components.  This not only includes snapshot tests, but also all of your methods and changes in state.
 
 ## Evaluation
 
