@@ -12,6 +12,21 @@
   }
 }
 
+.content a:link, .content a:visited {
+  border-bottom: 5px solid scale-color($turing-primary, $alpha: -75%);
+  text-shadow: 1px 0px 1px #0000000d;
+  text-decoration: none;
+  transition: all 0.3s;
+  color: lighten($turing-secondary, 25%);
+  line-height: 1em;
+  display: inline-block;
+}
+
+.content a:visited {
+  color: $turing-secondary;
+  text-shadow: 0;
+}
+
 .small {
   width: 40%;
   margin: 15px 10px;
