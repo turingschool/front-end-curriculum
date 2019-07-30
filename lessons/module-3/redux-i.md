@@ -158,7 +158,11 @@ There is some ES6 shorthand going on here. You'll notice that the curly braces a
 Additionally, the `accountNumber` and `amount` values are using the ES6 object shorthand. It's the same as if we wrote `accountNumber: accountNumber` - the key and the value are named the same thing, so we are able to simply write it once, and ES6 knows that we intend to create a key called `accountNumber`, with the value being whatever is being passed in as that argument.
 </section>
 
-You'll notice that our action creator is named `depositMoney`. 
+You'll notice that our action creator is named `depositMoney` - our action creators are always named to describe what we're doing to state. In this case, we're depositing some money into our account!
+
+You'll also notice that the type value is "DEPOSIT_MONEY". It's convention to make the value of this type a string that is upcased and separated with underscores. There isn't a formal name for this (other examples are "camel case" or "snake case") - personally, I like to refer to it as "loud snake case".
+
+This `type` key-value pair is crucial
 
 
 
