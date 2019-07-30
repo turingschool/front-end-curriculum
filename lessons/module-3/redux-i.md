@@ -113,6 +113,53 @@ Let's demystify this analogy a bit.
 | Computer with all bank accounts info | Store |
 | Your bank account | A specific piece of state in the store |
 
+As we dig into the actual functions and objects that make up the Redux store and the methods which access and update it, we'll keep coming back to this analogy. Hopefully, it will help you keep track of what's going on!
+
+## The Redux Loop
+
+Let's jump in!
+
+### Action Creators and Actions
+
+It's often easiest to start understanding the Redux loop by beginning with actions and their creators. From our analogy, this is the part where you put your money and deposit slip in the tube, preparing to send it to the teller.
+
+![Action creator](https://i.imgur.com/KW1rIhI.png)
+
+The Redux store, similar to component state, is simply an object. In order to update that object, we need to provide some information.
+
+We know that, in order to deposit money into our account, the bank teller needs some information:
+ - That we are making a deposit (rather than a withdrawal, etc)
+ - Our account number, and
+ - The amount we're depositing
+
+Our Redux store, similarly, needs information:
+ - What change we want to make
+ - The information needed in order to make that change
+
+We send that information to our bank teller (in Redux, that's the reducer!) by creating an object. Neat!
+
+The object itself is the "action", and the function used to create the action is the "action creator".
+
+```js
+// action creator
+
+const depositMoney = (accountNumber, amount) => ({
+  type: 'DEPOSIT_MONEY',
+  accountNumber,
+  amount
+})
+```
+
+<section class="note">
+### Note
+
+There is some ES6 shorthand going on here. You'll notice that the curly braces are after the arrow are wrapped in parentheses. This is because we are implicitly returning an object, rather than opening up a function block.
+
+Additionally, the `accountNumber` and `amount` values are using the ES6 object shorthand. It's the same as if we wrote `accountNumber: accountNumber` - the key and the value are named the same thing, so we are able to simply write it once, and ES6 knows that we intend to create a key called `accountNumber`, with the value being whatever is being passed in as that argument.
+</section>
+
+You'll notice that our action creator is named `depositMoney`. 
+
 
 
 <!-- CALL TO ACTION -->
