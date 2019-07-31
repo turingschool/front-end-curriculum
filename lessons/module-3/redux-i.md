@@ -260,7 +260,7 @@ In order to allow our React components to interact with the Redux store:
 
 ### Connecting a component to the store
 
-So now that we've done allllllll this setup... *WE SO CHOOSE*!!! We can _finally_ connect our components to the store.
+So now that we've done allllllll this setup... **WE SO CHOOSE**!!! We can _finally_ connect our components to the store.
 
 > ![connect](https://i.imgur.com/j5ZY7p2.png)
 
@@ -296,9 +296,9 @@ Okay, so this analogy went a little off the rails.
 
 In a nutshell:
 
-`mapStateToProps` allows the component to *READ* the information in the store. The function takes in an argument of the entire global state tree, and returns an object which cherry picks just the parts of state it wants to show to the component.
+`mapStateToProps` allows the component to **READ** the information in the store. The function takes in an argument of the entire global state tree, and returns an object which cherry picks just the parts of state it wants to show to the component.
 
-`mapDispatchToProps` allows the component to *UPDATE* the information in the store. The function takes in an argument of `dispatch`, and returns an object that sets up functions which send action objects to the reducers.
+`mapDispatchToProps` allows the component to **UPDATE** the information in the store. The function takes in an argument of `dispatch`, and returns an object that sets up functions which send action objects to the reducers.
 
 Where do these functions get the global state tree and `dispatch` from? How do those resulting objects get merged into the component's props object?
 
