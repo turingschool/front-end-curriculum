@@ -12,15 +12,15 @@
   }
 }
 
-// .content a:link, .content a:visited {
-//   color: blue;
-//   text-decoration: none;
-//   font-weight: 900;
+.content a:link, .content a:visited {
+  color: blue;
+  text-decoration: none;
+  font-weight: 900;
 
-//   &:hover {
-//     color: black;
-//   }
-// }
+  &:hover {
+    color: black;
+  }
+}
 
 .small {
   width: 40%;
