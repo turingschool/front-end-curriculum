@@ -123,7 +123,7 @@ Let's jump in!
 
 It's often easiest to start understanding the Redux loop by beginning with actions and their creators. From our analogy, this is the part where you put your money and deposit slip in the tube, preparing to send it to the teller.
 
-![Action creator](https://i.imgur.com/KW1rIhI.png)
+> ![Action creator](https://i.imgur.com/KW1rIhI.png)
 
 The Redux store, similar to component state, is simply an object. In order to update that object, we need to provide some information.
 
@@ -138,7 +138,7 @@ Our Redux store, similarly, needs information:
 
 We send that information to our bank teller (in Redux, that's the reducer!) by creating an object. Neat!
 
-![Action object](https://i.imgur.com/EWyHSnc.png)
+> ![Action object](https://i.imgur.com/EWyHSnc.png)
 
 The object itself is the "action", and the function used to create the action is the "action creator".
 
@@ -176,7 +176,7 @@ But in order to send that action to the teller/Reducer, we have to `dispatch` it
 
 This piece can be harder to understand, since - unlike action creators and actions - we don't write it! It's a baked-in function from Redux.
 
-![redux dispatch](https://i.imgur.com/NhNCJ3O.png)
+> ![redux dispatch](https://i.imgur.com/NhNCJ3O.png)
 
 We'll see later how we use `dispatch` to connect a React component to the Redux store. For now, just know:
 
@@ -190,7 +190,7 @@ Okay. Once `dispatch` takes the action object to the reducer ... what happens ne
 
 Reducers are where the magic happens. These are functions that return pieces of state to us! Put a bunch of reducers together, and they output the Redux store!
 
-![Reducers](https://i.imgur.com/A1QZsvU.png)
+> ![Reducers](https://i.imgur.com/A1QZsvU.png)
 
 Let's take a step back before we get into the details of what our reducer functions do.
 
@@ -239,7 +239,7 @@ Neat!
 
 As we said earlier, every reducer controls one piece of the store. We package them up together into a single object (known by convention as the `rootReducer`) by using a Redux function called `combineReducers`.
 
-![Root reducer](https://i.imgur.com/29Xkpct.png)
+> ![Root reducer](https://i.imgur.com/29Xkpct.png)
 
 We then use the `rootReducer` to create the Redux store!
 
@@ -247,7 +247,7 @@ We then use the `rootReducer` to create the Redux store!
 
 Stick with me.
 
-![The Redux Store](https://i.imgur.com/qZEBe43.png)
+> ![The Redux Store](https://i.imgur.com/qZEBe43.png)
 
 In order to allow our React components to interact with the Redux store:
 1. We use a function called `createStore` from Redux to _create the store_
@@ -262,7 +262,7 @@ In order to allow our React components to interact with the Redux store:
 
 So now that we've done allllllll this setup... *WE SO CHOOSE*!!! We can _finally_ connect our components to the store.
 
-![connect](https://i.imgur.com/j5ZY7p2.png)
+> ![connect](https://i.imgur.com/j5ZY7p2.png)
 
 We do this by writing two functions and passing them in as arguments to a third function provided by `react-redux`.
 
