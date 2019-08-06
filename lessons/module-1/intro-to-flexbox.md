@@ -167,6 +167,23 @@ Dog Party Starter Kits:
 - [Top Section](https://codepen.io/ameseee/pen/zVWEEa)
 - [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ)
 
+## Extensions
+
+If you've made it this far, you've flexed your Flexbox muscles. Now let's put it into practice by recreating some common design layouts. Your job is to recreate the following layouts from scratch! Your job is as follows:
+
+* Create a new repo on GitHub titled 'Flexbox Layout Challenges'
+* Create two separate HTML files (`collection.html` and `pricing.html`)
+* Create two separate CSS files (`collection-styles.css` and `pricing-styles.css`)
+* Recreate each comp utilizing Flexbox - feel free to take some creative liberties on styling/colors/etc.
+* Once you have finished, drop your link to repo [here](https://docs.google.com/spreadsheets/d/1KvOeGVWbHKGbgRtpU4It33pSMEwToBbc3q4NIsI5lQg/edit?usp=sharing)
+
+Collection Comp
+<img class="medium-large" src="./assets/images/flexbox/collection-flex.png" alt="graphic of collection layout">
+
+Pricing Table Comp
+<img class="medium-large" src="./assets/images/flexbox/pricing-flex.png" alt="graphic of pricing layout">
+
+
 ## Further Exploration
 
 While you may not use the following properties as frequently, it's working reading through some documentation on them should you have a use-case in the future:
