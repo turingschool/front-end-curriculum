@@ -150,18 +150,39 @@ If we add the declaration `flex-direction: column`, we will see the items center
 
 ## Practice
 
-You and your partner will be assigned a portion of the Dog Party comp to recreate - but with Flexbox this time! You'll be given a starter kit with the HTML you should use and _some_ CSS. Follow the protocol below:
+Now that we have explored some of the key properties of Flexbox, let's put our skills to the test with a fun, interactive game known as Flexbox Froggy. Take some time to work through each challenge before moving on to the challenge activity!
 
-* Decide who will drive and who will navigate.
-* The driver should fork the CodePen to their account.
-* Navigator - use notes from this lesson and navigate your driver towards implementing Flexbox!
-* Once you've achieved the comp, the driver should explain what each new line of CSS is doing.
-* If time, switch driver/navigator and select a different part of Dog Party to style with Flexbox, and repeat.
+Click [here](https://flexboxfroggy.com/) to start flexin' your Flexbox skills!
+
+## Challenge
+
+Now that you have some practice with implementing Flexbox, it's time to refactor your favorite project... Dog Party! You will be given several portions of the Dog Party comp to recreate using Flexbox. Each starter kit will include the HTML structure and _some_ CSS. Your job is as follows:
+
+* Fork the CodePen to your account.
+* Using Flexbox, work on replicating the comp for each section - [click here](https://frontend.turing.io/projects/dog-party-2.0.html) to see the Dog Party comp
+* Once you have achieved the comp, drop your CodePen link in the following [submission form](https://docs.google.com/forms/d/1pSa6AT8MgzdvZE1CciJ11g8L2Zr2cR96KIrRImzm0tY/edit)
 
 Dog Party Starter Kits:
 - [Nav](https://codepen.io/ameseee/pen/MMVEym)
 - [Top Section](https://codepen.io/ameseee/pen/zVWEEa)
 - [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ)
+
+## Extensions
+
+If you've made it this far, you've flexed your Flexbox muscles. Now let's put it into practice by recreating some common design layouts. Your job is to recreate the following layouts from scratch! Your job is as follows:
+
+* Create a new repo on GitHub titled 'Flexbox Layout Challenges'
+* Create two separate HTML files (`collection.html` and `pricing.html`)
+* Create two separate CSS files (`collection-styles.css` and `pricing-styles.css`)
+* Recreate each comp utilizing Flexbox - feel free to take some creative liberties on styling/colors/etc.
+* Once you have finished, drop your link to repo [here](https://docs.google.com/spreadsheets/d/1KvOeGVWbHKGbgRtpU4It33pSMEwToBbc3q4NIsI5lQg/edit?usp=sharing)
+
+Collection Comp
+<img class="medium-large" src="./assets/images/flexbox/collection-flex.png" alt="graphic of collection layout">
+
+Pricing Table Comp
+<img class="medium-large" src="./assets/images/flexbox/pricing-flex.png" alt="graphic of pricing layout">
+
 
 ## Further Exploration
 
