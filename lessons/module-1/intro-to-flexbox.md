@@ -148,6 +148,12 @@ Since `display: flex;` was applied and no further declarations were made for the
 
 If we add the declaration `flex-direction: column`, we will see the items center themselves along the vertical axis, or _cross-axis_.
 
+## Practice Part 1
+
+Now that we have explored some of the key properties of Flexbox, let's put our skills to the test with a fun, interactive game known as Flexbox Froggy. Take some time to work through each challenge before moving on to the challenge activity!
+
+Click [here](https://flexboxfroggy.com/) to start flexin' your Flexbox skills!
+
 ## Practice
 
 You and your partner will be assigned a portion of the Dog Party comp to recreate - but with Flexbox this time! You'll be given a starter kit with the HTML you should use and _some_ CSS. Follow the protocol below:
