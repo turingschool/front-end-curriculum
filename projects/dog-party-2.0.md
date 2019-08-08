@@ -34,8 +34,6 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 - Style your site using CSS -- aim to get it as visually close to the comp as possible. Work to craft your CSS according to the [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
 - Create a `README.md` file that gives a brief overview of your project (don't forget to make sure to include the comps as well as the screen grabs of your finished site!). [This](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is great resource for markdown!
 
----
-
 ## Iteration 1: Add some functionality
 
 - Once you have the HTML structure built and successfully being styled to work for both layouts using your two CSS files, experiment with adding in interaction using Javascript: Build functionality to allow a user to type a dog name in the input field and then, when the user clicks the button, have that dog name replace the text `Some Dogs` in the main `A Site About Some Dogs` header and clear out the input field. For example: if I typed `Fido` into the input, when I click the button the main header of the page should change to read `A Site About Fido`.
@@ -45,13 +43,14 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 - Make your Dog Party site mobile. We haven't given you layouts for mobile, so think about how you'll approach making each layout work best for small screens. Do side-by-side columns on large screens stack when viewed on a phone? What about larger sections of content? Experiment using your DevTools and `media queries`! Note - we realize we have not explicitly covered any of this in class; this is a great chance to push yourself and do some independent learning!
 
-
 ## Iteration 3: Extensions
 
 - Add functionality to each of the buttons in each column.  When the user clicks on the button, it should hide the content in that specific column (still having the picture and button be displayed).  When the user clicks the button again, the text should display once more.  
   * Bonus: add a nice animation to this to give a better transition
 - Add a tooltip to each of the elements in the navigation bar.  When a user hovers over one of them, a tool tip should appear giving more information as to what that page is about.
 - Add another `input` and `textarea` to the form that can update the text in each column.  The input should either be a dropdown or radio/checkboxes to specify which column's text is being updated.
+
+---
 
 ## Design Comp 1
 
@@ -78,6 +77,8 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 * Font: Roboto Slab
 
 # ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
+
+---
 
 ## Submission Details
 
