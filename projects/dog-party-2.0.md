@@ -56,12 +56,12 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 #### Hex Codes:
 
-* Light blue: #75e2e6
-* Dark blue: #048eaa
-* Background color: #ffffff
-* White text: #ffffff
-* Body text: #000000
-* Font: Open Sans
+* Light blue: `#75e2e6`
+* Dark blue: `#048eaa`
+* Background color: `#ffffff`
+* White text: `#ffffff`
+* Body text: `#000000`
+* Font: `Open Sans`
 
 # ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
 
@@ -69,12 +69,12 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 #### Hex Codes:
 
-* Light purple: #9A969C
-* Dark purple: #3E3544
-* Background color: #ffffff
-* White text: #ffffff
-* Body text: #000000
-* Font: Roboto Slab
+* Light purple: `#9A969C`
+* Dark purple: `#3E3544`
+* Background color: `#ffffff`
+* White text: `#ffffff`
+* Body text: `#000000`
+* Font: `Roboto Slab`
 
 # ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
 
