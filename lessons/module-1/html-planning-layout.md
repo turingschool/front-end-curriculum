@@ -8,6 +8,11 @@ tags: html, layout, semantic
 
 * Explain the difference between block and inline elements
 
+## Vocabulary
+
+- `Block` A block-level element occupies the entire width of its parent element (container), thereby creating a "block."
+- `Inline` An inline-level element only occupies the space bounded by the tags defining the element, instead of breaking the flow of the content.
+
 ## Block and Inline Elements
 
 You might notice that some tags behave a little differently in a layout than others. Some tags make content stack, while others let content sit next to each other. What's that about?
