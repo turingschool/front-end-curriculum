@@ -122,10 +122,11 @@ describe('Question Class', () => {
 });
 ```
 
-
+<section class="call-to-action">
 ### Practice
 
-Take a look at the following code. What would you want to test about this function?
+In your journal:
+* Take a look at the following code. What would you want to test about this function?
 
 ```js
 function reverseWord(word) {
@@ -136,7 +137,7 @@ function reverseWord(word) {
 
 reverseWord('turing'); // gnirut
 ```
-
+</section>
 
 <!--
 
