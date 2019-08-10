@@ -176,11 +176,14 @@ Consider:
 - What does this tag do for us?
 - How many of these tags might we see on a given site?
 
-(make an example anchor chart for <main></main>)
-
+Assignments:
 - Group 1: nav, header, footer
 - Group 2: section, article, aside
 - Group 3: mark, em, strong, time, address
+
+Here's an example of an anchor chart, for the `<main>` tag:
+
+<img class="small" src="./assets/images/html/main-anchor-chart.jpg">
 
 ## Refactoring Some HTML
 
