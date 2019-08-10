@@ -106,9 +106,9 @@ class Question {
   }
 }
 ```
-
+<section class="call-to-action">
 What would we want to verify about the `checkAnswer` method? What should this method do?
-
+</section>
 
 ```js
 describe('Question Class', () => {
@@ -445,9 +445,10 @@ Iteration 3:
 ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
 ```
 
-
+<section class="checks-for-understanding">
 ### Checks for Understanding
 
 * What is the difference between Mocha and Chai?
 * What are the phases of a test?
 * What is the `describe()` block used for, and what is the `it()` block used for?
+</section>
