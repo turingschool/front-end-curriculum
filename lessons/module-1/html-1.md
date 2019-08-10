@@ -22,11 +22,7 @@ Students should spend 15-20 minutes reading, watching, and completing the conten
 - `HTML Tag` Used to create HTML elements. Some elements have an opening and closing tag, others only have an opening tag
 - `Attribute` Additional values that configure HTML elements and adjust their behavior
 - `Hyperlink` A reference to an external resource
-- `Block` A block-level element occupies the entire width of its parent element (container), thereby creating a "block."
-- `Inline` An inline-level element only occupies the space bounded by the tags defining the element, instead of breaking the flow of the content.
 - `Nesting` when an element lives inside of another element
-
-***
 
 ## Overview
 
@@ -37,8 +33,6 @@ The front-end of the web is based on three major technologies:
 * __JavaScript aka "BEHAVIOR"__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
 
 Today, we will build a foundation of HTML knowledge and skills.
-
-***
 
 ## What is HTML?
 
@@ -201,7 +195,6 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 - Then, look for at least 3 opportunities to improve readability and accessibility by changing tags to be more semantic. Once you and you partner agree, make those changes.
 </section>
 
-
 ## Thinking Bigger Picture
 
 We've learned how to use some pieces of HTML, but it's important we can put them together to build a site.
@@ -223,8 +216,7 @@ Every page that is built with HTML needs to have the following four elements to 
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
-
-# Additional Resources
+## Additional Resources
 
 * [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
 * [W3C Markup validation](https://validator.w3.org/#validate_by_uri)
