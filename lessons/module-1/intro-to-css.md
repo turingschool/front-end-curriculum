@@ -4,12 +4,17 @@ length: 90
 tags: css, box model, syntax
 ---
 
-But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.com/)
-
 ## Learning Goals
 
 * Implement clean and consistent CSS syntax
 * Demonstrate understanding of the box model by recreating small comps
+
+## Pre-Work
+
+Whip up a little "document" with some info, some links for research
+- be familiar with a certain list of CSS properties
+- be familiar with targeting by element, class, and ID
+- have some CFUs at the end
 
 ## Vocabulary
 
@@ -86,17 +91,15 @@ This diagram can be found in the CSS Dev Tools and the same color coding is used
 * [MDN CSS Box Model](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Box_Model/Introduction_to_the_CSS_box_model)
 * [MDN CSS Overview](https://developer.mozilla.org/en-US/docs/Web/CSS)
 
-## CSS Practice Time!
+## The Box Model Applied
 
-Let's setup a small static page to experiment with our HTML and CSS.
-
-First, let's flex those command-line muscles you've been building:
+First, let's flex those command line muscles you've been building:
 
 * Create a directory called static-site-playground
 * Create a file `index.html` with the html provided below
 * Create a file `main.css`
 * Link the index and main files you just made
-* Test things are working as expected by adding in the following HTML:
+* Test things are working as expected by adding in the following HTML, then opening in the browser by running `open index.html` in your terminal:
 
 ```html
 <!doctype html>
@@ -105,24 +108,51 @@ First, let's flex those command-line muscles you've been building:
     <title>CSS Playground</title>
   </head>
   <body>
-    <article class="article-1">article 1</article>
-    <article class="article-2">article 2</article>
+    <h1>Button Practice</h1>
+    <article>
+      <button class="track-package">Track package</button>
+    </article>
   </body>
 </html>
 ```
 
 Next, we'll use this HTML to do some experimenting with Box Model behavior.
 
-### Let's draw some boxes and play with some basic CSS properties
+<section class="call-to-action">
+### Explore Box Model
 
-Use `.article-1` and `.article-2` as the selectors you're targeting in your `main.css` file.
+On your own, take a few minutes to practice writing the syntax of CSS rules and seeing how margin and padding effect an element.
+- A common mantra when working on CSS is "when in doubt, border it out". Apply a border of an obvious color to both the article and button so you are 100% clear on where things are.
+- Add margin and padding to your button
+- Add margin and padding to the article
 
-Try adding some properties that impact the Box Model and some properties that impact the aesthetics of your page:
+With your partner, choose a website you frequently visit. Find a button or box that demonstrates the use of padding. Find a place where margin was probably used to provide breathing room. Be ready to show and share!
+</section>
 
-* Box Model things: `width`, `height`, `border`, `padding`, `margin`
-* Aesthetic things: `color`, `font`, `background`
+## Using our Tools even better
 
-What do you notice when you add or adjust the Box Model properties? What happens to the size of the element?
+We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with. Let's use our tools to build something professional-grade.
+
+The screen shots below are taken from the "Your Orders" page.
+
+<img class="medium" src="./assets/images/css/amazon-order.png">
+<img class="medium" src="./assets/images/css/amazon-buttons.png">
+
+<section class="call-to-action">
+### Recreating Amazon Buttons
+
+With your partner, decide who will drive and who will navigate. The navigator should close their computer.
+
+First, work to recreate the "Track package" button. Since the focus is box model, do not worry about the slight linear gradient in the background color; just use `#f0c14b` and `#846a29` for the border. Things to keep in mind:
+  - Approximately what percentage of the button do the words take up on Amazon's button? How closely does yours match that?
+  - About how much space is between the top of the letter and the top border?
+  - How thick is the border?
+  - What do the corners of the button look like?
+
+Now, work to recreate the 5 grey buttons. You already have a lot to work with from the code you wrote for the first one. Use `#e7e9ec` for the background and `#A2A6AC` for the border. Things to keep in mind:
+  - How much space is between each grey button?
+  - How much space is between the yellow and first grey button?
+</section>
 
 ## Box-Sizing and the CSS Box Model
 
@@ -142,11 +172,15 @@ This is the default behavior for the rendering of block elements in CSS and is d
 
 Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. It's `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
 
-### CSS Practice Time, the remix!
+<section class="call-to-action">
+### Revisiting Amazon Buttons
 
-Revisit the static page you just made and add the CSS rule shown above that applies the `box-sizing` property to your CSS. How does it change what's rendered in the browser? How is the size of the elements impacted?
+Revisit your Amazon buttons and add the CSS rule shown above that applies the `box-sizing` property to your CSS. How does it change what's rendered in the browser? How is the size of the elements impacted?
+</section>
 
 ## Inline vs. Block
+
+AMY - update this! Reference HTML lesson from yesterday, keep it at a very high level!
 
 The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according to their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
 

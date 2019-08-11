@@ -4,6 +4,8 @@ length: 90
 tags: css, combinators, layout, display, specificity
 ---
 
+But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.com/)
+
 ## CSS Combinators and Complex Selectors
 
 Another way to target specific relationships among elements is to use CSS combinators. We will review a few of the common selectors, but be sure to reference [the documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators) and [this guide](https://learn.shayhowe.com/advanced-html-css/complex-selectors/) for more explanation on some of these complex selectors.
