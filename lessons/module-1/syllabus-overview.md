@@ -2,18 +2,12 @@
 title: Syllabus Overview & Expectations
 ---
 
-## Jun 24, 2019 - Aug 2, 2019
-
-| Instructors     | Slack            | Email            |
-| ----------------|------------------| -----------------|
-| Amy Holt        | @ameseee         | amy@turing.io    |
-| Khalid Williams | @Khalid Williams | khalid@turing.io |
-| Eric Weissman   | @Eric Weissman   | eric@turing.io   |
-
 ## Module Overview
+
 Welcome! We are excited to share the first six weeks of the program with you. As the first of four modules in the Front End program this six weeks is about developing a solid foundation in the fundamentals of HTML, CSS, and Javascript. Additionally, we’ll introduce you to test driven development, version control, refactoring, and object oriented programming. Module one also includes an introduction to Turing citizenship via special curriculum in community Fridays for M1 students and professional development courses to cultivate your unique developer identity in anticipation of entering the job market as a front end engineer.
 
 ## Inclusivity Statement
+
 We understand our community members represent a rich variety of backgrounds and perspectives. Turing is committed to providing an atmosphere for learning that respects diversity. While working together to build this community we ask all members to:
 
 * share their unique experiences, values and beliefs
@@ -26,6 +20,7 @@ community
 * inclusive environment at Turing and across the tech community at large
 
 ## Module Aims
+
 By the end of module one, students will:
 
 #### General
@@ -52,19 +47,18 @@ By the end of module one, students will:
 * Understand and implement responsive layouts.
 * Practically apply css animations in user interactions design.
 * Understand basic performance issues introduced by CSS and be mindful of those considerations when crafting their CSS.
-* Use devtools effectively to debug & read error messages.
+* Use Dev Tools effectively to debug & read error messages.
 
 #### Javascript
 
 * Exhibit a solid grasp of syntax, such that syntax does not inhibit student’s progress (the occasional quick reference is fine).
-* Use devtools to debug & read error messages, specifically: making use of console to test data and code, isolating and manipulating the HTML and CSS of elements in the DOM.
+* Use Dev Tools to debug & read error messages, specifically: making use of console to test data and code, isolating and manipulating the HTML and CSS of elements in the DOM.
 * Understand scope, and a beginner's understanding of `this` binding.
 * Strong foundation in accessing data through arrays and objects (In/Out, transform).
 * Communicate coding solutions/questions w/ correct terminology.
 * Fundamental Code Concepts: variable assignment, functions, arguments/parameters, objects, arrays, data-types, local storage, conditionals/operators, DOM.
 * Array prototypes: students know the different methods and use them appropriately in a variety of circumstances.
 * Understand how browsers interpret/read code.
-* Understand the reason for jQuery and how to leverage it.
 * Understand how event bubbling and delegation work, and exhibit that understanding in manipulation of the DOM.
 
 #### Testing
@@ -86,7 +80,6 @@ By the end of module one, students will:
 | Attendance & Tardiness| Class begins promptly at 9:00 AM for the morning session, and 1:00 PM for the afternoon session. You are expected to be on time and in attendance every day.<br> We understand issues arise, and ask that you communicate with instructors when you are going to be late or absent. |
 | Evals | Per project assessments that should be included in your portfolio.|
 |Mid Mock Assessment| This assessment is not included in your portfolio, but is prep for the final assessment week.|
-|Quizlettes| Weekly reviews of concepts from lecture|
 |Final Assessment| Week six of the program, there are two summative assessments to determine your eligibility to advance to module two. This will include a final exam and project.
 |Portfolio Defense| A portfolio summarizes your individual, team, and community accomplishments.<br>Detailed information can be found on the Turing School [Portfolios Repo](https://github.com/turingschool/portfolios).|
 |Community Fridays| As a valuable member of the community, we expect your participation and engagement in Friday events.|
