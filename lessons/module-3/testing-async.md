@@ -64,10 +64,10 @@ Here's the overall steps we'll be taking:
 
 1. Move `fetch`es into their own file
   - Discuss why
-2. Test each `fetch` in isolation
-  - Learn how to figure out what needs to be tested
-3. Import `fetch`es into the React component they originally belonged in
+2. Import `fetch`es into the React component they originally belonged in
   - Make sure component tests still pass
+3. Test each `fetch` in isolation
+  - Learn how to figure out what needs to be tested
 4. Test the asynchronous functions of the component
   - Learn to mock a file
   - Learn what to mock and what to test
@@ -167,6 +167,12 @@ In our front-end repo, let's create a file to hold all our API queries, and a fi
 touch src/apiCalls.js src/apiCalls.test.js
 ```
 
+<section class="note">
+### Note
+
+Notice that we did not capitalize this filename. That's because this is not a component! Only components are capitalized. This is just a regular old JavaScript file, with some regular old JavaScript functions in it.
+</section>
+
 Let's look at the API calls we're making in `App,js`.
 
 We're making one to get all of our ideas in the `componentDidMount`. We're making one that posts a new idea. We're making one that gets a single idea based on its id. We're making one that deletes an idea by its id.
@@ -204,30 +210,20 @@ What do we need to return out of these functions?
 How much of the `addIdea` and `deleteIdea` methods will we be pulling into these functions instead?
 </section>
 
-Okay. Let's take a look at `addIdea` in our `App.js` file:
+Okay. Let's take a look at `componentDidMount` in our `App.js` file:
 
 ```js
 // App.js
 
-addIdea = (newIdea) => {
-  const options = {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({ ...newIdea })
-  };
-
-  fetch('http://localhost:3001/api/v1/ideas', options)
+componentDidMount() {
+  fetch('http://localhost:3001/api/v1/ideas')
     .then(response => response.json())
-    .then(response => fetch(`http://localhost:3001/api/v1/ideas/${response.id}`))
-    .then(response => response.json())
-    .then(newIdea => this.setState({ ideas: [...this.state.ideas, newIdea] }))
-    .catch(error => this.setState({ error: error.message }))
+    .then(ideas => this.setState({ ideas }))
+    .catch(error => this.setState({ error: error.message }));
 }
 ```
 
-After we post the first `fetch`, we get back a Promise that resolves into the response.
+After we make the first `fetch` call, we get back a Promise that resolves into the response.
 
 <section class="note">
 ### Note
@@ -235,9 +231,56 @@ After we post the first `fetch`, we get back a Promise that resolves into the re
 Any time you can chain on a `.then()`, the previous line is returning a Promise!
 </section>
 
-Once the Promise that the `.json()` generates resolve, we use the parsed response to make another fetch.
+Once the Promise that the `.json()` generates is resolved, we put the parsed response in state.
 
-So our
+How much of this should we move into the `getIdeas` function?
+
+Probably, anything to do with a component's state should stay inside that component. I think we can safely move the fetch and parsing the response into the `getIdeas` function!
+
+```js
+// apiCalls.js
+export const getIdeas = () => {
+  return fetch('http://localhost:3001/api/v1/ideas')
+    .then(response => response.json())
+}
+```
+
+But wait! If we look back at the `componentDidMount`, we can see that we could also possibly get an error back from the API, rather than an array of ideas.
+
+So let's write our new function to handle that possibility:
+
+```js
+// apiCalls.js
+export const getIdeas = () => {
+  return fetch('http://localhost:3001/api/v1/ideas')
+    .then(response => {
+      if (!response.ok) {
+        throw Error('Error fetching ideas')
+      }
+      return response.json()
+    })
+}
+```
+
+We can now import this function into our `App.js` file and use it!
+
+```js
+// App.js
+
+import { getIdeas } from './apiCalls.js';
+
+componentDidMount() {
+  getIdeas()
+    .then(ideas => this.setState({ ideas }))
+    .catch(error => this.setState({ error: error.message }));
+}
+```
+
+If you start up Ideabox, you should see that our app still works! _Whew!_
+
+And we can see our error working nicely if we change the URL of our fetch to something like `http://localhost:3001/api/v1/yolo`. Now, our app displays the error we threw - "Error fetching ideas".
+
+Now that we know that this is working, let's test this `getIdeas` function!
 
 
 
