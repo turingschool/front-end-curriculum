@@ -7,6 +7,7 @@ tags: css, box model, syntax
 ## Learning Goals
 
 * Implement clean and consistent CSS syntax
+* Use Chrome Dev Tools to debug CSS
 * Demonstrate understanding of the box model by recreating small comps
 
 ## Pre-Work
@@ -96,10 +97,10 @@ This diagram can be found in the CSS Dev Tools and the same color coding is used
 First, let's flex those command line muscles you've been building:
 
 * Create a directory called static-site-playground
-* Create a file `index.html` with the html provided below
+* Create a file `index.html`, copy and paste in the HTML provided below
 * Create a file `main.css`
 * Link the index and main files you just made
-* Test things are working as expected by adding in the following HTML, then opening in the browser by running `open index.html` in your terminal:
+* Test things are working as expected by opening in the browser by running `open index.html` in your terminal:
 
 ```html
 <!doctype html>
@@ -129,9 +130,9 @@ On your own, take a few minutes to practice writing the syntax of CSS rules and 
 With your partner, choose a website you frequently visit. Find a button or box that demonstrates the use of padding. Find a place where margin was probably used to provide breathing room. Be ready to show and share!
 </section>
 
-## Using our Tools even better
+## Recreating Comps
 
-We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with. Let's use our tools to build something professional-grade.
+We can apply all the margin and padding we want, but when it comes down to it, many times Front End Developers are tasked with re-creating something a designer has provided them with, commonly called "comps". Let's use our tools to build something professional-grade.
 
 The screen shots below are taken from the "Your Orders" page.
 
@@ -180,14 +181,41 @@ Revisit your Amazon buttons and add the CSS rule shown above that applies the `b
 
 ## Inline vs. Block
 
-AMY - update this! Reference HTML lesson from yesterday, keep it at a very high level!
+While doing your capstone or in yesterday's Intro to HTML lesson, you may have noticed that some HTML elements behave differently, in terms of whether they are on their own line or not.
 
-The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according to their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
+Every HTML element has a default `display` property - either `inline` or `block`.
 
-- CSS divides HTML elements into two types: inline and block
-- After block elements, browsers render a new line
-- Inline elements: `img`, `a`, `br`, `em`, `strong`
-- Block elements: `p`, `h1`, `ul`, `li`, almost everything else
+Block elements start on a new line and take up the entire width of the page, even if the content doesn't take up the entire width of the page. Some elements that default to `display: block` are `p`, `h1` and `section`. Open up this CodePen to see this illustrated:
+
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="css,result" data-user="ameseee" data-slug-hash="VoEdzG" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Block Elements">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/VoEdzG/">
+  Block Elements</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+Inline elements only take up the space their content requires, so you may see multiple inline elements sitting next to each other. Some elements that default to `display: inline` are `img`, `a`, `input`, and `em`. Open up this CodePen to see this illustrated:
+
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="OKBEOe" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline Elements">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/OKBEOe/">
+  Inline Elements</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<section class="note">
+### You're not stuck with the default display
+
+While every element has a default, we can modify the `display` of any given element with CSS.
+</section>
+
+<section class="call-to-action">
+### Changing Display
+
+One by one, fork each CodePen. Add a declaration to one rule at a time, changing the value of the display property from its default.
+</section>
+
+We will go into much more detail on how to use the different display properties tomorrow; this is meant to be a high level introduction.
 
 ## Additional Resources
 
