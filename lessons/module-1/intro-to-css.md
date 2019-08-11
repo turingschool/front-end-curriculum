@@ -12,10 +12,7 @@ tags: css, box model, syntax
 
 ## Pre-Work
 
-Whip up a little "document" with some info, some links for research
-- be familiar with a certain list of CSS properties
-- be familiar with targeting by element, class, and ID
-- have some CFUs at the end
+Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and all links provided and complete exercises provided in it. Be prepared to demonstrate your understanding of the concepts in that document when you come to this class.
 
 ## Vocabulary
 

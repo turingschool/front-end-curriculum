@@ -83,7 +83,7 @@ p {
 }
 
 .green {
-  background-color: pink;
+  background-color: green;
 }
 ```
 
@@ -104,8 +104,8 @@ IDs help us accomplish a similar goal as classes do. The difference is that IDs 
 ```html
 <h1>Hello, World!</h1>
 <p id="orange">This is an orange paragraph</p>
-<p>This is an orange paragraph</p>
-<p>This is an orange paragraph</p>
+<p>This is a plain paragraph</p>
+<p>This is a plain paragraph</p>
 ```
 
 ```css
