@@ -1,7 +1,7 @@
 ---
-title: "CSS I: Structure, Box Model, and Positioning"
-length: 180
-tags: css, introduction, practice
+title: "Intro to CSS"
+length: 90
+tags: css, box model, syntax, combinators
 ---
 
 ## Overview & Docs
@@ -20,14 +20,17 @@ This lesson is all about the presentation layer, CSS. We'll take this opportunit
 
 But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.com/)
 
-## Vocab
+## Vocabulary
 
 - `CSS` Cascading Style Sheets
-- `CSS property` The name of a display property of an HTML element (e.g., color, border)
 - `HTML element` A building block that makes up the structure of a web page
-- `tag` Usually used interchangeably with 'HTML element'
 - `id` / `class` Ways to identify HTML elements
-
+- `property` (CSS property) The name of a style property of an HTML element (e.g., color, border)
+- `value` The value that is paired with a given style property
+- `declaration` A property/value pair within a CSS rule
+- `declaration blocks` multiple declarations
+- `selector` used to target HTML elements on our web pages that we want to style
+- `rule` selector(s) and a declaration block come together to create a rule
 
 ## What is CSS?
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
@@ -54,18 +57,18 @@ With your partner, answer the questions below:
 * Which takes precedent?
 
 ## CSS Combinators and Complex Selectors
-Another way to target specific relationships among elements is to use CSS combinators. We will review a few of the common selectors, but be sure to reference [the documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators) and [this guide](https://learn.shayhowe.com/advanced-html-css/complex-selectors/) for more explanation on some of these complex selectors. 
+Another way to target specific relationships among elements is to use CSS combinators. We will review a few of the common selectors, but be sure to reference [the documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators) and [this guide](https://learn.shayhowe.com/advanced-html-css/complex-selectors/) for more explanation on some of these complex selectors.
 
 #### Use of Commas
 ```css
-h1, 
-h2, 
-h3, 
+h1,
+h2,
+h3,
 h4 {
   /* some rules */
 }
 ```
-If you want to apply the SAME styles to multiple elements, you can use a comma to link the elements that you want to apply the styling rules to. In the rule above, all of the headings would have the same styles applied to them. 
+If you want to apply the SAME styles to multiple elements, you can use a comma to link the elements that you want to apply the styling rules to. In the rule above, all of the headings would have the same styles applied to them.
 
 #### Descendant Combinator
 ```html
@@ -76,10 +79,10 @@ If you want to apply the SAME styles to multiple elements, you can use a comma t
 ```
 ```css
 section p {
-    /* some rules */ 
+    /* some rules */
 }
 ```
-This combinator will target the second element that is a direct descendant of the first element. In the above example, this combinator will target all `p` tags that are descendants of a section tag. In this case, the rules would only apply to the first paragraph on the page, but not the second since it is not nested within a `section` tag. 
+This combinator will target the second element that is a direct descendant of the first element. In the above example, this combinator will target all `p` tags that are descendants of a section tag. In this case, the rules would only apply to the first paragraph on the page, but not the second since it is not nested within a `section` tag.
 
 Syntax: `space` between selectors
 
