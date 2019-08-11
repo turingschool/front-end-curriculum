@@ -33,6 +33,7 @@ But first, the road to enlightenment: [CSS Zen Garden](http://www.csszengarden.c
 - `rule` selector(s) and a declaration block come together to create a rule
 
 ## What is CSS?
+
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ html element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your css and javascript. They are hooks so that you can manipulate the look and behavior of your HTML elements.
 
 ## Anatomy of a Basic CSS Rule
@@ -57,9 +58,11 @@ With your partner, answer the questions below:
 * Which takes precedent?
 
 ## CSS Combinators and Complex Selectors
+
 Another way to target specific relationships among elements is to use CSS combinators. We will review a few of the common selectors, but be sure to reference [the documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators) and [this guide](https://learn.shayhowe.com/advanced-html-css/complex-selectors/) for more explanation on some of these complex selectors.
 
 #### Use of Commas
+
 ```css
 h1,
 h2,
@@ -71,6 +74,7 @@ h4 {
 If you want to apply the SAME styles to multiple elements, you can use a comma to link the elements that you want to apply the styling rules to. In the rule above, all of the headings would have the same styles applied to them.
 
 #### Descendant Combinator
+
 ```html
 <section>
   <p>Some text</p>
@@ -91,12 +95,13 @@ Syntax: `space` between selectors
 Developer Tools, or Dev Tools, are available to use in every browser. They help us debug, experiment, and test assumptions in our HTML, CSS, and Javascript quickly and at low-risk in the browser. They're your friend when it comes to understanding how CSS works (or untangling why it *isn't* working) -- get in the habit of using them early and often!
 
 ### Editing CSS
+
 To the right of the HTML pane, there's a small sidebar that gives us styling information for the currently selected element. Similar to the HTML pane, we can add or remove styles and adjust CSS property values from this pane. You can click on any style property associated with the selected element and change its value. You can also use the blue checkbox to toggle the style on or off.
 
 ![Editing CSS](/assets/images/lessons/debugging-with-devtools/editing-css.png)
 
-
 ### Your Dev Tools Challenge
+
 Directly from the css pane, we can edit the css and see the changes reflected immediately.
 
 Let's work with the following edits on [girldevelopit.com](https://www.girldevelopit.com/):
@@ -106,9 +111,9 @@ Let's work with the following edits on [girldevelopit.com](https://www.girldevel
 * Change the "flourish" logo in the headline to have a height of 20px
 * Hide the element that contains the map using css
 
-***
 
 ## All the Elements are Boxes
+
 Each element is a rectangular box. CSS leverages "the box model" to control layout and design. An HTML element is comprised of its content and the margins, borders, padding surrounding it. Boxes are "stacked" in the order they appear in your HTML. You can stack them horizontally, vertically, and in the z-plane.
 
 # ![Box Model](/assets/images/box-model.jpg)
@@ -120,6 +125,7 @@ Each element is a rectangular box. CSS leverages "the box model" to control layo
 * [Visual Guide to CSS](http://cssreference.io/)
 
 ## CSS Practice Time!
+
 Let's setup a small static page to experiment with our HTML and CSS.
 
 First, let's flex those command-line muscles you've been building:
@@ -178,8 +184,6 @@ Setting the `box-sizing` property to `border-box` will alter the model so that t
 
 Revisit the static page you just made and add the CSS rule shown above that applies the `box-sizing` property to your CSS. How does it change what's rendered in the browser? How is the size of the elements impacted?
 
-***
-
 ## Document Flow is Important
 
 The document flow is the model by which elements are rendered by default in the CSS specifications. In this model, elements are rendered according to their default display rule. In other words, block-level elements are displayed on a new line and inline elements on the same line. Everything is stacked in an ordered way from top to bottom. The document flow can be modified by CSS through its positioning properties.
@@ -209,6 +213,7 @@ div {
 Quick tip: If you want to center an element, you can give the `margin` property a value of `auto` to center a block like element.
 
 ### Your turn:
+
 * With a partner:
   * How can you right align a block like element using the margin property?
 
@@ -224,6 +229,7 @@ Quick tip: If you want to center an element, you can give the `margin` property 
 - A positioned element can take advantage of the `z-index` property to specify its stack order. The stack order is the order in which elements in the same space lay on top of one another. For example, an element with a `z-index` of `2` will appear above an element with a `z-index` of `1` if they happen to overlap. Without any z-index value, elements stack in the order they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning will always appear on top of elements with default static positioning. Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can never be higher than element B.
 
 ### Your turn:
+
 * With a partner:
   * What might be a useful scenario for using position absolute?
   * What about relative?
@@ -231,6 +237,7 @@ Quick tip: If you want to center an element, you can give the `margin` property 
   * z-index?
 
 ## Floats
+
 "Floating" an element takes it out of the normal flow, and places it as far to the left or right of its containing element as possible. Any other elements, such as paragraphs or lists, will wrap around the floated element as seen [here](https://codepen.io/LouisaBarrett/pen/GwwKGN).
 
 - Always specify a width when floating an element, otherwise the element is likely to take up the whole page and not appear floated.
@@ -250,9 +257,8 @@ Quick tip: If you want to center an element, you can give the `margin` property 
 }
 ```
 
-***
-
 ## CSS Specificity
+
 __Specificity__ is how the browser decides which CSS values are the most relevant to an element and whether or not they should be used.
 __Specificity__ is a weight that is applied to a given CSS declaration and is determined by the number of each selector type in the matching selector.
 Basically, it’s a mechanism within the CSS cascade, which helps browsers in conflicts resolution. Suppose, you have two (or more) conflicting CSS rules that are being applied to the same element, then there are going to be some basic rules which a browser will follow to determine which one is most specific and that particular CSS declaration will win.
@@ -274,9 +280,10 @@ li p {
 ```
 
 ### How do you calculate specificity?
+
 To find the actual specificity of a group of nested selectors takes some calculation. Basically, every inline style has a specificity of 1000, every ID selector has a value of 100, every class selector has a value of 10 and every elements and pseudo elements  has a value of 1. Finally, we add them up to get the specificity weight.
 
-Examples:-
+Examples:
 
 * `a` has a specificity of 1 (1 element selector)
 * `div p` has a specificity of 2 (2 element selectors, 1+1)
@@ -295,7 +302,6 @@ Key Points:
 * When an !important rule is used on a style declaration, it will override any other declarations.
 * The only way an !important value can be overridden is with another !important rule declared later in the CSS and with equal or great specificity value .
 
-***
-
 ## Additional Resources
+
 * [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
