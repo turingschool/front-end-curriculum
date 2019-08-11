@@ -6,11 +6,11 @@ tags: testing, react, async, fetch
 
 ## Agenda
 
-* Discuss async testing goals and pitfalls
+* Understand how and why we test asynchronous JS
+* Understand what to test
 * Pseudocode tests for async code
 * Write tests using .then() promise resolution
 * Refactor tests to use async/await
-* Refactor fetch out of the component
 * Use manual mocks to update and refactor test suite
 
 ## Learning Goals
@@ -22,31 +22,240 @@ By the end of this lesson, you will:
 
 ## Vocab
 
-* mock
-* control flow
-* then
-* async/await
+* mock - in a test file, overwriting a function/method or data so that the component being tested uses the simpler, controllable mock function/method/data instead of the real one
+* `.then()`/`.catch()` - JavaScript syntax for handling the resolution/rejection of a Promise
+* `async`/`await` - ES6 syntax for handling asynchronous JavaScript
+* `try`/`catch` - ES6 syntax for handling the resolution/rejection of a Promise
 
 ## Testing Async JavaScript & API Calls
 
 ### Getting Started
 
-Follow along with a modified version of the grocery list application [here](https://github.com/turingschool-examples/grocery-list/tree/async-begin).
+We're going to use the [same Ideabox repo](https://github.com/turingschool-examples/ideabox-testing/tree/react-iii-complete) that we've been using to learn how to unit test React components. We'll start by checking out the `react-iii-complete` branch, which already has all of our unit tests!
 
-Clone the repo, checkout the **async-begin** branch, and install the dependencies.
+If you want to pull down a fresh copy, run the following commands in your terminal:
 
 ```bash
-git clone git@github.com:turingschool-examples/grocery-list.git
-git checkout async-begin
-npm install
+git clone https://github.com/turingschool-examples/ideabox-testing.git
+cd ideabox-testing
+git checkout react-iii-complete
+npm i
 ```
 
-Open the code up in your editor.
+Open the code up in your editor. You can fire up the front-end by running `npm start` if you want to remind yourself how the app works.
 
-Open two tabs in your terminal and run `npm run server` in one terminal window and `npm start` in the other terminal window to get started.
+Open a **new tab** in your terminal, `cd` so you are **no longer inside the ideabox-testing repo**, and run the following command to set up the API that Ideabox will consume:
+
+```bash
+git clone https://github.com/turingschool-examples/ideabox-api.git && cd ideabox-api && npm i && npm start
+```
 
 ## Testing API Calls
-When our application makes a request to an API endpoint, we typically want to test our app's **reaction** to the response it receives from that request. We don't really care about what goes on in the back-end, we just want to know that we can handle the response appropriately. This makes API calls a good scenario for using mocks. However, we're usually placing our fetch requests within other functions or methods, and we might not want to override the functionality of the entire method with a mock. Consider the following example from our [AddGroceryForm Component](https://github.com/turingschool-examples/grocery-list/blob/async-complete/src/AddGroceryForm.js):
+
+When our application makes a request to an API endpoint, we typically want to test our app's **reaction** to the response it receives from that request. We don't really care about what goes on in the back-end, we just want to know that we can handle the response appropriately.
+
+In most cases, we're not the ones who write the back-end, and we're not going to bother testing the code that we didn't write.
+
+However, we _did_ write the code that DOES something with the data we get back from the API! So we do need to test that.
+
+In this lesson, we're going to be rewriting a lot of code to **mock out functionality** in our test suites. For example, we don't actually want to query an API every time we test our fetch functions! But it's important to remember that we shouldn't be mocking out ALL the functionality: usually, we're placing our fetch requests within OTHER functions or methods, and we DO want to test the rest of that method/function functionality, around the mocked fetch!
+
+Here's the overall steps we'll be taking:
+
+1. Move `fetch`es into their own file
+  - Discuss why
+2. Test each `fetch` in isolation
+  - Learn how to figure out what needs to be tested
+3. Import `fetch`es into the React component they originally belonged in
+  - Make sure component tests still pass
+4. Test the asynchronous functions of the component
+  - Learn to mock a file
+  - Learn what to mock and what to test
+
+Before we get started, take a look at the `App.js` file and the `App.test.js` file.
+
+<section class="call-to-action">
+### Turn & Talk
+
+Discuss with your neighbor:
+- What methods in App are asynchronous? How can you tell?
+- The tests for `addIdea` and `deleteIdea` are failing - why?
+</section>
+
+### Isolating fetch
+
+Why do you think the tests for `addIdea` and `deleteIdea` are breaking? Here's the test for `addIdea`:
+
+```js
+// App.test.js
+
+it('should update state when addIdea is called', () => {
+  const mockIdea = {
+    id: 3, title: 'Sweaters for pugs', description: 'Why not?'
+  };
+  const expected = [{ id: 1, title: 'Prank Travis', description: 'Stick googly eyes on all his stuff' },
+  { id: 2, title: 'Make a secret password app', description: 'So you and your rideshare driver can both know neither one of you is lying' }, mockIdea];
+
+  wrapper.instance().addIdea(mockIdea);
+
+  expect(wrapper.state('ideas')).toEqual(expected);
+});
+```
+
+And let's look at the code for `addIdea`:
+
+```js
+// App.js
+
+addIdea = (newIdea) => {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ ...newIdea })
+  };
+
+  fetch('http://localhost:3001/api/v1/ideas', options)
+    .then(response => response.json())
+    .then(response => fetch(`http://localhost:3001/api/v1/ideas/${response.id}`))
+    .then(response => response.json())
+    .then(newIdea => this.setState({ ideas: [...this.state.ideas, newIdea] }))
+    .catch(error => this.setState({ error: error.message }))
+}
+```
+
+A HA! When our test suite is running through the code, it hits that `fetch` and gets nothing back - because we don't want to _actually_ query our API. It's not actually getting anything back from the fetch, so it's not changing App's state at all.
+
+So instead, we're going to have to mock `fetch`. We do that by overwriting the window's implementation of `fetch` inside our test suite. We're going to rewrite it so it returns exactly what we want the `addIdea` fetch call to return! NICE.
+
+But, hang on - we have more than one `fetch` in our code! There's TWO in `addIdea`, and there's a different one in `deleteIdea`. We can't chop up the component and have it define different mocked `fetch`es for the different methods, unfortunately. So instead we're going to **isolate** our API calls by creating a separate file to hold all of our `fetch`es.
+
+_Yikes._ What does all of this even mean?
+
+<section class="note">
+### Analogy time!
+
+You're the component. You're standing at a vending machine. You can order whatever you want by selecting the right code. Chips, pop, candy.
+
+Punching in the code is the equivalent of calling `fetch`. There are lots of different API queries you could make!
+
+But let's put you in a testing situation: you didn't build the vending machine, so you don't need to make sure that the inner mechanisms work. You don't care about making sure the little spiral things turn and advance an item. You don't care that the little flap at the bottom properly swings up to stop people from stealing stuff from the bottom row.
+
+But you DO care that, if you type in the code for peanut butter cups, you get peanut butter cups out of the machine! Especially if, say, you were getting them for your project partner because you know they especially love peanut butter cups. You not only want to get back peanut butter cups, but you especially need them to be peanut butter cups, because you're going to be doing something with them after you get them! You can't go giving your project partner a _granola bar_ instead of _peanut butter cups!_ CAN YOU IMAGINE?!
+
+Okay, so this testing scenario: you don't get to use the real vending machine, because you're just checking that things work and you don't wanna keep stuffing quarters in a machine for no reason.
+
+So instead you make a fake one. It can only dispense one thing at a time - it's basically a gumball machine, because making a whole entire vending machine would be REALLY complicated and probably not worth the time or effort.
+
+Now, when you put in the code for peanut butter cups, you get peanut butter cups! NICE.
+
+But, uh oh - when you put in the code for potato chips ... you still get peanut butter cups. NOT NICE.
+
+There's no way to stop and swap out the peanut butter cups for potato chips.
+
+Instead, let's do something that still feels kinda silly, but works: let's build **multiple fake vending machines**, which each give you back exactly what you want, but only when you ask for it the right way.
+
+Faking it like this is still okay, because - again, YOU DIDN"T BUILD THE VENDING MACHINE. You just want to make sure that, when you ask for potato chips, you get back potato chips. When you ask for peanut butter cups, you don't get a granola bar. It's a safety net to catch errors when things change. Because, hey, maybe in the future, the real vending machine is updated and it'll work differently - it's best to have our tests be able to catch the changes before we spend a dollar on the wrong snack.
+</section>
+
+So what does this look like in our Ideabox app?
+
+In our front-end repo, let's create a file to hold all our API queries, and a file to test those queries:
+
+```bash
+touch src/apiCalls.js src/apiCalls.test.js
+```
+
+Let's look at the API calls we're making in `App,js`.
+
+We're making one to get all of our ideas in the `componentDidMount`. We're making one that posts a new idea. We're making one that gets a single idea based on its id. We're making one that deletes an idea by its id.
+
+So let's write three separate functions for each of those `fetch`es!
+
+I'll get you started:
+
+```js
+// apiCalls.js
+export const getIdeas = () => {
+  return // your code here
+};
+
+export const postIdea = newIdea => {
+  return // your code here
+}
+
+export const getIdea = id => {
+  return // your code here
+};
+
+export const deleteIdea = id => {
+  return // your code here
+}
+```
+
+Before we start coding, take a second to consider:
+
+<section class="call-to-action">
+### In Your Notebook
+
+What do we need to return out of these functions?
+
+How much of the `addIdea` and `deleteIdea` methods will we be pulling into these functions instead?
+</section>
+
+Okay. Let's take a look at `addIdea` in our `App.js` file:
+
+```js
+// App.js
+
+addIdea = (newIdea) => {
+  const options = {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ ...newIdea })
+  };
+
+  fetch('http://localhost:3001/api/v1/ideas', options)
+    .then(response => response.json())
+    .then(response => fetch(`http://localhost:3001/api/v1/ideas/${response.id}`))
+    .then(response => response.json())
+    .then(newIdea => this.setState({ ideas: [...this.state.ideas, newIdea] }))
+    .catch(error => this.setState({ error: error.message }))
+}
+```
+
+After we post the first `fetch`, we get back a Promise that resolves into the response.
+
+<section class="note">
+### Note
+
+Any time you can chain on a `.then()`, the previous line is returning a Promise!
+</section>
+
+Once the Promise that the `.json()` generates resolve, we use the parsed response to make another fetch.
+
+So our
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Consider the following example from our [AddGroceryForm Component](https://github.com/turingschool-examples/grocery-list/blob/async-complete/src/AddGroceryForm.js):
 
 ```javascript
 // AddGroceryForm.js
