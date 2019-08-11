@@ -474,7 +474,168 @@ describe('getIdeas', () => {
 })
 ```
 
-WOWZA.
+WOWZA. Our test now passes! WOOHOO! Now let's get our next test passing.
+
+We're going to use the `async`/`await` syntax for this - it'll make our tests a bit cleaner.
+
+Notice that we're still using the mock implementation of `fetch` that we set up in the `beforeEach()` block.
+
+```js
+// apiCalls.test.js
+
+  it('should return an array of ideas (HAPPY)', async () => {
+    const results = await getIdeas();
+
+    expect(results).toEqual(mockResponse);
+  });
+```
+
+Hopefully you're seeing that green checkmark :) The happy path has been tested! I feel pretty happy.
+
+Now we've got to test the sad path. Sad path tests are critical - if something unwanted happens, we need to make sure that we're handling it properly so our whole app doesn't just break.
+
+Sad path tests help us make sure those eventualities are covered!
+
+We're going to have to rewrite our `fetch` so that the object's "ok" key's value is false, because we WANT to trigger our error.
+
+<section class="call-to-action">
+### In Your Notebook
+
+How would you rewrite the mock implementation of fetch?
+</section>
+
+Let's try it out.
+
+```js
+// apiCalls.test.js
+
+  it('should return an error (SAD)',  () => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: false
+      })
+    });
+
+    expect(getIdeas()).rejects.toEqual(Error('Error fetching ideas'));
+  });
+```
+
+HECK YES! Now that we've figured out how to isolate and test the `fetch` that gathers up all our ideas from the API, let's keep going.
+
+<section class="checks-for-understanding">
+### You try it!
+
+Isolate and test the fetch that posts a new idea.
+
+Isolate and test the fetch that retrieves a single idea based on its id.
+
+Isolate and test the fetch that deletes an idea based on its id.
+
+_Hint: Put each of these fetches into its own `describe` block!_
+</section>
+
+### Testing the component
+
+Now that we've finished testing each of our fetches in isolation, what is left to test when we bring them into our `App` component? Let's focus on `getIdeas` for now.
+
+Here's the part of App that's using `getIdeas`:
+
+```js
+// App.js
+
+componentDidMount() {
+  getIdeas()
+    .then(ideas => this.setState({ ideas }))
+    .catch(error => this.setState({ error: error.message }));
+}
+```
+
+Since we've already tested that `getIdeas` works as we expect, all we have left to test are the rest of `componentDidMount`: that state is being updated.
+
+`App.js` is bringing in `getIdeas` from './apiCalls.js'. We can trick App into using mocked functions instead of the real ones! Here's how:
+
+1. In `src`, create a new folder called `__mocks__` (that's two underscores + mocks + two underscores)
+2. Inside the `__mocks__` folder, create a file named "apiCalls.js"
+3. At the top of the `App.test.js` file, we'll create our mock export object!
+
+```bash
+mkdir src/__mocks__
+touch src/__mocks__/apiCalls.js
+```
+
+When we export all our fetch functions from the real `apiCalls.js`, each of those functions is being added to an object, and that object is what we're importing at the top of `App.js`.
+
+Now, we're going to interrupt that cycle and paste in our own object of mocked functions instead!
+
+```js
+// App.test.js
+
+const mockIdeas = [{id: 1, title: 'Idea', description: 'It\'s great'}];
+
+jest.mock('./apiCalls.js', () => ({
+  getIdeas: jest.fn().mockImplementation(() => Promise.resolve(mockIdeas))
+}))
+```
+
+As you can see, `mock` is a jest method that takes in two arguments: the filepath to our fake apiCalls file, and a callback. This callback returns our export object: it should contain keys of the names of the functions we're mocking, and the values should be our mocked functions.
+
+In the case of `getIdeas`, the key is "getIdeas" and the value is a jest function with a mock implementation that returns a Promise which resolves to our mocked ideas.
+
+So now, when App's `componentDidMount` runs its first line, it runs the jest function instead of the real one from `apiCalls`.
+
+We've returned some fake, controlled data, so then we can check that our state has been updated with the fake data.
+
+```js
+// App.test.js
+
+  it('should retreive ideas after mounting', () => {
+    expect(wrapper.state('ideas')).toEqual(mockIdeas)
+  });
+```
+
+We know that `getIdeas` can already successfully return ideas or an error. We now know that App will successfully place the response in state. Great! Our componentDidMount has been tested.
+
+Let's try out our first failing App test:
+
+```js
+it('should update state when addIdea is called', () => {
+  const mockIdea = {
+    id: 3, title: 'Sweaters for pugs', description: 'Why not?'
+  };
+  const expected = [{ id: 1, title: 'Prank Travis', description: 'Stick googly eyes on all his stuff' },
+  { id: 2, title: 'Make a secret password app', description: 'So you and your rideshare driver can both know neither one of you is lying' }, mockIdea];
+
+  wrapper.instance().addIdea(mockIdea);
+
+  expect(wrapper.state('ideas')).toEqual(expected);
+});
+```
+
+Ooooookay. There are a few things we need to edit. This test is leftover from when we were starting out App's state with a hardcoded list of ideas. Now that we're getting our ideas from the server, we know that in our test suite App will start out with an array with just one idea - the one we're returning from our mocked out `getIdeas`!
+
+So let's update the original test to look something more like this:
+
+```js
+it('should update state when addIdea is called', () => {
+  const mockIdea = { id: 2, title: 'Sweaters for pugs', description: 'Why not?' };
+  const expected = [{id: 1, title: 'Idea', description: 'It\'s great'}, mockIdea];
+
+  wrapper.instance().addIdea(mockIdea);
+
+  expect(wrapper.state('ideas')).toEqual(expected);
+});
+```
+
+Our test will still fail ... because we haven't mocked out `postIdea` or `getIdea`! Try that out now.
+
+<section class="call-to-action">
+### With a Partner
+
+Refactor `App.js`'s `addIdea` to use the `postIdea` and `getIdea` functions from our real `apiCalls` file.
+
+Then, mock out those functions in our test file. Try to get the test passing.
+</section>
+
 
 
 
