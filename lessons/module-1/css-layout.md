@@ -1,3 +1,42 @@
+---
+title: "CSS: Layout"
+length: 90
+tags: css, combinators, layout, display, specificity
+---
+
+## CSS Combinators and Complex Selectors
+
+Another way to target specific relationships among elements is to use CSS combinators. We will review a few of the common selectors, but be sure to reference [the documentation](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Selectors#Combinators) and [this guide](https://learn.shayhowe.com/advanced-html-css/complex-selectors/) for more explanation on some of these complex selectors.
+
+#### Use of Commas
+
+```css
+h1,
+h2,
+h3,
+h4 {
+  /* some rules */
+}
+```
+If you want to apply the SAME styles to multiple elements, you can use a comma to link the elements that you want to apply the styling rules to. In the rule above, all of the headings would have the same styles applied to them.
+
+#### Descendant Combinator
+
+```html
+<section>
+  <p>Some text</p>
+</section>
+<p>Even more cool text</p>
+```
+```css
+section p {
+    /* some rules */
+}
+```
+This combinator will target the second element that is a direct descendant of the first element. In the above example, this combinator will target all `p` tags that are descendants of a section tag. In this case, the rules would only apply to the first paragraph on the page, but not the second since it is not nested within a `section` tag.
+
+Syntax: `space` between selectors
+
 
 ## Display Property
 
