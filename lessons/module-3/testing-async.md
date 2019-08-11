@@ -26,6 +26,8 @@ By the end of this lesson, you will:
 * `.then()`/`.catch()` - JavaScript syntax for handling the resolution/rejection of a Promise
 * `async`/`await` - ES6 syntax for handling asynchronous JavaScript
 * `try`/`catch` - ES6 syntax for handling the resolution/rejection of a Promise
+* happy path - the expected, desired outcome
+* sad path - the unexpected outcome, typically covered by error handling
 
 ## Testing Async JavaScript & API Calls
 
@@ -183,6 +185,7 @@ I'll get you started:
 
 ```js
 // apiCalls.js
+
 export const getIdeas = () => {
   return // your code here
 };
@@ -239,6 +242,7 @@ Probably, anything to do with a component's state should stay inside that compon
 
 ```js
 // apiCalls.js
+
 export const getIdeas = () => {
   return fetch('http://localhost:3001/api/v1/ideas')
     .then(response => response.json())
@@ -251,6 +255,7 @@ So let's write our new function to handle that possibility:
 
 ```js
 // apiCalls.js
+
 export const getIdeas = () => {
   return fetch('http://localhost:3001/api/v1/ideas')
     .then(response => {
@@ -280,13 +285,196 @@ If you start up Ideabox, you should see that our app still works! _Whew!_
 
 And we can see our error working nicely if we change the URL of our fetch to something like `http://localhost:3001/api/v1/yolo`. Now, our app displays the error we threw - "Error fetching ideas".
 
+Fun fact: our fetch can fail in a couple ways! The way above, which is the one we're controlling, and a second way, which we don't have control over. You can see this second error by changing the url we're querying to `http://localhost:3002/api/v1/ideas` - it now reads "Failed to fetch".
+
 Now that we know that this is working, let's test this `getIdeas` function!
 
+### Testing the isolated fetch
 
+In your `apiCalls.test.js` file, let's set up our tests.
 
+```js
+// apiCalls.test.js
 
+import { getIdeas } from './apiCalls';
 
+describe('getIdeas', () => {
 
+})
+```
+
+We don't have to import React, because - remember - the file we're testing is just plain JavaScript, not a React component! We also don't need `shallow` or `mount`, for the same reason. All we need is the function we're testing.
+
+Okay. So how do we know what we need to test?
+
+Let's take a look at each line of our function.
+
+```js
+// apiCalls.js
+
+export const getIdeas = () => {
+  return fetch('http://localhost:3001/api/v1/ideas')
+    .then(response => {
+      if (!response.ok) {
+        throw Error('Error fetching ideas')
+      }
+      return response.json()
+    })
+}
+```
+
+Take a few minutes to talk it through with your partner.
+
+<section class="call-to-action">
+### Turn & Talk
+
+What do you think you should test in the `getIdeas` function?
+What's going on in each line?
+What's the happy path?
+What's the sad path?
+</section>
+
+Going through line by line, here's what I see to test:
+
+* Fetch should be invoked with the correct URL
+* If the response is good, we should get back an array of ideas (the happy path)
+* If the response is bad, we should get back an Error with a message of "Error fetching ideas" (the sad path)
+
+Let's set up those it blocks!
+
+```js
+// apiCalls.test.js
+
+import { getIdeas } from './apiCalls';
+
+describe('getIdeas', () => {
+
+  it('should call fetch with the correct url', () => {
+
+  });
+
+  it('should return an array of ideas (HAPPY)', () => {
+
+  });
+
+  it('should return an error (SAD)', () => {
+
+  });
+})
+```
+
+Reading through my tests, it looks like I'm going to need to use some mocked data.
+
+Let's set up a `beforeEach()` block to handle it.
+
+```js
+// apiCalls.test.js
+
+import { getIdeas } from './apiCalls';
+
+describe('getIdeas', () => {
+  let mockResponse;
+
+  beforeEach(() => {
+    mockResponse = [
+      {
+        id: 1,
+        title: "Sweaters for pugs",
+        description: "To keep them warm"
+      }
+    ];
+  });
+
+  it('should call fetch with the correct url', () => {
+
+  });
+
+  it('should return an array of ideas (HAPPY)', () => {
+
+  });
+
+  it('should return an error (SAD)', () => {
+
+  });
+})
+```
+
+Okay, so let's write our first test.
+
+```js
+// apiCalls.test.js
+
+  it('should call fetch with the correct url', () => {
+    getIdeas();
+
+    expect(window.fetch).toHaveBeenCalledWith('http://localhost:3001/api/v1/ideas');
+  });
+```
+
+We're going to run into some issues when this executes. Firstly, our test runner will fail and tell us that "toHaveBeenCalledWith" can only be used on a mocked jest function. And secondly, `fetch` won't be available when running our tests in the console; we won't have access to the real API endpoint. There are a bunch of libraries that you could use to handle this behavior, some common ones are [nock](https://github.com/node-nock/nock) or [fetch-mock](http://www.wheresrhys.co.uk/fetch-mock/).
+
+Luckily for us, though, [Jest](https://facebook.github.io/jest) has some really great utilities for mocking built into it!
+
+Let's rewrite `fetch`.
+
+Okay. Let's really read our `getIdeas` function:
+
+```js
+// apiCalls.js
+
+export const getIdeas = () => {
+  return fetch('http://localhost:3001/api/v1/ideas')
+    .then(response => {
+      if (!response.ok) {
+        throw Error('Error fetching ideas')
+      }
+      return response.json()
+    })
+}
+```
+
+We know that `fetch` returns a Promise (because we can chain a `.then()` onto it). The Promise resolves into the response object. It looks like that response object has at least two values in it: a key of "ok" whose value is a boolean, and a key of "json" whose value is a function. That "json" function also returns a Promise, and _that_ Promise resolves into our array of ideas.
+
+So let's write out our mocked fetch!
+
+```js
+// apiCalls.test.js
+
+import { getIdeas } from './apiCalls';
+
+describe('getIdeas', () => {
+  let mockResponse;
+
+  beforeEach(() => {
+    mockResponse = [
+      {
+        id: 1,
+        title: "Sweaters for pugs",
+        description: "To keep them warm"
+      }
+    ];
+
+    // set fetch to a jest mock function, whose implementation is a function
+    window.fetch = jest.fn().mockImplementation(() => {
+      // that returns a Promise that resolves into an object
+      Promise.resolve({
+        // with a key of "ok"
+        ok: true,
+        // and a key of "json" whose value is a FUNCTION that returns a PROMISE that resolves into our ARRAY of ideas
+        json: () => Promise.resolve(mockResponse)
+      });
+    });
+  });
+
+  it('should call fetch with the correct url', () => {
+    getIdeas();
+
+    expect(window.fetch).toHaveBeenCalledWith('http://localhost:3001/api/v1/ideas');
+  });
+})
+```
+
+WOWZA.
 
 
 
