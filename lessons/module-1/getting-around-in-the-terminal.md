@@ -1,6 +1,6 @@
 ---
 title: Introduction to the Terminal
-length: 90
+length: 60
 tags: command line, terminal
 ---
 
@@ -67,10 +67,12 @@ Let's actually start working on some basic interactions with our files using the
 
 Open your terminal using `cmd + spacebar`, then type `terminal`, and press `enter`. The mysterious black window appears...
 
+<section class="note">
 ### Side Note - Keyboard Shortcuts for Efficiency
 
 - `cmd + spacebar` will open your spotlight search
 - `cmd + tab` will take you to your most recent open application
+</section>
 
 ## Observe the File Structure: `pwd`, `ls`
 
@@ -121,14 +123,13 @@ The return from this command will be a list of all contents inside your current 
 
 `ls` doesn't explicitly tell us what is a directory and what is a file, as compared to the finder which provides an icon the the left of each item inside a directory. We can, however, determine this by observing if a specific item in a directory has a file extension or now. For example, `.png`, `.js`, etc.
 
-<div class="turn-and-talk">
-  <h3>Try It</h3>
-  <ul>
-    <li>Open your terminal and enter the command <code>pwd</code>. What do you see? Can you find this same location using Finder?</li>
-    <li>Enter the command <code>ls</code>. What directories and files do you see?</li>
-    <li>Enter <code>ls -la</code>. How does this list change? Do you see the same files and directories when you use Finder?</li>
-  </ul>
-</div>
+<section class="call-to-action">
+### Try It
+
+- Open your terminal and enter the command <code>pwd</code>. What do you see? Can you find this same location using Finder?
+- Enter the command <code>ls</code>. What directories and files do you see?
+- Enter <code>ls -la</code>. How does this list change? Do you see the same files and directories when you use Finder?
+</section>
 
 For a more detailed list of content, we can use `ls -la` - note the space between the characters. The addition of `-la` gives more information about when that file or directory was last modified, permissions, and also lists [hidden files/directories](https://en.wikipedia.org/wiki/Hidden_file_and_hidden_directory).
 
@@ -194,15 +195,14 @@ There is **no return value** for this command.
 
 As you can see there was no warning such as, "Are you sure you want to delete this file?..." Be careful with this command because **you can't undo it**.
 
-<div class="turn-and-talk">
-  <h3>Try It</h3>
-  <ul>
-    <li>Open a new terminal window. Create a directory called <code>terminal-practice</code>. Navigate into that directory, then follow the steps below.</li>
-    <li>Create three different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.</li>
-    <li>Create five new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.</li>
-    <li>Now, create three new directories, each with 2 files inside of them. Then delete both files in a directory, then the directory. Repeat until your <code>terminal-practice</code> is empty!</li>
-  </ul>
-</div>
+<section class="call-to-action">
+### Try It
+
+- Open a new terminal window. Create a directory called <code>terminal-practice</code>. Navigate into that directory, then follow the steps below.
+- Create three different directories (with different names). Double check that all of the directories are listed in your current directory. Delete all the directories.
+- Create five new files with different file names. Double check that all the files are listed in your current directory. Delete all the files you just created.
+- Now, create three new directories, each with 2 files inside of them. Then delete both files in a directory, then the directory. Repeat until your <code>terminal-practice</code> is empty!
+</section>
 
 ### Tab Autocomplete
 
@@ -225,14 +225,13 @@ If we're in `Desktop` and we want to get to `terminal-practice` quickly, then we
 
 Likewise, we can also go back up multiple directories using one command. If you are in the `terminal-practice` directory and you want to go back to the `turing` directory, then you can use the double dots as before with the slash separator: `cd ../..`
 
-<div class="turn-and-talk">
-  <h3>Try It</h3>
-  <ul>
-    <li>In your terminal, change to your root directory. Your root directory is noted as a <code>~</code> symbol. So the change directory command would be <code>cd ~</code>. From there, <code>cd</code> into your Documents directory.</li>
-    <li>Now, list the contents of the Documents directory.</li>
-    <li>In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this three times. When you are done, delete the directories you just made, one directory at a time.</li>
-  </ul>
-</div>
+<section class="call-to-action">
+### Try It
+
+- In your terminal, change to your root directory. Your root directory is noted as a `~` symbol. So the change directory command would be `cd`. From there, `cd` into your Documents directory.
+- Now, list the contents of the Documents directory.
+- In your Documents directory, make a new directory of your choosing. Change into that directory, and make another new directory. Repeat this three times. When you are done, delete the directories you just made, one directory at a time.
+</section>
 
 ## Commands From Your Present Working Directory
 
@@ -274,15 +273,14 @@ We end up with:
     |--- new-file.txt
 ```
 
-<div class="turn-and-talk">
-  <h3>Try It</h3>
-  <ul>
-    <li>Change to your root directory if you are not there already. How did you do this? With these next tasks, do _not_ change into other directories. Keep your root directory as your present working directory.</li>
-    <li>Make three nested directories.</li>
-    <li>In each nested directory, create a file.</li>
-    <li>Remove all of the directories and files that you just created - one directory at a time.</li>
-  </ul>
-</div>
+<section class="call-to-action">
+### Try It
+
+- Change to your root directory if you are not there already. How did you do this? With these next tasks, do _not_ change into other directories. Keep your root directory as your present working directory.
+- Make three nested directories
+- In each nested directory, create a file
+- Remove all of the directories and files that you just created - one directory at a time
+</section>
 
 ## Move and Copy Files/Directories: `mv`, `cp`
 
@@ -309,12 +307,11 @@ mv project-1.html projects
 
 and the `project-1.html` file will be moved into the `projects` directory.
 
-<div class="turn-and-talk">
-  <h3>Try It</h3>
-  <ul>
-    <li>Make a few nested directories with blank <code>html</code> files in them, and move files around from directory to directory to practice using <code>mv</code>.</li>
-  </ul>
-</div>
+<section class="call-to-action">
+### Try It
+
+Make a few nested directories with blank `html` files in them, and move files around from directory to directory to practice using `mv`.
+</section>
 
 ### `cp` (copy)
 

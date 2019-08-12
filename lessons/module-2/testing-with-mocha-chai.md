@@ -106,9 +106,9 @@ class Question {
   }
 }
 ```
-
+<section class="call-to-action">
 What would we want to verify about the `checkAnswer` method? What should this method do?
-
+</section>
 
 ```js
 describe('Question Class', () => {
@@ -122,10 +122,11 @@ describe('Question Class', () => {
 });
 ```
 
-
+<section class="call-to-action">
 ### Practice
 
-Take a look at the following code. What would you want to test about this function?
+In your journal:
+* Take a look at the following code. What would you want to test about this function?
 
 ```js
 function reverseWord(word) {
@@ -136,7 +137,7 @@ function reverseWord(word) {
 
 reverseWord('turing'); // gnirut
 ```
-
+</section>
 
 <!--
 
@@ -194,10 +195,12 @@ Good tests have **Four Phases**:
 1. Setup - Setup the conditions required to execute the action on your `SUT`
 2. Execution - Execute some action on your `SUT`
 3. Assertion - Assert that the action you did had the results you expect
-<!-- 4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time) -->
+4. Tear Down - Clean up any resources you used in your test (this is done automatically the majority of the time)
+
+(Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes)
 
 All of these phases deal with the **Subject Under Test** (`SUT`, or just `subject`).
-<!-- Most tests you write will not need the Tear Down phase, but it's good to know that step is there sometimes. -->
+
 
 **Good tests:**
 - Test one thing
@@ -239,7 +242,7 @@ To practice, let's kick off a small project to demonstrate how you would utilize
 In your terminal, clone down this [starter repo](https://github.com/turingschool-examples/our-first-tests) and run `npm install`:
 
 ```bash
-git clone https://github.com/turingschool-examples/our-first-tests 
+git clone https://github.com/turingschool-examples/our-first-tests
 cd our-first-tests
 npm install
 ```
@@ -429,7 +432,7 @@ Iteration 2:
 - You should be able to increase the width by a provided value.
 ie: `box.increaseWidth(10)`
 - You should be able to increase the height of your box by a provided value
-ie: `box.increaseHeight(10)` 
+ie: `box.increaseHeight(10)`
 ```
 
 ## Testing Practice: Iteration 3
@@ -440,12 +443,13 @@ Implement iteration 3 for our box per the spec outlined below;
 Iteration 3:
 
 - Refactor your code so that instead of having increaseWidth and increaseHeight methods, you can have a single method to do both jobs
-ie: `box.increment(10, 'height')` or `box.increment(10, 'width')` 
+ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
 ```
 
-
+<section class="checks-for-understanding">
 ### Checks for Understanding
 
 * What is the difference between Mocha and Chai?
 * What are the phases of a test?
 * What is the `describe()` block used for, and what is the `it()` block used for?
+</section>
