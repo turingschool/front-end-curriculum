@@ -219,7 +219,7 @@ app.post('/api/v1/pets', (request, response) => {
   const id = Date.now();
   const { pet } = request.body;
 
-  app.locals.pets.push({id, ...pet});
+  app.locals.pets.push({ id, ...pet });
 
   response.status(201).json({ id, pet });
 });
@@ -252,7 +252,7 @@ app.post('/api/v1/pets', (request, response) => {
       error: 'No pet property provided'
     });
   } else {
-    app.locals.pets.push({ id, pet });
+    app.locals.pets.push({ id, ...pet });
     return response.status(201).json({ id, pet });
   }
 })
