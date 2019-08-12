@@ -21,7 +21,7 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 - Using your terminal, create a directory called `dog-party`
 - Inside of your `dog-party` directory, create a sub-directory called `images`
-- Also create four files called `index.html`, `styles1.css`, `styles2.css`, and `main.js`
+- Also create four files called `index.html`, `styles.css`, and `main.js`
 - You will also need to [download the image assets](https://drive.google.com/drive/folders/0B_lPnjyMN6-CamRRV0xPRmZNOFU?usp=sharing) and insert them into your `images` directory
 
 **Note: DO NOT use CSS `flex-box` or `grid` for this project (If you don't know what this is, no worries! You'll learn more about these techniques in the coming weeks!)**
