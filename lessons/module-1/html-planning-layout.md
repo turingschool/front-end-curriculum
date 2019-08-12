@@ -7,6 +7,7 @@ tags: html, layout, semantic
 ## Learning Goals
 
 * Explain the difference between block and inline elements
+* Wireframe a complex layout utilzing semantic HTML tags
 
 ## Vocabulary
 
@@ -44,9 +45,10 @@ All of the tags we discussed above have some kind of semantic meaning. Assistive
 
 Sometimes, however, you don't want a tag to have any meaning. Typically, this is when you just want to target a certain portion of the page with CSS or JavaScript and none of the semantic tags really apply.
 
-**Disclaimer**: There are many, many more semantic tags than the ones we're discussing today.
+Some think of `<span>` and `<div>` as the flavorless Jello of HTML tags: 
 
-Some think of `<span>` and `<div>` as the flavorless Jello of HTML tags; they don't have any meaning in and of themselves and they typically don't come with any built-in styling from the browser.
+- They don't have any meaning in and of themselves 
+- They typically don't come with any built-in styling from the browser.
 
 There is just one important difference between the two:
 
@@ -55,7 +57,7 @@ There is just one important difference between the two:
 
 We'll discuss these more in a later lesson when we talk about CSS.
 
-<div class="turn-and-talk">
+<div class="call-to-action">
     <h3>Turn & Talk</h3>
     <ul>
     <li>What is the difference between block and inline elements?</li>
@@ -64,14 +66,10 @@ We'll discuss these more in a later lesson when we talk about CSS.
 </div>
 
 
-
 ### Layout Structure
 
 As front-end developers, you'll use HTML to build layouts given to you by a designer or client. It's an interesting challenge that can seem overly simple, but how you structure your HTML can have a very real impact in how you have to write your CSS and even how you use Javascript. Remember, HTML is like the frame of a house -- it has to be stable and well thought through for everything to be stable!
 
-### Containing Elements, Semantics & Text
-
-HTML5 has a variety of _semantic tags_, or HTML tags that provide additional meaning through descriptive naming, available for us to use. These tags are an easy way to not only make our code more understandable and clear to other developers (and our future selves), but they are also a great way to incorporate basic accessibility into your HTML for users who may need to access your website in non-traditional ways.
 
 ### Planning a Layout
 
