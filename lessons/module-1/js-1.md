@@ -348,7 +348,7 @@ When this code is read, `makeStatements()` is "invoked", all three statements wi
   <ul>
     <li>Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.</li>
      <li>Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.</li>
-    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number]( http://frontend.turing.io/independent-study/random-numbers.html) to the console.</li>
+    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a <a href="http://frontend.turing.io/independent-study/random-numbers.html">random number</a>to the console.</li>
   </ul>
 </section>
 
@@ -411,11 +411,11 @@ return x + y / 3;
 
 <section class="call-to-action">
   <h3>You Do</h3>
-    <ol>
-      <li>Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.</li>
-      <li>Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</li>
-      <li>Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.</li>
-    </ol>
+  <ul>
+    <li>Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.</li>
+    <li>Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</li>
+    <li>Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.</li>
+  </ul>
 </section>
 
 ### Summary
