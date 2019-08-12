@@ -10,9 +10,21 @@ tags: html, introduction, practice
 * Identify and use attributes for appropriate elements
 * Understand the importance of writing semantic HTML
 
-## Prep
+<!-- ## Prep
 
-Students should spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome-dev-tools) resource before attending class.
+Students should spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome-dev-tools) resource before attending class. -->
+
+## Warm Up
+
+Open up the Chrome Dev Tools in your browser. In your notebook, jot down the answers to the following as you explore:
+- How did you open the Dev Tools?
+- How do you move the Dev Tools "dock" to the bottom or side?
+- How do you increase the size of the font in the Dev Tools?
+- How do you open the inspector tool?
+- How can you search for a specific HTML element in the HTML document? For example, `<nav>`.
+- How can you change the Dev Tool to dark or light mode?
+
+Now, share/compare discoveries with your partner. Be ready to share out your answers in the large group.
 
 ## Vocabulary
 
