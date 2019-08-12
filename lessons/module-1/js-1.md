@@ -136,9 +136,10 @@ When we write a very simple variable like this, it's called _declaring_ the vari
 - Use names that describe the kind of information you plan to assign the variable.
 - If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`.
 
-#### Your Turn (in the console)
-
-Declare 2 variables, one named "quantity" and one named "mythicalCreature"
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <p>Declare 2 variables, one named "quantity" and one named "mythicalCreature"</p>
+</section>
 
 ### Variable Values: Assignment
 
@@ -156,11 +157,16 @@ Let's test these additions in our console!
 - Step 2: call the variable
 - Step 3: dance for joy at seeing our assigned value of "Fred Rogers"
 
-#### Your Turn (in the console)
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <ul>
+    <li>Assign values to your "quantity" and "mythicalCreature" variables</li>
+     <li>WWhat data type did you assign as the value in your "quantity" and "mythicalCreature" variables?</li>
+    <li>Assign values to your "quantity" and "mythicalCreature" variables.</li>
+    <li>Create three more variables, and give them each different data types (numbers, strings, booleans)</li>
+  </ul>
+</section>
 
-* Assign values to your "quantity" and "mythicalCreature" variables.
-* What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
-* Create three more variables, and give them each different data types (numbers, strings, booleans)
 
 ### Using Variables Together
 
@@ -174,9 +180,11 @@ var creatureCount = quantity + mythicalCreature;
 
 We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature.  Looking at creatureCount, we'll notice the value is `"3 unicorns"`.  The reason this works even though the first value is a number and the second is a string, is a result of _type coercion_.  Javascript is essentially trying to help us by converting the number into a string so that they can combine the two together.
 
-#### Your Turn (in the console)
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <p>Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.</p>
+</section>
 
-Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
 
 ### Adding Variable Values to Strings
 
@@ -244,8 +252,11 @@ This expression results in 5
 
 In simpler terms, a statement performs some kind of action.  It does not return anything.  An expression produces a value and can be written wherever a value is expected.
 
-#### Your Turn (in your notebook)
-Write down in your own words what both a statement and expression are.  What is the difference between the two?
+<section class="call-to-action">
+  <h3>Your Turn (in your notebook)</h3>
+  <p>Write down in your own words what both a statement and expression are.  What is the difference between the two?</p>
+</section>
+
 
 ## Operators
 
@@ -257,9 +268,11 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
-#### Your Turn
+<section class="call-to-action">
+  <h3>Your Turn</h3>
+  <p>Practice writing out atleast one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.</p>
+</section>
 
-Practice writing out atleast one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.
 
 ## Conditionals
 
@@ -312,9 +325,11 @@ if (nextLocation === "home") {
 }
 ```
 
-#### Your Turn
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <p>Write a conditional that logs a different message based on your favorite kind of animal.</p>
+</section>
 
-Write a conditional that logs a different message based on your favorite kind of animal.
 
 ## Functions
 Functions are a way to group statements together to perform a specific task. Functions are reusable blocks of code. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
