@@ -308,7 +308,8 @@ Cross Origin Resource Sharing (CORS) is a protocol that prevents domains to make
 By default the CORS policy in express apps prevents you from making api calls from other domains. In order to allow api calls from other domains you need follow these two steps:
 
 1. Install cors as a dependency `npm install cors`
-2. Insert this config line into your server file: `app.use(cors());`
+2. Near the top of the file, pull in the dependency `const cors = require('cors');`
+3. Insert this config line into your server file: `app.use(cors());`
 
 Without it, you will get cors errors if you try to make a request from a react repo hosted at another domain. ie. trying to make requests from `http://localhost:3000` to `http://localhost:3001`
 
