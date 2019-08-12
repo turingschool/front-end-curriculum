@@ -181,7 +181,8 @@ Like, if you go to a site and it doesn't do anything... you probably forgot them
 
 ### Promises
 
-We spent some time going over promises this morning, so check out this promises implementation 
+You should be very familiar with Promises at this point. Here's an example of
+Promises in Nightmare.
 
 [Promise example here](https://github.com/rosshinkley/nightmare-examples/blob/master/docs/beginner/promises.md)
 
