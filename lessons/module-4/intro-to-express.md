@@ -219,7 +219,7 @@ app.post('/api/v1/pets', (request, response) => {
   const id = Date.now();
   const { pet } = request.body;
 
-  app.locals.pets.push(pet);
+  app.locals.pets.push({id, ...pet});
 
   response.status(201).json({ id, pet });
 });
