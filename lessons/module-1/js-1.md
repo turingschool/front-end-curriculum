@@ -342,14 +342,15 @@ makeStatements();
 
 When this code is read, `makeStatements()` is "invoked", all three statements within the function's body (those curly braces) get run, one line at a time.  What do you think will happen if we swap the 2nd and 3rd statements?
 
-#### Your Turn
-With the person across from you, create your own functions in the console:
-
-- Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.
-
-- Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
-
-- Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number]( http://frontend.turing.io/independent-study/random-numbers.html) to the console.
+<section class="call-to-action">
+  <h3>Your Turn</h3>
+  <p>With the person across from you, create your own functions in the console:</p>
+  <ul>
+    <li>Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.</li>
+     <li>Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.</li>
+    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number]( http://frontend.turing.io/independent-study/random-numbers.html) to the console.</li>
+  </ul>
+</section>
 
 ### Passing Information to a Function:
 Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_ in the function declaration. These are place holders that you identify with appropriately named labels inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as a means to pass values.
@@ -407,6 +408,15 @@ return false;
 return x;
 return x + y / 3;
 ```
+
+<section class="call-to-action">
+  <h3>You Do</h3>
+    <ol>
+      <li>Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.</li>
+      <li>Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</li>
+      <li>Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.</li>
+    </ol>
+</section>
 
 ### Summary
 1. What are the six primitive data types?
