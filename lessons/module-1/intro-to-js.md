@@ -24,8 +24,6 @@ In this lesson we'll cover:
 - `Concatenation` The binding of multiple strings together using the `+` string operator
 - `Interpolation`  - The process of injecting a variable directly into a string.
 - `Template literal` - Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
-- `Statement` An executable piece of code
-- `Expression` An executable piece of code that resolves to a single value, the result of which may be assigned to a variable.
 - `Operator` Symbols that are used to assign, compare, and perform operations
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 
@@ -217,27 +215,54 @@ This is very useful when we want to append data to our webpage, because it means
 
 One important thing to keep in mind is that template literals are not as widely [supported](https://caniuse.com/#feat=template-literals) as concatenation.
 
+## Statements
+
+A script is a series of instructions that a computer can follow one-by-one. Each individual instruction is known as a **statement**. Each statement in JavaScript is followed by a semicolon.
+
+Example statements:
+
+```javascript
+console.log('BOOM');
+alert('POW');
+```
+
+## Expressions
+
+An **expression** results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
+
+This expression results in "apple"
+
+`"apple"`
+
+This expression results in 5
+
+`2 + 3`
+
+### What is the difference?
+
+In simpler terms, a statement performs some kind of action. It does not return anything. An expression produces a value and can be written wherever a value is expected.
+
 ## Operators
 
 Expressions rely on operators to calculate their single value. There are 5 basic types of operators to get you started:
 
-1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment) assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
+1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment) assign a value to a variable. `var color = 'magenta';`
 2. [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic) perform basic math. `var addTwo = 2 + 2;`
 3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
 <section class="call-to-action">
-  <h3>Your Turn</h3>
-  <p>Practice writing out atleast one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.</p>
+### Your Turn
+
+Practice writing out at least one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.
 </section>
 
 ## Conditionals
 
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similary and allow us to take a certain path in our program.
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similarly and allow us to take a certain path in our program.
 
 To use conditionals, we first need to use expressions, operators, and statements.
-Let's head on over to [repl](https://repl.it) and practice writing them out there!
 
 ### Basic Conditional Structure
 
@@ -284,18 +309,30 @@ if (nextLocation === "home") {
 ```
 
 <section class="call-to-action">
-  <h3>Your Turn (in the console)</h3>
-  <p>Write a conditional that logs a different message based on your favorite kind of animal.</p>
+### Your Turn
+
+In your console, declare and assign a variable named "favoriteAnimal". Then, write a conditional that logs a different message based on your favorite kind of animal.
+
+**Tip:** You can use the `up arrow` in the Dev Tools console to search through previous commands you have run.
+
+Use the `up arrow` to avoid waiting time re-typing. Before you hit return, change the value assigned to "favoriteAnimal", to ensure your conditional is behaving as you expect.
 </section>
 
-### Summary
+### Wrap Up
+
+We've worked through a lot of content - some of which may be new, some is review. Let's take a minute to reflect.
+
+<section class="checks-for-understanding">
+### In Your Journal
 
 1. What are the six primitive data types?
 2. How are variables useful and what is an example of one that has a value assigned to it?
 3. Write out an example of string concatenation.  Now write that same example using a template literal.
 4. Write out the basic structure of an if/else conditional.
+5. Write down at least one question you have coming out of this lesson.
+</section>
 
 ### Additional Resources & Practice
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
+* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) lets you experiment more with these concepts.
