@@ -48,8 +48,8 @@ JavaScript can be _client-side_ and _server-side_, meaning that it can be used t
 It's a highly versatile and flexible language, and has become the most commonly used language of the web.
 
 Now that we know a little bit about JavaScript, let's talk about how to actually use it!
-
 ## Side Note: The console
+
 Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run Javascript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
 
 To open the console in Chrome, either:
@@ -129,6 +129,7 @@ We see that we have the variable keyword, and we've set the variable name to `my
 When we write a very simple variable like this, it's called _declaring_ the variable.
 
 ### Rules for Naming Variables
+
 - Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
 - Names can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
 - You cannot use keywords or reserved words (such as `var` or `for`).
@@ -149,7 +150,7 @@ Notice when we first create a variable, its value is _undefined_ because it does
 var excellentHuman = "Fred Rogers";
 ```
 
-Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and the variable value, the variable is considered _undefined_.
+Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the **assignment operator**, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and the variable value, the variable is considered _undefined_.
 
 Let's test these additions in our console!
 

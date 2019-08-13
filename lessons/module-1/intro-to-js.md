@@ -21,12 +21,9 @@ In this lesson we'll cover:
 - `Variable` A container for a value. The main building block for all programming
 - `Declare` Creating a new variable (distinct from assignment)
 - `Assignment` Assigning a value to a variable
-- `Type coercion` The process of converting a value from one type to another (such as a number to a string).
 - `Concatenation` The binding of multiple strings together using the `+` string operator
 - `Interpolation`  - The process of injecting a variable directly into a string.
 - `Template literal` - Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
-- `Statement` An executable piece of code
-- `Expression` An executable piece of code that resolves to a single value, the result of which may be assigned to a variable.
 - `Operator` Symbols that are used to assign, compare, and perform operations
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 
@@ -44,13 +41,15 @@ It's a highly versatile and flexible language, and has become the most commonly 
 
 Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
-## Side Note: The console
+<section class="note">
+### The Console
 
-Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run Javascript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
+Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run JavaScript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
+</section>
 
 To open the console in Chrome, either:
 * Click `View` > `Developer` > `Javascript Console`
-* Or use the hotkeys `command+option+J` / `command+option+I`
+* Or use the hotkeys `command + option + j` / `command + option + i`
 
 ## Data Types
 
@@ -64,47 +63,18 @@ Javascript has six primitive data types:
 - String
 - Symbol (new in ECMAScript 6 we do not need to worry about this one)
 
- Let's go over what each of these is.
+<section class="call-to-action">
+### Data Types Jigsaw
 
-### Null Data Type
+You're going to do some research on one of the 5 data types we are focusing on, then share out with the class. We'll follow this protocol:
+- **2 min:** independent research
+- **3 min:** table groups discuss findings, ask/answer questions
+- **3 min:** table group makes anchor chart to share takeaways
+  - Keep in mind: What are possible values? Examples? Does this data type get commonly confused with something else? Why/when would developers use it? Provide an example of it being used in code!
+- **30 sec - 1 min:** each table group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
+</section>
 
-* The datatype _null_ only has one value which is `null`.
-* Shows an intentional absence of a value
-* Often is used when creating a variable that could have a value later.
-
-### Undefined Data Type
-
-* The datatype _undefined_ only has one value which is `undefined`.
-* A variable which has not been assigned a value has a datatype of `undefined`.
-* A function returns `undefined` unless another value is returned.
-
-### Boolean Data Type
-
-* A boolean has one of two values: `true` or `false`.
-  * Can act like a light switch: it's either on or off.
-* Booleans can be very useful to help determine which part of a script should be run (as in conditionals, which we will talk about later).
-
-### Numeric Data Type
-
-* The numeric data type deals with all numbers.
-  * No need for commas EX:  three thousand four hundred and seventy five would be `3475`
-* Negatives and decimals (also called "floats") are written like `-3475` and `0.5`
-  * Unlike other programming languages, there is no distinction between integer and floating-point values
-* Important Note: _do not_ enclose a number data type in quotes.
-
-### String Data Type
-
-* The string data type handles letters and other characters.
-  * Always enclosed in quotes EX: `"I am a string!"`
-* Can use either single or double quotes to wrap a string
-  * Make sure opening and closing quotes match
-  * Be consistent throughout a project
-
-Strings can be used for any kind of text. We use them regularly to add text to a page.
-
-#### Your Turn
-
-Take a couple of minutes to pair up and explain these the following data types to your neighbor: `null`, `undefined`, `boolean`, `number`, and `string`. Take turns, and make sure both of you have a chance to explain, practicing correct vocabulary and talking about code. Also practice using your console to show the different data types.
+Without much context of _how_ to use this, this can feel a little abstract. Soon, we'll have a way to use these different data types, and having this vocabulary as a foundation will prove helpful.
 
 ## Variables in JavaScript
 
@@ -124,6 +94,15 @@ We see that we have the variable keyword, and we've set the variable name to `my
 
 When we write a very simple variable like this, it's called _declaring_ the variable.
 
+<section class="call-to-action">
+### Console Practice
+
+**Declare** 2 variables, one named "quantity" and one named "name".
+
+Then, **call** each variable by typing out its name, then hitting `return`. What is returned?
+</section>
+
+<section class="note">
 ### Rules for Naming Variables
 
 - Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
@@ -132,13 +111,9 @@ When we write a very simple variable like this, it's called _declaring_ the vari
 - All variables are case sensitive.
 - Use names that describe the kind of information you plan to assign the variable.
 - If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`.
-
-<section class="call-to-action">
-  <h3>Your Turn (in the console)</h3>
-  <p>Declare 2 variables, one named "quantity" and one named "mythicalCreature"</p>
 </section>
 
-### Variable Values: Assignment
+### Variables: Assigning Values
 
 Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `excellentHuman` variable:
 
@@ -150,20 +125,35 @@ Notice after our `var` keyword and our variable name, we have an equals sign, `=
 
 Let's test these additions in our console!
 
-- Step 1: declare a variable and it's value
+- Step 1: declare a variable and assign it a value
 - Step 2: call the variable
-- Step 3: dance for joy at seeing our assigned value of "Fred Rogers"
 
 <section class="call-to-action">
-  <h3>Your Turn (in the console)</h3>
-  <ul>
-    <li>Assign values to your "quantity" and "mythicalCreature" variables</li>
-     <li>WWhat data type did you assign as the value in your "quantity" and "mythicalCreature" variables?</li>
-    <li>Assign values to your "quantity" and "mythicalCreature" variables.</li>
-    <li>Create three more variables, and give them each different data types (numbers, strings, booleans)</li>
-  </ul>
+### Console Practice
+
+- Declare a new variable, "age", and assign it to a value.
+- Declare a new variable, "city", and assign it to a value.
+- Call both new variables to confirm they hold the value you believe they do
+- What data type did you assign as the value in your "age" and "city" variables?
+- Create three more variables, and give them each different data types (Number, String, Boolean)
+- Call each variable to confirm it holds the value you believe it does
 </section>
 
+### Variables: Re-assigning Values
+
+In the introduction to variables, the lesson said "`Variable` is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run."
+
+At times, you will want to change the value a variable holds. One real-world example is a users age. When a user signs up for the app and provides their birthday and age, they don't expect to have to go back in every year to inform the app they have reached their birthday and turned another year older; they expect the app to "know" that.
+
+Here's the syntax for re-assigning a variable:
+
+```javascript
+var age = 31;
+
+age = 32;
+```
+
+On the first line, we see the variable declaration and initial assignment. Below, we see `age = 31`. Syntactically, there are many similarities. The main difference is, **we do not use the keyword var**.
 
 ### Using Variables Together
 
@@ -175,21 +165,25 @@ var mythicalCreature = " unicorns";
 var creatureCount = quantity + mythicalCreature;
 ```
 
-We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature.  Looking at creatureCount, we'll notice the value is `"3 unicorns"`.  The reason this works even though the first value is a number and the second is a string, is a result of _type coercion_.  Javascript is essentially trying to help us by converting the number into a string so that they can combine the two together.
-
-<section class="call-to-action">
-  <h3>Your Turn (in the console)</h3>
-  <p>Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.</p>
-</section>
-
+We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature. Looking at creatureCount, we'll notice the value is `"3 unicorns"`. The reason this works even though the first value is a number and the second is a string, is a result of **type coercion**. JavaScript is essentially trying to help us by converting the number into a string so that we can combine the two together.
 
 ### Adding Variable Values to Strings
 
-There are two different ways to add values to strings.
+There are two different methods to add values to strings.
 
-#### 1. Via Concatenation
+<section class="call-to-action">
+### Partner Teach
 
-In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
+Between you and your partner, find out whose birthday comes earlier in the year.
+- Birthday earlier in the year partner: Concatenation
+- Birthday later in the year partner: Interpolation
+
+Take 3 minutes to read through the section you were assigned to, and implement it in your Dev Tools. When the timer goes off, you and your partner will walk each other through the method you read about.
+</section>
+
+#### 1. Concatenation
+
+In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called **concatenation**, which is a series of values linked together.
 
 Here's another example
 
@@ -200,12 +194,11 @@ var sentence = "I had a " + food + " for breakfast."
 
 In this instance, we're concatenating multiple values including two strings and a variable in order for the sentence to come out as `"I had a burrito for breakfast."`  This can make our string more dynamic depending on what value is in the variable.
 
-#### 2. Via Interpolation
+#### 2. Interpolation
 
-Another way of adding values to strings is through _template literals_.  Template literals are special strings that allow us to _interpolate_ information. They use backticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
+Another way of adding values to strings is through **template literals**.  Template literals are special strings that allow us to _interpolate_ information. They use back ticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
 
 We can concatenate or interpolate html tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
-
 
 ```javascript
 var quantity = 3;
@@ -224,7 +217,7 @@ One important thing to keep in mind is that template literals are not as widely 
 
 ## Statements
 
-A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a _statement_. Each statement in JavaScript is followed by a semicolon.
+A script is a series of instructions that a computer can follow one-by-one. Each individual instruction is known as a **statement**. Each statement in JavaScript is followed by a semicolon.
 
 Example statements:
 
@@ -235,7 +228,7 @@ alert('POW');
 
 ## Expressions
 
-An _expression_ results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
+An **expression** results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
 
 This expression results in "apple"
 
@@ -247,35 +240,29 @@ This expression results in 5
 
 ### What is the difference?
 
-In simpler terms, a statement performs some kind of action.  It does not return anything.  An expression produces a value and can be written wherever a value is expected.
-
-<section class="call-to-action">
-  <h3>Your Turn (in your notebook)</h3>
-  <p>Write down in your own words what both a statement and expression are.  What is the difference between the two?</p>
-</section>
-
+In simpler terms, a statement performs some kind of action. It does not return anything. An expression produces a value and can be written wherever a value is expected.
 
 ## Operators
 
 Expressions rely on operators to calculate their single value. There are 5 basic types of operators to get you started:
 
-1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment) assign a value to a variable. (hint: you've got these down already) `var color = 'magenta';`
+1. [Assignment operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Assignment) assign a value to a variable. `var color = 'magenta';`
 2. [Arithmetic operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Arithmetic) perform basic math. `var addTwo = 2 + 2;`
 3. [String operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String) combine strings. `var greeting = 'Hello! ' + 'Nice to meet you.';`
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
 <section class="call-to-action">
-  <h3>Your Turn</h3>
-  <p>Practice writing out atleast one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.</p>
+### Your Turn
+
+Practice writing out at least one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.
 </section>
 
 ## Conditionals
 
-Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similary and allow us to take a certain path in our program.
+Sometimes we want to perform an action based on some kind of condition. In English, we can say "If this thing is true, then do that." In JavaScript, conditionals are written very similarly and allow us to take a certain path in our program.
 
 To use conditionals, we first need to use expressions, operators, and statements.
-Let's head on over to [repl](https://repl.it) and practice writing them out there!
 
 ### Basic Conditional Structure
 
@@ -322,18 +309,30 @@ if (nextLocation === "home") {
 ```
 
 <section class="call-to-action">
-  <h3>Your Turn (in the console)</h3>
-  <p>Write a conditional that logs a different message based on your favorite kind of animal.</p>
+### Your Turn
+
+In your console, declare and assign a variable named "favoriteAnimal". Then, write a conditional that logs a different message based on your favorite kind of animal.
+
+**Tip:** You can use the `up arrow` in the Dev Tools console to search through previous commands you have run.
+
+Use the `up arrow` to avoid waiting time re-typing. Before you hit return, change the value assigned to "favoriteAnimal", to ensure your conditional is behaving as you expect.
 </section>
 
-### Summary
+### Wrap Up
+
+We've worked through a lot of content - some of which may be new, some is review. Let's take a minute to reflect.
+
+<section class="checks-for-understanding">
+### In Your Journal
 
 1. What are the six primitive data types?
 2. How are variables useful and what is an example of one that has a value assigned to it?
 3. Write out an example of string concatenation.  Now write that same example using a template literal.
 4. Write out the basic structure of an if/else conditional.
+5. Write down at least one question you have coming out of this lesson.
+</section>
 
 ### Additional Resources & Practice
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
+* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) lets you experiment more with these concepts.
