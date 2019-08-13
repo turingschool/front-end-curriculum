@@ -136,9 +136,10 @@ When we write a very simple variable like this, it's called _declaring_ the vari
 - Use names that describe the kind of information you plan to assign the variable.
 - If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`.
 
-#### Your Turn (in the console)
-
-Declare 2 variables, one named "quantity" and one named "mythicalCreature"
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <p>Declare 2 variables, one named "quantity" and one named "mythicalCreature"</p>
+</section>
 
 ### Variable Values: Assignment
 
@@ -156,11 +157,16 @@ Let's test these additions in our console!
 - Step 2: call the variable
 - Step 3: dance for joy at seeing our assigned value of "Fred Rogers"
 
-#### Your Turn (in the console)
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <ul>
+    <li>Assign values to your "quantity" and "mythicalCreature" variables</li>
+     <li>WWhat data type did you assign as the value in your "quantity" and "mythicalCreature" variables?</li>
+    <li>Assign values to your "quantity" and "mythicalCreature" variables.</li>
+    <li>Create three more variables, and give them each different data types (numbers, strings, booleans)</li>
+  </ul>
+</section>
 
-* Assign values to your "quantity" and "mythicalCreature" variables.
-* What data type did you assign as the value in your "quantity" and "mythicalCreature" variables?
-* Create three more variables, and give them each different data types (numbers, strings, booleans)
 
 ### Using Variables Together
 
@@ -174,9 +180,11 @@ var creatureCount = quantity + mythicalCreature;
 
 We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature.  Looking at creatureCount, we'll notice the value is `"3 unicorns"`.  The reason this works even though the first value is a number and the second is a string, is a result of _type coercion_.  Javascript is essentially trying to help us by converting the number into a string so that they can combine the two together.
 
-#### Your Turn (in the console)
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <p>Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.</p>
+</section>
 
-Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.
 
 ### Adding Variable Values to Strings
 
@@ -244,8 +252,11 @@ This expression results in 5
 
 In simpler terms, a statement performs some kind of action.  It does not return anything.  An expression produces a value and can be written wherever a value is expected.
 
-#### Your Turn (in your notebook)
-Write down in your own words what both a statement and expression are.  What is the difference between the two?
+<section class="call-to-action">
+  <h3>Your Turn (in your notebook)</h3>
+  <p>Write down in your own words what both a statement and expression are.  What is the difference between the two?</p>
+</section>
+
 
 ## Operators
 
@@ -257,9 +268,11 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 4. [Comparison operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Comparison) compare two values and return a __true__ or __false__. `var buy = 3 > 5; // Value of buy is false`
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
-#### Your Turn
+<section class="call-to-action">
+  <h3>Your Turn</h3>
+  <p>Practice writing out atleast one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.</p>
+</section>
 
-Practice writing out atleast one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.
 
 ## Conditionals
 
@@ -312,9 +325,11 @@ if (nextLocation === "home") {
 }
 ```
 
-#### Your Turn
+<section class="call-to-action">
+  <h3>Your Turn (in the console)</h3>
+  <p>Write a conditional that logs a different message based on your favorite kind of animal.</p>
+</section>
 
-Write a conditional that logs a different message based on your favorite kind of animal.
 
 ## Functions
 Functions are a way to group statements together to perform a specific task. Functions are reusable blocks of code. To create a function, you must give it a name and then write the statements required for the function to achieve its task inside the function's curly braces. Let's work through the pieces and parts of a function.
@@ -342,14 +357,15 @@ makeStatements();
 
 When this code is read, `makeStatements()` is "invoked", all three statements within the function's body (those curly braces) get run, one line at a time.  What do you think will happen if we swap the 2nd and 3rd statements?
 
-#### Your Turn
-With the person across from you, create your own functions in the console:
-
-- Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.
-
-- Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
-
-- Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number]( http://frontend.turing.io/independent-study/random-numbers.html) to the console.
+<section class="call-to-action">
+  <h3>Your Turn</h3>
+  <p>With the person across from you, create your own functions in the console:</p>
+  <ul>
+    <li>Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.</li>
+     <li>Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.</li>
+    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a <a href="http://frontend.turing.io/independent-study/random-numbers.html">random number</a> to the console.</li>
+  </ul>
+</section>
 
 ### Passing Information to a Function:
 Sometimes you need to give a function some information in order for it to do its job. You can give that function the information it needs by providing _parameters_ in the function declaration. These are place holders that you identify with appropriately named labels inside the parentheses of your named function. The words you use for your parameters act like variables INSIDE the function, which means they serve as a means to pass values.
@@ -407,6 +423,15 @@ return false;
 return x;
 return x + y / 3;
 ```
+
+<section class="call-to-action">
+  <h3>You Do</h3>
+  <ul>
+    <li>Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.</li>
+    <li>Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</li>
+    <li>Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.</li>
+  </ul>
+</section>
 
 ### Summary
 1. What are the six primitive data types?
