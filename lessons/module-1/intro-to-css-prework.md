@@ -114,4 +114,4 @@ IDs help us accomplish a similar goal as classes do. The difference is that IDs 
 }
 ```
 
-**Note the syntax:** to target an element by class, we preface the class name with a octothorp/pound/hashtag, `#`, in the CSS selector.
+**Note the syntax:** to target an element by id, we preface the class name with a octothorp/pound/hashtag, `#`, in the CSS selector.
