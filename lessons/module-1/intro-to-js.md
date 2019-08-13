@@ -165,7 +165,7 @@ var mythicalCreature = " unicorns";
 var creatureCount = quantity + mythicalCreature;
 ```
 
-We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature. Looking at creatureCount, we'll notice the value is `"3 unicorns"`. The reason this works even though the first value is a number and the second is a string, is a result of **type coercion**. JavaScript is essentially trying to help us by converting the number into a string so that we can combine the two together.
+We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature. Looking at creatureCount, we'll notice the value is `"3 unicorns"`. The reason this works even though the first value is a number and the second is a string, is a result of **type coercion**. JavaScript is essentially trying to help us by converting the number into a string so we can combine the two together.
 
 ### Adding Variable Values to Strings
 
@@ -185,11 +185,13 @@ Take 3 minutes to read through the section you were assigned to, and implement i
 
 In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called **concatenation**, which is a series of values linked together.
 
-Here's another example
+We can concatenate HTML tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
 
 ```javascript
-var food = "burrito";
-var sentence = "I had a " + food + " for breakfast."
+var quantity = 3;
+var mythicalCreature = "unicorns";
+
+var creatureCount = "<p>I have " + quantity + " very fancy " + mythicalCreature + "</p>"
 ```
 
 In this instance, we're concatenating multiple values including two strings and a variable in order for the sentence to come out as `"I had a burrito for breakfast."`  This can make our string more dynamic depending on what value is in the variable.
@@ -198,16 +200,12 @@ In this instance, we're concatenating multiple values including two strings and 
 
 Another way of adding values to strings is through **template literals**.  Template literals are special strings that allow us to _interpolate_ information. They use back ticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
 
-We can concatenate or interpolate html tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
+We can interpolate HTML tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
 
 ```javascript
 var quantity = 3;
 var mythicalCreature = "unicorns";
 
-// using concatenation
-var creatureCount = "<p>I have " + quantity + " very fancy " + mythicalCreature + "</p>"
-
-// using a template literal
 var creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 ```
 
