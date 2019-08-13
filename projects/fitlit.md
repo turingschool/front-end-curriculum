@@ -128,7 +128,7 @@ Where `someClassName` is the name of your class - like `UserRepository`. Read th
 ### Iteration 2 - Hydration
 
 **Data:**
-Using a similar class structure idea for a user and a user repository, create classes and methods that can calculate:
+Create classes and methods that can calculate:
 
 * For a user (identified by their `userID` - this is the same for all methods requiring a specific user's data), the average fluid ounces consumed per day for all time
 * For a user, how many fluid ounces they consumed for a specific day (identified by a date)
@@ -149,7 +149,7 @@ Keep the displays simple for now and make them fancy later. Do not use and addit
 ### Iteration 3 - Sleep
 
 **Data:**
-Using a similar class structure idea for a user and a user repository, create classes and methods that can calculate:
+Create classes and methods that can calculate:
 
 * For a user (identified by their `userID`), the average number of hours slept per day
 * For a user, their average sleep quality per day over all time
@@ -174,7 +174,7 @@ Items to add to the dashboard:
 ### Iteration 4 - Activity
 
 **Data:**
-Using a similar class structure idea for a user and a user repository, create classes and methods that can calculate:
+Create classes and methods that can calculate:
 
 * For a specific day (specified by a date), return the miles a user has walked based on their number of steps (use their `strideLength` to help calculate this)
 * For a user, (identified by their `userID`) how many minutes were they active for a given day (specified by a date)?
