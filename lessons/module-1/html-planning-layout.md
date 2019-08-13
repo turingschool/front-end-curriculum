@@ -59,8 +59,8 @@ We'll discuss these more in a later lesson when we talk about CSS.
 
 <div class="call-to-action">
 ### Turn & Talk
-* What is the difference between block and inline elements?</li>
-* Are `<img>`elements block or inline?`<a>` elements? Explain and/or prove it.
+* What is the difference between block and inline elements?
+* Are `<img>` elements block or inline? `<a>` elements? Explain and/or prove it.
 </div>
 
 
