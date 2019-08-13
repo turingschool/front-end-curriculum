@@ -202,13 +202,11 @@ Let's use this pen for practice
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 <section class="call-to-action">
-  <h3>Pair Practice</h3>
-  <ul>
-    <li>Add an input field with the `id` of "very-important-message" along with a button. When the user clicks on the button, it should set the `innerText` of the box to contents of the input field.</li>
-    <li>Add two inputs one for a CSS property and one for a value. When the user clicks the button, it should adjust that property on the box.</li>
-    <li>Here is an example of the second task <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif"></li>
-    <li>When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).</li>
-  </ul>
+### Pair Practice
+* Add an input field with the `id` of "very-important-message" along with a button. When the user clicks on the button, it should set the `innerText` of the box to contents of the input field.
+* Add two inputs one for a CSS property and one for a value. When the user clicks the button, it should adjust that property on the box.
+* Here is an example of the second task https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif
+* When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).
 </section>
 
 ### Summary
