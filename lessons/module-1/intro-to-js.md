@@ -45,7 +45,7 @@ It's a highly versatile and flexible language, and has become the most commonly 
 Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
 <section class="note">
-### The console
+### The Console
 
 Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run JavaScript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
 </section>
@@ -97,21 +97,23 @@ We see that we have the variable keyword, and we've set the variable name to `my
 
 When we write a very simple variable like this, it's called _declaring_ the variable.
 
-<!-- ### Rules for Naming Variables
-
-- Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
-- Names can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
-- You cannot use keywords or reserved words (such as `var` or `for`).
-- All variables are case sensitive.
-- Use names that describe the kind of information you plan to assign the variable.
-- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`. -->
-
 <section class="call-to-action">
 ### Console Practice
 
 **Declare** 2 variables, one named "quantity" and one named "name".
 
 Then, **call** each variable by typing out its name, then hitting `return`. What is returned?
+</section>
+
+<section class="note">
+### Rules for Naming Variables
+
+- Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
+- Names can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
+- You cannot use keywords or reserved words (such as `var` or `for`).
+- All variables are case sensitive.
+- Use names that describe the kind of information you plan to assign the variable.
+- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`.
 </section>
 
 ### Variables: Assigning Values
@@ -141,6 +143,20 @@ Let's test these additions in our console!
 </section>
 
 ### Variables: Re-assigning Values
+
+In the introduction to variables, the lesson said "`Variable` is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run."
+
+At times, you will want to change the value a variable holds. One real-world example is a users age. When a user signs up for the app and provides their birthday and age, they don't expect to have to go back in every year to inform the app they have reached their birthday and turned another year older; they expect the app to "know" that.
+
+Here's the syntax for re-assigning a variable:
+
+```javascript
+var age = 31;
+
+age = 32;
+```
+
+On the first line, we see the variable declaration and initial assignment. Below, we see `age = 31`. Syntactically, there are many similarities. The main difference is, **we do not use the keyword var**.
 
 ### Using Variables Together
 
