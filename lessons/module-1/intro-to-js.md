@@ -114,7 +114,7 @@ When we write a very simple variable like this, it's called _declaring_ the vari
 Then, **call** each variable by typing out its name, then hitting `return`. What is returned?
 </section>
 
-### Variable Values: Assignment
+### Variables: Assigning Values
 
 Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `excellentHuman` variable:
 
@@ -126,20 +126,21 @@ Notice after our `var` keyword and our variable name, we have an equals sign, `=
 
 Let's test these additions in our console!
 
-- Step 1: declare a variable and it's value
+- Step 1: declare a variable and assign it a value
 - Step 2: call the variable
-- Step 3: dance for joy at seeing our assigned value of "Fred Rogers"
 
 <section class="call-to-action">
-  <h3>Your Turn (in the console)</h3>
-  <ul>
-    <li>Assign values to your "quantity" and "mythicalCreature" variables</li>
-     <li>WWhat data type did you assign as the value in your "quantity" and "mythicalCreature" variables?</li>
-    <li>Assign values to your "quantity" and "mythicalCreature" variables.</li>
-    <li>Create three more variables, and give them each different data types (numbers, strings, booleans)</li>
-  </ul>
+### Console Practice
+
+- Declare a new variable, "age", and assign it to a value.
+- Declare a new variable, "city", and assign it to a value.
+- Call both new variables to confirm they hold the value you believe they do
+- What data type did you assign as the value in your "age" and "city" variables?
+- Create three more variables, and give them each different data types (Number, String, Boolean)
+- Call each variable to confirm it holds the value you believe it does
 </section>
 
+### Variables: Re-assigning Values
 
 ### Using Variables Together
 
