@@ -71,8 +71,8 @@ The DOM has been updated to the following:
 ```
 
 <section class="call-to-action">
-  <h3>Your Turn</h3>
-  <p>Grab the first paragraph element and change the text to 'The original paragraph'.</p>
+### Your Turn
+* Grab the first paragraph element and change the text to 'The original paragraph'.
 </section>
 
 ### .innerText vs .innerHTML vs .textContent
@@ -141,15 +141,12 @@ Let's take a look at the syntax and then we'll talk about what's happening.
   - The type of event we're interested in listening for.
   - A function that should be called whenever that event happens.
 
-### Pair Practice
 <section class="call-to-action">
-  <h3>Pair Practice</h3>
-  <ul>
-    <li>Take the JavaScript that you wrote during the previous pair practice session.</li>
-     <li>Add a `<button>` to the HTML markup of the page.</li>
-    <li>Add an event listener to that button.</li>
-    <li>When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).</li>
-  </ul>
+### Pair Practice
+* Take the JavaScript that you wrote during the previous pair practice session.
+* Add a `<button>` to the HTML markup of the page.
+* Add an event listener to that button.
+* When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).
 </section>
 
 
