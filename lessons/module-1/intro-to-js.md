@@ -110,7 +110,7 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 - You cannot use keywords or reserved words (such as `var` or `for`).
 - All variables are case sensitive.
 - Use names that describe the kind of information you plan to assign the variable.
-- If your variable is made up of more than one word, then use camel case for every word AFTER the first word, which should be lower case ie. `thisIsMyVariableName`.
+- If your variable is made up of more than one word, then use [camelCase](https://en.wikipedia.org/wiki/Camel_case) for every word AFTER the first word, which should be lower case i.e., `thisIsMyVariableName`.
 </section>
 
 ### Variables: Assigning Values
