@@ -49,12 +49,15 @@ It's a highly versatile and flexible language, and has become the most commonly 
 
 Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
-## Side Note: The console
-Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run Javascript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
+<section class="note">
+### The console
+
+Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run JavaScript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
+</section>
 
 To open the console in Chrome, either:
 * Click `View` > `Developer` > `Javascript Console`
-* Or use the hotkeys `command+option+J` / `command+option+I`
+* Or use the hotkeys `command + option + j` / `command + option + i`
 
 ## Data Types
 
@@ -68,43 +71,16 @@ Javascript has six primitive data types:
 - String
 - Symbol (new in ECMAScript 6 we do not need to worry about this one)
 
- Let's go over what each of these is.
+<section class="call-to-action">
+### Data Types Jigsaw
 
-### Null Data Type
-
-* The datatype _null_ only has one value which is `null`.
-* Shows an intentional absence of a value
-* Often is used when creating a variable that could have a value later.
-
-### Undefined Data Type
-
-* The datatype _undefined_ only has one value which is `undefined`.
-* A variable which has not been assigned a value has a datatype of `undefined`.
-* A function returns `undefined` unless another value is returned.
-
-### Boolean Data Type
-
-* A boolean has one of two values: `true` or `false`.
-  * Can act like a light switch: it's either on or off.
-* Booleans can be very useful to help determine which part of a script should be run (as in conditionals, which we will talk about later).
-
-### Numeric Data Type
-
-* The numeric data type deals with all numbers.
-  * No need for commas EX:  three thousand four hundred and seventy five would be `3475`
-* Negatives and decimals (also called "floats") are written like `-3475` and `0.5`
-  * Unlike other programming languages, there is no distinction between integer and floating-point values
-* Important Note: _do not_ enclose a number data type in quotes.
-
-### String Data Type
-
-* The string data type handles letters and other characters.
-  * Always enclosed in quotes EX: `"I am a string!"`
-* Can use either single or double quotes to wrap a string
-  * Make sure opening and closing quotes match
-  * Be consistent throughout a project
-
-Strings can be used for any kind of text. We use them regularly to add text to a page.
+You're going to do some research on one of the 5 data types we are focusing on, then share out with the class. We'll follow this protocol:
+- **2 min:** independent research
+- **3 min:** table groups discuss findings, ask/answer questions
+- **3 min:** table group makes anchor chart to share takeaways
+  - Keep in mind: What are possible values? Examples? Does this data type get commonly confused with something else? Why/when would developers use it? Provide an example of it being used in code!
+- **30 sec - 1 min:** each table group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
+</section>
 
 #### Your Turn
 
@@ -129,6 +105,7 @@ We see that we have the variable keyword, and we've set the variable name to `my
 When we write a very simple variable like this, it's called _declaring_ the variable.
 
 ### Rules for Naming Variables
+
 - Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
 - Names can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
 - You cannot use keywords or reserved words (such as `var` or `for`).
