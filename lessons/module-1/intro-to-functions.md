@@ -46,13 +46,11 @@ makeStatements();
 When this code is read, `makeStatements()` is "invoked", all three statements within the function's body (those curly braces) get run, one line at a time.  What do you think will happen if we swap the 2nd and 3rd statements?
 
 <section class="call-to-action">
-  <h3>Your Turn</h3>
-  <p>With the person across from you, create your own functions in the console:</p>
-  <ul>
-    <li>Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.</li>
-     <li>Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.</li>
-    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number]( http://frontend.turing.io/independent-study/random-numbers.html) to the console.</li>
-  </ul>
+### Your Turn
+With the person across from you, create your own functions in the console:
+* Write a function that logs to the console a message of "YO!", and then logs a sum of five different integers.
+* Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
+* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number](http://frontend.turing.io/independent-study/random-numbers.html) to the console.
 </section>
 
 ### Passing Information to a Function:
@@ -94,13 +92,17 @@ function addTwoNumbers(num1, num2) {
 }
 ```
 
-Notice in the last example that when the `return` statement is called in a function, it ends function execution (the following lines do not run), and it specifies a value to be returned to the function caller.  If the expression is omitted, _undefined_ is returned instead.  Here is the basic structure:
+Notice in the last example that when the `return` statement is called in a function, it ends function execution (the following lines do not run), and it specifies a value to be returned to the function caller. Here is the basic structure:
 
 ```javascript
 // This is the formula:
 return [expression];
 // The expression to return. If the return is omitted, undefined is returned instead. The [] are meant to show that the expression is dynamic.
 ```
+<section class="note">
+### Note
+If the expression is omitted/there is no return statement, `undefined` is returned instead.
+</section>
 
 The following return statements are all examples that would break function execution:
 
@@ -113,15 +115,16 @@ return x + y / 3;
 ```
 
 <section class="call-to-action">
-  <h3>You Do</h3>
-    <ol>
-      <li>Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.</li>
-      <li>Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</li>
-      <li>Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.</li>
-    </ol>
+### You Do
+* Create a function called `saySomething` that requires no parameters. This function should return a message of your choice.
+* Create a function called `showFavorites` that requires three parameters - a food, a movie, and an animal. Your function should return a string that uses either concatenation or interpolation to return the three favorite things in a string.</
+* Create a function called `calculateAge` that takes a single parameter - a year. Your function should return the difference in years from the birth year from our current year, 2019.
+
+If you finish early, try writing tackling [these functions](https://www.teaching-materials.org/javascript/exercises/functions)!
 </section>
 
 ### Additional Resources & Practice
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
 * [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
+
