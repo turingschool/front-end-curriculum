@@ -21,7 +21,6 @@ In this lesson we'll cover:
 - `Variable` A container for a value. The main building block for all programming
 - `Declare` Creating a new variable (distinct from assignment)
 - `Assignment` Assigning a value to a variable
-- `Type coercion` The process of converting a value from one type to another (such as a number to a string).
 - `Concatenation` The binding of multiple strings together using the `+` string operator
 - `Interpolation`  - The process of injecting a variable directly into a string.
 - `Template literal` - Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
@@ -168,21 +167,25 @@ var mythicalCreature = " unicorns";
 var creatureCount = quantity + mythicalCreature;
 ```
 
-We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature.  Looking at creatureCount, we'll notice the value is `"3 unicorns"`.  The reason this works even though the first value is a number and the second is a string, is a result of _type coercion_.  Javascript is essentially trying to help us by converting the number into a string so that they can combine the two together.
-
-<section class="call-to-action">
-  <h3>Your Turn (in the console)</h3>
-  <p>Make 4 new variables. Assign values with numeric data types to two of them, and string data types to the others. See what happens when you combine the two numeric variables together vs what happens when you combine the two string variables.</p>
-</section>
-
+We have a variable called "creatureCount" and assign the value as our quantity and our mythicalCreature. Looking at creatureCount, we'll notice the value is `"3 unicorns"`. The reason this works even though the first value is a number and the second is a string, is a result of **type coercion**. JavaScript is essentially trying to help us by converting the number into a string so that we can combine the two together.
 
 ### Adding Variable Values to Strings
 
-There are two different ways to add values to strings.
+There are two different methods to add values to strings.
 
-#### 1. Via Concatenation
+<section class="call-to-action">
+### Partner Teach
 
-In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called _concatenation_, which is a series of values linked together.
+Between you and your partner, find out whose birthday comes earlier in the year.
+- Birthday earlier in the year partner: Concatenation
+- Birthday later in the year partner: Interpolation
+
+Take 3 minutes to read through the section you were assigned to, and implement it in your Dev Tools. When the timer goes off, you and your partner will walk each other through the method you read about.
+</section>
+
+#### 1. Concatenation
+
+In the example above, we used a `+` as a string operator to combine the values of two different variables. This is called **concatenation**, which is a series of values linked together.
 
 Here's another example
 
@@ -193,12 +196,11 @@ var sentence = "I had a " + food + " for breakfast."
 
 In this instance, we're concatenating multiple values including two strings and a variable in order for the sentence to come out as `"I had a burrito for breakfast."`  This can make our string more dynamic depending on what value is in the variable.
 
-#### 2. Via Interpolation
+#### 2. Interpolation
 
-Another way of adding values to strings is through _template literals_.  Template literals are special strings that allow us to _interpolate_ information. They use backticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
+Another way of adding values to strings is through **template literals**.  Template literals are special strings that allow us to _interpolate_ information. They use back ticks instead of normal quotes and use a combination of a dollar sign followed by curly braces. ie. ``${quantity} ${mythicalCreature}``
 
 We can concatenate or interpolate html tags, text, numbers, and variable values. Let's revisit our example above to create a more readable phrase as the value of our creatureCount variable:
-
 
 ```javascript
 var quantity = 3;
@@ -214,39 +216,6 @@ var creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
 This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and add the data from our variable.
 
 One important thing to keep in mind is that template literals are not as widely [supported](https://caniuse.com/#feat=template-literals) as concatenation.
-
-## Statements
-
-A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a _statement_. Each statement in JavaScript is followed by a semicolon.
-
-Example statements:
-
-```javascript
-console.log('BOOM');
-alert('POW');
-```
-
-## Expressions
-
-An _expression_ results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
-
-This expression results in "apple"
-
-`"apple"`
-
-This expression results in 5
-
-`2 + 3`
-
-### What is the difference?
-
-In simpler terms, a statement performs some kind of action.  It does not return anything.  An expression produces a value and can be written wherever a value is expected.
-
-<section class="call-to-action">
-  <h3>Your Turn (in your notebook)</h3>
-  <p>Write down in your own words what both a statement and expression are.  What is the difference between the two?</p>
-</section>
-
 
 ## Operators
 
