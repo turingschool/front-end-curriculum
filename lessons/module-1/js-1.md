@@ -48,16 +48,13 @@ JavaScript can be _client-side_ and _server-side_, meaning that it can be used t
 It's a highly versatile and flexible language, and has become the most commonly used language of the web.
 
 Now that we know a little bit about JavaScript, let's talk about how to actually use it!
+## Side Note: The console
 
-<section class="note">
-### The console
-
-Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run JavaScript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
-</section>
+Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run Javascript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
 
 To open the console in Chrome, either:
 * Click `View` > `Developer` > `Javascript Console`
-* Or use the hotkeys `command + option + j` / `command + option + i`
+* Or use the hotkeys `command+option+J` / `command+option+I`
 
 ## Data Types
 
@@ -71,16 +68,43 @@ Javascript has six primitive data types:
 - String
 - Symbol (new in ECMAScript 6 we do not need to worry about this one)
 
-<section class="call-to-action">
-### Data Types Jigsaw
+ Let's go over what each of these is.
 
-You're going to do some research on one of the 5 data types we are focusing on, then share out with the class. We'll follow this protocol:
-- **2 min:** independent research
-- **3 min:** table groups discuss findings, ask/answer questions
-- **3 min:** table group makes anchor chart to share takeaways
-  - Keep in mind: What are possible values? Examples? Does this data type get commonly confused with something else? Why/when would developers use it? Provide an example of it being used in code!
-- **30 sec - 1 min:** each table group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
-</section>
+### Null Data Type
+
+* The datatype _null_ only has one value which is `null`.
+* Shows an intentional absence of a value
+* Often is used when creating a variable that could have a value later.
+
+### Undefined Data Type
+
+* The datatype _undefined_ only has one value which is `undefined`.
+* A variable which has not been assigned a value has a datatype of `undefined`.
+* A function returns `undefined` unless another value is returned.
+
+### Boolean Data Type
+
+* A boolean has one of two values: `true` or `false`.
+  * Can act like a light switch: it's either on or off.
+* Booleans can be very useful to help determine which part of a script should be run (as in conditionals, which we will talk about later).
+
+### Numeric Data Type
+
+* The numeric data type deals with all numbers.
+  * No need for commas EX:  three thousand four hundred and seventy five would be `3475`
+* Negatives and decimals (also called "floats") are written like `-3475` and `0.5`
+  * Unlike other programming languages, there is no distinction between integer and floating-point values
+* Important Note: _do not_ enclose a number data type in quotes.
+
+### String Data Type
+
+* The string data type handles letters and other characters.
+  * Always enclosed in quotes EX: `"I am a string!"`
+* Can use either single or double quotes to wrap a string
+  * Make sure opening and closing quotes match
+  * Be consistent throughout a project
+
+Strings can be used for any kind of text. We use them regularly to add text to a page.
 
 #### Your Turn
 
@@ -126,7 +150,7 @@ Notice when we first create a variable, its value is _undefined_ because it does
 var excellentHuman = "Fred Rogers";
 ```
 
-Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and the variable value, the variable is considered _undefined_.
+Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the **assignment operator**, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and the variable value, the variable is considered _undefined_.
 
 Let's test these additions in our console!
 
