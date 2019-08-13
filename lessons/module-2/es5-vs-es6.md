@@ -13,13 +13,28 @@ module: 2
 
 Up until now, you've mostly been writing ECMAScript 5. (You can read more about ECMAScript [here](https://medium.freecodecamp.org/whats-the-difference-between-javascript-and-ecmascript-cba48c73a2b5).)
 
-ES5 is comfortable and familiar, but we ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
+ES5 is comfortable and familiar, but ES6 gives us a lot of great [new features](http://es6-features.org/#Constants), which we'll start learning about here.
+
+## Template Literals
+
+Constructing strings while interpolating variables:
+
+```js
+// es5 
+var name = 'Brittany';
+var greeting = 'Hello' + name + '!';
+
+// es6
+var name = 'Brittany';
+var greeting = `Hello ${name}!`;
+```
+
 
 ## Scope
 
 ### Block Scope
 
-We're familiar with global and function scope. <S></S>cope is literally the scope in which a variable or value can be accessed.
+We're familiar with global and function scope. Scope is literally the area of code in which a variable or value can be accessed.
 
 We already know that variables declared (using the keyword `var`) inside of a function will remain scoped to that function. In other words, it won't be accessible outside of the function.
 
@@ -70,7 +85,14 @@ callbacks[2]() === 4
 
 The major differences are:
 * using the keyword `let` instead of `var` in the `for` loop, which will remain scoped to that block
-* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally
+* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally.
+
+
+### Hoisting
+
+Another difference between `var` vs. `let` and `const` is that variables declared with let/const will not respond to hoisting in the same way `var` does. Instead, if you try to access a variable declared with `let` or `const` before it's declared, you will get a `ReferenceError: Cannot access <variableName> before initialization`.
+
+
 
 **The differences between let and const:**
 
@@ -81,6 +103,8 @@ If an array or object is declared using the keyword `const`, the contents of tha
 #### Turn and Talk
 
 What are var, let, and const similar? How are they different?
+
+
 
 ## Arrow Functions
 
@@ -94,22 +118,22 @@ We can map over that array to create new arrays of `odds`, `pairs`, and `nums`:
 
 ```
 // es5 syntax examples
-var odds = evens.map(function (v) { 
-  return v + 1; 
+var odds = evens.map(function (num) { 
+  return num + 1; 
 });
 
-var pairs = evens.map(function (v) {   
-  return { even: v, odd: v + 1 }; 
+var pairs = evens.map(function (num) {   
+  return { even: num, odd: num + 1 }; 
 });
 
-var nums = evens.map(function (v, i) { 
-  return v + i; 
+var nums = evens.map(function (num, i) { 
+  return num + i; 
 });
 
 var fives = [];
-nums.forEach(function (v) {
-  if (v % 5 === 0) {
-    fives.push(v);
+nums.forEach(function (num) {
+  if (num % 5 === 0) {
+    fives.push(num);
   }
 });
 ```
@@ -117,22 +141,22 @@ nums.forEach(function (v) {
 Compare that to arrow function syntax:
 
 ```
-var odds = evens.map(v => 
-  v + 1
+var odds = evens.map(num => 
+  num + 1
 );
 
-var pairs = evens.map(v => 
-  ({ even: v, odd: v + 1 })
+var pairs = evens.map(num => 
+  ({ even: num, odd: num + 1 })
 );
 
-var nums = evens.map((v, i) => 
-  v + i
+var nums = evens.map((num, i) => 
+  num + i
 );
 
 var fives = [];
-nums.forEach(v => {  
-  if (v % 5 === 0) {
-    fives.push(v)
+nums.forEach(num => {  
+  if (num % 5 === 0) {
+    fives.push(num)
   }
 });
 ```
@@ -159,6 +183,7 @@ function sayHi() {
 // es6 syntax
 const sayHi = () => console.log('Hi!');
 ```
+
 #### Turn and Talk
 
 What are the benefits of using arrow functions over function declarations?
@@ -176,12 +201,8 @@ Consider the following code:
 ```
 // es5
 function f (x, y, z) {
-    if (y === undefined) {
-        y = 7;
-    }
-    if (z === undefined) {
-        z = 42;
-    }
+    y = y || 7
+    z = z || 42
     return x + y + z;
 };
 

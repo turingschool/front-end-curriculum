@@ -1,19 +1,40 @@
-button {
-  background-color: #F9F9F9;
+%button-shared {
+  font-family: $bold-copy;
+  font-size: 0.9em;
   border: none;
-  border-radius: 2px;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
-  padding: 20px 15px;
-  margin: 10px;
-  font-size: 1.25em;
-  color: #5F7D99;
+  border-radius: 50px;
+  display: inline-block;
+  text-transform: uppercase;
+  padding: 18px 30px 12px;
+  margin: 5px;
 
   &:hover {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
   }
 }
 
-button.active {
-  background-color: #E0E0E0;
-  border: 1px solid #AEAEAE;
+.btn-dark {
+  @extend %button-shared;
+  background-color: $dark-gray;
+  color: $light-gray;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.btn-dark.active {
+  background-color: $turing-secondary;
+  color: $turing-primary;
+}
+
+.btn-light {
+  @extend %button-shared;
+  background-color: $light-gray;
+  color: $dark-gray;
+}
+
+.btn-light.active {
+  background-color: $turing-primary;
+  color: $turing-secondary;
 }

@@ -4,39 +4,43 @@ title: Lesson Plans
 ---
 
 <section>
-  <button class="module-selector" data-module="1">Module 1</button>
-  <button class="module-selector" data-module="2">Module 2</button>
-  <button class="module-selector" data-module="3">Module 3</button>
-  <button class="module-selector" data-module="4">Module 4</button>
-  <button class="module-selector" data-module="0">Show All</button>
+  <button class="btn btn-dark module-selector" data-module="1">Module 1</button>
+  <button class="btn btn-dark module-selector" data-module="2">Module 2</button>
+  <button class="btn btn-dark module-selector" data-module="3">Module 3</button>
+  <button class="btn btn-dark module-selector" data-module="4">Module 4</button>
+  <button class="btn btn-dark module-selector" data-module="0">Show All</button>
 </section>
 
-<section class="lesson-container" data-module="1" style="display:none">
+<section class="module-content" data-module="1" style="display:none">
   <h2>Module 1 Lessons</h2>
+  <p class="mod-description">Module 1 focuses on building a foundation for Front End Engineering and some of the tools and processes necessary for development. Students will learn to write semantic HTML, build responsive layouts, and write clean, refactored JavaScript that utilizes DOM manipulation, Object-Oriented Programming concepts, and Test-Driven Development. Projects will reinforce lesson concepts by emphasizing Object-Oriented Programming, comp recreation including responsive design, and clean, readable code.</p>
 
   <h3>Syllabus</h3>
   <ul>
     <li class="lesson"><a href="module-1/syllabus-overview.html">Overview &amp; Expectations</a></li>
-    <li class="lesson"><a href="module-1/syllabus-weekly-detail.html">Weekly Detail </a></li>
     <li class="lesson"><a href="module-1/syllabus-eval-progression.html">Evaluation &amp; Skills Progression</a></li>
+    <li class="lesson"><a href="https://docs.google.com/document/d/1eb1H7GsfsD7vFP1Bx7UWyVOeltZ9ng_HtLr7R-_fCJg/edit?ts=5c1d55a1">Portfolio Presentations</a></li>
     <li class="lesson"><a href="https://docs.google.com/presentation/d/19Oyx9AS-9Y13RhtCjLreHZxTmGSq30GkBU-H1SyWqAU/present?usp=sharing">FEE Program Orientation</a> (google slides)</li>
   </ul>
 
   <h3>HTML and CSS</h3>
   <ul>
-    <li class="lesson"><a href="module-1/html-1.html">HTML I: Structure, Semantics, and FPO</a></li>
+    <li class="lesson"><a href="module-1/intro-to-html.html">Intro to HTML</a></li>
+    <li class="lesson"><a href="module-1/html-planning-layout.html">HTML: Planning a Layout</a></li>
     <li class="lesson"><a href="module-1/html-semantic-element-review.html">HTML Review Workshop: Structure, Semantics</a></li>
-    <li class="lesson"><a href="module-1/css-1.html">CSS I: Structure, Box Model, and Positioning</a></li>
+    <li class="lesson"><a href="module-1/intro-to-css.html">Intro to CSS</a></li>
+    <li class="lesson"><a href="module-1/css-layout.html">CSS: Layout</a></li>
     <li class="lesson"><a href="module-1/css-2.html">CSS Jigsaw</a></li>
-    <li class="lesson"><a href="module-1/intro-responsive-refactor.html" target="_blank">Intro To Responsive Layouts - Refactor</a></li>
+    <li class="lesson"><a href="module-1/intro-to-responsive.html" target="_blank">Intro To Responsive Layouts</a></li>
     <li class="lesson"><a href="https://github.com/turingschool-examples/css-layout-challenges" target="_blank">CSS Layout Challenges</a></li>
     <li class="lesson"><a href="module-1/reset-vs-normalize.html">Reset vs Normalize CSS Files</a></li>
-    <li class="lesson"><a href="module-1/introduction-to-flexbox.html">Introduction to Flexbox</a></li>
+    <li class="lesson"><a href="module-1/intro-to-flexbox.html">Introduction to Flexbox</a> | <a href="module-1/intro-to-flexbox-slides.html">Slides</a></li>
     <li class="lesson"><a href="module-1/introduction-to-grid.html">Introduction to Grid</a></li>
     <li class="lesson"><a href="module-1/css-transitions-transformations">CSS Transitions, Transformations, and Animations</a></li>
     <li class="lesson"><a href="https://github.com/turingschool-examples/responsive-rescue">Unicorn Rescue</a></li>
     <li class="lesson"><a href="module-1/html-breakout.html">HTML Accessibility Breakout Session</a></li>
     <li class="lesson"><a href="module-1/html-css-workshop.html">HTML and CSS Workshop</a></li>
+    <li class="lesson"><a href="module-1/breaking-down-a-spec.html">Approaching a New Spec</a></li>
   </ul>
 
   <h3>Javascript</h3>
@@ -46,18 +50,15 @@ title: Lesson Plans
     <li class="lesson"><a href="module-1/js-3-dom-manipulation.html">JS III: Introduction to DOM Manipulation</a></li>
     <li class="lesson"><a href="module-1/js-4.html">JS IV: Objects, `this`, Classes, & Instances</a></li>
     <li class="lesson"><a href="module-1/javascript-playground.html">JavaScript Playground</a></li>
-    <li class="lesson"><a href="module-1/jquery-jigsaw.html">jQuery Jigsaw</a></li>
-    <li class="lesson"><a href="module-1/introduction-to-jquery.html">jQuery Intro - DOM Traversal, Manipulation, and Events</a></li>
     <li class="lesson"><a href="module-1/json-and-localstorage.html">localStorage and JSON</a></li>
     <li class="lesson"><a href="https://github.com/turingschool-examples/debugger-intro">Debugging Javascript</a></li>
     <li class="lesson"><a href="module-1/event-bubbling-and-delegation.html">Event Bubbling and Delegation</a></li>
     <li class="lesson"><a href="module-1/introduction-to-testing-javascript.html">Introduction to Unit Testing JavaScript</a></li>
     <li class="lesson"><a href="module-1/intro-to-array-prototype-methods.html">Intro to Array Prototype Methods</a></li>
-    <!-- <li class="lesson"><a href="module-1/array-prototype-iteration-methods.html">Array Prototype Iteration Methods</a></li> -->
     <li class="lesson"><a href="https://github.com/mdn/advanced-js-fundamentals-ck/blob/gh-pages/tutorials/02-functions/02-what-is-this.md">What is <code>this</code>?</a></li>
-    <li class="lesson"><a href="module-1/return-and-srp.html">Return Statements and SRP</a></li>
     <li class="lesson"><a href="module-1/javascript-workshop-1.html">Javascript Workshop</a></li>
     <li class="lesson"><a href="module-1/javascript-workshop-2.html">Javascript Workshop Advanced</a></li>
+    <li class="lesson"><a href="module-1/refactor.html">Refactor Workshop</a></li>
   </ul>
 
   <h3>Git and Github</h3>
@@ -80,44 +81,28 @@ title: Lesson Plans
     <li class="lesson"><a href="module-1/getting-around-in-the-terminal.html">Introduction to the Terminal</a></li>
   </ul>
 
-  <h3>Community</h3>
-  <ul>
-    <li class="lesson"><a href="module-1/personal-goal-setting.html">Personal Goal Setting</a></li>
-    <li class="lesson"><a href="https://github.com/turingschool/portfolios">End of Module Turing Portfolios</a></li>
-  </ul>
-
-  <h3>Professional Development</h3>
-  <ul>
-    <li><a href="https://github.com/turingschool/backend-curriculum-site/blob/gh-pages/professional_development/module_one/identity_essentials.markdown">M1 Identity Essentials</a></li>
-  </ul>
-
-    <!-- <li class="lesson"><a href="debugging-with-devtools.html">Debugging with Dev Tools</a></li> -->
     <!-- <li class="lesson"><a href="https://github.com/turingschool-examples/responsive-layout-challenges" target="_blank">Responsive Layout Challenges</a></li> -->
-
-  <hr/>
 </section>
 
 
-
-
-
-
-<section class="lesson-container" data-module="2" style="display:none">
+<section class="module-content" data-module="2" style="display:none">
   <h2>Module 2 Lessons</h2>
+  <p class="mod-description">Module 2 focuses on fundamental JavaScript concepts, popular patterns for writing and organizing front-end code, and learning new tools and workflows to help improve the development process for more complex applications. Projects will reinforce lesson concepts by emphasizing Object-Oriented Programming, Test-Driven Development and heavy data manipulation. | <a href="https://docs.google.com/presentation/d/1VgzKmBWpBM7cQfj6oNNJ_x1BRDE2Hzi0soeYuqqUuFE/present?usp=sharing">Intro to Mod 2 (slides)</a></p>
 
-  <h3>Mod 2 KO</h3>
+  <h3>General Web, Tooling & Workflow</h3>
   <ul>
-    <li class="lessons"><a href="https://docs.google.com/presentation/d/1VgzKmBWpBM7cQfj6oNNJ_x1BRDE2Hzi0soeYuqqUuFE/present?usp=sharing">Intro to Mod 2</a> (google slides)</li>
-  </ul>
-
-  <h3>Tooling & Workflow</h3>
-  <ul>
-    <li class="lessons"><a href="module-2/build-processes-with-npm-webpack.html">Build Processes with NPM & Webpack</a></li>
-    <li class="lessons"><a href="module-2/eslint-basics.html">ESLint Basics</a></li>
-    <li class="lessons"><a href="module-2/refactoring-guidelines.html">Refactoring Guidelines</a></li>
-    <li class="lessons"><a href="module-2/git-forking-vs-cloning.html">Workflow: Forking vs. Cloning</a></li>
+    <li class="lesson"><a href="module-2/intro-to-npm.html">Intro to NPM</a></li>
+    <li class="lesson"><a href="module-2/build-processes-with-npm-webpack.html">Build Processes with Webpack</a></li>
+    <li class="lesson"><a href="module-2/eslint-basics.html">ESLint Basics</a></li>
+    <li class="lesson"><a href="module-2/taming-merge-conflicts.html">git Workflow: taming merge conflicts</a>
+    <li class="lesson"><a href="module-2/merge-vs-rebase.html">git Workflow: Merge vs Rebase</a>
+    <li class="lesson"><a href="module-2/refactoring-guidelines.html">Refactoring Guidelines</a></li>
+    <li class="lesson"><a href="module-2/git-forking-vs-cloning.html">Workflow: remote & local repos, Forking vs. Cloning</a></li>
     <li class="lesson"><a href="module-2/github-collaboration.html">Effective GitHub Collaboration</a></li>
     <li class="lesson"><a href="module-2/whiteboarding-and-pseudocoding.html">Whiteboarding and Pseudocoding</a></li>
+    <li class="lesson"><a href="module-2/intro-network-requests.html">Introduction to Network Requests</a></li>
+    <li class="lesson"><a href="module-2/how-the-web-works.html">How The Web Works</a></li>
+    <li class="lesson"><a href="module-2/cross-browser-compat.html">Cross-Browser Compatibility</a></li>
   </ul>
 
   <h3>Design & UI/UX</h3>
@@ -127,96 +112,93 @@ title: Lesson Plans
     <li class="lesson"><a href="http://frontend.turing.io/lessons/module-2/web-accessibility.html">Web Accessibility</a></li>
   </ul>
 
+  <h3>JavaScript</h3>
+
+  <h4>General</h4>
+  <ul>
+    <li class="lesson"><a href="module-2/js-5.html">Data Types: Simple vs. Complex</a></li>
+    <li class="lesson"><a href="module-2/es5-vs-es6.html">ES5 vs ES6</a></li>
+    <li class="lesson"><a href="module-2/this.html">Rules of "this"</a></li>
+    <li class="lesson"><a href="module-2/introduction-to-jquery.html">jQuery Intro - DOM Traversal, Manipulation, and Events</a></li>
+    <li class="lesson"><a href="module-2/asynchronous-javascript.html">Asynchronous JavaScript</a></li>
+  </ul>
+
+  <h4>Objects</h4>
+  <ul>
+    <li class="lesson"><a href="module-2/oop-1.html">Objects: Literals, Constructors, and this</a></li>
+    <li class="lesson"><a href="module-2/oop-2.html">Objects: Prototype & Prototype Chain</a></li>
+    <li class="lesson"><a href="module-2/oop-3.html">Objects: Inheritance</a></li>
+    <li class="lesson"><a href="module-2/oop-4.html">Objects: Review Session</a></li>
+  </ul>
+
+  <h4>Scope</h4>
+  <ul>
+    <li class="lesson"><a href="module-2/scope-1.html">Scope: Execution Contexts</a></li>
+    <li class="lesson"><a href="module-2/scope-2.html">Scope: JS Scopes & Scope Chain</a></li>
+    <li class="lesson"><a href="module-2/scope-3.html">Scope: Scope & Closures</a></li>
+  </ul>
+
+  <h4>Prototypes and Data Manipulation</h4>
+  <ul>
+    <li class="lesson"><a href="module-2/array-iterator-methods.html">Array Iterator Prototype Methods</a></li>
+  </ul>
+
+  <h3>Testing</h3>
+  <ul>
+    <li class="lesson"><a href="module-2/testing-with-mocha-chai.html">Testing: TDD with Mocha and Chai</a></li>
+    <li class="lesson"><a href="module-2/testing-with-hooks-and-linting.html">Testing: Linting & Hooks</a></li>
+    <li class="lesson"><a href="module-2/testing-with-chai-spies.html">Testing: Spies</a></li>
+  </ul>
 
   <h3>CSS</h3>
   <ul>
     <li class="lesson"><a href="module-2/introduction-to-sass.html">Introduction to Sass</a></li>
   </ul>
-
-  <h3>JavaScript</h3>
-
-  <h4>Patterns & Concepts</h4>
-  <ul>
-    <li class="lessons"><a href="module-2/js-5.html">Fundamentals Review</a></li>
-    <li class="lessons"><a href="module-2/es5-vs-es6.html">ES5 vs ES6</a></li>
-    <li class="lessons"><a href="module-2/this.html">Rules of "this"</a></li>
-    <li class="lessons"><a href="module-2/oop-1.html">Objects: literals, constructors, and this</a></li>
-    <li class="lessons"><a href="module-2/oop-2.html">Objects: Prototype & Prototype Chain</a></li>
-    <li class="lessons"><a href="module-2/oop-3.html">Objects: Inheritance</a></li>
-    <li class="lessons"><a href="module-2/oop-4.html">Objects: Review Session</a></li>
-    <li class="lessons"><a href="module-2/scope-1.html">Scope: Creation, Hoisting, and Execution</a></li>
-    <li class="lessons"><a href="module-2/scope-2.html">Scope: JS Scopes & Scope Chain</a></li>
-    <li class="lessons"><a href="module-2/scope-3.html">Scope: Scope & Closures</a></li>
-    <li class="lessons"><a href="module-2/fun-review.html">jsFUN: Review</a></li>
-    <li class="lessons"><a href="module-2/test-driven-development-with-webpack.html">Testing: TDD with Mocha and Chai</a></li>
-    <li class="lessons"><a href="module-2/testing-with-hooks-and-linting.html">Linting and Testing with Hooks</a></li>
-    <li class="lessons"><a href="module-2/testing-with-chai-spies.html">Testing: Mocking and spies</a></li>
-    <li class="lessons"><a href="module-2/array-iterator-methods.html">Array Iterator Prototype Methods</a></li>
-  </ul>
-
-    <!-- <li class="lessons"><a href="module-2/recursion.html">Recursion</a></li> -->
-<!--   <h4>Platforms, Frameworks & Libraries</h4>
-  <ul>
-    <li class="lesson"><a href="module-2/intro-to-react.html">Intro To React</a></li>
-    <li class="lesson"><a href="module-2/intro-to-react-stateful-components.html">Intro To React Stateful Components</a></li>
-    <li class="lesson"><a href="module-2/react-component-communication.html">React Component Communication</a></li>
-    <li class="lessons"><a href="module-2/react-testing.html">React Testing</a></li>
-  </ul> -->
-
-  <h3>General Web</h3>
-  <ul>
-    <li class="lessons"><a href="module-2/intro-xhr-ajax-fetch.html">Introduction to XHR / AJAX / Fetch</a></li>
-    <li class="lesson"><a href="module-2/build-an-npm-module-mod2.html">Build an NPM Module</a></li>
-    <li class="lessons"><a href="module-2/how-the-web-works.html">How The Web Works</a></li>
-    <li class="lesson"><a href="module-2/cross-browser-compat.html">Cross-Browser Compatibility</a></li>
-  </ul>
-
-  <hr/>
 </section>
 
-<section class="lesson-container" data-module="3" style="display:none">
+
+<section class="module-content" data-module="3" style="display:none">
   <h2>Module 3 Lessons</h2>
+  <p class="mod-description">Module 3 focuses on front-end frameworks and libraries for building complex, scalable, fully-tested applications, as well as diving into asynchronous JavaScript and consuming APIs. Primary tools used are React, React Router, and Redux. Projects are designed to reinforce lesson concepts by allowing students to practice implementing network requests, frameworks, and testing in applications that range from small and simple to larger and more complex.</p>
 
   <h3>Tooling & Workflow</h3>
+
   <ul>
     <li class="lessons"><a href="module-3/tools.html">Tools you will need this mod</a></li>
   </ul>
 
-  <h3>Advanced React and Redux</h3>
+  <h3>React</h3>
 
   <ul>
-    <li class="lesson"><a href="module-3/ideabox.html">Ideabox in React</a></li>
-    <li class="lesson"><a href="module-3/react-basic-lifecycle-methods-and-propTypes.html">React Basic Lifecycle Methods and PropTypes</a></li>
-    <li class="lesson"><a href="module-3/react-concepts.html">Important React Concepts</a></li>
-    <li class="lesson"><a href="module-3/react-advanced-lifecycle-methods-and-concepts.html">React Advanced Lifecycle Methods &amp; Concepts</a></li>
-    <li class="lesson"><a href="module-3/react-lifecycles.html">React Lifecycle Slides</a></li>
+    <li class="lesson"><a href="module-3/react-i.html">React I: the What and the Why</a></li>
+    <li class="lesson"><a href="module-3/react-ii.html">React II: the How</a></li>
+    <li class="lesson"><a href="module-3/react-iii.html">React III: Advanced Data Management</a></li>
     <li class="lesson"><a href="module-3/unit-testing-react.html">Unit Testing React with Create React App, Enzyme, and Jest</a></li>
     <li class="lesson"><a href="module-3/testing-async.html">Testing Async Methods &amp; API Calls in React</a></li>
-    <li class="lesson"><a href="module-3/intermediate-react-hooks.html">Intro to Hooks</a></li>
-    <li class="lesson"><a href="module-3/starting-up-redux.html">Starting Up Redux</a></li>
+  </ul>
+
+  <h3>React Router</h3>
+
+  <ul>
+    <li class="lesson"><a href="module-3/react-router-v4.html">React Router 4</a></li>
+  </ul>
+
+  <h3>Redux</h3>
+
+  <ul>
+    <li class="lesson"><a href="module-3/redux-i.html">Redux I: the Why and the What</a></li>
     <li class="lesson"><a href="module-3/testing-redux.html">Testing Redux</a></li>
-    <li class="lesson"><a href="module-3/redux-when-why.html">Redux: When and Why</a></li>
     <li class="lesson"><a href="module-3/redux-revisited.html">Redux Revisited</a></li>
     <li class="lesson"><a href="module-3/redux-thunk-middleware.html">Redux-Thunk Middleware</a></li>
+  </ul>
+
+
+  <h3>Advanced React</h3>
+
+  <ul>
+    <li class="lesson"><a href="module-3/intermediate-react-hooks.html">Intro to Hooks</a></li>
     <li class="lesson"><a href="module-3/redux-sagas.html">Redux-Saga Middleware</a></li>
-    <li class="lesson"><a href="module-3/react-router-v4.html">React Router 4</a></li>
     <li class="lesson"><a href="module-3/data-visualization-with-react.html">Data Visualization with React</a></li>
-  </ul>
-
-  <h3>Client-Side Web APIs</h3>
-
-  <ul>
-    <li class="lesson"><a href="module-3/getusermedia-api.html">getUserMedia API</a></li>
-    <li class="lesson"><a href="module-3/geolocation-api.html">Geolocation API</a></li>
-    <li class="lesson"><a href="module-3/drag-and-drop.html">Drag and Drop</a></li>
-  </ul>
-
-  <h3>Server-Side</h3>
-
-  <ul>
-    <li class="lesson"><a href="module-3/intro-to-node.html">Intro to Node</a></li>
-    <li class="lesson"><a href="module-3/intro-to-express.html">Express Fundamentals</a></li>
-    <li class="lesson"><a href="module-3/server-side-testing.html">Server Side Testing</a></li>
   </ul>
 
   <h3>ES6 Fundamentals</h3>
@@ -234,7 +216,6 @@ title: Lesson Plans
   <h3>Application Architecture</h3>
 
   <ul>
-    <li class="lesson"><a href="module-3/boilerplate.html">Building a Boilerplate</a></li>
     <li class="lesson"><a href="module-3/mvc.html">MVC Architecture</a></li>
     <li class="lesson"><a href="module-3/mvc-architecture.html">MVC Architecture Slides</a></li>
     <li class="lesson"><a href="module-3/rest-architecture-and-urls.html">Rest Architecture and Urls</a></li>
@@ -252,25 +233,45 @@ title: Lesson Plans
     <li class="lesson"><a href="module-3/grocery-list.html">Grocery List</a></li>
     <li class="lesson"><a href="https://github.com/turingschool-examples/thought-box-mini-project" target="_blank">Thought Box</a></li>
     <li class="lesson"><a href="module-3/promises-practice.html">Promises Practice</a></li>
+    <li class="lesson"><a href="module-3/react-to-redux-workshop.html">React to Redux Workshop</a></li>
+    <li class="lesson"><a href="module-3/network-request-exercises.html">Network Request Exercises</a></li>
   </ul>
 
   <h3>Other Stuff</h3>
 
   <ul>
-    <li class="lesson"><a href="module-3/cors.html">CORS</a></li>
     <li class="lesson"><a href="module-3/post-css.html">Post CSS</a></li>
-    <li class="lesson"><a href="module-3/regex-fun-times.html">Regex Fun Times</a></li>
-    <li class="lesson"><a href="module-3/parallax.html">Parallax</a></li>
     <li class="lesson"><a href="module-3/pull-request-review.html">Pull Request Review</a></li>
-    <li class="lesson"><a href="module-3/number-systems-bitwise-operators.html">Number Systems and Bitwise Operators</a></li>
     <li class="lesson"><a href="module-3/user-testing-adventure.html">User Testing Adventure</a></li>
-    <li class="lesson"><a href="module-3/merge-vs-rebase.html">Merge vs Rebase</a></li>
   </ul>
 
-  <hr/>
+  <!-- <li class="lesson"><a href="module-3/cors.html">CORS</a></li> -->
+  <!-- <li class="lesson"><a href="module-3/regex-fun-times.html">Regex Fun Times</a></li> -->
+  <!-- <li class="lesson"><a href="module-3/parallax.html">Parallax</a></li> -->
+  <!-- <li class="lesson"><a href="module-3/number-systems-bitwise-operators.html">Number Systems and Bitwise Operators</a></li> -->
+    <!-- <li class="lesson"><a href="module-3/react-basic-lifecycle-methods-and-propTypes.html">React Basic Lifecycle Methods and PropTypes</a></li> -->
+    <!--  <li class="lesson"><a href="module-3/react-advanced-lifecycle-methods-and-concepts.html">React Advanced Lifecycle Methods &amp; Concepts</a></li> -->
+    <!-- <li class="lesson"><a href="module-3/ideabox.html">Ideabox in React</a></li> -->
+    <!-- <li class="lesson"><a href="module-3/react-concepts.html">Important React Concepts</a></li> -->
+    <!-- <li class="lesson"><a href="module-3/react-lifecycles.html">React Lifecycle Slides</a></li> -->
+    <!-- <li class="lesson"><a href="module-3/redux-when-why.html">Redux: When and Why</a></li> -->
+    <!-- <li class="lesson"><a href="module-3/boilerplate.html">Building a Boilerplate</a></li> -->
+  <!-- <h3>Client-Side Web APIs</h3>
+  <ul>
+    <li class="lesson"><a href="module-3/getusermedia-api.html">getUserMedia API</a></li>
+    <li class="lesson"><a href="module-3/geolocation-api.html">Geolocation API</a></li>
+    <li class="lesson"><a href="module-3/drag-and-drop.html">Drag and Drop</a></li>
+  </ul> -->
+  <!-- <h3>Server-Side</h3>
+  <ul>
+    <li class="lesson"><a href="module-3/intro-to-node.html">Intro to Node</a></li>
+    <li class="lesson"><a href="module-3/intro-to-express.html">Express Fundamentals</a></li>
+    <li class="lesson"><a href="module-3/server-side-testing.html">Server Side Testing</a></li>
+  </ul> -->
 </section>
 
-<section class="lesson-container" data-module="4" style="display:none">
+
+<section class="module-content" data-module="4" style="display:none">
   <h2>Module 4 Lessons</h2>
 
   <h3>Server-Side JavaScript and APIs</h3>
@@ -278,6 +279,7 @@ title: Lesson Plans
   <ul>
     <li class="lesson"><a href="module-4/kickoff.html">Kickoff</a></li>
     <li class="lesson"><a href="module-4/node-prework.html">Introduction to Node.js</a></li>
+    <li class="lesson"><a href="module-4/intro-to-express.html">Getting Started with Express</a></li>
     <li class="lesson"><a href="module-4/server-side-testing-with-db.html">Server-Side Testing With a DB</a>
     <li class="lesson"><a href="module-4/deploy-to-heroku.html">Deploying a Node app to Heroku</a></li>
     <li class="lesson"><a href="module-4/express-middleware.html">Express Middleware</a></li>
@@ -346,4 +348,4 @@ title: Lesson Plans
   </ul>
 </section>
 
-<script src="/public/js/lesson-lists.js"></script>
+<script src="/public/js/module-selectors.js"></script>

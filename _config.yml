@@ -9,6 +9,7 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+  parse_block_html: true
 
 exclude: [
   'Gemfile',
@@ -16,10 +17,12 @@ exclude: [
   'README.md',
   'LICENSE',
   'CNAME',
+  'archive',
   'lessons/module-1/archive',
   'lessons/module-2/archive',
   'lessons/module-3/archive',
-  'lessons/module-4/archive'
+  'lessons/module-4/archive',
+  'projects/archive'
 ]
 
 defaults:
@@ -56,18 +59,16 @@ algolia:
     - _sass
     - _site
     - _templates
+    - archive/**/*
     - assets/**/*
     - books/**/*
     - calendars/**/*
     - challenges/**/*
-    - independent-study/**/*
-    - instructor-info/**/*
     - lessons/module-1/archive/**/*
     - lessons/module-2/archive/**/*
     - lessons/module-3/archive/**/*
     - lessons/module-4/archive/**/*
     - mentor-posse-info/**/*
-    - open-source/**/*
     - portal/**/*
     - postwork/**/*
     - module-0-capstone/**/*

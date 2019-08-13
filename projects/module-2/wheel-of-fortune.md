@@ -307,8 +307,18 @@ child of #Core Application
 depends on #8
 ```
 
-*Issue title*  
-User Story 12, Spin the Wheel, Losing a Turn
+*Issue title* 
+User Story 12, Spin the Wheel, Losing a Turn 
+User Story 12, ```
+As a visitor,
+when a valid customer has been selected,
+The `Rooms` page will display all the following customer specific information:
+
+- Summary of all past bookings
+
+If there is no valid information for past booking for this customer,
+I will be notified that no valid data exists.
+```Spin the Wheel, Losing a Turn
 
 ```
 As a player of the game,

@@ -42,8 +42,8 @@ You'll be working with some new technologies for this project:
 |Day           | Status| Deliverables |
 |---           |---    |--- |
 |*Day 1 (Thur)* | Kick-off| Set up DTR, explore boilerplate repo, design wireframes|
-|*Day 2 (Fri)* | Setup & Coding| [Fork this repo](https://github.com/turingschool-examples/gametime-starter) by following the "Initial Setup" below and then continue with the instructions in the README. In your forked repo, update the README to include a link to your pair's DTR, your final wireframes, and chosen design inspiration|
-|*Day 6 (Tue)*       | 1st PR | PR due w/instructors tagged|
+|*Day 2 (Fri)* | Setup & Coding| Setup your repository using the instructions in this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) and continue with the instructions in the README. In your project's repo, update the README to include relavent information to your version of the project, a link to your group's DTR, your final wireframes, and any design inspiration|
+|*Day 6 (Tue)* | 1st PR | PR due w/instructors tagged|
 
 ### Week 5
 
@@ -73,7 +73,7 @@ You will be using the following JavaScript libraries:
 
 ## Initial Setup
 
-For this project, you need to use this [Gametime Starter Kit](https://github.com/turingschool-examples/gametime-starter) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
+For this project, you need to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Follow the instructions in the README for forking the repo and getting it setup. Once you have it set up (through running `npm install`), follow the instructions to verify it is setup correctly.
 
 There are additional notes in the README about where your game logic code goes and where your test code goes as well. Be sure to read through the README before you start coding because for this starter kit to work correctly, it has some underlying assumptions of where files live. 
 

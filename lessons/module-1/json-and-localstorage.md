@@ -34,9 +34,9 @@ There are two primary ways of storing data in web applications, which are - serv
 
 Browsers provide two main types of immediate storage that is accessible without messing with a database: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> which gets reset whenever your browser session restarts, and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a>, which has no specified expiration date. Today we will strictly be talking about `localStorage`.
 
-The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site. 
+The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site.
 
-## Local Storage 
+## Local Storage
 
 <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a> is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
 
@@ -73,12 +73,7 @@ Check out the docs. What other methods are available to you when using localStor
 ### localStorage in Action
 How can we improve the functionality of the following codepen with local storage?
 
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="khalidwilliams" data-slug-hash="zeWjwM" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="Local Storage Contact EX">
-  <span>See the Pen <a href="https://codepen.io/khalidwilliams/pen/zeWjwM/">
-  Local Storage Contact EX</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="400px" width="100%" src="https://repl.it/@Khalid_Williams/Local-Storage-and-Bubbling-Contact-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## What is JSON?
 
@@ -131,18 +126,13 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 8. `parsedObject` (We are now back to our original object!)
 
 ### JSON in Action
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="html,result" data-user="khalidwilliams" data-slug-hash="ErELRJ" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid black; margin: 1em 0; padding: 1em;" data-pen-title="JSON Contact Example">
-  <span>See the Pen <a href="https://codepen.io/khalidwilliams/pen/ErELRJ/">
-  JSON Contact Example</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<iframe height="400px" width="100%" src="https://repl.it/@Khalid_Williams/JSON-Contact-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
 
 ## Data Attributes
 
 In addition to giving our html elements `id` and `class` attributes, sometimes it may be more appropriate to give our elements a `data-` attribute instead.
 `data-` attributes are used to store information related to the data of the content your showing.
-For instance, if you have a lot of objects of the same type and they are all represented on the web page the same way, then you can use a `data-` attribute to identify them via the dom. 
+For instance, if you have a lot of objects of the same type and they are all represented on the web page the same way, then you can use a `data-` attribute to identify them via the dom.
 Here we can see an html example of using a `data-` attribute on an element. Note that whatever comes after the `-` is totally up to the developer.
 
 ```html
@@ -167,7 +157,7 @@ Open <a target="_blank" href="http://codepen.io/team/turing/pen/xOYdBG">this Cod
 
 ## Dig Deeper
 * [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
-* [Mozilla Docs on Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API) 
+* [Mozilla Docs on Web Storage](https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
 * [Google Docs on Storing/Caching Data in Chrome](https://developers.google.com/web/tools/chrome-devtools/manage-data/local-storage)
 * [Mozilla Docs on data- attributes](https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes)
 * [jQuery Docs on data- attributes](https://api.jquery.com/data/#data2)

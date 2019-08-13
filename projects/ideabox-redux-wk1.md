@@ -14,10 +14,10 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 * Continue to improve on building responsive client-side applications with good user feedback
 * Understand how to implement client-side data persistence using `localStorage`
-* Understand what it looks like to have a separate data model (using a class) and dom model
-* Understand how to utilize `data-*` attributes
-* Understand how to incorporate & iterate over arrays in order to filter what is being displayed
-* Understand how to craft code with clean style, using small functions that show trends toward DRYness and SRP
+* Understand what it looks like to have a separate data model (using a class) and DOM model
+* Utilize `data-*` attributes
+* Incorporate & iterate over arrays in order to filter what is being displayed
+* Craft code with clean style, using small functions that show trends toward DRYness and SRP
 
 ## Overview:
 
@@ -26,7 +26,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 For this project, we'll be increasingly thinking about the "data model" and "dom model" as separate entities. We'll be using:
 
 - JSON and `localStorage` to persist data on page reload.
-- JavaScript to manage client-side interactions.
+- vanilla JavaScript to manage client-side interactions.
 
 Your entire application will consist of one HTML page or template.
 You will have two javascript files:
@@ -52,7 +52,7 @@ You will have two javascript files:
     * How the idea is displayed should be done using an array of quality strings, where the integer value is used to pull a certain string via its index.
     * By default, the idea's _quality_ should default to the lowest setting, which is 0.
 
-Each idea should be created as an instance of the `Idea` class.
+Each idea should be created as an object instance of the `Idea` class.
 
 ### Phase One: Beginning User Flow
 
@@ -79,7 +79,7 @@ When a user clicks "Save":
 * The page _should not_ reload.
 * The idea should be persisted. It should still be present upon reloading the page.
 
-_Note:_ `localStorage` will not track the type of object, so on page reload you will need to reinstantiate all of your idea instances so that they have access to their methods.
+_Note:_ `localStorage` will not track the type of object, so on page reload you will need to re-instantiate all of your idea instances so that they have access to their methods.
 
 #### Deleting an existing idea
 
@@ -90,7 +90,7 @@ When viewing the idea list:
 * The page _should not_ reload when an idea is deleted.
 * The idea should be removed from `localStorage`. It should not re-appear on next page load.
   * This update of the data model should happen in a `deleteFromStorage` method that is defined in the `Idea` class.
-  * How the dom gets updated using javascript should happen in the `main.js` file (where you can still leverage your idea instance)
+  * How the DOM gets updated using JavaScript should happen in the `main.js` file (where you can still leverage your idea instance)
 
 #### Editing/Starring an existing idea
 
@@ -99,7 +99,7 @@ When viewing the idea list:
 - When the user clicks on the "Star" button, the button should stay in the active state.
 * If the user reloads the page, their edits will be reflected.
   * This update of the data model should occur in an `updateIdea` method that is defined in the `Idea` class.
-  * How the dom gets updated using javascript should happen in the `main.js` file (where you can still leverage your idea instance)
+  * How the DOM gets updated using JavaScript should happen in the `main.js` file (where you can still leverage your idea instance)
 
 ### Phase Two: Enhancing the User Experience
 
@@ -114,7 +114,7 @@ As we said above, ideas should start out as "swill." In order to change the reco
   "plausible" → "swill").
 * Incrementing a "genius" idea or decrementing a "swill" idea should have no effect.
   * This update of the data model should occur in an `updateQuality` method that is defined in the `Idea` class.
-  * How the dom gets updated using javascript should happen in the `main.js` file (where you should can still leverage your idea instance)
+  * How the DOM gets updated using JavaScript should happen in the `main.js` file (where you should can still leverage your idea instance)
 
 #### Filtering and Searching by Text
 
@@ -141,7 +141,6 @@ You will need the `svg` files for the star, delete, upvote, downvote, and menu i
 
 ![icon specs][icon-specs]
 
-
 [desktop-base]: /assets/images/projects/ideabox/ideabox-redux-01.jpg
 [button-hover-specs]: /assets/images/projects/ideabox/ideabox-redux-04.jpg
 [icon-specs]: /assets/images/projects/ideabox/ideabox-redux-05.jpg
@@ -162,25 +161,25 @@ You will need the `svg` files for the star, delete, upvote, downvote, and menu i
 ### Comp Recreation
 
 * [ ]  Novice - Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
-* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.). Transitions between screen sizes may not be smooth
-* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward
-* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons,spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps
+* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth
+* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward
+* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps
 
 ------------------------------------------------------------------
 
 ### HTML - Style and Implementation
 
-* [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
+* [ ]  Novice - Crafts markup according to the [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
 * [ ]  Advanced Beginner - Application adds to the above by using appropriate semantic elements and using `data-*` attributes for all data related things
 * [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes and:
-  * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
+  * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson](http://frontend.turing.io/lessons/floating/web-accessibility.html)
 
 ------------------------------------------------------------------
 
 ### CSS - Style and Implementation
 
-* [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
+* [ ]  Novice - Crafts CSS according to the [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
 * [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
 * [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
@@ -189,7 +188,7 @@ You will need the `svg` files for the star, delete, upvote, downvote, and menu i
 
 ### JAVASCRIPT - Style and Implementation
 
-* [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+* [ ]  Novice - Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 * [ ]  Advanced Beginner - Application adds to the above by correctly implementing a data model for the `Idea` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
   * [ ]  Uses event delegation correctly on dynamic elements for deleting, editing, & starring an idea
@@ -199,4 +198,4 @@ You will need the `svg` files for the star, delete, upvote, downvote, and menu i
 * [ ]  Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
   * [ ]  Uses logical operators instead of if/else statements where applicable
   * [ ]  Uses arrow functions, block scoped variables, and destructuring correctly.
-  * [ ]  When 'Filtering and Searching by Text' and 'Filtering by Importance', ideas that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
+  * [ ]  When 'Filtering and Searching by Text' and 'Filtering by Importance', ideas that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view

@@ -29,6 +29,8 @@ In this lesson we'll cover:
 ## Vocab
 
 - See [vocab](http://frontend.turing.io/lessons/module-1/js-1.html) for JS I
+- `DRY` Programming principle that means `Don't Repeat Yourself`
+- `Refactoring` - the process of cleaning up your working code to be more concise
 - `Anonymous Function` A function without a name
 - `Scope` Determines the accessibility/visibility of variables and functions
 - `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
@@ -36,28 +38,74 @@ In this lesson we'll cover:
 - `Array` Used to store a collection of data items/multiple values under a single variable name
 - `Loops` A quick and easy way to do something repeatedly
 - `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops. 
-- `DRY` Programming principle that means `Don't Repeat Yourself`
 
 
 # More on Functions
 
 Can't get enough.  
 
-## Part 1: Calling functions inside of other functions
-When writing Javascript, you want to do your best to keep your code DRY (Don't Repeat Yourself). That means keeping functions concise and single responsibility. It's not uncommon to do a first pass at solving a problem and end up with a more verbose solution, and then revisit your code to tighten it up. This process of cleaning up your working code is called `refactoring`. When we refactor, one of the things we look for is unnecessary duplication. If we see a line of code being used in multiple places, we can pull it out into its own separate function of reusable code.
+## Part 1: Refactoring + Calling functions inside of other functions
+
+When you are just starting to learn how to program, your main objective should be to get things working. It doesn't need to be pretty, it doesn't need to be clever - it just needs to work. However, after you have things working, you'll want to take some time to **refactor** your code. Refactoring is the process of cleaning up your already working code to remove repetitive, unnecessary or non-functioning code from your codebase. 
+
+In programming, you'll often hear about keeping your code 'DRY' - which stands for 'Don't Repeat Yourself'. That means keeping functions concise and single responsibility (each function only has one task/job). This idea goes hand in hand with refactoring and is a good starting place to see where you can clean up your code. Simply put, if you find areas where you are writing the same lines of code over and over again, you can likely break these repetitive lines of code out into their own smaller functions.
+
+Another common example of refactoring is for functions that are very long/verbose. While there isn't a "perfect length" of a function, typically, the smaller (and more modular), the better. Let's take a look at the example below:
+
+```js
+function geezerAttack() {
+  console.log('What in tarnation?!')
+  console.log('Who is making all that racket on my porch?')
+  console.log('If I miss one second of my television program I am gonna lose it!')
+  console.log('***Struggles out of reclining chair...***')
+  console.log('***Bangs knee on coffee table...***')
+  console.log('***Drops TV remote on slippered foot...***')
+  console.log('~~~Whack on the head with a newspaper~~~')
+  console.log('~~~Throw slipper at victim~~~')
+  console.log('~~~Smack with hickory cane~~~')
+}
+```
+
+The above function is pretty long and there is a lot of things happening. This could be a great opportunity to refactor by breaking this function out into smaller functions and calling them within our main function, `geezerAttack()`. Looking at this functionality, there seems to be three main themes: warnings, struggles and fightingMoves. We could break this up into three other functions! See below:
+
+```js
+function geezerWarnings() {
+  console.log('What in tarnation?!')
+  console.log('Who is making all the racket on my porch?')
+  console.log('If I miss one second of my television program I am gonna lose it!')
+}
+
+function geezerStruggles() {
+  console.log('***Struggles out of reclining chair...***')
+  console.log('***Bangs knee on coffee table...***')
+  console.log('***Drops TV remote on slippered foot...***')
+}
+
+function geezerFightingMoves() {
+  console.log('~~~Whack on the head with a newspaper~~~')
+  console.log('~~~Throw slipper at victim~~~')
+  console.log('~~~Smack with hickory cane~~~')
+}
+
+function geezerAttack() {
+  geezerWarnings()
+  geezerStruggles()
+  geezerFightingMoves()
+}
+```
 
 Let's take a crack at refactoring some functions and calling functions within other functions. Below we see two very important functions:
 
 ```js
 function karateChop() {
   console.log("KARATE CHOP!");
-  console.log("KAPOW!");
-  console.log("JUDO CHOP!");
+  alert("KAPOW!");
+  alert("JUDO CHOP!");
 }
 
 function ninjaAttack() {
-  console.log("KAPOW!");
-  console.log("JUDO CHOP!");
+  alert("KAPOW!");
+  alert("JUDO CHOP!");
   console.log("NINJA SURPRISE!");
 }
 ```
@@ -66,8 +114,8 @@ We can see that we have some duplication going on between these two functions. W
 
 ```js
 function surpriseAttack() {
-  console.log("KAPOW!");
-  console.log("JUDO CHOP!");
+  alert("KAPOW!");
+  alert("JUDO CHOP!");
 }
 
 function karateChop() {
@@ -76,7 +124,7 @@ function karateChop() {
 }
 
 function ninjaAttack() {
-  surpriseAttack();
+  karateChop();
   console.log("NINJA SURPRISE!");
 }
 ```
@@ -85,7 +133,8 @@ function ninjaAttack() {
 
 Turn to your neighbor and explain how the functions above work. Remember, getting practice using the vocabulary is important so make sure you both have a chance to talk through it!  
 
-How would you use parameters and arguments to make the logged string be different each time we call the function?
+How would you use parameters and arguments to make the logged string in `ninjaAttack()` be different each time we call the function?
+
 
 ## Part 2: Declarations vs Expressions
 
@@ -295,87 +344,6 @@ console.log(num); // This will also give 12
 
 Hooray!  Now we are getting what we expected both inside of the function and globally.  Because we are using a different name, the interpreter knows which variable we are referring to.
 
-# Refactoring Visited Again
-
-Now that we have covered calling functions within functions, hoisting, and scope...Let's look at a more real world example of refactoring.  There will likely be many scenarios in your applications where a user must be logged in to perform an action.  We will need to check if their password is correct when we sign in, as well as when a user posts a comment.  Let's look at what this might look like:
-
-```js
-function signIn() {
-  var onlineStatus = false;
-  var password = 'blueberries123';
-  if (password === 'airplanes765') {
-    onlineStatus = true;
-  } else {
-    onlineStatus = false;
-  }
-
-  if (onlineStatus === true) {
-    console.log('User has just signed in.')
-  } else {
-    console.log('That is not the correct password.')
-  }
-}
-
-function postMessage() {
-  var onlineStatus = false;
-  var password = 'blueberries123';
-  if (password === 'airplanes765') {
-    onlineStatus = true;
-  } else {
-    onlineStatus = false;
-  }
-
-  if (onlineStatus === true) {
-    console.log('Posting a message now')
-  } else {
-    console.log('Please sign in first.')
-  }
-}
-```
-
-Are you seeing some repetitive lines of code here?  This is often referred to as `code smell`.  Seeing multiple lines of code that are repeated throughout can be a bit of a red flag.  We notice that both functions are checking to see if their password is correct and then updating their onlineStatus.  We also can see that we are doing a check to see if they are online using a conditional and then performing an action based on that. Let's break apart these functions to be smaller and more reusable:
-
-```js
-function signIn() {
-  var onlineStatus = validatePassword();
-  executeAction(
-    onlineStatus,
-    'User has just signed in.',
-    'That is not the correct password.' 
-  )
-}
-
-function postMessage() {
-  var onlineStatus = validatePassword();
-  executeAction(
-    onlineStatus,
-    'Posting a message now',
-    'Please sign in first.' 
-  )
-}
-
-function validatePassword() {
-  var password = 'blueberries123';
-  if (password === 'airplanes765') {
-    return true
-  } else {
-    return false
-  }
-}
-
-function executeAction(status, happyMsg, sadMsg) {
-  if (status === true) {
-    console.log(happyMsg);
-  } else {
-    console.log(sadMsg)
-  }
-}
-```
-
-We have broken the password validation into its own function and then return true or false based on if they have guessed the correct password.  We also have broken out what is going to happen if the user is signed in using arguments and parameters.  Finding ways to simplify our code and make our logic more modular can make our functions more reusable for other scenarios.  
-
-### You Turn
-How could you use parameters and arguments to make the password more dynamic so that the user can actually sign in?
 
 # Arrays
 An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
@@ -548,7 +516,8 @@ for (var i = 0; i > -1; i++) {
 }
 ```
 
-We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.  
+We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them. 
+
 
 ### Additional Practice  
 

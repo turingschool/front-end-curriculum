@@ -31,6 +31,55 @@ And after all dependencies are installed, you can run the following to start you
 bundle exec jekyll serve
 ```
 
+
+### Styling Your Lesson Plans
+
+You can add styled boxes to your lesson plans for different areas of content.
+
+#### Standard Box:
+
+```html
+<section class="call-to-action">
+### In Your Notebook
+
+What would you expect to be logged when we get to line 10? Why?
+</section>
+```
+
+Will result in the following styled box:
+
+![styled-box](https://user-images.githubusercontent.com/17582916/60548262-e75fd180-9cde-11e9-8964-03c4ee6152d9.png)
+
+
+#### Note Box:
+
+```html
+<section class="note">
+### Note
+
+This hoisting behavior adds some complexity to the JavaScript language, and is important to understand thoroughly in order to anticipate the values of your variables at any given time.
+</section>
+```
+
+![note-box](https://user-images.githubusercontent.com/17582916/60548280-f2b2fd00-9cde-11e9-848c-6d58f4b6ebde.png)
+
+#### CFU/Exit Ticket Box:
+
+```html
+<section class="checks-for-understanding">
+### Exit Ticket
+
+What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?
+</section>
+```
+
+![cfu-box](https://user-images.githubusercontent.com/17582916/60548305-ff375580-9cde-11e9-9e06-739244d68973.png)
+
+**DO NOT INDENT YOUR MARKDOWN** within the section tag, or else it will not work.
+
+
+
+
 ### Algolia Search
 
 The site uses [Algolia](https://www.algolia.com/dashboard) for search indexing. To re-index the search when new lessons are added or lessons are removed, run this 

@@ -1,5 +1,5 @@
 ---
-title: Web Accessibility
+title: WAI ARIA
 length: 90
 tags: html, ARIA, accessibility
 ---
@@ -11,7 +11,6 @@ tags: html, ARIA, accessibility
 - `Role` The function an element serves on the page
 - `State` The state of an element on a page (e.g., expanded, disabled)
 - `Property` Additional information about an element or other elements its related to
-- `VoiceOver` A screen reader that is built into apple computers
 
 ### Learning Goals
 
@@ -52,22 +51,8 @@ __Side Note__: Documentation is your friend when developing a website. Here are 
 
 * [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-I will often search google to find documentation for an html element that fulfills a purpose. 
 
-Example google search: `html element for navigation mdn` formula for a search `[what you want to search for] [documentation source]`
-
-### Testing for Accessibility
- 
-#### Using your screen reader (basic commands)
-
-When people with visual disabilities are using your website they will be using some sort of screen reader. 
-Luckily for us, we have one that comes with our computer! It's called VoiceOver and here are some basic commands we can use to test the accessibility of our webpages.
-
-* Starting/Stopping VoiceOver - `command + F5`
-* Moving your VoiceOver cursor - `control + option + arrow key` ie. `control + option + right arrow`
-* Moving your VoiceOver cursor into your web page's content - `control + option + shift + down arrow`
-* Moving your VoiceOver cursor out of your web page's content - `control + option + shift + up arrow`
-
+### CSS/Styling
 
 ***PLEASE NOTE***
 
@@ -75,19 +60,6 @@ DO NOT REMOVE THE FOCUS RING that appears on interactive elements without provid
 
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
 
-
-#### Your Turn
-
-By yourself:
-* Open this [code pen](https://codepen.io/damwhit/pen/JZmeqQ)
-* Plug in your headphones and turn on VoiceOver
-* Use the key combination above to move your VoiceOver cursor into the web content of the code pen.
-* Close your eyes, and interact with the site using the VoiceOver key combos to move the cursor.
-* When you are finished, do the same thing with this [code pen](https://codepen.io/damwhit/pen/WyaMaQ)
-
-With a partner, answer the following questions:
-* What was your experience like?
-* What differences did you notice between the two code pens?
 
 ### WAI-ARIA
 
@@ -99,9 +71,9 @@ WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich In
 * An element can only have one role at a time, but can have as many properties and states as necessary
 
 An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
-
+<!-- 
 ![Aria Tree](/assets/images/aria.jpg)
-
+ -->
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
@@ -326,6 +298,13 @@ __Label Input Elements that do not have a label element associated with them__
 -------------------------------------------------
 
 ## Your Challenge
+
+Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accesible. Find your project partner/s and start implementing! 
+
+
+<!-- The challenge below would be good to use for review the next morning  -->
+
+<!-- 
 Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes.
 
 ```html
@@ -358,6 +337,7 @@ Take the following HTML snippet and make it accessible using explicit semantic H
   <span>Copyright &amp;copy; Aurelio De Rosa 2014</span>
 </div>
 ```
+ -->
 <!-- solution: http://codepen.io/team/turing/pen/PWKMga?editors=1000 -->
 
 ## Perfect is the enemy of good

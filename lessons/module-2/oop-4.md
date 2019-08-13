@@ -51,7 +51,7 @@ Using the journal questions to guide you, start a discussion within your small g
 [*Jeopardy*](https://github.com/turingschool-examples/oop-review/tree/master/jeopardy)  
 [*Wheel of Fortune*](https://github.com/turingschool-examples/oop-review/tree/master/wheel-of-fortune)
 
-*Get in your GameTime groups. You will know be reviewing two codebases that have implemented games in OOP*
+*Get in your GameTime groups. You will be reviewing two codebases that have implemented games in OOP*
 
 <!-- WOF groups should be reviewing Jeopardy and vice versa. Family Feud can review either. Goal is to have groups review an unfamiliar codebase -->
 

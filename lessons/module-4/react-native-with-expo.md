@@ -44,6 +44,10 @@ Per the docs: [Expo](https://expo.io/) is a free and open source toolchain
 built around React Native to help you build native iOS and Android projects 
 using JavaScript and React.
 
+To get started, follow the link above, and create an account with Expo. After
+doing that, you'll also need to install the Expo client (available on either the
+Google Play store or Apple App store).
+
 ### Bootstraping our application
 
 To create our first React Native application, we're going to use the Expo CLI,
@@ -51,9 +55,13 @@ go ahead and download it globally.
 
 `npm i -g expo-cli`
 
-Once installed, we can use the CLI to create our first application:
 
-`expo init ConceptBox`
+Once installed and logged in, let's login and use the CLI to create our first application:
+
+```
+expo login  
+expo init ConceptBox
+```
 
 After running this command you'll be prompted with some questions. Choose a
 *blank* starter project, and a *managed* workflow. You can try this again later

@@ -1,4 +1,10 @@
-# Setting up eslint
+---
+title: ESlint Basics
+tags: javascript, linting
+module: 2
+---
+
+## Setting up eslint
 
 (Non-React projects)
 

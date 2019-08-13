@@ -4,24 +4,22 @@ title: Check Yo'Self
 
 ## Specification
 
-Now that you've got the main foundations down to build out a frontend application, it's time to prove to yourself that you own those skills! You're going to be building a checklist application called Check Yo'Self!
-
-Note: If you have started to learn some es6, feel free to implement all of those new es6 features (arrow functions, block scoped variables, etc.).  However, if es5 syntax is still more comfortable for you, then stick with what you know.  You'll get a lot more practice and instruction with modern Javascript features next mod!
+Now that you've got the main foundations down to build out a frontend application, it's time to prove to yourself that you own those skills! You're going to be building a checklist application called `Check Yo'Self`!
 
 ## Learning Goals
 
-* Solidify and demonstrate your use of:
+* Solidify and demonstrate your understanding of:
   * semantic HTML
   * clean & organized CSS styles
   * DRY JavaScript
   * localStorage to persist data
-* Iterate through/filter dom elements using for loops/array prototype methods
+* Iterate through/filter DOM elements using for loops/array prototype methods
 * Understand the difference between the data model and how the data is displayed on the DOM
 * Ability to match/recreate a UI and create a great UX
 
 ### Architecture
 
-Your entire application will consist of one HTML page or template. You will have two javascript files:
+Your entire application will consist of one HTML page or template. You will have two JavaScript files:
 
 1. A `todo-list.js` file that contains a `ToDoList` class.
 	* `ToDoList` methods must include, _but are not limited to_:
@@ -30,7 +28,7 @@ Your entire application will consist of one HTML page or template. You will have
 		3. `deleteFromStorage`
 		4. `updateToDo` (should update the todo's title and urgency)
 		5. `updateTask` (should update a task's content and if it has been completed)
-2. A `main.js` file that contains all DOM related javascript
+2. A `main.js` file that contains all DOM related JavaScript
 
 ### Data Model
 * A to-do list has an _id_, _title_, _tasks_, and _urgent_ property.
@@ -46,13 +44,13 @@ Each todo list on the page should be created as an instance of the `ToDoList` cl
 
 ### Phase One: Beginning User Flow
 
-#### Viewing the List of ToDos
+#### Viewing the List of To-Dos
 
 When visiting the application, the user should:
 
-* See a list of all existing todos, including the title, list of tasks to be checked off, and state of urgency.
-* Todos should appear in descending chronological order (with the most recently created todo at the top left).
-  * If there are no todos yet, then there should be an indication to the user to create a todo list, displayed in the empty section.
+* See a list of all existing to-dos, including the title, list of tasks to be checked off, and state of urgency.
+* To-dos should appear in descending chronological order (with the most recently created todo at the top left).
+  * If there are no to-dos yet, then there should be an indication to the user to create a todo list, displayed in the empty section.
 
 #### Adding a New Checklist
 
@@ -91,7 +89,7 @@ After a user has completed a task on their checklist, they should be able to che
 * There should be a visual cue so that the user knows what they have completed and what is still left to do.
 * Tasks that are checked off should persist upon reloading the page.
 * The update of the data model should occur in the `updateTask` method that is defined in the `ToDoList` class.
-* How the DOM gets updated using javascript should happen in the `main.js` file.
+* How the DOM gets updated using JavaScript should happen in the `main.js` file.
 
 #### Deleting an Existing ToDo Card
 
@@ -101,7 +99,7 @@ After creating a todo card, the user should be able to remove it once they have 
 * The "Delete" button should only be enabled if all of the tasks on the checklist have been checked off.
 * Upon clicking the "Delete" button, the appropriate todo list should be removed from the DOM.
 * The update of the data model should happen in the `deleteFromStorage` method that is defined in the `ToDoList` class.
-* How the DOM gets updated using javascript should happen in the `main.js` file
+* How the DOM gets updated using JavaScript should happen in the `main.js` file
 
 #### Marking a ToDo Card Urgent
 
@@ -110,16 +108,16 @@ A user should be able to mark their todo cards urgent so that they know which th
 * When the user clicks on the `Urgent` button, the button should stay in the active state.
 * Todo cards that are marked as urgent should persist upon reloading the page.
 * This update of the data model should occur in the `updateToDo` method that is defined in the `ToDoList` class.
-* How the DOM gets updated using javascript should happen in the `main.js` file
+* How the DOM gets updated using JavaScript should happen in the `main.js` file
 
 ### Phase Three: Specifying what Content is Viewed
 
 #### Filtering and Searching by Text
 
-We'd like our users to be able to easily find their todos, so let's provide them a search bar to filter through their list.
+We'd like our users to be able to easily find their to-dos, so let's provide them a search bar to filter through their list.
 
 * At the top of the application, include a text field labeled `Search`.
-* As a user types in the search box, the list of todos on the DOM should filter in real time to only display todo cards whose title include the user's text. The page _should not_ reload.
+* As a user types in the search box, the list of to-dos on the DOM should filter in real time to only display todo cards whose title include the user's text. The page _should not_ reload.
 * Clearing the search box should restore all todo cards on the list.
 * There is no need to make persisting changes to the data model to achieve this functionality.
 
@@ -128,9 +126,9 @@ We'd like our users to be able to easily find their todos, so let's provide them
 Let's also allow our user be able to view their urgent todo cards only.
 
 * The user should only see the urgent todo cards when they click on the `Filter by Urgency` button. (consequently, the button should be highlighted)
-* Clicking on the `Filter by Urgency` button again, the button should no longer be highlighted, and all of the user's todos should be displayed.
-* When viewing urgent todos, the search field should only search through the urgent todos.
-* If there are no urgent todos yet, then there should be an indication displayed in the empty todo section notifying the user to mark some todos urgent.
+* Clicking on the `Filter by Urgency` button again, the button should no longer be highlighted, and all of the user's to-dos should be displayed.
+* When viewing urgent to-dos, the search field should only search through the urgent to-dos.
+* If there are no urgent to-dos yet, then there should be an indication displayed in the empty todo section notifying the user to mark some to-dos urgent.
 * These changes _do not need to persist_ in between sessions.
 
 ### Phase Four (Extensions): Improving on the Experience
@@ -160,9 +158,16 @@ The user might also might to add more tasks to their checklist after they have c
 * Each task added should appear at the bottom of the list unchecked.
 * The user should not be able to add blank tasks if the input is empty.
 
+## What is a Masonry Layout?
+
+This type of layout is known as a *Masonry layout*.  This layout refers to when items of uneven size are laid out in a way where there are no uneven gaps.  Due to this scenario, this is *NOT* good scenario for using `grid`.  This is because we can't define where each card is going to be in the layout.  There are a number of ways to solve this solution.  Here are a couple of links to check out to achieve this goal:
+
+* [CSS Tricks Examples](https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/)
+* [Code Pen Example](https://codepen.io/Kalikoze/pen/XQaJYd)
+
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1twjIgn6X0Yqi3tS3Nx3hOgZ9dR5juGg58gly1GsbOBs/edit#gid=557400577)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1CS4BipxFi1VPh5NJFsn0yoeDTQQL_yjwcIM0fccVOGc/edit#gid=557400577)
 
 ### Layout Comps
 
@@ -187,7 +192,6 @@ Mobile layout:
 Color, font, and icon spec:
 
 ![color font and icon specs][button-hover-specs]
-
 
 [desktop-base]: /assets/images/projects/check-yo-self/check-yo-self-01.jpg
 [desktop-new-task]: /assets/images/projects/check-yo-self/check-yo-self-02.jpg
@@ -219,17 +223,17 @@ Color, font, and icon spec:
 
 ### HTML - Style and Implementation
 
-* [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
+* [ ]  Novice - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
 * [ ]  Advanced Beginner - Application adds to the above by using `data-*` attributes for all data related things
 * [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
-    * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
+    * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/module-1/html-breakout.html)
 
 ------------------------------------------------------------------
 
 ### CSS - Style and Implementation
 
-* [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
+* [ ]  Novice - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 * [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
 * [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
 * [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
@@ -238,14 +242,13 @@ Color, font, and icon spec:
 
 ### JAVASCRIPT - Style and Implementation
 
-* [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+* [ ]  Novice - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
 * [ ]  Advanced Beginner - Application correctly implements data model for the `ToDoList` class including all required methods
 * [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
   * [ ]  Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
   * [ ]  All functions are less than 10 lines
-  * [ ]  There are no global variables aside from query selectors and an array for your todos
+  * [ ]  There are no global variables aside from query selectors and an array for your to-dos
   * [ ]  There are no nested if/else statements
 * [ ] Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
   * [ ] Uses logical operators instead of if/else statements where applicable
-  * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
-  * [ ] When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', todos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+  * [ ] When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view

@@ -4,259 +4,151 @@ tags: TDD, unit testing, mocha, chai, webpack, spies
 mod: 2
 ---
 
-## What is the Issue Here?
+<section class="call-to-action">
+We'll continue working with the [our-first-tests repo](https://github.com/turingschool-examples/our-first-tests). Commit any changes you may have made, then checkout the `spies-begin` branch by running the following commands:
 
-_Note:_ We're continuing from the Test Driven Development with Webpack lesson. Commit your changes if you haven't yet.
+ ```bash
+ git fetch --all
+ git checkout -b spies-begin origin/spies-begin
+ ```
+ 
+</section>
 
-One of the biggest hurdles you'll have when building frontend applications is keeping your codebase clean and **testable**. Chances are good that you are currently intermixing your DOM Manipulation with code that is handling the state of your classes. However, the classes in your game file should be completely oblivious to the DOM - they should only store state and "broadcast" their changes to the DOM... not handle DOM manipulation directly.
+## Why Spy with Our Little Eyes?
 
-This is because, unfortunately, Mocha and Chai run in an environment outside of your browser. Therefore they do not have the ability to test if changes have been applied to the DOM (the browser page) successfully. We can't test anything happening on the DOM. For instance, if a class method is structured like this:
+One of the biggest hurdles with front-end testing, and why it can be so complex, is that your tests are running in a different environment than your app. Your app runs in the **browser**, and your tests run in the **terminal**.
 
-```js
-increaseCount(){
-  this.count++
-  document.querySelector('#item').innerText('Change to this text please.'); // Some DOM manipulation here
-};
-```
+<!-- I've mentioned in our first testing lesson, that TDD was pretty much always a process on the back-end, and it made sense there because when you're writing server-side/back-end code, you're pretty much living in your terminal. One reason testing didn't come around to the front-end side of things was because we have this environmental difference. We couldn't figure out how to run our tests in an environment that behaved like a browser. -->
 
-By running the test that uses this method, Mocha will say that it has no idea what the `document` is, and the test will _fail_... So we want to test this method while still keeping the DOM manipulation functionality a part of the method. How do we do that? 
+This environmental difference means that we can't test functionality that's dependent on the browser. The terminal does not have access to all of the objects and web APIs that we have in the browser, and will therefore not understand things like:
 
-**By pulling the DOM manipulation functionality out of the method and using a "spy".**
+`document.getElementById()`
 
-## Let's See Why
+because it doesn't know what a `document` is. If we look at our `window` object in the console, pretty much anything that exists here that we want to use in our code, the terminal will not know about or understand. So we can run into some problems testing our code when we want to do things like:
 
-Change the original starter kit HTML (`index.html`) to be:
+* manipulate the DOM
+* perform network requests
+* manage localStorage data
 
-```html
-<!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <title>Gametime Starter Kit</title>
-  </head>
-  <body>
-    <h1>Gametime Starter Kit</h1>
+## Practice
 
-    <img src="/images/turing-logo.png" alt="turing logo" height="100px" width="100px">
+Let's look at what would happen if we tried to test a method that leverages `localStorage`.
 
-    <!-- Adding these lines below -->
-    <h3>Box Height</h3>
-    <p id="box-height-display">This is where the height goes.</p>
-  </body>
-</html>
-```
-
-Let's add some functionality to the `increaseHeight` method in the `Box` class to display the height of the box _on the DOM_ after it is increased:
+Let's add a method to our `Box.js` class called `saveDetails` that persists our box information to localStorage:
 
 ```js
-// Box.js
-
-increaseHeight(val) {
-  this.height += val;
-  document.querySelector('#box-height-display').innerText = this.height;
-};
-```
-
-Add some code to our existing JavaScript entry file code to instantiate a box and increase it's height:
-
-```js
-// index.js
-
-import Box from './Box.js';
-
-const box = new Box();
-box.increaseHeight(100);
-```
-
-Start the webpack server, and check to see if it works:
-
-```bash
-npm start
-```
-
-_But when we run the tests:_
-
-```bash
-npm test
-```
-
-And we now see the test for the `increaseHeight` method fails...
-
-```bash
-1) Box
-       should increase the height:
-     ReferenceError: document is not defined
-      at Box.increaseHeight (dist/webpack:/src/Box.js:13:1)
-      at Context.<anonymous> (dist/webpack:/test/Box-test.js:33:1)
-```
-
-Now we know we need to fundamentally change the structure of our code in order to continue testing methods that involve DOM manipulation.
-
-## Spies
-
-Since we cannot actually test our DOM manipulation, we are going to use a [`spy`](https://github.com/chaijs/chai-spies) to verify whether our method that displays the score has been called. *Note: Spies will help you verify calls to methods without actually calling them.* This library is included in the Gametime Starter Kit (look in the `devDependencies` section of the `package.json` file).
-
-What is a spy? A spy is a tool that listens for a specific function, `functionA`, to be called in a test. When `functionA` is called in a test, the spy takes over control of `functionA`. The spy runs a "fake" function instead as if `functionA` had actually run.
-
-**Setup**
-
-Let's add a file that will house all of our DOM manipulation function for the whole project:
-
-```bash
-touch src/domUpdates.js
-```
-
-Refactor the `increaseHeight` method to call a function within the `domUpdates` file:
-
-```js
-//Box.js
-
-// At top of file
-import domUpdates from './domUpdates.js';
-
-// Add domUpdates function to method
-increaseHeight(val) {
-  this.height += val;
-  domUpdates.displayHeight(this.height);
-};
-```
-
-Now let's write the `domUpdates` function:
-
-```js
-// domUpdates.js
-
-export default {
-  displayHeight: function(newHeight) {
-    document.querySelector('#box-height-display').innerText = newHeight;
-  }
-
-  // You can add more functions just like this as key-value pairs
+saveDetails() {
+  localStorage.setItem('box', { 
+    height: this.height,
+    width: this.width
+  });
 }
 ```
 
-Ok, so far we haven't added a spy, but everything should still work the same. Let's verify!
-
-If we run `npm test`, then test should still fail, however. On to the spy!
-
-
-### Adding the Spy
-
-This is what we need to add to the test file so that we can use spies:
+and now let's try to test this method:
 
 ```js
-// Box-test.js
+describe('saveDetails', function() {
+  it('should save details to localStorage', function() {
+    var box = new Box(100, 100);
+    box.saveDetails();
+    expect(localStorage.getItem('box').to.equal({ 
+      width: 100,
+      height: 100
+    })
+});
+```
 
-import chai from 'chai';
-const expect = chai.expect;
+We'll see in our terminal `ReferenceError: localStorage is not defined`. This would be the case even if we changed our expectation to `expect(true).to.equal(true)`, because the test is actually failing during the **execution phase** when our **application code** is trying to do `localStorage.setItem()`.
 
-import spies from 'chai-spies';
+
+## What are our Options?
+
+### Mocking LocalStorage
+
+One option is to recreate our own version of `localStorage`. This might sound daunting at first, but it's actually not all that much code:
+
+```js
+global.localStorage = {
+  store: {},
+  setItem(keyName, value) {
+    this.store[keyName] = value;
+  },
+  
+  getItem(keyName) {
+    return this.store[keyName]
+  }
+}
+```
+
+This is a common and totally reasonable practice in front-end testing. Just like we mock out data to work with, we also sometimes mock out web APIs to bring some of that functionality to the terminal. The only problem with this now, is that if anything is wrong with our implementation of `localStorage`, our tests might fail even if our application code isn't actually broken. 
+
+So our other option is to leverage spies.
+
+
+### Spies
+
+Spies are useful for when you want to check that something happened - but you don't necessarily care exactly what it did. **Spies will help you verify calls to methods without actually calling them.**
+
+So in our example, we would want to verify that `localStorage.setItem()` was called, but we don't actually care to test the result of that method running. (We can assume the browser has already tested their implementation of `localStorage`, which means that we don't have to!) We are trusting that as long as we're invoking `localStorage.setItem()`, our browser is going to do it.
+
+So all we really want to test is that something was called. We want to **spy** on localStorage, and make sure that its `setItem` method was called. 
+
+A spy will listen for a specific function, `localStorage.setItem`, to be called in a test. When it is called, the spy takes over control of `localStorage.setItem`. The spy runs a “fake” function instead, as if `localStorage.setItem` had actually run.
+
+To do this, we're going to add another `devDependency` to our `package.json` file:
+
+```bash
+npm install chai-spies --save-dev
+```
+
+To our test file, we'll require in our new dependency and configure `chai` to use it, by adding:
+
+```js
+const spies = require('chai-spies');
 chai.use(spies);
-
-import Box from '../src/Box.js'
-import domUpdates from '../src/domUpdates.js';
 ```
 
-Next, we will take advantage of the `.on()` method from the [Chai-spies](https://github.com/chaijs/chai-spies#user-content-spyon) to spy on the methods that interact with the DOM:
+Now instead of mocking out all the functionality of `localStorage`, we can simply assign it to an empty object that we will spy on:
 
 ```js
-chai.spy.on(domUpdates, 'displayHeight', () => true);
-
-// chai.spy.on([an object that contains the methods to spy on],
-//             [a string or array of the method names you want to spy on], 
-//             [a callback function with what you intend the spy to return instead of your function, 'displayHeight', actually running]
-//            )
+global.localStorage = {};
 ```
 
-And lastly, let's update our test for `increaseHeight` to verify that our method of `displayHeight` is actually being called:
 
 ```js
-it('should have an increment method that will increase the height by a provided value', function() {
-  box.increaseHeight(10);
-
-  expect(box.height).to.equal(110);
-  expect(domUpdates.displayHeight).to.have.been.called(1);
-  expect(domUpdates.displayHeight).to.have.been.called.with(110);
-});
+chai.spy.on(localStorage, ['setItem', 'getItem'], () => {});
 ```
 
-Run `npm test`.
+<section class="call-to-action">
+Checkout the following documentation on [chai.spy.on](https://github.com/chaijs/chai-spies#spyon) -- what are the three arguments it takes in?
+</section>
 
-Finally, we can call that method in the appropriate place and see that our test is passing.
 
-### Recap
+1. `chai.spy.on()` is a method that let's us define what we want to spy on
+2. the **first** argument is the object we want to spy on
+3. the **second** argument is an array of any methods we want to override with a spy (or a single string if we're only spying on one method)
+4. the **third** argument is an optional replacement for how those methods should behave/what they should do
 
-Together, let's recap where we started and what we did to get to a passing test.
+So what we're doing with this code is saying: "I know that `localStorage` works as it should, because the browser engineers have already tested it. All I want to verify is that I'm actually invoking `localStorage.setItem()`. I am going to replace the default behavior of `localStorage.setItem()` with a spy so that I can assert it was called without having to worry about what's happening under the hood."
 
-### Your Turn
-Set up the functionality to display the width to the DOM - using your `domUpdates file` to keep this code separate from the state of your app. Be sure to update your testing accordingly.
-
-## On Your Own Time: Using Spies in Multiple Tests
-
-When you have added spies for your `domUpdates` functions, you might have multiple tests that call the same spied function. For instance, multiple tests in a test file might call `displayHeight`.
-
-With the current spy setup, the first test that encounters `displayHeight` being called will log that function being called once. But then in a following test where `displayHeight` is called, you will have to expect that the function should have been called twice:
+Let's see how this changes the assertion logic of our test:
 
 ```js
-// (Other test code above...)
-
-it('should increment height', function() {
-  box.increaseHeight(10);
-
-  expect(box.height).to.equal(110);
-  expect(domUpdates.displayHeight).to.have.been.called(1);
-  expect(domUpdates.displayHeight).to.have.been.called.with(110);
-});
-
-it('should decrement height if negative value is given', function() {
-  box.increaseHeight(-10);
-
-  expect(box.height).to.equal(90);
-  expect(domUpdates.displayHeight).to.have.been.called(2); // this needs to be 2 because the function was called once above
-  expect(domUpdates.displayHeight).to.have.been.called.with(90);
-});
-
-// (other test code below...)
-```
-
-This is not ideal because our tests are not running in _isolation_. If we were to switch the order of these tests, then we would need to modify the `.to.have.been.called()` value.
-
-To fix this, utilize the Mocha hooks to set up the spy before each test and then reset the spy after each test:
-
-```js
-describe('Box', function() {
-  beforeEach(function() {
-    chai.spy.on(domUpdates, 'displayHeight', () => true);
-  })
-
-  afterEach(function() {
-    chai.spy.restore(domUpdates);
-  })
-
-  // ("it" blocks with tests below...)
+describe('saveDetails', function() {
+  it('should save details to localStorage', function() {
+    var box = new Box(100, 100);
+    box.saveDetails();
+    expect(localStorage.setItem).to.have.been.called(1); 
+    expect(localStorage.setItem).to.have.been.called.with('box', { width: 100, height: 100 });
 });
 ```
 
-Now the tests can be updated to be able to run in isolation with `.to.have.been.called(1)` in _both_ tests:
+We have two assertions here: 
+1. verifies that `localStorage.setItem` was called one time
+2. verifies that it was called with accurate arguments
 
-```js
-// (Other test code above...)
 
-it('should increment height', function() {
-  box.increaseHeight(10);
-
-  expect(box.height).to.equal(110);
-  expect(domUpdates.displayHeight).to.have.been.called(1);
-  expect(domUpdates.displayHeight).to.have.been.called.with(110);
-});
-
-it('should decrement height if negative value is given', function() {
-  box.increaseHeight(-10);
-
-  expect(box.height).to.equal(90);
-  expect(domUpdates.displayHeight).to.have.been.called(1); // this is now 1
-  expect(domUpdates.displayHeight).to.have.been.called.with(90);
-});
-
-// (other test code below...)
-```
-
+<section class="call-to-action">
+Think about the other web APIs and libraries you'll be using in your projects. Where might spies help you? What will be your strategy?
+</section>

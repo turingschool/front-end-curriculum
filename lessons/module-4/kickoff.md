@@ -2,7 +2,7 @@
 title: Module 4 KickOff
 ---
 
-## Learning Goals & Focus
+<!-- ## Learning Goals & Focus
 
 ### Week 1: Server-Side Intro
 
@@ -37,13 +37,13 @@ And then there's your last group project! You'll get a chance to work with back-
 Your final assessment will be a take-home style challenge that you will work on independently (we'll talk about this more as the weeks go on).
 
 Everyone will also need to complete a successful mock interview.
-
+ -->
 
 ## Graduation Requirements
 
 In order to graduate from Module 4, students must complete each of the following:
 
-### 90% Attendance
+### 80% Attendance
 
 Students must notify instructors of any absences, and are required to make up any work missed during the time they were out. 
 If missing class for an interview, students must record the interview questions they received and add them to this [doc](https://docs.google.com/document/d/1PPfnfGOmzVRPXVa9t9qzl1G6vYM52teL7NksRQbfqiQ/edit?usp=sharing)
@@ -59,11 +59,11 @@ Students must do a mock interview with one of the instructors. You will be given
 ### Independent Work
 
 * Prework Assignments
-* Palette Picker
+* BYOB
 
 ### Group Work
 
-* Build-Your-Own-Backend (BE and FE)
+* Palette Picker (BE and FE)
 * Cross-Pollination Project
 
 ### Career Development
@@ -76,12 +76,10 @@ This will be mentioned again during your week-one professional development kicko
 On the final Thursday of the module, you will give a 10-minute presentation about your experience in module 4, Turing, and your action plan going forward. 
 The details about it can be found [here](https://docs.google.com/document/d/1eb1H7GsfsD7vFP1Bx7UWyVOeltZ9ng_HtLr7R-_fCJg/edit?usp=sharing) under "Module 4 (Front-End)".
 
-
 ## Odds and Ends
 
 * Classroom door code
 * Fire safety instructions
-
 
 ## Go Forth!
 

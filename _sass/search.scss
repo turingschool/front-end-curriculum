@@ -1,6 +1,6 @@
  .search-bar input {
   font-weight: 500;
-  outline-color: $turing-primary;
+  outline-color: lighten($turing-secondary, 25%);
   padding-left: 0.5em;
   margin-left: 15px;
   position: relative;
@@ -56,7 +56,7 @@
 }
 
 .search-results-container {
-  background-color: #F8F8F8; 
+  background-color: #F8F8F8;
   border: 1px solid #BBB;
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
   position: absolute;

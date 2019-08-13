@@ -1,4 +1,8 @@
-# JavaScript Fundamentals: Data Types & Structures
+---
+title: "JavaScript Fundamentals: Data Types & Structures"
+tags: javascript, data types, data structures
+module: 2
+---
 
 ### Learning Goals
 * Review and discuss JavaScript fundamentals
@@ -38,7 +42,7 @@
 
 [Primitive Data Types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
 
-* What are the 6 primitive data types?
+* What are the 7 primitive data types?
 * What are 3 characteristics of primitive data types?
 
 

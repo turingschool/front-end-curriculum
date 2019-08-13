@@ -15,7 +15,7 @@ tags: javascript, oop, mocha, testing
 # Evaluation Rubric
 
 ### Functional Expectations
-* 4: Application fulfills all expectations of iterations 1 - 4 with no bugs, crashes, or missing functionality *as well as* an extension.
+* 4: Application fulfills all expectations of iterations 1 - 4 (at least one extension) with no bugs, crashes, or missing functionality.
 * 3: Application fulfills expectations of iterations 1 - 3 with no bugs, crashes, or missing functionality.
 * 2: Application is usable but has some missing functionality.
 * 1: Application crashes during normal usage.

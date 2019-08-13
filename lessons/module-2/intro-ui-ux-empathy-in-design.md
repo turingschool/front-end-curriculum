@@ -1,11 +1,7 @@
-# Intro to UI/UX
-## aka Empathy &  Usability in Design
-
-[slides](https://docs.google.com/presentation/d/1V2Pn6ejC78e0u9T4e9rP8fDpZ29Vm7G-eLVAxFdMDBU/edit#slide=id.g1c033f9cd5_0_35)
-
-![what you don't want your users to experience](https://media.giphy.com/media/9QeSVgwB6i5Ik/giphy.gif)
-
-_this is what you don't necessarily want your users to feel when they use your apps - yeah, there's awe, but also confusion and horror_
+---
+title: Intro to UI/UX
+module: 2
+---
 
 ## Learning goals:
 **By the end of the lesson, you will:**
@@ -77,16 +73,43 @@ But as developers, when you hear "design", you should be thinking "functionality
 
 **Good design anticipates users' needs.**
 
-## Principles of Usability
+## Usability Considerations & Processes
 
 ![usability tools](https://blog.therestaurantzone.com/wp-content/uploads/2017/01/restaurant-recruiting-tools.jpg)
 
-Here is your starting toolkit to create usable designs for your apps!
-- Context
-- Empathy
+- Audience Research
+- Content Analysis
 - User Testing
 
-### Context
+
+
+### Audience Research
+
+Empathy is crucial and vital to UXD. Empathy in User Experience Design means understanding and serving the needs, motivations, difficulties, and goals of your end user.
+
+In order to develop this, we need to do audience research. We might want to know the following about our users and how they interact with our application:
+
+Consider your user:
+- Their familiarity with technology
+- Their familiarity with this app
+- How often they use the app
+- When/why they use the app
+- What they want to accomplish
+- How many other ways can they get what they need, other than your app?
+- What accessibility needs do they have?
+- etc
+
+User experience designers use a number of tools to help them keep the end user in mind:
+- Personas (imaginary end users - we will go over this in our next UX/UI lesson!)
+- User stories (detailed road maps of a user's journey through an app while attempting to reach a goal; every button they click, every page they visit)
+- Consider voice/tone
+- Forgiving (what happens if a user makes a mistake? Can they go back and fix it? Do they feel chastised or supported?)
+- Intuitive (does an app work the way a user expects based on previous experience?)
+- Consistent (layout, interactions, functionality should be consistent from one page to the next)
+- Seamless learning curve (the onboarding process should be painless and intuitive)
+
+
+### Content Analysis - Context
 
 Your app should give the user what they need, when they need it.
 
@@ -121,44 +144,6 @@ When designing an app, keep in mind the user's context:
     - Real-time feedback through error-messaging
     - etc
 
-Of course, knowing the user's context is dependent on our next UXD tool ...
-
-### Empathy
-
-Empathy is crucial and vital to UXD. It's like an oxygen tank when scuba diving; you need it, but you also need additional tools to make it useful and effective.
-
-![a cat scuba diving!](https://media.giphy.com/media/VAdLjRLRaFAmA/giphy.gif)
-
-Empathy in User Experience Design means understanding and serving the needs, motivations, difficulties, and goals of your end user.
-
-It is a first step - the second step is actually bringing in your users and getting their real, live perspectives (and not just your imagined users' perspectives). Remember, you will still drown if you have an oxygen tank but no hoses or scuba mask. We'll get to examples of software designed with empathy but without user testing, and how the results are strong but also sometimes disastrous.
-
-But let's start unpacking how we can begin to build empathy for our users, and informing our [designs with empathy in mind](https://www.uxpin.com/studio/blog/deconstructing-6-examples-of-empowering-ux-design/).
-
-**Empathetic Design**
-
-Consider your user:
-- Their familiarity with technology
-- Their familiarity with this app
-- How often they use the app
-- When/why they use the app
-- What they want to accomplish
-- How many other ways can they get what they need, other than your app?
-- What accessibility needs do they have?
-- etc
-
-User experience designers use a number of tools to help them keep the end user in mind:
-- Personas (imaginary end users - we will go over this in our next UX/UI lesson!)
-- User stories (detailed road maps of a user's journey through an app while attempting to reach a goal; every button they click, every page they visit)
-- Consider voice/tone
-- Forgiving (what happens if a user makes a mistake? Can they go back and fix it? Do they feel chastised or supported?)
-- Intuitive (does an app work the way a user expects based on previous experience?)
-- Consistent (layout, interactions, functionality should be consistent from one page to the next)
-- Seamless learning curve (the onboarding process should be painless and intuitive)
-
-Note: sometimes you will see the phrase "empathic design" - this means the same thing. Be empathetic. You don't have to be empathic.
-
-![like counselor troi](http://images6.fanpop.com/image/photos/39700000/Counselor-Deanna-Troi-counselor-deanna-troi-39723861-245-188.gif)
 
 ### User Testing
 
@@ -173,20 +158,3 @@ User testing helps account for any biases we might have as developers. We can't 
 [Steve Krug](https://www.sensible.com/dmmt.html)'s excellent book on usability and user testing, [Don't Make Me Think](http://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) is worth reading if you're interested in making your apps more usable. Hint: everyone should be interested in making their apps more usable.
 
 No matter how empathetic and diligent you are, you can't assume you know everything about your users, or that you've closed all the gaps in your own assumptions.
-
-
-## Summary
-
-Good design is about making an app usable. Creating a usable app requires empathy and seeking out and listening to the app's end users.
-
-**Usability tools:**
-
-- User Testing
-- Empathy
-  - Personas
-  - User stories
-- Context
-  - Explicit interactions
-  - Implicit interactions
-  - Info when the user needs it
-- When you run across bad design, take a minute to analyze _what makes it bad_ and _how you can make it better_!

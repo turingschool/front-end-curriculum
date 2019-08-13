@@ -4,25 +4,15 @@ tags: React, Redux, Testing
 module: 3
 ---
 
-## Agenda
-
-- Talk about the different types of tests related to Redux
-- Work through Action Creator tests
-- Work through Reducer tests
-- Discuss how NOT to test Containers
-- Work through mapStateToProps and mapDispatchToProps tests
-
 ## Learning Goals
 
-- Know how to test Action Creators
-- Know how to test Reducers
-- Know how to test mapStateToProps and mapDispatchToProps
+- Understand the different types of tests related to Redux
+- Know how to test Action Creators and Reducers
+- Understand how to test Containers with mapStateToProps & mapDispatchToProps
 
 ## Vocab
 
-- Dispatch
-- Pure functions
-- Container
+- `Pure functions` A pure function is a function that returns the same output given the same input.  It has no side affects and modifies no other variables outside of its scope.
 - Vocab from [Starting Up Redux](starting-up-redux.html)
 
 ## Getting Started
@@ -32,10 +22,10 @@ exploring Redux for the first time. Go ahead and clone it, and switch to the
 begin-testing branch:
 
 ```bash
-git clone https://github.com/turingschool-examples/redux-lesson-boilerplate
-cd redux-lesson-boilerplate
-git fetch
+git clone https://github.com/turingschool-examples/redux-lesson-boilerplate testing-redux
+cd testing-redux
 git checkout begin-testing
+npm i
 ```
 
 ### Unit Testing
@@ -71,6 +61,8 @@ not too difficult to test.
 _**Stop and think**: Why do we even need Action Creators? Couldn't we just create
 objects where we need them?_
 
+<!-- For simpler Actions, this is possible.  But as Actions get more complex, copy-and-pasting an action in multiple places can be more difficult. It's much easier to update a complex payload or refactor some code in one area than multiple places. -->
+
 ---
 
 Action Creators are functions that return a plain object. When testing action
@@ -89,7 +81,7 @@ export const addTodo = (text) => {
 ```
 
 Given a string as text, (let's say "Go to the Vault"), we expect it to return an 
-object with a key of `'ADD_TODO'` and the text "Go to the Vault".  
+object with a type of `'ADD_TODO'` and the text "Go to the Vault".  
 
 ### Action Creator Tests
 `actions/todos.test.js`  
@@ -101,7 +93,7 @@ import * as actions from '../actions'
 
 describe('actions', () => {
   it('should have a type of ADD_TODO', () => {
-    expect(true).toEqual(false)
+    expect(true).toEqual(false);
   })
 })
 
@@ -126,19 +118,19 @@ import * as actions from '../actions'
 describe('actions', () => {
   it('should have a type of ADD_TODO', () => {
     // Setup
-    const text = "Go to the Vault"
-    const id = 1
+    const text = "Go to the Vault";
+    const id = 1;
     const expectedAction = {
       type: 'ADD_TODO',
       text: "Go to the Vault",
       id: 1
-    }
+    };
 
     // Execution
-    const result = actions.addTodo(text, id)
+    const result = actions.addTodo(text, id);
 
     // Expectation
-    expect(result).toEqual(expectedAction)
+    expect(result).toEqual(expectedAction);
   })
 })
 ```
@@ -185,18 +177,18 @@ undefined. What we want to have happen in this case is for the reducer to return
 whatever the state was when the reducer function was called.
 
 ```js
-import todosReducer from '../todosReducer'
+import { todosReducer } from '../reducers/todosReducer';
 
 describe('todosReducer', () => {
   it('should return the initial state', () => {
     // Setup
-    const expected = []
+    const expected = [];
 
     // Execution
-    const result = todosReducer(undefined, {})
+    const result = todosReducer(undefined, {});
 
     // Expectation
-    expect(result).toEqual(expected)
+    expect(result).toEqual(expected);
   })
 })
 
@@ -209,14 +201,14 @@ Test the todos reducer for what we expect to see in State if we...
 
 ```js
 it('should return state with a new todo', () => {
-})
+});
 ```
 
 * hit the "TOGGLE_TODO" case
 
 ```js
 it('should toggle the completed status of a new todo', () => {
-})
+});
 ```
 
 ### Containers
@@ -345,7 +337,8 @@ a refresher, check out the [testing lesson](unit-testing-react.html). The new
 test we're going to need are for `mapStateToProps` and `mapDispatchToProps`.
 Let's start with `mapStateToProps`.
 
-First, create a new file containers/AddTodoFormContainer.test.js
+Make a new test file:  
+`containers/AddTodoFormContainer.test.js`  
 
 The key in testing `mapStateToProps` is understanding what it's role is. It will
 take in the state of the Redux store, and return to us an object that has parsed
@@ -357,7 +350,7 @@ A test description might be 'it should return an object with the todos array'
 
 // containers/AddTodoFormContainer.test.js
 
-import { AddTodoForm, mapStateToProps, mapDispatchToProps }
+import { AddTodoForm, mapStateToProps, mapDispatchToProps } from '../containers/AddTodoForm';
 
 describe('AddTodoFormContainer', () => {
   describe('AddTodoForm component', () => {
@@ -369,11 +362,11 @@ describe('AddTodoFormContainer', () => {
     it('should return an object with the todos array', () => {
       // Setup
       const mockState = {
-        todos: [{text: 'Learn Redux!', id: 0}],
+        todos: [{text: 'Learn Redux!', id: 1}],
         filter: 'SHOW_ALL'
       }
       const expected = {
-        todos: [{text: 'Learn Redux!', id: 0}]
+        todos: [{text: 'Learn Redux!', id: 1}]
       }
 
       // Execution
@@ -381,9 +374,9 @@ describe('AddTodoFormContainer', () => {
 
       // Expectation
       expect(mappedProps).toEqual(expected)
-    })
-  })
-})
+    });
+  });
+});
 
 ```
 
@@ -413,23 +406,23 @@ describe('AddTodoFormContainer', () => {
   describe('AddTodoForm component', () => {
     // Write these tests on your own
     // You already know how!
-  })
+  });
 
   describe('mapDispatchToProps', () => {
     it('calls dispatch with an addTodo action when handleSubmit is called', () => {
       // Setup
-      const mockDispatch = jest.fn()
-      const actionToDispatch = addTodo('Learn Redux!', 0)
+      const mockDispatch = jest.fn();
+      const actionToDispatch = addTodo('Learn Redux!', 1);
 
       // Execution
-      const mappedProps = mapDispatchToProps(mockDispatch)
-      mappedProps.handleSubmit('Learn Redux!', 0)
+      const mappedProps = mapDispatchToProps(mockDispatch);
+      mappedProps.handleSubmit('Learn Redux!', 1);
 
       // Expectaion
-      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch)
-    })
-  })
-})
+      expect(mockDispatch).toHaveBeenCalledWith(actionToDispatch);
+    });
+  });
+});
 
 ```
 
@@ -443,12 +436,11 @@ called._
 
 ## Final Thoughts
 
-Test Redux can be your favorite thing in the world if you lean into it. All of
-the pieces of the Redux flow have been design so they are easy to test. You can
+Testing Redux can be your favorite thing in the world if you lean into it. All of
+the pieces of the Redux flow have been designed so that they are easy to test. You can
 do it, give it a shot!
 
-There are some additional resources below if you'd like to dive into the topic
-further.
+Feel free to check out the `finish-testing` branch for the solutions to the actions, reducers, & containers we tested in this session. There are also some additional resources below if you'd like to dive into the topic further.
 
 ## Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
