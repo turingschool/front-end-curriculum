@@ -203,7 +203,9 @@ Let's use this pen for practice
 * Add an input field with the `id` of "very-important-message" along with a button. When the user clicks on the button, it should set the `innerText` of the box to contents of the input field.
 * Add two inputs one for a CSS property and one for a value. When the user clicks the button, it should adjust that property on the box.
 * Here is an example of the second task:
+
 ![Custom CSS Color Box](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif)
+
 * When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).
 </section>
 
