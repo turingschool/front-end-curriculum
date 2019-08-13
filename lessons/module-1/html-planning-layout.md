@@ -58,11 +58,9 @@ There is just one important difference between the two:
 We'll discuss these more in a later lesson when we talk about CSS.
 
 <div class="call-to-action">
-    <h3>Turn & Talk</h3>
-    <ul>
-    <li>What is the difference between block and inline elements?</li>
-    <li>Are <code>img</code> elements block or inline? <code>a</code> elements? Explain and/or prove it.</li>
-    </ul>
+### Turn & Talk
+* What is the difference between block and inline elements?</li>
+* Are `<img>`elements block or inline?`<a>` elements? Explain and/or prove it.
 </div>
 
 
