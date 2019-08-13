@@ -37,19 +37,17 @@ JavaScript was created to make the web more dynamic. It is an object-oriented sc
 
 JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
 
-It's a highly versatile and flexible language, and has become the most commonly used language of the web.
-
-Now that we know a little bit about JavaScript, let's talk about how to actually use it!
+It's a highly versatile and flexible language, and has become the most commonly used language of the web. Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
 <section class="note">
 ### The Console
 
 Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run JavaScript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
-</section>
 
 To open the console in Chrome, either:
 * Click `View` > `Developer` > `Javascript Console`
 * Or use the hotkeys `command + option + j` / `command + option + i`
+</section>
 
 ## Data Types
 
@@ -61,14 +59,14 @@ Javascript has six primitive data types:
 - Boolean
 - Number
 - String
-- Symbol (new in ECMAScript 6 we do not need to worry about this one)
+- Symbol (new in ECMAScript 6; we won't focus on this in Mod 1)
 
 <section class="call-to-action">
 ### Data Types Jigsaw
 
 You're going to do some research on one of the 5 data types we are focusing on, then share out with the class. We'll follow this protocol:
 - **2 min:** independent research
-- **3 min:** table groups discuss findings, ask/answer questions
+- **2 min:** table groups discuss findings, ask/answer questions
 - **3 min:** table group makes anchor chart to share takeaways
   - Keep in mind: What are possible values? Examples? Does this data type get commonly confused with something else? Why/when would developers use it? Provide an example of it being used in code!
 - **30 sec - 1 min:** each table group presents to the class, while not presenting, you are taking notes on what you're learning from other groups
@@ -105,12 +103,12 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 <section class="note">
 ### Rules for Naming Variables
 
-- Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number.
-- Names can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name.
-- You cannot use keywords or reserved words (such as `var` or `for`).
-- All variables are case sensitive.
-- Use names that describe the kind of information you plan to assign the variable.
-- If your variable is made up of more than one word, then use [camelCase](https://en.wikipedia.org/wiki/Camel_case) for every word AFTER the first word, which should be lower case i.e., `thisIsMyVariableName`.
+- Names must begin with a letter, dollar sign, or an underscore. They cannot begin with a number
+- Names can contain any of the above characters plus a number, but you cannot use a dash (-) or a period (.) within the name
+- You cannot use keywords or reserved words (such as `var` or `for`)
+- All variables are case sensitive
+- Use names that describe the kind of information you plan to assign the variable
+- If your variable is made up of more than one word, then use [camelCase](https://en.wikipedia.org/wiki/Camel_case) for every word AFTER the first word, which should be lower case i.e., `thisIsMyVariableName`
 </section>
 
 ### Variables: Assigning Values
@@ -118,7 +116,7 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `excellentHuman` variable:
 
 ```javascript
-var excellentHuman = "Fred Rogers";
+var bestInstagram = "mrpokee";
 ```
 
 Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and the variable value, the variable is considered _undefined_.
@@ -251,9 +249,18 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 5. [Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical) combines __expressions__ and return a Boolean value of true or false. `var buy = (5 > 3) && (2 < 4);`
 
 <section class="call-to-action">
-### Your Turn
+### Partner Challenge
 
-Practice writing out at least one of each using arithmetic, string, comparison, and logical operators with the person next to you.  Explain what each one is doing and how it is working.
+Translate each of the following expressions to JavaScript. Type them out in your console so you can be more confident they are doing what you want them to do.
+
+_Example:_ Check if 2 is greater than or equal to 3
+_Example solution:_ `2 > 3`
+
+- Find 12 divided by 3
+- Find the reminder when 12 is divided by 5
+- Combine the strings "hello" and "world" and "!"
+- Check if "4" is the exact same thing as 4
+- Write a variable age and assign to a number. Check if the age is greater than 21 but less than 65.
 </section>
 
 ## Conditionals
