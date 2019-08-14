@@ -453,3 +453,6 @@ ie: `box.increment(10, 'height')` or `box.increment(10, 'width')`
 * What are the phases of a test?
 * What is the `describe()` block used for, and what is the `it()` block used for?
 </section>
+
+### Further Reading
+* <li><a href="https://frontend.turing.io/lessons/module-2/testing-with-hooks-and-linting.html" target="\__blank">Hooks</a></li>
