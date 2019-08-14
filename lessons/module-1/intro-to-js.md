@@ -189,10 +189,10 @@ We can concatenate HTML tags, text, numbers, and variable values. Let's revisit 
 var quantity = 3;
 var mythicalCreature = "unicorns";
 
-var creatureCount = "<p>I have " + quantity + " very fancy " + mythicalCreature + "</p>"
+var creatureCount = "I have " + quantity + " very fancy " + mythicalCreature;
 ```
 
-In this instance, we're concatenating multiple values including two strings and a variable in order for the sentence to come out as `"I had a burrito for breakfast."`  This can make our string more dynamic depending on what value is in the variable.
+In this instance, we're concatenating multiple values including two strings and a variable in order for the sentence to come out as `"I have 3 very fancy unicorns."`  This can make our string more dynamic depending on what value is in the variable.
 
 #### 2. Interpolation
 
@@ -204,7 +204,7 @@ We can interpolate HTML tags, text, numbers, and variable values. Let's revisit 
 var quantity = 3;
 var mythicalCreature = "unicorns";
 
-var creatureCount = `<p>I have ${quantity} very fancy ${mythicalCreature}</p>`
+var creatureCount = `I have ${quantity} very fancy ${mythicalCreature}`;
 ```
 
 This is very useful when we want to append data to our webpage, because it means we can write out an entire HTML tag and add the data from our variable.
@@ -257,7 +257,7 @@ _Example:_ Check if 2 is greater than or equal to 3
 _Example solution:_ `2 > 3`
 
 - Find 12 divided by 3
-- Find the reminder when 12 is divided by 5
+- Find the remainder when 12 is divided by 5
 - Combine the strings "hello" and "world" and "!"
 - Check if "4" is the exact same thing as 4
 - Write a variable age and assign to a number. Check if the age is greater than 21 but less than 65.
