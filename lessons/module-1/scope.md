@@ -16,7 +16,19 @@ tags: javascript, scope, hoisting
 
 ## Variable Scope
 
-**Scope** refers to the accessibility of, or ability to reference, a variable. **Where** you declare a variable affects where it can be used within your code. If you declare a variable within a function, it can only be accessed within that function. This is known as the variable's `scope`. When we talk about variables in regard to their scope, there are two types:
+**Scope** refers to the accessibility of, or ability to reference, a variable. **Where** you declare a variable affects where it can be used within your code.
+
+<section class="call-to-action">
+### Explore Scope
+
+Visit [this repl](https://repl.it/@ameseee/Scope) and follow these directions:
+1. List out the names of all variables in this program
+2. One-by-one, console.log the value of each variable on line 8. What prints out?
+3. One-by-one, console.log the value of each variable on line 11. What prints out?
+4. Why were the results different from line 8 and 11?
+</section>
+
+If you declare a variable within a function, it can only be accessed within that function. This is known as the variable's `scope`. When we talk about variables in regard to their scope, there are two types:
 
 **Local Variables:**
 - created _inside_ a function using the `var` keyword
