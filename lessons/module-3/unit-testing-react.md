@@ -207,7 +207,7 @@ describe('Card', () => {
       title="Bananas"
       description="B A N A N A S"
       id={3}
-      deleteIdea={jest.fn()}
+      removeIdea={jest.fn()}
     />);
 
     expect(wrapper).toMatchSnapshot();
@@ -315,7 +315,7 @@ it('should match the favorited snapshot', () => {
         title='bananas'
         description='b a n a n a s'
         id={3}
-        deleteIdea={jest.fn()}
+        removeIdea={jest.fn()}
         isFavorite={true}
       />
     )
@@ -353,7 +353,7 @@ A common practice to think about and follow through when writing out tests is:
 Consider the following test:
 
 ```jsx
-  it('should call the deleteIdea prop with the Card\'s id when clicked', () => {
+  it('should call the removeIdea prop with the Card\'s id when clicked', () => {
     // Setup
     const removeIdeaMock = jest.fn();
     const wrapper = shallow(
