@@ -148,20 +148,45 @@ Since `display: flex;` was applied and no further declarations were made for the
 
 If we add the declaration `flex-direction: column`, we will see the items center themselves along the vertical axis, or _cross-axis_.
 
+<section class="call-to-action">
+## Put It All Together
+
+Now that you have had a chance to play around with some of properties of flexbox - let's solidify our learning. Please complete the [Flexbox Froggy](https://flexboxfroggy.com/) exercises before moving on to the Practice section!
+</section>
+
 ## Practice
 
-You and your partner will be assigned a portion of the Dog Party comp to recreate - but with Flexbox this time! You'll be given a starter kit with the HTML you should use and _some_ CSS. Follow the protocol below:
+You will be assigned a portion of the Dog Party comp to recreate - but with Flexbox this time! You'll be given a starter kit with the HTML you should use and _some_ CSS. Follow the protocol below:
 
-* Decide who will drive and who will navigate.
-* The driver should fork the CodePen to their account.
+* Fork each CodePen to your account.
 * Navigator - use notes from this lesson and navigate your driver towards implementing Flexbox!
 * Once you've achieved the comp, the driver should explain what each new line of CSS is doing.
-* If time, switch driver/navigator and select a different part of Dog Party to style with Flexbox, and repeat.
 
 Dog Party Starter Kits:
 - [Nav](https://codepen.io/ameseee/pen/MMVEym)
 - [Top Section](https://codepen.io/ameseee/pen/zVWEEa)
 - [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ)
+
+Once you have finished, submit each one of your CodePen links on the following [submission form!](https://docs.google.com/forms/d/e/1FAIpQLSdgbegLChznocAB4KaNvN4vkvYNl7tmDb6ZP0CI8QWkbNo_oA/viewform?usp=sf_link)
+
+## Solo Challenge
+
+Now that you have had some experience implementing Flexbox on a comp that you have encountered, it's time to apply these skills to a new comp! We have selected a few common design layouts that you can implement with Flexbox. Follow the steps below for implementation:
+
+<section class="call-to-action">
+### Instructions
+
+1. Create a new repo on GitHub called `Flexbox Comp Challenges`
+2. Create the following files: `collection-grid.html`, `pricing-table.html`, `collection-styles.css`, and `pricing-styles.css`
+3. Re-create the following comps using Flexbox - work on making small, atomic commits! Feel free to take creative liberty on color schemes, fonts, placeholder images/logos, etc.
+4. Once you have finished, submit your GH repo link [here](https://docs.google.com/spreadsheets/d/1KvOeGVWbHKGbgRtpU4It33pSMEwToBbc3q4NIsI5lQg/edit#gid=783599477).
+</section>
+
+#### Collection Grid
+<img class="medium-large" src="./assets/images/flexbox/collection.png">
+
+#### Pricing Table
+<img class="medium-large" src="./assets/images/flexbox/pricing.png">
 
 ## Further Exploration
 
