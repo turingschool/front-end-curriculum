@@ -23,8 +23,8 @@ tags: javascript, scope, hoisting
 
 Visit [this repl](https://repl.it/@ameseee/Scope) and follow these directions:
 1. List out the names of all variables in this program
-2. One-by-one, console.log the value of each variable on line 8. What prints out?
-3. One-by-one, console.log the value of each variable on line 11. What prints out?
+2. One-by-one, `console.log` the value of each variable on line 8. What prints out?
+3. One-by-one, `console.log` the value of each variable on line 11. What prints out?
 4. Why were the results different from line 8 and 11?
 </section>
 
