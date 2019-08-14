@@ -9,19 +9,21 @@ tags: react, testing
 
 - Review differences between Unit testing/Integration Testing/Acceptance Testing
 - Know how to add Enzyme to a project
-- Know how to use Enzyme and Jest to take a snapshot of UI
-- Know how to use Enzyme to simulate user behavior
-- Know how to unit test a class method using Jest
+- Become familiar with using Enzyme & Jest docs
+- Go over the different ways of testing including:
+  - Creating a snapshot of the UI
+  - utilizing Enzyme to simulate user behavior
+  - test class methods using Jest
 
 ## Vocab
 
-- `Unit test` - Unit tests test the smallest unit of functionality, typically a method/function. For example, when you call a specific method on a class, you expect should a value to be returned. Unit tests should be focused on one particular feature
-- `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly.
-- `Acceptance test` - Once an application is ready to use, it undergoes testing by the end user or client to verify that it meets the user expectations
+- `Unit test` - Unit tests test the smallest unit of functionality, typically a method/function. For example, when you call a specific method on a class, you would likely expect a value to be returned. Unit tests should be focused on one particular feature
+- `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly
+- `Acceptance test` - Once an application is ready to use, it undergoes testing by the end user or client to verify that it meets the user's expectations
 - `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library.  It can also be used for snapshot testing. 
-- `Enzyme` - Enzyme was created by Airbnb is a JS testing utility that makes it easier to assert, manipulate, and traverse your React component
-- `Snapshot` - Snapshot testing is provided by Jest and allows you the ability to create a rendered ‘snapshot’ of a component and compare it to a previously saved ‘snapshot’
-- `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired.  
+- `Enzyme` - Enzyme was created by Airbnb and is a JS testing utility that makes it easier to assert, manipulate, and traverse your React component
+- `Snapshot` - Snapshot testing is provided by Jest and allows you the ability to create a rendered "snapshot" of a component and compare it to a previously saved "snapshot"
+- `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired
 
 ## Unit Testing React Components
 
@@ -54,7 +56,7 @@ npm i
 
 ### Running Tests
 
-This application was built using `create-react-app`.  This great thing about this is that it has a built in testing framework.  This that cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
+This application was built using `create-react-app`.  The great thing about this is that it has a built in testing framework.  This that cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
 
 In order to run the tests, type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better — by default, it will only watch files that have changed since the last time you made a git commit.
 
@@ -76,7 +78,7 @@ Enzyme is a fantasic tool for testing our React components in a virtual way, wit
 npm i enzyme -S
 ```
 
-You're also going need the enzyme adapter for the version of React that you're using. As of this writing, it's enzyme-adapter-react-16, but that will change in the future, when create-react-app starts using version 17 of React. Just make sure you have the right one.
+You're also going to need the enzyme adapter for the version of React that you're using. As of this writing, it's enzyme-adapter-react-16, but that will change in the future, when create-react-app starts using version 17 of React. Just make sure you have the right one.
 
 ```bash
 npm install enzyme-adapter-react-16 --D
@@ -123,7 +125,7 @@ Let's focus on our first rule first and test our `Card` component.  We'll have t
 
 We want to import our `Card` component so we can test that.  We also want to import `shallow` from Enzyme.  This renders our component in a testing environment so that we can test it.  It allows you to test a component in isolation while also allowing you to test methods like `componentDidMount` and `componentDidUpdate`.  You will almost always want to start with `shallow`.  
 
-Another way to render a component in a testing environment is using `mount`.  Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md). `mount` will also render child elements, but you typically will not want to do this since you want to test these components in isolation.  We will write tests for every component so this is a mute point.  Think back to what a `unit test` is.  According to the docs, the few scenarios where you might want to use `mount` would be if you have to do some testing with a DOM API or need to test components that are wrapped in higher order components.  You will likely have few situations where you need to worry about this throughout the module.
+Another way to render a component with Enzyme is using `mount`.  Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md). `mount` will also render child elements, but you typically will not want to do this since you want to test these components in isolation.  We will write tests for every component so this is a mute point.  Think back to what a *unit test* is.  According to the docs, the few scenarios where you might want to use `mount` would be if you have to do some testing with a DOM API or need to test components that are wrapped in higher order components.  You will likely have few situations where you need to worry about this throughout the module.
 
 ```jsx
 // Card.test.js
@@ -135,7 +137,7 @@ import Card from './Card';
 describe('Card', () => {
   it('renders the title of the idea in <h1> tags', () => {
     const wrapper = shallow(<Card title="Bananas" />);
-    const title = <h2>Bananas</h2>;
+    const title = <h3>Bananas</h3>;
 
     expect(wrapper.contains(title)).toEqual(true);
   });
@@ -149,7 +151,7 @@ As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.i
 If you run `npm test` you should see your one test pass (two if you still have the generic App test). You can keep this process running. The test suite will automatically run whenever you make a change to the test file.
 
 ---
-_**Fun Fact**: Let's say we changed that `h2` tag to an `h3`.  It's going to fail.  If we wanted to debug and see what our `shallow` was actually rendering, we can add this line in our test._
+_**Fun Fact**: Let's say we changed that `h3` tag to an `h2`.  It's going to fail.  If we wanted to debug and see what our `shallow` was actually rendering, we can add this line in our test._
 
 ```js
     console.log(wrapper.debug());
@@ -162,9 +164,10 @@ _**Fun Fact 2**: If you want to keep seeing those friendly green checkmarks, we 
 ```js
   "test": "react-scripts test --verbose"
 ```
----
 
-If you stop your test runner (type `q` into your terminal) and then restart it (`npm test`), you should see the "should" statement from your it testing block.
+_If you stop your test runner (type `q` into your terminal) and then restart it (`npm test`), you should see the "should" statement from your it testing block._
+
+---
 
 We could continue to write tests this way for every single element but...there is actually a much better way of doing this.  Enter the world of snapshot testing!
 
@@ -256,7 +259,7 @@ const Card = ({ id, title, description, removeIdea }) => {
 }
 ```
 
-Running the tests now, you should see a failure for the snapshot test, with the differences between the two snapshots in the console. Here is where you have to consider, 'am I ok with those changes?' If so, you can update the tests by typing `u` while `Jest` is still in watch mode. Alternatively, you can restart your test suite and run `npm test --updateSnapshot`.
+Running the tests now, you should see a failure for the snapshot test, with the differences between the two snapshots in the console. Here is where you have to consider, "am I ok with those changes?" If so, you can update the tests by typing `u` while `Jest` is still in watch mode. Alternatively, you can restart your test suite and run `npm test --updateSnapshot`.
 
 ---
 _**Note**: This also tests to see if we have changed our className as well!  However, it does not test if we changed the name of the function._
@@ -264,7 +267,7 @@ _**Note**: This also tests to see if we have changed our className as well!  How
 ---
 
 ---
-_**Your Turn**: Write snapshot tests for the rest of your components as well including your App, Form, and Ideas components.  Remember to pass the props necessary in order for your wrapper to render correctly._
+_**Your Turn**: Write snapshot tests for the rest of your components including your App, Form, and Ideas components.  Remember to pass the props necessary in order for your wrapper to render correctly._
 
 ---
 
@@ -272,9 +275,9 @@ _**Your Turn**: Write snapshot tests for the rest of your components as well inc
 
 When testing your components, you're mainly testing presentation logic. Given our UI will change based on application data (our component props), we'll want to make sure we have tests for any conditional logic or dynamic changes.
 
-We'll learn about conditional rendering in React III but for now, let's add some conditional rendering into our IdeaBox, just so you can see how we'd test it.
+We'll learn more about conditional rendering in React III but for now, let's add some conditional rendering into our IdeaBox, just so you can see how we'd test it.
 
-Imagine our Card component having an extra property, called "isFavorite" - and if "isFavorite" is true, then the Card will have an additional class of "favorite".
+Imagine our Card component having an extra property, called "isFavorite" - and if "isFavorite" is true, then the Card will have an a different class of "favorite".
 
 ```jsx
 // Card.js
@@ -327,7 +330,7 @@ When both tests pass, we know that the two different possible versions of our Ca
 
 We currently only have one button, but how do we know it's doing what we expect it to do?
 
-First, we should start by being clear about what should happen. If you look closely at the code, you'll see that the `deleteIdea` property is being passed in. It stands to reason that this function should be called when that button is tested.
+First, we should start by being clear about what should happen. If you look closely at the code, you'll see that the `removeIdea` property is being passed in. It stands to reason that this function should be called when that button is tested.
 
 At this point, we don't necessarily care what the functions are doing -- just that they are being called appropriately. We'll test what the function is doing later when we test the `App` component where the method lives.  This is where **mocks** come in handy.
 
@@ -335,17 +338,17 @@ Mocks are stubbed-in or "faked" functionality that allows us to unit test specif
 
 You'll find when testing applications that use a framework like React, you'll need to make a significant amount of mocks. And that's ok! Sometimes it may feel like you're faking too much of your code by mocking so many pieces of functionality. The general rule here is if you're not testing the actual behavior **within** the code you are mocking, it's perfectly fine to mock it.
 
-So let's use mocks to test that the removeIdea function we passed in is being called appropriately, and with the correct argument.
+So let's use mocks to test that the `removeIdea` function we passed in is being called appropriately, and with the correct argument.
 
 ---
-_**Your Turn**: Before looking at the test below, think about how you might test this.  You don't need to write out the specific code, but think about what needs to be tested.  In english form, write out in your notebook you might set up this test._
+_**Your Turn**: Before looking at the test below, think about how you might test this.  You don't need to write out the specific code, but think about what needs to be tested.  In english form, write out in your notebook how you might set up this test._
 
 ---
 
-A common practice to think about and follow through when writing out tests are:
-* `Setup` - What do we need to render the component (aka *shallow* or *mount*).  What data needs to be mocked?
+A common practice to think about and follow through when writing out tests is:
+* `Setup` - What do we need to do in order to render the component (aka *shallow* or *mount*).  What data needs to be mocked?
 * `Execution` - Let's run the command or simulate the action.
-* `Expectation` - There is where our assertion happens.  After running our function, what did we expect to happen?
+* `Expectation` - This is where our assertion happens.  After running our function, what did we expect to happen?
 
 Consider the following test:
 
@@ -381,13 +384,13 @@ _**Your Turn**: Let's focus our testing now on our `App` component.  With the pe
 
 ---
 
-In our App component we have two class methods, `addIdea` and `deleteIdea`. Think about what each of those methods does.
+In our App component we have two class methods, `addIdea` and `removeIdea`. Think about what each of those methods do.
 
 True to unit-testing-nature, we'd like to test both of those methods in isolation. (AKA we don't want to only be able to test it by bringing in our whole Form component, finding the inputs, simulating changes, finding the button, simulating a click, and then seeing whether or not `addIdea` was called. That would be an integration test; much harder to do!)
 
 Fortunately, [Enzyme](https://airbnb.io/enzyme/docs/api/ReactWrapper/instance.html) has a really handy function that lets us call a method from the instance of a component: `instance()`.
 
-Calling `instance()` on our wrapper will give us access to all of the class instance methods. In this case, `addIdea` and `deleteIdea` (and also `setState`, which will be useful in a moment)!
+Calling `instance()` on our wrapper will give us access to all of the class instance methods. In this case, `addIdea` and `removeIdea` (and also `setState` if you want to set an initial state!)
 
 ---
 _**Important Note**: REMEMBER! `instance()` can only be used on class components.  `instance()` returns `null` for stateless functional components.  Sooo....don't include methods in your functional components!_ 
@@ -424,11 +427,11 @@ describe('App', () => {
 
 Definitely take some more time testing out your ideabox.  To see a finished example of what we did in class, you can checkout the `react-testing-complete` branch.  Continue to look through those docs as you work on testing these other pieces of functionality.
 
-- Write a unit test for deleteIdea
+- Write a unit test for `removeIdea`
 - Can you write the tests and implementation for the "favorite" button (that doesn't exist yet)?
 - Write a test that makes sure that our Ideas component shows the correct number of ideas.
 - Make sure that any other functions or interactions (ie. button clicks, input changes) are tested (especially in your form).
-- Not shown: Can you test and implement a counter that keeps track of the number of ideas in the list?
+- Can you test and implement a counter that keeps track of the number of ideas in the list?
 
 ---
 _**Fun Fact**: Interested in how much of your app you have tested?  You can run this command below!  Try and go for 100% test coverage!_ 
