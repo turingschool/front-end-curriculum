@@ -48,6 +48,7 @@ Let's continue working on the ideabox app we built together in class yesterday! 
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-testing.git
 cd ideabox-testing
+git checkout begin-react-testing
 npm i
 ```
 
@@ -239,7 +240,7 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
 `; 
 ```
 
-How do we make this test fail? We'd have to change what our component actually looks like. Let's the h3 tag to an h2 tag. Do that now:
+How do we make this test fail? We'd have to change what our component actually looks like. Let's change the h3 tag to an h2 tag. Do that now:
 
 ```jsx
 // Card.js
@@ -421,8 +422,18 @@ describe('App', () => {
 
 ### Homework: Finish testing your ideabox
 
+Definitely take some more time testing out your ideabox.  To see a finished example of what we did in class, you can checkout the `react-testing-complete` branch.  Continue to look through those docs as you work on testing these other pieces of functionality.
+
 - Write a unit test for deleteIdea
 - Can you write the tests and implementation for the "favorite" button (that doesn't exist yet)?
 - Write a test that makes sure that our Ideas component shows the correct number of ideas.
 - Make sure that any other functions or interactions (ie. button clicks, input changes) are tested (especially in your form).
 - Not shown: Can you test and implement a counter that keeps track of the number of ideas in the list?
+
+---
+_**Fun Fact**: Interested in how much of your app you have tested?  You can run this command below!  Try and go for 100% test coverage!_ 
+
+```bash
+npm test --  --coverage --watchAll=false
+```
+---
