@@ -107,6 +107,12 @@ let threeYearOldPup = pets.find(pet => {
 });
 
 console.log(threeYearOldPup); // { name: 'julius', age: 3 }
+
+let threeYearOldPups = pets.filter(pet => {
+  return pet.age === 3;
+})
+
+console.log(threeYearOldPups) // => [{name: 'julius', age: 3}, {name: 'mishu', age: 3}]
 ```
 
 
@@ -167,6 +173,8 @@ How do we iterate through objects?... Hint: `Object.keys()` or `Object.values()`
 
 Notice the different style of how these methods are used. How are these methods used for a given object?
 
+Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a>
+
 <section class="checks-for-understanding">
 ### Checks for Understanding
 
@@ -175,4 +183,5 @@ Notice the different style of how these methods are used. How are these methods 
 * What is a prototype method?
 * Name two prototype methods for an object.
 * Name three prototype methods for an array.
+* Which prototype methods are the most confusing right now?
 </section>
