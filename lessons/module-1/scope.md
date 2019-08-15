@@ -35,6 +35,7 @@ If you declare a variable within a function, it can only be accessed within that
 - are said to have "local scope"
 - cannot be accessed outside the function in which it was declared
 - are created when the function is run, and removed when it is done
+
 Other notes:
 - if the function runs twice, the variable could have a different value each time
 - two different functions can use the same variable name without a naming conflict
