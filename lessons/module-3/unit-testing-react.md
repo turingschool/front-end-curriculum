@@ -135,7 +135,7 @@ import { shallow } from 'enzyme';
 import Card from './Card';
 
 describe('Card', () => {
-  it('renders the title of the idea in <h1> tags', () => {
+  it('renders the title of the idea in <h3> tags', () => {
     const wrapper = shallow(<Card title="Bananas" />);
     const title = <h3>Bananas</h3>;
 
@@ -286,7 +286,7 @@ import React from 'react';
 import './Card.css';
 
 const Card = ({ id, title, description, removeIdea, isFavorite }) => {
-  var favoriteClass = isFavorite ? 'favorite' : 'card'
+  const favoriteClass = isFavorite ? 'favorite' : 'card'
 
   return (
     <section className={favoriteClass}>
@@ -369,7 +369,7 @@ Consider the following test:
     wrapper.find('button').simulate('click');
   
     // Expectation
-    expect(removeIdeaMock).toBeCalledWith(7);
+    expect(removeIdeaMock).toHaveBeenCalledWith(7);
   });
 ```
 
