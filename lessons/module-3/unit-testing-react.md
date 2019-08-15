@@ -56,7 +56,7 @@ npm i
 
 ### Running Tests
 
-This application was built using `create-react-app`.  The great thing about this is that it has a built in testing framework.  This that cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
+This application was built using `create-react-app`.  The great thing about this is that it has a built in testing framework.  This cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
 
 In order to run the tests, type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better — by default, it will only watch files that have changed since the last time you made a git commit.
 
@@ -197,6 +197,8 @@ Lastly, in order to use this serializer in jest, we need to add this line to our
 Everything should be set up now so that we can run our snapshot tests.  Let's add the following test:
 
 ```jsx
+// Card.test.js
+
 import React from 'react';
 import { shallow } from 'enzyme';
 import Card from './Card';
@@ -353,6 +355,8 @@ A common practice to think about and follow through when writing out tests is:
 Consider the following test:
 
 ```jsx
+// Card.test.js
+
   it('should call the removeIdea prop with the Card\'s id when clicked', () => {
     // Setup
     const removeIdeaMock = jest.fn();
