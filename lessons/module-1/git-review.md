@@ -9,8 +9,8 @@ tags: git, workflow
 - `git init`
 - `git add <filename>` ♻️
 - `git commit -m "Message here"` ♻️
-- `git push origin master`
-- `git pull origin master`
+- `git push origin master` ☁
+- `git pull origin master` 💻
 
 ## Cloning a Repo
 
@@ -21,7 +21,7 @@ When we clone a repository from GitHub, we are copying it down to our machine ex
 
 ### FAQs
 
-- If I make a type in a commit message, how can I change it? [Resource](https://help.github.com/en/articles/changing-a-commit-message)
+- If I make a typo in a commit message, how can I change it? [Resource](https://help.github.com/en/articles/changing-a-commit-message)
 - I hear people talk about `git blame` - what even is it and why would we use it? [Resource](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-blame)
 
 ## Solo Practice
