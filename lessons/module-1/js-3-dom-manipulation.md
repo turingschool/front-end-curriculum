@@ -45,6 +45,10 @@ Let's try out some queries:
 * `document.querySelector('#third')` will return the paragraph with the id `third`.
 * `document.querySelectorAll('.awesome')` will return a collection containing the two paragraphs with the class `awesome`.
 
+<section class="note">
+For today's lesson, we will only be working with `document.querySelector()`. We will focus on how to best utilize `document.querySelectorAll()` once we learn more about arrays and loops!
+</section>
+
 ### Updating our HTML
 
 [Elements](https://developer.mozilla.org/en-US/docs/Web/API/Element) have a number of useful properties and methods.
@@ -103,24 +107,29 @@ To sum up:
 
 Visit <a href="http://codepen.io/team/turing/pen/GqEBqg" target="_blank">this page</a> and fork the CodePen.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="GqEBqg" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/GqEBqg/">HTML Report Card</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="eric_turing" data-slug-hash="QWLNaVE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML Report Card">
+  <span>See the Pen <a href="https://codepen.io/eric_turing/pen/QWLNaVE/">
+  HTML Report Card</a> by eric weissman (<a href="https://codepen.io/eric_turing">@eric_turing</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+<section class="call-to-action">
 
 #### Beginning
-
-* Find the element with the `id` of `status` and change the message to something warm and uplifting.
 * Find the `h1` tag and change the header to "A Stellar Record of My Performance".
-* Change all of the elements with a class of `student` to your name.
+* Find the element with the `class` of `hs` and capitalize it's name.
+* Change the subject of each of the elements with the `id`s of `math`, `science`, and `language-arts`.
+* Find the element with the `id` of `message` and change the message to something warm and uplifting. Do the same with element with an `id` of `status`!
 
 #### Intermediate
-
-* Find all of the elements with the class of `grade`. Iterate through all of them and change their content to "A+"s.
+<!-- * Find all of the elements with the class of `grade`. Iterate through all of them and change their content to "A+"s. -->
 * Can you create a function that takes an HTML element as an argument and capitalizes its contents?
 
 #### Challenging
-
 * Select an element and set `contentEditable` to true. Now, click on the element. What happened?
 * Take a look at the [MDN documentation for DOM events][events-mdn]. Can you bind a function to the click event of the element?
+</section>
 
 ## Adding Event Listeners
 
@@ -143,10 +152,11 @@ Let's take a look at the syntax and then we'll talk about what's happening.
 
 <section class="call-to-action">
 ### Pair Practice
-* Take the JavaScript that you wrote during the previous pair practice session.
+* Create a function called `changeMessage` that executes the code you wrote for updating the element with a class of `message`
 * Add a `<button>` to the HTML markup of the page.
 * Add an event listener to that button.
-* When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).
+* When the button is clicked, have your `changeMessage` function fire!
+<!-- * When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades). -->
 </section>
 
 
@@ -181,10 +191,12 @@ Consider the following:
 <p data-height="300" data-theme-id="23788" data-slug-hash="grRjXA" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/grRjXA/">CSS Manipulation with JavaScript</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
-### Pair Practice
+<section class="call-to-action">
 
+### Pair Practice
 1. Add a button that changes the width of the box to 400px.
 2. Add a button that removes the border class from the box. (Hint: the method is called `remove` instead of `add`.)
+</section>
 
 ### Getting User Input from Forms
 
@@ -195,10 +207,15 @@ To access the value from an input element we can do the following
 
 Let's use this pen for practice
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="akwjjr" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/akwjjr/">Color Box</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="eric_turing" data-slug-hash="mdbPXYW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box">
+  <span>See the Pen <a href="https://codepen.io/eric_turing/pen/mdbPXYW/">
+  Color Box</a> by eric weissman (<a href="https://codepen.io/eric_turing">@eric_turing</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 <section class="call-to-action">
+
 ### Pair Practice
 * Add an input field with the `id` of "very-important-message" along with a button. When the user clicks on the button, it should set the `innerText` of the box to contents of the input field.
 * Add two inputs one for a CSS property and one for a value. When the user clicks the button, it should adjust that property on the box.
@@ -209,9 +226,12 @@ Let's use this pen for practice
 * When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades).
 </section>
 
+<section class="checks-for-understanding">
+
 ### Summary
 - What is the DOM?
 - How do we get information out of the DOM and into our JS?
 - How do we add information to the DOM?
 - How can we change the CSS of elements?
 - What is the preferred method for updating our CSS using JS?
+</section>
