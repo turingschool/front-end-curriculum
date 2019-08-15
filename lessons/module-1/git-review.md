@@ -9,8 +9,8 @@ tags: git, workflow
 - `git init`
 - `git add <filename>` ♻️
 - `git commit -m "Message here"` ♻️
-- `git push origin master`
-- `git pull origin master`
+- `git push origin master` ☁
+- `git pull origin master` 💻
 
 ## Cloning a Repo
 
@@ -21,7 +21,7 @@ When we clone a repository from GitHub, we are copying it down to our machine ex
 
 ### FAQs
 
-- If I make a type in a commit message, how can I change it? [Resource](https://help.github.com/en/articles/changing-a-commit-message)
+- If I make a typo in a commit message, how can I change it? [Resource](https://help.github.com/en/articles/changing-a-commit-message)
 - I hear people talk about `git blame` - what even is it and why would we use it? [Resource](https://www.atlassian.com/git/tutorials/inspecting-a-repository/git-blame)
 
 ## Solo Practice
@@ -37,13 +37,13 @@ Follow the steps below to get some practice. By next week, you should be to the 
   - add and commit your work
   - check your git log
   - add a button under your paragraph, write a CSS rule to add some padding to that button
-  - check your work - does it meet the criteria for the HTML and CSS Style Guides? If so, move on, if not, fix it.
+  - check your work - does it meet the criteria for the HTML and CSS Style Guides? If so, move on. If not, fix it.
   - add and commit your work
-  - go to GitHub and create a repo
+  - go to GitHub and create a repo. Usually you want to name it the same thing as your local project
   - add the remote repo to your local repo and push up
   - verify that all your code is now on the GitHub repo
-  - look at your commit history
-  - add a README file, just give it a title
+  - look at your commit history on GitHub
+  - on GitHub, add a README file - just give it a title
   - in your terminal, pull down the repo
   - check Atom - you should see the README
   - make an update to the README
