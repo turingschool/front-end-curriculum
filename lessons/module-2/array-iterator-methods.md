@@ -17,8 +17,10 @@ Students should be able to:
 
 Arrays and objects are the more complex data types that are available to us in JavaScript. What are all the data types you know of?
 
+<section class="call-to-action">
 **In Your Notebook**
 Write down everything you know about arrays. Everything you know about objects. Think about when you've used them in the past, where you've seen them, and what you've done with them. What do people mean with they say that "everything is an object" in JavaScript?
+</section>
 
 An array is essentially a comma-separated list of related values. For example:
 
@@ -41,6 +43,7 @@ let pizza = {
 
 ## A Review of `for` Loops
 
+<section class="call-to-action">
 **With Someone Next to You**
 Talk about the structure of a `for` loop. What does each part of the `for` loop do?
 
@@ -49,6 +52,7 @@ for (part 1; part 2; part 3) {
   part 4
 }
 ```
+</section>
 
 ## Prototype Methods
 
@@ -59,7 +63,7 @@ Prototype methods are functions that allow you to manipulate the value of a part
 
 ## Array Iteration Methods (Prototypes)
 
-What are they? Whhy are they useful? They loop through an existing array and apply a callback function to each element that might mutate each element and return a new value. Iteration methods generally take in a callback function as their first argument:
+What are they? Why are they useful? They loop through an existing array and apply a callback function to each element that might mutate each element and return a new value. Iteration methods generally take in a callback function as their first argument:
 
 `array.someArrayPrototype(callbackFunction)`
 
@@ -90,7 +94,7 @@ What is the purpose of the `return` in the `map()` example above?
 ### `Array.find(callbackFunction)` and `Array.filter(callbackFunction)`
 `Array.find()` helps you find a particular item in an array that matches a given condition. It will return the very first array element where the callback function returns true, even if there are multiple matches.
 
-  
+
 ```js
 let pets = [
   { name: 'harvey', age: 1 },
@@ -104,11 +108,11 @@ let threeYearOldPup = pets.find(pet => {
 
 console.log(threeYearOldPup); // { name: 'julius', age: 3 }
 ```
-  
+
 
 `Array.filter()` is very similar to `Array.find()`, but instead of simply returning the first match, it will return a new array with all elements that match.
 
-  
+
 ```js
 let pets = [
   { name: 'harvey', age: 1 },
@@ -123,7 +127,7 @@ let adultPets = pets.filter(pet => {
 console.log(adultPets);
 // [{name: 'julius', age: 5}, {name: 'mishu', age: 5}]
 ```
-  
+
 
 ### `Array.reduce(callbackFunction, initialValue)`
 `Array.reduce()` can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:
@@ -131,13 +135,13 @@ console.log(adultPets);
 _Callback Function_ - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over
 
 _Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
-  
+
 ```js
 const numbers = [1, 2, 3, 4, 5];
 
 let sum = numbers.reduce((sum, number) => {
   sum += number;
-  
+
   return sum;
 }, 0);
 ```
@@ -163,7 +167,7 @@ How do we iterate through objects?... Hint: `Object.keys()` or `Object.values()`
 
 Notice the different style of how these methods are used. How are these methods used for a given object?
 
-
+<section class="checks-for-understanding">
 ### Checks for Understanding
 
 * Describe an array?
@@ -171,4 +175,4 @@ Notice the different style of how these methods are used. How are these methods 
 * What is a prototype method?
 * Name two prototype methods for an object.
 * Name three prototype methods for an array.
-
+</section>
