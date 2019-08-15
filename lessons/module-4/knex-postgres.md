@@ -199,20 +199,17 @@ And in this particular migration we'll want to add a column on the `up`, and dro
 
 ```js
 exports.up = function(knex) {
-  return Promise.all([
-    knex.schema.table('papers', function(table) {
-      table.string('publisher');
-    })
-  ]);
+  return knex.schema.table('papers', function(table) {
+    table.string('publisher');
+  })  
 };
 
 exports.down = function(knex) {
-  return Promise.all([
-    knex.schema.table('papers', function(table) {
-      table.dropColumn('publisher');
-    })
-  ]);
+  return knex.schema.table('papers', function(table) {
+    table.dropColumn('publisher');
+  })
 };
+
 ```
 
 Go ahead and run this migration and then we'll add some seed data to our tables that we've just set up.
