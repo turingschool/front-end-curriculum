@@ -74,6 +74,8 @@ $ heroku logs
 $ heroku logs --tail
 ```
 
+After you have read the error logs, continue to the next step.
+
 ## Step 7 - Configure Your Environment
 
 We've previously only worked with our applications in a `development` environment. Now we need to set them up to work in a `production` environment. This involves a couple of steps:
