@@ -127,7 +127,7 @@ If the function fails for any reason, our Promise object is considered **rejecte
 ![Image of Promise Flow](https://wtcindia.files.wordpress.com/2016/06/promises.png?w=605)
 (Photo credit from [WalkingTree](https://blogs.walkingtree.tech/2016/07/03/using-promises-in-ext-js-6/))
 
-### The Promise-Based Fetch API
+### Passing the Options Argument
 
 The syntax would look fairly similar if we wanted to make a `POST` or `DELETE` request.  One thing to note is that `fetch` can actually take two arguments:
 
