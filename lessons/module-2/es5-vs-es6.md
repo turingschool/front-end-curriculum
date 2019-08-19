@@ -42,51 +42,6 @@ ES6 gives us two new variable keywords: `let` and `const`. These two variable ke
 
 What is a block? The most common ones that you will be familiar with are `if` statements and `for` loops. You can read more about block statements [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block).
 
-#### Turn and Code
-
-With a partner, consider the example below. What is happening within the body of our for loop? What will be returned? Why?
-
-```
-// es5 block scope
-var callbacks = [];
-
-for (var i = 0; i <= 2; i++) {
-
-    callbacks[i] = function () { 
-      return i * 2; 
-    }
-}
-
-callbacks[0](); // What will this return?
-callbacks[1](); // What will this return?
-callbacks[2](); // What will this return?
-```
-
-Previously, when we wanted a variable to remain scoped to a block, we had to wrap the contents of the block in a function.
-
-And here's how we would do it with ES6 syntax:
-
-```
-// es6 block scope
-var callbacks = []
-
-for (let i = 0; i <= 2; i++) {
-  
-  callbacks[i] = function () {
-    return i * 2 
-  }
-
-}
-
-callbacks[0]() === 0
-callbacks[1]() === 2
-callbacks[2]() === 4
-```
-
-The major differences are:
-* using the keyword `let` instead of `var` in the `for` loop, which will remain scoped to that block
-* not needing to wrap the contents of the loop in a function, _because_ the `i` is no longer referencing a variable that has been scoped globally.
-
 
 ### Hoisting
 
@@ -166,9 +121,6 @@ Here are some features arrow functions give you:
   * the curly braces and keyword `return` can be eliminated and the remaining expression will be evaluated and returned
   * only make use of this when a single expression is written
   * multiple lines or expressions in an arrow function require the curly braces and the keyword `return`
-* return an object
-  * surround the object with parentheses
-  * you can still also use syntax from ES5 instead of parentheses if more semantic/readable
 * drop the parentheses around a single parameter
   * if using multiple parameters or no paremeters, the parentheses must be used
   
