@@ -57,7 +57,11 @@ src/
   * Adobe XD CC 
   * InVision
 
-- Please make sure to DM your instructors your wireframes, DTR, and project management tool (GH Projects, trello, etc.) by the end of the first day.
+#### Deliverables 
+Please DM your instructors the following by the end of the first day:
+  * wireframes
+  * DTR between you & project partner
+  * project management tool (GH Projects, trello, etc.) 
 
 ### Iteration 1: Landing Page
 
