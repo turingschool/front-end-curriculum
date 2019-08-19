@@ -21,7 +21,7 @@ By the end of this lesson, you will be able to:
 
 Now that we understand the order of execution a bit, we can dive deeper into the concept of scope. Scope is the place in which a variable or value can be accessed.
 
-At the most basic level, variables can be either globally or locally scoped. Take the following example: 
+At the most basic level, variables can be either globally or locally scoped. Take the following example:
 
 ```js
 var cowNoise = 'moo';
@@ -31,7 +31,9 @@ function makeNoise() {
   console.log('Cow Noise inside Function: ', cowNoise);
   console.log('Cat Noise inside Function: ', catNoise);
 }
-  
+
+makeNoise();
+
 console.log('Cow Noise outside Function: ', cowNoise);
 console.log('Cat Noise outside Function: ', catNoise);
 ```
@@ -49,14 +51,72 @@ We have several scopes available to us: global, function, block, and eval (the l
 - Functions and variables in the global scope are "vulnerable" because they can be accessed by everything and potentially mutated (changed).
 - `var`, `let`, and `const` can be globally scoped.
 
+```js
+var one = "one";
+let two = "two";
+const three = "three";
+
+showNumbers();
+
+function showNumbers () {
+  console.log("In function: ", one, two, three);
+  if (one && two && three) {
+    console.log("In if block: ", one, two, three);
+  }
+}
+
+
+// The three global variables are accessible everywhere
+```
+
 **Function scope:**
 - Variables declared in the function (using `var`, `let`, or `const`) can only be accessed by the other code inside the function.
 - You control what's in the function scope, it cannot be meddled with by anyone or anything else.
 - The global scope cannot access function scope.
 
+```js
+function readWords() {
+  var greeting = "Hello, friend, ";
+  let question = "how are you? ";
+  const response = "I am fine."
+
+  if (true) {
+    console.log('Sentence in the if block: ', greeting, question, response);
+  }
+
+  console.log(greeting + question + response);
+}
+
+readWords();
+
+console.log(greeting + question + response);
+
+
+```
+
 **Block scope:**
 - Variables declared in the [block statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/block) (`if` blocks, `for` loops, etc) using `let` or `const` can only be accessed by other code inside the block.
 - Variables declared in block statements using `var` will not be scoped within the block (as this is a special feature of `let` and `const`). Variables declared with `var` will "leak out"
+
+```js
+function readWords() {
+  var greeting = "Hello, friend, ";
+  let question = "how are you? ";
+  const response = "I am fine."
+
+  if (true) {
+     var greeting = "Sup dawg, ";
+     let question = "what's good?";
+     const response = "Nm."
+     console.log('Sentence in if block: ', greeting, question, response);
+  }
+
+  console.log(greeting + question + response);
+}
+
+readWords();
+```
+
 
 
 *Important things to know when dealing with scope and code execution*
@@ -92,15 +152,22 @@ In the example below, the `console.log` fails because parent scopes do not have 
 
 ```js
 const array = [ 5, 4, 3, 2, 1 ];
+const secondNumber = array[1];
 
 function getFirstNumber () {
   const firstNumber = array[0];
   return firstNumber;
 }
 
-getFirstNumber(); // this works, why?
+function getSecondNumber () {
+  return secondNumber;
+}
 
-console.log(firstNumber);  // why can't we access firstNumber?
+getFirstNumber(); // this works, why?
+getSecondNumber(); // this works, why?
+
+console.log(secondNumber);
+console.log(firstNumber);  // why can we access secondNumber, but not firstNumber?
 ```
 
 ##### Let and const are block scoped
@@ -119,6 +186,24 @@ if (message.length > 0) {
 console.log(message);
 ```
 
+Another fun example:
+
+```js
+function getIndex(searchQuery) {
+  const names = ["Brittany", "Khalid", "Robbie"];
+
+  for (let i = 0; i < names.length; i++) {
+    if (names[i] === searchQuery) {
+      console.log ('The index is: ', i);
+      break;
+    }
+  }
+  return i;
+}
+
+getIndex("Khalid"); // What will log and what will return?
+```
+
 If they are not found within the context of a block statement, then `let` and `const` will be functionally scoped, like `var`.
 
 #### Journal
@@ -131,19 +216,19 @@ What might be a metaphor or analogy for scope? Draw or diagram it out.
 
 ## Scope Chain
 
-Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in the most immediate (local) scope and moves towards the global space. Remember that the scope chain is initialized during the "creation phase" of the interpreter running through the code. This is important to note, as the scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are _invoked_. 
+Whenever a variable is used, the JavaScript interpreter traverses the `scope chain` until it finds an entry for that variable. Traversal on the scope chain always starts in the most immediate (local) scope and moves towards the global space. Remember that the scope chain is initialized during the "creation phase" of the interpreter running through the code. This is important to note, as the scope chain (e.g. "What is the parent scope for this variable? The grandparent scope?") is determined by where functions are _defined_ in the code base.... not where functions are _invoked_.
 
 Every time a variable is initialized, the interpreter will first look in its own scope to see if the label can be found. If it is not found, it will look "up" the scope chain to the parent scope to try to resolve the variable in the parent context. It will climb up the scope chain examining every scope, looking for a match to the variable name. If that name is never found, the interpreter will declare it globally on the window and the variable will be scoped as such.
 
 
 ```js
 1  let number = 10;
-2 
+2
 3  function foo () {
 4    number = 20;
 5    console.log('A', number);  // prints 'A', 20
 6  }
-7 
+7
 8  console.log('B', number);  // prints 'B', 10
 9  
 10  foo();
@@ -157,7 +242,7 @@ Every time a variable is initialized, the interpreter will first look in its own
 2. Line 1 - `number` is assigned the value of 10
 3. Line 8 - prints `B 10` to the console
 4. Line 10 - `foo` is invoked, creating a new execution context
-5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searchs in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20, both locally and globally.
+5. Line 4 - A variable is declared without the keyword `var` and assigned a value. The interpreter searches in the current execution context to see where this variable was defined. Because it doesn't find it declared in the current scope, it looks up the scope chain to the parent scope, which happens to be the global scope. The interpreter understands that this is to be treated as a re-assignment and assigned the value of `number` to 20, both locally and globally.
 6. Line 5 - prints `A 20` to the console
 7. Line 12 - prints `C 20` to the console
 
@@ -183,16 +268,39 @@ console.log(number);  // what will log here?
 Example 2:
 
 ```js
-var givenName = 'Robbie McJaeger';
+var givenName = 'Amon Williams';
 
 function printGreeting() {
   console.log(`Hello ${givenName}`);
 }
 
-printGreeting('Bob-o');  // what will log here?
+printGreeting('Khalid');  // what will log here?
 printGreeting();      // what will log here?
 ```
 
+Example 3:
+
+```js
+var givenName = 'Amon Williams';
+
+function printGreeting() {
+  let givenName = "Khalid"
+  console.log(`A: Hello ${givenName}`);
+
+  if( givenName.split(" ").length < 2) {
+    givenName = "Khalid Williams";
+    console.log(`B: Hello ${givenName}`);
+  }
+
+  console.log(`C: Hello ${givenName}`);
+}
+
+printGreeting();
+
+console.log(`D: Hello ${givenName}`);
+
+// What logs at each letter?
+```
 
 #### Closing
 
@@ -297,7 +405,7 @@ array[5]()  // what will log here?
 
 
 
-<!-- 
+<!--
 ====================================================
 ====================================================
 ====================================================
@@ -309,13 +417,13 @@ _**Scope**_
 Prompt for students:
 
 What is the result of each `console.log()`? Explain your answer.
-```js 
+```js
 var alarmTime = 8;
 
 function testAlarm() {
    let alarmTime = 22;
    if (alarmTime > 10) {
-     console.log('A', alarmTime); 
+     console.log('A', alarmTime);
      console.log('Wake up!');
    }
 }
