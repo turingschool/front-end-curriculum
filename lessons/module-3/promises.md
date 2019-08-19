@@ -155,13 +155,13 @@ In this example, we're making a `POST` request that would add a new joke. We wou
 const options = {
   method: 'POST',
   body: JSON.stringify({
-    jokeName: 'Foo',
-    totalPoints: 100
+    jokeName: 'Another bad joke',
+    jokeValue: 'What did the triangle say to the circle? You’re so pointless.'
   }),
   headers: {
-    'content-type': 'application/json'
+    'Content-Type': 'application/json'
   }
-}; 
+};
 
 fetch('/api/v1/jokes', options)
   .then(response => response.json())
