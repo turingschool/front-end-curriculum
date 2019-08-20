@@ -123,7 +123,9 @@ Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="_blank">this 
 * Find the element with the `id` of `message` and change the message to something warm and uplifting. Do the same with element with an `id` of `status`!
 
 #### Intermediate
-<!-- * Find all of the elements with the class of `grade`. Iterate through all of them and change their content to "A+"s. -->
+
+* Add a button called `Change Name`. Find all of the elements with a class of `student` and change them to your name when the button is clicked!
+* Add a button called `Change Grades`. Find all of the elements with the class of `grade`. Iterate through all of them and change their content to `A+`s when the button is clicked. 
 * Can you create a function that takes an HTML element as an argument and capitalizes its contents?
 
 #### Challenging
