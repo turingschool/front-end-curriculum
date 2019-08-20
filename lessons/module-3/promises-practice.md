@@ -194,7 +194,7 @@ fetch('http://localhost:3001/api/frontend-staff')
   // }
 ```
 
-<section>
+<section class="call-to-action">
 ### On Your Own
 
 So we're probably going to have to iterate over this array to make a fetch call for all the bios and images. How do we do that?
