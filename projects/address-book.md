@@ -23,3 +23,28 @@ Address book will be build in two separate repositories:
 - A back-end repository for your database and server
 - A front-end repository for your user-facing application, which will consume
   the back-end API
+
+## Learning Goals
+
+The primary learning goals for this project are:
+
+- server-side testing
+- further understanding of complete CRUD endpoints
+- connecting BE & FE repositories using CORS
+- multiple environments: 
+    - testing 
+    - making use of automatic continuous integration with TravisCI
+    - deployment with Heroku
+
+The second focus for this project is developing professional-level workflow habits. This includes:
+
+- using a PR template
+- conducting actual code reviews in your PRs
+- detailed agile workflow using a kanban system or GH issues
+- keeping track of MVP features and nice-to-have features
+- agreeing to a commit message template
+- exploring `git rebase` and squashing
+- Highly semantic, specific, professional documentation (README, API documentation, etc)
+
+This workflow process will be good preparation for the next group project, which is your Cross-Pollination capstone.
+
