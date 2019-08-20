@@ -129,3 +129,19 @@ You application must have the following functionality. A user should be able to:
 * Delete a contact detail for a specific contact
 * Delete a contact and all their associated details
 * Never need to refresh the page to see new information
+
+### Design Research
+
+As part of your submission template, we'd like you to do some design research. Pick a single UI element off of [Dribbble](https://dribbble.com) (or any other site you find to be really pretty) that you like and use it to inspire the rest of your design. For example: 
+
+I really like the subtle drop-shadows on these [notifications](https://dribbble.com/shots/1467222-Notifications), and the way the notification icons vary slightly in color by being slightly lighter than the rest of the background. I will incorporate these types of drop-shadows on elements in my project and play with this particular use of color.
+
+In your project submission, you will link to _your wireframes and to your design inspiration(s)_.
+
+### Testing
+
+Because testing the front-end is familiar by now, we will require 75% or higher testing coverage of your front-end codebase.
+
+### Deployment
+
+Your front-end codebase should be fully deployed to Heroku. You do not need to implement TravisCI for your front-end repository, but you may if you wish.
