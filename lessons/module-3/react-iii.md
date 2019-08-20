@@ -438,8 +438,8 @@ Refactor IdeaBox to use these endpoints. Hint: you might need to write more fetc
 When you have completed this functionality, compare it to the solution on the `react-iii-complete` branch.
 </section> 
 
-<section class="note">
-### Additional steps
+<section class="call-to-action">
+### Additional Steps
 
 Take a look ahead to our async testing lesson and pull the fetches into their own files and try to write out a few async tests!
 </section>
