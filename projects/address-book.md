@@ -48,3 +48,10 @@ The second focus for this project is developing professional-level workflow habi
 
 This workflow process will be good preparation for the next group project, which is your Cross-Pollination capstone.
 
+# Base Expectations
+
+## Back End Functionality 
+
+The back-end of this project can be completed with three new lessons: Intro to
+Express, Server-Side Testing, and Connecting the BE & FE. You have the tools to
+build out the one-to-many relationship in PostgreSQL with a Express/Knex server!
