@@ -43,7 +43,7 @@ This workflow process will be good preparation for the next group project, which
 
 ## Back End Functionality 
 
-The back-end of this project can be completed with only two new lesson: Server-side Testing, and Connecting the BE and FE. You already have the tools to build out the one-to-many relationship PostgreSQL database and Express/Knex server!
+The back-end of this project can be completed with only two new lessons: Server-side Testing, and Connecting the BE and FE. You already have the tools to build out the one-to-many relationship PostgreSQL database and Express/Knex server!
 
 ### Required Endpoints
 
