@@ -47,12 +47,12 @@ Up until now, the codebases you've created have been fairly bare-bones. The file
 * `css/styles.css`
 * `images/logo.jpg`
 
-In the real world, you're going to see codebases that contain many more files, organized in a much more complex manner. 
+In the real world, you're going to see codebases that contain many more files, organized in a much more complex manner.
 
-<div class="discuss">
+<section class="call-to-action">
   <h4>In Your Notebook</h4>
   <p>Take a look at the files and directory structure of <a href="https://github.com/mozilla/normandy" target="_blank">this repo</a> What are some things that seem new to you? What's familiar? Why are so many files prefixed with a dot?</p>
-</div>
+</section>
 
 You can expect the apps you work on in the future to be much closer to this size and structure than the simple 5-file, 3-folder structure you've started out with. It's important that we feel comfortable navigating large codebases and understand the how and why they require the complexity that we see here.
 
@@ -64,10 +64,10 @@ In order to demystify some of the complex structure we'll see in the future, let
 Looking at the top-level, root directory of our boilerplate, we already have quite a few files.
 
 
-<div class="discuss">
+<section class="call-to-action">
   <h4>Turn and Talk</h4>
   <p>Based on the files in our root, what tools are we going to be using to facilitate the development of our application?</p>
-</div>
+</section>
 
 <!-- eslint, git, NPM, mocha/chai -->
 
@@ -85,7 +85,7 @@ With the exception of the `README.md` file, each of these is some sort of config
 
 **The NPM Files:** `package.json` and `package-lock.json`
 
-NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish small, reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). 
+NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish small, reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency).
 
 With this definition, there are two more words we'll run into that should be clarified:
 
@@ -97,7 +97,7 @@ As an example, pretend that the `.filter()` method did not exist in JavaScript f
 ```js
 Array.prototype.filter = function(callback) {
   var filteredData = [];
-  
+
   this.forEach(function(i) {
     if (callback(i)) {
       filteredData.push(i)
@@ -109,10 +109,10 @@ Array.prototype.filter = function(callback) {
 
 Instead of having us all re-invent the wheel, and waste time writing the same piece of code over and over again, NPM would allow someone to write this code once and publish it to the registry. From there, all other developers could simply download this code snippet and incorporate it into their project without having to write it from scratch.
 
-<div class="discuss">
+<section class="call-to-action">
   <h4>Table Talk</h4>
   <p>How does NPM differ from GitHub? They both seem to be places where developers can publish and download code.</p>
-</div>
+</section>
 
 <!-- NPM is more for publishing code that is solving a very tiny, common problem that many developers will face. Other developers will download a package from NPM when they want to take advantage of its functionality in their project. GitHub is for publishing entire projects (that may or may not rely on NPM packages). Other developers will only download your project from GitHub if they want to contribute to it. That said, NPM packages are still published to GitHub for version control purposes, but full-blown GitHub projects have no real reason to be published to NPM. Think about idea-box from mod 1. You wouldn't publish that to NPM because most people aren't building projects that need an ideabox inside of them. -->
 
@@ -161,13 +161,13 @@ Regular dependencies that will need to be included in our application for our us
 As we determine that our project needs certain dependencies, we install them by running something like: `npm install <packageName>` in our terminal. This will automatically add that package to our `dependencies` section of the `package.json`. If we only need a development dependency, we can specify for NPM to store it in our `devDependencies` by modifying the command slightly: `npm install <packageName --save-dev`
 
 
-As we install dependencies, we populate a directory called `node_modules` - this is where our application looks for all of the packages our project relies on. It's important to note that **we do not commit the `node_modules` directory to GitHub**. Looking back at the root of our repo, we noticed a `.gitignore` file that told git specifically not to commit certain files and directories. Included in this list of ignored files was our `node_modules` directory. 
+As we install dependencies, we populate a directory called `node_modules` - this is where our application looks for all of the packages our project relies on. It's important to note that **we do not commit the `node_modules` directory to GitHub**. Looking back at the root of our repo, we noticed a `.gitignore` file that told git specifically not to commit certain files and directories. Included in this list of ignored files was our `node_modules` directory.
 
 
-<div class="discuss">
+<section class="call-to-action">
   <h4>Turn and Talk</h4>
   <p>Why wouldn't we want to commit our `node_modules` directory? If this directory is not being pushed up to GitHub, how do other developers still have access to each of our project's dependencies?</p>
-</div>
+</section>
 
 **Semantic Versioning**
 
@@ -176,11 +176,11 @@ You'll notice that the dependencies we install each have a value associated with
 Think back to the filter example code from earlier. Imagine the developer who created that package decided to change the name of the method from `filter` to `sift`. If this change took effect immediately, as soon as the developer pushed it to GitHub, now anybody using the `filter` method would have a broken application. Version numbers allow us to rely on a particular representation of a package (e.g. `filter` at version `1.2.3`), then update manually to a newer version (e.g. `sift` at version 2.0.0) when we have the time and knowledge to refactor our applications to work with the new changes.
 
 
-<div class="discuss">
+<section class="call-to-action">
   <h4>Reading</h4>
   <p>Read through the following <a href="https://semver.org/">documentation</a>. What do each of the numbers in a version number represent?</p>
-</div>
+</section>
 
 
 
-<!-- I discuss semver here but at a high-level, very briefly. --> 
+<!-- I discuss semver here but at a high-level, very briefly. -->
