@@ -4,7 +4,20 @@ title: Which Beyoncé? - Solo
 
 ## Learning Goals
 
+* Solidify and demonstrate your understanding of:
+  * semantic HTML
+  * clean & organized CSS styles
+  * DRY JavaScript
+  * localStorage to persist data
+* Iterate through/filter DOM elements using for loops/array prototype methods
+* Understand the difference between the data model and how the data is displayed on the DOM
+* Match/recreate a UI and create a great UX
+
 ## Overview
+
+`Which Beyoncé?` is a two-player game that replicates [Concentration](https://en.wikipedia.org/wiki/Concentration_(card_game)).
+
+Each player takes turn flipping over two cards at a time. If they match, that player "scores". If the two cards don't match, they must be flipped back over. The goal is the get the greatest amount of matches.
 
 ## Progression
 
@@ -106,13 +119,13 @@ The topic does not have to be Beyonce. Besides assets and name of app, students 
 ## HTML
 
 * **4:** Application uses BEM, SMACCS or another set of **naming conventions** for classes, all team members can explain those naming conventions. The form uses **WAI-ARIA** and is fully accessible.
-* **3:** Application adds to the above with markup that is **easy to read** and follows across **naming conventions**.
-* **2:** Application adds to the above with HTML that incorporates **semantic HTML** elements and has a simple, clean HTML structure.
-* **1:** Crafts markup that meets the criteria of the Turing HTML Style Guide
+* **3:** Application uses markup that is **easy to read** and follows across **naming conventions**.
+* **2:** Application uses HTML that incorporates **semantic HTML** elements and has a simple, clean HTML structure.
+* **1:** Crafts markup that meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
 
 ### JavaScript
 
 * **4:** **Code is well refactored** and demonstrates developer empathy. No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. All functions are **less than 10 lines long**.
 * **3:** The **event object** is used correctly, and is not accepted as a parameter if it is not necessary. All team members can speak to **how the event object is utilized** for any given event handler. **Function and variable names** describe their role in the program. *Examples: The name of the data type should not ever be in a variable name; the name itself should be clear enough to indicate the type of data it holds. An event handler should not have name "eventHandler". Possible alternatives are `allCards` and `flipCard()`.*
-* **2:** The application adds to the above by correctly **implementing a data model** for the `Card` and `Deck` classes, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. All team members can speak to the **role of each class**.
-* **1:** Style and syntax meets the criteria of the Turing JS Style Guide
+* **2:** The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. All team members can speak to the **role of each class**.
+* **1:** Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
