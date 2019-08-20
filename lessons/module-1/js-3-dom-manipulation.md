@@ -105,7 +105,7 @@ To sum up:
 
 ### Pair Practice
 
-Visit <a href="http://codepen.io/team/turing/pen/GqEBqg" target="_blank">this page</a> and fork the CodePen.
+Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="_blank">this page</a> and fork the CodePen.
 
 <p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="eric_turing" data-slug-hash="QWLNaVE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML Report Card">
   <span>See the Pen <a href="https://codepen.io/eric_turing/pen/QWLNaVE/">
