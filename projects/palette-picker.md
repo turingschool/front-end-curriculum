@@ -13,7 +13,7 @@ Your job is to recreate some of this site's functionality with your own backend 
 
 Palette Picker will be built in two separate respositories:
 - A back-end repository for your database and server
-- A front-end repository for your user-facing application that will consume the BE repo
+- A front-end repository for your user-facing application that will consume the BE API
 
 ## Learning Goals
 
