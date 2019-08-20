@@ -181,6 +181,7 @@ function listFruits() {
 }
 
 ```
+You can see that instead of using a hardcoded number, we are using `fruits.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
 
 <section class="call-to-action">
 
@@ -201,7 +202,7 @@ function listFruits() {
 
 </section>
 
-You can see that instead of using a hardcoded number, we are using `fruits.length` in our condition. This means we will continue to loop over the array as long as the counter is less than the total number of elements in the array. That's pretty handy!
+
 
 ### Loops and Performance Issues
 It's important to be aware of the potential performance problems that loops can cause. When a browser hits Javascript, it stops executing anything else on the page until it has processed that script. Since loops can be run on arrays or containers of unknown -- and potentially enormous -- size, it's possible for our loop to make a page much, much slower to load.
