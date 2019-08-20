@@ -127,14 +127,18 @@ endpoints so far? What is missing?
 Since we want to make sure that we are getting the correct behavior/responses in the event that a `GET` request is made for a student that does not exist in the DB - we need to write a "Sad Path" as well
 
 ```js
-  it('should return a 404 and a "No Student Found" message if the student does not exist', async () => {
-    const res = await request(app).get('/students/10')
-    const result = res.body[0]
+    it('should return a 404 and the message "Student not found"', async () => {
+      const invalidID = -1;
 
-    expect(res.status).toBe(404)
-    expect(result).toEqual('No Student Found')
-  })
+      await request(app)
+              .get(`/students/${invalidID}`)
+              .catch(response => {
+                expect(response.status).toBe(404)
+              })
+    })
 ```
+
+_Note: As of superagent v4.1.0, there is an issue with tests that expect a status code other than 2xx. Above is the workaround for testing for other statues with async/await_
 
 ## POST a new student
 
@@ -175,7 +179,7 @@ Now we're ready to write our test POSTing a new student to the database:
 describe('POST /students', () => {
   it('should post a new student to the db', async () => {
     // setup
-    const newStudent = { lastname: 'Lovett', program: 'FE', enrolled: true }
+    const newStudent = { lastname: 'Lovett', program: 'FE', enrolled: false }
 
     // execution
     const res = await request(app)
@@ -187,7 +191,7 @@ describe('POST /students', () => {
 
 
     // expectation
-    expect(res.status).toBe(200)
+    expect(res.status).toBe(201)
     expect(student.lastname).toEqual(newStudent.lastname)
   })
 })
