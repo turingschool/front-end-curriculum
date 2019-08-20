@@ -67,9 +67,9 @@ Now we continue on with `foo(x * y)` which pushes `a + b + 11` to the top of the
 <section class="call-to-action">
 Go try it out [here](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZm9vKGIpIHsKICB2YXIgYSA9IDEwOwogIHJldHVybiBhICsgYiArIDExOwp9CgpmdW5jdGlvbiBiYXIoeCkgewogIHZhciB5ID0gMzsKICByZXR1cm4gZm9vKHggKiB5KTsKfQoKY29uc29sZS5sb2coYmFyKDcpKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D).
 
-Run the existing example, and then edit it from there. Add a `setTimeout()` or two. What happens in the call stack and queue as the `setTimeout()`runs?
-
 Did anything happen you didn't expect? Talk to a neighbor about what you've learned after playing around with the stack.
+
+If you get bored, edit the existing example to include a `setTimeout()` or two. What happens in the call stack and queue as the `setTimeout()`runs?
 </section>
 
 So! From the exercise above we can start to understand these these concepts:
@@ -91,28 +91,30 @@ Heres a great example:
   Non-Blocking JS</a> by Travis Rollins (<a href="https://codepen.io/Kalikoze">@Kalikoze</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+<!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
 
-When Big Loop handler runs the browser appears frozen. We know JavaScript’s call stack is synchronous soBig Loop executes on the call stack until completion. It’s also non-blocking where Do Stuff clicks are still received even if they didn’t execute immediately.
+When Big Loop handler runs the browser appears frozen. We know JavaScript’s call stack is synchronous so Big Loop executes on the call stack until completion. It’s also non-blocking where "Do Stuff" clicks are still received even if they didn’t execute immediately.
+
+Note that you might not see the "Do Stuff" button being clicked, but the click is still registered.
 
 
 ### Asynchronous
 
 Let's continue on with asynchronous. With non-blocking code, we can have a user click a button and continue on with I/O without making them wait.
 
-How does that work? Well for a long time the web has used `callbacks` to help solve this issue, allowing code to be executed once its finished. For example, the `browser` has web API's that take callbacks as an argument, like: `XHR`, `SetTimeout`, `DOM` events. These things have their own `callback queues`/`task queues` which run an `event loop`.
+How does that work? Well for a long time the web has used `callbacks` to help solve this issue, allowing code to be executed once it's finished. For example, the `browser` has web APIs that take callbacks as an argument, like: `XHR` (old version of `fetch`), `SetTimeout`, `DOM` events. These things have their own `callback queues`/`task queues`, which run an `event loop`.
 
 You can try it yourself [here](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D).
 
-When your code first executes, it loads events and saves them in [`heap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Heap) , but for now let's reference it by the web API box. So the call stack starts running through our code and `setTimeout(function timeout{...})`(line 9) gets put on the call stack. Which sends it over to the web API box for storage until it's ready to execute the callback after 5 seconds! Once the wait is done, it will send the callback to the `callback queue / task queue` while the `event loop` waits for a good time to throw it on the stack / till the stack is cleared. ( event loop is the orange loop in this example )
+When your code first executes, it loads events and saves them in [`heap`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Heap) , but for now let's reference it by the web API box. So the call stack starts running through our code and `setTimeout(function timeout{...})`(line 9) gets put on the call stack. Which sends it over to the web API box for storage until it's ready to execute the callback after 5 seconds! Once the wait is done, it will send the callback to the `callback queue / task queue` while the `event loop` waits for a good time to throw it on the stack / till the stack is cleared (event loop is the orange loop in this example).
 
-Now we also saw that the `DOM event listener`, when put on the call stack(line 1) is pushed to the web API's storage and waits/listens for its time to be called. You'll notice that once I trigger the event by clicking the 'Click me!' button, that callback is pushed to the `callback queue / task queue`. Once the stack has cleared the `event loop` will trigger the next callback.
+Now we also saw that the `DOM event listener`, when put on the call stack (line 1) is pushed to the web API's storage and waits/listens for its time to be called. You'll notice that once you trigger the event by clicking the 'Click me!' button, that callback is pushed to the `callback queue / task queue`. Once the stack has cleared the `event loop` will trigger the next callback.
 
 So what does this mean? Yes, your JS code is running on a single call stack (single-threaded). But under your JS, the browser code is running multiple threads to manage async actions. When an async action is done doing its thing, the callback gets pushed on the task queue. The event loop is constantly checking to see if the call stack is empty, and when it is, the task queue grabs the first thing in the queue and puts it on the call stack. And this is where the function is executed.
 
 Hope that review was helpful!
 
-## Let's dive in and build a Front-end Turing staff website
+## Let's dive in and build a Front-End Turing staff website
 
 ![spec](../../assets/images/spec.png)
 
@@ -120,11 +122,11 @@ Hope that review was helpful!
 
 ## Promises Practice Repo
 
-We're going to be building out this site with two different repos.  One for the client side code and another is an API that serves up a collection of members.  Something to note is that the API given to us doesn't automatically give us all of the info needed to display the staff members. There is a second nested endpoint we will need to fetch... More on this in a moment.
+We're going to be building out this site with two different repos. One for the client side code and another is an API that serves up a collection of members. Something to note is that the API given to us doesn't automatically give us all of the info needed to display the staff members. There is a second nested endpoint we will need to fetch... More on this in a moment.
 
 Clone [this repo](https://github.com/turingschool-examples/promises-practice) and the [promises-api](https://github.com/turingschool-examples/promises-api) repo down.
 
-For both:
+Have these directories open in two separate terminal tabs so you can see them both at the same time. For both, run:
 
 `npm install`
 
@@ -192,9 +194,13 @@ fetch('http://localhost:3001/api/frontend-staff')
   // }
 ```
 
-So we're probably going to have to iterate over this array to make a fetch call for all the bios and images.
+<section>
+### On Your Own
 
-```javascript
+So we're probably going to have to iterate over this array to make a fetch call for all the bios and images. How do we do that?
+</section>
+
+<!-- ```javascript
 fetchBios = (staff) => {
   const promises = staff.map(staffMember => {
     return fetch(staffMember.info)
@@ -204,7 +210,7 @@ fetchBios = (staff) => {
   });
   return Promise.all(promises);
 };
-```
+``` -->
 
 #### Resources
 * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
