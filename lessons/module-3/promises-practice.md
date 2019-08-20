@@ -36,11 +36,9 @@ JavaScript is `a single-threaded, non-blocking, asynchronous, concurrent languag
 
 ### Single-Threaded
 
-As we know JavaScript has a single-threaded `call stack` that has stack frames. As our code is run, each stack frame is pushed and popped from the top of the call stack, the top being the current code being executed. Think of a can of Pringles... the first in is the last out (FILO).
+JavaScript has a single-threaded `call stack` that has what are called "stack frames". As our code is run, each stack frame is pushed and popped from the top of the call stack, the top being the current code being executed. Think of a can of Pringles... the first in is the last out (FILO).
 
-*Check out this awesome video if you want a deeper dive into the `call stack`, `task queue`, `event loop`, `web APIs` and how they all work together  [VIDEO](https://www.youtube.com/watch?v=8aGhZQkoFbQ)*
-
-So consider the JavaScript:
+Consider the JavaScript:
 
 ```javascript
 function foo(b) {
@@ -66,16 +64,23 @@ As we see the stack starts by pushing `console.log(bar(7))` because it was the f
 
 Now we continue on with `foo(x * y)` which pushes `a + b + 11` to the top of the stack to immediately get popped off leaving `a + b` to be pushed to the top. Then finishes off by popping all the rest of the stack. This will finish by returning `42` to the console.
 
-Go try it out [here](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZm9vKGIpIHsKICB2YXIgYSA9IDEwOwogIHJldHVybiBhICsgYiArIDExOwp9CgpmdW5jdGlvbiBiYXIoeCkgewogIHZhciB5ID0gMzsKICByZXR1cm4gZm9vKHggKiB5KTsKfQoKY29uc29sZS5sb2coYmFyKDcpKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D). Did anything happen you didn't expect? Talk to a neighbor about what you've learned after playing around with the stack.
+<section class="call-to-action">
+Go try it out [here](http://latentflip.com/loupe/?code=ZnVuY3Rpb24gZm9vKGIpIHsKICB2YXIgYSA9IDEwOwogIHJldHVybiBhICsgYiArIDExOwp9CgpmdW5jdGlvbiBiYXIoeCkgewogIHZhciB5ID0gMzsKICByZXR1cm4gZm9vKHggKiB5KTsKfQoKY29uc29sZS5sb2coYmFyKDcpKTs%3D!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D).
 
-So! From the image above we can start to understand these these concepts:
+Run the existing example, and then edit it from there. Add a `setTimeout()` or two. What happens in the call stack and queue as the `setTimeout()`runs?
+
+Did anything happen you didn't expect? Talk to a neighbor about what you've learned after playing around with the stack.
+</section>
+
+So! From the exercise above we can start to understand these these concepts:
 
 * `Single threaded:` Threads are basic units of CPU utilization.
 * `Asynchronous:` JavaScript call stack carries out tasks to completion instead of task switching and the same holds for events.
 * `Non-blocking:` Blocking occurs when the application state is suspended as a thread runs.
 
+*Check out [this awesome video](https://www.youtube.com/watch?v=8aGhZQkoFbQ) if you want a deeper dive into the `call stack`, `task queue`, `event loop`, `web APIs` and how they all work together*
 
-### Non-blocking
+### Non-Blocking
 
 A very interesting property of the event loop model is that JavaScript, unlike a lot of other languages, never blocks. Handling I/O is typically performed via events and callbacks, so when the application is waiting for a network request to return, it can still process other things like user input.[*](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop#Never_blocking)
 
