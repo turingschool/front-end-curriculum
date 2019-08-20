@@ -113,3 +113,19 @@ You can put your documentation in the README of your BYOB GitHub repository. Rem
 ### Deployment
 
 Your back-end will be deployed to Heroku, and we will set up continuous integration using the TravisCI tool. We will have a lesson where we deploy our BE applications using TravisCI and Heroku together at the end of Week 2.
+
+## Front End Functionality
+
+You application must have the following functionality. A user should be able to:
+
+* Create a new contact with a name
+* Add phone numbers for the contact with appropriate tags (Home, Cell, etc)
+* Add emails for the contact with appropriate tags (Personal, Work, etc)
+* Add a physical address for the contact
+* Contact names should be unique
+* Phone numbers & emails should be unique across contacts
+* See a list of all contacts in the address book
+* See a list of all the contact details for a specific contact
+* Delete a contact detail for a specific contact
+* Delete a contact and all their associated details
+* Never need to refresh the page to see new information
