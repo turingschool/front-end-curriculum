@@ -3,24 +3,39 @@ title: Server-Side Testing With A DB
 tags: express, testing, server, node, postgres
 ---
 
+
+### Goals
+
+By the end of this lesson, you will:
+
+* Know how to implement request specs in an express application using jest and supertest
+
+
 ## Overview
 
-Previously, we've learned about server side testing, focusing primarily on
-making sure that we get the correct response codes back from our endpoints.
-That's a great way to start, but generally, we'll be interacting with a database
-of some kind. In this lesson, we'll review how to test the endpoints of our
-express applications, layering on how to test their database interactions.
+In order to test our server-side code, we have to be sure that database interactions (as well as the status codes within responses) are behaving as we expect.
+
+### Warm Up
 
 Before we begin, spend 5 minutes exploring our [starter
-repo](https://github.com/turingschool-examples/test-express). Go ahead and
-follow the instructions in the readme to get everything setup. Why do you think
-we have separate keys for development and test in our knexfile?
+repo](https://github.com/turingschool-examples/test-express). Go ahead and follow the instructions in the readme to get everything setup. 
+
+In your journal, answer the following questions:
+  - Why do you think we have separate keys for development and test in our knexfile?
+  - What code is present in the `app.js` file? What about the `server.js` file? Why do you think we have these set up in separate files?
+  <!-- In order to test things we need to separate our server startup from our endpoints. If we leave the startup in the file that we're testing, then our project will try to start the server each time we run our tests. -->
+  - When you think about the BE, what do you think we should be concerned about testing?
+
 
 ## Getting started
 
-We'll need to set up our `app.js` and test file to have access to our database, 
-regardless of whether we're using the development DB or the test DB. Add the 
-following to your own `app.js`, as well as `app.test.js`:
+Now that you've had a chance to clone the repo and install all of the necessary dependencies, you'll want to make sure you have jest installed globally. If you're not sure, run
+
+```bash
+npm install jest -g
+```
+
+We'll need to set up our `app.js` and test file to have access to our database, regardless of whether we're using the development DB or the test DB. Add the following to your own `app.js`, as well as `app.test.js`:
 
 ```js
 const environment = process.env.NODE_ENV || 'development'
@@ -28,12 +43,16 @@ const configuration = require('./knexfile')[environment]
 const database = require('knex')(configuration)
 ```
 
-This ensures that we'll be accessing the correct database when we're running our
-test file. This is possible becuase our `knexfile.js` has a specific key/value
-pair for `test`, and Jest will automatically set the NODE_ENV to `test` when
-running our test suite.
+This ensures that we'll be accessing the correct database when we're running our test file. This is possible because our `knexfile.js` has a specific key/value pair for `test`, and Jest will automatically set the NODE_ENV to `test` when running our test suite.
 
-## Wrting our first test, GET all students
+In general, we are really only concerned with 3 things when it comes to testing our apis.
+
+For both happy and sad paths:
+1. The response status code
+2. The response body
+3. That our dataset has changed according to our expectations
+
+## Writing our first tests
 
 We're going to try to test drive all the interactions with this database, and
 with that in mind, here's a brief outline of the functionality we want to test:
@@ -48,24 +67,28 @@ We will start with getting all the students. Assuming we've seeded our database,
 the students we get back from the endpoint should be the same as the
 students in our database.
 
+### Happy Path
+
 Let's write our first test! Add the following to your app.test.js file:
 
 ```js
 describe('GET /students', () => {
-  it('should return all the students in the DB', async () => {
+  it('should return a 200 and all of the students', async () => {
     // setup
-    const expectedStudents = database('students').select()
+    const expectedStudents = await database('students').select()
 
     // execution
     const res = await request(app).get('/students')
     const students = res.body
 
     // expectation
+    expect(res.status).toBe(200)
     expect(students).toEqual(expectedStudents)
   })
 })
 ```
 
+#### Your Turn
 When we run this test, it should fail, that's TDD for you! Go ahead and write
 the code to make it pass.
 
@@ -75,14 +98,12 @@ Take 5 minutes and see if you can write a test to get a single student back from
 a new `/students/:id` endpoint. Once you have a failing test make it pass! No
 looking ahead!
 
-If you've made it that far, consider this: Are we adequately testing these
-endpoints so far? What is missing?
 
 Here's one way you could write the test:
 
 ```js
 describe('GET /students/:id', () => {
-  it('should return a single student', async () => {
+  it('should return a 200 and a single student if the student exists', async () => {
     // setup
     const expectedStudent = await database('students').first()
     const id = student.id
@@ -92,9 +113,27 @@ describe('GET /students/:id', () => {
     const result = res.body[0]
 
     // expectation
+    expect(res.status).toBe(200)
     expect(result).toEqual(expectedStudent)
   })
 })
+```
+
+If you've made it that far, consider this: Are we adequately testing these
+endpoints so far? What is missing?
+
+### Sad Path
+
+Since we want to make sure that we are getting the correct behavior/responses in the event that a `GET` request is made for a student that does not exist in the DB - we need to write a "Sad Path" as well
+
+```js
+  it('should return a 404 and a "No Student Found" message if the student does not exist', async () => {
+    const res = await request(app).get('/students/10')
+    const result = res.body[0]
+
+    expect(res.status).toBe(404)
+    expect(result).toEqual('No Student Found')
+  })
 ```
 
 ## POST a new student
@@ -136,7 +175,7 @@ Now we're ready to write our test POSTing a new student to the database:
 describe('POST /students', () => {
   it('should post a new student to the db', async () => {
     // setup
-    const newStudent = { lastname: 'Mitchell', program: 'BE', enrolled: false }
+    const newStudent = { lastname: 'Lovett', program: 'FE', enrolled: true }
 
     // execution
     const res = await request(app)
