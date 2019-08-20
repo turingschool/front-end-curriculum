@@ -17,12 +17,6 @@ module: 3
 - lifecycle method: a set of methods found in the parent class Component that fire at different points during the component lifecycle
 - PropTypes: a library we use to validate the data type of props coming into a component; allows for more specific, helpful error messages
 
-## Overview
-
-In today's lesson, we're going to continue building on our fully tested IdeaBox repo. You may clone down a completed copy [here](https://github.com/turingschool-examples/ideabox-testing/) (be sure to checkout the branch `react-iii` and then run `npm install`).
-
-Before we get started with our code along, let's take some time to understand the component lifecycle from a high level!
-
 ## The Component Lifecycle
 
 Did you ever learn about the butterfly lifecycle when you were a kid? It starts out as an egg, hatches into a caterpillar, eats a bunch, wraps itself into a cocoon, emerges as a butterfly? Well, React components have lifecycles, too.
@@ -54,56 +48,15 @@ constructor() {
 }
 ```
 
-Can you think of where you've seen these methods before, outside of React? Take a minute to write down everything you know about `constructor()` and `super()` methods in JavaScript classes (think back to the beginning of Mod 2!).
-
 Per [the docs](https://facebook.github.io/react/docs/react-component.html#constructor), the `constructor()` method is called once, and before the component is mounted onto the DOM. It is the first and only function called automatically whenever a `class`-based component is created.  
 
-Any class in JavaScript has this rule: Within the constructor, it's important to immediately call `super()` in cases where our class extends any other class that also has a defined constructor. In the case of React class-based components, what class are we extending?
-
-(Hint: go take a look at your last React project and find a class-based component. What does code say when you are declaring your component?)
+Any class in JavaScript has this rule: Within the constructor, it's important to immediately call `super()` in cases where our class extends any other class that also has a defined constructor.
 
 Invoking `super()` will run the constructor method of the parent class and allows it to initialize itself. This invocation allows `this` to have a defined value **within the constructor**. Constructors are great for setting up our component and initializing state. However, this is **NOT** a place you should consider making a network request.
 
-This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting the use of a default constructor. Basically, if you don't need to initialize state or bind any methods, you don't need to implement a constructor for your component! It will get called automatically behind the scenes. Magic!
+This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting the use of a default constructor. Basically, if you don't need to initialize state or bind any methods, you don't need to implement a constructor for your component! It will get called automatically behind the scenes. Magic! 
 
-Rule of thumb, though, is typically: if you have a constructor method in your code, you must invoke the super method. In fact, browsers today will throw an error if you are using ES6 syntax and try to call a constructor method without `super()`! Thanks for looking out like a pal, browsers!
-
-Let's take a minute to fire up a react component and watch the errors trigger as we build out a class based component. Remember - errors are trying their best to be helpful. They're like friendly goblins - kinda alarming to look at at first, but then you start to see how helpful they are.
-
-Start a blank react project - feel free to use `create-react-app` for this lesson.  
-
-You'll notice that React has some incredibly verbose and helpful goblins - I mean, error messages. Make sure you take time to read these as you build out projects this mod, they will almost always point you in the direction of happiness.  
-
-### What is this `super()` business?  
-
-Try this in your component and check out the error message:
-
-```js
-// Card.js
-
-constructor(){
-  console.log(this);
-}
-```
-
-You should see something like this:  
-
-```js
-Failed to compile.
-
-Error in ./src/Card.js
-Syntax error: 'this' is not allowed before super()
-
-`
-  3 | export default class Card extends Component {
-  4 |   constructor(){
-> 5 |     console.log(this);
-    |                 ^
-  6 |   }
-  7 |
-  8 |   render () {
-`
-```
+### Where are my props?  
 
 If, in your constructor, you need access to that component's `props`, you _must_ pass these as an argument down through `super()`.
 
@@ -119,11 +72,11 @@ constructor(props) {
 Without passing the props down into this method, `this.props` will return as `undefined` **within the `constructor` method**.  
 This is bad because the constructor method is the first function called when your component is instantiated as a class - knowing the context of `this` from the get go can be a big deal.   
 
-Note that whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` method - the `render()` method defines its own context.  
+Note that whether or not you have a constructor method has no effect on `this` or `this.props` within the `render()` method (or any other method you create for that matter) - the `render()` method defines its own context.  
 
 Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class), class components should always pass props to the base constructor (this is why we pass them into the `super()` method). However there is some debate as to why this is suggested, since React will automatically set the props for you once the constructor has fired.
 
-### static getDerivedStateFromProps() - ***NEW***
+### static getDerivedStateFromProps() - *NEW with React 16.3.0*
 
 This is a new lifecycle method that was added with React 16.3. Check out what the [docs](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) have to say about it. Because this is a static method, we don't have access to `this` inside the method. Per the docs, this method gets invoked under 2 circumstances:
   * after a component is instantiated
@@ -131,11 +84,17 @@ This is a new lifecycle method that was added with React 16.3. Check out what th
 
 It takes in `nextProps` and `prevState` and returns an object to update state, or null if the new props do not require any state updates.
 
-This method exists for only one purpose... it enables a component to update its internal state as the result of changes in props. Since this method is static, you can't refernece `this` in it. Whatever object is returned from this method is what the state of the component will be set to. This new method will be called on the initial mounting of the component, as well as when it's re-rendered.
+This method exists for only one purpose... it enables a component to update its internal state as the result of changes in props.  The [docs](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state) themselves tell developers to use this lifecycle method **sparingly**. (it's even listed in the **Rarely Used Lifecycle Methods** section) This new method will be called on the initial mounting of the component, as well as *every* time it is re-rendered.
 
 ### render()
 
-Now that our component has been initialized and configured, we can begin rendering some content/elements on the page. This is the lifecycle method that React developers are most familiar with. It is the one lifecycle method that exists across all phases of a React component. It's important to remember to always keep `render()` a **pure method**. This means we should never call `this.setState()` within `render()`. If we take a minute to think about this, it makes total sense... it would put us in an infinite loop of re-rendering!  
+Now that our component has been initialized and configured, we can begin rendering some content/elements on the page. This is the lifecycle method that React developers are most familiar with. It is the one lifecycle method that exists across all phases of a React component. 
+
+<section class="call-to-action">
+### Turn and Talk
+
+It's important to remember to always keep `render()` a **pure method**. This means we should never call `this.setState()` within `render()`. Why do you think this is?  
+</section>
 
 #### Managing Children Components and Mounting
 
@@ -143,11 +102,13 @@ The React Element that has been rendered by the initial `render()` may possibly 
 
 ### componentDidMount()
 
-Per [the docs](https://reactjs.org/docs/react-component.html#componentdidmount), `componentDidMount()` is invoked "immediately after a component is mounted." When `componentDidMount()` is called, this signalizes that the component - and all its sub-components - have rendered properly. Any functionality that is dependent on existing DOM nodes should live here. For example, let's say you want to set state which affects a `<p>` tag, you need to wait until that `<p>` tag exists before you can throw any additional information into it.
+Per [the docs](https://reactjs.org/docs/react-component.html#componentdidmount), `componentDidMount()` is invoked "immediately after a component is mounted." When `componentDidMount()` is called, this signalizes that the component - and all its sub-components - have rendered properly.  This is also the go-to location to fire off an API call or network request (**BEST PRACTICE**). This is a great [blog post](https://www.robinwieruch.de/react-fetching-data/) that discusses how and where to fetch data in React.
 
-This is also the go-to location to fire off an API call or network request (**BEST PRACTICE**). This is a great [blog post](https://www.robinwieruch.de/react-fetching-data/) that discusses how and where to fetch data in React.
+<section class="note">
+### Note
 
-**NOTE:** Setting state in this method **WILL** trigger a re-render - but will not cause an infinite re-rendering loop, because `componentDidMount` only fires after the initial mount of the component.
+Setting state in this method **WILL** trigger a re-render - but will not cause an infinite re-rendering loop, because `componentDidMount` only fires after the initial mount of the component.
+</section>
 
 ## Updating Phase
 
@@ -157,7 +118,13 @@ Yep, it lives here, too. If you look back up at the diagram from the beginning o
 
 ### getSnapshotBeforeUpdate - *NEW with React 16.3.0*
 
-This method is called right before any DOM manipulations are made. If you need to do any calculations that you'd like to use in componentDidUpdate(), you can return those in this method, and they will get passed along as a the third argument to componentDidUpdate()
+This [method](https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate) is called right before any DOM manipulations are made. If you need to do any calculations that you'd like to use in `componentDidUpdate()`, you can return those in this method, and they will get passed along as a the third argument to `componentDidUpdate()`. 
+
+<section class="note">
+### Note
+
+This is another lifecycle method that you will not use frequently (this is also listed in the **Rarely Used Lifecycle Methods** section).  A scenario where it could be useful is if you are building some kind of chat application where you need to keep track of the scroll position.
+</section>
 
 ### render()
 
@@ -165,21 +132,31 @@ And, yeah, render lives here, too.
 
 ### componentDidUpdate()
 
-Per the docs: "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."
+This method is invoked *after* updating occurs.  It is **NOT** called for the initial render.  Per the [docs](https://reactjs.org/docs/react-component.html#componentdidupdate): "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."
+
+<section class="note">
+### Note
+
+You are able to call `setState()` but only if it's wrapped in a conditional.  Otherwise, an infinite loop will happen just like it does in the `render()` method.
+</section>
 
 ## Unmounting Phase
 
 ### componentWillUnmount()
 
-This is invoked just once, before the component is unmounted and destroyed. It's a good place to invalidate any open network requests, kill any timers, and do any other necessary cleanup tasks.
+This is invoked just once, before the component is unmounted and destroyed. According to the [docs](https://reactjs.org/docs/react-component.html#componentwillunmount), it's a good place to cancel any open network requests, kill any timers, and do any other necessary cleanup tasks.  You should **NOT** called `setState` here because the component will not re-render.
 
-## Error Handling
+## Error Handling (just know that these exists)
 
-### componentDidCatch() - *just know that this exists*
+### componentDidCatch()
 
-`componentDidCatch` allows you to set up error boundaries in your application, and display fallback UI rather than just letting the error crash into the console. Check the references below for more information.
+`componentDidCatch` originally was set up to allow you to set up error boundaries in your application, mainly for logging errors.  You can use it to display fallback UI using `setState()`, but advise against it since it will be deprecated in a future release. Check the [docs](https://reactjs.org/docs/react-component.html#componentdidcatch) for more information.
 
-## Code Along
+### getDerivedStateFromError() - *NEW with React 16.6.0*
+
+Similar to `componentDidCatch`, this lifecycle is invoked after an error has been thrown by a child component.  According to the docs, "It receives the error that was thrown as a parameter and should return a value to update state."  Take a look at an example [here](https://reactjs.org/docs/react-component.html#static-getderivedstatefromerror).
+
+## Workshop On Our IdeaBox
 
 Okay. Why do we care about any of this?
 
@@ -189,19 +166,44 @@ We're going to implement `componentDidMount()` in our IdeaBox.
 
 ### Setup  your back end
 
-We're going to be running a back end server, which will function as our API! Lucky you, we've written up the backend for you, complete with documentation and friendly error messages.
+If you want, you can re-clone your IdeaBox into a new directory.  Follow the steps here:
+
+```bash
+git clone https://github.com/turingschool-examples/ideabox-testing.git react-iii
+cd react-iii
+git checkout react-testing-complete
+npm i
+npm start
+```
+
+We're also going to be running a back end server, which will function as our API! Lucky you, we've written up the backend for you, complete with documentation and friendly error messages.
 
 Clone down [the repo](https://github.com/turingschool-examples/ideabox-api) - but NOT inside your existing IdeaBox repository!
 
-Follow the instructions inside the API repo's README to get set up.
+```bash
+git clone https://github.com/turingschool-examples/ideabox-api.git ideabox-api
+cd ideabox-api
+npm i
+npm start
+```
+
+Note that the frontend should be running on `localhost:3000` and the backend should be running on `localhost:3001`.
 
 Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you should see a brief list of ideas!
 
-### Refactor our IdeaBox Front End
+### Implement Our Backend
 
 Okay. Let's refactor our IdeaBox so that we are consuming our API!
 
-In `App.js`, let's edit our initial state.
+<section class="call-to-action">
+### Your Turn
+
+Pair up and work together on implementing the functionality to `fetch` our ideas from the API!  Think about what lifecycle method this should live in?  Once you have the ideas being rendered, give your partner a high five!
+</section>
+
+As we've noted before, we should use our catch somehow in order to display an error if something goes wrong.  Try stopping your backend server and see what happens.  Your catch should before firing (because the Promise rejected).  Let's do something with that error.
+
+Let's edit our intial state in our `App.js`:
 
 ```jsx
 // App.js
@@ -212,26 +214,7 @@ In `App.js`, let's edit our initial state.
   };
 ```
 
-Now, let's make a network request to our back-end to get our ideas data. Looking through our lifecycle methods, from which one should we make our fetch?
-
-By convention, we make network requests from `componentDidMount`. This occurs after the initial mount of the component (aka, some data is rendered to the page), so that we can get _something_ onto the page, even if our network request takes forever. We don't want users staring at a blank screen!
-
-```jsx
-// App.js
-
-  componentDidMount() {
-    fetch('http://localhost:3001/api/v1/ideas')
-      .then(response => response.json())
-      .then(ideas => this.setState({ ideas }))
-      .catch(error => this.setState({ error: error.message }));
-  }
-```
-
-You'll notice that when we refresh our app, the title and form render, but the Cards render a split second later, once the data has come back from our back-end server.
-
-What happens if you intentionally break the fetch? Try messing up the URL. What happens to the UI? Check what's going on in your React dev tools.
-
-It looks like our catch is firing (because our Promise rejected), and we're setting the error message in state. Let's _do_ something with that information! Such as displaying it to the user.
+Then inside of your catch, set the error message in state. Now, let's _do_ something with that information! Such as displaying it to the user.
 
 ### Conditional Rendering
 
@@ -241,13 +224,13 @@ We don't want an error message showing all the time. So ... let's make use of co
 // App.js
 
   render() {
-    return(
-      <main className='App'>
+    return (
+      <main className="App">
         <h1>IdeaBox</h1>
         <Form addIdea={this.addIdea} />
-        <Ideas
-          ideas={this.state.ideas}
-          deleteIdea={this.deleteIdea}
+        <Ideas 
+          ideas={this.state.ideas} 
+          removeIdea={ this.removeIdea} 
         />
       </main>
     )
@@ -260,14 +243,14 @@ If we wanted to add an h2 that would show up if we had an error, what would we w
 // App.js
 
   render() {
-    return(
-      <main className='App'>
+    return (
+      <main className="App">
         <h1>IdeaBox</h1>
         <Form addIdea={this.addIdea} />
         {this.state.error && <h2>{this.state.error}</h2>}
-        <Ideas
-          ideas={this.state.ideas}
-          deleteIdea={this.deleteIdea}
+        <Ideas 
+          ideas={this.state.ideas} 
+          removeIdea={ this.removeIdea} 
         />
       </main>
     )
@@ -286,50 +269,58 @@ Notice that we are only conditionally rendering the one part of the render that 
 
 We're not rendering two different versions of the App. We just have the one, and one line will show up only if there is an error stored in state.
 
+<section class="call-to-action">
+### Your Turn
+
+Imagine we have a slow connection or need to load A LOT of data.  We might want to implement some kind of loading icon.  Using conditional rendering, display a loading icon while the fetch is retrieving the data.
+</section>
+
 ## PropTypes
 
 PropTypes allow you to specify what type of props you are expecting in a certain component. This is also known as "typechecking".
 
 Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, the `prop-type` module lets you establish a safety net with very little effort.
 
-The overall benefit of using PropTypes is that it gives your error-message goblins more tools to provide you with helpful, specific errors to better debug your code.
-
 Let's say you declare a component `<Main title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else - say for example the API you are consuming has changed and now you have an array of strings - you will get a helpful warning message in your console.  
 
 Previously, PropTypes was built into the React library itself, however it has since been extracted into its own module. You can install it like any other module.
 
-```sh
+```bash
 $ npm install prop-types -S
 ```
-
-_hint: the `-S` flag is the same as the `--save` flag, and as of npm version 5, all dependencies installed without a flag default to being saved as regular dependencies._
 
 In React, `PropTypes` are declared like this:
 
 ```js
-// Main.js
+// Card.js
 
+import React from 'react';
 import PropTypes from 'prop-types'
+import './Card.css'
 
-class Main extends Component  {
-  render() {
-    return(
-      <p>Welcome, {this.props.name}</p>
-    )
-  }
+const Card = ({ id, title, description, removeIdea, isFavorite }) => {
+  const favoriteClass = isFavorite ? 'favorite' : 'card'
+
+  return (
+    <section className={favoriteClass}>
+      <h3>{ title }</h3>
+      <p>{ description }</p>
+      <button onClick={() => removeIdea(id)}>🗑</button>
+    </section>
+  )
 }
 
-Main.propTypes = {
-  name: PropTypes.string
+export default Card;
+
+Card.propTypes = {
+  title: PropTypes.string
 }
 ```
 
 The error you will see if the component gets something besides a string would look something like this:  
 
 ```
-Warning: Failed prop type: Invalid prop `name` of type `array` supplied to `Main`, expected `string`.
-    in Main (created by App)
-    in App
+Warning: Failed prop type: Invalid prop `name` of type `array` supplied to `Card`, expected `string`.
 ```
 
 Without using PropTypes, you would have seen a vague error when the Component failed to render. With PropTypes, we can see that the error was that we were receiving an array when we expected a string.
@@ -341,19 +332,27 @@ Check out a complete list of `propTypes` and examples of usage [here](https://fa
 By default, all props specified within the `Class.propTypes` object will be considered optional. There are many instances where your component will not function correctly without that particular prop. To add a validation that will fire an error message if a prop does not show up at all, simply add `.isRequired` to the end of the propType declaration.  
 
 ```js
-Main.propTypes = {
-  name: PropTypes.string.isRequired
+Card.propTypes = {
+  title: PropTypes.string.isRequired
 }
 ```
 
 You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. Instead of specifying a particular JS primitive you can use `.any`.
 
 ```js
-Main.propTypes = {
-  name: PropTypes.any.isRequired
+Card.propTypes = {
+  title: PropTypes.any.isRequired
 }
 ```
 
+<section class="call-to-action">
+### Your Turn
+
+Take a few minutes and finish writing up the rest of the propTypes for our `Card` component.  
+
+</section>
+
+<section class="call-to-action">
 ### Your Turn
 
 Take the next 5 minutes to look up the following prop types and understand what they do. We will circle back to talk about
@@ -364,40 +363,50 @@ these particular methods when you are done.
 - `PropTypes.objectOf()`  
 - `PropTypes.shape()`
 
+</section>
 
 ## DefaultProps
 
 Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  
 
 ```js
-class Main extends Component  {
-  render() {
-    return(
-      <p>Welcome, {this.props.name}</p>
-    )
-  }
+const Card = ({ id, title, description, removeIdea, isFavorite }) => {
+  const favoriteClass = isFavorite ? 'favorite' : 'card'
+
+  return (
+    <section className={favoriteClass}>
+      <h3>{ title }</h3>
+      <p>{ description }</p>
+      <button onClick={() => removeIdea(id)}>🗑</button>
+    </section>
+  )
 }
 
-Main.defaultProps = {
-  name: 'Batman'
+export default Card;
+
+Card.propTypes = {
+  id: PropTypes.number.isRequired,
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+  removeIdea: PropTypes.func.isRequired,
+  isFavorite: PropTypes.bool.isRequiredd,
+}
+
+Card.defaultProps = {
+  isFavorite: true
 }
 ```  
 
-**Note:** The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props to fill themselves in before any warning messages are thrown.  
+<section class="note">
+### Note
 
-### Your Turn  
+The `propTypes` typechecking validations fire AFTER `defaultProps` have been resolved. This allows for the default props to fill themselves in before any warning messages are thrown.
+</section>
 
-Now that we've talked about the most obvious use cases of propTypes to preemptively debug your code, read the following two articles - you are highly encouraged to take notes:  
-- [Better Prop Validation](https://medium.com/@MoeSattler/better-prop-validation-in-react-cc83590d311f#.8z6wszfzn).  
-- [Writing A Good React Component](https://thoughts.travelperk.com/writing-a-good-react-component-59624ed40b8e#.64wzjk4qc)  
+<section class="checks-for-understanding">
+### Reflect
 
-We will circle back to review the main points of these articles together.  
-
-When you are done reading, work with your table to implement propTypes and defaultProps into IdeaBox!
-
-## Reflect
-
-Take a few minutes to journal:
+Take a few minutes to journal to write notes to each of these questions:
 
 * What "aha" moments did you have?
 * Which concepts are the fuzziest for you right now?
@@ -405,9 +414,19 @@ Take a few minutes to journal:
 * What do you know about `componentDidMount`?
 * How do you conditionally render a part of a component?
 * What's the purpose of propTypes?
+</section> 
 
 ## Suggested homework
 
+<section class="call-to-action">
+### Extra Reading on PropTypes
+
+Now that we've talked about the most obvious use cases of propTypes to preemptively debug your code, read the following two articles - you are highly encouraged to take notes:  
+- [Better Prop Validation](https://medium.com/@MoeSattler/better-prop-validation-in-react-cc83590d311f#.8z6wszfzn).  
+- [Writing A Good React Component](https://thoughts.travelperk.com/writing-a-good-react-component-59624ed40b8e#.64wzjk4qc) 
+</section> 
+
+<section class="call-to-action">
 ### Additional Async Practice
 
 Right now, our IdeaBox will work as expected. However, you'll notice that our `addIdea` and `deleteIdea` methods are only manipulating our application state, rather than interacting at all with our back-end.
@@ -416,9 +435,14 @@ Go take a look at the BE repo's README. There is documentation for adding and de
 
 Refactor IdeaBox to use these endpoints. Hint: you might need to write more fetches...
 
-### Take a look ahead to our async testing lesson and...
+When you have completed this functionality, compare it to the solution on the `react-iii-complete` branch.
+</section> 
 
-...pull the fetches into their own files and try to write out a few async tests!
+<section class="note">
+### Additional steps
+
+Take a look ahead to our async testing lesson and pull the fetches into their own files and try to write out a few async tests!
+</section>
 
 ## References
 
