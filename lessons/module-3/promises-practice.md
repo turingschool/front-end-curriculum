@@ -200,7 +200,9 @@ fetch('http://localhost:3001/api/frontend-staff')
 So we're probably going to have to iterate over this array to make a fetch call for all the bios and images. How do we do that?
 </section>
 
-<!-- ```javascript
+Possible solution to help:
+
+```javascript
 fetchBios = (staff) => {
   const promises = staff.map(staffMember => {
     return fetch(staffMember.info)
@@ -210,7 +212,7 @@ fetchBios = (staff) => {
   });
   return Promise.all(promises);
 };
-``` -->
+```
 
 #### Resources
 * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
