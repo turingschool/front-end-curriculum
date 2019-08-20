@@ -130,15 +130,12 @@ Since we want to make sure that we are getting the correct behavior/responses in
     it('should return a 404 and the message "Student not found"', async () => {
       const invalidID = -1;
 
-      await request(app)
-              .get(`/students/${invalidID}`)
-              .catch(response => {
-                expect(response.status).toBe(404)
-              })
-    })
-```
+      const response = await request(app).get(`/students/${invalidID}`)
 
-_Note: As of superagent v4.1.0, there is an issue with tests that expect a status code other than 2xx. Above is the workaround for testing for other statues with async/await_
+      expect(response.status).toBe(404);
+      expect(response.body.error).toEqual('No student found');
+    });
+```
 
 ## POST a new student
 
