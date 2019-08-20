@@ -86,7 +86,7 @@ Work through these **in order**:
 - Easter Egg: use a [Konami Code](https://en.wikipedia.org/wiki/Konami_Code) to display some secret surprise for users -- have fun, get weird, be creative!!
 - Have a **Clear All** button that removes all of the cards from the page.
 - Have a sort button that organizes the game cards by the least amount of guesses to the greatest.
-  - Incorporate in the UI which game has the **High Score**!
+- Incorporate in the UI which game has the **High Score**!
 
 
 ## Mid-Way Check-ins
@@ -128,6 +128,19 @@ Error Icon:
 ------------------------------------------------------------------
 
 ## Rubric
+
+### Professionalism
+
+- **Exceptional:** Participated in at least one conversation on a PR that was constructive and supportive. *("Great Job" does not count. It should be a conversation where technical considerations/questions arose and moved the project forward or helped all teammates get on the same page about why/what has been/will be implemented).*
+- **Proficient:** Pointed to two commits that you made, were able to explain your process, approach, and what the code you wrote does. You made no less than 40% of the commits, and no more than 60% of the commits. You were able to speak to how the event object is utilized for any given event handler.
+- **Advanced Beginner:** You were able to explain how any given event listener and it's handler worked. You made no less than 35% of the commits, and no more than 65% of the commits.
+- **Novice:** There was a large discrepancy in commits and/or you were not able to articulate what any given event listener and it's handler worked.
+
+**NOTE:** In addition to this rubric, keep in mind that you will complete a survey regarding your partner's professionalism at the end of the project so we have a pulse on how things went. The results will be confidential. We ask:
+  - Would you want to work with this teammate agin?
+  - Did your teammate honor the commitments made in the DTR?
+  - Did your teammate respect your time (show up on time, complete tasks when they said they would, was focused during pairing time, etc)?
+  - Did your teammate respect your space & your learning (give you the chance to write some code on your own, give you time to soak in concepts if/when needed, didn't write code without you unless agreed, didn't interrupt you while talking, listened to your ideas and was open to implementing them, etc.)?
 
 ### Functional Expectations
 
