@@ -452,9 +452,9 @@ class Fridge {
 }
 ```
 
-<section class="checks-for-understanding">
+<section class="call-to-action">
 
-### Turn & Talk<
+### Turn & Talk
 - How would one invoke the `addFood` function/method? Be specific.
 - Describe, in detail, what the `addFood` function/method does, and how it does it.
 </section>
