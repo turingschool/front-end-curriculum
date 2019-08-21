@@ -100,7 +100,7 @@ Being in the place noted above would put you on track for functionality completi
 
 ## Submission Details
 
-* In your final PR, tag your assigned instructor. Also, make sure that the link to you GitHub Pages site is in the body of that PR.
+* In your final PR, tag your assigned instructor. Also, make sure that the link to your GitHub Pages site is in the body of that PR.
 
 #### Layout comps
 
