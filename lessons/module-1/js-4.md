@@ -92,11 +92,14 @@ var schoolName = school.name;
 var schoolCapacity = school.capacity;
 ```
 
-<div class="lesson-segment">
-  <h3>Partner Practice: Accessing Properties</h3>
-    <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/Dot-Notation-Practice">this repl.it</a>.</p>
-    <p>Together, complete each exercise listed in the comments below the two object literals. Write the code with a given direction directly below it, and do not delete code as you go.</p>
-</div>
+<section class="call-to-action">
+
+### Partner Practice: Accessing Properties
+
+Choose a driver and a navigator. The driver should start by forking [this repl.it](https://repl.it/@ameseee/Dot-Notation-Practice)
+
+Together, complete each exercise listed in the comments below the two object literals. Write the code with a given direction directly below it, and do not delete code as you go.
+</section>
 
 There is also bracket notation:
 
