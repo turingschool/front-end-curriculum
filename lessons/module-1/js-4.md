@@ -147,7 +147,7 @@ console.log(school);
 ### Solo Practice: Reassigning & Adding
 We are also able to reassign the value of a property in a similar way.
 - Go back to the repl you were working on before, and add a property of "bestFriend" to `user1`. Assign it to a string of anything you want.
-- Now try re-assigning `user1<` **age** to 9. Then, re-assign `user2`'s **hobbies** to an array of your choice!
+- Now try re-assigning `user1` **age** to 9. Then, re-assign `user2`'s **hobbies** to an array of your choice!
 - 🤞Remember to call the object or the property on the last line of the file, and run the repl to verify the outcome!
 </section>
 
@@ -447,7 +447,19 @@ Let's define an `addFood` method that allows us to put foods in your fridge.
 
 ```javascript
 class Fridge {
-  // ... constructor code
+  constructor() {
+    this.temperature = 36;
+    this.smelly = true;
+    this.contents = [];
+  }
+
+  removeStench() {
+    this.smelly = false;
+  }
+
+  adjustTemperature(temp) {
+    this.temperature = temp;
+  }
 
   addFood(food) {
     this.contents.push(food);
@@ -458,16 +470,12 @@ class Fridge {
 <section class="call-to-action">
 
 ### Turn & Talk
+- How would one invoke the `removeStench` function/method? Be specific.
+- Describe, in detail, what the `removeStench` function/method does, and how it does it.
+- How would one invoke the `adjustTemperature` function/method? Describe, in detail, what the `adjustTemperature` function/method does, and how it does it.
 - How would one invoke the `addFood` function/method? Be specific.
 - Describe, in detail, what the `addFood` function/method does, and how it does it.
 </section>
-
-Let's update our code so that we:
-
-1. Create a new instance of Fridge.
-2. Log the contents of that Fridge.
-3. Add something to the contents of the Fridge.
-4. Log the new contents of the Fridge.
 
 <section class="call-to-action">
 
