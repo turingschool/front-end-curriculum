@@ -202,7 +202,7 @@ There are two primary rules of thumb when it comes to `this`:
 <section class="call-to-action">
 
  ### Turn & Talk
- 
+
 With the key point above in mind, why did you sometimes get a value (string, number, array), and sometimes get undefined in the previous activity? Explain with as much technical vocabulary and precision as possible.
 </section>
 
@@ -295,7 +295,10 @@ human.getName();
 // Create a second object with a different name value and use the same getName/sayName key value pair.
 ```
 
+<section class="note">
+
 **KEY TAKEAWAY:** The context of this within a function will be determined by _what object the function gets called on_.
+</section>
 
 <div class="lesson-segment">
   <h3>Explore: <code>this</code> and the DOM</h3>
