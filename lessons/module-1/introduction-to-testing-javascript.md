@@ -5,12 +5,13 @@ tags: javascript, browser, testing, tdd
 ---
 
 ## Learning Goals
+
 * Understand what testing is, why it is important, and the various types of tests
 * Recognizing the importance of Test Driven Development (TDD)
 * Ability to read/create tests
 * Understanding how to import/export files specifically for testing
 
-## Vocab
+## Vocabulary
 
 - `TDD` Test Driven Development / Design
 - `Assertion` An expression containing some testable logic
@@ -58,10 +59,8 @@ With TDD, we're basically automating this process. You're forcing yourself to wr
 
 One important thing to note is that TDD is not about writing tests. Writing tests is writing tests, period. TDD is more than that - it’s a methodology in which three activities are tightly interwoven: testing (in the form of unit testing), coding, and design (in the form of refactoring). In order to do TDD well, you should follow the following steps:
 
-
 ![TDD cycle](/assets/images/tdd-cycle.png)
 
-<!-- Write on board -->
 1. Think and write test cases - this step ensures that you understand the functionality that is required
 2. Red –  In this step, you try to run your test. You have no implementation code, so your test should fail.
 3. Green – Write the minimum code required to get the test to pass
@@ -153,13 +152,14 @@ Below you will find the general syntax for assertions for most of the methods av
   assert.method(actual, expected, [message])
 ```
 
-You'll notice that our method takes three arguments (the third being optional, as denoted by the square brackets): 
+You'll notice that our method takes three arguments (the third being optional, as denoted by the square brackets):
 
 - actual: The actual JS code that you want to run from the codebase
 - expected: The expected output that should be returned based on test requirements
 - message: A (String) message to yourself on what is being tested
 
 ## Importing/Exporting Files
+
 As mentioned earlier, tests are typically separate from its implementation code.  In order for this to work properly, we need to be able to export the functionality from one file and import it into the test file.  Let's take a look at an example:
 
 *Implementation.js*
@@ -206,12 +206,9 @@ It takes some time to build out solid habits when testing.  Often we'll see some
 5. Then make sure that all of the _previous tests are passing_.  If not, go back and follow steps 1-4.  Otherwise, continue on to the next one.
 
 ### Wrap Up
+
 What is the TDD process?
 
-Think back to your Number Guesser project. 
+Think back to your Number Guesser project.
 - What are the smallest pieces of functionality?
-<!-- 
-  generateRandomNumber(min, max)
-  getUserFeedback(min, max, guess)
--->
 - How could you write tests for that functionality?
