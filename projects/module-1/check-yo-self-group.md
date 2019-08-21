@@ -249,10 +249,10 @@ Color, font, and icon spec:
   * Uses logical operators instead of if/else statements where applicable
   * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
 *  **3:**
-  *  DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
-  *  All functions are less than 10 lines
-  *  There are no nested if/else statements
-  *  There are no global variables aside from query selectors and an array for your to-dos
-  *  Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
+  * DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
+  * All functions are less than 10 lines
+  * There are no nested if/else statements
+  * There are no global variables aside from query selectors and an array for your to-dos
+  * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
 *  **2:** Application correctly implements data model for the `ToDoList` class including all required methods
 *  **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
