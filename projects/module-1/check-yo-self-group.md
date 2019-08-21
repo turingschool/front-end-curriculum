@@ -4,7 +4,7 @@ title: Check Yo'Self
 
 ## Specification
 
-Now that you've got the main foundations down to build out a frontend application, it's time to prove to yourself that you own those skills! You're going to be building a checklist application called `Check Yo'Self`!
+Now that you've got the main foundations down to build out a front-end application, it's time to prove to yourself that you own those skills! You're going to be building a checklist application called `Check Yo'Self`!
 
 ## Learning Goals
 
@@ -131,7 +131,7 @@ Let's also allow our user be able to view their urgent todo cards only.
 * If there are no urgent to-dos yet, then there should be an indication displayed in the empty todo section notifying the user to mark some to-dos urgent.
 * These changes _do not need to persist_ in between sessions.
 
-### Phase Four (Extensions): Improving on the Experience
+### Phase Four: Improving on the Experience
 
 #### Editing Our Tasks
 
@@ -160,14 +160,11 @@ The user might also might to add more tasks to their checklist after they have c
 
 ## What is a Masonry Layout?
 
-This type of layout is known as a *Masonry layout*.  This layout refers to when items of uneven size are laid out in a way where there are no uneven gaps.  Due to this scenario, this is *NOT* good scenario for using `grid`.  This is because we can't define where each card is going to be in the layout.  There are a number of ways to solve this solution.  Here are a couple of links to check out to achieve this goal:
-
-* [CSS Tricks Examples](https://css-tricks.com/piecing-together-approaches-for-a-css-masonry-layout/)
-* [Code Pen Example](https://codepen.io/Kalikoze/pen/XQaJYd)
+This type of layout is known as a *Masonry layout*.  This layout refers to when items of uneven size are laid out in a way where there are no uneven gaps.  Due to this scenario, this is *NOT* good scenario for using `grid`.  This is because we can't define where each card is going to be in the layout.  There are a number of ways to solve this solution.
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1CS4BipxFi1VPh5NJFsn0yoeDTQQL_yjwcIM0fccVOGc/edit#gid=557400577)
+In your final PR, tag your Project Manager. Also, make sure that the link to your GitHub Pages site is in the body of that PR.
 
 ### Layout Comps
 
@@ -205,50 +202,40 @@ Color, font, and icon spec:
 
 ### Functional Expectations
 
-* [ ] Novice: Application meets all of the expectations of phase one.
-* [ ] Advanced Beginner: Application meets all of the expectations of phase two.
-* [ ] Proficient: Application meets all of the expectations of phase three.
-* [ ] Exceptional: Application adds all of the extensions from phase four.
+* **4:** Application meets all of the expectations from Phase Four.
+* **3:** Application meets all of the expectations of Phase Three and _one_ of the three options in Phase Four.
+* **2:** Application meets all of the expectations of Phase Two.
+* **1:** Application meets all of the expectations of Phase One.
 
 ------------------------------------------------------------------
 
 ### Comp Recreation
 
-* [ ]  Novice - Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
-* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
-* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
-* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
-
-------------------------------------------------------------------
-
-### HTML - Style and Implementation
-
-* [ ]  Novice - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
-* [ ]  Advanced Beginner - Application adds to the above by using `data-*` attributes for all data related things
-* [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
-    * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/module-1/html-breakout.html)
+*  **4:** Additional elements that have been added match the visuals established in the comps. Every little detail was built out thoughtfully - from hover states to placeholders.
+*  **3:** Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with **smooth transitions between screen sizes**. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
+*  **2:** Application implements all major comp details accurately and correctly on **desktop and mobile** (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
+*  **1:** Application implements all major comp details on desktop only (colors, fonts, icons, spacing, alignment, etc.)
 
 ------------------------------------------------------------------
 
 ### CSS - Style and Implementation
 
-* [ ]  Novice - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
-* [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
-* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
+*  **4:** Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
+*  **3:** Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
+*  **2:** Application has intentional organization for the whole stylesheet and within rules
+*  **1:** Crafts CSS according to the [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
 
 ------------------------------------------------------------------
 
-### JAVASCRIPT - Style and Implementation
+### JavaScript - Style and Implementation
 
-* [ ]  Novice - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
-* [ ]  Advanced Beginner - Application correctly implements data model for the `ToDoList` class including all required methods
-* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
-  * [ ]  Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
-  * [ ]  All functions are less than 10 lines
-  * [ ]  There are no global variables aside from query selectors and an array for your to-dos
-  * [ ]  There are no nested if/else statements
-* [ ] Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
-  * [ ] Uses logical operators instead of if/else statements where applicable
-  * [ ] When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+* **4:** Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
+  * Uses logical operators instead of if/else statements where applicable
+  * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+*  **3:** Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
+  *  All functions are less than 10 lines
+  *  There are no nested if/else statements
+  *  There are no global variables aside from query selectors and an array for your to-dos
+  *  Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
+*  **2:** Application correctly implements data model for the `ToDoList` class including all required methods
+*  **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
