@@ -18,7 +18,7 @@ tags: javascript, testing, tdd, mocha, chai
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 
-## What does it mean to unit test your code?
+## What does it mean to test your code?
 
 We're always testing our code. We pull it up in the browser and poke at it. Does it do the thing we were expecting it to do? Yes? Then the code works. It's time to go and celebrate. No? Well then, back to the drawing board, right?
 
