@@ -218,10 +218,23 @@ Color, font, and icon spec:
 
 ------------------------------------------------------------------
 
+### Git Workflow & Documentation
+
+*  **4:** A PR template was used. A code review was requested and completed by a mentor, and all team members can speak to how the feedback in code review was implemented (and point to the commit(s) that implemented the feedback).
+*  **3:** Every team member (on a team of 3) authors between 25%-40% of the commits. Most commits are formatted correctly. Every team member contributes to at least 2 meaningful PR conversations. The README is formatted well and contains:
+  - Overview of project and goals
+  - Overview of technologies used, challenges, and wins, any other reflections
+  - Screenshots of comp and your app
+  - Credit all teammates
+*  **2:** Every team member (on a team of 3) authors between 20%-45% of the commits. More than a few commits are formatted incorrectly.The README is formatted well but may be lacking in detail.
+*  **1:** Commit and PR history does not tell a story of the application OR a README has not been created/has minimal information.
+
+------------------------------------------------------------------
+
 ### CSS - Style and Implementation
 
-*  **4:** Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
-*  **3:** Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
+*  **4:** Codebase follows [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
+*  **3:** Codebase does not contain repetitive rules and blocks of code according to the DRY principle
 *  **2:** Application has intentional organization for the whole stylesheet and within rules
 *  **1:** Crafts CSS according to the [Turing CSS Style Guide](https://github.com/turingschool-examples/css)
 
@@ -229,10 +242,12 @@ Color, font, and icon spec:
 
 ### JavaScript - Style and Implementation
 
-* **4:** Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
+* **4:**
+  * All loops are refactored into the proper array prototype iteration methods
   * Uses logical operators instead of if/else statements where applicable
   * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
-*  **3:** Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
+*  **3:**
+  *  DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
   *  All functions are less than 10 lines
   *  There are no nested if/else statements
   *  There are no global variables aside from query selectors and an array for your to-dos
