@@ -204,7 +204,7 @@ There are two primary rules of thumb when it comes to `this`:
 
 <section class="call-to-action">
 
- ### Turn & Talk
+### Turn & Talk
 
 With the key point above in mind, why did you sometimes get a value (string, number, array), and sometimes get undefined in the previous activity? Explain with as much technical vocabulary and precision as possible.
 </section>
