@@ -123,8 +123,8 @@ addIdea = (newIdea) => {
     .then(response => fetch(`http://localhost:3001/api/v1/ideas/${response.id}`))
     .then(response => response.json())
     .then(newIdea => this.setState({ ideas: [...this.state.ideas, newIdea] }))
-    .catch(error => this.setState({ error: error.message }))
-}
+    .catch(error => this.setState({ error: error.message }));
+};
 ```
 
 A HA! When our test suite is running through the code, it hits that `fetch` and gets nothing back - because we don't want to _actually_ query our API. It's not actually getting anything back from the fetch, so it's not changing App's state at all.
@@ -192,7 +192,7 @@ export const getIdeas = () => {
 
 export const postIdea = newIdea => {
   return // your code here
-}
+};
 
 export const getIdea = id => {
   return // your code here
@@ -200,7 +200,7 @@ export const getIdea = id => {
 
 export const deleteIdea = id => {
   return // your code here
-}
+};
 ```
 
 Before we start coding, take a second to consider:
@@ -246,7 +246,7 @@ Probably, anything to do with a component's state should stay inside that compon
 export const getIdeas = () => {
   return fetch('http://localhost:3001/api/v1/ideas')
     .then(response => response.json())
-}
+};
 ```
 
 But wait! If we look back at the `componentDidMount`, we can see that we could also possibly get an error back from the API, rather than an array of ideas.
@@ -260,11 +260,11 @@ export const getIdeas = () => {
   return fetch('http://localhost:3001/api/v1/ideas')
     .then(response => {
       if (!response.ok) {
-        throw Error('Error fetching ideas')
+        throw Error('Error fetching ideas');
       }
-      return response.json()
-    })
-}
+      return response.json();
+    });
+};
 ```
 
 We can now import this function into our `App.js` file and use it!
@@ -300,7 +300,7 @@ import { getIdeas } from './apiCalls';
 
 describe('getIdeas', () => {
 
-})
+});
 ```
 
 We don't have to import React, because - remember - the file we're testing is just plain JavaScript, not a React component! We also don't need `shallow` or `mount`, for the same reason. All we need is the function we're testing.
@@ -316,11 +316,11 @@ export const getIdeas = () => {
   return fetch('http://localhost:3001/api/v1/ideas')
     .then(response => {
       if (!response.ok) {
-        throw Error('Error fetching ideas')
+        throw Error('Error fetching ideas');
       }
-      return response.json()
-    })
-}
+      return response.json();
+    });
+};
 ```
 
 Take a few minutes to talk it through with your partner.
@@ -360,7 +360,7 @@ describe('getIdeas', () => {
   it('should return an error (SAD)', () => {
 
   });
-})
+});
 ```
 
 Reading through my tests, it looks like I'm going to need to use some mocked data.
@@ -396,7 +396,7 @@ describe('getIdeas', () => {
   it('should return an error (SAD)', () => {
 
   });
-})
+});
 ```
 
 Okay, so let's write our first test.
@@ -426,11 +426,11 @@ export const getIdeas = () => {
   return fetch('http://localhost:3001/api/v1/ideas')
     .then(response => {
       if (!response.ok) {
-        throw Error('Error fetching ideas')
+        throw Error('Error fetching ideas');
       }
-      return response.json()
-    })
-}
+      return response.json();
+    });
+};
 ```
 
 We know that `fetch` returns a Promise (because we can chain a `.then()` onto it). The Promise resolves into the response object. It looks like that response object has at least two values in it: a key of "ok" whose value is a boolean, and a key of "json" whose value is a function. That "json" function also returns a Promise, and _that_ Promise resolves into our array of ideas.
@@ -495,7 +495,7 @@ Notice that we're still using the mock implementation of `fetch` that we set up 
 
   it('should return an array of ideas (HAPPY)', () => {
     getIdeas()
-    .then(results => expect(results).toEqual(mockResponse))
+    .then(results => expect(results).toEqual(mockResponse));
   });
 ```
 
@@ -585,7 +585,7 @@ const mockIdeas = [{id: 1, title: 'Idea', description: 'It\'s great'}];
 
 jest.mock('./apiCalls.js', () => ({
   getIdeas: jest.fn().mockImplementationOnce(() => Promise.resolve(mockIdeas))
-}))
+}));
 ```
 
 As you can see, `mock` is a jest method that takes in two arguments: the file path to our fake apiCalls file, and a callback. This callback returns our exported object. It should contain keys of the names of the functions to be mocked, and values of our mocked functions.
@@ -600,7 +600,7 @@ We've returned some fake, controlled data, so then we can check that our state h
 // App.test.js
 
   it('should retrieve ideas after mounting', () => {
-    expect(wrapper.state('ideas')).toEqual(mockIdeas)
+    expect(wrapper.state('ideas')).toEqual(mockIdeas);
   });
 ```
 
@@ -666,14 +666,14 @@ export const getIdeas = () => {
   return fetch('http://localhost:3001/api/v1/ideas')
     .then(response => {
       if (!response.ok) {
-        throw Error('Error fetching ideas')
+        throw Error('Error fetching ideas');
       }
-      return response.json()
+      return response.json();
     })
     .catch(error => {
-      throw Error(error.message)
+      throw Error(error.message);
     })
-}
+};
 ```
 
 And in our tests:
@@ -709,7 +709,7 @@ addIdea = async newIdea => {
   } catch(error) {
     this.setState({ error: error.message });
   }
-}
+};
 ```
 
 Using `async/await` with `try/catch` allows us to `await` all our asynchronous behavior. Should any of our `await`ed Promises fail, they will be caught by the `catch` statement. In this example, our code is now moderately more concise, and I would say a fair bit more readable. Let's use this new syntax to now update our tests.
@@ -745,5 +745,3 @@ Refactor the rest of your apiCalls tests into using async await where necessary!
 </section>
 
 You can find completed async testing by checking out the branch `async-complete` on this repo.
-
-## Instructor Notes
