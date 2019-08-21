@@ -34,15 +34,16 @@ Constantly poking at our code manually is tedious and it's not the best use of o
 
 The bulk of your tests for an application are likely to be unit tests.  **Unit tests** test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment).
 
-#### Benefits
-
-* Unit tests are a safety net that helps developers find software bugs early
-* Unit tests provide documentation by telling a living story about your application
-* Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
-
 ## Integration Tests
 
 **Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work.  You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
+
+#### Benefits
+
+* Unit & Integration tests are a safety net that helps developers find software bugs early
+* Unit & Integration tests provide documentation by telling a living story about your application
+* Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
+* Integration tests allow us to be confident that all those small pieces are working together as expected
 
 ## What is Test-Driven Development?
 
