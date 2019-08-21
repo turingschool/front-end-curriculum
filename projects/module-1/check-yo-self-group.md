@@ -19,7 +19,7 @@ Now that you've got the main foundations down to build out a front-end applicati
 
 ### Architecture
 
-Your entire application will consist of one HTML page or template. You will have two JavaScript files:
+Your entire application will consist of one HTML page or template. You will have three JavaScript files:
 
 1. A `todo-list.js` file that contains a `ToDoList` class.
 	* `ToDoList` methods must include, _but are not limited to_:
@@ -28,9 +28,11 @@ Your entire application will consist of one HTML page or template. You will have
 		3. `deleteFromStorage`
 		4. `updateToDo` (should update the todo's title and urgency)
 		5. `updateTask` (should update a task's content and if it has been completed)
-2. A `main.js` file that contains all DOM related JavaScript
+2. A `todo-item.js` file that contains a `ToDoItem` class. We aren't giving you any requirements about what methods or properties should be on it.
+3. A `main.js` file that contains all DOM related JavaScript
 
 ### Data Model
+
 * A to-do list has an _id_, _title_, _tasks_, and _urgent_ property.
 	* The _id_ property should be a unique identifier
 	* _title_ is a string
