@@ -1,5 +1,5 @@
 ---
-title: JS IV - Objects, <code>this</code>, Classes, & Instances
+title: JS IV - Objects, `this`, Classes, & Instances
 length: 120
 tags: js, introduction, constructor functions, this, classes, objects
 ---
@@ -139,17 +139,18 @@ console.log(school);
 //   address: "7701 E 1st Pl, Denver, CO 80230"
 // }
 ```
+<section class="call-to-action">
 
-<div class="lesson-segment">
-  <h3>Solo Practice: Reassigning & Adding</h3>
-  <p>We are also able to reassign the value of a property in a similar way.</p>
-  <p>Go back to the repl you were working on before, and add a property of "bestFriend" to <code>user1</code>. Assign it to a string of anything you want.</p>
-  <p>Now try re-assigning <code>user1</code>'s age to 9. Then, re-assign <code>user2</code>'s hobbies to an array of your choice!</p>
-  <p>🤞Remember to call the object or the property on the last line of the file, and run the repl to verify the outcome!</p>
-</div>
+### Solo Practice: Reassigning & Adding
+We are also able to reassign the value of a property in a similar way.
+- Go back to the repl you were working on before, and add a property of "bestFriend" to `user1`. Assign it to a string of anything you want.
+- Now try re-assigning `user1<` **age** to 9. Then, re-assign `user2`'s **hobbies** to an array of your choice!
+- 🤞Remember to call the object or the property on the last line of the file, and run the repl to verify the outcome!
+</section>
+
+<section class="checks-for-understanding">
 
 ### Stop and Reflect
-
 **First:** Independently, take a few minutes to write about each prompt below:
 - To start, go ahead and make an object or two.
 - How do you create an object using literal notation?
@@ -158,12 +159,14 @@ console.log(school);
 - When we assign a function as the value of a key inside an object, what do we call it?
 
 **Then:** Turn to your neighbor and explain the above object-related questions to each other. Practice makes perfect, so make sure you both get to explain.
+</section>
 
-<div class="lesson-segment">
-  <h3>Partner Practice: Access and Update</h3>
-  <p>Choose a driver and a navigator. The driver should start by forking <a href="https://repl.it/@ameseee/Partner-Practice">this repl.it</a>.</p>
-  <p>Together, complete each exercise listed in the comments below the provided object literal. Write the code with a given direction directly below it, and do not delete code as you go.</p>
-</div>
+<section class="call-to-action">
+
+### Partner Practice: Access and Update
+- Choose a driver and a navigator. The driver should start by forking [this repl.it](https://repl.it/@ameseee/Partner-Practice)
+- Together, complete each exercise listed in the comments below the provided object literal. Write the code with a given direction directly below it, and **do not delete code as you go**.
+</section>
 <br>
 
 ## Introduction to `this`
@@ -196,10 +199,11 @@ There are two primary rules of thumb when it comes to `this`:
 1. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
 2. In the context of an object, `this` refers to and is bound to the object itself.
 
-<div class="lesson-segment">
-  <h3>Turn & Talk</h3>
-  <p>With the key point above in mind, why did you sometimes get a value (string, number, array), and sometimes get undefined in the previous activity? Explain with as much technical vocabulary and precision as possible.</p>
-</div>
+<section class="call-to-action">
+
+ ### Turn & Talk<
+With the key point above in mind, why did you sometimes get a value (string, number, array), and sometimes get undefined in the previous activity? Explain with as much technical vocabulary and precision as possible.
+</section>
 
 In our example `school` object above, `this` is referring to `school`. If we look at our `checkOpenSpots` method, we see the statement being returned is: `return this.capacity - this.currentStudents;` which is basically saying `return school.capacity - school.currentStudents;`.
 
@@ -350,12 +354,13 @@ console.log(fridge2);
 
 We can run the repl to see what the fridges are showing at this point. We currently have no state or behavior for these fridge instances. But it is clear that they are instances of a fridge because they show up with `Fridge` before their `{}`.
 
-<div class="lesson-segment">
-  <h3>Practice: Creating Object Instances</h3>
-  <p>Determine who will drive and who will navigate.</p>
-  <p>In a brand-new repl file, define a <code>Laptop</code> class, then create 2-3 object instances from that class.</p>
-  <p>Keep this repl file open in a tab; we will come back to it throughout the next few sections of class.</p>
-</div>
+<section class="call-to-action">
+
+### Practice: Creating Object Instances
+- Determine who will drive and who will navigate.
+- In a brand-new repl file, define a `laptop` class, then create 2-3 object instances from that class.
+- Keep this repl file open in a tab; we will come back to it throughout the next few sections of class.
+</section>
 
 ### Constructor
 
@@ -421,10 +426,11 @@ var fridge2 = new Fridge("black", 40, true, []);
 
 Note that the arguments that we pass to our `Class()` are order dependent.
 
-<div class="lesson-segment">
-  <h3>Practice: Adding Attributes</h3>
-  <p>With your partner, build on the Laptop class you started earlier. Give your <code>Laptop</code> class some attributes and create some instances of Laptop.</p>
-</div>
+<section class="call-to-action">
+
+### Practice: Adding Attributes
+With your partner, build on the Laptop class you started earlier. Give your `Laptop` class some attributes and create some instances of Laptop.
+</section>
 
 ## Implementing Behavior with Methods
 
@@ -442,11 +448,12 @@ class Fridge {
 }
 ```
 
-<div class="lesson-segment">
-  <h3>Turn & Talk</h3>
-  <p>How would one invoke the <code>addFood</code> function/method? Be specific.</p>
-  <p>Describe, in detail, what the <code>addFood</code> function/method does, and how it does it.</p>
-</div>
+<section class="checks-for-understanding">
+
+### Turn & Talk<
+- How would one invoke the `addFood` function/method? Be specific.
+- Describe, in detail, what the `addFood` function/method does, and how it does it.
+</section>
 
 Let's update our code so that we:
 
@@ -455,19 +462,23 @@ Let's update our code so that we:
 3. Add something to the contents of the Fridge.
 4. Log the new contents of the Fridge.
 
-<div class="lesson-segment">
-  <h3>Practice: Adding Behavior</h3>
-  <p>With your partner, create a <code>turnOn</code> method for your Laptop class. This should set the power of that laptop to <em>true</em>.</p>
-  <p>Finished Early? Complete the exercise in <a href="https://repl.it/@ameseee/Classes-Extra-Practice">this repl</a>. Remember, the quantity of work you get through is not what matters most, it's the depth of your understanding and ability to articulate your understanding of how things are working. Don't race through this and do continue to talk through each line with your partner!</p>
-</div>
+<section class="call-to-action">
+
+### Practice: Adding Behavior
+With your partner, create a `turnOn` method for your Laptop class. This should set the power of that laptop to *true*.
+
+Finished Early? Complete the exercise in [this repl](https://repl.it/@ameseee/Classes-Extra-Practice). Remember, the quantity of work you get through is not what matters most, it's the depth of your understanding and ability to articulate your understanding of how things are working. Don't race through this and do continue to talk through each line with your partner!
+</section>
+
+<section class="checks-for-understanding">
 
 ### Check For Understanding
 
 Take the last few minutes of class to self-assess by completing the form below. Once you submit, you will be emailed your responses and be able to view the "solutions" - this is just one solution/answer, yours may vary but still be accurate! Use this as an opportunity to identify what you understand and what you need to brush up on.
-<br>
-<br>
+</section>
 
 <iframe class="google-form" src="https://docs.google.com/forms/d/e/1FAIpQLSdYAham4iJ8PGaPL2rZQ0OHrIkIt4MJ8tiVWoA7-EfwavNUBQ/viewform?embedded=true" width="100%" height="600px">Loading...</iframe>
+
 
 ## Additional Resources
 * [Objects and Mythical Creatures Video](https://www.youtube.com/watch?v=wfrwMYn2BCg)
