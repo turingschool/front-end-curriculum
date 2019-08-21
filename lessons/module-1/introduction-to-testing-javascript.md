@@ -1,7 +1,7 @@
 ---
 title: Introduction to Unit Testing with JavaScript
-length: 120
-tags: javascript, browser, testing, tdd
+length: 150
+tags: javascript, testing, tdd, mocha, chai
 ---
 
 ## Learning Goals
@@ -26,11 +26,13 @@ For small code bases, this works. Write or change some code and then flip over t
 
 Even worse: we can end up in a situation where changing code in one place causes something to break somewhere else—somewhere that we're not currently poking.
 
-Constantly poking at our code is tedious and it's not the best use of our time. We're better off writing some code that tests our other code for us. This sounds almost like a joke about programmers, but it's actually a really efficient way to maintain quality in our code base.
+<section class="note">
+Constantly poking at our code manually is tedious and it's not the best use of our time. We're better off writing some code that tests our other code for us. It's a really efficient way to maintain quality in our code base.
+</section>
 
 ## Unit Tests
 
-The bulk of your tests for an application are likely to be unit tests.  Unit tests test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment).
+The bulk of your tests for an application are likely to be unit tests.  **Unit tests** test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment).
 
 #### Benefits
 
@@ -39,17 +41,12 @@ The bulk of your tests for an application are likely to be unit tests.  Unit tes
 * Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
 
 ## Integration Tests
-Integration tests test the interaction between two units to make sure that they play together nicely and work the way we expect them to work.  You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
 
-### Your Turn
+**Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work.  You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
 
-* Take a minute to write in your journal and explain why unit tests are so important in your own words.  
-* When building out a piece of functionality, should you focus on writing unit tests first or integration tests?  Why?
-* Do you think it might be important to write tests before you have implemented the code for some kind of functionality or afterwards? Are there benefits to both?  
+## What is Test-Driven Development?
 
-## What is test-driven development?
-
-Test-driven development (TDD) is one of those things that is deceptively simple to explain and incredibly hard to do. The basic premise is that we write our test for a piece of required functionality _before_ writing any implementation code. The test should fail when its first run, and then, you write the code to make it pass. Once the test passes, you can then safely refactor your code.
+Test-Driven Development (TDD) is one of those things that is deceptively simple to explain and incredibly hard to do. The basic premise is that we write our test for a piece of required functionality _before_ writing any implementation code. The test should fail when its first run, and then, you write the code to make it pass. Once the test passes, you can then safely refactor your code.
 
 If you think about it, this is not too far off from how you're already thinking about code. You have some idea of what you want to happen and then you go ahead and (try) to make it happen—with some amount of cursing and flailing around wildly in the middle. You manually test your application by checking for the results that you expect in your console or the browser.
 
@@ -68,16 +65,18 @@ One important thing to note is that TDD is not about writing tests. Writing test
 5. Refactor - Refactor to ensure functionality is intact and the code is refined.
 6. Repeat this cycle - Steps 1 - 5 are repeated multiple times so that all the features are covered in TDD cycles
 
-### Your Turn
+<section class="call-to-action">
+### In Your Notebook
 
-* Explain the steps of TDD in your own words in a notebook.  
-* Brainstorm and write down three reasons as to why TDD is important and why it might save you headaches in the future.
+* What is your understanding of why testing is important?
+* Explain the steps of TDD in your own words.  
+</section>
 
-## So what happens if you don't test first?
+## What happens if you don't test first?
 
 "I'll write tests later. I just want to get this working first," is one of the greatest lies in software development and it's usually one that we tell ourselves.
 
-Beyond the issue of general motivation—let's face it, you're never going to go back and add those tests—there is the issue that not all code is testable. We won't run into this issue today, but we will soon. The thing I'd like you to keep in mind is that if you write your tests first, it's really hard to find yourself in this situation.
+Beyond the issue of general motivation — let's face it, you're never going to go back and add those tests — there is the issue that not all code is testable. We won't run into this issue today, but we will soon. The thing you want to keep in mind is that if you write your tests first, it's really hard to find yourself in this situation.
 
 **Steve's Law of Testing**: If something is hard to test, it's probably not your test's fault.
 
@@ -85,30 +84,46 @@ Beyond the issue of general motivation—let's face it, you're never going to go
 
 In Mod 1, we will be using the Mocha testing framework along with the assertion library Chai.
 
-* [Mocha](https://mochajs.org/) is a testing framework that runs on Node.js in your terminal, and can also be run in your browser window. This is what allows us to organize and execute our tests.
+* [Mocha](https://mochajs.org/) is a testing framework that runs on `Node.js` in your terminal, and can also be run in your browser window. This is what allows us to organize and execute our tests.
 
 * [Chai](http://www.chaijs.com/) is an assertion library that plugs in to Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
 
 Let's say we were writing a function that squared a number and we wanted to write a unit test to see if it worked. Here's how that test would look:
 
-<p data-height="265" data-theme-id="light" data-slug-hash="xjYeoY" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Your First Test" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/xjYeoY/">Your First Test</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+```javascript
+function square(n) {
+  return n * n;
+}
+
+describe('square', function() {
+
+  it('returns the square of a number', function() {
+    var result = square(2);
+
+    assert.equal(result, 4);
+  });
+
+});
+```
 
 Let's talk a little bit about what's going on here:
 
 * Typically, our test files are separate from our implementation code.
 
-*Test.js*
+*test.js*
 
 ```js
-describe('square', function () {
-  it('returns the square of a number', function () {
-    assert.equal(square(2), 4);
+describe('square', function() {
+  it('returns the square of a number', function() {
+    var result = square(2);
+
+    assert.equal(result, 4);
   });
 });
 ```
 
-*Implementation.js*
+*implementation.js*
+
 ```js
 function square(n) {
   return n * n;
@@ -118,9 +133,11 @@ function square(n) {
 * We have a `describe()` block which denotes that we're going to start writing a number of tests about the same unit.
 
 ```js
-describe('square', function () {
-//  it('returns the square of a number', function () {
-//    assert.equal(square(2), 4);
+describe('square', function() {
+//  it('returns the square of a number', function() {
+  // var result = square(2);
+  //
+  // assert.equal(result, 4);
 //  });
 });
 ```
@@ -128,9 +145,11 @@ describe('square', function () {
 * We make a statement about our code with the `it()` block.
 
 ```js
-//describe('square', function () {
-  it('returns the square of a number', function () {
-    assert.equal(square(2), 4);
+//describe('square', function() {
+  it('returns the square of a number', function() {
+    var result = square(2);
+
+    assert.equal(result, 4);
   });
 //});
 
@@ -141,7 +160,9 @@ describe('square', function () {
 ```js
 //describe('square', function () {
 //  it('returns the square of a number', function () {
-    assert.equal(square(2), 4);
+      var result = square(2);
+
+      assert.equal(result, 4);
 //  });
 //});
 ```
@@ -149,23 +170,22 @@ describe('square', function () {
 Below you will find the general syntax for assertions for most of the methods available:
 
 ```js
-  assert.method(actual, expected, [message])
+  assert.method(actual, expected)
 ```
 
-You'll notice that our method takes three arguments (the third being optional, as denoted by the square brackets):
+You'll notice that our method takes two arguments:
 
-- actual: The actual JS code that you want to run from the codebase
-- expected: The expected output that should be returned based on test requirements
-- message: A (String) message to yourself on what is being tested
+- `actual`: The actual JS code that you want to run from the codebase
+- `expected`: The expected output that should be _returned_ based on test requirements
 
 ## Importing/Exporting Files
 
 As mentioned earlier, tests are typically separate from its implementation code.  In order for this to work properly, we need to be able to export the functionality from one file and import it into the test file.  Let's take a look at an example:
 
-*Implementation.js*
+*implementation.js*
 
 ```js
-function Hello() {
+function hello() {
   return 'Hello World';
 }
 
@@ -174,41 +194,50 @@ module.exports = Hello;
 
 The `module.exports` allows us to export a piece of functionality.  In this instance, we want to export our function Hello, so that is what we assign it.    
 
-*Test.js*
+*test.js*
+
 ```js
 var Hello = require('./implementation')
 
-describe('Hello', function () {
+describe('hello', function () {
   it('returns the string Hello World', function () {
-    assert.equal(Hello(), 'Hello World');
+    assert.equal(hello(), 'Hello World');
   });
 });
 ```
 
 By adding `require('./implementation')` to our test file, we are importing that function and assigning it to a variable.  Then we can test it by asserting what value is returned after invoking our imported function!
 
+<section class="call-to-action">
 ## Let's practice
 
-Enough talk about testing. Let's actually write some tests to see this in action. We'll do some together and then you'll do some on your own.
+Enough talk about testing. Let's actually write some tests to see this in action! We'll do some together and then you'll do some on your own.
 
 Check out [this repository][rep] to get your hands dirty.
 
 [rep]: http://github.com/turingschool-examples/testing-javascript
+</section>
+
 
 ## The Testing Process
 
 It takes some time to build out solid habits when testing.  Often we'll see some developers run the test without even looking at the test first, or start writing the implementation code before they have even run the test.  Develop these good habits early so you really know what you are testing for and can speak to the process.
 
-1. _Read the test_.  This includes the description, paying attention to what it is asking for, and then what the assertions are.
-2. _Run the test_.  It should fail.  Take a look at the error and what it is saying.  Pay attention also to what line the test fails on.
-3. Then begin to _write implementation code_.  Going off of what the error says, write the _minimum_ amount of code it is asking for.
-4. _Run the test_ again.  If it still fails, see if the error has changed.  Is a different line of code failing?  Rinse and repeat until it passes.
-5. Then make sure that all of the _previous tests are passing_.  If not, go back and follow steps 1-4.  Otherwise, continue on to the next one.
+1. **Read the test**.  This includes the description, paying attention to what it is asking for, and then what the assertions are.
+2. **Run the test**.  It should fail.  Take a look at the error and what it is saying.  Pay attention also to what line the test fails on.
+3. Then begin to **write implementation code**.  Going off of what the error says, write the _minimum_ amount of code it is asking for.
+4. **Run the test** again.  If it still fails, see if the error has changed.  Is a different line of code failing?  Rinse and repeat until it passes.
+5. Then make sure that all of the **previous tests are passing**.  If not, go back and follow steps 1-4.  Otherwise, continue on to the next one.
 
+<section class="checks-for-understanding">
 ### Wrap Up
 
-What is the TDD process?
+Open up the Slack DM between you, your project parter, and your PM. Share your answers to the following with the group:
+* Why is testing your code important? ⬅️ _Popular Interview Question!_
+* What is the TDD process?
+* In the Number Guesser project:
+  - What are the smallest pieces of functionality?
+  - How could you write tests for that functionality?
 
-Think back to your Number Guesser project.
-- What are the smallest pieces of functionality?
-- How could you write tests for that functionality?
+**Note:** You are not required to test anything on Number Guesser, this is just an exercise to push your thinking on how it _can_ be applied.
+</section>
