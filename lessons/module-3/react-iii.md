@@ -14,8 +14,8 @@ module: 3
 
 ## Vocabulary
 
-- lifecycle method: a set of methods found in the parent class Component that fire at different points during the component lifecycle
-- PropTypes: a library we use to validate the data type of props coming into a component; allows for more specific, helpful error messages
+- `lifecycle method` a set of methods found in the parent class Component that fire at different points during the component lifecycle
+- `PropTypes` a library we use to validate the data type of props coming into a component; allows for more specific, helpful error messages
 
 ## The Component Lifecycle
 
@@ -80,11 +80,11 @@ Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-st
 
 This is a new lifecycle method that was added with React 16.3. Check out what the [docs](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) have to say about it. Because this is a static method, we don't have access to `this` inside the method. Per the docs, this method gets invoked under 2 circumstances:
   * after a component is instantiated
-  * when the component receives new props
+  * when the component receives new props (aka when it re-renders)
 
 It takes in `nextProps` and `prevState` and returns an object to update state, or null if the new props do not require any state updates.
 
-This method exists for only one purpose... it enables a component to update its internal state as the result of changes in props.  The [docs](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state) themselves tell developers to use this lifecycle method **sparingly**. (it's even listed in the **Rarely Used Lifecycle Methods** section) This new method will be called on the initial mounting of the component, as well as *every* time it is re-rendered.
+This method exists for only one purpose... it enables a component to update its internal state as the result of changes in props.  The [docs](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state) themselves tell developers to use this lifecycle method **sparingly**. (it's even listed in the **Rarely Used Lifecycle Methods** section)
 
 ### render()
 
@@ -132,7 +132,7 @@ And, yeah, render lives here, too.
 
 ### componentDidUpdate()
 
-This method is invoked *after* updating occurs.  It is **NOT** called for the initial render.  Per the [docs](https://reactjs.org/docs/react-component.html#componentdidupdate): "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."
+This method is invoked *after* updating occurs.  It is **NOT** called for the initial render.  Per the [docs](https://reactjs.org/docs/react-component.html#componentdidupdate): "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."  For example, if the `userId` in your new props is not the same as the one that is being currently displayed, you could fetch the new user.
 
 <section class="note">
 ### Note
@@ -183,6 +183,7 @@ Clone down [the repo](https://github.com/turingschool-examples/ideabox-api) - bu
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-api.git ideabox-api
 cd ideabox-api
+npm install nodemon -g
 npm i
 npm start
 ```
@@ -198,7 +199,7 @@ Okay. Let's refactor our IdeaBox so that we are consuming our API!
 <section class="call-to-action">
 ### Your Turn
 
-Pair up and work together on implementing the functionality to `fetch` our ideas from the API!  Think about what lifecycle method this should live in?  Once you have the ideas being rendered, give your partner a high five!
+Pair up and work together on implementing the functionality to `fetch` our ideas from the API!  Use the docs for the API to figure out what endpoint you need to hit.  Also think about what lifecycle method this should live in.  Once you have the ideas being rendered, give your partner a high five!
 </section>
 
 As we've noted before, we should use our catch somehow in order to display an error if something goes wrong.  Try stopping your backend server and see what happens.  Your catch should before firing (because the Promise rejected).  Let's do something with that error.
@@ -220,7 +221,7 @@ Then inside of your catch, set the error message in state. Now, let's _do_ somet
 
 We don't want an error message showing all the time. So ... let's make use of conditional rendering! Let's take a look at our current `render()` method:
 
-```js
+```jsx
 // App.js
 
   render() {
@@ -239,7 +240,7 @@ We don't want an error message showing all the time. So ... let's make use of co
 
 If we wanted to add an h2 that would show up if we had an error, what would we write?
 
-```js
+```jsx
 // App.js
 
   render() {
@@ -281,7 +282,7 @@ PropTypes allow you to specify what type of props you are expecting in a certain
 
 Many people have moved to implementing languages like [TypeScript](https://www.typescriptlang.org/) or [Flow](https://flowtype.org/) for this exact purpose, but even without any additional technologies, the `prop-type` module lets you establish a safety net with very little effort.
 
-Let's say you declare a component `<Main title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else - say for example the API you are consuming has changed and now you have an array of strings - you will get a helpful warning message in your console.  
+Let's say you declare a component `<Card title={this.state.title}/>`. Here, your component is expecting a prop called `title` and you (probably) expect it to be a string. If you define that value within your `propTypes` object and it comes in as something else - say for example the API you are consuming has changed and now you have an array of strings - you will get a helpful warning message in your console.  
 
 Previously, PropTypes was built into the React library itself, however it has since been extracted into its own module. You can install it like any other module.
 
@@ -291,7 +292,7 @@ $ npm install prop-types -S
 
 In React, `PropTypes` are declared like this:
 
-```js
+```jsx
 // Card.js
 
 import React from 'react';
@@ -369,7 +370,7 @@ these particular methods when you are done.
 
 Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  
 
-```js
+```jsx
 const Card = ({ id, title, description, removeIdea, isFavorite }) => {
   const favoriteClass = isFavorite ? 'favorite' : 'card'
 
