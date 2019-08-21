@@ -52,6 +52,42 @@ For both happy and sad paths:
 2. The response body
 3. That our dataset has changed according to our expectations
 
+### Separate the Server from the App
+
+Right now we have all of our application code living in one file (server.js).
+In order to test things we need to separate our server startup from our endpoints.
+If we leave the startup in the file that we're testing, then our project will try to start the server each time we run our tests.
+
+Let's create both an `app.js` and an `app.spec.js` file in the root of our directory.
+
+Now move all but the server startup into the app.js file.
+
+Afterwards, your files should look something like:
+
+app.js
+```javascript
+import express from 'express';
+import cors from 'cors';
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+// All endpoints are here
+
+export default app;
+```
+
+server.js
+```javascript
+import app from './app';
+
+app.set('port', 3001);
+app.listen(app.get('port'), () => {
+  console.log(`App is running on http://localhost:${app.get('port')}`)
+});
+```
+
 ## Writing our first tests
 
 We're going to try to test drive all the interactions with this database, and
