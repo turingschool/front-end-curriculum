@@ -10,7 +10,6 @@ By the end of this lesson, you will:
 
 * Know how to implement request specs in an express application using jest and supertest
 
-
 ## Overview
 
 In order to test our server-side code, we have to be sure that database interactions (as well as the status codes within responses) are behaving as we expect.
@@ -58,7 +57,7 @@ Right now we have all of our application code living in one file (server.js).
 In order to test things we need to separate our server startup from our endpoints.
 If we leave the startup in the file that we're testing, then our project will try to start the server each time we run our tests.
 
-Let's create both an `app.js` and an `app.spec.js` file in the root of our directory.
+Let's create both an `app.js` and an `app.test.js` file in the root of our directory.
 
 Now move all but the server startup into the app.js file.
 
