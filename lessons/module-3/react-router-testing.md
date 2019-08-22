@@ -6,7 +6,7 @@ tags: testing, react, router
 
 ## Overview
 
-In this exercise, you will utilize blog posts and documentation to learn how to test an application using React Router.
+In this exercise, you will utilize blog posts and documentation to learn how to test an application that uses React Router.
 
 ## What to Test?
 
@@ -28,7 +28,7 @@ Read these blog posts and documentation pages, and take notes as you read throug
 * [Testing React Router apps with Jest and Enzyme](https://medium.com/@antonybudianto/react-router-testing-with-jest-and-enzyme-17294fefd303){:target="_blank"} **Note:** If you have `<Router>` in the `index.js` file surrounding `<App>` like [this lesson](../module-3/react-router-v4.html){:target="_blank"} shows, then you do not have to worry about mocking the Browser Router as is noted in this blog post.
 * [MemoryRouter Documentation](https://github.com/ReactTraining/react-router/blob/master/packages/react-router/docs/api/MemoryRouter.md){:target="_blank"}
 
-From the reading, if you had to tell someone what a `<MemoryRouter>` is, what would you tell them? Why do we need it for testing?
+From the reading, if you had to tell someone what a `<MemoryRouter>` is, what would you tell them? Why do we need it for testing? What is the difference between Enzyme's `shallow` and `mount` methods?
 </section>
 
 ## Implementation
