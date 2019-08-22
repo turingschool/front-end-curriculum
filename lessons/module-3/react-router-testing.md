@@ -40,9 +40,11 @@ Test the routes in the application you created during the [React Router lesson](
 * Within the `describe` block, create `it` blocks to test each routing possibility
 * Go forth and test the routing!
 
-## Deliverables
+<section class="checks-for-understanding">
+### Deliverables
 
 1. Submit a link to the JS file on GitHub containing the tests from the React Router lesson.
-1. Work with your project partners to add at least one route to your current project, and test that the routing is working. Submit a link to the code file on GitHub contaiing your project's routing tests.
+1. Work with your project partners to add at least one route to your current project, and test that the routing is working. Submit a link to the code file on GitHub containing your project's routing tests.
 
 Submit the links here: [submission gist](https://gist.github.com/robbiejaeger/816c31fbdb01aef8467908378b214f80){:target="_blank"}
+</section>
