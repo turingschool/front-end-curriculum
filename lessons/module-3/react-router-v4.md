@@ -156,6 +156,8 @@ All three of these are rendered with [route props](https://reacttraining.com/rea
 <section class="call-to-action">
 ### Take the next 10 minutes to read about these components
 
+---
+
 #### Link
 
 _Provides declarative, accessible navigation around your application._
@@ -280,9 +282,13 @@ Next we will go to our `App.js` file and begin constructing the routes for our a
 import { Route, NavLink } from 'react-router-dom'
 ```
 
-Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `activeClassName` attribute. 
+Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `active` class. 
 
-_**It comes with a default class of `.active` so we can either use that without defining it, or define a new name.**_
+<section class="note">
+### Note
+
+It comes with a default class of `.active` so we can either use that without defining it, or define a new name using `activeClassName`.
+</section>
 
 ```jsx
 export default class App extends Component {
@@ -330,11 +336,13 @@ Now let's define the route:
 <Route path='/' component={Home} />
 ```
 
-#### Your Turn!
+<section class="call-to-action">
+### In Your Notebook
 
 Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` Route working by displaying `<h1> Unicorns! </h1>`.
 
 _hint: You'll probably need to create a new component to render when on the `/unicorns` route_
+</section>
 
 ![unicorn](http://www.chickensmoothie.com/oekaki/image/image.php?id=410567&size=large&format=auto&rev=1302806499)
 
@@ -366,8 +374,8 @@ Now that we have routes defined, and a template of a component, let's get someth
 //Unicorns.js
 
 import React from 'react';
-import './image-display.css';
 import unicornData from './data/unicorn-data'
+import './image-display.css';
 
 const Unicorns = () => {
   const displayUnicorns = unicornData.map(unicorn => {
@@ -388,7 +396,8 @@ export default Unicorns;
 
 We should now be able to see a bunch of unicorns displaying on the page!
 
-#### Your Turn!
+<section class="call-to-action">
+### Your Turn!
 
 Take some time to mimic these steps for `Puppies` and `Sharks` so that each respective route shows images of their respective creatures.
 
@@ -399,6 +408,7 @@ Take some time to mimic these steps for `Puppies` and `Sharks` so that each resp
 	* `unicorn-data.js`
 	* `puppy-data.js`
 	* `shark-data.js`
+</section>
 
 ![whaaaat?!](https://i.imgflip.com/160nr0.jpg)
 
@@ -454,10 +464,10 @@ Hopefully this seems pretty straight forward so far, but what if we want to go a
 Currently we have 9 creatures per component and we want to be able to link to a specific view for **each creature**. One way we could do this is to create a route for each creature...something like:
 
 ```jsx
-<Route to='/unicorns/1' />
-<Route to='/unicorns/2' />
-<Route to='/unicorns/3' />
-<Route to='/unicorns/4' />
+<Route path='/unicorns/1' />
+<Route path='/unicorns/2' />
+<Route path='/unicorns/3' />
+<Route path='/unicorns/4' />
 ...
 ```
 
@@ -525,6 +535,7 @@ We passed through the `match` prop and console logged it, let's take a look. Not
 
 Now all we have to do is modify our route to render the correct data.
 
+<section class="call-to-action">
 ### Your Turn!
 
 See if you can write some codes to render the correct data based on the ID in the URL. Focus just on unicorns for now.
@@ -534,6 +545,7 @@ See if you can write some codes to render the correct data based on the ID in th
 * You will need to bring in the data from the `unicorn-data.js` file
 * You may want to use the `CreatureDetails` component already set up for you
 * Focus first on seeing the data when you type in the URL manually, we'll set up the click next
+</section>
 
 ![rambo on unicorn](http://pleatedjeans.files.wordpress.com/2010/08/10-28-rambounicorn1.jpg)
 
@@ -549,9 +561,11 @@ Here's the code:
 
 Now if we visit `http://localhost:3000/unicorns/1` we should see a view specifically for Unicorn 1!
 
+<section class="call-to-action">
 ### Your Turn!
 
 See if you can modify your `Creatures` component so that each image can be clicked and `Link` to the correct Route / path / URL.
+</section>
 
 ![tunacorn](http://www.nataliedee.com/081905/tuna-plus-unicorn.jpg)
 
