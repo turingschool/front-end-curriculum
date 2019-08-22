@@ -68,7 +68,11 @@ React Router allows us to:
 * Bookmark specific page/view within our application to reference at a later time
 * Utilize the `back` and `forward` buttons in our browser
 
-* In your notebook. What does this lead to? Why or how? - Take a minute to write and then discuss with a partner.
+<section class="call-to-action">
+### In Your Notebook
+
+What does this lead to? Why or how? - Take a minute to write your answer and then discuss with a partner.
+</section>
 
 ### Router
 
@@ -148,11 +152,11 @@ All three of these are rendered with [route props](https://reacttraining.com/rea
 
 **Important Note:** If you have a component that is not rendered by a Route, but still needs access to the route props (match/location/history), you will need to use the `withRouter` method provided by React Router. This will be necessary to make any of your React Router components (Link, Route, Redirect, Switch, etc.) work correctly. Take a few minutes and read [the docs](https://reacttraining.com/react-router/core/api/withRouter) as well as [this post](https://stackoverflow.com/questions/53539314/what-is-withrouter-for-in-react-router-dom) for more info. 
 
-**Take 10 minutes to read about these**
 
----
+<section class="call-to-action">
+### Take the next 10 minutes to read about these components
 
-### Link
+#### Link
 
 _Provides declarative, accessible navigation around your application._
 
@@ -171,7 +175,7 @@ _Provides declarative, accessible navigation around your application._
 
 ---
 
-### NavLink
+#### NavLink
 
 _A special version of the `<Link>` that will add styling attributes to the rendered element when it matches the current URL._
 
@@ -192,7 +196,7 @@ It can take the following attributes:
 
 ---
 
-### Redirect
+#### Redirect
 
 _Rendering a `<Redirect>` will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
 More of a nice to know for now. This is something that can be used if the user does something wrong. ie. went to a route they don't have permissions to access.
@@ -210,7 +214,7 @@ It can take the following attributes:
 
 ---
 
-### Switch
+#### Switch
 
 _Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively** (only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively** (more than one route can match and render at a time)_
 
@@ -224,8 +228,7 @@ _Renders the **first** child `<Route>` or `<Redirect>` that matches the location
 ```
 
 The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job of quickly showing what Switch is all about.
-
----
+</section>
 
 # Time to Code!
 
