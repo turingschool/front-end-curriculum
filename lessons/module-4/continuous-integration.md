@@ -29,7 +29,7 @@ TravisCI will also help you catch errors that you might not find locally. By mor
 
 2. Authorize TravisCI to access information about your GitHub repos (it's ok)
 
-3. Start to your repository using the `+` button next to "My Repositories" on the left pane
+3. Click the `+` button next to "My Repositories" on the left pane
 
 4. Search for the name of the repository using the `Filter repositories` box (you might have to click the `Sync account` button on the top right)
 
@@ -40,6 +40,8 @@ TravisCI will also help you catch errors that you might not find locally. By mor
 That's it! Easy, right? Just kidding.
 
 Now, any time you push new commits to your remote repository, TravisCI will automatically kick off a new build so you can keep an eye on the overall health and stability of your application.
+
+_Note: If you don't see your repo after you've flipped the switch, try refreshing the page._
 
 ### Configuring TravisCI
 
