@@ -159,8 +159,8 @@ describe('square', function() {
 * We write an _assertion_ about our code. Here, we're asserting that when we pass the number 2 into `square()` that the result should be 4.
 
 ```js
-//describe('square', function () {
-//  it('returns the square of a number', function () {
+//describe('square', function() {
+//  it('returns the square of a number', function() {
       var result = square(2);
 
       assert.equal(result, 4);
@@ -200,8 +200,8 @@ The `module.exports` allows us to export a piece of functionality.  In this inst
 ```js
 var Hello = require('./implementation')
 
-describe('hello', function () {
-  it('returns the string Hello World', function () {
+describe('hello', function() {
+  it('returns the string Hello World', function() {
     assert.equal(hello(), 'Hello World');
   });
 });
