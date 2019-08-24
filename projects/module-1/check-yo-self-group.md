@@ -9,7 +9,6 @@ Now that you've got the main foundations down to build out a front-end applicati
 ## Learning Goals
 
 * Solidify and demonstrate your understanding of:
-  * semantic HTML
   * clean & organized CSS styles
   * DRY JavaScript
   * localStorage to persist data
@@ -162,7 +161,7 @@ The user might also might to add more tasks to their checklist after they have c
 
 ## What is a Masonry Layout?
 
-This type of layout is known as a *Masonry layout*.  This layout refers to when items of uneven size are laid out in a way where there are no uneven gaps.  Due to this scenario, this is *NOT* good scenario for using `grid`.  This is because we can't define where each card is going to be in the layout.  There are a number of ways to solve this solution.
+This type of layout is known as a *Masonry layout*.  This layout refers to when items of uneven size are laid out in a way where there are no uneven gaps.  Due to this scenario, this is *NOT* good scenario for using `grid`.  This is because we can't define where each card is going to be in the layout.  There are a number of solutions to building this type of layout.
 
 ## Submission Details
 
@@ -213,23 +212,23 @@ Color, font, and icon spec:
 
 ### Comp Recreation
 
-*  **4:** Additional elements that have been added match the visuals established in the comps. Every little detail was built out thoughtfully - from hover states to placeholders.
-*  **3:** Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with **smooth transitions between screen sizes**. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
-*  **2:** Application implements all major comp details accurately and correctly on **desktop and mobile** (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
-*  **1:** Application implements all major comp details on desktop only (colors, fonts, icons, spacing, alignment, etc.)
+* **4:** Additional elements that have been added match the visuals established in the comps. Every little detail was built out thoughtfully - from hover states to placeholders.
+* **3:** Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with **smooth transitions between screen sizes**. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
+* **2:** Application implements all major comp details accurately and correctly on **desktop and mobile** (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
+* **1:** Application implements all major comp details on desktop only (colors, fonts, icons, spacing, alignment, etc.)
 
 ------------------------------------------------------------------
 
 ### Git Workflow & Documentation
 
-*  **4:** A PR template was used. A code review was requested and completed by a mentor, and all team members can speak to how the feedback in code review was implemented (and point to the commit(s) that implemented the feedback).
-*  **3:** Every team member (on a team of 3) authors between 25%-40% of the commits. Most commits are formatted correctly. Every team member contributes to at least 2 meaningful PR conversations. The README is formatted well and contains:
+* **4:** A PR template was used. A code review was requested and completed by a mentor, and all team members can speak to how the feedback in code review was implemented (and point to the commit(s) that implemented the feedback).
+* **3:** Every team member (on a team of 3) authors between 25%-40% of the commits. Most commits are formatted correctly. Every team member contributes to at least 2 meaningful PR conversations. The README is formatted well and contains:
   - Overview of project and goals
   - Overview of technologies used, challenges, and wins, any other reflections
   - Screenshots of comp and your app
   - Credit all teammates
-*  **2:** Every team member (on a team of 3) authors between 20%-45% of the commits. More than a few commits are formatted incorrectly.The README is formatted well but may be lacking in detail.
-*  **1:** Commit and PR history does not tell a story of the application OR a README has not been created/has minimal information.
+* **2:** Every team member (on a team of 3) authors between 20%-45% of the commits. More than a few commits are formatted incorrectly. The README is formatted well but may be lacking in detail.
+* **1:** Commit and PR history does not tell a story of the application OR a README has not been created/has minimal information.
 
 ------------------------------------------------------------------
 
@@ -248,11 +247,11 @@ Color, font, and icon spec:
   * All loops are refactored into the proper array prototype iteration methods
   * Uses logical operators instead of if/else statements where applicable
   * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
-*  **3:**
+* **3:**
   * DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
   * All functions are less than 10 lines
   * There are no nested if/else statements
   * There are no global variables aside from query selectors and an array for your to-dos
   * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
-*  **2:** Application correctly implements data model for the `ToDoList` class including all required methods
-*  **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+* **2:** Application correctly implements data model for the `ToDoList` class including all required methods
+* **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
