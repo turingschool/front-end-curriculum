@@ -1,16 +1,16 @@
 ---
 title: Event Bubbling and Delegation
-length: 120
-tags: javascript, dom, browser, events
+length: 180
+tags: javascript, dom, browser, events, bubbling
 ---
 
 ### Learning Goals
 
-- Understand and describe propagation
+- Understand and describe propagation and bubbling
 - Understand and apply event delegation
 - Utilize the event object
 
-## Vocab
+## Vocabulary
 
 - `Event Handlers` Functions that will run when an event happens
 - `Event Propagation` Roughly, the order in which different DOM elements are notified of an event
@@ -66,13 +66,15 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 
 ![Graphical representation of an event dispatched in a DOM tree using the DOM event flow](/assets/images/eventpropagation.png)
 
-* Event capture phase - When an event occurs in the DOM, notification of the event is passed starting at the top of the DOM tree and passing down through all parent element nodes all the way to the target node where the event occurred.
-* Event target phase - After the capturing phase occurs, the Target phase occurs. The target phase only includes a notification of Node where the event took place.
-* Event bubbling phase - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM
+* **Event capture phase** - When an event occurs in the DOM, notification of the event is passed starting at the top of the DOM tree and passing down through all parent element nodes all the way to the target node where the event occurred.
+* **Event target phase** - After the capturing phase occurs, the Target phase occurs. The target phase only includes a notification of Node where the event took place.
+* **Event bubbling phase** - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM
 
+<section class="call-to-action">
 ### Your Turn
 
 Take a couple minutes to create an analogy and visual representation of event propagation to show how these event phases occur behind the scenes.
+</section>
 
 ## Event Bubbling
 
@@ -95,17 +97,17 @@ In the following code pen, we have three nested HTML elements in `index.html`:
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+<section class="call-to-action">
 ### Pair Practice
 
-Visit the [this page][codepen] and fork the CodePen.
-
-[codepen]: http://codepen.io/team/turing/pen/ZOvkVo
+Fork [this CodePen](http://codepen.io/team/turing/pen/ZOvkVo).
 
 * Add a click event to the button, that logs the element that was clicked on using `this`.
 * Move the event listener to the `.parent` element. What is the result when you click on the button?
 * Move the event listener from the first step to the `.grandparent` element.
   * What is the result when you click on the button?
   * What is is the result when you click the `.parent` element?
+</section>
 
 ### Discussion
 
@@ -144,6 +146,7 @@ As noted above, we are focusing on the bubbling phase because there are _very_ f
 
 ```
 
+<section class="call-to-action">
 ### Your Turn
 
 Open your journal and address the following:
@@ -157,6 +160,7 @@ Open your journal and address the following:
   </div>
 </form>
 ```
+</section>
 
 ## The Event Object
 
@@ -179,10 +183,11 @@ button.addEventListener('click', function (event) {
   console.log(event.target);
 });
 ```
-
+<section class="call-to-action">
 ### Pair Practice
 
 Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful? What happens when you log `this` in each of the separate elements above?
+</section>
 
 ## Event Delegation
 
@@ -213,14 +218,15 @@ parent.addEventListener('click', function(event) {
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+<section class="call-to-action">
 ### Your Turn
 
 What is a real life analogy that you could use to explain how event delegation works? Create a new visual representation of this in your notebook.
-
+</section>
 <!-- <p data-height="300" data-theme-id="23788" data-slug-hash="AXVgOj" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXVgOj/">event-delegation</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
  -->
-
+<section class="checks-for-understanding">
 ## Summary
 
  Using your journal, take a few minutes to answer the following:
@@ -228,6 +234,7 @@ What is a real life analogy that you could use to explain how event delegation w
   - What are three things that you learned today?
   - What are two things that you still have a question about?
   - What is one thing you can take from this lesson to apply to your current projects?
+</section>
 
 ### Resources
 
