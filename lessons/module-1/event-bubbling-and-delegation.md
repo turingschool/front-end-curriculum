@@ -122,15 +122,15 @@ Try out the following code in the example code pen:
   var parent = document.querySelector('.parent');
   var button = document.querySelector('#click-me');
 
-  grandParent.addEventListener('click', function (event) {
+  grandParent.addEventListener('click', function(event) {
     console.log('Grandparent');
   });
 
-  parent.addEventListener('click', function (event) {
+  parent.addEventListener('click', function(event) {
     console.log('Parent');
   });
 
-  button.addEventListener('click', function (event) {
+  button.addEventListener('click', function(event) {
     console.log('Button');
   });
 ```
@@ -140,7 +140,7 @@ If you click on the button, you'll see that the events all bubble up through the
 As noted above, we are focusing on the bubbling phase because there are _very_ few instances where you will have to be consciously aware of the event phases. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```js
- button.addEventListener('click', function (event) {
+ button.addEventListener('click', function(event) {
     console.log('Button');
   }, true);
 
@@ -171,15 +171,15 @@ Each type of event supports a number of different properties. `MouseEvent`s cont
 Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` of the event.
 
 ```js
-grandParent.addEventListener('click', function (event) {
+grandParent.addEventListener('click', function(event) {
   console.log(event.target);
 });
 
-parent.addEventListener('click', function (event) {
+parent.addEventListener('click', function(event) {
   console.log(event.target);
 });
 
-button.addEventListener('click', function (event) {
+button.addEventListener('click', function(event) {
   console.log(event.target);
 });
 ```
