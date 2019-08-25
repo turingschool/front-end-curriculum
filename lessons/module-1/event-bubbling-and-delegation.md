@@ -137,7 +137,7 @@ Try out the following code in the example code pen:
 
 If you click on the button, you'll see that the events all bubble up through the `.parent` and `.grandparent` elements — this provides a more explicit proof than the solutions you may come up with for the previous question.
 
-As noted above, we are focusing on the bubbling phase because there are _very_ few instances where you will have to be consiously aware of the event phases. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
+As noted above, we are focusing on the bubbling phase because there are _very_ few instances where you will have to be consciously aware of the event phases. In the event that you DID want to use the capturing phase (so that the parent element's event handler is triggered before the target) you would want to take advantage of the optional `useCapture` parameter that is available to you with [`addEventListener`](https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener):
 
 ```js
  button.addEventListener('click', function (event) {
@@ -164,7 +164,7 @@ Open your journal and address the following:
 
 ## The Event Object
 
-Sometimes inside an event handler function, you might see a parameter specified with a name such as `event`, `evt`, or simply `e`. This is called the event object, and it is automatically passed to event handlers to provide extra features and information. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
+Sometimes inside an event handler function, you might see a parameter specified with a name such as `event`, `evt`, or simply `e`. This is called the **event object**, and it is automatically passed to event handlers to provide extra features and information. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
 
 Each type of event supports a number of different properties. `MouseEvent`s contain information about the `x` and `y` coordinates where the mouse was clicked. `KeyboardEvent` has information about which key was pressed. The `currentTarget` property on the `Event` object can be useful during the event bubbling phase.
 
@@ -183,6 +183,7 @@ button.addEventListener('click', function (event) {
   console.log(event.target);
 });
 ```
+
 <section class="call-to-action">
 ### Pair Practice
 
@@ -191,12 +192,12 @@ Modify the code above to log the event itself (as opposed to the `target` proper
 
 ## Event Delegation
 
-With the understanding of **event propagation** and the **event object**, we can now go back to the original issue with handling events on dynamic content.  Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
+With the understanding of **event propagation** and the **event object**, we can now go back to the original issue with handling events on dynamic content. Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
 
 In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements. Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
 
 
-The algorithim:
+The algorithm:
  1. Put a single handler on a container
  2. In the handler - check the source element using `event.target`
  3. If the event happened inside an element that interests us, then handle the event
@@ -223,9 +224,7 @@ parent.addEventListener('click', function(event) {
 
 What is a real life analogy that you could use to explain how event delegation works? Create a new visual representation of this in your notebook.
 </section>
-<!-- <p data-height="300" data-theme-id="23788" data-slug-hash="AXVgOj" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/AXVgOj/">event-delegation</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
- -->
+
 <section class="checks-for-understanding">
 ## Summary
 
@@ -240,4 +239,4 @@ What is a real life analogy that you could use to explain how event delegation w
 
 <!-- For now, we no longer teach jQuery so commenting this out for the time being. -->
 <!-- - Now that you have some jQuery under your belt - you should know that jQuery has an easy way to do event delegation with the 'on' function. [Check out the docs here](http://api.jquery.com/on/) -->
-- A very detailed piece that desribes [event order](https://www.quirksmode.org/js/events_order.html) can be found here
+- A very detailed piece that describes [event order](https://www.quirksmode.org/js/events_order.html) can be found here
