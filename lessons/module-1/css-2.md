@@ -80,18 +80,17 @@ Give instructors group questions so we can circle back around on them at a later
 
 ### Reset v. Normalize CSS Files & Idiomatic CSS
 
-* Start with the [Reset vs Normalize](http://frontend.turing.io/lessons/module-1/reset-vs-normalize) lesson
+* Start with the [Reset vs Normalize](https://frontend.turing.io/lessons/module-1/reset-vs-normalize) lesson
 * What are the differences Reset v. Normalize files and when/why would they matter to us as FE Devs?
 * Who are the creators of normalize and why should we care?
 * Anything else of interest to note? Think output of the CSS, bug issues, performance, documentation, maintainability, legacy and future support, etc.
-* Check out [Idiomatic CSS](http://frontend.turing.io/independent-study/idiomatic-css.html) lesson from the FE curriculum independent study section
+* Check out the concept of [Idiomatic CSS](https://github.com/necolas/idiomatic-css)
 * What is idiomatic CSS and why is it important?
 * What are some options in the organization of properties per CSS declaration? Describe and show details.
 * Check out this [article](https://www.wired.com/2012/06/write-better-css-with-idiomatic-css/) and see if there is anything else interesting to add to your share list.
 
 ### Image Optimization
 
-* Start with the [Image Handling 101](http://frontend.turing.io/independent-study/image-handling.html) lesson from the FE curriculum independent study section
 * What are the different image types and their best uses? Can you provide any visual examples to highlight differences?  
 * What is the lowest hanging fruit available to you as a developer to optimize image file size? How does it work? Can you test it out/demonstrate it quickly for the class?
 * What is a sprite? How does it work?
@@ -100,8 +99,7 @@ Give instructors group questions so we can circle back around on them at a later
 
 ### Performance & Organization
 
-* Start with the [CSS Performance & Organization](http://frontend.turing.io/independent-study/css-performance-and-organization.html) lesson from the FE curriculum independent study section
-* Revisit the concept of specificity from the [CSS 1](http://frontend.turing.io/lessons/module-1/css-1) lesson
+* Revisit the concept of specificity from the CSS introduction lesson
 * How does the browser handle conflicting CSS rules?
 * When writing CSS, what sorts of things does a front end dev need to consider for performance (remember - always want things to read/render/perform FASTER)
 * Are there any good "rules of thumb" to remember as you construct your CSS?
@@ -111,7 +109,7 @@ Give instructors group questions so we can circle back around on them at a later
 
 ### Transitions, Transformations, Animations
 
-* Start with the [CSS Transitions, Transformations, Animations](http://frontend.turing.io/lessons/module-1/css-transitions-transformations) lesson
+* Start with the [CSS Transitions, Transformations, Animations](https://frontend.turing.io/lessons/module-1/css-transitions-transformations) lesson
 * Articulate the differences between transitions, transformations, and animations.
 * Are there accessibility concerns with CSS animations? What are they and what can we do about it?
 * Create your own code pen examples of various transitions, transformations, and at least one multi-stage animation (goal: 5 code pens, different from the lesson provided above)
