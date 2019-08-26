@@ -30,7 +30,13 @@ __Good News!__ _A great deal of web content can be made accessible just by makin
 
 Most production websites are not very accessible. This is a great way to set yourself apart from other candidates in the job hunt and add value to teams early.
 
-Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s) to see how far accessible technologies in web development have come.
+Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?v=qdB8SRhqvFc) to see how far accessible technologies in web development have come.
+
+<section class="call-to-action">
+  While you watch, think about these questions:
+  * What has changed about web accessibility in recent years?
+  * How can developers make webpages more accessible?
+</section>
 
 ## Ways to Make Your Websites More Accessible
 
@@ -45,9 +51,11 @@ There are two different elements that are semantically neutral: Those are `span`
 Semantic html is very important for 3 reasons:
 1. developer empathy - It makes code much easier to read and debug
 2. accessibility - It allows screen readers to move through the web page seamlessly
-3. seo - it will make your webpage more discoverable 
+3. seo - it will make your webpage more discoverable
 
 __Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
+
+Let's compare a <a href="https://repl.it/@Khalid_Williams/Semantic-Page" target="\__blank">semantic</a> and <a href="https://repl.it/@Khalid_Williams/All-Div-Everything" target="\__blank"> non-semantic</a> version of the same simple page.
 
 * [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
@@ -56,7 +64,7 @@ __Side Note__: Documentation is your friend when developing a website. Here are 
 
 ***PLEASE NOTE***
 
-DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation. 
+DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
 
@@ -71,7 +79,7 @@ WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich In
 * An element can only have one role at a time, but can have as many properties and states as necessary
 
 An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
-<!-- 
+<!--
 ![Aria Tree](/assets/images/aria.jpg)
  -->
 #### Rules of ARIA Use
@@ -79,9 +87,9 @@ The core rules to keep in mind when using ARIA are:
 
 If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
 
-### Aria Roles, States, and Properties 
+### Aria Roles, States, and Properties
 
-#### Roles 
+#### Roles
 
 Roles define what an element is - what function it serves on the page. They give screen readers more information about how to interact with the element (`What am I?`)
 
@@ -110,6 +118,7 @@ A form element has a role of 'form' by default. We can override that role using 
 
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 
+<section class="call-to-action">
 #### Your Turn
 - Use the table of elements and look up the following elements and their implicit roles
   - div
@@ -117,8 +126,9 @@ A form element has a role of 'form' by default. We can override that role using 
   - input
 - Turn to your neighbor and take turns explaining what a role is.
 - What is the difference between implicit and explicit roles?
+</section>
 
-### States 
+### States
 
 States describe how you are interacting with an element (What am I doing right now?)
 
@@ -137,7 +147,7 @@ What this doesn't tell you is if the menu is already open or closed, which is fi
 Luckily ARIA provides state information that we can add to our markup.
 
 ```html
-<button 
+<button
   aria-expanded="true"
 >
   Toggle Menu
@@ -152,12 +162,15 @@ Here is a good [menu example][Menu-Example] that you can use with voiceover to s
 
 [Menu-Example]: https://www.w3.org/TR/wai-aria-practices/examples/menubar/menubar-1/menubar-1.html
 
+
+<section class="call-to-action">
 #### Your Turn
 
 - Turn to your neighbor and take turns explaining what states are.
 - What would be another example of state that your app might need?
+</section>
 
-### Properties 
+### Properties
 
 Properties give an element special characteristics that you can relate to other documents or elements.
 
@@ -207,10 +220,12 @@ Open [this CodePen](https://codepen.io/damwhit/pen/XeLVbw) to play around with i
 * `aria-labelledby` - Sister to `aria-label`, references the ID of another element, which is a short title for the element.
 * `aria-describedby` - is just like aria-labelledby – but is meant for longer descriptions instead of short titles. This is read after the field-type is stated
 
+<section class="call-to-action:">
 #### Your Turn
 - Turn to your neighbor and explain what a property is
 - Come up with a good analogy for property
 - How are properties different from state?
+</section>
 
 ## Accessibility in Practice Moving forward
 
@@ -228,10 +243,10 @@ __Below are some low hanging fruit that you should always incorporate in lessons
 * Just do it.
 
 ```html
-bad 
+bad
 <img src="mountain.jpg" alt="mountain">
 
-good 
+good
 <img src="mountain.jpg" alt="The cascade mountains at sunset in January">
 ```
 
@@ -250,7 +265,7 @@ good
 
 ### Lang attribute on Yo HTML!
 
-* Low hanging fruit for HTML 
+* Low hanging fruit for HTML
 * As far as non-english speaking screen readers are concerned, when they land on an english-speaking web page without lang attribute, it will be spoken with the screen reader language - making it impossible to understand - unless the screen reader user disables language switching in the screen reader.
 * Just do it
 
@@ -299,12 +314,12 @@ __Label Input Elements that do not have a label element associated with them__
 
 ## Your Challenge
 
-Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accesible. Find your project partner/s and start implementing! 
+Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accesible. Find your project partner/s and start implementing!
 
 
 <!-- The challenge below would be good to use for review the next morning  -->
 
-<!-- 
+<!--
 Take the following HTML snippet and make it accessible using explicit semantic HTML, ARIA roles, and attributes.
 
 ```html
@@ -345,7 +360,7 @@ Take the following HTML snippet and make it accessible using explicit semantic H
 For many people, the fear of not getting EVERYTHING right when it comes to accessibility causes them to not do accessibility at all. Don't be that person.
 
 ```markdown
-Helping one group of people is a good place to start. There's a temptation with accessibility to think it has to be perfect. This is technology. This is people. We don't do perfect. It never happens. So, really, please don't go out there and think that if you're going to do accessibility that you have to get everything right. Perfect is, very much, the enemy of good. 
+Helping one group of people is a good place to start. There's a temptation with accessibility to think it has to be perfect. This is technology. This is people. We don't do perfect. It never happens. So, really, please don't go out there and think that if you're going to do accessibility that you have to get everything right. Perfect is, very much, the enemy of good.
 - Leonie Watson, Accessibility Engineer
 ```
 
@@ -359,9 +374,9 @@ Helping one group of people is a good place to start. There's a temptation with 
 
 Tools
 * [aXe Chrome Plugin](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
+* [ChromeVox Plugin](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
 
 Videos
 * [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
 * [ARIA, Accessibility APIs and Coding Like You Give A Damn!](https://www.youtube.com/watch?v=qdB8SRhqvFc&t=399s)
 * [describedBy vs labeledBy video](https://www.youtube.com/watch?v=U8_VjI-Z1LA)
-
