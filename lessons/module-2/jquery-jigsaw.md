@@ -87,8 +87,6 @@ Go through [this lesson](http://frontend.turing.io/lessons/module-1/introduction
 ### Selectors
 
 * Start here: [The basics of jQuery and the selector.](https://medium.com/@jaeger.rob/jquery-selectors-the-absolute-basics-d781500c722c#.q6q4j61fj)
-* How do you write a basic jQuery selector? How does it differ from using vanilla JavaScript?
-* What data type does the jQuery selector syntax use?
 * How do you select HTML elements using element names, ID, or class?
 * What are the different ways to chain selectors? For instance, how would you select an element that has a class of “bordered-content” AND “ad-aside”?
 * How can you select many elements with different classes and IDs in a single selector statement? For instance, how can you select an element with the ID of "main" and a different element with an ID of "secondary"?
