@@ -4,21 +4,14 @@ module: 3
 tags: testing, react, async, fetch
 ---
 
-## Agenda
-
-* Understand how and why we test asynchronous JS
-* Understand what to test
-* Pseudocode tests for async code
-* Write tests using .then() promise resolution
-* Refactor tests to use async/await
-* Use manual mocks to update and refactor test suite
-
 ## Learning Goals
 
 By the end of this lesson, you will:
 
+* Understand how and why we test asynchronous JS
 * Know how to test React components that contain methods with async JavaScript
 * Understand how and what to test when making API calls with fetch
+* Be able to write tests using .then() and async/await syntax
 
 ## Vocab
 
@@ -179,7 +172,7 @@ Notice that we did not capitalize this filename. That's because this is not a co
 
 Let's look at the API calls we're making in `App.js`.
 
-We're making one to get all of our ideas in the `componentDidMount`. We're making one that posts a new idea. We're making one that gets a single idea based on its id. We're making one that deletes an idea by its id.
+We're making one to get all of our ideas in the `componentDidMount`. We're making one that posts a new idea and lastly, we're making one that deletes an idea by its id.
 
 So let's write three separate functions for each of those `fetch`es!
 
@@ -208,7 +201,7 @@ Before we start coding, take a second to consider:
 
 What do we need to return out of these functions?
 
-How much of the `addIdea` and `deleteIdea` methods will we be pulling into these functions instead?
+How much of the `componentDidMount`, `addIdea`, and `deleteIdea` methods will we be pulling into these functions instead?
 </section>
 
 Okay. Let's take a look at `componentDidMount` in our `App.js` file:
@@ -677,15 +670,13 @@ Let's try out our first failing App test:
 // App.test.js
 
 it('should update state when addIdea is called', () => {
-  const mockIdea = {
-    id: 3, title: 'Sweaters for pugs', description: 'Why not?'
-  };
-  const expected = [{ id: 1, title: 'Prank Travis', description: 'Stick googly eyes on all his stuff' },
-  { id: 2, title: 'Make a secret password app', description: 'So you and your rideshare driver can both know neither one of you is lying' }, mockIdea];
+    const wrapper = shallow(<App />);
+    const mockIdea = { title: 'sweaters for pugs', description: 'why not?', id: Date.now() };
+    const expected = [mockIdea];
 
-  wrapper.instance().addIdea(mockIdea);
+    wrapper.instance().addIdea(mockIdea);
 
-  expect(wrapper.state('ideas')).toEqual(expected);
+    expect(wrapper.state('ideas')).toEqual(expected);
 });
 ```
 
@@ -732,6 +723,7 @@ Below you can see that we have mocked out how postIdea works in the test itself.
 
     await wrapper.instance().addIdea(mockIdea);
 
+    expect(postIdea).toHaveBeenCalled();
     expect(wrapper.state('ideas')).toEqual(expected);
   });
 ```
