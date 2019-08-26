@@ -121,11 +121,9 @@ Using jQuery methods:
 
 * Compare the vanilla JavaScript event listener (`addEventListener`) to the jQuery event listener(s).
 * What is the one jQuery event listener that can be used to listen for many types events. How do you specify the type of event?
-* What are some event listener methods in jQuery that are specific to the event type?
-* How do you write a basic click event listener that logs something to the console?
 * What is the role of `this` within an event listener?
 * There are more than just the `click` event. What other events can be used in jQuery? Find at least five others. Can you think of examples for each of these?
-* What is the `event` object, and what can we use it for in event listeners?
+* What is the `event` object, and what can we use it for in event listeners? Console log the event object in an example and explore what types of information it gives you.
 * Create a demo (in CodePen) using two different types of event listeners (a click event and something else).
 * For the [`.on()` doc page](http://api.jquery.com/on/), some of the method arguments are listed in square brackets. Why? Can you find other examples of this and explain why they are used?
 
