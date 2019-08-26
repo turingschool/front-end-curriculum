@@ -70,7 +70,8 @@ By default, in our Node projects the TravisCI test section will simply try to ru
 ```js
 "scripts": {
   "start": "node server.js",
-  "test": "NODE_ENV=test mocha --exit"
+  "test" : "jest server --forceExit",
+  "test:watch": "jest --watchAll"
 }
 ```
 
