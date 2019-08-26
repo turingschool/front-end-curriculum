@@ -35,6 +35,7 @@ Let's watch the first ten minutes of [this video](https://www.youtube.com/watch?
 <section class="call-to-action">
   While you watch, think about these questions:
   * What has changed about web accessibility in recent years?
+  * What is the accessibility tree?
   * How can developers make webpages more accessible?
 </section>
 
@@ -53,9 +54,9 @@ Semantic html is very important for 3 reasons:
 2. accessibility - It allows screen readers to move through the web page seamlessly
 3. seo - it will make your webpage more discoverable
 
-__Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
-
 Let's compare a <a href="https://repl.it/@Khalid_Williams/Semantic-Page" target="\__blank">semantic</a> and <a href="https://repl.it/@Khalid_Williams/All-Div-Everything" target="\__blank"> non-semantic</a> version of the same simple page.
+
+__Side Note__: Documentation is your friend when developing a website. Here are some super useful docs for better knowing what element to use for a given scenario.
 
 * [List of html semantic elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
@@ -67,6 +68,8 @@ Let's compare a <a href="https://repl.it/@Khalid_Williams/Semantic-Page" target=
 DO NOT REMOVE THE FOCUS RING that appears on interactive elements without providing alternative styling or accounting for users who depend on the keyboard as their primary way of navigation.
 
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
+
+An <a href="https://repl.it/@Khalid_Williams/Input-Focus" target="\__blank"> example</a>, if you like.
 
 
 ### WAI-ARIA
@@ -314,7 +317,7 @@ __Label Input Elements that do not have a label element associated with them__
 
 ## Your Challenge
 
-Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accesible. Find your project partner/s and start implementing!
+Now that you have the basics of accessibility under your belt, we will be spending the remainder of class making our current applications more accessible. Find your project partner/s and start implementing!
 
 
 <!-- The challenge below would be good to use for review the next morning  -->
@@ -375,6 +378,8 @@ Helping one group of people is a good place to start. There's a temptation with 
 Tools
 * [aXe Chrome Plugin](https://chrome.google.com/webstore/detail/axe/lhdoppojpmngadmnindnejefpokejbdd)
 * [ChromeVox Plugin](https://chrome.google.com/webstore/detail/chromevox/kgejglhpjiefppelpmljglcjbhoiplfn?hl=en)
+* [Colorblinding](https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en)
+* [Colorblind](https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool/related?hl=en)
 
 Videos
 * [Aria Roles, States, and Properties](https://www.youtube.com/watch?v=JptGV3XqNNk)
