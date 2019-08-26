@@ -127,7 +127,6 @@ Using jQuery methods:
 * There are more than just the `click` event. What other events can be used in jQuery? Find at least five others. Can you think of examples for each of these?
 * What is the `event` object, and what can we use it for in event listeners?
 * Create a demo (in CodePen) using two different types of event listeners (a click event and something else).
-* Where do you go to find the official jQuery docs?
 * For the [`.on()` doc page](http://api.jquery.com/on/), some of the method arguments are listed in square brackets. Why? Can you find other examples of this and explain why they are used?
 
 ### DOM Traversal
