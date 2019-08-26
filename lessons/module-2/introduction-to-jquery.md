@@ -136,36 +136,6 @@ In this example, we're doing the following:
 * Write out how you would grab the value of an input in Javascript.  Now in jQuery.
 * Now, how would you change the value of the input using both Javascript & jQuery?
 
-### A Note on Working with Numbers
-
-JavaScript has two ways of seeing if two values are equal: `==` and `===`. `==` is notoriously weird, so we tend to avoid it. But there is something with using `===` and getting numbers from input fields that we need to discuss.
-
-Let's consider the following example:
-
-<p data-height="300" data-theme-id="23788" data-slug-hash="GqoYJQ" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/GqoYJQ/">Is this two?</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-
-Hmm—that's curious. It doesn't seem to work. You may have encountered this in a previous project. No matter what, input fields always hold **strings** of text. So, we're actually getting the string `"2"` from the input element and not the integer `2`. It makes sense that those things are not strictly equal. What we need to do is turn that string into a number before we compare it.
-
-This is pretty common, so JavaScript gives us a function for doing it called `parseInt()`.
-
-```js
-parseInt("2") === 2; // true!
-```
-
-Now, we can update our conditional as follows:
-
-```js
-if (parseInt(number) === 2) {
-  $('.message').text('You are right!');
-} else {
-  $('.message').text('Sorry, that is not the number 2.');
-}
-```
-
-It works now!
-
-<p data-height="300" data-theme-id="23788" data-slug-hash="rLxqwe" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/rLxqwe/">Is this two? (Non-Working)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 
 ### Try It: Secret Passcode Time
 
