@@ -462,7 +462,7 @@ describe('getIdeas', () => {
 
     expect(window.fetch).toHaveBeenCalledWith('http://localhost:3001/api/v1/ideas');
   });
-})
+});
 ```
 
 <section class="note">
@@ -488,7 +488,7 @@ Notice that we're still using the mock implementation of `fetch` that we set up 
   });
 ```
 
-Hopefully you're seeing that green checkmark :) The happy path has been tested! I feel pretty happy.  Notice though that the syntax is a bit odd because we have to use `.then` before we can make our assertion.  We can use a less verbose way using the `.resolves` [property](docs.google.com/spreadsheets/d/1hJqBIWJTBk36uEZgH-icjA9-sE2NT2Wr7q-qCqlpB-0/edit#gid=1720707264) in order to make the test a bit cleaner/easier to read. 
+Hopefully you're seeing that green checkmark :) The happy path has been tested! I feel pretty happy.  Notice though that the syntax is a bit odd because we have to use `.then` before we can make our assertion.  We can use a less verbose way using the `.resolves` [property](https://jestjs.io/docs/en/expect#resolves) in order to make the test a bit cleaner/easier to read. 
 
 ```js
 // apiCalls.test.js
