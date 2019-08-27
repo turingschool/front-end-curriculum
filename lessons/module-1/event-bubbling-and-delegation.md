@@ -122,15 +122,15 @@ Try out the following code in the example code pen:
   var parent = document.querySelector('.parent');
   var button = document.querySelector('#click-me');
 
-  grandParent.addEventListener('click', function(event) {
+  grandParent.addEventListener('click', function() {
     console.log('Grandparent');
   });
 
-  parent.addEventListener('click', function(event) {
+  parent.addEventListener('click', function() {
     console.log('Parent');
   });
 
-  button.addEventListener('click', function(event) {
+  button.addEventListener('click', function() {
     console.log('Button');
   });
 ```
