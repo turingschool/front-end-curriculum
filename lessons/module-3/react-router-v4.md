@@ -17,13 +17,13 @@ module: 3
 * Utilize url params to build dynamic routes
 
 ## Vocab
-* `BrowserRouter` A <Router> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
+* `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Link` Links provide declarative, accessible navigation around your application
-* `NavLink` A special version of the <Link> that will add styling attributes to the rendered element when it matches the current URL.
-* `Redirect` Rendering a <Redirect> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
-* `Switch` Renders the first child <Route> or <Redirect> that matches the location. <Switch> is unique in that it renders a route exclusively (only one route wins).
-* `match` A match object contains information about how a <Route path> matched the URL.
+* `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
+* `Redirect` Rendering a \<Redirect\> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
+* `Switch` Renders the first child \<Route\> or \<Redirect\> that matches the location. \<Switch\> is unique in that it renders a route exclusively (only one route wins).
+* `match` A match object contains information about how a \<Route path\> matched the URL.
 
 ## React Router (v4)
 
