@@ -605,7 +605,7 @@ describe('postIdea', () => {
     });
   });
 
-  it('should fetch with the correct url', () => {
+  it('should fetch with the correct arguments', () => {
     const expected = [ 'http://localhost:3001/api/v1/ideas', {
       method: 'POST',
       body: JSON.stringify(mockIdea),
