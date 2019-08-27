@@ -675,7 +675,7 @@ So now, when App's `componentDidMount` runs its first line, it runs the jest fun
 ```js
 // App.test.js
 
-  it('should retrieve ideas after mounting', async () => {
+  it('should retrieve ideas after mounting', () => {
     shallow(<App />);
     expect(getIdeas).toHaveBeenCalled();
   });
