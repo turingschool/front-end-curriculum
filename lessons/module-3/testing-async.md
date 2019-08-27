@@ -587,7 +587,25 @@ Because `post` needs an options object, you will need to include that when check
 ```js
 // apiCalls.test.js
 
-  it('should fetch fetch with the correct url', () => {
+import { getIdeas, postIdea } from './apiCalls';
+
+describe('postIdea', () => {
+  let mockIdea = {
+    id: 1,
+    title: "Sweaters for pugs",
+    description: "To keep them warm"
+  }
+
+  beforeEach(() => {
+    window.fetch = jest.fn().mockImplementation(() => {
+      return Promise.resolve({
+        ok: true,
+        json: () => Promise.resolve(mockIdea)
+      });
+    });
+  });
+
+  it('should fetch with the correct url', () => {
     const expected = [ 'http://localhost:3001/api/v1/ideas', {
       method: 'POST',
       body: JSON.stringify(mockIdea),
@@ -599,6 +617,7 @@ Because `post` needs an options object, you will need to include that when check
 
     expect(window.fetch).toHaveBeenCalledWith(...expected)
   });
+});
 ```
 
 ### Testing the component
