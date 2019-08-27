@@ -199,8 +199,8 @@ Like `var` and `function`, `this` is a special keyword in JavaScript. The value 
 </div>
 
 There are two primary rules of thumb when it comes to `this`:
-1. When it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
-2. In the context of an object, `this` refers to and is bound to the object itself.
+1. If `this` is used in the context of an object, then `this` refers to and is bound to THE OBJECT itself.
+2. Otherwise, when it is used in the _global context_, `this` refers to the global objects of `document` or `window`.
 
 <section class="call-to-action">
 
