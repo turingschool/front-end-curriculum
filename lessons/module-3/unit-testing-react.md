@@ -33,15 +33,13 @@ isolated, parts (units) of our application behave as expected. The more we can
 write our code in a way that is testable at the unit level, the easier it will
 be to scale and extend our applications.
 
----
-_**Your Turn**: We hear a lot about unit, integration, and acceptance tests.  What is the difference between the three of these? Take 5 minutes and see what you and your partner can find out._
+<section class="call-to-action">
+### Your Turn
+We hear a lot about unit, integration, and acceptance tests.  What is the difference between the three of these? Take 5 minutes and see what you and your partner can find out.
 
----
-
----
-_**Next Steps**: In your journal, write out why do we test.  What are the benefits of testing?  When should we test?  When should we not test?_
-
----
+### Next Steps
+In your journal, write out why do we test.  What are the benefits of testing?  When should we test?  When should we not test?
+</section>
 
 ### Getting started
 
@@ -62,8 +60,11 @@ In order to run the tests, type `npm test`. Normally, our suite runs and then we
 
 Try it out - run `npm test` to fire up the testing server. Currently our app has only one test file, `App.test.js`. Take a few seconds to look at that file.
 
-**Stop and Read**: [This section on file naming
-conventions](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md#filename-conventions).  
+<section class="call-to-action">
+### Stop and Read
+
+Read [this section on file naming conventions](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md#filename-conventions).
+</section>  
 
 Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with the facebook convention for the purposes of this tutorial.  
 
@@ -105,10 +106,11 @@ configure({ adapter: new Adapter() });
 
 Great! Now we're all ready to start using Enzyme to test our React components!
 
----
-_**Stop and Think**: We've got everything setup to start writing tests.  But first, we need to think about what we need to test?  We answered this question previously, but think about what needs to be tested for our IdeaBox.  Should we test things like the UI?  What about methods we've created?_
+<section>
+### Stop and Think
 
----
+We've got everything setup to start writing tests.  But first, we need to think about what we need to test?  We answered this question previously, but think about what needs to be tested for our IdeaBox.  Should we test things like the UI?  What about methods we've created?
+</section>
 
 ### What should we test?
 
@@ -150,24 +152,26 @@ As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.i
 
 If you run `npm test` you should see your one test pass (two if you still have the generic App test). You can keep this process running. The test suite will automatically run whenever you make a change to the test file.
 
----
-_**Fun Fact**: Let's say we changed that `h3` tag to an `h2`.  It's going to fail.  If we wanted to debug and see what our `shallow` was actually rendering, we can add this line in our test._
+<section class="note">
+### Fun Fact
+Let's say we changed that `h3` tag to an `h2`.  It's going to fail.  If we wanted to debug and see what our `shallow` was actually rendering, we can add this line in our test.
 
 ```js
     console.log(wrapper.debug());
 ```
----
+</section>
 
----
-_**Fun Fact 2**: If you want to keep seeing those friendly green checkmarks, we can add a "verbose" flag to our test script. In your `package.json`, under `scripts`, edit the `"test"` script:_
+<section class="note">
+### Fun Fact 2
+
+If you want to keep seeing those friendly green checkmarks, we can add a "verbose" flag to our test script. In your `package.json`, under `scripts`, edit the `"test"` script:
 
 ```js
   "test": "react-scripts test --verbose"
 ```
 
-_If you stop your test runner (type `q` into your terminal) and then restart it (`npm test`), you should see the "should" statement from your it testing block._
-
----
+If you stop your test runner (type `q` into your terminal) and then restart it (`npm test`), you should see the "should" statement from your it testing block.
+</section>
 
 We could continue to write tests this way for every single element but...there is actually a much better way of doing this.  Enter the world of snapshot testing!
 
@@ -196,7 +200,7 @@ Lastly, in order to use this serializer in jest, we need to add this line to our
 
 Everything should be set up now so that we can run our snapshot tests.  Let's add the following test:
 
-```jsx
+```js
 // Card.test.js
 
 import React from 'react';
@@ -223,7 +227,7 @@ Ok, well that's great, but what are we actually testing? The first time we run t
 
 It should look like this:
 
-```
+```js
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Card should match the snapshot with all data passed in correctly 1`] = `
@@ -247,7 +251,7 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
 
 How do we make this test fail? We'd have to change what our component actually looks like. Let's change the h3 tag to an h2 tag. Do that now:
 
-```jsx
+```js
 // Card.js
 
 const Card = ({ id, title, description, removeIdea }) => {
@@ -258,20 +262,22 @@ const Card = ({ id, title, description, removeIdea }) => {
       <button onClick={() => removeIdea(id)}>🗑</button>
     </section>
   )
-}
+};
 ```
 
 Running the tests now, you should see a failure for the snapshot test, with the differences between the two snapshots in the console. Here is where you have to consider, "am I ok with those changes?" If so, you can update the tests by typing `u` while `Jest` is still in watch mode. Alternatively, you can restart your test suite and run `npm test --updateSnapshot`.
 
----
-_**Note**: This also tests to see if we have changed our className as well!  However, it does not test if we changed the name of the function._
+<section class="note">
+### Note
 
----
+This also tests to see if we have changed our className as well!  However, it does not test if we changed the name of the function.
+</section>
 
----
-_**Your Turn**: Write snapshot tests for the rest of your components including your App, Form, and Ideas components.  Remember to pass the props necessary in order for your wrapper to render correctly._
+<section class="call-to-action">
+### Your Turn
 
----
+Write snapshot tests for the rest of your components including your App, Form, and Ideas components.  Remember to pass the props necessary in order for your wrapper to render correctly.
+</section>
 
 ### Testing for dynamic changes
 
@@ -281,14 +287,14 @@ We'll learn more about conditional rendering in React III but for now, let's add
 
 Imagine our Card component having an extra property, called "isFavorite" - and if "isFavorite" is true, then the Card will have an a different class of "favorite".
 
-```jsx
+```js
 // Card.js
 
 import React from 'react';
 import './Card.css';
 
 const Card = ({ id, title, description, removeIdea, isFavorite }) => {
-  const favoriteClass = isFavorite ? 'favorite' : 'card'
+  const favoriteClass = isFavorite ? 'favorite' : 'card';
 
   return (
     <section className={favoriteClass}>
@@ -297,7 +303,7 @@ const Card = ({ id, title, description, removeIdea, isFavorite }) => {
       <button onClick={() => removeIdea(id)}>🗑</button>
     </section>
   )
-}
+};
 
 export default Card;
 ```
@@ -308,7 +314,7 @@ Just know that, when `isFavorite` is passed into Card with a value of `true`, th
 
 We can write a second snapshot test that looks at a different wrapper instance:
 
-```jsx
+```js
 // Card.test.js
 
 it('should match the favorited snapshot', () => {
@@ -320,7 +326,7 @@ it('should match the favorited snapshot', () => {
         removeIdea={jest.fn()}
         isFavorite={true}
       />
-    )
+    );
 
     expect(wrapper).toMatchSnapshot();
   });
@@ -342,10 +348,11 @@ You'll find when testing applications that use a framework like React, you'll ne
 
 So let's use mocks to test that the `removeIdea` function we passed in is being called appropriately, and with the correct argument.
 
----
-_**Your Turn**: Before looking at the test below, think about how you might test this.  You don't need to write out the specific code, but think about what needs to be tested.  In english form, write out in your notebook how you might set up this test._
+<section class="call-to-action">
+### Your Turn
 
----
+Before looking at the test below, think about how you might test this.  You don't need to write out the specific code, but think about what needs to be tested.  In english form, write out in your notebook how you might set up this test.
+</section>
 
 A common practice to think about and follow through when writing out tests is:
 * `Setup` - What do we need to do in order to render the component (aka *shallow* or *mount*).  What data needs to be mocked?
@@ -354,7 +361,7 @@ A common practice to think about and follow through when writing out tests is:
 
 Consider the following test:
 
-```jsx
+```js
 // Card.test.js
 
   it('should call the removeIdea prop with the Card\'s id when clicked', () => {
@@ -383,10 +390,11 @@ Consider the following test:
 
 ### Testing a class-based component's method
 
----
-_**Your Turn**: Let's focus our testing now on our `App` component.  With the person next to you, discuss what might be similar with our functional component?  What might be different?  (Go back to your notes.  We've actually discussed this earlier!)_ 
+<section class="call-to-action">
+### Your Turn
 
----
+Let's focus our testing now on our `App` component.  With the person next to you, discuss what might be similar with our functional component?  What might be different?  (Go back to your notes.  We've actually discussed this earlier!)
+</section>
 
 In our App component we have two class methods, `addIdea` and `removeIdea`. Think about what each of those methods do.
 
@@ -396,14 +404,15 @@ Fortunately, [Enzyme](https://airbnb.io/enzyme/docs/api/ReactWrapper/instance.ht
 
 Calling `instance()` on our wrapper will give us access to all of the class instance methods. In this case, `addIdea` and `removeIdea` (and also `setState` if you want to set an initial state!)
 
----
-_**Important Note**: REMEMBER! `instance()` can only be used on class components.  `instance()` returns `null` for stateless functional components.  Sooo....don't include methods in your functional components!_ 
+<section class="note">
+### Important Note
 
----
+REMEMBER! `instance()` can only be used on class components.  `instance()` returns `null` for stateless functional components.  Sooo....don't include methods in your functional components!
+</section>
 
 Let's write a test for `addIdea` in our `App.test.js` file:
 
-```jsx
+```js
 // App.test.js
 
 describe('App', () => {
@@ -427,6 +436,7 @@ describe('App', () => {
 
 - `wrapper.state([arg])` returns the state based what key you give as an argument.  If there is no argument included, it returns the entire state.  Read the docs [here](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html)!
 
+<section class="checks-for-understanding">
 ### Homework: Finish testing your ideabox
 
 Definitely take some more time testing out your ideabox.  To see a finished example of what we did in class, you can checkout the `react-testing-complete` branch.  Continue to look through those docs as you work on testing these other pieces of functionality.
@@ -436,11 +446,14 @@ Definitely take some more time testing out your ideabox.  To see a finished exam
 - Write a test that makes sure that our Ideas component shows the correct number of ideas.
 - Make sure that any other functions or interactions (ie. button clicks, input changes) are tested (especially in your form).
 - Can you test and implement a counter that keeps track of the number of ideas in the list?
+</section>
 
----
-_**Fun Fact**: Interested in how much of your app you have tested?  You can run this command below!  Try and go for 100% test coverage!_ 
+<section class="note">
+### Fun Fact
+
+Interested in how much of your app you have tested?  You can run this command below!  Try and go for 100% test coverage!
 
 ```bash
 npm test --  --coverage --watchAll=false
 ```
----
+</section>
