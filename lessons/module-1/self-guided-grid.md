@@ -91,6 +91,20 @@ So far, our grid rows have been implicitly set. But you can also explicitly set 
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
+### Marvel's Rows
+
+Take a look at the way the Marvel site used `grid-template-row`:
+
+```css
+.grid-2 {
+  grid-template-columns: minmax(200px, 1.167fr) 0.45fr 0.25fr 0.3fr 0.8fr;
+}
+```
+
+<img class="medium" src="./assets/images/grid/marvel-grid-rows.png" alt="Marvel site with rows highlighted">
+<br>
+The image above leaves out the first row which is why we start with row 2 rather than 1. Notice that the image on the far left-top took up three rows, but the bottom row all had one-row-high images. This is why Grid is so powerful! It also means it's **essential to plan out** how Grid will be used before writing any code.
+
 <section class="call-to-action">
 ## Try It
 
