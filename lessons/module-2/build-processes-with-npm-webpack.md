@@ -92,9 +92,10 @@ This single file it generates is called a **bundle file**. We can see this gener
 
 <hr />
 
+<section class="checks-for-understanding">
 ### Checks for Understanding
 
 * What is a server responsible for?
 * What are three main benefits that we get by using a tool like Webpack?
-
+</section>
 <!-- Quiz Review with CFUs: https://goo.gl/forms/7V5rtBeKZM2zTL1U2 -->
