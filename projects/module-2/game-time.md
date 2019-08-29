@@ -41,7 +41,7 @@ You'll be working with some new technologies for this project:
 
 |Day           | Status| Deliverables |
 |---           |---    |--- |
-|*Day 1 (Thur)* | Kick-off| Set up DTR, explore boilerplate repo, design wireframes|
+|*Day 1 (Thur)* | Kick-off| Set up DTR, explore boilerplate repo, design theme/inspiration|
 |*Day 2 (Fri)* | Setup & Coding| Setup your repository using the instructions in this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) and continue with the instructions in the README. In your project's repo, update the README to include relavent information to your version of the project, a link to your group's DTR, your final wireframes, and any design inspiration|
 |*Day 6 (Tue)* | 1st PR | PR due w/instructors tagged|
 
@@ -142,16 +142,10 @@ Your README should include the following, in this order:
 * [ ] Proficient - Application is fully playable. Developers have implemented functionality for all user stories.
 * [ ] Exceptional - Meets all expectations for `Proficient`. In addition, developers have implemented one or more extensions.
 
-### UX/Accessibility
 
-* [ ] Novice - The application is confusing or difficult to use.
-* [ ] Advanced Beginner - The application shows effort in the user experience, but the result is not effective. The evaluator has some difficulty using the application and may need assistance from developers.
-* [ ] Proficient - The application is pleasant, logical, and easy to use. Developers use appropriate semantic elements in markup that allow for both mouse and keyboard navigation to all interactive elements.
-* [ ] Exceptional -  Meets all expectations for `Proficient`.  In addition, developers implement attributes and ARIA labels where appropriate to allow for a better user experience with a screen reader. The application stands on its own to be used by the instructor _without_ guidance from the developers.
+### UI/UX
 
-### User Interface
-
-* [ ] Novice - Developers can integrate typography, color choices, and layout in ways that do not detract from legibility.
+* [ ] Novice - Developers can integrate typography, color choices, and layout in ways that do not detract from legibility. Instructor can use the app on its own without guidance.
 * [ ] Advanced Beginner - Developers can apply fundamental design concepts with increased sensitivity that result in clear legibility but likely break in areas of layout or “noise”.
 * [ ] Proficient - Developers can apply fundamental design concepts that demonstrates a thoughtful, purposeful, cohesive strategy that does not detract from legibility or overall design integrity.
 * [ ] Exceptional - Meets all expectations for `Proficient`. In addition, typography, color choices, and layout decisions are thoughtful and appropriate, and strongly enhance the layout and legibility of the design.
