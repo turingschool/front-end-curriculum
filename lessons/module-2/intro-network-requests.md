@@ -151,6 +151,23 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .catch(err => /* do something else */);
 ```
 
+### Queries
+What's all that weird stuff in the URL we're fetching?
+
+Fetch and XMLHttpRequest Objects take the url as one of their arguments. The URL itself can be thought of containing sub-arguments that give these request obejcts and methods more information. The entire anatomy of a URL can be broken down into a series of informative peices, but the ones we're focused on today are queries.
+
+Anything coming after the `?` in a url is part of a query. Queries can be broken down into categories and arguments (check the vocab here). Each category / argument pair is separated by an `&`.
+
+ In the example from above:
+```
+fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
+```
+we're querying information about the `amount`, `category`, and `type` of the trivia we want to receive.
+
+<section class="call-to-action">
+Take a look at the [trivia docs](https://opentdb.com/api_config.php), and figure out what each of the queries in our fetch request mean.
+</section>
+
 ---
 
 ## [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Using_promises)
@@ -167,7 +184,7 @@ function getTrivia(number, categoryId) {
 	const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
 	const promise = fetch(url)
 	                .then(data => data.json());
-	
+
 	return promise;
 }
 
@@ -200,13 +217,14 @@ console.log("Wait for it...");
 
 `setTimeout()` is actually an asynchronous function, which executes its callback after waiting for the allotted time to expire.
 
-
+<section class="call-to-action">
 #### Questions:
 
 * Why are async operations necessary?
 * Have you run into a situation on past projects where you needed async operations to accomplish it?
+</section>
 
-
+<section class="call-to-action">
 ## Practice Time!
 
 In your console do the following...
@@ -215,7 +233,7 @@ In your console do the following...
 - Fetch 20 geography questions and for each trivia console.log the answer only
 - Fetch 20 geography questions and console.log the response status code.
 - Fetch 30 geography questions and console.log an array of only the hard trivia
-
+</section>
 
 ---
 
@@ -244,6 +262,3 @@ In your console do the following...
       returns a Promise object and inspect it to solidify that Promise syntax
 
 -->
-
-
-
