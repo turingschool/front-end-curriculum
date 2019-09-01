@@ -173,9 +173,14 @@ The user might also might to add more tasks to their checklist after they have c
 
 This type of layout is known as a *Masonry layout*.  This layout refers to when items of uneven size are laid out in a way where there are no uneven gaps.  Due to this scenario, this is *NOT* good case for using `grid`.  This is because we can't define where each card is going to be in the layout.  There are a number of solutions to building this type of layout.
 
+## Check-Ins
+
+- By Check-In 1, teams should be through Iteration 0. Desktop UI should look good, but maybe not perfected yet.
+- By Check-In 2, teams should be through Iteration 1 and working on Iteration 2. Desktop UI should be polished and media queries should look good, but maybe not perfected yet.
+
 ## Submission Details
 
-In your final PR, tag your Project Manager. Also, make sure that the link to your GitHub Pages site is in the body of that PR.
+In your final PR, request a review from your Project Manager. Also, make sure that the link to your GitHub Pages site is in the body of that PR.
 
 ### Layout Comps
 
