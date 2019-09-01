@@ -30,12 +30,12 @@ Your entire application will consist of one HTML page or template. You will have
 		1. `constructor`
 		2. `saveToStorage`
 		3. `deleteFromStorage`
-		4. `updateToDo` (should update the todo's title and urgency)
+		4. `updateToDo` (should update the to-do's title and urgency)
 		5. `updateTask` (should update a task's content and if it has been completed)
 2. A `task.js` file that contains a `Task` class. We aren't giving you any requirements about what methods or properties should be on it.
 3. A `main.js` file that contains all DOM related JavaScript
 
-Each todo list on the page should be created as an instance of the `ToDoList` class.
+Each to-do list on the page should be created as an instance of the `ToDoList` class.
 
 ### Iteration 0: Beginning User Flow
 
@@ -45,7 +45,7 @@ When visiting the application, the user should:
 
 * See a list of all existing to-dos, including the title, list of tasks to be checked off, and state of urgency.
 * See to-dos in descending chronological order (with the most recently created to-do at the top left).
-  * If there are no to-dos yet, then there should be an indication to the user to create a todo list, displayed in the empty section. You should use your best judgement to create the design for this.
+  * If there are no to-dos yet, then there should be an indication to the user to create a to-do list, displayed in the empty section. You should use your best judgement to create the design for this.
 
 #### Adding a New Checklist
 
@@ -63,8 +63,8 @@ When a user adds a new `Task Item`:
 
 When a user clicks `Make Task List`:
 
-* A new card with the provided title and tasks should appear in the todo list.
-* The text fields and checklist in the form should be cleared and ready to accept a new todo.
+* A new card with the provided title and tasks should appear in the to-do list.
+* The text fields and checklist in the form should be cleared and ready to accept a new to-do.
 * The `Make Task List` button should be disabled if either the title input or checklist is empty.
 * The page _should not_ reload.
 
@@ -104,8 +104,8 @@ A user should be able to mark their to-do cards urgent so that they know which t
 At _almost_ any point in using this application, the user should be able to refresh the page (or navigate away, then come back) and still have their data.
 
 When a user clicks `Clear All`:
-* The todo card should be persisted. It should still be present upon reloading the page.
-* The todo should be added to `localStorage` using the `saveToStorage` method defined in the `ToDoList` class.
+* The to-do card should be persisted. It should still be present upon reloading the page.
+* The to-do should be added to `localStorage` using the `saveToStorage` method defined in the `ToDoList` class.
 
 After a user has completed a task on their checklist, they should be able to check it off.
 * Tasks that are checked off should persist upon reloading the page.
@@ -114,7 +114,7 @@ After creating a to-do card, the user should be able to remove it once they have
 * The update of the data model should happen in the `deleteFromStorage` method that is defined in the `ToDoList` class.
 
 A user should be able to mark their to-do cards urgent so that they know which they need to complete first.
-* Todo cards that are marked as urgent should persist upon reloading the page.
+* To-do cards that are marked as urgent should persist upon reloading the page.
 
 The one feature we **do not** need to implement local storage is:
 
@@ -128,27 +128,27 @@ When a user adds a new `Task Item`:
 We'd like our users to be able to easily find their to-dos, so let's provide them a search bar to filter through their list.
 
 * At the top of the application, include a text field labeled `Search`.
-* As a user types in the search box, the list of to-dos on the DOM should filter in real time to only display todo cards whose title include the user's text. The page _should not_ reload.
-* Clearing the search box should restore all todo cards on the list.
+* As a user types in the search box, the list of to-dos on the DOM should filter in real time to only display to-do cards whose title include the user's text. The page _should not_ reload.
+* Clearing the search box should restore all to-do cards on the list.
 * There is no need to make persisting changes to the data model to achieve this functionality.
 
 #### Viewing Urgent ToDo Cards
 
-Let's also allow our user be able to view their urgent todo cards only.
+Let's also allow our user be able to view their urgent to-do cards only.
 
-* The user should only see the urgent todo cards when they click on the `Filter by Urgency` button. (consequently, the button should be highlighted)
+* The user should only see the urgent to-do cards when they click on the `Filter by Urgency` button. (consequently, the button should be highlighted)
 * Clicking on the `Filter by Urgency` button again, the button should no longer be highlighted, and all of the user's to-dos should be displayed.
 * When viewing urgent to-dos, the search field should only search through the urgent to-dos.
-* If there are no urgent to-dos yet, then there should be an indication displayed in the empty todo section notifying the user to mark some to-dos urgent.
+* If there are no urgent to-dos yet, then there should be an indication displayed in the empty to-do section notifying the user to mark some to-dos urgent.
 * These changes _do not need to persist_ in between sessions.
 
 ### Iteration 4: Improving on the Experience
 
 #### Editing Our Tasks
 
-A user would likely want to edit the title of a todo or update their task later on.
+A user would likely want to edit the title of a to-do or update their task later on.
 
-* When a user clicks the title or any of the tasks on the checklist of a todo card, that text should become an editable text field, pre-populated with the existing todo title or task.
+* When a user clicks the title or any of the tasks on the checklist of a to-do card, that text should become an editable text field, pre-populated with the existing to-do title or task.
 * The user should be able to "commit" their changes by pressing "Enter/Return" and by clicking outside of the text field.
 * This change should be saved in localStorage using the `updateTodo` method for the title and `updateTask` method for the task defined in the `ToDoList` class.
 
@@ -157,13 +157,13 @@ A user would likely want to edit the title of a todo or update their task later 
 Our user might want to be able to search their cards not only by their title, but by their tasks as well.
 
 * The user should have a drop down next to the search bar to select if they want to filter their list by `Title`, `Tasks`, or `All`.
-* Searching by the `Title` will be the original functionality where it filters the todo cards by their title based on the user's text.
-* Searching by the `Tasks` will filter the todo cards by their tasks based on the user's text.
-* Searching by the `All` will filter the todo cards by both their title and tasks based on the user's text.
+* Searching by the `Title` will be the original functionality where it filters the to-do cards by their title based on the user's text.
+* Searching by the `Tasks` will filter the to-do cards by their tasks based on the user's text.
+* Searching by the `All` will filter the to-do cards by both their title and tasks based on the user's text.
 
 #### Adding More Tasks To Each Card
 
-The user might also might to add more tasks to their checklist after they have created a todo card.
+The user might also might to add more tasks to their checklist after they have created a to-do card.
 
 * Add an input to the bottom of each card so that the user can add more tasks later.
 * Each task added should appear at the bottom of the list unchecked.
@@ -267,6 +267,6 @@ Color, font, and icon spec:
   * All functions are less than 10 lines
   * There are no nested if/else statements
   * There are no global variables aside from query selectors and an array for your to-dos
-  * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
+  * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a to-do urgent
 * **2:** Application correctly implements data model for the `ToDoList` class including all required methods
 * **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
