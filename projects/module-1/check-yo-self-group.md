@@ -228,9 +228,9 @@ Color, font, and icon spec:
 ### Comp Recreation
 
 * **4:** Additional elements that have been added match the visuals established in the comps. Every little detail was built out thoughtfully - from hover states to placeholders, etc.
-* **3:** Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with **smooth transitions between screen sizes**. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
-* **2:** Application implements all major comp details accurately and correctly on **desktop and mobile** (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
-* **1:** Application implements all major comp details on desktop only (colors, fonts, icons, spacing, alignment, etc.)
+* **3:** Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment, etc.) with **smooth transitions between screen sizes**. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
+* **2:** Application implements most major comp details accurately and correctly on **desktop and mobile** (colors, fonts, icons, spacing, alignment, etc.). Transitions between screen sizes may not be smooth.
+* **1:** Application implements all major comp details on desktop only (colors, fonts, icons, spacing, alignment, etc.), OR masonry layout is not implemented.
 
 ------------------------------------------------------------------
 
