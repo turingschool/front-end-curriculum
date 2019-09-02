@@ -16,14 +16,14 @@ length: 90
 - `index` The position of each element within an array
 - `method` A function on an object
 
-<section class="call-to-action">
+<!-- <section class="call-to-action">
 ### Warm Up
 
 In your notebook, jot down your responses to the following:
-- How are you, or how might you end up, using arrays in your IdeaBox project?
+- How are you, or how might you end up, using arrays in your Check Yo Self project?
 - Given the requirements of the project spec, in what ways may you need to change an array? Access given elements from it?
 - On a scale of 1-5, how comfortable do you feel working with arrays?
-</section>
+</section> -->
 
 ## Context
 
@@ -102,7 +102,7 @@ Array prototype methods allow us to deal with arrays in a variety of ways.  Bein
 <section class="checks-for-understanding">
 ### Exit Ticket
 
-- What array prototype methods that we learned today do you think will be most helpful in your IdeaBox project?
+<!-- - What array prototype methods that we learned today do you think will be most helpful in your Check Yo Self project? -->
 - What techniques did you use when going through the documentation?
 - Which array prototype method/s are still confusing to you?
 - What are your next steps in getting more comfortable with array prototype methods?
