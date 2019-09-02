@@ -6,7 +6,7 @@ tags: react, javascript, api
 
 ## Introduction
 
-For this project, we are going to work on developing some muscle memory building out React components. At this point you've built at least one basic React app in the past. Now's the time to leverage that and add some complexity.  
+For this project, we are going to work on developing some muscle memory building out React components. At this point you've built at least one basic React app in the past. Now is the time to leverage that and add some complexity.  
 
 For this project, we will be hitting [The Star Wars API](https://swapi.co/documentation) to tap into a "black hole" of Star Wars data. Mwahaha.  
 
@@ -23,12 +23,12 @@ For this project, we will be hitting [The Star Wars API](https://swapi.co/docume
 
 ## Prep Work
 
-You will be expected to use a modular structure for this application. Before you begin coding, read [this article](https://medium.com/@kentcdodds/what-code-comments-can-teach-us-about-scaling-a-codebase-90bbfad8d70d#.yno9hmf22) which discusses why modular architecture is a good idea.   
+You will be expected to use a modular structure for this application. Before you begin coding, read [this article](https://kentcdodds.com/blog/colocation) which discusses why modular architecture is a good idea.   
 
 Using a "Modular Structure" means that all of the files associated with a given component should be nested within the same folder.  
 
 For example:  
-```js
+```
 src/
   components/
     Button/
@@ -40,11 +40,12 @@ src/
       Card.scss
       Card.test.js
 ``` 
-
-### Important Notes  
+<section class="note">
+### Notes  
 
 - The API we are using is completely unsecured. This means we will be making all requests for this particular project directly from our browser. We will not be sending any advanced communication from a local server.  
 - Although there are many resources out there for making API calls, you are asked to exclusively use the native [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API for this project. 
+</section>
 
 ## Specifications
 
@@ -59,9 +60,9 @@ src/
 
 #### Deliverables 
 Please DM your instructors the following by the end of the first day:
-  * wireframes
+  * Wireframes
   * DTR between you & project partner
-  * project management tool (GH Projects, trello, etc.) 
+  * Project management tool (GH Projects, trello, etc.) 
 
 ### Iteration 1: Landing Page
 
@@ -93,7 +94,7 @@ Please DM your instructors the following by the end of the first day:
   - Terrain  
   - Population  
   - Climate  
-  - Residents  
+  - Residents (their names only)  
   - A button to "Favorite" the planet  
 
 - Vehicle Cards:  
@@ -135,17 +136,17 @@ Please DM your instructors the following by the end of the first day:
 
 ### Project Professionalism
 
-* 1 - Either the README is incomplete, wireframes are not used, no project managment system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits. 
+* 1 - Either the README is incomplete, wireframes are not used, no project management system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits. 
 * 2 -  README has been updated but is missing group members, setup, tech used, application images, or etc.  Wireframes are included and a project management tool was started, but are not utilized throughout the entire project. Project has more than 5 linter errors. Project team makes large infrequent git commits. 
-* 3 - The codebase has less than 5 linter errors and README has been updated with all group members. Project utilized wireframes from the outset and updated them as changes were made. A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and consise commit messages. 
-* 4 - Codebase has zero linter errors/warnings and README is well documented with images of different pages, setup, purpose of application, and group members. Project team uses a rebase workflow, taking advantage of github issues to track work.
+* 3 - The codebase has less than 5 linter errors and README has been updated with all group members. Project utilized wireframes from the outset and updated them as changes were made. A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and concise commit messages. 
+* 4 - Codebase has zero linter errors/warnings and README is well documented with images of different pages, setup, purpose of application, and group members. Project team uses a rebase workflow, taking advantage of GitHub issues to track work.
 
 ### React Architecture
 
-* 1 - PropTypes are substantially unused. Project shows little understanding of React and significant refactoring is required including but not limited to component structure, knowing when to use class vs functional components, mutation of props, or etc.  Unneccessary data is being passed down to child components through props. File structure is not modular.
-* 2 - PropType functionality is complete.  There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component.  File structure is modular but api calls have not been broken out into a separate file.  
-* 3 - React architecture is clean and organized.  Logic is kept out of return statements.  There are some issues with the asynchronous js where the frontend is not matching with the backend.  There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored. Data fetched from API is not cleaned before being set to state.
-* 4 - Functions including fetch calls have been refactored to be reusuable for multiple queries.  Frontend data always matches the backend data.  Data fetched from API is run through a cleaning function (which lives in a separate file).  Implements excellent error handling if server is down or fetch fails.  This includes loading images as well as error messages on the frontend.
+* 1 - PropTypes are substantially unused. Project shows little understanding of React and significant refactoring is required including but not limited to component structure, knowing when to use class vs functional components, mutation of props, or etc.  Unnecessary data is being passed down to child components through props. File structure is not modular.
+* 2 - PropType functionality is complete.  There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component.  File structure is modular but API calls have not been broken out into a separate file.  
+* 3 - React architecture is clean and organized.  Logic is kept out of return statements.  There are some issues with the asynchronous JS where the frontend is not matching with the backend.  There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored. Data fetched from API is not cleaned before being set to state.
+* 4 - Functions including fetch calls have been refactored to be reusable for multiple queries.  Frontend data always matches the backend data.  Data fetched from API is run through a cleaning function (which lives in a separate file).  Implements excellent error handling if server is down or fetch fails.  This includes loading images as well as error messages on the frontend.
 
 ### Routing
 
