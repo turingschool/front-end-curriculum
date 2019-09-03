@@ -260,7 +260,7 @@ In order to allow our React components to interact with the Redux store:
 
 ### Connecting a component to the store
 
-So now that we've done allllllll this setup... **WE SO CHOOSE**!!! We can _finally_ connect our components to the store.
+So now that we've done allllllll this setup... **WE'RE SO CLOSE**!!! We can _finally_ connect our components to the store.
 
 > ![connect](https://i.imgur.com/j5ZY7p2.png)
 
