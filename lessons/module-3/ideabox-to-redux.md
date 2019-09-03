@@ -16,7 +16,7 @@ By this point, you should feel comfortable with React components, state manageme
 
 ### Setup
 
-We're going to be starting with a `Todo Box` application and moving it over to Redux.  Will we will need to clone down this [repo](https://github.com/turingschool-examples/redux-lesson-boilerplate/tree/master).
+We're going to start out with a `Todo Box` application and then move it over to Redux.  We will need to clone down this [repo](https://github.com/turingschool-examples/redux-lesson-boilerplate/tree/master).
 
 **CoWorkers Api**
 ```bash
@@ -118,7 +118,7 @@ Take note of where we are importing combineReducers from!  `combineReducers` is 
 
 There are a few last steps to setting up Redux in our app before we have access to our store.  Let's move on to our `index.js` file in our src directory.
 
-```js
+```jsx
 // src/index.js
 
 import React from 'react';
@@ -142,7 +142,7 @@ ReactDOM.render(
 
 There are several pieces of functionality we must import from the packages we installed at the beginning of the session.  Let's look at what each of these do:
 
-* `Provider` - Comes from `react-redux`.  According to the [react-redux docs](https://react-redux.js.org/api/provider#targetText=Overview,component%20tree%20inside%20of%20it.), "The `Provider` makes the Redux store available to any nested components.  Since any React component in a React Redux app can be connected, most applications will render a <Provider> at the top level."  Note that the Provider wraps around the entire app. (if you are using React-Router, it will wrap around `BrowserRouter`)
+* `Provider` - Comes from `react-redux`.  According to the [react-redux docs](https://react-redux.js.org/api/provider#targetText=Overview,component%20tree%20inside%20of%20it.), "The `Provider` makes the Redux store available to any nested components.  Since any React component in a React Redux app can be connected, most applications will render a Provider at the top level."  Note that the Provider wraps around the entire app. (if you are using React-Router, it will wrap around `BrowserRouter`)
 * `createStore` - Comes from `redux`.  According to the [redux docs](https://redux.js.org/api/createstore), "This creates a Redux store that holds the complete state tree of your app.  There should only be a single store in your app."
 * `composeWithDevTools` - A method we brought in and can pass as an argument with `createStore` so that we have access to our devtools and can view our store. (order matters here)
 
@@ -157,14 +157,15 @@ Start up your app!  If everything has worked correctly, you should be able to go
 ### Hooking Up Our React Components to the Store
 Now that we have the Redux store available, let's think back to where we want to be adding a todo.  That's right, in our `Form`!  When a user types in a todo, and clicks "Submit", we want to fire our action to update our store.  Let's import a couple of things into our `Form.js`.  We'll need our action creator, `addToDo`, and `connect` rom *react-redux*.  (since this connects a react component to our redux store, we import it from `react-redux`)
 
-```js
+```jsx
+// components/AddTodoForm.js
 import React, { Component } from 'react'
 import { addToDo } from '../actions';
 import { connect } from 'react-redux';
 
 class AddTodoForm extends Component {
 
-    submitForm = (e) => {
+  submitForm = (e) => {
     e.preventDefault()
     this.props.addToDo(this.state.todo)
     this.setState({ todo: '' });
@@ -183,7 +184,7 @@ export default connect(null, mapDispatchToProps)(AddTodoForm);
 <section class="call-to-action">
 ### Reading the docs
 
-Take a moment and read the [docs](https://react-redux.js.org/using-react-redux/connect-mapdispatch) on what mapDispatchToProps does.  This is a function we must create the returns an object.  `dispatch` is a function from the Redux stores that sends our actions to our reducers, leading to state changes (the global store).  Note that it passes these methods down to our component as props.
+Take a moment and read the [docs](https://react-redux.js.org/using-react-redux/connect-mapdispatch) on what mapDispatchToProps does.  This is a function we must create that returns an object.  `dispatch` is a function from the Redux store that sends our actions to our reducers, leading to state changes (the global store).  Note that it passes these methods down to our component as props.
 </section>
 
 Since we don't need access to the store specifically in this scenario, we only need the action to add our todo to the store.  We can pass null as the first argument to `connect` and then `mapDispatchToProps` as our second argument.  Now we have access to our props in our `AddTodoForm` component, and can call it on the submit!  Let's try adding some todos and check our store with our DevTools.
@@ -201,7 +202,9 @@ We're almost there, we just have to display our todos from our store.  But how d
 touch src/containers/ToDoList.js
 ```
 
-```js
+```jsx
+// containers/ToDoList.js
+
 import React from 'react';
 import { connect } from 'react-redux';
 
@@ -243,7 +246,7 @@ Now that you have the data, you know what to do.  Finish up writing the `ToDoLis
 
 Here is what I came up with at the end:
 
-```js
+```jsx
 // containers/TodoList.js
 
 import React from 'react';
@@ -275,7 +278,7 @@ export default connect(mapStateToProps)(ToDoList);
 ```
 
 ```js
-// src/ToDo.js
+// components/ToDo.js
 
 import React from 'react';
 
@@ -297,7 +300,7 @@ Your instructor will drop groups in your channel.  Group up and implement anothe
 
 **Hints:**
 * Start out with creating another action creator.  What is every action made up of?  What do we need in order to find which todo needs to be toggled?
-* We are updating our todos.  Don't we already have a todos reducer?  Add another case in your reducer!
+* We are updating our todos.  Don't we already have a todos reducer?  Add another case in your `todos` reducer!
 * Your rootReducer should be set up, you should not have to do anything in `reducers/index.js` or `src/index.js`.
 * Where does the action need to happen? How can you make a prop available so when a user clicks on a `ToDo`, they can check it off. 
 * Use the classes already provided to you for the styling.  (`completed` and `not-completed`)
