@@ -51,6 +51,8 @@ The web storage API is a secure way your browser can store key value pairs that 
 [ss-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage
 [gs-mdn]: https://developer.mozilla.org/en-US/docs/Web/API/Window/globalStorage
 
+<section class="checks-for-understanding">
+
 ### Your Turn
 
 Open up the developer tools on this page and try the following:
@@ -69,11 +71,15 @@ Open up the developer tools on this page and try the following:
 What are your observations?
 
 Check out the docs. What other methods are available to you when using localStorage?
+</section>
 
 ### localStorage in Action
 How can we improve the functionality of the following codepen with local storage?
 
-<iframe height="400px" width="100%" src="https://repl.it/@Khalid_Williams/Local-Storage-and-Bubbling-Contact-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="265" style="width: 100%;" scrolling="no" title="localStorage in Action - Save Info Form" src="//codepen.io/eric_turing/embed/yLBzwvd/?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/eric_turing/pen/yLBzwvd/'>localStorage in Action - Save Info Form</a> by eric weissman
+  (<a href='https://codepen.io/eric_turing'>@eric_turing</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## What is JSON?
 
@@ -102,12 +108,15 @@ The browser provides a `JSON` object with two methods.
 - `JSON.stringify();` turns any JavaScript object into valid JSON.
 - `JSON.parse();` turns any valid JSON into a JavaScript object.
 
+<section class="checks-for-understanding">
+
 ### Your Turn
 
 Take the object from the previous exercise that didn't work and refactor it. Don't look below quite yet...
 
 1. You should use `JSON.stringify();` before storing it in `localStorage`.
 2. You should use `JSON.parse();` after retrieving it from `localStorage`.
+</section>
 
 ### Complete Workflow in Console
 
@@ -126,7 +135,10 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 8. `parsedObject` (We are now back to our original object!)
 
 ### JSON in Action
-<iframe height="400px" width="100%" src="https://repl.it/@Khalid_Williams/JSON-Contact-Example?lite=true" scrolling="no" frameborder="no" allowtransparency="true" allowfullscreen="true" sandbox="allow-forms allow-pointer-lock allow-popups allow-same-origin allow-scripts allow-modals"></iframe>
+<iframe height="265" style="width: 100%;" scrolling="no" title="JSON in Action - Contact Form" src="//codepen.io/eric_turing/embed/wLORLw/?height=265&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/eric_turing/pen/wLORLw/'>JSON in Action - Contact Form</a> by eric weissman
+  (<a href='https://codepen.io/eric_turing'>@eric_turing</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 ## Data Attributes
 
