@@ -23,73 +23,17 @@ As a result of building out this project, you are going to be developing some mu
 
 This project is working off the [Itunes Search API](https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/iTuneSearchAPI/index.html#//apple_ref/doc/uid/TP40017632-CH3-SW1). The idea of the project is to be able to sign in as a user and save a collection of albums/audio books you want to check out.
 
-[This repository]() will serve as your "backend", allowing you to connect to Postgres. You'll need to set up a separate client-side application (use `create-react-app`), to sit alongside this one. Do not put that project in the same repository as this one, save yourself a headache.
+[This repository](https://github.com/turingschool-examples/favorites-tracker-api){:target="_blank"} will serve as your backend, allowing you to connect to a PostgreSQL database. You'll need to set up a separate client-side application (use `create-react-app`), to sit alongside this one. Do not put that project in the same repository as this one, save yourself a headache.
 
-### Project Setup
+Follow the instructions in the backend repo for setup. Everyone in your group will have to setup the backend separately on their own machines. Once you have it setup, practice using the endpoints (routes) listed in the README of the backend repo. *The documentation for the endpoints is in the README for the backend repo.*
 
-* Clone down this repo and run `npm install`
-* If you don't have postgresSQl, scroll down to `Setup Postgresql` and follow those steps.
-* Run `npm start` - visit `localhost:3000/api/users` - you should see a json response with a single user.
-
-### Setup Postgresql
-
-#### IMPORTANT: If you already have Postgresql on your computer for some reason, you will need to uninstall it
-For information on how to do this read [this](https://postgresapp.com/documentation/remove.html)
-
-#### What is Postgresql?
-* PostgreSQL is a powerful, open source object-relational database system
-
-#### Installation:
-* Head over to [Postgres.app](http://postgresapp.com/) to download and install PostgreSQL
-* When you click `initialize`, you should now be able to see that postgreSQL is running
-* To be able to use the command line tools, you will need to run the following command in your terminal to configure your $PATH `sudo mkdir -p /etc/paths.d && echo /Applications/Postgres.app/Contents/Versions/latest/bin | sudo tee /etc/paths.d/postgresapp`
-* You will need to close your terminal window and re-open it for the changes to take effect
-	
-#### Creating our database
-* Make sure you are in your `tune-in-later` project folder
-* From the command line, run the following command to create a users database `psql -f ./database/users.sql`
-* When you start up the server (`npm install` and `npm start`), you should now be able to visit `localhost:3000/api/users` and see the database with a single user (Alan Turing)
-	
-#### Press CMD-T to create a new tab in your terminal
-* Type `psql`. This will get you into the interactive postgres terminal. From here you can run postgres and sql commands. You might get an error *psql: FATAL: database "username" does not exist* To resolve this error type *createdb 'somthing does not exist'*
-
-#### [PSQL Commands](http://postgresguide.com/utilities/psql.html)
+You will be using the fetch API to make all your api calls. If you are making a post request, note that you will need to pass in an options object with a method and headers - with a `'Content-Type': 'application/json'`. Additionally you will need to pass any any required fields into the body. Check out the [docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) for additional info.
 
 ### Deliverables 
 Please DM your instructors the following by the end of the first day:
   * Wireframes
   * DTR between you & project partner
   * Project management tool (GH Projects, trello, etc.)
-
-## API - Endpoints
-
-You will be using the fetch API to make all your api calls. If you are making a post request, note that you will need to pass in an options object with a method and headers - with a `'Content-Type': 'application/json'`. Additionally you will need to pass any any required fields into the body. Check out the [docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) for additional info.
-
-###### Users
-
- * ##### Sign In `/api/users`
-
-  To sign in you will need to pass in *email* and *password* to the *body*.
-  Emails should be sent in all lowercase. - ex: `{..., body: {email: 'tim@aol.com', password: 'password'} }`
-  The database starts off with a single user inside. -> { email: tman2272@aol.com password: password }. Keep in mind the response will send the entire user back.
-
-* ##### Create Account - `/api/users/new`
-  Creating an account must have all input fields filled in (name, email, password)
-  You must send all three into the body. Passwords are case sensitive.
-  Keep in mind the response only gives the new user ID.
-
-* ##### Add To Collection - `/api/users/albums/new` or `/api/users/books/new`
-  To save an album you must send into the body: artistId, userId and artistName, collectionName, artworkUrl100, releaseDate, contentAdvisoryRating & primaryGenreName.
-
-  To save an audio book you must send into the body: artistId, userId and artistName, collectionName, artworkUrl100, releaseDate, description & primaryGenreName.
-
-  **Note:** Keep in mind the response only gives the new collection id.
-
-* ##### Receive All Items from collection - `/api/users/:user_id/albums` or `/api/users/:user_id/books`
-  To get a users collected albums/audio books, you need to send in the user ID through the params. This will return an array of the user's collected albums/audio books.
-
-* ##### Delete From Collection - `/api/users/:user_id/albums/:album_id` or `/api/users/:uiser_id/books/:book_id`
-  To delete an album/audio book from a user's collection, you must send in the user's id and id of the album/audio book.
 
 ### Iterations
 
@@ -107,7 +51,7 @@ You will be using the fetch API to make all your api calls. If you are making a 
 ##### Iteration 2: Adding & Removing From Your Collection
   * Each album/book should be displayed with a `Save For Later` button.
   * If the user is not signed in and clicks on a `Save For Later` button, the user will be prompted with the request to create an account.
-  * Validate your stored albums/audio books before adding to db. Aka does that user already have the album/ audio book stored in their collection already. There should be no duplicates. 
+  * Validate your stored albums/audio books before adding to db. Aka does that user already have the album/audio book stored in their collection already. There should be no duplicates. 
   * If the user visits `/my-collection`, they should see a list of all their collected albums/audio books.
   * The user should be able to delete favorites from `/my-collection` or `/`.
   * Albums or audio books that have been added to your collection should have a visual indication on `/`.
@@ -121,6 +65,7 @@ You will be using the fetch API to make all your api calls. If you are making a 
   * A user stays signed in after refreshing the page. *Hint:* You will probably use localStorage. 
   * Should only take real email addresses *Hint:* Look into regular expressions
   * Convert your project to use [typescript](https://www.typescriptlang.org/)
+  * If you're working with albums, enable the user to search for albums based on a track title within the album
   
 ## Rubric 
 
