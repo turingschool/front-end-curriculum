@@ -151,10 +151,13 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .catch(err => /* do something else */);
 ```
 
-### Queries
+### Query Strings / URL Structure
+
+![url anatomy diagram](https://sitechecker.pro/wp-content/uploads/2017/12/url-structure.jpg)
+
 What's all that weird stuff in the URL we're fetching?
 
-Fetch and XMLHttpRequest Objects take the url as one of their arguments. The URL itself can be thought of containing sub-arguments that give these request obejcts and methods more information. The entire anatomy of a URL can be broken down into a series of informative peices, but the ones we're focused on today are queries.
+Fetch and XMLHttpRequest Objects take the url as one of their arguments. The URL itself can be thought of containing sub-arguments that give these request objects and methods more information. The entire anatomy of a URL can be broken down into a series of informative peices, but the ones we're focused on today are queries.
 
 Anything coming after the `?` in a url is part of a query. Queries can be broken down into categories and arguments (check the vocab here). Each category / argument pair is separated by an `&`.
 
