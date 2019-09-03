@@ -6,9 +6,9 @@ tags: react, redux, testing, javascript, api
 
 ## Introduction
 
-For this project, you are going to work on developing some muscle memory building out applications with Redux. You will also be getting more practice doing network requests with a backend.  
+Ever had that moment where someone tells you about a new artist's album or a famous author's book, and you wanted to write it down real quick.  Well now, you will be building out an app that allows you to create an account, sign in, and search for either `artists` or `authors` (your choice) from iTunes.  Viewing their albums/audio books, you'll be add them to a collection for you to check out later. 
 
-Ever had that moment where someone tells you about a new artist's album or a famous author's book, and you wanted to write it down real quick.  Well now, you will be building out an app that allows you to create an account, sign in, and search for either `artists` or `authors` (your choice) from iTunes.  Viewing their albums/audio books, you'll be add them to a collection for you to check out later.    
+As a result of building out this project, you are going to be developing some muscle memory building out applications with Redux. You will also be getting much more practice doing network requests with a backend.     
 
 ## Learning Goals
 
@@ -17,7 +17,7 @@ Ever had that moment where someone tells you about a new artist's album or a fam
 3. Become comfortable with different network requests like `GET`, `POST`, & `DELETE`. 
 4. Solidify concepts with React to create clean and re-useable components.
 5. Become comfortable with Redux's lifecycle, creating actions, reducers, and connecting them to React components.  
-6. Understand and solidify concepts with React component, asynchronous code, route handling, and Redux testing..
+6. Understand and solidify concepts with React component, asynchronous code, route handling, and Redux testing.
 
 ## Prep Work
 
@@ -25,13 +25,13 @@ This project is working off the [Itunes Search API](https://developer.apple.com/
 
 [This repository]() will serve as your "backend", allowing you to connect to Postgres. You'll need to set up a separate client-side application (use `create-react-app`), to sit alongside this one. Do not put that project in the same repository as this one, save yourself a headache.
 
-## Project Setup
+### Project Setup
 
 * Clone down this repo and run `npm install`
 * If you don't have postgresSQl, scroll down to `Setup Postgresql` and follow those steps.
 * Run `npm start` - visit `localhost:3000/api/users` - you should see a json response with a single user.
 
-## Setup Postgresql
+### Setup Postgresql
 
 #### IMPORTANT: If you already have Postgresql on your computer for some reason, you will need to uninstall it
 For information on how to do this read [this](https://postgresapp.com/documentation/remove.html)
@@ -54,6 +54,12 @@ For information on how to do this read [this](https://postgresapp.com/documentat
 * Type `psql`. This will get you into the interactive postgres terminal. From here you can run postgres and sql commands. You might get an error *psql: FATAL: database "username" does not exist* To resolve this error type *createdb 'somthing does not exist'*
 
 #### [PSQL Commands](http://postgresguide.com/utilities/psql.html)
+
+### Deliverables 
+Please DM your instructors the following by the end of the first day:
+  * Wireframes
+  * DTR between you & project partner
+  * Project management tool (GH Projects, trello, etc.)
 
 ## API - Endpoints
 
@@ -88,8 +94,8 @@ You will be using the fetch API to make all your api calls. If you are making a 
 ### Iterations
 
 ##### Iteration 0: Pull in iTunes Search API
-  * Search for an `artist/author` to get all of their albums/books from the iTunes Search API.
-  * Display each album/book on root index `/`
+  * Search for an `artist/author` to get all of their albums/audio books from the iTunes Search API.
+  * Display each album or audio book on the root index `/`
 
 ##### Iteration 1: Sign In / Sign Out Functionality
   * Be able to sign in on page `/login` and redirect user to `/`
@@ -101,13 +107,13 @@ You will be using the fetch API to make all your api calls. If you are making a 
 ##### Iteration 2: Adding & Removing From Your Collection
   * Each album/book should be displayed with a `Save For Later` button.
   * If the user is not signed in and clicks on a `Save For Later` button, the user will be prompted with the request to create an account.
-  * Validate your stored albums/audio books before adding to db. Aka does that user already have the album/book stored in their collection already. There should be no duplicates. 
+  * Validate your stored albums/audio books before adding to db. Aka does that user already have the album/ audio book stored in their collection already. There should be no duplicates. 
   * If the user visits `/my-collection`, they should see a list of all their collected albums/audio books.
   * The user should be able to delete favorites from `/my-collection` or `/`.
   * Albums or audio books that have been added to your collection should have a visual indication on `/`.
 
 ##### Iteration 3: Showing Details, Pagination & Filtering
-  * A user can click and view any individual album/book. The url for each individual album/book page should be "/albums/:id" or "/books/:id" (depending on which you choose)
+  * A user can click and view any individual album/audio book. The url for each individual album/audio book page should be "/albums/:id" or "/books/:id" (depending on which you choose)
   * Only the first 10 albums/audio books should show at first on `/`.  The user should have a way to checkout the next/last 10 items.
   * A user should be able to filter through their collection on `/my-collection` based on the genre of albums/audio books.
 
@@ -141,11 +147,11 @@ You will be using the fetch API to make all your api calls. If you are making a 
 
 ### Redux Architecture
 
+* 1 - Application state is mostly outside the control of Redux. Application did not make use of Redux actions and reducers to mutate state. Components do not demonstrate a clear understanding of stateful vs. statelessness.
+* 2 - At least one component is not connected with Redux appropriately. Application state is mutated by more than just Redux. The Redux store is missing application data that it should be handling.
+* 3 - Appropriate components are wrapped in connected Redux container components. The Redux store contains all necessary application data. All state changes are handled through Redux actions and reducers.
 * 4 - All requirements from 3 met, and no duplication of data exists in the
   store. Data in the store remains flat (not nested).
-* 3 - Appropriate components are wrapped in connected Redux container components. The Redux store contains all necessary      application data. All state changes are handled through Redux actions and reducers.
-* 2 - At least one component is not connected with Redux appropriately. Application state is mutated by more than just Redux. The Redux store is missing application data that it should be handling.
-* 1 - Application state is mostly outside the control of Redux. Application did not make use of Redux actions and reducers to mutate state. Components do not demonstrate a clear understanding of stateful vs. statelessness.
 
 ### Testing
 
