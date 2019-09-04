@@ -77,6 +77,5 @@ While reviewing the code, ask yourself the following questions:
 ### Closing
 
 Within your original group, discuss the following questions - 
-* Of the two repos you are reviewing, which does a better job at following the principles of good OOP design? Why?
 * What new information have you learned from the readings? From the code review?
 * How will this effect the way you continue to write your GameTime projects? Is there any code you now would like to change?
