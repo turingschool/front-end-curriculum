@@ -16,9 +16,19 @@ By the end of this session, you will be able to:
 
 ## Structure (5 mins)
 
+* 10 mins of reflection
 * 30 mins of research and journaling
 * 15 mins of group discussion
 * 30 - 40 mins of code review
+
+### Reflection (10 minutes)
+
+In your FitLit Pairs, get with another pair and discuss what it was like to structure your code around objects. Focus specifically on:
+
+* What **didn't** we teach you, that would have been helpful to know?
+* How did you stray from the class structure that the spec outlined, if at all? Why did you do that?
+* Are there any changes you would have made to the code in your classes based on feedback you received or if you had additional time?
+
 
 #### Research (20 minutes)
 
@@ -42,7 +52,7 @@ After you have finished reading the four articles, answer the following question
 - What new information have you learned from one (or all) of these readings?
 - What questions do you have after reading through these?
 
-#### Discussion (15 mins)
+#### Discussion (15 minutes)
 
 Using the journal questions to guide you, start a discussion within your small groups.
 
@@ -69,3 +79,4 @@ While reviewing the code, ask yourself the following questions:
 Within your original group, discuss the following questions - 
 * Of the two repos you are reviewing, which does a better job at following the principles of good OOP design? Why?
 * What new information have you learned from the readings? From the code review?
+* How will this effect the way you continue to write your GameTime projects? Is there any code you now would like to change?
