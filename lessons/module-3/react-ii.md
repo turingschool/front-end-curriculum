@@ -314,7 +314,7 @@ We already said that we want to have a container for all of our idea Cards. So l
 
 _Okay. Hang on. Our App component was capitalized, and now our Ideas component is capitalized, too. Why do you think this is? What did you learn about the naming conventions for JS classes in Mod 2?_
 
-_It's convention to capitalize class names so that, at a glance, a developer knows they are dealing with a class. We capitalize component names for the exact same reason. If you named this component `ideas` instead of `Ideas`, it would still work. But for reasons of readability and developer empathy, we capitalize component names. Okay, back to your regularly scheduled programming!_
+_It's convention to capitalize class names so that, at a glance, a developer knows they are dealing with a class. This is good for developer empathy. It is also important to note that when an element starts with a lowercase letter, it refers to (and will be treated as) a built-in component like `<div>` or `<span>`, which can lead to silent errors or unexpected side-effects._
 
 Will this Ideas component need to have state? What do you think?
 
