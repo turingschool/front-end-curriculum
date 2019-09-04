@@ -248,7 +248,7 @@ export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm);
 ```
 
 <section class="note">
-### Context
+### Some Context
 
 In some projects, you'll see the component imported into the container file, rather than all in one file. Both are reasonable approaches, the former being mostly for container reusability.
 </section>
