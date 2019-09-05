@@ -355,7 +355,7 @@ Remember, we didn't write dispatch, so all we really need to test here is that d
 ```js
 // containers/AddTodoFormContainer.test.js
 
-import { AddTodoForm, mapStateToProps, mapDispatchToProps };
+import { AddTodoForm, mapStateToProps, mapDispatchToProps } from '../containers/AddTodoForm';
 import { addTodo } from '../actions';
 
 describe('AddTodoFormContainer', () => {
@@ -363,6 +363,8 @@ describe('AddTodoFormContainer', () => {
     // Write these tests on your own
     // You already know how!
   });
+
+  // mapStateToProps test here...
 
   describe('mapDispatchToProps', () => {
     it('calls dispatch with an addTodo action when handleSubmit is called', () => {
