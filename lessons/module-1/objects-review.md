@@ -30,7 +30,7 @@ var user = {
 ```
 
 <section class="call-to-action">
-## Object Literal Practice
+### Object Literal Practice
 
 Familiarize yourself with the object literal stored in `employee`, then answer the questions below.
 
@@ -80,7 +80,7 @@ You may notice above there are three components to accessing a value:
 3. Calling the name of the property. In this case, `name` and `age` were called.
 
 <section class="call-to-action">
-## Dot Notation Practice
+### Dot Notation Practice
 
 We'll use the same `employee` object from the previous practice section.
 
@@ -151,7 +151,7 @@ Notice that we still have those same three pieces:
 4. Now, we **also** have the assignment operator and a new value.
 
 <section class="call-to-action">
-## Dot Notation Practice
+### Dot Notation Practice
 
 We'll use a similar `student` object from the previous practice section.
 
@@ -226,7 +226,7 @@ employee.promotions.teamLead
 ```
 
 <section class="call-to-action">
-## Nested Objects Practice
+### Nested Objects Practice
 
 First, add a list (array) of allergies to our student object:
 
@@ -321,7 +321,7 @@ var student = {
 
 Write a function that `console.log`s a sentence following this format: `[name] is one of our awesome [program] students, currently in module [module]!`. To make sure it is working as expected, try invoking it with at least two different objects being passed in as the argument.
 
-## Challenge
+### Challenge
 
 Use the object below as a template:
 
