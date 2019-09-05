@@ -28,7 +28,7 @@ npm i
 
 ### Unit Testing
 
-Unit tests, aim to modularly test individual pieces of code as throughly as possible. In React apps, these targeted pieces include classes, functions, components, and helper files. Unit testing makes your life easier as a developer, and makes it simpler to refactor your code. When testing in Redux, most of our tests will be unit tests.
+Unit tests aim to test individual pieces of code as throughly as possible. In React apps, these targeted pieces include classes, functions, components, and helper functions. Unit testing makes your life easier as a developer, and makes it simpler to refactor your code. When testing in Redux, most of our tests will be unit tests.
 
 ### Testing in Redux  
 
@@ -47,10 +47,10 @@ Action creators in Redux are functions that return an Action object. Actions des
 
 Why do we even need Action Creators? Couldn't we just create objects where we need them?
 
-<!-- For simpler Actions, this is possible.  But as Actions get more complex, copy-and-pasting an action in multiple places can be more difficult. It's much easier to update a complex payload or refactor some code in one area than multiple places. -->
+<!-- For simpler Actions, this is possible.  But as Actions get more complex, copy-and-pasting an action in multiple places can be more difficult. It's much easier to update a complex payload or refactor some code in one area than multiple places. This keeps our code DRY. -->
 </section>
 
-Action Creators are functions that return a plain object. When testing action creators we want to test that the returned object is what we expect, based on the input parameters.
+Action Creators are functions that return a plain object. When testing Action Creators we want to test that the returned object is what we expect, based on the input parameters.
 
 Take for example our `addTodo()` action.  
 
@@ -197,7 +197,7 @@ it('should toggle the completed status of a new todo', () => {
 
 Testing React Containers is a lot of what you already know, with a little of what you don't mixed in. Remember that a container is just a Redux connected React component. We connect the React component to the Redux store using the `connect` method.
 
-While we could try to mock out our store, and test through the `connect` method, we're not going to do that. We didn't write `connect`, and it's a real challenge to test through it. Even the [Redux Testing Docs](https://redux.js.org/recipes/writing-tests#connected-components) suggest that this is unwise.
+While we could try to mock out our store and test through the `connect` method, we're not going to do that. We didn't write `connect`, and it's a real challenge to test through it. Even the [Redux Testing Docs](https://redux.js.org/recipes/writing-tests#connected-components) suggest that this is unwise.
 
 With that in mind, there are three main areas of our container that need to be tested; our `Component`, our `mapStateToProps` function, and our `mapDispatchToProps` function.
 
@@ -384,7 +384,7 @@ describe('AddTodoFormContainer', () => {
 <section class="call-to-action">
 ### Discuss With a Partner
 
-Assume we have another action removeTodo, and that our todosReducer digests it properly. Write a test that checks dispatch is called with this removeTodo action, whenever the mappedProp of handleRemove is called.
+Assume we have another action `removeTodo`, and that our `todosReducer` digests it properly. Write a test that checks `dispatch` is called with this `removeTodo` action, whenever the `mappedProp` of `handleRemove` is called.
 </section>
 
 ## Final Thoughts
