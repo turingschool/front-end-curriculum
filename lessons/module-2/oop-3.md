@@ -40,11 +40,17 @@ Inheritance allows you to create an object based on another one. Let's look at a
 
 ![instrument example](https://koenig-media.raywenderlich.com/uploads/2017/05/ObjectOrientedProgramming-graph-2.png)
 
-We have a top-level **parent class** called `Instrument`. An `Instrument` might have a name, and be able to play music. But then we can branch out further from there, and create guitars, pianos, violins, etc. 
+We have a top-level **parent class** called `Instrument`. An `Instrument` might have a name, and be able to play music. But then we can branch out further from there, and create guitars, pianos, violins, etc.
 
 Each of these more specific instruments should all still have a name and be able to play music - but they might start having their own behaviors and properties. For example, a guitar might have a property that denotes if it's acoustic or electric. A piano might have a property that denotes how many keys it has.
 
 As we get more specific, we create new classes that are based on our parent `Instrument`, and we allow them to each **inherit** the name property and the ability to play music from that parent. This allows us to share a single method across many subclasses, keeping our code DRY and performant.
+
+The basic inheritance syntax will look something like this:
+
+```js
+class Childclass extends Parentclass {...}
+```
 
 Let's go back to our previous example with an Instructor:
 
@@ -105,16 +111,17 @@ let bob = new TA('Bob', 2, ['serious']);
 
 The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor method of the parent class.
 
-The super keyword allos us to call a function (the class we are extending) that is definied somewhere else, but keep the current context (of our child class). 
+The super keyword allos us to call a function (the class we are extending) that is definied somewhere else, but keep the current context (of our child class).
 
-This will allow the parent constructor to add any inherited properties to the new instance of our class. 
+This will allow the parent constructor to add any inherited properties to the new instance of our class.
 
+<section class="call-to-action">
 #### OOP: Animals and the Zoo
 
 With a partner, think about your last trip to the Zoo and come up with at least three things that could be templated with a class. What properties and methods might it have? Come up with a subclass that could inherit from it and either add new behaviors, or override existing ones. Create a repl for them!
+</section>
 
-
-<!-- 
+<!--
 #### Old Way:
 
 ```
@@ -139,12 +146,12 @@ Tesla.prototype.autoDrive = function() {
 
  -->
 
-
+<section class="checks-for-understanding">
 ## Checks for Understanding
 
 * Explain how inheritance works
 * Why do we call `super()` in the inherited class's constructor?
-
+</section>
 
 ## Further Reading
 
@@ -191,5 +198,5 @@ class Cat {
       return `${this.name} casually sniffs the ${treat} and then ignores it.`
     }
   }
-} 
+}
 ``` -->

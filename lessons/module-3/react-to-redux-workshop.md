@@ -473,10 +473,11 @@ We'll need to import *thunk* from `redux-thunk` and include it in our *composeWi
 
 Lastly, we need to connect the store to our props.  You've done this already.  Go back to your `App.js` and think about how we added to our props previously.  We need to feed both an action and our state to you `App`.
 
----
-_**Your Turn**: Before looking at the solution below, experiment with passing state from your store to your props.  You've already done this before!  You likely will also need to set up your container so it can accept actions as well.  Think about which action you need to dispatch._
+<section class="call-to-action">
+### Your Turn
 
----
+Before looking at the solution below, experiment with passing state from your store to your props.  You've already done this before!  You likely will also need to set up your container so it can accept actions as well.  Think about which action you need to dispatch.
+</section>
 
 ```jsx
 // Components/App
