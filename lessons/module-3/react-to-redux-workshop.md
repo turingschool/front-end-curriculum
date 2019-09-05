@@ -109,9 +109,9 @@ The only difference is that we need a type (as with all actions) and an id which
 #### Creating the Reducer
 
 ```js
-// reducers/selectedReducer.js
+// reducers/selectedId.js
 
-export const selectedReducer = (state=null, action) => {
+export const selectedId = (state=null, action) => {
   switch (action.type) {
     case 'SELECT_USER':
       return action.id
@@ -123,19 +123,20 @@ export const selectedReducer = (state=null, action) => {
 
 Similar to what our state was when it was originally in the `App.js` file, we want the default state to start out *null* since the user hasn't selected a profile yet.  However, if the type of the action matches "SELECT_USER", we want to return the new id that is to be selected.  Remember to always include the default state since all reducers fire (both on startup of an application as well as when an action is dispatched).  Next up the rootReducer.  
 
----
-_**Your Turn**: Right now we only have one reducer, but we will likely need multiple reducers in the future!  Create an `index.js` file inside of your reducers directory, and create the rootReducer._
+<section class="call-to-action">
+### Your Turn
 
----
+Right now we only have one reducer, but we will likely need multiple reducers in the future!  Create an `index.js` file inside of your reducers directory, and create the rootReducer.
+</section>
 
 ```js
 // reducers/index.js
 
 import { combineReducers } from 'redux';
-import { selectedReducer } from './selectedReducer';
+import { selectedId } from './selectedId';
 
 export const rootReducer = combineReducers({
-  selectedId: selectedReducer,
+  selectedId,
 })
 ```
 
@@ -143,12 +144,13 @@ You should have something like this.  We set the key to *selectedId* just so it'
 
 #### Finalizing Setup of Redux
 
----
-_**Your Turn**: Move to your `index.js` file in the src directory.  Install & import the necessary dependencies necessary to make your store available to your App component._
+<section class="call-to-action">
+### Your Turn
 
-_**Hint**: You might want to install your redux devtools so that you have access to them later!_
+Move to your `index.js` file in the src directory.  Install & import the necessary dependencies necessary to make your store available to your App component.
 
----
+**Hint**: You might want to install your redux devtools so that you have access to them later!
+</section>
 
 ```bash
   npm i redux react-redux redux-devtools-extension -S
@@ -179,10 +181,12 @@ ReactDOM.render(
 
 Everything should be hooked up.  You can open your application now and see if everything is up and running.  Double check any errors and then open your DevTools.  Do you see *selectedId* in your store?  Awesome!  Now that the store is set up, we need to find which components need access to our store and actions.  Let's start with where we need the state.  We originally had *selectedId* in our App, so let's include that in our props!
 
----
-_**Your Turn**: Hook up your App component so it has access to `selectedId` in it's props.  Think about what needs to be included to "connect" your App component to the store!_
+<section class="call-to-action">
+### Your Turn
 
----
+Hook up your App component so it has access to `selectedId` in it's props.  Think about what needs to be included to "connect" your App component to the store!
+</section>
+
 
 ```jsx
 // App.js
@@ -221,10 +225,11 @@ You should have access to the prop now.  Right now it will be *null* due to it b
 
 Think about where we originally invoked our *selectUser* method.  That's right, back in the CoWorkerTab component.  We can connect functional components to our store as well.  
 
----
-_**Your Turn**: Hook up your coWorkerTab component so it has access to the `selectUser` method in it's props.  Remember to import the action you need to dispatch!_
+<section class="call-to-action">
+### Your Turn
 
----
+Hook up your coWorkerTab component so it has access to the `selectUser` method in it's props.  Remember to import the action you need to dispatch!
+</section>
 
 ```js
 // CoWorkerTab.js
@@ -369,18 +374,22 @@ That's it, we now have our action creators finished.  Let's get back on the trai
 Let's create a separate file from our `selectedReducer.js` file since this is dealing with different data.  Let's create a `coWorkersReducer.js` file.  In here, we'll include three reducers to handle our three actions.  (there are three reducers because they all update different pieces of our Redux store)
 
 ```js
-// reducers/coWorkersReducer.js
+// reducers/isLoading.js
 
 export const isLoading = (state=false, action) => {
   switch(action.type) {
     case 'IS_LOADING':
-      return action.isLoading
+      return action.isLoading;
     default:
       return state;
   }
 }
+```
 
-export const hasErrored = (state = '', action) => {
+```js
+// reducers/errorMsg
+
+export const errorMsg = (state = '', action) => {
   switch(action.type) {
     case 'HAS_ERRORED':
       return action.errorMsg
@@ -388,6 +397,10 @@ export const hasErrored = (state = '', action) => {
       return state;
   }
 }
+```
+
+```js
+// reducers/coWorkers.js
 
 export const coWorkers = (state=[], action) => {
   switch(action.type) {
@@ -401,23 +414,26 @@ export const coWorkers = (state=[], action) => {
 
 The neat thing about how we're setting this up is that in the future, when we create other methods for adding co-workers, removing co-workers, we can re-use our actions for handling loading & errors.  It's going to take practice, but finding ways to reuse actions/reducers can help to keep a flatter Redux store!
 
----
-_**Your Turn**: We've created our reducers now.  What is the next part of the flow?  How can we connect these to our store?  Take a few minutes and get these new reducers connected._
+<section class="call-to-action">
+### Your Turn
 
----
+We've created our reducers now.  What is the next part of the flow?  How can we connect these to our store?  Take a few minutes and get these new reducers connected.
+</section>
 
 ```js
 // reducers/index.js
 
 import { combineReducers } from 'redux';
-import { selectedReducer } from './selectedReducer';
-import { isLoading, hasErrored, coWorkers } from './coWorkersReducer';
+import { selectedId } from './selectedId';
+import { isLoading } from './isLoading';
+import { errorMsg } from './errorMsg';
+import { coWorkers } from './coWorkers';
 
 export const rootReducer = combineReducers({
-  selectedId: selectedReducer,
+  selectedId,
   isLoading,
-  errorMsg: hasErrored,
-  coWorkers,
+  errorMsg,
+  coWorkers
 });
 ```
 
@@ -466,7 +482,7 @@ _**Your Turn**: Before looking at the solution below, experiment with passing st
 // Components/App
 
 import { bindActionCreators } from 'redux';
-import { fetchCoWorkers } from '../thunks/fetchCoWorkers';
+import { fetchCoWorkers } from '../../thunks/fetchCoWorkers';
 
 class App extends Component {
   async componentDidMount() {
