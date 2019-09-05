@@ -151,7 +151,7 @@ Notice that we still have those same three pieces:
 4. Now, we **also** have the assignment operator and a new value.
 
 <section class="call-to-action">
-### Dot Notation Practice
+### Reassigning Practice
 
 We'll use a similar `student` object from the previous practice section.
 
@@ -164,7 +164,7 @@ var student = {
 }
 ```
 
-Write the syntax that move Scott to Module 2: <input/>
+Write the syntax that will move Scott to Module 2: <input/>
 
 Write the syntax that will move Scott to Module 5: <input/>
 
