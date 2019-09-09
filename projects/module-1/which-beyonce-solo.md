@@ -20,7 +20,7 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 
 ## Progression
 
-### Iteration 0 - Single Player Layout & UI:
+### Iteration 0 - Single Player Layout & UI
 
 - User should see an input for their name, and a "Play" button
 - User should enter their name, (note the two bullet points below) click "Play", then see a greeting including their name and directions for how to play the game. Upon clicking another button, the game begins.
@@ -29,7 +29,7 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 - Once the user clicks "Start Game", they should see ten cards, face down.
 - User should be able to click on any card. Once each card is clicked on, the other side of it should be displayed.
 
-### Iteration 1 - Single Player Matches:
+### Iteration 1 - Single Player Matches
 
 - User should see a "Number of Matches" count somewhere on the page.
 - User should **only** be able to flip over two cards at a time.
@@ -48,7 +48,7 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 - The Deck should have `cards`, `matchedCards`, `selectedCards`, and `matches` as properties. The Deck should have the following methods: `shuffle`, `checkSelectedCards`, and `moveToMatched`. If you find a need for additional methods, write/use them!
 </section>
 
-### Iteration 2 - A little more interesting, and a better UI:
+### Iteration 2 - A little more interesting, and a better UI
 
 - Once all matches are found, the user should see a congratulatory message including their name *and* the amount of time it took, in minutes and seconds, for them to find all 5 matches.
 - Each time a user plays, the ten cards should be assorted *differently*.
@@ -60,7 +60,7 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 - The users name should persist in Local Storage
 - After a user wins, a winner board should appear. It should include the names of the 5 winners who solved the puzzle in the shortest amount of time, as well as the time they took to solve.
 
-### Iteration 4 - Two Player:
+### Iteration 4 - Two Player
 
 - Two users should be able to compete.
 - Both users should enter their name and see them displayed on the screen
@@ -78,19 +78,19 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 - If you see the need for other properties or methods, you can absolutely add those!
 </section>
 
-### Iteration 5:
+### Iteration 5 - Leveling Up
 
 - Users should be provided 10 cards (5 matches) that are randomly selected from a list of 20 cards (10 matches) to further diversify the mix and make playing multiple times more interesting.
 - After finishing a game, user(s) should have the option to play again as the same players, or start completely over. If they choose to play again as the same players, they should not have to re-enter their info or read the directions again.
 - The users should have the ability to pause the game. Once it is paused, time stops, and no cards can be clicked/flipped.
 
-### Extensions:
+### Extensions
 
 - Under each users name, the total number of wins they have had should appear. This should persist on page refresh. (Think about how this impacts your data for Player!)
 - If the user leaves the page and comes back, the game will still be paused, but can resume from there (all cards in same position, same number of "matches" etc.)
 - Test your classes (we can provide some assistance with the setup if you'd like to tackle this!)
 
-## Comp:
+## Comp
 
 Screenshots of UI
 
