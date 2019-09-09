@@ -58,7 +58,7 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 ### Iteration 3 - Implement Storage
 
 - The users name should persist in Local Storage
-- After a user wins, a winner board should appear. It should include the names of the 5 winners who solved the puzzle in the shortest amount of time, as well as the time they took to solve.
+- A "Top 5 Winner Board" should be available for the user to view when clicking the icon in top right corner. It should include the names of the 5 winners who won the game in the shortest amount of time, as well as the time they required to win. When the icon is clicked again, the board should no longer be visible.
 
 ### Iteration 4 - Two Player
 
