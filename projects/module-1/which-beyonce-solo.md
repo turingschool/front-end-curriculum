@@ -6,10 +6,9 @@ title: Which Beyoncé? - Solo
 
 * Solidify and demonstrate your understanding of:
   * semantic HTML
-  * clean & organized CSS styles
   * DRY JavaScript
   * localStorage to persist data
-* Iterate through/filter DOM elements using for loops/array prototype methods
+* Iterate through/filter DOM elements using `for` loops
 * Understand the difference between the data model and how the data is displayed on the DOM
 * Match/recreate a UI and create a great UX
 
@@ -25,15 +24,16 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 
 - User should see an input for their name, and a "Play" button
 - User should enter their name, (note the two bullet points below) click "Play", then see a greeting including their name and directions for how to play the game. Upon clicking another button, the game begins.
-- The user should not be able to click "Play" until something is typed in the name input field. The limit on the name input field should be 32 characters.
-- If the user attempts to click the "Play" button before entering their name, they should receive a small but clear message as to why they can't yet click the button, prompting them to enter their name.
+  - If the user attempts to click the "Play" button before entering their name, they should receive a small but clear message as to why they can't yet click the button, prompting them to change what they are providing.
+  - The limit on the name input field should be 32 characters.
 - Once the user clicks "Start Game", they should see ten cards, face down.
 - User should be able to click on any card. Once each card is clicked on, the other side of it should be displayed.
 
 ### Iteration 1 - Single Player Matches:
 
+- User should see a "Number of Matches" count somewhere on the page.
 - User should **only** be able to flip over two cards at a time.
-- If the cards match, they should disappear and the "matches" count should increase
+- If the two flipped cards match, they should disappear and the "Number of Matches" count should increase
 - If the cards don't match, the user can re-click them to turn them back over.
 - User continues to click until they find all matches
 - Once all matches are found, the user should see a congratulatory message including their name.
@@ -53,12 +53,11 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 - Once all matches are found, the user should see a congratulatory message including their name *and* the amount of time it took, in minutes and seconds, for them to find all 5 matches.
 - Each time a user plays, the ten cards should be assorted *differently*.
 - When the card is clicked on to view the other side, and when a card flips back over if not a match, there should be a smooth transition.
-- Once two cards are clicked on/turned over, **no other cards** should be click-able/turn-over-able.
-- Instead of having to manually re-click a card to turn it back face-down, the program should automatically flip both cards over, after the user has had 3-5 seconds from the time both cards are revealed to view them.
+- Instead of having to manually re-click a card to turn it back face-down, the program should automatically flip both cards over, after the user has had ___ seconds from the time both cards are revealed to view them. This is a great opportunity to do some user testing and see what the right amount of time is!
 
 ### Iteration 3 - Implement Storage
 
-- The users name should persist in local storage
+- The users name should persist in Local Storage
 - After a user wins, a winner board should appear. It should include the names of the 5 winners who solved the puzzle in the shortest amount of time, as well as the time they took to solve.
 
 ### Iteration 4 - Two Player:
@@ -89,10 +88,9 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 
 - Under each users name, the total number of wins they have had should appear. This should persist on page refresh. (Think about how this impacts your data for Player!)
 - If the user leaves the page and comes back, the game will still be paused, but can resume from there (all cards in same position, same number of "matches" etc.)
-- The winner's name, and time it took to won, should appear on a top player board. When another player wins, their info should join that board. The winner in place #1 should have won in the smallest amount of time. At least 5 winners and their times should be displayed. This data should persist on page load.
-- Test your classes
+- Test your classes (we can provide some assistance with the setup if you'd like to tackle this!)
 
-## TO DO:
+## Comp:
 
 Screenshots of UI
 
@@ -118,7 +116,7 @@ The topic does not have to be Beyonce. Besides assets and name of app, students 
 
 ## HTML
 
-* **4:** Application uses BEM, SMACCS or another set of **naming conventions** for classes, all team members can explain those naming conventions. The form uses **WAI-ARIA** and is fully accessible.
+* **4:** Application uses BEM, SMACCS or another set of **naming conventions** for classes, developer can explain those naming conventions. The form uses **WAI-ARIA** and is fully accessible.
 * **3:** Application uses markup that is **easy to read** and follows across **naming conventions**.
 * **2:** Application uses HTML that incorporates **semantic HTML** elements and has a simple, clean HTML structure.
 * **1:** Crafts markup that meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
@@ -126,6 +124,6 @@ The topic does not have to be Beyonce. Besides assets and name of app, students 
 ### JavaScript
 
 * **4:** **Code is well refactored** and demonstrates developer empathy. No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. All functions are **less than 10 lines long**.
-* **3:** The **event object** is used correctly, and is not accepted as a parameter if it is not necessary. All team members can speak to **how the event object is utilized** for any given event handler. **Function and variable names** describe their role in the program. *Examples: The name of the data type should not ever be in a variable name; the name itself should be clear enough to indicate the type of data it holds. An event handler should not have name "eventHandler". Possible alternatives are `allCards` and `flipCard()`.*
-* **2:** The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. All team members can speak to the **role of each class**.
+* **3:** The **event object** is used correctly, and is not accepted as a parameter if it is not necessary. Developer can speak to **how the event object is utilized** for any given event handler. **Function and variable names** describe their role in the program. *Examples: The name of the data type should not ever be in a variable name; the name itself should be clear enough to indicate the type of data it holds. An event handler should not have name "eventHandler". Possible alternatives are `allCards` and `flipCard()`.*
+* **2:** The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. Developer can speak to the **role of each class**.
 * **1:** Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
