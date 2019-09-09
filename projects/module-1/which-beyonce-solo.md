@@ -122,7 +122,7 @@ The topic does not have to be Beyonce. Besides assets and name of app, students 
 * **2:** Application uses HTML that incorporates **semantic HTML** elements and has a simple, clean HTML structure.
 * **1:** Crafts markup that meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
 
-### JavaScript
+## JavaScript
 
 * **4:** **Code is well refactored** and demonstrates developer empathy. No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. All functions are **less than 10 lines long**.
 * **3:** The **event object** is used correctly, and is not accepted as a parameter if it is not necessary. Developer can speak to **how the event object is utilized** for any given event handler. **Function and variable names** describe their role in the program. *Examples: The name of the data type should not ever be in a variable name; the name itself should be clear enough to indicate the type of data it holds. An event handler should not have name "eventHandler". Possible alternatives are `allCards` and `flipCard()`.*
