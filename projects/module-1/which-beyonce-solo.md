@@ -81,6 +81,7 @@ Each player takes turn flipping over two cards at a time. If they match, that pl
 ### Iteration 5 - Leveling Up
 
 - Users should be provided 10 cards (5 matches) that are randomly selected from a list of 20 cards (10 matches) to further diversify the mix and make playing multiple times more interesting.
+- If a user with the same name as someone of the "Top 5 Winners" board is playing, a trophy-like icon should appear on their side of the scoreboard to indicate that one (or both) of the players is a previous winner.
 - After finishing a game, user(s) should have the option to play again as the same players, or start completely over. If they choose to play again as the same players, they should not have to re-enter their info or read the directions again.
 - The users should have the ability to pause the game. Once it is paused, time stops, and no cards can be clicked/flipped.
 
