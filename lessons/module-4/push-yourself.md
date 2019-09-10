@@ -10,7 +10,7 @@ During Week 5, we have reserved 3 hours of class time for you to investigate a t
 
 ## Requirements
 
-*Deliverable: Reflection Paper*
+**Deliverable: Reflection Paper**
 
 This should be 2-3 paragraphs in length. Your reflection should address the following:
 
@@ -26,10 +26,10 @@ Other questions you might consider to help guide your reflection are listed belo
   * What surprised you about what you learned?
   * What were your roadblocks? How did I move through them?
 
-*Resources*
+**Resources**  
 As part of your deliverable, you are required to cite _at least_ four sources that you used as part of your research into this topic. These can be videos, blog posts, documentation, etc. 
 
-*Above and Beyond*
+**Above and Beyond**
 
 Though not required, you are welcome to submit any of the following in addition to your reflection:
 
