@@ -1,4 +1,10 @@
-# Differentiation: Push Yourself
+---
+title: Differentiation: Push Yourself
+length: 120
+tags: research, job hunt, differentiation
+---
+
+# Push Yourself
 
 During Week 5, we have reserved 3 hours of class time for you to investigate a topic that is outside of the current FE curriculum.  The purpose of reserving this time is twofold. First, we understand that there are a lot of topics that students want to learn more about - and we simply don’t have enough time to cover _everything_ - our focus is getting you ramped up on the skills/knowledge that you absolutely need to secure a job as a junior dev. Secondly, being able to differentiate yourself from other Turing grads is an important piece of the job-hunting process.  Employers want to see your curiosity and passion - and this gives you the avenue (and the time) to demonstrate just that.
 
