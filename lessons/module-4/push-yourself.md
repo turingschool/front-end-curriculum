@@ -1,5 +1,5 @@
 ---
-title: Differentiation: Push Yourself
+title: Differentiation
 length: 120
 tags: research, job hunt, differentiation
 ---
