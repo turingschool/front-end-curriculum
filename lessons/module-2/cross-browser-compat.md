@@ -9,7 +9,7 @@ tags: cross-browser, compatibility
 
 By the end of this lesson, you will know/be able to:
 
-* Understand why cross-browser discrepencies occur and know how to resolve them
+* Understand why cross-browser discrepancies occur and know how to resolve them
 * Utilize existing tools & strategies to ensure your apps are as consistent as possible across browsers and platforms
 
 ## Vocab
@@ -22,7 +22,7 @@ By the end of this lesson, you will know/be able to:
 
 ## What is Cross-Browser Compatibility
 
-Cross-Browser compatibility describes the issues and strategies behind making sure your applications look and behave in a consistent manner across as many browsers and platforms as possible. As we have introduced more devices, operating systems and browsers into the ecosystem, attempting to support all of them has become a significant challenge for front-end developers. 
+Cross-Browser compatibility describes the issues and strategies behind making sure your applications look and behave in a consistent manner across as many browsers and platforms as possible. As we have introduced more devices, operating systems and browsers into the ecosystem, attempting to support all of them has become a significant challenge for front-end developers.
 
 __________________________________________
 
@@ -44,12 +44,12 @@ Another reason discrepancies continue to exist is because people are still using
 
 Finally, some companies are hesitant to stop supporting older browsers simply for financial reasons. The New York Times makes much more of its money off of online subscriptions and advertisements in recent years. Previously, they continued to support older versions of IE because not doing so could have had drastic effects on their revenue if they happened to lose that portion of their user base. (They eventually dropped support for IE8 in 2014 and IE9 in 2015. When doing so, they put an indicator on the UI for reader's using those browsers to let them know their browser would soon no longer be supported. The response was overwhelmingly positive. A large percentage of users were able to upgrade their browsers and did so.)
 
-
+<section class="call-to-action">
 #### Turn and Talk
 
 * In your own words, describe an API.
 * What are examples of browser APIs that you have used in past projects? (Be sure that you Check the browser compatability chart in the documentation)
-
+</section>
 __________________________________________
 
 
@@ -82,7 +82,7 @@ At a high-level, there are two popular approaches for tackling the cross-compat 
 
 While these two approaches usually produce similar results, the big difference between them lies in where your initial priorities are targeted. Do you want to start by building the most complex and advanced application possible, then try to "fix" the experience for older platforms? (Graceful Degradation) Or do you want to nail down the basic user experience for lesser, maybe more common environments, and slowly extend and advance it for future platforms? (Progressive Enhancement)
 
-
+<section class="call-to-action">
 #### Turn and Talk
 
 Both progressive enhancement and graceful degradation assist in making websites more accessible. With this in mind, discuss the following:
@@ -90,7 +90,8 @@ Both progressive enhancement and graceful degradation assist in making websites 
 * Which is better overall? Why?
 * Which would be better for testing? Why?
 * What is the difference between progressive enhancement and graceful degradation?
-
+  * What factors could influence which method you choose?
+</section>
 __________________________________________
 
 ## Strategies & Solutions
@@ -151,13 +152,14 @@ if (window.Notification && Notification.permission === "granted") {
   $('#notification-box').append('<li>Hi there, notification here!</li>');
 }
 ```
-
+<section class="call-to-action">
 #### Your Turn
 
-Open your `Activity Tracker` project's HTML and CSS files and go to the[*HTML5 PLEASE*](https://html5please.com/) website.
+Open your `FitLit` / `Game Time` project's HTML and CSS files and go to the[*HTML5 PLEASE*](https://html5please.com/) website.
 
 * Take 5 - 10 minutes to check some of those new, shiny HTML5 tags and CSS3 properties that you implemented.
   * Do you need a fallback? Something called a polyfill? Neither?
+</section>
 
 _*Note: Another popular site to check for compatability issues is ["Can I Use"](https://caniuse.com/). This site is nice in that it provides up-to-date browser support tables*_
 
@@ -243,8 +245,9 @@ __________________________________________
 * [BrowserStack](https://www.browserstack.com/)
 __________________________________________
 
+<section class="checks-for-understanding">
 ## Checks for Understanding
 
-* You’re building an app that relies on knowing a person’s location. You want to use the geolocation API but it’s unsupported in some of the platforms your audience uses. What steps will you take to resolve this discrepancy? 
+* You’re building an app that relies on knowing a person’s location. You want to use the geolocation API but it’s unsupported in some of the platforms your audience uses. What steps will you take to resolve this discrepancy?
 * What research must you first do to determine whether you’ll take a progressive enhancement or graceful degradation approach?
-
+</section>
