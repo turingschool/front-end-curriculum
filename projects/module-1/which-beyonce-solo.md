@@ -52,14 +52,15 @@ Create a **private** repository on GitHub and add both/all instructors as collab
 - The Deck should have `cards`, `matchedCards`, `selectedCards`, and `matches` as properties. The Deck should have the following methods: `shuffle`, `checkSelectedCards`, and `moveToMatched`. If you find a need for additional methods, write/use them!
 </section>
 
-<!--
+
 ### Iteration 2 - A little more interesting, and a better UI
 
 - Once all matches are found, the user should see a congratulatory message including their name *and* the amount of time it took, in minutes and seconds, for them to find all 5 matches. (The comp shows seconds, but we think minutes and seconds are more friendly to the user!)
 - Each time a user plays, the ten cards should be assorted *differently*. The `Deck` class should handle this logic.
-- When the card is clicked on to view the other side, and when a card flips back over if not a match, there should be a smooth transition.
 - Instead of having to manually re-click a card to turn it back face-down, the program should automatically flip both cards over, after the user has had ___ seconds from the time both cards are revealed to view them. This is a great opportunity to do some user testing and see what the right amount of time is!
+- Anytime a card flips over, there should be a smooth transition.
 
+<!--
 ### Iteration 3 - Implement Storage
 
 - The users name should persist in Local Storage
