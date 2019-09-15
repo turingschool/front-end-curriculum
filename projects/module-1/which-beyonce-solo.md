@@ -60,12 +60,13 @@ Create a **private** repository on GitHub and add both/all instructors as collab
 - Instead of having to manually re-click a card to turn it back face-down, the program should automatically flip both cards over, after the user has had ___ seconds from the time both cards are revealed to view them. This is a great opportunity to do some user testing and see what the right amount of time is!
 - Anytime a card flips over, there should be a smooth transition.
 
-<!--
+
 ### Iteration 3 - Implement Storage
 
 - The users name should persist in Local Storage
 - A "Top 5 Winner Board" should be available for the user to view when clicking the icon in top right corner. It should include the names of the 5 winners who won the game in the shortest amount of time, as well as the time they required to win. When the icon is clicked again, the board should no longer be visible.
 
+<!--
 ### Iteration 4 - Two Player
 
 - Two users should be able to compete.
