@@ -18,25 +18,46 @@ In it's simplest form, the application should have the following:
   - A button to "Mark as Read"
   - A button to "Remove" the bookmark
 
+### Data Model
+- Each card should get its data from an object instance of a `Bookmark` class
+- Each Bookmark should have the following properties:
+  - id - must be a unique identifier  (take a look into Date.now()!)
+  - title
+  - url
+  - read - this should be a boolean!
+- Each Bookmark should have the following methods:
+  - toggleRead()
+    - This method should be invoked when someone changes whether a Bookmark has been read or not
+    - This method should update the `read` property on the Bookmark
+
+
 ### Phase One
 
 - The user should be able to input a title and URL into the appropriate fields
-- When the user clicks on the button for creating the bookmark, it should be added to the bookmarks section
+- When the user clicks on the button for creating the bookmark, it should be added to the bookmarks section - it should also instantiate a new instance of the Bookmark class!
+  - Think about how you could store/house all of the bookmarks you are creating!
 - When the user clicks on the "Mark as Read" button:
   - A class of `.read` should be added to the bookmark
   - If it already has the class of `.read`, it should be removed
-- When the user clicks on the "Delete" button, the link should be removed from the page
+  - When the user clicks the "Read" button, it should update that instance of the Bookmark class!
+- When the user clicks on the "Delete" button, the link should be removed from the page AND removed from the data model
 
 ### Phase Two
 
 - If the user omits the title or the URL, the application should not create the link and should instead display an error.
 - The application should be responsive and work equally well on desktop and mobile.
+- Implement localStorage!
+  - All instances of Bookmarks should be saved to localStorage when a new Bookmark is created
+  - If a Bookmark is removed from the page, it should be removed from the data model and removed from localStorage
 
 ### Phase Three
 
 - The button for creating links should be disabled if there are no contents in the title or URL fields.
 - The application should be able to keep count of the total number of links currently on the page.
 - The application should be able to keep count of the total number of read and unread links currently on the page.
+- localStorage Part II
+  - When the page is reloaded, the DOM should be populated with all bookmarks that are saved in localStorage
+    NOTE: When you pull your data out of localStorage, your objects won't be instances of their class anymore! You will need to think about how you can RE-INSTANTIATE each object as a class instance when you pull from storage! 
 
 ### Phase Four: The Project Strikes Back
 
@@ -120,7 +141,7 @@ In it's simplest form, the application should have the following:
 * Novice  
 * Advanced Beginner  
 * Proficient  
-* Exceptional 
+* Exceptional
 
 ## Technical Vocabulary
 
