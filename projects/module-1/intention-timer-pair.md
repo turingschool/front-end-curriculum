@@ -33,8 +33,8 @@ Make sure both teammates and instructors are added as collaborators on the GitHu
   - If the `Start Activity` button is clicked before the user has entered information into all four inputs, the user will receive an error message, but will not lose any information that was provided.
 
 ![Zero State Desktop](./assets/intention-timer/zero-state-desktop.png)
-![Error Message Desktop](./assets/intention-timer/error-message-desktop.png)
 ![Complete Form Desktop](./assets/intention-timer/complete-form-desktop.png)
+![Error Message Desktop](./assets/intention-timer/error-message-desktop.png)
 ![Timer Start Desktop](./assets/intention-timer/timer-start-desktop.png)
 
 ### Iteration 1 - Build an MVP
