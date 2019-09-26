@@ -4,9 +4,16 @@ title: Intention Timer - Pair
 
 ## Learning Goals
 
+* Develop your skills in writing:
+  * semantic HTML
+  * clean & organized CSS styles
+  * DRY and organized JavaScript
+* Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
+* Understand event bubbling and use event delegation on dynamic elements
 
 ## Overview
 
+You'll be building an application that allows a user to set goals for their health and productivity, tied to an amount of time. After setting a timer for a certain goal, the user can log that activity to keep track of how they spend with time.
 
 ## Set Up
 
@@ -99,6 +106,11 @@ Active (color-coded) and non-active (white) icons are all stored [here](https://
 ### Fonts
 
 [Montserrat](https://fonts.google.com/?query=mont&selection.family=Montserrat:300,400), both 300 and 400 weights are used in the comp
+
+### Mobile Layouts
+
+<img src="./assets/intention-timer/mobile-1.png" style="height: 400px;">
+<img src="./assets/intention-timer/mobile-2.png" style="height: 400px;">
 
 ## Rubric
 
