@@ -83,7 +83,9 @@ You can put your documentation in the README of your BYOB GitHub repository. Rem
 
 In addition to the functional requirement, on a separate dedicated git branch, go through each line of the server file and put a comment on each line that explains what that line of code is doing. Be as explicit as you can.
 
-### Extension: Create a FE documentation in your BE repo
+### Extensions:
+
+**Create a FE documentation in your BE repo**  
 
 If all other expectations and requirements are met, you may:
 
@@ -91,6 +93,19 @@ If all other expectations and requirements are met, you may:
 * Provide a page that documents the available endpoints, the data that will be received, and the data the user must send.
 * The site should be interactive, allowing a developer to "try out" endpoints. Think of building out something like Postman specifically for your back-end.
 * This front-end documentation page should be a single page and can be written in Javascript, jQuery, or React.
+
+**Test your Application**  
+
+If all other expectations and requirements are met, we would strongly encourage you to [look ahead](https://frontend.turing.io/lessons/module-4/server-side-testing-with-db.html) to see about testing your application.
+
+**Create a custom API endpoint**  
+Use query params on at least one endpoint, which would allow the user to narrow down the nature of their request or filter their results. So for example, you may have an endpoint like:
+
+GET api/v1/merchants?areacode=80202
+
+Which would limit the results to merchants in the 80202 area code.
+
+A further example of this implementation can be found here: [params](https://scotch.io/tutorials/use-expressjs-to-get-url-and-post-parameters)
 
 -----------------------------------------------
 
