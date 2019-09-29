@@ -27,7 +27,8 @@ Possible sources of data:
   * https://developer.foursquare.com/
   * data.world
 * Parse CSVs or JSON files (Node has built-in modules for parsing CSVs)
-* Create the data yourself. You must create a ‘seed file’ with a minimum of ~30 rows of data for each main table
+* Create the data yourself. You must create a ‘seed file’ with a minimum of ~30 rows of data for each main table.
+
 
 ### Relationships
 
@@ -106,3 +107,33 @@ We will have one check in over the course of the project.
 * You're going to be seeding a lot of data all at once. Recall the "Seeding Large Datasets" example from the [Knex Lesson Plan](http://frontend.turing.io/lessons/module-4/knex-postgres.html) and brush up on how to work with `Promise.all()`
 * Remember you often have to RETURN the Promises you're using in your seed file. If you aren't getting any errors, but your data isn't being seeded, you're likely forgetting a `return` statement.
 * If you're trying to transform data from a CSV file, avoid using [this library](https://www.npmjs.com/package/knex-seed-file).
+
+## Rubric
+
+### Endpoints
+
+* **4** - Developer has implemented all 7 endpoints. All endpoints have appropriate status codes and clear, informative messages for error handling.
+* **3** - Developer has implemented all 7 endpoints. Some endpoints may not be using appropriate status codes. Error messaging is clear.
+* **2** - Developer is missing 1 - 2 endpoints and may be missing status codes.
+* **1** - Developer is missing more than 2 endpoints.
+
+### Data Persistence with SQL Database
+
+* **4** - The application persists data in a SQL database with correct relationships clearly defined
+* **3** - The application persists data in a SQL database but with some incorrect relationships bet
+* **2** - The application persist data in a SQL database in most scenarios. There may be instances/bugs where data does not persist or is not updated appropriately.
+* **1** - The application does not persist data in a SQL datanse
+
+### Documentation and Annotations
+
+* **4** - README provides in-depth documentation for what API endpoints are available, the parameters used (if any), as well as sample responses. Developer has a separate, dedicated git branch with detailed annotations (line-by-line) of what is happening in the server file.
+* **3** - README provides documentation for what API endpoints are available, the parameters used (if any), as well as sample responses. Developer has a separate, dedicated git branch with annotations for the server file
+* **2** - README provides documentation for what API endpoints are available. Formatting makes the README hard to read. Annotations in the server file are sparse.
+* **1** - There is no documenation and/or annotations on the server file
+
+### Workflow
+
+* **4** - Developer makes many small, atomic commits that clearly document the evolution of the application and do not contain irrelevant changesets that aren't reflected by the commit message. Developer(s) effectively use git branches and pull requests (with templates) to incorporate changes into the application, and are not pushing directly to master. Developer makes use of a sprint board, which is linked in the README.
+* **3** - Developer(s) use git branches and pull requests when applicable to incorporate changes into the application, and are not pushing fresh changes directly to master. Pull requests may sometimes not make use of a PR template. Developer makes use of a sprint board, which is linked in the README.
+* **2** - Developer make large, inconsistent commits that contain irrelevant changesets and make it difficult to follow the evolution of the application. Developer(s) rarely use git branches and frequently incorporate changes directly into master.
+* **1**  - Developer makes very few commits that each cover too much responsibility and aren't indicative of how the application evolved. Branches and pull requests are not used.
