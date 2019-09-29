@@ -75,13 +75,18 @@ Some things you want to considering having in your API documentation:
 
 You can put your documentation in the README of your BYOB GitHub repository. Remember, improperly formatted information can make it very difficult to read even if it's all accurate, so be sure to utilize markdown syntax styling/formatting ([here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a markdown style cheatsheet).
 
-### Deployment
+### Workflow
 
-* Your application should be deployed to Heroku
+As part of your project planning and workflow for this project, it is expected that you will make use of a sprint board (like [GitHub Projects](https://help.github.com/en/articles/about-project-boards) or [ClubHouse](https://clubhouse.io/)) as well as a [PR template](https://quickleft.com/blog/pull-request-templates-make-code-review-easier/).
+
 
 ## Articulation Requirement
 
 In addition to the functional requirement, on a separate dedicated git branch, go through each line of the server file and put a comment on each line that explains what that line of code is doing. Be as explicit as you can.
+
+### Deployment
+
+* Your application should be deployed to Heroku
 
 ### Extensions:
 
