@@ -5,7 +5,7 @@ tags: javascript, oop, mocha, testing
 
 ## Goals and Objectives
 
-- Contribute code to an partially constructed object-oriented application 
+- Contribute code to an partially constructed object-oriented application
 - Follow spec/prompts to make a working application
 - Implement ES6 classes
 - Write modular, reusable code that follows SRP (Single Responsibility Principle)
@@ -13,7 +13,7 @@ tags: javascript, oop, mocha, testing
 
 In this project, you will write a program to simulate a set of flash cards through the command line! 😱 A user will be able to see the questions, take guesses, and see a final score at the end of the round.
 
-In order to build good habits, we've broken the project up into small classes to demonstrate objects that have a single responsibility. 
+In order to build good habits, we've broken the project up into small classes to demonstrate objects that have a single responsibility.
 
 Through each iteration, you should use TDD to drive implementation of your code.
 
@@ -45,14 +45,14 @@ Your testing suite should test all of the functionality of the game, including t
 
 # Iterations
 
-## Iteration 1: 
+## Iteration 1:
 
 ***Cards***
 
 - A `Card` represents a single flashcard
 - Each card has an id, a question, possible answers, and a correct answer
 
-For example: 
+For example:
 
 ```js
 const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
@@ -67,7 +67,7 @@ const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug
   - `evaluateGuess`: method that returns a boolean indicating if the user's guess matches the correct answer on the card
   - `giveFeedback` - method that returns either 'incorrect!' or 'correct!' based on whether the guess is correct or not.
 
-For example: 
+For example:
 
 ```js
 const card = new Card(1, 'What is Robbie\'s favorite animal', ['sea otter', 'pug', 'capybara'], 'sea otter');
@@ -79,7 +79,7 @@ turn.returnGuess();    // => 'pug'
 turn.returnCard();     // => { id: 1,
                        //      question: 'What is Robbie\'s favorite animal',
                        //      answers: ['sea otter', 'pug', 'capybara'],
-                       //      correctAnswer: 'sea otter' 
+                       //      correctAnswer: 'sea otter'
                        //    }
 
 
@@ -140,14 +140,14 @@ round.deck;   // => [card1, card2, card3];
 round.returnCurrentCard(); // => { id: 1,
                            //      question: 'What is Robbie\'s favorite animal',
                            //      answers: ['sea otter', 'pug', 'capybara'],
-                           //      correctAnswer: 'sea otter' 
+                           //      correctAnswer: 'sea otter'
                            //    }
 
 round.turns; // => 0
 
 round.incorrectGuesses;     // => []
 
-round.takeTurn('capybara'); // => 'correct!' 
+round.takeTurn('capybara'); // => 'correct!'
 
 round.takeTurn('spleen');   // => 'incorrect!'
 
@@ -158,10 +158,10 @@ round.incorrectGuesses;     // => [14]
 round.currentCard();    // => { id: 12,
                         //      question: 'What is Travis\'s favorite stress reliever?',
                         //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
-                        //      correctAnswer: 'playing with bubble wrap' 
+                        //      correctAnswer: 'playing with bubble wrap'
                         //    }
 
-round.calculatePercentCorrect(); // => 50 
+round.calculatePercentCorrect(); // => 50
 ```
 
 ## Iteration 3:
@@ -179,13 +179,13 @@ As you may have noticed, your `Game` class has two methods fleshed out already: 
   - `start`: method that starts everything
     * Creates `Cards`
     * Puts `Cards` in a `Deck`
-    * Creates a new `Round` using the `Deck` 
+    * Creates a new `Round` using the `Deck`
     * invokes `printMessage` to display the message in the CLI
-    * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI 
+    * invokes `printQuestion` to kick off our helper functions that allow interaction via the CLI
 
     _Note: The helper functions are all fleshed out and fit to work with classes/methods that meet the requirements in the past iterations._
 
-For example: 
+For example:
 
 ```js
 game.currentRound; // => Round {...} (The new Round object that has been instatiated)
@@ -197,7 +197,7 @@ Choose one or more of these extensions for this iteration.
 
 _Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
-***Build out another study/flashcards dataset*** 
+***Build out another study/flashcards dataset***
 Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
 
 ***More practice***   
@@ -218,6 +218,8 @@ At the beginning of the game, give options for choosing to study different subje
 ***CYOE (Choose Your Own Extension)***  
 Collaborate with instructors to personalize an extension for this project
 
-# Evaluation Rubric
+# Evaluations / Submission
 
-The project and structure for the evaluation for this project can be found [here](http://frontend.turing.io/projects/flash-cards-eval)
+This project will be evaluated remotely by your instructors over the weekend. We will have a retro the following Monday to go over common issues and takeaways for the project.
+
+Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1-x7qljnul7V-vWXcs4G9kpArfQNgISXpxuyNnKfedNU/edit?usp=sharing" target="\__blank">here</a> by __9AM on Friday, Oct 4th__.
