@@ -64,7 +64,7 @@ Here is what the endpoint looks like to get the news data.
 
 | Purpose | URL | Verb | Request Body | Sample Success Response |
 |----|----|----|----|----|
-| Get all news data | `https://whats-new-api.herokuapp.com/api/v1/news_data` | GET | none | `{ "message": "Hello, I am Dr. Watson..." }` |
+| Get all news data | `https://whats-new-api.herokuapp.com/api/v1/news` | GET | none | `{"entertainment": [{}, {}, ...], "health": [{}, {}, ...], ...}` |
 
 **Note: This will likely break some of your previous tests.  No worries, we will discuss testing async functionality in a future lesson.**
 
