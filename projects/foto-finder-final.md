@@ -65,10 +65,7 @@ This phase is all about setting up the user inputs and general structure of the 
   - A button to "Remove" the photo from the album
 - Each photo card should persist (in `localStorage`) and should be present upon reloading the page.
   - The photo should be added to `localStorage` using the `saveToStorage` method defined in the `Photo` class.
-- When a user clicks the title or caption of a photo in the list, that text should become an editable text field, pre-populated with the existing photo title or caption.
-- The user should be able to "commit" their changes by pressing "Enter/Return" or by clicking outside of the text field.
-  - This change should be saved in localStorage using the `updatePhoto` method defined in the `Photo` class.
-  - Bonus: If the user clicks on the image, the user should be able to update the photo using the `updatePhoto` method.
+
 - When the user clicks on the "Favorite" button, the button should stay in the active (pink) state.  
   - This favorited state should also persist after a page refresh using the `updatePhoto` method defined in the `Photo` class
 - When the user clicks on the "Trash" button, the photo should be removed from the page
@@ -77,12 +74,6 @@ This phase is all about setting up the user inputs and general structure of the 
 
 ### Phase Three
 
-Let's improve the user experience in this phase.
-
-- If the user does not have text in the Title **or** Caption input elements, **or** they have not selected a photo from the `photos` directory, then the "Add to Album" button should be disabled.
-- If there are no photos in the album yet, then there should be an indication to the user to add photos, displayed in the empty photo section.
-- The file selector should only allow image file types
-
 #### Filtering and Searching by Text
 We want the user to be able to search through all of their photos easily.
 
@@ -90,6 +81,21 @@ We want the user to be able to search through all of their photos easily.
 - As a user types in the search box, the list of photos should filter in real time to only display photos whose title or caption include the user's text. The page _should not_ reload.
 - Clearing the search box should restore all the photos to the list.
   - Do not need to persist changes in between sessions.
+
+#### Editing a Photo
+- When a user clicks the title or caption of a photo in the list, that text should become an editable text field, pre-populated with the existing photo title or caption.
+- The user should be able to "commit" their changes by pressing "Enter/Return" or by clicking outside of the text field.
+  - This change should be saved in localStorage using the `updatePhoto` method defined in the `Photo` class.
+  - *Bonus: If the user clicks on the image, the user should be able to update the photo using the `updatePhoto` method.*
+
+#### Improve User Experience
+- If the user does not have text in the Title **or** Caption input elements, **or** they have not selected a photo from the `photos` directory, then the "Add to Album" button should be disabled.
+
+- If there are no photos in the album yet, then there should be an indication to the user to add photos, displayed in the empty photo section.
+
+- The file selector should only allow image file types
+
+### Phase 4
 
 #### Recent Photos
 
@@ -144,54 +150,34 @@ Work through these **in order**:
 
 ## Rubric
 
-### Functional Expectations
+As you reference the rubric throughout the project the self-assess, keep in mind that the "bar" for each category is a 3. Sometimes, criteria for a 2 will not be listed under the criteria for a 3. To earn a 3, one must meet criteria for the 1 and 2. If there are any clarifying questions, make sure to speak with an instructor **before** the day of the evaluation.
 
-* [ ]  Novice - Application meets all of the basic functional expectations of create, edit, delete, and those changes persist in `localStorage`
-* [ ]  Advanced Beginner - Application adds 'Favoriting a Photo' and enables 'Filtering and Searching by Text' as defined in the spec
-* [ ]  Proficient - Applications adds 'Recent Photos' and 'Viewing Favorites' as outlined in the spec
-* [ ]  Exceptional - Application adds all of the extensions
+## Functionality
 
-------------------------------------------------------------------
+* **4:** Iterations **0-4 are fully functional** with no bugs, and 2 of the 3 user stories in Iteration 4 are fully functional. At least one bullet point in Iteration 5 is fully functional.
+* **3:** Iterations **0-4 are fully functional**. One small bug may exist. (Point of clarity - a small bug is not a missing feature or a completely broken feature; it's a feature that usually works but under certain edge cases, behaves unexpectedly).
+* **2:** Iterations **0-3 are fully functional** with no bugs.
+* **1:** Iterations 0-1 are functional.
 
-### Comp Recreation
+## UI/Comp Recreation
 
-* [ ]  Novice - Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
-* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
-* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
-* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
+The topic does not have to be Beyonce. Besides assets and name of app, students are expected to recreate the comp.
 
-------------------------------------------------------------------
+* **4:** Additional elements that have been added **match** the visuals established in the comps. **Finished touches** such as `cursor: pointer` on hover are thoughtfully implemented.
+* **3:** Application implements all major comp details accurately and correctly on desktop, tablet, and large TV with **smooth** transitions between screen sizes. **Additional elements added generally match** the visuals established in the comps, but may be slightly awkward. **Nothing about the UI is confusing** to a user who has never seen this application before.
+* **2:** Application implements all major comp details accurately and correctly on desktop, **tablet, and large TV**. Transitions between screen sizes may not be smooth. Some UI may be slightly confusing or unclear.
+* **1:** Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
 
-### HTML - Style and Implementation
+## HTML
 
-* [ ]  Novice - Crafts markup according to the [turing html style guide](https://github.com/turingschool-examples/html)
-* [ ]  Advanced Beginner - Application adds to the above by using `data-*` attributes for all data related things
-* [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
-    * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/web-accessibility.html)
+* **4:** Application uses BEM, SMACCS or another set of **naming conventions** for classes, developer can explain those naming conventions. The form uses **WAI-ARIA** and is fully accessible.
+* **3:** Application uses markup that is **easy to read** and follows across **naming conventions**.
+* **2:** Application uses HTML that incorporates **semantic HTML** elements and has a simple, clean HTML structure.
+* **1:** Crafts markup that meets the criteria of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html)
 
-------------------------------------------------------------------
+## JavaScript
 
-### CSS - Style and Implementation
-
-* [ ]  Novice - Crafts CSS according to the [turing css style guide](https://github.com/turingschool-examples/css)
-* [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
-* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
-
-------------------------------------------------------------------
-
-### JAVASCRIPT - Style and Implementation
-
-* [ ]  Novice - Crafts JS according to the [turing js style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
-* [ ]  Advanced Beginner - Application correctly implements data model for the `Photo` class including all required methods
-* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
-  * [ ]  Uses event delegation correctly on dynamic elements for deleting, favoriting, and editing a photo (clicking outside of the text field)
-  * [ ]  All functions are less than 10 lines
-  * [ ]  There are no global variables aside from query selectors, an array for your photos, and your instantiation of a [FileReader](https://developer.mozilla.org/en-US/docs/Web/API/FileReader)
-  * [ ]  There are no nested if/else statements
-* [ ] Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
-  * [ ] Uses logical operators instead of if/else statements where applicable
-  * [ ] Uses arrow functions, block scoped variables, and destructuring correctly.
-  * [ ] Application stores all photos in one array in local storage, instead of individually
-  * [ ] When 'Filtering and Searching by Text' and 'Viewing Photos', photos that do not need to be shown on the dom should be completely removed from the dom, instead of only being hidden from view
+* **4:** **Code is well refactored** and demonstrates developer empathy. No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor. All functions are **less than 10 lines long**.
+* **3:** The **event object** is used correctly, and is not accepted as a parameter if it is not necessary. Developer can speak to **how the event object is utilized** for any given event handler. **Function and variable names** describe their role in the program. *Examples: The name of the data type should not ever be in a variable name; the name itself should be clear enough to indicate the type of data it holds. An event handler should not have name "eventHandler". Possible alternatives are `allCards` and `flipCard()`.*
+* **2:** The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. Developer can speak to the **role of each class**.
+* **1:** Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
