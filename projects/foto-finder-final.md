@@ -73,6 +73,14 @@ This phase is all about setting up the user inputs and general structure of the 
 
 ### Phase Three
 
+#### Improve User Experience
+- If the user does not have text in the Title **or** Caption input elements, **or** they have not selected a photo from the `photos` directory, then the "Add to Album" button should be disabled.
+
+- If there are no photos in the album yet, then there should be an indication to the user to add photos, displayed in the empty photo section.
+
+- The file selector should only allow image file types
+
+
 #### Filtering and Searching by Text
 We want the user to be able to search through all of their photos easily.
 
@@ -81,20 +89,14 @@ We want the user to be able to search through all of their photos easily.
 - Clearing the search box should restore all the photos to the list.
   - Do not need to persist changes in between sessions.
 
-#### Editing a Photo
+<!-- #### Editing a Photo
 - When a user clicks the title or caption of a photo in the list, that text should become an editable text field, pre-populated with the existing photo title or caption.
 - The user should be able to "commit" their changes by pressing "Enter/Return" or by clicking outside of the text field.
   - This change should be saved in localStorage using the `updatePhoto` method defined in the `Photo` class.
-  - *Bonus: If the user clicks on the image, the user should be able to update the photo using the `updatePhoto` method.*
+  - *Bonus: If the user clicks on the image, the user should be able to update the photo using the `updatePhoto` method.* -->
 
-#### Improve User Experience
-- If the user does not have text in the Title **or** Caption input elements, **or** they have not selected a photo from the `photos` directory, then the "Add to Album" button should be disabled.
 
-- If there are no photos in the album yet, then there should be an indication to the user to add photos, displayed in the empty photo section.
-
-- The file selector should only allow image file types
-
-### Phase 4
+<!-- ### Phase 4
 
 #### Viewing Favorites
 
@@ -122,7 +124,7 @@ The application should only show the ten most recent Photos on page load.
 Work through these **in order**:
 
 - When the user clicks on the image, the user should be able to update the photo using the `updatePhoto` method.
-- Include at least 3 different animations. Example: one for when a card gets created/deleted.
+- Include at least 3 different animations. Example: one for when a card gets created/deleted. -->
 
 ### Layout Comps
 
@@ -133,9 +135,9 @@ Work through these **in order**:
 ![Foto Finder Desktop][desktop-base]
 
 
-#### Mobile layout:
+<!-- #### Mobile layout:
 
-![Foto Finder Mobile][mobile-base]
+![Foto Finder Mobile][mobile-base] -->
 
 
 #### Color and font spec:
@@ -143,7 +145,7 @@ Work through these **in order**:
 ![Design Specs][design-specs]
 
 [desktop-base]: /assets/images/projects/foto-finder/fotofinder2-1.png
-[mobile-base]: /assets/images/projects/foto-finder/fotofinder2-2.png
+<!-- [mobile-base]: /assets/images/projects/foto-finder/fotofinder2-2.png -->
 [design-specs]: /assets/images/projects/foto-finder/fotofinder-5.png
 
 ------------------------------------------------------------------
@@ -154,18 +156,16 @@ As you reference the rubric throughout the project the self-assess, keep in mind
 
 ## Functionality
 
-* **4:** Iterations **0-4 are fully functional** with no bugs, and 2 of the 3 user stories in Iteration 4 are fully functional. At least one bullet point in Iteration 5 is fully functional.
-* **3:** Iterations **0-4 are fully functional**. One small bug may exist. (Point of clarity - a small bug is not a missing feature or a completely broken feature; it's a feature that usually works but under certain edge cases, behaves unexpectedly).
-* **2:** Iterations **0-3 are fully functional** with no bugs.
-* **1:** Iterations 0-1 are functional.
+* **4:** Iterations **0-3 are fully functional** with no bugs.
+* **3:** Iterations **0-2 are fully functional**. One small bug may exist. (Point of clarity - a small bug is not a missing feature or a completely broken feature; it's a feature that usually works but under certain edge cases, behaves unexpectedly).
+* **2:** Iterations **0-1 are fully functional** with no bugs.
+* **1:** Iterations 0-1 are mostly functional.
 
 ## UI/Comp Recreation
 
-The topic does not have to be Beyonce. Besides assets and name of app, students are expected to recreate the comp.
-
 * **4:** Additional elements that have been added **match** the visuals established in the comps. **Finished touches** such as `cursor: pointer` on hover are thoughtfully implemented.
-* **3:** Application implements all major comp details accurately and correctly on desktop, tablet, and large TV with **smooth** transitions between screen sizes. **Additional elements added generally match** the visuals established in the comps, but may be slightly awkward. **Nothing about the UI is confusing** to a user who has never seen this application before.
-* **2:** Application implements all major comp details accurately and correctly on desktop, **tablet, and large TV**. Transitions between screen sizes may not be smooth. Some UI may be slightly confusing or unclear.
+* **3:** Application implements all major comp details accurately and correctly on desktop. **Additional elements added generally match** the visuals established in the comps, but may be slightly awkward. **Nothing about the UI is confusing** to a user who has never seen this application before.
+* **2:** Application implements all major comp details accurately and correctly on desktop. Transitions between screen sizes may not be smooth. Some UI may be slightly confusing or unclear.
 * **1:** Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
 
 ## HTML
@@ -177,7 +177,7 @@ The topic does not have to be Beyonce. Besides assets and name of app, students 
 
 ## JavaScript
 
-* **4:** **Code is well refactored** and demonstrates developer empathy. No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor. All functions are **less than 10 lines long**.
+* **4:** **Code is well refactored** and demonstrates developer empathy. No global variables are used aside from query selectors, start time, and instances of `Photo`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor. All functions are **less than 10 lines long**.
 * **3:** The **event object** is used correctly, and is not accepted as a parameter if it is not necessary. Developer can speak to **how the event object is utilized** for any given event handler. **Function and variable names** describe their role in the program. *Examples: The name of the data type should not ever be in a variable name; the name itself should be clear enough to indicate the type of data it holds. An event handler should not have name "eventHandler". Possible alternatives are `allCards` and `flipCard()`.*
-* **2:** The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. Developer can speak to the **role of each class**.
+* **2:** The application correctly **implements a data model** for the `Photo` class, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. Developer can speak to the **role of each class**.
 * **1:** Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
