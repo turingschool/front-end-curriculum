@@ -78,7 +78,7 @@ Projects will be due on Monday of Week 2 by 8am. The instructors will go through
 
 ### Specification Adherence
 
-* 1 - The application is missing multiple features outlined above and in it's current state is non-functioning. Developer did minimal to no CSS for this project.
+* 1 - The application is missing multiple features outlined above and in its current state is non-functioning. Developer did minimal to no CSS for this project.
 * 2 - The application is in a usable state, but is missing part of one or more of the features outlined above. There are one or more major bugs and the evaluator has multiple recommendations for design changes.
 * 3 - The application completes all iterations above without error. Evaluator has minimal recommendations for design changes.
 * 4 - The application completes all iterations above and implements one or more of the extensions.  The evaluator has no recommendations for design changes.
