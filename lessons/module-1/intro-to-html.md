@@ -149,6 +149,27 @@ In this case, the `<a>` tag needs to know which url it should be linked to. We u
 - Which attributes have you seen used before, and what was the purpose of each of those?
 </section>
 
+## Thinking Bigger Picture
+
+We've learned how to use some pieces of HTML, but it's important we can put them together to build a site.
+
+### Required Structure of any HTML Page
+
+Every page that is built with HTML needs to have the following four elements to start:
+
+* `<!DOCTYPE html>` declaration: The doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the page is written in.  
+  - [W3C DTD Docs](https://www.w3.org/QA/2002/04/valid-dtd-list.html)  
+* `<html></html>` tag wraps the entire document
+* `<head></head>` tag wraps elements that shouldn't be rendered - information about the page and how to process it
+* `<body></body>` tag wraps elements that should be displayed - the actual content that will appear in the browser
+
+<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="xoVEVQ" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Required Structure of HTML">
+  <span>See the Pen <a href="https://codepen.io/ameseee/pen/xoVEVQ/">
+  Required Structure of HTML</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
 ## Nesting HTML Elements
 
 Before we really start putting what we've learned into practice, it's important to be familiar with vocabulary and certain patterns. Specifically, around nested HTML elements.
@@ -209,27 +230,6 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 - First, fix the indentation to make this more readable and maintainable
 - Then, look for at least 3 opportunities to improve readability and accessibility by changing tags to be more semantic. Once you and you partner agree, make those changes.
 </section>
-
-## Thinking Bigger Picture
-
-We've learned how to use some pieces of HTML, but it's important we can put them together to build a site.
-
-### Required Structure of any HTML Page
-
-Every page that is built with HTML needs to have the following four elements to start:
-
-* `<!DOCTYPE html>` declaration: The doctype declaration is not an HTML tag, but rather tells the browser which version of HTML the page is written in.  
-  - [W3C DTD Docs](https://www.w3.org/QA/2002/04/valid-dtd-list.html)  
-* `<html></html>` tag wraps the entire document
-* `<head></head>` tag wraps elements that shouldn't be rendered - information about the page and how to process it
-* `<body></body>` tag wraps elements that should be displayed - the actual content that will appear in the browser
-
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="xoVEVQ" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Required Structure of HTML">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/xoVEVQ/">
-  Required Structure of HTML</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Additional Resources
 
