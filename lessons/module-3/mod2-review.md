@@ -1,6 +1,6 @@
 ---
 title: Module 2 Reivew
-tags: inheritence, fetch, OOP, arrays, prototypes, scope, context
+tags: inheritence, fetch, OOP, arrays, prototypes, scope, context, testing
 module: 3
 ---
 
@@ -68,3 +68,10 @@ Create a parent and two child classes that inherit from the parent class. Make s
 Of course you will continue to see places where block and functional scope are used.
 
 Create your own scenarios where block and function scope are shown. They can be two separate pieces of code.
+
+## Testing
+
+What are the four phases of testing you saw in module 2? (Maybe you only used three, but that's ok.)
+
+How do you know what to test?
+
