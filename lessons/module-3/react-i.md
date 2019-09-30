@@ -111,11 +111,14 @@ If we take a look at a website like Twitter, we can start to flesh out what comp
 
 ![twitter components](/assets/images/lessons/intro-to-react/twitter-components.png)
 
-#### Your Turn
+<section class="call-to-action">
+### Your Turn
 
 Pick a web app that you frequently use and try to break it down into components just by looking at it. Which components might be reused on the page? Which components might have components nested within them? Try to think of semantic names for each of the components you identify.
+</section>
 
-#### Important Note
+<section class="note">
+### More on the term 'component'
 
 You'll hear the term 'component' used in many different areas of programming, and it might mean slightly different things depending on the context. In React, components have the following characteristics:
 
@@ -123,10 +126,11 @@ You'll hear the term 'component' used in many different areas of programming, an
 * They return one, single JSX element (remember, functions can only return one thing!)
 
 We'll start investigating these characteristics by practicing with functional components.
+</section>
 
 ### Functional Components
 
-Functional components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Functional components are just functions that return the HTML you want rendered to the DOM. Examine the following example:
+Functional components are components that simply need to render content to the DOM, and do not need to be aware of any application data that might be changing. They are sometimes called "dumb" components. Functional components are just functions that return the JSX you want rendered to the DOM. Examine the following example:
 
 ```jsx
 const App = () => (
@@ -172,9 +176,11 @@ When we pass props down to a child component, it comes through as a simple JavaS
 
 <iframe src="https://codesandbox.io/embed/eloquent-bartik-b2182?fontsize=14" title="eloquent-bartik-b2182" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>
 
-#### Your Turn
+<section class="call-to-action">
+### Your Turn
 
 Imagine if we have 50 different grocery items.  That is going to make our code look messy if we have to write the GroceryItem component 50 times.  How could we refactor this using an array of data and the `.map()` array prototype method?
+</section>
 
 ### State
 
@@ -186,11 +192,13 @@ One of the more confusing things about React is when to make a component a class
 
 Understanding the difference between props and state can be tricky. Read through the top three answers on this [stackoverflow question](https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react), and go through any links or resources provided in the answers. Just because one answer has the most upvotes, doesn't mean it's going to be the one that makes everything click for you. Take your time reading through the explanations here.
 
-## Checks for Understanding
+<section class="checks-for-understanding">
+### Checks for Understanding
 
 * How does React improve the process of manipulating the DOM?
 * What are some differences between functional and class components?
 * What is the difference between props and state?
+</section>
 
 ## Further Reading & Resources
 * [ReactJS Docs](https://reactjs.org/)
