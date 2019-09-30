@@ -10,9 +10,9 @@ tags: html, introduction, practice
 * Identify and use attributes for appropriate elements
 * Understand the importance of writing semantic HTML
 
-<!-- ## Prep
+## Prep
 
-Students should spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome-dev-tools) resource before attending class. -->
+Students should spend 15-20 minutes reading, watching, and completing the content in the [Chrome Dev Tools](./chrome-dev-tools) resource before attending class.
 
 ## Warm Up
 

@@ -25,12 +25,12 @@ Instructors will be around during the day to answer questions, but - like a real
 
 ## Deliverables
 
-You will be given the spec at on Monday of Week 6.
+<!-- You will be given the spec at on Monday of Week 6. -->
 
-**Due Date:** Wednesday of Week 6 at 12:00pm.
+**Due Date:** Wednesday of Week 6 at 9:00AM.
 
 ## Evaluation
 
-We will have a quick in-person evaluation Wednesday afternoon where you will show what you worked on - this can be done for interviews when they bring you in after the challenge.
+We will have a quick in-person evaluation Wednesday where you will show what you worked on - this can be done for interviews when they bring you in after the challenge.
 
 Show what you created, your favorite piece of code, what you struggled with, and what you would like to add in the future if you had more time.

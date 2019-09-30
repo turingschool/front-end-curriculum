@@ -7,7 +7,7 @@ Often times in interviews, you will be asked to provide a detailed description o
 
 Please create a private gist that highlights the prompts below. Take time to provide thoughtful and descriptive answers while the experience is still fresh in your mind so that you have a collection of reflections you can pull from when it is time to start interviewing!
 
-## Abstract 
+## Abstract
 
 - In a few sentences, explain **what** the project was and the scope of your work. Imagine explaining your answer to a technical recruiter or a developer who you'd potentially be interviewing with.
 
@@ -26,5 +26,3 @@ Please create a private gist that highlights the prompts below. Take time to pro
 ## Reflection
 
 - What lessons did you learn during this project? How have you applied these lessons in a recent project (or plan to)?
-
-Once you have completed your gist, please [complete the following form](https://forms.gle/CrmGCxTgmaAGvNWPA) to submit your reflection and answer a few short questions about your pairing/team experience.

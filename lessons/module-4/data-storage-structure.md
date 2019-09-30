@@ -9,14 +9,24 @@ module: 4
 
 By the end of this lesson, you will:
 
-* Be familiar with common data relationships and understand how their structure is affected by the database you choose
 * Understand the difference between relational and non-relational databases
+* Understand and diagram the 3 types of relationships in relation database design
+
 
 ## Databases
 
-A database is a collection of data stored in an organized way.
+A database is a collection of data that is specifically organized so that it can be easily and efficiently accessed, managed, and updated. 
+
+One of the biggest keys for successful database design is _PLANNING_. This includes verifying the requirements for your application, diagramming your data, and being willing to refine your plan _before_ you start coding.
+
+Some questions you should ask yourself as part of the planning process include:
+
+- What information do we need to store? (analytics, social, articles)
+- How do we want to retrieve information from the database? (Are we doing complex queries - join operations )
+- How frequently will data be stored? Retrieved? (Read heavy: news article websites, Wiki.... Write heavy: Social Media)
 
 Software products that are used to build, maintain and access data from a database are called Database Management Systems. You'll often hear of two different types of database systems: **relational** and **non-relational**. 
+
 
 ### Non-Relational Databases
 
@@ -25,7 +35,7 @@ Up until now, you have mostly seen non-relational databases. Non-relational data
 Non-relational databases:
 
 * **Allow for irregular data to be stored** - allows for a more nested data structure as you can store lists and objects in any field
-* **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast, but it also means it's safe from SQL injection attacks.
+* **Do not have structured mechanisms for linking data between tables** - No SQL means we have to do manual linking of our data records which can get ugly pretty fast.
 
 Non-relational databases have been gaining popularity as the web can support more complex data types and applications are becoming more robust. They come with much greater flexibility. But as always, greater flexibility also means a greater chance of doing things wrong (or not necessarily wrong, but definitely less efficient).
 
@@ -193,7 +203,6 @@ Choosing a Database Management System for your application is highly dependent o
 * What are two or more differences between relational and non-relational databases?
 * What is a schema?
 * Give an example of a one-to-many relationship. A many-to-many relationship?
-
 
 ## Resources
 
