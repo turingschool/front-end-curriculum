@@ -4,8 +4,6 @@ tags: inheritence, fetch, OOP, arrays, prototypes, scope, context, testing
 module: 3
 ---
 
-# Module 2 Review
-
 ## Array Prototypes
 
 You're going to continue working with datasets throughout the rest of your career as a front-end developer (and certainly in mod 3).
