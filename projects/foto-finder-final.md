@@ -6,7 +6,6 @@ title: Foto Finder
 
 Now that you've got the main foundations down to build out a frontend application, it's time to prove to yourself that you own those skills! You're going to be building a photo album application called Foto Finder!
 
-Note: If you have started to learn some es6, feel free to implement all of those new es6 features (arrow functions, block scoped variables, etc.).  However, if es5 syntax is still more comfortable for you, then stick with what you know.  You'll get a lot more practice and instruction with modern Javascript features next mod!
 
 ## Learning Goals
 
@@ -15,7 +14,7 @@ Note: If you have started to learn some es6, feel free to implement all of those
   * clean & organized CSS styles
   * DRY JavaScript
   * localStorage to persist data
-* Iterate through/filter dom elements using for loops/array prototype methods
+* Iterate through/filter DOM elements using for loops/array prototype methods
 * Understands the difference between the data model and how the data is displayed on the DOM
 * Ability to match/recreate a UI and create a great UX
 
@@ -30,7 +29,7 @@ You will have two javascript files:
     2. `saveToStorage`
     3. `deleteFromStorage`
     4. `updatePhoto`
-2. A `main.js` file that contains all dom related javascript.
+2. A `main.js` file that contains all DOM related javascript.
 
 ### Data Model
 * An photo has an _id_, _title_, _caption_, _file_, and a _favorite_ property.
@@ -97,6 +96,15 @@ We want the user to be able to search through all of their photos easily.
 
 ### Phase 4
 
+#### Viewing Favorites
+
+Finally, let's let our user be able to view only their favorites.
+
+- The user should only see their favorites when they click on the `View Favorites` button. (consequently, the text on the button should then say `View All Photos`)
+- Clicking on the `View All Photos` button, the user should be able to see all of their photo cards.
+- When viewing favorites, search field should only search through the favorited photos.
+  - Do not need to persist changes in between sessions.
+
 #### Recent Photos
 
 The application should only show the ten most recent Photos on page load.
@@ -108,14 +116,6 @@ The application should only show the ten most recent Photos on page load.
   * This functionality should toggle back and forth based on that button click.
   * Do not need to persist changes in between sessions.
 
-#### Viewing Favorites
-
-Finally, let's let our user be able to view only their favorites.
-
-- The user should only see their favorites when they click on the `View Favorites` button. (consequently, the text on the button should then say `View All Photos`)
-- Clicking on the `View All Photos` button, the user should be able to see all of their photo cards.
-- When viewing favorites, search field should only search through the favorited photos.
-  - Do not need to persist changes in between sessions.
 
 ### Extensions
 
