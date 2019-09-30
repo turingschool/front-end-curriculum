@@ -4,9 +4,11 @@ tags: inheritence, fetch, OOP, arrays, prototypes, scope, context
 module: 3
 ---
 
-
+# Module 2 Review
 
 ## Array Prototypes
+
+You're going to continue working with datasets throughout the rest of your career as a front-end developer (and certainly in mod 3).
 
 Working with this data:
 
@@ -43,3 +45,26 @@ const someNews = [
 ];
 ```
 
+Use array prototype methods to:
+
+* Get all of the news items that have been read - then get all that have _not_ been read
+* Create a new array of only the news titles
+* Count how many news articles have not been read
+
+## Fetch
+
+HTTP requests are very powerful for retrieving data that you want to use in your applications. Many of your projects will utilize `fetch` to make HTTP requests for data from outside of your own application.
+
+Get some advice from [this API](https://api.adviceslip.com/). Write a `fetch` call to `console.log` some advice in your browser console (dev tools).
+
+## Inheritance
+
+React components use inheritance behind the scenes. So it's important to know the mechanics of inheritance.
+
+Create a parent and two child classes that inherit from the parent class. Make sure there are at least one property and method shared in the child class.
+
+## Scope
+
+Of course you will continue to see places where block and functional scope are used.
+
+Create your own scenarios where block and function scope are shown. They can be two separate pieces of code.
