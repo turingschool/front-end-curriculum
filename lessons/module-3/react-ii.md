@@ -12,7 +12,6 @@ module: 3
 * Use state and props to manage application data
 * Create a controlled form
 * Use JSX
-* Understand conditional rendering
 
 ## Create React App
 
