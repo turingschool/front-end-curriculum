@@ -113,7 +113,7 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 
 ### Variables: Assigning Values
 
-Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `excellentHuman` variable:
+Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `bestInstagram` variable:
 
 ```javascript
 var bestInstagram = "mrpokee";
@@ -123,16 +123,16 @@ Notice after our `var` keyword and our variable name, we have an equals sign, `=
 
 Let's test these additions in our console!
 
-- Step 1: declare a variable and assign it a value
-- Step 2: call the variable
+- **Step 1**: declare a variable and assign it a value
+- **Step 2**: call the variable
 
 <section class="call-to-action">
 ### Console Practice
 
-- Declare a new variable, "age", and assign it to a value.
-- Declare a new variable, "city", and assign it to a value.
+- Declare a new variable, `age`, and assign it to a value.
+- Declare a new variable, `city`, and assign it to a value.
 - Call both new variables to confirm they hold the value you believe they do
-- What data type did you assign as the value in your "age" and "city" variables?
+- What data type did you assign as the value in your `age` and `city` variables?
 - Create three more variables, and give them each different data types (Number, String, Boolean)
 - Call each variable to confirm it holds the value you believe it does
 </section>
@@ -254,7 +254,7 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 Translate each of the following expressions to JavaScript. Type them out in your console so you can be more confident they are doing what you want them to do.
 
 _Example:_ Check if 2 is greater than or equal to 3
-_Example solution:_ `2 > 3`
+_Example solution:_ `2 >= 3`
 
 - Find 12 divided by 3
 - Find the remainder when 12 is divided by 5
