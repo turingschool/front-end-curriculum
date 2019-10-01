@@ -26,6 +26,13 @@ Read through [Intro to CSS Pre-Work document](./intro-to-css-prework.html) and a
 - `selector` used to target HTML elements on our web pages that we want to style
 - `rule` selector(s) and a declaration block come together to create a rule
 
+## Warm Up
+
+Answer the following questions in your notebook. Be ready to share out your answer as if you were in an interview.
+- What is the difference between HTML and CSS?
+- List at least two ways an element can be targeted in CSS, and write out the syntax.
+- List at least three CSS properties and explain what they do.
+
 ## What is CSS?
 
 It’s a “style sheet language” that lets you style the HTML elements on your page. CSS works _with_ HTML, but isn't HTML. CSS controls the positioning, sizing, colors, and specific fonts on your page. There is a `class` and `id` attribute available to use on __every__ HTML element. In addition to the plain old element names themselves, these attributes allow you to create "targets" for both your CSS and JavaScript. They are hooks that you can use to manipulate the look and behavior of your HTML elements.
@@ -93,11 +100,12 @@ This diagram can be found in the CSS Dev Tools and the same color coding is used
 
 First, let's flex those command line muscles you've been building:
 
-* Create a directory called static-site-playground
+* Create a directory called `static-site-playground`
 * Create a file `index.html`, copy and paste in the HTML provided below
 * Create a file `main.css`
+* Open the project in Atom
 * Link the index and main files you just made
-* Test things are working as expected by opening in the browser by running `open index.html` in your terminal:
+* Test things are working as expected by opening in the browser by running `open index.html` in your terminal
 
 ```html
 <!doctype html>
@@ -107,9 +115,9 @@ First, let's flex those command line muscles you've been building:
   </head>
   <body>
     <h1>Button Practice</h1>
-    <article>
+    <section>
       <button class="track-package">Track package</button>
-    </article>
+    </section>
   </body>
 </html>
 ```
@@ -120,9 +128,9 @@ Next, we'll use this HTML to do some experimenting with Box Model behavior.
 ### Explore Box Model
 
 On your own, take a few minutes to practice writing the syntax of CSS rules and seeing how margin and padding effect an element.
-- A common mantra when working on CSS is "when in doubt, border it out". Apply a border of an obvious color to both the article and button so you are 100% clear on where things are.
+- A common mantra when working on CSS is "when in doubt, border it out". Apply a border of an obvious color to both the section and button so you are 100% clear on where things are.
 - Add margin and padding to your button
-- Add margin and padding to the article
+- Add margin and padding to the section
 
 With your partner, choose a website you frequently visit. Find a button or box that demonstrates the use of padding. Find a place where margin was probably used to provide breathing room. Be ready to show and share!
 </section>
@@ -147,7 +155,7 @@ First, work to recreate the "Track package" button. Since the focus is box model
   - How thick is the border?
   - What do the corners of the button look like?
 
-Now, work to recreate the 5 grey buttons. You already have a lot to work with from the code you wrote for the first one. Use `#e7e9ec` for the background and `#A2A6AC` for the border. Things to keep in mind:
+Now, work to recreate the 4 grey buttons. You already have a lot to work with from the code you wrote for the first one. Use `#e7e9ec` for the background and `#A2A6AC` for the border. Things to keep in mind:
   - How much space is between each grey button?
   - How much space is between the yellow and first grey button?
 </section>
@@ -156,7 +164,7 @@ Now, work to recreate the 5 grey buttons. You already have a lot to work with fr
 
 In HTML, you can visualize each element as its own rectangular box. There are a number of CSS properties that can affect the final width and height of each of these boxes. The CSS Box Model describes how the final height and width of an element is determined.
 
-We have an `article` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The Dev Tools panel provides a handy graphic of how our article is being rendered.
+We have an `section` element that we gave a `width` of `400` and a `height` of `200`. However, we've also applied several additional properties that are affecting its size and positioning. The `padding` and `border` properties are both adding `20px` to the element's height and width. Now the actual *visible* dimensions of our element are `480x280`. The Dev Tools panel provides a handy graphic of how our section is being rendered.
 
 This is the default behavior for the rendering of block elements in CSS and is due to the `box sizing` property having a default value of `content-box`. The `box-sizing` property allows us to override this behavior and alter how the dimensions of an element are calculated:
 
@@ -169,6 +177,8 @@ This is the default behavior for the rendering of block elements in CSS and is d
 ```
 
 Setting the `box-sizing` property to `border-box` will alter the model so that the `width` and `height` properties include the content, padding and border. If we were to set `box-sizing: border-box` on our previous example, our element would be rendered at exactly the `400x200` dimensions we specified. It's `padding` and `border` properties would be included within those dimensions, making our content area slightly smaller.
+
+You can read about and see another example [here](https://dev.to/ameseee/meet-border-box-my-best-friend-a56).
 
 <section class="call-to-action">
 ### Revisiting Amazon Buttons
