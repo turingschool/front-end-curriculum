@@ -295,9 +295,9 @@ Now for some real conditional examples.
 var hoursOfSleep = 8;
 
 if (hoursOfSleep < 6) {
-  console.log('I am groggy.');
+  console.log("I am groggy.");
 } else {
-  console.log('I feel fantastic!');
+  console.log("I feel fantastic!");
 }
 ```
 
@@ -330,10 +330,10 @@ We've worked through a lot of content - some of which may be new, some is review
 <section class="checks-for-understanding">
 ### In Your Journal
 
-1. What are the six primitive data types?
+1. What are the five primitive data types we learned about today?
 2. How are variables useful and what is an example of one that has a value assigned to it?
 3. Write out an example of string concatenation.  Now write that same example using a template literal.
-4. Write out the basic structure of an if/else conditional.
+4. Write out the basic structure of an `if/else` conditional.
 5. Write down at least one question you have coming out of this lesson.
 </section>
 
