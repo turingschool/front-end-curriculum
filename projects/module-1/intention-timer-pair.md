@@ -35,7 +35,7 @@ Make sure both teammates and instructors are added as collaborators on the GitHu
 
 ![Zero State Desktop](./assets/intention-timer/zero-state-desktop.png)
 
-### Iteration 0 - Form Functionality
+### Iteration 1 - Form Functionality
 
 - Form Functionality
   - When an activity category is clicked on (`Exercise`, `Meditate`, or `Study`), the associated border and icon should change colors to give a visual indication that it has been selected. Colors are provided in comp.
