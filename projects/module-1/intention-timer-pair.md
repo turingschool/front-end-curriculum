@@ -13,7 +13,7 @@ title: Intention Timer - Pair
 
 ## Overview
 
-You'll be building an application that allows a user to set goals for their health and productivity, tied to an amount of time. After setting a timer for a certain goal, the user can log that activity to keep track of how they spend with time.
+You'll be building an application that allows a user to set goals for their health and productivity, tied to an amount of time. Users will select an activity category, set the amount of time they want to spend on that activity, and start the timer. The app will log that activity to keep track of how the user has been spending their time.
 
 ## Set Up
 
