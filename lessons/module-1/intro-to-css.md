@@ -127,7 +127,7 @@ Next, we'll use this HTML to do some experimenting with Box Model behavior.
 <section class="call-to-action">
 ### Explore Box Model
 
-On your own, take a few minutes to practice writing the syntax of CSS rules and seeing how margin and padding effect an element.
+On your own, take a few minutes to practice writing the syntax of CSS rules and seeing how margin and padding affect an element.
 - A common mantra when working on CSS is "when in doubt, border it out". Apply a border of an obvious color to both the section and button so you are 100% clear on where things are.
 - Add margin and padding to your button
 - Add margin and padding to the section
