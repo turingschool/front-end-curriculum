@@ -316,7 +316,7 @@ if (nextLocation === "home") {
 <section class="call-to-action">
 ### Your Turn
 
-In your console, declare and assign a variable named "favoriteAnimal". Then, write a conditional that logs a different message based on your favorite kind of animal.
+In your console, declare and assign a variable named `favoriteAnimal`. Then, write a conditional that logs a different message based on your favorite kind of animal.
 
 **Tip:** You can use the `up arrow` in the Dev Tools console to search through previous commands you have run.
 
