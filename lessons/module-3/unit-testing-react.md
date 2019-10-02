@@ -76,7 +76,7 @@ they "recommend that you use a separate tool for browser end-to end tests if you
 Enzyme is a fantasic tool for testing our React components in a virtual way, without actually having to use a browser. This makes running tests related to our UI much faster. First off, let's get Enzyme installed:
 
 ```bash
-npm i enzyme -S
+npm i enzyme -D
 ```
 
 You're also going to need the enzyme adapter for the version of React that you're using. As of this writing, it's enzyme-adapter-react-16, but that will change in the future, when create-react-app starts using version 17 of React. Just make sure you have the right one.
