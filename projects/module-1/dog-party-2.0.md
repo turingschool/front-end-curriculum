@@ -4,7 +4,7 @@ title: Dog Party 2.0 (Positioning Is Ruff)
 
 ## Overview
 
-As a frontend developer, you're going to need to be able to accurately build out the UI (user interface) for websites based on [comps](https://en.wikipedia.org/wiki/Comprehensive_layout) provided by a designer. For your first project, you'll build a 1-page static site to practice writing well structured, semantic HTML with clean, precise CSS, as well as take a first crack at adding some user interaction with Javascript and the DOM.  
+As a frontend developer, you're going to need to be able to accurately build out the UI (user interface) for websites based on [comps](https://en.wikipedia.org/wiki/Comprehensive_layout) provided by a designer. For your first project, you'll build a 1-page static site to practice writing well structured, semantic HTML with clean, precise CSS, as well as take a first crack at adding some user interaction with JavaScript and the DOM.  
 
 <!-- Something to note is that you will need to style the comp two different ways using two different css stylesheets. This is based off of the [CSS Zen Garden site](http://www.csszengarden.com/).  **Although you will need to have two stylesheets, the same HTML file and structure will be used for both layouts** (aka even though you'll have two stylesheets, you'll have only one index.html file). This is to help you focus on what is necessary for your HTML structure so that it can work for multiple layouts. -->
 
@@ -36,8 +36,8 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 ## Iteration 1: Add some functionality
 
-- Once you have the HTML structure built and successfully being styled to work for both layouts using your two CSS files, experiment with adding in interaction using Javascript: Build functionality to allow a user to type a dog name in the input field and then, when the user clicks the button, have that dog name replace the text `Some Dogs` in the main `A Site About Some Dogs` header and clear out the input field. For example: if I typed `Fido` into the input, when I click the button the main header of the page should change to read `A Site About Fido`.
-- Work to craft your Javascript according to the [Turing Javascript Style Guide](https://github.com/turingschool-examples/javascript)
+- Once you have the HTML structure built and successfully being styled to work for both layouts using your two CSS files, experiment with adding in interaction using JavaScript: Build functionality to allow a user to type a dog name in the input field and then, when the user clicks the button, have that dog name replace the text `Some Dogs` in the main `A Site About Some Dogs` header and clear out the input field. For example: if I typed `Fido` into the input, when I click the button the main header of the page should change to read `A Site About Fido`.
+- Work to craft your JavaScript according to the [Turing JavaScript Style Guide](https://github.com/turingschool-examples/javascript)
 
 ## Iteration 2: Make it responsive
 
