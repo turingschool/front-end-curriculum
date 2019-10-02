@@ -12,7 +12,6 @@ tags: javascript, scope, hoisting
 ## Vocabulary
 
 - `Scope` Determines the accessibility/visibility of variables and functions
-- `Hoisting` The process of implicitly moving the declaration of variables and functions to the top of their scope
 
 ## Variable Scope
 
@@ -118,52 +117,4 @@ function test(number) {
 test(num)
 
 console.log(num); // This will also give 12
-```
-
-## Hoisting
-
-Hoisting refers to the order in which variable and function declarations are stored in memory.
-
-<section class="call-to-action">
-### Explore Hoisting in the Global Scope
-
-Visit [this repl](https://repl.it/@ameseee/Hoisting-in-Global-Scope) and follow these directions:
-1. Read the code and comments above. Predict what will print to the console for each of the four `console.log`s
-2. One-by-one, uncomment out each `console.log`. Run the program to see what is printed out.
-3. What is printed out? Is that the same or different from what you expected?
-4. Repeat, for all four `console.log`s.
-5. What does this tell you about where you can access variables? What does this tell you about where you can access functions?
-</section>
-
-Key Takeaways:
-- The interpreter will always look for variables and function declarations _before_ going line-by-line through the rest of the script
-- A function can be called on a line of code before the line of code where it is defined
-- A variable in the global scope will be `undefined` on any line of code before the assignment (as opposed to throwing a ReferenceError, not ever being defined)
-
-### Function Scope
-
-Variables scoped to a function behave the same way global variables do. Let's explore [this example](https://repl.it/@ameseee/Hoisting-in-Function).
-
-Example:
-
-```js
-// This named function...
-function foo() {
-  bar();
-  var x = 1;
-}
-
-// Will actually be interpreted like this:
-function foo() {
-  var x;
-  bar();
-  x = 1;
-}
-
-// Which can be seen here:
-function bar() {
-  console.log('y before:', y);
-  var y = 2;
-  console.log('y after:', y);
-}
 ```

@@ -27,6 +27,11 @@ In this lesson we'll cover:
 - `Operator` Symbols that are used to assign, compare, and perform operations
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 
+## Warm Up
+
+With your partner...
+- Ham is to Hamster. Come up with at least 2 more
+
 ## History of JavaScript
 
 Way back in the early days of the web, Brendan Eich created JavaScript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'JavaScript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
