@@ -381,9 +381,9 @@ Run the tests and watch them fail (RED).
 
 Write some code to implement the functionality one test at a time. You can use the method `.skip` on any tests you want to skip so you can isolate individual tests you want to run.  
 
-Take a minute to make those tests pass **WITHOUT LOOKING AHEAD**. Here's a picture of a pig so you aren't tempted to look at the answer first.  
+Take a minute to make those tests pass **WITHOUT LOOKING AHEAD**. Here's a picture of some capybara so you aren't tempted to look at the answer first.  
 
-![adorable pig in rain boots](http://i.imgur.com/iEL5S40.jpg)   
+![cute capybara family](https://i.imgur.com/ZCUC5xw.jpg)   
 
 
 ```js

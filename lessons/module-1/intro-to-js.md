@@ -27,6 +27,11 @@ In this lesson we'll cover:
 - `Operator` Symbols that are used to assign, compare, and perform operations
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 
+## Warm Up
+
+With your partner...
+- Ham is to Hamster. Come up with at least 2 more
+
 ## History of JavaScript
 
 Way back in the early days of the web, Brendan Eich created JavaScript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'JavaScript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
@@ -113,7 +118,7 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 
 ### Variables: Assigning Values
 
-Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `excellentHuman` variable:
+Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `bestInstagram` variable:
 
 ```javascript
 var bestInstagram = "mrpokee";
@@ -123,16 +128,16 @@ Notice after our `var` keyword and our variable name, we have an equals sign, `=
 
 Let's test these additions in our console!
 
-- Step 1: declare a variable and assign it a value
-- Step 2: call the variable
+- **Step 1**: declare a variable and assign it a value
+- **Step 2**: call the variable
 
 <section class="call-to-action">
 ### Console Practice
 
-- Declare a new variable, "age", and assign it to a value.
-- Declare a new variable, "city", and assign it to a value.
+- Declare a new variable, `age`, and assign it to a value.
+- Declare a new variable, `city`, and assign it to a value.
 - Call both new variables to confirm they hold the value you believe they do
-- What data type did you assign as the value in your "age" and "city" variables?
+- What data type did you assign as the value in your `age` and `city` variables?
 - Create three more variables, and give them each different data types (Number, String, Boolean)
 - Call each variable to confirm it holds the value you believe it does
 </section>
@@ -254,7 +259,7 @@ Expressions rely on operators to calculate their single value. There are 5 basic
 Translate each of the following expressions to JavaScript. Type them out in your console so you can be more confident they are doing what you want them to do.
 
 _Example:_ Check if 2 is greater than or equal to 3
-_Example solution:_ `2 > 3`
+_Example solution:_ `2 >= 3`
 
 - Find 12 divided by 3
 - Find the remainder when 12 is divided by 5
@@ -295,9 +300,9 @@ Now for some real conditional examples.
 var hoursOfSleep = 8;
 
 if (hoursOfSleep < 6) {
-  console.log('I am groggy.');
+  console.log("I am groggy.");
 } else {
-  console.log('I feel fantastic!');
+  console.log("I feel fantastic!");
 }
 ```
 
@@ -316,7 +321,7 @@ if (nextLocation === "home") {
 <section class="call-to-action">
 ### Your Turn
 
-In your console, declare and assign a variable named "favoriteAnimal". Then, write a conditional that logs a different message based on your favorite kind of animal.
+In your console, declare and assign a variable named `favoriteAnimal`. Then, write a conditional that logs a different message based on your favorite kind of animal.
 
 **Tip:** You can use the `up arrow` in the Dev Tools console to search through previous commands you have run.
 
@@ -330,10 +335,10 @@ We've worked through a lot of content - some of which may be new, some is review
 <section class="checks-for-understanding">
 ### In Your Journal
 
-1. What are the six primitive data types?
+1. What are the five primitive data types we learned about today?
 2. How are variables useful and what is an example of one that has a value assigned to it?
 3. Write out an example of string concatenation.  Now write that same example using a template literal.
-4. Write out the basic structure of an if/else conditional.
+4. Write out the basic structure of an `if/else` conditional.
 5. Write down at least one question you have coming out of this lesson.
 </section>
 

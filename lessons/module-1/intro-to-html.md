@@ -186,8 +186,8 @@ As sites become more complex, more elements are used, and more are used in relat
 <main>
   <section>
     <h2>Coffee Ipsum</h2>
-    <p>Variety, half and half, trifecta medium arabica froth percolator. Mug brewed aromatic that sit to go latte. Cup, skinny cup, as blue mountain turkish, pumpkin spice.<p>
-    </p>Pumpkin spice americano java coffee doppio and sweet mug java saucer variety aromatic. Flavour, cappuccino macchiato et at, latte french press cream rich con panna barista single origin.</p>
+    <p>Variety, half and half, trifecta medium arabica froth percolator. Mug brewed aromatic that sit to go latte. Cup, skinny cup, as blue mountain turkish, pumpkin spice.</p>
+    <p>Pumpkin spice americano java coffee doppio and sweet mug java saucer variety aromatic. Flavour, cappuccino macchiato et at, latte french press cream rich con panna barista single origin.</p>
   </section>
 </main>
 ```

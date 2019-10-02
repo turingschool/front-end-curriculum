@@ -82,6 +82,27 @@ As part of your project planning and workflow for this project, it is expected t
 We also expect that you will follow a [rebase workflow](https://medium.com/hackernoon/git-merge-vs-rebase-whats-the-diff-76413c117333) for this project.
 
 
+<!-- 
+
+__Sprint Board__
+    * Icebox (Stories to do eventually)
+    * Backlog (Stories to do next) These are our priorities for the next day, new few days
+    * In Progress (Stories currently being worked on) - owned by someone 
+    * In Review (Stories with finished code the team* is reviewing)
+    * Completed (Things we’ve finished/merged)
+    
+    
+__WHAT IS A STORY?__
+    * One single unit of work
+    * Possibly following this format:
+      
+      ```js
+      As a [ user type ]
+      I want [ feature requested]
+      So that [ benefit gained]
+      ```
+
+ -->
 ## Articulation Requirement
 
 In addition to the functional requirement, on a separate dedicated git branch, go through each line of the server file and put a comment on each line that explains what that line of code is doing. Be as explicit as you can.
