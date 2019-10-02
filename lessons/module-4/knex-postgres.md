@@ -180,7 +180,7 @@ exports.down = function(knex) {
 };
 ```
 
-_Note: In some examples online, you are likely to see a second argument of `Promise` passed in. Before the latest version of Knex (0.18.0), Knex utilized the bluebird promise library for promise functionality instead of native promises. As of the newest version, Knex no longer supports versions of Node.js that are older than 8_
+_Note: In some examples online, you are likely to see a second argument of `Promise` passed in. Before the 0.18.0 version of Knex, Knex utilized the bluebird promise library for promise functionality instead of native promises. As of the newest version, Knex no longer supports versions of Node.js that are older than 8_
 
 ### Running Your Migrations
 
@@ -379,7 +379,7 @@ exports.seed = (knex) => {
 
 ## Fetching From the Database
 
-Let's write some express code to interact with our newly seeded database. [Set up a simple express server](https://frontend.turing.io/lessons/module-3/intro-to-express.html) and we'll add some configuration to work with the knex database:
+Let's write some express code to interact with our newly seeded database. [Set up a simple express server](https://frontend.turing.io/lessons/module-4intro-to-express.html) and we'll add some configuration to work with the knex database:
 
 ```js
 const environment = process.env.NODE_ENV || 'development';
