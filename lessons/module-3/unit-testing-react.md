@@ -287,7 +287,7 @@ We'll learn more about conditional rendering in React III but for now, let's add
 
 Imagine our Card component having an extra property, called "isFavorite" - and if "isFavorite" is true, then the Card will have an a different class of "favorite".
 
-```js
+```jsx
 // Card.js
 
 import React from 'react';
@@ -435,6 +435,133 @@ describe('App', () => {
 ```
 
 - `wrapper.state([arg])` returns the state based what key you give as an argument.  If there is no argument included, it returns the entire state.  Read the docs [here](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html)!
+
+### More Practice & Examples (Forms!)
+
+Let's dive into a few more examples where testing methods and changes in state can happen a lot.  The best scenario for this is in our `Form` component!  Let's get our initial setup done by creating the test file, importing what is necessary, and include a snapshot test if you haven't already.
+
+```js
+import React from 'react';
+import { shallow } from 'enzyme'
+import Form from './Form';
+
+describe('Form', () => {
+  let wrapper
+  const mockAddIdea = jest.fn();
+
+  beforeEach(() => {
+    wrapper = shallow(<Form addIdea={jest.fn()} />);
+  });
+
+  it('should match the snapshot', () => {
+    expect(wrapper).toMatchSnapshot();
+  });
+});
+```
+
+Awesome now that we have got that set up, let's take a closer look at our `Form` component.  One of the first methods that we have is `handleChange`.  Inside the method it is updating the state. So let's write another test that invokes this method and check to see if state has been updated.  Give it a shot now!
+
+<section class="call-to-action">
+### Your Turn
+
+Write a test that calls `handleChange` on the **instance** and check to see if state has been updated.  Look at the last test we wrote for `addIdea` in the `App.test.js`.  Are we passing any arguments through handleChange?  What properties are we expecting to have inside of that *event* object?
+</section>
+
+Let's take a look at a solution below:
+
+```js
+    it('should update state when handleChange is called', () => {
+    const mockEvent = { target: { name: 'title', value: 'Sweaters for pugs.'} };
+    const expected = 'Sweaters for pugs.';
+
+    wrapper.instance().handleChange(mockEvent);
+
+    expect(wrapper.state('title')).toEqual(expected);
+  });
+```
+
+Notice we had to mock out the event object giving it the exact properties we expected it to have.  It needs a `target` that has a value of an object that also has two properties of `name` and `value`.  You can give them whatever values you want as long as you assert that the change in state has that same value!  Let's practice doing one more test that is similar.
+
+<section class="call-to-action">
+### Your Turn
+
+Write a test for your `resetInputs` method.  The purpose of this method is to clear out the state right?  Think about how you could set a default state in here (how do you normally set state?), and then run the `resetInputs` method.  Then assert that the state is empty.
+</section>
+
+Let's take a look at a solution below:
+
+```js
+  it('should reset state when resetInputs is called', () => {
+    const defaultState = { title: 'Sweaters for pugs', description: 'Why not?'}
+    const expected = { title: '', description: '' };
+    
+    wrapper.instance().setState(defaultState);
+
+    wrapper.instance().resetInputs();
+
+    expect(wrapper.state()).toEqual(expected);
+  });
+```
+
+Crazy!  We can call `setState` in our component as well since it is a method that we have available that we inherit from the `Component` class.  Then we can call the method assert that the state has been emptied out.
+
+Let's now take a look at a more complicated method like `submitNewIdea`.  We can see that it's passing an event object, so that should tell us that we will need to mock it out like we did previously.  It looks like it also creates a new Idea object and calls two methods, `addIdea` and `resetInputs`.  Since `addIdea` comes from our `App`, we don't need to test the functionality of it. (we already have actually!)  We have also already tested what `resetInputs` does as well!  What we want to do is test that these methods have been invoked!  Let's work through it together:
+
+```js
+  it('should call addIdea and resetInputs when submitNewIdea is called', () => {
+    const mockEvent = { preventDefault: jest.fn() };
+    wrapper.instance().resetInputs = jest.fn();
+    wrapper.instance().submitNewIdea(mockEvent);
+    
+    expect(wrapper.instance().props.addIdea).toHaveBeenCalled();
+    expect(wrapper.instance().resetInputs).toHaveBeenCalled();
+  });
+```
+
+This one is a bit trickier.  We want to set `resetInputs` to a mock function so that we can keep track of whether or not the function has been called.  After invoking `submitNewIdea`, we want to assert a few things.  Notice at the top of our test where we are declaring our wrapper, we are passing `addIdea` as a prop which has the value of a mock function.  So, we can test that both `addIdea` and `resetInputs` have been called.
+
+Now...is there a way that we can take this a step further?  Notice that `addIdea` often passes an argument (the newIdea).  We can change our expectation so it reads:
+
+```js
+expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith();
+```
+
+Read what the test tells us.  It's now checking the argument which has our default values and an id set to the actual `Date.now()`.  The problem is that `Date.now()` is always going to be a different value everytime we run the test.  Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
+
+```js
+  it('should call addIdea and resetInputs when submitNewIdea is called', () => {
+    global.Date.now = jest.fn().mockImplementation(() => 12345)
+    const mockEvent = { preventDefault: jest.fn() };
+    const expected = { title: '', description: '', id: 12345 };
+    wrapper.instance().resetInputs = jest.fn();
+    wrapper.instance().submitNewIdea(mockEvent);
+    
+    expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith(expected);
+    expect(wrapper.instance().resetInputs).toHaveBeenCalled();
+  });
+```
+
+We are assigning `Date.now` to a mock function.  These mock functions have a method called `mockImplementation` to tell it how that mock function should behave.  Here we are just telling it that it should always return the value of *12345* everytime it gets invoked.  Now we make an assertion because the value will always be the same.  Cheers!
+
+Let's write one more test.  Let's test something different, like simulating an event.  Similar to our `Card` component when we clicked on a button, we can do something similar here.  Let's write a test for clicking the button on our form!  Let's work through it:
+
+```js
+  it('should run submitIdea when the button is clicked', () => {
+    wrapper.instance().submitNewIdea = jest.fn();
+    wrapper.instance().forceUpdate();
+    const mockEvent = { preventDefault: jest.fn() };
+
+    wrapper.find('button').simulate('click', mockEvent);
+
+    expect(wrapper.instance().submitNewIdea).toHaveBeenCalledWith(mockEvent);
+  });
+```
+
+<section class="note">
+### What is this forceUpdate?
+
+This has to do with the binding of our method.  Looking at the `Form` component, it is assigned to *this.submitNewIdea*.  If you change it to *e => this.submitNewIdea(e)* and comment out the `forceUpdate` line, it works as well!  Weird!  It has to do with how React binds the method to the onClick.  Don't stress too much on this, just know depending on how you set your methods to `onClick` and `onChange`, you might need to use `forceUpdate()`.  
+</section>
 
 <section class="checks-for-understanding">
 ### Homework: Finish testing your ideabox
