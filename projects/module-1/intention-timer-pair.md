@@ -13,7 +13,7 @@ title: Intention Timer - Pair
 
 ## Overview
 
-You'll be building an application that allows a user to set goals for their health and productivity, tied to an amount of time. After setting a timer for a certain goal, the user can log that activity to keep track of how they spend with time.
+You'll be building an application that allows a user to set goals for their health and productivity, tied to an amount of time. Users will select an activity category, set the amount of time they want to spend on that activity, and start the timer. The app will log that activity to keep track of how the user has been spending their time.
 
 ## Set Up
 
@@ -27,11 +27,15 @@ Make sure both teammates and instructors are added as collaborators on the GitHu
 
 ## Progression
 
-### Iteration 0 - Zero State and Form Functionality
+### Iteration 0 - Zero State
 
 - Build the layout with HTML & CSS
   - Before moving on, the header and left side of the page should match the comp.
   - The right side of the page should only have the sub-header and not that no activities exist since you do not have past activity card functionality yet!
+
+![Zero State Desktop](./assets/intention-timer/zero-state-desktop.png)
+
+### Iteration 1 - Form Functionality
 
 - Form Functionality
   - When an activity category is clicked on (`Exercise`, `Meditate`, or `Study`), the associated border and icon should change colors to give a visual indication that it has been selected. Colors are provided in comp.
@@ -39,19 +43,18 @@ Make sure both teammates and instructors are added as collaborators on the GitHu
   - A `Start Activity` button is provided to submit the data entered into the form. When the button is clicked, the user should no longer see the form, and instead see a timer clock. The timer clock should display the minutes a seconds, as well the and description. The category should not appear, but the outline of the circle should match the color associated with the category.
   - If the `Start Activity` button is clicked before the user has entered information into all four inputs, the user will receive an error message, but will not lose any information that was provided.
 
-![Zero State Desktop](./assets/intention-timer/zero-state-desktop.png)
 ![Complete Form Desktop](./assets/intention-timer/complete-form-desktop.png)
 ![Error Message Desktop](./assets/intention-timer/error-message-desktop.png)
 ![Timer Start Desktop](./assets/intention-timer/timer-start-desktop.png)
 
-### Iteration 1 - Build an MVP
+### Iteration 2 - Build an MVP
 
 - The user can start the time by clicking `Start`.
 - While timer is running, the user should see it count down by second.
 - When the timer completes, an [`alert`](https://developer.mozilla.org/en-US/docs/Web/API/Window/alert) should appear in the browser, letting the user know that the time is up. (This alert is temporary and is not something we suggest using in a fully built out application.)
 
 
-### Iteration 2 - Logging Past Activities
+### Iteration 3 - Logging Past Activities
 
 - When the timer completes, the `alert` no longer appears.
 - Instead, a motivational or congratulatory message appears on the left side of the page, replacing the timer.
@@ -62,7 +65,7 @@ Make sure both teammates and instructors are added as collaborators on the GitHu
 ![Activity Complete Desktop](./assets/intention-timer/complete-activity-desktop.png)
 ![Full Functionality Desktop](./assets/intention-timer/full-functionality-desktop.png)
 
-## Iteration 3 - Adding Functionality
+## Iteration 4 - Adding Functionality
 
 For this iteration, your team can select one or both of the options below:
 
@@ -80,7 +83,7 @@ For this iteration, your team can select one or both of the options below:
 
 Before moving on to an extension, the site should match the comp and any additions should be in the spirit of the comp and have been user-tested from a great user experience (UX).
 
-## Iteration 4 - Extensions
+## Extensions
 
 - Once the user starts the timer, they have an option to pause the timer.
 - An `Activity` class is written and utilized to hold the state of a given activity.
