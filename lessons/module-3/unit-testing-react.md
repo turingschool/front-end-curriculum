@@ -450,7 +450,7 @@ describe('Form', () => {
   const mockAddIdea = jest.fn();
 
   beforeEach(() => {
-    wrapper = shallow(<Form addIdea={jest.fn()} />);
+    wrapper = shallow(<Form addIdea={mockAddIdea} />);
   });
 
   it('should match the snapshot', () => {
