@@ -513,7 +513,7 @@ Let's now take a look at a more complicated method like `submitNewIdea`.  We can
     wrapper.instance().resetInputs = jest.fn();
     wrapper.instance().submitNewIdea(mockEvent);
     
-    expect(wrapper.instance().props.addIdea).toHaveBeenCalled();
+    expect(mockAddIdea).toHaveBeenCalled();
     expect(wrapper.instance().resetInputs).toHaveBeenCalled();
   });
 ```
@@ -536,7 +536,7 @@ Read what the test tells us.  It's now checking the argument which has our defau
     wrapper.instance().resetInputs = jest.fn();
     wrapper.instance().submitNewIdea(mockEvent);
     
-    expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith(expected);
+    expect(mockAddIdea).toHaveBeenCalledWith(expected);
     expect(wrapper.instance().resetInputs).toHaveBeenCalled();
   });
 ```
