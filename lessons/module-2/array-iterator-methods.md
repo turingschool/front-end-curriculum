@@ -210,7 +210,14 @@ let cleanArray = messyArray.reduce((accumulator, currentElement) => {
 
 The best way to get comfortable with these methods is to practice them, so we will!
 
-We'll break into groups and work on some <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">stations</a>. Answer the questions in each markdown file, and work through the problems in a repl. 
+We'll break into groups and work on some <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">stations</a>. Answer the questions in each markdown file, and work through the problems in a repl.
+
+The stations will be:
+1. `forEach`
+2. `map`
+3. `find`
+4. `filter`
+5. `reduce`
 
 It's highly recommended to keep a list of the methods, along with answers to the questions from the markdown files, in a place that's easy to turn back to!
 
