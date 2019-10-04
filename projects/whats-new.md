@@ -92,8 +92,8 @@ Projects will be due on Monday of Week 2 by 8am. The instructors will go through
 
 ### React Architecture
 
-* 1 - PropTypes are substantially unused. Project shows little understanding of React and significant refactoring is required including but not limited to component structure, knowing when to use class vs functional components, mutation of props, or etc.  Unnecessary data is being passed down to child components through props. File structure is not modular.
-* 2 - PropType functionality is complete.  There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component. 
+* 1 - Project shows little understanding of React and significant refactoring is required including but not limited to component structure, knowing when to use class vs functional components, mutation of props, or etc.  Unnecessary data is being passed down to child components through props. File structure is not modular.
+* 2 - There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component. 
 * 3 - React architecture is clean and organized.  Logic is kept out of return statements.  There are multiple functions that are doing similar pieces of functionality that could continue to be refactored.
 * 4 - Functions have been refactored to be reusable for multiple queries.  Evaluator has no recommendations for refactoring.
 
