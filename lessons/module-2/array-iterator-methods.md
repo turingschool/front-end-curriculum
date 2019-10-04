@@ -19,7 +19,7 @@ Arrays and objects are the more complex data types that are available to us in J
 
 <section class="call-to-action">
 **In Your Notebook**
-Write down everything you know about arrays. Everything you know about objects. Think about when you've used them in the past, where you've seen them, and what you've done with them. What do people mean with they say that "everything is an object" in JavaScript?
+Write down everything you know about arrays. Think about when you've used them in the past, where you've seen them, and what you've done with them.
 </section>
 
 An array is essentially a comma-separated list of related values. For example:
@@ -28,7 +28,7 @@ An array is essentially a comma-separated list of related values. For example:
 let pizzaToppings = ['onions', 'garlic', 'peppers'];
 ```
 
-An object is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:
+<!-- An object is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:
 
 ```js
 let pizza = {
@@ -38,7 +38,7 @@ let pizza = {
   extraCheese: true,
   toppings: ['onions', 'garlic', 'peppers']
 };
-```
+``` -->
 
 
 ## A Review of `for` Loops
@@ -67,13 +67,50 @@ What are they? Why are they useful? They loop through an existing array and appl
 
 `array.someArrayPrototype(callbackFunction)`
 
-There are many array prototype methods out there, but we are going to focus on some of the iterator methods: forEach, map, find, filter, reduce, and sort.
+### Callback Functions
+All the methods we'll talk about today will take a `callback function`. You've likely seen these before, but we'll got over the basic syntax:
+
+```js
+someData.somePrototype(function callBack (mandatoryParameter [,optionalParameters... ]) {
+  // some statements
+  // often a return statement
+})
+```
+Easy, right?
+
+#### Side Note:
+
+Many callbacks require a return statement. Remember that these statements determine what the CALLBACK returns, **not** what the METHOD returns. The method may return something different, and this value may need to be captured (in a variable, another return statement...).
+
+You can find more information on different prototype methods and their callbacks <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/prototype#Iteration_methods" target="\__blank">here</a>.
+
+There are many array prototype methods out there, but we are going to focus on some of the iterator methods: forEach, map, find, filter, and reduce.
+
+### `Array.forEach(callbackFunction)`
+
+Use Case: when you want to perform an operation on every element in an array.
+Note: `forEach` does NOT return anything. It's just a for loop in a method.
+
+```js
+let words = ['hello', 'world'];
+
+words.forEach(word => {
+  console.log(word)
+});
+
+/*
+Console will print:
+  hello
+  world
+*/
+```
 
 ### `Array.map(callbackFunction)`
 
-Use Case: when you want a new array based on your original, with some modification to each item
+Use Case: when you want a new array based on your original, with some modification to each item.
+Note: `map` will return a **new array of the same length** as the original array.
 
-The `map()` method is very similar to `forEach()`, except that each time the callback is executed, whatever is returned from the callback is added to a new array that map returns.
+The `map()` method is very similar to `forEach()`, except that each time the callback is executed, whatever is returned from the callback is added to the new array that map returns.
 
 ```js
 let evenNumbers = [2, 4, 6, 8, 10];
@@ -84,16 +121,14 @@ let oddNumbers = evenNumbers.map((number, index, array) => {
 
 console.log(oddNumbers); // [3, 5, 7, 9, 11]
 ```
-
-
-### Return?
-
+<section class="checks-for-understanding">
+#### Return?
 What is the purpose of the `return` in the `map()` example above?
+</section>
 
-
-### `Array.find(callbackFunction)` and `Array.filter(callbackFunction)`
-`Array.find()` helps you find a particular item in an array that matches a given condition. It will return the very first array element where the callback function returns true, even if there are multiple matches.
-
+### `Array.find(callbackFunction)`
+Use case: when you need to find a particular item in an array that matches a given condition. It will return the very first array element where the callback function returns true, even if there are multiple matches.
+Note: the callback needs to return a **boolean**. You also cannot modify the element you're finding
 
 ```js
 let pets = [
@@ -115,8 +150,11 @@ let threeYearOldPups = pets.filter(pet => {
 console.log(threeYearOldPups) // => [{name: 'julius', age: 3}, {name: 'mishu', age: 3}]
 ```
 
+### `Array.filter(callbackFunction)`
 
 `Array.filter()` is very similar to `Array.find()`, but instead of simply returning the first match, it will return a new array with all elements that match.
+
+Note: See the notes for `.find` above.
 
 
 ```js
@@ -136,11 +174,13 @@ console.log(adultPets);
 
 
 ### `Array.reduce(callbackFunction, initialValue)`
-`Array.reduce()` can turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:
+Use Case: If you need to turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:
 
 _Callback Function_ - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over
 
 _Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
+
+Note: `.reduce` is great for **cleaning data** (hint hint...)
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
@@ -166,14 +206,22 @@ let cleanArray = messyArray.reduce((accumulator, currentElement) => {
 // cleanArray is [0, 1, 2, 3, 4, 5]
 ```
 
+## Practice
 
+The best way to get comfortable with these methods is to practice them, so we will!
+
+We'll break into groups and work on some <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">stations</a>. Answer the questions in each markdown file, and work through the problems.
+
+It's highly recommended to keep a list of the methods, along with answers to the questions from the markdown files, in a place that's easy to turn back to!
+
+<!--
 ## What About Objects?
 
 How do we iterate through objects?... Hint: `Object.keys()` or `Object.values()`. Go over to the docs (MDN maybe), and read about what these do and when you might use them.
 
 Notice the different style of how these methods are used. How are these methods used for a given object?
 
-Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a>
+Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a> -->
 
 <section class="checks-for-understanding">
 ### Checks for Understanding
