@@ -210,7 +210,7 @@ let cleanArray = messyArray.reduce((accumulator, currentElement) => {
 
 The best way to get comfortable with these methods is to practice them, so we will!
 
-We'll break into groups and work on some <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">stations</a>. Answer the questions in each markdown file, and work through the problems.
+We'll break into groups and work on some <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">stations</a>. Answer the questions in each markdown file, and work through the problems in a repl. 
 
 It's highly recommended to keep a list of the methods, along with answers to the questions from the markdown files, in a place that's easy to turn back to!
 
@@ -227,9 +227,7 @@ Try using these methods to refactor the country exercises to work with the whole
 ### Checks for Understanding
 
 * Describe an array?
-* Describe an object?
 * What is a prototype method?
-* Name two prototype methods for an object.
 * Name three prototype methods for an array.
 * Which prototype methods are the most confusing right now?
 </section>
