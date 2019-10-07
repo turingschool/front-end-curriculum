@@ -67,7 +67,7 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
   <p>Fork <a href="https://codepen.io/ameseee/pen/PrQObO">this</a> CodePen to your account. One-by-one, uncomment lines 3, 4, 12, 13, and 14. Take note of what impact each "uncomment" has. Identify the containers and items each time Flexbox is used. After you make predictions about what each declaration does, read up on them on <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks</a>. Do <strong>not</strong> read about every single thing on the page; use <code>cmd + f</code> to search for specific properties!</p>
 </div>
 
-**NOTE:** Many of the examples used in this document contain a set of colored boxes. However, you won't find the styles for those boxes in the CSS. They are loaded in the CSS Pen settings, thanks to whoever made this: https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/flexbox-playground.css !
+**NOTE:** Many of the examples used in this document contain a set of colored boxes. However, you won't find the styles for those boxes in the CSS. They are loaded in the CSS Pen settings, thanks to whoever made [this](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/flexbox-playground.css)!
 
 ## Creating a Flex Container
 
@@ -167,7 +167,7 @@ Dog Party Starter Kits:
 - [Top Section](https://codepen.io/ameseee/pen/zVWEEa)
 - [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ)
 
-Once you have finished, submit each one of your CodePen links on the following [submission form!](https://docs.google.com/forms/d/e/1FAIpQLSdgbegLChznocAB4KaNvN4vkvYNl7tmDb6ZP0CI8QWkbNo_oA/viewform?usp=sf_link)
+Once you have finished, submit each one of your CodePen links on the following [submission form!](https://docs.google.com/forms/d/e/1FAIpQLSerzju9NYHp6EgMjK6SHmSEr05iFWdRA64h54lSF7XQK5gBQw/viewform?usp=sf_link)
 
 ## Solo Challenge
 
@@ -179,7 +179,7 @@ Now that you have had some experience implementing Flexbox on a comp that you ha
 1. Create a new repo on GitHub called `Flexbox Comp Challenges`
 2. Create the following files: `collection-grid.html`, `pricing-table.html`, `collection-styles.css`, and `pricing-styles.css`
 3. Re-create the following comps using Flexbox - work on making small, atomic commits! Feel free to take creative liberty on color schemes, fonts, placeholder images/logos, etc.
-4. Once you have finished, submit your GH repo link [here](https://docs.google.com/spreadsheets/d/1KvOeGVWbHKGbgRtpU4It33pSMEwToBbc3q4NIsI5lQg/edit#gid=783599477).
+4. Once you have finished, submit your GH repo link in the Submission Form!
 </section>
 
 #### Collection Grid
