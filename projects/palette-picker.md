@@ -89,6 +89,12 @@ In addition to responding with the appropriate status code, you are expected to 
 
 All endpoints need to be tested for happy AND sad paths. You should assert that proper status codes are being returned as well as appropriate response data and error messages. Please reference the server-side testing lesson to see the robustness and thoroughness of testing we are expecting.
 
+### Workflow
+
+As part of your project planning and workflow for this project, it is expected that you will make use of a sprint board (like [GitHub Projects](https://help.github.com/en/articles/about-project-boards) or [ClubHouse](https://clubhouse.io/)) as well as a [PR template](https://quickleft.com/blog/pull-request-templates-make-code-review-easier/).
+
+We also expect that you will follow a [rebase workflow](https://medium.com/hackernoon/git-merge-vs-rebase-whats-the-diff-76413c117333) for this project.  
+
 ### Documentation
 
 In the README, developer should provide documentation on the API endpoints that can be hit. Here is a [great example of in-depth documentation](https://developer.github.com/v3/repos/) Pay attention to the information provided and the format that it's presented in.
