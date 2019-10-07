@@ -67,7 +67,7 @@ Please DM your instructors the following by the end of the first day:
 
 ### Iteration 1: Landing Page
 
-- When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, favorite quote from the Star Wars films, and must select an option on how familiar they are with the Star Wars universe.  You can list the options however you'd like, but there should be atleast three categories for  `novice`, `intermediate`, & `expert`.
+- When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, favorite quote from the Star Wars films, and must select a ranking on how familiar they are with the Star Wars universe.  You can list the options however you'd like, but there should be atleast three categories for  `novice`, `intermediate`, & `expert`.
 - An error message should appear if one of the inputs has not been filled out.
 - All inputs must be filled in order for the user to sign in.
 
@@ -75,7 +75,7 @@ Please DM your instructors the following by the end of the first day:
 
 - Upon signing in, the user should be redirected to `/movies` where they should see all seven different Star Wars films available in order by episode, with the title of the film, episode, and release year listed below.  
 - There should a button on each card to view `View Characters` for each movie.  
-- The user's profile data should be displayed with their name, favorite quote, and ranking.
+- The user's profile data should be displayed with their name, favorite quote, and ranking (`novice`, `intermediate`, or `expert`).
 - A `Sign Out` button should also be available, logging the user out and redirecting them back to the root route, `/`.
 
 ### Iteration 3: The Characters
