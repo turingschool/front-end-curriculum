@@ -83,56 +83,23 @@ In the console:
 
 ## Getting Multiple Values from Functions
 
-Functions can return more than one value using an array. Let's see what this looks like:
+We learned last week that a single function can only return a single value. There will be times when you want to send a list of values over. We are able to do this by returning an array. Because an array is a complex data type, it has the ability to "wrap up" many values into one value, it doesn't break the rule of "a single function can only return a single value".
 
 ```javascript
-function getSize(width, height, depth) {
-  var area = width * height;
-  var volume = width * height * depth;
-  var sizes = [area, volume];
-  return sizes;
-}
-var areaOne = getSize(3, 2, 3)[0];
-var volumeOne = getSize(3, 2, 3)[1];
-```
-
-### Your Turn (10 min)
-
-Okay, let's pick this apart in the console, step by step, and make sure we understand what's what. In the console, do these things:
-
-```javascript
-// Declare the getSize function
-function getSize(width, height, depth) {
-  var area = width * height;
-  var volume = width * height * depth;
-  var sizes = [area, volume];
-  return sizes;
+function combineNames(name1, name2, name3) {
+  var names = [name1, name2, name3];
+  return names;
 }
 
-// Ask the console what "getSize" is
-getSize;
+var listOfNames = combineNames("Luna", "Bey", "Sunny");
 
-// Call the "getSize" function
-getSize();
+listOfNames;
+// => ["Luna", "Bey", "Sunny"]
 
-// Why this?
-[NaN, NaN];
-
-// Okay, pass getSize some arguments
-getSize(5, 3, 2);
-
-// I feel pretty good about this result, but feel free to check the math. ;)
-[15, 30];
-
-// Interactive Pop Quiz Time!
-var areaOne = getSize(3, 2, 3)[0];
-var volumeOne = getSize(3, 2, 3)[1];
-var areaTwo = getSize(5, 1, 2)[0];
-var volumeTwo = getSize(2, 2, 2)[1];
-var areaThree = getSize(1, 8, 7)[0];
 ```
 
 # Loops
+
 There are times when we want to repeat the same operation multiple times over a set of data. Loops allow us to do just that by running through our data one by one and executing code to accomplish a goal.
 
 For example, for each item in a list (maybe an `array`...) if a conditional returns `true`, a code block will be run and the condition will be checked again. This pattern will be repeated until the conditional returns `false`.
