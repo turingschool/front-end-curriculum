@@ -188,7 +188,7 @@ We can see that this condition will never return `false` and we'll be stuck in t
 
 ### Additional Practice  
 
-* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) let's you experiment more with these concepts.
+* [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) lets you experiment more with these concepts.
 
 ### Dig Deeper  
 
