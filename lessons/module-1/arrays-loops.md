@@ -1,6 +1,6 @@
 ---
 title: JavaScript II - Arrays and For Loops
-length: 60
+length: 90
 tags: javascript, introduction, foundation, variables
 ---
 
