@@ -8,7 +8,7 @@ module: 3
 
 Clone down the [nested-promises](https://github.com/turingschool-examples/nested-promises) repo and start it up.
 
-**CoWorkers Api**
+**Nested Promises API**
 ```bash
 git clone https://github.com/turingschool-examples/nested-promises.git
 cd nested-promises
@@ -20,7 +20,7 @@ Now that you got a local server running,  create another directory for the front
 
 ```bash
 npx create-react-app nested-promises-practice
-cd nested-prommises-practice
+cd nested-promises-practice
 npm start
 ```
 
@@ -63,18 +63,13 @@ Go back to your App and check your console, and you should get an object with mo
 
 ```js
 { 
-  rails: 'http://localhost:3001/api/v1/light-rails',
-  skyrides: 'http://localhost:3001/api/v1/sky-rides',
   buses: 'http://localhost:3001/api/v1/buses',
-  extras: [
-    'http://localhost:3001/api/v1/mallride',
-    'http://localhost:3001/api/v1/metroride',
-    'http://localhost:3001/api/v1/sport-rides',
-  ]
+  rails: 'http://localhost:3001/api/v1/light-rails',
+  skyRides: 'http://localhost:3001/api/v1/sky-rides'
 }
 ```
 
-Darn it, this isn't quite what we are looking for.  We are going to have to do another fetch request in order to retrive our data.  Let's do one together and get the rails data.  Create an `apiCalls` file inside of your src directory:
+Bummer, this isn't quite what we are looking for.  We are going to have to do another fetch request in order to retrive our data.  Let's do one together and get the rails data.  Create an `apiCalls` file inside of your src directory:
 
 ```bash
 touch src/apiCalls.js
@@ -110,7 +105,7 @@ class App extends Component {
   }
 ```
 
-You will get another object with yet again event more nested fetch requests.  Let's look at the data below:
+You will get another object with yet again even more nested fetch requests.  Let's look at the data below:
 
 ```js
 {
@@ -125,12 +120,12 @@ You will get another object with yet again event more nested fetch requests.  Le
       name: 'Union Station to Westminster',
       schedule: 'http://localhost:3001/api/light-rail/B'
     },
-    ...
+    // etc...
   ]
 }
 ```
 
-We're getting closer though.  Now we know the lines and names of each light rail but we still don't have the schedule of stops that each rail stops at.  We're going to have to find a way to iterate through this array, and fetch each nested url.  `map` could be a useful array prototype method since we need to return an array of the same length but with the full data.  As we iterate through, we'll need to run a fetch for each schedule.  Let's create one more function that will do another fetch for this.  Look at the code below closely:
+We're getting closer though.  Now we know the lines and names of each light rail but we still don't have the schedule of stops for each rail line.  We're going to have to find a way to iterate through this array, and fetch each nested url.  `map` could be a useful array prototype method since we need to return an array of the same length but with the full data.  As we iterate through, we'll need to run a fetch for each schedule.  Let's create one more function that will do another fetch for this.  Look at the code below closely:
 
 ```js
 export const getRails = rails => {
@@ -163,7 +158,7 @@ export const getRails = rails => {
           .then(railStops => ({ line, name, railStops }))
       });
       console.log(railData)
-    })
+    });
 }
 
 const getSchedule = schedule => {
@@ -208,7 +203,7 @@ Hooray!  That was a lot of work but we finally got an array of objects including
 <section class="call-to-action">
 ### Your Turn
 
-This is going to take practice, but it's okay.  We still have a couple of more endpoints to still practice on in this exercise (as well as in your projects).  Continue to work on getting the data for the `bus` and `skyride` schedule
+This is going to take practice, but it's okay.  We still have a couple of more endpoints to still practice on in this exercise (as well as in your projects).  Continue to work on getting the data for the `bus` and `skyride` schedules!
 </section>
 
 
