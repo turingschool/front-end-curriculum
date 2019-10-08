@@ -1,5 +1,5 @@
 ---
-title: JavaScript II - Arrays, and For Loops
+title: JavaScript II - Arrays and For Loops
 length: 60
 tags: javascript, introduction, foundation, variables
 ---
@@ -13,25 +13,26 @@ In this lesson we'll cover:
 * `for` loops and how to iterate through arrays using loops
 
 
-## Vocab
+## Vocabulary
 
 - `Literal`  A way of declaring a data structure and its values at the same time
 - `Array` Used to store a collection of data items/multiple values under a single variable name
+- `Element` A single item stored in an array. An element can be of any data type.
 - `Loops` A quick and easy way to do something repeatedly
-- `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops. 
+- `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops.
 
 # Arrays
-An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
 
-You can put different types of data into an array:
+An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. Each value is referred to as an `element`. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
+
+You can put different types of data into an array, and there is not a certain number of elements an array can or should contain:
 
 ```js
-var arrayName = [element0, element1, ...];
-var rainbowColors = ['Red', 'Orange', 'Yellow', 'Green',
-'Blue', 'Indigo', 'Violet'];
+var arrayName = [element0];
+var rainbowColors = ['Red', 'Orange', 'Yellow'];
 var lotteryNumbers = [33, 72, 64, 18, 17, 85];
 ```
-You can create an array just like you would any other variable, using the var keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets ([]), and each individual value is comma-separated. The above technique for creating an array is known as an **array literal**. It is usually the preferred method for creating an array. You can also write an array with values on separate lines, like so:
+You can create an array just like you would any other variable, using the `var` keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets (`[]`), and each element is comma-separated. The above technique for creating an array is known as an **array literal**. You can also write an array with values on separate lines, like so:
 
 ```javascript
 var colors = [
@@ -42,6 +43,7 @@ var colors = [
 ```
 
 ## Accessing Values in Arrays
+
 Each value in an array is automatically given a number called an index. This index can be used to access a particular value in any given array.
 
 Indices begin at 0 and order incrementally. So in the above `colors` example, the following is true:
@@ -69,19 +71,17 @@ colors;
 colors[0];
 ```
 
-
 <section class="call-to-action">
+### Your Turn
 
-### Your Turn (5 min)
 In the console:  
 - create an array of cars
 - change the values within the array
 - add a new car to the array
 - identify the value of the 3rd element of the array
-
 </section>
 
-## Getting Multiple Values from Functions:
+## Getting Multiple Values from Functions
 
 Functions can return more than one value using an array. Let's see what this looks like:
 
@@ -186,7 +186,7 @@ You can see that instead of using a hardcoded number, we are using `fruits.lengt
 <section class="call-to-action">
 
 ### You Do
- 
+
 #### Annoying Zoo Kid
 1. Create an array of four animals called `animals`.
 2. Create a function called `nameAnimals`.
@@ -198,14 +198,14 @@ You can see that instead of using a hardcoded number, we are using `fruits.lengt
 2. Create a function called `getSum` that takes one parameter, an array of numbers.
 3. Within your function, create a variable called `sum` that starts at 0.
 4. Within your function, create a `for loop` that increments AND reassigns the value of the sum variable each iteration.
-5. Return the `sum` variable from the function. 
+5. Return the `sum` variable from the function.
 
 </section>
 
 
 
 ### Loops and Performance Issues
-It's important to be aware of the potential performance problems that loops can cause. When a browser hits Javascript, it stops executing anything else on the page until it has processed that script. Since loops can be run on arrays or containers of unknown -- and potentially enormous -- size, it's possible for our loop to make a page much, much slower to load.
+It's important to be aware of the potential performance problems that loops can cause. When a browser hits JavaScript, it stops executing anything else on the page until it has processed that script. Since loops can be run on arrays or containers of unknown -- and potentially enormous -- size, it's possible for our loop to make a page much, much slower to load.
 
 Additionally, if the condition of your loop never returns `false`, you will get stuck in what's known as an `infinite loop`. This means that your loop will never stop running. Eventually your browser will run out of memory and your script will break.
 
@@ -217,7 +217,7 @@ for (var i = 0; i > -1; i++) {
 }
 ```
 
-We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them. 
+We can see that this condition will never return `false` and we'll be stuck in this loop forever (or at least until our page crashes)! Be mindful of the possibility that you could create infinite loops when leveraging loops in your code. They can happen to the best of us, and knowing what they are is the first step to avoiding and correcting them.
 
 
 ### Additional Practice  
@@ -229,4 +229,3 @@ We can see that this condition will never return `false` and we'll be stuck in t
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
 * [Seven JS Quirks I Wish I'd Known About](http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/#expdec)  
 * [Adequately Good JS](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)  
-
