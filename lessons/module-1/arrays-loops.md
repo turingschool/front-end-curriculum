@@ -12,7 +12,6 @@ In this lesson we'll cover:
 * Adding/changing values to arrays via their indices  
 * `for` loops and how to iterate through arrays using loops
 
-
 ## Vocabulary
 
 - `Literal`  A way of declaring a data structure and its values at the same time
@@ -21,7 +20,13 @@ In this lesson we'll cover:
 - `Loops` A quick and easy way to do something repeatedly
 - `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops.
 
-# Arrays
+## Warm Up
+
+Each person should have two post-it notes available at your table.
+- On one, write the name of a pet, as a string. Do not assign it to a variable.
+- On the other, write the age of that pet, as a number. Do not assign it to a variable.
+
+## Arrays
 
 An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. Each value is referred to as an `element`. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
 
