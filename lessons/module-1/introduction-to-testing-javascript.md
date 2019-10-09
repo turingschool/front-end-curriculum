@@ -18,6 +18,26 @@ tags: javascript, testing, tdd, mocha, chai
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 
+<section class="call-to-action">
+## Warm Up
+
+In your group, brainstorm at least 3 pieces of functionality that your assigned app has. Use the `user story` format below:
+
+```
+As a user...
+  - When I [take some action]
+  - I [observe some outcome]
+```
+
+Here's as example for Venmo:
+
+```
+As a user,
+- When I click "Transfer Balance"
+- I receive a notification that the transfer has initiated.
+```
+</section>
+
 ## What does it mean to test your code?
 
 We're always testing our code. We pull it up in the browser and poke at it. Does it do the thing we were expecting it to do? Yes? Then the code works. It's time to go and celebrate. No? Well then, back to the drawing board, right?
@@ -32,11 +52,11 @@ Constantly poking at our code manually is tedious and it's not the best use of o
 
 ## Unit Tests
 
-The bulk of your tests for an application are likely to be unit tests.  **Unit tests** test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave.  The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment).
+The bulk of your tests for an application are likely to be unit tests. **Unit tests** test one function or one object in isolation to make sure that it behaves the way we were expecting it to behave. The bulk of your tests for an application are likely to be unit tests (both at Turing and in the work environment).
 
 ## Integration Tests
 
-**Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work.  You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
+**Integration tests** test the interaction between two units to make sure that they play together nicely and work the way we expect them to work. You will get many opportunities to experiment with this type of test at Turing (including Mod 1) and in the work environment as well.  
 
 #### Benefits
 
@@ -44,6 +64,14 @@ The bulk of your tests for an application are likely to be unit tests.  **Unit t
 * Unit & Integration tests provide documentation by telling a living story about your application
 * Unit tests foster simplicity by forcing you to write code that is decoupled, flexible, and configurable
 * Integration tests allow us to be confident that all those small pieces are working together as expected
+
+<section class="call-to-action">
+### Think - Pair - Share
+
+* What is one piece of functionality (think back to the Warm Up) that you could test from your assigned application?
+* Would that be a unit or integration test? Why?
+* What would the consequences for the company be if this piece of functionality broke?
+</section>
 
 ## What is Test-Driven Development?
 
@@ -233,12 +261,12 @@ It takes some time to build out solid habits when testing.  Often we'll see some
 <section class="checks-for-understanding">
 ### Wrap Up
 
-Open up the Slack DM between you, your project parter, and your PM. Share your answers to the following with the group:
+Open up the Slack DM between you, your project parter, and your instructors. Share your answers to the following with the group:
 * Why is testing your code important? ⬅️ _Popular Interview Question!_
 * What is the TDD process?
-* In the Number Guesser project:
+* In the Paired Project project:
   - What are the smallest pieces of functionality?
   - How could you write tests for that functionality?
 
-**Note:** You are not required to test anything on Number Guesser, this is just an exercise to push your thinking on how it _can_ be applied.
+**Note:** You are not required to test anything on the Paired Project, this is just an exercise to push your thinking on how it _can_ be applied.
 </section>
