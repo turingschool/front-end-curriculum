@@ -36,12 +36,12 @@ Quick tip: If you want to center an element, you can give the `margin` property 
 ### Your turn:
 
 * With a partner:
-  * Fork the following [CodePen](https://codepen.io/eric_turing/pen/QeXBYz)
+  * Fork the following [CodePen](https://codepen.io/turing-school/pen/jOObVQr)
   * How can you right align a block like element using the margin property?
 
 ## Position Property
 
-- We can manipulate this [CodePen](https://codepen.io/eric_turing/pen/bXPzzW) to play around with the following values for our position property.
+- We can manipulate this [CodePen](https://codepen.io/turing-school/pen/XWWmNyz) to play around with the following values for our position property.
 - The `position` property in CSS will take elements out of the normal page flow, and should therefore be used sparingly.
 - `relative`: A relatively positioned element preserves its space. The adjacent elements aren’t repositioned to occupy the reserved space for this element. However, the offsets of this element don’t occupy space. They’re completely ignored from the other elements, and hence that may causes elements to overlap each other.
 - `absolute`: An absolutely positioned element is completely removed from the normal flow. The adjacent sibling elements occupy its space.
@@ -69,7 +69,7 @@ Quick tip: If you want to center an element, you can give the `margin` property 
 - `right`: floats the element to the right of its container.
 - `inherit`: the element inherits the float direction of its parent.
 - `clear`: Float's sister property. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float.
-- We can play around with this [code pen](https://codepen.io/LouisaBarrett/pen/GEQbNY) to see how float and clear work with one another.
+- We can play around with this [CodePen](https://codepen.io/turing-school/pen/JjjYbmv) to see how float and clear work with one another.
 
 ```css
 .clearfix:after {
