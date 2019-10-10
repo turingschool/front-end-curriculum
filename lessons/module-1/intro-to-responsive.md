@@ -84,9 +84,9 @@ Review the two media queries written below. Predict the result of this code. Be 
 
 Above is an example of the syntax for a media query with a breakpoint set for screens 900px and larger. We also have a breakpoint set for screens 700px and smaller. When the screen size is 900px or greater, the body should have a magenta background. When it is 700px or less, it should have a teal background. When it is in between, it will be the background color specified in CSS or white, if it was not specified.
 
-<p class="codepen" data-height="265" data-theme-id="0" data-default-tab="css,result" data-user="khalidwilliams" data-slug-hash="wLQqzK" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Media Queries Demo">
-  <span>See the Pen <a href="https://codepen.io/khalidwilliams/pen/wLQqzK/">
-  Media Queries Demo</a> by khalidwilliams (<a href="https://codepen.io/khalidwilliams">@khalidwilliams</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="RwwWoqO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Media Queries Demo">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/RwwWoqO">
+  Media Queries Demo</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
