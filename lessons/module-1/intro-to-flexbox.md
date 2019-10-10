@@ -62,7 +62,7 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 <br>
 (Graphics from <a target="blank" href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/" >CSS Tricks</a>)
 
-<div class="turn-and-talk">
+<div class="call-to-action">
   <h3>Explore Flexbox</h3>
   <p>Fork <a href="https://codepen.io/ameseee/pen/PrQObO">this</a> CodePen to your account. One-by-one, uncomment lines 3, 4, 12, 13, and 14. Take note of what impact each "uncomment" has. Identify the containers and items each time Flexbox is used. After you make predictions about what each declaration does, read up on them on <a href="https://css-tricks.com/snippets/css/a-guide-to-flexbox/">CSS Tricks</a>. Do <strong>not</strong> read about every single thing on the page; use <code>cmd + f</code> to search for specific properties!</p>
 </div>
@@ -116,7 +116,7 @@ We frequently see white space (margin or padding) used, and the content is **cen
 
 But the items are still all crunched together. They might need some breathing room too, which can be achieved with margin!
 
-<div class="turn-and-talk">
+<div class="call-to-action">
   <h2>Try It: Justify Content</h2>
   <p>On the container's CSS rule, change the code to: <code class="try-it-code">justify-content: space-between;</code>. What happens?</p>
   <p>Now try: <code class="try-it-code">justify-content: space-around;</code>. What is the difference between space-around and space-between?</p>
@@ -125,7 +125,7 @@ But the items are still all crunched together. They might need some breathing ro
 
 The `justify-content` property allows us to control how our content sits _on the main axis_.
 
-<div class="turn-and-talk">
+<div class="call-to-action">
   <h2>Try It: Justify Content</h2>
   <p>On the container's CSS rule, change the code to: <code class="try-it-code">flex-direction: column; justify-content: center;</code>. What happens? Why do you think that is?</p>
 </div>
