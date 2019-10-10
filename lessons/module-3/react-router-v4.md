@@ -49,7 +49,7 @@ class SomeComponent extends Component {
 }
 ```
 
-This works...but as our applications grow larger and we need to render more components, these conditinal toggles can become difficult to manage.
+This works...but as our applications grow larger and we need to render more components, these conditional toggles can become difficult to manage.
 
 Suppose you have list of star wars characters and you only want to show a user's favorites when they click on a `Favorites` button... 
 You can easily accomplish this with React Router!
@@ -339,7 +339,7 @@ Now let's define the route:
 <section class="call-to-action">
 ### In Your Notebook
 
-Next we need to define those routes and tell it which components to render. Take 10 mintues and see if you can get the `/unicorns` Route working by displaying `<h1> Unicorns! </h1>`.
+Next we need to define those routes and tell it which components to render. Take 10 minutes and see if you can get the `/unicorns` Route working by displaying `<h1> Unicorns! </h1>`.
 
 _hint: You'll probably need to create a new component to render when on the `/unicorns` route_
 </section>
@@ -538,7 +538,7 @@ Now all we have to do is modify our route to render the correct data.
 <section class="call-to-action">
 ### Your Turn!
 
-See if you can write some codes to render the correct data based on the ID in the URL. Focus just on unicorns for now.
+See if you can write some code to render the correct data based on the ID in the URL. Focus just on unicorns for now.
 
 **_Hints:_**
 
