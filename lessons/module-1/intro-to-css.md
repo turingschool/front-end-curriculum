@@ -47,8 +47,12 @@ We can target an HTML element in CSS many ways:
 * via id name
 * via a combination of above
 
-<p data-height="300" data-theme-id="26495" data-slug-hash="KNvbQX" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-pen-title="CSS Rules" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/KNvbQX/">CSS Rules</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="GRRpNBa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Rules">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/GRRpNBa">
+  CSS Rules</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 <section class="call-to-action">
 ### Explore
@@ -194,18 +198,18 @@ Every HTML element has a default `display` property - either `inline` or `block`
 
 Block elements start on a new line and take up the entire width of the page, even if the content doesn't take up the entire width of the page. Some elements that default to `display: block` are `p`, `h1` and `section`. Open up this CodePen to see this illustrated:
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="css,result" data-user="ameseee" data-slug-hash="VoEdzG" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Block Elements">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/VoEdzG/">
-  Block Elements</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="mddeOGg" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Block Elements">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/mddeOGg">
+  Block Elements</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Inline elements only take up the space their content requires, so you may see multiple inline elements sitting next to each other. Some elements that default to `display: inline` are `img`, `a`, `input`, and `em`. Open up this CodePen to see this illustrated:
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="OKBEOe" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline Elements">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/OKBEOe/">
-  Inline Elements</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="QWWjGZN" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline Elements">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/QWWjGZN">
+  Inline Elements</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
