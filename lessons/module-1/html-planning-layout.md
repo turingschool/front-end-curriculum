@@ -30,9 +30,9 @@ Most elements are block elements. Some common inline tags you might see in the w
 
 We use `<em>` and `<strong>` to denote the semantic meaning of the content.
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="EBKyrE" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline v Block Elements">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/EBKyrE/">
-  Inline v Block Elements</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="LYYpbrr" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline v Block Elements">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/LYYpbrr">
+  Inline v Block Elements</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -45,9 +45,9 @@ All of the tags we discussed above have some kind of semantic meaning. Assistive
 
 Sometimes, however, you don't want a tag to have any meaning. Typically, this is when you just want to target a certain portion of the page with CSS or JavaScript and none of the semantic tags really apply.
 
-Some think of `<span>` and `<div>` as the flavorless Jello of HTML tags: 
+Some think of `<span>` and `<div>` as the flavorless Jello of HTML tags:
 
-- They don't have any meaning in and of themselves 
+- They don't have any meaning in and of themselves
 - They typically don't come with any built-in styling from the browser.
 
 There is just one important difference between the two:
