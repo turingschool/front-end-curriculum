@@ -51,7 +51,7 @@ In the real world, you're going to see codebases that contain many more files, o
 
 <section class="call-to-action">
   <h4>In Your Notebook</h4>
-  <p>Take a look at the files and directory structure of <a href="https://github.com/mozilla/normandy" target="_blank">this repo</a> What are some things that seem new to you? What's familiar? Why are so many files prefixed with a dot?</p>
+  <p>Take a look at the files and directory structure of <a href="https://github.com/facebook/react" target="\__blank">this repo</a> What are some things that seem new to you? What's familiar? Why are so many files prefixed with a dot?</p>
 </section>
 
 You can expect the apps you work on in the future to be much closer to this size and structure than the simple 5-file, 3-folder structure you've started out with. It's important that we feel comfortable navigating large codebases and understand the how and why they require the complexity that we see here.
