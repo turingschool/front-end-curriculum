@@ -88,9 +88,9 @@ Type both opening and closing tags before typing content to avoid making silly m
 
 Here is an example of a slightly more robust document:
 
-<p class="codepen" data-height="450" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="RzaRBd" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Very Basic HTML Page">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/RzaRBd/">
-  Very Basic HTML Page</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="oNNjYqM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Very Basic HTML Page">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/oNNjYqM">
+  Very Basic HTML Page</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -163,9 +163,9 @@ Every page that is built with HTML needs to have the following four elements to 
 * `<head></head>` tag wraps elements that shouldn't be rendered - information about the page and how to process it
 * `<body></body>` tag wraps elements that should be displayed - the actual content that will appear in the browser
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="xoVEVQ" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Required Structure of HTML">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/xoVEVQ/">
-  Required Structure of HTML</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="oNNjYdM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Required Structure of HTML">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/oNNjYdM">
+  Required Structure of HTML</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -226,7 +226,7 @@ Now that you know what clean, correctly indented HTML looks like, and some of th
 ### Partner Practice
 
 - Choose a driver and a navigator.
-- The driver should fork [this CodePen](https://codepen.io/ameseee/pen/pXrdpR).
+- The driver should fork [this CodePen](https://codepen.io/turing-school/pen/KKKdNeM).
 - First, fix the indentation to make this more readable and maintainable
 - Then, look for at least 3 opportunities to improve readability and accessibility by changing tags to be more semantic. Once you and you partner agree, make those changes.
 </section>
