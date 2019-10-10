@@ -73,9 +73,9 @@ When we use Flexbox, we will make the parent elements `flex containers` and the 
 
 Without Flexbox, 10 colorful `article`s might look like this:
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="RzMYNj" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Normal Blocks Els">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/RzMYNj/">
-  Flexbox: Normal Blocks Els</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="jOObVJM" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Normal Blocks Els">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/jOObVJM">
+  Flexbox: Normal Blocks Els</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -83,9 +83,9 @@ Without Flexbox, 10 colorful `article`s might look like this:
 
 But with Flexbox, we can start having some control over them:
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="WqzgbL" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Creating a Container">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/WqzgbL/">
-  Flexbox: Creating a Container</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="eYYpBXG" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Creating a Container">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/eYYpBXG">
+  Flexbox: Creating a Container</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -106,9 +106,9 @@ Another CSS property with Flexbox is `direction`. This property takes one of fou
 
 We frequently see white space (margin or padding) used, and the content is **centered** on the screen. We can use Flexbox to center content:
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="xoWJYb" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Justify Content">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/xoWJYb/">
-  Flexbox: Centering Items</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="xxxwRBz" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Justify Content">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/xxxwRBz">
+  Flexbox: Justify Content</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -136,9 +136,9 @@ In the section above, you should have observed that `justify-content: center;` h
 
 Just like we can control how our content sits on the main axis with `justify-content`, we have a tool to control how our content sits _on the cross-axis_. Check out the CodePen below.
 
-<p class="codepen" data-height="300" data-theme-id="37136" data-default-tab="html,result" data-user="ameseee" data-slug-hash="GbxXRQ" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Align-Items">
-  <span>See the Pen <a href="https://codepen.io/ameseee/pen/GbxXRQ/">
-  Flexbox: Align-Items</a> by Amy Holt (<a href="https://codepen.io/ameseee">@ameseee</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="bGGVBJE" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Flexbox: Align-Items">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/bGGVBJE">
+  Flexbox: Align-Items</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
