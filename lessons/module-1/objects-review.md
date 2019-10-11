@@ -157,20 +157,20 @@ We'll use a similar `student` object from the previous practice section.
 
 ```javascript
 var student = {
-  name: "Scott",
+  name: "Tristan",
   program: "Front End",
   module: 1,
   alum: false
 }
 ```
 
-Write the syntax that will move Scott to Module 2: <input/>
+Write the syntax that will move Tristan to Module 2: <input/>
 
-Write the syntax that will move Scott to Module 5: <input/>
+Write the syntax that will move Tristan to Module 5: <input/>
 
-Write the syntax that will make Scott an alum: <input/>
+Write the syntax that will make Tristan an alum: <input/>
 
-What will happen if you run `scott.module = 3`? Why?
+What will happen if you run `tristan.module = 3`? Why?
 <textarea class="wide-text"></textarea>
 
 </section>
@@ -232,7 +232,7 @@ First, add a list (array) of allergies to our student object:
 
 ```javascript
 var student = {
-  name: "Vee",
+  name: "Zack",
   program: "Front End",
   module: 1,
   alum: false
@@ -244,25 +244,25 @@ We'll use a similar `student` object from the previous practice section. Notice 
 
 ```javascript
 var student = {
-  name: "Heather",
+  name: "Maddy",
   program: "Front End",
   module: 1,
   alum: false,
   projects: {
     dogParty: "n/a",
-    numberGuesser: "crushed it, great teamwork!",
+    intentionTimer: null,
     checkYoSelf: null
   }
 }
 ```
 
-Write the syntax that would access the notes from Heather's Dog Party: <input/>
+Write the syntax that would access the notes from Maddy's Dog Party: <input/>
 
-Write the syntax that would access the notes from Heather's Number Guesser: <input/>
+Write the syntax that would access the notes from Maddy's Intention Timer: <input/>
 
-Write the syntax that will give Heather a note of "Great Job!" for Check Yo Self: <input/>
+Write the syntax that will give Maddy a note of "Great Job!" for Check Yo Self: <input/>
 
-Why do you think the value of the `checkYoSelf` property is assigned to `null` in the original object?
+Why do you think the value of the `intentionTimer` property is assigned to `null` in the original object?
 <textarea class="wide-text"></textarea>
 
 </section>
@@ -312,7 +312,7 @@ Use the `student` object below as a template for potentially a lot of other simi
 
 ```javascript
 var student = {
-  name: "Cody",
+  name: "Melissa",
   program: "Front End",
   module: 1,
   alum: false
