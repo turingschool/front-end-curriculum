@@ -15,7 +15,7 @@ By the end of this lesson, you will:
 
 ## Vocab
 
-* mock - in a test file, overwriting a function/method or data so that the component being tested uses the simpler, controllable mock function/method/data instead of the real one
+* `mock` - in a test file, overwriting a function/method or data so that the component being tested uses the simpler, controllable mock function/method/data instead of the real one
 * `.then()`/`.catch()` - JavaScript syntax for handling the resolution/rejection of a Promise
 * `async`/`await` - ES7 syntax for handling asynchronous JavaScript
 * `try`/`catch` - ES7 syntax for handling the resolution/rejection of a Promise
@@ -31,8 +31,8 @@ We're going to use the [same Ideabox repo](https://github.com/turingschool-examp
 If you want to pull down a fresh copy, run the following commands in your terminal:
 
 ```bash
-git clone https://github.com/turingschool-examples/ideabox-testing.git
-cd ideabox-testing
+git clone https://github.com/turingschool-examples/ideabox-testing.git testing-async
+cd testing-async
 git checkout react-iii-complete
 npm i
 ```
@@ -126,7 +126,7 @@ A HA! When our test suite is running through the code, it hits that `fetch` and 
 
 So instead, we're going to have to mock `fetch`. We do that by overwriting the window's implementation of `fetch` inside our test suite. We're going to rewrite it so it returns exactly what we want the `addIdea` fetch call to return! NICE.
 
-But, hang on - we have more than one `fetch` in our code! There's TWO in `addIdea`, and there's a different one in `deleteIdea`. We can't chop up the component and have it define different mocked `fetch`es for the different methods, unfortunately. So instead we're going to **isolate** our API calls by creating a separate file to hold all of our `fetch`es.
+But, hang on - we have more than one `fetch` in our code! There's one in `addIdea`, and there's TWO in `deleteIdea`. We can't chop up the component and have it define different mocked `fetch`es for the different methods, unfortunately. So instead we're going to **isolate** our API calls by creating a separate file to hold all of our `fetch`es.
 
 _Yikes._ What does all of this even mean?
 
@@ -528,34 +528,13 @@ Let's try it out.
 
 HECK YES! Notice this time we are using the `rejects` property.  Now that we've figured out how to isolate and test the `fetch` that gathers up all our ideas from the API, let's keep going.
 
-### A note on error handling
+### Let's Add One More Sad Path Test
 
-When using fetch calls, there are two main times when we want to check for errors. The first is when the fetch itself rejects.
+When using fetch calls, there are two main times when we want to check for errors. The first one we tested was when the fetch resolves, but the response is not okay.  
 
-The second is when the fetch doesn't fail, but the response is not ok. In that case we should manually throw an error that we'll catch elsewhere.
+The second way a fetch call can fail is when it rejects.  When a promise rejects, it automatically throws an error.  The *catch* in our `App` will still catch this error and set it to state.
 
-So far, we've only handled the second instance.
-
-Let's add a catch to our isolated fetches to handle when the fetch fails.
-
-```js
-// apiCalls.js
-
-export const getIdeas = () => {
-  return fetch('http://localhost:3001/api/v1/ideas')
-    .then(response => {
-      if (!response.ok) {
-        throw Error('Error fetching ideas');
-      }
-      return response.json();
-    })
-    .catch(error => {
-      throw Error(error.message);
-    })
-};
-```
-
-And in our tests:
+Let's write the following test:
 
 ```js
 // apiCalls.test.js
@@ -563,9 +542,7 @@ And in our tests:
   // describe getIdeas
     it('SAD: should return an error if promise rejects', () => {
       window.fetch = jest.fn().mockImplementation(() => {
-        return Promise.reject({
-          message: 'fetch failed'
-        })
+        return Promise.reject(Error('fetch failed'))
       });
 
       expect(getIdeas()).rejects.toEqual(Error('fetch failed'));
