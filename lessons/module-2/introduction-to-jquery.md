@@ -28,7 +28,7 @@ To use the jQuery library, you'll need to include the following lines in your HT
 
 Let's talk about what's going on here:
 
-In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.3.1` (as of the writing of this lesson).   
+In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.4.1` (as of the writing of this lesson).   
 
 <!--
 Main benefit of loading from a CDN vs your own server, is that your user likely has a copy of google's cdn jquery already cached in their browser.
