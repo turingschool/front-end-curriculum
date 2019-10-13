@@ -8,7 +8,7 @@ tags: jquery, javascript
 - What is jQuery?
 - How to use jQuery to Interact with the DOM
 
-jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about [71% of the top million web pages](https://trends.builtwith.com/javascript), so it's worth while getting comfortable with it.
+jQuery is a library that allows us to use CSS selectors to find elements on the page and then interact with them. Under the hood, **it's JavaScript**. It's used on about [80% of the top million web pages](https://trends.builtwith.com/javascript), so it's worth while getting comfortable with it.
 
 ## Vocab
 
@@ -30,8 +30,8 @@ Let's talk about what's going on here:
 
 In the first line, we're linking to the [Google-hosted CDN (Content Delivery Network) for jQuery](https://developers.google.com/speed/libraries/#jquery). Both Google and Microsoft host the jQuery library, and for our purposes we'll go ahead and stick with the Google link. In this link, we can see which version of jQuery we're using, which is `3.3.1` (as of the writing of this lesson).   
 
-<!-- 
-Main benefit of loading from a CDN vs your own server, is that your user likely has a copy of google's cdn jquery already cached in their browser. 
+<!--
+Main benefit of loading from a CDN vs your own server, is that your user likely has a copy of google's cdn jquery already cached in their browser.
  -->
 
 In the second line, we're including a link to a local set of jQuery files that we've downloaded to our machine and included in the directory for our project. This line isn't strictly required for us to use jQuery, but rather is a fallback to make sure that we can still access the library in the event that we are unable to access the CDN for some reason (better safe than sorry, right?). You can [download a copy of jQuery here.](http://jquery.com/download/) **Note: be sure to download the same version that you're referencing in the Google CDN link.**  
@@ -68,12 +68,15 @@ Play around with the following example using jQuery.
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="zBrJpV" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/gMPdzx/">Event Listeners</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
 
+<section class="call-to-action">
 ### Your Turn
 
 In your journal, write out the syntax for selecting these elements in vanilla Javascript and jQuery.
 
 * Change the text of an `h1` element to "I'm learning jQuery!".
 * Select an element with a class of `important-msg` and change it's text to "Understanding the difference between Javascript and jQuery."
+
+</section>
 
 ## Responding to User Events
 
@@ -97,9 +100,11 @@ Now, when a user clicks on that button. The browser will run the function we pro
 
 For a list of other events other than click, look at the [jQuery documentation](http://api.jquery.com/Types/#Event).
 
+<section class="call-to-action">
 ### Your Turn
 
 * Write out event listener for a `button` element that listens to a click.  First, in vanilla Javascript, and then in jQuery.  Take note of the differences.
+</section>
 
 ## Try It: Adding a CSS Class
 
@@ -112,10 +117,12 @@ We're using a jQuery method called `toggleClass()`. When the user clicks on the 
 - Can you create some additional CSS classes and toggle them?
 - Can you also change the text?
 
+<section class="call-to-action">
 ### Your Turn
 
 * Discuss with the person across from you on the differences between adding/removing a class using Javascript and jQuery.  
 * Is there anything like `toggleClass()` in Javascript?
+</section>
 
 ## Getting Values from the User
 
@@ -131,11 +138,12 @@ In this example, we're doing the following:
 - When it's clicked, we're grabbed the value of the input field and storing it into a variable.
 - We're then updating the contents of the `<h1>` to the value we stored from the input field.
 
+<section class="call-to-action">
 ### Your Turn
 
 * Write out how you would grab the value of an input in Javascript.  Now in jQuery.
 * Now, how would you change the value of the input using both Javascript & jQuery?
-
+</section>
 
 ### Try It: Secret Passcode Time
 
