@@ -72,7 +72,7 @@ $("[selector]")
 
 `$()` is known as the __jQuery function__.
 
-We can put in a `CSS Selector` (or combination of selectors) in to this function to grab element(s) off of the DOM.
+We can put a `CSS Selector` (or combination of selectors) in to this function to grab element(s) off of the DOM.
 
 The jQuery function returns what's known as a __jQuery object__. You can think of this as being analogous to the `Element` that `.querySelector` returns.
 
@@ -86,6 +86,9 @@ $(mainHeading).text('Hello World');
 
 $('h1').text('Hello World');
 
+// However, this won't work:
+mainHeading.text('Hello World')
+
 ```
 
 The jQuery object contains a series of methods (such as `.text()`) that we can use to do a variety of things on the DOM, including:
@@ -98,9 +101,78 @@ among others. Rather than spell out the syntax for everything jQuery can do, we'
 
 ## jQuery Jigsaw
 
+The next part of this lesson will be set up as a jigsaw. This will be good practice for how you can approach learning new topics on the job, especially when there won't be someone to formally teach you.
+
+Everyone will be split into four groups, each responsible for researching one of the following:
+
+- jQuery selectors and the jQuery Object
+- Responding to events
+- DOM traversal
+- Getting and setting content on the page
+
+Each group will have time to research a series of questions, and create a guide with examples in repl or codepen, which they will then present to the class. Starters for your <a href="https://repl.it/@Khalid_Williams/jQuery-setup" target="\__blank">repl</a> or <a href="https://codepen.io/khalidwilliams/pen/eYYJbaq" target="\__blank"> codepen</a> can be found here.
+
+For the presentations, feel free to put together whatever format works best for the group (gist / markdown file with links to examples, everything in a codepen with examples, everything in a repl.it with examples, etc). Just make sure you have examples to demo.
+
+We'll research / prep for 30 - 40 minutes, then each group will take 10 minutes to present and answer questions.
+
+### Research Questions
+
+In your respective group, answer / build examples for the following questions (feel free to go more in depth if you find interesting things!):
+
+#### Selectors
+
+For the following questions, be sure to compare how you would perform the action in vanilla JS as well as with jQuery.
+
+- How do you select a single element in jQuery? How does this differ from vanilla JS?
+- What does the jQuery function return? How is it similar or different from a DOM Element object?
+- How can you select multiple elements with jQuery?
+- How can you select multiple elements with different IDs and classes in _one_ selector expression?
+- What are the different ways of chaining selectors?
+- How do you select elements based on different attributes?
+- How do you select a checkbox based on its state?
+- What are some important "gotchas" to be wary of with jQuery objects?
 
 
-Play around with the following example using jQuery.
+#### Events
+
+- What method(s) allows us to listen for / respond to an event with jQuery?
+- Which method allows us to listen to any kind of event? How do you specify the event?
+- How do you take advantage of event delegation with jQuery? How is it different from vanilla JS event delegation?
+- How do you determine which element fired the event in a jQuery event listener? How is this different from finding the element that fired an event in vanilla JS?
+- What's the difference between `this` and `$(this)`?
+- Can you still access the `event` object within a jQuery event listener?
+
+#### Getting and Setting Content
+
+For all applicable questions, compare and contrast using jQuery and vanilla JS.
+
+- How do you get the text from an element (like a paragraph) with jQuery??
+- How do you set the text of an element (like a paragraph)?
+- How do you get the text / content from an input?
+- How do you set the text / content of an input?
+- How do you add / remove / toggle classes on an element?
+- What's the difference between `.text()` and `.text([text])`?
+- If you select multiple elements with jQuery, do you have to use a `for` loop / iterate through each to modify their content? Give an example.
+
+
+#### Traversing the DOM
+
+For all applicable questions, compare and contrast using jQuery and vanilla JS.
+Get some practice reading the <a href="https://api.jquery.com/category/traversing/tree-traversal/" target="\__blank">jQuery docs</a>.
+
+- Describe what DOM traversal is and why it is useful.
+- What can the `siblings()`, `parent()`, and `children()` methods do?
+- What is `prepend()`, `append()`, and what are their differences?
+- What is the difference between `parent()` and `parents()`? Why would I want to use either?
+- Describe `closest()` and `find()`. What are their use cases?
+
+
+## Extra Practice
+
+Check out this <a href="https://frontend.turing.io/lessons/module-2/introduction-to-jquery.html" target="\__blank">lesson plan</a> to get more practice traversing and manipulating the DOM with jQuery.
+
+<!-- Play around with the following example using jQuery.
 
 - Change the replacement text to something else.
 - Change the `h1` selector to `.important-header`
@@ -187,7 +259,7 @@ In this example, we're doing the following:
 
 ### Try It: Secret Passcode Time
 
-Can you change the code above so that it's looking for a secret passcode before it prints a hidden message to the screen? It's totally your call on what the password is and what the message should be. I don't want to steal your creative thunder.
+Can you change the code above so that it's looking for a secret passcode before it prints a hidden message to the screen? It's totally your call on what the password is and what the message should be. I don't want to steal your creative thunder. -->
 
 <!-- ## Bringing It Together: CSS Transitions and Animations Together
 
@@ -197,7 +269,7 @@ Change some of the properties of the `.box` and `.clicked` selectors and observe
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="xOVxxp" data-default-tab="css,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/xOVxxp/">Flying Box</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p> -->
 
-## Knowing Which Element We Clicked - THIS!
+<!-- ## Knowing Which Element We Clicked - THIS!
 
 Consider a situation where we have three boxes. When that particular box is clicked, we want to toggle a class on that box only. How do we know which box was clicked?
 
@@ -222,11 +294,11 @@ We want each box to have a button inside of it. When the user clicks the button,
 
 This code _does not_ work the way we'd like - right now when we click on the button, the button itself is rotating instead of the entire box. What we need to do is when the user clicks on a button, go up and find the box that it lives in (the parent element) and add the class to _that_ element. We can use traversal like this:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="YWqzJo" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/YWqzJo/">Rotating Boxes</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p data-height="300" data-theme-id="23788" data-slug-hash="YWqzJo" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/YWqzJo/">Rotating Boxes</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p> -->
 
-You can see all of ways we can move around the DOM tree in [jQuery documentation](https://api.jquery.com/category/traversing/tree-traversal/).
+<!-- You can see all of ways we can move around the DOM tree in [jQuery documentation](https://api.jquery.com/category/traversing/tree-traversal/). -->
 
-# A Deeper Dive
+<!-- # A Deeper Dive
 
 Let's take a closer look at how we can use the jQuery library!
 
@@ -432,4 +504,4 @@ In order to take both `append()` and `prepend()` for a spin, let's try the follo
 
 * Find all of the presidents who died in office (hint: they have a `died` class on their `tr`).
 * Append `<span class="died">(Died)<span>` to the the `term` column.
-* **Bonus**: Add a radio button before the number in each row.
+* **Bonus**: Add a radio button before the number in each row. -->
