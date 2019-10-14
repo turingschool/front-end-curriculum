@@ -31,10 +31,12 @@ Git hooks allow us to effectively 'pause' the commit cycle at each of these four
 
 ### Why?
 
-* **We Don't Have to Wait for a Build Process:** We just saw how CircleCI builds will sometimes fail if we have a failing test or our code doesn't pass the linting rules we've set. Builds can take significant time when we have complex applications, so we want to minimize the chances that we'll start a build that's going to fail. One way we can do that is by running our tests and linting checks before we even commit our code with a `pre-commit` hook.
+On your own, write down why this might be useful as part of your workflow? After you are done, discuss your thoughts with the person next to you.
+ 
+<!-- * **We Don't Have to Wait for a Build Process:** We just saw how CircleCI builds will sometimes fail if we have a failing test or our code doesn't pass the linting rules we've set. Builds can take significant time when we have complex applications, so we want to minimize the chances that we'll start a build that's going to fail. One way we can do that is by running our tests and linting checks before we even commit our code with a `pre-commit` hook.
 * **They ensure your commits are flawless:** If you verify the integrity of your code before committing it, you'll never have to go back and add a separate commit that says 'Fix linting errors' or 'Remove console.logs'. These types of commits clutter up the history and make it more difficult to search past versions of the project.
 * **They enable you to be a slob:** You can carry-on with your normal workflow and write messy code...and no one will be the wiser. Git will clean it all up for you (or at least remind you to do so) before your teammates see what a mess you've made.
-
+ -->
 ## The .git Directory
 Whenever we create a new local git repo, a `.git` directory is included in our project. This is where our git hooks live! The `.git` directory holds all sorts of secrets and goodies related to the version control process for our project. It maintains an immense amount of information, including all the deltas and changesets you've ever made. So even if you delete a commit or think you've lost some important code, never fear -- you can always jump into the depths of the `.git` directory and retrieve it. *(If you've ever committed your `node_modules` directory, you'll notice all of your clones and pulls are incredibly slow because that changeset still exists in the history somewhere, even after you delete it.)*
 
