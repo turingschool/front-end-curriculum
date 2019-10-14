@@ -368,17 +368,13 @@ Let's set up a `beforeEach()` block to handle it.
 import { getIdeas } from './apiCalls';
 
 describe('getIdeas', () => {
-  let mockResponse;
-
-  beforeEach(() => {
-    mockResponse = [
-      {
-        id: 1,
-        title: "Sweaters for pugs",
-        description: "To keep them warm"
-      }
-    ];
-  });
+  let mockResponse = [
+    {
+      id: 1,
+      title: "Sweaters for pugs",
+      description: "To keep them warm"
+    }
+  ];
 
   it('should call fetch with the correct url', () => {
 
@@ -438,17 +434,15 @@ So let's write out our mocked fetch!
 import { getIdeas } from './apiCalls';
 
 describe('getIdeas', () => {
-  let mockResponse;
+  let mockResponse = [
+    {
+      id: 1,
+      title: "Sweaters for pugs",
+      description: "To keep them warm"
+    }
+  ];
 
   beforeEach(() => {
-    mockResponse = [
-      {
-        id: 1,
-        title: "Sweaters for pugs",
-        description: "To keep them warm"
-      }
-    ];
-
     window.fetch = jest.fn().mockImplementation(() => {
       return Promise.resolve({
         ok: true,
