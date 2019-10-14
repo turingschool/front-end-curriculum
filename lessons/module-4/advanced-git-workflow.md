@@ -32,7 +32,7 @@ Git hooks allow us to effectively 'pause' the commit cycle at each of these four
 ### Why?
 
 On your own, write down why this might be useful as part of your workflow? After you are done, discuss your thoughts with the person next to you.
- 
+
 <!-- * **We Don't Have to Wait for a Build Process:** We just saw how CircleCI builds will sometimes fail if we have a failing test or our code doesn't pass the linting rules we've set. Builds can take significant time when we have complex applications, so we want to minimize the chances that we'll start a build that's going to fail. One way we can do that is by running our tests and linting checks before we even commit our code with a `pre-commit` hook.
 * **They ensure your commits are flawless:** If you verify the integrity of your code before committing it, you'll never have to go back and add a separate commit that says 'Fix linting errors' or 'Remove console.logs'. These types of commits clutter up the history and make it more difficult to search past versions of the project.
 * **They enable you to be a slob:** You can carry-on with your normal workflow and write messy code...and no one will be the wiser. Git will clean it all up for you (or at least remind you to do so) before your teammates see what a mess you've made.
@@ -75,39 +75,92 @@ npm run lint --silent
 We might also want to check for `console.logs` or `debugger` statements in our code before committing, because embarassing things like <a href="https://twitter.com/CLINT/status/493173618105274369">this</a> might happen. Sometimes (though rarely), you might actually want to include an intentional `console.log`. With the following script, we can allow users to choose whether or not to continue with the commit if any logs are detected:
 
 ```bash
-echo "\nChecking for console.logs()...\n"
+#!/bin/sh
+#
+# An example hook script to verify what is about to be committed.
+# Called by git-commit with no arguments.  The hook should
+# exit with non-zero status after issuing an appropriate message if
+# it wants to stop the commit.
+#
+# To enable this hook, make this file executable.
 
-exec 1>&2
-# enable user input
-exec < /dev/tty
+# This is slightly modified from Andrew Morton's Perfect Patch.
+# Lines you introduce should not have trailing whitespace.
+# Also check for an indentation that has SP before a TAB.
 
-consoleregexp='^\+.*console\.log('
-debuggerregexp='debugger'
-
-if test $(git diff --cached | grep $consoleregexp | wc -l) != 0
+if git-rev-parse --verify HEAD 2>/dev/null
 then
-  exec git diff --cached | grep -ne $consoleregexp
-  read -p "You have added one or more console logs in your modification. Are you sure want to continue? (y/n)" yn
-  echo $yn | grep ^[Yy]$
-  if [ $? -eq 0 ]
-  then
-    exit 0; # Let the user continue
-  else
-    exit 1; # Don't let the user continue
-  fi
-fi
-if test $(git diff --cached | grep $debuggerregexp | wc -l) != 0
-then
-  exec git diff --cached | grep -ne $debuggerregexp
-  read -p "You have added one or more debuggers in your modification. Are you sure want to continue? (y/n)" yn
-  echo $yn | grep ^[Yy]$
-  if [ $? -eq 0 ]
-  then
-    exit 0; # Let the user continue
-  else
-    exit 1; # Don't let the user continue
-  fi
-fi
+  git-diff-index -p -M --cached HEAD --
+else
+  # NEEDSWORK: we should produce a diff with an empty tree here
+  # if we want to do the same verification for the initial import.
+  :
+fi |
+perl -e '
+    my $found_bad = 0;
+    my $filename;
+    my $reported_filename = "";
+    my $lineno;
+    sub bad_line {
+  my ($why, $line) = @_;
+  if (!$found_bad) {
+      print STDERR "*\n";
+      print STDERR "* You have some suspicious patch lines:\n";
+      print STDERR "*\n";
+      $found_bad = 1;
+  }
+  if ($reported_filename ne $filename) {
+      print STDERR "* In $filename\n";
+      $reported_filename = $filename;
+  }
+  print STDERR "* $why (line $lineno)\n";
+  print STDERR "$filename:$lineno:$line\n";
+    }
+
+$last_line = "";
+    while (<>) {
+  if (m|^diff --git a/(.*) b/\1$|) {
+      $filename = $1;
+      next;
+  }
+  if (/^@@ -\S+ \+(\d+)/) {
+      $lineno = $1 - 1;
+      next;
+  }
+if (/^ |\+/) {
+  if(($last_line . $_) =~ m/,[\s+]*}/) {
+    bad_line("trailing comma", $last_line . $_);
+  } $last_line = $_;
+}
+  if (/^ /) {
+      $lineno++;
+      next;
+  }
+  if (s/^\+//) {
+      $lineno++;
+      chomp;
+      if (/\s$/) {
+    bad_line("trailing whitespace", $_);
+      }
+      if (/^\s* \t/) {
+    bad_line("indent SP followed by a TAB", $_);
+      }
+      if (/^([<>])\1{6} |^={7}$/) {
+    bad_line("unresolved merge conflict", $_);
+      }
+      if (/ruby-debug/) {
+    bad_line("debugger breakpoint left in", $_);
+      }
+      if(/debugger/){
+    bad_line("debugger breakpoint left in", $_);
+      }
+      if (/console\.log/) {
+    bad_line("console logging left in", $_);
+      }
+  }
+    }
+    exit($found_bad);
+'
 ```
 
 *Note: In order for a hook file to run, it must be made executeable. You can make a file executeable by running:* 
@@ -125,9 +178,12 @@ In earlier versions of Git, you could implement this same strategy by creating a
 
 Both of these strategies can be facilitated by a library like [git-validate](https://github.com/nlf/git-validate). With git-validate, you can create a separate repository to hold things like a common linting configuration and rules for your pre-commit hooks.
 
+## On Your Own
+A a pre-commit hook to your Palette Picker that will test for console logs.
+
 ## Amending Commits
 
-After making a commit, if you realize you want to add another change to that commit or have some code changes that you want to modify, you can stage your new changes and instead of creating a new commit for them, you can edit the previous commit with `git commit --amend`
+After making a commit, if you realize you want to add another change to that commit or have some code changes that you want to modify, you can stage your new changes and instead of creating a new commit for them, you can edit the previous commit with `git commit --amend` (Alternatively, if you would just like to edit the message, you can run `git commit --amend -m "Your message here"`)
 
 This will add any staged changes to the previous commit, and open up the commit message for an opportunity to modify that as well. It's important to note that this feature **rewrites history**. Because you'll be amending a pre-existing commit, it will change the unique SHA (identifier) of that commit. If anyone else has based work off of the original commit, they'll get into a bad state where git doesn't know how to resolve the changes. Amending commits is useful for when you are working locally and/or individually, and nobody else is relying on your work. 
 
