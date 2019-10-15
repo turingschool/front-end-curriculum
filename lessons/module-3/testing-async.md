@@ -612,7 +612,7 @@ Since we've already tested that `getIdeas` works as we expect, all we have left 
 <section class="note">
 ### Note
 
-I recommend not testing state changes in `componentDidUpdate`.  It gets complex fast, and even once you mock out what `getIdeas` returns, you can run into race conditions where asserting things about state doesn't always work. However, you **should** test that state has updated with other async methods you have created. 
+I recommend not testing state changes in `componentDidMount`.  It gets complex fast, and even once you mock out what `getIdeas` returns, you can run into race conditions where asserting things about state doesn't always work. However, you **should** test that state has updated with other async methods you have created. 
 </section>
 
 `App.js` is bringing in `getIdeas` from `./apiCalls.js`. We can trick App into using mocked functions instead of the real ones!
@@ -713,7 +713,7 @@ Below you can see that we have mocked out how postIdea works in the test itself.
 
     await wrapper.instance().addIdea(mockIdea);
 
-    expect(postIdea).toHaveBeenCalled();
+    expect(postIdea).toHaveBeenCalledWith(mockIdea);
     expect(wrapper.state('ideas')).toEqual(expected);
   });
 ```
