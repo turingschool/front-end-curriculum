@@ -35,7 +35,7 @@ They are meant to bundle together two things:
 
 ## Anatomy of Objects
 
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in JavaScript to declare an object is curly braces ```{}```. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
 
 Objects are a collection of _key-value pairs_ surrounded by _curly braces_. A _key_ is like a _name_ that holds a value. You're actually used to working with key-value pairs already, because a key-value pair in an object is similar to a variable - the variable name serves as a label for the data we really care about referencing.
 
@@ -371,7 +371,7 @@ We can run the repl to see what the fridges are showing at this point. We curren
 
 ### Constructor
 
-When we run `new Fridge();` in javascript, what actually happens? We can see from the last example that different Fridge object instances are created and returned. Other than that, nothing happens. If we want some specific code to run when we first create a new Fridge, we need to tell JavaScript what should happen when a new Fridge object instance is created. We do this with the constructor method.
+When we run `new Fridge();` in JavaScript, what actually happens? We can see from the last example that different Fridge object instances are created and returned. Other than that, nothing happens. If we want some specific code to run when we first create a new Fridge, we need to tell JavaScript what should happen when a new Fridge object instance is created. We do this with the constructor method.
 
 ```javascript
 class Fridge {

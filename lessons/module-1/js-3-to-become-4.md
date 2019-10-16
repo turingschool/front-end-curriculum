@@ -98,7 +98,7 @@ The ```school``` object has one method:
 
 - ```checkOpenspots: function(){ return this.capacity - this.currentStudents; }```
 
-There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in javascript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
+There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in JavaScript to declare an object is curly braces ```{}```. I swear. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var myDumbObjectIsEmpty = {}```
 
 There are two ways to access the properties or methods of an object:
 

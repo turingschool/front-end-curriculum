@@ -81,7 +81,7 @@ Things to Avoid:
 <!-- Replacement. You're using a paragraph but telling it to be a header. Just use an h1-h6 element.  -->
 ```
 
-As much as possible, if there's an element that accomplishes the "role" you are trying to achieve, use it. HTML 5 has provided a boatload of really great, semantically rich elements that not only convey the appropriate role, but also handle all of the behavioral keyboard interactions without requiring additional javascript.
+As much as possible, if there's an element that accomplishes the "role" you are trying to achieve, use it. HTML 5 has provided a boatload of really great, semantically rich elements that not only convey the appropriate role, but also handle all of the behavioral keyboard interactions without requiring additional JavaScript.
 
 [Table of elements and their implicit roles](https://www.w3.org/TR/html-aria/#docconformance)
 

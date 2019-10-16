@@ -63,7 +63,7 @@ Some representation, usually visual, of the tables, columns, ids and foreign key
 
 ### SQL
 
-Structured Query Language is it's own language. It has variables and functions and every database engine has it's own dialect. It's used mostly for reading and writing data, but it can do logic and calculations on your data, often much more quickly than your silly ruby or javascript can.
+Structured Query Language is it's own language. It has variables and functions and every database engine has it's own dialect. It's used mostly for reading and writing data, but it can do logic and calculations on your data, often much more quickly than your silly ruby or JavaScript can.
 
 #### Insert
 
@@ -221,7 +221,7 @@ For a really simple GUI, try [robomongo](https://lmgtfy.com/?q=robomongo)
 
 ### Exercises
 
-I wrote a javascript to fill a collection with TV shows and episodes. To give you something to play with. [Here's a gist of it](https://gist.github.com/neight-allen/84cbaaf6a5fd5126b9c01e24e2e3e009)
+I wrote a JavaScript to fill a collection with TV shows and episodes. To give you something to play with. [Here's a gist of it](https://gist.github.com/neight-allen/84cbaaf6a5fd5126b9c01e24e2e3e009)
 
 [There's also a sample dataset from the mongo people](https://docs.mongodb.com/getting-started/shell/import-data/)
 

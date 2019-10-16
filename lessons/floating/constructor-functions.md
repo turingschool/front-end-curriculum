@@ -7,7 +7,7 @@ tags: js, introduction, constructor functions, this
 
 We feel pretty good about using literal notation to create an object. We know that all we really need is `{}`, but it's a good idea to assign an empty object to a variable to we can actually put things in it.
 
-Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, javascript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
+Now, let's talk about using _constructor notation_ to create an object. It's not too hard. Out of the box, JavaScript gives a function for making blank objects. Javascript also gives us a handy keyword called ```new```. When you put the two together, you can generate blank objects all day!
 
 ```javascript
 // literal notation
@@ -35,7 +35,7 @@ function Restaurant(name, tables, reservations) {
 Let's talk about what's going on here:
 
 - A function called `Restaurant` is a template for creating new objects that represent individual "instances" of restaurants  
-- Therefore, every time the function is invoked, it creates a new instance (object of a certain type) of a Restaurant 
+- Therefore, every time the function is invoked, it creates a new instance (object of a certain type) of a Restaurant
 - The function has three parameters (`name`, `tables`, `reservations`)  
 - Each parameter sets the _value_ of a _property_ in the object  
 - The `this` keyword is used instead of the object name to indicate that the property or method belongs to the object that THIS function creates  
@@ -91,7 +91,7 @@ function Singer() {}
 Singer.prototype;
 ```
 
-As a review, constructors in javascript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
+As a review, constructors in JavaScript can be any function and they are responsible for creating new instances - recall that we can throw on some initial properties in our constructor function to give it some information off the bat.
 
 ```javascript
 function Singer() {
@@ -99,7 +99,7 @@ function Singer() {
 }
 ```
 
-Similarly, a `prototype` in javascript can be _any object_ and it is responsible for defining the **behavior** of instances. This behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. Creating prototype functions is essentially defining your objects' instance methods.  
+Similarly, a `prototype` in JavaScript can be _any object_ and it is responsible for defining the **behavior** of instances. This behavior is defined by modifying the prototype directly, e.g. by adding functions to it as properties. Creating prototype functions is essentially defining your objects' instance methods.  
 
 Let's look at some code examples.  
 
@@ -121,4 +121,3 @@ pie.bake();
 ```
 
 _Note_: We will get WAY MORE INTO prototype methods and what is happening behind the scenes as we progress through this mod/program. This is not the last time we will talk about these concepts so if prototypes and the word "this" make you feel panicky...thats ok.  
-

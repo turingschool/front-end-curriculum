@@ -11,7 +11,7 @@ tags: node, setup, tools
 - `Terminal` A program that allows a user to interact with The Command Line
 - `Git` A tool for managing the code you write
 - `Xcode` A set of development tools built and distributed by Apple
-- `node` Something that allows us to run javascript from the command line
+- `node` Something that allows us to run JavaScript from the command line
 
 ## Configuring a development environment
 
@@ -126,8 +126,8 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
 
 ### Install the Sublime command line tools
 
-  - Make sure you download [Sublime](https://www.sublimetext.com/) 
-  - Open your finder (Command-Space for spotlight, type Finder, and hit enter) 
+  - Make sure you download [Sublime](https://www.sublimetext.com/)
+  - Open your finder (Command-Space for spotlight, type Finder, and hit enter)
   - Move Sublime from your downloads to your Applications folder.
   - Open your terminal (Command-Space for spotlight, type Sublime, and hit enter).
   - First up, check your own $PATH by typing the following in your terminal line:
@@ -141,7 +141,7 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
   `ln -s "/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl" /usr/local/bin/sublime`
   - Open a new terminal window (Command-T) and type `sublime .`
   - Experiment with creating a file in Sublime and using `ls` in the terminal to see it. Try creating a file in the terminal with `touch` and see if it shows up in Sublime.
- 
+
  (Full instructions can be found [here](http://olivierlacan.com/posts/launch-sublime-text-3-from-the-command-line//))
 
 ### Add config setting to set tab size
@@ -154,7 +154,7 @@ Google Chrome Canary is a bleeding edge, experimental version of Chrome, with th
   "translate_tabs_to_spaces": true,
 ```
 
-  - This will set tabs to be two spaces and make tabs compile down to spaces 
+  - This will set tabs to be two spaces and make tabs compile down to spaces
 
 ### Install Node.js using `nvm`
 

@@ -28,7 +28,7 @@ Exercisms are a great way to get more reps in with a coding language that you're
 - Afterwards, notice on the right side you'll need to download the hello world exercism.  Copy and paste it into your terminal.
   * The command to download is: ```exercism download --exercise=hello-world --track=javascript```
   * From your root directory, type in ```cd Exercism/javascript/hello-world/```
-- You'll notice a README and two javascript files.  
+- You'll notice a README and two JavaScript files.  
   * The hello-world.spec.js is where the test lies.
   * The hello-world.js is where you will solve the problem.
 - To run the test, we'll need to install a package globally first.

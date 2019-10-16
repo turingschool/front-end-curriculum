@@ -51,16 +51,16 @@ WEBP (keep your eye on this one, not currently supported in all browsers)
 **Often, you will need to experiment with file types/approaches to find what works best for your particular project needs.**
 
 ## Image Crushing - Just Do It. :facepunch:
-If you do nothing else, crush your images. Crushing images is an immediate and significant savings. You could spend an hour refactoring javascript or CSS to shave a handful of kilobytes off your app, or run your images through a crusher, and save megabytes in seconds. One more time -- IF YOU DO NOTHING ELSE, AT LEAST CRUSH YOUR IMAGES. 
+If you do nothing else, crush your images. Crushing images is an immediate and significant savings. You could spend an hour refactoring JavaScript or CSS to shave a handful of kilobytes off your app, or run your images through a crusher, and save megabytes in seconds. One more time -- IF YOU DO NOTHING ELSE, AT LEAST CRUSH YOUR IMAGES. 
 
 [ImageOptim](https://imageoptim.com/mac)
-- This app is a actually a collection of other image optimizers for the different image file types. 
-- It runs a file through each optimizer to minimize overall file size. 
+- This app is a actually a collection of other image optimizers for the different image file types.
+- It runs a file through each optimizer to minimize overall file size.
 - For the most part, it's removing a metric ton of crufty meta data hiding in your images.
 - You'll realize the biggest gains in pngs first, then jpgs, then gif.
 
 [SVGO GUI](https://github.com/svg/svgo-gui)
-- For use when you save an image out as ```.svg``` and you are in fact using it as an image, 
+- For use when you save an image out as ```.svg``` and you are in fact using it as an image,
 - NOT for inline svg code
 - Works a lot like ImageOptim
 
@@ -75,8 +75,8 @@ Many a tutorial exist on generating sprites. Choose your own adventure:
 - [CSS Tricks Sprites](https://css-tricks.com/css-sprites/)
 
 ## Responsive Image Handling :pray:
-Well, first thing first. The web is *almost* 100% responsive by DEFAULT. 
-Yep, that's right. Simply set the width of your images to 100%, and boom :boom:. 
+Well, first thing first. The web is *almost* 100% responsive by DEFAULT.
+Yep, that's right. Simply set the width of your images to 100%, and boom :boom:.
 Need more proof? Check this site + the minimal accompanying *responsive css*: [fluidity.sexy](http://fluidity.sexy/)
 
 But of course, it is never just that easy...
@@ -87,10 +87,10 @@ But what if I don't want my picture to squish quite like that (fluidity example 
 _Resolution Switching Problem:_ :raising_hand:
 But if my picture is giant, like say 4000px wide, and I serve that image to mobile devices that are only 320px - 480px wide, and I let the browser squish that 4000px image down, aren't those just "wasted" pixels? Seems like a lot to ask the cellular network to download a ginormous image when it really only needs a tiny little version.
 
-_Short answer:_ :point_right: Yes and Yes :point_left:. 
+_Short answer:_ :point_right: Yes and Yes :point_left:.
 So how do we deal with the issues above?
 We leverage two newish attributes of the `img` tag in HTML.
-`srcset` and `sizes` provide several additional source images along with hints to help the browser pick the right one. 
+`srcset` and `sizes` provide several additional source images along with hints to help the browser pick the right one.
 
 ```
 <img srcset="puppy-320w.jpg 320w,
@@ -101,7 +101,7 @@ We leverage two newish attributes of the `img` tag in HTML.
             800px"
      src="puppy-800w.jpg" alt="Adorable puppy picture">
 ```
-The srcset and sizes attributes look complicated, but they're not that bad to understand if you format them as shown above, with a different part of the attribute value on each line. Each value contains a comma-separated list. Each part of the lists are made up of three sub-parts. 
+The srcset and sizes attributes look complicated, but they're not that bad to understand if you format them as shown above, with a different part of the attribute value on each line. Each value contains a comma-separated list. Each part of the lists are made up of three sub-parts.
 
 ```srcset``` defines the set of images we will allow the browser to choose between, and what size each image is. Before each comma, we write:
 
@@ -126,9 +126,9 @@ The srcset and sizes attributes look complicated, but they're not that bad to un
 - You could go crazy w/ image sizes, but don't. Set your range - like maybe your smallest image size will be 800px, and you and the team agree you have no qualms serving that on a 400 screen. Work w/ your designers on resolution range setting. If it gets too blurry at 2400 screen, then bump up the range of size/pixel dimension serving that you've set.
 - Evaluate analytics to determine which image sizes are most popular, and make some optimization choices based on those insights.
 
-** Future forward, keep your eye out on the "Client Hints" movement, whereby client sends info to server and server handles all the image choosing. Managing this crap on client side hurts. 
+** Future forward, keep your eye out on the "Client Hints" movement, whereby client sends info to server and server handles all the image choosing. Managing this crap on client side hurts.
 
---- 
+---
 
 ## Further reading and things to keep your :eyes: on:
 - [SVGs and Accessibility](https://css-tricks.com/accessible-svgs/)
@@ -150,4 +150,3 @@ Our go-to image control approach from the server was a combination of using html
 - Had to have the markup *just right*, with a parent element containing a child element that had the background image property. Some developers didn't realize this, and would consequently *believe* they were only pulling down the images they needed at specific breakpoints, but in reality, the client was pulling down ALL the images across breakpoints because the markup wasn't structured correctly. And also, extra markup = :rage:
 - Not great for accessibility, because this approach essentially just applies an image to an existing, regular old html element. There is no alt attribute like on an ```img``` tag, and no fallback. If the image didn't load from server, the user's experience was broken.
 - ```object-fit``` is gaining traction, which is the right solution to this janky approach, but it's not yet supported on all browsers.
-

@@ -245,7 +245,7 @@ colors
 - add a new car to the array
 
 ### Statements
-A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in javascript is followed by a semicolon. Example statement:
+A script is a series of instructions that a computer can follow one by one. Each individual instruction is known as a statement. Each statement in JavaScript is followed by a semicolon. Example statement:
 
 ```javascript
 console.log('BOOM');

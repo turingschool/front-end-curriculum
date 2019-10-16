@@ -11,7 +11,7 @@ Let's review our three building blocks for front end development:
 * __PRESENTATION__:  Cascading Style Sheets (CSS) sets the look and style of a web page. CSS provides style to the structure provided by HTML.
 * __BEHAVIOR__:  JavaScript allows us to define interaction in our pages. What happens when a user clicks on a certain area?
 
-Turns out, CSS has some "behaviour tricks" up its sleeve as well. Through CSS transitions, transformations, and animations you can create quite a bit of movement on your page sans any real javascript. Stunning examples include:
+Turns out, CSS has some "behaviour tricks" up its sleeve as well. Through CSS transitions, transformations, and animations you can create quite a bit of movement on your page sans any real JavaScript. Stunning examples include:
 
 * [Type Terms](https://www.supremo.tv/typeterms/)
 * [Code Pen: Page Flip](http://codepen.io/fbrz/pen/whxbF?editors=1100#0)

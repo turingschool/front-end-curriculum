@@ -1,5 +1,5 @@
 ---
-title: Introduction to Selenium Testing 
+title: Introduction to Selenium Testing
 ---
 
 # Optional Pre-Teach
@@ -11,13 +11,13 @@ __Video:__ [Introduction to Selenium](https://www.youtube.com/watch?v=BL4-_tVx2r
 # Learning Goals
 
 * Learn how to setup a selenium testing environment to run tests locally
-* Learn the basics of constructing selenium tests in javascript
+* Learn the basics of constructing selenium tests in JavaScript
 * Learn about testing best practices
 
 # Vocab
 
 - `Unit (testing)` The smallest component of software. Usually a Class or a single function
-- `Unit Test` Tests that interact with and examine Units 
+- `Unit Test` Tests that interact with and examine Units
 - `Integration Testing` Tests that examine how Units interact and 'integrate' with each other
 
 ***
@@ -44,7 +44,7 @@ Why should you care? With Selenium, you can configure a set of scripts that will
 * Selenium is open source and supports a range of languages including
   Java, Perl, Python, C#, Ruby, Java Script, etc., as well as a range of
   OS like Windows, Mac, Linux, UNIX, etc.
-* Testing tools components allow for a fully customizable suite 
+* Testing tools components allow for a fully customizable suite
 * Cross browser & device flexibility
 
 ### Wait, what was all that ^^ again?
@@ -59,8 +59,8 @@ Up to this point in our development we’ve spent most, if not all our time, in 
 
 ***
 
-# Setup 
-Let's take Selenium for a test drive on our Linked List project. 
+# Setup
+Let's take Selenium for a test drive on our Linked List project.
 
 ### Installation
 1. `cd` into an existing Linked List project that you have saved locally, or clone down a new Linked List project from :octocat: and `cd` into the resulting directory.
@@ -78,7 +78,7 @@ Let's take Selenium for a test drive on our Linked List project.
 Let's create a sample test file that will both help us see our Selenium in action, as well as walk us through some of the config requirements.
 
 * Add a file to your linked list project called `multiple_browser_test.js`
-* Copy/paste the code from below into the file: 
+* Copy/paste the code from below into the file:
 
 #### Multiple Browser Test File Code
 
@@ -132,8 +132,8 @@ function searchTest(driver) {
 
 #### Comprehend (10 min) :open_mouth:
 
-* Objective: practice reading and articulating code. 
-* Pair and/or triple up in teams 
+* Objective: practice reading and articulating code.
+* Pair and/or triple up in teams
 * In your `multiple_browser_test.js` file, you will write comments to explain each block of code
 * A "block of code" for our purposes of this exercise, is simply those lines of codes set apart by line breaks - so there are eight(8) total in this file, although I've given you the comments on the first block as an example, which leaves only seven(7) for you to do on your own
 * Above each block, TAKE TURNS writing comments that explain what the block of code is doing
@@ -147,7 +147,7 @@ I'll post a version in slack for you to compare your comments.
 * What are the big discrepancies you notice?
 * Any A-HA moments?
 
-*** 
+***
 
 # Application: Your Turn
 
@@ -167,4 +167,3 @@ I'll post a version in slack for you to compare your comments.
 1. Use good locator strategies: When you are Interacting with the document, make sure that you use locators and page objects that are unlikely to change — if you have a testable element that you want to perform a test on, make sure that it has a stable ID, or position on the page that can be selected using a CSS selector, which isn't going to just change with the next site iteration. You want to make your tests as non-brittle as possible, i.e. they won't just break when something changes.
 2. Write atomic tests: Each test should test one thing only, making it easy to keep track of what test file is testing which criterion. As an example, the google_test.js test we looked at above is pretty good, as it just tests a single thing — whether the title of a search results page is set correctly. We could work on giving it a better name so it is easier to work out what it does if we add more google tests. Perhaps results_page_title_set_correctly.js would be slightly better?
 3. Write autonomous tests: Each test should work on it's own, and not depend on other tests to work.
-
