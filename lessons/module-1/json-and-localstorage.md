@@ -32,13 +32,13 @@ There are two primary ways of storing data in web applications, which are - serv
 
 ## Client-side storage
 
-Browsers provide two main types of immediate storage that is accessible without messing with a database: <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> which gets reset whenever your browser session restarts, and <a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a>, which has no specified expiration date. Today we will strictly be talking about `localStorage`.
+Browsers provide two main types of immediate storage that is accessible without messing with a database: <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> which gets reset whenever your browser session restarts, and <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a>, which has no specified expiration date. Today we will strictly be talking about `localStorage`.
 
 The web storage API is a secure way your browser can store key value pairs that are unique to each domain. So, if you store some information on a page hosted at `github.com`, then it is not accessible from a page hosted at `twitter.com`. This is for security reasons as well as to guarantee that the pages won't end up with conflicting names and overwriting items in storage from another site.
 
 ## Local Storage
 
-<a target="_blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a> is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
+<a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a> is a property you can call on the global `window` variable within your browser, just like you can call `document`, that allows you to access a local storage object for persisting data.
 
 `localStorage` supports the following methods:
 
@@ -76,10 +76,12 @@ Check out the docs. What other methods are available to you when using localStor
 ### localStorage in Action
 How can we improve the functionality of the following codepen with local storage?
 
-<iframe height="265" style="width: 100%;" scrolling="no" title="localStorage in Action - Save Info Form" src="//codepen.io/eric_turing/embed/yLBzwvd/?height=265&theme-id=dark&default-tab=css,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/eric_turing/pen/yLBzwvd/'>localStorage in Action - Save Info Form</a> by eric weissman
-  (<a href='https://codepen.io/eric_turing'>@eric_turing</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="PoozazK" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="localStorage in Action - Save Info Form">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/PoozazK">
+  localStorage in Action - Save Info Form</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## What is JSON?
 
@@ -87,7 +89,7 @@ When we're communicating with servers, we use a transport protocol called HTTP.
 
 HTTP powers the web, but it does have one limitation. All information can only be sent back and forth using strings. Strings are great, but it's not hard to imagine a world where we might want to send slightly more complicated data structures back (e.g. objects and arrays) back and forth between the client and the server.
 
-JSON stands for "JavaScript Object Notation" and is an alternative to <a target="_blank" href="https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53">XML</a> as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. **JSON** is a language-independent data format that is easy for humans to read and write and easy for machines to parse and generate.
+JSON stands for "JavaScript Object Notation" and is an alternative to <a target="blank" href="https://gist.github.com/stevekinney/210a7fb9c9b3c0be2e53">XML</a> as a standard for sending information back and forth over the web. It's a subset of JavaScript's object syntax. **JSON** is a language-independent data format that is easy for humans to read and write and easy for machines to parse and generate.
 
 JSON has the following rules:
 
@@ -135,10 +137,13 @@ Now the object is in local storage, and we can retrieve it out of local storage.
 8. `parsedObject` (We are now back to our original object!)
 
 ### JSON in Action
-<iframe height="265" style="width: 100%;" scrolling="no" title="JSON in Action - Contact Form" src="//codepen.io/eric_turing/embed/wLORLw/?height=265&theme-id=dark&default-tab=html,result" frameborder="no" allowtransparency="true" allowfullscreen="true">
-  See the Pen <a href='https://codepen.io/eric_turing/pen/wLORLw/'>JSON in Action - Contact Form</a> by eric weissman
-  (<a href='https://codepen.io/eric_turing'>@eric_turing</a>) on <a href='https://codepen.io'>CodePen</a>.
-</iframe>
+
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="rNNLKLg" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="JSON in Action - Contact Form">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/rNNLKLg">
+  JSON in Action - Contact Form</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 ## Data Attributes
 
