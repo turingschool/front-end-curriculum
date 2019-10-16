@@ -17,7 +17,7 @@ Turns out, CSS has some "behaviour tricks" up its sleeve as well. Through CSS tr
 * [Code Pen: Page Flip](http://codepen.io/fbrz/pen/whxbF?editors=1100#0)
 * [Movie Posters](http://demo.marcofolio.net/3d_animation_css3/)
 * [Coke Can](http://www.romancortes.com/ficheros/css-coke.html)
-* [Album Covers](http://www.bluedashed.com/covers/)...okay, so there is some js happening in this one, but the covers were recreated using pure CSS.
+* [Album Covers](http://www.bluedashed.com/covers/)...okay, so there is some JS happening in this one, but the covers were recreated using pure CSS.
 
 ### Definitions:
 
@@ -34,9 +34,6 @@ Turns out, CSS has some "behaviour tricks" up its sleeve as well. Through CSS tr
 * [CSS Tricks Animation](https://css-tricks.com/almanac/properties/a/animation/)
 
 # Practice
-
-Let's create some pens! 
-But first - rearrange yourselves so that you can pair up with a new partner! Someone you have not yet paired with in a class exercise or a project. 
 
 ### Code Pen #1
 
@@ -82,7 +79,7 @@ Setup:
   width: 25%;
 }
 ```
-1. Create a hover state for the CONTAINER whereby the background color of the BOX changes to green. 
+1. Create a hover state for the CONTAINER whereby the background color of the BOX changes to green.
 2. Make the box move on hover by adding `margin-left: 75%`.
 3. It's a stark transition. Smooth it out with a 1s transition that works when the user moves their cursor onto the container, and also works when they move their cursor off of the container.
 4. Experiment with the following three values with the
@@ -131,10 +128,10 @@ Setup:
 
 1. Rotate the box counter-clockwise 45 degrees
 2. What happens when you pass rotate an argument of `.5turn` or `.75turn` or `2turn`
-3. You can control the origin from which the transformation initiates. Add `-webkit-transform-origin: 100% 100%;` to the hover state of your container and then experiment with changing the x and y values of the property. What do you notice by using 0 for both x and y, versus using 50% for both x and y? 
+3. You can control the origin from which the transformation initiates. Add `-webkit-transform-origin: 100% 100%;` to the hover state of your container and then experiment with changing the x and y values of the property. What do you notice by using 0 for both x and y, versus using 50% for both x and y?
 4. Implement `scale` and `skew` transformations
 
-### Code Pen #5 
+### Code Pen #5
 
 Setup:
 
@@ -171,7 +168,4 @@ div {
 7. Set the animation direction to alternate
 
 ### Code Pen #6 :facepunch: :dizzy_face:
-Go crazy. Experiment with all you've just learned and make a 4-stage animation(s). Hint: code pen #5 was a 2-stage animation. Post animations in 1611 slack channel.
-
-
-
+Experiment with all you've just learned and make a 4-stage animation(s). Hint: CodePen #5 was a 2-stage animation. Post animations in cohort slack channel.
