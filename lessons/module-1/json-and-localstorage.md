@@ -76,7 +76,7 @@ Check out the docs. What other methods are available to you when using localStor
 
 ### localStorage in Action
 
-How can we improve the functionality of the following codepen with local storage?
+How can we improve the functionality of the following CodePen with local storage?
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="PoozazK" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="localStorage in Action - Save Info Form">
   <span>See the Pen <a href="https://codepen.io/turing-school/pen/PoozazK">
@@ -158,7 +158,7 @@ Here we can see an html example of using a `data-` attribute on an element. Note
 <article data-name="cookie"></article>
 ```
 
-And now in our javascript we can access that article using it's data attribute.
+And now in our JavaScript we can access that article using it's data attribute.
 
 ```js
 var article = document.querySelector('article');
