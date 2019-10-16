@@ -24,8 +24,12 @@ We are intentionally using the `for loop` throughout this lesson. If at a later 
 
 Let's say we have a page with the following markup:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="WxOKwo" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/WxOKwo/">Simple HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="KKKMeVx" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple HTML Page">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/KKKMeVx">
+  Simple HTML Page</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Let's try out some queries:
 
@@ -51,8 +55,12 @@ for (var i = 0; i < awesomeParas.length; i++) {
 }
 ```
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="kXwjbv" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/kXwjbv/">Simple HTML Page (Now with JavaScript!)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="ExxyRPq" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple HTML Page (Now with JavaScript!)">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/ExxyRPq">
+  Simple HTML Page (Now with JavaScript!)</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 <section class="call-to-action">
 ### Your Turn
@@ -68,9 +76,9 @@ The following pair practice will require you to use your knowledge of creating f
 
 Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="blank">this page</a> and fork the CodePen.
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="eric_turing" data-slug-hash="QWLNaVE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML Report Card">
-  <span>See the Pen <a href="https://codepen.io/eric_turing/pen/QWLNaVE/">
-  HTML Report Card</a> by eric weissman (<a href="https://codepen.io/eric_turing">@eric_turing</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="vYYKrGy" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML Report Card">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/vYYKrGy">
+  HTML Report Card</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
