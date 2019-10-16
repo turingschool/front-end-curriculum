@@ -226,6 +226,7 @@ What is a real life analogy that you could use to explain how event delegation w
 </section>
 
 <section class="checks-for-understanding">
+
 ## Summary
 
  Using your journal, take a few minutes to answer the following:
