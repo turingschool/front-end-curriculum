@@ -34,14 +34,17 @@ This method take a query selector—like you would use in CSS. `document.querySe
 
 Let's say we have a page with the following markup:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="WxOKwo" data-default-tab="html,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/WxOKwo/">Simple HTML Page</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="XWWKYJQ" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple HTML Page">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/XWWKYJQ">
+  Simple HTML Page</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Let's try out some queries:
 
 * `document.querySelector('p')` will return just the first paragraph.
 * `document.querySelector('#third')` will return the paragraph with the id `third`.
-
 
 <section class="note">
 For today's lesson, we will only be working with `document.querySelector()`. We will focus on how to best utilize `document.querySelectorAll()` once we learn more about arrays and loops!
@@ -59,8 +62,12 @@ var h1Element = document.querySelector('h1');
 h1Element.innerText = 'JavaScript is amazing!';
 ```
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="kXwjbv" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/kXwjbv/">Simple HTML Page (Now with JavaScript!)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="GRRqGJW" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Simple HTML Page (Now with JavaScript!)">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/GRRqGJW">
+  Simple HTML Page (Now with JavaScript!)</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 The DOM has been updated to the following:
 
@@ -103,11 +110,11 @@ To sum up:
 
 ### Pair Practice
 
-Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="_blank">this page</a> and fork the CodePen.
+Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="blank">this page</a> and fork the CodePen.
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="eric_turing" data-slug-hash="QWLNaVE" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML Report Card">
-  <span>See the Pen <a href="https://codepen.io/eric_turing/pen/QWLNaVE/">
-  HTML Report Card</a> by eric weissman (<a href="https://codepen.io/eric_turing">@eric_turing</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="yLLJENR" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="HTML Report Card">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/yLLJENR">
+  HTML Report Card</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
@@ -141,8 +148,12 @@ This is the crux of front-end engineering. We present a user interface and then 
 
 Let's take a look at the syntax and then we'll talk about what's happening.
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="qNjyAg" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/qNjyAg/">A First Event Listener</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="js,result" data-user="turing" data-slug-hash="qNjyAg" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="A First Event Listener">
+  <span>See the Pen <a href="https://codepen.io/team/turing/pen/qNjyAg">
+  A First Event Listener</a> by Turing School of Software and Design (<a href="https://codepen.io/turing">@turing</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 1. We're querying for all of the elements we need and we're storing them in variables.
 2. We're adding an event listener to the `<button>` with the class of `.change-text`.
@@ -188,8 +199,12 @@ We're only going to talk about the first two today.
 
 Consider the following:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="grRjXA" data-default-tab="js,result" data-user="turing" data-embed-version="2" data-editable="true" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/grRjXA/">CSS Manipulation with JavaScript</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="js,result" data-user="turing-school" data-slug-hash="YzzWvyW" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="CSS Manipulation with JavaScript">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/YzzWvyW">
+  CSS Manipulation with JavaScript</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 <section class="call-to-action">
 
@@ -202,14 +217,18 @@ Consider the following:
 
 To access the value from an input element we can do the following
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="deZKNP" data-default-tab="js,result" data-user="nfosterky" data-embed-version="2" data-pen-title="Color Box - Get Color" class="codepen">See the Pen <a href="https://codepen.io/nfosterky/pen/deZKNP/">Color Box - Get Color</a> by Nathaniel Foster (<a href="https://codepen.io/nfosterky">@nfosterky</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="js,result" data-user="turing-school" data-slug-hash="OJJXEyj" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box - Get Color">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/OJJXEyj">
+  Color Box - Get Color</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
 
 Let's use this pen for practice
 
-<p class="codepen" data-height="265" data-theme-id="dark" data-default-tab="html,result" data-user="eric_turing" data-slug-hash="mdbPXYW" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box">
-  <span>See the Pen <a href="https://codepen.io/eric_turing/pen/mdbPXYW/">
-  Color Box</a> by eric weissman (<a href="https://codepen.io/eric_turing">@eric_turing</a>)
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="bGGeKVa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/bGGeKVa">
+  Color Box</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
   on <a href="https://codepen.io">CodePen</a>.</span>
 </p>
 <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
