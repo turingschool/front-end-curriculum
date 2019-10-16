@@ -5,12 +5,13 @@ tags: web apis, storage, persistence
 ---
 
 ## Learning Goals
+
 - Understand the difference between server-side and client-side storage
 - Understand and utilize localStorage
 - Understand and utilize JSON
 - Understand when and why one would use `data-` attributes
 
-## Vocab
+## Vocabulary
 
 - `Client-side Storage` Storage on the client (usually the browser)
 - `Server-side storage` Storage on the server
@@ -30,7 +31,7 @@ There are two primary ways of storing data in web applications, which are - serv
 
 **Your turn** With a partner, come up with an analogies for server-side and client-side storage.
 
-## Client-side storage
+## Client-side Storage
 
 Browsers provide two main types of immediate storage that is accessible without messing with a database: <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/sessionStorage"><code>sessionStorage</code></a> which gets reset whenever your browser session restarts, and <a target="blank" href="https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage"><code>localStorage</code></a>, which has no specified expiration date. Today we will strictly be talking about `localStorage`.
 
@@ -74,6 +75,7 @@ Check out the docs. What other methods are available to you when using localStor
 </section>
 
 ### localStorage in Action
+
 How can we improve the functionality of the following codepen with local storage?
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="PoozazK" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="localStorage in Action - Save Info Form">
@@ -165,12 +167,11 @@ article.dataset.name // "cookie"
 
 The js and jquery docs are both great and more easy to read than most when it comes to `data-` attributes. They are linked in the dig deeper section below.
 
-
 ## Storage Events
 
 Whenever you change a value in localStorage, the DOM will fire a `storage` event in every other page currently open on that domain.
 
-Open <a target="_blank" href="http://codepen.io/team/turing/pen/xOYdBG">this CodePen</a> up in two different windows to see.  
+Open <a target="blank" href="http://codepen.io/team/turing/pen/xOYdBG">this CodePen</a> up in two different windows to see.  
 
 ## Dig Deeper
 * [JSON Mozilla Tutorial](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON)
