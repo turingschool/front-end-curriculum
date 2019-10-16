@@ -10,7 +10,7 @@ tags: javascript, dom, browser
 * Continue to develop a basic understanding for JavaScript syntax
 * Understand how to query and update a page after its been loaded
 
-## Vocab
+## Vocabulary
 
 - `HTML Element` A building block that makes up the structure of a web page.
 - `CSS Selector` A way to identify a set elements, typically using a tag, class or id.
@@ -20,6 +20,7 @@ tags: javascript, dom, browser
 - `EventHandler` A function that will run when a specific event occurs
 
 ## The Document Object Model (DOM)
+
 [DOM Documentation](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction)
 
 The browser gives us some useful global objects for free. The `window` object is the global object and it holds a lot of information about the browser window including it's current location (URL), size, etc. `document` contains a representation of the current web page.
@@ -81,6 +82,7 @@ The DOM has been updated to the following:
 
 <section class="call-to-action">
 ### Your Turn
+
 * Grab the first paragraph element and change the text to 'The original paragraph'.
 </section>
 
@@ -122,6 +124,7 @@ Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="blank">this p
 <section class="call-to-action">
 
 #### Beginning
+
 * Find the `h1` tag and change the header to "A Stellar Record of My Performance".
 * Find the element with the `class` of `hs` and capitalize it's name.
 * Change the subject of each of the elements with the `id`'s of `math`, `science`, and `language-arts` individually.
@@ -134,6 +137,7 @@ Visit <a href="https://codepen.io/eric_turing/pen/QWLNaVE" target="blank">this p
 * Can you create a function that takes an HTML element as an argument and capitalizes its contents? -->
 
 #### Challenging
+
 * Select an element and set `contentEditable` to true. Now, click on the element. What happened?
 * Take a look at the [MDN documentation for DOM events][events-mdn]. Can you bind a function to the click event of the element?
 </section>
@@ -169,7 +173,6 @@ Let's take a look at the syntax and then we'll talk about what's happening.
 * When the button is clicked, have your `changeMessage` function fire!
 <!-- * When the button is clicked, one of your JavaScript functions from the previous session should execute (such as updating all of the grades). -->
 </section>
-
 
 #### Extensions
 
@@ -209,6 +212,7 @@ Consider the following:
 <section class="call-to-action">
 
 ### Pair Practice
+
 1. Add a button that changes the width of the box to 400px.
 2. Add a button that removes the border class from the box. (Hint: the method is called `remove` instead of `add`.)
 </section>
@@ -236,6 +240,7 @@ Let's use this pen for practice
 <section class="call-to-action">
 
 ### Pair Practice
+
 * Add an input field with the `id` of "very-important-message" along with a button. When the user clicks on the button, it should set the `innerText` of the box to contents of the input field.
 * Add two inputs one for a CSS property and one for a value. When the user clicks the button, it should adjust that property on the box.
 * Here is an example of the second task:
@@ -248,6 +253,7 @@ Let's use this pen for practice
 <section class="checks-for-understanding">
 
 ### Summary
+
 - What is the DOM?
 - How do we get information out of the DOM and into our JS?
 - How do we add information to the DOM?
