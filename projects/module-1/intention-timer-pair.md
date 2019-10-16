@@ -119,45 +119,45 @@ Active (color-coded) and non-active (white) icons are all stored [here](https://
 
 ### Functional Expectations
 
-* **Exceptional:** Application adds three or more of the extensions from phase four.
-* **Proficient:** Application meets all of the expectations of phase three.
-* **Advanced Beginner:** Application meets all of the expectations of phase two.
-* **Novice:** Application meets all of the expectations of phase one.
+* **Exceptional/4:** Application adds three or more of the extensions from phase four.
+* **Proficient/3:** Application meets all of the expectations of phase three.
+* **Advanced Beginner/2:** Application meets all of the expectations of phase two.
+* **Novice/1:** Application meets all of the expectations of phase one.
 
 ### Comp Recreation
 
-* **Exceptional:** Application implements all major comp details accurately and correctly on desktop **and** mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
-* **Proficient:** Application implements **all** major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward. Careful attention was given to the little details like spacing, alignment, and hover states.
-* **Advanced Beginner:** Application implements most major comp details accurately and correctly on desktop & mobile (colors, fonts, icons, spacing, alignment,  etc.).
-* **Novice:** Application implements most major comp details accurately and correctly on **desktop only** (colors, fonts, icons, spacing, alignment, etc.)
+* **Exceptional/4:** Application implements all major comp details accurately and correctly on desktop **and** mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
+* **Proficient/3:** Application implements **all** major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward. Careful attention was given to the little details like spacing, alignment, and hover states.
+* **Advanced Beginner/2:** Application implements most major comp details accurately and correctly on desktop & mobile (colors, fonts, icons, spacing, alignment,  etc.).
+* **Novice/1:** Application implements most major comp details accurately and correctly on **desktop only** (colors, fonts, icons, spacing, alignment, etc.)
 
 ### HTML - Style and Implementation
 
-* **Exceptional:** Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/aria-accessibility.html)
-* **Proficient:** Application adds to the above with markup that is easy to read and follows across naming conventions
-* **Advanced Beginner:** Application adds to the above with HTML that incorporates semantic HTML elements and has a simple, clean HTML structure.
-* **Novice:** Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
+* **Exceptional/4:** Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/aria-accessibility.html)
+* **Proficient/3:** Application adds to the above with markup that is easy to read and follows across naming conventions
+* **Advanced Beginner/2:** Application adds to the above with HTML that incorporates semantic HTML elements and has a simple, clean HTML structure.
+* **Novice/1:** Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
 
 ### CSS - Style and Implementation
 
-* **Exceptional:** Application adds to the requirements of the Proficient category by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
-* **Proficient:** Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle and has 3 or less media queries for responsiveness
-* **Advanced Beginner:** Application adds organization for the whole stylesheet and within rules and has 5 or less media queries for responsiveness
-* **Novice:** Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
+* **Exceptional/4:** Application adds to the requirements of the Proficient category by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
+* **Proficient/3:** Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle and has 3 or less media queries for responsiveness
+* **Advanced Beginner/2:** Application adds organization for the whole stylesheet and within rules and has 5 or less media queries for responsiveness
+* **Novice/1:** Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 
 ### JavaScript - Style and Implementation
 
-* **Exceptional:**
+* **Exceptional/4:**
   - Functions and code are well-refactored and show developer empathy
   - There are no global variables aside from query selectors, `time` and `currentTimerInfo`.
   - All functions are less than 10 lines
   - Uses logical operators instead of if/else statements where applicable
-* **Proficient:**
+* **Proficient/3:**
   * Application uses event delegation correctly on dynamic elements
   * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html)
   * There are no nested if/else statements
-* **Advanced Beginner:**
+* **Advanced Beginner/2:**
   * All parameters are used in their respective functions
   * Uses function declarations over anonymous functions in event listeners
   * Uses if/else statements to handle multiple paths of logic/error handling
-* **Novice:** Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+* **Novice/1:** Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
