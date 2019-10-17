@@ -44,7 +44,7 @@ Webpack is a robust and versatile development tool that provides us with several
 
 As the applications we build gain more complexity, it helps to have tooling in place that makes the development process easier. The above benefits can significantly speed up our development and help ensure the app is in an appropriate state when it comes time to push it live.
 
-Let's dig into each of these benefits by working with our [Game Time Webpack Starter Kit Repo](https://github.com/turingschool-examples/webpack-starter-kit). **Clone** the starter repo to your machine. We'll make a handful of changes that you can trash when we're done with `git checkout .`
+Let's dig into each of these benefits by working with our [Webpack Starter Kit Repo](https://github.com/turingschool-examples/webpack-starter-kit). **Clone** the starter repo to your machine. We'll make a handful of changes that you can trash when we're done with `git checkout .`
 
 
 ### Development Servers
@@ -88,7 +88,6 @@ This single file it generates is called a **bundle file**. We can see this gener
 * [Import/Export Syntax](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f)
 * [MDN Export](https://developer.mozilla.org/en-US/docs/web/javascript/reference/statements/export)
 * [MDN Import](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import)
-* [Semver](https://semver.org/), [NPM Semver](https://docs.npmjs.com/about-semantic-versioning)
 
 <hr />
 
