@@ -21,15 +21,14 @@ This is a unique opportunity that presents some valuable goals:
 
 ### Schedule
 
-1. Any new pitches for projects you want to work on?
-1. Group forming
-1. Instructors finalize teams
+1. Submit Capston Pitches by Thursday morning at 8am via form
+1. Meet as group to go over any questions that came from reading the spec
+1. Vote for which projects you would like to work on (If the project, is your idea please indicate with your vote)
+1. Instructors will form teams
 1. Gather into your teams
-1. Go through project expectations
 1. Start working on Day 1 deliverables!
   * Go through project expectations again with your team
   * Ask us any questions along the way!
-1. Instructors meet with teams to look through Day 1 deliverables
 
 ## Expectations
 
@@ -75,19 +74,18 @@ Possible stretch goals:
 
 * Implement FE in a framework you have not used before in a project
 * Utilize internationalization and localization tools to localize the FE based on the user's locale
-* Implement OAuth and store user data in the BE database as needed
 * Implement Progressive Web App (PWA) technologies like: background sync, IndexedDB, static assets caching using a Service Worker
 * Utilize websockets rather than traditional HTTP/HTTPS (maybe [socket.io](https://socket.io/))
 
 **Note:** FE students can be the BE creators and vice versa, if it fits into your learning goals
 
-## Day 1 Deliverables
+## Day 1 Deliverables (Friday)
 
 By the end of the kick-off session today, you should have a full proposal of your project, which should include:
 
 * DTR
 * Initialize your repositories (don't write any code just yet!)
-* Set up your scrum board and connect them to your repositories (you can have multiple repositories connected to a single Waffle board)
+* Set up your scrum board with Github projects. You'll be requireed to use a single board for all repos. This will make it easier to see what everyone is working on during the project. 
 * Each student create your goal for something you would like to learn about the other stack (BE student creates learning goal for something about the FE, and vice versa)
 * Normalize on git workflow (we recommend using a "rebase" workflow, as opposed to "merge", as it is most common on the job) - use a PR template
 * Determine MVP (knowing it could change as the project continues)
@@ -113,15 +111,14 @@ Instructors will serve as project managers and hold check-ins with teams at leas
 
 ### End-of-Project Demos
 
-Thursday morning of week 6 your team will demo your application to the class and instructors (the application should be demo’d using production). It will be a great preparation for demo night so you can nail your demos!  
+Thursday morning of week 6 your team will demo your application to the class and instructors (the application should be demo'd using _production_). It will be a great preparation for demo night so you can nail your demos!
 
-Demo Expectations:  
-
+_Demo Expectations:_
 1. Live demo your application in production (Have a recording as a back-up)
-2. Include the problem you are trying to solve and how your application does that
-3. Include the challenges on the Frontend and Backend and solutions to those challenges
-4. Have your application up and ready to go when you start. Other windows should be closed, be logged in(if applicable), etc.
-5. Be proud of your applications! You’ve spent a lot of time and hard work on this, now is your chance to show it off. Your demo should really showcase that hardwork and accomplishments.  
+1. Include the problem you are trying to solve and how your application does that
+1. Include the challenges on the Frontend and Backend and solutions to those challenges
+1. Have your application up and ready to go when you start. Other windows should be closed, be logged in(if applicable), etc.
+1. Be proud of your applications! You've spent a lot of time and hard work on this, now is your chance to show it off. Your demo should really showcase that hardwork and accomplishments.
 
 We recommend that you have a quick 30 sec - 1 min statement about what your app is and then jump straight into your demo. After the demo is complete, you can go in more depth and talk about the other points.
 
@@ -135,4 +132,4 @@ Evaluation will take place Thursday afternoon of week 5. Each team will meet wit
 * Show application is using continuous integration
 * Talk about lessons learned
 
-Teams - it's your responsibility to keep an ensure you are on track to meet expectations of the rubric, which can be found [here](http://backend.turing.io/module4/projects/cross_pollination/cross_pollination_rubric).
+Teams - it's your responsibility to keep and ensure you are on track to meet expectations of the rubric, which can be found [here](https://backend.turing.io/module4/projects/cross_pollination/cross_pollination_rubric).
