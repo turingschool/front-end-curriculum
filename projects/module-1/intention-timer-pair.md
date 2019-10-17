@@ -127,9 +127,9 @@ Active (color-coded) and non-active (white) icons are all stored [here](https://
 ### Comp Recreation
 
 * **Exceptional/4:** Application implements all major comp details accurately and correctly on desktop **and** mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
-* **Proficient/3:** Application implements **all** major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward. Careful attention was given to the little details like spacing, alignment, and hover states.
-* **Advanced Beginner/2:** Application implements most major comp details accurately and correctly on desktop & mobile (colors, fonts, icons, spacing, alignment,  etc.).
-* **Novice/1:** Application implements most major comp details accurately and correctly on **desktop only** (colors, fonts, icons, spacing, alignment, etc.)
+* **Proficient/3:** Application implements **all** major comp details accurately and correctly on desktop and and most comp details on mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward. Careful attention was given to the little details like spacing, alignment, and hover states.
+* **Advanced Beginner/2:** Application implements most major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment,  etc.).
+* **Novice/1:** Crafts markup according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 
 ### HTML - Style and Implementation
 
@@ -141,8 +141,8 @@ Active (color-coded) and non-active (white) icons are all stored [here](https://
 ### CSS - Style and Implementation
 
 * **Exceptional/4:** Application adds to the requirements of the Proficient category by using [BEM](http://getbem.com/), [SMACCS](http://smacss.com/), or another set of naming conventions for classes
-* **Proficient/3:** Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle and has 3 or less media queries for responsiveness
-* **Advanced Beginner/2:** Application adds organization for the whole stylesheet and within rules and has 5 or less media queries for responsiveness
+* **Proficient/3:** Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle and has 3 or less media queries for responsiveness (if applicable)
+* **Advanced Beginner/2:** Application adds organization for the whole stylesheet and has 5 or less media queries for responsiveness (if applicable)
 * **Novice/1:** Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 
 ### JavaScript - Style and Implementation
