@@ -224,7 +224,7 @@ On Thursday, your team will meet with one of your instructors. The 30 minute eva
   
   The instructors may also conduct code reviews over the weekend.
   
-### Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1810/mod-4/palette-picker/submission-template.md) by COPYING it to a NEW FILE called partner1name-partner2name.md in the SAME directory. Submit it as a PR to the front-end-submissions repo by 8:30am on Thursday of Week 3.
+### Create one submission file for your project based on [this template](https://github.com/turingschool/front-end-submissions-public/blob/master/1904/mod-4/palette-picker/submission-template.md) by COPYING it to a NEW FILE called partner1name-partner2name.md in the SAME directory. Submit it as a PR to the front-end-submissions repo by 9:30am on Thursday of Week 3.
 
 ## Rubric
 
