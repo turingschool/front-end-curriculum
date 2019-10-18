@@ -269,7 +269,7 @@ When getting ready to make a UI:
 
 Let's practice good code review on some **bad** code. Just for fun.
 
-We're going to dive into the <a href="https://github.com/turingschool/front-end-curriculum" target="\__blank" FE Curriculum repo</a> and take a look at this workflow in action.
+We're going to dive into the <a href="https://github.com/turingschool/front-end-curriculum" target="\__blank">FE Curriculum repo</a> and take a look at this workflow in action.
 
 <section class="note">
 #### Side Note:
