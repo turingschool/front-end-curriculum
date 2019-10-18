@@ -10,10 +10,11 @@
       margin-top: 1em;
     }
   }
+  background-color: blue;
 }
 
 .content a:link, .content a:visited {
-  color: blue;
+  color: yellow;
   text-decoration: none;
   font-weight: 900;
 
@@ -58,6 +59,7 @@
 .call-to-action {
   @extend %call-to-action-shared;
   border-left: 8px solid lighten($turing-secondary, 25%);
+  background-color: green;
 }
 
 .checks-for-understanding {
