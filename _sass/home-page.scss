@@ -84,29 +84,6 @@
   }
 }
 
-@media (max-width: $tablet-width) {
-  .splash {
-    height: 350px;
-  }
-
-  .splash-text h1 {
-    font-size: 5em;
-    margin-left: 50px;
-    letter-spacing: -4px;
-  }
-
-  .splash-text p {
-    font-size: 1em;
-    margin: 0px 0px 0px 50px;
-  }
-
-  .resources-section {
-    img {
-      margin: 10px;
-      width: 250px;
-    }
-  }
-}
 
 @media (max-width: $phone-width) {
   .splash {
