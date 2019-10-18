@@ -139,6 +139,14 @@ Milestones are a helpful way to prioritize and create deadlines for your project
 ![Issues Milestones](/assets/images/lessons/github-issues/issues-milestones.png)
 
 
+<section class="note">
+#### Closing issues with a PR
+
+You can <a href="https://help.github.com/en/articles/closing-issues-using-keywords" target="\__blank"> close an issue with a PR!</a>
+
+This can help speed up your workflow, decreasing overhead tasks that your or your group members have to complete.
+</section>
+
 <section class="call-to-action">
 #### Turn and Talk (15 mins)
 
