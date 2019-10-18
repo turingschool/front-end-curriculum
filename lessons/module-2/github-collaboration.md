@@ -7,21 +7,22 @@ module: 2
 
 ## Goals
 
-By the end of this lesson, students should be able to:
-
-* Give professional and actionable feedback through code reviews
-* Recognize what makes a README useful
-* File and organize issues with labels, that are closed through PRs
+__      __.__            __     ____ _____________   ____ _______________     ___________________________________________________
+/  \    /  \  |__ _____ _/  |_  |    |   \______   \ /_   /   __   \   _  \   /  __  \_____   \_____   \_____   \_____   \_____   \
+\   \/\/   /  |  \\__  \\   __\ |    |   /|     ___/  |   \____    /  /_\  \  >      <  /   __/  /   __/  /   __/  /   __/  /   __/
+\        /|   Y  \/ __ \|  |   |    |  / |    |      |   |  /    /\  \_/   \/   --   \|   |    |   |    |   |    |   |    |   |   
+ \__/\  / |___|  (____  /__|   |______/  |____|      |___| /____/  \_____  /\______  /|___|    |___|    |___|    |___|    |___|   
+      \/       \/     \/                                                 \/        \/ <___>    <___>    <___>    <___>    <___>   
 
 
 -------------------------------------------------------------
 
 
-## Writing READMEs 
+## Khalid
 
 A README is often the first thing people will see when they visit an open source project. It's vital that this document provides visitors with the information they need in a clear and efficient manner. Often times, the README determines whether or not people will work with or explore your project further.
 
-#### Research and Talk
+#### Made
 
 Take a few minutes to read through your assigned article. We will come back together as a group to discuss what you find. Here are some questions to consider as you read:
 
@@ -34,7 +35,7 @@ Take a few minutes to read through your assigned article. We will come back toge
 * [Article 3](https://thejunkland.com/blog/how-to-write-good-readme.html)
 * [Article 4](https://ponyfoo.com/articles/readme-driven-development)
 
-### Writing READMEs at Turing
+### A
 
 For your projects at Turing, your goal is to demonstrate to employers that you understand the purpose of a README. Your READMEs should be set up so employers can clone things down and use your application. Other things you might want to highlight would be a small reflection of your work, how you attacked the project, how you collaborated, etc. Remember, the goal is to really showcase your work!
 
@@ -46,7 +47,7 @@ For your time at Turing, your README should have the following flow:
 
 *Your abstract and installation/setup instruction should be prioritized since this is the common convention for how READMEs are set up in the wild.*
 
-#### Turn and Talk
+#### MESS
 
 Who would you hire from these READMES?
 
@@ -63,9 +64,9 @@ Who would you hire from these READMES?
 -------------------------------------------------------------
 
 
-## Filing Issues
+## Of
 
-Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on will have a tracker of some kind (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers often connect directly to GitHub issues, but offer a more robust UI experience. For today's lesson, we are going to be working with GitHub’s built-in tracker called `Issues` - which has its own section in every repository. 
+Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on will have a tracker of some kind (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers often connect directly to GitHub issues, but offer a more robust UI experience. For today's lesson, we are going to be working with GitHub’s built-in tracker called `Issues` - which has its own section in every repository.
 
 Filing issues is an important part of the workflow process. It allows you to:
 
@@ -79,7 +80,7 @@ Filing issues is an important part of the workflow process. It allows you to:
 In addition to these benefits, having an up-to-date list of issues will also indicate to potential employers that you're aware of what could be improved, and you plan on continuing to maintain the project in the future. Sometimes the code we have hosted on GitHub gets a little old and crusty, and doesn't showcase our current skills the best they could. Issues are a great way to say "I'm aware and I'm working on it!" This is especially important if you think about the projects that you are building now. By the time you exit Turing, projects that you build in Mod 1 or Mod 2 will not adequately showcase your true skill level by the time you finish Mod 4.
 
 
-### Filing An Issue
+### Things
 
 The first thing you will do when you create an issue is give it a title:
 
@@ -108,8 +109,8 @@ Issue tagging with labels are an important part of keeping engineering and produ
 
 Here are the ones that we want you to focus on when working on your project:
 
-##### Platform 
-These labels are good for filtering issues - showing what makes sense for a person to tackle. 
+##### Platform
+These labels are good for filtering issues - showing what makes sense for a person to tackle.
 
 Often you will also see priority levels listed on these labels with `P1` for priority 1, `P2` for priority 2, etc.
 
@@ -172,7 +173,7 @@ Following a PR workflow will improve your communication skills. Sometimes (parti
   - Give the reason **WHY** you made those changes
   - Ask for any insights
 
-It is important as the creator of the PR that you are giving other developers some context of what they are reviewing as well as what they should looking for in the change. Asking for feedback/help is a valuable skill that you should have as a developer. 
+It is important as the creator of the PR that you are giving other developers some context of what they are reviewing as well as what they should looking for in the change. Asking for feedback/help is a valuable skill that you should have as a developer.
 
 ##### Improve your technical skills
 The PR workflow can be very enlightening on a technical level as well. It is common to hear developers state that they have learned more/ramped up quicker in code reviews than while pairing, reading blog posts, watching videos, etc. When you are creating PRs, it is helpful to know if what you're trying to technically communicate isn't clear. On the flip side of that, reading someone else's code is insightful due to the exposure code that you haven't written through the review process/asking clarifying questions.
@@ -195,7 +196,7 @@ Be careful of your tone
 Acknowledge the effort
  - Positive words! Thanks
 
-Keep the code review two-sided rather than dominating it 
+Keep the code review two-sided rather than dominating it
   Not a list of demands -->
 
 
@@ -213,7 +214,7 @@ Keep the code review two-sided rather than dominating it
 <!-- Average: Lots of the feedback is just little nitpicks here and there, stylistic things, which are important - but don’t add a ton of learning for either person. Some acknowledgment and thanks for the effort put in. Some really terse/short questions from the reviewer, which could potentially come off as harsh, but balanced out with lots of smiley faces. (Emojis are fair game!) -->
 
 *BAD*
-* [Bootstrap](https://github.com/twbs/bootstrap/issues/3057) (This is actually an issue, not a PR, but the same concepts still apply.) 
+* [Bootstrap](https://github.com/twbs/bootstrap/issues/3057) (This is actually an issue, not a PR, but the same concepts still apply.)
 
 <!-- Bad: Douglas Crockford (a glorified techie) starts the conversation using a lot of aggressive and insulting language which sets the tone for the rest of the comments going forward and allows it to spiral out of control. -->
 
@@ -223,6 +224,6 @@ Keep the code review two-sided rather than dominating it
 
 Answer the following in your journal:
 
-- What makes a README useful? 
+- What makes a README useful?
 - Why should you file issues on your student projects?
 - What are some benefits of the PR workflow and the code review process?
