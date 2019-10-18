@@ -17,7 +17,7 @@ By the end of this lesson, students should be able to:
 -------------------------------------------------------------
 
 
-## Writing READMEs 
+## Writing READMEs
 
 A README is often the first thing people will see when they visit an open source project. It's vital that this document provides visitors with the information they need in a clear and efficient manner. Often times, the README determines whether or not people will work with or explore your project further.
 
@@ -40,12 +40,14 @@ For your projects at Turing, your goal is to demonstrate to employers that you u
 
 For your time at Turing, your README should have the following flow:
 
-- _Abstract_ A sentence of two describing the project, with a link to the hosted version if applicable
+- _Abstract_ A sentence or two describing the project, with a link to the hosted version if applicable
 - _Install/Setup instructions_ How someone can clone down the project and run it locally
 - _Everything else_ This might include mentioning other contributors, the wireframes and design inspiration used for developing the UI, a reflection of the project as a whole, etc.
 
 *Your abstract and installation/setup instruction should be prioritized since this is the common convention for how READMEs are set up in the wild.*
 
+
+<section class="call-to-action">
 #### Turn and Talk
 
 Who would you hire from these READMES?
@@ -55,7 +57,7 @@ Who would you hire from these READMES?
 * [School Finder](https://github.com/sljohnson32/school-finder)
 * [Flex Sandbox](https://github.com/Mickyfen17/flex-sandbox)
 * [Club Reads](https://github.com/lindsaywparker/club-reads-frontend) <!-- high, text needs some formatting help, but pretty good -->
-
+</section>
 
 
 
@@ -65,7 +67,7 @@ Who would you hire from these READMES?
 
 ## Filing Issues
 
-Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on will have a tracker of some kind (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers often connect directly to GitHub issues, but offer a more robust UI experience. For today's lesson, we are going to be working with GitHub’s built-in tracker called `Issues` - which has its own section in every repository. 
+Issues are a great way to keep track of tasks, enhancements, and bugs for your projects. Most projects that you work on will have a tracker of some kind (e.g. Waffle, Trello, Jira, etc.) to organize and share progress and information across the team. These trackers often connect directly to GitHub issues, but offer a more robust UI experience. For today's lesson, we are going to be working with GitHub’s built-in tracker called `Issues` - which has its own section in every repository.
 
 Filing issues is an important part of the workflow process. It allows you to:
 
@@ -108,8 +110,8 @@ Issue tagging with labels are an important part of keeping engineering and produ
 
 Here are the ones that we want you to focus on when working on your project:
 
-##### Platform 
-These labels are good for filtering issues - showing what makes sense for a person to tackle. 
+##### Platform
+These labels are good for filtering issues - showing what makes sense for a person to tackle.
 
 Often you will also see priority levels listed on these labels with `P1` for priority 1, `P2` for priority 2, etc.
 
@@ -137,12 +139,15 @@ Milestones are a helpful way to prioritize and create deadlines for your project
 ![Issues Milestones](/assets/images/lessons/github-issues/issues-milestones.png)
 
 
-#### Turn and Talk (20 mins)
+<section class="call-to-action">
+#### Turn and Talk (15 mins)
 
-Working in your project pairs, take a look at the the project spec and user stories for Activity Tracker. Start to talk about some categories/labels that you want to do for your project and file at least 10 issues for Activity Tracker.
+Working in your project groups, take a look at the the project spec and user stories for FitLit / Refactor Tractor. Go over the issues you've filed so far on your projects. Are they in line with the guidelines above?
 
-Remember, you can also file issues for things that you haven't figured out.
+If appropriate, add labels, milestones and assignments to any existing issues.
 
+Feel free to file new issues following this structure as well!
+</section>
 
 
 
@@ -172,17 +177,37 @@ Following a PR workflow will improve your communication skills. Sometimes (parti
   - Give the reason **WHY** you made those changes
   - Ask for any insights
 
-It is important as the creator of the PR that you are giving other developers some context of what they are reviewing as well as what they should looking for in the change. Asking for feedback/help is a valuable skill that you should have as a developer. 
+It is important as the creator of the PR that you are giving other developers some context of what they are reviewing as well as what they should looking for in the change. Asking for feedback/help is a valuable skill that you should have as a developer.
+
+To ensure solid communication, we're going to ask that you follow <a href="https://quickleft.com/blog/pull-request-templates-make-code-review-easier/" target="\__blank"> this template</a> when making your PRs:
+
+```
+#### What's this PR do?
+#### Where should the reviewer start?
+#### How should this be manually tested?
+#### Any background context you want to provide?
+#### What are the relevant tickets?
+#### Screenshots (if appropriate)
+#### Questions:
+- Is there a blog post?
+- Does the knowledge base need an update?
+- Does this add new dependencies which need to be added?
+
+```
+
+Not all of these may always be applicable (and can be noted as such with "N/A"), but it's always good to be standardized and verbose when seeking code review.
 
 ##### Improve your technical skills
-The PR workflow can be very enlightening on a technical level as well. It is common to hear developers state that they have learned more/ramped up quicker in code reviews than while pairing, reading blog posts, watching videos, etc. When you are creating PRs, it is helpful to know if what you're trying to technically communicate isn't clear. On the flip side of that, reading someone else's code is insightful due to the exposure code that you haven't written through the review process/asking clarifying questions.
+The PR workflow can be very enlightening on a technical level as well. It is common to hear developers state that they have learned more/ramped up quicker in code reviews than while pairing, reading blog posts, watching videos, etc. When you are creating PRs, it is helpful to know if what you're trying to technically communicate isn't clear. On the flip side of that, reading someone else's code is insightful due to the exposure of code that you haven't written through the review process/asking clarifying questions.
 
 ##### ASK QUESTIONS
 Asking questions if something doesn't make sense to you is an important skill to have, both here and in the wild.
 
+<section class="call-to-action">
 #### Turn and Talk
 
 Take a few minutes to read through [this Twitter thread](https://twitter.com/brittanystoroz/status/1049675860309991425) about the PR process. What are some things you can take away from this based on the experience of others? We will come back together as a group to discuss.
+</section>
 
 <!-- Whiteboard student answers
 
@@ -195,8 +220,22 @@ Be careful of your tone
 Acknowledge the effort
  - Positive words! Thanks
 
-Keep the code review two-sided rather than dominating it 
+Keep the code review two-sided rather than dominating it
   Not a list of demands -->
+
+<section class="note">
+#### Merge Conflicts
+
+As a reminder, you should NEVER be resolving your merge conflicts in GH's UI.
+When getting ready to make a UI:
+
+- Always make sure your local master is up to date with remote
+- Merge local master into your local feature branch
+- Resolve merge conflicts on your local machine
+- Commit the resolved merge
+- THEN make the PR if you're ready
+
+</section>
 
 
 
@@ -213,16 +252,30 @@ Keep the code review two-sided rather than dominating it
 <!-- Average: Lots of the feedback is just little nitpicks here and there, stylistic things, which are important - but don’t add a ton of learning for either person. Some acknowledgment and thanks for the effort put in. Some really terse/short questions from the reviewer, which could potentially come off as harsh, but balanced out with lots of smiley faces. (Emojis are fair game!) -->
 
 *BAD*
-* [Bootstrap](https://github.com/twbs/bootstrap/issues/3057) (This is actually an issue, not a PR, but the same concepts still apply.) 
+* [Bootstrap](https://github.com/twbs/bootstrap/issues/3057) (This is actually an issue, not a PR, but the same concepts still apply.)
 
 <!-- Bad: Douglas Crockford (a glorified techie) starts the conversation using a lot of aggressive and insulting language which sets the tone for the rest of the comments going forward and allows it to spiral out of control. -->
 
 
+### Practice Time
 
+Let's practice good code review on some **bad** code. Just for fun.
+
+We're going to dive into the <a href="https://github.com/turingschool/front-end-curriculum" target="\__blank" FE Curriculum repo</a> and take a look at this workflow in action.
+
+<section class="note">
+#### Side Note:
+
+Our site is open source! You're always welcome to submit a PR.
+</section>
+
+
+<section class="checks-for-understanding">
 ### Summary
 
 Answer the following in your journal:
 
-- What makes a README useful? 
+- What makes a README useful?
 - Why should you file issues on your student projects?
 - What are some benefits of the PR workflow and the code review process?
+</section>
