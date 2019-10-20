@@ -8,7 +8,7 @@ tags: react, javascript
 
 For this project, we are going to work on developing some muscle memory in building out simple React components and passing data down as props.  You will see the difference between class components and function components and start getting a sense of when to use one over the other.
 
-![What's New screenshot](../assets/images/whats-new.png)
+![What's New screenshot](../../assets/images/whats-new.png)
 
 ## Prep Work
 
