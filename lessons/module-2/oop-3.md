@@ -26,7 +26,7 @@ By the end of this lesson, you will be able to:
 <!-- - `Coupling` The level of connectedness between two objects -->
 
 
-## Benefits
+## OOP Benefits
 
 * Code reusability
 * Encapsulation: values are scoped to the specific object
@@ -111,7 +111,7 @@ let bob = new TA('Bob', 2, ['serious']);
 
 The super keyword is used to access and invoke methods on the parent class. In the example above, the super keyword is used to invoke the constructor method of the parent class.
 
-The super keyword allos us to call a function (the class we are extending) that is definied somewhere else, but keep the current context (of our child class).
+The super keyword allows us to call a function (the class we are extending) that is defined somewhere else, but keep the current context (of our child class).
 
 This will allow the parent constructor to add any inherited properties to the new instance of our class.
 
