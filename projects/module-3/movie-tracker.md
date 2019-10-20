@@ -23,7 +23,7 @@ As a result of building out this project, you are going to be developing some mu
 
 This project is working off the [The Movie DB API](https://www.themoviedb.org/documentation/api){:target="_blank"} - note you'll need to go create an account to get an API key).
 
-[This repository](https://github.com/turingschool-examples/movie-tracker.git){:target="_blank"} will serve as your backend, allowing you to connect to a PostgreSQL database. You'll need to set up a separate client-side application (use `create-react-app`), to sit alongside this one. Do not put that project in the same repository as this one, save yourself a headache.
+[This repository](https://github.com/turingschool-examples/favorites-tracker-api){:target="_blank"} will serve as your backend, allowing you to connect to a PostgreSQL database. You'll need to set up a separate client-side application (use `create-react-app`), to sit alongside this one. Do not put that project in the same repository as this one, save yourself a headache.
 
 Follow the instructions in the backend repo for setup. Everyone in your group will have to setup the backend separately on their own machines. Once you have it setup, practice using the endpoints (routes) listed in the README of the backend repo. *The documentation for the endpoints is in the README for the backend repo.*
 
