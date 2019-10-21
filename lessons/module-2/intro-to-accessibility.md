@@ -162,7 +162,7 @@ Browser vendors are beginning to work some accessibility checks directly into ou
 * Click 'Run Audits' (your dev tools may disappear for a while, or your screen may go blank, just wait it out)
 
 Read through the passing, failing, non-applicable and manual audits:
-* What accessibility concerns have come to light?
+* What accessibility concerns have come to light? WHY are they accessibility concerns?
 * What strategies may you have learned based on the failing audits? Passing audits?
 * Run the audit on your fitlit application, take note of what issues you might need to resolve
 
@@ -173,5 +173,5 @@ Read through the passing, failing, non-applicable and manual audits:
 <section class="checks-for-understanding">
 ### Exit Ticket
 
-What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?
+In your project groups, file issues for all accessibility concerns that need to be fixed 
 </section>
