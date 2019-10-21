@@ -156,14 +156,15 @@ Read the following [article on strategies for making text more accessible]( http
 
 Browser vendors are beginning to work some accessibility checks directly into our good friend, dev tools. Let's see what we can learn from them! 
 
-* Open up the following [Turing lesson plan](), and open up your dev tools panel
+* Open up the following [Turing lesson plan](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html), and open up your dev tools panel
 * Click on the 'Audits' panel of dev tools
 * Select the following [settings](https://imgur.com/QMMFc0R) to run an accessibility check on the page
 * Click 'Run Audits' (your dev tools may disappear for a while, or your screen may go blank, just wait it out)
 
-Read through the passing, failing and manual audits:
+Read through the passing, failing, non-applicable and manual audits:
 * What accessibility concerns have come to light?
 * What strategies may you have learned based on the failing audits? Passing audits?
+* Run the audit on your fitlit application, take note of what issues you might need to resolve
 
 
 -----------------------------------------------
