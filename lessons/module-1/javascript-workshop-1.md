@@ -59,15 +59,21 @@ Create a function that determines whether a shopping order is eligible for free 
 ##### Examples
 
 ```js
-checkForFreeShipping({ "Shampoo": 5.99, "Rubber Ducks": 15.99 }) ➞ false
+checkForFreeShipping({ "Shampoo": 5.99, "Rubber Ducks": 15.99 });
 
-checkForFreeShipping({ "Flatscreen TV": 399.99 }) ➞ true
+➞ false
 
-checkForFreeShipping({ 
-  "Monopoly": 11.99, 
-  "Secret Hitler": 35.99, 
-  "Bananagrams": 13.99 
-  }) ➞ true
+checkForFreeShipping({ "Flatscreen TV": 399.99 });
+
+➞ true
+
+checkForFreeShipping({
+  "Monopoly": 11.99,
+  "Secret Hitler": 35.99,
+  "Bananagrams": 13.99
+});
+
+➞ true
 ```
 
 ##### Notes
@@ -80,13 +86,21 @@ Create a function that returns the frequency distribution of an array. This func
 ##### Examples
 
 ```js
-getFrequencies(["A", "B", "A", "A", "A"]) ➞ { A: 4, B: 1 }
+getFrequencies(["A", "B", "A", "A", "A"]);
 
-getFrequencies([1, 2, 3, 3, 2]) ➞ { "1": 1, "2": 2, "3": 2 }
+➞ { A: 4, B: 1 }
 
-getFrequencies([true, false, true, false, false]) ➞ { true: 2, false: 3 }
+getFrequencies([1, 2, 3, 3, 2]);
 
-getFrequencies([]) ➞ {}
+➞ { "1": 1, "2": 2, "3": 2 }
+
+getFrequencies([true, false, true, false, false]);
+
+➞ { true: 2, false: 3 }
+
+getFrequencies([]);
+
+➞ {}
 ```
 
 ##### Notes
@@ -125,4 +139,3 @@ checkIfDataIsSame({
 
 ➞ true
 ```
-
