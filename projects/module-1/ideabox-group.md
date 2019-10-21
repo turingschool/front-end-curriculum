@@ -35,13 +35,11 @@ Plan then write the HTML and CSS so that you application matches this comp. Base
 
 Use the same text on your cards that is used in the spec so you can ensure your spacing/sizing is accurate.
 
-![desktop specs][desktop-base]
-
-<img class="medium" src="./assets/ideabox-group/colors.png">
+![Desktop Layout](./assets/ideabox-group/desktop.jpg)
+![Colors](./assets/ideabox-group/colors.jpg)
+![Colors](./assets/ideabox-group/icons.jpg)
 
 You will need the `svg` files for the star, delete, and menu icons. [Here's the link to download the `svg` icons.](https://drive.google.com/drive/folders/18xpWplI0tpXIK1omBZeq04LEx2OMzzMK?usp=sharing)
-
-[desktop-base]: /assets/images/projects/ideabox/ideabox-redux-01.jpg
 
 ### Iteration 1 - Mobile Layout
 
@@ -49,14 +47,11 @@ Now that your Desktop Layout is in place, it's time to write some media queries 
 
 Full mobile layout:
 
-![full mobile layout][mobile-full]
+![Mobile Layout](./assets/ideabox-group/mobile.jpg)
 
 Full mobile layout with open navigation:
 
-![full mobile layout with navigation][mobile-full-navigation]
-
-[mobile-full]: /assets/images/projects/ideabox/ideabox-redux-02.jpg
-[mobile-full-navigation]: /assets/images/projects/ideabox/ideabox-redux-03.jpg
+![Mobile Layout with Dropdown](./assets/ideabox-group/mobile-dropdown.jpg)
 
 ### Iteration 2 and beyond
 
