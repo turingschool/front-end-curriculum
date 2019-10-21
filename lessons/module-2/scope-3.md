@@ -130,7 +130,7 @@ function analyzeGrades() {
   console.log(analyzeGrades()) // object with changeGrades method
 
   let instructor = analyzeGrades();
-  instructor.changeGrades(); // [93, 95, 88, 5...]
+  instructor.changeGrades(); // undefined (we are not returning anything from that method, but it is running)
   instructor.viewGrades(); // [98, 100, 93...]
 ```
 
