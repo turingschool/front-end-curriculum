@@ -94,7 +94,7 @@ Install a colorblind simulator for Chrome. Try one (or both) of the following:
 * [Colorblinding](https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en)
 * [Colorblind](https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool/related?hl=en)
 
-Navigate to some of your most visited sites -- especially those that have some sort of notifications. (You can also look at design sites like [Dribbble](https://www.dribbble.com))
+Navigate to some of your most visited sites -- especially those that have some sort of notifications that you would expect to be red (error), yellow (info/warning), green (success). (You can also look at design sites like [Dribbble](https://www.dribbble.com))
 
 **Questions:**
 * What would be difficult about navigating the web while color blind?
@@ -118,7 +118,13 @@ Watch the following [video](https://youtu.be/hKIQkgPVXH4?t=307) up until the 9:5
 * What are some key takeaways from this video snippet?
 * What can you do to make sure your page is accessible just through the keyboard?
 
-Go to the [Enterprise Car Sales](https://www.enterprisecarsales.com//) website and try to navigate it just by tabbing around with your keyboard.
+Go to a site you're less familiar with, and try to accomplish a specific task just by tabbing through. Some ideas:
+
+* go to the United Airlines website and try to book a flight outta here
+* go to USPS and try to calculate the price of a package shipping
+* go to Facebook and try to comment on a post)
+
+No use of the trackpad is allowed!
 
 **Questions:**
 * What was your experience like? Was anything frustrating or confusing about the process? What could you do to solve the frustrations you encountered?
