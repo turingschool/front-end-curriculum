@@ -94,7 +94,7 @@ Install a colorblind simulator for Chrome. Try one (or both) of the following:
 * [Colorblinding](https://chrome.google.com/webstore/detail/colorblinding/dgbgleaofjainknadoffbjkclicbbgaa/related?hl=en)
 * [Colorblind](https://chrome.google.com/webstore/detail/colorblind-dalton-for-goo/afcafnelafcgjinkaeohkalmfececool/related?hl=en)
 
-Navigate to some of your most visited sites -- especially those that have some sort of notifications. (You can also look at design sites like [Dribbble](https://www.dribbble.com))
+Navigate to some of your most visited sites -- especially those that have some sort of notifications that you would expect to be red (error), yellow (info/warning), green (success). (You can also look at design sites like [Dribbble](https://www.dribbble.com))
 
 **Questions:**
 * What would be difficult about navigating the web while color blind?
@@ -118,7 +118,13 @@ Watch the following [video](https://youtu.be/hKIQkgPVXH4?t=307) up until the 9:5
 * What are some key takeaways from this video snippet?
 * What can you do to make sure your page is accessible just through the keyboard?
 
-Go to the [Enterprise Car Sales](https://www.enterprisecarsales.com//) website and try to navigate it just by tabbing around with your keyboard.
+Go to a site you're less familiar with, and try to accomplish a specific task just by tabbing through. Some ideas:
+
+* go to the United Airlines website and try to book a flight outta here
+* go to USPS and try to calculate the price of a package shipping
+* go to Facebook and try to comment on a post)
+
+No use of the trackpad is allowed!
 
 **Questions:**
 * What was your experience like? Was anything frustrating or confusing about the process? What could you do to solve the frustrations you encountered?
@@ -150,14 +156,15 @@ Read the following [article on strategies for making text more accessible]( http
 
 Browser vendors are beginning to work some accessibility checks directly into our good friend, dev tools. Let's see what we can learn from them! 
 
-* Open up the following [Turing lesson plan](), and open up your dev tools panel
+* Open up the following [Turing lesson plan](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html), and open up your dev tools panel
 * Click on the 'Audits' panel of dev tools
 * Select the following [settings](https://imgur.com/QMMFc0R) to run an accessibility check on the page
 * Click 'Run Audits' (your dev tools may disappear for a while, or your screen may go blank, just wait it out)
 
-Read through the passing, failing and manual audits:
-* What accessibility concerns have come to light?
+Read through the passing, failing, non-applicable and manual audits:
+* What accessibility concerns have come to light? WHY are they accessibility concerns?
 * What strategies may you have learned based on the failing audits? Passing audits?
+* Run the audit on your fitlit application, take note of what issues you might need to resolve
 
 
 -----------------------------------------------
@@ -166,5 +173,5 @@ Read through the passing, failing and manual audits:
 <section class="checks-for-understanding">
 ### Exit Ticket
 
-What are 3 easy and actionable accessibility steps you can take in all of your projects from here on out?
+In your project groups, file issues for all accessibility concerns that need to be fixed 
 </section>
