@@ -31,7 +31,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ### Iteration 0 - Desktop Layout
 
-Plan then write the HTML and CSS so that you application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
+Plan then write the HTML and CSS so that your application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
 
 Use the same text on your cards that is used in the spec so you can ensure your spacing/sizing is accurate.
 
@@ -74,7 +74,7 @@ Your entire application will consist of one HTML page or template. You will have
     2. `saveToStorage` (should only have one job which is to save the instance to storage)
     3. `deleteFromStorage`
     4. `updateIdea` (should be able to update the idea's title, body, or starred state)
-2. A `main.js` file that contains all syndrome related JavaScript.
+2. A `main.js` file that contains all DOM related JavaScript.
 
 **Note** The `idea.js` file  must be the first script in your HTML so that your `main.js` file has access to your `Idea` class.
 

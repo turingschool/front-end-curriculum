@@ -21,7 +21,7 @@ As a result of building out this project, you are going to be developing some mu
 
 ## Project Setup
 
-This project is working off the [The Movie DB API](https://www.themoviedb.org/documentation/api){:target="_blank"} - note you'll need to go create an account to get an API key).
+This project is working off the [The Movie DB API](https://www.themoviedb.org/documentation/api){:target="_blank"} - note you'll need to go create an account to get an API key.
 
 [This repository](https://github.com/turingschool-examples/favorites-tracker-api){:target="_blank"} will serve as your backend, allowing you to connect to a PostgreSQL database. You'll need to set up a separate client-side application (use `create-react-app`), to sit alongside this one. Do not put that project in the same repository as this one, save yourself a headache.
 
@@ -99,8 +99,8 @@ Please DM your instructors the following by the end of the first day:
 * 1 - A valid attempt to test this application was made, but there are obvious
   gaps with missing unit tests for Redux and React.  
 * 2 - Nearly all unit tests are in place. React components are well tested with a diverse set of tests including but not limited to snapshot tests, event simulation tests, and tests on class methods. There are tests in place for actions, reducers, mapStateToProps, and mapDispatchToProps. No attempt to test async functionality was made.
-* 3 - All Redux functionality is tested (actions, reducers, mapStateToProps, mapDispatchToProps), all components are unit tested, and a valid attempt was made to test any async functionality. Some routes are tested.
-* 4 - All async functionality is tested. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently (using mount only when appropriate). All routes have been tested as well including dynamic routes. Evaluator has no recommendations for testing.
+* 3 - All Redux functionality is tested (actions, reducers, mapStateToProps, mapDispatchToProps), all components are unit tested, and a valid attempt was made to test any async functionality.
+* 4 - All async functionality is tested. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently (using mount only when appropriate). Evaluator has no recommendations for testing. (Try testing React Router.)
 
 ### Routing
 
