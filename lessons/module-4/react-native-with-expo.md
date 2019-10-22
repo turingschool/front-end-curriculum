@@ -76,7 +76,7 @@ the project and start it up.
 
 ```
 cd ConceptBox
-npm start
+expo start
 ```
 
 This will launch Metro Bundler for you, and enable you to run your application
