@@ -65,7 +65,7 @@ We know we want to build a site that works well on a variety of screen sizes, bu
 
 There are [several different media types](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) (`all`, `screen`, `print`, `speech`), but for our purposes we'll primarily use ``screen``. This indicates that the media query is intended for computer screens.
 
-**Break points** are the pixel widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied.
+**Breakpoints** refer to the widths that the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied.
 
 #### Let's Get Started
 
