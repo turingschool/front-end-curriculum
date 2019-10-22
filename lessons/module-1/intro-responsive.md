@@ -12,7 +12,7 @@ tags: html, css
 
 - `Page Layout` - The size and positioning of elements on a page. Examples are static, liquid, adaptive, and responsive
 - `Media Query` A CSS feature that makes it possible to apply styling based on boolean logic
-- `Breakpoint` The specific amounts that media queries reference (usually in pixels)
+- `Breakpoint` The specific amounts that media queries reference
 - `CSS Reset` A set of styles that applies default styling
 - `Viewport Meta Tag` An html tag that is used to describe attributes that affect how the page is displayed
 
