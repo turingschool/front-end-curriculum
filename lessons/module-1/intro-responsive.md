@@ -5,6 +5,7 @@ tags: html, css
 ---
 
 ### Learning Goals
+
 - Understand and describe page layout
 - Understand and apply media queries
 
@@ -20,7 +21,7 @@ tags: html, css
 
 We can't control how our users interact with our products, but we *can* make sure that our work looks good and functions correctly on all screen sizes. Your product lives online, it's important to make sure that no matter how a user accesses it they are able to use it successfully.
 
-A general understanding of responsive website design, how to use media queries, and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your toolbelt.
+A general understanding of responsive website design, how to use media queries, and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your tool belt.
 
 In this session, we'll be diving into responsive page layouts and using media queries to control your page content at all screen sizes. This lesson assumes you are familiar with HTML and CSS fundamentals.
 

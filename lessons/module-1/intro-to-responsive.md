@@ -13,7 +13,7 @@ tags: css, responsive, media queries, design, layout
 
 - `Page Layout` - The size and positioning of elements on a page. Examples are static, liquid, adaptive, and responsive
 - `Media Query` A CSS feature that makes it possible to apply styling based on boolean logic
-- `Breakpoint` The specific amounts that media queries reference (usually in pixels)
+- `Breakpoint` The specific amounts that media queries reference
 - `Viewport Meta Tag` An HTML tag that is used to describe attributes that affect how the page is displayed
 
 ## Introduction
@@ -63,7 +63,7 @@ We know we want to build a site that works well on a variety of screen sizes, bu
 
 There are [several different media types](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) (`all`, `screen`, `print`, `speech`), but for our purposes we'll primarily use `screen`. This indicates that the media query is intended for computer screens.
 
-**Breakpoints** are the pixel widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied. It may seem natural to set breakpoints for certain devices; it's actually best practice to choose a breakpoint when the layout of content needs to change.
+**Breakpoints** refer to the widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied. It may seem natural to set breakpoints for certain devices; it's actually best practice to choose a breakpoint when the layout of content needs to change.
 
 <section class="call-to-action">
 ### Turn & Talk
