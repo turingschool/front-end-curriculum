@@ -31,7 +31,7 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 ### Iteration 0 - Desktop Layout
 
-Plan then write the HTML and CSS so that you application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
+Plan then write the HTML and CSS so that your application matches this comp. Based on what you are building, you can anticipate that the Idea "cards" will not always be there on page load, but for now, they should.
 
 Use the same text on your cards that is used in the spec so you can ensure your spacing/sizing is accurate.
 
