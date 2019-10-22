@@ -10,7 +10,7 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 * Understand the difference between synchronous and asynchronous operations
 * Be familiar with the fetch API
 * Understand how network requests work
-* Know what a `GET` request does and how to use it
+* Know what `GET` and `POST` requests do and how to use them
 
 ### Vocab
 
@@ -26,17 +26,69 @@ Open up your dev tools and navigate to the Network tab. Refresh the page and wat
 
 Each item on a webpage is coming from some server somewhere. The link tags in your HTML connecting your stylesheets and JavaScript files prompt network requests.
 
+### Types of Requests
+
+Network requests can be made to **GET** information from a server, but it's not the only use.
+
+The HTTP protocol defines a variety of types of requests we can make. These include:
+
+* `GET` - retrieve information from a server
+* `POST` - send information to a server, creating / updating resources
+* `PUT` - send information to a server, creating / updating resources
+* `DELETE` - remove information from a server
+* And <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="\__blank"> many others </a>
+
+
+While getting comfortable with network requests, we're going to focus on **GET** and **POST** requests.
+
+### Responses
+
+Every request we make, successful or not, will receive a response.
+
+Take another look at the **Network** tab in the dev tools.
+
+<img src="../../assets/images/network-requests-response-statuses.png" alt="network request response codes in dev tools">
+
+We can see that each request has a different response code. The HTTP protocol lays a series of <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" target="\__blank">Response Codes</a> to give more information on the status of a request.
+
+Here's a high level overview of different statuses:
+
+```
+1XX status codes have informational purposes
+2XX indicates success
+3XX is for redirection
+4XX represent client-side errors
+5XX indicate problems on the server side
+```  
+
+#### Common statuses:
+
+* `200 OK` -- successful request
+* `201 Created`-- successful POST request
+* `400 Bad Request` -- The request failed due to some error in its structure
+* `404 Not Found` -- The request was correctly structured, but specified a non-existent resource
+* `500 Internal Server Error` -- Something wrong happened on the server's side of things
+
+
+## Making a request
+
+Remember, every resource we use on our webpages has to get requested from some server.
+
 Why is it important to keep this in mind?
 
 Each network request takes time - they're _expensive_. Imagine if you had to wait for a webpage to load one thing at a time! It would not make for a great user experience.
 
 Network requests are expensive no matter what we do. However, we can run them _asynchronously_, saving some time.
 
-## AJAX
+`Asynchronous` operations refer to things that can happen outside the normal order of execution. Network requests can be `synchronous` or `asynchronous`, but most modern applications do them `asynchronously` to improve performance / the user experience.
 
-[**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX)
+We'll come back to this idea, but know that when we make requests, we typically do them asynchronously. For now, lets look at how to actually make a request.
 
-Cool, but really, what is it?
+One of the more common ways to make a request is through a process called AJAX, or [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX). AJAX was a huge advancement for the web, as it allowed developers to update part of a webpage without reloading the entire thing.
+
+Traditionally, Ajax requests have been made via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="\__blank"> XMLHttpRequest object </a>. However, the process is a little clunky, so developers made a more streamlined way to do the same thing: the `fetch API`.
+
+<!-- Cool, but really, what is it?
 
 _“the method of exchanging data with a server, and updating parts of a web page – without reloading the entire page.”_
 
@@ -103,11 +155,11 @@ xhttp.send();
 
 If it worked, you should be able to type `xhttp` and see the results in your XMLHttpRequest object with a status of `200` as well as some responseText containing the specific trivia returned.
 
----
+--- -->
 
-### Isn't There an Easier Way??? ES6: fetch()
+## ES6: fetch()
 
-Another great tool to help with network requests is the [fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API). This is what we'll focus on in Mod 2, since we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery)!
+Another great tool to help with network requests is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="\__blank">fetch API</a>. This is what we'll focus on in Mod 2, since we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery)!
 
 _It's important to note that not every browser supports the fetch api; polyfills are available, but many legacy codebases use other apis that are supported by older browsers, such as Axios or Superagent._
 
@@ -115,17 +167,63 @@ From the docs:
 
 _The fetch() method takes one mandatory argument, the path to the resource you want to fetch. It returns a promise that resolves to the Response to that request, whether it is successful or not._
 
-We can nearly mimic the syntax above to perform the same network request, with a few minor tweaks. First we need to pass in the path we want to fetch from:
+
+<section class="note">
+Fetch will **always** return a promise
+</section>
+
+`fetch` takes only one mandatory argument: the url of the resource we are requesting.
+
+For example:
+
+```js
+fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
+```
+This make a basic `GET` request to the <a href="https://opentdb.com/api_config.php" target="\__blank"> Trivia API</a>.
+
+`fetch` can also take an optional `init` object as its second argument.
+
+### `fetch` syntax
+
+```js
+fetch(resourceUrl, {/*init object with `method`, `body`, and other optional properties*/});
+// Returns a promise
+```
+
+Let's dive deeper into fetch by looking at how we can make different requests with it
+
+### GET with fetch
+
+By default, fetch performs a `GET` request. This means that if we only add a resource url to the fetch call, we'll try and `GET` information the resource leads us to.
+
+Try typing this in your console and see what we get back:
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
 ```
 
-Next we see that fetch returns a promise that resolves to the response of of our request. We haven't talked about promises yet, but all you need to know for now is that we can add `.then(callback)` to our fetch. The callback parameter inside the `.then()` method will execute as soon as the response comes in. In other words, it will wait until we have ALL of the data (or an error) back, `THEN` it will execute whatever we say to do next with that data.
+If we put this in the console, we'll see something like this:
+
+```
+Promise {<pending>};
+```
+
+<section class="note">
+#### Promises - the quick version
+
+A `Promise` is an object that represents the eventual completion of an action.
+
+We don't need to worry too much about them now. Just know that a Promise will either be resolved upon completion, or rejected upon failure. We can use special methods for promises to determine what needs to happen in either of those scenarios:
+
+* `.then()` runs upon the resolution of a promise. Returns another promise
+* `.catch()` runs upon the rejection of a failed promise. Used for error handling
+</section>
+
+Diving into the returned promise reveals some information, such as its status and value, but nothing that's too immediately useful. Instead we have to resolve it:
 
 ```js
-fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-  .then(data => console.log(data));
+fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
+	.then(response => console.log(response))
 ```
 
 If you plug the code above into your console, you should see the Response object come back!
@@ -151,7 +249,56 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .catch(err => /* do something else */);
 ```
 
-### Query Strings / URL Structure
+<section class="call-to-action">
+### Practice
+Using the <a href="https://opentdb.com/api_config.php" target="\__blank"> Trivia API</a>, do the following in your console:
+
+- Fetch 10 science questions using fetch and console.log the entire response
+- Fetch 20 geography questions and for each trivia console.log the answer only
+- Fetch 20 geography questions and console.log the response status code.
+</section>
+
+### POST with fetch
+
+What if we want to add information to a database?
+
+If we want to use fetch to make any other kind of request, we'll have to add an optional init object into the function call.
+
+```js
+fetch(url, {
+	method:"POST",
+})
+```
+
+From here, the implementation may look different based on the API you're communicating with. Some good init object properties to be aware of:
+
+* `method` - whatever kind of request we'll be making; "GET", "POST", "DELETE", etc...
+* `body` - the body of whatever we want to send to the server
+* `headers` - extra information needed about the request. Takes an object. An **important** header property to know:
+  * `Content-Type` - specify what format the body will be in
+
+Here's a typical POST request structure:
+
+```js
+fetch(url, {
+	method: 'POST',
+	headers: {
+		'Content-Type': 'application/json'
+	},
+	body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
+})
+	.then(response => response.json())
+	.then(json => /*do something with json*/)
+	.catch(err => /*do something with the error*/);
+```
+
+Remember, **fetch still returns a promise**. We've got to resolve it, regardless of what request type we're making.
+
+Often times, if a `POST` is successful, you'll see a `201 created` status message in the response
+
+<!-- Add in a link to a place to practice post requests -->
+
+### Nice to Know: Query Strings / URL Structure
 
 ![url anatomy diagram](https://sitechecker.pro/wp-content/uploads/2017/12/url-structure.jpg)
 
@@ -227,17 +374,6 @@ console.log("Wait for it...");
 * Have you run into a situation on past projects where you needed async operations to accomplish it?
 </section>
 
-<section class="call-to-action">
-## Practice Time!
-
-In your console do the following...
-
-- Fetch 10 science questions using fetch and console.log the entire response
-- Fetch 20 geography questions and for each trivia console.log the answer only
-- Fetch 20 geography questions and console.log the response status code.
-- Fetch 30 geography questions and console.log an array of only the hard trivia
-</section>
-
 ---
 
 ##### Further Reading:
@@ -245,6 +381,7 @@ In your console do the following...
 * [The Evolution of Asyncronous JavaScript](https://blog.risingstack.com/asynchronous-javascript/)
 * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
+* [Postman](https://www.getpostman.com/) -- good tool for testing out APIs
 
 
 

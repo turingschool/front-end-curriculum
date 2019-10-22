@@ -5,6 +5,7 @@ tags: html, css
 ---
 
 ### Learning Goals
+
 - Understand and describe page layout
 - Understand and apply media queries
 
@@ -12,7 +13,7 @@ tags: html, css
 
 - `Page Layout` - The size and positioning of elements on a page. Examples are static, liquid, adaptive, and responsive
 - `Media Query` A CSS feature that makes it possible to apply styling based on boolean logic
-- `Breakpoint` The specific amounts that media queries reference (usually in pixels)
+- `Breakpoint` The specific amounts that media queries reference
 - `CSS Reset` A set of styles that applies default styling
 - `Viewport Meta Tag` An html tag that is used to describe attributes that affect how the page is displayed
 
@@ -20,7 +21,7 @@ tags: html, css
 
 We can't control how our users interact with our products, but we *can* make sure that our work looks good and functions correctly on all screen sizes. Your product lives online, it's important to make sure that no matter how a user accesses it they are able to use it successfully.
 
-A general understanding of responsive website design, how to use media queries, and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your toolbelt.
+A general understanding of responsive website design, how to use media queries, and when to add breakpoints so your page layout resizes nicely is a critical skill to have in your tool belt.
 
 In this session, we'll be diving into responsive page layouts and using media queries to control your page content at all screen sizes. This lesson assumes you are familiar with HTML and CSS fundamentals.
 
@@ -65,7 +66,7 @@ We know we want to build a site that works well on a variety of screen sizes, bu
 
 There are [several different media types](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) (`all`, `screen`, `print`, `speech`), but for our purposes we'll primarily use ``screen``. This indicates that the media query is intended for computer screens.
 
-**Break points** are the pixel widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied.
+**Breakpoints** refer to the widths that the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied.
 
 #### Let's Get Started
 

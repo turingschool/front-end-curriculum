@@ -13,8 +13,8 @@ tags: css, responsive, media queries, design, layout
 
 - `Page Layout` - The size and positioning of elements on a page. Examples are static, liquid, adaptive, and responsive
 - `Media Query` A CSS feature that makes it possible to apply styling based on boolean logic
-- `Breakpoint` The specific amounts that media queries reference (usually in pixels)
-- `Viewport Meta Tag` An html tag that is used to describe attributes that affect how the page is displayed
+- `Breakpoint` The specific amounts that media queries reference
+- `Viewport Meta Tag` An HTML tag that is used to describe attributes that affect how the page is displayed
 
 ## Introduction
 
@@ -24,9 +24,17 @@ A general understanding of responsive website design, how to use media queries, 
 
 In this session, we'll be diving into responsive page layouts and using media queries to control your page content at all screen sizes. This lesson assumes you are familiar with HTML and CSS fundamentals.
 
+<div class="call-to-action">
+## Exploration: Page Layouts
+
+Page Layout refers to the arrangement and sizing of visual elements on a web page. There are four primary page layout types, which you are about the explore.
+
+Take a few minutes to explore <a target="blank" href="http://www.liquidapsive.com/">Liquidapsive</a>. Your table color corresponds to a color on the handout - you are assigned to become an expert on the layout in that color. Also, all students should look at the static layout. One by one, select both options from the drop-down in the top right corner. Change the screen width and observe what happens. Jot down your observations, likes and dislikes as a user, and be ready to share what you learned with someone from a different table color.
+</div>
+
 ## Page Layouts
 
-Page Layout refers to the arrangement and sizing of visual elements on a web page. There are four primary page layout types:
+Here is a breakdown of each Page Layout type and an brief explanation of each:
 
 **Static Page Layout**
 
@@ -47,11 +55,6 @@ Page Layout refers to the arrangement and sizing of visual elements on a web pag
 
 * At first glance, a responsive site looks a lot like an adaptive site. But start resizing your screen, and you'll see why it's the best solution. A true responsive page layout combines the best parts of a liquid layout and an adaptive layout to create the best experience for your users as they move between devices and screen sizes. By using both relative units and media queries, a responsive site allows us to transition through screen sizes seamlessly and effortlessly.
 
-<div class="lesson-segment">
-  <h3>Explore Page Layouts</h3>
-  <p>Take a few minutes to explore <a target="blank" href="http://www.liquidapsive.com/">Liquidapsive</a>. One by one, select each option from the drop-down in the top right corner. Change the screen width and observe what happens. Jot down any observations/learnings in your graphic organizer.</p>
-</div>
-
 ## Media Queries & Breakpoints
 
 We know we want to build a site that works well on a variety of screen sizes, but we keep talking about "media queries" and "setting breakpoints". What does that mean?
@@ -60,7 +63,7 @@ We know we want to build a site that works well on a variety of screen sizes, bu
 
 There are [several different media types](https://developer.mozilla.org/en-US/docs/Web/CSS/@media) (`all`, `screen`, `print`, `speech`), but for our purposes we'll primarily use `screen`. This indicates that the media query is intended for computer screens.
 
-**Breakpoints** are the pixel widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied. It may seem natural to set breakpoints for certain devices; it's actually best practice to choose a breakpoint when the layout of content needs to change.
+**Breakpoints** refer to the widths the media queries reference. When the media query is true (i.e. when the screen size matches what is specified by the break point), the styles specified in that media query will be applied. It may seem natural to set breakpoints for certain devices; it's actually best practice to choose a breakpoint when the layout of content needs to change.
 
 <section class="call-to-action">
 ### Turn & Talk
@@ -69,13 +72,13 @@ Review the two media queries written below. Predict the result of this code. Be 
 </section>
 
 ```css
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 55em) {
   body {
     background: magenta;
   }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 40em) {
   body {
     background: teal;
   }
@@ -129,4 +132,4 @@ Before you start to build out the HTML, familiarize yourself with all required l
 * The site [Liquidapsive](http://www.liquidapsive.com/) is a great resource showing simple examples of all the layout types in action.
 * [MDN's Using Media Queries](https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Using_media_queries)
 * [MDN's Explanation Viewport Meta Tag](https://developer.mozilla.org/en-US/docs/Mozilla/Mobile/Viewport_meta_tag)
-* Brad Frost's [This is Responsive](http://bradfrost.github.io/this-is-responsive/), patterns and resources for creating responsive websites.
+* Brad Frost's [This is Responsive](http://bradfrost.github.io/this-is-responsive/), patterns and resources for creating responsive websites. He also created [this](https://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/#relative) brief read.
