@@ -74,7 +74,7 @@ Your entire application will consist of one HTML page or template. You will have
     2. `saveToStorage` (should only have one job which is to save the instance to storage)
     3. `deleteFromStorage`
     4. `updateIdea` (should be able to update the idea's title, body, or starred state)
-2. A `main.js` file that contains all syndrome related JavaScript.
+2. A `main.js` file that contains all DOM related JavaScript.
 
 **Note** The `idea.js` file  must be the first script in your HTML so that your `main.js` file has access to your `Idea` class.
 
