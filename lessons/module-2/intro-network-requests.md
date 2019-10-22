@@ -10,7 +10,7 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 * Understand the difference between synchronous and asynchronous operations
 * Be familiar with the fetch API
 * Understand how network requests work
-* Know what a `GET` request does and how to use it
+* Know what `GET` and `POST` requests do and how to use them
 
 ### Vocab
 
