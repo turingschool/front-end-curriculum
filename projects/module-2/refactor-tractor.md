@@ -115,6 +115,7 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
 ## Extensions
 
 * Deploy your updates to GH pages
+* Do proper error handling for your users to ensure that they are submitting their POST requests successfully (handle the case where they submit their data and an error message returns from the request, and also validate the input fields on the client-side)
 * Test and fix any inconsistencies of your application in Internet Explorer (BrowserStack is a potential tool that may help with this!)
 * Add webpack into YOUR FitLit Project
 
