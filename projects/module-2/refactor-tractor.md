@@ -146,12 +146,9 @@ If the evaluator is left wanting a bit more from your response, they may choose 
 
 
 
-
-
-
-
-
-
-* Group eval, with individual scores
-* We may have you delete some functionality that was implemented during this project and re-implement it on the fly and/or we will be asking technical/conversational questions and expect that any of you can speak to them. (e.g. "Describe what a POST request is and why we might perform one.")
-
+<!-- IDEAS FOR NEXT INNING
+* Better error handling when users do something wrong with their POST request - make this a requirement rather than an extension
+* Add bugs into the codebase
+* Give you a codebase of a similar but different project
+* Don't just generate a random user - let people choose who they want to see
+-->
