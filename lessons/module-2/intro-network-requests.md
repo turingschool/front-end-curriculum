@@ -296,7 +296,11 @@ Remember, **fetch still returns a promise**. We've got to resolve it, regardless
 
 Often times, if a `POST` is successful, you'll see a `201 created` status message in the response
 
-<!-- Add in a link to a place to practice post requests -->
+<section class="call-to-action">
+#### Practice
+
+Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting and POSTing.
+</section>
 
 ### Nice to Know: Query Strings / URL Structure
 
