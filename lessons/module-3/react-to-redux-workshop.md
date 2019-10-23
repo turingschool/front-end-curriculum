@@ -37,7 +37,7 @@ After setting it up and running it, check through the code.  Much of it should f
 
 - Become more familiar with creating actions, reducers, and containers
 - Understanding where it is necessary to utilize mapStateToProps & mapDispatchToProps
-- Learn how to apply middleware to Redux using thunks to fetch calls
+- Learn how to use actions along with your fetch calls to update the store
 
 ### A Closer Look
 
@@ -231,7 +231,7 @@ Think about where we originally invoked our *selectUser* method.  That's right, 
 Hook up your coWorkerTab component so it has access to the `selectUser` method in it's props.  Remember to import the action you need to dispatch!
 </section>
 
-```js
+```jsx
 // CoWorkerTab.js
 
 import { bindActionCreators } from 'redux'; 
@@ -392,11 +392,11 @@ Lastly, we need to connect the store to our props.  You've done this already.  G
 <section class="call-to-action">
 ### Your Turn
 
-Before looking at the solution below, experiment with passing state from your store to your props.  You've already done this before!  You likely will also need to set up your container so it can accept actions as well.  Think about which action you need to dispatch.
+Before looking at the solution below, experiment with passing state from your store to your props.  You've already done this before!  You likely will also need to set up your container so it can accept actions as well.  Think about which actions need to fire and when.  Instead of setting your coWorkers to state, use an action to update the store.  If something errors out, how can you use an action to update the global state?
 </section>
 
 ```jsx
-// Components/App
+// App.js
 
 import { bindActionCreators } from 'redux';
 import { fetchCoWorkers } from '../apiCalls';
@@ -457,11 +457,12 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 Notice in our `componentDidMount` that we destructure our actions from our props.  Then at the beginning of the function, we invoke our *isLoading* method to update our Redux store.  This is to signify that the data is currently loading. If everything goes well, and we get our data back, we can call *isLoading* once more saying that the loading has finished.  Lastly, we can invoke *getCoWorkers* and pass our data to update our store.  Notice we are also calling *hasErrored* in our `catch` to update state with the error message if things go wrong.
 
-Comment out our *constructor*, *addCoWorker*, and *removeWorker* methods.  Going back to your app, it should load your co-workers.  If you change the url in your *fetchCoWorkers* method to break it, it should still display an error.  We're now fully utilizing our Redux store!  
+Comment out your *constructor*, *addCoWorker*, and *removeWorker* methods.  Going back to your app, it should load your co-workers.  If you change the url in your *fetchCoWorkers* method to break it, it should still display an error.  We're now fully utilizing our Redux store!  
 
+<section class="call-to-action">
 ### Next Steps
 
 Now that we have implemented getting the co-workers, try and do the same for adding a co-worker and removing a co-worker.  Practice writing out more actions & reducers and connect what pieces you need to the `App`.  You got this!
 
 If you get stuck, check out the `convert-to-redux` branch to see the final version.  Cheers!
-
+</section>
