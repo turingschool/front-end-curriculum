@@ -354,7 +354,7 @@ You may have noticed that `@extend` and `@mixin` can be seen as accomplishing th
 <section class="call-to-action">
 #### Research and Talk
 
-In pairs, take 5 minutes to read two articles around this debate. Come together to discuss what you found. Bonus points if you also look into `placeholder`.
+In pairs, take 5 minutes to read two articles around this debate. Come together to discuss what you found.
 </section>
 
 <hr />
