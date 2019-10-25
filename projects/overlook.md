@@ -242,11 +242,22 @@ You will use the following endpoints for fetching your data:
 You must incorporate POST requests to allow the current user to add a Booking or Room Services. For a user to add a booking, they should POST to the bookings endpoint with an object that looks like the following:
 
 ```js
+{
+    "userID": 48,
+    "date": "2019/09/23",
+    "roomNumber": 4
+}
 ```
 
 For a user to add a room service item, they should POST to the room services endpoint with an object that looks like the following:
 
 ```js
+{
+    "userID": 100,
+    "date": "2019/10/18",
+    "food": "Rustic Cotton Sandwich",
+    "totalCost": 17.33
+}
 ```
 
 # Rubric
