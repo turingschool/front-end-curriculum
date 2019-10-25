@@ -20,7 +20,7 @@ For this project, you will be building a hotel management tool for hotel staff t
 
 ## Technologies
 
-* **the fetch API** to retrieve data 
+* **the fetch API** to retrieve and add data
 * **jQuery** for making the DOM easier to handle
 * **Sass** for getting fancy with your CSS
 
@@ -79,7 +79,7 @@ I need to make sure a valid customer has been selected in order for a visitor to
 - calculate a total bill
 ```
 
-### EPIC: Dashboard
+### Dashboard
 
 ```
 As a visitor,
@@ -105,7 +105,7 @@ Clicking on `Orders`, `Rooms`, or `Customer` should take me to a new tab with ne
 Clicking on the `Main` tab from any of the other tabs will redirect me to the main dashboard/tab.
 ```
 
-### Epic: Customer
+### Customer
 
 ```
 As a visitor,
@@ -130,7 +130,7 @@ I will know that a customer has been selected,
 because the customer name will be displayed at the top of the page.
 ```
 
-### Epic: Orders
+### Orders
 
 ```
 As a visitor,
@@ -156,7 +156,7 @@ If there is no valid information for this customer,
 I will be notified that no valid data exists.
 ```
 
-### Epic: Bookings
+### Bookings
 
 ```
 As a visitor,
@@ -218,10 +218,22 @@ If purchases are made for room service, these changes will be reflected on the `
 
 ## Data Endpoints
 
+You will use the following endpoints for fetching your data:
+
 * [Users](https://fe-apps.herokuapp.com/api/v1/overlook/1904/users/users)
 * [Rooms](https://fe-apps.herokuapp.com/api/v1/overlook/1904/rooms/rooms)
 * [Bookings](https://fe-apps.herokuapp.com/api/v1/overlook/1904/bookings/bookings)
 * [Room Services](https://fe-apps.herokuapp.com/api/v1/overlook/1904/room-services/roomServices)
+
+You must incorporate POST requests to allow the current user to add a Booking or Room Services. For a user to add a booking, they should POST to the bookings endpoint with an object that looks like the following:
+
+```js
+```
+
+For a user to add a room service item, they should POST to the room services endpoint with an object that looks like the following:
+
+```js
+```
 
 # Rubric
 
