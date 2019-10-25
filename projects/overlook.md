@@ -13,7 +13,8 @@ For this project, you will be building a hotel management tool for hotel staff t
 ## Goals and Objectives
 
 - Use OOP to drive the design of the application and the code
-- Separate business-logic code from view-related code
+- Work with an API to send and receive data
+- Solidify the code review process
 - Create a robust test suite that thoroughly tests all functionality of a client-side application
 
 # Requirements
@@ -26,7 +27,20 @@ For this project, you will be building a hotel management tool for hotel staff t
 
 ## Initial Setup
 
-For this project, you need to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo.
+For this project, you need to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Setup instructions are in the README
+
+## Workflow
+
+You will be assigned one workflow buddy to submit PRs to:
+
+* You must give your workflow buddy collaboration access to your repo.
+* You must submit at least 3 PRs to your workflow buddy for review.
+* You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
+
+It is up to you to decide what changes warrant a PR -- remember we want to submit PRs that have significant changes and potential for feedback. As a workflow buddy, you are responsible for reviewing at least 3 PRs from your partner.
+
+Please also tag your instructors in any PR you make.
+
 
 ## Testing
 
@@ -42,7 +56,7 @@ Your testing suite should test all of the functionality of the application, incl
 
 For the purposes of this project, you will keep your state logic separate from your view logic. In other words, ideally your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
 
-To do this, you will utilize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
+If you feel you need to do DOM manipulation from within a class method, you should create a function to perform the DOM manipulation that you can invoke. You will then spy on this function just to verify that it has been called, rather than allowing your tests to try to actually run it. It may be helpful to create a separate file (e.g. `domUpdates.js`) for these types of functions and put them into an object as methods. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
 
 ## README
 
