@@ -5,12 +5,7 @@ mod: 2
 ---
 
 <section class="call-to-action">
-We'll continue working with the [our-first-tests repo](https://github.com/turingschool-examples/our-first-tests). Commit any changes you may have made, then checkout the `spies-begin` branch by running the following commands:
-
- ```bash
- git fetch --all
- git checkout -b spies-begin origin/spies-begin
- ```
+We'll be working with a <a href="https://github.com/turingschool-examples/chai-spy-box" target="\__blank">new testing repo</a>.
 
 </section>
 
@@ -40,7 +35,7 @@ because it doesn't know what a `document` is. If we look at our `window` object 
 
 Let's look at what would happen if we tried to test a method that leverages `localStorage`.
 
-Let's add a method to our `Box.js` class called `saveDetails` that persists our box information to localStorage:
+Let's add a method to our `Square.js` class called `saveDetails` that persists our box information to localStorage:
 
 ```js
 saveDetails() {
