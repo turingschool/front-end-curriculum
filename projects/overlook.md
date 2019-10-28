@@ -40,7 +40,7 @@ You will use the following endpoints for fetching your data:
 
 ## Iterations
 
-### Login
+### 1. Login
 
 Your app should support two different types of users: a customer and a manager. When first arriving at the site, a user should be able to log in with a username and password. If it is a **manager** logging in, they should log in with the following credentials:
 
@@ -49,7 +49,7 @@ username: manager
 password: overlook2019
 ```
 
-If it is a customer logging in, they should log in with the following credentials:
+If it is a **customer** logging in, they should log in with the following credentials:
 
 ```
 username: customer50 (where 50 is the ID of the user)
@@ -57,7 +57,7 @@ password: overlook2019
 ```
 
 
-###   Dashboard
+### 2. Dashboard
 
 **As a manager, upon logging in:**
 
@@ -72,12 +72,12 @@ password: overlook2019
   * Any room bookings I have made (past or present/upcoming)
   * The total amount I have spent on rooms
 
-### Customer Interaction
+### 3. Customer Interaction
 
 **As a customer:**
 
 * I should be able to select a date for which I'd like to book a room for myself
-* Upon selecting a date, I should be shown a list of room details for *only rooms that are available for booking on that date*
+* Upon selecting a date, I should be shown a list of room details for *only rooms that are available on that date*
 * I should be able to filter the list of available rooms by their `roomType` property
 * I should be able to select a room for booking
 * In the event that no rooms are available for the date/roomType selected, display a message fiercely apologizing to the user and asking them to adjust their room search
@@ -95,7 +95,7 @@ Booking a room will require a POST request to the bookings endpoint, like so:
 ```
 
 
-### Manager Interaction
+### 4. Manager Interaction
 
 **As a manager:**
 
@@ -104,7 +104,7 @@ Booking a room will require a POST request to the bookings endpoint, like so:
   * Add a room booking for that user
   * Delete any upcoming room bookings for that user (they cannot delete a booking from the past)
 
-Deleting an upcoming booking will require a DELETE request to the bookings endpoint, passing through just the booking ID:
+Deleting an upcoming booking will require a DELETE request to the bookings endpoint, like so:
 
 ```js
 id: 12085397154
