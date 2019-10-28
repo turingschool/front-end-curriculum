@@ -118,7 +118,7 @@ You will be assigned one workflow buddy to submit PRs to:
 * You must submit at least 2 PRs to your workflow buddy for review.
 * You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
 
-It is up to you to decide what changes warrant a PR -- remember we want to submit PRs that have significant changes and potential for feedback. As a workflow buddy, you are responsible for reviewing at least 3 PRs from your partner.
+It is up to you to decide what changes warrant a PR -- remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you're struggling with or have questions about or need help with. As a workflow buddy, you are responsible for reviewing at least 2 PRs from your partner.
 
 Please also tag your instructors in any PR you make.
 
