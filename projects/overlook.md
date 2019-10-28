@@ -107,7 +107,9 @@ Booking a room will require a POST request to the bookings endpoint, like so:
 Deleting an upcoming booking will require a DELETE request to the bookings endpoint, like so:
 
 ```js
-id: 12085397154
+{
+    id: 12085397154
+}
 ```
 
 ## Workflow
