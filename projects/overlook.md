@@ -29,18 +29,6 @@ For this project, you will be building a hotel management tool for hotel custome
 
 For this project, you will want to use this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) repo. Setup instructions are in the README
 
-## Workflow
-
-You will be assigned one workflow buddy to submit PRs to:
-
-* You must give your workflow buddy collaboration access to your repo.
-* You must submit at least 2 PRs to your workflow buddy for review.
-* You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
-
-It is up to you to decide what changes warrant a PR -- remember we want to submit PRs that have significant changes and potential for feedback. As a workflow buddy, you are responsible for reviewing at least 3 PRs from your partner.
-
-Please also tag your instructors in any PR you make.
-
 ## Datasets
 
 You will use the following endpoints for fetching your data:
@@ -49,20 +37,6 @@ You will use the following endpoints for fetching your data:
 * [Rooms](https://fe-apps.herokuapp.com/api/v1/overlook/1904/rooms/rooms)
 * [Bookings](https://fe-apps.herokuapp.com/api/v1/overlook/1904/bookings/bookings)
 
-## Testing
-
-You should be testing your the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
-
-Your testing suite should test all of the functionality of the application, including the following:
-
-* Class default properties
-* Class methods
-* Anything that updates class properties
-
-Keep in mind your use-cases for Spies:
-
-* Mocking out a fetch call and testing your applications reaction to the response
-* Spying on methods that call other methods which are already tested elsewhere
 
 ## Iterations
 
@@ -136,10 +110,45 @@ Deleting an upcoming booking will require a DELETE request to the bookings endpo
 id: 12085397154
 ```
 
+## Workflow
 
+You will be assigned one workflow buddy to submit PRs to:
+
+* You must give your workflow buddy collaboration access to your repo.
+* You must submit at least 2 PRs to your workflow buddy for review.
+* You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
+
+It is up to you to decide what changes warrant a PR -- remember we want to submit PRs that have significant changes and potential for feedback. As a workflow buddy, you are responsible for reviewing at least 3 PRs from your partner.
+
+Please also tag your instructors in any PR you make.
+
+
+## Testing
+
+You should be testing your the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
+
+Your testing suite should test all of the functionality of the application, including the following:
+
+* Class default properties
+* Class methods
+* Anything that updates class properties
+
+Keep in mind your use-cases for Spies:
+
+* Mocking out a fetch call and testing your applications reaction to the response
+* Spying on methods that call other methods which are already tested elsewhere
+
+
+## Accessibility
+
+* Accessibility audits should be at 100%
+* A user should be able to interact with all functionality of your application by tabbing through it, no use of the trackpad
+* ARIA attributes should be utilized for any UI elements that are not understood by the screen reader
+* Application should be fully responsive for mobile - tablet - desktop
 
 
 ## Extensions
 
 * Allow customers to filter available rooms by cost (min/max), bed size, and/or number of beds
 * Allow customers and managers to add a room service charge to a booking by utilizing the [room services endpoint](https://fe-apps.herokuapp.com/api/v1/overlook/1904/room-services/roomServices)
+* Find and fix a cross-browser compat issue
