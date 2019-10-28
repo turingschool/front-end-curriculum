@@ -99,7 +99,7 @@ Booking a room will require a POST request to the bookings endpoint, like so:
 
 **As a manager:**
 
-* I should be able to enter any customer ID and:
+* I should be able to search for any user by name and:
   * View their name, a list of all of their bookings, and the total amount they've spent
   * Add a room booking for that user
   * Delete any upcoming room bookings for that user (they cannot delete a booking from the past)
@@ -137,6 +137,7 @@ Keep in mind your use-cases for Spies:
 
 * Mocking out a fetch call and testing your applications reaction to the response
 * Spying on methods that call other methods which are already tested elsewhere
+* Spying on any functions that do DOM manipulation in response to the result of a fetch request/instance updating
 
 
 ## Accessibility
@@ -152,3 +153,7 @@ Keep in mind your use-cases for Spies:
 * Allow customers to filter available rooms by cost (min/max), bed size, and/or number of beds
 * Allow customers and managers to add a room service charge to a booking by utilizing the [room services endpoint](https://fe-apps.herokuapp.com/api/v1/overlook/1904/room-services/roomServices)
 * Find and fix a cross-browser compat issue
+
+
+
+## Rubric
