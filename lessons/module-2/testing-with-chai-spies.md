@@ -5,13 +5,8 @@ mod: 2
 ---
 
 <section class="call-to-action">
-We'll continue working with the [our-first-tests repo](https://github.com/turingschool-examples/our-first-tests). Commit any changes you may have made, then checkout the `spies-begin` branch by running the following commands:
+We'll be working with a <a href="https://github.com/turingschool-examples/chai-spy-box" target="\__blank">new testing repo</a>.
 
- ```bash
- git fetch --all
- git checkout -b spies-begin origin/spies-begin
- ```
- 
 </section>
 
 ## Why Spy with Our Little Eyes?
@@ -19,6 +14,12 @@ We'll continue working with the [our-first-tests repo](https://github.com/turing
 One of the biggest hurdles with front-end testing, and why it can be so complex, is that your tests are running in a different environment than your app. Your app runs in the **browser**, and your tests run in the **terminal**.
 
 <!-- I've mentioned in our first testing lesson, that TDD was pretty much always a process on the back-end, and it made sense there because when you're writing server-side/back-end code, you're pretty much living in your terminal. One reason testing didn't come around to the front-end side of things was because we have this environmental difference. We couldn't figure out how to run our tests in an environment that behaved like a browser. -->
+
+<section class="call-to-action">
+### Brainstorm
+- What web APIs and technologies are our apps rely on in the browser?
+- Are these defined in the terminal environment?
+</section>
 
 This environmental difference means that we can't test functionality that's dependent on the browser. The terminal does not have access to all of the objects and web APIs that we have in the browser, and will therefore not understand things like:
 
@@ -34,11 +35,11 @@ because it doesn't know what a `document` is. If we look at our `window` object 
 
 Let's look at what would happen if we tried to test a method that leverages `localStorage`.
 
-Let's add a method to our `Box.js` class called `saveDetails` that persists our box information to localStorage:
+Let's add a method to our `Square.js` class called `saveDetails` that persists our box information to localStorage:
 
 ```js
 saveDetails() {
-  localStorage.setItem('box', { 
+  localStorage.setItem('box', {
     height: this.height,
     width: this.width
   });
@@ -52,7 +53,7 @@ describe('saveDetails', function() {
   it('should save details to localStorage', function() {
     var box = new Box(100, 100);
     box.saveDetails();
-    expect(localStorage.getItem('box').to.equal({ 
+    expect(localStorage.getItem('box').to.equal({
       width: 100,
       height: 100
     })
@@ -74,14 +75,14 @@ global.localStorage = {
   setItem(keyName, value) {
     this.store[keyName] = value;
   },
-  
+
   getItem(keyName) {
     return this.store[keyName]
   }
 }
 ```
 
-This is a common and totally reasonable practice in front-end testing. Just like we mock out data to work with, we also sometimes mock out web APIs to bring some of that functionality to the terminal. The only problem with this now, is that if anything is wrong with our implementation of `localStorage`, our tests might fail even if our application code isn't actually broken. 
+This is a common and totally reasonable practice in front-end testing. Just like we mock out data to work with, we also sometimes mock out web APIs to bring some of that functionality to the terminal. The only problem with this now, is that if anything is wrong with our implementation of `localStorage`, our tests might fail even if our application code isn't actually broken.
 
 So our other option is to leverage spies.
 
@@ -92,7 +93,7 @@ Spies are useful for when you want to check that something happened - but you do
 
 So in our example, we would want to verify that `localStorage.setItem()` was called, but we don't actually care to test the result of that method running. (We can assume the browser has already tested their implementation of `localStorage`, which means that we don't have to!) We are trusting that as long as we're invoking `localStorage.setItem()`, our browser is going to do it.
 
-So all we really want to test is that something was called. We want to **spy** on localStorage, and make sure that its `setItem` method was called. 
+So all we really want to test is that something was called. We want to **spy** on localStorage, and make sure that its `setItem` method was called.
 
 A spy will listen for a specific function, `localStorage.setItem`, to be called in a test. When it is called, the spy takes over control of `localStorage.setItem`. The spy runs a “fake” function instead, as if `localStorage.setItem` had actually run.
 
@@ -139,12 +140,12 @@ describe('saveDetails', function() {
   it('should save details to localStorage', function() {
     var box = new Box(100, 100);
     box.saveDetails();
-    expect(localStorage.setItem).to.have.been.called(1); 
+    expect(localStorage.setItem).to.have.been.called(1);
     expect(localStorage.setItem).to.have.been.called.with('box', { width: 100, height: 100 });
 });
 ```
 
-We have two assertions here: 
+We have two assertions here:
 1. verifies that `localStorage.setItem` was called one time
 2. verifies that it was called with accurate arguments
 
