@@ -6,7 +6,7 @@ title: Dog Party 2.0 (Positioning Is Ruff)
 
 As a frontend developer, you're going to need to be able to accurately build out the UI (user interface) for websites based on [comps](https://en.wikipedia.org/wiki/Comprehensive_layout) provided by a designer. For your first project, you'll build a 1-page static site to practice writing well structured, semantic HTML with clean, precise CSS, as well as take a first crack at adding some user interaction with JavaScript and the DOM.  
 
-<!-- Something to note is that you will need to style the comp two different ways using two different css stylesheets. This is based off of the [CSS Zen Garden site](http://www.csszengarden.com/).  **Although you will need to have two stylesheets, the same HTML file and structure will be used for both layouts** (aka even though you'll have two stylesheets, you'll have only one index.html file). This is to help you focus on what is necessary for your HTML structure so that it can work for multiple layouts. -->
+Something to note is that you will need to style the comp two different ways using two different css stylesheets. This is based off of the [CSS Zen Garden site](http://www.csszengarden.com/).  **Although you will need to have two stylesheets, the same HTML file and structure will be used for both layouts** (aka even though you'll have two stylesheets, you'll have only one index.html file). This is to help you focus on what is necessary for your HTML structure so that it can work for multiple layouts.
 
 Similar to what you might be asked to do on the job, we've given you the comps with a set of technical specs to go along with it and your challenge is to build it.
 
@@ -50,6 +50,18 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 - Add a tooltip to each of the elements in the navigation bar.  When a user hovers over one of them, a tool tip should appear giving more information as to what that page is about.
 - Add another `input` and `textarea` to the form that can update the text in each column.  The input should either be a dropdown or radio/checkboxes to specify which column's text is being updated.
 
+## Iteration 4: Zen Garden
+
+Something to note is that you will need to style the comp two different ways using two different css stylesheets. This is based off of the [CSS Zen Garden site](http://www.csszengarden.com/). This is to help you focus on what is necessary for your HTML structure so that it can work for multiple layouts.
+
+Directions:
+
+1. Create a new CSS file in your dog_party directory.
+2. Change the `link` tag in your HTML to point to this new CSS file.
+3. Write CSS to recreate Design Comp 2 (comp below).
+
+The challenge is - you cannot change **anything** in the HTML once you've updated the `link` tag. This is the point of the challenge! You may find that you need more [advanced selectors](https://css-tricks.com/almanac/selectors/) (wink wink) because you didn't have a class or id attribute on an element you now need a hook for.
+
 ---
 
 ## Design Comp 1
@@ -65,7 +77,7 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 
 # ![Dog Party 01](/assets/images/projects/zen-garden/zen-garden-01.jpg)
 
-<!-- ## Design Comp 2
+## Design Comp 2
 
 #### Hex Codes:
 
@@ -76,7 +88,7 @@ Similar to what you might be asked to do on the job, we've given you the comps w
 * Body text: `#000000`
 * Font: `Roboto Slab`
 
-# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
+# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
 
 ---
 
