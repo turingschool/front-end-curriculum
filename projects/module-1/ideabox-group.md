@@ -129,7 +129,7 @@ As a user,
 - When I delete or favorite any card,
 - I should _not_ see the page reload
 
-### Iteration 4 - Local Storage
+### Iteration 4 - Local Storage & Filtering
 
 As a user,
 - When I create one idea successfully, then refresh the page,
@@ -142,6 +142,27 @@ As a user,
 As a user,
 - When I favorite an idea card, then refresh the page,
 - That idea card is still in the "favorite" state with the filled in star icon
+
+As a user,
+- When I click "Show Starred Ideas"
+- I see only card that are favorited
+
+As a user,
+- When I click "Show Starred Ideas"
+- I see the text on that button has changed to "Show All Ideas"
+
+As a user,
+- When I click "Show Starred Ideas"
+- Then I click what is now "Show All Ideas"
+- I see all idea, favorited or not
+
+As a user,
+- When a type a letter or phrase into the search bar
+- I now only see the cards that include the letter/phrase in the title or body
+
+As a user,
+- When I backspace and delete something from the search bar, so that it's empty
+- I see all cards since no search criteria is being provided
 
 ### Iteration 5 - Commenting on Ideas
 
