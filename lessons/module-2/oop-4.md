@@ -53,9 +53,12 @@ After you have finished reading the four articles, answer the following question
 - What new information have you learned from one (or all) of these readings?
 - What questions do you have after reading through these?
 
-#### Discussion (15 minutes)
+#### Discussion & Closing (15 minutes)
 
 Using the journal questions to guide you, start a discussion within your small groups.
+
+
+
 <!-- 
 #### Code Review & Group Discussion
 
