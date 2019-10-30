@@ -23,11 +23,12 @@ By the end of this session, you will be able to:
 
 ### Reflection (10 minutes)
 
-In your FitLit Pairs, get with another pair and discuss what it was like to structure your code around objects. Focus specifically on:
+In your **original** FitLit Pairs, get with another pair and discuss what it was like to structure your code around objects when first building FitLit, and when refactoring another group's FitLit. Focus specifically on:
 
 * What **didn't** we teach you, that would have been helpful to know?
-* How did you stray from the class structure that the spec outlined, if at all? Why did you do that?
-* Are there any changes you would have made to the code in your classes based on feedback you received or if you had additional time?
+* How did you/your assigned FitLit project stray from the class structure that the spec outlined, if at all? Why did you do that?
+* How did what you built compare to what you received for your group project? What similarities/differences did you notice?
+* Are there any different approaches you might take to structuring your code now if given a similar project?
 
 
 #### Research (20 minutes)
@@ -55,15 +56,13 @@ After you have finished reading the four articles, answer the following question
 #### Discussion (15 minutes)
 
 Using the journal questions to guide you, start a discussion within your small groups.
-
+<!-- 
 #### Code Review & Group Discussion
 
 [*Jeopardy*](https://github.com/turingschool-examples/oop-review/tree/master/jeopardy)  
 [*Wheel of Fortune*](https://github.com/turingschool-examples/oop-review/tree/master/wheel-of-fortune)
 
 *Get in your GameTime groups. You will be reviewing two codebases that have implemented games in OOP*
-
-<!-- WOF groups should be reviewing Jeopardy and vice versa. Family Feud can review either. Goal is to have groups review an unfamiliar codebase -->
 
 While reviewing the code, ask yourself the following questions:
 
@@ -78,4 +77,4 @@ While reviewing the code, ask yourself the following questions:
 
 Within your original group, discuss the following questions - 
 * What new information have you learned from the readings? From the code review?
-* How will this effect the way you continue to write your GameTime projects? Is there any code you now would like to change?
+* How will this effect the way you continue to write your GameTime projects? Is there any code you now would like to change? -->
