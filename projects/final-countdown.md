@@ -19,7 +19,7 @@ To demonstrate:
 
 ## Timeline
 
-Instructors will give you the spec on Monday - we will kickoff together in class.
+<!-- Instructors will give you the spec on Monday - we will kickoff together in class. -->
 
 Instructors will be around during the day to answer questions, but - like a real take-home code challenge - may not provide help through pairing, or answer all questions. Please still ask, though! When you do, form your questions the way you would ask the person who issued the take-home code challenge in a technical interview.
 
@@ -27,7 +27,7 @@ Instructors will be around during the day to answer questions, but - like a real
 
 <!-- You will be given the spec at on Monday of Week 6. -->
 
-**Due Date:** Wednesday of Week 6 at 9:00AM.
+**Due Date:** Wednesday of Week 6 at 12:00PM.
 
 ## Evaluation
 

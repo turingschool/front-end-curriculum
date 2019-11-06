@@ -102,6 +102,8 @@ Create a **private** repository on GitHub and add both/all instructors as collab
 
 The font used in the comp is `Open Sans`.
 
+Assets can be found here: https://drive.google.com/drive/folders/1u0GBpL4piAk__QaBSiYXaqGQ1sWQLQTC?usp=sharing
+
 When the users first come to the site to play, they should see a screen that takes both players names:
 
 ![Which Beyonce Landing Screen](./assets/which-beyonce/landing.png)
