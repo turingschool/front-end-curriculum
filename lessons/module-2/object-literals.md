@@ -14,6 +14,44 @@ By the end of this lesson, you will:
 * Be able to access and create key value pairs on complex data types
 
 
+## Dot vs. Bracket Notation
+
+When working with complex data types, it's important to fully understand how to access and create values so that we can manipulate our datasets as needed. We have two syntaxes that help us here: **dot notation** and **bracket notation**.
+
+**Dot Notation** is used when we literally know the name of the key we want to access or create. e.g.:
+
+```js
+var duck = { noise: 'quack' };
+duck.noise // returns 'quack'
+duck.color = 'yellow'; // adds a key named 'color' to our duck object, with the value 'yellow'
+```
+
+This works great in simple scenarios as seen above, but often times we are doing more complex manipulation that requires a bit more flexibility than dot notation gives us. This is where **Bracket Notation** comes into play. When we use bracket notation, JavaScript will evaluate whatever is inside of the brackets before trying to create or access a key. For example:
+
+```js
+var animal = 'duck';
+
+var farm = {
+    duck: 'quack',
+    cow: 'moo',
+    sheep: 'baaa'
+};
+
+farm[animal] // returns 'quack'
+// animal will be evaluated and the interpreter will see
+// that it represents a string of 'duck' - so it will then
+// look for a key of duck in the farm object
+```
+
+The most common use-cases for bracket notation that you'll see in the wild are when using arguments/parameters, variables or iterations. Let's look at a couple of examples!
+
+<!-- Instructor Notes:
+    * Go through the following examples in class by typing them out in repls, not just reading them to the class
+    * As you start to solve each one, popsicle stick the students to ask them for help with what to do next
+    * e.g. "If I want to write a function that takes in an index of a kitten, and I want the function to return
+    * the name of my kitten at that index, how might I do that?"
+-->
+
 ```js
 // Accessing Values using bracket notation 
 // when our parameter represents a key
