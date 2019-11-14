@@ -10,7 +10,11 @@ This is a quick tutorial that will walk you through how to connect a project on 
 
 ## Local vs. Remote Repositories
 
-quick explanation here
+Despite their similar names, Git and GitHub are not the same thing. They work together, but they are their own distinct beasts.
+* Git allows us to save specific versions of our work in a _local_ repository on our computer.
+* GitHub is an online Git project repository hosting service, which means it holds the directories that contain all the files and folders that make up our projects.
+
+GitHub also allows teams to work seamlessly together (most of the time) on the same codebase. Everyone on a team can pull down a local version of the repo on GitHub, and then, as work is done, the code is committed and pushed from the developer’s local repo and added to the repo on GitHub.
 
 ## Step 1: Create a Local Repository
 
