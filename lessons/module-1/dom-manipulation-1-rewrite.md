@@ -177,6 +177,17 @@ As a developer, a huge part of your job is researching and learning on your own.
 
 ### Add or Remove Classes from the Element
 
+Since it's common to need to change multiple CSS declarations, we can instead add or remove a class from the list of classes a given element has on it.
 
+<section class="call-to-action">
+### Check It Out
+
+Fork [this CodePen](https://codepen.io/turing-school/pen/MWWPLYx) and follow the directions below:
+- Read through the code that is currently written, and observe the result in the mini-browser
+- Un-comment line 3. What changed about the button? What remained the same?
+- Un-comment line 4. What changed about the button? What remained the same?
+</section>
+
+Typically, if you are going to add/remove a class via JavaScript, that class should be declared **below** the class that originally styled the given element. This is because of the cascading nature of CSS; any time rules conflict, the rule declared lower on the sheet will take precedence.
 
 ## Event Listeners
