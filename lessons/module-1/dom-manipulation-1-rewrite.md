@@ -77,7 +77,7 @@ Open the Dev Tools while you are looking at this lesson. In the console, paste t
 
 `var box = document.querySelector('.call-to-action');`
 
-Then, call the `box` variable.
+Then, call the `box` variable (by typing in `box`, then hitting `return`).
 
 **Discuss with your partner:**
 - What is returned?
@@ -136,5 +136,47 @@ box.innerHTML = `
 Try running this code in the browser and see what happens to the first "call to action" box that appears on the page!
 
 ## Changing Styles Programmatically
+
+It isn't rare to see an application change the color of something after a user interacts with it.
+
+We see things like...
+- Toggling light and dark mode
+- A grey check mark turn into a green one
+- A box or button changing colors once we've already clicked it, or visited that link
+... on almost a daily basis!
+
+We talked earlier about how powerful the DOM is because it allows us to interact with HTML elements via JavaScript. This also gives us the power to **modify the styles applied to said elements** via JavaScript.
+
+We will briefly discuss two ways to do this:
+1. Directly manipulate the style of the element through inline styles
+2. **Add or remove classes from the element** (the preferred way).
+
+### Directly Manipulate the Style of the Element
+
+We can call the `.style` property on an element, then any CSS property:
+
+```javascript
+var box = document.querySelector('.call-to-action');
+
+box.style.borderColor = "red";
+```
+
+This will result in:
+
+<img class="medium" src="./assets/images/dom-manipulation-1/inline-style.png">
+
+The reason this is not preferred is we usually want to make more than one tiny change; and each change requires one line of code. This can make for long functions that are difficult to read. Adding or removing classes (examples below) is strongly preferred.
+
+<section class="note">
+### Then Why Bring It Up?
+
+Often times, your instructors at Turing will share with you an overview of something, including the multiple ways something can be done, but tell you that one is preferred. Why do we bother to bring up the less-than-ideal approaches?
+
+As a developer, a huge part of your job is researching and learning on your own. That will also be a huge part of being a student at Turing. You'll sift through documentation, blog posts, and Stack Overflow posts. It's important to be familiar with the multiple ways of doing things, different syntax, best practices, etc. so you can more easily sift through those resources and determine what is good and helpful.
+</section>
+
+### Add or Remove Classes from the Element
+
+
 
 ## Event Listeners
