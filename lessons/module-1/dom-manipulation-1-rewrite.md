@@ -190,4 +190,6 @@ Fork [this CodePen](https://codepen.io/turing-school/pen/MWWPLYx) and follow the
 
 Typically, if you are going to add/remove a class via JavaScript, that class should be declared **below** the class that originally styled the given element. This is because of the cascading nature of CSS; any time rules conflict, the rule declared lower on the sheet will take precedence.
 
+Read up on [this documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to learn how to **remove** a class from an elements classList! Hint: `toggle` may soon be a friend of yours, as well!
+
 ## Event Listeners
