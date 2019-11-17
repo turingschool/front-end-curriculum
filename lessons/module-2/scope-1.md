@@ -43,7 +43,7 @@ Let's look at a more complex example:
 
 
 ```js
-1   var modTwoTeachers = ['Brittany', 'Robbie', 'Pam'];
+1   var modTwoTeachers = ['Brittany', 'Hannah', 'Khalid'];
 2
 3   function calculateEvals (teachers, classSize) {
 4     return classSize / teachers.length;
