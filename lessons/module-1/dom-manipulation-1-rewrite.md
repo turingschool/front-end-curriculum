@@ -110,12 +110,12 @@ After running the code in the console that is pictured above, the text of the `h
 
 Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below.
 
-- Declare a variable `heading` and assign it to the value of the `h1` element
-- Declare a variable `sub-heading` and assign it to the value of the `h3` element
-- Declare a variable `name` and assign it to the value of the element with a class of `name`
-- Change the `innerText` of the `h1` to "I love coding"
-- Change the `innerText` of the `h3` to "Mod 1"
-- Change the `innerText` of the `.name` to your name!
+- Declare a variable `name` and assign it to the value of the element with the class of `student-1`
+- Declare a variable `schoolName` and assign it to the value of the `h3` element
+- Declare a variable `bestGrade` and assign it to the value of the element with a class of `grade-2`
+- Change the `innerText` of the `.student-1` to your name
+- Change the `innerText` of the `h3` to be the name of a school you've attended
+- Change the `innerText` of the `.grade-2` to be an `A+`!
 </section>
 
 ### `innerHTML`
@@ -193,3 +193,117 @@ Typically, if you are going to add/remove a class via JavaScript, that class sho
 Read up on [this documentation](https://developer.mozilla.org/en-US/docs/Web/API/Element/classList) to learn how to **remove** a class from an elements classList! Hint: `toggle` may soon be a friend of yours, as well!
 
 ## Event Listeners
+
+Changing stuff on the page with JavaScript is great, but you might as well have just written it in the markup to begin with. The real power of JavaScript comes into play when we write code that **responds to user input**.
+
+This power emerges when we start **listening for user events**. This is the crux of front-end engineering. We present a user interface and then as the user interacts with the UI, we change and update what they see.
+
+Let's take a look at the syntax and then we'll talk about what's happening.
+
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="js,result" data-user="turing-school" data-slug-hash="MWWzMre" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="A First Event Listener">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/MWWzMre">
+  A First Event Listener</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+1. We're querying for all of the elements we need and we're storing them in variables.
+2. We're adding an event listener to the `<button>` with the class of `.change-text`.
+3. We're passing `addEventListener()` two arguments:
+  - The type of event we're interested in listening for.
+  - The name of a function that should be called whenever that event happens.
+4. We declare the function that will be called when the button is clicked.
+
+<section class="call-to-action">
+### Pair Practice
+
+Go back into your Report Card CodePen.
+* Create a function called `changeMessage` that updates the content inside of the element with the class `message`. You can choose the message!
+* Add a `<button>` to the HTML markup of the page.
+* Attach an event listener to that button.
+* When the button is clicked, have your `changeMessage` function fire!
+
+**Extra Time?**
+* Create a second button, function, and event listener, that work together to change the paragraph at the bottom of the page. _Hint: You many need to add a class attribute to that element._
+</section>
+
+### Style Change on Button Click
+
+Like we mentioned earlier, it's pretty common for a user to experience helpful feedback from an application after they've taken some sort of action.
+
+Take for example the "heart" icon on CodePen. CodePen has 4 levels of "love" - 0, 1, 2, and 3. Each time a heart is clicked, the user increments their love up by one. (Until the click when it is read and at level 3 - at that point, it goes back to 0). While the "love leveling" is a bit confusing, this is still a great example of **styles changing based on user interaction**.
+
+<img class="medium" src="./assets/images/dom-manipulation-1/codepen-heart-click.gif">
+
+To do this, we need to combine what we just learned about event listeners with what we learned about changing styles programmatically earlier in this lesson.
+
+<section class="call-to-action">
+### Pair Challenge
+
+We are putting a few pieces together now, so this may seem a bit more challenging. That's when it is especially important to pseudo-code, or write human-readable notes that give you a roadmap for the code you will later write.
+
+Your task is to add a new button the the Report Card markup. When the button is clicked on, the CSS rule on lines 15 should be applied to the `section` that wraps all the content in the HTML.
+
+In your notebook:
+* List the directions, as specially as possible, that you want to give to the computer.
+* What are the DOM elements that this program will need to know about? What variable names will you use for them?
+
+Now, implement your ideas in code.
+</section>
+
+### Get User Input
+
+We can use the `.value` property available on an `input` DOM element to get the value that a user has typed into it.
+
+<section class="call-to-action">
+### Explore
+
+Follow the steps below to explore how `.value` works!
+1. Open your dev tools and inspect this box, specifically, the input field below. What is its class name?
+2. In the console, call `document.querySelector('.check-me');`
+3. In the console. call `document.querySelector('.check-me').value;`
+4. Type your favorite food into the input
+5. In the console. call `document.querySelector('.check-me').value;`
+
+<input type="text" class="check-me" placeholder="this is the input!">
+
+</section>
+
+When called, the `.value` property on an input element will return the **current value**.
+
+<section class="note">
+One of the top misconceptions/mistakes we see students make while in Mod 1 is attempt to capture the value of an input while the input is empty. If you want to get a user's input, we have to get the value **inside of some event listener** - on an event that happens after the user has typed into the input field.
+</section>
+
+Below is an example of a small application that takes a user input, then changes the color of a box based on that input:
+
+<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="bGGeKVa" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Color Box">
+  <span>See the Pen <a href="https://codepen.io/turing-school/pen/bGGeKVa">
+  Color Box</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
+<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+
+Let's break down what's happening in the CodePen above:
+- **Lines 1-3:** Declare variables for the DOM elements that we will need (box, input field, button)
+- **Line 5:** Attach an event listener to the button
+- **Line 7:** Declare a function that will execute when the button is clicked
+  - Declare a variable, `color` that takes the value the user selected and stores it
+  - Applies an inline style, `backgroundColor` with that newly selected color
+
+<section class="call-to-action">
+## Solo Practice
+
+Fork [this CodePen](https://codepen.io/turing-school/pen/abbQeoG) and implement these two features:
+* When the user clicks on the "Change Text!" button, the `innerText` of the `h1` should change to be the contents of the input field.
+* When the user clicks the "Change Styles!" button, it should adjust that property on the box.
+<br>
+
+Here is an example of the second task:
+
+![Custom CSS Color Box](https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-340/custom-css-modifier.gif)
+
+</section>
+
+<!-- <section class="checks-for-understanding">
+</section> -->
