@@ -7,7 +7,7 @@ tags: html, layout, semantic
 ## Learning Goals
 
 * Explain the difference between block and inline elements
-* Wireframe a complex layout utilzing semantic HTML tags
+* Wireframe a complex layout utilizing semantic HTML tags
 
 ## Vocabulary
 
@@ -16,19 +16,19 @@ tags: html, layout, semantic
 
 ## Block and Inline Elements
 
-You might notice that some tags behave a little differently in a layout than others. Some tags make content stack, while others let content sit next to each other. What's that about?
+You might notice that some elements behave a little differently in a layout than others. Some elements make content stack, while others let content sit next to each other. What's that about?
 
 This is an important distinction:
 
-- `Block elements` stack on top of each other. Each one starts and ends on its own line.
-- `Inline elements` can be used to mark up a few words inside of a block element.
+- **Block elements** stack on top of each other. Each one starts and ends on its own line.
+- **Inline elements** can be used to mark up a few words inside of a block element.
 
-Most elements are block elements. Some common inline tags you might see in the wild:
+Most elements are block elements. Some common **inline tags** you might see used:
 
 - `<em>` is used to denote that you'd like to emphasize some text.
 - `<strong>` is used to denote that this text is important.
 
-We use `<em>` and `<strong>` to denote the semantic meaning of the content.
+We use `<em>` and `<strong>` to denote the semantic meaning of the content. When looking at the markup, you also notice that it's common for inline elements to be written on the same line of code, nested inside of a parent element.
 
 <p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="html,result" data-user="turing-school" data-slug-hash="LYYpbrr" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Inline v Block Elements">
   <span>See the Pen <a href="https://codepen.io/turing-school/pen/LYYpbrr">
@@ -63,27 +63,28 @@ We'll discuss these more in a later lesson when we talk about CSS.
 * Are `<img>` elements block or inline? `<a>` elements? Explain and/or prove it.
 </div>
 
-
 ### Layout Structure
 
 As front-end developers, you'll use HTML to build layouts given to you by a designer or client. It's an interesting challenge that can seem overly simple, but how you structure your HTML can have a very real impact in how you have to write your CSS and even how you use Javascript. Remember, HTML is like the frame of a house -- it has to be stable and well thought through for everything to be stable!
-
 
 ### Planning a Layout
 
 In your groups, use the following semantic HTML tags to create the basic structure of a twitter profile on your chart paper.  Click the links below to read the docs for each HTML element.  (notice they all send you to the MDN docs).  Think about which elements are most fitting and how it could be used to create the basic structure of the page.
 
-Recommended starting point: Mark up the hard copy of the image with the elements you would use for each part, then consider the ordering/nesting necessary to achieve that as you write your HTML on the chart paper.
+**Recommended starting point:** Mark up the hard copy of the image with the elements you would use for each part, then consider the ordering/nesting necessary to achieve that as you write your HTML on the chart paper.
 
 * [header](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/header)
 * [footer](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/footer)
 * [h1 - h6](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 * [section](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/section)
 * [article](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/article)
+* [aside](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside)
+* [button](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
+* [img](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/img)
 * [p](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/p)
 * [ul](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ul)
 * [ol](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ol)
-* [div](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div)
+* [time](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/time)
 
 ![Twitter Profile](/assets/images/twitter-profile.png)
 
