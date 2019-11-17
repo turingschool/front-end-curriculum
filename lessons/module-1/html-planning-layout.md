@@ -63,7 +63,22 @@ We'll discuss these more in a later lesson when we talk about CSS.
 * Are `<img>` elements block or inline? `<a>` elements? Explain and/or prove it.
 </div>
 
-### Layout Structure
+## Containing Elements
+
+There are a number of HTML elements whose main job is to hold other content - or be a container. The `div` is the oldest, probably most well-known and most used container element. It communicates no semantic meaning; which sometimes is what we want.
+
+When we want to convey semantic meaning, we can use one the following containing elements:
+
+- `header`
+- `nav`
+- `section`
+- `article`
+- `aside`
+- `footer`
+
+Although we commonly refer to these, broadly, as "containers" - to be clear, there is **not** and HTML element called "container".
+
+## Layout Structure
 
 As front-end developers, you'll use HTML to build layouts given to you by a designer or client. It's an interesting challenge that can seem overly simple, but how you structure your HTML can have a very real impact in how you have to write your CSS and even how you use Javascript. Remember, HTML is like the frame of a house -- it has to be stable and well thought through for everything to be stable!
 
