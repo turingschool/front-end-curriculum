@@ -146,10 +146,16 @@ The GET request:
 app.get('/api/v1/pets', (request, response) => {
   const pets = app.locals.pets;
 
-  return response.json({ pets });
+  response.json({ pets });
 });
 ```
 
+<section class="note">
+### Note
+
+- `response.json` is just a short hand for setting the response type as `application/json`.
+- It automatically serializes our object as JSON.
+</section>
 
 ### Making a Dynamic Route
 
@@ -159,19 +165,13 @@ Consider the following:
 
 ```js
 app.get('/api/v1/pets/:id', (request, response) => {
-  return response.json({
+  response.json({
     id: request.params.id
   });
 });
 ```
 
 Take that for a spin with a bunch of different words where `:id` should go.
-
-Some things to notice:
-
-- `response.json` is just a short hand for setting the response type as `application/json`.
-- It automatically serializes our object as JSON.
-
 
 Here is the feature we want to implement: when a user requests a pet by its `id`, we want to return that pet's pet and id.
 
@@ -180,21 +180,21 @@ app.get('/api/v1/pets/:id', (request, response) => {
   const { id } = request.params;
   const pet = app.locals.pets.find(pet => pet.id === id);
 
-  return response.status(200).json(pet);
+  response.status(200).json(pet);
 });
 ```
 
 Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the pet. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
 
 ```js
-app.get('/api/v1/pet/:id', (request, response) => {
-  const { id } = request.params;
+app.get('/api/v1/pets/:id', (req, res) => {
+  const { id } = req.params;
   const pet = app.locals.pets.find(pet => pet.id === id);
-  if (pet) {
-    return response.status(200).json(pet);
-  } else {
-    return response.sendStatus(404);
+  if (!pet) {
+    return res.sendStatus(404);
   }
+
+  res.status(200).json(pet);
 });
 ```
 
@@ -219,7 +219,7 @@ app.post('/api/v1/pets', (request, response) => {
   const id = Date.now();
   const { pet } = request.body;
 
-  app.locals.pets.push({ id, ...pet });
+  app.locals.pets.push({ id, pet });
 
   response.status(201).json({ id, pet });
 });
@@ -244,18 +244,18 @@ Status codes are especially important when handling errors for a request. Let's 
 
 ```js
 app.post('/api/v1/pets', (request, response) => {
-  const { pet } = request.body;
   const id = Date.now();
+  const { pet } = request.body;
 
   if (!pet) {
     return response.status(422).send({
       error: 'No pet property provided'
     });
-  } else {
-    app.locals.pets.push({ id, ...pet });
-    return response.status(201).json({ id, pet });
   }
-})
+
+  app.locals.pets.push({ id, ...pet });
+  response.status(201).json({ id, pet });
+});
 ```
 
 If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error pet we sent along with the 422 response.
@@ -270,10 +270,12 @@ Things to consider:
 * If you are including information in the body of the request, then one of the headers needs to include `Content-Type: application/json`
 * Remember to check which HTTP method you are using before sending the request
 
+<section class="call-to-action">
 ### Student Exploration (10 mins)
 
 * Implement a PUT route for a specific pet to edit the name of the pet
 * Implement a DELETE route for a specific pet to remove it
+</section>
 
 **BONUS:**
 
@@ -363,11 +365,13 @@ You should be able to use imports/exports now and when you run `npm start` it'll
 
 For more details on how to update your other scripts to use babel, check out this [article](https://hackernoon.com/using-babel-7-with-node-7e401bc28b04).
 
-## Checks For Understanding
+<section class="checks-for-understanding">
+### Checks For Understanding
 
 - In as much detail as possible, explain what Express is and why we use it.
 - What would the CRUD endpoints be for a data structure that was an array of `todo` objects? Each `todo` object has an `id` and a `task` property.
 - What do the 2xx level status codes represent? 4xx?
+</section>
 
 ## Resources
 - [Express.js](https://expressjs.com/)
