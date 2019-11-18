@@ -68,7 +68,13 @@ Over the course of today's class, we will work to re-create the top part of a Tw
 
 ## z-index
 
-A positioned element can take advantage of the `z-index` property to specify its stack order. The stack order is the order in which elements in the same space lay on top of one another. For example, an element with a `z-index` of `2` will appear above an element with a `z-index` of `1` if they happen to overlap. Without any z-index value, elements stack in the order they appear in the DOM (the lowest one down at the same hierarchy level appears on top). Elements with non-static positioning will always appear on top of elements with default static positioning. Also note that nesting plays a big role. If an element B sits on top of element A, a child element of element A can never be higher than element B.
+The `z-index` property controls the third dimension of elements - how the stack on top of each other. It only affects elements that have a position value other than static (the default).
+
+Without applying any `z-index`, elements will appear in the browser in the order they are placed in the DOM.
+
+<img class="medium" src="./assets/images/css-layout/z-index.png" alt="Example of z-index in action">
+
+The ins-and-outs of `z-index` can be a bit complicated; we won't go into it today. But if you do need to stack or layer something, you now know where to start!
 
 ## Floats
 
