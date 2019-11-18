@@ -52,6 +52,8 @@ As a user,
 ```
 </section>
 
+### Comp
+
 <img src="../assets/balancing-act/transactions-comp.png" alt="Transactions Comp">
 
 The next few images show a little more detail as to what is expected in your comp recreation:
