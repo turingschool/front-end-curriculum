@@ -354,6 +354,20 @@ documentation built in, via the `man` command.
 `man` opens up the manual for whatever command you have questions about. Once
 you've found out what you need to, you can type `q` to get back to the terminal.
 
+If I wanted to find out how exactly I use the `cp` command, I could read the
+manual entry like so:
+
+```bash
+man cp
+```
+
+<section class="call-to-action">
+### Try It
+
+We already saw that `ls` can take some options, when we used `ls -la`. Go ahead
+and use `man` to find out what other options we could use with `ls`.
+</section>
+
 # Wrap Up
 
 From this point forward, you should not be using the Finder. Challenge yourself to use the terminal for navigation. It will be painful at first, but you can't get fast without starting slow!
