@@ -12,8 +12,8 @@ Steps 4-5 are to be completed over the Weekend between Weeks 1-2. Turing student
 ```
 As a user,
 - When I am on the Dashboard and click the "wallet" icon (middle of the three icons on the nav bar),
-- The orange highlight to the left of the clipboard icon will disappear, and
-- an orange highlight to the left of the wallet icon will appear
+- The turquoise highlight to the left of the clipboard icon will disappear, and
+- an turquoise highlight to the left of the wallet icon will appear
 ```
 
 ```
@@ -26,8 +26,8 @@ As a user,
 As a user,
 - When I am on the Dashboard and click the "wallet" icon,
 - Then click the "clipboard" icon,
-- The orange highlight to the left of the wallet icon will disappear, and
-- an orange highlight to the left of the clipboard icon will appear
+- The turquoise highlight to the left of the wallet icon will disappear, and
+- an turquoise highlight to the left of the clipboard icon will appear
 ```
 
 ```
