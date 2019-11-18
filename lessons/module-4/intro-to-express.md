@@ -187,16 +187,22 @@ app.get('/api/v1/pets/:id', (request, response) => {
 Let's go ahead and take this for a spin. It kind of works. If they give us the right `id`, they'll get the pet. But they don't get an error if they give us an invalid `id`. It would be preferable to send them a 404 status code, which let's the browser know that the resource was not found.
 
 ```js
-app.get('/api/v1/pets/:id', (req, res) => {
-  const { id } = req.params;
+app.get('/api/v1/pets/:id', (request, response) => {
+  const { id } = request.params;
   const pet = app.locals.pets.find(pet => pet.id === id);
   if (!pet) {
-    return res.sendStatus(404);
+    return response.sendStatus(404);
   }
 
-  res.status(200).json(pet);
+  response.status(200).json(pet);
 });
 ```
+
+<section class="note">
+### Note
+
+Notice the slight difference between the `status` and `sendStatus` methods in the [docs](https://expressjs.com/en/4x/api.html#res.sendStatus).
+</section>
 
 ### Sending Data With A Post Request
 
@@ -253,7 +259,7 @@ app.post('/api/v1/pets', (request, response) => {
     });
   }
 
-  app.locals.pets.push({ id, ...pet });
+  app.locals.pets.push({ id, pet });
   response.status(201).json({ id, pet });
 });
 ```
@@ -273,13 +279,12 @@ Things to consider:
 <section class="call-to-action">
 ### Student Exploration (10 mins)
 
-* Implement a PUT route for a specific pet to edit the name of the pet
+* Implement a PATCH route for a specific pet to edit the name of the pet
 * Implement a DELETE route for a specific pet to remove it
-</section>
-
 **BONUS:**
 
 Can you implement a GET route that shows only the pets that have been edited?
+</section>
 
 ### Static Files in Express
 To serve static files like an `index.html` file, you need to let Express know. To do this, tell Express what directory your static files live in with:
