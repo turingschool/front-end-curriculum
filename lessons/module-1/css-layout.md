@@ -48,7 +48,7 @@ div {
 The `position` property in CSS will take elements out of the normal page flow, and should therefore be used sparingly.
 
 - **static**: Every element, by default, has a static position. When `position: static` is applied, the element will stick to the normal page flow.
-- **relative**: A relatively positioned element preserves its space. The adjacent elements aren’t repositioned to occupy the reserved space for this element. However, the offsets of this element don’t occupy space. They’re completely ignored from the other elements, and hence that may causes elements to overlap each other.
+- **relative**: The element is positioned relative to its normal position. When `position: relative` is applied, an no other positioning attributes are, nothing will happen. It is mainly used in conjunction with `position: absolute` on a child element.
 - **absolute**: An absolutely positioned element is completely removed from the normal flow. The adjacent sibling elements occupy its space.
   - An element whose position property is set to absolute or fixed is called an absolutely positioned element.
   - We can position an element to a specific place on the page, relative to one of its ancestor elements.
