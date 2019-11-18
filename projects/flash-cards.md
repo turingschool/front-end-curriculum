@@ -147,7 +147,7 @@ round.turns; // => 0
 
 round.incorrectGuesses;     // => []
 
-round.takeTurn('capybara'); // => 'correct!'
+round.takeTurn('sea otter'); // => 'correct!'
 
 round.takeTurn('spleen');   // => 'incorrect!'
 
@@ -190,6 +190,9 @@ For example:
 ```js
 game.currentRound; // => Round {...} (The new Round object that has been instatiated)
 ```
+
+**HINT**
+- Look at the file being  run when we want to start the game. Think about where you need to invoke your `Game.start` method.
 
 ## Iteration 4:
 
