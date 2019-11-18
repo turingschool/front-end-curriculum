@@ -70,7 +70,7 @@ Here is what the endpoint looks like to get the news data.
 
 ## Evaluation
 
-Projects will be due on Monday of Week 2 by 8am. The instructors will go through projects that morning and then go over common mistakes we saw as a class.
+Projects will be due on Friday of Week 1 by 8pm. The instructors will go through projects that morning and then go over common mistakes we saw as a class.
 
 ----------------------------------------------------------
 
