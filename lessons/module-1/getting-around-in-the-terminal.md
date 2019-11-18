@@ -98,6 +98,7 @@ We will dive into the details shortly, but here's a quick preview of the command
 - `touch`
 - `rm`
 - `rmdir`
+- `man`
 
 On the graphic organizer provided, complete each column for the command as we discuss it in class. If you aren't sure how to complete a given box, please let your partner or instructor know!
 
@@ -341,6 +342,17 @@ If we are in the `turing` directory, then this is how we move the file:
 ```bash
 cp sample.txt notes/
 ```
+
+## Finding out how to use these commands on your own
+
+### `man` (manual)
+
+The internet can be an invaluable resource when you're trying to find out more
+about how to use specific terminal commands. However, there is also good
+documentation built in, via the `man` command.
+
+`man` opens up the manual for whatever command you have questions about. Once
+you've found out what you need to, you can type `q` to get back to the terminal.
 
 # Wrap Up
 
