@@ -139,7 +139,7 @@ To earn a given score, an application must meet the requirements listed in that 
 * 4 - All details have been achieved for both Dashboard and Transactions views. Buttons have hover states (cursor and some other sort of visual indicator that is consistent with the comp, and not distracting).
 * 3 - The general layout of the comp has been achieved for both Dashboard and Transactions views and almost all details have been achieved.
 * 2 - The general layout of the comp has been achieved for both Dashboard and Transactions views. Some details have been achieved, while some may be missing. (Examples of "details" we'll look for: the text on the buttons is centered horizontally and vertically, the font size of the word "Credit Score" is significantly smaller than that of "673", extremely close to the size difference displayed in comp.) **OR** The general layout of the comp has been achieved with 1-2 layout issues. Almost all details have been achieved.
-* 1 - Colors, fonts, and icons were implemented and the general layout of the comp for both Dashboard and Transactions views has been achieved with 1-2 layout issues **OR** the general layout has been achieves and almost all details have been achieved for the Dashboard only.
+* 1 - Colors, fonts, and icons were implemented and the general layout of the comp for both Dashboard and Transactions views has been achieved with 1-2 layout issues **OR** the general layout has been achieved and almost all details have been achieved for the Dashboard only.
 
 ### HTML
 
