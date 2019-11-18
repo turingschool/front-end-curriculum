@@ -22,7 +22,7 @@ Spend a couple minutes really looking at every little detail of the comp. Consid
 
 Map it out. Either print out the comp (there is a printer available in the vault), or sketch it out in your notebook.
 - Label each part of the page with the HTML element you think is most appropriate to display it.
-- For parts of that page that are repetitve (account cards, and more!), decide on a class name that you will use to refer to those in CSS.
+- For parts of that page that are repetitive (account cards, and more!), decide on a class name that you will use to refer to those in CSS.
 - Think about, and possibly research, how will you make sure that the nav bar stays on the left and the recent transactions box stays on the right?
 </section>
 

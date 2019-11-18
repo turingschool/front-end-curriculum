@@ -52,4 +52,12 @@ As a user,
 ```
 </section>
 
-💥insert image of transactions detail page💥
+<img src="../assets/balancing-act/transactions-comp.png" alt="Transactions Comp">
+
+The next few images show a little more detail as to what is expected in your comp recreation:
+
+<img src="../assets/balancing-act/nav-details-2.png" alt="Completed project">
+
+<img src="../assets/balancing-act/filter-btns.png" alt="Completed project">
+
+<img src="../assets/balancing-act/form-detail.png" alt="Completed project">
