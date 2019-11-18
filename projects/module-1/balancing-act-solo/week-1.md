@@ -127,37 +127,37 @@ This rubric should serve as a guide for students as they progress through the pr
 
 Scores land in a range between 1 and 4. Below is a breakdown of what those numbers represent.
 
-4 - Exceptional (you are where you need to be and either had time or learned extra to go above and beyond in this area)
-3 - Expected (you showed you are right where you need to be at this point in time)
-2 - Below expectations (in a good place to grow and be strong in this area soon, but not where you need to be right now)
-1 - Far below (significant growth needs to be shown in this area; maybe it's an area you forgot to look at, maybe it's something you have big gaps on and need to set up a pairing session on ASAP)
+* 4 - Exceptional (you are where you need to be and either had time or learned extra to go above and beyond in this area)
+* 3 - Expected (you showed you are right where you need to be at this point in time)
+* 2 - Below expectations (in a good place to grow and be strong in this area soon, but not where you need to be right now)
+* 1 - Far below (significant growth needs to be shown in this area; maybe it's an area you forgot to look at, maybe it's something you have big gaps on and need to set up a pairing session on ASAP)
 
 To earn a given score, an application must meet the requirements listed in that score explanation **and** all scores lower.
 
 ### Comp Recreation
 
-4 - All details have been achieved for both Dashboard and Transactions views. Buttons have hover states (cursor and some other sort of visual indicator that is consistent with the comp, and not distracting).
-3 - The general layout of the comp has been achieved for both Dashboard and Transactions views and almost all details have been achieved.
-2 - The general layout of the comp has been achieved for both Dashboard and Transactions views. Some details have been achieved, while come may be missing. (Examples of "details" we'll look for: the text on the buttons is centered horizontally and vertically, the font size of the word "Credit Score" is significantly smaller than that of "673", extremely close to the size difference displayed in comp.) **OR** The general layout of the comp has been achieved with 1-2 layout issues. Almost all details have been achieved.
-1 - Colors, fonts, and icons were implemented and the general layout of the comp for both Dashboard and Transactions views has been achieved with 1-2 layout issues **OR** the general layout has been achieves and almost all details have been achieved for the Dashboard only.
+* 4 - All details have been achieved for both Dashboard and Transactions views. Buttons have hover states (cursor and some other sort of visual indicator that is consistent with the comp, and not distracting).
+* 3 - The general layout of the comp has been achieved for both Dashboard and Transactions views and almost all details have been achieved.
+* 2 - The general layout of the comp has been achieved for both Dashboard and Transactions views. Some details have been achieved, while come may be missing. (Examples of "details" we'll look for: the text on the buttons is centered horizontally and vertically, the font size of the word "Credit Score" is significantly smaller than that of "673", extremely close to the size difference displayed in comp.) **OR** The general layout of the comp has been achieved with 1-2 layout issues. Almost all details have been achieved.
+* 1 - Colors, fonts, and icons were implemented and the general layout of the comp for both Dashboard and Transactions views has been achieved with 1-2 layout issues **OR** the general layout has been achieves and almost all details have been achieved for the Dashboard only.
 
 ### HTML
 
-4 - Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](https://frontend.turing.io/lessons/floating/aria-accessibility.html) as a resource!
-3 - Semantic tags are used to convey meaning of content. Elements are not added in for the sole purpose of making styling easier (`<br>`s should not be used, excessive `<div>`s or other containing elements, etc.)
-2 - Class and ID names follow a convention and describe the content in a consistent manner.
-1 - Use of spaces, white space and indentation meet requirements of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
+* 4 - Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](https://frontend.turing.io/lessons/floating/aria-accessibility.html) as a resource!
+* 3 - Semantic tags are used to convey meaning of content. Elements are not added in for the sole purpose of making styling easier (`<br>`s should not be used, excessive `<div>`s or other containing elements, etc.)
+* 2 - Class and ID names follow a convention and describe the content in a consistent manner.
+* 1 - Use of spaces, white space and indentation meet requirements of the [Turing HTML Style Guide](https://github.com/turingschool-examples/html).
 
 ### CSS
 
-4 - Code does not contain repetitive rules according to the [DRY principle](https://vanseodesign.com/css/dry-principles/).
-3 - A method is used to order declarations within a rule (get some inspiration [here](https://9elements.com/css-rule-order/) and [here](https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685))
-2 - A method is used to order the rules within the stylesheet. Comments are used to help a reader more quickly navigate the sheet.
-1 - Whitespace, indentation and comments meet requirements of the [Turing CSS Style Guide](https://github.com/turingschool-examples/css).
+* 4 - Code does not contain repetitive rules according to the [DRY principle](https://vanseodesign.com/css/dry-principles/).
+* 3 - A method is used to order declarations within a rule (get some inspiration [here](https://9elements.com/css-rule-order/) and [here](https://webdesign.tutsplus.com/articles/outside-in-ordering-css-properties-by-importance--cms-21685))
+* 2 - A method is used to order the rules within the stylesheet. Comments are used to help a reader more quickly navigate the sheet.
+* 1 - Whitespace, indentation and comments meet requirements of the [Turing CSS Style Guide](https://github.com/turingschool-examples/css).
 
 ### Functionality
 
-4 - If the user has closed the welcome banner, visits the Transactions view, then goes back to Dashboard, the banner does no re-appear.
-3 - The user can toggle between the Dashboard and Transactions views, and the visual indicator to the left of the associated icon is updated accordingly.
-2 - The user can toggle between the Dashboard and Transactions views.
-1 - The welcome banner disappears when clicked when the "x" icon is clicked.
+* 4 - If the user has closed the welcome banner, visits the Transactions view, then goes back to Dashboard, the banner does no re-appear.
+* 3 - The user can toggle between the Dashboard and Transactions views, and the visual indicator to the left of the associated icon is updated accordingly.
+* 2 - The user can toggle between the Dashboard and Transactions views.
+* 1 - The welcome banner disappears when clicked when the "x" icon is clicked.
