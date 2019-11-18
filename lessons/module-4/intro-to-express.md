@@ -281,9 +281,7 @@ Things to consider:
 
 * Implement a PATCH route for a specific pet to edit the name of the pet
 * Implement a DELETE route for a specific pet to remove it
-**BONUS:**
-
-Can you implement a GET route that shows only the pets that have been edited?
+* **BONUS:** Can you implement a GET route that shows only the pets that have been edited?
 </section>
 
 ### Static Files in Express
