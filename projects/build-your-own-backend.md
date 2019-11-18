@@ -5,7 +5,7 @@ module: 4
 
 ## Abstract
 
-BYOB is a one week long solo project. It is ungraded and intended as a way to get comfortable with building databases using Express, Knex, and PostgreSQL. You will be building a RESTful API, complete with professional-grade documentation. This knowledge will be directly applicable to the next paired project, Palette Picker.
+BYOB is a one week long solo project. It is intended as a way to get comfortable with building databases using Express, Knex, and PostgreSQL. You will be building a RESTful API, complete with professional-grade documentation. This knowledge will be directly applicable to the next paired project, Palette Picker.
 
 The skills you will be building in BYOB are:
 
