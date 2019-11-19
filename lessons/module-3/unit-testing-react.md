@@ -76,16 +76,14 @@ they "recommend that you use a separate tool for browser end-to end tests if you
 Enzyme is a fantasic tool for testing our React components in a virtual way, without actually having to use a browser. This makes running tests related to our UI much faster. First off, let's get Enzyme installed:
 
 ```bash
-npm i enzyme -D
+npm install enzyme --save-dev
 ```
 
 You're also going to need the enzyme adapter for the version of React that you're using. As of this writing, it's enzyme-adapter-react-16, but that will change in the future, when create-react-app starts using version 17 of React. Just make sure you have the right one.
 
 ```bash
-npm install enzyme-adapter-react-16 --D
+npm install enzyme-adapter-react-16 --save-dev
 ```
-
-Hint: the `--D` flag is the same as the `--save-dev` flag - just shorter!
 
 As a last step, we need to make sure that the adapter is configured before our test suite runs. Setting up some kind of configuration before a test suite runs is a really common task actually. So common in fact, that the create-react-app team has a specific way you need to do this.
 
@@ -185,7 +183,7 @@ Once again, let's look at the docs to find out what [snapshot testing](https://j
 First we'll need to install one more package in order to convert our Enzyme wrappers to a format that is compatible with Jest snapshot testing.
 
 ```bash
-npm install enzyme-to-json --D
+npm install enzyme-to-json --save-dev
 ```
 
 Lastly, in order to use this serializer in jest, we need to add this line to our Jest configuration in our `package.json`.
@@ -287,7 +285,7 @@ We'll learn more about conditional rendering in React III but for now, let's add
 
 Imagine our Card component having an extra property, called "isFavorite" - and if "isFavorite" is true, then the Card will have an a different class of "favorite".
 
-```jsx
+```js
 // Card.js
 
 import React from 'react';
