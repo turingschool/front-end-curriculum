@@ -20,25 +20,21 @@ tags: react, testing
 - `Unit test` - Unit tests test the smallest unit of functionality, typically a method/function. For example, when you call a specific method on a class, you would likely expect a value to be returned. Unit tests should be focused on one particular feature
 - `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly
 - `Acceptance test` - Once an application is ready to use, it undergoes testing by the end user or client to verify that it meets the user's expectations
-- `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library.  It can also be used for snapshot testing. 
+- `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing. 
 - `Enzyme` - Enzyme was created by Airbnb and is a JS testing utility that makes it easier to assert, manipulate, and traverse your React component
 - `Snapshot` - Snapshot testing is provided by Jest and allows you the ability to create a rendered "snapshot" of a component and compare it to a previously saved "snapshot"
 - `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired
 
 ## Unit Testing React Components
 
-When testing React apps, or really when testing any kind of application, most of
-the tests your write will be *unit tests*. Unit tests make sure that small,
-isolated, parts (units) of our application behave as expected. The more we can
-write our code in a way that is testable at the unit level, the easier it will
-be to scale and extend our applications.
+When testing React apps, or really when testing any kind of application, most of the tests your write will be *unit tests*. Unit tests make sure that small, isolated, parts (units) of our application behave as expected. The more we can write our code in a way that is testable at the unit level, the easier it will be to scale and extend our applications.
 
 <section class="call-to-action">
 ### Your Turn
-We hear a lot about unit, integration, and acceptance tests.  What is the difference between the three of these? Take 5 minutes and see what you and your partner can find out.
+We hear a lot about unit, integration, and acceptance tests. What is the difference between the three of these? Take 5 minutes and see what you and your partner can find out.
 
 ### Next Steps
-In your journal, write out why do we test.  What are the benefits of testing?  When should we test?  When should we not test?
+In your journal, write out why do we test. What are the benefits of testing? When should we test? When should we not test?
 </section>
 
 ### Getting started
@@ -54,7 +50,7 @@ npm i
 
 ### Running Tests
 
-This application was built using `create-react-app`.  The great thing about this is that it has a built in testing framework.  This cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
+This application was built using `create-react-app`. The great thing about this is that it has a built in testing framework. This cannot be changed without ejecting from the boilerplate. Luckily, it's a pretty awesome test runner called `Jest`. [Read more about the Jest and React combo here](https://facebook.github.io/jest/docs/tutorial-react.html).
 
 In order to run the tests, type `npm test`. Normally, our suite runs and then we return to the command line. With Create React App, `npm test` starts up a server that is constantly watching for changes. When you modify a file, the test suite will automatically rerun. Even better — by default, it will only watch files that have changed since the last time you made a git commit.
 
@@ -66,7 +62,7 @@ Try it out - run `npm test` to fire up the testing server. Currently our app has
 Read [this section on file naming conventions](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md#filename-conventions).
 </section>  
 
-Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with the facebook convention for the purposes of this tutorial.  
+Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with the facebook convention for the purposes of this tutorial. 
 
 Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md)
 they "recommend that you use a separate tool for browser end-to end tests if you need them. They are beyond the scope of Create React App." This means implementing our super friend `Enzyme`!  
@@ -107,12 +103,12 @@ Great! Now we're all ready to start using Enzyme to test our React components!
 <section>
 ### Stop and Think
 
-We've got everything setup to start writing tests.  But first, we need to think about what we need to test?  We answered this question previously, but think about what needs to be tested for our IdeaBox.  Should we test things like the UI?  What about methods we've created?
+We've got everything setup to start writing tests. But first, we need to think about what we need to test? We answered this question previously, but think about what needs to be tested for our IdeaBox. Should we test things like the UI? What about methods we've created?
 </section>
 
 ### What should we test?
 
-A general rule of thumb when thinking about testing is asking yourself what code did you write?  Did you write the JSX?  Then likely you should test that.  Did you write those methods?  Are you making changes to state?  You would likely want to test that as well.
+A general rule of thumb when thinking about testing is asking yourself what code did you write? Did you write the JSX? Then likely you should test that. Did you write those methods? Are you making changes to state? You would likely want to test that as well.
 
 When testing React, focus on these three main rules:
 * Test your UI to make sure it is rendering the JSX you expect it to.
@@ -121,11 +117,11 @@ When testing React, focus on these three main rules:
 
 ### Testing the Card Component
 
-Let's focus on our first rule first and test our `Card` component.  We'll have to create a test file called `Card.test.js`. In `Card.test.js`, we'll start with a simple test to see if the `name` property is properly rendered in the component when passed in as a prop.
+Let's focus on our first rule first and test our `Card` component. We'll have to create a test file called `Card.test.js`. In `Card.test.js`, we'll start with a simple test to see if the `name` property is properly rendered in the component when passed in as a prop.
 
-We want to import our `Card` component so we can test that.  We also want to import `shallow` from Enzyme.  This renders our component in a testing environment so that we can test it.  It allows you to test a component in isolation while also allowing you to test methods like `componentDidMount` and `componentDidUpdate`.  You will almost always want to start with `shallow`.  
+We want to import our `Card` component so we can test that. We also want to import `shallow` from Enzyme. This renders our component in a testing environment so that we can test it. It allows you to test a component in isolation while also allowing you to test methods like `componentDidMount` and `componentDidUpdate`. You will almost always want to start with `shallow`. 
 
-Another way to render a component with Enzyme is using `mount`.  Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md). `mount` will also render child elements, but you typically will not want to do this since you want to test these components in isolation.  We will write tests for every component so this is a mute point.  Think back to what a *unit test* is.  According to the docs, the few scenarios where you might want to use `mount` would be if you have to do some testing with a DOM API or need to test components that are wrapped in higher order components.  You will likely have few situations where you need to worry about this throughout the module.
+Another way to render a component with Enzyme is using `mount`. Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md). `mount` will also render child elements, but you typically will not want to do this since you want to test these components in isolation. We will write tests for every component so this is a mute point. Think back to what a *unit test* is. According to the docs, the few scenarios where you might want to use `mount` would be if you have to do some testing with a DOM API or need to test components that are wrapped in higher order components. You will likely have few situations where you need to worry about this throughout the module.
 
 ```jsx
 // Card.test.js
@@ -144,7 +140,7 @@ describe('Card', () => {
 });
 ```
 
-As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax).  
+As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax). 
 
 [Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
 
@@ -152,7 +148,7 @@ If you run `npm test` you should see your one test pass (two if you still have t
 
 <section class="note">
 ### Fun Fact
-Let's say we changed that `h3` tag to an `h2`.  It's going to fail.  If we wanted to debug and see what our `shallow` was actually rendering, we can add this line in our test.
+Let's say we changed that `h3` tag to an `h2`. It's going to fail. If we wanted to debug and see what our `shallow` was actually rendering, we can add this line in our test.
 
 ```js
     console.log(wrapper.debug());
@@ -171,14 +167,14 @@ If you want to keep seeing those friendly green checkmarks, we can add a "verbos
 If you stop your test runner (type `q` into your terminal) and then restart it (`npm test`), you should see the "should" statement from your it testing block.
 </section>
 
-We could continue to write tests this way for every single element but...there is actually a much better way of doing this.  Enter the world of snapshot testing!
+We could continue to write tests this way for every single element but...there is actually a much better way of doing this. Enter the world of snapshot testing!
 
 <!-- This test works, but you might be thinking right now, 'hey don't my PropTypes cover that kind of behavior?' You're absolutely right! If you're using PropTypes throughout your application you really don't need these kinds of tests. In fact, there is a much simpler way of testing your UI, snapshot tests! -->
 
 
 ### Snapshot testing
 
-Once again, let's look at the docs to find out what [snapshot testing](https://jestjs.io/docs/en/snapshot-testing) is in Jest.  Reading throught the docs, we find out that we can use snapshot tests to compare against a previous 'snapshot' of what our component looked like. Snapshot tests are not really TDD but it is a way to double check if a change was made to the UI unexpectedly.  If something has changed, the snapshot will fail. If we really did mean to make that change, we can `update` our snapshot to use the newest version. 
+Once again, let's look at the docs to find out what [snapshot testing](https://jestjs.io/docs/en/snapshot-testing) is in Jest. Reading throught the docs, we find out that we can use snapshot tests to compare against a previous 'snapshot' of what our component looked like. Snapshot tests are not really TDD but it is a way to double check if a change was made to the UI unexpectedly. If something has changed, the snapshot will fail. If we really did mean to make that change, we can `update` our snapshot to use the newest version. 
 
 First we'll need to install one more package in order to convert our Enzyme wrappers to a format that is compatible with Jest snapshot testing.
 
@@ -196,7 +192,7 @@ Lastly, in order to use this serializer in jest, we need to add this line to our
   }
 ```
 
-Everything should be set up now so that we can run our snapshot tests.  Let's add the following test:
+Everything should be set up now so that we can run our snapshot tests. Let's add the following test:
 
 ```js
 // Card.test.js
@@ -274,7 +270,7 @@ This also tests to see if we have changed our className as well!  However, it do
 <section class="call-to-action">
 ### Your Turn
 
-Write snapshot tests for the rest of your components including your App, Form, and Ideas components.  Remember to pass the props necessary in order for your wrapper to render correctly.
+Write snapshot tests for the rest of your components including your App, Form, and Ideas components. Remember to pass the props necessary in order for your wrapper to render correctly.
 </section>
 
 ### Testing for dynamic changes
@@ -308,7 +304,7 @@ export default Card;
 
 Don't worry too much about what's going on here; we'll see what that strange syntax is doing in our React III lesson.
 
-Just know that, when `isFavorite` is passed into Card with a value of `true`, the Card will have a class of "favorite".  If the value is `false` or `undefined`, then the class will be `card`.
+Just know that, when `isFavorite` is passed into Card with a value of `true`, the Card will have a class of "favorite". If the value is `false` or `undefined`, then the class will be `card`.
 
 We can write a second snapshot test that looks at a different wrapper instance:
 
@@ -338,7 +334,7 @@ We currently only have one button, but how do we know it's doing what we expect 
 
 First, we should start by being clear about what should happen. If you look closely at the code, you'll see that the `removeIdea` property is being passed in. It stands to reason that this function should be called when that button is tested.
 
-At this point, we don't necessarily care what the functions are doing -- just that they are being called appropriately. We'll test what the function is doing later when we test the `App` component where the method lives.  This is where **mocks** come in handy.
+At this point, we don't necessarily care what the functions are doing -- just that they are being called appropriately. We'll test what the function is doing later when we test the `App` component where the method lives. This is where **mocks** come in handy.
 
 Mocks are stubbed-in or "faked" functionality that allows us to unit test specific parts of our code without having to worry about others. A mock will override the behavior of a specific function and provide you with utilities to test the interaction with the mock instead.
 
@@ -349,13 +345,13 @@ So let's use mocks to test that the `removeIdea` function we passed in is being 
 <section class="call-to-action">
 ### Your Turn
 
-Before looking at the test below, think about how you might test this.  You don't need to write out the specific code, but think about what needs to be tested.  In english form, write out in your notebook how you might set up this test.
+Before looking at the test below, think about how you might test this. You don't need to write out the specific code, but think about what needs to be tested. In english form, write out in your notebook how you might set up this test.
 </section>
 
 A common practice to think about and follow through when writing out tests is:
-* `Setup` - What do we need to do in order to render the component (aka *shallow* or *mount*).  What data needs to be mocked?
+* `Setup` - What do we need to do in order to render the component (aka *shallow* or *mount*). What data needs to be mocked?
 * `Execution` - Let's run the command or simulate the action.
-* `Expectation` - This is where our assertion happens.  After running our function, what did we expect to happen?
+* `Expectation` - This is where our assertion happens. After running our function, what did we expect to happen?
 
 Consider the following test:
 
@@ -382,8 +378,8 @@ it('should call the removeIdea prop with the Card\'s id when clicked', () => {
 });
 ```
 
-- `jest.fn()` Mock functions allow you to spy on the behavior of a function that is called indirectly by some other code, rather than testing the output.  Read more about it [here](https://jestjs.io/docs/en/jest-object.html#jestfnimplementation).  
-- `wrapper.find('.btn-remove').simulate('click');` will simulate a click event.  This uses specific methods that enzyme gives us.  This includes [find](https://airbnb.io/enzyme/docs/api/ReactWrapper/find.html) and [simulate](https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html)
+- `jest.fn()` Mock functions allow you to spy on the behavior of a function that is called indirectly by some other code, rather than testing the output. Read more about it [here](https://jestjs.io/docs/en/jest-object.html#jestfnimplementation). 
+- `wrapper.find('.btn-remove').simulate('click');` will simulate a click event. This uses specific methods that enzyme gives us. This includes [find](https://airbnb.io/enzyme/docs/api/ReactWrapper/find.html) and [simulate](https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html)
 - `expect(removeIdeaMock).toHaveBeenBeenCalledWith([arg])` asks our mock function if it was called with a specific argument. Here are the [docs](https://jestjs.io/docs/en/expect) to see a list of different methods available to you from `Jest`.
 
 ### Testing a class-based component's method
@@ -391,7 +387,7 @@ it('should call the removeIdea prop with the Card\'s id when clicked', () => {
 <section class="call-to-action">
 ### Your Turn
 
-Let's focus our testing now on our `App` component.  With the person next to you, discuss what might be similar with our functional component?  What might be different?  (Go back to your notes.  We've actually discussed this earlier!)
+Let's focus our testing now on our `App` component. With the person next to you, discuss what might be similar with our functional component? What might be different? (Go back to your notes. We've actually discussed this earlier!)
 </section>
 
 In our App component we have two class methods, `addIdea` and `removeIdea`. Think about what each of those methods do.
@@ -405,7 +401,7 @@ Calling `instance()` on our wrapper will give us access to all of the class inst
 <section class="note">
 ### Important Note
 
-REMEMBER! `instance()` can only be used on class components.  `instance()` returns `null` for stateless functional components.  Sooo....don't include methods in your functional components!
+REMEMBER! `instance()` can only be used on class components. `instance()` returns `null` for stateless functional components. Sooo....don't include methods in your functional components!
 </section>
 
 Let's write a test for `addIdea` in our `App.test.js` file:
@@ -432,11 +428,11 @@ describe('App', () => {
 });
 ```
 
-- `wrapper.state([arg])` returns the state based what key you give as an argument.  If there is no argument included, it returns the entire state.  Read the docs [here](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html)!
+- `wrapper.state([arg])` returns the state based what key you give as an argument. If there is no argument included, it returns the entire state. Read the docs [here](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html)!
 
 ### More Practice & Examples (Forms!)
 
-Let's dive into a few more examples where testing methods and changes in state can happen a lot.  The best scenario for this is in our `Form` component!  Let's get our initial setup done by creating the test file, importing what is necessary, and include a snapshot test if you haven't already.
+Let's dive into a few more examples where testing methods and changes in state can happen a lot. The best scenario for this is in our `Form` component!  Let's get our initial setup done by creating the test file, importing what is necessary, and include a snapshot test if you haven't already.
 
 ```js
 import React from 'react';
@@ -457,12 +453,12 @@ describe('Form', () => {
 });
 ```
 
-Awesome now that we have got that set up, let's take a closer look at our `Form` component.  One of the first methods that we have is `handleChange`.  Inside the method it is updating the state. So let's write another test that invokes this method and check to see if state has been updated.  Give it a shot now!
+Awesome now that we have got that set up, let's take a closer look at our `Form` component. One of the first methods that we have is `handleChange`. Inside the method it is updating the state. So let's write another test that invokes this method and check to see if state has been updated. Give it a shot now!
 
 <section class="call-to-action">
 ### Your Turn
 
-Write a test that calls `handleChange` on the **instance** and check to see if state has been updated.  Look at the last test we wrote for `addIdea` in the `App.test.js`.  Are we passing any arguments through handleChange?  What properties are we expecting to have inside of that *event* object?
+Write a test that calls `handleChange` on the **instance** and check to see if state has been updated. Look at the last test we wrote for `addIdea` in the `App.test.js`. Are we passing any arguments through handleChange? What properties are we expecting to have inside of that *event* object?
 </section>
 
 Let's take a look at a solution below:
@@ -478,12 +474,12 @@ it('should update state when handleChange is called', () => {
 });
 ```
 
-Notice we had to mock out the event object giving it the exact properties we expected it to have.  It needs a `target` that has a value of an object that also has two properties of `name` and `value`.  You can give them whatever values you want as long as you assert that the change in state has that same value!  Let's practice doing one more test that is similar.
+Notice we had to mock out the event object giving it the exact properties we expected it to have. It needs a `target` that has a value of an object that also has two properties of `name` and `value`. You can give them whatever values you want as long as you assert that the change in state has that same value!  Let's practice doing one more test that is similar.
 
 <section class="call-to-action">
 ### Your Turn
 
-Write a test for your `resetInputs` method.  The purpose of this method is to clear out the state right?  Think about how you could set a default state in here (how do you normally set state?), and then run the `resetInputs` method.  Then assert that the state is empty.
+Write a test for your `resetInputs` method. The purpose of this method is to clear out the state right? Think about how you could set a default state in here (how do you normally set state?), and then run the `resetInputs` method. Then assert that the state is empty.
 </section>
 
 Let's take a look at a solution below:
@@ -501,9 +497,9 @@ it('should reset state when resetInputs is called', () => {
 });
 ```
 
-Crazy!  We can call `setState` in our component as well since it is a method that we have available that we inherit from the `Component` class.  Then we can call the method assert that the state has been emptied out.
+Crazy!  We can call `setState` in our component as well since it is a method that we have available that we inherit from the `Component` class. Then we can call the method assert that the state has been emptied out.
 
-Let's now take a look at a more complicated method like `submitNewIdea`.  We can see that it's passing an event object, so that should tell us that we will need to mock it out like we did previously.  It looks like it also creates a new Idea object and calls two methods, `addIdea` and `resetInputs`.  Since `addIdea` comes from our `App`, we don't need to test the functionality of it. (we already have actually!)  We have also already tested what `resetInputs` does as well!  What we want to do is test that these methods have been invoked!  Let's work through it together:
+Let's now take a look at a more complicated method like `submitNewIdea`. We can see that it's passing an event object, so that should tell us that we will need to mock it out like we did previously. It looks like it also creates a new Idea object and calls two methods, `addIdea` and `resetInputs`. Since `addIdea` comes from our `App`, we don't need to test the functionality of it. (we already have actually!)  We have also already tested what `resetInputs` does as well!  What we want to do is test that these methods have been invoked!  Let's work through it together:
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
@@ -516,15 +512,15 @@ it('should call addIdea and resetInputs when submitNewIdea is called', () => {
 });
 ```
 
-This one is a bit trickier.  We want to set `resetInputs` to a mock function so that we can keep track of whether or not the function has been called.  After invoking `submitNewIdea`, we want to assert a few things.  Notice at the top of our test where we are declaring our wrapper, we are passing `addIdea` as a prop which has the value of a mock function.  So, we can test that both `addIdea` and `resetInputs` have been called.
+This one is a bit trickier. We want to set `resetInputs` to a mock function so that we can keep track of whether or not the function has been called. After invoking `submitNewIdea`, we want to assert a few things. Notice at the top of our test where we are declaring our wrapper, we are passing `addIdea` as a prop which has the value of a mock function. So, we can test that both `addIdea` and `resetInputs` have been called.
 
-Now...is there a way that we can take this a step further?  Notice that `addIdea` often passes an argument (the newIdea).  We can change our expectation so it reads:
+Now...is there a way that we can take this a step further? Notice that `addIdea` often passes an argument (the newIdea). We can change our expectation so it reads:
 
 ```js
 expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith();
 ```
 
-Read what the test tells us.  It's now checking the argument which has our default values and an id set to the actual `Date.now()`.  The problem is that `Date.now()` is always going to be a different value everytime we run the test.  Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
+Read what the test tells us. It's now checking the argument which has our default values and an id set to the actual `Date.now()`. The problem is that `Date.now()` is always going to be a different value everytime we run the test. Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
@@ -539,9 +535,9 @@ it('should call addIdea and resetInputs when submitNewIdea is called', () => {
 });
 ```
 
-We are assigning `Date.now` to a mock function.  These mock functions have a method called `mockImplementation` to tell it how that mock function should behave.  Here we are just telling it that it should always return the value of *12345* everytime it gets invoked.  Now we make an assertion because the value will always be the same.  Cheers!
+We are assigning `Date.now` to a mock function. These mock functions have a method called `mockImplementation` to tell it how that mock function should behave. Here we are just telling it that it should always return the value of *12345* everytime it gets invoked. Now we make an assertion because the value will always be the same. Cheers!
 
-Let's write one more test.  Let's test something different, like simulating an event.  Similar to our `Card` component when we clicked on a button, we can do something similar here.  Let's write a test for clicking the button on our form!  Let's work through it:
+Let's write one more test. Let's test something different, like simulating an event. Similar to our `Card` component when we clicked on a button, we can do something similar here. Let's write a test for clicking the button on our form!  Let's work through it:
 
 ```js
 it('should run submitIdea when the button is clicked', () => {
@@ -558,13 +554,13 @@ it('should run submitIdea when the button is clicked', () => {
 <section class="note">
 ### What is this forceUpdate?
 
-This has to do with the binding of our method.  Looking at the `Form` component, it is assigned to *this.submitNewIdea*.  If you change it to *e => this.submitNewIdea(e)* and comment out the `forceUpdate` line, it works as well!  Weird!  It has to do with how React binds the method to the onClick.  Don't stress too much on this, just know depending on how you set your methods to `onClick` and `onChange`, you might need to use `forceUpdate()`.  
+This has to do with the binding of our method. Looking at the `Form` component, it is assigned to *this.submitNewIdea*. If you change it to *e => this.submitNewIdea(e)* and comment out the `forceUpdate` line, it works as well!  Weird!  It has to do with how React binds the method to the onClick. Don't stress too much on this, just know depending on how you set your methods to `onClick` and `onChange`, you might need to use `forceUpdate()`. 
 </section>
 
 <section class="checks-for-understanding">
 ### Homework: Finish testing your ideabox
 
-Definitely take some more time testing out your ideabox.  To see a finished example of what we did in class, you can checkout the `react-testing-complete` branch.  Continue to look through those docs as you work on testing these other pieces of functionality.
+Definitely take some more time testing out your ideabox. To see a finished example of what we did in class, you can checkout the `react-testing-complete` branch. Continue to look through those docs as you work on testing these other pieces of functionality.
 
 - Write a unit test for `removeIdea`
 - Can you write the tests and implementation for the "favorite" button (that doesn't exist yet)?
@@ -576,7 +572,7 @@ Definitely take some more time testing out your ideabox.  To see a finished exam
 <section class="note">
 ### Fun Fact
 
-Interested in how much of your app you have tested?  You can run this command below!  Try and go for 100% test coverage!
+Interested in how much of your app you have tested? You can run this command below!  Try and go for 100% test coverage!
 
 ```bash
 npm test --  --coverage --watchAll=false
