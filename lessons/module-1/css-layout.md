@@ -81,7 +81,7 @@ You can specify a) whether an element is floated or not, and b) which side it ям
 - `inherit`: the element inherits the float direction of its parent.
 - `clear`: Float's sister property. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float.
 
-We can play around with this [CodePen](https://codepen.io/turing-school/pen/JjjYbmv) to see how float and clear work with one another.
+We can play around with this [CodePen](https://codepen.io/turing-school/pen/wvvOaNP) to see how float and clear work with one another.
 
 ```css
 .clearfix:after {
