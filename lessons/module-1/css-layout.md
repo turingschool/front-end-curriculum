@@ -83,6 +83,8 @@ You can specify a) whether an element is floated or not, and b) which side it ям
 
 We can play around with this [CodePen](https://codepen.io/turing-school/pen/wvvOaNP) to see how float and clear work with one another.
 
+The code snippet below is known as the `clearfix hack`. It prevents the container from collapsing when all of its contents are floated.
+
 ```css
 .clearfix:after {
   content: ' ';
