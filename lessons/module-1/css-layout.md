@@ -58,6 +58,8 @@ The `position` property in CSS will take elements out of the normal page flow, a
 - **fixed**: A fixed positioned element (subcategory of the absolute positioning) is positioned relative to the viewport. It will stick in place despite any scrolling or resizing of the viewport.
 - **sticky**: A sticky element will behave a lot like an absolutely positioned element. But, if the user scrolls beyond the view of the element, the element will be "stuck" and remain in the users view (where an absolutely positioned element will scroll off the page). Many times this is used for headers or footers on a page. There are a couple of great examples in [this blog post](https://medium.com/@elad/css-position-sticky-how-it-really-works-54cd01dc2d46).
 
+We can play around in [this CodePen](https://codepen.io/turing-school/pen/XWWGJqz) to build a better understanding of position.
+
 <section class="call-to-action">
 ### Try It:
 
