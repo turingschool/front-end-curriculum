@@ -19,8 +19,6 @@ Come prepared to class by reading [CSS Specificity + Combinators](https://fronte
 
 ## Warm Up
 
-Find the other 2-3 students who have the same color and numbered sticky-note as you. This will be your team. You do **not** need to move your belongings; just huddle together and wait for directions from your instructor!
-
 [Instructor Resource](https://docs.google.com/presentation/d/1ZM4pRSnB-pgvXvpCoRjYPt-RmRncYPahvOCibIuS1WU/edit#slide=id.g78e7823268_0_0)
 
 ## Display
