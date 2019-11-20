@@ -48,7 +48,7 @@ div {
 The `position` property in CSS will take elements out of the normal page flow, and should therefore be used sparingly.
 
 - **static**: Every element, by default, has a static position. When `position: static` is applied, the element will stick to the normal page flow.
-- **relative**: The element is positioned relative to its normal position. When `position: relative` is applied, an no other positioning attributes are, nothing will happen. It is mainly used in conjunction with `position: absolute` on a child element.
+- **relative**: The element is positioned relative to its normal position. When `position: relative` is applied, and no other positioning attributes are, nothing will happen. It is mainly used in conjunction with `position: absolute` on a child element.
 - **absolute**: An absolutely positioned element is completely removed from the normal flow. The adjacent sibling elements occupy its space.
   - An element whose position property is set to absolute or fixed is called an absolutely positioned element.
   - We can position an element to a specific place on the page, relative to one of its ancestor elements.
