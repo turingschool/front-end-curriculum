@@ -104,7 +104,7 @@ Back in your Twitter profile CodePen:
 
 The `z-index` property controls the third dimension of elements - how the stack on top of each other. It only affects elements that have a position value other than static (the default).
 
-Without applying any `z-index`, elements will appear in the browser in the order they are placed in the DOM.
+Without applying any `z-index`, elements will appear in the browser in the order they are placed in the DOM. The `z-index` of every element, by default, is 0.
 
 <img class="medium" src="./assets/images/css-layout/z-index.png" alt="Example of z-index in action">
 
