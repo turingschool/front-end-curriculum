@@ -50,7 +50,7 @@ When this code is read, `makeStatements()` is "invoked", all three statements wi
 With the person across from you, create your own functions in the console:
 * Write a function that logs to the console a message of "YO!", and then logs a sum of five different integers.
 * Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.
-* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number](http://frontend.turing.io/independent-study/random-numbers.html) to the console.
+* Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a [random number](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random) to the console.
 </section>
 
 ### Passing Information to a Function:
@@ -81,14 +81,14 @@ function addTwoNumbers(num1, num2) {
   return num1 + num2;
 }
 
-function addTwoNumbers(num1, num2) {
-  console.log('Boom');
-  return num1 + num2;
+function buildAHouse(material, cost) {
+  console.log("I'm building a house!");
+  return "My house is made of " + material + " and cost me $" + cost;
 }
 
-function addTwoNumbers(num1, num2) {
-  return num1 + num2;
-  console.log('Boom');
+function buildAHouse(material, cost) {
+  return "My house is made of " + material + " and cost me $" + cost;
+  console.log("I'm building a house!");
 }
 ```
 
