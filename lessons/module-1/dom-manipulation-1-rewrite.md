@@ -85,7 +85,7 @@ Then, call the `box` variable (by typing in `box`, then hitting `return`).
 
 **Discuss with your partner:**
 - What is returned?
-- Where is that element in the browser?
+- Where does that element appear in the browser?
 - There are several sections with that class name on this page - why do you think that only _one_ of them is stored in the `box` variable?
 </section>
 
@@ -99,13 +99,13 @@ We'll continue using our `title` variable for this example.
 var title = document.querySelector('h1');
 ```
 
-Since our box variable stores a DOM element, we now have access to another set of properties methods that are built for DOM elements. We won't learn about all of them today. We'll focus on `innerText`, and time permitting `innerHTML`.
+Since our `title` variable stores a DOM element, we now have access to another set of properties methods that are built for DOM elements. We won't learn about all of them today. We'll focus on `innerText`, and time permitting `innerHTML`.
 
 ### `innerText`
 
 This is a property which holds the text that lives inside of a given element. Right now, the content inside of the `h1` on this page is `Intro to DOM Manipulation` so that is what the `innerText` is. We can use the assignment operator to change it.
 
-<img class="small" src="./assets/images/dom-manipulation-1/inner-text.png">
+<img class="medium" src="./assets/images/dom-manipulation-1/inner-text.png">
 
 After running the code in the console that is pictured above, the text of the `h1` changed from `Intro to DOM Manipulation` to `Hello, World!`. Now, this may feel a bit disconnected because we know that we usually write our JavaScript in a file in atom, not in the Dev Tools. **If we wrote this in the JavaScript file associated with the page, we'd have the exact same result.** To reinforce this, you're going to have some time to practice applying this concept.
 
