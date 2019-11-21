@@ -26,7 +26,11 @@ Before we can implement functionality like this though, we're going to build a s
 - `Event Handler` A function that will run when a specific event occurs
 - `Method` A type of function for a specific object
 
-## Greeting App Activity to illustrate need for DOM
+## Warm Up
+
+On your own, answer the questions associated with each stage of the Greeting App. If you aren't sure - it's ok - but take a try. You'll have time to chat with your partner afterward.
+
+[Instructor Resource](https://docs.google.com/document/d/1NmlZD0IlsInu4zjpCey9MI2GdV-Zd_jlIcnLdcvnTEo/edit)
 
 ## Document Object Model
 
