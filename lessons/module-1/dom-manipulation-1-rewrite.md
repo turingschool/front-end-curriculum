@@ -117,9 +117,9 @@ Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete t
 - Declare a variable `name` and assign it to the value of the element with the class of `student-1`
 - Declare a variable `schoolName` and assign it to the value of the `h3` element
 - Declare a variable `bestGrade` and assign it to the value of the element with a class of `grade-2`
-- Change the `innerText` of the `.student-1` to your name
-- Change the `innerText` of the `h3` to be the name of a school you've attended
-- Change the `innerText` of the `.grade-2` to be an `A+`!
+- Change the `innerText` of the `name` variable to your name
+- Change the `innerText` of the `schoolName` to be the name of a school you've attended
+- Change the `innerText` of the `bestGrade` to be an `A+`!
 </section>
 
 ### `innerHTML`
