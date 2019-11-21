@@ -112,6 +112,7 @@ The following return statements are all examples that would break function execu
 return;
 return true;
 return false;
+return 0;
 return x;
 return x + y / 3;
 ```
