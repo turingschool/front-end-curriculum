@@ -180,7 +180,7 @@ _Callback Function_ - Within the callback, we have access to the accumulator, th
 
 _Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
 
-Note: `.reduce` is great for **cleaning data** (hint hint...)
+<!-- Note: `.reduce` is great for **cleaning data** (hint hint...) -->
 
 ```js
 const numbers = [1, 2, 3, 4, 5];
@@ -193,17 +193,17 @@ let sum = numbers.reduce((sum, number) => {
 ```
 
 
-There is a lot going on in reduce, so let's take a look at another example. Imagine we have a really complex data structure that is an array that contains multiple arrays, and we want to flatten it into a single array. We could do something like the following:
+There is a lot going on in reduce, so let's take a look at another example. Imagine we have an array that we want to turn into and object. We could do something like the following:
 
 ```js
-let messyArray = [[0, 1], [2, 3], [4, 5]];
+let adjectives = ['fantastic', 'amazing', 'childish'];
 
-let cleanArray = messyArray.reduce((accumulator, currentElement) => {
-    return accumulator.concat(currentElement);
-  }
-,[]);
+let wordLength = adjectives.reduce((acc, adjective) => {
+  acc[adjective] = adjective.length;
+  return acc;
+}, {})
 
-// cleanArray is [0, 1, 2, 3, 4, 5]
+// wordLength is { fantastic: 9, amazing: 7, childish: 8 }
 ```
 
 ## Practice
