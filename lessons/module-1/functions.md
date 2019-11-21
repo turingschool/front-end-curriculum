@@ -87,14 +87,14 @@ function addTwoNumbers(num1, num2) {
   return num1 + num2;
 }
 
-function addTwoNumbers(num1, num2) {
-  console.log('Boom');
-  return num1 + num2;
+function buildAHouse(material, cost) {
+  console.log("I'm building a house!");
+  return "My house is made of " + material + " and cost me $" + cost;
 }
 
-function addTwoNumbers(num1, num2) {
-  return num1 + num2;
-  console.log('Boom');
+function buildAHouse(material, cost) {
+  return "My house is made of " + material + " and cost me $" + cost;
+  console.log("I'm building a house!");
 }
 ```
 
