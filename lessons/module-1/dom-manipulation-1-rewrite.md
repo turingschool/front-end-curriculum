@@ -112,7 +112,7 @@ After running the code in the console that is pictured above, the text of the `h
 <section class="call-to-action">
 ### Try It
 
-Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below.
+Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below, in the `JS` file of the CodePen.
 
 - Declare a variable `name` and assign it to the value of the element with the class of `student-1`
 - Declare a variable `schoolName` and assign it to the value of the `h3` element
