@@ -99,7 +99,7 @@ We'll continue using our `title` variable for this example.
 var title = document.querySelector('h1');
 ```
 
-Since our `title` variable stores a DOM element, we now have access to another set of properties methods that are built for DOM elements. We won't learn about all of them today. We'll focus on `innerText`, and time permitting `innerHTML`.
+Since our `title` variable stores a DOM element, we now have access to another set of properties and methods that are built for DOM elements. We won't learn about all of them today. We'll focus on `innerText`, and time permitting `innerHTML`.
 
 ### `innerText`
 
