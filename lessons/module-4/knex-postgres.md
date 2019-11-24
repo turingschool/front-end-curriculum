@@ -290,10 +290,10 @@ exports.seed = function(knex) {
         knex('papers').insert({
           title: 'Fooo', author: 'Bob', publisher: 'Minnesota'
         }, 'id')
-        .then(paper => {
+        .then(paperID => {
           return knex('footnotes').insert([
-            { note: 'Lorem', paper_id: paper[0] },
-            { note: 'Dolor', paper_id: paper[0] }
+            { note: 'Lorem', paper_id: paperID[0] },
+            { note: 'Dolor', paper_id: paperID[0] }
           ])
         })
         .then(() => console.log('Seeding complete!'))
@@ -336,6 +336,10 @@ let papersData = [{
 We could write a function that appropriately seeds a paper into the `papers` table and all of it's footnotes into the `footnotes` table:
 
 ```js
+// paper.js
+const papersData = require('../../../papers');
+
+
 const createPaper = (knex, paper) => {
   return knex('papers').insert({
     title: paper.title,
@@ -379,7 +383,7 @@ exports.seed = (knex) => {
 
 ## Fetching From the Database
 
-Let's write some express code to interact with our newly seeded database. [Set up a simple express server](https://frontend.turing.io/lessons/module-4intro-to-express.html) and we'll add some configuration to work with the knex database:
+Let's write some express code to interact with our newly seeded database. [Set up a simple express server](https://frontend.turing.io/lessons/module-4/intro-to-express.html) and we'll add some configuration to work with the knex database:
 
 ```js
 const environment = process.env.NODE_ENV || 'development';

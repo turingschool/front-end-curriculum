@@ -52,7 +52,7 @@ When this code is read, `makeStatements()` is "invoked", all three statements wi
   <ul>
     <li>Write a function that logs to the console a message of "YO!", and then logs a sum of eight different integers.</li>
      <li>Write a function that assigns three different math equations to three different variables, then logs the sum of the values of all three variables.</li>
-    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a <a href="http://frontend.turing.io/independent-study/random-numbers.html">random number</a> to the console.</li>
+    <li>Write a function that declares a `firstName` variable and a `lastName` variable, then logs a message that incorporates the full name, and then logs a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random">random number</a> to the console.</li>
   </ul>
 </section>
 
@@ -87,14 +87,14 @@ function addTwoNumbers(num1, num2) {
   return num1 + num2;
 }
 
-function addTwoNumbers(num1, num2) {
-  console.log('Boom');
-  return num1 + num2;
+function buildAHouse(material, cost) {
+  console.log("I'm building a house!");
+  return "My house is made of " + material + " and cost me $" + cost;
 }
 
-function addTwoNumbers(num1, num2) {
-  return num1 + num2;
-  console.log('Boom');
+function buildAHouse(material, cost) {
+  return "My house is made of " + material + " and cost me $" + cost;
+  console.log("I'm building a house!");
 }
 ```
 
@@ -112,6 +112,7 @@ The following return statements are all examples that would break function execu
 return;
 return true;
 return false;
+return 0;
 return x;
 return x + y / 3;
 ```
