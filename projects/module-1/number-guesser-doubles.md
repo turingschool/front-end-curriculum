@@ -85,9 +85,31 @@ By our check-in that is placed about 2/3 of the way through the project, you sho
 
 Being in the place noted above would put you on track for functionality completion. This does not mean that if you don't meet this benchmark, you _can't_ do it; and it also doesn't mean that you are _guaranteed_ to have a passing project if you do have this much functionality. Keep in mind that the rubric weighs the quality of your code much more than your functionality!
 
-## Submission Details
+## Comp to Recreate
 
-#### Layout comps
+### Color and font spec:
+
+**Colors:**
+- Header background: `#404041`
+- Left side background: `#f7f7f7`
+- Right side background: `#d0d2d3`
+- Pink text: `#dd1972`
+- Buttons - text: `#ffffff`
+- Buttons - active state background: `#6e6e6e`
+- Buttons - disabled state background: `#d0d2d3`
+- Buttons - hover and click background: `#dd1792`
+
+**Icons:**
+- Error Icon [can be found here](https://drive.google.com/drive/folders/1xMuapAlmwswiz28L3SUGCma9AUHEQ-uD)
+
+**Font:**
+- [Open Sans](https://fonts.google.com/?query=open+san&selection.family=Open+Sans:300,700) (Bold: 700, Light: 300)
+
+[desktop-base]: /assets/images/projects/number-guesser/week2-numberguesser-01.jpg
+[desktop-error-base]: /assets/images/projects/number-guesser/week2-numberguesser-02.jpg
+[mobile-base]: /assets/images/projects/number-guesser/week2-numberguesser-03.jpg
+
+### Layout comps
 
 Desktop layout:
 
@@ -97,18 +119,6 @@ Desktop layout:
 Mobile layout:
 
 ![Number Guesser Mobile][mobile-base]
-
-Color and font spec:
-
-![Design Specs][design-specs]
-
-[desktop-base]: /assets/images/projects/number-guesser/week2-numberguesser-01.jpg
-[desktop-error-base]: /assets/images/projects/number-guesser/week2-numberguesser-02.jpg
-[mobile-base]: /assets/images/projects/number-guesser/week2-numberguesser-03.jpg
-[design-specs]: /assets/images/projects/number-guesser/week1-numberguesser-03.jpg
-
-Error Icon:
-[Error Icon](https://drive.google.com/drive/folders/1xMuapAlmwswiz28L3SUGCma9AUHEQ-uD?usp=sharing)
 
 ------------------------------------------------------------------
 
