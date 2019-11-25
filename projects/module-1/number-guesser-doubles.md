@@ -81,7 +81,7 @@ This final iteration asks you to level your game up with a few more details! You
 
 ## Mid-Way Check-ins
 
-By our check-in that is placed about 2/3 of the way through the project, you should probably have complete iterations 0-2 and be working in Iteration 3 to be on track.
+By our check-in that is placed about 2/3 of the way through the project, you should probably have completed iterations 0-2 and be working in Iteration 3 to be on track.
 
 Being in the place noted above would put you on track for functionality completion. This does not mean that if you don't meet this benchmark, you _can't_ do it; and it also doesn't mean that you are _guaranteed_ to have a passing project if you do have this much functionality. Keep in mind that the rubric weighs the quality of your code much more than your functionality!
 
