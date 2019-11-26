@@ -38,7 +38,7 @@ Lastly, create a repository on GitHub and connect to this local repository. If y
 
 - Week 1: [Dashboard Comp](./week-1.html)
 - Week 1-2 Weekend: [Transactions + Nav](./weekend-1-2.html)
-- Week 2: [FlexBox + Classes](./week-2.html)
+- Week 2: [Form + FlexBox + Classes](./week-2.html)
 - Week 3: [Event Bubbling](./week-3.html)
 - Week 4: [Responsive + Refactor](./week-4.html)
 - Week 5: [Local Storage](./week-5.html)
