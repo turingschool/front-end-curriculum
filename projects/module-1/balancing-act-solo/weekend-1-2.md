@@ -102,5 +102,5 @@ To earn a given score, an application must meet the requirements listed in that 
 
 * 4 - If the user has closed the welcome banner, visits the Transactions view, then goes back to Dashboard, the banner does not re-appear.
 * 3 - The user can toggle between the Dashboard and Transactions views, and the visual indicator to the left of the associated icon is updated accordingly.
-* 2 - The user can toggle between the Dashboard and Transactions views.
+* 2 - The user can toggle between the Dashboard and Transactions views **OR** the visual indicator to the left of the associated icon is updated accordingly, but the Transaction view does not display when it's icon is clicked.
 * 1 - The welcome banner disappears when clicked when the "x" icon is clicked.
