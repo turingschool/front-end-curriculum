@@ -113,9 +113,9 @@ Beyond the issue of general motivation — let's face it, you're never going to 
 
 In Mod 1, we will be using the Mocha testing framework along with the assertion library Chai.
 
-* [Mocha](https://mochajs.org/) is a testing framework that runs on `Node.js` in your terminal, and can also be run in your browser window. This is what allows us to organize and execute our tests.
+* [Mocha](https://mochajs.org/) is a testing framework that runs on `Node.js` in your terminal. This is what allows us to organize and execute our tests.
 
-* [Chai](http://www.chaijs.com/) is an assertion library that plugs in to Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
+* [Chai](http://www.chaijs.com/) is an assertion library that plugs into Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
 
 Let's say we were writing a function that squared a number and we wanted to write a unit test to see if it worked. Here's how that test would look:
 
