@@ -71,11 +71,6 @@ As a user, I should be able to:
 - Determine the amount of ingredients still needed to cook a given meal, based on what's in my pantry
 - Remove the ingredients used for a given meal from my pantry, once that meal has been cooked
 
-
-### Iteration 1
-
-At the most basic level, the app should allow users to view recipes. This iteration should be focused on this behavior.
-
 <section class="note">
 The details outlined above are basic user stories. You may find it useful to create classes that relate to ehe stories, but are not speicifically outlined above. 
 </section>
