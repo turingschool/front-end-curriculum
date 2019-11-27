@@ -117,86 +117,63 @@ In Mod 1, we will be using the Mocha testing framework along with the assertion 
 
 * [Chai](http://www.chaijs.com/) is an assertion library that plugs into Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
 
-Let's say we were writing a function that squared a number and we wanted to write a unit test to see if it worked. Here's how that test would look:
+Let's say we were writing a class, Tweet, that represents the content a user see when they read a tweet. We want to make sure each tweet is labeled with its sender. Here's how that test would look:
 
 ```javascript
-function square(n) {
-  return n * n;
+class Tweet {
+// In the spirit of TDD, we haven't yet written the implementation code
 }
 
-describe('square', function() {
+describe('Tweet', function() {
+  it('has a sender', function() {
+    var tweet = new Tweet('@LetaCodes', 'something brilliant');
 
-  it('returns the square of a number', function() {
-    var result = square(2);
-
-    assert.equal(result, 4);
+    assert.equal(tweet.sender, '@LetaCodes');
   });
-
 });
 ```
 
 Let's talk a little bit about what's going on here:
 
-* Typically, our test files are separate from our implementation code.
-
-*test.js*
+* We have a `describe()` block which denotes that we're going to start writing a number of tests about the same function.
 
 ```js
-describe('square', function() {
-  it('returns the square of a number', function() {
-    var result = square(2);
-
-    assert.equal(result, 4);
-  });
-});
-```
-
-*implementation.js*
-
-```js
-function square(n) {
-  return n * n;
-}
-```
-
-* We have a `describe()` block which denotes that we're going to start writing a number of tests about the same unit.
-
-```js
-describe('square', function() {
-//  it('returns the square of a number', function() {
-  // var result = square(2);
+describe('Tweet', function() {
+  // it('has a sender', function() {
+  //   var tweet = new Tweet('@LetaCodes', 'something brilliant');
   //
-  // assert.equal(result, 4);
-//  });
+  //   assert.equal(tweet.sender, '@LetaCodes');
+  // });
 });
 ```
 
-* We make a statement about our code with the `it()` block.
+* We make a human-readable statement about our code with the `it()` block.
 
 ```js
-//describe('square', function() {
-  it('returns the square of a number', function() {
-    var result = square(2);
+// describe('Tweet', function() {
+  it('has a sender', function() {
+    var tweet = new Tweet('@LetaCodes', 'something brilliant');
 
-    assert.equal(result, 4);
+    assert.equal(tweet.sender, '@LetaCodes');
   });
-//});
+// });
 
 ```
 
-* We write an _assertion_ about our code. Here, we're asserting that when we pass the number 2 into `square()` that the result should be 4.
+* We write an _assertion_ about our code. Here, we're asserting that when we pass the string `@LetaCodes` into `Tweet` that the tweet object will have a `sender` property with that value.
 
 ```js
-//describe('square', function() {
-//  it('returns the square of a number', function() {
-      var result = square(2);
+// describe('Tweet', function() {
+  // it('has a sender', function() {
+    var tweet = new Tweet('@LetaCodes', 'something brilliant');
 
-      assert.equal(result, 4);
-//  });
-//});
+    assert.equal(tweet.sender, '@LetaCodes');
+  // });
+// });
 ```
 
-Below you will find the general syntax for assertions for most of the methods available:
+<section class="note">
+Below is the general syntax for assertions for most of the methods available:
 
 ```js
   assert.method(actual, expected)
@@ -206,47 +183,47 @@ You'll notice that our method takes two arguments:
 
 - `actual`: The actual JS code that you want to run from the codebase
 - `expected`: The expected output that should be _returned_ based on test requirements
+</section>
 
 ## Importing/Exporting Files
 
 As mentioned earlier, tests are typically separate from its implementation code.  In order for this to work properly, we need to be able to export the functionality from one file and import it into the test file.  Let's take a look at an example:
 
-*implementation.js*
+*tweet.js*
 
 ```js
-function hello() {
-  return 'Hello World';
+class Tweet {
+
 }
 
-module.exports = hello;
+module.exports = Tweet;
 ```
 
-The `module.exports` allows us to export a piece of functionality.  In this instance, we want to export our function Hello, so that is what we assign it.    
+The `module.exports` allows us to export a piece of functionality.  In this instance, we want to export our function (specifically, our class) Tweet, so that is what we assign it.    
 
-*test.js*
+*tweet-test.js*
 
 ```js
-var hello = require('./implementation')
+var Tweet = require('./tweet.js');
 
-describe('hello', function() {
-  it('returns the string Hello World', function() {
-    assert.equal(hello(), 'Hello World');
+describe('Tweet', function() {
+  it('has a sender', function() {
+    var tweet = new Tweet('@LetaCodes', 'something brilliant');
+
+    assert.equal(tweet.sender, '@LetaCodes');
   });
 });
 ```
 
-By adding `require('./implementation')` to our test file, we are importing that function and assigning it to a variable.  Then we can test it by asserting what value is returned after invoking our imported function!
+By adding `require('./tweet')` to our test file, we are importing that function and assigning it to a variable.  Then we can test it by asserting what value is returned after invoking our imported function!
 
 <section class="call-to-action">
 ## Let's practice
 
 Enough talk about testing. Let's actually write some tests to see this in action! We'll do some together and then you'll do some on your own.
 
-Check out [this repository][rep] to get your hands dirty.
-
-[rep]: http://github.com/turingschool-examples/testing-javascript
+Check out [this repository](https://github.com/turingschool-examples/intro-js-testing) to get your hands dirty.
 </section>
-
 
 ## The Testing Process
 
@@ -261,7 +238,7 @@ It takes some time to build out solid habits when testing.  Often we'll see some
 <section class="checks-for-understanding">
 ### Wrap Up
 
-Open up the Slack DM between you, your project parter, and your instructors. Share your answers to the following with the group:
+Open up a Slack DM between you, your project parter, and your Project Manager. Share your answers to the following with the group:
 * Why is testing your code important? ⬅️ _Popular Interview Question!_
 * What is the TDD process?
 * In the Paired Project project:
