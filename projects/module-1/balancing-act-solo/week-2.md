@@ -137,7 +137,7 @@ Touch a new file, `account.js` and in it, write an Account Class. It should have
 - `nickname`
 - `active` (boolean - all start at true.)
 
-It should have a method called `updateAccount` that takes two arguments - `category`, and `updatedInfo`. This method will change the value of a certain property. So if ("nickname", and "Oscar's Vacation Fund") are passed in, the nickname property would be updated from whatever it previously was, to "Oscar's Vacation Fund".
+The Account class should also have a method called `updateAccount` that takes two arguments - `category`, and `updatedInfo`. This method will change the value of a certain property. So if ("nickname", and "Oscar's Vacation Fund") are passed in, the nickname property would be updated from whatever it previously was, to "Oscar's Vacation Fund".
 
 These classes aren't doing anything yet - they're kind of just "extra files" sitting in the project. We will bring it full circle in the coming weeks.
 
