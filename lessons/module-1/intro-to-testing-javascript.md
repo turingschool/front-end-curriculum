@@ -218,7 +218,7 @@ function hello() {
   return 'Hello World';
 }
 
-module.exports = Hello;
+module.exports = hello;
 ```
 
 The `module.exports` allows us to export a piece of functionality.  In this instance, we want to export our function Hello, so that is what we assign it.    
@@ -226,7 +226,7 @@ The `module.exports` allows us to export a piece of functionality.  In this inst
 *test.js*
 
 ```js
-var Hello = require('./implementation')
+var hello = require('./implementation')
 
 describe('hello', function() {
   it('returns the string Hello World', function() {
