@@ -122,18 +122,24 @@ Below is the static comp for the Profile view! Later, we will add in functionali
 <img src="../assets/balancing-act/profile-desktop.png" alt="Profile View">
 
 <section class="call-to-action">
-
 ## Account or Transaction Class
 
-Content coming soon
+Touch a new file, `transaction.js` and in it, write a Transaction Class. It should have the following properties:
+- `type`
+- `category`
+- `accountFrom`
+- `payee`
+- `amount`
+- `memo` (optional)
 
-<!--  -->
-<!-- Touch a new file, `transaction.js` and in it, write a Transaction Class. It should have the following properties: type, category, accountFrom, payee, amount, memo (optional) -->
+Touch a new file, `account.js` and in it, write an Account Class. It should have the following properties:
+- `type` (credit, savings, or checking)
+- `nickname`
+- `active` (boolean - all start at true.)
 
-<!-- Touch a new file, `account.js` and in it, write an Account Class. It should have the following properties: type (credit, savings, or checking), nickname, active (boolean - all start at true.) It should have a method that takes two arguments - category, and updatedInfo. This method will change the value of a certain property. So if ("nickname", and "Oscar's Vacation Fund") are passed in, the nickname property would be updated from whatever it previously was, to "Oscar's Vacation Fund" -->
+It should have a method called `updateAccount` that takes two arguments - `category`, and `updatedInfo`. This method will change the value of a certain property. So if ("nickname", and "Oscar's Vacation Fund") are passed in, the nickname property would be updated from whatever it previously was, to "Oscar's Vacation Fund".
 
-<!-- These classes aren't doing anything yet - they're kind of just "extra files" sitting in the project. We will bring it full circle in the coming weeks. -->
+These classes aren't doing anything yet - they're kind of just "extra files" sitting in the project. We will bring it full circle in the coming weeks.
 
-<!-- Note: you do NOT need to test these classes; you'd need mocha and chai which require a lot of configuration that you don't have set up for this project. -->
-
+Note: you do NOT need to test these classes; you'd need mocha and chai which require a lot of configuration that you don't have set up for this project.
 </section>
