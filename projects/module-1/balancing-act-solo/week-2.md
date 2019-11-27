@@ -72,16 +72,68 @@ Refactor the HTML and CSS of at least one part of your current project to utiliz
 <section class="call-to-action">
 ## Profile Page
 
-Content coming soon
+In addition to building out the third and final page, "Your Profile", let's make sure we have the following user stories implemented:
+
+```
+As a user,
+- when I click on the "profile" icon (third/last on the left-side nav),
+- I no longer see the previous page (Dashboard or Transactions)
+```
+
+```
+As a user,
+- when I click on any of the three icons in the left-side nav,
+- The turquoise highlight to the left of the previously selected icon will disappear, and
+- the turquoise highlight to the left of the recently selected icon will appear
+```
+
+```
+As a user,
+- when I click on the "Manage Accounts" button from the Dashboard view,
+- I will be taken to the "Your Profile" view
+```
+
+```
+As a user,
+- when I click on the "Manage Accounts" button from the Dashboard view,
+- the turquoise highlight to the left of the clipboard icon will disappear, and
+- the turquoise highlight to the left of the profile icon will appear
+```
+
+```
+As a user,
+- when I click on the "New Transaction" button from the Dashboard view,
+- I will be taken to the "Transactions" view
+```
+
+```
+As a user,
+- when I click on the "New Transaction" button from the Dashboard view,
+- the turquoise highlight to the left of the clipboard icon will disappear, and
+- the turquoise highlight to the left of the wallet icon will appear
+```
+
+Below is the static comp for the Profile view! Later, we will add in functionality for "Edit my Info", edit/delete an account, and "Add an Account".
+
 </section>
 
-<!-- Profile page
-- have them build out profile page, nav works the same for it.
-- name of user - save that in a variable and it should match the banner on dashboard page
-- form to add an account. -->
+### Comp
+
+<img src="../assets/balancing-act/profile-desktop.png" alt="Profile View">
 
 <section class="call-to-action">
+
 ## Account or Transaction Class
 
 Content coming soon
+
+<!--  -->
+<!-- Touch a new file, `transaction.js` and in it, write a Transaction Class. It should have the following properties: type, category, accountFrom, payee, amount, memo (optional) -->
+
+<!-- Touch a new file, `account.js` and in it, write an Account Class. It should have the following properties: type (credit, savings, or checking), nickname, active (boolean - all start at true.) It should have a method that takes two arguments - category, and updatedInfo. This method will change the value of a certain property. So if ("nickname", and "Oscar's Vacation Fund") are passed in, the nickname property would be updated from whatever it previously was, to "Oscar's Vacation Fund" -->
+
+<!-- These classes aren't doing anything yet - they're kind of just "extra files" sitting in the project. We will bring it full circle in the coming weeks. -->
+
+<!-- Note: you do NOT need to test these classes; you'd need mocha and chai which require a lot of configuration that you don't have set up for this project. -->
+
 </section>
