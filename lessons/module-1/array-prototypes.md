@@ -24,6 +24,8 @@ Throughout most of this lesson, you'll be working in small groups to explore bot
 - some array prototypes
 - different ways to learn new technical concepts, and which you like best
 
+[Instructor resource](https://docs.google.com/document/d/1_X1vhIFuiSM752l25sBntxVPrTWBV50ZZ3wy_kXQ10A/edit)
+
 <section class="call-to-action">
 For each array prototype method, follow this protocol carefully:
 
