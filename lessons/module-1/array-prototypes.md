@@ -10,10 +10,9 @@ In this lesson we'll cover:
 
 ## Vocabulary
 
-- Array Prototype
-- Method
-- Mutator
-- Accessor
+- `Array Prototype` - methods that are built specifically for arrays. They help us change the arrays themselves or get certain information out of them.
+- `Mutator` - methods that mutate, or change, the original array
+- `Accessor` - methods that do not mutate the original array, rather just give us some information about the array
 
 ## Warm Up
 
