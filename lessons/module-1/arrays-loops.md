@@ -1,7 +1,7 @@
 ---
-title: JavaScript II - Arrays and For Loops
+title: Arrays and For Loops
 length: 90
-tags: javascript, introduction, foundation, variables
+tags: javascript, foundation, arrays, loops
 ---
 
 ## Learning Goals
@@ -22,9 +22,11 @@ In this lesson we'll cover:
 
 ## Warm Up
 
-Each person should have two post-it notes available at your table.
-- On one, write the name of a pet, as a string. Do not assign it to a variable.
-- On the other, write the age of that pet, as a number. Do not assign it to a variable.
+Each person should have one post-it note available at your table.
+- If you have pink, write the name of a pet, as a string. Do not assign it to a variable.
+- If you have yellow, write the age of a pet, as a number. Do not assign it to a variable.
+
+[Instructor Resource](https://github.com/turingschool/front-end-keys/blob/master/module-1/lesson-plans/array-loops.md)
 
 ## Arrays
 
