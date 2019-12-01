@@ -26,7 +26,11 @@ Before we can implement functionality like this though, we're going to build a s
 - `Event Handler` A function that will run when a specific event occurs
 - `Method` A type of function for a specific object
 
-## Greeting App Activity to illustrate need for DOM
+## Warm Up
+
+On your own, answer the questions associated with each stage of the Greeting App. If you aren't sure - it's ok - but take a try. You'll have time to chat with your partner afterward.
+
+[Instructor Resource](https://docs.google.com/document/d/1NmlZD0IlsInu4zjpCey9MI2GdV-Zd_jlIcnLdcvnTEo/edit)
 
 ## Document Object Model
 
@@ -81,7 +85,7 @@ Then, call the `box` variable (by typing in `box`, then hitting `return`).
 
 **Discuss with your partner:**
 - What is returned?
-- Where is that element in the browser?
+- Where does that element appear in the browser?
 - There are several sections with that class name on this page - why do you think that only _one_ of them is stored in the `box` variable?
 </section>
 
@@ -95,27 +99,27 @@ We'll continue using our `title` variable for this example.
 var title = document.querySelector('h1');
 ```
 
-Since our box variable stores a DOM element, we now have access to another set of properties methods that are built for DOM elements. We won't learn about all of them today. We'll focus on `innerText`, and time permitting `innerHTML`.
+Since our `title` variable stores a DOM element, we now have access to another set of properties and methods that are built for DOM elements. We won't learn about all of them today. We'll focus on `innerText`, and time permitting `innerHTML`.
 
 ### `innerText`
 
 This is a property which holds the text that lives inside of a given element. Right now, the content inside of the `h1` on this page is `Intro to DOM Manipulation` so that is what the `innerText` is. We can use the assignment operator to change it.
 
-<img class="small" src="./assets/images/dom-manipulation-1/inner-text.png">
+<img class="medium" src="./assets/images/dom-manipulation-1/inner-text.png">
 
 After running the code in the console that is pictured above, the text of the `h1` changed from `Intro to DOM Manipulation` to `Hello, World!`. Now, this may feel a bit disconnected because we know that we usually write our JavaScript in a file in atom, not in the Dev Tools. **If we wrote this in the JavaScript file associated with the page, we'd have the exact same result.** To reinforce this, you're going to have some time to practice applying this concept.
 
 <section class="call-to-action">
 ### Try It
 
-Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below.
+Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below, in the `JS` file of the CodePen.
 
 - Declare a variable `name` and assign it to the value of the element with the class of `student-1`
 - Declare a variable `schoolName` and assign it to the value of the `h3` element
 - Declare a variable `bestGrade` and assign it to the value of the element with a class of `grade-2`
-- Change the `innerText` of the `.student-1` to your name
-- Change the `innerText` of the `h3` to be the name of a school you've attended
-- Change the `innerText` of the `.grade-2` to be an `A+`!
+- Change the `innerText` of the `name` variable to your name
+- Change the `innerText` of the `schoolName` variable to be the name of a school you've attended
+- Change the `innerText` of the `bestGrade` variable to be an `A+`!
 </section>
 
 ### `innerHTML`

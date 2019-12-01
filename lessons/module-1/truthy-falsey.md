@@ -23,9 +23,9 @@ The following 6 values can be considered `falsy` -
 * `NaN`
 * `" "` - empty string
 * `false`
+* `0`
 
-So if the value you are working with is **NOT** one of these values, we can pretty safely assume that they will evaluate to `true` and can be considered `truthy`.
-
+So if the value you are working with is **NOT** one of these values, we can pretty safely assume that it will evaluate to `true` and can be considered `truthy`.
 
 ## Operators Review
 

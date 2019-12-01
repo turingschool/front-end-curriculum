@@ -38,7 +38,7 @@ Notice that we have multiple stylesheets - one for each component. You are welco
 
 Create a NewsContainer component, which will act as a container that renders each of our news articles. For now, the news articles being displayed will be "Local News". Figure out how to pass information from `App.js` to `NewsContainer.js`!
 
-Then create a NewsArticle component. Each NewsArticle card will display: the image, the headline, the description, and the url (see the screenshot above for an idea).
+Then create a NewsArticle component. Each NewsArticle card will display: the image, the headline, the description, and the URL (see the screenshot above for an idea).
 
 In your NewsContainer component, create NewsArticle cards that have the information each needs to display properly.
 
@@ -70,7 +70,7 @@ Here is what the endpoint looks like to get the news data.
 
 ## Evaluation
 
-Projects will be due on Monday of Week 2 by 8am. The instructors will go through projects that morning and then go over common mistakes we saw as a class.
+Projects will be due on Friday of Week 1 by 8pm. The instructors will go through projects that morning and then go over common mistakes we saw as a class.
 
 ----------------------------------------------------------
 

@@ -1,6 +1,6 @@
 ---
-title: Intro to Flexbox
-length: 60
+title: Intro to Flexbox - Self-Guided
+length: 90
 tags: css, flexbox, layout
 ---
 
@@ -22,6 +22,17 @@ tags: css, flexbox, layout
 ## What is FlexBox?
 
 Flexbox is a part of CSS that provides a more efficient way to lay out, align and distribute space among items in a container. It helps us when we have those silly block elements, that even with `display: inline-block`, can be hard to do just what we want them to do.
+
+## Self Guided Learning
+
+You've been provided with a chunk of time to dedicate to learning and practicing Flexbox. If the lesson format is helpful, you can continue reading and use this as you main resource! If you prefer starting with documentation, blog posts, of different tutorials, you can absolutely do that. We've provided you with some links to start with.
+
+- [CSS Tricks - Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+- [MDN Documentation](https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Flexbox)
+- [freeCodeCamp Blog Post](https://www.freecodecamp.org/news/learn-css-flexbox-in-5-minutes-b941f0affc34/)
+- [Scrimba Video that accompanies blog post above](https://scrimba.com/g/gflexbox)
+- [Flexbox Froggy - great practice!](https://flexboxfroggy.com/)
+- [Flexbox Defense - more practice!](http://www.flexboxdefense.com/)
 
 ## Parents and Children
 
@@ -154,7 +165,7 @@ If we add the declaration `flex-direction: column`, we will see the items center
 Now that you have had a chance to play around with some of properties of flexbox - let's solidify our learning. Please complete the [Flexbox Froggy](https://flexboxfroggy.com/) exercises before moving on to the Practice section!
 </section>
 
-## Practice
+<!-- ## Practice
 
 You will be assigned a portion of the Dog Party comp to recreate - but with Flexbox this time! You'll be given a starter kit with the HTML you should use and _some_ CSS. Follow the protocol below:
 
@@ -165,11 +176,11 @@ You will be assigned a portion of the Dog Party comp to recreate - but with Flex
 Dog Party Starter Kits:
 - [Nav](https://codepen.io/ameseee/pen/MMVEym)
 - [Top Section](https://codepen.io/ameseee/pen/zVWEEa)
-- [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ)
-
-Once you have finished, submit each one of your CodePen links on the following [submission form!](https://docs.google.com/forms/d/e/1FAIpQLSerzju9NYHp6EgMjK6SHmSEr05iFWdRA64h54lSF7XQK5gBQw/viewform?usp=sf_link)
+- [Bottom Section](https://codepen.io/ameseee/pen/PrRJaZ) -->
 
 ## Solo Challenge
+
+**NOTE:** This is optional if you are following this as a self-guided tutorial.
 
 Now that you have had some experience implementing Flexbox on a comp that you have encountered, it's time to apply these skills to a new comp! We have selected a few common design layouts that you can implement with Flexbox. Follow the steps below for implementation:
 

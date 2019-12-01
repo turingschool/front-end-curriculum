@@ -19,8 +19,6 @@ Come prepared to class by reading [CSS Specificity + Combinators](https://fronte
 
 ## Warm Up
 
-Find the other 2-3 students who have the same color and numbered sticky-note as you. This will be your team. You do **not** need to move your belongings; just huddle together and wait for directions from your instructor!
-
 [Instructor Resource](https://docs.google.com/presentation/d/1ZM4pRSnB-pgvXvpCoRjYPt-RmRncYPahvOCibIuS1WU/edit#slide=id.g78e7823268_0_0)
 
 ## Display
@@ -48,7 +46,7 @@ div {
 The `position` property in CSS will take elements out of the normal page flow, and should therefore be used sparingly.
 
 - **static**: Every element, by default, has a static position. When `position: static` is applied, the element will stick to the normal page flow.
-- **relative**: The element is positioned relative to its normal position. When `position: relative` is applied, an no other positioning attributes are, nothing will happen. It is mainly used in conjunction with `position: absolute` on a child element.
+- **relative**: The element is positioned relative to its normal position. When `position: relative` is applied, and no other positioning attributes are, nothing will happen. It is mainly used in conjunction with `position: absolute` on a child element.
 - **absolute**: An absolutely positioned element is completely removed from the normal flow. The adjacent sibling elements occupy its space.
   - An element whose position property is set to absolute or fixed is called an absolutely positioned element.
   - We can position an element to a specific place on the page, relative to one of its ancestor elements.
@@ -57,6 +55,8 @@ The `position` property in CSS will take elements out of the normal page flow, a
   - You specify the position of your element via offset properties: `auto` (default), `top`, `bottom`, `right`, `left`
 - **fixed**: A fixed positioned element (subcategory of the absolute positioning) is positioned relative to the viewport. It will stick in place despite any scrolling or resizing of the viewport.
 - **sticky**: A sticky element will behave a lot like an absolutely positioned element. But, if the user scrolls beyond the view of the element, the element will be "stuck" and remain in the users view (where an absolutely positioned element will scroll off the page). Many times this is used for headers or footers on a page. There are a couple of great examples in [this blog post](https://medium.com/@elad/css-position-sticky-how-it-really-works-54cd01dc2d46).
+
+We can play around in [this CodePen](https://codepen.io/turing-school/pen/XWWGJqz) to build a better understanding of position.
 
 <section class="call-to-action">
 ### Try It:
@@ -79,7 +79,9 @@ You can specify a) whether an element is floated or not, and b) which side it ям
 - `inherit`: the element inherits the float direction of its parent.
 - `clear`: Float's sister property. An element that has the clear property set on it will not move up adjacent to the float like the float desires, but will move itself down past the float.
 
-We can play around with this [CodePen](https://codepen.io/turing-school/pen/JjjYbmv) to see how float and clear work with one another.
+We can play around with this [CodePen](https://codepen.io/turing-school/pen/wvvOaNP) to see how float and clear work with one another.
+
+The code snippet below is known as the `clearfix hack`. It prevents the container from collapsing when all of its contents are floated. In order for this specific snippet to work, the class `clearfix` must be applied to the container element in question.
 
 ```css
 .clearfix:after {
@@ -102,7 +104,7 @@ Back in your Twitter profile CodePen:
 
 The `z-index` property controls the third dimension of elements - how the stack on top of each other. It only affects elements that have a position value other than static (the default).
 
-Without applying any `z-index`, elements will appear in the browser in the order they are placed in the DOM.
+Without applying any `z-index`, elements will appear in the browser in the order they are placed in the DOM. The `z-index` of every element, by default, is 0.
 
 <img class="medium" src="./assets/images/css-layout/z-index.png" alt="Example of z-index in action">
 
