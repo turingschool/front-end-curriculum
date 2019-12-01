@@ -124,7 +124,7 @@ You can read up on how to configure the CORS middleware in the [documentation he
 
 ---
 
-## Step 4: Environmental Variables
+## Step 5: Environmental Variables
 
 In the fetch call of our FE application, we hardcoded the URL we are querying. But `localhost` won't work when we get to our production application. How can we make the URL dynamic?
 
@@ -178,7 +178,7 @@ In the development environment, a new build is run every time we run `$ npm star
 
 Check your react app in the browser. Hopefully we will still be successfully making our fetch call using the environment variable!
 
-## Step 5: Deployment
+## Step 6: Deployment
 
 ### Backend
 
