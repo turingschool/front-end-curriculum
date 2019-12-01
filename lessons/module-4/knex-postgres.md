@@ -337,7 +337,7 @@ We could write a function that appropriately seeds a paper into the `papers` tab
 
 ```js
 // paper.js
-const papersData = require('../../../papers');
+const papersData = require('../../../papersData');
 
 
 const createPaper = (knex, paper) => {
