@@ -1,5 +1,5 @@
 ---
-title: Number Guesser Doubles
+title: Number Guesser
 ---
 
 ## Learning Goals
