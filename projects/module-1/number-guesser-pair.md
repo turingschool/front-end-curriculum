@@ -129,8 +129,8 @@ Mobile layout:
 
 - **4:** Participated in at least one conversation on a PR that was constructive and supportive. *("Great Job" does not count. It should be a conversation where technical considerations/questions arose and moved the project forward or helped all teammates get on the same page about why/what has been/will be implemented).*
 - **3:** Pointed to two commits that you made, were able to explain your process, approach, and what the code you wrote does. You made no less than 40% of the commits, and no more than 60% of the commits.
-- **2:** You were able to explain how any given event listener and it's handler worked. You made no less than 35% of the commits, and no more than 65% of the commits.
-- **1:** There was a large discrepancy in commits and/or you were not able to articulate what any given event listener and it's handler worked.
+- **2:** You made no less than 35% of the commits, and no more than 65% of the commits. A PR was made for almost every card on the Trello board. Most PRs had multiple commits.
+- **1:** There was a large discrepancy in commits and/or there was not a PR for almost every card on the Trello board and/or most PRs did not have multiple commits.
 
 **NOTE:** In addition to this rubric, keep in mind that you will complete a survey regarding your partner's professionalism at the end of the project so we have a pulse on how things went. The results will be confidential. We ask:
   - Would you want to work with this teammate agin?
