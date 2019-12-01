@@ -105,20 +105,21 @@ Being in the place noted above would put you on track for functionality completi
 **Font:**
 - [Open Sans](https://fonts.google.com/?query=open+san&selection.family=Open+Sans:300,700) (Bold: 700, Light: 300)
 
-[desktop-base]: /assets/images/projects/number-guesser/week2-numberguesser-01.jpg
-[desktop-error-base]: /assets/images/projects/number-guesser/week2-numberguesser-02.jpg
-[mobile-base]: /assets/images/projects/number-guesser/week2-numberguesser-03.jpg
 
 ### Layout comps
 
 Desktop layout:
 
-![Number Guesser Desktop][desktop-base]
-![Number Guesser Desktop Error Messages][desktop-error-base]
+![Number Guesser Desktop](./assets/number-guesser/zero-state.jpg)
+![Number Guesser Winner Cards](./assets/number-guesser/winner-cards.jpg)
+
+Error Handling:
+
+![Error Messages](./assets/number-guesser/error-handling.jpg)
 
 Mobile layout:
 
-![Number Guesser Mobile][mobile-base]
+![Number Guesser Mobile](./assets/number-guesser/mobile.jpg)
 
 ------------------------------------------------------------------
 
