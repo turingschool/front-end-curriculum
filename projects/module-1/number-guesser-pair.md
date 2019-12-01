@@ -19,14 +19,14 @@ Over the next two weeks, you'll work with a teammate to build a two-player game!
 
 ### GitHub
 
-One teammate will need to follow the steps below for the initial setup:
+**One teammate will need to follow the steps below for the initial setup:**
 - Create a project on your machine title `number-guesser`
   - Touch `index.html`, `styles.css`, and `main.js` files inside the project
   - Create a `assets` directory inside the project
 - Follow the directions [here](https://frontend.turing.io/lessons/module-1/github-repo.html) to set up a local Git repository and connect it to a remote GitHub repository.
 - In the "Settings" tab, click "Collaborators & teams", then type your partners email or GitHub handle in to invite them. Either send them the provided link in Slack or tell them to check their email for the link.
 
-Now, the other partner should follow these directions:
+**Now, the other partner should follow these directions:**
 - Click the link provided by your partner, and accept the invitation to be a collaborator on this repo. You **MUST** do this - if you just clone, you won't have push access.
 - Now, clone the repo down to your machine.
 - FYI - even though you are a collaborator, you don't _own_ this repo, so it won't show up on your repo page. If you'd like it to be there for whatever reason, we recommend waiting until the project is submitted, then forking it to your account.
@@ -35,7 +35,7 @@ At this point, both partners are set up to contribute to this project!
 
 ### Project Board
 
-To set up your project board, follow these directions (only ONE partner needs to do this):
+**To set up your project board, one teammate needs to follow these directions:**
 - Create a free account, if you don't have one yet, with [Trello](www.trello.com/trello‎)
 - Go to [this site - the template](https://trello.com/b/MVhsK3uT/number-guesser-1911)
 - Click "... Show Menu" in the top-right corner
@@ -43,7 +43,7 @@ To set up your project board, follow these directions (only ONE partner needs to
 - Click "Copy Board" - give it any title you'd like, and keep both boxes checked.
 - Click "Create"
 
-Lastly, make it public so that your partner and PM can view it:
+**Lastly, make it public so that your partner and PM can view it:**
 - In the "secondary" nav bar, you'll see the title of the board and some icons on the left side - click the "Private" button.
 - When the drop down appears, select "Public"
 
