@@ -130,12 +130,10 @@ Go to `create-react-app` docs for the section on [environment variables](https:/
 Take a few minutes to read through that section. 
 
 From here, let's update the following in our application:
-
-  1. Within the return of the render in your frontend app, add the following code:
-
   ```js
    <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
   ```
+  1. Add this code block (shown above) within the return of the render in your frontend app
   2. In the root of your react app, create a dot-prefixed env file called `.env.development` (This will be used to store variables that are utilized when we are `development`)
   3. Declare a custom React environment variable to store our backed URL for the fetch call. This variable should be save in the  `.env.development` file you created. Now, replace the hard-coded URL in your App fetch call with the environment variable, and see if it works!
 
