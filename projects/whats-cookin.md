@@ -72,9 +72,8 @@ As a user, I should be able to:
 - Determine the amount of ingredients still needed to cook a given meal, based on what's in my pantry
 - Remove the ingredients used for a given meal from my pantry, once that meal has been cooked (only applicable if users have a list of `mealsToCook`; can be considered a stretch goal)
 
-<section class="note">
-__Two Things:__
-1. When you test a JavaScript class file, you need to use module.exports in your class file so the test can use the code - just like Mythical Creatures. However, in this project when you call that same class in the browser, the browser has no idea what module is. So your code crashes. The module object is something your tests know how to use, but the browser has no idea what it is. To fix this, you’ll want to include something like this in your class file (for each class file that you create):
+### A Note: 
+When you test a JavaScript class file, you need to use module.exports in your class file so the test can use the code - just like Mythical Creatures. However, in this project when you call that same class in the browser, the browser has no idea what module is. So your code crashes. The module object is something your tests know how to use, but the browser has no idea what it is. To fix this, you’ll want to include something like this in your class file (for each class file that you create):
 ```js
 // Instead of:
 module.exports = someClassName;
@@ -86,7 +85,8 @@ if (typeof module !== 'undefined') {
 ```
 Where someClassName is the name of your class - like User. Read through this a few times - what does this conditional do? Pick it apart. Why do you need it in your code sometimes?
 
-2. The details outlined above are basic user stories. You may find it useful to create classes that relate to the stories (ex: would it be useful to have classes that hold on to multiple instances of a different class?), but are not specifically outlined above. 
+<section class="note">
+The details outlined above are basic user stories. You may find it useful to create classes that relate to the stories (ex: would it be useful to have classes that hold on to multiple instances of a different class?), but are not specifically outlined above. 
 </section>
 
 ## MVP
