@@ -27,10 +27,10 @@ We're also not going to deal with proxies today, and we certainly won't be using
 
 To start, you will create a basic Express application. Your application should:
 
-  * Send a generic response from your root URL
-  * Utilize `app.locals` to serve A JSON object of arbitrary data (perhaps an array of objects)
-  * Include 1 GET: should return all the resources
-  * Include gitignore file
+  1. Send a generic response from your root URL
+  2. Utilize `app.locals` to serve A JSON object of arbitrary data (perhaps an array of objects)
+  3. Include 1 GET: should return all the resources
+  4. Include gitignore file
 
   *Test your endpoint with Postman*
 
@@ -50,8 +50,8 @@ Now that our backend endpoint is working, we are going to build a small frontend
 If you have not done so recently, update your create-react-app npm package using the command: `npm i -g create-react-app`. Create a new create-react-app React front-end application - name it whatever you'd like.
 
 Your frontend should:
-  * Be initialized with create-react-app. Name it whatever you would like
-  * Fetch all of the resources from your backend application. Note:
+  1. Be initialized with create-react-app. Name it whatever you would like
+  2. Fetch all of the resources from your backend application. Note:
     - State should hold the data from the fetch call
     - There should be some default state of the fetched data (the default state should be rendered on the page)
     - Once the fetch is complete, the state should be updated and rendered on the page.
@@ -88,11 +88,11 @@ Turn and Talk:
  -->
 
 Read through [this MDN page](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) about CORS - specifically:
-  * "Introduction"
-  * "What requests use CORS?"
-  * "Functional Overview", 
-  * **Simple requests** portion of "Examples of access control scenarios"
-  * "The HTTP response headers"
+  1. "Introduction"
+  2. "What requests use CORS?"
+  3. "Functional Overview", 
+  4. **Simple requests** portion of "Examples of access control scenarios"
+  5. "The HTTP response headers"
 
 Now in each group at your tables on a piece of chart paper:
 
@@ -112,8 +112,8 @@ For this, we can install a node package that allows us to enable CORS with vario
 
 Using the docs found [here](https://www.npmjs.com/package/cors), let's install an extension designed to address enable CORS with Express apps:
 
-* Install this package as a dependency by using `--save`
-* Using the documentation as a guide, require the CORS package and utilize the simple usage to enable _all_ CORS requests
+1. Install this package as a dependency by using `--save`
+2. Using the documentation as a guide, require the CORS package and utilize the simple usage to enable _all_ CORS requests
 
 Now that the CORS situation is fixed, and even though it works, note that you _SHOULD NOT use the default CORS settings_ to allow all origins! In your back-end application, you need to change the default settings in the server to allow only specific origins that apply to your application (for development and production).
 
@@ -131,13 +131,13 @@ Take a few minutes to read through that section.
 
 From here, let's update the following in our application:
 
-  * Within the return of the render in your frontend app, add the following code:
+  1. Within the return of the render in your frontend app, add the following code:
 
   ```js
    <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
   ```
-  * In the root of your react app, create a dot-prefixed env file called `.env.development` (This will be used to store variables that are utilized when we are `development`)
-  * Declare a custom React environment variable to store our backed URL for the fetch call. This variable should be save in the  `.env.development` file you created. Now, replace the hard-coded URL in your App fetch call with the environment variable, and see if it works!
+  2. In the root of your react app, create a dot-prefixed env file called `.env.development` (This will be used to store variables that are utilized when we are `development`)
+  3. Declare a custom React environment variable to store our backed URL for the fetch call. This variable should be save in the  `.env.development` file you created. Now, replace the hard-coded URL in your App fetch call with the environment variable, and see if it works!
 
 <!-- ```
 // .env.development
@@ -151,11 +151,9 @@ Now, in our FE application, let's update the hardcoded URL in our fetch to use t
 fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/[YOUR ENDPOINT HERE]')
 ```
 
-_*NOTE:*_ You will have to kill your FE server and restart it. This is because, as you read in the documentation, environment variables are embedded into the code during the BUILD of the app, not during the run time. So now that we've added a new variable for our development environment, we must start a new build.
+_*NOTE:*_ You will have to kill your FE server and restart it. This is because, as you read in the documentation, environment variables are embedded into the code during the BUILD of the app, not during the run time. So now that we've added a new variable for our development environment, we must start a new build. In the development environment, a new build is run every time we run `$ npm start`, so let's do that now. Make sure your BE server is already running.
 
-In the development environment, a new build is run every time we run `$ npm start`, so let's do that now. Make sure your BE server is already running.
-
-Check your react app in the browser. Hopefully we will still be successfully making our fetch call using the environment variable!
+Check your React app in the browser. Hopefully we will still be successfully making our fetch call using the environment variable!
 
 Questions:
 * How do you add a custom environment variable to a create-react-app?
@@ -167,13 +165,13 @@ Questions:
 <!-- NODE_ENV environment variable is available by default -->
 <!-- The environment variables are embedded during the build time, not run time -->
 
+---
+
 ## Step 6: Deployment
 
 ### Backend
 
-So we're set up locally, and everything seems to be working correctly! So far we've taken care of our development environment. What about production and deploying our application?
-
-Let's deploy the back-end application to Heroku first. Go ahead! (Reference the [lesson](https://frontend.turing.io/lessons/module-4/deploy-to-heroku.html) we've already had about deploying a back-end app to Heroku.)
+So we're set up locally, and everything seems to be working correctly! So far we've taken care of our development environment. What about production and deploying our application? Let's deploy the back-end application to Heroku first. Go ahead! (Reference the [lesson](https://frontend.turing.io/lessons/module-4/deploy-to-heroku.html) we've already had about deploying a back-end app to Heroku.)
 
 Test it with Postman to make sure the API is working.
 
@@ -181,9 +179,7 @@ Test it with Postman to make sure the API is working.
 
 Next we need to deploy the front-end. This is a little different from deploying the back-end. To deploy something to Heroku, we need a server. Our React app has a development server (this is what is used when you say `npm start` in your terminal), but we can't use it in production.
 
-We have to use what is called a buildpack. It essentially wraps our React app in a server (like an Express server) for us, which Heroku can use to serve our front-end application.
-
-[This is a buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack) that is suggested. 
+We have to use what is called a buildpack. It essentially wraps our React app in a server (like an Express server) for us, which Heroku can use to serve our front-end application.[This is a buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack) that is suggested. 
 
 To set it up and create a Heroku application, run the command: `heroku create your-app-name --buildpack mars/create-react-app` Push up your FE app and watch it build. Does it run? Does the fetch call go through successfully? What happened?
 
@@ -191,7 +187,7 @@ To set it up and create a Heroku application, run the command: `heroku create yo
 
 You will probably see your default state information being rendered, but nothing from your fetch call. Why?
 
-We only defined a backend url for our *development* environment, but on Heroku, we're in a *production* environment!
+<!-- We only defined a backend url for our *development* environment, but on Heroku, we're in a *production* environment! -->
 
 Read [this Heroku doc page](https://devcenter.heroku.com/articles/config-vars#using-the-heroku-dashboard) for what you might need to add.
 
