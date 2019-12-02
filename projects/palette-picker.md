@@ -182,7 +182,7 @@ Once all other project expectations are completed, you may
 
 **Back-End:** build using Express, knex, and PostgreSQL. Each API endpoint should respond with JSON-formatted data.
 
-**Front-End:** build using vanilla JavaScript, **jQuery**, or React.
+**Front-End:** build using React.
 
 Both the back-end and front-end codebases should be thoroughly tested.
 
