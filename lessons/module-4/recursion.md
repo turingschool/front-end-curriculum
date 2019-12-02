@@ -63,19 +63,16 @@ Try solving this using an if statement, and then try solving it using a [`while`
 **Solution**:
 
 ```
-function countdown(number) {
+const countdown = number => {
   // check our base case, if statement
-  if (number < 0) {
-    return;
+  if (!number) {
+    return 0;
   }
   
   console.log(number);
   
-  // get closer to base case
-  number--;
-  
-  // execute function again
-  countdown(number)
+  // execute function again minus 1
+  countdown(number - 1)
 }
 
 countdown(3); // 3, 2, 1, 0
