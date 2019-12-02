@@ -49,9 +49,10 @@ Users will be associated with recipes, which will in turn be associated with ing
 A `User` holds on to all of a user's data. As a user, I should be able to:
   - Favorite recipes (add to / remove from the user's `favoriteRecipes`)
   - Decide to cook a recipe that week (add to my recipesToCook)
-  - Remove a recipes from my `recipesToCook`
   - Filter my `favoriteRecipes` or `recipesToCook` by type
   - Search any of my saved recipes by name or ingredient
+
+Favorites are meant to be recipes that one can easily find again. When a user decides to cook a recipe, they should be able to determine whether they have sufficient ingredients in their pantry (see Pantry user stories). If they do not, they should be able to see a list of what ingredients they need to buy, and how much it will cost. User should be able to do this for at least one recipe. Making a list of `recipesToCook` can be implemented at a later time. 
 
 ### Recipes
 
@@ -69,18 +70,45 @@ Every User should have a pantry. A `Pantry` holds on to all the ingredients its 
 As a user, I should be able to:
 - Determine whether my pantry has enough ingredients to cook a given meal
 - Determine the amount of ingredients still needed to cook a given meal, based on what's in my pantry
-- Remove the ingredients used for a given meal from my pantry, once that meal has been cooked
+- Remove the ingredients used for a given meal from my pantry, once that meal has been cooked (only applicable if users have a list of `mealsToCook`; can be considered a stretch goal)
+
+### A Note: 
+When you test a JavaScript class file, you need to use module.exports in your class file so the test can use the code - just like Mythical Creatures. However, in this project when you call that same class in the browser, the browser has no idea what module is. So your code crashes. The module object is something your tests know how to use, but the browser has no idea what it is. To fix this, you’ll want to include something like this in your class file (for each class file that you create):
+```js
+// Instead of:
+module.exports = someClassName;
+
+// You will need to use:
+if (typeof module !== 'undefined') {
+  module.exports = someClassName;
+}
+```
+Where someClassName is the name of your class - like User. Read through this a few times - what does this conditional do? Pick it apart. Why do you need it in your code sometimes?
 
 <section class="note">
-The details outlined above are basic user stories. You may find it useful to create classes that relate to ehe stories, but are not speicifically outlined above. 
+The details outlined above are basic user stories. You may find it useful to create classes that relate to the stories (ex: would it be useful to have classes that hold on to multiple instances of a different class?), but are not specifically outlined above. 
 </section>
+
+## MVP
+
+The user stories outlined above should be used to create an outline of your class structure. It will be each group's responsibility to determine what MVP looks like. This should be noted in your class structure plan / project board, and submitted for review before you begin writing code. 
+
+## Timeline
+
+Dates and deadlines to be aware of:
+
+**Monday, December 2nd** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code
+**Thursday, December 5th** - Project check ins
+**Thursday, December 12th** - Project assessments. Project due by 9AM. 
+
+Submit projects <a href="https://docs.google.com/spreadsheets/d/1gMYHBcCuSV16rHjn9XiyRR7hn-ZA-g9QpHbwnwi0XdQ/edit?usp=sharing" target="\__blank">here</a> by 9AM, December 12th. 
 
 ## Rubric
 
 ### Functional Expectations
-* 4: Application fulfills all expectations of iterations 1 - 5 with no bugs or missing functionality *as well as* an extension.
-* 3: Application fulfills expectations of iterations 1 - 5 with no bugs or missing functionality.
-* 2: Application is usable but has some missing functionality.
+* 4: Application fulfills all expectations of user stories, and has functionality that goes above and beyond an MVP.
+* 3: Application demonstrates a fully functional MVP, and group members can articulate choices for prioritizing certain pieces of functionality.
+* 2: Application is usable, but has some missing functionality and no clear MVP.
 * 1: Application crashes during normal usage.
 
 ### Fundamental JavaScript & Style
@@ -97,7 +125,7 @@ The details outlined above are basic user stories. You may find it useful to cre
 
 ### Encapsulation / Breaking Logic into Components
 * 4: Application is expertly divided into logical components each with a clear, single responsibility.
-* 3: Application effectively breaks logical components apart but breaks the principle of SRP.
+* 3: Application effectively breaks logical components apart, but breaks the principle of SRP.
 * 2: Application shows some effort to break logic into components, but the divisions are inconsistent or unclear.
 * 1: Application logic shows poor decomposition with too much logic mashed together.
 
@@ -108,8 +136,8 @@ The details outlined above are basic user stories. You may find it useful to cre
 * 1: The application is confusing or difficult to use.
 
 ### Workflow
-* 4: The team effectively uses Git branches and many small, atomic commits that document the evolution of their application with descriptive commit messages. The team displays good pairing practices (driver-navigator, dividing up work, etc.) and utilizes a planning tool more than GitHub issues (GitHub Projects, Trello, etc).
-* 3: The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Both members contribute meaningfully to the application.
+* 4: The team effectively uses Git branches and pull requests for meaningful code review. The evolution of the project is evident through conversation done via code reviews and pull requests. 
+* 3: The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Team members utilize a kanban-style project board and git branches. 
 * 2: The team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
 * 1: The team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 

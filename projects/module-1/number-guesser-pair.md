@@ -19,14 +19,14 @@ Over the next two weeks, you'll work with a teammate to build a two-player game!
 
 ### GitHub
 
-One teammate will need to follow the steps below for the initial setup:
+**One teammate will need to follow the steps below for the initial setup:**
 - Create a project on your machine title `number-guesser`
   - Touch `index.html`, `styles.css`, and `main.js` files inside the project
   - Create a `assets` directory inside the project
 - Follow the directions [here](https://frontend.turing.io/lessons/module-1/github-repo.html) to set up a local Git repository and connect it to a remote GitHub repository.
 - In the "Settings" tab, click "Collaborators & teams", then type your partners email or GitHub handle in to invite them. Either send them the provided link in Slack or tell them to check their email for the link.
 
-Now, the other partner should follow these directions:
+**Now, the other partner should follow these directions:**
 - Click the link provided by your partner, and accept the invitation to be a collaborator on this repo. You **MUST** do this - if you just clone, you won't have push access.
 - Now, clone the repo down to your machine.
 - FYI - even though you are a collaborator, you don't _own_ this repo, so it won't show up on your repo page. If you'd like it to be there for whatever reason, we recommend waiting until the project is submitted, then forking it to your account.
@@ -35,7 +35,7 @@ At this point, both partners are set up to contribute to this project!
 
 ### Project Board
 
-To set up your project board, follow these directions (only ONE partner needs to do this):
+**To set up your project board, one teammate needs to follow these directions:**
 - Create a free account, if you don't have one yet, with [Trello](www.trello.com/trello‎)
 - Go to [this site - the template](https://trello.com/b/MVhsK3uT/number-guesser-1911)
 - Click "... Show Menu" in the top-right corner
@@ -43,7 +43,7 @@ To set up your project board, follow these directions (only ONE partner needs to
 - Click "Copy Board" - give it any title you'd like, and keep both boxes checked.
 - Click "Create"
 
-Lastly, make it public so that your partner and PM can view it:
+**Lastly, make it public so that your partner and PM can view it:**
 - In the "secondary" nav bar, you'll see the title of the board and some icons on the left side - click the "Private" button.
 - When the drop down appears, select "Public"
 
@@ -81,7 +81,7 @@ This final iteration asks you to level your game up with a few more details! You
 
 ## Mid-Way Check-ins
 
-By our check-in that is placed about 2/3 of the way through the project, you should probably have completed iterations 0-2 and be working in Iteration 3 to be on track.
+By our check-in that is placed about 2/3 of the way through the project, you should probably have completed Iterations 0-2 and be working in Iteration 3 to be on track.
 
 Being in the place noted above would put you on track for functionality completion. This does not mean that if you don't meet this benchmark, you _can't_ do it; and it also doesn't mean that you are _guaranteed_ to have a passing project if you do have this much functionality. Keep in mind that the rubric weighs the quality of your code much more than your functionality!
 
@@ -105,20 +105,21 @@ Being in the place noted above would put you on track for functionality completi
 **Font:**
 - [Open Sans](https://fonts.google.com/?query=open+san&selection.family=Open+Sans:300,700) (Bold: 700, Light: 300)
 
-[desktop-base]: /assets/images/projects/number-guesser/week2-numberguesser-01.jpg
-[desktop-error-base]: /assets/images/projects/number-guesser/week2-numberguesser-02.jpg
-[mobile-base]: /assets/images/projects/number-guesser/week2-numberguesser-03.jpg
 
 ### Layout comps
 
 Desktop layout:
 
-![Number Guesser Desktop][desktop-base]
-![Number Guesser Desktop Error Messages][desktop-error-base]
+![Number Guesser Desktop](./assets/number-guesser/zero-state.jpg)
+![Number Guesser Winner Cards](./assets/number-guesser/winner-cards.jpg)
+
+Error Handling:
+
+![Error Messages](./assets/number-guesser/error-handling.jpg)
 
 Mobile layout:
 
-![Number Guesser Mobile][mobile-base]
+![Number Guesser Mobile](./assets/number-guesser/mobile.jpg)
 
 ------------------------------------------------------------------
 
@@ -127,9 +128,9 @@ Mobile layout:
 ### Professionalism
 
 - **4:** Participated in at least one conversation on a PR that was constructive and supportive. *("Great Job" does not count. It should be a conversation where technical considerations/questions arose and moved the project forward or helped all teammates get on the same page about why/what has been/will be implemented).*
-- **3:** Pointed to two commits that you made, were able to explain your process, approach, and what the code you wrote does. You made no less than 40% of the commits, and no more than 60% of the commits. You were able to speak to how the event object is/isn't utilized for any given event handler.
-- **2:** You were able to explain how any given event listener and it's handler worked. You made no less than 35% of the commits, and no more than 65% of the commits.
-- **1:** There was a large discrepancy in commits and/or you were not able to articulate what any given event listener and it's handler worked.
+- **3:** Pointed to two commits that you made, were able to explain your process, approach, and what the code you wrote does. You made no less than 40% of the commits, and no more than 60% of the commits.
+- **2:** You made no less than 35% of the commits, and no more than 65% of the commits. A PR was made for almost every card on the Trello board. Most PRs had multiple commits.
+- **1:** There was a large discrepancy in commits and/or there was not a PR for almost every card on the Trello board and/or most PRs did not have multiple commits.
 
 **NOTE:** In addition to this rubric, keep in mind that you will complete a survey regarding your partner's professionalism at the end of the project so we have a pulse on how things went. The results will be confidential. We ask:
   - Would you want to work with this teammate agin?
