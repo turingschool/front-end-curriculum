@@ -155,11 +155,9 @@ a look at our seed file again:
 ```js
 const students = require('../../../students')
 
-exports.seed = knex => {
-  return knex('students').del()
-    .then(() => {
-      return knex('students').insert(students);
-    });
+exports.seed = async knex => {
+  await knex('students').del()
+  await knex('students').insert(students);
 };
 ```
 
