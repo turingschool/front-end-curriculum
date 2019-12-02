@@ -23,14 +23,13 @@ You might have done this before - an Express server and create-react-app applica
 
 We're also not going to deal with proxies today, and we certainly won't be using any Chrome extensions for CORS (if it's on now, turn it off).
 
-## Step 1: Create a Back-End
+## Step 1: Create a Back-End (10 minutes)
 
 To start, you will create a basic Express application. Your application should:
 
-  1. Send a generic response from your root URL
-  2. Utilize `app.locals` to serve A JSON object of arbitrary data (perhaps an array of objects)
-  3. Include 1 GET: should return all the resources
-  4. Include gitignore file
+  1. Utilize `app.locals` to serve A JSON object of arbitrary data (perhaps an array of objects)
+  2. Include 1 GET: should return all the resources
+  3. Include gitignore file
 
   *Test your endpoint with Postman*
 
@@ -43,7 +42,7 @@ Questions:
 
 ---
 
-## Step 2: Create a Front-End
+## Step 2: Create a Front-End (10 minutes)
 
 Now that our backend endpoint is working, we are going to build a small frontend application in React.
 
@@ -51,10 +50,10 @@ If you have not done so recently, update your create-react-app npm package using
 
 Your frontend should:
   1. Be initialized with create-react-app. Name it whatever you would like
-  2. Fetch all of the resources from your backend application. Note:
-    - State should hold the data from the fetch call
-    - There should be some default state of the fetched data (the default state should be rendered on the page)
-    - Once the fetch is complete, the state should be updated and rendered on the page.
+  2. Fetch all of the resources from your backend application. Note:  
+    - State should hold the data from the fetch call  
+    - There should be some default state of the fetched data (the default state should be rendered on the page)  
+    - Once the fetch is complete, the state should be updated and rendered on the page.  
 
 Questions:
 * What port is does `create-react-app` define for us automatically?
