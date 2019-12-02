@@ -29,8 +29,8 @@ To start, you will create a basic Express application. Your application should:
 
   * Send a generic response from your root URL
   * Utilize `app.locals` to serve A JSON object of arbitrary data (perhaps an array of objects)
-  * 1 GET: should return all the resources
-  * A gitignore file
+  * Include 1 GET: should return all the resources
+  * Include gitignore file
 
   *Test your endpoint with Postman*
 
@@ -106,14 +106,11 @@ Now in each group at your tables on a piece of chart paper:
 
 Let's fix the CORS issue.
 
-*Fixing CORS errors in Express*
-
 <!-- They need to add the "cors" express package and use the default app.use(cors()); in their server file -->
 
 For this, we can install a node package that allows us to enable CORS with various options. 
 
-Using the docs found [here](https://www.npmjs.com/package/cors) 
-Let's install an extension designed to address Express CORS handling into our BE express app:
+Using the docs found [here](https://www.npmjs.com/package/cors), let's install an extension designed to address enable CORS with Express apps:
 
 * Install this package as a dependency by using `--save`
 * Using the documentation as a guide, require the CORS package and utilize the simple usage to enable _all_ CORS requests
@@ -132,6 +129,34 @@ Go to `create-react-app` docs for the section on [environment variables](https:/
 
 Take a few minutes to read through that section. 
 
+From here, let's update the following in our application:
+
+  * Within the return of the render in your frontend app, add the following code:
+
+  ```js
+   <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
+  ```
+  * In the root of your react app, create a dot-prefixed env file called `.env.development` (This will be used to store variables that are utilized when we are `development`)
+  * Declare a custom React environment variable to store our backed URL for the fetch call. This variable should be save in the  `.env.development` file you created. Now, replace the hard-coded URL in your App fetch call with the environment variable, and see if it works!
+
+<!-- ```
+// .env.development
+
+REACT_APP_BACKEND_URL=http://localhost:3001
+``` -->
+
+Now, in our FE application, let's update the hardcoded URL in our fetch to use the new environment variable.
+
+```js
+fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/[YOUR ENDPOINT HERE]')
+```
+
+_*NOTE:*_ You will have to kill your FE server and restart it. This is because, as you read in the documentation, environment variables are embedded into the code during the BUILD of the app, not during the run time. So now that we've added a new variable for our development environment, we must start a new build.
+
+In the development environment, a new build is run every time we run `$ npm start`, so let's do that now. Make sure your BE server is already running.
+
+Check your react app in the browser. Hopefully we will still be successfully making our fetch call using the environment variable!
+
 Questions:
 * How do you add a custom environment variable to a create-react-app?
 * Are there any caveats to know about them?
@@ -142,49 +167,13 @@ Questions:
 <!-- NODE_ENV environment variable is available by default -->
 <!-- The environment variables are embedded during the build time, not run time -->
 
-Within the return of your render, add the following:
-  ```js
-   <small>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</small>
-  ```
-
-
-*Making a custom create-react-app environment variable*
-
-Let's add an environment variable for the `BACKEND_URL` in a `.env.development` file. Replace the hard-coded URL in your App fetch call with the environment variable, and see if it works!
-
-In the root of your react app, create a dot-prefixed env file to store variables that will be used when we are in the `development` environment.
-
-```
-$ touch .env.development
-```
-
-Then, let's add a custom React environment variable to store our backend URL for the fetch call.
-
-Look through the docs (linked above) to see how to format the environment variable.
-
-```
-REACT_APP_BACKEND_URL=http://localhost:3001
-```
-
-Now, in our FE application, let's update the hardcoded URL in our fetch to use the new environment variable.
-
-```js
-fetch(process.env.REACT_APP_BACKEND_URL + '/api/v1/[YOUR ENDPOINT HERE]')
-```
-
-You will have to kill your FE server and restart it. This is because, as you read in the documentation, environment variables are embedded into the code during the BUILD of the app, not during the run time. So now that we've added a new variable for our development environment, we must start a new build.
-
-In the development environment, a new build is run every time we run `$ npm start`, so let's do that now. Make sure your BE server is already running.
-
-Check your react app in the browser. Hopefully we will still be successfully making our fetch call using the environment variable!
-
 ## Step 6: Deployment
 
 ### Backend
 
 So we're set up locally, and everything seems to be working correctly! So far we've taken care of our development environment. What about production and deploying our application?
 
-Let's deploy the back-end application to Heroku first. Go ahead! (Reference the lesson we've already had about deploying a back-end app to Heroku.)
+Let's deploy the back-end application to Heroku first. Go ahead! (Reference the [lesson](https://frontend.turing.io/lessons/module-4/deploy-to-heroku.html) we've already had about deploying a back-end app to Heroku.)
 
 Test it with Postman to make sure the API is working.
 
@@ -194,9 +183,9 @@ Next we need to deploy the front-end. This is a little different from deploying 
 
 We have to use what is called a buildpack. It essentially wraps our React app in a server (like an Express server) for us, which Heroku can use to serve our front-end application.
 
-[This is a buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack) that is suggested. To set it up and create a Heroku application, run the command: `heroku create your-app-name --buildpack mars/create-react-app`
+[This is a buildpack for create-react-app](https://github.com/mars/create-react-app-buildpack) that is suggested. 
 
-Push up your FE app and watch it build. Does it run? Does the fetch call go through successfully? What happened?
+To set it up and create a Heroku application, run the command: `heroku create your-app-name --buildpack mars/create-react-app` Push up your FE app and watch it build. Does it run? Does the fetch call go through successfully? What happened?
 
 <!-- The fetch call will not go through because the BACKEND_URL has not been set for production through Heroku -->
 
@@ -217,4 +206,3 @@ Probably not! According to the docs, when are environment variables embedded? Wh
 Take a few minutes now to write down, in your own words, exactly the steps you had to take to get your BE and FE to talk to one another. What caused bugs? How did you address those bugs?
 
 Write down what remaining questions you have. Use those question as starting places for digging into the documentation.
-<!--  -->
