@@ -203,7 +203,6 @@ Ok, you should be feeling a bit more confident now. Working on your own, or with
 a partner, see if you can write out the tests for the `PUT /students/:id` and
 `DELETE students/:id` endpoints, and then implement them.
 </section>
-## 
 
 <section class="checks-for-understanding">
 ### Checks For Understanding
