@@ -56,7 +56,7 @@ Your frontend should:
     - Once the fetch is complete, the state should be updated and rendered on the page.  
 
 Questions:
-* What port is does `create-react-app` define for us automatically?
+* What port does `create-react-app` define for us automatically?
 * Can you run your BE and FE on the same port? 
 * Why isn't your fetch working?
 
