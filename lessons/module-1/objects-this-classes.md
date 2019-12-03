@@ -1,5 +1,5 @@
 ---
-title: JS IV - Objects, `this`, Classes, & Instances
+title: Objects, `this`, Classes, & Instances
 length: 120
 tags: js, introduction, constructor functions, this, classes, objects
 ---
