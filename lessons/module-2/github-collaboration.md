@@ -110,21 +110,17 @@ Issue tagging with labels are an important part of keeping engineering and produ
 
 Here are the ones that we want you to focus on when working on your project:
 
-##### Platform
-These labels are good for filtering issues - showing what makes sense for a person to tackle.
+##### Music
+https://www.youtube.com/watch?v=cYM3QfpoHAw
 
-Often you will also see priority levels listed on these labels with `P1` for priority 1, `P2` for priority 2, etc.
+##### More Music
+https://www.youtube.com/watch?v=ANzgMYgoJsA
 
-- P1 Security vulnerabilities
-- P2 Costing the business money
-- P3 Not a big deal but may be annoying for users
+##### Neutron Stars
+https://www.youtube.com/watch?v=udFxKZRyQt4
 
-##### Experience
-These labels are good for when you want particular contributers for your project. Is design or UI/UX your area of expertise? Angular? With these labels, people know where they can contribute the most.
-
-##### Improvement
-These are the low priority labels; however, these labels are very applicable for the projects you are building at Turing. Because of that, this is something we expect to see in your projects. An example would be `nice-to-have` features that you want to add to your project.
-
+##### Aliens and Stuff 
+https://www.youtube.com/watch?v=sNhhvQGsMEc
 
 ### Assignments
 
