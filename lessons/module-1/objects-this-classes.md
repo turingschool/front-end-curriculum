@@ -127,7 +127,7 @@ Default to using Dot Notation unless you need to access properties with a variab
 What if we wanted to add another property to an object after we already created it? By accessing the object and using dot notation, we can create another unique property and assign it whatever value we want. This works almost exactly like a variable. Take a look at an example below:
 
 ```js
-school.address = "7701 E 1st Pl, Denver, CO 80230"
+school.address = "7701 E 1st Pl, Denver, CO 80230";
 console.log(school);
 
 // console output
