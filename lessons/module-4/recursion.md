@@ -81,7 +81,7 @@ countdown(3); // 3, 2, 1, 0
 Or, using a while loop:
 
 ```
-function countdown(number) {
+const countdown = number => {
   // condition of while loop serves as base case
   while (number >= 0) {
   
@@ -128,16 +128,16 @@ It can be helpful to break down what each step of this problem looks like. Here'
 **Solution**:
 
 ```
-function sum(array) {
+const sum = numbers => {
   // base case
-  if (!array.length) {
+  if (!numbers.length) {
     return 0;
   }
   
   // get closer to base case
-  let number = array.shift();
+  let number = numbers.shift();
   
-  return number + sum(array);
+  return number + sum(numbers);
 }
 ```
 
