@@ -13,6 +13,23 @@
   }
 }
 
+@keyframes grow {
+  50%{ transform: scaleX(20);}
+  50%{ transform: scaleY(20);}
+  100%{ transform: scaleX(1);}
+  100%{ transform: scaleY(1);}
+}
+
+button {
+  transform: rotate(24deg);
+  background-color: olive !important;
+}
+
+button:hover{
+  animation-name: grow;
+  animation-duration: 10s;
+}
+
 .btn-dark {
   @extend %button-shared;
   background-color: $dark-gray;
