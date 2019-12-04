@@ -145,7 +145,6 @@ console.log(school);
 <section class="call-to-action">
 
 ### Solo Practice: Reassigning & Adding
-We are also able to reassign the value of a property in a similar way.
 - Go back to the repl you were working on before, and add a property of "bestFriend" to `user1`. Assign it to a string of anything you want.
 - Now try re-assigning `user1` **age** to 9. Then, re-assign `user2`'s **hobbies** to an array of your choice!
 - 🤞Remember to call the object or the property on the last line of the file, and run the repl to verify the outcome!
