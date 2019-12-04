@@ -128,16 +128,16 @@ It can be helpful to break down what each step of this problem looks like. Here'
 **Solution**:
 
 ```
-const sum = numbers => {
+const sum = nums => {
   // base case
-  if (!numbers.length) {
+  if (!nums.length) {
     return 0;
   }
   
   // get closer to base case
-  let number = numbers.shift();
+  let number = nums.shift();
   
-  return number + sum(numbers);
+  return number + sum(nums);
 }
 ```
 
