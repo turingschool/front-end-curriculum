@@ -159,9 +159,9 @@ This can help speed up your workflow, decreasing overhead tasks that your or you
 </section>
 
 <section class="call-to-action">
-#### Turn and Talk (15 mins)
+#### Turn and Talk 
 
-Working in your project groups, take a look at the the project spec and user stories for FitLit / Refactor Tractor. Go over the issues you've filed so far on your projects. Are they in line with the guidelines above?
+Working in your project groups, take a look at the the project spec and user stories for you paired project. Go over the issues you've filed so far on your projects. Are they in line with the guidelines above?
 
 If appropriate, add labels, milestones and assignments to any existing issues.
 
