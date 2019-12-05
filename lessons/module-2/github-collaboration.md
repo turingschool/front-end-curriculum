@@ -208,9 +208,6 @@ To ensure solid communication, we're going to ask that you follow <a href="https
 #### What are the relevant tickets?
 #### Screenshots (if appropriate)
 #### Questions:
-- Is there a blog post?
-- Does the knowledge base need an update?
-- Does this add new dependencies which need to be added?
 
 ```
 
