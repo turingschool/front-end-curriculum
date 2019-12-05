@@ -127,7 +127,7 @@ Default to using Dot Notation unless you need to access properties with a variab
 What if we wanted to add another property to an object after we already created it? By accessing the object and using dot notation, we can create another unique property and assign it whatever value we want. This works almost exactly like a variable. Take a look at an example below:
 
 ```js
-school.address = "7701 E 1st Pl, Denver, CO 80230"
+school.address = "7701 E 1st Pl, Denver, CO 80230";
 console.log(school);
 
 // console output
@@ -145,7 +145,6 @@ console.log(school);
 <section class="call-to-action">
 
 ### Solo Practice: Reassigning & Adding
-We are also able to reassign the value of a property in a similar way.
 - Go back to the repl you were working on before, and add a property of "bestFriend" to `user1`. Assign it to a string of anything you want.
 - Now try re-assigning `user1` **age** to 9. Then, re-assign `user2`'s **hobbies** to an array of your choice!
 - 🤞Remember to call the object or the property on the last line of the file, and run the repl to verify the outcome!
