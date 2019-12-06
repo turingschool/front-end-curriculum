@@ -153,10 +153,10 @@ If a build passes on TravisCI, then that means the code is good enough to go to 
 We need the [TravisCI command line tool](https://github.com/travis-ci/travis.rb#installation) to generate a Heroku API key. You can install the tool using the command:
 
 ```bash
-gem install travis -v 1.8.8 --no-rdoc --no-ri
+gem install travis -v 1.8.10 --no-document
 ```
 
-If your terminal gives you a response along the lines of `permissions needed`, then you might need to use the `sudo` command to install the gem. In that case, use the command `sudo gem install travis -v 1.8.8 --no-rdoc --no-ri` where you'll have to enter your system password.
+If your terminal gives you a response along the lines of `permissions needed`, then you might need to use the `sudo` command to install the gem. In that case, use the command `sudo gem install travis -v 1.8.10 --no-document` where you'll have to enter your system password.
 
 Next we need to generate the deployment API key. To do so, use the command:
 
