@@ -109,14 +109,14 @@
           <p>Let's try securing a single server-side endpoint with a JWT. We'll set up a simple express server and utilize the <a href="https://www.npmjs.com/package/jsonwebtoken">jsonwebtoken</a> npm library for generating and verifying a token that can be used to access our protected endpoint.</p> 
           <h3>Step 1: Getting Started</h3>
           <ul>
-            <li>Create a new npm project and install <a href="https://www.npmjs.com/package/express">express</a>, <a href="https://www.npmjs.com/package/body-parser">body-parser</a> and <a href="https://www.npmjs.com/package/jsonwebtoken">jsonwebtoken</a></li>
-            <li>Copy <a href="https://gist.github.com/brittanystoroz/19275a98b183466955408b595457d3ef">this</a> boilerplate as your server.</li>
-            <li>Create an app variable called <code>secretKey</code> using <code>app.set</code> <em>(Note: You would not normally store an app secret in your server like this. Because this would be considered sensitive data, you would store it in an environment variable instead.)</em></li>
+            <li>Create a new npm project and install <a href="https://www.npmjs.com/package/express">express</a> and <a href="https://www.npmjs.com/package/jsonwebtoken">jsonwebtoken</a></li>
+            <li>Copy <a href="https://gist.github.com/Kalikoze/fe09a21eb7a7b0d13a49f5da9dbd3c7d">this</a> boilerplate as your server.</li>
+            <li>Create an app variable called <code>secretKey</code> using <code>app.set</code> and set the value to a random string <em>(Note: You would not normally store an app secret in your server like this. Because this would be considered sensitive data, you would store it in an environment variable instead.)</em></li>
           </ul>
           <h3>Step 2: Create an Authentication Endpoint</h3>
           <ul>
             <li>This should be a <code>POST</code> request that accepts an <code>email</code> and an <code>appName</code>.</li>
-            <li>Within the request handler, use the jsontwebtoken library to <a href="https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback">sign a new token</a>. The payload should contain the email address and app name.</li>
+            <li>Within the request handler, use the jsonwebtoken library to <a href="https://www.npmjs.com/package/jsonwebtoken#jwtsignpayload-secretorprivatekey-options-callback">sign a new token</a>. The payload should contain the email address and app name.</li>
             <li>The JWT should expire in 48 hours.</li>
             <li>The server should respond with a JSON object containing the generated token.</li>
           </ul>
@@ -125,7 +125,7 @@
             <li>Create a new function called <code>checkAuth</code> to be used as middleware.</li>
             <li>The <code>checkAuth</code> function should:
               <ul>
-                <li>Check for a token that was sent through with the request</li>
+                <li>Check for a token that was sent through with the request's header (although tokens can be sent through a request's body or params, it is generally best practice to send it through the header)</li>
                 <li>If no token exists, respond with a <code>403</code> and an error message that says 'You must be authorized to hit this endpoint.'</li>
                 <li>If a token <b>does</b> exist, <a href="https://www.npmjs.com/package/jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback">verify the token</a>.</li>
                 <li>If there is an error with the token, respond with a <code>403</code> and message that says 'Invalid token'.</li>
