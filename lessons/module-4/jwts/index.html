@@ -125,7 +125,7 @@
             <li>Create a new function called <code>checkAuth</code> to be used as middleware.</li>
             <li>The <code>checkAuth</code> function should:
               <ul>
-                <li>Check for a token that was sent through with the request's header (although tokens can be sent through a request's body or params, it is generally best practice to send it through the header)</li>
+                <li>Check for a token that was sent through with the request's header <em>(Note: although tokens can be sent through a request's body or params, it is generally best practice to send it through the header)</em></li>
                 <li>If no token exists, respond with a <code>403</code> and an error message that says 'You must be authorized to hit this endpoint.'</li>
                 <li>If a token <b>does</b> exist, <a href="https://www.npmjs.com/package/jsonwebtoken#jwtverifytoken-secretorpublickey-options-callback">verify the token</a>.</li>
                 <li>If there is an error with the token, respond with a <code>403</code> and message that says 'Invalid token'.</li>
