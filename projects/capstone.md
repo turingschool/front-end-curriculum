@@ -57,14 +57,14 @@ If you have questions regarding this please reach out to your project managers.
 * Test the FE:
   * If you use React/Redux for your FE, then we expect above 85% test coverage
   * If you experiment with a new FE framework outside of React/Redux, then FE test coverage is expected to be at least 25%
-* Implement a stretch goal (listed below)
+* If React/Redux is selected, the team must utilize React Hooks***
 
-Possible stretch goals:
 
-* Implement FE in a framework you have not used before in a project
-* Utilize internationalization and localization tools to localize the FE based on the user's locale
-* Implement Progressive Web App (PWA) technologies like: background sync, IndexedDB, static assets caching using a Service Worker
-* Utilize websockets rather than traditional HTTP/HTTPS (maybe [socket.io](https://socket.io/))
+* You must pick **2** of the following stretch goals:
+  * Implement FE in a framework you have not used before in a project
+  * Implement GraphQL with Apollo Client
+  * Implement Progressive Web App (PWA) technologies like: background sync, IndexedDB, static assets caching using a Service Worker
+  * Utilize websockets rather than traditional HTTP/HTTPS (maybe [socket.io](https://socket.io/))
 
 **Note:** FE students can be the BE creators and vice versa, if it fits into your learning goals
 
