@@ -115,7 +115,7 @@ You may have noticed that the event listeners on a parent element are fired when
 
 When an event occurs, the browser checks the element to see if there are any event listeners registered. After it checks the element where the event occurred, the browser works its way up the DOM tree to see if any of the parents have a listener registered, then grandparents, and so on. It checks every element all the way up to the root. This process is known as _event bubbling_.
 
-Try out the following code in the example code pen:
+Try out the following code in the example CodePen:
 
 ```js
   var grandParent = document.querySelector('.grandparent');
@@ -156,6 +156,7 @@ Open your journal and address the following:
 ```html
 <form>
   <div>
+    <h2></h2>
     <p></p>
   </div>
 </form>
