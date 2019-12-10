@@ -165,7 +165,7 @@ Open your journal and address the following:
 
 ## The Event Object
 
-Sometimes inside an event handler function, you might see a parameter specified with a name such as `event`, `evt`, or simply `e`. This is called the **event object**, and it is automatically passed to event handlers to provide extra features and information. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
+Sometimes inside an event handler function, you might see a parameter specified with a name such as `event`, `evt`, or simply `e`. This parameter holds the **event object**, and it is automatically passed to event handlers to provide extra features and information. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
 
 Each type of event supports a number of different properties. `MouseEvent`s contain information about the `x` and `y` coordinates where the mouse was clicked. `KeyboardEvent` has information about which key was pressed. The `currentTarget` property on the `Event` object can be useful during the event bubbling phase.
 
