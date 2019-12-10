@@ -78,7 +78,7 @@ Take a couple minutes to create an analogy and visual representation of event pr
 
 ## Event Bubbling
 
-Now we've talked about the very basics of events, let's turn our attention to event bubbling, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to children of those nodes.
+Now we've talked about the fundamentals of events, let's turn our attention to **event bubbling**, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to ancestors of those nodes.
 
 Many people question why more attention isn't paid to the capturing phase. Simply put, it's unlikely that you'll have to use it. IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both.
 
