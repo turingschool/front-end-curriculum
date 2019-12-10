@@ -188,7 +188,7 @@ button.addEventListener('click', function(event) {
 <section class="call-to-action">
 ### Pair Practice
 
-Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful? What happens when you log `this` in each of the separate elements above?
+Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful or interesting?
 </section>
 
 ## Event Delegation
