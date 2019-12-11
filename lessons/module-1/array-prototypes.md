@@ -19,7 +19,15 @@ By the end of this lesson, you'll be able to:
 
 ## Warm Up
 
+In your notebook, jot down your answers to the following:
 
+```
+var students = ["Devin", "Tanisha", "Charlie", "Amanda", "Ed"];
+```
+
+For the array above,
+- How would you programmatically find the number of elements?
+- Oops! There's not an Amanda in our class. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove her string from the array?
 
 ## Protocol
 
