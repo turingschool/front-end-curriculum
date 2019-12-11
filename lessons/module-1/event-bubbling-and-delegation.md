@@ -197,7 +197,6 @@ With the understanding of **event propagation** and the **event object**, we can
 
 In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements. Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
 
-
 The algorithm:
  1. Put a single handler on a container
  2. In the handler - check the source element using `event.target`

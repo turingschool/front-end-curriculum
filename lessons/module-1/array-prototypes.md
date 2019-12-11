@@ -6,7 +6,10 @@ tags: javascript, arrays, prototypes, mutator, accessor
 
 ## Learning Goals
 
-In this lesson we'll cover:
+By the end of this lesson, you'll be able to:
+- read documentation and explore array prototype methods
+- determine if a given method is a mutator or accessor
+- build a process for self-guided learning, and determine which parts are most helpful for _you_
 
 ## Vocabulary
 
