@@ -21,7 +21,7 @@ By the end of this lesson, you'll be able to:
 
 In your notebook, jot down your answers to the following:
 
-```
+```javascript
 var students = ["Devin", "Tanisha", "Charlie", "Amanda", "Ed"];
 ```
 
