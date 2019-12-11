@@ -29,6 +29,12 @@ For the array above,
 - How would you programmatically find the number of elements?
 - Oops! There's not an Amanda in our class. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove her string from the array?
 
+### Debrief
+
+Sometimes we need to access information about an array or certain elements in our array. Methods we use to do that, like `.length` are called **accessor** methods. They do not mutate or change the original array.
+
+In other cases, we will want to change the data our array holds.  **Mutator** methods actually mutate, or change, the data in the array. If we needed to remove a student element from the `students` array, we'd need to use a mutator method.
+
 ## Protocol
 
 Throughout most of this lesson, you'll be working in small groups to explore both
