@@ -24,6 +24,7 @@ Game play,
   - Each player's score should be displayed by their name
   - The player who solves the puzzle is the only one keeps all of the money from their account for the current round. This money is added to their grand total score
   - The player with the highest score after 4 Rounds will play in a Bonus Round with a Bonus Wheel.
+  - Winning score should be added to a leader board
 ```
 
 ```
