@@ -106,11 +106,13 @@ Additionally, there are other features that will likely use as you're creating, 
 
 Issue tagging with labels are an important part of keeping engineering and product teams aligned and organized across repositories. Below you'll see a great example of an internal tagging system that is currently being used at [Robin](https://robinpowered.com/blog/best-practice-system-for-organizing-and-tagging-github-issues/). You'll notice that each category has a different color, which allows other team members to easily filter for what the issue is and who can help out with it.
 
+Be aware, this is just an example of how you may see issues organized in the wild. Many of these are beyond the scope of what you'll see in Mod 2. But the organizational system is a good one to base your own tracking off of (different colors for different categories). 
+
 ![Internal Tagging System](/assets/images/lessons/github-issues/labels.png)
 
 Here are the ones that we want you to focus on when working on your project:
 
-##### Platform
+##### Priority
 These labels are good for filtering issues - showing what makes sense for a person to tackle.
 
 Often you will also see priority levels listed on these labels with `P1` for priority 1, `P2` for priority 2, etc.
@@ -119,10 +121,19 @@ Often you will also see priority levels listed on these labels with `P1` for pri
 - P2 Costing the business money
 - P3 Not a big deal but may be annoying for users
 
+##### In Progress 
+Note whether or not someone is currently working at an issue.
+
+##### Problems
+You should have a label for issues that correspond to a bug. You don't have to get much more specific than than 
+
+##### Question / Discussion
+Use these for issues that you want feedback or discussion on. If you have questions about a feature, this is a good kind of label to add. 
+
 ##### Experience
 These labels are good for when you want particular contributers for your project. Is design or UI/UX your area of expertise? Angular? With these labels, people know where they can contribute the most.
 
-##### Improvement
+##### Improvement / Enhancement
 These are the low priority labels; however, these labels are very applicable for the projects you are building at Turing. Because of that, this is something we expect to see in your projects. An example would be `nice-to-have` features that you want to add to your project.
 
 
@@ -148,9 +159,9 @@ This can help speed up your workflow, decreasing overhead tasks that your or you
 </section>
 
 <section class="call-to-action">
-#### Turn and Talk (15 mins)
+#### Turn and Talk 
 
-Working in your project groups, take a look at the the project spec and user stories for FitLit / Refactor Tractor. Go over the issues you've filed so far on your projects. Are they in line with the guidelines above?
+Working in your project groups, take a look at the the project spec and user stories for you paired project. Go over the issues you've filed so far on your projects. Are they in line with the guidelines above?
 
 If appropriate, add labels, milestones and assignments to any existing issues.
 
@@ -197,9 +208,6 @@ To ensure solid communication, we're going to ask that you follow <a href="https
 #### What are the relevant tickets?
 #### Screenshots (if appropriate)
 #### Questions:
-- Is there a blog post?
-- Does the knowledge base need an update?
-- Does this add new dependencies which need to be added?
 
 ```
 

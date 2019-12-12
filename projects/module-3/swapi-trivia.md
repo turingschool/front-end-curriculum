@@ -20,7 +20,7 @@ For this project, we will be hitting [The Star Wars API](https://swapi.co/docume
 6. Become familiar with promises, nested fetch requests, and handling the UI based on acceptance of data.
 7. Become familiar with routing and how to handle dynamic routes.
 8. Use `propTypes` for every component receiving props.  
-9. Write tests for React components, asynchronous functionality, and route handling.
+9. Write tests for React components and some asynchronous functionality.
 
 ## Prep Work
 
@@ -141,5 +141,5 @@ Please DM your instructors the following by the end of the first day:
 
 * 1 - There is little or no evidence of testing in the application.  There are some UI tests including snapshot tests, but major gaps in unit testing functionality.
 * 2 - Nearly all unit tests are in place. Components are well tested with a diverse set of tests including but not limited to snapshot tests, event simulation tests, and tests on class methods (including `componentDidMount`).  No attempt to test async functionality was made.
-* 3 - A valid attempt to test asynchronous functionality has been made.  Asynchronous tests cover happy paths as well as multiple sad paths.
+* 3 - Includes testing from levels 1 and 2, and a valid attempt to test asynchronous functionality has been made.  Asynchronous tests cover happy paths as well as multiple sad paths.
 * 4 - All async functionality is tested, tests are passing and run efficiently (using mount only when appropriate).  Unit tests for snapshots and methods cover not only happy paths but also sad paths.  Evaluator has no recommendations for testing.

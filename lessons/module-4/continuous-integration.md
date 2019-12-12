@@ -70,7 +70,7 @@ By default, in our Node projects the TravisCI test section will simply try to ru
 ```js
 "scripts": {
   "start": "node server.js",
-  "test" : "jest server --forceExit",
+  "test" : "jest --forceExit",
   "test:watch": "jest --watchAll"
 }
 ```

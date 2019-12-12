@@ -18,7 +18,7 @@ Feel free to use the above sites as inspiration for your UI, but note that there
 
 ### Initial Setup
 
-For this project, you will use a <a href="#" target="\__blank">starter-kit</a> repo. Follow the unstructions in the README for forking the repo and getting it set up. Once you have it set up, follow the instructions to ensure everything is working correctly.
+For this project, you will use a <a href="https://github.com/turingschool-examples/whats-cookin-starter-kit" target="\__blank">starter-kit</a> repo. Follow the instructions in the README for forking the repo and getting it set up. Once you have it set up, follow the instructions to ensure everything is working correctly.
 
 ### Testing
 
@@ -137,7 +137,7 @@ Submit projects <a href="https://docs.google.com/spreadsheets/d/1gMYHBcCuSV16rHj
 
 ### Workflow
 * 4: The team effectively uses Git branches and pull requests for meaningful code review. The evolution of the project is evident through conversation done via code reviews and pull requests. 
-* 3: The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Team members utilize a kanban-style project board and git branches. 
+* 3: The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Team members utilize a kanban-style project board (we recommend Github Project) and git branches. 
 * 2: The team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
 * 1: The team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 

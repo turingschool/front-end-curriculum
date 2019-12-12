@@ -155,7 +155,7 @@ Start up your app!  If everything has worked correctly, you should be able to go
 </section>
 
 ### Hooking Up Our React Components to the Store
-Now that we have the Redux store available, let's think back to where we want to be adding a todo.  That's right, in our `Form`!  When a user types in a todo, and clicks "Submit", we want to fire our action to update our store.  Let's import a couple of things into our `Form.js`.  We'll need our action creator, `addToDo`, and `connect` rom *react-redux*.  (since this connects a react component to our redux store, we import it from `react-redux`)
+Now that we have the Redux store available, let's think back to where we want to be adding a todo.  That's right, in our `Form`!  When a user types in a todo, and clicks "Submit", we want to fire our action to update our store.  Let's import a couple of things into our `AddTodoForm.js`.  We'll need our action creator, `addToDo`, and `connect` rom *react-redux*.  (since this connects a react component to our redux store, we import it from `react-redux`)
 
 ```jsx
 // components/AddTodoForm.js
@@ -192,7 +192,7 @@ Since we don't need access to the store specifically in this scenario, we only n
 <section class="note">
 ### Move `AddTodoForm` to your containers directory
 
-Anytime we wrap a component with `connect` to connect it to the store, that component becomes a `container`.  As a result, in order to stay organized, let's move our `AddTodoForm` to our containers directory. 
+Anytime we wrap a component with `connect` to connect it to the store, that component becomes a `container`.  As a result, in order to stay organized, let's move our `AddTodoForm` to our containers directory.
 </section>
 
 ### Displaying Our Todos
@@ -227,7 +227,7 @@ export default connect(mapStateToProps)(ToDoList);
 <section class="call-to-action">
 ### Reading the docs
 
-This time we are creating a function called [mapStateToProps](https://react-redux.js.org/using-react-redux/connect-mapstate).  This "is used for selecting the part of the data from the store that the connected component needs.  It is called everytime the store has been updated."  The `state` refers to the global store.  Why do we call it state instead of `store` then?  Read about it [here in the docs](https://react-redux.js.org/using-react-redux/connect-mapstate#arguments)!  The property then defines what the prop will be in our component, while the value will be set to the data needed in the component. 
+This time we are creating a function called [mapStateToProps](https://react-redux.js.org/using-react-redux/connect-mapstate).  This "is used for selecting the part of the data from the store that the connected component needs.  It is called everytime the store has been updated."  The `state` refers to the global store.  Why do we call it state instead of `store` then?  Read about it [here in the docs](https://react-redux.js.org/using-react-redux/connect-mapstate#arguments)!  The property then defines what the prop will be in our component, while the value will be set to the data needed in the component.
 </section>
 
 <section class="note">
@@ -302,7 +302,7 @@ Your instructor will drop groups in your channel.  Group up and implement anothe
 * Start out with creating another action creator.  What is every action made up of?  What do we need in order to find which todo needs to be toggled?
 * We are updating our todos.  Don't we already have a todos reducer?  Add another case in your `todos` reducer!
 * Your rootReducer should be set up, you should not have to do anything in `reducers/index.js` or `src/index.js`.
-* Where does the action need to happen? How can you make a prop available so when a user clicks on a `ToDo`, they can check it off. 
+* Where does the action need to happen? How can you make a prop available so when a user clicks on a `ToDo`, they can check it off.
 * Use the classes already provided to you for the styling.  (`completed` and `not-completed`)
 </section>
 
@@ -319,8 +319,3 @@ Practice going through this again from scratch!  Try to do as much as possible w
 * `Show Active` will show all of the todos that haven't been completed.
 * `Show Completed` will show all of the todos that have been completed.
 </section>
-
-
-
-
-
