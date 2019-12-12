@@ -56,9 +56,9 @@ You'll be working with some new technologies for this project:
 
 To populate the data for your assigned game, you will be using one of the following datasets:
 
-* [Wheel of Fortune](https://repl.it/@thatpamiam/WheelOfFortune)
-* [Jeopardy](https://repl.it/@brittanystoroz/Jeopardy)
-* [Family Feud](https://repl.it/@brittanystoroz/FamilyFeud)
+* [Wheel of Fortune](https://repl.it/@Khalid_Williams/WheelOfFortune)
+* [Jeopardy](https://repl.it/@Khalid_Williams/Jeopardy)
+* [Family Feud](https://repl.it/@Khalid_Williams/FamilyFeud)
 
 Copy your assigned data into a separate `js` file that you can then include in your repository. 
 
