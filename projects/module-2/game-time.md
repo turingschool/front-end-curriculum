@@ -37,13 +37,13 @@ You'll be working with some new technologies for this project:
 
 ## Outline
 
-### Week 4
+### Weeks 3/ 4
 
 |Day           | Status| Deliverables |
 |---           |---    |--- |
-|*Day 1 (Thur)* | Kick-off| Set up DTR, explore boilerplate repo, design theme/inspiration|
-|*Day 2 (Fri)* | Setup & Coding| Setup your repository using the instructions in this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) and continue with the instructions in the README. In your project's repo, update the README to include relavent information to your version of the project, a link to your group's DTR, your final wireframes, and any design inspiration|
-|*Day 6 (Tue)* | 1st PR | PR due w/instructors tagged|
+|*Day 1 (Thur Week 3)* | Kick-off| Set up DTR, explore boilerplate repo, design theme/inspiration|
+|*Day 2 (Fri Week 3)* | Setup & Coding| Setup your repository using the instructions in this [Webpack Starter Kit](https://github.com/turingschool-examples/webpack-starter-kit) and continue with the instructions in the README. In your project's repo, update the README to include relavent information to your version of the project, a link to your group's DTR, your final wireframes, and any design inspiration|
+|*Day 6 (Tue Week 4)* | 1st PR | PR due w/instructors tagged|
 
 ### Week 5
 
@@ -56,9 +56,9 @@ You'll be working with some new technologies for this project:
 
 To populate the data for your assigned game, you will be using one of the following datasets:
 
-* [Wheel of Fortune](https://repl.it/@thatpamiam/WheelOfFortune)
-* [Jeopardy](https://repl.it/@brittanystoroz/Jeopardy)
-* [Family Feud](https://repl.it/@brittanystoroz/FamilyFeud)
+* [Wheel of Fortune](https://repl.it/@Khalid_Williams/WheelOfFortune)
+* [Jeopardy](https://repl.it/@Khalid_Williams/Jeopardy)
+* [Family Feud](https://repl.it/@Khalid_Williams/FamilyFeud)
 
 Copy your assigned data into a separate `js` file that you can then include in your repository. 
 
@@ -88,7 +88,7 @@ You should have at least one use-case for [inheritance](https://www.sitepoint.co
 
 ## Testing
 
-You should be testing your the correctness of your code throughout your project. Each JavaScript file in your project should have its own test file. (e.g. Your `Game.js` class file should have a corresponding testing file called `Game-test.js`)
+You should be testing the correctness of your code throughout your project. Each JavaScript file in your project should have its own test file. (e.g. Your `Game.js` class file should have a corresponding testing file called `Game-test.js`)
 
 Your testing suite should test all of the functionality of the game, including the following:
 
@@ -99,6 +99,11 @@ Your testing suite should test all of the functionality of the game, including t
 For the purposes of this project, you will keep your state logic completely separate from your view logic. In other words, your business logic (classes/methods) should not handle anything that deals with the UI (DOM Manipulation).
 
 To do this, you will utlize a separate `domUpdates.js` file that handles any DOM manipulation that is triggered by your business logic. This is covered in more depth in the testing lesson, which you can find [here](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
+
+<section class="note">
+  domUpdates will hold your DOM updating logic. Some of this logic may be called on by methods in your class files. You won't test actual methods in domUpdates, but you will test class methods that call on DOM updates. This is done with [spies](http://frontend.turing.io/lessons/module-2/testing-with-chai-spies.html).
+</section>
+
 
 ## User Stories
 
@@ -123,7 +128,7 @@ Your README should include the following, in this order:
 
 - Abstract at the top (A sentence or two describing the project)
 - Install/Setup instructions
-- Everything else (must include wireframes and screenshot/GIF of finished project)
+- Everything else (screenshot/GIF of finished project)
 
 ## Extensions
 
@@ -185,3 +190,12 @@ Your README should include the following, in this order:
 * [ ] Advanced Beginner - Everyone in the group speaks. Presenters do a live demo of the application. The group may speak about the planning/challenges/rewards of the project; however, the delivery does not seem thought out/well-planned. 
 * [ ] Proficient - Everyone in the group has an opporunity to speak during the presentation. The group has a visual of the application to demo (e.g. slides, recordings of interactions, live demo). The group talks about the app, speaking to the challenges, rewards, and collaborative aspects of the project.
 * [ ] Exceptional - Meets all expectations of `Proficient`. In addition, the presentation runs smoothly w/no hiccups - indicating that it was planned/rehearsed/polished. The presentation is so engaging that there is no time that the evaluators find themselves checking the time/clock.
+
+
+### Technical Articulation 
+* [ ] Expert - Responds to the question accurately and gracefully. Uses the correct vocabulary when discussing the concept, and is sure of their response. Gives an appropriate amount of detail to thoroughly answer the question, but responds well to any follow-up questions that may arise.
+* [ ] Proficient -  Responds to the question with accuracy, but may be a bit vague or unsure of themselves. May answer the question by describing an example rather than having an eloquent articulation of the concept. May not be able to dig much deeper to respond to follow-up questions that may arise. 
+* [ ] Advanced Beginner - Cannot respond to the question with accuracy. May discuss related ideas, but does not quite stay on topic for the question we're asking. May ramble a bit until they throw out the correct term, looking to the interviewer for signs of being on the right track.
+* [ ] Novice - Cannot respond to the question with accuracy. Interviewer may reprhase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
+
+If the evaluator is left wanting a bit more from your response, they may choose to continue to ask follow-up question to you - or they may open it up to volunteers in the group to assist.

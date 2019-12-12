@@ -584,6 +584,7 @@ Game play,
   - Each player starts with a score of 0
   - Each player's score should be displayed by their name
   - Each player gets an individual turn (rather than every player racing to answer the question)
+  - Winning score should be added to a leader board
 ```
 
 ```
