@@ -48,7 +48,7 @@ Fonts, colors, and general appearance are up to you. However, please stick to th
 
 Note: the "Saved Outfits" section will contain buttons, not links.
 
-We will provide assets to use (found [here]()), or you may spend 1 hour finding your own assets. **DO NOT SPEND MORE THAN ONE HOUR ON THIS.** And if you choose to use your own assets, please keep things professional - remember, future employers may one day look at this very project! 😱
+We will provide assets to use (found [here](https://github.com/turingschool/front-end-curriculum/tree/gh-pages/projects/module-1/assets/bab-assets)), or you may spend 1 hour finding your own assets. **DO NOT SPEND MORE THAN ONE HOUR ON THIS.** And if you choose to use your own assets, please keep things professional - remember, future employers may one day look at this very project! 😱
 
 By the end of Iteration 0:
 * display and style the header
