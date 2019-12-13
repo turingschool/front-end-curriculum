@@ -90,9 +90,11 @@ Each outfit should be created as an object instance of the `Outfit` class. Once 
 
 ### Iteration 2 and beyond
 
-After you have completed Iterations 0-1, your Project Manager will provide you with the next iteration, which will allow us to connect all of our pieces together!
+After you have completed Iterations 0-1, alert your Project Manager that you are ready for the next iteration. Then, your Project Manager will provide you with the spec for the next iteration.
 
 There are 6 total iterations (Iteration 0 - Iteration 5), and optional additional extensions.
+
+Each time you complete an iteration, ask for the next one!
 
 **A passing project completes functionality through iteration 5 cleanly, with refactored, thoughtful code.**
 
