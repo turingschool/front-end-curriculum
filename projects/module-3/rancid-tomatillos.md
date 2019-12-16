@@ -6,6 +6,8 @@ tags: react, redux, testing, javascript, api
 
 Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a rancid tomatillo at the screen!" Or maybe you loved the movie and you could really go for a nice, fresh tomatillo salsa to enjoy the moment. Well it's your lucky day. In this project, you'll build a movie rating site where a user can login and rate the movies they loved or hated.
 
+__
+
 ## Learning Goals
 
 * Reinforce React fundamentals
@@ -17,11 +19,11 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 
 ## Iterations
 
-### Day-1 Deliverables 
+### Iteration 0 - Day-1 Deliverables 
 Create a group Slack channel and include your instructors in the channel:
-  * Layout/Wireframes
+  * Layouts/Wireframes sketches
   * Group DTR
-  * Project management tool (GH Projects, trello, etc.) - be sure this is public so your instructors can view it
+  * Project management tool (GitHub Projects, Trello, etc.) - be sure this is public so your instructors can view it
 
 After you send us this information, we'll give you your user's name, email, and password.
 
@@ -29,29 +31,31 @@ After you send us this information, we'll give you your user's name, email, and 
 
 You will be assigned a user for your group. Each user has a name, email, and password that you will use throughout the project. This is your team's user! 
 
-Get your head around the API via the documentation below. Try them out in Postman! See what you can get from all the endpoints available.
+At this point, get your head around the API's endpoints via the documentation below. Try them out in Postman - you don't need an API key for this! See what you can get from all the endpoints available.
 
-Create a homepage (`/`) where the visitor can see all of the movies in the database with their average ratings.
+For your app, create a homepage (`/`) where the visitor can see all of the movies in the database with their average ratings.
 
 ### Iteration 2 - User Login
 
-Create a login page (`/login`) where your user can login. Ultimately, you'll need the user's ID value to make requests later. Logging in the user using the POST `/login` route documented below will give you that ID value. You could call this a login "session" when you have your user's information after logging in.
+Create a separate login page (`/login`) where your user can login. Ultimately, you'll need to obtain the user's unique ID value to make requests later. Logging in the user using the POST `/login` route documented below will give you that ID value.
 
-It probably seems weird to POST to `/login` to login a user, and this endpoint isn't even creating anything. Using a POST verb for logging in is a common convention because we need to send sensitive information like passwords in the body of requests, and POST lets us do that.
+It probably seems weird to POST to `/login` to login a user, and this endpoint isn't even creating anything! Using a POST verb for logging in is a common convention because we need to send sensitive information like passwords in the body of the login request, and a POST lets us do that. Again, nothing is created in the DB for logging in - you are doing this to retrieve user information (the ID) to use while the user is logged in.
 
 After logging in, the user knows they are logged in and they are taken back to the homepage.
 
-A user should be able to logout and they are taken to the homepage, but the app should should that no one is logged in.
+A user should be able to logout, and they are taken to the homepage. The app should should that no one is logged in.
 
 ### Iteration 3 - Movie Show Page
 
-Use router to create a dynamic route for a each movie. A "show" page is a app page that shows only a particular item. In this case, the show page is for a particular movie. This page should show all information about the movie.
+Use Router to create a dynamic route for a "show page" for each movie (`/movies/5`, for instance). A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
 
 ## Iteration 4 - Show and Add Ratings
 
-A user should be able to see their own movie rating _only_ when they are logged in to the app. Otherwise, they should only see only the movie's average rating. Everywhere a movie is shown, including the show page, the app should display the average rating and also the user's rating if they are logged in.
+A user should be able to see their own movie ratings only when they are _logged in_ to the app. Otherwise, they should only see only the movie's average rating. Everywhere a movie is shown, including the movie's show page, the app should display the movie's average rating and also the user's rating for each movie that they have rated if they are logged in.
 
 A user should be able to submit a rating for a movie. The rating must be an integer (whole number) between 1 and 10.
+
+A user is limited to one rating per movie.
 
 ## Iteration 5 - Remove Ratings
 
@@ -59,7 +63,10 @@ The only way to change a rating is to delete the old rating and submit a new rat
 
 ## Extensions
 
-Hmmm...we'll see.
+* Once logged in, sort the user's movies by the date they rated the movie (the `updated_at` info for a rating might help with this)
+* Whether or not a user is logged in, give the ability to sort the movies by release date
+
+Hmmm...we'll see if there are any others.
 
 ## The API
 
@@ -71,22 +78,29 @@ There is no setup! You are not going to run an API locally for this project. The
 
 All API endpoints (also known as "routes") are prefixed with `https://rancid-tomatillos.herokuapp.com/api/v1`. Also, wherever you see a `:user_id` or `:rating_id` in the endpoint documentation, that would be replaced by the ID _value_ in your request, like `5`, for instance. Here are the endpoints available:
 
-| URL | Verb | Request Body | Sample Response (Happy Path) |
-|-----|------|--------------|------------------------------|
-| `/movies` | GET | N/A | All movies in database with average rating: `{"movies": [{id: 1, title: "Movie Title", poster_path: "someURL", backdrop_path: "someURL", release_date: "2019-12-04", overview: "Some overview", average_rating: 6 }, ...]}` |
-| `/login` | POST | `{email: <String>, password: <String>}` | A user's login session information: `{user: {id: 1, name: "Alan", email: "alan@turing.io"}}` |
-| `/users/:user_id/ratings` | GET | N/A | A user's ratings for all movies: `{"ratings": [{id: 1, user_id: 1, movie_id: 1, rating: 6, created_at: "someDate", updated_at: "someDate"},...]}` |
-| `/users/:user_id/ratings` | POST | `{ movie_id: <Integer>, rating: <Integer between 1 and 10> }` | The rating that was successfully created: `{rating: {user_id: 2, movie_id: 19, rating: 5}}` |
-| `/users/:user_id/ratings/:rating_id` | DELETE | N/A | 204 status code (NO CONTENT in response body) |
+| Purpose | URL | Verb | Request Body | Sample Response (Happy Path) |
+|---------|-----|------|--------------|------------------------------|
+| Get all movies | `/movies` | GET | N/A | All movies in database with average rating: `{"movies": [{id: 1, title: "Movie Title", poster_path: "someURL", backdrop_path: "someURL", release_date: "2019-12-04", overview: "Some overview", average_rating: 6 }, ...]}` |
+| Login a user | `/login` | POST | `{email: <String>, password: <String>}` | A user's login session information: `{user: {id: 1, name: "Alan", email: "alan@turing.io"}}` |
+| Get all the ratings a user has submitted | `/users/:user_id/ratings` | GET | N/A | A user's ratings for all movies: `{"ratings": [{id: 1, user_id: 1, movie_id: 1, rating: 6, created_at: "someDate", updated_at: "someDate"},...]}` |
+| Submit a new movie rating for a user | `/users/:user_id/ratings` | POST | `{ movie_id: <Integer>, rating: <Integer between 1 and 10> }` | The rating that was successfully created: `{rating: {user_id: 2, movie_id: 19, rating: 5}}` |
+| Delete an existing user's rating for a movie | `/users/:user_id/ratings/:rating_id` | DELETE | N/A | 204 status code (NO CONTENT in response body) |
 
 All resources are given a unique ID in the database. For instance, every user has an `id` property, like `1` or `5`. Similarly, every movie has a unique ID called `id`, and every rating has a unique ID called `id`. The IDs are used to reference each item (user, movie, or rating) uniquely. If you need to delete a rating, then you need to know which rating to delete, which is identified by its unique `id` value.
 
 If you are sending information in the body of a request, you will need to set the request header of `Content-Type` to `application/json`.
 
-**Note:** The API might need to be reset a couple times throughout the project for various reasons, thereby destroying information your group might have saved to the database. Keep in mind your user's name, email, and password will remain the same, but their unique ID might change. Your user's saved reviews might be deleted from the API throughout the week, but it's ok!
+<section class="note">
+#### Note
 
-**Related Note:** Since the API might reset at anytime, this does not guarantee that any unique IDs for users, movies, or ratings will be the same over the lifetime of your project. So _do not hard code ID values into your application_. Just because you have one user and your user's unique ID is `id: 4` today, it could change to `id: 6` tomorrow. Just be sure to keep your app flexible to be able to handle any user.
+The API might need to be reset a couple times throughout the project for various reasons, thereby destroying information your group might have saved to the database. Keep in mind your user's name, email, and password will remain the same, but their unique ID might change. Your user's saved reviews might be deleted from the API throughout the week, but it's ok!
+</section>
 
+<section class="note">
+#### Related Note
+
+Since the API might reset at anytime, this does not guarantee that any unique IDs for users, movies, or ratings will be the same over the lifetime of your project. So _do not hard code ID values into your application_. Just because you have one user and your user's unique ID is `id: 4` today, it could change to `id: 6` tomorrow. Just be sure to keep your app flexible to be able to handle any user.
+</section>
 
 ----------------------------------------------------------
 
