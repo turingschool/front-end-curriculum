@@ -105,6 +105,26 @@ To do this, you will utlize a separate `domUpdates.js` file that handles any DOM
 </section>
 
 
+## Fetch
+
+After learning about GET and POST requests, you'll be using the following endpoints to retrieve your game data:
+
+* [Wheel of Fortune](https://fe-apps.herokuapp.com/api/v1/gametime/1903/wheel-of-fortune/data)
+* [Jeopardy](https://fe-apps.herokuapp.com/api/v1/gametime/1903/jeopardy/data)
+* [Family Feud](https://fe-apps.herokuapp.com/api/v1/gametime/1903/family-feud/data)
+
+For implementing a leaderboard, you'll want to send your high scores to the following endpoint: [http://fe-apps.herokuapp.com/api/v1/gametime/leaderboard](http://fe-apps.herokuapp.com/api/v1/gametime/leaderboard). A new high score entry should be sent through like so:
+
+```js
+{
+	appId: "1909adbecf", // where 1909 is replaced with your cohort number, and the letters are the first and last initials of each group member
+	playerName: "Bob Loblaw",
+	playerScore: 100
+}
+```
+
+You can retrieve all the high scores by doing a GET request to the same endpoint, but once that data comes back, you'll want to `filter` for only the high scores that pertain to your appId.
+
 ## User Stories
 
 These user stories may be worked on in any order that makes sense to your pair. Do take time to think about which ones must be completed before you can make progress on others. This will help you prioritize the work that you do.
