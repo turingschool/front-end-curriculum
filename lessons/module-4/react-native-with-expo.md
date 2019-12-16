@@ -55,7 +55,13 @@ expo login
 expo init ConceptBox
 ```
 
-After running this command you'll be prompted with some questions. Choose a *blank* starter project, and a *managed* workflow. You can try this again later with different options, but for now we want to work from the simplest example possible. Next, you'll be asked to give your ConceptBox a display name.  Choose whatever you like here. Next, you'll be asked if you'd like to use Yarn for managing dependencies. This is largely a personal choice, but we'll say no, and just stick with npm.
+<section class="note">
+### Note
+
+If you run into an error about your version of Node being out of date/not supported, follow the steps [here](https://stackoverflow.com/questions/57477361/react-native-expo-node-js-version-11-13-0-is-no-longer-supported).
+</section>
+
+After running this command you'll be prompted with some questions. Choose a *blank* starter project under the *managed workflow* section. You can try this again later with different options, but for now we want to work from the simplest example possible. Next, you'll be asked to give your ConceptBox a display name.  Choose whatever you like here. You might also be asked if you'd like to use Yarn for managing dependencies. This is largely a personal choice, but we'll say no, and just stick with npm.
 
 That's it! We've just created our first React Native project. Let's move into the project and start it up.
 
@@ -74,6 +80,8 @@ Once you have the Expo app on your device, you should be be able to scan that QR
 
 If everything worked, you should see the render of App.js on the screen. Cool! Open up App.js and make a small change, then save the file. Your device should have updated as well. Super cool!
 
+
+<section class="call-to-action">
 ### React Native Components
 
 In React Native, we don't use HTML tags in our rendering, instead relying on specialized components to build out our UI. Before we move on, take 5 minutes and see what you can learn about the following components:
@@ -89,6 +97,7 @@ For each of these, make sure you know:
 - What would I use this for?
 
 After you've read about each of the components, turn and talk with a partner, and discuss the answers to the above questions.
+</section>
 
 ### Styling our components
 
@@ -123,20 +132,14 @@ const styles = StyleSheet.create({
 });
 ```
 
-Here, I've added a `text` property to the styles StyleSheet, and I'm passing
-that style to the specific component that needs it. Try adding some styles of
-your own.
+Here, I've added a `text` property to the styles StyleSheet, and I'm passing that style to the specific component that needs it. Try adding some styles of your own.
 
 ### Lets actually build something
 
-Having an app running on our device is neat, but we want to do more than that.
-Our app is called ConceptBox, and we want to build something that can display
-user inputed 'concepts'. Clever huh?
+Having an app running on our device is neat, but we want to do more than that.  Our app is called ConceptBox, and we want to build something that can display user inputed 'concepts'. Clever huh?
 
 To start, we'll need to use the
-[TextInput](https://facebook.github.io/react-native/docs/textinput) component
-from the React Native library. Modify your App.js to look like what I have
-below:
+[TextInput](https://facebook.github.io/react-native/docs/textinput) component from the React Native library. Modify your App.js to look like what I have below:
 
 ```jsx
 import React, { Component } from 'react';
@@ -187,15 +190,9 @@ We'll come back together and share our learnings after 20 minutes.
 
 ## Lets talk debugging
 
-Debugging is a critical part of development on any platform, and React Native is
-no different. If you're running the app on a device, shake the device to bring
-up the Expo menu. You should see an option to 'Start remote debugging'. Click
-that.
+Debugging is a critical part of development on any platform, and React Native is no different. If you're running the app on a device, shake the device to bring up the Expo menu. You should see an option to 'Start remote debugging'. Click that.
 
-This opens up a browser window where you have access to the console and
-debugger. Open up the console and select the `Pause on Exceptions` button. Then
-throw a debugger into your JS and save, causing the app to reload. The debugger
-should trigger, allowing you to inspect `this`, `props`, etc.
+This opens up a browser window where you have access to the console and debugger. Open up the console and select the `Debug Remote JS` button. Then throw a debugger into your JS and save, causing the app to reload. The debugger should trigger, allowing you to inspect `this`, `props`, etc.
 
 <section class="note">
 ### A Refresher in the React Component Lifecycle
@@ -207,9 +204,15 @@ Just like normal React, we have access to the component lifecycle API. This incl
 
 This is just a taste of what you could do with React Native, but you should realize by now that you really already know how to do most of the difficult parts. Mobile apps often require a bit more configuration than what you may be used to from the Web, but if you can work through that, you can add a valuable skill to your toolset with React Native.
 
+<section class="checks-for-understanding">
+### Checks For Understanding
+
+- What are some of the advantages & disadvantages of using React Native? (list atleast 2 for each)
+- What are 3 React Native components and explain their purpose and functionality in as much detail as you can.
+</section>
+
 ## Resources
 
 - [React Native Docs](https://facebook.github.io/react-native/)
 - [Expo Docs](https://docs.expo.io/versions/latest/)
-- [React Native Styles Cheat
-Sheet](https://github.com/vhpoet/react-native-styling-cheat-sheet)
+- [React Native Styles Cheat Sheet](https://github.com/vhpoet/react-native-styling-cheat-sheet)
