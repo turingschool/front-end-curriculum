@@ -49,7 +49,7 @@ A user should be able to logout, and they are taken to the homepage. The app sho
 
 Use Router to create a dynamic route for a "show page" for each movie (`/movies/5`, for instance). A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
 
-## Iteration 4 - Show and Add Ratings
+### Iteration 4 - Show and Add Ratings
 
 A user should be able to see their own movie ratings only when they are _logged in_ to the app. Otherwise, they should only see only the movie's average rating. Everywhere a movie is shown, including the movie's show page, the app should display the movie's average rating and also the user's rating for each movie that they have rated if they are logged in.
 
@@ -57,11 +57,11 @@ A user should be able to submit a rating for a movie. The rating must be an inte
 
 A user is limited to one rating per movie.
 
-## Iteration 5 - Remove Ratings
+### Iteration 5 - Remove Ratings
 
 The only way to change a rating is to delete the old rating and submit a new rating. Include functionality for the user to remove an existing rating they submitted and then be able to submit a new rating (effectively the user is editing their rating).
 
-## Extensions
+### Extensions
 
 * Once logged in, sort the user's movies by the date they rated the movie (the `updated_at` info for a rating might help with this)
 * Whether or not a user is logged in, give the ability to sort the movies by release date
