@@ -200,6 +200,10 @@ You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CS
 
 In the world of Sass, the `@import` directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
 
+*Note: Adding @imports for the same file more than once will still cause performance issues. 
+
+*2019 Update:* SASS is starting to switch to `@use` instead of `@import`. This fixes some issues, and gives us new, exciting features. With `@use`, the files are only imported once by default, no matter how many times you add it with use. We get *namespaces* and can create private variables (and more). Here is a [helpful article](https://css-tricks.com/introducing-sass-modules/) with more information on @use. 
+
 Generally, your structure will have the following:
 
 * Partial files that have an underscore prefix
@@ -232,6 +236,17 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 @import 'Stories';
 /*...*/
 /*...*/
+
+```
+
+```scss
+// index.scss
+@use 'reset';
+@use 'colors';
+
+/*...*/
+
+.button { color: colors.$dark };
 
 ```
 
