@@ -10,7 +10,7 @@ module: 2
 
 ## Vocab
 
-- `Data Type` A kind of data, e.g., String, Object, Boolean, etc.
+- `Data Type` A type of data, e.g., String, Object, Boolean, etc.
 - `Primitives` / `Simple Data Types` Basic data types like String, Boolean, Number
 - `Complex Data Types` Data types that are not Primitives. E.g., Objects, Arrays
 - `Object` A data structure made up of Keys and Values
@@ -24,64 +24,169 @@ module: 2
 - `Arguments` The actual variables a function uses when it runs
 - `Prototype` An object that allows a one object to inherit methods and properties from another
 
-### Journal Warm Up
 
-* Explain a function to a five year old
-* Imagine you are on a technical interview, and an engineer asks you 'what is a data type?' How would you respond?
 
-<!-- * Consider this [code](https://codepen.io/plovett/pen/vVOGxN?editors=1112). The `log` will return `object`. Why do you think this is? -->
+
+## What is a Data Type? 
+
+In this lesson we'll talk a bit further about data types in JavaScript. Every language has a concept of included data types, but there are often some differences in how they are handled, what they are called, etc. This can cause some confusion when trying to learn a new language, so we want to make sure we understand them deeply in JavaScript!
+
+
+<!-- Instructor Notes:
+
+* Start by letting them know some of this may be review, some of it may be new
+* Popsicle stick a few people on the spot: Imagine you're on a technical interview for an engineering position and they ask you, "What is a data type?" How would you respond? Try *not* to use the word data or type in your definition.
+* Usually their answers to this are really brutal so make it comfortable for them - we're all going to give bad definitions here and empathize with them about how hard it can be to define technical vocabulary
+* After hearing a couple of definitions from students, on the whiteboard give them this definition to write in their notebooks: "Data Type - an identifier that tells us what kind of information we're working with and how we might interact with it"
+-->
+
+
+<section class="call-to-action">
+### Shout 'em Out!
+What data types are you familiar with in JavaScript?
+</section>
+
+<!-- Instructor Notes:
+
+* While they shout, on the whiteboard, write down the following data types separated into two columns (I usually use a different color for each column):
+
+boolean          objects
+undefined        arrays
+null             functions
+numbers
+strings
+
+* You can give them acronyms to remember the two separate columns: bunns (simple/primitive data types) and oafs (complex/object data types)
+* This isn't a perfect/exact list of all the data types in JavaScript, but this is all we care about in this lesson
+* Wait until you get the the primitives/complex sections to label the two columns
+-->
+
+
+<section class="call-to-action">
+### Turn and Talk
+How do we know what data type we're working with?
 <!-- 
+	* by the way it's written (e.g. strings are wrapped in quotes, numbers are not)
+	* the typeof operator (ask if they've seen or used this before or can think of a time when they might want to check the data type of a variable with this keyword. In a mod 1 project they often deal with a number field that returns the value as a string instead of a number)
+-->
+</section>
+
+
+### Dynamic Typing
+
+JavaScript is what we call a **dynamically typed** language. This means that the JavaScript interpreter will infer what kind of data type we're working with rather than us having to explicitly define that. It also means that the data type of a given value can change on you! This is a common source of bugs in JavaScript programs.
+
+This feature of JavaScript is in contrast to **statically typed** languages, where you must explicitly state what data type you would like a particular value to be. For example, in Java, we might declare a variable like so:
+
+```java
+int count = 5
+```
+
+Where `int` says "This variable must be an integer", `count` is the name of our variable, and `5` is it's value. Now `count` will always represent an integer and we will not be able to change it to a string or other data type later.
+
+Compare this to JavaScript where we might declare the same variable like so:
+
 ```js
-  const pets = ['Pandora', 'Antigone'];
-  console.log(typeof pets)
-``` -->
+var count = 5;
+```
+
+How does JavaScript know what data type we're working with? It infers it based on the way we wrote the value. If JavaScript were a person, it might look at this line of code and ask:
+
+* is the value wrapped in quotes? -> no -> it is not a string
+* is the value wrapped in hard brackets []? -> no -> it is not an array
+* is the value wrapped in curly brackets {} -> no -> it is not an object
+* is the value undefined, null, true, or false -> no -> it is not undefined, null or a boolean
+* it the value a valid number -> yes -> it must be a number
+
+### Type Coercion
+
+In addition to having our data types inferred, dynamically typed languages also allow for the data type of a value to change over time. Consider the following code:
+
+```js
+var counter = 5;
+var newCounter = '10';
+
+var totalCount = counter + newCounter;
+console.log(totalCount); // what value and data type will totalCount be?
+```
+
+<!-- Let students look over that code for a bit and give them some guesses to choose from:
+	* we would get an error because we're trying to add a number and a string
+	* a number 15
+	* a string 15
+	* a string 510
+	* a number 510
+-->
+
+What we see happen with this code is called **type coercion**. JavaScript says, "Hmm, you're trying to add a number and a string together here - I'm going to try my best and make an assumption about what you want here!". It then **coerces** the number into a string so that it can concatenate the two strings together more easily. In statically typed languages, we would get an error for trying to do this! But JavaScript is our dear friend that's trying it's best.
+
+
+<!-- This is usually a good place for a POM. When you return, label the data type columns on the whiteboard:
+
+Simple/Primitives         Complex/objects       
+boolean          			objects
+undefined        			arrays
+null             			functions
+numbers
+strings
+-->
+
+
 
 ## Simple / Primitive Data Types
 
+<section class="call-to-action">
 ### Read
-
 [Primitive Data Types](https://developer.mozilla.org/en-US/docs/Glossary/Primitive)
 
-* What are the 7 primitive data types?
-* What are 3 characteristics of primitive data types?
+* What are some characteristics of primitive data types?
+</section>
 
 
-```js
-// boolean values
-true, false
+<!-- Popsicle stick people for 1 characteristic at a time. Let them know we will only focus on some of them, you don't have to write down every single characteristic people say. You can say "Yes that's true but we're not going to focus on that one today, so I'm going to leave it off our list for now."
 
-// null value - represents an intentional absence of a value
-null
+On the whiteboard, under the primitives column, list the following characteristics:
 
-// a variable that has not been assigned a value is of type undefined
-// functions return undefined if no other return value is specified
-undefined
-
-// numeric values can be positive or negative and integers or floating point numbers
--43
-65
-3.1415
-
-// strings, a list of characters sorrounded by single or double quotes
-"true"
-'34'
-'JavaScript is great!'
-```
-
-
-##### [typeof](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof)
-The typeof operator returns a string indicating the type of the operand.
-
-#### Your Turn 
- - Make a variable for every data type and use typeof to see what string is returned.
- - What would be a use case for `typeof` in a program? Turn and talk to the person next to you to discuss why this is operator is useful.
-
-<!-- 
-	typeof is very useful for determining if something is a string, number, boolean, object or function
-	typeof null === 'object' bug explained http://2ality.com/2013/10/typeof-null.html
+* Not objects
+* Have no methods
+* Immutable
 -->
 
----
+### Working with Primitives
+
+Primitive data types are not objects, have no methods, and are immutable. Let's uncover a bit more about these properties of a primitive data type. Consider the following code:
+
+```js
+var cow = 'moo';
+cow.toUpperCase();
+console.log(cow); // what will be logged here?
+```
+
+<section class="call-to-action">
+### Turn and talk
+* On line 2, what kind of syntax are we using? Where have we seen this syntax before? <!-- Dot notation - which is used for accessing properties on an object --> 
+* What data type is `toUpperCase`? <!-- a function, and when we have a function on an object, we call it a method -->
+* What will get logged on line 3? <!-- 'moo' because primitives are immutable -->
+</section>
+
+<!-- Instructor Notes:
+* Popsicle pairs to answer the above turn and talk questions. Emphasize the first two characteristics: we're saying primitives are NOT objects and DO NOT have methods, but then on line 2 of that code we are using dot notation to call a method. Why is this possible? Any guesses? (Take volunteers for that guess)
+* The reading they did includes information about "wrapper objects" - at runtime, JavaScript will see that you have a string and that you want to DO something with it on line 2. It says "Oh shit, you actually want to DO something with this string? Real quick let me turn into an object and give you access to all of these helpful string methods but then as soon as I'm done pretend like nothing happened and go back to being a simple little string."
+* This is where the immutability characteristic comes into play - because it removes that wrapper object as soon as it's unneeded, we get 'moo' logged on line 3 because it pretends like nothing ever happened once that toUpperCase() operation is complete. In order to capture the uppercased value, we would need to reassign the cow variable to that new representation of 'moo'. Show them this in a repl.
+-->
+
+This particular code example seems to fly in the face of what we just learned about primitives. We are using dot notation to call a method on our `cow` variable, then uppercasing it with that method. You'll notice, however, that when we log our `cow` on line 3, we still get the lower cased original version of that string. In order to capture that new format, we would need to reassign the `cow` variable to that new representation of the string, like so:
+
+```js
+var cow = 'moo';
+cow = cow.toUpperCase();
+console.log(cow);
+```
+
+An important distinction about immutability is that **variables themselves** (e.g. `cow`) are not immutable, but their values are. We can completely reassign `cow` to a new value in order to store the uppercased version.
+
+
+
 
 ## Complex Data Types / Objects
 
@@ -161,9 +266,7 @@ dog[property] = 'Boris';
 console.log(dog); // { name: 'Boris' };
 ```
 
-<!-- 
-	example of production vs development environment, where an environment string is stored in a variable which then determines which api is called, background color... 
--->
+
 
 ```js
 const storeItems = [ 'hammer', 'chisel', 'rake' ];
@@ -207,10 +310,6 @@ const honeybee = {
 const fancyName = 'scientificName';
 ```
 
-<!-- 2. Create an object with the following keys:
-`book1, book2`...`book199, book200`, whose values are their corresponding number
-eg: `{ book1: 1, book2: 2`...`book199: 199, book200: 200 }`
- -->
 
 ### Arrays
 [Arrays](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array) are list-like objects, used for storing a list of related values. If you were making a list of pizza toppings, you might store them in an array like so:
@@ -235,61 +334,6 @@ This syntax is a lot more verbose, and the numbered keys don't really give us an
 <!-- Array objects inherit from the Array.prototype which gives us access to methods like `push`, `pop`, and `forEach`, which allow us to manipulate and interact with our arrays.
 
 TLDR: arrays are objects (whose keys are numbers that start their count at `0`), which have special methods which make it easier to manipulate and interact with the values in the array.-->
-<!-- 
-#### Your turn
-In the console, take a look at `Array.prototype`. What methods do you recognize? What methods are new to you?
-
-### Destructuring
-
-Similar to objects, we can use destructuring to unpack values from an array (using position) to create distinct variables
- -->
-<!-- ```js
-const sisters = ['Charlotte', 'Emily', 'Anne'];
-let [first, second, third] = sisters;
-
-console.log(second); // 'Emily'
-```
-
-**Reassigning values:**
-
-Destructuring also lets you swap values in an array without using a temporary variable.
- -->
-<!-- ```js
-const list = [1, 2, 3];
-
-// es5
-let temp = list[0];
-list[0] = list[2];
-list[2] = temp;
-
-// es6
-[ list[0], list[2] ] = [ list[2], list[0] ];
-
-console.log(list); // [3, 2, 1];
-```
-
-The square brackets are just part of the destructuring syntax here.
-
-You can read more about destructuring and the things it can do [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment).
- -->
-<!-- #### Turn and Code
-
-```js
-const numbers = [4, 5, 6, [3, 5, 7], 4];
-```
-
-Taking turns for each prompt in driver/navigator fashion, complete the following:
-Using our `numbers` array, use destructuring assignment to do the following:
-  1. Create two variables called `first` and `second` that hold the values from the first two elements of the `numbers` array
-  2. Create a variable called `nestedArray` that holds the value of our nested array, `[3, 5, 7]`
-  3. Swap the values of `5` and `6` so that the order of our array is such:  `[4, 6, 5, [3, 5, 7], 4]`
- -->
-<!--   Answers:
-  1. const [first, second] = numbers;
-  2. const [,,,nestedArray] = numbers;
-  3. [numbers[1], numbers[2]] = [numbers[2], numbers[1]]; -->
-
----
 
 ### Functions
 Functions are objects that contain JS code which can be repeatedly invoked/executed.
@@ -350,10 +394,7 @@ console.log(mabelGreeting);
 ##### One very important thing to remember!
 If we are returning a value out of a function that we wish to use elsewhere in our code, it must be stored in a way that will allow us to reference it later. The easiest way to do this is to capture the value with a variable. In the above example, we are creating a new variable named `mabelGreeting` in which we are storing our newly created greeting (aka the value being returned by invoking `makeGreeting` with an argument of `'Mabel'`).
 
-#### Your Turn
-- Create a function `add2` that takes in a parameter of `number` and returns the parameter plus 2.
-- Add conditional logic within your function to handle for the case that an argument is not passed. In this event, the parameter of `number`should be set to `0` so that the function returns `2` 
-- Refactor your function by removing the conditional logic and setting a default value of `0` for the `number` parameter
+
 
 ### Journal
 * What are some characteristics of primitive data types?

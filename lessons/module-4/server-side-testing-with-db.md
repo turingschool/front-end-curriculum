@@ -3,7 +3,6 @@ title: Server-Side Testing With A DB
 tags: express, testing, server, node, postgres
 ---
 
-
 ### Goals
 
 By the end of this lesson, you will:
@@ -72,13 +71,13 @@ We will start with getting all the students. Assuming we've seeded our database,
 Let's write our first test! Add the following to your app.test.js file:
 
 ```js
-describe('GET /students', () => {
+describe('GET /api/v1/students', () => {
   it('should return a 200 and all of the students', async () => {
     // setup
     const expectedStudents = await database('students').select()
 
     // execution
-    const res = await request(app).get('/students')
+    const res = await request(app).get('/api/v1/students')
     const students = res.body
 
     // expectation
@@ -106,14 +105,14 @@ Take 5 minutes and see if you can write a test to get a single student back from
 Here's one way you could write the test:
 
 ```js
-describe('GET /students/:id', () => {
+describe('GET /api/v1/students/:id', () => {
   it('should return a 200 and a single student if the student exists', async () => {
     // setup
     const expectedStudent = await database('students').first()
     const { id } = expectedStudent;
 
     // execution
-    const res = await request(app).get(`/students/${id}`)
+    const res = await request(app).get(`/api/v1/students/${id}`)
     const result = res.body[0]
 
     // expectation
@@ -134,7 +133,7 @@ Since we want to make sure that we are getting the correct behavior/responses in
 it('should return a 404 and the message "Student not found"', async () => {
   const invalidID = -1;
 
-  const response = await request(app).get(`/students/${invalidID}`)
+  const response = await request(app).get(`/api/v1/students/${invalidID}`)
 
   expect(response.status).toBe(404);
   expect(response.body.error).toEqual('Student not found');
@@ -175,13 +174,13 @@ beforeEach(async () => {
 Now we're ready to write our test POSTing a new student to the database:
 
 ```js
-describe('POST /students', () => {
+describe('POST /api/v1/students', () => {
   it('should post a new student to the db', async () => {
     // setup
     const newStudent = { lastname: 'Lovett', program: 'FE', enrolled: false }
 
     // execution
-    const res = await request(app).post('/students').send(newStudent)
+    const res = await request(app).post('/api/v1/students').send(newStudent)
 
     const students = await database('students').where('id', res.body.id).select()
     const student = students[0]
@@ -198,8 +197,8 @@ describe('POST /students', () => {
 ### Your Turn: PUT and DELETE students
 
 Ok, you should be feeling a bit more confident now. Working on your own, or with
-a partner, see if you can write out the tests for the `PUT /students/:id` and
-`DELETE students/:id` endpoints, and then implement them.
+a partner, see if you can write out the tests for the `PUT /api/v1/students/:id` and
+`DELETE /api/v1/students/:id` endpoints, and then implement them.
 </section>
 
 <section class="checks-for-understanding">

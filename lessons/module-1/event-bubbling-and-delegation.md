@@ -56,7 +56,7 @@ Could we modify the function that adds new buttons so that it adds an event list
 
 Setting event listeners on specific newly created DOM nodes is one way to set event listeners. However, if you're not careful, you may end up setting multiple listeners on the same node.
 
-Also, You can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
+Also, you can cause a [memory leak](http://javascript.crockford.com/memory/leak.html) if an event listeners are not unbound from an element when it is removed from the DOM. See also, [memory management and garbage collection](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management), and [4 Types of Memory Leaks in Javascript and How to Get Rid of Them](https://auth0.com/blog/four-types-of-leaks-in-your-javascript-code-and-how-to-get-rid-of-them/).
 
 So how else can we listen for events on dynamic content?  Let's dive into how events work a little more first and then come back to this question.
 
@@ -68,7 +68,7 @@ Event propagation is an important yet misunderstood topic/term when talking abou
 
 * **Event capture phase** - When an event occurs in the DOM, notification of the event is passed starting at the top of the DOM tree and passing down through all parent element nodes all the way to the target node where the event occurred.
 * **Event target phase** - After the capturing phase occurs, the Target phase occurs. The target phase only includes a notification of Node where the event took place.
-* **Event bubbling phase** - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM
+* **Event bubbling phase** - This is the final phase to occur, although many people think this is the first phase. In the bubbling phase a notice is passed from the target Node up through all of the parent Nodes all the way back to the top root of the DOM.
 
 <section class="call-to-action">
 ### Your Turn
@@ -78,7 +78,7 @@ Take a couple minutes to create an analogy and visual representation of event pr
 
 ## Event Bubbling
 
-Now we've talked about the very basics of events, let's turn our attention to event bubbling, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to children of those nodes.
+Now we've talked about the fundamentals of events, let's turn our attention to **event bubbling**, which refers to the ability of events set on DOM nodes to "bubble up" and also apply to ancestors of those nodes.
 
 Many people question why more attention isn't paid to the capturing phase. Simply put, it's unlikely that you'll have to use it. IE < 9 uses only event bubbling, whereas IE9+ and all major browsers support both.
 
@@ -115,7 +115,7 @@ You may have noticed that the event listeners on a parent element are fired when
 
 When an event occurs, the browser checks the element to see if there are any event listeners registered. After it checks the element where the event occurred, the browser works its way up the DOM tree to see if any of the parents have a listener registered, then grandparents, and so on. It checks every element all the way up to the root. This process is known as _event bubbling_.
 
-Try out the following code in the example code pen:
+Try out the following code in the example CodePen:
 
 ```js
   var grandParent = document.querySelector('.grandparent');
@@ -156,6 +156,7 @@ Open your journal and address the following:
 ```html
 <form>
   <div>
+    <h2></h2>
     <p></p>
   </div>
 </form>
@@ -164,11 +165,11 @@ Open your journal and address the following:
 
 ## The Event Object
 
-Sometimes inside an event handler function, you might see a parameter specified with a name such as `event`, `evt`, or simply `e`. This is called the **event object**, and it is automatically passed to event handlers to provide extra features and information. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
+Sometimes inside an event handler function, you might see a parameter specified with a name such as `event`, `evt`, or simply `e`. This parameter holds the **event object**, and it is automatically passed to event handlers to provide extra features and information. In the case of the click event we've been using as an example, this is a `MouseEvent`. You can visit [the MDN page for `Event`](https://developer.mozilla.org/en-US/docs/Web/API/Event) to explore the full list of supported event types.
 
 Each type of event supports a number of different properties. `MouseEvent`s contain information about the `x` and `y` coordinates where the mouse was clicked. `KeyboardEvent` has information about which key was pressed. The `currentTarget` property on the `Event` object can be useful during the event bubbling phase.
 
-Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` of the event.
+Let's make some changes to the code from earlier. Instead of logging a description of each element where an event was triggered, either by a click or through event bubbling, let's log the `target` property of the event.
 
 ```js
 grandParent.addEventListener('click', function(event) {
@@ -187,7 +188,7 @@ button.addEventListener('click', function(event) {
 <section class="call-to-action">
 ### Pair Practice
 
-Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful? What happens when you log `this` in each of the separate elements above?
+Modify the code above to log the event itself (as opposed to the `target` property on the event). What other properties on the event object look particularly useful or interesting?
 </section>
 
 ## Event Delegation
@@ -195,7 +196,6 @@ Modify the code above to log the event itself (as opposed to the `target` proper
 With the understanding of **event propagation** and the **event object**, we can now go back to the original issue with handling events on dynamic content. Rather than manage the addition and removal of event listeners, there is a methodology you can use called ***event delegation***.
 
 In ***event delegation***, we take advantage of the fact that events bubble in the event loops by setting an event listener on one parent. This event listener analyzes bubbled events to find a match in its child elements. Event delegation is one of the most helpful patterns for DOM events. It simplifies things and can save memory since there is no need to add many handlers.
-
 
 The algorithm:
  1. Put a single handler on a container

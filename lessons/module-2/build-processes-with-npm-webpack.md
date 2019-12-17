@@ -59,7 +59,16 @@ When we're viewing applications on the internet, this retrieval process follows 
 
 If we were simply using the filesystem to open our application files in the browser, the environment we'd be building in would behave slightly differently than if we were interacting with an HTTP server. In order to reduce any potential differences here, we can set up our own HTTP server that runs on our machine. This is one of the first main benefits we get from webpack.
 
-We talked earlier about NPM, and briefly discussed the scripts section of our `package.json` file. If we use the `start` command from this scrips section, by typing `npm run start` into our terminal, we will fire up a development server and open our app in the browser at a URL like `localhost:8080`. This is how you'll most frequently be viewing your applications from now on as you develop them.
+We talked earlier about NPM, and briefly discussed the scripts section of our `package.json` file. If we use the `start` command from this scrips section, by typing `npm run start` into our terminal, we will fire up a development server and open our app in the browser at a URL like `localhost:8080`. This is how you'll be viewing your applications from now on as you develop them.
+
+<section class="call-to-action">
+### Tips
+
+* You will always need to have one terminal tab open that just runs your server. You must open an additional terminal tab in order to run other commands (like git commit/push etc.)
+* If you view your app through the filesystem, it will be horribly broken - check your URL and make sure you're only viewing it at localhost:8080
+* If you already have a server running, and you try to run another one, it will start another server up at localhost:8081...8082..etc. Try to be very diligent with your terminal tabs so that you're always looking at the right URL and you only have one server running
+* You can shut down your server with control+C
+</section>
 
 #### Live Reloading Changes
 
@@ -67,6 +76,12 @@ Besides more closely mimicking and following the rules of HTTP, having a local s
 
 Make a change to your CSS file and save it. Watch the change take effect immediately! Webpack is essentially "watching" any files that we might be working with, and when it detects a change, it will reload our app to reflect that update.
 
+<section class="call-to-action">
+### Tips
+
+* If you don't see your changes automatically reflected, you may have introduced a syntax error that prevented webpack from properly reading your files
+* Check your terminal where your server is running and see if you see any errors. These will point you to where the syntax error occurred
+</section>
 
 ### Bundling & Pre-Processing Files
 

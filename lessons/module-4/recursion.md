@@ -63,19 +63,16 @@ Try solving this using an if statement, and then try solving it using a [`while`
 **Solution**:
 
 ```
-function countdown(number) {
+const countdown = number => {
   // check our base case, if statement
-  if (number < 0) {
-    return;
+  if (!number) {
+    return 0;
   }
   
   console.log(number);
   
-  // get closer to base case
-  number--;
-  
-  // execute function again
-  countdown(number)
+  // execute function again minus 1
+  countdown(number - 1)
 }
 
 countdown(3); // 3, 2, 1, 0
@@ -84,7 +81,7 @@ countdown(3); // 3, 2, 1, 0
 Or, using a while loop:
 
 ```
-function countdown(number) {
+const countdown = number => {
   // condition of while loop serves as base case
   while (number >= 0) {
   
@@ -131,16 +128,16 @@ It can be helpful to break down what each step of this problem looks like. Here'
 **Solution**:
 
 ```
-function sum(array) {
+const sum = nums => {
   // base case
-  if (!array.length) {
+  if (!nums.length) {
     return 0;
   }
   
   // get closer to base case
-  let number = array.shift();
+  let number = nums.shift();
   
-  return number + sum(array);
+  return number + sum(nums);
 }
 ```
 

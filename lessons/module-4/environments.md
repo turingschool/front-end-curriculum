@@ -122,13 +122,14 @@ In node applications, our environment variables are always prefixed with `proces
 
 The `env` property on our process returns another object that contains details about the current environment. This is where we store and read our environment variables. You can create and set your own environment variables in a couple different ways:
 
+<!-- To set it for current shell and all processes started from current shell -->
+
 ```bash
 export FOO=bar
 npm start
 ```
 
-Or...
-
+<!-- To set variable only for current shell -->
 ```bash
 FOO=bar node server.js
 ```

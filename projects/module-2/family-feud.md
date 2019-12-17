@@ -24,6 +24,7 @@ Game play,
   - In the first two rounds, players will take turns guessing responses to the survey. The round is over when all responses to the survey have been guessed
   - The third round should be a "Fast Money" round: each player gets 30 seconds to enter as many responses as they can think of
   - The winner is determined by the player with the highest total score at the end of 3 rounds
+  - Winning score should be added to a leader board
 ```
 
 ```
