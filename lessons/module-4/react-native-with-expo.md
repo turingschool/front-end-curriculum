@@ -190,9 +190,9 @@ We'll come back together and share our learnings after 20 minutes.
 
 ## Lets talk debugging
 
-Debugging is a critical part of development on any platform, and React Native is no different. If you're running the app on a device, shake the device to bring up the Expo menu. You should see an option to 'Start remote debugging'. Click that.
+Debugging is a critical part of development on any platform, and React Native is no different. If you're running the app on a device, shake the device to bring up the Expo menu. You should see an option to `Debug Remote JS`.  Click that.
 
-This opens up a browser window where you have access to the console and debugger. Open up the console and select the `Debug Remote JS` button. Then throw a debugger into your JS and save, causing the app to reload. The debugger should trigger, allowing you to inspect `this`, `props`, etc.
+This opens up a browser window where you have access to the console and debugger. Open up the console and select the `Pause on Exceptions` button under the `Sources` tab. Then throw a debugger into your JS and save, causing the app to reload. The debugger should trigger, allowing you to inspect `this`, `props`, etc.
 
 <section class="note">
 ### A Refresher in the React Component Lifecycle
