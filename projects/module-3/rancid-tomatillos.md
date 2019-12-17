@@ -21,9 +21,10 @@ __
 
 ### Iteration 0 - Day-1 Deliverables 
 Create a group Slack channel and include your instructors in the channel:
-  * Layouts/Wireframes sketches
+  * Layouts/Wireframes sketches of your user interface
   * Group DTR
   * Project management tool (GitHub Projects, Trello, etc.) - be sure this is public so your instructors can view it
+  * PR template your group agrees to follow for every PR submitted ([here is a good example of a PR template](https://quickleft.com/blog/pull-request-templates-make-code-review-easier/))
 
 After you send us this information, we'll give you your user's name, email, and password.
 
@@ -63,10 +64,10 @@ The only way to change a rating is to delete the old rating and submit a new rat
 
 ### Extensions
 
-* Once logged in, sort the user's movies by the date they rated the movie (the `updated_at` info for a rating might help with this)
+* Once logged in, sort the user's movies by the date they rated the movie (the `created_at` info for a rating might help with this...)
 * Whether or not a user is logged in, give the ability to sort the movies by release date
 
-Hmmm...we'll see if there are any others.
+Think of some others!
 
 ## The API
 
