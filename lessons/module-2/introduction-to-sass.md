@@ -39,6 +39,12 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
+Now, this version of Sass looks a little different. Let's compare the same code written in Sass and SCSS syntax. 
+[Sass Codepen](https://codepen.io/hannahhch/pen/eYmdpLj)
+[SCSS Codepen](https://codepen.io/hannahhch/pen/MWYjKWP)
+
+You _may_ see the Sass syntax in the wild, but we will focus on the newer SCSS syntax.
+
 ### SCSS
 
 SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced with more recognizable syntax.
@@ -113,7 +119,7 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 }
 ```
 
-Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right.
+Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right. Here is a [good article](https://css-tricks.com/difference-between-types-of-css-variables/)to read more about the differences between CSS and Sass variables. 
 
 <hr />
 
