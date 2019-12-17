@@ -6,8 +6,6 @@ tags: react, redux, testing, javascript, api
 
 Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a rancid tomatillo at the screen!" Or maybe you loved the movie and you could really go for a nice, fresh tomatillo salsa to enjoy the moment. Well it's your lucky day. In this project, you'll build a movie rating site where a user can login and rate the movies they loved or hated.
 
-__
-
 ## Learning Goals
 
 * Reinforce React fundamentals
@@ -20,6 +18,7 @@ __
 ## Iterations
 
 ### Iteration 0 - Day-1 Deliverables 
+
 Create a group Slack channel and include your instructors in the channel:
   * Layouts/Wireframes sketches of your user interface
   * Group DTR
