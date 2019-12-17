@@ -200,9 +200,9 @@ You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CS
 
 In the world of Sass, the `@import` directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
 
-*Note: Adding @imports for the same file more than once will still cause performance issues. 
+*Note: Adding an `@import` for the same file more than once will still cause performance issues. 
 
-*2019 Update:* SASS is starting to switch to `@use` instead of `@import`. This fixes some issues, and gives us new, exciting features. With `@use`, the files are only imported once by default, no matter how many times you add it with use. We get *namespaces* and can create private variables (and more). Here is a [helpful article](https://css-tricks.com/introducing-sass-modules/) with more information on @use. 
+*2019 Update:* SASS is starting to switch to `@use` instead of `@import`. This fixes some issues, and gives us new, exciting features. With `@use`, the files are only imported once by default, no matter how many times you add it with `@use`. We get *namespaces* that help us to know where our imports are coming from. Here is a [helpful article](https://css-tricks.com/introducing-sass-modules/) with more information on the features `@use` brings. 
 
 Generally, your structure will have the following:
 
@@ -241,12 +241,15 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 
 ```scss
 // index.scss
-@use 'reset';
-@use 'colors';
+@use 'reset' as *; // the star removes namespace
+@use 'colors'; // namespace is automatically set as "colors"
+@use 'layout' as l; // we can change our name space to be "l"
 
 /*...*/
 
 .button { color: colors.$dark };
+
+.wrapper { display: l.$flex };
 
 ```
 
@@ -255,7 +258,7 @@ But what about media queries? There are a lot of [different approaches](http://t
 <section class="call-to-action">
 #### Turn and Talk
 
-* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
+* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS? How is `@use` different from Sass' `@import` at-rule?
 * With your partner, find two different ways to set up your file structure with Sass
 </section>
 
