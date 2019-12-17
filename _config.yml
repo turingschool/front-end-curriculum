@@ -50,6 +50,7 @@ algolia:
   index_name:     'front-end-curriculum'
   search_only_api_key: '5b955c38c514d8e5cb906c983c8c24db'
   extensions_to_index: 'html,md'
+  nodes_to_index: 'p,blockquote,li,h2,h3,h4'
   settings:
     attributeForDistinct: 'title'
     distinct: true
