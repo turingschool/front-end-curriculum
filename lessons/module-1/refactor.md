@@ -41,7 +41,8 @@ You should be following the red-green-refactor flow, just as you do with TDD. Re
 
 With the repo you select based on the level of heat you want, take these steps:
 - Make sure you are familiar with the current functionality (i.e., run the app in the browser!)
-- There are many refactoring opportunities here. With your partner, decide on **one** area to focus your energy.
+- There are many refactoring opportunities here. List all the ones you see out.
+- With your partner, decide on **one** area to focus your energy.
 - Rubber duck it - what do you know? Which parts seem almost `impossible` right now? Takes notes in notebook or with comments to start chipping away at the challenge.
 - Once you feel like you are done, ensure that the app is behaving as it originally was in the browser. Make sure to clean up any old comments, old code, whitespace, etc.
 
