@@ -15,7 +15,7 @@ length: 60
 - `refactor` Rewriting working code for readability, maintainability, or performance without changing it's behavior
 
 <section class="call-to-action">
-### Warm Up
+### Turn + Talk
 
 Talk with your partner: If someone says, "this needs to be refactored", what might they see that makes them say that?
 
