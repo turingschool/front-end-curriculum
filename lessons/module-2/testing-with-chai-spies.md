@@ -4,8 +4,8 @@ tags: TDD, unit testing, mocha, chai, webpack, spies
 mod: 2
 ---
 
-<section class="call-to-action">
-We'll be working with a <a href="https://github.com/turingschool-examples/chai-spy-box" target="\__blank">new testing repo</a>.
+<!-- <section class="call-to-action">
+We'll be working with a <a href="https://github.com/turingschool-examples/chai-spy-box" target="\__blank">new testing repo</a>. -->
 
 </section>
 
