@@ -53,10 +53,11 @@ describe('saveDetails', function() {
   it('should save details to localStorage', function() {
     var box = new Box(100, 100);
     box.saveDetails();
-    expect(localStorage.getItem('box').to.equal({
+    expect(localStorage.getItem('box')).to.deep.equal({
       width: 100,
       height: 100
-    })
+    });
+  });
 });
 ```
 
