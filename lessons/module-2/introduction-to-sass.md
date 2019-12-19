@@ -39,6 +39,12 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
+Now, this version of Sass looks a little different. Let's compare the same code written in Sass and SCSS syntax. 
+[Sass Codepen](https://codepen.io/hannahhch/pen/eYmdpLj)
+[SCSS Codepen](https://codepen.io/hannahhch/pen/MWYjKWP)
+
+You _may_ see the Sass syntax in the wild, but we will focus on the newer SCSS syntax.
+
 ### SCSS
 
 SCSS stands for Sassy CSS (...seriously). In May, 2010 `SCSS` was introduced with more recognizable syntax.
@@ -113,7 +119,7 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 }
 ```
 
-Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right.
+Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right. Here is a [good article](https://css-tricks.com/difference-between-types-of-css-variables/)to read more about the differences between CSS and Sass variables. 
 
 <hr />
 
@@ -200,6 +206,10 @@ You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CS
 
 In the world of Sass, the `@import` directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
 
+*Note: Adding an `@import` for the same file more than once will still cause performance issues. 
+
+*2019 Update:* SASS is starting to switch to `@use` instead of `@import`. This fixes some issues, and gives us new, exciting features. With `@use`, the files are only imported once by default, no matter how many times you add it with `@use`. We get *namespaces* that help us to know where our imports are coming from. Here is a [helpful article](https://css-tricks.com/introducing-sass-modules/) with more information on the features `@use` brings. 
+
 Generally, your structure will have the following:
 
 * Partial files that have an underscore prefix
@@ -235,12 +245,26 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 
 ```
 
+```scss
+// index.scss
+@use 'reset' as *; // the star removes namespace
+@use 'colors'; // namespace is automatically set as "colors"
+@use 'layout' as l; // we can change our name space to be "l"
+
+/*...*/
+
+.button { color: colors.$dark };
+
+.wrapper { display: l.$flex };
+
+```
+
 But what about media queries? There are a lot of [different approaches](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32) that you can take. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844) that walks through setting up responsive mixins for each component.
 
 <section class="call-to-action">
 #### Turn and Talk
 
-* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS?
+* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS? How is `@use` different from Sass' `@import` at-rule?
 * With your partner, find two different ways to set up your file structure with Sass
 </section>
 
