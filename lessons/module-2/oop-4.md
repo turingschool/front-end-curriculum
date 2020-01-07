@@ -77,6 +77,6 @@ While reviewing the code, ask yourself the following questions:
 
 ### Closing
 
-Within your original group, discuss the following questions - 
+In your journals, answer the following questions:  
 * What new information have you learned from the readings? From the code review?
-* How will this effect the way you continue to write your GameTime projects? Is there any code you now would like to change? 
+* How will this effect the way you continue to write object-oriented code? Is there any code you now would like to change in hindsight? 
