@@ -18,4 +18,12 @@ It's a dog party!  The reality is, as a frontend developer, you're going to be b
 - You only have a little over an hour, so its likely you won't have time to make it pixel perfect - that's ok! Start with the general layout, then work your way into details.
 
 # ![Dog Party](/assets/images/dog-party.png)
-<!-- # ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg) -->
+
+### Part 2
+
+- Initialize a git repository and commit your work
+- From here on out, you cannot make ANY changes to the HTML file (with the exception of one line)
+- Touch a second CSS file and change the link in HTML to point to this file
+- With the HTML you've written, re-create this comp:
+
+# ![Dog Party 02](/assets/images/projects/zen-garden/zen-garden-02.jpg)
