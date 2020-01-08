@@ -6,9 +6,13 @@ tags: react, redux, javascript, api
 
 ## Introduction
 
-This project will challenge you to use the technology you've become familiar with over the course of Mod 3, as well as force you to work inside some constraints. Everyone will be working with (at least) one API, and one audience.
+This project will challenge you to use the technology you've become familiar with over the course of Mod 3, as well as force you to work inside some constraints. Everyone will be working with (at least) one API and one audience.
 
-Your instructors will pass out cards to each of you. You now have 30 minutes to haggle with each other. Want a different API? Find someone to trade with.
+Choose an open API to work with where the data sounds interesting to you. A good place to start looking is [this repo with a list of free/open APIs](https://github.com/public-apis/public-apis). Choose an API where you could make an application based on the data from the API. _Do not choose an API that requires "OAuth or OAuth 2.0"_, which is a more complicated authentication scheme. APIs that require an `apikey` are usually easy to deal with, and some APIs don't require an `apikey`.
+
+After you have an API that interests you, the next thing you need to do is choose an audience. You need to be _specific_ with your audience. For instance, if you chose an API that served cat data, your audience should just be "cat lovers", it should be something more specific like "cat lovers who live in Alaska". This will give you some constraints for the project to make it more unique and design decisions a little easier.
+
+<!-- Your instructors will pass out cards to each of you. You now have 30 minutes to haggle with each other. Want a different API? Find someone to trade with. -->
 
 Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas. You'll be meeting with some of your peers and an instructor shortly to get feedback on each idea.
 
