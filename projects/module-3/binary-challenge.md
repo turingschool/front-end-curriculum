@@ -14,7 +14,7 @@ After you have an API that interests you, the next thing you need to do is choos
 
 <!-- Your instructors will pass out cards to each of you. You now have 30 minutes to haggle with each other. Want a different API? Find someone to trade with. -->
 
-Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas. You'll be meeting with some of your peers and an instructor shortly to get feedback on each idea.
+Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas.
 
 ## Wireframes
 
@@ -37,7 +37,7 @@ You will need to make 8-10 wireframes for this project, which you'll review with
 
 ### Day-1 Deliverables
 
-By noon of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do.
+By noon of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do. Have a backup API/audience ready just in case.
 
 ## Rubric
 
