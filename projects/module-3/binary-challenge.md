@@ -22,8 +22,6 @@ Wireframing will be a major component of this project. The more time you spend i
 
 There are a lot of different tools you can use for this, including just plain old pen and paper. Just make sure you really spend time thinking about the user interactions. For a good overview of how to effectively wireframe a project, check out [this video](https://www.youtube.com/watch?v=e2Oynq-mOLk).
 
-You will need to make 8-10 wireframes for this project, which you'll review with your peers and an instructor.
-
 ## Project Goals and Requirements
 
 1. Use the technology you've been working with over the course of the module to
@@ -38,6 +36,8 @@ You will need to make 8-10 wireframes for this project, which you'll review with
 ### Day-1 Deliverables
 
 By noon of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do. Have a backup API/audience ready just in case.
+
+If you have wireframes ready to go, send those along too. You can send your wireframes to your project manager at any time to get feedback.
 
 ## Rubric
 
