@@ -35,6 +35,10 @@ You will need to make 8-10 wireframes for this project, which you'll review with
 
 2. Work within constraints to deliver a unique product for your audience which helps them in some way. Your project must utilize your assigned API and technology, and must be built for your assigned audience.
 
+### Day-1 Deliverables
+
+By noon of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do.
+
 ## Rubric
 
 ### Specification Adherence
