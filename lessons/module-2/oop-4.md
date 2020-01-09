@@ -23,11 +23,11 @@ By the end of this session, you will be able to:
 
 ### Reflection (10 minutes)
 
-In your **original** FitLit Pairs, get with another pair and discuss what it was like to structure your code around objects when first building FitLit, and when refactoring another group's FitLit. Focus specifically on:
+In your Whats Cookin' Pairs, get with another pair and discuss what it was like to structure your code around objects when first building the project, and when refactoring another group's FitLit. Focus specifically on:
 
 * What **didn't** we teach you, that would have been helpful to know?
-* How did you/your assigned FitLit project stray from the class structure that the spec outlined, if at all? Why did you do that?
-* How did what you built compare to what you received for your group project? What similarities/differences did you notice?
+* How did your paired project / your assigned refactor tractor project stray from the class structure that the spec outlined, if at all? Why did you do that?
+* How did what you built compare to what you received for your refactor tractor project? What similarities/differences did you notice?
 * Are there any different approaches you might take to structuring your code now if given a similar project?
 
 
@@ -59,7 +59,6 @@ Using the journal questions to guide you, start a discussion within your small g
 
 
 
-<!-- 
 #### Code Review & Group Discussion
 
 [*Jeopardy*](https://github.com/turingschool-examples/oop-review/tree/master/jeopardy)  
@@ -78,6 +77,6 @@ While reviewing the code, ask yourself the following questions:
 
 ### Closing
 
-Within your original group, discuss the following questions - 
+In your journals, answer the following questions:  
 * What new information have you learned from the readings? From the code review?
-* How will this effect the way you continue to write your GameTime projects? Is there any code you now would like to change? -->
+* How will this effect the way you continue to write object-oriented code? Is there any code you now would like to change in hindsight? 

@@ -6,19 +6,21 @@ tags: react, redux, javascript, api
 
 ## Introduction
 
-This project will challenge you to use the technology you've become familiar with over the course of Mod 3, as well as force you to work inside some constraints. Everyone will be working with (at least) one API, and one audience.
+This project will challenge you to use the technology you've become familiar with over the course of Mod 3, as well as force you to work inside some constraints. Everyone will be working with (at least) one API and one audience.
 
-Your instructors will pass out cards to each of you. You now have 30 minutes to haggle with each other. Want a different API? Find someone to trade with.
+Choose an open API to work with where the data sounds interesting to you. A good place to start looking is [this repo with a list of free/open APIs](https://github.com/public-apis/public-apis). Choose an API where you could make an application based on the data from the API. _Do not choose an API that requires "OAuth or OAuth 2.0"_, which is a more complicated authentication scheme. APIs that require an `apikey` are usually easy to deal with, and some APIs don't require an `apikey`.
 
-Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas. You'll be meeting with some of your peers and an instructor shortly to get feedback on each idea.
+After you have an API that interests you, the next thing you need to do is choose an audience. You need to be _specific_ with your audience. For instance, if you chose an API that served cat data, your audience should not just be "cat lovers", it should be something more specific like "cat lovers who live in Alaska". This will give you some constraints for the project to make it more unique and design decisions a little easier.
+
+<!-- Your instructors will pass out cards to each of you. You now have 30 minutes to haggle with each other. Want a different API? Find someone to trade with. -->
+
+Once you've got your API and audience settled, start thinking about how you're going to build something for this audience, using that API. Come up with a few different ideas.
 
 ## Wireframes
 
 Wireframing will be a major component of this project. The more time you spend intentionally thinking about what the layout of your application will look like, the better the final result will be.
 
 There are a lot of different tools you can use for this, including just plain old pen and paper. Just make sure you really spend time thinking about the user interactions. For a good overview of how to effectively wireframe a project, check out [this video](https://www.youtube.com/watch?v=e2Oynq-mOLk).
-
-You will need to make 8-10 wireframes for this project, which you'll review with your peers and an instructor.
 
 ## Project Goals and Requirements
 
@@ -30,6 +32,12 @@ You will need to make 8-10 wireframes for this project, which you'll review with
    - Asynchronous JavaScript
 
 2. Work within constraints to deliver a unique product for your audience which helps them in some way. Your project must utilize your assigned API and technology, and must be built for your assigned audience.
+
+### Day-1 Deliverables
+
+By noon of day 1, send your instructional project manager the plans for you API, specific audience, and a general overview of what the application will do. Have a backup API/audience ready just in case.
+
+If you have wireframes ready to go, send those along too. You can send your wireframes to your project manager at any time to get feedback.
 
 ## Rubric
 

@@ -73,6 +73,10 @@ But as developers, when you hear "design", you should be thinking "functionality
 
 **Good design anticipates users' needs.**
 
+## Paired Activity
+[Website 1](https://gist.github.com/hannahhch/44391a45d30b7d084d14e26d56659807)
+[Website 2](https://gist.github.com/hannahhch/48e6a8b421c4351ca3c1413c7be25f97)
+
 ## Usability Considerations & Processes
 
 ![usability tools](https://blog.therestaurantzone.com/wp-content/uploads/2017/01/restaurant-recruiting-tools.jpg)
@@ -100,7 +104,7 @@ Consider your user:
 - etc
 
 User experience designers use a number of tools to help them keep the end user in mind:
-- Personas (imaginary end users - we will go over this in our next UX/UI lesson!)
+- Personas (imaginary end users)
 - User stories (detailed road maps of a user's journey through an app while attempting to reach a goal; every button they click, every page they visit)
 - Consider voice/tone
 - Forgiving (what happens if a user makes a mistake? Can they go back and fix it? Do they feel chastised or supported?)
@@ -108,6 +112,7 @@ User experience designers use a number of tools to help them keep the end user i
 - Consistent (layout, interactions, functionality should be consistent from one page to the next)
 - Seamless learning curve (the onboarding process should be painless and intuitive)
 
+![university website comic](https://imgs.xkcd.com/comics/university_website.png)
 
 ### Content Analysis - Context
 

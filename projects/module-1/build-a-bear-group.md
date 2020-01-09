@@ -202,6 +202,8 @@ As a user,
 * Add data validation to ensure that no two outfits can be named the same thing
 * Add UI so users can filter saved outfits by the garments or background they include
 * Refactor so one outfit can contain more than one item from each category (i.e. the bear can wear more than one accessory, hat, etc, at a time).
+* Modify the outfit card so a small image of the dressed bear appears next to the name of the outfit.
+*
 
 -->
 
@@ -258,6 +260,6 @@ To earn a given score, an application must meet the requirements listed in that 
   * Uses classes to encapsulate data (state) and behavior (methods)
 * **2:**
   * JavaScript demonstrates clear organization, with variable declarations grouped together, function declarations grouped together, event listeners grouped together.
-  * Variables and functions are named thoughtfully and semantically
+  * Variables and functions are named thoughtfully and semantically. There are no un-used variables in the codebase
   * DRY and SRP practices are attempted in codebase and all team members can speak to implementation decisions
 * **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)

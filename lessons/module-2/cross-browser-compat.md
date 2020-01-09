@@ -48,7 +48,7 @@ Finally, some companies are hesitant to stop supporting older browsers simply fo
 #### Turn and Talk
 
 * In your own words, describe an API.
-* What are examples of browser APIs that you have used in past projects? (Be sure that you Check the browser compatability chart in the documentation)
+* What are examples of browser APIs that you have used in past projects? Check the browser compatability chart in the documentation. 
 </section>
 __________________________________________
 
@@ -140,6 +140,19 @@ By providing a plain colored background with the `background: #1e5799` property,
 Because browsers will skip properties they don't understand, we can add a `filter` property specifically for older versions of IE. This is a particular rule that only Internet Explorer understands (obviously the syntax looks like hell), but other browsers will simply ignore this in favor of the other gradient declarations.
 
 You'll also notice we are specifying our gradients with indicators such as `-moz-linear-gradient` and `-webkit-linear-gradient`. These are called **vendor prefixes**, and can be used to target a specific browser vendor (Firefox or Chrome/Safari, in this case). These are useful when a new CSS declaration is added to the spec and platform engineers are still attempting to implement it. Eventually, when the implementation is more stable, these can be dropped in favor of the more generic `linear-gradient` declaration that all modern browsers will recognize.
+
+[Autoprefixer](https://autoprefixer.github.io/) is a great resource to add vendor prefixes to chunks of CSS code.
+
+![vendor prefix list](https://i.redd.it/n4icam7prn421.jpg). 
+
+Typically vendor prefixes are added to the beginning of the css property value, but sometimes they can look a little different. 
+[Range Example](https://codepen.io/hannahhch/pen/wEqXmN)
+
+### Reset Styles
+
+![form elements in different browsers](https://formalize.me/assets/images/chrome_examples.png)
+
+Every browser applies a slightly different look to native HTML elements. Because of this, many developers will chose to include a reset stylesheet, to start off a project in a more consistant place. The [Meyer Reset](https://meyerweb.com/eric/tools/css/reset/) was one of the first, and is still used today. 
 
 ### Feature Detection
 Feature detection is similar to fallbacks, though it's more about the process of determining whether or not a browser supports a particular piece of code. We can write our own conditional code to detect feature support, and within each condition, provide the best possible user experience for that scenario. For example, some browsers might support the new [Notifications API](https://developer.mozilla.org/en-US/docs/Web/API/notification) that allows for mobile-style push notifications from the browser. In an application where we want to provide this functionality, we'd want to detect whether or not the browser recognizes the API with a conditional like this:
@@ -243,7 +256,9 @@ __________________________________________
 * [Polyfills vs. Shims](http://www.2ality.com/2011/12/shim-vs-polyfill.html)
 * [IE Conditional Comments](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/)
 * [BrowserStack](https://www.browserstack.com/)
-__________________________________________
+* [Autoprefixer](https://autoprefixer.github.io/)
+* [Flexbugs](https://github.com/philipwalton/flexbugs)
+
 
 <section class="checks-for-understanding">
 ## Checks for Understanding
@@ -251,3 +266,12 @@ __________________________________________
 * You’re building an app that relies on knowing a person’s location. You want to use the geolocation API but it’s unsupported in some of the platforms your audience uses. What steps will you take to resolve this discrepancy?
 * What research must you first do to determine whether you’ll take a progressive enhancement or graceful degradation approach?
 </section>
+
+<!-- 
+Instructor Notes:
+
+Start class by showing this tweet: https://twitter.com/Martijn_Cuppens/status/1015169981368225793
+Discuss and open up div in different browsers. Get students to make guesses as to what is happening. 
+
+
+-->
