@@ -31,7 +31,7 @@ By EOD on Kick Off Day: DM your assigned instructor with two links: Project Boar
 
 ### Architecture
 
-Your entire application will consist of one HTML page or template. You will have two JavaScript files:
+Your entire application will consist of one HTML page or template. You will have three JavaScript files:
 
 1. A `todo-list.js` file that contains a `ToDoList` class.
 	* `ToDoList` methods must include, _but are not limited to_:
@@ -40,7 +40,8 @@ Your entire application will consist of one HTML page or template. You will have
 		3. `deleteFromStorage`
 		4. `updateToDo` (should update the todo's title and urgency)
 		5. `updateTask` (should update a task's content and if it has been completed)
-2. A `main.js` file that contains all DOM related JavaScript
+2. A `task.js` file that contains a Task class. We aren’t giving you any requirements about what methods or properties should be on it.
+3. A `main.js` file that contains all DOM related JavaScript
 
 ### Data Model
 
