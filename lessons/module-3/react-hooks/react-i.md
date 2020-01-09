@@ -165,7 +165,7 @@ Without knowing much React, or what props are, how do you think we would refacto
 <section class="note">
 ### ES6 Class Components
 
-As you do your own research and learning on React, you will likely come across documentation where components are written as ES6 classes. (The above component might be written like [this](https://codesandbox.io/s/elastic-brattain-rhrrb), for example.) This was the go-to pattern for creating React components in the past. While this syntax still works (try it out!), it is currently being phased out in favor of the functional style shown above.
+As you do your own research and learning on React, you will likely come across documentation where components are written as ES6 classes. (The above component might be written like [this](https://codesandbox.io/s/amazing-sinoussi-pczu7), for example.) This was the go-to pattern for creating React components in the past. While this syntax still works (try it out!), it is currently being phased out in favor of the functional style shown above.
 </section>
 
 
