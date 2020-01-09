@@ -141,9 +141,12 @@ Because browsers will skip properties they don't understand, we can add a `filte
 
 You'll also notice we are specifying our gradients with indicators such as `-moz-linear-gradient` and `-webkit-linear-gradient`. These are called **vendor prefixes**, and can be used to target a specific browser vendor (Firefox or Chrome/Safari, in this case). These are useful when a new CSS declaration is added to the spec and platform engineers are still attempting to implement it. Eventually, when the implementation is more stable, these can be dropped in favor of the more generic `linear-gradient` declaration that all modern browsers will recognize.
 
-[Autoprixer](https://autoprefixer.github.io/) is a great resource to add vendor prefixes to chunks of CSS code.
+[Autoprefixer](https://autoprefixer.github.io/) is a great resource to add vendor prefixes to chunks of CSS code.
 
 ![vendor prefix list](https://i.redd.it/n4icam7prn421.jpg). 
+
+Typically vendor prefixes are added to the beginning of the css property value, but sometimes they can look a little different. 
+[Range Example](https://codepen.io/hannahhch/pen/wEqXmN)
 
 ### Reset Styles
 
@@ -270,6 +273,5 @@ Instructor Notes:
 Start class by showing this tweet: https://twitter.com/Martijn_Cuppens/status/1015169981368225793
 Discuss and open up div in different browsers. Get students to make guesses as to what is happening. 
 
-Show this codepen example of a custom slider element to discuss vendor prefixes: https://codepen.io/hannahhch/pen/wEqXmN
 
 -->
