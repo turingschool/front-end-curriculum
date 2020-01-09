@@ -9,13 +9,25 @@ Now that you've got the main foundations down to build out a frontend applicatio
 ## Learning Goals
 
 * Solidify and demonstrate your understanding of:
-  * semantic HTML
-  * clean & organized CSS styles
   * DRY JavaScript
   * localStorage to persist data
-* Iterate through/filter DOM elements using for loops/array prototype methods
+* Iterate through/filter DOM elements using for loops
 * Understand the difference between the data model and how the data is displayed on the DOM
-* Ability to match/recreate a UI and create a great UX
+
+## Solo Project Expectations
+
+This project is an important step in demonstrating you are ready to start Module 2. To ensure we can accurately assess that, it's important you meet the expectations:
+- You are the only one who should type code - no copy and pasting code
+- For any code that you didn't write entirely by yourself (mentor or rock supported)- you should be able delete it and re-write it yourself
+- You shouldn't be looking at any other Check Yo Self codebase at any time for any reason. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
+- Any peer-to-peer collaboration should be discussions about ideas, not coding together.
+
+## Set Up & Submission
+
+- Create a **private** repository and add your assigned instructor as a collaborator. You cannot deploy private repositories to GitHub Pages, that's ok.
+- Create a project board
+
+By EOD on Kick Off Day: DM your assigned instructor with two links: Project Board & Repo
 
 ### Architecture
 
@@ -31,6 +43,7 @@ Your entire application will consist of one HTML page or template. You will have
 2. A `main.js` file that contains all DOM related JavaScript
 
 ### Data Model
+
 * A to-do list has an _id_, _title_, _tasks_, and _urgent_ property.
 	* The _id_ property should be a unique identifier
 	* _title_ is a string
@@ -42,7 +55,7 @@ Your entire application will consist of one HTML page or template. You will have
 
 Each todo list on the page should be created as an instance of the `ToDoList` class.
 
-### Phase One: Beginning User Flow
+### Iteration 0: Beginning User Flow
 
 #### Viewing the List of To-Dos
 
@@ -80,7 +93,7 @@ When a user clicks `Clear All`:
 * Both the title input and list of tasks should be cleared.
 * The `Clear All` button should be disabled if both the title input and checklist are empty.
 
-### Phase Two: Completing The MVP (Minimum Viable Product)
+### Iteration 1: Completing The MVP (Minimum Viable Product)
 
 #### Checking Off A Task
 
@@ -110,7 +123,7 @@ A user should be able to mark their todo cards urgent so that they know which th
 * This update of the data model should occur in the `updateToDo` method that is defined in the `ToDoList` class.
 * How the DOM gets updated using JavaScript should happen in the `main.js` file
 
-### Phase Three: Specifying what Content is Viewed
+### Iteration 2: Specifying what Content is Viewed
 
 #### Filtering and Searching by Text
 
@@ -131,7 +144,7 @@ Let's also allow our user be able to view their urgent todo cards only.
 * If there are no urgent to-dos yet, then there should be an indication displayed in the empty todo section notifying the user to mark some to-dos urgent.
 * These changes _do not need to persist_ in between sessions.
 
-### Phase Four (Extensions): Improving on the Experience
+### Iteration 3 (Extensions): Improving on the Experience
 
 #### Editing Our Tasks
 
@@ -198,57 +211,42 @@ Color, font, and icon spec:
 [desktop-urgent-cards]: /assets/images/projects/check-yo-self/check-yo-self-03.jpg
 [mobile-base]: /assets/images/projects/check-yo-self/check-yo-self-04.jpg
 [button-hover-specs]: /assets/images/projects/check-yo-self/check-yo-self-05.jpg
-
 ----------------------------------------------------------
 
 ## Rubric
 
 ### Functional Expectations
 
-* [ ] Novice: Application meets all of the expectations of phase one.
-* [ ] Advanced Beginner: Application meets all of the expectations of phase two.
-* [ ] Proficient: Application meets all of the expectations of phase three.
-* [ ] Exceptional: Application adds all of the extensions from phase four.
+* **4:** Application meets all of the expectations from Iteration 3.
+* **3:** Application meets all of the expectations of Iteration 2.
+* **2:** Application meets all of the expectations of Iteration 1 and one of the 2 parts of Iteration 2.
+* **1:** Application meets all of the expectations of Iteration 0.
 
 ------------------------------------------------------------------
 
-### Comp Recreation
+### Professionalism
 
-* [ ]  Novice - Application implements all major comp details accurately and correctly on desktop only (colors, fonts, icons, spacing, alignment, etc.)
-* [ ]  Advanced Beginner - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.). Transitions between screen sizes may not be smooth.
-* [ ]  Proficient - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward.
-* [ ]  Exceptional - Application implements all major comp details accurately and correctly on desktop and mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
-
-------------------------------------------------------------------
-
-### HTML - Style and Implementation
-
-* [ ]  Novice - Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
-* [ ]  Advanced Beginner - Application adds to the above by using `data-*` attributes for all data related things
-* [ ]  Proficient - Applications adds to the above with markup that is easy to read and follow across naming conventions
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
-    * [ ]  Implements html that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/module-1/html-breakout.html)
+* **4:** A PR template was used. A code review was requested and completed by a mentor, and all team members can speak to how the feedback in code review was implemented (and point to the commit(s) that implemented the feedback). **AND:** Developer is ready to clearly present the evolution of this app during the eval - from architecture decisions made in the planning process, to wins and challenges throughout.
+* **3:** Developer is able to clearly answer questions regarding the evolution of this app during the eval - from architecture decisions made in the planning process, to wins and challenges throughout. **AND:** A project board is used and kept update throughout the project. Branches are used. Most commits are formatted correctly. The README is formatted well and contains:
+  - Overview of project and goals
+  - Overview of technologies used, challenges, and wins, any other reflections
+  - Screenshots of comp and your app
+* **2:** Developer is able to answer questions regarding the evolution of the app, but may need some prompts to clearly articulate or provide enough context. More than a few commits are formatted incorrectly. The README is formatted well but may be lacking in detail.
+* **1:** Developer struggles to answer questions regarding the evolution of the app. **OR:** Commit and PR history does not tell a story of the application OR a README has not been created/has minimal information.
 
 ------------------------------------------------------------------
 
-### CSS - Style and Implementation
+### JavaScript - Style and Implementation
 
-* [ ]  Novice - Crafts CSS according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
-* [ ]  Advanced Beginner - Application adds organization for the whole stylesheet and within rules
-* [ ]  Proficient - Applications adds to the above by removing repetitive rules and blocks of code according to the DRY principle
-* [ ]  Exceptional - Application adds to the above by using [BEM](http://getbem.com/), [SMACCS](https://smacss.com/), or another set of naming conventions for classes
-
-------------------------------------------------------------------
-
-### JAVASCRIPT - Style and Implementation
-
-* [ ]  Novice - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
-* [ ]  Advanced Beginner - Application correctly implements data model for the `ToDoList` class including all required methods
-* [ ]  Proficient - Application adds readability by incorporating both DRY and SRP practices and students can speak to implementation decisions and:
-  * [ ]  Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a todo urgent
-  * [ ]  All functions are less than 10 lines
-  * [ ]  There are no global variables aside from query selectors and an array for your to-dos
-  * [ ]  There are no nested if/else statements
-* [ ] Exceptional - Application adds to code quality by refactoring all for loops into the proper array prototype iteration methods and:
-  * [ ] Uses logical operators instead of if/else statements where applicable
-  * [ ] When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+* **4:**
+  * All loops are refactored into the proper array prototype iteration methods (not using arrow functions)
+  * Uses logical operators instead of if/else statements where applicable
+  * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+* **3:**
+  * DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
+  * All functions are less than 10 lines
+  * There are no nested if/else statements
+  * There are no global variables aside from query selectors and an array for your to-dos
+  * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a to-do urgent
+* **2:** Application correctly implements data model for the `ToDoList` class including all required methods. No unused variables or functions are present in the codebase.
+* **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
