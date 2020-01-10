@@ -429,16 +429,11 @@ Without the curly braces, if we were to return `<h2>Hello, props.name</h2>` - th
 In `App.js`, add another Ideas component to the `render` method, but pass in a different name. What do you see in the browser? Try creating new props to use!
 </section>
 
-
-
-<!-- BSTOROZ left off here -->
-
-
 Okay, so just WHAT exactly is going on here?
 
 Similar to how **state** is an object that contains key-value pairs, **props** is the name of an object that contains key-value pairs. From our above example, the key is "name", and the value is "Travis". So, in our Ideas component, we can access the value by writing `props.name` (which gives us a string of "Travis"). This is the same dot notation we learned in Mods 1 and 2 to access data stored in objects.
 
-If, in the `render` method of our App component, we called the property "potato" instead of "name", we would have to access it by (inside the Ideas component) writing `props.potato`.
+If, in the JSX of our App component, we called the property "potato" instead of "name", we would have to access it (inside the Ideas component) by writing `props.potato`.
 
 We can even destructure the props object, because it's just a regular object!
 
@@ -471,11 +466,13 @@ const Ideas = ({name}) => {
 
 React lets us destructure props ON THE WAY IN. Whoa! It's accomplishing the same thing as destructuring on a separate line, like in the previous example.
 
+
+
 ### Mapping over the ideas array
 
 All right. We don't actually want to render an h2 in our Ideas component. We want to render some Cards with some gosh dang IDEAS!
 
-Let's create a Card component to use. Will it be function- or class- based?
+Let's create a Card component that we'll be able to re-use for rendering each idea.
 
 Create your files: `$ touch src/Card.js src/Card.css`
 
@@ -549,26 +546,25 @@ Okay! Hopefully your app looks like this:
 
 ![screenshot of IdeaBox so far](https://i.imgur.com/TiPPUMq.png)
 
+
 All right, friends. Let's get to passing some PROPS! Let's go all the way back to our App component and pass our list of ideas to the Ideas container component, so that it can then create Card components out of each individual idea.
 
 ```js
 // App.js
 
-render() {
-  return(
-    <main className='App'>
-      <h1>IdeaBox</h1>
-      <Ideas ideas={this.state.ideas} />
-    </main>
-  )
-}
+return (
+  <main className='App'>
+    <h1>IdeaBox</h1>
+    <Ideas ideas={ideas} />
+  </main>
+)
 ```
 
-Let's unpack what we're doing here. We created a new prop called "ideas", and the value we're passing in is our array of ideas which lives in the App component's state. Remember, `this.state.ideas` is JavaScript, not HTML, so we need to wrap it in curly brackets!
+Let's unpack what we're doing here. We created a new prop called "ideas", and the value we're passing in is our array of ideas which lives in the App component's state. Remember, `ideas` is a variable we've created with JavaScript, not HTML, so we need to wrap it in curly brackets!
 
 Go look at the Ideas component in your React dev tools in the browser. You should see that the props contain a key of "ideas" with a value of the array of ideas from App state!
 
-We now want to iterate through our array and create a Card component, passing it the information it needs to display the proper information!
+We now want to iterate through our array and create a Card component for each idea, passing it the information it needs to display the proper information!
 
 ```js
 // Ideas.js
@@ -614,9 +610,28 @@ const Card = ({ title, description, id }) => {
 
 I created a button to delete the Card, but we'll get to that later. For now, high five the people at your table, because we just got this sucker to display some ideas!!
 
+
+<section class="call-to-action">
+### Table Talk
+
+We've created 3 components so far, one with state (App) and two with props (Ideas and Card). Take some time to discuss again the relationship between state and props. You can use the following questions to guide your conversation:
+
+* Why did we place our ideas state in the App component? Why not in the Card component? 
+* How did we use our state value in other components?
+* How can we identify when a component needs state vs. when it just needs props?
+</section>
+
+
+
+
+
 ### Form.js
 
-Let's move on to our Form component. We're going to create what is known as a controlled form.
+Let's move on to our Form component. We're going to create what is known as a controlled form. This form component will also have some state to keep track of our user input values:
+
+* Users will be typing a title and description for a new idea into the input fields, therefore
+* The input values are data that changes in response to user interaction, therefore
+* They are good candidates for storing in state
 
 Create the Form component files: `$ touch src/Form.js src/Form.css`
 
@@ -641,193 +656,144 @@ Our Form will start like this:
 ```js
 // Form.js
 
-import React, { Component } from 'react';
-import './Form.css';
+import React, { useState } from 'react';
 
-class Form extends Component {
-  constructor() {
-    super();
-    this.state = {
-      title: '',
-      description: ''
-    }
-  }
-
-  render() {
-    return (
-      <form>
-        <input
-          type='text'
-          placeholder='Title'
-          name='title'
-          value={this.state.title}
-        />
-
-        <input
-          type='text'
-          placeholder='Description'
-          name='description'
-          value={this.state.description}
-        />
-
-        <button>SUBMIT</button>
-      </form>
-    )
-  }
+const Form = (props) => {
+  return (
+    <form>
+      <label htmlFor="title">Title</label>
+      <input name="title" type="text" placeholder="Title" />
+      <label htmlFor="description">Description</label>
+      <input name="description" type="text" placeholder="Description" />
+      <button type="submit" id="add">Add Idea</button>
+    </form>
+  )
 }
 
 export default Form;
 ```
 
-But we need to write some functions. Let's start by making sure that when we type into our inputs, they update the Form's state.
+Import the Form component into your `App.js` file and render it within the JSX:
+
+```js
+import Form from './Form';
+
+<Form />
+````
+
+We're already importing `useState` from React - now we just need to leverage it. We'll have two state values in our Form component - `title` and `description` that each represent the value of their corresponding input fields:
 
 ```js
 // Form.js
 
-  handleChange = event => {
-    this.setState({ [event.target.name]: event.target.value });
+const Form = (props) => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+```
+
+Remember that `setTitle` and `setDescription` are now functions that can be called when we want to update those state values. Because we want to keep the state value in sync with what a user is typing, we'll add an `onChange` event to our input fields. We'll also set the `value` attribute of our input fields to the state value it should be reflecting at all times:
+
+```js
+<input name="title" type="text" placeholder="Title" value={title} onChange={(event) => { handleTitleChange(event)}}></input>
+
+<input name="description" type="text" placeholder="Description" value={description} onChange={(event) => { handleDescriptionChange(event)}}></input>
+```
+
+Let's break this syntax down a little bit:
+
+* We add an `onChange` attribute to our input element (think back to Mod 1 and your standard HTML skills - this is just an attribute you can add to your HTML elements)
+* We assign it to an arrow function (the entire arrow function must be wrapped in curley braces - remember a function is JavaScript so we need to tell React to treat anything within the curlies as pure JavaScript rather than literal HTML)
+* Our arrow function gives us access to an event object that will help us grab the input value from that element (again, think back to Mod 1 when you added event listeners to your elements)
+* Our arrow function kicks off a new named function (e.g. `handleTitleChange`) that takes in the event object as an argument
+* We now must create these two functions `handleTitleChange` and `handleDescriptionChange` in order to make our state changes:
+
+
+```js
+const Form = (props) => {
+  const [title, setTitle] = useState('');
+  const [description, setDescription] = useState('');
+
+  const handleTitleChange = (event) => {
+    setTitle(event.currentTarget.value);
   }
 
-  render() {
-    return (
-      <form>
-        <input
-          type='text'
-          placeholder='Title'
-          name='title'
-          value={this.state.title}
-          onChange={event => this.handleChange(event)}
-        />
-
-        <input
-          type='text'
-          placeholder='Description'
-          name='description'
-          value={this.state.description}
-          onChange={event => this.handleChange(event)}
-        />
-
-        <button>SUBMIT</button>
-      </form>
-    )
+  const handleDescriptionChange = (event) => {
+    setDescription(event.currentTarget.value);
   }
 ```
 
-What is this `setState` business? It's a method that comes from the parent Component class. It does a few things: it takes in an object (with a key that matches a key in state, and the updated value), it updates state with the new information, and it triggers a re-render (it literally runs the `render` method again) to keep our displayed data up to date!
+Each of these functions will invoke either `setTitle` or `setDescription` in order to update their respective state value. We make use of the `event` object by grabbing the input value with `event.currentTarget.value` and use that as the new value for our state. Take a look at your React dev tools - is the state updating as you type into the inputs?
 
-Take a look at your React dev tools - is the state updating as you type into the inputs?
+<!-- I would note here why those handle function calls need to be wrapped in an anonymous arrow function rather than just trying to invoke them directly in the JSX before moving on 
 
-When we click the submit button, what do we want to happen? We want to create an object out of the new idea and add it to the list of ideas that App is holding onto in state. How do we access App's state from inside our Form component?
+Maybe you also want to show them how to refactor/dry this up a bit? Here is an example of the two state values merged into somewhat more reusable logic: https://gist.github.com/brittanystoroz/a686f1928830e470a9a579e823bf2d2d
 
-### Passing bound methods
+--> 
 
-In App, we're going to have to create a method that updates App's state:
+### Passing methods as props
 
-```js
-// App.js
+Now that our inputs are working, we need to hook up the submit button to actually add our new idea to the list. Remember:
 
-  addIdea = (newIdea) => {
-    this.setState({ ideas: [...this.state.ideas, newIdea] });
-  }
+* The list of ideas is going to grow or shrink in response to user interaction
+* We stored this list of ideas in state from within our App component
 
-  render() {
-    return(
-      <main className='App'>
-        <h1>IdeaBox</h1>
-        <Form addIdea={this.addIdea} />
-        <Ideas ideas={this.state.ideas} />
-      </main>
-    )
-  }
-```
-
-You'll notice that we're using an arrow function to create this class method. Why do you think that is? We know that - unlike keyword `function` functions - the context of `this` is set when an arrow function is declared, not when it is invoked. This means that, no matter where we call `addIdea`, no matter what component invokes it, the `this` from `this.setState` will refer to the App component.
-
-This is good, because we're passing it down as a prop to the Form component!
-
-Before we had ES6 arrow functions at our disposal, we had to manually bind our functions in the constructor, like this:
+We can only access and manipulate the App component's state from within the App component. This means that we'll want to write a function in `App.js` that can add our new idea into the list:
 
 ```js
-// App.js
-
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      ideas: [
-        { id: 1, title: 'Prank Travis', description: 'Stick googly eyes on all his stuff' },
-        { id: 2, title: 'Make a secret password app', description: 'So you and your rideshare driver can both know neither one of you is lying' },
-        { id: 3, title: 'Learn a martial art', description: 'To exact vengeance upon my enemies' },
-      ]
-    }
-
-    this.addIdea = this.addIdea.bind(this);
-  }
-
-  addIdea(newIdea) {
-    this.setState({ ideas: [...this.state.ideas, newIdea] });
-  }
-
-  render() {
-    return(
-      <main className='App'>
-        <h1>IdeaBox</h1>
-        <Form addIdea={this.addIdea} />
-        <Ideas ideas={this.state.ideas} />
-      </main>
-    )
-  }
+const addIdea = (idea) => {
+  let newIdeaList = ideas.concat([idea]);
+  setIdeas(newIdeaList);
 }
 ```
 
-This took place in the constructor for a few reasons: you wouldn't have to remember to bind it every place you wanted to pass it in the `render`, and it would only be declared once, when the `constructor` method was called. (Conversely, `render` is called every time the component state updates; there's no need to have a bunch of identical bound `addIdea`s floating around in memory!)
-
-You can see that using the arrow function is much shorter syntactically. However, it's good to know the REASON behind using it, especially since some legacy codebases will still be using manually bound class methods.
-
-Now, in the Form component, let's make use of the `addIdea` method we passed as a prop. In class-based components, we reference props with `this.props`. If you remember from earlier, function-based components merely use the keyword `props`.
+Even though we must define this function within the `App` component, we'll want to **invoke** the function within our `Form` component. In order to do this, we must pass down a reference to it as a prop:
 
 ```js
-// Form.js
+<Form addIdea={addIdea} />
+```
 
-  submitIdea = event => {
-    event.preventDefault(); // prevents the page from refreshing when the form submits
-    const newIdea = {
-      id: Date.now(),
-      ...this.state // spreading in the title and description
-    }
-    this.props.addIdea(newIdea); // using the addIdea method from App that we passed as a prop to Form
-    this.clearInputs(); // invoking the method I wrote below to reset the inputs
-  }
+This will allow us to invoke the function in the appropriate place (our Form component, which is keeping track of the new idea values). Note that we are not invoking it here (there are no parens after `addIdea`), we are simply referencing it.
 
-  clearInputs = () => {
-    this.setState({ title: '', description: '' });
-  }
+Now, in our Form component, we can invoke `addIdea` when a user clicks the submit button:
 
-  render() {
-    return (
-      <form>
-        <input
-          type='text'
-          placeholder='Title'
-          name='title'
-          value={this.state.title}
-          onChange={event => this.handleChange(event)}
-        />
+```js
+<button type="submit" id="add" onClick={(event) => { handleSubmit(event)}}>Add Idea</button>
+```
 
-        <input
-          type='text'
-          placeholder='Description'
-          name='description'
-          value={this.state.description}
-          onChange={event => this.handleChange(event)}
-        />
+Let's create a `handleSubmit` function that allows us to prevent the default behavior of the submit event (reloading the entire page, which we do not want or need), invokes our `addIdea` function, and resets the input fields:
 
-        <button onClick={event => this.submitIdea(event)}>SUBMIT</button> // adding the event listener to the button
-      </form>
-    )
-  }
+```js
+const handleSubmit = (event) => {
+  event.preventDefault(); // prevents the page from refreshing on form submit
+  const newIdea = { 
+    id: Date.now(),            // give our new idea a unique id
+    title: title,              // give our new idea a title using the title value from state
+    description: description   // give our new idea a description using the description value from state
+  };
+
+  props.addIdea(newIdea);
+  clearInputs();              // clear out the input values after our new idea has been added
 }
 ```
+
+In this function, we invoke our `addIdea` function by accessing `props.addIdea`. It will take in an object that represents our new idea data - an ID, title and description. (Look back to how we created the `addIdea` function in our App component - you'll see it has a single parameter called `idea`). 
+
+In order to clear our input fields, let's write another function like so:
+
+```js
+const clearInputs = () => {
+  setTitle('');
+  setDescription('');
+}
+```
+
+
+
+
+
+<!-- BSTOROZ LEFT OFF HERE -->
+
+
 
 ### Deleting a Card
 
