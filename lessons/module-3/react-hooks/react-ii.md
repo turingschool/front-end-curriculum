@@ -788,13 +788,6 @@ const clearInputs = () => {
 ```
 
 
-
-
-
-<!-- BSTOROZ LEFT OFF HERE -->
-
-
-
 ### Deleting a Card
 
 Now that you know how to use a method and props to allow a different component to update App's state, see if you can get each Card's delete button to work.
@@ -804,54 +797,18 @@ First, write the App method to delete an idea from state and pass it to the Idea
 ```js
 // App.js
 
-import React, { Component } from 'react';
-import Ideas from './Ideas';
-import Form from './Form';
-import './App.css';
-
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      ideas: [
-        { id: 1, title: 'Prank Travis', description: 'Stick googly eyes on all his stuff' },
-        { id: 2, title: 'Make a secret password app', description: 'So you and your rideshare driver can both know neither one of you is lying' },
-        { id: 3, title: 'Learn a martial art', description: 'To exact vengeance upon my enemies' },
-      ]
-    }
-  }
-
-  addIdea = (newIdea) => {
-    this.setState({ ideas: [...this.state.ideas, newIdea] });
-  }
-
-  deleteIdea = (id) => {
-    console.log(id);
-    const filteredIdeas = this.state.ideas.filter(idea => idea.id != id);
-
-    this.setState({ ideas: filteredIdeas });
-  }
-
-  render() {
-    return(
-      <main className='App'>
-        <h1>IdeaBox</h1>
-        <Form addIdea={this.addIdea} />
-        <Ideas ideas={this.state.ideas} deleteIdea={this.deleteIdea} />
-      </main>
-    )
-  }
-}
-
-export default App;
+const deleteIdea = (id) => {
+  let newIdeaList = ideas.filter(idea => idea.id !== id);
+  setIdeas(newIdeaList);
+};
 ```
 
 Second, pass the `deleteIdea` function to each Card that the Ideas component creates:
 
 ```js
-import React, { Fragment } from 'react';
-import Card from './Card';
+import React from 'react';
 import './Ideas.css';
+import Card from './Card';
 
 const Ideas = ({ideas, deleteIdea}) => {
 
@@ -862,7 +819,7 @@ const Ideas = ({ideas, deleteIdea}) => {
         description={idea.description}
         id={idea.id}
         key={idea.id}
-        deleteIdea={deleteIdea}
+        deleteIdea={props.deleteIdea}
       />
     )
   })
@@ -873,7 +830,6 @@ const Ideas = ({ideas, deleteIdea}) => {
     </div>
   )
 }
-
 export default Ideas;
 ```
 
