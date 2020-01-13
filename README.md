@@ -50,6 +50,20 @@ Will result in the following styled box:
 
 ![styled-box](https://user-images.githubusercontent.com/17582916/60548262-e75fd180-9cde-11e9-8964-03c4ee6152d9.png)
 
+#### Answer Box:
+
+The heading in the answer box *must be an h3*. You can include any text within the section after that
+
+```html
+<section class="answer">
+### The Answer  
+
+Here is an answer to the On Your Own section...
+</section>
+```
+
+Will result in the following styled box:
+
 
 #### Note Box:
 
@@ -76,8 +90,6 @@ What are 3 easy and actionable accessibility steps you can take in all of your p
 ![cfu-box](https://user-images.githubusercontent.com/17582916/60548305-ff375580-9cde-11e9-9e06-739244d68973.png)
 
 **DO NOT INDENT YOUR MARKDOWN** within the section tag, or else it will not work.
-
-
 
 
 ### Algolia Search
