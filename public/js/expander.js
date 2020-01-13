@@ -6,11 +6,11 @@ $('.answer h3').each(function(idx, title) {
 $('.answer h3').nextAll().hide();
 
 $('.answer h3 img.expander-arrow').on('click', function() {
-  if (!$(this).hasClass('down')) {
-    $(this).addClass('down');
+  if (!$(this).hasClass('expanded')) {
+    $(this).addClass('expanded');
     $('.answer h3').nextAll().show(150);
   } else {
-    $(this).removeClass('down');
+    $(this).removeClass('expanded');
     $('.answer h3').nextAll().hide(150);
   }
 });
