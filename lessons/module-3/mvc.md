@@ -100,14 +100,26 @@ export default App;
 Sure this is about as basic as it gets, but even this simple counter has all
 three of our architectural components. Can you identify each one?
 
----
-_**Turn and talk:**_
+<section class="call-to-action">
+### Turn and talk
 
 * What part of the application above is the Model? 
 * How about the Controller and the View? 
 * How would your answer change if this was just a stateless component accepting props?
+</section>
 
----
+<section class="answer">
+### Answer  
+
+The Model is state. The controller is the `handleCounter` method.
+
+* The View is everything in the `render()` method.
+* Stateless component would be different because there is no state...
+
+```js
+const thisVar = 'someString';
+```
+</section>
 
 ### Where will I see this?
 

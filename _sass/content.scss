@@ -72,6 +72,24 @@
   background-color: lighten($front-end-primary, 40%);
 }
 
+.answer {
+  @extend %call-to-action-shared;
+  border-left: 8px solid #CCC;
+}
+
+.expander-arrow {
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: transform 0.2s ease;
+  height: 15px;
+  width: 15px;
+}
+
+.expander-arrow.down {
+  transform: rotate(90deg);
+  transition: transform 0.2s ease;
+}
+
 .google-form {
   border: none;
 }
