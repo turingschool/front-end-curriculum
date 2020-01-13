@@ -45,6 +45,8 @@ After logging in, the user knows they are logged in and they are taken back to t
 
 A user should be able to logout, and they are taken to the homepage. The app should should that no one is logged in.
 
+At this point, you should have your testing suite up and going. Get tests running, and test your Login workflow as it stands now. Yes, your tests might change, but that's ok and expected.
+
 ### Iteration 3 - Movie Show Page
 
 Use Router to create a dynamic route for a "show page" for each movie (`/movies/5`, for instance). A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
@@ -56,6 +58,8 @@ A user should be able to see their own movie ratings only when they are _logged 
 A user should be able to submit a rating for a movie. The rating must be an integer (whole number) between 1 and 10.
 
 A user is limited to one rating per movie.
+
+Again, revisit where you are with testing your application. Do you have multiple user pathways through the code and edge cases tested? Do not move forward with the next iteration until you have good coverage of existing features.
 
 ### Iteration 5 - Remove Ratings
 
