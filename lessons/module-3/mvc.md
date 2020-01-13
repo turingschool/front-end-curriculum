@@ -108,19 +108,6 @@ three of our architectural components. Can you identify each one?
 * How would your answer change if this was just a stateless component accepting props?
 </section>
 
-<section class="answer">
-### Answer  
-
-The Model is state. The controller is the `handleCounter` method.
-
-* The View is everything in the `render()` method.
-* Stateless component would be different because there is no state...
-
-```js
-const thisVar = 'someString';
-```
-</section>
-
 ### Where will I see this?
 
 This pattern is all over the place in software development. Consider a simple
