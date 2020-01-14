@@ -8,48 +8,34 @@ module: 3
 ## Learning Goals
 * Be able to explain the need for routing
 * Be able to implement React Router in a project
-* Articulate what each of these components do:
-    * BrowserRouter
-    * Route
-    * Link / NavLink
-    * Redirect
-    * Switch
 * Utilize url params to build dynamic routes
 
 ## Vocab
 * `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
-* `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Link` Links provide declarative, accessible navigation around your application
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
-* `Redirect` Rendering a \<Redirect\> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
+<!-- * `Redirect` Rendering a \<Redirect\> will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do.
 * `Switch` Renders the first child \<Route\> or \<Redirect\> that matches the location. \<Switch\> is unique in that it renders a route exclusively (only one route wins).
-* `match` A match object contains information about how a \<Route path\> matched the URL.
+* `match` A match object contains information about how a \<Route path\> matched the URL. -->
 
-## React Router (v4)
+## React Router
 
 
 ### Why Routing?
 
-Up until now you've been creating single page applications that maybe have utilized conditional rendering based on a boolean in state. Something along the lines of...
+Up until now you've been creating **Single Page Applications (SPAs)** that maybe have utilized conditional rendering based on a boolean in state. Something along the lines of...
 
 ```jsx
-class SomeComponent extends Component {
-  constructor() {
-    super();
-    this.state = {
-      showWelcome: false
-    }
-  }
+const App () => {
+  const [showWelcome, setWelcome] = useState(true);
   
-  render() {
-    return (
-      { this.state.showWelcome && <Welcome /> }
-    )
-  }
+  return (
+    { showWelcome && <Welcome /> }
+  )
 }
 ```
 
-This works...but as our applications grow larger and we need to render more components, these conditional toggles can become difficult to manage.
+This works...but as our applications grow larger and we need to render more components, these conditional toggles can become difficult to manage. Another issue with building Single Page Applications is that you lose the ability to link to any particular state or view of your application because there is no concept of URLs beyond the homepage. 
 
 Suppose you have list of star wars characters and you only want to show a user's favorites when they click on a `Favorites` button... 
 You can easily accomplish this with React Router!
@@ -65,7 +51,7 @@ React Router is a collection of navigational components that compose declarative
 React Router allows us to:
 
 * Define which component(s) are rendering based on the URL pathname (dynamic, nested views should have a URL of their own)
-* Bookmark specific page/view within our application to reference at a later time
+* Bookmark specific "page" or view within our application to reference at a later time
 * Utilize the `back` and `forward` buttons in our browser
 
 <section class="call-to-action">
@@ -73,6 +59,8 @@ React Router allows us to:
 
 What does this lead to? Why or how? - Take a minute to write your answer and then discuss with a partner.
 </section>
+
+<!-- BSTOROZ LEFT OFF HERE -->
 
 ### Router
 
@@ -91,7 +79,7 @@ Ultimately it will allow our users to bookmark specific paths and utilize their 
 
 There are a few more tools we get with React Router that are important to know about:
 
-### Route
+<!-- ### Route
 The Route component is a key piece of React Router. Its most basic responsibility is to render some UI when a location matches the route’s path.
 
 The Route component expects a `path` prop (string) that describes the path name.
@@ -150,7 +138,7 @@ All three of these are rendered with [route props](https://reacttraining.com/rea
 * [location](https://reacttraining.com/react-router/web/api/location)
 * [history](https://reacttraining.com/react-router/web/api/history)
 
-**Important Note:** If you have a component that is not rendered by a Route, but still needs access to the route props (match/location/history), you will need to use the `withRouter` method provided by React Router. This will be necessary to make any of your React Router components (Link, Route, Redirect, Switch, etc.) work correctly. Take a few minutes and read [the docs](https://reacttraining.com/react-router/core/api/withRouter) as well as [this post](https://stackoverflow.com/questions/53539314/what-is-withrouter-for-in-react-router-dom) for more info. 
+**Important Note:** If you have a component that is not rendered by a Route, but still needs access to the route props (match/location/history), you will need to use the `withRouter` method provided by React Router. This will be necessary to make any of your React Router components (Link, Route, Redirect, Switch, etc.) work correctly. Take a few minutes and read [the docs](https://reacttraining.com/react-router/core/api/withRouter) as well as [this post](https://stackoverflow.com/questions/53539314/what-is-withrouter-for-in-react-router-dom) for more info.  -->
 
 
 <section class="call-to-action">
@@ -593,6 +581,4 @@ And that's it! Go ahead and work on setting up dynamic routes for the other two 
 
 * [React Router Training](https://reacttraining.com/react-router/web/guides/philosophy)
 * [Watch This Video](https://www.youtube.com/watch?v=Mf0Fy8iHp8k&feature=youtu.be)
-* [The Hitchhiker’s Guide To React Router v4: Grok React Router in 20 minutes](https://medium.freecodecamp.org/hitchhikers-guide-to-react-router-v4-a957c6a5aa18)
-* [The Hitchhiker’s Guide to React Router v4: [match, location, history] — your best friends!](https://medium.freecodecamp.org/hitchhikers-guide-to-react-router-v4-4b12e369d10)
 * [A Little Bit of History](https://medium.com/@pshrmn/a-little-bit-of-history-f245306f48dd)
