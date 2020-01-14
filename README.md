@@ -50,7 +50,7 @@ Will result in the following styled box:
 
 ![styled-box](https://user-images.githubusercontent.com/17582916/60548262-e75fd180-9cde-11e9-8964-03c4ee6152d9.png)
 
-#### Answer Box:
+#### Answer/Solution Box:
 
 The heading in the answer box *must be an h3*. You can include any text within the section after that
 
@@ -64,6 +64,9 @@ Here is an answer to the On Your Own section...
 
 Will result in the following styled box:
 
+![collapsed answer](https://user-images.githubusercontent.com/17582916/72355972-a725d680-36a5-11ea-8755-077ebf0d34dc.png)
+
+![expanded answer](https://user-images.githubusercontent.com/17582916/72356019-be64c400-36a5-11ea-87e6-a5a7310db2bc.png)
 
 #### Note Box:
 
