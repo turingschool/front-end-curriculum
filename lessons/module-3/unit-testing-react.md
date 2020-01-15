@@ -20,7 +20,7 @@ tags: react, testing
 - `Unit test` - Unit tests test the smallest unit of functionality, typically a method/function. For example, when you call a specific method on a class, you would likely expect a value to be returned. Unit tests should be focused on one particular feature
 - `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly
 - `Acceptance test` - Once an application is ready to use, it undergoes testing by the end user or client to verify that it meets the user's expectations
-- `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing. 
+- `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing.
 - `Enzyme` - Enzyme was created by Airbnb and is a JS testing utility that makes it easier to assert, manipulate, and traverse your React component
 - `Snapshot` - Snapshot testing is provided by Jest and allows you the ability to create a rendered "snapshot" of a component and compare it to a previously saved "snapshot"
 - `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired
@@ -62,7 +62,7 @@ Try it out - run `npm test` to fire up the testing server. Currently our app has
 Read [this section on file naming conventions](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md#filename-conventions).
 </section>  
 
-Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with the facebook convention for the purposes of this tutorial. 
+Traditionally, we have always put our tests into their own directory. That is absolutely still possible, but the Facebook team makes some good points for keeping test files in the same directory as their implementation. Whatever you decide to do in the future is up to you, but let's go with the facebook convention for the purposes of this tutorial.
 
 Jest is great for unit testing your app, but according to the [react docs on testing](https://github.com/facebook/create-react-app/blob/master/docusaurus/docs/running-tests.md)
 they "recommend that you use a separate tool for browser end-to end tests if you need them. They are beyond the scope of Create React App." This means implementing our super friend `Enzyme`!  
@@ -119,7 +119,7 @@ When testing React, focus on these three main rules:
 
 Let's focus on our first rule first and test our `Card` component. We'll have to create a test file called `Card.test.js`. In `Card.test.js`, we'll start with a simple test to see if the `name` property is properly rendered in the component when passed in as a prop.
 
-We want to import our `Card` component so we can test that. We also want to import `shallow` from Enzyme. This renders our component in a testing environment so that we can test it. It allows you to test a component in isolation while also allowing you to test methods like `componentDidMount` and `componentDidUpdate`. You will almost always want to start with `shallow`. 
+We want to import our `Card` component so we can test that. We also want to import `shallow` from Enzyme. This renders our component in a testing environment so that we can test it. It allows you to test a component in isolation while also allowing you to test methods like `componentDidMount` and `componentDidUpdate`. You will almost always want to start with `shallow`.
 
 Another way to render a component with Enzyme is using `mount`. Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md). `mount` will also render child elements, but you typically will not want to do this since you want to test these components in isolation. We will write tests for every component so this is a mute point. Think back to what a *unit test* is. According to the docs, the few scenarios where you might want to use `mount` would be if you have to do some testing with a DOM API or need to test components that are wrapped in higher order components. You will likely have few situations where you need to worry about this throughout the module.
 
@@ -140,7 +140,7 @@ describe('Card', () => {
 });
 ```
 
-As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax). 
+As previously mentioned, `create-react-app` uses [Jest](http://facebook.github.io/jest/) instead of Mocha. That said, you'll notice that the syntax is surprising similar. One difference is that Jest includes its own expectation library which is similar to Chai's `expect` syntax (as opposed to the `assert` syntax).
 
 [Jest Assertions](https://facebook.github.io/jest/docs/api.html)  
 
@@ -174,7 +174,7 @@ We could continue to write tests this way for every single element but...there i
 
 ### Snapshot testing
 
-Once again, let's look at the docs to find out what [snapshot testing](https://jestjs.io/docs/en/snapshot-testing) is in Jest. Reading throught the docs, we find out that we can use snapshot tests to compare against a previous 'snapshot' of what our component looked like. Snapshot tests are not really TDD but it is a way to double check if a change was made to the UI unexpectedly. If something has changed, the snapshot will fail. If we really did mean to make that change, we can `update` our snapshot to use the newest version. 
+Once again, let's look at the docs to find out what [snapshot testing](https://jestjs.io/docs/en/snapshot-testing) is in Jest. Reading throught the docs, we find out that we can use snapshot tests to compare against a previous 'snapshot' of what our component looked like. Snapshot tests are not really TDD but it is a way to double check if a change was made to the UI unexpectedly. If something has changed, the snapshot will fail. If we really did mean to make that change, we can `update` our snapshot to use the newest version.
 
 First we'll need to install one more package in order to convert our Enzyme wrappers to a format that is compatible with Jest snapshot testing.
 
@@ -240,7 +240,7 @@ exports[`Card should match the snapshot with all data passed in correctly 1`] = 
     🗑
   </button>
 </section>
-`; 
+`;
 ```
 
 How do we make this test fail? We'd have to change what our component actually looks like. Let's change the h3 tag to an h2 tag. Do that now:
@@ -378,7 +378,7 @@ it('should call the removeIdea prop with the Card\'s id when clicked', () => {
 });
 ```
 
-- `jest.fn()` Mock functions allow you to spy on the behavior of a function that is called indirectly by some other code, rather than testing the output. Read more about it [here](https://jestjs.io/docs/en/jest-object.html#jestfnimplementation). 
+- `jest.fn()` Mock functions allow you to spy on the behavior of a function that is called indirectly by some other code, rather than testing the output. Read more about it [here](https://jestjs.io/docs/en/jest-object.html#jestfnimplementation).
 - `wrapper.find('.btn-remove').simulate('click');` will simulate a click event. This uses specific methods that enzyme gives us. This includes [find](https://airbnb.io/enzyme/docs/api/ReactWrapper/find.html) and [simulate](https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html)
 - `expect(removeIdeaMock).toHaveBeenBeenCalledWith([arg])` asks our mock function if it was called with a specific argument. Here are the [docs](https://jestjs.io/docs/en/expect) to see a list of different methods available to you from `Jest`.
 
@@ -434,6 +434,9 @@ describe('App', () => {
 
 Let's dive into a few more examples where testing methods and changes in state can happen a lot. The best scenario for this is in our `Form` component!  Let's get our initial setup done by creating the test file, importing what is necessary, and include a snapshot test if you haven't already.
 
+<section class="answer">
+### Form Solution
+
 ```js
 import React from 'react';
 import { shallow } from 'enzyme'
@@ -452,6 +455,8 @@ describe('Form', () => {
   });
 });
 ```
+</section>
+
 
 Awesome now that we have got that set up, let's take a closer look at our `Form` component. One of the first methods that we have is `handleChange`. Inside the method it is updating the state. So let's write another test that invokes this method and check to see if state has been updated. Give it a shot now!
 
@@ -488,7 +493,7 @@ Let's take a look at a solution below:
 it('should reset state when resetInputs is called', () => {
   const defaultState = { title: 'Sweaters for pugs', description: 'Why not?'}
   const expected = { title: '', description: '' };
-  
+
   wrapper.instance().setState(defaultState);
 
   wrapper.instance().resetInputs();
@@ -506,7 +511,7 @@ it('should call addIdea and resetInputs when submitNewIdea is called', () => {
   const mockEvent = { preventDefault: jest.fn() };
   wrapper.instance().resetInputs = jest.fn();
   wrapper.instance().submitNewIdea(mockEvent);
-  
+
   expect(mockAddIdea).toHaveBeenCalled();
   expect(wrapper.instance().resetInputs).toHaveBeenCalled();
 });
@@ -529,7 +534,7 @@ it('should call addIdea and resetInputs when submitNewIdea is called', () => {
   const expected = { title: '', description: '', id: 12345 };
   wrapper.instance().resetInputs = jest.fn();
   wrapper.instance().submitNewIdea(mockEvent);
-  
+
   expect(mockAddIdea).toHaveBeenCalledWith(expected);
   expect(wrapper.instance().resetInputs).toHaveBeenCalled();
 });
@@ -554,7 +559,7 @@ it('should run submitIdea when the button is clicked', () => {
 <section class="note">
 ### What is this forceUpdate?
 
-This has to do with the binding of our method. Looking at the `Form` component, it is assigned to *this.submitNewIdea*. If you change it to *e => this.submitNewIdea(e)* and comment out the `forceUpdate` line, it works as well!  Weird!  It has to do with how React binds the method to the onClick. Don't stress too much on this, just know depending on how you set your methods to `onClick` and `onChange`, you might need to use `forceUpdate()`. 
+This has to do with the binding of our method. Looking at the `Form` component, it is assigned to *this.submitNewIdea*. If you change it to *e => this.submitNewIdea(e)* and comment out the `forceUpdate` line, it works as well!  Weird!  It has to do with how React binds the method to the onClick. Don't stress too much on this, just know depending on how you set your methods to `onClick` and `onChange`, you might need to use `forceUpdate()`.
 </section>
 
 <section class="checks-for-understanding">
