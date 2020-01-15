@@ -117,11 +117,9 @@ The dependency array is just a plain old JavaScript array. Any values we put in 
 
 After updating your code to include the dependency array, click on the 'Add Point' button and notice the fetch call does not get fired in response.
 
+#### Running on each re-render
 
-
-
-
-
+We can add as many invocations to `useEffect` as we'd like, each with different callback functions and dependency arrays passed in. Next we'll add a new `useEffect` that runs on every re-render and 
 
 
 
