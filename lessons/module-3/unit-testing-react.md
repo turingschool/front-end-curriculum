@@ -437,6 +437,9 @@ Let's dive into a few more examples where testing methods and changes in state c
 <section class="answer">
 ### Form Solution
 
+Test answer
+</section>
+
 ```js
 import React from 'react';
 import { shallow } from 'enzyme'
@@ -455,8 +458,6 @@ describe('Form', () => {
   });
 });
 ```
-</section>
-
 
 Awesome now that we have got that set up, let's take a closer look at our `Form` component. One of the first methods that we have is `handleChange`. Inside the method it is updating the state. So let's write another test that invokes this method and check to see if state has been updated. Give it a shot now!
 
