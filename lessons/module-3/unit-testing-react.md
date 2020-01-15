@@ -435,10 +435,7 @@ describe('App', () => {
 Let's dive into a few more examples where testing methods and changes in state can happen a lot. The best scenario for this is in our `Form` component!  Let's get our initial setup done by creating the test file, importing what is necessary, and include a snapshot test if you haven't already.
 
 <section class="answer">
-### Form Solution
-
-Test answer
-</section>
+### Form Solution Pt. 1
 
 ```js
 import React from 'react';
@@ -458,6 +455,9 @@ describe('Form', () => {
   });
 });
 ```
+</section>
+
+
 
 Awesome now that we have got that set up, let's take a closer look at our `Form` component. One of the first methods that we have is `handleChange`. Inside the method it is updating the state. So let's write another test that invokes this method and check to see if state has been updated. Give it a shot now!
 
@@ -469,6 +469,9 @@ Write a test that calls `handleChange` on the **instance** and check to see if s
 
 Let's take a look at a solution below:
 
+<section class="answer">
+### handleChange solution
+
 ```js
 it('should update state when handleChange is called', () => {
   const mockEvent = { target: { name: 'title', value: 'Sweaters for pugs.'} };
@@ -479,6 +482,8 @@ it('should update state when handleChange is called', () => {
   expect(wrapper.state('title')).toEqual(expected);
 });
 ```
+</section>
+
 
 Notice we had to mock out the event object giving it the exact properties we expected it to have. It needs a `target` that has a value of an object that also has two properties of `name` and `value`. You can give them whatever values you want as long as you assert that the change in state has that same value!  Let's practice doing one more test that is similar.
 
@@ -489,6 +494,9 @@ Write a test for your `resetInputs` method. The purpose of this method is to cle
 </section>
 
 Let's take a look at a solution below:
+
+<section class="answer">
+### resetInputs Solution
 
 ```js
 it('should reset state when resetInputs is called', () => {
@@ -502,10 +510,15 @@ it('should reset state when resetInputs is called', () => {
   expect(wrapper.state()).toEqual(expected);
 });
 ```
+</section>
+
 
 Crazy!  We can call `setState` in our component as well since it is a method that we have available that we inherit from the `Component` class. Then we can call the method assert that the state has been emptied out.
 
 Let's now take a look at a more complicated method like `submitNewIdea`. We can see that it's passing an event object, so that should tell us that we will need to mock it out like we did previously. It looks like it also creates a new Idea object and calls two methods, `addIdea` and `resetInputs`. Since `addIdea` comes from our `App`, we don't need to test the functionality of it. (we already have actually!)  We have also already tested what `resetInputs` does as well!  What we want to do is test that these methods have been invoked!  Let's work through it together:
+
+<section class="answer">
+### submitIdea Solution Pt. I
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
@@ -517,6 +530,7 @@ it('should call addIdea and resetInputs when submitNewIdea is called', () => {
   expect(wrapper.instance().resetInputs).toHaveBeenCalled();
 });
 ```
+</section>
 
 This one is a bit trickier. We want to set `resetInputs` to a mock function so that we can keep track of whether or not the function has been called. After invoking `submitNewIdea`, we want to assert a few things. Notice at the top of our test where we are declaring our wrapper, we are passing `addIdea` as a prop which has the value of a mock function. So, we can test that both `addIdea` and `resetInputs` have been called.
 
@@ -527,6 +541,9 @@ expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith();
 ```
 
 Read what the test tells us. It's now checking the argument which has our default values and an id set to the actual `Date.now()`. The problem is that `Date.now()` is always going to be a different value everytime we run the test. Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
+
+<section class="answer">
+### submitIdea Solution Pt. II
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
@@ -540,10 +557,14 @@ it('should call addIdea and resetInputs when submitNewIdea is called', () => {
   expect(wrapper.instance().resetInputs).toHaveBeenCalled();
 });
 ```
+</section>
 
 We are assigning `Date.now` to a mock function. These mock functions have a method called `mockImplementation` to tell it how that mock function should behave. Here we are just telling it that it should always return the value of *12345* everytime it gets invoked. Now we make an assertion because the value will always be the same. Cheers!
 
 Let's write one more test. Let's test something different, like simulating an event. Similar to our `Card` component when we clicked on a button, we can do something similar here. Let's write a test for clicking the button on our form!  Let's work through it:
+
+<section class="answer">
+### Button Click solution
 
 ```js
 it('should run submitIdea when the button is clicked', () => {
@@ -556,6 +577,8 @@ it('should run submitIdea when the button is clicked', () => {
   expect(wrapper.instance().submitNewIdea).toHaveBeenCalledWith(mockEvent);
 });
 ```
+</section>
+
 
 <section class="note">
 ### What is this forceUpdate?
