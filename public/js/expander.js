@@ -8,10 +8,10 @@ $('.answer h3').nextAll().hide();
 $('.answer h3 img.expander-arrow').on('click', function() {
   if (!$(this).hasClass('expanded')) {
     $(this).addClass('expanded');
-    $('.answer h3').nextAll().show(150);
+    $(this).parent('h3').nextAll().show(150);
   } else {
     $(this).removeClass('expanded');
-    $('.answer h3').nextAll().hide(150);
+    $(this).parent('h3').nextAll().hide(150);
   }
 });
 
