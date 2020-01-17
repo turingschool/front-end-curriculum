@@ -143,6 +143,10 @@ We will have one check in over the course of the project.
 
 -----------------------------------------------
 
+## Project Due Date
+
+Project should be submitted via this [link](https://forms.gle/M8YEKa5KPKbH4Hgi6) no later than 9 AM the Monday of Week 2.
+
 #### Common Gotchas with Seeding Data:
 
 * Often, people think they have to do all their seeding in one step, but you can take whatever steps you need. Scraping data from the web? Consuming another API? You can do those all in separate steps! Get your data, _then_ clean it, _then_ write your seed file!
