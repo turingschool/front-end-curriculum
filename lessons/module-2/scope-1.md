@@ -43,7 +43,7 @@ Let's look at a more complex example:
 
 
 ```js
-1   var modTwoTeachers = ['Brittany', 'Hannah', 'Khalid'];
+1   var modTwoTeachers = ['Will', 'Hannah', 'Khalid'];
 2
 3   function calculateEvals (teachers, classSize) {
 4     return classSize / teachers.length;
@@ -108,7 +108,7 @@ Using the first code example, the interpreter recognizes that we're going to be 
 3     return classSize / teachers.length;
 4   }
 5
-6   modTwoTeachers = ['Brittany', 'Robbie', 'Pam'];
+6   modTwoTeachers = ['Will', 'Hannah', 'Khalid'];
 7
 8   numEvals = calculateEvals(modTwoTeachers, currentCohort);
 9
