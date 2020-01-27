@@ -7,6 +7,9 @@ tags: node, express, knex, database, SQL, http
 ### Pre-reqs
 
 * Download Postgresql with `brew install postgres`
+* Download Postico [here](https://eggerapps.at/postico/) and get it installed.
+* Given what you know about the structure of relational databases, what is happening in
+[these lines](https://github.com/mahaplatform/backframe/blob/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations/20161030203400_teams.js#L3-L7) of code? What about [these lines](https://github.com/mahaplatform/backframe/blob/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations/20161030203405_strategies.js#L3-L10)? *_Diagram it out in your journal_*
 
 ### Goals
 
@@ -272,7 +275,6 @@ Because we are working with papers **and** footnotes, we need to:
 
 1. Clear out both tables (footnotes first, as they depend on papers existing)
 2. Add a paper => return the paper's id => add footnotes with that paper id
-3. Add a paper => return the paper's id => add footnotes with that paper id
 
 The logic here gets a little hairy, but ultimately will end up looking like this:
 
