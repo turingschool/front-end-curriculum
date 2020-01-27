@@ -52,7 +52,7 @@ Make sure to name it .eslintrc
 
 [.eslintrc](./assets/weathrly/eslintrc.json)
  -->
-## Requirements
+<!-- ## Requirements
 
 Your weather underground API key should not be stored on github. Store it in a seperate file. This file should be added to your `.gitignore` file.
 
@@ -62,13 +62,12 @@ Your app should have at a minimum the following components.
 - Welcome
 - Search
 - Current Weather
-- 7 Hour Forecast
-- 10 Day Forecast
+- 5-Day Forecast
 - Card (used in 7 hour and 10 day)
-
+ -->
 ## Design Requirements
 
-Your Readme should include wireframes of your app.
+Your Readme should include wireframes of your app. Use sites like [dribbble](https://dribbble.com/) for some design inspiration. Search for things like "weather card" or "search bar" to get some design ideas.
 
 ## Phase One
 
