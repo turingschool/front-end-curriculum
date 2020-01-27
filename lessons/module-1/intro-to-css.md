@@ -85,6 +85,8 @@ Let's make the following edits on [kodewithklossy.com](https://www.kodewithkloss
 * Change the text color of all the nav items to `orange`.
 * Change the "Kode With Klossy" logo in the nav bar to have a height of 90px and a width of 320px
 * Hide the element that contains the content under the sub header "In The News"
+
+**Finished Early?** Find the Turing logo in the footer of the site. Inspect it. What HTML element created it? What attributes does it have? In the Styles Pane, toggle off and on various CSS properties to explore the outcome. Now, scroll down in that pane - you'll see a rule that targets: `#comp-jxczctmainlineContent-gridContainer > *`. Do some research to explore what `>` is doing. Lastly, consider this: when you explore elements in larger sites, you'll commonly see very obscure looking class and ID names - if there is such an emphasis on semantics and good naming, why might this be?
 </section>
 
 ## The Box Model
