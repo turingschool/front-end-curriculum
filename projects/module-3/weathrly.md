@@ -23,6 +23,8 @@ Use [create-react-app](https://www.npmjs.com/package/create-react-app) for your 
 ### Note on the API
 
 The free version of the API has a rate limit of 60 calls per minute. Just be conscious of changes that you are making to the application such that you don't frustrate yourself too much being locked out each minute.
+
+You can see some of the limitations of the free version of the API [here](https://openweathermap.org/price), like request rate limits and what data is available for free.
 </section>
 
 <!-- ## ESLint
@@ -92,6 +94,8 @@ Your Current Weather component should display the following information:
 
 * Application should handle when a user searches for a location that is not found by the API. Team should research different ways to handle unfound locations by looking around on different weather and other location searching applications and implement a solution for their project that they find intuitive. -->
 
+For this first phase, you can hardcode in a default location for your application. In a later phase, you will add functionality to change the location.
+
 Test your application as it is so far.
 
 ## Phase Two
@@ -123,11 +127,13 @@ Test your application as it is so far.
 
 * Location should persist after refresh
 
-* If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
+<!-- * If a user clicks on a specific day on the 10 day forecast the application should display an hourly breakdown of the forecasted weather for a 24-hour period.
    * For each hour it should display an image that reflects the weather
    * For each hour it should display the projected temperature and the hour
-
+ -->
 * Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
+
+* Use the geolocation API given in the browser to find the location of the user automatically
 
 * The application is fully accessible.
    * The application can be used without a mouse
