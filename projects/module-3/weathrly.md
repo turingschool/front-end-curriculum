@@ -132,7 +132,7 @@ Test your application as it is so far.
  -->
 * Add one or two examples of Micro-Interactions found on Dribbble or Behance in your ReadMe that inspired your design
 
-* Use the geolocation API given in the browser to find the location of the user automatically
+* Use the [geolocation API](https://developer.mozilla.org/en-US/docs/Web/API/Geolocation_API) given in the browser to find the location of the user automatically
 
 * The application is fully accessible.
    * The application can be used without a mouse
