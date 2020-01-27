@@ -145,7 +145,7 @@ We will have one check in over the course of the project.
 
 ## Project Due Date
 
-Project should be submitted via this [link](https://forms.gle/M8YEKa5KPKbH4Hgi6) no later than 9 AM the Monday of Week 2.
+Project should be submitted via this [link](https://forms.gle/M8YEKa5KPKbH4Hgi6) no later than 9 AM the Monday of Week 2. Instructors will go through individual projects and do a review at 1 PM.
 
 #### Common Gotchas with Seeding Data:
 

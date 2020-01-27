@@ -223,11 +223,11 @@ We'll use our super secure method of generating random IDs:
 ```js
 app.post('/api/v1/pets', (request, response) => {
   const id = Date.now();
-  const { pet } = request.body;
+  const { name, type } = request.body;
 
-  app.locals.pets.push({ id, pet });
+  app.locals.pets.push({ id, name, type });
 
-  response.status(201).json({ id, pet });
+  response.status(201).json({ id, name, type });
 });
 ```
 
@@ -238,7 +238,7 @@ IMPORTANT NOTE: this approach has a few of flaws.
 
 #### The Sad Path
 
-What happens if the user doesn't give us a pet parameter?
+What happens if the user doesn't give us a name or type parameter?
 
 We should tell them that we got some bad data.
 
@@ -246,25 +246,28 @@ In our previous example, we simply stored a new pet object that we received from
 
 Take a minute to look through some of the other available status codes that can be used. These are a quick way to determine what happened to our request when it was sent to the server, and are easily viewed in the 'Network' panel of your browser developer tools.
 
-Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that 'pet' is a required property when submitting a new pet, and we want to respond with an error if it's missing:
+Status codes are especially important when handling errors for a request. Let's add some error handling to our previous example. We are going to assume that both 'name' and 'type' are required properties when submitting a new pet, and we want to respond with an error if one of them is missing:
 
 ```js
 app.post('/api/v1/pets', (request, response) => {
   const id = Date.now();
-  const { pet } = request.body;
+  const pet = request.body;
 
-  if (!pet) {
-    return response.status(422).send({
-      error: 'No pet property provided'
-    });
+  for (let requiredParameter of ['name', 'type']) {
+    if (!pet[requiredParameter]) {
+      return response
+        .status(422)
+        .send({ error: `Expected format: { name: <String>, type: <String> }. You're missing a "${requiredParameter}" property.` });
+    }
   }
 
-  app.locals.pets.push({ id, pet });
-  response.status(201).json({ id, pet });
+  const { name, type } = pet;
+  app.locals.pets.push({ name, type, id });
+  response.status(201).json({ name, type, id });
 });
 ```
 
-If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error pet we sent along with the 422 response.
+If either property is missing, we will see an error in the Network tab of our developer tools where the response is highlighted in red and has a status of `422` (client error). The response details will tell us exactly which property we are missing based on the error we sent along with the 422 response.
 
 It's important to handle errors and write descriptive error messages so that others can more easily debug their code and quickly fix whatever problem they are running into. Setting appropriate status codes and being as specific as possible with the response pet is the best way to write a user-friendly API.
 
@@ -308,7 +311,7 @@ So now you can add a directory called `public` and in that directory add a file 
 
 ## CORS
 
-Cross Origin Resource Sharing (CORS) is a protocol that prevents domains to make requests to other domains. This is in place for security reasons.
+Cross Origin Resource Sharing (CORS) is a protocol that allows restricted resources on a web page to be requested from another domain outside the domain from which the first resource was served. This is in place for security reasons.
 
 By default the CORS policy in express apps prevents you from making api calls from other domains. In order to allow api calls from other domains you need follow these two steps:
 
@@ -384,3 +387,7 @@ For more details on how to update your other scripts to use babel, check out thi
 ### Extra Repository
 
 - [Dino Express](https://github.com/Alex-Tideman/dino_express)
+
+### Instructor Resources
+
+* [Complete Express Example](https://github.com/turingschool/complete-express-example)

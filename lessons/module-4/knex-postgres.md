@@ -7,6 +7,9 @@ tags: node, express, knex, database, SQL, http
 ### Pre-reqs
 
 * Download Postgresql with `brew install postgres`
+* Download Postico [here](https://eggerapps.at/postico/) and get it installed.
+* Given what you know about the structure of relational databases, what is happening in
+[these lines](https://github.com/mahaplatform/backframe/blob/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations/20161030203400_teams.js#L3-L7) of code? What about [these lines](https://github.com/mahaplatform/backframe/blob/e738762b4b2b9f19351e261c99cfeebb62411c44/src/platform/db/migrations/20161030203405_strategies.js#L3-L10)? *_Diagram it out in your journal_*
 
 ### Goals
 
@@ -149,17 +152,16 @@ To see all the different options on building and modifying a table, review [the 
 Let's edit the migration to create a `papers` table and a `footnotes` table. We will work with a one-to-many relationship here, where one paper can have many footnotes, but a footnote can only belong to one paper:
 
 ```js
-exports.up = function(knex) {
-  return Promise.all([
-    knex.schema.createTable('papers', function(table) {
+exports.up = function (knex) {
+  return knex.schema
+    .createTable('papers', function (table) {
       table.increments('id').primary();
       table.string('title');
       table.string('author');
 
       table.timestamps(true, true);
-    }),
-
-    knex.schema.createTable('footnotes', function(table) {
+    })
+    .createTable('footnotes', function (table) {
       table.increments('id').primary();
       table.string('note');
       table.integer('paper_id').unsigned()
@@ -168,19 +170,22 @@ exports.up = function(knex) {
 
       table.timestamps(true, true);
     })
-  ])
 };
 
-
-exports.down = function(knex) {
-  return Promise.all([
-    knex.schema.dropTable('footnotes'),
-    knex.schema.dropTable('papers')
-  ]);
+exports.down = function (knex) {
+  return knex.schema
+    .dropTable('footnotes')
+    .dropTable('papers')
 };
 ```
 
-_Note: In some examples online, you are likely to see a second argument of `Promise` passed in. Before the 0.18.0 version of Knex, Knex utilized the bluebird promise library for promise functionality instead of native promises. As of the newest version, Knex no longer supports versions of Node.js that are older than 8_
+<section class="note">
+### Note
+
+The *return* keyword is necessary because your migration functions must return a promise in order to work correctly.
+
+Also note that in some examples online, you are likely to see a second argument of `Promise` passed in. Before the 0.18.0 version of Knex, Knex utilized the bluebird promise library for promise functionality instead of native promises. As of the newest version, Knex no longer supports versions of Node.js that are older than 8.
+</section>
 
 ### Running Your Migrations
 
@@ -254,11 +259,11 @@ exports.seed = function(knex) {
   // Deletes ALL existing entries
   return knex('table_name').del()
     .then(function () {
-      return Promise.all([
-        // Inserts seed entries
-        knex('table_name').insert({id: 1, colName: 'rowValue1'}),
-        knex('table_name').insert({id: 2, colName: 'rowValue2'}),
-        knex('table_name').insert({id: 3, colName: 'rowValue3'})
+      // Inserts seed entries
+      return knex('table_name').insert([
+        {id: 1, colName: 'rowValue1'},
+        {id: 2, colName: 'rowValue2'},
+        {id: 3, colName: 'rowValue3'}
       ]);
     });
 };
@@ -270,41 +275,35 @@ Because we are working with papers **and** footnotes, we need to:
 
 1. Clear out both tables (footnotes first, as they depend on papers existing)
 2. Add a paper => return the paper's id => add footnotes with that paper id
-3. Add a paper => return the paper's id => add footnotes with that paper id
 
 The logic here gets a little hairy, but ultimately will end up looking like this:
 
 ```js
-exports.seed = function(knex) {
-  // We must return a Promise from within our seed function
-  // Without this initial `return` statement, the seed execution
-  // will end before the asynchronous tasks have completed
-  return knex('footnotes').del() // delete all footnotes first
-    .then(() => knex('papers').del()) // delete all papers
+exports.seed = async function (knex) {
+  try {
+    knex('footnotes').del() // delete all footnotes first
+    knex('papers').del() // delete all papers
 
     // Now that we have a clean slate, we can re-insert our paper data
-    .then(() => {
-      return Promise.all([
-        
-        // Insert a single paper, return the paper ID, insert 2 footnotes
-        knex('papers').insert({
-          title: 'Fooo', author: 'Bob', publisher: 'Minnesota'
-        }, 'id')
-        .then(paperID => {
-          return knex('footnotes').insert([
-            { note: 'Lorem', paper_id: paperID[0] },
-            { note: 'Dolor', paper_id: paperID[0] }
-          ])
-        })
-        .then(() => console.log('Seeding complete!'))
-        .catch(error => console.log(`Error seeding data: ${error}`))
-      ]) // end return Promise.all
-    })
-    .catch(error => console.log(`Error seeding data: ${error}`));
-};
+    // Insert a single paper, return the paper ID, insert 2 footnotes
+    const paperId = await knex('papers').insert({
+      title: 'Fooo', author: 'Bob', publisher: 'Minnesota'
+    }, 'id')
+    return knex('footnotes').insert([
+      { note: 'Lorem', paper_id: paperId[0] },
+      { note: 'Dolor', paper_id: paperId[0] }
+    ])
+  } catch (error) {
+    console.log(`Error seeding data: ${error}`);
+  }
+}
 ```
 
-*Note on return statements: In our seed files, we often have to return Promises rather than just calling them. Without the return statements, the asynchronous code in our seed file will be kicked-off, but knex will not necessarily know to wait for it to resolve before it says 'I'm done seeding your data'. The same thing applies at any nested level of .thens() in our code. If your seeding doesn't seem to be working, but you're not receiving any error messages, double-check if you're missing any return statements for the asynchronous operations you're writing.*
+<section class="note">
+### Note
+
+In our seed files, we often have to return Promises rather than just calling them. Without the use of Promises, the asynchronous code in our seed file will be kicked-off, but knex will not necessarily know to wait for it to resolve before it says 'I'm done seeding your data'. Because *knex().insert()* returns a Promise, we can use *async/await* on it.  If your seeding doesn't seem to be working, but you're not receiving any error messages, double-check if you’re missing any return statements for the asynchronous operations you're writing.
+</section>
 
 ### Running Your Seeds
 
@@ -321,6 +320,8 @@ When you have a large dataset that needs to be seeded, you'll often want to simp
 To get around this, we can break our insertion logic out into a separate function. For example, given the following dataset:
 
 ```js
+// papersData.js
+
 let papersData = [{
   author: 'Brittany',
   title: 'Lorem Ipsum',
@@ -331,6 +332,8 @@ let papersData = [{
   title: 'Dolor Set Amet',
   footnotes: ['four', 'five', 'six']
 }]
+
+module.exports = papersData;
 ```
 
 We could write a function that appropriately seeds a paper into the `papers` table and all of it's footnotes into the `footnotes` table:
@@ -339,26 +342,20 @@ We could write a function that appropriately seeds a paper into the `papers` tab
 // paper.js
 const papersData = require('../../../papersData');
 
-
-const createPaper = (knex, paper) => {
-  return knex('papers').insert({
+const createPaper = async (knex, paper) => {
+  const paperId = await knex('papers').insert({
     title: paper.title,
     author: paper.author
-  }, 'id')
-  .then(paperId => {
-    let footnotePromises = [];
+  }, 'id');
 
-    paper.footnotes.forEach(footnote => {
-      footnotePromises.push(
-        createFootnote(knex, {
-          note: footnote,
-          paper_id: paperId[0]
-        })
-      )
-    });
+  let footnotePromises = paper.footnotes.map(footnote => {
+    return createFootnote(knex, {
+      note: footnote,
+      paper_id: paperId[0]
+    })
+  });
 
-    return Promise.all(footnotePromises);
-  })
+  return Promise.all(footnotePromises);
 };
 
 const createFootnote = (knex, footnote) => {
@@ -366,18 +363,18 @@ const createFootnote = (knex, footnote) => {
 };
 
 exports.seed = (knex) => {
-  return knex('footnotes').del() // delete footnotes first
-    .then(() => knex('papers').del()) // delete all papers
-    .then(() => {
-      let paperPromises = [];
+  knex('footnotes').del() // delete footnotes first
+  knex('papers').del() // delete all papers
 
-      papersData.forEach(paper => {
-        paperPromises.push(createPaper(knex, paper));
-      });
+  try {
+    let paperPromises = papersData.map(paper => {
+      return createPaper(knex, paper);
+    });
 
-      return Promise.all(paperPromises);
-    })
-    .catch(error => console.log(`Error seeding data: ${error}`));
+    return Promise.all(paperPromises);
+  } catch (error) {
+    console.log(`Error seeding data: ${error}`)
+  }
 };
 ```
 
@@ -402,14 +399,13 @@ To make a selection for all the papers in the database, we can use `database('pa
 
 
 ```js
-app.get('/api/v1/papers', (request, response) => {
-  database('papers').select()
-    .then((papers) => {
-      response.status(200).json(papers);
-    })
-    .catch((error) => {
-      response.status(500).json({ error });
-    });
+app.get('/api/v1/papers', async (request, response) => {
+  try {
+    const papers = await database('papers').select();
+    response.status(200).json(papers);
+  } catch(error) {
+    response.status(500).json({ error });
+  }
 });
 ```
 
@@ -451,9 +447,11 @@ Our GET request would now return the same array without publisher columns:
 }]
 ```
 
-#### On Your Own
+<section class="call-to-action">
+### On Your Own
 
 Write a GET request to retrieve all footnotes. Verify it works using Postman.
+</section>
 
 
 ### Adding Data to the Database
@@ -461,7 +459,7 @@ Write a GET request to retrieve all footnotes. Verify it works using Postman.
 Now let's add a new paper to the database. We can do this with a POST request and use our database `insert` method:
 
 ```js
-app.post('/api/v1/papers', (request, response) => {
+app.post('/api/v1/papers', async (request, response) => {
   const paper = request.body;
 
   for (let requiredParameter of ['title', 'author']) {
@@ -472,20 +470,20 @@ app.post('/api/v1/papers', (request, response) => {
     }
   }
 
-  database('papers').insert(paper, 'id')
-    .then(paper => {
-      response.status(201).json({ id: paper[0] })
-    })
-    .catch(error => {
-      response.status(500).json({ error });
-    });
+  try {
+    const id = await database('papers').insert(paper, 'id');
+    response.status(201).json({ id })
+  } catch (error) {
+    response.status(500).json({ error });
+  }
 });
 ```
 
-#### On Your Own
+<section class="call-to-action">
+### On Your Own
 
 Write a POST request to add a new footnote that belongs to a pre-existing paper. Verify it works with Postman.
-
+</section>
 
 ### Querying Data for a specific Resource
 
@@ -493,36 +491,37 @@ What if we want to only retrieve a single, specific paper? We can do this by pas
 
 ```js
 // GET a specific paper
-app.get('/api/v1/papers/:id', (request, response) => {
-  database('papers').where('id', request.params.id).select()
-    .then(papers => {
-      if (papers.length) {
-        response.status(200).json(papers);
-      } else {
-        response.status(404).json({ 
-          error: `Could not find paper with id ${request.params.id}`
-        });
-      }
-    })
-    .catch(error => {
-      response.status(500).json({ error });
-    });
+app.get('/api/v1/papers/:id', async (request, response) => {
+  try {
+    const papers = await database('papers').where('id', request.params.id).select();
+    if (papers.length) {
+      response.status(200).json(papers);
+    } else {
+      response.status(404).json({
+        error: `Could not find paper with id ${request.params.id}`
+      });
+    }
+  } catch (error) {
+    response.status(500).json({ error });
+  }
 });
 ```
 
-#### On Your Own
+<section class="call-to-action">
+### On Your Own
 
 Write a GET request to retrieve all footnotes for a pre-existing paper. Verify it works with postman.
+</section>
 
-
-## Checks for Understanding
+<section class="checks-for-understanding">
+### Checks for Understanding
 
 * Why would we use a library like knex?
 * In as much detail as possible, describe what migrations are and what they do.
 * If we accidentally fat-finger a column name when setting up a table in our database, how can we fix that?
 * What's the difference between creating a migration and running a migration?
 * What is seed data and what do we use it for?
-
+</section>
 
 ### Instructor Resources
 
