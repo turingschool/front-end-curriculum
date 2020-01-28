@@ -32,7 +32,7 @@ problem.
 
 ## Iterations
 
-### 0: Practice Variables, Primitives, Functions, Arrays, Objects, and Classes  
+### 0: Practice Variables, Primitives, Functions, Arrays, and Objects
   - In the `src/` directory, you'll find a file called 'warm-up.js'. Read
     through the instructions in the file carefully. The exercises in this file
     will help you to complete the rest of the iterations  
