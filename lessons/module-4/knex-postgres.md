@@ -281,8 +281,8 @@ The logic here gets a little hairy, but ultimately will end up looking like this
 ```js
 exports.seed = async function (knex) {
   try {
-    knex('footnotes').del() // delete all footnotes first
-    knex('papers').del() // delete all papers
+    await knex('footnotes').del() // delete all footnotes first
+    await knex('papers').del() // delete all papers
 
     // Now that we have a clean slate, we can re-insert our paper data
     // Insert a single paper, return the paper ID, insert 2 footnotes
@@ -362,11 +362,11 @@ const createFootnote = (knex, footnote) => {
   return knex('footnotes').insert(footnote);
 };
 
-exports.seed = (knex) => {
-  knex('footnotes').del() // delete footnotes first
-  knex('papers').del() // delete all papers
-
+exports.seed = async (knex) => {
   try {
+    await knex('footnotes').del() // delete footnotes first
+    await knex('papers').del() // delete all papers
+
     let paperPromises = papersData.map(paper => {
       return createPaper(knex, paper);
     });
