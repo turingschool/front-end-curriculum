@@ -48,7 +48,7 @@ src/
 </section>
 
 ## Specifications
-
+<section class="answer">
 ### Iteration O: Wireframing
 
 - Utilize a wireframing tool of your choice to plan the design of your application before you start building.
@@ -63,13 +63,17 @@ Please DM your instructors the following by the end of the first day:
   * Wireframes
   * DTR between you & project partner
   * Project management tool (GH Projects, trello, etc.)
+</section>
 
+<section class="answer">
 ### Iteration 1: Landing Page
 
 - When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, their email, and a purpose/goal for using this listing app.  You can list the options however you'd like, but there should be at least three categories for  `business`, `vacation`, & `other`.
 - An error message should appear if one of the inputs has not been filled out.
 - All inputs must be filled in order for the user to sign in.
+</section>
 
+<section class="answer">
 ### Iteration 2: The Areas
 
 - Upon signing in, the user should be redirected to `/areas` where they should see a breakdown of the various areas of Denver.
@@ -80,7 +84,9 @@ Please DM your instructors the following by the end of the first day:
 - There should a button on each card to view `listings` for a specific area  
 - The user's profile data should be displayed with their name, a short greeting dependent on their purpose for using the listing app
 - A `Sign Out` button should also be available, logging the user out and redirecting them back to the root route, `/`.
+</section>
 
+<section class="answer">
 ### Iteration 3: The Listings
 
 - When a user clicks on the `View Listings`, the user should then be redirected to `/areas/:area_id`. Here the users should see a list of cards for each listing.
@@ -102,19 +108,23 @@ Please DM your instructors the following by the end of the first day:
   - Unique features of the listing -->
 
 - **Note:** User should still see their profile info and be able to log out.
+</section>
 
+<section class="answer">
 ### Iteration 4: User's Favorites
 - There should be a button on each card to save it to Favorites.  
 - There should also be a button that when clicked, links the user to the `/favorites` route and displays only the favorited cards.
 - This button should also show the count of favorited items in the button text.
 - Users should be able to unfavorite a card both on the relevant route (`/areas/:area_id/:listing_id`) as well as the `/favorites` route.  
 - If there are no favorites, there should be a message indicating that there are no favorites.
+</section>
 
-## Extensions
+<section class="answer">
+### Extensions
 
 1. Implement a map that shows where all of the listings are located when a user goes to the `/areas/:area_id` route for a specific listing area.
 2. Have your user and favorites data persist in `localStorage`. Think about when you want to store it and when it should be removed.
-
+</section>
 
 ----------------------------------------------------------
 
