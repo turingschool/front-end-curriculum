@@ -12,8 +12,8 @@ tags: react, testing
 - Become familiar with using Enzyme & Jest docs
 - Go over the different ways of testing including:
   - Creating a snapshot of the UI
-  - utilizing Enzyme to simulate user behavior
-  - test class methods using Jest
+  - Utilizing Enzyme to simulate user behavior
+  - Test class methods using Jest
 
 ## Vocab
 
@@ -24,6 +24,16 @@ tags: react, testing
 - `Enzyme` - Enzyme was created by Airbnb and is a JS testing utility that makes it easier to assert, manipulate, and traverse your React component
 - `Snapshot` - Snapshot testing is provided by Jest and allows you the ability to create a rendered "snapshot" of a component and compare it to a previously saved "snapshot"
 - `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired
+
+<section class="call-to-action">
+### Journal on Your Own (3 minutes)
+
+Why do we test? What is the point of writing tests?
+
+### Discuss with a Partner (5 minutes)
+
+Talk with a partner next to you about your reasons to write tests.
+</section>
 
 ## Unit Testing React Components
 
