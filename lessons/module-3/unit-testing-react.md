@@ -489,11 +489,14 @@ Let's take a look at a solution below:
 
 ```js
 it('should update state when handleChange is called', () => {
+  //setup
   const mockEvent = { target: { name: 'title', value: 'Sweaters for pugs.'} };
   const expected = 'Sweaters for pugs.';
 
+  //execution
   wrapper.instance().handleChange(mockEvent);
 
+  //expectation
   expect(wrapper.state('title')).toEqual(expected);
 });
 ```
@@ -517,13 +520,16 @@ Let's take a look at a solution below:
 
 ```js
 it('should reset state when resetInputs is called', () => {
+  //setup
   const defaultState = { title: 'Sweaters for pugs', description: 'Why not?'}
   const expected = { title: '', description: '' };
 
+  //execution
   wrapper.instance().setState(defaultState);
 
   wrapper.instance().resetInputs();
 
+  //expectation
   expect(wrapper.state()).toEqual(expected);
 });
 ```
@@ -547,10 +553,14 @@ Let's now take a look at a more complicated method like `submitNewIdea`. We can 
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
+  //setup
   const mockEvent = { preventDefault: jest.fn() };
   wrapper.instance().resetInputs = jest.fn();
+
+  //execution
   wrapper.instance().submitNewIdea(mockEvent);
 
+  //expectation
   expect(mockAddIdea).toHaveBeenCalled();
   expect(wrapper.instance().resetInputs).toHaveBeenCalled();
 });
@@ -565,19 +575,24 @@ Now...is there a way that we can take this a step further? Notice that `addIdea`
 expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith();
 ```
 
-Read what the test tells us. It's now checking the argument which has our default values and an id set to the actual `Date.now()`. The problem is that `Date.now()` is always going to be a different value everytime we run the test. Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
+Read what the test tells us. It's now checking the argument which has our default values and an id set to the actual `Date.now()`. The problem is that `Date.now()` is always going to be a different value every time we run the test. Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
 
 <section class="answer">
 ### submitNewIdea Solution Pt. II
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
+  //mock out Date.now()
   global.Date.now = jest.fn().mockImplementation(() => 12345)
+  //setup
   const mockEvent = { preventDefault: jest.fn() };
   const expected = { title: '', description: '', id: 12345 };
   wrapper.instance().resetInputs = jest.fn();
+
+  //execution
   wrapper.instance().submitNewIdea(mockEvent);
 
+  //expectation
   expect(mockAddIdea).toHaveBeenCalledWith(expected);
   expect(wrapper.instance().resetInputs).toHaveBeenCalled();
 });
@@ -593,12 +608,15 @@ Let's write one more test. Let's test something different, like simulating an ev
 
 ```js
 it('should run submitIdea when the button is clicked', () => {
+  //setup
   wrapper.instance().submitNewIdea = jest.fn();
   wrapper.instance().forceUpdate();
   const mockEvent = { preventDefault: jest.fn() };
 
+  //execution
   wrapper.find('button').simulate('click', mockEvent);
 
+  //expectation
   expect(wrapper.instance().submitNewIdea).toHaveBeenCalledWith(mockEvent);
 });
 ```
