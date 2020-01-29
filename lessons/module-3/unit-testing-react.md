@@ -575,7 +575,11 @@ Now...is there a way that we can take this a step further? Notice that `addIdea`
 expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith();
 ```
 
-Read what the test tells us. It's now checking the argument which has our default values and an id set to the actual `Date.now()`. The problem is that `Date.now()` is always going to be a different value every time we run the test. Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
+Read what the test tells us...
+- It's now checking the argument which has our default values and an id set to the actual `Date.now()`.
+- The problem is that `Date.now()` is always going to be a different value every time we run the test.
+
+Brace yourself....we are going to mock our what `Date.now` returns! Update your test to what it looks like below:
 
 <section class="answer">
 ### submitNewIdea Solution Pt. II
@@ -599,9 +603,18 @@ it('should call addIdea and resetInputs when submitNewIdea is called', () => {
 ```
 </section>
 
-We are assigning `Date.now` to a mock function. These mock functions have a method called `mockImplementation` to tell it how that mock function should behave. Here we are just telling it that it should always return the value of *12345* everytime it gets invoked. Now we make an assertion because the value will always be the same. Cheers!
+We are assigning `Date.now` to a mock function. These mock functions have a method called `mockImplementation` to tell it how that mock function should behave. Here we are just telling it that it should always return the value of *12345* every time it gets invoked. Now we make an assertion because the value will always be the same. Noice!
 
 Let's write one more test. Let's test something different, like simulating an event. Similar to our `Card` component when we clicked on a button, we can do something similar here. Let's write a test for clicking the button on our form!  Let's work through it:
+
+<section class="call-to-action">
+### Testing the Button click
+
+- We can mock out `submitNewIdea` since we have already tested that it works as expected
+- We are going to use `forceUpdate` to allow us to setup `submitNewIdea` as a `jest.fn()`
+- Find the button and simulate a click event - how can we pass the necessary info into this simulated event?
+- What does this `submitNewIdea` need to be passed to work correctly? That will help inform our assertion/expectation!  
+</section>
 
 <section class="answer">
 ### Button Click solution
@@ -621,7 +634,6 @@ it('should run submitIdea when the button is clicked', () => {
 });
 ```
 </section>
-
 
 <section class="note">
 ### What is this forceUpdate?
