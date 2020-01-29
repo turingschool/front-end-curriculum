@@ -93,7 +93,7 @@ npm install enzyme-adapter-react-16 --save-dev
 
 As a last step, we need to make sure that the adapter is configured before our test suite runs. Setting up some kind of configuration before a test suite runs is a really common task actually. So common in fact, that the create-react-app team has a specific way you need to do this.
 
-Inside of `src/`, create a file called `setupTests.js`.
+Inside of `src/`, create a file called `setupTests.js`. This might already be created for you with `create-react-app`.
 
 Jest will run this file before your test suite starts up, so it's the ideal place to do any kind of configuration or setup for the test suite. Add the following to `setupTests.js`:
 
