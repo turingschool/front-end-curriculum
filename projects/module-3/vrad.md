@@ -48,6 +48,12 @@ src/
 - For this project, you will need to clone down the [VRAD API](https://github.com/turingschool/VRAD-API) and run it locally on your machine. More detailed instructions can be found in the README.
 </section>
 
+<section class="call-to-action">
+### Resources for Project
+- [VRAD Listings API](https://github.com/turingschool/VRAD-API)
+- [Images for Listings](https://github.com/turingschool/VRAD-Assets)
+</section>
+
 ## Specifications
 <section class="answer">
 ### Iteration O: Wireframing
