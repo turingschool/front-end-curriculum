@@ -12,8 +12,8 @@ tags: react, testing
 - Become familiar with using Enzyme & Jest docs
 - Go over the different ways of testing including:
   - Creating a snapshot of the UI
-  - utilizing Enzyme to simulate user behavior
-  - test class methods using Jest
+  - Utilizing Enzyme to simulate user behavior
+  - Test class methods using Jest
 
 ## Vocab
 
@@ -24,6 +24,16 @@ tags: react, testing
 - `Enzyme` - Enzyme was created by Airbnb and is a JS testing utility that makes it easier to assert, manipulate, and traverse your React component
 - `Snapshot` - Snapshot testing is provided by Jest and allows you the ability to create a rendered "snapshot" of a component and compare it to a previously saved "snapshot"
 - `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired
+
+<section class="call-to-action">
+### Journal on Your Own (3 minutes)
+
+Why do we test? What is the point of writing tests?
+
+### Discuss with a Partner (5 minutes)
+
+Talk with a partner next to you about your reasons to write tests.
+</section>
 
 ## Unit Testing React Components
 
@@ -83,7 +93,7 @@ npm install enzyme-adapter-react-16 --save-dev
 
 As a last step, we need to make sure that the adapter is configured before our test suite runs. Setting up some kind of configuration before a test suite runs is a really common task actually. So common in fact, that the create-react-app team has a specific way you need to do this.
 
-Inside of `src/`, create a file called `setupTests.js`.
+Inside of `src/`, create a file called `setupTests.js`. This might already be created for you with `create-react-app`.
 
 Jest will run this file before your test suite starts up, so it's the ideal place to do any kind of configuration or setup for the test suite. Add the following to `setupTests.js`:
 
@@ -123,7 +133,7 @@ We want to import our `Card` component so we can test that. We also want to impo
 
 Another way to render a component with Enzyme is using `mount`. Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md). `mount` will also render child elements, but you typically will not want to do this since you want to test these components in isolation. We will write tests for every component so this is a mute point. Think back to what a *unit test* is. According to the docs, the few scenarios where you might want to use `mount` would be if you have to do some testing with a DOM API or need to test components that are wrapped in higher order components. You will likely have few situations where you need to worry about this throughout the module.
 
-```jsx
+```js
 // Card.test.js
 
 import React from 'react';

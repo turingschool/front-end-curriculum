@@ -10,7 +10,7 @@ module: 3
 * Understand the component lifecycle
 * Understand class component lifecycle methods
 * Implement conditional rendering
-* Implement PropTypes & understand why they are useful
+* Implement `PropTypes` and understand why they are useful
 
 ## Vocabulary
 
@@ -21,17 +21,19 @@ module: 3
 
 Did you ever learn about the butterfly lifecycle when you were a kid? It starts out as an egg, hatches into a caterpillar, eats a bunch, wraps itself into a cocoon, emerges as a butterfly? Well, React components have lifecycles, too.
 
-A React Component goes through 3 distinct phases during its Lifecycle:
+A React component goes through 3 distinct phases during its lifecycle:   
 
 * Mounting (aka Birth)
-* Updating (aka Growth)
+* Updating (aka Growth and Change)
 * Unmounting (aka Death)
 
 Dan Abramov [tweeted](https://twitter.com/dan_abramov/status/981712092611989509) a diagram that helps explain some of the React 16 lifecycle methods.
 
 ![React 16 component lifecycle methods chart](https://pbs.twimg.com/media/DZ-97vzW4AAbcZj?format=jpg)
 
-We'll take a deeper look into some of these methods in this lesson.
+We'll take a deeper look into some of these methods in this lesson. There are a few that you will probably use throughout your time at Turing. This simplified diagram of the same lifecycle is what we will talk about in depth ([created here](http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/)):
+
+![React 16 component lifecycle methods chart simplified](/assets/images/react-lifecycle-simplified.png)
 
 ## Mounting Phase
 
@@ -54,7 +56,7 @@ Any class in JavaScript has this rule: Within the constructor, it's important to
 
 Invoking `super()` will run the constructor method of the parent class and allows it to initialize itself. This invocation allows `this` to have a defined value **within the constructor**. Constructors are great for setting up our component and initializing state. However, this is **NOT** a place you should consider making a network request.
 
-This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting the use of a default constructor. Basically, if you don't need to initialize state or bind any methods, you don't need to implement a constructor for your component! It will get called automatically behind the scenes. Magic! 
+This does not mean that every class NEEDS a constructor. The [default constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor#Default_constructors) is used if you aren't modifying it. There is even an [eslint rule](http://eslint.org/docs/rules/no-useless-constructor) for detecting the use of a default constructor. Basically, if you don't need to initialize state or bind any methods, you don't need to implement a constructor for your component! It will get called automatically behind the scenes. Magic!
 
 ### Where are my props?  
 
@@ -76,19 +78,9 @@ Note that whether or not you have a constructor method has no effect on `this` o
 
 Per [the docs](https://reactjs.org/docs/state-and-lifecycle.html#adding-local-state-to-a-class), class components should always pass props to the base constructor (this is why we pass them into the `super()` method). However there is some debate as to why this is suggested, since React will automatically set the props for you once the constructor has fired.
 
-### static getDerivedStateFromProps() - *NEW with React 16.3.0*
-
-This is a new lifecycle method that was added with React 16.3. Check out what the [docs](https://reactjs.org/docs/react-component.html#static-getderivedstatefromprops) have to say about it. Because this is a static method, we don't have access to `this` inside the method. Per the docs, this method gets invoked under 2 circumstances:
-  * after a component is instantiated
-  * when the component receives new props (aka when it re-renders)
-
-It takes in `nextProps` and `prevState` and returns an object to update state, or null if the new props do not require any state updates.
-
-This method exists for only one purpose... it enables a component to update its internal state as the result of changes in props.  The [docs](https://reactjs.org/blog/2018/06/07/you-probably-dont-need-derived-state.html#when-to-use-derived-state) themselves tell developers to use this lifecycle method **sparingly**. (it's even listed in the **Rarely Used Lifecycle Methods** section)
-
 ### render()
 
-Now that our component has been initialized and configured, we can begin rendering some content/elements on the page. This is the lifecycle method that React developers are most familiar with. It is the one lifecycle method that exists across all phases of a React component. 
+Now that our component has been initialized and configured, we can begin rendering some content/elements on the page. This is the lifecycle method that React developers are most familiar with. It is the one lifecycle method that exists across all phases of a React component.
 
 <section class="call-to-action">
 ### Turn and Talk
@@ -112,24 +104,6 @@ Setting state in this method **WILL** trigger a re-render - but will not cause a
 
 ## Updating Phase
 
-### static getDerivedStateFromProps
-
-Yep, it lives here, too. If you look back up at the diagram from the beginning of the lesson, you can see that it's a part of the _New Props_ phase of Updating.
-
-### getSnapshotBeforeUpdate - *NEW with React 16.3.0*
-
-This [method](https://reactjs.org/docs/react-component.html#getsnapshotbeforeupdate) is called right before any DOM manipulations are made. If you need to do any calculations that you'd like to use in `componentDidUpdate()`, you can return those in this method, and they will get passed along as a the third argument to `componentDidUpdate()`. 
-
-<section class="note">
-### Note
-
-This is another lifecycle method that you will not use frequently (this is also listed in the **Rarely Used Lifecycle Methods** section).  A scenario where it could be useful is if you are building some kind of chat application where you need to keep track of the scroll position.
-</section>
-
-### render()
-
-And, yeah, render lives here, too.
-
 ### componentDidUpdate()
 
 This method is invoked *after* updating occurs.  It is **NOT** called for the initial render.  Per the [docs](https://reactjs.org/docs/react-component.html#componentdidupdate): "Use this as an opportunity to operate on the DOM when the component has been updated. This is also a good place to do network requests as long as you compare the current props to the previous props (e.g. a network request may not be necessary if the props have not changed)."  For example, if the `userId` in your new props is not the same as the one that is being currently displayed, you could fetch the new user.
@@ -146,16 +120,6 @@ You are able to call `setState()` but only if it's wrapped in a conditional.  Ot
 
 This is invoked just once, before the component is unmounted and destroyed. According to the [docs](https://reactjs.org/docs/react-component.html#componentwillunmount), it's a good place to cancel any open network requests, kill any timers, and do any other necessary cleanup tasks.  You should **NOT** called `setState` here because the component will not re-render.
 
-## Error Handling (just know that these exists)
-
-### componentDidCatch()
-
-`componentDidCatch` originally was set up to allow you to set up error boundaries in your application, mainly for logging errors.  You can use it to display fallback UI using `setState()`, but advise against it since it will be deprecated in a future release. Check the [docs](https://reactjs.org/docs/react-component.html#componentdidcatch) for more information.
-
-### getDerivedStateFromError() - *NEW with React 16.6.0*
-
-Similar to `componentDidCatch`, this lifecycle is invoked after an error has been thrown by a child component.  According to the docs, "It receives the error that was thrown as a parameter and should return a value to update state."  Take a look at an example [here](https://reactjs.org/docs/react-component.html#static-getderivedstatefromerror).
-
 ## Workshop On Our IdeaBox
 
 Okay. Why do we care about any of this?
@@ -164,7 +128,7 @@ To be honest, you probably won't be using much more than `constructor()`, `super
 
 We're going to implement `componentDidMount()` in our IdeaBox.
 
-### Setup  your back end
+### Setup Your Back End
 
 If you want, you can re-clone your IdeaBox into a new directory.  Follow the steps here:
 
@@ -192,9 +156,9 @@ Note that the frontend should be running on `localhost:3000` and the backend sho
 
 Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you should see a brief list of ideas!
 
-### Implement Our Backend
+### Implement Getting Data from the Backend
 
-Okay. Let's refactor our IdeaBox so that we are consuming our API!
+Okay. Let's refactor our IdeaBox so that we are consuming data from our API!
 
 <section class="call-to-action">
 ### Your Turn
@@ -206,13 +170,13 @@ As we've noted before, we should use our catch somehow in order to display an er
 
 Let's edit our intial state in our `App.js`:
 
-```jsx
+```js
 // App.js
 
-  this.state = {
-    ideas: [],
-    error: ''
-  };
+this.state = {
+  ideas: [],
+  error: ''
+};
 ```
 
 Then inside of your catch, set the error message in state. Now, let's _do_ something with that information! Such as displaying it to the user.
@@ -221,41 +185,41 @@ Then inside of your catch, set the error message in state. Now, let's _do_ somet
 
 We don't want an error message showing all the time. So ... let's make use of conditional rendering! Let's take a look at our current `render()` method:
 
-```jsx
+```js
 // App.js
 
-  render() {
-    return (
-      <main className="App">
-        <h1>IdeaBox</h1>
-        <Form addIdea={this.addIdea} />
-        <Ideas 
-          ideas={this.state.ideas} 
-          removeIdea={ this.removeIdea} 
-        />
-      </main>
-    )
-  }
+render() {
+  return (
+    <main className="App">
+      <h1>IdeaBox</h1>
+      <Form addIdea={this.addIdea} />
+      <Ideas
+        ideas={this.state.ideas}
+        removeIdea={this.removeIdea}
+      />
+    </main>
+  );
+}
 ```
 
-If we wanted to add an h2 that would show up if we had an error, what would we write?
+If we wanted to add an `h2` that would show up if we had an error, what would we write?
 
-```jsx
+```js
 // App.js
 
-  render() {
-    return (
-      <main className="App">
-        <h1>IdeaBox</h1>
-        <Form addIdea={this.addIdea} />
-        {this.state.error && <h2>{this.state.error}</h2>}
-        <Ideas 
-          ideas={this.state.ideas} 
-          removeIdea={ this.removeIdea} 
-        />
-      </main>
-    )
-  }
+render() {
+  return (
+    <main className="App">
+      <h1>IdeaBox</h1>
+      <Form addIdea={this.addIdea} />
+      {this.state.error && <h2>{this.state.error}</h2>}
+      <Ideas
+        ideas={this.state.ideas}
+        removeIdea={this.removeIdea}
+      />
+    </main>
+  );
+}
 ```
 
 Wowwwww okay. What does that syntax even mean?
@@ -292,15 +256,15 @@ $ npm install prop-types -S
 
 In React, `PropTypes` are declared like this:
 
-```jsx
+```js
 // Card.js
 
 import React from 'react';
-import PropTypes from 'prop-types'
-import './Card.css'
+import PropTypes from 'prop-types';
+import './Card.css';
 
 const Card = ({ id, title, description, removeIdea, isFavorite }) => {
-  const favoriteClass = isFavorite ? 'favorite' : 'card'
+  const favoriteClass = isFavorite ? 'favorite' : 'card';
 
   return (
     <section className={favoriteClass}>
@@ -308,14 +272,14 @@ const Card = ({ id, title, description, removeIdea, isFavorite }) => {
       <p>{ description }</p>
       <button onClick={() => removeIdea(id)}>🗑</button>
     </section>
-  )
-}
+  );
+};
 
 export default Card;
 
 Card.propTypes = {
   title: PropTypes.string
-}
+};
 ```
 
 The error you will see if the component gets something besides a string would look something like this:  
@@ -335,7 +299,7 @@ By default, all props specified within the `Class.propTypes` object will be cons
 ```js
 Card.propTypes = {
   title: PropTypes.string.isRequired
-}
+};
 ```
 
 You can also be more generic - let's say you need a prop to come in but it doesn't matter what type it is as long as it's there. Instead of specifying a particular JS primitive you can use `.any`.
@@ -343,7 +307,7 @@ You can also be more generic - let's say you need a prop to come in but it doesn
 ```js
 Card.propTypes = {
   title: PropTypes.any.isRequired
-}
+};
 ```
 
 <section class="call-to-action">
@@ -370,7 +334,7 @@ these particular methods when you are done.
 
 Just like when writing functions, React also allows us to provide a default value for props. [defaultProps](https://facebook.github.io/react/docs/typechecking-with-proptypes.html#default-prop-values) let you ensure that a value will be passed through. This helps eliminate some of the incessant ternaries that either render the prop or an empty string, for instance.  
 
-```jsx
+```js
 const Card = ({ id, title, description, removeIdea, isFavorite }) => {
   const favoriteClass = isFavorite ? 'favorite' : 'card'
 
@@ -380,8 +344,8 @@ const Card = ({ id, title, description, removeIdea, isFavorite }) => {
       <p>{ description }</p>
       <button onClick={() => removeIdea(id)}>🗑</button>
     </section>
-  )
-}
+  );
+};
 
 export default Card;
 
@@ -391,11 +355,11 @@ Card.propTypes = {
   description: PropTypes.string.isRequired,
   removeIdea: PropTypes.func.isRequired,
   isFavorite: PropTypes.bool.isRequiredd,
-}
+};
 
 Card.defaultProps = {
   isFavorite: true
-}
+};
 ```  
 
 <section class="note">
@@ -415,7 +379,7 @@ Take a few minutes to journal to write notes to each of these questions:
 * What do you know about `componentDidMount`?
 * How do you conditionally render a part of a component?
 * What's the purpose of propTypes?
-</section> 
+</section>
 
 ## Suggested homework
 
@@ -424,8 +388,8 @@ Take a few minutes to journal to write notes to each of these questions:
 
 Now that we've talked about the most obvious use cases of propTypes to preemptively debug your code, read the following two articles - you are highly encouraged to take notes:  
 - [Better Prop Validation](https://medium.com/@MoeSattler/better-prop-validation-in-react-cc83590d311f#.8z6wszfzn).  
-- [Writing A Good React Component](https://thoughts.travelperk.com/writing-a-good-react-component-59624ed40b8e#.64wzjk4qc) 
-</section> 
+- [Writing A Good React Component](https://thoughts.travelperk.com/writing-a-good-react-component-59624ed40b8e#.64wzjk4qc)
+</section>
 
 <section class="call-to-action">
 ### Additional Async Practice
@@ -437,7 +401,7 @@ Go take a look at the BE repo's README. There is documentation for adding and de
 Refactor IdeaBox to use these endpoints. Hint: you might need to write more fetches...
 
 When you have completed this functionality, compare it to the solution on the `react-iii-complete` branch.
-</section> 
+</section>
 
 <section class="call-to-action">
 ### Additional Steps
