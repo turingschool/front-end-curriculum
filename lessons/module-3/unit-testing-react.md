@@ -133,7 +133,7 @@ We want to import our `Card` component so we can test that. We also want to impo
 
 Another way to render a component with Enzyme is using `mount`. Read more about the differences between [shallow rendering](https://github.com/airbnb/enzyme/blob/master/docs/api/shallow.md) and [full mounting](https://github.com/airbnb/enzyme/blob/master/docs/api/mount.md). `mount` will also render child elements, but you typically will not want to do this since you want to test these components in isolation. We will write tests for every component so this is a mute point. Think back to what a *unit test* is. According to the docs, the few scenarios where you might want to use `mount` would be if you have to do some testing with a DOM API or need to test components that are wrapped in higher order components. You will likely have few situations where you need to worry about this throughout the module.
 
-```jsx
+```js
 // Card.test.js
 
 import React from 'react';
