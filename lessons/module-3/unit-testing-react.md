@@ -469,12 +469,17 @@ describe('Form', () => {
 
 
 
-Awesome now that we have got that set up, let's take a closer look at our `Form` component. One of the first methods that we have is `handleChange`. Inside the method it is updating the state. So let's write another test that invokes this method and check to see if state has been updated. Give it a shot now!
+Awesome now that we have got that set up, let's take a closer look at our `Form` component. One of the first methods that we have is `handleChange`. Inside the method it is updating the state. So let's write another test that...
+
+- Invokes the `handleChange` method
+- Checks to see if the state has been updated
 
 <section class="call-to-action">
 ### Your Turn
 
-Write a test that calls `handleChange` on the **instance** and check to see if state has been updated. Look at the last test we wrote for `addIdea` in the `App.test.js`. Are we passing any arguments through handleChange? What properties are we expecting to have inside of that *event* object?
+Write a test that calls `handleChange` on the **instance** and check to see if state has been updated. Look at the last test we wrote for `addIdea` in the `App.test.js`.
+- Are we passing any arguments through handleChange?
+- What properties are we expecting to have inside of that *event* object?
 </section>
 
 Let's take a look at a solution below:
@@ -494,13 +499,15 @@ it('should update state when handleChange is called', () => {
 ```
 </section>
 
-
 Notice we had to mock out the event object giving it the exact properties we expected it to have. It needs a `target` that has a value of an object that also has two properties of `name` and `value`. You can give them whatever values you want as long as you assert that the change in state has that same value!  Let's practice doing one more test that is similar.
 
 <section class="call-to-action">
 ### Your Turn
 
-Write a test for your `resetInputs` method. The purpose of this method is to clear out the state right? Think about how you could set a default state in here (how do you normally set state?), and then run the `resetInputs` method. Then assert that the state is empty.
+Write a test for your `resetInputs` method!
+- The purpose of this method is to clear out the state right? Think about how you could set a default state in here (how do you normally set state?)
+- Run the `resetInputs` method.
+- Assert that the state is empty.
 </section>
 
 Let's take a look at a solution below:
@@ -525,10 +532,18 @@ it('should reset state when resetInputs is called', () => {
 
 Crazy!  We can call `setState` in our component as well since it is a method that we have available that we inherit from the `Component` class. Then we can call the method assert that the state has been emptied out.
 
-Let's now take a look at a more complicated method like `submitNewIdea`. We can see that it's passing an event object, so that should tell us that we will need to mock it out like we did previously. It looks like it also creates a new Idea object and calls two methods, `addIdea` and `resetInputs`. Since `addIdea` comes from our `App`, we don't need to test the functionality of it. (we already have actually!)  We have also already tested what `resetInputs` does as well!  What we want to do is test that these methods have been invoked!  Let's work through it together:
+Let's now take a look at a more complicated method like `submitNewIdea`. We can see that it's passing an event object, so that should tell us that we will need to mock it out like we did previously. It looks like it also creates a new Idea object and calls two methods, `addIdea` and `resetInputs`. Since `addIdea` comes from our `App`, we don't need to test the functionality of it. (we already have actually!)  We have also already tested what `resetInputs` does as well!  `**What we want to do is test that these methods have been invoked!**`  Let's work through it together:
+
+<section class="call-to-action">
+### Testing submitNewIdea()
+
+- The first thing we notice is the `e.preventDefault()` - how can we handle this in our test?
+- We don't care about `resetInputs` at the moment, just that it was called.  How can we handle this in our test?
+- How can we invoke the method we are trying to test? Does it need to be passed any arguments?
+</section>
 
 <section class="answer">
-### submitIdea Solution Pt. I
+### submitNewIdea Solution Pt. I
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
@@ -553,7 +568,7 @@ expect(wrapper.instance().props.addIdea).toHaveBeenCalledWith();
 Read what the test tells us. It's now checking the argument which has our default values and an id set to the actual `Date.now()`. The problem is that `Date.now()` is always going to be a different value everytime we run the test. Brace yourself....we are going to mock our what `Date.now` returns!  Update your test to what it looks like below:
 
 <section class="answer">
-### submitIdea Solution Pt. II
+### submitNewIdea Solution Pt. II
 
 ```js
 it('should call addIdea and resetInputs when submitNewIdea is called', () => {
