@@ -8,7 +8,7 @@ tags: react, javascript, api
 
 For this project, we are going to work on developing some muscle memory building out React components. At this point you've built at least one basic React app in the past. Now is the time to leverage that and add some complexity.  
 
-For this project, we will be utilizing an external API that houses data about different areas of Denver and associated rentals available in the those areas.
+For this project, we will be utilizing an [external API](https://github.com/turingschool/VRAD-API) that houses data about different areas of Denver and associated rentals available in the those areas.
 
 ## Learning Goals
 
@@ -45,6 +45,7 @@ src/
 ### Notes  
 
 - Although there are many resources out there for making API calls, you are asked to exclusively use the native [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API for this project.
+- For this project, you will need to clone down the [VRAD API](https://github.com/turingschool/VRAD-API) and run it locally on your machine. More detailed instructions can be found in the README.
 </section>
 
 ## Specifications
