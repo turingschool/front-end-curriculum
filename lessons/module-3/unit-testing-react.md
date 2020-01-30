@@ -424,6 +424,8 @@ Let's write a test for `addIdea` in our `App.test.js` file. We want to:
 - What would our state look like after we add an idea?
 
 <section class="answer">
+### addIdea Solution
+
 ```js
 // App.test.js
 
