@@ -363,7 +363,9 @@ A common practice to think about and follow through when writing out tests is:
 * `Execution` - Let's run the command or simulate the action.
 * `Expectation` - This is where our assertion happens. After running our function, what did we expect to happen?
 
-Consider the following test:
+
+<section class="answer">
+### Mocking `removeIdea`
 
 ```js
 // Card.test.js
@@ -391,6 +393,7 @@ it('should call the removeIdea prop with the Card\'s id when clicked', () => {
 - `jest.fn()` Mock functions allow you to spy on the behavior of a function that is called indirectly by some other code, rather than testing the output. Read more about it [here](https://jestjs.io/docs/en/jest-object.html#jestfnimplementation).
 - `wrapper.find('.btn-remove').simulate('click');` will simulate a click event. This uses specific methods that enzyme gives us. This includes [find](https://airbnb.io/enzyme/docs/api/ReactWrapper/find.html) and [simulate](https://airbnb.io/enzyme/docs/api/ShallowWrapper/simulate.html)
 - `expect(removeIdeaMock).toHaveBeenBeenCalledWith([arg])` asks our mock function if it was called with a specific argument. Here are the [docs](https://jestjs.io/docs/en/expect) to see a list of different methods available to you from `Jest`.
+</section>
 
 ### Testing a class-based component's method
 
