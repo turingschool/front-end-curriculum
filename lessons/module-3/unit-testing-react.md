@@ -417,8 +417,13 @@ Calling `instance()` on our wrapper will give us access to all of the class inst
 REMEMBER! `instance()` can only be used on class components. `instance()` returns `null` for stateless functional components. Sooo....don't include methods in your functional components!
 </section>
 
-Let's write a test for `addIdea` in our `App.test.js` file:
+Let's write a test for `addIdea` in our `App.test.js` file. We want to:
+- Start by creating a shallow version of our `<App>` component. Does it require any props?
+- What does our state start as? Do we need to do anything to make that happen?
+- Does the `addIdea` method take any arguments? How can we account for that?
+- What would our state look like after we add an idea?
 
+<section class="answer">
 ```js
 // App.test.js
 
@@ -442,6 +447,7 @@ describe('App', () => {
 ```
 
 - `wrapper.state([arg])` returns the state based what key you give as an argument. If there is no argument included, it returns the entire state. Read the docs [here](https://airbnb.io/enzyme/docs/api/ReactWrapper/state.html)!
+</section>
 
 ### More Practice & Examples (Forms!)
 
