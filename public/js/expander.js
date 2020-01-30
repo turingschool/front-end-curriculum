@@ -5,13 +5,14 @@ $('.answer h3').each(function(idx, title) {
 
 $('.answer h3').nextAll().hide();
 
-$('.answer h3 img.expander-arrow').on('click', function() {
-  if (!$(this).hasClass('expanded')) {
-    $(this).addClass('expanded');
-    $(this).parent('h3').nextAll().show(150);
+$('.answer h3').on('click', function() {
+  let arrowEl = $(this).find('img.expander-arrow');
+  
+  if (!arrowEl.hasClass('expanded')) {
+    arrowEl.addClass('expanded');
+    arrowEl.parent('h3').nextAll().show(150);
   } else {
-    $(this).removeClass('expanded');
-    $(this).parent('h3').nextAll().hide(150);
+    arrowEl.removeClass('expanded');
+    arrowEl.parent('h3').nextAll().hide(150);
   }
 });
-

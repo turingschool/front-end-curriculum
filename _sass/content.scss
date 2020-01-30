@@ -75,6 +75,10 @@
 .answer {
   @extend %call-to-action-shared;
   border-left: 8px solid #CCC;
+
+  h3 {
+    cursor: pointer;
+  }
 }
 
 .expander-arrow {
