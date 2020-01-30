@@ -48,6 +48,7 @@ In all programs, there are two primary components:
 | **Focal Point** | Functions | Instructions | Objects |
 | **Data/Behavior** | Separate: distinctly different| Global: shared by functions| Encapsulated: single location|
 
+You can read more about the differemces in these paradigms <a href="https://levelup.gitconnected.com/functional-object-oriented-procedural-programming-644feda5bcfc" target=\__blank">here</a>.
 
 # OOP
 Object Oriented Programming (OOP) will be our primary focus for this lesson - which is an approach that structures your code around objects rather than functions and procedures. *(Functional and procedural programming are beyond the scope of this lesson.)*
@@ -208,7 +209,6 @@ For example, if `brittany` relied on `pam` being funny and smart, and all of a s
 
 This connectedness between the two objects is referred to as **coupling**. The more objects depend on each other, the more **tightly coupled** they are. A good goal as a programmer is to make objects as independent as possible, meaning they can be tested as stand-alone units and don't have too many dependencies on other objects to perform their respective duties.
 
-Coupling refers to the level of connectedness between two objects. It's inevitable that objects will need to interact with one another, and therefore can create dependencies. A good goal as a programmer is to make objects as independent as possible, meaning they can be tested as stand-alone units and don't have too many dependencies on other objects to perform their respective duties.
 
 ## Single Responsibility Principle/Principle of Least Knowledge
 
