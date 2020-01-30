@@ -155,11 +155,11 @@ round.turns; // => 2
 
 round.incorrectGuesses;     // => [14]
 
-round.currentCard();    // => { id: 12,
-                        //      question: 'What is Travis\'s favorite stress reliever?',
-                        //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
-                        //      correctAnswer: 'playing with bubble wrap'
-                        //    }
+round.returnCurrentCard();    // => { id: 12,
+            	              //      question: 'What is Travis\'s favorite stress reliever?',
+            	              //      answers: ['listening to music', 'watching Netflix', 'playing with bubble wrap'],
+            	              //      correctAnswer: 'playing with bubble wrap'
+            	              //    }
 
 round.calculatePercentCorrect(); // => 50
 ```
