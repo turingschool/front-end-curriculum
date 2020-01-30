@@ -100,19 +100,17 @@ Please DM your instructors the following by the end of the first day:
 
 - The data for each card should include:
   - Name
+  - A single picture for the listing
+  - A button that, when clicked, shows more details for the listing at a new route
+
+- When a user clicks a specific listing, they should be redirected to `/areas/:area_id/:listing_id` and get a more detailed breakdown of a specific listing. This card/view should include:
   - Address
   - # of Bedrooms
   - # of Bathrooms
   - Cost per Night
-  - Pictures of the listing
+  - All pictures of the listing
   - Unique features of the listing
   - A button to "Favorite" the listing
-
-<!-- Should we have students drill down further from each listing? -->
-<!-- - When a user clicks a specific listing, they should be redirected to `/areas/:area_id/:listing_id` and get a more detailed breakdown of a specific listing. This card/view should include:
-  - Address
-  - Pictures of the listing
-  - Unique features of the listing -->
 
 - **Note:** User should still see their profile info and be able to log out.
 </section>
