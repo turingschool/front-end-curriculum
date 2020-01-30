@@ -105,8 +105,8 @@ Please DM your instructors the following by the end of the first day:
 
 - When a user clicks a specific listing, they should be redirected to `/areas/:area_id/:listing_id` and get a more detailed breakdown of a specific listing. This card/view should include:
   - Address
-  - # of Bedrooms
-  - # of Bathrooms
+  - Number of Bedrooms
+  - Number of Bathrooms
   - Cost per Night
   - All pictures of the listing
   - Unique features of the listing
