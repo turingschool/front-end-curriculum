@@ -339,6 +339,59 @@ componentDidMount() {
 ```
 </section>
 
+## Step 5 - Building a Helpers File
+[Bravo!](./assets/images/promises-practice/bravo.jpeg) - we have successfully integrated the nested data from the API into our App's state! But, this is a pretty burly chunk of code and isn't super readable. This is where you might find it more beneficial to break this into a separate file and bring in the functionality only when you need it!
+
+<section class="call-to-action">
+### You Do
+With a partner, see if you can extract the logic from our `fetch` call into it's own function within a new file!
+1. Create a new file called `helpers.js`
+2. Create a function called `fetchStaffBios`
+3. Think about what logic from the `fetch` from our App needs to be broken out and extract that logic into the `fetchStaffBios` function
+4. Import the function into your `<App />` component and use it within the `fetch` of `componentDidMount`. If the app still works, you did it!
+5. Add some error handling to your `fetch` to handle if something goes awry anywhere along the way!
+</section>
+
+<section class="answer">
+### Final Solution!
+```js
+// helpers.js
+export const fetchStaffBios = (data) => {
+  const promises = data.bio.map(staffMember => {
+    return fetch(staffMember.info)
+      .then(res => res.json())
+      .then(info => {
+        return {
+          name: staffMember.name,
+          ...info
+        }
+      })
+  })
+  return Promise.all(promises)
+}
+// App,js
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      staff: [],
+      error: ''
+    };
+  }
+
+componentDidMount() {
+  fetch('http://localhost:3001/api/frontend-staff')
+    .then(response => response.json())
+    .then(data => fetchStaffBios(data))
+    .then(staff => this.setState({ staff }))
+    .catch(error => this.setState({ error }))
+  }
+  render() {
+    //JSX
+  }
+}
+```
+</section>
 
 #### Resources
 * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
