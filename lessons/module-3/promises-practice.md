@@ -140,8 +140,12 @@ Have these directories open in two separate terminal tabs so you can see them bo
 
 `npm start`
 
+## Postman
+[Postman](https://www.getpostman.com/downloads/) is a great tool for making requests to an API and seeing the response you get back in a quick, easy-to-use interface! We will be utilizing this tool throughout Mod 3 and beyond!
 
-### Getting Started
+Download the app now and get it running now!
+
+## Getting Started
 Since we are going to be getting our data from an API, it's usually a good idea to get a sense of what our responses look like when we make a request to a certain endpoint!
 
 <section class="call-to-action">
@@ -149,17 +153,53 @@ Since we are going to be getting our data from an API, it's usually a good idea 
 - Make sure you have the `Promises-API` running on port 3001
 - With a partner, open **Postman** and make a `GET` request to the following endpoint: `http://localhost:3001/api/frontend-staff`
 - What is included in the response?
+- Try entering one of the endpoints found in the `info` key for one of the objects. What is included in the response?
 </section>
 
+As you may be starting to see, there is a lot of data available to us but it is going to be a little tricky to access this data. We are going to work together to break down how to access this data to get our app running.
 
-### Getting Started
+## Step 1 - Getting the Initial `Bio` Info
+Before we can get any of the detailed info for each staff member, we have to start at the initial endpoint as our "entry" into the rest of the dataset. We will be utilizing the `fetch API` to access this data!
 
-The endpoints given to us are:
-* [http://localhost:3001/api/frontend-staff](http://localhost:3001/api/frontend-staff) - this returns an object with a key of bio and the value is an array of objects that contain the name of each staff member and another endpoint to grab some additional info (bio & image).
+If you're not feeling totally comfortable with `fetch` yet, I suggest taking a five minutes to review the [docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
 
-![api/frontend-staff](../../assets/images/api-frontend-staff.png)
+<section class="answer">
+### Fetch Details
+- Fetch returns a **Promise**, which will either `resolve` or `reject` depending on the status of the promise.
+- You might want to take a look at when fetch actually catches errors [here](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Checking_that_the_fetch_was_successful). The API can actually be set up in a way that can help fix this, but this is a major reason why some people dislike `fetch`.
+- Since `fetch` returns a promise, it makes sense that you can chain `.then()` or `.catch()` to it.
+</section>
 
-* [http://localhost:3001/api/bio/:id](http://localhost:3001/api/bio/1) - this is the endpoint given from each obj inside the array from the endpoint `frontend-staff`
+<section class="call-to-action">
+### You Do
+Take 5 minutes to read this [article](https://www.robinwieruch.de/react-fetching-data/) about where we should kick off these type of network requests within a React app. Be prepared to discuss the best approach for this problem!
+
+<section class="answer">
+### How/Where Will We Fetch?
+As you read, utilizing the `componentDidMount()` method is the best place to kick off our network request to the first endpoint!
+</section>
+</section>
+
+OK, so let's start by making our initial fetch request and seeing what we get back. See if you can...
+- Use `fetch` within `componentDidMount()` to make a request to `http://localhost:3001/api/frontend-staff`
+- `console.log` the data that comes back!
+
+<section class="answer">
+### Initial Fetch w/ `console.log` Solution
+```js
+componentDidMount() {
+  fetch('http://localhost:3001/api/frontend-staff')
+    //fetch returns another Promise, which resolves to a Response object
+    //We can call .json() on the Response object to access the data from
+    //the body of the Response object
+    .then(response => response.json())
+    .then(data => {
+      //let's check what the data even looks like...
+      console.log(data);
+    })
+}
+```
+</section>
 
 #### Let's do a little pseudo-coding
 * make initial fetch
