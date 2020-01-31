@@ -117,3 +117,9 @@ Yet again, another shortcut for our lazy developer selves. Start with this short
 
 Take 5 minutes to look at [article on Object Property Value Shorthand](https://alligator.io/js/object-property-shorthand-es6/).
 </section>
+
+
+## Extra Resources
+
+* [Immutability in React](https://blog.logrocket.com/immutability-in-react-ebe55253a1cc/)
+* [All Features of ES6](http://es6-features.org/#Constants)
