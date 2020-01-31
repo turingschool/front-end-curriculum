@@ -1,5 +1,5 @@
 ---
-title: Promises & Event Loop Practice
+title: Promises Practice
 tags: promises, event loop, heap, task queue, single-threaded, non-blocking, call stack, asynchronous, Promise.all()
 module: 3
 ---
@@ -20,7 +20,7 @@ Understanding of:
 * How to implement a promise
 * How to use Promise.all()
 
-## Vocab
+<!-- ## Vocab
 
 * `single-threaded JS` - JavaScript runs on a single call stack aka it is single-threaded..
 * `asynchronous JS` This refers to the concept of more than one thing occurring at the same time in JavaScript.
@@ -93,7 +93,7 @@ Heres a great example:
 </p>
 <!-- <script async src="https://static.codepen.io/assets/embed/ei.js"></script> -->
 
-When Big Loop handler runs the browser appears frozen. We know JavaScript’s call stack is synchronous so Big Loop executes on the call stack until completion. It’s also non-blocking where "Do Stuff" clicks are still received even if they didn’t execute immediately.
+<!-- When Big Loop handler runs the browser appears frozen. We know JavaScript’s call stack is synchronous so Big Loop executes on the call stack until completion. It’s also non-blocking where "Do Stuff" clicks are still received even if they didn’t execute immediately.
 
 Note that you might not see the "Do Stuff" button being clicked, but the click is still registered.
 
@@ -112,13 +112,21 @@ Now we also saw that the `DOM event listener`, when put on the call stack (line 
 
 So what does this mean? Yes, your JS code is running on a single call stack (single-threaded). But under your JS, the browser code is running multiple threads to manage async actions. When an async action is done doing its thing, the callback gets pushed on the task queue. The event loop is constantly checking to see if the call stack is empty, and when it is, the task queue grabs the first thing in the queue and puts it on the call stack. And this is where the function is executed.
 
-Hope that review was helpful!
+Hope that review was helpful! -->
 
-## Let's dive in and build a Front-End Turing staff website
+## Warm Up (10 minutes - 5 minutes writing - 5 minutes discussing)
+In your journal, write your answers to the following questions. It is totally OK (and encouraged!) to look back at the notes you took yesterday!
+- What is the difference between synchronous and asynchronous JS?
+- What are the different statuses of a Promise?
+- What is returned when we use the `fetch` API?
+- Draw a quick sketch of the event loop - whats parts are synchronous? What parts are asynchronous?
+
+
+## What We Will Be Building
 
 ![spec](../../assets/images/spec.png)
 
----
+--- -->
 
 ## Promises Practice Repo
 
