@@ -294,62 +294,51 @@ This is what our console.log looks like:
 - Spend 5 minutes researching/figuring out how we can resolve multiple Promise objects!
 </section>
 
-
-
-```javascript
-componentDidMount() {
-  const url = 'http://localhost:3001/api/frontend-staff'
-  fetch(url)
-  .then(response => response.json())
-  .then(data => this.fetchBios(data.bio)) // we'll write this function that will fetch all of the nested endpoints shortly
-  .then(staff => this.setState({ staff }))
-  .catch(error => console.log(error));
-}
-```
-
-When we make a request and the response comes back as JSON, the first thing we need to do is parse the JSON. Notice also that we are chaining another `.then()` to the `response.json()`. We can do this because `.json()` returns a promise that resolves with the result of parsing the body text as JSON.
-
-### Promise.all()
-
-Now that we have our initial fetch set up, we need to iterate over the array to fetch the other information we need. Yes, we could make 10 different fetch calls, but all our data is going to come back at different times. That's not going to make for a great UI experience. How can we fetch the additional data, but wait for all the data to be returned before we do anything with it? Enter `Promise.all()`.
-
-So `Promise.all()` takes an array of promises and returns a single promise that will either `resolve` when every promise has resolved or `reject` with the reason of the first value in the array that reject. If the promise array resolves completely, the resulting values will be an array of values whose results are ordered by the order of the promises in the original array - regardless of which promises resolve first.
-
-How can we use this to our advantage? So when we make our request to `'api/frontend-staff'` we receive an `array` of staff members containing info to make more `fetch calls`.
-
-```javascript
-fetch('http://localhost:3001/api/frontend-staff')
-  .then(response => response.json());
-  // this returns =>
-  // { bio: [
-  //         { name: "Louisa Barrett",
-  //           info: "http://localhost:3001/api/bio/1"
-  //         },
-  //         {...},
-  //         {...}
-  //        ]
-  // }
-```
-
-<section class="call-to-action">
-### On Your Own
-
-So we're probably going to have to iterate over this array to make a fetch call for all the bios and images. How do we do that?
+## Step 4 - Resolving ALL of the Promises!
+<section class="answer">
+### Solution to Problem from Research Spike!
+`Promise.all()` has entered the chat!
+- `Promise.all()` takes an array of promises and returns a single promise that will either `resolve` when every promise has resolved or `reject` with the reason of the first value in the array that reject.
+- If the promise array resolves completely, the resulting values will be an array of values whose results are ordered by the order of the promises in the original array - regardless of which promises resolve first!
+- **This allows us to make ensure that all of the data is returned at one time, rather than making several different `fetch` calls which could resolve at different times!**
 </section>
 
-Possible solution to help:
+Dope! So now we have a way to work with all of the Promises returned from our `.map`! But before we implement it, let's [check the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) and make sure we understand what we are getting back from this solution!
 
-```javascript
-fetchBios = (staff) => {
-  const promises = staff.map(staffMember => {
-    return fetch(staffMember.info)
+<section class="call-to-action">
+### You Do
+- With a partner, see if you can return all of the Promises into a format we can work with by `console.log` the data! Hint: What does `Promise.all` return?
+- After you can see the data, how could we store the data within the `state` of our App?
+</section>
+
+<section class="answer">
+### Promise.all() Solution
+```js
+componentDidMount() {
+  fetch('http://localhost:3001/api/frontend-staff')
     .then(response => response.json())
-    .then(data => ({...data, name: staffMember.name}))
-    .catch(error => console.log(error));
-  });
-  return Promise.all(promises);
-};
+    .then(data => {
+        const promises = data.bio.map(staffMember => {
+          return fetch(staffMember.info)
+            .then(res => res.json())
+            .then(info => {
+              return {
+                name: staffMember.name,
+                ...info
+              }
+            })
+        })
+        //this will return us a single Promise!
+        //If it returns a Promise, we need to use .then
+        //to give it time to resolve!
+        return Promise.all(promises)
+    })
+    //We can now set the workable data to our state!
+    .then(staff => this.setState({ staff }))
+}
 ```
+</section>
+
 
 #### Resources
 * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
