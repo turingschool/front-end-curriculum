@@ -282,7 +282,7 @@ componentDidMount() {
 ```
 This is what our console.log looks like:
 ![console.log of Promises pt. 2](./assets/images/promises-practice/iterating-staff-pt-2.png)
-</section
+</section>
 
 [Hell yeah!](./assets/images/promises-practice/hell-yeah.png) We now have the data looking how we want. But the problem is, it's still a Promise and we can't work with it yet. Consarnit! And worst of all, now we have this giant array of Promises - how on earth are we going to resolve all of them?!
 
@@ -298,7 +298,7 @@ This is what our console.log looks like:
 `Promise.all()` has entered the chat!
 - `Promise.all()` takes an array of promises and returns a single promise that will either `resolve` when every promise has resolved or `reject` with the reason of the first value in the array that reject.
 - If the promise array resolves completely, the resulting values will be an array of values whose results are ordered by the order of the promises in the original array - regardless of which promises resolve first!
-- **This allows us to make ensure that all of the data is returned at one time, rather than making several different `fetch` calls which could resolve at different times!**
+- **This allows us to make ensure that all of the data is returned at one time, in the correct order, rather than making several different `fetch` calls which could resolve at different times and hoping for the best!**
 </section>
 
 Dope! So now we have a way to work with all of the Promises returned from our `.map`! But before we implement it, let's [check the docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise/all) and make sure we understand what we are getting back from this solution!
