@@ -192,32 +192,109 @@ componentDidMount() {
     //fetch returns another Promise, which resolves to a Response object
     //We can call .json() on the Response object to access the data from
     //the body of the Response object
+    //.json() returns another Promise, which is why we need to chain
+    //a .then to allow it to resolve!
     .then(response => response.json())
     .then(data => {
       //let's check what the data even looks like...
-      console.log(data);
+      console.log('all data', data);
+      console.log('bio data', data.bio);
     })
 }
 ```
 </section>
 
-#### Let's do a little pseudo-coding
-* make initial fetch
-* map over the array of staff members
-  * I need to fetch each endpoint
-  * this map is going to return a promise
-* Promise.all(promises)
-  * returns a single promise
+## Step 2 - Accessing the `bio` Data
+OK, so it looks like we want to dig into the `.bio` from the data that gets returned after we run the `.json()` method on our initial response object! But, now we have **multiple** API endpoints that house the data we are really after... woof.
 
-The first thing we need ask ourselves is where do we want to fetch our data from. This [article](https://www.robinwieruch.de/react-fetching-data/) does a really solid job of answering that question. Looks like componentDidMount() is our best option. With componentDidMount(), We can be assured that our component has mounted on the DOM and we can also setState there once we get our data back.
+<section class="call-to-action">
+### With a Partner
+- Discuss a way we could access the data of each member of the staff
+- Since we will have to utilize `fetch` for each staff member's info, what will be returned from these `fetch` requests?
+- Write some psuedocode for how you could approach this problem!
+</section>
 
-### Fetch
+<section class="answer">
+### Possible Psuedocode Pt. I
+1. Make initial fetch to `http://localhost:3001/api/frontend-staff` in `componentDidMount`
+2. Iterate using `.map()` over the array of staff members
+  - `fetch` from each endpoint within the `.map`
+  - Since this `.map` is making network requests using `fetch`, the map will return an array of Promises
+3. Find some way to resolve all of these daggum Promises from the `.map`!
+</section>
 
-If you're not feeling totally comfortable with `fetch` yet, I suggest taking a five minutes to review the [docs](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API).
+Great! We have a plan! Plans are `#tite`. Let's work on getting the first two steps implemented.
 
-Fetch returns a promise, which will either `resolve` or `reject` depending on the status of the promise. You might want to take a look at when fetch actually catches errors [here](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#Checking_that_the_fetch_was_successful). The API can actually be set up in a way that can help fix this, but this is a major reason why some people dislike `fetch`.
+<section class="answer">
+### Iterating Over Staff Members Solution Pt. I
+```js
+componentDidMount() {
+  fetch('http://localhost:3001/api/frontend-staff')
+    .then(response => response.json())
+    .then(data => {
+      //let's just see what we are getting back!
+        const promises = data.bio.map(staffMember => {
+          return fetch(staffMember.info)
+            .then(res => res.json())
+        })
+      console.log('promises', promises);
+    })
+}
+```
+This is what the data looks like in our console:
 
-So, since `fetch` returns a promise, it makes sense that you can chain `.then()` or `.catch()` to it.
+![console.log of Promises](./assets/images/promises-practice/iterating-staff-pt-1.png)
+</section>
+
+Alrighty then... We are getting a little bit closer to grabbing all of the data we need. But we still have a little work to do.
+
+## Step 3 - Getting the Data We Need
+So we have access to two new pieces of data from this `fetch` - the `bio` and `image`. But we still need to have all of the relevant info for each staff member, especially their `name`!
+
+<section class="call-to-action">
+### You Do
+With a partner, see if you can find a way to extract the necessary data from the response from our `fetch` of each staff member and find a way to combine it with their name!
+</section>
+
+<section class="answer">
+### Combining Data w/in .map() Solution
+```js
+componentDidMount() {
+  fetch('http://localhost:3001/api/frontend-staff')
+    .then(response => response.json())
+    .then(data => {
+        const promises = data.bio.map(staffMember => {
+          return fetch(staffMember.info)
+            .then(res => res.json())
+            //after we have pulled the data off the response...
+            .then(info => {
+              //create an object with the name
+              return {
+                name: staffMember.name,
+                //and the remaining info (bio + image)
+                ...info
+                //bio: info.bio,
+                //image: info.image
+              }
+            })
+        })
+      console.log('promises', promises);
+    })
+}
+```
+This is what our console.log looks like:
+![console.log of Promises pt. 2](./assets/images/promises-practice/iterating-staff-pt-2.png)
+</section
+
+[Hell yeah!](./assets/images/promises-practice/hell-yeah.png) We now have the data looking how we want. But the problem is, it's still a Promise and we can't work with it yet. Consarnit! And worst of all, now we have this giant array of Promises - how on earth are we going to resolve all of them?!
+
+<section class="call-to-action">
+## Research Spike
+- **The Problem:**  we have multiple Promises that need to get resolved.
+- Spend 5 minutes researching/figuring out how we can resolve multiple Promise objects!
+</section>
+
+
 
 ```javascript
 componentDidMount() {
