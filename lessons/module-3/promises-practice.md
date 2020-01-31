@@ -16,7 +16,7 @@ module: 3
 - Understanding of:
   * Why promises over callbacks
   * How to implement a promise
-  * How to use Promise.all()
+  * How to break out functionality into helper files
 
 
 
@@ -114,13 +114,11 @@ So what does this mean? Yes, your JS code is running on a single call stack (sin
 
 Hope that review was helpful! -->
 
-## Warm Up (10 minutes - 5 minutes writing - 5 minutes discussing)
+## Warm Up
 In your journal, write your answers to the following questions. It is totally OK (and encouraged!) to look back at the notes you took yesterday!
 - What is the difference between synchronous and asynchronous JS?
 - What are the different statuses of a Promise?
 - What is returned when we use the `fetch` API?
-- Draw a quick sketch of the event loop - whats parts are synchronous? What parts are asynchronous?
-
 
 ## What We Will Be Building
 
