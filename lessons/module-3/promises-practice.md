@@ -6,19 +6,19 @@ module: 3
 
 ## Learning Goals
 
-Review these concepts:
-* single-threaded JS
-* asynchronous JS
-* non-blocking
-* call stack
-* task queue
-* event loop
-* heap
+- Review these concepts:
+  * single-threaded JS
+  * asynchronous JS
+  * event loop
 
-Understanding of:
-* Why promises over callbacks
-* How to implement a promise
-* How to use Promise.all()
+- Utilize Postman as a tool for making requests to APIs
+
+- Understanding of:
+  * Why promises over callbacks
+  * How to implement a promise
+  * How to use Promise.all()
+
+
 
 <!-- ## Vocab
 
@@ -140,7 +140,19 @@ Have these directories open in two separate terminal tabs so you can see them bo
 
 `npm start`
 
-### What we're working with
+
+### Getting Started
+Since we are going to be getting our data from an API, it's usually a good idea to get a sense of what our responses look like when we make a request to a certain endpoint!
+
+<section class="call-to-action">
+### You Do
+- Make sure you have the `Promises-API` running on port 3001
+- With a partner, open **Postman** and make a `GET` request to the following endpoint: `http://localhost:3001/api/frontend-staff`
+- What is included in the response?
+</section>
+
+
+### Getting Started
 
 The endpoints given to us are:
 * [http://localhost:3001/api/frontend-staff](http://localhost:3001/api/frontend-staff) - this returns an object with a key of bio and the value is an array of objects that contain the name of each staff member and another endpoint to grab some additional info (bio & image).
