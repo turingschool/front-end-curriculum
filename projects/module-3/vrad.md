@@ -78,6 +78,7 @@ Please DM your instructors the following by the end of the first day:
 - When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, their email, and a purpose/goal for using this listing app.  You can list the options however you'd like, but there should be at least three categories for  `business`, `vacation`, & `other`.
 - An error message should appear if one of the inputs has not been filled out.
 - All inputs must be filled in order for the user to sign in.
+- NOTE: The users name/email don't need to match anything, this is basically a "fake" login but will give you practice making modular components!
 </section>
 
 <section class="answer">
@@ -88,7 +89,8 @@ Please DM your instructors the following by the end of the first day:
   * shortname of the area (ex. `RiNo`)
   * name of the area (ex. `River North`)
   * a description of the area
-- There should a button on each card to view `listings` for a specific area  
+- There should a button on each card to view `listings` for a specific area
+  - NOTE: This button doesn't need to have any functionality in this iteration. Details on what the button does will be outlined in future iterations!
 - The user's profile data should be displayed with their name, a short greeting dependent on their purpose for using the listing app
 - A `Sign Out` button should also be available, logging the user out and redirecting them back to the root route, `/`.
 </section>
@@ -96,14 +98,17 @@ Please DM your instructors the following by the end of the first day:
 <section class="answer">
 ### Iteration 3: The Listings
 
-- When a user clicks on the `View Listings`, the user should then be redirected to `/areas/:area_id`. Here the users should see a list of cards for each listing.
+- When a user clicks on the `View Listings`, the user should then be redirected to `/areas/:area_id/listings/`.
+  - NOTE: Be careful on how to structure this route. The parts of the route that include are dynamic (ex: `/:area_id`) should not actually include a colon - it is simply to show that this part of the route should change. An example of what a completed route would look like could be: `/areas/66`
+
+- From this route, the users should see a list of cards for each listing.
 
 - The data for each card should include:
   - Name
   - A single picture for the listing
   - A button that, when clicked, shows more details for the listing at a new route
 
-- When a user clicks a specific listing, they should be redirected to `/areas/:area_id/:listing_id` and get a more detailed breakdown of a specific listing. This card/view should include:
+- When a user clicks a specific listing, they should be redirected to `/areas/:area_id/listings/:listing_id` and get a more detailed breakdown of a specific listing. This card/view should include:
   - Address
   - Number of Bedrooms
   - Number of Bathrooms
@@ -127,7 +132,11 @@ Please DM your instructors the following by the end of the first day:
 <section class="answer">
 ### Extensions
 
-1. Implement a map that shows where all of the listings are located when a user goes to the `/areas/:area_id` route for a specific listing area.
+1. Incorporate an interactive map into your app!
+- Implement a map that shows where all of the listings are located when a user goes to the `/areas/:area_id` route for a specific listing area.
+- When a user clicks on a listing marker on the map, you should display an info box that includes:
+  - An image of the listing
+  - A link to the specific listing pages
 2. Have your user and favorites data persist in `localStorage`. Think about when you want to store it and when it should be removed.
 </section>
 
