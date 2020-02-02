@@ -175,22 +175,19 @@ Now we're ready to write our test POSTing a new student to the database:
 
 ```js
 describe('POST /api/v1/students', () => {
-  it('should post a new student to the db', async () => {
-    // setup
-    const newStudent = { lastname: 'Lovett', program: 'FE', enrolled: false }
+    it('should post a new student to the db', async () => {
+      const newStudent = { lastname: 'Lovett', program: 'FE', enrolled: false }
 
-    // execution
-    const res = await request(app).post('/api/v1/students').send(newStudent)
+      const res = await request(app).post('/api/v1/students').send(newStudent)
 
-    const students = await database('students').where('id', res.body.id).select()
-    const student = students[0]
+      const students = await database('students').where('id', res.body.id[0]);
 
+      const student = students[0];
 
-    // expectation
-    expect(res.status).toBe(201)
-    expect(student.lastname).toEqual(newStudent.lastname)
+      expect(res.status).toBe(201)
+      expect(student.lastname).toEqual(newStudent.lastname)
+    });
   });
-});
 ```
 
 <section class="call-to-action">
