@@ -13,10 +13,7 @@ module: 3
 
 - Utilize Postman as a tool for making requests to APIs
 
-- Understanding of:
-  * Why promises over callbacks
-  * How to implement a promise
-  * How to break out functionality into helper files
+- Utilize `fetch` to get data from an API and utilize the data in a FE app
 
 
 
@@ -394,5 +391,5 @@ componentDidMount() {
 #### Resources
 * [MDN docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/EventLoop)
 * [Loupe](http://latentflip.com/loupe/?code=JC5vbignYnV0dG9uJywgJ2NsaWNrJywgZnVuY3Rpb24gb25DbGljaygpIHsKICAgIHNldFRpbWVvdXQoZnVuY3Rpb24gdGltZXIoKSB7CiAgICAgICAgY29uc29sZS5sb2coJ1lvdSBjbGlja2VkIHRoZSBidXR0b24hJyk7ICAgIAogICAgfSwgMjAwMCk7Cn0pOwoKY29uc29sZS5sb2coIkhpISIpOwoKc2V0VGltZW91dChmdW5jdGlvbiB0aW1lb3V0KCkgewogICAgY29uc29sZS5sb2coIkNsaWNrIHRoZSBidXR0b24hIik7Cn0sIDUwMDApOwoKY29uc29sZS5sb2coIldlbGNvbWUgdG8gbG91cGUuIik7!!!PGJ1dHRvbj5DbGljayBtZSE8L2J1dHRvbj4%3D), by Philip Roberts, was used for examples.
-* [DAN MARTENSEN](https://danmartensen.svbtle.com/events-concurrency-and-javascript) wrote this article that I referenced his code pen from.
+* [DAN MARTENSEN](https://danmartensen.svbtle.com/events-concurrency-and-javascript)
 * [Promises, Async/Await](https://javascript.info/async)
