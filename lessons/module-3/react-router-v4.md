@@ -40,7 +40,7 @@ class SomeComponent extends Component {
       showWelcome: false
     }
   }
-  
+
   render() {
     return (
       { this.state.showWelcome && <Welcome /> }
@@ -51,7 +51,7 @@ class SomeComponent extends Component {
 
 This works...but as our applications grow larger and we need to render more components, these conditional toggles can become difficult to manage.
 
-Suppose you have list of star wars characters and you only want to show a user's favorites when they click on a `Favorites` button... 
+Suppose you have list of star wars characters and you only want to show a user's favorites when they click on a `Favorites` button...
 You can easily accomplish this with React Router!
 
 Enter [React Router](https://reacttraining.com/react-router/web/guides/philosophy)
@@ -87,7 +87,7 @@ We will be focusing on **`BrowserRouter`** which is _A Router that uses the HTML
 
 We will wrap our entire app with this router.
 
-Ultimately it will allow our users to bookmark specific paths and utilize their forward/back buttons. 
+Ultimately it will allow our users to bookmark specific paths and utilize their forward/back buttons.
 
 There are a few more tools we get with React Router that are important to know about:
 
@@ -95,7 +95,7 @@ There are a few more tools we get with React Router that are important to know a
 The Route component is a key piece of React Router. Its most basic responsibility is to render some UI when a location matches the route’s path.
 
 The Route component expects a `path` prop (string) that describes the path name.
- 
+
 There are 3 ways to render something with a Route:
 
 * `<Route component>`
@@ -120,12 +120,12 @@ This also allows you to define and pass specific properties to a component dynam
 ```jsx
 <Route path='/ideas/:id' render={({ match }) => {
   const idea = ideas.find(idea => idea.id === parseInt(match.params.id));
-  
+
   if (!idea) {
     return (<div>This idea does not exist! </div>);  
   }
   return <ListItem match={match} {...idea} />
-  
+
 }} />
 ```
 
@@ -144,21 +144,21 @@ It works exactly like render except that it gets called whether there is a match
 
 ### Route Props
 
-All three of these are rendered with [route props](https://reacttraining.com/react-router/web/api/Route/Route-props), which include: 
+All three of these are rendered with [route props](https://reacttraining.com/react-router/web/api/Route/Route-props), which include:
 
 * [match](https://reacttraining.com/react-router/web/api/match)
 * [location](https://reacttraining.com/react-router/web/api/location)
 * [history](https://reacttraining.com/react-router/web/api/history)
 
-**Important Note:** If you have a component that is not rendered by a Route, but still needs access to the route props (match/location/history), you will need to use the `withRouter` method provided by React Router. This will be necessary to make any of your React Router components (Link, Route, Redirect, Switch, etc.) work correctly. Take a few minutes and read [the docs](https://reacttraining.com/react-router/core/api/withRouter) as well as [this post](https://stackoverflow.com/questions/53539314/what-is-withrouter-for-in-react-router-dom) for more info. 
+**Important Note:** If you have a component that is not rendered by a Route, but still needs access to the route props (match/location/history), you will need to use the `withRouter` method provided by React Router. This will be necessary to make any of your React Router components (Link, Route, Redirect, Switch, etc.) work correctly. Take a few minutes and read [the docs](https://reacttraining.com/react-router/core/api/withRouter) as well as [this post](https://stackoverflow.com/questions/53539314/what-is-withrouter-for-in-react-router-dom) for more info.
 
 
 <section class="call-to-action">
 ### Take the next 10 minutes to read about these components
 
 ---
-
-#### Link
+<section class="answer">
+### Link
 
 _Provides declarative, accessible navigation around your application._
 
@@ -174,10 +174,9 @@ _Provides declarative, accessible navigation around your application._
 
 <Link to='/unicorns'> Unicorns </Link>
 ```
-
----
-
-#### NavLink
+</section>
+<section class="answer">
+### NavLink
 
 _A special version of the `<Link>` that will add styling attributes to the rendered element when it matches the current URL._
 
@@ -195,10 +194,9 @@ It can take the following attributes:
 ```jsx
 <NavLink to='/about'>About</NavLink>
 ```
-
----
-
-#### Redirect
+</section>
+<section class="answer">
+### Redirect
 
 _Rendering a `<Redirect>` will navigate to a new location. The new location will override the current location in the history stack, like server-side redirects (HTTP 3xx) do._
 More of a nice to know for now. This is something that can be used if the user does something wrong. ie. went to a route they don't have permissions to access.
@@ -213,10 +211,9 @@ It can take the following attributes:
 ```jsx
 <Redirect to='/not/unicorns' />
 ```
-
----
-
-#### Switch
+</section>
+<section class="answer">
+### Switch
 
 _Renders the **first** child `<Route>` or `<Redirect>` that matches the location. `<Switch>` is unique in that it renders a route **exclusively** (only one route wins). In contrast, every `<Route>` that matches the location renders **inclusively** (more than one route can match and render at a time)_
 
@@ -231,9 +228,11 @@ _Renders the **first** child `<Route>` or `<Redirect>` that matches the location
 
 The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job of quickly showing what Switch is all about.
 </section>
+</section>
 
 # Time to Code!
-
+<section class="answer">
+### Setup
 Enough talk, let's implement React Router!
 
 * Clone [this repo](https://github.com/turingschool-examples/react-router-example) and `cd` into it
@@ -281,8 +280,10 @@ Next we will go to our `App.js` file and begin constructing the routes for our a
 
 import { Route, NavLink } from 'react-router-dom'
 ```
-
-Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `active` class. 
+</section>
+<section class="answer">
+### Creating a Header Component
+Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `active` class.
 
 <section class="note">
 ### Note
@@ -292,7 +293,7 @@ It comes with a default class of `.active` so we can either use that without def
 
 ```jsx
 export default class App extends Component {
-  
+
   render() {
     return (
       <main className='App'>
@@ -307,8 +308,10 @@ export default class App extends Component {
 }
 ```
 
-If you click on these links now, you should see the URL change to the routes we told each NavLink to route `to`. 
-
+If you click on these links now, you should see the URL change to the routes we told each NavLink to route `to`.
+</section>
+<section class="answer">
+### Creating a Home Route + Component
 Next we need to define a `Home` route for when users first arrive to the app (or when the `path='/'`). For now we'll just do a basic welcome message:
 
 ```jsx
@@ -415,7 +418,7 @@ Take some time to mimic these steps for `Puppies` and `Sharks` so that each resp
 **Let's recap where we're at:**
 
 * We have defined four Routes:
-	* `/` 
+	* `/`
 	* `/unicorns`
 	* `/puppies`
 	* `/sharks`
@@ -471,9 +474,9 @@ Currently we have 9 creatures per component and we want to be able to link to a 
 ...
 ```
 
-This would be incredibly inefficient. Instead, we can use the `render` attribute within our `Route` to dynamically match the id of the URL with the matching ID within our data. 
+This would be incredibly inefficient. Instead, we can use the `render` attribute within our `Route` to dynamically match the id of the URL with the matching ID within our data.
 
-To signify a dynamic route, you simply add a colon in front of the parameter you're dynamically changing. 
+To signify a dynamic route, you simply add a colon in front of the parameter you're dynamically changing.
 
 ```jsx
 path='/unicorns/:id'
@@ -486,17 +489,17 @@ Let's focus just on unicorns for now. Here are the steps we're working through:
 3. Based on the ID in the URL, we pass through data specific to that matching unicorn
 
 So, if our first unicorn's data looks like this:
-	
+
 ```jsx
-{ 
-  id: 1, 
-  name: 'Chuck', 
-  image: img1, 
-  type: 'unicorns', 
-  bio: bio1 
+{
+  id: 1,
+  name: 'Chuck',
+  image: img1,
+  type: 'unicorns',
+  bio: bio1
 }
-``` 
-	
+```
+
 We want to redirect to `/unicorns/1`
 
 Then, we want to define a `Route` that looks at the parameter in the URL and passes the specific matching data into something we can render.
@@ -508,7 +511,7 @@ Let's poke the bear a little bit. Paste this route into your `App.js` file:
 
 <Route path='/unicorns/:id' render={({ match }) => {
    console.log(match)
-	      
+
    return (
       <div>New Unicorn Route!</div>
    )
@@ -517,7 +520,7 @@ Let's poke the bear a little bit. Paste this route into your `App.js` file:
 
 Now visit this URL and open up your console: `http://localhost:3000/unicorns/1`
 
-First thing we should see is that all of our unicorns are still showing, why do you think this is? 
+First thing we should see is that all of our unicorns are still showing, why do you think this is?
 
 It's because we didn't specify the `exact` attribute in our `/unicorns` route, so that route sees the URL is `/unicorns/1`, considers it a match and renders any components that match. Let's fix this for all three components:
 
