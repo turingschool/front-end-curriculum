@@ -45,7 +45,7 @@ var awesomeParas = document.querySelectorAll('.awesome');
 awesomeParas.innerText = 'This is so awesome!';
 ```
 
-That's because `document.querySelectorAll()` returns an array! We need to iterate over the array and change elements one at a time using a `for loop`! So to get this working, we would need to do the following:
+That's because `document.querySelectorAll()` returns a list of potentially many elements. Even if there only was one match it would be in a NodeList. We need to iterate over the NodeList and change elements one at a time using a `for loop`! So to get this working, we would need to do the following:
 
 ```js
 var awesomeParas = document.querySelectorAll('.awesome');
