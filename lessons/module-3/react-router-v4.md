@@ -281,7 +281,7 @@ Next we will go to our `App.js` file and begin constructing the routes for our a
 import { Route, NavLink } from 'react-router-dom'
 ```
 </section>
-<section class="answer">
+
 ### Creating a Header Component
 Now let's build a header to persist on all views. We will use `NavLink` so we can take advantage of the `active` class.
 
@@ -309,8 +309,7 @@ export default class App extends Component {
 ```
 
 If you click on these links now, you should see the URL change to the routes we told each NavLink to route `to`.
-</section>
-<section class="answer">
+
 ### Creating a Home Route + Component
 Next we need to define a `Home` route for when users first arrive to the app (or when the `path='/'`). For now we'll just do a basic welcome message:
 
@@ -348,8 +347,7 @@ _hint: You'll probably need to create a new component to render when on the `/un
 </section>
 
 ![unicorn](http://www.chickensmoothie.com/oekaki/image/image.php?id=410567&size=large&format=auto&rev=1302806499)
-</section>
-<section class="answer">
+
 ### Using the component render method
 
 Let's start out with using the `component` render method on a `Route`:
@@ -373,7 +371,8 @@ This is where we need to use the `exact` attribute on a `Route`
 What we're saying by adding this attribute is that only when the path is **EXACT**-ly `'/'` do we want to render the `Home` component.
 
 Now that we have routes defined, and a template of a component, let's get something more fun displaying. Go to your `Unicorns` component and replace what you have with this code:
-
+<section class="answer">
+### Solution
 ```jsx
 //Unicorns.js
 
@@ -399,7 +398,7 @@ export default Unicorns;
 ```
 
 We should now be able to see a bunch of unicorns displaying on the page!
-
+</section>
 <section class="call-to-action">
 ### Your Turn!
 
@@ -425,8 +424,7 @@ Take some time to mimic these steps for `Puppies` and `Sharks` so that each resp
 	* `/sharks`
 * Each route renders a different component
 * The `Home` route requires an `exact` attribute because all of the routes contain `/`
-</section>
-<section class="answer">
+
 ### Refactor using the render method
 
 Taking a look at this, you might notice that we have three separate components for unicorns, puppies, and sharks.  This kind of defeats the purpose of React though since we are essentially displaying the same information with different data for each route.  Let's try reusing the same component to display that data!  We can pull the data that is imported inside the App and pass the data down to a `<Creatures />` component using the render attribute on the `<Route />` component.
@@ -463,8 +461,7 @@ export default Creatures;
 ```
 
 Hopefully this seems pretty straight forward so far, but what if we want to go a level deeper? When a user clicks on an image, we want to send them to a new view where they can see information specific to _that_ creature only. This is where we get into **dynamic routing**.
-</section>
-<section class="answer">
+
 ### Dynamic Routing
 
 Currently we have 9 creatures per component and we want to be able to link to a specific view for **each creature**. One way we could do this is to create a route for each creature...something like:
@@ -537,7 +534,7 @@ It's because we didn't specify the `exact` attribute in our `/unicorns` route, s
 
 Ok back to business!
 
-We passed through the `match` prop and console logged it, let's take a look. Notice that the `params` property contains an object with our defined paramter `id`, and it is equal to the ID we linked to in the URL!
+We passed through the `match` prop and console logged it, let's take a look. Notice that the `params` property contains an object with our defined parameter `id`, and it is equal to the ID we linked to in the URL!
 
 Now all we have to do is modify our route to render the correct data.
 
