@@ -144,7 +144,7 @@ const options = {
   headers: {
     'Content-Type': 'application/json'
   }
-}; 
+};
 
 fetch('/api/v1/jokes', options);
 ```
@@ -289,7 +289,7 @@ But wait, there's more.
 - `Promise.all` takes an array of promises and waits until all of the promises are resolved. This solves the nastiness involved in doing this with callbacks.
 - `Promise.race` takes an array of promises and resolves as soon as any one of them fulfill. This would allow you to hit 3 API endpoints and then move on when we heard back from whichever one came back first.
 
-### ES7 async/await
+<!-- ### ES7 async/await
 
 Just like everything else in JavaScript, there is the way to use promises that
 you just saw, and then there is the new flashy way. ES7 introduced the
@@ -302,7 +302,7 @@ methods together. Here's the same example from above, inside a React lifecycle m
 Things to remember about *async/await*:
 * The word *async* before a function means that function *ALWAYS RETURNS A PROMISE*
 * The keyword *await* makes JavaScript wait until that promise settles and returns that result (you can not use the await keyword in a function that has not been declared *async*)
-* Error handling with async/await is best accomplished with `try...catch` statements
+* Error handling with async/await is best accomplished with `try...catch` statements -->
 
 ## References
 
