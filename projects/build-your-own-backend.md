@@ -77,7 +77,7 @@ You can put your documentation in the README of your BYOB GitHub repository. Rem
 
 ### Workflow
 
-As part of your project planning and workflow for this project, it is expected that you will make use of a sprint board  with [GitHub Projects](https://help.github.com/en/articles/about-project-boards) as well as a [PR template](https://quickleft.com/blog/pull-request-templates-make-code-review-easier/).
+As part of your project planning and workflow for this project, it is expected that you will make use of a sprint board  with [GitHub Projects](https://help.github.com/en/articles/about-project-boards) as well as a [PR template](https://github.com/turingschool/enroll/pull/490).
 
 We also expect that you will follow a [rebase workflow](https://medium.com/hackernoon/git-merge-vs-rebase-whats-the-diff-76413c117333) for this project.
 
