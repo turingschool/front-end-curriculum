@@ -57,7 +57,6 @@ src/
 ## Specifications
 <section class="answer">
 ### Iteration O: Wireframing
-
 - Utilize a wireframing tool of your choice to plan the design of your application before you start building.
   * Sketch
   * Draw.io
@@ -66,7 +65,7 @@ src/
   * InVision
 
 #### Deliverables
-Please DM your instructors the following by the end of the first day:
+Create a private Slack channel with your teammate and your Project Manager (PM). By the end of the day, please update your private slack channel with:
   * Wireframes
   * DTR between you & project partner
   * Project management tool (GH Projects, trello, etc.)
@@ -75,7 +74,7 @@ Please DM your instructors the following by the end of the first day:
 <section class="answer">
 ### Iteration 1: Landing Page
 
-- When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, their email, and a purpose/goal for using this listing app.  You can list the options however you'd like, but there should be at least three categories for  `business`, `vacation`, & `other`.
+- When the app starts up on the root route, `/`, the user should be introduced to a welcome form asking for the user's name, their email, and a purpose/goal for using this listing app. You can list the options however you'd like, but there should be at least three categories for  `business`, `vacation`, & `other`. Feel free to add any other inputs/fields that you think are necessary for a user of this app!
 - An error message should appear if one of the inputs has not been filled out.
 - All inputs must be filled in order for the user to sign in.
 - NOTE: The users name/email don't need to match anything, this is basically a "fake" login but will give you practice making modular components!
@@ -90,7 +89,7 @@ Please DM your instructors the following by the end of the first day:
   * name of the area (ex. `River North`)
   * a description of the area
 - There should a button on each card to view `listings` for a specific area
-  - NOTE: This button doesn't need to have any functionality in this iteration. Details on what the button does will be outlined in future iterations!
+  - *NOTE: This button doesn't need to have any functionality in this iteration. Details on what the button does will be outlined in future iterations!*
 - The user's profile data should be displayed with their name, a short greeting dependent on their purpose for using the listing app
 - A `Sign Out` button should also be available, logging the user out and redirecting them back to the root route, `/`.
 </section>
@@ -99,7 +98,7 @@ Please DM your instructors the following by the end of the first day:
 ### Iteration 3: The Listings
 
 - When a user clicks on the `View Listings`, the user should then be redirected to `/areas/:area_id/listings/`.
-  - NOTE: Be careful on how to structure this route. The parts of the route that include are dynamic (ex: `/:area_id`) should not actually include a colon - it is simply to show that this part of the route should change. An example of what a completed route would look like could be: `/areas/66`
+  - NOTE: Be careful on how to structure this route. The parts of the route that are dynamic (ex: `/:area_id`) should not actually include a colon - it is simply to show that this part of the route should change. An example of what a completed route would look like could be: `/areas/66`
 
 - From this route, the users should see a list of cards for each listing.
 
