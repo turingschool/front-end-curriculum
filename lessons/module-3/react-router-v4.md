@@ -340,7 +340,7 @@ Now let's define the route:
 ```
 
 <section class="call-to-action">
-### In Your Notebook
+### You Do
 
 Next we need to define those routes and tell it which components to render. Take 10 minutes and see if you can get the `/unicorns` Route working by displaying `<h1> Unicorns! </h1>`.
 
@@ -348,7 +348,8 @@ _hint: You'll probably need to create a new component to render when on the `/un
 </section>
 
 ![unicorn](http://www.chickensmoothie.com/oekaki/image/image.php?id=410567&size=large&format=auto&rev=1302806499)
-
+</section>
+<section class="answer">
 ### Using the component render method
 
 Let's start out with using the `component` render method on a `Route`:
@@ -369,7 +370,7 @@ This is where we need to use the `exact` attribute on a `Route`
 <Route exact path='/' component={Home} />
 ```
 
-What we're saying by adding this attribute is that only when the path is **EXACT**ly `'/'` do we want to render the `Home` component.
+What we're saying by adding this attribute is that only when the path is **EXACT**-ly `'/'` do we want to render the `Home` component.
 
 Now that we have routes defined, and a template of a component, let's get something more fun displaying. Go to your `Unicorns` component and replace what you have with this code:
 
@@ -424,7 +425,8 @@ Take some time to mimic these steps for `Puppies` and `Sharks` so that each resp
 	* `/sharks`
 * Each route renders a different component
 * The `Home` route requires an `exact` attribute because all of the routes contain `/`
-
+</section>
+<section class="answer">
 ### Refactor using the render method
 
 Taking a look at this, you might notice that we have three separate components for unicorns, puppies, and sharks.  This kind of defeats the purpose of React though since we are essentially displaying the same information with different data for each route.  Let's try reusing the same component to display that data!  We can pull the data that is imported inside the App and pass the data down to a `<Creatures />` component using the render attribute on the `<Route />` component.
@@ -461,7 +463,8 @@ export default Creatures;
 ```
 
 Hopefully this seems pretty straight forward so far, but what if we want to go a level deeper? When a user clicks on an image, we want to send them to a new view where they can see information specific to _that_ creature only. This is where we get into **dynamic routing**.
-
+</section>
+<section class="answer">
 ### Dynamic Routing
 
 Currently we have 9 creatures per component and we want to be able to link to a specific view for **each creature**. One way we could do this is to create a route for each creature...something like:
@@ -552,7 +555,8 @@ See if you can write some code to render the correct data based on the ID in the
 
 ![rambo on unicorn](http://pleatedjeans.files.wordpress.com/2010/08/10-28-rambounicorn1.jpg)
 
-Here's the code:
+<section class="answer">
+### Solution
 
 ```jsx
 <Route path='/unicorns/:id' render={({ match }) => {
@@ -569,7 +573,7 @@ Now if we visit `http://localhost:3000/unicorns/1` we should see a view specific
 
 See if you can modify your `Creatures` component so that each image can be clicked and `Link` to the correct Route / path / URL.
 </section>
-
+<section class="answer">
 ![tunacorn](http://www.nataliedee.com/081905/tuna-plus-unicorn.jpg)
 
 Here's a simple addition to `Creatures.js`.
@@ -588,9 +592,9 @@ Then we just wrap what we returned before with a `<Link>` as such:
     )
   });
 ```
-
+</section>
 And that's it! Go ahead and work on setting up dynamic routes for the other two components!
-
+</section>
 
 #### Resources:
 
