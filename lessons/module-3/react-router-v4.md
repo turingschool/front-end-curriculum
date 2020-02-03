@@ -564,13 +564,14 @@ See if you can write some code to render the correct data based on the ID in the
 ```
 
 Now if we visit `http://localhost:3000/unicorns/1` we should see a view specifically for Unicorn 1!
-
+</section>
 <section class="call-to-action">
 ### Your Turn!
 
 See if you can modify your `Creatures` component so that each image can be clicked and `Link` to the correct Route / path / URL.
 </section>
 <section class="answer">
+### Solution
 ![tunacorn](http://www.nataliedee.com/081905/tuna-plus-unicorn.jpg)
 
 Here's a simple addition to `Creatures.js`.
@@ -591,7 +592,7 @@ Then we just wrap what we returned before with a `<Link>` as such:
 ```
 </section>
 And that's it! Go ahead and work on setting up dynamic routes for the other two components!
-</section>
+
 
 #### Resources:
 
