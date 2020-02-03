@@ -190,10 +190,10 @@ componentDidMount() {
     //.json() returns another Promise, which is why we need to chain
     //a .then to allow it to resolve!
     .then(response => response.json())
-    .then(data => {
+    .then(staffData => {
       //let's check what the data even looks like...
-      console.log('all data', data);
-      console.log('bio data', data.bio);
+      console.log('all data', staffData);
+      console.log('bio data', staffData.bio);
     })
 }
 ```
@@ -226,9 +226,9 @@ Great! We have a plan! Plans are `#tite`. Let's work on getting the first two st
 componentDidMount() {
   fetch('http://localhost:3001/api/frontend-staff')
     .then(response => response.json())
-    .then(data => {
+    .then(staffData => {
       //let's just see what we are getting back!
-        const promises = data.bio.map(staffMember => {
+        const promises = staffData.bio.map(staffMember => {
           return fetch(staffMember.info)
             .then(res => res.json())
         })
@@ -257,10 +257,10 @@ With a partner, see if you can find a way to extract the necessary data from the
 componentDidMount() {
   fetch('http://localhost:3001/api/frontend-staff')
     .then(response => response.json())
-    .then(data => {
-        const promises = data.bio.map(staffMember => {
+    .then(staffData => {
+        const promises = staffData.bio.map(staffMember => {
           return fetch(staffMember.info)
-            .then(res => res.json())
+            .then(res => response.json())
             //after we have pulled the data off the response...
             .then(info => {
               //create an object with the name
@@ -312,8 +312,8 @@ Dope! So now we have a way to work with all of the Promises returned from our `.
 componentDidMount() {
   fetch('http://localhost:3001/api/frontend-staff')
     .then(response => response.json())
-    .then(data => {
-        const promises = data.bio.map(staffMember => {
+    .then(staffData => {
+        const promises = staffData.bio.map(staffMember => {
           return fetch(staffMember.info)
             .then(res => res.json())
             .then(info => {
@@ -351,8 +351,8 @@ With a partner, see if you can extract the logic from our `fetch` call into it's
 ### Final Solution!
 ```js
 // helpers.js
-export const fetchStaffBios = (data) => {
-  const promises = data.bio.map(staffMember => {
+export const fetchStaffBios = staffData => {
+  const promises = staffData.bio.map(staffMember => {
     return fetch(staffMember.info)
       .then(res => res.json())
       .then(info => {
@@ -377,7 +377,7 @@ class App extends Component {
 componentDidMount() {
   fetch('http://localhost:3001/api/frontend-staff')
     .then(response => response.json())
-    .then(data => fetchStaffBios(data))
+    .then(staffData => fetchStaffBios(staffData))
     .then(staff => this.setState({ staff }))
     .catch(error => this.setState({ error }))
   }
