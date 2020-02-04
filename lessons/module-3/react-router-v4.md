@@ -154,9 +154,9 @@ All three of these are rendered with [route props](https://reacttraining.com/rea
 
 
 <section class="call-to-action">
-### Take the next 10 minutes to read about these components
+### Component Research Spike (10 mins)
 
----
+Take notes on the features of each of these components in your notebook!
 <section class="answer">
 ### Link
 
@@ -461,6 +461,40 @@ export default Creatures;
 ```
 
 Hopefully this seems pretty straight forward so far, but what if we want to go a level deeper? When a user clicks on an image, we want to send them to a new view where they can see information specific to _that_ creature only. This is where we get into **dynamic routing**.
+
+<section class="answer">
+### render Solution full
+```js
+//App.js
+import React, { Component } from 'react';
+import { Route, NavLink } from 'react-router-dom'
+import Home from './Home.js';
+import Unicorns from './Unicorns.js';
+import Puppies from './Puppies.js';
+import Creatures from './Creatures.js';
+import unicornData from './data/unicorn-data'
+import puppyData from './data/puppy-data'
+import sharkData from './data/shark-data'
+import './App.css';
+
+export default class App extends Component {
+  render() {
+    return (
+      <main className="App">
+        <header>
+          <NavLink to='/unicorns' className='nav'> Unicorns </NavLink>
+          <NavLink to='/puppies' className='nav'> Puppies </NavLink>
+          <NavLink to='/sharks' className='nav'> Sharks </NavLink>
+        </header>
+        <Route path='/unicorns' render={() => <Creatures data={unicornData} />} />
+        <Route path='/puppies' render={() => <Creatures data={puppyData} />} />
+        <Route path='/sharks' render={() => <Creatures data={sharkData} />} />
+      </main>
+    );
+  }
+}
+```
+</section>
 
 ### Dynamic Routing
 
