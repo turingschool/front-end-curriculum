@@ -29,7 +29,6 @@ title: Array Exercises
   <h3>Best Client</h3>
   <p>Kayla gets paid various amounts by each client for a dog walk. The array below holds 7 numbers, the hourly amounts. Write a function that takes one argument, an Array of Numbers, and that returns her highest paying dog-walking gig.</p>
   <p>If this were the array representing Kayla's different hourly rates: <code class="try-it-code">var hourlyPay = [22, 17, 29, 16, 18]</code>, this function should return the Number 29.</p>
-  </p>
 </div>
 
 ## Spicy Practice
