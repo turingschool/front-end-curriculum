@@ -68,12 +68,12 @@ build out the one-to-many relationship in PostgreSQL with a Express/Knex server!
 
 ### Status Codes & Error Handling
 
-All endpoints should respond with the minimum status code results:
+Here is a list of common status codes that should exist within your endpoints:
 
 * 200/201: Success
 * 404: Not Found
 
-If POST request fails to save an entity due to bad information being sent from the client, you should respond with
+If a POST request fails to save an entity due to bad information being sent from the client, you should respond with
 
 * 422: Unprocessable Entity
 
@@ -105,7 +105,7 @@ Some things you want to considering having in your API documentation:
 * What parameters can be used in certain requests (e.g. For a POST request, what should be put in the request body?)
 * Sample responses from endpoints (What does the response object look like for a request?)
 
-You can put your documentation in the README of your BYOB GitHub repository. Remember, improperly formatted information can make it very difficult to read even if it's all accurate, so be sure to utilize markdown syntax styling/formatting ([here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a markdown style cheatsheet).
+You can put your documentation in the README of your Palette Picker GitHub repository. Remember, improperly formatted information can make it very difficult to read even if it's all accurate, so be sure to utilize markdown syntax styling/formatting ([here](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) is a markdown style cheatsheet).
 
 ### Deployment
 
