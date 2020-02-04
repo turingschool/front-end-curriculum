@@ -19,6 +19,8 @@ In this lesson we'll cover:
 - `Element` A single item stored in an array. An element can be of any data type.
 - `Loops` A quick and easy way to do something repeatedly
 - `Control Flow` The order in which the computer executes statements in a script. The order of execution can change whenever the computer runs across the (extremely frequent) structures that change the control flow, such as conditionals and loops.
+- `Bracket Notation` How we access individual elements of an array. Either to
+  express the element, or assign a new element.
 
 ## Warm Up
 
