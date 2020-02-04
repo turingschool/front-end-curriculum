@@ -19,15 +19,17 @@ title: Array Exercises
 ## Medium Practice
 
 <div class="call-to-action">
-  <h3>Sum of All</h3>
-  <p>Write a function that takes one argument, an Array of Numbers, and that returns the sum of all of the numbers in that array. No empty arrays will be passed in. For example, when an array is passed in like <code class="try-it-code">[19, 5, 42, 2, 77]</code>, the output should be <code class="try-it-code">145</code>.</p>
-</div>
-
-<div class="call-to-action">
   <h3>Calculate Total Pay</h3>
   <p>Trisha gets paid $22 each time she walks a dog. The array below holds 7 numbers, the number of dog walks she took each day last week. Write a function that takes one argument, an Array of Numbers, and that returns her total pay.</p>
   <code class="try-it-code">var dogWalks = [4, 5, 2, 2, 6, 1, 3]</code>
   <p></p>
+</div>
+
+<div class="call-to-action">
+  <h3>Best Client</h3>
+  <p>Kayla gets paid various amounts by each client for a dog walk. The array below holds 7 numbers, the hourly amounts. Write a function that takes one argument, an Array of Numbers, and that returns her highest paying dog-walking gig.</p>
+  <p>If this were the array representing Kayla's different hourly rates: <code class="try-it-code">var hourlyPay = [22, 17, 29, 16, 18]</code>, this function should return the Number 29.</p>
+  </p>
 </div>
 
 ## Spicy Practice
