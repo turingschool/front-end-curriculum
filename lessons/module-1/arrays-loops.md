@@ -122,7 +122,7 @@ for ([initialExpression]; [condition]; [incrementExpression]) {
 Which looks like this when we implement it in code:
 
 ```js
-for (var i = 0; i < 10; i++ ) {
+for (var i = 0; i < 10; i++) {
   console.log(i);
 }
 ```
@@ -195,6 +195,7 @@ We can see that this condition will never return `false` and we'll be stuck in t
 
 ### Additional Practice  
 
+* [Leveled Array Practice](array-practice.html)
 * [JavaScript Playground](http://frontend.turing.io/lessons/module-1/javascript-playground.html) lets you experiment more with these concepts.
 
 ### Dig Deeper  
