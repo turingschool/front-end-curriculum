@@ -372,7 +372,7 @@ What we're saying by adding this attribute is that only when the path is **EXACT
 
 Now that we have routes defined, and a template of a component, let's get something more fun displaying. Go to your `Unicorns` component and replace what you have with this code:
 <section class="answer">
-### Solution
+### Unicorns.js Boilerplate
 ```jsx
 //Unicorns.js
 
@@ -427,16 +427,11 @@ Take some time to mimic these steps for `Puppies` and `Sharks` so that each resp
 
 ### Refactor using the render method
 
-Taking a look at this, you might notice that we have three separate components for unicorns, puppies, and sharks.  This kind of defeats the purpose of React though since we are essentially displaying the same information with different data for each route.  Let's try reusing the same component to display that data!  We can pull the data that is imported inside the App and pass the data down to a `<Creatures />` component using the render attribute on the `<Route />` component.
+Taking a look at this, you might notice that we have three separate components for unicorns, puppies, and sharks.  This kind of defeats the purpose of React though since we are essentially displaying the same information with different data for each route.  Let's try reusing the same component to display that data!  
+* Step 1 - Create a new component called `Creatures` that takes one prop of `data` - feel free to use the boilerplate below!
 
-```jsx
-// App.js
-
-  <Route path='/unicorns' render={() => <Creatures data={unicornData} />} />
-  <Route path='/puppies' render={() => <Creatures data={puppyData} />} />
-  <Route path='/sharks' render={() => <Creatures data={sharkData} />} />
-```
-
+<section class="answer">
+### Creatures.js Boilerplate
 ```jsx
 // Creatures.js
 
@@ -459,6 +454,20 @@ const Creatures = ({data}) => {
 
 export default Creatures;
 ```
+</section>
+
+* Step 2 - Pull the data that is imported inside the App and pass the data down to a `<Creatures />` component using the render attribute on the `<Route />` component.
+
+<section class="answer">
+### App Boilerplate
+```jsx
+// App.js
+
+  <Route path='/unicorns' render={() => <Creatures data={unicornData} />} />
+  <Route path='/puppies' render={() => <Creatures data={puppyData} />} />
+  <Route path='/sharks' render={() => <Creatures data={sharkData} />} />
+```
+</section> 
 
 Hopefully this seems pretty straight forward so far, but what if we want to go a level deeper? When a user clicks on an image, we want to send them to a new view where they can see information specific to _that_ creature only. This is where we get into **dynamic routing**.
 
