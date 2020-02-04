@@ -467,7 +467,7 @@ export default Creatures;
   <Route path='/puppies' render={() => <Creatures data={puppyData} />} />
   <Route path='/sharks' render={() => <Creatures data={sharkData} />} />
 ```
-</section> 
+</section>
 
 Hopefully this seems pretty straight forward so far, but what if we want to go a level deeper? When a user clicks on an image, we want to send them to a new view where they can see information specific to _that_ creature only. This is where we get into **dynamic routing**.
 
@@ -589,14 +589,14 @@ See if you can write some code to render the correct data based on the ID in the
 **_Hints:_**
 
 * You will need to bring in the data from the `unicorn-data.js` file
-* You may want to use the `CreatureDetails` component already set up for you
+* Use the `CreatureDetails` component already set up for you!
 * Focus first on seeing the data when you type in the URL manually, we'll set up the click next
 </section>
 
 ![rambo on unicorn](http://pleatedjeans.files.wordpress.com/2010/08/10-28-rambounicorn1.jpg)
 
 <section class="answer">
-### Solution
+### Dynamic Route Solution
 
 ```jsx
 <Route path='/unicorns/:id' render={({ match }) => {
@@ -611,32 +611,27 @@ Now if we visit `http://localhost:3000/unicorns/1` we should see a view specific
 <section class="call-to-action">
 ### Your Turn!
 
-See if you can modify your `Creatures` component so that each image can be clicked and `Link` to the correct Route / path / URL.
+See if you can modify your `Creatures` component so that each image can be clicked!
+- Utilize a `<Link>` to wrap around the JSX we already have
+- How can you hook into the data passed down to creature to build the correct path for each `<Link>`?
 </section>
 <section class="answer">
-### Solution
-![tunacorn](http://www.nataliedee.com/081905/tuna-plus-unicorn.jpg)
+### Clickable Link Solution
+```js
+import { Link } from 'react-router-dom'
 
-Here's a simple addition to `Creatures.js`.
-
-First we `import { Link } from 'react-router-dom'`
-
-Then we just wrap what we returned before with a `<Link>` as such:
-
-```jsx
-  const displayCreatures = data.map(creature => {
-    const { id, image, type } = creature;
-    return (
-      <Link to={`/${type}/${id}`} key={id}>      
-        <img src={image} className='app-img' />
-      </Link>
-    )
-  });
+const displayCreatures = data.map(creature => {
+  const { id, image, type } = creature;
+  return (
+    <Link to={`/${type}/${id}`} key={id}>      
+      <img src={image} className='app-img' />
+    </Link>
+  )
+});
 ```
 </section>
+
 And that's it! Go ahead and work on setting up dynamic routes for the other two components!
-
-
 #### Resources:
 
 * [React Router Training](https://reacttraining.com/react-router/web/guides/philosophy)
