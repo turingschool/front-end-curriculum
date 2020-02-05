@@ -20,7 +20,33 @@ We are going to be working to recreate `fetch` from scratch! Let's use the follo
 
 Let's start by getting an event listener set up to listen for a click on the button. When we click the button, we want to make a fetch to the [Advice API](https://api.adviceslip.com/). Take a look at the documentation to see how we can get some random life advice!
 
-Take a few minutes to get your app set up to make a fetch to this API and display the data on the page! If you're really stuck, you can see a solution [here](./assets/images/go-fetch/basic-setup.png)
+Take a few minutes to get your app set up to make a fetch to this API and display the data on the page! If you're really stuck, you can see a solution below!
+
+<section class="answer">
+### Setup Solution
+```html
+<button type="button" name="button">Go Fetch</button>
+<section id="advice-area">
+
+</section>
+```
+```js
+const button = document.querySelector('button');
+button.addEventListener('click', getAdvice);
+
+const getAdvice = () => {
+  const advice = fetch('https://api.adviceslip.com/advice')
+  .then(res => res.json())
+  .then(advice => appendAdvice(advice))
+}
+
+const appendAdvice = advice => {
+  document.querySelector('section').insertAdjacentHTML('afterend', `
+  <h3>${advice.slip.advice}</h3>
+  `)
+}
+```
+</section>
 
 
 ## Breaking Down Fetch
@@ -93,7 +119,8 @@ But wait...
 In this case, we are trying to make a mocked out version of the fetch to the Advice API. So, let's open Postman to see what a response looks like when we hit the Advice API. It should look something like this...
 
 ```js
-  { "slip": {
+  {
+    "slip": {
     "advice": "State the problem in words as clearly as possible.",
     "slip_id":"154"
     }
@@ -118,7 +145,17 @@ So we know we need to mock out the `.json()` method of our Response object. When
 <section class="call-to-action">
 Try to finish out our re-write of fetch! If it works correctly, your App should be able to render the same joke as you have in your `mockResponse`!
 
-You can view a possible solution [here](./assets/images/go-fetch/go-fetch-solution.png).
+<section class="answer">
+### Recreating Fetch Solution
+```js
+window.fetch = () => {
+  return Promise.resolve({
+    ok: true,
+    json: () => Promise.resolve(mockResponse)
+  })
+}
+```
+</section>
 </section>
 
 
