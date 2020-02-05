@@ -77,7 +77,7 @@ The `school` object has four properties:
 
 Create a new repl.
 
-Declare a new variable, called <code>person</code> that stores an object literal. It should have all the properties that were printed on the handout you got this morning, paired with the values you handwrote in.
+Declare a new variable called <code>order</code> that stores an object literal. It should have all the properties that were printed on the handout you got this morning, paired with the values you handwrote in.
 </section>
 
 ### Access Properties
