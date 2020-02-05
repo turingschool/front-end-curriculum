@@ -208,12 +208,14 @@ In action, it looks like this:
 ```js
 school.sendWelcomeMessage();
 ```
-<section class="ccall-to-action">
+<section class="call-to-action">
 ## Turn and Talk
 
 - When reading the code snippet above, how would you say, out loud, in English, what we are doing?
 - When we used dot notation at the start of the lesson, we didn't follow a property name with `()`. Why do you think we are using that here? What does it remind you of? Further, what do you think would happen if we called `school.sendWelcomeMessage`?
 </section>
+
+Let's add a method to our order object.
 
 <section class="checks-for-understanding">
 ### Stop and Reflect
