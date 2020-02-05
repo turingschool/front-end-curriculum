@@ -29,12 +29,12 @@ We are pretending that we are making an order at a coffee shop.
 
 ## Objects
 
-Objects are an abstraction, or the representation of real world things in computer programming.
+Objects are a type of collection, or complex data type in JavaScript. An array is another type of collection. We can think of objects as a representation of real world things in computer programming.
 
 They are meant to bundle together two things:
 
 1. State (data)
-2. Behavior (functions)
+2. Behavior (functionality)
 
 ## When to use Objects
 
