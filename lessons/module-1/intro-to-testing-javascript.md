@@ -21,21 +21,12 @@ tags: javascript, testing, tdd, mocha, chai
 <section class="call-to-action">
 ## Warm Up
 
-In your group, brainstorm at least 3 pieces of functionality that your assigned app has. Use the `user story` format below:
+Read [this article](https://techcrunch.com/2020/02/04/iowa-caucus-app-disaster/). When everyone has had time to read, discuss the following questions with your table of 3-4:
 
-```
-As a user...
-  - When I [take some action]
-  - I [observe some outcome]
-```
-
-Here's as example for Venmo:
-
-```
-As a user,
-- When I click "Transfer Balance"
-- I receive a notification that the transfer has initiated.
-```
+- What were the consequences of this app not working as expected?
+- What kind of pressure can you imagine the engineering team who built this were under, while developing the app?
+- What lessons do you think the company and engineering team learned from this?
+- Do you have any idea what software testing could or should look like?
 </section>
 
 ## What does it mean to test your code?
@@ -109,13 +100,27 @@ Beyond the issue of general motivation — let's face it, you're never going to 
 
 **Steve's Law of Testing**: If something is hard to test, it's probably not your test's fault.
 
-## Your First Test
+## Mocha and Chai
 
 In Mod 1, we will be using the Mocha testing framework along with the assertion library Chai.
 
 * [Mocha](https://mochajs.org/) is a testing framework that runs on `Node.js` in your terminal. This is what allows us to organize and execute our tests.
 
 * [Chai](http://www.chaijs.com/) is an assertion library that plugs into Mocha. The assertion library is what actually runs the specs and determines whether any given condition is valid or not.
+
+## Set Up
+
+When we are testing code, it's usually best to have the implementation code pulled up, as well as the test file. You'll constantly be going back and forth between the two, and need to compare what is in each, so this will make you much more effiecient.
+
+<img src="./assets/images/testing/setup.png" alt="Screen shot of two panes in Atom text editor">
+
+For the work we do today, and throughout Mod 1, we will only be testing classes. So, let's break down how we will use the two files.
+
+- Our `implementation` file refers to the code we are actually testing. This will be a class.
+- Our `test` file will be the automated tests that we write, that verify our class does what it should. This is where we will create object instances, and verify that they do what they should.
+- It is important to keep scope in mind: variables declared in the `test` file are not available in the `implementation` file. And in the `implementation` file, the only way we can call properties declared in the class is if we call them on an object created from that class.
+
+## Your First Test
 
 Let's say we were writing a class, Tweet, that represents the content a user see when they read a tweet. We want to make sure each tweet is labeled with its sender. Here's how that test would look:
 
@@ -238,7 +243,7 @@ It takes some time to build out solid habits when testing.  Often we'll see some
 <section class="checks-for-understanding">
 ### Wrap Up
 
-Open up a Slack DM between you, your project parter, and your Project Manager. Share your answers to the following with the group:
+In your Pair Project channel, share your answers to the following with the group:
 * Why is testing your code important? ⬅️ _Popular Interview Question!_
 * What is the TDD process?
 * In the Paired Project project:
