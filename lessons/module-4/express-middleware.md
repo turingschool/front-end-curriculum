@@ -57,7 +57,7 @@ Auth middleware deals with the authentication of the request and checking to see
 
 #### Other Middlewares
 
-Some other common uses of middleware can include error handling.  Express has a built in error handler for any unhandled errors that may have occurred throughout the pipeline.  There is also middleware that can be used to handle routes for your application.  Remember `app.use(express.statuc('public'))`?  If you are serving your frontend from your backend application including static files like HTML, CSS, & JS, you can have Express render different views based on different HTML files (similar to how something like React Router functions).  This could be useful for pages where a user isn't authorized or a page that doesn't exist.
+Some other common uses of middleware can include error handling.  Express has a built in error handler for any unhandled errors that may have occurred throughout the pipeline.  There is also middleware that can be used to handle routes for your application.  Remember `app.use(express.static('public'))`?  If you are serving your frontend from your backend application including static files like HTML, CSS, & JS, you can have Express render different views based on different HTML files (similar to how something like React Router functions).  This could be useful for pages where a user isn't authorized or a page that doesn't exist.
 
 ### Getting Started
 
