@@ -22,12 +22,12 @@ By the end of this lesson, you'll be able to:
 In your notebook, jot down your answers to the following:
 
 ```javascript
-var students = ["Devin", "Tanisha", "Charlie", "Amanda", "Ed"];
+var students = ["Michelle", "Collie", "Lauren", "Amanda", "Quinn"];
 ```
 
 For the array above,
 - How would you programmatically find the number of elements?
-- Oops! There's not an Amanda in our class. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove her string from the array?
+- Oops! There's not an Amanda in our class. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove the string "Amanda" from the array?
 
 ### Debrief
 
@@ -48,8 +48,8 @@ For each array prototype method, follow this protocol carefully:
 
 1. Read the documentation on MDN.
 2. Talk through your understanding of it together. Make a visual representation of the method with your candies and paper.
-3. Predict: What is **returned** from the method?
-4. Predict: Does the method mutate the original array?
+3. Think: What is **returned** from the method?
+4. Think: Does the method mutate the original array?
 5. Try It: In a `repl.it`, try out the method. While poking around here, try to verify your predictions from steps 3 and 4.
 6. Back to documentation - verify your predictions from steps 3 and 4.
 7. Document any remaining questions!
@@ -57,14 +57,14 @@ For each array prototype method, follow this protocol carefully:
 
 ## Gallery Walk
 
-In your new group of 3, make an anchor chart for your assigned array prototype! It should include:
+In your new group of 3, make a poster for your assigned array prototype! It should include:
 - Name of method
 - What it does (in plain English)
 - Does it mutate the original array?
 - What does it return
-- Optional: Syntax examples, use-case examples.
+- _Optional: Syntax examples, use-case examples._
 
-After all anchor charts are made, we will do a "Gallery Walk" - walk around the room and look at each others posters and make sure notes are accurate. If you aren't 100% of something you are about to write on your poster - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates.
+After all poster are made, we will do a "Gallery Walk" - walk around the room and look at each others posters and make sure notes are accurate. If you aren't 100% of something you are about to write on your poster - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates.
 
 ## Wrap Up
 
