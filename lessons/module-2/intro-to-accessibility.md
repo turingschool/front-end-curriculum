@@ -62,7 +62,7 @@ For each of these types of limitations:
 
 
 <section class="call-to-action">
-### Experiment I - Using a Screen Reader
+### Using a Screen Reader
 
 * Watch the following [video to see how a screen reader understands a page](https://youtu.be/qdB8SRhqvFc?t=417) up until the 9:40 mark.
 
@@ -86,8 +86,11 @@ Here are some helpful VoiceOver commands:
 * Did you cheat and open your eyes?
 </section>
 
+## Station Two
+
+
 <section class="call-to-action">
-### Experiment II - Color Blindness
+### Color Blindness
  
 Install a colorblind simulator for Chrome. Try one (or both) of the following:
 
@@ -107,10 +110,10 @@ Navigate to some of your most visited sites -- especially those that have some s
 
 
 
-## Station Two
+## Station Three
 
 <section class="call-to-action">
-### Experiment I - Tabbing
+### Tabbing
 
 Watch the following [video](https://youtu.be/hKIQkgPVXH4?t=307) up until the 9:50 mark.
 
@@ -131,8 +134,10 @@ No use of the trackpad is allowed!
 * How was the focus on your current selection? Did you tab into the drop down menus for selecting a car make and model?
 </section>
 
+## Station Four
+
 <section class="call-to-action">
-### Experiment II - Accessible Text
+### Accessible Text
 
 Check out the following [site](http://geon.github.io/programming/2016/03/03/dsxyliea) that replicates what it *could* be like to read text with Dyslexia. 
 
