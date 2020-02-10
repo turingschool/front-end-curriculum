@@ -329,11 +329,13 @@ What's the happy path?
 What's the sad path?
 </section>
 
-Going through line by line, here's what I see to test:
+<section class="answer">
+### What to test?
 
 * Fetch should be invoked with the correct URL
 * If the response is good, we should get back an array of ideas (the happy path)
 * If the response is bad, we should get back an Error with a message of "Error fetching ideas" (the sad path)
+</section>
 
 Let's set up those it blocks!
 
@@ -368,6 +370,7 @@ Let's set up a `beforeEach()` block to handle it.
 import { getIdeas } from './apiCalls';
 
 describe('getIdeas', () => {
+  //create a mock response that we can use later in our test
   let mockResponse = [
     {
       id: 1,
@@ -389,8 +392,10 @@ describe('getIdeas', () => {
   });
 });
 ```
-
+#### Testing the URL
 Okay, so let's write our first test.
+- Invoke the method we are testing (`getIdeas`)
+- Ensure that `fetch` was called with the correct URL!
 
 ```js
 // apiCalls.test.js
@@ -423,11 +428,18 @@ export const getIdeas = () => {
     });
 };
 ```
+We know that:
+- `fetch` returns a Promise (because we can chain a `.then()` onto it).
+- That Promise resolves into the response object.
+- It looks like that response object has at least two values in it: a key of "ok" whose value is a boolean, and a key of "json" whose value is a function. -
+- That "json" function also returns a Promise, and _that_ Promise resolves into our array of ideas.
 
-We know that `fetch` returns a Promise (because we can chain a `.then()` onto it). The Promise resolves into the response object. It looks like that response object has at least two values in it: a key of "ok" whose value is a boolean, and a key of "json" whose value is a function. That "json" function also returns a Promise, and _that_ Promise resolves into our array of ideas.
+<section class="call-to-action">
+### You Do
+How could we mock out the `fetch` and ensure that it is a `jest.fn()`, that when called, will return us a `Promise` that we can work with?
 
-So let's write out our mocked fetch!
-
+<section class="answer">
+### Mocking Fetch in our Test
 ```js
 // apiCalls.test.js
 
@@ -458,6 +470,9 @@ describe('getIdeas', () => {
   });
 });
 ```
+</section>
+</section>
+
 
 <section class="note">
 ### Tangent: before & after blocks
@@ -469,10 +484,21 @@ Often times, you'll want to start from scratch after every `it` block runs in yo
 * [afterEach](https://facebook.github.io/jest/docs/api.html#aftereachfn) - will run after every single `it` block
 </section>
 
-WOWZA. Our test now passes! WOOHOO! Now let's get our next test passing.
+#### Testing the Happy Path
 
-Notice that we're still using the mock implementation of `fetch` that we set up in the `beforeEach()` block.
+Notice that we're still using the mock implementation of `fetch` that we set up in the `beforeEach()` block. This will ensure that we will get back EXACTLY what we want any time we use the `fetch` within our tests.
 
+OK, for our next test we want to check:
+- When we call `getIdeas`...
+- We get back the response we expect
+
+<section class="call-to-action">
+### You Do
+See if you can get this test to pass!
+</section>
+
+<section class="answer">
+### Happy Path V1
 ```js
 // apiCalls.test.js
 
@@ -481,9 +507,12 @@ Notice that we're still using the mock implementation of `fetch` that we set up 
     .then(results => expect(results).toEqual(mockResponse));
   });
 ```
+Hopefully you're seeing that green checkmark :) The happy path has been tested! I feel pretty happy.  Notice though that the syntax is a bit odd because we have to use `.then` before we can make our assertion.
+</section>
 
-Hopefully you're seeing that green checkmark :) The happy path has been tested! I feel pretty happy.  Notice though that the syntax is a bit odd because we have to use `.then` before we can make our assertion.  We can use a less verbose way using the `.resolves` [property](https://jestjs.io/docs/en/expect#resolves) in order to make the test a bit cleaner/easier to read. 
-
+<section class="answer">
+### Happy Path V2
+We can use a less verbose way using the `.resolves` [property](https://jestjs.io/docs/en/expect#resolves) in order to make the test a bit cleaner/easier to read.
 ```js
 // apiCalls.test.js
 
@@ -491,7 +520,9 @@ Hopefully you're seeing that green checkmark :) The happy path has been tested! 
     expect(getIdeas()).resolves.toEqual(mockResponse);
   });
 ```
+</section>
 
+#### Testing the Sad Path
 Now we've got to test the sad path. Sad path tests are critical - if something unwanted happens, we need to make sure that we're handling it properly so our whole app doesn't just break.
 
 Sad path tests help us make sure those eventualities are covered!
@@ -500,12 +531,11 @@ We're going to have to rewrite our `fetch` so that the object's "ok" key's value
 
 <section class="call-to-action">
 ### In Your Notebook
-
-How would you rewrite the mock implementation of fetch?
+How would you rewrite the mock implementation of fetch to handle a sad path?
 </section>
 
-Let's try it out.
-
+<section class="answer">
+### Sad Path Pt. 1
 ```js
 // apiCalls.test.js
 
@@ -519,17 +549,21 @@ Let's try it out.
     expect(getIdeas()).rejects.toEqual(Error('Error fetching ideas'));
   });
 ```
+Notice this time we are using the `rejects` property within our test to check the error coming through!
+</section>
 
-HECK YES! Notice this time we are using the `rejects` property.  Now that we've figured out how to isolate and test the `fetch` that gathers up all our ideas from the API, let's keep going.
+##### Let's Add One More Sad Path Test
 
-### Let's Add One More Sad Path Test
+When using fetch calls, there are two main times when we want to check for errors.
+- The first one we tested was when the fetch resolves, but **the response is not `ok`**.  
+- The second way a fetch call can fail is when it **rejects**. When a promise rejects, it *automatically throws an error*. The *catch* in our `App` will still catch this error and set it to state.
 
-When using fetch calls, there are two main times when we want to check for errors. The first one we tested was when the fetch resolves, but the response is not okay.  
+Let's write a test for when if our Promise from `fetch` rejects:
+- Think about how we made our Promise resolve in our mocked out `fetch`... How could we use that same logic to make it **reject**?
+- If a Promise is `rejected`, what value does it give us?
 
-The second way a fetch call can fail is when it rejects.  When a promise rejects, it automatically throws an error.  The *catch* in our `App` will still catch this error and set it to state.
-
-Let's write the following test:
-
+<section class="answer">
+### Sad Path V2
 ```js
 // apiCalls.test.js
 
@@ -542,19 +576,24 @@ Let's write the following test:
       expect(getIdeas()).rejects.toEqual(Error('fetch failed'));
     });
 ```
+</section>
 
 <section class="checks-for-understanding">
 ### You try it!
 
-Isolate and test the fetch that posts a new idea.
+Isolate and test the fetch that POSTS a new idea.
 
 Isolate and test the fetch that deletes an idea based on its id.
 
 _Hint: Put each of these fetches into its own `describe` block!_
 </section>
 
-Because `post` needs an options object, you will need to include that when checking to see if the fetch called that argument.  Here is a solution below:
+### Testing `postIdea`
 
+Because `post` needs an options object, you will need to include that when checking to see if the fetch called that argument. Here is a solution below:
+
+<section class="answer">
+### postIdea URL + Options Test
 ```js
 // apiCalls.test.js
 
@@ -590,6 +629,8 @@ describe('postIdea', () => {
   });
 });
 ```
+</section>
+
 
 ### Testing the component
 
@@ -612,7 +653,7 @@ Since we've already tested that `getIdeas` works as we expect, all we have left 
 <section class="note">
 ### Note
 
-I recommend not testing state changes in `componentDidMount`.  It gets complex fast, and even once you mock out what `getIdeas` returns, you can run into race conditions where asserting things about state doesn't always work. However, you **should** test that state has updated with other async methods you have created. 
+I recommend not testing state changes in `componentDidMount`.  It gets complex fast, and even once you mock out what `getIdeas` returns, you can run into race conditions where asserting things about state doesn't always work. However, you **should** test that state has updated with other async methods you have created.
 </section>
 
 `App.js` is bringing in `getIdeas` from `./apiCalls.js`. We can trick App into using mocked functions instead of the real ones!
