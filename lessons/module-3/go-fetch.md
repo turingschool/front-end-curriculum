@@ -59,9 +59,13 @@ But why are we doing this? When we start discussing async testing, there are goi
 
 If we break this down, `fetch` is a method (or function) to will return us some data that we can use later in our app. So to get things rolling, we need to reassign fetch to be a function!
 
+<section class="answer">
+### Reassigning Fetch
 ```js
   window.fetch = () => {}
 ```
+</section>
+
 
 ### Step 2 - What does `fetch` return?
 When we use the fetch API, we are making a network request to get data that we can use in our app. But as we know, it doesn't just come back all neatly packaged for us. So what DO we get back from a fetch request?
@@ -70,11 +74,15 @@ That's right... A PROMISE!
 
 So how can we adjust our handmade `fetch` to handle this? Well for today, let's just worry about getting a Promise back that has been resolved (Happy Path).
 
+<section class="answer">
+### Mocking Fetch's Return
 ```js
   window.fetch = () => {
     return Promise.resolve({})
   }
 ```
+</section>
+
 
 Let's break down what's happening here...
 * We are returning a Promise object from the `fetch`
@@ -98,6 +106,8 @@ There is a lot of data in the response object and we don't necessarily need to u
 
 We definitely want to include the `ok` property to convey that this Promise has resolved as expected. We can refactor our fetch to reflect this.
 
+<section class="answer">
+### Response Object Pt. 1
 ```js
 window.fetch = () => {
 	return Promise.resolve({
@@ -105,6 +115,8 @@ window.fetch = () => {
 	})
 }
 ```
+</section>
+
 
 ### Step 4 - Getting Data From the Response Object
 Thinking back to our original fetch, what did we need to do to actually extract data from the Response object? We had to call `.json()` on the Response! Take a few minutes to review the [documentation](https://developer.mozilla.org/en-US/docs/Web/API/Body/json) on this method.
@@ -121,8 +133,8 @@ In this case, we are trying to make a mocked out version of the fetch to the Adv
 ```js
   {
     "slip": {
-    "advice": "State the problem in words as clearly as possible.",
-    "slip_id":"154"
+      "advice": "State the problem in words as clearly as possible.",
+      "slip_id":"154"
     }
   }
 ```
@@ -131,6 +143,9 @@ Great! We don't necessarily care about all of this information, but we definitel
 
 Let's create a variable to hold this information and then we can use that when we want to keep building our `fetch`!
 
+<section class="answer">
+### Creating a Mock Response
+</section>
 ```js
 const mockResponse = {
   slip: {
