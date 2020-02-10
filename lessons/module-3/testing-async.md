@@ -656,6 +656,9 @@ Since we've already tested that `getIdeas` works as we expect, all we have left 
 I recommend not testing state changes in `componentDidMount`.  It gets complex fast, and even once you mock out what `getIdeas` returns, you can run into race conditions where asserting things about state doesn't always work. However, you **should** test that state has updated with other async methods you have created.
 </section>
 
+#### Mocking Out our API Calls Functions
+We've already tested all of the functions within our `apiCalls.js` file - we know they work. However, to utilize them in our `App.js`, they need to be `jest` functions in order to work with them!
+
 `App.js` is bringing in `getIdeas` from `./apiCalls.js`. We can trick App into using mocked functions instead of the real ones!
 
 When we export all our fetch functions from the real `apiCalls.js`, each of those functions is being added to an object, and that object is what we're importing at the top of `App.js`.
@@ -664,6 +667,8 @@ Now, we're going to interrupt that cycle and paste in our own object of mocked f
 
 We're going to call `jest.mock('../apiCalls')`, which allows jest to overwrite any functions that are found in `apiCalls.js` as mock functions.  Let's also import and mock out what `getIdeas` returns and run that in a beforeEach.
 
+<section class="answer">
+### Mocking API Calls Functions
 ```js
 // App.test.js
 
@@ -679,11 +684,15 @@ describe('App', () => {
   });
 });
 ```
+</section>
+
 
 So now, when App's `componentDidMount` runs its first line, it runs the jest function instead of the real one from `apiCalls`.
 
 `shallow` calls `componentDidMount` automatically, so let's test to see if it has been called.
 
+<section class="answer">
+### Testing componentDidMount
 ```js
 // App.test.js
 
@@ -692,8 +701,8 @@ So now, when App's `componentDidMount` runs its first line, it runs the jest fun
     expect(getIdeas).toHaveBeenCalled();
   });
 ```
-
 Cheers! Our componentDidMount has been tested.
+</section>
 
 Let's try out our first failing App test:
 
@@ -734,9 +743,13 @@ Our test will still fail ... because we haven't mocked out `postIdea`! Try that 
 <section class="call-to-action">
 ### With a Partner
 
-Import and mock out your `postIdea` function in your test file. Try to get the test passing.
+Import and mock out your `postIdea` function in your test file. Your `postIdea` mock function should...
+- Return a Promise
+- The Promise should resolve to the idea that you hope to add
 </section>
 
+<section class="answer">
+### postIdea Solution
 Below you can see that we have mocked out how postIdea works in the test itself.  (you could move it in the beforeEach, but this is the only test asking for it).  Notice we also used `async/await` because our postIdea method is asynchronous.  We want it to wait before we check out the state.
 
 ```js
@@ -758,6 +771,7 @@ Below you can see that we have mocked out how postIdea works in the test itself.
     expect(wrapper.state('ideas')).toEqual(expected);
   });
 ```
+</section>
 
 ## Summary
 
