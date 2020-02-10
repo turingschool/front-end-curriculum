@@ -145,7 +145,6 @@ Let's create a variable to hold this information and then we can use that when w
 
 <section class="answer">
 ### Creating a Mock Response
-</section>
 ```js
 const mockResponse = {
   slip: {
@@ -153,6 +152,8 @@ const mockResponse = {
   }
 }
 ```
+</section>
+
 
 ### Step 6 - Finishing Out Our Fetch!
 So we know we need to mock out the `.json()` method of our Response object. When we call that in the real world, is parses the data and returns it to us in a format we can work in. We just created the data that we want back in our `mockResponse` - so, put it all together!
