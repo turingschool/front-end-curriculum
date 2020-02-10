@@ -151,10 +151,25 @@ Luckily ARIA provides state information that we can add to our markup.
 
 ```html
 <button
+  id="menu-button"
   aria-expanded="true"
 >
   Toggle Menu
 </button>
+```
+
+```javascript
+let button = document.getElementById("menu-button");
+
+button.addEventListener("click", function() {
+  let attr = button.getAttribute("aria-expanded");
+  
+  if (attr === 'true') {
+     button.setAttribute("aria-expanded", false);
+  } else {
+     button.setAttribute("aria-expanded", true);
+  }
+});
 ```
 
 This also allows you to target these elements using the `aria-expanded` attribute when interacting with them in your JavaScript or CSS.
