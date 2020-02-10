@@ -46,3 +46,7 @@ All of these questions were from previous student's actual interviews.
 * What could we use instead of `<b>` tags for bold and `<i>` tags for italics to make our HTML more semantic?
 * What is the purpose of article, section, header and footer tags? Please explain with an example and why we should not use divs.
 * What are HTML data attributes?
+* What is the event loop?
+* What are some popular NodeJS Modules?
+* What is the concetp of state in React?
+* What is the virtual DOM?
