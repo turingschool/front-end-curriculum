@@ -48,5 +48,5 @@ All of these questions were from previous student's actual interviews.
 * What are HTML data attributes?
 * What is the event loop?
 * What are some popular NodeJS Modules?
-* What is the concetp of state in React?
-* What is the virtual DOM?
+* What is the concept of state in React?
+* What is the virtual DOM in React?
