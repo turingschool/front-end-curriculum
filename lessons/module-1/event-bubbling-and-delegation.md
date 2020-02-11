@@ -33,18 +33,18 @@ A common obstacle that many JavaScript developers struggle with is understanding
 
 ### Experiment
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="js,result" data-user="turing-school" data-slug-hash="NWWrzvB" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Events: Adding a New Event Listener">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/NWWrzvB">
-  Events: Adding a New Event Listener</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+Clone [this](https://github.com/wvmitchell/eventPractice) repository to your
+local machine, and open up example1/index.html.
+
+<section class="call-to-action">
+### Your Turn
 
 You should see three buttons labeled "Click me!" as well as a button for adding new buttons to the page.
 
 1. Click each of the "Click me!" buttons and verify that each one fires an `alert` notifying you that the button has in fact been clicked.
 2. Add an additional button using the "Add a new button below." button.
 3. Click on your new button and observe the results.
+</section>
 
 What did you notice?
 
