@@ -84,23 +84,10 @@ Many people question why more attention isn't paid to the capturing phase. Simpl
 
 Legend has it that back in the day, Netscape Navigator and Internet Explorer had different, incompatible ways of propagating events to multiple handlers; Netscape "captured" while Internet Explorer "bubbled." W3C has very sensibly decided to take a middle position in this dispute. According to the W3C event model, any event taking place is first captured until it reaches the target element... and then bubbles up again.
 
-Let's start with a quick experiment.
-
-### Experiment
-
-In the following code pen, we have three nested HTML elements in `index.html`:
-
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="css,result" data-user="turing-school" data-slug-hash="ZEEORJN" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Event Bubbling Example">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/ZEEORJN">
-  Event Bubbling Example</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
 <section class="call-to-action">
 ### Pair Practice
 
-Fork [this CodePen](http://codepen.io/team/turing/pen/ZOvkVo).
+Using [this repo](https://github.com/wvmitchell/eventPractice) `open example2/index.html` for this pair practice, and modify `script.js`
 
 * Add a click event to the button, that logs the element that was clicked on using `this`.
 * Move the event listener to the `.parent` element. What is the result when you click on the button?
