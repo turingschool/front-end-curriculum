@@ -339,6 +339,8 @@ What's the sad path?
 
 Let's set up those it blocks!
 
+<section class="answer">
+### Test Setup
 ```js
 // apiCalls.test.js
 
@@ -359,10 +361,9 @@ describe('getIdeas', () => {
   });
 });
 ```
+</section>
 
-Reading through my tests, it looks like I'm going to need to use some mocked data.
-
-Let's set up a `beforeEach()` block to handle it.
+Reading through my tests, it looks like I'm going to need to use some mocked data. We can set up a variable before our `it` blocks so they all have access to it.
 
 ```js
 // apiCalls.test.js
@@ -370,7 +371,6 @@ Let's set up a `beforeEach()` block to handle it.
 import { getIdeas } from './apiCalls';
 
 describe('getIdeas', () => {
-  //create a mock response that we can use later in our test
   let mockResponse = [
     {
       id: 1,
