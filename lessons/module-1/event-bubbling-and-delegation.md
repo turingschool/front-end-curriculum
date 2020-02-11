@@ -199,17 +199,14 @@ parent.addEventListener('click', function(event) {
 });
 ```
 
-<p class="codepen" data-height="300" data-theme-id="37918" data-default-tab="js,result" data-user="turing-school" data-slug-hash="abbZKLO" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Events: Adding a New Event Listener">
-  <span>See the Pen <a href="https://codepen.io/turing-school/pen/abbZKLO">
-  Events: Adding a New Event Listener</a> by Turing School (<a href="https://codepen.io/turing-school">@turing-school</a>)
-  on <a href="https://codepen.io">CodePen</a>.</span>
-</p>
-<script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-
 <section class="call-to-action">
 ### Your Turn
 
-What is a real life analogy that you could use to explain how event delegation works? Create a new visual representation of this in your notebook.
+- Add the previous code to `example3/script.js`
+- Replace the commented out code
+- Run the code with `open example3/index.js`
+- Add some other if statements. How often is this eventListener being activated?
+
 </section>
 
 <section class="checks-for-understanding">
