@@ -119,15 +119,15 @@ Active (color-coded) and non-active (white) icons are all stored [here](https://
 
 ### Functional Expectations
 
-* **Exceptional/4:** Application adds three or more of the extensions from phase four.
-* **Proficient/3:** Application meets all of the expectations of phase three.
-* **Advanced Beginner/2:** Application meets all of the expectations of phase two.
-* **Novice/1:** Application meets all of the expectations of phase one.
+* **Exceptional/4:** Application completes one of the two options from Iteration 4.
+* **Proficient/3:** Application meets all of the expectations of Iteration 3.
+* **Advanced Beginner/2:** Application meets all of the expectations of Iteration 2.
+* **Novice/1:** Application meets all of the expectations of Iteration 1.
 
 ### Comp Recreation
 
 * **Exceptional/4:** Application implements all major comp details accurately and correctly on desktop **and** mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements that have been added match the visuals established in the comps.
-* **Proficient/3:** Application implements **all** major comp details accurately and correctly on desktop and and most comp details on mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward. Careful attention was given to the little details like spacing, alignment, and hover states.
+* **Proficient/3:** Application implements **all** major comp details accurately and correctly on desktop and and **some** comp details on mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. Additional elements added generally match the visuals established in the comps, but may be slightly awkward. Careful attention was given to the little details like spacing, alignment, and hover states.
 * **Advanced Beginner/2:** Application implements most major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment,  etc.).
 * **Novice/1:** Crafts markup according to the [Turing CSS style guide](https://github.com/turingschool-examples/css)
 
@@ -135,7 +135,7 @@ Active (color-coded) and non-active (white) icons are all stored [here](https://
 
 * **Exceptional/4:** Application fully implements HTML that is accessible for folks with visual disabilities. Reference [this lesson plan](http://frontend.turing.io/lessons/floating/aria-accessibility.html)
 * **Proficient/3:** Application adds to the above with markup that is easy to read and follows across naming conventions
-* **Advanced Beginner/2:** Application adds to the above with HTML that incorporates semantic HTML elements and has a simple, clean HTML structure.
+* **Advanced Beginner/2:** Application adds to the above with HTML that incorporates semantic HTML elements and has a simple, clean HTML structure
 * **Novice/1:** Crafts markup according to the [Turing HTML style guide](https://github.com/turingschool-examples/html)
 
 ### CSS - Style and Implementation
