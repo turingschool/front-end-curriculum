@@ -19,7 +19,7 @@ In this project, you will be building on top of somebody else's pre-existing Wha
 
 * Sass
 * Fetch
-* Webpack
+* [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html)
 
 ## Set Up
 
@@ -136,7 +136,7 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 * Identify redundant code in your classes and opportunities for DRYing it up
 * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior
-* Refactor **across** your classes to create a parent class that others inherit methods from
+* Refactor **across** your classes to create a parent class that others inherit methods from as appropriate
 
 
 ### Accessibility
@@ -179,7 +179,7 @@ module.exports = domUpdates;
 ### User Testing / UI
 * Test out the application manually and file errors for any UI or UX issues you can find
 * Fix UI / UX problems. If a display feels hard to use, think about how you can remake it
-* Make the page fully responsive and functional down to mobile screens
+* Make the page fully responsive and functional down to mobile screensx
 
 ## Extensions
 
@@ -206,7 +206,7 @@ We will evaluate your response based on the following rubric:
 
 **Advanced Beginner:** Cannot respond to the question with accuracy. May discuss related ideas, but does not quite stay on topic for the question we're asking. May ramble a bit until they throw out the correct term, looking to the interviewer for signs of being on the right track.
 
-**Novice:** Cannot respond to the question with accuracy. Interviewer may reprhase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
+**Novice:** Cannot respond to the question with accuracy. Interviewer may rephrase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
 
 If the evaluator is left wanting a bit more from your response, they may choose to continue to ask follow-up question to you - or they may open it up to volunteers in the group to assist.
 
