@@ -343,12 +343,12 @@ The great thing about promises is that since they are just objects we can move t
 
 ```js
 function getTrivia(number, categoryId) {
-	const root = 'https://opentdb.com/api.php';
-	const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
-	const promise = fetch(url)
-	                .then(response => response.json());
-
-	return promise;
+  const root = 'https://opentdb.com/api.php';
+  const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
+  const promise = fetch(url)
+                  .then(response => response.json());
+  
+  return promise;
 }
 
 getTrivia(10, 27)
