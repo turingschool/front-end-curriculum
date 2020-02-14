@@ -346,14 +346,14 @@ function getTrivia(number, categoryId) {
 	const root = 'https://opentdb.com/api.php';
 	const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
 	const promise = fetch(url)
-	                .then(data => data.json());
+	                .then(response => response.json());
 
 	return promise;
 }
 
 getTrivia(10, 27)
-.then(data => console.log(data))
-.catch(err => /* do something else */);
+  .then(data => console.log(data))
+  .catch(err => /* do something else */);
 ```
 ---
 
