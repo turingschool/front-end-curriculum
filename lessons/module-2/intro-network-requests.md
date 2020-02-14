@@ -253,7 +253,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 Using the <a href="https://opentdb.com/api_config.php" target="\__blank"> Trivia API</a>, do the following in your console:
 
 - Fetch 10 science questions using fetch and console.log the entire response
-- Fetch 20 geography questions and for each trivia console.log the answer only
+- Fetch 20 geography questions and for each trivia object console.log the answer only
 - Fetch 20 geography questions and console.log the response status code.
 </section>
 
@@ -299,6 +299,16 @@ Often times, if a `POST` is successful, you'll see a `201 created` status messag
 #### Practice
 
 Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting and POSTing.
+
+Working with a partner do the following:
+- Get the server up and running (just follow all the set up instructions in the
+  repo)
+- Write a fetch request to GET all the users
+- Write a fetch request to POST a new user
+- Rerun your previous GET fetch request to verify you added the user
+- Write a fetch request to GET all the animals
+- Write a fetch request to POST a new animal
+- Rerun your previous GET fetch request to verify you added the animal
 </section>
 
 ### Nice to Know: Query Strings / URL Structure
