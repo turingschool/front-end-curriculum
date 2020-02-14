@@ -222,7 +222,7 @@ Diving into the returned promise reveals some information, such as its status an
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
-	.then(response => console.log(response))
+  .then(response => console.log(response))
 ```
 
 If you plug the code above into your console, you should see the Response object come back!
@@ -265,7 +265,7 @@ If we want to use fetch to make any other kind of request, we'll have to add an 
 
 ```js
 fetch(url, {
-	method:"POST",
+  method:"POST",
 })
 ```
 
@@ -280,15 +280,15 @@ Here's a typical POST request structure:
 
 ```js
 fetch(url, {
-	method: 'POST',
-	headers: {
-		'Content-Type': 'application/json'
-	},
-	body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
+  method: 'POST',
+  headers: {
+  	'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
 })
-	.then(response => response.json())
-	.then(json => /*do something with json*/)
-	.catch(err => /*do something with the error*/);
+  .then(response => response.json())
+  .then(json => /*do something with json*/)
+  .catch(err => /*do something with the error*/);
 ```
 
 Remember, **fetch still returns a promise**. We've got to resolve it, regardless of what request type we're making.
