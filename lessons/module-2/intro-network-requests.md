@@ -32,7 +32,8 @@ The HTTP protocol defines a variety of types of requests we can make. These incl
 
 * `GET` - retrieve information from a server
 * `POST` - send information to a server, creating / updating resources
-* `PUT` - send information to a server, creating / updating resources
+* `PUT` - send information to a server, updating entire resources
+* `PATCH` - send informatin to a server, updating partial resources
 * `DELETE` - remove information from a server
 * And <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="\__blank"> many others </a>
 
