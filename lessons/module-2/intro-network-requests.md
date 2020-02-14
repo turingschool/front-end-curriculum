@@ -53,7 +53,7 @@ We can see that each request has a different response code. The HTTP protocol la
 Here's a high level overview of different statuses:
 
 ```
-1XX status codes have informational purposes
+1XX status codes have informational (in progress) purposes
 2XX indicates success
 3XX is for redirection
 4XX represent client-side errors
