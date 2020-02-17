@@ -18,7 +18,7 @@ In early stages, it is a single player game. The user clicks two cards. If they'
 
 ## Set Up
 
-Create a **private** repository on GitHub and add both/all instructors as collaborators. Send over your repo link and GitHub pages as soon as it's up.
+Create a repository on GitHub and add both/all instructors as collaborators. Send over your repo link and GitHub pages as soon as it's up.
 
 ## Progression
 
@@ -60,6 +60,13 @@ To do this, we're going to create two JavaScript classes: `Card` and `Deck`.
 - All card object instances should be held in the *Deck* class
 - The Deck should have `cards`, `matchedCards`, and `selectedCards` as properties. The Deck should have the following methods: `shuffle`, `checkSelectedCards`, and `moveToMatched`. If you find a need for additional methods, write/use them!
 </section>
+
+- Create two files: `card.js` and `deck.js`
+- Build out both classes
+- Consider:
+  - What properties in the class should be dynamic, and which ones should be default?
+  - What will each method do?
+  - If you're not sure, look forward to future iterations to see when you might need it - it's okay to wait to define the method until you know how you need to use it!
 
 ### Iteration 2 - Rendering the Data Model
 
@@ -214,7 +221,30 @@ The topic does not have to be Beyonce. Besides assets and name of app, however, 
 
 ## JavaScript
 
-* **4:** **Code is well refactored** and demonstrates developer empathy. No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor. All functions are **less than 10 lines long** or otherwise demonstrate SRP.
-* **3:** The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods. Arguments and parameters are used to limit global variables. **Function declarations** are used over anonymous functions in event listeners. Developers can speak to the **role of each class**. The separation of data model logic and presentational logic is clear and can be explained by all developers in the team.
-* **2:** The **event object** is used correctly, and is not accepted as a parameter if it is not necessary. Developer can speak to **how the event object is utilized** for any given event handler. **Function and variable names** describe their role in the program. *Examples: The name of the data type should not ever be in a variable name (ex: "petArray"); the name itself should be clear enough to indicate the type of data it holds (ex: "allPets"). An event handler should not have "handler" (ex: "clickHandler"); the name should indicate the handler's purpose (ex: "addNewPet").
-* **1:** Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5).
+* **4:**
+
+  - **Code is well refactored** and demonstrates developer empathy.
+  - No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
+  - All functions are **less than 10 lines long** or otherwise demonstrate SRP.
+
+* **3:**
+
+  - The separation of data model logic and presentational logic is clear and can be explained by all developers in the team.
+  - The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods.
+  - Developers can speak to the **role of each class**.
+  - All DOM manipulation is handled exclusively in `main.js`.
+  - Developers demonstrate understanding and ability to refactor code by having at least 1 example of DRY code that was intentionally reused.
+  - SRP is evidenced by clear, concise function names; each function only does what the name describes.
+
+* **2:**
+
+  - Arguments and parameters are used to limit global variables.
+  - The **event object** is used correctly, and is not accepted as a parameter if it is not necessary.
+  - Developers can speak to **how the event object is utilized** for any given event handler.
+  - **Function and variable names** describe their role in the program. Examples: The name of the data type should not ever be in a variable name (ex: "petArray"); the name itself should be clear enough to indicate the type of data it holds (ex: "allPets").
+  - An event handler should not have "handler" in the name (ex: "clickHandler"); the name should indicate the handler's purpose (ex: "addNewPet").
+
+* **1:**
+
+  - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5).
+  - **Function declarations** are used over anonymous functions in event listeners.
