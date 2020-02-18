@@ -155,6 +155,7 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 * All DOM manipulation is done with jQuery, there should be no mixture of jQuery and vanilla JavaScript
 * DOM manipulation should also be organized into a `domUpdates.js` file. The file should look something like this:
+
 ```JavaScript
 // domUpdates.js
 
@@ -164,7 +165,7 @@ let domUpdates = {
   ...
 };
 
-module.exports = domUpdates;
+export default  domUpdates;
 ```
 * Any DOM updating functionality will then be imported into other files that need them
   - This will create a more modular structure, and allow you to test your DOM methods (see below)
