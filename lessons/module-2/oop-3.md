@@ -29,7 +29,7 @@ By the end of this lesson, you will be able to:
 ## OOP Benefits
 
 * Code reusability
-* Encapsulation: values are scoped to the specific object
+* Encapsulation: values & functionality are scoped to the specific object
 * Design & Scalability: OOP forces programmers to meticulously plan the project. OOP is also much more maintainable for larger programs
 * Maintainable: OOP tends to be easier to modify specific pieces of the code without affecting the larger program
 
