@@ -4,8 +4,7 @@ length: 180 minutes
 tags: javascript, browser, network requests, fetch, ajax, xhr
 ---
 
-<section class="call-to-action">
-### By the end of this lesson you should...
+### Learning Goals
 
 * Understand the difference between synchronous and asynchronous operations
 * Be familiar with the fetch API
@@ -16,7 +15,6 @@ tags: javascript, browser, network requests, fetch, ajax, xhr
 
 * `Async` / `Asynchronous` Executing code without blocking the execution of code after it
 * `AJAX` Updating a webpage based on data from the network without reloading the whole thing
-</section>
 
 ## What is a network request?
 
@@ -34,7 +32,8 @@ The HTTP protocol defines a variety of types of requests we can make. These incl
 
 * `GET` - retrieve information from a server
 * `POST` - send information to a server, creating / updating resources
-* `PUT` - send information to a server, creating / updating resources
+* `PUT` - send information to a server, updating entire resources
+* `PATCH` - send informatin to a server, updating partial resources
 * `DELETE` - remove information from a server
 * And <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods" target="\__blank"> many others </a>
 
@@ -54,7 +53,7 @@ We can see that each request has a different response code. The HTTP protocol la
 Here's a high level overview of different statuses:
 
 ```
-1XX status codes have informational purposes
+1XX status codes have informational (in progress) purposes
 2XX indicates success
 3XX is for redirection
 4XX represent client-side errors
@@ -223,7 +222,7 @@ Diving into the returned promise reveals some information, such as its status an
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
-	.then(response => console.log(response))
+  .then(response => console.log(response))
 ```
 
 If you plug the code above into your console, you should see the Response object come back!
@@ -254,7 +253,7 @@ fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
 Using the <a href="https://opentdb.com/api_config.php" target="\__blank"> Trivia API</a>, do the following in your console:
 
 - Fetch 10 science questions using fetch and console.log the entire response
-- Fetch 20 geography questions and for each trivia console.log the answer only
+- Fetch 20 geography questions and for each trivia object console.log the answer only
 - Fetch 20 geography questions and console.log the response status code.
 </section>
 
@@ -266,7 +265,7 @@ If we want to use fetch to make any other kind of request, we'll have to add an 
 
 ```js
 fetch(url, {
-	method:"POST",
+  method:"POST",
 })
 ```
 
@@ -281,15 +280,15 @@ Here's a typical POST request structure:
 
 ```js
 fetch(url, {
-	method: 'POST',
-	headers: {
-		'Content-Type': 'application/json'
-	},
-	body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
+  method: 'POST',
+  headers: {
+  	'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(someDataToSend), // remember how HTTP can only send and receive strings, just like localStorage?
 })
-	.then(response => response.json())
-	.then(json => /*do something with json*/)
-	.catch(err => /*do something with the error*/);
+  .then(response => response.json())
+  .then(json => /*do something with json*/)
+  .catch(err => /*do something with the error*/);
 ```
 
 Remember, **fetch still returns a promise**. We've got to resolve it, regardless of what request type we're making.
@@ -300,6 +299,16 @@ Often times, if a `POST` is successful, you'll see a `201 created` status messag
 #### Practice
 
 Head to <a href="https://github.com/turingschool-examples/fe2-fetch-practice" target="\__blank">this repo</a> for some practice with GETting and POSTing.
+
+Working with a partner do the following:
+- Get the server up and running (just follow all the set up instructions in the
+  repo)
+- Write a fetch request to GET all the users
+- Write a fetch request to POST a new user
+- Rerun your previous GET fetch request to verify you added the user
+- Write a fetch request to GET all the animals
+- Write a fetch request to POST a new animal
+- Rerun your previous GET fetch request to verify you added the animal
 </section>
 
 ### Nice to Know: Query Strings / URL Structure
@@ -334,17 +343,17 @@ The great thing about promises is that since they are just objects we can move t
 
 ```js
 function getTrivia(number, categoryId) {
-	const root = 'https://opentdb.com/api.php';
-	const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
-	const promise = fetch(url)
-	                .then(data => data.json());
-
-	return promise;
+  const root = 'https://opentdb.com/api.php';
+  const url = `${root}?amount=${number}&category=${categoryId}&type=multiple`;
+  const promise = fetch(url)
+                  .then(response => response.json());
+  
+  return promise;
 }
 
 getTrivia(10, 27)
-.then(data => console.log(data))
-.catch(err => /* do something else */);
+  .then(data => console.log(data))
+  .catch(err => /* do something else */);
 ```
 ---
 
