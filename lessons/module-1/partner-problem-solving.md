@@ -76,7 +76,7 @@ lowerCaseStrings(colors);
 // => ['red', 'green']
 ```
 
-Ex:
+Example:
 ```js
 var randomItems = [1, 'Green', 'pink', true];
 lowerCaseStrings(randomItems);
