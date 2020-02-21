@@ -18,6 +18,7 @@ We recommend you take these steps:
 - Pseudo-code and make a plan for how to solve it
 - Do any research on the JavaScript tools you'll need to solve it
 - Implement the solution in JavaScript
+
 <!-- - Independently reflect - each partner takes a few minutes to jot down the process, what steps were helpful, what you learned
 - Come together and decide on how you can write one short blog post that shares your process, what was helpful/what caused roadblocks, and any advice you'd give someone as they approach problems -->
 
