@@ -216,6 +216,13 @@ Color, font, and icon spec:
 
 ## Rubric
 
+Rubric score key:
+
+* **4: Over-achievement** - student did self-teaching and accomplished beyond scope of project, _without_ sacrificing code quality in the pursuit of extensions; all code demonstrates strong mastery of DRY principles and SRP conventions
+* **3: Right on track** - student is exactly where we want them to be, has a strong foundation, and demonstrates competency and comfort with the subject
+* **2: A little behind** - student needs to focus study in this area to catch up to where they should be in terms of proficiency
+* **1: Very behind** - student needs intervention to get back on track
+
 ### Functional Expectations
 
 * **4:** Application meets all of the expectations from Iteration 3.
@@ -240,14 +247,29 @@ Color, font, and icon spec:
 ### JavaScript - Style and Implementation
 
 * **4:**
-  * All loops are refactored into the proper array prototype iteration methods (not using arrow functions)
-  * Uses logical operators instead of if/else statements where applicable
-  * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
+
+  - **Code is well refactored** and demonstrates developer empathy.
+  - No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
+  - All functions are **less than 10 lines long** or otherwise demonstrate SRP.
+
 * **3:**
-  * DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
-  * All functions are less than 10 lines
-  * There are no nested if/else statements
-  * There are no global variables aside from query selectors and an array for your to-dos
-  * Uses event delegation correctly on dynamic elements for deleting, checking tasks off, and marking a to-do urgent
-* **2:** Application correctly implements data model for the `ToDoList` class including all required methods. No unused variables or functions are present in the codebase.
-* **1:** Crafts JS according to the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+
+  - The separation of data model logic and presentational logic is clear and can be explained by developer.
+  - The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods.
+  - Developer can speak to the **role of each class**.
+  - All DOM manipulation is handled exclusively in `main.js`.
+  - Developer demonstrates understanding and ability to refactor code by having at least 1 example of DRY code that was intentionally reused.
+  - SRP is evidenced by clear, concise function names; each function only does what the name describes.
+
+* **2:**
+
+  - Arguments and parameters are used to limit global variables.
+  - The **event object** is used correctly, and is not accepted as a parameter if it is not necessary.
+  - Developer can speak to **how the event object is utilized** for any given event handler.
+  - **Function and variable names** describe their role in the program. Examples: The name of the data type should not ever be in a variable name (ex: "petArray"); the name itself should be clear enough to indicate the type of data it holds (ex: "allPets").
+  - An event handler should not have "handler" in the name (ex: "clickHandler"); the name should indicate the handler's purpose (ex: "addNewPet").
+
+* **1:**
+
+  - Style and syntax meets the criteria of the [Turing JS Style Guide](https://github.com/turingschool-examples/javascript/tree/master/es5).
+  - **Function declarations** are used over anonymous functions in event listeners.
