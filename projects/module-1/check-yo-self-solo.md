@@ -249,13 +249,13 @@ Rubric score key:
 * **4:**
 
   - **Code is well refactored** and demonstrates developer empathy.
-  - No global variables are used aside from query selectors, start time, and instances of `Player` and `Deck`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
+  - No global variables are used aside from query selectors, start time, and instances of `ToDoList` and `Task`. If you feel you need more because you are building out additional functionality that requires a global variable, please check in with an instructor.
   - All functions are **less than 10 lines long** or otherwise demonstrate SRP.
 
 * **3:**
 
   - The separation of data model logic and presentational logic is clear and can be explained by developer.
-  - The application correctly **implements a data model** for the `Card` and `Deck` classes, including all required methods.
+  - The application correctly **implements a data model** for the `ToDoList` and `Task` classes, including all required methods.
   - Developer can speak to the **role of each class**.
   - All DOM manipulation is handled exclusively in `main.js`.
   - Developer demonstrates understanding and ability to refactor code by having at least 1 example of DRY code that was intentionally reused.
