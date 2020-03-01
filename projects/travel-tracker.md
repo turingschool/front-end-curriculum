@@ -47,7 +47,7 @@ Below are all the endpoints set up for this project. You may not use all of them
 |Get single traveler|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/travelers/travelers/<id>`     *where`<id>` will be a number of a traveler's id* | GET  | none | object of single traveler's info |
 |Get all trips| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips` | GET | none | object with `trips` property containing an array of all travelers |
 |Get all destinations| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/destinations/destinations` | GET | none | object with `trips` property containing an array of all travelers |
-| Add new trip |`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips`| POST | `{id: <number>, userID: <number>, destinationId: <number>, travelers: <number>, date: <string 'YYYY/MM/DD'>, duration: <number>, status: <string 'approved' or 'pending'>, suggestedActivities: <array of strings>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with trip info just posted>}`|
+| Add new trip |`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips`| POST | `{id: <number>, userID: <number>, destinationID: <number>, travelers: <number>, date: <string 'YYYY/MM/DD'>, duration: <number>, status: <string 'approved' or 'pending'>, suggestedActivities: <array of strings>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with trip info just posted>}`|
 | Add new destination|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/destinations/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with destination info just posted>}`|
 | Modify single trip | `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedResource: <Object with newly updated data>}`|
 | Delete single trip| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips` | DELETE | `{id: <Number>}` | Trip #<id> has been deleted |
@@ -109,8 +109,8 @@ Submitting a trip request will require a POST request to the trips endpoint, lik
 ```js
 {
    "id": 92829,
-   "userId": 44,
-   "destinationId": 49,
+   "userID": 44,
+   "destinationID": 49,
    "travelers": 1,
    "date": "2019/09/16",
    "duration": 8,
