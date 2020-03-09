@@ -318,14 +318,14 @@ _Note: Just like variables, common convention is to place your mixins in a parti
 
 In a CodePen, build the following chunk of html and SASS using `mixins`
   1. Create a mixin called `level-one-header` that has a font size of 32px, a
-     font weight of 800, and a font family of Helvetica.  
+     font weight of 800, and a font family of Helvetica.
   1. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
-     weight of 300, and a font family of Arial.   
-  1. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.   
-  1. Using these mixins, create a small chunk of html. The HTML should have the following:  
-  - One h1 element using the appropriate mixin.  
-  - Two divs, each with an h2 and a paragraph tag.  
-  - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.  
+     weight of 300, and a font family of Arial.
+  1. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.
+  1. Using these mixins, create a small chunk of html. The HTML should have the following:
+  - One h1 element using the appropriate mixin.
+  - Two divs, each with an h2 and a paragraph tag.
+  - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.
   - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
 </section>
 
@@ -401,27 +401,27 @@ Let's take a second to go back over the different ways to define a color in CSS.
 
 #### RGBA
 
-Stands For: Red, Green, Blue, Alpha(Opacity)  
-Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`  
-Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)  
+Stands For: Red, Green, Blue, Alpha(Opacity)
+Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`
+Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)
 
 Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation/intensity of red, blue and green respectively, and blends them together.
 
 #### Hexadecimal Code
 
-A form of RGB notation written as pairs of hexadecimal values.  
-Syntax: `#rrggbb` or `#rgb`.  
-Example: `#f00` or `#ff0000` (red)  
+A form of RGB notation written as pairs of hexadecimal values.
+Syntax: `#rrggbb` or `#rgb`.
+Example: `#f00` or `#ff0000` (red)
 
 *ProTip:* Shorthand comes from duplicating each character. So `#f00` (red) expands into `#ff0000`, or `#fb0` (yellow) expands to `#ffbb00`;)
 
 #### HSLA
 
-Stands For: Hue, Saturation, Lightness, Alpha(Opacity)  
-Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`  
-Example: `hsla(0, 100%, 50%, 1)` (red)  
+Stands For: Hue, Saturation, Lightness, Alpha(Opacity)
+Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`
+Example: `hsla(0, 100%, 50%, 1)` (red)
 
-**Hue:** A value from 0 to 360 indicating the value of RGB on a color wheel.  
+**Hue:** A value from 0 to 360 indicating the value of RGB on a color wheel.
 
 Think of the letters RGB distributed equally clockwise around a circle. (R)ed is at 0 or 360, (G)reen is at 120, (B)lue is at 240.
 
@@ -538,7 +538,7 @@ $duller-color: hsla(240, 50%, 50%, 1);
 The if directive returns any styles if the directive does not result in false or null.
 
 ```
-// For debugging    
+// For debugging
 @mixin debug-text($true) {
   @if $true {
     color: red;
@@ -573,7 +573,7 @@ body {
 
 The each directive loops through a list or map of variables. This is handy in creating accurate class names with specific values:
 
-```    
+```
 @each $cohort in 1505, 1511, 1610, 1612 {
    .#{$cohort}-avatar {
        background-image: url('/img/#{$cohort}.png');
@@ -660,4 +660,4 @@ We've talked about a lot of the strengths/advantages of using Sass without ackno
 
 ### Instructor Resources
 
-- [Practice Solutions](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/intro-to-sass.md)
+- [Practice Solutions](https://github.com/turingschool/front-end-keys/blob/master/module-4/sass/intro-to-sass.md)
