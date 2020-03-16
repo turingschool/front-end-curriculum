@@ -18,12 +18,21 @@ We recommend you take these steps:
 - Pseudo-code and make a plan for how to solve it
 - Do any research on the JavaScript tools you'll need to solve it
 - Implement the solution in JavaScript
-- Independently reflect - each partner takes a few minutes to jot down the process, what steps were helpful, what you learned
-- Come together and decide on how you can write one short blog post that shares your process, what was helpful/what caused roadblocks, and any advice you'd give someone as they approach problems
+- Finish early? Find *another* way to solve this problem. Discuss the tradeoffs for your various solutions.
+
+Preparing to write your blog post:
+- Reflect on the following:
+  - What was this experience? How much time did you have? What problem did you tackle? How did you pair with your teammate?
+  - What was your process in solving (or not quite yet solving) this problem?
+  - What pieces of your process felt helpful? What pieces maybe led you down the wrong path? For anything that led you down a wrong path, did you learn from that?
+  - Was there a time you "thought you had it", but realized you didn't? What did you learn from that?
+  - What advice do you have for someone (including your future self) when approaching a problem like this?
+- Decide where you will post it dev.to, medium, any other platform of your choosing! If you don't want to bother with creating an account somewhere right now, you can write it in markdown in a GitHub gist!
+- Use your reflection answers from above to write up a post. It's highly recommended to include your code snippets - from the challenge, to your solution, and potentially some code in between! It could also be great to link the resources or documentation you used along the way.
 
 ## Deliverables
 
-Share the link to your blog post (details about where in your cohort channel). Your blog post should include the code snippet(s) for your solution(s)!
+Share the link to your blog post (details about where in your cohort channel). 
 
 ## Code Challenges to choose from
 
@@ -76,7 +85,7 @@ lowerCaseStrings(colors);
 // => ['red', 'green']
 ```
 
-Ex:
+Example:
 ```js
 var randomItems = [1, 'Green', 'pink', true];
 lowerCaseStrings(randomItems);

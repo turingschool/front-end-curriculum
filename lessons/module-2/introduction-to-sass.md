@@ -19,7 +19,7 @@ module: 2
 * In past projects, how have you refactored your CSS to follow the DRY principle?
 * In past projects, how have you organized your CSS?
 * Check Sublime to make sure that you have the color scheme for Sass installed by following these steps:
-  1. Type `cmd + shift + p` 
+  1. Type `cmd + shift + p`
   2. Search for `Package Control: List Packages` and search for `Sass`
   3. If the `Sass` package is not installed, follow Step 1 again and search/select `Package Control: Install Package`. Install `Sass` from here.
   4. Scroll down to the very bottom and start reading through the additional resources in the last section, starting with `A Complete Beginner’s Guide to Learning Sass in a Weekend`
@@ -39,7 +39,7 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
-Now, this version of Sass looks a little different. Let's compare the same code written in Sass and SCSS syntax. 
+Now, this version of Sass looks a little different. Let's compare the same code written in Sass and SCSS syntax.
 [Sass Codepen](https://codepen.io/hannahhch/pen/eYmdpLj)
 [SCSS Codepen](https://codepen.io/hannahhch/pen/MWYjKWP)
 
@@ -95,7 +95,7 @@ Variables are defined by a `$` immediately preceding the name of the variable (l
 $favorite-text-color: lime;
 ```
 
-They can then be used anywhere in your stylesheet in place of that style. If I wanted all of my paragraph tags to have this color, my selector would look like this: 
+They can then be used anywhere in your stylesheet in place of that style. If I wanted all of my paragraph tags to have this color, my selector would look like this:
 
 ```scss
 p {
@@ -119,7 +119,7 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 }
 ```
 
-Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right. Here is a [good article](https://css-tricks.com/difference-between-types-of-css-variables/)to read more about the differences between CSS and Sass variables. 
+Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right. Here is a [good article](https://css-tricks.com/difference-between-types-of-css-variables/)to read more about the differences between CSS and Sass variables.
 
 <hr />
 
@@ -204,15 +204,20 @@ One of the main benefits of Sass is having the ability to split your codebase ac
 
 You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request).
 
-In the world of Sass, the `@import` directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
+In the world of Sass, the `@import`(https://sass-lang.com/documentation/at-rules/import) directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
 
-*Note: Adding an `@import` for the same file more than once will still cause performance issues. 
+* Note: Adding an `@import` for the same file more than once will still cause performance issues.
 
-*2019 Update:* SASS is starting to switch to `@use` instead of `@import`. This fixes some issues, and gives us new, exciting features. With `@use`, the files are only imported once by default, no matter how many times you add it with `@use`. We get *namespaces* that help us to know where our imports are coming from. Here is a [helpful article](https://css-tricks.com/introducing-sass-modules/) with more information on the features `@use` brings. 
+<section class="note">
+*2019 Update:* SASS is starting to switch to `@use` instead of `@import`. This fixes some issues, and gives us new, exciting features. With `@use`, the files are only imported once by default, no matter how many times you add it with `@use`. We get *namespaces* that help us to know where our imports are coming from. Here is a [helpful article](https://css-tricks.com/introducing-sass-modules/) with more information on the features `@use` brings.
+
+**However**, as of writing this, only Dart-Sass supports the use of `@use`. So keep an eye out for continued support of this feature!
+
+</section>
 
 Generally, your structure will have the following:
 
-* Partial files that have an underscore prefix
+* [Partial](https://sass-lang.com/documentation/at-rules/import#partials) files that have an underscore prefix
 * A main file where you will be importing these partial files
 
 ```scss
@@ -290,8 +295,8 @@ To use:
           border-radius: $radius;
 }
 
-.box { 
-  @include rounded-corners(50px); 
+.box {
+  @include rounded-corners(50px);
 }
 ```
 
@@ -307,22 +312,22 @@ To use:
 ```
 
 _Note: Just like variables, common convention is to place your mixins in a partial file that is separate from other styles_
-   
+
 <section class="call-to-action">
 #### Turn and Code
 
 In a CodePen, build the following chunk of html and SASS using `mixins`
   1. Create a mixin called `level-one-header` that has a font size of 32px, a
-     font weight of 800, and a font family of Helvetica.  
+     font weight of 800, and a font family of Helvetica.
   1. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
-     weight of 300, and a font family of Arial.   
-  1. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.   
-  1. Using these mixins, create a small chunk of html. The HTML should have the following:  
-  - One h1 element using the appropriate mixin.  
-  - Two divs, each with an h2 and a paragraph tag.  
-  - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.  
+     weight of 300, and a font family of Arial.
+  1. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.
+  1. Using these mixins, create a small chunk of html. The HTML should have the following:
+  - One h1 element using the appropriate mixin.
+  - Two divs, each with an h2 and a paragraph tag.
+  - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.
   - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
-</section> 
+</section>
 
 ## Extend
 
@@ -396,27 +401,27 @@ Let's take a second to go back over the different ways to define a color in CSS.
 
 #### RGBA
 
-Stands For: Red, Green, Blue, Alpha(Opacity)  
-Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`  
-Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)  
+Stands For: Red, Green, Blue, Alpha(Opacity)
+Syntax: `rgba(0-255, 0-255, 0-255, 0-1)` or `rgba(0-100%, 0-100%, 0-100%, 0-1 )`
+Example: `rgba(255, 0, 0, 1)` or `rgba(100%, 0, 0, 1)` (red)
 
 Each value takes either a integer from 0-255 or a percentage from 0-100% representing the saturation/intensity of red, blue and green respectively, and blends them together.
 
 #### Hexadecimal Code
 
-A form of RGB notation written as pairs of hexadecimal values.  
-Syntax: `#rrggbb` or `#rgb`.  
-Example: `#f00` or `#ff0000` (red)  
+A form of RGB notation written as pairs of hexadecimal values.
+Syntax: `#rrggbb` or `#rgb`.
+Example: `#f00` or `#ff0000` (red)
 
 *ProTip:* Shorthand comes from duplicating each character. So `#f00` (red) expands into `#ff0000`, or `#fb0` (yellow) expands to `#ffbb00`;)
 
 #### HSLA
 
-Stands For: Hue, Saturation, Lightness, Alpha(Opacity)  
-Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`  
-Example: `hsla(0, 100%, 50%, 1)` (red)  
+Stands For: Hue, Saturation, Lightness, Alpha(Opacity)
+Syntax: `hsla(0-360, 0-100%, 0-100%, 0-1)`
+Example: `hsla(0, 100%, 50%, 1)` (red)
 
-**Hue:** A value from 0 to 360 indicating the value of RGB on a color wheel.  
+**Hue:** A value from 0 to 360 indicating the value of RGB on a color wheel.
 
 Think of the letters RGB distributed equally clockwise around a circle. (R)ed is at 0 or 360, (G)reen is at 120, (B)lue is at 240.
 
@@ -431,13 +436,13 @@ Think of the letters RGB distributed equally clockwise around a circle. (R)ed is
 ---
 Using RGBA to try to adjust lightness or saturation can be impractical and frustrating. In order to do this, you would need to shift each of the color channels - which would likely change the original color (hue). This matters most when you are looking to make color variations (fading, gradients, etc) from the same color. Using HSLA is a lot more predictable than RGBA, as seen in this [demo tool](https://css-tricks.com/examples/HSLaExplorer/)
 
-[Light](https://www.claude-monet.com/haystacks.jsp) is an important piece of the design puzzle when it comes to working with color - something that is true for all mediums of [art](https://www.newyorker.com/humor/daily-shouts/a-few-thoughts-from-monet-on-those-stacks-of-wheat) and design, including the digital mediums we use as FE developers. 
+[Light](https://www.claude-monet.com/haystacks.jsp) is an important piece of the design puzzle when it comes to working with color - something that is true for all mediums of [art](https://www.newyorker.com/humor/daily-shouts/a-few-thoughts-from-monet-on-those-stacks-of-wheat) and design, including the digital mediums we use as FE developers.
 
 
 #### Jigsaw
 
 In groups of four, research your assigned built-in color function. Reference the descriptions below, the [Sass documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html) on color functions, and the examples you are given. Make sure to play around with the code in a codepen - are there differences in using hex, rgba, and hsla? Why is this function relevant?
-  
+
   * complement()
   * mix()
   * lighten/darken()
@@ -525,7 +530,7 @@ $duller-color: hsla(240, 50%, 50%, 1);
 
 <!-- [Check it out](https://codepen.io/atideman/pen/QKJmaO) -->
 
-<!-- 
+<!--
 ## Control directives
 
 ### @if
@@ -533,7 +538,7 @@ $duller-color: hsla(240, 50%, 50%, 1);
 The if directive returns any styles if the directive does not result in false or null.
 
 ```
-// For debugging    
+// For debugging
 @mixin debug-text($true) {
   @if $true {
     color: red;
@@ -543,7 +548,7 @@ The if directive returns any styles if the directive does not result in false or
 body {
   @include debug-text(true)
 }
-  
+
 // Useful mixin using if and else statement
 @mixin top-or-bottom($tb) {
   position: absolute;
@@ -568,7 +573,7 @@ body {
 
 The each directive loops through a list or map of variables. This is handy in creating accurate class names with specific values:
 
-```    
+```
 @each $cohort in 1505, 1511, 1610, 1612 {
    .#{$cohort}-avatar {
        background-image: url('/img/#{$cohort}.png');
@@ -586,7 +591,7 @@ $align-list: center, left, right;
 
 ### @for
 
-Output styles in a loop. Uses a variable name to track the loop. You can use from x through y to include the ending number or from x to y to not include it. You can loop backwards by making the first number larger than the second. 
+Output styles in a loop. Uses a variable name to track the loop. You can use from x through y to include the ending number or from x to y to not include it. You can loop backwards by making the first number larger than the second.
 
 ```
 @for $i from 1 through 12 {
@@ -602,7 +607,7 @@ Output styles until the desired condition returns false.
 $z:1;
 
 @while $z < 9 {
-    .text-col-#{$z} { 
+    .text-col-#{$z} {
       font-weight: 100 * $z;
     }
     $z: $z + 1;
@@ -655,4 +660,4 @@ We've talked about a lot of the strengths/advantages of using Sass without ackno
 
 ### Instructor Resources
 
-- [Practice Solutions](https://github.com/turingschool/front-end-keys/blob/master/module-4/lesson-plans/intro-to-sass.md)
+- [Practice Solutions](https://github.com/turingschool/front-end-keys/blob/master/module-4/sass/intro-to-sass.md)

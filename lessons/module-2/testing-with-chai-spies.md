@@ -4,9 +4,18 @@ tags: TDD, unit testing, mocha, chai, webpack, spies
 mod: 2
 ---
 
-<!-- <section class="call-to-action">
-We'll be working with a <a href="https://github.com/turingschool-examples/chai-spy-box" target="\__blank">new testing repo</a>. -->
+<section class="call-to-action">
+We'll be working with the <a href="https://github.com/turingschool-examples/our-first-tests" target="\__blank"> our firsts tests repo</a>.
 
+- If you still have the repo on your computer, open it and commit your changes, then run:
+```
+git fetch --all
+git checkout spies-begin
+```
+- If you don't have the repo on your computer, clone it down, then run:
+```
+git checkout spies-begin
+```
 </section>
 
 ## Why Spy with Our Little Eyes?
