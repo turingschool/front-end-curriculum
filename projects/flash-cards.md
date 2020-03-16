@@ -225,4 +225,4 @@ Collaborate with instructors to personalize an extension for this project
 
 This project will be evaluated remotely by your instructors over the weekend. We will have a retro the following Monday to go over common issues and takeaways for the project.
 
-Submit your GH Repo <a>here</a> by __9AM on Friday, March 20th__.
+Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1f2O5AwcylVca9JoLQI66eK57LqEYsfSV2PEwqPRsS3I/edit?usp=sharing" target="_blank">here</a> by __9AM on Friday, March 20th__.
