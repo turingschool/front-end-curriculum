@@ -29,7 +29,7 @@ We are pretending that we are making an order at a coffee shop.
 
 ## Objects
 
-Objects are a type of collection, or complex data type in JavaScript. An array is another type of collection. We can think of objects as a representation of real world things in computer programming.
+Objects are a type of collection, or complex data type in JavaScript. We can think of objects as a representation of real world things in computer programming.
 
 They are meant to bundle together two things:
 
@@ -38,16 +38,16 @@ They are meant to bundle together two things:
 
 ## When to use Objects
 
-We just got the hang of arrays and are feeling pretty great about them - when/why do we also need objects?
+If we already have our primitive data types, when/why do we also need objects?
 
-- When we don’t care about the order of items (array)
 - When we need an associative relationship (title for some info)
+- We want to model a more complex thing.
 
-If I wanted to make a list of the handles of all my favorite creators on TikTok, I should use an array. They are all strings, they are all holding the same type of information. I don’t care about the number of followers they have, if they are verified, or anything else.
-
-If I wanted to make a list of the handles of all my favorite creators on TikTok and their number of followers, I should use an object. There is an associative relationship between each creator and their follower count.
-
-_Later in the lesson, we will take a look at what an object that holds all that data might look like!_
+Imagine you wanted to model all the information related to a car in code. We
+could create a whole series of variables (brand, color, year, model, etc),
+however those variables aren't tied together in any sensible way. The car itself
+is one thing, and we want a way hold onto it as such. This is where objects
+really shine.
 
 ## Anatomy of Objects
 
