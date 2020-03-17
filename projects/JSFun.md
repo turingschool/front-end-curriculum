@@ -22,6 +22,8 @@ There are two ways we'd like you to demonstrate mastery of these concepts:
 
 **Fork** this [repo](https://github.com/turingschool-examples/jsFun) of practice exercises. There are three folders of problems to work through, each corresponding with a concept to be mastered.
 
+Watch this [how-to video](https://vimeo.com/388545928) to get up and running. 
+
 
 ### In-Class
 

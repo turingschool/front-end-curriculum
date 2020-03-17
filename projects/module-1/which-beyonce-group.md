@@ -198,10 +198,10 @@ Rubric score key:
 
 ## Functionality
 
-* **4:** Iterations **0-6 are fully functional** with no bugs, and at least one extension has been fully implemented without bugs.
-* **3:** Iterations **0-6 are fully functional**. One small bug may exist. (Point of clarity - a small bug is not a missing feature or a completely broken feature; it's a feature that usually works but behaves unexpectedly in certain edge cases.)
-* **2:** Iterations **0-5 are fully functional** with no bugs.
-* **1:** Iterations 0-4 are functional.
+* **4:** Iterations **0-6 are fully functional** with no bugs.
+* **3:** Iterations **0-5 are fully functional**. One small bug may exist. (Point of clarity - a small bug is not a missing feature or a completely broken feature; it's a feature that usually works but behaves unexpectedly in certain edge cases.)
+* **2:** Iterations 0-4 are functional.
+* **1:** Iterations 0-3 are functional.
 
 ## Comp Recreation (UI and UX)
 

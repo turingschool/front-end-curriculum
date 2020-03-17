@@ -22,27 +22,42 @@ In this lesson we'll cover:
 - `Declare` Creating a new variable (distinct from assignment)
 - `Assignment` Assigning a value to a variable
 - `Concatenation` The binding of multiple strings together using the `+` string operator
-- `Interpolation`  - The process of injecting a variable directly into a string.
-- `Template literal` - Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
+- `Interpolation` The process of injecting a variable directly into a string.
+- `Template literal` Template literals are string literals that provide an easy way to interpolate a variable or expression into a string.
 - `Operator` Symbols that are used to assign, compare, and perform operations
+- `Statement` A single piece of code that accomplishes one task
+- `Expression` A statement that represents a value
+- `Evaluate/Evaluation` 
 - `Conditional` An expression that evaluates to true or false, or a control flow statement that executes code
 
 ## Warm Up
 
-With your partner...
-- Ham is to Hamster. Come up with at least 2 more
+Wanted to start with a quick message about a common mistake people make:
 
-## History of JavaScript
+Java and JavaScript are COMPLETELY and UTTERLY unrelated. 
+
+### History of JavaScript
 
 Way back in the early days of the web, Brendan Eich created JavaScript. Legend has it that he wrote it in 10 days in 1995 while was was working as an engineer at Netscape. The language was first released with Netscape 2 in 1996. The name 'JavaScript' was a oh-so-clever marketing push to try to pick up on the momentum of Sun Microsystem's popular language Java, but instead it lead to years of confusion about the names of these two mostly unrelated programming languages. If you'd like to learn more about where JS came from, take a look [here](http://speakingjs.com/es5/ch04.html).
 
+If you wanna shorten JavaScript, do so by saying/writing "JS" - not "Java". 
+
+Think of it like this: **Java is to JavaScript, as Ham is to Hamster.**
+
+With your partner...
+- Ham 🙅‍♀Hamster
+- Mile 🙅‍♀️ Miley Cyrus
+- Come up with 2 mores
+
 ## What is JavaScript and Why?
 
-JavaScript was created to make the web more dynamic. It is an object-oriented scripting language made to run inside a host environment like a web browser and provide programatic control over the objects of that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
+JavaScript was created to make the web more dynamic. It is an object-oriented scripting language (we'll learn about objects soon) made to run inside a host environment - like a web browser! It provides programatic control over the objects in that environment. For example, when you click a button and you want something about the webpage to change, you will use JavaScript.
 
-JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces as well as handle the server-side extensions that connect with a database.
+JavaScript can be _client-side_ and _server-side_, meaning that it can be used to control user-facing interfaces (e.g. browsers) as well as handle the server-side extensions that connect with a database.
 
-It's a highly versatile and flexible language, and has become the most commonly used language of the web. Now that we know a little bit about JavaScript, let's talk about how to actually use it!
+It's a highly versatile and flexible language, favoring configuration over convention. This means that, when you're working in JavaScript, there are TONS of different ways to accomplish the same task. Sometimes one is better than another, but often there's not One Right Way to do something. JavaScript has become the most commonly used language of the web! 
+
+Now that we know a little bit about JavaScript, let's talk about how to actually use it!
 
 <section class="note">
 ### The Console
@@ -50,8 +65,8 @@ It's a highly versatile and flexible language, and has become the most commonly 
 Browsers give developers a set of handy tools, aptly named **Developer Tools**. One such tool is the console, an environment where you can run JavaScript inside the browser. The console is one of the most useful ways to interact with your code from the browser, and we'll be using it to demonstrate and practice concepts today.
 
 To open the console in Chrome, either:
+* Or use the hotkeys `command + option + j` or `command + option + i`
 * Click `View` > `Developer` > `Javascript Console`
-* Or use the hotkeys `command + option + j` / `command + option + i`
 </section>
 
 ## Data Types
@@ -79,23 +94,25 @@ You're going to do some research on one of the 5 data types we are focusing on, 
 
 Without much context of _how_ to use this, this can feel a little abstract. Soon, we'll have a way to use these different data types, and having this vocabulary as a foundation will prove helpful.
 
-## Variables in JavaScript
+## Saving and Naming Information with Variables
 
-As we're writing code, there are many times when we want to be able to store a value so that we have the ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common that we need to have access to the same information more than once. A variable lets us do just that!
+As we're writing code, there are many times when we want to be able to store a value so that we have the ability to reuse it in multiple places. Writing the same thing over and over is a pain, and it's common to need to have access to the same information more than once. A variable lets us do that!
 
 ### What is a variable?
 
 A variable is a place to store values. When we write scripts (a set of instructions for a computer to follow), we need to temporarily store small pieces of data. We store that data in variables. "Variable" is a good name for this concept because it indicates the stored data can change (or _vary_) each time a script is run.
 
-A variable is, at its most simple, a declaration. It's made up of two parts: the variable keyword, `var` (a special word that the JavaScript interpreter knows is used to create a variable), and the variable name, which can be whatever you choose. Let's see what that looks like in the console:
+When you declare a variable (similar to declaring a function), you're creating a statement. A variable is made up of two parts: the variable keyword, `var` (a special word that the JavaScript interpreter knows is used to create a variable), and the variable name, which can be whatever you choose. Let's see what that looks like in the console:
 
 ```javascript
 var myVariableName;
 ```
 
+When we write a very simple variable like this, it's called _declaring_ the variable.
+
 We see that we have the variable keyword, and we've set the variable name to `myVariableName`.
 
-When we write a very simple variable like this, it's called _declaring_ the variable.
+Under the hood, when we run JavaScript in the browser, we're naming a tiny piece of memory. It's like putting a label on an empty box. In the future, when we use the variable name in our code, we're saying "Use whatever is inside this labeled box"!
 
 <section class="call-to-action">
 ### Console Practice
@@ -118,13 +135,15 @@ Then, **call** each variable by typing out its name, then hitting `return`. What
 
 ### Variables: Assigning Values
 
-Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Let's add a value to a `bestInstagram` variable:
+Notice when we first create a variable, its value is _undefined_ because it doesn't have a value yet. This is because we have to set a value! Remember - the little box of memory is empty. 
+
+Let's learn how to add a value. Create a `bestInstagram` variable and assign a value to it all at once:
 
 ```javascript
 var bestInstagram = "mrpokee";
 ```
 
-Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and the variable value, the variable is considered _undefined_.
+Notice after our `var` keyword and our variable name, we have an equals sign, `=`. This is called the _assignment operator_, because we use it to _assign_ a value to our variable declaration.  Without the assignment operator and providing a specific value, the value of the variable is _undefined_.
 
 Let's test these additions in our console!
 
@@ -229,7 +248,7 @@ alert('POW');
 
 ## Expressions
 
-An **expression** results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
+An **expression** is a statement that, when read by the browser, results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
 
 This expression results in "apple"
 
@@ -242,6 +261,20 @@ This expression results in 5
 ### What is the difference?
 
 In simpler terms, a statement performs some kind of action. It does not return anything. An expression produces a value and can be written wherever a value is expected.
+
+Think about the following sentences:
+
+- "It's raining a lot!"
+- "It's raining cats and dogs!"
+
+Both of these sentences are statements! They declare something. But one of them is an _expression_ - it means something other than what the letters actually spell out. "It's raining cats and dogs" ACTUALLY _means_ "It's raining a lot". 
+
+Similarly, consider the following code statements:
+
+- `4;`
+- `2 + 2;`
+
+They're both statements. One is an expression - `2 + 2;` evaluates to `4;`!
 
 ## Operators
 
