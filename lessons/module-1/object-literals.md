@@ -49,19 +49,6 @@ If I wanted to make a list of the handles of all my favorite creators on TikTok 
 
 _Later in the lesson, we will take a look at what an object that holds all that data might look like!_
 
-<section class="call-to-action">
-### Turn + Talk: Array or Object?
-For each set of data, would an array or object be better to store it? Why?
-
-- List of all of the students in class
-- List of states and their capitals
-- List of things to pack for vacation
-- Names of all the Instagram accounts I follow
-- List of scholar names and the school they attend
-- Ingredients and amount of each ingredient to bake a cake
-- All my favorite restaurants
-</section>
-
 ## Anatomy of Objects
 
 There are several ways to create an object, and the easiest and most popular is _literal notation_. The only thing you need in JavaScript to declare an object is curly braces ```{}```. Although, it makes things a bit easier if you at least assign it to a variable, like so: ```var emptyObject = {};```
@@ -177,50 +164,6 @@ console.log(school);
 - Now try re-assigning the **drinkOrder** property to a different string.
 - 🤞Remember to call the object or the property on the last line of the file (or in the console), and run the repl to verify the outcome!
 </section>
-
-## Objects IRL
-
-Similar to arrays, it’s very likely that every application you’ve used utilized objects in the code that built it.
-
-In the intro to this lesson, we talked about how TikTok might use an object to group together information about a specific creator.
-
-Let's dig into this code snippet and try to understand what it is doing/what it represents:
-
-```js
-var trending = [
-  {
-    name: "Evan The Card Guy",
-    handle: "@thecardguy",
-    followers: 7000000,
-    tagline: "100k on YouTube? 👆 insta: evanthecardguy 📧 evanthecardguy@gmail.com"
-  },
-  {
-    name: "Spencer X",
-    handle: "@Spencerx",
-    followers: 13800000,
-    tagline: "🗣 Mouth Music Man 🎶 Follow me on IG and YouTube :) 👇🏼👆🏼"
-  },
-  {
-    name: "Avani",
-    handle: "@avani",
-    followers: 7100000,
-    tagline: "if you don’t love me i love you MERCHANDISE IS OUT!! - FANJOY.CO/AVANI"
-  },
-  {
-    name: "Loren Grey",
-    handle: "@lorengrey",
-    followers: 36700000,
-    tagline: "No bio yet."
-  },
-
-];
-```
-
-Or, for a more visual representation:
-
-<img src="https://ameseee.github.io/kwk-curriculum-site/web-app/lessons/js-objects/assets/tiktok-array-obj.png" alt="screen shot of TikTok with array and object syntax laid over it">
-
-There are still 4 elements in this array, but each element is now an object so there are many more lines of code! We may or may not need an array that has so many moving pieces; this piece of the lesson was just intended to help you make a real-life connection.
 
 ## Methods on Objects
 
