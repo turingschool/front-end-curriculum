@@ -15,7 +15,7 @@ tags: js, introduction, object literals, dot notation
 - `Object` A bundle of behavior (methods) and state (properties)
 - `Key` The name used to reference a value on an object
 - `Value` The data referenced by a key
-- `Property` Another word for the 'key' portion of a key-value pair on an object
+- `Property` How we refer to one of the key-value pairs of an object
 - `Method` A function on an object
 - `Dot Notation` Notation to access a value on an object, explicitly specifies the key
 
