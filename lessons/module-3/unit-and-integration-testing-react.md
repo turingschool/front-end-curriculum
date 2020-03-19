@@ -293,7 +293,7 @@ Congrats! You wrote a great unit test for this component. It gives us assurance 
 Let's look at the `Form` component's functionality. Using the logic from clicking the delete button in the `Card` unit test, we should be able to apply the same logic to triggering the `addIdea` function within the `Form` and test that it was called with the correct argument(s).
 
 <section class="call-to-action">
-### Write the Integration Test
+### Write the Test
 
 1. Create a new test file for the `Form` component
 1. Write a new `it` block for this test
@@ -306,7 +306,7 @@ Use `debug()` along the way to see the progress of your components.
 </section>
 
 <section class="answer">
-### Add and Idea Integration Test
+### Mocking the addIdea Function
 
 ```js
 // Form.test.js
@@ -374,7 +374,7 @@ Use `debug()` along the way to see the progress of your components.
 </section>
 
 <section class="answer">
-### Add and Idea Integration Test
+### Adding an Idea Integration Test
 
 ```js
 // App.test.js
