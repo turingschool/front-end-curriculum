@@ -116,9 +116,9 @@ If you finish this, then look into the different between `getAllBy` queries and 
 </section>
 
 <section class="answer">
-### Rendering a Component
+### Finding Elements
 
-This [queries API docs page](https://testing-library.com/docs/dom-testing-library/api-queries) is a going to be your best friend to help you find how to get the element(s) you're looking for.
+This [Queries API docs page](https://testing-library.com/docs/dom-testing-library/api-queries) is a going to be your best friend to help you find how to get the element(s) you're looking for.
 </section>
 
 The good thing about using this library to find elements is that it really pushes us as developers to make our apps accessible. So many of the queries available to us in the library are based around accessibility.
@@ -146,12 +146,11 @@ The React Testing Library and DOM Testing Library docs are pretty nice once you 
 
 ### Testing What is Rendering to the Page
 
-Let's bring all of our research in the docs together to make our first test! Use this repo as a starting point - it's an ideabox that has a form and delete button already implemented. Make sure you clone this down in outside of any other React projects you have right now. Here are the steps to set it up:
+Let's bring all of our research in the docs together to make our first test! Use this repo as a starting point - it's an ideabox that has a form and delete button already implemented. Make sure you clone this down outside of any other React projects you have right now. Here are the steps to set it up:
 
 ```bash
-git clone https://github.com/turingschool-examples/ideabox-testing.git
-cd ideabox-testing
-git checkout begin-react-testing
+git clone git@github.com:turingschool-examples/ideabox-testing-rtl.git
+cd ideabox-testing-rtl
 npm install
 npm start
 ```
@@ -173,8 +172,8 @@ Now that we know our Jest tests can run and our assertions work, we can move on 
 ### Render the Component
 
 1. Remove the assertion of true to be equal to true
-1. Render the Card component in the `it` block
-1. Find the element with a certain title text (you decide what the title text should be)
+1. Render the Card component in the `it` block (making sure to pass in props that the component needs)
+1. Find the element with a certain title text (you decide what the title text should be via the props)
 </section>
 
 For the `removeIdea` prop, what do you pass in??? For now, pass in a Jest function: `removeIdea={jest.fn()}`. We'll talk more about this in later testing lessons.
@@ -184,7 +183,7 @@ Next we need to make an assertion. You found the element on the page, but you wa
 <section class="call-to-action">
 ### Make Assertions
 
-1. Install the jest-dom library
+1. Install the [jest-dom](https://github.com/testing-library/jest-dom) library
 1. Import the library into your test file using `import '@testing-library/jest-dom';`
 1. Head to the [Custom Matchers section of the jest-dom docs](https://github.com/testing-library/jest-dom#custom-matchers) to find how to assert that something is in the document
 1. Repeat the assertion for the Card's description and delete button
@@ -194,6 +193,8 @@ Next we need to make an assertion. You found the element on the page, but you wa
 ### A Finished Test
 
 ```js
+// Card.test.js
+
 import React from 'react';
 import Card from './Card';
 import { render } from '@testing-library/react';
@@ -222,22 +223,207 @@ This [section of the testing API page](https://testing-library.com/docs/react-te
 </section>
 
 
-From here we will continue on with more unit testing and then integration testing!
+### Interactive Unit Testing
 
-<!-- ### Other unit tests
+The Card component has a button that when clicked, fires a function that was passed down through the component via props. We want to be able to test that when that button is clicked, the function is fired with the correct argument(s).
 
-#### Mocking with Jest Functions
+To do that, we need to know more about the `jest.fn()` we used earlier.
 
+A `jest.fn()` is known as a "mock". Here is the [documentation on Jest mock functions](https://jestjs.io/docs/en/mock-function-api.html). By using a `jest.fn()` function, it gives us the ability to:
+* Provide a mock function to override the original function's behavior
+* Track that the mock function was called and was called with certain arguments, if applicable
+
+Our goal is to:
+* Give the component a mock function that we can reference later (to know that it was called)
+* Trigger the event that would call the function in the component
+* Check that the mock function was called and check if it was called with the correct arguments, if applicable
+
+Let's setup this test:
+
+```js
+it('passes the correct id to the removeIdea function', () => {
+    const mockRemoveIdea = jest.fn();
+    const { getByText } = render(<Card
+            id={1}
+            title="New Idea"
+            description="Something new I thought of"
+            removeIdea={mockRemoveIdea}
+            />);
+
+    // Execute the code by clicking the button
+
+    // Assert that the mockRemoveIdea was called with the correct argument
+  })
+});
+```
+
+<section class="call-to-action">
+### Finish the Test
+
+1. Find out how to trigger the function by clicking the delete button
+1. Assert that the mocked function was called with the correct argument
+
+Hint: assertions/expectations/matchers for mocked functions can be found [here](https://jestjs.io/docs/en/expect) along with other Jest matchers.
+</section>
+
+<section class="answer">
+### Checking a Mocked Function
+
+```js
+it('passes the correct id to the removeIdea function', () => {
+    const mockRemoveIdea = jest.fn();
+    const { getByText } = render(<Card
+            id={1}
+            title="New Idea"
+            description="Something new I thought of"
+            removeIdea={mockRemoveIdea}
+            />);
+
+    fireEvent.click(getByText("Delete"));
+    expect(mockRemoveIdea).toHaveBeenCalledWith(1);
+  })
+});
+```
+</section>
+
+Congrats! You wrote a great unit test for this component. It gives us assurance that in the chain of event that occurs when the Delete button is clicked, that this is performing as expected.
+
+### Overwriting Existing Functionality with Mocks
+
+Let's look at the `Form` component's functionality. Using the logic from clicking the delete button in the `Card` unit test, we should be able to apply the same logic to triggering the `addIdea` function within the `Form` and test that it was called with the correct argument(s).
+
+<section class="call-to-action">
+### Write the Integration Test
+
+1. Create a new test file for the `Form` component
+1. Write a new `it` block for this test
+1. Setup your test file so that you can render the `Form` component using React Testing Library
+1. Pass in a mocked function for the `addIdea` prop
+1. Fill in the input fields and click the submit button
+1. Check that the mocked `addIdea` function was called with the correct argument
+
+Use `debug()` along the way to see the progress of your components.
+</section>
+
+<section class="answer">
+### Add and Idea Integration Test
+
+```js
+// Form.test.js
+
+import React from 'react';
+import Form from './Form';
+import { render, fireEvent } from '@testing-library/react';
+
+describe('Form', () => {
+  it('sends the correct data up to app via addIdea', () => {
+    const mockAddIdea = jest.fn();
+
+    const {getByPlaceholderText, getByText} = render(<Form addIdea={mockAddIdea} />);
+
+    fireEvent.change(getByPlaceholderText('title'), {target: {value: 'Best!'}});
+    fireEvent.change(getByPlaceholderText('description'), {target: {value: 'Idea!'}});
+    fireEvent.click(getByText('Submit!'));
+
+    expect(mockAddIdea).toHaveBeenCalledWith({id: Date.now(), title: "Best!", description: "Idea!"});
+  });
+});
+```
+</section>
+
+But the test is failing! Why??
+
+We need to overwrite the functionality of `Date.now()` to get a consistent value when we run our tests. We can do that with Jest mock functions too! Within the `it` block:
+
+```js
+it('sends the correct data up to app via addIdea', () => {
+  const mockAddIdea = jest.fn();
+  Date.now = jest.fn().mockImplementation(() => 1584585306565);
+
+  const {getByPlaceholderText, getByText} = render(<Form addIdea={mockAddIdea} />);
+
+  fireEvent.change(getByPlaceholderText('title'), {target: {value: 'Best!'}});
+  fireEvent.change(getByPlaceholderText('description'), {target: {value: 'Idea!'}});
+  fireEvent.click(getByText('Submit!'));
+
+  expect(mockAddIdea).toHaveBeenCalledWith({id: 1584585306565, title: "Best!", description: "Idea!"});
+});
+```
+
+We can reassign the `Date.now` function to be a function that _we control_ using Jest's `mockImplementation`. In essence, we are overwriting `Date.now()` to return the value `1584585306565` every time it is called in this test (but not for our actual production code).
 
 ## Integration Testing
 
--->
+Integration testing is all about testing multiple functions or components working together. In our case, a great integration test would be to test that we can submit a new idea to the page.
+
+To begin an integration test, ask yourself, "What components need to be rendered to perform this task?"
+
+In this case, the entire application needs to be rendered because we need the form and we need to see that the Card shows up on the page. So let's make an integration test for `App`.
+
+<section class="call-to-action">
+### Write the Integration Test
+
+1. Go into the `App.test.js` file or create a new test file for `App` if one does not exist
+1. Write a new `it` block for this test
+1. Setup your test file so that you can render the `App` component using React Testing Library
+1. Fill in the input fields and click the submit button
+1. After submit, check that the inputs have been cleared
+1. Check that the new idea has been added to the page
+
+Use `debug()` along the way to see the progress of your components.
+</section>
+
+<section class="answer">
+### Add and Idea Integration Test
+
+```js
+// App.test.js
+
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+it('renders without crashing', () => {
+  const div = document.createElement('div');
+  ReactDOM.render(<App />, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
+
+describe('App', () => {
+  it('can add a new idea', () => {
+    const {getByPlaceholderText, getByText} = render(<App />);
+
+    fireEvent.change(getByPlaceholderText('title'), {target: {value: 'Best!'}});
+    fireEvent.change(getByPlaceholderText('description'), {target: {value: 'Idea!'}});
+    fireEvent.click(getByText('Submit!'));
+
+    expect(getByPlaceholderText('title').value).toEqual('');
+    expect(getByPlaceholderText('description').value).toEqual('');
+
+    expect(getByText("Best!")).toBeInTheDocument();
+    expect(getByText("Idea!")).toBeInTheDocument();
+  });
+});
+
+```
+</section>
+
+<section class="call-to-action">
+### Some More Tests to Write
+
+1. Unit: In the Form, test that it displays correctly
+1. Unit: In the Form, check that when you type in an input that the correct value displays in the input
+1. Integration: Test that you can delete an idea
+</section>
 
 ## Vocab
 
 - `Unit test` - Unit tests test the smallest unit of functionality, typically a method/function. For example, when you call a specific method on a class, you would likely expect a value to be returned. Unit tests should be focused on one particular feature
 - `Integration test` - Integration tests build on unit tests by combining the units of code and testing that the resulting combination functions correctly
-- `Acceptance test` - (also known as end-to-end tests) Once an application is ready to use, it undergoes testing by the end user or client to verify that it meets the user's expectations
+- `Acceptance test` - (also known as end-to-end tests) Once an application is ready to use, it undergoes testing in a browser by a user (or automated user) to verify that the features behave normally and meet expectations
 - `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing.
 - `React Testing Library` -
 - `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired, or when we want to set up a function that runs in place of another function
