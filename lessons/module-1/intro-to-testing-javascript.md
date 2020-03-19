@@ -18,6 +18,8 @@ tags: javascript, testing, tdd, mocha, chai
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 
+## Part I: Strategies, Tools, and Functions
+
 <section class="call-to-action">
 ## Warm Up
 
@@ -114,13 +116,22 @@ When we are testing code, it's usually best to have the implementation code pull
 
 <img src="./assets/images/testing/setup.png" alt="Screen shot of two panes in Atom text editor">
 
-For the work we do today, and throughout Mod 1, we will only be testing classes. So, let's break down how we will use the two files.
-
 - Our `implementation` file refers to the code we are actually testing. This will be a class.
 - Our `test` file will be the automated tests that we write, that verify our class does what it should. This is where we will create object instances, and verify that they do what they should.
 - It is important to keep scope in mind: variables declared in the `test` file are not available in the `implementation` file. And in the `implementation` file, the only way we can call properties declared in the class is if we call them on an object created from that class.
 
-## Your First Test
+## Implementing functions using tests
+
+Eventually, we'll be writing our own tests, but for now so we can see how the
+process works a bit, and to get some practice reading error messages, we'll
+start with some prewritten tests.
+
+Head over to [this repository](https://github.com/turingschool-examples/first-unit-tests)
+and follow the instructions in the README to get some practice implementing
+functions based on test conditions.
+
+
+## Part II: Testing Classes
 
 Let's say we were writing a class, Tweet, that represents the content a user see when they read a tweet. We want to make sure each tweet is labeled with its sender. Here's how that test would look:
 
