@@ -13,7 +13,7 @@ JavaScript is full of ways to do the same task using different methods. In React
 
 ## Pass by Value - Pass by Reference
 
-You might have seen example like this before. Consider the following:
+You might have seen examples like this before. Consider the following:
 
 ```js
 let myPet = 'Scruffy';
