@@ -66,7 +66,7 @@ So how do you make a copy of an array...easily? You could use `.concat()`, but t
 <section class="call-to-action">
 ### Head to the Docs
 
-Take 5 minutes to look at [this MDN doc page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and read through the **Spread in array literals** section.
+Take 5 minutes to look at [this MDN doc page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_array_literals) and read through the **Spread in array literals** section.
 
 After you're done reading, create an example where you make two separate arrays of any elements. Then combine the two arrays into a new array using the spread operator.
 </section>
@@ -76,7 +76,7 @@ You've probably seen the spread operator used with `setState` and arrays in Reac
 <section class="call-to-action">
 ### Head to the Docs Again!
 
-Take 5 minutes to look at [this MDN doc page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) and read through the **Spread in object literals** section.
+Take 5 minutes to look at [this MDN doc page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals) and read through the **Spread in object literals** section.
 
 After you're done reading, create an example where you make two objects with a few key-value pairs and combine the two using the spread operator. What happens when there are two of the same keys in the objects?
 </section>
@@ -90,7 +90,7 @@ But again, these syntaxes are not specific to React. They're built in to the Jav
 <section class="call-to-action">
 ### Head to the Docs Yet Again!
 
-Take 5 minutes to look at [this MDN doc page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) and read through the **Object destructuring** section.
+Take 5 minutes to look at [this MDN doc page](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#Object_destructuring) and read through the **Object destructuring** section.
 
 After you're done reading, work through this exercise:
 
