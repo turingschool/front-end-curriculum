@@ -42,19 +42,15 @@ Then create a NewsArticle component. Each NewsArticle card will display: the ima
 
 In your NewsContainer component, create NewsArticle cards that have the information each needs to display properly.
 
-**Test Your App with snapshot tests.**
-
 ### Iteration 2
 
 Take a look at the `data` directory and inspect the other news data that is included.  There is an `entertainment.js`, `health.js`, `science.js`, and `technology.js` file.  Import the data and put it in `App's` state.  Create a Menu component that has navigation to display the different news articles.  When selecting a navigation link, it should display the relevant news articles in the NewsContainer component.  How can you reuse components?
-
-**Add/Update any snapshot tests necessary.  Also add tests for any new methods you have created or changes in state** 
 
 ### Iteration 3 (extension - do not attempt until iterations 0 - 2 are completed)
 
 Add in the functionality so that a user can search through the news articles.  After a user has typed a search query, a user should either be able to press `Enter` or `Search` to filter out the correct news articles.  The search functionality should only filter through the selected news articles.
 
-**Add/Update any tests necessary.  Remember to include tests for any new methods you have created or changes in state** 
+**Start testing what you can at this point before moving on to the next iterations**
 
 ### Iteration 4 (extension - do not attempt until iterations 0 - 3 are completed)
 
@@ -66,15 +62,11 @@ Here is what the endpoint looks like to get the news data.
 |----|----|----|----|----|
 | Get all news data | `https://whats-new-api.herokuapp.com/api/v1/news` | GET | none | `{"entertainment": [{}, {}, ...], "health": [{}, {}, ...], ...}` |
 
-**Note: This will likely break some of your previous tests.  No worries, we will discuss testing async functionality in a future lesson.**
-
-## Evaluation
-
-Projects will be due on Friday of Week 1 by 8pm. The instructors will go through projects that morning and then go over common mistakes we saw as a class.
+**Note: This will likely break some of your previous tests.  No worries, we will discuss testing asynchronous functionality in a future lesson.**
 
 ----------------------------------------------------------
 
-## Rubric 
+## Rubric
 
 ### Specification Adherence
 
@@ -85,21 +77,21 @@ Projects will be due on Friday of Week 1 by 8pm. The instructors will go through
 
 ### Project Professionalism
 
-* 1 - Either the README is incomplete, no project management system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits. 
-* 2 -  README has been updated but is missing setup, project management tool used, tech used, application images, or etc.  A project management tool was started, but was not utilized throughout the entire project. Project has more than 5 linter errors. Developer makes large infrequent git commits. 
-* 3 - The codebase has less than 5 linter errors and README has been fully updated.  A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and concise commit messages. 
+* 1 - Either the README is incomplete, no project management system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits.
+* 2 -  README has been updated but is missing setup, project management tool used, tech used, application images, or etc.  A project management tool was started, but was not utilized throughout the entire project. Project has more than 5 linter errors. Developer makes large infrequent git commits.
+* 3 - The codebase has less than 5 linter errors and README has been fully updated.  A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and concise commit messages.
 * 4 - Codebase has zero linter errors/warnings and README is well documented with images of how the app works, setup, and purpose of application. Developer uses a rebase workflow, taking advantage of GitHub issues to track work.
 
 ### React Architecture
 
 * 1 - Project shows little understanding of React and significant refactoring is required including but not limited to component structure, knowing when to use class vs functional components, mutation of props, or etc.  Unnecessary data is being passed down to child components through props. File structure is not modular.
-* 2 - There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component. 
+* 2 - There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component.
 * 3 - React architecture is clean and organized.  Logic is kept out of return statements.  There are multiple functions that are doing similar pieces of functionality that could continue to be refactored.
 * 4 - Functions have been refactored to be reusable for multiple queries.  Evaluator has no recommendations for refactoring.
 
 ### Testing
 
 * 1 - There is little or no evidence of testing in the application.  There are some UI tests including snapshot tests, but snapshots have not been updated and there are major gaps in unit testing functionality.
-* 2 - Snapshot tests are up to date but don't cover all scenarios. Components have some event simulation tests and tests on class methods but many are still failing. 
+* 2 - Snapshot tests are up to date but don't cover all scenarios. Components have some event simulation tests and tests on class methods but many are still failing.
 * 3 - Snapshot tests cover all scenarios of what the UI can look like including classes.  Tests are passing but there are gaps still in testing all functionality
 * 4 - Components are full tested including snapshots, class methods, and event simulation tests. Evaluator has no recommendations for testing.
