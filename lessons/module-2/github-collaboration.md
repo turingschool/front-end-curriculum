@@ -273,7 +273,7 @@ When getting ready to make a UI:
 <!-- Bad: Douglas Crockford (a glorified techie) starts the conversation using a lot of aggressive and insulting language which sets the tone for the rest of the comments going forward and allows it to spiral out of control. -->
 
 
-### Practice Time
+<!-- ### Practice Time
 
 Let's practice good code review on some **bad** code. Just for fun.
 
@@ -284,7 +284,7 @@ We're going to dive into the <a href="https://github.com/turingschool/front-end-
 
 Our site is open source! You're always welcome to submit a PR.
 </section>
-
+ -->
 
 <section class="checks-for-understanding">
 ### Summary
