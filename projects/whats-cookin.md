@@ -95,11 +95,9 @@ The user stories outlined above should be used to create an outline of your clas
 
 ## Timeline
 
-<!-- Dates and deadlines to be aware of:
+Dates and deadlines to be aware of:
 
-**Monday, December 2nd** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code
-**Thursday, December 5th** - Project check ins -->
-Due Date:
+**Monday, March 23rd** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code!
 **Thursday, April 2nd** - Project assessments. Project due by 9AM. 
 
 Submit projects <a href="https://docs.google.com/spreadsheets/d/1f2O5AwcylVca9JoLQI66eK57LqEYsfSV2PEwqPRsS3I/edit#gid=1401427478" target="\__blank">here</a> by 9AM, April 2nd. 
