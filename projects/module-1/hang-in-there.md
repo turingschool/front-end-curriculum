@@ -47,18 +47,17 @@ By the end of the day, complete the following tasks:
 
 ### Iteration 0 - Main Page
 
-![homepage](homepage.png)
+![homepage](../../assets/images/projects/hang-in-there/homepage.png)
 
 - When the page loads, we should see a poster with a randomly selected image, title, and quote
 
 ### Iteration 1 - Switching Views
 
 Form view:
-![form](form.png)
+![form](../../assets/images/projects/hang-in-there/form.png)
 
 Saved posters view:
-![saved posters](saved.png)
-
+![saved posters](../../assets/images/projects/hang-in-there/saved.png)
 
 - When a user clicks the "Make Your Own Poster" button, we should see the form, and the main poster should be hidden
 - When a user clicks the "View Saved Posters" button, we should see the saved posters area, and the main poster should be hidden
@@ -70,7 +69,7 @@ _Hint: go check out the HTML and CSS files to see how the form and saved posters
 ## Iteration 2 - Creating a New Poster
 
 Result after clicking save button:
-![result](form-result.png)
+![result](../../assets/images/projects/hang-in-there/form-result.png)
 
 - On the new poster form view, users should be able to fill out the three input fields and then hit the save button
 - When the save button is clicked, several things will happen:
