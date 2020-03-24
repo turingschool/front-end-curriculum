@@ -18,7 +18,7 @@ Sometimes you need a pick me up. Remember those motivational posters that were a
 
 To begin, choose one partner to do the following:
 
-1. Fork this repository.
+1. Fork the repository found here: [https://github.com/turingschool-examples/hang-in-there-boilerplate/](https://github.com/turingschool-examples/hang-in-there-boilerplate/).
 2. Clone down your new, forked repo
 3. `cd` into the repository
 4. Open it in your text editor
