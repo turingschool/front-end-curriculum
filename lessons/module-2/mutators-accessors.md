@@ -12,7 +12,7 @@ tags: prototype methods
 
 ## Structure
 
-In your groups, you'll be assigned to one or two prototype methods to research and poster:
+In your breakout groups, you’ll be assigned to one or two prototype methods to research and create a short presentation on:
 
 
 * **Group 1:** sort
@@ -21,24 +21,29 @@ In your groups, you'll be assigned to one or two prototype methods to research a
 * **Group 4:** concat
 * **Group 5:** shift and unshift
 
-You will make a poster for your assigned prototype method (or two posters, if you are assigned two methods). Your poster should include the following information:
+You will make a presentation for your assigned prototype method (or two presentations, if you are assigned two methods). You are encouraged to be creative when choosing your presentation medium, but if you aren't sure, these might be good choices:
+* Google Slides
+* Google Docs
 
+Presentations should include the following information:
 * Name of the method
 * Short sentence on what it does or why you would use it
 * Does it mutate the original array? Yes or no
 * What does it take in?
 * What does it return?
 
-Each group will present their poster to the class.
+Each group will present their presentation to the class.
 
 In addition to making a poster, your group should code up at least 2 examples of using the method. (You may find that creating more than 2 examples and exercises is helpful):
 
-* **First repl:** One person from your group will connect to th TVs and walk the class through how the method is being used and what it's doing. When the explanation is complete, switch to your second repl - 
-* **Second repl:** Send your second repl to the class in your public slack channel - this repl should not contain solutions, but simply practice exercises/prompts for the class to work on for a couple of minutes individually
+* **First repl:** One person from your group will share their screen, and walk the class through how the method is being used and what it’s doing. 
+* **Second repl:** Send your second repl to the class in your public slack channel - this repl should not contain solutions, but simply practice exercises/prompts for the class to work on for a couple of minutes individually.
 
 
 
 <!-- Instructor Notes:
+
+	* March 25, 2020 REMOTE VERSION - Language has been changed a little bit to reflect that students will be creating online presentations instead of these posters and sharing their screens. Once we aren't remote - update the wording. 
 
 	* Find the large post-it note style poster paper in the staff area and markers. (If you grab the wrong poster paper you'll have to tape the posters to the walls and then the tape will rip the paint off the walls. So find the post-it note paper.) Markers are usually in Ellen Mary's office and you should send her a message that you've taken them for the morning and BE SURE TO GIVE THEM BACK WHEN YOURE DONE
 	* Count off students to assign them to groups 1-5 and give them time to work on their posters and their practice exercises. Students are free to take POMs as they need during the lesson. Have them put their posters on the wall as they finish up so that you can get a sense for timing/when to come back together as a class.
