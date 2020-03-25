@@ -130,7 +130,7 @@ We're going to implement `componentDidMount()` in our IdeaBox.
 
 ### Setup Your Back End
 
-If you want, you can re-clone your IdeaBox into a new directory.  Follow the steps here:
+If you want, you can [re-clone](https://github.com/turingschool-examples/ideabox-testing) your IdeaBox into a new directory.  Follow the steps here:
 
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-testing.git react-iii
@@ -251,7 +251,7 @@ Let's say you declare a component `<Card title={this.state.title}/>`. Here, your
 Previously, PropTypes was built into the React library itself, however it has since been extracted into its own module. You can install it like any other module.
 
 ```bash
-$ npm install prop-types -S
+$ npm install prop-types
 ```
 
 In React, `PropTypes` are declared like this:
