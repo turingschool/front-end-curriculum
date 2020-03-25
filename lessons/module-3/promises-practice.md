@@ -364,6 +364,7 @@ export const fetchStaffBios = staffData => {
   })
   return Promise.all(promises)
 }
+
 // App,js
 class App extends Component {
   constructor() {
@@ -374,13 +375,14 @@ class App extends Component {
     };
   }
 
-componentDidMount() {
-  fetch('http://localhost:3001/api/frontend-staff')
-    .then(response => response.json())
-    .then(staffData => fetchStaffBios(staffData))
-    .then(staff => this.setState({ staff }))
-    .catch(error => this.setState({ error }))
+  componentDidMount() {
+    fetch('http://localhost:3001/api/frontend-staff')
+      .then(response => response.json())
+      .then(staffData => fetchStaffBios(staffData))
+      .then(staff => this.setState({ staff }))
+      .catch(error => this.setState({ error }))
   }
+
   render() {
     //JSX
   }
