@@ -12,8 +12,7 @@ tags: prototype methods
 
 ## Structure
 
-In your breakout groups, you’ll be assigned to one or two prototype methods to research and create a short presentation on:
-
+In your breakout groups, you’ll be assigned to one or two prototype methods to research and create a short (5 minutes or less) presentation on:
 
 * **Group 1:** sort
 * **Group 2:** split and join
@@ -32,9 +31,9 @@ Presentations should include the following information:
 * What does it take in?
 * What does it return?
 
-Each group will present their presentation to the class.
+**Each group will present to the class.**
 
-In addition to making a poster, your group should code up at least 2 examples of using the method. (You may find that creating more than 2 examples and exercises is helpful):
+In _addition_ to making a presentation, your group should code up at least **2 examples** of using the method. (You may find that creating more than 2 examples and exercises is helpful):
 
 * **First repl:** One person from your group will share their screen, and walk the class through how the method is being used and what it’s doing. 
 * **Second repl:** Send your second repl to the class in your public slack channel - this repl should not contain solutions, but simply practice exercises/prompts for the class to work on for a couple of minutes individually.
