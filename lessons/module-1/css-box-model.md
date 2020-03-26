@@ -67,3 +67,5 @@ page.
 On your own, open up a codepen and try to recreate the Netflix page below. Try
 to use the various elements of the box model in your recreation. This challenge
 is just HTML & CSS, so you shouldn't need to be writing any JavaScript!
+
+<img class="medium" src="./assets/images/css/netflix-screen.png">
