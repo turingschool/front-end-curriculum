@@ -41,3 +41,29 @@ has a major impact in the size of our box. Adding more text, images, or videos
 will increase the size of the box. Additionally, changing font sizes or image
 sizes will cause them to take up more space, also increasing the size of the
 box.
+
+### Padding
+
+Padding will create a transparent cleared space around our content. Imagine you
+had a custom button you were designing, and wanted to make sure that all the
+text of the button was at least 10px from the edges. We could set a padding of
+10px on the element to make that happen.
+
+### Border
+
+Borders can seem like an afterthought, but they do take up space in the box
+model, so forgetting about them can lead to some elements that seem *just* off.
+The border wraps our content and padding sections of the box.
+
+### Margin
+
+Finally, margin allows us to clear a space outside the border. Most frequently,
+this is used to give an element visual space away from other elements on the
+page.
+
+
+## Lets get some practice!
+
+On your own, open up a codepen and try to recreate the Netflix page below. Try
+to use the various elements of the box model in your recreation. This challenge
+is just HTML & CSS, so you shouldn't need to be writing any JavaScript!
