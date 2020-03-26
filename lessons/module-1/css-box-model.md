@@ -1,5 +1,5 @@
 ---
-title: CSS: The Box Model
+title: "CSS: The Box Model"
 tags: css, box model
 ---
 
