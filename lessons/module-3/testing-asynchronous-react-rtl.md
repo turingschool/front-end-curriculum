@@ -77,7 +77,7 @@ npm test
 Try running `npm install fsevents@1.2.11` to install a specific version of `fsevents` and then run `npm test` again to see if that worked.
 </section>
 
-Set up the [back-end repo](). You might already have this cloned down, and in that case find it a get it started.
+Set up the [back-end repo](https://github.com/turingschool-examples/ideabox-api.git). You might already have this cloned down, and in that case find it a get it started.
 
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-api.git
@@ -211,14 +211,146 @@ The network request is still happening in the background. We'll take care of tha
 
 ## No More Network Requests
 
-Coming soon to our next class!
+Let's return to our second goal: Tell our test to not make a network request, but instead fake the network request
+
+To fake the network request, we need to mock the network request. The best way to mock something is to overwrite an existing function using a `jest.fn()`. The issue we need to solve now is how to overwrite the `fetch` call without always overwriting the entire implementation of `fetch`. To do that, we need to isolate any network request we make to its own function.
+
+<section class="call-to-action">
+### Isolate the Fetch Call
+
+In the `App` component, we have `fetch` being invoked in `componentDidMount`. Spend some time taking this network request and putting it into it's own function in a file called `apiCalls.js` that lives in the `src` directory.
+
+With the code you have written in `componentDidMount` so far, you'll have to play around with how much code you can pull out of `App` and how much needs to stay in the component.
+
+If you have isolated the fetch call, make sure your test still passes.
+</section>
+
+<section class="answer">
+### An Isolated Fetch Call
+
+```js
+// src/apiCalls.js
+export const getIdeas = () => {
+  return fetch('http://localhost:3001/api/v1/ideas')
+    .then(response => response.json())
+};
+
+// App.js
+// only looking at componentDidMount
+componentDidMount() {
+  getIdeas()
+    .then(ideas => this.setState({ ideas }))
+    .catch(err => console.error(err.message))
+}
+```
+</section>
 
 
-<!-- ### Sad Path Possibilities
+### Mock the Function
 
-* What is the network doesn't give a response...?
+Now that the function with the network request is isolated, we can focus on mocking it. In the future, this `apiCalls` file could have many network requests for posting and/or deleting ideas. So we will tell Jest to mock the entire file.
+
+We need to add this to our App's test file before we write any `it` blocks:
+
+```js
+import { getIdeas } from '../apiCalls';
+jest.mock('../apiCalls.js');
+```
+
+What is this doing? `jest.mock(filename)` is going into that file and making everything in that file a `jest.fn()`, which allows us to overwrite any of those functions behavior.
+
+Ultimately, the behavior of the `getIdeas` function is to make a network request and return a promise with a resolved or rejected value. If we assume a happy path, the function returned a resolved promise with the resolved value being the array of ideas from the API.
+
+```js
+[
+  {id: 1, title: 'Sweaters for pugs', description: 'To keep them warm'},
+  {id: 2, title: 'Film a romcom', description: 'But make it ghosts'},
+  {id: 3, title: 'A game show called Ether/Or', description: 'When you lose you get chloroformed'},
+]
+```
+
+In our test, now that the `getIdeas` function is a `jest.fn()`, we can overwrite its behavior. To do this, we can mock what the resolved value of the function should be in the test:
+
+```js
+// at the top of the test
+
+getIdeas.mockResolvedValueOnce([
+  {id: 1, title: 'Sweaters for pugs', description: 'To keep them warm'},
+  {id: 2, title: 'Film a romcom', description: 'But make it ghosts'},
+  {id: 3, title: 'A game show called Ether/Or', description: 'When you lose you get chloroformed'},
+]);
+```
+
+Now turn off your back-end API, and you should still have a passing test!
+
+<section class="answer">
+### Mocked Network Request
+
+```js
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
+
+import { render, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+import { getIdeas } from '../apiCalls';
+jest.mock('../apiCalls.js');
+
+describe('App', () => {
+  it('when the App loads, we should see an idea', async () => {
+    getIdeas.mockResolvedValueOnce([
+      {id: 1, title: 'Sweaters for pugs', description: 'To keep them warm'},
+      {id: 2, title: 'Film a romcom', description: 'But make it ghosts'},
+      {id: 3, title: 'A game show called Ether/Or', description: 'When you lose you get chloroformed'},
+    ]);
+
+    const { getByText } = render(<App />);
+
+    const ideaContainer = getByText('Ideas Component');
+
+    const idea = await waitFor(() => getByText('Sweaters for pugs'));
+
+    expect(ideaContainer).toBeInTheDocument();
+    expect(idea).toBeInTheDocument();
+  });
+});
+```
+</section>
+
+### Another Scenario
+
+<section class="call-to-action">
+### Write Another Test
+
+Consider the scenario where the API returns an empty array of ideas.
+
+Write another test to mock this scenario. Change the apps behavior to render a message like "No ideas yet!" on the page if the ideas state is an empty array.
+
+Be sure to write an assertion to check for the message on the page.
+</section>
+
+### Posting a New Idea
+
+This one will take a little longer from start to finish.
+
+<section class="call-to-action">
+### Add Posting Functionality
+
+Add functionality into the app so that when you submit a new idea, it is posted to the back-end API and displays on the page.
+
+Then add a test for that scenario using the same order of operations we did for mocking `getIdeas`.
+</section>
+
+### Sad Path Possibilities
+
+In your apps, consider the scenarios where:
+
+* What if the network doesn't give a response...?
 * What if the response is empty?
-* What is the server is down? -->
+* What if the server is down?
+
+For a rejected promise, you can use [mockRejectedValueOnce](https://jestjs.io/docs/en/mock-function-api.html#mockfnmockrejectedvalueoncevalue) to mock that scenario.
 
 #### Resources
 
