@@ -16,7 +16,7 @@ By the end of this lesson, you will:
 
 ## The Current State of Things
 
-Let's assume we have a React application that is fetching data when the `App` component mounts. This app is a classic ideabox that holds onto our best future app ideas. Pseudocode for a test in this application might look something like:
+Let's assume we have a React application that is fetching data when the `App` component mounts. The app we're thinking about is a classic ideabox that holds onto our best future ideas. Pseudocode for a test in this application might look something like:
 
 ```js
 it('Can view all the ideas when the app loads', () => {
@@ -44,7 +44,7 @@ Discuss with a partner:
 
 ### Jest and `jsdom`
 
-The testing library we use with React, Jest, comes with a library by default called `jsdom`. This library simulates the browser environment when we run our tests, which means that every browser API we use in our app can be used when we run our tests. Browser APIs like `Date.now()`, `fetch()`, `document.querySelector()`, etc are available to use while we run our tests. This is amazing! But it's also something we want to avoid sometimes. In particular, we want to avoid actually making network requests in our tests.
+The testing library we use with React (Jest) comes with a library by default called `jsdom`. This library simulates the browser environment when we run our tests, which means that every browser API we use in our app can be used when we run our tests. Browser APIs like `Date.now()`, `fetch()`, `document.querySelector()`, etc are available to use while we run our tests. This is amazing! But it's also something we want to avoid sometimes. In particular, we want to avoid actually making network requests in our tests (we'll get into that later).
 
 ## On Your Marks: Our Goal
 
@@ -60,7 +60,7 @@ We need to:
 Set up the [front-end repo](https://github.com/turingschool-examples/ideabox-testing-rtl):
 
 ```bash
-git clone https://github.com/turingschool-examples/ideabox-testing-rtl.git
+git clone https://github.com/turingschool-examples/ideabox-testing-rtl.git testing-async-react
 npm install
 npm start
 ```
@@ -205,6 +205,8 @@ describe('App', () => {
 ```
 </section>
 
+What is the `async` keyword needed for? What does `await` do?
+
 The network request is still happening in the background. We'll take care of that next.
 
 ## No More Network Requests
@@ -217,3 +219,8 @@ Coming soon to our next class!
 * What is the network doesn't give a response...?
 * What if the response is empty?
 * What is the server is down? -->
+
+#### Resources
+
+* [async await by javascript.info/](https://javascript.info/async-await)
+* [MDN on async await](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Async_await)
