@@ -17,19 +17,19 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 
 ## Iterations
 
-### Iteration 0 - Day-1 Deliverables 
+### Iteration 0 - Day-1 Deliverables
 
 Create a group Slack channel and include your instructors in the channel:
   * Layouts/Wireframes sketches of your user interface
   * Group DTR
   * Project management tool (GitHub Projects, Trello, etc.) - be sure this is public so your instructors can view it
-  * PR template your group agrees to follow for every PR submitted ([here is a good example of a PR template](https://quickleft.com/blog/pull-request-templates-make-code-review-easier/))
+  * PR template your group agrees to follow for every PR submitted ([here are some instructions from GitHub on how to create this](https://help.github.com/en/github/building-a-strong-community/creating-a-pull-request-template-for-your-repository))
 
 After you send us this information, we'll give you your user's name, email, and password.
 
 ### Iteration 1 - User Info, API Intro, and Movies
 
-You will be assigned a user for your group. Each user has a name, email, and password that you will use throughout the project. This is your team's user! 
+You will be assigned a user for your group. Each user has a name, email, and password that you will use throughout the project. This is your team's user!
 
 At this point, get your head around the API's endpoints via the documentation below. Try them out in Postman - you don't need an API key for this! See what you can get from all the endpoints available.
 
@@ -108,7 +108,7 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 
 ----------------------------------------------------------
 
-## Rubric 
+## Rubric
 
 ### Specification Adherence
 
@@ -119,9 +119,9 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 
 ### Project Professionalism
 
-* 1 - Either the README is incomplete, wireframes are not used, no project management system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits. 
-* 2 -  README has been updated but is missing group members, setup, tech used, application images, or etc.  Wireframes are included and a project management tool was started, but are not utilized throughout the entire project. Project has more than 5 linter errors. Project team makes large infrequent git commits. 
-* 3 - The codebase has less than 5 linter errors and README has been updated with all group members. Project utilized wireframes from the outset and updated them as changes were made. A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and concise commit messages. 
+* 1 - Either the README is incomplete, wireframes are not used, no project management system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits.
+* 2 -  README has been updated but is missing group members, setup, tech used, application images, or etc.  Wireframes are included and a project management tool was started, but are not utilized throughout the entire project. Project has more than 5 linter errors. Project team makes large infrequent git commits.
+* 3 - The codebase has less than 5 linter errors and README has been updated with all group members. Project utilized wireframes from the outset and updated them as changes were made. A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and concise commit messages.
 * 4 - Codebase has zero linter errors/warnings and README is well documented with images of different pages, setup, purpose of application, and group members. Project team uses a rebase workflow, taking advantage of GitHub issues to track work.
 
 ### React Architecture
@@ -142,7 +142,7 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 
 * 1 - A valid attempt to test this application was made, but there are obvious gaps with missing unit tests for Redux and React.  
 * 2 - Nearly all unit tests are in place. React components are well tested with a diverse set of tests including but not limited to snapshot tests, event simulation tests, and tests on class methods. There are tests in place for actions, reducers, mapStateToProps, and mapDispatchToProps. No attempt to test async functionality was made.
-* 3 - All Redux functionality is tested (actions, reducers, mapStateToProps, mapDispatchToProps), all components are unit tested, and a valid attempt was made to test any async functionality.
+* 3 - All Redux functionality is tested (actions and reducers), all components are unit tested, and a valid attempt was made to test any async functionality.
 * 4 - All async functionality is tested. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently (using mount only when appropriate). Evaluator has no recommendations for testing. (Try testing React Router - it gets tricky because we have Redux.)
 
 ### Routing
