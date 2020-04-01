@@ -19,6 +19,7 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 
 * Sass
 * Fetch
+* jQuery
 * [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html)
 
 ## Set Up
