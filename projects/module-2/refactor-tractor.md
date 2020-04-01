@@ -20,7 +20,7 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 * Sass
 * Fetch
 * jQuery
-* [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html) -> Extension
+* [Webpack](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html)
 
 ## Set Up
 
@@ -34,6 +34,28 @@ In this project, you will be building on top of somebody else's pre-existing Fit
 8. In your terminal:
     - remove the old remote `git remote remove origin`
     - then add a new remote `git remote add origin [your new repo url]`
+
+### Working with Webpack
+This project is set up to use [Webpack](https://webpack.js.org/guides/getting-started/), a module bundler. It will take whatever code we write, and bundle it into a series of more efficient files that the browser can read (allowing us to use things like Sass, npm packages and ES6 `import` / `export` syntax).
+
+This [video](https://www.youtube.com/watch?v=GU-2T7k9NfI) provides a nice overview of some things webpack lets us do out of the box, most of which is set up for you already.
+
+This [article](https://survivejs.com/webpack/what-is-webpack/) provides some more detail into how Webpack works, and what the `webpack.config.js` file is doing (don't mess with this file unless you're sure you need to -- feel free to ask before you change things).
+
+Webpack is a powerful tool, which you're encouraged to explore more (the Turing [Webpack lesson plan](https://frontend.turing.io/lessons/module-2/build-processes-with-npm-webpack.html) is a great place to start). But there are a few things that you should know when starting to work with it:
+
+- You need to use [`import` / `export`](https://www.youtube.com/watch?v=_3oSWwapPKQ) syntax
+  - Note: This video goes into Babel and Rollup. Webpack handles the transpiling of our ESModules code into something the browser can read.
+
+- Webpack needs to know where to look for your files. Look [here](https://github.com/turingschool-examples/webpack-starter-kit#where-to-add-your-code) for a description of where webpack is set up to look for your HTML, CSS, JS and image files. Some general points:
+  - You need to import images into the entrypoint file (usually `scripts.js` or `index.js`).
+  - You need to `import` you Scss/CSS files into the entrypoint file too
+  - Make sure HTML, JS and Scss/CSS files are all in the `/src` directory
+  - You have to `import` any required modules and code for tests into your test files
+
+- While developing, run `npm start`. Webpack will create a live version of your site on a local server, where you can see your changes happen in real time. To access it, in your browser, navigate to the `localhost` address that your terminal gives you. Be aware, if you write a breaking change, your server may crash. The terminal will give you some error report about why the crash happened.
+
+- Don't worry about running `npm build` until you are [ready to deploy your site](https://github.com/turingschool-examples/webpack-starter-kit#deploying-to-github-pages)
 
 ## Requirements 
 
@@ -116,7 +138,6 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
 
 * Deploy your updates to GH pages
 * Do proper error handling for your users to ensure that they are submitting their POST requests successfully (handle the case where they submit their data and an error message returns from the request, and also validate the input fields on the client-side)
-* Add webpack into YOUR FitLit Project
 
 
 ## Iterations
