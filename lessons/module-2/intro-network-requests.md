@@ -158,7 +158,7 @@ If it worked, you should be able to type `xhttp` and see the results in your XML
 
 ## ES6: fetch()
 
-Another great tool to help with network requests is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="\__blank">fetch API</a>. This is what we'll focus on in Mod 2, since we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery)!
+Another great tool to help with network requests is the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API" target="\__blank">fetch API</a>. This is what we'll focus on in Mod 2, since we can use it "for free" with ES6 (as opposed to `$.get` which requires us to bring in jQuery or *axios* which is a separate npm package)!
 
 _It's important to note that not every browser supports the fetch api; polyfills are available, but many legacy codebases use other apis that are supported by older browsers, such as Axios or Superagent._
 
