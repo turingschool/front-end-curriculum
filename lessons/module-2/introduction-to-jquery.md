@@ -157,15 +157,19 @@ Change some of the properties of the `.box` and `.clicked` selectors and observe
 
 <p data-height="300" data-theme-id="23788" data-slug-hash="xOVxxp" data-default-tab="css,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/xOVxxp/">Flying Box</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p> -->
 
-## Knowing Which Element We Clicked - THIS!
+## Knowing Which Element We Clicked!
 
 Consider a situation where we have three boxes. When that particular box is clicked, we want to toggle a class on that box only. How do we know which box was clicked?
 
-It turns out that when we add an event listener using jQuery, we get a special variable called `this`. Although the concept of the JavaScript `this` can get quite complicated, for our purposes the variable `this` is assigned to the context within which it is called.
+The callback function takes in an event argument. We can use this to determine the event target (what you clicked on).
 
 Let's take a look at the example below:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="EyKxpp" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/EyKxpp/">$(this)</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="hannahhch" data-slug-hash="yLNrJOz" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Event Boxes">
+  <span>See the Pen <a href="https://codepen.io/hannahhch/pen/yLNrJOz">
+  Event Boxes</a> by Hannah Hudson (<a href="https://codepen.io/hannahhch">@hannahhch</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
 #### Try It
 Can you create a class that adds a border and then toggle that class on the specific box that is hovered over? (For your own sanity, you probably want to remove the alert!)  
@@ -178,11 +182,19 @@ Let's work through a box example again.
 
 We want each box to have a button inside of it. When the user clicks the button, it should rotate the entire box. (We're rotating the box with a CSS class called `clicked`.)  
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="vKGYzo" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/vKGYzo/">Rotating Buttons</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="hannahhch" data-slug-hash="NWqmrRd" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Rotating Buttons">
+  <span>See the Pen <a href="https://codepen.io/hannahhch/pen/NWqmrRd">
+  Rotating Buttons</a> by Hannah Hudson (<a href="https://codepen.io/hannahhch">@hannahhch</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
 This code _does not_ work the way we'd like - right now when we click on the button, the button itself is rotating instead of the entire box. What we need to do is when the user clicks on a button, go up and find the box that it lives in (the parent element) and add the class to _that_ element. We can use traversal like this:
 
-<p data-height="300" data-theme-id="23788" data-slug-hash="YWqzJo" data-default-tab="js,result" data-user="turing" data-embed-version="2" class="codepen">See the Pen <a href="http://codepen.io/team/turing/pen/YWqzJo/">Rotating Boxes</a> by Turing School of Software and Design (<a href="http://codepen.io/turing">@turing</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<p class="codepen" data-height="265" data-theme-id="light" data-default-tab="css,result" data-user="hannahhch" data-slug-hash="JjdVKRw" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Rotating Boxes">
+  <span>See the Pen <a href="https://codepen.io/hannahhch/pen/JjdVKRw">
+  Rotating Boxes</a> by Hannah Hudson (<a href="https://codepen.io/hannahhch">@hannahhch</a>)
+  on <a href="https://codepen.io">CodePen</a>.</span>
+</p>
 
 You can see all of ways we can move around the DOM tree in [jQuery documentation](https://api.jquery.com/category/traversing/tree-traversal/).
 
