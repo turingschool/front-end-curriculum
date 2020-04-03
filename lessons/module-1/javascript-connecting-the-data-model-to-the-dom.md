@@ -149,3 +149,63 @@ It's great to be able to add fruit to our Data Model, but what about removing
 them? Create a new function that takes an id parameter, removes the fruit with
 that id from our Data Model, and updates the presentation layer for our user.
 </div>
+
+## Challenge Time
+
+Great, so we can render, add, and remove fruits from our data model, and we're
+doing it all with only one DOM element! That's all well and good when we're just
+writing the code ourselves, but what if our user actually wants to interact with
+our page?
+
+If something our user does should change the look of the page, then it probably
+needs to change our Data Model as well.
+
+Notice those 'Lick' buttons? They all have _data-id attributes_ on them which
+match the id of the fruit above. We could use them in conjuction with an event
+listener to make our fruit rotten!
+
+<div class="call-to-action">
+## Rotten fruit
+
+Set an event listener on the `fruitBox` DOM element. Whenever someone clicks on
+one of the 'Lick' buttons, that fruit should now be labeled as 'Rotten'. _Hint:
+You may find event.target.dataset useful!_
+
+Be an advocate for your own learning, don't read ahead!
+</div>
+
+Alright, how'd you do? Here's one way we could solve the problem:
+
+```javascript
+fruitBox.addEventListener('click', makeRotten)
+
+function makeRotten(event) {
+  var id = event.target.dataset.id
+  if(id) {
+    var newFruits = []
+    fruits.forEach(function(fruit) {
+      if(fruit.id == id) {
+        newFruits.push({name: fruit.name, img: fruit.img, rotten: true})
+      } else {
+        newFruits.push(fruit)
+      }
+    })
+    fruits = newFruits
+  }
+  render()
+}
+```
+
+Our event handler looks to see if an id exists in the event.target.dataset,
+which will only be true if one of the buttons has been clicked. If it finds an
+id, we loop through all our fruits, find the one where the fruit.id matches the
+id in the dataset, and replace it with a rotten fruit. After we've updated our
+Data Model, we re-render the model to see the change.
+
+## In Summary
+
+This pattern of using a Data Model as a source of truth is extremely common in
+professional JavaScript programming. You'll see it again later at Turing. As you
+work on your current project, remember to ask yourself 'What is my Data Model',
+and 'How do my user interactions affect my Data Model'. If you can get the hang
+of this concept, you'll be set up for future success.
