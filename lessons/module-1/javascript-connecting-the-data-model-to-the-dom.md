@@ -54,7 +54,7 @@ var fruits = [
 
 This Array of objects is our Data Model. Every object represents one piece of
 the model that we could create a visual representation for. The key is that
-every this we ultimately _see_ on the DOM, is backed up by some piece of data in
+every thing we ultimately _see_ on the DOM, is backed up by some piece of data in
 our model.
 
 <div class="call-to-action">
