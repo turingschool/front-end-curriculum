@@ -98,3 +98,54 @@ the values in our Data Model. Finally, after it's finished building, it makes
 _one_ reference to the DOM, to update what our user actually _sees_. Critically,
 the Data Model is our source of truth. With out the Data Model, our render
 method is pretty meaningless.
+
+## Making a change to our Data Model
+
+Let's say we wanted to add another fruit, what should our code actually do?
+Remember, our Data Model is our _*source of truth*_, so if a function is going
+to add something to our code, it better be updating our Data Model.
+
+<div class="call-to-action">
+## Back to the group
+
+Continuing to work in the same codepen, create a function with three arguments: 
+name, img, and rotten. This function should be able to add a new object to the
+Data Model. Once you've finished, call your function with 3 arguments of your
+choice. Does your Data Model update? What about what the user sees?
+</div>
+
+If you successfully added a new fruit to your Data Model, you may have written a
+function that looks something this this:
+
+```javascript
+function addFruit(name, img, rotten) {
+  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length}
+  fruits.push(newFruit)
+}
+```
+
+This will do a fine job of updating our Data Model, but what about actually
+showing the fruit on the page? You might be tempted to start using some DOM
+selectors to add in the new fruit you create, but this is an anti-pattern.
+Remember, we already have a function that is specifically designed to render our
+fruits. Let's just modify our addFruit method to call our render function once a
+fruit is added:
+
+```javascript
+function addFruit(name, img, rotten) {
+  var newFruit = {name: name, img: img, rotten: rotten, id: fruits.length}
+  fruits.push(newFruit)
+  render()
+}
+```
+
+Awesome! Now we're reusing our render method to show what's in our data model
+whenever anything changes. Cool!!
+
+<div class="call-to-action">
+## Once more with the group
+
+It's great to be able to add fruit to our Data Model, but what about removing
+them? Create a new function that takes an id parameter, removes the fruit with
+that id from our Data Model, and updates the presentation layer for our user.
+</div>
