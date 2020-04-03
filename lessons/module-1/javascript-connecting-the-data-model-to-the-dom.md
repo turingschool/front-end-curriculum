@@ -64,4 +64,37 @@ Taking a look at [this codepen](https://codepen.io/wvmitchell/pen/eYNaYpG)
 you'll find the Data Model from above, as well as some HTML and CSS. Take 15
 minutes, read through all the existing code, then try adding a `render` method,
 which will create one displayed fruit for every fruit in the Data Model.
+
+Be an advocate for your own learning, don't read ahead!
 </div>
+
+## Rendering our Data Model
+
+Having a specific way that we render our Data Model is very helpful, because it
+allows us to save a lot of effort coding. Once we have a way of rendering our
+Data Model, we can use that same method anytime our data model changes.
+
+Here's one way that you could have rendered the Data Model in the codepen above:
+
+```javascript
+function render() {
+  var fruitHTML = ""
+  fruits.forEach(function(fruit) {
+    var fruitTitle = fruit.rotten ? `Rotten ${fruit.name}` : fruit.name;
+    fruitHTML += `
+      <div class="fruit">
+        <h2>${fruitTitle}</h2>
+        <img src="${fruit.img}" />
+        <button data-id=${fruit.id}>Lick</button>
+      </div>
+    `
+  })
+  fruitBox.innerHTML = fruitHTML;
+}
+```
+
+This code iterates through all the fruits, and builds up an HTML string based on
+the values in our Data Model. Finally, after it's finished building, it makes
+_one_ reference to the DOM, to update what our user actually _sees_. Critically,
+the Data Model is our source of truth. With out the Data Model, our render
+method is pretty meaningless.
