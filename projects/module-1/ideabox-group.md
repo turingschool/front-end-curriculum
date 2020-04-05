@@ -23,7 +23,8 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 - Complete a DTR
 - Create a slack channel for all team members and your Project Manager.
-- Create a directory called `ideabox`, with `index.html` and `styles.css` files inside of it. Initialize and create a GitHub project. Add all team members and your Project Manager as collaborators.
+- Fork [the boilerplate
+  repository](https://github.com/turingschool-examples/ideabox-boilerplate). Add all team members and your Project Manager as collaborators.
 - Deploy your application to GitHub Pages.
 - In the team channel, drop the repo link and GitHub pages link.
 
