@@ -335,7 +335,7 @@ Be sure to write an assertion to check for the message on the page.
 This one will take a little longer from start to finish.
 
 <section class="call-to-action">
-### Add Posting Functionality
+### Stretch Goal: Add Posting Functionality
 
 Add functionality into the app so that when you submit a new idea, it is posted to the back-end API and displays on the page.
 
