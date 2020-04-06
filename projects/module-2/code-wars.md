@@ -3,7 +3,6 @@
 ## 8
 
 * [Find numbers which are divisible by given number](https://www.codewars.com/kata/55edaba99da3a9c84000003b/train/javascript)
-* [What's up next?](https://www.codewars.com/kata/542ebbdb494db239f8000046/train/javascript)
 * [Even or Odd](https://www.codewars.com/kata/53da3dbb4a5168369a0000fe/train/javascript)
 * [String Repeat](https://www.codewars.com/kata/57a0e5c372292dd76d000d7e/train/javascript)
 * [Remove First and Last Character](https://www.codewars.com/kata/56bc28ad5bdaeb48760009b0/train/javascript)

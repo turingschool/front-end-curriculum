@@ -50,6 +50,7 @@ By the end of the day, complete the following tasks:
 ![homepage](../../assets/images/projects/hang-in-there/homepage.png)
 
 - When the page loads, we should see a poster with a randomly selected image, title, and quote
+- Every time the user clicks the Show Random Poster button, a new random poster is displayed.
 
 ### Iteration 1 - Switching Views
 

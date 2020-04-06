@@ -23,7 +23,8 @@ Throughout the project, one of our focuses will be on providing a fluid and resp
 
 - Complete a DTR
 - Create a slack channel for all team members and your Project Manager.
-- Create a directory called `ideabox`, with `index.html` and `styles.css` files inside of it. Initialize and create a GitHub project. Add all team members and your Project Manager as collaborators.
+- Fork [the boilerplate
+  repository](https://github.com/turingschool-examples/ideabox-boilerplate). Add all team members and your Project Manager as collaborators.
 - Deploy your application to GitHub Pages.
 - In the team channel, drop the repo link and GitHub pages link.
 
@@ -242,6 +243,8 @@ As a user,
   * Uses logical operators instead of if/else statements where applicable
   * When 'Filtering and Searching by Text' and 'Viewing Urgent ToDo Cards', to-dos that do not need to be shown on the DOM should be completely removed from the DOM, instead of only being hidden from view
 * **3:**
+  * Application uses the Data Model exclusively to track changes to the ideas,
+    and display of ideas happens after the Data Model has been updated
   * DRY and SRP practices are demonstrated in codebase and students can speak to implementation decisions
   * All functions are less than 10 lines
   * There are no nested if/else statements
