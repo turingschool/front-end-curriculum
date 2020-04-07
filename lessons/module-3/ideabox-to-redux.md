@@ -89,7 +89,10 @@ Just like our App would likely default with an empty array of todos, we will set
 <section class="call-to-action">
 ### In Your Notebook
 
-Write out the similarities to what we are doing so far compared to what we have done with an IdeaBox in Redux.  What are the differences?  Then turn and talk to the person next to you and explain what we have done so far.  Remember to use key terms like `actions`, `action creators`, `reducers`, etc.
+Write out the similarities to what we are doing so far compared to how we have already built out Ideaboxes. 
+- What are the differences? 
+- What are the similarities?
+Then turn and talk to the person next to you and explain what we have done so far.  Remember to use key terms like `actions`, `action creators`, `reducers`, etc.
 </section>
 
 ### Creating the Store
@@ -145,7 +148,6 @@ There are several pieces of functionality we must import from the packages we in
 * `Provider` - Comes from `react-redux`.  According to the [react-redux docs](https://react-redux.js.org/api/provider#targetText=Overview,component%20tree%20inside%20of%20it.), "The `Provider` makes the Redux store available to any nested components.  Since any React component in a React Redux app can be connected, most applications will render a Provider at the top level."  Note that the Provider wraps around the entire app. (if you are using React-Router, it will wrap around `BrowserRouter`)
 * `createStore` - Comes from `redux`.  According to the [redux docs](https://redux.js.org/api/createstore), "This creates a Redux store that holds the complete state tree of your app.  There should only be a single store in your app."
 * `composeWithDevTools` - A method we brought in and can pass as an argument with `createStore` so that we have access to our devtools and can view our store. (order matters here)
-
 <section class="call-to-action">
 ### Try it out!
 
@@ -191,6 +193,8 @@ Since we don't need access to the store specifically in this scenario, we only n
 
 <section class="note">
 ### Move `AddTodoForm` to your containers directory
+
+Look into container vs presentational components [here](https://redux.js.org/basics/usage-with-react/#presentational-and-container-components)
 
 Anytime we wrap a component with `connect` to connect it to the store, that component becomes a `container`.  As a result, in order to stay organized, let's move our `AddTodoForm` to our containers directory.
 </section>
