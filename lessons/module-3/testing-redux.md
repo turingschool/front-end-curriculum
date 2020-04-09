@@ -34,7 +34,7 @@ Unit tests aim to test individual pieces of code as throughly as possible. In Re
 
 In order to test Redux, we need to first consider the pieces that will require testing. We'll need Action Creator tests, Reducer tests, Container tests, and tests for any Redux Middleware we may be using. For this lesson, we're just going to focus on the first three.
 
-Testing in Redux can actually be a very plesant experience, because all the functions you'll be writing while using Redux are *pure*. This means that given the same inputs for a function, we'll always get back the same output. For more explaination of pure functions, check out [this post](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/).
+Testing in Redux can actually be a very pleasant experience, because all the functions you'll be writing while using Redux are *pure*. This means that given the same inputs for a function, we'll always get back the same output. For more explanation of pure functions, check out [this post](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/).
 
 Let's start with Action Creator tests.
 
@@ -63,7 +63,7 @@ export const addTodo = (text) => {
 };
 ```
 
-Given a string as text, (let's say "Go to the Vault"), we expect it to return an object with a type of `'ADD_TODO'` and the text "Go to the Vault".  
+Given a string as text, (let's say "Go to Brothers"), we expect it to return an object with a type of `'ADD_TODO'` and the text "Go to Brothers".  
 
 ### Action Creator Tests
 `actions/todos.test.js`  
@@ -193,13 +193,13 @@ it('should toggle the completed status of a new todo', () => {
 ```
 </section>
 
-### Containers
+### Unit and Integration Testing Containers
 
-Testing React Containers is a lot of what you already know, with a little of what you don't mixed in. Remember that a container is just a Redux connected React component. We connect the React component to the Redux store using the `connect` method.
+Testing React Containers is a lot of what you already know, with a little of what you don't mixed in. Remember that a container is a Redux connected React component. We connect the React component to the Redux store using the `connect` method.
 
-While we could try to mock out our store and test through the `connect` method, we're not going to do that. We didn't write `connect`, and it's a real challenge to test through it. Even the [Redux Testing Docs](https://redux.js.org/recipes/writing-tests#connected-components) suggest that this is unwise.
+<!-- While we could try to mock out our store and test through the `connect` method, we're not going to do that. We didn't write `connect`, and it's a real challenge to test through it. Even the [Redux Testing Docs](https://redux.js.org/recipes/writing-tests#connected-components) suggest that this is unwise.
 
-With that in mind, there are three main areas of our container that need to be tested; our `Component`, our `mapStateToProps` function, and our `mapDispatchToProps` function.
+With that in mind, there are three main areas of our container that need to be tested; our `Component`, our `mapStateToProps` function, and our `mapDispatchToProps` function. -->
 
 Lets take a look at our container to remind ourselves:
 
@@ -217,7 +217,6 @@ class AddTodoForm extends Component {
   }
 
   render() {
-    console.log(this.props);
     const { handleSubmit, todos } = this.props;
     return (
       <section>
@@ -242,7 +241,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = (dispatch) => ({
   handleSubmit: (text, id) => dispatch(addToDo(text, id))
 });
- 
+
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm);
 ```
@@ -250,9 +249,92 @@ export default connect(mapStateToProps, mapDispatchToProps)(AddTodoForm);
 <section class="note">
 ### Some Context
 
-In some projects, you'll see the component imported into the container file, rather than all in one file. Both are reasonable approaches, the former being mostly for container reusability.
+In some projects out in the wild, you'll see the component imported into the container file, rather than all in one file. Both are reasonable approaches, the former being mostly for container reusability.
 </section>
 
+<section class="call-to-action">
+### Let's Think
+
+Take a moment to think about testing these connected components. Since this component is connected to the Redux store, what might happen when we import component into a test file and call `render()` (from React Testing Library) with the component? Will it go well for us? Why not?
+
+<!-- The component is connected to the store, and if the component is rendered without a provider around it, then it has no store to connect to -->
+</section>
+
+With a connected component, any time we bring the component into a test, it will try to connect to the Redux store. But if the component is rendered on its own in the test, then it no longer has a `Provider` wrapped around it (like we would see in the `src/index.js` file around `App`).
+
+So it no longer has access to a Redux store and can't connect! For unit and integration test where we are testing a component that is connected to the store, we must "provide" a redux store for that component to connect to.
+
+Let's break it down. We need to:
+
+* Test a component connected to the store
+* Give that component a store to connect to
+* A store is created and given to a `Provider` component and wrapped around a component
+* So we need to make a store, give it to a provider, and wrap the component under test with that provider
+
+Here is what that could look like in pseudocode:
+
+```js
+// AddTodoFormContainer test file
+
+// ..other testing imports up here
+
+// import the function needed to make a store
+// import the component that provides the store to whatever it is wrapped around
+// import the root reducer
+
+it('can render AddTodoForm and see the form', () => {
+  // make a new Redux store
+
+  // render the component with the component under test (AddTodoFormContainer) wrapped in a Provider
+  // this part is the crux of it all, so no worries if it's tough
+
+  // check that the form is rendering as expected
+});
+```
+
+<section class="call-to-action">
+### Try it Out!
+
+Take some time to fill in the pseudocode from above. Take it one line at a time, and phone a friend when you need to!
+</section>
+
+<section class="answer">
+### Testing a Connected Component
+
+```js
+// AddTodoForm.test.js
+
+import React from 'react';
+import AddTodoForm from './AddTodoForm';
+
+import { render } from '@testing-library/react';
+import '@testing-library/jest-dom';
+
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+import { rootReducer } from '../reducers';
+
+
+describe('AddTodoForm', () => {
+  it('can render AddTodoForm and see the form', () => {
+    const store = createStore(rootReducer);
+
+    const { getByPlaceholderText } = render(<Provider store={store}><AddTodoForm /></Provider>);
+
+    expect(getByPlaceholderText('Add A Todo')).toBeInTheDocument();
+  });
+});
+```
+</section>
+
+If you want to get fancy with it and reduce the boilerplate around each component under test for every `it` block, then checkout how a special `render` function can be made from the React Testing Library [recipes docs](https://testing-library.com/docs/example-react-redux). Keep in mind this is not necessary for your projects.
+
+<section class="note">
+### Testing Functions Being Called
+
+Note that with this style of test, since Redux is giving the component the function to call when the form is submitted, we don't have direct access to that function to check if it's called. Therefore, we cannot have the same style test as before where would check if a `jest.fn()` was invoked with the correct arguments...you can debate in your head for a few minutes on if you like that or not.
+</section>
+<!--
 ### Container Tests
 
 When we go to test this container, as mentioned before, we don't want to test through `connect`. This means when importing into our test file, we don't want the default export `connect`, but instead want to import the component on it's own, as well as `mapStateToProps` and `mapDispatchToProps`. To achieve this, we'll need to add named exports to all three, like so:
@@ -387,13 +469,11 @@ describe('AddTodoFormContainer', () => {
 ### Discuss With a Partner
 
 Assume we have another action `removeTodo`, and that our `todosReducer` digests it properly. Write a test that checks `dispatch` is called with this `removeTodo` action, whenever the `mappedProp` of `handleRemove` is called.
-</section>
+</section> -->
 
 ## Final Thoughts
 
 Testing Redux can be your favorite thing in the world if you lean into it. All of the pieces of the Redux flow have been designed so that they are easy to test. You can do it, give it a shot!
-
-Feel free to check out the `finish-testing` branch for the solutions to the actions, reducers, & containers we tested in this session. There are also some additional resources below if you'd like to dive into the topic further.
 
 ## Resources
 [Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
