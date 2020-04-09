@@ -334,6 +334,15 @@ If you want to get fancy with it and reduce the boilerplate around each componen
 
 Note that with this style of test, since Redux is giving the component the function to call when the form is submitted, we don't have direct access to that function to check if it's called. Therefore, we cannot have the same style test as before where would check if a `jest.fn()` was invoked with the correct arguments...you can debate in your head for a few minutes on if you like that or not.
 </section>
+
+<section class="call-to-action">
+### Break the Code!
+
+Take out the `Provider` component in your test so that you're rendering only the `<AddTodoForm />`. What happens? What is the error? Why are you getting this error?
+
+Note down this error because you might see it again in the future.
+</section>
+
 <!--
 ### Container Tests
 
