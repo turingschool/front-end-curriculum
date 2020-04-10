@@ -32,7 +32,22 @@ Unit tests aim to test individual pieces of code as throughly as possible. In Re
 
 ### Testing in Redux  
 
-In order to test Redux, we need to first consider the pieces that will require testing. We'll need Action Creator tests, Reducer tests, Container tests, and tests for any Redux Middleware we may be using. For this lesson, we're just going to focus on the first three.
+In order to test Redux, we need to first consider the pieces that will require testing.
+
+<section class="note"> 
+**When it comes to redux, what do you think we need to test?**
+Take a look at the <a href="https://redux.js.org/recipes/writing-tests/" target="_blank">Redux docs</a> and come up with an answer.
+</section>
+<section class="answer">
+ We'll need:
+- Action Creator tests
+- Reducer tests 
+- Container tests
+- Tests for any Redux Middleware we may be using
+
+ For this lesson, we're just going to focus on the first three.
+</section>
+
 
 Testing in Redux can actually be a very pleasant experience, because all the functions you'll be writing while using Redux are *pure*. This means that given the same inputs for a function, we'll always get back the same output. For more explanation of pure functions, check out [this post](http://www.nicoespeon.com/en/2015/01/pure-functions-javascript/).
 
@@ -485,6 +500,6 @@ Assume we have another action `removeTodo`, and that our `todosReducer` digests 
 Testing Redux can be your favorite thing in the world if you lean into it. All of the pieces of the Redux flow have been designed so that they are easy to test. You can do it, give it a shot!
 
 ## Resources
-[Testing Section of Official Redux Docs](http://redux.js.org/docs/recipes/WritingTests.html)  
+[Testing Section of Official Redux Docs](https://redux.js.org/recipes/writing-tests/)  
 [Comprehensive Blog Post about Unit Testing Redux](https://www.codementor.io/reactjs/tutorial/redux-unit-test-mocha-mocking)  
 [Blog Post About Testing Containers](http://www.wsbrunson.com/react/redux/test/2016/05/08/testing-redux-containers.html)  
