@@ -114,12 +114,13 @@ After running the code in the console that is pictured above, the text of the `h
 
 Fork [this CodePen](https://codepen.io/turing-school/pen/bGGmOrR) and complete the steps listed below, in the `JS` file of the CodePen.
 
-- Declare a variable `name` and assign it to the value of the element with the class of `student-1`
+- Declare a variable `name` and assign it to the value of the element with the class of `student`
 - Declare a variable `schoolName` and assign it to the value of the `h3` element
 - Declare a variable `bestGrade` and assign it to the value of the element with a class of `grade-2`
-- Change the `innerText` of the `name` variable to your name
-- Change the `innerText` of the `schoolName` variable to be the name of a school you've attended
-- Change the `innerText` of the `bestGrade` variable to be an `A+`!
+- Declare a variable `newData` and assign it to an object with keys of `name`, `schoolName`, and `bestGrade`, whose values are new strings with whatever information you want to display on the page instead.
+- Change the `innerText` of the `name` variable to the `name` value from your `newData` object
+- Change the `innerText` of the `schoolName` variable to the `schoolName` value from your object
+- Change the `innerText` of the `bestGrade` variable to be the grade you gave your `bestGrade` key in your object
 </section>
 
 ### `innerHTML`
@@ -131,11 +132,18 @@ It can not only insert plain text, but it can insert HTML elements. For the exam
 ```javascript
 var box = document.querySelector('.call-to-action');
 
+var pageData = {
+  title: "Pizza is Tasty",
+  body: "Yum!"
+}
+
 box.innerHTML = `
-  <h3>Title</h3>
-  <p>a bunch of text here</p>
+  <h3>${pageData.title}</h3>
+  <p>${pageData.body}</p>
 `;
 ```
+
+Turn and talk with a partner - BEFORE you run this code, what do you think is happening? What do you think will happen when it's run?
 
 Try running this code in the browser and see what happens to the first "call to action" box that appears on the page!
 
