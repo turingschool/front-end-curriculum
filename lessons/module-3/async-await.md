@@ -109,14 +109,14 @@ const getSomeAdvice = async () => {
       throw new Error('Weird error');
     }
     let data = await response.json();
-    console.log(data.slip.advice);
+    return data.advice.slip;
   }
   catch (e) {
     console.log(e.message);
   }
 };
 
-getSomeAdvice();
+getSomeAdvice().then(data => console.log(data)).catch(err => console.error(err));
 ```
 </section>
 
