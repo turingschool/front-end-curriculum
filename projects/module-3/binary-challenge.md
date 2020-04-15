@@ -37,7 +37,7 @@ There are a lot of different tools you can use for this, including just plain ol
 
 3. Your applications should have the following core functionality:
   - Display the data from the API in a way that applies directly to your audience
-  - Ability for users to store/manipulate the data displayed in the application, such as favoriting or adding to a list 
+  - Ability for users to store/manipulate the data displayed in the application, such as favoriting or adding to a list
 
 ### Day-1 Deliverables
 
@@ -65,10 +65,10 @@ If you have wireframes ready to go, send those along too. You can send your wire
 
 ### Testing
 
-* 4 - All requirements from 3 met, all async functionality is tested, tests are passing and run efficiently (using mount only when appropriate).
-* 3 - All Redux functionality is tested (actions, reducers, mapStateToProps, mapDispatchToProps), all components are unit tested, and a valid attempt was made to test any async functionality.
-* 2 - Nearly all unit tests for Redux and React are in place. No attempt to test async functionality was made.
-* 1 - A valid attempt to test this application was made, but there are obvious gaps, with missing unit tests for Redux and React.
+* 4 - All requirements from 3 are met. All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
+* 3 - All Redux functionality is tested (actions and reducers), all components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
+* 2 - Nearly all unit tests are in place. React components are well tested with a diverse set of tests including but not limited to unit testing display of the component, event simulation tests, and unit tests for functions passed as props. There are tests in place for actions and reducers. No attempt to test async functionality was made.
+* 1 - A valid attempt to test this application was made, but there are obvious gaps with missing unit tests for Redux and React.  
 
 ### Redux Architecture
 
