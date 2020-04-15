@@ -46,14 +46,14 @@ Your app should support two different types of users: a customer and a manager. 
 
 ```
 username: manager
-password: overlook2019
+password: overlook2020
 ```
 
 If it is a **customer** logging in, they should log in with the following credentials:
 
 ```
 username: customer50 (where 50 is the ID of the user)
-password: overlook2019
+password: overlook2020
 ```
 
 
