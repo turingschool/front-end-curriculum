@@ -80,7 +80,8 @@ This workflow is not required, but will help you meet the overall requirements o
 5. Create central game board on the DOM
 6. Connect Game data model to the DOM
 7. Display the Player data in the sidebars
-8. Persist Player data using local storage (number of wins and mini-boards displaying won games should persist across page refreshes)
+8. Automatically reset the game board to allow for a new game to be played after the previous game is won
+9. Persist Player data using local storage (number of wins and mini-boards displaying won games should persist across page refreshes)
 
 ## Rubric
 
