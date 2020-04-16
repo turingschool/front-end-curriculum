@@ -52,9 +52,9 @@ Your entire application will consist of one HTML page or template. You will have
 1. A `player.js` file that contains a `Player` class.
 	* `Player` methods must include, _but are not limited to_:
 		1. `constructor`
-      - `id` (ex: `'one'`)
-      - `token` (ex: `'⭐️'`)
-      - `wins` (ex: `[]`)
+                       - `id` (ex: `'one'`)
+                       - `token` (ex: `'⭐️'`)
+                       - `wins` (ex: `[]`)
 		2. `saveWinsToStorage`
 		3. `retrieveWinsFromStorage`
 2. A `game.js` file that contains a Game class. 
