@@ -305,6 +305,7 @@ A basic rule of thumb for determining if a component should be function-based or
 
 In general, function-based components are lighter than class-based components. You'll find that most of your applications will be made up of simple function-based components, getting their data from a few heavier class-based components.
 
+
 ## Ideas.js
 
 Let's skip the Form component for now. We'll come back to it later! Let's focus on getting our two ideas to render!
@@ -592,7 +593,84 @@ const Card = ({ title, description, id }) => {
 
 I created a button to delete the Card, but we'll get to that later. For now, high five the people at your table, because we just got this sucker to display some ideas!!
 
-### Form.js
+## Conditional Rendering
+
+Before me move on, lets tighten up the UX here a bit. 
+
+<section class="call-to-action">
+### Try making App.state.ideas an empty array. 
+What happens?
+</section>
+
+Right now if we take the ideas out of state, nothing really renders. That's not a great user experience, so lets give the user some context on what to do.
+
+<section class="note"> 
+  **If** there are no ideas in the App's state, **then** the App should tell the user to add some ideas.
+</section>
+
+This kind of logic is what's known as **Conditional Rendering**.
+
+Conditional rendering is exactly what it sounds like: telling a component to render something based on a condition. We put some JS into our component's render function, and tell it what to put on the DOM based on some set of conditions. Let's add some here!
+
+Currently our App looks like this:
+
+```javascript
+// App.js
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      ideas: []
+    }
+  }
+
+  render () {
+    return (
+      <main className="App">
+        <h1>IdeaBox</h1>
+        <Ideas ideas={this.state.ideas} />
+      </main>
+    )
+  }
+}
+
+
+```
+
+<section class="answer">
+### In plain JS, what could this conditional look like?
+```javascript
+if (! this.state.ideas.length) {
+  // render an h2 saying to add some ideas
+}
+```
+</section>
+
+We want this logic to live inside of our `render()` method, so we can use curly braces to inject JS into our JSX. However, we need whatever is inside of our curlies to _evaluate_ to the HTML we want rendered, so we'll use some syntax like this:
+
+```
+// App.js 
+
+render() {
+  <main className="App>
+    <h1>IdeaBox</h1>
+    {!this.state.ideas.length && <h2>No ideas yet -- add some!</h2> }
+    <Ideas ideas={this.state.ideas} />
+  </main>
+}
+
+```
+
+<section class="note">
+### If this syntax feels weird, take a look at the [logical && operator's docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#Logical).
+
+What does the operator return? 
+</section>
+
+The code above says that, if the expression on the left side of the `&&` is true, return the expression on the right side. So if there are no ideas in state, return our h2!
+
+## Form.js
 
 Let's move on to our Form component. We're going to create what is known as a controlled form.
 
