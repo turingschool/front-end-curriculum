@@ -200,7 +200,7 @@ Choose one or more of these extensions for this iteration.
 
 _Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
-***Use a project board to guide your workflow**
+***Use a project board to guide your workflow***
 Use a tool like GitHub pages or Trello to split up iteration items into small tasks. 
 
 ***Build out another study/flashcards dataset***
@@ -224,7 +224,7 @@ At the beginning of the game, give options for choosing to study different subje
 ***CYOE (Choose Your Own Extension)***  
 Collaborate with instructors to personalize an extension for this project
 
-# Repeaters
+## Repeaters
 - Must create a brand new repo and start the project fresh
 - Should aim to complete at least one extension
 
