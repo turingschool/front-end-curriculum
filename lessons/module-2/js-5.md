@@ -87,7 +87,7 @@ Where `int` says "This variable must be an integer", `count` is the name of our 
 Compare this to JavaScript where we might declare the same variable like so:
 
 ```js
-var count = 5;
+let count = 5;
 ```
 
 How does JavaScript know what data type we're working with? It infers it based on the way we wrote the value. If JavaScript were a person, it might look at this line of code and ask:
@@ -103,10 +103,10 @@ How does JavaScript know what data type we're working with? It infers it based o
 In addition to having our data types inferred, dynamically typed languages also allow for the data type of a value to change over time. Consider the following code:
 
 ```js
-var counter = 5;
-var newCounter = '10';
+let counter = 5;
+let newCounter = '10';
 
-var totalCount = counter + newCounter;
+let totalCount = counter + newCounter;
 console.log(totalCount); // what value and data type will totalCount be?
 ```
 
@@ -157,7 +157,7 @@ On the whiteboard, under the primitives column, list the following characteristi
 Primitive data types are not objects, have no methods, and are immutable. Let's uncover a bit more about these properties of a primitive data type. Consider the following code:
 
 ```js
-var cow = 'moo';
+let cow = 'moo';
 cow.toUpperCase();
 console.log(cow); // what will be logged here?
 ```
@@ -178,7 +178,7 @@ console.log(cow); // what will be logged here?
 This particular code example seems to fly in the face of what we just learned about primitives. We are using dot notation to call a method on our `cow` variable, then uppercasing it with that method. You'll notice, however, that when we log our `cow` on line 3, we still get the lower cased original version of that string. In order to capture that new format, we would need to reassign the `cow` variable to that new representation of the string, like so:
 
 ```js
-var cow = 'moo';
+let cow = 'moo';
 cow = cow.toUpperCase();
 console.log(cow);
 ```
@@ -207,9 +207,9 @@ If we want to access our object later, we need to store it in a variable.
 If we had a lot of information we wanted to store about our dog we might be tempted to create a lot of variables.
 
 ```js
-var dogName = 'Boris';
-var dogAge = 3;
-var dogBreed = 'Labradoodle';
+let dogName = 'Boris';
+let dogAge = 3;
+let dogBreed = 'Labradoodle';
 ```
 
 We could store the same information in an object. Objects are the fundamental building block for organizing the information in our application. Objects are made up of properties. A property has two parts a key and a value.
@@ -342,9 +342,18 @@ A function declaration is declared using the keyword `function` and the followin
 
 ```js
 function sayHi () {
-	var greeting = 'Hi!';
+	let greeting = 'Hi!';
 	
 	console.log(greeting);
+}
+```
+
+```js
+// ES6 "fat arrow" style function
+const sayHi = () => {
+	let greeting = 'Hi!';
+
+	console.log(greeting)
 }
 ```
 
@@ -352,7 +361,7 @@ function sayHi () {
 
 ```js
 function sayHi () {
-	var greeting = 'Hi!';
+	let greeting = 'Hi!';
 
 	console.log(greeting); // 'Hi!'
 }
@@ -368,7 +377,7 @@ If we want to pass information into a function, we pass in a parameter when we d
 ```js
 // this function has a parameter of name
 function sayHi (name) {
-	var greeting = 'Hi, ' + name + '!';
+	let greeting = 'Hi, ' + name + '!';
 
 	console.log(greeting);
 }
@@ -381,12 +390,12 @@ If we want to create something in the function and use it outside of our functio
 
 ```js
 function makeGreeting (name) {
-	var greeting = 'Hi, ' + name + '!';
+	let greeting = 'Hi, ' + name + '!';
 
 	return greeting;
 }
 
-var mabelGreeting = makeGreeting('Mabel');
+let mabelGreeting = makeGreeting('Mabel');
 
 console.log(mabelGreeting);
 ```
