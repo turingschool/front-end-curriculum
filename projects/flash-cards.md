@@ -200,6 +200,9 @@ Choose one or more of these extensions for this iteration.
 
 _Note: Solving some of these problems may require modifying pre-existing code that was given to you_
 
+***Use a project board to guide your workflow**
+Use a tool like GitHub pages or Trello to split up iteration items into small tasks. 
+
 ***Build out another study/flashcards dataset***
 Create a new dataset that is structured similarily to our prototypes dataset. This dataset should be reviewing another fundamental topic and should live in the same `data.js` file.. Update your application so that once the first `Round` is over (and thus, the `Game` is over), a new `Round` starts with the new dataset that you've created.
 
@@ -221,8 +224,12 @@ At the beginning of the game, give options for choosing to study different subje
 ***CYOE (Choose Your Own Extension)***  
 Collaborate with instructors to personalize an extension for this project
 
+# Repeaters
+- Must create a brand new repo and start the project fresh
+- Should aim to complete at least one extension
+
 # Evaluations / Submission
 
-This project will be evaluated remotely by your instructors over the weekend. We will have a retro the following Monday to go over common issues and takeaways for the project.
+This project will be evaluated remotely by your instructors over the weekend. We will send you written feedback on your project by Sunday afternoon / Monday. 
 
 Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit?usp=sharing" target="_blank">here</a> by __9PM on Thursday, May 7th__.
