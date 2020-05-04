@@ -22,7 +22,7 @@ Get set up by cloning down [this repo](https://github.com/turingschool-examples/
 2. Learn to pass information between components using props.
 3. Learn to write readable JSX (your render methods/return statements should be clean and simple).
 4. Use `propTypes` for every component receiving props.  
-5. Learn how to unit test React components including snapshot testing, methods, and changes in state.
+5. Learn how to unit test React components including smoke testing, methods, and changes in state.
 
 ## Specifications
 
@@ -91,7 +91,7 @@ Here is what the endpoint looks like to get the news data.
 
 ### Testing
 
-* 1 - There is little or no evidence of testing in the application.  There are some UI tests including snapshot tests, but snapshots have not been updated and there are major gaps in unit testing functionality.
-* 2 - Snapshot tests are up to date but don't cover all scenarios. Components have some event simulation tests and tests on class methods but many are still failing.
-* 3 - Snapshot tests cover all scenarios of what the UI can look like including classes.  Tests are passing but there are gaps still in testing all functionality
-* 4 - Components are full tested including snapshots, class methods, and event simulation tests. Evaluator has no recommendations for testing.
+* 1 - There is little or no evidence of testing in the application.  There are some UI tests including smoke tests, but tests do not reflect the end state of the component and there are major gaps in unit testing functionality.
+* 2 - Smoke tests are up to date but don't cover all scenarios. Components have some event simulation tests and tests on class methods but many are still failing.
+* 3 - Smoke tests cover all scenarios of what the UI can look like including classes.  Tests are passing but there are gaps still in testing all functionality
+* 4 - Components are full tested including rendering, class methods, and event simulation tests. Evaluator has no recommendations for testing.
