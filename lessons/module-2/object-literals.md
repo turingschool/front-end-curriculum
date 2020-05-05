@@ -128,10 +128,10 @@ for (let i = 0; i < dogDetails.length; i++) {
 <section class="call-to-action">
 ### Individual Practice Time!
 
-* 1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
-* 2. Spend no more than *40 minutes* working through the problems on your own
-* 3. When you've finished, send your completed REPL to your instructor in a Slack DM
-* 4. Take a POM and wait for next steps 
+1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
+2. Spend no more than *40 minutes* working through the problems on your own
+3. When you've finished, send your completed REPL to your instructor in a Slack DM
+4. Take a POM and wait for next steps 
 
 </section>
 
