@@ -115,6 +115,14 @@ for (var i = 0; i < dogDetails.length; i++) {
 *In the above example, note that you can do NESTED bracket notation!*
 
 
+<section class="checks-for-understanding">
+### Checks for Understanding
+
+* When would you use dot notation?
+* When would you use bracket notation?
+
+</section>
+
 
 ## Individual Object Literal Practice
 [Instructions](https://gist.github.com/hannahhch/14ef41fb61103bb532ddb91d725d44dd)
