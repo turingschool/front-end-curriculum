@@ -123,14 +123,14 @@ for (let i = 0; i < dogDetails.length; i++) {
 * When would you use bracket notation?
 
 </section>
-
+</br>
 
 ## Individual Object Literal Practice
 [Instructions](https://gist.github.com/hannahhch/14ef41fb61103bb532ddb91d725d44dd)
 
 ## Additional Resources
 * [Dots vs. Brackets Instructor Video](https://www.youtube.com/watch?v=DJ0deyVQZPw)
-* [Object.keys() from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)]
+* [Object.keys() from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 * Bonus Cool Object Methods:
   * [Object.values()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values) - returns an array of the targeted object values
   * [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) - returns an array of arrays containing the key and value of targeted object
