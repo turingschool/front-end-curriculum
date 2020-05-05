@@ -123,12 +123,20 @@ for (let i = 0; i < dogDetails.length; i++) {
 * When would you use bracket notation?
 
 </section>
-</br>
 
-## Individual Object Literal Practice
-[Instructions](https://gist.github.com/hannahhch/14ef41fb61103bb532ddb91d725d44dd)
 
-## Additional Resources
+<section class="call-to-action">
+### Individual Practice Time!
+
+* 1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
+* 2. Spend no more than *40 minutes* working through the problems on your own
+* 3. When you've finished, send your completed REPL to your instructor in a Slack DM
+* 4. Take a POM and wait for next steps 
+
+</section>
+
+
+### Additional Resources
 * [Dots vs. Brackets Instructor Video](https://www.youtube.com/watch?v=DJ0deyVQZPw)
 * [Object.keys() from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
 * Bonus Cool Object Methods:
