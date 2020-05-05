@@ -116,8 +116,11 @@ for (var i = 0; i < dogDetails.length; i++) {
 
 
 
+## Individual Object Literal Practice
+[Instructions](https://gist.github.com/hannahhch/14ef41fb61103bb532ddb91d725d44dd)
 
-
+## Additional Resources
+* [Dots vs. Brackets Instructor Video](https://www.youtube.com/watch?v=DJ0deyVQZPw)
 
 <!-- Instructor Resources
 
