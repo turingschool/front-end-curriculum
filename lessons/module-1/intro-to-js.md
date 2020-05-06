@@ -242,6 +242,9 @@ A script is a series of instructions that a computer can follow one-by-one. Each
 Example statements:
 
 ```javascript
+"hello";
+358;
+false;
 console.log('BOOM');
 alert('POW');
 ```
@@ -250,13 +253,9 @@ alert('POW');
 
 An **expression** is a statement that, when read by the browser, results in a single value. Expressions can use operators to create this single value. Here are some example expressions:
 
-This expression results in "apple"
+This expression results in "apple": `"ap" + "ple"`
 
-`"apple"`
-
-This expression results in 5
-
-`2 + 3`
+This expression results in 5: `2 + 3`
 
 ### What is the difference?
 
