@@ -29,9 +29,9 @@ duck.color = 'yellow'; // adds a key named 'color' to our duck object, with the 
 This works great in simple scenarios as seen above, but often times we are doing more complex manipulation that requires a bit more flexibility than dot notation gives us. This is where **Bracket Notation** comes into play. When we use bracket notation, JavaScript will evaluate whatever is inside of the brackets before trying to create or access a key. For example:
 
 ```js
-var animal = 'duck';
+let animal = 'duck';
 
-var farm = {
+let farm = {
     duck: 'quack',
     cow: 'moo',
     sheep: 'baaa'
@@ -78,7 +78,7 @@ function getKittenDetail(index, detail) {
 // Creating key/value pairs using bracket notation
 // when our parameters represent a key and its value
 
-var experienceLevels = {
+let experienceLevels = {
   domManipulation: 'advanced beginner',
   html: 'novice',
   css: 'proficient'
@@ -97,17 +97,18 @@ addSkill('testing', 'expert');
 ```js
 // Accessing values with bracket notation when iterating
 
-var dog = {
+let dog = {
   name: 'Boris',
   age: 3,
   breed: 'Pug'
 };
 
-var dogDetails = Object.keys(dog);
+// Object.keys gives us an array of the targeted object's keys
+var dogDetails = Object.keys(dog); // ['name', 'age', 'breed'];
 
 console.log('I have a dog and...');
 
-for (var i = 0; i < dogDetails.length; i++) {
+for (let i = 0; i < dogDetails.length; i++) {
   console.log(`His ${dogDetails[i]} is ${dog[dogDetails[i]]});
 }
 ```
@@ -115,9 +116,33 @@ for (var i = 0; i < dogDetails.length; i++) {
 *In the above example, note that you can do NESTED bracket notation!*
 
 
+<section class="checks-for-understanding">
+### Checks for Understanding
+
+* When would you use dot notation?
+* When would you use bracket notation?
+
+</section>
 
 
+<section class="call-to-action">
+### Individual Practice Time!
 
+1. Fork the following [REPL](https://repl.it/repls/TrustyCarpalCalculator)
+2. Spend no more than *40 minutes* working through the problems on your own
+3. When you've finished, send your completed REPL to your instructor in a Slack DM
+4. Take a POM and wait for next steps 
+
+</section>
+
+
+### Additional Resources
+* [Dots vs. Brackets Instructor Video](https://www.youtube.com/watch?v=DJ0deyVQZPw)
+* [Object.keys() from MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
+* Bonus Cool Object Methods:
+  * [Object.values()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Object/values) - returns an array of the targeted object values
+  * [Object.entries()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/entries) - returns an array of arrays containing the key and value of targeted object
+  * [Object.assign()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/assign) - copies data from one object to another, and more!
 
 <!-- Instructor Resources
 
