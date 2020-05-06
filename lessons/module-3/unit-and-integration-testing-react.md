@@ -143,6 +143,16 @@ The React Testing Library and DOM Testing Library docs are pretty nice once you 
 
 **Keep in mind** that by installing React Testing Library, we get the functionality of the DOM Testing library for free!
 
+<section class="checks-for-understanding">
+### Organize the Library Chaos
+
+Make a table in your notebook or on a piece of paper with the following columns:
+
+* Library
+* Insallation
+* What is it? Why would we use it?
+</section>
+
 
 ### Testing What is Rendering to the Page
 
