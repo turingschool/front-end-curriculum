@@ -149,7 +149,7 @@ The React Testing Library and DOM Testing Library docs are pretty nice once you 
 Make a table in your notebook or on a piece of paper with the following columns:
 
 * Library
-* Insallation
+* Installation
 * What is it? Why would we use it?
 </section>
 
