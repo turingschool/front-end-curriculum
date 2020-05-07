@@ -28,11 +28,11 @@ By the end of this lesson, you will be able to:
 
 ---
 
-<!-- 
+<section class="call-to-action">
 ### Journal Warm Up
   * What might be a benefit of placing methods inside of objects (as opposed to defining them as functions outside of objects)? 
-  * Create an object based on this sentence: This school is a non-profit, in a basement, that opens at 9 and closes at 5.
-``` -->
+  * Create an object literal based on this sentence: This school is a non-profit, in a basement, that opens at 9 and closes at 5.
+</section>
 
 # Programming Paradigms 
 
