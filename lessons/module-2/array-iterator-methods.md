@@ -105,7 +105,7 @@ Iteration methods generally take in a callback function as their first argument:
 ### Callback Functions
 All the methods we'll talk about today will take a `callback function`. You've likely seen these before (think about event listeners). 
 
-From [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) - "A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action."
+From MDN - "A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action."
 
 
 In this example, we can see that the somePrototypeMethod (this could be a forEach, filter, etc.) is *taking in a function as an argument*. This function is called a "callback function." The callback function is what takes in the mandatory and optional parameters!
@@ -337,3 +337,9 @@ Try using these methods to refactor the country exercises to work with the whole
 </section>
 
 
+### Additional Resources
+* [Why and when to use forEach, map, filter, reduce, and find in JavaScript.](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
+* [ForEach vs For Loops](https://alligator.io/js/foreach-vs-for-loops/)
+* [Finally Understand the JavaScript Reduce Method](https://alligator.io/js/finally-understand-reduce/)
+* [JavaScript Callback Functions - What are Callbacks in JS and How to Use Them](https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/)
+* [Callback Functions MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function)
