@@ -138,7 +138,7 @@ There are many array prototype methods out there, but we are going to focus on s
 ### `Array.forEach(callbackFunction)`
 
 Use Case: when you want to perform an operation on every element in an array.
-Note: `forEach` does NOT return anything. It's just a for loop in a method.
+Note: `forEach` does NOT return anything (even if you have return statements!!) It's just a for loop in a method.
 
 ```js
 let words = ['hello', 'world'];
@@ -152,7 +152,21 @@ Console will print:
   hello
   world
 */
+
+function displayLoudWords() {
+  let loudWords = [];
+
+  words.forEach(word => {
+    loudWords.push(word.toUpperCase());
+  });
+
+  return loudWords;
+}
 ```
+We can push our element data into an array and return that, but the array MUST exist outside of the forEach. 
+While this is valid code, there is a better method we can use to achieve this. 
+
+
 
 ### `Array.map(callbackFunction)`
 
@@ -161,23 +175,38 @@ Note: `map` will return a **new array of the same length** as the original array
 
 The `map()` method is very similar to `forEach()`, except that each time the callback is executed, whatever is returned from the callback is added to the new array that map returns.
 
+Cleaner, right?
+```js
+let words = ['hello', 'world'];
+
+function displayLoudWords() {
+  return words.map(word => {
+    return word.toUpperCase();
+  });
+}
+
+```
+
+<section class="checks-for-understanding">
+#### Return?
+What is the purpose of each `return` statements in the `map()` example above?
+</section>
+
+*Another Example* 
 ```js
 let evenNumbers = [2, 4, 6, 8, 10];
 
-let oddNumbers = evenNumbers.map((number, index, array) => {
+let oddNumbers = evenNumbers.map((number, index) => {
   return number + 1;
 });
 
 console.log(oddNumbers); // [3, 5, 7, 9, 11]
 ```
-<section class="checks-for-understanding">
-#### Return?
-What is the purpose of the `return` in the `map()` example above?
-</section>
+What is the purpose of the `index` param?
 
 ### `Array.find(callbackFunction)`
 Use case: when you need to find a particular item in an array that matches a given condition. It will return the very first array element where the callback function returns true, even if there are multiple matches.
-Note: the callback needs to return a **boolean**. You also cannot modify the element you're finding
+Note: the callback needs to return a **boolean**. You also cannot modify the element you're finding.
 
 ```js
 let pets = [
@@ -186,24 +215,36 @@ let pets = [
   { name: 'mishu', age: 3 },
 ];
 
-let threeYearOldPup = pets.find(pet => {
-  return pet.age === 3
-});
+function findThreeYearOldPet() {
+  return pets.find(pet => {
+    return pet.age === 3
+  })
+}
 
-console.log(threeYearOldPup); // { name: 'julius', age: 3 }
+findThreeYearOldPet() // { name: 'julius', age: 3 }
+```
 
-let threeYearOldPups = pets.filter(pet => {
-  return pet.age === 3;
-})
+Let's make our above example a little more dynamic and see some bracket notation in action!
 
-console.log(threeYearOldPups) // => [{name: 'julius', age: 3}, {name: 'mishu', age: 3}]
+```js
+function findPetByAge(age) {
+  return pets.find(pet => {
+    return pet[age] === 3
+  })
+}
+
+findPetByAge(3)
 ```
 
 ### `Array.filter(callbackFunction)`
 
-`Array.filter()` is very similar to `Array.find()`, but instead of simply returning the first match, it will return a new array with all elements that match.
+`Array.filter()` is very similar to `Array.find()`, but instead of simply returning the first match, it will return a new **array** with all elements that match.
 
 Note: See the notes for `.find` above.
+
+Gotchas with `find` and `filter`:
+- They are SO similar, its easy to forget that `find` always returns one element and `filter` always returns an array
+- We're used to writing `if` statements for conditionals, but `find` and `filter` are doing this for us! 
 
 
 ```js
@@ -213,14 +254,14 @@ let pets = [
   { name: 'mishu', age: 5 },
 ];
 
-let adultPets = pets.filter(pet => {
-  return pet.age === 5;
-});
+function findThreeYearOldPets() {
+  return pets.filter(pet => {
+    return pet.age === 3;
+  })
+}
 
-console.log(adultPets);
-// [{name: 'julius', age: 5}, {name: 'mishu', age: 5}]
+findThreeYearOldPets() // => [{name: 'julius', age: 3}, {name: 'mishu', age: 3}]
 ```
-
 
 ### `Array.reduce(callbackFunction, initialValue)`
 Use Case: If you need to turn an array into a single value. This single value could be a number, string, object, or another array. To accomplish this, reduce takes in two parameters:
@@ -228,6 +269,7 @@ Use Case: If you need to turn an array into a single value. This single value co
 _Callback Function_ - Within the callback, we have access to the accumulator, the current element in the iteration, the current element's index, and the original array we are looping over
 
 _Initial Value_ - The initial value to be used as the accumulator (the first argument to the first call of the callback). The accumulator is the 'single value' that will eventually be returned. It's called an accumulator because each iteration over the array will modify the accumulator value until the loop is complete.
+
 
 <!-- Note: `.reduce` is great for **cleaning data** (hint hint...) -->
 
@@ -247,13 +289,19 @@ There is a lot going on in reduce, so let's take a look at another example. Imag
 ```js
 let adjectives = ['fantastic', 'amazing', 'childish'];
 
-let wordLength = adjectives.reduce((acc, adjective) => {
-  acc[adjective] = adjective.length;
-  return acc;
-}, {})
+function getWordLengths() {
+  return adjectives.reduce((acc, adjective) => {
+    acc[adjective] = adjective.length;
+    
+    return acc;
+  }, {})
+}
 
-// wordLength is { fantastic: 9, amazing: 7, childish: 8 }
+getWordLengths() // { fantastic: 9, amazing: 7, childish: 8 }
 ```
+
+When to use reduce?? Often, students will see that we want to return one thing (array, object, number) and lean towards reduce. Sometimes another method might make more sense (remember that map returns a single array!). Think about using reduce when you want to return one thing that is a _combination_ or _sum_ of all things in your orginial array!
+
 
 ## Practice
 
