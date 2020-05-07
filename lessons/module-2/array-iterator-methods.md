@@ -91,24 +91,21 @@ What are they? Why are they useful? They loop through an existing array and appl
 
 WAIT. Can't we already iterate through arrays with a for loop?!
 
-As Javascript developers, we have many different tools in our toolbelt. Yes, we can often accomplish the same thing using a for loop, but the array iteration methods do provide some good benefits!
+In Javascript, there are often many different ways to solve something, and maybe different tools to choose from. Yes, we can often accomplish the same thing using a for loop, but the array iteration methods do provide some good benefits!
 - Cleaner syntax and easier to read
 - DRYs up code 
 - More modern way of writing Javascript
 
 There are _occassional_ times when it makes more sense to use a for loop over something like a forEach. You can read more about why to use one over the other [here](https://alligator.io/js/foreach-vs-for-loops/).
 
-Iteration methods generally take in a callback function as their first argument:
-
-`array.someArrayPrototype(callbackFunction)`
 
 ### Callback Functions
+
 All the methods we'll talk about today will take a `callback function`. You've likely seen these before (think about event listeners). 
 
 From MDN - "A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action."
 
-
-In this example, we can see that the somePrototypeMethod (this could be a forEach, filter, etc.) is *taking in a function as an argument*. This function is called a "callback function." The callback function is what takes in the mandatory and optional parameters!
+In this example, we can see that the somePrototypeMethod (this could be a forEach, filter, etc.) is **taking in a function as an argument**. This function is called a "callback function." The callback function is what takes in the mandatory and optional parameters!
 
 ```js
 someArrayData.somePrototypeMethod(function callBack (mandatoryParameter [,optionalParameters... ]) {
@@ -117,7 +114,7 @@ someArrayData.somePrototypeMethod(function callBack (mandatoryParameter [,option
 })
 ```
 
-Since these methods were introduced as part of ES6, most of the time you will see them written using a fat arrow like below:
+Since these prototype methods were introduced as part of ES6, most of the time you will see them written using a fat arrow like below:
 ```js
 someArrayData.somePrototypeMethod((mandatoryParameter [,optionalParameters... ]) => {
   // some statements
@@ -129,15 +126,20 @@ someArrayData.somePrototypeMethod((mandatoryParameter [,optionalParameters... ])
 
 Many callbacks require a return statement. Remember that these statements determine what the CALLBACK returns, **not** what the METHOD returns. The method may return something different, and this value may need to be captured (in a variable, another return statement...). 
 
-Students tend to forget that they will often need *TWO* return statements when working with iterator methods! 
+**You will often need *TWO* return statements when working with iterator methods!**
 
 You can find more information on different prototype methods and their callbacks <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods" target="\__blank">here</a>.
 
-There are many array prototype methods out there, but we are going to focus on some of these iterator methods: forEach, map, find, filter, and reduce.
+There are many array prototype methods out there, but we are going to focus on some of these iterator methods: 
+* `forEach()`
+* `map()`
+* `find()`
+* `filter()`
+* `reduce()`
 
 ### `Array.forEach(callbackFunction)`
 
-Use Case: when you want to perform an operation on every element in an array.
+Use Case: when you want to perform an operation on every element in an array. `forEach` is the prototype method that is most similar to a for loop.
 Note: `forEach` does NOT return anything (even if you have return statements!!) It's just a for loop in a method.
 
 ```js
@@ -162,6 +164,8 @@ function displayLoudWords() {
 
   return loudWords;
 }
+
+displayLoudWords() // ['HELLO', 'WORLD']
 ```
 We can push our element data into an array and return that, but the array MUST exist outside of the forEach. 
 While this is valid code, there is a better method we can use to achieve this. 
@@ -185,6 +189,7 @@ function displayLoudWords() {
   });
 }
 
+displayLoudWords() // ['HELLO', 'WORLD']
 ```
 
 <section class="checks-for-understanding">
@@ -284,7 +289,7 @@ let sum = numbers.reduce((sum, number) => {
 ```
 
 
-There is a lot going on in reduce, so let's take a look at another example. Imagine we have an array that we want to turn into and object. We could do something like the following:
+There is a lot going on in reduce, so let's take a look at another example. Imagine we have an array that we want to turn into an object. We could do something like the following:
 
 ```js
 let adjectives = ['fantastic', 'amazing', 'childish'];
@@ -300,24 +305,12 @@ function getWordLengths() {
 getWordLengths() // { fantastic: 9, amazing: 7, childish: 8 }
 ```
 
-When to use reduce?? Often, students will see that we want to return one thing (array, object, number) and lean towards reduce. Sometimes another method might make more sense (remember that map returns a single array!). Think about using reduce when you want to return one thing that is a _combination_ or _sum_ of all things in your orginial array!
+**When to use reduce??** - Often, students will see that we want to return one thing (array, object, number) and lean towards reduce. Sometimes another method might make more sense (remember that map returns a single array!). Think about using reduce when you want to return one thing that is a _combination_ or _sum_ of all things in your orginial array!
 
 
-## Practice
+## Paired Practice
 
-The best way to get comfortable with these methods is to practice them, so we will!
-
-We'll break into groups and work on some <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">stations</a>. Answer the questions in each markdown file, and work through the problems in a repl.
-
-The stations will be:
-1. `forEach`
-2. `map`
-3. `find`
-4. `filter`
-5. `reduce`
-
-It's highly recommended to keep a list of the methods, along with answers to the questions from the markdown files, in a place that's easy to turn back to!
-
+<a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">https://github.com/turingschool-examples/iterator-methods-stations</a>
 <!--
 ## What About Objects?
 
@@ -325,12 +318,16 @@ How do we iterate through objects?... Hint: `Object.keys()` or `Object.values()`
 
 Notice the different style of how these methods are used. How are these methods used for a given object?
 
-Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a> -->
+Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a>
+
+## Homework
+
+Make a copy of this [google sheet](https://docs.google.com/spreadsheets/d/1dgVmzc-t8vb9w2P7gaFJtmkcVoQBzFqFOCQDKysxpaw/edit#gid=0). Fill out the table for each prototype method so you can use it to reference. It might be helpful to link examples too!
 
 <section class="checks-for-understanding">
 ### Checks for Understanding
 
-* Describe an array?
+* Describe an array.
 * What is a prototype method?
 * Name three prototype methods for an array.
 * Which prototype methods are the most confusing right now?
@@ -338,7 +335,7 @@ Try using these methods to refactor the country exercises to work with the whole
 
 
 ### Additional Resources
-* [Why and when to use forEach, map, filter, reduce, and find in JavaScript.](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
+* [Why and when to use forEach, map, filter, reduce, and find in JavaScript](https://medium.com/@JeffLombardJr/understanding-foreach-map-filter-and-find-in-javascript-f91da93b9f2c)
 * [ForEach vs For Loops](https://alligator.io/js/foreach-vs-for-loops/)
 * [Finally Understand the JavaScript Reduce Method](https://alligator.io/js/finally-understand-reduce/)
 * [JavaScript Callback Functions - What are Callbacks in JS and How to Use Them](https://www.freecodecamp.org/news/javascript-callback-functions-what-are-callbacks-in-js-and-how-to-use-them/)
