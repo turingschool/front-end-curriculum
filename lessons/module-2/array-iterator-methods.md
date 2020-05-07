@@ -17,15 +17,30 @@ Students should be able to:
 
 Arrays and objects are the more complex data types that are available to us in JavaScript. What are all the data types you know of?
 
-<section class="call-to-action">
+<!-- <section class="call-to-action">
 **In Your Notebook**
 Write down everything you know about arrays. Think about when you've used them in the past, where you've seen them, and what you've done with them.
-</section>
+</section> -->
 
 An array is essentially a comma-separated list of related values. For example:
 
 ```js
-let pizzaToppings = ['onions', 'garlic', 'peppers'];
+let pizzaToppings = ['tomato', 'cheese', 'pepperoni'];
+```
+
+```js
+let lunch = [
+  {
+    name: 'apple pie',
+    type: 'dessert',
+    ingredients: ['dough', 'apples', 'butter', 'sugar']
+  },
+  {
+    name: 'sandwich',
+    type: 'main',
+    ingredients: ['bread', 'peanut butter', 'jelly']
+  }
+];
 ```
 
 <!-- An object is a set of data stored in key-value pairs that provide a little additional specificity and context to the information. For example:
@@ -36,12 +51,14 @@ let pizza = {
   sauce: 'tomato',
   size: 14,
   extraCheese: true,
-  toppings: ['onions', 'garlic', 'peppers']
+  toppings: ['tomato', 'cheese', 'pepperoni']
 };
 ``` -->
 
 
 ## A Review of `for` Loops
+
+When would you use a `for` loop?
 
 <section class="call-to-action">
 **With Someone Next to You**
@@ -60,31 +77,63 @@ In order to understand what a prototype method is, let's break down the terms in
 
 Prototype methods are functions that allow you to manipulate the value of a particular data type or class. JavaScript comes with several built-in data types that each have their own prototype methods, that allow you to interact with them in certain ways. For example, you might want to add or remove an item from an array. Or inspect the properties on an object. Prototype methods allow you to perform these actions and manipulate your values.
 
+You might already be familiar with some of the following prototype methods:
+- `.length()`
+- `.pop()`
+- `.push()`
+
+Which other ones can you name?
+
 
 ## Array Iteration Methods (Prototypes)
 
-What are they? Why are they useful? They loop through an existing array and apply a callback function to each element that might mutate each element and return a new value. Iteration methods generally take in a callback function as their first argument:
+What are they? Why are they useful? They loop through an existing array and apply a callback function to each element that might mutate each element and return a new value. 
+
+WAIT. Can't we already iterate through arrays with a for loop?!
+
+As Javascript developers, we have many different tools in our toolbelt. Yes, we can often accomplish the same thing using a for loop, but the array iteration methods do provide some good benefits!
+- Cleaner syntax and easier to read
+- DRYs up code 
+- More modern way of writing Javascript
+
+There are _occassional_ times when it makes more sense to use a for loop over something like a forEach. You can read more about why to use one over the other [here](https://alligator.io/js/foreach-vs-for-loops/).
+
+Iteration methods generally take in a callback function as their first argument:
 
 `array.someArrayPrototype(callbackFunction)`
 
 ### Callback Functions
-All the methods we'll talk about today will take a `callback function`. You've likely seen these before, but we'll got over the basic syntax:
+All the methods we'll talk about today will take a `callback function`. You've likely seen these before (think about event listeners). 
+
+From [MDN](https://developer.mozilla.org/en-US/docs/Glossary/Callback_function) - "A callback function is a function passed into another function as an argument, which is then invoked inside the outer function to complete some kind of routine or action."
+
+
+In this example, we can see that the somePrototypeMethod (this could be a forEach, filter, etc.) is *taking in a function as an argument*. This function is called a "callback function." The callback function is what takes in the mandatory and optional parameters!
 
 ```js
-someData.somePrototype(function callBack (mandatoryParameter [,optionalParameters... ]) {
+someArrayData.somePrototypeMethod(function callBack (mandatoryParameter [,optionalParameters... ]) {
   // some statements
   // often a return statement
 })
 ```
-Easy, right?
 
-#### Side Note:
+Since these methods were introduced as part of ES6, most of the time you will see them written using a fat arrow like below:
+```js
+someArrayData.somePrototypeMethod((mandatoryParameter [,optionalParameters... ]) => {
+  // some statements
+  // often a return statement 
+})
+```
 
-Many callbacks require a return statement. Remember that these statements determine what the CALLBACK returns, **not** what the METHOD returns. The method may return something different, and this value may need to be captured (in a variable, another return statement...).
+#### More on Callbacks
+
+Many callbacks require a return statement. Remember that these statements determine what the CALLBACK returns, **not** what the METHOD returns. The method may return something different, and this value may need to be captured (in a variable, another return statement...). 
+
+Students tend to forget that they will often need *TWO* return statements when working with iterator methods! 
 
 You can find more information on different prototype methods and their callbacks <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array#Instance_methods" target="\__blank">here</a>.
 
-There are many array prototype methods out there, but we are going to focus on some of the iterator methods: forEach, map, find, filter, and reduce.
+There are many array prototype methods out there, but we are going to focus on some of these iterator methods: forEach, map, find, filter, and reduce.
 
 ### `Array.forEach(callbackFunction)`
 
@@ -238,3 +287,5 @@ Try using these methods to refactor the country exercises to work with the whole
 * Name three prototype methods for an array.
 * Which prototype methods are the most confusing right now?
 </section>
+
+
