@@ -311,14 +311,14 @@ getWordLengths() // { fantastic: 9, amazing: 7, childish: 8 }
 ## Paired Practice
 
 <a href="https://github.com/turingschool-examples/iterator-methods-stations" target="\__blank">https://github.com/turingschool-examples/iterator-methods-stations</a>
-<!--
-## What About Objects?
+
+<!-- ## What About Objects?
 
 How do we iterate through objects?... Hint: `Object.keys()` or `Object.values()`. Go over to the docs (MDN maybe), and read about what these do and when you might use them.
 
 Notice the different style of how these methods are used. How are these methods used for a given object?
 
-Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a>
+Try using these methods to refactor the country exercises to work with the whole <a href="https://github.com/turingschool-examples/iterator-methods-stations/blob/master/data.json" target="\__blank">dataset</a> -->
 
 ## Homework
 
