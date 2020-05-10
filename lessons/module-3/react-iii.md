@@ -128,17 +128,23 @@ To be honest, you probably won't be using much more than `constructor()`, `super
 
 We're going to implement `componentDidMount()` in our IdeaBox.
 
-### Setup Your Back End
+### Setup Your Front End
 
 If you want, you can [re-clone](https://github.com/turingschool-examples/ideabox-testing) your IdeaBox into a new directory.  Follow the steps here:
 
 ```bash
-git clone https://github.com/turingschool-examples/ideabox-testing.git react-iii
-cd react-iii
-git checkout react-testing-complete
+git clone https://github.com/turingschool-examples/react-iii-ideabox
+cd react-iii-ideabox
 npm i
 npm start
 ```
+
+<section class="note">
+#### Optional Code Sandbox Link:
+You can also make a fork of this <a href="https://codesandbox.io/s/react-iii-ideabox-starter-mz1g2" target="_blank"> CodeSandBox Template</a>
+</section>
+
+### Setting Up Your Back End
 
 We're also going to be running a back end server, which will function as our API! Lucky you, we've written up the backend for you, complete with documentation and friendly error messages.
 
@@ -147,9 +153,8 @@ Clone down [the repo](https://github.com/turingschool-examples/ideabox-api) - bu
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-api.git ideabox-api
 cd ideabox-api
-npm install nodemon -g
 npm i
-npm start
+node server.js
 ```
 
 Note that the frontend should be running on `localhost:3000` and the backend should be running on `localhost:3001`.
@@ -157,6 +162,28 @@ Note that the frontend should be running on `localhost:3000` and the backend sho
 Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you should see a brief list of ideas!
 
 ### Implement Getting Data from the Backend
+
+<section class="call-to-action">
+### Your Turn -- Review `.fetch()`
+ Take some time to look into the <a href="https://developer.mozilla.org/en-us/docs/web/api/fetch_api/using_fetch" target="_blank">fetch API documentation</a>.
+ Answer the following questions:
+  <section class="answer">
+### what does `.fetch()` do?
+  `.fetch()` is a method provided by the fetch api. it allows us to make a network request.     
+  </section>
+  <section class="answer">
+### what does `.fetch()` return?
+`.fetch()` returns a promise.
+  </section>
+  <section class="answer">
+### what does `.then()` do? what is the method called on? what does it return?
+`.then()` is a promise prototype method that runs when the promise object it is chanined to successfully resolves. it returns a new promise object. 
+  </section>
+  <section class="answer">
+### What does `.catch()` do? What is the method called on? What does it return?
+`.catch()` is a method called on a Promise object (aka a Promise prototype method). It runs when the first promise it is chained to fails / rejects. It returns a promise object.
+  </section>
+</section>
 
 Okay. Let's refactor our IdeaBox so that we are consuming data from our API!
 
@@ -377,8 +404,19 @@ Take a few minutes to journal to write notes to each of these questions:
 * Which concepts are the fuzziest for you right now?
 * Which concepts are the clearest for you right now?
 * What do you know about `componentDidMount`?
-* How do you conditionally render a part of a component?
 * What's the purpose of propTypes?
+</section>
+
+## Required Homework
+<section class="call-to-action">
+### Life Cycles Diagram
+Diagram out the react component lifecycle. Feel free to follow the diagram at the top of the lesson. 
+Your diagram should include a description of the following methods, an example of what you might use them for, and an indication of when in the lifecycle they run:
+- `constructor`
+- `render`
+- `componentDidMount`
+- `componentDidUpdate`
+- `componentDidUnmount`
 </section>
 
 ## Suggested homework
