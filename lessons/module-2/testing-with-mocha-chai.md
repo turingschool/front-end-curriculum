@@ -92,16 +92,17 @@ For example, let's say we have a quiz application that checks a user's answers a
 
 ```js
 class Question {
-  constructor(questionText, correctAnswer) {
+  constructor(questionText, correctAnswer, player) {
     this.questionText = questionText;
     this.correctAnswer = correctAnswer;
+    this.player = player;
   }
 
   checkAnswer(playerAnswer) {
     if (playerAnswer === this.correctAnswer) {
-      player.score++
+      this.player.score++
     } else {
-      player.score--
+      this.player.score--
     }
   }
 }
