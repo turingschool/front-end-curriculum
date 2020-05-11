@@ -34,7 +34,15 @@ For this project, you need to use this [FitLit Starter Kit](https://github.com/t
 
 There is no boilerplate for testing in the starter-kit repo. You will need to set up all of the tests yourself. Although, if you have run `npm install` in the setup instructions, then the tooling you need to start testing is already installed (`mocha` and `chai`). Refer to the testing lesson from week 1 as a guide to get started as well as the [mocha](https://mochajs.org/) and [chai](https://www.chaijs.com/) documentation pages.
 
-DOM functionality like `document.querySelector(...)` cannot and should not be tested in this project.
+You are *expected* to test:
+
+* All instance methods
+* All class methods (including any helper methods)
+
+You are *not expected* to test:
+
+* DOM manipulation / DOM manipulating methods (like `document.querySelector(...)`)
+
 
 ### Activity Data
 
@@ -217,9 +225,14 @@ _Choose at least one_
 
 ---
 
-### Due Date
+### Timeline
+Dates and deadlines to be aware of:
 
-Please submit your finished projects [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=1401427478) on **Wednesday,May 20th by 9PM**
+**Monday, May 11th** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code! (send this to us via Slack)
+**Wednesday, May 20th** - Project due at 9PM. 
+**Thursday, May 21st** - Project evals.
+
+Please submit your finished projects [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=1401427478) 
 
 ---
 
