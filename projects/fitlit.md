@@ -217,6 +217,12 @@ Items to add to the dashboard:
 
 ---
 
+### Due Date
+
+Please submit your finished projects [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=1401427478) on **Wednesday,May 20th by 9PM**
+
+---
+
 ## Rubric
 
 ### Functional Expectations
