@@ -142,13 +142,6 @@ To earn a given score, an application must meet the requirements listed in that 
   - There is a 50% disparity in code contributions between teammates
   - There is no README, or README is insufficient
 
-### Functional Expectations
-
-* **4:** Applications completes one or more of the extensions without bugs
-* **3:** Application completes all the expectations of Iteration 4 without bugs
-* **2:** Application completes all the expectations of Iteration 3 without bugs
-* **1:** Application completes all the expectations of Iteration 2 without bugs
-
 ### JavaScript Style & Implementation
 
 * **4:** 
@@ -167,3 +160,18 @@ To earn a given score, an application must meet the requirements listed in that 
   - Correctly uses if/else statements to handle multiple paths of logic & error handling
 * **1:** 
   - Crafts JS according to the [Turing JS style guide](https://github.com/turingschool-examples/javascript/tree/master/es5)
+
+
+### Functional Expectations
+
+Functionality is the least important piece of the rubric. It's included because it is another benchmark to gauge proficiency. However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
+
+This means, we DO NOT want to see:
+- Code that completes iterations but is sloppy
+- One or both team members do not understand every single line of code
+- One or both team members skips the problem solving process (pseudocoding, talking out the problem, articulating, planning) in the pursuit of completing functionality
+
+* **4:** Applications completes one or more of the extensions without bugs
+* **3:** Application completes all the expectations of Iteration 4 without bugs
+* **2:** Application completes all the expectations of Iteration 3 without bugs
+* **1:** Application completes all the expectations of Iteration 2 without bugs
