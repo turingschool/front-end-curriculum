@@ -200,7 +200,7 @@ Items to add to the dashboard:
 ---
 
 ### Iteration 5 - Trends and Challenges
-
+_Choose at least one_
 1. Design a step challenge between friends. Assign your user a few friends from the user data file. Add the methods you need and a display on the dashboard to see their friends step count for a whole week, and then show who had the most steps for that week.
 1. Calculate and display this trend: for a user, what days had increasing steps for 3 or more days?
 1. Think of your own trend for one user or many users. Document it, calculate it, and display it.
