@@ -45,7 +45,7 @@ src/
 ### Notes  
 
 - Although there are many resources out there for making API calls, you are asked to exclusively use the native [`fetch()`](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) API for this project.
-- For this project, you will need to clone down the [VRAD API](https://github.com/turingschool/VRAD-API) and run it locally on your machine. More detailed instructions can be found in the README.
+- For this project, you will use the [VRAD API](https://github.com/turingschool/VRAD-API). We suggest using the live API instead of locally building on your machine. More detailed instructions are in the API's README.  
 </section>
 
 <section class="call-to-action">
