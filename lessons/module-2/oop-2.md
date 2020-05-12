@@ -15,8 +15,8 @@ By the end of this lesson, you will be able to:
 ## Vocab
 
 `prototype` A special object which is assigned to functions that you make in JavaScript  
-`[[prototype]]` A hidden link on every object that links objects to one another, allowing objects to share behaviors
-`__proto__` Also called "dunder-proto", this allows us to access the `[[prototype]]` link
+`[[prototype]]` A hidden link on every object that links objects to one another, allowing objects to share behaviors    
+`__proto__` Also called "dunder-proto", this allows us to access the `[[prototype]]` 
 
 
 # Prototype
@@ -59,7 +59,6 @@ Similarly, if you type 'instructor' into your console to check the new instance,
 
 It is likely that you have seen this (somewhat overwhelming) list of properties while working with other types of data in your console - not just functions and objects.
 
-![the prototype chain simlified](/assets/images/lessons/oop/chain.png)
 
 
 #### On Your Own
@@ -89,9 +88,18 @@ When the interpreter is attempting to access a property on an object, it will st
 
 The most common way to link two objects together (and extend the prototype chain that is built-in to the language) is to use the `new` keyword with the invocation of a function. When this occurs, the new object instance that is created will automatically set the instance's `[[prototype]]` property to point to that function's `prototype`. 
 
+![the prototype chain simplified](/assets/images/lessons/oop/chain.png)
+
+
 _*Note: There are a number of ways to extend the prototype chain. You can find discussions on other ways [here](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain#Different_ways_to_create_objects_and_the_resulting_prototype_chain)*_
 
 ## Checks for Understanding
 
 * Describe the prototype chain. Why is the chain in place? Why would the interpreter traverse this chain?
 * What is the difference between `prototype` and `[[prototype]]`?
+
+
+## Additional Resources
+* [Object Prototypes from MDN](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+* [Explaining JavaScript's Prototype Chain Like You're Five](https://dev.to/codesmith_staff/explain-javascripts-prototype-chain-like-im-five-51p)
+* [Prototype Inheritance](https://javascript.info/prototype-inheritance)
