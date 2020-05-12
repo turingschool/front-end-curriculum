@@ -52,13 +52,13 @@ By the end of the day, complete the following tasks:
 
 ### Iteration 0 - Main Page
 
-<img src="../assets/romcom/romcom-home.png" alt="Homepage">
+<img src="./assets/romcom/romcom-home.png" alt="Homepage">
 
 - When the page loads, we should see a cover with a randomly selected image, title, and tagline which includes two random descriptors
 
 ### Iteration 1 - Show Random Cover
 
-<img src="../assets/romcom/romcom-random.png" alt="Randomize">
+<img src="./assets/romcom/romcom-random.png" alt="Randomize">
 
 - Every time the user clicks the Show New Random Cover button, a new random cover is created
     - hint: you may need to update the value of the provided `currentCover` variable
@@ -71,14 +71,14 @@ By the end of the day, complete the following tasks:
 **NOTE:** in this iteration, you are not worrying about making the form WORK, and you are not worrying about saving or displaying covers. You simply want to make sure the views can be switched when you click the appropriate buttons.
 
 Form view:
-<img src="../assets/romcom/romcom-form.png" alt="Form">
+<img src="./assets/romcom/romcom-form.png" alt="Form">
 
 - When a user clicks the "Make Your Own Cover" button, we should see the form, and the homepage view should be hidden
 - When the Form view is visible, the "Show New Random Cover" and "Save Cover" buttons should be hidden
 - When the Form view is visible, the "Home" button should be visible
 
 Saved covers view:
-<img src="../assets/romcom/romcom-saved.png" alt="Homepage">
+<img src="./assets/romcom/romcom-saved.png" alt="Homepage">
 
 - When a user clicks the "View Saved Covers" button, we should see the saved covers section, and the homepage view should be hidden
 - When the Saved Covers view is visible, the "Show New Random Cover" and "Save Cover" buttons should be hidden
