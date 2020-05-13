@@ -166,7 +166,7 @@ If your program is running in strict mode _and_ neither of the first two rules a
 
 
 ```javascript
-console.log(this);
+"use strict";
 
 function logThis() {
   console.log(this);
