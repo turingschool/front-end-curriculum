@@ -79,7 +79,20 @@ Looking at the top-level, root directory of our boilerplate, we already have qui
 
 With the exception of the `README.md` file, each of these is some sort of configuration file. A **configuration file** is a file that allows you to define how a particular tool you're using should interact with your codebase.
 
+<!-- At this point, I do some live coding so that they can actually see the package.json getting generated and be able to make that connection. All of their future projects are set up for them, so they aren't getting to npm init a project for the first time. Here's what I did:
 
+1. create a new (arbitrary) directory 
+2. run npm init and talk through what is happening in each step
+3. look at the package json and compare it to the paired project package.json from before 
+4. run npm install chai --save-dev and mocha
+5. talk about all the different dependancies and the lock file 
+  - difference between dependency and devDependency
+6. add a gitignore and put node modules 
+7. open up node modules and look at chai
+
+
+lots of this bleeds into the next sections, so you might want to reference back to it 
+ -->
 
 ## NPM
 
@@ -109,9 +122,21 @@ Array.prototype.filter = function(callback) {
 
 Instead of having us all re-invent the wheel, and waste time writing the same piece of code over and over again, NPM would allow someone to write this code once and publish it to the registry. From there, all other developers could simply download this code snippet and incorporate it into their project without having to write it from scratch.
 
+### Let's Check Out the NPM Website!
+
+https://www.npmjs.com/
+
+Let's search for a familiar package, like Chai or Mocha. What things do we notice on the page? 
+
 <section class="call-to-action">
-  <h4>Table Talk</h4>
-  <p>How does NPM differ from GitHub? They both seem to be places where developers can publish and download code.</p>
+  <h4>Paired Practice: Choosing a NPM package.</h4>
+  <p>On the NPM website, search for these two packages: <strong>js-datepicker</strong> and <strong>date-selector</strong></p>
+  <ol>
+    <li>What are some of the differences between the two packages?</li>
+    <li>Which package would you want to use in a project?</li>
+    <li>Seeing that both of these packages are also on GitHub, what is the difference between npm and GitHub?</li>
+  </ol>
+  
 </section>
 
 <!-- NPM is more for publishing code that is solving a very tiny, common problem that many developers will face. Other developers will download a package from NPM when they want to take advantage of its functionality in their project. GitHub is for publishing entire projects (that may or may not rely on NPM packages). Other developers will only download your project from GitHub if they want to contribute to it. That said, NPM packages are still published to GitHub for version control purposes, but full-blown GitHub projects have no real reason to be published to NPM. Think about idea-box from mod 1. You wouldn't publish that to NPM because most people aren't building projects that need an ideabox inside of them. -->
@@ -170,6 +195,8 @@ As we install dependencies, we populate a directory called `node_modules` - this
 </section>
 
 **Semantic Versioning**
+
+![breaking feature fix](/assets/images/lessons/intro-to-npm/semver.png)
 
 You'll notice that the dependencies we install each have a value associated with them like '1.4.6' -- these values are the version numbers of our dependencies. As developers update their packages, they must increase the version number of their package to allow any projects relying on it some lee-way before they update.
 
