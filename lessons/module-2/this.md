@@ -151,7 +151,7 @@ const denver = {
 1. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
       `{buildings: {…}, restaurants: Array(2), logThis: ƒ}`
 2. Utilize the `logThis` function (by setting it as a method) so that when you execute the function it logs the following:
-      `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368 }`
+      `{ name: "Swedish Medical Center", floors: 6, completed: 1905, height: 65, beds: 368, logThis: ƒ}`
 
 
 ## Rule 3 - Default _this_ refers to the global object
