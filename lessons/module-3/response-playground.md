@@ -21,7 +21,7 @@ Our goal as developers should be to handle responses and errors gracefully when 
 
 ## Your Tasks
 
-The server you'll be working with is hosted at: https://response-playground.herokuapp.com/
+The server you'll be working with is hosted at: [https://response-playground.herokuapp.com/](https://response-playground.herokuapp.com/)
 
 Here is the documentation associated with the API:
 
