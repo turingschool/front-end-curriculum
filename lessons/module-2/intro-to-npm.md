@@ -122,9 +122,9 @@ Array.prototype.filter = function(callback) {
 
 Instead of having us all re-invent the wheel, and waste time writing the same piece of code over and over again, NPM would allow someone to write this code once and publish it to the registry. From there, all other developers could simply download this code snippet and incorporate it into their project without having to write it from scratch.
 
-### Let's Check Out the NPM Website!
+### Exploring the NPM Website
 
-https://www.npmjs.com/
+[https://www.npmjs.com/](https://www.npmjs.com/)
 
 Let's search for a familiar package, like Chai or Mocha. What things do we notice on the page? 
 
