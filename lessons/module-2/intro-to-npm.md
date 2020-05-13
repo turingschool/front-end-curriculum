@@ -98,7 +98,7 @@ lots of this bleeds into the next sections, so you might want to reference back 
 
 **The NPM Files:** `package.json` and `package-lock.json`
 
-NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish small, reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency).
+NPM stands for **Node Package Manager**. A package manager is a registry where developers can publish reusable pieces of code that they've written (a package), and allow other developers to download it directly into their projects (as a dependency). NPM is not the only package manager - you may see others such as Yarn or Bower. 
 
 With this definition, there are two more words we'll run into that should be clarified:
 
@@ -134,7 +134,7 @@ Let's search for a familiar package, like Chai or Mocha. What things do we notic
   <ol>
     <li>What are some of the differences between the two packages?</li>
     <li>Which package would you want to use in a project?</li>
-    <li>Seeing that both of these packages are also on GitHub, what is the difference between npm and GitHub?</li>
+    <li>Seeing that both of these packages are also on GitHub, what is the difference between NPM and GitHub?</li>
   </ol>
   
 </section>
