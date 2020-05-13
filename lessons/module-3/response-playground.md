@@ -44,4 +44,4 @@ When you see `:id` in the URL parameter, this can be any positive integer value 
 4. Make a request to `/responses/:id` - what is the status code of the response, and what is sent back in the response body?
 5. Use the endpoint `/someNotFound/:id` where `:id` is any positive integer between 1 and 100 to find all of the `id` values that give a 404 status code as the response. What are the values? You might have to do some iterating - no brute force guessing - write some code to find the answers.
 6. Make a request to `/serverError` - what is the status code and what is the error?
-7. What property of the response object can tell us if a response's status code is 200-level or not?
+7. What property of the response object can tell us if a response's status code is 200-level or not? Adjust your logic in the `/someNotFound/:id` endpoint to include looking at this property.
