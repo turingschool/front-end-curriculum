@@ -183,10 +183,10 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 ### Hints:
 - Use the Creatures component. Formatting and styling is handled for you.
 - What additional react-router components should you use? Do any current components need to change?
-- How do you pass props into a component rendered by a <Route /> ?
+- How do you pass props into a component rendered by a `<Route />` ?
 </section>
 
-<!--
+
 <section class="answer">
 ### Solution
 ```jsx
@@ -217,7 +217,7 @@ export default class App extends Component {
 }
 ```
 </section>
--->
+
 
 ### Render `exact` matches
 
@@ -271,7 +271,7 @@ This also allows you to define and pass specific properties to a component dynam
 
 Get the sharks link working as well! 
 
-<!--
+
 <section class="answer">
 ### Solution
 ```jsx
@@ -301,7 +301,7 @@ export default class App extends Component {
 }
 ```
 </section>
--->
+
 
 ### Route Props
 
@@ -352,6 +352,23 @@ Hints:
 - How can you find a one puppy's data in an array based on its id?
 </section>
 
+<section class="answer">
+### Solution
+
+The new route could look something like this:
+```jsx
+// App.js
+        <Route
+          path="/puppies/:id"
+          exact
+          render={({match}) => {
+            const { id } = match.params;
+            const creatureToRender = puppies.find(creature => creature.id === parseInt(id));   
+            return <CreatureDetails {...creatureToRender} />
+          }}
+        />
+```
+</section>
 
 ## Exercise #4: Unit Testing the App
 
@@ -365,6 +382,49 @@ Uncomment the code blocks inside of the Unit Test portion of `App.test.js`
 ### Hint:
 - Think about which libraries this problem deals with. Google carefully... 
 </section>
+
+<section class="answer">
+### Solution
+
+We need to wrap the App inside of a Router! In the browser, this is handled at the entry point (index.js), but in the tests we're rendering the App on its own. 
+Just wrap the App in a router, and you're good to go:
+
+```jsx
+// App.test.js
+import React from "react";
+import App from "./App";
+import { render, fireEvent } from "@testing-library/react";
+import "@testing-library/jest-dom";
+import { BrowserRouter } from "react-router-dom";
+
+describe("App", () => {
+  describe("Unit Tests", () => {
+    it("Should render the heading", () => {
+      const { getByRole } = render(
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      );
+      const heading = getByRole("heading", { name: "Puppies or Sharks" });
+
+      expect(heading).toBeInTheDocument();
+    });
+
+    it("Should render a nav", () => {
+      const { getByRole } = render(
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
+      );
+      const navigation = getByRole("navigation");
+
+      expect(navigation).toBeInTheDocument();
+    });
+  });
+});
+```
+</section>
+
 
 ## Exercise #5: Integration Testing the App
 
@@ -382,7 +442,175 @@ Uncomment the code in the Integration Test portion of `App.test.js`
 - Once again, flex those Googling muscles. What issue are you seeing? Which library's docs might be helpful?
 </section>
 
+<section class="answer">
+### Solution
+The Router's history is getting out of sync from jest-dom's history. 
+
+We can do one of two things:
+1. Create a custom history object and pass it to the BrowserRouter
+2. Use a [Memory Router](https://reacttraining.com/react-router/web/api/MemoryRouter)
+
+Let's look at both of these solutions.
+
+
+<section class="answer">
+### Option 1: Creating a new history object
+
+For this solution, we have to look into the [history package](https://github.com/ReactTraining/history) from React Training. 
+
+Routers use this package to manage their session history. BrowserRouter creates a history object under the hood, which gets its current location from the browser ([jsdom](https://www.npmjs.com/package/jsdom) in the case of jest's testing environment), and updates the browser history via a few methods that you can [read more about if you're interested](https://github.com/ReactTraining/history/blob/master/docs/Navigation.md).
+
+We can also [create our own history object](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md) and use it to overwrite the BrowserRouter's default history. This allows us to instantiate a new Router at a specific location (url) of our choosing.
+
+```jsx
+import { createMemoryHistory } from 'history';
+import { BrowserRouter } from 'react-router-dom';
+
+// Make a new blank history object
+const customHistory = createMemoryHistory();
+
+// Overwrite the history of the BrowserRouter:
+const routerWithCustomHistory = <BrowserRouter history={customHistory}></BrowserRouter>
+```
+
+So our final solution to the Integration Test could look like this:
+
+```jsx
+import React from 'react';
+import App from './App';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { BrowserRouter } from 'react-router-dom';
+import { createMemoryHistory } from 'history';
+
+describe('App', () => {
+  describe('Integration Tests', () => {
+    it('Should render 9 puppies on click', () => {
+      const history = createMemoryHistory();
+      const { getByRole, getAllByRole } = render(
+        <BrowserRouter history={history}>
+          <App />
+        </BrowserRouter>
+      );
+      const puppiesLink = getByRole('link', { name: 'Puppies'});
+      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+
+      expect(welcomeMessage).toBeInTheDocument();
+
+      fireEvent.click(puppiesLink);
+
+      expect(welcomeMessage).not.toBeInTheDocument();
+
+      const images = getAllByRole('img');
+
+      expect(images).toHaveLength(9);
+
+    });
+
+    it('Should render 9 sharks on click', () => {
+      const history = createMemoryHistory();
+      const { getByRole, getAllByRole } = render(
+        <BrowserRouter history={history}>
+          <App />
+        </BrowserRouter>
+      );
+      const sharksLink = getByRole('link', { name: 'Sharks'});
+      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+
+      expect(welcomeMessage).toBeInTheDocument();
+
+      fireEvent.click(sharksLink);
+
+      expect(welcomeMessage).not.toBeInTheDocument();
+
+      const images = getAllByRole('img');
+
+      expect(images).toHaveLength(9);
+
+    });
+
+  });
+});
+```
+
+**Note** This is the technique recommended by [React Testing Library](https://testing-library.com/docs/example-react-router)
+
+</section>
+
+<section class="answer">
+### Option 2: Using a MemoryRouter
+
+Alternatively, we can use a different kind of Router that doesn't get information about history from the DOM. 
+
+[MemoryRouter](https://reacttraining.com/react-router/web/api/MemoryRouter) doesn't read or write to the address bar. As such, it's useful for tests and non-browser environments like React Native.
+
+**MemoryRouter WILL NOT WORK IN YOUR BROWSER CODE**
+
+```jsx
+import React from 'react';
+import App from './App';
+import { render, fireEvent } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { BrowserRouter, MemoryRouter } from 'react-router-dom';
+
+describe('App', () => {
+  describe('Integration Tests', () => {
+    it('Should render 9 puppies on click', () => {
+      const { getByRole, getAllByRole } = render(<MemoryRouter><App /></MemoryRouter>);
+      const puppiesLink = getByRole('link', { name: 'Puppies'});
+      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+
+      expect(welcomeMessage).toBeInTheDocument();
+
+      fireEvent.click(puppiesLink);
+
+      expect(welcomeMessage).not.toBeInTheDocument();
+
+      const images = getAllByRole('img');
+
+      expect(images).toHaveLength(9);
+
+    });
+
+    it('Should render 9 sharks on click', () => {
+      const { getByRole, getAllByRole } = render(<MemoryRouter><App /></MemoryRouter>);
+      const sharksLink = getByRole('link', { name: 'Sharks'});
+      const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
+
+      expect(welcomeMessage).toBeInTheDocument();
+
+      fireEvent.click(sharksLink);
+
+      expect(welcomeMessage).not.toBeInTheDocument();
+
+      const images = getAllByRole('img');
+
+      expect(images).toHaveLength(9);
+
+    });
+
+  });
+});
+```
+
+</section>
+</section>
+
 ## Extra Resources:
+
+### Tutorials / Guides:
+
+- [React Training's 13 minute overview of React Router](https://www.youtube.com/watch?v=Mf0Fy8iHp8k&feature=youtu.be)
+- [The Hitchhiker's Guide to React Router - learn Router in 20 minutes](https://www.freecodecamp.org/news/hitchhikers-guide-to-react-router-v4-a957c6a5aa18/)
+- [The Hitchhiker's Guide to React Router - match, location, history](https://www.freecodecamp.org/news/hitchhikers-guide-to-react-router-v4-4b12e369d10/)
+
+### Helpful Articles / Docs:
+
+- [Routing and Form Submission](https://tylermcginnis.com/react-router-programmatically-navigate/)
+- [Old lesson plan](https://frontend.turing.io/lessons/module-3/react-router-v4.html)
+- [React Router Testing Recipe from RTL](https://testing-library.com/docs/example-react-router)
+- [Memory Router docs](https://reacttraining.com/react-router/web/api/MemoryRouter)
+- [history package docs](https://github.com/ReactTraining/history)
 
 <section class="call-to-action">
 ### Check out this additional information on some Router Components:
@@ -460,7 +688,3 @@ The [docs](https://reacttraining.com/react-router/web/api/Switch) do a great job
 </section>
 </section>
 
-- [Old lesson plan](https://frontend.turing.io/lessons/module-3/react-router-v4.html)
-- [React Router Testing Recipe from RTL](https://testing-library.com/docs/example-react-router)
-- [Memory Router docs](https://reacttraining.com/react-router/web/api/MemoryRouter)
-- [history package docs](https://github.com/ReactTraining/history)
