@@ -29,6 +29,20 @@ const response = fetch(someURL);
 const data = response.json();
 console.log(data);
 ```
+
+What order will things log in here:
+```js
+function doSomeAsyncStuff () {
+  console.log(1)
+fetch('https://api.adviceslip.com/advice')
+  .then(() => {
+    console.log(2)
+  })
+console.log(3)
+}
+
+doSomeAsyncStuff();
+```
 </section>
 
 Sometimes we want our code to be more synchronous like this, but asynchronous JavaScript doesn’t really work like this. We cannot expect to know when the data from the `fetch` call will come back.
