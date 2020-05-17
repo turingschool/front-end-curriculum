@@ -8,7 +8,7 @@
 * Refactor pre-existing code and use inheritance to DRY up repetitive logic
 * Ensure your app is following best practices for accessibility
 * Detect cross-browser compatibility issues by testing your app on different platforms and environments
-* Practice (or solidify) your understanding of DOM manipulation with jQuery
+<!-- * Practice (or solidify) your understanding of DOM manipulation with jQuery -->
 * Leverage Sass to DRY up your CSS
 * Incorporate Webpack to streamline your workflow process
 * Leverage Chai Spies to verify that your DOM manipulation is happening
@@ -166,16 +166,16 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 * You must be able to tab through your app and use it without a mouse
 * Your app must still be viewable when tested with a colorblind extension
 * You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing (you'll need to deploy to GH pages for this)
-
+<!-- 
 ### Cross-Browser/Platform Compatibility
 
 * App should be fully responsive from mobile devices - tablets - laptops - large monitors
 * Test your app in Safari and Firefox to identify any inconsistencies and file issues for resolving them
-* Resolve as many cross-browser compatibility issues as possible
+* Resolve as many cross-browser compatibility issues as possible -->
 
-### DOM Manipulation with jQuery
+### DOM Manipulation 
 
-* All DOM manipulation is done with jQuery, there should be no mixture of jQuery and vanilla JavaScript
+<!-- * All DOM manipulation is done with jQuery, there should be no mixture of jQuery and vanilla JavaScript -->
 * DOM manipulation should also be organized into a `domUpdates.js` file. The file should look something like this:
 
 ```js
@@ -205,8 +205,8 @@ export default  domUpdates;
 * Make the page fully responsive and functional down to mobile screensx
 
 ## Extensions
-
-* Test and fix any inconsistencies of your application in Internet Explorer (BrowserStack is a potential tool that may help with this!)
+* TBD
+<!-- * Test and fix any inconsistencies of your application in Internet Explorer (BrowserStack is a potential tool that may help with this!) -->
 
 
 ## Iterations
