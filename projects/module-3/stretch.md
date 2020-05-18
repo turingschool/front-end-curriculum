@@ -113,7 +113,7 @@ React might not be the framework you end up working with on the job, and employe
 
 **Some things to note**: instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will still be required to test the application even though you are choosing a framework other than React.
 
-Depending on your application, the multi-page requirement might not be applicable for this category choice.
+For this choice, the multi-page requirement using React Router is not applicable.
 
 #### User Authentication
 
@@ -121,7 +121,7 @@ Some apps allow you to sign in using your Google, Facebook, or Twitter account -
 
 #### Miscellaneous
 
-If you choose from from this category, then you must pick at least two of these options:
+If you choose from this category, then you must pick at least two of these options:
 
 * Styled Components
 * Localization and Internationalization (would recommend using a library for this like [react-i18next](https://github.com/i18next/react-i18next))
