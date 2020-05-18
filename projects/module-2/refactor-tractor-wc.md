@@ -239,7 +239,7 @@ export default  domUpdates;
 ### User Testing / UI
 * Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive.
 * Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive.
-* Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project. 
+* Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project, and appropriate error handling messages are displayed. 
 * Exceptional - Meets all expectations for Proficient. In addition, the application has clearly had special consideration around usability on devices.
 
 ## Evaluation/Rubric
