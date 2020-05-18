@@ -210,7 +210,7 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 
 # Written Feedback Rubric
-### Functional Expectiations
+## Functional Expectiations
 * Novice: Application crashes during normal usage.
 * Advanced Beginner: Application is usable, but has some missing functionality.
 * Proficient: Application fulfills all requirements. 
@@ -223,25 +223,25 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 * Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
 * Exceptional - Project has a running test suite that utilizes spies. The test suite covers almost all aspects of the application.
 
-### SASS
+## SASS
 * Novice - There are several (10+) instances of duplication. Code is written with unnecessary selectors or tags which do not increase clarity. No SASS, or VERY minimal SASS is utilized .
 * Advanced Beginner - There is some duplication (5-10 instances) in the codebase, and there may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only a few variables have been used. 
 * Proficient - The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well. 
 * Exceptional - Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP (see extensions). 
 
-### Accessibility
+## Accessibility
 * Novice - Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tabable, large use of non-semantic HTML. 
 * Advanced Beginner - One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tabable, large use of non-semantic HTML. 
 * Proficient - All accessibility areas have been considered and tested. An accessibility audit with a score of at least 95.  
 * Exceptional - Meets all requirements for proficient, with an audit score of 100% and has gone above and beyond standard accessibility features (see extensions).
 
-### User Testing / UI
+## User Testing / UI
 * Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive.
 * Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive.
 * Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project, and appropriate error handling messages are displayed. 
 * Exceptional - Meets all expectations for Proficient. In addition, the application has clearly had special consideration around usability on devices.
 
-### Workflow
+## Workflow
 * Novice - The team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * Advanced Beginner - The team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
 * Proficient - The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Team members utilize a kanban-style project board (we recommend Github Project) and git branches.
@@ -254,15 +254,13 @@ As a group, you will respond to high-level technical questions, interview-style.
 
 Individually, you will select a card at random that has a question to respond to. You must give an attempt at responding to it before passing it off to a group member if you're unsure. Imagine you don't know the answer to a question on a technical interview, you won't simply say "I don't know". Will you try to take an educated guess? Will you say you're unsure? Will you try to explain by example?
 
-We will evaluate your response based on the following rubric:
+### We will evaluate your response based on the following rubric:
 
-**Expert:** Responds to the question accurately and gracefully. Uses the correct vocabulary when discussing the concept, and is sure of their response. Gives an appropriate amount of detail to thoroughly answer the question, but responds well to any follow-up questions that may arise.
+* Expert - Responds to the question accurately and gracefully. Uses the correct vocabulary when discussing the concept, and is sure of their response. Gives an appropriate amount of detail to thoroughly answer the question, but responds well to any follow-up questions that may arise.
+* Proficient - Responds to the question with accuracy, but may be a bit vague or unsure of themselves. May answer the question by describing an example rather than having an eloquent articulation of the concept. May not be able to dig much deeper to respond to follow-up questions that may arise.
+* Advanced Beginner - Cannot respond to the question with accuracy. May discuss related ideas, but does not quite stay on topic for the question we're asking. May ramble a bit until they throw out the correct term, looking to the interviewer for signs of being on the right track.
 
-**Proficient:** Responds to the question with accuracy, but may be a bit vague or unsure of themselves. May answer the question by describing an example rather than having an eloquent articulation of the concept. May not be able to dig much deeper to respond to follow-up questions that may arise.
-
-**Advanced Beginner:** Cannot respond to the question with accuracy. May discuss related ideas, but does not quite stay on topic for the question we're asking. May ramble a bit until they throw out the correct term, looking to the interviewer for signs of being on the right track.
-
-**Novice:** Cannot respond to the question with accuracy. Interviewer may rephrase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
+* Novice: - Cannot respond to the question with accuracy. Interviewer may rephrase the question several times or pivot to ask a simpler question. May find a way to gracefully say "I don't know".
 
 If the evaluator is left wanting a bit more from your response, they may choose to continue to ask follow-up question to you - or they may open it up to volunteers in the group to assist.
 
