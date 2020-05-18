@@ -95,6 +95,7 @@ The application should also be fully tested. This means:
 - Initial values of class properties need tests
 - Class methods need tests for all expected outcomes
 - Any methods that modify class properties should be test
+- **You are not required to test your fetch calls**
 
 You'll also be expected to test the methods that update the DOM (more info below).
 
@@ -189,6 +190,7 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 * You must be able to tab through your app and use it without a mouse
 * Your app must still be viewable when tested with a colorblind extension
 * You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing (you'll need to deploy to GH pages for this).
+* Your HTML must be written semantically 
 
 ### User Testing / UI
 * Test out the application manually and file errors for any UI or UX issues you can find
@@ -196,15 +198,18 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 * Your app should be fully responsive from mobile devices - tablets - laptops - large monitors
 
 ### Extensions
-* Choose-your-own-extension: Create and implement a new feature for your application. 
-* Don't just generate a random user - let people choose who they want to see or create a log in page
+* Create and implement a new feature for your application (run this by instructors first). 
+* Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
+* Create a video of you navigating through your app via a keyboard and screen reader. 
+* Implement an animation using SASS 
+
 
 ### Strategies for Success
 * Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely.
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 
 
-# Rubric
+# Written Feedback Rubric
 ### Functional Expectiations
 * Novice: Application crashes during normal usage.
 * Advanced Beginner: Application is usable, but has some missing functionality.
@@ -236,7 +241,14 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 * Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project, and appropriate error handling messages are displayed. 
 * Exceptional - Meets all expectations for Proficient. In addition, the application has clearly had special consideration around usability on devices.
 
-## Evaluation/Rubric
+### Workflow
+* Novice - The team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
+* Advanced Beginner - The team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
+* Proficient - The team makes a series of small, atomic commits that document the evolution of their application. The team conducts a DTR (define the relationship) and utilizes GitHub issues and best pairing practices. Team members utilize a kanban-style project board (we recommend Github Project) and git branches.
+* Exceptional - The team effectively uses Git branches and pull requests for meaningful code review. The evolution of the project is evident through conversation done via code reviews and pull requests.
+
+
+# Technical Evaluation Rubric
 
 As a group, you will respond to high-level technical questions, interview-style. These questions will all relate to the work you've done on this project. For example, "Describe what a POST request is and why we might perform one."
 
