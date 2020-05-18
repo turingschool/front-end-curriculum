@@ -130,7 +130,7 @@ If you choose from from this category, then you must pick at least two of these 
 
 ## Deliverables
 
-### Day-1
+### Day 1
 
 Create a private Slack channel with your team members and instructor project manager. Submit the following by end of day 1:
 
@@ -139,7 +139,7 @@ Create a private Slack channel with your team members and instructor project man
 * Wireframes of your application (using any electronic or hand-drawn tool you would like)
 * Project management tool (with some cards filled out and assigned)
 
-### Day-4
+### Day 4
 
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
 * A demo of your application so far detailing the progress made toward your MVP
