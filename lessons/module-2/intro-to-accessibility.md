@@ -64,7 +64,7 @@ For each of these types of limitations:
 <section class="call-to-action">
 ### Using a Screen Reader
 
-* Watch the following [video to see how a screen reader understands a page](https://youtu.be/qdB8SRhqvFc?t=417) up until the 9:40 mark.
+* Watch the following [video to see how a screen reader understands a page](https://youtu.be/qdB8SRhqvFc?t=417) from **6:57 to the 9:40** mark.
 
 Using the built-in screen reader on your machine, VoiceOver, close your eyes and navigate through the following two codepens, one at a time:
 
@@ -115,7 +115,7 @@ Navigate to some of your most visited sites -- especially those that have some s
 <section class="call-to-action">
 ### Tabbing
 
-Watch the following [video](https://youtu.be/hKIQkgPVXH4?t=307) up until the 9:50 mark.
+Watch the following [video](https://youtu.be/hKIQkgPVXH4?t=307) from **5:07 - 9:50**.
 
 **Questions:**
 * What are some key takeaways from this video snippet?
@@ -161,10 +161,14 @@ Read the following [article on strategies for making text more accessible]( http
 
 Browser vendors are beginning to work some accessibility checks directly into our good friend, dev tools. Let's see what we can learn from them! 
 
+### Lighthouse
 * Open up the following [Turing lesson plan](https://frontend.turing.io/lessons/module-2/intro-to-accessibility.html), and open up your dev tools panel
 * Click on the 'Audits' panel of dev tools
 * Select the following [settings](https://imgur.com/QMMFc0R) to run an accessibility check on the page
 * Click 'Run Audits' (your dev tools may disappear for a while, or your screen may go blank, just wait it out)
+
+### WAVE Evaluation Tool
+* Download the [Chrome Extension](https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh?hl=en-US)
 
 Read through the passing, failing, non-applicable and manual audits:
 * What accessibility concerns have come to light? WHY are they accessibility concerns?

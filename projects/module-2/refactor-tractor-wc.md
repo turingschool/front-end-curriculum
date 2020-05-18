@@ -7,7 +7,7 @@
 * Make network requests to API endpoints to retrieve and manipulate data
 * Refactor pre-existing code and use inheritance to DRY up repetitive logic
 * Ensure your app is following best practices for accessibility
-* Detect cross-browser compatibility issues by testing your app on different platforms and environments
+<!-- * Detect cross-browser compatibility issues by testing your app on different platforms and environments -->
 <!-- * Practice (or solidify) your understanding of DOM manipulation with jQuery -->
 * Leverage Sass to DRY up your CSS
 * Incorporate Webpack to streamline your workflow process
