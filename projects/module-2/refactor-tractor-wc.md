@@ -7,8 +7,6 @@
 * Make network requests to API endpoints to retrieve and manipulate data
 * Refactor pre-existing code and use inheritance to DRY up repetitive logic
 * Ensure your app is following best practices for accessibility
-<!-- * Detect cross-browser compatibility issues by testing your app on different platforms and environments -->
-<!-- * Practice (or solidify) your understanding of DOM manipulation with jQuery -->
 * Leverage Sass to DRY up your CSS
 * Incorporate Webpack to streamline your workflow process
 * Leverage Chai Spies to verify that your DOM manipulation is happening
@@ -59,7 +57,7 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 ## Requirements
 
-### Functionality / Basic Testing
+### Functionality
 
 You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.io/projects/whats-cookin.html) that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished. These include:
 
@@ -99,6 +97,31 @@ The application should also be fully tested. This means:
 - Any methods that modify class properties should be test
 
 You'll also be expected to test the methods that update the DOM (more info below).
+
+### DOM Manipulation 
+
+* DOM manipulation should be organized into its own `domUpdates.js` file. The file should look something like this:
+
+```js
+// domUpdates.js
+
+let domUpdates = {
+  updateDomMethod1(){...},
+  updateDomMethod2(){...},
+  ...
+};
+
+export default  domUpdates;
+```
+* Any DOM updating functionality will then be imported into other files that need them
+  - This will create a more modular structure, and allow you to test your DOM methods (see below)
+  
+### Testing with Spies
+
+* Refactor DOM manipulation into methods on an object
+* Spy on all DOM manipulation methods to verify that they occurred and were called with the correct arguments
+* Use an `afterEach` hook to clean up spies in between tests
+* Spy on any class methods that have already been tested elsewhere
 
 ### Sass
 
@@ -167,50 +190,21 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 * Your app must still be viewable when tested with a colorblind extension
 * You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing (you'll need to deploy to GH pages for this).
 
-
-### DOM Manipulation 
-
-<!-- * All DOM manipulation is done with jQuery, there should be no mixture of jQuery and vanilla JavaScript -->
-* DOM manipulation should also be organized into a `domUpdates.js` file. The file should look something like this:
-
-```js
-// domUpdates.js
-
-let domUpdates = {
-  updateDomMethod1(){...},
-  updateDomMethod2(){...},
-  ...
-};
-
-export default  domUpdates;
-```
-* Any DOM updating functionality will then be imported into other files that need them
-  - This will create a more modular structure, and allow you to test your DOM methods (see below)
-
-### Testing with Spies
-
-* Refactor DOM manipulation into methods on an object
-* Spy on all DOM manipulation methods to verify that they occurred and were called with the correct arguments
-* Use an `afterEach` hook to clean up spies in between tests
-* Spy on any class methods that have already been tested elsewhere
-
 ### User Testing / UI
 * Test out the application manually and file errors for any UI or UX issues you can find
 * Fix UI / UX problems. If a display feels hard to use, think about how you can remake it
 * Your app should be fully responsive from mobile devices - tablets - laptops - large monitors
 
-
-## Extensions
+### Extensions
 * Choose-your-own-extension: Create and implement a new feature for your application. 
 * Don't just generate a random user - let people choose who they want to see or create a log in page
 
+### Strategies for Success
+* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely.
+* Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 
-## Iterations
 
-* You must finish every bullet point in the requirements
-* Every group member must fully understand all of the code changes that have been made
-
-## Rubric
+# Rubric
 ### Functional Expectiations
 * Novice: Application crashes during normal usage.
 * Advanced Beginner: Application is usable, but has some missing functionality.
@@ -266,5 +260,5 @@ If the evaluator is left wanting a bit more from your response, they may choose 
 * Better error handling when users do something wrong with their POST request - make this a requirement rather than an extension
 * Add bugs into the codebase
 * Give you a codebase of a similar but different project
-* Don't just generate a random user - let people choose who they want to see
+
 -->
