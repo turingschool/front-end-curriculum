@@ -4,7 +4,7 @@ length: 60
 tags: javascript, foundation, arrays
 ---
 
-## Learning Goals
+## Learning goals
 
 In this lesson we'll cover:
 
