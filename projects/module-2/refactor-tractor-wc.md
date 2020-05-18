@@ -61,7 +61,7 @@ Webpack is a powerful tool, which you're encouraged to explore more (the Turing 
 
 ### Functionality / Basic Testing
 
-You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.io/projects/whats-cookin.html) that your project has yet to finish. These include:
+You must complete all of the User Stories outlined in the [What's Cookin Spec](https://frontend.turing.io/projects/whats-cookin.html) that your project has yet to finish. Make sure you spend some time reviewing the spec to take note of features that might be unfinished. These include:
 
 #### Users
 A `User` holds on to all of a user's data. As a user, I should be able to:
@@ -92,7 +92,7 @@ As a user, I should be able to:
 - Add the necessary ingredients to my pantry (and keep this up to date with the database via `fetch`)
 - Remove the ingredients used for a given meal from my pantry, once that meal has been cooked
 
-#### Testing
+### Testing
 The application should also be fully tested. This means:
 - Initial values of class properties need tests
 - Class methods need tests for all expected outcomes
@@ -109,7 +109,7 @@ Your Sass should be making use of:
 * variables for colors, fonts, etc.
 * nesting, when/where appropriate
 * color functions for ensuring a cohesive color scheme
-* at least one mixin, function or extends
+* at least one mixin or extends
 
 
 ### Fetch
@@ -121,7 +121,7 @@ You will no longer be receiving your data from a hardcoded data file, but rather
 * ingredientsData: https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/ingredients/ingredientsData
 * recipesData: https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/recipes/recipeData
 
-#### Add and remove ingredients from a user's pantry
+#### Add and remove ingredients from a user's pantry (POST)
 For the currently displayed user, you must be able to add and remove ingredients from their pantry.
 
 For example, if the currently displayed user has an ID of 50, and you want to _add_ 3 units of an ingredient with an ID of 123, you would want to send a JSON object through with your POST request that looks like:
@@ -149,7 +149,7 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 ### Pull Requests
 
-* Each person must submit 1 pull request to their group mates for feedback
+* Each person must submit at least 1 pull request to their group mates for feedback
 * Each pull request that you did NOT submit must be reviewed by every other team member, individually
 * Each pull request should include significant / helpful feedback and conversation
 * No pull request may be merged before it has been reviewed, and must not be merged by the person who submitted it
@@ -165,13 +165,8 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 * You must be able to tab through your app and use it without a mouse
 * Your app must still be viewable when tested with a colorblind extension
-* You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing (you'll need to deploy to GH pages for this)
-<!-- 
-### Cross-Browser/Platform Compatibility
+* You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing (you'll need to deploy to GH pages for this).
 
-* App should be fully responsive from mobile devices - tablets - laptops - large monitors
-* Test your app in Safari and Firefox to identify any inconsistencies and file issues for resolving them
-* Resolve as many cross-browser compatibility issues as possible -->
 
 ### DOM Manipulation 
 
@@ -202,11 +197,12 @@ export default  domUpdates;
 ### User Testing / UI
 * Test out the application manually and file errors for any UI or UX issues you can find
 * Fix UI / UX problems. If a display feels hard to use, think about how you can remake it
-* Make the page fully responsive and functional down to mobile screensx
+* Your app should be fully responsive from mobile devices - tablets - laptops - large monitors
+
 
 ## Extensions
-* TBD
-<!-- * Test and fix any inconsistencies of your application in Internet Explorer (BrowserStack is a potential tool that may help with this!) -->
+* Choose-your-own-extension: Create and implement a new feature for your application. 
+* Don't just generate a random user - let people choose who they want to see or create a log in page
 
 
 ## Iterations
@@ -214,6 +210,37 @@ export default  domUpdates;
 * You must finish every bullet point in the requirements
 * Every group member must fully understand all of the code changes that have been made
 
+## Rubric
+### Functional Expectiations
+* Novice: Application crashes during normal usage.
+* Advanced Beginner: Application is usable, but has some missing functionality.
+* Proficient: Application fulfills all requirements. 
+* Exceptional: Application fulfills all requirements, and has functionality that goes above and beyond an MVP.
+
+
+## Testing
+* Novice - There is little or no evidence of testing in the application.
+* Advanced Beginner - Project has sporadic use of tests at multiple levels. The application contains numerous holes in testing and/or many features are untested.
+* Proficient - Project has a running test suite that tests multiple levels but fails to cover some features.
+* Exceptional - Project has a running test suite that utilizes spies. The test suite covers almost all aspects of the application.
+
+### SASS
+* Novice - There are several (10+) instances of duplication. Code is written with unnecessary selectors or tags which do not increase clarity. No SASS, or VERY minimal SASS is utilized .
+* Advanced Beginner - There is some duplication (5-10 instances) in the codebase, and there may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only a few variables have been used. 
+* Proficient - The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well. 
+* Exceptional - Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP (see extensions). 
+
+### Accessibility
+* Novice - Two or more accessibility areas have not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tabable, large use of non-semantic HTML. 
+* Advanced Beginner - One accessibility area has not been tested or considered. This may be: an accessibility audit with a score of 80% or lower, errors with color contrast when checking via a colorblind extension, app is not tabable, large use of non-semantic HTML. 
+* Proficient - All accessibility areas have been considered and tested. An accessibility audit with a score of at least 95.  
+* Exceptional - Meets all requirements for proficient, with an audit score of 100% and has gone above and beyond standard accessibility features (see extensions).
+
+### User Testing / UI
+* Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive.
+* Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive.
+* Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project. 
+* Exceptional - Meets all expectations for Proficient. In addition, the application has clearly had special consideration around usability on devices.
 
 ## Evaluation/Rubric
 
