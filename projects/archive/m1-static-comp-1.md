@@ -1,5 +1,5 @@
 ---
-title: Static Comp Challenge 1
+title: Static Comp Challenge
 ---
 
 ## Specification
