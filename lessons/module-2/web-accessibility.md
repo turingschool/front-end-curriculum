@@ -69,7 +69,7 @@ DO NOT REMOVE THE FOCUS RING that appears on interactive elements without provid
 
 This blog post on writing accessible css has a [section](https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939) that digs into why you shouldn't remove it (as well as some alternatives to take).[This website](http://www.outlinenone.com/) offers a list of alternative styling options. And [this article](https://hackernoon.com/removing-that-ugly-focus-ring-and-keeping-it-too-6c8727fefcd2) also has some alternatives to use to get rid of the focus ring while still keeping things accessible.
 
-An <a href="https://repl.it/@Khalid_Williams/Input-Focus" target="\__blank"> example</a>, if you like.
+A design-friendly <a href="https://codepen.io/hannahhch/pen/QWjJbbz" target="\__blank"> example</a> of some alternative outline styles. 
 
 
 ### WAI-ARIA
@@ -82,13 +82,19 @@ WAI-ARIA is a shorthand for (Web Accessibility Initiative – Accessible Rich In
 * An element can only have one role at a time, but can have as many properties and states as necessary
 
 An important point about WAI-ARIA attributes is that they don't affect the appearance or functionality of a web page, except for the information exposed by the browser's accessibility APIs (where screenreaders get their information from). WAI-ARIA doesn't affect webpage structure, the DOM, etc., although the attributes can be useful for selecting elements by CSS.
+
+*These are attributes that are "hidden" in your HTML for screen readers to see.* Think of other attributes you might put on an HTML element that don't show up on the page:
+- `disabled`
+- `alt`
+- `lang`
+
 <!--
 ![Aria Tree](/assets/images/aria.jpg)
  -->
 #### Rules of ARIA Use
 The core rules to keep in mind when using ARIA are:
 
-If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time.
+If you can use native HTML elements and attributes to communicate the proper semantics (like `<header>`, `<nav>`, `<main>`, `<footer>`, `<button>` etc.) and behavior then do so. Adding ARIA support where it’s not needed is __redundant code__ that isn’t doing anything. For the most part it won’t lead to problems, but it is a waste of time, and will annoy your screen reader users. Many "accessibility flags" come from developers _overusing_ ARIA. 
 
 ### Aria Roles, States, and Properties
 
@@ -322,11 +328,22 @@ Below you will find a code example of defining three landmark roles:
 
 __Label Input Elements that do not have a label element associated with them__
 
+Note: you should _really_ be providing labels with all of your input fields, like this:
+
+```html
+<label for="first-name">First name</label>
+<input id="first-name" type="text" placeholder="Hannah">
+
+```
+
+You can use the `aria-label` below to define a label, but remember to use semantic, native elements whenever possible. 
+
 * `aria-label`: property that defines a short title for an element
 
 ```html
-<input type="text" aria-label="First name" placeholder="Grace">
+<input type="text" aria-label="First name" placeholder="Hannah">
 ```
+
 
 -------------------------------------------------
 
