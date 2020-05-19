@@ -141,9 +141,9 @@ Your Sass should be making use of:
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a server. You must use fetch to:
 
 #### Retrieve all data from an endpoint (GET)
-* wcUsersData: https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/users/wcUsersData
-* ingredientsData: https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/ingredients/ingredientsData
-* recipesData: https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/recipes/recipeData
+* wcUsersData: [https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/users/wcUsersData](https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/users/wcUsersData)
+* ingredientsData: [https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/ingredients/ingredientsData](https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/ingredients/ingredientsData)
+* recipesData: [https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/recipes/recipeData](https://fe-apps.herokuapp.com/api/v1/whats-cookin/1911/recipes/recipeData)
 
 #### Add and remove ingredients from a user's pantry (POST)
 For the currently displayed user, you must be able to add and remove ingredients from their pantry.
@@ -173,35 +173,34 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 ### Pull Requests
 
-* Each person must submit at least 1 pull request to their group mates for feedback
-* Each pull request that you did NOT submit must be reviewed by every other team member, individually
 * Each pull request should include significant / helpful feedback and conversation
+* Each pull request that you did NOT submit must be reviewed by every other team member, individually
 * No pull request may be merged before it has been reviewed, and must not be merged by the person who submitted it
 
 ### Inheritance & Refactoring
 
 * Identify redundant code in your classes and opportunities for DRYing it up
 * Refactor **within** your classes to create dynamic methods that use arguments/parameters for changing their behavior
-* Refactor **across** your classes to create a parent class that others inherit methods from as appropriate
+* Refactor **across** your classes to create a parent class that others inherit methods from as appropriate **OR** be able to defend your choice for *not* using inheritance. 
 
 
 ### Accessibility
 
 * You must be able to tab through your app and use it without a mouse
-* Your app must still be viewable when tested with a colorblind extension
-* You must score as close to 100% in an Accessibility Audit as possible. Be prepared to explain any accessibility audits your application is failing (you'll need to deploy to GH pages for this).
-* Your HTML must be written semantically 
+* Your app must still be usuable when tested with a colorblind extension
+* You must score as close to 100% as possible with the "Lighthouse Accessibility Audit" (you'll need to deploy to GH pages for this). Be prepared to explain any accessibility audits your application is failing.
+* Your HTML must be written semantically and ARIA tags should be used (ONLY if needed / appropriate)
 
 ### User Testing / UI
 * Test out the application manually and file errors for any UI or UX issues you can find
-* Fix UI / UX problems. If a display feels hard to use, think about how you can remake it
+* Fix UI / UX problems. If a display feels hard to use, think about how you can remake it (wihout changing the original design of the app)
 * Your app should be fully responsive from mobile devices - tablets - laptops - large monitors
 
 ### Extensions
 * Create and implement a new feature for your application (run this by instructors first). 
 * Instead of displaying a random user when the app starts, implement a login, or a way to select which user to view.
-* Create a video of you navigating through your app via a keyboard and screen reader. 
-* Implement an animation using SASS 
+* Create a video of your team navigating through your app via a keyboard and screen reader. 
+* Implement an animation using CSS and SASS 
 
 
 ### Strategies for Success
@@ -241,6 +240,12 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 * Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. New features match the style of the existing project, and appropriate error handling messages are displayed. 
 * Exceptional - Meets all expectations for Proficient. In addition, the application has clearly had special consideration around usability on devices.
 
+## JavaScipt
+* Novice - Application generates syntax error or crashes during execution.
+* Advanced Beginner - Class methods use a mix of array and object prototypes and for loops. Application runs but the code has long methods, unnecessary or poorly named variables, and needs significant refactoring.
+* Proficient - Class methods use array and object prototypes - for loops are not used in the application. Application shows strong effort towards organization, content, and refactoring.
+* Exceptional - Application demonstrates excellent knowledge of JavaScript syntax, style, and refactoring.
+
 ## Workflow
 * Novice - The team committed the code to version control in only a few commits. The evaluator cannot determine the evolution of the application.
 * Advanced Beginner - The team makes large commits covering multiple features that make it difficult for the evaluator to determine the evolution of the application. The team does not utilize a planning tool or equitable pairing practices. One or both members do not contribute meaningfully to the application.
@@ -270,5 +275,4 @@ If the evaluator is left wanting a bit more from your response, they may choose 
 * Better error handling when users do something wrong with their POST request - make this a requirement rather than an extension
 * Add bugs into the codebase
 * Give you a codebase of a similar but different project
-
 -->
