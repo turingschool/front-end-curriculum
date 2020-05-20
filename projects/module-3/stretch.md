@@ -10,13 +10,15 @@ You've made it through your first front-end JavaScript framework: React! Now tha
 
 Incorporating a new technology into your application that isn't explicitly taught will give you the opportunity to differentiate yourself from other Turing grads and give you a great story to tell in your job interview - employers love to hear about your experiences being self driven and learning new technologies outside of the standard Turing curriculum.
 
+No one hires a junior dev based on what the junior already knows. Instead, junior developers are successful when they showcase their ability to learn and ask questions. This project will provide tangible, demonstrable anecdotes for you to bring up during interviews to show your ability to struggle with new material and problem solve!
+
 You have a lot of freedom with this project, but there are a few requirements listed next.
 
 ## Requirements
 
 As a group, you need to decide on:
 
-1. A minimum viable product (MVP) idea
+1. A minimum viable product (MVP) idea that solves a problem for your users
 1. The use of at least one external API
 1. Choose one category from the "Stretch Technologies" section below
 
@@ -27,7 +29,7 @@ Your application needs to be summarized with a minimum viable product. What is t
 The project is very open-ended in that you can make pretty much anything you want. However, we have some requirements to follow:
 * The application cannot simply be a display of data - there needs to be some way for the user to work with or manipulate the data (think favoriting at the very least, but be more creative than favoriting)
 * The application should be a multi-page application using React Router
-* **Any other requirements here?**
+* Be able to answer: What problems are you solving? What features must the solution include to solve this problem?
 
 Create a summary (MVP) of what your application will do and who your application is made for - be specific with your audience because it will give you direction in your work and make your project more interesting.
 
@@ -102,22 +104,22 @@ React "hooks" is a way of writing React components that are all functional - no 
 
 #### Another Framework
 
-React might not be the framework you end up working with on the job, and employers might want to see that you can be flexible in the technologies/frameworks you work in. Choosing this category means that you would use a framework other than React - here are some to choose from in no particular order:
+React might not be the framework you end up working with on the job, and employers might want to see that you can be flexible in the technologies/frameworks you work in. Choosing this category means that you would use a framework other than React - there are two you can choose from for this project since they have a similar feel to React:
 
-* Angular
-* Ember
 * Vue
 * Svelte
-* Backbone
-* React Native and Electron are _not_ a frameworks you can use for this project
 
-**Some things to note**: instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will still be required to test the application even though you are choosing a framework other than React.
-
-For this choice, the multi-page requirement using React Router is not applicable.
+**Some things to note**: Instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will still be required to test the application even though you are choosing a framework other than React. You will not be able to use React Router with these frameworks.
 
 #### User Authentication
 
 Some apps allow you to sign in using your Google, Facebook, or Twitter account - this is called user authentication. If you made this yourself, you would need a back-end server to store the user's data and it gets complicated, which is too much for this project. Use a third-party library like: PassportJS, Auth0, or Google's Firebase to enable a user to login to your application via Google, Facebook, and/or Twitter. The user should be able to stay logged in even after refreshing the page.
+
+### TypeScript
+
+The JavaScript language that we know and love is loosely typed - meaning a variable that you make can hold a string, and then you can change the value to a number and JS has no problem with that. TypeScript says once a variable is a string, it must stay a string, amongst other features. It's increasingly popular and some employers are seeking TypeScript experience.
+
+You can add TypeScript in React! This is a big shift in writing JavaScript like you have been, so be sure to keep your MVP small and then you can add on as you go. To get started with TypeScript and `create-react-app`, [start here](https://create-react-app.dev/docs/adding-typescript/).
 
 #### Miscellaneous
 
@@ -125,7 +127,8 @@ If you choose from this category, then you must pick at least two of these optio
 
 * Styled Components
 * Localization and Internationalization (would recommend using a library for this like [react-i18next](https://github.com/i18next/react-i18next))
-* **Some help needed here to make this category viable**
+* GSAP Animation
+* 100% passing accessibility testing using an accessibility analyzer like A11y or Axe
 
 
 ## Deliverables
