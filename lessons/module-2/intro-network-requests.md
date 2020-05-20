@@ -237,7 +237,7 @@ In short, it gives us access to the data!
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-  .then(data => data.json())
+  .then(response => response.json())
   .then(data => console.log(data));
 ```
 
@@ -245,7 +245,7 @@ Lastly, we can add in a `.catch()` to account for any errors we may run into.
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-  .then(data => data.json())
+  .then(response => response.json())
   .then(data => console.log(data))
   .catch(err => /* do something else */);
 ```
