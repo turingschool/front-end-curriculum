@@ -210,7 +210,7 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 Please submit projects [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=685056282) by **9pm on June 2nd.**
 
-# Written Feedback Rubric
+# Project Requirements Rubric
 ## Functional Expectiations
 * Novice: Application crashes during normal usage.
 * Advanced Beginner: Application is usable, but has some missing functionality.
