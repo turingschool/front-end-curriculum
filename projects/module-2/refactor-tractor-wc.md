@@ -204,9 +204,11 @@ If you wanted to _remove_ 3 units of that ingredient, you'd want to send a JSON 
 
 
 ### Strategies for Success
-* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely.
+* Make sure you are reviewing the original "What's Cooking" spec so you have a good idea for what the project and its requirements are. 
+* Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 
+Please submit projects [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=685056282) by **9pm on June 2nd.**
 
 # Written Feedback Rubric
 ## Functional Expectiations
