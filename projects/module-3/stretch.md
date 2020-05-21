@@ -37,13 +37,13 @@ Create a summary (MVP) of what your application will do and who your application
 
 Here is a list of some data APIs that are open to the public:
 
-* [Dad Jokes](https://icanhazdadjoke.com/api)
 * [Harry Potter](https://www.potterapi.com/)
 * [Thesaurus](https://words.bighugelabs.com/site/api)
 * [Jokes](https://jokes.one/api/joke/)
 * [Pokemon](https://pokeapi.co/)
 * [Cat Facts](https://alexwohlbruck.github.io/cat-facts/docs/)
 * [Marvel](https://developer.marvel.com/)
+* [Dad Jokes](https://icanhazdadjoke.com/api)
 * [Covid 19](https://covid19api.com/)
 * [IQAir - Real-Time Air Quality Forecast](https://www.iqair.com/us/air-pollution-data-api)
 * [eBird](https://documenter.getpostman.com/view/664302/S1ENwy59?version=latest)
@@ -109,13 +109,13 @@ React might not be the framework you end up working with on the job, and employe
 * Vue
 * Svelte
 
-**Some things to note**: Instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will still be required to test the application even though you are choosing a framework other than React. You will not be able to use React Router with these frameworks.
+**Some things to note**: Instructors will not be able to give in-depth feedback because most instructors do not have a lot of experience in each of these frameworks, and you will still be required to test the application even though you are choosing a framework other than React. **You will not be able to use React Router with these frameworks, start with a single-page application and add a routing tool once you get moving in the new framework.**
 
 #### User Authentication
 
 Some apps allow you to sign in using your Google, Facebook, or Twitter account - this is called user authentication. If you made this yourself, you would need a back-end server to store the user's data and it gets complicated, which is too much for this project. Use a third-party library like: PassportJS, Auth0, or Google's Firebase to enable a user to login to your application via Google, Facebook, and/or Twitter. The user should be able to stay logged in even after refreshing the page.
 
-### TypeScript
+#### TypeScript
 
 The JavaScript language that we know and love is loosely typed - meaning a variable that you make can hold a string, and then you can change the value to a number and JS has no problem with that. TypeScript says once a variable is a string, it must stay a string, amongst other features. It's increasingly popular and some employers are seeking TypeScript experience.
 
@@ -127,7 +127,7 @@ If you choose from this category, then you must pick at least two of these optio
 
 * Styled Components
 * Localization and Internationalization (would recommend using a library for this like [react-i18next](https://github.com/i18next/react-i18next))
-* GSAP Animation
+* GSAP Animations or WebGL Animations
 * 100% passing accessibility testing using an accessibility analyzer like A11y or Axe
 
 
@@ -137,10 +137,10 @@ If you choose from this category, then you must pick at least two of these optio
 
 Create a private Slack channel with your team members and instructor project manager. Submit the following by end of day 1:
 
-* MVP summary with a description of your audience
-* DTR
+* MVP summary with a description the problem you are solving and your audience
+* DTR (be as actionable, detailed, and specific as you can)
 * Wireframes of your application (using any electronic or hand-drawn tool you would like)
-* Project management tool (with some cards filled out and assigned)
+* Project management tool (with some cards filled out and assigned to team members)
 
 ### Day 4
 
@@ -153,4 +153,4 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 
 ## Rubric
 
-TBD
+Coming soon.
