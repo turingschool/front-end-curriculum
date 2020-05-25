@@ -397,6 +397,7 @@ console.log("Wait for it...");
 * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 * [Postman](https://www.getpostman.com/) -- good tool for testing out APIs
+* [GETs, POSTs and DELETEs, man! Intro to Postman](https://www.youtube.com/watch?v=MRw07FQRscI) - Instructor video for getting started with Postman
 
 
 
