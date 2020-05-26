@@ -29,14 +29,18 @@ Each person should have one post-it note available at your table.
 
 ## Arrays
 
-An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. Each value is referred to as an `element`. You should consider using an array whenever you are working with a collection of values, or values that are related to one another.
+An array is a complex data type. Instead of storing just one value, it stores an ordered list of values. Each value is referred to as an `element`. You should consider using an array whenever you are working with a collection of values of the same data type, or values that are related to one another. 
 
-You can put different types of data into an array, and there is not a certain number of elements an array can or should contain:
+An array is capable of holding any type of data, but generally each array should hold just one type of data. There is not a certain number of elements an array can or should contain:
 
 ```js
+// Good practice - each array only holds one type of data
 var arrayName = [element0];
-var rainbowColors = ['Red', 'Orange', 'Yellow'];
+var rainbowColors = ['Red', 'Orange', 'Yellow']; 
 var lotteryNumbers = [33, 72, 64, 18, 17, 85];
+
+// Bad practice - this array holds a mix of data types
+var randomData = ['hello', true, 100]
 ```
 You can create an array just like you would any other variable, using the `var` keyword followed by the name of your array. The values are assigned to the array inside a pair of square brackets (`[]`), and each element is comma-separated. The above technique for creating an array is known as an **array literal**. You can also write an array with values on separate lines, like so:
 
@@ -47,6 +51,14 @@ var colors = [
   'pink'
 ];
 ```
+
+<section class="call-to-action">
+### Turn and Talk
+
+With a partner:  
+- Consider social media applications that you use.
+- What are some examples of related data that the application might store in an array?
+</section>
 
 ## Accessing Values in Arrays
 
