@@ -135,9 +135,10 @@ If you choose from this category, then you must pick at least two of these optio
 
 ### Day 1
 
-Create a private Slack channel with your team members and instructor project manager. Submit the following by end of day 1:
+Create a private Slack channel with your team members and instructor project manager. Submit the following by **noon** of day 1:
 
 * MVP summary with a description the problem you are solving and your audience
+* The API you will use
 * DTR (be as actionable, detailed, and specific as you can)
 * Wireframes of your application (using any electronic or hand-drawn tool you would like)
 * Project management tool (with some cards filled out and assigned to team members)
