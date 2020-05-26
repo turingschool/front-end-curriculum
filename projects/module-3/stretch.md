@@ -65,7 +65,7 @@ Here is a list of some data APIs that are open to the public:
 
 Some of these APIs require API keys to consume the data. You'll have to go to the documentation for that API to find out how to get an API key and how to use the API key in your network requests.
 
-You can also take a look at [this list of APIs](https://github.com/public-apis/public-apis) for some more ideas. However, stay away from APIs listed here where "Auth" is "OAuth" and where "CORS" is either "Unknown" or "Yes". If you find an API in this list or from somewhere else that you are interested in using, then let your project manager know so they can help you see if it will be relatively easy to work with. 
+You can also take a look at [this list of APIs](https://github.com/public-apis/public-apis) for some more ideas. However, stay away from APIs listed here where "Auth" is "OAuth" and where "CORS" is either "Unknown" or "Yes". If you find an API in this list or from somewhere else that you are interested in using, then let your project manager know so they can help you see if it will be relatively easy to work with.
 
 ### Stretch Technologies
 
@@ -141,15 +141,22 @@ Create a private Slack channel with your team members and instructor project man
 * DTR (be as actionable, detailed, and specific as you can)
 * Wireframes of your application (using any electronic or hand-drawn tool you would like)
 * Project management tool (with some cards filled out and assigned to team members)
+* A plan for how you will learn the stretch technology together as a group
+
+### Most Days
+
+Your instructors will do a stand-up meeting in the mornings to see where the group is at, and give a chance for each group member to talk through what they're working on or where they have blockers.
 
 ### Day 4
 
 Your instructors will do a formal check-in with your group. At this check-in, instructors expect to see:
-* A demo of your application so far detailing the progress made toward your MVP
+* A very quick demo of your application so far detailing the progress made toward your MVP
 * Your testing suite running
 * Progress you've made on your Stretch Technology category
 * Any blockers you're experiencing
 * Your plan going forward for the next few days
+
+Share your app progress with the class for Show and Tell! Be prepared to tell the story or what your app is, why you're making it, and share a quick demo of your app so far. In total, the show and tell for your app should last no longer than 10 minutes.
 
 ## Rubric
 
