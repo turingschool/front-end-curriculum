@@ -153,4 +153,36 @@ Your instructors will do a formal check-in with your group. At this check-in, in
 
 ## Rubric
 
-Coming soon.
+### Specification Adherence
+
+* 4: Project has a fully flushed out MVP, and a completed stretch goal (extra stretch tech, stretch feature, etc). Evalutator has no recommendations for design changes. 
+* 3: Project has a fully flushed out MVP. At least one external data API is used, and any stretch-technology dependent MVP features are completed. Users can interact with the data. Evaluator has minimal recommendations for design changes. 
+* 2: Project comes up short of proposed MVP. Stretch technology is not fully implemented.Evaluator has mutliple recommendations for design changes.
+* 1: User interaction is not present in the application. No external API is used. Developers did minial to no styling.
+
+### Project Professionalism
+
+* 4 - Codebase has zero linter errors/warnings and README is well documented with images of different pages, setup, purpose of application, and group members. Evolution of the project is evident through consitent code review. Issues and project board cards are assigned to group members.
+* 3 - The codebase has less than 5 linter errors and README has been updated with all group members. Project utilized wireframes from the outset and updated them as changes were made. A project management tool was continuously used from the beginning of the project.  All git commits are atomic, made first to branches, and use descriptive and concise commit messages.
+* 2 -  README has been updated but is missing group members, setup, tech used, application images, or etc.  Wireframes are included and a project management tool was started, but are not utilized throughout the entire project. Project has more than 5 linter errors. Project team makes large infrequent git commits.
+* 1 - Either the README is incomplete, wireframes are not used, no project management system was utilized, or more than 10 linter errors are present. Git history does not show evolution of project with many large and inconsistent commits.
+
+### React  / Project Architecture
+
+* 4 - Functions including fetch calls have been refactored to be reusable for multiple queries.  Frontend data always matches the backend data.  Data fetched from API is run through a cleaning function (which lives in a separate file).  Implements excellent error handling if server is down or fetch fails.  This includes loading images as well as error messages on the frontend. All appropriate routes are visible on each page.
+* 3 - React architecture is clean and organized.  Logic is kept out of return statements.  There are some issues with the asynchronous JS where the frontend is not matching with the backend.  There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored. Data fetched from API is not cleaned before being set to state. A router is used for navigation.
+* 2 - Type checking functionality is complete.  There are no unnecessary props being passed down to child components.  However, there are still methods that are being created inside of functional components instead of being passed down through props from a class component.  File structure is modular but API calls have not been broken out into a separate file.  
+* 1 - Type checking (proptypes or otherwise) is substantially unused. Project shows little understanding of React and significant refactoring is required including but not limited to component structure, knowing when to use class vs functional components, mutation of props, or etc.  Unnecessary data is being passed down to child components through props. File structure is not modular.
+
+### Stretch Technology 
+* 4: Project demonstrate deep underatanding and sophisticated implementation of chose stretch technology, **and** implements a second new piece of tech. Group members can speak to best practices of chosen technologies. 
+* 3: Project demonstrates deep understanding of chosen stretch technology. Group members can think critically and speak to understood best practices of stretch technology. 
+* 2: Project demonstrates partial implementation of chosen stretch technology. Any stretch-tech-dependent features are functional, despite the MVP not being met.
+* 1 Project demonstrates no implementation of stretch tech, OR stretch-dependent features have major bugs. 
+
+### Testing
+
+* 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
+* 3 - All Redux functionality is tested (actions and reducers), all components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
+* 2 - Nearly all unit tests are in place. React components are well tested with a diverse set of tests including but not limited to unit testing display of the component, event simulation tests, and unit tests for functions passed as props. There are tests in place for actions and reducers. No attempt to test async functionality was made.
+* 1 - A valid attempt to test this application was made, but there are obvious gaps with missing unit tests for Redux and React.  
