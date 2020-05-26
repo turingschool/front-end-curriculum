@@ -29,7 +29,7 @@ In this session, we'll be diving into responsive page layouts and using media qu
 
 Page Layout refers to the arrangement and sizing of visual elements on a web page. There are four primary page layout types, which you are about the explore.
 
-Take a few minutes to explore <a target="blank" href="http://www.liquidapsive.com/">Liquidapsive</a>. Your table color corresponds to a color on the handout - you are assigned to become an expert on the layout in that color. Also, all students should look at the static layout. One by one, select both options from the drop-down in the top right corner. Change the screen width and observe what happens. Jot down your observations, likes and dislikes as a user, and be ready to share what you learned with someone from a different table color.
+Take a few minutes to explore <a target="blank" href="https://web.archive.org/web/20190602161514/http://www.liquidapsive.com/">Liquidapsive</a>. Your table color corresponds to a color on the handout - you are assigned to become an expert on the layout in that color. Also, all students should look at the static layout. One by one, select both options from the drop-down in the top right corner. Change the screen width and observe what happens. Jot down your observations, likes and dislikes as a user, and be ready to share what you learned with someone from a different table color.
 </div>
 
 ## Page Layouts
