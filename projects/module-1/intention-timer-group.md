@@ -52,6 +52,7 @@ Make sure both teammates and your assigned instructor are all added as collabora
   - Methods should include:
     - countdown (or beginTimer or startTimer - whatever naming makes sense to you)
     - markComplete
+    - saveToStorage
 
 Make sure that you link this file in your `index.html` using a `script` tag, above the link to your `main.js` file.
 
@@ -91,6 +92,13 @@ Make sure that you link this file in your `index.html` using a `script` tag, abo
 ![Timer Complete Desktop](./assets/intention-timer/complete-timer-desktop.png)
 ![Activity Complete Desktop](./assets/intention-timer/complete-activity-desktop.png)
 ![Full Functionality Desktop](./assets/intention-timer/full-functionality-desktop.png)
+
+## Iteration 5 - Persisting past activities
+
+**STOP!** Did you refactor Iteration 4? Clean up your code before moving on!
+
+- When the user refreshes the page,
+  - Their past activities are still displayed!
 
 ## Optional Extensions
 
@@ -160,6 +168,7 @@ To earn a given score, an application must meet the requirements listed in that 
   - Additional elements that have been added match the visuals established in the comps.
 * **3:** 
   - Application implements **all** major comp details accurately and correctly on desktop and **most** comp details on mobile (colors, fonts, icons, spacing, alignment,  etc.) with smooth transitions between screen sizes. 
+  - If additional elements were added, they generally match the visuals established in the comps, but may be slightly awkward. 
   - Careful attention was given to the little details like spacing, alignment, and hover states.
 * **2:** 
   - Application implements most major comp details accurately and correctly on desktop (colors, fonts, icons, spacing, alignment,  etc.).
@@ -211,6 +220,7 @@ To earn a given score, an application must meet the requirements listed in that 
   * Functions are [DRY](https://en.wikipedia.org/wiki/Don%27t_repeat_yourself) with a focus on [SRP](http://knnthvu.weebly.com/srp-and-dry.html)
   * Application demonstrates full separation of data-model and presentational logic (there is no DOM logic in the `Activity` class)
   * Application makes use of arguments and parameters to make functions more dynamic/reusable
+  * Application correctly uses `localStorage` to persist data
 * **2:**
   * There are no extraneous or unnecessary parameters in functions
   * Application uses function declarations over anonymous functions in event listeners
@@ -223,7 +233,7 @@ To earn a given score, an application must meet the requirements listed in that 
 
 ### Functional Expectations
 
-Functionality is the least important piece of the rubric. It's included because it is another benchmark to gauge proficiency. However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
+Functionality is the least important piece of the rubric. It's included because it is another benchmark to gauge proficiency (for example, we can’t grade your JS if there isn’t enough of it written!). However, you should not pursue functionality at the expense of code quality or the learning/growth of all team members.
 
 This means, we DO NOT want to see:
 - Code that completes iterations but is sloppy
@@ -233,6 +243,6 @@ This means, we DO NOT want to see:
 A score cannot be earned if all developers are not intimately familiar with the concepts and understanding driving every line of code.
 
 * **4:** Application completes an extension
-* **3:** Application meets all of the expectations of Iteration 4.
-* **2:** Application meets all of the expectations of Iteration 3.
-* **1:** Application meets all of the expectations of Iteration 2.
+* **3:** Application meets all of the expectations of Iteration 5.
+* **2:** Application meets all of the expectations of Iteration 4.
+* **1:** Application meets all of the expectations of Iteration 3.

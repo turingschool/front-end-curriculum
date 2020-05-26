@@ -83,6 +83,8 @@ Network requests are expensive no matter what we do. However, we can run them _a
 
 We'll come back to this idea, but know that when we make requests, we typically do them asynchronously. For now, lets look at how to actually make a request.
 
+**AJAX**
+
 One of the more common ways to make a request is through a process called AJAX, or [**A**synchronous **J**avaScript **A**nd **X**ML](https://developer.mozilla.org/en-US/docs/AJAX). AJAX was a huge advancement for the web, as it allowed developers to update part of a webpage without reloading the entire thing.
 
 Traditionally, Ajax requests have been made via the <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest" target="\__blank"> XMLHttpRequest object </a>. However, the process is a little clunky, so developers made a more streamlined way to do the same thing: the `fetch API`.
@@ -221,7 +223,7 @@ We don't need to worry too much about them now. Just know that a Promise will ei
 Diving into the returned promise reveals some information, such as its status and value, but nothing that's too immediately useful. Instead we have to resolve it:
 
 ```js
-fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple");
+fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
   .then(response => console.log(response))
 ```
 
@@ -235,7 +237,7 @@ In short, it gives us access to the data!
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-  .then(data => data.json())
+  .then(response => response.json())
   .then(data => console.log(data));
 ```
 
@@ -243,7 +245,7 @@ Lastly, we can add in a `.catch()` to account for any errors we may run into.
 
 ```js
 fetch("https://opentdb.com/api.php?amount=1&category=27&type=multiple")
-  .then(data => data.json())
+  .then(response => response.json())
   .then(data => console.log(data))
   .catch(err => /* do something else */);
 ```
@@ -395,6 +397,7 @@ console.log("Wait for it...");
 * [Fetch](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API)
 * [Promises](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise)
 * [Postman](https://www.getpostman.com/) -- good tool for testing out APIs
+* [GETs, POSTs and DELETEs, man! Intro to Postman](https://www.youtube.com/watch?v=MRw07FQRscI) - Instructor video for getting started with Postman
 
 
 

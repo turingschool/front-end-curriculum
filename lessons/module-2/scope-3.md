@@ -125,59 +125,25 @@ function analyzeGrades() {
   }
 };
   
-  console.log(privateGrades) // undefined
-  console.log(analyzeGrades) // fn definition
-  console.log(analyzeGrades()) // object with changeGrades method
+console.log(privateGrades) // undefined
+console.log(analyzeGrades) // fn definition
+console.log(analyzeGrades()) // object with changeGrades method
 
-  let instructor = analyzeGrades();
-  instructor.changeGrades(); // undefined (we are not returning anything from that method, but it is running)
-  instructor.viewGrades(); // [98, 100, 93...]
+let instructor = analyzeGrades();
+instructor.changeGrades(); // undefined (we are not returning anything from that method, but it is running)
+instructor.viewGrades(); // [98, 100, 93...]
 ```
+
+<section class="call-to-action">
+### Practice
+
+Add a new function `addGrade` to this closure, such that we can update our
+`privateGrades` variable, adding a new grade to the array.
+</section>
 
 Our most thorough definition of a closure is now **when an inner function has access to the outer function's variables and can remember the environment in which it was created. The outer function's variables are protected by the closure and can only be manipulated by code defined within that function.**
 
 In the previous example, you'll notice we could still technically change those grades and snoop on them if we wanted to. This is why we say JavaScript doesn't have a true fashion for creating private variables. We can kind of imply that you shouldn't be fussing with something by hiding it in a function and not exposing that variable declaration outside of it - but we can still gain access to that value. So closures aren't really going to help if you have truly sensitive data that nobody should be able to see.
-
-We still find this closure behavior powerful though! Let's look at yet another example. Save the following [gist](https://gist.github.com/brittanystoroz/a74c66b0cf1b20bf4102341a4f0fd212) to your computer by clicking the 'Download Zip' button in the top right of the page. Open the `little-jQuery.html` file in your browser.
-
-If we take a look at the JavaScript code in this file, we can see we've declared a function named `$`, that takes in a single argument, `selector`. The function ultimate returns an object of methods -- `addClass`, `hasClass`, `removeClass`, and `toggleClass`. While there are other variables and functions defined inside of our `$` function, those will never be exposed to the user. As developers, all we have access to are the methods returned from invoking the  `$` function:
-
-```js
-function $(selector) {
-  let selectorType = selector.split('').shift();
-  let selectorName = selector.substr(1);
-  let DOMElement = selectDOMElement();
-
-  function selectDOMElement() {
-    if (selectorType === '#') {
-      return document.getElementById(selectorName);
-    } else {
-      return document.querySelectorAll(selectorName);
-    }
-  }
-
-  return {
-    addClass(className) {
-      DOMElement.classList.add(className);
-    },
-    removeClass(className) {
-      DOMElement.classList.remove(className);
-    },
-    hasClass(className) {
-      return DOMElement.classList.contains(className);
-    },
-    toggleClass(className) {
-      if (this.hasClass(className)) {
-        this.removeClass(className);
-      } else {
-        this.addClass(className);
-      }
-    }
-  }
-};
-```
-
-So rather than trying to hide sensitive information, we're using a closure here to hide information that the user of jQuery (us! developers!) doesn't need. This makes the interface for working with the library a little less overwhelming. We only expose what's necessary for someone to develop with jQuery, and we hide all the extra inner magic that it takes to get it to work.
 
 <section class="call-to-action">
 ### Practice
@@ -254,7 +220,9 @@ Looking at this code, what do you think is happening?
 You can read more about the module pattern here:
 Read more about the JS Module Pattern:
 - [http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html)
-- [https://toddmotto.com/mastering-the-module-pattern/](https://toddmotto.com/mastering-the-module-pattern/) -->
+- [https://toddmotto.com/mastering-the-module-pattern/](https://toddmotto.com/mastering-the-module-pattern/)
+
+-->
 
 <section class="checks-for-understanding">
 ### Checks for Understanding 

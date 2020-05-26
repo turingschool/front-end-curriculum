@@ -1,9 +1,9 @@
 ---
-title: Static Comp Challenge 1
+title: Static Comp Challenge
 ---
 
 ## Specification
-The static comp challenge is a series of three challenges to keep you working that HTML/CSS muscle. :muscle: You will be asked to recreate a static comp, with each growing in complexity. For each challenge, you'll be given a static comp and asked to recreate it. Don't worry, we'll give you a bit of creative license, however the objective is to build something that respects the integrity of the original design. Once you get into the workforce - building out comps that reflect the designer's choice in layout, spacing, font, imagery, and color to the smallest detail is a requirement.
+The static comp challenge is a challenge to get you working that HTML/CSS muscle. :muscle: You will be asked to recreate a webpage based off of the provided static comp. Don't worry, we'll give you a bit of creative license, however the objective is to build something that respects the integrity of the original design. Once you get into the workforce - building out comps that reflect the designer's choice in layout, spacing, font, imagery, and color to the smallest detail is a requirement.
 
 ### Things to Note
  - We have not provided you with any assets, nor native files. You will have to source assets on your own per the creative license guidelines below.
@@ -21,19 +21,19 @@ You may NOT take liberties with the layout, but your creative license includes:
 
   - Basic static site setup with `index.html` and `styles.css`
   - Site must be responsive
-  - Create a repo on github :octocat: for your work with following naming construct: [initials]-comp-challenge-[challenge number] (i.e. __"bt-comp-challenge-1"__)
+  - Create a repo on github :octocat: for your work with following naming construct: [initials]-comp-challenge-[challenge number] (i.e. __"cd-comp-challenge-1"__)
   - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
   - Push your final work to [github pages](https://pages.github.com/)
 
 ### Additional Requirements
  - Site must work across Firefox, Safari, Chrome
- - Developer must use normalize instead of reset file in CSS
- - **You are allowed to use `flex-box` for this project (and will likely want to).  However, DO NOT use `grid`**
+ - Developer must use normalize or reset file in CSS
+ - **You are allowed to use `flex-box` and/or `grid`**
 
 ***
 
 ## Submission Details
 
-* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1Gfvrp74oj80tCadz4_J0YeQBha92Cf3nWx-ACKssBMw/edit#gid=1037661414)
+* Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/182EV6x0ifR3xaCnlTc5tfVsj0oA8x1pqW5WGjmmFZ5Y/edit?usp=sharing)
 
 ![static-comp-challenge-2](/assets/images/static-comp-challenge-2.jpg)
