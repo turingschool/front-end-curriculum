@@ -568,20 +568,23 @@ $duller-color: hsla(240, 50%, 50%, 1);
 
 
 ## Summary
+We've covered the basics (and more!) of Sass, but Sass can do a lot! If you're looking for more, check out the [Sass documentation](https://sass-lang.com/documentation/modules) for things like functions, operators, more at-rules, etc. 
+
+CSS can be messy. If you're looking for more ways to think about organizing your styles (CSS or SASS), look into some of the modular architecture methodologies, like OOCSS, BEM or SMACSS.
+
+<section class="call-to-action">
+### Exit Ticket
 
 We've talked about a lot of the strengths/advantages of using Sass without acknowledging that there are downsides. Given what you know, make a case for possible _disadvantages_ of using Sass
+</section>
 
 ## Resources
 
-- Follow [Facebook's guidelines](https://facebook.github.io/create-react-app/docs/adding-a-sass-stylesheet) to add Sass to your `create-react-app` project
-- [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
 - [Why Sass?](http://alistapart.com/article/why-sass)
 - [Cooler things you can do with Sass](https://gist.github.com/jareware/4738651)
 - [Downsides of using a CSS preprocessor](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
 - [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
-- [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 - [Sass to CSS Translator](http://www.sassmeister.com/)
+- [Advanced Sass Tutorials](http://thesassway.com/advanced)
+- [How to Organize Your CSS with a Modular Architecture](https://snipcart.com/blog/organize-css-modular-architecture)
 
-### Instructor Resources
-
-- [Practice Solutions](https://github.com/turingschool/front-end-keys/blob/master/module-4/sass/intro-to-sass.md)
