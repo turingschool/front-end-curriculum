@@ -143,26 +143,19 @@ chai.use(spies);
 Now instead of mocking out all the functionality of `localStorage`, we can mock
 it to an empty object that we'll spy on. Remember, `localStorage` doesn't exist
 in the terminal, so we're going to have to put something in place for it,
-otherwise we'll just keep encountering that reference error'
+otherwise we'll just keep encountering that reference error.
 
 ```js
 global.localStorage = {};
-```
-
-The syntax for setting up our spies looks a little funny, so let's dive into it.
-`chai.spy.on` is our call to the library. Our first argument `localStorage` is
-the object whose methods we want to spy on. The second argument is an array of
-methods that may be called on that object. The third argument is a replacement
-function, and tells chai what to do instead of running those methods.
-
-```js
-chai.spy.on(localStorage, ['setItem', 'getItem'], () => {});
 ```
 
 <section class="call-to-action">
 Checkout the following documentation on [chai.spy.on](https://github.com/chaijs/chai-spies#spyon) for more details about how to call it.
 </section>
 
+```js
+chai.spy.on(localStorage, ['setItem', 'getItem'], () => {});
+```
 
 1. `chai.spy.on()` is a method that let's us define what we want to spy on
 2. the **first** argument is the object we want to spy on
@@ -171,10 +164,19 @@ Checkout the following documentation on [chai.spy.on](https://github.com/chaijs/
 
 So what we're doing with this code is saying: "I know that `localStorage` works as it should, because the browser engineers have already tested it. All I want to verify is that I'm actually invoking `localStorage.setItem()`. I am going to replace the default behavior of `localStorage.setItem()` with a spy so that I can assert it was called without having to worry about what's happening under the hood."
 
+You might be wondering where exactly we should put that mocking/spying code in
+our test suite. This is a perfect place for a `beforeEach`. We can set this up
+inside our `saveDetails` describe block.
+
 Let's see how this changes the assertion logic of our test:
 
 ```js
 describe('saveDetails', function() {
+  beforeEach(function() {
+    global.localStorage = {}
+    chai.spy.on(localStorage, ['setItem', 'getItem'], () => {})
+  })
+
   it('should save details to localStorage', function() {
     var box = new Box(100, 100);
     box.saveDetails();
