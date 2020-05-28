@@ -55,18 +55,8 @@ git checkout spies-begin
 
 Let's look at what would happen if we tried to test a method that leverages `localStorage`.
 
-Let's add a method to our `Square.js` class called `saveDetails` that persists our box information to localStorage:
-
-```js
-saveDetails() {
-  localStorage.setItem('box', {
-    height: this.height,
-    width: this.width
-  });
-}
-```
-
-and now let's try to test this method:
+Let's test for a method `saveDetails`, which we will expect persists information
+to `localStorage`
 
 ```js
 describe('saveDetails', function() {
@@ -81,7 +71,14 @@ describe('saveDetails', function() {
 });
 ```
 
-We'll see in our terminal `ReferenceError: localStorage is not defined`. This would be the case even if we changed our expectation to `expect(true).to.equal(true)`, because the test is actually failing during the **execution phase** when our **application code** is trying to do `localStorage.setItem()`.
+When we first run this test, we're told that the function `saveDetails` is not
+defined. That's no problem, we know how to get past that error. However, the
+next error we encounter is more challenging.
+
+We'll see in our terminal `ReferenceError: localStorage is not defined`. This 
+would be the case even if we changed our expectation to `expect(true).to.equal(true)`, 
+because the test is actually failing during the **execution phase** when our 
+**application code** is trying to do `localStorage.setItem()`.
 
 
 ## What are our Options?
@@ -143,19 +140,27 @@ const spies = require('chai-spies');
 chai.use(spies);
 ```
 
-Now instead of mocking out all the functionality of `localStorage`, we can simply assign it to an empty object that we will spy on:
+Now instead of mocking out all the functionality of `localStorage`, we can mock
+it to an empty object that we'll spy on. Remember, `localStorage` doesn't exist
+in the terminal, so we're going to have to put something in place for it,
+otherwise we'll just keep encountering that reference error'
 
 ```js
 global.localStorage = {};
 ```
 
+The syntax for setting up our spies looks a little funny, so let's dive into it.
+`chai.spy.on` is our call to the library. Our first argument `localStorage` is
+the object whose methods we want to spy on. The second argument is an array of
+methods that may be called on that object. The third argument is a replacement
+function, and tells chai what to do instead of running those methods.
 
 ```js
 chai.spy.on(localStorage, ['setItem', 'getItem'], () => {});
 ```
 
 <section class="call-to-action">
-Checkout the following documentation on [chai.spy.on](https://github.com/chaijs/chai-spies#spyon) -- what are the three arguments it takes in?
+Checkout the following documentation on [chai.spy.on](https://github.com/chaijs/chai-spies#spyon) for more details about how to call it.
 </section>
 
 
@@ -181,6 +186,20 @@ describe('saveDetails', function() {
 We have two assertions here:
 1. verifies that `localStorage.setItem` was called one time
 2. verifies that it was called with accurate arguments
+
+
+Now that our test isn't erroring out on us, we can actually go ahead and
+implement our method. Go ahead and add this implementation, and see if the test
+passes now.
+
+```js
+saveDetails() {
+  localStorage.setItem('box', {
+    height: this.height,
+    width: this.width
+  });
+}
+```
 
 
 <section class="call-to-action">
