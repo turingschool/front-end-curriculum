@@ -214,9 +214,9 @@ saveDetails() {
 ```
 
 Huzzah! The test passes! This might make you uncomfortable. You might be saying
-"But how do I know that my data was properly set in localStorage?" It boils down
+"But how do I know that my data was properly set in `localStorage`?" It boils down
 to trust. If you're verifying that `localStorage` gets called with the correct
-parameters, we can trust that someone else already tested that `localStorage`
+arguments, we can trust that someone else already tested that `localStorage`
 will store that data correctly.
 
 
