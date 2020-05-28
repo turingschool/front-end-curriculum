@@ -133,7 +133,7 @@ To do this, we're going to add another `devDependency` to our `package.json` fil
 npm install chai-spies --save-dev
 ```
 
-To our test file, we'll require in our new dependency and configure `chai` to use it, by adding:
+To our test file, we'll require in our new dependency and configure `chai` to use it, by adding the following near the top of the file:
 
 ```js
 const spies = require('chai-spies');
@@ -204,6 +204,9 @@ saveDetails() {
 ```
 
 
-<section class="call-to-action">
-Think about the other web APIs and libraries you'll be using in your projects. Where might spies help you? What will be your strategy?
+<section class="checks-for-understanding">
+### Check for Understanding
+
+In your journal, write about the other web APIs and libraries 
+you'll be using in your projects. Where might spies help you? What will be your strategy?
 </section>
