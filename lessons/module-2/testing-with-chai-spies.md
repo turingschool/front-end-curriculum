@@ -108,13 +108,13 @@ application code isn't actually broken. Alternatively, our tests could pass,
 even though our real code is broken, becuase our mocked implementation doesn't
 match the real implementation.
 
-The other concern is that it shouldn't really be ourresponsiblity to 
+The other concern is that it shouldn't be our responsiblity to 
 test code that we didn't write. Someone else implemented
 `localStorage`, it's their responsibility to test that it does what it is
 supposed to do. Our responsibility is to test that all of our code uses
 `localStorage` correctly.
 
-So our other option is to leverage spies.
+The better option is to leverage spies.
 
 
 ### Spies
