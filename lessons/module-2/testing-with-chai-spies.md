@@ -92,7 +92,7 @@ global.localStorage = {
 }
 ```
 
-This is a common and totally reasonable practice in front-end testing. Just like we mock out data to work with, we also sometimes mock out web APIs to bring some of that functionality to the terminal. The only problem with this now, is that if anything is wrong with our implementation of `localStorage`, our tests might fail even if our application code isn't actually broken.
+This is common in front-end testing. Just like we mock out data to work with, we also sometimes mock out web APIs to bring some of that functionality to the terminal. The problem with this is that if anything is wrong with our implementation of `localStorage`, our tests might fail even if our application code isn't actually broken.
 
 So our other option is to leverage spies.
 
