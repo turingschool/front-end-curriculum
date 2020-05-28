@@ -4,19 +4,17 @@ tags: TDD, unit testing, mocha, chai, webpack, spies
 mod: 2
 ---
 
-<section class="call-to-action">
-We'll be working with the <a href="https://github.com/turingschool-examples/our-first-tests" target="\__blank"> our firsts tests repo</a>.
+## Goals
 
-- If you still have the repo on your computer, open it and commit your changes, then run:
-```
-git fetch --all
-git checkout spies-begin
-```
-- If you don't have the repo on your computer, clone it down, then run:
-```
-git checkout spies-begin
-```
-</section>
+By the end of this lesson, you will be able to:
+
+* Determine when it is appropriate to use a test spy
+* Run a test using a spy
+
+## Vocab
+
+- `Spy/Spies` - helpers that we use in tests which can assert functions were
+  called
 
 ## Why Spy with Our Little Eyes?
 
@@ -37,6 +35,21 @@ because it doesn't know what a `document` is. If we look at our `window` object 
 * manipulate the DOM
 * perform network requests
 * manage localStorage data
+
+<section class="call-to-action">
+We'll be working with the <a href="https://github.com/turingschool-examples/our-first-tests" target="\__blank"> our firsts tests repo</a>.
+
+- If you still have the repo on your computer, open it and commit your changes, then run:
+```
+git fetch --all
+git checkout spies-begin
+```
+- If you don't have the repo on your computer, clone it down, then run:
+```
+git checkout spies-begin
+```
+</section>
+
 
 ## Practice
 
