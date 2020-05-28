@@ -22,11 +22,9 @@ git checkout spies-begin
 
 One of the biggest hurdles with front-end testing, and why it can be so complex, is that your tests are running in a different environment than your app. Your app runs in the **browser**, and your tests run in the **terminal**.
 
-<!-- I've mentioned in our first testing lesson, that TDD was pretty much always a process on the back-end, and it made sense there because when you're writing server-side/back-end code, you're pretty much living in your terminal. One reason testing didn't come around to the front-end side of things was because we have this environmental difference. We couldn't figure out how to run our tests in an environment that behaved like a browser. -->
-
 <section class="call-to-action">
 ### Brainstorm
-- What web APIs and technologies are our apps rely on in the browser?
+- What are some web APIs and technologies that our apps rely on in the browser?
 - Are these defined in the terminal environment?
 </section>
 
