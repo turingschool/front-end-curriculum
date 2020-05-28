@@ -61,8 +61,13 @@ to `localStorage`
 ```js
 describe('saveDetails', function() {
   it('should save details to localStorage', function() {
+    // setup
     var box = new Box(100, 100);
+
+    // execution
     box.saveDetails();
+
+    // expectation
     expect(localStorage.getItem('box')).to.deep.equal({
       width: 100,
       height: 100
@@ -178,8 +183,13 @@ describe('saveDetails', function() {
   })
 
   it('should save details to localStorage', function() {
+    // setup
     var box = new Box(100, 100);
+
+    // execution
     box.saveDetails();
+
+    // expectation
     expect(localStorage.setItem).to.have.been.called(1);
     expect(localStorage.setItem).to.have.been.called.with('box', { width: 100, height: 100 });
 });
