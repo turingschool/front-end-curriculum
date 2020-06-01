@@ -12,9 +12,9 @@ module: 2
 
 ## Vocab
 
-- `UI` User interface
-- `UX` User experience
-- `UXD` User experience design
+- `UI` User interface; what the user actually sees and interacts with in an app
+- `UX` User experience; the overall experience of using an app - what it's like to use an app in pursuit of a goal (buying something, getting information, etc)
+- `UXD` User experience design: the art and science of creating apps that seamlessly meet user needs and create a painless experience 
 - `Usability` How easy your design is to understand and use
 
 ## User Experience Design
@@ -25,20 +25,24 @@ You can't be a _good_ front-end developer without understanding the fundamental 
 
 You don't need to be an artist or graphic designer. You don't have to create beautiful designs out of thin air. But you DO need to understand who will be using your app, how they're using it, and what they want to accomplish while using it.
 
-**Vocab**:
-- **UI**: user interface; what the user actually sees and interacts with in an app
-- **UX**: user experience; the overall experience of using an app - what it's like to use an app in pursuit of a goal (buying something, getting information, etc)
-- **UXD**: user experience design: the art and science of creating apps that seamlessly meet user needs and create a painless experience 
-
 ### What even is it?
 
 User experience design is simple and also very complex. It's the act of making your app **usable** and **painless** for the end user.
 
-**Turn and talk!**
+<section class="call-to-action">
 
-What are some examples of apps that you use (think about the sites you use for social media, looking up info, booking travel, etc). What apps are easy to use? What apps are really fun to use? What apps are the worst? Think of times when you had a very frustrating experience with a website (making a payment, filling out a form, etc).
+### Turn and Talk
+
+What are some examples of apps that you use (think about the sites you use for social media, looking up info, booking travel, etc). 
+
+* What apps are easy to use? What apps are really fun to use? 
+
+* What apps are the worst? Think of times when you had a very frustrating experience with a website (making a payment, filling out a form, etc).
 
 WHY were those experiences frustrating? What would have made them better? What makes an app enjoyable to use?
+
+</section>
+
 
 ### Why does User Experience Design matter?
 
@@ -46,18 +50,21 @@ Even if your app offers a great service, it won't matter if no one can figure ou
 
 ### The Bad
 
-We know it when we see it. Let's figure out what exactly makes a design **bad**.
+We know it when we see it. Let's figure out what exactly makes a design **"bad"**. Consider this form:  
 
-Consider this form:
 ![terrible user interface form](https://cdn0.tnwcdn.com/wp-content/blogs.dir/1/files/2015/09/Screen-Shot-2015-09-29-at-14.46.33.png)
 
-There's a lot that makes this a huge pain in the neck:
+
+
+<!-- There's a lot that makes this a huge pain in the neck:
 - The input fields are very close together; difficult to use on a touchscreen interface
 - It's very long
 - The colors are alarming; we're used to red being reserved for error messages
 - Some of the fields are not going to be used by everyone
 - It doesn't look very trustworthy
-- etc
+- etc -->
+
+What do we see here that might be frustrating to deal with as a user? What could we do to improve the experience?
 
 Okay, that was fun and infuriating. How many of our concerns were PURELY aesthetic? How many were based on usability (aka how much was bad because it made it harder to use this form)?
 
@@ -71,11 +78,11 @@ When people talk about design, a lot of times they're picturing fluff - the fini
 
 But as developers, when you hear "design", you should be thinking "functionality". Good design is pleasant to look at, yes, but more importantly it's pleasant to use.
 
-**Good design anticipates users' needs.**
+![side by side form example bad and good](https://miro.medium.com/max/2000/1*duSgTJVJm493nlejCoVcIg.jpeg)
 
-## Paired Activity
-[Website 1](https://gist.github.com/hannahhch/44391a45d30b7d084d14e26d56659807)
-[Website 2](https://gist.github.com/hannahhch/48e6a8b421c4351ca3c1413c7be25f97)
+**Good design anticipates users' needs. That's it!**
+
+
 
 ## Usability Considerations & Processes
 
@@ -163,3 +170,11 @@ User testing helps account for any biases we might have as developers. We can't 
 [Steve Krug](https://www.sensible.com/dmmt.html)'s excellent book on usability and user testing, [Don't Make Me Think](http://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) is worth reading if you're interested in making your apps more usable. Hint: everyone should be interested in making their apps more usable.
 
 No matter how empathetic and diligent you are, you can't assume you know everything about your users, or that you've closed all the gaps in your own assumptions.
+
+<section class="call-to-action">
+
+## Paired Activity
+* [Website 1](https://gist.github.com/hannahhch/44391a45d30b7d084d14e26d56659807)
+* [Website 2](https://gist.github.com/hannahhch/48e6a8b421c4351ca3c1413c7be25f97)
+
+</section>
