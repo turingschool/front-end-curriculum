@@ -83,7 +83,7 @@ But as developers, when you hear "design", you should be thinking "functionality
 **Good design anticipates users' needs. That's it!**
 
 
-
+</br>
 ## Usability Considerations & Processes
 
 ![usability tools](https://blog.therestaurantzone.com/wp-content/uploads/2017/01/restaurant-recruiting-tools.jpg)
@@ -174,7 +174,10 @@ No matter how empathetic and diligent you are, you can't assume you know everyth
 <section class="call-to-action">
 
 ## Paired Activity
-* [Website 1](https://gist.github.com/hannahhch/44391a45d30b7d084d14e26d56659807)
-* [Website 2](https://gist.github.com/hannahhch/48e6a8b421c4351ca3c1413c7be25f97)
+Let's get some practice with user testing! You and a partner will be assigned a website to test out. Make sure you read the instructions so you know what your tasks are. 
+
+
+* [Website A](https://github.com/turingschool-examples/user-experience-activities/blob/master/website-a.md)
+* [Website B](https://github.com/turingschool-examples/user-experience-activities/blob/master/website-b.md)
 
 </section>
