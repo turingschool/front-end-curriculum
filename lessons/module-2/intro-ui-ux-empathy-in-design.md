@@ -188,3 +188,4 @@ Let's get some practice with user testing! You and a partner will be assigned a 
 * [7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886)
 * [Intro to Personas](https://frontend.turing.io/lessons/module-2/ux-ui-intro-to-personas.html)
 * [A Worst-Practice UI Experiment](https://userinyerface.com/)
+* [Type Scale](https://type-scale.com/) - tool for visualizing font size balance 
