@@ -8,7 +8,7 @@ tags: javascript, oop, testing, jquery
 
 ## Background and Description
 
-For this project, you will be creating an application to manage and track different trips for users and travel agencies.
+For this project, you will be creating an application to manage and track different trips for users and a travel agency.
 
 ## Goals and Objectives
 
@@ -22,7 +22,6 @@ For this project, you will be creating an application to manage and track differ
 ## Technologies
 
 * **the fetch API** to retrieve and add data
-* **jQuery** for making the DOM easier to handle
 * **Sass** for getting fancy with your CSS
 
 ## Initial Setup
@@ -53,7 +52,7 @@ Below are all the endpoints set up for this project. You may not use all of them
 | Delete single trip| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips` | DELETE | `{id: <Number>}` | Trip #<id> has been deleted |
 
 - All POST and DELETE requests should have the following headers:
-```
+```js
 {
   "Content-Type": "application/json"
 }
@@ -86,13 +85,13 @@ password: travel2020
 **As a traveler, upon logging in:**
 - I should see a dashboard page that shows me:
     - All of my trips (past, present, upcoming and pending)
-    - Total amount I have spent on trips this year (including travel agent's 10% fee)
+    - Total amount I have spent on trips this year. This should be calculated from the trips data and include a travel agent's 10% fee
 
 **As a travel agent, upon logging in:**
 - I should see a dashboard page that shows me:
-    - New trip requests
+    - New trip requests (a user's "pending" trips)
     - Total income generated this year (should be 10% of user trip cost)
-    - Number of travelers on trips for today's date
+    - Travelers on trips for today's date (number, names, however you want to display this!)
 
 ### 3. Traveler Interaction
 
@@ -100,25 +99,13 @@ password: travel2020
 - I should be able to make a trip request
     - I will select a date, duration, number of travelers and choose from a list of destinations
     - After making these selections, I should see an estimated cost (with a 10% travel agent fee) for the trip.
-    - Once I submit the trip request, it will show on my dashboard as "pending"
+    - Once I submit the trip request, it will show on my dashboard as "pending" so that the travel agency can approve or deny it. 
 
 Submitting a trip request will require a POST request to the trips endpoint, like so:
 
 **Trips: [https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips](https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips)**
 
-```js
-{
-   "id": 92829,
-   "userID": 44,
-   "destinationID": 49,
-   "travelers": 1,
-   "date": "2019/09/16",
-   "duration": 8,
-   "status": "pending",
-   "suggestedActivities": []
-}
-```
-- This is an example of what to send the server if you wanted to add a new trip
+Refer to the "Add new trip" section from the endpoints table above! 
 
 ### 4. Agent Interaction
 
@@ -137,7 +124,8 @@ Approving a trip will require a POST - changing the trip status from "pending" t
    "status": "approved"
 }
 ```
-- This is an example of what to send the server if you wanted to approve trip 92829
+- This is an example of what to send the server if you wanted to approve trip 92829  
+- Refer to the "Modify single trip" section of the endpoints table above!
 
 Deleting an upcoming booking will require a DELETE request to the bookings endpoint, like so:
 
@@ -146,23 +134,25 @@ Deleting an upcoming booking will require a DELETE request to the bookings endpo
   "id": 92829
 }
 ```
-- This is an example of what to send the server if you wanted to delete trip 92829
+- This is an example of what to send the server if you wanted to delete trip 92829  
+- Refer to the "Delete single trip	" section of the endpoints table above!
+
 
 ### Extensions
 - The user dashboard should display a countdown to my next trip (if I have any)
-- Allow the travel agent to POST suggestedActivities for user trips (see Endpoints table above)
+- Allow the travel agent to POST suggestedActivities for user trips (see Endpoints table above). This could be based off of a user's "travelerType" value.
 - Allow the travel agent to create new destinations (see Endpoints table above)
 
 ## Workflow
 You will be assigned one workflow buddy to submit PRs to:
 
 * You must give your workflow buddy collaboration access to your repo.
-* You must submit at least 2 PRs to your workflow buddy for review.
+* You must submit _at least_ 2 PRs to your workflow buddy for review.
 * You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
 
 It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As a workflow buddy, you are responsible for reviewing at least 2 PRs from your partner.
 
-Please also tag your instructors in any PR you make to your buddy.
+**Please also tag your project manager in any PR you make to your buddy.**
 
 ## Testing
 You should be testing your the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
@@ -190,8 +180,8 @@ Keep in mind your use-cases for Spies:
 
 ## UI/UX
 
-* [ ] Novice - The application is confusing or difficult to use. The UI is incomplete.
-* [ ] Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use.
+* [ ] Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive.
+* [ ] Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive.
 * [ ] Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX.
 * [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application has clearly had special consideration around usability on devices.
 
@@ -204,10 +194,10 @@ Keep in mind your use-cases for Spies:
 
 ## CSS/Sass Style
 
-* [ ] Novice - There are several (10+) instances of duplication and one or two major bugs. Developers write code with unnecessary selectors or tags which do not increase clarity.
-* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase. There may be one to two minor bugs. There may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules.
-* [ ] Proficient - Application is thoughtfully put together with comments to help guide organization. There may be some duplication (fewer than 5 instances) present. Comments are present to assist with organization of code.
-* [ ] Exceptional - Meets all expectations for `Proficient`. The application has exceptionally well-factored CSS/Sass with all styles separated out into logical stylesheets. There are zero instances where an instructor would recommend taking a different approach.
+* [ ] Novice -  There are several (10+) instances of duplication. Code is written with unnecessary selectors or tags which do not increase clarity. No SASS, or VERY minimal SASS is utilized.
+* [ ] Advanced Beginner - There is some duplication (5-10 instances) in the codebase, and there may be some unnecessary selectors or tags. Application adds organization for the whole stylesheet and within rules, but multiple SASS files have not been utilized. All SASS code lives in a single file, and only a few variables have been used.
+* [ ] Proficient - The application has well-factored SASS with all styles separated out into logical stylesheets. Mixins or extends, variables, (appropriate) nesting and color functions have been utilized well.
+* [ ] Exceptional - Application fulfills all requirements of the proficient level, and has SASS functionality that goes above and beyond an MVP.
 
 ## Testing
 
