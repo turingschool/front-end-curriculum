@@ -29,7 +29,7 @@ When we say **single-threaded**, that could be read as doing one thing at a time
 <section class="call-to-action">
 ### On Your Own
 
-Take 15 minutes to read [this article](https://www.sohamkamani.com/blog/2016/03/14/wrapping-your-head-around-async-programming/){:target="\__blank"} about how JavaScript is asynchronous and also single threaded.
+Take 15 minutes to read [this article](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd){:target="\__blank"} about how JavaScript is asynchronous and also single threaded.
 
 ### Discuss
 
