@@ -23,6 +23,7 @@ For this project, you will be creating an application to manage and track differ
 
 * **the fetch API** to retrieve and add data
 * **Sass** for getting fancy with your CSS
+* **Mocha** and **Chai** for testing your code
 
 ## Initial Setup
 
