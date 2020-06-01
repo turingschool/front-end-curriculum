@@ -179,12 +179,12 @@ Keep in mind your use-cases for Spies:
 * [ ]  Proficient - The application uses the above technologies to a professional level.
 * [ ]  Exceptional - Meets all expectations of `Proficient`. In addition, the application has additional features/extensions implemented that go above and beyond the project requirements.
 
-## UI/UX
+## UI/UX & Accessibility
 
-* [ ] Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive.
-* [ ] Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive.
-* [ ] Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX.
-* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application has clearly had special consideration around usability on devices.
+* [ ] Novice - The application is confusing or difficult to use. The UI is incomplete, and the app is not responsive. Accessibility has not been considered. 
+* [ ] Advanced Beginner - The application may be confusing or difficult to use at times. The application shows some effort in the interface, but the result is not effective because UX and/or UI still present an application that is incomplete or difficult to use. The UI is incomplete, and the app is not responsive. Accessibility has been considered, but does not have strong accessible features. 
+* [ ] Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
+* [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application has clearly had special consideration around usability on devices. Lighthouse accessibility audit is at a 100%.
 
 ### JavaScript Style & OOP
 
