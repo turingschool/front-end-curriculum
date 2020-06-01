@@ -83,7 +83,6 @@ But as developers, when you hear "design", you should be thinking "functionality
 **Good design anticipates users' needs. That's it!**
 
 
-</br>
 ## Usability Considerations & Processes
 
 ![usability tools](https://blog.therestaurantzone.com/wp-content/uploads/2017/01/restaurant-recruiting-tools.jpg)
