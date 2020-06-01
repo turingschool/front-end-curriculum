@@ -119,14 +119,17 @@ User experience designers use a number of tools to help them keep the end user i
 - Consistent (layout, interactions, functionality should be consistent from one page to the next)
 - Seamless learning curve (the onboarding process should be painless and intuitive)
 
-![university website comic](https://imgs.xkcd.com/comics/university_website.png)
+<section class="call-to-action">
+Imagine you were doing audience research for your Fitlit or What's Cookin' apps. What sort of questions would you ask to determine which new features to add?
+
+</section>
 
 ### Content Analysis - Context
 
 Your app should give the user what they need, when they need it.
 
 A great real world example of this principle is [TurboTax](https://www.appcues.com/blog/how-turbotax-makes-a-dreadful-user-experience-a-delightful-one/
-). (And actually the TurboTax site is a great example of UXD in general.)
+). (And actually the _old_ TurboTax site is a great example of UXD in general.)
 
 ![turbotax has great UXD](https://blog.appcues.com/hs-fs/hubfs/Blog/turbotax-refund.gif?t=1511982576695&width=1280&name=turbotax-refund.gif)
 
@@ -141,25 +144,23 @@ It's important to anticipate what a user needs to know. It's poor UXD to withhol
 **Contextual Design**
 
 When designing an app, keep in mind the user's context:
-- Metadata (time of day, location, language, etc)
+- Metadata (time of day, location, language, etc) 
+    - Example: food delivery apps notifying a user that a particular restaurant is closed at that time
 - Explicit interaction (the user actively and consciously changes the design of the app)
     - Changes the color in the settings
     - Sets the location or time of day
-    - etc
 - Implicit interaction (the app changes its design without the user consciously making the change)
     - Detecting the time of day and showing the nighttime mode
     - Remembering the user's last search and showing that info
     - Detecting the location and updating displayed info
-    - etc
 - Give the information a user needs when they need it
-    - Microinteractions to improve the onboarding experience
+    - Microinteractions to improve the onboarding experience 
     - Real-time feedback through error-messaging
-    - etc
 
 
 ### User Testing
 
-![users will always find ways to misunderstand how to use your app, so do user testing!](https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/07/1436502693image00.gif)
+![users will always find ways to misunderstand how to use your app, so do user testing!](https://miro.medium.com/max/600/1*c4v8RrKa6nwZ0aKOvQHwwA.png)
 
 _Users will always find new and creative ways to misunderstand how to use your app ... so do user testing!_
 
@@ -167,7 +168,7 @@ Earlier we said that empathy is one part of creating a great user experience. Us
 
 User testing helps account for any biases we might have as developers. We can't assume that we know all the pain points our users might run into, and we also can't assume that we know the right questions to ask!
 
-[Steve Krug](https://www.sensible.com/dmmt.html)'s excellent book on usability and user testing, [Don't Make Me Think](http://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) is worth reading if you're interested in making your apps more usable. Hint: everyone should be interested in making their apps more usable.
+Steve Krug's excellent book on usability and user testing, [Don't Make Me Think](http://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) is worth reading if you're interested in making your apps more usable. Hint: everyone should be interested in making their apps more usable.
 
 No matter how empathetic and diligent you are, you can't assume you know everything about your users, or that you've closed all the gaps in your own assumptions.
 
@@ -181,3 +182,10 @@ Let's get some practice with user testing! You and a partner will be assigned a 
 * [Website B](https://github.com/turingschool-examples/user-experience-activities/blob/master/website-b.md)
 
 </section>
+
+
+## Additional Resources
+
+* [7 Practical Tips for Cheating at Design](https://medium.com/refactoring-ui/7-practical-tips-for-cheating-at-design-40c736799886)
+* [Intro to Personas](https://frontend.turing.io/lessons/module-2/ux-ui-intro-to-personas.html)
+* [A Worst-Practice UI Experiment](https://userinyerface.com/)
