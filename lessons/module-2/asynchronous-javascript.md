@@ -68,4 +68,4 @@ Let's take this event loop example with `setTimeout` and translate it to what we
 </section>
 
 ### Additional Resources
-* [Loupe](http://latentflip.com/loupe)
+* [Loupe](http://latentflip.com/loupe){:target="\__blank"}
