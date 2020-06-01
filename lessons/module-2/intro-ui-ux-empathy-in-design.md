@@ -189,3 +189,4 @@ Let's get some practice with user testing! You and a partner will be assigned a 
 * [Intro to Personas](https://frontend.turing.io/lessons/module-2/ux-ui-intro-to-personas.html)
 * [A Worst-Practice UI Experiment](https://userinyerface.com/)
 * [Type Scale](https://type-scale.com/) - tool for visualizing font size balance 
+* [Baymard Institute Page Designs](https://baymard.com/ecommerce-design-examples) - page examples with UX annotations
