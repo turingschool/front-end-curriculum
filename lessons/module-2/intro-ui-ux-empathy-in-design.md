@@ -190,3 +190,6 @@ Let's get some practice with user testing! You and a partner will be assigned a 
 * [A Worst-Practice UI Experiment](https://userinyerface.com/)
 * [Type Scale](https://type-scale.com/) - tool for visualizing font size balance 
 * [Baymard Institute Page Designs](https://baymard.com/ecommerce-design-examples) - page examples with UX annotations
+* [Color Patterns from MailChimp](https://ux.mailchimp.com/patterns/color)
+* [Ultimate Guide to User Flow Diagrams](https://creately.com/blog/diagrams/user-flow-diagram/)
+* [Invision Design Process](https://www.invisionapp.com/inside-design/category/design/process/)
