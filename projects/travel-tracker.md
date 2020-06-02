@@ -33,9 +33,9 @@ For this project, you will want to use this [Webpack Starter Kit](https://github
 
 You will use the following endpoints for fetching your data:
 
-* [Travelers](https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/travelers/travelers)
-* [Trips](https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips)
-* [Destinations](https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/destinations/destinations)
+* [Travelers](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/travelers/travelers)
+* [Trips](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips)
+* [Destinations](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/destinations/destinations)
 
 ### Endpoints
 
@@ -43,14 +43,14 @@ Below are all the endpoints set up for this project. You may not use all of them
 
 | Description | URL | Method | Required Properties for Request | Sample Successful Response |
 |----------|-----|--------|---------------------|-----------------|
-| Get all travelers|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/travelers/travelers`| GET  | none | object with `travelers` property containing an array of all travelers |
-|Get single traveler|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/travelers/travelers/<id>`     *where`<id>` will be a number of a traveler's id* | GET  | none | object of single traveler's info |
-|Get all trips| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips` | GET | none | object with `trips` property containing an array of all travelers |
-|Get all destinations| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/destinations/destinations` | GET | none | object with `trips` property containing an array of all travelers |
-| Add new trip |`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips`| POST | `{id: <number>, userID: <number>, destinationID: <number>, travelers: <number>, date: <string 'YYYY/MM/DD'>, duration: <number>, status: <string 'approved' or 'pending'>, suggestedActivities: <array of strings>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with trip info just posted>}`|
-| Add new destination|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/destinations/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with destination info just posted>}`|
-| Modify single trip | `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedResource: <Object with newly updated data>}`|
-| Delete single trip| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips` | DELETE | `{id: <Number>}` | Trip #<id> has been deleted |
+| Get all travelers|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/travelers/travelers`| GET  | none | object with `travelers` property containing an array of all travelers |
+|Get single traveler|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/travelers/travelers/<id>`     *where`<id>` will be a number of a traveler's id* | GET  | none | object of single traveler's info |
+|Get all trips| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips` | GET | none | object with `trips` property containing an array of all travelers |
+|Get all destinations| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/destinations/destinations` | GET | none | object with `trips` property containing an array of all travelers |
+| Add new trip |`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips`| POST | `{id: <number>, userID: <number>, destinationID: <number>, travelers: <number>, date: <string 'YYYY/MM/DD'>, duration: <number>, status: <string 'approved' or 'pending'>, suggestedActivities: <array of strings>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with trip info just posted>}`|
+| Add new destination|`https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/destinations/destinations`| POST | `{id: <number>, destination: <string>, estimatedLodgingCostPerDay: <number>, estimatedFlightCostPerPerson: <number>, image: <string>, alt: <string>}` | `{message: 'Resource with id <id> successfully posted', newResource: <Object with destination info just posted>}`|
+| Modify single trip | `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/updateTrip` | POST | `{id: <number>, status:<String of 'approved' or 'pending', suggestedActivities: <Array of strings>}` *Only a status* **or** *a suggestedActivities property is required for a successful request*| `{message: 'Trip #<id> has been modified', updatedResource: <Object with newly updated data>}`|
+| Delete single trip| `https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips` | DELETE | `{id: <Number>}` | Trip #<id> has been deleted |
 
 - All POST and DELETE requests should have the following headers:
 ```js
@@ -104,7 +104,7 @@ password: travel2020
 
 Submitting a trip request will require a POST request to the trips endpoint, like so:
 
-**Trips: [https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips](https://fe-apps.herokuapp.com/api/v1/travel-tracker/1911/trips/trips)**
+**Trips: [https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips](https://fe-apps.herokuapp.com/api/v1/travel-tracker/data/trips/trips)**
 
 Refer to the "Add new trip" section from the endpoints table above! 
 
