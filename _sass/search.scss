@@ -1,8 +1,22 @@
+.search-bar {
+  display: flex;
+}
+
+.search-bar label {
+  display: flex;
+  align-items: center;
+}
+
+.search-icon {
+  height: 25px;
+  width: auto;
+}
+
  .search-bar input {
   font-weight: 500;
   outline-color: lighten($turing-secondary, 25%);
   padding-left: 0.5em;
-  margin-left: 15px;
+  margin-left: 5px;
   position: relative;
   border: 1px solid $medium-gray;
   width: 200px;
