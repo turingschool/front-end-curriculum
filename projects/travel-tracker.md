@@ -170,6 +170,10 @@ Keep in mind your use-cases for Spies:
 - Spying on methods that call other methods which are already tested elsewhere
 - Spying on any functions that do DOM manipulation in response to the result of a fetch request/instance updating
 
+## Due Date
+
+Make sure you turn in your project [here](https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit#gid=1963824141) by **Tuesday, June 9th at 9pm**
+
 # Rubric
 
 ## Specification Adherence
@@ -186,7 +190,7 @@ Keep in mind your use-cases for Spies:
 * [ ] Proficient - The application has many strong pages/interactions. The application can stand on its own to be used by instructor without guidance from a developer on the team. The application is fully responsive and the UI does not detract from the UX. Lighthouse accessibility audit is at least 90%.
 * [ ] Exceptional - Meets all expectations for `Proficient`. In addition, the application has clearly had special consideration around usability on devices. Lighthouse accessibility audit is at a 100%.
 
-### JavaScript Style & OOP
+## JavaScript Style & OOP
 
 * [ ] Novice - Application is not separated into classes, or methods and properties are illogically assigned to classes. Developer writes code with unnecessary variables, operations, or steps that do not increase clarity. Business-side logic and view-related code are not separated.
 * [ ] Advanced Beginner - Application has a significant amount of duplication. Application is organized into classes that do not display a good understanding of encapsulation, and logic is not well-divided. Developer cannot articulate what each line of code is doing.
