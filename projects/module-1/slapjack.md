@@ -62,6 +62,7 @@ Gameplay:
   - When a Jack is revealed, the player who is out of cards can slap it. The central pile is then their new hand, the game continues as normal.
   - If however, the player who is out of cards slaps something that is not a Jack, or if the player who still has cards slaps the Jack first, then the player who is out of cards loses and the game is over!
   - Doubles and Sandwiches are not valid when one player is completely out of cards - in this case, only a Jack can save them!
+  - The only way the player who still has cards can win is by slapping the Jack before the player without cards left. 
 
 In this project, we will not be providing detailed iterations. We want you to exercise your skills in planning out work!
 
