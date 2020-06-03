@@ -204,6 +204,6 @@ We still expect you to use good workflow practices! Atomic commits, use of branc
 ### Functional Expectations
 
 * **4:** Application is fully complete (matches all functionality from demo, without bugs), and implements additional functionality devised by the student
-* **3:** Application is fully complete (matches all functionality from demo, and player win counts persist across refreshes)
-* **2:** Able to play an entire game successfully (win, draw, displayed player data updates)
+* **3:** Application is fully complete (matches all functionality from demo, and player win counts persist across refreshes, a new game starts automatically)
+* **2:** Able to play an entire game successfully (dealing, slaps, win, displayed player wins count updates as needed)
 * **1:** Unable to play an entire game successfully
