@@ -138,23 +138,6 @@ Deleting an upcoming booking will require a DELETE request to the bookings endpo
 - This is an example of what to send the server if you wanted to delete trip 92829  
 - Refer to the "Delete single trip	" section of the endpoints table above!
 
-
-### Extensions
-- The user dashboard should display a countdown to my next trip (if I have any)
-- Allow the travel agent to POST suggestedActivities for user trips (see Endpoints table above). This could be based off of a user's "travelerType" value.
-- Allow the travel agent to create new destinations (see Endpoints table above)
-
-## Workflow
-You will be assigned one workflow buddy to submit PRs to:
-
-* You must give your workflow buddy collaboration access to your repo.
-* You must submit _at least_ 2 PRs to your workflow buddy for review.
-* You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
-
-It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As a workflow buddy, you are responsible for reviewing at least 2 PRs from your partner.
-
-**Please also tag your project manager in any PR you make to your buddy.**
-
 ## Testing
 You should be testing your the correctness of your code throughout your project. Each JavaScript class file in your project should have its own test file.
 
@@ -169,6 +152,24 @@ Keep in mind your use-cases for Spies:
 - Mocking out a fetch call and testing your applications reaction to the response
 - Spying on methods that call other methods which are already tested elsewhere
 - Spying on any functions that do DOM manipulation in response to the result of a fetch request/instance updating
+
+## Workflow
+You will be assigned one workflow buddy to submit PRs to:
+
+* You must give your workflow buddy collaboration access to your repo.
+* You must submit _at least_ 2 PRs to your workflow buddy for review.
+* You must wait for your workflow buddy to review your PRs, and allow THEM to merge any PRs you submit.
+
+It is up to you to decide what changes warrant a PR – remember we want to submit PRs that have significant changes and potential for feedback. Think about what functionality you’re struggling with or have questions about or need help with. As a workflow buddy, you are responsible for reviewing at least 2 PRs from your partner.
+
+**Please also tag your project manager in any PR you make to your buddy.**
+
+## Extensions
+- The user dashboard should display a countdown to my next trip (if I have any)
+- Allow the travel agent to POST suggestedActivities for user trips (see Endpoints table above). This could be based off of a user's "travelerType" value.
+- Allow the travel agent to create new destinations (see Endpoints table above)
+- Utilize an npm package (example: momentJS) - requires permission from instructors
+- Choose your own extension! 
 
 ## Due Date
 
