@@ -21,7 +21,8 @@ This project is an important step in demonstrating you are ready to start Module
 
 - You are the only one who should type code - no copy-pasting code!
 - For any code that you didn't write entirely by yourself (mentor or rock supported), you should be able delete it and re-write it yourself
-- The only resources you use are MDN, CSS Tricks, and lesson plans - no youtube videos or tutorials of programming Tic Tac Toe. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
+- The only resources you use are MDN, CSS Tricks, and lesson plans - no youtube videos or tutorials of programming Slap Jack. If you have an opportunity and are tempted, do the right thing for YOUR learning and don't do it!
+- You are allowed to watch gameplay of the physical SlapJack game; just avoid coding videos.
 - Any peer-to-peer collaboration should be discussions about IDEAS, not coding together or sharing code.
 
 We want to see YOUR work.
