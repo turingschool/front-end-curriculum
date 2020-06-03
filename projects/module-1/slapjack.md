@@ -89,7 +89,11 @@ Your entire application will consist of one HTML page or template. You will have
       - A way to reset the deck and players to play a new game when one is won
 3. A `main.js` file that instantiates the Game class and also contains all DOM related JavaScript
 
-You may create additional properties, methods, Classes, or files, if you have a need for them.
+You will also have:
+
+1. An `assets` folder, which will contain the card images: to be found [here](https://drive.google.com/drive/folders/1gFMgCOrbWGjreKz2LuXwbF-7veqkPX5f?usp=sharing).
+
+You _may_ create additional properties, methods, Classes, or files, if you have a need for them, but beware of adding unnecessary complexity.
 
 ### Data Model
 
@@ -97,7 +101,7 @@ In a game like SlapJack, it is tempting to manipulate the DOM first. Remember th
 
 ### Suggested Iterations
 
-This workflow is not required, but will help you meet the overall requirements of the project.
+This workflow is not required, but may help you meet the overall requirements of the project.
 
 1. Plan out the HTML layout (colors and fonts do not need to match, but overall layout should closely match the demo video)
 2. Create the Player class
