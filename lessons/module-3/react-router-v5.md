@@ -447,7 +447,7 @@ Uncomment the code in the Integration Test portion of `App.test.js`
 The Router's history is getting out of sync from jest-dom's history. 
 
 We can do one of two things:
-1. Create a custom history object and pass it to the BrowserRouter
+1. Create a custom history object and pass it to a Router (NOT a BrowserRouter)
 2. Use a [Memory Router](https://reacttraining.com/react-router/web/api/MemoryRouter)
 
 Let's look at both of these solutions.
@@ -460,17 +460,19 @@ For this solution, we have to look into the [history package](https://github.com
 
 Routers use this package to manage their session history. BrowserRouter creates a history object under the hood, which gets its current location from the browser ([jsdom](https://www.npmjs.com/package/jsdom) in the case of jest's testing environment), and updates the browser history via a few methods that you can [read more about if you're interested](https://github.com/ReactTraining/history/blob/master/docs/Navigation.md).
 
-We can also [create our own history object](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md) and use it to overwrite the BrowserRouter's default history. This allows us to instantiate a new Router at a specific location (url) of our choosing.
+We can also [create our own history object](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md).
+
+However, BrowserRouter CANNOT receive a custom history object, so if we want to make an manipulate our own history, we'll have to wrap our component in a [Router](https://reacttraining.com/react-router/web/api/Router). So we can use that history object to overwrite the Router's default history. This allows us to instantiate a new Router at a specific location (url) of our choosing.
 
 ```jsx
 import { createMemoryHistory } from 'history';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 
 // Make a new blank history object
 const customHistory = createMemoryHistory();
 
 // Overwrite the history of the BrowserRouter:
-const routerWithCustomHistory = <BrowserRouter history={customHistory}></BrowserRouter>
+const routerWithCustomHistory = <Router history={customHistory}></Router>
 ```
 
 So our final solution to the Integration Test could look like this:
@@ -480,7 +482,7 @@ import React from 'react';
 import App from './App';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 
 describe('App', () => {
@@ -488,9 +490,9 @@ describe('App', () => {
     it('Should render 9 puppies on click', () => {
       const history = createMemoryHistory();
       const { getByRole, getAllByRole } = render(
-        <BrowserRouter history={history}>
+        <Router history={history}>
           <App />
-        </BrowserRouter>
+        </Router>
       );
       const puppiesLink = getByRole('link', { name: 'Puppies'});
       const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
@@ -510,9 +512,9 @@ describe('App', () => {
     it('Should render 9 sharks on click', () => {
       const history = createMemoryHistory();
       const { getByRole, getAllByRole } = render(
-        <BrowserRouter history={history}>
+        <Router history={history}>
           <App />
-        </BrowserRouter>
+        </Router>
       );
       const sharksLink = getByRole('link', { name: 'Sharks'});
       const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
@@ -533,7 +535,7 @@ describe('App', () => {
 });
 ```
 
-**Note** This is the technique recommended by [React Testing Library](https://testing-library.com/docs/example-react-router)
+**Note** This techniques comes from [React Testing Library](https://testing-library.com/docs/example-react-router)
 
 </section>
 
