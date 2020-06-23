@@ -8,17 +8,6 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 
 ## Learning Goals
 
-<!--
-
-| Phase One | Phase Two|
-|-------|-----|
-| - Create their first react app          | - Write an endpoint to a server          |
-| - Write asynchronous  JS to interact with a server           | - Use React Router to create a multi-page user experience         |
-| - Test the application by testing UI, spying on prop methods, and waiting for asynchrnously-rendered UI           |          |
-| - Set up routes to dynamic content (click a button, url changes)          |          |
-
--->
-
 * Reinforce React fundamentals
 * Reinforce using React Router to create a multi-page user experience
 * Reinforce component and asynchronous JS testing
@@ -61,10 +50,6 @@ A user should be able to logout, and they are taken to the homepage. The app sho
 At this point, you should have your testing suite up and going. Get tests running, and test your Login workflow as it stands now. Yes, your tests might change, but that's ok and expected.
 
 
-<!-- 
-  Is it worth having them mess with URLs at all so far, or only implement Router for the solo iterations?
--->
-
 ### Iteration 3 - Movie Show Page
 
 Create a dynamic route for a "show page" for each movie (the show page for a movie with an id of 5 would be at a url path of `/movies/5`, for instance). A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
@@ -93,18 +78,7 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 
 </section>
 
-<!-- Part 2: 
-
-## Functionality to Add:
-- Router
-- Add two express routes:
-  - favorites
-  - comments
-- Add extra functionality to filter by favorites and genres 
-- Add extra functionality to comment on movies, and see the number of comments on the main page. 
--->
-
-<!--
+<!-- Uncomment for part 2:
 ## Part 2: New Features
 
 For the next part of the project, you'll continue working on the same codebase, but will be dividing and conquering a few separate features. All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
