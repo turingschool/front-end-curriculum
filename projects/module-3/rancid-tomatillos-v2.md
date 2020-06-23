@@ -8,12 +8,16 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 
 ## Learning Goals
 
+<!--
+
 | Phase One | Phase Two|
 |-------|-----|
 | - Create their first react app          | - Write an endpoint to a server          |
 | - Write asynchronous  JS to interact with a server           | - Use React Router to create a multi-page user experience         |
 | - Test the application by testing UI, spying on prop methods, and waiting for asynchrnously-rendered UI           |          |
 | - Set up routes to dynamic content (click a button, url changes)          |          |
+
+-->
 
 * Reinforce React fundamentals
 * Reinforce using React Router to create a multi-page user experience
@@ -87,7 +91,7 @@ Again, revisit where you are with testing your application. Do you have multiple
 
 The only way to change a rating is to delete the old rating and submit a new rating. Include functionality for the user to remove an existing rating they submitted and then be able to submit a new rating (effectively the user is editing their rating).
 
-<!-- Part 2: -->
+<!-- Part 2: 
 
 ## Functionality to Add:
 - Router
@@ -96,6 +100,8 @@ The only way to change a rating is to delete the old rating and submit a new rat
   - comments
 - Add extra functionality to filter by favorites and genres 
 - Add extra functionality to comment on movies, and see the number of comments on the main page. 
+
+-->
 
 ## Part 2: Divide and Conquer
 
@@ -155,6 +161,7 @@ Users have been wanting to keep track of their favorite movies. The server is no
 
 * Once logged in, sort the user's movies by the date they rated the movie (the `created_at` info for a rating might help with this...)
 * Whether or not a user is logged in, give the ability to sort the movies by release date and genre
+* Add the ability to view a movie's trailer(s) from the movie's show page (check out the `/movies/:movie_id/videos` endpoint)
 
 Think of some others!
 
@@ -163,16 +170,21 @@ Think of some others!
 ### Setup
 
 
-There is no setup! You are not going to run an API locally for this project. The API was created by your instructors and it lives on Heroku. The API you'll be working with lets you make GET, POST, and DELETE requests.
+There is no setup! You are not going to run an API locally to start this project. The API was created by your instructors and it lives on Heroku. The API you'll be working with lets you make GET, POST, and DELETE requests.
 
 ### API Documentation
 
-All API endpoints (also known as "routes") are prefixed with `https://rancid-tomatillos.herokuapp.com/api/v1`. Also, wherever you see a `:user_id` or `:rating_id` in the endpoint documentation, that would be replaced by the ID _value_ in your request, like `5`, for instance. Here are the endpoints available:
+All API endpoints (also known as "routes") are prefixed with `https://rancid-tomatillos.herokuapp.com/api/v2`. Also, wherever you see a `:user_id` or `:rating_id` in the endpoint documentation, that would be replaced by the ID _value_ in your request, like `5`, for instance. Here are the endpoints available:
+
+<!-- Uncomment for part 2
+When running the API locally, you will replace `https://rancid-tomatillos.herokuapp.com/api/v2` with `http://localhost:3001/api/v2`.
+-->
 
 | Purpose | URL | Verb | Request Body | Sample Response (Happy Path) |
 |---------|-----|------|--------------|------------------------------|
 | Get all movies | `/movies` | GET | N/A | All movies in database with average rating: `{"movies": [{id: 1, title: "Movie Title", poster_path: "someURL", backdrop_path: "someURL", release_date: "2019-12-04", overview: "Some overview", average_rating: 6 }, ...]}` |
 | Get a single movie | `/movies/:movie_id` | GET | N/A | The movie corresponding to the id sent in the URL: `{"movie": {id: 1, title: "Movie Title", poster_path: "someURL", backdrop_path: "someURL", release_date: "2019-12-04", overview: "Some overview", average_rating: 6 }}` |
+| Get a single movie's videos | `/movies/:movie_id/videos` | GET | N/A | An array of available videos corresponding to the movie whose id is in the URL; this may be an empty array: `[]` or `[id: 1, movie_id: 1, key:"SUXWAEX2jlg", site: "YouTube", type:"Trailer"]` |
 | Login a user | `/login` | POST | `{email: <String>, password: <String>}` | A user's login session information: `{user: {id: 1, name: "Alan", email: "alan@turing.io"}}` |
 | Get all the ratings a user has submitted | `/users/:user_id/ratings` | GET | N/A | A user's ratings for all movies: `{"ratings": [{id: 1, user_id: 1, movie_id: 1, rating: 6, created_at: "someDate", updated_at: "someDate"},...]}` |
 | Submit a new movie rating for a user | `/users/:user_id/ratings` | POST | `{ movie_id: <Integer>, rating: <Integer between 1 and 10> }` | The rating that was successfully created: `{rating: {user_id: 2, movie_id: 19, rating: 5}}` |
@@ -239,3 +251,12 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 2 - Application uses React Router, but does not display the appropriate components upon navigating.  There are one or more issues with the UX and access to routes is either unclear or not full implemented on some pages.
 * 3 - Application uses React Router to display appropriate components based on URL.  UX is clear and set up well so that user has access to previous routes.
 * 4 - React Router components have been refactored for developer empathy and code quality is clean.  Application accounts for undefined routes. UX is excellent and set up well to have links to all routes on all pages.
+
+<!-- 
+### Express
+
+* 1 - No new routes are added to the locally hosted API. No data is being saved on the server.
+* 2 - New routes are added, but no error handling is present (ex: hitting a route always returns a 200, even if the request is malformed). 
+* 3 - New routes are added, and only return successful responses when the request is correctly formatted.
+* 4 - New routes are added, and there is dynamic and meaningful error handling present.
+-->
