@@ -60,14 +60,6 @@ A user should be able to logout, and they are taken to the homepage. The app sho
 
 At this point, you should have your testing suite up and going. Get tests running, and test your Login workflow as it stands now. Yes, your tests might change, but that's ok and expected.
 
-<section class="note">
-We've mentioned url paths a few times so far. Applications typically handle keeping the url and UI in sync via some sort of [Router](https://frontend.turing.io/lessons/module-3/react-router-v5.html). We will implement more formal routing down the line, and you're welcome to look into it now if you'd like; but if not, think of how you can update the app's url and conditionally render the content you need to. 
-
-If you want to try implementing a router, [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) is a good choice. 
-
-Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
-
-</section>
 
 <!-- 
   Is it worth having them mess with URLs at all so far, or only implement Router for the solo iterations?
@@ -91,6 +83,16 @@ Again, revisit where you are with testing your application. Do you have multiple
 
 The only way to change a rating is to delete the old rating and submit a new rating. Include functionality for the user to remove an existing rating they submitted and then be able to submit a new rating (effectively the user is editing their rating).
 
+
+<section class="note">
+We've mentioned url paths a few times so far. Applications typically handle keeping the url and UI in sync via some sort of [Router](https://frontend.turing.io/lessons/module-3/react-router-v5.html). We will implement more formal routing down the line, and you're welcome to look into it now if you'd like; but if not, think of how you can update the app's url and conditionally render the content you need to. 
+
+If you want to try implementing a router, [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) is a good choice. 
+
+Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
+
+</section>
+
 <!-- Part 2: 
 
 ## Functionality to Add:
@@ -102,8 +104,8 @@ The only way to change a rating is to delete the old rating and submit a new rat
 - Add extra functionality to comment on movies, and see the number of comments on the main page. 
 
 -->
-
-## Part 2: Divide and Conquer
+<!--
+## Part 2: New Features
 
 For the next part of the project, you'll continue working on the same codebase, but will be dividing and conquering a few separate features. All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
 
@@ -156,6 +158,8 @@ Users have been wanting to keep track of their favorite movies. The server is no
 - Add a new POST route to update a collection of favorited movies in `app.locals`. A valid POST request should _at least_ have an `id` property for the movie that's being favorited/unfavorited. If the request is unsuccessful (ie, if a malformed request is sent), send back a helpful response to the user. 
 
 - Add a new GET route to get all currently favorited movies (these will be stored in app.locals).
+
+-->
 
 ### Extensions
 
