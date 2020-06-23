@@ -102,8 +102,8 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
   - comments
 - Add extra functionality to filter by favorites and genres 
 - Add extra functionality to comment on movies, and see the number of comments on the main page. 
-
 -->
+
 <!--
 ## Part 2: New Features
 
@@ -249,6 +249,7 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - All Redux functionality is tested (actions and reducers), all components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
 * 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
 
+<!-- Comment back in for part 2
 ### Routing
 
 * 1 - Application uses React Router, but does not render/use all routes according to spec. Application does not utilize built in React Router components and manipulates history instead.  UX is challenging and frustrating where multiple pages on the application are missing links to routes.
@@ -256,7 +257,6 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - Application uses React Router to display appropriate components based on URL.  UX is clear and set up well so that user has access to previous routes.
 * 4 - React Router components have been refactored for developer empathy and code quality is clean.  Application accounts for undefined routes. UX is excellent and set up well to have links to all routes on all pages.
 
-<!-- 
 ### Express
 
 * 1 - No new routes are added to the locally hosted API. No data is being saved on the server.
