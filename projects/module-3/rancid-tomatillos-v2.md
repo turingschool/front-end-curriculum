@@ -33,7 +33,7 @@ You will be assigned a user for your pair. Each user has a name, email, and pass
 
 At this point, get your head around the API's endpoints via the documentation below. Try them out in Postman - you don't need an API key for this! See what you can get from all the endpoints available.
 
-For your app, create a homepage where the visitor can see all of the movies in the database with their average ratings. When on this page, the url's path will be `/` (ex: in development, the url will look something like: `http://localhost:3000/`).
+For your app, create a homepage where the visitor can see all of the movies in the database with their average ratings.
 
 ### Iteration 2 - User Login
 
@@ -69,14 +69,6 @@ Again, revisit where you are with testing your application. Do you have multiple
 The only way to change a rating is to delete the old rating and submit a new rating. Include functionality for the user to remove an existing rating they submitted and then be able to submit a new rating (effectively the user is editing their rating).
 
 
-<section class="note">
-We've mentioned url paths a few times so far. Applications typically handle keeping the url and UI in sync via some sort of [Router](https://frontend.turing.io/lessons/module-3/react-router-v5.html). We will implement more formal routing down the line, and you're welcome to look into it now if you'd like; but if not, think of how you can update the app's url and conditionally render the content you need to. 
-
-If you want to try implementing a router, [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) is a good choice. 
-
-Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
-
-</section>
 
 <!-- Uncomment for part 2:
 ## Part 2: New Features
@@ -85,11 +77,24 @@ For the next part of the project, you'll continue working on the same codebase, 
 
 ### Iteration 6 - Router (complete together)
 
-If you haven't already, it's time to add in Router! Wrap the App in a `<BrowserRouter>` component. Use `<Route>` components to dynamically render the appropriate UI based on the current URL. 
+It's time to add in Router! So far the application has worked like a single page applicaiton. We have different views that are conditionally rendered, but we have to control the logic for when to render certain things. Furthermore, the URL never changes. We're going to be using [React Router](https://reacttraining.com/react-router/web/api/BrowserRouter) to conditionally render our views based on the URL's location. 
 
-Don't forget to replace all your `<a>` tags with [\<Link> components](https://reacttraining.com/react-router/web/api/Link).
+This iteration is all about refactoring. Use the table below to add in appropriate routes.
+
+| View | URL Path  |
+|:-----|:---------|
+| Homepage, logged in or not (from iteration 1) | `/` |
+| Login form (from iteration 2) | `/login` | 
+| Movie show page (from iteration 3) | `/movies/:movieId`, where `movieId` is the `id` of the movie being displayed |
+
 
 Adding in Router is likely to break your tests. Make sure to update those to keep everything passing.
+
+<section class="note">
+
+Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_is_a_URL#Deeper_dive) to learn more about URL anatomy. 
+
+</section>
 
 ### Iteration 7 - Fork the Server (complete together)
 
