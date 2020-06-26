@@ -17,6 +17,13 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 
 ## Iterations
 
+<section class="note">
+
+### Note
+You are expected to test the functionality you write in each iteration. Don't save testing for the last minute!
+
+</section>
+
 ### Iteration 0 - Day-1 Deliverables
 
 Create a group Slack channel and include your instructors in the channel:
@@ -37,7 +44,7 @@ For your app, create a homepage where the visitor can see all of the movies in t
 
 ### Iteration 2 - User Login
 
-Create a separate login page where your user can login. When a user navigates to this page, the URL's path should be `/login` (ex: in development, the url will be `http://localhost:3000/login`).
+Create a separate login page where your user can login. 
 
 Ultimately, you'll need to obtain the user's unique ID value to make requests later. Logging in the user using the POST `/login` route documented below will give you that ID value.
 
@@ -52,7 +59,7 @@ At this point, you should have your testing suite up and going. Get tests runnin
 
 ### Iteration 3 - Movie Show Page
 
-Create a dynamic route for a "show page" for each movie (the show page for a movie with an id of 5 would be at a url path of `/movies/5`, for instance). A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
+Create a dynamic route for a "show page" for each movie. A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
 
 ### Iteration 4 - Show and Add Ratings
 
