@@ -42,11 +42,13 @@ At this point, get your head around the API's endpoints via the documentation be
 
 For your app, create a homepage where the visitor can see all of the movies in the database with their average ratings.
 
+Make sure to add in error handling for any bad requests (non-2xx-level responses) that the server may give _throughout_ this project.
+
 ### Iteration 2 - User Login
 
 Create a separate login page where your user can login. 
 
-Ultimately, you'll need to obtain the user's unique ID value to make requests later. Logging in the user using the POST `/login` route documented below will give you that ID value.
+Ultimately, you'll need to obtain the user's unique ID value to make requests later. Logging in the user using the POST `/login` route documented below will give you that ID value. Don't forget about error handling! 
 
 It probably seems weird to POST to `/login` to login a user, and this endpoint isn't even creating anything! Using a POST verb for logging in is a common convention because we need to send sensitive information like passwords in the body of the login request, and a POST lets us do that. Again, nothing is created in the DB for logging in - you are doing this to retrieve user information (the ID) to use while the user is logged in.
 
@@ -60,6 +62,8 @@ At this point, you should have your testing suite up and going. Get tests runnin
 ### Iteration 3 - Movie Show Page
 
 Create a dynamic route for a "show page" for each movie. A show page is a app page that shows only one particular item. In this case, the show page is for a particular movie. This page should show all information available about the movie.
+
+Don't forget to account for handling non-2xx-level responses from the server.
 
 ### Iteration 4 - Show and Add Ratings
 
@@ -75,7 +79,7 @@ Again, revisit where you are with testing your application. Do you have multiple
 
 The only way to change a rating is to delete the old rating and submit a new rating. Include functionality for the user to remove an existing rating they submitted and then be able to submit a new rating (effectively the user is editing their rating).
 
-
+Don't forget to account for handling non-2xx-level responses from the server.
 
 <!-- Uncomment for part 2:
 ## Part 2: New Features
