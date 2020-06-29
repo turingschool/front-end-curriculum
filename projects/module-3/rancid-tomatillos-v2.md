@@ -38,7 +38,7 @@ After you send us this information, we'll give you your user's name, email, and 
 
 You will be assigned a user for your pair. Each user has a name, email, and password that you will use throughout the project. This is your team's user!
 
-At this point, get your head around the API's endpoints via the documentation below. Try them out in Postman - you don't need an API key for this! See what you can get from all the endpoints available.
+At this point, get your head around the API's endpoints via the documentation below. Try them out in [Postman](https://www.postman.com/) - you don't need an API key for this! See what you can get from all the endpoints available.
 
 For your app, create a homepage where the visitor can see all of the movies in the database with their average ratings.
 
