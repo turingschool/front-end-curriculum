@@ -204,3 +204,4 @@ Understanding the difference between props and state can be tricky. Read through
 * [ReactJS Docs](https://reactjs.org/)
 * [React DevTools](https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en)
 * [Props vs. State](https://stackoverflow.com/questions/27991366/what-is-the-difference-between-state-and-props-in-react)
+* [Job Board Example](https://github.com/khalidwilliams/job-board-example)
