@@ -12,8 +12,6 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 * Reinforce using React Router to create a multi-page user experience
 * Reinforce component and asynchronous JS testing
 * Work with and navigate a shared, persistent API using GET, POST, and DELETE requests
-* Implement Redux as the app's place to store shared state
-* Test Redux functions
 
 ## Iterations
 
