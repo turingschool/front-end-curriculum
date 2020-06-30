@@ -1,7 +1,7 @@
 ---
 title: Rancid Tomatillos
 module: 3
-tags: react, redux, testing, javascript, api
+tags: react,  testing, javascript, api
 ---
 
 Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a rancid tomatillo at the screen!" Or maybe you loved the movie and you could really go for a nice, fresh tomatillo salsa to enjoy the moment. Well it's your lucky day. In this project, you'll build a movie rating site where a user can login and rate the movies they loved or hated.
@@ -9,11 +9,9 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 ## Learning Goals
 
 * Reinforce React fundamentals
-* Reinforce using React Router to create a multi-page user experience
+<!--* Reinforce using React Router to create a multi-page user experience-->
 * Reinforce component and asynchronous JS testing
 * Work with and navigate a shared, persistent API using GET, POST, and DELETE requests
-* Implement Redux as the app's place to store shared state
-* Test Redux functions
 
 ## Iterations
 
@@ -225,18 +223,11 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - React architecture is clean and organized.  Logic is kept out of return statements.  There are some issues with the asynchronous JS where the frontend is not matching with the backend.  There are multiple functions (including fetch calls) that are doing similar pieces of functionality that could continue to be refactored. Data fetched from API is not cleaned before being set to state.
 * 4 - Functions including fetch calls have been refactored to be reusable for multiple queries.  Frontend data always matches the backend data.  Data fetched from API is run through a cleaning function (which lives in a separate file).  Implements excellent error handling if server is down or fetch fails.  This includes loading images as well as error messages on the frontend.
 
-### Redux Architecture
-
-* 1 - Application state is mostly outside the control of Redux. Application did not make use of Redux actions and reducers to mutate state. Components do not demonstrate a clear understanding of class vs. functional.
-* 2 - At least one component is not connected with Redux appropriately. Application state is mutated by more than just Redux. The Redux store is missing application data that it should be handling.
-* 3 - Appropriate components are wrapped in connected Redux container components. The Redux store contains all necessary application data. All state changes are handled through Redux actions and reducers.
-* 4 - All requirements from 3 met, and no duplication of data exists in the store. Data in the store remains flat (not nested).
-
 ### Testing
 
-* 1 - A valid attempt to test this application was made, but there are obvious gaps with missing unit tests for Redux and React.  
+* 1 - A valid attempt to test this application was made, but there are obvious gaps with missing unit tests for React.  
 * 2 - Nearly all unit tests are in place. React components are well tested with a diverse set of tests including but not limited to unit testing display of the component, event simulation tests, and unit tests for functions passed as props. There are tests in place for actions and reducers. No attempt to test async functionality was made.
-* 3 - All Redux functionality is tested (actions and reducers), all components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
+* 3 - All components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
 * 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
 
 <!-- Comment back in for part 2
