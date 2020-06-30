@@ -168,16 +168,16 @@ Once you are set up, you can visit `http://localhost:3001/api/v1/ideas` and you 
  Take some time to look into the <a href="https://developer.mozilla.org/en-us/docs/web/api/fetch_api/using_fetch" target="_blank">fetch API documentation</a>.
  Answer the following questions:
   <section class="answer">
-### what does `.fetch()` do?
-  `.fetch()` is a method provided by the fetch api. it allows us to make a network request.     
+### What does `.fetch()` do?
+  `.fetch()` is a method provided by the fetch api. It allows us to make a network request.     
   </section>
   <section class="answer">
-### what does `.fetch()` return?
+### What does `.fetch()` return?
 `.fetch()` returns a promise.
   </section>
   <section class="answer">
-### what does `.then()` do? what is the method called on? what does it return?
-`.then()` is a promise prototype method that runs when the promise object it is chanined to successfully resolves. it returns a new promise object. 
+### What does `.then()` do? What is the method called on? What does it return?
+`.then()` is a promise prototype method that runs when the promise object it is chanined to successfully resolves. It returns a new promise object. 
   </section>
   <section class="answer">
 ### What does `.catch()` do? What is the method called on? What does it return?
