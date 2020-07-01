@@ -124,7 +124,7 @@ modOneInstructors;
 <section class="call-to-action">
 ### Final Practice: Access and Update
 
-Start by forking [this repl.it](https://repl.it/@HannahHudson/IntroArrayPractice). Complete each exercise listed in the comments below the provided object literal. Write the code with a given direction directly below it, and **do not delete code as you go**.
+Start by forking [this repl.it](https://repl.it/@HannahHudson/IntroArrayPractice). Complete each exercise listed in the comments below the provided array literal. Write the code with a given direction directly below it, and **do not delete code as you go**.
 </section>
 
 ### Dig Deeper
