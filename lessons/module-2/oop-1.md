@@ -18,7 +18,8 @@ By the end of this lesson, you will be able to:
 - `OOP` Object Oriented Programming
 - `Programming paradigm` A style or way of thinking about and approaching programming problems
 - `Object` A data structure of key value pairs that groups related data and behavior
-- `Constructor Function` 
+- `Constructor Function` A special function for reliably creating multiple
+  instances of similar objects
 - `Class` A blueprint or template of an object that describes what information it should contain and how it should interact with the data
 - `Instance` One specific copy of an object
 - `Encapsulation` Hiding the details of how an object works & grouping data and behavior
