@@ -130,7 +130,7 @@ We're going to implement `componentDidMount()` in our IdeaBox.
 
 ### Setup Your Front End
 
-If you want, you can [re-clone](https://github.com/turingschool-examples/ideabox-testing) your IdeaBox into a new directory.  Follow the steps here:
+If you want, you can [re-clone](https://github.com/turingschool-examples/react-iii-ideabox) your IdeaBox into a new directory.  Follow the steps here:
 
 ```bash
 git clone https://github.com/turingschool-examples/react-iii-ideabox
