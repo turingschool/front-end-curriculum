@@ -21,11 +21,14 @@ tags: react, testing
 <section class="call-to-action">
 ### Journal on Your Own (3 minutes)
 
-Why do we test? What is the point of writing tests?
+1. Why do we test? What is the point of writing tests?
+2. What have you been testing in apps so far?
 
+<!--
 ### Discuss with a Partner (5 minutes)
 
 Talk with a partner next to you about your reasons to write tests.
+-->
 </section>
 
 When testing React apps, or really when testing any kind of application, most of the tests your write will be *unit and integration tests*.
@@ -156,7 +159,7 @@ Make a table in your notebook or on a piece of paper with the following columns:
 
 ### Testing What is Rendering to the Page
 
-Let's bring all of our research in the docs together to make our first test! Use this repo as a starting point - it's an ideabox that has a form and delete button already implemented. Make sure you clone this down outside of any other React projects you have right now. Here are the steps to set it up:
+Let's bring all of our research in the docs together to make our first test! Use [this repo](https://github.com/turingschool-examples/ideabox-testing-rtl) as a starting point - it's an ideabox that has a form and delete button already implemented. Make sure you clone this down outside of any other React projects you have right now. Here are the steps to set it up:
 
 ```bash
 git clone git@github.com:turingschool-examples/ideabox-testing-rtl.git
@@ -437,3 +440,6 @@ describe('App', () => {
 - `Jest` - Jest is a JS framework created by Facebook that is included in React and acts as a test runner, assertion library, and mocking library. It can also be used for snapshot testing.
 - `React Testing Library` -
 - `Mock` - Mocks are created in order to replicate the data or functions you would expect to have or be fired, or when we want to set up a function that runs in place of another function
+
+## Extra Resources:
+- [@testing-library/user-event](https://testing-library.com/docs/ecosystem-user-event)
