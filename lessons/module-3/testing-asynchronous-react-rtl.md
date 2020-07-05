@@ -78,7 +78,7 @@ npm test
 Try running `npm install fsevents@1.2.11` to install a specific version of `fsevents` and then run `npm test` again to see if that worked.
 </section>
 
-Set up the [back-end repo](https://github.com/turingschool-examples/ideabox-api.git). You might already have this cloned down, and in that case find it a get it started.
+Set up the [back-end repo](https://github.com/turingschool-examples/ideabox-api.git). You might already have this cloned down, and in that case find it and get it started.
 
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-api.git
@@ -249,7 +249,7 @@ componentDidMount() {
 
 ### Mock the Function
 
-Now that the function with the network request is isolated, we can focus on mocking it. In the future, this `apiCalls` file could have many network requests for posting and/or deleting ideas. So we will tell Jest to mock the entire file.
+Now that the function with the network request is isolated, we can focus on mocking it. In the future, this `apiCalls` file could have many network requests for posting and/or deleting ideas. So we will tell Jest to [mock the entire file](https://jestjs.io/docs/en/jest-object#jestmockmodulename-factory-options).
 
 We need to add this to our App's test file before we write any `it` blocks:
 
