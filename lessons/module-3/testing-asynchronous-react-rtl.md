@@ -61,6 +61,7 @@ Set up the [front-end repo](https://github.com/turingschool-examples/ideabox-tes
 
 ```bash
 git clone https://github.com/turingschool-examples/ideabox-testing-rtl.git testing-async-react
+cd testing-async-react
 npm install
 npm start
 ```
