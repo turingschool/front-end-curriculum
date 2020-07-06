@@ -33,7 +33,7 @@ For the array above,
 
 Sometimes we need to access information about an array or certain elements in our array. Methods we use to do that are called **accessor** methods. They do not mutate or change the original array - they just give us information, or copies of parts of the array. 
 
-In other cases, we will want to change the data our array holds. **Mutator** methods actually mutate, or change, the data in the array. If we needed to remove a student element from the `students` array, we'd need to use a mutator method.
+In other cases, we will want to change the data our array holds. **Mutator** methods actually mutate, or change, the data in the array. If we needed to remove an instructor element from the `instructors` array, we'd need to use a mutator method.
 
 ## Protocol
 
@@ -63,7 +63,7 @@ For each array prototype method, follow this protocol carefully:
 
 1. Read the documentation on MDN.
 2. Talk through your understanding of it together.
-3. Visual represent the method using a copy of [this Jamboard](https://jamboard.google.com/d/1FQ8dDURIkf43XTq2S6Eb2rvoiPlUihnW6NQxnzcJ7No/viewer?f=0), or make your own!
+3. Visually represent the method using a copy of [this Jamboard](https://jamboard.google.com/d/1FQ8dDURIkf43XTq2S6Eb2rvoiPlUihnW6NQxnzcJ7No/viewer?f=0), or make your own!
 <!-- 3. Make a visual representation of the method with your candies and paper. -->
 4. Think: What is **returned** from the method?
 5. Think: Does the method mutate the original array?
