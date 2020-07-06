@@ -97,11 +97,11 @@ The user stories outlined above should be used to create an outline of your clas
 
 Dates and deadlines to be aware of:
 
-**Monday, March 23rd** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code!
-**Wednesday, April 1st** - Project due at 5PM.
-**Thursday, April 2nd** - Project evals.
+**Monday, July 6th** - Submit your project board and planned out class structure to instructors BEFORE beginning to write code!
+**Wednesday, July 15th** - Project due at 9PM.
+**Thursday, July 16th** - Project evals.
 
-Submit projects <a href="https://docs.google.com/spreadsheets/d/1f2O5AwcylVca9JoLQI66eK57LqEYsfSV2PEwqPRsS3I/edit#gid=1401427478" target="\__blank">here</a> by 5PM, April 1st. 
+Submit projects <a href="https://docs.google.com/spreadsheets/d/1SbUtNaFZ4TGu_NvPMqzcuK0WrXvBRWjlGyjZMw9ux_Y/edit#gid=1401427478" target="\__blank">here</a> by 5PM, April 1st. 
 
 ## Rubric
 
