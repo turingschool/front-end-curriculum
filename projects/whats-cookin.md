@@ -26,7 +26,7 @@ Aside from the necessary tooling (`mocha` and `chai`), you will need to set up a
 
 You are __expected__ to test:
 - __All instance methods__
-- __All class methods__ (including any helper methods)
+- __Any helper methods__ (things you stuck in scripts.js)
 
 You are __not expected__ to test:
 - DOM manipulation / DOM manipulating methods
