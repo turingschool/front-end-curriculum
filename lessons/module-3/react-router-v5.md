@@ -4,6 +4,10 @@ length: 3 hours
 tags: React, Router
 module: 3
 ---
+<!-- 
+FOR INSTRUCTORS:
+- There are solutions to each exercise commented down below. Feel free to uncomment them after the lesson
+-->
 
 ## Learning Goals:
 * Understand and articulate the need for routing 
@@ -13,6 +17,7 @@ module: 3
 
 ## Vocab
 * `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
+* `Router` The class that \<BrowserRouter\> is extended from
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Link` Links provide declarative, accessible navigation around your application
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
@@ -71,7 +76,7 @@ We'll be using <a href="https://github.com/turingschool-examples/react-router-v5
 
 **Installation Instructions**
 ```bash
-# Clone the repo 
+git clone https://github.com/turingschool-examples/react-router-v5
 cd react-router-v5
 npm i
 npm start
@@ -137,7 +142,7 @@ ReactDOM.render(router, document.getElementById('root'));
 </section>
 
 <section class="answer">
-### Finally, add a Route for the `<Home />` component into your `<App />`
+### Finally, add a Route for the `Home`  component into your `App`
 
 ```javascript
 import React, { Component } from 'react';
@@ -171,6 +176,7 @@ We picked `/` for the path in the route becuase it designates that there won't b
 
 </section>
 
+---
 ## Exercise # 1: Render Puppies
 
 Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. The page should look something like the picture on the lesson plan. ***While you may change components*** as needed, you shouldn't outright delete content from the page to achieve this.
@@ -186,7 +192,7 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 - How do you pass props into a component rendered by a `<Route />` ?
 </section>
 
-
+<!--
 <section class="answer">
 ### Solution
 ```jsx
@@ -217,6 +223,7 @@ export default class App extends Component {
 }
 ```
 </section>
+-->
 
 
 ### Render `exact` matches
@@ -267,11 +274,13 @@ This also allows you to define and pass specific properties to a component dynam
 ```
 
 
+---
 ## Exercise # 2: Rendering Sharks
 
 Get the sharks link working as well! 
 
 
+<!--
 <section class="answer">
 ### Solution
 ```jsx
@@ -301,11 +310,12 @@ export default class App extends Component {
 }
 ```
 </section>
-
+-->
+---
 
 ### Route Props
 
-Let's take a close look at what happens when you a Route renders. 
+Let's take a close look at what happens when a Route renders. 
 
 [Route render methods](https://reacttraining.com/react-router/web/api/Route/route-render-methods) all provide access to [route props](https://reacttraining.com/react-router/web/api/Route/route-props), either automatically to the component they render, or via the callback function that the methods take. 
 
@@ -340,10 +350,11 @@ and then navigating to `/puppies`, we can see that the `<Creatures />` component
 This is great for dynamically rendering content based on things in the url, like an id. Let's do that 
 
 ## Exercise #3: Dynamic Routing
+---
 
 Take a look at the CreatureDetails Component. It takes in all data for a given creature, and displays it on the page. 
 
-**Your Task is to make a route that will dynamically render a CreateDetails component for a puppy based on its ID**
+**Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID**
 
 <section class="note">
 Hints:
@@ -352,6 +363,7 @@ Hints:
 - How can you find a one puppy's data in an array based on its id?
 </section>
 
+<!--
 <section class="answer">
 ### Solution
 
@@ -369,7 +381,9 @@ The new route could look something like this:
         />
 ```
 </section>
+-->
 
+---
 ## Exercise #4: Unit Testing the App
 
 Uncomment the code blocks inside of the Unit Test portion of `App.test.js`
@@ -383,6 +397,7 @@ Uncomment the code blocks inside of the Unit Test portion of `App.test.js`
 - Think about which libraries this problem deals with. Google carefully... 
 </section>
 
+<!--
 <section class="answer">
 ### Solution
 
@@ -424,7 +439,9 @@ describe("App", () => {
 });
 ```
 </section>
+-->
 
+---
 
 ## Exercise #5: Integration Testing the App
 
@@ -442,6 +459,7 @@ Uncomment the code in the Integration Test portion of `App.test.js`
 - Once again, flex those Googling muscles. What issue are you seeing? Which library's docs might be helpful?
 </section>
 
+<!--
 <section class="answer">
 ### Solution
 The Router's history is getting out of sync from jest-dom's history. 
@@ -471,7 +489,7 @@ import { Router } from 'react-router-dom';
 // Make a new blank history object
 const customHistory = createMemoryHistory();
 
-// Overwrite the history of the BrowserRouter:
+// Overwrite the history of the Router:
 const routerWithCustomHistory = <Router history={customHistory}></Router>
 ```
 
@@ -597,6 +615,9 @@ describe('App', () => {
 
 </section>
 </section>
+-->
+
+--- 
 
 ## Extra Resources:
 
