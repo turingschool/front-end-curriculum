@@ -1,5 +1,5 @@
 ---
-title: Scope I - Execution Contexts
+title: "Scope I: Execution Contexts"
 length: 120
 tags: javascript, execution, creation, hoisting
 module: 2
