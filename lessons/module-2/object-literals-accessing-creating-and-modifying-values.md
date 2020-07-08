@@ -1,5 +1,5 @@
 ---
-title: "Object Literals"
+title: "Object Literals: Accessing, Creating, and Modifying Values"
 length: 180
 tags: javascript, objects, bracket notation, dot notation
 module: 2

@@ -1,5 +1,5 @@
 ---
-title: "Objects: literals, constructors, and 'this'"
+title: "OOP I: Making Objects with Constructor Functions and Classes"
 length: 180
 tags: javascript, objects, constructors, classes this, oop
 module: 2
