@@ -192,7 +192,6 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 - How do you pass props into a component rendered by a `<Route />` ?
 </section>
 
-<!--
 <section class="answer">
 ### Solution
 ```jsx
@@ -223,7 +222,6 @@ export default class App extends Component {
 }
 ```
 </section>
--->
 
 
 ### Render `exact` matches
@@ -280,7 +278,6 @@ This also allows you to define and pass specific properties to a component dynam
 Get the sharks link working as well! 
 
 
-<!--
 <section class="answer">
 ### Solution
 ```jsx
@@ -310,7 +307,6 @@ export default class App extends Component {
 }
 ```
 </section>
--->
 ---
 
 ### Route Props
@@ -363,7 +359,6 @@ Hints:
 - How can you find a one puppy's data in an array based on its id?
 </section>
 
-<!--
 <section class="answer">
 ### Solution
 
@@ -381,7 +376,6 @@ The new route could look something like this:
         />
 ```
 </section>
--->
 
 ---
 ## Exercise #4: Unit Testing the App
@@ -397,7 +391,6 @@ Uncomment the code blocks inside of the Unit Test portion of `App.test.js`
 - Think about which libraries this problem deals with. Google carefully... 
 </section>
 
-<!--
 <section class="answer">
 ### Solution
 
@@ -439,7 +432,6 @@ describe("App", () => {
 });
 ```
 </section>
--->
 
 ---
 
@@ -459,7 +451,6 @@ Uncomment the code in the Integration Test portion of `App.test.js`
 - Once again, flex those Googling muscles. What issue are you seeing? Which library's docs might be helpful?
 </section>
 
-<!--
 <section class="answer">
 ### Solution
 The Router's history is getting out of sync from jest-dom's history. 
@@ -615,7 +606,6 @@ describe('App', () => {
 
 </section>
 </section>
--->
 
 --- 
 
