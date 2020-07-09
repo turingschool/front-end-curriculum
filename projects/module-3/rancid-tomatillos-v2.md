@@ -9,7 +9,7 @@ Have you ever watched a movie and said to yourself, "Ugh, I wish I could throw a
 ## Learning Goals
 
 * Reinforce React fundamentals
-<!--* Reinforce using React Router to create a multi-page user experience-->
+* Reinforce using React Router to create a multi-page user experience
 * Reinforce component and asynchronous JS testing
 * Work with and navigate a shared, persistent API using GET, POST, and DELETE requests
 
@@ -79,7 +79,6 @@ The only way to change a rating is to delete the old rating and submit a new rat
 
 Don't forget to account for handling non-2xx-level responses from the server.
 
-<!-- Uncomment for part 2:
 ## Part 2: New Features
 
 For the next part of the project, you'll continue working on the same codebase, but will be dividing and conquering a few separate features. All the following iterations are required, but not all are expected to be completed individually. Again, you'll be contrubuting to the same codebase, so your workflow will be especially important here. 
@@ -147,8 +146,6 @@ Users have been wanting to keep track of their favorite movies. The server is no
 
 - Add a new GET route to get all currently favorited movies (these will be stored in app.locals).
 
--->
-
 ### Extensions
 
 * Once logged in, sort the user's movies by the date they rated the movie (the `created_at` info for a rating might help with this...)
@@ -170,9 +167,6 @@ There is no setup! You are not going to run an API locally to start this project
 
 All API endpoints (also known as "routes") are prefixed with `https://rancid-tomatillos.herokuapp.com/api/v2`. Also, wherever you see a `:user_id` or `:rating_id` in the endpoint documentation, that would be replaced by the ID _value_ in your request, like `5`, for instance. Here are the endpoints available:
 
-<!-- Uncomment for part 2
-When running the API locally, you will replace `https://rancid-tomatillos.herokuapp.com/api/v2` with `http://localhost:3001/api/v2`.
--->
 
 | Purpose | URL | Verb | Request Body | Sample Response (Happy Path) |
 |---------|-----|------|--------------|------------------------------|
@@ -232,7 +226,6 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 * 3 - All components are unit tested in units and integration, and a valid attempt was made to mock async functionality.
 * 4 - All async functionality is mocked. Asynchronous tests cover happy paths as well as multiple sad paths. All pieces of functionality have been tested and are passing and run efficiently. Evaluator has no recommendations for testing.
 
-<!-- Comment back in for part 2
 ### Routing
 
 * 1 - Application uses React Router, but does not render/use all routes according to spec. Application does not utilize built in React Router components and manipulates history instead.  UX is challenging and frustrating where multiple pages on the application are missing links to routes.
@@ -244,6 +237,5 @@ Since the API might reset at anytime, this does not guarantee that any unique ID
 
 * 1 - No new routes are added to the locally hosted API. No data is being saved on the server.
 * 2 - New routes are added, but no error handling is present (ex: hitting a route always returns a 200, even if the request is malformed). 
-* 3 - New routes are added, and only return successful responses when the request is correctly formatted.
+* 3 - New routes are added, and only return successful responses when the request is correctly formatted. Routes are structured in a proper RESTful fashion.
 * 4 - New routes are added, and there is dynamic and meaningful error handling present.
--->
