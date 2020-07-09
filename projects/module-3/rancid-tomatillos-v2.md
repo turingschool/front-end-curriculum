@@ -105,13 +105,13 @@ Check out this [article](https://developer.mozilla.org/en-US/docs/Learn/Common_q
 
 </section>
 
-### Iteration 7 - Fork the Server (complete together)
+### Iteration 7 - Make a microservice (complete together)
 
-You're going to be delivering some new features to your users, which will require updating the server's endpoints. To do this, you'll be making your own local development version of the API. 
+You'll be delivering some new features to your user. However, the current API is not set up to support them. So you're going to make a new one! 
 
-Fork and clone down the [Rancid Tomatillos API](https://github.com/turingschool-examples/rancid-tomatillos-api). Only one group member should make the fork. Whoever makes it will add the other partner as a contributor. 
+You and your partner should set up a new express app to function as a [microservice](https://en.wikipedia.org/wiki/Microservices), or small application used as part of a bigger product. 
 
-Update your React project so that it queries your new local copy of the API. 
+For this iteration, get a basic express app set up and pushed up to GitHub. Make sure each partner has push rights to repo. 
 
 ### Iteration 8 - Divide and Conquer
 
@@ -127,9 +127,9 @@ Users have been requesting the ability to comment on movies. The server is not c
 - **If they are logged in**, they should be able to fill out a form and add a comment to the movie. Comments should be sent to the server, and therefore persist across page reloads. 
 
 **Back End**:
-- Add a new POST route to the server (`POST /movies/:movieId/comment`) that creates a new comment and adds it to `app.locals`. Each comment needs to have _at least_ an `id`, `author` and `comment` property. If the request is unsucessful (ie the client sends a malformed request), send back an appropriate and helpful error (ex: if a request is made without an `author` property, send back a 422 level response with a message like "Unable to process request: missing `author` property"). 
+- Add a new POST route to your new server that creates a new comment and adds it to `app.locals`. Each comment needs to have _at least_ an `id`, `author` and `comment` property. If the request is unsucessful (ie the client sends a malformed request), send back an appropriate and helpful error (ex: if a request is made without an `author` property, send back a 422 level response with a message like "Unable to process request: missing `author` property"). 
 
-- Add a new GET route to the server (`GET /movies/:movieId/comments`) that GETs all existing comments for a given movie.  
+- Add a new GET route to your new server that GETs all existing comments for a given movie.  
 
 ### Iteration 8b - Favoriting and Filtering
 
@@ -154,6 +154,8 @@ Users have been wanting to keep track of their favorite movies. The server is no
 * Once logged in, sort the user's movies by the date they rated the movie (the `created_at` info for a rating might help with this...)
 * Whether or not a user is logged in, give the ability to sort the movies by release date and genre
 * Add the ability to view a movie's trailer(s) from the movie's show page (check out the `/movies/:movie_id/videos` endpoint)
+
+* Deploy your apps (FE and BE) to [Heroku](https://devcenter.heroku.com/categories/deployment)
 
 Think of some others!
 
