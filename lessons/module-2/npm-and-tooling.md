@@ -1,5 +1,5 @@
 ---
-title: Intro to NPM
+title: "NPM & Tooling"
 length: 90 min
 tags: npm, node modules
 mod: 2

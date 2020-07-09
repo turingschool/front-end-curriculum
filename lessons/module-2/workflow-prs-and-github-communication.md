@@ -1,5 +1,5 @@
 ---
-title: Effective GitHub Collaboration
+title: "Workflow: PRs and GH Communication"
 length: 120
 tags: workflow, git, github, collaboration, code review
 module: 2
