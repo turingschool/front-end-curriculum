@@ -1,5 +1,5 @@
 ---
-title: Array Prototype Methods: Iterators
+title: "Array Prototype Methods: Iterators"
 tags: javascript, iterator, prototype, arrays
 module: 2
 ---
