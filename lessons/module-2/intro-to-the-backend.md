@@ -32,9 +32,9 @@ code!
 
 ### Getting started
 We're going to be using
-[this repo](https://github.com/turingschool-examples/intro-to-the-backend) for the rest of
-the lesson, so go ahead and clone it to your own machine, and follow the set up
-instructions. 
+[this repo](https://github.com/turingschool-examples/intro-to-the-backend){:target='blank'}
+for the rest of the lesson, so go ahead and clone it to your own machine, 
+and follow the set up instructions. 
 
 <section class="call-to-action">
 Once you've cloned it to your machine and installed the dependencies, take 3
