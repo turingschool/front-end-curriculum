@@ -71,7 +71,7 @@ app.listen(port, () => console.log(`Listening on port ${3000}`)
 ```
 
 Remember from our previous lesson on [how the web
-works](http://localhost:4000/lessons/module-2/how-the-web-works.html) that a
+works](https://frontend.turing.io/lessons/module-2/how-the-web-works.html) that a
 server is waiting for requests to come in from clients. `app.listen` is a method
 that tells our Express application to start listening for those requests. 
 
