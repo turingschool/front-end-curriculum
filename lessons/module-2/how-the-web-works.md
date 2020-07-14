@@ -29,6 +29,8 @@ As front-end developers you will notice that a lot of your job is going to be ab
 
 ## Client Server Model
 
+[Slides](https://docs.google.com/presentation/d/1oA0g7Vmsiv7pOySq2bVrb2t5BurELTixYpRRyW899nQ/edit?usp=sharing)
+
 On June 28th 2006 Senator Ted Stevens described the internet as a 'series of tubes'
 
 ```
