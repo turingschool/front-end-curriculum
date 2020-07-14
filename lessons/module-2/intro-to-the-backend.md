@@ -48,7 +48,6 @@ partner
 
 ### What are we looking at?
 
-## Starting Express
 Let's break this down into it's most critical components. First, at the top of
 the file we see:
 
@@ -58,14 +57,13 @@ const app = express()
 const port = 3000
 ```
 
-This is where we are loading Express into our application. Express will allow us
+This is where we are loading Express into our application. Express with allow us
 to more easily interact with the networking capabilities of the machine using
 JavaScript syntax that will feel familiar. `const app` creates a new instance of
 an Express application, which is just a fancy Object with lots of built in
 methods. `const port` is exactly what it looks like, a variable containing the
 integer 3000.
 
-## Listening for requests
 Now, let's drop down to the bottom of the file:
 
 ```javascript
@@ -86,3 +84,72 @@ The port number must be an unsigned 16-bit number (between 0 and 65535).
 Hopefully, you were able to identify the second argument as a callback function.
 In this case, the callback function will execute once our `app` successfully
 starts listening for incomming messages on port 3000. 
+
+Go ahead and run this code with `node index.js`. What do you see?
+
+It might not seem like we've done very much, but in fact, we've just made a
+working server! In the terminal you should see the output from our callback
+function `Listening on port 3000`. Our sever is up and waiting for incoming
+connections, and it will remain so until we kill the process (ctrl - c), or
+restart our machine.
+
+### Making our first request
+
+In a browser, navigate to [localhost:3000/welcome](http://localhost:3000/welcome){:target='blank'}.
+
+What do you see? Assuming your server is still running, you should see the text;
+"Here's the information you requested."
+
+Let's jump back to our server code, and take a look at the last remaining lines
+in `index.js`:
+
+```javascript
+app.get('/welcome', (request, response) => {
+  response.send("Here's the information you requested")
+})
+```
+
+The code that we looked at so far allowed us to listen for any kind of request,
+but it didn't say anything about how we should _handle_ those requests. That's
+what this code does for us. Let's break it down:
+
+#### app.get
+`app.get` is a method that determines how our application should handle specific
+kinds of requests made with the `GET` verb. There are other types of requests than `GET`, but for now,
+we're only going to concern ourselves with `GET`. When you type a web address into
+a browser, you are making a `GET` request to that address.
+
+#### the path
+The `app.get` method takes two arguments, the first is a string, and we call
+this argument the path. In our example, the path is everything that comes after
+`localhost:3000`.
+
+#### the callback function
+The second argument is a callback function, and this is where the meat of our
+server lives. Whenever our server hears a `GET` request to the `/welcome` path,
+it will execute this callback function. The function takes two paramenters;
+`request`, which will contain information about the request that was sent from the
+client, and `response`, which will give our server the ability to send
+information back to the client.
+
+#### response.send
+Finally, we see `response.send("Here's the information you requested")`. We're
+using the response object, provided by Express, to send a string back to the
+client.
+
+<section class="call-to-action">
+### Time to experiment!
+
+Using what you've learned so far as a template, see if you can create three
+response handlers:
+* The first should use the path /date, and should respond to the client with the
+  current date
+* Next use the path /myName, and respond to the client with your own name
+* Finally, use the path /random, and respond to the client a random number
+  between 1 and 100
+</section>
+
+### Check for Understanding
+* What would you use the library Express for?
+* What is it called when a client sends a message to a server?
+* What is it called when a server sends a message to a client?
