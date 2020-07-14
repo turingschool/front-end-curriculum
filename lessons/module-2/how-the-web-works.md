@@ -38,11 +38,11 @@ On June 28th 2006 Senator Ted Stevens described the internet as a 'series of tub
  ```
 Don't let this be you!
 
-Really in a very small and simplistic sense the internet is just a bunch of computers talking to computers. The internet is comprised of Serves that hold files and information on them. These servers or server networks are connected by wires either underground or underwater.
+Really in a very small and simplistic sense the internet is just a bunch of computers talking to computers. The internet is comprised of Servers that hold files and information on them. These servers or server networks are connected by wires either underground or underwater.
 
 Now typically what you will find is that a Server typically will provided a service and that the client typically will take advantage of that service. The client will send a request to the server to utilize that service.
 
-In most cases you'll see that a client is software that accesses the serves provided by the server. That service is typically a file or application stored on a physical server somewhere. For example if you bank online. Your browser is acting as the client and is communicating to a physical server to grab information about the user's bank account. It uses `requests` to get information / services from the server.
+In most cases you'll see that a client is software that accesses the data provided by the server. That service is typically a file or application stored on a physical server somewhere. For example if you bank online. Your browser is acting as the client and is communicating to a physical server to grab information about the user's bank account. It uses `requests` to get information / services from the server.
 
 This is where things can get a little tricky. A server/client can be a physical piece of hardware or some software that lets you serve up information. In `game-time` or `idea-box-pivot` you utilized something called a `webpack-dev-server`. When you strip everything down it's really just a `node-server` in the background serving your game / project locally on your machine. In this specific case your computer was a physical server and your laptop was also the client.
 
