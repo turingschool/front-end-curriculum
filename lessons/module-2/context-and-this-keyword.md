@@ -1,5 +1,5 @@
 ---
-title: Understanding the keyword `this`
+title: "Context and `this` keyword"
 length:
 tags: javascript, js, this, keyword
 ---

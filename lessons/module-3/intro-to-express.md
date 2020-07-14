@@ -6,7 +6,7 @@ tags: node, express, back-end, server, http
 
 ### Pre-reqs
 
-* Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64) (you may already have the browser extension, which is now deprecated; please download the desktop application)
+* Download the [Postman desktop app](https://app.getpostman.com/app/download/osx64)
 
 ### Goals
 
@@ -30,9 +30,7 @@ By the end of this lesson, you will:
 Express is a small framework built on top of the web server functionality provided by Node.js. It helps to simplify and organize the server-side functionality of your application by providing abstractions over the more confusing parts of Node.js, and adding helpful utilities and features.
 
 ## Why do we use Express?
-Think about how and why we use jQuery on the front-end. Vanilla JavaScript can be verbose and difficult to read. jQuery came along to give developers a nicer-looking syntax to perform the same operations. It was a library built to abstract the trickier parts of JavaScript and make them easier to write and work with. Express was built for very similar reasons.
-
-Just like browser-based JavaScript, the syntax for using the plain [Node `http` library](https://nodejs.org/api/http.html) isn't the friendliest. Node gives you enough low-level features to build the back-end of an application, but Express is a light layer built on top of Node to make these low-level features a little easier to read and write.
+The syntax for using the plain [Node `http` library](https://nodejs.org/api/http.html) (allowing us to write JS for back end work, aka server-side JS) isn't the friendliest or easiest to maintain. Node gives you enough low-level features to build the back-end of an application, but Express is a light layer built on top of Node to make these low-level features a little easier to read and write.
 
 ## Advantages of Express
 While Node's `http` library provides us with all of the functionality we need for our back-ends, writing this logic without Express is more difficult to make sense of and maintain. The two biggest advantages of Express are:
@@ -113,7 +111,7 @@ You can fire up your server using `node server.js` and visit `http://localhost:3
 
 OR...
 
-If you don't have `nodemon` installed globally, now might be a useful time to do that. Nodemon will auto-restart your server for you any time you make changes to your server file. When starting an app with `node`, you would have to manually shut your server down and spin it up again to see your most recent changes reflected.
+If you don't have `nodemon` installed globally, now might be a useful time to do that. Nodemon will auto-restart your server for you any time you make changes to your server file (hot-reloading). When starting an app with `node`, you would have to manually shut your server down and spin it up again to see your most recent changes reflected.
 
 ```bash
 npm i -g nodemon
@@ -124,17 +122,19 @@ nodemon server.js
 
 We've already made one GET request, that's simply returning some text. Let's make another one using some actual data that will return JSON for us.
 
-For now, we'll store an array of pets in a variable called `app.locals`, which is automatically given to us through express:
+For now, we'll store an array of pets in a variable called `app.locals`, which is an object automatically given to us through Express:
 
 ```js
 app.locals.pets = [];
 ```
 
+You can think of app.locals as something similar to a component's state in React! It resets every time the server refreshes and does not persist (for true server-side data storage, we would use a database).
+
 Let's put some fake data in for now:
 
 ```js
 app.locals.pets = [
-  { id: 'a1', name: 'Rover', type: 'dog' },
+  { id: 'a1', name: 'Jessica', type: 'dog' },
   { id: 'b2', name: 'Marcus Aurelius', type: 'parakeet' },
   { id: 'c3', name: 'Craisins', type: 'cat' }
 ];

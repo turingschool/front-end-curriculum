@@ -7,7 +7,6 @@ title: Hang In There - Pair
 * Write clean, DRY JavaScript to store our data
 * Use a provided class by creating object instances using the `new` keyword
 * Manipulate the page after it has loaded adding, removing, and updating elements on the DOM
-* Understand event bubbling and use event delegation on dynamic elements
 * Begin to understand how to write effective, clean HTML & CSS
 
 ## Overview

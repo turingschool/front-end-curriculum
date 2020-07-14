@@ -232,4 +232,4 @@ Collaborate with instructors to personalize an extension for this project
 
 This project will be evaluated remotely by your instructors over the weekend. We will send you written feedback on your project by Sunday afternoon / Monday. 
 
-Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1N4bLirAEpgNWVCeNJheoM6vnrlSB5Qy9ejsFeSbvxCQ/edit?usp=sharing" target="_blank">here</a> by __9PM on Thursday, May 7th__.
+Submit your GH Repo <a href="https://docs.google.com/spreadsheets/d/1SbUtNaFZ4TGu_NvPMqzcuK0WrXvBRWjlGyjZMw9ux_Y/edit#gid=0" target="_blank">here</a> by __9PM on Thursday, July 2nd__.

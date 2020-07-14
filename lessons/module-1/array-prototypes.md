@@ -22,18 +22,18 @@ By the end of this lesson, you'll be able to:
 In your notebook, jot down your answers to the following:
 
 ```javascript
-var students = ["Estelle", "Katy", "Ian", "Hanna", "Miley", "Ben"];
+var instructors = ["Casey", "Scott", "Hannah", "Leta"];
 ```
 
 For the array above,
 - How would you programmatically find the number of elements?
-- Oops! There's not a Miley in our class. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove the string "Miley" from the array?
+- Oops! Leta is not teaching Mod 1 this inning. NO CODE - what are the **instructions** you would want to tell the computer to take in order to remove the string "Leta" from the array?
 
 ### Debrief
 
 Sometimes we need to access information about an array or certain elements in our array. Methods we use to do that are called **accessor** methods. They do not mutate or change the original array - they just give us information, or copies of parts of the array. 
 
-In other cases, we will want to change the data our array holds. **Mutator** methods actually mutate, or change, the data in the array. If we needed to remove a student element from the `students` array, we'd need to use a mutator method.
+In other cases, we will want to change the data our array holds. **Mutator** methods actually mutate, or change, the data in the array. If we needed to remove an instructor element from the `instructors` array, we'd need to use a mutator method.
 
 ## Protocol
 
@@ -63,7 +63,8 @@ For each array prototype method, follow this protocol carefully:
 
 1. Read the documentation on MDN.
 2. Talk through your understanding of it together.
-3. Make a visual representation of the method with your candies and paper.
+3. Visually represent the method using a copy of [this Jamboard](https://jamboard.google.com/d/1FQ8dDURIkf43XTq2S6Eb2rvoiPlUihnW6NQxnzcJ7No/viewer?f=0), or make your own!
+<!-- 3. Make a visual representation of the method with your candies and paper. -->
 4. Think: What is **returned** from the method?
 5. Think: Does the method mutate the original array?
 6. Try It: In a `repl.it`, try out the method. While poking around here, try to verify your predictions from steps 3 and 4.
@@ -71,16 +72,30 @@ For each array prototype method, follow this protocol carefully:
 8. Document any remaining questions!
 </section>
 
-## Gallery Walk
+<!-- ## Gallery Walk -->
+## Presentations
 
-In your new group of 3, make a poster for your assigned array prototype! It should include:
+- *Group 1:* push
+- *Group 2:* pop
+- *Group 3:* unshift
+- *Group 4:* shift
+- *Group 5:* slice
+- *Group 6:* splice
+- *Group 7:* includes
+- *Group 8:* concat
+
+In your new group of 3, make a presentation for your assigned array prototype! It should include:
 - Name of method
-- What it does (in plain English)
+- What it does (in plain English) and why you would use it
 - Does it mutate the original array?
 - What does it return
-- _Optional: Syntax examples, use-case examples._
+- _Optional (but helpful!): Syntax examples, use-case examples in a `repl.it`, analogies, etc._
 
-After all poster are made, we will do a "Gallery Walk" - walk around the room and look at each others posters and make sure notes are accurate. If you aren't 100% of something you are about to write on your poster - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates.
+After all are complete, each group will do a short presentation on their assigned array prototype. Make sure you decide who is leading the presentaion, or split up sections between the three of you!
+
+If you aren't 100% of something you are about add to your presentation - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates.
+
+<!-- After all poster are made, we will do a "Gallery Walk" - walk around the room and look at each others posters and make sure notes are accurate. If you aren't 100% of something you are about to write on your poster - totally ok to ask an instructor! We do want to make sure these provide accurate info for your classmates. -->
 
 ## Wrap Up
 
@@ -99,7 +114,7 @@ It's not a good use of time to attempt to memorize every array prototype and its
 <section class="checks-for-understanding">
 ## Reflection
 
-1. What from this morning helped you learn? Talking with your partner? Spending time in the docs? Playing with a method in `repl.it`? Visualizing it without code (using candies)?
+1. What from this morning helped you learn? Talking with your partner? Spending time in the docs? Playing with a method in `repl.it`? Visualizing it without code (using jamboard sticky notes)?
 2. Discuss your best learning techniques with your table/partner.
 3. Open your notebooks to the last page, and write "When I'm stuck, I will:" and then add the learning strategies that worked best for you!
 </section>

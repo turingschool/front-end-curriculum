@@ -70,7 +70,7 @@ Indices begin at 0 and order incrementally. So in the above `colors` example, th
 - color black has an index of 1
 - color pink has an index of 2
 
-You can change values in an array by using their index. Let's walk through it in the console:
+You can change and access values in an array by using their index. Let's walk through it in the console:
 
 ```javascript
 // Create the array
@@ -101,7 +101,7 @@ In the console:
 
 ## Getting Multiple Values from Functions
 
-We learned last week that a single function can only return a single value. There will be times when you want to send a list of values over. We are able to do this by returning an array. Because an array is a complex data type, it has the ability to "wrap up" many values into one value, it doesn't break the rule of "a single function can only return a single value".
+We learned this morning that a single function can only return a single value. There will be times when you want to send a list of values over. We are able to do this by returning an array. Because an array is a complex data type, it has the ability to "wrap up" many values into one value, it doesn't break the rule of "a single function can only return a single value".
 
 ```javascript
 function combineNames(name1, name2, name3) {
@@ -114,10 +114,20 @@ var listOfNames = combineNames("Luna", "Bey", "Sunny");
 listOfNames;
 // => ["Luna", "Bey", "Sunny"]
 
+var modOneInstructors = combineNames["Scott", "Casey", "Hannah"];
+
+modOneInstructors;
+// => ["Scott", "Casey", "Hannah"]
+
 ```
+
+<section class="call-to-action">
+### Final Practice: Access and Update
+
+Start by forking [this repl.it](https://repl.it/@HannahHudson/IntroArrayPractice). Complete each exercise listed in the comments below the provided array literal. Write the code with a given direction directly below it, and **do not delete code as you go**.
+</section>
 
 ### Dig Deeper
 
 * [JS Style Guide](https://github.com/turingschool-examples/javascript)
 * [Seven JS Quirks I Wish I'd Known About](http://developer.telerik.com/featured/seven-javascript-quirks-i-wish-id-known-about/#expdec)  
-* [Adequately Good JS](http://www.adequatelygood.com/JavaScript-Scoping-and-Hoisting.html)  

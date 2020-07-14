@@ -1,5 +1,5 @@
 ---
-title: Mutator & Accessor Methods
+title: "Array Prototype Methods: Mutator & Accessor"
 length: 180
 tags: prototype methods
 ---

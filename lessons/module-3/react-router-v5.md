@@ -4,6 +4,10 @@ length: 3 hours
 tags: React, Router
 module: 3
 ---
+<!-- 
+FOR INSTRUCTORS:
+- There are solutions to each exercise commented down below. Feel free to uncomment them after the lesson
+-->
 
 ## Learning Goals:
 * Understand and articulate the need for routing 
@@ -13,6 +17,7 @@ module: 3
 
 ## Vocab
 * `BrowserRouter` A \<Router\> that uses the HTML5 history API (pushState, replaceState and the popstate event) to keep your UI in sync with the URL
+* `Router` The class that \<BrowserRouter\> is extended from
 * `Route` Its most basic responsibility is to render some UI when a location matches the route’s path
 * `Link` Links provide declarative, accessible navigation around your application
 * `NavLink` A special version of the \<Link\> that will add styling attributes to the rendered element when it matches the current URL.
@@ -71,7 +76,7 @@ We'll be using <a href="https://github.com/turingschool-examples/react-router-v5
 
 **Installation Instructions**
 ```bash
-# Clone the repo 
+git clone https://github.com/turingschool-examples/react-router-v5
 cd react-router-v5
 npm i
 npm start
@@ -137,7 +142,7 @@ ReactDOM.render(router, document.getElementById('root'));
 </section>
 
 <section class="answer">
-### Finally, add a Route for the `<Home />` component into your `<App />`
+### Finally, add a Route for the `Home`  component into your `App`
 
 ```javascript
 import React, { Component } from 'react';
@@ -171,6 +176,7 @@ We picked `/` for the path in the route becuase it designates that there won't b
 
 </section>
 
+---
 ## Exercise # 1: Render Puppies
 
 Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. The page should look something like the picture on the lesson plan. ***While you may change components*** as needed, you shouldn't outright delete content from the page to achieve this.
@@ -185,7 +191,6 @@ Your goal is click on the word Puppies and see a grid of 9 puppies on the DOM. T
 - What additional react-router components should you use? Do any current components need to change?
 - How do you pass props into a component rendered by a `<Route />` ?
 </section>
-
 
 <section class="answer">
 ### Solution
@@ -267,6 +272,7 @@ This also allows you to define and pass specific properties to a component dynam
 ```
 
 
+---
 ## Exercise # 2: Rendering Sharks
 
 Get the sharks link working as well! 
@@ -301,11 +307,11 @@ export default class App extends Component {
 }
 ```
 </section>
-
+---
 
 ### Route Props
 
-Let's take a close look at what happens when you a Route renders. 
+Let's take a close look at what happens when a Route renders. 
 
 [Route render methods](https://reacttraining.com/react-router/web/api/Route/route-render-methods) all provide access to [route props](https://reacttraining.com/react-router/web/api/Route/route-props), either automatically to the component they render, or via the callback function that the methods take. 
 
@@ -340,10 +346,11 @@ and then navigating to `/puppies`, we can see that the `<Creatures />` component
 This is great for dynamically rendering content based on things in the url, like an id. Let's do that 
 
 ## Exercise #3: Dynamic Routing
+---
 
 Take a look at the CreatureDetails Component. It takes in all data for a given creature, and displays it on the page. 
 
-**Your Task is to make a route that will dynamically render a CreateDetails component for a puppy based on its ID**
+**Your Task is to make a route that will dynamically render a CreatureDetails component for a puppy based on its ID**
 
 <section class="note">
 Hints:
@@ -370,6 +377,7 @@ The new route could look something like this:
 ```
 </section>
 
+---
 ## Exercise #4: Unit Testing the App
 
 Uncomment the code blocks inside of the Unit Test portion of `App.test.js`
@@ -425,6 +433,7 @@ describe("App", () => {
 ```
 </section>
 
+---
 
 ## Exercise #5: Integration Testing the App
 
@@ -447,7 +456,7 @@ Uncomment the code in the Integration Test portion of `App.test.js`
 The Router's history is getting out of sync from jest-dom's history. 
 
 We can do one of two things:
-1. Create a custom history object and pass it to the BrowserRouter
+1. Create a custom history object and pass it to a Router (NOT a BrowserRouter)
 2. Use a [Memory Router](https://reacttraining.com/react-router/web/api/MemoryRouter)
 
 Let's look at both of these solutions.
@@ -460,17 +469,19 @@ For this solution, we have to look into the [history package](https://github.com
 
 Routers use this package to manage their session history. BrowserRouter creates a history object under the hood, which gets its current location from the browser ([jsdom](https://www.npmjs.com/package/jsdom) in the case of jest's testing environment), and updates the browser history via a few methods that you can [read more about if you're interested](https://github.com/ReactTraining/history/blob/master/docs/Navigation.md).
 
-We can also [create our own history object](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md) and use it to overwrite the BrowserRouter's default history. This allows us to instantiate a new Router at a specific location (url) of our choosing.
+We can also [create our own history object](https://github.com/ReactTraining/history/blob/master/docs/GettingStarted.md).
+
+However, BrowserRouter CANNOT receive a custom history object, so if we want to make an manipulate our own history, we'll have to wrap our component in a [Router](https://reacttraining.com/react-router/web/api/Router). So we can use that history object to overwrite the Router's default history. This allows us to instantiate a new Router at a specific location (url) of our choosing.
 
 ```jsx
 import { createMemoryHistory } from 'history';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 
 // Make a new blank history object
 const customHistory = createMemoryHistory();
 
-// Overwrite the history of the BrowserRouter:
-const routerWithCustomHistory = <BrowserRouter history={customHistory}></BrowserRouter>
+// Overwrite the history of the Router:
+const routerWithCustomHistory = <Router history={customHistory}></Router>
 ```
 
 So our final solution to the Integration Test could look like this:
@@ -480,7 +491,7 @@ import React from 'react';
 import App from './App';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { BrowserRouter } from 'react-router-dom';
+import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history';
 
 describe('App', () => {
@@ -488,9 +499,9 @@ describe('App', () => {
     it('Should render 9 puppies on click', () => {
       const history = createMemoryHistory();
       const { getByRole, getAllByRole } = render(
-        <BrowserRouter history={history}>
+        <Router history={history}>
           <App />
-        </BrowserRouter>
+        </Router>
       );
       const puppiesLink = getByRole('link', { name: 'Puppies'});
       const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
@@ -510,9 +521,9 @@ describe('App', () => {
     it('Should render 9 sharks on click', () => {
       const history = createMemoryHistory();
       const { getByRole, getAllByRole } = render(
-        <BrowserRouter history={history}>
+        <Router history={history}>
           <App />
-        </BrowserRouter>
+        </Router>
       );
       const sharksLink = getByRole('link', { name: 'Sharks'});
       const welcomeMessage = getByRole('heading', {name: 'Welcome! Click on the links above to see a variety of creatures'});
@@ -533,7 +544,7 @@ describe('App', () => {
 });
 ```
 
-**Note** This is the technique recommended by [React Testing Library](https://testing-library.com/docs/example-react-router)
+**Note** This techniques comes from [React Testing Library](https://testing-library.com/docs/example-react-router)
 
 </section>
 
@@ -595,6 +606,8 @@ describe('App', () => {
 
 </section>
 </section>
+
+--- 
 
 ## Extra Resources:
 

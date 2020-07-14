@@ -1,5 +1,5 @@
 ---
-title: Static Comp Challenge
+title: Static Comp Challenge 2
 ---
 
 ## Specification
@@ -21,7 +21,7 @@ You may NOT take liberties with the layout, but your creative license includes:
 
   - Basic static site setup with `index.html` and `styles.css`
   - Site must be responsive
-  - Create a repo on github :octocat: for your work with following naming construct: [initials]-comp-challenge-[challenge number] (i.e. __"cd-comp-challenge-1"__)
+  - Create a repo on github :octocat: for your work with following naming construct: [initials]-comp-challenge-[challenge number] (i.e. __"cd-comp-challenge-2"__)
   - Include a README with the repo that provides a brief overview of the project, and images of both the original comp and your version.
   - Push your final work to [github pages](https://pages.github.com/)
 
@@ -36,4 +36,4 @@ You may NOT take liberties with the layout, but your creative license includes:
 
 * Place submissions in the _appropriate tab_ of the [Submission Sheet](https://docs.google.com/spreadsheets/d/1wY5daYCN013bC1QIo5fUzFOyQiNqXftSq2Zx63L4-Kc/edit#gid=1037661414)
 
-![static-comp-challenge-2](/assets/images/static-comp-challenge-2.jpg)
+![static-comp-challenge-2](/assets/images/static-comp-challenge-3.jpg)

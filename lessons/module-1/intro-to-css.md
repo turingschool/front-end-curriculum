@@ -228,7 +228,7 @@ While every element has a default, we can modify the `display` of any given elem
 One by one, fork each CodePen. Add a declaration to one rule at a time, changing the value of the display property from its default.
 </section>
 
-We will go into much more detail on how to use the different display properties tomorrow; this is meant to be a high level introduction.
+We will go into much more detail on how to use the different display properties next week; this is meant to be a high level introduction.
 
 ## Additional Resources
 

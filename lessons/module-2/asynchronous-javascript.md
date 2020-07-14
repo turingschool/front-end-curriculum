@@ -29,7 +29,7 @@ When we say **single-threaded**, that could be read as doing one thing at a time
 <section class="call-to-action">
 ### On Your Own
 
-Take 15 minutes to read [this article](https://www.sohamkamani.com/blog/2016/03/14/wrapping-your-head-around-async-programming/){:target="\__blank"} about how JavaScript is asynchronous and also single threaded.
+Take 15 minutes to read [this article](https://dev.to/steelvoltage/if-javascript-is-single-threaded-how-is-it-asynchronous-56gd){:target="\__blank"} about how JavaScript is asynchronous and also single threaded.
 
 ### Discuss
 
@@ -49,7 +49,7 @@ Create a diagram similar to the article to demonstrate what happens when we use 
 
 How can JavaScript keep track of what code or function is running at any given time? How can we keep track or visualize how to expect the code to behave? JavaScript handles this using a few tools: the call stack, event loop, and a queue.
 
-Let's take a look at snippets of [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:target="\__blank"} that has some great visualizations for the call stack, event loop, and queue.
+Let's take a look at [this video](https://www.youtube.com/watch?v=8aGhZQkoFbQ){:target="\__blank"} that has some great visualizations for the call stack, event loop, and queue. Pay close attention during the following points:
 
 * 4:15-6:00 (call stack with synchronous functions)
 * 6:40 (stack overflow example)
@@ -57,10 +57,15 @@ Let's take a look at snippets of [this video](https://www.youtube.com/watch?v=8a
 * 10:23-11:46 (asynchronous callbacks - `setTimeout`, what happens to the `setTimout` on the stack?)
 * 11:47-14:50 (intro to the event loop)
 
-After this point, the talk is good but gets into a lot of detail.
+As you're watching the video, please fill out [this
+form](https://docs.google.com/forms/d/e/1FAIpQLScEqls1aeHfgO0h5EbK9b4YDWnmQDz3XoHW1J-5zgDeAz7G5A/viewform?usp=sf_link){:target="\__blank"},
+and we'll discuss as a group after you've finished.
 
 <section class="checks-for-understanding">
 ### Check for Understanding
 
 Let's take this event loop example with `setTimeout` and translate it to what we have seen with `fetch` and promises. Note that the event loop will wait until the call stack is empty to run the `.then` from a fetch call.
 </section>
+
+### Additional Resources
+* [Loupe](http://latentflip.com/loupe){:target="\__blank"}

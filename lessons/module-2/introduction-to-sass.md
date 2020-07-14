@@ -7,12 +7,13 @@ module: 2
 
 ### Learning Goals
 * Understand that Sass has two syntaxes: SASS and SCSS
-* Understand and apply the basics of Sass to follow the principles of DRY and KISS
+* Understand and apply the basics of Sass to follow the principles of DRY
 * Speak to the pros and cons of using a CSS Preprocessor
 
 ## Vocab
 
-- `CSS Preprocessor` A tool that processes some CSS-like language and turns it into CSS
+- `CSS Preprocessor` a program that lets you generate CSS from the preprocessor's own unique syntax. It extends the default capabilities of CSS. Examples include: Sass, LESS, Stylus and more. 
+- `Compiler` converts our preprocessed code into css code so that the browser can understand it.
 
 <!-- ### Warm Up
 
@@ -27,9 +28,7 @@ module: 2
 
 ## Intro to Sass
 
-Sass stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. It is a CSS preprocessor that converts SCSS (Sassy CSS) into vanilla CSS.
-
-A pre-processor is a tool that will process your code and compile it to a new format that adheres to the requirements of your environment. Think babel - this compiles our fancy ES6 syntax back down to ES5 so that it can be supported in older browsers.
+<a target="_blank" href="https://sass-lang.com/">Sass</a> stands for Syntactically Awesome StyleSheets. Sass allows you to add more advanced syntax - like variables and functions - to your stylesheets. 
 
 ### Sass
 
@@ -39,9 +38,9 @@ Sass was originally part of another preprocessor called Haml. It used no curly b
 
 With this version, variables were assigned using `!` and CSS styles were defined with `=`. Pretty different from the CSS you're used to using now. Developers liked the additional control we had over writing our stylesheets, but wanted a syntax more similar to vanilla CSS. This is where SCSS comes in.
 
-Now, this version of Sass looks a little different. Let's compare the same code written in Sass and SCSS syntax.
-[Sass Codepen](https://codepen.io/hannahhch/pen/eYmdpLj)
-[SCSS Codepen](https://codepen.io/hannahhch/pen/MWYjKWP)
+Now, this version of Sass looks a little different. Let's compare the same code written in Sass and SCSS syntax.  
+* [Sass Codepen Example](https://codepen.io/hannahhch/pen/eYmdpLj)
+* [SCSS Codepen Example](https://codepen.io/hannahhch/pen/MWYjKWP)
 
 You _may_ see the Sass syntax in the wild, but we will focus on the newer SCSS syntax.
 
@@ -62,7 +61,7 @@ Although both Sass and SCSS are both still viable languages to use, movement has
 1. All modern CSS is valid SCSS. That means that you can rename an entire `.css` file `.scss` and nothing will yell at you. This not the case for pure Sass with the `.sass` file extension.
 2. There are no strict rules about indentation. There are still best practices, and if your indentation is all over the place you'll make your teachers cry, BUT through our tears, your stylesheet will still function properly.
 
-_Note: For our purposes here, be aware that we will be working strictly with the SCSS syntax when we are working with Sass._
+_Note: For our purposes here, be aware that we will be working strictly with the SCSS syntax when we are working with Sass, AND when most people say "SASS" they are talking about SCSS._
 
 <section class="call-to-action">
 #### Turn and Talk
@@ -71,11 +70,20 @@ _Note: For our purposes here, be aware that we will be working strictly with the
 - How would you explain what a preprocessor is to a five year old?
 </section>
 
+### Sass in Action
+
+Our browsers *do not* understand Sass, or any of the css preprocessors! In order to be able to use Sass in our code, we need something to turn our Sass code into CSS code so that the browser can understand it. One tool that _compiles_ our Sass (among other things) for us is Webpack!
+
 ### Why would we use Sass?
 
-CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY. This is the one of the key principles of Sass - *DO NOT REPEAT YOURSELF* .
+CSS in large apps can get crazy. Making changes to these large apps is tedious and extremely error prone. Sass makes it easier to change colors, fonts, and other properties by keeping your code DRY. This is the one of the key principles of Sass (and in most programming) - *DO NOT REPEAT YOURSELF* .
 
-Some of the cool tricks include defining variables that can be peppered across multiple CSS files, nesting elements to visibly reflect the HTML element relationships, using math equations to adjust sizes and values, adjusting colors using more intuitive language like "darken" and "lighten", and bundling groups of styles together to easily reference throughout your CSS...to name a few.
+Some of the cool tricks include:
+* defining variables that can be peppered across multiple CSS files
+* nesting elements to visibly reflect the HTML element relationships
+* using math equations to adjust sizes and values
+* adjusting colors using more intuitive language like "darken" and "lighten" 
+* bundling groups of styles together to easily reference throughout your CSS...to name a few.
 
 <hr />
 
@@ -92,14 +100,18 @@ Similar to JavaScript, variables can hold a variety of data types: numbers, colo
 Variables are defined by a `$` immediately preceding the name of the variable (like jQuery), and a colon separating the name of the variable from the value.
 
 ```scss
-$favorite-text-color: lime;
+$primary-color: lime;
 ```
 
-They can then be used anywhere in your stylesheet in place of that style. If I wanted all of my paragraph tags to have this color, my selector would look like this:
+They can then be used anywhere in your stylesheet in place of that style. If I wanted all of my paragraph tags to have this color and my buttons to have it as a background color, my selector would look like this:
 
 ```scss
 p {
-  color: $favorite-text-color;
+  color: $primary-color;
+}
+
+button {
+  background-color: $primary-color;
 }
 ```
 
@@ -107,19 +119,29 @@ It's also nice to avoid typing long, specific styles more than once. Instead we 
 
 ```scss
 $frilly-font: "Fantasy", cursive;
-$main-font: "Arial", "Helvetica", "Copperplate", sans-serif;
+$main-font: "Open Sans", sans-serif;
 
 $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s;
 
 .main-content {
   font-family: $main-font;
+
   button {
     transition: $button-slide-transition;
   }
 }
 ```
 
-Note: As some of you may already know, CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right. Here is a [good article](https://css-tricks.com/difference-between-types-of-css-variables/)to read more about the differences between CSS and Sass variables.
+Note: CSS can now support variables _without_ the use of a preprocessor. In fact, there are a lot of compelling arguments out there regarding the fact that native variables in CSS are more powerful and flexible than the variables that you get with Sass. However, it's important to note that if you are _only_ using a preprocesser like Sass for the variables, you're not using it right. Here is a [good article](https://css-tricks.com/difference-between-types-of-css-variables/) to read more about the differences between CSS and Sass variables.
+
+<section class="call-to-action">
+#### Paired Practice
+
+* Fork a copy of [this codepen sandbox page](https://codepen.io/hannahhch/pen/bGVJvJz)
+* Take note of which styles get reused, and work with a partner to add in some variables.
+* Don't forget, you'll need to add Sass to your codepen! 
+
+</section>
 
 <hr />
 
@@ -132,15 +154,19 @@ For example, if you were writing pure CSS and wanted to target an anchor tag tha
 ##### Sass
 
 ```scss
-$main-text-dark: #000;
-$dark-red: #FF0000;
-$link-light: #fff;
+$grey-dark: #2f3640;
+$grey-light: #dcdde1;
+$red-dark: #FF0000;
 
 header {
-  color: $main-text-dark;
+  color: $grey-dark;
+
   nav {
-    background-color: $dark-red;
-    a { color: $link-light; }
+    background-color: $red-dark;
+
+    a { 
+      color: $grey-light; 
+    }
   }
 }
 ```
@@ -148,15 +174,23 @@ header {
 ##### CSS Output
 
 ```scss
-header { color: #000; }
-header nav { background-color: #ff0000; }
-header nav a { color: white; }
+header { 
+  color: #2f3640; 
+}
+
+header nav { 
+  background-color: #ff0000; 
+}
+
+header nav a { 
+  color: #dcdde1; 
+}
 ```
 
 <section class="note">
-### Note
+### Use nesting with CAUTION
 
-Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific. Try to avoid excessive levels of nesting unless absolutely necessary.
+Be aware that having _too_ much nesting can be a problem - resulting in hard to maintain CSS that is overly specific (remember specificity?). Try to avoid excessive levels of nesting unless absolutely necessary. 
 </section>
 
 #### Nesting & Psuedo-Selectors
@@ -167,16 +201,23 @@ To target a parent element and apply a psuedo selector, use `&:psuedo-selector`,
 
 ```scss
 a {
-  &:hover { color: pink; }
+  color: black;
+
+  &:hover { 
+    color: pink; 
+  }
 }
 ```
 
-It is common to use the parent selector for situations where a secondary class changes a style.
+<!-- It is common to use the parent selector for situations where a secondary class changes a style. -->
 
 <section class="call-to-action">
-#### Turn and Code
+#### Paired Practice
 
-Write SCSS for the following HTML using nesting & variables, following the following criteria:
+* Revisit your Sass Sandbox Codepen and add in some nesting
+* What other situations can you think of where nesting could be beneficial? 
+
+<!-- Write SCSS for the following HTML using nesting & variables, following the following criteria:
 
 * Link text font family should be Arial, Tahoma, or sans-serif.
 * On hover, make the link text red, and the button text white.
@@ -191,10 +232,10 @@ Write SCSS for the following HTML using nesting & variables, following the follo
       <li><button type="button" name="button">Log In</button></li>
     </ul>
   </nav>
-```
+``` -->
 </section>
 
-Let's say that your client wants everything thats red to be teal.  Pretend that your CSS file is huge. Isn't it awesome that you only have to change the CSS in one tiny little place?
+Let's say that your client wants everything thats red to be teal. Pretend that your CSS file is huge. Isn't it awesome that you only have to change the CSS in one tiny little place?
 
 <hr />
 
@@ -204,7 +245,7 @@ One of the main benefits of Sass is having the ability to split your codebase ac
 
 You may remember the [`@import`](https://developer.mozilla.org/en-US/docs/Web/CSS/@import) CSS at-rule that can be used to import style rules from other style sheets when you were working with CSS in Mod 1. However, it's okay if you don't - as the use of this at-rule is typically a code smell/bad practice since it blocks parallel downloads of CSS files (each time you use `@import` it creates another HTTP request).
 
-In the world of Sass, the `@import`(https://sass-lang.com/documentation/at-rules/import) directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
+In the world of Sass, the [`@import`](https://sass-lang.com/documentation/at-rules/import) directive works differently - which is important to know. Although `@import` is still used to require/import other stylesheets into other files, Sass will simply combine imported sheets into one final CSS file that is served to the browser, making it so multiple HTTP requests aren't made.
 
 * Note: Adding an `@import` for the same file more than once will still cause performance issues.
 
@@ -250,27 +291,19 @@ $button-slide-transition: width 2s, height 2s, background-color 2s, transform 2s
 
 ```
 
-```scss
-// index.scss
-@use 'reset' as *; // the star removes namespace
-@use 'colors'; // namespace is automatically set as "colors"
-@use 'layout' as l; // we can change our name space to be "l"
-
-/*...*/
-
-.button { color: colors.$dark };
-
-.wrapper { display: l.$flex };
-
-```
+### Media Queries
 
 But what about media queries? There are a lot of [different approaches](http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32) that you can take. Here's a [good blog post](https://medium.com/front-end-developers/the-solution-to-media-queries-in-sass-5493ebe16844) that walks through setting up responsive mixins for each component.
 
-<section class="call-to-action">
-#### Turn and Talk
+One thing to note is that we can nest our media queries and use variables.  
 
-* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS? How is `@use` different from Sass' `@import` at-rule?
-* With your partner, find two different ways to set up your file structure with Sass
+
+<section class="call-to-action">
+#### Paired Practice
+
+* How does `@import` work in Sass? How is it different from the `@import` at-rule used in CSS? 
+* In your Sassy Sandbox, find two different ways to set up your file structure with Sass. Separate this code out with comments. 
+* What other files might make sense to have in a project?
 </section>
 
 <hr />
@@ -281,8 +314,8 @@ A mixin allows you to define a set of styles that you want to reuse throughout y
 
 To use:
 
-1. You name them with @mixin name(arguments) { style }.
-1. To include them you use @include name.
+1. You name them with `@mixin name(arguments) { style }`.
+1. To include them you use `@include` name.
 
 ##### SCSS
 
@@ -316,17 +349,12 @@ _Note: Just like variables, common convention is to place your mixins in a parti
 <section class="call-to-action">
 #### Turn and Code
 
-In a CodePen, build the following chunk of html and SASS using `mixins`
+In your Sassy Sandbox, build of the following chunk of html and SASS using `mixins`
   1. Create a mixin called `level-one-header` that has a font size of 32px, a
-     font weight of 800, and a font family of Helvetica.
+     font weight of 800, and a color of your choice.
   1. Create a second mixin called `level-two-header` that specifies a font size of 24px, a font
-     weight of 300, and a font family of Arial.
-  1. Create another mixin called `body-copy` that has a font size of 16px, a font weight of 100,  and a font family of Times New Roman.
-  1. Using these mixins, create a small chunk of html. The HTML should have the following:
-  - One h1 element using the appropriate mixin.
-  - Two divs, each with an h2 and a paragraph tag.
-  - For the two h2 elements, one should have a class of "pink", which should have pink font, and one with a class of "subheader" that is grey, underlined, and all caps.
-  - Each of the paragraphs should have a max width of 980px, but the one associated with the subheader should also be in italics. Refactor this CSS into SCSS using a mixin that takes in the two colors you need in your gradient. Apply the mixin to a div to give it a background gradient.
+     weight of 300, and a color of your choice.
+  1. Create another mixin on your own 
 </section>
 
 ## Extend
@@ -381,9 +409,10 @@ Compiles to:
 You may have noticed that `@extend` and `@mixin` can be seen as accomplishing the same thing in a different way since they are both geared towards reusing styles across your project. A common question developers have with Sass is when you should choose to use one over the other, and why.
 
 <section class="call-to-action">
-#### Research and Talk
+#### Paired Practice
 
-In pairs, take 5 minutes to read two articles around this debate. Come together to discuss what you found.
+* Add an `extend` or two to your sandbox, and compare it to your mixin. Do you have a preference?
+
 </section>
 
 <hr />
@@ -439,14 +468,26 @@ Using RGBA to try to adjust lightness or saturation can be impractical and frust
 [Light](https://www.claude-monet.com/haystacks.jsp) is an important piece of the design puzzle when it comes to working with color - something that is true for all mediums of [art](https://www.newyorker.com/humor/daily-shouts/a-few-thoughts-from-monet-on-those-stacks-of-wheat) and design, including the digital mediums we use as FE developers.
 
 
-#### Jigsaw
+<section class="call-to-action">
+### Group Practice
 
-In groups of four, research your assigned built-in color function. Reference the descriptions below, the [Sass documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html) on color functions, and the examples you are given. Make sure to play around with the code in a codepen - are there differences in using hex, rgba, and hsla? Why is this function relevant?
+In small groups, research your assigned built-in color function. Reference the descriptions below, the [Sass documentation](https://sass-lang.com/documentation/modules/color) on color functions, and the examples you are given. Make sure to play around with the code in a codepen - are there differences in using hex, rgba, and hsla? Why is this function relevant?
 
   * complement()
   * mix()
   * lighten/darken()
   * desaturate/saturate()
+
+Be prepared to show us:
+* What the function does
+* What it takes in 
+* The function in action!
+</section>
+
+
+
+<!-- 
+This is what students will be researching
 
 ## Color Functions
 
@@ -523,141 +564,27 @@ $duller-color: hsla(240, 50%, 50%, 1);
 
 .dull-background {
   background: desaturate($full-color, 80%);
-}
-```
+} -->
 
-<!-- <hr /> -->
-
-<!-- [Check it out](https://codepen.io/atideman/pen/QKJmaO) -->
-
-<!--
-## Control directives
-
-### @if
-
-The if directive returns any styles if the directive does not result in false or null.
-
-```
-// For debugging
-@mixin debug-text($true) {
-  @if $true {
-    color: red;
-  }
-}
-
-body {
-  @include debug-text(true)
-}
-
-// Useful mixin using if and else statement
-@mixin top-or-bottom($tb) {
-  position: absolute;
-
-  // Declare top or bottom
-  @if $tb == top {
-    top: 20px;
-  }
-
-  @else if $tb == bottom {
-    bottom: 20px;
-  }
-}
-
-.lower-text {
-  @include top-or-bottom(bottom);
-}
-```
-
-
-### @each
-
-The each directive loops through a list or map of variables. This is handy in creating accurate class names with specific values:
-
-```
-@each $cohort in 1505, 1511, 1610, 1612 {
-   .#{$cohort}-avatar {
-       background-image: url('/img/#{$cohort}.png');
-   }
-}
-
-$align-list: center, left, right;
-
-@each $align in $align-list {
-  .txt-#{$align} {
-    text-align: $align;
-  }
-}
-```
-
-### @for
-
-Output styles in a loop. Uses a variable name to track the loop. You can use from x through y to include the ending number or from x to y to not include it. You can loop backwards by making the first number larger than the second.
-
-```
-@for $i from 1 through 12 {
-  .col-#{$i} { width: 100/12 * $i;}
-}
-```
-
-### @while
-
-Output styles until the desired condition returns false.
-
-```
-$z:1;
-
-@while $z < 9 {
-    .text-col-#{$z} {
-      font-weight: 100 * $z;
-    }
-    $z: $z + 1;
-};
-```
- -->
-
-<!-- <hr /> -->
-
-<!-- ## Operators
-
-One last cool trick that we wanted to cover: Sass allows you to use Math to handle simple changes to numerical values.
-
-For example, you can define the width of your window using a variable like `$windowWidth` and then make a div that has a width of `windowWidth/3`.  Let's see this in action.
-
-##### SCSS
-
-```css
-$content-width: 900px;
-
-.innerContent {
-  width: $contentWidth/3;
-}
-```
-
-##### CSS
-
-```css
-.innerContent {
-  width: 300px;
-}
-```
- -->
-<hr />
 
 ## Summary
+We've covered the basics (and more!) of Sass, but Sass can do a lot! If you're looking for more, check out the [Sass documentation](https://sass-lang.com/documentation/modules) for things like functions, operators, more at-rules, etc. 
+
+CSS can be messy. If you're looking for more ways to think about organizing your styles (CSS or SASS), look into some of the modular architecture methodologies, like OOCSS, BEM or SMACSS.
+
+<section class="call-to-action">
+### Exit Ticket
 
 We've talked about a lot of the strengths/advantages of using Sass without acknowledging that there are downsides. Given what you know, make a case for possible _disadvantages_ of using Sass
+</section>
 
 ## Resources
 
-- Follow [Facebook's guidelines](https://facebook.github.io/create-react-app/docs/adding-a-sass-stylesheet) to add Sass to your `create-react-app` project
-- [A Complete Beginner’s Guide to Learning Sass in a Weekend](http://skillcrush.com/2014/07/29/jargon-begone-common-sass-terminology-beginners/)
 - [Why Sass?](http://alistapart.com/article/why-sass)
 - [Cooler things you can do with Sass](https://gist.github.com/jareware/4738651)
 - [Downsides of using a CSS preprocessor](https://adamsilver.io/articles/the-disadvantages-of-css-preprocessors/)
 - [How to Structure a Sass Project](http://thesassway.com/beginner/how-to-structure-a-sass-project)
-- [Color Functions Documentation](http://sass-lang.com/documentation/Sass/Script/Functions.html)
 - [Sass to CSS Translator](http://www.sassmeister.com/)
+- [Advanced Sass Tutorials](http://thesassway.com/advanced)
+- [How to Organize Your CSS with a Modular Architecture](https://snipcart.com/blog/organize-css-modular-architecture)
 
-### Instructor Resources
-
-- [Practice Solutions](https://github.com/turingschool/front-end-keys/blob/master/module-4/sass/intro-to-sass.md)

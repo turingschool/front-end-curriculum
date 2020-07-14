@@ -1,5 +1,5 @@
 ---
-title: Scope
+title: "Scope II: Scopes and Scope Chain"
 length: 120
 tags: javascript, scope, var, let, const, scope chain
 module: 2

@@ -1,5 +1,5 @@
 ---
-title: Test Driven Development
+title: "Testing: TDD, Mocha, and Chai"
 tags: TDD, unit testing, mocha, chai
 mod: 2
 ---
@@ -9,7 +9,7 @@ mod: 2
 - Talk through the what and why of Test Driven Development  
 - Look at the structure of a test and the testing lifecycle  
 - Discuss Mocha and Chai
-- Write some tests!`
+- Write some tests!
 
 ## Vocab
 
@@ -18,7 +18,7 @@ mod: 2
 - `Assertion Library` A package of assertion functionality. Usually distinct from a `Testing Framework`
 - `Testing Framework` A library that determines how tests are organized and executed
 - `Red Green Refactor` The process of writing a failing test, making it pass, then refactoring the tests and/or implementation with confidence
-- `Test Phases` A test that is organized into the phases [Setup, Execution, Assertion, Teardown*]
+- `Test Phases` A test that is organized into the phases [Setup, Execution, Assertion, Teardown*
 
 ## Review: What is TDD?
 

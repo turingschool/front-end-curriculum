@@ -1,5 +1,5 @@
 ---
-title: "JavaScript Fundamentals: Data Types & Structures"
+title: "Data Types: Advanced Concepts"
 tags: javascript, data types, data structures
 module: 2
 ---
