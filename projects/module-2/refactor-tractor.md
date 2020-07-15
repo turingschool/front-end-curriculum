@@ -1,4 +1,7 @@
-# Refactor Tractor
+---
+title: Refactor Tractor
+tags: javascript, oop, mocha, chai, testing
+---
 
 ## Goals and Objectives
 
@@ -73,24 +76,24 @@ Your Sass should be making use of:
 You will no longer be receiving your data from a hardcoded data file, but rather implementing the fetch API for accessing the data from a server. You must use fetch to:
 
 #### Retrieve all data from an endpoint (GET)
-* userData: https://fe-apps.herokuapp.com/api/v1/fitlit/1908/users/userData
-* sleepData: https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData
-* activityData: https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData
-* hydrationData: https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData
+
+| Data Type | Verb | URL |  
+|---|---|---|  
+| User Data |GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/users/userData |  
+| Sleep Data | GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData |  
+| Activity Data | GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData |  
+| Hydration Data | GET | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData |  
 
 #### Add new sleep, activity, and hydration data (POST)
 For the currently displayed user, you must be able to add a new sleep, hydration and activity data entry for that user.
 
 For example, if the currently displayed user has an ID of 50, and you want to add a new sleep entry for that user, you would want to send a JSON object through with your POST request that looks like:
 
-```json
-{
-  "userId": 50,
-  "date": "2019/09/23",
-  "hoursSlept": 5.4,
-  "sleepQuality": 4.9
-}
-```
+| Data Type | Verb | URL | Required Body |  
+|---|---|---|---|  
+| Sleep Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/sleep/sleepData | `{"userId": integer, "date": string, "hoursSlept": integer, "sleepQuality": integer}` |  
+| Activity Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/activity/activityData | `{"userId": integer, "date": string, "numSteps": integer, "minutesActive": integer, "flightsOfStairs": integer}` |  
+| Hydration Data | POST | https://fe-apps.herokuapp.com/api/v1/fitlit/1908/hydration/hydrationData | `{"userId": integer, "date": string, "numOunces": integer}` | 
 
 
 ### Pull Requests
@@ -132,7 +135,7 @@ For example, if the currently displayed user has an ID of 50, and you want to ad
 
 
 ### Strategies for Success
-* Make sure you are reviewing the original "What's Cooking" spec so you have a good idea for what the project and its requirements are. 
+* Make sure you are reviewing the original "FitLit" spec so you have a good idea for what the project and its requirements are. 
 * Since this project is not separated out into iterations or user stories, make sure that you spending a good amount of time breaking apart tasks and using that project board wisely. Make sure to send over your project board to your PM as well. 
 * Every group member must fully understand and be able to speak to all of the code changes that have been made. 
 
