@@ -78,7 +78,6 @@ In addition to an API, you must choose a new technology (or set of technologies)
 As apps begin to grow and grow, state management via `this.state` and passing props down through dozens of components gets kind of tangled, messy, and confusing. There are some tools invented to alleviate that issue:
 
 * Redux
-* MobX
 * React's built-in Context API
 
 Companies with large apps are likely to be using a state management tool like the ones listed above. If you're interested in this, you should pick _one_ tool from the list and use it within your React app.
